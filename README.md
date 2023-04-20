@@ -33,8 +33,8 @@ Over 400 problems arranged in ten topics for any young students or students rela
 
 Over 400 problems collected from some competitions of the club during the year 2020.
 
-- Summer semester - 14 weeks, each with a weekly team contest and a set of problems of the week, at various levels
-- Fall semeter - 3 months, each with monthly team contest and a set of problems of the months, at various levels
+- Summer semester - 14 weeks, each with a weekly team contest and a set of problems of the week
+- Fall semeter - 3 months, each with monthly team contest and a set of problems of the months
 
 <img src="./img/LPS-Vol-2.png" alt="Learning Problem Solving, Volume 2" width="80%"/>
 
