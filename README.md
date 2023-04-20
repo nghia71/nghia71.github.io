@@ -1,4 +1,4 @@
-# Nghia Doan's stufss
+# Nghia Doan's stuffs
 
 ## [A. Math, Chess, and Coding Club (MCC)](#math-chess-and-coding-club-mcc)
 
