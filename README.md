@@ -1,8 +1,8 @@
 # Nghia Doan's stuffs
 
-## [A. Math, Chess, and Coding Club (MCC)](#math-chess-and-coding-club-mcc)
+## [A. Math, Coding, and Chess Club (MCC)](#math-chess-and-coding-club-mcc)
 
-These books consititues the Learning Problem Solving series from Math, Coding, and Chess Club (MCC), a.k.a Math and Chess Club in Ottawa. 
+These books coónititue the Learning Problem Solving series from Math, Coding, and Chess Club (MCC), a.k.a Math and Chess Club in Ottawa. 
 
 Students of the club are advised to use the book to learn, practice, and prepare for the club’s House Championship as well as math competitions.
 
