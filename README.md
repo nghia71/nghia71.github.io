@@ -202,3 +202,12 @@ In each chapters, there are examples at lower difficulty for juniors or seniors 
 <img src="./img/2022-2-psc-1.png" alt="Problem Solving Championship seminars, Winter Semester, 2022" width="80%"/>
 
 &nbsp;
+
+------ 
+
+&nbsp;
+
+#### A.6.1. Summer camp, 2023:
+- [MS & HS courses](./mcc/2023-summer-camp.pdf)
+
+&nbsp;
