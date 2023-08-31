@@ -58,7 +58,7 @@ Over 400 problems collected from some competitions of the club during the year 2
 
 ### **A.3 Ongoing companion for every math leaners**: [Learning Problem Solving, Volume 3](./lps/LPS-Vol3-3.1-Ongoing.pdf)
 
-<span style="color:red">*Last update on January 6, 2022.*</span>
+<span style="color:red">*Last update on August 31, 2023.*</span>
 
 Unlike the other book, this book is an ongoing online book, which means that it is updated frequently and available online to the members of the club. 
 
