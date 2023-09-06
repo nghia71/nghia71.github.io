@@ -207,7 +207,7 @@ In each chapters, there are examples at lower difficulty for juniors or seniors 
 
 &nbsp;
 
-#### A.6.1. Summer camp, 2023:
+#### A.5.8. Summer camp, 2023:
 - [MS & HS courses](./mcc/2023-summer-camp.pdf)
 
 &nbsp;
