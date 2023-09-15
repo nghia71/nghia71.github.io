@@ -14,9 +14,15 @@ Nghia Doan & Catherine Doan
 
 -----
 
+## [B. School Year 2023-2024](#b-school-year-2023-2024)
+
+[Entrance Test problems and solutions](./mcc/2023-2024-entrance-test.pdf)
+
+-----
+
 &nbsp;
 
-### **A. 1. For beginners**: [Learning Problem Solving, Volume 1](./lps/LPS-Vol-1-4.0-Final.pdf)
+### **C. 1. For beginners**: [Learning Problem Solving, Volume 1](./lps/LPS-Vol-1-4.0-Final.pdf)
 
 Over 400 problems arranged in ten topics for any young students or students relatively new to math to get started:
 
@@ -41,7 +47,7 @@ Over 400 problems arranged in ten topics for any young students or students rela
 
 &nbsp;
 
-### **A.2 Club competitions**: [Learning Problem Solving, Volume 2](./lps/LPS-Vol-2-1.0-Final.pdf)
+### **C.2 Club competitions**: [Learning Problem Solving, Volume 2](./lps/LPS-Vol-2-1.0-Final.pdf)
 
 Over 400 problems collected from some competitions of the club during the year 2020.
 
@@ -56,7 +62,7 @@ Over 400 problems collected from some competitions of the club during the year 2
 
 &nbsp;
 
-### **A.3 Ongoing companion for every math leaners**: [Learning Problem Solving, Volume 3](./lps/LPS-Vol3-3.1-Ongoing.pdf)
+### **C.3 Ongoing companion for every math leaners**: [Learning Problem Solving, Volume 3](./lps/LPS-Vol3-3.1-Ongoing.pdf)
 
 <span style="color:red">*Last update on August 31, 2023.*</span>
 
@@ -78,7 +84,7 @@ In each chapters, there are examples at lower difficulty for juniors or seniors 
 
 &nbsp;
 
-### **A.4 Companion for the youngsters**: [Learning Problem Solving, Toolbox](./lps/LPS-Tools.pdf)
+### **C.4 Companion for the youngsters**: [Learning Problem Solving, Toolbox](./lps/LPS-Tools.pdf)
 
 - 10 Problem Solving Strategies
 - 5 Principles: Invariance, Colouring, Pigeonhole, Extremal, and Induction
@@ -94,11 +100,11 @@ In each chapters, there are examples at lower difficulty for juniors or seniors 
 
 &nbsp;
 
-### **A.5 Some collections from club activities (problems with solutions)**
+### **C.5 Some collections from club activities (problems with solutions)**
 
 &nbsp;
 
-#### A.5.1 [Fall Semester, 2021](./mcc/2021-fall.pdf)
+#### C.5.1 [Fall Semester, 2021](./mcc/2021-fall.pdf)
 
 - 5 House Championship rounds (plus entrance test)
 - 4 MCC Indidvidual Contest rounds
@@ -115,7 +121,7 @@ In each chapters, there are examples at lower difficulty for juniors or seniors 
 
 &nbsp;
 
-#### A.5.2. [Fall Semester, 2022](./mcc/2022-fall.pdf)
+#### C.5.2. [Fall Semester, 2022](./mcc/2022-fall.pdf)
 
 - 3 House Championship rounds (plus 2 entrance tests)
 - 3 MCC Indidvidual Contest rounds
@@ -132,7 +138,7 @@ In each chapters, there are examples at lower difficulty for juniors or seniors 
 
 &nbsp;
 
-#### A.5.3. [Winter Semester, 2022](./mcc/2022-winter.pdf)
+#### C.5.3. [Winter Semester, 2022](./mcc/2022-winter.pdf)
 
 - 5 House Championship rounds (plus 2 entrance tests)
 - 4 MCC Indidvidual Contest rounds
@@ -150,7 +156,7 @@ In each chapters, there are examples at lower difficulty for juniors or seniors 
 
 &nbsp;
 
-#### A.5.4. [Olympiad Team Training, 2022](./mcc/2022-olympiad.pdf)
+#### C.5.4. [Olympiad Team Training, 2022](./mcc/2022-olympiad.pdf)
 
 - 4 Training session
 
@@ -164,7 +170,7 @@ In each chapters, there are examples at lower difficulty for juniors or seniors 
 
 &nbsp;
 
-#### A.5.5. [Competition Mock Tests, 2022](./mcc/2022-mock-tests.pdf)
+#### C.5.5. [Competition Mock Tests, 2022](./mcc/2022-mock-tests.pdf)
 - 5 Mock tests (12 problems each, similar to Canadian Open Math Challenge)
 
 *Below is an excerpt from the book.*
@@ -177,7 +183,7 @@ In each chapters, there are examples at lower difficulty for juniors or seniors 
 
 &nbsp;
 
-#### A.5.6. Middle School seminars, 2022:
+#### C.5.6. Middle School seminars, 2022:
 
 - [Session 1](./mcc/2022-2-ms-1.pdf)
 - [Session 2](./mcc/2022-2-ms-2.pdf)
@@ -193,7 +199,7 @@ In each chapters, there are examples at lower difficulty for juniors or seniors 
 
 &nbsp;
 
-#### A.5.7. Problem Solving Championship seminars, 2022:
+#### C.5.7. Problem Solving Championship seminars, 2022:
 - [Session 1](./mcc/2022-2-psc-1.pdf)
 - [Session 2](./mcc/2022-2-psc-2.pdf)
 
@@ -207,7 +213,7 @@ In each chapters, there are examples at lower difficulty for juniors or seniors 
 
 &nbsp;
 
-#### A.5.8. Summer camp, 2023:
+#### C.5.8. Summer camp, 2023:
 - [MS & HS courses](./mcc/2023-summer-camp.pdf)
 
 &nbsp;
