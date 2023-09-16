@@ -18,6 +18,11 @@ Nghia Doan & Catherine Doan
 
 [Entrance Test problems and solutions](./mcc/2023-2024-entrance-test.pdf)
 
+September 16 weekly reading and problem set
+- [I-Level](https://drive.google.com/file/d/1s8hl9wzKvATAzZtT6kqBi484QL224VAU/view?usp=drive_link)
+- [A-Level](https://drive.google.com/file/d/1b8k7dbnz_l606gR2aA63GzLzki_likFi/view?usp=drive_link)
+- [O-Level](https://drive.google.com/file/d/1bJFYINnwP1qJWRR54U5UoEPXI2wLWcTg/view?usp=drive_link)
+
 -----
 
 &nbsp;
