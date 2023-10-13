@@ -16,8 +16,8 @@ Nghia Doan & Catherine Doan
 
 ## [B. School Year 2023-2024](#b-school-year-2023-2024)
 
-[The online ongoing book](https://drive.google.com/file/d/1VVUMGywLkhSB3Osh_GdfeW_4L69l-gIw/view?usp=sharing), updated on October 7, 2023.
-It contains problems and solutions for the entrance tests and session 1.
+[The online ongoing book](https://drive.google.com/file/d/1VVUMGywLkhSB3Osh_GdfeW_4L69l-gIw/view?usp=sharing), updated on October 12, 2023.
+It contains problems and solutions for the entrance tests and sessions 1-2.
 
 Weekly readings and problem sets
 - [I-Level](https://drive.google.com/drive/folders/1eyc_x-Ef3LUHzCj3fu4NJZ6nVZmj_el9?usp=sharing)
