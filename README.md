@@ -16,9 +16,13 @@ Nghia Doan & Catherine Doan
 
 ## [B. School Year 2023-2024](#b-school-year-2023-2024)
 
-[Semester 2 - Weekly readings and problem sets](./mcc/2023-2024-sm2.pdf)
+Weekly readings and problem sets
 
-[This is the link to the book of the First Semester](./mcc/2023-2024.pdf)
+[Semester 1](./mcc/2023-2024.pdf)
+
+[Semester 2](./mcc/2023-2024-sm2.pdf)
+
+[All problems (no solution - useful for newbies and training)](./mcc/2023-2024-po.pdf)
 
 -----
 
