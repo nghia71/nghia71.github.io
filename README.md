@@ -35,7 +35,7 @@ Based on weekly tests, monthly submissions, and other schedule tests.
 Based on weekly tests, monthly submissions, and other schedule tests.
 
 **[Purple Comet Math Meet](https://purplecomet.org)**:
-All teams have a chance to participate in this great competition 
+All teams have a chance to participate in this great competition.
 
 &nbsp;
 
@@ -47,7 +47,7 @@ All teams have a chance to participate in this great competition
 
 **Registration**:
 - From now until August 21.
-- Contact: mcc.youth.global@gmail.com
+- Contact: [mcc.youth.global@gmail.com](mailto:mcc.youth.global@gmail.com?subject=Registration%20for%20School%20Year%2024-2025)
 
 **Entrance Tests**:
 - Students registering for level G1 do not have to take the entrance test.
