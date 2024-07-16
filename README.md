@@ -1,225 +1,69 @@
-# Nghia Doan's stuffs
+# Math Club & Competitions (MCC)
 
-## [A. Math, Coding, and Chess Club (MCC)](#math-chess-and-coding-club-mcc)
+## Plan for School Year 2024-2025:
 
-These books constitute the Learning Problem Solving series from Math, Coding, and Chess Club (MCC), a.k.a Math and Chess Club in Ottawa. 
+**Level Groups**: In principle there will be 4 groups for students from grades 4 to 12 for the 2024-2025 school year:
+- *Group 1 (G1) for beginners*: absolute no prerequisite is required for joining this group. All students will learn basic approach to mathematics and problem solving.
+- *Group 2 (G2) for intermediate students*, who have an understanding of basic mathematical concepts and obtained a few skills to solve math problem. They are capable of writing their own solution to a given problem.
+- *Group 3 (G3) for advanced students*, who are ready to go on the track to master enough knowledge and skills to solve any math problems in school and willing to go the distance for national competitions.
+- *Group 4 (G4) for olympiad students*, who are about to be ready or already proven themselves in competitions and now preparing for upcoming and new challenges.
 
-Students of the club are advised to use the book to learn, practice, and prepare for the club’s House Championship as well as math competitions.
+**Team organizations:**
+- Students when registered will be assigned into teams.
+- Team standings are calculated based on the members' results in both mandatory and optional programs.
 
-The problems and their solutions are from various sources. Thus, these are open books with all rights reserved by the authors of the problems and solutions. No attempt should be made to reproduce or commercialize any part of any of these books.
+**Fundamental program**:
+This is the *mandatory program* for every level, every week a 60-minute seminar on a topic on Sunday, then a home assignment for about 5 hours (based on the content of the seminar on the topic in 5 days), then a 90-minutes test on the following Saturday In short, every week from Sunday to Saturday, students need about 7 hours, equivalent to 1 hour/day.
 
-Have fun, learn and enjoy!
+|  Sunday |    Monday   |   Tuesday   |  Wednesday  |   Thursday  |    Friday   | Saturday |
+|:-------:|:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|:--------:|
+| Seminar |   Homework  |   Homework  |   Homework  |   Homework  |   Homework  |   Test   |
+|   1 hr  | minimum 1hr | minimum 1hr | minimum 1hr | minimum 1hr | minimum 1hr |  1.5 hrs |
 
-Nghia Doan & Catherine Doan
+
+*Note: This year's program is different from other years in that it does not go deep into each individual math topic, but each week students will have content that requires focused thinking, reasoning, reading comprehension, and applying the content learned in the seminar to work on assignments, then applying that for the test at the end of the week. This will prepare students to be ready for tests, competitions, etc at all times.*
+
+**Enrichment program**: 
+This is an *optional program* to help certain students to study more deeply and work with teammates, at the beginning of the month a number of challenges are issued. The members of in a team will work together solve and submit solutions at the end of the month. Teams submitted great solutions will be invited for presentation in seminars. It is expected that participating student needs to invest an additional 7 hours/week for this program.
+
+*Note: Solving monthly challenges is to be able to invest in deep thinking on difficult problems, on topics that require extensive reading and deep understanding. One of the key aspects is learning to work as a team.*
+
+**Individual Championships**:
+Based on weekly tests, monthly submissions, and other schedule tests.
+
+**Team Championships**:
+Based on weekly tests, monthly submissions, and other schedule tests.
+
+**[Purple Comet Math Meet](https://purplecomet.org)**:
+All teams have a chance to participate in this great competition 
+
+&nbsp;
+
+*Note: Students who are not familiar or have not successfully passed the Introductory Curriculum Level 5 Test are advised to learn and take the tests. More information about the ICLTs can be found [here](https://mccyouthclub.wixsite.com/home/post/the-first-introductory-curriculum-level-test-iclt-this-year-22nd-oct-22).*
+
+&nbsp;
+
+## Registration and Entrance Tests for School Year 2024-2025:
+
+**Registration**:
+- From now until August 21.
+- Contact: mcc.youth.global@gmail.com
+
+**Entrance Tests**:
+- Students registering for level G1 do not have to take the entrance test.
+- For students registering for level G2-G3-G4: There are two entrance test days on August 24 and August 31, 90 minutes for each test. Students can register different levels for the tests.
+
+**Acceptance**:
+- Students registering for level G1 are automatically admitted. Students registering for levels G2-G3-G4 but failed all of the tests taken can be admitted to level G1.
+- Students registered and succeed the tests (for levels G2-G3-G4) can be admitted any of the levels of the successful tests.
+
+&nbsp;
 
 -----
 
-## [B. School Year 2023-2024](#b-school-year-2023-2024)
+Below are the books containing tens of thousands of problems and solutions that students are advised to use for learning problem solving: the first set is our own *Learning Problem Solving* volumes and the previous school year books.
 
-Weekly readings and problem sets
+## [Learning Problem Solving Volumes 1-2-3](./lps-volumes.md)
 
-[Semester 1](./mcc/2023-2024.pdf)
+## [Annual School Year books (2021-2024)](./annual-books.md)
 
-[Semester 2](./mcc/2023-2024-sm2.pdf)
-
-[All problems (no solution - useful for newbies and training)](./mcc/2023-2024-po.pdf)
-
------
-
-&nbsp;
-
-### **C. 1. For beginners**: [Learning Problem Solving, Volume 1](./lps/LPS-Vol-1-4.0-Final.pdf)
-
-Over 400 problems arranged in ten topics for any young students or students relatively new to math to get started:
-
-- Insightful Proofs
-- Logic
-- Parity
-- Visual patterns
-- Divisibility
-- Basic Geometry
-- Ratio
-- Average
-- Percent
-- Counting
-- Distance - Rate - Time
-- Probability
-
-<img src="./img/LPS-Vol-1.png" alt="Learning Problem Solving, Volume 1" width="80%"/>
-
-&nbsp;
-
------- 
-
-&nbsp;
-
-### **C.2 Club competitions**: [Learning Problem Solving, Volume 2](./lps/LPS-Vol-2-1.0-Final.pdf)
-
-Over 400 problems collected from some competitions of the club during the year 2020.
-
-- Summer semester - 14 weeks, each with a weekly team contest and a set of problems of the week
-- Fall semeter - 3 months, each with monthly team contest and a set of problems of the months
-
-<img src="./img/LPS-Vol-2.png" alt="Learning Problem Solving, Volume 2" width="80%"/>
-
-&nbsp;
-
------- 
-
-&nbsp;
-
-### **C.3 Ongoing companion for every math leaners**: [Learning Problem Solving, Volume 3](./lps/LPS-Vol3-3.1-Ongoing.pdf)
-
-<span style="color:red">*Last update on August 31, 2023.*</span>
-
-Unlike the other book, this book is an ongoing online book, which means that it is updated frequently and available online to the members of the club. 
-
-A smaller set of problems are to help the young contestants to find their footing at the beginning of the journey. A significant number of problems in the book are from the International Mathematical Olympiads (IMO), National Math Olympiads, and other Math Competitions from countries and regions around the world.
-
-Thousands of problems are organized into over 40 chapters of 7 parts: Algebra, Combinatorics, Geometry, Number Theory, Logic, Chess, and Coding. In each chapter, which focuses on certain topics, some examples are discussed in details, sometimes with multiple solutions. 
-
-In each chapters, there are examples at lower difficulty for juniors or seniors without extensive mathematical knowledge or skills. Readers will find examples at olympiad level and additional problems. The students shall attempt to solve the examples first, before consult with the solution(s). In some chapters, related theories are noted at the beginning, some are accompanied with proofs, and additional colloraries. They are by no mean complete. The students are advised and encouraged to learn from other sources, whenever possible.
-
-*Below is an excerpt from the book.*
-
-<img src="./img/LPS-Vol-3.png" alt="Learning Problem Solving, Volume 3" width="80%"/>
-
-&nbsp;
-
------- 
-
-&nbsp;
-
-### **C.4 Companion for the youngsters**: [Learning Problem Solving, Toolbox](./lps/LPS-Tools.pdf)
-
-- 10 Problem Solving Strategies
-- 5 Principles: Invariance, Colouring, Pigeonhole, Extremal, and Induction
-- 10 Counting Techniques
-
-*Below is an excerpt from the book.*
-
-<img src="./img/LPS-Tools.png" alt="Learning Problem Solving, Tools" width="80%"/>
-
-&nbsp;
-
------- 
-
-&nbsp;
-
-### **C.5 Some collections from club activities (problems with solutions)**
-
-&nbsp;
-
-#### C.5.1 [Fall Semester, 2021](./mcc/2021-fall.pdf)
-
-- 5 House Championship rounds (plus entrance test)
-- 4 MCC Indidvidual Contest rounds
-- 2 Introductory Curriculum Level Test rounds (for all levels 1-5)
-- 2 AMC 8 review sessions
-
-*Below is an excerpt from the book.*
-
-<img src="./img/2021-fall.png" alt="Fall Semester, 2021" width="80%"/>
-
-&nbsp;
-
------- 
-
-&nbsp;
-
-#### C.5.2. [Fall Semester, 2022](./mcc/2022-fall.pdf)
-
-- 3 House Championship rounds (plus 2 entrance tests)
-- 3 MCC Indidvidual Contest rounds
-- 2 Introductory Curriculum Level Test rounds (for all levels 1-9)
-- 2 Problem Solving Championship rounds
-
-*Below is an excerpt from the book.*
-
-<img src="./img/2022-fall.png" alt="Fall Semester, 2022" width="80%"/>
-
-&nbsp;
-
------- 
-
-&nbsp;
-
-#### C.5.3. [Winter Semester, 2022](./mcc/2022-winter.pdf)
-
-- 5 House Championship rounds (plus 2 entrance tests)
-- 4 MCC Indidvidual Contest rounds
-- 2 Introductory Curriculum Level Test rounds (for all levels 1-9)
-- 6 Purple Comet Training sessions
-- 1 Middle School Training session
-
-*Below is an excerpt from the book.*
-
-<img src="./img/2022-winter.png" alt="Winter Semester, 2022" width="80%"/>
-
-&nbsp;
-
------- 
-
-&nbsp;
-
-#### C.5.4. [Olympiad Team Training, 2022](./mcc/2022-olympiad.pdf)
-
-- 4 Training session
-
-*Below is an excerpt from the book.*
-
-<img src="./img/2022-olympiad.png" alt="Olympiad Training, Winter Semester, 2022" width="80%"/>
-
-&nbsp;
-
------- 
-
-&nbsp;
-
-#### C.5.5. [Competition Mock Tests, 2022](./mcc/2022-mock-tests.pdf)
-- 5 Mock tests (12 problems each, similar to Canadian Open Math Challenge)
-
-*Below is an excerpt from the book.*
-
-<img src="./img/2022-mock-tests.png" alt="Competition Mock Tests, Fall Semester, 2022" width="80%"/>
-
-&nbsp;
-
------- 
-
-&nbsp;
-
-#### C.5.6. Middle School seminars, 2022:
-
-- [Session 1](./mcc/2022-2-ms-1.pdf)
-- [Session 2](./mcc/2022-2-ms-2.pdf)
-- [Session 3](./mcc/2022-2-ms-3.pdf)
-
-*Below is an excerpt from the seminars.*
-
-<img src="./img/2022-2-ms-2.png" alt="Middle School seminars, Winter Semester, 2022" width="80%"/>
-
-&nbsp;
-
------- 
-
-&nbsp;
-
-#### C.5.7. Problem Solving Championship seminars, 2022:
-- [Session 1](./mcc/2022-2-psc-1.pdf)
-- [Session 2](./mcc/2022-2-psc-2.pdf)
-
-*Below is an excerpt from the seminars.*
-
-<img src="./img/2022-2-psc-1.png" alt="Problem Solving Championship seminars, Winter Semester, 2022" width="80%"/>
-
-&nbsp;
-
------- 
-
-&nbsp;
-
-#### C.5.8. Summer camp, 2023:
-- [MS & HS courses](./mcc/2023-summer-camp.pdf)
-
-&nbsp;
