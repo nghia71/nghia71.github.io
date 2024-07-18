@@ -57,6 +57,13 @@ All teams have a chance to participate in this great competition.
 - Students registering for level G1 are automatically admitted. Students registering for levels G2-G3-G4 but failed all of the tests taken can be admitted to level G1.
 - Students registered and succeed the tests (for levels G2-G3-G4) can be admitted any of the levels of the successful tests.
 
+**Q&A**:
+1. Do I have to take a test if I register for G1?: Students registering for level G1 are automatically admitted. No test is required.
+2. Can I register for two different levels?: Yes, you could. In fact, you are encouraged to register for different levels for different test dates.
+3. Can I register both dates for the same level?: Yes, you could. In fact, the tests contain different problems.
+4. If both tests are successful, what can I choose?: You can choose to join any level you want.
+5. If both tests failed, what can I do?: You will be admitted to level G1.
+
 &nbsp;
 
 -----
