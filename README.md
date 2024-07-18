@@ -1,4 +1,4 @@
-# Math Club & Competitions (MCC)
+![Math Club & Competitions (MCC)](./img/MCC-2024-Logo-Large.png)
 
 ## Plan for School Year 2024-2025:
 
