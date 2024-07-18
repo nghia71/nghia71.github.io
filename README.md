@@ -45,7 +45,7 @@ All teams have a chance to participate in this great competition.
 
 ## Registration and Entrance Tests for School Year 2024-2025:
 
-**Registration**:
+**Registration**: [click here](https://docs.google.com/forms/d/e/1FAIpQLSfKEYw5WLXEL6aUBSiw-0fXiI-0bhfJMAxRwZuV-laV7v35aA/viewform)
 - From now until August 21.
 - Contact: [mcc.youth.global@gmail.com](mailto:mcc.youth.global@gmail.com?subject=Registration%20for%20School%20Year%2024-2025)
 
