@@ -79,6 +79,14 @@
 |  S143  | Khoa Anh Vu            |     G3    |   20   |   20   |    2   |        |    2   |   **44**  |
 |  S144  | Henry Dinh             |     G4    |        |   20   |    0   |    0   |   20   |   **40**  |
 
+**Communications**
+
+*Mailing list*: You have probably receive an email from our newly created Google Group MCC 2024-2025: https://groups.google.com/g/mcc-2024-2025 This is to be used for email when we need to send email to everyone. Please accept the invitation.
+
+*Direct chat with teacher*: To reach me directly and have a chat, use this Discord: https://discord.gg/skrNy7qF. Please note that you have to use your name or you student name so that I can know who are talking to me or who am I talking to.
+
+&nbsp;
+
 ## Entrance Tests and Important Dates
 
 **Registration for the School Year 2024-2025 is CLOSED.**
@@ -108,13 +116,6 @@ Students who join the club *without registering to take any test* have to *do no
 - **September 8: Admission Announcement** - preliminary program calendar, level groups, and teams
 - September 9-13: *Questions, Requests, Comments from parents and students for the club before the Opening*
 - **September 15: Kick-off online ceremony.** Final Club Program Calendar, Level Groups, and  Teams
-
-**Communications**
-
-*Mailing list*: You have probably receive an email from our newly created Google Group MCC 2024-2025: https://groups.google.com/g/mcc-2024-2025 This is to be used for email when we need to send email to everyone. Please accept the invitation.
-
-*Direct chat with teacher*: To reach me directly and have a chat, use this Discord: https://discord.gg/skrNy7qF. Please note that you have to use your name or you student name so that I can know who are talking to me or who am I talking to.
-
 
 &nbsp;
 
