@@ -65,7 +65,7 @@
 |  S108  | Nguyen Hai Ha          |     G2    |    2   |   20   |    0   |    2   |   18   |   **42**  |
 |  S111  | Dao Anna               |     G2    |   20   |   20   |   10   |   20   |    4   |   **74**  |
 |  S114  | Mike Nguyen            |     G2    |    2   |    0   |   10   |    0   |        |   **12**  |
-|  S118  | Tuyet Ly Phuong        |     G2    |   10   |    4   |    0   |        |    4   |   **18**  |
+|  S118  | Tuyet Ly Phuong        |     G3    |   10   |    4   |    0   |        |    4   |   **18**  |
 |  S119  | Truc An Le             |     G2    |   20   |   20   |   20   |   20   |   18   |   **98**  |
 |  S120  | Michelle Nguyen        |     G2    |   20   |   20   |   20   |    6   |        |   **66**  |
 |  S127  | Minh Ngoc Nguyen       |     G2    |   20   |   20   |   20   |   18   |   10   |   **88**  |
