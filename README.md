@@ -2,6 +2,11 @@
 
 ## FINAL Result of Entrance Test Day 1
 
+How to read the result:
+- If you got over 50 points, you have passed the test at the registered level. Congratulation! 
+- If you got 70+ points, you are good at that level. You probably already got a recommendation for taking the test on August 31 at higher level.
+- If you got under 50 points, you can be accepted to G1 or to take another test at the same or lower level on August 31.
+
 | **ID** |        **Name**        | **Level** | **P1** | **P2** | **P3** | **P4** | **P5** | **Total** |
 |:------:|:----------------------:|:---------:|:------:|:------:|:------:|:------:|:------:|:---------:|
 |   S77  |  Adelina Mai Linh Luu  |     G2    |   20   |   20   |    6   |    2   |    6   |     54    |
