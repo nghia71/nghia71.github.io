@@ -79,9 +79,9 @@
 
 **Communications**
 
-*Mailing list*: You have probably receive an email from our newly created Google Group MCC 2024-2025: https://groups.google.com/g/mcc-2024-2025 This is to be used for email when we need to send email to everyone. Please accept the invitation.
+*Mailing list*: You have probably receive an email from our newly created [Google Group MCC 2024-2025](https://groups.google.com/g/mcc-2024-2025) This is to be used for email when we need to send email to everyone. Please accept the invitation.
 
-*Direct chat with teacher*: To reach me directly and have a chat, use this Discord: https://discord.gg/skrNy7qF. Please note that you have to use your name or you student name so that I can know who are talking to me or who am I talking to.
+*Direct chat with teacher*: To reach me directly and have a chat, use this [Discord](https://discord.gg/skrNy7qF). Please note that you have to use your name or you student name so that I can know who are talking to me or who am I talking to.
 
 &nbsp;
 
