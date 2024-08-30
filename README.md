@@ -1,83 +1,81 @@
 ![Math Club & Competitions (MCC)](./img/MCC-2024-Logo-Large.png)
 
-## PRELIMINARY Result of Entrance Test Day 1
-
-*Note that the result might change due to the ongoing review process.*
+## FINAL Result of Entrance Test Day 1
 
 | **ID** |        **Name**        | **Level** | **P1** | **P2** | **P3** | **P4** | **P5** | **Total** |
 |:------:|:----------------------:|:---------:|:------:|:------:|:------:|:------:|:------:|:---------:|
-|   S1   | Vincent Pham           |     G2    |   20   |   20   |   20   |    6   |   14   |   **80**  |
-|   S8   | Tony Vo                |     G2    |    0   |   20   |    6   |    2   |    0   |   **28**  |
-|   S9   | Milan Thai             |     G2    |        |    0   |    0   |        |    0   |   **0**   |
-|   S11  | Kylan Thai             |     G2    |        |    0   |        |        |        |   **0**   |
-|   S14  | James Minh Trí Nguyen  |     G2    |    2   |    0   |    0   |    0   |    4   |   **6**   |
-|   S15  | Huu Duc Nguyen         |     G2    |    2   |    0   |    0   |    0   |    0   |   **2**   |
-|   S18  | Dang Khanh Le Ngan     |     G2    |    0   |    0   |   10   |    0   |    0   |   **10**  |
-|   S19  | Minh Cao Doan          |     G2    |   20   |   20   |   20   |   20   |   18   |   **98**  |
-|   S20  | Sam Ha                 |     G2    |   10   |   20   |   20   |   20   |   10   |   **80**  |
-|   S21  | Henry Ho               |     G2    |   20   |   20   |    0   |   20   |   18   |   **78**  |
-|   S22  | Anh Diep Nguyen        |     G2    |   20   |   20   |    0   |    6   |    6   |   **52**  |
-|   S24  | Trần Hiếu Khoa         |     G3    |    6   |   20   |        |   20   |    6   |   **52**  |
-|   S26  | Harry Vien             |     G2    |    0   |   14   |   14   |    6   |    6   |   **40**  |
-|   S27  | Helen Vien             |     G2    |   20   |   20   |   20   |    6   |   14   |   **80**  |
-|   S31  | Linh Khanh Le          |     G2    |   20   |   20   |   20   |    6   |   20   |   **86**  |
-|   S34  | Bao Le                 |     G2    |   20   |   20   |   20   |   14   |    4   |   **78**  |
-|   S35  | Phạm Nhật Minh         |     G2    |   20   |   14   |   20   |   20   |   10   |   **84**  |
-|   S36  | Sean Pham              |     G2    |    6   |   20   |   20   |    2   |    4   |   **52**  |
-|   S38  | Long Doan              |     G2    |    2   |   20   |   10   |   14   |   14   |   **60**  |
-|   S41  | Ngo Bao Ngoc           |     G2    |    6   |    6   |    6   |    6   |    2   |   **26**  |
-|   S42  | Sofia Vy Nguyen        |     G2    |   20   |    2   |    6   |    6   |    6   |   **40**  |
-|   S45  | Long Tran              |     G2    |   20   |    6   |    2   |    6   |    6   |   **40**  |
-|   S48  | Nguyen Jérémy          |     G3    |   10   |   20   |    4   |        |   18   |   **52**  |
-|   S50  | Samuel Luong           |     G3    |   20   |   20   |    4   |        |    6   |   **50**  |
-|   S52  | Nam Nguyen             |     G3    |   10   |   14   |    2   |    0   |    2   |   **28**  |
-|   S55  | Khai-Tam Nguyen        |     G3    |    0   |   20   |    0   |    0   |    2   |   **22**  |
-|   S56  | Hien-Lam Nguyen        |     G2    |   20   |   14   |    0   |    6   |    4   |   **44**  |
-|   S58  | Matheo Nguyen          |     G2    |   20   |   20   |   20   |   20   |   14   |   **94**  |
-|   S59  | Hoang Dang             |     G3    |        |   20   |   20   |   19   |   16   |   **75**  |
-|   S60  | Ha Dang                |     G2    |   20   |   10   |   20   |   20   |    6   |   **76**  |
-|   S62  | Julie Cao              |     G2    |   20   |   20   |   10   |   20   |   14   |   **84**  |
-|   S64  | Kien Dang              |     G2    |   20   |   20   |   14   |   20   |   14   |   **88**  |
-|   S68  | Leo Bui                |     G2    |   20   |   20   |    4   |   20   |    6   |   **70**  |
-|   S68  | Leo Bui                |     G3    |   20   |   20   |    4   |        |   10   |   **54**  |
-|   S71  | Yanis-Huy Desarmaux-Do |     G2    |   20   |   20   |   20   |   18   |   14   |   **92**  |
-|   S72  | Jade Pham              |     G2    |   20   |    6   |        |   20   |        |   **46**  |
-|   S73  | Fred Bui               |     G2    |   18   |   20   |   20   |   20   |   18   |   **96**  |
-|   S74  | Lê Cường Lâm           |     G2    |   20   |   20   |   20   |   14   |   14   |   **88**  |
-|   S77  | Adelina Mai Linh Luu   |     G2    |   20   |   20   |    6   |    0   |    6   |   **52**  |
-|   S79  | Ryan Nguyen            |     G3    |   20   |   20   |    0   |    2   |   18   |   **60**  |
-|   S81  | Minh Tran              |     G2    |   20   |   10   |    2   |    6   |    6   |   **44**  |
-|   S82  | Nguyễn Gia Bảo Nam     |     G2    |   20   |   20   |   20   |   20   |   18   |   **98**  |
-|   S83  | Dang Nguyen Phung      |     G2    |        |   20   |    6   |    0   |        |   **26**  |
-|   S85  | Zygmunt Malig          |     G2    |    0   |   20   |   14   |   20   |    6   |   **60**  |
-|   S87  | Chi Khanh Pham         |     G3    |   20   |   20   |    2   |   20   |    4   |   **66**  |
-|   S89  | Luan Duc Tran          |     G2    |   20   |   20   |   20   |   18   |   14   |   **92**  |
-|   S91  | Phuc Long Phuong       |     G2    |    0   |    0   |    0   |    0   |    2   |   **2**   |
-|   S93  | John Minh Quan         |     G3    |   20   |   20   |   20   |        |   18   |   **78**  |
-|   S95  | Anne Chu               |     G2    |   20   |    4   |    0   |   18   |   14   |   **56**  |
-|   S99  | Nguyen Ngo Lam Phong   |     G2    |    0   |   10   |    0   |   18   |    2   |   **30**  |
-|  S100  | Sam Vuong              |     G2    |   20   |   20   |   14   |   20   |   14   |   **88**  |
-|  S101  | Albert Dinh-Le         |     G3    |   20   |   20   |   20   |   20   |   14   |   **94**  |
-|  S104  | Henry Minh Nhat Trinh  |     G3    |   20   |   20   |   20   |    2   |   18   |   **80**  |
-|  S105  | Lê Lâm Phương Anh      |     G2    |    4   |   20   |    4   |    6   |    4   |   **38**  |
-|  S106  | Dao Antoine            |     G3    |   10   |    0   |        |   20   |   10   |   **40**  |
-|  S107  | Nguyen Minh Phong      |     G2    |   20   |   10   |   20   |   18   |   18   |   **86**  |
-|  S108  | Nguyen Hai Ha          |     G2    |    2   |   20   |    0   |    2   |   18   |   **42**  |
-|  S111  | Dao Anna               |     G2    |   20   |   20   |   10   |   20   |    4   |   **74**  |
-|  S114  | Mike Nguyen            |     G2    |    2   |    0   |   10   |    0   |        |   **12**  |
-|  S118  | Tuyet Ly Phuong        |     G2    |   10   |    4   |    0   |        |    4   |   **18**  |
-|  S119  | Truc An Le             |     G2    |   20   |   20   |   20   |   20   |   18   |   **98**  |
-|  S120  | Michelle Nguyen        |     G2    |   20   |   20   |   20   |    6   |        |   **66**  |
-|  S127  | Minh Ngoc Nguyen       |     G2    |   20   |   20   |   20   |   18   |   10   |   **88**  |
-|  S128  | Giang Nguyen           |     G2    |   14   |   20   |   20   |   18   |   18   |   **90**  |
-|  S129  | Ninh Nguyen            |     G2    |   20   |   20   |   14   |   18   |   18   |   **90**  |
-|  S130  | Theo Nguyen            |     G2    |   20   |   20   |   20   |   20   |   18   |   **98**  |
-|  S131  | Nguyen Duy             |     G2    |   20   |   20   |    6   |   10   |    4   |   **60**  |
-|  S132  | Nguyen My              |     G2    |    4   |    4   |   14   |    6   |        |   **28**  |
-|  S136  | Tuan Kien Vuong        |     G2    |    4   |   20   |    2   |    6   |    2   |   **34**  |
-|  S142  | Minh Hai Vu            |     G4    |        |        |        |        |   14   |   **14**  |
-|  S143  | Khoa Anh Vu            |     G3    |   20   |   20   |    2   |        |    2   |   **44**  |
-|  S144  | Henry Dinh             |     G4    |        |   20   |    0   |    0   |   20   |   **40**  |
+|   S77  |  Adelina Mai Linh Luu  |     G2    |   20   |   20   |    6   |    2   |    6   |     54    |
+|  S101  |     Albert Dinh-Le     |     G3    |   20   |   20   |   20   |   20   |   14   |     94    |
+|   S22  |     Anh Diep Nguyen    |     G2    |   20   |   20   |    0   |    6   |    6   |     52    |
+|   S95  |        Anne Chu        |     G2    |   20   |    0   |   10   |   14   |   12   |     56    |
+|   S34  |         Bao Le         |     G2    |   20   |   20   |   20   |   14   |    4   |     78    |
+|   S87  |     Chi Khanh Pham     |     G3    |   20   |   20   |    2   |   20   |    4   |     66    |
+|   S18  |   Dang Khanh Le Ngan   |     G2    |    0   |    0   |   10   |    0   |    0   |     10    |
+|   S83  |    Dang Nguyen Phung   |     G2    |        |   20   |    2   |    6   |        |     28    |
+|  S111  |        Dao Anna        |     G2    |   20   |   20   |   10   |   20   |    4   |     74    |
+|  S106  |       Dao Antoine      |     G3    |   10   |    0   |        |   20   |   10   |     40    |
+|   S73  |        Fred Bui        |     G2    |   18   |   20   |   20   |   20   |   16   |     94    |
+|  S128  |      Giang Nguyen      |     G2    |   14   |   20   |   20   |   18   |   18   |     90    |
+|   S60  |         Ha Dang        |     G2    |   20   |   10   |   20   |   20   |    6   |     76    |
+|   S26  |       Harry Vien       |     G2    |    0   |   14   |   14   |    6   |    6   |     40    |
+|   S27  |       Helen Vien       |     G2    |   20   |   20   |   20   |    6   |   14   |     80    |
+|  S144  |       Henry Dinh       |     G4    |        |   20   |    0   |    0   |   20   |     40    |
+|   S21  |        Henry Ho        |     G2    |   20   |   20   |    0   |   20   |   18   |     78    |
+|  S104  |  Henry Minh Nhat Trinh |     G3    |   20   |   20   |   20   |    2   |   18   |     80    |
+|   S56  |     Hien-Lam Nguyen    |     G2    |   20   |   14   |    0   |    6   |    4   |     44    |
+|   S59  |       Hoang Dang       |     G3    |        |   20   |   20   |   19   |   16   |     75    |
+|   S15  |     Huu Duc Nguyen     |     G2    |    2   |    0   |    0   |    0   |    0   |     2     |
+|   S72  |        Jade Pham       |     G2    |   18   |    4   |   20   |    0   |        |     42    |
+|   S14  |  James Minh Trí Nguyen |     G2    |    2   |    0   |    0   |    0   |    4   |     6     |
+|   S93  |     John Minh Quan     |     G3    |   20   |   20   |   20   |        |   18   |     78    |
+|   S62  |        Julie Cao       |     G2    |   20   |   20   |   10   |   20   |   14   |     84    |
+|   S55  |     Khai-Tam Nguyen    |     G3    |    0   |   20   |    0   |    0   |    2   |     22    |
+|  S143  |       Khoa Anh Vu      |     G3    |   20   |   20   |    2   |        |    2   |     44    |
+|   S64  |        Kien Dang       |     G2    |   20   |   20   |   14   |   20   |   14   |     88    |
+|   S11  |       Kylan Thai       |     G2    |        |    0   |        |        |        |     0     |
+|   S74  |      Lê Cường Lâm      |     G2    |   18   |   20   |   14   |   20   |   14   |     86    |
+|  S105  |   Lê Lâm Phương Anh    |     G2    |    4   |   20   |    4   |    6   |    4   |     38    |
+|   S68  |         Leo Bui        |     G2    |   20   |   20   |    4   |   20   |    6   |     70    |
+|   S68  |         Leo Bui        |     G3    |   20   |   20   |    4   |        |   10   |     54    |
+|   S31  |      Linh Khanh Le     |     G2    |   20   |   20   |   20   |    6   |   20   |     86    |
+|   S38  |        Long Doan       |     G2    |    2   |   20   |   10   |   14   |   14   |     60    |
+|   S45  |        Long Tran       |     G2    |   20   |    6   |    2   |    6   |    6   |     40    |
+|   S89  |      Luan Duc Tran     |     G2    |   20   |   20   |   14   |   20   |   12   |     86    |
+|   S58  |      Matheo Nguyen     |     G2    |   20   |   20   |   20   |   20   |   14   |     94    |
+|  S120  |     Michelle Nguyen    |     G2    |   20   |   20   |   20   |    6   |        |     66    |
+|  S114  |       Mike Nguyen      |     G2    |    2   |    0   |   10   |    0   |        |     12    |
+|   S9   |       Milan Thai       |     G4    |        |    0   |    0   |        |    0   |     0     |
+|   S19  |      Minh Cao Doan     |     G2    |   20   |   20   |   20   |   20   |   18   |     98    |
+|  S142  |       Minh Hai Vu      |     G4    |        |        |        |        |   14   |     14    |
+|  S127  |    Minh Ngoc Nguyen    |     G2    |   20   |   20   |   20   |   18   |   10   |     88    |
+|   S81  |        Minh Tran       |     G2    |   20   |   10   |    2   |    6   |    6   |     44    |
+|   S52  |       Nam Nguyen       |     G3    |   10   |   14   |    2   |    0   |    2   |     28    |
+|   S41  |      Ngo Bao Ngoc      |     G2    |    6   |    6   |    6   |    6   |    2   |     26    |
+|  S131  |       Nguyen Duy       |     G2    |   20   |   20   |    6   |   10   |    4   |     60    |
+|   S82  |   Nguyễn Gia Bảo Nam   |     G2    |   20   |   20   |   20   |   20   |   18   |     98    |
+|  S108  |      Nguyen Hai Ha     |     G2    |    2   |   20   |    0   |    2   |   18   |     42    |
+|   S48  |      Nguyen Jérémy     |     G3    |   10   |   20   |    4   |        |   18   |     52    |
+|  S107  |    Nguyen Minh Phong   |     G2    |   20   |   10   |   20   |   18   |   18   |     86    |
+|  S132  |        Nguyen My       |     G2    |    4   |    4   |   14   |    6   |        |     28    |
+|   S99  |  Nguyen Ngo Lam Phong  |     G2    |    0   |   10   |    2   |   18   |    4   |     34    |
+|  S129  |       Ninh Nguyen      |     G2    |   20   |   20   |   14   |   18   |   18   |     90    |
+|   S35  |     Phạm Nhật Minh     |     G2    |   20   |   14   |   20   |   20   |   10   |     84    |
+|   S91  |    Phuc Long Phuong    |     G2    |    0   |    0   |    0   |    2   |    2   |     4     |
+|   S79  |       Ryan Nguyen      |     G3    |   20   |   20   |    0   |    2   |   18   |     60    |
+|   S20  |         Sam Ha         |     G2    |   10   |   20   |   20   |   20   |   10   |     80    |
+|  S100  |        Sam Vuong       |     G2    |   20   |   20   |   14   |   20   |   14   |     88    |
+|   S50  |      Samuel Luong      |     G3    |   20   |   20   |    4   |        |    6   |     50    |
+|   S36  |        Sean Pham       |     G2    |    6   |   20   |   20   |    2   |    4   |     52    |
+|   S42  |     Sofia Vy Nguyen    |     G2    |   20   |    2   |    6   |    6   |    6   |     40    |
+|  S130  |       Theo Nguyen      |     G2    |   20   |   966  |   125  |   755  |   601  |    100    |
+|   S8   |         Tony Vo        |     G2    |    0   |   20   |    2   |    6   |    0   |     28    |
+|   S24  |     Trần Hiếu Khoa     |     G3    |    6   |   20   |        |   20   |    6   |     52    |
+|  S119  |       Truc An Le       |     G2    |   20   |   20   |   20   |   20   |   18   |     98    |
+|  S136  |     Tuan Kien Vuong    |     G2    |    4   |   20   |    2   |    6   |    2   |     34    |
+|  S118  |     Tuyet Ly Phuong    |     G3    |   10   |    4   |    0   |        |    4   |     18    |
+|   S1   |      Vincent Pham      |     G2    |   20   |   20   |   20   |    6   |   14   |     80    |
+|   S71  | Yanis-Huy Desarmaux-Do |     G2    |   20   |   20   |   14   |   18   |   14   |     86    |
+|   S85  |      Zygmunt Malig     |     G2    |    0   |   20   |   14   |   20   |    6   |     60    |
 
 **Communications**
 
