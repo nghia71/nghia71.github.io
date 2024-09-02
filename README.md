@@ -8,6 +8,7 @@
 For example:
 
 *Adelina Mai Linh Luu has done one test, Albert Dinh-Le has done two tests, and An Nguyen has done one test:*
+
 |  ID  |          Name          |   Program   | Country | Level | P1 | P2 | P3 | P4 | P5 | Total |
 |:----:|:----------------------:|:-----------:|:-------:|:-----:|:--:|:--:|:--:|:--:|:--:|:-----:|
 |  S77 | Adelina Mai Linh Luu   | Fundamental |    CA   |   G2  | 20 | 20 |  6 |  2 |  6 |   54  |
