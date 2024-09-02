@@ -238,9 +238,12 @@ This is the *mandatory program* for every level, every week a 60-minute seminar 
 *Note: This year's program is different from other years in that it does not go deep into each individual math topic, but each week students will have content that requires focused thinking, reasoning, reading comprehension, and applying the content learned in the seminar to work on assignments, then applying that for the test at the end of the week. This will prepare students to be ready for tests, competitions, etc at all times.*
 
 **Enrichment program**: 
-This is an *optional program,* offering for students G2, G3, and G4 only, to help them to study more deeply and work with teammates, at the beginning of the month a number of challenges are issued. The members of in a team will work together solve and submit solutions at the end of the month. Teams submitted great solutions will be invited for presentation in seminars. It is expected that participating student needs to invest an additional 7 hours/week for this program.
+This is an *optional program,* offering for students G2, G3, and G4 only, to help them to study more deeply and work with teammates
+- In every 6 weeks, a number of challenges are issued. The members of in a team will work together solve and submit solutions at deadlines. Teams submitted great solutions will be invited for presentation in seminars.
+- In addition, the team will be participating a team test in every 6 weeks. Everybody should work together online during the 90-minute test and submit together the solution.
+It is expected that participating student needs to invest an additional 7 hours/week for this program.
 
-*Note: Solving monthly challenges is to be able to invest in deep thinking on difficult problems, on topics that require extensive reading and deep understanding. One of the key aspects is learning to work as a team.*
+*Note: Solving monthly challenges is to be able to invest in deep thinking on difficult problems, on topics that require extensive reading and deep understanding. Working together during a 90-minute test requires even better collaboration. Both are the key aspects of learning to work as a team.*
 
 **Individual Championships**:
 Based on weekly tests, monthly submissions, and other schedule tests.
