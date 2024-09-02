@@ -168,6 +168,7 @@ For example:
 |      |                        |             |         |   G3  |  2 |  4 |  0 | 18 | 14 |   38  |
 |  S50 | Samuel Luong           | Enrichment  |    US   |   G3  | 20 | 20 |  4 |    |  6 |   50  |
 |  S36 | Sean Pham              | Enrichment  |    US   |   G2  | 20 |  0 | 20 |  2 |  2 |   44  |
+|      |                        |             |         |   G2  |  6 | 20 | 20 |  2 |  4 |   52  |
 | S42  | Sofia Vy Nguyen        |             |         |   G2  | 20 |  2 |  6 |  6 |  6 |   40  |
 |  S28 | Sophia Cao             | Enrichment  |    US   |   G2  | 20 | 20 | 14 | 20 | 14 |   88  |
 |      |                        |             |         |   G3  |  2 | 20 |  2 |    | 20 |   44  |
