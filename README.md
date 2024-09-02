@@ -7,7 +7,7 @@
 1. If you have done one test, you got one line. If you have done multiple test, you got multiple lines: the one started with your ID and all the ones without until the next student.
 For example:
 
-*Adelina Mai Linh Luu has done one test, Albert Dinh-Le has done two tests, and An Nguyen has done one test:*
+*Adelina Mai Linh Luu has done one test (G2), Albert Dinh-Le has done two tests (G3 and G4), and An Nguyen has done one test (G3):*
 
 |  ID  |          Name          |   Program   | Country | Level | P1 | P2 | P3 | P4 | P5 | Total |
 |:----:|:----------------------:|:-----------:|:-------:|:-----:|:--:|:--:|:--:|:--:|:--:|:-----:|
