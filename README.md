@@ -134,7 +134,7 @@ For example:
 |  S25 | Nathan Luong           | Enrichment  |    CA   |   G2  |  2 | 20 | 14 | 20 | 20 |   76  |
 |  S41 | Ngo Bao Ngoc           |             |         |   G2  |  6 |  6 |  6 |  6 |  2 |   26  |
 |      |                        |             |         |   G2  | 10 |  0 |  0 |  0 | 20 |   30  |
-| S131 | Nguyen Duy             | Enrichment  |    FE   |   G2  | 20 | 20 |  6 | 10 |  4 |   60  |
+| S131 | Nguyen Duy             | Enrichment  |    FR   |   G2  | 20 | 20 |  6 | 10 |  4 |   60  |
 |      |                        |             |         |   G3  |  2 |  2 |  6 |  6 |  0 |   16  |
 |  S82 | Nguyễn Gia Bảo Nam     | Fundamental |    VN   |   G2  | 20 | 20 | 20 | 20 | 18 |   98  |
 |      |                        |             |         |   G3  |  2 | 20 |  0 |  6 | 14 |   42  |
