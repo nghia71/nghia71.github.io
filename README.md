@@ -125,7 +125,7 @@ For example:
 |      |                        |             |         |   G3  |  2 | 20 |    | 20 |  2 |   44  |
 | S142 | Minh Hai Vu            | Enrichment  |    UK   |   G4  |    |    |    |    | 14 |   14  |
 |      |                        |             |         |   G3  |  2 |  6 | 16 | 20 | 10 |   54  |
-| S127 | Minh Ngoc Nguyen       | Fundamental |    UK   |   G2  | 20 | 20 | 20 | 18 | 10 |   88  |
+| S127 | Minh Ngoc Nguyen       | Fundamental |    US   |   G2  | 20 | 20 | 20 | 18 | 10 |   88  |
 |      |                        |             |         |   G3  |  2 | 10 |    |    | 20 |   32  |
 |  S81 | Minh Tran              |             |         |   G2  | 20 | 10 |  2 |  6 |  6 |   44  |
 |      |                        |             |         |   G2  | 20 |  0 |  4 |  2 | 20 |   46  |
