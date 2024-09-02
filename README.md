@@ -104,7 +104,7 @@ For example:
 |      |                        |             |         |   G2  | 20 |  0 | 20 |  2 |  0 |   42  |
 |  S68 | Leo Bui                | Fundamental |    US   |   G2  | 20 | 20 |  4 | 20 |  6 |   70  |
 |      |                        |             |         |   G3  | 20 | 20 |  4 |    | 10 |   54  |
-|  S31 | Linh Khanh Le          | Fundamental |    UK   |   G2  | 20 | 20 | 20 |  6 | 20 |   86  |
+|  S31 | Linh Khanh Le          | Enrichment  |    UK   |   G2  | 20 | 20 | 20 |  6 | 20 |   86  |
 |      |                        |             |         |   G3  | 20 | 10 |    |    | 20 |   50  |
 |  S38 | Long Doan              | Fundamental |    ES   |   G2  |  2 | 20 | 10 | 14 | 14 |   60  |
 |      |                        |             |         |   G3  |  2 | 20 |    |  2 |  2 |   26  |
