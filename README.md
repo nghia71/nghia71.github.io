@@ -125,7 +125,7 @@ For example:
 |      |                        |             |         |   G3  |  2 | 20 |    | 20 |  2 |   44  |
 | S142 | Minh Hai Vu            | Enrichment  |    UK   |   G4  |    |    |    |    | 14 |   14  |
 |      |                        |             |         |   G3  |  2 |  6 | 16 | 20 | 10 |   54  |
-| S127 | Minh Ngoc Nguyen       | Fundamental |    UK   |   G2  | 20 | 20 | 20 | 18 | 10 |   88  |
+| S127 | Minh Ngoc Nguyen       | Fundamental |    US   |   G2  | 20 | 20 | 20 | 18 | 10 |   88  |
 |      |                        |             |         |   G3  |  2 | 10 |    |    | 20 |   32  |
 |  S81 | Minh Tran              |             |         |   G2  | 20 | 10 |  2 |  6 |  6 |   44  |
 |      |                        |             |         |   G2  | 20 |  0 |  4 |  2 | 20 |   46  |
@@ -134,7 +134,7 @@ For example:
 |  S25 | Nathan Luong           | Enrichment  |    CA   |   G2  |  2 | 20 | 14 | 20 | 20 |   76  |
 |  S41 | Ngo Bao Ngoc           |             |         |   G2  |  6 |  6 |  6 |  6 |  2 |   26  |
 |      |                        |             |         |   G2  | 10 |  0 |  0 |  0 | 20 |   30  |
-| S131 | Nguyen Duy             | Enrichment  |    FE   |   G2  | 20 | 20 |  6 | 10 |  4 |   60  |
+| S131 | Nguyen Duy             | Enrichment  |    FR   |   G2  | 20 | 20 |  6 | 10 |  4 |   60  |
 |      |                        |             |         |   G3  |  2 |  2 |  6 |  6 |  0 |   16  |
 |  S82 | Nguyễn Gia Bảo Nam     | Fundamental |    VN   |   G2  | 20 | 20 | 20 | 20 | 18 |   98  |
 |      |                        |             |         |   G3  |  2 | 20 |  0 |  6 | 14 |   42  |
