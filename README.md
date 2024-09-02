@@ -74,7 +74,7 @@ For example:
 | S104 | Henry Minh Nhat Trinh  | Enrichment  |    US   |   G3  | 20 | 20 | 20 |  2 | 18 |   80  |
 |      |                        |             |         |   G4  |  0 |  0 |    |    |    |   0   |
 |  S56 | Hien-Lam Nguyen        | Fundamental |    UK   |   G2  | 20 | 14 |  0 |  6 |  4 |   44  |
-|      |                        |             |         |   G2  | 20 | 20 | 20 | 20 | 20 |  100  |
+|      |                        |             |         |   G2  | 20 | 14 | 20 | 20 | 20 |   94  |
 |  S59 | Hoang Dang             | Fundamental |    US   |   G3  |    | 20 | 20 | 19 | 16 |   75  |
 |      |                        |             |         |   G4  |    | 20 |    |    |    |   20  |
 |  S15 | Huu Duc Nguyen         |             |    ?    |   G2  |  2 |  0 |  0 |  0 |  0 |   2   |
