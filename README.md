@@ -17,7 +17,7 @@ For example:
 |  S84 | An Nguyen              | Enrichment  |    UK   |   G3  |  4 | 20 |  2 | 12 | 20 |   58  |
 
 2. **If you got 50+ points**, you are accepted to that level group. If you pass more, you can be accepted to the highest level of them.
-*It is your choice which level do you want to attend.* In the example above *Adelina Mai Linh Luu is accepted to level G2*, *Albert Dinh-Le has a choice to G3 or G4,* and *An Nguyen is accepted to G3.* Be careful when making the choice. It should be the one that *you are comfortable with.*
+*It is your choice which level do you want to attend.* In the example above *Adelina Mai Linh Luu is accepted to level G2*, *Albert Dinh-Le has a choice for G3 or G4,* and *An Nguyen is accepted to G3.* Be careful when making the choice. It should be the one that *you are comfortable with.*
 
 3. **If you got under 50 points**, you can be accepted to G1.
 
