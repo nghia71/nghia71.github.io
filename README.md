@@ -89,6 +89,7 @@ For example:
 |  S62 | Julie Cao              | Enrichment  |    FR   |   G2  | 20 | 20 | 10 | 20 | 14 |   84  |
 |      |                        |             |         |   G3  |  2 | 20 |  0 |    | 20 |   42  |
 |  S44 | Karl Le                | Fundamental |    FR   |   G3  |  2 | 20 | 20 |    | 20 |   62  |
+|      |                        |             |         |   G2  | 20 | 20 |  6 |    |    |   46  |
 |  S55 | Khai-Tam Nguyen        |             |    UK   |   G3  |  0 | 20 |  0 |  0 |  2 |   22  |
 |      |                        |             |         |   G3  |  2 | 10 |  1 |  0 | 10 |   23  |
 | S145 | Khang Nguyen           | Fundamental |    US   |   G2  | 10 |  2 | 14 |  0 |  0 |   26  |
