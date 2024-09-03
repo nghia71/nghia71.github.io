@@ -2,7 +2,7 @@
 
 ## Ongoing Enrichment Team Organization:
 
-*Currently we have 5 students from Canada, 1 from Spain, 15 from France, 13 from UK, 11 from US, and 3 from VN to form 8 teams, each of 6 members.()
+*Currently we have 5 students from Canada, 1 from Spain, 15 from France, 13 from UK, 11 from US, and 3 from VN to form 8 teams (each has maximum 6 members.)
 
 Enrichment Team Program: it is an optional program, offering for students G2, G3, and G4 only, to help them to study more deeply and work with teammates:
 - In every 6 weeks, a number of challenges are issued. The members of in a team will work together solve and submit solutions at deadlines. Teams submitted great solutions will be invited for presentation in seminars.
