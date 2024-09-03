@@ -67,7 +67,7 @@ For example:
 |        |                                |                        |             |             |   **G3**  |              |   20   |   20   |    0   |   20   |   20   |   **80**  |
 |   S73  | haidoan711@gmail.com           | Fred Bui               | Enrichment  |      CA     |   **G2**  |      G2      |   18   |   20   |   20   |   20   |   16   |   **94**  |
 |        |                                |                        |             |             |   **G3**  |              |    2   |    4   |    2   |        |        |   **8**   |
-|   S29  | trangnguyen.thtn@gmail.com     | Geoffrey Cao           | Enrichment  |      US     |   **G2**  |              |   20   |   20   |   20   |   20   |   20   |  **100**  |
+|   S29  | trangnguyen.thtn@gmail.com     | Geoffrey Cao           | Enrichment  |      US     |   **G3**  |              |   20   |   20   |   20   |   20   |   20   |  **100**  |
 |        |                                |                        |             |             |   **G3**  |      G3      |    4   |    6   |        |   20   |   20   |   **50**  |
 |  S128  | vinhnq@vt.edu                  | Giang Nguyen           | Fundamental |      US     |   **G2**  |              |   14   |   20   |   20   |   18   |   18   |   **90**  |
 |        |                                |                        |             |             |   **G3**  |      G3      |    2   |   20   |    0   |   20   |   20   |   **62**  |
