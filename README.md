@@ -11,7 +11,6 @@ It is expected that participating student needs to invest an additional 7 hours/
 
 Solving monthly challenges is to be able to invest in deep thinking on difficult problems, on topics that require extensive reading and deep understanding. Working together during a 90-minute test requires even better collaboration. Both are the key aspects of learning to work as a team.
 
-
 ## FINAL Result of Entrance Test (Day 1 & 2)
 
 ### How to read the result:
