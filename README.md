@@ -94,7 +94,7 @@ For example:
 |      |                        |             |         |   G3  | 20 | 20 |    |    | 10 |   50  |
 |  S14 | James Minh Trí Nguyen  |             |    CA   |   G2  |  2 |  0 |  0 |  0 |  4 |   6   |
 |      |                        |             |         |   G3  |  2 |  2 |    |    |    |   4   |
-|  S12 | Jason To               | Enrichment  |    UK   |   G3  |  4 |  6 |    | 20 | 18 |   48  |
+|  S12 | Jason To               | Enrichment  |    UK   |   G3  |  6 |  6 |    | 20 | 20 |   52  |
 |  S93 | John Minh Quan         | Enrichment  |    VN   |   G3  | 20 | 20 | 20 |    | 18 |   78  |
 |      |                        |             |         |   G3  |  2 | 20 |  6 | 10 | 20 |   58  |
 |  S62 | Julie Cao              | Enrichment  |    FR   |   G2  | 20 | 20 | 10 | 20 | 14 |   84  |
