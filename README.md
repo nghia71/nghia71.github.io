@@ -1,12 +1,12 @@
 ![Math Club & Competitions (MCC)](./img/MCC-2024-Logo-Large.png)
 
-## A. September 8, 2024 - Admission Announcement
+## [A. September 8, 2024 - Admission Announcement](#a-september-8-2024---admission-announcement)
 
 Welcome to the 2024 - 2025 School Year of the Math Club & Competitions!
 
 *Please read carefully the content below before sending any question to the club.*
 
-### A.1. Level Groups:
+### [A.1. Level Groups](#a1-level-groups)
 
 There are 4 level groups for students from grades 4 to 12:
 - *Group 1 (G1) for beginners*: absolute no prerequisite is required for joining this group. All students will learn basic approach to mathematics and problem solving.
@@ -16,7 +16,7 @@ There are 4 level groups for students from grades 4 to 12:
 
 Each of the students is accepted for a level group. For G2, G3, or G4, the student had taken a successful test. Congratulation!
 
-### A.2. Official Curriculum:
+### [A.2. Official Curriculum](#a2-official-curriculum)
 
 The student will use the official [2024-2025 curriculum](https://drive.google.com/file/d/13mwcNV9et5dG1OMAAgAIPAQ3TFU9wjVL/view?usp=sharing) for to study in Semester 1.
 
@@ -28,9 +28,9 @@ What part of the curriculum the student learns is based on his/her level group a
 
 You can also checkout the official solutions for the entrance test day 1 & 2 in Part I of the book.
 
-### A.3. Programs:
+### [A.3. Programs](#a3-programs)
 
-#### A.3.1 Fundamental program:
+#### [A.3.1 Fundamental program](#a31-fundamental-program)
 
 In every week of the first 4 weeks of every 6-week cycle, the student attends a 60-minute seminar on a topic on Sunday, then practicing on home assignment from the content of the seminar, then a 90-minutes test on the following Saturday In short, every week from Sunday to Saturday, students need about 7 hours, equivalent to 1 hour/day.
 
@@ -173,7 +173,7 @@ Below is the list of all accepted students. Note that:
 |  S85 | Zygmunt Malig          | Fundamental  |   G2  |   7   |    UK   |    BST   | [Link](https://drive.google.com/drive/folders/1MFd0DbOkEUrzjYY9gr3PM075rWWDUqLD)             |
 | S148 | Hà Tấn Cương           | Fundamental  |   G1  |   7   |    VN   |   GMT+7  | [Link](https://drive.google.com/drive/folders/1Slmolacv_GRrza9bXRGbNsIfnQ1nJAZF?usp=sharing  |
 
-#### A.3.2. Enrichment program:
+#### [A.3.2. Enrichment program](#a32-enrichment-program)
 
 This is an *optional program,* offering for students G2, G3, and G4 only, to help them to study more deeply and work with teammates
 - In every 6 weeks, a team challenge consisting of a number of problems are issued. The members of in a team will work together solve and submit solutions at deadlines. Teams submitted great solutions will be invited for presentation in seminars.
@@ -241,7 +241,7 @@ Below are the list of the teams:
 |         |    S107    | Nguyen Minh Phong      | Enrichment |   G2  |   7   |    VN   |   GMT+7  | Lieutenant |
 |         |    S108    | Nguyen Hai Ha          | Enrichment |   G2  |   7   |    VN   |   GMT+7  |   Member   |
 
-### A.4. Learning Calendar:
+### [A.4. Learning Calendar:](#a4-learning-calendar)
 
 | **6-week cycle** | **Program** | **Session** | **Seminar Day** | **Q&A Day** | **Individual Test Day** | **Team Test Day** | **Team Challenge Day** | **Grading** |        | **Review** |        |
 |:----------------:|:-----------:|:-----------:|:---------------:|:-----------:|:-----------------------:|:-----------------:|:----------------------:|:-----------:|:------:|:----------:|:------:|
@@ -260,7 +260,7 @@ Below are the list of the teams:
 |                  |  Enrichment |  Session 11 |                 |    Dec 1    |                         |       Dec 7       |                        |    Dec 8    | Dec 12 |   Dec 13   | Dec 14 |
 |                  |             |  Session 12 |                 |    Dec 8    |                         |                   |         Dec 14         |    Dec 15   | Dec 29 |   Dec 20   | Dec 21 |
 
-#### A.4.1. 6-week Cycles:
+#### [A.4.1. 6-week Cycles](#a41-6-week-cycles)
 
 The school calendar is divided into 6-week cycle. In the first semester, we have 2 cycles. See above.
 
@@ -281,7 +281,7 @@ Each cycle contains 6 sessions, each is intended to be within a week:
 
 Above, you can see that periods when the submissions will be graded and reviewed.
 
-#### A.4.2. Seminar Times
+#### [A.4.2. Seminar Times](#a42-seminar-times)
 
 Each seminar lasts for 30 minutes. The timezone for each student is on the list of all admintted students:
 - G1: 10:00 AM - 10:30 AM Eastern Time
@@ -293,7 +293,7 @@ Each seminar lasts for 30 minutes. The timezone for each student is on the list 
 
 Zoom links to each of the seminars will be provided.
 
-#### A.4.3. Test Times
+#### [A.4.3. Test Times](#a43-test-times)
 
 Students with in a group of timezones, see below, will participate both individual and team tests at the same time:
 
@@ -440,7 +440,7 @@ a captain's or lieutenant's folder - if it is a team test.
 |       N/A      |  S63 | Nguyen Binh An         | Fundamental  |   G1  |   4   |   N/A   |          |
 |                |  S95 | Anne Chu               | Fundamental  |   G2  |   7   |   N/A   |          |
 
-#### A.5. Important Dates
+#### [A.5. Important Dates](#a5-important-dates)
 
 **Important dates**
 - **September 8: Admission Announcement** - preliminary program calendar, level groups, and teams
@@ -449,7 +449,7 @@ a captain's or lieutenant's folder - if it is a team test.
 
 -----
 
-## B. September 2, 2024 - FINAL Result of Entrance Test (Day 1 & 2)
+## [B. September 2, 2024 - FINAL Result of Entrance Test (Day 1 & 2)](#b-september-2-2024---final-result-of-entrance-test-day-1--2)
 
 ### B.1. How to read the result:
 
@@ -643,7 +643,7 @@ For example:
 
 -----
 
-## C. [Club's books](#clubs-books)
+## [C. Club's books](#c-clubs-books)
 
 Below are the books containing tens of thousands of problems and solutions that students are advised to use for learning problem solving: the first set is our own *Learning Problem Solving* volumes and the previous school year books.
 
