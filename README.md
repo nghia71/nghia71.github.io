@@ -10,8 +10,8 @@ Welcome to the 2024 - 2025 School Year of the Math Club & Competitions!
 
 There are 4 level groups for students from grades 4 to 12:
 
-|                   Group                  |                                                                                   Students                                                                                   |
-|:----------------------------------------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+| Group                                    | Students                                                                                                                                                                     |
+|------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | *Group 1 (G1) for beginners*             | absolute no prerequisite is required for joining this group. All students will learn basic approach to mathematics and problem solving.                                      |
 | *Group 2 (G2) for intermediate students* | who have an understanding of basic mathematical concepts and obtained a few skills to solve math problem. They are capable of writing their own solution to a given problem. |
 | *Group 3 (G3) for advanced students*     | who are ready to go on the track to master enough knowledge and skills to solve any math problems in school and willing to go the distance for national competitions.        |
@@ -23,7 +23,7 @@ The student will use the official [2024-2025 curriculum](https://drive.google.co
 
 What part of the curriculum the student learns is based on his/her level group as follow:
 
-| Level |      Chapters     |              Part             |
+| Level | Chapters          | Part                          |
 |:-----:|:-----------------:|:-----------------------------:|
 |   G1  | Chapters 03 to 10 | Part II - Beginner Level      |
 |   G2  | Chapters 11 to 18 | Part III - Intermediate Level |
