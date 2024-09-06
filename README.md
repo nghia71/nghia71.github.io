@@ -44,7 +44,7 @@ Below is the list of all accepted students. Note that:
 - the club maintains (only) two emails per student (one for the student, one for a parent) on a mailing list [Google Group MCC 2024-2025](https://groups.google.com/g/mcc-2024-2025) This is to be used for email when we need to send email to everyone.
 - each shared folder assigned to a student is accessible by two email accounts mentioned. Only the club organizers and volunteer graders have access to this folder.
 
-| ID | Student | Program | Level | Grade | Country | Timezone | Folder |
+| ID | Student | Program | Level | Grade | Country | Timezone | Folder Link |
 |:---:|---|---|:---:|:---:|:---:|:---:|---|
 | S77 | Adelina Mai Linh Luu | Fundamental | G2 | 7 | CA | MDT | [Link](https://drive.google.com/drive/folders/1Ls9aA_SYUf7DncTjzM1Mx-QQwRvstLpf) |
 | S101 | Albert Dinh-Le | Enrichment | G4 | 12 | FR | CEST | [Link](https://drive.google.com/drive/folders/1N56n-gwRqGFJjfHiy-EYp06XiyO8hIZu) |
