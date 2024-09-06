@@ -283,7 +283,7 @@ Above, you can see that periods when the submissions will be graded and reviewed
 
 #### [A.4.2. Seminar Times](#a42-seminar-times)
 
-Use **[this link](https://www.worldtimebuddy.com/?qm=1&lid=2193733,2078025,1857910,127,12,14,305,306,307,308&h=305&date=2024-9-22&sln=10-12&hf=1&c=1444)** to see what time in your timezone correspond to the time in other zones
+Use **[this link](https://www.worldtimebuddy.com/?qm=1&lid=2193733,2078025,1857910,127,12,14,305,306,307,308&h=305&date=2024-9-22&sln=10-12&hf=1&c=1444)** to see what time in your timezone corresponds to the times in other zones.
 
 Each seminar lasts for 30 minutes. The timezone for each student is on the list of all admintted students:
 - G1: 10:00 AM - 10:30 AM Eastern Time
