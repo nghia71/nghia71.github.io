@@ -21,10 +21,13 @@ Each of the students is accepted for a level group. For G2, G3, or G4, the stude
 The student will use the official [2024-2025 curriculum](https://drive.google.com/file/d/13mwcNV9et5dG1OMAAgAIPAQ3TFU9wjVL/view?usp=sharing) for to study in Semester 1.
 
 What part of the curriculum the student learns is based on his/her level group as follow:
-- G1: Chapters 03 to 10 of Part II - Beginner Level
-- G2: Chapters 11 to 18 of Part III - Intermediate Level
-- G3: Chapters 19 to 26 of Part IV - Advanced Level
-- G4: Chapters 27 to 34 of Part V - Olympiad Level
+
+| Level |      Chapters     |              Part             |
+|:-----:|:-----------------:|:-----------------------------:|
+|   G1  | Chapters 03 to 10 | Part II - Beginner Level      |
+|   G2  | Chapters 11 to 18 | Part III - Intermediate Level |
+|   G3  | Chapters 19 to 26 | Part IV - Advanced Level      |
+|   G4  | Chapters 27 to 34 | Part V - Olympiad Level       |
 
 You can also checkout the official solutions for the entrance test day 1 & 2 in Part I of the book.
 
@@ -286,10 +289,13 @@ Above, you can see that periods when the submissions will be graded and reviewed
 Use **[this link](https://www.worldtimebuddy.com/?qm=1&lid=2193733,2078025,1857910,127,12,14,305,306,307,308&h=305&date=2024-9-22&sln=10-12&hf=1&c=1444)** to see what time in your timezone corresponds to the times in other zones.
 
 Each seminar lasts for 30 minutes. The timezone for each student is on the list of all admintted students:
-- G1: 10:00 AM - 10:30 AM Eastern Time
-- G2: 10:30 AM - 11:00 AM Eastern Time
-- G3: 11:00 AM - 11:30 AM Eastern Time
-- G4: 11:30 AM - 12:00 PM Eastern Time
+
+| Level |               Time               |
+|:-----:|:--------------------------------:|
+|   G1  | 10:00 AM - 10:30 AM Eastern Time |
+|   G2  | 10:30 AM - 11:00 AM Eastern Time |
+|   G3  | 11:00 AM - 11:30 AM Eastern Time |
+|   G4  | 11:30 AM - 12:00 PM Eastern Time |
 
 ![Seminar Times](./img/seminar-time-24-25-SM1.png)
 
@@ -299,10 +305,12 @@ Zoom links to each of the seminars will be provided.
 
 Students with in a group of timezones, see below, will participate both individual and team tests at the same time:
 
-- VN+AU+JP+NZ: 00:00 AM - 01:30 AM Eastern Time
-- UK+FR+ES: 05:00 AM - 06:30 AM Eastern Time
-- CA+US: 10:00 AM - 11:30 AM Eastern Time
-- N/A: 10:00 AM - 11:30 PM Eastern Time
+| Timezone group |               Time               |
+|:--------------:|:--------------------------------:|
+|   VN+AU+JP+NZ  | 00:00 AM - 01:30 AM Eastern Time |
+|    UK+FR+ES    | 05:00 AM - 06:30 AM Eastern Time |
+|      CA+US     | 10:00 AM - 11:30 AM Eastern Time |
+|       N/A      | 10:00 AM - 11:30 PM Eastern Time |
 
 All the test problems are sent directly to the student emails. All submissions must be uploaded to individual folders - if it is an individual test,
 a captain's or lieutenant's folder - if it is a team test.
