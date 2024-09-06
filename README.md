@@ -84,7 +84,7 @@ Below is the list of all accepted students. Note that:
 |  S88 | Hieu Nguyen            | Fundamental  |   G1  |   5   |    US   |    EDT   | [Link](https://drive.google.com/drive/folders/1M9Tv3JNov77QW8HfSlL6I3A0O5c70A-X?usp=sharing) |
 |  S59 | Hoang Dang             | Fundamental  |   G3  |   9   |    US   |    PDT   | [Link](https://drive.google.com/drive/folders/1K3IVPMdOCA0BUFpBigG7ITIxDc9xF12v)             |
 |  S4  | Hoang Xuan Bach        | Fundamental  |   G1  |   3   |    VN   |   GMT+7  | [Link](https://drive.google.com/drive/folders/1HTXJEpqYV6jujK4V_fiHuMH7lFyvdIM6?usp=sharing) |
-|  S15 | Huu Duc Nguyen         | Fundamental  |   G1  |   7   |   N/A   |          | [Link](https://drive.google.com/drive/folders/1GSZxzi1E-yjzfwT8nbPYafl8ODe8Wt5u)             |
+|  S15 | Huu Duc Nguyen         | Fundamental  |   G1  |   7   |    CA   |    CDT   | [Link](https://drive.google.com/drive/folders/1GSZxzi1E-yjzfwT8nbPYafl8ODe8Wt5u)             |
 | S115 | Huynh Minh Nhien       | Fundamental  |   G1  |   5   |    VN   |   GMT+7  | [Link](https://drive.google.com/drive/folders/1OSE1HmBWpVEcnlMMKnsfiD-_JtKr42bf?usp=sharing) |
 |  S72 | Jade Pham              | Enrichment   |   G3  |   8   |    FR   |   CEST   | [Link](https://drive.google.com/drive/folders/1KpsyJwAbNW2SA1ZkdDkaBIsIbMhKDs0d)             |
 | S114 | James Minh Trí Nguyen  | Fundamental  |   G1  |   4   |    CA   |    PDT   | [Link](https://drive.google.com/drive/folders/1GqGSoeLGAVtFmnqS1_XX25G9QPLJ9cTM)             |
