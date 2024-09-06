@@ -255,212 +255,195 @@ Below are the list of the teams:
   overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
   font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-wp8o{border-color:#000000;text-align:center;vertical-align:top}
-.tg .tg-xwyw{border-color:#000000;text-align:center;vertical-align:middle}
-.tg .tg-73oq{border-color:#000000;text-align:left;vertical-align:top}
+.tg .tg-hrrh{background-color:#ffffff;border-color:#000000;color:#333333;text-align:left;vertical-align:top}
+.tg .tg-trlr{background-color:#ffffff;border-color:#000000;color:#333333;text-align:center;vertical-align:middle}
+.tg .tg-2qwx{background-color:#ffffff;border-color:#000000;color:#333333;text-align:center;vertical-align:top}
 </style>
 <table class="tg"><thead>
   <tr>
-    <th class="tg-xwyw" rowspan="2">6-week cycle</th>
-    <th class="tg-xwyw" rowspan="2">Program</th>
-    <th class="tg-xwyw" rowspan="2">Session</th>
-    <th class="tg-xwyw" rowspan="2">Seminar Day</th>
-    <th class="tg-xwyw" rowspan="2">Q&amp;A Day</th>
-    <th class="tg-xwyw" rowspan="2">Individual Test Day</th>
-    <th class="tg-xwyw" rowspan="2">Team Test Day</th>
-    <th class="tg-xwyw" rowspan="2">Team Challenge Day</th>
-    <th class="tg-xwyw" colspan="2">Grading</th>
-    <th class="tg-xwyw" colspan="2">Review</th>
+    <th class="tg-trlr" rowspan="2">6-week cycle</th>
+    <th class="tg-trlr" rowspan="2">Program</th>
+    <th class="tg-trlr" rowspan="2">Session</th>
+    <th class="tg-trlr" rowspan="2">Seminar Day</th>
+    <th class="tg-trlr" rowspan="2">Q&amp;A Day</th>
+    <th class="tg-trlr" rowspan="2">Individual Test Day</th>
+    <th class="tg-trlr" rowspan="2">Team Test Day</th>
+    <th class="tg-trlr" rowspan="2">Team Challenge Day</th>
+    <th class="tg-trlr" colspan="2">Grading</th>
+    <th class="tg-trlr" colspan="2">Review</th>
   </tr>
   <tr>
-    <th class="tg-xwyw">Begin</th>
-    <th class="tg-xwyw">End</th>
-    <th class="tg-xwyw">Begin</th>
-    <th class="tg-xwyw">End</th>
+    <th class="tg-trlr">Begin</th>
+    <th class="tg-trlr">End</th>
+    <th class="tg-trlr">Begin</th>
+    <th class="tg-trlr">End</th>
   </tr></thead>
 <tbody>
   <tr>
-    <td class="tg-xwyw" rowspan="6">Cycle 1</td>
-    <td class="tg-xwyw" rowspan="4">Fundamental</td>
-    <td class="tg-wp8o">S1</td>
-    <td class="tg-wp8o">Sep 22</td>
-    <td class="tg-73oq"></td>
-    <td class="tg-wp8o">Sep 28</td>
-    <td class="tg-73oq"></td>
-    <td class="tg-73oq"></td>
-    <td class="tg-wp8o">Sep 29</td>
-    <td class="tg-wp8o">Oct 3</td>
-    <td class="tg-wp8o">Oct 4</td>
-    <td class="tg-wp8o">Oct 5</td>
+    <td class="tg-trlr" rowspan="6">Cycle 1</td>
+    <td class="tg-trlr" rowspan="4">Fundamental</td>
+    <td class="tg-2qwx">S1</td>
+    <td class="tg-2qwx">Sep 22</td>
+    <td class="tg-hrrh"></td>
+    <td class="tg-2qwx">Sep 28</td>
+    <td class="tg-hrrh"></td>
+    <td class="tg-hrrh"></td>
+    <td class="tg-2qwx">Sep 29</td>
+    <td class="tg-2qwx">Oct 3</td>
+    <td class="tg-2qwx">Oct 4</td>
+    <td class="tg-2qwx">Oct 5</td>
   </tr>
   <tr>
-    <td class="tg-wp8o">S2</td>
-    <td class="tg-wp8o">Sep 29</td>
-    <td class="tg-73oq"></td>
-    <td class="tg-wp8o">Oct 5</td>
-    <td class="tg-73oq"></td>
-    <td class="tg-73oq"></td>
-    <td class="tg-wp8o">Oct 6</td>
-    <td class="tg-wp8o">Oct10</td>
-    <td class="tg-wp8o">Oct 11</td>
-    <td class="tg-wp8o">Oct 12</td>
+    <td class="tg-2qwx">S2</td>
+    <td class="tg-2qwx">Sep 29</td>
+    <td class="tg-hrrh"></td>
+    <td class="tg-2qwx">Oct 5</td>
+    <td class="tg-hrrh"></td>
+    <td class="tg-hrrh"></td>
+    <td class="tg-2qwx">Oct 6</td>
+    <td class="tg-2qwx">Oct10</td>
+    <td class="tg-2qwx">Oct 11</td>
+    <td class="tg-2qwx">Oct 12</td>
   </tr>
   <tr>
-    <td class="tg-wp8o">S3</td>
-    <td class="tg-wp8o">Oct 6</td>
-    <td class="tg-73oq"></td>
-    <td class="tg-wp8o">Oct 12</td>
-    <td class="tg-73oq"></td>
-    <td class="tg-73oq"></td>
-    <td class="tg-wp8o">Oct 13</td>
-    <td class="tg-wp8o">Oct 17</td>
-    <td class="tg-wp8o">Oct 18</td>
-    <td class="tg-wp8o">Oct 19</td>
+    <td class="tg-2qwx">S3</td>
+    <td class="tg-2qwx">Oct 6</td>
+    <td class="tg-hrrh"></td>
+    <td class="tg-2qwx">Oct 12</td>
+    <td class="tg-hrrh"></td>
+    <td class="tg-hrrh"></td>
+    <td class="tg-2qwx">Oct 13</td>
+    <td class="tg-2qwx">Oct 17</td>
+    <td class="tg-2qwx">Oct 18</td>
+    <td class="tg-2qwx">Oct 19</td>
   </tr>
   <tr>
-    <td class="tg-wp8o">S4</td>
-    <td class="tg-wp8o">Oct 13</td>
-    <td class="tg-73oq"></td>
-    <td class="tg-wp8o">Oct 19</td>
-    <td class="tg-73oq"></td>
-    <td class="tg-73oq"></td>
-    <td class="tg-wp8o">Oct 20</td>
-    <td class="tg-wp8o">Oct 24</td>
-    <td class="tg-wp8o">Oct 26</td>
-    <td class="tg-wp8o">Oct 26</td>
+    <td class="tg-2qwx">S4</td>
+    <td class="tg-2qwx">Oct 13</td>
+    <td class="tg-hrrh"></td>
+    <td class="tg-2qwx">Oct 19</td>
+    <td class="tg-hrrh"></td>
+    <td class="tg-hrrh"></td>
+    <td class="tg-2qwx">Oct 20</td>
+    <td class="tg-2qwx">Oct 24</td>
+    <td class="tg-2qwx">Oct 26</td>
+    <td class="tg-2qwx">Oct 26</td>
   </tr>
   <tr>
-    <td class="tg-xwyw" rowspan="2">Enrichment</td>
-    <td class="tg-wp8o">S5</td>
-    <td class="tg-73oq"></td>
-    <td class="tg-wp8o">Oct 20</td>
-    <td class="tg-73oq"></td>
-    <td class="tg-wp8o">Oct 26</td>
-    <td class="tg-73oq"></td>
-    <td class="tg-wp8o">Oct 27</td>
-    <td class="tg-wp8o">Oct 31</td>
-    <td class="tg-wp8o">Nov 1</td>
-    <td class="tg-wp8o">Nov 2</td>
+    <td class="tg-trlr" rowspan="2">Enrichment</td>
+    <td class="tg-2qwx">S5</td>
+    <td class="tg-hrrh"></td>
+    <td class="tg-2qwx">Oct 20</td>
+    <td class="tg-hrrh"></td>
+    <td class="tg-2qwx">Oct 26</td>
+    <td class="tg-hrrh"></td>
+    <td class="tg-2qwx">Oct 27</td>
+    <td class="tg-2qwx">Oct 31</td>
+    <td class="tg-2qwx">Nov 1</td>
+    <td class="tg-2qwx">Nov 2</td>
   </tr>
   <tr>
-    <td class="tg-wp8o">S6</td>
-    <td class="tg-73oq"></td>
-    <td class="tg-wp8o">Oct 27</td>
-    <td class="tg-73oq"></td>
-    <td class="tg-73oq"></td>
-    <td class="tg-wp8o">Nov 2</td>
-    <td class="tg-wp8o">Nov 3</td>
-    <td class="tg-wp8o">Nov 7</td>
-    <td class="tg-wp8o">Nov 8</td>
-    <td class="tg-wp8o">Nov 9</td>
+    <td class="tg-2qwx">S6</td>
+    <td class="tg-hrrh"></td>
+    <td class="tg-2qwx">Oct 27</td>
+    <td class="tg-hrrh"></td>
+    <td class="tg-hrrh"></td>
+    <td class="tg-2qwx">Nov 2</td>
+    <td class="tg-2qwx">Nov 3</td>
+    <td class="tg-2qwx">Nov 7</td>
+    <td class="tg-2qwx">Nov 8</td>
+    <td class="tg-2qwx">Nov 9</td>
   </tr>
   <tr>
-    <td class="tg-73oq"></td>
-    <td class="tg-73oq"></td>
-    <td class="tg-73oq"></td>
-    <td class="tg-73oq"></td>
-    <td class="tg-73oq"></td>
-    <td class="tg-73oq"></td>
-    <td class="tg-73oq"></td>
-    <td class="tg-73oq"></td>
-    <td class="tg-73oq"></td>
-    <td class="tg-73oq"></td>
-    <td class="tg-73oq"></td>
-    <td class="tg-73oq"></td>
+    <td class="tg-hrrh"></td>
+    <td class="tg-hrrh"></td>
+    <td class="tg-hrrh"></td>
+    <td class="tg-hrrh"></td>
+    <td class="tg-hrrh"></td>
+    <td class="tg-hrrh"></td>
+    <td class="tg-hrrh"></td>
+    <td class="tg-hrrh"></td>
+    <td class="tg-hrrh"></td>
+    <td class="tg-hrrh"></td>
+    <td class="tg-hrrh"></td>
+    <td class="tg-hrrh"></td>
   </tr>
   <tr>
-    <td class="tg-xwyw" rowspan="6">Cycle 2</td>
-    <td class="tg-xwyw" rowspan="4">Fundamental</td>
-    <td class="tg-wp8o">S7</td>
-    <td class="tg-wp8o">Nov 3</td>
-    <td class="tg-73oq"></td>
-    <td class="tg-wp8o">Nov 9</td>
-    <td class="tg-73oq"></td>
-    <td class="tg-73oq"></td>
-    <td class="tg-wp8o">Nov 10</td>
-    <td class="tg-wp8o">Nov 14</td>
-    <td class="tg-wp8o">Nov 15</td>
-    <td class="tg-wp8o">Nov 16</td>
+    <td class="tg-trlr" rowspan="6">Cycle 2</td>
+    <td class="tg-trlr" rowspan="4">Fundamental</td>
+    <td class="tg-2qwx">S7</td>
+    <td class="tg-2qwx">Nov 3</td>
+    <td class="tg-hrrh"></td>
+    <td class="tg-2qwx">Nov 9</td>
+    <td class="tg-hrrh"></td>
+    <td class="tg-hrrh"></td>
+    <td class="tg-2qwx">Nov 10</td>
+    <td class="tg-2qwx">Nov 14</td>
+    <td class="tg-2qwx">Nov 15</td>
+    <td class="tg-2qwx">Nov 16</td>
   </tr>
   <tr>
-    <td class="tg-wp8o">S8</td>
-    <td class="tg-wp8o">Nov 10</td>
-    <td class="tg-73oq"></td>
-    <td class="tg-wp8o">Nov 16</td>
-    <td class="tg-73oq"></td>
-    <td class="tg-73oq"></td>
-    <td class="tg-wp8o">Nov 17</td>
-    <td class="tg-wp8o">Nov 21</td>
-    <td class="tg-wp8o">Nov 22</td>
-    <td class="tg-wp8o">Nov 23</td>
+    <td class="tg-2qwx">S8</td>
+    <td class="tg-2qwx">Nov 10</td>
+    <td class="tg-hrrh"></td>
+    <td class="tg-2qwx">Nov 16</td>
+    <td class="tg-hrrh"></td>
+    <td class="tg-hrrh"></td>
+    <td class="tg-2qwx">Nov 17</td>
+    <td class="tg-2qwx">Nov 21</td>
+    <td class="tg-2qwx">Nov 22</td>
+    <td class="tg-2qwx">Nov 23</td>
   </tr>
   <tr>
-    <td class="tg-wp8o">S9</td>
-    <td class="tg-wp8o">Nov 17</td>
-    <td class="tg-73oq"></td>
-    <td class="tg-wp8o">Nov 23</td>
-    <td class="tg-73oq"></td>
-    <td class="tg-73oq"></td>
-    <td class="tg-wp8o">Nov 24</td>
-    <td class="tg-wp8o">Nov 28</td>
-    <td class="tg-wp8o">Nov 29</td>
-    <td class="tg-wp8o">Nov 30</td>
+    <td class="tg-2qwx">S9</td>
+    <td class="tg-2qwx">Nov 17</td>
+    <td class="tg-hrrh"></td>
+    <td class="tg-2qwx">Nov 23</td>
+    <td class="tg-hrrh"></td>
+    <td class="tg-hrrh"></td>
+    <td class="tg-2qwx">Nov 24</td>
+    <td class="tg-2qwx">Nov 28</td>
+    <td class="tg-2qwx">Nov 29</td>
+    <td class="tg-2qwx">Nov 30</td>
   </tr>
   <tr>
-    <td class="tg-wp8o">S10</td>
-    <td class="tg-wp8o">Nov 24</td>
-    <td class="tg-73oq"></td>
-    <td class="tg-wp8o">Nov 30</td>
-    <td class="tg-73oq"></td>
-    <td class="tg-73oq"></td>
-    <td class="tg-wp8o">Dec 1</td>
-    <td class="tg-wp8o">Dec 5</td>
-    <td class="tg-wp8o">Dec 6</td>
-    <td class="tg-wp8o">Dec 7</td>
+    <td class="tg-2qwx">S10</td>
+    <td class="tg-2qwx">Nov 24</td>
+    <td class="tg-hrrh"></td>
+    <td class="tg-2qwx">Nov 30</td>
+    <td class="tg-hrrh"></td>
+    <td class="tg-hrrh"></td>
+    <td class="tg-2qwx">Dec 1</td>
+    <td class="tg-2qwx">Dec 5</td>
+    <td class="tg-2qwx">Dec 6</td>
+    <td class="tg-2qwx">Dec 7</td>
   </tr>
   <tr>
-    <td class="tg-xwyw" rowspan="2">Enrichment</td>
-    <td class="tg-wp8o">S11</td>
-    <td class="tg-73oq"></td>
-    <td class="tg-wp8o">Dec 1</td>
-    <td class="tg-73oq"></td>
-    <td class="tg-wp8o">Dec 7</td>
-    <td class="tg-73oq"></td>
-    <td class="tg-wp8o">Dec 8</td>
-    <td class="tg-wp8o">Dec 12</td>
-    <td class="tg-wp8o">Dec 13</td>
-    <td class="tg-wp8o">Dec 14</td>
+    <td class="tg-trlr" rowspan="2">Enrichment</td>
+    <td class="tg-2qwx">S11</td>
+    <td class="tg-hrrh"></td>
+    <td class="tg-2qwx">Dec 1</td>
+    <td class="tg-hrrh"></td>
+    <td class="tg-2qwx">Dec 7</td>
+    <td class="tg-hrrh"></td>
+    <td class="tg-2qwx">Dec 8</td>
+    <td class="tg-2qwx">Dec 12</td>
+    <td class="tg-2qwx">Dec 13</td>
+    <td class="tg-2qwx">Dec 14</td>
   </tr>
   <tr>
-    <td class="tg-wp8o">S12</td>
-    <td class="tg-73oq"></td>
-    <td class="tg-wp8o">Dec 8</td>
-    <td class="tg-73oq"></td>
-    <td class="tg-73oq"></td>
-    <td class="tg-wp8o">Dec 14</td>
-    <td class="tg-wp8o">Dec 15</td>
-    <td class="tg-wp8o">Dec 29</td>
-    <td class="tg-wp8o">Dec 20</td>
-    <td class="tg-wp8o">Dec 21</td>
+    <td class="tg-2qwx">S12</td>
+    <td class="tg-hrrh"></td>
+    <td class="tg-2qwx">Dec 8</td>
+    <td class="tg-hrrh"></td>
+    <td class="tg-hrrh"></td>
+    <td class="tg-2qwx">Dec 14</td>
+    <td class="tg-2qwx">Dec 15</td>
+    <td class="tg-2qwx">Dec 29</td>
+    <td class="tg-2qwx">Dec 20</td>
+    <td class="tg-2qwx">Dec 21</td>
   </tr>
 </tbody></table>
-
-| 6-week cycle |   Program   | Session | Seminar Day | Q&A Day | Individual Test Day | Team Test Day | Team Challenge Day | Grading |        | Review |        |
-|:------------:|:-----------:|:-------:|:-----------:|:-------:|:-------------------:|:-------------:|:------------------:|:-------:|:------:|:------:|:------:|
-|              |             |         |             |         |                     |               |                    |  Begin  |   End  |  Begin |   End  |
-|    Cycle 1   | Fundamental |    S1   |    Sep 22   |         |        Sep 28       |               |                    |  Sep 29 |  Oct 3 |  Oct 4 |  Oct 5 |
-|              |             |    S2   |    Sep 29   |         |        Oct 5        |               |                    |  Oct 6  |  Oct10 | Oct 11 | Oct 12 |
-|              |             |    S3   |    Oct 6    |         |        Oct 12       |               |                    |  Oct 13 | Oct 17 | Oct 18 | Oct 19 |
-|              |             |    S4   |    Oct 13   |         |        Oct 19       |               |                    |  Oct 20 | Oct 24 | Oct 26 | Oct 26 |
-|              |  Enrichment |    S5   |             |  Oct 20 |                     |     Oct 26    |                    |  Oct 27 | Oct 31 |  Nov 1 |  Nov 2 |
-|              |             |    S6   |             |  Oct 27 |                     |               |        Nov 2       |  Nov 3  |  Nov 7 |  Nov 8 |  Nov 9 |
-|              |             |         |             |         |                     |               |                    |         |        |        |        |
-|    Cycle 2   | Fundamental |    S7   |    Nov 3    |         |        Nov 9        |               |                    |  Nov 10 | Nov 14 | Nov 15 | Nov 16 |
-|              |             |    S8   |    Nov 10   |         |        Nov 16       |               |                    |  Nov 17 | Nov 21 | Nov 22 | Nov 23 |
-|              |             |    S9   |    Nov 17   |         |        Nov 23       |               |                    |  Nov 24 | Nov 28 | Nov 29 | Nov 30 |
-|              |             |   S10   |    Nov 24   |         |        Nov 30       |               |                    |  Dec 1  |  Dec 5 |  Dec 6 |  Dec 7 |
-|              |  Enrichment |   S11   |             |  Dec 1  |                     |     Dec 7     |                    |  Dec 8  | Dec 12 | Dec 13 | Dec 14 |
-|              |             |   S12   |             |  Dec 8  |                     |               |       Dec 14       |  Dec 15 | Dec 29 | Dec 20 | Dec 21 |
 
 #### [A.4.1. 6-week Cycles](#a41-6-week-cycles)
 
