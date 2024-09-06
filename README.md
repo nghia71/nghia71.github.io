@@ -4,7 +4,9 @@
 
 Welcome to the 2024 - 2025 School Year of the Math Club & Competitions!
 
-*Please read carefully the content below before sending any question to the club.*
+**Important***
+- From now to September 13: *Please read carefully the content below. If you have any personal question, send it directly the club. if you have any general question that might be concern of other students, send it to the mailing list.*
+- On **September 15**, the club will host a **online kick-off ceremony.** Watch out for an email from the club.
 
 ### [A.1. Level Groups](#a1-level-groups)
 
@@ -450,13 +452,6 @@ a captain's or lieutenant's folder - if it is a team test.
 |                | S102 | Vo Nhu Y               | Fundamental  |   G1  |   6   |    CA   |    ADT   |
 |       N/A      |  S63 | Nguyen Binh An         | Fundamental  |   G1  |   4   |   N/A   |          |
 |                |  S95 | Anne Chu               | Fundamental  |   G2  |   7   |   N/A   |          |
-
-#### [A.5. Important Dates](#a5-important-dates)
-
-**Important dates**
-- **September 8: Admission Announcement** - preliminary program calendar, level groups, and teams
-- September 9-13: *Questions, Requests, Comments from parents and students for the club before the Opening*
-- **September 15: Kick-off online ceremony.** Final Club Program Calendar, Level Groups, and  Teams
 
 -----
 
