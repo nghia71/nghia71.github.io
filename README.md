@@ -176,7 +176,7 @@ Below is the list of all accepted students. Note that:
 #### [A.3.2. Enrichment program](#a32-enrichment-program)
 
 This is an *optional program,* offering for students G2, G3, and G4 only, to help them to study more deeply and work with teammates
-- In every 6 weeks, a team challenge consisting of a number of problems are issued. The members of in a team will work together solve and submit solutions at deadlines. Teams submitted great solutions will be invited for presentation in seminars.
+- In every 6 weeks, a team challenge consisting of a number of problems are issued. The members of a team will work together solve and submit solutions at deadlines. Teams submitted great solutions will be invited for presentation in seminars.
 - In addition, the team will be participating a team test in every 6 weeks. Everybody should work together online during the 90-minute test and submit together the solution.
 It is expected that participating student needs to invest an additional 7 hours/week for this program.
 
@@ -282,6 +282,8 @@ Each cycle contains 6 sessions, each is intended to be within a week:
 Above, you can see that periods when the submissions will be graded and reviewed.
 
 #### [A.4.2. Seminar Times](#a42-seminar-times)
+
+Use **[this link](https://www.worldtimebuddy.com/?qm=1&lid=2193733,2078025,1857910,127,12,14,305,306,307,308&h=305&date=2024-9-22&sln=10-12&hf=1&c=1444)** to see what time in your timezone correspond to the time in other zones
 
 Each seminar lasts for 30 minutes. The timezone for each student is on the list of all admintted students:
 - G1: 10:00 AM - 10:30 AM Eastern Time
