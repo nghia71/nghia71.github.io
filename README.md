@@ -247,7 +247,9 @@ Below are the list of the teams:
 |         |    S107    | Nguyen Minh Phong      | Enrichment |   G2  |   7   |    VN   |   GMT+7  | Lieutenant |
 |         |    S108    | Nguyen Hai Ha          | Enrichment |   G2  |   7   |    VN   |   GMT+7  |   Member   |
 
-[**Grading team submission:**](#grading-team-submission) *It is impossible to balance teams for a fair contest, especially when allowing self-organized teams to be formed.*
+#### [A.3.3. Grading team submission](#a33-grading-team-submission)
+
+*It is impossible to balance teams for a fair contest, especially when allowing self-organized teams to be formed.*
 *We will use two different measures: (i) absolute score and (2) relative score. Below is an example.*
 
 *Assume that the team test containing 10 problems: 4 at G2 difficulty, 4 at G3, and 2 at G4. Each problem is worth of 10 points.*
