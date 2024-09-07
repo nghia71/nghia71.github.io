@@ -473,16 +473,16 @@ We will use two different measures: (i) absolute score: and (2) relative score. 
 </tbody></table>
 
 *The team strength is the sum of the product of the numbers of each members at each difficulty (G2-3-4) multiply with a weight (1, 1.5, 2).*
-For example Team T2 has a mix of 2 G2, 4 G3, and 0 G4 members, their team strength is: $`2 * 1.0 + 4 * 1.5 = 8.`$
-Team T4 has 3 G2, 1 G3, and 1 G4 members, their team strength is: $`3 * 1.0 + 1 * 1.5 + 1 * 2.0 = 6.5.`$
+For example Team T2 has a mix of 2 G2, 4 G3, and 0 G4 members, their team strength is: `2 * 1.0 + 4 * 1.5 = 8.`
+Team T4 has 3 G2, 1 G3, and 1 G4 members, their team strength is: `3 * 1.0 + 1 * 1.5 + 1 * 2.0 = 6.5.`
 
 *The absolute score is the sum of the points the team earn from solving the problem, without any modification by weight.*
 For example Team T2 has solved of 3 G2, 4 G3, their absolute score is 70.
 Team T4 has solved 3 G2, 2 G3, and 2 G4, their absolute score is also 70.
 
 *For relative score is the the sum of the points the team earn from solving the problem weighted by the difficulties of the problems (1, 1.5, 2), then divided by their team strength.*
-Team T2 has achieved $`(3 * 1.0 + 4 * 1.5) * 10 / 8 = 11.25.`$
-Team T4 has achieved $`(3 * 1.0 + 2 * 1.5  + 2 * 2.0) * 10 / 6.5 = 15.38.`$
+Team T2 has achieved `(3 * 1.0 + 4 * 1.5) * 10 / 8 = 11.25.`
+Team T4 has achieved `(3 * 1.0 + 2 * 1.5  + 2 * 2.0) * 10 / 6.5 = 15.38.`
 
 ### [A.4. Learning Calendar:](#a4-learning-calendar)
 
