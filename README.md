@@ -829,7 +829,7 @@ a captain's or lieutenant's folder - if it is a team test.
 |                |  S27 | Helen Vien             | Enrichment   |   G3  |   8   |    UK   |    BST   |
 |                |  S56 | Hien-Lam Nguyen        | Fundamental  |   G2  |   6   |    UK   |    BST   |
 |                |  S72 | Jade Pham              | Enrichment   |   G3  |   8   |    FR   |   CEST   |
-|                |  S12 | Jason To               | Fundamental  |   G3  |   8   |    UK   |    BST   |
+|                |  S12 | Jason To               | Enrichment   |   G3  |   8   |    UK   |    BST   |
 |                |  S62 | Julie Cao              | Enrichment   |   G2  |   9   |    FR   |   CEST   |
 |                |  S44 | Karl Le                | Enrichment   |   G3  |   10  |    FR   |   CEST   |
 |                |  S55 | Khai-Tam Nguyen        | Fundamental  |   G1  |   9   |    UK   |    BST   |
