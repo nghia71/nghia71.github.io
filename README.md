@@ -250,24 +250,239 @@ Below are the list of the teams:
 #### [A.3.3. Grading team submission](#a33-grading-team-submission)
 
 It is impossible to balance teams for a fair contest, especially when allowing self-organized teams to be formed.
-We will use two different measures: (i) absolute score and (2) relative score. Below is an example.
+We will use two different measures: (i) absolute score: and (2) relative score. Below is an example.
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-ycr8{background-color:#ffffff;text-align:left;vertical-align:top}
+.tg .tg-vxga{background-color:#ffffff;text-align:center;vertical-align:middle}
+.tg .tg-i81m{background-color:#ffffff;text-align:center;vertical-align:top}
+</style>
+<table class="tg"><thead>
+  <tr>
+    <th class="tg-vxga" rowspan="2"><span style="font-weight:normal;font-style:normal;color:#000">Team</span></th>
+    <th class="tg-i81m" colspan="3"><span style="font-weight:normal;font-style:normal;color:#000">Members</span></th>
+    <th class="tg-vxga" rowspan="2"><span style="font-weight:normal;font-style:normal;color:#000">Team Strength</span></th>
+    <th class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">P1</span></th>
+    <th class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">P2</span></th>
+    <th class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">P3</span></th>
+    <th class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">P4</span></th>
+    <th class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">P5</span></th>
+    <th class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">P6</span></th>
+    <th class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">P7</span></th>
+    <th class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">P8</span></th>
+    <th class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">P9</span></th>
+    <th class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">P10</span></th>
+    <th class="tg-vxga" rowspan="2"><span style="font-weight:normal;font-style:normal;color:#000">Absolute Score</span></th>
+    <th class="tg-vxga" rowspan="2"><span style="font-weight:normal;font-style:normal;color:#000">Relative Score</span></th>
+  </tr>
+  <tr>
+    <th class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">G2</span></th>
+    <th class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">G3</span></th>
+    <th class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">G4</span></th>
+    <th class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">1</span></th>
+    <th class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">1</span></th>
+    <th class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">1</span></th>
+    <th class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">1</span></th>
+    <th class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">1.5</span></th>
+    <th class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">1.5</span></th>
+    <th class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">1.5</span></th>
+    <th class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">1.5</span></th>
+    <th class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">2</span></th>
+    <th class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">2</span></th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">T1</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">5</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">0</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">0</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">5.00</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">1</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">1</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">1</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">1</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">1</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">1</span></td>
+    <td class="tg-ycr8"></td>
+    <td class="tg-ycr8"></td>
+    <td class="tg-ycr8"></td>
+    <td class="tg-ycr8"></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">60</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">14.00</span></td>
+  </tr>
+  <tr>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">T2</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">2</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">4</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">0</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">8.00</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">1</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">1</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">1</span></td>
+    <td class="tg-ycr8"></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">1</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">1</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">1</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">1</span></td>
+    <td class="tg-ycr8"></td>
+    <td class="tg-ycr8"></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">70</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">11.25</span></td>
+  </tr>
+  <tr>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">T3</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">5</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">0</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">0</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">5.00</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">1</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">1</span></td>
+    <td class="tg-ycr8"></td>
+    <td class="tg-ycr8"></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">1</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">1</span></td>
+    <td class="tg-ycr8"></td>
+    <td class="tg-ycr8"></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">1</span></td>
+    <td class="tg-ycr8"></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">50</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">14.00</span></td>
+  </tr>
+  <tr>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">T4</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">3</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">1</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">1</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">6.50</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">1</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">1</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">1</span></td>
+    <td class="tg-ycr8"></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">1</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">1</span></td>
+    <td class="tg-ycr8"></td>
+    <td class="tg-ycr8"></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">1</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">1</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">70</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">15.38</span></td>
+  </tr>
+  <tr>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">T5</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">3</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">1</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">1</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">6.50</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">1</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">1</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">1</span></td>
+    <td class="tg-ycr8"></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">1</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">1</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">1</span></td>
+    <td class="tg-ycr8"></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">1</span></td>
+    <td class="tg-ycr8"></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">70</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">14.62</span></td>
+  </tr>
+  <tr>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">T6</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">1</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">4</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">0</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">7.00</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">1</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">1</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">1</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">1</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">1</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">1</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">1</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">1</span></td>
+    <td class="tg-ycr8"></td>
+    <td class="tg-ycr8"></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">80</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">14.29</span></td>
+  </tr>
+  <tr>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">T7</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">2</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">3</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">1</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">8.50</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">1</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">1</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">1</span></td>
+    <td class="tg-ycr8"></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">1</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">1</span></td>
+    <td class="tg-ycr8"></td>
+    <td class="tg-ycr8"></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">1</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">1</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">70</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">11.76</span></td>
+  </tr>
+  <tr>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">T8</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">2</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">2</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">1</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">7.00</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">1</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">1</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">1</span></td>
+    <td class="tg-ycr8"></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">1</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">1</span></td>
+    <td class="tg-ycr8"></td>
+    <td class="tg-ycr8"></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">1</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">1</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">70</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">14.29</span></td>
+  </tr>
+  <tr>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">T9</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">2</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">1</span></td>
+    <td class="tg-ycr8"><span style="font-weight:normal;font-style:normal;color:#000">0</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">3.50</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">1</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">1</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">1</span></td>
+    <td class="tg-ycr8"></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">1</span></td>
+    <td class="tg-ycr8"></td>
+    <td class="tg-ycr8"></td>
+    <td class="tg-ycr8"></td>
+    <td class="tg-ycr8"></td>
+    <td class="tg-ycr8"></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">40</span></td>
+    <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">12.86</span></td>
+  </tr>
+</tbody></table>
 
 Assume that the team test containing 10 problems: 4 at G2 difficulty, 4 at G3, and 2 at G4. Each problem is worth of 10 points.
-- Team A has 5 G2 students. They solved 4 G2, and 2 G3, all perfectly correct.
-- Team B has a mix of 3 G2, 1 G3, and 1 G4. They solved 3 G2, 2 G3, and 1 G4, all perfectly correct.
-- Team C has 2 G2 and 4 G3. They solved 2 G2, 4 G3, and 2 G4, all perfectly correct.
 
-For absolute scores:
-- Team A got $` 4 \times 10 + 2 \times 10 = 60 `$.
-- Team B got $` 3 \times 10 + 2 \times 10 + 1 \times 10 = 60 `$.
-- Team C got $` 2 \times 10 + 4 \times 10 + 2 \times 10 = 80 `$.
+The team strength is the sum of the product of the numbers of each members at each difficulty (G2-3-4) multiply with a weight (1, 1.5, 2)
+For example Team T2 has a mix of 2 G2, 4 G3, and 0 G4 members, their team strength is $`2 \times 1 + 4 \times 1.5 = 8`$.
+Team T4 has 3 G2, 1 G3, and 1 G4 members, their team strength is $`3 \times 1 + 1 \times 1.5 + 1 \times 2 = 6.5`$.
 
-For relative scores:
-- Each student at G2 has a strength of 1.0, G3 with a strength of 1.5, and G4 with a strength of 2.0.
-- Each problem at G2 has a strength of 1.0, G3 with a strength of 1.5, and G4 with a strength of 2.0.
-- Team A has a relative strength of $` (5 \times 1.0)/5 = 1.0. `$ Its weighted score is $` 4 \times 10 \times 1.0 + 2 \times 10 \times 1.5 = 70. `$ Thus its relative score is $` 70/1.0=70.`$
-- Team B has a relative strength of $` (3 \times 1.0+1 \times 1.5+1 \times 2.0)/5 = 1.1. `$ Its weighted score is $` 3 \times 10 \times 1.0 + 1 \times 10 \times 1.5 + 1 \times 10 \times 2.0 = 65. `$ Thus its relative score is $65/1.1=59.1$.
-- Team B has a relative strength of $` (2 \times 1.0+4 \times 1.5)/5 = 1.6. `$ Its weighted score is $` 2 \times 10 \times 1.0 + 4 \times 10 \times 1.5 + 2 \times 10 \times 2.0 = 120. `$ Thus its relative score is $` 120/1.6=75. `$
+The absolute score is the sum of the points the team earn from solving the problem, without any modification by weight.
+For example Team T2 has solved of 3 G2, 4 G3, their absolute score is 70.
+Team T4 has solved 3 G2, 2 G3, and 2 G4, their absolute score is also 70.
+
+For relative score is the the sum of the points the team earn from solving the problem weighted by the difficulties of the problems (1, 1.5, 2), then divided by their team strength.
+Team T2 has achieved $`(3 \times 1.0 + 4 \times 1.5) * 10 / 8 = 11.25`$.
+Team T4 has achieved $`(3 \times 1.0 + 2 \times 1.5  + 2 \times 2) * 10 / 6.5 = 15.38`$.
 
 ### [A.4. Learning Calendar:](#a4-learning-calendar)
 
