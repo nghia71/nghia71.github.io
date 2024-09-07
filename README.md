@@ -249,25 +249,25 @@ Below are the list of the teams:
 
 #### [A.3.3. Grading team submission](#a33-grading-team-submission)
 
-*It is impossible to balance teams for a fair contest, especially when allowing self-organized teams to be formed.*
-*We will use two different measures: (i) absolute score and (2) relative score. Below is an example.*
+It is impossible to balance teams for a fair contest, especially when allowing self-organized teams to be formed.
+We will use two different measures: (i) absolute score and (2) relative score. Below is an example.
 
-*Assume that the team test containing 10 problems: 4 at G2 difficulty, 4 at G3, and 2 at G4. Each problem is worth of 10 points.*
-- *Team A has 5 G2 students. They solved 4 G2, and 2 G3, all perfectly correct.*
-- *Team B has a mix of 3 G2, 1 G3, and 1 G4. They solved 3 G2, 2 G3, and 1 G4, all perfectly correct.*
-- *Team C has 2 G2 and 4 G3. They solved 2 G2, 4 G3, and 2 G4, all perfectly correct.*
+Assume that the team test containing 10 problems: 4 at G2 difficulty, 4 at G3, and 2 at G4. Each problem is worth of 10 points.
+- Team A has 5 G2 students. They solved 4 G2, and 2 G3, all perfectly correct.
+- Team B has a mix of 3 G2, 1 G3, and 1 G4. They solved 3 G2, 2 G3, and 1 G4, all perfectly correct.
+- Team C has 2 G2 and 4 G3. They solved 2 G2, 4 G3, and 2 G4, all perfectly correct.
 
-*For absolute scores:*
-- *Team A got $4*10 + 2*10 = 60$.*
-- *Team B got $3*10 + 2*10 + 1*10 = 60$.*
-- *Team C got $2*10 + 4*10 + 2*10 = 80$.*
+For absolute scores:
+- Team A got $4*10 + 2*10 = 60$.
+- Team B got $3*10 + 2*10 + 1*10 = 60$.
+- Team C got $2*10 + 4*10 + 2*10 = 80$.
 
-*For relative scores:*
-- *Each student at G2 has a strength of 1.0, G3 with a strength of 1.5, and G4 with a strength of 2.0.*
-- *Each problem at G2 has a strength of 1.0, G3 with a strength of 1.5, and G4 with a strength of 2.0.*
-- *Team A has a relative strength of $(5*1.0)/5 = 1.0.$ Its weighted score is $4*10*1.0 + 2*10*1.5 = 70.$ Thus its relative score is $70/1.0=70.$*
-- *Team B has a relative strength of $(3*1.0+1*1.5+1*2.0)/5 = 1.1.$ Its weighted score is $3*10*1.0 + 1*10*1.5 + 1*10*2.0 = 65.$ Thus its relative score is $65/1.1=59.1$.*
-- *Team B has a relative strength of $(2*1.0+4*1.5)/5 = 1.6.$ Its weighted score is $2*10*1.0 + 4*10*1.5 + 2*10*2.0 = 120.$ Thus its relative score is $120/1.6=75.$*
+For relative scores:
+- Each student at G2 has a strength of 1.0, G3 with a strength of 1.5, and G4 with a strength of 2.0.
+- Each problem at G2 has a strength of 1.0, G3 with a strength of 1.5, and G4 with a strength of 2.0.
+- Team A has a relative strength of $(5*1.0)/5 = 1.0.$ Its weighted score is $4*10*1.0 + 2*10*1.5 = 70.$ Thus its relative score is $70/1.0=70.$
+- Team B has a relative strength of $(3*1.0+1*1.5+1*2.0)/5 = 1.1.$ Its weighted score is $3*10*1.0 + 1*10*1.5 + 1*10*2.0 = 65.$ Thus its relative score is $65/1.1=59.1$.
+- Team B has a relative strength of $(2*1.0+4*1.5)/5 = 1.6.$ Its weighted score is $2*10*1.0 + 4*10*1.5 + 2*10*2.0 = 120.$ Thus its relative score is $120/1.6=75.$
 
 ### [A.4. Learning Calendar:](#a4-learning-calendar)
 
