@@ -529,7 +529,7 @@ We will use two different measures: (i) absolute score: and (2) relative score. 
   </tr>
 </tbody></table>
 
-*The team strength is the sum of the product of the numbers of each members at each difficulty (G2-3-4) multiply with a weight (1, 1.5, 2).*
+*The team strength is the sum of the product of the numbers of each members at each difficulty (G2-3-4) multiply with a weight (1, 2, 3).*
 For example Team T2 has a mix of 2 G2, 4 G3, and 0 G4 members, their team strength is: `2 * 1.0 + 4 * 2.0 = 10.`
 Team T4 has 3 G2, 1 G3, and 1 G4 members, their team strength is: `3 * 1.0 + 1 * 2.0 + 1 * 3.0 = 8.`
 
