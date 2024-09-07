@@ -135,7 +135,7 @@ Below is the list of all accepted students. Note that:
 | S108 | Nguyen Hai Ha          | Enrichment   |   G2  |   7   |    VN   |   GMT+7  | [Link](https://drive.google.com/drive/folders/1Ox7pD2njHa7bs5zA0QG5ka23zK0Hil7_)             |
 |  S67 | Nguyen Huy Khanh       | Fundamental  |   G2  |   5   |    VN   |   GMT+7  | [Link](https://drive.google.com/drive/folders/1L2aBkIK1ytQdqaA6R0s39W7s0RXfcZvC)             |
 |  S48 | Nguyen Jérémy          | Fundamental  |   G3  |   11  |    FR   |   CEST   | [Link](https://drive.google.com/drive/folders/1KV2Vv4_Jw3LhQmTt5jLJOmIj2rLyjjlT)             |
-|  S61 | Nguyen Martin          | Enrichment   |   G2  |   7   |    FR   |   CEST   | [Link](https://drive.google.com/drive/folders/1LYIOG5aikq6uhp0YfTKT6YHSVJYM7KXA)             |
+|  S61 | Nguyen Martin          | Enrichment   |   G2  |   9   |    FR   |   CEST   | [Link](https://drive.google.com/drive/folders/1LYIOG5aikq6uhp0YfTKT6YHSVJYM7KXA)             |
 |  S16 | Nguyen Minh            | Fundamental  |   G1  |   2   |    JP   |    JST   | [Link](https://drive.google.com/drive/folders/1GOHZMl6_KcGSZoFDxWkDTZsOFMdyfghR?usp=sharing) |
 | S112 | Nguyen Minh Ngoc       | Fundamental  |   G1  |   4   |    VN   |   GMT+7  | [Link](https://drive.google.com/drive/folders/1Q-JUsoyKHWiH-RIbgSHZctwvh4Iu8MJU?usp=sharing) |
 | S107 | Nguyen Minh Phong      | Enrichment   |   G2  |   7   |    VN   |   GMT+7  | [Link](https://drive.google.com/drive/folders/1P5EFZWunQXSvNcDo-vMeTKog7WlpA4FQ)             |
@@ -207,7 +207,7 @@ Below are the list of the teams:
 |         |     S44    | Karl Le                | Enrichment |   G3  |   10  |    FR   |   CEST   |   Member   |
 |         |            |                        |            |       |       |         |          |            |
 |   FR-2  |     S19    | Minh Cao Doan          | Enrichment |   G2  |   11  |    ES   |   CEST   |   Captain  |
-|         |     S61    | Nguyen Martin          | Enrichment |   G2  |   7   |    FR   |   CEST   | Lieutenant |
+|         |     S61    | Nguyen Martin          | Enrichment |   G2  |   9   |    FR   |   CEST   | Lieutenant |
 |         |    S131    | Nguyen Duy             | Enrichment |   G2  |   9   |    FR   |   CEST   |   Member   |
 |         |    S140    | Nguyen Pham Bao Ngoc   | Enrichment |   G2  |   7   |    FR   |   CEST   |   Member   |
 |         |     S99    | Nguyen Ngo Lam Phong   | Enrichment |   G2  |   9   |    FR   |   CEST   |   Member   |
@@ -850,7 +850,7 @@ a captain's or lieutenant's folder - if it is a team test.
 |                |  S52 | Nam Nguyen             | Fundamental  |   G2  |   8   |    UK   |    BST   |
 |                | S131 | Nguyen Duy             | Enrichment   |   G2  |   9   |    FR   |   CEST   |
 |                |  S48 | Nguyen Jérémy          | Fundamental  |   G3  |   11  |    FR   |   CEST   |
-|                |  S61 | Nguyen Martin          | Enrichment   |   G2  |   7   |    FR   |   CEST   |
+|                |  S61 | Nguyen Martin          | Enrichment   |   G2  |   9   |    FR   |   CEST   |
 |                | S132 | Nguyen My              | Enrichment   |   G2  |   6   |    FR   |   CEST   |
 |                |  S99 | Nguyen Ngo Lam Phong   | Enrichment   |   G2  |   9   |    FR   |   CEST   |
 |                | S140 | Nguyen Pham Bao Ngoc   | Enrichment   |   G2  |   7   |    FR   |   CEST   |
