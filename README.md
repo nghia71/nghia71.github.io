@@ -169,7 +169,7 @@ Below is the list of all accepted students. Note that:
 |  S96 | Tran Nguyen An         | Fundamental  |   G1  |   10  |    FR   |   CEST   | [Link](https://drive.google.com/drive/folders/1NbEjtp0o77H8kMb2gdbsXzzrKeHh0xwj?usp=sharing) |
 | S119 | Truc An Le             | Fundamental  |   G2  |   9   |    US   |    PDT   | [Link](https://drive.google.com/drive/folders/1O-JystN7yVRwrs8f7Wm__21A79q9tPYE)             |
 |  S39 | Truong Mai-Vy          | Fundamental  |   G1  |   5   |    VN   |   GMT+7  | [Link](https://drive.google.com/drive/folders/1JErIjjDqDW-CRg3pW9QQySo1-EfHtBIZ?usp=sharing) |
-|  S40 | Truong Minh-Vu         | Fundamental  |   G1  |   6   |    VN   |   GMT+7  | [Link](https://drive.google.com/drive/folders/1IwRvV307Djy5B7Y02AWfNwziHe5MsUBS)             |
+|  S40 | Truong Minh-Vu         | Fundamental  |   G2  |   6   |    VN   |   GMT+7  | [Link](https://drive.google.com/drive/folders/1IwRvV307Djy5B7Y02AWfNwziHe5MsUBS)             |
 | S136 | Tuan Kien Vuong        | Fundamental  |   G1  |   8   |    CA   |    PDT   | [Link](https://drive.google.com/drive/folders/1PHFGQyBX54Lp3P3cxTR4eFPRyLTdhEsf)             |
 | S118 | Tuyet Ly Phuong        | Enrichment   |   G2  |   8   |    CA   |    EDT   | [Link](https://drive.google.com/drive/folders/1O7KbxsuqCWK4eEJ289vvWi02UhMaYFhf)             |
 |  S10 | Valentin Thang         | Fundamental  |   G1  |   6   |    UK   |    BST   | [Link](https://drive.google.com/drive/folders/1GxN1XN7H9KLtSeyLH0BQjJ0Dx0b45DjZ)             |
@@ -814,7 +814,7 @@ a captain's or lieutenant's folder - if it is a team test.
 |                |  S17 | Quan                   | Fundamental  |   G1  |   6   |    VN   |   GMT+7  |
 |                |  S24 | Trần Hiếu Khoa         | Fundamental  |   G3  |   9   |    VN   |   GMT+7  |
 |                |  S39 | Truong Mai-Vy          | Fundamental  |   G1  |   5   |    VN   |   GMT+7  |
-|                |  S40 | Truong Minh-Vu         | Fundamental  |   G1  |   6   |    VN   |   GMT+7  |
+|                |  S40 | Truong Minh-Vu         | Fundamental  |   G2  |   6   |    VN   |   GMT+7  |
 |    UK+FR+ES    | S101 | Albert Dinh-Le         | Enrichment   |   G4  |   12  |    FR   |   CEST   |
 |                |  S84 | An Nguyen              | Enrichment   |   G3  |   12  |    UK   |    BST   |
 |                |  S32 | Annie Doan             | Fundamental  |   G1  |   8   |    UK   |    BST   |
