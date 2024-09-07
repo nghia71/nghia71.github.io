@@ -4,9 +4,9 @@
 
 Welcome to the 2024 - 2025 School Year of the Math Club & Competitions!
 
-**Important***
-- From now to September 13: *Please read carefully the content below. If you have any personal question, send it directly the club. if you have any general question that might be concern of other students, send it to the mailing list.*
-- On **September 15**, the club will host a **online kick-off ceremony.** Watch out for an email from the club.
+Please read carefully the content below. If you have any personal question, send it directly the club. if you have any general question that might be concern of other students, send it to the mailing list.
+
+On **September 15**, the club will host a **online kick-off ceremony.** Watch out for an email from the club.
 
 ### [A.1. Level Groups](#a1-level-groups)
 
@@ -210,13 +210,13 @@ Below are the list of the teams:
 |         |     S61    | Nguyen Martin          | Enrichment |   G2  |   7   |    FR   |   CEST   | Lieutenant |
 |         |    S131    | Nguyen Duy             | Enrichment |   G2  |   9   |    FR   |   CEST   |   Member   |
 |         |    S140    | Nguyen Pham Bao Ngoc   | Enrichment |   G2  |   7   |    FR   |   CEST   |   Member   |
-|         |    S141    | Nguyen Trung Kien      | Enrichment |   G2  |   11  |    FR   |   CEST   |   Member   |
+|         |     S99    | Nguyen Ngo Lam Phong   | Enrichment |   G2  |   9   |    FR   |   CEST   |   Member   |
 |         |            |                        |            |       |       |         |          |            |
 |   FR-3  |    S101    | Albert Dinh-Le         | Enrichment |   G4  |   12  |    FR   |   CEST   |   Captain  |
 |         |     S71    | Yanis-Huy Desarmaux-Do | Enrichment |   G3  |   11  |    FR   |   CEST   | Lieutenant |
 |         |     S97    | Ha Duong Linh Chi      | Enrichment |   G2  |   12  |    FR   |   CEST   |   Member   |
 |         |    S132    | Nguyen My              | Enrichment |   G2  |   6   |    FR   |   CEST   |   Member   |
-|         |     S99    | Nguyen Ngo Lam Phong   | Enrichment |   G2  |   9   |    FR   |   CEST   |   Member   |
+|         |    S141    | Nguyen Trung Kien      | Enrichment |   G2  |   11  |    FR   |   CEST   |   Member   |
 |         |            |                        |            |       |       |         |          |            |
 |   UK-1  |     S57    | Ha-Anh Le              | Enrichment |   G4  |   12  |    UK   |    BST   |   Captain  |
 |         |     S79    | Ryan Nguyen            | Enrichment |   G3  |   11  |    UK   |    BST   | Lieutenant |
