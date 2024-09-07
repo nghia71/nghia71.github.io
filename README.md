@@ -94,7 +94,7 @@ Below is the list of all accepted students. Note that:
 | S115 | Huynh Minh Nhien       | Fundamental  |   G1  |   5   |    VN   |   GMT+7  | [Link](https://drive.google.com/drive/folders/1OSE1HmBWpVEcnlMMKnsfiD-_JtKr42bf?usp=sharing) |
 |  S72 | Jade Pham              | Enrichment   |   G3  |   8   |    FR   |   CEST   | [Link](https://drive.google.com/drive/folders/1KpsyJwAbNW2SA1ZkdDkaBIsIbMhKDs0d)             |
 | S114 | James Minh Trí Nguyen  | Fundamental  |   G1  |   4   |    CA   |    PDT   | [Link](https://drive.google.com/drive/folders/1GqGSoeLGAVtFmnqS1_XX25G9QPLJ9cTM)             |
-|  S12 | Jason To               | Fundamental  |   G3  |   8   |    UK   |    BST   | [Link](https://drive.google.com/drive/folders/1GsAJIFpzOyx7pVgi-fu6WrHpWwZEWUTD)             |
+|  S12 | Jason To               | Enrichment   |   G3  |   8   |    UK   |    BST   | [Link](https://drive.google.com/drive/folders/1GsAJIFpzOyx7pVgi-fu6WrHpWwZEWUTD)             |
 |  S69 | Javien Do              | Fundamental  |   G1  |   3   |    CA   |    EDT   | [Link](https://drive.google.com/drive/folders/1KzgnzsWZDZIeaTa3VG3PNms-UMg4Ilh8?usp=sharing) |
 |  S93 | John Minh Quan         | Enrichment   |   G3  |   7   |    VN   |   GMT+7  | [Link](https://drive.google.com/drive/folders/1NsNGuFRqSjldwhuiYdvP5uSJ0c4Ops4q)             |
 |  S62 | Julie Cao              | Enrichment   |   G2  |   9   |    FR   |   CEST   | [Link](https://drive.google.com/drive/folders/1LXR8ltppxKQ9vS-F2wYfYhRchq4yiK69)             |
@@ -220,6 +220,7 @@ Below are the list of the teams:
 |         |            |                        |            |       |       |         |          |            |
 |   UK-1  |     S57    | Ha-Anh Le              | Enrichment |   G4  |   12  |    UK   |    BST   |   Captain  |
 |         |     S79    | Ryan Nguyen            | Enrichment |   G3  |   11  |    UK   |    BST   | Lieutenant |
+|         |     S12    | Jason To               | Enrichment |   G3  |   8   |    UK   |    BST   |   Member   |
 |         |     S26    | Harry Vien             | Enrichment |   G2  |   5   |    UK   |    BST   |   Member   |
 |         |    S143    | Khoa Anh Vu            | Enrichment |   G2  |   10  |    UK   |    BST   |   Member   |
 |         |     S74    | Lê Cường Lâm           | Enrichment |   G2  |   10  |    UK   |    BST   |   Member   |
