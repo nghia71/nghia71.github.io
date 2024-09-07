@@ -252,6 +252,8 @@ Below are the list of the teams:
 It is impossible to balance teams for a fair contest, especially when allowing self-organized teams to be formed.
 We will use two different measures: (i) absolute score: and (2) relative score. Below is an example.
 
+*Assume that the team test containing 10 problems: 4 at G2 difficulty, 4 at G3, and 2 at G4. Each problem is worth of 10 points.*
+
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
 .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
@@ -469,8 +471,6 @@ We will use two different measures: (i) absolute score: and (2) relative score. 
     <td class="tg-i81m"><span style="font-weight:normal;font-style:normal;color:#000">12.86</span></td>
   </tr>
 </tbody></table>
-
-Assume that the team test containing 10 problems: 4 at G2 difficulty, 4 at G3, and 2 at G4. Each problem is worth of 10 points.
 
 *The team strength is the sum of the product of the numbers of each members at each difficulty (G2-3-4) multiply with a weight (1, 1.5, 2).*
 For example Team T2 has a mix of 2 G2, 4 G3, and 0 G4 members, their team strength is:
