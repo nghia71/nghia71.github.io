@@ -54,7 +54,7 @@ Below is the list of all accepted students. Note that:
 |  S22 | Anh Diep Nguyen        | Enrichment   |   G2  |   8   |    CA   |    EDT   | [Link](https://drive.google.com/drive/folders/1IG3YC2DRt6rgXJnmtWEdgPWIedABzX3A)             |
 |  S37 | Anh Nguyen             | Fundamental  |   G1  |   4   |    CA   |    ADT   | [Link](https://drive.google.com/drive/folders/1JMfJJMRo5Zb8KnQ5nt53BQyz9nlRoUmE?usp=sharing) |
 | S121 | Anna Le                | Fundamental  |   G1  |   9   |    US   |    PDT   | [Link](https://drive.google.com/drive/folders/1Q0wjiUfJqKTs2kNqyjyD548dnyJyyBmx)             |
-|  S95 | Anne Chu               | Fundamental  |   G2  |   7   |   N/A   |          | [Link](https://drive.google.com/drive/folders/1NeS_fphDdjwTXCZq9J37mY5dqw9WOiJP)             |
+|  S95 | Anne Chu               | Fundamental  |   G2  |   7   |    AU   |   AEST   | [Link](https://drive.google.com/drive/folders/1NeS_fphDdjwTXCZq9J37mY5dqw9WOiJP)             |
 |  S32 | Annie Doan             | Fundamental  |   G1  |   8   |    UK   |    BST   | [Link](https://drive.google.com/drive/folders/1JreR7yIJClcqU4GCBW02aEIkzr-D82sD)             |
 | S125 | Annie Nguyen           | Fundamental  |   G1  |   4   |    CA   |    EDT   | [Link](https://drive.google.com/drive/folders/1PnXE6pHVQmUQtRN4lgNN7IEeDLTAFdAZ)             |
 |  S90 | Anthony Pham           | Enrichment   |   G3  |   11  |    FR   |   CEST   | [Link](https://drive.google.com/drive/folders/1M2VA1_QL_G4aOoiCgkU9OHPqMHdBgxI8)             |
@@ -793,6 +793,7 @@ a captain's or lieutenant's folder - if it is a team test.
 | Timezone group |  ID  | Student                | Program      | Level | Grade | Country | Timezone |
 |:--------------:|:----:|------------------------|--------------|:-----:|:-----:|:-------:|:--------:|
 |   VN+AU+JP+NZ  |  S13 | Andrei Alexeichik      | Fundamental  |   G1  |   6   |    NZ   |   NZST   |
+|                |  S95 | Anne Chu               | Fundamental  |   G2  |   7   |    AU   |   AEST   |
 |                |  S78 | Bui Hoang Long         | Fundamental  |   G2  |   10  |    VN   |   GMT+7  |
 |                |  S80 | Bui Hoang Mai          | Fundamental  |   G1  |   6   |    VN   |   GMT+7  |
 |                | S133 | Duong Dang Huy         | Fundamental  |   G1  |   8   |    VN   |   GMT+7  |
@@ -923,7 +924,7 @@ a captain's or lieutenant's folder - if it is a team test.
 |                |  S1  | Vincent Pham           | Enrichment   |   G2  |   10  |    CA   |    EDT   |
 |                | S102 | Vo Nhu Y               | Fundamental  |   G1  |   6   |    CA   |    ADT   |
 |       N/A      |  S63 | Nguyen Binh An         | Fundamental  |   G1  |   4   |   N/A   |          |
-|                |  S95 | Anne Chu               | Fundamental  |   G2  |   7   |   N/A   |          |
+
 
 -----
 
