@@ -250,7 +250,7 @@ Below are the list of the teams:
 #### [A.3.3. Grading team submission](#a33-grading-team-submission)
 
 It is impossible to balance teams for a fair contest, especially when allowing self-organized teams to be formed.
-We will use two different measures: (i) absolute score: and (2) relative score. Below is an example.
+We will use two different measures: (i) absolute score: and (2) relative score. Below is an example (not related anyhow to the current team compositions.)
 
 *Assume that the team test containing 10 problems: 4 at G2 difficulty, 4 at G3, and 2 at G4. Each problem is worth of 10 points.*
 
