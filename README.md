@@ -124,7 +124,7 @@ Below is the list of all accepted students. Note that:
 |  S19 | Minh Cao Doan          | Enrichment   |   G2  |   11  |    ES   |   CEST   | [Link](https://drive.google.com/drive/folders/1IPgGVJUTDXwS8Ejz7W63rSUyLsLmII5T)             |
 | S137 | Minh Duc Vuong         | Fundamental  |   G1  |   6   |    CA   |    PDT   | [Link](https://drive.google.com/drive/folders/1PES4da7ahSMGy95k3a1ndxR9CrgUjmmK?usp=sharing) |
 | S142 | Minh Hai Vu            | Enrichment   |   G3  |   13  |    UK   |    BST   | [Link](https://drive.google.com/drive/folders/1HFs8oHxKutBp2FL-JKyMBx8xjfGYlbr6)             |
-| S127 | Minh Ngoc Nguyen       | Enrichment   |   G2  |   7   |    US   |    PDT   | [Link](https://drive.google.com/drive/folders/1PeahOLaJYJh8dhqv8Cv5fEY2EW39VHmM)             |
+| S127 | Minh Ngoc Nguyen       | Fundamental  |   G2  |   7   |    US   |    PDT   | [Link](https://drive.google.com/drive/folders/1PeahOLaJYJh8dhqv8Cv5fEY2EW39VHmM)             |
 |  S81 | Minh Tran              | Fundamental  |   G1  |   5   |    UK   |    BST   | [Link](https://drive.google.com/drive/folders/1Lc_EH7Q62CExmCeMu_0g6q8iXsDSUarP)             |
 |  S52 | Nam Nguyen             | Fundamental  |   G2  |   8   |    UK   |    BST   | [Link](https://drive.google.com/drive/folders/1KM1majtLLdtaiOv_QiF2V-_9GNcucxoC)             |
 |  S25 | Nathan Luong           | Enrichment   |   G2  |   8   |    CA   |    EDT   | [Link](https://drive.google.com/drive/folders/1I1G7jURDXx40VqA8miqTWZFbNjijo7Wj)             |
@@ -232,7 +232,6 @@ Below are the list of the teams:
 |         |            |                        |            |       |       |         |          |            |
 |   US-1  |    S112    | Benny Le               | Enrichment |   G4  |   8   |    US   |    EDT   |   Captain  |
 |         |    S104    | Henry Minh Nhat Trinh  | Enrichment |   G3  |   9   |    US   |    MDT   | Lieutenant |
-|         |    S127    | Minh Ngoc Nguyen       | Enrichment |   G2  |   7   |    US   |    PDT   |   Member   |
 |         |     S36    | Sean Pham              | Enrichment |   G2  |   6   |    US   |    PDT   |   Member   |
 |         |     S29    | Geoffrey Cao           | Enrichment |   G3  |   4   |    US   |    EDT   |   Member   |
 |         |     S50    | Samuel Luong           | Enrichment |   G3  |   9   |    US   |    CDT   |   Member   |
@@ -899,7 +898,7 @@ a captain's or lieutenant's folder - if it is a team test.
 |                | S114 | Mike Nguyen            | Fundamental  |   G1  |   8   |    CA   |    EDT   |
 |                |  S9  | Milan Thai             | Fundamental  |   G1  |   5   |    US   |    EDT   |
 |                | S137 | Minh Duc Vuong         | Fundamental  |   G1  |   6   |    CA   |    PDT   |
-|                | S127 | Minh Ngoc Nguyen       | Enrichment   |   G2  |   7   |    US   |    PDT   |
+|                | S127 | Minh Ngoc Nguyen       | Fundamental  |   G2  |   7   |    US   |    PDT   |
 |                |  S25 | Nathan Luong           | Enrichment   |   G2  |   8   |    CA   |    EDT   |
 |                |  S41 | Ngo Bao Ngoc           | Fundamental  |   G1  |   7   |    CA   |    EDT   |
 |                | S129 | Ninh Nguyen            | Fundamental  |   G2  |   5   |    US   |    EDT   |
