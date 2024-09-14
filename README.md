@@ -38,7 +38,7 @@ You can also checkout the official solutions for the entrance test day 1 & 2 in 
 
 #### [A.3.1 Fundamental program](#a31-fundamental-program)
 
-In every week of the first 4 weeks of every 6-week cycle, the student attends a 60-minute seminar on a topic on Sunday, then practicing on home assignment from the content of the seminar, then a 90-minutes test on the following Saturday In short, every week from Sunday to Saturday, students need about 7 hours, equivalent to 1 hour/day.
+In every week of the first 4 weeks of every 6-week cycle, the student attends a 30-minute seminar on a topic on Sunday, then practicing on home assignment from the content of the seminar, then a 90-minutes test on the following Saturday In short, every week from Sunday to Saturday, students need about 7 hours, equivalent to 1 hour/day.
 
 Below is the list of all accepted students. Note that:
 - the club maintains (only) two emails per student (one for the student, one for a parent) on a mailing list [Google Group MCC 2024-2025](https://groups.google.com/g/mcc-2024-2025) This is to be used for email when we need to send email to everyone.
