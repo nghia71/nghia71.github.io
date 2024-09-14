@@ -179,6 +179,41 @@ Below is the list of all accepted students. Note that:
 |  S85 | Zygmunt Malig          | Fundamental  |   G2  |   7   |    UK   |    BST   | [Link](https://drive.google.com/drive/folders/1MFd0DbOkEUrzjYY9gr3PM075rWWDUqLD)             |
 | S148 | Hà Tấn Cương           | Fundamental  |   G1  |   7   |    VN   |   GMT+7  | [Link](https://drive.google.com/drive/folders/1Slmolacv_GRrza9bXRGbNsIfnQ1nJAZF?usp=sharing) |
 
+
+**List of emails that are self-configured to not receive emails from mailing lists, thus will not receive announcements directly from the club's mailing list:**
+11helenvsmiles@gmail.com
+anhngoclan@yahoo.com
+baonguyenle2011@gmail.com
+boonnhq@gmail.com
+harryvien2014@gmail.com
+hatancuong2012@gmail.com
+henryfho@gmail.com
+kien.vuongtuan@gmail.com
+luanductran1212@gmail.com
+maivy.lucie.truong@gmail.com
+maligzygmunt@gmail.com
+minhkarl.le@gmail.com
+minhvu.hugo.truong@gmail.com
+mnp.usvn@gmail.com
+mochiball614@gmail.com
+ngjade174@gmail.com
+nmv0819@gmail.com
+pajalou174186@gmail.com
+phongnm.1211@gmail.com
+samnam.ha@gmail.com
+sonmphammsc@gmail.com
+thi1517@hotmail.com
+tranhieukhoa@gmail.com
+tuankien.minhduc@gmail.com
+utbe84@yahoo.com
+
+**List of emails that are on the club's mailing list, but sent emails bounced off them**
+changduyen.can@gmail.com
+dominhtrang@yahoo.com
+hoatq79@yahoo.fr
+sonhho@gmail.com
+trile771@gmail.com
+
 #### [A.3.2. Enrichment program](#a32-enrichment-program)
 
 This is an *optional program,* offering for students G2, G3, and G4 only, to help them to study more deeply and work with teammates
