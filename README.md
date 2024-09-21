@@ -44,175 +44,173 @@ Below is the list of all accepted students. Note that:
 - the club maintains (only) two emails per student (one for the student, one for a parent) on a mailing list [Google Group MCC 2024-2025](https://groups.google.com/g/mcc-2024-2025) This is to be used for email when we need to send email to everyone.
 - each shared folder assigned to a student is accessible by two email accounts mentioned. Only the club organizers and volunteer graders have access to this folder.
 
-|  ID  | Student                | Program      | Level | Grade | Country | Timezone | Folder Link                                                                                  |
-|:----:|------------------------|--------------|:-----:|:-----:|:-------:|:--------:|----------------------------------------------------------------------------------------------|
-|  S77 | Adelina Mai Linh Luu   | Fundamental  |   G2  |   7   |    CA   |    MDT   | [Link](https://drive.google.com/drive/folders/1Ls9aA_SYUf7DncTjzM1Mx-QQwRvstLpf)             |
-| S101 | Albert Dinh-Le         | Enrichment   |   G4  |   12  |    FR   |   CEST   | [Link](https://drive.google.com/drive/folders/1N56n-gwRqGFJjfHiy-EYp06XiyO8hIZu)             |
-|  S2  | Allison Ly             | Fundamental  |   G1  |   4   |    CA   |    EDT   | [Link](https://drive.google.com/drive/folders/1HXHcZ2q2t6GpWdWfatjYLArX6N6QvidF?usp=sharing) |
-|  S84 | An Nguyen              | Enrichment   |   G3  |   12  |    UK   |    BST   | [Link](https://drive.google.com/drive/folders/1MI9SgDgXIUAvWx4praqW8u78tX21TlzG)             |
-|  S13 | Andrei Alexeichik      | Fundamental  |   G1  |   6   |    NZ   |   NZST   | [Link](https://drive.google.com/drive/folders/1GrIFcyGxPlUdIFRVkC14PMhyVJJub_zO)             |
-|  S22 | Anh Diep Nguyen        | Enrichment   |   G2  |   8   |    CA   |    EDT   | [Link](https://drive.google.com/drive/folders/1IG3YC2DRt6rgXJnmtWEdgPWIedABzX3A)             |
-|  S37 | Anh Nguyen             | Fundamental  |   G1  |   4   |    CA   |    ADT   | [Link](https://drive.google.com/drive/folders/1JMfJJMRo5Zb8KnQ5nt53BQyz9nlRoUmE?usp=sharing) |
-| S121 | Anna Le                | Fundamental  |   G1  |   9   |    US   |    PDT   | [Link](https://drive.google.com/drive/folders/1Q0wjiUfJqKTs2kNqyjyD548dnyJyyBmx)             |
-|  S95 | Anne Chu               | Fundamental  |   G2  |   7   |    AU   |   AEST   | [Link](https://drive.google.com/drive/folders/1NeS_fphDdjwTXCZq9J37mY5dqw9WOiJP)             |
-|  S32 | Annie Doan             | Fundamental  |   G1  |   8   |    UK   |    BST   | [Link](https://drive.google.com/drive/folders/1JreR7yIJClcqU4GCBW02aEIkzr-D82sD)             |
-| S125 | Annie Nguyen           | Fundamental  |   G1  |   4   |    CA   |    EDT   | [Link](https://drive.google.com/drive/folders/1PnXE6pHVQmUQtRN4lgNN7IEeDLTAFdAZ)             |
-|  S90 | Anthony Pham           | Enrichment   |   G3  |   11  |    FR   |   CEST   | [Link](https://drive.google.com/drive/folders/1M2VA1_QL_G4aOoiCgkU9OHPqMHdBgxI8)             |
-|  S34 | Bao Le                 | Fundamental  |   G2  |   7   |    US   |    EDT   | [Link](https://drive.google.com/drive/folders/1JmD0meiIFdYCC5VN5I6O_i7dphvgSI48)             |
-| S112 | Benny Le               | Enrichment   |   G4  |   8   |    US   |    EDT   | [Link](https://drive.google.com/drive/folders/1OeDgafEdhrai1vtoSplMecCR9DFyq4Y4)             |
-| S110 | Brooklyn Vu            | Fundamental  |   G1  |   4   |    CA   |    EDT   | [Link](https://drive.google.com/drive/folders/1OgHhCo7GULJMcKfoP-MrSevtfSN3nS1A?usp=sharing) |
-|  S78 | Bui Hoang Long         | Fundamental  |   G2  |   10  |    VN   |   GMT+7  | [Link](https://drive.google.com/drive/folders/1LjM9hu_J5OL_Sy_O5Db5uupfwKf388Ow)             |
-|  S80 | Bui Hoang Mai          | Fundamental  |   G1  |   6   |    VN   |   GMT+7  | [Link](https://drive.google.com/drive/folders/1LdhzOK_HWkVlaj_78Iunxr01XV4vidrq?usp=sharing) |
-|  S87 | Chi Khanh Pham         | Enrichment   |   G3  |   7   |    US   |    PDT   | [Link](https://drive.google.com/drive/folders/1MDVldPRB5KDSPS7K-vJ8lSFfJPsyD5PE)             |
-|  S46 | Claire Luu             | Fundamental  |   G1  |   4   |    US   |    PDT   | [Link](https://drive.google.com/drive/folders/1KZAOIjW4fbykXKHTZ3P4CUjmvJmXjpdu?usp=sharing) |
-|  S51 | Conan Le               | Fundamental  |   G1  |   7   |    CA   |    ADT   | [Link](https://drive.google.com/drive/folders/1KPS4PgoYCaLzF3KtJ8OPYrxe4DwGbxCE)             |
-|  S18 | Dang Khanh Le Ngan     | Fundamental  |   G1  |   6   |    CA   |    ADT   | [Link](https://drive.google.com/drive/folders/1ITLwcSR6SHTvfwAIaI33auL_JxQgAHVa)             |
-|  S83 | Dang Nguyen Phung      | Fundamental  |   G1  |   5   |    CA   |    ADT   | [Link](https://drive.google.com/drive/folders/1MKmKEfz4z1oPLdHtTCLEn0voN6jwGXNZ)             |
-| S111 | Dao Anna               | Enrichment   |   G2  |   7   |    FR   |   CEST   | [Link](https://drive.google.com/drive/folders/1OfSH-l0icAt_M4mgldIZLiHVQdk3BTNB)             |
-| S106 | Dao Antoine            | Enrichment   |   G3  |   10  |    FR   |   CEST   | [Link](https://drive.google.com/drive/folders/1P6cNEMyc8sTsl5OlWhyTLnLYJCso0-0b)             |
-| S146 | David Vu               | Fundamental  |   G1  |   4   |    CA   |    EDT   | [Link](https://drive.google.com/drive/folders/16KSbl5RqVDgkh4RxI_crwXCtdZZsL_5X?usp=sharing) |
-| S133 | Duong Dang Huy         | Fundamental  |   G1  |   8   |    VN   |   GMT+7  | [Link](https://drive.google.com/drive/folders/1PVIn9L0Arj-2KH2KzaRsQ9wvJf8wu0hi?usp=sharing) |
-|  S70 | Elovie Do              | Fundamental  |   G1  |   4   |    CA   |    EDT   | [Link](https://drive.google.com/drive/folders/1KyaXEvPyGr0SaNfedvvQzT_nLsco4vPE?usp=sharing) |
-|  S73 | Fred Bui               | Enrichment   |   G2  |   7   |    CA   |    EDT   | [Link](https://drive.google.com/drive/folders/1KpjrmQ4nCvDte89T3p5JSci-pGbPNJnw)             |
-|  S29 | Geoffrey Cao           | Enrichment   |   G3  |   4   |    US   |    EDT   | [Link](https://drive.google.com/drive/folders/1Hg_d0L2FYoGTq_mIGMWhnRnpP3LGyjxo)             |
-| S128 | Giang Nguyen           | Fundamental  |   G3  |   7   |    US   |    EDT   | [Link](https://drive.google.com/drive/folders/1Pa38rnwa8qfZ8t18_v9ircV8g5-vSBv0)             |
-|  S60 | Ha Dang                | Fundamental  |   G2  |   6   |    US   |    PDT   | [Link](https://drive.google.com/drive/folders/1K3BFB-NblNlUfxhjxwuzZho_iCUTX_pR)             |
-|  S97 | Ha Duong Linh Chi      | Enrichment   |   G2  |   12  |    FR   |   CEST   | [Link](https://drive.google.com/drive/folders/1NTtzvMV7_jYah4eOBmkU4MRtE3bJMTEd)             |
-|  S57 | Ha-Anh Le              | Enrichment   |   G4  |   12  |    UK   |    BST   | [Link](https://drive.google.com/drive/folders/1K6ciATKQdPuaZZNLq9uiVp38Cdok5Rei)             |
-|  S49 | Ha-Chi Vu Le           | Fundamental  |   G1  |   5   |    UK   |    BST   | [Link](https://drive.google.com/drive/folders/1KUS4N9e7h4rfQizoGDmyptkqxSi3h2OD?usp=sharing) |
-|  S26 | Harry Vien             | Enrichment   |   G2  |   5   |    UK   |    BST   | [Link](https://drive.google.com/drive/folders/1I18a7WeGbiw5t0VfG2YOvfesMMVBiJiD)             |
-|  S27 | Helen Vien             | Enrichment   |   G3  |   8   |    UK   |    BST   | [Link](https://drive.google.com/drive/folders/1I-VuB5QyUWS14zRXzaK3oHgSKe0f6iaQ)             |
-|  S86 | Henry Bui              | Fundamental  |   G1  |   4   |    US   |    EDT   | [Link](https://drive.google.com/drive/folders/1MDnGQEfiyrrp6haOgRwimcYgk7BCKGPb?usp=sharing) |
-| S144 | Henry Dinh             | Enrichment   |   G4  |   11  |    US   |    EDT   | [Link](https://drive.google.com/drive/folders/1HJGV8MQacuB0kokXIU6z3yY6KgwsXHza)             |
-|  S21 | Henry Ho               | Enrichment   |   G2  |   6   |    US   |    EDT   | [Link](https://drive.google.com/drive/folders/1IKhlUX3wazsG3UrAzCWAduppSA0Y4KJ2)             |
-| S104 | Henry Minh Nhat Trinh  | Enrichment   |   G3  |   9   |    US   |    MDT   | [Link](https://drive.google.com/drive/folders/1Mw_9PGGNbgLCishI-WBLfSxejwmHRbag)             |
-|  S56 | Hien-Lam Nguyen        | Fundamental  |   G2  |   6   |    UK   |    BST   | [Link](https://drive.google.com/drive/folders/1KBeYCcNP6wMlOICAImMZg5uIbF3R17L4)             |
-|  S88 | Hieu Nguyen            | Fundamental  |   G1  |   5   |    US   |    EDT   | [Link](https://drive.google.com/drive/folders/1M9Tv3JNov77QW8HfSlL6I3A0O5c70A-X?usp=sharing) |
-|  S59 | Hoang Dang             | Fundamental  |   G3  |   9   |    US   |    PDT   | [Link](https://drive.google.com/drive/folders/1K3IVPMdOCA0BUFpBigG7ITIxDc9xF12v)             |
-|  S4  | Hoang Xuan Bach        | Fundamental  |   G1  |   3   |    VN   |   GMT+7  | [Link](https://drive.google.com/drive/folders/1HTXJEpqYV6jujK4V_fiHuMH7lFyvdIM6?usp=sharing) |
-|  S15 | Huu Duc Nguyen         | Fundamental  |   G1  |   7   |    CA   |    CDT   | [Link](https://drive.google.com/drive/folders/1GSZxzi1E-yjzfwT8nbPYafl8ODe8Wt5u)             |
-| S115 | Huynh Minh Nhien       | Fundamental  |   G1  |   5   |    VN   |   GMT+7  | [Link](https://drive.google.com/drive/folders/1OSE1HmBWpVEcnlMMKnsfiD-_JtKr42bf?usp=sharing) |
-|  S72 | Jade Pham              | Enrichment   |   G3  |   8   |    FR   |   CEST   | [Link](https://drive.google.com/drive/folders/1KpsyJwAbNW2SA1ZkdDkaBIsIbMhKDs0d)             |
-| S114 | James Minh Trí Nguyen  | Fundamental  |   G1  |   4   |    CA   |    PDT   | [Link](https://drive.google.com/drive/folders/1GqGSoeLGAVtFmnqS1_XX25G9QPLJ9cTM)             |
-|  S12 | Jason To               | Enrichment   |   G3  |   8   |    UK   |    BST   | [Link](https://drive.google.com/drive/folders/1GsAJIFpzOyx7pVgi-fu6WrHpWwZEWUTD)             |
-|  S69 | Javien Do              | Fundamental  |   G1  |   3   |    CA   |    EDT   | [Link](https://drive.google.com/drive/folders/1KzgnzsWZDZIeaTa3VG3PNms-UMg4Ilh8?usp=sharing) |
-|  S93 | John Minh Quan         | Enrichment   |   G3  |   7   |    VN   |   GMT+7  | [Link](https://drive.google.com/drive/folders/1NsNGuFRqSjldwhuiYdvP5uSJ0c4Ops4q)             |
-|  S62 | Julie Cao              | Enrichment   |   G2  |   9   |    FR   |   CEST   | [Link](https://drive.google.com/drive/folders/1LXR8ltppxKQ9vS-F2wYfYhRchq4yiK69)             |
-|  S44 | Karl Le                | Enrichment   |   G3  |   10  |    FR   |   CEST   | [Link](https://drive.google.com/drive/folders/1InNZt8CX13-6WukI0u01uVdkJmRB7nb0)             |
-|  S55 | Khai-Tam Nguyen        | Fundamental  |   G1  |   9   |    UK   |    BST   | [Link](https://drive.google.com/drive/folders/1KD_2f5IUW2B3Aa4lyRT_QYPBcs60Hbj5)             |
-|  S92 | Khang M. Nguyen        | Fundamental  |   G1  |   3   |    VN   |   GMT+7  | [Link](https://drive.google.com/drive/folders/1NubuI7Nz0RifbCbWVQYq_Oozt8NgOJ96?usp=sharing) |
-| S145 | Khang Nguyen           | Fundamental  |   G1  |   7   |    US   |    EDT   | [Link](https://drive.google.com/drive/folders/15orqdRd0OSRNQ6TGEZGjefHrUCfJCNed)             |
-|  S30 | Khiem Pham             | Fundamental  |   G1  |   4   |    UK   |    BST   | [Link](https://drive.google.com/drive/folders/1HYnDJaByx4yDjZUHcADPoghNL8GQDlXm?usp=sharing) |
-| S143 | Khoa Anh Vu            | Enrichment   |   G2  |   10  |    UK   |    BST   | [Link](https://drive.google.com/drive/folders/1HODnchKSPV0u2xv4Cv7N1rpTtMdoQc2Z)             |
-|  S64 | Kien Dang              | Fundamental  |   G3  |   10  |    US   |    PDT   | [Link](https://drive.google.com/drive/folders/1LE00lq_mgDm1upqeg4zqkvuW91falq-9)             |
-|  S11 | Kylan Thai             | Fundamental  |   G1  |   4   |    US   |    PDT   | [Link](https://drive.google.com/drive/folders/1Gx-2dt__r49N053v00b1b2UsdaAYcTyd)             |
-|  S74 | Lê Cường Lâm           | Enrichment   |   G2  |   10  |    UK   |    BST   | [Link](https://drive.google.com/drive/folders/1KeteHB0gpD2WmNOJlJXXlDTC3W8mEfZS)             |
-| S105 | Lê Lâm Phương Anh      | Fundamental  |   G1  |   5   |    AU   |   ACST   | [Link](https://drive.google.com/drive/folders/1MulANaswOzLV_lTzLb6pnO92l-GFqQl1)             |
-|  S76 | Le Minh Quan           | Fundamental  |   G1  |   7   |   N/A   |          | [Link](https://drive.google.com/drive/folders/1LwmeDrTGeSH4G5j__eSCA9_DORMCYT01)             |
-| S123 | Lê Nguyễn Linh Nhi     | Fundamental  |   G1  |  N/A  |    VN   |   GMT+7  | [Link](https://drive.google.com/drive/folders/1PpvXLBQezBReG1erBuuiiJNXc3zdcMwa?usp=sharing) |
-|  S68 | Leo Bui                | Fundamental  |   G3  |   8   |    US   |    EDT   | [Link](https://drive.google.com/drive/folders/1L0Pc-G8pIiM_Oztbil58bpiINiZBNndd)             |
-|  S31 | Linh Khanh Le          | Enrichment   |   G3  |   8   |    UK   |    BST   | [Link](https://drive.google.com/drive/folders/1K1V-oCnNnmQHMJgmeDpewpVz3_yiXUfT)             |
-|  S5  | Lisa Doan              | Fundamental  |   G1  |   6   |    UK   |    BST   | [Link](https://drive.google.com/drive/folders/1HSwLHvtFWgkoZtjJCBFJCJ_b2EgbQW1c?usp=sharing) |
-|  S38 | Long Doan              | Fundamental  |   G2  |   9   |    ES   |   CEST   | [Link](https://drive.google.com/drive/folders/1JGT67aj2X9vH6MO1beW96TfrVtG398Xv)             |
-|  S45 | Long Tran              | Fundamental  |   G2  |   7   |    UK   |    BST   | [Link](https://drive.google.com/drive/folders/1Imdu6SybR6Eqb-UdTHKHeQdLHMXAgPxS)             |
-|  S89 | Luan Duc Tran          | Enrichment   |   G2  |   8   |    UK   |    BST   | [Link](https://drive.google.com/drive/folders/1M7Cux7fVKIirI5n8cF_xzAQJT6hD3uPq)             |
-|  S58 | Matheo Nguyen          | Fundamental  |   G2  |   7   |    UK   |    BST   | [Link](https://drive.google.com/drive/folders/1K4DP6zpmw2hARvz07ab72_d2u4L76_NZ)             |
-| S120 | Michelle Nguyen        | Fundamental  |   G2  |   10  |    US   |    PDT   | [Link](https://drive.google.com/drive/folders/1Nw7Ewz0bvMIB1zkhwpcmnfPps2_wJjAj)             |
-| S114 | Mike Nguyen            | Fundamental  |   G1  |   8   |    CA   |    EDT   | [Link](https://drive.google.com/drive/folders/1OWL1-KMzavk6Idpk3-3IrRVDBsRMBdao)             |
-|  S22 | Mike Nguyen            | Fundamental  |   G2  |   11  |    UK   |    BST   | [Link](https://drive.google.com/drive/folders/1L5tAUcijEpvZY22ee1jxS6DzWkODgjbz)             |
-|  S9  | Milan Thai             | Fundamental  |   G1  |   5   |    US   |    EDT   | [Link](https://drive.google.com/drive/folders/1H5dJ-F8slYU42BRk_CSSX7UUeBL0ExYx)             |
-|  S19 | Minh Cao Doan          | Enrichment   |   G2  |   11  |    ES   |   CEST   | [Link](https://drive.google.com/drive/folders/1IPgGVJUTDXwS8Ejz7W63rSUyLsLmII5T)             |
-| S137 | Minh Duc Vuong         | Fundamental  |   G1  |   6   |    CA   |    PDT   | [Link](https://drive.google.com/drive/folders/1PES4da7ahSMGy95k3a1ndxR9CrgUjmmK?usp=sharing) |
-| S142 | Minh Hai Vu            | Enrichment   |   G3  |   13  |    UK   |    BST   | [Link](https://drive.google.com/drive/folders/1HFs8oHxKutBp2FL-JKyMBx8xjfGYlbr6)             |
-| S127 | Minh Ngoc Nguyen       | Fundamental  |   G2  |   7   |    US   |    PDT   | [Link](https://drive.google.com/drive/folders/1PeahOLaJYJh8dhqv8Cv5fEY2EW39VHmM)             |
-|  S81 | Minh Tran              | Fundamental  |   G1  |   5   |    UK   |    BST   | [Link](https://drive.google.com/drive/folders/1Lc_EH7Q62CExmCeMu_0g6q8iXsDSUarP)             |
-|  S52 | Nam Nguyen             | Fundamental  |   G2  |   8   |    UK   |    BST   | [Link](https://drive.google.com/drive/folders/1KM1majtLLdtaiOv_QiF2V-_9GNcucxoC)             |
-|  S25 | Nathan Luong           | Enrichment   |   G2  |   8   |    CA   |    EDT   | [Link](https://drive.google.com/drive/folders/1I1G7jURDXx40VqA8miqTWZFbNjijo7Wj)             |
-|  S41 | Ngo Bao Ngoc           | Fundamental  |   G1  |   7   |    CA   |    EDT   | [Link](https://drive.google.com/drive/folders/1Iu83aGF1x-hNAFrDqpL8CByTpvpptmUj)             |
-|  S63 | Nguyen Binh An         | Fundamental  |   G1  |   4   |   N/A   |          | [Link](https://drive.google.com/drive/folders/1LQApylNkOORjWuW6Uw3_cWDdhdybOGsd?usp=sharing) |
-| S131 | Nguyen Duy             | Enrichment   |   G2  |   9   |    FR   |   CEST   | [Link](https://drive.google.com/drive/folders/1PYagPAsEh0C6wFcBsmqypS_zP7Qb-aFt)             |
-|  S82 | Nguyễn Gia Bảo Nam     | Fundamental  |   G2  |   10  |    VN   |   GMT+7  | [Link](https://drive.google.com/drive/folders/1MPeaBpaq3xtM1NfBdrE14x-GqfFEL1IU)             |
-| S108 | Nguyen Hai Ha          | Enrichment   |   G2  |   7   |    VN   |   GMT+7  | [Link](https://drive.google.com/drive/folders/1Ox7pD2njHa7bs5zA0QG5ka23zK0Hil7_)             |
-|  S67 | Nguyen Huy Khanh       | Fundamental  |   G2  |   5   |    VN   |   GMT+7  | [Link](https://drive.google.com/drive/folders/1L2aBkIK1ytQdqaA6R0s39W7s0RXfcZvC)             |
-|  S48 | Nguyen Jérémy          | Fundamental  |   G3  |   11  |    FR   |   CEST   | [Link](https://drive.google.com/drive/folders/1KV2Vv4_Jw3LhQmTt5jLJOmIj2rLyjjlT)             |
-|  S61 | Nguyen Martin          | Enrichment   |   G2  |   9   |    FR   |   CEST   | [Link](https://drive.google.com/drive/folders/1LYIOG5aikq6uhp0YfTKT6YHSVJYM7KXA)             |
-|  S16 | Nguyen Minh            | Fundamental  |   G1  |   2   |    JP   |    JST   | [Link](https://drive.google.com/drive/folders/1GOHZMl6_KcGSZoFDxWkDTZsOFMdyfghR?usp=sharing) |
-| S112 | Nguyen Minh Ngoc       | Fundamental  |   G1  |   4   |    VN   |   GMT+7  | [Link](https://drive.google.com/drive/folders/1Q-JUsoyKHWiH-RIbgSHZctwvh4Iu8MJU?usp=sharing) |
-| S107 | Nguyen Minh Phong      | Enrichment   |   G2  |   7   |    VN   |   GMT+7  | [Link](https://drive.google.com/drive/folders/1P5EFZWunQXSvNcDo-vMeTKog7WlpA4FQ)             |
-| S132 | Nguyen My              | Enrichment   |   G2  |   6   |    FR   |   CEST   | [Link](https://drive.google.com/drive/folders/1PW1RrRmM7yp5Tez6bRQOkBeuQIbeakSc)             |
-|  S99 | Nguyen Ngo Lam Phong   | Fundamental  |   G2  |   9   |    FR   |   CEST   | [Link](https://drive.google.com/drive/folders/1NOLd4WRd0Wawb9PTkUtXhJsB5rmXc92L)             |
-| S140 | Nguyen Pham Bao Ngoc   | Enrichment   |   G2  |   9   |    FR   |   CEST   | [Link](https://drive.google.com/drive/folders/1Y7GRvuEmNPkEZczH1-ruOp7pVqDoBQhF)             |
-| S117 | Nguyễn Phan Thành Huy  | Fundamental  |   G1  |   10  |    VN   |   GMT+7  | [Link](https://drive.google.com/drive/folders/1OJzZCLzI1JoW-ezX41KU_2hH6Pp5gEJI)             |
-|  S53 | Nguyễn Tiến Minh Khôi  | Fundamental  |   G1  |   1   |    VN   |   GMT+7  | [Link](https://drive.google.com/drive/folders/1KJW6_vOy91BSIDPtvzrtis8TnwMm6Nqz?usp=sharing) |
-| S141 | Nguyen Trung Kien      | Enrichment   |   G2  |   7   |    FR   |   CEST   | [Link](https://drive.google.com/drive/folders/1--qnKo3e2Jhon-XUx4VW1n3Kj2iZ8Hfc)             |
-| S129 | Ninh Nguyen            | Fundamental  |   G2  |   5   |    US   |    EDT   | [Link](https://drive.google.com/drive/folders/1P_YmdpTUT6FvMCRrqVDu_pDROiRae3ar)             |
-| S109 | Paris Vu               | Fundamental  |   G1  |   6   |    CA   |    EDT   | [Link](https://drive.google.com/drive/folders/1Ou9nC6MJTdvjymBoQZ5a5rW0Zc5idyt3?usp=sharing) |
-|  S35 | Phạm Nhật Minh         | Enrichment   |   G3  |   8   |    US   |    PDT   | [Link](https://drive.google.com/drive/folders/1Jh5XXUH79m1oPNGsdkMCNEARdR_Xw6V7)             |
-| S116 | Phạm Thanh Thanh       | Fundamental  |   G1  |   5   |    VN   |    EDT   | [Link](https://drive.google.com/drive/folders/1OKVCDsBu_NuRhamAEUyYBw-gM8uZ0sRE?usp=sharing) |
-|  S91 | Phuc Long Phuong       | Fundamental  |   G1  |   7   |    CA   |    EDT   | [Link](https://drive.google.com/drive/folders/1NutZ8Vjk9eL3giHwJ0j-d1mpTgS4-4O3)             |
-|  S17 | Quan                   | Fundamental  |   G1  |   6   |    VN   |   GMT+7  | [Link](https://drive.google.com/drive/folders/1I_rb4vkT4EtC3FGXoymQt9RX21GmXHg_?usp=sharing) |
-| S138 | Quan Le                | Fundamental  |   G1  |   5   |    US   |    EDT   | [Link](https://drive.google.com/drive/folders/1P8Y1sg9vK9cHW_bD7_1_sxVmYHlFbOL5?usp=sharing) |
-|  S79 | Ryan Nguyen            | Enrichment   |   G3  |   11  |    UK   |    BST   | [Link](https://drive.google.com/drive/folders/1LfCbZhO6YE--U23-Gui0h41Gx8a2mj6X)             |
-|  S20 | Sam Ha                 | Fundamental  |   G2  |   7   |    CA   |    EDT   | [Link](https://drive.google.com/drive/folders/1ILW4eSDK3uXbz2ANJgKk7JR62AFyRnHT)             |
-| S100 | Sam Vuong              | Fundamental  |   G2  |   5   |    US   |    EDT   | [Link](https://drive.google.com/drive/folders/1N9VvOY4kHZziHHcxRPAt6Mh2WLmj9D_B)             |
-|  S50 | Samuel Luong           | Enrichment   |   G3  |   9   |    US   |    CDT   | [Link](https://drive.google.com/drive/folders/1KS2yNpE0HaW4W9RLdyS4Nl8EwjDJPzhN)             |
-|  S36 | Sean Pham              | Enrichment   |   G2  |   6   |    US   |    PDT   | [Link](https://drive.google.com/drive/folders/1JbfL2FBZbX9gy0uuBiEIFjoFlmTUiPdQ)             |
-|  S42 | Sofia Vy Nguyen        | Fundamental  |   G1  |   7   |    CA   |    EDT   | [Link](https://drive.google.com/drive/folders/1IpzWas72VETZO3irzQF0liclMXe_beJ1)             |
-|  S28 | Sophia Cao             | Enrichment   |   G2  |   6   |    US   |    EDT   | [Link](https://drive.google.com/drive/folders/1HgicOSuJm1jqF8IRLdaztxfqjf22PN_M)             |
-|  S47 | Sophie HaLinh Pham     | Fundamental  |   G1  |   3   |    US   |    PDT   | [Link](https://drive.google.com/drive/folders/1KYT9bHU4ktyy83DHcqTRU-z3Zj8q1Zmo?usp=sharing) |
-| S135 | Steven Pham            | Fundamental  |   G1  |   4   |    US   |    PDT   | [Link](https://drive.google.com/drive/folders/1PK8TfPQS_NejS--fRMEhHmPWy9oqGCY7)             |
-| S130 | Theo Nguyen            | Fundamental  |   G3  |   11  |    UK   |    BST   | [Link](https://drive.google.com/drive/folders/1PZs_DGit6ybHLWCqFP_0h5qJNvuI3zjg)             |
-| S147 | Thomas Vu              | Fundamental  |   G1  |   7   |    CA   |    EDT   | [Link](https://drive.google.com/drive/folders/1gIAoA1jquQdSmGIInOgeNRIxEoz5aFGP?usp=sharing) |
-|  S8  | Tony Vo                | Fundamental  |   G1  |   6   |    US   |    EDT   | [Link](https://drive.google.com/drive/folders/1H7TBu_brTablubCc8WWP6LF-plSPhkol)             |
-|  S24 | Trần Hiếu Khoa         | Fundamental  |   G3  |   9   |    VN   |   GMT+7  | [Link](https://drive.google.com/drive/folders/1I4TOoKc4OgSgB7KpPlkfhFJbrLwzNThC)             |
-| S139 | Tran Lê Bách           | Fundamental  |   G2  |   13  |    FR   |   CEST   | [Link](https://drive.google.com/drive/folders/1P7Yq7CA7n9Fxq3E0QBjwbxuFGfNDw3QI)             |
-|  S96 | Tran Nguyen An         | Fundamental  |   G1  |   10  |    FR   |   CEST   | [Link](https://drive.google.com/drive/folders/1NbEjtp0o77H8kMb2gdbsXzzrKeHh0xwj?usp=sharing) |
-| S119 | Truc An Le             | Fundamental  |   G2  |   9   |    US   |    PDT   | [Link](https://drive.google.com/drive/folders/1O-JystN7yVRwrs8f7Wm__21A79q9tPYE)             |
-|  S39 | Truong Mai-Vy          | Fundamental  |   G1  |   5   |    VN   |   GMT+7  | [Link](https://drive.google.com/drive/folders/1JErIjjDqDW-CRg3pW9QQySo1-EfHtBIZ?usp=sharing) |
-|  S40 | Truong Minh-Vu         | Fundamental  |   G2  |   6   |    VN   |   GMT+7  | [Link](https://drive.google.com/drive/folders/1IwRvV307Djy5B7Y02AWfNwziHe5MsUBS)             |
-| S136 | Tuan Kien Vuong        | Fundamental  |   G1  |   8   |    CA   |    PDT   | [Link](https://drive.google.com/drive/folders/1PHFGQyBX54Lp3P3cxTR4eFPRyLTdhEsf)             |
-| S118 | Tuyet Ly Phuong        | Enrichment   |   G2  |   8   |    CA   |    EDT   | [Link](https://drive.google.com/drive/folders/1O7KbxsuqCWK4eEJ289vvWi02UhMaYFhf)             |
-|  S10 | Valentin Thang         | Fundamental  |   G1  |   6   |    UK   |    BST   | [Link](https://drive.google.com/drive/folders/1GxN1XN7H9KLtSeyLH0BQjJ0Dx0b45DjZ)             |
-|  S1  | Vincent Pham           | Enrichment   |   G2  |   10  |    CA   |    EDT   | [Link](https://drive.google.com/drive/folders/1GNJ6w5Q_R4hL4AJHKqn5WmGefs4q1cRZ)             |
-| S102 | Vo Nhu Y               | Fundamental  |   G1  |   6   |    CA   |    ADT   | [Link](https://drive.google.com/drive/folders/1MztTmW8fhfhQrmKYE8QKRW_ENo3M7_KD)             |
-|  S71 | Yanis-Huy Desarmaux-Do | Enrichment   |   G3  |   11  |    FR   |   CEST   | [Link](https://drive.google.com/drive/folders/1Ktq8jXwmzRoaDqlcqPLmMNL4UZCuDZ93)             |
-|  S85 | Zygmunt Malig          | Fundamental  |   G2  |   7   |    UK   |    BST   | [Link](https://drive.google.com/drive/folders/1MFd0DbOkEUrzjYY9gr3PM075rWWDUqLD)             |
-| S148 | Hà Tấn Cương           | Fundamental  |   G1  |   7   |    VN   |   GMT+7  | [Link](https://drive.google.com/drive/folders/1Slmolacv_GRrza9bXRGbNsIfnQ1nJAZF?usp=sharing) |
-
+|  ID  | Student                | Program      | Level | Grade | Country |    Access   | Timezone | Folder Link                                                                          |
+|:----:|------------------------|--------------|:-----:|:-----:|:-------:|:-----------:|:--------:|--------------------------------------------------------------------------------------|
+|  S77 | Adelina Mai Linh Luu   | Fundamental  |   G2  |   7   |    CA   |  Supervised |    MDT   | https://drive.google.com/drive/folders/1Ls9aA_SYUf7DncTjzM1Mx-QQwRvstLpf             |
+| S101 | Albert Dinh-Le         | Enrichment   |   G4  |   12  |    FR   |             |   CEST   | https://drive.google.com/drive/folders/1N56n-gwRqGFJjfHiy-EYp06XiyO8hIZu             |
+|  S2  | Allison Ly             | Fundamental  |   G1  |   4   |    CA   |             |    EDT   | https://drive.google.com/drive/folders/1HXHcZ2q2t6GpWdWfatjYLArX6N6QvidF?usp=sharing |
+|  S84 | An Nguyen              | Enrichment   |   G3  |   12  |    UK   |             |    BST   | https://drive.google.com/drive/folders/1MI9SgDgXIUAvWx4praqW8u78tX21TlzG             |
+|  S13 | Andrei Alexeichik      | Fundamental  |   G1  |   6   |    NZ   |             |   NZST   | https://drive.google.com/drive/folders/1GrIFcyGxPlUdIFRVkC14PMhyVJJub_zO             |
+|  S22 | Anh Diep Nguyen        | Enrichment   |   G2  |   8   |    CA   |             |    EDT   | https://drive.google.com/drive/folders/1IG3YC2DRt6rgXJnmtWEdgPWIedABzX3A             |
+|  S37 | Anh Nguyen             | Fundamental  |   G1  |   4   |    CA   |             |    ADT   | https://drive.google.com/drive/folders/1JMfJJMRo5Zb8KnQ5nt53BQyz9nlRoUmE?usp=sharing |
+| S121 | Anna Le                | Fundamental  |   G1  |   9   |    US   |             |    PDT   | https://drive.google.com/drive/folders/1Q0wjiUfJqKTs2kNqyjyD548dnyJyyBmx             |
+|  S95 | Anne Chu               | Fundamental  |   G2  |   7   |    AU   |             |   AEST   | https://drive.google.com/drive/folders/1NeS_fphDdjwTXCZq9J37mY5dqw9WOiJP             |
+|  S32 | Annie Doan             | Fundamental  |   G1  |   8   |    UK   |             |    BST   | https://drive.google.com/drive/folders/1JreR7yIJClcqU4GCBW02aEIkzr-D82sD             |
+| S125 | Annie Nguyen           | Fundamental  |   G1  |   4   |    CA   |             |    EDT   | https://drive.google.com/drive/folders/1PnXE6pHVQmUQtRN4lgNN7IEeDLTAFdAZ             |
+|  S90 | Anthony Pham           | Enrichment   |   G3  |   11  |    FR   |             |   CEST   | https://drive.google.com/drive/folders/1M2VA1_QL_G4aOoiCgkU9OHPqMHdBgxI8             |
+|  S34 | Bao Le                 | Fundamental  |   G2  |   7   |    US   |             |    EDT   | https://drive.google.com/drive/folders/1JmD0meiIFdYCC5VN5I6O_i7dphvgSI48             |
+| S112 | Benny Le               | Enrichment   |   G4  |   8   |    US   |             |    EDT   | https://drive.google.com/drive/folders/1OeDgafEdhrai1vtoSplMecCR9DFyq4Y4             |
+| S110 | Brooklyn Vu            | Fundamental  |   G1  |   4   |    CA   |             |    EDT   | https://drive.google.com/drive/folders/1OgHhCo7GULJMcKfoP-MrSevtfSN3nS1A?usp=sharing |
+|  S78 | Bui Hoang Long         | Fundamental  |   G2  |   10  |    VN   |             |   GMT+7  | https://drive.google.com/drive/folders/1LjM9hu_J5OL_Sy_O5Db5uupfwKf388Ow             |
+|  S80 | Bui Hoang Mai          | Fundamental  |   G1  |   6   |    VN   |             |   GMT+7  | https://drive.google.com/drive/folders/1LdhzOK_HWkVlaj_78Iunxr01XV4vidrq?usp=sharing |
+|  S87 | Chi Khanh Pham         | Enrichment   |   G3  |   7   |    US   |  Supervised |    PDT   | https://drive.google.com/drive/folders/1MDVldPRB5KDSPS7K-vJ8lSFfJPsyD5PE             |
+|  S46 | Claire Luu             | Fundamental  |   G1  |   4   |    US   |             |    PDT   | https://drive.google.com/drive/folders/1KZAOIjW4fbykXKHTZ3P4CUjmvJmXjpdu?usp=sharing |
+|  S51 | Conan Le               | Fundamental  |   G1  |   7   |    CA   |             |    ADT   | https://drive.google.com/drive/folders/1KPS4PgoYCaLzF3KtJ8OPYrxe4DwGbxCE             |
+|  S18 | Dang Khanh Le Ngan     | Fundamental  |   G1  |   6   |    CA   |             |    ADT   | https://drive.google.com/drive/folders/1ITLwcSR6SHTvfwAIaI33auL_JxQgAHVa             |
+|  S83 | Dang Nguyen Phung      | Fundamental  |   G1  |   5   |    CA   |             |    ADT   | https://drive.google.com/drive/folders/1MKmKEfz4z1oPLdHtTCLEn0voN6jwGXNZ             |
+| S111 | Dao Anna               | Enrichment   |   G2  |   7   |    FR   |  Supervised |   CEST   | https://drive.google.com/drive/folders/1OfSH-l0icAt_M4mgldIZLiHVQdk3BTNB             |
+| S106 | Dao Antoine            | Enrichment   |   G3  |   10  |    FR   |  Supervised |   CEST   | https://drive.google.com/drive/folders/1P6cNEMyc8sTsl5OlWhyTLnLYJCso0-0b             |
+| S146 | David Vu               | Fundamental  |   G1  |   4   |    CA   |             |    EDT   | https://drive.google.com/drive/folders/16KSbl5RqVDgkh4RxI_crwXCtdZZsL_5X?usp=sharing |
+| S133 | Duong Dang Huy         | Fundamental  |   G1  |   8   |    VN   |             |   GMT+7  | https://drive.google.com/drive/folders/1PVIn9L0Arj-2KH2KzaRsQ9wvJf8wu0hi?usp=sharing |
+|  S70 | Elovie Do              | Fundamental  |   G1  |   4   |    CA   |             |    EDT   | https://drive.google.com/drive/folders/1KyaXEvPyGr0SaNfedvvQzT_nLsco4vPE?usp=sharing |
+|  S73 | Fred Bui               | Enrichment   |   G2  |   7   |    CA   |             |    EDT   | https://drive.google.com/drive/folders/1KpjrmQ4nCvDte89T3p5JSci-pGbPNJnw             |
+|  S29 | Geoffrey Cao           | Enrichment   |   G3  |   4   |    US   |             |    EDT   | https://drive.google.com/drive/folders/1Hg_d0L2FYoGTq_mIGMWhnRnpP3LGyjxo             |
+| S128 | Giang Nguyen           | Fundamental  |   G3  |   7   |    US   |  Supervised |    EDT   | https://drive.google.com/drive/folders/1Pa38rnwa8qfZ8t18_v9ircV8g5-vSBv0             |
+|  S60 | Ha Dang                | Fundamental  |   G2  |   6   |    US   |  Supervised |    PDT   | https://drive.google.com/drive/folders/1K3BFB-NblNlUfxhjxwuzZho_iCUTX_pR             |
+|  S97 | Ha Duong Linh Chi      | Enrichment   |   G2  |   12  |    FR   |             |   CEST   | https://drive.google.com/drive/folders/1NTtzvMV7_jYah4eOBmkU4MRtE3bJMTEd             |
+|  S57 | Ha-Anh Le              | Enrichment   |   G4  |   12  |    UK   |             |    BST   | https://drive.google.com/drive/folders/1K6ciATKQdPuaZZNLq9uiVp38Cdok5Rei             |
+|  S49 | Ha-Chi Vu Le           | Fundamental  |   G1  |   5   |    UK   |             |    BST   | https://drive.google.com/drive/folders/1KUS4N9e7h4rfQizoGDmyptkqxSi3h2OD?usp=sharing |
+|  S26 | Harry Vien             | Enrichment   |   G2  |   5   |    UK   |  Supervised |    BST   | https://drive.google.com/drive/folders/1I18a7WeGbiw5t0VfG2YOvfesMMVBiJiD             |
+|  S27 | Helen Vien             | Enrichment   |   G3  |   8   |    UK   |  Supervised |    BST   | https://drive.google.com/drive/folders/1I-VuB5QyUWS14zRXzaK3oHgSKe0f6iaQ             |
+|  S86 | Henry Bui              | Fundamental  |   G1  |   4   |    US   |             |    EDT   | https://drive.google.com/drive/folders/1MDnGQEfiyrrp6haOgRwimcYgk7BCKGPb?usp=sharing |
+| S144 | Henry Dinh             | Enrichment   |   G4  |   11  |    US   |             |    EDT   | https://drive.google.com/drive/folders/1HJGV8MQacuB0kokXIU6z3yY6KgwsXHza             |
+|  S21 | Henry Ho               | Enrichment   |   G2  |   6   |    US   |  Supervised |    EDT   | https://drive.google.com/drive/folders/1IKhlUX3wazsG3UrAzCWAduppSA0Y4KJ2             |
+| S104 | Henry Minh Nhat Trinh  | Enrichment   |   G3  |   9   |    US   |             |    MDT   | https://drive.google.com/drive/folders/1Mw_9PGGNbgLCishI-WBLfSxejwmHRbag             |
+|  S56 | Hien-Lam Nguyen        | Fundamental  |   G2  |   6   |    UK   |  Supervised |    BST   | https://drive.google.com/drive/folders/1KBeYCcNP6wMlOICAImMZg5uIbF3R17L4             |
+|  S88 | Hieu Nguyen            | Fundamental  |   G1  |   5   |    US   |  Supervised |    EDT   | https://drive.google.com/drive/folders/1M9Tv3JNov77QW8HfSlL6I3A0O5c70A-X?usp=sharing |
+|  S59 | Hoang Dang             | Fundamental  |   G3  |   9   |    US   | Supervised  |    PDT   | https://drive.google.com/drive/folders/1K3IVPMdOCA0BUFpBigG7ITIxDc9xF12v             |
+|  S4  | Hoang Xuan Bach        | Fundamental  |   G1  |   3   |    VN   |             |   GMT+7  | https://drive.google.com/drive/folders/1HTXJEpqYV6jujK4V_fiHuMH7lFyvdIM6?usp=sharing |
+|  S15 | Huu Duc Nguyen         | Fundamental  |   G1  |   7   |    CA   |  Supervised |    CDT   | https://drive.google.com/drive/folders/1GSZxzi1E-yjzfwT8nbPYafl8ODe8Wt5u             |
+| S115 | Huynh Minh Nhien       | Fundamental  |   G1  |   5   |    VN   |             |   GMT+7  | https://drive.google.com/drive/folders/1OSE1HmBWpVEcnlMMKnsfiD-_JtKr42bf?usp=sharing |
+|  S72 | Jade Pham              | Enrichment   |   G3  |   8   |    FR   |             |   CEST   | https://drive.google.com/drive/folders/1KpsyJwAbNW2SA1ZkdDkaBIsIbMhKDs0d             |
+| S114 | James Minh Trí Nguyen  | Fundamental  |   G1  |   4   |    CA   |  Supervised |    PDT   | https://drive.google.com/drive/folders/1GqGSoeLGAVtFmnqS1_XX25G9QPLJ9cTM             |
+|  S12 | Jason To               | Enrichment   |   G3  |   8   |    UK   |  Supervised |    BST   | https://drive.google.com/drive/folders/1GsAJIFpzOyx7pVgi-fu6WrHpWwZEWUTD             |
+|  S69 | Javien Do              | Fundamental  |   G1  |   3   |    CA   |             |    EDT   | https://drive.google.com/drive/folders/1KzgnzsWZDZIeaTa3VG3PNms-UMg4Ilh8?usp=sharing |
+|  S93 | John Minh Quan         | Enrichment   |   G3  |   7   |    VN   |             |   GMT+7  | https://drive.google.com/drive/folders/1NsNGuFRqSjldwhuiYdvP5uSJ0c4Ops4q             |
+|  S62 | Julie Cao              | Enrichment   |   G2  |   9   |    FR   |  Supervised |   CEST   | https://drive.google.com/drive/folders/1LXR8ltppxKQ9vS-F2wYfYhRchq4yiK69             |
+|  S44 | Karl Le                | Enrichment   |   G3  |   10  |    FR   |  Supervised |   CEST   | https://drive.google.com/drive/folders/1InNZt8CX13-6WukI0u01uVdkJmRB7nb0             |
+|  S55 | Khai-Tam Nguyen        | Fundamental  |   G1  |   9   |    UK   |  Supervised |    BST   | https://drive.google.com/drive/folders/1KD_2f5IUW2B3Aa4lyRT_QYPBcs60Hbj5             |
+|  S92 | Khang M. Nguyen        | Fundamental  |   G1  |   3   |    VN   |             |   GMT+7  | https://drive.google.com/drive/folders/1NubuI7Nz0RifbCbWVQYq_Oozt8NgOJ96?usp=sharing |
+| S145 | Khang Nguyen           | Fundamental  |   G1  |   7   |    US   |  Supervised |    EDT   | https://drive.google.com/drive/folders/15orqdRd0OSRNQ6TGEZGjefHrUCfJCNed             |
+|  S30 | Khiem Pham             | Fundamental  |   G1  |   4   |    UK   |             |    BST   | https://drive.google.com/drive/folders/1HYnDJaByx4yDjZUHcADPoghNL8GQDlXm?usp=sharing |
+| S143 | Khoa Anh Vu            | Enrichment   |   G2  |   10  |    UK   |             |    BST   | https://drive.google.com/drive/folders/1HODnchKSPV0u2xv4Cv7N1rpTtMdoQc2Z             |
+|  S64 | Kien Dang              | Fundamental  |   G3  |   10  |    US   |             |    PDT   | https://drive.google.com/drive/folders/1LE00lq_mgDm1upqeg4zqkvuW91falq-9             |
+|  S11 | Kylan Thai             | Fundamental  |   G1  |   4   |    US   |             |    PDT   | https://drive.google.com/drive/folders/1Gx-2dt__r49N053v00b1b2UsdaAYcTyd             |
+|  S74 | Lê Cường Lâm           | Enrichment   |   G2  |   10  |    UK   |  Supervised |    BST   | https://drive.google.com/drive/folders/1KeteHB0gpD2WmNOJlJXXlDTC3W8mEfZS             |
+| S105 | Lê Lâm Phương Anh      | Fundamental  |   G1  |   5   |    AU   |             |   ACST   | https://drive.google.com/drive/folders/1MulANaswOzLV_lTzLb6pnO92l-GFqQl1             |
+|  S76 | Le Minh Quan           | Fundamental  |   G1  |   7   |   N/A   |             |          | https://drive.google.com/drive/folders/1LwmeDrTGeSH4G5j__eSCA9_DORMCYT01             |
+| S123 | Lê Nguyễn Linh Nhi     | Fundamental  |   G1  |  N/A  |    VN   |             |   GMT+7  | https://drive.google.com/drive/folders/1PpvXLBQezBReG1erBuuiiJNXc3zdcMwa?usp=sharing |
+|  S68 | Leo Bui                | Fundamental  |   G3  |   8   |    US   |             |    EDT   | https://drive.google.com/drive/folders/1L0Pc-G8pIiM_Oztbil58bpiINiZBNndd             |
+|  S31 | Linh Khanh Le          | Enrichment   |   G3  |   8   |    UK   |  Supervised |    BST   | https://drive.google.com/drive/folders/1K1V-oCnNnmQHMJgmeDpewpVz3_yiXUfT             |
+|  S5  | Lisa Doan              | Fundamental  |   G1  |   6   |    UK   |             |    BST   | https://drive.google.com/drive/folders/1HSwLHvtFWgkoZtjJCBFJCJ_b2EgbQW1c?usp=sharing |
+|  S38 | Long Doan              | Fundamental  |   G2  |   9   |    ES   |             |   CEST   | https://drive.google.com/drive/folders/1JGT67aj2X9vH6MO1beW96TfrVtG398Xv             |
+|  S45 | Long Tran              | Fundamental  |   G2  |   7   |    UK   |             |    BST   | https://drive.google.com/drive/folders/1Imdu6SybR6Eqb-UdTHKHeQdLHMXAgPxS             |
+|  S89 | Luan Duc Tran          | Enrichment   |   G2  |   8   |    UK   |             |    BST   | https://drive.google.com/drive/folders/1M7Cux7fVKIirI5n8cF_xzAQJT6hD3uPq             |
+|  S58 | Matheo Nguyen          | Fundamental  |   G2  |   7   |    UK   |             |    BST   | https://drive.google.com/drive/folders/1K4DP6zpmw2hARvz07ab72_d2u4L76_NZ             |
+| S120 | Michelle Nguyen        | Fundamental  |   G2  |   10  |    US   |             |    PDT   | https://drive.google.com/drive/folders/1Nw7Ewz0bvMIB1zkhwpcmnfPps2_wJjAj             |
+| S114 | Mike Nguyen            | Fundamental  |   G1  |   8   |    CA   |             |    EDT   | https://drive.google.com/drive/folders/1OWL1-KMzavk6Idpk3-3IrRVDBsRMBdao             |
+|  S22 | Mike Nguyen            | Fundamental  |   G2  |   11  |    UK   |             |    BST   | https://drive.google.com/drive/folders/1L5tAUcijEpvZY22ee1jxS6DzWkODgjbz             |
+|  S9  | Milan Thai             | Fundamental  |   G1  |   5   |    US   |             |    EDT   | https://drive.google.com/drive/folders/1H5dJ-F8slYU42BRk_CSSX7UUeBL0ExYx             |
+|  S19 | Minh Cao Doan          | Enrichment   |   G2  |   11  |    ES   |             |   CEST   | https://drive.google.com/drive/folders/1IPgGVJUTDXwS8Ejz7W63rSUyLsLmII5T             |
+| S137 | Minh Duc Vuong         | Fundamental  |   G1  |   6   |    CA   |             |    PDT   | https://drive.google.com/drive/folders/1PES4da7ahSMGy95k3a1ndxR9CrgUjmmK?usp=sharing |
+| S142 | Minh Hai Vu            | Enrichment   |   G3  |   13  |    UK   |             |    BST   | https://drive.google.com/drive/folders/1HFs8oHxKutBp2FL-JKyMBx8xjfGYlbr6             |
+| S127 | Minh Ngoc Nguyen       | Fundamental  |   G2  |   7   |    US   |             |    PDT   | https://drive.google.com/drive/folders/1PeahOLaJYJh8dhqv8Cv5fEY2EW39VHmM             |
+|  S81 | Minh Tran              | Fundamental  |   G1  |   5   |    UK   |             |    BST   | https://drive.google.com/drive/folders/1Lc_EH7Q62CExmCeMu_0g6q8iXsDSUarP             |
+|  S52 | Nam Nguyen             | Fundamental  |   G2  |   8   |    UK   |             |    BST   | https://drive.google.com/drive/folders/1KM1majtLLdtaiOv_QiF2V-_9GNcucxoC             |
+|  S25 | Nathan Luong           | Enrichment   |   G2  |   8   |    CA   |             |    EDT   | https://drive.google.com/drive/folders/1I1G7jURDXx40VqA8miqTWZFbNjijo7Wj             |
+|  S41 | Ngo Bao Ngoc           | Fundamental  |   G1  |   7   |    CA   |             |    EDT   | https://drive.google.com/drive/folders/1Iu83aGF1x-hNAFrDqpL8CByTpvpptmUj             |
+|  S63 | Nguyen Binh An         | Fundamental  |   G1  |   4   |   N/A   |             |          | https://drive.google.com/drive/folders/1LQApylNkOORjWuW6Uw3_cWDdhdybOGsd?usp=sharing |
+| S131 | Nguyen Duy             | Enrichment   |   G2  |   9   |    FR   |  Supervised |   CEST   | https://drive.google.com/drive/folders/1PYagPAsEh0C6wFcBsmqypS_zP7Qb-aFt             |
+|  S82 | Nguyễn Gia Bảo Nam     | Fundamental  |   G2  |   10  |    VN   |             |   GMT+7  | https://drive.google.com/drive/folders/1MPeaBpaq3xtM1NfBdrE14x-GqfFEL1IU             |
+| S108 | Nguyen Hai Ha          | Enrichment   |   G2  |   7   |    VN   |             |   GMT+7  | https://drive.google.com/drive/folders/1Ox7pD2njHa7bs5zA0QG5ka23zK0Hil7_             |
+|  S67 | Nguyen Huy Khanh       | Fundamental  |   G2  |   5   |    VN   |             |   GMT+7  | https://drive.google.com/drive/folders/1L2aBkIK1ytQdqaA6R0s39W7s0RXfcZvC             |
+|  S48 | Nguyen Jérémy          | Fundamental  |   G3  |   11  |    FR   |             |   CEST   | https://drive.google.com/drive/folders/1KV2Vv4_Jw3LhQmTt5jLJOmIj2rLyjjlT             |
+|  S61 | Nguyen Martin          | Enrichment   |   G2  |   9   |    FR   |             |   CEST   | https://drive.google.com/drive/folders/1LYIOG5aikq6uhp0YfTKT6YHSVJYM7KXA             |
+|  S16 | Nguyen Minh            | Fundamental  |   G1  |   2   |    JP   |             |    JST   | https://drive.google.com/drive/folders/1GOHZMl6_KcGSZoFDxWkDTZsOFMdyfghR?usp=sharing |
+| S112 | Nguyen Minh Ngoc       | Fundamental  |   G1  |   4   |    VN   |             |   GMT+7  | https://drive.google.com/drive/folders/1Q-JUsoyKHWiH-RIbgSHZctwvh4Iu8MJU?usp=sharing |
+| S107 | Nguyen Minh Phong      | Enrichment   |   G2  |   7   |    VN   |             |   GMT+7  | https://drive.google.com/drive/folders/1P5EFZWunQXSvNcDo-vMeTKog7WlpA4FQ             |
+| S132 | Nguyen My              | Enrichment   |   G2  |   6   |    FR   |  Supervised |   CEST   | https://drive.google.com/drive/folders/1PW1RrRmM7yp5Tez6bRQOkBeuQIbeakSc             |
+|  S99 | Nguyen Ngo Lam Phong   | Fundamental  |   G2  |   9   |    FR   |  Supervised |   CEST   | https://drive.google.com/drive/folders/1NOLd4WRd0Wawb9PTkUtXhJsB5rmXc92L             |
+| S140 | Nguyen Pham Bao Ngoc   | Enrichment   |   G2  |   9   |    FR   |             |   CEST   | https://drive.google.com/drive/folders/1Y7GRvuEmNPkEZczH1-ruOp7pVqDoBQhF             |
+| S117 | Nguyễn Phan Thành Huy  | Fundamental  |   G1  |   10  |    VN   |             |   GMT+7  | https://drive.google.com/drive/folders/1OJzZCLzI1JoW-ezX41KU_2hH6Pp5gEJI             |
+|  S53 | Nguyễn Tiến Minh Khôi  | Fundamental  |   G1  |   1   |    VN   |             |   GMT+7  | https://drive.google.com/drive/folders/1KJW6_vOy91BSIDPtvzrtis8TnwMm6Nqz?usp=sharing |
+| S141 | Nguyen Trung Kien      | Enrichment   |   G2  |   7   |    FR   |             |   CEST   | https://drive.google.com/drive/folders/1--qnKo3e2Jhon-XUx4VW1n3Kj2iZ8Hfc             |
+| S129 | Ninh Nguyen            | Fundamental  |   G2  |   5   |    US   |  Supervised |    EDT   | https://drive.google.com/drive/folders/1P_YmdpTUT6FvMCRrqVDu_pDROiRae3ar             |
+| S109 | Paris Vu               | Fundamental  |   G1  |   6   |    CA   |             |    EDT   | https://drive.google.com/drive/folders/1Ou9nC6MJTdvjymBoQZ5a5rW0Zc5idyt3?usp=sharing |
+|  S35 | Phạm Nhật Minh         | Enrichment   |   G3  |   8   |    US   |             |    PDT   | https://drive.google.com/drive/folders/1Jh5XXUH79m1oPNGsdkMCNEARdR_Xw6V7             |
+| S116 | Phạm Thanh Thanh       | Fundamental  |   G1  |   5   |    VN   |             |    EDT   | https://drive.google.com/drive/folders/1OKVCDsBu_NuRhamAEUyYBw-gM8uZ0sRE?usp=sharing |
+|  S91 | Phuc Long Phuong       | Fundamental  |   G1  |   7   |    CA   |             |    EDT   | https://drive.google.com/drive/folders/1NutZ8Vjk9eL3giHwJ0j-d1mpTgS4-4O3             |
+|  S17 | Quan                   | Fundamental  |   G1  |   6   |    VN   |             |   GMT+7  | https://drive.google.com/drive/folders/1I_rb4vkT4EtC3FGXoymQt9RX21GmXHg_?usp=sharing |
+| S138 | Quan Le                | Fundamental  |   G1  |   5   |    US   |             |    EDT   | https://drive.google.com/drive/folders/1P8Y1sg9vK9cHW_bD7_1_sxVmYHlFbOL5?usp=sharing |
+|  S79 | Ryan Nguyen            | Enrichment   |   G3  |   11  |    UK   |             |    BST   | https://drive.google.com/drive/folders/1LfCbZhO6YE--U23-Gui0h41Gx8a2mj6X             |
+|  S20 | Sam Ha                 | Fundamental  |   G2  |   7   |    CA   |             |    EDT   | https://drive.google.com/drive/folders/1ILW4eSDK3uXbz2ANJgKk7JR62AFyRnHT             |
+| S100 | Sam Vuong              | Fundamental  |   G2  |   5   |    US   |             |    EDT   | https://drive.google.com/drive/folders/1N9VvOY4kHZziHHcxRPAt6Mh2WLmj9D_B             |
+|  S50 | Samuel Luong           | Enrichment   |   G3  |   9   |    US   |             |    CDT   | https://drive.google.com/drive/folders/1KS2yNpE0HaW4W9RLdyS4Nl8EwjDJPzhN             |
+|  S36 | Sean Pham              | Enrichment   |   G2  |   6   |    US   |             |    PDT   | https://drive.google.com/drive/folders/1JbfL2FBZbX9gy0uuBiEIFjoFlmTUiPdQ             |
+|  S42 | Sofia Vy Nguyen        | Fundamental  |   G1  |   7   |    CA   |             |    EDT   | https://drive.google.com/drive/folders/1IpzWas72VETZO3irzQF0liclMXe_beJ1             |
+|  S28 | Sophia Cao             | Enrichment   |   G2  |   6   |    US   |             |    EDT   | https://drive.google.com/drive/folders/1HgicOSuJm1jqF8IRLdaztxfqjf22PN_M             |
+|  S47 | Sophie HaLinh Pham     | Fundamental  |   G1  |   3   |    US   |  Supervised |    PDT   | https://drive.google.com/drive/folders/1KYT9bHU4ktyy83DHcqTRU-z3Zj8q1Zmo?usp=sharing |
+| S135 | Steven Pham            | Fundamental  |   G1  |   4   |    US   |             |    PDT   | https://drive.google.com/drive/folders/1PK8TfPQS_NejS--fRMEhHmPWy9oqGCY7             |
+| S130 | Theo Nguyen            | Fundamental  |   G3  |   11  |    UK   |             |    BST   | https://drive.google.com/drive/folders/1PZs_DGit6ybHLWCqFP_0h5qJNvuI3zjg             |
+| S147 | Thomas Vu              | Fundamental  |   G1  |   7   |    CA   |             |    EDT   | https://drive.google.com/drive/folders/1gIAoA1jquQdSmGIInOgeNRIxEoz5aFGP?usp=sharing |
+|  S8  | Tony Vo                | Fundamental  |   G1  |   6   |    US   |             |    EDT   | https://drive.google.com/drive/folders/1H7TBu_brTablubCc8WWP6LF-plSPhkol             |
+|  S24 | Trần Hiếu Khoa         | Fundamental  |   G3  |   9   |    VN   |             |   GMT+7  | https://drive.google.com/drive/folders/1I4TOoKc4OgSgB7KpPlkfhFJbrLwzNThC             |
+| S139 | Tran Lê Bách           | Fundamental  |   G2  |   13  |    FR   |             |   CEST   | https://drive.google.com/drive/folders/1P7Yq7CA7n9Fxq3E0QBjwbxuFGfNDw3QI             |
+|  S96 | Tran Nguyen An         | Fundamental  |   G1  |   10  |    FR   |             |   CEST   | https://drive.google.com/drive/folders/1NbEjtp0o77H8kMb2gdbsXzzrKeHh0xwj?usp=sharing |
+| S119 | Truc An Le             | Fundamental  |   G2  |   9   |    US   |             |    PDT   | https://drive.google.com/drive/folders/1O-JystN7yVRwrs8f7Wm__21A79q9tPYE             |
+|  S39 | Truong Mai-Vy          | Fundamental  |   G1  |   5   |    VN   |  Supervised |   GMT+7  | https://drive.google.com/drive/folders/1JErIjjDqDW-CRg3pW9QQySo1-EfHtBIZ?usp=sharing |
+|  S40 | Truong Minh-Vu         | Fundamental  |   G2  |   6   |    VN   |  Supervised |   GMT+7  | https://drive.google.com/drive/folders/1IwRvV307Djy5B7Y02AWfNwziHe5MsUBS             |
+| S136 | Tuan Kien Vuong        | Fundamental  |   G1  |   8   |    CA   |             |    PDT   | https://drive.google.com/drive/folders/1PHFGQyBX54Lp3P3cxTR4eFPRyLTdhEsf             |
+| S118 | Tuyet Ly Phuong        | Enrichment   |   G2  |   8   |    CA   |             |    EDT   | https://drive.google.com/drive/folders/1O7KbxsuqCWK4eEJ289vvWi02UhMaYFhf             |
+|  S10 | Valentin Thang         | Fundamental  |   G1  |   6   |    UK   |             |    BST   | https://drive.google.com/drive/folders/1GxN1XN7H9KLtSeyLH0BQjJ0Dx0b45DjZ             |
+|  S1  | Vincent Pham           | Enrichment   |   G2  |   10  |    CA   |             |    EDT   | https://drive.google.com/drive/folders/1GNJ6w5Q_R4hL4AJHKqn5WmGefs4q1cRZ             |
+| S102 | Vo Nhu Y               | Fundamental  |   G1  |   6   |    CA   |             |    ADT   | https://drive.google.com/drive/folders/1MztTmW8fhfhQrmKYE8QKRW_ENo3M7_KD             |
+|  S71 | Yanis-Huy Desarmaux-Do | Enrichment   |   G3  |   11  |    FR   |             |   CEST   | https://drive.google.com/drive/folders/1Ktq8jXwmzRoaDqlcqPLmMNL4UZCuDZ93             |
+| S148 | Hà Tấn Cương           | Fundamental  |   G1  |   7   |    VN   |             |   GMT+7  | https://drive.google.com/drive/folders/1Slmolacv_GRrza9bXRGbNsIfnQ1nJAZF?usp=sharing |
 
 **List of emails that are self-configured to not receive emails from mailing lists, thus will not receive announcements directly from the club's mailing list:**
-11helenvsmiles@gmail.com
-anhngoclan@yahoo.com
-baonguyenle2011@gmail.com
-boonnhq@gmail.com
-harryvien2014@gmail.com
-hatancuong2012@gmail.com
-henryfho@gmail.com
-kien.vuongtuan@gmail.com
-luanductran1212@gmail.com
-maivy.lucie.truong@gmail.com
-maligzygmunt@gmail.com
-minhkarl.le@gmail.com
-minhvu.hugo.truong@gmail.com
-mnp.usvn@gmail.com
-mochiball614@gmail.com
-ngjade174@gmail.com
-nmv0819@gmail.com
-pajalou174186@gmail.com
-phongnm.1211@gmail.com
-samnam.ha@gmail.com
-sonmphammsc@gmail.com
-thi1517@hotmail.com
-tranhieukhoa@gmail.com
-tuankien.minhduc@gmail.com
-utbe84@yahoo.com
+- 11helenvsmiles@gmail.com
+- anhngoclan@yahoo.com
+- baonguyenle2011@gmail.com
+- boonnhq@gmail.com
+- harryvien2014@gmail.com
+- hatancuong2012@gmail.com
+- henryfho@gmail.com
+- kien.vuongtuan@gmail.com
+- luanductran1212@gmail.com
+- maivy.lucie.truong@gmail.com
+- maligzygmunt@gmail.com
+- minhkarl.le@gmail.com
+- minhvu.hugo.truong@gmail.com
+- mnp.usvn@gmail.com
+- mochiball614@gmail.com
+- ngjade174@gmail.com
+- nmv0819@gmail.com
+- pajalou174186@gmail.com
+- phongnm.1211@gmail.com
+- samnam.ha@gmail.com
+- sonmphammsc@gmail.com
+- thi1517@hotmail.com
+- tranhieukhoa@gmail.com
+- tuankien.minhduc@gmail.com
+- utbe84@yahoo.com
 
 **List of emails that are on the club's mailing list, but sent emails bounced off them**
-changduyen.can@gmail.com
-dominhtrang@yahoo.com
-hoatq79@yahoo.fr
-sonhho@gmail.com
-trile771@gmail.com
+- changduyen.can@gmail.com
+- dominhtrang@yahoo.com
+- hoatq79@yahoo.fr
+- sonhho@gmail.com
+- trile771@gmail.com
 
 #### [A.3.2. Enrichment program](#a32-enrichment-program)
 
@@ -226,60 +224,60 @@ Where the teams can find the Team Challenge in the curriculum:
 
 Below are the list of the teams:
 
-| Team ID | Student ID | Student                | Program    | Level | Grade | Country | Timezone |    Type    |
-|:-------:|:----------:|------------------------|------------|:-----:|:-----:|:-------:|:--------:|:----------:|
-|   CA-1  |     S73    | Fred Bui               | Enrichment |   G2  |   7   |    CA   |    EDT   |   Captain  |
-|         |     S1     | Vincent Pham           | Enrichment |   G2  |   10  |    CA   |    EDT   | Lieutenant |
-|         |     S22    | Anh Diep Nguyen        | Enrichment |   G2  |   8   |    CA   |    EDT   |   Member   |
-|         |     S25    | Nathan Luong           | Enrichment |   G2  |   8   |    CA   |    EDT   |   Member   |
-|         |    S118    | Tuyet Ly Phuong        | Enrichment |   G2  |   8   |    CA   |    EDT   |   Member   |
-|         |            |                        |            |       |       |         |          |            |
-|   FR-1  |     S90    | Anthony Pham           | Enrichment |   G3  |   11  |    FR   |   CEST   |   Captain  |
-|         |    S106    | Dao Antoine            | Enrichment |   G3  |   10  |    FR   |   CEST   | Lieutenant |
-|         |    S111    | Dao Anna               | Enrichment |   G2  |   7   |    FR   |   CEST   |   Member   |
-|         |     S72    | Jade Pham              | Enrichment |   G3  |   8   |    FR   |   CEST   |   Member   |
-|         |     S62    | Julie Cao              | Enrichment |   G2  |   9   |    FR   |   CEST   |   Member   |
-|         |     S44    | Karl Le                | Enrichment |   G3  |   10  |    FR   |   CEST   |   Member   |
-|         |            |                        |            |       |       |         |          |            |
-|   FR-2  |     S19    | Minh Cao Doan          | Enrichment |   G2  |   11  |    ES   |   CEST   |   Captain  |
-|         |     S61    | Nguyen Martin          | Enrichment |   G2  |   9   |    FR   |   CEST   | Lieutenant |
-|         |    S131    | Nguyen Duy             | Enrichment |   G2  |   9   |    FR   |   CEST   |   Member   |
-|         |    S140    | Nguyen Pham Bao Ngoc   | Enrichment |   G2  |   9   |    FR   |   CEST   |   Member   |
-|         |            |                        |            |       |       |         |          |            |
-|   FR-3  |    S101    | Albert Dinh-Le         | Enrichment |   G4  |   12  |    FR   |   CEST   |   Captain  |
-|         |     S71    | Yanis-Huy Desarmaux-Do | Enrichment |   G3  |   11  |    FR   |   CEST   | Lieutenant |
-|         |     S97    | Ha Duong Linh Chi      | Enrichment |   G2  |   12  |    FR   |   CEST   |   Member   |
-|         |    S132    | Nguyen My              | Enrichment |   G2  |   6   |    FR   |   CEST   |   Member   |
-|         |    S141    | Nguyen Trung Kien      | Enrichment |   G2  |   7   |    FR   |   CEST   |   Member   |
-|         |            |                        |            |       |       |         |          |            |
-|   UK-1  |     S57    | Ha-Anh Le              | Enrichment |   G4  |   12  |    UK   |    BST   |   Captain  |
-|         |     S79    | Ryan Nguyen            | Enrichment |   G3  |   11  |    UK   |    BST   | Lieutenant |
-|         |     S12    | Jason To               | Enrichment |   G3  |   8   |    UK   |    BST   |   Member   |
-|         |     S26    | Harry Vien             | Enrichment |   G2  |   5   |    UK   |    BST   |   Member   |
-|         |    S143    | Khoa Anh Vu            | Enrichment |   G2  |   10  |    UK   |    BST   |   Member   |
-|         |     S74    | Lê Cường Lâm           | Enrichment |   G2  |   10  |    UK   |    BST   |   Member   |
-|         |            |                        |            |       |       |         |          |            |
-|   UK-2  |    S142    | Minh Hai Vu            | Enrichment |   G3  |   13  |    UK   |    BST   |   Captain  |
-|         |     S84    | An Nguyen              | Enrichment |   G3  |   12  |    UK   |    BST   | Lieutenant |
-|         |     S31    | Linh Khanh Le          | Enrichment |   G3  |   8   |    UK   |    BST   |   Member   |
-|         |     S89    | Luan Duc Tran          | Enrichment |   G2  |   8   |    UK   |    BST   |   Member   |
-|         |     S27    | Helen Vien             | Enrichment |   G3  |   8   |    UK   |    BST   |   Member   |
-|         |            |                        |            |       |       |         |          |            |
-|   US-1  |    S112    | Benny Le               | Enrichment |   G4  |   8   |    US   |    EDT   |   Captain  |
-|         |    S104    | Henry Minh Nhat Trinh  | Enrichment |   G3  |   9   |    US   |    MDT   | Lieutenant |
-|         |     S36    | Sean Pham              | Enrichment |   G2  |   6   |    US   |    PDT   |   Member   |
-|         |     S29    | Geoffrey Cao           | Enrichment |   G3  |   4   |    US   |    EDT   |   Member   |
-|         |     S50    | Samuel Luong           | Enrichment |   G3  |   9   |    US   |    CDT   |   Member   |
-|         |            |                        |            |       |       |         |          |            |
-|   US-2  |    S144    | Henry Dinh             | Enrichment |   G4  |   11  |    US   |    EDT   |   Captain  |
-|         |     S87    | Chi Khanh Pham         | Enrichment |   G3  |   7   |    US   |    PDT   | Lieutenant |
-|         |     S21    | Henry Ho               | Enrichment |   G2  |   6   |    US   |    EDT   |   Member   |
-|         |     S28    | Sophia Cao             | Enrichment |   G2  |   6   |    US   |    EDT   |   Member   |
-|         |     S35    | Phạm Nhật Minh         | Enrichment |   G3  |   8   |    US   |    PDT   |   Member   |
-|         |            |                        |            |       |       |         |          |            |
-|   VN-1  |     S93    | John Minh Quan         | Enrichment |   G3  |   7   |    VN   |   GMT+7  |   Captain  |
-|         |    S107    | Nguyen Minh Phong      | Enrichment |   G2  |   7   |    VN   |   GMT+7  | Lieutenant |
-|         |    S108    | Nguyen Hai Ha          | Enrichment |   G2  |   7   |    VN   |   GMT+7  |   Member   |
+| Team ID | Student ID | Email                         | Student                | Program    | Level | Grade | Country | Timezone |    Type    |                                           Folder                                           |
+|:-------:|:----------:|-------------------------------|------------------------|------------|:-----:|:-----:|:-------:|:--------:|:----------:|:------------------------------------------------------------------------------------------:|
+|   CA-1  |     S73    | haidoan711@gmail.com          | Fred Bui               | Enrichment |   G2  |   7   |    CA   |    EDT   |   Captain  | [Link](://drive.google.com/drive/folders/1RDgm_Jbc1nmyzWEtuDPW9jF1cc3yxB4T?usp=drive_link) |
+|         |     S1     | VincentPham1210@gmail.com     | Vincent Pham           | Enrichment |   G2  |   10  |    CA   |    EDT   | Lieutenant | [Link](://drive.google.com/drive/folders/1RDgm_Jbc1nmyzWEtuDPW9jF1cc3yxB4T?usp=drive_link) |
+|         |     S22    | real.oscar.the.owl8@gmail.com | Anh Diep Nguyen        | Enrichment |   G2  |   8   |    CA   |    EDT   |   Member   |                                                                                            |
+|         |     S25    | luong.dinh.dung@gmail.com     | Nathan Luong           | Enrichment |   G2  |   8   |    CA   |    EDT   |   Member   |                                                                                            |
+|         |    S118    | changduyen.can@gmail.com      | Tuyet Ly Phuong        | Enrichment |   G2  |   8   |    CA   |    EDT   |   Member   |                                                                                            |
+|         |            |                               |                        |            |       |       |         |          |            |                                                                                            |
+|   FR-1  |     S90    | anthony.pham.0702@gmail.com   | Anthony Pham           | Enrichment |   G3  |   11  |    FR   |   CEST   |   Captain  | [Link](://drive.google.com/drive/folders/1pQ0pCRgZeW_ATrPwFCz7Pb-zEdcDXzi0?usp=drive_link) |
+|         |    S106    | daohbh2810@gmail.com          | Dao Antoine            | Enrichment |   G3  |   10  |    FR   |   CEST   | Lieutenant | [Link](://drive.google.com/drive/folders/1pQ0pCRgZeW_ATrPwFCz7Pb-zEdcDXzi0?usp=drive_link) |
+|         |    S111    | daoanna0712@gmail.com         | Dao Anna               | Enrichment |   G2  |   7   |    FR   |   CEST   |   Member   |                                                                                            |
+|         |     S72    | jadethugiang@gmail.com        | Jade Pham              | Enrichment |   G3  |   8   |    FR   |   CEST   |   Member   |                                                                                            |
+|         |     S62    | julie.caovu@gmail.com         | Julie Cao              | Enrichment |   G2  |   9   |    FR   |   CEST   |   Member   |                                                                                            |
+|         |     S44    | minhkarl.le@gmail.com         | Karl Le                | Enrichment |   G3  |   10  |    FR   |   CEST   |   Member   |                                                                                            |
+|         |            |                               |                        |            |       |       |         |          |            |                                                                                            |
+|   FR-2  |     S19    | caominhdoan8989@gmail.com     | Minh Cao Doan          | Enrichment |   G2  |   11  |    ES   |   CEST   |   Captain  | [Link](://drive.google.com/drive/folders/1ls0BvCO2gtxRZKKvW0yIR1lcyjXHMK9e?usp=drive_link) |
+|         |     S61    | hoa.truong@tmfacility.com     | Nguyen Martin          | Enrichment |   G2  |   9   |    FR   |   CEST   | Lieutenant | [Link](://drive.google.com/drive/folders/1ls0BvCO2gtxRZKKvW0yIR1lcyjXHMK9e?usp=drive_link) |
+|         |    S131    | hoanganhelec@gmail.com        | Nguyen Duy             | Enrichment |   G2  |   9   |    FR   |   CEST   |   Member   |                                                                                            |
+|         |    S140    | ngjade174@gmail.com           | Nguyen Pham Bao Ngoc   | Enrichment |   G2  |   9   |    FR   |   CEST   |   Member   |                                                                                            |
+|         |            |                               |                        |            |       |       |         |          |            |                                                                                            |
+|   FR-3  |    S101    | dinhalbert@gmail.com          | Albert Dinh-Le         | Enrichment |   G4  |   12  |    FR   |   CEST   |   Captain  | [Link](://drive.google.com/drive/folders/1oZbDyrL8Ly0_cwmYelItccRLZOrnJ-7I?usp=drive_link) |
+|         |     S71    | yanishuy.dd@gmail.com         | Yanis-Huy Desarmaux-Do | Enrichment |   G3  |   11  |    FR   |   CEST   | Lieutenant | [Link](://drive.google.com/drive/folders/1oZbDyrL8Ly0_cwmYelItccRLZOrnJ-7I?usp=drive_link) |
+|         |     S97    | ashdelinhchi@gmail.com        | Ha Duong Linh Chi      | Enrichment |   G2  |   12  |    FR   |   CEST   |   Member   |                                                                                            |
+|         |    S132    | anh1505.nguyen@gmail.com      | Nguyen My              | Enrichment |   G2  |   6   |    FR   |   CEST   |   Member   |                                                                                            |
+|         |    S141    | pajalou174186@gmail.com       | Nguyen Trung Kien      | Enrichment |   G2  |   7   |    FR   |   CEST   |   Member   |                                                                                            |
+|         |            |                               |                        |            |       |       |         |          |            |                                                                                            |
+|   UK-1  |     S57    | cunsu0714@gmail.com           | Ha-Anh Le              | Enrichment |   G4  |   12  |    UK   |    BST   |   Captain  | [Link](://drive.google.com/drive/folders/17IilzcAvsITlq3cLS8KLreU_BRY9PPM5?usp=drive_link) |
+|         |     S79    | minhlnguyen@gmail.com         | Ryan Nguyen            | Enrichment |   G3  |   11  |    UK   |    BST   | Lieutenant | [Link](://drive.google.com/drive/folders/17IilzcAvsITlq3cLS8KLreU_BRY9PPM5?usp=drive_link) |
+|         |     S12    | tobatoan@gmail.com            | Jason To               | Enrichment |   G3  |   8   |    UK   |    BST   |   Member   |                                                                                            |
+|         |     S26    | harryvien2014@gmail.com       | Harry Vien             | Enrichment |   G2  |   5   |    UK   |    BST   |   Member   |                                                                                            |
+|         |    S143    | khoavu25b@gmail.com           | Khoa Anh Vu            | Enrichment |   G2  |   10  |    UK   |    BST   |   Member   |                                                                                            |
+|         |     S74    | lcuonglam@gmail.com           | Lê Cường Lâm           | Enrichment |   G2  |   10  |    UK   |    BST   |   Member   |                                                                                            |
+|         |            |                               |                        |            |       |       |         |          |            |                                                                                            |
+|   UK-2  |    S142    | minhvu25b@gmail.com           | Minh Hai Vu            | Enrichment |   G3  |   13  |    UK   |    BST   |   Captain  | [Link](://drive.google.com/drive/folders/19SYII9zZQld6g1sslHpjtg81wPUw75vH?usp=drive_link) |
+|         |     S84    | anknguyen119@gmail.com        | An Nguyen              | Enrichment |   G3  |   12  |    UK   |    BST   | Lieutenant | [Link](://drive.google.com/drive/folders/19SYII9zZQld6g1sslHpjtg81wPUw75vH?usp=drive_link) |
+|         |     S31    | linhkhanhle.hbs@gmail.com     | Linh Khanh Le          | Enrichment |   G3  |   8   |    UK   |    BST   |   Member   |                                                                                            |
+|         |     S89    | luanductran1212@gmail.com     | Luan Duc Tran          | Enrichment |   G2  |   8   |    UK   |    BST   |   Member   |                                                                                            |
+|         |     S27    | 11helenvsmiles@gmail.com      | Helen Vien             | Enrichment |   G3  |   8   |    UK   |    BST   |   Member   |                                                                                            |
+|         |            |                               |                        |            |       |       |         |          |            |                                                                                            |
+|   US-1  |    S112    | benranger2011@gmail.com       | Benny Le               | Enrichment |   G4  |   8   |    US   |    EDT   |   Captain  | [Link](://drive.google.com/drive/folders/1KZSeOn52jjRiAffyQWgbvKIBkfsDjiGr?usp=drive_link) |
+|         |    S104    | henrymntrinh@gmail.com        | Henry Minh Nhat Trinh  | Enrichment |   G3  |   9   |    US   |    MDT   | Lieutenant | [Link](://drive.google.com/drive/folders/1KZSeOn52jjRiAffyQWgbvKIBkfsDjiGr?usp=drive_link) |
+|         |     S36    | sonmphammsc@gmail.com         | Sean Pham              | Enrichment |   G2  |   6   |    US   |    PDT   |   Member   |                                                                                            |
+|         |     S29    | trangnguyen.thtn@gmail.com    | Geoffrey Cao           | Enrichment |   G3  |   4   |    US   |    EDT   |   Member   |                                                                                            |
+|         |     S50    | samluong8109@gmail.com        | Samuel Luong           | Enrichment |   G3  |   9   |    US   |    CDT   |   Member   |                                                                                            |
+|         |            |                               |                        |            |       |       |         |          |            |                                                                                            |
+|   US-2  |    S144    | henrydinh17@gmail.com         | Henry Dinh             | Enrichment |   G4  |   11  |    US   |    EDT   |   Captain  | [Link](://drive.google.com/drive/folders/1htrZQUSmQLkGoFEfNlyxKqo27rjgZnp-?usp=drive_link) |
+|         |     S87    | chipham6712@gmail.com         | Chi Khanh Pham         | Enrichment |   G3  |   7   |    US   |    PDT   | Lieutenant | [Link](://drive.google.com/drive/folders/1htrZQUSmQLkGoFEfNlyxKqo27rjgZnp-?usp=drive_link) |
+|         |     S21    | henryfho@gmail.com            | Henry Ho               | Enrichment |   G2  |   6   |    US   |    EDT   |   Member   |                                                                                            |
+|         |     S28    | minhduc.cao@gmail.com         | Sophia Cao             | Enrichment |   G2  |   6   |    US   |    EDT   |   Member   |                                                                                            |
+|         |     S35    | mnp.usvn@gmail.com            | Phạm Nhật Minh         | Enrichment |   G3  |   8   |    US   |    PDT   |   Member   |                                                                                            |
+|         |            |                               |                        |            |       |       |         |          |            |                                                                                            |
+|   VN-1  |     S93    | ngochuongssy@gmail.com        | John Minh Quan         | Enrichment |   G3  |   7   |    VN   |   GMT+7  |   Captain  | [Link](://drive.google.com/drive/folders/1eBqgygGNmsgWbvBeh8bTJje1BmKLD06i?usp=drive_link) |
+|         |    S107    | phongnm.1211@gmail.com        | Nguyen Minh Phong      | Enrichment |   G2  |   7   |    VN   |   GMT+7  | Lieutenant | [Link](://drive.google.com/drive/folders/1eBqgygGNmsgWbvBeh8bTJje1BmKLD06i?usp=drive_link) |
+|         |    S108    | nguyenhaiha2987@gmail.com     | Nguyen Hai Ha          | Enrichment |   G2  |   7   |    VN   |   GMT+7  |   Member   |                                                                                            |                           |
 
 #### [A.3.3. Grading team submission](#a33-grading-team-submission)
 
@@ -797,7 +795,7 @@ Above, you can see that periods when the submissions will be graded and reviewed
 
 Use **[this link](https://www.worldtimebuddy.com/?qm=1&lid=2193733,2078025,1857910,127,12,14,305,306,307,308&h=305&date=2024-9-22&sln=10-12&hf=1&c=1444)** to see what time in your timezone corresponds to the times in other zones.
 
-Each seminar lasts for 30 minutes. The timezone for each student is on the list of all admintted students:
+Each seminar lasts for 30 minutes. The timezone for each student is on the list of all admitted students:
 
 | Level |               Time               |
 |:-----:|:--------------------------------:|
