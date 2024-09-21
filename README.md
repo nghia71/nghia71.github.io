@@ -114,7 +114,7 @@ Below is the list of all accepted students. Note that:
 |  S31 | Linh Khanh Le          | Enrichment   |   G3  |   8   |    UK   |  Supervised |    BST   | https://drive.google.com/drive/folders/1K1V-oCnNnmQHMJgmeDpewpVz3_yiXUfT             |
 |  S5  | Lisa Doan              | Fundamental  |   G1  |   6   |    UK   |             |    BST   | https://drive.google.com/drive/folders/1HSwLHvtFWgkoZtjJCBFJCJ_b2EgbQW1c?usp=sharing |
 |  S38 | Long Doan              | Fundamental  |   G2  |   9   |    ES   |             |   CEST   | https://drive.google.com/drive/folders/1JGT67aj2X9vH6MO1beW96TfrVtG398Xv             |
-|  S45 | Long Tran              | Fundamental  |   G2  |   7   |    UK   |             |    BST   | https://drive.google.com/drive/folders/1Imdu6SybR6Eqb-UdTHKHeQdLHMXAgPxS             |
+|  S45 | Long Tran              | Fundamental  |   G2  |   7   |    UK   |  Supervised |    BST   | https://drive.google.com/drive/folders/1Imdu6SybR6Eqb-UdTHKHeQdLHMXAgPxS             |
 |  S89 | Luan Duc Tran          | Enrichment   |   G2  |   8   |    UK   |             |    BST   | https://drive.google.com/drive/folders/1M7Cux7fVKIirI5n8cF_xzAQJT6hD3uPq             |
 |  S58 | Matheo Nguyen          | Fundamental  |   G2  |   7   |    UK   |             |    BST   | https://drive.google.com/drive/folders/1K4DP6zpmw2hARvz07ab72_d2u4L76_NZ             |
 | S120 | Michelle Nguyen        | Fundamental  |   G2  |   10  |    US   |             |    PDT   | https://drive.google.com/drive/folders/1Nw7Ewz0bvMIB1zkhwpcmnfPps2_wJjAj             |
@@ -125,7 +125,7 @@ Below is the list of all accepted students. Note that:
 | S137 | Minh Duc Vuong         | Fundamental  |   G1  |   6   |    CA   |             |    PDT   | https://drive.google.com/drive/folders/1PES4da7ahSMGy95k3a1ndxR9CrgUjmmK?usp=sharing |
 | S142 | Minh Hai Vu            | Enrichment   |   G3  |   13  |    UK   |             |    BST   | https://drive.google.com/drive/folders/1HFs8oHxKutBp2FL-JKyMBx8xjfGYlbr6             |
 | S127 | Minh Ngoc Nguyen       | Fundamental  |   G2  |   7   |    US   |             |    PDT   | https://drive.google.com/drive/folders/1PeahOLaJYJh8dhqv8Cv5fEY2EW39VHmM             |
-|  S81 | Minh Tran              | Fundamental  |   G1  |   5   |    UK   |             |    BST   | https://drive.google.com/drive/folders/1Lc_EH7Q62CExmCeMu_0g6q8iXsDSUarP             |
+|  S81 | Minh Tran              | Fundamental  |   G1  |   5   |    UK   |  Supervised |    BST   | https://drive.google.com/drive/folders/1Lc_EH7Q62CExmCeMu_0g6q8iXsDSUarP             |
 |  S52 | Nam Nguyen             | Fundamental  |   G2  |   8   |    UK   |             |    BST   | https://drive.google.com/drive/folders/1KM1majtLLdtaiOv_QiF2V-_9GNcucxoC             |
 |  S25 | Nathan Luong           | Enrichment   |   G2  |   8   |    CA   |             |    EDT   | https://drive.google.com/drive/folders/1I1G7jURDXx40VqA8miqTWZFbNjijo7Wj             |
 |  S41 | Ngo Bao Ngoc           | Fundamental  |   G1  |   7   |    CA   |             |    EDT   | https://drive.google.com/drive/folders/1Iu83aGF1x-hNAFrDqpL8CByTpvpptmUj             |
