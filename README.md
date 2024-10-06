@@ -1,6 +1,7 @@
 ![Math Club & Competitions (MCC)](./img/MCC-2024-Logo-Large.png)
 
 ## [Current standings](#current-standings)
+
 |  **ID** | **Student**            | **Level** | **Country** | **P1** | **P2** | **P3** | **P4** |      S1 |
 |:-------:|------------------------|:---------:|:-----------:|-------:|-------:|-------:|-------:|--------:|
 |   S77   | Adelina Mai Linh Luu   |     G2    |      CA     |     25 |     20 |     10 |      0 |  **55** |
