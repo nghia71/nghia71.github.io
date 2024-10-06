@@ -90,7 +90,7 @@
 |   S81   | Minh Tran              |     G1    |      UK     |     22 |     25 |      0 |     20 |  **67** |
 |   S52   | Nam Nguyen             |     G2    |      UK     |      5 |     25 |     25 |      5 |  **60** |
 |   S25   | Nathan Luong           |     G2    |      CA     |     10 |      2 |     25 |     25 |  **62** |
-| **S41** | **Ngo Bao Ngoc**       |     G1    |      CA     |     25 |     25 |     25 |     25 | **100** |
+|   S41   | Ngo Bao Ngoc           |     G1    |      CA     |     25 |     25 |     25 |     25 | **100** |
 |   S63   | Nguyen Binh An         |     G1    |     N/A     |        |        |        |        |         |
 |   S131  | Nguyen Duy             |     G2    |      FR     |        |        |        |        |         |
 |   S82   | Nguyễn Gia Bảo Nam     |     G2    |      VN     |     25 |      2 |      0 |     10 |  **37** |
