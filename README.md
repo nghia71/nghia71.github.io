@@ -137,6 +137,7 @@
 |  S1  | Vincent Pham           |   G2  |    CA   |  0 |  0 |  8 |  0 |   8 |                                                                                                                                                                                   |
 | S102 | Vo Nhu Y               |   G1  |    CA   |    |    |    |    |     |                                                                                                                                                                                   |
 |  S71 | Yanis-Huy Desarmaux-Do |   G3  |    FR   | 15 |  5 | 10 |    |  30 |                                                                                                                                                                                   |
+
 -----
 
 ## [A. September 8, 2024 - Admission Announcement](#a-september-8-2024---admission-announcement)
