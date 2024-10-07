@@ -2,142 +2,141 @@
 
 ## [Current standings](#current-standings)
 
-|  **ID** | **Student**            | **Level** | **Country** | **P1** | **P2** | **P3** | **P4** |      S1 |
-|:-------:|------------------------|:---------:|:-----------:|-------:|-------:|-------:|-------:|--------:|
-|   S77   | Adelina Mai Linh Luu   |     G2    |      CA     |     25 |     20 |     10 |      0 |  **55** |
-|   S101  | Albert Dinh-Le         |     G4    |      FR     |     25 |        |      0 |     10 |  **35** |
-|    S2   | Allison Ly             |     G1    |      CA     |        |        |        |        |         |
-|   S84   | An Nguyen              |     G3    |      UK     |        |        |        |        |         |
-|   S13   | Andrei Alexeichik      |     G1    |      NZ     |     10 |     10 |     25 |     10 |  **55** |
-|   S22   | Anh Diep Nguyen        |     G2    |      CA     |     25 |        |      5 |        |  **30** |
-|   S37   | Anh Nguyen             |     G1    |      CA     |        |        |        |        |         |
-|   S121  | Anna Le                |     G1    |      US     |     10 |        |     25 |     10 |  **45** |
-|   S95   | Anne Chu               |     G2    |      AU     |        |        |        |        |         |
-|   S32   | Annie Doan             |     G1    |      UK     |        |        |        |        |         |
-|   S125  | Annie Nguyen           |     G1    |      CA     |        |        |        |        |         |
-|   S90   | Anthony Pham           |     G3    |      FR     |      5 |        |     25 |      0 |  **30** |
-|   S34   | Bao Le                 |     G2    |      US     |      5 |      0 |     15 |      5 |  **25** |
-|   S112  | Benny Le               |     G4    |      US     |     25 |     10 |      5 |     25 |  **65** |
-|   S110  | Brooklyn Vu            |     G1    |      CA     |     10 |     20 |      0 |      5 |  **35** |
-|   S78   | Bui Hoang Long         |     G2    |      VN     |        |        |        |        |         |
-|   S80   | Bui Hoang Mai          |     G1    |      VN     |     25 |     20 |      5 |     10 |  **60** |
-|   S87   | Chi Khanh Pham         |     G3    |      US     |        |     25 |        |        |  **25** |
-|   S46   | Claire Luu             |     G1    |      US     |     25 |     25 |        |     25 |  **75** |
-|   S51   | Conan Le               |     G1    |      CA     |     20 |     25 |      0 |     20 |  **65** |
-|   S18   | Dang Khanh Le Ngan     |     G1    |      CA     |        |        |        |        |         |
-|   S83   | Dang Nguyen Phung      |     G1    |      CA     |     25 |     25 |      0 |     10 |  **60** |
-|   S111  | Dao Anna               |     G2    |      FR     |     25 |        |      0 |     25 |  **50** |
-|   S106  | Dao Antoine            |     G3    |      FR     |     25 |     25 |        |      5 |  **55** |
-|   S146  | David Vu               |     G1    |      CA     |        |        |        |        |         |
-|   S133  | Duong Dang Huy         |     G1    |      VN     |        |        |        |        |         |
-|   S70   | Elovie Do              |     G1    |      CA     |        |        |        |        |         |
-|   S73   | Fred Bui               |     G2    |      CA     |      0 |        |     10 |     25 |  **35** |
-|   S29   | Geoffrey Cao           |     G2    |      US     |     25 |     15 |     25 |     25 |  **90** |
-|   S128  | Giang Nguyen           |     G2    |      US     |     25 |      5 |     25 |     10 |  **65** |
-|   S128  | Giang Nguyen           |     G3    |      US     |     10 |      5 |        |        |  **15** |
-|   S60   | Ha Dang                |     G2    |      US     |     10 |        |     25 |     10 |  **45** |
-|   S97   | Ha Duong Linh Chi      |     G2    |      FR     |        |        |        |        |         |
-|   S148  | Hà Tấn Cương           |     G1    |      VN     |        |        |        |        |         |
-|   S57   | Ha-Anh Le              |     G4    |      UK     |        |        |        |        |         |
-|   S49   | Ha-Chi Vu Le           |     G1    |      UK     |        |        |        |        |         |
-|   S26   | Harry Vien             |     G2    |      UK     |      5 |      0 |     25 |     25 |  **55** |
-|   S27   | Helen Vien             |     G3    |      UK     |      5 |        |        |        |   **5** |
-|   S86   | Henry Bui              |     G1    |      US     |     20 |     25 |      0 |     10 |  **55** |
-|   S144  | Henry Dinh             |     G4    |      US     |     25 |     25 |     25 |     25 | **100** |
-|   S21   | Henry Ho               |     G2    |      US     |     15 |     20 |     25 |     20 |  **80** |
-|   S104  | Henry Minh Nhat Trinh  |     G3    |      US     |     25 |      0 |     10 |        |  **35** |
-|   S56   | Hien-Lam Nguyen        |     G1    |      UK     |     25 |     25 |      0 |      5 |  **55** |
-|   S56   | Hien-Lam Nguyen        |     G2    |      UK     |        |      2 |      5 |     10 |  **17** |
-|   S88   | Hieu Nguyen            |     G1    |      US     |        |        |        |        |         |
-|   S59   | Hoang Dang             |     G3    |      US     |        |        |     25 |        |  **25** |
-|    S4   | Hoang Xuan Bach        |     G1    |      VN     |        |        |        |        |         |
-|   S15   | Huu Duc Nguyen         |     G1    |      CA     |        |        |        |        |         |
-|   S115  | Huynh Minh Nhien       |     G1    |      VN     |     25 |      5 |        |      0 |  **30** |
-|   S72   | Jade Pham              |     G3    |      FR     |        |        |        |        |         |
-|   S114  | James Minh Trí Nguyen  |     G1    |      CA     |     25 |     25 |        |     25 |  **75** |
-|   S12   | Jason To               |     G3    |      UK     |     25 |     15 |        |     25 |  **65** |
-|   S69   | Javien Do              |     G1    |      CA     |        |        |        |        |         |
-|   S93   | John Minh Quan         |     G3    |      VN     |      5 |      5 |        |        |  **10** |
-|   S62   | Julie Cao              |     G2    |      FR     |     25 |     25 |        |     25 |  **75** |
-|   S44   | Karl Le                |     G3    |      FR     |      2 |      2 |      5 |      0 |   **9** |
-|   S55   | Khai-Tam Nguyen        |     G1    |      UK     |     25 |     25 |     25 |     25 | **100** |
-|   S55   | Khai-Tam Nguyen        |     G2    |      UK     |     20 |      0 |     20 |     15 |  **55** |
-|   S92   | Khang M. Nguyen        |     G1    |      VN     |        |        |        |        |         |
-|   S145  | Khang Nguyen           |     G1    |      US     |        |        |        |        |         |
-|   S30   | Khiem Pham             |     G1    |      UK     |     25 |     25 |     25 |     25 | **100** |
-|   S143  | Khoa Anh Vu            |     G2    |      UK     |     20 |        |     20 |     25 |  **65** |
-|   S64   | Kien Dang              |     G3    |      US     |      2 |      0 |        |      0 |   **2** |
-|   S11   | Kylan Thai             |     G1    |      US     |     15 |     25 |        |     10 |  **50** |
-|   S74   | Lê Cường Lâm           |     G2    |      UK     |        |        |        |        |         |
-|   S105  | Lê Lâm Phương Anh      |     G1    |      AU     |      0 |     22 |      0 |     10 |  **32** |
-|   S76   | Le Minh Quan           |     G1    |     N/A     |        |        |        |        |         |
-|   S123  | Lê Nguyễn Linh Nhi     |     G1    |      VN     |        |        |        |        |         |
-|   S68   | Leo Bui                |     G2    |      US     |     25 |     10 |      0 |     10 |  **45** |
-|   S31   | Linh Khanh Le          |     G3    |      UK     |     25 |     10 |        |      2 |  **37** |
-|    S5   | Lisa Doan              |     G1    |      UK     |        |        |        |        |         |
-|   S38   | Long Doan              |     G2    |      ES     |        |        |        |        |         |
-|   S45   | Long Tran              |     G2    |      UK     |     10 |        |      5 |     10 |  **25** |
-|   S89   | Luan Duc Tran          |     G2    |      UK     |     10 |        |      5 |        |         |
-|   S58   | Matheo Nguyen          |     G2    |      UK     |        |        |        |        |         |
-|   S120  | Michelle Nguyen        |     G2    |      US     |        |        |        |        |         |
-|   S114  | Mike Nguyen            |     G1    |      CA     |        |        |        |        |         |
-|   S66   | Mike Nguyen            |     G2    |      UK     |        |        |      2 |        |   **2** |
-|    S9   | Milan Thai             |     G1    |      US     |      5 |     25 |        |      5 |  **35** |
-|   S19   | Minh Cao Doan          |     G2    |      ES     |        |        |        |        |         |
-|   S137  | Minh Duc Vuong         |     G1    |      CA     |        |        |        |        |         |
-|   S142  | Minh Hai Vu            |     G3    |      UK     |     25 |     10 |        |      0 |  **35** |
-|   S127  | Minh Ngoc Nguyen       |     G2    |      US     |        |        |        |        |         |
-|   S81   | Minh Tran              |     G1    |      UK     |     22 |     25 |      0 |     20 |  **67** |
-|   S52   | Nam Nguyen             |     G2    |      UK     |      5 |     25 |     25 |      5 |  **60** |
-|   S25   | Nathan Luong           |     G2    |      CA     |     10 |      2 |     25 |     25 |  **62** |
-|   S41   | Ngo Bao Ngoc           |     G1    |      CA     |     25 |     25 |     25 |     25 | **100** |
-|   S63   | Nguyen Binh An         |     G1    |     N/A     |        |        |        |        |         |
-|   S131  | Nguyen Duy             |     G2    |      FR     |        |        |        |        |         |
-|   S82   | Nguyễn Gia Bảo Nam     |     G2    |      VN     |     25 |      2 |      0 |     10 |  **37** |
-|   S108  | Nguyen Hai Ha          |     G2    |      VN     |        |        |        |        |         |
-|   S67   | Nguyen Huy Khanh       |     G2    |      VN     |        |        |        |        |         |
-|   S48   | Nguyen Jérémy          |     G3    |      FR     |     22 |        |        |        |  **22** |
-|   S61   | Nguyen Martin          |     G2    |      FR     |        |        |        |        |         |
-|   S16   | Nguyen Minh            |     G1    |      JP     |     25 |        |      0 |     25 |  **50** |
-|   S112  | Nguyen Minh Ngoc       |     G1    |      VN     |        |        |        |        |         |
-|   S107  | Nguyen Minh Phong      |     G2    |      VN     |        |        |        |        |         |
-|   S132  | Nguyen My              |     G2    |      FR     |        |        |        |        |         |
-|   S99   | Nguyen Ngo Lam Phong   |     G2    |      FR     |     10 |      5 |        |     10 |  **25** |
-|   S140  | Nguyen Pham Bao Ngoc   |     G2    |      FR     |     25 |     20 |     25 |        |  **70** |
-|   S117  | Nguyễn Phan Thành Huy  |     G1    |      VN     |      0 |      2 |      0 |      0 |   **2** |
-|   S53   | Nguyễn Tiến Minh Khôi  |     G1    |      VN     |        |        |        |        |         |
-|   S141  | Nguyen Trung Kien      |     G2    |      FR     |     25 |        |     25 |     25 |  **75** |
-|   S129  | Ninh Nguyen            |     G2    |      US     |     20 |     25 |     25 |      5 |  **75** |
-|   S109  | Paris Vu               |     G1    |      CA     |      5 |     25 |      0 |      0 |  **30** |
-|   S35   | Phạm Nhật Minh         |     G3    |      US     |     20 |      5 |        |      1 |  **26** |
-|   S116  | Phạm Thanh Thanh       |     G1    |      VN     |     20 |     25 |      0 |        |  **45** |
-|   S91   | Phuc Long Phuong       |     G1    |      CA     |        |        |        |        |         |
-|   S17   | Quan                   |     G1    |      VN     |        |        |        |        |         |
-|   S138  | Quan Le                |     G1    |      US     |     25 |     25 |     25 |     25 | **100** |
-|   S79   | Ryan Nguyen            |     G3    |      UK     |        |        |        |        |         |
-|   S20   | Sam Ha                 |     G2    |      CA     |     20 |      2 |     20 |     10 |  **52** |
-|   S100  | Sam Vuong              |     G2    |      US     |     10 |     25 |      0 |     10 |  **45** |
-|   S50   | Samuel Luong           |     G3    |      US     |     15 |      5 |        |        |  **20** |
-|   S36   | Sean Pham              |     G2    |      US     |        |        |     25 |     15 |  **40** |
-|   S42   | Sofia Vy Nguyen        |     G1    |      CA     |        |        |        |        |         |
-|   S28   | Sophia Cao             |     G2    |      US     |      2 |     25 |      0 |     25 |  **52** |
-|   S47   | Sophie HaLinh Pham     |     G1    |      US     |     20 |     25 |      0 |     10 |  **55** |
-|   S135  | Steven Pham            |     G1    |      US     |     10 |     25 |      0 |      5 |  **40** |
-|   S130  | Theo Nguyen            |     G3    |      UK     |     10 |        |        |     25 |  **35** |
-|   S147  | Thomas Vu              |     G1    |      CA     |      3 |      3 |      0 |      3 |   **9** |
-|    S8   | Tony Vo                |     G1    |      US     |     25 |     20 |      0 |      5 |  **50** |
-|   S24   | Trần Hiếu Khoa         |     G3    |      VN     |        |        |        |        |         |
-|   S139  | Tran Lê Bách           |     G2    |      FR     |     10 |      0 |      0 |     15 |  **25** |
-|   S96   | Tran Nguyen An         |     G1    |      FR     |     25 |     25 |     25 |     10 |  **85** |
-|   S39   | Truong Mai-Vy          |     G1    |      VN     |     10 |     15 |        |     10 |  **35** |
-|   S40   | Truong Minh-Vu         |     G2    |      VN     |     10 |     10 |      2 |      5 |  **27** |
-|   S136  | Tuan Kien Vuong        |     G1    |      CA     |     10 |     25 |      0 |      5 |  **40** |
-|   S118  | Tuyet Ly Phuong        |     G2    |      CA     |        |        |        |        |         |
-|   S10   | Valentin Thang         |     G1    |      UK     |     25 |     25 |        |     25 |  **75** |
-|    S1   | Vincent Pham           |     G2    |      CA     |      0 |      0 |      8 |      0 |   **8** |
-|   S102  | Vo Nhu Y               |     G1    |      CA     |        |        |        |        |         |
-|   S71   | Yanis-Huy Desarmaux-Do |     G3    |      FR     |     15 |      5 |     10 |        |  **30** |
-
+|  ID  | Student                | Level | Country | P1 | P2 | P3 | P4 |  S1 |                                                                                                                                                                           Comment |
+|:----:|------------------------|:-----:|:-------:|---:|---:|---:|---:|----:|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+|  S77 | Adelina Mai Linh Luu   |   G2  |    CA   | 25 | 20 | 10 |  0 |  55 |                                                                                                                                                                                   |
+| S101 | Albert Dinh-Le         |   G4  |    FR   | 25 |    |  0 | 10 |  35 |                                                                                                                                                                                   |
+|  S2  | Allison Ly             |   G1  |    CA   |    |    |    |    |     |                                                                                                                                                                                   |
+|  S84 | An Nguyen              |   G3  |    UK   |    |    |    |    |     |                                                                                                                                                                                   |
+|  S13 | Andrei Alexeichik      |   G1  |    NZ   | 10 | 10 | 25 | 10 |  55 |                                                                                                                                                                                   |
+|  S22 | Anh Diep Nguyen        |   G2  |    CA   | 25 |    |  5 |    |  30 |                                                                                                                                                                                   |
+|  S37 | Anh Nguyen             |   G1  |    CA   |    |    |    |    |     |                                                                                                                                                                                   |
+| S121 | Anna Le                |   G1  |    US   | 10 |    | 25 | 10 |  45 | Need a better explaination as to why 9 pairs adds up to 20 + 10 leads to a conclusion. The last problem has 2 answers.                                                            |
+|  S95 | Anne Chu               |   G2  |    AU   |    |    |    |    |     |                                                                                                                                                                                   |
+|  S32 | Annie Doan             |   G1  |    UK   |    |    |    |    |     |                                                                                                                                                                                   |
+| S125 | Annie Nguyen           |   G1  |    CA   |    |    |    |    |     |                                                                                                                                                                                   |
+|  S90 | Anthony Pham           |   G3  |    FR   |  5 |    | 25 |  0 |  30 |                                                                                                                                                                                   |
+|  S34 | Bao Le                 |   G2  |    US   |  5 |  0 | 15 |  5 |  25 |                                                                                                                                                                                   |
+| S112 | Benny Le               |   G4  |    US   | 25 | 10 |  5 | 25 |  65 |                                                                                                                                                                                   |
+| S110 | Brooklyn Vu            |   G1  |    CA   | 10 | 20 |  0 |  5 |  35 |                                                                                                                                                                                   |
+|  S78 | Bui Hoang Long         |   G2  |    VN   |    |    |    |    |     |                                                                                                                                                                                   |
+|  S80 | Bui Hoang Mai          |   G1  |    VN   | 25 | 20 |  5 | 10 |  60 | Can you draw the solution for 3.5.3? For 3.5.4 - please explain further why the number is 25 (despite it is trivial)                                                              |
+|  S87 | Chi Khanh Pham         |   G3  |    US   |    | 25 |    |    |  25 |                                                                                                                                                                                   |
+|  S46 | Claire Luu             |   G1  |    US   | 25 | 25 |    | 25 |  75 |                                                                                                                                                                                   |
+|  S51 | Conan Le               |   G1  |    CA   | 20 | 25 |  0 | 20 |  65 |                                                                                                                                                                                   |
+|  S18 | Dang Khanh Le Ngan     |   G1  |    CA   |    |    |    |    |     |                                                                                                                                                                                   |
+|  S83 | Dang Nguyen Phung      |   G1  |    CA   | 25 | 25 |  0 | 10 |  60 | For 3.5.4 - please explain further why the number is 25 (despite it is trivial)                                                                                                   |
+| S111 | Dao Anna               |   G2  |    FR   | 25 |    |  0 | 25 |  50 |                                                                                                                                                                                   |
+| S106 | Dao Antoine            |   G3  |    FR   | 25 | 25 |    |  5 |  55 |                                                                                                                                                                                   |
+| S146 | David Vu               |   G1  |    CA   |    |    |    |    |     |                                                                                                                                                                                   |
+| S133 | Duong Dang Huy         |   G1  |    VN   |    |    |    |    |     |                                                                                                                                                                                   |
+|  S70 | Elovie Do              |   G1  |    CA   |    |    |    |    |     |                                                                                                                                                                                   |
+|  S73 | Fred Bui               |   G2  |    CA   |  0 |    | 10 | 25 |  35 |                                                                                                                                                                                   |
+|  S29 | Geoffrey Cao           |   G2  |    US   | 25 | 15 | 25 | 25 |  90 |                                                                                                                                                                                   |
+| S128 | Giang Nguyen           |   G2  |    US   | 25 |  5 | 25 | 10 |  65 |                                                                                                                                                                                   |
+| S128 | Giang Nguyen           |   G3  |    US   | 10 |  5 |    |    |  15 |                                                                                                                                                                                   |
+|  S60 | Ha Dang                |   G2  |    US   | 10 |    | 25 | 10 |  45 | Need a better explaination as to why gold coin weight 10. The last problem has 2 answers. Also please submit you works in PDF as instructed.                                      |
+|  S97 | Ha Duong Linh Chi      |   G2  |    FR   |    |    |    |    |     |                                                                                                                                                                                   |
+| S148 | Hà Tấn Cương           |   G1  |    VN   |    |    |    |    |     |                                                                                                                                                                                   |
+|  S57 | Ha-Anh Le              |   G4  |    UK   |    |    |    |    |     |                                                                                                                                                                                   |
+|  S49 | Ha-Chi Vu Le           |   G1  |    UK   |    |    |    |    |     |                                                                                                                                                                                   |
+|  S26 | Harry Vien             |   G2  |    UK   |  5 |  0 | 25 | 25 |  55 |                                                                                                                                                                                   |
+|  S27 | Helen Vien             |   G3  |    UK   |  5 |    |    |    |   5 |                                                                                                                                                                                   |
+|  S86 | Henry Bui              |   G1  |    US   | 20 | 25 |  0 | 10 |  55 |                                                                                                                                                                                   |
+| S144 | Henry Dinh             |   G4  |    US   | 25 | 25 | 25 | 25 | 100 |                                                                                                                                                                                   |
+|  S21 | Henry Ho               |   G2  |    US   | 15 | 20 | 25 | 20 |  80 |                                                                                                                                                                                   |
+| S104 | Henry Minh Nhat Trinh  |   G3  |    US   | 25 |  0 | 10 |    |  35 |                                                                                                                                                                                   |
+|  S56 | Hien-Lam Nguyen        |   G1  |    UK   | 25 | 25 |  0 |  5 |  55 |                                                                                                                                                                                   |
+|  S56 | Hien-Lam Nguyen        |   G2  |    UK   |    |  2 |  5 | 10 |  17 |                                                                                                                                                                                   |
+|  S88 | Hieu Nguyen            |   G1  |    US   |    |    |    |    |     |                                                                                                                                                                                   |
+|  S59 | Hoang Dang             |   G3  |    US   |    |    | 25 |    |  25 |                                                                                                                                                                                   |
+|  S4  | Hoang Xuan Bach        |   G1  |    VN   |    |    |    |    |     |                                                                                                                                                                                   |
+|  S15 | Huu Duc Nguyen         |   G1  |    CA   |    |    |    |    |     |                                                                                                                                                                                   |
+| S115 | Huynh Minh Nhien       |   G1  |    VN   | 25 |  5 |    |  0 |  30 |                                                                                                                                                                                   |
+|  S72 | Jade Pham              |   G3  |    FR   |    |    |    |    |     |                                                                                                                                                                                   |
+| S114 | James Minh Trí Nguyen  |   G1  |    CA   | 25 | 25 |    | 25 |  75 |                                                                                                                                                                                   |
+|  S12 | Jason To               |   G3  |    UK   | 25 | 15 |    | 25 |  65 | Only answer for problem 3 submitted? - yet a correct solution but remember the question did ask whether that depend on P & Q?                                                     |
+|  S69 | Javien Do              |   G1  |    CA   |    |    |    |    |     |                                                                                                                                                                                   |
+|  S93 | John Minh Quan         |   G3  |    VN   |  5 |  5 |    |    |  10 | Please review the tutorial for method to solve Question 1 - also look at official answer.                                                                                         |
+|  S62 | Julie Cao              |   G2  |    FR   | 25 | 25 |    | 25 |  75 |                                                                                                                                                                                   |
+|  S44 | Karl Le                |   G3  |    FR   |  2 |  2 |  5 |  0 |   9 |                                                                                                                                                                                   |
+|  S55 | Khai-Tam Nguyen        |   G1  |    UK   | 25 | 25 | 25 | 25 | 100 |                                                                                                                                                                                   |
+|  S55 | Khai-Tam Nguyen        |   G2  |    UK   | 20 |  0 | 20 | 15 |  55 |                                                                                                                                                                                   |
+|  S92 | Khang M. Nguyen        |   G1  |    VN   |    |    |    |    |     |                                                                                                                                                                                   |
+| S145 | Khang Nguyen           |   G1  |    US   |    |    |    |    |     |                                                                                                                                                                                   |
+|  S30 | Khiem Pham             |   G1  |    UK   | 25 | 25 | 25 | 25 | 100 |                                                                                                                                                                                   |
+| S143 | Khoa Anh Vu            |   G2  |    UK   | 20 |    | 20 | 25 |  65 | You jumped into conclusion that t_1 = c_1 + 10 too quick. Some further explaination is needed here. Also for the third problem, please explain in details.                        |
+|  S64 | Kien Dang              |   G3  |    US   |  2 |  0 |    |  0 |   2 |                                                                                                                                                                                   |
+|  S11 | Kylan Thai             |   G1  |    US   | 15 | 25 |    | 10 |  50 |                                                                                                                                                                                   |
+|  S74 | Lê Cường Lâm           |   G2  |    UK   |    |    |    |    |     |                                                                                                                                                                                   |
+| S105 | Lê Lâm Phương Anh      |   G1  |    AU   |  0 | 22 |  0 | 10 |  32 |                                                                                                                                                                                   |
+|  S76 | Le Minh Quan           |   G1  |   N/A   |    |    |    |    |     |                                                                                                                                                                                   |
+| S123 | Lê Nguyễn Linh Nhi     |   G1  |    VN   |    |    |    |    |     |                                                                                                                                                                                   |
+|  S68 | Leo Bui                |   G2  |    US   | 25 | 10 |  0 | 10 |  45 |                                                                                                                                                                                   |
+|  S31 | Linh Khanh Le          |   G3  |    UK   | 25 | 10 |    |  2 |  37 |                                                                                                                                                                                   |
+|  S5  | Lisa Doan              |   G1  |    UK   |    |    |    |    |     |                                                                                                                                                                                   |
+|  S38 | Long Doan              |   G2  |    ES   |    |    |    |    |     |                                                                                                                                                                                   |
+|  S45 | Long Tran              |   G2  |    UK   | 10 |    |  5 | 10 |  25 |                                                                                                                                                                                   |
+|  S89 | Luan Duc Tran          |   G2  |    UK   | 10 |    |  5 |    |     |                                                                                                                                                                                   |
+|  S58 | Matheo Nguyen          |   G2  |    UK   |    |    |    |    |     |                                                                                                                                                                                   |
+| S120 | Michelle Nguyen        |   G2  |    US   |    |    |    |    |     |                                                                                                                                                                                   |
+| S114 | Mike Nguyen            |   G1  |    CA   |    |    |    |    |     |                                                                                                                                                                                   |
+|  S66 | Mike Nguyen            |   G2  |    UK   |    |    |  2 |    |   2 |                                                                                                                                                                                   |
+|  S9  | Milan Thai             |   G1  |    US   |  5 | 25 |    |  5 |  35 |                                                                                                                                                                                   |
+|  S19 | Minh Cao Doan          |   G2  |    ES   |    |    |    |    |     |                                                                                                                                                                                   |
+| S137 | Minh Duc Vuong         |   G1  |    CA   |    |    |    |    |     |                                                                                                                                                                                   |
+| S142 | Minh Hai Vu            |   G3  |    UK   | 25 | 10 |    |  0 |  35 |                                                                                                                                                                                   |
+| S127 | Minh Ngoc Nguyen       |   G2  |    US   |    |    |    |    |     |                                                                                                                                                                                   |
+|  S81 | Minh Tran              |   G1  |    UK   | 22 | 25 |  0 | 20 |  67 | For 3.5.4 - you provided the chart up to 5 - yet the chart should be extended to 9                                                                                                |
+|  S52 | Nam Nguyen             |   G2  |    UK   |  5 | 25 | 25 |  5 |  60 |                                                                                                                                                                                   |
+|  S25 | Nathan Luong           |   G2  |    CA   | 10 |  2 | 25 | 25 |  62 |                                                                                                                                                                                   |
+|  S41 | Ngo Bao Ngoc           |   G1  |    CA   | 25 | 25 | 25 | 25 | 100 |                                                                                                                                                                                   |
+|  S63 | Nguyen Binh An         |   G1  |   N/A   |    |    |    |    |     |                                                                                                                                                                                   |
+| S131 | Nguyen Duy             |   G2  |    FR   |    |    |    |    |     |                                                                                                                                                                                   |
+|  S82 | Nguyễn Gia Bảo Nam     |   G2  |    VN   | 25 |  2 |  0 | 10 |  37 |                                                                                                                                                                                   |
+| S108 | Nguyen Hai Ha          |   G2  |    VN   |    |    |    |    |     |                                                                                                                                                                                   |
+|  S67 | Nguyen Huy Khanh       |   G2  |    VN   |    |    |    |    |     |                                                                                                                                                                                   |
+|  S48 | Nguyen Jérémy          |   G3  |    FR   | 22 |    |    |    |  22 |                                                                                                                                                                                   |
+|  S61 | Nguyen Martin          |   G2  |    FR   |    |    |    |    |     |                                                                                                                                                                                   |
+|  S16 | Nguyen Minh            |   G1  |    JP   | 25 |    |  0 | 25 |  50 |                                                                                                                                                                                   |
+| S112 | Nguyen Minh Ngoc       |   G1  |    VN   |    |    |    |    |     |                                                                                                                                                                                   |
+| S107 | Nguyen Minh Phong      |   G2  |    VN   |    |    |    |    |     |                                                                                                                                                                                   |
+| S132 | Nguyen My              |   G2  |    FR   |    |    |    |    |     |                                                                                                                                                                                   |
+|  S99 | Nguyen Ngo Lam Phong   |   G2  |    FR   | 10 |  5 |    | 10 |  25 |                                                                                                                                                                                   |
+| S140 | Nguyen Pham Bao Ngoc   |   G2  |    FR   | 25 | 20 | 25 |    |  70 |                                                                                                                                                                                   |
+| S117 | Nguyễn Phan Thành Huy  |   G1  |    VN   |  0 |  2 |  0 |  0 |   2 |                                                                                                                                                                                   |
+|  S53 | Nguyễn Tiến Minh Khôi  |   G1  |    VN   |    |    |    |    |     |                                                                                                                                                                                   |
+| S141 | Nguyen Trung Kien      |   G2  |    FR   | 25 |    | 25 | 25 |  75 | Need a better explaination for 9T - 135                                                                                                                                           |
+| S129 | Ninh Nguyen            |   G2  |    US   | 20 | 25 | 25 |  5 |  75 |                                                                                                                                                                                   |
+| S109 | Paris Vu               |   G1  |    CA   |  5 | 25 |  0 |  0 |  30 |                                                                                                                                                                                   |
+|  S35 | Phạm Nhật Minh         |   G3  |    US   | 20 |  5 |    |  1 |  26 |                                                                                                                                                                                   |
+| S116 | Phạm Thanh Thanh       |   G1  |    VN   | 20 | 25 |  0 |    |  45 |                                                                                                                                                                                   |
+|  S91 | Phuc Long Phuong       |   G1  |    CA   |    |    |    |    |     |                                                                                                                                                                                   |
+|  S17 | Quan                   |   G1  |    VN   |    |    |    |    |     |                                                                                                                                                                                   |
+| S138 | Quan Le                |   G1  |    US   | 25 | 25 | 25 | 25 | 100 | Well done - please improve handwriting and presentation                                                                                                                           |
+|  S79 | Ryan Nguyen            |   G3  |    UK   |    |    |    |    |     |                                                                                                                                                                                   |
+|  S20 | Sam Ha                 |   G2  |    CA   | 20 |  2 | 20 | 10 |  52 |                                                                                                                                                                                   |
+| S100 | Sam Vuong              |   G2  |    US   | 10 | 25 |  0 | 10 |  45 |                                                                                                                                                                                   |
+|  S50 | Samuel Luong           |   G3  |    US   | 15 |  5 |    |    |  20 |                                                                                                                                                                                   |
+|  S36 | Sean Pham              |   G2  |    US   |    |    | 25 | 15 |  40 |                                                                                                                                                                                   |
+|  S42 | Sofia Vy Nguyen        |   G1  |    CA   |    |    |    |    |     |                                                                                                                                                                                   |
+|  S28 | Sophia Cao             |   G2  |    US   |  2 | 25 |  0 | 25 |  52 |                                                                                                                                                                                   |
+|  S47 | Sophie HaLinh Pham     |   G1  |    US   | 20 | 25 |  0 | 10 |  55 |                                                                                                                                                                                   |
+| S135 | Steven Pham            |   G1  |    US   | 10 | 25 |  0 |  5 |  40 |                                                                                                                                                                                   |
+| S130 | Theo Nguyen            |   G3  |    UK   | 10 |    |    | 25 |  35 |                                                                                                                                                                                   |
+| S147 | Thomas Vu              |   G1  |    CA   |  3 |  3 |  0 |  3 |   9 | Please - i. write your answers in separate paper instead of using the exam question sheet, ii. clearly give the solutions and explanation instead of only writing out the answers |
+|  S8  | Tony Vo                |   G1  |    US   | 25 | 20 |  0 |  5 |  50 |                                                                                                                                                                                   |
+|  S24 | Trần Hiếu Khoa         |   G3  |    VN   |    |    |    |    |     |                                                                                                                                                                                   |
+| S139 | Tran Lê Bách           |   G2  |    FR   | 10 |  0 |  0 | 15 |  25 |                                                                                                                                                                                   |
+|  S96 | Tran Nguyen An         |   G1  |    FR   | 25 | 25 | 25 | 10 |  85 |                                                                                                                                                                                   |
+|  S39 | Truong Mai-Vy          |   G1  |    VN   | 10 | 15 |    | 10 |  35 |                                                                                                                                                                                   |
+|  S40 | Truong Minh-Vu         |   G2  |    VN   | 10 | 10 |  2 |  5 |  27 |                                                                                                                                                                                   |
+| S136 | Tuan Kien Vuong        |   G1  |    CA   | 10 | 25 |  0 |  5 |  40 |                                                                                                                                                                                   |
+| S118 | Tuyet Ly Phuong        |   G2  |    CA   |    |    |    |    |     |                                                                                                                                                                                   |
+|  S10 | Valentin Thang         |   G1  |    UK   | 25 | 25 |    | 25 |  75 | For 3.5.4 - the method of trial and error is accepted, but you should have tried up to 9                                                                                          |
+|  S1  | Vincent Pham           |   G2  |    CA   |  0 |  0 |  8 |  0 |   8 |                                                                                                                                                                                   |
+| S102 | Vo Nhu Y               |   G1  |    CA   |    |    |    |    |     |                                                                                                                                                                                   |
+|  S71 | Yanis-Huy Desarmaux-Do |   G3  |    FR   | 15 |  5 | 10 |    |  30 |                                                                                                                                                                                   |
 -----
 
 ## [A. September 8, 2024 - Admission Announcement](#a-september-8-2024---admission-announcement)
