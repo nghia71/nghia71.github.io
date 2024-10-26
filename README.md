@@ -1,6 +1,64 @@
 ![Math Club & Competitions (MCC)](./img/MCC-2024-Logo-Large.png)
 
-## [Current standings](#current-standings)
+## [Current teams](#current-teams)
+
+| **Team ID** | **Strength** | **Student ID** | **Student**            | **Program** | **Level** | **Grade** |  **Type**  |                                            **Folder**                                           |
+|:-----------:|:------------:|:--------------:|------------------------|-------------|:---------:|:---------:|:----------:|:-----------------------------------------------------------------------------------------------:|
+|   **CA-1**  |       5      |       S73      | Fred Bui               | Enrichment  |     G2    |     7     |   Captain  | [Link](https://drive.google.com/drive/folders/1RDgm_Jbc1nmyzWEtuDPW9jF1cc3yxB4T?usp=drive_link) |
+|             |              |       S1       | Vincent Pham           | Enrichment  |     G2    |     10    | Lieutenant | [Link](https://drive.google.com/drive/folders/1RDgm_Jbc1nmyzWEtuDPW9jF1cc3yxB4T?usp=drive_link) |
+|             |              |       S22      | Anh Diep Nguyen        | Enrichment  |     G2    |     8     |   Member   |                                                                                                 |
+|             |              |       S25      | Nathan Luong           | Enrichment  |     G2    |     8     |   Member   |                                                                                                 |
+|             |              |      S118      | Tuyet Ly Phuong        | Enrichment  |     G2    |     8     |   Member   |                                                                                                 |
+|             |              |                |                        |             |           |           |            |                                                                                                 |
+|   **FR-1**  |       9      |       S90      | Anthony Pham           | Enrichment  |     G3    |     11    |   Captain  | [Link](https://drive.google.com/drive/folders/1pQ0pCRgZeW_ATrPwFCz7Pb-zEdcDXzi0?usp=drive_link) |
+|             |              |      S106      | Dao Antoine            | Enrichment  |     G3    |     10    | Lieutenant | [Link](https://drive.google.com/drive/folders/1pQ0pCRgZeW_ATrPwFCz7Pb-zEdcDXzi0?usp=drive_link) |
+|             |              |      S111      | Dao Anna               | Enrichment  |     G2    |     7     |   Member   |                                                                                                 |
+|             |              |       S72      | Jade Pham              | Enrichment  |     G2    |     8     |   Member   |                                                                                                 |
+|             |              |       S62      | Julie Cao              | Enrichment  |     G2    |     9     |   Member   |                                                                                                 |
+|             |              |       S44      | Karl Le                | Enrichment  |     G3    |     10    |   Member   |                                                                                                 |
+|             |              |                |                        |             |           |           |            |                                                                                                 |
+|   **FR-2**  |       4      |       S19      | Minh Cao Doan          | Enrichment  |     G2    |     11    |   Captain  | [Link](https://drive.google.com/drive/folders/1ls0BvCO2gtxRZKKvW0yIR1lcyjXHMK9e?usp=drive_link) |
+|             |              |       S61      | Nguyen Martin          | Enrichment  |     G2    |     9     | Lieutenant | [Link](https://drive.google.com/drive/folders/1ls0BvCO2gtxRZKKvW0yIR1lcyjXHMK9e?usp=drive_link) |
+|             |              |      S131      | Nguyen Duy             | Enrichment  |     G2    |     9     |   Member   |                                                                                                 |
+|             |              |      S140      | Nguyen Pham Bao Ngoc   | Enrichment  |     G2    |     9     |   Member   |                                                                                                 |
+|             |              |                |                        |             |           |           |            |                                                                                                 |
+|   **FR-3**  |       7      |      S101      | Albert Dinh-Le         | Enrichment  |     G4    |     12    |   Captain  | [Link](https://drive.google.com/drive/folders/1oZbDyrL8Ly0_cwmYelItccRLZOrnJ-7I?usp=drive_link) |
+|             |              |       S71      | Yanis-Huy Desarmaux-Do | Enrichment  |     G3    |     11    | Lieutenant | [Link](https://drive.google.com/drive/folders/1oZbDyrL8Ly0_cwmYelItccRLZOrnJ-7I?usp=drive_link) |
+|             |              |      S132      | Nguyen My              | Enrichment  |     G2    |     6     |   Member   |                                                                                                 |
+|             |              |      S141      | Nguyen Trung Kien      | Enrichment  |     G2    |     7     |   Member   |                                                                                                 |
+|             |              |                |                        |             |           |           |            |                                                                                                 |
+|   **UK-1**  |      10      |       S57      | Ha-Anh Le              | Enrichment  |     G4    |     12    |   Captain  | [Link](https://drive.google.com/drive/folders/17IilzcAvsITlq3cLS8KLreU_BRY9PPM5?usp=drive_link) |
+|             |              |       S79      | Ryan Nguyen            | Enrichment  |     G3    |     11    | Lieutenant | [Link](https://drive.google.com/drive/folders/17IilzcAvsITlq3cLS8KLreU_BRY9PPM5?usp=drive_link) |
+|             |              |       S12      | Jason To               | Enrichment  |     G3    |     8     |   Member   |                                                                                                 |
+|             |              |       S26      | Harry Vien             | Enrichment  |     G2    |     5     |   Member   |                                                                                                 |
+|             |              |      S143      | Khoa Anh Vu            | Enrichment  |     G2    |     10    |   Member   |                                                                                                 |
+|             |              |       S74      | Lê Cường Lâm           | Enrichment  |     G2    |     10    |   Member   |                                                                                                 |
+|             |              |                |                        |             |           |           |            |                                                                                                 |
+|   **UK-2**  |       9      |      S142      | Minh Hai Vu            | Enrichment  |     G3    |     13    |   Captain  | [Link](https://drive.google.com/drive/folders/19SYII9zZQld6g1sslHpjtg81wPUw75vH?usp=drive_link) |
+|             |              |       S84      | An Nguyen              | Enrichment  |     G3    |     12    | Lieutenant | [Link](https://drive.google.com/drive/folders/19SYII9zZQld6g1sslHpjtg81wPUw75vH?usp=drive_link) |
+|             |              |       S31      | Linh Khanh Le          | Enrichment  |     G3    |     8     |   Member   |                                                                                                 |
+|             |              |       S89      | Luan Duc Tran          | Enrichment  |     G2    |     8     |   Member   |                                                                                                 |
+|             |              |       S27      | Helen Vien             | Enrichment  |     G3    |     8     |   Member   |                                                                                                 |
+|             |              |                |                        |             |           |           |            |                                                                                                 |
+|   **US-1**  |      11      |      S112      | Benny Le               | Enrichment  |     G4    |     8     |   Captain  | [Link](https://drive.google.com/drive/folders/1KZSeOn52jjRiAffyQWgbvKIBkfsDjiGr?usp=drive_link) |
+|             |              |      S104      | Henry Minh Nhat Trinh  | Enrichment  |     G3    |     9     | Lieutenant | [Link](https://drive.google.com/drive/folders/1KZSeOn52jjRiAffyQWgbvKIBkfsDjiGr?usp=drive_link) |
+|             |              |       S36      | Sean Pham              | Enrichment  |     G2    |     6     |   Member   |                                                                                                 |
+|             |              |       S29      | Geoffrey Cao           | Enrichment  |     G3    |     4     |   Member   |                                                                                                 |
+|             |              |      S100      | Sam Vuong              | Enrichment  |     G2    |     5     |   Member   |                                                                                                 |
+|             |              |       S50      | Samuel Luong           | Enrichment  |     G3    |     9     |   Member   |                                                                                                 |
+|             |              |                |                        |             |           |           |            |                                                                                                 |
+|   **US-2**  |       9      |      S144      | Henry Dinh             | Enrichment  |     G4    |     11    |   Captain  | [Link](https://drive.google.com/drive/folders/1htrZQUSmQLkGoFEfNlyxKqo27rjgZnp-?usp=drive_link) |
+|             |              |       S87      | Chi Khanh Pham         | Enrichment  |     G3    |     7     | Lieutenant | [Link](https://drive.google.com/drive/folders/1htrZQUSmQLkGoFEfNlyxKqo27rjgZnp-?usp=drive_link) |
+|             |              |       S21      | Henry Ho               | Enrichment  |     G2    |     6     |   Member   |                                                                                                 |
+|             |              |       S28      | Sophia Cao             | Enrichment  |     G2    |     6     |   Member   |                                                                                                 |
+|             |              |       S35      | Phạm Nhật Minh         | Enrichment  |     G3    |     8     |   Member   |                                                                                                 |
+|             |              |                |                        |             |           |           |            |                                                                                                 |
+|   **VN-1**  |       2      |      S107      | Nguyen Minh Phong      | Enrichment  |     G2    |     7     |   Captain  | [Link](https://drive.google.com/drive/folders/1eBqgygGNmsgWbvBeh8bTJje1BmKLD06i?usp=drive_link) |
+|             |              |      S108      | Nguyen Hai Ha          | Enrichment  |     G2    |     7     | Lieutenant |                                                                                                 |                                                                                            |
+
+-----
+
+## [Current standings](#current-standings
 
 | **ID** | **Student**            | **Level** | **Country** |  **S1** |  **S2** | **P1** | **P2** | **P3** | **P4** |  **S3** | **Total** |
 |:------:|------------------------|:---------:|:-----------:|--------:|--------:|-------:|-------:|-------:|-------:|--------:|----------:|
@@ -360,65 +418,7 @@ This is an *optional program,* offering for students G2, G3, and G4 only, to hel
 - In addition, the team will be participating a team test in every 6 weeks. Everybody should work together online during the 90-minute test and submit together the solution.
 It is expected that participating student needs to invest an additional 7 hours/week for this program.
 
-Where the teams can find the Team Challenge in the curriculum:
-- Part VI - Monthly Challenges
-
-Below are the list of the teams:
-
-| Team ID | Student ID | Email                         | Student                | Program    | Level | Grade | Country | Timezone |    Type    |                                           Folder                                           |
-|:-------:|:----------:|-------------------------------|------------------------|------------|:-----:|:-----:|:-------:|:--------:|:----------:|:------------------------------------------------------------------------------------------:|
-|   CA-1  |     S73    | haidoan711@gmail.com          | Fred Bui               | Enrichment |   G2  |   7   |    CA   |    EDT   |   Captain  | [Link](://drive.google.com/drive/folders/1RDgm_Jbc1nmyzWEtuDPW9jF1cc3yxB4T?usp=drive_link) |
-|         |     S1     | VincentPham1210@gmail.com     | Vincent Pham           | Enrichment |   G2  |   10  |    CA   |    EDT   | Lieutenant | [Link](://drive.google.com/drive/folders/1RDgm_Jbc1nmyzWEtuDPW9jF1cc3yxB4T?usp=drive_link) |
-|         |     S22    | real.oscar.the.owl8@gmail.com | Anh Diep Nguyen        | Enrichment |   G2  |   8   |    CA   |    EDT   |   Member   |                                                                                            |
-|         |     S25    | luong.dinh.dung@gmail.com     | Nathan Luong           | Enrichment |   G2  |   8   |    CA   |    EDT   |   Member   |                                                                                            |
-|         |    S118    | changduyen.can@gmail.com      | Tuyet Ly Phuong        | Enrichment |   G2  |   8   |    CA   |    EDT   |   Member   |                                                                                            |
-|         |            |                               |                        |            |       |       |         |          |            |                                                                                            |
-|   FR-1  |     S90    | anthony.pham.0702@gmail.com   | Anthony Pham           | Enrichment |   G3  |   11  |    FR   |   CEST   |   Captain  | [Link](://drive.google.com/drive/folders/1pQ0pCRgZeW_ATrPwFCz7Pb-zEdcDXzi0?usp=drive_link) |
-|         |    S106    | daohbh2810@gmail.com          | Dao Antoine            | Enrichment |   G3  |   10  |    FR   |   CEST   | Lieutenant | [Link](://drive.google.com/drive/folders/1pQ0pCRgZeW_ATrPwFCz7Pb-zEdcDXzi0?usp=drive_link) |
-|         |    S111    | daoanna0712@gmail.com         | Dao Anna               | Enrichment |   G2  |   7   |    FR   |   CEST   |   Member   |                                                                                            |
-|         |     S72    | jadethugiang@gmail.com        | Jade Pham              | Enrichment |   G3  |   8   |    FR   |   CEST   |   Member   |                                                                                            |
-|         |     S62    | julie.caovu@gmail.com         | Julie Cao              | Enrichment |   G2  |   9   |    FR   |   CEST   |   Member   |                                                                                            |
-|         |     S44    | minhkarl.le@gmail.com         | Karl Le                | Enrichment |   G3  |   10  |    FR   |   CEST   |   Member   |                                                                                            |
-|         |            |                               |                        |            |       |       |         |          |            |                                                                                            |
-|   FR-2  |     S19    | caominhdoan8989@gmail.com     | Minh Cao Doan          | Enrichment |   G2  |   11  |    ES   |   CEST   |   Captain  | [Link](://drive.google.com/drive/folders/1ls0BvCO2gtxRZKKvW0yIR1lcyjXHMK9e?usp=drive_link) |
-|         |     S61    | hoa.truong@tmfacility.com     | Nguyen Martin          | Enrichment |   G2  |   9   |    FR   |   CEST   | Lieutenant | [Link](://drive.google.com/drive/folders/1ls0BvCO2gtxRZKKvW0yIR1lcyjXHMK9e?usp=drive_link) |
-|         |    S131    | hoanganhelec@gmail.com        | Nguyen Duy             | Enrichment |   G2  |   9   |    FR   |   CEST   |   Member   |                                                                                            |
-|         |    S140    | ngjade174@gmail.com           | Nguyen Pham Bao Ngoc   | Enrichment |   G2  |   9   |    FR   |   CEST   |   Member   |                                                                                            |
-|         |            |                               |                        |            |       |       |         |          |            |                                                                                            |
-|   FR-3  |    S101    | dinhalbert@gmail.com          | Albert Dinh-Le         | Enrichment |   G4  |   12  |    FR   |   CEST   |   Captain  | [Link](://drive.google.com/drive/folders/1oZbDyrL8Ly0_cwmYelItccRLZOrnJ-7I?usp=drive_link) |
-|         |     S71    | yanishuy.dd@gmail.com         | Yanis-Huy Desarmaux-Do | Enrichment |   G3  |   11  |    FR   |   CEST   | Lieutenant | [Link](://drive.google.com/drive/folders/1oZbDyrL8Ly0_cwmYelItccRLZOrnJ-7I?usp=drive_link) |
-|         |     S97    | ashdelinhchi@gmail.com        | Ha Duong Linh Chi      | Enrichment |   G2  |   12  |    FR   |   CEST   |   Member   |                                                                                            |
-|         |    S132    | anh1505.nguyen@gmail.com      | Nguyen My              | Enrichment |   G2  |   6   |    FR   |   CEST   |   Member   |                                                                                            |
-|         |    S141    | pajalou174186@gmail.com       | Nguyen Trung Kien      | Enrichment |   G2  |   7   |    FR   |   CEST   |   Member   |                                                                                            |
-|         |            |                               |                        |            |       |       |         |          |            |                                                                                            |
-|   UK-1  |     S57    | cunsu0714@gmail.com           | Ha-Anh Le              | Enrichment |   G4  |   12  |    UK   |    BST   |   Captain  | [Link](://drive.google.com/drive/folders/17IilzcAvsITlq3cLS8KLreU_BRY9PPM5?usp=drive_link) |
-|         |     S79    | minhlnguyen@gmail.com         | Ryan Nguyen            | Enrichment |   G3  |   11  |    UK   |    BST   | Lieutenant | [Link](://drive.google.com/drive/folders/17IilzcAvsITlq3cLS8KLreU_BRY9PPM5?usp=drive_link) |
-|         |     S12    | tobatoan@gmail.com            | Jason To               | Enrichment |   G3  |   8   |    UK   |    BST   |   Member   |                                                                                            |
-|         |     S26    | harryvien2014@gmail.com       | Harry Vien             | Enrichment |   G2  |   5   |    UK   |    BST   |   Member   |                                                                                            |
-|         |    S143    | khoavu25b@gmail.com           | Khoa Anh Vu            | Enrichment |   G2  |   10  |    UK   |    BST   |   Member   |                                                                                            |
-|         |     S74    | lcuonglam@gmail.com           | Lê Cường Lâm           | Enrichment |   G2  |   10  |    UK   |    BST   |   Member   |                                                                                            |
-|         |            |                               |                        |            |       |       |         |          |            |                                                                                            |
-|   UK-2  |    S142    | minhvu25b@gmail.com           | Minh Hai Vu            | Enrichment |   G3  |   13  |    UK   |    BST   |   Captain  | [Link](://drive.google.com/drive/folders/19SYII9zZQld6g1sslHpjtg81wPUw75vH?usp=drive_link) |
-|         |     S84    | anknguyen119@gmail.com        | An Nguyen              | Enrichment |   G3  |   12  |    UK   |    BST   | Lieutenant | [Link](://drive.google.com/drive/folders/19SYII9zZQld6g1sslHpjtg81wPUw75vH?usp=drive_link) |
-|         |     S31    | linhkhanhle.hbs@gmail.com     | Linh Khanh Le          | Enrichment |   G3  |   8   |    UK   |    BST   |   Member   |                                                                                            |
-|         |     S89    | luanductran1212@gmail.com     | Luan Duc Tran          | Enrichment |   G2  |   8   |    UK   |    BST   |   Member   |                                                                                            |
-|         |     S27    | 11helenvsmiles@gmail.com      | Helen Vien             | Enrichment |   G3  |   8   |    UK   |    BST   |   Member   |                                                                                            |
-|         |            |                               |                        |            |       |       |         |          |            |                                                                                            |
-|   US-1  |    S112    | benranger2011@gmail.com       | Benny Le               | Enrichment |   G4  |   8   |    US   |    EDT   |   Captain  | [Link](://drive.google.com/drive/folders/1KZSeOn52jjRiAffyQWgbvKIBkfsDjiGr?usp=drive_link) |
-|         |    S104    | henrymntrinh@gmail.com        | Henry Minh Nhat Trinh  | Enrichment |   G3  |   9   |    US   |    MDT   | Lieutenant | [Link](://drive.google.com/drive/folders/1KZSeOn52jjRiAffyQWgbvKIBkfsDjiGr?usp=drive_link) |
-|         |     S36    | sonmphammsc@gmail.com         | Sean Pham              | Enrichment |   G2  |   6   |    US   |    PDT   |   Member   |                                                                                            |
-|         |     S29    | trangnguyen.thtn@gmail.com    | Geoffrey Cao           | Enrichment |   G3  |   4   |    US   |    EDT   |   Member   |                                                                                            |
-|         |     S50    | samluong8109@gmail.com        | Samuel Luong           | Enrichment |   G3  |   9   |    US   |    CDT   |   Member   |                                                                                            |
-|         |            |                               |                        |            |       |       |         |          |            |                                                                                            |
-|   US-2  |    S144    | henrydinh17@gmail.com         | Henry Dinh             | Enrichment |   G4  |   11  |    US   |    EDT   |   Captain  | [Link](://drive.google.com/drive/folders/1htrZQUSmQLkGoFEfNlyxKqo27rjgZnp-?usp=drive_link) |
-|         |     S87    | chipham6712@gmail.com         | Chi Khanh Pham         | Enrichment |   G3  |   7   |    US   |    PDT   | Lieutenant | [Link](://drive.google.com/drive/folders/1htrZQUSmQLkGoFEfNlyxKqo27rjgZnp-?usp=drive_link) |
-|         |     S21    | henryfho@gmail.com            | Henry Ho               | Enrichment |   G2  |   6   |    US   |    EDT   |   Member   |                                                                                            |
-|         |     S28    | minhduc.cao@gmail.com         | Sophia Cao             | Enrichment |   G2  |   6   |    US   |    EDT   |   Member   |                                                                                            |
-|         |     S35    | mnp.usvn@gmail.com            | Phạm Nhật Minh         | Enrichment |   G3  |   8   |    US   |    PDT   |   Member   |                                                                                            |
-|         |            |                               |                        |            |       |       |         |          |            |                                                                                            |
-|   VN-1  |     S93    | ngochuongssy@gmail.com        | John Minh Quan         | Enrichment |   G3  |   7   |    VN   |   GMT+7  |   Captain  | [Link](://drive.google.com/drive/folders/1eBqgygGNmsgWbvBeh8bTJje1BmKLD06i?usp=drive_link) |
-|         |    S107    | phongnm.1211@gmail.com        | Nguyen Minh Phong      | Enrichment |   G2  |   7   |    VN   |   GMT+7  | Lieutenant | [Link](://drive.google.com/drive/folders/1eBqgygGNmsgWbvBeh8bTJje1BmKLD06i?usp=drive_link) |
-|         |    S108    | nguyenhaiha2987@gmail.com     | Nguyen Hai Ha          | Enrichment |   G2  |   7   |    VN   |   GMT+7  |   Member   |                                                                                            |                           |
+Where the teams can find the Team Challenge in the curriculum: Part VI - Monthly Challenges
 
 #### [A.3.3. Grading team submission](#a33-grading-team-submission)
 
