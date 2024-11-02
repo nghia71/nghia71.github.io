@@ -1,5 +1,7 @@
 ![Math Club & Competitions (MCC)](./img/MCC-2024-Logo-Large.png)
 
+If you would like to ask questions, propose something, please contact [Ms. Le Ngoc Ha](mailto:lengocha45@gmail.com), or [Ms. Tran Ngoc Anh](mailto:tranngocanh0910@gmail.com) - if Ms. Le Ngoc Ha seems not available.
+
 ## [A.1. Current individual standings](./24-25-standings.md#a-current-individual-standings)
 
 ## [A.2 Current team standings](./24-25-standings.md#b-current-team-standings)
@@ -30,12 +32,6 @@
 - Mr. Minh Dang (US)
 
 *Thank you all for volunteering your time to help all the students.*
-
-From now on, any of the volunteer parents would make announcement related to what they are responsible of.
-
-They might contact you directly if needed. 
-
-If you would like to ask questions, propose something, please contact [Ms. Le Ngoc Ha](mailto:lengocha45@gmail.com), or [Ms. Tran Ngoc Anh](mailto:tranngocanh0910@gmail.com) - if Ms. Le Ngoc Ha seems not available.
 
 ## [C. Programs of the School Year 2024-2025](./24-25-programs.md)
 
