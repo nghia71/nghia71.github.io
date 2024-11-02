@@ -4,7 +4,7 @@
 
 ## [A.2 Current team standings](./24-25-standings.md#b-current-team-standings)
 
-## [B. Club Operation Organizers]
+## [B. Club Operation Organizers](#b-club-operation-organizers)
 
 1. Ms Le Ngoc Ha (FR): She is the representative of the group. She will be the first contact when you have any question for the club, whatever it is. If you are willing to volunteer for certain activities of the club, please contact her.
 
