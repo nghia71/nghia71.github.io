@@ -61,8 +61,8 @@ For example Team T2 has solved of 3 G2, 4 G3, their absolute score is 70.
 Team T4 has solved 3 G2, 2 G3, and 2 G4, their absolute score is also 70.
 
 *For relative score is the the sum of the points the team earn from solving the problem weighted by the difficulties of the problems (1, 1.5, 2), then divided by their team strength.*
-Team T2 has achieved `(3 * 1.0 + 4 * 2.0) * 10 / 10 = 11.`
-Team T4 has achieved `(3 * 1.0 + 2 * 2.0  + 2 * 3.0) * 10 / 8 = 16.25.`
+Team T2 has achieved `(3 * 1.0 + 4 * 1.5) * 10 / 10 = 9.`
+Team T4 has achieved `(3 * 1.0 + 2 * 1.5  + 2 * 2.0) * 10 / 8 = 12.5.`
 
 ### C.4. Learning calendar
 
