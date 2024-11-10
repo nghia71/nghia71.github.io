@@ -2,9 +2,9 @@
 
 If you would like to ask questions, propose something, please contact by email: **Ms. Le Ngoc Ha** [lengocha45@gmail.com](mailto:lengocha45@gmail.com), or **Ms. Tran Ngoc Anh** [tranngocanh0910@gmail.com](mailto:tranngocanh0910@gmail.com).
 
-## [A.1. Current individual standings](./24-25-standings.md#a-current-individual-standings)
+## [A.1. Current individual standings](./24-25-individual-standings.md)
 
-## [A.2 Current team standings](./24-25-standings.md#b-current-team-standings)
+## [A.2 Current team standings](./24-25-team-standings.md)
 
 ## [B. Club Operation Organizers](#b-club-operation-organizers)
 
