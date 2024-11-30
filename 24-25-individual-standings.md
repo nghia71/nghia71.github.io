@@ -98,7 +98,7 @@
 |   S82  | Nguyễn Gia Bảo Nam     | Fundamental  |     G2    |     10    |      VN     |     37 |     37 |        |        |        |        |        |    **74** |      5     |     2     |      37% |      42% |
 |  S108  | Nguyen Hai Ha          | Enrichment   |     G2    |     7     |      VN     |        |        |        |        |        |        |        |           |      7     |     0     |          |          |
 |   S67  | Nguyen Huy Khanh       | Fundamental  |     G2    |     5     |      VN     |        |        |        |        |        |        |        |           |      7     |     0     |          |          |
-|   S48  | Nguyen Jérémy          | Fundamental  |     G3    |     11    |      FR     |     22 |     75 |     20 |     37 |     48 |        |     35 |   **237** |      1     |     6     |      40% |      59% |
+|   S48  | Nguyen Jérémy          | Fundamental  |     G3    |     11    |      FR     |     22 |     75 |     20 |     37 |     48 |        |     40 |   **242** |      1     |     6     |      40% |      61% |
 |   S61  | Nguyen Martin          | Enrichment   |     G2    |     9     |      FR     |        |        |        |        |     85 |     50 |     75 |   **210** |      4     |     3     |      70% |      93% |
 |   S16  | Nguyen Minh            | Fundamental  |     G1    |     2     |      JP     |     50 |        |        |        |        |        |        |    **50** |      6     |     1     |      50% |      67% |
 |  S112  | Nguyen Minh Ngoc       | Fundamental  |     G1    |     4     |      VN     |        |        |        |        |        |        |        |           |      7     |     0     |          |          |
