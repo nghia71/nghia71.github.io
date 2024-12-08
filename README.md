@@ -1,8 +1,8 @@
 ![Math Club & Competitions (MCC)](./img/MCC-2024-Logo-Large.png)
 
-The greetings from students!
+<!-- The greetings from students!
 
-![November 20](./img/Card%2020-11.png)
+![November 20](./img/Card%2020-11.png) -->
 
 ---
 
