@@ -43,13 +43,13 @@ Contact: If you would like to ask questions, propose something, please contact b
 
 ## [C. Programs of the School Year 2024-2025](./24-25-programs.md)
 
-## [D. Entrance Test (Day 1 & 2)](./24-25-et.md)
+<!-- ## [D. Entrance Test (Day 1 & 2)](./24-25-et.md)
 
-Below are the books containing tens of thousands of problems and solutions that students are advised to use for learning problem solving: the first set is our own *Learning Problem Solving* volumes and the previous school year books.
+Below are the books containing tens of thousands of problems and solutions that students are advised to use for learning problem solving: the first set is our own *Learning Problem Solving* volumes and the previous school year books. -->
 
-## [E.1. Learning Problem Solving Volumes 1-2-3](./lps-volumes.md)
+## [D. Learning Problem Solving Volumes 1-2-3](./lps-volumes.md)
 
-## [E.2. Annual School Year books (2021-2024)](./annual-books.md)
+## [E. Annual School Year books (2021-2024)](./annual-books.md)
 
 -----
 
