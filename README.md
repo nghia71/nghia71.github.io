@@ -20,22 +20,24 @@ Contact: If you would like to ask questions, propose something, please contact b
 
 3. Mr Le Anh Tuan (UK) leads the effort to draft, adjust, and update rules and procedures how the club functions. Mr Le Anh Tuan also substitutes Ms Le Ngoc Ha when needed.
 
-4. Mr. Dinh Xuan Quyen (FR) is responsible for organize volunteer parents for grading of students’ individual and team tests. He has the final word on reviewing graded results in case of dispute.
-
-5. Other parents volunteer to participate to grade submissions:
+4. Parents volunteer to participate to grade submissions:
+- Mr. Dinh Xuan Quyen (FR): is responsible for organize volunteer parents for grading of students’ individual and team tests. He has the final word on reviewing graded results in case of dispute.
+- Mr. Le Anh Tuan (UK)
 - Mr. Hai Dinh (US)
-- Mr. Tung-Lam Dao (FR)
-- Mr. Toan To (UK)
-- Ms. Thanh Xuan (FR)
-- Mr. Hoa Pham (US)
-- Mr. Minh Dang (US)
 - Mr. Hiep Luong (US)
-
-6. Mr. Tung-Lam Dao (FR) is responsible for providing technical support to the volunteer parents to access, use, and share information.
-
-7. Other parents volunteer to participate to provide technical support:
+- Mr. Hieu Luu (CA)
 - Mr. Hoa Pham (US)
-- Mr. Minh Dang (US)
+- Mr. Hung Nguyen (FR)
+- Ms. Huong Le (CA)
+- Ms. Huyen Trang (US)
+- Mr. Minh Le (US)
+- Mr. Nam Pham (US)
+- Mr. Son Nguyen (UK)
+- Ms. Thanh Xuan (FR)
+- Mr. Toan To (UK)
+- Mr. Tung-Lam Dao (FR)
+
+7. Mr. Tung-Lam Dao (FR) and Mr. Hoa Pham (US) is responsible for providing technical support to the volunteer parents to access, use, and share information.
 
 *Thank you all for volunteering your time to help all the students.*
 

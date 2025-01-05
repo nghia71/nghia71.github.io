@@ -1,6 +1,119 @@
 ![Math Club & Competitions (MCC)](./img/MCC-2024-Logo-Large.png)
 
-## [Current individual standings](#current-individual-standings)
+## [Current Individual Standings](#current-individual-standings)
+
+|      | Student's email                      | Name                   | Program     | Level | Grade | Country |
+|------|--------------------------------------|------------------------|-------------|:-----:|:-----:|:-------:|
+|  S77 | hieuquangluu@gmail.com               | Adelina Mai Linh Luu   | Fundamental |   G2  |   7   |    CA   |
+| S101 | dinhalbert@gmail.com                 | Albert Dinh-Le         | Enrichment  |   G4  |   12  |    FR   |
+|      | uhhchilly294@gmail.com               | An Ton Vu              | Fundamental |   G1  |   10  |    UK   |
+|      | jennyad.prof@gmail.com               | Anh Dang (Jenny)       | Fundamental |   G1  |   4   |    US   |
+|  S22 | real.oscar.the.owl8@gmail.com        | Anh Diep Nguyen        | Enrichment  |   G2  |   8   |    CA   |
+|      | minahinata2205@gmail.com             | Anh Pham               | Fundamental |   G1  |   5   |    US   |
+| S121 | anna.le351910@gmail.com              | Anna Le                | Fundamental |   G1  |   9   |    US   |
+|  S90 | anthony.pham.0702@gmail.com          | Anthony Pham           | Enrichment  |   G3  |   11  |    FR   |
+|      | knjade.tranvu@gmail.com              | Arthur Tran-Vu         | Fundamental |   G1  |   7   |    FR   |
+|  S34 | baonguyenle2011@gmail.com            | Bao Le                 | Fundamental |   G2  |   7   |    US   |
+|      | beatricetran07@gmail.com             | Beatrice TRAN          | Fundamental |   G1  |   6   |    AU   |
+| S112 | benranger2011@gmail.com              | Benny Le               | Enrichment  |   G4  |   8   |    US   |
+|  S87 | chipham6712@gmail.com                | Chi Khanh Pham         | Enrichment  |   G2  |   7   |    US   |
+|  S46 | tpham151st@gmail.com                 | Claire Luu             | Fundamental |   G1  |   4   |    US   |
+|  S18 | minhnguyetle2710@gmail.com           | Dang Khanh Le Ngan     | Fundamental |   G1  |   6   |    CA   |
+| S111 | daoanna0712@gmail.com                | Dao Anna               | Enrichment  |   G2  |   7   |    FR   |
+| S106 | daohbh2810@gmail.com                 | Dao Antoine            | Enrichment  |   G3  |   10  |    FR   |
+|      | ddohoang42@gmail.com                 | Đỗ Hoàng Dương         | Fundamental |   G1  |   7   |    VN   |
+|      | ductri.luong0901@gmail.com           | Duc Tri Luong          | Fundamental |   G1  |   7   |    UK   |
+|      | yennhiduong1004@gmail.com            | Duong Yen Nhi          | Fundamental |   G1  |   7   |    FR   |
+|      | evelynkaldawi@gmail.com              | Evelyn May Kaldawi     | Fundamental |   G1  |   4   |    US   |
+|  S73 | haidoan711@gmail.com                 | Fred Bui               | Enrichment  |   G2  |   7   |    CA   |
+|      | gabrieltapuyan@gmail.com             | Gabriel Apuyan         | Fundamental |   G1  |   5   |    US   |
+|      | gavynnguyen7@gmail.com               | Gavyn Nguyen           | Fundamental |   G1  |   7   |    US   |
+|  S29 | trangnguyen.thtn@gmail.com           | Geoffrey Cao           | Enrichment  |   G2  |   4   |    US   |
+| S128 | vinhnq@vt.edu                        | Giang Nguyen           | Fundamental |   G3  |   7   |    US   |
+|  S57 | cunsu0714@gmail.com                  | Ha-Anh Le              | Enrichment  |   G4  |   12  |    UK   |
+|  S49 | maivu20241@gmail.com                 | Ha-Chi Vu Le           | Fundamental |   G1  |   5   |    UK   |
+|  S26 | harryvien2014@gmail.com              | Harry Vien             | Enrichment  |   G2  |   5   |    UK   |
+|  S27 | 11helenvsmiles@gmail.com             | Helen Vien             | Enrichment  |   G3  |   8   |    UK   |
+| S144 | henrydinh17@gmail.com                | Henry Dinh             | Enrichment  |   G4  |   11  |    US   |
+|  S21 | henryfho@gmail.com                   | Henry Ho               | Enrichment  |   G2  |   6   |    US   |
+| S104 | henrymntrinh@gmail.com               | Henry Minh Nhat Trinh  | Enrichment  |   G3  |   9   |    US   |
+|  S56 | hienlam.h.nguyen@gmail.com           | Hien-Lam Nguyen        | Fundamental |   G2  |   6   |    UK   |
+|  S4  | hcnghia@gmail.com                    | Hoang Xuan Bach        | Fundamental |   G1  |   3   |    VN   |
+|  S72 | jadethugiang@gmail.com               | Jade Pham              | Enrichment  |   G3  |   8   |    FR   |
+|  S14 | haiha0604@gmail.com                  | James Minh Trí Nguyen  | Fundamental |   G1  |   4   |    CA   |
+|  S12 | Jasondbto@gmail.com                  | Jason To               | Enrichment  |   G3  |   8   |    UK   |
+|      | joevoscanlon9@gmail.com              | Joe Scanlon            | Fundamental |   G1  |   7   |    UK   |
+|  S62 | julie.caovu@gmail.com                | Julie Cao              | Enrichment  |   G2  |   9   |    FR   |
+|  S44 | minhkarl.le@gmail.com                | Karl Le                | Enrichment  |   G3  |   10  |    FR   |
+|      | kevin.tn.phan@gmail.com              | Kévin Phan             | Fundamental |   G1  |   9   |    FR   |
+|  S55 | khaitam.h.nguyen@gmail.com           | Khai-Tam Nguyen        | Fundamental |   G1  |   9   |    UK   |
+|  S30 | linh.tn.bui@googlemail.com           | Khiem Pham             | Fundamental |   G1  |   4   |    UK   |
+|      | Kienle.kcs@gmail.com                 | Kien Le                | Fundamental |   G1  |   3   |    UK   |
+|      | anh.gl.nguyen1762@gmail.com          | Kim Gia Khanh          | Fundamental |   G1  |   9   |    US   |
+| S105 | phuong.bmsport@gmail.com             | Lê Lâm Phương Anh      | Fundamental |   G1  |   5   |    AU   |
+|      | minhducmk2021@gmail.com              | Le Minh Duc            | Fundamental |   G1  |   10  |    FR   |
+|  S31 | linhkhanhle.hbs@gmail.com            | Linh Khanh Le          | Enrichment  |   G2  |   8   |    UK   |
+|      | pham.t.long14@gmail.com              | Long Pham              | Fundamental |   G1  |   4   |    US   |
+|  S45 | quynhanhvo0612@gmail.com             | Long Tran              | Fundamental |   G2  |   7   |    UK   |
+|      | louis.nguyensteeler@gmail.com        | Louis Nguyen           | Fundamental |   G1  |   5   |    US   |
+|      | phlouis1112@gmail.com                | Louis PHAM             | Fundamental |   G1  |   7   |    FR   |
+|  S89 | luanductran1212@gmail.com            | Luan Duc Tran          | Enrichment  |   G2  |   8   |    UK   |
+|      | maitongoctrinh@gmail.com             | Mai Trinh              | Fundamental |   G1  |   8   |    UK   |
+|      | marie.bernard.student@gmail.com      | Marie BERNARD          | Fundamental |   G1  |   10  |    FR   |
+|      | travellingwithmars@gmail.com         | Mars Luong             | Fundamental |   G1  |   3   |    US   |
+|      | maxkhtong@gmail.com                  | Max Tong               | Fundamental |   G1  |   4   |    US   |
+|      | mia.da.nguyen@gmail.com              | Mia Nguyen             | Fundamental |   G1  |   3   |    US   |
+|      | michael.learn.to.code.2015@gmail.com | Michael Le             | Fundamental |   G2  |   4   |    US   |
+|  S9  | thaitrunghieu@gmail.com              | Milan Thai             | Fundamental |   G1  |   5   |    US   |
+|      | minhanhmg7314@gmail.com              | Minh Anh Dao           | Fundamental |   G1  |   6   |    UK   |
+| S142 | minhvu25b@gmail.com                  | Minh Hai Vu            | Enrichment  |   G3  |   13  |    UK   |
+| S127 | minhisascammer@gmail.com             | Minh Ngoc Nguyen       | Fundamental |   G2  |   7   |    US   |
+|      | minhmo.nguyen.17@gmail.com           | Minh Nguyen            | Fundamental |   G1  |   3   |    UK   |
+|      | ryanminhng@gmail.com                 | Minh Nguyen            | Fundamental |   G1  |   4   |    US   |
+|      | minh167000@gmail.com                 | Minh Nguyen            | Fundamental |   G1  |   5   |    US   |
+|      | henryquangnm11@gmail.com             | Minh Quang Nguyen      | Fundamental |   G1  |   8   |    US   |
+|  S52 | hiepnguyen84@gmail.com               | Nam Nguyen             | Fundamental |   G2  |   8   |    UK   |
+|  S25 | luong.dinh.dung@gmail.com            | Nathan Luong           | Enrichment  |   G2  |   8   |    CA   |
+|  S41 | nguyenanhhup@gmail.com               | Ngo Bao Ngoc           | Fundamental |   G1  |   7   |    CA   |
+|      | anducvinhnguyen2401@gmail.com        | Nguyễn Đức Vĩnh An     | Fundamental |   G1  |   7   |    CA   |
+|      | thinq19@gmail.com                    | Nguyễn Hà My           | Fundamental |   G1  |   9   |    VN   |
+|  S48 | jeremyku.nguyen@gmail.com            | Nguyen Jérémy          | Fundamental |   G3  |   11  |    FR   |
+|  S61 | hoa.truong@tmfacility.com            | Nguyen Martin          | Enrichment  |   G2  |   9   |    FR   |
+|      | minhcan0411@gmail.com                | Nguyễn Minh Can        | Fundamental |   G1  |   8   |    US   |
+|      | minhchi261013@gmail.com              | Nguyễn Minh Chi        | Fundamental |   G1  |   6   |    US   |
+|      | nphongleo@gmail.com                  | Nguyen Nam Phong       | Fundamental |   G1  |   7   |    FR   |
+|  S99 | phongnguyen280813@gmail.com          | Nguyen Ngo Lam Phong   | Fundamental |   G2  |   9   |    FR   |
+|      | nicolasdavid.nguyen@gmail.com        | NGUYEN Nicolas         | Fundamental |   G1  |   7   |    FR   |
+| S140 | ngjade174@gmail.com                  | Nguyen Pham Bao Ngoc   | Enrichment  |   G2  |   9   |    FR   |
+|      | tuanminhnguyen20102014@gmail.com     | NGUYỄN Thomas          | Fundamental |   G1  |   5   |    FR   |
+| S141 | pajalou174186@gmail.com              | Nguyen Trung Kien      | Enrichment  |   G2  |   7   |    FR   |
+| S129 | hanhle@mcps.org                      | Ninh Nguyen            | Fundamental |   G2  |   5   |    US   |
+|      | pablotran13@gmail.com                | Pablo TRAN             | Fundamental |   G1  |   4   |    AU   |
+|  S35 | mnp.usvn@gmail.com                   | Phạm Nhật Minh         | Enrichment  |   G3  |   8   |    US   |
+|      | mailys.phungkhac@gmail.com           | PHUNG KHAC Mailys      | Fundamental |   G1  |   7   |    FR   |
+| S138 | dominotism@gmail.com                 | Quan Le                | Fundamental |   G1  |   5   |    US   |
+|      | pineapple.ngo@gmail.com              | Quang Dat Ngo          | Fundamental |   G1  |   4   |    US   |
+|      | kentnguyen09082014@gmail.com         | Quang Vinh Nguyen      | Fundamental |   G1  |   4   |    US   |
+|  S20 | samnam.ha@gmail.com                  | Sam Ha                 | Fundamental |   G2  |   7   |    CA   |
+| S100 | queen.che@gmail.com                  | Sam Vuong              | Fundamental |   G2  |   5   |    US   |
+|  S50 | samluong8109@gmail.com               | Samuel Luong           | Enrichment  |   G3  |   9   |    US   |
+|  S36 | sonmphammsc@gmail.com                | Sean Pham              | Enrichment  |   G2  |   6   |    US   |
+|  S28 | minhduc.cao@gmail.com                | Sophia Cao             | Enrichment  |   G2  |   6   |    US   |
+| S135 | ngoctram.summerrains@gmail.com       | Steven Pham            | Fundamental |   G1  |   4   |    US   |
+| S130 | theo.nguyen.301108@gmail.com         | Theo Nguyen            | Fundamental |   G3  |   11  |    UK   |
+|      | tommyphan285@gmail.com               | Tommy Phan             | Fundamental |   G1  |   9   |    UK   |
+|  S96 | nguyenantran92@gmail.com             | Tran Nguyen An         | Fundamental |   G1  |   10  |    FR   |
+|      | namantn2024@gmail.com                | Trần Nguyễn Nam An     | Fundamental |   G1  |   6   |    VN   |
+|      | baokhanhnt14@gmail.com               | Trung Bao Khanh Nguyen | Fundamental |   G1  |   5   |    GE   |
+|  S40 | minhvu.hugo.truong@gmail.com         | Truong Minh-Vu         | Fundamental |   G2  |   6   |    VN   |
+|  S10 | valentin.thang@gmail.com             | Valentin Thang         | Fundamental |   G1  |   6   |    UK   |
+|      | veronikamymrikova@gmail.com          | Veronika Mymrikova     | Fundamental |   G1  |   4   |    US   |
+|      | cheesecakert2103@gmail.com           | Viet Nguyen            | Fundamental |   G1  |   4   |    US   |
+|      | sen82734@gmail.com                   | Xuân Huỳnh             | Fundamental |   G2  |   12  |    UK   |
+|  S71 | yanishuy.dd@gmail.com                | Yanis-Huy Desarmaux-Do | Enrichment  |   G3  |   11  |    FR   |
+|      |                                      |                        |             |       |       |         |
+
+## [Semester 1  - Individual Standings](#semester-1----individual-standings)
 
 |  ID  | Student                | Level | Grade | Country |  S1 |  S2 |  S3 |  S4 |  S5 |  S6 |  S7 |  S8 | Total | Absent | Taken | Prod | Perf | Comp |
 |:----:|------------------------|:-----:|:-----:|:-------:|----:|----:|----:|----:|----:|----:|----:|----:|------:|:------:|:-----:|-----:|-----:|-----:|
