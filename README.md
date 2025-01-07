@@ -1,5 +1,13 @@
 ![Math Club & Competitions (MCC)](./img/MCC-2024-Logo-Large.png)
 
+Important links (note that you have to be a registered member of our club in order to access them).
+
+[**2024-2025 curriculum**](https://drive.google.com/file/d/1CxmboI543WL2PDni12EvnXAM9zO3Ri-g/view?usp=sharing)
+
+[**Weekly tests**](https://drive.google.com/drive/folders/12CVZJpMdqUNpkfxGYKJktzEok0WuEXjC?usp=share_link)
+
+[**Lecture Zoom link**](https://us06web.zoom.us/meeting/register/LpAttYMHS0mR_eJOTMG9aQ) - for this, you have to register before January 12.
+
 <!-- The greetings from students!
 
 ![November 20](./img/Card%2020-11.png) -->
