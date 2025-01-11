@@ -87,18 +87,18 @@ Each cycle contains 3 sessions, each is intended to be within a week:
 
 Above, you can see that periods when the submissions will be graded and reviewed.
 
-#### C.5. Lecture Times
+#### [C.5. Lecture Times](#c5-lecture-times)
 
-Use **[this link](https://www.worldtimebuddy.com/?qm=1&lid=2193733,2078025,1857910,127,12,14,305,306,307,308&h=305&date=2024-9-22&sln=10-12&hf=1&c=1444)** to see what time in your timezone corresponds to the times in other zones.
+Use **[this link](https://www.worldtimebuddy.com/?qm=1&lid=2193733,2078025,1857910,127,12,14,5,6,7,8&h=8&date=2025-1-11&sln=7-9&hf=2&c=1838)** to see what time in your timezone corresponds to the times in other zones.
 
 Each seminar lasts for 30 minutes. The timezone for each student is on the list of all admitted students:
 
-| Level |               Time               |
-|:-----:|:--------------------------------:|
-|   G1  | 10:00 AM - 10:30 AM Eastern Time |
-|   G2  | 10:30 AM - 11:00 AM Eastern Time |
-|   G3  | 11:00 AM - 11:30 AM Eastern Time |
-|   G4  | 11:30 AM - 12:00 PM Eastern Time |
+| Level |               Time      |
+|:-----:|:-----------------------:|
+|   G1  | 07:00 AM - 07:30 AM PST |
+|   G2  | 07:30 AM - 08:00 AM PST |
+|   G3  | 08:00 AM - 08:30 AM PST |
+|   G4  | 08:30 AM - 09:00 PM PST |
 
 ![Seminar Times](./img/seminar-time-24-25-SM1.png)
 
