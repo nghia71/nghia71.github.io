@@ -102,7 +102,7 @@
 | S12  | Jason To               |  Enrichment |   G3  |   8   |    UK   | 25 |  0 | 25 | 23 |    73 |
 | S44  | Karl Le                |  Enrichment |   G3  |   10  |    FR   | 25 |  0 | 25 | 25 |    75 |
 | S142 | Minh Hai Vu            |  Enrichment |   G3  |   13  |    UK   | 10 | 25 |    |  0 |    35 |
-| S48  | Nguyen Jérémy          | Fundamental |   G3  |   11  |    FR   | 25 |    | 15 | 25 |    65 |
+| S48  | Nguyen Jérémy          | Fundamental |   G3  |   11  |    FR   | 25 |    | 25 | 25 |    75 |
 | S35  | Phạm Nhật Minh         |  Enrichment |   G3  |   8   |    US   | 25 |    | 25 | 25 |    75 |
 | S50  | Samuel Luong           |  Enrichment |   G3  |   9   |    US   | 25 |    |    | 24 |    49 |
 | S71  | Yanis-Huy Desarmaux-Do |  Enrichment |   G3  |   11  |    FR   | 25 |    | 25 |    |    50 |
