@@ -4,7 +4,7 @@
 
 |  ID  |         Student        |   Program   | Level | Grade | Country | IT1 | IT2 |
 |:----:|:----------------------:|:-----------:|:-----:|:-----:|:-------:|:---:|:---:|
-|  S77 | Adelina Mai Linh Luu   | Fundamental |   G2  |   7   |    CA   | 100 |  80 |
+|  S77 | Adelina Mai Linh Luu   | Fundamental |   G2  |   7   |    CA   | 100 |  87 |
 | S101 | Albert Dinh-Le         | Enrichment  |   G4  |   12  |    FR   |  55 |  48 |
 | S145 | An Ton Vu              | Fundamental |   G1  |   10  |    UK   |  41 |  60 |
 | S192 | An Tong                | Fundamental |   G1  |   8   |    US   |  75 |  55 |
@@ -71,7 +71,7 @@
 | S169 | Minh Nguyen            | Fundamental |   G1  |   4   |    US   |  35 |  75 |
 | S168 | Minh Nguyen            | Fundamental |   G1  |   3   |    UK   | 100 |  50 |
 | S171 | Minh Quang Nguyen      | Fundamental |   G1  |   8   |    US   |  70 |  29 |
-|  S81 | Minh Tran              | Fundamental |   G2  |       |    UK   |  61 |  35 |
+|  S81 | Minh Tran              | Fundamental |   G1  |   5   |    UK   |  61 |  35 |
 |  S52 | Nam Nguyen             | Fundamental |   G2  |   8   |    UK   |  25 |  30 |
 |  S25 | Nathan Luong           | Enrichment  |   G2  |   8   |    CA   |  35 | 100 |
 |  S41 | Ngo Bao Ngoc           | Fundamental |   G1  |   7   |    CA   |  25 |  25 |
@@ -83,7 +83,7 @@
 | S175 | Nguyễn Minh Chi        | Fundamental |   G1  |   6   |    US   |   6 |  25 |
 | S176 | Nguyen Nam Phong       | Fundamental |   G1  |   7   |    FR   |  83 |  70 |
 |  S99 | Nguyen Ngo Lam Phong   | Fundamental |   G2  |   9   |    FR   |  48 |   0 |
-| S177 | NGUYEN Nicolas         | Fundamental |   G1  |   7   |    FR   |  76 |  55 |
+| S177 | NGUYEN Nicolas         | Fundamental |   G1  |   7   |    FR   |  76 |  60 |
 | S140 | Nguyen Pham Bao Ngoc   | Enrichment  |   G2  |   9   |    FR   |  75 |  55 |
 | S178 | NGUYỄN Thomas          | Fundamental |   G1  |   5   |    FR   |  61 |  75 |
 | S141 | Nguyen Trung Kien      | Enrichment  |   G2  |   7   |    FR   |  40 |  25 |
