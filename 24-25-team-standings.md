@@ -2,6 +2,16 @@
 
 ## [Current Team Standings](#current-team-standings)
 
+| Team ID | Total |
+|:-------:|:-----:|
+|   US-2  | 72.33 |
+|   FR-3  | 41.88 |
+|   US-1  | 34.29 |
+|   FR-1  | 23.67 |
+|   UK-2  | 21.39 |
+
+## [Current Teams](#current-teams)
+
 | Team ID | Strength | Student ID | Email                         | Student                | Program    | Level | Grade | Country | Timezone |    Type    |                                              Folder                                             |
 |:-------:|:--------:|:----------:|-------------------------------|------------------------|------------|:-----:|:-----:|:-------:|:--------:|:----------:|:-----------------------------------------------------------------------------------------------:|
 |   FR-1  |          |     S90    | anthony.pham.0702@gmail.com   | Anthony Pham           | Enrichment |   G3  |   11  |    FR   |   CEST   |   Captain  | [Link](https://drive.google.com/drive/folders/1pQ0pCRgZeW_ATrPwFCz7Pb-zEdcDXzi0?usp=drive_link) |
