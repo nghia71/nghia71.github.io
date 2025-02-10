@@ -2,7 +2,7 @@
 
 Welcome to the 2024 - 2025 School Year of the Math Club & Competitions!
 
-**The second semester is from January 12 to June 15, 2024.**
+**The second semester is from January 12 to June 15, 2025.**
 
 Please read carefully the content below. If you have any personal question, send it directly the club. if you have any general question that might be concern of other students, send it to the mailing list.
 
