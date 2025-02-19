@@ -64,7 +64,7 @@
 | S167 | Minh Anh Dao           | Fundamental |   G1  |   6   |    UK   |     |  53 |  25 |
 | S142 | Minh Hai Vu            | Enrichment  |   G3  |   13  |    UK   |  35 |  35 |  30 |
 | S127 | Minh Ngoc Nguyen       | Fundamental |   G2  |   7   |    US   |   0 |  10 |  25 |
-| S169 | Minh Nguyen            | Fundamental |   G1  |   4   |    US   |  35 |  75 |  38 |
+| S169 | Minh Nguyen            | Fundamental |   G1  |   4   |    US   | 100 |  75 |  38 |
 | S171 | Minh Quang Nguyen      | Fundamental |   G1  |   8   |    US   |  70 |  29 |  18 |
 |  S81 | Minh Tran              | Fundamental |   G1  |   5   |    UK   |  61 |  35 | 100 |
 |  S52 | Nam Nguyen             | Fundamental |   G2  |   8   |    UK   |  25 |  30 |  65 |
