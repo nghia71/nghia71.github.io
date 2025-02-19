@@ -31,7 +31,7 @@
 | S128 | Giang Nguyen           | Fundamental |   G2  |   7   |    US   | 100 |  65 |  50 |
 |  S57 | Ha-Anh Le              | Enrichment  |   G4  |   12  |    UK   |  45 |  10 |  45 |
 |  S49 | Ha-Chi Vu Le           | Fundamental |   G1  |   5   |    UK   |  75 |  52 |  50 |
-|  S26 | Harry Vien             | Enrichment  |   G2  |   5   |    UK   |  75 |  54 |  50 |
+|  S26 | Harry Vien             | Enrichment  |   G2  |   5   |    UK   |  75 |  57 |  65 |
 |  S27 | Helen Vien             | Enrichment  |   G3  |   8   |    UK   |  15 |  35 |  28 |
 | S144 | Henry Dinh             | Enrichment  |   G4  |   11  |    US   | 100 |  99 | 100 |
 |  S21 | Henry Ho               | Enrichment  |   G2  |   6   |    US   |  67 |  25 |  45 |
@@ -72,7 +72,7 @@
 |  S41 | Ngo Bao Ngoc           | Fundamental |   G1  |   7   |    CA   |  25 |  25 |  25 |
 | S172 | Nguyễn Đức Vĩnh An     | Fundamental |   G1  |   7   |    CA   |  97 |  80 |  85 |
 | S173 | Nguyễn Hà My           | Fundamental |   G1  |   9   |    VN   |  50 |  10 |  80 |
-|  S48 | Nguyen Jérémy          | Fundamental |   G3  |   11  |    FR   |  75 |  68 |  41 |
+|  S48 | Nguyen Jérémy          | Fundamental |   G3  |   11  |    FR   |  75 |  68 |  46 |
 |  S61 | Nguyen Martin          | Enrichment  |   G2  |   9   |    FR   |  27 | 100 |  30 |
 | S174 | Nguyễn Minh Can        | Fundamental |   G1  |   8   |    US   |  85 |  55 |   3 |
 | S175 | Nguyễn Minh Chi        | Fundamental |   G1  |   6   |    US   |   6 |  25 |   5 |
