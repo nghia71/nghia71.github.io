@@ -2,114 +2,105 @@
 
 ## [Current Individual Standings](#current-individual-standings)
 
-|  ID  |         Student        |   Program   | Level | Grade | Country | IT1 | IT2 |
-|:----:|:----------------------:|:-----------:|:-----:|:-----:|:-------:|:---:|:---:|
-|  S77 | Adelina Mai Linh Luu   | Fundamental |   G2  |   7   |    CA   | 100 |  87 |
-| S101 | Albert Dinh-Le         | Enrichment  |   G4  |   12  |    FR   |  55 |  48 |
-| S145 | An Ton Vu              | Fundamental |   G1  |   10  |    UK   |  41 |  60 |
-| S192 | An Tong                | Fundamental |   G1  |   8   |    US   |  75 |  55 |
-| S146 | Anh Dang (Jenny)       | Fundamental |   G1  |   4   |    US   |  25 |   0 |
-|  S22 | Anh Diep Nguyen        | Enrichment  |   G2  |   8   |    CA   |  52 |  70 |
-| S147 | Anh Pham               | Fundamental |   G1  |   5   |    US   |  75 |  40 |
-| S121 | Anna Le                | Fundamental |   G1  |   9   |    US   |     |     |
-|  S90 | Anthony Pham           | Enrichment  |   G3  |   11  |    FR   |  75 |  50 |
-| S148 | Arthur Tran-Vu         | Fundamental |   G1  |   7   |    FR   | 100 |  25 |
-|  S34 | Bao Le                 | Fundamental |   G2  |   7   |    US   |  80 |  70 |
-| S149 | Beatrice TRAN          | Fundamental |   G1  |   6   |    AU   |  75 |     |
-| S112 | Benny Le               | Enrichment  |   G4  |   8   |    US   |  75 |  75 |
-|  S87 | Chi Khanh Pham         | Enrichment  |   G2  |   7   |    US   |  67 |  60 |
-|  S46 | Claire Luu             | Fundamental |   G1  |   4   |    US   | 100 |  88 |
-|  S18 | Dang Khanh Le Ngan     | Fundamental |   G1  |   6   |    CA   |  35 |     |
-| S111 | Dao Anna               | Enrichment  |   G2  |   7   |    FR   |  49 |  50 |
-| S106 | Dao Antoine            | Enrichment  |   G3  |   10  |    FR   |  75 |  65 |
-| S189 | Đỗ Hoàng Dương         | Fundamental |   G1  |   7   |    VN   |     |   0 |
-| S150 | Duc Tri Luong          | Fundamental |   G1  |   7   |    UK   |   5 |  25 |
-| S152 | Evelyn May Kaldawi     | Fundamental |   G1  |   4   |    US   |   5 |  20 |
-|  S73 | Fred Bui               | Enrichment  |   G2  |   7   |    CA   |  75 |  25 |
-| S153 | Gabriel Apuyan         | Fundamental |   G1  |   5   |    US   |     |     |
-| S154 | Gavyn Nguyen           | Fundamental |   G1  |   7   |    US   |  50 |  49 |
-|  S29 | Geoffrey Cao           | Enrichment  |   G2  |   4   |    US   |  33 |  30 |
-| S170 | Gia Minh Nguyen        | Fundamental |   G1  |   5   |    US   |  70 |  50 |
-| S128 | Giang Nguyen           | Fundamental |   G2  |   7   |    US   | 100 |  65 |
-|  S57 | Ha-Anh Le              | Enrichment  |   G4  |   12  |    UK   |  45 |  10 |
-|  S49 | Ha-Chi Vu Le           | Fundamental |   G1  |   5   |    UK   |  75 |  52 |
-|  S26 | Harry Vien             | Enrichment  |   G2  |   5   |    UK   |  75 |  54 |
-|  S27 | Helen Vien             | Enrichment  |   G3  |   8   |    UK   |  15 |  35 |
-| S144 | Henry Dinh             | Enrichment  |   G4  |   11  |    US   | 100 |  99 |
-|  S21 | Henry Ho               | Enrichment  |   G2  |   6   |    US   |  67 |  25 |
-| S104 | Henry Minh Nhat Trinh  | Enrichment  |   G3  |   9   |    US   |  15 |   5 |
-|  S56 | Hien-Lam Nguyen        | Fundamental |   G1  |   6   |    UK   |  58 |  60 |
-|  S72 | Jade Pham              | Enrichment  |   G2  |   8   |    FR   |  49 |  25 |
-|  S14 | James Minh Trí Nguyen  | Fundamental |   G1  |   4   |    CA   |     |     |
-|  S12 | Jason To               | Enrichment  |   G3  |   8   |    UK   |  73 |  65 |
-| S155 | Joe Scanlon            | Fundamental |   G1  |   7   |    UK   |   3 |  55 |
-|  S62 | Julie Cao              | Enrichment  |   G2  |   9   |    FR   |  80 |  55 |
-|  S44 | Karl Le                | Enrichment  |   G3  |   10  |    FR   |  75 |  60 |
-| S156 | Kévin Phan             | Fundamental |   G1  |   9   |    FR   |  50 |  50 |
-|  S55 | Khai-Tam Nguyen        | Fundamental |   G2  |   9   |    UK   |  86 |  35 |
-|  S30 | Khiem Pham             | Fundamental |   G1  |   4   |    UK   |  50 |  25 |
-| S143 | Khoa Anh Vu            | Enrichment  |   G2  |   10  |    UK   |  72 |  75 |
-| S157 | Kien Le                | Fundamental |   G1  |   3   |    UK   |  45 |     |
-| S158 | Kim Gia Khanh          | Fundamental |   G1  |   9   |    US   |     |  52 |
-| S105 | Lê Lâm Phương Anh      | Fundamental |   G1  |   5   |    AU   |  22 |     |
-| S190 | Le Minh Duc            | Fundamental |   G1  |   10  |    FR   |  75 |  75 |
-|  S31 | Linh Khanh Le          | Enrichment  |   G2  |   8   |    UK   |  96 |  77 |
-| S159 | Long Pham              | Fundamental |   G1  |   4   |    US   |  60 |  77 |
-|  S45 | Long Tran              | Fundamental |   G1  |   7   |    UK   | 100 |  78 |
-| S191 | Louis Nguyen           | Fundamental |   G1  |   5   |    US   |     |     |
-| S160 | Louis PHAM             | Fundamental |   G1  |   7   |    FR   |   0 |  50 |
-|  S89 | Luan Duc Tran          | Enrichment  |   G2  |   8   |    UK   |  29 |  20 |
-| S161 | Mai Trinh              | Fundamental |   G1  |   8   |    UK   |  28 |  27 |
-| S162 | Marie BERNARD          | Fundamental |   G1  |   10  |    FR   | 100 |  80 |
-| S163 | Mars Luong             | Fundamental |   G1  |   3   |    US   |     |     |
-| S164 | Max Tong               | Fundamental |   G1  |   4   |    US   |  25 |   0 |
-| S166 | Michael Le             | Fundamental |   G2  |   4   |    US   |  55 |  75 |
-|  S9  | Milan Thai             | Fundamental |   G1  |   5   |    US   |  50 |  30 |
-| S167 | Minh Anh Dao           | Fundamental |   G1  |   6   |    UK   |     |  53 |
-| S142 | Minh Hai Vu            | Enrichment  |   G3  |   13  |    UK   |  35 |  35 |
-| S127 | Minh Ngoc Nguyen       | Fundamental |   G2  |   7   |    US   |   0 |  10 |
-| S169 | Minh Nguyen            | Fundamental |   G1  |   4   |    US   |  35 |  75 |
-| S168 | Minh Nguyen            | Fundamental |   G1  |   3   |    UK   | 100 |  50 |
-| S171 | Minh Quang Nguyen      | Fundamental |   G1  |   8   |    US   |  70 |  29 |
-|  S81 | Minh Tran              | Fundamental |   G1  |   5   |    UK   |  61 |  35 |
-|  S52 | Nam Nguyen             | Fundamental |   G2  |   8   |    UK   |  25 |  30 |
-|  S25 | Nathan Luong           | Enrichment  |   G2  |   8   |    CA   |  35 | 100 |
-|  S41 | Ngo Bao Ngoc           | Fundamental |   G1  |   7   |    CA   |  25 |  25 |
-| S172 | Nguyễn Đức Vĩnh An     | Fundamental |   G1  |   7   |    CA   |  97 |  80 |
-| S173 | Nguyễn Hà My           | Fundamental |   G1  |   9   |    VN   |  50 |  10 |
-|  S48 | Nguyen Jérémy          | Fundamental |   G3  |   11  |    FR   |  75 |  68 |
-|  S61 | Nguyen Martin          | Enrichment  |   G2  |   9   |    FR   |  27 | 100 |
-| S174 | Nguyễn Minh Can        | Fundamental |   G1  |   8   |    US   |  85 |  55 |
-| S175 | Nguyễn Minh Chi        | Fundamental |   G1  |   6   |    US   |   6 |  25 |
-| S176 | Nguyen Nam Phong       | Fundamental |   G1  |   7   |    FR   |  83 |  70 |
-|  S99 | Nguyen Ngo Lam Phong   | Fundamental |   G2  |   9   |    FR   |  48 |   0 |
-| S177 | NGUYEN Nicolas         | Fundamental |   G1  |   7   |    FR   |  76 |  60 |
-| S140 | Nguyen Pham Bao Ngoc   | Enrichment  |   G2  |   9   |    FR   |  75 |  55 |
-| S178 | NGUYỄN Thomas          | Fundamental |   G1  |   5   |    FR   |  61 |  75 |
-| S141 | Nguyen Trung Kien      | Enrichment  |   G2  |   7   |    FR   |  40 |  25 |
-| S129 | Ninh Nguyen            | Fundamental |   G2  |   5   |    US   |  78 |  27 |
-| S179 | Pablo TRAN             | Fundamental |   G1  |   4   |    AU   |  50 |     |
-|  S35 | Phạm Nhật Minh         | Enrichment  |   G3  |   8   |    US   |  75 |  45 |
-| S180 | PHUNG KHAC Mailys      | Fundamental |   G1  |   7   |    FR   |  49 |  50 |
-| S138 | Quan Le                | Fundamental |   G1  |   5   |    US   |     |     |
-| S181 | Quang Dat Ngo          | Fundamental |   G1  |   4   |    US   |  45 |  50 |
-| S182 | Quang Vinh Nguyen      | Fundamental |   G1  |   4   |    US   |  50 |  35 |
-|  S20 | Sam Ha                 | Fundamental |   G2  |   7   |    CA   |  50 |  55 |
-| S100 | Sam Vuong              | Fundamental |   G2  |   5   |    US   |  31 |  60 |
-|  S50 | Samuel Luong           | Enrichment  |   G3  |   9   |    US   |  49 |  30 |
-|  S36 | Sean Pham              | Enrichment  |   G2  |   6   |    US   |  55 |  79 |
-|  S28 | Sophia Cao             | Enrichment  |   G2  |   6   |    US   |  45 |  50 |
-| S135 | Steven Pham            | Fundamental |   G1  |   4   |    US   |   0 |  47 |
-| S183 | Tommy Phan             | Fundamental |   G1  |   9   |    UK   |  75 |  80 |
-|  S96 | Tran Nguyen An         | Fundamental |   G1  |   10  |    FR   |  75 |  38 |
-| S184 | Trần Nguyễn Nam An     | Fundamental |   G1  |   6   |    VN   |   0 |     |
-| S185 | Trung Bao Khanh Nguyen | Fundamental |   G1  |   5   |    GE   |  30 |  50 |
-|  S40 | Truong Minh-Vu         | Fundamental |   G1  |   6   |    VN   |  20 |  50 |
-|  S10 | Valentin Thang         | Fundamental |   G1  |   6   |    UK   |  10 |     |
-| S186 | Veronika Mymrikova     | Fundamental |   G1  |   4   |    US   |     |     |
-| S187 | Viet Nguyen            | Fundamental |   G1  |   4   |    US   | 100 |  75 |
-| S188 | Xuân Huỳnh             | Fundamental |   G2  |   12  |    UK   |  72 |     |
-|  S71 | Yanis-Huy Desarmaux-Do | Enrichment  |   G3  |   11  |    FR   |  50 |  50 |
+|  ID  |         Student        |   Program   | Level | Grade | Country | IT1 | IT2 | IT3 |
+|:----:|:----------------------:|:-----------:|:-----:|:-----:|:-------:|:---:|:---:|:---:|
+|  S77 | Adelina Mai Linh Luu   | Fundamental |   G2  |   7   |    CA   | 100 |  87 | 100 |
+| S101 | Albert Dinh-Le         | Enrichment  |   G4  |   12  |    FR   |  55 |  48 |  50 |
+| S145 | An Ton Vu              | Fundamental |   G1  |   10  |    UK   |  41 |  60 |  75 |
+| S192 | An Tong                | Fundamental |   G1  |   8   |    US   |  75 |  55 |  33 |
+| S146 | Anh Dang (Jenny)       | Fundamental |   G1  |   4   |    US   |  25 |   0 |   0 |
+|  S22 | Anh Diep Nguyen        | Enrichment  |   G2  |   8   |    CA   |  52 |  70 |  70 |
+| S147 | Anh Pham               | Fundamental |   G1  |   5   |    US   |  75 |  40 |  70 |
+| S121 | Anna Le                | Fundamental |   G1  |   9   |    US   |     |     |     |
+|  S90 | Anthony Pham           | Enrichment  |   G3  |   11  |    FR   |  75 |  50 |  28 |
+| S148 | Arthur Tran-Vu         | Fundamental |   G1  |   7   |    FR   | 100 |  25 |  75 |
+|  S34 | Bao Le                 | Fundamental |   G2  |   7   |    US   |  80 |  70 |  80 |
+| S112 | Benny Le               | Enrichment  |   G4  |   8   |    US   |  75 |  75 |  49 |
+|  S87 | Chi Khanh Pham         | Enrichment  |   G2  |   7   |    US   |  67 |  60 |  55 |
+|  S46 | Claire Luu             | Fundamental |   G1  |   4   |    US   | 100 |  88 | 100 |
+|  S18 | Dang Khanh Le Ngan     | Fundamental |   G1  |   6   |    CA   |  35 |     |  45 |
+| S111 | Dao Anna               | Enrichment  |   G2  |   7   |    FR   |  49 |  50 |  75 |
+| S106 | Dao Antoine            | Enrichment  |   G3  |   10  |    FR   |  75 |  65 |  75 |
+| S189 | Đỗ Hoàng Dương         | Fundamental |   G1  |   7   |    VN   |     |   0 |  10 |
+| S150 | Duc Tri Luong          | Fundamental |   G1  |   7   |    UK   |   5 |  25 |   0 |
+| S152 | Evelyn May Kaldawi     | Fundamental |   G1  |   4   |    US   |   5 |  20 |     |
+|  S73 | Fred Bui               | Enrichment  |   G2  |   7   |    CA   |  75 |  25 |  35 |
+| S154 | Gavyn Nguyen           | Fundamental |   G1  |   7   |    US   |  50 |  49 |  45 |
+|  S29 | Geoffrey Cao           | Enrichment  |   G2  |   4   |    US   |  33 |  30 |  95 |
+| S170 | Gia Minh Nguyen        | Fundamental |   G1  |   5   |    US   |  70 |  50 |  53 |
+| S128 | Giang Nguyen           | Fundamental |   G2  |   7   |    US   | 100 |  65 |  50 |
+|  S57 | Ha-Anh Le              | Enrichment  |   G4  |   12  |    UK   |  45 |  10 |  45 |
+|  S49 | Ha-Chi Vu Le           | Fundamental |   G1  |   5   |    UK   |  75 |  52 |  50 |
+|  S26 | Harry Vien             | Enrichment  |   G2  |   5   |    UK   |  75 |  54 |  50 |
+|  S27 | Helen Vien             | Enrichment  |   G3  |   8   |    UK   |  15 |  35 |  28 |
+| S144 | Henry Dinh             | Enrichment  |   G4  |   11  |    US   | 100 |  99 | 100 |
+|  S21 | Henry Ho               | Enrichment  |   G2  |   6   |    US   |  67 |  25 |  45 |
+| S104 | Henry Minh Nhat Trinh  | Enrichment  |   G3  |   9   |    US   |  15 |   5 |  80 |
+|  S56 | Hien-Lam Nguyen        | Fundamental |   G1  |   6   |    UK   |  58 |  60 |  18 |
+|  S72 | Jade Pham              | Enrichment  |   G2  |   8   |    FR   |  49 |  25 |  55 |
+|  S14 | James Minh Trí Nguyen  | Fundamental |   G1  |   4   |    CA   |     |     |     |
+|  S12 | Jason To               | Enrichment  |   G3  |   8   |    UK   |  73 |  65 |  75 |
+| S155 | Joe Scanlon            | Fundamental |   G1  |   7   |    UK   |   3 |  55 |  20 |
+|  S62 | Julie Cao              | Enrichment  |   G2  |   9   |    FR   |  80 |  55 |  70 |
+|  S44 | Karl Le                | Enrichment  |   G3  |   10  |    FR   |  75 |  60 |  65 |
+| S156 | Kévin Phan             | Fundamental |   G1  |   9   |    FR   |  50 |  50 |  50 |
+|  S55 | Khai-Tam Nguyen        | Fundamental |   G2  |   9   |    UK   |  86 |  35 |  55 |
+|  S30 | Khiem Pham             | Fundamental |   G1  |   4   |    UK   |  50 |  25 |  25 |
+| S143 | Khoa Anh Vu            | Enrichment  |   G2  |   10  |    UK   |  72 |  75 |  78 |
+| S157 | Kien Le                | Fundamental |   G1  |   3   |    UK   |  45 |     |     |
+| S158 | Kim Gia Khanh          | Fundamental |   G1  |   9   |    US   |     |  52 |   5 |
+| S105 | Lê Lâm Phương Anh      | Fundamental |   G1  |   5   |    AU   |  22 |     |     |
+| S190 | Le Minh Duc            | Fundamental |   G1  |   10  |    FR   |  75 |  75 |  58 |
+|  S31 | Linh Khanh Le          | Enrichment  |   G2  |   8   |    UK   |  96 |  77 | 100 |
+| S159 | Long Pham              | Fundamental |   G1  |   4   |    US   |  60 |  77 |  60 |
+|  S45 | Long Tran              | Fundamental |   G1  |   7   |    UK   | 100 |  78 | 100 |
+| S160 | Louis PHAM             | Fundamental |   G1  |   7   |    FR   |   0 |  50 |  18 |
+|  S89 | Luan Duc Tran          | Enrichment  |   G2  |   8   |    UK   |  29 |  20 |  45 |
+| S161 | Mai Trinh              | Fundamental |   G1  |   8   |    UK   |  28 |  27 |   5 |
+| S162 | Marie BERNARD          | Fundamental |   G1  |   10  |    FR   | 100 |  80 | 100 |
+| S164 | Max Tong               | Fundamental |   G1  |   4   |    US   |  25 |   0 |  21 |
+| S166 | Michael Le             | Fundamental |   G2  |   4   |    US   |  55 |  75 |  25 |
+|  S9  | Milan Thai             | Fundamental |   G1  |   5   |    US   |  50 |  30 |  25 |
+| S167 | Minh Anh Dao           | Fundamental |   G1  |   6   |    UK   |     |  53 |  25 |
+| S142 | Minh Hai Vu            | Enrichment  |   G3  |   13  |    UK   |  35 |  35 |  30 |
+| S127 | Minh Ngoc Nguyen       | Fundamental |   G2  |   7   |    US   |   0 |  10 |  25 |
+| S169 | Minh Nguyen            | Fundamental |   G1  |   4   |    US   |  35 |  75 |  38 |
+| S171 | Minh Quang Nguyen      | Fundamental |   G1  |   8   |    US   |  70 |  29 |  18 |
+|  S81 | Minh Tran              | Fundamental |   G1  |   5   |    UK   |  61 |  35 | 100 |
+|  S52 | Nam Nguyen             | Fundamental |   G2  |   8   |    UK   |  25 |  30 |  65 |
+|  S25 | Nathan Luong           | Enrichment  |   G2  |   8   |    CA   |  35 | 100 |  35 |
+|  S41 | Ngo Bao Ngoc           | Fundamental |   G1  |   7   |    CA   |  25 |  25 |  25 |
+| S172 | Nguyễn Đức Vĩnh An     | Fundamental |   G1  |   7   |    CA   |  97 |  80 |  85 |
+| S173 | Nguyễn Hà My           | Fundamental |   G1  |   9   |    VN   |  50 |  10 |  80 |
+|  S48 | Nguyen Jérémy          | Fundamental |   G3  |   11  |    FR   |  75 |  68 |  41 |
+|  S61 | Nguyen Martin          | Enrichment  |   G2  |   9   |    FR   |  27 | 100 |  30 |
+| S174 | Nguyễn Minh Can        | Fundamental |   G1  |   8   |    US   |  85 |  55 |   3 |
+| S175 | Nguyễn Minh Chi        | Fundamental |   G1  |   6   |    US   |   6 |  25 |   5 |
+| S176 | Nguyen Nam Phong       | Fundamental |   G1  |   7   |    FR   |  83 |  70 |  70 |
+|  S99 | Nguyen Ngo Lam Phong   | Fundamental |   G2  |   9   |    FR   |  48 |   0 |   5 |
+| S177 | NGUYEN Nicolas         | Fundamental |   G1  |   7   |    FR   |  76 |  60 | 100 |
+| S140 | Nguyen Pham Bao Ngoc   | Enrichment  |   G2  |   9   |    FR   |  75 |  55 |  55 |
+| S178 | NGUYỄN Thomas          | Fundamental |   G1  |   5   |    FR   |  61 |  75 |  75 |
+| S141 | Nguyen Trung Kien      | Enrichment  |   G2  |   7   |    FR   |  40 |  25 |  55 |
+| S129 | Ninh Nguyen            | Fundamental |   G2  |   5   |    US   |  78 |  27 |  40 |
+|  S35 | Phạm Nhật Minh         | Enrichment  |   G3  |   8   |    US   |  75 |  45 |  70 |
+| S180 | PHUNG KHAC Mailys      | Fundamental |   G1  |   7   |    FR   |  49 |  50 |  78 |
+| S138 | Quan Le                | Fundamental |   G1  |   5   |    US   |     |     |  20 |
+| S181 | Quang Dat Ngo          | Fundamental |   G1  |   4   |    US   |  45 |  50 |  28 |
+| S182 | Quang Vinh Nguyen      | Fundamental |   G1  |   4   |    US   |  50 |  35 |  35 |
+|  S20 | Sam Ha                 | Fundamental |   G2  |   7   |    CA   |  50 |  55 |  70 |
+| S100 | Sam Vuong              | Fundamental |   G2  |   5   |    US   |  31 |  60 |  60 |
+|  S50 | Samuel Luong           | Enrichment  |   G3  |   9   |    US   |  49 |  30 |  50 |
+|  S36 | Sean Pham              | Enrichment  |   G2  |   6   |    US   |  55 |  79 |  53 |
+|  S28 | Sophia Cao             | Enrichment  |   G2  |   6   |    US   |  45 |  50 |  45 |
+| S135 | Steven Pham            | Fundamental |   G1  |   4   |    US   |   0 |  47 |  30 |
+| S183 | Tommy Phan             | Fundamental |   G1  |   9   |    UK   |  75 |  80 |  13 |
+|  S96 | Tran Nguyen An         | Fundamental |   G1  |   10  |    FR   |  75 |  38 |  40 |
+| S184 | Trần Nguyễn Nam An     | Fundamental |   G1  |   6   |    VN   |   0 |     |   0 |
+| S185 | Trung Bao Khanh Nguyen | Fundamental |   G1  |   5   |    GE   |  30 |  50 |  10 |
+|  S40 | Truong Minh-Vu         | Fundamental |   G1  |   6   |    VN   |  20 |  50 |   5 |
+| S188 | Xuân Huỳnh             | Fundamental |   G2  |   12  |    UK   |  72 |     |     |
+|  S71 | Yanis-Huy Desarmaux-Do | Enrichment  |   G3  |   11  |    FR   |  50 |  50 |  40 |
 
 
 ## [Semester 1  - Individual Standings](#semester-1----individual-standings)
