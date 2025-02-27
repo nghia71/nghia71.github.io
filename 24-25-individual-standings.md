@@ -47,7 +47,7 @@
 | S143 | Khoa Anh Vu            | Enrichment  |   G2  |   10  |    UK   |  72 |  75 |  78 |  68 |
 | S157 | Kien Le                | Fundamental |   G1  |   3   |    UK   |  45 |     |     |     |
 | S158 | Kim Gia Khanh          | Fundamental |   G1  |   9   |    US   |     |  52 |   5 |   5 |
-| S105 | Lê Lâm Phương Anh      | Fundamental |   G1  |   5   |    AU   |  22 |     |     |  36 |
+| S105 | Lê Lâm Phương Anh      | Fundamental |   G1  |   5   |    AU   |  22 |     |   9 |  36 |
 | S190 | Le Minh Duc            | Fundamental |   G1  |   10  |    FR   |  75 |  75 |  58 |  80 |
 |  S31 | Linh Khanh Le          | Enrichment  |   G2  |   8   |    UK   |  96 |  77 | 100 | 100 |
 | S159 | Long Pham              | Fundamental |   G1  |   4   |    US   |  60 |  77 |  60 |  10 |
