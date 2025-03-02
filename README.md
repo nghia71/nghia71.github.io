@@ -1,5 +1,49 @@
 ![Math Club & Competitions (MCC)](./img/MCC-2024-Logo-Large.png)
 
+## Our teams to participate in Purple Comet 2025 Competition:
+
+| HS One |                        |    |    |    |            |
+|--------|------------------------|----|----|----|------------|
+|    1   | Albert Dinh-Le         | G4 | 12 | FR |   Captain  |
+|    2   | Antoine Dao            | G3 | 10 | FR | Lieutenant |
+|    3   | Jason To               | G3 | 10 | UK |   Member   |
+|    4   | Anthony Pham           | G3 | 11 | FR |   Member   |
+|    5   | Yanis-Huy Desarmaux-Do | G3 | 11 | FR |   Member   |
+|    6   | Henry Trinh            | G3 |  9 | US |   Member   |
+|        |                        |    |    |    |            |
+| HS Two |                        |    |    |    |            |
+|    1   | Benny Le               | G4 |  8 | US |   Captain  |
+|    2   | Karl Le                | G3 | 10 | FR | Lieutenant |
+|    3   | Jeremy Nguyen          | G3 | 11 | FR |   Member   |
+|    4   | Samuel Luong           | G3 |  9 | US |   Member   |
+|        |                        |    |    |    |            |
+| MS One |                        |    |    |    |            |
+|    1   | Linh Khanh Le          | G2 |  8 | UK |   Captain  |
+|    2   | Julie Cao              | G2 |  9 | FR | Lieutenant |
+|    3   | Chi Khanh Pham         | G2 |  7 | US |   Member   |
+|    4   | Dao Anna               | G2 |  7 | FR |   Member   |
+|    5   | Sean Pham              | G2 |  6 | US |   Member   |
+|    6   | Sam Vuong              | G2 |  5 | US |   Member   |
+|        |                        |    |    |    |            |
+| MS Two |                        |    |    |    |            |
+|    1   | Benny Le               | G4 |  8 | US |   Captain  |
+|    2   | Martin Nguyen          | G2 |  9 | FR | Lieutenant |
+
+## The achievements of our clubs in previous Purple Comet Competitions:
+
+**Middle School Mixed Team Category**:
+	⁃	1st in the world in 2019: The Contest Team (Math & Chess Club in Ottawa) - https://purplecomet.org/?action=result/results/2019
+	⁃	Honorable mention worldwide in 2021: MCC Challengers (Canada) - https://purplecomet.org/?action=result/results/2021
+	⁃	Second in Canada in 2022: The Pi-thons (Canada) - https://purplecomet.org/?action=result/results/2022
+	⁃	Second in Canada in 2023: Middle School One (Canada) - https://purplecomet.org/?action=result/results/2023
+**High School Mixed Team Category**:
+	⁃	Honorable mention worldwide, second in Canada in 2022: The Lost Comets (Canada) - https://purplecomet.org/?action=result/results/2022
+	⁃	Honorable mention worldwide, second in Canada in 2021: Hi-scorers (Canada) - https://purplecomet.org/?action=result/results/2021
+	⁃	First in Canada in 2019: The Contest Team (Math & Chess Club in Ottawa) - https://purplecomet.org/?action=result/results/2019
+	⁃	Second in Canada in 2020: Mazaleth (Canada) - https://purplecomet.org/?action=result/results/2020
+
+---
+
 Important links (note that you have to be a registered member of our club in order to access them).
 
 [**2024-2025 curriculum**](https://drive.google.com/file/d/1CxmboI543WL2PDni12EvnXAM9zO3Ri-g/view?usp=sharing)
