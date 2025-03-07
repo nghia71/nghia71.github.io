@@ -32,15 +32,16 @@
 ## The achievements of our clubs in previous Purple Comet Competitions:
 
 **Middle School Mixed Team Category**:
-	⁃	1st in the world in 2019: The Contest Team (Math & Chess Club in Ottawa) - https://purplecomet.org/?action=result/results/2019
-	⁃	Honorable mention worldwide in 2021: MCC Challengers (Canada) - https://purplecomet.org/?action=result/results/2021
-	⁃	Second in Canada in 2022: The Pi-thons (Canada) - https://purplecomet.org/?action=result/results/2022
-	⁃	Second in Canada in 2023: Middle School One (Canada) - https://purplecomet.org/?action=result/results/2023
+- [1st in the world in 2019: The Contest Team (Math & Chess Club in Ottawa)](https://purplecomet.org/?action=result/results/2019)
+- [Honorable mention worldwide in 2021: MCC Challengers (Canada)](https://purplecomet.org/?action=result/results/2021)
+- [Second in Canada in 2022: The Pi-thons (Canada)](https://purplecomet.org/?action=result/results/2022)
+- [Second in Canada in 2023: Middle School One (Canada)](https://purplecomet.org/?action=result/results/2023)
+
 **High School Mixed Team Category**:
-	⁃	Honorable mention worldwide, second in Canada in 2022: The Lost Comets (Canada) - https://purplecomet.org/?action=result/results/2022
-	⁃	Honorable mention worldwide, second in Canada in 2021: Hi-scorers (Canada) - https://purplecomet.org/?action=result/results/2021
-	⁃	First in Canada in 2019: The Contest Team (Math & Chess Club in Ottawa) - https://purplecomet.org/?action=result/results/2019
-	⁃	Second in Canada in 2020: Mazaleth (Canada) - https://purplecomet.org/?action=result/results/2020
+- [Honorable mention worldwide, second in Canada in 2022: The Lost Comets (Canada)](https://purplecomet.org/?action=result/results/2022)
+- [Honorable mention worldwide, second in Canada in 2021: Hi-scorers (Canada)](https://purplecomet.org/?action=result/results/2021)
+- [First in Canada in 2019: The Contest Team (Math & Chess Club in Ottawa)](https://purplecomet.org/?action=result/results/2019)
+- [Second in Canada in 2020: Mazaleth (Canada)](https://purplecomet.org/?action=result/results/2020)
 
 ---
 
