@@ -38,6 +38,7 @@
 |  S18 | Dang Khanh Le Ngan     | Fundamental |   G1  |   6   |    CA   |  35 |     |  45 |  11 |  65 |    39.0 |
 | S154 | Gavyn Nguyen           | Fundamental |   G1  |   7   |    US   |  50 |  49 |  45 |   5 |  45 |    38.8 |
 | S171 | Minh Quang Nguyen      | Fundamental |   G1  |   8   |    US   |  70 |  29 |  18 |  18 |  55 |    38.0 |
+|  S99 | Nguyen Ngo Lam Phong   | Fundamental |   G1  |   9   |    FR   |  48 |   0 |   5 |  60 |  70 |    36.6 |
 | S167 | Minh Anh Dao           | Fundamental |   G1  |   6   |    UK   |     |  53 |  25 |   6 |  50 |    33.5 |
 | S175 | Nguyễn Minh Chi        | Fundamental |   G1  |   6   |    US   |   6 |  25 |   5 |  85 |  40 |    32.2 |
 | S135 | Steven Pham            | Fundamental |   G1  |   4   |    US   |   0 |  47 |  30 |     |  50 |    31.8 |
@@ -52,6 +53,7 @@
 | S158 | Kim Gia Khanh          | Fundamental |   G1  |   9   |    US   |     |  52 |   5 |   5 |   5 |    16.8 |
 | S146 | Anh Dang (Jenny)       | Fundamental |   G1  |   4   |    US   |  25 |   0 |   0 |   3 |  25 |    10.6 |
 | S189 | Đỗ Hoàng Dương         | Fundamental |   G1  |   7   |    VN   |     |   0 |  10 |   6 |  25 |    10.3 |
+| S127 | Minh Ngoc Nguyen       | Fundamental |   G1  |   7   |    US   |   0 |  10 |  25 |     |   0 |     8.8 |
 | S184 | Trần Nguyễn Nam An     | Fundamental |   G1  |   6   |    VN   |   0 |     |   0 |     |     |     0.0 |
 |  S31 | Linh Khanh Le          | Enrichment  |   G2  |   8   |    UK   |  96 |  77 | 100 | 100 |  73 |    89.2 |
 |  S77 | Adelina Mai Linh Luu   | Fundamental |   G2  |   7   |    CA   | 100 |  87 | 100 |  47 |  70 |    80.8 |
@@ -77,11 +79,9 @@
 | S166 | Michael Le             | Fundamental |   G2  |   4   |    US   |  55 |  75 |  25 |  25 |  50 |    46.0 |
 |  S52 | Nam Nguyen             | Fundamental |   G2  |   8   |    UK   |  25 |  30 |  65 |  49 |  50 |    43.8 |
 |  S72 | Jade Pham              | Enrichment  |   G2  |   8   |    FR   |  49 |  25 |  55 |  50 |  30 |    41.8 |
-|  S99 | Nguyen Ngo Lam Phong   | Fundamental |   G2  |   9   |    FR   |  48 |   0 |   5 |  60 |  70 |    36.6 |
 | S141 | Nguyen Trung Kien      | Enrichment  |   G2  |   7   |    FR   |  40 |  25 |  55 |  10 |  40 |    34.0 |
 |  S89 | Luan Duc Tran          | Enrichment  |   G2  |   8   |    UK   |  29 |  20 |  45 |  30 |  25 |    29.8 |
 |  S27 | Helen Vien             | Enrichment  |   G2  |   8   |    UK   |  15 |  35 |  28 |  15 |     |    23.3 |
-| S127 | Minh Ngoc Nguyen       | Fundamental |   G2  |   7   |    US   |   0 |  10 |  25 |     |   0 |     8.8 |
 |  S44 | Karl Le                | Enrichment  |   G3  |   10  |    FR   |  75 |  60 |  65 | 100 | 100 |    80.0 |
 | S106 | Dao Antoine            | Enrichment  |   G3  |   10  |    FR   |  75 |  65 |  75 |  83 |  68 |    73.2 |
 |  S12 | Jason To               | Enrichment  |   G3  |   8   |    UK   |  73 |  65 |  75 |  65 |  80 |    71.6 |
