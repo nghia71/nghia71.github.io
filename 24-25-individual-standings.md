@@ -10,7 +10,7 @@
 | S162 | Marie Bernard          | Fundamental |   G1  |   10  |    FR   | 100 |  80 | 100 |  11 | 100 |  85.0 |  91.0 |    81.0 |
 |  S77 | Adelina Mai Linh Luu   | Fundamental |   G1  |   7   |    CA   | 100 |  87 | 100 |  47 |  70 |  50.0 |  90.0 |    77.7 |
 | S177 | NGUYEN Nicolas         | Fundamental |   G1  |   7   |    FR   |  76 |  60 | 100 |  43 |  60 |  90.0 |  96.0 |    75.0 |
-| S148 | Arthur Tran-Vu         | Fundamental |   G1  |   7   |    FR   | 100 |  25 |  75 |  55 |  90 |  85.0 |  91.0 |    74.4 |
+| S148 | Arthur Tran-Vu         | Fundamental |   G1  |   7   |    FR   | 100 |  25 |  75 |  55 |  90 |  85.0 |  88.0 |    74.0 |
 | S192 | An Tong                | Fundamental |   G1  |   8   |    US   |  75 |  55 |  33 |  81 | 100 |  75.0 |  65.0 |    69.1 |
 | S190 | Le Minh Duc            | Fundamental |   G1  |   10  |    FR   |  75 |  75 |  58 |  80 |  65 |  48.0 |  69.0 |    67.1 |
 | S170 | Gia Minh Nguyen        | Fundamental |   G1  |   5   |    US   |  70 |  50 |  53 |  80 |  85 |  45.0 |  83.0 |    66.6 |
@@ -18,8 +18,8 @@
 | S169 | Minh Nguyen            | Fundamental |   G1  |   4   |    US   | 100 |  75 |  38 |  49 |  55 |  75.0 |  68.0 |    65.7 |
 | S176 | Nguyen Nam Phong       | Fundamental |   G1  |   7   |    FR   |  83 |  70 |  70 |  66 |  65 |  45.0 |  49.0 |    64.0 |
 | S180 | PHUNG KHAC Mailys      | Fundamental |   G1  |   7   |    FR   |  49 |  50 |  78 |  53 |  90 |  66.0 |  55.0 |    63.0 |
-|  S96 | Tran Nguyen An         | Fundamental |   G1  |   10  |    FR   |  75 |  38 |  40 |  77 |  40 |  93.0 |  75.0 |    62.6 |
-|  S81 | Minh Tran              | Fundamental |   G1  |   5   |    UK   |  61 |  35 | 100 |  75 |  80 |  30.0 |  40.0 |    60.1 |
+|  S96 | Tran Nguyen An         | Fundamental |   G1  |   10  |    FR   |  75 |  38 |  40 |  77 |  40 |  93.0 |  73.0 |    62.3 |
+|  S81 | Minh Tran              | Fundamental |   G1  |   5   |    UK   |  61 |  35 | 100 |  75 |  80 |  30.0 |  31.0 |    58.9 |
 | S183 | Tommy Phan             | Fundamental |   G1  |   9   |    UK   |  75 |  80 |  13 |  29 |  75 |  60.0 |  77.0 |    58.4 |
 | S174 | Nguyễn Minh Can        | Fundamental |   G1  |   8   |    US   |  85 |  55 |   3 |  87 |  65 | -     |  50.0 |    57.5 |
 | S159 | Long Pham              | Fundamental |   G1  |   4   |    US   |  60 |  77 |  60 |  10 |  55 |  50.0 |  83.0 |    56.4 |
@@ -42,7 +42,7 @@
 | S171 | Minh Quang Nguyen      | Fundamental |   G1  |   8   |    US   |  70 |  29 |  18 |  18 |  55 |       |  38.0 |    38.0 |
 | S160 | Louis PHAM             | Fundamental |   G1  |   7   |    FR   |   0 |  50 |  18 |  53 |  80 |  35.0 |  24.0 |    37.1 |
 | S175 | Nguyễn Minh Chi        | Fundamental |   G1  |   6   |    US   |   6 |  25 |   5 |  85 |  40 |       |  43.0 |    34.0 |
-| S164 | Max Tong               | Fundamental |   G1  |   4   |    US   |  25 |   0 |  21 |  50 |  35 |   6.0 |  80.0 |    31.0 |
+| S164 | Max Tong               | Fundamental |   G1  |   4   |    US   |  25 |   0 |  21 |  50 |  35 |   6.0 |  77.0 |    30.6 |
 | S167 | Minh Anh Dao           | Fundamental |   G1  |   6   |    UK   |     |  53 |  25 |   6 |  50 |   3.0 |   5.0 |    23.7 |
 | S135 | Steven Pham            | Fundamental |   G1  |   4   |    US   |   0 |  47 |  30 |     |  50 |   5.0 |  10.0 |    23.7 |
 | S185 | Trung Bao Khanh Nguyen | Fundamental |   G1  |   5   |    GE   |  30 |  50 |  10 |  25 |  25 |   0.0 |       |    23.3 |
@@ -65,7 +65,7 @@
 | S143 | Khoa Anh Vu            | Enrichment  |   G2  |   10  |    UK   |  72 |  75 |  78 |  68 |  40 |  38.0 |  35.0 |    58.0 |
 |  S34 | Bao Le                 | Fundamental |   G2  |   7   |    US   |  80 |  70 |  80 |  25 |  50 |  49.0 |  49.0 |    57.6 |
 |  S20 | Sam Ha                 | Fundamental |   G2  |   7   |    CA   |  50 |  55 |  70 |  50 |  50 |       |  60.0 |    55.8 |
-|  S22 | Anh Diep Nguyen        | Enrichment  |   G2  |   8   |    CA   |  52 |  70 |  70 |  75 |  30 |  28.0 |  64.0 |    55.6 |
+|  S22 | Anh Diep Nguyen        | Enrichment  |   G2  |   8   |    CA   |  52 |  70 |  70 |  75 |  30 |  28.0 |  65.0 |    55.7 |
 | S100 | Sam Vuong              | Fundamental |   G2  |   5   |    US   |  31 |  60 |  60 |  60 |  75 | -     |  40.0 |    54.3 |
 | S128 | Giang Nguyen           | Fundamental |   G2  |   7   |    US   | 100 |  65 |  50 |  67 |  20 |  37.0 |  41.0 |    54.3 |
 |  S36 | Sean Pham              | Enrichment  |   G2  |   6   |    US   |  55 |  79 |  53 |  40 |  25 | -     |  60.0 |    52.0 |

@@ -1,34 +1,5 @@
 ![Math Club & Competitions (MCC)](./img/MCC-2024-Logo-Large.png)
 
-## Our teams to participate in Purple Comet 2025 Competition:
-
-| HS One |                        |    |    |    |            |
-|--------|------------------------|----|----|----|------------|
-|    1   | Albert Dinh-Le         | G4 | 12 | FR |   Captain  |
-|    2   | Antoine Dao            | G3 | 10 | FR | Lieutenant |
-|    3   | Jason To               | G3 | 10 | UK |   Member   |
-|    4   | Anthony Pham           | G3 | 11 | FR |   Member   |
-|    5   | Yanis-Huy Desarmaux-Do | G3 | 11 | FR |   Member   |
-|    6   | Henry Trinh            | G3 |  9 | US |   Member   |
-|        |                        |    |    |    |            |
-| HS Two |                        |    |    |    |            |
-|    1   | Benny Le               | G4 |  8 | US |   Captain  |
-|    2   | Karl Le                | G3 | 10 | FR | Lieutenant |
-|    3   | Jeremy Nguyen          | G3 | 11 | FR |   Member   |
-|    4   | Samuel Luong           | G3 |  9 | US |   Member   |
-|        |                        |    |    |    |            |
-| MS One |                        |    |    |    |            |
-|    1   | Linh Khanh Le          | G2 |  8 | UK |   Captain  |
-|    2   | Julie Cao              | G2 |  9 | FR | Lieutenant |
-|    3   | Chi Khanh Pham         | G2 |  7 | US |   Member   |
-|    4   | Dao Anna               | G2 |  7 | FR |   Member   |
-|    5   | Sean Pham              | G2 |  6 | US |   Member   |
-|    6   | Sam Vuong              | G2 |  5 | US |   Member   |
-|        |                        |    |    |    |            |
-| MS Two |                        |    |    |    |            |
-|    1   | Benny Le               | G4 |  8 | US |   Captain  |
-|    2   | Martin Nguyen          | G2 |  9 | FR | Lieutenant |
-
 ## The achievements of our clubs in previous Purple Comet Competitions:
 
 **Middle School Mixed Team Category**:
@@ -42,6 +13,37 @@
 - [Honorable mention worldwide, second in Canada in 2021: Hi-scorers (Canada)](https://purplecomet.org/?action=result/results/2021)
 - [First in Canada in 2019: The Contest Team (Math & Chess Club in Ottawa)](https://purplecomet.org/?action=result/results/2019)
 - [Second in Canada in 2020: Mazaleth (Canada)](https://purplecomet.org/?action=result/results/2020)
+
+## Our teams to participate in Purple Comet 2025 Competition:
+
+| HS     |                        |    |    |    |            |
+|--------|------------------------|----|----|----|------------|
+|    1   | Benny Le               | G4 |  8 | US |   Captain  |
+|    2   | Albert Dinh-Le         | G4 | 12 | FR | Lieutenant |
+|    3a  | Antoine Dao            | G3 | 10 | FR |   Member   |
+|    3b  | Karl Le                | G3 | 10 | FR |   Member   |
+|    4a  | Anthony Pham           | G3 | 11 | FR |   Member   |
+|    4b  | Jeremy Nguyen          | G3 | 11 | FR |   Member   |
+|    5   | Henry Trinh            | G3 |  9 | US |   Member   |
+|    6   | Samuel Luong           | G3 |  9 | US |   Member   |
+|        |                        |    |    |    |            |
+
+| MS One |                        |    |    |    |            |
+|--------|------------------------|----|----|----|------------|
+|    1   | Benny Le               | G4 |  8 | US |   Captain  |
+|    2   | Pham Nhat Minh         | G3 |  8 | US | Lieutenant |
+|    3   | Chi Khanh Pham         | G2 |  7 | US |   Member   |
+|    4   | Julie Cao              | G2 |  9 | FR | Lieutenant |
+|    5   | Dao Anna               | G2 |  7 | FR |   Member   |
+|    6   | Henry Ho               | G2 |  6 | US |   Member   |
+
+| MS Two |                        |    |    |    |            |
+|    1   | Linh Khanh Le          | G2 |  8 | UK |   Captain  |
+|    2   | Jason To               | G3 | 10 | UK | Lieutenant |
+|    3   | Martin Nguyen          | G2 |  9 | FR |   Member   |
+|    4   | Sam Vuong              | G2 |  5 | US |   Member   |
+|    5   | Minh Can Nguyen        | G1 |  8 | US |   Member   |
+|    6   | Sean Pham              | G2 |  6 | US |   Member   |
 
 ---
 
