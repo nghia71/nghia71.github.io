@@ -1,58 +1,60 @@
 ![Math Club & Competitions (MCC)](./img/MCC-2024-Logo-Large.png)
 
-## The achievements of our clubs in previous Purple Comet Competitions:
+## 2025 Summer Courses
 
-**Middle School Mixed Team Category**:
-- [1st in the world in 2025: MS One (Math, Coding & Chess Club)](https://purplecomet.org/?action=result/results/2025)
-- [1st in the world in 2019: The Contest Team (Math & Chess Club in Ottawa)](https://purplecomet.org/?action=result/results/2019)
-- [Honorable mention worldwide in 2021: MCC Challengers (Canada)](https://purplecomet.org/?action=result/results/2021)
-- [Second in Canada in 2023: Middle School One (Canada)](https://purplecomet.org/?action=result/results/2023)
-- [Second in Canada in 2022: The Pi-thons (Canada)](https://purplecomet.org/?action=result/results/2022)
+FOR REGISTRATION CLINK [THIS LINK](https://docs.google.com/forms/d/e/1FAIpQLScqPoz-mfFVKXMc0yDAUE8LPdW1UDfG3RhzcNTeTBzoQCQIQw/viewform?usp=header)
 
-**High School Mixed Team Category**:
-- [Honorable mention worldwide, first in Canada in 2025: HS One (Math, Codding & Chess Club (MCC))](https://purplecomet.org/?action=result/results/2025)
-- [Honorable mention worldwide, first in Canada in 2025: HS Two (Math, Codding & Chess Club (MCC))](https://purplecomet.org/?action=result/results/2025)
-- [Honorable mention worldwide, second in Canada in 2022: The Lost Comets (Canada)](https://purplecomet.org/?action=result/results/2022)
-- [Honorable mention worldwide, second in Canada in 2021: Hi-scorers (Canada)](https://purplecomet.org/?action=result/results/2021)
-- [Second in Canada in 2020: Mazaleth (Canada)](https://purplecomet.org/?action=result/results/2020)
-- [First in Canada in 2019: The Contest Team (Math & Chess Club in Ottawa)](https://purplecomet.org/?action=result/results/2019)
+🌞 MCC Summer Math Camp 2025 – Keep Curious Minds Growing!
 
-## Our teams participated in Purple Comet 2025 Competition:
+This summer, MCC is offering five online math courses for students from Grades 5 to 12. Each course includes:
+✅ Weekly recorded lessons
+✅ Timed tests or problem sets
+✅ Live solution discussions every Sunday
 
-**Honorable Mention Worldwide**: both HS One and HS Two.
+Whether your child is just starting out in competition math or preparing for national Olympiads, these structured and flexible courses are designed to build both skills and confidence.
 
-| HS    |                        |    |    |    |            |
-|--------|------------------------|----|----|----|------------|
-|    1   | Benny Le               | G4 |  8 | US |   Captain  |
-|    2   | Albert Dinh-Le         | G4 | 12 | FR | Lieutenant |
-|    3a  | Antoine Dao            | G3 | 10 | FR |   Member   |
-|    3b  | Karl Le                | G3 | 10 | FR |   Member   |
-|    4a  | Anthony Pham           | G3 | 11 | FR |   Member   |
-|    4b  | Jeremy Nguyen          | G3 | 11 | FR |   Member   |
-|    5   | Henry Trinh            | G3 |  9 | US |   Member   |
-|    6   | Samuel Luong           | G3 |  9 | US |   Member   |
-|        |                        |    |    |    |            |
+👨‍🏫 As the founder of MCC, I’ve seen how a focused summer program can spark real breakthroughs — not only in performance, but also in mindset and joy. Many of our strongest students began with summer training like this.
 
-**First Place in the World**: MS One.
+🗓️ Registration deadline: May 31, 2025
 
-| MS One |                        |    |    |    |            |
-|--------|------------------------|----|----|----|------------|
-|    1   | Benny Le               | G4 |  8 | US |   Captain  |
-|    2   | Pham Nhat Minh         | G3 |  8 | US | Lieutenant |
-|    3   | Chi Khanh Pham         | G2 |  7 | US |   Member   |
-|    4   | Julie Cao              | G2 |  9 | FR | Lieutenant |
-|    5   | Dao Anna               | G2 |  7 | FR |   Member   |
-|    6   | Henry Ho               | G2 |  6 | US |   Member   |
+⸻
 
-| MS Two |                        |    |    |    |            |
-|    1   | Linh Khanh Le          | G2 |  8 | UK |   Captain  |
-|    2   | Jason To               | G3 | 10 | UK | Lieutenant |
-|    3   | Martin Nguyen          | G2 |  9 | FR |   Member   |
-|    4   | Sam Vuong              | G2 |  5 | US |   Member   |
-|    5   | Minh Can Nguyen        | G1 |  8 | US |   Member   |
-|    6   | Sean Pham              | G2 |  6 | US |   Member   |
+🏆 About MCC – A Global Math Community
 
----
+Founded in Canada, MCC has grown into a vibrant international community where students from around the world come together to train, compete, and explore mathematics. The club offers free coaching, weekly challenges, and team contests, all designed to help develop strong problem-solving skills.
+
+In 2025, MCC made headlines at the Purple Comet Math Meet, one of the world’s largest online math competitions with over 4,600 teams from more than 80 countries: Middle School Team One earned a perfect score and placed 1st in the world, High School Teams One and Two both scored 26/30, earning Honorable Mentions on the global leaderboard!
+
+MCC students have also performed strongly at national math Olympiads in Canada, the USA, the UK, and France, with several qualifying for advanced training programs and team selections.
+
+⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻
+
+🌞 Trại Hè Toán Học MCC 2025 – Giữ Lửa Tư Duy, Sẵn Sàng Cho Năm Học Mới!
+
+Hè này, MCC tổ chức 5 khóa học toán trực tuyến dành cho học sinh từ lớp 5 đến lớp 12. Mỗi khóa bao gồm:
+✅ Bài giảng ghi hình mỗi tuần
+✅ Bài kiểm tra hoặc bộ đề luyện mô phỏng kỳ thi thực tế
+✅ Chữa đề trực tiếp vào mỗi Chủ nhật tuần kế tiếp
+
+Dù con bạn mới bắt đầu với toán tư duy hay đang chuẩn bị cho kỳ thi Olympic Toán học Quốc gia, chương trình được thiết kế bài bản và linh hoạt này sẽ giúp phát triển cả kỹ năng và sự tự tin.
+
+👨‍🏫 Là người sáng lập MCC, tôi đã chứng kiến nhiều bước đột phá thực sự đến từ các chương trình hè — không chỉ về thành tích mà cả tư duy và niềm yêu thích toán học. Nhiều học sinh xuất sắc nhất của CLB bắt đầu từ chính những khóa học như thế này.
+
+🗓️ Hạn chót đăng ký: 31 tháng 5 năm 2025
+
+⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻
+
+🏆 Giới thiệu về MCC – Cộng Đồng Toán Học Toàn Cầu
+
+MCC khởi đầu tại Canada và đã phát triển thành một cộng đồng toán học quốc tế sôi động, nơi học sinh từ nhiều quốc gia cùng học, luyện tập và thi đấu. CLB cung cấp các buổi huấn luyện miễn phí, thử thách hàng tuần và các kỳ thi đồng đội, nhằm rèn luyện kỹ năng tư duy và giải quyết vấn đề.
+
+Năm 2025, MCC tiếp tục ghi dấu ấn tại kỳ thi Purple Comet Math Meet — một trong những cuộc thi toán trực tuyến lớn nhất thế giới với hơn 4.600 đội từ hơn 80 quốc gia: Đội THCS số 1 đạt điểm tuyệt đối và xếp Hạng Nhất Thế Giới, Hai đội THPT cùng đạt 26/30 điểm, được Vinh Danh Toàn Cầu (Honorable Mentions) trên bảng xếp hạng quốc tế!
+
+Nhiều học sinh MCC cũng đã đạt thành tích cao tại các kỳ Olympic Toán học Quốc gia ở Canada, Hoa Kỳ, Vương quốc Anh và Pháp, và một số em còn được chọn vào các chương trình huấn luyện và đội tuyển nâng cao.
+
+⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻
+
+## [Purple Comet 2025](./purple-comet.md)
 
 Important links (note that you have to be a registered member of our club in order to access them).
 
@@ -68,13 +70,13 @@ Important links (note that you have to be a registered member of our club in ord
 
 ![November 20](./img/Card%2020-11.png) -->
 
----
+⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻
 
-## [A.1. Current individual standings](./24-25-individual-standings.md)
+## [2024-2025 Individual Standings](./24-25-individual-standings.md)
 
-## [A.2 Current team standings](./24-25-team-standings.md)
+## [2024-2025 Team Standings](./24-25-team-standings.md)
 
-## [B. Club Operation Organizers](#b-club-operation-organizers)
+## [2024-2025 Club Operation Organizers](#b-club-operation-organizers)
 
 1. Ms Le Ngoc Ha (FR): She is the representative of the group. She will be the first contact when you have any question for the club, whatever it is. If you are willing to volunteer for certain activities of the club, please contact her.
 
@@ -103,16 +105,14 @@ Important links (note that you have to be a registered member of our club in ord
 
 *Thank you all for volunteering your time to help all the students.*
 
-## [C. Programs of the School Year 2024-2025](./24-25-programs.md)
+## [2024-2025 Programs of the School Year](./24-25-programs.md)
+
+*Note: Students who are not familiar or have not successfully passed the Introductory Curriculum Level 5 Test are advised to learn and take the tests. More information about the ICLTs can be found [here](https://mccyouthclub.wixsite.com/home/post/the-first-introductory-curriculum-level-test-iclt-this-year-22nd-oct-22).*
 
 <!-- ## [D. Entrance Test (Day 1 & 2)](./24-25-et.md)
 
 Below are the books containing tens of thousands of problems and solutions that students are advised to use for learning problem solving: the first set is our own *Learning Problem Solving* volumes and the previous school year books. -->
 
-## [D. Learning Problem Solving Volumes 1-2-3](./lps-volumes.md)
+## [Learning Problem Solving Volumes 1-2-3](./lps-volumes.md)
 
-## [E. Annual School Year books (2021-2024)](./annual-books.md)
-
------
-
-*Note: Students who are not familiar or have not successfully passed the Introductory Curriculum Level 5 Test are advised to learn and take the tests. More information about the ICLTs can be found [here](https://mccyouthclub.wixsite.com/home/post/the-first-introductory-curriculum-level-test-iclt-this-year-22nd-oct-22).*
+## [Annual School Year books (2021-2024)](./annual-books.md)
