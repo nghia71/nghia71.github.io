@@ -54,7 +54,14 @@ Nhiều học sinh MCC cũng đã đạt thành tích cao tại các kỳ Olympi
 
 ⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻
 
-## [Purple Comet 2025](./purple-comet.md)
+## [The achievements of our clubs in the Purple Comet Math Meet 2025](./purple-comet.md)
+
+⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻
+
+
+## [From the students](./from-students.md)
+
+⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻
 
 Important links (note that you have to be a registered member of our club in order to access them).
 
@@ -65,12 +72,6 @@ Important links (note that you have to be a registered member of our club in ord
 [**Lecture Zoom link**](https://us06web.zoom.us/meeting/register/LpAttYMHS0mR_eJOTMG9aQ) - for this, you have to register before January 12.
 
 **Q&A**: If you would like to ask questions, propose something, please contact by email: **Ms. Le Ngoc Ha** [lengocha45@gmail.com](mailto:lengocha45@gmail.com), or **Ms. Tran Ngoc Anh** [tranngocanh0910@gmail.com](mailto:tranngocanh0910@gmail.com).
-
-<!-- The greetings from students!
-
-![November 20](./img/Card%2020-11.png) -->
-
-⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻
 
 ## [2024-2025 Individual Standings](./24-25-individual-standings.md)
 
