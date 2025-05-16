@@ -95,7 +95,6 @@ Important links (note that you have to be a registered member of our club in ord
 - Mr. Hung Nguyen (FR)
 - Ms. Huong Le (CA)
 - Ms. Huyen Trang (US)
-- Mr. Minh Le (US)
 - Mr. Nam Pham (US)
 - Mr. Son Nguyen (UK)
 - Ms. Thanh Xuan (FR)
