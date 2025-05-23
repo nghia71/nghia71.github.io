@@ -107,7 +107,7 @@ Important links (note that you have to be a registered member of our club in ord
 
 ## [2024-2025 Programs of the School Year](./24-25-programs.md)
 
-*Note: Students who are not familiar or have not successfully passed the Introductory Curriculum Level 5 Test are advised to learn and take the tests. More information about the ICLTs can be found [here](https://mccyouthclub.wixsite.com/home/post/the-first-introductory-curriculum-level-test-iclt-this-year-22nd-oct-22).*
+*Note: Students who are not familiar or have not successfully passed the Introductory Curriculum Level 5 Test are advised to learn and take the tests. More information about the ICLTs can be found [here](./iclt.md).*
 
 <!-- ## [D. Entrance Test (Day 1 & 2)](./24-25-et.md)
 
