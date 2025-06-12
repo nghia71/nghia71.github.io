@@ -1,25 +1,54 @@
 ![Math Club & Competitions (MCC)](./img/MCC-2024-Logo-Large.png)
 
-## 2025 Summer Courses
+## 1. [Plan for the School Year 2025-2026](#1-plan-for-the-school-year-2025-2026)
 
-FOR REGISTRATION CLINK [THIS LINK](https://docs.google.com/forms/d/e/1FAIpQLScqPoz-mfFVKXMc0yDAUE8LPdW1UDfG3RhzcNTeTBzoQCQIQw/viewform?usp=header)
+### 1.1 The Plan:
 
-🌞 MCC Summer Math Camp 2025 – Keep Curious Minds Growing!
+Read the [📗 Plan for the 2025–2026 School Year](https://drive.google.com/file/d/14pvTXzHbJYM4vlOUiAEzeKcJzZlWozdm/view?usp=share_link). 
 
-This summer, MCC is offering five online math courses for students from Grades 5 to 12. Each course includes:
-✅ Weekly recorded lessons
-✅ Timed tests or problem sets
-✅ Live solution discussions every Sunday
+Đọc [Kế hoạch cho Năm học 2025–2026](https://drive.google.com/file/d/14pvTXzHbJYM4vlOUiAEzeKcJzZlWozdm/view?usp=share_link) trước khi tiếp tục.
 
-Whether your child is just starting out in competition math or preparing for national Olympiads, these structured and flexible courses are designed to build both skills and confidence.
+### 1.2 Register: DEADLINE July 13, 2025
 
-👨‍🏫 As the founder of MCC, I’ve seen how a focused summer program can spark real breakthroughs — not only in performance, but also in mindset and joy. Many of our strongest students began with summer training like this.
+### 1.2.1 📋 School Year 2025–2026 Registration Forms - Đăng ký cho Năm học 2025–2026:
 
-🗓️ Registration deadline: May 31, 2025
+- 🧑‍🎓 Current students: please use [this form](https://forms.gle/9BkNG1Z3XmrW8KycA)
+- 🆕 New students: please use [this form](https://forms.gle/6Nf9eQrrkgTF3p3Q6)
 
-⸻
+### 1.2.2 📝 Admission Test (for new students, if required) - Bài kiểm tra đầu vào (nếu cần thiết): 
 
-🏆 About MCC – A Global Math Community
+The test consists of two days, selected from the following: 📅 August 9, 10, 16, or 17. 
+
+Bài kiểm tra diễn ra trong hai ngày, bạn chọn từ các ngày sau: 📅 Ngày 9, 10, 16 hoặc 17 tháng 8
+
+### 1.2.3 📚 Materials for Preparation
+
+- C2: Review the first 5 levels of the AoPS books. 
+- T1/2/3/4: Review the 2024-2025 curriculum. 
+- If you are already a member of the club, you should have access to both the 2024-2025 curriculum and the AoPS books.
+- If you are not a member, please register for School Year 2025 - 2026. At the end of the form, where it asks for your questions, request access to the material.
+
+Tài liệu ôn tập:
+- Nhóm C2: Ôn tập 5 cấp đầu tiên của sách AoPS
+- Nhóm T1–T4: Ôn tập chương trình năm học 2024–2025
+- Nếu bạn là thành viên hiện tại, bạn đã có quyền truy cập
+- Nếu chưa, hãy đăng ký theo biểu mẫu trên. Ở cuối mẫu, nơi yêu cầu ghi câu hỏi, hãy yêu cầu cấp quyền truy cập tài liệu
+
+### 1.2.4 💵 Admission Test Fee: 
+
+- You only pay the Admission Test fee if it is required. Bạn chỉ cần đóng lệ phí nếu bắt buộc phải thi đầu vào.
+
+### 1.2.5 Once admission tests are completed - Sau khi hoàn tất xét tuyển:
+
+- Learning scheduling - Lên kế hoạch học tập
+- Membership payment - Thanh toán phí thành viên
+
+
+&nbsp;
+
+## 2. 🏆 About MCC – Giới thiệu về MCC
+
+A Global Math Club
 
 Founded in Canada, MCC has grown into a vibrant international community where students from around the world come together to train, compete, and explore mathematics. The club offers free coaching, weekly challenges, and team contests, all designed to help develop strong problem-solving skills.
 
@@ -27,24 +56,9 @@ In 2025, MCC made headlines at the Purple Comet Math Meet, one of the world’s 
 
 MCC students have also performed strongly at national math Olympiads in Canada, the USA, the UK, and France, with several qualifying for advanced training programs and team selections.
 
-⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻
+&nbsp;
 
-🌞 Trại Hè Toán Học MCC 2025 – Giữ Lửa Tư Duy, Sẵn Sàng Cho Năm Học Mới!
-
-Hè này, MCC tổ chức 5 khóa học toán trực tuyến dành cho học sinh từ lớp 5 đến lớp 12. Mỗi khóa bao gồm:
-✅ Bài giảng ghi hình mỗi tuần
-✅ Bài kiểm tra hoặc bộ đề luyện mô phỏng kỳ thi thực tế
-✅ Chữa đề trực tiếp vào mỗi Chủ nhật tuần kế tiếp
-
-Dù con bạn mới bắt đầu với toán tư duy hay đang chuẩn bị cho kỳ thi Olympic Toán học Quốc gia, chương trình được thiết kế bài bản và linh hoạt này sẽ giúp phát triển cả kỹ năng và sự tự tin.
-
-👨‍🏫 Là người sáng lập MCC, tôi đã chứng kiến nhiều bước đột phá thực sự đến từ các chương trình hè — không chỉ về thành tích mà cả tư duy và niềm yêu thích toán học. Nhiều học sinh xuất sắc nhất của CLB bắt đầu từ chính những khóa học như thế này.
-
-🗓️ Hạn chót đăng ký: 31 tháng 5 năm 2025
-
-⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻
-
-🏆 Giới thiệu về MCC – Cộng Đồng Toán Học Toàn Cầu
+Câu Lộc Bộ Toán Học Toàn Cầu
 
 MCC khởi đầu tại Canada và đã phát triển thành một cộng đồng toán học quốc tế sôi động, nơi học sinh từ nhiều quốc gia cùng học, luyện tập và thi đấu. CLB cung cấp các buổi huấn luyện miễn phí, thử thách hàng tuần và các kỳ thi đồng đội, nhằm rèn luyện kỹ năng tư duy và giải quyết vấn đề.
 
@@ -52,60 +66,17 @@ Năm 2025, MCC tiếp tục ghi dấu ấn tại kỳ thi Purple Comet Math Meet
 
 Nhiều học sinh MCC cũng đã đạt thành tích cao tại các kỳ Olympic Toán học Quốc gia ở Canada, Hoa Kỳ, Vương quốc Anh và Pháp, và một số em còn được chọn vào các chương trình huấn luyện và đội tuyển nâng cao.
 
-⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻
+&nbsp;
 
-## [The achievements of our clubs in the Purple Comet Math Meet 2025](./purple-comet.md)
+## 3. [2025 Summer Courses](./25-sc.md)
 
-⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻
+&nbsp;
 
+## 4. [The achievements of our clubs in the Purple Comet Math Meet 2025](./purple-comet.md)
 
-## [From the students](./from-students.md)
+&nbsp;
 
-⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻
-
-Important links (note that you have to be a registered member of our club in order to access them).
-
-[**2024-2025 curriculum**](https://drive.google.com/file/d/1CxmboI543WL2PDni12EvnXAM9zO3Ri-g/view?usp=sharing)
-
-[**Weekly tests**](https://drive.google.com/drive/folders/12CVZJpMdqUNpkfxGYKJktzEok0WuEXjC?usp=share_link)
-
-[**Lecture Zoom link**](https://us06web.zoom.us/meeting/register/LpAttYMHS0mR_eJOTMG9aQ) - for this, you have to register before January 12.
-
-**Q&A**: If you would like to ask questions, propose something, please contact by email: **Ms. Le Ngoc Ha** [lengocha45@gmail.com](mailto:lengocha45@gmail.com), or **Ms. Tran Ngoc Anh** [tranngocanh0910@gmail.com](mailto:tranngocanh0910@gmail.com).
-
-## [2024-2025 Individual Standings](./24-25-individual-standings.md)
-
-## [2024-2025 Team Standings](./24-25-team-standings.md)
-
-## [2024-2025 Club Operation Organizers](#b-club-operation-organizers)
-
-1. Ms Le Ngoc Ha (FR): She is the representative of the group. She will be the first contact when you have any question for the club, whatever it is. If you are willing to volunteer for certain activities of the club, please contact her.
-
-2. Ms Tran Ngoc Anh (US) substitutes Ms Le Ngoc Ha when needed or provides help to parents/students when assigned to.
-
-3. Mr Le Anh Tuan (UK) leads the effort to draft, adjust, and update rules and procedures how the club functions. Mr Le Anh Tuan also substitutes Ms Le Ngoc Ha when needed.
-
-4. Parents volunteer to participate to grade submissions:
-- Mr. Dinh Xuan Quyen (FR): is responsible for organize volunteer parents for grading of students’ individual and team tests. He has the final word on reviewing graded results in case of dispute.
-- Mr. Le Anh Tuan (UK)
-- Mr. Hai Dinh (US)
-- Mr. Hiep Luong (US)
-- Mr. Hieu Luu (CA)
-- Mr. Hoa Pham (US)
-- Mr. Hung Nguyen (FR)
-- Ms. Huong Le (CA)
-- Ms. Huyen Trang (US)
-- Mr. Nam Pham (US)
-- Mr. Son Nguyen (UK)
-- Ms. Thanh Xuan (FR)
-- Mr. Toan To (UK)
-- Mr. Tung-Lam Dao (FR)
-
-7. Mr. Tung-Lam Dao (FR) and Mr. Hoa Pham (US) is responsible for providing technical support to the volunteer parents to access, use, and share information.
-
-*Thank you all for volunteering your time to help all the students.*
-
-## [2024-2025 Programs of the School Year](./24-25-programs.md)
+## 5. [2024-2025 Programs of the School Year](./24-25-programs.md)
 
 *Note: Students who are not familiar or have not successfully passed the Introductory Curriculum Level 5 Test are advised to learn and take the tests. More information about the ICLTs can be found [here](./iclt.md).*
 
@@ -113,6 +84,14 @@ Important links (note that you have to be a registered member of our club in ord
 
 Below are the books containing tens of thousands of problems and solutions that students are advised to use for learning problem solving: the first set is our own *Learning Problem Solving* volumes and the previous school year books. -->
 
-## [Learning Problem Solving Volumes 1-2-3](./lps-volumes.md)
+&nbsp;
 
-## [Annual School Year books (2021-2024)](./annual-books.md)
+## 6. [Learning Problem Solving Volumes 1-2-3](./lps-volumes.md)
+
+&nbsp;
+
+## 7. [Annual School Year books (2021-2024)](./annual-books.md)
+
+&nbsp;
+
+## 8. [From the students](./from-students.md)

@@ -2,6 +2,50 @@
 
 Welcome to the 2024 - 2025 School Year of the Math Club & Competitions!
 
+Important links (note that you have to be a registered member of our club in order to access them).
+
+[**2024-2025 curriculum**](https://drive.google.com/file/d/1CxmboI543WL2PDni12EvnXAM9zO3Ri-g/view?usp=sharing)
+
+[**Weekly tests**](https://drive.google.com/drive/folders/12CVZJpMdqUNpkfxGYKJktzEok0WuEXjC?usp=share_link)
+
+[**Lecture Zoom link**](https://us06web.zoom.us/meeting/register/LpAttYMHS0mR_eJOTMG9aQ) - for this, you have to register before January 12.
+
+**Q&A**: If you would like to ask questions, propose something, please contact by email: **Ms. Le Ngoc Ha** [lengocha45@gmail.com](mailto:lengocha45@gmail.com), or **Ms. Tran Ngoc Anh** [tranngocanh0910@gmail.com](mailto:tranngocanh0910@gmail.com).
+
+## [2024-2025 Individual Standings](./24-25-individual-standings.md)
+
+## [2024-2025 Team Standings](./24-25-team-standings.md)
+
+## [2024-2025 Club Operation Organizers](#b-club-operation-organizers)
+
+1. Ms Le Ngoc Ha (FR): She is the representative of the group. She will be the first contact when you have any question for the club, whatever it is. If you are willing to volunteer for certain activities of the club, please contact her.
+
+2. Ms Tran Ngoc Anh (US) substitutes Ms Le Ngoc Ha when needed or provides help to parents/students when assigned to.
+
+3. Mr Le Anh Tuan (UK) leads the effort to draft, adjust, and update rules and procedures how the club functions. Mr Le Anh Tuan also substitutes Ms Le Ngoc Ha when needed.
+
+4. Parents volunteer to participate to grade submissions:
+- Mr. Dinh Xuan Quyen (FR): is responsible for organize volunteer parents for grading of students’ individual and team tests. He has the final word on reviewing graded results in case of dispute.
+- Mr. Le Anh Tuan (UK)
+- Mr. Hai Dinh (US)
+- Mr. Hiep Luong (US)
+- Mr. Hieu Luu (CA)
+- Mr. Hoa Pham (US)
+- Mr. Hung Nguyen (FR)
+- Ms. Huong Le (CA)
+- Ms. Huyen Trang (US)
+- Mr. Nam Pham (US)
+- Mr. Son Nguyen (UK)
+- Ms. Thanh Xuan (FR)
+- Mr. Toan To (UK)
+- Mr. Tung-Lam Dao (FR)
+
+7. Mr. Tung-Lam Dao (FR) and Mr. Hoa Pham (US) is responsible for providing technical support to the volunteer parents to access, use, and share information.
+
+*Thank you all for volunteering your time to help all the students.*
+
+&nbsp;
+
 **The second semester is from January 12 to June 15, 2025.**
 
 Please read carefully the content below. If you have any personal question, send it directly the club. if you have any general question that might be concern of other students, send it to the mailing list.
