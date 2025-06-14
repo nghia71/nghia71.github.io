@@ -43,6 +43,15 @@ Tài liệu ôn tập:
 - Learning scheduling - Lên kế hoạch học tập
 - Membership payment - Thanh toán phí thành viên
 
+### 1.3 Advice for parents
+
+- How can we make math more enjoyable? Not a set of dry lessons. Not a series of drills. But something that sparks curiosity. Something that feels like solving a mystery, discovering a pattern, unlocking a secret?
+- Over the past 10 years, I’ve taught hundreds of students — from beginners to competition-level learners — and learned one thing: The right problem explained the right way can change everything. That’s why I wrote this book. It’s a collection of knowledge, ideas, and teaching insights gathered over a decade of working with young learners. 
+It’s designed to help students fall in love with problem solving — not by making things easier, but by making them more meaningful. I’d love to share it with you. It’s an ebook, you get it in your hand in 5 minutes.
+
+[100 Math Problems for Absolute Beginners](https://www.lulu.com/shop/nghia-doan/100-math-problems-for-absolute-beginners/ebook/product-p69y785.html?page=1&pageSize=4)
+
+[100 Bài Toán Dành Cho Người Mới Bắt Đầu](https://www.lulu.com/shop/nghia-doan/100-bài-toán-dành-cho-người-mới-bắt-đầu/ebook/product-rm68v54.html?page=1&pageSize=4)
 
 &nbsp;
 
