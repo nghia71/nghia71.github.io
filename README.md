@@ -75,6 +75,8 @@ Năm 2025, MCC tiếp tục ghi dấu ấn tại kỳ thi Purple Comet Math Meet
 
 Nhiều học sinh MCC cũng đã đạt thành tích cao tại các kỳ Olympic Toán học Quốc gia ở Canada, Hoa Kỳ, Vương quốc Anh và Pháp, và một số em còn được chọn vào các chương trình huấn luyện và đội tuyển nâng cao.
 
+[CO Team 2025](./img/co-team-2025.png)
+
 &nbsp;
 
 ## 3. [2025 Summer Courses](./25-sc.md)
