@@ -57,7 +57,7 @@ It’s designed to help students fall in love with problem solving — not by ma
 
 ## 2. 🏆 About MCC – Giới thiệu về MCC
 
-A Global Math Club
+## 2.1 A Global Math Club
 
 Founded in Canada, MCC has grown into a vibrant international community where students from around the world come together to train, compete, and explore mathematics. The club offers free coaching, weekly challenges, and team contests, all designed to help develop strong problem-solving skills.
 
@@ -75,7 +75,21 @@ Năm 2025, MCC tiếp tục ghi dấu ấn tại kỳ thi Purple Comet Math Meet
 
 Nhiều học sinh MCC cũng đã đạt thành tích cao tại các kỳ Olympic Toán học Quốc gia ở Canada, Hoa Kỳ, Vương quốc Anh và Pháp, và một số em còn được chọn vào các chương trình huấn luyện và đội tuyển nâng cao.
 
-[CO Team 2025](./img/co-team-2025.png)
+## 2.2 2024-2025 Ceremony
+
+### 2.2.1 Club Video:
+
+[Club Video](https://www.youtube.com/watch?v=oDps_b4k8rw "Club Video")
+
+### 2.2.2 Club Students/Parents:
+
+<img src="./img/club-2025-3.png" alt="Club 2025 #1" width="600"/>
+
+<img src="./img/club-2025-1.png" alt="Club 2025 #1" width="600"/>
+
+<img src="./img/club-2025-2.png" alt="Club 2025 #1" width="600"/>
+
+<img src="./img/co-team-2025.png" alt="Club 2025 #1" width="600"/>
 
 &nbsp;
 
