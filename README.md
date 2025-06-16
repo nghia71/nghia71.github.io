@@ -45,11 +45,12 @@ Tài liệu ôn tập:
 
 ### 1.3 Advice for parents
 
-- How can we make math more enjoyable? Not a set of dry lessons. Not a series of drills. But something that sparks curiosity. Something that feels like solving a mystery, discovering a pattern, unlocking a secret?
-- Over the past 10 years, I’ve taught hundreds of students — from beginners to competition-level learners — and learned one thing: The right problem explained the right way can change everything. That’s why I wrote this book. It’s a collection of knowledge, ideas, and teaching insights gathered over a decade of working with young learners. 
+How can we make math more enjoyable? Not a set of dry lessons. Not a series of drills. But something that sparks curiosity. Something that feels like solving a mystery, discovering a pattern, unlocking a secret? Over the past 10 years, I’ve taught hundreds of students — from beginners to competition-level learners — and learned one thing: The right problem explained the right way can change everything. That’s why I wrote this book. It’s a collection of knowledge, ideas, and teaching insights gathered over a decade of working with young learners. 
 It’s designed to help students fall in love with problem solving — not by making things easier, but by making them more meaningful. I’d love to share it with you. It’s an ebook, you get it in your hand in 5 minutes.
 
 [100 Math Problems for Absolute Beginners](https://www.lulu.com/shop/nghia-doan/100-math-problems-for-absolute-beginners/ebook/product-p69y785.html?page=1&pageSize=4)
+
+Làm thế nào để Toán học trở nên thú vị hơn? Không phải là những bài giảng khô khan. Cũng không phải là một chuỗi các bài luyện tập máy móc. Mà là điều gì đó khơi gợi sự tò mò — như đang giải một bí ẩn, phát hiện một quy luật, mở khóa một điều bí mật? Trong 10 năm qua, tôi đã dạy hàng trăm học sinh — từ những em mới bắt đầu đến các bạn học sinh luyện thi cấp cao — và tôi rút ra một điều: một bài toán phù hợp, được giảng giải đúng cách, có thể thay đổi mọi thứ. Đó là lý do tôi viết cuốn sách này. Nó là tập hợp của kiến thức, ý tưởng, và những trải nghiệm giảng dạy mà tôi tích lũy suốt một thập kỷ làm việc cùng học sinh nhỏ tuổi. Cuốn sách được viết để giúp học sinh yêu thích việc giải toán — không phải bằng cách làm cho mọi thứ dễ hơn, mà là bằng cách khiến chúng có ý nghĩa hơn. Tôi rất muốn chia sẻ nó với bạn. Đây là sách điện tử — bạn có thể nhận được chỉ sau 5 phút.
 
 [100 Bài Toán Dành Cho Người Mới Bắt Đầu](https://www.lulu.com/shop/nghia-doan/100-bài-toán-dành-cho-người-mới-bắt-đầu/ebook/product-rm68v54.html?page=1&pageSize=4)
 
