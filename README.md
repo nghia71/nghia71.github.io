@@ -15,13 +15,18 @@ Read the [📗 Plan for the 2025–2026 School Year](https://drive.google.com/fi
 - 🧑‍🎓 Current students: please use [this form](https://forms.gle/9BkNG1Z3XmrW8KycA)
 - 🆕 New students: please use [this form](https://forms.gle/6Nf9eQrrkgTF3p3Q6)
 
-### 1.2.2 📝 Admission Test (for new students, if required) - Bài kiểm tra đầu vào (nếu cần thiết): 
+### 1.2.2 Finding teammates
+
+- Use this [Google form](https://forms.gle/JYzQgojT1Nu2wyTh8) to declare your intentions (Open/Close)
+- After declaration, read this [Google spreadsheet](https://docs.google.com/spreadsheets/d/1rcF2Dj7HPmLkoB1RnSd4YCPpEYIQYts2BYzaR2sOrc4/edit?usp=sharing) to find your teammate.
+
+### 1.2.3 📝 Admission Test (for new students, if required) - Bài kiểm tra đầu vào (nếu cần thiết): 
 
 The test consists of two days, selected from the following: 📅 August 9, 10, 16, or 17. 
 
 Bài kiểm tra diễn ra trong hai ngày, bạn chọn từ các ngày sau: 📅 Ngày 9, 10, 16 hoặc 17 tháng 8
 
-### 1.2.3 📚 Materials for Preparation
+### 1.2.4 📚 Materials for Preparation
 
 - C2: Review the first 5 levels of the AoPS books. 
 - T1/2/3/4: Review the 2024-2025 curriculum. 
@@ -34,11 +39,11 @@ Tài liệu ôn tập:
 - Nếu bạn là thành viên hiện tại, bạn đã có quyền truy cập
 - Nếu chưa, hãy đăng ký theo biểu mẫu trên. Ở cuối mẫu, nơi yêu cầu ghi câu hỏi, hãy yêu cầu cấp quyền truy cập tài liệu
 
-### 1.2.4 💵 Admission Test Fee: 
+### 1.2.5 💵 Admission Test Fee: 
 
 - You only pay the Admission Test fee if it is required. Bạn chỉ cần đóng lệ phí nếu bắt buộc phải thi đầu vào.
 
-### 1.2.5 Once admission tests are completed - Sau khi hoàn tất xét tuyển:
+### 1.2.6 Once admission tests are completed - Sau khi hoàn tất xét tuyển:
 
 - Learning scheduling - Lên kế hoạch học tập
 - Membership payment - Thanh toán phí thành viên
