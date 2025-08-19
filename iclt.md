@@ -1,3 +1,5 @@
+![Math Club & Competitions (MCC)](./img/MCC-2024-Logo-Large.png)
+
 ## Introductory Curriculum Level Test (ICLT)
 
 ICLT is an activity of Math, Chess, and Coding Club (MCC).

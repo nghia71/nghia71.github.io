@@ -1,3 +1,5 @@
+![Math Club & Competitions (MCC)](./img/MCC-2024-Logo-Large.png)
+
 These books constitute the Learning Problem Solving series from Math Club & Competitions (MCC) (a.k.a Math and Chess Club in Ottawa.) 
 
 Students of the club are advised to use the book to learn, practice, and prepare for the club’s House Championship as well as math competitions.
