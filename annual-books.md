@@ -1,3 +1,11 @@
+# [School Year 2024-2025](#school-year-2024-2025)
+
+The following books containing weekly readings, assignments, and tests.
+
+[Full Curriculum](./mcc/2024-2025-curriculum.pdf)
+
+&nbsp;
+
 # [School Year 2023-2024](#school-year-2023-2024)
 
 The following books containing weekly readings, assignments, and tests.
@@ -6,7 +14,7 @@ The following books containing weekly readings, assignments, and tests.
 
 [Winter-Spring Semester](./mcc/2023-2024-sm2.pdf)
 
-[All problems without solution - useful for newbies and training)](./mcc/2023-2024-po.pdf)
+[All problems without solution - useful for newbies and training](./mcc/2023-2024-po.pdf)
 
 &nbsp;
 
