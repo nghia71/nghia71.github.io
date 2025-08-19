@@ -1,3 +1,5 @@
+![Math Club & Competitions (MCC)](./img/MCC-2024-Logo-Large.png)
+
 # [School Year 2024-2025](#school-year-2024-2025)
 
 The following books containing weekly readings, assignments, and tests.
