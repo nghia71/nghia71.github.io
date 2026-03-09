@@ -35,7 +35,26 @@ Làm thế nào để Toán học trở nên thú vị hơn? Không phải là n
 
 &nbsp;
 
-## 3. [Our achievements in the Purple Comet Math Meets](./purple-comet.md)
+## 3. Our achievements in the Purple Comet Math Meets
+
+The great teams in 2025 [2025 Middle School and High School Teams](./purple-comet.md)
+
+### **Middle School Mixed Team Category**:
+
+- [1st in the world in 2025: MS One (Math, Coding & Chess Club)](https://purplecomet.org/results/2025?year=2025)
+- [1st in the world in 2019: The Contest Team (Math & Chess Club in Ottawa)](https://purplecomet.org/results/2019?year=2019)
+- [Honorable mention worldwide in 2021: MCC Challengers (Canada)](https://purplecomet.org/results/2021?year=2021)
+- [Second in Canada in 2023: Middle School One (Canada)](https://purplecomet.org/results/2023?year=2023)
+- [Second in Canada in 2022: The Pi-thons (Canada)](https://purplecomet.org/results/2022?year=2022)
+
+### **High School Mixed Team Category**:
+
+- [Honorable mention worldwide, first in Canada in 2025: HS One (Math, Codding & Chess Club (MCC))](https://purplecomet.org/results/2025?year=2025)
+- [Honorable mention worldwide, first in Canada in 2025: HS Two (Math, Codding & Chess Club (MCC))](https://purplecomet.org/results/2025?year=2025)
+- [Honorable mention worldwide, second in Canada in 2022: The Lost Comets (Canada)](https://purplecomet.org/results/2022?year=2022)
+- [Honorable mention worldwide, second in Canada in 2021: Hi-scorers (Canada)](https://purplecomet.org/results/2021?year=2021)
+- [Second in Canada in 2020: Mazaleth (Canada)](https://purplecomet.org/?action=result/results/2020)
+- [First in Canada in 2019: The Contest Team (Math & Chess Club in Ottawa)](https://purplecomet.org/results/2019?year=2019)
 
 &nbsp;
 
