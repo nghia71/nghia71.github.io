@@ -41,7 +41,18 @@ Every journey in mathematics begins with a single spark of curiosity. To help st
 ### (1) The Foundation: 100 Math Problems for Absolute Beginners
 
 Before diving into complex theories, students need to fall in love with patterns and logic. This book is a collection of teaching insights gathered over a decade, designed to make math meaningful. It is the perfect entry point for young thinkers.
+
+How can we make math more enjoyable? Not a set of dry lessons. Not a series of drills. But something that sparks curiosity. Something that feels like solving a mystery, discovering a pattern, unlocking a secret? Over the past 10 years, I’ve taught hundreds of students — from beginners to competition-level learners — and learned one thing: The right problem explained the right way can change everything. That’s why I wrote this book. It’s a collection of knowledge, ideas, and teaching insights gathered over a decade of working with young learners.
+
+It’s designed to help students fall in love with problem solving — not by making things easier, but by making them more meaningful. I’d love to share it with you.
+
+There are two editions: print and electronic. I suggest you to get the print one, that is a beautiful and high quality book. Contact the club to have the print edition.
+
+In case if you want to have the ebook, you get it in your hand in 5 minutes.
+
 👉 [100 Math Problems for Absolute Beginners (Ebook)](https://www.lulu.com/shop/nghia-doan/100-math-problems-for-absolute-beginners/ebook/product-p69y785.html)
+
+&nbsp;
 
 ### (2) The Curriculum: Learning Problem Solving V & VI (New for 2026)
 
@@ -62,7 +73,18 @@ Mỗi hành trình toán học đều bắt đầu từ một tia sáng tò mò.
 ### (1) Nền tảng: 100 Bài Toán Dành Cho Người Mới Bắt Đầu
 
 Trước khi bước vào những lý thuyết phức tạp, học sinh cần yêu thích các quy luật và logic. Cuốn sách này là tập hợp những trải nghiệm giảng dạy suốt một thập kỷ, giúp toán học trở nên có ý nghĩa và gần gũi hơn. Đây là điểm bắt đầu lý tưởng.
+
+Làm thế nào để Toán học trở nên thú vị hơn? Không phải là những bài giảng khô khan. Cũng không phải là một chuỗi các bài luyện tập máy móc. Mà là điều gì đó khơi gợi sự tò mò — như đang giải một bí ẩn, phát hiện một quy luật, mở khóa một điều bí mật? Trong 10 năm qua, tôi đã dạy hàng trăm học sinh — từ những em mới bắt đầu đến các bạn học sinh luyện thi cấp cao — và tôi rút ra một điều: một bài toán phù hợp, được giảng giải đúng cách, có thể thay đổi mọi thứ. Đó là lý do tôi viết cuốn sách này. Nó là tập hợp của kiến thức, ý tưởng, và những trải nghiệm giảng dạy mà tôi tích lũy suốt một thập kỷ làm việc cùng học sinh nhỏ tuổi. 
+
+Cuốn sách được viết để giúp học sinh yêu thích việc giải toán — không phải bằng cách làm cho mọi thứ dễ hơn, mà là bằng cách khiến chúng có ý nghĩa hơn. Tôi rất muốn chia sẻ nó với bạn. 
+
+Hiện có hai phiên bản: sách in và sách điện tử. Tôi khuyên bạn nên chọn phiên bản sách in, vì đây là một cuốn sách được thiết kế đẹp mắt với chất lượng cao. Liên lạc với Câu Lộc Bộ để có bản in.
+
+Trong trường hợp bạn muốn sở hữu bản ebook, bạn sẽ nhận được sách chỉ sau 5 phút.
+
 👉 [100 Bài Toán Dành Cho Người Mới Bắt Đầu (Ebook)](https://www.google.com/search?q=https://www.lulu.com/shop/nghia-doan/100-b%C3%A0i-to%C3%A1n-d%C3%A0nh-cho-ng%C6%B0%E1%BB%9Di-m%E1%BB%9Bi-b%E1%BA%AFt-%C4%91%E1%BA%A7u/ebook/product-rm68v54.html)
+
+&nbsp;
 
 ### (2) Giáo trình chuyên sâu: Learning Problem Solving V & VI (Ra mắt 2026)
 
