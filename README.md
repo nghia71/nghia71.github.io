@@ -17,7 +17,7 @@ Starting from the 2026-2027 school year, MCC is evolving into a more structured,
 
 **Contact**: register yourself to [the MCC Malining List](https://groups.google.com/g/mcc-school-year-2025-2026), or email to [Ms. Thu Pham](mailto:tpham151st@gmail.com), [Ms. Ngoc Ha](mailto:lengocha45@gmail.com), [Ms. Ngoc Anh](tranngocanh0910@gmail.com).
 
-&nbsp;
+-----
 
 Câu Lạc Bộ Toán Học Toàn Cầu MCC khởi đầu tại Canada và đã phát triển thành một cộng đồng quốc tế sôi động. Trong hơn một thập kỷ, chúng tôi đã đồng hành cùng học sinh qua các buổi huấn luyện và thử thách hàng tuần. Thành tích của MCC đã được khẳng định trên đấu trường quốc tế: Năm 2025, lần thứ 2 đội THCS của chúng tôi xếp **Hạng Nhất Thế Giới** với điểm tuyệt đối tại Purple Comet Math Meet, và các đội THPT liên tục nhận vinh danh **Honorable Mentions** toàn cầu.
 
@@ -55,7 +55,7 @@ Each set consists of two books:
 1. **Textbook & Practice:** 50 chapters with guided examples, including **video solutions** for key problems accessible via member accounts.
 2. **Exams & Solutions:** A dedicated volume for assessment and grading, allowing parents and students to track progress throughout the 4-year curriculum.
 
-&nbsp;
+-----
 
 Mỗi hành trình toán học đều bắt đầu từ một tia sáng tò mò. Để giúp học sinh khởi đầu đúng hướng, chúng tôi đã thiết kế một lộ trình phát triển rõ ràng:
 
@@ -110,7 +110,7 @@ The great teams in 2025 [2025 Middle School and High School Teams](./purple-come
 - [Second in Canada in 2020: Mazaleth (Canada)](https://purplecomet.org/?action=result/results/2020)
 - [First in Canada in 2019: The Contest Team (Math & Chess Club in Ottawa)](https://purplecomet.org/results/2019?year=2019)
 
-&nbsp;
+-----
 
 Những đội tuyển xuất sắc năm 2025 [Các đội THCS và THPT năm 2025](https://www.google.com/search?q=./purple-comet.md)
 
