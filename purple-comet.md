@@ -35,5 +35,4 @@
 |    4b  | Jeremy Nguyen          | G3 | 11 | FR |   Member   |
 |    5   | Henry Trinh            | G3 |  9 | US |   Member   |
 |    6   | Samuel Luong           | G3 |  9 | US |   Member   |
-|        |                        |    |    |    |            |
 
