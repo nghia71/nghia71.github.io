@@ -1,6 +1,47 @@
 ![Math Club & Competitions (MCC)](./img/MCC-2024-Logo-Large.png)
 
+# [Hot news - Our Teams](#purple-comet-teams-2026) at [Purple Comet! Math Meet 2026](https://purplecomet.org)
+
+|    **Team**   |   **Title**  |       **Name**      | **Grade** | **Age** |
+|:-------------:|:------------:|:-------------------:|:---------:|:-------:|
+| **MS Team 1** |    Captain   | Jason To            |     8     |    14   |
+|               | Vice Captain | Linh Le             |     8     |    14   |
+|               |              | Alex Tran           |     7     |    13   |
+|               |              | Chi Pham            |     8     |    13   |
+|               |              | Mailys Phung Khac   |     8     |    13   |
+|               |              | Nam Phong Nguyen    |     8     |    13   |
+|               |              |                     |           |         |
+| **MS Team 2** |    Captain   | Luan Tran           |     8     |    14   |
+|               | Vice Captain | Mia Vu              |     8     |    12   |
+|               |              | Long Vo Duc Tran    |     8     |    13   |
+|               |              | Anna Dao            |     8     |    13   |
+|               |              | Minh Vo Duc Tran    |     7     |    12   |
+|               |              | Nguyen Trung Kien   |     8     |    13   |
+|               |              |                     |           |         |
+| **MS Team 3** |    Captain   | Henry Ho            |     7     |    13   |
+|               | Vice Captain | Helen Vien          |     8     |    13   |
+|               |              | Claire Bao Tran Luu |     5     |    10   |
+|               |              | Gia Minh Nguyen     |     6     |    11   |
+|               |              | Harry Vien          |     6     |    10   |
+|               |              | Michael Le          |     5     |    11   |
+|               |              |                     |           |         |
+|  **HS Team**  |    Captain   | Karl Le             |     11    |    16   |
+|               | Vice Captain | Linh Le             |     8     |    14   |
+|               |              | Antoine Dao         |     11    |    16   |
+|               |              | Chi Pham            |     8     |    13   |
+|               |              | Jake Cao            |     9     |    15   |
+|               |              | Jason To            |     8     |    14   |
+
+Contest time:
+
+- MS Teams: **7am PST = 9am ET = 3pm BST = 4pm Europe on Sunday April 19**
+
+- HS Team: **8.30am PST = 10.30am ET = 4.30 BST = 5.30 Europe on Sunday April 19**
+
+&nbsp;
+
 # MCC – A Global Math Club
+
 
 ## 1. 🏆 Who are we? & Our 2026-2027 Transition / Chúng tôi là ai & Sự chuyển mình 2026-2027
 
