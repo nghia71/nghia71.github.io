@@ -12,7 +12,7 @@
 |               |              | Nam Phong Nguyen    |     8     |    13   |
 |               |              |                     |           |         |
 | **MS Team 2** |    Captain   | Luan Tran           |     8     |    14   |
-|               | Vice Captain | Mia Vu              |     8     |    12   |
+|               | Vice Captain | Nam Nguyen          |     8     |    13   |
 |               |              | Long Vo Duc Tran    |     8     |    13   |
 |               |              | Anna Dao            |     8     |    13   |
 |               |              | Minh Vo Duc Tran    |     7     |    12   |
