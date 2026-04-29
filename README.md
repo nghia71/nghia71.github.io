@@ -115,9 +115,6 @@ Competing on this scale, MCC teams demonstrated not only excellence — but disc
 
 <table>
 <tr>
-
-<tr>
-
 <td width="20%" valign="top">
 
 <h3>Anna Dao</h3>
@@ -560,9 +557,7 @@ It was my first time participating, and I really loved working as a team.</p>
 More time work on Math.</p>
 
 </td>
-
 </tr>
-
 </table>
 
 &nbsp;
