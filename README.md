@@ -564,20 +564,18 @@ More time work on Math.</p>
 </tr>
 
 </table>
----
-
-# 💬 FEATURED TESTIMONIAL  
-## Albert Dinh-Le (MCC Alumni, Twice Purple Comet Honourable Mentions 2022, 2025.)
-
-It is clear how much the club has grown into something truly special. Over the years, it has brought together students who share a curiosity for mathematics and a desire to challenge themselves. Your commitment to creating engaging problems and fostering a supportive, stimulating environment has made the club a place where learning is both demanding and deeply rewarding.
-
-On a personal level, the impact of the club has been especially meaningful during my studies. The rigor of the problems, combined with your guidance, helped me develop the discipline, precision, and perseverance required to succeed. Beyond improving my mathematical skills, it shaped the way I think, reason, and approach difficulty in general. The habits and confidence I gained through the club continue to guide me every day, and I am truly grateful for its lasting influence.
 
 ---
 
-# 🎯 FINAL REFLECTION
+*It is clear how much the club has grown into something truly special. Over the years, it has brought together students who share a curiosity for mathematics and a desire to challenge themselves. Your commitment to creating engaging problems and fostering a supportive, stimulating environment has made the club a place where learning is both demanding and deeply rewarding.*
 
-This is not just about winning.
+*On a personal level, the impact of the club has been especially meaningful during my studies. The rigor of the problems, combined with your guidance, helped me develop the discipline, precision, and perseverance required to succeed. Beyond improving my mathematical skills, it shaped the way I think, reason, and approach difficulty in general. The habits and confidence I gained through the club continue to guide me every day, and I am truly grateful for its lasting influence.*
+
+- Albert Dinh-Le (MCC Alumni, Twice Purple Comet Honourable Mentions 2022, 2025.)
+
+---
+
+This competition is not just about winning.
 
 It is about:
 - developing discipline and perseverance  
