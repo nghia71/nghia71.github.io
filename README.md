@@ -1,42 +1,652 @@
 ![Math Club & Competitions (MCC)](./img/MCC-2024-Logo-Large.png)
 
-# [Hot news - Our Teams](#purple-comet-teams-2026) at [Purple Comet! Math Meet 2026](https://purplecomet.org)
+# 🚀 MCC at Purple Comet 2026  
+## A Decade of Excellence • A Global Achievement
 
-|    **Team**   |   **Title**  |       **Name**      | **Grade** | **Age** |
-|:-------------:|:------------:|:-------------------:|:---------:|:-------:|
-| **MS Team 1** |    Captain   | Jason To            |     8     |    14   |
-|               | Vice Captain | Linh Le             |     8     |    14   |
-|               |              | Alex Tran           |     7     |    13   |
-|               |              | Chi Pham            |     8     |    13   |
-|               |              | Mailys Phung Khac   |     8     |    13   |
-|               |              | Nam Phong Nguyen    |     8     |    13   |
-|               |              |                     |           |         |
-| **MS Team 2** |    Captain   | Luan Tran           |     8     |    14   |
-|               | Vice Captain | Nam Nguyen          |     8     |    13   |
-|               |              | Long Vo Duc Tran    |     8     |    13   |
-|               |              | Anna Dao            |     8     |    13   |
-|               |              | Minh Vo Duc Tran    |     7     |    12   |
-|               |              | Nguyen Trung Kien   |     8     |    13   |
-|               |              |                     |           |         |
-| **MS Team 3** |    Captain   | Henry Ho            |     7     |    13   |
-|               | Vice Captain | Helen Vien          |     8     |    13   |
-|               |              | Claire Bao Tran Luu |     5     |    10   |
-|               |              | Gia Minh Nguyen     |     6     |    11   |
-|               |              | Harry Vien          |     6     |    10   |
-|               |              | Michael Le          |     5     |    11   |
-|               |              |                     |           |         |
-|  **HS Team**  |    Captain   | Karl Le             |     11    |    16   |
-|               | Vice Captain | Linh Le             |     8     |    14   |
-|               |              | Antoine Dao         |     11    |    16   |
-|               |              | Chi Pham            |     8     |    13   |
-|               |              | Jake Cao            |     9     |    15   |
-|               |              | Jason To            |     8     |    14   |
+We proudly present the achievements and voices of our students at the [Purple Comet! Math Meet 2026](chatgpt://generic-entity?number=0), as we also celebrate **10 years of MCC participation in Purple Comet**.
 
-Contest time:
+---
 
-- MS Teams: **7am PST = 9am ET = 3pm BST = 4pm Europe on Sunday April 19**
+## 🌍 Preminent at Global Stage
 
-- HS Team: **8.30am PST = 10.30am ET = 4.30 BST = 5.30 Europe on Sunday April 19**
+- 🌐 **4,804 teams**
+- 🌎 **86 countries**
+
+Competing on this scale, MCC teams demonstrated not only excellence — but discipline, collaboration, and a deep love for mathematics.
+
+---
+
+## 🏆 MCC RESULTS
+
+| Team | Result | Score |
+|------|--------|-------|
+| 🥇 MS ONE | First Place (Tie) | 20 / 20 |
+| 🥇 MS TWO | First Place (Tie) | 20 / 20 |
+| 🌟 MS THREE | Honorable Mention | 19 / 20 |
+| 🥇 HS ONE | First Place (Tie) | 30 / 30 |
+
+🔥 **3 MCC teams ranked #1 worldwide**
+
+---
+
+
+
+## 🏆 MCC TEAMS OVERVIEW
+
+<div align="center">
+
+<table>
+
+<tr>
+
+<td valign="top">
+
+### 🟦 MS ONE  
+
+**🥇 First Place (20/20)**  
+
+| Role | Name | Grade |
+|------|------|------|
+| Captain | Jason To | 8 |
+| Vice Captain | Linh Le | 8 |
+| Member | Alex Tran | 7 |
+| Member | Chi Pham | 8 |
+| Member | Mailys Phung Khac | 8 |
+| Member | Nam Phong Nguyen | 8 |
+
+</td>
+
+<td valign="top">
+
+### 🟦 MS TWO  
+
+**🥇 First Place (20/20)**  
+
+| Role | Name | Grade |
+|------|------|------|
+| Captain | Luan Tran | 8 |
+| Vice Captain | Nam Nguyen | 8 |
+| Member | Long Vo Duc Tran | 8 |
+| Member | Anna Dao | 8 |
+| Member | Minh Vo Duc Tran | 7 |
+| Member | Nguyen Trung Kien | 8 |
+
+</td>
+
+<td valign="top">
+
+### 🟦 MS THREE  
+
+**🌟 Honorable Mention (19/20)**  
+
+| Role | Name | Grade |
+|------|------|------|
+| Captain | Henry Ho | 7 |
+| Vice Captain | Helen Vien | 8 |
+| Member | Claire Bao Tran Luu | 5 |
+| Member | Gia Minh Nguyen | 6 |
+| Member | Harry Vien | 6 |
+| Member | Michael Le | 5 |
+</td>
+<td valign="top">
+
+### 🟦 HS ONE  
+
+**🥇 First Place (30/30)**  
+
+| Role | Name | Grade |
+|------|------|------|
+| Captain | Karl Le | 11 |
+| Vice Captain | Linh Le | 8 |
+| Member | Antoine Dao | 11 |
+| Member | Chi Pham | 8 |
+| Member | Jake Cao | 9 |
+| Member | Jason To | 8 |
+</td>
+</tr>
+</table>
+</div>
+
+---
+
+# 👥 MCC Student Profiles (Alphabetical)
+
+<table>
+<tr>
+
+<td width="20%" valign="top">
+
+### Anna Dao  
+**G8 • Age 13**  
+**Teams:** MS TWO  
+**Role:** Member  
+
+<img src="./img/2026-AnnaDao.jpeg" width="160"/>
+
+**Who I Am**  
+Hello, my name is Anna. I am 13 years old and in Grade 8. I live in France.
+
+**MCC Journey**  
+I have been attending MCC for 2 years.
+
+**Purple Comet Experience**  
+I took part in the Purple Comet competition for 2 years. I really appreciate the teamwork, and I was very happy to receive the first award.
+
+**Parent Thought**  
+Anna has participated in the club for the past two years. She has started to make progress, becoming more focused and gradually improving her reasoning and teamwork.
+
+</td>
+
+<td width="20%" valign="top">
+
+### Antoine Dao  
+**G11 • Age 16**  
+**Teams:** HS ONE  
+**Role:** Member  
+
+<img src="./img/2026-DaoHaBachHieu.jpeg" width="160"/>
+
+**Who I Am**  
+My name is Antoine Dao, and I am 16 years old.
+
+**MCC Journey**  
+I started MCC 5 years ago and have seen a lot of progress through the years.
+
+**Purple Comet Experience**  
+I have taken part in 4 Purple Comet competitions, and this year is the first time our team achieved a perfect score of 30/30.
+
+**Parent Thought**  
+We have seen great progress in his autonomy, mathematical knowledge, and reasoning.
+
+</td>
+
+<td width="20%" valign="top">
+
+### Claire Bao Tran Luu  
+**G5 • Age 10**  
+**Teams:** MS THREE  
+**Role:** Member  
+
+<img src="./img/2026-ClaireLuu.jpg" width="160"/>
+
+**Who I Am**  
+I am Claire, a fifth grader living in Washington. I love playing the violin and piano, and I enjoy swimming.
+
+**MCC Journey**  
+I have been attending MCC for 2 years.
+
+**Purple Comet Experience**  
+I took part in the 2026 Middle School Purple Comet as part of Team 3. The training sessions were very helpful, and the problems were similar to what we practiced, which helped me understand how to approach them.
+
+**Parent Thought**  
+Claire has improved tremendously. She can now write solutions in a logical and precise way and has benefited greatly from teamwork.
+
+</td>
+
+<td width="20%" valign="top">
+
+### Chi Pham  
+**G8 • Age 13**  
+**Teams:** MS ONE, HS ONE  
+**Role:** Member  
+
+<img src="./img/2026-ChiPham.jpeg" width="160"/>
+
+**Who I Am**  
+I am Chi Pham. I am in 8th grade and live in Washington, USA.
+
+**MCC Journey**  
+I have been attending MCC for 3 years.
+
+**Purple Comet Experience**  
+I took part in both MS ONE and HS ONE. Purple Comet was a nice challenge and helped develop teamwork within the club.
+
+**Parent Thought**  
+Chi has significantly improved since joining the club. She started as a beginner, and now she is solid and able to work well in a team.
+
+</td>
+
+<td width="20%" valign="top">
+
+### Gia Minh Nguyen  
+**G6 • Age 11**  
+**Teams:** MS THREE  
+**Role:** Member  
+
+<!-- <img src="" width="160"/>
+
+**Who I Am**  
+
+
+**MCC Journey**  
+
+
+**Purple Comet Experience**  
+
+
+**Parent Thought**   -->
+
+
+</td>
+
+</tr>
+
+<tr>
+
+<td width="20%" valign="top">
+
+### Harry Vien  
+**G6 • Age 10**  
+**Teams:** MS THREE  
+**Role:** Member  
+
+<img src="./img/2026-HarryVien.jpg" width="160"/>
+
+**Who I Am**  
+I am Harry. I am 11 years old and will be attending Queen Elizabeth's School for Boys. I have participated in several math competitions.
+
+**MCC Journey**  
+I have been attending MCC for 2 years.
+
+**Purple Comet Experience**  
+This was my first time attending Purple Comet. I found it a great opportunity to test my skills and understand what I need to improve.
+
+**Parent Thought**  
+Harry has made significant progress in mathematical thinking and problem-solving skills.
+
+</td>
+
+<td width="20%" valign="top">
+
+### Helen Vien  
+**G8 • Age 13**  
+**Teams:** MS THREE  
+**Role:** Vice Captain  
+
+<img src="./img/2026-HelenVien.jpg" width="160"/>
+
+**Who I Am**  
+I am 13 years old and study at the Henrietta Barnett School in the UK.
+
+**MCC Journey**  
+I have been attending MCC for 2 years.
+
+**Purple Comet Experience**  
+This was my first time participating. It was very helpful in improving my problem-solving skills.
+
+**Parent Thought**  
+Helen has made excellent progress and achieved outstanding results in competitions.
+
+</td>
+
+<td width="20%" valign="top">
+
+### Henry Ho  
+**G7 • Age 13**  
+**Teams:** MS THREE  
+**Role:** Captain  
+
+<img src="./img/2026-HenryHo.jpeg" width="160"/>
+
+**Who I Am**  
+My name is Henry Ho. I am 13 years old and in 7th grade.
+
+**MCC Journey**  
+This is my second year at MCC.
+
+**Purple Comet Experience**  
+I participated this year, and the problems were solvable but required time and thinking.
+
+**Parent Thought**  
+Henry has made strong progress in strengthening his fundamentals.
+
+</td>
+
+<td width="20%" valign="top">
+
+### Jason To  
+**G8 • Age 14**  
+**Teams:** MS ONE, HS ONE  
+**Role:** Captain (MS ONE), Member (HS ONE)
+
+<img src="./img/2026-JasonTo.jpg" width="160"/>
+
+**Who I Am**  
+My name is Jason To, a dedicated member of MCC.
+
+**MCC Journey**  
+I have been attending MCC for 3 years.
+
+**Purple Comet Experience**  
+I participated in both Middle School and High School competitions and achieved full marks. It was a proud moment, but the teamwork and focus mattered most.
+
+**Parent Thought**  
+Jason has grown in confidence, maturity, and passion for mathematics.
+
+</td>
+
+<td width="20%" valign="top">
+
+### Jake Cao  
+**G9 • Age 15**  
+**Teams:** HS ONE  
+**Role:** Member  
+
+<!-- <img src="" width="160"/>
+
+**Who I Am**  
+
+
+**MCC Journey**  
+
+
+**Purple Comet Experience**  
+
+
+**Parent Thought**   -->
+
+
+</td>
+
+</tr>
+
+<tr>
+
+<td width="20%" valign="top">
+
+### Karl Le  
+**G11 • Age 16**  
+**Teams:** HS ONE  
+**Role:** Captain  
+
+<img src="./img/2026-KarlLe.jpeg" width="160"/>
+
+**Who I Am**  
+Karl Le, 16 years old, living in France near Paris, currently in 11th grade.
+
+**MCC Journey**  
+I have been attending MCC for 5 years.
+
+**Purple Comet Experience**  
+I have participated for 3–4 years. It is a good competition, and this year’s was even better, especially looking at the results.
+
+**Parent Thought**  
+Good.
+
+</td>
+
+<td width="20%" valign="top">
+
+### Linh Le  
+**G8 • Age 14**  
+**Teams:** MS ONE, HS ONE  
+**Role:** Vice Captain (MS ONE), Vice Captain (HS ONE)
+
+<img src="./img/2026-LinhLe.jpg" width="160"/>
+
+**Who I Am**  
+Hi! My name is Linh, and I am a Year 9 student from the UK.
+
+**MCC Journey**  
+I have been attending MCC for 2 years.
+
+**Purple Comet Experience**  
+I have participated in the Purple Comet competitions in 2025 and 2026. This year, I was part of both the Middle School and High School teams, where both teams achieved full marks and top scores. The competition was an unforgettable experience with both intense and rewarding moments.
+
+**Parent Thought**  
+Linh has developed a deeper passion for mathematics, stronger problem-solving skills, teamwork, and discipline.
+
+</td>
+
+<td width="20%" valign="top">
+
+### Long Vo Duc Tran  
+**G8 • Age 13**  
+**Teams:** MS TWO  
+**Role:** Member  
+
+<img src="./img/2026-LongTran.jpg" width="160"/>
+
+**Who I Am**  
+My name is Long Vo Duc Tran. I am 13 years old and in Year 9 in the UK.
+
+**MCC Journey**  
+I have been attending MCC for almost 2 years.
+
+**Purple Comet Experience**  
+I took part in the Middle School Purple Comet as part of Team 2. I thought it was challenging and actually harder than the practice, but it was fun.
+
+**Parent Thought**  
+Long has developed from needing encouragement to becoming genuinely excited about learning. He now appreciates the beauty of mathematics and expresses his reasoning clearly.
+
+</td>
+
+<td width="20%" valign="top">
+
+### Luan Tran  
+**G8 • Age 14**  
+**Teams:** MS TWO  
+**Role:** Captain  
+
+<!-- <img src="" width="160"/>
+
+**Who I Am**  
+
+
+**MCC Journey**  
+
+
+**Purple Comet Experience**  
+
+
+**Parent Thought**   -->
+
+
+</td>
+
+<td width="20%" valign="top">
+
+### Mailys Phung Khac  
+**G8 • Age 13**  
+**Teams:** MS ONE  
+**Role:** Member  
+
+<!-- <img src="" width="160"/>
+
+**Who I Am**  
+
+
+**MCC Journey**  
+
+
+**Purple Comet Experience**  
+
+
+**Parent Thought**  
+ -->
+
+</td>
+
+</tr>
+
+<tr>
+
+<td width="20%" valign="top">
+
+### Michael Le  
+**G5 • Age 11**  
+**Teams:** MS THREE  
+**Role:** Member  
+
+<img src="./img/2026-MichaelLe.jpeg" width="160"/>
+
+**Who I Am**  
+Michael Le, a 5th grader in Washington, USA. I enjoy building LEGO, creating music sheets, and playing video games with my brothers.
+
+**MCC Journey**  
+I have been attending MCC for 1 year.
+
+**Purple Comet Experience**  
+I participated in Purple Comet 2026. My teammates actively worked on problems and helped review each other’s solutions. The training and materials provided were very effective.
+
+**Parent Thought**  
+Michael has improved in critical thinking and teamwork.
+
+</td>
+
+<td width="20%" valign="top">
+
+### Minh Nguyen  
+**G6 • Age 12**  
+**Teams:** MS TWO  
+**Role:** Member  
+
+<img src="./img/2026-MinhNguyen.jpeg" width="160"/>
+
+**Who I Am**  
+I am in 6th grade and live in Washington state.
+
+**MCC Journey**  
+I have been attending MCC for 2 years.
+
+**Purple Comet Experience**  
+I participated in the 2026 Middle School competition. It was my first time. I received lectures and practice materials beforehand. My teammates were kind, and we all did our best.
+
+**Parent Thought**  
+Minh has learned many new concepts and now explains ideas much more clearly. He also collaborates very well with teammates.
+
+</td>
+
+<td width="20%" valign="top">
+
+### Minh Vo Duc Tran  
+**G7 • Age 12**  
+**Teams:** MS TWO  
+**Role:** Member  
+
+<img src="./img/2026-MinhTran.jpg" width="160"/>
+
+**Who I Am**  
+My name is Minh Vo Duc Tran, and I am 12 years old. I am in Year 7 in the UK.
+
+**MCC Journey**  
+I have been attending MCC for almost 2 years.
+
+**Purple Comet Experience**  
+The Purple Comet competition was more challenging than anything I had done before. I was part of the second Middle School team.
+
+**Parent Thought**  
+Minh has learned persistence and improved his ability to explain his solutions clearly.
+
+</td>
+
+<td width="20%" valign="top">
+
+### Nam Nguyen  
+**G8 • Age 13**  
+**Teams:** MS TWO  
+**Role:** Vice Captain  
+
+<img src="./img/2026-NamNguyen.jpeg" width="160"/>
+
+**Who I Am**  
+I am a Year 9 student at the Perse Upper in Cambridge. Maths is my favourite subject, and I also play piano and table tennis.
+
+**MCC Journey**  
+I have been attending MCC for 2 years.
+
+**Purple Comet Experience**  
+I participated in the Middle School competition. The questions were interesting and challenging.
+
+**Parent Thought**  
+“My son finds the MCC Club both useful and motivating for his Maths learning.”
+
+</td>
+
+<td width="20%" valign="top">
+
+### Nam Phong Nguyen  
+**G8 • Age 13**  
+**Teams:** MS ONE  
+**Role:** Member  
+
+<img src="./img/2026-Thoa Nguyen.jpeg" width="160"/>
+
+**Who I Am**  
+I am 13 years old and study at Lakanal Middle School in Sceaux, France. I enjoy sports, especially tennis.
+
+**MCC Journey**  
+I have been attending MCC for about 1.5 years.
+
+**Purple Comet Experience**  
+I participated in MS ONE this year. The competition was very interesting and required strong collaboration between all team members.
+
+**Parent Thought**  
+He has become more independent and focused when solving math problems, and his motivation has improved.
+
+</td>
+
+</tr>
+
+<tr>
+
+<td width="20%" valign="top">
+
+### Nguyen Trung Kien  
+**G8 • Age 13**  
+**Teams:** MS TWO  
+**Role:** Member  
+
+<img src="./img/2026-JadePascalNguyen.jpeg" width="160"/>
+
+**Who I Am**  
+My name is Trung Kien. I live in France and am in 8th grade. I enjoy math, chess, and playing.
+
+**MCC Journey**  
+I have been attending MCC since 2024.
+
+**Purple Comet Experience**  
+It was my first time participating, and I really loved working as a team.
+
+**Parent Thought**  
+More time work on Math.
+
+</td>
+
+</tr>
+
+</table>
+---
+
+# 💬 FEATURED TESTIMONIAL  
+## Albert Dinh-Le (MCC Alumni, Twice Purple Comet Honourable Mentions 2022, 2025.)
+
+It is clear how much the club has grown into something truly special. Over the years, it has brought together students who share a curiosity for mathematics and a desire to challenge themselves. Your commitment to creating engaging problems and fostering a supportive, stimulating environment has made the club a place where learning is both demanding and deeply rewarding.
+
+On a personal level, the impact of the club has been especially meaningful during my studies. The rigor of the problems, combined with your guidance, helped me develop the discipline, precision, and perseverance required to succeed. Beyond improving my mathematical skills, it shaped the way I think, reason, and approach difficulty in general. The habits and confidence I gained through the club continue to guide me every day, and I am truly grateful for its lasting influence.
+
+---
+
+# 🎯 FINAL REFLECTION
+
+This is not just about winning.
+
+It is about:
+- developing discipline and perseverance  
+- learning to think deeply and clearly  
+- growing through teamwork and challenge  
+
+💙 MCC continues to build not only strong mathematicians —  
+but confident thinkers.
+
+---
+
+# 🔗 Official Results
+https://purplecomet.org/results/2026
+
+---
+
+# #MCC #PurpleComet #GlobalChampions #MathJourney
 
 &nbsp;
 
