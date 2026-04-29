@@ -565,6 +565,8 @@ More time work on Math.</p>
 
 </table>
 
+&nbsp;
+
 ---
 
 *It is clear how much the club has grown into something truly special. Over the years, it has brought together students who share a curiosity for mathematics and a desire to challenge themselves. Your commitment to creating engaging problems and fostering a supportive, stimulating environment has made the club a place where learning is both demanding and deeply rewarding.*
