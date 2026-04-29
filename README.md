@@ -467,7 +467,7 @@ It is about:
 
 ## 1. 🏆 Who are we? & Our 2026-2027 Transition / Chúng tôi là ai & Sự chuyển mình 2026-2027
 
-Founded in Canada, MCC has grown from a passionate group of students into a vibrant international community. For over a decade, we have offered coaching, weekly challenges, and team contests to help students develop strong problem-solving skills. Our track record is marked by world-class achievements: In 2025, for the second time, our Middle School team placed **1st in the world** at the Purple Comet Math Meet with a perfect score, while our High School teams consistently earn global **Honorable Mentions**.
+Founded in Canada by Nghia Doan, MCC has grown from a passionate group of students into a vibrant international community. For over a decade, we have offered coaching, weekly challenges, and team contests to help students develop strong problem-solving skills. Our track record is marked by world-class achievements: In 2025, for the second time, our Middle School team placed **1st in the world** at the Purple Comet Math Meet with a perfect score, while our High School teams consistently earn global **Honorable Mentions**.
 
 **The Transition to 2026-2027:**
 Starting from the 2026-2027 school year, MCC is evolving into a more structured, professional organization. We are moving from a flexible coaching model to a **Comprehensive Research & Olympiad Club**. This transformation includes:
@@ -515,15 +515,21 @@ Cuốn sách được viết để giúp học sinh yêu thích việc giải to
 
 There are two editions: print and electronic. I suggest you to get the print one, that is a beautiful and high quality book. Contact the club to have the print edition.
 
-In case if you want to have the ebook, you get it in your hand in 5 minutes.
+In case if you want to have the ebook, you get it in your hand in 5 minutes, click the image for the English edition.
 
-👉 [100 Math Problems for Absolute Beginners (Ebook)](https://www.lulu.com/shop/nghia-doan/100-math-problems-for-absolute-beginners/ebook/product-p69y785.html)
+[![100 Math Problems for Absolute Beginners (Ebook)][1]][2]
+
+[1]: ./img/cover-en.jpg
+[2]: https://www.lulu.com/shop/nghia-doan/100-math-problems-for-absolute-beginners/ebook/product-p69y785.html
 
 Hiện có hai phiên bản: sách in và sách điện tử. Tôi khuyên bạn nên chọn phiên bản sách in, vì đây là một cuốn sách được thiết kế đẹp mắt với chất lượng cao. Liên lạc với Câu Lộc Bộ để có bản in.
 
-Trong trường hợp bạn muốn sở hữu bản ebook, bạn sẽ nhận được sách chỉ sau 5 phút.
+Trong trường hợp bạn muốn sở hữu bản ebook, bạn sẽ nhận được sách chỉ sau 5 phút, nhấp vào hình bên dưới cho bản tiếng Việt.
 
-👉 [100 Bài Toán Dành Cho Người Mới Bắt Đầu (Ebook)](https://www.google.com/search?q=https://www.lulu.com/shop/nghia-doan/100-b%C3%A0i-to%C3%A1n-d%C3%A0nh-cho-ng%C6%B0%E1%BB%9Di-m%E1%BB%9Bi-b%E1%BA%AFt-%C4%91%E1%BA%A7u/ebook/product-rm68v54.html)
+[![100 Bài Toán Dành Cho Người Mới Bắt Đầu (Ebook)][3]][4]
+
+[3]: ./img/cover-vn.jpg
+[4]: https://www.lulu.com/shop/nghia-doan/100-bài-toán-dành-cho-người-mới-bắt-đầu/ebook/product-rm68v54.html
 
 &nbsp;
 
