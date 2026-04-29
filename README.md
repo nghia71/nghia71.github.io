@@ -115,105 +115,76 @@ Competing on this scale, MCC teams demonstrated not only excellence — but disc
 
 <table>
 <tr>
-<td width="20%" valign="top">
 
+<td width="20%" valign="top">
 <h3>Anna Dao</h3>
 <p><strong>G8 • Age 13</strong><br>
 <strong>Teams:</strong> MS TWO<br>
 <strong>Role:</strong> Member</p>
-
 <img src="./img/2026-AnnaDao.jpeg" width="160"/>
-
 <p><strong>Who I Am</strong><br>
 Hello, my name is Anna. I am 13 years old and in Grade 8. I live in France.</p>
-
 <p><strong>MCC Journey</strong><br>
 I have been attending MCC for 2 years.</p>
-
 <p><strong>Purple Comet Experience</strong><br>
 I took part in the Purple Comet competition for 2 years. I really appreciate the teamwork, and I was very happy to receive the first award.</p>
-
 <p><strong>Parent Thought</strong><br>
 Anna has participated in the club for the past two years. She has started to make progress, becoming more focused and gradually improving her reasoning and teamwork.</p>
-
 </td>
 
 <td width="20%" valign="top">
-
 <h3>Antoine Dao</h3>
 <p><strong>G11 • Age 16</strong><br>
 <strong>Teams:</strong> HS ONE<br>
 <strong>Role:</strong> Member</p>
-
 <img src="./img/2026-DaoHaBachHieu.jpeg" width="160"/>
-
 <p><strong>Who I Am</strong><br>
 My name is Antoine Dao, and I am 16 years old.</p>
-
 <p><strong>MCC Journey</strong><br>
 I started MCC 5 years ago and have seen a lot of progress through the years.</p>
-
 <p><strong>Purple Comet Experience</strong><br>
 I have taken part in 4 Purple Comet competitions, and this year is the first time our team achieved a perfect score of 30/30.</p>
-
 <p><strong>Parent Thought</strong><br>
 We have seen great progress in his autonomy, mathematical knowledge, and reasoning.</p>
-
 </td>
 
 <td width="20%" valign="top">
-
 <h3>Claire Bao Tran Luu</h3>
 <p><strong>G5 • Age 10</strong><br>
 <strong>Teams:</strong> MS THREE<br>
 <strong>Role:</strong> Member</p>
-
 <img src="./img/2026-ClaireLuu.jpg" width="160"/>
-
 <p><strong>Who I Am</strong><br>
 I am Claire, a fifth grader living in Washington. I love playing the violin and piano, and I enjoy swimming.</p>
-
 <p><strong>MCC Journey</strong><br>
 I have been attending MCC for 2 years.</p>
-
 <p><strong>Purple Comet Experience</strong><br>
 I took part in the 2026 Middle School Purple Comet as part of Team 3. The training sessions were very helpful, and the problems were similar to what we practiced, which helped me understand how to approach them.</p>
-
 <p><strong>Parent Thought</strong><br>
 Claire has improved tremendously. She can now write solutions in a logical and precise way and has benefited greatly from teamwork.</p>
-
 </td>
 
 <td width="20%" valign="top">
-
 <h3>Chi Pham</h3>
 <p><strong>G8 • Age 13</strong><br>
 <strong>Teams:</strong> MS ONE, HS ONE<br>
 <strong>Role:</strong> Member</p>
-
 <img src="./img/2026-ChiPham.jpeg" width="160"/>
-
 <p><strong>Who I Am</strong><br>
 I am Chi Pham. I am in 8th grade and live in Washington, USA.</p>
-
 <p><strong>MCC Journey</strong><br>
 I have been attending MCC for 3 years.</p>
-
 <p><strong>Purple Comet Experience</strong><br>
 I took part in both MS ONE and HS ONE. Purple Comet was a nice challenge and helped develop teamwork within the club.</p>
-
 <p><strong>Parent Thought</strong><br>
 Chi has significantly improved since joining the club. She started as a beginner, and now she is solid and able to work well in a team.</p>
-
 </td>
 
 <td width="20%" valign="top">
-
 <h3>Gia Minh Nguyen</h3>
 <p><strong>G6 • Age 11</strong><br>
 <strong>Teams:</strong> MS THREE<br>
 <strong>Role:</strong> Member</p>
-
 </td>
 
 </tr>
@@ -221,49 +192,35 @@ Chi has significantly improved since joining the club. She started as a beginner
 <tr>
 
 <td width="20%" valign="top">
-
 <h3>Harry Vien</h3>
 <p><strong>G6 • Age 10</strong><br>
 <strong>Teams:</strong> MS THREE<br>
 <strong>Role:</strong> Member</p>
-
 <img src="./img/2026-HarryVien.jpg" width="160"/>
-
 <p><strong>Who I Am</strong><br>
 I am Harry. I am 11 years old and will be attending Queen Elizabeth's School for Boys. I have participated in several math competitions.</p>
-
 <p><strong>MCC Journey</strong><br>
 I have been attending MCC for 2 years.</p>
-
 <p><strong>Purple Comet Experience</strong><br>
 This was my first time attending Purple Comet. I found it a great opportunity to test my skills and understand what I need to improve.</p>
-
 <p><strong>Parent Thought</strong><br>
 Harry has made significant progress in mathematical thinking and problem-solving skills.</p>
-
 </td>
 
 <td width="20%" valign="top">
-
 <h3>Helen Vien</h3>
 <p><strong>G8 • Age 13</strong><br>
 <strong>Teams:</strong> MS THREE<br>
 <strong>Role:</strong> Vice Captain</p>
-
 <img src="./img/2026-HelenVien.jpg" width="160"/>
-
 <p><strong>Who I Am</strong><br>
 I am 13 years old and study at the Henrietta Barnett School in the UK.</p>
-
 <p><strong>MCC Journey</strong><br>
 I have been attending MCC for 2 years.</p>
-
 <p><strong>Purple Comet Experience</strong><br>
 This was my first time participating. It was very helpful in improving my problem-solving skills.</p>
-
 <p><strong>Parent Thought</strong><br>
 Helen has made excellent progress and achieved outstanding results in competitions.</p>
-
 </td>
 
 <td width="20%" valign="top">
@@ -272,144 +229,103 @@ Helen has made excellent progress and achieved outstanding results in competitio
 <p><strong>G7 • Age 13</strong><br>
 <strong>Teams:</strong> MS THREE<br>
 <strong>Role:</strong> Captain</p>
-
 <img src="./img/2026-HenryHo.jpeg" width="160"/>
-
 <p><strong>Who I Am</strong><br>
 My name is Henry Ho. I am 13 years old and in 7th grade.</p>
-
 <p><strong>MCC Journey</strong><br>
 This is my second year at MCC.</p>
-
 <p><strong>Purple Comet Experience</strong><br>
 I participated this year, and the problems were solvable but required time and thinking.</p>
-
 <p><strong>Parent Thought</strong><br>
 Henry has made strong progress in strengthening his fundamentals.</p>
-
 </td>
 
 <td width="20%" valign="top">
-
 <h3>Jason To</h3>
 <p><strong>G8 • Age 14</strong><br>
 <strong>Teams:</strong> MS ONE, HS ONE<br>
 <strong>Role:</strong> Captain (MS ONE), Member (HS ONE)</p>
-
 <img src="./img/2026-JasonTo.jpg" width="160"/>
-
 <p><strong>Who I Am</strong><br>
 My name is Jason To, a dedicated member of MCC.</p>
-
 <p><strong>MCC Journey</strong><br>
 I have been attending MCC for 3 years.</p>
-
 <p><strong>Purple Comet Experience</strong><br>
 I participated in both Middle School and High School competitions and achieved full marks. It was a proud moment, but the teamwork and focus mattered most.</p>
-
 <p><strong>Parent Thought</strong><br>
 Jason has grown in confidence, maturity, and passion for mathematics.</p>
-
 </td>
 
 <td width="20%" valign="top">
-
 <h3>Jake Cao</h3>
 <p><strong>G9 • Age 15</strong><br>
 <strong>Teams:</strong> HS ONE<br>
 <strong>Role:</strong> Member</p>
-
 </td>
 
 </tr>
 
 <tr>
-
 <td width="20%" valign="top">
-
 <h3>Karl Le</h3>
 <p><strong>G11 • Age 16</strong><br>
 <strong>Teams:</strong> HS ONE<br>
 <strong>Role:</strong> Captain</p>
-
 <img src="./img/2026-KarlLe.jpeg" width="160"/>
-
 <p><strong>Who I Am</strong><br>
 Karl Le, 16 years old, living in France near Paris, currently in 11th grade.</p>
-
 <p><strong>MCC Journey</strong><br>
 I have been attending MCC for 5 years.</p>
-
 <p><strong>Purple Comet Experience</strong><br>
 I have participated for 3–4 years. It is a good competition, and this year’s was even better, especially looking at the results.</p>
-
 <p><strong>Parent Thought</strong><br>
 Good.</p>
-
 </td>
 
 <td width="20%" valign="top">
-
 <h3>Linh Le</h3>
 <p><strong>G8 • Age 14</strong><br>
 <strong>Teams:</strong> MS ONE, HS ONE<br>
 <strong>Role:</strong> Vice Captain (MS ONE), Vice Captain (HS ONE)</p>
-
 <img src="./img/2026-LinhLe.jpg" width="160"/>
-
 <p><strong>Who I Am</strong><br>
 Hi! My name is Linh, and I am a Year 9 student from the UK.</p>
-
 <p><strong>MCC Journey</strong><br>
 I have been attending MCC for 2 years.</p>
-
 <p><strong>Purple Comet Experience</strong><br>
 I have participated in the Purple Comet competitions in 2025 and 2026. This year, I was part of both the Middle School and High School teams, where both teams achieved full marks and top scores. The competition was an unforgettable experience with both intense and rewarding moments.</p>
-
 <p><strong>Parent Thought</strong><br>
 Linh has developed a deeper passion for mathematics, stronger problem-solving skills, teamwork, and discipline.</p>
-
 </td>
 
 <td width="20%" valign="top">
-
 <h3>Long Vo Duc Tran</h3>
 <p><strong>G8 • Age 13</strong><br>
 <strong>Teams:</strong> MS TWO<br>
 <strong>Role:</strong> Member</p>
-
 <img src="./img/2026-LongTran.jpg" width="160"/>
-
 <p><strong>Who I Am</strong><br>
 My name is Long Vo Duc Tran. I am 13 years old and in Year 9 in the UK.</p>
-
 <p><strong>MCC Journey</strong><br>
 I have been attending MCC for almost 2 years.</p>
-
 <p><strong>Purple Comet Experience</strong><br>
 I took part in the Middle School Purple Comet as part of Team 2. I thought it was challenging and actually harder than the practice, but it was fun.</p>
-
 <p><strong>Parent Thought</strong><br>
 Long has developed from needing encouragement to becoming genuinely excited about learning. He now appreciates the beauty of mathematics and expresses his reasoning clearly.</p>
-
 </td>
 
 <td width="20%" valign="top">
-
 <h3>Luan Tran</h3>
 <p><strong>G8 • Age 14</strong><br>
 <strong>Teams:</strong> MS TWO<br>
 <strong>Role:</strong> Captain</p>
-
 </td>
 
 <td width="20%" valign="top">
-
 <h3>Mailys Phung Khac</h3>
 <p><strong>G8 • Age 13</strong><br>
 <strong>Teams:</strong> MS ONE<br>
 <strong>Role:</strong> Member</p>
-
 </td>
 
 </tr>
@@ -417,118 +333,83 @@ Long has developed from needing encouragement to becoming genuinely excited abou
 <tr>
 
 <td width="20%" valign="top">
-
 <h3>Michael Le</h3>
 <p><strong>G5 • Age 11</strong><br>
 <strong>Teams:</strong> MS THREE<br>
 <strong>Role:</strong> Member</p>
-
 <img src="./img/2026-MichaelLe.jpeg" width="160"/>
-
 <p><strong>Who I Am</strong><br>
 Michael Le, a 5th grader in Washington, USA. I enjoy building LEGO, creating music sheets, and playing video games with my brothers.</p>
-
 <p><strong>MCC Journey</strong><br>
 I have been attending MCC for 1 year.</p>
-
 <p><strong>Purple Comet Experience</strong><br>
 I participated in Purple Comet 2026. My teammates actively worked on problems and helped review each other’s solutions. The training and materials provided were very effective.</p>
-
 <p><strong>Parent Thought</strong><br>
 Michael has improved in critical thinking and teamwork.</p>
-
 </td>
 
 <td width="20%" valign="top">
-
 <h3>Minh Nguyen</h3>
 <p><strong>G6 • Age 12</strong><br>
 <strong>Teams:</strong> MS TWO<br>
 <strong>Role:</strong> Member</p>
-
 <img src="./img/2026-MinhNguyen.jpeg" width="160"/>
-
 <p><strong>Who I Am</strong><br>
 I am in 6th grade and live in Washington state.</p>
-
 <p><strong>MCC Journey</strong><br>
 I have been attending MCC for 2 years.</p>
-
 <p><strong>Purple Comet Experience</strong><br>
 I participated in the 2026 Middle School competition. It was my first time. I received lectures and practice materials beforehand. My teammates were kind, and we all did our best.</p>
-
 <p><strong>Parent Thought</strong><br>
 Minh has learned many new concepts and now explains ideas much more clearly. He also collaborates very well with teammates.</p>
-
 </td>
 
 <td width="20%" valign="top">
-
 <h3>Minh Vo Duc Tran</h3>
 <p><strong>G7 • Age 12</strong><br>
 <strong>Teams:</strong> MS TWO<br>
 <strong>Role:</strong> Member</p>
-
 <img src="./img/2026-MinhTran.jpg" width="160"/>
-
 <p><strong>Who I Am</strong><br>
 My name is Minh Vo Duc Tran, and I am 12 years old. I am in Year 7 in the UK.</p>
-
 <p><strong>MCC Journey</strong><br>
 I have been attending MCC for almost 2 years.</p>
-
 <p><strong>Purple Comet Experience</strong><br>
 The Purple Comet competition was more challenging than anything I had done before. I was part of the second Middle School team.</p>
-
 <p><strong>Parent Thought</strong><br>
 Minh has learned persistence and improved his ability to explain his solutions clearly.</p>
-
 </td>
 
 <td width="20%" valign="top">
-
 <h3>Nam Nguyen</h3>
 <p><strong>G8 • Age 13</strong><br>
 <strong>Teams:</strong> MS TWO<br>
 <strong>Role:</strong> Vice Captain</p>
-
 <img src="./img/2026-NamNguyen.jpeg" width="160"/>
-
 <p><strong>Who I Am</strong><br>
 I am a Year 9 student at the Perse Upper in Cambridge. Maths is my favourite subject, and I also play piano and table tennis.</p>
-
 <p><strong>MCC Journey</strong><br>
 I have been attending MCC for 2 years.</p>
-
 <p><strong>Purple Comet Experience</strong><br>
 I participated in the Middle School competition. The questions were interesting and challenging.</p>
-
 <p><strong>Parent Thought</strong><br>
 “My son finds the MCC Club both useful and motivating for his Maths learning.”</p>
-
 </td>
 
 <td width="20%" valign="top">
-
 <h3>Nam Phong Nguyen</h3>
 <p><strong>G8 • Age 13</strong><br>
 <strong>Teams:</strong> MS ONE<br>
 <strong>Role:</strong> Member</p>
-
 <img src="./img/2026-Thoa Nguyen.jpeg" width="160"/>
-
 <p><strong>Who I Am</strong><br>
 I am 13 years old and study at Lakanal Middle School in Sceaux, France. I enjoy sports, especially tennis.</p>
-
 <p><strong>MCC Journey</strong><br>
 I have been attending MCC for about 1.5 years.</p>
-
 <p><strong>Purple Comet Experience</strong><br>
 I participated in MS ONE this year. The competition was very interesting and required strong collaboration between all team members.</p>
-
 <p><strong>Parent Thought</strong><br>
 He has become more independent and focused when solving math problems, and his motivation has also improved.</p>
-
 </td>
 
 </tr>
@@ -536,23 +417,17 @@ He has become more independent and focused when solving math problems, and his m
 <tr>
 
 <td width="20%" valign="top">
-
 <h3>Nguyen Trung Kien</h3>
 <p><strong>G8 • Age 13</strong><br>
 <strong>Teams:</strong> MS TWO<br>
 <strong>Role:</strong> Member</p>
-
 <img src="./img/2026-JadePascalNguyen.jpeg" width="160"/>
-
 <p><strong>Who I Am</strong><br>
 My name is Trung Kien. I live in France and am in 8th grade. I enjoy math, chess, and playing.</p>
-
 <p><strong>MCC Journey</strong><br>
 I have been attending MCC since 2024.</p>
-
 <p><strong>Purple Comet Experience</strong><br>
 It was my first time participating, and I really loved working as a team.</p>
-
 <p><strong>Parent Thought</strong><br>
 More time work on Math.</p>
 
@@ -579,8 +454,7 @@ It is about:
 - learning to think deeply and clearly  
 - growing through teamwork and challenge  
 
-💙 MCC continues to build not only strong mathematicians —  
-but confident thinkers.
+💙 **MCC continues to build not only strong mathematicians — but confident thinkers.**
 
 ---
 
