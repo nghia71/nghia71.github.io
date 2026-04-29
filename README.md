@@ -11,6 +11,7 @@ We proudly present the achievements and voices of our students at the [Purple Co
 
 - 🌐 **4,804 teams**
 - 🌎 **86 countries**
+- [🔗 Official Results](https://purplecomet.org/results/2026) - search for *Math, Codding & Chess Club (MCC)*
 
 Competing on this scale, MCC teams demonstrated not only excellence — but discipline, collaboration, and a deep love for mathematics.
 
@@ -458,12 +459,6 @@ It is about:
 
 ---
 
-# 🔗 Official Results
-https://purplecomet.org/results/2026
-
----
-
-# #MCC #PurpleComet #GlobalChampions #MathJourney
 
 &nbsp;
 
