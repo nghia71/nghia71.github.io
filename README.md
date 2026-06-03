@@ -1,5 +1,27 @@
 ![Math Club & Competitions (MCC)](./img/MCC-2024-Logo-Large.png)
 
+# Registration for School Year 2026-2027
+
+*Dear Parents and Students,*
+
+*We are delighted to invite students to register for the upcoming academic year of the MCC Club, which will commence in September 2026.*
+
+*Please complete the registration form by visiting the following link:* **https://forms.gle/dD6cLU6Ym8kEQddNA**
+
+*Kindly submit your registration by* **18 July 2026.**
+
+*For new students,* **an entrance test will take place at the beginning of August 2026**. *This assessment will help us place students in the most appropriate level for their learning. The membership fee for the academic year is* **$300,** *which includes curriculum books to support students throughout the programme.*
+
+*Further details regarding the entrance test and membership arrangements will be shared in due course.*
+
+*If you have any questions, please do not hesitate to get in touch. We look forward to welcoming you to the MCC Club.*
+
+*Kind regards,*
+
+*MCC Admin Team.*
+
+&nbsp;
+
 # 🚀 MCC at Purple Comet 2026  
 ## A Decade of Excellence • A Global Achievement
 
