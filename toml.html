@@ -1,0 +1,2452 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>TOML ��� The Online Mathematics Laboratory</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <script defer=""
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css" />
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">TOML ��� The Online Mathematics Laboratory</h1>
+</header>
+<h1 id="toml-the-online-mathematics-laboratory">TOML — The Online
+Mathematics Laboratory</h1>
+<p><em>An introduction for parents, teachers, and club organizers — with
+seven fully worked sample investigations.</em></p>
+<p>🇬🇧 English version below — 🇻🇳 <a
+href="#toml--the-online-mathematics-laboratory-1">Bản tiếng Việt ở nửa
+sau của trang này</a></p>
+<h2 id="what-is-toml">What is TOML?</h2>
+<p>TOML is a way of learning mathematics through
+<strong>investigation</strong>: instead of receiving a problem with a
+ready-made model solution, students receive a <strong>genuine
+mathematical question</strong> and walk the full path of a working
+mathematician — observing, gathering data, spotting patterns, forming
+conjectures, hunting for counterexamples, and finally
+<strong>proving</strong> what they believe to be true. In TOML, the
+computer plays the role a microscope plays in a biology lab: it lets
+students <em>see</em> structures that the naked eye and scratch paper
+cannot reach — a hidden cycle inside a sequence of a million terms, a
+common law across tens of thousands of geometric configurations — but it
+never replaces human reasoning.</p>
+<p>TOML is <strong>not</strong> a programming course, not a
+competitive-algorithm training system, and not a judge that merely
+returns “right/wrong”. Every TOML investigation ends not with a number
+but with an <strong>insight</strong>: a theorem proved, a counterexample
+found, a formula established, or an open question stated more
+precisely.</p>
+<p>Every investigation moves through three activities, and the
+three-question structure of every problem mirrors them exactly:</p>
+<ol type="1">
+<li><strong>Explore</strong> <em>(Question 1)</em>: use the computer to
+experiment, generate data, observe phenomena.</li>
+<li><strong>Explain</strong> <em>(Question 2)</em>: push the experiment
+to a larger scale and identify the mechanism behind the data.</li>
+<li><strong>Establish</strong> <em>(Question 3)</em>: convert
+experimental evidence into a rigorous mathematical proof.</li>
+</ol>
+<p>Questions 1 and 2 are graded automatically (students submit a single
+number or short string). Question 3 — the question that truly separates
+levels of thinking — is submitted as a handwritten proof and graded by a
+teacher against the essential ideas of the solution.</p>
+<p>The most important lesson TOML wants to hand its students is the
+boundary between <strong>verification</strong> and
+<strong>proof</strong>: a pattern that holds for the first million cases
+can still fail at case one-million-and-one (Problem 7 below is a classic
+example). Students may use any tool — including AI — to explore and to
+suggest directions, but they must be able to <strong>explain and take
+responsibility for everything they submit</strong>; any result produced
+by AI is always treated as a conjecture to be checked, never as a source
+of correctness.</p>
+<p>The seven investigations below form TOML’s complete sample set — each
+comes with reference Python code (short, optimal, easy to read) for the
+exploration phase and a complete mathematical proof for the
+establishment phase. <strong>Every answer has been independently
+verified by computer.</strong> Together they show concretely <em>what
+students do and how they do it</em> in TOML.</p>
+<hr />
+<h1 id="part-i-three-investigations-for-middle-school-ms">PART I — THREE
+INVESTIGATIONS FOR MIDDLE SCHOOL (MS)</h1>
+<p><em>Selection criteria: basic programming (loops, arrays, light
+recursion); mathematics centered on hands-on number theory, counting
+principles, and lattice geometry.</em></p>
+<hr />
+<h2
+id="problem-1.-the-pisano-period-last-digits-of-fibonacci-numbers">Problem
+1. The Pisano period — last digits of Fibonacci numbers</h2>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Field</th>
+<th>Audience</th>
+<th>Difficulty math / coding / openness</th>
+<th>Role of the tool</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Number theory</td>
+<td>Grades 7–9</td>
+<td>★★☆☆☆ / ★★☆☆☆ / ★★☆☆☆</td>
+<td>#Pattern_discovery — nearly essential</td>
+</tr>
+</tbody>
+</table>
+<h3 id="the-problem">The problem</h3>
+<ul>
+<li><strong>Q1 (Explore).</strong> Find the <strong>last digit</strong>
+of the one-millionth Fibonacci number, <span
+class="math inline">F_{1\,000\,000}</span>.</li>
+<li><strong>Q2 (Optimize).</strong> Find the <strong>last two
+digits</strong> of the one-billionth Fibonacci number, <span
+class="math inline">F_{1\,000\,000\,000}</span>.</li>
+<li><strong>Q3 (Prove).</strong> Consider the sequence of remainders of
+the Fibonacci numbers modulo any positive integer <span
+class="math inline">m</span>. Prove that this sequence is
+<strong>necessarily periodic</strong>, and that the period starts right
+at the beginning of the sequence (i.e., it returns to the remainder pair
+<span class="math inline">(0, 1)</span>).</li>
+</ul>
+<h3 id="solution-to-q1q2-python">Solution to Q1–Q2 (Python)</h3>
+<p>Computing <span class="math inline">F_{10^9}</span> directly is
+hopeless with an ordinary loop — that is exactly the “trap” that forces
+students to discover the <strong>cycle</strong>: the last digits repeat!
+Find the period, then reduce the index.</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> pisano_period(m):</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">&quot;&quot;&quot;Period of the Fibonacci sequence mod m: count steps until the pair (0, 1) returns.&quot;&quot;&quot;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    a, b <span class="op">=</span> <span class="dv">0</span>, <span class="dv">1</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> step <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, m <span class="op">*</span> m <span class="op">+</span> <span class="dv">1</span>):        <span class="co"># the period never exceeds m^2 (see Q3)</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>        a, b <span class="op">=</span> b, (a <span class="op">+</span> b) <span class="op">%</span> m</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> (a, b) <span class="op">==</span> (<span class="dv">0</span>, <span class="dv">1</span>):</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> step</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> fib_mod(n, m):</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="co">&quot;&quot;&quot;Compute F_n mod m by reducing the index modulo the Pisano period.&quot;&quot;&quot;</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    n_reduced <span class="op">=</span> n <span class="op">%</span> pisano_period(m)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    a, b <span class="op">=</span> <span class="dv">0</span>, <span class="dv">1</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(n_reduced):</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>        a, b <span class="op">=</span> b, (a <span class="op">+</span> b) <span class="op">%</span> m</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> a</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Q1:&quot;</span>, fib_mod(<span class="dv">10</span><span class="op">**</span><span class="dv">6</span>, <span class="dv">10</span>))                <span class="co"># last digit</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Q2:&quot;</span>, <span class="bu">str</span>(fib_mod(<span class="dv">10</span><span class="op">**</span><span class="dv">9</span>, <span class="dv">100</span>)).zfill(<span class="dv">2</span>)) <span class="co"># last two digits</span></span></code></pre></div>
+<p><strong>Output (verified):</strong></p>
+<pre><code>Pisano period mod 10  = 60      →  10^6 mod 60  = 40,  F_40  = 102334155
+Pisano period mod 100 = 300     →  10^9 mod 300 = 100, F_100 = ...915075
+Q1: 5
+Q2: 75</code></pre>
+<p><strong>Auto-graded answers:</strong> Q1: <code>5</code> — Q2:
+<code>75</code>.</p>
+<h3 id="q3-proof-pure-periodicity-of-fibonacci-mod-m">Q3 — Proof (pure
+periodicity of Fibonacci mod m)</h3>
+<p><strong>Step 1 — The sequence must repeat (the Pigeonhole
+Principle).</strong> Each term of the remainder sequence is completely
+determined by the <strong>pair of terms immediately before it</strong>.
+The number of possible remainder pairs <span class="math inline">(F_i
+\bmod m,\; F_{i+1} \bmod m)</span> is finite: at most <span
+class="math inline">m^2</span>. The Fibonacci sequence is infinite, so
+by the Pigeonhole Principle there exist positions <span
+class="math inline">i &lt; j</span> (with <span class="math inline">j -
+i \le m^2</span>) such that</p>
+<p><span class="math display">(F_i, F_{i+1}) \equiv (F_j, F_{j+1})
+\pmod{m}.</span></p>
+<p>Since the recurrence <span class="math inline">F_{n+2} = F_{n+1} +
+F_n</span> depends only on the preceding pair, two positions with
+identical pairs generate identical tails: the sequence is periodic from
+position <span class="math inline">i</span> with period <span
+class="math inline">T = j - i</span>.</p>
+<p><strong>Step 2 — The period starts at the very beginning (backward
+determinism).</strong> The key point: Fibonacci runs not only forward
+but also <strong>backward</strong>:</p>
+<p><span class="math display">F_{n-1} = F_{n+1} - F_n.</span></p>
+<p>So the pair <span class="math inline">(F_n, F_{n+1})</span> uniquely
+determines the pair before it, <span class="math inline">(F_{n-1},
+F_n)</span> — also modulo <span class="math inline">m</span>. From <span
+class="math inline">(F_i, F_{i+1}) \equiv (F_j, F_{j+1})</span>, apply
+this backward step <span class="math inline">i</span> times:</p>
+<p><span class="math display">(F_{i-1}, F_i) \equiv (F_{j-1}, F_j),
+\quad \dots, \quad (F_0, F_1) \equiv (F_{j-i}, F_{j-i+1})
+\pmod{m}.</span></p>
+<p>Hence the starting pair <span class="math inline">(0, 1)</span>
+reappears at position <span class="math inline">T = j - i</span>: the
+remainder sequence is <strong>purely periodic</strong> — no pre-periodic
+“tail” — and the period is at most <span class="math inline">m^2</span>.
+<span class="math inline">\blacksquare</span></p>
+<blockquote>
+<p><strong>Takeaway:</strong> the computer’s data <em>suggests</em> the
+cycle exists; the Pigeonhole Principle plus backward determinism
+<em>proves</em> it must exist for <strong>every</strong> <span
+class="math inline">m</span> — something no amount of experimentation
+could ever confirm.</p>
+</blockquote>
+<hr />
+<h2 id="problem-2.-the-game-of-nim-and-the-binary-xor-strategy">Problem
+2. The game of Nim and the binary XOR strategy</h2>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Field</th>
+<th>Audience</th>
+<th>Difficulty math / coding / openness</th>
+<th>Role of the tool</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Combinatorial games</td>
+<td>Grades 8–9</td>
+<td>★★★☆☆ / ★★☆☆☆ / ★★★☆☆</td>
+<td>#Configuration_search, #Pattern_discovery — useful</td>
+</tr>
+</tbody>
+</table>
+<h3 id="the-problem-1">The problem</h3>
+<p>Two players alternately remove any positive number of stones from
+<strong>one</strong> pile. Whoever takes the last stone wins.</p>
+<ul>
+<li><strong>Q1 (Exhaustive search).</strong> With 3 piles of at most 5
+stones each: print <strong>all</strong> states <span
+class="math inline">(a, b, c)</span> with <span class="math inline">a
+\le b \le c \le 5</span> in which the player to move is <strong>certain
+to lose</strong> against optimal play.</li>
+<li><strong>Q2 (Apply).</strong> A real match has piles <span
+class="math inline">(13, 17, 30)</span> and you move first. Find the
+optimal first move.</li>
+<li><strong>Q3 (Prove).</strong> Using binary representation, state and
+prove the theorem giving the necessary and sufficient condition for a
+“losing state” in general Nim with <span class="math inline">k</span>
+piles <span class="math inline">(n_1, \dots, n_k)</span>.</li>
+</ul>
+<h3 id="solution-to-q1q2-python-1">Solution to Q1–Q2 (Python)</h3>
+<p>Q1 needs no prior theory: just define recursively <em>“you win iff
+some move puts your opponent in a losing state”</em> and let the
+computer search.</p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> functools <span class="im">import</span> lru_cache</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="at">@lru_cache</span>(maxsize<span class="op">=</span><span class="va">None</span>)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> wins(state):</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="co">&quot;&quot;&quot;True if the player TO MOVE wins under optimal play by both sides.&quot;&quot;&quot;</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">sum</span>(state) <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">False</span>                        <span class="co"># no stones left: the player to move has lost</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i, pile <span class="kw">in</span> <span class="bu">enumerate</span>(state):</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> left <span class="kw">in</span> <span class="bu">range</span>(pile):            <span class="co"># try taking 1..pile stones from pile i</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>            new <span class="op">=</span> <span class="bu">list</span>(state)</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>            new[i] <span class="op">=</span> left</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> <span class="kw">not</span> wins(<span class="bu">tuple</span>(<span class="bu">sorted</span>(new))):</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>                <span class="cf">return</span> <span class="va">True</span>                 <span class="co"># a move that puts the opponent in a losing state</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="va">False</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Q1: exhaustive search over all states a &lt;= b &lt;= c &lt;= 5</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>losing <span class="op">=</span> [(a, b, c) <span class="cf">for</span> a <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">6</span>) <span class="cf">for</span> b <span class="kw">in</span> <span class="bu">range</span>(a, <span class="dv">6</span>) <span class="cf">for</span> c <span class="kw">in</span> <span class="bu">range</span>(b, <span class="dv">6</span>)</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>          <span class="cf">if</span> <span class="kw">not</span> wins((a, b, c))]</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Q1:&quot;</span>, losing)</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Looking at the data → conjecture: losing state &lt;=&gt; a XOR b XOR c == 0</span></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;XOR conjecture:&quot;</span>, <span class="bu">all</span>(a <span class="op">^</span> b <span class="op">^</span> c <span class="op">==</span> <span class="dv">0</span> <span class="cf">for</span> a, b, c <span class="kw">in</span> losing))</span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Q2: use Bouton&#39;s theorem (proved in Q3) on the large state</span></span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> <span class="dv">13</span> <span class="op">^</span> <span class="dv">17</span> <span class="op">^</span> <span class="dv">30</span>                            <span class="co"># the &quot;Nim sum&quot; of the state</span></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> pile <span class="kw">in</span> (<span class="dv">13</span>, <span class="dv">17</span>, <span class="dv">30</span>):</span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> pile <span class="op">^</span> s <span class="op">&lt;</span> pile:                     <span class="co"># reducing this pile to pile^s is a winning move</span></span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f&quot;Q2: take </span><span class="sc">{</span>pile <span class="op">-</span> (pile <span class="op">^</span> s)<span class="sc">}</span><span class="ss"> stones from the pile of </span><span class="sc">{</span>pile<span class="sc">}</span><span class="ss">, leaving </span><span class="sc">{</span>pile <span class="op">^</span> s<span class="sc">}</span><span class="ss">&quot;</span>)</span></code></pre></div>
+<p><strong>Output (verified):</strong></p>
+<pre><code>Q1: [(0,0,0), (0,1,1), (0,2,2), (0,3,3), (0,4,4), (0,5,5), (1,2,3), (1,4,5)]
+XOR conjecture: True
+Q2: take 2 stones from the pile of 30, leaving 28    →  state (13, 17, 28) has XOR = 0</code></pre>
+<p><strong>Auto-graded answers:</strong> Q1: the 8 states above — Q2:
+<code>take 2 stones from the pile of 30</code> (reaching <span
+class="math inline">(13, 17, 28)</span>; this is the
+<strong>unique</strong> winning move).</p>
+<h3 id="q3-proof-boutons-theorem-1901">Q3 — Proof (Bouton’s theorem,
+1901)</h3>
+<p><strong>Theorem.</strong> A Nim state <span class="math inline">(n_1,
+\dots, n_k)</span> is a <strong>losing state</strong> for the player to
+move if and only if the <em>Nim sum</em> <span class="math inline">s =
+n_1 \oplus n_2 \oplus \dots \oplus n_k = 0</span>, where <span
+class="math inline">\oplus</span> is bitwise XOR.</p>
+<p><em>Proof.</em> We check three properties, then conclude by induction
+on the total number of stones.</p>
+<p><strong>(a) The terminal state has <span class="math inline">s =
+0</span>.</strong> The state <span class="math inline">(0, \dots,
+0)</span> — where the player to move has no move and has lost — has XOR
+sum <span class="math inline">0</span>.</p>
+<p><strong>(b) From <span class="math inline">s = 0</span>, every move
+leads to <span class="math inline">s&#39; \ne 0</span>.</strong> A move
+replaces exactly one pile <span class="math inline">n_i</span> by <span
+class="math inline">n_i&#39; &lt; n_i</span>. The new sum is</p>
+<p><span class="math display">s&#39; = s \oplus n_i \oplus n_i&#39; = 0
+\oplus n_i \oplus n_i&#39; = n_i \oplus n_i&#39;.</span></p>
+<p>Since <span class="math inline">n_i&#39; \ne n_i</span>, we get <span
+class="math inline">n_i \oplus n_i&#39; \ne 0</span>. So a player in a
+balanced state is <em>forced</em> to break the balance.</p>
+<p><strong>(c) From <span class="math inline">s \ne 0</span>, some move
+leads to <span class="math inline">s&#39; = 0</span>.</strong> Let <span
+class="math inline">d</span> be the <strong>highest set bit</strong> of
+<span class="math inline">s</span>. Since bit <span
+class="math inline">d</span> of <span class="math inline">s</span>
+equals <span class="math inline">1</span>, at least one pile <span
+class="math inline">n_i</span> has bit <span
+class="math inline">d</span> equal to <span class="math inline">1</span>
+(otherwise the XOR at that bit would be <span
+class="math inline">0</span>). For that pile:</p>
+<p><span class="math display">n_i&#39; := n_i \oplus s &lt;
+n_i,</span></p>
+<p>because XOR-ing with <span class="math inline">s</span> flips bit
+<span class="math inline">d</span> of <span
+class="math inline">n_i</span> from <span class="math inline">1</span>
+to <span class="math inline">0</span> and touches only lower bits. So
+“reduce pile <span class="math inline">n_i</span> to <span
+class="math inline">n_i \oplus s</span>” is a legal move, and it
+gives</p>
+<p><span class="math display">s&#39; = s \oplus n_i \oplus n_i&#39; = s
+\oplus n_i \oplus n_i \oplus s = 0.</span></p>
+<p><strong>Conclusion (induction on the total number of
+stones).</strong> If <span class="math inline">s = 0</span>: either the
+stones are gone and you have lost by (a), or by (b) every move of yours
+hands your opponent a state with <span class="math inline">s&#39; \ne
+0</span> and fewer stones — which by the induction hypothesis is a
+winning state for them. If <span class="math inline">s \ne 0</span>: by
+(c) you have a move handing your opponent a state with <span
+class="math inline">s&#39; = 0</span> and fewer stones — a losing state
+for them. <span class="math inline">\blacksquare</span></p>
+<p><em>Applied to Q2:</em> <span class="math inline">13 \oplus 17 \oplus
+30 = 2 \ne 0</span>, so the first player wins; the unique move restoring
+Nim sum <span class="math inline">0</span> is <span
+class="math inline">30 \to 30 \oplus 2 = 28</span>.</p>
+<blockquote>
+<p><strong>Takeaway:</strong> brute force handles the 5×5×5 table but is
+helpless against <span class="math inline">(13, 17, 30)</span> without
+theory; conversely, it is precisely the small exhaustive table where the
+XOR conjecture reveals itself. Experiment and proof lean on each
+other.</p>
+</blockquote>
+<hr />
+<h2 id="problem-3.-picks-theorem-area-on-the-integer-lattice">Problem 3.
+Pick’s theorem — area on the integer lattice</h2>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Field</th>
+<th>Audience</th>
+<th>Difficulty math / coding / openness</th>
+<th>Role of the tool</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Lattice geometry</td>
+<td>Grades 8–9</td>
+<td>★★★☆☆ / ★★☆☆☆ / ★★★☆☆</td>
+<td>#Observation, #Pattern_discovery — useful</td>
+</tr>
+</tbody>
+</table>
+<h3 id="the-problem-2">The problem</h3>
+<p>A <em>lattice polygon</em> has all vertices at integer points of the
+grid. Let <span class="math inline">I</span> be the number of lattice
+points <strong>strictly inside</strong> the polygon and <span
+class="math inline">B</span> the number of lattice points <strong>on its
+boundary</strong>.</p>
+<ul>
+<li><strong>Q1 (Experiment).</strong> Count <span
+class="math inline">I</span> and <span class="math inline">B</span> for
+the right triangle <span class="math inline">O(0,0)</span>, <span
+class="math inline">A(6,0)</span>, <span
+class="math inline">B(0,8)</span>.</li>
+<li><strong>Q2 (Discover).</strong> Generate 20 different lattice
+polygons; for each, compute the area <span class="math inline">S</span>
+by the Shoelace (Gauss) formula and count <span
+class="math inline">I</span> and <span class="math inline">B</span>.
+Find the constant <span class="math inline">k</span> in the relation
+<span class="math inline">S = I + k \cdot B - 1</span>.</li>
+<li><strong>Q3 (Prove).</strong> Prove Pick’s theorem for all lattice
+polygons by a cut-and-paste argument: first explain why the theorem
+holds for a <em>primitive triangle</em> (a lattice triangle containing
+no lattice point other than its 3 vertices), then prove that the formula
+is <strong>additive</strong> when two polygons are glued together.</li>
+</ul>
+<h3 id="solution-to-q1q2-python-2">Solution to Q1–Q2 (Python)</h3>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> math <span class="im">import</span> gcd</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> random</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> shoelace_area(verts):</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="co">&quot;&quot;&quot;Polygon area by Gauss&#39;s formula; vertices listed in boundary order.&quot;&quot;&quot;</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    n <span class="op">=</span> <span class="bu">len</span>(verts)</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    total <span class="op">=</span> <span class="bu">sum</span>(verts[i][<span class="dv">0</span>] <span class="op">*</span> verts[(i<span class="op">+</span><span class="dv">1</span>) <span class="op">%</span> n][<span class="dv">1</span>] <span class="op">-</span> verts[(i<span class="op">+</span><span class="dv">1</span>) <span class="op">%</span> n][<span class="dv">0</span>] <span class="op">*</span> verts[i][<span class="dv">1</span>]</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>                <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(n))</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="bu">abs</span>(total) <span class="op">/</span> <span class="dv">2</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> boundary_count(verts):</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>    <span class="co">&quot;&quot;&quot;Lattice points on the boundary: an edge with vector (dx, dy) contributes gcd(|dx|, |dy|).&quot;&quot;&quot;</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>    n <span class="op">=</span> <span class="bu">len</span>(verts)</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="bu">sum</span>(gcd(<span class="bu">abs</span>(verts[(i<span class="op">+</span><span class="dv">1</span>) <span class="op">%</span> n][<span class="dv">0</span>] <span class="op">-</span> verts[i][<span class="dv">0</span>]),</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>                   <span class="bu">abs</span>(verts[(i<span class="op">+</span><span class="dv">1</span>) <span class="op">%</span> n][<span class="dv">1</span>] <span class="op">-</span> verts[i][<span class="dv">1</span>])) <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(n))</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> interior_count(verts):</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>    <span class="co">&quot;&quot;&quot;Count lattice points strictly inside (convex polygon): all cross products share a sign.&quot;&quot;&quot;</span></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> inside(p):</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>        signs <span class="op">=</span> []</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(verts)):</span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>            (x1, y1), (x2, y2) <span class="op">=</span> verts[i], verts[(i<span class="op">+</span><span class="dv">1</span>) <span class="op">%</span> <span class="bu">len</span>(verts)]</span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>            d <span class="op">=</span> (x2<span class="op">-</span>x1) <span class="op">*</span> (p[<span class="dv">1</span>]<span class="op">-</span>y1) <span class="op">-</span> (y2<span class="op">-</span>y1) <span class="op">*</span> (p[<span class="dv">0</span>]<span class="op">-</span>x1)</span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> d <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>                <span class="cf">return</span> <span class="va">False</span>                 <span class="co"># boundary points don&#39;t count</span></span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>            signs.append(d <span class="op">&gt;</span> <span class="dv">0</span>)</span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="bu">all</span>(signs) <span class="kw">or</span> <span class="kw">not</span> <span class="bu">any</span>(signs)</span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>    xs, ys <span class="op">=</span> [p[<span class="dv">0</span>] <span class="cf">for</span> p <span class="kw">in</span> verts], [p[<span class="dv">1</span>] <span class="cf">for</span> p <span class="kw">in</span> verts]</span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="bu">sum</span>(inside((x, y)) <span class="cf">for</span> x <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">min</span>(xs), <span class="bu">max</span>(xs) <span class="op">+</span> <span class="dv">1</span>)</span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>                               <span class="cf">for</span> y <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">min</span>(ys), <span class="bu">max</span>(ys) <span class="op">+</span> <span class="dv">1</span>))</span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a><span class="co"># Q1: triangle O(0,0), A(6,0), B(0,8)</span></span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a>tri <span class="op">=</span> [(<span class="dv">0</span>, <span class="dv">0</span>), (<span class="dv">6</span>, <span class="dv">0</span>), (<span class="dv">0</span>, <span class="dv">8</span>)]</span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Q1: I =&quot;</span>, interior_count(tri), <span class="st">&quot; B =&quot;</span>, boundary_count(tri), <span class="st">&quot; S =&quot;</span>, shoelace_area(tri))</span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a><span class="co"># Q2: 20 random convex lattice polygons (convex hulls of random point sets)</span></span>
+<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> convex_hull(points):</span>
+<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a>    points <span class="op">=</span> <span class="bu">sorted</span>(<span class="bu">set</span>(points))</span>
+<span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> half(seq):</span>
+<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a>        chain <span class="op">=</span> []</span>
+<span id="cb5-41"><a href="#cb5-41" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> p <span class="kw">in</span> seq:</span>
+<span id="cb5-42"><a href="#cb5-42" aria-hidden="true" tabindex="-1"></a>            <span class="cf">while</span> <span class="bu">len</span>(chain) <span class="op">&gt;=</span> <span class="dv">2</span> <span class="kw">and</span> <span class="op">\</span></span>
+<span id="cb5-43"><a href="#cb5-43" aria-hidden="true" tabindex="-1"></a>                  (chain[<span class="op">-</span><span class="dv">1</span>][<span class="dv">0</span>]<span class="op">-</span>chain[<span class="op">-</span><span class="dv">2</span>][<span class="dv">0</span>]) <span class="op">*</span> (p[<span class="dv">1</span>]<span class="op">-</span>chain[<span class="op">-</span><span class="dv">2</span>][<span class="dv">1</span>]) <span class="op">-</span> <span class="op">\</span></span>
+<span id="cb5-44"><a href="#cb5-44" aria-hidden="true" tabindex="-1"></a>                  (chain[<span class="op">-</span><span class="dv">1</span>][<span class="dv">1</span>]<span class="op">-</span>chain[<span class="op">-</span><span class="dv">2</span>][<span class="dv">1</span>]) <span class="op">*</span> (p[<span class="dv">0</span>]<span class="op">-</span>chain[<span class="op">-</span><span class="dv">2</span>][<span class="dv">0</span>]) <span class="op">&lt;=</span> <span class="dv">0</span>:</span>
+<span id="cb5-45"><a href="#cb5-45" aria-hidden="true" tabindex="-1"></a>                chain.pop()</span>
+<span id="cb5-46"><a href="#cb5-46" aria-hidden="true" tabindex="-1"></a>            chain.append(p)</span>
+<span id="cb5-47"><a href="#cb5-47" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> chain</span>
+<span id="cb5-48"><a href="#cb5-48" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> half(points)[:<span class="op">-</span><span class="dv">1</span>] <span class="op">+</span> half(points[::<span class="op">-</span><span class="dv">1</span>])[:<span class="op">-</span><span class="dv">1</span>]</span>
+<span id="cb5-49"><a href="#cb5-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-50"><a href="#cb5-50" aria-hidden="true" tabindex="-1"></a>random.seed(<span class="dv">2026</span>)</span>
+<span id="cb5-51"><a href="#cb5-51" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">20</span>):</span>
+<span id="cb5-52"><a href="#cb5-52" aria-hidden="true" tabindex="-1"></a>    verts <span class="op">=</span> convex_hull([(random.randint(<span class="dv">0</span>, <span class="dv">15</span>), random.randint(<span class="dv">0</span>, <span class="dv">15</span>)) <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">12</span>)])</span>
+<span id="cb5-53"><a href="#cb5-53" aria-hidden="true" tabindex="-1"></a>    S, I, B <span class="op">=</span> shoelace_area(verts), interior_count(verts), boundary_count(verts)</span>
+<span id="cb5-54"><a href="#cb5-54" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> (S <span class="op">+</span> <span class="dv">1</span> <span class="op">-</span> I) <span class="op">/</span> B <span class="op">==</span> <span class="fl">0.5</span>            <span class="co"># k is always 1/2</span></span>
+<span id="cb5-55"><a href="#cb5-55" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Q2: k = 0.5 for all 20 polygons  →  S = I + B/2 - 1&quot;</span>)</span></code></pre></div>
+<p><strong>Output (verified):</strong></p>
+<pre><code>Q1: I = 17  B = 16  S = 24.0        (check: 17 + 16/2 - 1 = 24 ✓)
+Q2: k = 0.5 for all 20 polygons  →  S = I + B/2 - 1</code></pre>
+<p><strong>Auto-graded answers:</strong> Q1: <code>I = 17, B = 16</code>
+— Q2: <code>k = 0.5</code> (Pick’s theorem: <span class="math inline">S
+= I + \frac{B}{2} - 1</span>).</p>
+<h3 id="q3-proof-picks-theorem">Q3 — Proof (Pick’s theorem)</h3>
+<p>Set <span class="math inline">P(G) := I + \frac{B}{2} - 1</span> for
+a lattice polygon <span class="math inline">G</span>. We must show <span
+class="math inline">S(G) = P(G)</span>.</p>
+<p><strong>Step 1 — Primitive triangles.</strong> A <em>primitive
+triangle</em> has <span class="math inline">I = 0</span>, <span
+class="math inline">B = 3</span>, so Pick’s formula predicts <span
+class="math inline">S = 0 + \frac{3}{2} - 1 = \frac{1}{2}</span>. We
+show its area really is <span class="math inline">\frac{1}{2}</span>:
+take a primitive triangle <span class="math inline">T</span> with
+vertices <span class="math inline">A, B, C</span>. Reflect <span
+class="math inline">T</span> through the midpoint of side <span
+class="math inline">BC</span> to get <span
+class="math inline">T&#39;</span>; the union <span class="math inline">T
+\cup T&#39;</span> is a parallelogram <span class="math inline">H</span>
+with lattice vertices, and — since point reflection through a
+half-lattice point maps the lattice to itself — <span
+class="math inline">H</span> likewise contains no lattice points besides
+its 4 vertices. The translates of <span class="math inline">H</span> by
+its two edge vectors <strong>tile the plane</strong>, and each copy
+“owns” exactly one lattice point (one vertex). The density of lattice
+points in the plane is <span class="math inline">1</span> per unit area,
+so <span class="math inline">H</span> has area <span
+class="math inline">1</span>, hence <span class="math inline">S(T) =
+\frac{1}{2}</span>. So the formula holds for every primitive
+triangle.</p>
+<p><strong>Step 2 — Additivity of Pick’s formula.</strong> Suppose the
+polygon <span class="math inline">G</span> is glued from two lattice
+polygons <span class="math inline">G_1, G_2</span> along a common
+polyline containing <span class="math inline">e</span> lattice points
+(endpoints included). Under gluing:</p>
+<ul>
+<li>Areas add: <span class="math inline">S = S_1 + S_2</span>.</li>
+<li>The <span class="math inline">e - 2</span> interior points of the
+seam switch from “boundary” to “interior”: <span class="math inline">I =
+I_1 + I_2 + (e - 2)</span>.</li>
+<li>Boundary points: the seam’s interior points were counted in both
+<span class="math inline">B_1</span> and <span
+class="math inline">B_2</span> and then leave the boundary; the two
+endpoints were counted twice but remain on the boundary: <span
+class="math inline">B = B_1 + B_2 - 2(e - 2) - 2</span>.</li>
+</ul>
+<p>Therefore:</p>
+<p><span class="math display">P(G_1) + P(G_2) = (I_1 + I_2) + \frac{B_1
++ B_2}{2} - 2 = \big(I - (e-2)\big) + \frac{B + 2(e-2) + 2}{2} - 2 = I +
+\frac{B}{2} - 1 = P(G).</span></p>
+<p>So if Pick’s formula holds for <span class="math inline">G_1</span>
+and <span class="math inline">G_2</span>, it holds for <span
+class="math inline">G</span> (and conversely: if it holds for <span
+class="math inline">G</span> and one piece, it holds for the other
+piece).</p>
+<p><strong>Step 3 — Conclusion by induction.</strong> Every lattice
+polygon can be triangulated (induction on the number of vertices: any
+polygon with <span class="math inline">\ge 4</span> vertices has a
+diagonal lying entirely inside it, splitting it into two smaller
+polygons). Every lattice triangle can be further subdivided into
+primitive triangles (induction on the number of lattice points it
+contains: while some lattice point other than the 3 vertices remains,
+join it to the vertices to split the triangle). Apply Step 1 to each
+primitive piece and reassemble with Step 2 to get <span
+class="math inline">S(G) = P(G)</span> for every lattice polygon. <span
+class="math inline">\blacksquare</span></p>
+<blockquote>
+<p><strong>Takeaway:</strong> the computer finds the coefficient <span
+class="math inline">k = \frac{1}{2}</span> in seconds, but the question
+“why <span class="math inline">\frac{1}{2}</span> for
+<strong>every</strong> polygon?” can only be answered by cut-and-paste
+and induction.</p>
+</blockquote>
+<hr />
+<h1 id="part-ii-three-investigations-for-high-school-hs">PART II — THREE
+INVESTIGATIONS FOR HIGH SCHOOL (HS)</h1>
+<p><em>Selection criteria: algorithmic thinking with awareness of
+complexity; more advanced mathematics — generating functions, analytic
+limits, computational geometry.</em></p>
+<hr />
+<h2 id="problem-4.-integer-partitions-and-eulers-identity">Problem 4.
+Integer partitions and Euler’s identity</h2>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Field</th>
+<th>Audience</th>
+<th>Difficulty math / coding / openness</th>
+<th>Role of the tool</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Combinatorics</td>
+<td>Grades 10–12</td>
+<td>★★★★☆ / ★★★☆☆ / ★★★☆☆</td>
+<td>#Verification, #Method_comparison — nearly essential</td>
+</tr>
+</tbody>
+</table>
+<h3 id="the-problem-3">The problem</h3>
+<p>A <em>partition</em> of a positive integer <span
+class="math inline">n</span> is a way of writing <span
+class="math inline">n</span> as a sum of positive integers, order
+ignored.</p>
+<ul>
+<li><strong>Q1 (Dynamic programming).</strong> Compute the number of
+partitions of <span class="math inline">n = 60</span>. (Naive recursion
+is far too slow — find an <span class="math inline">O(n^2)</span>
+algorithm.)</li>
+<li><strong>Q2 (Compare).</strong> For <span class="math inline">n =
+100</span>, compute and compare: (a) the number of partitions of <span
+class="math inline">n</span> into <strong>odd</strong> parts; (b) the
+number of partitions of <span class="math inline">n</span> into
+<strong>pairwise distinct</strong> parts.</li>
+<li><strong>Q3 (Prove).</strong> Use <strong>generating
+functions</strong> to prove Euler’s identity: for every <span
+class="math inline">n</span>, the number of partitions of <span
+class="math inline">n</span> into odd parts equals the number of
+partitions of <span class="math inline">n</span> into distinct
+parts.</li>
+</ul>
+<h3 id="solution-to-q1q2-python-3">Solution to Q1–Q2 (Python)</h3>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> partitions(n, parts):</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">&quot;&quot;&quot;Number of ways to write n as a sum of elements from &#39;parts&#39; (unlimited reuse).</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co">    dp[i] = number of partitions of i. Processing each part k exactly once,</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="co">    in order, prevents counting permutations of the same partition twice. O(n^2).</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="co">    &quot;&quot;&quot;</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    dp <span class="op">=</span> [<span class="dv">1</span>] <span class="op">+</span> [<span class="dv">0</span>] <span class="op">*</span> n</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> k <span class="kw">in</span> parts:</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(k, n <span class="op">+</span> <span class="dv">1</span>):</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>            dp[i] <span class="op">+=</span> dp[i <span class="op">-</span> k]</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> dp[n]</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> distinct_partitions(n):</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>    <span class="co">&quot;&quot;&quot;Same, but each part may be used AT MOST ONCE: sweep i downward (0/1 style).&quot;&quot;&quot;</span></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>    dp <span class="op">=</span> [<span class="dv">1</span>] <span class="op">+</span> [<span class="dv">0</span>] <span class="op">*</span> n</span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> k <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, n <span class="op">+</span> <span class="dv">1</span>):</span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(n, k <span class="op">-</span> <span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>):</span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>            dp[i] <span class="op">+=</span> dp[i <span class="op">-</span> k]</span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> dp[n]</span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Q1: p(60) =&quot;</span>, partitions(<span class="dv">60</span>, <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">61</span>)))</span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>odd      <span class="op">=</span> partitions(<span class="dv">100</span>, <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">101</span>, <span class="dv">2</span>))      <span class="co"># odd parts only: 1, 3, 5, ...</span></span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>distinct <span class="op">=</span> distinct_partitions(<span class="dv">100</span>)</span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&quot;Q2: odd(100) = </span><span class="sc">{</span>odd<span class="sc">}</span><span class="ss">,  distinct(100) = </span><span class="sc">{</span>distinct<span class="sc">}</span><span class="ss">&quot;</span>)</span></code></pre></div>
+<p><strong>Output (verified):</strong></p>
+<pre><code>Q1: p(60) = 966467
+Q2: odd(100) = 444793,  distinct(100) = 444793      ← the two counts are EQUAL!</code></pre>
+<p><strong>Auto-graded answers:</strong> Q1: <code>966467</code> — Q2:
+<code>444793</code> (both quantities).</p>
+<h3 id="q3-proof-eulers-identity-via-generating-functions">Q3 — Proof
+(Euler’s identity via generating functions)</h3>
+<p>The generating function for partitions into <strong>odd</strong>
+parts (each odd part <span class="math inline">2j-1</span> used <span
+class="math inline">0, 1, 2, \dots</span> times):</p>
+<p><span class="math display">O(x) = \prod_{j \ge 1} \frac{1}{1 -
+x^{2j-1}} = \frac{1}{(1-x)(1-x^3)(1-x^5)(1-x^7)\cdots}</span></p>
+<p>The generating function for partitions into <strong>distinct</strong>
+parts (each part <span class="math inline">k</span> used <span
+class="math inline">0</span> or <span class="math inline">1</span>
+times):</p>
+<p><span class="math display">D(x) = \prod_{k \ge 1} (1 + x^k) =
+(1+x)(1+x^2)(1+x^3)(1+x^4)\cdots</span></p>
+<p>Apply the identity <span class="math inline">1 + x^k = \dfrac{1 -
+x^{2k}}{1 - x^k}</span> to every factor:</p>
+<p><span class="math display">D(x) = \prod_{k \ge 1} \frac{1 - x^{2k}}{1
+- x^k} =
+\frac{(1-x^2)(1-x^4)(1-x^6)(1-x^8)\cdots}{(1-x)(1-x^2)(1-x^3)(1-x^4)\cdots}</span></p>
+<p>The numerator consists of exactly the factors <span
+class="math inline">(1 - x^{2k})</span> with <strong>even</strong>
+exponents; they cancel all even-exponent factors of the denominator.
+After cancellation, only the <strong>odd</strong>-exponent factors
+remain below:</p>
+<p><span class="math display">D(x) =
+\frac{1}{(1-x)(1-x^3)(1-x^5)(1-x^7)\cdots} = O(x).</span></p>
+<p>Equal formal power series have equal coefficients: the coefficient of
+<span class="math inline">x^n</span> in <span
+class="math inline">O(x)</span> (partitions into odd parts) equals the
+coefficient of <span class="math inline">x^n</span> in <span
+class="math inline">D(x)</span> (partitions into distinct parts), for
+every <span class="math inline">n</span>. <span
+class="math inline">\blacksquare</span></p>
+<p><em>Technical note:</em> everything above takes place in the ring of
+formal power series: the coefficient of <span
+class="math inline">x^n</span> depends on only finitely many factors, so
+the “infinite cancellation” is legitimate. An equally beautiful
+alternative proof builds a <strong>bijection</strong>: split each even
+part <span class="math inline">2^a \cdot l</span> (<span
+class="math inline">l</span> odd) into <span
+class="math inline">2^a</span> copies of <span
+class="math inline">l</span> — strong students should try both
+routes.</p>
+<blockquote>
+<p><strong>Takeaway:</strong> the computer <em>astonishes</em> students
+by showing two utterly different counting problems produce the same
+sequence; generating functions turn that astonishment into an inevitable
+identity in a few lines of algebra.</p>
+</blockquote>
+<hr />
+<h2
+id="problem-5.-the-distribution-of-primes-and-the-prime-number-theorem">Problem
+5. The distribution of primes and the Prime Number Theorem</h2>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Field</th>
+<th>Audience</th>
+<th>Difficulty math / coding / openness</th>
+<th>Role of the tool</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Number theory – Analysis</td>
+<td>Grades 11–12</td>
+<td>★★★★☆ / ★★★☆☆ / ★★☆☆☆</td>
+<td>#Observation, #Verification — nearly essential</td>
+</tr>
+</tbody>
+</table>
+<h3 id="the-problem-4">The problem</h3>
+<p>Let <span class="math inline">\pi(x)</span> denote the number of
+primes not exceeding <span class="math inline">x</span>.</p>
+<ul>
+<li><strong>Q1 (Optimized sieve).</strong> Write a Sieve of Eratosthenes
+fast enough to compute <span class="math inline">\pi(10^8)</span>.</li>
+<li><strong>Q2 (Limit).</strong> Compute the ratio <span
+class="math inline">R(x) = \dfrac{\pi(x)}{x / \ln x}</span> at <span
+class="math inline">x = 10^4, 10^5, 10^6, 10^7, 10^8</span>. What is the
+trend?</li>
+<li><strong>Q3 (Apply the theory).</strong> State the Prime Number
+Theorem. Use it to estimate the <strong>number of decimal
+digits</strong> of the <span class="math inline">10^{12}</span>-th prime
+(the trillionth prime).</li>
+</ul>
+<h3 id="solution-to-q1q2-python-4">Solution to Q1–Q2 (Python)</h3>
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> math <span class="im">import</span> isqrt, log</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> eratosthenes_sieve(limit):</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    <span class="co">&quot;&quot;&quot;sieve[i] = 1 iff i is prime. Runs in ~15 seconds for limit = 10^8.</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="co">    Two key optimizations: only sieve up to the square root of the limit,</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="co">    and mark multiples with slice assignment (much faster than a pure Python loop).</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="co">    &quot;&quot;&quot;</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>    sieve <span class="op">=</span> <span class="bu">bytearray</span>([<span class="dv">1</span>]) <span class="op">*</span> limit</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>    sieve[<span class="dv">0</span>] <span class="op">=</span> sieve[<span class="dv">1</span>] <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2</span>, isqrt(limit) <span class="op">+</span> <span class="dv">1</span>):</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> sieve[i]:</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>            sieve[i<span class="op">*</span>i::i] <span class="op">=</span> <span class="bu">bytearray</span>(<span class="bu">len</span>(sieve[i<span class="op">*</span>i::i]))</span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> sieve</span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>sieve <span class="op">=</span> eratosthenes_sieve(<span class="dv">10</span><span class="op">**</span><span class="dv">8</span>)</span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Q1: pi(10^8) =&quot;</span>, <span class="bu">sum</span>(sieve))</span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>count, e <span class="op">=</span> <span class="dv">0</span>, <span class="dv">4</span></span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> x <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2</span>, <span class="dv">10</span><span class="op">**</span><span class="dv">8</span>):                    <span class="co"># Q2: one sweep, print at each milestone</span></span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>    count <span class="op">+=</span> sieve[x]</span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> x <span class="op">+</span> <span class="dv">1</span> <span class="op">==</span> <span class="dv">10</span><span class="op">**</span>e:</span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f&quot;Q2: x = 10^</span><span class="sc">{</span>e<span class="sc">}</span><span class="ss">:  pi(x) = </span><span class="sc">{</span>count<span class="sc">:&gt;9}</span><span class="ss">  R(x) = </span><span class="sc">{</span>count <span class="op">/</span> (<span class="dv">10</span><span class="op">**</span>e <span class="op">/</span> log(<span class="dv">10</span><span class="op">**</span>e))<span class="sc">:.4f}</span><span class="ss">&quot;</span>)</span>
+<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a>        e <span class="op">+=</span> <span class="dv">1</span></span></code></pre></div>
+<p><strong>Output (verified):</strong></p>
+<pre><code>Q1: pi(10^8) = 5761455
+Q2: x = 10^4:  pi(x) =      1229  R(x) = 1.1320
+    x = 10^5:  pi(x) =      9592  R(x) = 1.1043
+    x = 10^6:  pi(x) =     78498  R(x) = 1.0845
+    x = 10^7:  pi(x) =    664579  R(x) = 1.0712
+    x = 10^8:  pi(x) =   5761455  R(x) = 1.0613     → slowly decreasing toward 1</code></pre>
+<p><strong>Auto-graded answers:</strong> Q1: <code>5761455</code> — Q2:
+the sequence <span class="math inline">1.1320,\ 1.1043,\ 1.0845,\
+1.0712,\ 1.0613</span> creeping toward <span
+class="math inline">1</span>.</p>
+<h3
+id="q3-solution-the-prime-number-theorem-and-the-digits-of-p_1012">Q3 —
+Solution (the Prime Number Theorem and the digits of <span
+class="math inline">p_{10^{12}}</span>)</h3>
+<p><strong>The Prime Number Theorem (Hadamard – de la Vallée Poussin,
+1896).</strong></p>
+<p><span class="math display">\lim_{x \to \infty} \frac{\pi(x)}{x / \ln
+x} = 1.</span></p>
+<p><strong>Consequence for the <span class="math inline">n</span>-th
+prime.</strong> Let <span class="math inline">p_n</span> be the <span
+class="math inline">n</span>-th prime, so <span
+class="math inline">\pi(p_n) = n</span>. Substituting into the theorem:
+<span class="math inline">n \sim \dfrac{p_n}{\ln p_n}</span>, hence
+<span class="math inline">p_n \sim n \ln p_n</span>. Taking logarithms
+gives <span class="math inline">\ln p_n \sim \ln n</span> (lower-order
+terms are negligible), therefore</p>
+<p><span class="math display">p_n \sim n \ln n.</span></p>
+<p><strong>Applying <span class="math inline">n =
+10^{12}</span>:</strong></p>
+<p><span class="math display">p_{10^{12}} \approx 10^{12} \cdot
+\ln(10^{12}) = 10^{12} \cdot 12 \ln 10 \approx 10^{12} \cdot 12 \times
+2.302585 \approx 2.76 \times 10^{13}.</span></p>
+<p>The number of digits of a positive integer <span
+class="math inline">N</span> is <span class="math inline">\lfloor
+\log_{10} N \rfloor + 1</span>:</p>
+<p><span class="math display">\log_{10}\left(2.76 \times 10^{13}\right)
+\approx 13.44 \quad \Rightarrow \quad \lfloor 13.44 \rfloor + 1 = 14
+\text{ digits}.</span></p>
+<p><em>Independent check:</em> the true value is <span
+class="math inline">p_{10^{12}} = 29\,996\,224\,275\,833 \approx 3.0
+\times 10^{13}</span> — exactly <strong>14 digits</strong>. The estimate
+<span class="math inline">n \ln n</span> undershoots by about <span
+class="math inline">8\%</span> (the refinement <span
+class="math inline">n(\ln n + \ln \ln n)</span> gives <span
+class="math inline">3.03 \times 10^{13}</span>), but the conclusion
+about the digit count is robust. <span
+class="math inline">\blacksquare</span></p>
+<blockquote>
+<p><strong>Takeaway:</strong> the sieve’s data (<span
+class="math inline">R(x)</span> decreasing <em>very</em> slowly — still
+6% away from 1 at <span class="math inline">10^8</span>!) gives students
+an honest feel for the lazy convergence in the PNT — and for why
+extrapolating from finite data needs theory as its guide.</p>
+</blockquote>
+<hr />
+<h2
+id="problem-6.-convex-hulls-and-the-left-turn-right-turn-test">Problem
+6. Convex hulls and the left-turn / right-turn test</h2>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Field</th>
+<th>Audience</th>
+<th>Difficulty math / coding / openness</th>
+<th>Role of the tool</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Computational geometry</td>
+<td>Grades 10–12</td>
+<td>★★★☆☆ / ★★★★☆ / ★★☆☆☆</td>
+<td>#Configuration_search, #Visualization — nearly essential</td>
+</tr>
+</tbody>
+</table>
+<h3 id="the-problem-5">The problem</h3>
+<ul>
+<li><strong>Q1 (Warm-up).</strong> Given 5 points <span
+class="math inline">A(0,0)</span>, <span
+class="math inline">B(4,0)</span>, <span
+class="math inline">C(0,4)</span>, <span
+class="math inline">D(2,1)</span>, <span
+class="math inline">E(1,1)</span>: for each point, check by program
+whether it lies <strong>strictly inside</strong> the convex polygon
+formed by the remaining points.</li>
+<li><strong>Q2 (Algorithm).</strong> Generate <span
+class="math inline">10\,000</span> random integer points (fixed seed
+<code>2026</code>, coordinates in <span class="math inline">[-10^6,
+10^6]</span>). Implement an <span class="math inline">O(n \log n)</span>
+convex hull algorithm (Graham Scan or Andrew’s Monotone Chain) and
+report how many vertices the hull has.</li>
+<li><strong>Q3 (Mathematical foundation).</strong> The decisive tool in
+every convex hull algorithm is the <strong>cross product</strong>. Write
+the determinant formula that tests “left turn or right turn” through
+three consecutive points <span class="math inline">P_1, P_2, P_3</span>,
+and <strong>prove</strong> why the sign of that determinant tells the
+turn direction.</li>
+</ul>
+<h3 id="solution-to-q1q2-python-5">Solution to Q1–Q2 (Python)</h3>
+<div class="sourceCode" id="cb11"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> random</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> cross(o, a, b):</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    <span class="co">&quot;&quot;&quot;Cross product of vectors OA and OB: &gt; 0 left turn, &lt; 0 right turn, = 0 collinear.&quot;&quot;&quot;</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (a[<span class="dv">0</span>]<span class="op">-</span>o[<span class="dv">0</span>]) <span class="op">*</span> (b[<span class="dv">1</span>]<span class="op">-</span>o[<span class="dv">1</span>]) <span class="op">-</span> (a[<span class="dv">1</span>]<span class="op">-</span>o[<span class="dv">1</span>]) <span class="op">*</span> (b[<span class="dv">0</span>]<span class="op">-</span>o[<span class="dv">0</span>])</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> convex_hull(points):</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>    <span class="co">&quot;&quot;&quot;Andrew&#39;s monotone chain, O(n log n): build the lower then the upper hull.&quot;&quot;&quot;</span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>    points <span class="op">=</span> <span class="bu">sorted</span>(<span class="bu">set</span>(points))</span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> half(seq):</span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>        chain <span class="op">=</span> []</span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> p <span class="kw">in</span> seq:</span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>            <span class="cf">while</span> <span class="bu">len</span>(chain) <span class="op">&gt;=</span> <span class="dv">2</span> <span class="kw">and</span> cross(chain[<span class="op">-</span><span class="dv">2</span>], chain[<span class="op">-</span><span class="dv">1</span>], p) <span class="op">&lt;=</span> <span class="dv">0</span>:</span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>                chain.pop()                  <span class="co"># not a left turn: discard the middle vertex</span></span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a>            chain.append(p)</span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> chain</span>
+<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> half(points)[:<span class="op">-</span><span class="dv">1</span>] <span class="op">+</span> half(points[::<span class="op">-</span><span class="dv">1</span>])[:<span class="op">-</span><span class="dv">1</span>]</span>
+<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Q1: strictly inside &lt;=&gt; walking the boundary, the point stays on the same side</span></span>
+<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a>pts <span class="op">=</span> {<span class="st">&#39;A&#39;</span>: (<span class="dv">0</span>,<span class="dv">0</span>), <span class="st">&#39;B&#39;</span>: (<span class="dv">4</span>,<span class="dv">0</span>), <span class="st">&#39;C&#39;</span>: (<span class="dv">0</span>,<span class="dv">4</span>), <span class="st">&#39;D&#39;</span>: (<span class="dv">2</span>,<span class="dv">1</span>), <span class="st">&#39;E&#39;</span>: (<span class="dv">1</span>,<span class="dv">1</span>)}</span>
+<span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> name, p <span class="kw">in</span> pts.items():</span>
+<span id="cb11-22"><a href="#cb11-22" aria-hidden="true" tabindex="-1"></a>    h <span class="op">=</span> convex_hull([q <span class="cf">for</span> t, q <span class="kw">in</span> pts.items() <span class="cf">if</span> t <span class="op">!=</span> name])</span>
+<span id="cb11-23"><a href="#cb11-23" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">all</span>(cross(h[i], h[(i<span class="op">+</span><span class="dv">1</span>) <span class="op">%</span> <span class="bu">len</span>(h)], p) <span class="op">&gt;</span> <span class="dv">0</span> <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(h))):</span>
+<span id="cb11-24"><a href="#cb11-24" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f&quot;Q1: </span><span class="sc">{</span>name<span class="sc">}{</span>p<span class="sc">}</span><span class="ss"> lies strictly inside&quot;</span>)</span>
+<span id="cb11-25"><a href="#cb11-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-26"><a href="#cb11-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Q2: hull of 10,000 points (fixed seed =&gt; a unique gradable answer)</span></span>
+<span id="cb11-27"><a href="#cb11-27" aria-hidden="true" tabindex="-1"></a>random.seed(<span class="dv">2026</span>)</span>
+<span id="cb11-28"><a href="#cb11-28" aria-hidden="true" tabindex="-1"></a>cloud <span class="op">=</span> [(random.randint(<span class="op">-</span><span class="dv">10</span><span class="op">**</span><span class="dv">6</span>, <span class="dv">10</span><span class="op">**</span><span class="dv">6</span>), random.randint(<span class="op">-</span><span class="dv">10</span><span class="op">**</span><span class="dv">6</span>, <span class="dv">10</span><span class="op">**</span><span class="dv">6</span>))</span>
+<span id="cb11-29"><a href="#cb11-29" aria-hidden="true" tabindex="-1"></a>         <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10_000</span>)]</span>
+<span id="cb11-30"><a href="#cb11-30" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Q2: hull vertices =&quot;</span>, <span class="bu">len</span>(convex_hull(cloud)))</span></code></pre></div>
+<p><strong>Output (verified):</strong></p>
+<pre><code>Q1: D(2, 1) lies strictly inside
+Q1: E(1, 1) lies strictly inside
+Q2: hull vertices = 26</code></pre>
+<p><strong>Auto-graded answers:</strong> Q1: <code>D, E</code> — Q2:
+<code>26</code>.</p>
+<h3 id="q3-proof-the-sign-of-the-cross-product-determines-the-turn">Q3 —
+Proof (the sign of the cross product determines the turn)</h3>
+<p>Take three consecutive points <span class="math inline">P_1(x_1,
+y_1)</span>, <span class="math inline">P_2(x_2, y_2)</span>, <span
+class="math inline">P_3(x_3, y_3)</span> and the two displacement
+vectors <span class="math inline">\vec{u} = \overrightarrow{P_1
+P_2}</span>, <span class="math inline">\vec{v} = \overrightarrow{P_2
+P_3}</span>. The quantity in question is the determinant</p>
+<p><span class="math display">D = \det \begin{pmatrix} x_2 - x_1 &amp;
+y_2 - y_1 \\ x_3 - x_2 &amp; y_3 - y_2 \end{pmatrix} = (x_2 - x_1)(y_3 -
+y_2) - (y_2 - y_1)(x_3 - x_2).</span></p>
+<p><strong>Proving what the sign means.</strong> Write both vectors in
+polar form: <span class="math inline">\vec{u} = r_1(\cos\alpha,
+\sin\alpha)</span> and <span class="math inline">\vec{v} =
+r_2(\cos\beta, \sin\beta)</span> with lengths <span
+class="math inline">r_1, r_2 &gt; 0</span> and direction angles <span
+class="math inline">\alpha, \beta</span> measured from the positive
+<span class="math inline">x</span>-axis. Expanding directly:</p>
+<p><span class="math display">D = r_1 r_2 (\cos\alpha \sin\beta -
+\sin\alpha \cos\beta) = r_1 r_2 \sin(\beta - \alpha).</span></p>
+<p>The difference <span class="math inline">\beta - \alpha</span> is
+precisely the <strong>turning angle</strong> from the old heading <span
+class="math inline">\vec{u}</span> to the new heading <span
+class="math inline">\vec{v}</span>. Since <span class="math inline">r_1
+r_2 &gt; 0</span>, the sign of <span class="math inline">D</span> equals
+the sign of <span class="math inline">\sin(\beta - \alpha)</span>:</p>
+<ul>
+<li><span class="math inline">D &gt; 0 \iff \sin(\beta - \alpha) &gt;
+0</span>: the heading rotates <strong>counterclockwise</strong> — a
+<strong>left</strong> turn. Graham Scan keeps <span
+class="math inline">P_2</span> on the hull.</li>
+<li><span class="math inline">D &lt; 0</span>: the heading rotates
+<strong>clockwise</strong> — a <strong>right</strong> turn. The point
+<span class="math inline">P_2</span> has been “wrapped inside” and is
+discarded from the hull.</li>
+<li><span class="math inline">D = 0</span>: the three points are
+<strong>collinear</strong>.</li>
+</ul>
+<p>Geometrically, <span class="math inline">\frac{D}{2}</span> is the
+<strong>signed area</strong> of triangle <span class="math inline">P_1
+P_2 P_3</span> — positive exactly when the vertices are listed
+counterclockwise. It is also the basic building block of the Shoelace
+formula of Problem 3: one determinant, two roles. <span
+class="math inline">\blacksquare</span></p>
+<p><em>Why the algorithm’s correctness rests on this:</em> a polygon is
+convex if and only if walking its boundary you always turn to the same
+side; the test <span class="math inline">D</span> lets the algorithm
+maintain the <strong>invariant</strong> “the current vertex chain only
+ever turns left” after every insertion — and that invariant is the
+entire soul of the correctness proof of Graham Scan / Andrew’s
+algorithm.</p>
+<blockquote>
+<p><strong>Takeaway:</strong> with integer coordinates, the test <span
+class="math inline">D</span> is <strong>exact arithmetic</strong> — no
+rounding error. The same test written with floating-point angles
+(arctangents) can silently give a wrong answer. Choosing the right
+representation is also doing mathematics.</p>
+</blockquote>
+<hr />
+<h1 id="bonus-problem-a-classic-extrapolation-trap">BONUS PROBLEM — A
+CLASSIC EXTRAPOLATION TRAP</h1>
+<p><em>The TOML framework requires every pilot set to include at least
+one problem that is “correct in many small cases but wrong later”. The
+six problems above are all of the kind where the pattern is real; this
+seventh problem teaches the opposite lesson — which is exactly why it
+was added to the sample set.</em></p>
+<hr />
+<h2
+id="problem-7.-mosers-circle-problem-when-1-2-4-8-16-is-not-what-you-think">Problem
+7. Moser’s circle problem — when 1, 2, 4, 8, 16 is not what you
+think</h2>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Field</th>
+<th>Audience</th>
+<th>Difficulty math / coding / openness</th>
+<th>Role of the tool</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Combinatorics – Geometry</td>
+<td>Grades 9–12</td>
+<td>★★★★☆ / ★★★☆☆ / ★★★★☆</td>
+<td>#Counterexample_hunt — <strong>potentially misleading</strong> if
+you only look at small data</td>
+</tr>
+</tbody>
+</table>
+<h3 id="the-problem-6">The problem</h3>
+<p>Place <span class="math inline">n</span> points on a circle in
+<em>general position</em> (no three chords meeting at a common interior
+point), then draw <strong>all</strong> chords joining pairs of points.
+Let <span class="math inline">R(n)</span> be the number of regions the
+disk is divided into.</p>
+<ul>
+<li><strong>Q1 (Observe — do it by hand first!).</strong> Draw and count
+<span class="math inline">R(1), \dots, R(5)</span>. What is your guess
+for <span class="math inline">R(6)</span>? Now draw very carefully (or
+use a program) and count <span class="math inline">R(6)</span>
+again.</li>
+<li><strong>Q2 (Exact survey).</strong> Write a program that counts
+<span class="math inline">R(n)</span> using <strong>exact
+geometry</strong> (rational numbers, no floating point) up to <span
+class="math inline">n = 12</span>, and find the true formula for <span
+class="math inline">R(n)</span> in terms of binomial coefficients.</li>
+<li><strong>Q3 (Prove).</strong> Prove the formula <span
+class="math inline">R(n) = \binom{n}{4} + \binom{n}{2} + 1</span> using
+Euler’s formula for planar graphs, <span class="math inline">V - E + F =
+2</span>.</li>
+</ul>
+<h3 id="solution-to-q1q2-python-6">Solution to Q1–Q2 (Python)</h3>
+<div class="sourceCode" id="cb13"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> itertools <span class="im">import</span> combinations</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> fractions <span class="im">import</span> Fraction</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> math <span class="im">import</span> comb</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> region_count(n):</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>    <span class="co">&quot;&quot;&quot;Count R(n) via Euler&#39;s formula V - E + F = 2, using EXACT geometry.</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="co">    Place point i at (2^i, 4^i) on the parabola y = x^2: the points are in convex</span></span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a><span class="co">    position, the coordinates are rational so every computation is exact (no float</span></span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a><span class="co">    error), and the chords&#39; crossing structure is identical to that on a circle.</span></span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a><span class="co">    &quot;&quot;&quot;</span></span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>    points <span class="op">=</span> [(Fraction(<span class="dv">2</span>)<span class="op">**</span>i, Fraction(<span class="dv">4</span>)<span class="op">**</span>i) <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(n)]</span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>    chords <span class="op">=</span> <span class="bu">list</span>(combinations(points, <span class="dv">2</span>))</span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> interior_intersection(c1, c2):</span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>        <span class="co">&quot;&quot;&quot;Exact intersection point of two segments, if they cross strictly inside.&quot;&quot;&quot;</span></span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a>        (p1, p2), (p3, p4) <span class="op">=</span> c1, c2</span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>        d <span class="op">=</span> (p2[<span class="dv">0</span>]<span class="op">-</span>p1[<span class="dv">0</span>])<span class="op">*</span>(p4[<span class="dv">1</span>]<span class="op">-</span>p3[<span class="dv">1</span>]) <span class="op">-</span> (p2[<span class="dv">1</span>]<span class="op">-</span>p1[<span class="dv">1</span>])<span class="op">*</span>(p4[<span class="dv">0</span>]<span class="op">-</span>p3[<span class="dv">0</span>])</span>
+<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> d <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="va">None</span></span>
+<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a>        t <span class="op">=</span> ((p3[<span class="dv">0</span>]<span class="op">-</span>p1[<span class="dv">0</span>])<span class="op">*</span>(p4[<span class="dv">1</span>]<span class="op">-</span>p3[<span class="dv">1</span>]) <span class="op">-</span> (p3[<span class="dv">1</span>]<span class="op">-</span>p1[<span class="dv">1</span>])<span class="op">*</span>(p4[<span class="dv">0</span>]<span class="op">-</span>p3[<span class="dv">0</span>])) <span class="op">/</span> d</span>
+<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a>        u <span class="op">=</span> ((p3[<span class="dv">0</span>]<span class="op">-</span>p1[<span class="dv">0</span>])<span class="op">*</span>(p2[<span class="dv">1</span>]<span class="op">-</span>p1[<span class="dv">1</span>]) <span class="op">-</span> (p3[<span class="dv">1</span>]<span class="op">-</span>p1[<span class="dv">1</span>])<span class="op">*</span>(p2[<span class="dv">0</span>]<span class="op">-</span>p1[<span class="dv">0</span>])) <span class="op">/</span> d</span>
+<span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="dv">0</span> <span class="op">&lt;</span> t <span class="op">&lt;</span> <span class="dv">1</span> <span class="kw">and</span> <span class="dv">0</span> <span class="op">&lt;</span> u <span class="op">&lt;</span> <span class="dv">1</span>:</span>
+<span id="cb13-24"><a href="#cb13-24" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> (p1[<span class="dv">0</span>] <span class="op">+</span> t<span class="op">*</span>(p2[<span class="dv">0</span>]<span class="op">-</span>p1[<span class="dv">0</span>]), p1[<span class="dv">1</span>] <span class="op">+</span> t<span class="op">*</span>(p2[<span class="dv">1</span>]<span class="op">-</span>p1[<span class="dv">1</span>]))</span>
+<span id="cb13-25"><a href="#cb13-25" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">None</span></span>
+<span id="cb13-26"><a href="#cb13-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-27"><a href="#cb13-27" aria-hidden="true" tabindex="-1"></a>    crossings <span class="op">=</span> [g <span class="cf">for</span> c1, c2 <span class="kw">in</span> combinations(chords, <span class="dv">2</span>)</span>
+<span id="cb13-28"><a href="#cb13-28" aria-hidden="true" tabindex="-1"></a>                 <span class="cf">if</span> (g <span class="op">:=</span> interior_intersection(c1, c2)) <span class="kw">is</span> <span class="kw">not</span> <span class="va">None</span>]</span>
+<span id="cb13-29"><a href="#cb13-29" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> <span class="bu">len</span>(crossings) <span class="op">==</span> <span class="bu">len</span>(<span class="bu">set</span>(crossings)), <span class="st">&quot;not in general position: 3 concurrent chords&quot;</span></span>
+<span id="cb13-30"><a href="#cb13-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-31"><a href="#cb13-31" aria-hidden="true" tabindex="-1"></a>    I <span class="op">=</span> <span class="bu">len</span>(crossings)                   <span class="co"># interior intersection points</span></span>
+<span id="cb13-32"><a href="#cb13-32" aria-hidden="true" tabindex="-1"></a>    V <span class="op">=</span> n <span class="op">+</span> I                            <span class="co"># vertices: n boundary points + I crossings</span></span>
+<span id="cb13-33"><a href="#cb13-33" aria-hidden="true" tabindex="-1"></a>    E <span class="op">=</span> n <span class="op">+</span> <span class="bu">len</span>(chords) <span class="op">+</span> <span class="dv">2</span><span class="op">*</span>I            <span class="co"># edges: n arcs + the subdivided chords</span></span>
+<span id="cb13-34"><a href="#cb13-34" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (<span class="dv">2</span> <span class="op">-</span> V <span class="op">+</span> E) <span class="op">-</span> <span class="dv">1</span>               <span class="co"># Euler&#39;s formula, minus the unbounded outer face</span></span>
+<span id="cb13-35"><a href="#cb13-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-36"><a href="#cb13-36" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Q1: R(1)..R(6) =&quot;</span>, [region_count(n) <span class="cf">for</span> n <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">7</span>)])</span>
+<span id="cb13-37"><a href="#cb13-37" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> n <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">13</span>):                   <span class="co"># Q2: match the formula up to n = 12</span></span>
+<span id="cb13-38"><a href="#cb13-38" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> region_count(n) <span class="op">==</span> comb(n, <span class="dv">4</span>) <span class="op">+</span> comb(n, <span class="dv">2</span>) <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb13-39"><a href="#cb13-39" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Q2: R(n) = C(n,4) + C(n,2) + 1 matches exact geometry up to n = 12&quot;</span>)</span></code></pre></div>
+<p><strong>Output (verified):</strong></p>
+<pre><code>Q1: R(1)..R(6) = [1, 2, 4, 8, 16, 31]        ← NOT 32!
+Q2: R(n) = C(n,4) + C(n,2) + 1 matches exact geometry up to n = 12</code></pre>
+<p><strong>Auto-graded answers:</strong> Q1: <code>31</code> — Q2: <span
+class="math inline">R(n) = \binom{n}{4} + \binom{n}{2} + 1</span>.
+(Ironically, <span class="math inline">R(10) = 256</span> is a power of
+2 again — pure coincidence!)</p>
+<h3 id="q3-proof-eulers-formula-for-planar-graphs">Q3 — Proof (Euler’s
+formula for planar graphs)</h3>
+<p>The chords and circular arcs form a connected planar graph. We count
+vertices <span class="math inline">V</span>, edges <span
+class="math inline">E</span>, and faces <span
+class="math inline">F</span> (including the unbounded outer face), then
+use <span class="math inline">V - E + F = 2</span>.</p>
+<p><strong>Counting interior intersection points.</strong> Two chords
+cross strictly inside the disk if and only if their four endpoints
+<strong>interleave</strong> around the circle — that is, every 4-element
+subset of the <span class="math inline">n</span> points produces exactly
+<strong>one</strong> crossing pair of chords (the two “diagonals” of the
+convex quadrilateral those 4 points form). General position guarantees
+these crossing points are pairwise distinct, so the number of interior
+intersection points is</p>
+<p><span class="math display">I = \binom{n}{4}.</span></p>
+<p><strong>Counting vertices.</strong> <span class="math inline">V = n +
+I = n + \binom{n}{4}</span> (the <span class="math inline">n</span>
+boundary points plus the crossings).</p>
+<p><strong>Counting edges.</strong> Each interior crossing lies on
+exactly 2 chords and <strong>splits each into one more segment</strong>.
+A chord containing <span class="math inline">t</span> crossings is
+divided into <span class="math inline">t + 1</span> segments; summing
+over all <span class="math inline">\binom{n}{2}</span> chords, the total
+number of “lies-on” incidences is <span class="math inline">2I</span>,
+so the chords contribute <span class="math inline">\binom{n}{2} +
+2I</span> edge segments. Adding the <span class="math inline">n</span>
+circular arcs of the boundary:</p>
+<p><span class="math display">E = n + \binom{n}{2} +
+2\binom{n}{4}.</span></p>
+<p><strong>Applying Euler’s formula.</strong> The graph is connected
+(every vertex is joined to the boundary through the chords), so</p>
+<p><span class="math display">F = 2 - V + E = 2 - n - \binom{n}{4} + n +
+\binom{n}{2} + 2\binom{n}{4} = 2 + \binom{n}{2} +
+\binom{n}{4}.</span></p>
+<p>Subtracting the unbounded face outside the circle:</p>
+<p><span class="math display">R(n) = \binom{n}{4} + \binom{n}{2} + 1.
+\qquad \blacksquare</span></p>
+<p><em>Re-checking the opening sequence:</em> <span
+class="math inline">R(5) = 5 + 10 + 1 = 16</span> but <span
+class="math inline">R(6) = 15 + 15 + 1 = \mathbf{31}</span>. The
+“doubling” pattern <span class="math inline">1, 2, 4, 8, 16</span> was
+an illusion of small data.</p>
+<blockquote>
+<p><strong>Takeaway — the most important of the whole set:</strong> the
+first five data points <em>scream</em> <span
+class="math inline">2^{n-1}</span>, and they are wrong. Verification is
+not proof. This is also the one problem where the right advice for Q1 is
+<strong>don’t rush to code</strong> — drawing by hand up to <span
+class="math inline">n = 5</span> is faster; but when you need certainty
+that <span class="math inline">R(6) = 31</span> (hand drawings miscount
+easily) and need to rule out three concurrent chords, the computer’s
+exact rational arithmetic becomes irreplaceable. Knowing <em>when</em>
+to use the tool is part of the mathematics.</p>
+</blockquote>
+<hr />
+<h1 id="for-parents-and-organizers">FOR PARENTS AND ORGANIZERS</h1>
+<p><strong>What will your child actually learn?</strong> Not “more
+programming” or “solving faster”, but the foundational capacities of
+scientific thinking: stating a precise conjecture from data; sharply
+distinguishing <em>verification</em> from <em>proof</em>; actively
+hunting for counterexamples and edge cases; deciding whether a tool
+should be used at all and being able to explain every line of code they
+use; and revising their beliefs when new evidence appears. In TOML, a
+<em>discovery journal</em> recording wrong conjectures and dead ends is
+valued no less than a correct solution — because that is the honest
+picture of mathematics being made.</p>
+<p><strong>How grading and operations work.</strong> Questions 1 and 2
+of every problem are graded automatically (students submit a single
+number or short string — every answer key has been independently
+verified by the editorial team’s own programs). Question 3 is submitted
+as a photo of a handwritten proof; the grader checks it against the
+essential ideas of the reference solution (the Pigeonhole Principle and
+backward stepping in Problem 1; the XOR sum in Problem 2; cut-and-paste
+in Problem 3; generating functions in Problem 4; Euler’s formula in
+Problem 7…). The planned release rhythm during the pilot: at most three
+investigations per week — one main, one short, one optional
+extension.</p>
+<p><strong>On AI and academic integrity.</strong> Students may use AI to
+suggest directions or draft initial code, under two non-negotiable
+conditions: they must declare the scope of its use in their journal, and
+they must be able to explain everything they submit. Personal journals
+are private by default; there are no leaderboards built on students’
+mistakes; data is collected only to the extent the educational goals
+require.</p>
+<p><strong>A deliberate confession.</strong> The first draft of this
+very sample set contained several wrong answer keys — they were caught
+only when independently verified by program, following exactly the
+editorial process TOML prescribes for itself. We keep that story here
+because it <em>is</em> the central lesson of the whole project: <em>in
+mathematics, no one — not the problem setter, not the computer, not the
+AI — is exempt from the duty of verification.</em> Tools extend the
+learner’s power to observe and experiment; the responsibility to
+understand, conclude, and reason remains human.</p>
+<h1 id="toml-the-online-mathematics-laboratory-1">TOML — The Online
+Mathematics Laboratory</h1>
+<p><em>Phòng thí nghiệm Toán học Trực tuyến — trang giới thiệu dành cho
+phụ huynh, giáo viên và người tổ chức câu lạc bộ.</em></p>
+<h2 id="toml-là-gì">TOML là gì?</h2>
+<p>TOML là một cách học toán thông qua <strong>điều tra</strong>: thay
+vì nhận một bài toán đã có sẵn lời giải mẫu, học sinh nhận một
+<strong>câu hỏi toán học thật</strong> và tự mình đi hết hành trình của
+một nhà toán học — quan sát, thu thập dữ liệu, phát hiện quy luật, đặt
+giả thuyết, săn tìm phản ví dụ, và cuối cùng <strong>chứng minh</strong>
+điều mình tin là đúng. Máy tính trong TOML đóng vai trò như kính hiển vi
+trong phòng thí nghiệm sinh học: nó giúp học sinh <em>nhìn thấy</em>
+những cấu trúc mà mắt thường và giấy nháp không với tới được — chu kỳ ẩn
+trong một dãy số triệu phần tử, quy luật chung của hàng vạn cấu hình
+hình học — nhưng nó không bao giờ thay thế được lập luận của con
+người.</p>
+<p>TOML <strong>không phải</strong> là một khóa học lập trình, không
+phải hệ thống luyện thuật toán thi đấu, và không phải một trang chấm bài
+chỉ trả về “đúng/sai”. Mỗi cuộc điều tra của TOML kết thúc không phải ở
+một con số mà ở một <strong>hiểu biết</strong>: một định lý được chứng
+minh, một phản ví dụ được tìm thấy, một công thức được xác lập, hoặc một
+câu hỏi mở được phát biểu chính xác hơn.</p>
+<p>Mỗi cuộc điều tra đi qua ba hoạt động, và cấu trúc ba câu hỏi của mọi
+bài đều phản ánh đúng ba hoạt động đó:</p>
+<ol type="1">
+<li><strong>Explore — Khảo sát</strong> <em>(Câu 1)</em>: dùng máy tính
+để thí nghiệm, sinh dữ liệu, quan sát hiện tượng.</li>
+<li><strong>Explain — Giải thích</strong> <em>(Câu 2)</em>: đẩy thí
+nghiệm đến quy mô lớn hơn, nhận diện cơ chế đứng sau dữ liệu.</li>
+<li><strong>Establish — Xác lập</strong> <em>(Câu 3)</em>: chuyển hóa
+bằng chứng thực nghiệm thành một chứng minh toán học chặt chẽ.</li>
+</ol>
+<p>Câu 1 và Câu 2 được chấm tự động (học sinh nộp một con số hoặc chuỗi
+ngắn). Câu 3 — câu quyết định để phân loại tư duy — được nộp dưới dạng
+bài chứng minh viết tay và được giáo viên chấm theo các ý tưởng bản
+chất.</p>
+<p>Bài học quan trọng nhất mà TOML muốn trao cho học sinh là ranh giới
+giữa <strong>kiểm chứng</strong> và <strong>chứng minh</strong>: một quy
+luật đúng với một triệu trường hợp đầu tiên vẫn có thể sai ở trường hợp
+thứ một triệu lẻ một (Bài 7 dưới đây là một ví dụ kinh điển). Học sinh
+được phép dùng mọi công cụ — kể cả AI — để khảo sát và gợi ý hướng đi,
+nhưng phải <strong>giải thích được và chịu trách nhiệm về mọi thứ mình
+nộp</strong>; kết quả do AI đưa ra luôn được coi là một giả thuyết cần
+kiểm tra, không bao giờ là nguồn xác nhận tính đúng đắn.</p>
+<p>Bảy cuộc điều tra dưới đây là bộ mẫu hoàn chỉnh của TOML — mỗi bài
+kèm mã Python tham khảo (ngắn, tối ưu, dễ đọc) cho phần khảo sát và một
+chứng minh toán học đầy đủ cho phần xác lập. <strong>Toàn bộ đáp số đã
+được kiểm chứng độc lập bằng máy tính.</strong> Chúng cho thấy cụ thể
+“học sinh sẽ làm gì và làm như thế nào” trong TOML.</p>
+<hr />
+<h1 id="phần-i-ba-cuộc-điều-tra-cho-thcs-ms">PHẦN I — BA CUỘC ĐIỀU TRA
+CHO THCS (MS)</h1>
+<p><em>Tiêu chí: lập trình mức cơ bản (vòng lặp, mảng, đệ quy nhẹ); toán
+học tập trung vào số học trực quan, nguyên lý đếm và hình học ô
+lưới.</em></p>
+<hr />
+<h2 id="bài-1.-chu-kỳ-pisano-chữ-số-tận-cùng-của-fibonacci">Bài 1. Chu
+kỳ Pisano — chữ số tận cùng của Fibonacci</h2>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Lĩnh vực</th>
+<th>Đối tượng</th>
+<th>Độ khó toán / kỹ thuật / độ mở</th>
+<th>Vai trò công cụ</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Số học</td>
+<td>Lớp 7–9</td>
+<td>★★☆☆☆ / ★★☆☆☆ / ★★☆☆☆</td>
+<td>#Phát_hiện_Quy_luật — gần như thiết yếu</td>
+</tr>
+</tbody>
+</table>
+<h3 id="đề-bài">Đề bài</h3>
+<ul>
+<li><strong>Câu 1 (Khảo sát).</strong> Tìm <strong>chữ số tận
+cùng</strong> của số Fibonacci thứ một triệu, <span
+class="math inline">F_{1\,000\,000}</span>.</li>
+<li><strong>Câu 2 (Tối ưu).</strong> Tìm <strong>hai chữ số tận
+cùng</strong> của số Fibonacci thứ một tỷ, <span
+class="math inline">F_{1\,000\,000\,000}</span>.</li>
+<li><strong>Câu 3 (Chứng minh).</strong> Xét dãy số dư của Fibonacci khi
+chia cho một số nguyên dương <span class="math inline">m</span> bất kỳ.
+Chứng minh rằng dãy số dư này <strong>bắt buộc tuần hoàn</strong>, và
+chu kỳ luôn bắt đầu ngay từ đầu dãy (tức là quay về cặp số dư <span
+class="math inline">(0, 1)</span>).</li>
+</ul>
+<h3 id="lời-giải-câu-12-python">Lời giải Câu 1–2 (Python)</h3>
+<p>Tính trực tiếp <span class="math inline">F_{10^9}</span> là bất khả
+thi với vòng lặp thường — đó chính là cái “bẫy” buộc học sinh phải tìm
+ra <strong>chu kỳ</strong>: dãy chữ số tận cùng lặp lại! Chỉ cần tìm chu
+kỳ rồi rút gọn chỉ số.</p>
+<div class="sourceCode" id="cb15"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> chu_ky_pisano(m):</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">&quot;&quot;&quot;Chu kỳ của dãy Fibonacci mod m: đếm số bước đến khi gặp lại cặp (0, 1).&quot;&quot;&quot;</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>    a, b <span class="op">=</span> <span class="dv">0</span>, <span class="dv">1</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> buoc <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, m <span class="op">*</span> m <span class="op">+</span> <span class="dv">1</span>):        <span class="co"># chu kỳ không vượt quá m^2 (xem Câu 3)</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>        a, b <span class="op">=</span> b, (a <span class="op">+</span> b) <span class="op">%</span> m</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> (a, b) <span class="op">==</span> (<span class="dv">0</span>, <span class="dv">1</span>):</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> buoc</span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> fibonacci_mod(n, m):</span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>    <span class="co">&quot;&quot;&quot;Tính F_n mod m bằng cách rút gọn chỉ số theo chu kỳ Pisano.&quot;&quot;&quot;</span></span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>    n_rut_gon <span class="op">=</span> n <span class="op">%</span> chu_ky_pisano(m)</span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>    a, b <span class="op">=</span> <span class="dv">0</span>, <span class="dv">1</span></span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(n_rut_gon):</span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>        a, b <span class="op">=</span> b, (a <span class="op">+</span> b) <span class="op">%</span> m</span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> a</span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Câu 1:&quot;</span>, fibonacci_mod(<span class="dv">10</span><span class="op">**</span><span class="dv">6</span>, <span class="dv">10</span>))               <span class="co"># chữ số tận cùng</span></span>
+<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Câu 2:&quot;</span>, <span class="bu">str</span>(fibonacci_mod(<span class="dv">10</span><span class="op">**</span><span class="dv">9</span>, <span class="dv">100</span>)).zfill(<span class="dv">2</span>)) <span class="co"># hai chữ số tận cùng</span></span></code></pre></div>
+<p><strong>Kết quả (đã kiểm chứng):</strong></p>
+<pre><code>Chu kỳ Pisano mod 10  = 60      →  10^6 mod 60  = 40,  F_40  = 102334155
+Chu kỳ Pisano mod 100 = 300     →  10^9 mod 300 = 100, F_100 = ...915075
+Câu 1: 5
+Câu 2: 75</code></pre>
+<p><strong>Đáp số chấm tự động:</strong> Câu 1: <code>5</code> — Câu 2:
+<code>75</code>.</p>
+<h3
+id="câu-3-chứng-minh-tính-tuần-hoàn-thuần-túy-của-fibonacci-mod-m">Câu 3
+— Chứng minh (tính tuần hoàn thuần túy của Fibonacci mod m)</h3>
+<p><strong>Bước 1 — Dãy phải lặp lại (Nguyên lý Dirichlet).</strong> Mỗi
+số hạng của dãy số dư được quyết định hoàn toàn bởi <strong>cặp hai số
+hạng liền trước</strong> nó. Số cặp số dư khả dĩ <span
+class="math inline">(F_i \bmod m,\; F_{i+1} \bmod m)</span> là hữu hạn:
+nhiều nhất <span class="math inline">m^2</span> cặp. Dãy Fibonacci thì
+vô hạn, nên theo Nguyên lý Dirichlet, tồn tại hai vị trí <span
+class="math inline">i &lt; j</span> (với <span class="math inline">j - i
+\le m^2</span>) sao cho</p>
+<p><span class="math display">(F_i, F_{i+1}) \equiv (F_j, F_{j+1})
+\pmod{m}.</span></p>
+<p>Vì công thức truy hồi <span class="math inline">F_{n+2} = F_{n+1} +
+F_n</span> chỉ phụ thuộc vào cặp liền trước, hai vị trí có cặp giống
+nhau sẽ sinh ra toàn bộ phần đuôi giống hệt nhau: dãy tuần hoàn kể từ vị
+trí <span class="math inline">i</span> với chu kỳ <span
+class="math inline">T = j - i</span>.</p>
+<p><strong>Bước 2 — Chu kỳ bắt đầu ngay từ đầu (tính xác định
+ngược).</strong> Điểm mấu chốt: Fibonacci không chỉ chạy xuôi được mà
+còn <strong>chạy ngược</strong> được:</p>
+<p><span class="math display">F_{n-1} = F_{n+1} - F_n.</span></p>
+<p>Nghĩa là cặp <span class="math inline">(F_n, F_{n+1})</span> quyết
+định duy nhất cặp đứng trước <span class="math inline">(F_{n-1},
+F_n)</span>, kể cả khi làm việc với số dư mod <span
+class="math inline">m</span>. Từ <span class="math inline">(F_i,
+F_{i+1}) \equiv (F_j, F_{j+1})</span>, áp dụng phép lùi này <span
+class="math inline">i</span> lần:</p>
+<p><span class="math display">(F_{i-1}, F_i) \equiv (F_{j-1}, F_j),
+\quad \dots, \quad (F_0, F_1) \equiv (F_{j-i}, F_{j-i+1})
+\pmod{m}.</span></p>
+<p>Vậy cặp xuất phát <span class="math inline">(0, 1)</span> xuất hiện
+trở lại tại vị trí <span class="math inline">T = j - i</span>: dãy số dư
+<strong>tuần hoàn thuần túy</strong> — không có “phần đuôi tiền chu kỳ”
+— và chu kỳ không vượt quá <span class="math inline">m^2</span>. <span
+class="math inline">\blacksquare</span></p>
+<blockquote>
+<p><strong>Bài học:</strong> dữ liệu máy tính gợi ý chu kỳ tồn tại;
+Nguyên lý Dirichlet + tính chạy ngược <em>chứng minh</em> nó bắt buộc
+tồn tại với <strong>mọi</strong> <span class="math inline">m</span> —
+điều mà không lượng thí nghiệm nào xác nhận nổi.</p>
+</blockquote>
+<hr />
+<h2 id="bài-2.-trò-chơi-nim-và-chiến-thuật-xor-nhị-phân">Bài 2. Trò chơi
+Nim và chiến thuật XOR nhị phân</h2>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Lĩnh vực</th>
+<th>Đối tượng</th>
+<th>Độ khó toán / kỹ thuật / độ mở</th>
+<th>Vai trò công cụ</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Tổ hợp trò chơi</td>
+<td>Lớp 8–9</td>
+<td>★★★☆☆ / ★★☆☆☆ / ★★★☆☆</td>
+<td>#Tìm_kiếm_Cấu_hình, #Phát_hiện_Quy_luật — hữu ích</td>
+</tr>
+</tbody>
+</table>
+<h3 id="đề-bài-1">Đề bài</h3>
+<p>Hai người chơi lần lượt bốc một số viên sỏi tùy ý (ít nhất 1 viên) từ
+<strong>một</strong> đống. Ai bốc viên sỏi cuối cùng là người thắng.</p>
+<ul>
+<li><strong>Câu 1 (Vét cạn).</strong> Với 3 đống sỏi, mỗi đống tối đa 5
+viên: in ra <strong>tất cả</strong> các trạng thái <span
+class="math inline">(a, b, c)</span> với <span class="math inline">a \le
+b \le c \le 5</span> khiến người đi trước <strong>chắc chắn
+thua</strong> nếu đối thủ chơi tối ưu.</li>
+<li><strong>Câu 2 (Áp dụng).</strong> Trận đấu thực tế có 3 đống <span
+class="math inline">(13, 17, 30)</span> và bạn đi trước. Tìm nước đi đầu
+tiên tối ưu.</li>
+<li><strong>Câu 3 (Chứng minh).</strong> Dùng biểu diễn nhị phân, phát
+biểu và chứng minh định lý về điều kiện cần và đủ của một “trạng thái
+thua” cho trò chơi Nim tổng quát <span class="math inline">k</span> đống
+<span class="math inline">(n_1, \dots, n_k)</span>.</li>
+</ul>
+<h3 id="lời-giải-câu-12-python-1">Lời giải Câu 1–2 (Python)</h3>
+<p>Câu 1 không cần biết trước lý thuyết nào: chỉ cần định nghĩa đệ quy
+<em>“thắng nếu tồn tại một nước đi đẩy đối thủ vào trạng thái thua”</em>
+và để máy tính vét cạn.</p>
+<div class="sourceCode" id="cb17"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> functools <span class="im">import</span> lru_cache</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="at">@lru_cache</span>(maxsize<span class="op">=</span><span class="va">None</span>)</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> thang(trang_thai):</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>    <span class="co">&quot;&quot;&quot;True nếu người ĐẾN LƯỢT thắng khi cả hai bên chơi tối ưu.&quot;&quot;&quot;</span></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">sum</span>(trang_thai) <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">False</span>                        <span class="co"># hết sỏi: người đến lượt đã thua</span></span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i, dong <span class="kw">in</span> <span class="bu">enumerate</span>(trang_thai):</span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> con_lai <span class="kw">in</span> <span class="bu">range</span>(dong):         <span class="co"># thử bốc 1..dong viên từ đống i</span></span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>            moi <span class="op">=</span> <span class="bu">list</span>(trang_thai)</span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a>            moi[i] <span class="op">=</span> con_lai</span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> <span class="kw">not</span> thang(<span class="bu">tuple</span>(<span class="bu">sorted</span>(moi))):</span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a>                <span class="cf">return</span> <span class="va">True</span>                 <span class="co"># có nước đẩy đối thủ vào thế thua</span></span>
+<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="va">False</span></span>
+<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Câu 1: vét cạn mọi trạng thái a &lt;= b &lt;= c &lt;= 5</span></span>
+<span id="cb17-17"><a href="#cb17-17" aria-hidden="true" tabindex="-1"></a>thua <span class="op">=</span> [(a, b, c) <span class="cf">for</span> a <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">6</span>) <span class="cf">for</span> b <span class="kw">in</span> <span class="bu">range</span>(a, <span class="dv">6</span>) <span class="cf">for</span> c <span class="kw">in</span> <span class="bu">range</span>(b, <span class="dv">6</span>)</span>
+<span id="cb17-18"><a href="#cb17-18" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="kw">not</span> thang((a, b, c))]</span>
+<span id="cb17-19"><a href="#cb17-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Câu 1:&quot;</span>, thua)</span>
+<span id="cb17-20"><a href="#cb17-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-21"><a href="#cb17-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Quan sát dữ liệu → giả thuyết: trạng thái thua &lt;=&gt; a XOR b XOR c == 0</span></span>
+<span id="cb17-22"><a href="#cb17-22" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Giả thuyết XOR:&quot;</span>, <span class="bu">all</span>(a <span class="op">^</span> b <span class="op">^</span> c <span class="op">==</span> <span class="dv">0</span> <span class="cf">for</span> a, b, c <span class="kw">in</span> thua))</span>
+<span id="cb17-23"><a href="#cb17-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-24"><a href="#cb17-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Câu 2: dùng định lý Bouton (chứng minh ở Câu 3) cho trạng thái lớn</span></span>
+<span id="cb17-25"><a href="#cb17-25" aria-hidden="true" tabindex="-1"></a>xuat_phat <span class="op">=</span> (<span class="dv">13</span>, <span class="dv">17</span>, <span class="dv">30</span>)</span>
+<span id="cb17-26"><a href="#cb17-26" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> <span class="dv">13</span> <span class="op">^</span> <span class="dv">17</span> <span class="op">^</span> <span class="dv">30</span>                            <span class="co"># &quot;tổng Nim&quot; của trạng thái</span></span>
+<span id="cb17-27"><a href="#cb17-27" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> dong <span class="kw">in</span> xuat_phat:</span>
+<span id="cb17-28"><a href="#cb17-28" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> dong <span class="op">^</span> s <span class="op">&lt;</span> dong:                     <span class="co"># hạ đống này xuống dong^s là nước thắng</span></span>
+<span id="cb17-29"><a href="#cb17-29" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f&quot;Câu 2: bốc </span><span class="sc">{</span>dong <span class="op">-</span> (dong <span class="op">^</span> s)<span class="sc">}</span><span class="ss"> viên từ đống </span><span class="sc">{</span>dong<span class="sc">}</span><span class="ss">, còn lại </span><span class="sc">{</span>dong <span class="op">^</span> s<span class="sc">}</span><span class="ss">&quot;</span>)</span></code></pre></div>
+<p><strong>Kết quả (đã kiểm chứng):</strong></p>
+<pre><code>Câu 1: [(0,0,0), (0,1,1), (0,2,2), (0,3,3), (0,4,4), (0,5,5), (1,2,3), (1,4,5)]
+Giả thuyết XOR: True
+Câu 2: bốc 2 viên từ đống 30, còn lại 28    →  trạng thái (13, 17, 28) có XOR = 0</code></pre>
+<p><strong>Đáp số chấm tự động:</strong> Câu 1: 8 trạng thái như trên —
+Câu 2: <code>bốc 2 viên từ đống 30</code> (đưa về <span
+class="math inline">(13, 17, 28)</span>; đây là nước thắng <strong>duy
+nhất</strong>).</p>
+<h3 id="câu-3-chứng-minh-định-lý-bouton-1901">Câu 3 — Chứng minh (Định
+lý Bouton, 1901)</h3>
+<p><strong>Định lý.</strong> Trạng thái Nim <span
+class="math inline">(n_1, \dots, n_k)</span> là <strong>trạng thái
+thua</strong> cho người đến lượt khi và chỉ khi <em>tổng Nim</em> <span
+class="math inline">s = n_1 \oplus n_2 \oplus \dots \oplus n_k =
+0</span>, trong đó <span class="math inline">\oplus</span> là phép XOR
+theo từng bit nhị phân.</p>
+<p><em>Chứng minh.</em> Ta kiểm tra ba tính chất, rồi kết luận bằng quy
+nạp theo tổng số sỏi.</p>
+<p><strong>(a) Trạng thái kết thúc có <span class="math inline">s =
+0</span>.</strong> Trạng thái <span class="math inline">(0, \dots,
+0)</span> — người đến lượt hết nước đi và đã thua — có tổng XOR bằng
+<span class="math inline">0</span>.</p>
+<p><strong>(b) Từ <span class="math inline">s = 0</span>, mọi nước đi
+đều dẫn tới <span class="math inline">s&#39; \ne 0</span>.</strong> Một
+nước đi thay đúng một đống <span class="math inline">n_i</span> bằng
+<span class="math inline">n_i&#39; &lt; n_i</span>. Tổng mới là</p>
+<p><span class="math display">s&#39; = s \oplus n_i \oplus n_i&#39; = 0
+\oplus n_i \oplus n_i&#39; = n_i \oplus n_i&#39;.</span></p>
+<p>Vì <span class="math inline">n_i&#39; \ne n_i</span> nên <span
+class="math inline">n_i \oplus n_i&#39; \ne 0</span>. Vậy người chơi ở
+trạng thái cân bằng <em>bắt buộc</em> phá vỡ cân bằng.</p>
+<p><strong>(c) Từ <span class="math inline">s \ne 0</span>, luôn tồn tại
+nước đi dẫn tới <span class="math inline">s&#39; = 0</span>.</strong>
+Gọi <span class="math inline">d</span> là <strong>bit cao nhất</strong>
+của <span class="math inline">s</span>. Vì bit <span
+class="math inline">d</span> của <span class="math inline">s</span> bằng
+<span class="math inline">1</span>, phải có ít nhất một đống <span
+class="math inline">n_i</span> có bit <span class="math inline">d</span>
+bằng <span class="math inline">1</span> (nếu không, XOR tại bit đó đã
+bằng <span class="math inline">0</span>). Với đống này:</p>
+<p><span class="math display">n_i&#39; := n_i \oplus s &lt;
+n_i,</span></p>
+<p>bởi vì phép XOR với <span class="math inline">s</span> đổi bit <span
+class="math inline">d</span> của <span class="math inline">n_i</span> từ
+<span class="math inline">1</span> xuống <span
+class="math inline">0</span> và chỉ chạm tới các bit thấp hơn <span
+class="math inline">d</span>. Vậy “hạ đống <span
+class="math inline">n_i</span> xuống còn <span class="math inline">n_i
+\oplus s</span>” là một nước đi hợp lệ, và nó cho</p>
+<p><span class="math display">s&#39; = s \oplus n_i \oplus n_i&#39; = s
+\oplus n_i \oplus n_i \oplus s = 0.</span></p>
+<p><strong>Kết luận (quy nạp theo tổng số sỏi).</strong> Nếu <span
+class="math inline">s = 0</span>: hoặc đã hết sỏi và bạn thua theo (a),
+hoặc theo (b) mọi nước đi của bạn trao cho đối thủ một trạng thái <span
+class="math inline">s&#39; \ne 0</span> với ít sỏi hơn — mà theo giả
+thiết quy nạp là trạng thái thắng của đối thủ. Nếu <span
+class="math inline">s \ne 0</span>: theo (c) bạn có nước đi trao cho đối
+thủ trạng thái <span class="math inline">s&#39; = 0</span> với ít sỏi
+hơn — trạng thái thua của họ. <span
+class="math inline">\blacksquare</span></p>
+<p><em>Áp dụng cho Câu 2:</em> <span class="math inline">13 \oplus 17
+\oplus 30 = 2 \ne 0</span> nên người đi trước thắng; nước duy nhất đưa
+tổng Nim về <span class="math inline">0</span> là <span
+class="math inline">30 \to 30 \oplus 2 = 28</span>.</p>
+<blockquote>
+<p><strong>Bài học:</strong> máy tính vét cạn được bảng 5×5×5 nhưng bất
+lực trước <span class="math inline">(13, 17, 30)</span> nếu không có lý
+thuyết; ngược lại, chính bảng vét cạn nhỏ là nơi giả thuyết XOR lộ diện.
+Thực nghiệm và chứng minh nương tựa nhau.</p>
+</blockquote>
+<hr />
+<h2 id="bài-3.-định-lý-pick-diện-tích-trên-lưới-ô-vuông">Bài 3. Định lý
+Pick — diện tích trên lưới ô vuông</h2>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Lĩnh vực</th>
+<th>Đối tượng</th>
+<th>Độ khó toán / kỹ thuật / độ mở</th>
+<th>Vai trò công cụ</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Hình học lưới</td>
+<td>Lớp 8–9</td>
+<td>★★★☆☆ / ★★☆☆☆ / ★★★☆☆</td>
+<td>#Quan_sát, #Phát_hiện_Quy_luật — hữu ích</td>
+</tr>
+</tbody>
+</table>
+<h3 id="đề-bài-2">Đề bài</h3>
+<p>Một <em>đa giác nguyên</em> là đa giác có mọi đỉnh nằm trên các điểm
+nguyên của lưới ô vuông. Gọi <span class="math inline">I</span> là số
+điểm nguyên nằm <strong>hẳn bên trong</strong> đa giác và <span
+class="math inline">B</span> là số điểm nguyên nằm <strong>trên
+biên</strong>.</p>
+<ul>
+<li><strong>Câu 1 (Thực nghiệm).</strong> Đếm <span
+class="math inline">I</span> và <span class="math inline">B</span> của
+tam giác vuông <span class="math inline">O(0,0)</span>, <span
+class="math inline">A(6,0)</span>, <span
+class="math inline">B(0,8)</span>.</li>
+<li><strong>Câu 2 (Phát hiện).</strong> Sinh 20 đa giác nguyên khác
+nhau; với mỗi đa giác tính diện tích <span class="math inline">S</span>
+bằng công thức Shoelace (Gauss) và đếm <span
+class="math inline">I</span>, <span class="math inline">B</span>. Tìm
+hằng số <span class="math inline">k</span> trong hệ thức <span
+class="math inline">S = I + k \cdot B - 1</span>.</li>
+<li><strong>Câu 3 (Chứng minh).</strong> Chứng minh Định lý Pick cho mọi
+đa giác nguyên bằng phương pháp “cắt–ghép”: trước hết giải thích vì sao
+định lý đúng với <em>tam giác cơ sở</em> (tam giác nguyên không chứa
+điểm nguyên nào khác ngoài 3 đỉnh), sau đó chứng minh công thức
+<strong>cộng được</strong> khi ghép hai đa giác.</li>
+</ul>
+<h3 id="lời-giải-câu-12-python-2">Lời giải Câu 1–2 (Python)</h3>
+<div class="sourceCode" id="cb19"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> math <span class="im">import</span> gcd</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> random</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> dien_tich_shoelace(dinh):</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>    <span class="co">&quot;&quot;&quot;Diện tích đa giác theo công thức Gauss, đỉnh liệt kê theo thứ tự trên biên.&quot;&quot;&quot;</span></span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>    n <span class="op">=</span> <span class="bu">len</span>(dinh)</span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>    tong <span class="op">=</span> <span class="bu">sum</span>(dinh[i][<span class="dv">0</span>] <span class="op">*</span> dinh[(i<span class="op">+</span><span class="dv">1</span>) <span class="op">%</span> n][<span class="dv">1</span>] <span class="op">-</span> dinh[(i<span class="op">+</span><span class="dv">1</span>) <span class="op">%</span> n][<span class="dv">0</span>] <span class="op">*</span> dinh[i][<span class="dv">1</span>]</span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>               <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(n))</span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="bu">abs</span>(tong) <span class="op">/</span> <span class="dv">2</span></span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> dem_bien(dinh):</span>
+<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a>    <span class="co">&quot;&quot;&quot;Số điểm nguyên trên biên: cạnh có vectơ (dx, dy) đóng góp gcd(|dx|, |dy|) điểm.&quot;&quot;&quot;</span></span>
+<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a>    n <span class="op">=</span> <span class="bu">len</span>(dinh)</span>
+<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="bu">sum</span>(gcd(<span class="bu">abs</span>(dinh[(i<span class="op">+</span><span class="dv">1</span>) <span class="op">%</span> n][<span class="dv">0</span>] <span class="op">-</span> dinh[i][<span class="dv">0</span>]),</span>
+<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a>                   <span class="bu">abs</span>(dinh[(i<span class="op">+</span><span class="dv">1</span>) <span class="op">%</span> n][<span class="dv">1</span>] <span class="op">-</span> dinh[i][<span class="dv">1</span>])) <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(n))</span>
+<span id="cb19-16"><a href="#cb19-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-17"><a href="#cb19-17" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> dem_trong(dinh):</span>
+<span id="cb19-18"><a href="#cb19-18" aria-hidden="true" tabindex="-1"></a>    <span class="co">&quot;&quot;&quot;Đếm điểm nguyên nằm hẳn bên trong (đa giác lồi): mọi tích có hướng cùng dấu.&quot;&quot;&quot;</span></span>
+<span id="cb19-19"><a href="#cb19-19" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> trong(p):</span>
+<span id="cb19-20"><a href="#cb19-20" aria-hidden="true" tabindex="-1"></a>        dau <span class="op">=</span> []</span>
+<span id="cb19-21"><a href="#cb19-21" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(dinh)):</span>
+<span id="cb19-22"><a href="#cb19-22" aria-hidden="true" tabindex="-1"></a>            (x1, y1), (x2, y2) <span class="op">=</span> dinh[i], dinh[(i<span class="op">+</span><span class="dv">1</span>) <span class="op">%</span> <span class="bu">len</span>(dinh)]</span>
+<span id="cb19-23"><a href="#cb19-23" aria-hidden="true" tabindex="-1"></a>            d <span class="op">=</span> (x2<span class="op">-</span>x1) <span class="op">*</span> (p[<span class="dv">1</span>]<span class="op">-</span>y1) <span class="op">-</span> (y2<span class="op">-</span>y1) <span class="op">*</span> (p[<span class="dv">0</span>]<span class="op">-</span>x1)</span>
+<span id="cb19-24"><a href="#cb19-24" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> d <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb19-25"><a href="#cb19-25" aria-hidden="true" tabindex="-1"></a>                <span class="cf">return</span> <span class="va">False</span>                 <span class="co"># trên biên thì không tính</span></span>
+<span id="cb19-26"><a href="#cb19-26" aria-hidden="true" tabindex="-1"></a>            dau.append(d <span class="op">&gt;</span> <span class="dv">0</span>)</span>
+<span id="cb19-27"><a href="#cb19-27" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="bu">all</span>(dau) <span class="kw">or</span> <span class="kw">not</span> <span class="bu">any</span>(dau)</span>
+<span id="cb19-28"><a href="#cb19-28" aria-hidden="true" tabindex="-1"></a>    xs, ys <span class="op">=</span> [p[<span class="dv">0</span>] <span class="cf">for</span> p <span class="kw">in</span> dinh], [p[<span class="dv">1</span>] <span class="cf">for</span> p <span class="kw">in</span> dinh]</span>
+<span id="cb19-29"><a href="#cb19-29" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="bu">sum</span>(trong((x, y)) <span class="cf">for</span> x <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">min</span>(xs), <span class="bu">max</span>(xs) <span class="op">+</span> <span class="dv">1</span>)</span>
+<span id="cb19-30"><a href="#cb19-30" aria-hidden="true" tabindex="-1"></a>                              <span class="cf">for</span> y <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">min</span>(ys), <span class="bu">max</span>(ys) <span class="op">+</span> <span class="dv">1</span>))</span>
+<span id="cb19-31"><a href="#cb19-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-32"><a href="#cb19-32" aria-hidden="true" tabindex="-1"></a><span class="co"># Câu 1: tam giác O(0,0), A(6,0), B(0,8)</span></span>
+<span id="cb19-33"><a href="#cb19-33" aria-hidden="true" tabindex="-1"></a>tg <span class="op">=</span> [(<span class="dv">0</span>, <span class="dv">0</span>), (<span class="dv">6</span>, <span class="dv">0</span>), (<span class="dv">0</span>, <span class="dv">8</span>)]</span>
+<span id="cb19-34"><a href="#cb19-34" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Câu 1: I =&quot;</span>, dem_trong(tg), <span class="st">&quot; B =&quot;</span>, dem_bien(tg), <span class="st">&quot; S =&quot;</span>, dien_tich_shoelace(tg))</span>
+<span id="cb19-35"><a href="#cb19-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-36"><a href="#cb19-36" aria-hidden="true" tabindex="-1"></a><span class="co"># Câu 2: 20 đa giác lồi nguyên ngẫu nhiên (bao lồi của các điểm ngẫu nhiên)</span></span>
+<span id="cb19-37"><a href="#cb19-37" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> bao_loi(diem):</span>
+<span id="cb19-38"><a href="#cb19-38" aria-hidden="true" tabindex="-1"></a>    diem <span class="op">=</span> <span class="bu">sorted</span>(<span class="bu">set</span>(diem))</span>
+<span id="cb19-39"><a href="#cb19-39" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> nua(day):</span>
+<span id="cb19-40"><a href="#cb19-40" aria-hidden="true" tabindex="-1"></a>        ch <span class="op">=</span> []</span>
+<span id="cb19-41"><a href="#cb19-41" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> p <span class="kw">in</span> day:</span>
+<span id="cb19-42"><a href="#cb19-42" aria-hidden="true" tabindex="-1"></a>            <span class="cf">while</span> <span class="bu">len</span>(ch) <span class="op">&gt;=</span> <span class="dv">2</span> <span class="kw">and</span> <span class="op">\</span></span>
+<span id="cb19-43"><a href="#cb19-43" aria-hidden="true" tabindex="-1"></a>                  (ch[<span class="op">-</span><span class="dv">1</span>][<span class="dv">0</span>]<span class="op">-</span>ch[<span class="op">-</span><span class="dv">2</span>][<span class="dv">0</span>]) <span class="op">*</span> (p[<span class="dv">1</span>]<span class="op">-</span>ch[<span class="op">-</span><span class="dv">2</span>][<span class="dv">1</span>]) <span class="op">-</span> <span class="op">\</span></span>
+<span id="cb19-44"><a href="#cb19-44" aria-hidden="true" tabindex="-1"></a>                  (ch[<span class="op">-</span><span class="dv">1</span>][<span class="dv">1</span>]<span class="op">-</span>ch[<span class="op">-</span><span class="dv">2</span>][<span class="dv">1</span>]) <span class="op">*</span> (p[<span class="dv">0</span>]<span class="op">-</span>ch[<span class="op">-</span><span class="dv">2</span>][<span class="dv">0</span>]) <span class="op">&lt;=</span> <span class="dv">0</span>:</span>
+<span id="cb19-45"><a href="#cb19-45" aria-hidden="true" tabindex="-1"></a>                ch.pop()</span>
+<span id="cb19-46"><a href="#cb19-46" aria-hidden="true" tabindex="-1"></a>            ch.append(p)</span>
+<span id="cb19-47"><a href="#cb19-47" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> ch</span>
+<span id="cb19-48"><a href="#cb19-48" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> nua(diem)[:<span class="op">-</span><span class="dv">1</span>] <span class="op">+</span> nua(diem[::<span class="op">-</span><span class="dv">1</span>])[:<span class="op">-</span><span class="dv">1</span>]</span>
+<span id="cb19-49"><a href="#cb19-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-50"><a href="#cb19-50" aria-hidden="true" tabindex="-1"></a>random.seed(<span class="dv">2026</span>)</span>
+<span id="cb19-51"><a href="#cb19-51" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">20</span>):</span>
+<span id="cb19-52"><a href="#cb19-52" aria-hidden="true" tabindex="-1"></a>    dinh <span class="op">=</span> bao_loi([(random.randint(<span class="dv">0</span>, <span class="dv">15</span>), random.randint(<span class="dv">0</span>, <span class="dv">15</span>)) <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">12</span>)])</span>
+<span id="cb19-53"><a href="#cb19-53" aria-hidden="true" tabindex="-1"></a>    S, I, B <span class="op">=</span> dien_tich_shoelace(dinh), dem_trong(dinh), dem_bien(dinh)</span>
+<span id="cb19-54"><a href="#cb19-54" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> (S <span class="op">+</span> <span class="dv">1</span> <span class="op">-</span> I) <span class="op">/</span> B <span class="op">==</span> <span class="fl">0.5</span>            <span class="co"># k luôn bằng 1/2</span></span>
+<span id="cb19-55"><a href="#cb19-55" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Câu 2: k = 0.5 cho cả 20 đa giác  →  S = I + B/2 - 1&quot;</span>)</span></code></pre></div>
+<p><strong>Kết quả (đã kiểm chứng):</strong></p>
+<pre><code>Câu 1: I = 17  B = 16  S = 24.0        (kiểm tra: 17 + 16/2 - 1 = 24 ✓)
+Câu 2: k = 0.5 cho cả 20 đa giác  →  S = I + B/2 - 1</code></pre>
+<p><strong>Đáp số chấm tự động:</strong> Câu 1:
+<code>I = 17, B = 16</code> — Câu 2: <code>k = 0.5</code> (Định lý Pick:
+<span class="math inline">S = I + \frac{B}{2} - 1</span>).</p>
+<h3 id="câu-3-chứng-minh-định-lý-pick">Câu 3 — Chứng minh (Định lý
+Pick)</h3>
+<p>Đặt <span class="math inline">P(Đ) := I + \frac{B}{2} - 1</span> cho
+đa giác nguyên <span class="math inline">Đ</span>. Ta cần chứng minh
+<span class="math inline">S(Đ) = P(Đ)</span>.</p>
+<p><strong>Bước 1 — Tam giác cơ sở.</strong> Một <em>tam giác cơ sở</em>
+có <span class="math inline">I = 0</span>, <span class="math inline">B =
+3</span>, nên công thức Pick dự đoán <span class="math inline">S = 0 +
+\frac{3}{2} - 1 = \frac{1}{2}</span>. Ta chứng minh diện tích của nó
+đúng bằng <span class="math inline">\frac{1}{2}</span>: Lấy tam giác cơ
+sở <span class="math inline">T</span> với các đỉnh <span
+class="math inline">A, B, C</span>. Lấy đối xứng <span
+class="math inline">T</span> qua trung điểm của cạnh <span
+class="math inline">BC</span> ta được tam giác <span
+class="math inline">T&#39;</span>; hợp <span class="math inline">T \cup
+T&#39;</span> là hình bình hành <span class="math inline">H</span> có
+đỉnh nguyên và — do phép đối xứng tâm qua một điểm nửa nguyên biến lưới
+điểm nguyên thành chính nó — <span class="math inline">H</span> cũng
+không chứa điểm nguyên nào ngoài 4 đỉnh. Các bản dịch chuyển của <span
+class="math inline">H</span> theo hai vectơ cạnh của nó <strong>lát kín
+mặt phẳng</strong>, và mỗi bản sao “sở hữu” đúng một điểm nguyên (một
+đỉnh). Mật độ điểm nguyên trên mặt phẳng là <span
+class="math inline">1</span> điểm trên mỗi đơn vị diện tích, nên diện
+tích của <span class="math inline">H</span> bằng <span
+class="math inline">1</span>, suy ra <span class="math inline">S(T) =
+\frac{1}{2}</span>. Vậy công thức đúng cho mọi tam giác cơ sở.</p>
+<p><strong>Bước 2 — Tính cộng được của công thức Pick.</strong> Giả sử
+đa giác <span class="math inline">Đ</span> được ghép từ hai đa giác
+nguyên <span class="math inline">Đ_1, Đ_2</span> dán với nhau dọc theo
+một đường gấp khúc chung chứa <span class="math inline">e</span> điểm
+nguyên (kể cả hai đầu mút). Khi ghép:</p>
+<ul>
+<li>Diện tích cộng lại: <span class="math inline">S = S_1 +
+S_2</span>.</li>
+<li><span class="math inline">e - 2</span> điểm nguyên nằm giữa đường
+dán chuyển từ “biên” thành “trong”: <span class="math inline">I = I_1 +
+I_2 + (e - 2)</span>.</li>
+<li>Điểm biên: các điểm giữa của đường dán bị đếm ở cả <span
+class="math inline">B_1</span> lẫn <span class="math inline">B_2</span>
+rồi biến mất khỏi biên, hai đầu mút bị đếm hai lần nhưng vẫn ở lại biên:
+<span class="math inline">B = B_1 + B_2 - 2(e - 2) - 2</span>.</li>
+</ul>
+<p>Do đó:</p>
+<p><span class="math display">P(Đ_1) + P(Đ_2) = (I_1 + I_2) + \frac{B_1
++ B_2}{2} - 2 = \big(I - (e-2)\big) + \frac{B + 2(e-2) + 2}{2} - 2 = I +
+\frac{B}{2} - 1 = P(Đ).</span></p>
+<p>Vậy nếu công thức Pick đúng cho <span class="math inline">Đ_1</span>
+và <span class="math inline">Đ_2</span> thì nó đúng cho <span
+class="math inline">Đ</span> (và ngược lại: đúng cho <span
+class="math inline">Đ</span> và một mảnh thì đúng cho mảnh còn lại).</p>
+<p><strong>Bước 3 — Kết luận bằng quy nạp.</strong> Mọi đa giác nguyên
+đều tam giác phân được (quy nạp theo số đỉnh: một đa giác có <span
+class="math inline">\ge 4</span> đỉnh luôn có đường chéo nằm hoàn toàn
+bên trong, cắt nó thành hai đa giác nhỏ hơn). Mỗi tam giác nguyên lại
+chia nhỏ tiếp được thành các tam giác cơ sở (quy nạp theo số điểm nguyên
+chứa trong nó: còn điểm nào ngoài 3 đỉnh thì nối điểm đó với các đỉnh để
+tách nhỏ). Áp dụng Bước 1 cho từng mảnh cơ sở rồi ghép dần lại bằng Bước
+2, ta được <span class="math inline">S(Đ) = P(Đ)</span> cho mọi đa giác
+nguyên. <span class="math inline">\blacksquare</span></p>
+<blockquote>
+<p><strong>Bài học:</strong> máy tính phát hiện hệ số <span
+class="math inline">k = \frac{1}{2}</span> trong vài giây, nhưng câu hỏi
+“vì sao lại là <span class="math inline">\frac{1}{2}</span> với
+<strong>mọi</strong> đa giác?” chỉ có cắt–ghép và quy nạp trả lời
+được.</p>
+</blockquote>
+<hr />
+<h1 id="phần-ii-ba-cuộc-điều-tra-cho-thpt-hs">PHẦN II — BA CUỘC ĐIỀU TRA
+CHO THPT (HS)</h1>
+<p><em>Tiêu chí: tư duy thuật toán có ý thức về độ phức tạp; toán học
+nâng cao hơn — hàm sinh, giới hạn giải tích, hình học tính
+toán.</em></p>
+<hr />
+<h2 id="bài-4.-phân-hoạch-số-nguyên-và-đồng-nhất-thức-euler">Bài 4. Phân
+hoạch số nguyên và Đồng nhất thức Euler</h2>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Lĩnh vực</th>
+<th>Đối tượng</th>
+<th>Độ khó toán / kỹ thuật / độ mở</th>
+<th>Vai trò công cụ</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Tổ hợp</td>
+<td>Lớp 10–12</td>
+<td>★★★★☆ / ★★★☆☆ / ★★★☆☆</td>
+<td>#Kiểm_chứng, #So_sánh_Phương_pháp — gần như thiết yếu</td>
+</tr>
+</tbody>
+</table>
+<h3 id="đề-bài-3">Đề bài</h3>
+<p>Một <em>phân hoạch</em> của số nguyên dương <span
+class="math inline">n</span> là cách viết <span
+class="math inline">n</span> thành tổng các số nguyên dương, không kể
+thứ tự.</p>
+<ul>
+<li><strong>Câu 1 (Quy hoạch động).</strong> Tính số phân hoạch của
+<span class="math inline">n = 60</span>. (Đệ quy vét cạn sẽ quá chậm —
+hãy tìm thuật toán <span class="math inline">O(n^2)</span>.)</li>
+<li><strong>Câu 2 (Đối chiếu).</strong> Với <span class="math inline">n
+= 100</span>, tính và so sánh: (a) số phân hoạch của <span
+class="math inline">n</span> thành các phần <strong>lẻ</strong>; (b) số
+phân hoạch của <span class="math inline">n</span> thành các phần
+<strong>đôi một khác nhau</strong>.</li>
+<li><strong>Câu 3 (Chứng minh).</strong> Dùng công cụ <strong>hàm
+sinh</strong> để chứng minh đẳng thức Euler: với mọi <span
+class="math inline">n</span>, số phân hoạch của <span
+class="math inline">n</span> thành các phần lẻ bằng số phân hoạch của
+<span class="math inline">n</span> thành các phần phân biệt.</li>
+</ul>
+<h3 id="lời-giải-câu-12-python-3">Lời giải Câu 1–2 (Python)</h3>
+<div class="sourceCode" id="cb21"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> phan_hoach(n, cac_phan):</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">&quot;&quot;&quot;Số cách viết n thành tổng các phần lấy từ &#39;cac_phan&#39; (dùng lại tùy ý).</span></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="co">    dp[i] = số phân hoạch của i. Duyệt từng phần k một lần theo thứ tự</span></span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a><span class="co">    đảm bảo không đếm lặp các hoán vị của cùng một phân hoạch. O(n^2).</span></span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a><span class="co">    &quot;&quot;&quot;</span></span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>    dp <span class="op">=</span> [<span class="dv">1</span>] <span class="op">+</span> [<span class="dv">0</span>] <span class="op">*</span> n</span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> k <span class="kw">in</span> cac_phan:</span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(k, n <span class="op">+</span> <span class="dv">1</span>):</span>
+<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a>            dp[i] <span class="op">+=</span> dp[i <span class="op">-</span> k]</span>
+<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> dp[n]</span>
+<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-13"><a href="#cb21-13" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> phan_hoach_phan_biet(n):</span>
+<span id="cb21-14"><a href="#cb21-14" aria-hidden="true" tabindex="-1"></a>    <span class="co">&quot;&quot;&quot;Như trên nhưng mỗi phần chỉ được dùng TỐI ĐA MỘT LẦN: duyệt i giảm dần.&quot;&quot;&quot;</span></span>
+<span id="cb21-15"><a href="#cb21-15" aria-hidden="true" tabindex="-1"></a>    dp <span class="op">=</span> [<span class="dv">1</span>] <span class="op">+</span> [<span class="dv">0</span>] <span class="op">*</span> n</span>
+<span id="cb21-16"><a href="#cb21-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> k <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, n <span class="op">+</span> <span class="dv">1</span>):</span>
+<span id="cb21-17"><a href="#cb21-17" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(n, k <span class="op">-</span> <span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>):</span>
+<span id="cb21-18"><a href="#cb21-18" aria-hidden="true" tabindex="-1"></a>            dp[i] <span class="op">+=</span> dp[i <span class="op">-</span> k]</span>
+<span id="cb21-19"><a href="#cb21-19" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> dp[n]</span>
+<span id="cb21-20"><a href="#cb21-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-21"><a href="#cb21-21" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Câu 1: p(60) =&quot;</span>, phan_hoach(<span class="dv">60</span>, <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">61</span>)))</span>
+<span id="cb21-22"><a href="#cb21-22" aria-hidden="true" tabindex="-1"></a>le        <span class="op">=</span> phan_hoach(<span class="dv">100</span>, <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">101</span>, <span class="dv">2</span>))      <span class="co"># chỉ các phần lẻ 1, 3, 5, ...</span></span>
+<span id="cb21-23"><a href="#cb21-23" aria-hidden="true" tabindex="-1"></a>phan_biet <span class="op">=</span> phan_hoach_phan_biet(<span class="dv">100</span>)</span>
+<span id="cb21-24"><a href="#cb21-24" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&quot;Câu 2: lẻ(100) = </span><span class="sc">{</span>le<span class="sc">}</span><span class="ss">,  phân biệt(100) = </span><span class="sc">{</span>phan_biet<span class="sc">}</span><span class="ss">&quot;</span>)</span></code></pre></div>
+<p><strong>Kết quả (đã kiểm chứng):</strong></p>
+<pre><code>Câu 1: p(60) = 966467
+Câu 2: lẻ(100) = 444793,  phân biệt(100) = 444793      ← hai số BẰNG NHAU!</code></pre>
+<p><strong>Đáp số chấm tự động:</strong> Câu 1: <code>966467</code> —
+Câu 2: <code>444793</code> (cả hai đại lượng).</p>
+<h3 id="câu-3-chứng-minh-đồng-nhất-thức-euler-bằng-hàm-sinh">Câu 3 —
+Chứng minh (Đồng nhất thức Euler bằng hàm sinh)</h3>
+<p>Hàm sinh của số phân hoạch thành các phần <strong>lẻ</strong> (mỗi
+phần lẻ <span class="math inline">2j-1</span> được dùng <span
+class="math inline">0, 1, 2, \dots</span> lần):</p>
+<p><span class="math display">O(x) = \prod_{j \ge 1} \frac{1}{1 -
+x^{2j-1}} = \frac{1}{(1-x)(1-x^3)(1-x^5)(1-x^7)\cdots}</span></p>
+<p>Hàm sinh của số phân hoạch thành các phần <strong>phân biệt</strong>
+(mỗi phần <span class="math inline">k</span> được dùng <span
+class="math inline">0</span> hoặc <span class="math inline">1</span>
+lần):</p>
+<p><span class="math display">D(x) = \prod_{k \ge 1} (1 + x^k) =
+(1+x)(1+x^2)(1+x^3)(1+x^4)\cdots</span></p>
+<p>Dùng hằng đẳng thức <span class="math inline">1 + x^k = \dfrac{1 -
+x^{2k}}{1 - x^k}</span> cho từng nhân tử:</p>
+<p><span class="math display">D(x) = \prod_{k \ge 1} \frac{1 - x^{2k}}{1
+- x^k} =
+\frac{(1-x^2)(1-x^4)(1-x^6)(1-x^8)\cdots}{(1-x)(1-x^2)(1-x^3)(1-x^4)\cdots}</span></p>
+<p>Tử số gồm đúng các nhân tử <span class="math inline">(1 -
+x^{2k})</span> với <strong>mũ chẵn</strong>; chúng triệt tiêu toàn bộ
+các nhân tử mũ chẵn ở mẫu số. Sau khi giản ước, mẫu số chỉ còn lại các
+nhân tử <strong>mũ lẻ</strong>:</p>
+<p><span class="math display">D(x) =
+\frac{1}{(1-x)(1-x^3)(1-x^5)(1-x^7)\cdots} = O(x).</span></p>
+<p>Hai chuỗi lũy thừa hình thức bằng nhau thì mọi hệ số bằng nhau: hệ số
+của <span class="math inline">x^n</span> trong <span
+class="math inline">O(x)</span> (số phân hoạch thành phần lẻ) bằng hệ số
+của <span class="math inline">x^n</span> trong <span
+class="math inline">D(x)</span> (số phân hoạch thành phần phân biệt),
+với mọi <span class="math inline">n</span>. <span
+class="math inline">\blacksquare</span></p>
+<p><em>Ghi chú kỹ thuật:</em> mọi biến đổi ở trên diễn ra trong vành
+chuỗi lũy thừa hình thức: hệ số của <span class="math inline">x^n</span>
+chỉ phụ thuộc hữu hạn nhân tử đầu, nên việc “giản ước vô hạn” là hợp lệ.
+Một chứng minh thay thế đẹp không kém là xây <strong>song ánh</strong>:
+tách mỗi phần chẵn <span class="math inline">2^a \cdot l</span> (<span
+class="math inline">l</span> lẻ) thành <span
+class="math inline">2^a</span> bản sao của <span
+class="math inline">l</span> — học sinh giỏi nên thử cả hai con
+đường.</p>
+<blockquote>
+<p><strong>Bài học:</strong> máy tính làm học sinh <em>kinh ngạc</em>
+rằng hai cách đếm khác hẳn nhau cho cùng một dãy số; hàm sinh biến sự
+kinh ngạc đó thành một đẳng thức tất yếu chỉ bằng vài dòng đại số.</p>
+</blockquote>
+<hr />
+<h2 id="bài-5.-phân-bố-số-nguyên-tố-và-định-lý-số-nguyên-tố">Bài 5. Phân
+bố số nguyên tố và Định lý Số nguyên tố</h2>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Lĩnh vực</th>
+<th>Đối tượng</th>
+<th>Độ khó toán / kỹ thuật / độ mở</th>
+<th>Vai trò công cụ</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Số học – Giải tích</td>
+<td>Lớp 11–12</td>
+<td>★★★★☆ / ★★★☆☆ / ★★☆☆☆</td>
+<td>#Quan_sát, #Kiểm_chứng — gần như thiết yếu</td>
+</tr>
+</tbody>
+</table>
+<h3 id="đề-bài-4">Đề bài</h3>
+<p>Gọi <span class="math inline">\pi(x)</span> là số các số nguyên tố
+không vượt quá <span class="math inline">x</span>.</p>
+<ul>
+<li><strong>Câu 1 (Sàng tối ưu).</strong> Viết Sàng Eratosthenes đủ
+nhanh để tính <span class="math inline">\pi(10^8)</span>.</li>
+<li><strong>Câu 2 (Giới hạn).</strong> Tính tỷ số <span
+class="math inline">R(x) = \dfrac{\pi(x)}{x / \ln x}</span> tại <span
+class="math inline">x = 10^4, 10^5, 10^6, 10^7, 10^8</span>. Dãy này có
+xu hướng gì?</li>
+<li><strong>Câu 3 (Vận dụng lý thuyết).</strong> Phát biểu Định lý Số
+nguyên tố. Từ đó ước lượng <strong>số chữ số</strong> (trong hệ thập
+phân) của số nguyên tố thứ <span class="math inline">10^{12}</span> (một
+nghìn tỷ).</li>
+</ul>
+<h3 id="lời-giải-câu-12-python-4">Lời giải Câu 1–2 (Python)</h3>
+<div class="sourceCode" id="cb23"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> math <span class="im">import</span> isqrt, log</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> sang_eratosthenes(gioi_han):</span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>    <span class="co">&quot;&quot;&quot;sang[i] = 1 nếu i là số nguyên tố. Chạy ~15 giây với giới hạn 10^8.</span></span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a><span class="co">    Hai tối ưu quan trọng: chỉ sàng tới căn bậc hai của giới hạn,</span></span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a><span class="co">    và đánh dấu bội số bằng phép gán lát cắt (nhanh hơn vòng lặp Python thuần).</span></span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a><span class="co">    &quot;&quot;&quot;</span></span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a>    sang <span class="op">=</span> <span class="bu">bytearray</span>([<span class="dv">1</span>]) <span class="op">*</span> gioi_han</span>
+<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a>    sang[<span class="dv">0</span>] <span class="op">=</span> sang[<span class="dv">1</span>] <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2</span>, isqrt(gioi_han) <span class="op">+</span> <span class="dv">1</span>):</span>
+<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> sang[i]:</span>
+<span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a>            sang[i<span class="op">*</span>i::i] <span class="op">=</span> <span class="bu">bytearray</span>(<span class="bu">len</span>(sang[i<span class="op">*</span>i::i]))</span>
+<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> sang</span>
+<span id="cb23-15"><a href="#cb23-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-16"><a href="#cb23-16" aria-hidden="true" tabindex="-1"></a>sang <span class="op">=</span> sang_eratosthenes(<span class="dv">10</span><span class="op">**</span><span class="dv">8</span>)</span>
+<span id="cb23-17"><a href="#cb23-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Câu 1: pi(10^8) =&quot;</span>, <span class="bu">sum</span>(sang))</span>
+<span id="cb23-18"><a href="#cb23-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-19"><a href="#cb23-19" aria-hidden="true" tabindex="-1"></a>dem, mu <span class="op">=</span> <span class="dv">0</span>, <span class="dv">4</span></span>
+<span id="cb23-20"><a href="#cb23-20" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> x <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2</span>, <span class="dv">10</span><span class="op">**</span><span class="dv">8</span>):                    <span class="co"># Câu 2: quét một lượt, in tại các mốc</span></span>
+<span id="cb23-21"><a href="#cb23-21" aria-hidden="true" tabindex="-1"></a>    dem <span class="op">+=</span> sang[x]</span>
+<span id="cb23-22"><a href="#cb23-22" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> x <span class="op">+</span> <span class="dv">1</span> <span class="op">==</span> <span class="dv">10</span><span class="op">**</span>mu:</span>
+<span id="cb23-23"><a href="#cb23-23" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f&quot;Câu 2: x = 10^</span><span class="sc">{</span>mu<span class="sc">}</span><span class="ss">:  pi(x) = </span><span class="sc">{</span>dem<span class="sc">:&gt;9}</span><span class="ss">  R(x) = </span><span class="sc">{</span>dem <span class="op">/</span> (<span class="dv">10</span><span class="op">**</span>mu <span class="op">/</span> log(<span class="dv">10</span><span class="op">**</span>mu))<span class="sc">:.4f}</span><span class="ss">&quot;</span>)</span>
+<span id="cb23-24"><a href="#cb23-24" aria-hidden="true" tabindex="-1"></a>        mu <span class="op">+=</span> <span class="dv">1</span></span></code></pre></div>
+<p><strong>Kết quả (đã kiểm chứng):</strong></p>
+<pre><code>Câu 1: pi(10^8) = 5761455
+Câu 2: x = 10^4:  pi(x) =      1229  R(x) = 1.1320
+       x = 10^5:  pi(x) =      9592  R(x) = 1.1043
+       x = 10^6:  pi(x) =     78498  R(x) = 1.0845
+       x = 10^7:  pi(x) =    664579  R(x) = 1.0712
+       x = 10^8:  pi(x) =   5761455  R(x) = 1.0613     → giảm chậm dần về 1</code></pre>
+<p><strong>Đáp số chấm tự động:</strong> Câu 1: <code>5761455</code> —
+Câu 2: dãy <span class="math inline">1.1320,\ 1.1043,\ 1.0845,\ 1.0712,\
+1.0613</span> tiến chậm về <span class="math inline">1</span>.</p>
+<h3 id="câu-3-lời-giải-định-lý-số-nguyên-tố-và-số-chữ-số-của-p_1012">Câu
+3 — Lời giải (Định lý Số nguyên tố và số chữ số của <span
+class="math inline">p_{10^{12}}</span>)</h3>
+<p><strong>Định lý Số nguyên tố (Hadamard – de la Vallée Poussin,
+1896).</strong></p>
+<p><span class="math display">\lim_{x \to \infty} \frac{\pi(x)}{x / \ln
+x} = 1.</span></p>
+<p><strong>Hệ quả cho số nguyên tố thứ <span
+class="math inline">n</span>.</strong> Gọi <span
+class="math inline">p_n</span> là số nguyên tố thứ <span
+class="math inline">n</span>, tức <span class="math inline">\pi(p_n) =
+n</span>. Thay vào định lý: <span class="math inline">n \sim
+\dfrac{p_n}{\ln p_n}</span>, suy ra <span class="math inline">p_n \sim n
+\ln p_n</span>. Lấy lôgarit: <span class="math inline">\ln p_n \sim \ln
+n</span> (các hạng bậc thấp hơn không đáng kể), do đó</p>
+<p><span class="math display">p_n \sim n \ln n.</span></p>
+<p><strong>Áp dụng <span class="math inline">n =
+10^{12}</span>:</strong></p>
+<p><span class="math display">p_{10^{12}} \approx 10^{12} \cdot
+\ln(10^{12}) = 10^{12} \cdot 12 \ln 10 \approx 10^{12} \cdot 12 \times
+2.302585 \approx 2.76 \times 10^{13}.</span></p>
+<p>Số chữ số của số nguyên dương <span class="math inline">N</span> là
+<span class="math inline">\lfloor \log_{10} N \rfloor + 1</span>:</p>
+<p><span class="math display">\log_{10}\left(2.76 \times 10^{13}\right)
+\approx 13.44 \quad \Rightarrow \quad \lfloor 13.44 \rfloor + 1 = 14
+\text{ chữ số}.</span></p>
+<p><em>Kiểm chứng độc lập:</em> giá trị thật là <span
+class="math inline">p_{10^{12}} = 29\,996\,224\,275\,833 \approx 3.0
+\times 10^{13}</span> — đúng <strong>14 chữ số</strong>. Xấp xỉ <span
+class="math inline">n \ln n</span> thấp hơn giá trị thật khoảng <span
+class="math inline">8\%</span> (xấp xỉ tinh hơn <span
+class="math inline">n(\ln n + \ln \ln n)</span> cho <span
+class="math inline">3.03 \times 10^{13}</span>), nhưng kết luận về số
+chữ số thì vững chắc. <span class="math inline">\blacksquare</span></p>
+<blockquote>
+<p><strong>Bài học:</strong> dữ liệu từ sàng (<span
+class="math inline">R(x)</span> giảm rất chậm: còn cách 1 tới 6% tại
+<span class="math inline">10^8</span>!) cho học sinh cảm nhận trung thực
+về tốc độ hội tụ “lười biếng” của PNT — và về việc ngoại suy từ dữ liệu
+hữu hạn cần lý thuyết dẫn đường.</p>
+</blockquote>
+<hr />
+<h2 id="bài-6.-bao-lồi-và-phép-thử-rẽ-trái-rẽ-phải">Bài 6. Bao lồi và
+phép thử rẽ trái – rẽ phải</h2>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Lĩnh vực</th>
+<th>Đối tượng</th>
+<th>Độ khó toán / kỹ thuật / độ mở</th>
+<th>Vai trò công cụ</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Hình học tính toán</td>
+<td>Lớp 10–12</td>
+<td>★★★☆☆ / ★★★★☆ / ★★☆☆☆</td>
+<td>#Tìm_kiếm_Cấu_hình, #Trực_quan_hóa — gần như thiết yếu</td>
+</tr>
+</tbody>
+</table>
+<h3 id="đề-bài-5">Đề bài</h3>
+<ul>
+<li><strong>Câu 1 (Khởi động).</strong> Cho 5 điểm <span
+class="math inline">A(0,0)</span>, <span
+class="math inline">B(4,0)</span>, <span
+class="math inline">C(0,4)</span>, <span
+class="math inline">D(2,1)</span>, <span
+class="math inline">E(1,1)</span>. Với mỗi điểm, kiểm tra bằng chương
+trình xem nó có nằm <strong>hẳn bên trong</strong> đa giác lồi tạo bởi
+các điểm còn lại hay không.</li>
+<li><strong>Câu 2 (Thuật toán).</strong> Sinh <span
+class="math inline">10\,000</span> điểm nguyên ngẫu nhiên (seed cố định
+<code>2026</code>, tọa độ trong <span class="math inline">[-10^6,
+10^6]</span>). Cài đặt thuật toán bao lồi <span class="math inline">O(n
+\log n)</span> (Graham Scan hoặc Andrew Monotone Chain) và cho biết bao
+lồi có bao nhiêu đỉnh.</li>
+<li><strong>Câu 3 (Cơ sở toán học).</strong> Công cụ quyết định của mọi
+thuật toán bao lồi là <strong>tích có hướng</strong>. Hãy viết công thức
+định thức kiểm tra “rẽ trái hay rẽ phải” khi đi qua ba điểm liên tiếp
+<span class="math inline">P_1, P_2, P_3</span>, và <strong>chứng
+minh</strong> vì sao dấu của định thức đó cho biết hướng rẽ.</li>
+</ul>
+<h3 id="lời-giải-câu-12-python-5">Lời giải Câu 1–2 (Python)</h3>
+<div class="sourceCode" id="cb25"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> random</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> cross(o, a, b):</span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>    <span class="co">&quot;&quot;&quot;Tích có hướng của vectơ OA và OB: &gt; 0 rẽ trái, &lt; 0 rẽ phải, = 0 thẳng hàng.&quot;&quot;&quot;</span></span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (a[<span class="dv">0</span>]<span class="op">-</span>o[<span class="dv">0</span>]) <span class="op">*</span> (b[<span class="dv">1</span>]<span class="op">-</span>o[<span class="dv">1</span>]) <span class="op">-</span> (a[<span class="dv">1</span>]<span class="op">-</span>o[<span class="dv">1</span>]) <span class="op">*</span> (b[<span class="dv">0</span>]<span class="op">-</span>o[<span class="dv">0</span>])</span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> bao_loi(diem):</span>
+<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a>    <span class="co">&quot;&quot;&quot;Andrew monotone chain O(n log n): dựng nửa dưới rồi nửa trên của bao lồi.&quot;&quot;&quot;</span></span>
+<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a>    diem <span class="op">=</span> <span class="bu">sorted</span>(<span class="bu">set</span>(diem))</span>
+<span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> nua(day):</span>
+<span id="cb25-11"><a href="#cb25-11" aria-hidden="true" tabindex="-1"></a>        chuoi <span class="op">=</span> []</span>
+<span id="cb25-12"><a href="#cb25-12" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> p <span class="kw">in</span> day:</span>
+<span id="cb25-13"><a href="#cb25-13" aria-hidden="true" tabindex="-1"></a>            <span class="cf">while</span> <span class="bu">len</span>(chuoi) <span class="op">&gt;=</span> <span class="dv">2</span> <span class="kw">and</span> cross(chuoi[<span class="op">-</span><span class="dv">2</span>], chuoi[<span class="op">-</span><span class="dv">1</span>], p) <span class="op">&lt;=</span> <span class="dv">0</span>:</span>
+<span id="cb25-14"><a href="#cb25-14" aria-hidden="true" tabindex="-1"></a>                chuoi.pop()                  <span class="co"># không rẽ trái: loại đỉnh giữa</span></span>
+<span id="cb25-15"><a href="#cb25-15" aria-hidden="true" tabindex="-1"></a>            chuoi.append(p)</span>
+<span id="cb25-16"><a href="#cb25-16" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> chuoi</span>
+<span id="cb25-17"><a href="#cb25-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> nua(diem)[:<span class="op">-</span><span class="dv">1</span>] <span class="op">+</span> nua(diem[::<span class="op">-</span><span class="dv">1</span>])[:<span class="op">-</span><span class="dv">1</span>]</span>
+<span id="cb25-18"><a href="#cb25-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-19"><a href="#cb25-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Câu 1: điểm nằm hẳn bên trong &lt;=&gt; đi vòng quanh biên luôn thấy nó ở cùng một phía</span></span>
+<span id="cb25-20"><a href="#cb25-20" aria-hidden="true" tabindex="-1"></a>diem <span class="op">=</span> {<span class="st">&#39;A&#39;</span>: (<span class="dv">0</span>,<span class="dv">0</span>), <span class="st">&#39;B&#39;</span>: (<span class="dv">4</span>,<span class="dv">0</span>), <span class="st">&#39;C&#39;</span>: (<span class="dv">0</span>,<span class="dv">4</span>), <span class="st">&#39;D&#39;</span>: (<span class="dv">2</span>,<span class="dv">1</span>), <span class="st">&#39;E&#39;</span>: (<span class="dv">1</span>,<span class="dv">1</span>)}</span>
+<span id="cb25-21"><a href="#cb25-21" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> ten, p <span class="kw">in</span> diem.items():</span>
+<span id="cb25-22"><a href="#cb25-22" aria-hidden="true" tabindex="-1"></a>    dinh <span class="op">=</span> bao_loi([q <span class="cf">for</span> t, q <span class="kw">in</span> diem.items() <span class="cf">if</span> t <span class="op">!=</span> ten])</span>
+<span id="cb25-23"><a href="#cb25-23" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">all</span>(cross(dinh[i], dinh[(i<span class="op">+</span><span class="dv">1</span>) <span class="op">%</span> <span class="bu">len</span>(dinh)], p) <span class="op">&gt;</span> <span class="dv">0</span> <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(dinh))):</span>
+<span id="cb25-24"><a href="#cb25-24" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f&quot;Câu 1: </span><span class="sc">{</span>ten<span class="sc">}{</span>p<span class="sc">}</span><span class="ss"> nằm hẳn bên trong&quot;</span>)</span>
+<span id="cb25-25"><a href="#cb25-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-26"><a href="#cb25-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Câu 2: bao lồi của 10.000 điểm (seed cố định để có đáp số duy nhất)</span></span>
+<span id="cb25-27"><a href="#cb25-27" aria-hidden="true" tabindex="-1"></a>random.seed(<span class="dv">2026</span>)</span>
+<span id="cb25-28"><a href="#cb25-28" aria-hidden="true" tabindex="-1"></a>n_diem <span class="op">=</span> [(random.randint(<span class="op">-</span><span class="dv">10</span><span class="op">**</span><span class="dv">6</span>, <span class="dv">10</span><span class="op">**</span><span class="dv">6</span>), random.randint(<span class="op">-</span><span class="dv">10</span><span class="op">**</span><span class="dv">6</span>, <span class="dv">10</span><span class="op">**</span><span class="dv">6</span>))</span>
+<span id="cb25-29"><a href="#cb25-29" aria-hidden="true" tabindex="-1"></a>          <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10_000</span>)]</span>
+<span id="cb25-30"><a href="#cb25-30" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Câu 2: số đỉnh bao lồi =&quot;</span>, <span class="bu">len</span>(bao_loi(n_diem)))</span></code></pre></div>
+<p><strong>Kết quả (đã kiểm chứng):</strong></p>
+<pre><code>Câu 1: D(2, 1) nằm hẳn bên trong
+Câu 1: E(1, 1) nằm hẳn bên trong
+Câu 2: số đỉnh bao lồi = 26</code></pre>
+<p><strong>Đáp số chấm tự động:</strong> Câu 1: <code>D, E</code> — Câu
+2: <code>26</code>.</p>
+<h3 id="câu-3-chứng-minh-dấu-của-tích-có-hướng-quyết-định-hướng-rẽ">Câu
+3 — Chứng minh (dấu của tích có hướng quyết định hướng rẽ)</h3>
+<p>Xét ba điểm liên tiếp <span class="math inline">P_1(x_1, y_1)</span>,
+<span class="math inline">P_2(x_2, y_2)</span>, <span
+class="math inline">P_3(x_3, y_3)</span> và hai vectơ dịch chuyển <span
+class="math inline">\vec{u} = \overrightarrow{P_1 P_2}</span>, <span
+class="math inline">\vec{v} = \overrightarrow{P_2 P_3}</span>. Đại lượng
+cần xét là định thức</p>
+<p><span class="math display">D = \det \begin{pmatrix} x_2 - x_1 &amp;
+y_2 - y_1 \\ x_3 - x_2 &amp; y_3 - y_2 \end{pmatrix} = (x_2 - x_1)(y_3 -
+y_2) - (y_2 - y_1)(x_3 - x_2).</span></p>
+<p><strong>Chứng minh ý nghĩa của dấu.</strong> Viết hai vectơ ở dạng
+lượng giác: <span class="math inline">\vec{u} = r_1(\cos\alpha,
+\sin\alpha)</span> và <span class="math inline">\vec{v} = r_2(\cos\beta,
+\sin\beta)</span> với <span class="math inline">r_1, r_2 &gt; 0</span>
+(độ dài) và <span class="math inline">\alpha, \beta</span> là góc định
+hướng của mỗi vectơ so với trục hoành. Khai triển trực tiếp:</p>
+<p><span class="math display">D = r_1 r_2 (\cos\alpha \sin\beta -
+\sin\alpha \cos\beta) = r_1 r_2 \sin(\beta - \alpha).</span></p>
+<p>Hiệu <span class="math inline">\beta - \alpha</span> chính là
+<strong>góc quay</strong> từ hướng đi cũ <span
+class="math inline">\vec{u}</span> sang hướng đi mới <span
+class="math inline">\vec{v}</span>. Vì <span class="math inline">r_1 r_2
+&gt; 0</span>, dấu của <span class="math inline">D</span> trùng với dấu
+của <span class="math inline">\sin(\beta - \alpha)</span>:</p>
+<ul>
+<li><span class="math inline">D &gt; 0 \iff \sin(\beta - \alpha) &gt;
+0</span>: hướng đi quay <strong>ngược chiều kim đồng hồ</strong> — rẽ
+<strong>trái</strong>. Graham Scan giữ điểm <span
+class="math inline">P_2</span> lại trên bao lồi.</li>
+<li><span class="math inline">D &lt; 0</span>: hướng đi quay
+<strong>thuận chiều kim đồng hồ</strong> — rẽ <strong>phải</strong>.
+Điểm <span class="math inline">P_2</span> bị “bọc vào trong” và bị loại
+khỏi bao lồi.</li>
+<li><span class="math inline">D = 0</span>: ba điểm <strong>thẳng
+hàng</strong>.</li>
+</ul>
+<p>Về mặt hình học, <span class="math inline">\frac{D}{2}</span> chính
+là <strong>diện tích có dấu</strong> của tam giác <span
+class="math inline">P_1 P_2 P_3</span> — dương khi ba đỉnh liệt kê ngược
+chiều kim đồng hồ. Đây cũng chính là khối cơ bản dựng nên công thức
+Shoelace ở Bài 3: cùng một định thức, hai vai trò. <span
+class="math inline">\blacksquare</span></p>
+<p><em>Vì sao tính đúng đắn của thuật toán cần điều này:</em> một đa
+giác là lồi khi và chỉ khi đi dọc biên ta chỉ rẽ về một phía; phép thử
+<span class="math inline">D</span> cho phép duy trì <strong>bất
+biến</strong> “chuỗi đỉnh hiện tại luôn chỉ rẽ trái” sau mỗi lần thêm
+điểm — và bất biến đó là toàn bộ linh hồn của chứng minh tính đúng của
+Graham Scan / Andrew.</p>
+<blockquote>
+<p><strong>Bài học:</strong> với tọa độ nguyên, phép thử <span
+class="math inline">D</span> là số học <strong>chính xác tuyệt
+đối</strong> — không sai số. Cùng phép thử đó viết bằng số thực (góc,
+arctan) có thể cho kết quả sai. Chọn biểu diễn đúng cũng là làm
+toán.</p>
+</blockquote>
+<hr />
+<h1 id="bài-bổ-sung-một-bẫy-ngoại-suy-kinh-điển">BÀI BỔ SUNG — MỘT “BẪY
+NGOẠI SUY” KINH ĐIỂN</h1>
+<p><em>Khung TOML yêu cầu bộ bài thử nghiệm phải chứa ít nhất một bài
+“đúng trong nhiều trường hợp nhỏ nhưng sai về sau”. Sáu bài trên đều
+thuộc loại “quy luật là thật”; bài thứ bảy này dạy điều ngược lại — và
+đó là lý do nó được thêm vào bộ mẫu.</em></p>
+<hr />
+<h2
+id="bài-7.-chia-hình-tròn-của-moser-khi-1-2-4-8-16-không-phải-là-điều-bạn-nghĩ">Bài
+7. Chia hình tròn của Moser — khi 1, 2, 4, 8, 16 không phải là điều bạn
+nghĩ</h2>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Lĩnh vực</th>
+<th>Đối tượng</th>
+<th>Độ khó toán / kỹ thuật / độ mở</th>
+<th>Vai trò công cụ</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Tổ hợp – Hình học</td>
+<td>Lớp 9–12</td>
+<td>★★★★☆ / ★★★☆☆ / ★★★★☆</td>
+<td>#Săn_tìm_Phản_ví_dụ — <strong>có nguy cơ gây hiểu lầm</strong> nếu
+chỉ nhìn dữ liệu nhỏ</td>
+</tr>
+</tbody>
+</table>
+<h3 id="đề-bài-6">Đề bài</h3>
+<p>Lấy <span class="math inline">n</span> điểm trên một đường tròn ở
+<em>vị trí tổng quát</em> (không có ba dây cung nào đồng quy tại một
+điểm trong), rồi vẽ <strong>tất cả</strong> các dây cung nối từng cặp
+điểm. Gọi <span class="math inline">R(n)</span> là số miền mà hình tròn
+bị chia thành.</p>
+<ul>
+<li><strong>Câu 1 (Quan sát — nên làm bằng tay trước!).</strong> Vẽ và
+đếm <span class="math inline">R(1), \dots, R(5)</span>. Bạn đoán <span
+class="math inline">R(6)</span> bằng bao nhiêu? Bây giờ hãy vẽ thật cẩn
+thận (hoặc dùng chương trình) và đếm lại <span
+class="math inline">R(6)</span>.</li>
+<li><strong>Câu 2 (Khảo sát chính xác).</strong> Viết chương trình đếm
+<span class="math inline">R(n)</span> bằng <strong>hình học chính
+xác</strong> (số hữu tỉ, không dùng số thực) cho <span
+class="math inline">n</span> tới <span class="math inline">12</span>, và
+tìm công thức đúng của <span class="math inline">R(n)</span> theo các hệ
+số nhị thức.</li>
+<li><strong>Câu 3 (Chứng minh).</strong> Chứng minh công thức <span
+class="math inline">R(n) = \binom{n}{4} + \binom{n}{2} + 1</span> bằng
+công thức Euler cho đồ thị phẳng <span class="math inline">V - E + F =
+2</span>.</li>
+</ul>
+<h3 id="lời-giải-câu-12-python-6">Lời giải Câu 1–2 (Python)</h3>
+<div class="sourceCode" id="cb27"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> itertools <span class="im">import</span> combinations</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> fractions <span class="im">import</span> Fraction</span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> math <span class="im">import</span> comb</span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> so_mien(n):</span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a>    <span class="co">&quot;&quot;&quot;Đếm R(n) qua công thức Euler V - E + F = 2, bằng HÌNH HỌC CHÍNH XÁC.</span></span>
+<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-8"><a href="#cb27-8" aria-hidden="true" tabindex="-1"></a><span class="co">    Đặt điểm thứ i tại (2^i, 4^i) trên parabol y = x^2: các điểm ở vị trí lồi,</span></span>
+<span id="cb27-9"><a href="#cb27-9" aria-hidden="true" tabindex="-1"></a><span class="co">    tọa độ hữu tỉ nên mọi phép tính là chính xác tuyệt đối (không sai số float),</span></span>
+<span id="cb27-10"><a href="#cb27-10" aria-hidden="true" tabindex="-1"></a><span class="co">    và cấu trúc giao nhau của các dây cung giống hệt như trên đường tròn.</span></span>
+<span id="cb27-11"><a href="#cb27-11" aria-hidden="true" tabindex="-1"></a><span class="co">    &quot;&quot;&quot;</span></span>
+<span id="cb27-12"><a href="#cb27-12" aria-hidden="true" tabindex="-1"></a>    diem <span class="op">=</span> [(Fraction(<span class="dv">2</span>)<span class="op">**</span>i, Fraction(<span class="dv">4</span>)<span class="op">**</span>i) <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(n)]</span>
+<span id="cb27-13"><a href="#cb27-13" aria-hidden="true" tabindex="-1"></a>    day_cung <span class="op">=</span> <span class="bu">list</span>(combinations(diem, <span class="dv">2</span>))</span>
+<span id="cb27-14"><a href="#cb27-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-15"><a href="#cb27-15" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> giao_trong(d1, d2):</span>
+<span id="cb27-16"><a href="#cb27-16" aria-hidden="true" tabindex="-1"></a>        <span class="co">&quot;&quot;&quot;Giao điểm chính xác của hai đoạn thẳng nếu chúng cắt nhau hẳn bên trong.&quot;&quot;&quot;</span></span>
+<span id="cb27-17"><a href="#cb27-17" aria-hidden="true" tabindex="-1"></a>        (p1, p2), (p3, p4) <span class="op">=</span> d1, d2</span>
+<span id="cb27-18"><a href="#cb27-18" aria-hidden="true" tabindex="-1"></a>        d <span class="op">=</span> (p2[<span class="dv">0</span>]<span class="op">-</span>p1[<span class="dv">0</span>])<span class="op">*</span>(p4[<span class="dv">1</span>]<span class="op">-</span>p3[<span class="dv">1</span>]) <span class="op">-</span> (p2[<span class="dv">1</span>]<span class="op">-</span>p1[<span class="dv">1</span>])<span class="op">*</span>(p4[<span class="dv">0</span>]<span class="op">-</span>p3[<span class="dv">0</span>])</span>
+<span id="cb27-19"><a href="#cb27-19" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> d <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb27-20"><a href="#cb27-20" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="va">None</span></span>
+<span id="cb27-21"><a href="#cb27-21" aria-hidden="true" tabindex="-1"></a>        t <span class="op">=</span> ((p3[<span class="dv">0</span>]<span class="op">-</span>p1[<span class="dv">0</span>])<span class="op">*</span>(p4[<span class="dv">1</span>]<span class="op">-</span>p3[<span class="dv">1</span>]) <span class="op">-</span> (p3[<span class="dv">1</span>]<span class="op">-</span>p1[<span class="dv">1</span>])<span class="op">*</span>(p4[<span class="dv">0</span>]<span class="op">-</span>p3[<span class="dv">0</span>])) <span class="op">/</span> d</span>
+<span id="cb27-22"><a href="#cb27-22" aria-hidden="true" tabindex="-1"></a>        u <span class="op">=</span> ((p3[<span class="dv">0</span>]<span class="op">-</span>p1[<span class="dv">0</span>])<span class="op">*</span>(p2[<span class="dv">1</span>]<span class="op">-</span>p1[<span class="dv">1</span>]) <span class="op">-</span> (p3[<span class="dv">1</span>]<span class="op">-</span>p1[<span class="dv">1</span>])<span class="op">*</span>(p2[<span class="dv">0</span>]<span class="op">-</span>p1[<span class="dv">0</span>])) <span class="op">/</span> d</span>
+<span id="cb27-23"><a href="#cb27-23" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="dv">0</span> <span class="op">&lt;</span> t <span class="op">&lt;</span> <span class="dv">1</span> <span class="kw">and</span> <span class="dv">0</span> <span class="op">&lt;</span> u <span class="op">&lt;</span> <span class="dv">1</span>:</span>
+<span id="cb27-24"><a href="#cb27-24" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> (p1[<span class="dv">0</span>] <span class="op">+</span> t<span class="op">*</span>(p2[<span class="dv">0</span>]<span class="op">-</span>p1[<span class="dv">0</span>]), p1[<span class="dv">1</span>] <span class="op">+</span> t<span class="op">*</span>(p2[<span class="dv">1</span>]<span class="op">-</span>p1[<span class="dv">1</span>]))</span>
+<span id="cb27-25"><a href="#cb27-25" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">None</span></span>
+<span id="cb27-26"><a href="#cb27-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-27"><a href="#cb27-27" aria-hidden="true" tabindex="-1"></a>    giao <span class="op">=</span> [g <span class="cf">for</span> d1, d2 <span class="kw">in</span> combinations(day_cung, <span class="dv">2</span>)</span>
+<span id="cb27-28"><a href="#cb27-28" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> (g <span class="op">:=</span> giao_trong(d1, d2)) <span class="kw">is</span> <span class="kw">not</span> <span class="va">None</span>]</span>
+<span id="cb27-29"><a href="#cb27-29" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> <span class="bu">len</span>(giao) <span class="op">==</span> <span class="bu">len</span>(<span class="bu">set</span>(giao)), <span class="st">&quot;vị trí chưa tổng quát: có 3 dây cung đồng quy&quot;</span></span>
+<span id="cb27-30"><a href="#cb27-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-31"><a href="#cb27-31" aria-hidden="true" tabindex="-1"></a>    I <span class="op">=</span> <span class="bu">len</span>(giao)                        <span class="co"># số giao điểm bên trong</span></span>
+<span id="cb27-32"><a href="#cb27-32" aria-hidden="true" tabindex="-1"></a>    V <span class="op">=</span> n <span class="op">+</span> I                            <span class="co"># đỉnh: n điểm trên biên + I giao điểm</span></span>
+<span id="cb27-33"><a href="#cb27-33" aria-hidden="true" tabindex="-1"></a>    E <span class="op">=</span> n <span class="op">+</span> <span class="bu">len</span>(day_cung) <span class="op">+</span> <span class="dv">2</span><span class="op">*</span>I          <span class="co"># cạnh: n cung tròn + các dây đã bị chia nhỏ</span></span>
+<span id="cb27-34"><a href="#cb27-34" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (<span class="dv">2</span> <span class="op">-</span> V <span class="op">+</span> E) <span class="op">-</span> <span class="dv">1</span>               <span class="co"># công thức Euler, trừ miền vô hạn bên ngoài</span></span>
+<span id="cb27-35"><a href="#cb27-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-36"><a href="#cb27-36" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Câu 1: R(1)..R(6) =&quot;</span>, [so_mien(n) <span class="cf">for</span> n <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">7</span>)])</span>
+<span id="cb27-37"><a href="#cb27-37" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> n <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">13</span>):                   <span class="co"># Câu 2: đối chiếu công thức tới n = 12</span></span>
+<span id="cb27-38"><a href="#cb27-38" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> so_mien(n) <span class="op">==</span> comb(n, <span class="dv">4</span>) <span class="op">+</span> comb(n, <span class="dv">2</span>) <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb27-39"><a href="#cb27-39" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Câu 2: R(n) = C(n,4) + C(n,2) + 1 khớp hình học chính xác tới n = 12&quot;</span>)</span></code></pre></div>
+<p><strong>Kết quả (đã kiểm chứng):</strong></p>
+<pre><code>Câu 1: R(1)..R(6) = [1, 2, 4, 8, 16, 31]        ← KHÔNG phải 32!
+Câu 2: R(n) = C(n,4) + C(n,2) + 1 khớp hình học chính xác tới n = 12</code></pre>
+<p><strong>Đáp số chấm tự động:</strong> Câu 1: <code>31</code> — Câu 2:
+<span class="math inline">R(n) = \binom{n}{4} + \binom{n}{2} + 1</span>.
+(Trớ trêu thay, <span class="math inline">R(10) = 256</span> lại là một
+lũy thừa của 2 — thuần túy ngẫu nhiên!)</p>
+<h3 id="câu-3-chứng-minh-công-thức-euler-cho-đồ-thị-phẳng">Câu 3 — Chứng
+minh (công thức Euler cho đồ thị phẳng)</h3>
+<p>Các dây cung và cung tròn tạo thành một đồ thị phẳng liên thông. Ta
+đếm đỉnh <span class="math inline">V</span>, cạnh <span
+class="math inline">E</span>, miền <span class="math inline">F</span>
+(kể cả miền vô hạn bên ngoài) rồi dùng <span class="math inline">V - E +
+F = 2</span>.</p>
+<p><strong>Đếm giao điểm bên trong.</strong> Hai dây cung cắt nhau hẳn
+bên trong hình tròn khi và chỉ khi bốn đầu mút của chúng <strong>xen
+kẽ</strong> trên đường tròn — tức là mỗi bộ 4 điểm trong <span
+class="math inline">n</span> điểm sinh ra đúng <strong>một</strong> cặp
+dây cung cắt nhau (hai “đường chéo” của tứ giác lồi mà 4 điểm đó tạo
+thành). Vị trí tổng quát bảo đảm các giao điểm này đôi một khác nhau,
+nên số giao điểm bên trong là</p>
+<p><span class="math display">I = \binom{n}{4}.</span></p>
+<p><strong>Đếm đỉnh.</strong> <span class="math inline">V = n + I = n +
+\binom{n}{4}</span> (<span class="math inline">n</span> điểm trên biên
+cộng các giao điểm).</p>
+<p><strong>Đếm cạnh.</strong> Mỗi giao điểm bên trong nằm trên đúng 2
+dây cung và <strong>chia mỗi dây thành thêm một đoạn</strong>. Một dây
+cung chứa <span class="math inline">t</span> giao điểm bị chia thành
+<span class="math inline">t + 1</span> đoạn; cộng trên tất cả <span
+class="math inline">\binom{n}{2}</span> dây cung, tổng số lần “nằm trên”
+là <span class="math inline">2I</span>, nên các dây cung góp <span
+class="math inline">\binom{n}{2} + 2I</span> đoạn cạnh. Thêm <span
+class="math inline">n</span> cung tròn trên biên:</p>
+<p><span class="math display">E = n + \binom{n}{2} +
+2\binom{n}{4}.</span></p>
+<p><strong>Áp dụng công thức Euler.</strong> Đồ thị liên thông (mọi đỉnh
+nối về biên qua các dây), nên</p>
+<p><span class="math display">F = 2 - V + E = 2 - n - \binom{n}{4} + n +
+\binom{n}{2} + 2\binom{n}{4} = 2 + \binom{n}{2} +
+\binom{n}{4}.</span></p>
+<p>Trừ đi miền vô hạn bên ngoài đường tròn:</p>
+<p><span class="math display">R(n) = \binom{n}{4} + \binom{n}{2} + 1.
+\qquad \blacksquare</span></p>
+<p><em>Kiểm tra lại chuỗi đầu:</em> <span class="math inline">R(5) = 5 +
+10 + 1 = 16</span> nhưng <span class="math inline">R(6) = 15 + 15 + 1 =
+\mathbf{31}</span>. Quy luật “gấp đôi” <span class="math inline">1, 2,
+4, 8, 16</span> chỉ là ảo ảnh của dữ liệu nhỏ.</p>
+<blockquote>
+<p><strong>Bài học — quan trọng nhất của cả bộ:</strong> năm điểm dữ
+liệu đầu tiên <em>gào lên</em> <span class="math inline">2^{n-1}</span>,
+và vẫn sai. Kiểm chứng không phải chứng minh. Đây cũng là bài duy nhất
+mà lời khuyên đúng ở Câu 1 là <strong>đừng vội viết code</strong> — vẽ
+tay đến <span class="math inline">n = 5</span> nhanh hơn; nhưng đến lúc
+cần chắc chắn <span class="math inline">R(6) = 31</span> (nét vẽ tay dễ
+đếm sót) và cần loại trừ ba-dây-đồng-quy thì số hữu tỉ chính xác của máy
+tính trở nên không thể thay thế. Biết <em>lúc nào</em> dùng công cụ cũng
+là nội dung của bài toán.</p>
+</blockquote>
+<hr />
+<h1 id="dành-cho-phụ-huynh-và-người-tổ-chức">DÀNH CHO PHỤ HUYNH VÀ NGƯỜI
+TỔ CHỨC</h1>
+<p><strong>Con bạn sẽ học được gì?</strong> Không phải “học thêm lập
+trình” hay “giải nhanh hơn”, mà là những năng lực nền tảng của tư duy
+khoa học: phát biểu một giả thuyết chính xác từ dữ liệu; phân biệt rành
+mạch <em>kiểm chứng</em> với <em>chứng minh</em>; chủ động săn tìm phản
+ví dụ và trường hợp biên; quyết định có nên dùng công cụ hay không và
+giải thích được mọi dòng mã mình dùng; và sửa lại niềm tin của mình khi
+bằng chứng mới xuất hiện. Trong TOML, một cuốn <em>nhật ký khám phá</em>
+ghi lại giả thuyết sai và ngõ cụt được trân trọng không kém một lời giải
+đúng — vì đó mới là hình ảnh trung thực của toán học đang được tạo
+ra.</p>
+<p><strong>Cách chấm và vận hành.</strong> Câu 1 và Câu 2 của mỗi bài
+chấm tự động (nộp một con số hoặc chuỗi ngắn — mọi đáp số đều đã được
+đội biên tập kiểm chứng độc lập bằng chương trình). Câu 3 nộp bằng ảnh
+chụp bài chứng minh viết tay; người chấm đối chiếu với các ý tưởng bản
+chất của lời giải mẫu (Nguyên lý Dirichlet và phép lùi ngược ở Bài 1;
+tổng XOR ở Bài 2; cắt–ghép ở Bài 3; hàm sinh ở Bài 4; công thức Euler ở
+Bài 7…). Nhịp phát hành dự kiến trong giai đoạn thử nghiệm: tối đa ba
+cuộc điều tra mỗi tuần — một bài chính, một bài ngắn, một bài mở rộng tự
+chọn.</p>
+<p><strong>Về AI và liêm chính học thuật.</strong> Học sinh được phép
+dùng AI để gợi ý hướng đi hoặc viết mã ban đầu, với hai điều kiện không
+nhân nhượng: phải khai báo phạm vi sử dụng trong nhật ký, và phải giải
+thích được mọi thứ mình nộp. Nhật ký cá nhân mặc định không công khai;
+không có bảng xếp hạng xây trên sai lầm của học sinh; dữ liệu chỉ được
+thu thập ở mức cần thiết cho mục tiêu giáo dục.</p>
+<p><strong>Một lời thú nhận có chủ đích.</strong> Bản nháp đầu tiên của
+chính bộ bài mẫu này chứa nhiều đáp số sai — chúng chỉ bị phát hiện khi
+được kiểm chứng độc lập bằng chương trình, đúng theo quy trình biên tập
+mà TOML tự đặt ra cho mình. Chúng tôi giữ lại câu chuyện đó ở đây vì nó
+chính là bài học trung tâm của toàn bộ dự án: <em>trong toán học, không
+ai — kể cả người ra đề, kể cả máy tính, kể cả AI — được miễn trừ khỏi
+nghĩa vụ kiểm chứng.</em> Công cụ mở rộng khả năng quan sát và thực
+nghiệm của người học; trách nhiệm hiểu, kết luận và lập luận vẫn thuộc
+về con người.</p>
+</body>
+</html>
