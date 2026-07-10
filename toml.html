@@ -226,6 +226,119 @@
     code span.vs { color: #4070a0; } /* VerbatimString */
     code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
   </style>
+  <style>
+    /* Responsive reading width: grows and shrinks with the browser window */
+    body {
+      max-width: min(1200px, 92vw) !important;
+      width: 92vw;
+      margin: 0 auto;
+      padding: 24px 0 60px;
+    }
+    div.sourceCode { position: relative; }
+    .code-toolbar {
+      position: absolute; top: 6px; right: 6px;
+      display: flex; gap: 6px; z-index: 5;
+    }
+    .code-toolbar button {
+      font: 12px/1.6 system-ui, sans-serif;
+      padding: 2px 10px; border-radius: 6px;
+      border: 1px solid #bbb; background: #fff; color: #333;
+      cursor: pointer; opacity: 0.85;
+    }
+    .code-toolbar button:hover { opacity: 1; background: #f0f4ff; }
+    .run-output {
+      background: #0d1117; color: #7ee787;
+      font: 13px/1.5 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      white-space: pre-wrap; border-radius: 8px;
+      padding: 12px 14px; margin: 6px 0 14px;
+    }
+    .run-output.error { color: #ff7b72; }
+    @media (max-width: 600px) { body { width: 96vw; max-width: 96vw !important; } }
+  </style>
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // ---- Copy buttons on every code block, Run buttons on Python blocks ----
+    document.querySelectorAll('div.sourceCode').forEach(function (block) {
+      var pre  = block.querySelector('pre');
+      var code = block.querySelector('pre > code');
+      if (!pre || !code) return;
+
+      var bar = document.createElement('div');
+      bar.className = 'code-toolbar';
+
+      var copyBtn = document.createElement('button');
+      copyBtn.textContent = '📋 Copy';
+      copyBtn.onclick = function () {
+        navigator.clipboard.writeText(code.innerText).then(function () {
+          copyBtn.textContent = '✅ Copied!';
+          setTimeout(function () { copyBtn.textContent = '📋 Copy'; }, 1500);
+        });
+      };
+      bar.appendChild(copyBtn);
+
+      if (pre.classList.contains('python')) {
+        var runBtn = document.createElement('button');
+        runBtn.textContent = '▶ Run';
+        runBtn.onclick = function () { runSnippet(code.innerText, block, runBtn); };
+        bar.appendChild(runBtn);
+      }
+      block.appendChild(bar);
+    });
+  });
+
+  // ---- Run Python directly in the browser via Pyodide (no server needed) ----
+  var pyodidePromise = null;
+  function getPyodide() {
+    if (!pyodidePromise) {
+      pyodidePromise = new Promise(function (resolve, reject) {
+        var s = document.createElement('script');
+        s.src = 'https://cdn.jsdelivr.net/pyodide/v0.26.4/full/pyodide.js';
+        s.onload = function () { loadPyodide().then(resolve, reject); };
+        s.onerror = function () { reject(new Error('Could not load the Python runtime (check your internet connection).')); };
+        document.head.appendChild(s);
+      });
+    }
+    return pyodidePromise;
+  }
+
+  function outputBoxFor(block) {
+    var out = block.nextElementSibling;
+    if (!out || !out.classList || !out.classList.contains('run-output')) {
+      out = document.createElement('div');
+      out.className = 'run-output';
+      block.parentNode.insertBefore(out, block.nextSibling);
+    }
+    return out;
+  }
+
+  async function runSnippet(source, block, btn) {
+    var out = outputBoxFor(block);
+    out.classList.remove('error');
+    btn.disabled = true;
+    var heavy = source.indexOf('10**8') !== -1;
+    out.textContent = '⏳ Loading the Python runtime (first run downloads it, ~10 MB)…';
+    try {
+      var py = await getPyodide();
+      out.textContent = heavy
+        ? '⏳ Running… this one sieves up to 10⁸ — expect 1–3 minutes in the browser. The tab may feel frozen; that is normal.'
+        : '⏳ Running…';
+      await new Promise(function (r) { setTimeout(r, 60); });  // let the message paint
+      var buf = [];
+      py.setStdout({ batched: function (s) { buf.push(s); } });
+      py.setStderr({ batched: function (s) { buf.push(s); } });
+      var t0 = performance.now();
+      await py.runPythonAsync(source);
+      var dt = ((performance.now() - t0) / 1000).toFixed(2);
+      out.textContent = (buf.length ? buf.join('\n') : '(no output)') +
+        '\n\n— finished in ' + dt + ' s, executed live in your browser (Pyodide/CPython)';
+    } catch (e) {
+      out.classList.add('error');
+      out.textContent = '❌ ' + e;
+    } finally {
+      btn.disabled = false;
+    }
+  }
+  </script>
   <script defer=""
   src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js"></script>
   <script>document.addEventListener("DOMContentLoaded", function () {
@@ -246,9 +359,6 @@
   href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css" />
 </head>
 <body>
-<header id="title-block-header">
-<h1 class="title">TOML ��� The Online Mathematics Laboratory</h1>
-</header>
 <h1 id="toml-the-online-mathematics-laboratory">TOML — The Online
 Mathematics Laboratory</h1>
 <p><em>An introduction for parents, teachers, and club organizers — with
