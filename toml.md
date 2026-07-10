@@ -1,3 +1,5 @@
+![Math Club & Competitions (MCC)](./img/MCC-2024-Logo-Large.png)
+
 # TOML — The Online Mathematics Laboratory
 
 *An introduction for parents, teachers, and club organizers — with seven fully worked sample investigations.*
