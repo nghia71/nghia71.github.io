@@ -97,6 +97,7 @@ Students work in pairs through a two-week cycle: study a chapter, submit a team 
 
   <div class="card">
     <span class="tag">Foundation</span>
+    <a href="./books.md"><img class="cover" src="./img/100-en-cover.jpg" alt="100 Math Problems for Absolute Beginners"></a>
     <h3>100 Math Problems for Absolute Beginners</h3>
     <p>A decade of teaching insight, written to make young students fall in love with patterns and logic. Print and e-book, English and Vietnamese.</p>
     <p><a href="./books.md">Details and ordering →</a></p>
@@ -104,6 +105,7 @@ Students work in pairs through a two-week cycle: study a chapter, submit a team 
 
   <div class="card">
     <span class="tag">Middle School</span>
+    <a href="https://www.lulu.com/shop/nghia-doan/learning-problem-solving-vi/hardcover/product-m2ezqjj.html"><img class="cover" src="./img/lps6-cover.jpg" alt="Learning Problem Solving VI"></a>
     <h3>LPS VI — From Foundations to Insight</h3>
     <p>54 chapters, 216 sections, about 1,400 problems, 675 pages. The textbook for T1 and T2.</p>
     <p><a href="https://www.lulu.com/shop/nghia-doan/learning-problem-solving-vi/hardcover/product-m2ezqjj.html">Order from Lulu →</a></p>
@@ -111,6 +113,7 @@ Students work in pairs through a two-week cycle: study a chapter, submit a team 
 
   <div class="card">
     <span class="tag">High School</span>
+    <a href="https://www.lulu.com/shop/nghia-doan/learning-problem-solving-vii/hardcover/product-2mnpyy4.html"><img class="cover" src="./img/lps7-cover.jpg" alt="Learning Problem Solving VII"></a>
     <h3>LPS VII — From Insight to Mastery</h3>
     <p>55 chapters, 934 worked examples and 406 exercises, 850 pages. The textbook for T3 and T4.</p>
     <p><a href="https://www.lulu.com/shop/nghia-doan/learning-problem-solving-vii/hardcover/product-2mnpyy4.html">Order from Lulu →</a></p>

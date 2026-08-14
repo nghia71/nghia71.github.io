@@ -18,9 +18,9 @@ There are two editions. I would recommend the print one: it is a beautiful, high
 
 <div class="covers" markdown="1">
 
-[![100 Math Problems for Absolute Beginners (e-book)](./img/cover-en.jpg)](https://www.lulu.com/shop/nghia-doan/100-math-problems-for-absolute-beginners/ebook/product-p69y785.html)
+[![100 Math Problems for Absolute Beginners (e-book)](./img/100-en-cover.jpg)](https://www.lulu.com/shop/nghia-doan/100-math-problems-for-absolute-beginners/ebook/product-p69y785.html)
 
-[![100 Bài Toán Dành Cho Người Mới Bắt Đầu (e-book)](./img/cover-vn.jpg)](https://www.lulu.com/shop/nghia-doan/100-bài-toán-dành-cho-người-mới-bắt-đầu/ebook/product-rm68v54.html)
+[![100 Bài Toán Dành Cho Người Mới Bắt Đầu (e-book)](./img/100-vn-cover.jpg)](https://www.lulu.com/shop/nghia-doan/100-bài-toán-dành-cho-người-mới-bắt-đầu/ebook/product-rm68v54.html)
 
 </div>
 
@@ -40,6 +40,7 @@ Hiện có hai phiên bản: sách in và sách điện tử. Tôi khuyên bạn
 
   <div class="card">
     <span class="tag">Middle School · T1–T2</span>
+    <a href="https://www.lulu.com/shop/nghia-doan/learning-problem-solving-vi/hardcover/product-m2ezqjj.html"><img class="cover" src="./img/lps6-cover.jpg" alt="Learning Problem Solving VI — From Foundations to Insight"></a>
     <h3>LPS VI — From Foundations to Insight</h3>
     <p><strong>54 chapters</strong>, four themed sections each — <strong>216 sections</strong> in all.<br>
        About <strong>1,400 problems</strong>. <strong>675 pages.</strong></p>
@@ -48,6 +49,7 @@ Hiện có hai phiên bản: sách in và sách điện tử. Tôi khuyên bạn
 
   <div class="card">
     <span class="tag">High School · T3–T4</span>
+    <a href="https://www.lulu.com/shop/nghia-doan/learning-problem-solving-vii/hardcover/product-2mnpyy4.html"><img class="cover" src="./img/lps7-cover.jpg" alt="Learning Problem Solving VII — From Insight to Mastery"></a>
     <h3>LPS VII — From Insight to Mastery</h3>
     <p><strong>55 chapters.</strong> About <strong>1,340 problems</strong>: <strong>934 fully worked examples</strong> and <strong>406 exercises</strong>, most solutions rewritten from scratch.<br>
        <strong>850 pages.</strong></p>
