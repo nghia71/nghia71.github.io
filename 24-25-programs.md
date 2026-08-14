@@ -1,4 +1,10 @@
-![Math Club & Competitions (MCC)](./img/MCC-2024-Logo-Large.png)
+---
+title: School year 2024-2025
+---
+
+<div class="note" markdown="1">
+**Archived page.** This describes a previous school year and is kept for reference. For the current year see [Programs 2026-2027](./programs.md).
+</div>
 
 Welcome to the 2024 - 2025 School Year of the Math Club & Competitions!
 

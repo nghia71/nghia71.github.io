@@ -1,4 +1,10 @@
-![Math Club & Competitions (MCC)](./img/MCC-2024-Logo-Large.png)
+---
+title: ICLT
+---
+
+<div class="note" markdown="1">
+**Archived page.** This describes a previous school year and is kept for reference. For the current year see [Programs 2026-2027](./programs.md).
+</div>
 
 ## Introductory Curriculum Level Test (ICLT)
 
@@ -22,7 +28,7 @@ There are several levels for the curriculum, each requires completion of a numbe
 text books and successfully pass of completion test. The table below lists the levels and required chapters
 from each text book.
 
-![ICLT](./img/iclt.png)
+![ICLT](./img/iclt.jpg)
 
 Introductory Curriculum Level Test:
 - All  start at 10:00 PM Eastern Time (EST) on a Saturday and lasts for 90 minutes.

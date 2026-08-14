@@ -1,0 +1,398 @@
+/* ==========================================================================
+   Math Club & Competitions (MCC) — site styles
+   Palette taken from the club logo: deep orange-red + warm gold.
+   ========================================================================== */
+
+:root {
+  --brand:        #b63200;
+  --brand-dark:   #8c2600;
+  --brand-light:  #d94f14;
+  --gold:         #f2c14e;
+  --gold-soft:    #fbe9c2;
+  --cream:        #fdf7ec;
+  --ink:          #2a1f18;
+  --ink-soft:     #5c4d42;
+  --rule:         #e7dccd;
+  --white:        #ffffff;
+  --radius:       10px;
+  --shadow:       0 1px 2px rgba(42,31,24,.06), 0 6px 18px rgba(42,31,24,.06);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---------- Header & navigation ------------------------------------------ */
+
+.site-header {
+  background: var(--brand);
+  border-bottom: 4px solid var(--gold);
+}
+
+.brand {
+  display: block;
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 18px 24px 6px;
+}
+
+.brand img {
+  display: block;
+  width: 100%;
+  max-width: 620px;
+  height: auto;
+}
+
+.site-nav {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 24px 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.site-nav a {
+  display: inline-block;
+  padding: 7px 14px;
+  border-radius: 999px;
+  color: var(--gold-soft);
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background .15s ease, color .15s ease;
+}
+
+.site-nav a:hover { background: rgba(255,255,255,.14); color: var(--white); }
+
+.site-nav a.active {
+  background: var(--gold);
+  color: var(--brand-dark);
+}
+
+/* ---------- Page shell ---------------------------------------------------- */
+
+.page {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 40px 24px 64px;
+}
+
+.site-footer {
+  border-top: 1px solid var(--rule);
+  background: var(--white);
+  color: var(--ink-soft);
+  font-size: 14.5px;
+}
+
+.site-footer p {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 6px 24px;
+}
+
+.site-footer p:first-child { padding-top: 26px; }
+.site-footer p:last-child  { padding-bottom: 26px; }
+
+/* ---------- Typography ---------------------------------------------------- */
+
+h1, h2, h3, h4 {
+  line-height: 1.25;
+  color: var(--brand-dark);
+  margin: 2em 0 .6em;
+  font-weight: 700;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 2.1rem;
+  letter-spacing: -.01em;
+}
+
+h2 {
+  font-size: 1.5rem;
+  padding-bottom: .3em;
+  border-bottom: 2px solid var(--gold);
+}
+
+h3 { font-size: 1.2rem; }
+h4 { font-size: 1.02rem; color: var(--ink); }
+
+p, ul, ol { margin: 0 0 1.1em; }
+li { margin-bottom: .35em; }
+
+a { color: var(--brand); text-underline-offset: 2px; }
+a:hover { color: var(--brand-light); }
+
+strong { color: var(--ink); }
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--rule);
+  margin: 2.5em 0;
+}
+
+blockquote {
+  margin: 1.6em 0;
+  padding: .2em 0 .2em 1.2em;
+  border-left: 4px solid var(--gold);
+  color: var(--ink-soft);
+  font-style: italic;
+}
+
+code {
+  background: var(--gold-soft);
+  padding: .15em .4em;
+  border-radius: 4px;
+  font-size: .9em;
+}
+
+pre {
+  background: #2a1f18;
+  color: #f4ead9;
+  padding: 16px 18px;
+  border-radius: var(--radius);
+  overflow-x: auto;
+}
+
+pre code { background: none; padding: 0; color: inherit; }
+
+img { max-width: 100%; height: auto; }
+
+/* ---------- Tables -------------------------------------------------------- */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.4em 0;
+  background: var(--white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  font-size: 15.5px;
+}
+
+th {
+  background: var(--brand);
+  color: var(--gold-soft);
+  text-align: left;
+  font-weight: 700;
+}
+
+th, td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--rule);
+  vertical-align: top;
+}
+
+tbody tr:last-child td { border-bottom: 0; }
+tbody tr:nth-child(even) { background: #fffdf8; }
+
+/* Tables inside cards (team rosters) are compact and unshadowed. */
+.card table {
+  box-shadow: none;
+  margin: .6em 0 0;
+  font-size: 13.5px;
+  border: 1px solid var(--rule);
+}
+
+.card th, .card td { padding: 5px 8px; }
+.card th { font-size: 12.5px; }
+
+/* ---------- Components ---------------------------------------------------- */
+
+/* Hero block for the top of the home page */
+.hero {
+  background: var(--white);
+  border: 1px solid var(--rule);
+  border-left: 6px solid var(--brand);
+  border-radius: var(--radius);
+  padding: 26px 28px;
+  margin-bottom: 34px;
+  box-shadow: var(--shadow);
+}
+
+.hero h1 { margin-bottom: .3em; }
+.hero p:last-child { margin-bottom: 0; }
+.hero .lede { font-size: 1.1rem; color: var(--ink-soft); }
+
+/* Card grid */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(216px, 1fr));
+  gap: 18px;
+  margin: 1.5em 0 2em;
+}
+
+/* Wider cards, for pages with only two or three of them */
+.cards.wide { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
+
+.card img {
+  display: block;
+  border-radius: 8px;
+  margin: 0 0 .8em;
+}
+
+.card {
+  background: var(--white);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  padding: 20px 22px;
+  box-shadow: var(--shadow);
+}
+
+.card h3 { margin: 0 0 .4em; font-size: 1.1rem; }
+.card p  { margin-bottom: .7em; font-size: 15.5px; color: var(--ink-soft); }
+.card p:last-child { margin-bottom: 0; }
+
+.card .tag {
+  display: inline-block;
+  background: var(--gold-soft);
+  color: var(--brand-dark);
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  padding: 3px 9px;
+  border-radius: 999px;
+  margin-bottom: .7em;
+}
+
+/* Statistic strip */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 14px;
+  margin: 1.4em 0 2em;
+}
+
+.stat {
+  background: var(--brand);
+  color: var(--gold-soft);
+  border-radius: var(--radius);
+  padding: 18px 16px;
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+
+.stat b {
+  display: block;
+  font-size: 1.9rem;
+  line-height: 1.1;
+  color: var(--gold);
+}
+
+.stat span { font-size: 14px; }
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  background: var(--brand);
+  color: var(--white) !important;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 11px 20px;
+  border-radius: 999px;
+  margin: .2em .5em .5em 0;
+  box-shadow: var(--shadow);
+  transition: background .15s ease;
+}
+
+.btn:hover { background: var(--brand-light); color: var(--white) !important; }
+
+.btn.secondary {
+  background: var(--white);
+  color: var(--brand) !important;
+  border: 2px solid var(--brand);
+  padding: 9px 18px;
+}
+
+.btn.secondary:hover { background: var(--gold-soft); }
+
+/* Callout note */
+.note {
+  background: var(--white);
+  border: 1px solid var(--rule);
+  border-left: 5px solid var(--gold);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  margin: 1.5em 0;
+}
+
+.note p:last-child { margin-bottom: 0; }
+.note strong:first-child { color: var(--brand-dark); }
+
+/* Vietnamese-language passages */
+.vn {
+  background: #fffaf0;
+  border: 1px dashed var(--rule);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  margin: 1.5em 0;
+}
+
+.vn p:last-child { margin-bottom: 0; }
+
+/* Simple two-column layout for wide screens */
+.split {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 0 34px;
+}
+
+/* Book cover pair */
+.covers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 26px;
+  margin: 1.6em 0 2em;
+}
+
+.covers img {
+  width: 240px;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(42,31,24,.16), 0 12px 28px rgba(42,31,24,.12);
+  transition: transform .15s ease;
+}
+
+.covers a:hover img { transform: translateY(-3px); }
+
+/* Link list used on the archive page */
+.linklist { list-style: none; padding: 0; }
+
+.linklist li {
+  border-bottom: 1px solid var(--rule);
+  padding: 10px 0;
+}
+
+.linklist li:last-child { border-bottom: 0; }
+.linklist .meta { color: var(--ink-soft); font-size: 14.5px; }
+
+/* ---------- Small screens ------------------------------------------------- */
+
+@media (max-width: 640px) {
+  body { font-size: 16px; }
+  .page { padding: 28px 18px 48px; }
+  .brand { padding: 14px 18px 4px; }
+  .site-nav { padding: 0 18px 12px; }
+  h1 { font-size: 1.7rem; }
+  h2 { font-size: 1.3rem; }
+  table { display: block; overflow-x: auto; }
+}
+
+/* ---------- Print --------------------------------------------------------- */
+
+@media print {
+  .site-header, .site-footer { display: none; }
+  body { background: #fff; }
+  .page { max-width: none; padding: 0; }
+}

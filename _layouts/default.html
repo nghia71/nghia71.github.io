@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'en' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title and page.url != '/' %}{{ page.title }} · {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="description" content="{{ page.description | default: site.description | strip_newlines | truncate: 300 }}">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+
+<header class="site-header">
+  <a class="brand" href="{{ '/' | relative_url }}">
+    <img src="{{ '/img/MCC-2024-Logo-Large.png' | relative_url }}" alt="Math Club &amp; Competitions">
+  </a>
+  <nav class="site-nav" aria-label="Main">
+    {% for item in site.nav %}
+      {% assign target = item.url | relative_url %}
+      {% assign here = page.url | remove: '.html' %}
+      {% if here == item.url or page.url == item.url %}
+        <a class="active" href="{{ target }}">{{ item.title }}</a>
+      {% else %}
+        <a href="{{ target }}">{{ item.title }}</a>
+      {% endif %}
+    {% endfor %}
+  </nav>
+</header>
+
+<main class="page">
+  {{ content }}
+</main>
+
+<footer class="site-footer">
+  <p><strong>Math Club &amp; Competitions (MCC)</strong> — Australia · Canada · France · Japan · New Zealand · Spain · United Kingdom · United States · Vietnam</p>
+  <p>Questions: <a href="https://groups.google.com/g/mcc-school-year-2025-2026">the MCC mailing list</a> ·
+     <a href="mailto:tpham151st@gmail.com">Ms. Thu Pham</a> ·
+     <a href="mailto:lengocha45@gmail.com">Ms. Ngoc Ha</a> ·
+     <a href="mailto:tranngocanh0910@gmail.com">Ms. Ngoc Anh</a></p>
+</footer>
+
+</body>
+</html>

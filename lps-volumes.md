@@ -1,58 +1,65 @@
-![Math Club & Competitions (MCC)](./img/MCC-2024-Logo-Large.png)
+---
+title: Learning Problem Solving 1-3
+---
 
-These books constitute the Learning Problem Solving series from Math Club & Competitions (MCC) (a.k.a Math and Chess Club in Ottawa.) 
+# Learning Problem Solving, Volumes 1–3
 
-Students of the club are advised to use the book to learn, practice, and prepare for the club’s House Championship as well as math competitions.
+<div class="note" markdown="1">
+**Earlier volumes.** These are the first books in the Learning Problem Solving series. The current curriculum is [LPS VI and LPS VII](./books.md).
+</div>
 
-The problems and their solutions are from various sources. Thus, these are open books with all rights reserved by the authors of the problems and solutions. No attempt should be made to reproduce or commercialize any part of any of these books.
+These books make up the Learning Problem Solving series from Math Club & Competitions (MCC), formerly the Math and Chess Club in Ottawa. Students of the club use them to learn, to practise, and to prepare for the club's House Championship and for maths competitions.
 
-Have fun, learn and enjoy!
+The problems and their solutions come from many sources. These are therefore open books, with all rights reserved by the authors of the original problems and solutions. No part of any of these books should be reproduced or commercialised.
 
-Nghia Doan & Catherine Doan
+Have fun, learn, and enjoy.
+
+*Nghia Doan & Catherine Doan*
 
 &nbsp;
 
-### **For beginners**: [Learning Problem Solving, Volume 1](./lps/LPS-Vol-1-4.0-Final.pdf)
+### For beginners — [Learning Problem Solving, Volume 1](./lps/LPS-Vol-1-4.0-Final.pdf)
 
-Over 400 problems arranged in ten topics for any young students or students relatively new to math to get started:
+Over 400 problems arranged in twelve topics, for young students or anyone relatively new to mathematics:
 
-- Insightful Proofs
+- Insightful proofs
 - Logic
 - Parity
 - Visual patterns
 - Divisibility
-- Basic Geometry
+- Basic geometry
 - Ratio
 - Average
 - Percent
 - Counting
-- Distance - Rate - Time
+- Distance, rate, and time
 - Probability
 
 &nbsp;
 
-### **Club competitions**: [Learning Problem Solving, Volume 2](./lps/LPS-Vol-2-1.0-Final.pdf)
+### Club competitions — [Learning Problem Solving, Volume 2](./lps/LPS-Vol-2-1.0-Final.pdf)
 
-Over 400 problems collected from some competitions of the club during the year 2020.
+Over 400 problems collected from the club's competitions during 2020:
 
-- Summer semester - 14 weeks, each with a weekly team contest and a set of problems of the week
-- Fall semester - 3 months, each with monthly team contest and a set of problems of the months
+- **Summer semester** — 14 weeks, each with a weekly team contest and a set of problems of the week.
+- **Fall semester** — 3 months, each with a monthly team contest and a set of problems of the month.
 
 &nbsp;
 
-### **Ongoing companion for every math learners**: [Learning Problem Solving, Volume 3](./lps/LPS-Vol3-3.1-Ongoing.pdf)
+### An ongoing companion — [Learning Problem Solving, Volume 3](./lps/LPS-Vol3-3.1-Ongoing.pdf)
 
-Unlike the other book, this book is an ongoing online book, which means that it is updated frequently and available online to the members of the club. 
+Unlike the others, this is an ongoing online book: it is updated frequently and available to members of the club.
 
-A smaller set of problems are to help the young contestants to find their footing at the beginning of the journey. A significant number of problems in the book are from the International Mathematical Olympiads (IMO), National Math Olympiads, and other Math Competitions from countries and regions around the world.
+A smaller set of problems helps young contestants find their footing at the beginning of the journey. A large number of the rest come from the International Mathematical Olympiad, from national olympiads, and from competitions in countries and regions around the world.
 
-Thousands of problems are organized into over 40 chapters of 7 parts: Algebra, Combinatorics, Geometry, Number Theory, Logic, Chess, and Coding. In each chapter, which focuses on certain topics, some examples are discussed in details, sometimes with multiple solutions. 
+Thousands of problems are organised into more than 40 chapters across seven parts: Algebra, Combinatorics, Geometry, Number Theory, Logic, Chess, and Coding. Each chapter focuses on particular topics, and some examples are discussed in detail, sometimes with several different solutions.
 
-In each chapters, there are examples at lower difficulty for juniors or seniors without extensive mathematical knowledge or skills. Readers will find examples at olympiad level and additional problems. The students shall attempt to solve the examples first, before consult with the solution(s). In some chapters, related theories are noted at the beginning, some are accompanied with proofs, and additional corollaries. They are by no mean complete. The students are advised and encouraged to learn from other sources, whenever possible.
+Every chapter includes examples at lower difficulty, for juniors or for seniors without extensive background, alongside examples at olympiad level and further problems. Students should attempt the examples before consulting the solutions. Some chapters open with the relevant theory, occasionally with proofs and corollaries; these are by no means complete, and students are encouraged to read other sources wherever possible.
 
-### **Companion for intermediate students**: [Learning Problem Solving, Toolbox](./lps/LPS-Tools.pdf)
+&nbsp;
 
-- 10 Problem Solving Strategies
-- 5 Principles: Invariance, Colouring, Pigeonhole, Extremal, and Induction Principles
-- 10 Counting Techniques
+### For intermediate students — [Learning Problem Solving, Toolbox](./lps/LPS-Tools.pdf)
 
+- 10 problem-solving strategies
+- 5 principles: invariance, colouring, pigeonhole, extremal, and induction
+- 10 counting techniques

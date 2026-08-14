@@ -1,79 +1,60 @@
-![Math Club & Competitions (MCC)](./img/MCC-2024-Logo-Large.png)
+---
+title: Annual school-year books
+---
 
-# [School Year 2024-2025](#school-year-2024-2025)
+# Annual school-year books, 2021–2025
 
-The following books containing weekly readings, assignments, and tests.
+<div class="note" markdown="1">
+**Archive.** Each of these books collects a year's weekly readings, assignments, and tests. They remain useful for practice, and for judging where a student stands before the entrance test. For the current year, see [Programs 2026-2027](./programs.md).
+</div>
 
-[Full Curriculum](./mcc/2024-2025-curriculum.pdf)
+## School year 2024-2025
 
-&nbsp;
+* [**Full curriculum**](./mcc/2024-2025-curriculum.pdf) — weekly readings, assignments, and tests for the whole year.
 
-# [School Year 2023-2024](#school-year-2023-2024)
+## School year 2023-2024
 
-The following books containing weekly readings, assignments, and tests.
+* [**Fall semester**](./mcc/2023-2024.pdf)
+* [**Winter–Spring semester**](./mcc/2023-2024-sm2.pdf)
+* [**All problems without solutions**](./mcc/2023-2024-po.pdf) — useful for newcomers and for training.
 
-[Fall Semester](./mcc/2023-2024.pdf)
+## Summer camp, 2023
 
-[Winter-Spring Semester](./mcc/2023-2024-sm2.pdf)
+* [**Middle School and High School courses**](./mcc/2023-summer-camp.pdf)
 
-[All problems without solution - useful for newbies and training](./mcc/2023-2024-po.pdf)
+## School year 2022-2023
 
-&nbsp;
+* [**Fall semester, 2022**](./mcc/2022-fall.pdf)
+  * 3 House Championship rounds, plus 2 entrance tests
+  * 3 MCC Individual Contest rounds
+  * 2 Introductory Curriculum Level Test rounds (Levels 1–9)
+  * 2 Problem Solving Championship rounds
 
-# [Summer camp, 2023](#summer-camp-2023)
+* [**Winter semester, 2022**](./mcc/2022-winter.pdf)
+  * 5 House Championship rounds, plus 2 entrance tests
+  * 4 MCC Individual Contest rounds
+  * 2 Introductory Curriculum Level Test rounds (Levels 1–9)
+  * 6 Purple Comet training sessions
+  * 1 Middle School training session
 
-[Middle School & High School courses](./mcc/2023-summer-camp.pdf)
+* [**Olympiad team training, 2022**](./mcc/2022-olympiad.pdf) — 4 training sessions.
 
-&nbsp;
+* [**Competition mock tests, 2022**](./mcc/2022-mock-tests.pdf) — 5 mock tests of 12 problems each, in the style of the Canadian Open Mathematics Challenge.
 
+* **Middle School seminars, 2022** — [Session 1](./mcc/2022-2-ms-1.pdf) · [Session 2](./mcc/2022-2-ms-2.pdf) · [Session 3](./mcc/2022-2-ms-3.pdf)
 
-# [School Year 2022-2023](#school-year-2022-2023)
+* **Problem Solving Championship seminars, 2022** — [Session 1](./mcc/2022-2-psc-1.pdf) · [Session 2](./mcc/2022-2-psc-2.pdf)
 
-[Fall Semester, 2022](./mcc/2022-fall.pdf)
-- 3 House Championship rounds (plus 2 entrance tests)
-- 3 MCC Individual Contest rounds
-- 2 Introductory Curriculum Level Test rounds (for all levels 1-9)
-- 2 Problem Solving Championship rounds
+## School year 2021-2022
 
-&nbsp;
+* [**Fall semester**](./mcc/2021-fall.pdf)
+  * 5 House Championship rounds, plus an entrance test
+  * 4 MCC Individual Contest rounds
+  * 2 Introductory Curriculum Level Test rounds (Levels 1–5)
+  * 2 AMC 8 review sessions
 
-[Winter Semester, 2022](./mcc/2022-winter.pdf)
-- 5 House Championship rounds (plus 2 entrance tests)
-- 4 MCC Individual Contest rounds
-- 2 Introductory Curriculum Level Test rounds (for all levels 1-9)
-- 6 Purple Comet Training sessions
-- 1 Middle School Training session
+## Other material
 
-&nbsp;
-
-[Olympiad Team Training, 2022](./mcc/2022-olympiad.pdf)
-- 4 Training session
-
-[Competition Mock Tests, 2022](./mcc/2022-mock-tests.pdf)
-- 5 Mock tests (12 problems each, similar to Canadian Open Math Challenge)
-
-&nbsp;
-
-Middle School seminars, 2022:
-- [Session 1](./mcc/2022-2-ms-1.pdf)
-- [Session 2](./mcc/2022-2-ms-2.pdf)
-- [Session 3](./mcc/2022-2-ms-3.pdf)
-
-&nbsp;
-
-Problem Solving Championship seminars, 2022:
-- [Session 1](./mcc/2022-2-psc-1.pdf)
-- [Session 2](./mcc/2022-2-psc-2.pdf)
-
-&nbsp;
-
-# [School Year 2021-2022](#school-year-2021-2022)
-
-[Fall Semester](./mcc/2021-fall.pdf)
-
-- 5 House Championship rounds (plus entrance test)
-- 4 MCC Individual Contest rounds
-- 2 Introductory Curriculum Level Test rounds (for all levels 1-5)
-- 2 AMC 8 review sessions
-
-
+* [**Introduction to Number Theory, 2022**](./umc/2022-intro-number-theory.pdf)
+* [**Summer courses, 2024**](./mcc/2024-sc.pdf)
+* [**Entrance test, 2023-2024**](./mcc/2023-2024-entrance-test.pdf)

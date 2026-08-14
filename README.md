@@ -1,640 +1,168 @@
-![Math Club & Competitions (MCC)](./img/MCC-2024-Logo-Large.png)
-
-# Registration for School Year 2026-2027
-
-*Dear Parents and Students,*
-
-*We are delighted to invite students to register for the upcoming academic year of the MCC Club, which will commence in September 2026.*
-
-*Please complete the registration form by visiting the following link:* **https://forms.gle/dD6cLU6Ym8kEQddNA**
-
-*Kindly submit your registration by* **18 July 2026.**
-
-*For new students,* **an entrance test will take place at the beginning of August 2026**. *This assessment will help us place students in the most appropriate level for their learning. The membership fee for the academic year is* **$300,** *which includes curriculum books to support students throughout the programme.*
-
-*Further details regarding the entrance test and membership arrangements will be shared in due course.*
-
-*If you have any questions, please do not hesitate to get in touch. We look forward to welcoming you to the MCC Club.*
-
-*Kind regards,*
-
-*MCC Admin Team.*
-
-&nbsp;
-
-# 🚀 MCC at Purple Comet 2026  
-## A Decade of Excellence • A Global Achievement
-
-We proudly present the achievements and voices of our students at the [Purple Comet! Math Meet 2026](chatgpt://generic-entity?number=0), as we also celebrate **10 years of MCC participation in Purple Comet**.
-
+---
+title: Home
 ---
 
-## 🌍 Preminent at Global Stage
+<div class="hero" markdown="1">
 
-- 🌐 **4,804 teams**
-- 🌎 **86 countries**
-- [🔗 Official Results](https://purplecomet.org/results/2026) - search for *Math, Codding & Chess Club (MCC)*
+# Math Club & Competitions
 
-**Competing on this scale, MCC teams demonstrated not only excellence — but discipline, collaboration, and a deep love for mathematics.**
+<p class="lede">A global mathematics club for students in Grades 4–12. Founded in Canada by Nghia Doan, MCC has grown over more than a decade from a small group of curious students into an international community spanning nine countries.</p>
 
----
+We teach problem solving, not formulas. Our students learn to read a problem carefully, experiment with small cases, build and test a conjecture, and write an argument that convinces. They do it together, in teams, and they take that habit into national and international competition.
 
-## 🏆 MCC RESULTS
-
-| Team | Result | Score |
-|------|--------|-------|
-| 🥇 MS ONE | World Champion (Tie) | 20 / 20 |
-| 🥇 MS TWO | World Champion (Tie) | 20 / 20 |
-| 🌟 MS THREE | Honorable Mention | 19 / 20 |
-| 🥇 HS ONE | World Champion (Tie) | 30 / 30 |
-
-🔥 **3 MCC teams ranked #1 worldwide**
-
----
-
-## 🏆 MCC TEAMS OVERVIEW
-
-<div align="center">
-
-<table>
-<tr>
-
-<td valign="top" width="25%">
-
-<h3>🟦 MS ONE</h3>
-<p><strong>🥇 World Champion (20/20)</strong></p>
-
-<table>
-<tr><th>Role</th><th>Name</th><th>Grade</th></tr>
-<tr><td>Captain</td><td>Jason To</td><td>8</td></tr>
-<tr><td>Vice Captain</td><td>Linh Le</td><td>8</td></tr>
-<tr><td>Member</td><td>Alex Tran</td><td>7</td></tr>
-<tr><td>Member</td><td>Chi Pham</td><td>8</td></tr>
-<tr><td>Member</td><td>Mailys Phung Khac</td><td>8</td></tr>
-<tr><td>Member</td><td>Nam Phong Nguyen</td><td>8</td></tr>
-</table>
-
-</td>
-
-<td valign="top" width="25%">
-
-<h3>🟦 MS TWO</h3>
-<p><strong>🥇 World Champion (20/20)</strong></p>
-
-<table>
-<tr><th>Role</th><th>Name</th><th>Grade</th></tr>
-<tr><td>Captain</td><td>Luan Tran</td><td>8</td></tr>
-<tr><td>Vice Captain</td><td>Nam Nguyen</td><td>8</td></tr>
-<tr><td>Member</td><td>Long Vo Duc Tran</td><td>8</td></tr>
-<tr><td>Member</td><td>Anna Dao</td><td>8</td></tr>
-<tr><td>Member</td><td>Minh Vo Duc Tran</td><td>7</td></tr>
-<tr><td>Member</td><td>Nguyen Trung Kien</td><td>8</td></tr>
-</table>
-
-</td>
-
-<td valign="top" width="25%">
-
-<h3>🟦 MS THREE</h3>
-<p><strong>🌟 Honorable Mention (19/20)</strong></p>
-
-<table>
-<tr><th>Role</th><th>Name</th><th>Grade</th></tr>
-<tr><td>Captain</td><td>Henry Ho</td><td>7</td></tr>
-<tr><td>Vice Captain</td><td>Helen Vien</td><td>8</td></tr>
-<tr><td>Member</td><td>Claire Bao Tran Luu</td><td>5</td></tr>
-<tr><td>Member</td><td>Gia Minh Nguyen</td><td>6</td></tr>
-<tr><td>Member</td><td>Harry Vien</td><td>6</td></tr>
-<tr><td>Member</td><td>Michael Le</td><td>5</td></tr>
-</table>
-
-</td>
-
-<td valign="top" width="25%">
-
-<h3>🟦 HS ONE</h3>
-<p><strong>🥇 World Champion (30/30)</strong></p>
-
-<table>
-<tr><th>Role</th><th>Name</th><th>Grade</th></tr>
-<tr><td>Captain</td><td>Karl Le</td><td>11</td></tr>
-<tr><td>Vice Captain</td><td>Linh Le</td><td>8</td></tr>
-<tr><td>Member</td><td>Antoine Dao</td><td>11</td></tr>
-<tr><td>Member</td><td>Chi Pham</td><td>8</td></tr>
-<tr><td>Member</td><td>Jake Cao</td><td>9</td></tr>
-<tr><td>Member</td><td>Jason To</td><td>8</td></tr>
-</table>
-
-</td>
-
-</tr>
-</table>
+[Register for 2026-2027](https://forms.gle/dD6cLU6Ym8kEQddNA){: .btn}
+[See the programs](./programs.md){: .btn .secondary}
+[Order the books](./books.md){: .btn .secondary}
 
 </div>
 
----
-
-# 👥 MCC Student Profiles (Alphabetical)
-
-<table>
-<tr>
-
-<td width="20%" valign="top">
-<h3>Anna Dao</h3>
-<p><strong>G8 • Age 13</strong><br>
-<strong>Teams:</strong> MS TWO<br>
-<strong>Role:</strong> Member</p>
-<img src="./img/2026-AnnaDao.jpeg" width="160"/>
-<p><strong>Who I Am</strong><br>
-Hello, my name is Anna. I am 13 years old and in Grade 8. I live in France.</p>
-<p><strong>MCC Journey</strong><br>
-I have been attending MCC for 2 years.</p>
-<p><strong>Purple Comet Experience</strong><br>
-I took part in the Purple Comet competition for 2 years. I really appreciate the teamwork, and I was very happy to receive the first award.</p>
-<p><strong>Parent Thought</strong><br>
-Anna has participated in the club for the past two years. She has started to make progress, becoming more focused and gradually improving her reasoning and teamwork.</p>
-</td>
-
-<td width="20%" valign="top">
-<h3>Antoine Dao</h3>
-<p><strong>G11 • Age 16</strong><br>
-<strong>Teams:</strong> HS ONE<br>
-<strong>Role:</strong> Member</p>
-<img src="./img/2026-DaoHaBachHieu.jpeg" width="160"/>
-<p><strong>Who I Am</strong><br>
-My name is Antoine Dao, and I am 16 years old.</p>
-<p><strong>MCC Journey</strong><br>
-I started MCC 5 years ago and have seen a lot of progress through the years.</p>
-<p><strong>Purple Comet Experience</strong><br>
-I have taken part in 4 Purple Comet competitions, and this year is the first time our team achieved a perfect score of 30/30.</p>
-<p><strong>Parent Thought</strong><br>
-We have seen great progress in his autonomy, mathematical knowledge, and reasoning.</p>
-</td>
-
-<td width="20%" valign="top">
-<h3>Claire Bao Tran Luu</h3>
-<p><strong>G5 • Age 10</strong><br>
-<strong>Teams:</strong> MS THREE<br>
-<strong>Role:</strong> Member</p>
-<img src="./img/2026-ClaireLuu.jpg" width="160"/>
-<p><strong>Who I Am</strong><br>
-I am Claire, a fifth grader living in Washington. I love playing the violin and piano, and I enjoy swimming.</p>
-<p><strong>MCC Journey</strong><br>
-I have been attending MCC for 2 years.</p>
-<p><strong>Purple Comet Experience</strong><br>
-I took part in the 2026 Middle School Purple Comet as part of Team 3. The training sessions were very helpful, and the problems were similar to what we practiced, which helped me understand how to approach them.</p>
-<p><strong>Parent Thought</strong><br>
-Claire has improved tremendously. She can now write solutions in a logical and precise way and has benefited greatly from teamwork.</p>
-</td>
-
-<td width="20%" valign="top">
-<h3>Chi Pham</h3>
-<p><strong>G8 • Age 13</strong><br>
-<strong>Teams:</strong> MS ONE, HS ONE<br>
-<strong>Role:</strong> Member</p>
-<img src="./img/2026-ChiPham.jpeg" width="160"/>
-<p><strong>Who I Am</strong><br>
-I am Chi Pham. I am in 8th grade and live in Washington, USA.</p>
-<p><strong>MCC Journey</strong><br>
-I have been attending MCC for 3 years.</p>
-<p><strong>Purple Comet Experience</strong><br>
-I took part in both MS ONE and HS ONE. Purple Comet was a nice challenge and helped develop teamwork within the club.</p>
-<p><strong>Parent Thought</strong><br>
-Chi has significantly improved since joining the club. She started as a beginner, and now she is solid and able to work well in a team.</p>
-</td>
-
-<td width="20%" valign="top">
-<h3>Gia Minh Nguyen</h3>
-<p><strong>G6 • Age 11</strong><br>
-<strong>Teams:</strong> MS THREE<br>
-<strong>Role:</strong> Member</p>
-</td>
-
-</tr>
-
-<tr>
-
-<td width="20%" valign="top">
-<h3>Harry Vien</h3>
-<p><strong>G6 • Age 10</strong><br>
-<strong>Teams:</strong> MS THREE<br>
-<strong>Role:</strong> Member</p>
-<img src="./img/2026-HarryVien.jpg" width="160"/>
-<p><strong>Who I Am</strong><br>
-I am Harry. I am 11 years old and will be attending Queen Elizabeth's School for Boys. I have participated in several math competitions.</p>
-<p><strong>MCC Journey</strong><br>
-I have been attending MCC for 2 years.</p>
-<p><strong>Purple Comet Experience</strong><br>
-This was my first time attending Purple Comet. I found it a great opportunity to test my skills and understand what I need to improve.</p>
-<p><strong>Parent Thought</strong><br>
-Harry has made significant progress in mathematical thinking and problem-solving skills.</p>
-</td>
-
-<td width="20%" valign="top">
-<h3>Helen Vien</h3>
-<p><strong>G8 • Age 13</strong><br>
-<strong>Teams:</strong> MS THREE<br>
-<strong>Role:</strong> Vice Captain</p>
-<img src="./img/2026-HelenVien.jpg" width="160"/>
-<p><strong>Who I Am</strong><br>
-I am 13 years old and study at the Henrietta Barnett School in the UK.</p>
-<p><strong>MCC Journey</strong><br>
-I have been attending MCC for 2 years.</p>
-<p><strong>Purple Comet Experience</strong><br>
-This was my first time participating. It was very helpful in improving my problem-solving skills.</p>
-<p><strong>Parent Thought</strong><br>
-Helen has made excellent progress and achieved outstanding results in competitions.</p>
-</td>
-
-<td width="20%" valign="top">
-
-<h3>Henry Ho</h3>
-<p><strong>G7 • Age 13</strong><br>
-<strong>Teams:</strong> MS THREE<br>
-<strong>Role:</strong> Captain</p>
-<img src="./img/2026-HenryHo.jpeg" width="160"/>
-<p><strong>Who I Am</strong><br>
-My name is Henry Ho. I am 13 years old and in 7th grade.</p>
-<p><strong>MCC Journey</strong><br>
-This is my second year at MCC.</p>
-<p><strong>Purple Comet Experience</strong><br>
-I participated this year, and the problems were solvable but required time and thinking.</p>
-<p><strong>Parent Thought</strong><br>
-Henry has made strong progress in strengthening his fundamentals.</p>
-</td>
-
-<td width="20%" valign="top">
-<h3>Jason To</h3>
-<p><strong>G8 • Age 14</strong><br>
-<strong>Teams:</strong> MS ONE, HS ONE<br>
-<strong>Role:</strong> Captain (MS ONE), Member (HS ONE)</p>
-<img src="./img/2026-JasonTo.jpg" width="160"/>
-<p><strong>Who I Am</strong><br>
-My name is Jason To, a dedicated member of MCC.</p>
-<p><strong>MCC Journey</strong><br>
-I have been attending MCC for 3 years.</p>
-<p><strong>Purple Comet Experience</strong><br>
-I participated in both Middle School and High School competitions and achieved full marks. It was a proud moment, but the teamwork and focus mattered most.</p>
-<p><strong>Parent Thought</strong><br>
-Jason has grown in confidence, maturity, and passion for mathematics.</p>
-</td>
-
-<td width="20%" valign="top">
-<h3>Jake Cao</h3>
-<p><strong>G9 • Age 15</strong><br>
-<strong>Teams:</strong> HS ONE<br>
-<strong>Role:</strong> Member</p>
-</td>
-
-</tr>
-
-<tr>
-<td width="20%" valign="top">
-<h3>Karl Le</h3>
-<p><strong>G11 • Age 16</strong><br>
-<strong>Teams:</strong> HS ONE<br>
-<strong>Role:</strong> Captain</p>
-<img src="./img/2026-KarlLe.jpeg" width="160"/>
-<p><strong>Who I Am</strong><br>
-Karl Le, 16 years old, living in France near Paris, currently in 11th grade.</p>
-<p><strong>MCC Journey</strong><br>
-I have been attending MCC for 5 years.</p>
-<p><strong>Purple Comet Experience</strong><br>
-I have participated for 3–4 years. It is a good competition, and this year’s was even better, especially looking at the results.</p>
-<p><strong>Parent Thought</strong><br>
-Good.</p>
-</td>
-
-<td width="20%" valign="top">
-<h3>Linh Le</h3>
-<p><strong>G8 • Age 14</strong><br>
-<strong>Teams:</strong> MS ONE, HS ONE<br>
-<strong>Role:</strong> Vice Captain (MS ONE), Vice Captain (HS ONE)</p>
-<img src="./img/2026-LinhLe.jpg" width="160"/>
-<p><strong>Who I Am</strong><br>
-Hi! My name is Linh, and I am a Year 9 student from the UK.</p>
-<p><strong>MCC Journey</strong><br>
-I have been attending MCC for 2 years.</p>
-<p><strong>Purple Comet Experience</strong><br>
-I have participated in the Purple Comet competitions in 2025 and 2026. This year, I was part of both the Middle School and High School teams, where both teams achieved full marks and top scores. The competition was an unforgettable experience with both intense and rewarding moments.</p>
-<p><strong>Parent Thought</strong><br>
-Linh has developed a deeper passion for mathematics, stronger problem-solving skills, teamwork, and discipline.</p>
-</td>
-
-<td width="20%" valign="top">
-<h3>Long Vo Duc Tran</h3>
-<p><strong>G8 • Age 13</strong><br>
-<strong>Teams:</strong> MS TWO<br>
-<strong>Role:</strong> Member</p>
-<img src="./img/2026-LongTran.jpg" width="160"/>
-<p><strong>Who I Am</strong><br>
-My name is Long Vo Duc Tran. I am 13 years old and in Year 9 in the UK.</p>
-<p><strong>MCC Journey</strong><br>
-I have been attending MCC for almost 2 years.</p>
-<p><strong>Purple Comet Experience</strong><br>
-I took part in the Middle School Purple Comet as part of Team 2. I thought it was challenging and actually harder than the practice, but it was fun.</p>
-<p><strong>Parent Thought</strong><br>
-Long has developed from needing encouragement to becoming genuinely excited about learning. He now appreciates the beauty of mathematics and expresses his reasoning clearly.</p>
-</td>
-
-<td width="20%" valign="top">
-<h3>Luan Tran</h3>
-<p><strong>G8 • Age 14</strong><br>
-<strong>Teams:</strong> MS TWO<br>
-<strong>Role:</strong> Captain</p>
-</td>
-
-<td width="20%" valign="top">
-<h3>Mailys Phung Khac</h3>
-<p><strong>G8 • Age 13</strong><br>
-<strong>Teams:</strong> MS ONE<br>
-<strong>Role:</strong> Member</p>
-</td>
-
-</tr>
-
-<tr>
-
-<td width="20%" valign="top">
-<h3>Michael Le</h3>
-<p><strong>G5 • Age 11</strong><br>
-<strong>Teams:</strong> MS THREE<br>
-<strong>Role:</strong> Member</p>
-<img src="./img/2026-MichaelLe.jpeg" width="160"/>
-<p><strong>Who I Am</strong><br>
-Michael Le, a 5th grader in Washington, USA. I enjoy building LEGO, creating music sheets, and playing video games with my brothers.</p>
-<p><strong>MCC Journey</strong><br>
-I have been attending MCC for 1 year.</p>
-<p><strong>Purple Comet Experience</strong><br>
-I participated in Purple Comet 2026. My teammates actively worked on problems and helped review each other’s solutions. The training and materials provided were very effective.</p>
-<p><strong>Parent Thought</strong><br>
-Michael has improved in critical thinking and teamwork.</p>
-</td>
-
-<td width="20%" valign="top">
-<h3>Minh Nguyen</h3>
-<p><strong>G6 • Age 12</strong><br>
-<strong>Teams:</strong> MS TWO<br>
-<strong>Role:</strong> Member</p>
-<img src="./img/2026-MinhNguyen.jpeg" width="160"/>
-<p><strong>Who I Am</strong><br>
-I am in 6th grade and live in Washington state.</p>
-<p><strong>MCC Journey</strong><br>
-I have been attending MCC for 2 years.</p>
-<p><strong>Purple Comet Experience</strong><br>
-I participated in the 2026 Middle School competition. It was my first time. I received lectures and practice materials beforehand. My teammates were kind, and we all did our best.</p>
-<p><strong>Parent Thought</strong><br>
-Minh has learned many new concepts and now explains ideas much more clearly. He also collaborates very well with teammates.</p>
-</td>
-
-<td width="20%" valign="top">
-<h3>Minh Vo Duc Tran</h3>
-<p><strong>G7 • Age 12</strong><br>
-<strong>Teams:</strong> MS TWO<br>
-<strong>Role:</strong> Member</p>
-<img src="./img/2026-MinhTran.jpg" width="160"/>
-<p><strong>Who I Am</strong><br>
-My name is Minh Vo Duc Tran, and I am 12 years old. I am in Year 7 in the UK.</p>
-<p><strong>MCC Journey</strong><br>
-I have been attending MCC for almost 2 years.</p>
-<p><strong>Purple Comet Experience</strong><br>
-The Purple Comet competition was more challenging than anything I had done before. I was part of the second Middle School team.</p>
-<p><strong>Parent Thought</strong><br>
-Minh has learned persistence and improved his ability to explain his solutions clearly.</p>
-</td>
-
-<td width="20%" valign="top">
-<h3>Nam Nguyen</h3>
-<p><strong>G8 • Age 13</strong><br>
-<strong>Teams:</strong> MS TWO<br>
-<strong>Role:</strong> Vice Captain</p>
-<img src="./img/2026-NamNguyen.jpeg" width="160"/>
-<p><strong>Who I Am</strong><br>
-I am a Year 9 student at the Perse Upper in Cambridge. Maths is my favourite subject, and I also play piano and table tennis.</p>
-<p><strong>MCC Journey</strong><br>
-I have been attending MCC for 2 years.</p>
-<p><strong>Purple Comet Experience</strong><br>
-I participated in the Middle School competition. The questions were interesting and challenging.</p>
-<p><strong>Parent Thought</strong><br>
-“My son finds the MCC Club both useful and motivating for his Maths learning.”</p>
-</td>
-
-<td width="20%" valign="top">
-<h3>Nam Phong Nguyen</h3>
-<p><strong>G8 • Age 13</strong><br>
-<strong>Teams:</strong> MS ONE<br>
-<strong>Role:</strong> Member</p>
-<img src="./img/2026-Thoa Nguyen.jpeg" width="160"/>
-<p><strong>Who I Am</strong><br>
-I am 13 years old and study at Lakanal Middle School in Sceaux, France. I enjoy sports, especially tennis.</p>
-<p><strong>MCC Journey</strong><br>
-I have been attending MCC for about 1.5 years.</p>
-<p><strong>Purple Comet Experience</strong><br>
-I participated in MS ONE this year. The competition was very interesting and required strong collaboration between all team members.</p>
-<p><strong>Parent Thought</strong><br>
-He has become more independent and focused when solving math problems, and his motivation has also improved.</p>
-</td>
-
-</tr>
-
-<tr>
-
-<td width="20%" valign="top">
-<h3>Nguyen Trung Kien</h3>
-<p><strong>G8 • Age 13</strong><br>
-<strong>Teams:</strong> MS TWO<br>
-<strong>Role:</strong> Member</p>
-<img src="./img/2026-JadePascalNguyen.jpeg" width="160"/>
-<p><strong>Who I Am</strong><br>
-My name is Trung Kien. I live in France and am in 8th grade. I enjoy math, chess, and playing.</p>
-<p><strong>MCC Journey</strong><br>
-I have been attending MCC since 2024.</p>
-<p><strong>Purple Comet Experience</strong><br>
-It was my first time participating, and I really loved working as a team.</p>
-<p><strong>Parent Thought</strong><br>
-More time work on Math.</p>
-
-</td>
-</tr>
-</table>
-
-&nbsp;
-
----
-
-*It is clear how much the club has grown into something truly special. Over the years, it has brought together students who share a curiosity for mathematics and a desire to challenge themselves. Your commitment to creating engaging problems and fostering a supportive, stimulating environment has made the club a place where learning is both demanding and deeply rewarding.*
-
-*On a personal level, the impact of the club has been especially meaningful during my studies. The rigor of the problems, combined with your guidance, helped me develop the discipline, precision, and perseverance required to succeed. Beyond improving my mathematical skills, it shaped the way I think, reason, and approach difficulty in general. The habits and confidence I gained through the club continue to guide me every day, and I am truly grateful for its lasting influence.*
-
-- Albert Dinh-Le (MCC Alumni, Twice Purple Comet Honourable Mentions 2022, 2025.)
-
----
-
-This competition is not just about winning.
-
-It is about:
-- developing discipline and perseverance  
-- learning to think deeply and clearly  
-- growing through teamwork and challenge  
-
-💙 **MCC continues to build not only strong mathematicians — but confident thinkers.**
-
----
-
-
-&nbsp;
-
-# MCC – A Global Math Club
-
-
-## 1. 🏆 Who are we? & Our 2026-2027 Transition / Chúng tôi là ai & Sự chuyển mình 2026-2027
-
-Founded in Canada by Nghia Doan, MCC has grown from a passionate group of students into a vibrant international community. For over a decade, we have offered coaching, weekly challenges, and team contests to help students develop strong problem-solving skills. Our track record is marked by world-class achievements: In 2025, for the second time, our Middle School team placed **1st in the world** at the Purple Comet Math Meet with a perfect score, while our High School teams consistently earn global **Honorable Mentions**.
-
-**The Transition to 2026-2027:**
-Starting from the 2026-2027 school year, MCC is evolving into a more structured, professional organization. We are moving from a flexible coaching model to a **Comprehensive Research & Olympiad Club**. This transformation includes:
-
-* **Professional Leadership:** A structured board with a President and 3 Vice-Presidents (Administrative, Academic, and Competition).
-* **Formal Membership:** An annual membership model ($200-$300/year) that provides a stable foundation for advanced resources.
-* **Global On-site Events:** Launching two annual "MCC Olympiads" held in-person in the USA and Europe.
-
-Câu Lạc Bộ Toán Học Toàn Cầu MCC khởi đầu tại Canada và đã phát triển thành một cộng đồng quốc tế sôi động. Trong hơn một thập kỷ, chúng tôi đã đồng hành cùng học sinh qua các buổi huấn luyện và thử thách hàng tuần. Thành tích của MCC đã được khẳng định trên đấu trường quốc tế: Năm 2025, lần thứ 2 đội THCS của chúng tôi xếp **Hạng Nhất Thế Giới** với điểm tuyệt đối tại Purple Comet Math Meet, và các đội THPT liên tục nhận vinh danh **Honorable Mentions** toàn cầu.
-
-**Sự chuyển mình cho năm học 2026-2027:**
-Bước sang năm học 2026-2027, MCC chính thức chuyển mình sang mô hình **Câu lạc bộ Nghiên cứu & Thi đấu chuyên nghiệp**. Đây là một bước tiến từ mô hình hỗ trợ tự phát sang một tổ chức có cấu trúc chặt chẽ:
-
-* **Bộ máy chuyên nghiệp:** Điều hành bởi Chủ tịch và 3 Phó chủ tịch phụ trách chuyên sâu về Hành chính, Chuyên môn và Thi đua.
-* **Hệ thống hội viên:** Chế độ hội viên thường niên ($200-$300/năm) giúp duy trì các nguồn lực cao cấp và hạ tầng học tập.
-* **Olympic trực tiếp:** Tổ chức 2 kỳ thi Olympic nội bộ quy mô lớn mỗi năm tại Mỹ và Châu Âu, tạo môi trường thi đấu thực tế cho học sinh.
-
-### How to Join / Làm Thế Nào Để Tham Gia 
-
-**Contact**: register yourself to [the MCC Malining List](https://groups.google.com/g/mcc-school-year-2025-2026), or email to [Ms. Thu Pham](mailto:tpham151st@gmail.com), [Ms. Ngoc Ha](mailto:lengocha45@gmail.com), [Ms. Ngoc Anh](tranngocanh0910@gmail.com).
-
-**Liên lạc**: đăng ký [the MCC Malining List](https://groups.google.com/g/mcc-school-year-2025-2026), hoặc email cho [Ms. Thu Pham](mailto:tpham151st@gmail.com), [Ms. Ngoc Ha](mailto:lengocha45@gmail.com), [Ms. Ngoc Anh](tranngocanh0910@gmail.com).
-
-&nbsp;
-
-## 2. The Club Curriculums/ Giáo Trình của Câu Lộc Bộ
-
-Every journey in mathematics begins with a single spark of curiosity. To help students find that spark, we have designed a clear, progressive pathway.
-
-Mỗi hành trình toán học đều bắt đầu từ một tia sáng tò mò. Để giúp học sinh khởi đầu đúng hướng, chúng tôi đã thiết kế một lộ trình phát triển rõ ràng.
-
-### (1) The Foundation: 100 Math Problems for Absolute Beginners / Nền tảng: 100 Bài Toán Dành Cho Người Mới Bắt Đầu
-
-Before diving into complex theories, students need to fall in love with patterns and logic. This book is a collection of teaching insights gathered over a decade, designed to make math meaningful. It is the perfect entry point for young thinkers.
-
-How can we make math more enjoyable? Not a set of dry lessons. Not a series of drills. But something that sparks curiosity. Something that feels like solving a mystery, discovering a pattern, unlocking a secret? Over the past 10 years, I’ve taught hundreds of students — from beginners to competition-level learners — and learned one thing: The right problem explained the right way can change everything. That’s why I wrote this book. It’s a collection of knowledge, ideas, and teaching insights gathered over a decade of working with young learners.
-
-It’s designed to help students fall in love with problem solving — not by making things easier, but by making them more meaningful. I’d love to share it with you.
-
-Trước khi bước vào những lý thuyết phức tạp, học sinh cần yêu thích các quy luật và logic. Cuốn sách này là tập hợp những trải nghiệm giảng dạy suốt một thập kỷ, giúp toán học trở nên có ý nghĩa và gần gũi hơn. Đây là điểm bắt đầu lý tưởng.
-
-Làm thế nào để Toán học trở nên thú vị hơn? Không phải là những bài giảng khô khan. Cũng không phải là một chuỗi các bài luyện tập máy móc. Mà là điều gì đó khơi gợi sự tò mò — như đang giải một bí ẩn, phát hiện một quy luật, mở khóa một điều bí mật? Trong 10 năm qua, tôi đã dạy hàng trăm học sinh — từ những em mới bắt đầu đến các bạn học sinh luyện thi cấp cao — và tôi rút ra một điều: một bài toán phù hợp, được giảng giải đúng cách, có thể thay đổi mọi thứ. Đó là lý do tôi viết cuốn sách này. Nó là tập hợp của kiến thức, ý tưởng, và những trải nghiệm giảng dạy mà tôi tích lũy suốt một thập kỷ làm việc cùng học sinh nhỏ tuổi. 
-
-Cuốn sách được viết để giúp học sinh yêu thích việc giải toán — không phải bằng cách làm cho mọi thứ dễ hơn, mà là bằng cách khiến chúng có ý nghĩa hơn. Tôi rất muốn chia sẻ nó với bạn. 
-
-There are two editions: print and electronic. I suggest you to get the print one, that is a beautiful and high quality book. Contact the club to have the print edition.
-
-In case if you want to have the ebook, you get it in your hand in 5 minutes, click the image for the English edition.
-
-[![100 Math Problems for Absolute Beginners (Ebook)][1]][2]
-
-[1]: ./img/cover-en.jpg
-[2]: https://www.lulu.com/shop/nghia-doan/100-math-problems-for-absolute-beginners/ebook/product-p69y785.html
-
-Hiện có hai phiên bản: sách in và sách điện tử. Tôi khuyên bạn nên chọn phiên bản sách in, vì đây là một cuốn sách được thiết kế đẹp mắt với chất lượng cao. Liên lạc với Câu Lộc Bộ để có bản in.
-
-Trong trường hợp bạn muốn sở hữu bản ebook, bạn sẽ nhận được sách chỉ sau 5 phút, nhấp vào hình bên dưới cho bản tiếng Việt.
-
-[![100 Bài Toán Dành Cho Người Mới Bắt Đầu (Ebook)][3]][4]
-
-[3]: ./img/cover-vn.jpg
-[4]: https://www.lulu.com/shop/nghia-doan/100-bài-toán-dành-cho-người-mới-bắt-đầu/ebook/product-rm68v54.html
-
-&nbsp;
-
-### (2) The Curriculum: Learning Problem Solving V & VI (New for 2026) / Giáo trình chuyên sâu: Learning Problem Solving V & VI (Ra mắt 2026)
-
-For the 2026-2027 school year, we are releasing our flagship high-quality print series. These are not just textbooks; they are complete learning journeys updated annually.
-
-* **Volume V: 500 Math Problems for Growing Thinkers** (Middle School)
-* **Volume VI: 500 Math Problems for Deep Thinkers** (High School)
-
-Each set consists of two books:
-
-1. **Textbook & Practice:** 50 chapters with guided examples, including **video solutions** for key problems accessible via member accounts.
-2. **Exams & Solutions:** A dedicated volume for assessment and grading, allowing parents and students to track progress throughout the 4-year curriculum.
-
-Cho năm học 2026-2027, MCC ra mắt bộ sách in chất lượng cao, được cập nhật và hiệu chỉnh hàng năm để phù hợp với thực tế học tập:
-
-* **Tập V: 500 Math Problems for Growing Thinkers** (Dành cho cấp THCS)
-* **Tập VI: 500 Math Problems for Deep Thinkers** (Dành cho cấp THPT)
-
-Mỗi cấp độ bao gồm bộ đôi sách đi kèm:
-
-1. **Sách Giáo khoa & Bài tập:** Gồm 50 chương với các ví dụ hướng dẫn và bài tập chọn lọc. Đặc biệt, các bài toán tiêu biểu sẽ có **video phân tích lời giải** đi kèm.
-2. **Bộ đề kiểm tra & Lời giải:** Hệ thống đánh giá định kỳ giúp học sinh và phụ huynh kiểm soát quá trình học tập một cách nghiêm túc và hiệu quả.
-
-&nbsp;
-
-## 3. Important Deadlines / Các mốc thời gian quan trọng
-
-* **February 28, 2026:** Registration deadline for the new book sets and club membership.
-* **March 2026:** Writing and content finalization phase.
-* **August 2026:** Global distribution of printed books to registered local groups.
-* **28/02/2026:** Hạn chót đăng ký mua bộ sách mới và tham gia hội viên câu lạc bộ.
-* **Tháng 3/2026:** Bắt đầu giai đoạn biên soạn và hoàn thiện nội dung.
-* **Tháng 8/2026:** Giao sách in đến các điểm đăng ký chung trên toàn cầu.
-
-&nbsp;
-
-## 4. Our achievements in the Purple Comet Math Meets
-
-The great teams in 2025 [2025 Middle School and High School Teams](./purple-comet.md)
-
-Những đội tuyển xuất sắc năm 2025 [Các đội THCS và THPT năm 2025](https://www.google.com/search?q=./purple-comet.md)
-
-### **Middle School Mixed Team Category** / **Hạng mục Đội Hỗn hợp cấp THCS**:
-
-- [1st in the world in 2025: MS One (Math, Coding & Chess Club)](https://purplecomet.org/results/2025?year=2025)
-- [1st in the world in 2019: The Contest Team (Math & Chess Club in Ottawa)](https://purplecomet.org/results/2019?year=2019)
-- [Honorable mention worldwide in 2021: MCC Challengers (Canada)](https://purplecomet.org/results/2021?year=2021)
-- [Second in Canada in 2023: Middle School One (Canada)](https://purplecomet.org/results/2023?year=2023)
-- [Second in Canada in 2022: The Pi-thons (Canada)](https://purplecomet.org/results/2022?year=2022)
-
-* [Hạng Nhất Thế giới năm 2025: MS One (Math, Coding & Chess Club)](https://purplecomet.org/results/2025?year=2025)
-* [Hạng Nhất Thế giới năm 2019: The Contest Team (Math & Chess Club tại Ottawa)](https://purplecomet.org/results/2019?year=2019)
-* [Vinh danh Toàn cầu năm 2021: MCC Challengers (Canada)](https://purplecomet.org/results/2021?year=2021)
-* [Hạng Nhì tại Canada năm 2023: Middle School One (Canada)](https://purplecomet.org/results/2023?year=2023)
-* [Hạng Nhì tại Canada năm 2022: The Pi-thons (Canada)](https://purplecomet.org/results/2022?year=2022)
-
-
-### **High School Mixed Team Category** / **Hạng mục Đội Hỗn hợp cấp THPT**:
-
-- [Honorable mention worldwide, first in Canada in 2025: HS One (Math, Codding & Chess Club (MCC))](https://purplecomet.org/results/2025?year=2025)
-- [Honorable mention worldwide, first in Canada in 2025: HS Two (Math, Codding & Chess Club (MCC))](https://purplecomet.org/results/2025?year=2025)
-- [Honorable mention worldwide, second in Canada in 2022: The Lost Comets (Canada)](https://purplecomet.org/results/2022?year=2022)
-- [Honorable mention worldwide, second in Canada in 2021: Hi-scorers (Canada)](https://purplecomet.org/results/2021?year=2021)
-- [Second in Canada in 2020: Mazaleth (Canada)](https://purplecomet.org/?action=result/results/2020)
-- [First in Canada in 2019: The Contest Team (Math & Chess Club in Ottawa)](https://purplecomet.org/results/2019?year=2019)
-
-* [Vinh danh Toàn cầu, Hạng Nhất tại Canada năm 2025: HS One (Math, Coding & Chess Club (MCC))](https://purplecomet.org/results/2025?year=2025)
-* [Vinh danh Toàn cầu, Hạng Nhất tại Canada năm 2025: HS Two (Math, Coding & Chess Club (MCC))](https://purplecomet.org/results/2025?year=2025)
-* [Vinh danh Toàn cầu, Hạng Nhì tại Canada năm 2022: The Lost Comets (Canada)](https://purplecomet.org/results/2022?year=2022)
-* [Vinh danh Toàn cầu, Hạng Nhì tại Canada năm 2021: Hi-scorers (Canada)](https://purplecomet.org/results/2021?year=2021)
-* [Hạng Nhì tại Canada năm 2020: Mazaleth (Canada)](https://purplecomet.org/?action=result/results/2020)
-* [Hạng Nhất tại Canada năm 2019: The Contest Team (Math & Chess Club tại Ottawa)](https://purplecomet.org/results/2019?year=2019)
-
-&nbsp;
-
-## 5. [Our other books and previous curriculums]
-
-[Learning Problem Solving Volumes 1-2-3](./lps-volumes.md)
-
-[Annual School Year books (2021-2025)](./annual-books.md)
-
-&nbsp;
-
-## 6. [From the students](./from-students.md)
+## 📣 Registration for 2026-2027 is open
+
+<div class="note" markdown="1">
+
+**Register by 18 July 2026.** Entrance and reassessment tests take place over two days at the **beginning of August**. Membership is **$300** for the year, including the curriculum books.
+
+**Three things are new, and two of them need settling *before* you fill in the form.** You must **register with a team of two**, already formed — we no longer match students to teammates afterwards. **Almost every student tests at the start of the year**, returning students included, unless they scored 75% or above last year. And the curriculum is now **[LPS VI and LPS VII](./books.md)**, ordered directly from Lulu at printing cost.
+
+[Read the full announcement](./register.md){: .btn}
+[Registration form](https://forms.gle/dD6cLU6Ym8kEQddNA){: .btn .secondary}
+
+</div>
+
+<div class="vn" markdown="1">
+
+**📣 Đăng ký năm học 2026-2027 đã mở.** Hạn chót **18/07/2026**. Thi đầu vào và thi đánh giá lại diễn ra trong hai ngày vào **đầu tháng 8**. Phí hội viên **$300/năm**, đã bao gồm bộ sách giáo trình.
+
+**Ba điểm mới, trong đó hai điểm cần chuẩn bị *trước* khi điền mẫu đăng ký.** Học sinh phải **đăng ký theo đội hai người đã lập sẵn** — câu lạc bộ không ghép đội sau khi thi nữa. **Hầu hết học sinh đều thi đầu năm**, kể cả học sinh cũ, trừ những em đạt từ 75% trở lên năm ngoái. Và giáo trình nay là **[LPS VI và LPS VII](./books.md)**, đặt trực tiếp từ Lulu theo giá in.
+
+[Đọc thông báo đầy đủ](./register.md){: .btn}
+[Mẫu đăng ký](https://forms.gle/dD6cLU6Ym8kEQddNA){: .btn .secondary}
+
+</div>
+
+## Purple Comet 2026 — three teams first in the world
+
+<div class="stats" markdown="0">
+  <div class="stat"><b>3</b><span>MCC teams ranked #1 worldwide</span></div>
+  <div class="stat"><b>4,804</b><span>competing teams</span></div>
+  <div class="stat"><b>86</b><span>countries</span></div>
+  <div class="stat"><b>10</b><span>years of MCC at Purple Comet</span></div>
+</div>
+
+MS ONE and MS TWO both scored a perfect 20/20 and HS ONE a perfect 30/30, each tying for World Champion; MS THREE earned an Honorable Mention at 19/20.
+
+[The 2026 teams and student profiles](./purple-comet-2026.md){: .btn}
+[Our results since 2019](./history.md){: .btn .secondary}
+
+## The four training tracks
+
+Students work in pairs through a two-week cycle: study a chapter, submit a team assignment, review the official solutions, then sit a team test together. Every track follows the same rhythm; what changes is the difficulty and the length of the test.
+
+<div class="cards" markdown="0">
+
+  <div class="card">
+    <span class="tag">Entry</span>
+    <h3><a href="./t1.md">T1 — Foundations</a></h3>
+    <p>The entry point into collaborative contest training. Learning to read a problem, choose a strategy, and write a complete solution with a partner.</p>
+    <p><strong>LPS VI</strong> · 5–7 hrs/week · 90-minute tests</p>
+  </div>
+
+  <div class="card">
+    <span class="tag">Contest</span>
+    <h3><a href="./t2.md">T2 — Foresight</a></h3>
+    <p>Harder contest problems that need several ideas joined together. Comparable to AMC 8/10 and national qualifiers.</p>
+    <p><strong>LPS VI</strong> · 5–7 hrs/week · 120-minute tests</p>
+  </div>
+
+  <div class="card">
+    <span class="tag">Olympiad</span>
+    <h3><a href="./t3.md">T3 — Combat</a></h3>
+    <p>National olympiad training. Standard olympiad theorems, unfamiliar problems broken into solvable parts, rigorous written proof.</p>
+    <p><strong>LPS VII</strong> · 6–7 hrs/week · 150-minute tests</p>
+  </div>
+
+  <div class="card">
+    <span class="tag">Mastery</span>
+    <h3><a href="./t4.md">T4 — Mastery</a></h3>
+    <p>The capstone. Advanced technique, professional solution writing, and the stamina for multi-hour contests. Aimed at team selection tests and the IMO.</p>
+    <p><strong>LPS VII</strong> · 7–8 hrs/week · 180-minute tests</p>
+  </div>
+
+</div>
+
+## The curriculum
+
+<div class="cards" markdown="0">
+
+  <div class="card">
+    <span class="tag">Foundation</span>
+    <h3>100 Math Problems for Absolute Beginners</h3>
+    <p>A decade of teaching insight, written to make young students fall in love with patterns and logic. Print and e-book, English and Vietnamese.</p>
+    <p><a href="./books.md">Details and ordering →</a></p>
+  </div>
+
+  <div class="card">
+    <span class="tag">Middle School</span>
+    <h3>LPS VI — From Foundations to Insight</h3>
+    <p>54 chapters, 216 sections, about 1,400 problems, 675 pages. The textbook for T1 and T2.</p>
+    <p><a href="https://www.lulu.com/shop/nghia-doan/learning-problem-solving-vi/hardcover/product-m2ezqjj.html">Order from Lulu →</a></p>
+  </div>
+
+  <div class="card">
+    <span class="tag">High School</span>
+    <h3>LPS VII — From Insight to Mastery</h3>
+    <p>55 chapters, 934 worked examples and 406 exercises, 850 pages. The textbook for T3 and T4.</p>
+    <p><a href="https://www.lulu.com/shop/nghia-doan/learning-problem-solving-vii/hardcover/product-2mnpyy4.html">Order from Lulu →</a></p>
+  </div>
+
+  <div class="card">
+    <span class="tag">Tests</span>
+    <h3>Tests & Yearbook</h3>
+    <p>56 papers and over 1,200 problems across four levels — and, at the end of the year, the yearbook the students write with us.</p>
+    <p><a href="./tests.md">How testing works →</a></p>
+  </div>
+
+</div>
+
+## The Online Mathematics Laboratory
+
+**[TOML](./toml.html)** is a free, bilingual companion course: mathematics investigated with a programming tool. Each problem is posed three ways — explore it computationally, explain what you see, then establish it with a proof — and every page carries runnable Python you can execute in the browser or copy to your own machine. Nothing to buy, nothing to install.
+
+## The club in 2026-2027
+
+Starting this year, MCC is becoming a more structured organisation, moving from a flexible coaching model to a **Comprehensive Research & Olympiad Club**:
+
+* **Professional leadership** — a board with a President and three Vice-Presidents (Administrative, Academic, and Competition).
+* **Formal membership** — an annual membership of $200–$300, giving the club a stable foundation for advanced resources.
+* **Global on-site events** — two annual in-person "MCC Olympiads", in the USA and in Europe.
+
+<div class="vn" markdown="1">
+
+**Câu Lạc Bộ Toán Học Toàn Cầu MCC** khởi đầu tại Canada và đã phát triển thành một cộng đồng quốc tế sôi động. Trong hơn một thập kỷ, chúng tôi đã đồng hành cùng học sinh qua các buổi huấn luyện và thử thách hàng tuần. Thành tích của MCC đã được khẳng định trên đấu trường quốc tế: năm 2026, ba đội của câu lạc bộ cùng đạt **Hạng Nhất Thế Giới** tại Purple Comet Math Meet với điểm tuyệt đối.
+
+**Sự chuyển mình cho năm học 2026-2027.** Bước sang năm học 2026-2027, MCC chính thức chuyển sang mô hình **Câu lạc bộ Nghiên cứu & Thi đấu chuyên nghiệp**:
+
+* **Bộ máy chuyên nghiệp** — điều hành bởi Chủ tịch và 3 Phó chủ tịch phụ trách Hành chính, Chuyên môn và Thi đua.
+* **Hệ thống hội viên** — chế độ hội viên thường niên ($200–$300/năm) giúp duy trì các nguồn lực cao cấp và hạ tầng học tập.
+* **Olympic trực tiếp** — tổ chức 2 kỳ thi Olympic quy mô lớn mỗi năm tại Mỹ và Châu Âu.
+
+[Thông báo đăng ký năm học 2026-2027](./register.md)
+
+</div>
+
+## How to join
+
+Register on the [MCC mailing list](https://groups.google.com/g/mcc-school-year-2025-2026), or write to
+[Ms. Thu Pham](mailto:tpham151st@gmail.com), [Ms. Ngoc Ha](mailto:lengocha45@gmail.com), or [Ms. Ngoc Anh](mailto:tranngocanh0910@gmail.com).
+
+*Liên lạc:* đăng ký [Danh sách thư MCC](https://groups.google.com/g/mcc-school-year-2025-2026), hoặc email cho [Ms. Thu Pham](mailto:tpham151st@gmail.com), [Ms. Ngoc Ha](mailto:lengocha45@gmail.com), [Ms. Ngoc Anh](mailto:tranngocanh0910@gmail.com).
+
+## Everything else
+
+* [**Registration 2026-2027**](./register.md) — the full announcement, in English and Vietnamese.
+* [**Programs 2026-2027**](./programs.md) — how the year works, entrance and reassessment, the calendar, awards.
+* [**Books**](./books.md) — the full curriculum and how to order it.
+* [**Tests & Yearbook**](./tests.md) — the test format, submission rules, grading, and the yearbook.
+* [**Purple Comet 2026**](./purple-comet-2026.md) — teams, results, and student profiles.
+* [**Competition history**](./history.md) — our Purple Comet results, 2019 to 2026.
+* [**Archive**](./archive.md) — past curricula, standings, entrance tests, and earlier LPS volumes.

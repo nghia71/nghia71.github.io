@@ -1,4 +1,6 @@
-![Math Club & Competitions (MCC)](./img/MCC-2024-Logo-Large.png)
+---
+title: From our students
+---
 
 **From our students!**
 
