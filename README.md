@@ -1,5 +1,6 @@
 ---
 title: Home
+permalink: /
 ---
 
 <div class="hero" markdown="1">
