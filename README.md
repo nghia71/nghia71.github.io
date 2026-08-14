@@ -154,9 +154,9 @@ Starting this year, MCC is becoming a more structured organisation, moving from 
 ## How to join
 
 Register on the [MCC mailing list](https://groups.google.com/g/mcc-school-year-2025-2026), or write to
-[Ms. Thu Pham](mailto:tpham151st@gmail.com), [Ms. Ngoc Ha](mailto:lengocha45@gmail.com), or [Ms. Ngoc Anh](mailto:tranngocanh0910@gmail.com).
+[Ms. Thu Pham](mailto:tpham151st@gmail.com), [Ms. Ngoc Ha](mailto:lengocha45@gmail.com), [Ms. Ngoc Anh](mailto:tranngocanh0910@gmail.com), or [Ms. Quynh Anh](mailto:vquynhanh80@gmail.com).
 
-*Liên lạc:* đăng ký [Danh sách thư MCC](https://groups.google.com/g/mcc-school-year-2025-2026), hoặc email cho [Ms. Thu Pham](mailto:tpham151st@gmail.com), [Ms. Ngoc Ha](mailto:lengocha45@gmail.com), [Ms. Ngoc Anh](mailto:tranngocanh0910@gmail.com).
+*Liên lạc:* đăng ký [Danh sách thư MCC](https://groups.google.com/g/mcc-school-year-2025-2026), hoặc email cho [Ms. Thu Pham](mailto:tpham151st@gmail.com), [Ms. Ngoc Ha](mailto:lengocha45@gmail.com), [Ms. Ngoc Anh](mailto:tranngocanh0910@gmail.com), [Ms. Quynh Anh](mailto:vquynhanh80@gmail.com).
 
 ## Everything else
 
