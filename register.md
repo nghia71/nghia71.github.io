@@ -55,7 +55,7 @@ If a student does not reach the bar, the right next step is **Beast Academy or t
 
 ### 3. New books: LPS VI and LPS VII
 
-Two new volumes replace the old curriculum. **[LPS VI — From Foundations to Insight](./books.md)** (54 chapters, ~1,400 problems, 675 pages) is used by T1 and T2; **[LPS VII — From Insight to Mastery](./books.md)** (55 chapters, 934 worked examples and 406 exercises, 850 pages) by T3 and T4.
+Two new volumes replace the old curriculum. **[LPS VI — From Foundations to Insight](./books.md)** (54 chapters, 1,395 problems, 672 pages) is used by T1 and T2; **[LPS VII — From Insight to Mastery](./books.md)** (55 chapters, 1,326 problems, 648 pages) by T3 and T4.
 
 They can be ordered directly from Lulu, at the printing cost rounded to the nearest unit — the club takes nothing. Lulu prints in each country and ships domestically. Tell us when you order: if a discount code is available, we will pass it on.
 
@@ -124,7 +124,7 @@ Nếu chưa đạt, bước tiếp theo đúng đắn là học **Beast Academy 
 
 ### 3. Bộ sách mới: LPS VI và LPS VII
 
-Hai quyển sách mới thay cho giáo trình cũ. **[LPS VI — From Foundations to Insight](./books.md)** (54 chương, khoảng 1.400 bài, 675 trang) dùng cho T1 và T2; **[LPS VII — From Insight to Mastery](./books.md)** (55 chương, 934 ví dụ có lời giải trọn vẹn và 406 bài tập, 850 trang) dùng cho T3 và T4.
+Hai quyển sách mới thay cho giáo trình cũ. **[LPS VI — From Foundations to Insight](./books.md)** (54 chương, 1.395 bài, 672 trang) dùng cho T1 và T2; **[LPS VII — From Insight to Mastery](./books.md)** (55 chương, 1.326 bài, 648 trang) dùng cho T3 và T4.
 
 Có thể đặt trực tiếp từ Lulu, giá đúng bằng giá in làm tròn đến hàng đơn vị — câu lạc bộ không lấy gì thêm. Lulu in tại từng nước rồi giao hàng trong nước đó. Khi đặt xin nhắn cho câu lạc bộ: nếu có mã giảm giá chúng tôi sẽ chuyển ngay.
 
