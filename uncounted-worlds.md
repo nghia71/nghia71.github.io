@@ -45,8 +45,8 @@ About half an hour to read. Includes the prologue, which introduces the four and
 
 Read the chapter in either language, then try whichever challenges appeal. **Nobody is expected to do all four** — start at your level and stretch from there.
 
-Send answers to **[email address]** by **[date]**. This is a test run and results count towards club standing.
+Send answers to **[Nghia Doan](mailto:nghia71@gmail.com)** by **August 31, 2026**. This is a test run and results count towards club standing.
 
 **Tell us where you got stuck.** "I understood the first part and then I did not know what to do with the third row" is worth more than a correct number, and it is what makes the next chapter better. There is no penalty for an unfinished attempt.
 
-*Đọc chương sách bằng ngôn ngữ nào cũng được, rồi thử những thử thách mà em thấy hợp. **Không ai phải làm cả bốn** — hãy bắt đầu từ đúng mức của mình rồi vươn lên. Gửi bài về **[địa chỉ email]** trước ngày **[ngày]**. Đây là đợt chạy thử và kết quả được tính vào thành tích câu lạc bộ. **Hãy cho chúng tôi biết em bị mắc ở đâu** — điều đó có giá trị hơn một đáp án đúng, và bài làm dở dang không bị trừ điểm.*
+*Đọc chương sách bằng ngôn ngữ nào cũng được, rồi thử những thử thách mà em thấy hợp. **Không ai phải làm cả bốn** — hãy bắt đầu từ đúng mức của mình rồi vươn lên. Gửi bài về **[Nghia Doan](mailto:nghia71@gmail.com)** trước ngày **31 tháng 8, 2026**. Đây là đợt chạy thử và kết quả được tính vào thành tích câu lạc bộ. **Hãy cho chúng tôi biết em bị mắc ở đâu** — điều đó có giá trị hơn một đáp án đúng, và bài làm dở dang không bị trừ điểm.*
