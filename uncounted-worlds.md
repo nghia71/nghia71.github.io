@@ -26,7 +26,7 @@ Every chapter ends with **four challenges, one per character, at four levels**. 
 
 ### *Ngày khai giảng ở bốn thế giới*
 
-<p><a class="btn" href="./uw/The-Uncounted-Worlds-001.pdf">Download Chapter 1 (PDF, bilingual)</a></p>
+<p><a class="btn" href="./uw/The-Uncounted-Worlds-001-Thirty-Seconds-on-Four-Worlds.pdf">Download Chapter 1 (PDF, bilingual)</a></p>
 
 About half an hour to read. Includes the prologue, which introduces the four and their schools.
 
