@@ -53,6 +53,18 @@ About half an hour to read.
 
 ---
 
+## Solutions to Chapter 1
+
+### *Lời giải Chương 1*
+
+<p><a class="btn" href="./uw/The-Uncounted-Worlds-001-Solutions.pdf">Download the solutions (PDF, English)</a></p>
+
+Published the week after the chapter, never inside it. Try the challenges first — the part worth writing down is where you got stuck, not the answer. The solutions are in English only; the chapter and the challenges are in both languages.
+
+*Đăng vào tuần kế tiếp sau chương sách, không bao giờ nằm trong chương. Hãy thử làm các thử thách trước đã — chỗ đáng ghi lại là chỗ em bị mắc, chứ không phải đáp án. Lời giải chỉ có bản tiếng Anh; chương sách và các thử thách thì có cả hai thứ tiếng.*
+
+---
+
 ## Taking part
 
 Read the chapter in either language, then try whichever challenges appeal. **Nobody is expected to do all four** — start at your level and stretch from there.
