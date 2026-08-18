@@ -40,9 +40,9 @@ Start here. It introduces the four students, the four worlds they live on, and t
 
 <p><a class="btn" href="./uw/The-Uncounted-Worlds-001-Thirty-Seconds-on-Four-Worlds.pdf">Download Chapter 1 (PDF, bilingual)</a></p>
 
-About half an hour to read.
+About forty minutes: a bit over half an hour of story, then the four challenges.
 
-*Đọc chừng nửa giờ.*
+*Chừng bốn mươi phút: hơn nửa giờ đọc truyện, rồi đến bốn thử thách.*
 
 | Challenge | Who | Level | What it needs |
 |---|---|---|---|
@@ -51,26 +51,37 @@ About half an hour to read.
 | 3 | Linh, Mars | Grade 9 · T3 | Reading a number system nobody taught you |
 | 4 | Nam, Helios Station | Grade 11 · T4 | Measuring something you cannot reach |
 
+| Thử thách | Ai | Mức | Cần đến |
+|---|---|---|---|
+| 1 | Mai, Trái Đất | Lớp 5 · T1 | Phép đếm, và sự khác nhau giữa điều chắc chắn và điều nhiều khả năng |
+| 2 | Quang, Mặt Trăng | Lớp 7 · T2 | Hình học, và một dòng vật lý |
+| 3 | Linh, Sao Hỏa | Lớp 9 · T3 | Đọc một hệ đếm chưa ai dạy em |
+| 4 | Nam, Trạm Helios | Lớp 11 · T4 | Đo một thứ em không với tới được |
+
 ---
 
-## Solutions to Chapter 1
+## Solutions
 
-### *Lời giải Chương 1*
+### *Lời giải*
 
-<p><a class="btn" href="./uw/The-Uncounted-Worlds-001-Solutions.pdf">Download the solutions (PDF, English)</a></p>
+<!--sol-->
+*The solutions to Chapter 1 go up after the answer deadline, 2026-09-03.*
+<!--/sol-->
 
-Published the week after the chapter, never inside it. Try the challenges first — the part worth writing down is where you got stuck, not the answer. The solutions are in English only; the chapter and the challenges are in both languages.
+<!--solvn-->
+*Lời giải Chương 1 sẽ được đăng sau hạn nộp bài, ngày 2026-09-03.*
+<!--/solvn-->
 
-*Đăng vào tuần kế tiếp sau chương sách, không bao giờ nằm trong chương. Hãy thử làm các thử thách trước đã — chỗ đáng ghi lại là chỗ em bị mắc, chứ không phải đáp án. Lời giải chỉ có bản tiếng Anh; chương sách và các thử thách thì có cả hai thứ tiếng.*
+Never inside the chapter, and never before the deadline. Try the challenges first — the part worth writing down is where you got stuck, not the answer. The solutions are in English only; the chapter and the challenges are in both languages.
+
+*Không bao giờ nằm trong chương sách, và không bao giờ đăng trước hạn nộp bài. Hãy thử làm các thử thách trước đã — chỗ đáng ghi lại là chỗ em bị mắc, chứ không phải đáp án. Lời giải chỉ có bản tiếng Anh; chương sách và các thử thách thì có cả hai thứ tiếng.*
 
 ---
 
 ## Taking part
 
-Read the chapter in either language, then try whichever challenges appeal. **Nobody is expected to do all four** — start at your level and stretch from there.
+Read the chapter in either language, then have a go. **Nobody is expected to do all four** — start at your level and stretch from there. Send your work to me at **[nghia71@gmail.com](mailto:nghia71@gmail.com)** by **<!--due-->2026-09-03<!--/due-->**. This is a test run and results count towards club standing.
 
-Send answers to **nghia71@gmail.com** by **[date]**. This is a test run and results count towards club standing.
+**Tell me where you got stuck** — saying exactly where it stopped making sense is what gets you to a right answer, and to a solution worth having.
 
-**Tell us where you got stuck.** "I understood the first part and then I did not know what to do with the third row" is worth more than a correct number, and it is what makes the next chapter better. There is no penalty for an unfinished attempt.
-
-*Đọc chương sách bằng ngôn ngữ nào cũng được, rồi thử những thử thách mà em thấy hợp. **Không ai phải làm cả bốn** — hãy bắt đầu từ đúng mức của mình rồi vươn lên. Gửi bài về **nghia71@gmail.com** trước ngày **[ngày]**. Đây là đợt chạy thử và kết quả được tính vào thành tích câu lạc bộ. **Hãy cho chúng tôi biết em bị mắc ở đâu** — điều đó có giá trị hơn một đáp án đúng, và bài làm dở dang không bị trừ điểm.*
+*Đọc chương sách bằng ngôn ngữ nào cũng được, rồi thử giải xem. **Không ai phải làm cả bốn bài** — hãy bắt đầu từ mức của mình rồi vươn lên. Gửi bài về cho Thầy **[nghia71@gmail.com](mailto:nghia71@gmail.com)** trước ngày **<!--duevn-->2026-09-03<!--/duevn-->**. Đây là đợt chạy thử và kết quả được tính vào thành tích câu lạc bộ. **Hãy cho Thầy biết em vướng ở đâu** — điều đó rất có ý nghĩa để em tìm được một đáp án đúng và có lời giải hay.*
