@@ -65,11 +65,11 @@ About forty minutes: a bit over half an hour of story, then the four challenges.
 ### *Lời giải*
 
 <!--sol-->
-*The solutions go up after the answer deadline.*
+*The solutions to Chapter 1 go up after the answer deadline, 2026-09-03.*
 <!--/sol-->
 
 <!--solvn-->
-*Lời giải sẽ được đăng sau hạn nộp bài.*
+*Lời giải Chương 1 sẽ được đăng sau hạn nộp bài, ngày 2026-09-03.*
 <!--/solvn-->
 
 Never inside the chapter, and never before the deadline. Try the challenges first — the part worth writing down is where you got stuck, not the answer. The solutions are in English only; the chapter and the challenges are in both languages.
