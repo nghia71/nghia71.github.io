@@ -10,28 +10,28 @@ MCC runs four team training tracks, **T1 to T4**. Every track uses the same rhyt
 
   <div class="card">
     <span class="tag">Entry</span>
-    <h3><a href="./t1.md">T1 — Foundations</a></h3>
+    <h3><a href="./t1">T1 — Foundations</a></h3>
     <p>Learning to read a problem, choose a strategy, and write a complete solution with a partner.</p>
     <p><strong>Textbook:</strong> LPS VI<br><strong>Effort:</strong> 5–7 hrs/week<br><strong>Test:</strong> 6 problems, 90 min</p>
   </div>
 
   <div class="card">
     <span class="tag">Contest</span>
-    <h3><a href="./t2.md">T2 — Foresight</a></h3>
+    <h3><a href="./t2">T2 — Foresight</a></h3>
     <p>Problems that need several ideas joined together, comparable to AMC 8/10 and national qualifiers.</p>
     <p><strong>Textbook:</strong> LPS VI<br><strong>Effort:</strong> 5–7 hrs/week<br><strong>Test:</strong> 6 problems, 120 min</p>
   </div>
 
   <div class="card">
     <span class="tag">Olympiad</span>
-    <h3><a href="./t3.md">T3 — Combat</a></h3>
+    <h3><a href="./t3">T3 — Combat</a></h3>
     <p>National olympiad training: standard theorems, unfamiliar problems, rigorous written proof.</p>
     <p><strong>Textbook:</strong> LPS VII<br><strong>Effort:</strong> 6–7 hrs/week<br><strong>Test:</strong> 6 problems, 150 min</p>
   </div>
 
   <div class="card">
     <span class="tag">Mastery</span>
-    <h3><a href="./t4.md">T4 — Mastery</a></h3>
+    <h3><a href="./t4">T4 — Mastery</a></h3>
     <p>Advanced technique, professional solution writing, and the stamina for multi-hour contests.</p>
     <p><strong>Textbook:</strong> LPS VII<br><strong>Effort:</strong> 7–8 hrs/week<br><strong>Test:</strong> 6 problems, 180 min</p>
   </div>

@@ -63,28 +63,28 @@ Students work in pairs through a two-week cycle: study a chapter, submit a team 
 
   <div class="card">
     <span class="tag">Entry</span>
-    <h3><a href="./t1.md">T1 — Foundations</a></h3>
+    <h3><a href="./t1">T1 — Foundations</a></h3>
     <p>The entry point into collaborative contest training. Learning to read a problem, choose a strategy, and write a complete solution with a partner.</p>
     <p><strong>LPS VI</strong> · 5–7 hrs/week · 90-minute tests</p>
   </div>
 
   <div class="card">
     <span class="tag">Contest</span>
-    <h3><a href="./t2.md">T2 — Foresight</a></h3>
+    <h3><a href="./t2">T2 — Foresight</a></h3>
     <p>Harder contest problems that need several ideas joined together. Comparable to AMC 8/10 and national qualifiers.</p>
     <p><strong>LPS VI</strong> · 5–7 hrs/week · 120-minute tests</p>
   </div>
 
   <div class="card">
     <span class="tag">Olympiad</span>
-    <h3><a href="./t3.md">T3 — Combat</a></h3>
+    <h3><a href="./t3">T3 — Combat</a></h3>
     <p>National olympiad training. Standard olympiad theorems, unfamiliar problems broken into solvable parts, rigorous written proof.</p>
     <p><strong>LPS VII</strong> · 6–7 hrs/week · 150-minute tests</p>
   </div>
 
   <div class="card">
     <span class="tag">Mastery</span>
-    <h3><a href="./t4.md">T4 — Mastery</a></h3>
+    <h3><a href="./t4">T4 — Mastery</a></h3>
     <p>The capstone. Advanced technique, professional solution writing, and the stamina for multi-hour contests. Aimed at team selection tests and the IMO.</p>
     <p><strong>LPS VII</strong> · 7–8 hrs/week · 180-minute tests</p>
   </div>
@@ -113,17 +113,17 @@ Students work in pairs through a two-week cycle: study a chapter, submit a team 
 
   <div class="card">
     <span class="tag">Starting out</span>
-    <a href="./books.md"><img class="cover" src="./img/100-en-cover.jpg" alt="100 Math Problems for Absolute Beginners"></a>
+    <a href="./books"><img class="cover" src="./img/100-en-cover.jpg" alt="100 Math Problems for Absolute Beginners"></a>
     <h3>100 Math Problems for Absolute Beginners</h3>
     <p>Not the course book — the one that comes before it. For students just starting, or with the club a year or less. English and Vietnamese editions.</p>
-    <p><a href="./books.md">Details and ordering →</a></p>
+    <p><a href="./books">Details and ordering →</a></p>
   </div>
 
   <div class="card">
     <span class="tag">Tests</span>
     <h3>Tests & Yearbook</h3>
     <p>56 papers and over 1,200 problems across four levels — and, at the end of the year, the yearbook the students write with us.</p>
-    <p><a href="./tests.md">How testing works →</a></p>
+    <p><a href="./tests">How testing works →</a></p>
   </div>
 
 </div>
