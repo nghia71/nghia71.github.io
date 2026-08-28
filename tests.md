@@ -10,6 +10,37 @@ Learning without testing does not stick. A student can read a chapter, follow ev
 
 Every chapter of the textbook has its own paper. **Three of the six problems examine the chapter just studied; the other three come from the remaining areas**, so all four of Algebra, Combinatorics, Geometry, and Number Theory stay in play all year.
 
+**Every paper is worth 100 points and the pass mark is 51** — chapter test and placement test alike. What changes between levels is how those 100 points are spread, because the levels ask different things of a student. In every case there are six problems: an Easy problem is a single question, a Medium problem is broken into two, a Hard problem into three.
+
+### Chapter tests — the entry level of each book
+
+**T1** (LPS VI) and **T3** (LPS VII) carry no Hard problems. The paper is there to confirm the chapter landed.
+
+| Band | Problems | Points each | Questions per problem | Total |
+|---|---|---|---|---|
+| **E — Easy** | 3 | 10, 15, 15 | 1 | 40 |
+| **M — Medium** | 3 | 20 | 2 | 60 |
+| | **6** | | | **100** |
+
+### Chapter tests — the upper level of each book
+
+**T2** (LPS VI) and **T4** (LPS VII) move the weight to the top of the paper.
+
+| Band | Problems | Points each | Questions per problem | Total |
+|---|---|---|---|---|
+| **E — Easy** | 1 | 8 | 1 | 8 |
+| **M — Medium** | 3 | 14 | 2 | 42 |
+| **H — Hard** | 2 | 25 | 3 | 50 |
+| | **6** | | | **100** |
+
+Half an upper-level paper is Hard problems. That is the real difference between the two levels of a book, and it is why a student comfortable at T1 is not automatically ready for T2.
+
+**Problems are not ordered by difficulty.** A paper may run Easy, Medium, Easy, Medium, Easy, Medium. Read all six before choosing where to start.
+
+### Entrance and reassessment papers
+
+Placement papers use a third shape, identical at **all four levels**, because a placement test has to discriminate at the top of the range as well as the bottom.
+
 | Band | Problems | Points each | Questions per problem | Total |
 |---|---|---|---|---|
 | **E — Easy** | 2 | 10 | 1 | 20 |
@@ -17,7 +48,7 @@ Every chapter of the textbook has its own paper. **Three of the six problems exa
 | **H — Hard** | 2 | 25 | 3 | 50 |
 | | **6** | | | **100** |
 
-**The pass mark is 51 points.** Test length depends on the level:
+### Test length
 
 | Level | Duration |
 |---|---|
@@ -90,7 +121,7 @@ Every year adds another one. Students who arrive later inherit a library; studen
 
 ## The exam volume
 
-Collected across the year, the chapter tests form the third book of the curriculum set: **54 chapter tests at four levels, plus 3 entrance tests — 56 papers and more than 1,200 problems.** A team testing weekly works through one level's worth in a single year.
+Collected across the year, the chapter tests form the third book of the curriculum set: **109 chapter tests — 54 for LPS VI, 55 for LPS VII — each set at two levels, plus 2 entrance tests set at all four: 226 papers and over 1,350 problems.** A team testing weekly works through one level's worth in a single year.
 
 ## Entrance and reassessment
 

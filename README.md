@@ -122,7 +122,7 @@ Students work in pairs through a two-week cycle: study a chapter, submit a team 
   <div class="card">
     <span class="tag">Tests</span>
     <h3>Tests & Yearbook</h3>
-    <p>56 papers and over 1,200 problems across four levels — and, at the end of the year, the yearbook the students write with us.</p>
+    <p>226 papers and over 1,350 problems across four levels — and, at the end of the year, the yearbook the students write with us.</p>
     <p><a href="./tests">How testing works →</a></p>
   </div>
 
