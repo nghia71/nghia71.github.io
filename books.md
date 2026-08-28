@@ -107,7 +107,7 @@ Tôi khuyên nên chọn bản in, vì đây là cuốn sách được thiết k
 
 ## 3. The tests and the yearbook
 
-Every chapter closes with its own test, and those tests are collected into the third book of the set — **56 papers and over 1,200 problems**, across all four levels. At the end of the year comes the yearbook, written together with the students.
+Every chapter closes with its own test, and those tests are collected into the third book of the set — **226 papers and over 1,350 problems**, across all four levels. At the end of the year comes the yearbook, written together with the students.
 
 [How testing works, and what goes in the yearbook →](./tests.md)
 
