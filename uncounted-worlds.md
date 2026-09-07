@@ -3,7 +3,7 @@ title: Uncounted Worlds
 ---
 
 <div class="note" markdown="1">
-**Discontinued.** This storytelling pilot is not continuing for 2026-2027. The Prologue, Chapter 1, and its solutions remain available below for anyone who wants them.
+**Discontinued after Chapter 2.** Chapter 2 below was the closing chapter of this storytelling pilot — it is not continuing for 2026-2027. The Prologue and both chapters, with their solutions, remain available below for anyone who wants them.
 </div>
 
 # The Uncounted Worlds
@@ -61,6 +61,36 @@ About forty minutes: a bit over half an hour of story, then the four challenges.
 | 2 | Quang, Mặt Trăng | Lớp 7 · T2 | Hình học, và một dòng vật lý |
 | 3 | Linh, Sao Hỏa | Lớp 9 · T3 | Đọc một hệ đếm chưa ai dạy em |
 | 4 | Nam, Trạm Helios | Lớp 11 · T4 | Đo một thứ em không với tới được |
+
+---
+
+## Chapter 2 — Belief Coming from Knowledge
+
+### *Niềm tin đến từ hiểu biết*
+
+<p><a class="btn" href="./uw/The-Uncounted-Worlds-002-Belief-Coming-from-Knowledge.pdf">Download Chapter 2 (PDF, bilingual)</a></p>
+
+The closing chapter of the series: four short stories — Nam building a working model of a magnetic field on Helios Station, Mai measuring the air in a jar with a candle, Linh cataloguing the ways to lift Martian dust off a marked surface, and Quang working out the geometry of a ball bouncing off a court's walls — then the four challenges.
+
+*Chương khép lại của bộ truyện: bốn câu chuyện ngắn — Nam dựng một mô hình về từ trường tại Trạm Helios, Mai đo lượng không khí trong một cái lọ bằng một ngọn nến, Linh liệt kê các cách lấy bụi Sao Hỏa khỏi một mặt phẳng có đánh dấu, và Quang tìm ra hình học của một quả bóng nảy qua các bức tường sân — rồi đến bốn thử thách.*
+
+| Challenge | Who | Level | What it needs |
+|---|---|---|---|
+| 1 | Nam, Helios Station | Grade 11 · T4 | Scaling a field with distance, and comparing enormous numbers |
+| 2 | Mai, Earth | Grade 5 · T1 | Comparing two changing fractions of the same whole |
+| 3 | Linh, Mars | Grade 9 · T3 | Reading a table of pressures against temperature |
+| 4 | Quang, the Moon | Grade 7 · T2 | The geometry of a ball bouncing off walls at fixed angles |
+
+| Thử thách | Ai | Mức | Cần đến |
+|---|---|---|---|
+| 1 | Nam, Trạm Helios | Lớp 11 · T4 | So sánh độ lớn của một trường theo khoảng cách, và so sánh những con số rất lớn |
+| 2 | Mai, Trái Đất | Lớp 5 · T1 | So sánh hai phân số thay đổi trên cùng một tổng |
+| 3 | Linh, Sao Hỏa | Lớp 9 · T3 | Đọc một bảng áp suất theo nhiệt độ |
+| 4 | Quang, Mặt Trăng | Lớp 7 · T2 | Hình học của một quả bóng nảy qua các bức tường theo góc cố định |
+
+This is the last chapter of *The Uncounted Worlds*. Solutions are still welcome any time — there is no fixed deadline for this one — but no further chapters are planned.
+
+*Đây là chương cuối cùng của Muôn Thế Giới Chưa Đếm. Bài giải vẫn được hoan nghênh bất cứ lúc nào — chương này không có hạn nộp cố định — nhưng sẽ không có thêm chương mới.*
 
 ---
 
