@@ -11,33 +11,33 @@ permalink: /
 
 We teach problem solving, not formulas. Our students learn to read a problem carefully, experiment with small cases, build and test a conjecture, and write an argument that convinces. They do it together, in teams, and they take that habit into national and international competition.
 
-[Register for 2026-2027](https://forms.gle/dD6cLU6Ym8kEQddNA){: .btn}
-[See the programs](./programs.md){: .btn .secondary}
+[See the programs](./programs.md){: .btn}
+[Meet the team](./organization.md){: .btn .secondary}
 [Order the books](./books.md){: .btn .secondary}
 
 </div>
 
-## 📣 Registration for 2026-2027 is open
+## 📣 The 2026-2027 school year is underway
 
 <div class="note" markdown="1">
 
-**Register by 18 July 2026.** Entrance and reassessment tests take place over two days at the **beginning of August**. Membership is **$300** for the year, including the curriculum books.
+**Registration for 2026-2027 is closed**, and the school year began on **8 September 2026**. Each team now follows its own personalised pace through the curriculum, with **[LPS VI and LPS VII](./books.md)** as the two textbooks.
 
-**Three things are new, and two of them need settling *before* you fill in the form.** You must **register with a team of two**, already formed — we no longer match students to teammates afterwards. **Almost every student tests at the start of the year**, returning students included, unless they scored 75% or above last year. And the curriculum is now **[LPS VI and LPS VII](./books.md)**, ordered directly from Lulu at printing cost.
+Day-to-day organisation — team assignments, regional contacts, the testing workflow, and the weekly Sunday session — is run by the **Parents' Association**, under Ms. Minh Thu.
 
-[Read the full announcement](./register.md){: .btn}
-[Registration form](https://forms.gle/dD6cLU6Ym8kEQddNA){: .btn .secondary}
+[Meet the team & find your contact](./organization.md){: .btn}
+[See how the programme works](./programs.md){: .btn .secondary}
 
 </div>
 
 <div class="vn" markdown="1">
 
-**📣 Đăng ký năm học 2026-2027 đã mở.** Hạn chót **18/07/2026**. Thi đầu vào và thi đánh giá lại diễn ra trong hai ngày vào **đầu tháng 8**. Phí hội viên **$300/năm**, đã bao gồm bộ sách giáo trình.
+**📣 Năm học 2026-2027 đã bắt đầu.** Đăng ký cho năm học 2026-2027 **đã đóng**, và năm học đã khai giảng ngày **8 tháng 9 năm 2026**. Mỗi đội nay học theo nhịp độ cá nhân hóa riêng qua bộ giáo trình **[LPS VI và LPS VII](./books.md)**.
 
-**Ba điểm mới, trong đó hai điểm cần chuẩn bị *trước* khi điền mẫu đăng ký.** Học sinh phải **đăng ký theo đội hai người đã lập sẵn** — câu lạc bộ không ghép đội sau khi thi nữa. **Hầu hết học sinh đều thi đầu năm**, kể cả học sinh cũ, trừ những em đạt từ 75% trở lên năm ngoái. Và giáo trình nay là **[LPS VI và LPS VII](./books.md)**, đặt trực tiếp từ Lulu theo giá in.
+Việc tổ chức hằng ngày — phân đội, đầu mối liên lạc theo khu vực, quy trình đăng ký học/thi, và buổi sinh hoạt Chủ nhật hàng tuần — do **Hội Phụ huynh** phụ trách, dưới sự điều phối của Cô Minh Thu.
 
-[Đọc thông báo đầy đủ](./register.md){: .btn}
-[Mẫu đăng ký](https://forms.gle/dD6cLU6Ym8kEQddNA){: .btn .secondary}
+[Xem đầu mối liên lạc](./organization.md){: .btn}
+[Xem chương trình học hoạt động ra sao](./programs.md){: .btn .secondary}
 
 </div>
 
@@ -57,7 +57,7 @@ MS ONE and MS TWO both scored a perfect 20/20 and HS ONE a perfect 30/30, each t
 
 ## The four training tracks
 
-Students work in pairs through a two-week cycle: study a chapter, submit a team assignment, review the official solutions, then sit a team test together. Every track follows the same rhythm; what changes is the difficulty and the length of the test.
+Students work in pairs, moving through the curriculum at their own pace: study a chapter, submit a team assignment, review the official solutions, then sit a team test — as often as weekly, or as seldom as once every three weeks. Every track follows the same rhythm; what changes is the difficulty and the length of the test.
 
 <div class="cards" markdown="0">
 
@@ -128,15 +128,15 @@ Students work in pairs through a two-week cycle: study a chapter, submit a team 
 
 </div>
 
-## The Online Mathematics Laboratory
+## The Coding Programme
 
-**[TOML](./toml.html)** is a free, bilingual companion course: mathematics investigated with a programming tool. Each problem is posed three ways — explore it computationally, explain what you see, then establish it with a proof — and every page carries runnable Python you can execute in the browser or copy to your own machine. Nothing to buy, nothing to install.
+**[TOML](./toml.html)** is now the home of the club's coding programme, open to Middle School and High School students alike: three problems a week at your level, solved and submitted online with feedback on each one, plus a coding competition every few weeks as part of the rotating weekly Sunday session.
 
 ## The club in 2026-2027
 
 Starting this year, MCC is becoming a more structured organisation, moving from a flexible coaching model to a **Comprehensive Research & Olympiad Club**:
 
-* **Professional leadership** — a board with a President and three Vice-Presidents (Administrative, Academic, and Competition).
+* **Leadership** — the **[Parents' Association](./organization.md)** runs the club's day-to-day organisation, alongside **Teacher Nghia**, who leads the curriculum and academics. There is no separate board or officer structure.
 * **Formal membership** — an annual membership of $200–$300, giving the club a stable foundation for advanced resources.
 * **Global on-site events** — two annual in-person "MCC Olympiads", in the USA and in Europe.
 
@@ -146,27 +146,34 @@ Starting this year, MCC is becoming a more structured organisation, moving from 
 
 **Sự chuyển mình cho năm học 2026-2027.** Bước sang năm học 2026-2027, MCC chính thức chuyển sang mô hình **Câu lạc bộ Nghiên cứu & Thi đấu chuyên nghiệp**:
 
-* **Bộ máy chuyên nghiệp** — điều hành bởi Chủ tịch và 3 Phó chủ tịch phụ trách Hành chính, Chuyên môn và Thi đua.
+* **Điều hành** — **[Hội Phụ huynh](./organization.md)** phụ trách tổ chức hằng ngày của câu lạc bộ, cùng với **Thầy Nghĩa**, người phụ trách chương trình học và chuyên môn. Không có ban điều hành hay chức danh nào khác.
 * **Hệ thống hội viên** — chế độ hội viên thường niên ($200–$300/năm) giúp duy trì các nguồn lực cao cấp và hạ tầng học tập.
 * **Olympic trực tiếp** — tổ chức 2 kỳ thi Olympic quy mô lớn mỗi năm tại Mỹ và Châu Âu.
 
-[Thông báo đăng ký năm học 2026-2027](./register.md)
+[Xem đầu mối liên lạc Hội Phụ huynh](./organization.md)
 
 </div>
 
+## Already a member?
+
+Find your regional contact on the **[Organization](./organization.md)** page.
+
+*Đã là thành viên?* Xem đầu mối liên lạc theo khu vực tại trang **[Hội Phụ huynh](./organization.md)**.
+
 ## How to join
 
-Register on the [MCC mailing list](https://groups.google.com/g/mcc-school-year-2025-2026), or write to
+Registration for 2026-2027 is closed. To hear about next year, join the [MCC mailing list](https://groups.google.com/g/mcc-school-year-2025-2026), or write to
 [Ms. Thu Pham](mailto:tpham151st@gmail.com), [Ms. Ngoc Ha](mailto:lengocha45@gmail.com), [Ms. Ngoc Anh](mailto:tranngocanh0910@gmail.com), or [Ms. Quynh Anh](mailto:vquynhanh80@gmail.com).
 
-*Liên lạc:* đăng ký [Danh sách thư MCC](https://groups.google.com/g/mcc-school-year-2025-2026), hoặc email cho [Ms. Thu Pham](mailto:tpham151st@gmail.com), [Ms. Ngoc Ha](mailto:lengocha45@gmail.com), [Ms. Ngoc Anh](mailto:tranngocanh0910@gmail.com), [Ms. Quynh Anh](mailto:vquynhanh80@gmail.com).
+*Muốn tham gia?* Đăng ký năm học 2026-2027 đã đóng. Để biết thông tin năm sau, xin đăng ký [Danh sách thư MCC](https://groups.google.com/g/mcc-school-year-2025-2026), hoặc email cho [Ms. Thu Pham](mailto:tpham151st@gmail.com), [Ms. Ngoc Ha](mailto:lengocha45@gmail.com), [Ms. Ngoc Anh](mailto:tranngocanh0910@gmail.com), [Ms. Quynh Anh](mailto:vquynhanh80@gmail.com).
 
 ## Everything else
 
-* [**Registration 2026-2027**](./register.md) — the full announcement, in English and Vietnamese.
+* [**Organization**](./organization.md) — the Parents' Association, regional contacts, and how the year is run.
 * [**Programs 2026-2027**](./programs.md) — how the year works, entrance and reassessment, the calendar, awards.
 * [**Books**](./books.md) — the full curriculum and how to order it.
 * [**Tests & Yearbook**](./tests.md) — the test format, submission rules, grading, and the yearbook.
 * [**Purple Comet 2026**](./purple-comet-2026.md) — teams, results, and student profiles.
 * [**Competition history**](./history.md) — our Purple Comet results, 2019 to 2026.
+* [**Registration 2026-2027**](./register.md) — the original announcement (registration is now closed), kept for reference.
 * [**Archive**](./archive.md) — past curricula, standings, entrance tests, and earlier LPS volumes.

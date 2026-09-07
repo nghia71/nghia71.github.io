@@ -2,6 +2,10 @@
 title: Registration 2026-2027
 ---
 
+<div class="note" markdown="1">
+**Registration closed.** Registration for the 2026-2027 school year closed on 18 July 2026, and the school year began on 8 September 2026. This page is kept as the original announcement. For how the club runs day to day now, see [Organization](./organization.md) and [Programs](./programs.md).
+</div>
+
 # Registration for the 2026-2027 school year
 # Đăng ký năm học 2026-2027
 

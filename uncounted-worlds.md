@@ -2,6 +2,10 @@
 title: Uncounted Worlds
 ---
 
+<div class="note" markdown="1">
+**Discontinued.** This storytelling pilot is not continuing for 2026-2027. The Prologue, Chapter 1, and its solutions remain available below for anyone who wants them.
+</div>
+
 # The Uncounted Worlds
 
 ## *Muôn Thế Giới Chưa Đếm*

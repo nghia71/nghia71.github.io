@@ -49,7 +49,7 @@ A student who knows they are weak in one area can also ask for extra papers in i
 The aim is that a student who can go fast is not held back, and a student who needs to go slowly knows precisely why. Both need the parent group's support to work.
 
 <div class="note" markdown="1">
-**Being finalised.** The mechanics of a per-family schedule are being worked out with the parent admin team before September. The three options above are the plan; the registration form and the calendar will confirm the details.
+**Finalised.** Each family registers its chosen level and testing pace with the **Parents' Association**; see [Programs](./programs.md#grading) for the full registration and grading workflow, and [Organization](./organization.md) for who to contact.
 </div>
 
 ## Submitting work
@@ -66,11 +66,11 @@ Tests are supervised at home by a parent. Teams sit the paper together, and subm
 
 ## Grading and feedback
 
-All assignments and tests are graded with comments — briefly on assignments, in detail on tests. A round of about forty teams can be graded in an evening, but results are released with about a week's spacing so that families, the parent group, and the club have time to actually discuss them.
+All assignments and tests are graded with comments — briefly on assignments, in detail on tests. T1 and T2 papers are graded by Mr. Nghia; T3 and T4 by Mr. Toan, each at the start of the week, with each covering for the other when a paper needs urgent turnaround. A round of about forty teams can be graded in an evening, but results are released with about a week's spacing so that families, the parent group, and the club have time to actually discuss them.
 
 **Results and individual evaluations are published on the site rather than emailed.** That is a real change and worth being direct about: a student who is struggling will see it, and so will everyone else. The reason for doing it anyway is that a mark in an inbox tells you almost nothing, while a page you can return to shows a student where they stand among their peers and, more importantly, how they have moved over time. Knowing your child's actual position — rather than the one you hope for — is what makes it possible to help them.
 
-Selected teams present their solutions live at the Sunday session, or send a recording if both members are away.
+Selected teams present their solutions as part of the club's weekly Sunday session (see [Programs](./programs.md#the-weekly-sunday-session)), or send a recording if both members are away.
 
 ## The yearbook
 

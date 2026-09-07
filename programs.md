@@ -64,8 +64,22 @@ Learning without testing does not stick. This year each family chooses how often
 A student who knows they are weak in one area — geometry, say — can also ask for extra papers in that area and test on it repeatedly. Sitting more tests is how a student finds out where they actually stand.
 
 <div class="note" markdown="1">
-**Being finalised.** The mechanics of the per-family schedule are being worked out with the parent admin team before September. The three options above are the plan; the registration form and the calendar will confirm the details.
+**How registration and testing work.** Each family registers its chosen level and testing pace with the **Parents' Association**, which tracks it against actual progress. From there: the club sends the paper (or shares the folder) for each test, marks the start time, receives the submission through the form, and records the submission time; the assigned teacher grades it and results are published (see [Grading](#grading) below); the Parents' Association compiles results against what was registered and follows up with each family. See [Organization](./organization.md) for the people behind each step, and for regional contacts.
 </div>
+
+## Grading
+
+T1 and T2 papers are graded by Mr. Nghia; T3 and T4 papers are graded by Mr. Toan, each at the start of the week. The two graders back each other up, so a paper needing an urgent turnaround is never stuck waiting on one person. The best-written solutions are kept for the year's [Yearbook](./tests.md).
+
+## The weekly Sunday session
+
+Because each team now tests at its own pace, Sunday is the club's one shared session, rotating between three things from one week to the next:
+
+* A lecture on a math theory or topic.
+* A lecture on recent test solutions.
+* A coding competition (see [TOML](./toml.html)).
+
+Each of the three comes around roughly once every three weeks. Official solutions are taught by Mr. Nghia, Mr. Toan, or one of the teachers and recorded for the club's YouTube channel, so no one is locked out by time zone. Students with a particularly good solution may also be recorded presenting it themselves.
 
 ## Teams
 
