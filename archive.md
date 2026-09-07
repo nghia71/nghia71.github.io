@@ -18,9 +18,9 @@ Everything the club has published, kept in one place. Earlier curricula are stil
 ## Previous school years
 
 <ul class="linklist">
-  <li><a href="./register.md"><strong>Registration announcement, 2026-2027</strong></a> (closed)<br>
+  <li><a href="./register"><strong>Registration announcement, 2026-2027</strong></a> (closed)<br>
       <span class="meta">The original registration announcement for 2026-2027 — the team-of-two rule, entrance/reassessment policy, and the new test format.</span></li>
-  <li><a href="./uncounted-worlds.md"><strong>The Uncounted Worlds</strong></a> (discontinued)<br>
+  <li><a href="./uncounted-worlds"><strong>The Uncounted Worlds</strong></a> (discontinued)<br>
       <span class="meta">A bilingual storytelling pilot with levelled challenges — Prologue and Chapter 1, kept for reference.</span></li>
   <li><a href="./25-26.md"><strong>School year 2025-2026</strong></a><br>
       <span class="meta">The individual tracks (I1, I2) and team tracks (T1–T4) as they ran last year, with the awards and membership policy.</span></li>
