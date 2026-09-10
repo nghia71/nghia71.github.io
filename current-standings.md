@@ -31,7 +31,7 @@ The **MCC Public Roster** is the one spreadsheet anyone — student, parent, or 
 
 <figure class="screenshot">
 <img src="./img/current-standings/roster-exams.png" alt="The Exams tab of the MCC Public Roster spreadsheet, showing test sessions and their status">
-<figcaption>The <code>Exams</code> tab — one row per test, updated as each one is placed, submitted, and graded.</figcaption>
+<figcaption>The <code>Exams</code> tab — one row per test, updated as each one is placed, submitted, and graded. (Cropped to the identifying and status columns; the full row also tracks timestamps and Drive links in between.)</figcaption>
 </figure>
 
 ## Organizer & coordinator resources
