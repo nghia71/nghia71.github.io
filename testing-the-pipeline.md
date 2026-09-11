@@ -4,12 +4,21 @@ title: Making Sure Testing Works
 
 # Making Sure Testing Works
 
-Here is what actually happens when a real team takes a test, start to finish: a coordinator (or the family itself) schedules the team's next test date; when that date arrives, the system creates the student's test session on its own; the student visits the sign-up form, confirms they're ready, and the test paper appears shared on their Google Drive within moments; the student solves it and uploads their answer as a PDF through that same form; a grader marks it and records the score; and the team's standing updates to reflect the result. No one emails a PDF around, and no coordinator has to update a spreadsheet by hand.
+Here's what actually happens when a real team takes a test, start to finish. A coordinator (or the family itself) schedules the team's next test date. When that date arrives, the system creates the student's test session on its own — no one has to remember to do it. The student visits the sign-up form, confirms they're ready, and the test paper appears shared on their Google Drive within moments. The student solves it and uploads their answer as a PDF through that same form. A grader marks it and records the score, and the team's standing updates to reflect the result. No one emails a PDF around, and no coordinator has to update a spreadsheet by hand.
 
-This page walks through every link in that chain, one at a time, to make sure it actually works before any real family's test depends on it — 14 numbered checks in all, **Test 1 through Test 14**. Each one walks through a specific, real situation: the ordinary path where everything goes right (Test 1), a family missing a deadline (Test 4 and Test 5), a team failing three times in a row (Test 3), someone signed into the wrong email (Test 14), and so on. Nghia runs through all 14 himself, using the club's standing **practice team** (`T-EC1` and `T-WC1`) and two dedicated **practice accounts** instead of real students — see "Roles, accounts, and how each test is written" just below for exactly which account plays which role. No real student data is touched by any of this.
+This page walks through every link in that chain, one at a time, to make sure it actually works before any real family's test depends on it — 14 numbered checks in all, **Test 1 through Test 14**. Each one walks through a specific, real situation: the ordinary path where everything goes right (Test 1), a family missing a deadline (Test 4 and Test 5), a team failing three times in a row (Test 3), someone signed into the wrong email (Test 14), and so on. Nghia runs through all 14 himself, using the club's standing **practice teams** (`T-EC1` and `T-WC1` — stand-ins for a real East Coast team and a real West Coast team, MCC's two regions so far) and two dedicated **practice accounts** instead of real students — see "Roles, accounts, and how each test is written" just below for exactly which account plays which role. No real student data is touched by any of this.
 
 <div class="note" markdown="1">
 **Why coordinators and organizers should read this, not just Nghia.** Before a real test day, you'll likely want to run a quick check of your own — smaller than this, maybe just "Check my data" and a glance at the roster. Your own check is really a *smaller version* of this full walkthrough. Reading through all 14 first shows you exactly what a complete check looks like and why each piece matters, so you can see how your own shorter routine relates to it — and borrow any pieces of it you want. **The situation** at the top of each one explains what real-world moment it's standing in for, and every **what you should see** line tells you exactly what should appear on screen if everything is working.
+</div>
+
+<div class="tc-progress" id="tc-progress">
+  <div class="tc-progress-row">
+    <span class="tc-progress-label">Your progress through these 14 tests: <strong id="tc-progress-count">0 of 14</strong> checked off.</span>
+    <button type="button" class="tc-progress-reset" id="tc-progress-reset">Start over</button>
+  </div>
+  <div class="tc-progress-bar"><div class="tc-progress-fill" id="tc-progress-fill"></div></div>
+  <p class="tc-progress-note">Checking off a test as you go just helps you keep your place. It's saved in this browser only — it won't follow you to another device, and it doesn't report anything to anyone.</p>
 </div>
 
 ## Roles, accounts, and how each test is written
@@ -63,6 +72,8 @@ Each test below says, in its own **Before you start** line, whether it needs any
 
 ### Test 1 — A test that goes right, start to finish
 
+<label class="tc-done-toggle"><input type="checkbox" class="tc-done-checkbox" data-test="1"> I've run through Test 1</label>
+
 <div class="note" markdown="1">
 **The situation:** this is what a completely ordinary test looks like, start to finish — a test paper becomes available, a student opens and submits it, a grader marks it, and the team's standing updates. Every other test below is really a variation on this one: something arriving late, someone signed into the wrong account, a team failing instead of passing. If this baseline doesn't work end to end, none of those other tests mean anything yet.
 </div>
@@ -84,7 +95,7 @@ Each test below says, in its own **Before you start** line, whether it needs any
 <em>What you should see:</em> a <code>Data Check</code> tab appears, with every row green.
 </div>
 <div class="tc-step-shot">
-<img src="./img/current-standings/master-tools-menu.png" alt="The confirmation dialog that appears after choosing MCC Tools → Check my data">
+<a href="./img/current-standings/master-tools-menu.png" target="_blank" rel="noopener" class="tc-step-shot-link"><img src="./img/current-standings/master-tools-menu.png" alt="The confirmation dialog that appears after choosing MCC Tools → Check my data"></a>
 <div class="tc-step-caption">The prompt that appears the moment you click — the green Data Check tab opens once you click OK.</div>
 </div>
 </div>
@@ -104,7 +115,7 @@ Each test below says, in its own **Before you start** line, whether it needs any
 <em>What you should see:</em> the form's own plain confirmation message.
 </div>
 <div class="tc-step-shot">
-<img src="./img/current-standings/form-landing.png" alt="The Test Paper Open/Submit Form landing page, signed into a test account, before either option is chosen">
+<a href="./img/current-standings/form-landing.png" target="_blank" rel="noopener" class="tc-step-shot-link"><img src="./img/current-standings/form-landing.png" alt="The Test Paper Open/Submit Form landing page, signed into a test account, before either option is chosen"></a>
 <div class="tc-step-caption">What step 4 looks like.</div>
 </div>
 </div>
@@ -132,7 +143,7 @@ Each test below says, in its own **Before you start** line, whether it needs any
 <em>What you should see:</em> the form's plain confirmation message, same as any submission.
 </div>
 <div class="tc-step-shot">
-<img src="./img/current-standings/form-upload.png" alt="The Test Paper form's submit-my-solution view with the PDF upload field">
+<a href="./img/current-standings/form-upload.png" target="_blank" rel="noopener" class="tc-step-shot-link"><img src="./img/current-standings/form-upload.png" alt="The Test Paper form's submit-my-solution view with the PDF upload field"></a>
 <div class="tc-step-caption">What step 7 looks like.</div>
 </div>
 </div>
@@ -166,7 +177,7 @@ Each test below says, in its own **Before you start** line, whether it needs any
 <em>What you should see:</em> the row saves normally, the same as typing into any spreadsheet.
 </div>
 <div class="tc-step-shot">
-<img src="./img/current-standings/grading-sheet.png" alt="This week's grading spreadsheet with a completed row for T-EC1">
+<a href="./img/current-standings/grading-sheet.png" target="_blank" rel="noopener" class="tc-step-shot-link"><img src="./img/current-standings/grading-sheet.png" alt="This week's grading spreadsheet with a completed row for T-EC1"></a>
 <div class="tc-step-caption">What step 11 looks like.</div>
 </div>
 </div>
@@ -204,6 +215,8 @@ Each test below says, in its own **Before you start** line, whether it needs any
 
 ### Test 2 — A team doesn't pass, but still has retakes left
 
+<label class="tc-done-toggle"><input type="checkbox" class="tc-done-checkbox" data-test="2"> I've run through Test 2</label>
+
 <div class="note" markdown="1">
 **The situation:** simulates a team that doesn't pass on a given attempt. A Fail shouldn't just sit there waiting for someone to notice — the system should schedule a retake at the same chapter on its own, without a coordinator having to catch it and act by hand.
 </div>
@@ -228,6 +241,8 @@ Each test below says, in its own **Before you start** line, whether it needs any
 ---
 
 ### Test 3 — A team fails for the third time in a row
+
+<label class="tc-done-toggle"><input type="checkbox" class="tc-done-checkbox" data-test="3"> I've run through Test 3</label>
 
 <div class="note" markdown="1">
 **The situation:** simulates a team that keeps failing. The system shouldn't keep retrying forever — it needs to stop at a defined limit (three attempts) and hand the decision back to a person, rather than looping endlessly or quietly giving up.
@@ -261,6 +276,8 @@ Each test below says, in its own **Before you start** line, whether it needs any
 
 ### Test 4 — A submission comes in a little late
 
+<label class="tc-done-toggle"><input type="checkbox" class="tc-done-checkbox" data-test="4"> I've run through Test 4</label>
+
 <div class="note" markdown="1">
 **The situation:** simulates a family with slow internet, or a last-minute scramble. A slightly-late submission shouldn't be rejected outright — it should just be flagged as late, and still count.
 </div>
@@ -285,6 +302,8 @@ Each test below says, in its own **Before you start** line, whether it needs any
 
 ### Test 5 — A submission comes in too late to count
 
+<label class="tc-done-toggle"><input type="checkbox" class="tc-done-checkbox" data-test="5"> I've run through Test 5</label>
+
 <div class="note" markdown="1">
 **The situation:** confirms there's a real cutoff. Grace is generous but not infinite — a genuinely too-late submission needs to be rejected outright, rather than accepted with a scary-looking "very late" status that still secretly counts.
 </div>
@@ -308,6 +327,8 @@ Each test below says, in its own **Before you start** line, whether it needs any
 ---
 
 ### Test 6 — A student submits a corrected file
+
+<label class="tc-done-toggle"><input type="checkbox" class="tc-done-checkbox" data-test="6"> I've run through Test 6</label>
 
 <div class="note" markdown="1">
 **The situation:** simulates a family correcting a mistake — the wrong file, or second thoughts. Their first attempt shouldn't be lost, and the system should always reflect whichever file they submitted most recently.
@@ -341,6 +362,8 @@ Each test below says, in its own **Before you start** line, whether it needs any
 
 ### Test 7 — A student tries to start before their test paper is ready (a real gap we found)
 
+<label class="tc-done-toggle"><input type="checkbox" class="tc-done-checkbox" data-test="7"> I've run through Test 7</label>
+
 <div class="note" markdown="1">
 **The situation:** this genuinely happened once, for real, the very first time this walkthrough was ever run — kept permanently as its own test so it's never a surprise again. It's a real, still-open gap: right now, nothing tells a student when this specific thing goes wrong.
 </div>
@@ -353,7 +376,7 @@ Each test below says, in its own **Before you start** line, whether it needs any
 <em>What you should see:</em> the form's ordinary confirmation message — indistinguishable from a real success. This is the entire problem: right now, there's no student-facing error message for this specific situation.
 </div>
 <div class="tc-step-shot">
-<img src="./img/current-standings/tc7-step1-form-confirmation.png" alt="The test-paper form's confirmation screen, ordinary and unremarkable">
+<a href="./img/current-standings/tc7-step1-form-confirmation.png" target="_blank" rel="noopener" class="tc-step-shot-link"><img src="./img/current-standings/tc7-step1-form-confirmation.png" alt="The test-paper form's confirmation screen, ordinary and unremarkable"></a>
 <div class="tc-step-caption">The confirmation looks exactly like a normal success — nothing here hints at the missing-paper problem.</div>
 </div>
 </div>
@@ -364,7 +387,7 @@ Each test below says, in its own **Before you start** line, whether it needs any
 <em>What you should see:</em> the start time and deadline are still blank. Nothing actually happened behind the scenes, and nothing on the student's screen showed that anything had gone wrong.
 </div>
 <div class="tc-step-shot">
-<img src="./img/current-standings/tc7-step2-exams-no-start.png" alt="The Exams sheet row for the team, with StartedUTC and Deadline both still blank">
+<a href="./img/current-standings/tc7-step2-exams-no-start.png" target="_blank" rel="noopener" class="tc-step-shot-link"><img src="./img/current-standings/tc7-step2-exams-no-start.png" alt="The Exams sheet row for the team, with StartedUTC and Deadline both still blank"></a>
 <div class="tc-step-caption">T-EC1's row after the "open" attempt — StartedUTC and Deadline are still empty.</div>
 </div>
 </div>
@@ -376,7 +399,7 @@ Each test below says, in its own **Before you start** line, whether it needs any
 <em>What you should see:</em> a red row naming the exact team and the exact chapter that's missing a paper.
 </div>
 <div class="tc-step-shot">
-<img src="./img/current-standings/tc7-step3-data-check-flag.png" alt="The Data Check tab, with one row flagged: T-EC1 due for Level 3, Chapter 2, Attempt 1 next, but no matching Papers row exists yet">
+<a href="./img/current-standings/tc7-step3-data-check-flag.png" target="_blank" rel="noopener" class="tc-step-shot-link"><img src="./img/current-standings/tc7-step3-data-check-flag.png" alt="The Data Check tab, with one row flagged: T-EC1 due for Level 3, Chapter 2, Attempt 1 next, but no matching Papers row exists yet"></a>
 <div class="tc-step-caption">The real Data Check output from this run — it names T-EC1 and the exact missing chapter, and warns their next Start click would fail with &quot;no-paper.&quot;</div>
 </div>
 </div>
@@ -384,6 +407,8 @@ Each test below says, in its own **Before you start** line, whether it needs any
 ---
 
 ### Test 8 — A team never submits their test
+
+<label class="tc-done-toggle"><input type="checkbox" class="tc-done-checkbox" data-test="8"> I've run through Test 8</label>
 
 <div class="note" markdown="1">
 **The situation:** confirms that access to a test paper doesn't stay open forever. Once there's no realistic chance a legitimate submission is still coming, the system should revoke access on its own, without a coordinator needing to remember to do it.
@@ -398,7 +423,7 @@ Each test below says, in its own **Before you start** line, whether it needs any
 <em>What you should see:</em> the team's <code>Exams</code> row is marked expired, and its shared access to the test paper is revoked.
 </div>
 <div class="tc-step-shot">
-<img src="./img/current-standings/tc8-step1-sweep.png" alt="The system's activity log confirming access was revoked for T-EC1's session, naming both students removed">
+<a href="./img/current-standings/tc8-step1-sweep.png" target="_blank" rel="noopener" class="tc-step-shot-link"><img src="./img/current-standings/tc8-step1-sweep.png" alt="The system's activity log confirming access was revoked for T-EC1's session, naming both students removed"></a>
 <div class="tc-step-caption">A real sweep — names the exact session and the exact accounts it removed.</div>
 </div>
 </div>
@@ -409,7 +434,7 @@ Each test below says, in its own **Before you start** line, whether it needs any
 <em>What you should see:</em> viewer access is now gone — the file no longer opens.
 </div>
 <div class="tc-step-shot">
-<img src="./img/current-standings/tc8-step2-drive-404.png" alt="Google Drive's 404 error page, shown when opening the test paper file signed in as the student account whose access was just revoked">
+<a href="./img/current-standings/tc8-step2-drive-404.png" target="_blank" rel="noopener" class="tc-step-shot-link"><img src="./img/current-standings/tc8-step2-drive-404.png" alt="Google Drive's 404 error page, shown when opening the test paper file signed in as the student account whose access was just revoked"></a>
 <div class="tc-step-caption">The file is really gone for them — Drive returns a plain 404, not even a "request access" screen.</div>
 </div>
 </div>
@@ -420,7 +445,7 @@ Each test below says, in its own **Before you start** line, whether it needs any
 <em>What you should see:</em> it reads "Overdue — the grace period has ended, contact your coordinator." This is the cue for a coordinator to actually reach out to the family directly — unlike a graded Fail, nothing retries a no-show automatically.
 </div>
 <div class="tc-step-shot">
-<img src="./img/current-standings/tc8-step3-status-overdue.png" alt="The Exams sheet showing T-EC1's Status column reading Overdue -- the grace period has ended, contact your coordinator">
+<a href="./img/current-standings/tc8-step3-status-overdue.png" target="_blank" rel="noopener" class="tc-step-shot-link"><img src="./img/current-standings/tc8-step3-status-overdue.png" alt="The Exams sheet showing T-EC1's Status column reading Overdue -- the grace period has ended, contact your coordinator"></a>
 <div class="tc-step-caption">The exact wording a coordinator sees, word for word.</div>
 </div>
 </div>
@@ -428,6 +453,8 @@ Each test below says, in its own **Before you start** line, whether it needs any
 ---
 
 ### Test 9 — A student clicks "I'm ready" twice by accident
+
+<label class="tc-done-toggle"><input type="checkbox" class="tc-done-checkbox" data-test="9"> I've run through Test 9</label>
 
 <div class="note" markdown="1">
 **The situation:** simulates an accidental double-click, or a student who genuinely isn't sure their first click registered. Either way, it shouldn't restart the clock or create any confusing duplicate state.
@@ -441,7 +468,7 @@ Each test below says, in its own **Before you start** line, whether it needs any
 <em>What you should see:</em> the form's ordinary confirmation message, identical to the first time — nothing visibly different.
 </div>
 <div class="tc-step-shot">
-<img src="./img/current-standings/tc9-step1-second-click.png" alt="The same Opening your test paper screen, shown a second time">
+<a href="./img/current-standings/tc9-step1-second-click.png" target="_blank" rel="noopener" class="tc-step-shot-link"><img src="./img/current-standings/tc9-step1-second-click.png" alt="The same Opening your test paper screen, shown a second time"></a>
 <div class="tc-step-caption">The second click looks exactly like the first — nothing warns the student either way.</div>
 </div>
 </div>
@@ -452,7 +479,7 @@ Each test below says, in its own **Before you start** line, whether it needs any
 <em>What you should see:</em> the start time and deadline are completely unchanged from the first click — the clock did not restart.
 </div>
 <div class="tc-step-shot">
-<img src="./img/current-standings/tc9-step2-unchanged-row.png" alt="T-EC1's Exams row, with the same StartedUTC and Deadline as before the second click">
+<a href="./img/current-standings/tc9-step2-unchanged-row.png" target="_blank" rel="noopener" class="tc-step-shot-link"><img src="./img/current-standings/tc9-step2-unchanged-row.png" alt="T-EC1's Exams row, with the same StartedUTC and Deadline as before the second click"></a>
 <div class="tc-step-caption">Same StartedUTC, same Deadline — the double-click changed nothing.</div>
 </div>
 </div>
@@ -460,6 +487,8 @@ Each test below says, in its own **Before you start** line, whether it needs any
 ---
 
 ### Test 10 — A team on break doesn't get scheduled
+
+<label class="tc-done-toggle"><input type="checkbox" class="tc-done-checkbox" data-test="10"> I've run through Test 10</label>
 
 <div class="note" markdown="1">
 **The situation:** confirms that deactivating a team — a family taking a break, or a team disbanding — actually stops new tests from being scheduled for them, without anyone needing to also delete their data.
@@ -473,7 +502,7 @@ Each test below says, in its own **Before you start** line, whether it needs any
 <em>What you should see:</em> the result dialog still names <code>T-EC1</code> in its opening line, but the "fresh session(s) locked in" list names only <code>T-WC1</code> — <code>T-EC1</code> gets no new session, and its Regional Pacing row is left completely untouched.
 </div>
 <div class="tc-step-shot">
-<img src="./img/current-standings/tc10-step1-done-dialog.png" alt="The Done dialog naming T-EC1 and T-WC1 as reset, but listing a fresh session for T-WC1 only">
+<a href="./img/current-standings/tc10-step1-done-dialog.png" target="_blank" rel="noopener" class="tc-step-shot-link"><img src="./img/current-standings/tc10-step1-done-dialog.png" alt="The Done dialog naming T-EC1 and T-WC1 as reset, but listing a fresh session for T-WC1 only"></a>
 <div class="tc-step-caption">A real result — T-EC1 is named, but gets no fresh session because it's inactive.</div>
 </div>
 </div>
@@ -484,7 +513,7 @@ Each test below says, in its own **Before you start** line, whether it needs any
 <em>What you should see:</em> now it schedules normally, exactly as in Test 1.
 </div>
 <div class="tc-step-shot">
-<img src="./img/current-standings/tc10-step2-reactivated-dialog.png" alt="The Done dialog now listing fresh sessions for both T-EC1 and T-WC1">
+<a href="./img/current-standings/tc10-step2-reactivated-dialog.png" target="_blank" rel="noopener" class="tc-step-shot-link"><img src="./img/current-standings/tc10-step2-reactivated-dialog.png" alt="The Done dialog now listing fresh sessions for both T-EC1 and T-WC1"></a>
 <div class="tc-step-caption">Reactivated — T-EC1 gets a fresh session again, same as any other team.</div>
 </div>
 </div>
@@ -492,6 +521,8 @@ Each test below says, in its own **Before you start** line, whether it needs any
 ---
 
 ### Test 11 — A team's next test date is stuck in the past
+
+<label class="tc-done-toggle"><input type="checkbox" class="tc-done-checkbox" data-test="11"> I've run through Test 11</label>
 
 <div class="note" markdown="1">
 **The situation:** confirms that a stale or mistyped date doesn't get quietly auto-corrected, or silently skipped forever — it should be flagged as something a coordinator actually needs to look at and fix.
@@ -505,7 +536,7 @@ Each test below says, in its own **Before you start** line, whether it needs any
 <em>What you should see:</em> the system's activity log names <code>T-EC1</code> as skipped because its next test date is in the past, and shows that date so a coordinator can see exactly what's stale. It's flagged by name on every run until it's fixed — never scheduled, but never silently dropped either. (<code>T-WC1</code> shows up too, skipped for the unrelated reason that it still has its own unresolved session from the reset.)
 </div>
 <div class="tc-step-shot">
-<img src="./img/current-standings/tc11-step1-past-date-skip.png" alt="The system's activity log showing T-EC1 skipped because its next test date is in the past, dated 2026-01-01">
+<a href="./img/current-standings/tc11-step1-past-date-skip.png" target="_blank" rel="noopener" class="tc-step-shot-link"><img src="./img/current-standings/tc11-step1-past-date-skip.png" alt="The system's activity log showing T-EC1 skipped because its next test date is in the past, dated 2026-01-01"></a>
 <div class="tc-step-caption">A real run — T-EC1 flagged by name with the stale date it's still carrying.</div>
 </div>
 </div>
@@ -516,7 +547,7 @@ Each test below says, in its own **Before you start** line, whether it needs any
 <em>What you should see:</em> now it schedules normally — a fresh session is created for <code>T-EC1</code>. (<code>T-WC1</code> still shows as skipped, for that same unrelated leftover session.)
 </div>
 <div class="tc-step-shot">
-<img src="./img/current-standings/tc11-step2-normal-scheduling.png" alt="The system's activity log showing a fresh session created for T-EC1 once its date is set back to today">
+<a href="./img/current-standings/tc11-step2-normal-scheduling.png" target="_blank" rel="noopener" class="tc-step-shot-link"><img src="./img/current-standings/tc11-step2-normal-scheduling.png" alt="The system's activity log showing a fresh session created for T-EC1 once its date is set back to today"></a>
 <div class="tc-step-caption">Fixed — T-EC1 schedules normally again once its date is current.</div>
 </div>
 </div>
@@ -524,6 +555,8 @@ Each test below says, in its own **Before you start** line, whether it needs any
 ---
 
 ### Test 12 — Making sure "Check my data" actually catches problems
+
+<label class="tc-done-toggle"><input type="checkbox" class="tc-done-checkbox" data-test="12"> I've run through Test 12</label>
 
 <div class="note" markdown="1">
 **The situation:** confirms the self-check isn't just a formality that always comes back green — it needs to actually catch a real broken state, which is the entire reason it exists.
@@ -537,7 +570,7 @@ Each test below says, in its own **Before you start** line, whether it needs any
 <em>What you should see:</em> two red rows, both naming <code>T-EC1</code> specifically — one explaining it's active but has no Regional Pacing row and so won't be scheduled, the other that it's due for a chapter with no Regional Pacing row, so the nightly scheduling run will never pick it up. Not a generic "something's wrong" — the exact team and the exact consequence, stated twice.
 </div>
 <div class="tc-step-shot">
-<img src="./img/current-standings/tc12-step1-check-data.png" alt="The Data Check tab showing two red rows, both naming T-EC1 and its missing Regional Pacing row">
+<a href="./img/current-standings/tc12-step1-check-data.png" target="_blank" rel="noopener" class="tc-step-shot-link"><img src="./img/current-standings/tc12-step1-check-data.png" alt="The Data Check tab showing two red rows, both naming T-EC1 and its missing Regional Pacing row"></a>
 <div class="tc-step-caption">A real check — two rows, same root cause, both naming T-EC1 by name.</div>
 </div>
 </div>
@@ -549,7 +582,7 @@ Each test below says, in its own **Before you start** line, whether it needs any
 <em>What you should see:</em> it should complete normally — or, if it doesn't, that itself is a real finding worth reporting. In practice, it's the latter: the result dialog names only <code>T-WC1</code> in its "fresh session(s) locked in" list, silently leaving out <code>T-EC1</code>, and checking the Regional Pacing tab afterward confirms why — <code>T-EC1</code>'s row is still entirely missing. The self-service button can't recover from a Regional Pacing row that's gone completely; a coordinator hitting this needs to ask for help rather than trust the "Ready to test from the start again" message.
 </div>
 <div class="tc-step-shot">
-<img src="./img/current-standings/tc12-step2-reset-incomplete.png" alt="The Done dialog locking in a fresh session for T-WC1 only, silently omitting T-EC1">
+<a href="./img/current-standings/tc12-step2-reset-incomplete.png" target="_blank" rel="noopener" class="tc-step-shot-link"><img src="./img/current-standings/tc12-step2-reset-incomplete.png" alt="The Done dialog locking in a fresh session for T-WC1 only, silently omitting T-EC1"></a>
 <div class="tc-step-caption">A real finding — T-EC1 is quietly left behind; the button doesn't say so.</div>
 </div>
 </div>
@@ -557,6 +590,8 @@ Each test below says, in its own **Before you start** line, whether it needs any
 ---
 
 ### Test 13 — Making sure the everyday reset button really works
+
+<label class="tc-done-toggle"><input type="checkbox" class="tc-done-checkbox" data-test="13"> I've run through Test 13</label>
 
 <div class="note" markdown="1">
 **The situation:** this is genuinely the button a coordinator would click to retest something right now — worth confirming end to end on its own, not just trusting it because every test above happened to use it along the way.
@@ -570,7 +605,7 @@ Each test below says, in its own **Before you start** line, whether it needs any
 <em>What you should see:</em> a confirmation dialog names both <code>T-EC1</code> and <code>T-WC1</code> — every team coordinator <code>O02</code> covers — and explains what it's about to do.
 </div>
 <div class="tc-step-shot">
-<img src="./img/current-standings/tc13-reset-confirm.png" alt="The Reset your test team(s) confirmation dialog, naming T-EC1 and T-WC1">
+<a href="./img/current-standings/tc13-reset-confirm.png" target="_blank" rel="noopener" class="tc-step-shot-link"><img src="./img/current-standings/tc13-reset-confirm.png" alt="The Reset your test team(s) confirmation dialog, naming T-EC1 and T-WC1"></a>
 <div class="tc-step-caption">The confirmation dialog after clicking Reset my test team(s).</div>
 </div>
 </div>
@@ -581,7 +616,7 @@ Each test below says, in its own **Before you start** line, whether it needs any
 <em>What you should see:</em> a fresh session ID is named for each team — confirming the reset and the re-scheduling both actually happened in one click.
 </div>
 <div class="tc-step-shot">
-<img src="./img/current-standings/tc13-reset-done.png" alt="The Done dialog naming fresh session IDs for T-EC1 and T-WC1">
+<a href="./img/current-standings/tc13-reset-done.png" target="_blank" rel="noopener" class="tc-step-shot-link"><img src="./img/current-standings/tc13-reset-done.png" alt="The Done dialog naming fresh session IDs for T-EC1 and T-WC1"></a>
 <div class="tc-step-caption">A real result — a fresh session locked in for each team.</div>
 </div>
 </div>
@@ -592,7 +627,7 @@ Each test below says, in its own **Before you start** line, whether it needs any
 <em>What you should see:</em> the next chapter is back to 1, the next test date is today, the old test rows are gone, and exactly one fresh row exists for today.
 </div>
 <div class="tc-step-shot">
-<img src="./img/current-standings/tc13-step3-pacing-and-history.png" alt="T-EC1's Regional Pacing row showing next chapter 1, and its Exams history showing exactly one fresh row">
+<a href="./img/current-standings/tc13-step3-pacing-and-history.png" target="_blank" rel="noopener" class="tc-step-shot-link"><img src="./img/current-standings/tc13-step3-pacing-and-history.png" alt="T-EC1's Regional Pacing row showing next chapter 1, and its Exams history showing exactly one fresh row"></a>
 <div class="tc-step-caption">T-EC1 back to chapter 1 (top), with exactly one fresh Exams row (bottom).</div>
 </div>
 </div>
@@ -604,7 +639,7 @@ Each test below says, in its own **Before you start** line, whether it needs any
 <em>What you should see:</em> completely untouched, identical to before the click.
 </div>
 <div class="tc-step-shot">
-<img src="./img/current-standings/tc13-step4-uk1-unchanged.png" alt="T-UK1's Regional Pacing row, unchanged by the reset">
+<a href="./img/current-standings/tc13-step4-uk1-unchanged.png" target="_blank" rel="noopener" class="tc-step-shot-link"><img src="./img/current-standings/tc13-step4-uk1-unchanged.png" alt="T-UK1's Regional Pacing row, unchanged by the reset"></a>
 <div class="tc-step-caption">T-UK1 — a team O02 doesn't coordinate — completely untouched.</div>
 </div>
 </div>
@@ -612,6 +647,8 @@ Each test below says, in its own **Before you start** line, whether it needs any
 ---
 
 ### Test 14 — Someone is signed into the wrong email
+
+<label class="tc-done-toggle"><input type="checkbox" class="tc-done-checkbox" data-test="14"> I've run through Test 14</label>
 
 <div class="note" markdown="1">
 **The situation:** simulates the single most common real mix-up — a parent using their own email instead of the student's registered one, or a typo'd address. The form shouldn't misattribute the submission to the wrong team, or show a confusing error — it should simply not recognize the person, and (consistent with every other exception above) tell them nothing either way.
@@ -625,7 +662,7 @@ Each test below says, in its own **Before you start** line, whether it needs any
 <em>What you should see:</em> the form's ordinary confirmation message — again, no visible error of any kind.
 </div>
 <div class="tc-step-shot">
-<img src="./img/current-standings/tc14-step1-form-confirmation.png" alt="The form's ordinary confirmation message, shown after submitting signed in as an unregistered email">
+<a href="./img/current-standings/tc14-step1-form-confirmation.png" target="_blank" rel="noopener" class="tc-step-shot-link"><img src="./img/current-standings/tc14-step1-form-confirmation.png" alt="The form's ordinary confirmation message, shown after submitting signed in as an unregistered email"></a>
 <div class="tc-step-caption">A real submission — the same friendly confirmation, whether or not the email was actually recognized.</div>
 </div>
 </div>
@@ -636,7 +673,7 @@ Each test below says, in its own **Before you start** line, whether it needs any
 <em>What you should see:</em> nothing changed anywhere — no row was touched. If a real family ever reports "nothing happened when I clicked start," this is the first thing to check, ahead of Test 7's missing-paper situation — most often, it's simply the wrong email signed in.
 </div>
 <div class="tc-step-shot">
-<img src="./img/current-standings/tc14-step2-exams-unchanged.png" alt="The Exams sheet, showing T-EC1's row with StartedUTC and Deadline still both blank after the submission">
+<a href="./img/current-standings/tc14-step2-exams-unchanged.png" target="_blank" rel="noopener" class="tc-step-shot-link"><img src="./img/current-standings/tc14-step2-exams-unchanged.png" alt="The Exams sheet, showing T-EC1's row with StartedUTC and Deadline still both blank after the submission"></a>
 <div class="tc-step-caption">Confirmed — T-EC1's row is exactly as it was; the unrecognized email touched nothing.</div>
 </div>
 </div>
@@ -654,3 +691,51 @@ Every test above exercises the same underlying system that gets checked automati
 <div class="note" markdown="1">
 **Coming next.** Once this practice-account walkthrough is fully illustrated with screenshots for every step (and a short walkthrough video at the end for anyone who'd rather watch than read), the same 14 tests become the template for real testing with real people — real coordinators, real families, and real graders, volunteering to run a smaller slice of this walkthrough themselves against their own accounts. See [Organization](./organization.md) if you'd like to help.
 </div>
+
+<script>
+(function () {
+  var TOTAL = 14;
+  var KEY = 'mcc-tc-progress-v1';
+
+  function load() {
+    try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { return {}; }
+  }
+  function save(state) {
+    try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) { /* ignore */ }
+  }
+  function updateSummary(state) {
+    var count = 0;
+    for (var i = 1; i <= TOTAL; i++) { if (state[i]) count++; }
+    var countEl = document.getElementById('tc-progress-count');
+    var fillEl = document.getElementById('tc-progress-fill');
+    if (countEl) countEl.textContent = count + ' of ' + TOTAL;
+    if (fillEl) fillEl.style.width = Math.round((count / TOTAL) * 100) + '%';
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var state = load();
+    var boxes = Array.prototype.slice.call(document.querySelectorAll('.tc-done-checkbox'));
+
+    boxes.forEach(function (box) {
+      var n = box.getAttribute('data-test');
+      box.checked = !!state[n];
+      box.addEventListener('change', function () {
+        state[n] = box.checked;
+        save(state);
+        updateSummary(state);
+      });
+    });
+    updateSummary(state);
+
+    var resetBtn = document.getElementById('tc-progress-reset');
+    if (resetBtn) {
+      resetBtn.addEventListener('click', function () {
+        state = {};
+        save(state);
+        boxes.forEach(function (box) { box.checked = false; });
+        updateSummary(state);
+      });
+    }
+  });
+})();
+</script>

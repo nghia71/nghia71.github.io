@@ -462,12 +462,14 @@ figure.screenshot figcaption {
 .tc-step-text { flex: 1 1 55%; font-size: 15.5px; line-height: 1.5; }
 .tc-step-text code { font-size: .92em; }
 
-.tc-step-shot { flex: 0 0 300px; max-width: 300px; text-align: center; }
+.tc-step-shot { flex: 0 0 400px; max-width: 400px; text-align: center; }
+.tc-step-shot-link { display: block; }
 .tc-step-shot img {
   width: 100%;
   display: block;
   border-radius: 6px;
   border: 1px solid var(--rule);
+  cursor: zoom-in;
 }
 .tc-step-caption {
   margin-top: 6px;
@@ -475,11 +477,76 @@ figure.screenshot figcaption {
   color: var(--ink-soft);
   font-style: italic;
 }
+.tc-step-caption::after {
+  content: " (tap to view full size)";
+  opacity: .7;
+}
 
 @media (max-width: 640px) {
   .tc-step { flex-direction: column; }
   .tc-step-shot { max-width: 100%; flex-basis: auto; }
 }
+
+/* ---------- Progress tracker (testing-pipeline page) ---------------------- */
+
+.tc-progress {
+  margin: 1.2em 0 1.6em;
+  padding: 14px 18px;
+  background: var(--white);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+.tc-progress-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.tc-progress-label { font-size: 15px; }
+.tc-progress-reset {
+  font-size: 13px;
+  font-family: inherit;
+  color: var(--brand);
+  background: var(--cream);
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  padding: 5px 14px;
+  cursor: pointer;
+}
+.tc-progress-reset:hover { background: var(--gold-soft); }
+.tc-progress-bar {
+  margin-top: 10px;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--cream);
+  overflow: hidden;
+}
+.tc-progress-fill {
+  height: 100%;
+  width: 0%;
+  background: var(--gold);
+  transition: width .2s ease;
+}
+.tc-progress-note {
+  margin: 8px 0 0;
+  font-size: 12.5px;
+  color: var(--ink-soft);
+  font-style: italic;
+}
+
+.tc-done-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin: -.4em 0 .8em;
+  font-size: 14px;
+  color: var(--ink-soft);
+  cursor: pointer;
+  user-select: none;
+}
+.tc-done-toggle input { width: 15px; height: 15px; cursor: pointer; }
 
 /* Collapsed-by-default, de-emphasized admin/sysadmin-only instructions --
    present for Nghia if something's broken, out of the way for everyone
