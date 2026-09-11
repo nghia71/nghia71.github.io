@@ -540,7 +540,11 @@ Each case below says if it needs anything beyond this standard reset.
 <div class="tc-step">
 <div class="tc-step-text">
 <strong>1. [Coordinator]</strong> Click <strong>MCC Tools → Check my data</strong>.<br>
-<em>Expect:</em> a red row naming <code>T-EC1</code> and its region specifically, explaining it's active but has no Regional Pacing row and will never be scheduled — not a generic "something's wrong," but the exact team and the exact consequence.
+<em>Expect:</em> two red rows, both naming <code>T-EC1</code> specifically — one explaining it's active but has no Regional Pacing row and won't be scheduled, the other that it's due for a chapter with no Regional Pacing row so it'll never be picked up by the nightly lock-in — not a generic "something's wrong," but the exact team and the exact consequence, twice over.
+</div>
+<div class="tc-step-shot">
+<img src="./img/current-standings/tc12-step1-check-data.png" alt="The Data Check tab showing two red rows, both naming T-EC1 and its missing Regional Pacing row">
+<div class="tc-step-caption">A real check — two rows, same root cause, both naming T-EC1 by name.</div>
 </div>
 </div>
 
@@ -548,7 +552,11 @@ Each case below says if it needs anything beyond this standard reset.
 <div class="tc-step-text">
 <strong>2. [Coordinator]</strong> Click <strong>Reset my test team(s)</strong>.<br>
 <em>Why it matters:</em> confirms the self-service reset also recovers from this, not just resets an already-clean state.<br>
-<em>Expect:</em> completes normally — or, if it doesn't, that itself is a real finding worth reporting.
+<em>Expect:</em> completes normally — or, if it doesn't, that itself is a real finding worth reporting. In practice, it's the latter: the Done dialog names only <code>T-WC1</code> in its "fresh session(s) locked in" list, silently dropping <code>T-EC1</code>, and a check of the Regional Pacing tab afterward confirms why — <code>T-EC1</code>'s row is still entirely missing. The self-service button can't recover from a Regional Pacing row that doesn't exist at all; a coordinator hitting this needs to ask for help rather than trust the "Ready to test from the start again" message.
+</div>
+<div class="tc-step-shot">
+<img src="./img/current-standings/tc12-step2-reset-incomplete.png" alt="The Done dialog locking in a fresh session for T-WC1 only, silently omitting T-EC1">
+<div class="tc-step-caption">A real finding — T-EC1 is quietly left behind; the button doesn't say so.</div>
 </div>
 </div>
 
