@@ -69,5 +69,5 @@ The **MCC Public Roster** is the one spreadsheet anyone — student, parent, or 
 Before any real team's test depends on it, every piece of the pipeline above — releasing a test paper, a family opening and submitting it, a grader marking it, the standings updating — gets proven end to end using two practice accounts instead of real students, across 14 numbered test cases.
 
 <div class="note" markdown="1">
-**[Testing the Pipeline: the 14-case walkthrough →](./testing-the-pipeline.md)**
+**[Making Sure Testing Works: a 14-test walkthrough →](./testing-the-pipeline.md)**
 </div>
