@@ -256,14 +256,15 @@ Each case below says if it needs anything beyond this standard reset.
 ### TC-3 — Edge case: retakes exhausted (Fail on the third attempt)
 
 <div class="note" markdown="1">
-**Objective:** simulates a team that keeps failing. The system shouldn't retry forever — it needs to stop at a defined limit (three attempts) and hand the decision back to a person, rather than looping silently or giving up silently.
+**Objective:** simulates a team that keeps failing. The system shouldn't retry forever — it needs to stop at a defined limit (three attempts) and hand the decision back to a person, rather than looping forever or quietly giving up.
 </div>
 
 **Setup:** standard reset, then repeat TC-2's Fail sequence twice more so <code>T-EC1</code> reaches Attempt 3 (or, faster: after the first Fail, hand-edit the new retake row's Attempt number to 3 directly on the spreadsheet before grading it).
 
 <div class="tc-step">
 <div class="tc-step-text">
-<strong>1. [Grader]</strong> Grade the Attempt 3 session as a Fail (score under 51), the same grading steps as TC-1.
+<strong>1. [Grader]</strong> Grade the Attempt 3 session as a Fail (score under 51), the same grading steps as TC-1.<br>
+<em>Expect:</em> the grading step itself completes the same as any other — nothing about it looks different from grading a Pass. The retry-limit only shows up in step 2 below.
 </div>
 </div>
 
@@ -314,7 +315,7 @@ Each case below says if it needs anything beyond this standard reset.
 **Objective:** confirms there's a real cutoff. Grace is generous but not infinite — a genuinely too-late submission needs to be rejected outright, not accepted with a scary-looking "very late" status that still counts.
 </div>
 
-**Setup:** standard reset, start the test, then submit well past the deadline plus 30 minutes.
+**Setup:** standard reset, start the test (TC-1 steps 1-6), then submit well past the deadline plus 30 minutes.
 
 <div class="tc-step">
 <div class="tc-step-text">
@@ -382,7 +383,7 @@ Each case below says if it needs anything beyond this standard reset.
 <div class="tc-step">
 <div class="tc-step-text">
 <strong>2. [Coordinator]</strong> Check the <code>Exams</code> row.<br>
-<em>Expect:</em> the start time and deadline are still blank — nothing happened, silently. Nothing on the student's screen shows anything is wrong.
+<em>Expect:</em> the start time and deadline are still blank. Nothing ran on the backend, and nothing on the student's screen showed that anything was wrong.
 </div>
 </div>
 
@@ -411,6 +412,7 @@ Each case below says if it needs anything beyond this standard reset.
 <div class="tc-step">
 <div class="tc-step-text">
 <strong>1. [Admin]</strong> The nightly access-cleanup run happens on its own on schedule (or Nghia can trigger it directly).<br>
+<em>Expect:</em> the team's <code>Exams</code> row is marked expired, and its shared access to the test paper is revoked.<br>
 <em>Why it matters:</em> this is what makes "time-boxed access" actually true in practice, not just something documented.
 </div>
 </div>
@@ -482,7 +484,7 @@ Each case below says if it needs anything beyond this standard reset.
 ### TC-11 — Edge case: the next test date is set in the past
 
 <div class="note" markdown="1">
-**Objective:** confirms that a stale or mistyped date doesn't get silently auto-corrected or silently skipped forever — it should be flagged as something a coordinator actually needs to look at.
+**Objective:** confirms that a stale or mistyped date doesn't get quietly auto-corrected, or silently skipped forever — it should be flagged as something a coordinator actually needs to look at.
 </div>
 
 **Setup:** standard reset, then on the Regional Pacing <code>EC</code> tab, hand-set <code>T-EC1</code>'s next test date to well before today. (Don't use the reset button for this one — it sets the date to today itself; hand-edit the date instead.)
@@ -490,7 +492,7 @@ Each case below says if it needs anything beyond this standard reset.
 <div class="tc-step">
 <div class="tc-step-text">
 <strong>1. [Admin]</strong> Trigger scheduling.<br>
-<em>Expect:</em> the result lists <code>T-EC1</code> as skipped (date in the past) — not scheduled, and not silently ignored forever either; it stays flagged on every run until fixed.
+<em>Expect:</em> the result lists <code>T-EC1</code> as skipped (date in the past) — not scheduled, and not dropped either; it stays flagged on every run until fixed.
 </div>
 </div>
 
