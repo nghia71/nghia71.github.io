@@ -446,12 +446,20 @@ Each case below says if it needs anything beyond this standard reset.
 <strong>1. [Student 1]</strong> Open the form again, choose "I'm ready to open my test paper" a second time, submit.<br>
 <em>Expect:</em> the form's ordinary confirmation, identical to the first time — no visible difference.
 </div>
+<div class="tc-step-shot">
+<img src="./img/current-standings/tc9-step1-second-click.png" alt="The same Opening your test paper screen, shown a second time">
+<div class="tc-step-caption">The second click looks exactly like the first — nothing warns the student either way.</div>
+</div>
 </div>
 
 <div class="tc-step">
 <div class="tc-step-text">
 <strong>2. [Coordinator]</strong> Check the <code>Exams</code> row.<br>
 <em>Expect:</em> the start time and deadline are completely unchanged from the first click — the clock did not restart.
+</div>
+<div class="tc-step-shot">
+<img src="./img/current-standings/tc9-step2-unchanged-row.png" alt="T-EC1's Exams row, with the same StartedUTC and Deadline as before the second click">
+<div class="tc-step-caption">Same StartedUTC, same Deadline — the double-click changed nothing.</div>
 </div>
 </div>
 
