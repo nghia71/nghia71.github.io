@@ -476,7 +476,11 @@ Each case below says if it needs anything beyond this standard reset.
 <div class="tc-step">
 <div class="tc-step-text">
 <strong>1. [Coordinator]</strong> With <code>T-EC1</code> inactive, trigger scheduling again — clicking <strong>Reset my test team(s)</strong> still runs it at the end.<br>
-<em>Expect:</em> the result lists <code>T-EC1</code> as skipped (inactive) — no new test session is created for it.
+<em>Expect:</em> the result dialog still names <code>T-EC1</code> in its opening line, but the "fresh session(s) locked in" list names only <code>T-WC1</code> — <code>T-EC1</code> gets no new session, and its own Regional Pacing row is left completely untouched.
+</div>
+<div class="tc-step-shot">
+<img src="./img/current-standings/tc10-step1-done-dialog.png" alt="The Done dialog naming T-EC1 and T-WC1 as reset, but listing a fresh session for T-WC1 only">
+<div class="tc-step-caption">A real result — T-EC1 is named, but gets no fresh session because it's inactive.</div>
 </div>
 </div>
 
@@ -484,6 +488,10 @@ Each case below says if it needs anything beyond this standard reset.
 <div class="tc-step-text">
 <strong>2. [Coordinator]</strong> Set Active back to <code>TRUE</code> and trigger scheduling again.<br>
 <em>Expect:</em> now it schedules normally, same as TC-1.
+</div>
+<div class="tc-step-shot">
+<img src="./img/current-standings/tc10-step2-reactivated-dialog.png" alt="The Done dialog now listing fresh sessions for both T-EC1 and T-WC1">
+<div class="tc-step-caption">Reactivated — T-EC1 gets a fresh session again, same as any other team.</div>
 </div>
 </div>
 
