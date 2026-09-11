@@ -36,6 +36,16 @@ The **MCC Public Roster** is the one spreadsheet anyone — student, parent, or 
 <figcaption>The <code>Exams</code> tab — one row per test, updated as each one is placed, submitted, and graded. (Cropped to the identifying and status columns; the full row also tracks timestamps and Drive links in between.)</figcaption>
 </figure>
 
+## Taking the test — the Test Paper Open/Submit Form
+
+This is the one link every student uses to open their test paper and, later, to submit their solution. It's a single permanent link — the same one, all year, for every team and every test — so it never changes and never needs to be looked up again once you have it. Bookmark it.
+
+<div class="note" markdown="1">
+**[Open the Test Paper Open/Submit Form →](https://docs.google.com/forms/d/e/1FAIpQLSdrDdmflJ9K6IR7BCAlTU_7ziffSilCjkywuVJT_MoEoDFPGg/viewform)**
+</div>
+
+Sign in with the email your team registered with, then choose **"I'm ready to open my test paper"** when it's time to start, or **"Submit my solution"** when you're done. If you ever lose this link, it's always here on this page — no need to wait on a coordinator to resend it.
+
 ## Coordinator & organizer resources
 
 <div class="note" markdown="1">

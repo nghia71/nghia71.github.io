@@ -38,6 +38,16 @@ Every step below is tagged with who does it — really, which Google account nee
 
 Coordinator, Grader, and Admin are really all the same person — Nghia — signed into the same account, since he's the one running through all 14 tests by himself. The two Student tags are genuinely two separate accounts, so the system can tell "who's on the team" apart the same way it would for two real family members.
 
+### The Test Paper Open/Submit Form
+
+Every step below that says "open the form" means this one link — the same single, permanent URL every real family uses too, all year, for every test:
+
+<div class="note" markdown="1">
+**[Open the Test Paper Open/Submit Form →](https://docs.google.com/forms/d/e/1FAIpQLSdrDdmflJ9K6IR7BCAlTU_7ziffSilCjkywuVJT_MoEoDFPGg/viewform)**
+</div>
+
+It's also published on the [Current Standings](./current-standings.md) page, in the "Taking the test" section near the top — that's the real, durable place a family should get it from, bookmarked once and reused all year, not something to go looking for each time.
+
 ### Switching between accounts in Chrome
 
 Most steps below need you signed into a specific one of the accounts above before you do anything. In Chrome:
@@ -71,8 +81,6 @@ Each test below says, in its own **Before you start** line, whether it needs any
 </details>
 
 ### Test 1 — A test that goes right, start to finish
-
-<label class="tc-done-toggle"><input type="checkbox" class="tc-done-checkbox" data-test="1"> I've run through Test 1</label>
 
 <div class="note" markdown="1">
 **The situation:** this is what a completely ordinary test looks like, start to finish — a test paper becomes available, a student opens and submits it, a grader marks it, and the team's standing updates. Every other test below is really a variation on this one: something arriving late, someone signed into the wrong account, a team failing instead of passing. If this baseline doesn't work end to end, none of those other tests mean anything yet.
@@ -110,7 +118,7 @@ Each test below says, in its own **Before you start** line, whether it needs any
 
 <div class="tc-step">
 <div class="tc-step-text">
-<strong>4. [Student 1]</strong> Signed into <code>mcc.tst1@gmail.com</code>, open the Test Paper Open/Submit Form, choose <strong>"I'm ready to open my test paper,"</strong> and submit.<br>
+<strong>4. [Student 1]</strong> Signed into <code>mcc.tst1@gmail.com</code>, open the <a href="https://docs.google.com/forms/d/e/1FAIpQLSdrDdmflJ9K6IR7BCAlTU_7ziffSilCjkywuVJT_MoEoDFPGg/viewform">Test Paper Open/Submit Form</a>, choose <strong>"I'm ready to open my test paper,"</strong> and submit.<br>
 <em>Why it matters:</em> this is the actual moment a real family starts their test. The form checks whichever email is signed in against the student's registered email — sign in as the wrong account, and it won't work (see Test 14).<br>
 <em>What you should see:</em> the form's own plain confirmation message.
 </div>
@@ -211,11 +219,11 @@ Each test below says, in its own **Before you start** line, whether it needs any
 </div>
 </div>
 
+<label class="tc-done-toggle"><input type="checkbox" class="tc-done-checkbox" data-test="1"> I've run through Test 1</label>
+
 ---
 
 ### Test 2 — A team doesn't pass, but still has retakes left
-
-<label class="tc-done-toggle"><input type="checkbox" class="tc-done-checkbox" data-test="2"> I've run through Test 2</label>
 
 <div class="note" markdown="1">
 **The situation:** simulates a team that doesn't pass on a given attempt. A Fail shouldn't just sit there waiting for someone to notice — the system should schedule a retake at the same chapter on its own, without a coordinator having to catch it and act by hand.
@@ -238,11 +246,11 @@ Each test below says, in its own **Before you start** line, whether it needs any
 </div>
 </div>
 
+<label class="tc-done-toggle"><input type="checkbox" class="tc-done-checkbox" data-test="2"> I've run through Test 2</label>
+
 ---
 
 ### Test 3 — A team fails for the third time in a row
-
-<label class="tc-done-toggle"><input type="checkbox" class="tc-done-checkbox" data-test="3"> I've run through Test 3</label>
 
 <div class="note" markdown="1">
 **The situation:** simulates a team that keeps failing. The system shouldn't keep retrying forever — it needs to stop at a defined limit (three attempts) and hand the decision back to a person, rather than looping endlessly or quietly giving up.
@@ -272,11 +280,11 @@ Each test below says, in its own **Before you start** line, whether it needs any
 </div>
 </div>
 
+<label class="tc-done-toggle"><input type="checkbox" class="tc-done-checkbox" data-test="3"> I've run through Test 3</label>
+
 ---
 
 ### Test 4 — A submission comes in a little late
-
-<label class="tc-done-toggle"><input type="checkbox" class="tc-done-checkbox" data-test="4"> I've run through Test 4</label>
 
 <div class="note" markdown="1">
 **The situation:** simulates a family with slow internet, or a last-minute scramble. A slightly-late submission shouldn't be rejected outright — it should just be flagged as late, and still count.
@@ -298,11 +306,11 @@ Each test below says, in its own **Before you start** line, whether it needs any
 </div>
 </div>
 
+<label class="tc-done-toggle"><input type="checkbox" class="tc-done-checkbox" data-test="4"> I've run through Test 4</label>
+
 ---
 
 ### Test 5 — A submission comes in too late to count
-
-<label class="tc-done-toggle"><input type="checkbox" class="tc-done-checkbox" data-test="5"> I've run through Test 5</label>
 
 <div class="note" markdown="1">
 **The situation:** confirms there's a real cutoff. Grace is generous but not infinite — a genuinely too-late submission needs to be rejected outright, rather than accepted with a scary-looking "very late" status that still secretly counts.
@@ -320,15 +328,15 @@ Each test below says, in its own **Before you start** line, whether it needs any
 <div class="tc-step">
 <div class="tc-step-text">
 <strong>2. [Coordinator]</strong> Check the <code>Exams</code> row.<br>
-<em>What you should see:</em> no submission was recorded at all — no file link, nothing. A real family in this situation needs to be told directly — a message, a phone call — that their submission didn't go through; the system will not tell them on its own.
+<em>What you should see:</em> no file link — the submission itself was rejected — but the row isn't blank about it: <code>LastRejectedReason</code> shows <code>past-grace</code>, <code>LastRejectedUTC</code> records the moment it was rejected, and the <code>Status</code> column reads "Your submission arrived too late to be accepted automatically (more than 30 min past the deadline) - contact your coordinator." That message is coordinator-facing only — the student still saw the form's ordinary confirmation in step 1 — so a real family in this situation still needs to be told directly, by message or phone call, that their submission didn't count; the system won't tell them on its own.
 </div>
 </div>
+
+<label class="tc-done-toggle"><input type="checkbox" class="tc-done-checkbox" data-test="5"> I've run through Test 5</label>
 
 ---
 
 ### Test 6 — A student submits a corrected file
-
-<label class="tc-done-toggle"><input type="checkbox" class="tc-done-checkbox" data-test="6"> I've run through Test 6</label>
 
 <div class="note" markdown="1">
 **The situation:** simulates a family correcting a mistake — the wrong file, or second thoughts. Their first attempt shouldn't be lost, and the system should always reflect whichever file they submitted most recently.
@@ -358,11 +366,11 @@ Each test below says, in its own **Before you start** line, whether it needs any
 </div>
 </div>
 
+<label class="tc-done-toggle"><input type="checkbox" class="tc-done-checkbox" data-test="6"> I've run through Test 6</label>
+
 ---
 
 ### Test 7 — A student tries to start before their test paper is ready (a real gap we found)
-
-<label class="tc-done-toggle"><input type="checkbox" class="tc-done-checkbox" data-test="7"> I've run through Test 7</label>
 
 <div class="note" markdown="1">
 **The situation:** this genuinely happened once, for real, the very first time this walkthrough was ever run — kept permanently as its own test so it's never a surprise again. It's a real, still-open gap: right now, nothing tells a student when this specific thing goes wrong.
@@ -404,11 +412,11 @@ Each test below says, in its own **Before you start** line, whether it needs any
 </div>
 </div>
 
+<label class="tc-done-toggle"><input type="checkbox" class="tc-done-checkbox" data-test="7"> I've run through Test 7</label>
+
 ---
 
 ### Test 8 — A team never submits their test
-
-<label class="tc-done-toggle"><input type="checkbox" class="tc-done-checkbox" data-test="8"> I've run through Test 8</label>
 
 <div class="note" markdown="1">
 **The situation:** confirms that access to a test paper doesn't stay open forever. Once there's no realistic chance a legitimate submission is still coming, the system should revoke access on its own, without a coordinator needing to remember to do it.
@@ -450,11 +458,11 @@ Each test below says, in its own **Before you start** line, whether it needs any
 </div>
 </div>
 
+<label class="tc-done-toggle"><input type="checkbox" class="tc-done-checkbox" data-test="8"> I've run through Test 8</label>
+
 ---
 
 ### Test 9 — A student clicks "I'm ready" twice by accident
-
-<label class="tc-done-toggle"><input type="checkbox" class="tc-done-checkbox" data-test="9"> I've run through Test 9</label>
 
 <div class="note" markdown="1">
 **The situation:** simulates an accidental double-click, or a student who genuinely isn't sure their first click registered. Either way, it shouldn't restart the clock or create any confusing duplicate state.
@@ -484,11 +492,11 @@ Each test below says, in its own **Before you start** line, whether it needs any
 </div>
 </div>
 
+<label class="tc-done-toggle"><input type="checkbox" class="tc-done-checkbox" data-test="9"> I've run through Test 9</label>
+
 ---
 
 ### Test 10 — A team on break doesn't get scheduled
-
-<label class="tc-done-toggle"><input type="checkbox" class="tc-done-checkbox" data-test="10"> I've run through Test 10</label>
 
 <div class="note" markdown="1">
 **The situation:** confirms that deactivating a team — a family taking a break, or a team disbanding — actually stops new tests from being scheduled for them, without anyone needing to also delete their data.
@@ -518,11 +526,11 @@ Each test below says, in its own **Before you start** line, whether it needs any
 </div>
 </div>
 
+<label class="tc-done-toggle"><input type="checkbox" class="tc-done-checkbox" data-test="10"> I've run through Test 10</label>
+
 ---
 
 ### Test 11 — A team's next test date is stuck in the past
-
-<label class="tc-done-toggle"><input type="checkbox" class="tc-done-checkbox" data-test="11"> I've run through Test 11</label>
 
 <div class="note" markdown="1">
 **The situation:** confirms that a stale or mistyped date doesn't get quietly auto-corrected, or silently skipped forever — it should be flagged as something a coordinator actually needs to look at and fix.
@@ -552,11 +560,11 @@ Each test below says, in its own **Before you start** line, whether it needs any
 </div>
 </div>
 
+<label class="tc-done-toggle"><input type="checkbox" class="tc-done-checkbox" data-test="11"> I've run through Test 11</label>
+
 ---
 
 ### Test 12 — Making sure "Check my data" actually catches problems
-
-<label class="tc-done-toggle"><input type="checkbox" class="tc-done-checkbox" data-test="12"> I've run through Test 12</label>
 
 <div class="note" markdown="1">
 **The situation:** confirms the self-check isn't just a formality that always comes back green — it needs to actually catch a real broken state, which is the entire reason it exists.
@@ -587,11 +595,11 @@ Each test below says, in its own **Before you start** line, whether it needs any
 </div>
 </div>
 
+<label class="tc-done-toggle"><input type="checkbox" class="tc-done-checkbox" data-test="12"> I've run through Test 12</label>
+
 ---
 
 ### Test 13 — Making sure the everyday reset button really works
-
-<label class="tc-done-toggle"><input type="checkbox" class="tc-done-checkbox" data-test="13"> I've run through Test 13</label>
 
 <div class="note" markdown="1">
 **The situation:** this is genuinely the button a coordinator would click to retest something right now — worth confirming end to end on its own, not just trusting it because every test above happened to use it along the way.
@@ -644,11 +652,11 @@ Each test below says, in its own **Before you start** line, whether it needs any
 </div>
 </div>
 
+<label class="tc-done-toggle"><input type="checkbox" class="tc-done-checkbox" data-test="13"> I've run through Test 13</label>
+
 ---
 
 ### Test 14 — Someone is signed into the wrong email
-
-<label class="tc-done-toggle"><input type="checkbox" class="tc-done-checkbox" data-test="14"> I've run through Test 14</label>
 
 <div class="note" markdown="1">
 **The situation:** simulates the single most common real mix-up — a parent using their own email instead of the student's registered one, or a typo'd address. The form shouldn't misattribute the submission to the wrong team, or show a confusing error — it should simply not recognize the person, and (consistent with every other exception above) tell them nothing either way.
@@ -677,6 +685,8 @@ Each test below says, in its own **Before you start** line, whether it needs any
 <div class="tc-step-caption">Confirmed — T-EC1's row is exactly as it was; the unrecognized email touched nothing.</div>
 </div>
 </div>
+
+<label class="tc-done-toggle"><input type="checkbox" class="tc-done-checkbox" data-test="14"> I've run through Test 14</label>
 
 ---
 
