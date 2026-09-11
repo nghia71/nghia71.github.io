@@ -630,12 +630,20 @@ Each case below says if it needs anything beyond this standard reset.
 <strong>1. [Anyone]</strong> Signed in as an account not on <code>T-EC1</code> — <code>nghia71@gmail.com</code> works fine for this — open the Test Paper Open/Submit Form, choose "I'm ready to open my test paper," submit.<br>
 <em>Expect:</em> the form's ordinary confirmation — again, no visible error of any kind.
 </div>
+<div class="tc-step-shot">
+<img src="./img/current-standings/tc14-step1-form-confirmation.png" alt="The form's ordinary confirmation message, shown after submitting signed in as an unregistered email">
+<div class="tc-step-caption">A real submission — the same friendly confirmation, whether or not the email was actually recognized.</div>
+</div>
 </div>
 
 <div class="tc-step">
 <div class="tc-step-text">
 <strong>2. [Coordinator]</strong> Check the <code>Exams</code> sheet.<br>
 <em>Expect:</em> nothing changed anywhere — no row was touched. If a real family ever reports "nothing happened when I clicked start," this is the first thing to check, ahead of TC-7's missing-paper case: most often it's simply the wrong email signed in.
+</div>
+<div class="tc-step-shot">
+<img src="./img/current-standings/tc14-step2-exams-unchanged.png" alt="The Exams sheet, showing T-EC1's row with StartedUTC and Deadline still both blank after the submission">
+<div class="tc-step-caption">Confirmed — T-EC1's row is exactly as it was; the unrecognized email touched nothing.</div>
 </div>
 </div>
 
