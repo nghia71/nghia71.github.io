@@ -371,12 +371,16 @@ Each case below says if it needs anything beyond this standard reset.
 **Objective:** this genuinely happened once, for real, the first time this suite was ever run — kept permanently as its own case precisely so it's never a surprise again. It's a real, still-open gap: the system doesn't yet tell a student when this specific thing goes wrong.
 </div>
 
-**Setup:** get a team into a state where its next-chapter number is ahead of what's been prepared on the Papers list (paper prep always starts at chapter 1) — for example, run TC-1 to a Pass so the team advances to chapter 2, then reset only the test history without also re-seeding papers.
+**Setup:** get a team into a state where its next-chapter number is ahead of what's been prepared on the Papers list (paper prep always starts at chapter 1) — for example, hand-edit that team's <code>NextChapter</code> cell on the Regional Pacing tab up by one and set <code>NextExamDate</code> to today, then let <code>nightlyLockIn()</code> create the session; running TC-1 to a Pass so the team advances normally works too, it just takes longer.
 
 <div class="tc-step">
 <div class="tc-step-text">
 <strong>1. [Student 1]</strong> Open the form, choose "I'm ready to open my test paper," submit.<br>
 <em>Expect:</em> the form's ordinary confirmation — indistinguishable from a real success. This is the entire problem: the system doesn't yet surface a student-facing error for this specific case.
+</div>
+<div class="tc-step-shot">
+<img src="./img/current-standings/tc7-step1-form-confirmation.png" alt="The test-paper form's confirmation screen, ordinary and unremarkable">
+<div class="tc-step-caption">The confirmation looks exactly like a normal success — nothing here hints at the missing-paper problem.</div>
 </div>
 </div>
 
@@ -384,6 +388,10 @@ Each case below says if it needs anything beyond this standard reset.
 <div class="tc-step-text">
 <strong>2. [Coordinator]</strong> Check the <code>Exams</code> row.<br>
 <em>Expect:</em> the start time and deadline are still blank. Nothing ran on the backend, and nothing on the student's screen showed that anything was wrong.
+</div>
+<div class="tc-step-shot">
+<img src="./img/current-standings/tc7-step2-exams-no-start.png" alt="The Exams sheet row for the team, with StartedUTC and Deadline both still blank">
+<div class="tc-step-caption">T-EC1's row after the "open" attempt — StartedUTC and Deadline are still empty.</div>
 </div>
 </div>
 
@@ -394,8 +402,8 @@ Each case below says if it needs anything beyond this standard reset.
 <em>Expect:</em> a red row naming the exact team and the exact missing chapter.
 </div>
 <div class="tc-step-shot">
-<img src="./img/current-standings/master-data-check.png" alt="The Data Check tab, with one row flagged for attention and the rest green">
-<div class="tc-step-caption">What step 3 looks like — a real example, the exact case this test documents.</div>
+<img src="./img/current-standings/tc7-step3-data-check-flag.png" alt="The Data Check tab, with one row flagged: T-EC1 due for Level 3, Chapter 2, Attempt 1 next, but no matching Papers row exists yet">
+<div class="tc-step-caption">The real Data Check output from this run — it names T-EC1 and the exact missing chapter, and warns their next Start click would fail with &quot;no-paper.&quot;</div>
 </div>
 </div>
 
