@@ -4,7 +4,7 @@ title: Current Standings
 
 # Current Standings
 
-This page is the club's live index: where the roster and every team's exam status can be seen by anyone, where the coordinator and organizer spreadsheets live for the people who run the club, and — while the new testing pipeline is being verified — a coordinator's-eye-view testing guide Mr. Nghia uses to exercise the whole system himself before real teams rely on it.
+This page is the club's live index: where the roster and every team's exam status can be seen by anyone, where the coordinator and organizer spreadsheets live for the people who run the club, and — at the bottom — the example test suite Nghia runs against practice data to prove the whole automated pipeline works, end to end, before any real team relies on it.
 
 ## Where the club's data lives
 
@@ -64,164 +64,542 @@ The **MCC Public Roster** is the one spreadsheet anyone — student, parent, or 
 <figcaption>One region's tab on the Regional Pacing Spreadsheet — the <code>Standings</code> tab sits alongside it, recomputed from graded results.</figcaption>
 </figure>
 
-## Testing the pipeline — a coordinator's-eye-view test-case guide
+## Testing the pipeline — the example test suite (14 test cases, practice data)
 
 <div class="note" markdown="1">
-**This section is a personal working guide, not general reading.** Mr. Nghia uses this to exercise the automated testing pipeline — paper release, submission, and grading — end to end, playing every role himself, before any real team relies on it. Written from the coordinator's actual vantage point: coordinator steps use only the **MCC Tools** menu, never raw Apps Script, because that's genuinely all the access a real coordinator has. Each step names who's acting, so a role change is never buried mid-sentence.
+**What this section is.** This is the actual test suite that proves the whole automated pipeline — releasing a test paper, a family submitting it, a grader marking it, the standings updating — works correctly before any real team depends on it. It's organized as 14 numbered **test cases, labeled TC-1 through TC-14** ("TC" simply stands for *test case*). Each one checks a specific, real situation: the ordinary path where everything goes right (TC-1), a family missing a deadline (TC-4/TC-5), a team failing three times in a row (TC-3), someone signed into the wrong email (TC-14), and so on. Nghia runs all 14 himself, playing every role — coordinator, student, grader — using the club's standing **practice team** and two dedicated test accounts, never real student data.
 </div>
 
-The guide uses the club's standing fixture teams — `T-EC1` and `T-WC1`, both covered by coordinator `O02` (`nghia71@gmail.com`) — and the two dedicated test accounts already set up for the student role. No real student data is touched.
+**Why coordinators and organizers should read this, not just Nghia.** Before a real test day, you'll likely want to run a quick check of your own — smaller than this, maybe just "Check my data" and a glance at the roster. Your own check is really a *subset* of this full suite. Reading through all 14 cases first shows you exactly what a complete check looks like and why each piece matters, so you can see how your own shorter routine relates to it — and borrow any pieces of it you want. The **Objective** at the top of each case explains what real-world situation it's standing in for, and every **Expect** line tells you exactly what you should see on screen if everything is working.
+
+<details class="admin-details">
+<summary>For Nghia (system admin) only — the manual recovery sequence, if the reset button itself seems broken</summary>
+
+<p>Coordinators reset the practice team with one click — see "Resetting between cases" just below. This manual sequence is the fallback only if that button itself stops working, or if every region needs resetting at once, not just the practice team's own regions. From the Master Registration Spreadsheet's Apps Script editor, run in order: <code>resetRegionalPacing()</code>, <code>seedRegionalPacing()</code>, <code>seedTestPapers()</code>, <code>resetExamsForTest_()</code> (via the temporary <code>zClaudeResetExams()</code> wrapper, since Apps Script hides functions ending in <code>_</code> from the run menu), then <code>nightlyLockIn()</code>. Don't skip <code>resetRegionalPacing()</code> — skipping it is exactly what caused the "StartedUTC/Deadline never fill in" bug TC-7 below documents.</p>
+
+</details>
+
+The suite uses the club's standing practice team — `T-EC1` and `T-WC1`, both covered by coordinator `O02` (`nghia71@gmail.com`) — and two dedicated test accounts already set up for the student role. No real student data is touched by any of this.
 
 ### Resetting between cases
 
-**As coordinator:** click **MCC Tools → Reset my test team(s)**. One click resets `T-EC1`/`T-WC1` to chapter 1 with a fresh test date today, clears their test history, and locks a new session in immediately — no Apps Script needed.
+**As coordinator, this is the everyday way:** open the <a href="https://docs.google.com/spreadsheets/d/13byGPiBQW00egpC2GIZenAsKhMCS7qbCykZSUtbE7jk/edit?usp=sharing">Master Registration Spreadsheet</a> and click **MCC Tools → Reset my test team(s)**. One click resets `T-EC1`/`T-WC1` to chapter 1 with a fresh test date today, clears their test history, and immediately locks a new session in — no Apps Script needed, and this is genuinely the same button a real coordinator uses to retest anything, any time.
 
-**As admin, only if that button itself seems broken:** the old manual sequence still works — from the Master Registration Spreadsheet's Apps Script editor, run in order: `resetRegionalPacing()`, `seedRegionalPacing()`, `seedTestPapers()`, `resetExamsForTest_()` (via the temporary `zClaudeResetExams()` wrapper, since Apps Script hides functions ending in `_` from the run menu), then `nightlyLockIn()`.
+Each case below says if it needs anything beyond this standard reset.
 
-### TC-1 — Positive: full lifecycle, Pass
+### TC-1 — Positive: the full lifecycle, Pass on the first attempt
 
-**What this proves:** the ordinary case everything else is a variation on.
+<div class="note" markdown="1">
+**Objective:** this is the ordinary path — a paper is released, a family opens it, submits it, a grader marks it, and the standings update. Every other case is a variation or an exception on this one. If this doesn't work end to end, nothing else in the suite matters yet, because every other case assumes this baseline already works.
+</div>
 
-1. **[Coordinator]** `Teams` tab, confirm `T-EC1` is `Active = TRUE`, `CoordinatorID = O02`.
-2. **[Coordinator]** Click **MCC Tools → Check my data**. *Expect:* `Data Check` tab, all green.
-3. **[Coordinator]** `Exams` tab, find the new `T-EC1` row from the reset. *Expect:* `SessionID` set, today's date, "Not started..."
-4. **[Student 1]** Signed into the first test account, open the Test Paper Open/Submit Form, choose **"I'm ready to open my test paper."** *Expect:* the form's own confirmation.
-5. **[Student 1]** Check the `Exams` row. *Expect:* `StartedUTC`/`Deadline` filled in — the confirmation screen itself doesn't actually tell you whether this worked (see TC-7 below), the sheet is the real source of truth.
-6. **[Student 1]** Check that account's Drive. *Expect:* viewer access to the test paper PDF.
-7. **[Student 2]** Switch to the second test account, same form, choose **"Submit my solution,"** upload any small PDF. *Expect:* the form's confirmation.
-8. **[Student 2]** Check the `Exams` row. *Expect:* `SubmissionFileLink`/`SubmittedUTC` filled in, `Status` reads submitted on time.
-9. **[Grader]** Run `setupWeeklyGrading_()` (the one grader step that still needs Apps Script — there's no self-service grader UI yet). *Expect:* this week's grading sheet created/found, shared with the `Graders` list.
-10. **[Grader]** Click the `SubmissionFileLink` on the `Exams` row. *Expect:* the submitted PDF opens.
-11. **[Grader]** On the grading sheet's `Grading` tab, add a row by hand: `SessionID`, `TeamID T-EC1`, `Score` ≥ 51 (a pass), `Comments`, your name as `GradedBy`, check `Done`.
-12. **[Grader]** Run `pullWeeklyGrading()`. *Expect:* logs the row pulled.
-13. **[Grader]** Check the `Exams` row. *Expect:* `Score`/`Result`(Pass)/`GradedUTC`/`GradedBy`/`GradingStatus` filled in, `Status` reads "Graded."
-14. **[Coordinator]** Hover the `Score` cell. *Expect:* the grader's comment shows as a note, not a new shared file.
-15. **[Coordinator]** Check the Regional Pacing row and `Standings` tab. *Expect:* `NextChapter` advanced, `Standings` reflects the result.
+**Setup:** standard reset (see above).
 
-<figure class="screenshot">
+<div class="tc-step">
+<div class="tc-step-text">
+<strong>1. [Coordinator]</strong> Open the <a href="https://docs.google.com/spreadsheets/d/13byGPiBQW00egpC2GIZenAsKhMCS7qbCykZSUtbE7jk/edit?usp=sharing">Master Registration Spreadsheet</a>'s <code>Teams</code> tab, confirm <code>T-EC1</code> shows <code>Active = TRUE</code> and <code>CoordinatorID = O02</code>.<br>
+<em>Why it matters:</em> this is the one fact everything downstream depends on — an inactive or misassigned team simply never gets scheduled.<br>
+<em>Expect:</em> both <code>TRUE</code> and <code>O02</code>.
+</div>
+</div>
+
+<div class="tc-step">
+<div class="tc-step-text">
+<strong>2. [Coordinator]</strong> Still on the Master Registration Spreadsheet, click <strong>MCC Tools → Check my data</strong>.<br>
+<em>Why it matters:</em> this is what a real coordinator does before trusting anything else — it catches a bad reference or missing coverage before it turns into a confusing problem downstream.<br>
+<em>Expect:</em> a <code>Data Check</code> tab appears, every row green.
+</div>
+<div class="tc-step-shot">
 <img src="./img/current-standings/master-tools-menu.png" alt="The confirmation dialog that appears after choosing MCC Tools → Check my data">
-<figcaption>Step 2 — the confirmation dialog after <strong>MCC Tools → Check my data</strong>.</figcaption>
-</figure>
+<div class="tc-step-caption">The prompt that appears the moment you click — the green Data Check tab opens once you click OK.</div>
+</div>
+</div>
 
-<figure class="screenshot">
+<div class="tc-step">
+<div class="tc-step-text">
+<strong>3. [Coordinator]</strong> Open the <a href="https://docs.google.com/spreadsheets/d/1m_CzWRfQxUt7puw1mVBqAZCpm1zvYDrxievSJXKGGFI/edit?usp=sharing">Public Roster</a>'s <code>Exams</code> tab, find the <code>T-EC1</code> row the reset just created.<br>
+<em>Why it matters:</em> confirms the reset step actually created a fresh session, not just cleared the old one.<br>
+<em>Expect:</em> a <code>SessionID</code> is set, the exam date reads today, and <code>Status</code> reads "Not started" or similar.
+</div>
+</div>
+
+<div class="tc-step">
+<div class="tc-step-text">
+<strong>4. [Student 1]</strong> Signed into the first test account, open the Test Paper Open/Submit Form, choose <strong>"I'm ready to open my test paper,"</strong> and submit.<br>
+<em>Why it matters:</em> this is the actual moment a family starts their test. The form matches whichever email is signed in against the student's registered email, so it only works signed in as the real account.<br>
+<em>Expect:</em> the form's own plain confirmation message.
+</div>
+<div class="tc-step-shot">
 <img src="./img/current-standings/form-landing.png" alt="The Test Paper Open/Submit Form landing page, signed into a test account, before either option is chosen">
-<figcaption>Step 4 — the form's landing choice.</figcaption>
-</figure>
+<div class="tc-step-caption">What step 4 looks like.</div>
+</div>
+</div>
 
-<figure class="screenshot">
+<div class="tc-step">
+<div class="tc-step-text">
+<strong>5. [Student 1]</strong> Check the <code>Exams</code> row again.<br>
+<em>Why it matters:</em> the form's own confirmation doesn't actually tell you whether starting the test succeeded (see TC-7 below, where it silently fails) — the spreadsheet is the real source of truth, always.<br>
+<em>Expect:</em> a start time and deadline are now filled in, <code>Status</code> reads "In progress."
+</div>
+</div>
+
+<div class="tc-step">
+<div class="tc-step-text">
+<strong>6. [Student 1]</strong> Check that account's Google Drive.<br>
+<em>Why it matters:</em> opening the test paper is the whole point of starting — access should appear automatically, without a human needing to share anything by hand.<br>
+<em>Expect:</em> viewer access to the test paper PDF (this access is time-boxed — it's removed again automatically once the deadline plus a grace period passes).
+</div>
+</div>
+
+<div class="tc-step">
+<div class="tc-step-text">
+<strong>7. [Student 2]</strong> Switch to the second test account, open the same form, choose <strong>"Submit my solution,"</strong> upload any small PDF, submit.<br>
+<em>Why it matters:</em> either team member can submit for the team — this confirms that isn't restricted to whoever started it.<br>
+<em>Expect:</em> the form's plain confirmation, same as any submission.
+</div>
+<div class="tc-step-shot">
 <img src="./img/current-standings/form-upload.png" alt="The Test Paper form's submit-my-solution view with the PDF upload field">
-<figcaption>Step 7 — submitting the solution PDF.</figcaption>
-</figure>
+<div class="tc-step-caption">What step 7 looks like.</div>
+</div>
+</div>
 
-<figure class="screenshot">
+<div class="tc-step">
+<div class="tc-step-text">
+<strong>8. [Student 2]</strong> Check the <code>Exams</code> row once more.<br>
+<em>Expect:</em> the submitted file link and submission time are filled in, <code>Status</code> reads "Submitted on time."
+</div>
+</div>
+
+<div class="tc-step">
+<div class="tc-step-text">
+<strong>9. [Grader]</strong> In Apps Script, run <code>setupWeeklyGrading_()</code> (no argument needed — it defaults to the current week). Its name ends in <code>_</code>, so — like <code>resetExamsForTest_()</code> in the admin box above — Apps Script hides it from the Run dropdown; run it through a small named wrapper, the same trick used there.<br>
+<em>Why it matters:</em> this is the one grading step that still needs Apps Script — there's no self-service grader menu yet, unlike the coordinator's own tools.<br>
+<em>Expect:</em> this week's grading spreadsheet is created (or found), shared automatically with everyone on the graders list.
+</div>
+</div>
+
+<div class="tc-step">
+<div class="tc-step-text">
+<strong>10. [Grader]</strong> On the <code>Exams</code> row, click the submitted-file link.<br>
+<em>Why it matters:</em> confirms a grader — not just a coordinator — actually has access to the real submitted file.<br>
+<em>Expect:</em> the submitted PDF opens.
+</div>
+</div>
+
+<div class="tc-step">
+<div class="tc-step-text">
+<strong>11. [Grader]</strong> On the weekly grading spreadsheet's <code>Grading</code> tab, add a row by hand: this session's ID, team <code>T-EC1</code>, a score of 51 or higher (a Pass), any comments, your name as grader, and check it done.<br>
+<em>Expect:</em> the row saves normally.
+</div>
+<div class="tc-step-shot">
 <img src="./img/current-standings/grading-sheet.png" alt="This week's grading spreadsheet with a completed row for T-EC1">
-<figcaption>Step 11 — a completed row on the weekly grading spreadsheet.</figcaption>
-</figure>
+<div class="tc-step-caption">What step 11 looks like.</div>
+</div>
+</div>
 
-### TC-2 — Edge: Fail with retakes remaining
+<div class="tc-step">
+<div class="tc-step-text">
+<strong>12. [Grader]</strong> In Apps Script, run <code>pullWeeklyGrading()</code>.<br>
+<em>Expect:</em> the log confirms the row was pulled and written back to the <code>Exams</code> tab.
+</div>
+</div>
 
-**What this proves:** a Fail doesn't just stop — it automatically schedules a retake at the same chapter.
+<div class="tc-step">
+<div class="tc-step-text">
+<strong>13. [Grader]</strong> Check the <code>Exams</code> row.<br>
+<em>Expect:</em> score, result (Pass), grading time, and grader name are all filled in; <code>Status</code> reads "Graded."
+</div>
+</div>
 
-1. Repeat TC-1 with `Score` under 51 at step 11.
-2. **[Coordinator]** Check `T-EC1`'s `Exams` history. *Expect:* the original row reads `Result: Fail`; a second row is created automatically, `Attempt 2`, same chapter.
-3. **[Coordinator]** Check the Regional Pacing row. *Expect:* `NextChapter` unchanged — only a Pass advances it.
+<div class="tc-step">
+<div class="tc-step-text">
+<strong>14. [Coordinator]</strong> Hover your mouse over the score cell.<br>
+<em>Why it matters:</em> a grader's comments are deliberately a cell note, not a new shared file — a privacy boundary worth confirming for real.<br>
+<em>Expect:</em> the grader's comment text appears as a note, without opening any new file.
+</div>
+</div>
 
-### TC-3 — Edge: retakes exhausted (Fail at Attempt 3)
+<div class="tc-step">
+<div class="tc-step-text">
+<strong>15. [Coordinator]</strong> Check <code>T-EC1</code>'s row on the <a href="https://docs.google.com/spreadsheets/d/1BsRd05S7tK1lnr83vxidwDA87qAd1NWEMTFKvDfRkDg/edit?usp=sharing">Regional Pacing Spreadsheet</a>'s <code>EC</code> tab, then its <code>Standings</code> tab.<br>
+<em>Expect:</em> the team's next chapter has advanced by one, the last test date updated, and <code>Standings</code> reflects the new result.
+</div>
+</div>
 
-**What this proves:** the system stops retrying at a defined limit and hands the decision to a person, rather than looping forever.
+---
 
-1. Reach `Attempt 3` (repeat TC-2's Fail twice more, or hand-edit the retake row's `Attempt` to `3`).
-2. **[Grader]** Grade `Attempt 3` as a Fail.
-3. **[Coordinator]** Check the `Exams` history. *Expect:* **no** `Attempt 4` row created.
-4. **[Coordinator]** This team now needs your own decision — a makeup, a conversation with the family, or moving on — not anything the system will do automatically.
+### TC-2 — Edge case: Fail, with retakes remaining
 
-### TC-4 — Edge: submission arrives late, inside the grace period
+<div class="note" markdown="1">
+**Objective:** simulates a team that doesn't pass on the first try. A Fail shouldn't just sit there — the system should notice on its own and schedule a retake at the same chapter, without a coordinator having to catch it and act manually.
+</div>
 
-**What this proves:** a slightly-late submission (slow internet, a scramble) is accepted and flagged, not thrown out.
+**Setup:** standard reset, then repeat TC-1's steps with a score under 51 at step 11 instead of a Pass.
 
-1. **[Student 2]** Submit after `Deadline` but within 30 minutes of it. *Expect:* the form's ordinary confirmation — same as on time, no visible difference.
-2. **[Coordinator]** Check the `Exams` row. *Expect:* **accepted**, `Status` reads "Submitted — N min late."
+<div class="tc-step">
+<div class="tc-step-text">
+<strong>1. [Coordinator]</strong> After the Fail is pulled in, check <code>T-EC1</code>'s <code>Exams</code> history on the Public Roster — there are now two rows for this team.<br>
+<em>Why it matters:</em> confirms a retake was actually created automatically, not just that the Fail itself was recorded.<br>
+<em>Expect:</em> the original row shows Result: Fail; a second row exists on its own, marked Attempt 2, same chapter, with a fresh date.
+</div>
+</div>
 
-### TC-5 — Exception: submission arrives past the grace period
+<div class="tc-step">
+<div class="tc-step-text">
+<strong>2. [Coordinator]</strong> Check the Regional Pacing row for <code>T-EC1</code>.<br>
+<em>Expect:</em> the next-chapter number is unchanged — a retake doesn't advance the team forward, only a Pass does.
+</div>
+</div>
 
-**What this proves:** there's a real cutoff, and a genuinely-too-late submission is rejected outright.
+---
 
-1. **[Student 2]** Submit more than 30 minutes past `Deadline`. *Expect:* the form's ordinary confirmation — **it will not tell the student it was rejected.**
-2. **[Coordinator]** Check the `Exams` row. *Expect:* nothing recorded — no `SubmissionFileLink`. A family in this situation needs to be told directly; the system won't tell them.
+### TC-3 — Edge case: retakes exhausted (Fail on the third attempt)
+
+<div class="note" markdown="1">
+**Objective:** simulates a team that keeps failing. The system shouldn't retry forever — it needs to stop at a defined limit (three attempts) and hand the decision back to a person, rather than looping silently or giving up silently.
+</div>
+
+**Setup:** standard reset, then repeat TC-2's Fail sequence twice more so <code>T-EC1</code> reaches Attempt 3 (or, faster: after the first Fail, hand-edit the new retake row's Attempt number to 3 directly on the spreadsheet before grading it).
+
+<div class="tc-step">
+<div class="tc-step-text">
+<strong>1. [Grader]</strong> Grade the Attempt 3 session as a Fail (score under 51), the same grading steps as TC-1.
+</div>
+</div>
+
+<div class="tc-step">
+<div class="tc-step-text">
+<strong>2. [Coordinator]</strong> Check <code>T-EC1</code>'s <code>Exams</code> history.<br>
+<em>Why it matters:</em> this is the case where "the system will just handle it" stops being true — worth knowing exactly where that line is.<br>
+<em>Expect:</em> Result: Fail on the Attempt 3 row; no Attempt 4 row is created automatically.
+</div>
+</div>
+
+<div class="tc-step">
+<div class="tc-step-text">
+<strong>3. [Coordinator]</strong> Check the Regional Pacing row.<br>
+<em>Expect:</em> the next-chapter number is still unchanged. This team genuinely needs a coordinator's own decision now — an in-person conversation with the family, a manually scheduled makeup, or moving on — the system won't do anything further on its own.
+</div>
+</div>
+
+---
+
+### TC-4 — Edge case: a submission arrives late, but still inside the grace period
+
+<div class="note" markdown="1">
+**Objective:** simulates a family with slow internet or a last-minute scramble. A slightly-late submission shouldn't be rejected outright — only flagged as late, so it still counts.
+</div>
+
+**Setup:** standard reset, start the test (TC-1 steps 1-6), then submit a little after the deadline but still within 30 minutes of it.
+
+<div class="tc-step">
+<div class="tc-step-text">
+<strong>1. [Student 2]</strong> Submit as in TC-1, but a few minutes after the deadline.<br>
+<em>Expect:</em> the form's ordinary confirmation — identical to an on-time submission. (Worth noticing: the system itself distinguishes late from on-time; the confirmation screen the student sees does not.)
+</div>
+</div>
+
+<div class="tc-step">
+<div class="tc-step-text">
+<strong>2. [Coordinator]</strong> Check the <code>Exams</code> row.<br>
+<em>Expect:</em> the submission is accepted — file link and submission time filled in, <code>Status</code> reads "Submitted — N minutes late," not rejected.
+</div>
+</div>
+
+---
+
+### TC-5 — Exception: a submission arrives past the grace period
+
+<div class="note" markdown="1">
+**Objective:** confirms there's a real cutoff. Grace is generous but not infinite — a genuinely too-late submission needs to be rejected outright, not accepted with a scary-looking "very late" status that still counts.
+</div>
+
+**Setup:** standard reset, start the test, then submit well past the deadline plus 30 minutes.
+
+<div class="tc-step">
+<div class="tc-step-text">
+<strong>1. [Student 2]</strong> Submit past the grace period.<br>
+<em>Expect:</em> the form's ordinary confirmation — the student still sees nothing indicating rejection. This is the sharpest version of a pattern worth remembering: the confirmation screen never tells a student whether something actually went wrong.
+</div>
+</div>
+
+<div class="tc-step">
+<div class="tc-step-text">
+<strong>2. [Coordinator]</strong> Check the <code>Exams</code> row.<br>
+<em>Expect:</em> no submission was recorded at all — no file link, nothing. A real family in this situation needs to be told directly (a message, a call) that their submission didn't go through — the system will not tell them on its own.
+</div>
+</div>
+
+---
 
 ### TC-6 — Positive: resubmission
 
-**What this proves:** correcting a mistake doesn't lose the first attempt.
+<div class="note" markdown="1">
+**Objective:** simulates a family correcting a mistake — the wrong file, or second thoughts. Their first attempt shouldn't be lost, and the system should always reflect whichever file they submitted most recently.
+</div>
 
-1. **[Student 2]** Submit a second, different file.
-2. **[Coordinator]** Check `SubmissionFileLink`. *Expect:* points at the new file.
-3. **[Coordinator]** Check Drive directly. *Expect:* both files still exist — nothing deleted.
+**Setup:** standard reset, run TC-1 through the first submission (its step 7).
 
-### TC-7 — Exception: no test paper ready yet (a real gap, found for real)
+<div class="tc-step">
+<div class="tc-step-text">
+<strong>1. [Student 2]</strong> Open the form again, choose "Submit my solution" again, upload a different file.<br>
+<em>Expect:</em> the form's ordinary confirmation, same as any submission.
+</div>
+</div>
 
-**What this proves:** this genuinely happened once — worth keeping as a permanent case so it's never a surprise again.
+<div class="tc-step">
+<div class="tc-step-text">
+<strong>2. [Coordinator]</strong> Check the <code>Exams</code> row's submitted-file link.<br>
+<em>Expect:</em> it now points at the new file.
+</div>
+</div>
 
-1. **[Student 1]** With a team whose `NextChapter` is ahead of what's been seeded on `Papers`, open the form and choose "I'm ready..." *Expect:* the ordinary confirmation — **indistinguishable from a real success.**
-2. **[Coordinator]** Check the `Exams` row. *Expect:* `StartedUTC`/`Deadline` **still blank**, no error anywhere visible.
-3. **[Coordinator]** The fix is prevention, not detection: run **Check my data** *before* a test window opens, every time — it's specifically built to catch a missing paper ahead of time.
+<div class="tc-step">
+<div class="tc-step-text">
+<strong>3. [Coordinator]</strong> Check Google Drive directly, not through the spreadsheet link.<br>
+<em>Why it matters:</em> confirms the first file wasn't deleted, only superseded — families sometimes want their original attempt back.<br>
+<em>Expect:</em> both the first and second uploaded files still exist.
+</div>
+</div>
 
-<figure class="screenshot">
+---
+
+### TC-7 — Exception: starting a test when no matching paper is ready yet (a real gap, found for real)
+
+<div class="note" markdown="1">
+**Objective:** this genuinely happened once, for real, the first time this suite was ever run — kept permanently as its own case precisely so it's never a surprise again. It's a real, still-open gap: the system doesn't yet tell a student when this specific thing goes wrong.
+</div>
+
+**Setup:** get a team into a state where its next-chapter number is ahead of what's been prepared on the Papers list (paper prep always starts at chapter 1) — for example, run TC-1 to a Pass so the team advances to chapter 2, then reset only the test history without also re-seeding papers.
+
+<div class="tc-step">
+<div class="tc-step-text">
+<strong>1. [Student 1]</strong> Open the form, choose "I'm ready to open my test paper," submit.<br>
+<em>Expect:</em> the form's ordinary confirmation — indistinguishable from a real success. This is the entire problem: the system doesn't yet surface a student-facing error for this specific case.
+</div>
+</div>
+
+<div class="tc-step">
+<div class="tc-step-text">
+<strong>2. [Coordinator]</strong> Check the <code>Exams</code> row.<br>
+<em>Expect:</em> the start time and deadline are still blank — nothing happened, silently. Nothing on the student's screen shows anything is wrong.
+</div>
+</div>
+
+<div class="tc-step">
+<div class="tc-step-text">
+<strong>3. [Coordinator]</strong> What to actually do about it: run <strong>MCC Tools → Check my data</strong> <em>before</em> a test window opens, every time.<br>
+<em>Why it matters:</em> this check is specifically built to catch exactly this in advance, by comparing every active team's next-due chapter against what's actually prepared on the Papers list. Catching it here, ahead of time, is the whole point — don't rely on a family ever reporting "nothing happened when I clicked start," because nothing on their screen will tell them something's wrong.<br>
+<em>Expect:</em> a red row naming the exact team and the exact missing chapter.
+</div>
+<div class="tc-step-shot">
 <img src="./img/current-standings/master-data-check.png" alt="The Data Check tab, with one row flagged for attention and the rest green">
-<figcaption>Step 3, expected result — the <code>Data Check</code> tab. This is a real example: a team due for a chapter with no test paper banked yet, the exact case TC-7 documents.</figcaption>
-</figure>
+<div class="tc-step-caption">What step 3 looks like — a real example, the exact case this test documents.</div>
+</div>
+</div>
 
-### TC-8 — Exception: a team never submits (no-show)
+---
 
-**What this proves:** access to the test paper doesn't stay open forever.
+### TC-8 — Exception: a team never submits (a no-show)
 
-1. **[Admin]** After `Deadline` + 30 minutes with no submission, the nightly access sweep runs (or trigger it directly).
-2. **[Student 1]** Check Drive access. *Expect:* revoked.
-3. **[Coordinator]** Check `Status`. *Expect:* "Overdue — the grace period has ended, contact your coordinator" — this is the cue to actually reach out to the family.
+<div class="note" markdown="1">
+**Objective:** confirms that access to a test paper isn't left open forever. Once there's no realistic chance a legitimate submission is still coming, the system should revoke access on its own.
+</div>
 
-### TC-9 — Edge: clicking "I'm ready" twice
+**Setup:** standard reset, start the test (TC-1 steps 1-6), then let the deadline plus 30 minutes' grace pass fully without ever submitting.
 
-**What this proves:** an accidental double-click doesn't reset the clock.
+<div class="tc-step">
+<div class="tc-step-text">
+<strong>1. [Admin]</strong> The nightly access-cleanup run happens on its own on schedule (or Nghia can trigger it directly).<br>
+<em>Why it matters:</em> this is what makes "time-boxed access" actually true in practice, not just something documented.
+</div>
+</div>
 
-1. **[Student 1]** Choose "I'm ready..." a second time. *Expect:* the ordinary confirmation.
-2. **[Coordinator]** Check the `Exams` row. *Expect:* `StartedUTC`/`Deadline` unchanged from the first click.
+<div class="tc-step">
+<div class="tc-step-text">
+<strong>2. [Student 1]</strong> Check Drive access to the test paper again, still signed into the same account.<br>
+<em>Expect:</em> viewer access is now revoked — the file no longer opens for them.
+</div>
+</div>
 
-### TC-10 — Edge: an inactive team is skipped
+<div class="tc-step">
+<div class="tc-step-text">
+<strong>3. [Coordinator]</strong> Check the <code>Exams</code> row's status.<br>
+<em>Expect:</em> reads "Overdue — the grace period has ended, contact your coordinator." This is the cue for a coordinator to actually reach out to the family — nothing automatically retries a no-show the way it does a graded Fail.
+</div>
+</div>
 
-**What this proves:** deactivating a team actually stops new tests from scheduling.
+---
 
-1. Set `T-EC1`'s `Active` to `FALSE`, then lock in. *Expect:* skipped, no new session.
-2. Set `Active` back to `TRUE`, lock in again. *Expect:* schedules normally.
+### TC-9 — Edge case: clicking "I'm ready" twice
 
-### TC-11 — Edge: `NextExamDate` is in the past
+<div class="note" markdown="1">
+**Objective:** simulates an accidental double-click, or a student genuinely unsure whether their first click registered. Either way, it shouldn't reset the clock or cause any confusing duplicate state.
+</div>
 
-**What this proves:** a stale date is flagged, not silently ignored or auto-corrected.
+**Setup:** standard reset, start the test once (TC-1 steps 1-4).
 
-1. Hand-set `NextExamDate` to a past date (don't use the reset button, which sets it to today), then lock in. *Expect:* flagged as skipped, not scheduled.
-2. Set `NextExamDate` to today, lock in again. *Expect:* schedules normally.
+<div class="tc-step">
+<div class="tc-step-text">
+<strong>1. [Student 1]</strong> Open the form again, choose "I'm ready to open my test paper" a second time, submit.<br>
+<em>Expect:</em> the form's ordinary confirmation, identical to the first time — no visible difference.
+</div>
+</div>
+
+<div class="tc-step">
+<div class="tc-step-text">
+<strong>2. [Coordinator]</strong> Check the <code>Exams</code> row.<br>
+<em>Expect:</em> the start time and deadline are completely unchanged from the first click — the clock did not restart.
+</div>
+</div>
+
+---
+
+### TC-10 — Edge case: an inactive team is skipped, not scheduled
+
+<div class="note" markdown="1">
+**Objective:** confirms that deactivating a team — a family taking a break, a team disbanding — actually stops new tests from being scheduled for them, without needing to also delete their data.
+</div>
+
+**Setup:** standard reset, then on the <code>Teams</code> tab set <code>T-EC1</code>'s Active column to <code>FALSE</code> before the next scheduling run.
+
+<div class="tc-step">
+<div class="tc-step-text">
+<strong>1. [Coordinator]</strong> With <code>T-EC1</code> inactive, trigger scheduling again — clicking <strong>Reset my test team(s)</strong> still runs it at the end.<br>
+<em>Expect:</em> the result lists <code>T-EC1</code> as skipped (inactive) — no new test session is created for it.
+</div>
+</div>
+
+<div class="tc-step">
+<div class="tc-step-text">
+<strong>2. [Coordinator]</strong> Set Active back to <code>TRUE</code> and trigger scheduling again.<br>
+<em>Expect:</em> now it schedules normally, same as TC-1.
+</div>
+</div>
+
+---
+
+### TC-11 — Edge case: the next test date is set in the past
+
+<div class="note" markdown="1">
+**Objective:** confirms that a stale or mistyped date doesn't get silently auto-corrected or silently skipped forever — it should be flagged as something a coordinator actually needs to look at.
+</div>
+
+**Setup:** standard reset, then on the Regional Pacing <code>EC</code> tab, hand-set <code>T-EC1</code>'s next test date to well before today. (Don't use the reset button for this one — it sets the date to today itself; hand-edit the date instead.)
+
+<div class="tc-step">
+<div class="tc-step-text">
+<strong>1. [Admin]</strong> Trigger scheduling.<br>
+<em>Expect:</em> the result lists <code>T-EC1</code> as skipped (date in the past) — not scheduled, and not silently ignored forever either; it stays flagged on every run until fixed.
+</div>
+</div>
+
+<div class="tc-step">
+<div class="tc-step-text">
+<strong>2. [Coordinator]</strong> Set the next test date to today, trigger scheduling again.<br>
+<em>Expect:</em> now it schedules normally.
+</div>
+</div>
+
+---
 
 ### TC-12 — Coordinator tool: "Check my data" catches a real problem
 
-**What this proves:** it isn't just a formality that always says green.
+<div class="note" markdown="1">
+**Objective:** confirms the self-check isn't just a formality that always reports green — it needs to actually catch a real broken state, which is the entire reason it exists.
+</div>
 
-1. Delete `T-EC1`'s Regional Pacing row entirely, then **Check my data**. *Expect:* a red row naming `T-EC1` and exactly why it matters — not a generic warning.
-2. Click **Reset my test team(s)**. *Expect:* recovers cleanly, or that failure is itself a real finding worth flagging.
+**Setup:** standard reset, then deliberately break something small — for example, delete <code>T-EC1</code>'s Regional Pacing row entirely.
+
+<div class="tc-step">
+<div class="tc-step-text">
+<strong>1. [Coordinator]</strong> Click <strong>MCC Tools → Check my data</strong>.<br>
+<em>Expect:</em> a red row naming <code>T-EC1</code> and its region specifically, explaining it's active but has no Regional Pacing row and will never be scheduled — not a generic "something's wrong," but the exact team and the exact consequence.
+</div>
+</div>
+
+<div class="tc-step">
+<div class="tc-step-text">
+<strong>2. [Coordinator]</strong> Click <strong>Reset my test team(s)</strong>.<br>
+<em>Why it matters:</em> confirms the self-service reset also recovers from this, not just resets an already-clean state.<br>
+<em>Expect:</em> completes normally — or, if it doesn't, that itself is a real finding worth reporting.
+</div>
+</div>
+
+---
 
 ### TC-13 — Coordinator tool: "Reset my test team(s)" as the everyday reset
 
-**What this proves:** this really is the everyday way to retest now.
+<div class="note" markdown="1">
+**Objective:** this is genuinely the everyday way a coordinator retests something now — worth confirming end to end on its own, not just trusting it because every case above happened to use it along the way.
+</div>
 
-1. After a completed TC-1, click **MCC Tools → Reset my test team(s)**. *Expect:* the confirmation names `T-EC1, T-WC1` and explains what it's about to do.
-2. Check the result dialog. *Expect:* a fresh `SessionID` for each.
-3. Check `T-EC1`'s pacing row and `Exams` history. *Expect:* `NextChapter` back to 1, one fresh row today.
-4. Check a team in a region `O02` doesn't cover (e.g. `T-UK1`). *Expect:* completely untouched — the whole point of the feature.
+**Setup:** run TC-1 to completion first, so there's real state (a graded, advanced team) to reset away.
+
+<div class="tc-step">
+<div class="tc-step-text">
+<strong>1. [Coordinator]</strong> Click <strong>MCC Tools → Reset my test team(s)</strong>.<br>
+<em>Expect:</em> a confirmation dialog names both <code>T-EC1</code> and <code>T-WC1</code> (every region coordinator <code>O02</code> covers) and explains what it's about to do.
+</div>
+</div>
+
+<div class="tc-step">
+<div class="tc-step-text">
+<strong>2. [Coordinator]</strong> Check the result dialog after confirming.<br>
+<em>Expect:</em> a fresh session ID is named for each team — confirming the reset and the re-scheduling both actually happened in one click.
+</div>
+</div>
+
+<div class="tc-step">
+<div class="tc-step-text">
+<strong>3. [Coordinator]</strong> Check <code>T-EC1</code>'s Regional Pacing row and test history.<br>
+<em>Expect:</em> next chapter back to 1, next test date is today, old test rows gone, exactly one fresh row for today.
+</div>
+</div>
+
+<div class="tc-step">
+<div class="tc-step-text">
+<strong>4. [Coordinator]</strong> Check a team in a region <code>O02</code> doesn't cover — for example <code>T-UK1</code>.<br>
+<em>Why it matters:</em> this is the whole safety property this feature exists for — a coordinator resetting their own teams must never touch anyone else's.<br>
+<em>Expect:</em> completely untouched, identical to before the click.
+</div>
+</div>
+
+---
 
 ### TC-14 — Exception: signed in as the wrong account
 
-**What this proves:** the form doesn't misattribute a submission — it just doesn't recognize the person, and tells them nothing either way.
+<div class="note" markdown="1">
+**Objective:** simulates the single most common real mix-up: a parent's own email instead of the student's registered one, or a typo'd address. The form shouldn't misattribute a submission to the wrong team, or error in a confusing way — it should just not recognize the person, and (consistent with every other exception case above) tell them nothing either way.
+</div>
 
-1. Signed in as an account not on the team, choose "I'm ready..." *Expect:* the ordinary confirmation.
-2. **[Coordinator]** Check the `Exams` sheet. *Expect:* nothing changed anywhere. If a family ever reports "nothing happened when I clicked start," check this first — most often it's the wrong email signed in, not a real bug.
+**Setup:** standard reset.
+
+<div class="tc-step">
+<div class="tc-step-text">
+<strong>1. [Anyone]</strong> Signed in as an account not on <code>T-EC1</code> — <code>nghia71@gmail.com</code> works fine for this — open the Test Paper Open/Submit Form, choose "I'm ready to open my test paper," submit.<br>
+<em>Expect:</em> the form's ordinary confirmation — again, no visible error of any kind.
+</div>
+</div>
+
+<div class="tc-step">
+<div class="tc-step-text">
+<strong>2. [Coordinator]</strong> Check the <code>Exams</code> sheet.<br>
+<em>Expect:</em> nothing changed anywhere — no row was touched. If a real family ever reports "nothing happened when I clicked start," this is the first thing to check, ahead of TC-7's missing-paper case: most often it's simply the wrong email signed in.
+</div>
+</div>
+
+---
 
 ### Cleanup afterward
 
-**[Coordinator]** Click **MCC Tools → Reset my test team(s)** again to leave a clean baseline for next time.
+**[Coordinator]** Click **MCC Tools → Reset my test team(s)** one more time to leave a clean baseline for next time.
+
+### What this suite does and doesn't prove
+
+Every case above exercises the same underlying code the automated developer test suite already checks on every change. Running through it by hand like this isn't a hunt for new bugs in the logic — it's confirming what a real coordinator, a real family, and a real grader each actually experience, using only the access each of them would really have. TC-7 and TC-14 in particular are worth re-reading even after they pass cleanly: they're not bugs waiting to be fixed, they're **real, permanent gaps** — no student-facing error message exists yet for either situation — that every coordinator should know about, because the system itself will never mention them.
+
+<div class="note" markdown="1">
+**Coming next.** Once this fake-data suite is fully illustrated with screenshots for every step (and a short walkthrough video at the end for anyone who'd rather watch than read), the same 14 cases become the template for real user-acceptance testing — real coordinators, real families, and real graders, volunteering to run a smaller slice of this suite themselves against their own accounts. See [Organization](./organization.md) if you'd like to help.
+</div>
+

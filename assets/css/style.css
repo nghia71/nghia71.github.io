@@ -444,3 +444,59 @@ figure.screenshot figcaption {
   color: var(--ink-soft);
   font-style: italic;
 }
+
+/* ---------- Test-case step layout (Current Standings testing-pipeline section) --- */
+
+.tc-step {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  margin: .9em 0;
+  padding: 14px 16px;
+  background: var(--white);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.tc-step-text { flex: 1 1 55%; font-size: 15.5px; line-height: 1.5; }
+.tc-step-text code { font-size: .92em; }
+
+.tc-step-shot { flex: 0 0 300px; max-width: 300px; text-align: center; }
+.tc-step-shot img {
+  width: 100%;
+  display: block;
+  border-radius: 6px;
+  border: 1px solid var(--rule);
+}
+.tc-step-caption {
+  margin-top: 6px;
+  font-size: 12.5px;
+  color: var(--ink-soft);
+  font-style: italic;
+}
+
+@media (max-width: 640px) {
+  .tc-step { flex-direction: column; }
+  .tc-step-shot { max-width: 100%; flex-basis: auto; }
+}
+
+/* Collapsed-by-default, de-emphasized admin/sysadmin-only instructions --
+   present for Nghia if something's broken, out of the way for everyone
+   else reading this as a general guide. */
+.admin-details {
+  margin: 1.2em 0;
+  padding: 10px 16px;
+  background: #faf7f2;
+  border: 1px dashed var(--rule);
+  border-radius: var(--radius);
+  font-size: 12.5px;
+  color: var(--ink-soft);
+}
+.admin-details summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--ink-soft);
+}
+.admin-details p { margin: .6em 0 0; }
+.admin-details code { font-size: .95em; }
