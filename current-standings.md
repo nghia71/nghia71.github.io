@@ -543,12 +543,20 @@ Each case below says if it needs anything beyond this standard reset.
 <strong>1. [Coordinator]</strong> Click <strong>MCC Tools → Reset my test team(s)</strong>.<br>
 <em>Expect:</em> a confirmation dialog names both <code>T-EC1</code> and <code>T-WC1</code> (every region coordinator <code>O02</code> covers) and explains what it's about to do.
 </div>
+<div class="tc-step-shot">
+<img src="./img/current-standings/tc13-reset-confirm.png" alt="The Reset your test team(s) confirmation dialog, naming T-EC1 and T-WC1">
+<div class="tc-step-caption">The confirmation dialog after clicking Reset my test team(s).</div>
+</div>
 </div>
 
 <div class="tc-step">
 <div class="tc-step-text">
 <strong>2. [Coordinator]</strong> Check the result dialog after confirming.<br>
 <em>Expect:</em> a fresh session ID is named for each team — confirming the reset and the re-scheduling both actually happened in one click.
+</div>
+<div class="tc-step-shot">
+<img src="./img/current-standings/tc13-reset-done.png" alt="The Done dialog naming fresh session IDs for T-EC1 and T-WC1">
+<div class="tc-step-caption">A real result — a fresh session locked in for each team.</div>
 </div>
 </div>
 
@@ -557,6 +565,10 @@ Each case below says if it needs anything beyond this standard reset.
 <strong>3. [Coordinator]</strong> Check <code>T-EC1</code>'s Regional Pacing row and test history.<br>
 <em>Expect:</em> next chapter back to 1, next test date is today, old test rows gone, exactly one fresh row for today.
 </div>
+<div class="tc-step-shot">
+<img src="./img/current-standings/tc13-step3-pacing-and-history.png" alt="T-EC1's Regional Pacing row showing next chapter 1, and its Exams history showing exactly one fresh row">
+<div class="tc-step-caption">T-EC1 back to chapter 1 (top), with exactly one fresh Exams row (bottom).</div>
+</div>
 </div>
 
 <div class="tc-step">
@@ -564,6 +576,10 @@ Each case below says if it needs anything beyond this standard reset.
 <strong>4. [Coordinator]</strong> Check a team in a region <code>O02</code> doesn't cover — for example <code>T-UK1</code>.<br>
 <em>Why it matters:</em> this is the whole safety property this feature exists for — a coordinator resetting their own teams must never touch anyone else's.<br>
 <em>Expect:</em> completely untouched, identical to before the click.
+</div>
+<div class="tc-step-shot">
+<img src="./img/current-standings/tc13-step4-uk1-unchanged.png" alt="T-UK1's Regional Pacing row, unchanged by the reset">
+<div class="tc-step-caption">T-UK1 — a team O02 doesn't coordinate — completely untouched.</div>
 </div>
 </div>
 
