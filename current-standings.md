@@ -407,13 +407,17 @@ Each case below says if it needs anything beyond this standard reset.
 **Objective:** confirms that access to a test paper isn't left open forever. Once there's no realistic chance a legitimate submission is still coming, the system should revoke access on its own.
 </div>
 
-**Setup:** standard reset, start the test (TC-1 steps 1-6), then let the deadline plus 30 minutes' grace pass fully without ever submitting.
+**Setup:** standard reset, start the test (TC-1 steps 1-6), then hand-edit the <code>Exams</code> row's <code>Deadline</code> cell to well in the past (rather than actually waiting out the grace period).
 
 <div class="tc-step">
 <div class="tc-step-text">
-<strong>1. [Admin]</strong> The nightly access-cleanup run happens on its own on schedule (or Nghia can trigger it directly).<br>
+<strong>1. [Admin]</strong> The nightly access-cleanup run happens on its own on schedule (or Nghia can trigger <code>sweepExpiredAccess()</code> directly).<br>
 <em>Expect:</em> the team's <code>Exams</code> row is marked expired, and its shared access to the test paper is revoked.<br>
 <em>Why it matters:</em> this is what makes "time-boxed access" actually true in practice, not just something documented.
+</div>
+<div class="tc-step-shot">
+<img src="./img/current-standings/tc8-step1-sweep.png" alt="The Apps Script execution log confirming sweepExpiredAccess revoked access for T-EC1's session, naming both students removed">
+<div class="tc-step-caption">A real sweep — names the exact session and the exact accounts it removed.</div>
 </div>
 </div>
 
@@ -422,12 +426,20 @@ Each case below says if it needs anything beyond this standard reset.
 <strong>2. [Student 1]</strong> Check Drive access to the test paper again, still signed into the same account.<br>
 <em>Expect:</em> viewer access is now revoked — the file no longer opens for them.
 </div>
+<div class="tc-step-shot">
+<img src="./img/current-standings/tc8-step2-drive-404.png" alt="Google Drive's 404 error page, shown when opening the test paper file signed in as the student account whose access was just revoked">
+<div class="tc-step-caption">The file is really gone for them — Drive returns a plain 404, not even a "request access" screen.</div>
+</div>
 </div>
 
 <div class="tc-step">
 <div class="tc-step-text">
 <strong>3. [Coordinator]</strong> Check the <code>Exams</code> row's status.<br>
 <em>Expect:</em> reads "Overdue — the grace period has ended, contact your coordinator." This is the cue for a coordinator to actually reach out to the family — nothing automatically retries a no-show the way it does a graded Fail.
+</div>
+<div class="tc-step-shot">
+<img src="./img/current-standings/tc8-step3-status-overdue.png" alt="The Exams sheet showing T-EC1's Status column reading Overdue -- the grace period has ended, contact your coordinator">
+<div class="tc-step-caption">The exact wording a coordinator sees, word for word.</div>
 </div>
 </div>
 
