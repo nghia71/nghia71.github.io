@@ -503,19 +503,27 @@ Each case below says if it needs anything beyond this standard reset.
 **Objective:** confirms that a stale or mistyped date doesn't get quietly auto-corrected, or silently skipped forever — it should be flagged as something a coordinator actually needs to look at.
 </div>
 
-**Setup:** standard reset, then on the Regional Pacing <code>EC</code> tab, hand-set <code>T-EC1</code>'s next test date to well before today. (Don't use the reset button for this one — it sets the date to today itself; hand-edit the date instead.)
+**Setup:** standard reset, then clear <code>T-EC1</code>'s freshly-locked row from the <code>Exams</code> sheet (the reset itself always locks in a fresh session as its last step, and that session has to be cleared first or it masks this test). Then, on the Regional Pacing <code>EC</code> tab, hand-set <code>T-EC1</code>'s next test date to well before today. (Don't use the reset button for this one — it sets the date to today itself and immediately locks in a session again; hand-edit the date instead.)
 
 <div class="tc-step">
 <div class="tc-step-text">
 <strong>1. [Admin]</strong> Trigger scheduling.<br>
-<em>Expect:</em> the result lists <code>T-EC1</code> as skipped (date in the past) — not scheduled, and not dropped either; it stays flagged on every run until fixed.
+<em>Expect:</em> the run log names <code>T-EC1</code> as skipped because its next test date is in the past, printing that date back so a coordinator can see exactly what's stale — not scheduled, and not dropped either; it stays flagged, by name, on every run until fixed. (<code>T-WC1</code> shows up too, skipped for the unrelated reason that it already has its own unresolved session from the reset.)
+</div>
+<div class="tc-step-shot">
+<img src="./img/current-standings/tc11-step1-past-date-skip.png" alt="Apps Script execution log showing T-EC1 skipped because its NextExamDate is in the past, dated 2026-01-01">
+<div class="tc-step-caption">A real run — T-EC1 flagged by name with the stale date it's still carrying.</div>
 </div>
 </div>
 
 <div class="tc-step">
 <div class="tc-step-text">
 <strong>2. [Coordinator]</strong> Set the next test date to today, trigger scheduling again.<br>
-<em>Expect:</em> now it schedules normally.
+<em>Expect:</em> now it schedules normally — a fresh session gets created for <code>T-EC1</code>. (<code>T-WC1</code> still shows as skipped, for that same unrelated leftover session.)
+</div>
+<div class="tc-step-shot">
+<img src="./img/current-standings/tc11-step2-normal-scheduling.png" alt="Apps Script execution log showing a fresh session created for T-EC1 once its date is set back to today">
+<div class="tc-step-caption">Fixed — T-EC1 schedules normally again once its date is current.</div>
 </div>
 </div>
 
