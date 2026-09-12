@@ -20,10 +20,14 @@ This page is yours alone. It uses one dedicated practice team — `T-UAT-1` — 
 
 Your practice team, `T-UAT-1`, has two members (Henry Ho, Michael Le), Level 3, and is already assigned to you as coordinator on the Coordinators tab.
 
+<div class="note" markdown="1">
+**A note on roles, in real life and in this test.** Coordinators are the only ones who ever open or edit the Master Registration and Regional Pacing spreadsheets — club organizers get view-only access to both, and students/parents never touch either spreadsheet at all. That's why every `[Student]` step below only ever uses the Test Paper Open/Submit Form (and, to see the paper itself, your own Google Drive) — never the spreadsheets directly. If a `[Student]` step ever seemed to need spreadsheet access to work, that would be a bug worth flagging.
+</div>
+
 ## Before you start
 
 <div class="note" markdown="1">
-**One real limitation, please read first.** The "Reset my test team(s)" button in the Master Registration Spreadsheet's **MCC Tools** menu only ever touches the club's own internal practice teams, never `T-UAT-1` — that's deliberate, so nobody's self-service reset button can ever reach a real team's data by mistake. If you need `T-UAT-1` reset to a clean starting point partway through, message Nghia directly and he'll reset it for you; otherwise just work through the steps below once, in order, from a fresh team.
+**Two different reset buttons in MCC Tools — use the right one.** “Reset my test team(s)” only ever touches the club's own internal practice teams and always restarts them from Chapter 1; it can never reach `T-UAT-1`. “Reset my test suite” is the one that does: as the coordinator, signed in as `sonhho@gmail.com`, click **MCC Tools → Reset my test suite** and it finds `T-UAT-1` for you automatically (it matches you by your CoordinatorID, `O-UAT-1`), then puts it back to the start of whichever chapter its last attempt was for — whether that attempt was stuck, failed, or even a genuine Pass. It's off by default for real-launch safety, so if you click it and see “Not available right now,” it just hasn't been turned on yet for this round — message Nghia. Otherwise, feel free to use it to reset `T-UAT-1` as many times as you like while you work through the steps below.
 </div>
 
 ## Part 1 — Coordinator: scheduling and watching a test happen

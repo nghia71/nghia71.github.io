@@ -18,10 +18,14 @@ This page is yours alone. It uses two dedicated practice teams — `T-UAT-3` and
 | **[Student A]** | Nam Phong Nguyen (Level 1, team `T-UAT-3`) | `nphongleo@gmail.com` |
 | **[Student B]** | Jason To (Level 3, team `T-UAT-5`) | `jasondbto@gmail.com` |
 
+<div class="note" markdown="1">
+**A note on roles, in real life and in this test.** Coordinators are the only ones who ever open or edit the Master Registration and Regional Pacing spreadsheets -- club organizers get view-only access to both, and students/parents never touch either spreadsheet at all. That's why every `[Student A]`/`[Student B]` step below only ever uses the Test Paper Open/Submit Form (and, to see the paper itself, your own Google Drive) -- never the spreadsheets directly. If a student step ever seemed to need spreadsheet access to work, that would be a bug worth flagging.
+</div>
+
 ## Before you start
 
 <div class="note" markdown="1">
-**One real limitation, please read first.** The "Reset my test team(s)" button in the Master Registration Spreadsheet's **MCC Tools** menu only ever touches the club's own internal practice teams, never `T-UAT-3`/`T-UAT-5` — that's deliberate, so nobody's self-service reset button can ever reach a real team's data by mistake. If you need either team reset partway through, message Nghia directly and he'll reset it for you; otherwise just work through the steps below once, in order, from a fresh team.
+**Two different reset buttons in MCC Tools — use the right one.** “Reset my test team(s)” only ever touches the club's own internal practice teams and always restarts them from Chapter 1; it can never reach `T-UAT-3` or `T-UAT-5`. “Reset my test suite” is the one that does: as the coordinator, signed in as `thoamai.nguyen84@gmail.com`, click **MCC Tools → Reset my test suite**. Since you have two teams under CoordinatorID `O-UAT-3`, it will ask you which one to reset — type `T-UAT-3` or `T-UAT-5`; typing anything else is refused, not silently ignored. Either way it puts that team back to the start of whichever chapter its last attempt was for — whether that attempt was stuck, failed, or even a genuine Pass. It's off by default for real-launch safety, so if you click it and see “Not available right now,” it just hasn't been turned on yet for this round — message Nghia. Otherwise, feel free to use it to reset either team as many times as you like while you work through the steps below.
 </div>
 
 ## Part 1 — Coordinator: scheduling and watching a test happen
