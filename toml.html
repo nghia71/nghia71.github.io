@@ -1,100 +1,66 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>TOML — The Coding Programme</title>
-  <style>
-    html {
-      color: #1a1a1a;
-      background-color: #fdfdfd;
-    }
-    body {
-      margin: 0 auto;
-      max-width: 42em;
-      padding: 50px;
-      hyphens: auto;
-      overflow-wrap: break-word;
-      text-rendering: optimizeLegibility;
-      font-kerning: normal;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-      line-height: 1.5;
-    }
-    @media (max-width: 600px) {
-      body { font-size: 0.95em; padding: 20px; }
-      h1 { font-size: 1.6em; }
-    }
-    a { color: #1a1a1a; }
-    a:visited { color: #1a1a1a; }
-    img { max-width: 100%; }
-    h1, h2, h3 { margin-top: 1.6em; }
-    header { margin-bottom: 2.5em; text-align: center; }
-    table { margin: 1em 0; border-collapse: collapse; width: 100%; }
-    th, td { text-align: left; padding: 0.35em 0.6em; border-bottom: 1px solid #e6e6e6; }
-    th { border-top: 1px solid #1a1a1a; border-bottom: 1px solid #1a1a1a; }
-    .note {
-      background: #f6f6f6;
-      border-left: 3px solid #999;
-      padding: 0.8em 1.2em;
-      margin: 1.4em 0;
-    }
-    hr { border: none; border-top: 1px solid #ddd; margin: 2em 0; }
-    .example {
-      border: 1px solid #ddd;
-      border-radius: 6px;
-      padding: 0.2em 1.4em 1.2em;
-      margin: 1.8em 0;
-    }
-    .example h3 { margin-top: 0.8em; font-size: 1em; }
-    .problem { font-style: italic; }
-    .math {
-      background: #fff8ec;
-      border-left: 3px solid #f2c14e;
-      padding: 0.7em 1.1em;
-      margin: 1em 0;
-    }
-    pre {
-      background: #f6f6f6;
-      border: 1px solid #ddd;
-      border-radius: 4px;
-      padding: 1em;
-      overflow-x: auto;
-      font-size: 0.82em;
-      line-height: 1.5;
-    }
-    code { font-family: SFMono-Regular, Menlo, Consolas, monospace; }
-    .tag {
-      display: inline-block;
-      background: #eee;
-      border-radius: 3px;
-      padding: 0.1em 0.5em;
-      font-size: 0.8em;
-      font-style: normal;
-    }
-    .practice-list li { margin: 1em 0; }
-  </style>
-</head>
-<body>
+---
+title: TOML
+---
 
-<header>
-  <h1>TOML</h1>
-  <p><em>The Online Mathematics Laboratory — now the club's Coding Programme</em></p>
-</header>
+<style>
+  /* Math text should read like a textbook, not the site's body sans-serif. */
+  .problem, .math {
+    font-family: Georgia, "Times New Roman", "Noto Serif", serif;
+    font-size: 1.02em;
+    line-height: 1.6;
+  }
+  .problem { font-style: italic; }
+  .example .tag,
+  .practice-list .tag {
+    display: inline-block;
+    background: var(--gold-soft);
+    color: var(--brand-dark);
+    font-size: 12.5px;
+    font-weight: 700;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    padding: 3px 9px;
+    border-radius: 999px;
+  }
+  .practice-list { list-style: none; padding: 0; }
+  .practice-list li {
+    background: var(--white);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+    padding: 16px 20px;
+    margin: 0 0 14px;
+    box-shadow: var(--shadow);
+  }
+  .practice-list .tag { margin-right: 4px; }
+  .example { margin-bottom: 1.8em; }
+  .example h3 { font-size: 1.05rem; border-bottom: none; padding-bottom: 0; margin-bottom: .6em; }
+</style>
 
-<div class="note">
-<strong>New for 2026-2027.</strong> TOML has been rewritten around a single, focused programme: coding practice for Middle School and High School students, with a coding competition folded into the club's weekly Sunday session. The earlier, broader "explore any topic computationally" course has been retired.
-</div>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  renderMathInElement(document.body, {
+    delimiters: [
+      {left: "\\[", right: "\\]", display: true},
+      {left: "\\(", right: "\\)", display: false}
+    ]
+  });
+});
+</script>
+
+<h1>TOML</h1>
+<p><em>The Online Mathematics Laboratory — now the club's Coding Programme</em></p>
 
 <div class="note">
 <strong>Get ready for the next coding competition — date to be announced.</strong> The six worked examples below show exactly what a TOML problem looks like and how to turn its underlying math into a short, well-commented Python program. Work through them first, then try the six practice problems that follow on your own, the same way. When the competition date is announced, problems there will look just like these.
 </div>
 
 <h2>Who it's for</h2>
-
 <p>Every MCC student, Middle School (MS) and High School (HS) alike. There is no separate registration — if you're in the club, you're in the coding programme.</p>
 
 <h2>How it works</h2>
-
 <ul>
   <li><strong>Three problems a week, at your level.</strong> Problems are posted on this page and graded by difficulty, the same way the math tests are.</li>
   <li><strong>Solve and submit online.</strong> Submissions go through the same kind of online form used for math assignments — no email, no photographs.</li>
@@ -102,14 +68,13 @@
 </ul>
 
 <h2>Worked examples: how to solve a TOML problem</h2>
-
 <p>Each example below is a real problem from the earliest Purple Comet! Math Meet archive on hand (2004), in three parts: the problem itself, the piece of mathematics its solution actually depends on, and a Python program — with comments explaining every step — that computes the answer from that math. Note what the code does <em>not</em> do: it never just tries numbers until one happens to work. It derives the general relationship first (an identity, a similarity ratio, a factorization, a symmetry group), and only touches this problem's specific numbers at the very end, or over a search space that is provably complete rather than an arbitrary guess.</p>
 
 
-<div class="example">
-<h3>MS &middot; Purple Comet 2004, Problem 7 &middot; <span class="tag">Easy</span> &middot; <span class="tag">Algebra</span></h3>
+<div class="card example">
+<h3>MS &middot; Purple Comet 2004, Problem 7 &middot; <span class="tag">Easy</span> <span class="tag">Algebra</span></h3>
 <p class="problem">A rectangle has area 1100. If the length is increased by ten percent and the width is decreased by ten percent, what is the area of the new rectangle?</p>
-<div class="math">Increasing one factor by 10% multiplies it by 1.1; decreasing the other by 10% multiplies it by 0.9. So the new area is always <code>(1.1)&times;(0.9) = 1 &minus; p&sup2;</code> times the old area, for <em>any</em> starting area and <em>any</em> percent &mdash; not just for 1100 and 10%. The identity <code>(1+p)(1&minus;p) = 1&minus;p&sup2;</code> is the whole problem; 1100 only tells you where to evaluate it.</div>
+<div class="note math">Increasing one factor by 10% multiplies it by 1.1; decreasing the other by 10% multiplies it by 0.9. So the new area is always \((1+p)(1-p) = 1-p^2\) times the old area, for <em>any</em> starting area and <em>any</em> percent \(p\) &mdash; not just for 1100 and 10%. That identity is the whole problem; 1100 only tells you where to evaluate it.</div>
 <pre><code># MATH: (1+p)(1-p) = 1 - p^2 is a fixed algebraic identity, true for
 # ANY starting area A and ANY percent p. So a &quot;+10%, then -10%&quot; change
 # always shrinks the area by exactly p^2 = 1% -- regardless of the 1100
@@ -126,10 +91,10 @@ print(new_area.subs({A: 1100, p: sp.Rational(1, 10)}))   # 1089
 </div>
 
 
-<div class="example">
-<h3>MS &middot; Purple Comet 2004, Problem 3 &middot; <span class="tag">Medium</span> &middot; <span class="tag">Geometry</span></h3>
-<p class="problem">In &#9651;ABC, three lines are drawn parallel to side BC, dividing the altitude of the triangle into four equal parts. If the area of the second-largest part is 35, what is the area of the whole &#9651;ABC?</p>
-<div class="math">Each line parallel to BC cuts off a smaller triangle, from the apex, that is <em>similar</em> to &#9651;ABC. A triangle similar with linear scale factor k has area k&sup2; times the original. With the altitude split into quarters, the four nested triangles (from the apex down) scale as k = &frac14;, &frac12;, &frac34;, 1, so their areas are &frac1{16}, &frac4{16}, &frac9{16}, &frac{16}{16} of the whole. The four strips between them are the differences of consecutive nested areas: &frac1{16}, &frac3{16}, &frac5{16}, &frac7{16} &mdash; a 1:3:5:7 split that holds for every triangle cut this way, regardless of size.</div>
+<div class="card example">
+<h3>MS &middot; Purple Comet 2004, Problem 3 &middot; <span class="tag">Medium</span> <span class="tag">Geometry</span></h3>
+<p class="problem">In \(\triangle ABC\), three lines are drawn parallel to side \(BC\), dividing the altitude of the triangle into four equal parts. If the area of the second-largest part is 35, what is the area of the whole \(\triangle ABC\)?</p>
+<div class="note math">Each line parallel to \(BC\) cuts off a smaller triangle, from the apex, that is <em>similar</em> to \(\triangle ABC\). A triangle similar with linear scale factor \(k\) has area \(k^2\) times the original. With the altitude split into quarters, the four nested triangles (from the apex down) scale as \(k = \tfrac14, \tfrac12, \tfrac34, 1\), so their areas are \(\tfrac{1}{16}, \tfrac{4}{16}, \tfrac{9}{16}, \tfrac{16}{16}\) of the whole. The four strips between them are the successive differences: \(\tfrac{1}{16}, \tfrac{3}{16}, \tfrac{5}{16}, \tfrac{7}{16}\) &mdash; a 1:3:5:7 split that holds for every triangle cut this way, regardless of size.</div>
 <pre><code># MATH: the three lines parallel to BC cut off, from the apex, smaller
 # triangles similar to the whole triangle with linear scale factors
 # k = 1/4, 1/2, 3/4, 1. Similar triangles scale AREA by k^2, so those
@@ -154,10 +119,10 @@ print(sp.solve(sp.Eq(second_largest, 35), A))                     # [112]
 </div>
 
 
-<div class="example">
-<h3>MS &middot; Purple Comet 2004, Problem 19 &middot; <span class="tag">Hard</span> &middot; <span class="tag">Number Theory</span></h3>
-<p class="problem">Find n such that n &minus; 76 and n + 76 are both cubes of positive integers.</p>
-<div class="math">Writing n&minus;76 = a&sup3; and n+76 = b&sup3; gives b&sup3;&minus;a&sup3; = 152. Factor the difference of cubes: b&sup3;&minus;a&sup3; = (b&minus;a)(b&sup2;+ab+a&sup2;). So if d = b&minus;a, then d must divide 152 &mdash; and 152 has only finitely many divisors. That turns an apparently infinite search ("try every n") into a genuinely finite, provably complete one ("try every divisor of 152").</div>
+<div class="card example">
+<h3>MS &middot; Purple Comet 2004, Problem 19 &middot; <span class="tag">Hard</span> <span class="tag">Number Theory</span></h3>
+<p class="problem">Find \(n\) such that \(n - 76\) and \(n + 76\) are both cubes of positive integers.</p>
+<div class="note math">Writing \(n-76=a^3\) and \(n+76=b^3\) gives \(b^3-a^3=152\). Factor the difference of cubes: \(b^3-a^3=(b-a)(b^2+ab+a^2)\). So if \(d=b-a\), then \(d\) must divide 152 &mdash; and 152 has only finitely many divisors. That turns an apparently infinite search (&ldquo;try every \(n\)&rdquo;) into a genuinely finite, provably complete one (&ldquo;try every divisor of 152&rdquo;).</div>
 <pre><code># MATH: n-76 = a^3 and n+76 = b^3 means b^3 - a^3 = 152. Factor the
 # difference of cubes: b^3-a^3 = (b-a)(b^2+ab+a^2). Writing d = b-a and
 # e = b^2+ab+a^2, we need d*e = 152 -- so d must be one of the finitely
@@ -181,10 +146,10 @@ print(found)   # [(140, 4, 6)]
 </div>
 
 
-<div class="example">
-<h3>HS &middot; Purple Comet 2004, Problem 9 &middot; <span class="tag">Easy</span> &middot; <span class="tag">Algebra</span></h3>
-<p class="problem">Let M and m be the largest and the smallest values of x, respectively, which satisfy 4x(x&minus;5) &le; 375. Find M &minus; m.</p>
-<div class="math">Rearranged, 4x&sup2;&minus;20x&minus;375 &le; 0 is an upward-opening parabola (positive leading coefficient), so the inequality holds exactly on the closed interval between its two roots. M and m are simply those two roots, found with the quadratic formula.</div>
+<div class="card example">
+<h3>HS &middot; Purple Comet 2004, Problem 9 &middot; <span class="tag">Easy</span> <span class="tag">Algebra</span></h3>
+<p class="problem">Let \(M\) and \(m\) be the largest and the smallest values of \(x\), respectively, which satisfy \(4x(x-5) \le 375\). Find \(M-m\).</p>
+<div class="note math">Rearranged, \(4x^2-20x-375 \le 0\) is an upward-opening parabola (positive leading coefficient), so the inequality holds exactly on the closed interval between its two roots. \(M\) and \(m\) are simply those two roots, found with the quadratic formula.</div>
 <pre><code># MATH: 4x(x-5) &lt;= 375 is a quadratic inequality. Rearranged to
 # 4x^2 - 20x - 375 &lt;= 0, the left side is an upward-opening parabola
 # (leading coefficient 4 &gt; 0), so the inequality holds exactly between
@@ -202,10 +167,10 @@ print(m, M, M - m)  # -7.5 12.5 20.0
 </div>
 
 
-<div class="example">
-<h3>HS &middot; Purple Comet 2004, Problem 12 &middot; <span class="tag">Medium</span> &middot; <span class="tag">Geometry</span></h3>
+<div class="card example">
+<h3>HS &middot; Purple Comet 2004, Problem 12 &middot; <span class="tag">Medium</span> <span class="tag">Geometry</span></h3>
 <p class="problem">The diagram shows a circle with radius 24 which contains two circles with radius 12 tangent to each other and the larger circle. The smallest circle is tangent to the three other circles. What is the radius of the smallest circle?</p>
-<div class="math">This is exactly the situation <strong>Descartes&rsquo; Circle Theorem</strong> was built for: four mutually tangent circles have curvatures (k = 1/radius, negative when a circle contains the others) related by k&#8324; = k&#8321;+k&#8322;+k&#8323; &plusmn; 2&radic;(k&#8321;k&#8322;+k&#8322;k&#8323;+k&#8323;k&#8321;). Plugging in the big circle (curvature &minus;1/24) and the two radius-12 circles gives the fourth curvature directly, with no coordinate geometry required.</div>
+<div class="note math">This is exactly the situation <strong>Descartes&rsquo; Circle Theorem</strong> was built for: four mutually tangent circles have curvatures (\(k=1/\text{radius}\), negative when a circle contains the others) related by \[k_4 = k_1+k_2+k_3 \pm 2\sqrt{k_1k_2+k_2k_3+k_3k_1}.\] Plugging in the big circle (curvature \(-1/24\)) and the two radius-12 circles gives the fourth curvature directly, with no coordinate geometry required.</div>
 <pre><code># MATH: Descartes&#x27; Circle Theorem. For four mutually tangent circles
 # with curvatures k1,k2,k3,k4 (k = 1/radius; NEGATIVE for a circle that
 # the others sit inside of, since it curves the &quot;other way&quot;):
@@ -228,10 +193,10 @@ print(1 / k4)  # 8.0
 </div>
 
 
-<div class="example">
-<h3>HS &middot; Purple Comet 2004, Problem 17 &middot; <span class="tag">Hard</span> &middot; <span class="tag">Combinatorics</span></h3>
+<div class="card example">
+<h3>HS &middot; Purple Comet 2004, Problem 17 &middot; <span class="tag">Hard</span> <span class="tag">Combinatorics</span></h3>
 <p class="problem">We want to paint some identically-sized cubes so that each face of each cube is painted a solid color and each cube is painted with six different colors. If we have seven different colors to choose from, how many distinguishable cubes can we produce?</p>
-<div class="math">Two colorings that are rotations of each other are the <em>same</em> physical cube, so this is a counting-up-to-symmetry problem &mdash; exactly what <strong>Burnside&rsquo;s Lemma</strong> is for: the number of genuinely distinct colorings equals the average, over every symmetry of the cube, of how many colorings that symmetry leaves unchanged. Since every face gets a different color, only the &ldquo;do nothing&rdquo; symmetry can ever leave a coloring unchanged, which collapses the count to 6!/24 = 30 arrangements per choice of 6 colors, times &#8290;<sup>7</sup>C&#8320;<sub>6</sub> = 7 ways to choose which 6 of the 7 colors to use.</div>
+<div class="note math">Two colorings that are rotations of each other are the <em>same</em> physical cube, so this is a counting-up-to-symmetry problem &mdash; exactly what <strong>Burnside&rsquo;s Lemma</strong> is for: the number of genuinely distinct colorings equals the average, over every symmetry of the cube, of how many colorings that symmetry leaves unchanged. Since every face gets a different color, only the &ldquo;do nothing&rdquo; symmetry can ever leave a coloring unchanged, which collapses the count to \(6!/24=30\) arrangements per choice of 6 colors, times \(\binom{7}{6}=7\) ways to choose which 6 of the 7 colors to use.</div>
 <pre><code># MATH: Burnside&#x27;s Lemma (orbit-counting theorem). Two colorings of the
 # cube&#x27;s faces are &quot;the same cube&quot; if a rotation of the cube turns one
 # into the other, so we are counting ORBITS of colorings under the
@@ -256,8 +221,6 @@ def det(M):
           - M[0][1]*(M[1][0]*M[2][2]-M[1][2]*M[2][0])
           + M[0][2]*(M[1][0]*M[2][1]-M[1][1]*M[2][0]))
 
-# Build G: all signed permutation matrices with determinant +1 -- these
-# are exactly the 24 rotational symmetries of a cube.
 rotations = []
 for perm in permutations(range(3)):
     for signs in product([1, -1], repeat=3):
@@ -288,29 +251,19 @@ print(distinct_colorings, comb(7, 6) * distinct_colorings)   # 30 210
 
 
 <h2>Practice on your own</h2>
-
 <p>Six more problems from the same 2004 Purple Comet archive, unsolved. Try writing your own short Python program for each one — find the math first (an identity, a similarity, a theorem, a symmetry), then write the code the same way the examples above do.</p>
 
 <ul class="practice-list">
-<li><strong>MS &middot; Problem 2</strong> &mdash; <span class="tag">Low</span> <span class="tag">Algebra</span><br>If h(a, b, c) = abc/(a+b+c), find h(3&radic;5, 6&radic;5, 9&radic;5).</li>
-<li><strong>MS &middot; Problem 20</strong> &mdash; <span class="tag">Medium</span> <span class="tag">Geometry</span><br>A circle with area 40 is tangent to a circle with area 10. Let R be the smallest rectangle containing both circles. The area of R is n/&pi;. Find n.</li>
-<li><strong>MS &middot; Problem 21</strong> &mdash; <span class="tag">High</span> <span class="tag">Number Theory</span><br>Find the number of different quadruples (a, b, c, d) of positive integers such that ab = cd = a + b + c + d &minus; 3.</li>
-<li><strong>HS &middot; Problem 4</strong> &mdash; <span class="tag">Low</span> <span class="tag">Algebra</span><br>Find x so that 2^(3^(2&sup2;)) = 4^(4x).</li>
-<li><strong>HS &middot; Problem 11</strong> &mdash; <span class="tag">Medium</span> <span class="tag">Geometry</span><br>How far is it from the point (9, 17) to its reflection across the line 3x + 4y = 15?</li>
-<li><strong>HS &middot; Problem 19</strong> &mdash; <span class="tag">High</span> <span class="tag">Probability</span><br>There are three bags. One bag contains three green candies and one red candy. One bag contains two green candies and two red candies. One bag contains one green candy and three red candies. A child randomly selects one of the bags, randomly chooses a first candy from that bag, and eats the candy. If the first candy had been green, the child randomly chooses one of the other two bags and randomly selects a second candy from that bag. If the first candy had been red, the child randomly selects a second candy from the same bag as the first candy. If the probability that the second candy is green is given by the fraction m/n in lowest terms, find m + n.</li>
+<li><strong>MS &middot; Problem 2</strong> &mdash; <span class="tag">Low</span> <span class="tag">Algebra</span><p class="problem">If \(h(a,b,c) = \dfrac{abc}{a+b+c}\), find \(h(3\sqrt5,\ 6\sqrt5,\ 9\sqrt5)\).</p></li>
+<li><strong>MS &middot; Problem 20</strong> &mdash; <span class="tag">Medium</span> <span class="tag">Geometry</span><p class="problem">A circle with area 40 is tangent to a circle with area 10. Let \(R\) be the smallest rectangle containing both circles. The area of \(R\) is \(n/\pi\). Find \(n\).</p></li>
+<li><strong>MS &middot; Problem 21</strong> &mdash; <span class="tag">High</span> <span class="tag">Number Theory</span><p class="problem">Find the number of different quadruples \((a,b,c,d)\) of positive integers such that \(ab = cd = a+b+c+d-3\).</p></li>
+<li><strong>HS &middot; Problem 4</strong> &mdash; <span class="tag">Low</span> <span class="tag">Algebra</span><p class="problem">Find \(x\) so that \(2^{3^{2^2}} = 4^{4x}\).</p></li>
+<li><strong>HS &middot; Problem 11</strong> &mdash; <span class="tag">Medium</span> <span class="tag">Geometry</span><p class="problem">How far is it from the point \((9,17)\) to its reflection across the line \(3x+4y=15\)?</p></li>
+<li><strong>HS &middot; Problem 19</strong> &mdash; <span class="tag">High</span> <span class="tag">Probability</span><p class="problem">There are three bags. One bag contains three green candies and one red candy. One bag contains two green candies and two red candies. One bag contains one green candy and three red candies. A child randomly selects one of the bags, randomly chooses a first candy from that bag, and eats the candy. If the first candy had been green, the child randomly chooses one of the other two bags and randomly selects a second candy from that bag. If the first candy had been red, the child randomly selects a second candy from the same bag as the first candy. If the probability that the second candy is green is given by the fraction \(m/n\) in lowest terms, find \(m+n\).</p></li>
 </ul>
 
 <h2>The coding competition</h2>
-
 <p>A coding competition is one of the three activities that rotate through the club's weekly Sunday session — alongside a lecture on a math theory or topic, and a lecture on recent test solutions. See <a href="./organization">Organization</a> and <a href="./programs#the-weekly-sunday-session">Programs</a> for how the rotation works and who runs it.</p>
 
 <h2>Questions?</h2>
-
 <p>Contact your regional coordinator on the <a href="./organization">Organization</a> page.</p>
-
-<hr>
-
-<p><a href="./">← Back to the MCC home page</a></p>
-
-</body>
-</html>
