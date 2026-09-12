@@ -118,11 +118,9 @@ For the test format itself — how the six problems are built and scored — see
 
 ## Membership
 
-The annual membership is **the same across all tracks**, and it is based on **last year's academic performance**. Students who achieved **more than 75% last year are exempt from paying**, whatever track they join this year. This keeps things fair and consistent.
+Membership is **$100 per year**, the same across every track. It's a club membership fee, not tuition for a particular track — choosing a track is a separate, personal decision based on each student's goals and how much they want to take on.
 
-Choosing a track is a personal decision that reflects each student's goals and how much they want to take on. This is a **club membership fee, not tuition for a particular track** — it reflects last year's results, not this year's choice. So two students in the same group may contribute different amounts, and that is not a matter of one being treated better than another.
-
-If the contribution creates real difficulty for a family, please ask for a reduction or a waiver. And please remember that taking part in the club is entirely voluntary — if the structure does not suit your family, you are free not to continue.
+If the fee creates real difficulty for a family, please ask for a reduction or a waiver. And please remember that taking part in the club is entirely voluntary — if the structure does not suit your family, you are free not to continue.
 
 ## Submitting work
 
