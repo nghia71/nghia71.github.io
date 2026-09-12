@@ -34,6 +34,67 @@ title: TOML
   .practice-list .tag { margin-right: 4px; }
   .example { margin-bottom: 1.8em; }
   .example h3 { font-size: 1.05rem; border-bottom: none; padding-bottom: 0; margin-bottom: .6em; }
+
+  /* Inline, runnable Python (worked examples + the free-form playground). */
+  .code-runner { margin-top: 14px; }
+  .code-editor {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+    font-size: 13px;
+    line-height: 1.5;
+    padding: 12px 14px;
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+    background: #fbfaf7;
+    color: #24292e;
+    resize: vertical;
+    min-height: 120px;
+    tab-size: 4;
+  }
+  .code-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+    flex-wrap: wrap;
+  }
+  .code-controls button {
+    font-family: inherit;
+    font-size: 12.5px;
+    font-weight: 700;
+    border: 1px solid var(--rule);
+    background: var(--white);
+    color: var(--brand-dark);
+    padding: 6px 14px;
+    border-radius: 999px;
+    cursor: pointer;
+  }
+  .code-controls button:hover { background: var(--gold-soft); }
+  .code-controls button:disabled { opacity: .5; cursor: default; }
+  .code-status {
+    font-size: 12.5px;
+    color: #6a6a6a;
+    font-style: italic;
+  }
+  .code-output {
+    margin: 8px 0 0;
+    padding: 12px 14px;
+    border-radius: var(--radius);
+    background: #1e1e1e;
+    color: #d4d4d4;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+    font-size: 13px;
+    white-space: pre-wrap;
+    word-break: break-word;
+    overflow-x: auto;
+    display: none;
+  }
+  .code-output.has-content { display: block; }
+  .code-output.is-error { color: #ff8383; }
+  .playground-card { margin-top: 1.2em; }
+  .playground-card .code-editor { min-height: 160px; }
 </style>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
@@ -48,6 +109,190 @@ document.addEventListener("DOMContentLoaded", function () {
     ]
   });
 });
+</script>
+
+<!-- Inline Python: runs entirely in the student's own browser via Pyodide (Python
+     compiled to WebAssembly) -- nothing is sent to any server, nothing is graded,
+     it only runs the code and shows what it prints (or the error). Loaded lazily,
+     only once someone actually presses Run, so a visitor who never clicks Run never
+     downloads it. -->
+<script src="https://cdn.jsdelivr.net/pyodide/v314.0.6/full/pyodide.js"></script>
+<script>
+(function () {
+  var pyodideReadyPromise = null;
+  function getPyodide() {
+    if (!pyodideReadyPromise) {
+      pyodideReadyPromise = loadPyodide();
+    }
+    return pyodideReadyPromise;
+  }
+
+  function setAllRunButtonsDisabled(disabled) {
+    document.querySelectorAll(".code-controls .run-btn").forEach(function (b) {
+      b.disabled = disabled;
+    });
+  }
+
+  function copyText(text, btn) {
+    function done() {
+      var original = btn.textContent;
+      btn.textContent = "✓ Copied";
+      setTimeout(function () { btn.textContent = original; }, 1200);
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(done, done);
+    } else {
+      var ta = document.createElement("textarea");
+      ta.value = text;
+      ta.style.position = "fixed";
+      ta.style.opacity = "0";
+      document.body.appendChild(ta);
+      ta.select();
+      try { document.execCommand("copy"); } catch (e) { /* ignore */ }
+      document.body.removeChild(ta);
+      done();
+    }
+  }
+
+  async function runCode(code, outputEl, statusEl) {
+    outputEl.classList.remove("is-error", "has-content");
+    outputEl.textContent = "";
+    statusEl.textContent = "Starting Python… (first run only -- loads the Python environment, a few seconds)";
+    setAllRunButtonsDisabled(true);
+
+    var buffer = "";
+    var hadError = false;
+    try {
+      var pyodide = await getPyodide();
+      pyodide.setStdout({ batched: function (s) { buffer += s + "\n"; } });
+      pyodide.setStderr({ batched: function (s) { buffer += s + "\n"; } });
+
+      statusEl.textContent = "Checking for imports…";
+      try {
+        await pyodide.loadPackagesFromImports(code);
+      } catch (pkgErr) {
+        // A missing/unsupported package still surfaces as a normal Python
+        // ImportError from runPythonAsync below -- nothing to do here.
+      }
+
+      statusEl.textContent = "Running…";
+      try {
+        await pyodide.runPythonAsync(code);
+      } catch (runErr) {
+        hadError = true;
+        buffer += (buffer ? "\n" : "") + (runErr && runErr.message ? runErr.message : String(runErr));
+      }
+    } catch (loadErr) {
+      hadError = true;
+      buffer += (buffer ? "\n" : "") + "Could not start the Python environment in this browser: " +
+        (loadErr && loadErr.message ? loadErr.message : loadErr);
+    }
+
+    statusEl.textContent = "";
+    setAllRunButtonsDisabled(false);
+    outputEl.textContent = buffer || "(no output)";
+    outputEl.classList.add("has-content");
+    if (hadError) outputEl.classList.add("is-error");
+  }
+
+  function makeRunner(getCode, container) {
+    var controls = document.createElement("div");
+    controls.className = "code-controls";
+
+    var runBtn = document.createElement("button");
+    runBtn.type = "button";
+    runBtn.className = "run-btn";
+    runBtn.textContent = "▶ Run";
+
+    var copyBtn = document.createElement("button");
+    copyBtn.type = "button";
+    copyBtn.textContent = "📋 Copy";
+
+    var status = document.createElement("span");
+    status.className = "code-status";
+
+    controls.appendChild(runBtn);
+    controls.appendChild(copyBtn);
+    controls.appendChild(status);
+
+    var output = document.createElement("pre");
+    output.className = "code-output";
+
+    container.appendChild(controls);
+    container.appendChild(output);
+
+    runBtn.addEventListener("click", function () {
+      runCode(getCode(), output, status);
+    });
+
+    return { controls: controls, output: output, status: status, runBtn: runBtn, copyBtn: copyBtn };
+  }
+
+  function enhanceExampleCodeBlocks() {
+    document.querySelectorAll(".example pre").forEach(function (pre) {
+      var codeEl = pre.querySelector("code");
+      if (!codeEl) return;
+      var original = codeEl.textContent;
+
+      var wrapper = document.createElement("div");
+      wrapper.className = "code-runner";
+
+      var textarea = document.createElement("textarea");
+      textarea.className = "code-editor";
+      textarea.spellcheck = false;
+      textarea.value = original;
+      textarea.rows = Math.min(28, Math.max(6, original.split("\n").length));
+
+      wrapper.appendChild(textarea);
+      pre.parentNode.insertBefore(wrapper, pre.nextSibling);
+      pre.style.display = "none"; // original stays in the DOM as a no-JS fallback
+
+      var runner = makeRunner(function () { return textarea.value; }, wrapper);
+
+      var resetBtn = document.createElement("button");
+      resetBtn.type = "button";
+      resetBtn.textContent = "↺ Reset";
+      resetBtn.addEventListener("click", function () {
+        textarea.value = original;
+        runner.output.textContent = "";
+        runner.output.classList.remove("has-content", "is-error");
+      });
+      runner.controls.insertBefore(resetBtn, runner.status);
+
+      runner.copyBtn.addEventListener("click", function () {
+        copyText(textarea.value, runner.copyBtn);
+      });
+    });
+  }
+
+  function setupPlayground() {
+    var textarea = document.getElementById("playground-editor");
+    if (!textarea) return;
+    var wrapper = textarea.parentNode;
+
+    var runner = makeRunner(function () { return textarea.value; }, wrapper);
+
+    var clearBtn = document.createElement("button");
+    clearBtn.type = "button";
+    clearBtn.textContent = "✖ Clear";
+    clearBtn.addEventListener("click", function () {
+      textarea.value = "";
+      runner.output.textContent = "";
+      runner.output.classList.remove("has-content", "is-error");
+      textarea.focus();
+    });
+    runner.controls.insertBefore(clearBtn, runner.status);
+
+    runner.copyBtn.addEventListener("click", function () {
+      copyText(textarea.value, runner.copyBtn);
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    enhanceExampleCodeBlocks();
+    setupPlayground();
+  });
+})();
 </script>
 
 <h1>TOML</h1>
@@ -69,6 +314,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 <h2>Worked examples: how to solve a TOML problem</h2>
 <p>Each example below is a real problem from the earliest Purple Comet! Math Meet archive on hand (2004), in three parts: the problem itself, the piece of mathematics its solution actually depends on, and a Python program — with comments explaining every step — that computes the answer from that math. Note what the code does <em>not</em> do: it never just tries numbers until one happens to work. It derives the general relationship first (an identity, a similarity ratio, a factorization, a symmetry group), and only touches this problem's specific numbers at the very end, or over a search space that is provably complete rather than an arbitrary guess.</p>
+<p><strong>Every example below is live.</strong> Click <strong>&#9654; Run</strong> under any code block to actually execute it, right in your browser (the first click takes a few seconds to start Python — after that it's instant). Edit the code first if you want to experiment; <strong>&#8630; Reset</strong> brings back the original, and <strong>&#128203; Copy</strong> copies whatever is currently in the box. Nothing you run here is saved or graded.</p>
 
 
 <div class="card example">
@@ -251,7 +497,7 @@ print(distinct_colorings, comb(7, 6) * distinct_colorings)   # 30 210
 
 
 <h2>Practice on your own</h2>
-<p>Six more problems from the same 2004 Purple Comet archive, unsolved. Try writing your own short Python program for each one — find the math first (an identity, a similarity, a theorem, a symmetry), then write the code the same way the examples above do.</p>
+<p>Six more problems from the same 2004 Purple Comet archive, unsolved. Try writing your own short Python program for each one — find the math first (an identity, a similarity, a theorem, a symmetry), then write the code the same way the examples above do. Use the playground below to actually run what you write.</p>
 
 <ul class="practice-list">
 <li><strong>MS &middot; Problem 2</strong> &mdash; <span class="tag">Low</span> <span class="tag">Algebra</span><p class="problem">If \(h(a,b,c) = \dfrac{abc}{a+b+c}\), find \(h(3\sqrt5,\ 6\sqrt5,\ 9\sqrt5)\).</p></li>
@@ -261,6 +507,12 @@ print(distinct_colorings, comb(7, 6) * distinct_colorings)   # 30 210
 <li><strong>HS &middot; Problem 11</strong> &mdash; <span class="tag">Medium</span> <span class="tag">Geometry</span><p class="problem">How far is it from the point \((9,17)\) to its reflection across the line \(3x+4y=15\)?</p></li>
 <li><strong>HS &middot; Problem 19</strong> &mdash; <span class="tag">High</span> <span class="tag">Probability</span><p class="problem">There are three bags. One bag contains three green candies and one red candy. One bag contains two green candies and two red candies. One bag contains one green candy and three red candies. A child randomly selects one of the bags, randomly chooses a first candy from that bag, and eats the candy. If the first candy had been green, the child randomly chooses one of the other two bags and randomly selects a second candy from that bag. If the first candy had been red, the child randomly selects a second candy from the same bag as the first candy. If the probability that the second candy is green is given by the fraction \(m/n\) in lowest terms, find \(m+n\).</p></li>
 </ul>
+
+<h2 id="playground">Try your own code</h2>
+<p>A blank scratchpad — paste in your solution to one of the problems above (or anything else you're working on) and run it. This isn't graded and isn't checked for correctness; it just runs whatever Python you give it and shows you what it prints, or the error if something's wrong. It's the fastest way to find out whether your code actually does what you think it does before you write up a real submission.</p>
+<div class="card playground-card">
+<textarea id="playground-editor" class="code-editor" spellcheck="false" rows="10" placeholder="# Write or paste your Python here, then click Run.&#10;print('Hello, MCC!')"></textarea>
+</div>
 
 <h2>The coding competition</h2>
 <p>A coding competition is one of the three activities that rotate through the club's weekly Sunday session — alongside a lecture on a math theory or topic, and a lecture on recent test solutions. See <a href="./organization">Organization</a> and <a href="./programs#the-weekly-sunday-session">Programs</a> for how the rotation works and who runs it.</p>
