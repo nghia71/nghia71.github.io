@@ -351,6 +351,16 @@ tbody tr:nth-child(even) { background: #fffdf8; }
 
 .vn p:last-child { margin-bottom: 0; }
 
+/* Collapsed by default (<details>/<summary>) -- click to read */
+.vn summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--ink-soft);
+  list-style: revert;
+}
+.vn[open] summary { margin-bottom: .8em; }
+.vn summary::marker { color: var(--ink-soft); }
+
 /* Simple two-column layout for wide screens */
 .split {
   display: grid;

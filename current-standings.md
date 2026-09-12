@@ -233,9 +233,8 @@ Quick reference for terms and column names used throughout this page and the she
 
 *(Coordinators: `NextExamDate`, `ExamFrequencyWeeks`, `NextChapter`, `LastExamDate`, and `Active` are covered where they're used, under "Changing a team's pace or date" and "Pausing vs. skipping" below — they live on the separate Regional Pacing sheet, not Exams & Standing.)*
 
-<div class="vn" markdown="1">
-
-## 🇻🇳 Tiếng Việt — Bảng thuật ngữ
+<details class="vn" markdown="1">
+<summary>🇻🇳 Tiếng Việt — Bảng thuật ngữ (click to expand)</summary>
 
 Tài liệu tham khảo nhanh cho các thuật ngữ và tên cột dùng trong trang này và các bảng tính liên quan. Phần lớn người đọc sẽ không cần đến phần này — các mục bên dưới đã giải thích bằng ngôn ngữ đơn giản ngay khi thuật ngữ xuất hiện — nhưng nếu có lúc bạn thấy một trong các từ này trên bảng tính, trong đường link, hay trong tin nhắn từ quản lý vùng và muốn biết chính xác nghĩa là gì, đây là nơi tra cứu.
 
@@ -273,7 +272,7 @@ Tài liệu tham khảo nhanh cho các thuật ngữ và tên cột dùng trong 
 
 *(Dành cho quản lý vùng: `NextExamDate`, `ExamFrequencyWeeks`, `NextChapter`, `LastExamDate`, và `Active` đã được giải thích ở phần "Thay đổi nhịp độ hoặc ngày thi của một đội" và "Tạm ngưng so với bỏ qua một lần" bên dưới — các cột này nằm trên bảng Regional Pacing riêng, không phải Exams & Standing.)*
 
-</div>
+</details>
 
 ---
 
@@ -380,9 +379,8 @@ Almost always, it's one of two things:
 
 If you've checked both and it's still not working, contact your regional coordinator rather than repeatedly retrying the Form.
 
-<div class="vn" markdown="1">
-
-## 🇻🇳 Tiếng Việt — Dành cho Phụ huynh & Học sinh
+<details class="vn" markdown="1">
+<summary>🇻🇳 Tiếng Việt — Dành cho Phụ huynh & Học sinh (click to expand)</summary>
 
 ### Mẫu (Form) duy nhất cần dùng
 
@@ -457,7 +455,7 @@ Hầu như luôn là một trong hai điều này:
 
 Nếu đã kiểm tra cả hai mà vẫn không được, hãy liên hệ quản lý vùng, đừng cứ thử lại nhiều lần qua Form.
 
-</div>
+</details>
 
 ---
 
@@ -663,9 +661,8 @@ Almost always: they're signed into an unregistered Google account. Confirm which
 
 The system automatically accepts a late submission up to 30 minutes past deadline (flagged, not penalized further by the system itself — see [Tests & Yearbook](./tests.md) for how grading works). Past that window, or a submission with no recorded start, is rejected outright and the family is told, on the sheet itself, exactly what to do. If a family reaches out to you about one of these, the fix is almost always what the `Status` message on their row already says — check that first.
 
-<div class="vn" markdown="1">
-
-### 🇻🇳 Tiếng Việt — Hằng ngày, với vai trò quản lý vùng
+<details class="vn" markdown="1">
+<summary>🇻🇳 Tiếng Việt — Hằng ngày, với vai trò quản lý vùng (click to expand)</summary>
 
 Phần còn lại của mục này giả định đã quen với vai trò quản lý vùng ở trang [Organization](./organization.md) và bảng Regional Pacing ở trên, nơi thiết lập nhịp độ của từng đội.
 
@@ -729,7 +726,7 @@ Hầu như luôn là do đăng nhập bằng tài khoản Google chưa đăng k�
 
 Hệ thống tự động chấp nhận bài nộp trễ trong vòng 30 phút sau hạn (được ghi nhận là trễ, không bị hệ thống tự trừ điểm thêm — xem [Tests & Yearbook](./tests.md) về cách chấm điểm). Quá thời hạn đó, hoặc một bài nộp mà không có ghi nhận đã bắt đầu làm bài, sẽ bị từ chối ngay và gia đình được thông báo ngay trên bảng cần làm gì tiếp theo. Nếu một gia đình liên hệ về việc này, cách xử lý hầu như luôn đúng như thông báo `Status` trên dòng của họ đã nêu — kiểm tra đó trước.
 
-</div>
+</details>
 
 ---
 
