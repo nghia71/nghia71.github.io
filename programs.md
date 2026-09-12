@@ -50,17 +50,11 @@ Testing runs on its own schedule, separate from the study rhythm above — see [
 
 **Taking a test is now fully automated, start to finish.** Each team's next test date is computed automatically from its chosen pace and updates itself the moment the previous test is graded, so nobody has to remember to book one. When a test is due, a student opens the club's one permanent **Test Paper Open/Submit Form**, signs in with the email their team registered with, and chooses "I'm ready to open my test paper." The system checks that a test really is due, then grants the team time-boxed access directly to that test's paper — no coordinator has to send anything by hand. The team works the paper together at home, then returns to the same form to submit their solution; access to the paper closes automatically the moment they do (or once the time limit and its grace period run out, whichever comes first). If a test isn't passed, a retake is scheduled automatically too — a genuinely different paper on the same chapter, up to two retakes, three attempts in total — so a fail is never something a family has to chase down on its own.
 
-See [Current Standings](./current-standings.md#taking-the-test-the-test-paper-opensubmit-form) for the form's link and exactly how it works, and [Grading](#grading) below for what happens after a test is submitted.
+See [Current Standings](./current-standings.md#for-parents-students) for the form's link and exactly how it works, and [Grading](#grading) below for what happens after a test is submitted.
 
 ## Choose your own testing pace
 
-Learning without testing does not stick. Each family chooses how often their team sits a test, and can change that choice during the year by asking their regional coordinator:
-
-* **Weekly** — the fastest pace. Exercises are not submitted; the test carries the load.
-* **Every two weeks** — the standard pace.
-* **Every three weeks** — for teams working through the material more slowly.
-
-A student who knows they are weak in one area — geometry, say — can also ask their coordinator for extra practice papers in that area. Sitting more tests is how a student finds out where they actually stand.
+Learning without testing does not stick. Each family chooses how often their team sits a test — weekly, every two weeks, or every three weeks — and can change that choice during the year by asking their regional coordinator. See [Tests & Yearbook](./tests.md#choosing-your-pace) for the full options and the thinking behind them.
 
 <div class="note" markdown="1">
 **How registration and testing work.** Each family registers its chosen level and testing pace with its **regional coordinator** (see [Organization](./organization.md) for who that is), who enters it into the system. From there everything described above runs on its own: the system schedules the next test from the pace on file, opens and closes access to the paper, and records when the team started and submitted. The assigned teacher grades the submission and results are published (see [Grading](#grading) below); your regional coordinator can see your team's status at any time and will follow up if something looks off.
@@ -132,12 +126,4 @@ If the contribution creates real difficulty for a family, please ask for a reduc
 
 ## Submitting work
 
-Team assignments are submitted through a simple online form, the same way as always:
-
-* **One PDF file per submission.** Nothing else.
-* **No email submissions.** No photographs, no image files, no multiple files.
-* **Submissions in the wrong format lose points.** This is deliberate — it takes one term to become a habit, and then nobody has to be reminded again for the rest of the year.
-
-Tests follow the same one-PDF rule, but go through the dedicated **Test Paper Open/Submit Form** described under [How a cycle works](#how-a-cycle-works) above, which also handles timing and paper access automatically.
-
-All work is graded with comments. Results and per-student evaluations are published on the site rather than emailed, so students and parents can see not only a score but how it has changed over time.
+Team assignments and tests both go through a simple online form, and both follow the same rule: one PDF file, nothing else — see [Tests & Yearbook](./tests.md#submitting-work) for exactly why, and for how tests specifically use the dedicated **Test Paper Open/Submit Form** described under [How a cycle works](#how-a-cycle-works) above. All work is graded with comments; see [Tests & Yearbook](./tests.md#grading-and-feedback) for how grading and results work.
