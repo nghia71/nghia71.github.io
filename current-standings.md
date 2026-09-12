@@ -4,9 +4,9 @@ title: Current Standings
 
 # Current Standings
 
-This page is the club's live index, for every role: where the roster and every team's exam status can be seen by anyone, exactly what happens on an actual test day and what each column and status message means, where the coordinator and organizer spreadsheets live for the people who run the club, and — at the bottom — the volunteer-tester pages and the example test suite Nghia runs against practice data to prove the whole automated pipeline works, end to end, before any real team relies on it.
+This page is the club's live index, for every role: where the roster and every team's exam status can be seen by anyone, exactly what happens on an actual test day and what each column and status message means, and where the coordinator and organizer spreadsheets live for the people who run the club.
 
-**Jump to:** [Start here](#start-here) · [Where the data lives](#where-the-clubs-data-lives) · [Glossary](#glossary) · [The public roster](#the-public-roster) · [For Parents & Students](#for-parents--students) · [Coordinator & organizer resources](#coordinator--organizer-resources) · [For Graders](#for-graders) · [UAT](#uat--testing-with-real-volunteers) · [Testing the pipeline](#testing-the-pipeline)
+**Jump to:** [Start here](#start-here) · [Where the data lives](#where-the-clubs-data-lives) · [Glossary](#glossary) · [The public roster](#the-public-roster) · [For Parents & Students](#for-parents--students) · [Coordinator & organizer resources](#coordinator--organizer-resources) · [For Graders](#for-graders)
 
 ## Start here
 
@@ -829,24 +829,3 @@ Nếu một đội fail lần thi thứ ba của một chương, sẽ không có
 
 </details>
 
----
-
-## UAT — testing with real volunteers
-
-A small group of real families and one real grader are helping test the same pipeline above, each with their own dedicated practice team so no one's data mixes with anyone else's. If you volunteered to help test, find your name below — that's your page, with your own login, your own team, and your own steps to follow, no email or message needed to get started.
-
-<div class="note" markdown="1">
-- **[Anh Tran, with Chi Khanh Pham →](./uat-anh-tran.md)**
-- **[Son Ho, with Henry Ho & Michael Le →](./uat-son-ho.md)**
-- **[Thoa Mai, with Nam Phong Nguyen & Jason To →](./uat-thoa-mai.md)**
-- **[Tuan Le, with Linh Khanh Le →](./uat-tuan-le.md)**
-- **[Toan To (Grader) →](./uat-toan-to.md)**
-</div>
-
-## Testing the pipeline
-
-Before any real team's test depends on it, every piece of the pipeline above — releasing a test paper, a family opening and submitting it, a grader marking it, the standings updating — gets proven end to end using two practice accounts instead of real students, across 14 numbered test cases.
-
-<div class="note" markdown="1">
-**[Making Sure Testing Works: a 14-test walkthrough →](./testing-the-pipeline.md)**
-</div>
