@@ -137,7 +137,7 @@ Students work in pairs, moving through the curriculum at their own pace: study a
 Starting this year, MCC is becoming a more structured organisation, moving from a flexible coaching model to a **Comprehensive Research & Olympiad Club**:
 
 * **Leadership** — the **[Parents' Association](./organization.md)** runs the club's day-to-day organisation, alongside **Teacher Nghia**, who leads the curriculum and academics. There is no separate board or officer structure.
-* **Formal membership** — an annual membership of $200–$300, giving the club a stable foundation for advanced resources.
+* **Formal membership** — an annual membership of $100, giving the club a stable foundation for advanced resources.
 * **Global on-site events** — two annual in-person "MCC Olympiads", in the USA and in Europe.
 
 <div class="vn" markdown="1">
@@ -147,7 +147,7 @@ Starting this year, MCC is becoming a more structured organisation, moving from 
 **Sự chuyển mình cho năm học 2026-2027.** Bước sang năm học 2026-2027, MCC chính thức chuyển sang mô hình **Câu lạc bộ Nghiên cứu & Thi đấu chuyên nghiệp**:
 
 * **Điều hành** — **[Hội Phụ huynh](./organization.md)** phụ trách tổ chức hằng ngày của câu lạc bộ, cùng với **Thầy Nghĩa**, người phụ trách chương trình học và chuyên môn. Không có ban điều hành hay chức danh nào khác.
-* **Hệ thống hội viên** — chế độ hội viên thường niên ($200–$300/năm) giúp duy trì các nguồn lực cao cấp và hạ tầng học tập.
+* **Hệ thống hội viên** — chế độ hội viên thường niên ($100/năm) giúp duy trì các nguồn lực cao cấp và hạ tầng học tập.
 * **Olympic trực tiếp** — tổ chức 2 kỳ thi Olympic quy mô lớn mỗi năm tại Mỹ và Châu Âu.
 
 [Xem đầu mối liên lạc Hội Phụ huynh](./organization.md)

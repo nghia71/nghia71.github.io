@@ -22,8 +22,8 @@ title: Registration 2026-2027
 | **August 2026** | Books available to order and print · *Đặt và in sách* |
 | **September 2026** | The school year begins · *Khai giảng năm học* |
 
-**Membership: $300 for the year, including the curriculum books.**
-*Phí hội viên: $300/năm, đã bao gồm bộ sách giáo trình.*
+**Membership: $100 for the year, including the curriculum books.**
+*Phí hội viên: $100/năm, đã bao gồm bộ sách giáo trình.*
 
 ---
 
