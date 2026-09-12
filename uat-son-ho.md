@@ -27,7 +27,7 @@ Your practice team, `T-UAT-1`, has two members (Henry Ho, Michael Le), Level 3, 
 ## Before you start
 
 <div class="note" markdown="1">
-**Two different reset buttons in MCC Tools — use the right one.** “Reset my test team(s)” only ever touches the club's own internal practice teams and always restarts them from Chapter 1; it can never reach `T-UAT-1`. “Reset my test suite” is the one that does: as the coordinator, signed in as `sonhho@gmail.com`, click **MCC Tools → Reset my test suite** and it finds `T-UAT-1` for you automatically (it matches you by your CoordinatorID, `O-UAT-1`), then puts it back to the start of whichever chapter its last attempt was for — whether that attempt was stuck, failed, or even a genuine Pass. It's off by default for real-launch safety, so if you click it and see “Not available right now,” it just hasn't been turned on yet for this round — message Nghia. Otherwise, feel free to use it to reset `T-UAT-1` as many times as you like while you work through the steps below.
+**Resetting `T-UAT-1` if you need to start over.** As the coordinator, signed in as `sonhho@gmail.com`, click **MCC Tools → Reset my test suite** and it finds `T-UAT-1` for you automatically (it matches you by your CoordinatorID, `O-UAT-1`), then puts it back to the start of whichever chapter its last attempt was for — whether that attempt was stuck, failed, or even a genuine Pass. It's off by default for real-launch safety, so if you click it and see “Not available right now,” it just hasn't been turned on yet for this round — message Nghia. Otherwise, feel free to use it to reset `T-UAT-1` as many times as you like while you work through the steps below.
 </div>
 
 ## Part 1 — Coordinator: scheduling and watching a test happen
