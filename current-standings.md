@@ -25,6 +25,19 @@ The club runs on three Google Sheets and one Form, kept deliberately separate so
 
 The **MCC Public Roster** is the one spreadsheet anyone — student, parent, or visitor — can open directly. The `Roster` tab lists every active team; the `Exams` tab shows, for each test session, whether the paper has been placed, submitted, or graded, updated automatically as the pipeline runs.
 
+**Roster columns:** `FullName`, `TeamID`, `Level`, `Region`, `Status` — a filtered, public-safe copy of `Students`.
+
+**`Exams` columns** (one row per test session):
+
+| Column | Meaning |
+|---|---|
+| `TeamID`, `Region`, `Level`, `Chapter`, `Attempt`, `ExamDate` | Set when the session is scheduled. |
+| `StartedUTC` / `Deadline` | Set on the student's first "open my test paper" click; a second click doesn't reset anything. `Deadline` is the level's time limit plus a small buffer. |
+| `SubmissionFileLink` / `SubmittedUTC` | Always the *latest accepted* submission — resubmitting overwrites these, but never deletes an earlier file. |
+| `ElapsedMinutes` / `LateByMinutes` | How long the student took, and how far past the deadline (0 if on time; there's a short grace period beyond which a submission is rejected instead of recorded). |
+| `GradingStatus` / `Score` / `Result` / `GradedUTC` / `GradedBy` | Filled in once a grader marks the test; `Result` is Pass/Fail from the score. |
+| `Status` | A plain-language summary computed from everything else — "In progress — N min remaining," "Submitted on time," and so on — refreshed automatically. |
+
 <div class="note" markdown="1">
 **[Open the MCC Public Roster →](https://docs.google.com/spreadsheets/d/1m_CzWRfQxUt7puw1mVBqAZCpm1zvYDrxievSJXKGGFI/edit?usp=sharing)**
 </div>
@@ -57,6 +70,62 @@ Sign in with the email your team registered with, then choose **"I'm ready to op
 
 **MCC Master Registration** — `Students`, `Teams`, `Coordinators`, `Graders`, and `Organizers` tabs, plus a `Data Check` tab that flags anything inconsistent before it causes a problem downstream. (The `Organizers` tab is just the contact list for that role — it's Nghia's record of who's an organizer, not something organizers themselves ever open; their own access to this spreadsheet, like Regional Pacing below, is view-only, never edit.)
 
+**`Students`** — one row per student.
+
+| Column | Meaning |
+|---|---|
+| `StudentID` | `S` + a zero-padded number (`S0142`). Assigned once, never derived from name or email — both can change; this never does. |
+| `FullName` | As given. |
+| `VerifiedEmail` | The email the registration Form itself captured from the signed-in respondent — never something typed into a text field. This is the one identity value every script trusts, including matching a Test Paper Form submission back to the right student. |
+| `AlternateEmail` | A typed backup contact only — never used to identify anyone. |
+| `ParentName` / `ParentEmail` | As given. |
+| `Country` / `Region` / `Timezone` | Region is one of `UK`/`FR`/`EC`/`WC`/`VN`, defaulted from Country but overridable; Timezone likewise. |
+| `Grade` | 1–12. |
+| `Level` | 1–4. |
+| `TeamID` | Blank if not yet on a team, otherwise must match a real row on `Teams` — never a note like "N/A" or "pending". |
+| `Status` | `pending-team` / `active` / `withdrawn`. |
+| `Note` | Free text — where any operational comment belongs, rather than jammed into `TeamID` or `Level`. |
+
+**`Teams`** — one row per team; this is where a `TeamID` is created.
+
+| Column | Meaning |
+|---|---|
+| `TeamID` | e.g. `T1a`. |
+| `TeamName` | Optional. |
+| `Level` | 1–4. |
+| `Member1ID`…`Member3ID` | Up to 3 `StudentID`s. |
+| `Region` | The team's "home" region, used to look up its default coordinator. |
+| `CoordinatorID` | Defaults to whoever covers `Region`, but always overridable by hand — this is how a team with members in two different regions (say, one East Coast, one West Coast) still gets one clear coordinator. |
+| `FolderID` | Not used — leave blank. An early design idea (a per-team folder of files) that was replaced before it ever shipped; teams get temporary access to the one shared paper file directly instead. |
+| `Active` | TRUE/FALSE. |
+
+**`Coordinators`** — `CoordinatorID` (e.g. `O01`), `Name`, `Email`, `RegionsCovered` (e.g. `EC, WC` — the *default* assignment only, never a hard restriction), `Note`. Every coordinator has edit access to every region's pacing, not just their own, so coordinators can always stand in for each other.
+
+**`Organizers`** — `OrganizerID` (e.g. `CO01`), `Name`, `Email`, `Note`. This tab is simply the contact list for that read-only role; it doesn't grant anything by itself.
+
+**`Graders`** — `GraderID`, `Name`, `Email`, `Note`.
+
+**`Papers`** — one row per test paper that exists.
+
+| Column | Meaning |
+|---|---|
+| `Level` | 1–4 |
+| `Chapter` | integer |
+| `Attempt` | 1, 2, 3… — a retake is a genuinely *different* uploaded file from a reserve pool, never the same paper reused |
+| `DriveFileID` | The Drive file ID of the one canonical copy of this paper |
+| `Note` | Free text |
+
+`(Level, Chapter, Attempt)` is the lookup key everything else joins against to find the right file. There's exactly one Drive file per combination, shared with nobody by default — when a team starts that test, they get temporary Viewer access to that one file for their access window, then it's revoked. No per-team copies are ever made.
+
+**How to get a `DriveFileID` and add a new paper — nothing in the automation generates this for you:**
+
+1. Prepare the PDF and upload it to Drive yourself, into the papers folder.
+2. Name the file exactly `MCC-L<level>-Ch<chapter>-A<attempt>.pdf` — e.g. `MCC-L3-Ch7-A1.pdf` (the original), `MCC-L3-Ch7-A2.pdf` (first retake), `MCC-L3-Ch7-A3.pdf` (second retake). The `MCC-` prefix makes every paper easy to find with one Drive search regardless of which folder it's in; the rest matches the `Papers` columns exactly, so matching a physical file to its row is never a guessing game.
+3. Get that file's Drive ID. Right-click the file in Drive → **Share** → **Copy link** (or just open the file and look at your browser's address bar). Either way you get a URL that looks like `https://drive.google.com/file/d/1AbCdEfGhIjKlMnOpQrStUvWxYz/view?usp=sharing` — the file ID is the long string of letters/numbers between `/d/` and the next `/` (here, `1AbCdEfGhIjKlMnOpQrStUvWxYz`). Paste just that string into the row's `DriveFileID` cell on the `Papers` tab — not the whole URL.
+4. In that same row's `Note` cell, spell out which attempt this is, e.g. `Level 3, Chapter 7, Attempt 2 (retake 1 of 2)` — so nobody miscounts the "at most 2 retakes" limit by reading `Attempt` alone.
+
+That's the entire process — no script call is needed to "register" a paper beyond adding that one row.
+
 <div class="note" markdown="1">
 **[Open the Master Registration Spreadsheet →](https://docs.google.com/spreadsheets/d/13byGPiBQW00egpC2GIZenAsKhMCS7qbCykZSUtbE7jk/edit?usp=sharing)**
 </div>
@@ -68,6 +137,23 @@ Sign in with the email your team registered with, then choose **"I'm ready to op
 
 **MCC Regional Pacing** — one tab per region, plus a `Standings` tab recomputed automatically from graded results.
 
+Same columns on every region tab:
+
+| Column | Meaning |
+|---|---|
+| `TeamID` / `TeamName` | Join key back to Master Registration; `TeamName` is copied at seed time, for readability only. |
+| `Level` | Copied from Master Registration when the team's row was first added here — **not kept in sync afterward.** If a team is promoted a level mid-year, this column needs a manual edit too. |
+| `NextChapter` | Which chapter the team tests next. Advances automatically once a test is graded (regardless of pass/fail — a coordinator who wants a team to redo a chapter still edits this by hand). |
+| `ExamFrequencyWeeks` | 1, 2, or 3 — the column families most often ask to change. Editable any time. |
+| `LastExamDate` | Set automatically once a test is graded. |
+| `NextExamDate` | `LastExamDate` + `ExamFrequencyWeeks` × 7 days, recomputed automatically after every graded test. This is the date a coordinator actually watches. |
+| `LastChangedDate` | Informational only — when this row was last hand-edited. |
+| `Note` | Free text. |
+
+Once `NextExamDate` falls inside the next 7 days, that date has already become a real scheduled session — editing the row after that point only changes the *next* test, never the one already under way.
+
+The `Standings` tab (alongside the five region tabs) is a read-only summary, fully rewritten every time it refreshes — a hand-edit there doesn't stick.
+
 <div class="note" markdown="1">
 **[Open the Regional Pacing Spreadsheet →](https://docs.google.com/spreadsheets/d/1BsRd05S7tK1lnr83vxidwDA87qAd1NWEMTFKvDfRkDg/edit?usp=sharing)**
 </div>
@@ -76,102 +162,6 @@ Sign in with the email your team registered with, then choose **"I'm ready to op
 <img src="./img/current-standings/pacing-standings.png" alt="A regional tab of the Regional Pacing spreadsheet, with the Standings tab visible alongside it">
 <figcaption>One region's tab on the Regional Pacing Spreadsheet — the <code>Standings</code> tab sits alongside it, recomputed from graded results.</figcaption>
 </figure>
-
-## What each column means
-
-The tables above show where the data lives; this section is for anyone -- coordinator, organizer, or a curious family -- who opens one of these spreadsheets and wants to know what a specific column actually means.
-
-### MCC Master Registration
-
-**`Students`** -- one row per student.
-
-| Column | Meaning |
-|---|---|
-| `StudentID` | `S` + a zero-padded number (`S0142`). Assigned once, never derived from name or email -- both can change; this never does. |
-| `FullName` | As given. |
-| `VerifiedEmail` | The email the registration Form itself captured from the signed-in respondent -- never something typed into a text field. This is the one identity value every script trusts, including matching a Test Paper Form submission back to the right student. |
-| `AlternateEmail` | A typed backup contact only -- never used to identify anyone. |
-| `ParentName` / `ParentEmail` | As given. |
-| `Country` / `Region` / `Timezone` | Region is one of `UK`/`FR`/`EC`/`WC`/`VN`, defaulted from Country but overridable; Timezone likewise. |
-| `Grade` | 1-12. |
-| `Level` | 1-4. |
-| `TeamID` | Blank if not yet on a team, otherwise must match a real row on `Teams` -- never a note like "N/A" or "pending". |
-| `Status` | `pending-team` / `active` / `withdrawn`. |
-| `Note` | Free text -- where any operational comment belongs, rather than jammed into `TeamID` or `Level`. |
-
-**`Teams`** -- one row per team; this is where a `TeamID` is created.
-
-| Column | Meaning |
-|---|---|
-| `TeamID` | e.g. `T1a`. |
-| `TeamName` | Optional. |
-| `Level` | 1-4. |
-| `Member1ID`.. `Member3ID` | Up to 3 `StudentID`s. |
-| `Region` | The team's "home" region, used to look up its default coordinator. |
-| `CoordinatorID` | Defaults to whoever covers `Region`, but always overridable by hand -- this is how a team with members in two different regions (say, one East Coast, one West Coast) still gets one clear coordinator. |
-| `FolderID` | Not used -- leave blank. An early design idea (a per-team folder of files) that was replaced before it ever shipped; teams get temporary access to the one shared paper file directly instead. |
-| `Active` | TRUE/FALSE. |
-
-**`Coordinators`** -- `CoordinatorID` (e.g. `O01`), `Name`, `Email`, `RegionsCovered` (e.g. `EC, WC` -- the *default* assignment only, never a hard restriction), `Note`. Every coordinator has edit access to every region's pacing, not just their own, so coordinators can always stand in for each other.
-
-**`Organizers`** -- `OrganizerID` (e.g. `CO01`), `Name`, `Email`, `Note`. This tab is simply the contact list for that read-only role; it doesn't grant anything by itself.
-
-**`Graders`** -- `GraderID`, `Name`, `Email`, `Note`.
-
-**`Papers`** -- one row per test paper that exists.
-
-| Column | Meaning |
-|---|---|
-| `Level` | 1-4 |
-| `Chapter` | integer |
-| `Attempt` | 1, 2, 3... -- a retake is a genuinely *different* uploaded file from a reserve pool, never the same paper reused |
-| `DriveFileID` | The Drive file ID of the one canonical copy of this paper |
-| `Note` | Free text |
-
-`(Level, Chapter, Attempt)` is the lookup key everything else joins against to find the right file. There's exactly one Drive file per combination, shared with nobody by default -- when a team starts that test, they get temporary Viewer access to that one file for their access window, then it's revoked. No per-team copies are ever made.
-
-**How to get a `DriveFileID` and add a new paper -- nothing in the automation generates this for you:**
-
-1. Prepare the PDF and upload it to Drive yourself, into the papers folder.
-2. Name the file exactly `MCC-L<level>-Ch<chapter>-A<attempt>.pdf` -- e.g. `MCC-L3-Ch7-A1.pdf` (the original), `MCC-L3-Ch7-A2.pdf` (first retake), `MCC-L3-Ch7-A3.pdf` (second retake). The `MCC-` prefix makes every paper easy to find with one Drive search regardless of which folder it's in; the rest matches the `Papers` columns exactly, so matching a physical file to its row is never a guessing game.
-3. Get that file's Drive ID. Right-click the file in Drive → **Share** → **Copy link** (or just open the file and look at your browser's address bar). Either way you get a URL that looks like `https://drive.google.com/file/d/1AbCdEfGhIjKlMnOpQrStUvWxYz/view?usp=sharing` -- the file ID is the long string of letters/numbers between `/d/` and the next `/` (here, `1AbCdEfGhIjKlMnOpQrStUvWxYz`). Paste just that string into the row's `DriveFileID` cell on the `Papers` tab -- not the whole URL.
-4. In that same row's `Note` cell, spell out which attempt this is, e.g. `Level 3, Chapter 7, Attempt 2 (retake 1 of 2)` -- so nobody miscounts the "at most 2 retakes" limit by reading `Attempt` alone.
-
-That's the entire process -- no script call is needed to "register" a paper beyond adding that one row.
-
-### MCC Regional Pacing
-
-Same columns on every region tab:
-
-| Column | Meaning |
-|---|---|
-| `TeamID` / `TeamName` | Join key back to Master Registration; `TeamName` is copied at seed time, for readability only. |
-| `Level` | Copied from Master Registration when the team's row was first added here -- **not kept in sync afterward.** If a team is promoted a level mid-year, this column needs a manual edit too. |
-| `NextChapter` | Which chapter the team tests next. Advances automatically once a test is graded (regardless of pass/fail -- a coordinator who wants a team to redo a chapter still edits this by hand). |
-| `ExamFrequencyWeeks` | 1, 2, or 3 -- the column families most often ask to change. Editable any time. |
-| `LastExamDate` | Set automatically once a test is graded. |
-| `NextExamDate` | `LastExamDate` + `ExamFrequencyWeeks` x 7 days, recomputed automatically after every graded test. This is the date a coordinator actually watches. |
-| `LastChangedDate` | Informational only -- when this row was last hand-edited. |
-| `Note` | Free text. |
-
-Once `NextExamDate` falls inside the next 7 days, that date has already become a real scheduled session -- editing the row after that point only changes the *next* test, never the one already under way.
-
-The `Standings` tab (alongside the five region tabs) is a read-only summary, fully rewritten every time it refreshes -- a hand-edit there doesn't stick.
-
-### MCC Public Roster & its `Exams` tab
-
-**Roster columns:** `FullName`, `TeamID`, `Level`, `Region`, `Status` -- a filtered, public-safe copy of `Students`.
-
-**`Exams` columns** (one row per test session):
-
-| Column | Meaning |
-|---|---|
-| `TeamID`, `Region`, `Level`, `Chapter`, `Attempt`, `ExamDate` | Set when the session is scheduled. |
-| `StartedUTC` / `Deadline` | Set on the student's first "open my test paper" click; a second click doesn't reset anything. `Deadline` is the level's time limit plus a small buffer. |
-| `SubmissionFileLink` / `SubmittedUTC` | Always the *latest accepted* submission -- resubmitting overwrites these, but never deletes an earlier file. |
-| `ElapsedMinutes` / `LateByMinutes` | How long the student took, and how far past the deadline (0 if on time; there's a short grace period beyond which a submission is rejected instead of recorded). |
-| `GradingStatus` / `Score` / `Result` / `GradedUTC` / `GradedBy` | Filled in once a grader marks the test; `Result` is Pass/Fail from the score. |
-| `Status` | A plain-language summary computed from everything else -- "In progress -- N min remaining," "Submitted on time," and so on -- refreshed automatically. |
 
 ## UAT — testing with real volunteers
 
