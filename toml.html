@@ -35,64 +35,68 @@ title: TOML
   .example { margin-bottom: 1.8em; }
   .example h3 { font-size: 1.05rem; border-bottom: none; padding-bottom: 0; margin-bottom: .6em; }
 
-  /* Inline, runnable Python (worked examples + the free-form playground). */
+  /* Inline, runnable Python (worked examples + the free-form playground).
+     Styled to match the site's existing pre/code blocks (dark ink bg, cream
+     text) and its small pill-shaped utility buttons (see .tc-progress-reset
+     in assets/css/style.css), not a separate "dev tool" look. */
   .code-runner { margin-top: 14px; }
   .code-editor {
     display: block;
     width: 100%;
     box-sizing: border-box;
     font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
-    font-size: 13px;
-    line-height: 1.5;
-    padding: 12px 14px;
-    border: 1px solid var(--rule);
+    font-size: 13.5px;
+    line-height: 1.55;
+    padding: 16px 18px;
+    border: none;
     border-radius: var(--radius);
-    background: #fbfaf7;
-    color: #24292e;
+    background: var(--ink);
+    color: #f4ead9;
     resize: vertical;
     min-height: 120px;
     tab-size: 4;
   }
+  .code-editor:focus { outline: 2px solid var(--gold); outline-offset: 2px; }
   .code-controls {
     display: flex;
     align-items: center;
     gap: 8px;
-    margin-top: 8px;
+    margin-top: 10px;
     flex-wrap: wrap;
   }
   .code-controls button {
     font-family: inherit;
-    font-size: 12.5px;
-    font-weight: 700;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--brand);
+    background: var(--cream);
     border: 1px solid var(--rule);
-    background: var(--white);
-    color: var(--brand-dark);
-    padding: 6px 14px;
     border-radius: 999px;
+    padding: 6px 16px;
     cursor: pointer;
   }
   .code-controls button:hover { background: var(--gold-soft); }
   .code-controls button:disabled { opacity: .5; cursor: default; }
   .code-status {
-    font-size: 12.5px;
-    color: #6a6a6a;
+    font-size: 13px;
+    color: var(--ink-soft);
     font-style: italic;
   }
   .code-output {
-    margin: 8px 0 0;
-    padding: 12px 14px;
+    margin: 10px 0 0;
+    padding: 16px 18px;
     border-radius: var(--radius);
-    background: #1e1e1e;
-    color: #d4d4d4;
+    background: var(--brand-dark);
+    color: var(--gold-soft);
     font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
-    font-size: 13px;
+    font-size: 13.5px;
     white-space: pre-wrap;
     word-break: break-word;
     overflow-x: auto;
     display: none;
   }
   .code-output.has-content { display: block; }
-  .code-output.is-error { color: #ff8383; }
+  .code-output.is-error { color: #ffd7c2; }
   .playground-card { margin-top: 1.2em; }
   .playground-card .code-editor { min-height: 160px; }
 </style>
@@ -303,7 +307,7 @@ document.addEventListener("DOMContentLoaded", function () {
 </div>
 
 <h2>Who it's for</h2>
-<p>Every MCC student, Middle School (MS) and High School (HS) alike. There is no separate registration — if you're in the club, you're in the coding programme.</p>
+<p>Every MCC student, Middle School (MS) and High School (HS) alike. If you're in the club, you can register for the coding programme.</p>
 
 <h2>How it works</h2>
 <ul>
