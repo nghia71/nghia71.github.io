@@ -117,7 +117,8 @@ Sign in with the email your team registered with, then choose **"I'm ready to op
 
 `(Level, Chapter, Attempt)` is the lookup key everything else joins against to find the right file. There's exactly one Drive file per combination, shared with nobody by default — when a team starts that test, they get temporary Viewer access to that one file for their access window, then it's revoked. No per-team copies are ever made.
 
-**How to get a `DriveFileID` and add a new paper — nothing in the automation generates this for you:**
+<details class="admin-details" markdown="1">
+<summary>How to get a <code>DriveFileID</code> and add a new paper — nothing in the automation generates this for you</summary>
 
 1. Prepare the PDF and upload it to Drive yourself, into the papers folder.
 2. Name the file exactly `MCC-L<level>-Ch<chapter>-A<attempt>.pdf` — e.g. `MCC-L3-Ch7-A1.pdf` (the original), `MCC-L3-Ch7-A2.pdf` (first retake), `MCC-L3-Ch7-A3.pdf` (second retake). The `MCC-` prefix makes every paper easy to find with one Drive search regardless of which folder it's in; the rest matches the `Papers` columns exactly, so matching a physical file to its row is never a guessing game.
@@ -125,6 +126,8 @@ Sign in with the email your team registered with, then choose **"I'm ready to op
 4. In that same row's `Note` cell, spell out which attempt this is, e.g. `Level 3, Chapter 7, Attempt 2 (retake 1 of 2)` — so nobody miscounts the "at most 2 retakes" limit by reading `Attempt` alone.
 
 That's the entire process — no script call is needed to "register" a paper beyond adding that one row.
+
+</details>
 
 <div class="note" markdown="1">
 **[Open the Master Registration Spreadsheet →](https://docs.google.com/spreadsheets/d/13byGPiBQW00egpC2GIZenAsKhMCS7qbCykZSUtbE7jk/edit?usp=sharing)**
