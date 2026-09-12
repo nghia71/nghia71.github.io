@@ -69,7 +69,7 @@ This page is yours alone. It uses two dedicated practice teams — `T-UAT-3` and
 
 <div class="tc-step">
 <div class="tc-step-text">
-<strong>6. [Coordinator]</strong> Check both <code>Exams</code> rows.<br>
+<strong>6. [Coordinator]</strong> Check both rows on the <a href="https://docs.google.com/spreadsheets/d/1m_CzWRfQxUt7puw1mVBqAZCpm1zvYDrxievSJXKGGFI/edit?usp=sharing">Public Roster</a>'s <code>Exams</code> tab -- a different spreadsheet from Master Registration and Regional Pacing above.<br>
 <em>What you should see:</em> both show "Submitted on time," each pointing at its own submission file — not mixed up with each other.
 </div>
 </div>

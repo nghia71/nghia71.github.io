@@ -64,7 +64,7 @@ Your practice team, `T-UAT-1`, has two members (Henry Ho, Michael Le), Level 3, 
 
 <div class="tc-step">
 <div class="tc-step-text">
-<strong>5. [Coordinator]</strong> Check <code>T-UAT-1</code>'s row on the <code>Exams</code> tab.<br>
+<strong>5. [Coordinator]</strong> Check <code>T-UAT-1</code>'s row on the <a href="https://docs.google.com/spreadsheets/d/1m_CzWRfQxUt7puw1mVBqAZCpm1zvYDrxievSJXKGGFI/edit?usp=sharing">Public Roster</a>'s <code>Exams</code> tab -- a third spreadsheet, separate from the two you opened above.<br>
 <em>What you should see:</em> <code>StartedUTC</code>/<code>Deadline</code> now filled in, status "In progress."
 </div>
 </div>

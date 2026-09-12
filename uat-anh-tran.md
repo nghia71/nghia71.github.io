@@ -70,7 +70,7 @@ Your practice team, `T-UAT-2`, has one member (Chi Khanh Pham), Level 3, and is 
 
 <div class="tc-step">
 <div class="tc-step-text">
-<strong>6. [Coordinator]</strong> Check <code>T-UAT-2</code>'s row on the <code>Exams</code> tab (Master Registration Spreadsheet).<br>
+<strong>6. [Coordinator]</strong> Check <code>T-UAT-2</code>'s row on the <a href="https://docs.google.com/spreadsheets/d/1m_CzWRfQxUt7puw1mVBqAZCpm1zvYDrxievSJXKGGFI/edit?usp=sharing">Public Roster</a>'s <code>Exams</code> tab -- a different spreadsheet from Master Registration, where Exams actually lives.<br>
 <em>What you should see:</em> <code>StartedUTC</code> and <code>Deadline</code> now filled in, status "In progress."
 </div>
 </div>

@@ -25,7 +25,7 @@ Each week's submissions land in a spreadsheet named **"MCC Grading — &lt;that 
 
 <div class="tc-step">
 <div class="tc-step-text">
-<strong>2. [Grader]</strong> For each row, open the submission (the link on the matching team's <code>Exams</code> row in the Master Registration Spreadsheet's <code>SubmissionFileLink</code> column) and grade it as you normally would.<br>
+<strong>2. [Grader]</strong> For each row, open the submission (the link on the matching team's <code>Exams</code> row -- on the <a href="https://docs.google.com/spreadsheets/d/1m_CzWRfQxUt7puw1mVBqAZCpm1zvYDrxievSJXKGGFI/edit?usp=sharing">Public Roster</a>, not Master Registration -- in the <code>SubmissionFileLink</code> column) and grade it as you normally would.<br>
 <em>What you should see:</em> the PDF opens directly — it's a real Drive file, just with placeholder content instead of a real answer.
 </div>
 </div>
@@ -40,7 +40,7 @@ Each week's submissions land in a spreadsheet named **"MCC Grading — &lt;that 
 <div class="tc-step">
 <div class="tc-step-text">
 <strong>4. [Grader]</strong> If you have access to run <code>pullWeeklyGrading()</code> yourself (the same way you do for real grading today), run it now. If you're not sure or don't have that access, let Nghia know you've finished marking rows <code>Done</code> and he'll pull them in.<br>
-<em>What you should see:</em> each matching team's <code>Exams</code> row on the Master Registration Spreadsheet fills in <code>Score</code>, <code>Result</code> (Pass/Fail), <code>GradedUTC</code>, and <code>GradedBy</code>.
+<em>What you should see:</em> each matching team's <code>Exams</code> row on the Public Roster fills in <code>Score</code>, <code>Result</code> (Pass/Fail), <code>GradedUTC</code>, and <code>GradedBy</code>.
 </div>
 </div>
 
