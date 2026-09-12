@@ -50,7 +50,7 @@ Testing runs on its own schedule, separate from the study rhythm above — see [
 
 **Taking a test is now fully automated, start to finish.** Each team's next test date is computed automatically from its chosen pace and updates itself the moment the previous test is graded, so nobody has to remember to book one. When a test is due, a student opens the club's one permanent **Test Paper Open/Submit Form**, signs in with the email their team registered with, and chooses "I'm ready to open my test paper." The system checks that a test really is due, then grants the team time-boxed access directly to that test's paper — no coordinator has to send anything by hand. The team works the paper together at home, then returns to the same form to submit their solution; access to the paper closes automatically the moment they do (or once the time limit and its grace period run out, whichever comes first). If a test isn't passed, a retake is scheduled automatically too — a genuinely different paper on the same chapter, up to two retakes, three attempts in total — so a fail is never something a family has to chase down on its own.
 
-See [Current Standings](./current-standings.md#for-parents-students) for the form's link and exactly how it works, and [Grading](#grading) below for what happens after a test is submitted.
+See [Current Standings](./current-standings.md#for-parents--students) for the form's link and exactly how it works, and [Grading](#grading) below for what happens after a test is submitted.
 
 ## Choose your own testing pace
 

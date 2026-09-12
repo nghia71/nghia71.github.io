@@ -12,15 +12,6 @@ This page walks through every link in that chain, one at a time, to make sure it
 **Why coordinators and organizers should read this, not just Nghia.** Before a real test day, you'll likely want to run a quick check of your own — smaller than this, maybe just "Check my data" and a glance at the roster. Your own check is really a *smaller version* of this full walkthrough. Reading through all 14 first shows you exactly what a complete check looks like and why each piece matters, so you can see how your own shorter routine relates to it — and borrow any pieces of it you want. **The situation** at the top of each one explains what real-world moment it's standing in for, and every **what you should see** line tells you exactly what should appear on screen if everything is working.
 </div>
 
-<div class="tc-progress" id="tc-progress">
-  <div class="tc-progress-row">
-    <span class="tc-progress-label">Your progress through these 14 tests: <strong id="tc-progress-count">0 of 14</strong> checked off.</span>
-    <button type="button" class="tc-progress-reset" id="tc-progress-reset">Start over</button>
-  </div>
-  <div class="tc-progress-bar"><div class="tc-progress-fill" id="tc-progress-fill"></div></div>
-  <p class="tc-progress-note">Checking off a test as you go just helps you keep your place. It's saved in this browser only — it won't follow you to another device, and it doesn't report anything to anyone.</p>
-</div>
-
 ## Roles, accounts, and how each test is written
 
 ### The accounts used below
@@ -219,8 +210,6 @@ Each test below says, in its own **Before you start** line, whether it needs any
 </div>
 </div>
 
-<label class="tc-done-toggle"><input type="checkbox" class="tc-done-checkbox" data-test="1"> I've run through Test 1</label>
-
 ---
 
 ### Test 2 — A team doesn't pass, but still has retakes left
@@ -245,8 +234,6 @@ Each test below says, in its own **Before you start** line, whether it needs any
 <em>What you should see:</em> the next-chapter number is unchanged — a retake doesn't move the team forward; only a Pass does.
 </div>
 </div>
-
-<label class="tc-done-toggle"><input type="checkbox" class="tc-done-checkbox" data-test="2"> I've run through Test 2</label>
 
 ---
 
@@ -280,8 +267,6 @@ Each test below says, in its own **Before you start** line, whether it needs any
 </div>
 </div>
 
-<label class="tc-done-toggle"><input type="checkbox" class="tc-done-checkbox" data-test="3"> I've run through Test 3</label>
-
 ---
 
 ### Test 4 — A submission comes in a little late
@@ -306,8 +291,6 @@ Each test below says, in its own **Before you start** line, whether it needs any
 </div>
 </div>
 
-<label class="tc-done-toggle"><input type="checkbox" class="tc-done-checkbox" data-test="4"> I've run through Test 4</label>
-
 ---
 
 ### Test 5 — A submission comes in too late to count
@@ -331,8 +314,6 @@ Each test below says, in its own **Before you start** line, whether it needs any
 <em>What you should see:</em> no file link — the submission itself was rejected — but the row isn't blank about it: <code>LastRejectedReason</code> shows <code>past-grace</code>, <code>LastRejectedUTC</code> records the moment it was rejected, and the <code>Status</code> column reads "Your submission arrived too late to be accepted automatically (more than 30 min past the deadline) - contact your coordinator." That message is coordinator-facing only — the student still saw the form's ordinary confirmation in step 1 — so a real family in this situation still needs to be told directly, by message or phone call, that their submission didn't count; the system won't tell them on its own.
 </div>
 </div>
-
-<label class="tc-done-toggle"><input type="checkbox" class="tc-done-checkbox" data-test="5"> I've run through Test 5</label>
 
 ---
 
@@ -365,8 +346,6 @@ Each test below says, in its own **Before you start** line, whether it needs any
 <em>What you should see:</em> both the first and second uploaded files still exist.
 </div>
 </div>
-
-<label class="tc-done-toggle"><input type="checkbox" class="tc-done-checkbox" data-test="6"> I've run through Test 6</label>
 
 ---
 
@@ -412,8 +391,6 @@ Each test below says, in its own **Before you start** line, whether it needs any
 </div>
 </div>
 
-<label class="tc-done-toggle"><input type="checkbox" class="tc-done-checkbox" data-test="7"> I've run through Test 7</label>
-
 ---
 
 ### Test 8 — A team never submits their test
@@ -458,8 +435,6 @@ Each test below says, in its own **Before you start** line, whether it needs any
 </div>
 </div>
 
-<label class="tc-done-toggle"><input type="checkbox" class="tc-done-checkbox" data-test="8"> I've run through Test 8</label>
-
 ---
 
 ### Test 9 — A student clicks "I'm ready" twice by accident
@@ -491,8 +466,6 @@ Each test below says, in its own **Before you start** line, whether it needs any
 <div class="tc-step-caption">Same StartedUTC, same Deadline — the double-click changed nothing.</div>
 </div>
 </div>
-
-<label class="tc-done-toggle"><input type="checkbox" class="tc-done-checkbox" data-test="9"> I've run through Test 9</label>
 
 ---
 
@@ -526,8 +499,6 @@ Each test below says, in its own **Before you start** line, whether it needs any
 </div>
 </div>
 
-<label class="tc-done-toggle"><input type="checkbox" class="tc-done-checkbox" data-test="10"> I've run through Test 10</label>
-
 ---
 
 ### Test 11 — A team's next test date is stuck in the past
@@ -559,8 +530,6 @@ Each test below says, in its own **Before you start** line, whether it needs any
 <div class="tc-step-caption">Fixed — T-EC1 schedules normally again once its date is current.</div>
 </div>
 </div>
-
-<label class="tc-done-toggle"><input type="checkbox" class="tc-done-checkbox" data-test="11"> I've run through Test 11</label>
 
 ---
 
@@ -594,8 +563,6 @@ Each test below says, in its own **Before you start** line, whether it needs any
 <div class="tc-step-caption">A real finding — T-EC1 is quietly left behind; the button doesn't say so.</div>
 </div>
 </div>
-
-<label class="tc-done-toggle"><input type="checkbox" class="tc-done-checkbox" data-test="12"> I've run through Test 12</label>
 
 ---
 
@@ -652,8 +619,6 @@ Each test below says, in its own **Before you start** line, whether it needs any
 </div>
 </div>
 
-<label class="tc-done-toggle"><input type="checkbox" class="tc-done-checkbox" data-test="13"> I've run through Test 13</label>
-
 ---
 
 ### Test 14 — Someone is signed into the wrong email
@@ -686,8 +651,6 @@ Each test below says, in its own **Before you start** line, whether it needs any
 </div>
 </div>
 
-<label class="tc-done-toggle"><input type="checkbox" class="tc-done-checkbox" data-test="14"> I've run through Test 14</label>
-
 ---
 
 ### Cleanup afterward
@@ -702,50 +665,3 @@ Every test above exercises the same underlying system that gets checked automati
 **Coming next.** Once this practice-account walkthrough is fully illustrated with screenshots for every step (and a short walkthrough video at the end for anyone who'd rather watch than read), the same 14 tests become the template for real testing with real people — real coordinators, real families, and real graders, volunteering to run a smaller slice of this walkthrough themselves against their own accounts. See [Organization](./organization.md) if you'd like to help.
 </div>
 
-<script>
-(function () {
-  var TOTAL = 14;
-  var KEY = 'mcc-tc-progress-v1';
-
-  function load() {
-    try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { return {}; }
-  }
-  function save(state) {
-    try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) { /* ignore */ }
-  }
-  function updateSummary(state) {
-    var count = 0;
-    for (var i = 1; i <= TOTAL; i++) { if (state[i]) count++; }
-    var countEl = document.getElementById('tc-progress-count');
-    var fillEl = document.getElementById('tc-progress-fill');
-    if (countEl) countEl.textContent = count + ' of ' + TOTAL;
-    if (fillEl) fillEl.style.width = Math.round((count / TOTAL) * 100) + '%';
-  }
-
-  document.addEventListener('DOMContentLoaded', function () {
-    var state = load();
-    var boxes = Array.prototype.slice.call(document.querySelectorAll('.tc-done-checkbox'));
-
-    boxes.forEach(function (box) {
-      var n = box.getAttribute('data-test');
-      box.checked = !!state[n];
-      box.addEventListener('change', function () {
-        state[n] = box.checked;
-        save(state);
-        updateSummary(state);
-      });
-    });
-    updateSummary(state);
-
-    var resetBtn = document.getElementById('tc-progress-reset');
-    if (resetBtn) {
-      resetBtn.addEventListener('click', function () {
-        state = {};
-        save(state);
-        boxes.forEach(function (box) { box.checked = false; });
-        updateSummary(state);
-      });
-    }
-  });
-})();
-</script>

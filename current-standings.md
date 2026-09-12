@@ -6,7 +6,7 @@ title: Current Standings
 
 This page is the club's live index, for every role: where the roster and every team's exam status can be seen by anyone, exactly what happens on an actual test day and what each column and status message means, where the coordinator and organizer spreadsheets live for the people who run the club, and — at the bottom — the volunteer-tester pages and the example test suite Nghia runs against practice data to prove the whole automated pipeline works, end to end, before any real team relies on it.
 
-**Jump to:** [Start here](#start-here) · [Where the data lives](#where-the-clubs-data-lives) · [Glossary](#glossary) · [The public roster](#the-public-roster) · [For Parents & Students](#for-parents-students) · [Coordinator & organizer resources](#coordinator-organizer-resources) · [For Graders](#for-graders) · [UAT](#uat-testing-with-real-volunteers) · [Testing the pipeline](#testing-the-pipeline)
+**Jump to:** [Start here](#start-here) · [Where the data lives](#where-the-clubs-data-lives) · [Glossary](#glossary) · [The public roster](#the-public-roster) · [For Parents & Students](#for-parents--students) · [Coordinator & organizer resources](#coordinator--organizer-resources) · [For Graders](#for-graders) · [UAT](#uat--testing-with-real-volunteers) · [Testing the pipeline](#testing-the-pipeline)
 
 ## Start here
 
@@ -14,13 +14,13 @@ A first-time checklist, in order, for whichever role brings you here. Everything
 
 <div class="tc-step">
 <div class="tc-step-text">
-<strong>1.</strong> Bookmark your one link: the <strong>Test Paper Open/Submit Form</strong> (see [Current Standings](#for-parents-students) for it). It never changes — the same link, all year, for every test your team takes.
+<strong>1.</strong> Bookmark your one link: the <strong>Test Paper Open/Submit Form</strong> (see the <a href="#for-parents--students">For Parents &amp; Students</a> section for it). It never changes — the same link, all year, for every test your team takes.
 </div>
 </div>
 
 <div class="tc-step">
 <div class="tc-step-text">
-<strong>2.</strong> Find your team on the public <strong>MCC Roster</strong> ([Current Standings](#the-public-roster)) and check your name, team, level, and region are right. If anything's wrong, tell your regional coordinator — it isn't something you can fix yourself.
+<strong>2.</strong> Find your team on the public <strong>MCC Roster</strong> (see the <a href="#the-public-roster">public roster</a> section) and check your name, team, level, and region are right. If anything's wrong, tell your regional coordinator — it isn't something you can fix yourself.
 </div>
 </div>
 
@@ -44,7 +44,7 @@ A first-time checklist, in order, for whichever role brings you here. Everything
 
 <div class="tc-step">
 <div class="tc-step-text">
-<strong>6.</strong> The Form's confirmation message never tells you whether your click actually worked — that's deliberate, not a bug. To actually check, look at your row on the <strong>Exams & Standing</strong> sheet: <em>"In progress,"</em> <em>"Submitted on time,"</em> or one of the other plain-language statuses [Current Standings](#for-parents-students) lists in full.
+<strong>6.</strong> The Form's confirmation message never tells you whether your click actually worked — that's deliberate, not a bug. To actually check, look at your row on the <strong>Exams & Standing</strong> sheet: <em>"In progress,"</em> <em>"Submitted on time,"</em> or one of the other plain-language statuses the <a href="#for-parents--students">For Parents &amp; Students</a> section lists in full.
 </div>
 </div>
 
@@ -54,20 +54,17 @@ A first-time checklist, in order, for whichever role brings you here. Everything
 </div>
 </div>
 
-<label class="tc-done-toggle"><input type="checkbox" class="tc-done-checkbox" data-test="f1"> Bookmarked the Form and checked my Roster entry</label><br>
-<label class="tc-done-toggle"><input type="checkbox" class="tc-done-checkbox" data-test="f2"> Know where to check my status and what the messages mean</label>
-
 <details class="vn" markdown="1">
 <summary>🇻🇳 Tiếng Việt — Bắt đầu từ đây (click to expand)</summary>
 
 Danh sách các bước đầu tiên, theo thứ tự, cho bất kỳ vai trò nào đưa bạn đến trang này. Mọi thứ bên dưới đã được giải thích đầy đủ ở các phần sau của trang.
 
-1. Lưu lại một đường link duy nhất: **Test Paper Open/Submit Form** (xem mục [dành cho Phụ huynh & Học sinh](#for-parents-students)). Link này không đổi — dùng suốt năm, cho mọi bài thi của đội.
+1. Lưu lại một đường link duy nhất: **Test Paper Open/Submit Form** (xem mục [dành cho Phụ huynh & Học sinh](#for-parents--students)). Link này không đổi — dùng suốt năm, cho mọi bài thi của đội.
 2. Tìm đội của mình trên **MCC Roster** công khai (xem mục [The public roster](#the-public-roster)) và kiểm tra tên, đội, level, khu vực có đúng không. Nếu có gì sai, báo quản lý vùng — đây không phải điều tự sửa được.
 3. Khi sắp đến ngày thi, dòng của đội trên bảng **Exams & Standing** công khai sẽ hiện *"Scheduled for &lt;ngày&gt;."* Không cần làm gì cho đến lúc đó — không có bước nào để "xác nhận" một bài thi đã lên lịch.
 4. Đến ngày thi, khi thực sự sẵn sàng bắt đầu: đăng nhập bằng **email đã đăng ký của đội** (không phải email cá nhân của phụ huynh) và chọn **"I'm ready to open my test paper."** Đây là thao tác bắt đầu tính giờ và cấp quyền mở đề thi — một, hai phút sau, kiểm tra Google Drive để thấy file đề.
 5. Cùng làm bài ở nhà, rồi quay lại đúng Form đó và chọn **"Submit my solution"** — một file PDF, không gì khác. Có thể nộp lại nếu phát hiện sai sót và vẫn còn thời gian; file mới sẽ thay cho file cũ làm bài nộp chính thức.
-6. Thông báo xác nhận của Form không bao giờ cho biết thao tác vừa bấm có thành công hay không — đây là chủ ý, không phải lỗi. Muốn biết chắc, xem dòng của đội trên bảng **Exams & Standing**: *"In progress,"* *"Submitted on time,"* hoặc một trong các thông báo khác mà mục [dành cho Phụ huynh & Học sinh](#for-parents-students) liệt kê đầy đủ.
+6. Thông báo xác nhận của Form không bao giờ cho biết thao tác vừa bấm có thành công hay không — đây là chủ ý, không phải lỗi. Muốn biết chắc, xem dòng của đội trên bảng **Exams & Standing**: *"In progress,"* *"Submitted on time,"* hoặc một trong các thông báo khác mà mục [dành cho Phụ huynh & Học sinh](#for-parents--students) liệt kê đầy đủ.
 7. Sau khi được chấm, cùng dòng đó sẽ điền `Score`, `Result`, và `Comment` từ người chấm — chữ thường, hoặc một đường link có thể bấm nếu người chấm gắn file PDF. Một lần Fail không phải là hết: đội được tối đa ba lần thi (hai lần thi lại) cho mỗi chương, và một buổi thi lại mới sẽ được tạo tự động — quản lý vùng sẽ liên hệ để sắp xếp.
 
 </details>
@@ -80,7 +77,7 @@ This assumes you're already familiar with [Organization](./organization.md)'s re
 
 <div class="tc-step">
 <div class="tc-step-text">
-<strong>1.</strong> Get access to the two spreadsheets you'll use all year: <strong>Master Registration</strong> and <strong>Regional Pacing</strong> (links and full schema on [Current Standings](#coordinator-organizer-resources)). If a link prompts Google to request access, that's normal the first time.
+<strong>1.</strong> Get access to the two spreadsheets you'll use all year: <strong>Master Registration</strong> and <strong>Regional Pacing</strong> (links and full schema under <a href="#coordinator--organizer-resources">Coordinator &amp; organizer resources</a> below). If a link prompts Google to request access, that's normal the first time.
 </div>
 </div>
 
@@ -110,32 +107,28 @@ This assumes you're already familiar with [Organization](./organization.md)'s re
 
 <div class="tc-step">
 <div class="tc-step-text">
-<strong>6.</strong> If a family ever genuinely needs their current test reset, <strong>MCC Tools → Reset my test suite</strong> can do it yourself (when Nghia has this turned on) — see [Current Standings](#coordinator-organizer-resources) for exactly what it does and doesn't cover.
+<strong>6.</strong> If a family ever genuinely needs their current test reset, <strong>MCC Tools → Reset my test suite</strong> can do it yourself (when Nghia has this turned on) — see <a href="#coordinator--organizer-resources">Coordinator &amp; organizer resources</a> below for exactly what it does and doesn't cover.
 </div>
 </div>
 
 <div class="tc-step">
 <div class="tc-step-text">
-<strong>7.</strong> Day to day: a family that says the Form "isn't working" almost always signed in with the wrong Google account. A late submission (within 30 minutes) is accepted automatically; past that, it's rejected and the family is told on the sheet itself. Both are covered in full on [Current Standings](#coordinator-organizer-resources).
+<strong>7.</strong> Day to day: a family that says the Form "isn't working" almost always signed in with the wrong Google account. A late submission (within 30 minutes) is accepted automatically; past that, it's rejected and the family is told on the sheet itself. Both are covered in full under <a href="#coordinator--organizer-resources">Coordinator &amp; organizer resources</a> below.
 </div>
 </div>
-
-<label class="tc-done-toggle"><input type="checkbox" class="tc-done-checkbox" data-test="c1"> Have access to both spreadsheets and found my teams</label><br>
-<label class="tc-done-toggle"><input type="checkbox" class="tc-done-checkbox" data-test="c2"> Ran Check my data once, clean</label><br>
-<label class="tc-done-toggle"><input type="checkbox" class="tc-done-checkbox" data-test="c3"> Understand NextExamDate vs. ExamFrequencyWeeks and what locks in automatically</label>
 
 <details class="vn" markdown="1">
 <summary>🇻🇳 Tiếng Việt — Dành cho quản lý vùng mới (click to expand)</summary>
 
 Phần này giả định đã quen với vai trò quản lý vùng ở trang [Organization](./organization.md).
 
-1. Xin quyền truy cập hai bảng tính sẽ dùng suốt năm: **Master Registration** và **Regional Pacing** (đường link và toàn bộ cấu trúc cột ở mục [Tài nguyên cho quản lý vùng & ban tổ chức](#coordinator-organizer-resources)). Nếu link yêu cầu xin quyền, đó là điều bình thường ở lần đầu.
+1. Xin quyền truy cập hai bảng tính sẽ dùng suốt năm: **Master Registration** và **Regional Pacing** (đường link và toàn bộ cấu trúc cột ở mục [Tài nguyên cho quản lý vùng & ban tổ chức](#coordinator--organizer-resources)). Nếu link yêu cầu xin quyền, đó là điều bình thường ở lần đầu.
 2. Trên tab `Teams` của Master Registration, tìm các đội được giao cho mình (`CoordinatorID` trùng với `Region` của đội, hoặc đội được giao trực tiếp). Trên Regional Pacing, tìm đúng các dòng của những đội đó — đây là nơi theo dõi và sửa `NextExamDate` và `ExamFrequencyWeeks` về sau.
 3. Bấm **MCC Tools → Check my data** (trên cùng Master Registration, cạnh File/Edit/View). Lần đầu, Google có thể hiện màn hình xin quyền — bấm **Allow**. Một tab **Data Check** sẽ xuất hiện; dòng xanh là ổn, dòng đỏ cho biết chính xác cần sửa gì. An toàn để chạy bất cứ lúc nào — chỉ báo cáo, không bao giờ thay đổi gì.
 4. Không cần làm gì để thực sự lên lịch một bài thi: khi `NextExamDate` của một đội rơi vào trong 7 ngày tới, hệ thống sẽ tự khóa lịch một buổi thi qua đêm. Nếu vừa đổi ngày và không muốn chờ, **MCC Tools → Lock in changed exam dates** sẽ chạy đúng việc kiểm tra đó ngay lập tức.
 5. Khi có kết quả, `NextExamDate`, `LastExamDate`, và (nếu Pass) `NextChapter` sẽ tự cập nhật. Nếu Fail mà vẫn còn lượt, một buổi thi lại được tạo tự động và dòng của gia đình sẽ báo là quản lý vùng sẽ liên hệ. Đến lần thi thứ ba không đạt, hệ thống dừng lại và chờ quyết định của quản lý vùng — thi lại chương đó, chuyển sang chương khác, hay bất cứ cách nào phù hợp.
-6. Nếu một gia đình thực sự cần reset lại bài thi hiện tại, **MCC Tools → Reset my test suite** có thể tự làm được (khi thầy Nghĩa đã bật tính năng này) — xem mục [Tài nguyên cho quản lý vùng & ban tổ chức](#coordinator-organizer-resources) để biết chính xác chức năng này làm được gì và không làm được gì.
-7. Ngày qua ngày: một gia đình báo Form "không hoạt động" hầu như luôn là do đăng nhập sai tài khoản Google. Một bài nộp trễ (trong vòng 30 phút) được tự động chấp nhận; quá thời gian đó sẽ bị từ chối và gia đình được thông báo ngay trên bảng. Cả hai điều này được giải thích đầy đủ ở mục [Tài nguyên cho quản lý vùng & ban tổ chức](#coordinator-organizer-resources).
+6. Nếu một gia đình thực sự cần reset lại bài thi hiện tại, **MCC Tools → Reset my test suite** có thể tự làm được (khi thầy Nghĩa đã bật tính năng này) — xem mục [Tài nguyên cho quản lý vùng & ban tổ chức](#coordinator--organizer-resources) để biết chính xác chức năng này làm được gì và không làm được gì.
+7. Ngày qua ngày: một gia đình báo Form "không hoạt động" hầu như luôn là do đăng nhập sai tài khoản Google. Một bài nộp trễ (trong vòng 30 phút) được tự động chấp nhận; quá thời gian đó sẽ bị từ chối và gia đình được thông báo ngay trên bảng. Cả hai điều này được giải thích đầy đủ ở mục [Tài nguyên cho quản lý vùng & ban tổ chức](#coordinator--organizer-resources).
 
 </details>
 
@@ -163,9 +156,6 @@ This is for Toan and Nghia, the two people who actually grade submissions each w
 </div>
 </div>
 
-<label class="tc-done-toggle"><input type="checkbox" class="tc-done-checkbox" data-test="g1"> Found this week's grading sheet</label><br>
-<label class="tc-done-toggle"><input type="checkbox" class="tc-done-checkbox" data-test="g2"> Know the Done checkbox rule and who pulls results in</label>
-
 <details class="vn" markdown="1">
 <summary>🇻🇳 Tiếng Việt — Dành cho người chấm bài mới (click to expand)</summary>
 
@@ -176,48 +166,6 @@ Phần này dành cho thầy Toàn và thầy Nghĩa, hai người trực tiếp
 3. Việc đưa kết quả vào hệ thống là bước của thầy Nghĩa, không phải của người chấm — mục **MCC Tools → Pull weekly grading** chỉ hoạt động với tài khoản của thầy Nghĩa. Sau khi đã đánh dấu `Done` các dòng của mình, báo cho thầy Nghĩa biết (hoặc thầy sẽ tự chạy theo lịch riêng); kết quả sẽ tự động chuyển vào bảng công khai, với nhận xét vào đúng cột `Comment` của dòng đó — chữ thường, hoặc một đường link có thể bấm nếu đã dán link.
 
 </details>
-
-<div class="tc-progress" id="tc-progress">
-  <div class="tc-progress-row">
-    <span class="tc-progress-label">Your progress: <strong id="tc-progress-count">0 of 7</strong> checked off.</span>
-    <button type="button" class="tc-progress-reset" id="tc-progress-reset">Start over</button>
-  </div>
-  <div class="tc-progress-bar"><div class="tc-progress-fill" id="tc-progress-fill"></div></div>
-</div>
-
-<script>
-(function () {
-  var IDS = ['f1', 'f2', 'c1', 'c2', 'c3', 'g1', 'g2'];
-  var TOTAL = IDS.length;
-  var KEY = 'mcc-getting-started-progress-v1';
-  function load() { try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { return {}; } }
-  function save(state) { try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {} }
-  function updateSummary(state) {
-    var count = 0;
-    IDS.forEach(function (id) { if (state[id]) count++; });
-    var countEl = document.getElementById('tc-progress-count');
-    var fillEl = document.getElementById('tc-progress-fill');
-    if (countEl) countEl.textContent = count + ' of ' + TOTAL;
-    if (fillEl) fillEl.style.width = Math.round((count / TOTAL) * 100) + '%';
-  }
-  document.addEventListener('DOMContentLoaded', function () {
-    var state = load();
-    var boxes = Array.prototype.slice.call(document.querySelectorAll('.tc-done-checkbox'));
-    boxes.forEach(function (box) {
-      var id = box.getAttribute('data-test');
-      box.checked = !!state[id];
-      box.addEventListener('change', function () { state[id] = box.checked; save(state); updateSummary(state); });
-    });
-    updateSummary(state);
-    var resetBtn = document.getElementById('tc-progress-reset');
-    if (resetBtn) {
-      resetBtn.addEventListener('click', function () {
-        state = {}; save(state); boxes.forEach(function (box) { box.checked = false; }); updateSummary(state);
-      });
-    }
-  });
-})();
-</script>
 
 ---
 
