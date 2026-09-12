@@ -166,7 +166,7 @@ Each test below says, in its own **Before you start** line, whether it needs any
 <div class="tc-step">
 <div class="tc-step-text">
 <strong>9. [Grader]</strong> Signed into <code>nghia71@gmail.com</code>, using the system's technical control panel, set up this week's grading spreadsheet (no need to enter anything — it defaults to the current week).<br>
-<em>Why it matters:</em> grading is currently the one step in this whole chain that still needs a direct, by-hand technical step — there's no click-a-menu option for it yet, unlike everything else a coordinator does.<br>
+<em>Why it matters:</em> there's now an "MCC Tools → Pull weekly grading" menu item for this, but it's Nghia-only (the toolbar check is hardcoded to his email) -- Toan can't self-pull, so this step is still, deliberately, a Nghia-only step either way.<br>
 <em>What you should see:</em> this week's grading spreadsheet is created (or found, if it already exists) and shared automatically with everyone on the graders list.
 </div>
 </div>
@@ -206,9 +206,9 @@ Each test below says, in its own **Before you start** line, whether it needs any
 
 <div class="tc-step">
 <div class="tc-step-text">
-<strong>14. [Coordinator]</strong> Hover your mouse over the score cell.<br>
-<em>Why it matters:</em> a grader's written comments are deliberately kept as a private note on the cell, not turned into a new shared file — worth actually confirming that boundary holds.<br>
-<em>What you should see:</em> the grader's comment text appears as a small note, without opening or sharing any new file.
+<strong>14. [Coordinator]</strong> Check the <code>Comment</code> column on that row.<br>
+<em>Why it matters:</em> a grader's written feedback reaches the family as text in its own column (or a clickable link, for a PDF), not by opening or sharing any new file — worth actually confirming that holds.<br>
+<em>What you should see:</em> the grader's comment text (or PDF link) is right there in the <code>Comment</code> cell.
 </div>
 </div>
 

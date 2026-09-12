@@ -46,8 +46,8 @@ Each week's submissions land in a spreadsheet named **"MCC Grading — &lt;that 
 
 <div class="tc-step">
 <div class="tc-step-text">
-<strong>5. [Grader]</strong> On the graded <code>Exams</code> row, hover over the <code>Score</code> cell.<br>
-<em>What you should see:</em> your <code>Comments</code> from the Grading sheet show up as a note on that cell — this is how a family sees your feedback without it being a separate, easy-to-miss column.
+<strong>5. [Grader]</strong> On the graded <code>Exams</code> row, check the <code>Comment</code> column.<br>
+<em>What you should see:</em> your <code>Comments</code> from the Grading sheet show up as text (or a clickable link, if you pasted one) right in that <code>Comment</code> cell — this is how a family sees your feedback.
 </div>
 </div>
 

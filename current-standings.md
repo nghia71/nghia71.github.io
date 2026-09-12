@@ -6,6 +6,8 @@ title: Current Standings
 
 This page is the club's live index, for every role: where the roster and every team's exam status can be seen by anyone, exactly what happens on an actual test day and what each column and status message means, where the coordinator and organizer spreadsheets live for the people who run the club, and — at the bottom — the volunteer-tester pages and the example test suite Nghia runs against practice data to prove the whole automated pipeline works, end to end, before any real team relies on it.
 
+New to a role here? [Getting Started](./getting-started.md) is the short, ordered walkthrough — this page is the fuller reference to come back to afterward.
+
 **Jump to:** [Where the data lives](#where-the-clubs-data-lives) · [Glossary](#glossary) · [The public roster](#the-public-roster) · [For Parents & Students](#for-parents-students) · [Coordinator & organizer resources](#coordinator-organizer-resources) · [For Graders](#for-graders) · [UAT](#uat-testing-with-real-volunteers) · [Testing the pipeline](#testing-the-pipeline)
 
 ## Where the club's data lives
@@ -145,6 +147,10 @@ You'll sign in with your registered Google account first. That's how the system 
 </div>
 
 If you ever lose this link, it's always here on this page — no need to wait on a coordinator to resend it.
+
+<div class="note" markdown="1">
+**The Form's confirmation message is always the same, whether your click worked or not.** That's deliberate, not a bug — it never reveals to a stranger whether an email is registered. It means a "nothing happened" report from a family is never actually nothing; check their row on the Exams & Standing sheet (see "Checking your status" below) rather than trusting the confirmation screen either way.
+</div>
 
 ### Opening your paper starts the clock
 
@@ -451,6 +457,12 @@ The first time you do this, Google may show you a permission approval screen —
 
 A new **Data Check** tab appears (or updates, if it's already there), with one row per thing checked. Green rows mean that part is fine. Any red row explains exactly what to look at and what to do about it — for example, a student listing a team that doesn't exist yet, or a team whose coordinator isn't set up. You can run this any time, as often as you want; it never changes any of your data, it only reports on it.
 
+### If a family needs their current test reset
+
+**MCC Tools → Reset my test suite** lets you reset one of your own teams' *current* test attempt yourself — back to a fresh, unstarted attempt (undoing a Pass if one already advanced them), with a new session locked in immediately. It only ever touches your own team, never anyone else's, and if you cover more than one team it asks which `TeamID` you mean before doing anything.
+
+This is turned off by default — click it and you may see *"Self-service reset isn't turned on for this round"* rather than a reset happening. That's not a bug; message Nghia directly in that case and he'll reset the team's current test for you. If the team's Regional Pacing row has been deleted outright rather than just needing a reset, this can't rebuild it — that's also a case for Nghia, not this menu item.
+
 ### Changing a team's pace or date
 
 Two fields, two separate effects:
@@ -468,6 +480,10 @@ Two fields, two separate effects:
 ### Where test papers come from
 
 You don't need to upload or manage test paper files — Nghia prepares and uploads every paper ahead of time. Your role is entirely about team pacing and being the first point of contact when a family hits a snag.
+
+<div class="note" markdown="1">
+**Known gap:** if a team's next chapter genuinely has no paper prepared yet, clicking "I'm ready to open my test paper" currently fails silently — no error to the family, nothing to the coordinator either. This is exactly why the readiness check mentioned above matters more than it might seem.
+</div>
 
 ### If a family says the Form "isn't working"
 
@@ -557,7 +573,7 @@ There's one shared spreadsheet per week, `MCC Grading — <ISO week>` (e.g. `MCC
 
 ### What to fill in, and when to mark a row Done
 
-Each row is one graded submission: fill in `Score` (0-100, the club's usual point system), `Comments` (whatever feedback you want the family to see -- per-problem or overall, your call), and `GradedBy` (your name). Check the `Done` box only once a row is genuinely finished. **A half-graded row should stay unchecked** -- the automation only ever reads rows marked `Done`, specifically so a score you're still second-guessing never gets pulled into a family's row by accident. There's no rush; grade at your own pace across the week, and pull results in whenever you're ready (see below).
+Each row is one graded submission: fill in `Score` (0-100, the club's usual point system), `Comments` (whatever feedback you want the family to see -- per-problem or overall, your call), and `GradedBy` (your name). Check the `Done` box only once a row is genuinely finished. **A half-graded row should stay unchecked** -- the automation only ever reads rows marked `Done`, specifically so a score you're still second-guessing never gets pulled into a family's row by accident. There's no rush; grade at your own pace across the week. **Pulling results in is Nghia's step, not yours** — the "MCC Tools → Pull weekly grading" menu item only works for him; once you've marked your rows `Done`, let him know (or he runs it on his own schedule) and they'll be pulled in.
 
 ### What happens automatically once you mark a row Done and pull results in
 
