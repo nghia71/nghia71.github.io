@@ -95,7 +95,7 @@ The last rule looks harsh and is meant kindly. It takes about a term to become a
 
 Tests go through the club's permanent **Test Paper Open/Submit Form** instead (see [Current Standings](./current-standings.md#taking-the-test-the-test-paper-opensubmit-form) for the link) — a team opens it when their test is due, works the paper together at home under a parent's supervision, and submits **one solution per problem, jointly**, through the same form before time runs out.
 
-For exactly what happens after that click — how the countdown works, the grace window for a late submission, and what changes once a result comes in — see [How Test Day Works](./test-day-guide.md).
+For exactly what happens after that click — how the countdown works, the grace window for a late submission, and what changes once a result comes in — see [Current Standings](./current-standings.md#for-parents-students).
 
 ## Grading and feedback
 
