@@ -73,19 +73,19 @@ Each family chooses how often their team tests, and may change the choice during
 
 * **Weekly** — the fastest pace. Exercises are not submitted; the test carries the load.
 * **Every two weeks** — the standard pace, matching the study cycle.
-* **One test per chapter** — for teams moving through the material more slowly.
+* **Every three weeks** — for teams moving through the material more slowly.
 
 A student who knows they are weak in one area can also ask for extra papers in it. If geometry is the weak spot, test on geometry repeatedly — it is the quickest way to find out where you actually are, and the quickest way to move.
 
-The aim is that a student who can go fast is not held back, and a student who needs to go slowly knows precisely why. Both need the parent group's support to work.
+The aim is that a student who can go fast is not held back, and a student who needs to go slowly knows precisely why. Both need their regional coordinator's support to work.
 
 <div class="note" markdown="1">
-**Finalised.** Each family registers its chosen level and testing pace with the **Parents' Association**; see [Programs](./programs.md#grading) for the full registration and grading workflow, and [Organization](./organization.md) for who to contact.
+**Finalised.** Each family registers its chosen level and testing pace with its **regional coordinator**; see [Programs](./programs.md#grading) for the full registration and grading workflow, and [Organization](./organization.md) for who to contact.
 </div>
 
 ## Submitting work
 
-Assignments and tests are submitted through an online form.
+Team assignments are submitted through a simple online form.
 
 * **One PDF file per submission.** Nothing else.
 * **No email submissions.** No photographs, no image files, no multiple files.
@@ -93,7 +93,7 @@ Assignments and tests are submitted through an online form.
 
 The last rule looks harsh and is meant kindly. It takes about a term to become a habit, and after that nobody spends the rest of the year sending reminders.
 
-Tests are supervised at home by a parent. Teams sit the paper together, and submit **one solution per problem, jointly**.
+Tests go through the club's permanent **Test Paper Open/Submit Form** instead (see [Current Standings](./current-standings.md#taking-the-test-the-test-paper-opensubmit-form) for the link) — a team opens it when their test is due, works the paper together at home under a parent's supervision, and submits **one solution per problem, jointly**, through the same form before time runs out.
 
 ## Grading and feedback
 

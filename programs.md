@@ -44,32 +44,31 @@ MCC runs four team training tracks, **T1 to T4**. Every track uses the same rhyt
 
 ## How a cycle works
 
-Every track runs on a repeating **two-week cycle**.
+Every track runs on the same **weekly study rhythm**: study the chapter, work the team assignment in two halves (the first half submitted by the end of week one, the second by the end of week two), then review the official solutions together once they're released. Each chapter of the textbook opens four themed sections, and each chapter closes with its own test. Over a full year a team can cover the whole volume; most teams take two years per volume, which is the pace the books were designed for.
 
-| | What happens |
-|---|---|
-| **Week 1** | Study the chapter — theory and worked examples. Work the first half of the team assignment and submit by Sunday. Official solutions to the previous assignment are released on Monday; grading and feedback from the previous test are returned Monday–Thursday; selected teams prepare on Friday and present on Sunday. |
-| **Week 2** | Work the second half of the assignment and submit by Sunday. Official solutions released Monday. Review them carefully as a team. **Sunday: team test.** One solution per problem, submitted jointly. |
+Testing runs on its own schedule, separate from the study rhythm above — see [Choose your own testing pace](#choose-your-own-testing-pace) below for how a team's pace is set.
 
-Each chapter of the textbook opens four themed sections, and each chapter closes with its own test. Over a full year a team can cover the whole volume; most teams take two years per volume, which is the pace the books were designed for.
+**Taking a test is now fully automated, start to finish.** Each team's next test date is computed automatically from its chosen pace and updates itself the moment the previous test is graded, so nobody has to remember to book one. When a test is due, a student opens the club's one permanent **Test Paper Open/Submit Form**, signs in with the email their team registered with, and chooses "I'm ready to open my test paper." The system checks that a test really is due, then grants the team time-boxed access directly to that test's paper — no coordinator has to send anything by hand. The team works the paper together at home, then returns to the same form to submit their solution; access to the paper closes automatically the moment they do (or once the time limit and its grace period run out, whichever comes first). If a test isn't passed, a retake is scheduled automatically too — a genuinely different paper on the same chapter, up to two retakes, three attempts in total — so a fail is never something a family has to chase down on its own.
+
+See [Current Standings](./current-standings.md#taking-the-test-the-test-paper-opensubmit-form) for the form's link and exactly how it works, and [Grading](#grading) below for what happens after a test is submitted.
 
 ## Choose your own testing pace
 
-Learning without testing does not stick. This year each family chooses how often their team sits a test, and can change that choice during the year:
+Learning without testing does not stick. Each family chooses how often their team sits a test, and can change that choice during the year by asking their regional coordinator:
 
 * **Weekly** — the fastest pace. Exercises are not submitted; the test carries the load.
-* **Every two weeks** — the standard pace, matching the cycle above.
-* **One test per chapter** — for teams working through the material more slowly.
+* **Every two weeks** — the standard pace.
+* **Every three weeks** — for teams working through the material more slowly.
 
-A student who knows they are weak in one area — geometry, say — can also ask for extra papers in that area and test on it repeatedly. Sitting more tests is how a student finds out where they actually stand.
+A student who knows they are weak in one area — geometry, say — can also ask their coordinator for extra practice papers in that area. Sitting more tests is how a student finds out where they actually stand.
 
 <div class="note" markdown="1">
-**How registration and testing work.** Each family registers its chosen level and testing pace with the **Parents' Association**, which tracks it against actual progress. From there: the club sends the paper (or shares the folder) for each test, marks the start time, receives the submission through the form, and records the submission time; the assigned teacher grades it and results are published (see [Grading](#grading) below); the Parents' Association compiles results against what was registered and follows up with each family. See [Organization](./organization.md) for the people behind each step, and for regional contacts.
+**How registration and testing work.** Each family registers its chosen level and testing pace with its **regional coordinator** (see [Organization](./organization.md) for who that is), who enters it into the system. From there everything described above runs on its own: the system schedules the next test from the pace on file, opens and closes access to the paper, and records when the team started and submitted. The assigned teacher grades the submission and results are published (see [Grading](#grading) below); your regional coordinator can see your team's status at any time and will follow up if something looks off.
 </div>
 
 ## Grading
 
-T1 and T2 papers are graded by Mr. Nghia; T3 and T4 papers are graded by Mr. Toan, each at the start of the week. The two graders back each other up, so a paper needing an urgent turnaround is never stuck waiting on one person. The best-written solutions are kept for the year's [Yearbook](./tests.md).
+T1 and T2 papers are graded by Mr. Nghia; T3 and T4 papers are graded by Mr. Toan, each at the start of the week. The two graders back each other up, so a paper needing an urgent turnaround is never stuck waiting on one person. A submitted test is added to that week's grading sheet automatically the moment it comes in, so nothing has to be remembered or copied over by hand. Once a grader enters a score, the result is written back automatically too: on a pass, the team's pacing moves on to the next chapter; on a fail, a retake is scheduled automatically, as described above. The best-written solutions are kept for the year's [Yearbook](./tests.md).
 
 ## The weekly Sunday session
 
@@ -133,10 +132,12 @@ If the contribution creates real difficulty for a family, please ask for a reduc
 
 ## Submitting work
 
-Assignments and tests are submitted through an online form:
+Team assignments are submitted through a simple online form, the same way as always:
 
 * **One PDF file per submission.** Nothing else.
 * **No email submissions.** No photographs, no image files, no multiple files.
 * **Submissions in the wrong format lose points.** This is deliberate — it takes one term to become a habit, and then nobody has to be reminded again for the rest of the year.
+
+Tests follow the same one-PDF rule, but go through the dedicated **Test Paper Open/Submit Form** described under [How a cycle works](#how-a-cycle-works) above, which also handles timing and paper access automatically.
 
 All work is graded with comments. Results and per-student evaluations are published on the site rather than emailed, so students and parents can see not only a score but how it has changed over time.
