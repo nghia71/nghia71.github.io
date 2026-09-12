@@ -8,15 +8,18 @@ This page is the club's live index: where the roster and every team's exam statu
 
 ## Where the club's data lives
 
-The club runs on three Google Sheets, kept deliberately separate so that what's safe for everyone to see, what's editable by the people who run pacing, and what's family-private never share a file:
+The club runs on three Google Sheets and one Form, kept deliberately separate so that what's safe for everyone to see, what's editable by the people who run pacing, what's family-private, and what a student uses to actually take a test never share a file:
 
-| Spreadsheet | What it holds | Who can open it |
+| Spreadsheet / Form | What it holds | Who can open it |
 |---|---|---|
 | **MCC Public Roster** | Every active team — name, team, level, region, status — plus a live row per test: placed, submitted, graded. | Anyone with the link |
-| **MCC Master Registration** | Full student and parent details, team assignments, and the club's coordinator and grader lists. | Coordinators only |
+| **MCC Master Registration** | Full student and parent details, team assignments, and the club's coordinator and grader lists. | Coordinators (edit) & club organizers (view only) |
 | **MCC Regional Pacing** | One tab per region (UK, FR, EC, WC, VN) — each team's next chapter, testing frequency, and next test date — hand-edited by that region's coordinator. | Coordinators (edit) & club organizers (view only) |
+| **Test Paper Open/Submit Form** | Where a student opens their test paper and, later, submits their solution — one permanent link, used all year for every team and every test. | Students only, identified by their own verified Google account |
 
-**Coordinators** are the volunteers who directly schedule and pace each region's teams — they get edit access to Regional Pacing. **Club organizers** is a separate, broader, read-only role for volunteers who run club activities day to day; they can see rosters and standings (Regional Pacing, view-only) but never edit anything and never touch the Master Registration Spreadsheet at all — that's where family contact details live, and organizers don't need it. See [Organization](./organization.md) for who's who.
+**Coordinators** are the volunteers who directly schedule and pace each region's teams — they get edit access to both Master Registration and Regional Pacing. **Club organizers** is a separate, broader, read-only role for volunteers who run club activities day to day; they can see rosters, standings, and family/team data (Master Registration and Regional Pacing, both view-only) but never edit anything. **Students** never open either spreadsheet at all — the Test Paper Form is the only thing they (or their parents) ever touch. See [Organization](./organization.md) for who's who.
+
+(There's a separate registration Form — the one families use to register for a team in the first place — that isn't part of this page; a coordinator is the one who takes what it collects and enters it into Master Registration.)
 
 ## The public roster
 
@@ -49,10 +52,10 @@ Sign in with the email your team registered with, then choose **"I'm ready to op
 ## Coordinator & organizer resources
 
 <div class="note" markdown="1">
-**Restricted access.** The two spreadsheets below hold family contact details and hand-edited pacing data, so they're shared individually, not with the public. The Master Registration Spreadsheet goes to coordinators only (edit access); the Regional Pacing Spreadsheet goes to coordinators (edit) and organizers (view only). Opening a link below without access will prompt Google to request it; if you should have access and don't, get in touch through the [Organization](./organization.md) page.
+**Restricted access.** The two spreadsheets below hold family contact details and hand-edited pacing data, so they're shared individually, not with the public. Both go to coordinators (edit access) and organizers (view-only access). Opening a link below without access will prompt Google to request it; if you should have access and don't, get in touch through the [Organization](./organization.md) page.
 </div>
 
-**MCC Master Registration** — `Students`, `Teams`, `Coordinators`, `Graders`, and `Organizers` tabs, plus a `Data Check` tab that flags anything inconsistent before it causes a problem downstream. (The `Organizers` tab is just the contact list for that role — it's Nghia's record of who's an organizer, not something organizers themselves ever open; their own access is view-only on Regional Pacing, below, never on this spreadsheet.)
+**MCC Master Registration** — `Students`, `Teams`, `Coordinators`, `Graders`, and `Organizers` tabs, plus a `Data Check` tab that flags anything inconsistent before it causes a problem downstream. (The `Organizers` tab is just the contact list for that role — it's Nghia's record of who's an organizer, not something organizers themselves ever open; their own access to this spreadsheet, like Regional Pacing below, is view-only, never edit.)
 
 <div class="note" markdown="1">
 **[Open the Master Registration Spreadsheet →](https://docs.google.com/spreadsheets/d/13byGPiBQW00egpC2GIZenAsKhMCS7qbCykZSUtbE7jk/edit?usp=sharing)**
