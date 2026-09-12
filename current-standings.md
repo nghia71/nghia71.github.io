@@ -57,6 +57,21 @@ A first-time checklist, in order, for whichever role brings you here. Everything
 <label class="tc-done-toggle"><input type="checkbox" class="tc-done-checkbox" data-test="f1"> Bookmarked the Form and checked my Roster entry</label><br>
 <label class="tc-done-toggle"><input type="checkbox" class="tc-done-checkbox" data-test="f2"> Know where to check my status and what the messages mean</label>
 
+<details class="vn" markdown="1">
+<summary>🇻🇳 Tiếng Việt — Bắt đầu từ đây (click to expand)</summary>
+
+Danh sách các bước đầu tiên, theo thứ tự, cho bất kỳ vai trò nào đưa bạn đến trang này. Mọi thứ bên dưới đã được giải thích đầy đủ ở các phần sau của trang.
+
+1. Lưu lại một đường link duy nhất: **Test Paper Open/Submit Form** (xem mục [dành cho Phụ huynh & Học sinh](#for-parents-students)). Link này không đổi — dùng suốt năm, cho mọi bài thi của đội.
+2. Tìm đội của mình trên **MCC Roster** công khai (xem mục [The public roster](#the-public-roster)) và kiểm tra tên, đội, level, khu vực có đúng không. Nếu có gì sai, báo quản lý vùng — đây không phải điều tự sửa được.
+3. Khi sắp đến ngày thi, dòng của đội trên bảng **Exams & Standing** công khai sẽ hiện *"Scheduled for &lt;ngày&gt;."* Không cần làm gì cho đến lúc đó — không có bước nào để "xác nhận" một bài thi đã lên lịch.
+4. Đến ngày thi, khi thực sự sẵn sàng bắt đầu: đăng nhập bằng **email đã đăng ký của đội** (không phải email cá nhân của phụ huynh) và chọn **"I'm ready to open my test paper."** Đây là thao tác bắt đầu tính giờ và cấp quyền mở đề thi — một, hai phút sau, kiểm tra Google Drive để thấy file đề.
+5. Cùng làm bài ở nhà, rồi quay lại đúng Form đó và chọn **"Submit my solution"** — một file PDF, không gì khác. Có thể nộp lại nếu phát hiện sai sót và vẫn còn thời gian; file mới sẽ thay cho file cũ làm bài nộp chính thức.
+6. Thông báo xác nhận của Form không bao giờ cho biết thao tác vừa bấm có thành công hay không — đây là chủ ý, không phải lỗi. Muốn biết chắc, xem dòng của đội trên bảng **Exams & Standing**: *"In progress,"* *"Submitted on time,"* hoặc một trong các thông báo khác mà mục [dành cho Phụ huynh & Học sinh](#for-parents-students) liệt kê đầy đủ.
+7. Sau khi được chấm, cùng dòng đó sẽ điền `Score`, `Result`, và `Comment` từ người chấm — chữ thường, hoặc một đường link có thể bấm nếu người chấm gắn file PDF. Một lần Fail không phải là hết: đội được tối đa ba lần thi (hai lần thi lại) cho mỗi chương, và một buổi thi lại mới sẽ được tạo tự động — quản lý vùng sẽ liên hệ để sắp xếp.
+
+</details>
+
 ---
 
 ## For a new coordinator
@@ -109,6 +124,21 @@ This assumes you're already familiar with [Organization](./organization.md)'s re
 <label class="tc-done-toggle"><input type="checkbox" class="tc-done-checkbox" data-test="c2"> Ran Check my data once, clean</label><br>
 <label class="tc-done-toggle"><input type="checkbox" class="tc-done-checkbox" data-test="c3"> Understand NextExamDate vs. ExamFrequencyWeeks and what locks in automatically</label>
 
+<details class="vn" markdown="1">
+<summary>🇻🇳 Tiếng Việt — Dành cho quản lý vùng mới (click to expand)</summary>
+
+Phần này giả định đã quen với vai trò quản lý vùng ở trang [Organization](./organization.md).
+
+1. Xin quyền truy cập hai bảng tính sẽ dùng suốt năm: **Master Registration** và **Regional Pacing** (đường link và toàn bộ cấu trúc cột ở mục [Tài nguyên cho quản lý vùng & ban tổ chức](#coordinator-organizer-resources)). Nếu link yêu cầu xin quyền, đó là điều bình thường ở lần đầu.
+2. Trên tab `Teams` của Master Registration, tìm các đội được giao cho mình (`CoordinatorID` trùng với `Region` của đội, hoặc đội được giao trực tiếp). Trên Regional Pacing, tìm đúng các dòng của những đội đó — đây là nơi theo dõi và sửa `NextExamDate` và `ExamFrequencyWeeks` về sau.
+3. Bấm **MCC Tools → Check my data** (trên cùng Master Registration, cạnh File/Edit/View). Lần đầu, Google có thể hiện màn hình xin quyền — bấm **Allow**. Một tab **Data Check** sẽ xuất hiện; dòng xanh là ổn, dòng đỏ cho biết chính xác cần sửa gì. An toàn để chạy bất cứ lúc nào — chỉ báo cáo, không bao giờ thay đổi gì.
+4. Không cần làm gì để thực sự lên lịch một bài thi: khi `NextExamDate` của một đội rơi vào trong 7 ngày tới, hệ thống sẽ tự khóa lịch một buổi thi qua đêm. Nếu vừa đổi ngày và không muốn chờ, **MCC Tools → Lock in changed exam dates** sẽ chạy đúng việc kiểm tra đó ngay lập tức.
+5. Khi có kết quả, `NextExamDate`, `LastExamDate`, và (nếu Pass) `NextChapter` sẽ tự cập nhật. Nếu Fail mà vẫn còn lượt, một buổi thi lại được tạo tự động và dòng của gia đình sẽ báo là quản lý vùng sẽ liên hệ. Đến lần thi thứ ba không đạt, hệ thống dừng lại và chờ quyết định của quản lý vùng — thi lại chương đó, chuyển sang chương khác, hay bất cứ cách nào phù hợp.
+6. Nếu một gia đình thực sự cần reset lại bài thi hiện tại, **MCC Tools → Reset my test suite** có thể tự làm được (khi thầy Nghĩa đã bật tính năng này) — xem mục [Tài nguyên cho quản lý vùng & ban tổ chức](#coordinator-organizer-resources) để biết chính xác chức năng này làm được gì và không làm được gì.
+7. Ngày qua ngày: một gia đình báo Form "không hoạt động" hầu như luôn là do đăng nhập sai tài khoản Google. Một bài nộp trễ (trong vòng 30 phút) được tự động chấp nhận; quá thời gian đó sẽ bị từ chối và gia đình được thông báo ngay trên bảng. Cả hai điều này được giải thích đầy đủ ở mục [Tài nguyên cho quản lý vùng & ban tổ chức](#coordinator-organizer-resources).
+
+</details>
+
 ---
 
 ## For a new grader
@@ -135,6 +165,17 @@ This is for Toan and Nghia, the two people who actually grade submissions each w
 
 <label class="tc-done-toggle"><input type="checkbox" class="tc-done-checkbox" data-test="g1"> Found this week's grading sheet</label><br>
 <label class="tc-done-toggle"><input type="checkbox" class="tc-done-checkbox" data-test="g2"> Know the Done checkbox rule and who pulls results in</label>
+
+<details class="vn" markdown="1">
+<summary>🇻🇳 Tiếng Việt — Dành cho người chấm bài mới (click to expand)</summary>
+
+Phần này dành cho thầy Toàn và thầy Nghĩa, hai người trực tiếp chấm bài mỗi tuần.
+
+1. Mỗi tuần có một bảng tính chia sẻ riêng, `MCC Grading — <số tuần ISO>`, được tạo tự động khi cần lần đầu — kiểm tra mục "Shared with me" trên Drive, hoặc tìm "MCC Grading".
+2. Với mỗi bài nộp: điền `Score` (0–100), `Comments` (bất cứ nhận xét nào muốn gia đình thấy), và `GradedBy`. Chỉ đánh dấu `Done` khi dòng đó thực sự đã chấm xong — một dòng chấm dở nên để trống, vì chỉ những dòng `Done` mới được đưa vào hệ thống.
+3. Việc đưa kết quả vào hệ thống là bước của thầy Nghĩa, không phải của người chấm — mục **MCC Tools → Pull weekly grading** chỉ hoạt động với tài khoản của thầy Nghĩa. Sau khi đã đánh dấu `Done` các dòng của mình, báo cho thầy Nghĩa biết (hoặc thầy sẽ tự chạy theo lịch riêng); kết quả sẽ tự động chuyển vào bảng công khai, với nhận xét vào đúng cột `Comment` của dòng đó — chữ thường, hoặc một đường link có thể bấm nếu đã dán link.
+
+</details>
 
 <div class="tc-progress" id="tc-progress">
   <div class="tc-progress-row">
@@ -194,6 +235,24 @@ The club runs on three Google Sheets and one Form, kept deliberately separate so
 **Coordinators** are the volunteers who directly schedule and pace each region's teams — they get edit access to both Master Registration and Regional Pacing. **Club organizers** is a separate, broader, read-only role for volunteers who run club activities day to day; they can see rosters, standings, and family/team data (Master Registration and Regional Pacing, both view-only) but never edit anything. **Students** never open either spreadsheet at all — the Test Paper Form is the only thing they (or their parents) ever touch. See [Organization](./organization.md) for who's who.
 
 (There's a separate registration Form — the one families use to register for a team in the first place — that isn't part of this page; a coordinator is the one who takes what it collects and enters it into Master Registration.)
+
+<details class="vn" markdown="1">
+<summary>🇻🇳 Tiếng Việt — Dữ liệu của câu lạc bộ nằm ở đâu (click to expand)</summary>
+
+Câu lạc bộ vận hành trên ba bảng tính Google Sheets và một Form, được tách riêng có chủ đích để những gì công khai an toàn cho mọi người xem, những gì chỉnh sửa được bởi người phụ trách nhịp độ, những gì riêng tư cho từng gia đình, và những gì học sinh dùng để thực sự làm bài thi không bao giờ nằm chung một file:
+
+| Bảng tính / Form | Chứa gì | Ai được mở |
+|---|---|---|
+| **MCC Public Roster** | Mọi đội đang hoạt động — tên, đội, level, khu vực, trạng thái — cùng một dòng theo dõi mỗi bài thi: đã mở đề, đã nộp, đã chấm. | Bất kỳ ai có link |
+| **MCC Master Registration** | Đầy đủ thông tin học sinh và phụ huynh, phân đội, và danh sách quản lý vùng, người chấm bài của câu lạc bộ. | Quản lý vùng (chỉnh sửa) & ban tổ chức (chỉ xem) |
+| **MCC Regional Pacing** | Mỗi khu vực một tab (UK, FR, EC, WC, VN) — chương kế tiếp, tần suất thi, và ngày thi kế tiếp của từng đội — do quản lý vùng đó tự tay chỉnh sửa. | Quản lý vùng (chỉnh sửa) & ban tổ chức (chỉ xem) |
+| **Test Paper Open/Submit Form** | Nơi học sinh mở đề thi và, sau đó, nộp bài giải — một link cố định, dùng suốt năm cho mọi đội và mọi bài thi. | Chỉ học sinh, xác định qua tài khoản Google đã xác thực của chính mình |
+
+**Quản lý vùng** là các tình nguyện viên trực tiếp lên lịch và điều chỉnh nhịp độ cho từng đội trong khu vực của mình — họ có quyền chỉnh sửa cả Master Registration lẫn Regional Pacing. **Ban tổ chức** là một vai trò riêng, rộng hơn, chỉ xem, dành cho tình nguyện viên vận hành hoạt động hàng ngày của câu lạc bộ; họ xem được danh sách, bảng xếp hạng, và dữ liệu gia đình/đội (cả Master Registration và Regional Pacing, đều chỉ xem) nhưng không bao giờ chỉnh sửa được gì. **Học sinh** không bao giờ mở bất kỳ bảng tính nào cả — Test Paper Form là thứ duy nhất các em (hoặc phụ huynh) từng chạm tới. Xem [Organization](./organization.md) để biết ai là ai.
+
+(Có một Form đăng ký riêng — Form mà các gia đình dùng để đăng ký một đội lần đầu — không thuộc phạm vi trang này; quản lý vùng là người lấy thông tin từ đó và nhập vào Master Registration.)
+
+</details>
 
 ## Glossary
 
@@ -299,6 +358,19 @@ If anything on your row looks wrong — a misspelled name, the wrong team, level
 <img src="./img/current-standings/roster-exams.png" alt="The Exams tab of the MCC Public Roster spreadsheet, showing test sessions and their status">
 <figcaption>The <code>Exams</code> tab — one row per test, updated as each one is placed, submitted, and graded. (Cropped to the identifying and status columns; the full row also tracks timestamps and Drive links in between.)</figcaption>
 </figure>
+
+<details class="vn" markdown="1">
+<summary>🇻🇳 Tiếng Việt — Bảng công khai (Public Roster) (click to expand)</summary>
+
+**MCC Public Roster** là bảng tính duy nhất mà bất kỳ ai — học sinh, phụ huynh, hay khách — có thể mở trực tiếp. Tab `Roster` liệt kê mọi đội đang hoạt động; tab `Exams` cho biết, với mỗi bài thi, đề đã được cấp, đã nộp, hay đã chấm chưa, tự động cập nhật khi hệ thống chạy.
+
+**Các cột trên `Roster`:** `FullName`, `TeamID`, `Level`, `Region`, `Status` — một bản sao đã lọc, an toàn để công khai, của tab `Students`.
+
+**Các cột trên `Exams`** (mỗi dòng là một bài thi) — xem mục [Bảng thuật ngữ](#glossary) ở trên để biết ý nghĩa từng cột, kể cả `Comment` và mọi thông báo mà `Status` có thể hiện ra.
+
+Nếu có gì trên dòng của mình trông không đúng — tên viết sai, sai đội, sai level, hay sai khu vực — hãy báo quản lý vùng; đây không phải điều tự sửa được.
+
+</details>
 
 ## For Parents & Students
 
@@ -662,7 +734,31 @@ Almost always: they're signed into an unregistered Google account. Confirm which
 The system automatically accepts a late submission up to 30 minutes past deadline (flagged, not penalized further by the system itself — see [Tests & Yearbook](./tests.md) for how grading works). Past that window, or a submission with no recorded start, is rejected outright and the family is told, on the sheet itself, exactly what to do. If a family reaches out to you about one of these, the fix is almost always what the `Status` message on their row already says — check that first.
 
 <details class="vn" markdown="1">
-<summary>🇻🇳 Tiếng Việt — Hằng ngày, với vai trò quản lý vùng (click to expand)</summary>
+<summary>🇻🇳 Tiếng Việt — Tài nguyên cho quản lý vùng & ban tổ chức (click to expand)</summary>
+
+<div class="note" markdown="1">
+**Quyền truy cập giới hạn.** Hai bảng tính dưới đây chứa thông tin liên hệ gia đình và dữ liệu nhịp độ tự tay chỉnh sửa, nên được chia sẻ riêng lẻ, không công khai. Cả hai đều cấp cho quản lý vùng (quyền chỉnh sửa) và ban tổ chức (chỉ xem). Mở một link bên dưới mà chưa có quyền sẽ khiến Google tự động xin quyền; nếu đáng lẽ có quyền mà không có, liên hệ qua trang [Organization](./organization.md).
+</div>
+
+**MCC Master Registration** — các tab `Students`, `Teams`, `Coordinators`, `Graders`, và `Organizers`, cùng một tab `Data Check` báo trước bất kỳ điều gì không nhất quán trước khi nó gây ra vấn đề về sau. (Tab `Organizers` chỉ là danh sách liên hệ cho vai trò đó — là hồ sơ của thầy Nghĩa về ai là ban tổ chức, không phải thứ ban tổ chức tự mở; quyền của họ trên bảng tính này, cũng như Regional Pacing bên dưới, chỉ để xem, không bao giờ chỉnh sửa.)
+
+**`Students`** — mỗi dòng một học sinh: `StudentID` (mã cố định, không đổi dù tên hay email thay đổi), `FullName`, `VerifiedEmail` (email mà chính Form đăng ký ghi nhận từ người đăng nhập — giá trị duy nhất mọi kịch bản tự động tin tưởng), `AlternateEmail` (chỉ để liên hệ dự phòng), `ParentName`/`ParentEmail`, `Country`/`Region`/`Timezone`, `Grade` (1–12), `Level` (1–4), `TeamID` (để trống nếu chưa vào đội, nếu không phải trùng với một dòng thật trên `Teams`), `Status` (`pending-team`/`active`/`withdrawn`), và `Note` để ghi chú tự do.
+
+**`Teams`** — mỗi dòng một đội, đây là nơi một `TeamID` được tạo ra: `TeamID`, `TeamName` (tùy chọn), `Level`, `Member1ID`…`Member3ID` (tối đa 3 `StudentID`), `Region` (khu vực "nhà" của đội, dùng để tìm quản lý vùng mặc định), `CoordinatorID` (mặc định theo `Region`, nhưng luôn có thể sửa tay — đây là cách một đội có thành viên ở hai khu vực khác nhau vẫn có một quản lý vùng rõ ràng), `FolderID` (không dùng — để trống), và `Active` (TRUE/FALSE).
+
+**`Coordinators`** — `CoordinatorID`, `Name`, `Email`, `RegionsCovered` (chỉ là phân công *mặc định*, không phải giới hạn cứng), `Note`. Mọi quản lý vùng đều có quyền chỉnh sửa nhịp độ của mọi khu vực, không chỉ khu vực của mình, để có thể thay thế cho nhau khi cần.
+
+**`Organizers`** — `OrganizerID`, `Name`, `Email`, `Note`. Tab này chỉ là danh sách liên hệ cho vai trò chỉ-xem đó; tự nó không cấp quyền gì.
+
+**`Graders`** — `GraderID`, `Name`, `Email`, `Note`.
+
+**`Papers`** — mỗi dòng một đề thi đang tồn tại: `Level` (1–4), `Chapter` (số nguyên), `Attempt` (1, 2, 3… — một lần thi lại luôn là một file thực sự khác, lấy từ kho đề dự trữ, không bao giờ dùng lại đề cũ), `DriveFileID` (mã Drive của bản chính đề đó), `Note`. Bộ ba `(Level, Chapter, Attempt)` là khóa tra cứu để tìm đúng file — chỉ có đúng một file Drive cho mỗi tổ hợp, mặc định không chia sẻ cho ai; khi một đội bắt đầu bài thi đó, họ được cấp quyền xem tạm thời cho đúng file đó trong thời gian truy cập, rồi quyền đó bị thu hồi. Không bao giờ có bản sao riêng cho từng đội.
+
+*(Mục "How to get a DriveFileID and add a new paper" ngay bên dưới là việc riêng của thầy Nghĩa khi thêm đề thi mới, không phải việc của quản lý vùng, nên không dịch chi tiết ở đây.)*
+
+**MCC Regional Pacing** — mỗi khu vực một tab, cùng một tab `Standings` tự động tính lại từ kết quả đã chấm.
+
+Cùng các cột trên mọi tab khu vực: `TeamID`/`TeamName` (khóa nối lại với Master Registration), `Level` (chỉ sao chép lúc thêm dòng lần đầu — **không tự cập nhật sau đó**; nếu một đội lên level giữa năm, cột này cần sửa tay), `NextChapter` (chương kế tiếp đội sẽ thi, tự động tiến sau khi một bài thi được chấm, dù pass hay fail — quản lý vùng muốn đội làm lại một chương vẫn cần tự sửa cột này), `ExamFrequencyWeeks` (1, 2, hoặc 3 tuần — cột các gia đình hay xin đổi nhất, sửa được bất cứ lúc nào), `LastExamDate` (tự động cập nhật sau khi chấm), `NextExamDate` (= `LastExamDate` + `ExamFrequencyWeeks` × 7 ngày, tự tính lại sau mỗi lần chấm — đây là ngày quản lý vùng thực sự cần theo dõi), `LastChangedDate` (chỉ để tham khảo — lần cuối dòng này bị sửa tay), và `Note`.
 
 Phần còn lại của mục này giả định đã quen với vai trò quản lý vùng ở trang [Organization](./organization.md) và bảng Regional Pacing ở trên, nơi thiết lập nhịp độ của từng đội.
 
@@ -699,6 +795,12 @@ Quản lý vùng không cần chờ thầy Nghĩa báo có gì đó không ổn.
 Lần đầu làm việc này, Google có thể hiện một màn hình xin quyền truy cập — đây là điều bình thường, không phải dấu hiệu có gì sai; bấm **Allow** để tiếp tục, việc kiểm tra sẽ chạy.
 
 Một tab mới tên **Data Check** sẽ xuất hiện (hoặc cập nhật, nếu đã có sẵn), mỗi dòng là một mục được kiểm tra. Dòng màu xanh nghĩa là phần đó ổn. Dòng màu đỏ sẽ giải thích chính xác cần xem gì và cần làm gì — ví dụ một học sinh ghi tên đội chưa tồn tại, hoặc một đội chưa có quản lý phụ trách. Có thể chạy kiểm tra này bất cứ lúc nào, bao nhiêu lần cũng được; nó không bao giờ thay đổi dữ liệu, chỉ báo cáo về dữ liệu thôi.
+
+### Nếu một gia đình cần reset bài thi hiện tại
+
+**MCC Tools → Reset my test suite** cho phép tự reset lại lần thi *hiện tại* của một trong các đội mình phụ trách — đưa về một lần thi mới, chưa bắt đầu (hủy một kết quả Pass nếu đã lỡ tiến lên), với một buổi thi mới được khóa lịch ngay lập tức. Chỉ tác động đến đội của chính mình, không bao giờ đụng đến đội khác, và nếu phụ trách nhiều hơn một đội, hệ thống sẽ hỏi rõ `TeamID` nào trước khi làm bất cứ điều gì.
+
+Tính năng này mặc định đang tắt — bấm vào có thể thấy *"Self-service reset isn't turned on for this round"* thay vì được reset ngay. Đây không phải lỗi; trong trường hợp đó, nhắn trực tiếp cho thầy Nghĩa và thầy sẽ reset lại bài thi hiện tại cho đội đó. Nếu dòng Regional Pacing của đội đã bị xóa hẳn chứ không chỉ cần reset, mục này không thể khôi phục lại được — cũng là trường hợp cần nhờ thầy Nghĩa, không phải mục menu này.
 
 ### Thay đổi nhịp độ hoặc ngày thi của một đội
 
@@ -753,6 +855,31 @@ A failing result doesn't mean you need to do anything else yourself. The family'
 ### What happens at the third failed attempt
 
 If a team fails their third attempt at a chapter, nothing further happens automatically -- no new retake is created. Their row instead reads *"...This chapter needs your coordinator's decision."* That's deliberate: at that point it's a real judgment call for the family's coordinator (repeat the chapter, move on anyway, or whatever fits), not something this system should guess at on its own.
+
+<details class="vn" markdown="1">
+<summary>🇻🇳 Tiếng Việt — Dành cho người chấm bài (click to expand)</summary>
+
+### Bảng chấm bài hàng tuần lấy từ đâu
+
+Mỗi tuần có một bảng tính chia sẻ riêng, `MCC Grading — <số tuần ISO>` (ví dụ `MCC Grading — 2026-W37`) — chỉ cấp quyền chỉnh sửa cho người chấm bài, không bao giờ chia sẻ cho gia đình. Bảng được tạo tự động khi cần lần đầu cho một tuần cụ thể; không cần tự tạo hay đặt tên. Sau khi đã có, bảng vẫn nằm trong Google Drive ("Shared with me", hoặc tìm "MCC Grading") suốt thời gian chấm bài tuần đó còn tiếp diễn.
+
+### Điền gì, và khi nào đánh dấu Done
+
+Mỗi dòng là một bài đã chấm: điền `Score` (0–100, theo thang điểm quen thuộc của câu lạc bộ), `Comments` (bất kỳ nhận xét nào muốn gia đình thấy — theo từng bài hay tổng quát, tùy ý), và `GradedBy` (tên mình). Chỉ đánh dấu `Done` khi dòng đó thực sự đã xong. **Một dòng chấm dở nên để trống ô Done** — hệ thống chỉ đọc những dòng đã đánh dấu `Done`, để một điểm số còn đang phân vân không bao giờ vô tình lọt vào dòng của một gia đình. Không cần vội, có thể chấm theo tốc độ của riêng mình trong tuần. **Đưa kết quả vào hệ thống là bước của thầy Nghĩa, không phải của người chấm** — mục "MCC Tools → Pull weekly grading" chỉ hoạt động với tài khoản của thầy; sau khi đã đánh dấu `Done` các dòng của mình, báo cho thầy biết (hoặc thầy tự chạy theo lịch riêng) để kết quả được đưa vào.
+
+### Điều gì tự động xảy ra sau khi đánh dấu Done và kết quả được đưa vào hệ thống
+
+Khi một dòng đã `Done` và kết quả được đưa vào, dòng tương ứng của gia đình trên bảng Exams & Standing công khai sẽ tự cập nhật: `Score`, `Result` (`Pass` nếu từ 51 điểm trở lên, `Fail` nếu không — thang điểm đã có từ trước, không có gì mới), và một mốc thời gian đều được ghi tự động. `Comments` của mình sẽ vào đúng cột `Comment` riêng trên dòng đó — chữ thường, hoặc nếu dán một đường link PDF, một link có thể bấm thẳng vào — nên đúng là nhận xét sẽ đến tay gia đình, không cần báo riêng hay chia sẻ gì thêm. Một dòng chưa đánh dấu `Done` sẽ được để yên; lần đưa kết quả sau, khi đã đánh dấu, sẽ tự động lấy dòng đó.
+
+### Một lần Fail nghĩa là gì từ đây
+
+Một kết quả Fail không có nghĩa là cần tự làm thêm gì. Dòng của gia đình sẽ tự động hiện một thông báo như *"Not passed — Attempt 1 of 3. Contact your coordinator to schedule a retake"* — một buổi thi lại mới cho cùng chương đó được tạo tự động. Chính quản lý vùng của gia đình, không phải người chấm bài, là người liên hệ và sắp xếp thời gian thi lại thực tế; hệ thống không tự gửi email cho ai cả. Một đội được tối đa ba lần thi (hai lần thi lại) cho mỗi chương.
+
+### Điều gì xảy ra ở lần thi thứ ba không đạt
+
+Nếu một đội fail lần thi thứ ba của một chương, sẽ không có gì tự động xảy ra thêm — không có buổi thi lại mới nào được tạo. Dòng của đội thay vào đó sẽ hiện *"...This chapter needs your coordinator's decision."* Đây là chủ ý: đến lúc đó là một quyết định thực sự của quản lý vùng gia đình đó (thi lại chương, cho qua, hay bất cứ cách nào phù hợp), không phải điều hệ thống nên tự đoán.
+
+</details>
 
 ---
 
