@@ -97,5 +97,85 @@ Your practice team, `T-UAT-2`, has one member (Chi Khanh Pham), Level 3, and is 
 </div>
 </div>
 
-Once Toan To has graded this submission (see his own page), come back and check the <code>Exams</code> row one more time — score, Pass/Fail, and who graded it should all be filled in, and your Regional Pacing row's <code>NextChapter</code> should advance if the result was a Pass.
+## Part 3 — Grading: Toan joins in
+
+<div class="note" markdown="1">
+**Why this part exists.** A test isn't really finished until it's graded and the family can see the result -- so this round follows Chi's submission all the way through Toan To grading it, not just up to the point where it's sitting in a queue.
+</div>
+
+<div class="tc-step">
+<div class="tc-step-text">
+<strong>10. [Grader]</strong> Toan, signed into <code>tobatoan@gmail.com</code>, on the Master Registration Spreadsheet clicks <strong>MCC Tools → Grader tools → Open this week's grading spreadsheet</strong>.<br>
+<em>What you should see (Toan):</em> a dialog with this week's "MCC Grading" spreadsheet and its link. Opening it shows a row for Chi's submission -- <code>SessionID</code>, <code>TeamID</code> <code>T-UAT-2</code> -- with <code>Score</code>/<code>Comments</code>/<code>Done</code> still blank.
+</div>
+</div>
+
+<div class="tc-step">
+<div class="tc-step-text">
+<strong>11. [Grader]</strong> Toan opens the submitted file from that row, then on the grading sheet fills in a <code>Score</code> of 51 or higher (a Pass), writes something in <code>Comments</code>, fills <code>GradedBy</code>, and checks <code>Done</code>.<br>
+<em>What you should see (Toan):</em> the row saves normally, the same as typing into any spreadsheet.
+</div>
+</div>
+
+<div class="tc-step">
+<div class="tc-step-text">
+<strong>12. [Grader]</strong> Toan clicks <strong>MCC Tools → Grader tools → Pull weekly grading</strong>.<br>
+<em>What you should see (Toan):</em> a confirmation naming 1 row graded and written back.
+</div>
+</div>
+
+<div class="tc-step">
+<div class="tc-step-text">
+<strong>13. [Coordinator]</strong> Check <code>T-UAT-2</code>'s <code>Exams</code> row one more time, then its Regional Pacing row.<br>
+<em>What you should see:</em> <code>Score</code>, <code>Result</code> ("Pass"), <code>GradedUTC</code>, <code>GradedBy</code>, and Toan's comment in the <code>Comment</code> column are all filled in, status "Graded" -- and on Regional Pacing, <code>NextChapter</code> has moved forward by one.
+</div>
+</div>
+
+## Part 4 — A team that doesn't pass, but still has retakes left
+
+<div class="note" markdown="1">
+**The situation.** A Fail shouldn't just sit there waiting for someone to notice -- the system should schedule a retake at the same chapter on its own, without you having to catch it and act by hand.
+</div>
+
+**Before you start:** reset `T-UAT-2` (see above), then repeat Part 2's steps, but this time Toan grades it with a score **under 51** (a Fail) instead of a Pass.
+
+<div class="tc-step">
+<div class="tc-step-text">
+<strong>14. [Coordinator]</strong> After the Fail is recorded, check <code>T-UAT-2</code>'s <code>Exams</code> history on the Public Roster.<br>
+<em>What you should see:</em> the original row shows Result: Fail; a second row exists on its own, marked Attempt 2, same chapter, with a fresh date -- and the family's status message reads something like "Not passed — Attempt 1 of 3. Contact your coordinator to schedule a retake."
+</div>
+</div>
+
+<div class="tc-step">
+<div class="tc-step-text">
+<strong>15. [Coordinator]</strong> Check the Regional Pacing row for <code>T-UAT-2</code>.<br>
+<em>What you should see:</em> the next-chapter number is unchanged -- a retake doesn't move the team forward; only a Pass does.
+</div>
+</div>
+
+## Part 5 — Someone signed into the wrong email
+
+<div class="note" markdown="1">
+**The situation.** This simulates the single most common real mix-up -- a parent using their own email instead of the student's registered one, or a typo'd address. The form shouldn't misattribute the submission to the wrong team, or show a confusing error -- it should simply not recognize the person, and tell them nothing either way, same as every other exception above.
+</div>
+
+**Before you start:** reset `T-UAT-2`.
+
+<div class="tc-step">
+<div class="tc-step-text">
+<strong>16. [Coordinator]</strong> Signed in as your own account, <code>tranngocanh0910@gmail.com</code> -- which isn't registered to <code>T-UAT-2</code>, Chi's is -- open the Test Paper Open/Submit Form and choose "I'm ready to open my test paper."<br>
+<em>What you should see:</em> the form's ordinary confirmation message -- no visible error of any kind.
+</div>
+</div>
+
+<div class="tc-step">
+<div class="tc-step-text">
+<strong>17. [Coordinator]</strong> Check the <code>Exams</code> sheet.<br>
+<em>What you should see:</em> nothing changed anywhere -- no row was touched. If a real family ever reports "nothing happened when I clicked start," this is the first thing to check -- most often, it's simply the wrong email signed in.
+</div>
+</div>
+
+<div class="note" markdown="1">
+**Conventions used above.** What **[Coordinator]**/**[Student]**/**[Grader]** mean, and how "Reset my test suite" works, are explained once in ["For a new coordinator"](./current-standings.md#for-a-new-coordinator) and ["For a new grader"](./current-standings.md#for-a-new-grader) on Current Standings; nothing on this page repeats it.
+</div>
 

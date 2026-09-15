@@ -4,7 +4,7 @@ title: UAT — Toan To (Grader)
 
 # Your test suite: Toan To (Grader)
 
-Unlike the other testers, grading isn't scoped to one family's team — a real grader sees submissions from whichever teams have them, and this round is no different. You'll be grading practice submissions from up to three teams: `T-UAT-1` (Henry Ho & Michael Le), `T-UAT-3` (Nam Phong Nguyen), and `T-UAT-5` (your own son Jason To's practice team) — all placeholder data, nothing real.
+Unlike the other testers, grading isn't scoped to one family's team — a real grader sees submissions from whichever teams have them, and this round is no different. You'll be grading practice submissions from up to four teams: `T-UAT-1` (Henry Ho & Michael Le), `T-UAT-2` (Chi Khanh Pham), `T-UAT-3` (Nam Phong Nguyen), and `T-UAT-5` (your own son Jason To's practice team) — all placeholder data, nothing real.
 
 <div class="note" markdown="1">
 **This page depends on the others.** There's nothing to grade until at least one of those teams' students has actually clicked "Submit my solution" on their own page. If you check the Grading sheet and it's empty, that's not a bug — it just means nobody's submitted yet. Check back later, or ask Nghia where things stand.
@@ -20,7 +20,7 @@ Each week's submissions land in a spreadsheet named **"MCC Grading — &lt;that 
 <div class="tc-step-text">
 <strong>1. [Grader]</strong> On the <a href="https://docs.google.com/spreadsheets/d/13byGPiBQW00egpC2GIZenAsKhMCS7qbCykZSUtbE7jk/edit?usp=sharing">Master Registration Spreadsheet</a>, click <strong>MCC Tools → Grader tools → Open this week's grading spreadsheet</strong>.<br>
 <em>Why it matters:</em> this is the one step that used to only work because Nghia already knew where every week's sheet was, having created each one himself by hand -- now it finds (or creates) it and shows you the link directly, no need to already have it bookmarked.<br>
-<em>What you should see:</em> a dialog naming this week's grading spreadsheet with its link. Open that link — a row for each submitted practice session — <code>SessionID</code>, <code>TeamID</code> (one of <code>T-UAT-1</code>/<code>T-UAT-3</code>/<code>T-UAT-5</code>), and empty <code>Score</code>/<code>Comments</code>/<code>Done</code> columns waiting for you.
+<em>What you should see:</em> a dialog naming this week's grading spreadsheet with its link. Open that link — a row for each submitted practice session — <code>SessionID</code>, <code>TeamID</code> (one of <code>T-UAT-1</code>/<code>T-UAT-2</code>/<code>T-UAT-3</code>/<code>T-UAT-5</code>), and empty <code>Score</code>/<code>Comments</code>/<code>Done</code> columns waiting for you.
 </div>
 </div>
 

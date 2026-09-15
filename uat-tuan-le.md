@@ -46,3 +46,7 @@ Your practice team, `T-UAT-4` ("The Mathematics Manipulators (UAT)"), has one me
 **That's it for this round.** If anything above was confusing, hard to find, or didn't make sense without extra explanation — that's exactly the kind of feedback this round is for. Tell Nghia directly, in whatever way you'd normally reach him.
 </div>
 
+<div class="note" markdown="1">
+**Conventions used above.** What the pages linked from [Current Standings](./current-standings.md) mean by "coordinator," "grader," and so on is explained once, in ["Start here"](./current-standings.md#start-here); nothing on this page repeats it. Your page is intentionally the shortest of the group -- since you're testing the Parent view, not running a test yourself, there isn't a "reset" step or a "[Grader] joins in" part to walk through the way the other testers' pages have.
+</div>
+

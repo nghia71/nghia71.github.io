@@ -91,5 +91,85 @@ Your practice team, `T-UAT-1`, has two members (Henry Ho, Michael Le), Level 3, 
 </div>
 </div>
 
-Once Toan To has graded this submission (see his own page), come back and check the <code>Exams</code> row one more time — score, Pass/Fail, and who graded it should all be filled in, and your Regional Pacing row's <code>NextChapter</code> should advance if the result was a Pass.
+## Part 3 — Grading: Toan joins in
+
+<div class="note" markdown="1">
+**Why this part exists.** A test isn't really finished until it's graded and the family can see the result -- so this round follows Michael's submission all the way through Toan To grading it, not just up to the point where it's sitting in a queue.
+</div>
+
+<div class="tc-step">
+<div class="tc-step-text">
+<strong>9. [Grader]</strong> Toan, signed into <code>tobatoan@gmail.com</code>, on the Master Registration Spreadsheet clicks <strong>MCC Tools → Grader tools → Open this week's grading spreadsheet</strong>.<br>
+<em>What you should see (Toan):</em> a dialog with this week's "MCC Grading" spreadsheet and its link. Opening it shows a row for Michael's submission -- <code>SessionID</code>, <code>TeamID</code> <code>T-UAT-1</code> -- with <code>Score</code>/<code>Comments</code>/<code>Done</code> still blank.
+</div>
+</div>
+
+<div class="tc-step">
+<div class="tc-step-text">
+<strong>10. [Grader]</strong> Toan opens the submitted file from that row (the link on <code>T-UAT-1</code>'s <code>Exams</code> row, on the Public Roster), then on the grading sheet fills in a <code>Score</code> of 51 or higher (a Pass), writes something in <code>Comments</code>, fills <code>GradedBy</code>, and checks <code>Done</code>.<br>
+<em>What you should see (Toan):</em> the row saves normally, the same as typing into any spreadsheet.
+</div>
+</div>
+
+<div class="tc-step">
+<div class="tc-step-text">
+<strong>11. [Grader]</strong> Toan clicks <strong>MCC Tools → Grader tools → Pull weekly grading</strong>.<br>
+<em>What you should see (Toan):</em> a confirmation naming 1 row graded and written back.
+</div>
+</div>
+
+<div class="tc-step">
+<div class="tc-step-text">
+<strong>12. [Coordinator]</strong> Check <code>T-UAT-1</code>'s <code>Exams</code> row one more time, then its Regional Pacing row.<br>
+<em>What you should see:</em> <code>Score</code>, <code>Result</code> ("Pass"), <code>GradedUTC</code>, <code>GradedBy</code>, and Toan's comment in the <code>Comment</code> column are all filled in, status "Graded" -- and on Regional Pacing, <code>NextChapter</code> has moved forward by one.
+</div>
+</div>
+
+## Part 4 — A submission that arrives a little late
+
+<div class="note" markdown="1">
+**The situation.** Real families sometimes finish right at the wire, or a few minutes past it. A slightly-late submission shouldn't be thrown out -- it should just be flagged as late, and still count.
+</div>
+
+**Before you start:** reset `T-UAT-1` (see above), then repeat steps 4-5 above to start the test again.
+
+<div class="tc-step">
+<div class="tc-step-text">
+<strong>13. [Student 2]</strong> Signed into <code>michael.learn.to.code.2015@gmail.com</code>, wait until just a few minutes past the deadline shown on the <code>Exams</code> row, then submit as before.<br>
+<em>What you should see:</em> the same ordinary confirmation message -- nothing on screen tells you whether you were on time or not.
+</div>
+</div>
+
+<div class="tc-step">
+<div class="tc-step-text">
+<strong>14. [Coordinator]</strong> Check the <code>Exams</code> row.<br>
+<em>What you should see:</em> the submission is accepted -- the file link and submission time are filled in, and the status reads "Submitted — N minutes late," not rejected.
+</div>
+</div>
+
+## Part 5 — When a test date is stuck in the past
+
+<div class="note" markdown="1">
+**The situation.** A stale or mistyped test date shouldn't get quietly auto-corrected, or silently skipped forever -- it should be flagged as something you actually need to look at and fix. This part doesn't need Henry or Michael at all -- it's entirely a coordinator/spreadsheet check.
+</div>
+
+**Before you start:** reset `T-UAT-1`, then clear its freshly-created row from the <code>Exams</code> tab on the Public Roster (the reset always locks one in as its last step, and it has to be cleared first or it would mask this problem). Then, on Regional Pacing's <code>EC</code> tab, hand-set `T-UAT-1`'s <code>NextExamDate</code> to well before today.
+
+<div class="tc-step">
+<div class="tc-step-text">
+<strong>15. [Coordinator]</strong> Click <strong>MCC Tools → Coordinator tools → Lock in changed exam dates</strong>.<br>
+<em>What you should see:</em> the confirmation dialog itself names <code>T-UAT-1</code> under "Needs attention -- NextExamDate is in the past for," and shows that stale date -- right there in the dialog.
+</div>
+</div>
+
+<div class="tc-step">
+<div class="tc-step-text">
+<strong>16. [Coordinator]</strong> Set the next test date back to today, then click the same menu item again.<br>
+<em>What you should see:</em> now the dialog reports a fresh session locked in for <code>T-UAT-1</code>, dated today.
+</div>
+</div>
+
+<div class="note" markdown="1">
+**Conventions used above.** What **[Coordinator]**/**[Student 1]**/**[Student 2]**/**[Grader]** mean, and how "Reset my test suite" works, are explained once in ["For a new coordinator"](./current-standings.md#for-a-new-coordinator) and ["For a new grader"](./current-standings.md#for-a-new-grader) on Current Standings; nothing on this page repeats it.
+</div>
 

@@ -74,5 +74,91 @@ This page is yours alone. It uses two dedicated practice teams — `T-UAT-3` and
 </div>
 </div>
 
-Once Toan To has graded both submissions (see his own page), come back and check both <code>Exams</code> rows one more time — score, Pass/Fail, and who graded it should all be filled in, and each Regional Pacing row's <code>NextChapter</code> should advance if the result was a Pass.
+## Part 3 — Grading: Toan joins in
+
+<div class="note" markdown="1">
+**Why this part exists.** A test isn't really finished until it's graded and the family can see the result -- so this round follows both submissions all the way through Toan To grading them, not just up to the point where they're sitting in a queue.
+</div>
+
+<div class="tc-step">
+<div class="tc-step-text">
+<strong>7. [Grader]</strong> Toan, signed into <code>tobatoan@gmail.com</code>, on the Master Registration Spreadsheet clicks <strong>MCC Tools → Grader tools → Open this week's grading spreadsheet</strong>.<br>
+<em>What you should see (Toan):</em> a dialog with this week's "MCC Grading" spreadsheet and its link. Opening it shows one row for each submission -- <code>TeamID</code> <code>T-UAT-3</code> and <code>T-UAT-5</code> -- with <code>Score</code>/<code>Comments</code>/<code>Done</code> still blank on both.
+</div>
+</div>
+
+<div class="tc-step">
+<div class="tc-step-text">
+<strong>8. [Grader]</strong> For each row, Toan opens the submitted file, fills in a <code>Score</code> of 51 or higher (a Pass), writes something in <code>Comments</code>, fills <code>GradedBy</code>, and checks <code>Done</code>.<br>
+<em>What you should see (Toan):</em> both rows save normally, the same as typing into any spreadsheet.
+</div>
+</div>
+
+<div class="tc-step">
+<div class="tc-step-text">
+<strong>9. [Grader]</strong> Toan clicks <strong>MCC Tools → Grader tools → Pull weekly grading</strong> once.<br>
+<em>What you should see (Toan):</em> a confirmation naming 2 rows graded and written back -- one pull, both teams.
+</div>
+</div>
+
+<div class="tc-step">
+<div class="tc-step-text">
+<strong>10. [Coordinator]</strong> Check both <code>Exams</code> rows one more time, then both Regional Pacing rows.<br>
+<em>What you should see:</em> <code>Score</code>, <code>Result</code> ("Pass"), <code>GradedUTC</code>, <code>GradedBy</code>, and Toan's comment are filled in on both -- each pointing at its own submission and its own comment, never mixed up with the other -- and both <code>NextChapter</code>s have moved forward by one.
+</div>
+</div>
+
+## Part 4 — A team that fails three times in a row
+
+<div class="note" markdown="1">
+**The situation.** The system shouldn't keep retrying a struggling team forever -- it needs to stop at a defined limit (three attempts) and hand the decision back to you, rather than looping endlessly or quietly giving up. This one uses `T-UAT-3` (Nam Phong Nguyen) -- `T-UAT-5` is untouched by this part.
+</div>
+
+**Before you start:** reset `T-UAT-3`, then have Nam Phong Nguyen start and submit as in Part 2, and have Toan grade it a Fail (under 51) -- twice more, so `T-UAT-3` reaches Attempt 3.
+
+<div class="tc-step">
+<div class="tc-step-text">
+<strong>11. [Grader]</strong> Toan grades the Attempt 3 session as a Fail too, the same steps as always.<br>
+<em>What you should see:</em> grading itself completes exactly as normal -- nothing about it looks different from grading a Pass. The retry limit only shows up in the next step.
+</div>
+</div>
+
+<div class="tc-step">
+<div class="tc-step-text">
+<strong>12. [Coordinator]</strong> Check <code>T-UAT-3</code>'s <code>Exams</code> history, then its Regional Pacing row.<br>
+<em>What you should see:</em> Result: Fail on the Attempt 3 row, no Attempt 4 row created automatically, and the next-chapter number still unchanged. The status message now reads something like "...This chapter needs your coordinator's decision" -- a real judgment call for you now (repeat the chapter, move on anyway, or whatever fits Nam's family), not something the system should guess at.
+</div>
+</div>
+
+## Part 5 — A team on break, and making sure resets stay in their own lane
+
+<div class="note" markdown="1">
+**The situation.** Deactivating a team -- a family taking a break, or a team disbanding -- should actually stop new tests from being scheduled for them, without anyone needing to also delete their data. This one uses `T-UAT-5` (Jason To) -- `T-UAT-3` is untouched by this part.
+</div>
+
+<div class="tc-step">
+<div class="tc-step-text">
+<strong>13. [Coordinator]</strong> On the <code>Teams</code> tab, set <code>T-UAT-5</code>'s <code>Active</code> column to <code>FALSE</code>, then click <strong>MCC Tools → Coordinator tools → Lock in changed exam dates</strong>.<br>
+<em>What you should see:</em> <code>T-UAT-5</code> gets no new session and its Regional Pacing row is left completely untouched.
+</div>
+</div>
+
+<div class="tc-step">
+<div class="tc-step-text">
+<strong>14. [Coordinator]</strong> Set <code>Active</code> back to <code>TRUE</code> and click the same menu item again.<br>
+<em>What you should see:</em> now it schedules normally, exactly as before.
+</div>
+</div>
+
+<div class="tc-step">
+<div class="tc-step-text">
+<strong>15. [Coordinator]</strong> One more thing worth checking, since you're the one coordinator here with two teams: click <strong>MCC Tools → Coordinator tools → Reset my test suite</strong>, and reset just <code>T-UAT-3</code>.<br>
+<em>Why it matters:</em> this is the whole safety property the reset button exists for -- resetting one of your teams must never touch your other one.<br>
+<em>What you should see:</em> <code>T-UAT-3</code> resets as expected; <code>T-UAT-5</code>'s Regional Pacing row and Exams history are completely unchanged.
+</div>
+</div>
+
+<div class="note" markdown="1">
+**Conventions used above.** What **[Coordinator]**/**[Student A]**/**[Student B]**/**[Grader]** mean, and how "Reset my test suite" works, are explained once in ["For a new coordinator"](./current-standings.md#for-a-new-coordinator) and ["For a new grader"](./current-standings.md#for-a-new-grader) on Current Standings; nothing on this page repeats it.
+</div>
 
