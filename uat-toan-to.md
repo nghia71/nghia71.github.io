@@ -4,6 +4,10 @@ title: UAT — Toan To (Grader)
 
 # Your test suite: Toan To (Grader)
 
+<div class="note" markdown="1">
+**This page has been folded into each coordinator's own page.** Rather than grading from one separate checklist, your steps now live directly inside each team's own story, right where the submission you're grading actually is: [Son Ho's page](./uat-son-ho.md), [Anh Tran's page](./uat-anh-tran.md), and [Thoa Mai's page](./uat-thoa-mai.md) each have their own "Part — Grading: Toan joins in" section. This page is kept here for reference only -- the content below still describes the same grading mechanics, just not split out by team anymore.
+</div>
+
 Unlike the other testers, grading isn't scoped to one family's team — a real grader sees submissions from whichever teams have them, and this round is no different. You'll be grading practice submissions from up to four teams: `T-UAT-1` (Henry Ho & Michael Le), `T-UAT-2` (Chi Khanh Pham), `T-UAT-3` (Nam Phong Nguyen), and `T-UAT-5` (your own son Jason To's practice team) — all placeholder data, nothing real.
 
 <div class="note" markdown="1">

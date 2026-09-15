@@ -841,10 +841,9 @@ The conventions used below -- what **[Coordinator]**/**[Student 1]**/**[Student 
 </div>
 
 - **[Nghia's own test suite: Testing the pipeline](./testing-the-pipeline.md)** -- the full 14-case walkthrough every coordinator's suite below is drawn from.
-- **[Son Ho's test suite](./uat-son-ho.md)**
-- **[Anh Tran's test suite](./uat-anh-tran.md)**
-- **[Thoa Mai's test suite](./uat-thoa-mai.md)**
-- **[Tuan Le's test suite](./uat-tuan-le.md)**
-- **[Toan To's test suite (grader)](./uat-toan-to.md)**
+- **[Son Ho & Toan To's test suite](./uat-son-ho.md)**
+- **[Anh Tran & Toan To's test suite](./uat-anh-tran.md)**
+- **[Thoa Mai & Toan To's test suite](./uat-thoa-mai.md)**
+- **[Tuan Le's test suite](./uat-tuan-le.md)** -- shorter: the Parent view only, no grading involved.
 
 {% endif %}

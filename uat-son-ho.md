@@ -1,8 +1,8 @@
 ---
-title: UAT — Son Ho, Henry Ho & Michael Le
+title: UAT — Son Ho, Toan To, Henry Ho & Michael Le
 ---
 
-# Your test suite: Son Ho, with Henry Ho & Michael Le
+# Your test suite: Son Ho & Toan To, with Henry Ho & Michael Le
 
 This page is yours alone. It uses one dedicated practice team — `T-UAT-1` — that exists only for this test round and is completely separate from every other family's data, including every other tester's page linked from [Current Standings](./current-standings.md). Nothing you do here can affect a real student's record, and nothing another tester does can affect what you see here.
 
@@ -17,6 +17,7 @@ This page is yours alone. It uses one dedicated practice team — `T-UAT-1` — 
 | **[Coordinator]** | You, wearing your regional-coordinator hat | `sonhho@gmail.com` |
 | **[Student 1]** | Henry Ho | `henryfho@gmail.com` |
 | **[Student 2]** | Michael Le | `michael.learn.to.code.2015@gmail.com` |
+| **[Grader]** | Toan To | `tobatoan@gmail.com` |
 
 Your practice team, `T-UAT-1`, has two members (Henry Ho, Michael Le), Level 3, and is already assigned to you as coordinator on the Coordinators tab.
 
@@ -131,7 +132,7 @@ Your practice team, `T-UAT-1`, has two members (Henry Ho, Michael Le), Level 3, 
 **The situation.** Real families sometimes finish right at the wire, or a few minutes past it. A slightly-late submission shouldn't be thrown out -- it should just be flagged as late, and still count.
 </div>
 
-**Before you start:** reset `T-UAT-1` (see above), then repeat steps 4-5 above to start the test again.
+**Before you start:** reset `T-UAT-1` (see above), then repeat steps 4-5 above to start the test again. One thing to expect: since Part 3's Pass just advanced your team to the next chapter, "Reset my test suite" starts you fresh at *that* chapter now, not back at Chapter 1 -- that's expected, not a bug, and it means this part exercises a different chapter's paper than Part 1 did. The same holds for Part 5 below.
 
 <div class="tc-step">
 <div class="tc-step-text">

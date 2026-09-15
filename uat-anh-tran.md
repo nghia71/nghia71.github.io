@@ -1,8 +1,8 @@
 ---
-title: UAT — Anh Tran & Chi Khanh Pham
+title: UAT — Anh Tran, Toan To & Chi Khanh Pham
 ---
 
-# Your test suite: Anh Tran, with Chi Khanh Pham
+# Your test suite: Anh Tran & Toan To, with Chi Khanh Pham
 
 This page is yours alone. It uses one dedicated practice team — `T-UAT-2` — that exists only for this test round and is completely separate from every other family's data, including every other tester's page linked from [Current Standings](./current-standings.md). Nothing you do here can affect a real student's record, and nothing another tester does can affect what you see here.
 
@@ -16,6 +16,7 @@ This page is yours alone. It uses one dedicated practice team — `T-UAT-2` — 
 |---|---|---|
 | **[Coordinator]** | You, wearing your regional-coordinator hat | `tranngocanh0910@gmail.com` |
 | **[Student]** | Chi Khanh Pham | `chipham6712@gmail.com` |
+| **[Grader]** | Toan To | `tobatoan@gmail.com` |
 
 Your practice team, `T-UAT-2`, has one member (Chi Khanh Pham), Level 3, and is already assigned to you as coordinator on the Coordinators tab.
 
@@ -137,7 +138,7 @@ Your practice team, `T-UAT-2`, has one member (Chi Khanh Pham), Level 3, and is 
 **The situation.** A Fail shouldn't just sit there waiting for someone to notice -- the system should schedule a retake at the same chapter on its own, without you having to catch it and act by hand.
 </div>
 
-**Before you start:** reset `T-UAT-2` (see above), then repeat Part 2's steps, but this time Toan grades it with a score **under 51** (a Fail) instead of a Pass.
+**Before you start:** reset `T-UAT-2` (see above), then repeat Part 2's steps, but this time Toan grades it with a score **under 51** (a Fail) instead of a Pass. One thing to expect: since Part 3's Pass just advanced your team to the next chapter, "Reset my test suite" starts you fresh at *that* chapter now, not back at Chapter 1 -- that's expected, not a bug, and it means this part exercises a different chapter's paper than Part 1 did. The same holds for Part 5 below.
 
 <div class="tc-step">
 <div class="tc-step-text">

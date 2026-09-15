@@ -1,8 +1,8 @@
 ---
-title: UAT — Thoa Mai, Nam Phong Nguyen & Jason To
+title: UAT — Thoa Mai, Toan To, Nam Phong Nguyen & Jason To
 ---
 
-# Your test suite: Thoa Mai, with Nam Phong Nguyen & Jason To
+# Your test suite: Thoa Mai & Toan To, with Nam Phong Nguyen & Jason To
 
 This page is yours alone. It uses two dedicated practice teams — `T-UAT-3` and `T-UAT-5` — that exist only for this test round and are completely separate from every other family's data, including every other tester's page linked from [Current Standings](./current-standings.md). Nothing you do here can affect a real student's record, and nothing another tester does can affect what you see here.
 
@@ -17,6 +17,7 @@ This page is yours alone. It uses two dedicated practice teams — `T-UAT-3` and
 | **[Coordinator]** | You, wearing your regional-coordinator hat | `thoamai.nguyen84@gmail.com` |
 | **[Student A]** | Nam Phong Nguyen (Level 1, team `T-UAT-3`) | `nphongleo@gmail.com` |
 | **[Student B]** | Jason To (Level 3, team `T-UAT-5`) | `jasondbto@gmail.com` |
+| **[Grader]** | Toan To | `tobatoan@gmail.com` |
 
 <div class="note" markdown="1">
 **A note on roles, in real life and in this test.** Coordinators are the only ones who ever open or edit the Master Registration and Regional Pacing spreadsheets -- club organizers get view-only access to both, and students/parents never touch either spreadsheet at all. That's why every `[Student A]`/`[Student B]` step below only ever uses the Test Paper Open/Submit Form (and, to see the paper itself, your own Google Drive) -- never the spreadsheets directly. If a student step ever seemed to need spreadsheet access to work, that would be a bug worth flagging.
@@ -114,7 +115,7 @@ This page is yours alone. It uses two dedicated practice teams — `T-UAT-3` and
 **The situation.** The system shouldn't keep retrying a struggling team forever -- it needs to stop at a defined limit (three attempts) and hand the decision back to you, rather than looping endlessly or quietly giving up. This one uses `T-UAT-3` (Nam Phong Nguyen) -- `T-UAT-5` is untouched by this part.
 </div>
 
-**Before you start:** reset `T-UAT-3`, then have Nam Phong Nguyen start and submit as in Part 2, and have Toan grade it a Fail (under 51) -- twice more, so `T-UAT-3` reaches Attempt 3.
+**Before you start:** reset `T-UAT-3`, then have Nam Phong Nguyen start and submit as in Part 2, and have Toan grade it a Fail (under 51) -- twice more, so `T-UAT-3` reaches Attempt 3. One thing to expect: since Part 3's Pass just advanced `T-UAT-3` to the next chapter, "Reset my test suite" starts you fresh at *that* chapter now, not back at Chapter 1 -- that's expected, not a bug, and it means this part exercises a different chapter's paper than Part 1 did.
 
 <div class="tc-step">
 <div class="tc-step-text">
