@@ -6,7 +6,7 @@ title: Current Standings
 
 This page is the club's live index, for every role: where the roster and every team's exam status can be seen by anyone, exactly what happens on an actual test day and what each column and status message means, and where the coordinator and organizer spreadsheets live for the people who run the club.
 
-**Jump to:** [Start here](#start-here) · [Where the data lives](#where-the-clubs-data-lives) · [Glossary](#glossary) · [The public roster](#the-public-roster) · [For Parents & Students](#for-parents--students) · [Coordinator & organizer resources](#coordinator--organizer-resources) · [For Graders](#for-graders)
+**Jump to:** [Start here](#start-here) · [Where the data lives](#where-the-clubs-data-lives) · [Glossary](#glossary) · [The public roster](#the-public-roster) · [For Parents & Students](#for-parents--students) · [Coordinator & organizer resources](#coordinator--organizer-resources) · [For Graders](#for-graders){% if site.show_test_material %} · [Test suites](#test-suites){% endif %}
 
 ## Start here
 
@@ -152,7 +152,7 @@ This is for Toan and Nghia, the two people who actually grade submissions each w
 
 <div class="tc-step">
 <div class="tc-step-text">
-<strong>3.</strong> Pulling results in is Nghia's step, not yours — <strong>MCC Tools → Pull weekly grading</strong> only works for his account. Once your rows are marked <code>Done</code>, let him know (or he runs it on his own schedule); they'll then flow onto the public sheet automatically, with your comment landing in that row's <code>Comment</code> column — plain text, or a clickable link if you pasted one.
+<strong>3.</strong> Once your rows are marked <code>Done</code>, pull them in yourself — <strong>MCC Tools → Grader tools → Pull weekly grading</strong> now works for any real grader, not just Nghia. Click it any time after marking a batch <code>Done</code>; they'll then flow onto the public sheet automatically, with your comment landing in that row's <code>Comment</code> column — plain text, or a clickable link if you pasted one.
 </div>
 </div>
 
@@ -163,7 +163,7 @@ Phần này dành cho thầy Toàn và thầy Nghĩa, hai người trực tiếp
 
 1. Mỗi tuần có một bảng tính chia sẻ riêng, `MCC Grading — <số tuần ISO>`, được tạo tự động khi cần lần đầu — kiểm tra mục "Shared with me" trên Drive, hoặc tìm "MCC Grading".
 2. Với mỗi bài nộp: điền `Score` (0–100), `Comments` (bất cứ nhận xét nào muốn gia đình thấy), và `GradedBy`. Chỉ đánh dấu `Done` khi dòng đó thực sự đã chấm xong — một dòng chấm dở nên để trống, vì chỉ những dòng `Done` mới được đưa vào hệ thống.
-3. Việc đưa kết quả vào hệ thống là bước của thầy Nghĩa, không phải của người chấm — mục **MCC Tools → Pull weekly grading** chỉ hoạt động với tài khoản của thầy Nghĩa. Sau khi đã đánh dấu `Done` các dòng của mình, báo cho thầy Nghĩa biết (hoặc thầy sẽ tự chạy theo lịch riêng); kết quả sẽ tự động chuyển vào bảng công khai, với nhận xét vào đúng cột `Comment` của dòng đó — chữ thường, hoặc một đường link có thể bấm nếu đã dán link.
+3. Sau khi đã đánh dấu `Done` các dòng của mình, tự đưa kết quả vào hệ thống được rồi — mục **MCC Tools → Grader tools → Pull weekly grading** giờ dùng được cho bất kỳ người chấm bài thật nào, không chỉ riêng thầy Nghĩa. Bấm vào đó bất cứ lúc nào sau khi đánh dấu `Done` một loạt bài; kết quả sẽ tự động chuyển vào bảng công khai, với nhận xét vào đúng cột `Comment` của dòng đó — chữ thường, hoặc một đường link có thể bấm nếu đã dán link.
 
 </details>
 
@@ -790,7 +790,7 @@ There's one shared spreadsheet per week, `MCC Grading — <ISO week>` (e.g. `MCC
 
 ### What to fill in, and when to mark a row Done
 
-Each row is one graded submission: fill in `Score` (0-100, the club's usual point system), `Comments` (whatever feedback you want the family to see -- per-problem or overall, your call), and `GradedBy` (your name). Check the `Done` box only once a row is genuinely finished. **A half-graded row should stay unchecked** -- the automation only ever reads rows marked `Done`, specifically so a score you're still second-guessing never gets pulled into a family's row by accident. There's no rush; grade at your own pace across the week. **Pulling results in is Nghia's step, not yours** — the "MCC Tools → Pull weekly grading" menu item only works for him; once you've marked your rows `Done`, let him know (or he runs it on his own schedule) and they'll be pulled in.
+Each row is one graded submission: fill in `Score` (0-100, the club's usual point system), `Comments` (whatever feedback you want the family to see -- per-problem or overall, your call), and `GradedBy` (your name). Check the `Done` box only once a row is genuinely finished. **A half-graded row should stay unchecked** -- the automation only ever reads rows marked `Done`, specifically so a score you're still second-guessing never gets pulled into a family's row by accident. There's no rush; grade at your own pace across the week. **You pull the results in yourself** — the "MCC Tools → Grader tools → Pull weekly grading" menu item now works for any real grader, not just Nghia; once you've marked your rows `Done`, click it and they'll be pulled in.
 
 ### What happens automatically once you mark a row Done and pull results in
 
@@ -813,7 +813,7 @@ Mỗi tuần có một bảng tính chia sẻ riêng, `MCC Grading — <số tu�
 
 ### Điền gì, và khi nào đánh dấu Done
 
-Mỗi dòng là một bài đã chấm: điền `Score` (0–100, theo thang điểm quen thuộc của câu lạc bộ), `Comments` (bất kỳ nhận xét nào muốn gia đình thấy — theo từng bài hay tổng quát, tùy ý), và `GradedBy` (tên mình). Chỉ đánh dấu `Done` khi dòng đó thực sự đã xong. **Một dòng chấm dở nên để trống ô Done** — hệ thống chỉ đọc những dòng đã đánh dấu `Done`, để một điểm số còn đang phân vân không bao giờ vô tình lọt vào dòng của một gia đình. Không cần vội, có thể chấm theo tốc độ của riêng mình trong tuần. **Đưa kết quả vào hệ thống là bước của thầy Nghĩa, không phải của người chấm** — mục "MCC Tools → Pull weekly grading" chỉ hoạt động với tài khoản của thầy; sau khi đã đánh dấu `Done` các dòng của mình, báo cho thầy biết (hoặc thầy tự chạy theo lịch riêng) để kết quả được đưa vào.
+Mỗi dòng là một bài đã chấm: điền `Score` (0–100, theo thang điểm quen thuộc của câu lạc bộ), `Comments` (bất kỳ nhận xét nào muốn gia đình thấy — theo từng bài hay tổng quát, tùy ý), và `GradedBy` (tên mình). Chỉ đánh dấu `Done` khi dòng đó thực sự đã xong. **Một dòng chấm dở nên để trống ô Done** — hệ thống chỉ đọc những dòng đã đánh dấu `Done`, để một điểm số còn đang phân vân không bao giờ vô tình lọt vào dòng của một gia đình. Không cần vội, có thể chấm theo tốc độ của riêng mình trong tuần. **Tự đưa kết quả vào hệ thống được** — mục "MCC Tools → Grader tools → Pull weekly grading" giờ dùng được cho bất kỳ người chấm bài thật nào, không chỉ riêng thầy Nghĩa; sau khi đã đánh dấu `Done` các dòng của mình, bấm vào đó là kết quả sẽ được đưa vào.
 
 ### Điều gì tự động xảy ra sau khi đánh dấu Done và kết quả được đưa vào hệ thống
 
@@ -829,3 +829,22 @@ Nếu một đội fail lần thi thứ ba của một chương, sẽ không có
 
 </details>
 
+{% if site.show_test_material %}
+---
+
+## Test suites
+
+<div class="note" markdown="1">
+**Live this week only.** These are the same 14-case walkthrough Nghia runs himself, and each coordinator's own version of it, now with Mr. Toan grading end to end -- live for this week's re-test (through Sunday night), then hidden again the same way they were hidden before. If you're reading this after that and these links are gone, that's expected -- nothing was deleted, see [Organization](./organization.md) if you'd like to help with the next round.
+
+The conventions used below -- what **[Coordinator]**/**[Student 1]**/**[Student 2]**/**[Grader]** mean, how to reset between tests, how to switch Google accounts -- are the same ones already explained in ["Start here,"](#start-here) ["For a new coordinator,"](#for-a-new-coordinator) and ["For a new grader"](#for-a-new-grader) above; nothing below re-explains them.
+</div>
+
+- **[Nghia's own test suite: Testing the pipeline](./testing-the-pipeline.md)** -- the full 14-case walkthrough every coordinator's suite below is drawn from.
+- **[Son Ho's test suite](./uat-son-ho.md)**
+- **[Anh Tran's test suite](./uat-anh-tran.md)**
+- **[Thoa Mai's test suite](./uat-thoa-mai.md)**
+- **[Tuan Le's test suite](./uat-tuan-le.md)**
+- **[Toan To's test suite (grader)](./uat-toan-to.md)**
+
+{% endif %}

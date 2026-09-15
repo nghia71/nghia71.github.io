@@ -156,9 +156,9 @@ Each test below says, in its own **Before you start** line, whether it needs any
 
 <div class="tc-step">
 <div class="tc-step-text">
-<strong>9. [Grader]</strong> Signed into <code>nghia71@gmail.com</code>, using the system's technical control panel, set up this week's grading spreadsheet (no need to enter anything — it defaults to the current week).<br>
-<em>Why it matters:</em> there's now an "MCC Tools → Pull weekly grading" menu item for this, but it's Nghia-only (the toolbar check is hardcoded to his email) -- Toan can't self-pull, so this step is still, deliberately, a Nghia-only step either way.<br>
-<em>What you should see:</em> this week's grading spreadsheet is created (or found, if it already exists) and shared automatically with everyone on the graders list.
+<strong>9. [Grader]</strong> Click <strong>MCC Tools → Grader tools → Pull weekly grading</strong> once, just to make sure this week's grading spreadsheet exists (it defaults to the current week automatically -- nothing to type).<br>
+<em>Why it matters:</em> this menu item now works for any real grader -- Toan included -- not just Nghia, so this whole step is genuinely something Toan can do himself, no admin help needed.<br>
+<em>What you should see:</em> a confirmation dialog reporting 0 new submissions and 0 rows pulled (nothing's graded yet), and this week's grading spreadsheet now exists, shared automatically with everyone on the graders list.
 </div>
 </div>
 
@@ -183,8 +183,8 @@ Each test below says, in its own **Before you start** line, whether it needs any
 
 <div class="tc-step">
 <div class="tc-step-text">
-<strong>12. [Grader]</strong> Using the system's technical control panel, pull this week's grading results back into the system.<br>
-<em>What you should see:</em> a confirmation that the row was read and written back to the <code>Exams</code> tab.
+<strong>12. [Grader]</strong> Click <strong>MCC Tools → Grader tools → Pull weekly grading</strong> again.<br>
+<em>What you should see:</em> a confirmation naming 1 row graded and written back to the <code>Exams</code> tab.
 </div>
 </div>
 
@@ -511,19 +511,19 @@ Each test below says, in its own **Before you start** line, whether it needs any
 
 <div class="tc-step">
 <div class="tc-step-text">
-<strong>1. [Admin]</strong> Trigger scheduling.<br>
-<em>What you should see:</em> the system's activity log names <code>T-EC1</code> as skipped because its next test date is in the past, and shows that date so a coordinator can see exactly what's stale. It's flagged by name on every run until it's fixed — never scheduled, but never silently dropped either. (<code>T-WC1</code> shows up too, skipped for the unrelated reason that it still has its own unresolved session from the reset.)
+<strong>1. [Coordinator]</strong> Click <strong>MCC Tools → Coordinator tools → Lock in changed exam dates</strong> -- this is now a real coordinator's own self-service button, the same one Test 13 relies on being safe, not an admin-only step.<br>
+<em>What you should see:</em> the confirmation dialog itself names <code>T-EC1</code> under "Needs attention -- NextExamDate is in the past for," and shows that stale date -- right there in the dialog, no activity log needed. It's flagged by name every time this is clicked until it's fixed -- never scheduled, but never silently dropped either.
 </div>
 <div class="tc-step-shot">
-<a href="./img/current-standings/tc11-step1-past-date-skip.png" target="_blank" rel="noopener" class="tc-step-shot-link"><img src="./img/current-standings/tc11-step1-past-date-skip.png" alt="The system's activity log showing T-EC1 skipped because its next test date is in the past, dated 2026-01-01"></a>
+<a href="./img/current-standings/tc11-step1-past-date-skip.png" target="_blank" rel="noopener" class="tc-step-shot-link"><img src="./img/current-standings/tc11-step1-past-date-skip.png" alt="The Lock in changed exam dates confirmation dialog showing T-EC1 flagged because its next test date is in the past, dated 2026-01-01"></a>
 <div class="tc-step-caption">A real run — T-EC1 flagged by name with the stale date it's still carrying.</div>
 </div>
 </div>
 
 <div class="tc-step">
 <div class="tc-step-text">
-<strong>2. [Coordinator]</strong> Set the next test date to today, then trigger scheduling again.<br>
-<em>What you should see:</em> now it schedules normally — a fresh session is created for <code>T-EC1</code>. (<code>T-WC1</code> still shows as skipped, for that same unrelated leftover session.)
+<strong>2. [Coordinator]</strong> Set the next test date to today, then click <strong>MCC Tools → Coordinator tools → Lock in changed exam dates</strong> again.<br>
+<em>What you should see:</em> now the dialog reports a session locked in for <code>T-EC1</code>, dated today.
 </div>
 <div class="tc-step-shot">
 <a href="./img/current-standings/tc11-step2-normal-scheduling.png" target="_blank" rel="noopener" class="tc-step-shot-link"><img src="./img/current-standings/tc11-step2-normal-scheduling.png" alt="The system's activity log showing a fresh session created for T-EC1 once its date is set back to today"></a>
