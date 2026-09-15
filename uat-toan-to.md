@@ -12,14 +12,15 @@ Unlike the other testers, grading isn't scoped to one family's team — a real g
 
 ## Where grading happens
 
-Each week's submissions land in a spreadsheet named **"MCC Grading — &lt;that week's ISO week number&gt;"** (for example, "MCC Grading — 2026-W37") — the same one you already use for real grading. You should already have it open or bookmarked; if not, it'll show up in your Google Drive once the first practice submission comes in.
+Each week's submissions land in a spreadsheet named **"MCC Grading — &lt;that week's ISO week number&gt;"** (for example, "MCC Grading — 2026-W37") — the same one you already use for real grading. You don't need to already have it bookmarked: step 1 below gets you the link directly from the Master Registration Spreadsheet's own menu, and it's shared with you automatically the moment you (or Nghia) first open or create it for the week — nobody else gets access to it.
 
 ## Steps
 
 <div class="tc-step">
 <div class="tc-step-text">
-<strong>1. [Grader]</strong> Open this week's "MCC Grading" spreadsheet.<br>
-<em>What you should see:</em> a row for each submitted practice session — <code>SessionID</code>, <code>TeamID</code> (one of <code>T-UAT-1</code>/<code>T-UAT-3</code>/<code>T-UAT-5</code>), and empty <code>Score</code>/<code>Comments</code>/<code>Done</code> columns waiting for you.
+<strong>1. [Grader]</strong> On the <a href="https://docs.google.com/spreadsheets/d/13byGPiBQW00egpC2GIZenAsKhMCS7qbCykZSUtbE7jk/edit?usp=sharing">Master Registration Spreadsheet</a>, click <strong>MCC Tools → Grader tools → Open this week's grading spreadsheet</strong>.<br>
+<em>Why it matters:</em> this is the one step that used to only work because Nghia already knew where every week's sheet was, having created each one himself by hand -- now it finds (or creates) it and shows you the link directly, no need to already have it bookmarked.<br>
+<em>What you should see:</em> a dialog naming this week's grading spreadsheet with its link. Open that link — a row for each submitted practice session — <code>SessionID</code>, <code>TeamID</code> (one of <code>T-UAT-1</code>/<code>T-UAT-3</code>/<code>T-UAT-5</code>), and empty <code>Score</code>/<code>Comments</code>/<code>Done</code> columns waiting for you.
 </div>
 </div>
 
@@ -39,8 +40,9 @@ Each week's submissions land in a spreadsheet named **"MCC Grading — &lt;that 
 
 <div class="tc-step">
 <div class="tc-step-text">
-<strong>4. [Grader]</strong> If you have access to run <code>pullWeeklyGrading()</code> yourself (the same way you do for real grading today), run it now. If you're not sure or don't have that access, let Nghia know you've finished marking rows <code>Done</code> and he'll pull them in.<br>
-<em>What you should see:</em> each matching team's <code>Exams</code> row on the Public Roster fills in <code>Score</code>, <code>Result</code> (Pass/Fail), <code>GradedUTC</code>, and <code>GradedBy</code>.
+<strong>4. [Grader]</strong> Back on the Master Registration Spreadsheet, click <strong>MCC Tools → Grader tools → Pull weekly grading</strong> yourself.<br>
+<em>Why it matters:</em> this used to only work for Nghia's account -- it now works for any real grader, so this is genuinely your own step, not something to hand off.<br>
+<em>What you should see:</em> a confirmation dialog naming how many rows were graded and written back, and each matching team's <code>Exams</code> row on the Public Roster fills in <code>Score</code>, <code>Result</code> (Pass/Fail), <code>GradedUTC</code>, and <code>GradedBy</code>.
 </div>
 </div>
 
@@ -52,6 +54,6 @@ Each week's submissions land in a spreadsheet named **"MCC Grading — &lt;that 
 </div>
 
 <div class="note" markdown="1">
-**One thing worth telling Nghia either way.** Step 4 is the one part of this whole round we're not 100% sure you have direct access to — if you don't, that's useful for us to know, since it means a real grader in your position would hit the same thing.
+**Conventions used above.** What **[Grader]** means, how test data here differs from a real family's, and how to reset between rounds -- all explained once, in ["For a new grader"](./current-standings.md#for-a-new-grader) on Current Standings; nothing on this page repeats it.
 </div>
 

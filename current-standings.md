@@ -140,7 +140,7 @@ This is for Toan and Nghia, the two people who actually grade submissions each w
 
 <div class="tc-step">
 <div class="tc-step-text">
-<strong>1.</strong> Each week has its own shared spreadsheet, <code>MCC Grading — &lt;ISO week&gt;</code>, created automatically the first time it's needed — check "Shared with me" in Drive, or search for "MCC Grading."
+<strong>1.</strong> Each week has its own shared spreadsheet, <code>MCC Grading — &lt;ISO week&gt;</code>, created automatically the first time it's needed. Click <strong>MCC Tools → Grader tools → Open this week's grading spreadsheet</strong> (on the Master Registration Spreadsheet) to get its link directly — or check "Shared with me" in Drive, or search for "MCC Grading," if you'd rather.
 </div>
 </div>
 
@@ -161,7 +161,7 @@ This is for Toan and Nghia, the two people who actually grade submissions each w
 
 Phần này dành cho thầy Toàn và thầy Nghĩa, hai người trực tiếp chấm bài mỗi tuần.
 
-1. Mỗi tuần có một bảng tính chia sẻ riêng, `MCC Grading — <số tuần ISO>`, được tạo tự động khi cần lần đầu — kiểm tra mục "Shared with me" trên Drive, hoặc tìm "MCC Grading".
+1. Mỗi tuần có một bảng tính chia sẻ riêng, `MCC Grading — <số tuần ISO>`, được tạo tự động khi cần lần đầu. Bấm **MCC Tools → Grader tools → Open this week's grading spreadsheet** (trên Master Registration Spreadsheet) để lấy link trực tiếp — hoặc kiểm tra mục "Shared with me" trên Drive, hoặc tìm "MCC Grading", nếu muốn.
 2. Với mỗi bài nộp: điền `Score` (0–100), `Comments` (bất cứ nhận xét nào muốn gia đình thấy), và `GradedBy`. Chỉ đánh dấu `Done` khi dòng đó thực sự đã chấm xong — một dòng chấm dở nên để trống, vì chỉ những dòng `Done` mới được đưa vào hệ thống.
 3. Sau khi đã đánh dấu `Done` các dòng của mình, tự đưa kết quả vào hệ thống được rồi — mục **MCC Tools → Grader tools → Pull weekly grading** giờ dùng được cho bất kỳ người chấm bài thật nào, không chỉ riêng thầy Nghĩa. Bấm vào đó bất cứ lúc nào sau khi đánh dấu `Done` một loạt bài; kết quả sẽ tự động chuyển vào bảng công khai, với nhận xét vào đúng cột `Comment` của dòng đó — chữ thường, hoặc một đường link có thể bấm nếu đã dán link.
 
@@ -786,7 +786,7 @@ English only -- this section is for Toan and Nghia, the two people who actually 
 
 ### Where the weekly grading spreadsheet comes from
 
-There's one shared spreadsheet per week, `MCC Grading — <ISO week>` (e.g. `MCC Grading — 2026-W37`) -- Editor access for graders only, never shared with families. It's created automatically the first time it's needed for a given week; you don't create or name it yourself. Once it exists, it stays available in your Google Drive ("Shared with me," or just search for "MCC Grading") for as long as that week's grading is in progress.
+There's one shared spreadsheet per week, `MCC Grading — <ISO week>` (e.g. `MCC Grading — 2026-W37`) -- Editor access for graders only, never shared with families, and never anyone outside the Graders sheet. It's created automatically the first time it's needed for a given week; you don't create or name it yourself. **MCC Tools → Grader tools → Open this week's grading spreadsheet** (on the Master Registration Spreadsheet) always finds or creates it and shows you its link directly -- you don't need to already have it bookmarked, and don't need to ask Nghia where it is. It's also in your Google Drive ("Shared with me," or search "MCC Grading") for as long as that week's grading is in progress.
 
 ### What to fill in, and when to mark a row Done
 
