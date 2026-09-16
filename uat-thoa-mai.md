@@ -117,6 +117,8 @@ This page is yours alone. It uses two dedicated practice teams — `T-UAT-3` and
 
 **Before you start:** reset `T-UAT-3`, then have Nam Phong Nguyen start and submit as in Part 2, and have Toan grade it a Fail (under 51) -- twice more, so `T-UAT-3` reaches Attempt 3. One thing to expect: since Part 3's Pass just advanced `T-UAT-3` to the next chapter, "Reset my test suite" starts you fresh at *that* chapter now, not back at Chapter 1 -- that's expected, not a bug, and it means this part exercises a different chapter's paper than Part 1 did.
 
+**One extra manual step each retake, and it's not a bug either:** the moment Toan grades a Fail, the system immediately schedules the retake's `Exams` row itself -- but dated a week out (the normal weekly cadence, same as any real retake), not today. So before Nam Phong Nguyen can actually open that retake, hand-edit that fresh row's `ExamDate` (Public Roster, `Exams` tab -- not Regional Pacing's `NextExamDate`, a different field) back to today. Do this once after each Fail, for both the Attempt 2 and the Attempt 3 retake. If "start" produces the form's generic confirmation but nothing on the `Exams` row ever fills in, this is the first thing to check -- same underlying cause as Test 11's stuck-date case, just on the `Exams` row instead of Regional Pacing.
+
 <div class="tc-step">
 <div class="tc-step-text">
 <strong>11. [Grader]</strong> Toan grades the Attempt 3 session as a Fail too, the same steps as always.<br>
