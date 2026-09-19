@@ -1,0 +1,607 @@
+---
+title: Lesson 1
+---
+
+<style>
+  /* Math text should read like a textbook, not the site's body sans-serif. */
+  .problem, .math {
+    font-family: Georgia, "Times New Roman", "Noto Serif", serif;
+    font-size: 1.02em;
+    line-height: 1.6;
+  }
+  .problem { font-style: italic; }
+  .example .tag,
+  .practice-list .tag {
+    display: inline-block;
+    background: var(--gold-soft);
+    color: var(--brand-dark);
+    font-size: 12.5px;
+    font-weight: 700;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    padding: 3px 9px;
+    border-radius: 999px;
+  }
+  .example .tag { margin-right: 4px; }
+  .example { margin-bottom: 1.8em; }
+  .example h3 { font-size: 1.05rem; border-bottom: none; padding-bottom: 0; margin-bottom: .6em; }
+
+  /* Inline, runnable Python (worked examples + the free-form playground).
+     Styled to match the site's existing pre/code blocks (dark ink bg, cream
+     text) and its small pill-shaped utility buttons (see .tc-progress-reset
+     in assets/css/style.css), not a separate "dev tool" look. */
+  .code-runner { margin-top: 14px; }
+  .code-editor {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+    font-size: 13.5px;
+    line-height: 1.55;
+    padding: 16px 18px;
+    border: none;
+    border-radius: var(--radius);
+    background: var(--ink);
+    color: #f4ead9;
+    resize: vertical;
+    min-height: 120px;
+    tab-size: 4;
+  }
+  .code-editor:focus { outline: 2px solid var(--gold); outline-offset: 2px; }
+  .code-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+  }
+  .code-controls button {
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--brand);
+    background: var(--cream);
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    padding: 6px 16px;
+    cursor: pointer;
+  }
+  .code-controls button:hover { background: var(--gold-soft); }
+  .code-controls button:disabled { opacity: .5; cursor: default; }
+  .code-status {
+    font-size: 13px;
+    color: var(--ink-soft);
+    font-style: italic;
+  }
+  .code-output {
+    margin: 10px 0 0;
+    padding: 16px 18px;
+    border-radius: var(--radius);
+    background: var(--brand-dark);
+    color: var(--gold-soft);
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+    font-size: 13.5px;
+    white-space: pre-wrap;
+    word-break: break-word;
+    overflow-x: auto;
+    display: none;
+  }
+  .code-output.has-content { display: block; }
+  .code-output.is-error { color: #ffd7c2; }
+  .playground-card { margin-top: 1.2em; }
+  .playground-card .code-editor { min-height: 160px; }
+
+  /* Geometry diagrams -- redrawn from the source PDF, not screenshots. */
+  .diagram {
+    text-align: center;
+    margin: 1em 0 1.4em;
+    padding: 14px;
+    background: var(--white);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+  }
+  .diagram svg { display: block; margin: 0 auto; max-width: 260px; height: auto; }
+  .diagram figcaption {
+    margin-top: 8px;
+    font-size: 13px;
+    color: var(--ink-soft);
+    font-style: italic;
+  }
+
+  /* Submission-requirements block -- deliberately the most visually
+     distinct thing on the page (2026-09-19: "very important for Lesson 1
+     to present what are required and acceptable for a submission"). */
+  .requirements {
+    background: var(--white);
+    border: 2px solid var(--brand);
+    border-radius: var(--radius);
+    padding: 22px 26px;
+    margin: 1.8em 0 2.2em;
+    box-shadow: var(--shadow);
+  }
+  .requirements h2 {
+    margin-top: 0;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  .requirements h3 { margin-top: 1.1em; margin-bottom: .4em; font-size: 1rem; }
+  .requirements ul { margin-bottom: 0; }
+  .requirements table { font-size: 14.5px; }
+</style>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  renderMathInElement(document.body, {
+    delimiters: [
+      {left: "\\[", right: "\\]", display: true},
+      {left: "\\(", right: "\\)", display: false}
+    ]
+  });
+});
+</script>
+
+<!-- Inline Python: runs entirely in the student's own browser via Pyodide (Python
+     compiled to WebAssembly) -- nothing is sent to any server, nothing is graded,
+     it only runs the code and shows what it prints (or the error). Loaded lazily,
+     only once someone actually presses Run, so a visitor who never clicks Run never
+     downloads it. -->
+<script src="https://cdn.jsdelivr.net/pyodide/v314.0.6/full/pyodide.js"></script>
+<script>
+(function () {
+  var pyodideReadyPromise = null;
+  function getPyodide() {
+    if (!pyodideReadyPromise) {
+      pyodideReadyPromise = loadPyodide();
+    }
+    return pyodideReadyPromise;
+  }
+
+  function setAllRunButtonsDisabled(disabled) {
+    document.querySelectorAll(".code-controls .run-btn").forEach(function (b) {
+      b.disabled = disabled;
+    });
+  }
+
+  function copyText(text, btn) {
+    function done() {
+      var original = btn.textContent;
+      btn.textContent = "✓ Copied";
+      setTimeout(function () { btn.textContent = original; }, 1200);
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(done, done);
+    } else {
+      var ta = document.createElement("textarea");
+      ta.value = text;
+      ta.style.position = "fixed";
+      ta.style.opacity = "0";
+      document.body.appendChild(ta);
+      ta.select();
+      try { document.execCommand("copy"); } catch (e) { /* ignore */ }
+      document.body.removeChild(ta);
+      done();
+    }
+  }
+
+  async function runCode(code, outputEl, statusEl) {
+    outputEl.classList.remove("is-error", "has-content");
+    outputEl.textContent = "";
+    statusEl.textContent = "Starting Python… (first run only -- loads the Python environment, a few seconds)";
+    setAllRunButtonsDisabled(true);
+
+    var buffer = "";
+    var hadError = false;
+    try {
+      var pyodide = await getPyodide();
+      pyodide.setStdout({ batched: function (s) { buffer += s + "\n"; } });
+      pyodide.setStderr({ batched: function (s) { buffer += s + "\n"; } });
+
+      statusEl.textContent = "Checking for imports…";
+      try {
+        await pyodide.loadPackagesFromImports(code);
+      } catch (pkgErr) {
+        // A missing/unsupported package still surfaces as a normal Python
+        // ImportError from runPythonAsync below -- nothing to do here.
+      }
+
+      statusEl.textContent = "Running…";
+      try {
+        await pyodide.runPythonAsync(code);
+      } catch (runErr) {
+        hadError = true;
+        buffer += (buffer ? "\n" : "") + (runErr && runErr.message ? runErr.message : String(runErr));
+      }
+    } catch (loadErr) {
+      hadError = true;
+      buffer += (buffer ? "\n" : "") + "Could not start the Python environment in this browser: " +
+        (loadErr && loadErr.message ? loadErr.message : loadErr);
+    }
+
+    statusEl.textContent = "";
+    setAllRunButtonsDisabled(false);
+    outputEl.textContent = buffer || "(no output)";
+    outputEl.classList.add("has-content");
+    if (hadError) outputEl.classList.add("is-error");
+  }
+
+  function makeRunner(getCode, container) {
+    var controls = document.createElement("div");
+    controls.className = "code-controls";
+
+    var runBtn = document.createElement("button");
+    runBtn.type = "button";
+    runBtn.className = "run-btn";
+    runBtn.textContent = "▶ Run";
+
+    var copyBtn = document.createElement("button");
+    copyBtn.type = "button";
+    copyBtn.textContent = "📋 Copy";
+
+    var status = document.createElement("span");
+    status.className = "code-status";
+
+    controls.appendChild(runBtn);
+    controls.appendChild(copyBtn);
+    controls.appendChild(status);
+
+    var output = document.createElement("pre");
+    output.className = "code-output";
+
+    container.appendChild(controls);
+    container.appendChild(output);
+
+    runBtn.addEventListener("click", function () {
+      runCode(getCode(), output, status);
+    });
+
+    return { controls: controls, output: output, status: status, runBtn: runBtn, copyBtn: copyBtn };
+  }
+
+  function enhanceExampleCodeBlocks() {
+    document.querySelectorAll(".example pre").forEach(function (pre) {
+      var codeEl = pre.querySelector("code");
+      if (!codeEl) return;
+      var original = codeEl.textContent;
+
+      var wrapper = document.createElement("div");
+      wrapper.className = "code-runner";
+
+      var textarea = document.createElement("textarea");
+      textarea.className = "code-editor";
+      textarea.spellcheck = false;
+      textarea.value = original;
+      textarea.rows = Math.min(28, Math.max(6, original.split("\n").length));
+
+      wrapper.appendChild(textarea);
+      pre.parentNode.insertBefore(wrapper, pre.nextSibling);
+      pre.style.display = "none"; // original stays in the DOM as a no-JS fallback
+
+      var runner = makeRunner(function () { return textarea.value; }, wrapper);
+
+      var resetBtn = document.createElement("button");
+      resetBtn.type = "button";
+      resetBtn.textContent = "↺ Reset";
+      resetBtn.addEventListener("click", function () {
+        textarea.value = original;
+        runner.output.textContent = "";
+        runner.output.classList.remove("has-content", "is-error");
+      });
+      runner.controls.insertBefore(resetBtn, runner.status);
+
+      runner.copyBtn.addEventListener("click", function () {
+        copyText(textarea.value, runner.copyBtn);
+      });
+    });
+  }
+
+  function setupPlayground() {
+    var textarea = document.getElementById("playground-editor");
+    if (!textarea) return;
+    var wrapper = textarea.parentNode;
+
+    var runner = makeRunner(function () { return textarea.value; }, wrapper);
+
+    var clearBtn = document.createElement("button");
+    clearBtn.type = "button";
+    clearBtn.textContent = "✖ Clear";
+    clearBtn.addEventListener("click", function () {
+      textarea.value = "";
+      runner.output.textContent = "";
+      runner.output.classList.remove("has-content", "is-error");
+      textarea.focus();
+    });
+    runner.controls.insertBefore(clearBtn, runner.status);
+
+    runner.copyBtn.addEventListener("click", function () {
+      copyText(textarea.value, runner.copyBtn);
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    enhanceExampleCodeBlocks();
+    setupPlayground();
+  });
+})();
+</script>
+
+<h1>Lesson 1</h1>
+<p><em>Purple Comet 2004, worked in full &mdash; Middle School and High School &mdash; math, code, and (where it helps) a diagram, for every problem in the archive.</em></p>
+
+<div class="note">
+<strong>Six problems are live below (Batch 1 of the full set).</strong> This is a standing lesson, not a one-time page &mdash; more problems from the same 2004 archive are added in batches over the coming weeks, each reviewed before it goes up. Come back for more.
+</div>
+
+<h2>What Lesson 1 is for</h2>
+<p>Every problem below is solved with real math first &mdash; an identity, a similarity ratio, a theorem, a provably complete search &mdash; and a short Python program second, so the code is doing something a calculator can&rsquo;t: expressing that math directly, not guessing numbers until one works. This is exactly the standard your own contest submissions are held to. Read a few of these closely before your first coding contest.</p>
+
+<div class="requirements">
+<h2 id="what-s-required-and-acceptable-for-a-contest-submission">What&rsquo;s required and acceptable for a contest submission</h2>
+<p>Read this before you write your first line of contest code. Every worked example below is itself a submission that would pass all of these rules &mdash; that&rsquo;s the point of reading them closely, not just the answer.</p>
+
+<h3>File format</h3>
+<ul>
+  <li>One <code>.py</code> text file per problem you attempt. Plain Python source, nothing else.</li>
+  <li><strong>Not accepted:</strong> a PDF, a Google Doc, a Jupyter notebook (<code>.ipynb</code>), a screenshot of code, a file renamed to end in <code>.py</code> that isn&rsquo;t actually Python.</li>
+</ul>
+
+<h3>Your program must</h3>
+<ul>
+  <li>Run in <strong>30 seconds or less</strong>.</li>
+  <li>Run <strong>with no errors</strong> &mdash; no exceptions, no crash, nothing printed to the screen except your program&rsquo;s own output.</li>
+  <li>Only import from the allowed list below.</li>
+</ul>
+
+<h3>Allowed libraries</h3>
+<table>
+<thead><tr><th>Library</th><th>Why it&rsquo;s allowed</th></tr></thead>
+<tbody>
+<tr><td>Python standard library &mdash; <code>math</code>, <code>itertools</code>, <code>functools</code>, <code>fractions</code>, <code>collections</code>, <code>re</code>, <code>decimal</code>, <code>random</code></td><td>baseline</td></tr>
+<tr><td><code>sympy</code></td><td>the symbolic tool every worked example below is built around</td></tr>
+<tr><td><code>numpy</code></td><td>numeric arrays and linear algebra, for geometry/simulation problems</td></tr>
+<tr><td><code>matplotlib</code></td><td>diagrams your own code generates as part of its solution</td></tr>
+</tbody>
+</table>
+<p>Anything else &mdash; network access, file I/O, <code>os</code>/<code>subprocess</code>, GUI toolkits &mdash; is out. This list may grow; the current version always lives on this page.</p>
+
+<h3>How a submission is scored &mdash; base score, up to 10 per problem</h3>
+<table>
+<thead><tr><th>Worth</th><th>For</th></tr></thead>
+<tbody>
+<tr><td>up to 6</td><td><strong>The math itself.</strong> Is the real identity/theorem/reduction actually there, and is it sound? A brute-force search with no justified, provably-complete bound is <em>not</em> real math here, even if it happens to print the right answer. This is the part you keep even if your code has a bug &mdash; good math, broken code, still earns these points.</td></tr>
+<tr><td>up to 3</td><td><strong>Correctness.</strong> The program actually runs clean, inside the time limit, and prints the right answer.</td></tr>
+<tr><td>up to 1</td><td><strong>How well-optimized/well-written the code is.</strong> An exhaustive search over a space a two-line argument would have shrunk to nothing loses points here even if it finishes in time.</td></tr>
+</tbody>
+</table>
+<p><strong>If there&rsquo;s no real math at all</strong> &mdash; the code just tries things at random until something matches the expected shape, with nothing above to award points against &mdash; the submission isn&rsquo;t accepted, regardless of whether it prints the right number.</p>
+
+<h3>Excellence bonus &mdash; up to 5 EXTRA points, on top</h3>
+<p>Reserved for work that goes past &ldquo;normally good&rdquo; &mdash; a solid, correct, reasonably-explained solution earns <strong>zero</strong> of these. Each of the five is independent, worth <strong>+1</strong> on its own:</p>
+<table>
+<thead><tr><th>+1 for</th><th>Meaning</th></tr></thead>
+<tbody>
+<tr><td>Excellent math</td><td>Not just correct &mdash; elegant, insightful, or genuinely the cleanest way to see why the answer is what it is.</td></tr>
+<tr><td>Very, very well commented</td><td>Comments that actually teach the reasoning, the way the worked examples on this page do &mdash; not just labels on lines.</td></tr>
+<tr><td>Excellent code</td><td>Clean, well-structured, readable &mdash; the kind of code someone else could pick up and follow.</td></tr>
+<tr><td>Code really reflects the math</td><td>The program's own structure &mdash; its variables, its steps &mdash; mirrors the mathematical argument, step for step, rather than just arriving at the right number by some other route.</td></tr>
+<tr><td>Very optimal runtime</td><td>Genuinely efficient, well beyond just squeaking in under 30 seconds.</td></tr>
+</tbody>
+</table>
+<p><strong>Maximum possible score per problem: 10 + 5 = 15.</strong></p>
+</div>
+
+<h2>How to read a worked example</h2>
+<p>Each problem below has the same four parts: the problem itself; a short note on the math that actually makes it solvable; a diagram where one helps; and a commented, runnable Python solution. <strong>Every code block is live</strong> &mdash; click &#9654; <strong>Run</strong> to execute it in your own browser (the first click takes a few seconds to start Python; after that it&rsquo;s instant). Edit it, break it, fix it &mdash; <strong>&#8630; Reset</strong> brings back the original. Nothing here is graded; the playground at the bottom is there for your own experiments.</p>
+
+<h2>Middle School</h2>
+
+<div class="card example">
+<h3>MS &middot; Purple Comet 2004, Problem 7 &middot; <span class="tag">Easy</span> <span class="tag">Algebra</span></h3>
+<p class="problem">A rectangle has area 1100. If the length is increased by ten percent and the width is decreased by ten percent, what is the area of the new rectangle?</p>
+<div class="note math">Increasing one factor by 10% multiplies it by 1.1; decreasing the other by 10% multiplies it by 0.9. So the new area is always \((1+p)(1-p) = 1-p^2\) times the old area, for <em>any</em> starting area and <em>any</em> percent \(p\) &mdash; not just for 1100 and 10%. That identity is the whole problem; 1100 only tells you where to evaluate it.</div>
+<pre><code># MATH: (1+p)(1-p) = 1 - p^2 is a fixed algebraic identity, true for
+# ANY starting area A and ANY percent p. So a &quot;+10%, then -10%&quot; change
+# always shrinks the area by exactly p^2 = 1% -- regardless of the 1100
+# in this particular problem. Derive that identity symbolically first,
+# then substitute this problem&#x27;s numbers only at the very end.
+import sympy as sp
+
+A, p = sp.symbols(&#x27;A p&#x27;, positive=True)
+new_area = sp.simplify(A * (1 + p) * (1 - p))
+print(new_area)                                   # A*(1 - p**2)
+
+print(new_area.subs({A: 1100, p: sp.Rational(1, 10)}))   # 1089
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3>MS &middot; Purple Comet 2004, Problem 3 &middot; <span class="tag">Medium</span> <span class="tag">Geometry</span></h3>
+<p class="problem">In \(\triangle ABC\), three lines are drawn parallel to side \(BC\), dividing the altitude of the triangle into four equal parts. If the area of the second-largest part is 35, what is the area of the whole \(\triangle ABC\)?</p>
+<figure class="diagram">
+<svg viewBox="0 0 200 210" xmlns="http://www.w3.org/2000/svg">
+  <polygon points="100,10 20,190 180,190" fill="none" stroke="#8c2600" stroke-width="2"/>
+  <line x1="80" y1="55" x2="120" y2="55" stroke="#b63200" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <line x1="60" y1="100" x2="140" y2="100" stroke="#b63200" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <line x1="40" y1="145" x2="160" y2="145" stroke="#b63200" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <text x="100" y="8" text-anchor="middle" font-size="13" fill="#2a1f18">A</text>
+  <text x="12" y="200" text-anchor="middle" font-size="13" fill="#2a1f18">B</text>
+  <text x="188" y="200" text-anchor="middle" font-size="13" fill="#2a1f18">C</text>
+</svg>
+<figcaption>The altitude from A split into four equal parts; each dashed line cuts off a triangle similar to &#9651;ABC.</figcaption>
+</figure>
+<div class="note math">Each line parallel to \(BC\) cuts off a smaller triangle, from the apex, that is <em>similar</em> to \(\triangle ABC\). A triangle similar with linear scale factor \(k\) has area \(k^2\) times the original. With the altitude split into quarters, the four nested triangles (from the apex down) scale as \(k = \tfrac14, \tfrac12, \tfrac34, 1\), so their areas are \(\tfrac{1}{16}, \tfrac{4}{16}, \tfrac{9}{16}, \tfrac{16}{16}\) of the whole. The four strips between them are the successive differences: \(\tfrac{1}{16}, \tfrac{3}{16}, \tfrac{5}{16}, \tfrac{7}{16}\) &mdash; a 1:3:5:7 split that holds for every triangle cut this way, regardless of size.</div>
+<pre><code># MATH: the three lines parallel to BC cut off, from the apex, smaller
+# triangles similar to the whole triangle with linear scale factors
+# k = 1/4, 1/2, 3/4, 1. Similar triangles scale AREA by k^2, so those
+# four nested triangles have areas (k^2)*A for each k -- true for the
+# whole family of such triangles, not just one particular size. The
+# four strips are the successive differences of those nested areas.
+import sympy as sp
+
+A, k = sp.symbols(&#x27;A k&#x27;, positive=True)
+subtriangle_area = k**2 * A
+
+strips, prev = [], sp.Integer(0)
+for frac in (sp.Rational(1,4), sp.Rational(1,2), sp.Rational(3,4), sp.Rational(1,1)):
+    area_k = subtriangle_area.subs(k, frac)
+    strips.append(sp.simplify(area_k - prev))
+    prev = area_k
+print(strips)                        # [A/16, 3*A/16, 5*A/16, 7*A/16]
+
+second_largest = sorted(strips, key=lambda e: e.subs(A, 1))[-2]   # 5A/16
+print(sp.solve(sp.Eq(second_largest, 35), A))                     # [112]
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3>MS &middot; Purple Comet 2004, Problem 19 &middot; <span class="tag">Hard</span> <span class="tag">Number Theory</span></h3>
+<p class="problem">Find \(n\) such that \(n - 76\) and \(n + 76\) are both cubes of positive integers.</p>
+<div class="note math">Writing \(n-76=a^3\) and \(n+76=b^3\) gives \(b^3-a^3=152\). Factor the difference of cubes: \(b^3-a^3=(b-a)(b^2+ab+a^2)\). So if \(d=b-a\), then \(d\) must divide 152 &mdash; and 152 has only finitely many divisors. That turns an apparently infinite search (&ldquo;try every \(n\)&rdquo;) into a genuinely finite, provably complete one (&ldquo;try every divisor of 152&rdquo;).</div>
+<pre><code># MATH: n-76 = a^3 and n+76 = b^3 means b^3 - a^3 = 152. Factor the
+# difference of cubes: b^3-a^3 = (b-a)(b^2+ab+a^2). Writing d = b-a and
+# e = b^2+ab+a^2, we need d*e = 152 -- so d must be one of the finitely
+# many divisors of 152. That is the real, complete search space -- not
+# an arbitrary range of numbers to try.
+import sympy as sp
+
+a, d, e = sp.symbols(&#x27;a d e&#x27;, integer=True, positive=True)
+eq = sp.Eq(3*a**2 + 3*a*d + d**2 - e, 0)   # b^2+ab+a^2 rewritten with b=a+d
+a_solutions = sp.solve(eq, a)
+
+found = []
+for d_val in sp.divisors(152):             # EVERY divisor -- complete, finite
+    e_val = 152 // d_val
+    for expr in a_solutions:
+        a_val = expr.subs({d: d_val, e: e_val})
+        if a_val.is_integer and a_val &gt; 0:
+            found.append((int(a_val)**3 + 76, int(a_val), int(a_val) + d_val))
+print(found)   # [(140, 4, 6)]
+</code></pre>
+</div>
+
+<h2>High School</h2>
+
+<div class="card example">
+<h3>HS &middot; Purple Comet 2004, Problem 9 &middot; <span class="tag">Easy</span> <span class="tag">Algebra</span></h3>
+<p class="problem">Let \(M\) and \(m\) be the largest and the smallest values of \(x\), respectively, which satisfy \(4x(x-5) \le 375\). Find \(M-m\).</p>
+<div class="note math">Rearranged, \(4x^2-20x-375 \le 0\) is an upward-opening parabola (positive leading coefficient), so the inequality holds exactly on the closed interval between its two roots. \(M\) and \(m\) are simply those two roots, found with the quadratic formula.</div>
+<pre><code># MATH: 4x(x-5) &lt;= 375 is a quadratic inequality. Rearranged to
+# 4x^2 - 20x - 375 &lt;= 0, the left side is an upward-opening parabola
+# (leading coefficient 4 &gt; 0), so the inequality holds exactly between
+# its two roots. Solve those roots with the quadratic formula; M and m
+# are the larger and smaller root.
+import math
+
+a, b, c = 4, -20, -375
+disc = b**2 - 4*a*c
+sq = math.sqrt(disc)
+x1, x2 = (-b - sq) / (2*a), (-b + sq) / (2*a)
+m, M = min(x1, x2), max(x1, x2)
+print(m, M, M - m)  # -7.5 12.5 20.0
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3>HS &middot; Purple Comet 2004, Problem 12 &middot; <span class="tag">Medium</span> <span class="tag">Geometry</span></h3>
+<p class="problem">The diagram shows a circle with radius 24 which contains two circles with radius 12 tangent to each other and the larger circle. The smallest circle is tangent to the three other circles. What is the radius of the smallest circle?</p>
+<figure class="diagram">
+<svg viewBox="-30 -30 60 60" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="0" cy="0" r="24" fill="none" stroke="#8c2600" stroke-width="1"/>
+  <circle cx="-12" cy="0" r="12" fill="#fbe9c2" stroke="#b63200" stroke-width="1"/>
+  <circle cx="12" cy="0" r="12" fill="#fbe9c2" stroke="#b63200" stroke-width="1"/>
+  <circle cx="0" cy="-16" r="8" fill="#f2c14e" stroke="#8c2600" stroke-width="1"/>
+</svg>
+<figcaption>Centers and radii drawn exactly to the solved values: the two r=12 circles split the big circle&rsquo;s diameter; the r=8 circle sits in the gap above, tangent to all three.</figcaption>
+</figure>
+<div class="note math">This is exactly the situation <strong>Descartes&rsquo; Circle Theorem</strong> was built for: four mutually tangent circles have curvatures (\(k=1/\text{radius}\), negative when a circle contains the others) related by \[k_4 = k_1+k_2+k_3 \pm 2\sqrt{k_1k_2+k_2k_3+k_3k_1}.\] Plugging in the big circle (curvature \(-1/24\)) and the two radius-12 circles gives the fourth curvature directly, with no coordinate geometry required.</div>
+<pre><code># MATH: Descartes&#x27; Circle Theorem. For four mutually tangent circles
+# with curvatures k1,k2,k3,k4 (k = 1/radius; NEGATIVE for a circle that
+# the others sit inside of, since it curves the &quot;other way&quot;):
+#   k4 = k1+k2+k3 +/- 2*sqrt(k1*k2 + k2*k3 + k3*k1)
+# Here k1 is the big radius-24 circle (internally tangent -&gt; negative),
+# k2=k3 are the two radius-12 circles, and k4 is the unknown small
+# circle tangent to all three.
+from fractions import Fraction
+import math
+
+k1 = -Fraction(1, 24)
+k2 = Fraction(1, 12)
+k3 = Fraction(1, 12)
+
+s = k1 + k2 + k3
+p = k1*k2 + k2*k3 + k3*k1
+k4 = float(s) + 2 * math.sqrt(float(p))
+print(1 / k4)  # 8.0
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3>HS &middot; Purple Comet 2004, Problem 17 &middot; <span class="tag">Hard</span> <span class="tag">Combinatorics</span></h3>
+<p class="problem">We want to paint some identically-sized cubes so that each face of each cube is painted a solid color and each cube is painted with six different colors. If we have seven different colors to choose from, how many distinguishable cubes can we produce?</p>
+<div class="note math">Two colorings that are rotations of each other are the <em>same</em> physical cube, so this is a counting-up-to-symmetry problem &mdash; exactly what <strong>Burnside&rsquo;s Lemma</strong> is for: the number of genuinely distinct colorings equals the average, over every symmetry of the cube, of how many colorings that symmetry leaves unchanged. Since every face gets a different color, only the &ldquo;do nothing&rdquo; symmetry can ever leave a coloring unchanged, which collapses the count to \(6!/24=30\) arrangements per choice of 6 colors, times \(\binom{7}{6}=7\) ways to choose which 6 of the 7 colors to use.</div>
+<pre><code># MATH: Burnside&#x27;s Lemma (orbit-counting theorem). Two colorings of the
+# cube&#x27;s faces are &quot;the same cube&quot; if a rotation of the cube turns one
+# into the other, so we are counting ORBITS of colorings under the
+# rotation group G (the 24 rotations of a cube), not raw colorings.
+# Burnside: #orbits = (1/|G|) * sum_{g in G} (# colorings fixed by g).
+# Because all 6 colors here are required to be different, a nontrivial
+# rotation (which always moves some face to another face) can never fix
+# such a coloring -- only the identity does. The code below does not
+# assume that shortcut, though: it checks every rotation directly.
+from itertools import permutations, product
+from math import comb
+
+faces = [&#x27;U&#x27;, &#x27;D&#x27;, &#x27;F&#x27;, &#x27;B&#x27;, &#x27;L&#x27;, &#x27;R&#x27;]
+vec = {&#x27;U&#x27;: (0,0,1), &#x27;D&#x27;: (0,0,-1), &#x27;F&#x27;: (0,-1,0),
+       &#x27;B&#x27;: (0,1,0), &#x27;L&#x27;: (-1,0,0), &#x27;R&#x27;: (1,0,0)}
+
+def apply(M, v):
+    return tuple(sum(M[i][j]*v[j] for j in range(3)) for i in range(3))
+
+def det(M):
+    return (M[0][0]*(M[1][1]*M[2][2]-M[1][2]*M[2][1])
+          - M[0][1]*(M[1][0]*M[2][2]-M[1][2]*M[2][0])
+          + M[0][2]*(M[1][0]*M[2][1]-M[1][1]*M[2][0]))
+
+rotations = []
+for perm in permutations(range(3)):
+    for signs in product([1, -1], repeat=3):
+        M = [[0]*3 for _ in range(3)]
+        for i in range(3):
+            M[i][perm[i]] = signs[i]
+        if det(M) == 1:
+            rotations.append(M)
+
+face_perms = []
+for M in rotations:
+    p = {f: next(g for g in faces if vec[g] == apply(M, vec[f])) for f in faces}
+    face_perms.append(p)
+
+idx = {f: i for i, f in enumerate(faces)}
+all_colorings = list(permutations(range(6)))   # the 6! all-distinct colorings
+
+total_fixed = sum(
+    1
+    for p in face_perms
+    for coloring in all_colorings
+    if tuple(coloring[idx[p[f]]] for f in faces) == coloring
+)
+distinct_colorings = total_fixed // len(face_perms)          # -&gt; 30
+print(distinct_colorings, comb(7, 6) * distinct_colorings)   # 30 210
+</code></pre>
+</div>
+
+<h2 id="playground">Try your own code</h2>
+<p>A blank scratchpad &mdash; paste in your own solution to any problem and run it. This isn&rsquo;t graded and isn&rsquo;t checked for correctness; it just runs whatever Python you give it and shows you what it prints, or the error if something&rsquo;s wrong.</p>
+<div class="card playground-card">
+<textarea id="playground-editor" class="code-editor" spellcheck="false" rows="10" placeholder="# Write or paste your Python here, then click Run.&#10;print('Hello, MCC!')"></textarea>
+</div>
+
+<h2>Questions?</h2>
+<p>Contact your regional coordinator on the <a href="./organization">Organization</a> page. For the coding contest itself, see <a href="./toml">TOML</a>.</p>

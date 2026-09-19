@@ -66,13 +66,14 @@ T1 and T2 papers are graded by Mr. Nghia; T3 and T4 papers are graded by Mr. Toa
 
 ## The weekly Sunday session
 
-Because each team now tests at its own pace, Sunday is the club's one shared session, rotating between three things from one week to the next:
+Because each team now tests at its own pace, Sunday is the club's one shared session, rotating between two things from one week to the next:
 
 * A lecture on a math theory or topic.
 * A lecture on recent test solutions.
-* A coding competition (see [TOML](./toml.html)).
 
-Each of the three comes around roughly once every three weeks. Official solutions are taught by Mr. Nghia, Mr. Toan, or one of the teachers and recorded for the club's YouTube channel, so no one is locked out by time zone. Students with a particularly good solution may also be recorded presenting it themselves.
+Each of the two comes around roughly once every three weeks. Official solutions are taught by Mr. Nghia, Mr. Toan, or one of the teachers and recorded for the club's YouTube channel, so no one is locked out by time zone. Students with a particularly good solution may also be recorded presenting it themselves.
+
+The coding programme runs its own, separate cycle: a **coding contest**, then a **solution discussion** of that contest two weeks later, then repeat — see [TOML](./toml.html) for the schedule and how to take part.
 
 ## Teams
 
