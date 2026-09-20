@@ -344,11 +344,12 @@ document.addEventListener("DOMContentLoaded", function () {
 <p><em>Purple Comet 2004, worked in full &mdash; Middle School and High School &mdash; math, code, and (where it helps) a diagram, for every problem in the archive.</em></p>
 
 <div class="note">
-<strong>47 of the 50 Purple Comet 2004 problems are live below</strong> (23 Middle School, 24 High School &mdash; several shared problems get their own write-up under each track), several with two or more independent solutions. This is a standing lesson, not a one-time page &mdash; the remaining three, and any further alternate solutions, are added as they clear review. Come back for more.
+<strong>48 of the 50 Purple Comet 2004 problems are live below</strong> (24 Middle School, 24 High School &mdash; several shared problems get their own write-up under each track), several with two or more independent solutions. This is a standing lesson, not a one-time page &mdash; the remaining two, and any further alternate solutions, are added as they clear review. Come back for more.
 </div>
 
 <h2>What Lesson 1 is for</h2>
 <p>Every problem below is solved with real math first &mdash; an identity, a similarity ratio, a theorem, a provably complete search &mdash; and a short Python program second, so the code is doing something a calculator can&rsquo;t: expressing that math directly, not guessing numbers until one works. This is exactly the standard your own contest submissions are held to. Read a few of these closely before your first coding contest.</p>
+<p>This page collects 47 problems at once, so it moves through more named techniques than any single week of class will. If a term or trick in a note is new to you, that&rsquo;s expected &mdash; don&rsquo;t worry about mastering it here; it will get its own proper treatment in a later chapter. Treat Lesson 1 as a preview of where the toolbox is headed, not a checklist of things you should already know.</p>
 
 <div class="requirements">
 <h2 id="what-s-required-and-acceptable-for-a-contest-submission">What&rsquo;s required and acceptable for a contest submission</h2>
@@ -729,7 +730,7 @@ print(len(complement), N - len(complement))          # 79 120 -- matches Solutio
 <div class="card example">
 <h3 id="ms-problem-10">MS &middot; Purple Comet 2004, Problem 10 &middot; <span class="tag">Hard</span> <span class="tag">Number Theory</span></h3>
 <p class="problem">One rainy afternoon you write the number 1 once, the number 2 twice, the number 3 three times, and so forth until you have written the number 99 ninety-nine times. What is the 2005th digit that you write?</p>
-<div class="note math">Group the writing into two blocks by digit-length. Numbers 1&ndash;9 are single digits, and number \(n\) is written \(n\) times, so that block contributes \(\sum_{n=1}^{9}n=45\) digits total. From 10 onward, each number is two digits, so after finishing number \(m\) (for \(10\le m\le99\)), the running digit total is \(45+\sum_{k=10}^{m}2k = m(m+1)-45\) &mdash; a closed-form running total, not something to tally one number at a time. Solve \(m(m+1)-45\ge2005\) for the smallest \(m\), then locate the exact position inside that one number&rsquo;s block of repeats.</div>
+<div class="note math">Group the writing into two blocks by digit-length. Numbers 1&ndash;9 are single digits, and number \(n\) is written \(n\) times, so that block contributes \(\sum_{n=1}^{9}n\) (shorthand for the sum \(1+2+3+\cdots+9\)) \(=45\) digits total. From 10 onward, each number is two digits, so after finishing number \(m\) (for \(10\le m\le99\)), the running digit total is \(45+\sum_{k=10}^{m}2k\) (that is, \(45+2\cdot10+2\cdot11+\cdots+2m\)) \(= m(m+1)-45\) &mdash; a closed-form running total, not something to tally one number at a time. Solve \(m(m+1)-45\ge2005\) for the smallest \(m\), then locate the exact position inside that one number&rsquo;s block of repeats.</div>
 <pre><code># MATH: numbers 1-9 are 1 digit each, written n times -&gt; sum_{n=1}^{9} n
 # = 45 digits total. From 10 on, each number is 2 digits, so the
 # running digit-count after finishing number m is 45 + sum_{k=10}^m 2k
@@ -988,6 +989,47 @@ height = 2*r1
 area = sp.simplify(width * height)
 print(area)                    # 240/pi
 print(sp.simplify(area*pi))    # 240  -- so n = 240
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="ms-problem-21">MS &middot; Purple Comet 2004, Problem 21 &middot; <span class="tag">Superhard</span> <span class="tag">Number Theory</span></h3>
+<p class="problem">Find the number of different quadruples \((a,b,c,d)\) of positive integers such that \(ab=cd=a+b+c+d-3\).</p>
+<div class="note math">Let \(N\) be the common value, so \(a+b+c+d=N+3\). The key move is to divide by \(N\): since \(N=ab\), we get \(\frac aN=\frac1b\) and \(\frac bN=\frac1a\) (and symmetrically \(\frac cN=\frac1d\), \(\frac dN=\frac1c\), since \(N=cd\) too). Adding all four and using \(a+b+c+d=N+3\) gives the identity \(\frac1a+\frac1b+\frac1c+\frac1d=1+\frac3N>1\). That one inequality is extremely restrictive: if all four of \(a,b,c,d\) were \(\ge4\), the left side would be at most \(4\cdot\frac14=1\), a contradiction. So the <em>smallest</em> of the four numbers is \(1\), \(2\), or \(3\) &mdash; a genuinely finite set of cases, not an open-ended search over \(N\).<br><br>Because the equation is unchanged by swapping the two members of either product, or by swapping the two pairs \((a,b)\) and \((c,d)\) with each other, that smallest value can always be relabeled as \(a\) without loss of generality &mdash; and once it&rsquo;s isolated as the true minimum, the other three are automatically \(\ge a\) too. Case on \(a\in\{1,2,3\}\):<br><br><strong>\(a=1\):</strong> \(N=b\), and the sum equation forces \(c+d=2\), so \(c=d=1\) and \(b=cd=1\). One solution: \((1,1,1,1)\).<br><br><strong>\(a=2\):</strong> \(N=2b\), and combining \(cd=N\) with the sum equation gives \(b=c+d-1\); substituting eliminates \(b\) and reduces algebraically to \((c-2)(d-2)=2\) &mdash; Simon&rsquo;s Favorite Factoring Trick, the same shift-and-factor move used elsewhere on this page. Since \(2\) has only one factorization into two positive integers, \((c,d)=(3,4)\) or \((4,3)\), giving \(b=6\).<br><br><strong>\(a=3\):</strong> here \(b,c,d\ge3\) (since \(a\) is the true minimum), and the same elimination gives \((2c-3)(2d-3)=9\). Both factors are odd and \(\ge3\), and \(9\)&rsquo;s only such factorization is \(3\times3\), forcing \(c=d=3\), \(b=3\).<br><br>Expanding each case into its full set of orderings (swap within a pair, swap the pairs) gives \(1+8+1=10\) quadruples total &mdash; a complete count, not a search that happened to stop finding new ones.</div>
+<pre><code># MATH: dividing a+b+c+d=N+3 (N=ab=cd) by N gives the identity
+# 1/a+1/b+1/c+1/d = 1+3/N &gt; 1. If all four numbers were &gt;=4, the left
+# side could be at most 1 -- contradiction. So the SMALLEST of the four
+# is 1, 2, or 3: a genuinely finite case split, not a guess at how far
+# to search. Each case reduces algebraically (Simon&#x27;s Favorite Factoring
+# Trick) to a small, fully-factored equation, not a scan over N.
+import sympy as sp
+
+def orbit(a, b, c, d):
+    # the equation is unchanged by swapping within a pair, or swapping
+    # the two pairs -- expand one representative into its full orbit
+    quads = set()
+    for x, y in [(a, b), (b, a)]:
+        for z, w in [(c, d), (d, c)]:
+            quads.add((x, y, z, w))
+            quads.add((z, w, x, y))
+    return quads
+
+solutions = set()
+
+solutions |= orbit(1, 1, 1, 1)             # a=1: forces c=d=1, b=1
+
+for e in sp.divisors(2):                   # a=2: (c-2)(d-2) = 2
+    c, d = 2 + e, 2 + 2 // e
+    solutions |= orbit(2, c + d - 1, c, d)
+
+for e in sp.divisors(9):                   # a=3: (2c-3)(2d-3) = 9,
+    if e >= 3 and 9 // e >= 3 and (e + 3) % 2 == 0:   # both factors odd, &gt;=3
+        c, d = (e + 3) // 2, (9 // e + 3) // 2
+        solutions |= orbit(3, (c + d) // 2, c, d)
+
+print(len(solutions))     # 10
+print(sorted(solutions))  # matches an exhaustive brute-force check over N up to 1000
 </code></pre>
 </div>
 
