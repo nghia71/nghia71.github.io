@@ -23,7 +23,7 @@
   // Apps Script Web App /exec URL. Set this after deploying the script --
   // see mcc-access-check.gs (kept alongside this file in the repo for
   // reference; Apps Script itself lives in Google's editor, not here).
-  var ACCESS_CHECK_URL = "REPLACE_WITH_APPS_SCRIPT_EXEC_URL";
+  var ACCESS_CHECK_URL = "https://script.google.com/macros/s/AKfycby3_Rgjq_JY7A1Dihq6LjNBHNLNPQaLCQ2o1inouRVu0rNTpS5Y6bUUuC4f-H1_JPiulw/exec";
 
   // Shared across every page that grants access, so a student verified on
   // one page (a personal lesson link, or the lessons hub's login form) is
