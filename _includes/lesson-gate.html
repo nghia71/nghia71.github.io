@@ -65,7 +65,16 @@ worked, forever, with no error shown anywhere on the site itself.
 (function () {
   var screen = document.getElementById("mcc-gate-screen");
   var message = document.getElementById("mcc-gate-message");
-  var content = document.getElementById("mcc-gate-content");
+  // Deliberately NOT looked up here at parse time: this script tag runs
+  // (per the include instructions above) right before the page's real
+  // content, so #mcc-gate-content doesn't exist in the DOM yet at this
+  // point -- getElementById would return null and content could never be
+  // revealed. Looked up instead inside showGranted(), which only ever
+  // runs from the checkAccess().then() callback below, by which time the
+  // rest of the page has long since finished parsing (this script block
+  // itself doesn't block parsing of what comes after it). This bit us on
+  // 2026-09-20: access checks were succeeding but the lesson content
+  // stayed hidden regardless.
 
   function showDenied() {
     message.innerHTML =
@@ -74,6 +83,7 @@ worked, forever, with no error shown anywhere on the site itself.
   }
 
   function showGranted(name) {
+    var content = document.getElementById("mcc-gate-content");
     screen.style.display = "none";
     if (content) content.style.display = "";
     if (name && content && !document.getElementById("mcc-gate-welcome")) {

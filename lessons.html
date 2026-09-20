@@ -13,7 +13,9 @@ robots: noindex
      student who came in through their personal link can still open this
      page afterward with no extra step. -->
 
-<div id="mcc-hub-login" class="mcc-gate-screen">
+<p id="mcc-hub-loading" style="text-align:center; color: var(--ink-soft); font-style: italic; margin: 2.5em 0;">Checking your access&hellip;</p>
+
+<div id="mcc-hub-login" class="mcc-gate-screen" style="display:none">
   <p id="mcc-hub-message"></p>
   <form id="mcc-hub-login-form">
     <p id="mcc-hub-welcome"></p>
@@ -115,6 +117,7 @@ robots: noindex
 <script src="{{ '/assets/js/mcc-roster.js' | relative_url }}?v=3"></script>
 <script>
 (function () {
+  var loading = document.getElementById("mcc-hub-loading");
   var loginScreen = document.getElementById("mcc-hub-login");
   var hubMessage = document.getElementById("mcc-hub-message");
   var loginForm = document.getElementById("mcc-hub-login-form");
@@ -127,9 +130,15 @@ robots: noindex
   var frame = document.getElementById("mcc-hub-frame");
 
   function showLoggedIn(student) {
+    loading.style.display = "none";
     loginScreen.style.display = "none";
     content.style.display = "";
     greeting.textContent = student.name ? "Welcome, " + student.name + ". Pick a lesson below." : "Pick a lesson below.";
+  }
+
+  function showLoginForm() {
+    loading.style.display = "none";
+    loginScreen.style.display = "";
   }
 
   function rememberAndEnter(student) {
@@ -194,6 +203,10 @@ robots: noindex
   // Already verified on this device (via a personal lesson link, or an
   // earlier visit here) -- skip straight to the lesson table. No PIN
   // needed again, just a re-check that the id is still on the roster.
+  // The login form starts hidden (see the style="display:none" on
+  // #mcc-hub-login) and #mcc-hub-loading shows in its place until this
+  // resolves either way, so a returning, already-verified student never
+  // sees the login form flash up before the lesson table replaces it.
   var stored = null;
   try { stored = JSON.parse(localStorage.getItem(MCCRoster.STORAGE_KEY) || "null"); } catch (e) {}
   if (stored && stored.id) {
@@ -203,9 +216,12 @@ robots: noindex
           showLoggedIn({ id: stored.id, name: result.name });
         } else {
           try { localStorage.removeItem(MCCRoster.STORAGE_KEY); } catch (e) {}
+          showLoginForm();
         }
       })
-      .catch(function () { /* couldn't re-check -- just show the login form */ });
+      .catch(function () { showLoginForm(); });
+  } else {
+    showLoginForm();
   }
 })();
 </script>
