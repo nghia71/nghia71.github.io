@@ -57,7 +57,10 @@ worked, forever, with no error shown anywhere on the site itself.
   }
 </style>
 
-<script src="{{ '/assets/js/mcc-roster.js' | relative_url }}"></script>
+<!-- ?v=N cache-busts this static asset -- keep this in sync with the
+     same query string in lessons.html; bump both any time
+     mcc-roster.js's content actually changes. -->
+<script src="{{ '/assets/js/mcc-roster.js' | relative_url }}?v=2"></script>
 <script>
 (function () {
   var screen = document.getElementById("mcc-gate-screen");

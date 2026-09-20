@@ -20,7 +20,7 @@ robots: noindex
     <label for="mcc-hub-id-input">Student ID</label><br>
     <input type="text" id="mcc-hub-id-input" autocomplete="off" autocapitalize="off" spellcheck="false" maxlength="20"><br>
     <label for="mcc-hub-pin-input">Access code</label><br>
-    <input type="text" id="mcc-hub-pin-input" autocomplete="off" autocapitalize="off" spellcheck="false" maxlength="40">
+    <input type="text" id="mcc-hub-pin-input" autocomplete="off" autocapitalize="off" spellcheck="false" maxlength="40"><br>
     <button type="submit">Continue</button>
     <p id="mcc-hub-login-error" style="display:none;">That id/code combination doesn't match &mdash; try again.</p>
   </form>
@@ -77,6 +77,7 @@ robots: noindex
     background: var(--brand);
     color: var(--white);
     cursor: pointer;
+    margin-top: 0.3em;
   }
   #mcc-hub-login-error { color: #b3261e; }
   #mcc-hub-welcome { font-weight: 600; }
@@ -105,7 +106,13 @@ robots: noindex
   }
 </style>
 
-<script src="{{ '/assets/js/mcc-roster.js' | relative_url }}"></script>
+<!-- ?v=N cache-busts this static asset -- browsers cache a JS file
+     aggressively by URL, so bump N here (and in lesson-gate.html) any
+     time mcc-roster.js's content actually changes, or a stale cached
+     copy keeps running after a real deploy (this bit us on 2026-09-20:
+     the CSV-fetch version stayed cached in a browser well after the
+     server-side-check version replaced it). -->
+<script src="{{ '/assets/js/mcc-roster.js' | relative_url }}?v=2"></script>
 <script>
 (function () {
   var loginScreen = document.getElementById("mcc-hub-login");
