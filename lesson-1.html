@@ -30,7 +30,7 @@ title: Lesson 1
      Styled to match the site's existing pre/code blocks (dark ink bg, cream
      text) and its small pill-shaped utility buttons (see .tc-progress-reset
      in assets/css/style.css), not a separate "dev tool" look. */
-  .code-runner { margin-top: 14px; }
+  .code-runner { margin-top: 14px; margin-bottom: 28px; }
   .code-editor {
     display: block;
     width: 100%;
@@ -106,6 +106,21 @@ title: Lesson 1
     font-size: 13px;
     color: var(--ink-soft);
     font-style: italic;
+  }
+  .addition {
+    display: inline-block;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-align: right;
+    line-height: 1.5;
+    margin: 0.6em 0;
+    padding: 2px 6px;
+  }
+  .addition .addition-row { white-space: pre; }
+  .addition .addition-sum {
+    border-top: 1.5px solid var(--ink);
+    padding-top: 2px;
   }
 
   /* Submission-requirements block -- deliberately the most visually
@@ -904,7 +919,7 @@ print(min(c[2] for c in candidates))   # 12
 <h3 id="ms-problem-17">MS &middot; Purple Comet 2004, Problem 17 &middot; <span class="tag">Hard</span> <span class="tag">Algebra</span></h3>
 <p class="problem">Find \(x\) so that \(2^{2^{3^{2^2}}} = 4^{4^x}\).</p>
 <p><strong>[Official]</strong></p>
-<div class="note math">The identical problem appears as <a href="#hs-problem-4">HS Problem 4</a> below. Both sides are towers built entirely out of \(2\)'s, so rewrite everything as a power of \(2\) and compare exponents. Working from the top of the left tower down: \(2^2=4\), then \(3^{2^2}=3^4=81\), so the whole left side is \(2^{2^{81}}\). On the right, \(4=2^2\), so \(4^{4^x}=\left(2^2\right)^{4^x}=2^{2\cdot4^x}\); and since \(4^x=2^{2x}\), that exponent is \(2\cdot2^{2x}=2^{2x+1}\), making the right side \(2^{2^{2x+1}}\). Both sides now have the same outer base \(2\) raised to a power that is itself a power of \(2\) &mdash; so the two outermost exponents must match: \(2^{81}=2^{2x+1}\). Matching bases one level deeper forces the exponents themselves to be equal, \(81=2x+1\), which pins down \(x\) uniquely with no search at all.</div>
+<div class="note math">(This problem is also 2004 Purple Comet High School Problem 4 &mdash; identical text, identical answer.) Both sides are towers built entirely out of \(2\)'s, so rewrite everything as a power of \(2\) and compare exponents. Working from the top of the left tower down: \(2^2=4\), then \(3^{2^2}=3^4=81\), so the whole left side is \(2^{2^{81}}\). On the right, \(4=2^2\), so \(4^{4^x}=\left(2^2\right)^{4^x}=2^{2\cdot4^x}\); and since \(4^x=2^{2x}\), that exponent is \(2\cdot2^{2x}=2^{2x+1}\), making the right side \(2^{2^{2x+1}}\). Both sides now have the same outer base \(2\) raised to a power that is itself a power of \(2\) &mdash; so the two outermost exponents must match: \(2^{81}=2^{2x+1}\). Matching bases one level deeper forces the exponents themselves to be equal, \(81=2x+1\), which pins down \(x\) uniquely with no search at all.</div>
 <pre><code># MATH: rewrite the tower base by base. Left side: 2^2=4, then 3^4=81,
 # so the whole left side is 2^(2^81). Right side: 4=2^2, so
 # 4^(4^x) = 2^(2*4^x) = 2^(2^(2x+1)) since 4^x=2^(2x). Matching the two
@@ -1066,17 +1081,17 @@ print(sorted(solutions))  # matches an exhaustive brute-force check over N up to
 <h3 id="ms-problem-22">MS &middot; Purple Comet 2004, Problem 22 &middot; <span class="tag">Hard</span> <span class="tag">Geometry</span></h3>
 <p class="problem">Two circles have radii 15 and 95. If the two external tangents to the circles intersect at 60 degrees, how far apart are the centers of the circles?</p>
 <figure class="diagram">
-<svg viewBox="-5 -35 65 70" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="-14 -38 76 76" xmlns="http://www.w3.org/2000/svg">
   <line x1="0" y1="0" x2="57.2" y2="33" stroke="#8c2600" stroke-width="1.2"/>
   <line x1="0" y1="0" x2="57.2" y2="-33" stroke="#8c2600" stroke-width="1.2"/>
   <line x1="6" y1="0" x2="38" y2="0" stroke="#b63200" stroke-width="1" stroke-dasharray="2,2"/>
   <circle cx="6" cy="0" r="3" fill="#f2c14e" stroke="#8c2600" stroke-width="0.6"/>
   <circle cx="38" cy="0" r="19" fill="none" stroke="#8c2600" stroke-width="1"/>
   <circle cx="0" cy="0" r="1" fill="#4a2b00"/>
-  <text x="-4" y="-6" font-size="6" fill="#4a2b00">P</text>
+  <text x="-11" y="-6" font-size="6" fill="#4a2b00">P</text>
   <text x="4" y="10" font-size="6" fill="#4a2b00">r=15</text>
-  <text x="34" y="-22" font-size="6" fill="#4a2b00">R=95</text>
-  <text x="14" y="8" font-size="6" fill="#8c2600">d=160</text>
+  <text x="41" y="-27" font-size="6" fill="#4a2b00">R=95</text>
+  <text x="14" y="-4" font-size="6" fill="#8c2600">d=160</text>
 </svg>
 <figcaption>Both circles are tangent to the <em>same</em> two lines through \(P\), at the same 30&deg; half-angle &mdash; drawn to the actual solved radii ratio (15:95) and center distance (160), scaled down by 5.</figcaption>
 </figure>
@@ -1119,8 +1134,10 @@ print(d)   # 160 -- matches Solution 1
 <div class="card example">
 <h3 id="ms-problem-23">MS &middot; Purple Comet 2004, Problem 23 &middot; <span class="tag">Medium</span> <span class="tag">Algebra</span></h3>
 <p class="problem">A cubic block with dimensions \(n\) by \(n\) by \(n\) is made up of a collection of \(1\times1\times1\) unit cubes. What is the smallest value of \(n\) so that if the outer <strong>two layers</strong> of unit cubes are removed from the block, more than half the original unit cubes will still remain?</p>
-<p><strong>[Solution &mdash; direct integer check]</strong></p>
-<div class="note math">The identical problem appears as <a href="#hs-problem-13">HS Problem 13</a> below. Removing the outer two 1-unit-thick layers from an \(n\times n\times n\) block leaves an \((n-4)\times(n-4)\times(n-4)\) core &mdash; peel two layers off each of the six faces. &ldquo;More than half remains&rdquo; is the inequality \(2(n-4)^3 &gt; n^3\), and as \(n\) grows the two-layer shell becomes a shrinking fraction of the total volume, so this holds from some smallest \(n\) onward &mdash; exactly the kind of threshold a solved inequality (checked against consecutive integers) finds directly.</div>
+<p><em>(This problem is also 2004 Purple Comet High School Problem 13 &mdash; identical text, identical answer.)</em></p>
+
+<p><strong>Solution 1 &mdash; check consecutive integers. [Solution 1 &mdash; direct integer check]</strong></p>
+<div class="note math">Removing the outer two 1-unit-thick layers from an \(n\times n\times n\) block leaves an \((n-4)\times(n-4)\times(n-4)\) core &mdash; peel two layers off each of the six faces. &ldquo;More than half remains&rdquo; is the inequality \(2(n-4)^3 &gt; n^3\), and as \(n\) grows the two-layer shell becomes a shrinking fraction of the total volume, so this holds from some smallest \(n\) onward &mdash; exactly the kind of threshold a solved inequality (checked against consecutive integers) finds directly.</div>
 <pre><code># MATH: peeling the outer TWO 1-unit-thick layers off an n x n x n
 # block leaves an (n-4)^3 core. &quot;More than half remains&quot; is the
 # inequality 2*(n-4)^3 &gt; n^3. The two-layer shell&#x27;s share of the total
@@ -1136,6 +1153,24 @@ while not inequality.subs(n, candidate):
     candidate += 1
 print(candidate)   # 20
 print((candidate - 4)**3 * 2, &#x27;>&#x27;, candidate**3)   # 8192 > 8000
+</code></pre>
+
+<p><strong>Solution 2 &mdash; solve the real boundary, then round up. [Official]</strong></p>
+<div class="note math">Rather than testing integers one at a time, solve the continuous equation \(2(n-4)^3=n^3\) for its real root directly: dividing through gives \(\left(\frac{n}{n-4}\right)^3=2\), so \(\frac{n}{n-4}=\sqrt[3]2\), which rearranges to a closed form for \(n\). Since \(2(n-4)^3-n^3\) is increasing once \(n\) is past that root, the smallest <em>integer</em> satisfying the inequality is exactly the ceiling of that real root &mdash; a direct algebraic answer instead of a scan.</div>
+<pre><code># MATH: solve the boundary equation 2(n-4)^3 = n^3 for its real root
+# directly (dividing both sides by (n-4)^3 gives (n/(n-4))^3 = 2, i.e.
+# n/(n-4) = cbrt(2), solved for n in closed form) -- then the smallest
+# INTEGER n satisfying the strict inequality is the ceiling of that
+# real root, since the cubic difference is increasing past the root.
+import sympy as sp
+import math
+
+n = sp.symbols(&#x27;n&#x27;, real=True)
+all_roots = sp.solve(sp.Eq(2*(n - 4)**3, n**3), n)   # cubic: up to 3 roots
+real_root = [r for r in all_roots if r.is_real][0]   # exactly one is real
+print(sp.N(real_root))          # 19.389... (not an integer)
+answer = math.ceil(float(real_root))
+print(answer)                   # 20
 </code></pre>
 </div>
 
@@ -1164,7 +1199,12 @@ print(target)   # 1
 
 <div class="card example">
 <h3 id="ms-problem-25">MS &middot; Purple Comet 2004, Problem 25 &middot; <span class="tag">Superhard</span> <span class="tag">Number Theory</span></h3>
-<p class="problem">In the addition problem<br><code>&nbsp;&nbsp;WHITE<br>+WATER<br>PICNIC</code><br>each distinct letter represents a different digit. Find the number represented by the answer PICNIC.</p>
+<p class="problem">In the addition problem below, each distinct letter represents a different digit. Find the number represented by the answer PICNIC.</p>
+<div class="addition">
+<div class="addition-row">&nbsp;WHITE</div>
+<div class="addition-row">+WATER</div>
+<div class="addition-row addition-sum">PICNIC</div>
+</div>
 
 <p><strong>Solution 1 &mdash; every bijection, exhaustively.</strong></p>
 <div class="note math">Count the distinct letters first, before writing any code: \(W,H,I,T,E,A,R,P,C,N\) &mdash; exactly <strong>10</strong> letters, one for each digit \(0\)&ndash;\(9\). That single observation turns an apparently open-ended puzzle into a genuinely finite, fully enumerable search: every valid solution is some bijection from letters to digits, and there are exactly \(10!=3{,}628{,}800\) of those &mdash; small enough to check completely, with the only real logic needed being &ldquo;no leading digit is 0&rdquo; and &ldquo;the arithmetic actually checks out.&rdquo; This is exhaustive search over a search space proven small and complete &mdash; not guessing digits until something matches.</div>
@@ -1231,50 +1271,6 @@ print(sorted(found))                                          # [169069] -- matc
 
 <h2>High School</h2>
 
-<div class="card example">
-<h3 id="hs-problem-1">HS &middot; Purple Comet 2004, Problem 1 &middot; <span class="tag">Easy</span> <span class="tag">Number Theory</span></h3>
-<p class="problem">How many different positive integers divide \(10!\)?</p>
-<div class="note math">The identical problem appears as <a href="#ms-problem-6">MS Problem 6</a> above &mdash; Purple Comet reuses a handful of problems across both tracks each year, and this is one of them. Same math (unique factorization: divisor count is \(\prod_i(e_i+1)\) over the prime exponents), same code.</div>
-<pre><code># MATH: unique factorization -- every divisor of n = p1^e1 * p2^e2 *...
-# is p1^f1 * p2^f2 * ... with 0 &lt;= fi &lt;= ei, independently for each
-# prime. That&#x27;s (e1+1)(e2+1)... divisors total. Factor 10! completely,
-# then apply that formula -- never list divisors one at a time.
-import sympy as sp
-
-n = sp.factorial(10)
-factors = sp.factorint(n)          # {2: 8, 3: 4, 5: 2, 7: 1}
-divisor_count = 1
-for exponent in factors.values():
-    divisor_count *= (exponent + 1)
-print(factors, divisor_count)      # {2: 8, 3: 4, 5: 2, 7: 1} 270
-</code></pre>
-</div>
-
-
-<div class="card example">
-<h3 id="hs-problem-2">HS &middot; Purple Comet 2004, Problem 2 &middot; <span class="tag">Easy</span> <span class="tag">Geometry</span></h3>
-<p class="problem">In \(\triangle ABC\), three lines are drawn parallel to side \(BC\), dividing the altitude of the triangle into four equal parts. If the area of the second-largest part is 35, what is the area of the whole \(\triangle ABC\)?</p>
-<div class="note math">The identical problem appears as <a href="#ms-problem-3">MS Problem 3</a> above, with two solutions there &mdash; similar triangles and an independent coordinate-geometry check. Same 1:3:5:7 area split, same code.</div>
-<pre><code># MATH: see MS Problem 3 above -- lines parallel to BC cut off, from
-# the apex, triangles similar to ABC with scale factors 1/4,1/2,3/4,1;
-# similar triangles scale AREA by k^2, giving a 1:3:5:7 split among the
-# four strips.
-import sympy as sp
-
-A, k = sp.symbols('A k', positive=True)
-subtriangle_area = k**2 * A
-
-strips, prev = [], sp.Integer(0)
-for frac in (sp.Rational(1,4), sp.Rational(1,2), sp.Rational(3,4), sp.Rational(1,1)):
-    area_k = subtriangle_area.subs(k, frac)
-    strips.append(sp.simplify(area_k - prev))
-    prev = area_k
-
-second_largest = sorted(strips, key=lambda e: e.subs(A, 1))[-2]
-print(sp.solve(sp.Eq(second_largest, 35), A))   # [112]
-</code></pre>
-</div>
-
 
 <div class="card example">
 <h3 id="hs-problem-3">HS &middot; Purple Comet 2004, Problem 3 &middot; <span class="tag">Medium</span> <span class="tag">Algebra</span></h3>
@@ -1302,53 +1298,6 @@ print(real_roots, len(real_roots))
 
 
 <div class="card example">
-<h3 id="hs-problem-4">HS &middot; Purple Comet 2004, Problem 4 &middot; <span class="tag">Hard</span> <span class="tag">Algebra</span></h3>
-<p class="problem">Find \(x\) so that \(2^{2^{3^{2^2}}} = 4^{4^x}\).</p>
-<p><strong>[Official]</strong></p>
-<div class="note math">The identical problem appears as <a href="#ms-problem-17">MS Problem 17</a> above. Both sides are towers built entirely out of \(2\)'s, so rewrite everything as a power of \(2\) and compare exponents. Working from the top of the left tower down: \(2^2=4\), then \(3^{2^2}=3^4=81\), so the whole left side is \(2^{2^{81}}\). On the right, \(4=2^2\), so \(4^{4^x}=\left(2^2\right)^{4^x}=2^{2\cdot4^x}\); and since \(4^x=2^{2x}\), that exponent is \(2\cdot2^{2x}=2^{2x+1}\), making the right side \(2^{2^{2x+1}}\). Both sides now have the same outer base \(2\) raised to a power that is itself a power of \(2\) &mdash; so the two outermost exponents must match: \(2^{81}=2^{2x+1}\). Matching bases one level deeper forces the exponents themselves to be equal, \(81=2x+1\), which pins down \(x\) uniquely with no search at all.</div>
-<pre><code># MATH: rewrite the tower base by base. Left side: 2^2=4, then 3^4=81,
-# so the whole left side is 2^(2^81). Right side: 4=2^2, so
-# 4^(4^x) = 2^(2*4^x) = 2^(2^(2x+1)) since 4^x=2^(2x). Matching the two
-# base-2 towers level by level forces 2^81 = 2^(2x+1), then 81 = 2x+1 --
-# an exact algebraic match, not a numeric search (the numbers involved
-# are far too large to ever compute directly).
-import sympy as sp
-
-x = sp.symbols('x')
-mid = 3**(2**2)                 # 81 -- the exponent atop the left tower
-eq = sp.Eq(mid, 2*x + 1)        # matching exponents one level below the shared base 2
-solution = sp.solve(eq, x)[0]
-print(mid, solution)            # 81 40
-
-# independent check: verify the algebraic identity that justifies the
-# level-matching step, using ordinary-sized numbers only
-xv = int(solution)
-print(2 * 4**xv == 2**(2*xv + 1))   # True  (this is 4^(4^x)'s exponent
-                                     #        rewritten as a power of 2)
-</code></pre>
-</div>
-
-
-<div class="card example">
-<h3 id="hs-problem-5">HS &middot; Purple Comet 2004, Problem 5 &middot; <span class="tag">Easy</span> <span class="tag">Number Theory</span></h3>
-<p class="problem">The number \(2.5081081081081\ldots\) can be written as \(\dfrac{m}{n}\) where \(m\) and \(n\) are natural numbers with no common factors. Find \(m+n\).</p>
-<div class="note math">The identical problem appears as <a href="#ms-problem-8">MS Problem 8</a> above, with two solutions: the multiply-and-subtract algebraic trick, and summing the repeating block as an infinite geometric series.</div>
-<pre><code># MATH: see MS Problem 8 above -- multiplying by 10^(k+r) and 10^k
-# (k=1 non-repeating digit, r=3 repeating digits) and subtracting
-# cancels the infinite tail exactly.
-import sympy as sp
-
-k, r = 1, 3
-whole_digits = 25081
-nonrep_digits = 25
-x = sp.Rational(whole_digits - nonrep_digits, 10**(k+r) - 10**k)
-m, n = sp.fraction(x)
-print(x, m, n, m + n)   # 464/185 464 185 649
-</code></pre>
-</div>
-
-
-<div class="card example">
 <h3 id="hs-problem-6">HS &middot; Purple Comet 2004, Problem 6 &middot; <span class="tag">Medium</span> <span class="tag">Algebra</span></h3>
 <p class="problem">Evaluate the product \(\left(1+\dfrac{2}{3}\right)\left(1+\dfrac{2}{4}\right)\left(1+\dfrac{2}{5}\right)\cdots\left(1+\dfrac{2}{98}\right)\).</p>
 <div class="note math">Each factor \(1+\frac{2}{k}\) simplifies to \(\frac{k+2}{k}\), so the whole product is \(\prod_{k=3}^{98}\frac{k+2}{k}\) &mdash; a <strong>telescoping product</strong>: the numerators run \(5,6,\ldots,100\) and the denominators run \(3,4,\ldots,98\), and every value from 5 through 98 appears once on top and once on bottom, cancelling completely. What survives is just the two numerators with no denominator partner (99, 100) over the two denominators with no numerator partner (3, 4).</div>
@@ -1366,40 +1315,6 @@ print(closed_form)   # 825
 # Sanity check only -- multiply out every factor directly.
 brute = sp.prod([sp.Rational(k+2, k) for k in range(3, 99)])
 print(brute)   # 825
-</code></pre>
-</div>
-
-
-<div class="card example">
-<h3 id="hs-problem-7">HS &middot; Purple Comet 2004, Problem 7 &middot; <span class="tag">Easy</span> <span class="tag">Number Theory</span></h3>
-<p class="problem">How many positive integers less than 200 are relatively prime to either 15 or 24?</p>
-<div class="note math">The identical problem appears as <a href="#ms-problem-9">MS Problem 9</a> above &mdash; including a second, set-based solution there. Same inclusion&ndash;exclusion reduction (coprime to neither 15 nor 24 collapses to &ldquo;divisible by 3 or 10&rdquo;), same code.</div>
-<pre><code># MATH: see MS Problem 9 above for the full derivation -- the
-# complement (not coprime to 15 AND not coprime to 24) reduces exactly
-# to &quot;divisible by 3 or 10,&quot; counted by inclusion-exclusion.
-N = 199
-complement = (N // 3) + (N // 10) - (N // 30)
-print(N - complement)   # 120
-</code></pre>
-</div>
-
-
-<div class="card example">
-<h3 id="hs-problem-8">HS &middot; Purple Comet 2004, Problem 8 &middot; <span class="tag">Medium</span> <span class="tag">Number Theory</span></h3>
-<p class="problem">One rainy afternoon you write the number 1 once, the number 2 twice, the number 3 three times, and so forth until you have written the number 99 ninety-nine times. What is the 2005th digit that you write?</p>
-<div class="note math">The identical problem appears as <a href="#ms-problem-10">MS Problem 10</a> above &mdash; same closed-form running digit-count \(m(m+1)-45\), same code.</div>
-<pre><code># MATH: see MS Problem 10 above -- the running digit total after
-# finishing two-digit number m is m(m+1)-45; find the smallest m that
-# reaches 2005, then locate the exact digit within its block.
-def cumulative(m):
-    return m*(m+1) - 45
-
-m = 10
-while cumulative(m) &lt; 2005:
-    m += 1
-before = cumulative(m-1)
-digit_index = (2005 - before - 1) % 2
-print(str(m)[digit_index])   # 5
 </code></pre>
 </div>
 
@@ -1492,25 +1407,30 @@ print(sqrt_S, S)   # 6 36 -- matches Solution 1
 </svg>
 <figcaption>The mirror line, the point \(P\), and its reflection \(P^\prime\) &mdash; drawn from the actual solved coordinates. The dashed segment \(PP^\prime\) is perpendicular to the line and bisected by it.</figcaption>
 </figure>
-<div class="note math">Reflecting a point across a line is a single, reusable piece of vector geometry, not a picture to eyeball: write the line as \(\mathbf{n}\cdot\mathbf{x}=15\) with normal \(\mathbf{n}=(3,4)\), compute the signed distance \(d=\frac{\mathbf{n}\cdot P-15}{|\mathbf{n}|^2}\), and then \(P^\prime = P - 2d\,\mathbf{n}\). The distance from \(P\) to its own reflection is always exactly twice the (unsigned) distance from \(P\) to the line &mdash; so the answer is \(2\cdot\frac{|3(9)+4(17)-15|}{5}\), no need to compute \(P^\prime\) explicitly at all, though doing so is a good independent check.</div>
-<pre><code># MATH: reflecting P across the line n.x = c (here n=(3,4), c=15) is
-# vector geometry: signed distance d = (n.P - c)/|n|^2, reflected point
-# P&#x27; = P - 2*d*n. The distance from P to P&#x27; is then always exactly
-# TWICE the unsigned distance from P to the line -- compute it two
-# independent ways as a cross-check.
+<div class="note math">The key fact: a point and its mirror image are the same distance from the mirror line, on opposite sides, along the line straight into the mirror (perpendicular to it). So the segment from \(P\) to its reflection \(P^\prime\) is exactly <strong>twice</strong> the straight-line distance from \(P\) to the line &mdash; we never need to find \(P^\prime\) itself. The distance from a point \((x_0,y_0)\) to a line \(ax+by=c\) has a standard formula: \(\dfrac{|ax_0+by_0-c|}{\sqrt{a^2+b^2}}\). Here \(a=3\), \(b=4\), \(c=15\), and \((x_0,y_0)=(9,17)\), so the distance from \(P\) to the line is \(\dfrac{|3(9)+4(17)-15|}{\sqrt{3^2+4^2}} = \dfrac{80}{5}=16\), and doubling that gives the answer.</div>
+<pre><code># MATH: a point and its reflection sit on opposite sides of the mirror
+# line, the same distance from it, along the perpendicular. So the
+# distance from P to its reflection is exactly TWICE the straight-line
+# distance from P to the line -- no need to find the reflected point.
+# Distance from (x0,y0) to the line ax+by=c is |a*x0+b*y0-c|/sqrt(a^2+b^2).
 import sympy as sp
 
-P = sp.Matrix([9, 17])
-n = sp.Matrix([3, 4])
-c = 15
+a, b, c = 3, 4, 15
+x0, y0 = 9, 17
 
-d_signed = (n.dot(P) - c) / n.dot(n)
-P_reflected = P - 2*d_signed*n
-print(P_reflected.T)                                  # [-51/5, -43/5]
+dist_to_line = abs(a*x0 + b*y0 - c) / sp.sqrt(a**2 + b**2)
+print(dist_to_line)          # 16
 
-dist_direct = sp.sqrt((P_reflected - P).dot(P_reflected - P))
-dist_via_formula = 2 * abs(3*P[0] + 4*P[1] - c) / sp.sqrt(3**2 + 4**2)
-print(sp.simplify(dist_direct), dist_via_formula)     # 32 32
+answer = 2 * dist_to_line
+print(answer)                # 32
+
+# independent check: reflect P across the line directly and measure
+P = sp.Matrix([x0, y0])
+normal = sp.Matrix([a, b])
+signed_dist = sp.Rational(a*x0 + b*y0 - c, a**2 + b**2)
+P_reflected = P - 2*signed_dist*normal
+print(P_reflected.T)                                       # [-51/5, -43/5]
+print(sp.sqrt((P_reflected - P).dot(P_reflected - P)))      # 32 -- matches
 </code></pre>
 </div>
 
@@ -1566,64 +1486,6 @@ eq_tangent_to_R24 = sp.Eq(y, 24 - r4)
 
 solution = sp.solve([eq_tangent_to_r12, eq_tangent_to_R24], [y, r4], dict=True)
 print(solution)   # [{r4: 8, y: 16}]
-</code></pre>
-</div>
-
-
-<div class="card example">
-<h3 id="hs-problem-13">HS &middot; Purple Comet 2004, Problem 13 &middot; <span class="tag">Easy</span> <span class="tag">Algebra</span></h3>
-<p class="problem">A cubic block with dimensions \(n\) by \(n\) by \(n\) is made up of a collection of \(1\times1\times1\) unit cubes. What is the smallest value of \(n\) so that if the <strong>outer two layers</strong> of unit cubes are removed from the block, more than half the original unit cubes will still remain?</p>
-
-<p><strong>Solution 1 &mdash; check consecutive integers. [Solution 1 &mdash; direct integer check]</strong></p>
-<div class="note math">The identical problem appears as <a href="#ms-problem-23">MS Problem 23</a> above. Peeling <em>two</em> 1-unit layers off every face of an \(n\times n\times n\) block leaves an \((n-4)\times(n-4)\times(n-4)\) core, so &ldquo;more than half remains&rdquo; is the inequality \(2(n-4)^3&gt;n^3\).</div>
-<pre><code># MATH: same reasoning as MS Problem 23, with a thicker shell removed.
-# Peeling 2 units off every face of an n x n x n block leaves an
-# (n-4)^3 core. &quot;More than half remains&quot; is 2*(n-4)^3 &gt; n^3 -- check
-# consecutive integers for the smallest n where this first holds.
-import sympy as sp
-
-n = sp.symbols('n', positive=True, integer=True)
-inequality = sp.Gt(2*(n - 4)**3, n**3)
-
-candidate = 5
-while not inequality.subs(n, candidate):
-    candidate += 1
-print(candidate)   # 20
-print((candidate-4)**3, '&gt;', sp.Rational(candidate**3, 2))   # 4096 > 4000
-</code></pre>
-
-<p><strong>Solution 2 &mdash; solve the real boundary, then round up. [Official]</strong></p>
-<div class="note math">Rather than testing integers one at a time, solve the continuous equation \(2(n-4)^3=n^3\) for its real root directly: dividing through gives \(\left(\frac{n}{n-4}\right)^3=2\), so \(\frac{n}{n-4}=\sqrt[3]2\), which rearranges to a closed form for \(n\). Since \(2(n-4)^3-n^3\) is increasing once \(n\) is past that root, the smallest <em>integer</em> satisfying the inequality is exactly the ceiling of that real root &mdash; a direct algebraic answer instead of a scan.</div>
-<pre><code># MATH: solve the boundary equation 2(n-4)^3 = n^3 for its real root
-# directly (dividing both sides by (n-4)^3 gives (n/(n-4))^3 = 2, i.e.
-# n/(n-4) = cbrt(2), solved for n in closed form) -- then the smallest
-# INTEGER n satisfying the strict inequality is the ceiling of that
-# real root, since the cubic difference is increasing past the root.
-import sympy as sp
-import math
-
-n = sp.symbols('n', real=True)
-all_roots = sp.solve(sp.Eq(2*(n - 4)**3, n**3), n)   # cubic: up to 3 roots
-real_root = [r for r in all_roots if r.is_real][0]   # exactly one is real
-print(sp.N(real_root))          # 19.389... (not an integer)
-
-answer = math.ceil(float(real_root))
-print(answer)                    # 20 -- matches Solution 1
-</code></pre>
-</div>
-
-
-<div class="card example">
-<h3 id="hs-problem-14">HS &middot; Purple Comet 2004, Problem 14 &middot; <span class="tag">Medium</span> <span class="tag">Geometry</span></h3>
-<p class="problem">Two circles have radii 15 and 95. If the two external tangents to the circles intersect at 60 degrees, how far apart are the centers of the circles?</p>
-<div class="note math">The identical problem appears as <a href="#ms-problem-22">MS Problem 22</a> above, with two solutions: two right triangles subtracted, and the &ldquo;shrink the small circle to a point&rdquo; reduction used here.</div>
-<pre><code># MATH: see MS Problem 22 above -- both circles are tangent to the same
-# two lines at the same half-angle, so d = (R-r)/sin(half-angle).
-import sympy as sp
-
-R, r = 95, 15
-d = (R - r) / sp.sin(sp.rad(30))
-print(sp.simplify(d))   # 160
 </code></pre>
 </div>
 
@@ -2002,70 +1864,6 @@ print(sol)                             # [51]
 </code></pre>
 </div>
 
-
-<div class="card example">
-<h3 id="hs-problem-25">HS &middot; Purple Comet 2004, Problem 25 &middot; <span class="tag">Hard</span> <span class="tag">Number Theory</span></h3>
-<p class="problem">In the addition problem<br><code>&nbsp;&nbsp;WHITE<br>+WATER<br>PICNIC</code><br>each distinct letter represents a different digit. Find the number represented by the answer PICNIC.</p>
-<p>The identical problem appears as <a href="#ms-problem-25">MS Problem 25</a> above; both solutions below are the same two methods, repeated here so this track has its own complete, self-contained write-up.</p>
-
-<p><strong>Solution 1 &mdash; every bijection, exhaustively.</strong></p>
-<div class="note math">Exactly 10 distinct letters appear (\(W,H,I,T,E,A,R,P,C,N\)), matching the 10 available digits \(0\)&ndash;\(9\) &mdash; so every candidate solution is one of only \(10!=3{,}628{,}800\) bijections from letters to digits, a small and provably complete search space, not an open-ended guess.</div>
-<pre><code># MATH: exactly 10 distinct letters map onto the 10 digits 0-9, so
-# every candidate solution is a BIJECTION of letters to digits, and
-# there are only 10! = 3,628,800 of those -- small enough to check
-# completely, rejecting leading zeros and keeping only the ones where
-# the sum actually holds.
-from itertools import permutations
-
-letters = ['W', 'H', 'I', 'T', 'E', 'A', 'R', 'P', 'C', 'N']
-
-def to_num(word, assign):
-    return int(''.join(str(assign[ch]) for ch in word))
-
-found = set()
-for perm in permutations(range(10)):
-    assign = dict(zip(letters, perm))
-    if assign['W'] == 0 or assign['P'] == 0:
-        continue
-    if to_num('WHITE', assign) + to_num('WATER', assign) == to_num('PICNIC', assign):
-        found.add(to_num('PICNIC', assign))
-print(sorted(found))   # [169069]
-</code></pre>
-
-<p><strong>Solution 2 &mdash; use the arithmetic to shrink the search.</strong></p>
-<div class="note math">Four of the ten letters &mdash; \(P,I,C,N\) &mdash; aren&rsquo;t free choices: column-by-column addition <em>determines</em> each of them from the other six letters (\(W,H,T,E,A,R\)) and the running carry, the same way the last digit of \(7+8\) is determined, not chosen. Searching only the 6 free letters, then checking that \(C\) and \(I\) (each forced twice, by two different columns) agree, is a smaller and differently-structured search than Solution 1&rsquo;s flat guess over all 10.</div>
-<pre><code># MATH: standard column-addition logic. Adding column by column from
-# the units digit, each column's sum determines that PICNIC digit AND a
-# carry into the next column -- so C, I, N, P are all DERIVED from
-# W,H,T,E,A,R (only 6 truly free letters). C and I each appear in TWO
-# columns, so both derivations must agree -- that consistency check is
-# the real constraint, not just relabeling the same search.
-from itertools import permutations
-
-count = 0
-found = set()
-for W, H, T, E, A, R in permutations(range(10), 6):
-    if W == 0:
-        continue
-    count += 1
-    c1, C = divmod(E + R, 10)              # units column
-    c2, I = divmod(T + E + c1, 10)         # tens column
-    c3, N = divmod(I + T + c2, 10)         # hundreds column
-    c4, C_check = divmod(H + A + c3, 10)   # thousands column -- must reproduce C
-    if C_check != C:
-        continue
-    c5, I_check = divmod(W + W + c4, 10)   # ten-thousands column -- must reproduce I
-    if I_check != I:
-        continue
-    P = c5
-    if P == 0 or len({W,H,T,E,A,R,C,I,N,P}) != 10:
-        continue
-    found.add(int(f"{P}{I}{C}{N}{I}{C}"))
-
-print(count, "permutations checked (vs 10! = 3,628,800)")   # 136080 ...
-print(sorted(found))                                        # [169069] -- matches Solution 1
-</code></pre>
-</div>
 
 <h2 id="playground">Try your own code</h2>
 <p>A blank scratchpad &mdash; paste in your own solution to any problem and run it. This isn&rsquo;t graded and isn&rsquo;t checked for correctness; it just runs whatever Python you give it and shows you what it prints, or the error if something&rsquo;s wrong.</p>
