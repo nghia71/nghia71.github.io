@@ -344,7 +344,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <p><em>Purple Comet 2004, worked in full &mdash; Middle School and High School &mdash; math, code, and (where it helps) a diagram, for every problem in the archive.</em></p>
 
 <div class="note">
-<strong>48 of the 50 Purple Comet 2004 problems are live below</strong> (24 Middle School, 24 High School &mdash; several shared problems get their own write-up under each track), several with two or more independent solutions. This is a standing lesson, not a one-time page &mdash; the remaining two, and any further alternate solutions, are added as they clear review. Come back for more.
+<strong>49 of the 50 Purple Comet 2004 problems are live below</strong> (25 Middle School, 24 High School &mdash; several shared problems get their own write-up under each track), several with two or more independent solutions. This is a standing lesson, not a one-time page &mdash; the last one, and any further alternate solutions, are added as they clear review. Come back for more.
 </div>
 
 <h2>What Lesson 1 is for</h2>
@@ -896,6 +896,33 @@ for kv in range(1, 10):
         candidates.append((kv, xv, 9*kv + xv))   # (k, x, total hits this season)
 print(candidates)                   # [(1,3,12), (2,4,22), (3,5,32)]
 print(min(c[2] for c in candidates))   # 12
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="ms-problem-17">MS &middot; Purple Comet 2004, Problem 17 &middot; <span class="tag">Hard</span> <span class="tag">Algebra</span></h3>
+<p class="problem">Find \(x\) so that \(2^{2^{3^{2^2}}} = 4^{4^x}\).</p>
+<div class="note math">Both sides are towers built entirely out of \(2\)'s, so rewrite everything as a power of \(2\) and compare exponents. Working from the top of the left tower down: \(2^2=4\), then \(3^{2^2}=3^4=81\), so the whole left side is \(2^{2^{81}}\). On the right, \(4=2^2\), so \(4^{4^x}=\left(2^2\right)^{4^x}=2^{2\cdot4^x}\); and since \(4^x=2^{2x}\), that exponent is \(2\cdot2^{2x}=2^{2x+1}\), making the right side \(2^{2^{2x+1}}\). Both sides now have the same outer base \(2\) raised to a power that is itself a power of \(2\) &mdash; so the two outermost exponents must match: \(2^{81}=2^{2x+1}\). Matching bases one level deeper forces the exponents themselves to be equal, \(81=2x+1\), which pins down \(x\) uniquely with no search at all.</div>
+<pre><code># MATH: rewrite the tower base by base. Left side: 2^2=4, then 3^4=81,
+# so the whole left side is 2^(2^81). Right side: 4=2^2, so
+# 4^(4^x) = 2^(2*4^x) = 2^(2^(2x+1)) since 4^x=2^(2x). Matching the two
+# base-2 towers level by level forces 2^81 = 2^(2x+1), then 81 = 2x+1 --
+# an exact algebraic match, not a numeric search (the numbers involved
+# are far too large to ever compute directly).
+import sympy as sp
+
+x = sp.symbols('x')
+mid = 3**(2**2)                 # 81 -- the exponent atop the left tower
+eq = sp.Eq(mid, 2*x + 1)        # matching exponents one level below the shared base 2
+solution = sp.solve(eq, x)[0]
+print(mid, solution)            # 81 40
+
+# independent check: verify the algebraic identity that justifies the
+# level-matching step, using ordinary-sized numbers only
+xv = int(solution)
+print(2 * 4**xv == 2**(2*xv + 1))   # True  (this is 4^(4^x)'s exponent
+                                     #        rewritten as a power of 2)
 </code></pre>
 </div>
 
