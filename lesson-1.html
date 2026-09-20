@@ -208,12 +208,14 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       statusEl.textContent = "Running…";
+      var runStarted = performance.now();
       try {
         await pyodide.runPythonAsync(code);
       } catch (runErr) {
         hadError = true;
         buffer += (buffer ? "\n" : "") + (runErr && runErr.message ? runErr.message : String(runErr));
       }
+      var runElapsedMs = performance.now() - runStarted;
     } catch (loadErr) {
       hadError = true;
       buffer += (buffer ? "\n" : "") + "Could not start the Python environment in this browser: " +
@@ -223,8 +225,19 @@ document.addEventListener("DOMContentLoaded", function () {
     statusEl.textContent = "";
     setAllRunButtonsDisabled(false);
     outputEl.textContent = buffer || "(no output)";
+    // Timing is measured by the runner around the code, never injected
+    // into the code itself -- it covers just this run's execution, not
+    // the one-time Pyodide startup/package-loading before it.
+    if (typeof runElapsedMs === "number") {
+      outputEl.textContent += "\n\n[ran in " + formatElapsed(runElapsedMs) + "]";
+    }
     outputEl.classList.add("has-content");
     if (hadError) outputEl.classList.add("is-error");
+  }
+
+  function formatElapsed(ms) {
+    if (ms < 1000) return Math.round(ms) + " ms";
+    return (ms / 1000).toFixed(2) + " s";
   }
 
   function makeRunner(getCode, container) {
@@ -331,7 +344,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <p><em>Purple Comet 2004, worked in full &mdash; Middle School and High School &mdash; math, code, and (where it helps) a diagram, for every problem in the archive.</em></p>
 
 <div class="note">
-<strong>Six problems are live below (Batch 1 of the full set).</strong> This is a standing lesson, not a one-time page &mdash; more problems from the same 2004 archive are added in batches over the coming weeks, each reviewed before it goes up. Come back for more.
+<strong>47 of the 50 Purple Comet 2004 problems are live below</strong> (23 Middle School, 24 High School &mdash; several shared problems get their own write-up under each track), several with two or more independent solutions. This is a standing lesson, not a one-time page &mdash; the remaining three, and any further alternate solutions, are added as they clear review. Come back for more.
 </div>
 
 <h2>What Lesson 1 is for</h2>
@@ -398,27 +411,59 @@ document.addEventListener("DOMContentLoaded", function () {
 <h2>Middle School</h2>
 
 <div class="card example">
-<h3>MS &middot; Purple Comet 2004, Problem 7 &middot; <span class="tag">Easy</span> <span class="tag">Algebra</span></h3>
-<p class="problem">A rectangle has area 1100. If the length is increased by ten percent and the width is decreased by ten percent, what is the area of the new rectangle?</p>
-<div class="note math">Increasing one factor by 10% multiplies it by 1.1; decreasing the other by 10% multiplies it by 0.9. So the new area is always \((1+p)(1-p) = 1-p^2\) times the old area, for <em>any</em> starting area and <em>any</em> percent \(p\) &mdash; not just for 1100 and 10%. That identity is the whole problem; 1100 only tells you where to evaluate it.</div>
-<pre><code># MATH: (1+p)(1-p) = 1 - p^2 is a fixed algebraic identity, true for
-# ANY starting area A and ANY percent p. So a &quot;+10%, then -10%&quot; change
-# always shrinks the area by exactly p^2 = 1% -- regardless of the 1100
-# in this particular problem. Derive that identity symbolically first,
-# then substitute this problem&#x27;s numbers only at the very end.
-import sympy as sp
+<h3 id="ms-problem-1">MS &middot; Purple Comet 2004, Problem 1 &middot; <span class="tag">Easy</span> <span class="tag">Number Theory</span></h3>
+<p class="problem">This year February 29 fell on a Sunday. In what year will February 29 next fall on a Sunday?</p>
+<div class="note math">A leap year happens every 4 years, except a century year (divisible by 100) is <em>not</em> a leap year unless it&rsquo;s also divisible by 400 &mdash; that exception rule is exactly the kind of thing that&rsquo;s easy to misremember or miscount by hand over a 28-year search, but trivial to state as a precise boolean rule and let code apply faithfully, year after year, without ever slipping. Once the leap-year rule is nailed down exactly, the day-of-week question is just: which of those leap years lands Feb 29 on a Sunday?</div>
+<pre><code># MATH: a year is a leap year iff divisible by 4, EXCEPT a century
+# year (divisible by 100) is NOT a leap year, UNLESS it&#x27;s also
+# divisible by 400. That exact rule (not &quot;every 4 years&quot;) is what
+# fixes the actual day-of-week drift between leap years -- get it
+# wrong and the count silently comes out off by a day every century.
+import datetime
 
-A, p = sp.symbols(&#x27;A p&#x27;, positive=True)
-new_area = sp.simplify(A * (1 + p) * (1 - p))
-print(new_area)                                   # A*(1 - p**2)
+def is_leap(y):
+    return y % 4 == 0 and (y % 100 != 0 or y % 400 == 0)
 
-print(new_area.subs({A: 1100, p: sp.Rational(1, 10)}))   # 1089
+d0 = datetime.date(2004, 2, 29)
+print(d0.strftime(&#x27;%A&#x27;))   # Sunday -- confirms the given fact
+
+y = 2004
+while True:
+    y += 1
+    if is_leap(y):
+        d = datetime.date(y, 2, 29)
+        if d.weekday() == 6:   # Python: Monday=0 ... Sunday=6
+            print(y)           # 2032
+            break
 </code></pre>
 </div>
 
 
 <div class="card example">
-<h3>MS &middot; Purple Comet 2004, Problem 3 &middot; <span class="tag">Medium</span> <span class="tag">Geometry</span></h3>
+<h3 id="ms-problem-2">MS &middot; Purple Comet 2004, Problem 2 &middot; <span class="tag">Easy</span> <span class="tag">Algebra</span></h3>
+<p class="problem">If \(h(a,b,c) = \dfrac{abc}{a+b+c}\), find \(h(3\sqrt5,\ 6\sqrt5,\ 9\sqrt5)\).</p>
+<div class="note math">Don&rsquo;t substitute the surds and grind through the arithmetic &mdash; look at how \(h\) behaves under scaling instead. The numerator \(abc\) is degree 3 in \((a,b,c)\); the denominator \(a+b+c\) is degree 1. So replacing \((a,b,c)\) with \((ka,kb,kc)\) multiplies the numerator by \(k^3\) and the denominator by \(k^1\), which multiplies \(h\) itself by \(k^{3-1}=k^2\). (Functions that scale this cleanly &mdash; by a fixed power of \(k\) &mdash; come up often enough in later chapters to have a name, <em>homogeneous</em>, but the argument here stands on its own without it.) Here \(k=\sqrt5\), so \(h(3\sqrt5,6\sqrt5,9\sqrt5) = 5\cdot h(3,6,9)\), and \(h(3,6,9)\) is easy integer arithmetic.</div>
+<pre><code># MATH: h(a,b,c) = abc/(a+b+c) is homogeneous of degree 2 -- scaling
+# every input by k multiplies the numerator by k^3 and the denominator
+# by k^1, so h itself scales by k^(3-1) = k^2. Prove that symbolically
+# first (works for ANY a,b,c,k), then use k = sqrt(5) to avoid ever
+# doing surd arithmetic by hand: h(3root5,6root5,9root5) = 5*h(3,6,9).
+import sympy as sp
+
+a, b, c, k = sp.symbols(&#x27;a b c k&#x27;, positive=True)
+h = a*b*c / (a + b + c)
+scale_factor = sp.simplify(h.subs({a: k*a, b: k*b, c: k*c}) / h)
+print(scale_factor)                       # k**2
+
+h39 = h.subs({a: 3, b: 6, c: 9})
+answer = sp.simplify(sp.Integer(5) * h39)  # k=sqrt(5) -> k**2 = 5
+print(h39, answer)                         # 9 45
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="ms-problem-3">MS &middot; Purple Comet 2004, Problem 3 &middot; <span class="tag">Medium</span> <span class="tag">Geometry</span></h3>
 <p class="problem">In \(\triangle ABC\), three lines are drawn parallel to side \(BC\), dividing the altitude of the triangle into four equal parts. If the area of the second-largest part is 35, what is the area of the whole \(\triangle ABC\)?</p>
 <figure class="diagram">
 <svg viewBox="0 0 200 210" xmlns="http://www.w3.org/2000/svg">
@@ -432,6 +477,7 @@ print(new_area.subs({A: 1100, p: sp.Rational(1, 10)}))   # 1089
 </svg>
 <figcaption>The altitude from A split into four equal parts; each dashed line cuts off a triangle similar to &#9651;ABC.</figcaption>
 </figure>
+<p><strong>Solution 1 &mdash; similar triangles.</strong></p>
 <div class="note math">Each line parallel to \(BC\) cuts off a smaller triangle, from the apex, that is <em>similar</em> to \(\triangle ABC\). A triangle similar with linear scale factor \(k\) has area \(k^2\) times the original. With the altitude split into quarters, the four nested triangles (from the apex down) scale as \(k = \tfrac14, \tfrac12, \tfrac34, 1\), so their areas are \(\tfrac{1}{16}, \tfrac{4}{16}, \tfrac{9}{16}, \tfrac{16}{16}\) of the whole. The four strips between them are the successive differences: \(\tfrac{1}{16}, \tfrac{3}{16}, \tfrac{5}{16}, \tfrac{7}{16}\) &mdash; a 1:3:5:7 split that holds for every triangle cut this way, regardless of size.</div>
 <pre><code># MATH: the three lines parallel to BC cut off, from the apex, smaller
 # triangles similar to the whole triangle with linear scale factors
@@ -454,11 +500,441 @@ print(strips)                        # [A/16, 3*A/16, 5*A/16, 7*A/16]
 second_largest = sorted(strips, key=lambda e: e.subs(A, 1))[-2]   # 5A/16
 print(sp.solve(sp.Eq(second_largest, 35), A))                     # [112]
 </code></pre>
+
+<p><strong>Solution 2 &mdash; coordinates, as a cross-check.</strong></p>
+<div class="note math">The similar-triangles argument is the fast route, but it&rsquo;s worth confirming with an independent method: place the triangle with apex \(A\) at height \(4h\) above a base of half-width \(b\). By similar triangles, the horizontal segment at height \(y\) has half-width \(b(1-\tfrac{y}{4h})\), so each strip between two heights is a trapezoid whose area is computable directly from its two parallel widths &mdash; no appeal to &ldquo;similar triangles scale area by \(k^2\)&rdquo; as a remembered fact, just the trapezoid area formula applied four times.</div>
+<pre><code># MATH: build the triangle in coordinates -- apex at height 4h, base
+# half-width b -- and compute each strip as an ordinary TRAPEZOID area
+# (average of its two parallel widths, times its height), using only
+# the trapezoid-area formula, not the &quot;area scales as k^2&quot; fact from
+# Solution 1. An independent method landing on the same 1:3:5:7 ratio
+# and the same final answer is strong confirmation neither has an error.
+import sympy as sp
+
+b, h = sp.symbols('b h', positive=True)
+
+def half_width(y):
+    return b*(1 - y/(4*h))
+
+def strip_area(y_lo, y_hi):
+    w_lo, w_hi = 2*half_width(y_lo), 2*half_width(y_hi)
+    return sp.simplify((w_lo + w_hi)/2 * (y_hi - y_lo))
+
+strips = [strip_area(3*h, 4*h), strip_area(2*h, 3*h), strip_area(1*h, 2*h), strip_area(0, 1*h)]
+whole = sp.simplify(sp.Rational(1,2)*(2*b)*(4*h))
+ratios = [sp.simplify(s/whole) for s in strips]
+print(ratios)   # [1/16, 3/16, 5/16, 7/16] -- matches Solution 1 exactly
+
+second_largest_ratio = sorted(ratios)[-2]     # 5/16
+W = sp.symbols('W', positive=True)
+print(sp.solve(sp.Eq(second_largest_ratio*W, 35), W))   # [112]
+</code></pre>
 </div>
 
 
 <div class="card example">
-<h3>MS &middot; Purple Comet 2004, Problem 19 &middot; <span class="tag">Hard</span> <span class="tag">Number Theory</span></h3>
+<h3 id="ms-problem-4">MS &middot; Purple Comet 2004, Problem 4 &middot; <span class="tag">Easy</span> <span class="tag">Algebra</span></h3>
+<p class="problem">If the numbers \(2a+2\) and \(2b+2\) add up to 2004, find the sum of the numbers \(\dfrac{a}{2}-2\) and \(\dfrac{b}{2}-2\).</p>
+<div class="note math">Never solve for \(a\) and \(b\) individually &mdash; the problem only ever asks about them through the combination \(a+b\), so work with that combination directly. The given equation \((2a+2)+(2b+2)=2004\) simplifies straight to \(a+b=1000\), and the target expression \(\left(\frac{a}{2}-2\right)+\left(\frac{b}{2}-2\right)\) is just \(\frac{a+b}{2}-4\) &mdash; substitute the single known value \(a+b=1000\) once, at the very end.</div>
+<pre><code># MATH: never isolate a and b separately -- both the given equation and
+# the target expression depend on them only through the SUM a+b, so
+# solve for that one combined quantity and substitute it in once, at
+# the end, rather than solving a 2-variable system that isn&#x27;t actually
+# determined (there are infinitely many valid (a,b) pairs).
+import sympy as sp
+
+apb = sp.symbols(&#x27;apb&#x27;)                     # apb stands for (a + b)
+given = sp.Eq(2*apb + 4, 2004)                # (2a+2)+(2b+2) = 2004
+apb_value = sp.solve(given, apb)[0]
+print(apb_value)                              # 1000
+
+target = apb_value / 2 - 4                    # (a/2-2)+(b/2-2) = (a+b)/2 - 4
+print(target)                                 # 496
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="ms-problem-5">MS &middot; Purple Comet 2004, Problem 5 &middot; <span class="tag">Easy</span> <span class="tag">Number Theory</span></h3>
+<p class="problem">Write the number \(2004_{(5)}\) &mdash; that is, 2004 read as a base-5 numeral &mdash; as a number in base 6.</p>
+<div class="note math">A positional numeral system is itself a piece of math, not just notation: the digits \(d_k \ldots d_1 d_0\) of a base-\(b\) numeral stand for \(\sum_i d_i b^i\). Converting bases is two applications of that one idea &mdash; expand \(2004_{(5)}\) into a decimal value using powers of 5, then re-expand that same decimal value into base 6 using the standard repeated-division algorithm (which is just running the place-value expansion backwards, one remainder at a time).</div>
+<pre><code># MATH: a base-b numeral d_k...d_1 d_0 means sum_i d_i * b^i -- that&#x27;s
+# the definition of positional notation, not a guess. Apply it once
+# (base 5 -&gt; decimal) and then run it backwards via repeated division
+# (decimal -&gt; base 6): dividing by 6 repeatedly and reading remainders
+# is exactly how you invert the place-value sum one digit at a time.
+digits_base5 = [2, 0, 0, 4]   # &quot;2004&quot; in base 5, most significant first
+decimal = sum(d * 5**i for i, d in enumerate(reversed(digits_base5)))
+print(decimal)                # 254
+
+def to_base(n, b):
+    digits = []
+    while n:
+        digits.append(n % b)
+        n //= b
+    return digits[::-1] or [0]
+
+print(&#x27;&#x27;.join(map(str, to_base(decimal, 6))))   # 1102
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="ms-problem-6">MS &middot; Purple Comet 2004, Problem 6 &middot; <span class="tag">Easy</span> <span class="tag">Number Theory</span></h3>
+<p class="problem">How many different positive integers divide \(10!\)?</p>
+
+<p><strong>Solution 1 &mdash; unique factorization.</strong></p>
+<div class="note math">Every divisor of \(n\) is built by choosing, independently, how many copies of each prime in \(n\)&rsquo;s factorization to include. If \(n = p_1^{e_1}p_2^{e_2}\cdots\), there are \(e_i+1\) choices for each prime&rsquo;s exponent (0 through \(e_i\)), so the divisor count is \(\prod_i (e_i+1)\) &mdash; a direct consequence of unique prime factorization, not something to count one divisor at a time.</div>
+<pre><code># MATH: unique factorization -- every divisor of n = p1^e1 * p2^e2 *...
+# is p1^f1 * p2^f2 * ... with 0 &lt;= fi &lt;= ei, independently for each
+# prime. That&#x27;s (e1+1)(e2+1)... divisors total. Factor 10! completely,
+# then apply that formula -- never list divisors one at a time.
+import sympy as sp
+
+n = sp.factorial(10)
+factors = sp.factorint(n)          # {2: 8, 3: 4, 5: 2, 7: 1}
+divisor_count = 1
+for exponent in factors.values():
+    divisor_count *= (exponent + 1)
+print(factors, divisor_count)      # {2: 8, 3: 4, 5: 2, 7: 1} 270
+</code></pre>
+
+<p><strong>Solution 2 &mdash; count divisors directly, in pairs.</strong></p>
+<div class="note math">Every divisor \(d\le\sqrt n\) of \(n\) pairs off with a partner divisor \(n/d\ge\sqrt n\), so trial-dividing only up to \(\sqrt n\) and counting each hit twice finds every divisor without ever factoring \(n\) &mdash; a direct headcount instead of a formula built from prime exponents. \(\sqrt{10!}\approx1905\), so this is a genuinely small, provably complete loop, not a guess at how far to search.</div>
+<pre><code># MATH: divisors pair up as d and n/d, and every pair has one partner
+# at or below sqrt(n) -- so trial-dividing only up to sqrt(n) and
+# counting each hit twice (once for the perfect-square divisor, if any)
+# finds every divisor of n WITHOUT ever factoring n. This is a direct
+# headcount, a genuinely different technique from Solution 1&#x27;s
+# prime-exponent formula, even though it must agree with it.
+import math
+
+n = math.factorial(10)
+count = 0
+for d in range(1, math.isqrt(n) + 1):
+    if n % d == 0:
+        count += 2                  # d and its partner n // d
+        if d * d == n:
+            count -= 1               # perfect-square n: don&#x27;t double-count d itself
+print(n, count)                     # 3628800 270 -- matches Solution 1
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="ms-problem-7">MS &middot; Purple Comet 2004, Problem 7 &middot; <span class="tag">Easy</span> <span class="tag">Algebra</span></h3>
+<p class="problem">A rectangle has area 1100. If the length is increased by ten percent and the width is decreased by ten percent, what is the area of the new rectangle?</p>
+<div class="note math">Increasing one factor by 10% multiplies it by 1.1; decreasing the other by 10% multiplies it by 0.9. So the new area is always \((1+p)(1-p) = 1-p^2\) times the old area, for <em>any</em> starting area and <em>any</em> percent \(p\) &mdash; not just for 1100 and 10%. That identity is the whole problem; 1100 only tells you where to evaluate it.</div>
+<pre><code># MATH: (1+p)(1-p) = 1 - p^2 is a fixed algebraic identity, true for
+# ANY starting area A and ANY percent p. So a &quot;+10%, then -10%&quot; change
+# always shrinks the area by exactly p^2 = 1% -- regardless of the 1100
+# in this particular problem. Derive that identity symbolically first,
+# then substitute this problem&#x27;s numbers only at the very end.
+import sympy as sp
+
+A, p = sp.symbols(&#x27;A p&#x27;, positive=True)
+new_area = sp.simplify(A * (1 + p) * (1 - p))
+print(new_area)                                   # A*(1 - p**2)
+
+print(new_area.subs({A: 1100, p: sp.Rational(1, 10)}))   # 1089
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="ms-problem-8">MS &middot; Purple Comet 2004, Problem 8 &middot; <span class="tag">Medium</span> <span class="tag">Number Theory</span></h3>
+<p class="problem">The number \(2.5081081081081\ldots\) can be written as \(\dfrac{m}{n}\) where \(m\) and \(n\) are natural numbers with no common factors. Find \(m+n\).</p>
+
+<p><strong>Solution 1 &mdash; multiply and subtract.</strong></p>
+<div class="note math">A repeating decimal is rational by construction, and there&rsquo;s a standard algebraic trick to extract the exact fraction: if a decimal has \(k\) non-repeating digits after the point followed by a block of \(r\) repeating digits, multiplying by \(10^{k+r}\) and by \(10^k\) and subtracting cancels the entire infinite tail, leaving one clean equation for the exact value &mdash; no rounding, no truncating the decimal anywhere.</div>
+<pre><code># MATH: x = 2.5(081) has k=1 non-repeating digit (&quot;5&quot;) then a repeating
+# block of length r=3 (&quot;081&quot;). Multiplying by 10^(k+r) and by 10^k gives
+# two decimals with IDENTICAL infinite tails; subtracting cancels that
+# tail completely, leaving an exact integer equation for x -- the
+# standard, fully rigorous way to turn a repeating decimal into a
+# fraction, not an approximation.
+import sympy as sp
+
+k, r = 1, 3
+whole_digits = 25081    # digits of 10^(k+r)*x, truncated at the point: &quot;25081&quot;
+nonrep_digits = 25      # digits of 10^k*x, truncated at the point: &quot;25&quot;
+x = sp.Rational(whole_digits - nonrep_digits, 10**(k+r) - 10**k)
+print(x)                 # 464/185
+
+m, n = sp.fraction(x)
+print(m, n, m + n)       # 464 185 649
+</code></pre>
+
+<p><strong>Solution 2 &mdash; sum the repeating block as a geometric series.</strong></p>
+<div class="note math">A repeating decimal is literally an infinite geometric series: \(0.\overline{081}=0.081+0.081\cdot10^{-3}+0.081\cdot10^{-6}+\cdots\), a block of value \(81/1000\) shrinking by a factor of \(1000\) each time. Summing that series in closed form (\(a/(1-r)\)) is calculus&rsquo; tool for the same fact Solution 1 reaches by algebraic cancellation &mdash; a genuinely different route to the identical exact value.</div>
+<pre><code># MATH: 0.081081081... is an infinite geometric series with first term
+# a = 81/1000 and common ratio r = 1/1000 -- sum it with the closed
+# form a/(1-r) (equivalently, sympy&#x27;s own infinite summation), a
+# different tool (series summation) from Solution 1&#x27;s algebraic
+# multiply-and-subtract trick, reaching the same exact fraction.
+import sympy as sp
+
+n = sp.symbols(&#x27;n&#x27;, positive=True, integer=True)
+repeating_part = sp.summation(81 * sp.Rational(1, 1000)**n, (n, 1, sp.oo))
+print(repeating_part)              # 3/37 -- exact value of 0.081081081...
+
+x = sp.Rational(5, 2) + repeating_part / 10   # 2.5 shifts the repeating block one place right
+print(x)                                       # 464/185
+
+m, n2 = sp.fraction(x)
+print(m, n2, m + n2)                           # 464 185 649 -- matches Solution 1
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="ms-problem-9">MS &middot; Purple Comet 2004, Problem 9 &middot; <span class="tag">Medium</span> <span class="tag">Number Theory</span></h3>
+<p class="problem">How many positive integers less than 200 are relatively prime to either 15 or 24?</p>
+<p><strong>Solution 1 &mdash; simplify the logic first, then count.</strong></p>
+<div class="note math">&ldquo;Coprime to 15 or 24&rdquo; is easiest to attack through its <em>complement</em>: a number fails to be coprime to <em>either</em> exactly when it shares a factor with 15 (i.e. is divisible by 3 or 5) <strong>and</strong> shares a factor with 24 (i.e. is divisible by 2 or 3). Walk through what &ldquo;divisible by 3 or 5&rdquo; <em>and</em> &ldquo;divisible by 2 or 3&rdquo; means for a number \(n\) by cases: if \(3\mid n\), both conditions are already satisfied by that one fact, regardless of 2 or 5. If \(3\nmid n\), the first condition forces \(5\mid n\) and the second forces \(2\mid n\) &mdash; together, \(10\mid n\). So the whole double condition collapses to one clean rule: <strong>divisible by 3, or divisible by 10</strong> &mdash; which inclusion&ndash;exclusion counts exactly, no case-by-case checking of individual numbers required.</div>
+<pre><code># MATH: work with the complement. n fails &quot;coprime to 15 or 24&quot; iff
+# NOT coprime to 15 (i.e. 3|n or 5|n) AND NOT coprime to 24 (i.e. 2|n
+# or 3|n). Case on whether 3|n: if it does, both conditions already
+# hold; if it doesn&#x27;t, the first condition forces 5|n and the second
+# forces 2|n, i.e. 10|n. So the combined condition is just: 3|n or
+# 10|n. Inclusion-exclusion counts that exactly.
+N = 199
+
+complement = (N // 3) + (N // 10) - (N // 30)   # divisible by 3 or 10
+answer = N - complement
+print(complement, answer)   # 79 120
+</code></pre>
+
+<p><strong>Solution 2 &mdash; build the sets directly, skip the hand-simplification.</strong></p>
+<div class="note math">The truth-table collapse in Solution 1 is elegant but not strictly necessary: the complement condition is literally &ldquo;shares a factor with 15&rdquo; <strong>and</strong> &ldquo;shares a factor with 24,&rdquo; and both of those are themselves just unions of multiples &mdash; so build the actual sets of multiples and intersect them with Python&rsquo;s own set operations. This is a more mechanical, less clever method, and that&rsquo;s the point: it needs no logical simplification by hand at all, only a correct translation of the problem into set language, and it lands on the same answer as an independent check.</div>
+<pre><code># MATH: &quot;shares a factor with 15&quot; = multiple of 3 OR multiple of 5;
+# &quot;shares a factor with 24&quot; = multiple of 2 OR multiple of 3. Build
+# those as actual sets and use set UNION and INTERSECTION directly --
+# no need to simplify the logic into &quot;div by 3 or 10&quot; by hand first,
+# since Python&#x27;s set algebra does the equivalent work for us.
+N = 199
+multiples_of_2 = set(range(2, N+1, 2))
+multiples_of_3 = set(range(3, N+1, 3))
+multiples_of_5 = set(range(5, N+1, 5))
+
+not_coprime_15 = multiples_of_3 | multiples_of_5    # shares a factor with 15
+not_coprime_24 = multiples_of_2 | multiples_of_3    # shares a factor with 24
+
+complement = not_coprime_15 & not_coprime_24         # fails BOTH conditions
+print(len(complement), N - len(complement))          # 79 120 -- matches Solution 1
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="ms-problem-10">MS &middot; Purple Comet 2004, Problem 10 &middot; <span class="tag">Hard</span> <span class="tag">Number Theory</span></h3>
+<p class="problem">One rainy afternoon you write the number 1 once, the number 2 twice, the number 3 three times, and so forth until you have written the number 99 ninety-nine times. What is the 2005th digit that you write?</p>
+<div class="note math">Group the writing into two blocks by digit-length. Numbers 1&ndash;9 are single digits, and number \(n\) is written \(n\) times, so that block contributes \(\sum_{n=1}^{9}n=45\) digits total. From 10 onward, each number is two digits, so after finishing number \(m\) (for \(10\le m\le99\)), the running digit total is \(45+\sum_{k=10}^{m}2k = m(m+1)-45\) &mdash; a closed-form running total, not something to tally one number at a time. Solve \(m(m+1)-45\ge2005\) for the smallest \(m\), then locate the exact position inside that one number&rsquo;s block of repeats.</div>
+<pre><code># MATH: numbers 1-9 are 1 digit each, written n times -&gt; sum_{n=1}^{9} n
+# = 45 digits total. From 10 on, each number is 2 digits, so the
+# running digit-count after finishing number m is 45 + sum_{k=10}^m 2k
+# = m(m+1) - 45, a closed form (no loop needed to GET to the right
+# number -- only to pinpoint the exact digit once we&#x27;re there).
+def cumulative(m):
+    return m*(m+1) - 45
+
+m = 10
+while cumulative(m) < 2005:
+    m += 1
+print(m, cumulative(m))          # 45 2025 -- digit 2005 falls inside number 45&#x27;s block
+
+before = cumulative(m-1)         # digits written through the end of number 44
+position_in_block = 2005 - before
+digit_index = (position_in_block - 1) % 2   # 0 = tens digit of m, 1 = units digit
+print(before, position_in_block, str(m)[digit_index])   # 1935 70 5
+
+# Sanity check only -- actually build the whole string and index into it.
+s = &#x27;&#x27;.join(str(n)*n for n in range(1, 100))
+print(s[2004])   # 0-indexed -&gt; the 2005th character. 5
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="ms-problem-11">MS &middot; Purple Comet 2004, Problem 11 &middot; <span class="tag">Medium</span> <span class="tag">Algebra</span></h3>
+<p class="problem">Find the sum of all integers \(x\) satisfying \(1+8x \le 358-2x \le 6x+94\).</p>
+<div class="note math">A compound inequality is really two separate inequalities sharing a variable, and each is linear &mdash; so each reduces to a single bound on \(x\) by straightforward rearrangement, no special technique needed beyond isolating \(x\) in each half separately, then intersecting the two resulting ranges before summing the integers inside.</div>
+<pre><code># MATH: split the compound inequality into its two linear halves and
+# solve each independently for a bound on x, then intersect the two
+# ranges -- an arithmetic series sum over the integers that survive.
+import sympy as sp
+
+x = sp.symbols(&#x27;x&#x27;)
+lower_bound = sp.solve(sp.Ge(358 - 2*x, 1 + 8*x), x)   # from 1+8x &lt;= 358-2x
+upper_bound = sp.solve(sp.Ge(6*x + 94, 358 - 2*x), x)  # from 358-2x &lt;= 6x+94
+print(lower_bound, upper_bound)   # x <= 357/10, x >= 33
+
+integers = [i for i in range(33, 36)]   # 33 &lt;= x &lt;= 35.7, integers only
+print(integers, sum(integers))          # [33, 34, 35] 102
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="ms-problem-12">MS &middot; Purple Comet 2004, Problem 12 &middot; <span class="tag">Easy</span> <span class="tag">Algebra</span></h3>
+<p class="problem">If \(f(x,y)=xy+2x+y+1\), find \(f\bigl(f(2,f(3,4)),5\bigr)\).</p>
+<div class="note math">Before grinding through three nested evaluations, notice that \(f(x,y)+1 = xy+2x+y+2 = (x+1)(y+2)\) &mdash; the messy expression factors completely. So \(f(x,y)=(x+1)(y+2)-1\), a much cleaner form to iterate by hand or in code, and factoring it symbolically once (true for every \(x,y\)) means the three nested calls are just repeated substitution, not three separate derivations.</div>
+<pre><code># MATH: f(x,y)+1 = xy+2x+y+2 factors completely as (x+1)(y+2) -- so
+# f(x,y) = (x+1)(y+2) - 1. Prove that symbolically first, then every
+# nested call is just plugging numbers into the same clean closed form,
+# not re-deriving arithmetic three times by hand.
+import sympy as sp
+
+x, y = sp.symbols(&#x27;x y&#x27;)
+factored = sp.factor(x*y + 2*x + y + 1 + 1)   # f(x,y) + 1
+print(factored)                                # (x+1)*(y+2)
+
+def f(a, b):
+    return int(factored.subs({x: a, y: b})) - 1
+
+inner = f(3, 4)
+mid = f(2, inner)
+result = f(mid, 5)
+print(inner, mid, result)   # 23 74 524
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="ms-problem-13">MS &middot; Purple Comet 2004, Problem 13 &middot; <span class="tag">Medium</span> <span class="tag">Combinatorics</span></h3>
+<p class="problem">How many three-digit numbers are made up of three distinct digits?</p>
+<p><strong>Solution 1 &mdash; multiplication principle.</strong></p>
+<div class="note math">The multiplication principle, applied in the right order: the first digit has 9 choices (1&ndash;9, it can&rsquo;t be 0), and then the remaining two digits are an <em>ordered</em> selection of 2 distinct digits from the 9 digits not yet used (0&ndash;9 minus whatever the first digit was) &mdash; that&rsquo;s the permutation count \(P(9,2)\). Multiplying the two independent choices together gives the total, no listing required.</div>
+<pre><code># MATH: multiplication principle. First digit: 9 choices (1-9). Given
+# that choice, the remaining two digits are an ORDERED pick of 2 more
+# distinct digits from the 9 left (0-9 minus the first digit) -- a
+# permutation, P(9,2) = 9*8. Multiply the independent choices.
+from math import perm
+
+first_digit_choices = 9
+remaining_ordered_pairs = perm(9, 2)
+total = first_digit_choices * remaining_ordered_pairs
+print(total)   # 648
+</code></pre>
+
+<p><strong>Solution 2 &mdash; complementary counting.</strong></p>
+<div class="note math">A genuinely different route: count the 900 three-digit numbers (100&ndash;999) <em>minus</em> the ones with at least one repeated digit, using inclusion&ndash;exclusion on the three pairwise-equal events \(A\!:\!d_1{=}d_2\), \(B\!:\!d_2{=}d_3\), \(C\!:\!d_1{=}d_3\). Each single event has 90 members (fix the matched pair, the third digit is free), each pairwise intersection of two events forces <em>all three</em> digits equal (90 becomes 9), and the triple intersection is that same set again &mdash; textbook inclusion&ndash;exclusion, landing on the same 648 by a route that never multiplies choices in a specific order at all.</div>
+<pre><code># MATH: complementary counting. |A|=|B|=|C|=90 (fix the matched pair of
+# digits, the third digit is free: 9 choices for the repeated digit
+# since it can&#x27;t make the number start with 0, times 10 for the free
+# digit). Any PAIRWISE intersection (e.g. d1=d2 AND d2=d3) forces all
+# three digits equal, so |A&amp;B|=|A&amp;C|=|B&amp;C|=|A&amp;B&amp;C|=9. Standard
+# inclusion-exclusion for |A union B union C|, then subtract from 900.
+total_3digit = 900
+A = B = C = 9 * 10
+AB = AC = BC = ABC = 9
+
+at_least_one_repeat = A + B + C - AB - AC - BC + ABC
+distinct = total_3digit - at_least_one_repeat
+print(at_least_one_repeat, distinct)   # 252 648 -- matches Solution 1
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="ms-problem-14">MS &middot; Purple Comet 2004, Problem 14 &middot; <span class="tag">Medium</span> <span class="tag">Combinatorics</span></h3>
+<p class="problem">A polygon has five times as many diagonals as it has sides. How many vertices does the polygon have?</p>
+<div class="note math">The number of diagonals in a convex \(n\)-gon is \(\binom{n}{2}-n = \frac{n(n-3)}{2}\) &mdash; every pair of vertices gives a segment, minus the \(n\) sides themselves. Setting that equal to \(5n\) and solving is one line of algebra once the diagonal-count formula itself is established, rather than something to count by drawing polygons.</div>
+<pre><code># MATH: an n-gon has C(n,2) = n(n-1)/2 total vertex pairs; subtracting
+# the n sides leaves n(n-3)/2 diagonals. Set that equal to 5n (&quot;five
+# times as many diagonals as sides&quot;) and solve for n -- the formula
+# does the counting, not a hand-drawn polygon.
+import sympy as sp
+
+n = sp.symbols(&#x27;n&#x27;, positive=True)
+diagonals = n*(n - 3) / 2
+solutions = sp.solve(sp.Eq(diagonals, 5*n), n)
+print(solutions)   # [13]
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="ms-problem-15">MS &middot; Purple Comet 2004, Problem 15 &middot; <span class="tag">Medium</span> <span class="tag">Number Theory</span></h3>
+<p class="problem">Find the prime number \(p\) for which \(p+2500\) is a perfect square.</p>
+<div class="note math">Write \(p+2500=k^2\), so \(p=k^2-2500=(k-50)(k+50)\) &mdash; a difference of squares, factored completely. A prime number has exactly two positive factorizations, \(1\times p\), so for \((k-50)(k+50)\) to equal a prime, one of the two factors must be exactly 1. Since \(k+50&gt;k-50\), that forces \(k-50=1\), pinning down \(k\) &mdash; and therefore \(p\) &mdash; uniquely, with no search required at all.</div>
+<pre><code># MATH: p+2500=k^2 factors as p=(k-50)(k+50) (difference of squares). A
+# prime has only the factor pair (1, p), so one of (k-50),(k+50) must
+# equal 1. Since k+50 &gt; k-50 for k&gt;0, that forces k-50=1 -- a unique,
+# fully determined value, not something to search over.
+import sympy as sp
+
+k = 51                 # forced: k - 50 = 1
+p = (k - 50) * (k + 50)
+print(p, sp.isprime(p))   # 101 True
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="ms-problem-16">MS &middot; Purple Comet 2004, Problem 16 &middot; <span class="tag">Hard</span> <span class="tag">Algebra</span></h3>
+<p class="problem">A week ago, Sandy&rsquo;s seasonal Little League batting average was .360. After five more at-bats this week, Sandy&rsquo;s batting average is up to .400. What is the smallest number of hits Sandy could have had this season?</p>
+<div class="note math">A .360 average means hits/at-bats \(=9/25\) in lowest terms, so the at-bats before this week must be a multiple of 25: write hits \(=9k\), at-bats \(=25k\) for some positive integer \(k\). If \(x\) of the 5 new at-bats were hits, the new average equation \(\frac{9k+x}{25k+5}=\frac{2}{5}\) reduces to the clean linear relation \(x=k+2\). Since \(x\) must be a whole number of hits <em>out of 5</em>, \(0\le x\le5\) bounds \(k\) to just \(\{1,2,3\}\) &mdash; a genuinely finite, fully justified search, not a guess-and-check over batting averages.</div>
+<pre><code># MATH: .360 = 9/25 in lowest terms, so at-bats before this week must
+# be a MULTIPLE of 25 -- hits=9k, at-bats=25k for integer k&gt;=1. Setting
+# up the new-average equation with x hits added in 5 new at-bats gives
+# the linear relation x=k+2 (derived symbolically, not guessed), and
+# 0&lt;=x&lt;=5 (x is a count of hits out of 5) bounds k to a tiny, provably
+# complete set of candidates -- exactly the reduce-to-finite-search
+# pattern, not a search over the target quantity itself.
+import sympy as sp
+
+k, x = sp.symbols('k x', positive=True, integer=True)
+x_expr = sp.solve(sp.Eq(5*(9*k + x), 2*(25*k + 5)), x)[0]
+print(x_expr)   # k + 2
+
+candidates = []
+for kv in range(1, 10):
+    xv = kv + 2
+    if 0 &lt;= xv &lt;= 5:               # x must be a valid hit-count out of 5
+        candidates.append((kv, xv, 9*kv + xv))   # (k, x, total hits this season)
+print(candidates)                   # [(1,3,12), (2,4,22), (3,5,32)]
+print(min(c[2] for c in candidates))   # 12
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="ms-problem-18">MS &middot; Purple Comet 2004, Problem 18 &middot; <span class="tag">Medium</span> <span class="tag">Combinatorics</span></h3>
+<p class="problem">Find the number of addition problems in which a two-digit number is added to a second two-digit number to give a two-digit answer.</p>
+
+<p><strong>Solution 1 &mdash; exhaustive grid scan.</strong></p>
+<div class="note math">This is pure counting once translated correctly: an <em>ordered</em> pair of two-digit numbers \((A,B)\) &mdash; since \(23+42\) and \(42+23\) are counted as different problems in the statement&rsquo;s own examples &mdash; whose sum \(A+B\) is also a two-digit number, i.e. \(A+B\le99\). With \(A,B\) each ranging over the 90 two-digit numbers \(10\)&ndash;\(99\), that&rsquo;s a small, completely enumerable grid to check exhaustively &mdash; there is no shortcut formula worth reaching for over a search space this size, and a direct scan is both the simplest and the most obviously correct method.</div>
+<pre><code># MATH: ordered pairs (A,B) of two-digit numbers (the problem&#x27;s own
+# examples show 23+42 and 42+23 counted separately) with A+B also a
+# two-digit number, i.e. A+B &lt;= 99. Only 90*90=8100 pairs total -- a
+# genuinely exhaustive, provably complete check, not a shortcut guess.
+count = 0
+for A in range(10, 100):
+    for B in range(10, 100):
+        if 10 &lt;= A + B &lt;= 99:
+            count += 1
+print(count)   # 3240
+</code></pre>
+
+<p><strong>Solution 2 &mdash; count with a formula, no scan at all.</strong></p>
+<div class="note math">Shift to \(A'=A-10\), \(B'=B-10\), so \(A&#x27;,B&#x27;\) range over \(0\)&ndash;\(89\) and the condition \(A+B\le99\) becomes \(A'+B'\le79\) &mdash; the number of at-least-\(A+B\ge10\) checks disappears entirely since \(A,B\ge10\) already forces \(A+B\ge20\). Counting nonnegative integer pairs with \(A'+B'\le N\) is a standard &ldquo;stars and bars&rdquo; count: for each fixed sum \(s=0,\ldots,N\) there are \(s+1\) pairs, so the total is \(\binom{N+2}{2}\). No loop needed at all &mdash; the scan in Solution 1 becomes a single binomial coefficient.</div>
+<pre><code># MATH: shift A&#x27;=A-10, B&#x27;=B-10 so both range over 0..89 and the
+# condition becomes A&#x27;+B&#x27; &lt;= 79 (the lower bound A+B&gt;=10 is automatic
+# once A,B&gt;=10). Counting nonnegative-integer pairs with A&#x27;+B&#x27; &lt;= N is
+# the standard stars-and-bars count sum_{s=0}^{N}(s+1) = C(N+2, 2) --
+# a closed-form count, not a loop.
+import sympy as sp
+
+N = 79   # = 99 - 10 - 10
+count = sp.binomial(N + 2, 2)
+print(count)   # 3240 -- matches Solution 1&#x27;s scan exactly
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="ms-problem-19">MS &middot; Purple Comet 2004, Problem 19 &middot; <span class="tag">Hard</span> <span class="tag">Number Theory</span></h3>
 <p class="problem">Find \(n\) such that \(n - 76\) and \(n + 76\) are both cubes of positive integers.</p>
 <div class="note math">Writing \(n-76=a^3\) and \(n+76=b^3\) gives \(b^3-a^3=152\). Factor the difference of cubes: \(b^3-a^3=(b-a)(b^2+ab+a^2)\). So if \(d=b-a\), then \(d\) must divide 152 &mdash; and 152 has only finitely many divisors. That turns an apparently infinite search (&ldquo;try every \(n\)&rdquo;) into a genuinely finite, provably complete one (&ldquo;try every divisor of 152&rdquo;).</div>
 <pre><code># MATH: n-76 = a^3 and n+76 = b^3 means b^3 - a^3 = 152. Factor the
@@ -483,10 +959,371 @@ print(found)   # [(140, 4, 6)]
 </code></pre>
 </div>
 
+
+<div class="card example">
+<h3 id="ms-problem-20">MS &middot; Purple Comet 2004, Problem 20 &middot; <span class="tag">Medium</span> <span class="tag">Geometry</span></h3>
+<p class="problem">A circle with area 40 is tangent to a circle with area 10. Let \(R\) be the smallest rectangle containing both circles. The area of \(R\) is \(\dfrac{n}{\pi}\). Find \(n\).</p>
+<figure class="diagram">
+<svg viewBox="-10 -10 200 140" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="0" width="180" height="120" fill="none" stroke="#8c2600" stroke-width="1.5"/>
+  <circle cx="60" cy="60" r="60" fill="#fbe9c2" stroke="#b63200" stroke-width="1"/>
+  <circle cx="150" cy="60" r="30" fill="#f2c14e" stroke="#8c2600" stroke-width="1"/>
+</svg>
+<figcaption>The two circles&rsquo; radii are in exact ratio 2:1 (areas 40:10 &rarr; radii \(\sqrt{40/\pi}:\sqrt{10/\pi}=2:1\)), tangent along a line, with the smallest enclosing rectangle drawn to that exact proportion.</figcaption>
+</figure>
+<div class="note math">Areas give the radii directly: \(r_1=\sqrt{40/\pi}\), \(r_2=\sqrt{10/\pi}\), and since \(r_1/r_2=\sqrt{4}=2\) exactly, the ratio is clean even though the radii themselves involve \(\pi\). With the circles externally tangent, the smallest bounding rectangle has width \(2r_1+2r_2\) (from the far edge of one circle to the far edge of the other, straight through both centers) and height \(2r_1\) (the diameter of the larger circle, which is taller than the smaller one). Multiplying those two symbolically, the \(\pi\)&rsquo;s combine cleanly into a rational multiple of \(1/\pi\).</div>
+<pre><code># MATH: area = pi*r^2 gives r1=sqrt(40/pi), r2=sqrt(10/pi) directly.
+# Tangent circles laid out in a line: the smallest bounding rectangle
+# has width 2*r1+2*r2 (spanning both far edges through the centers) and
+# height 2*r1 (diameter of the larger circle). Multiply symbolically --
+# sympy keeps everything exact through the pi&#x27;s and square roots.
+import sympy as sp
+
+pi = sp.pi
+r1 = sp.sqrt(40/pi)
+r2 = sp.sqrt(10/pi)
+
+width = 2*r1 + 2*r2
+height = 2*r1
+area = sp.simplify(width * height)
+print(area)                    # 240/pi
+print(sp.simplify(area*pi))    # 240  -- so n = 240
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="ms-problem-22">MS &middot; Purple Comet 2004, Problem 22 &middot; <span class="tag">Hard</span> <span class="tag">Geometry</span></h3>
+<p class="problem">Two circles have radii 15 and 95. If the two external tangents to the circles intersect at 60 degrees, how far apart are the centers of the circles?</p>
+<figure class="diagram">
+<svg viewBox="-5 -35 65 70" xmlns="http://www.w3.org/2000/svg">
+  <line x1="0" y1="0" x2="57.2" y2="33" stroke="#8c2600" stroke-width="1.2"/>
+  <line x1="0" y1="0" x2="57.2" y2="-33" stroke="#8c2600" stroke-width="1.2"/>
+  <line x1="6" y1="0" x2="38" y2="0" stroke="#b63200" stroke-width="1" stroke-dasharray="2,2"/>
+  <circle cx="6" cy="0" r="3" fill="#f2c14e" stroke="#8c2600" stroke-width="0.6"/>
+  <circle cx="38" cy="0" r="19" fill="none" stroke="#8c2600" stroke-width="1"/>
+  <circle cx="0" cy="0" r="1" fill="#4a2b00"/>
+  <text x="-4" y="-6" font-size="6" fill="#4a2b00">P</text>
+  <text x="4" y="10" font-size="6" fill="#4a2b00">r=15</text>
+  <text x="34" y="-22" font-size="6" fill="#4a2b00">R=95</text>
+  <text x="14" y="8" font-size="6" fill="#8c2600">d=160</text>
+</svg>
+<figcaption>Both circles are tangent to the <em>same</em> two lines through \(P\), at the same 30&deg; half-angle &mdash; drawn to the actual solved radii ratio (15:95) and center distance (160), scaled down by 5.</figcaption>
+</figure>
+
+<p><strong>Solution 1 &mdash; two right triangles, then subtract.</strong></p>
+<div class="note math">The two external tangent lines meet at the circles&rsquo; <strong>external center of similitude</strong> &mdash; the point from which both circles look tangent to the same pair of lines, which always lies on the line through both centers. From that point, each circle&rsquo;s radius and its distance to that point form a right triangle with the tangent line, so \(\sin(\text{half the 60}^\circ\text{ angle}) = \frac{r}{\text{distance to that circle}}\) for <em>both</em> circles &mdash; the same half-angle, since it&rsquo;s literally the same pair of lines. Subtracting the two distances (they&rsquo;re collinear) gives the center-to-center distance directly, in one formula: \(d=\frac{R-r}{\sin(30^\circ)}\).</div>
+<pre><code># MATH: both circles are tangent to the SAME two lines meeting at the
+# external point P, at the SAME half-angle (30 degrees). In each
+# tangent-radius right triangle, sin(half-angle) = radius / (distance
+# from P to that circle&#x27;s center) -- solve both distances, then
+# subtract (P, and both centers, are collinear).
+import sympy as sp
+
+R, r = 95, 15
+half_angle = sp.rad(30)
+dist_to_R = R / sp.sin(half_angle)
+dist_to_r = r / sp.sin(half_angle)
+d = sp.simplify(dist_to_R - dist_to_r)
+print(d)   # 160
+</code></pre>
+
+<p><strong>Solution 2 &mdash; shrink the small circle to a point.</strong></p>
+<div class="note math">A classic trick for external tangents: shrink <em>both</em> circles&rsquo; radii by the same amount \(r\). Every external common tangent shifts inward by exactly \(r\), staying tangent to the (now radius-\((R-r)\)) big circle and passing through the (now radius-0) small circle&rsquo;s center &mdash; which is exactly a tangent line from an external point to a single circle. So the whole two-circle configuration reduces to the single-circle right triangle \(\sin(30^\circ)=\frac{R-r}{d}\), one equation instead of two subtracted ones &mdash; a genuinely different (and shorter) route to the identical distance.</div>
+<pre><code># MATH: shrinking both circles&#x27; radii by r turns the small circle into
+# a single point (the tangent lines pass exactly through its center)
+# and the big circle into radius R-r, WITHOUT moving either tangent
+# line or the point P where they meet -- a standard reduction for
+# external tangent problems. That collapses two right triangles into
+# one: sin(half-angle) = (R-r)/d, solved directly for d.
+import sympy as sp
+
+R, r = 95, 15
+half_angle = sp.rad(30)
+d = sp.simplify((R - r) / sp.sin(half_angle))
+print(d)   # 160 -- matches Solution 1
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="ms-problem-23">MS &middot; Purple Comet 2004, Problem 23 &middot; <span class="tag">Medium</span> <span class="tag">Algebra</span></h3>
+<p class="problem">A cubic block with dimensions \(n\) by \(n\) by \(n\) is made up of a collection of \(1\times1\times1\) unit cubes. What is the smallest value of \(n\) so that if the outer layer of unit cubes is removed from the block, more than half the original unit cubes will still remain?</p>
+<div class="note math">Removing the outer 1-unit-thick layer from an \(n\times n\times n\) block leaves an \((n-2)\times(n-2)\times(n-2)\) block inside &mdash; peel one layer off each of the six faces. &ldquo;More than half remains&rdquo; is the inequality \((n-2)^3 &gt; \frac{n^3}{2}\), and as \(n\) grows the surface layer becomes a shrinking fraction of the total volume, so this holds from some smallest \(n\) onward &mdash; exactly the kind of threshold a solved inequality (checked against consecutive integers) finds directly.</div>
+<pre><code># MATH: peeling the outer 1-unit shell off an n x n x n block leaves an
+# (n-2)^3 block. &quot;More than half remains&quot; is (n-2)^3 &gt; n^3/2. The
+# surface layer&#x27;s share of the total volume shrinks as n grows, so this
+# inequality flips true from some smallest n onward -- find it exactly.
+import sympy as sp
+
+n = sp.symbols(&#x27;n&#x27;, positive=True, integer=True)
+inequality = sp.Gt(2*(n - 2)**3, n**3)   # (n-2)^3 &gt; n^3/2  <=>  2(n-2)^3 &gt; n^3
+
+candidate = 3
+while not inequality.subs(n, candidate):
+    candidate += 1
+print(candidate)   # 10
+print((candidate - 2)**3, &#x27;>&#x27;, sp.Rational(candidate**3, 2))   # 512 > 500
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="ms-problem-24">MS &middot; Purple Comet 2004, Problem 24 &middot; <span class="tag">Hard</span> <span class="tag">Algebra</span></h3>
+<p class="problem">Let \(a\) be a real number greater than 1 such that \(\dfrac{20a}{a^2+1}=\sqrt2\). Find \(\dfrac{14a}{a^2-1}\).</p>
+<div class="note math">Solve the given equation for \(a\) symbolically first &mdash; it&rsquo;s a quadratic in disguise once cleared of its denominator &mdash; then substitute that exact value into the target expression rather than trying to relate the two expressions algebraically by hand. Sympy carries the resulting nested radical (\(a=7+5\sqrt2\)) through the second computation exactly, so a value that looks messy on the way in can still simplify to something clean on the way out.</div>
+<pre><code># MATH: clear the denominator in 20a/(a^2+1)=sqrt(2) to get a quadratic
+# in a, solve it exactly (keeping the exact radical form, not a decimal
+# approximation), pick the root greater than 1, then substitute that
+# exact value into the target expression and let sympy simplify --
+# never round the intermediate value.
+import sympy as sp
+
+a = sp.symbols('a', positive=True)
+solutions = sp.solve(sp.Eq(20*a/(a**2 + 1), sp.sqrt(2)), a)
+a_val = [s for s in solutions if s.is_real and s &gt; 1][0]
+print(a_val)   # 7 + 5*sqrt(2)
+
+target = sp.simplify(14*a_val / (a_val**2 - 1))
+print(target)   # 1
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="ms-problem-25">MS &middot; Purple Comet 2004, Problem 25 &middot; <span class="tag">Superhard</span> <span class="tag">Number Theory</span></h3>
+<p class="problem">In the addition problem<br><code>&nbsp;&nbsp;WHITE<br>+WATER<br>PICNIC</code><br>each distinct letter represents a different digit. Find the number represented by the answer PICNIC.</p>
+
+<p><strong>Solution 1 &mdash; every bijection, exhaustively.</strong></p>
+<div class="note math">Count the distinct letters first, before writing any code: \(W,H,I,T,E,A,R,P,C,N\) &mdash; exactly <strong>10</strong> letters, one for each digit \(0\)&ndash;\(9\). That single observation turns an apparently open-ended puzzle into a genuinely finite, fully enumerable search: every valid solution is some bijection from letters to digits, and there are exactly \(10!=3{,}628{,}800\) of those &mdash; small enough to check completely, with the only real logic needed being &ldquo;no leading digit is 0&rdquo; and &ldquo;the arithmetic actually checks out.&rdquo; This is exhaustive search over a search space proven small and complete &mdash; not guessing digits until something matches.</div>
+<pre><code># MATH: exactly 10 distinct letters appear across WHITE + WATER =
+# PICNIC, matching the 10 available digits 0-9 exactly -- so every
+# candidate solution is a BIJECTION (permutation) of letters to digits,
+# and there are only 10! = 3,628,800 of those. That is a small,
+# provably complete search space, not an open-ended guess -- check
+# every permutation, reject leading zeros, keep the ones where the sum
+# actually holds.
+from itertools import permutations
+
+letters = [&#x27;W&#x27;, &#x27;H&#x27;, &#x27;I&#x27;, &#x27;T&#x27;, &#x27;E&#x27;, &#x27;A&#x27;, &#x27;R&#x27;, &#x27;P&#x27;, &#x27;C&#x27;, &#x27;N&#x27;]
+
+def to_num(word, assign):
+    return int(&#x27;&#x27;.join(str(assign[ch]) for ch in word))
+
+found = []
+for perm in permutations(range(10)):
+    assign = dict(zip(letters, perm))
+    if assign[&#x27;W&#x27;] == 0 or assign[&#x27;P&#x27;] == 0:   # no leading zero
+        continue
+    if to_num(&#x27;WHITE&#x27;, assign) + to_num(&#x27;WATER&#x27;, assign) == to_num(&#x27;PICNIC&#x27;, assign):
+        found.append(to_num(&#x27;PICNIC&#x27;, assign))
+
+print(sorted(set(found)))   # [169069] -- unique answer despite two valid letter assignments
+</code></pre>
+
+<p><strong>Solution 2 &mdash; use the arithmetic to shrink the search.</strong></p>
+<div class="note math">Solution 1 treats all 10 letters as free choices, but four of them &mdash; \(P,I,C,N\) &mdash; are not actually free: column-by-column addition (units, tens, hundreds, &hellip;) <em>determines</em> each of them from the other six letters and the carries, the same way the last digit of \(7+8\) is determined once you know 7 and 8, not chosen separately. Only \(W,H,T,E,A,R\) need to be searched over &mdash; a genuinely smaller and differently-structured search (permutations of 6 digits out of 10, then checking whether the two places \(C\) and \(I\) each appear are consistent) rather than one big flat guess over all 10.</div>
+<pre><code># MATH: standard column-addition logic. Adding column by column from
+# the units digit, each column&#x27;s sum determines that PICNIC digit AND a
+# carry into the next column -- so C, I, N, P are all DERIVED from
+# W,H,T,E,A,R (only 6 truly free letters), not chosen independently.
+# C and I each appear in TWO columns, so both derivations must agree --
+# that consistency check is what makes this a real constraint, not
+# just relabeling the same search.
+from itertools import permutations
+
+count = 0
+found = set()
+for W, H, T, E, A, R in permutations(range(10), 6):
+    if W == 0:
+        continue
+    count += 1
+    c1, C = divmod(E + R, 10)          # units column
+    c2, I = divmod(T + E + c1, 10)     # tens column
+    c3, N = divmod(I + T + c2, 10)     # hundreds column
+    c4, C_check = divmod(H + A + c3, 10)   # thousands column -- must reproduce C
+    if C_check != C:
+        continue
+    c5, I_check = divmod(W + W + c4, 10)   # ten-thousands column -- must reproduce I
+    if I_check != I:
+        continue
+    P = c5
+    if P == 0 or len({W,H,T,E,A,R,C,I,N,P}) != 10:
+        continue
+    found.add(int(f&quot;{P}{I}{C}{N}{I}{C}&quot;))
+
+print(count, &quot;permutations checked (vs 10! = 3,628,800)&quot;)   # 136080 ...
+print(sorted(found))                                          # [169069] -- matches Solution 1
+</code></pre>
+</div>
+
 <h2>High School</h2>
 
 <div class="card example">
-<h3>HS &middot; Purple Comet 2004, Problem 9 &middot; <span class="tag">Easy</span> <span class="tag">Algebra</span></h3>
+<h3 id="hs-problem-1">HS &middot; Purple Comet 2004, Problem 1 &middot; <span class="tag">Easy</span> <span class="tag">Number Theory</span></h3>
+<p class="problem">How many different positive integers divide \(10!\)?</p>
+<div class="note math">The identical problem appears as <a href="#ms-problem-6">MS Problem 6</a> above &mdash; Purple Comet reuses a handful of problems across both tracks each year, and this is one of them. Same math (unique factorization: divisor count is \(\prod_i(e_i+1)\) over the prime exponents), same code.</div>
+<pre><code># MATH: unique factorization -- every divisor of n = p1^e1 * p2^e2 *...
+# is p1^f1 * p2^f2 * ... with 0 &lt;= fi &lt;= ei, independently for each
+# prime. That&#x27;s (e1+1)(e2+1)... divisors total. Factor 10! completely,
+# then apply that formula -- never list divisors one at a time.
+import sympy as sp
+
+n = sp.factorial(10)
+factors = sp.factorint(n)          # {2: 8, 3: 4, 5: 2, 7: 1}
+divisor_count = 1
+for exponent in factors.values():
+    divisor_count *= (exponent + 1)
+print(factors, divisor_count)      # {2: 8, 3: 4, 5: 2, 7: 1} 270
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="hs-problem-2">HS &middot; Purple Comet 2004, Problem 2 &middot; <span class="tag">Easy</span> <span class="tag">Geometry</span></h3>
+<p class="problem">In \(\triangle ABC\), three lines are drawn parallel to side \(BC\), dividing the altitude of the triangle into four equal parts. If the area of the second-largest part is 35, what is the area of the whole \(\triangle ABC\)?</p>
+<div class="note math">The identical problem appears as <a href="#ms-problem-3">MS Problem 3</a> above, with two solutions there &mdash; similar triangles and an independent coordinate-geometry check. Same 1:3:5:7 area split, same code.</div>
+<pre><code># MATH: see MS Problem 3 above -- lines parallel to BC cut off, from
+# the apex, triangles similar to ABC with scale factors 1/4,1/2,3/4,1;
+# similar triangles scale AREA by k^2, giving a 1:3:5:7 split among the
+# four strips.
+import sympy as sp
+
+A, k = sp.symbols('A k', positive=True)
+subtriangle_area = k**2 * A
+
+strips, prev = [], sp.Integer(0)
+for frac in (sp.Rational(1,4), sp.Rational(1,2), sp.Rational(3,4), sp.Rational(1,1)):
+    area_k = subtriangle_area.subs(k, frac)
+    strips.append(sp.simplify(area_k - prev))
+    prev = area_k
+
+second_largest = sorted(strips, key=lambda e: e.subs(A, 1))[-2]
+print(sp.solve(sp.Eq(second_largest, 35), A))   # [112]
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="hs-problem-3">HS &middot; Purple Comet 2004, Problem 3 &middot; <span class="tag">Medium</span> <span class="tag">Algebra</span></h3>
+<p class="problem">How many real numbers are roots of the polynomial \(x^9 - 37x^8 - 2x^7 + 74x^6 + x^4 - 37x^3 - 2x^2 + 74x\)?</p>
+<div class="note math">Nine terms is too many to eyeball, but they group into two chunks with a shared factor: \(x^6(x^3-37x^2-2x+74)\) and \(x(x^3-37x^2-2x+74)\) &mdash; both multiples of the same cubic. Factoring that cubic itself by grouping (\(x^2(x-37)-2(x-37)=(x-37)(x^2-2)\)) peels the whole degree-9 polynomial apart into small, separately-solvable pieces: \(x\), a factor of \(x^5+1\) (which has exactly one real root, \(x=-1\) &mdash; a fifth root of \(-1\)), \((x-37)\), and \((x^2-2)\). Counting real roots becomes counting real roots of each small piece and checking none coincide.</div>
+<pre><code># MATH: group the 9 terms into two chunks sharing a common cubic
+# factor -- x^6*(cubic) and x*(cubic) -- so the whole degree-9
+# polynomial factors as (x^6 + x)*(cubic) = x*(x^5+1)*(cubic), and the
+# cubic itself splits further by grouping. Let sympy do the symbolic
+# factoring and then count the REAL roots of the fully factored form
+# (a degree-5 factor like x^5+1 has only one real root, not five --
+# never assume degree = real-root count).
+import sympy as sp
+
+x = sp.symbols(&#x27;x&#x27;)
+poly = x**9 - 37*x**8 - 2*x**7 + 74*x**6 + x**4 - 37*x**3 - 2*x**2 + 74*x
+print(sp.factor(poly))
+# x*(x - 37)*(x + 1)*(x**2 - 2)*(x**4 - x**3 + x**2 - x + 1)
+
+real_roots = sorted(set(sp.real_roots(poly)))
+print(real_roots, len(real_roots))
+# [-sqrt(2), -1, 0, sqrt(2), 37] 5
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="hs-problem-4">HS &middot; Purple Comet 2004, Problem 4 &middot; <span class="tag">Easy</span> <span class="tag">Algebra</span></h3>
+<p class="problem">Find \(x\) so that \(2^{3^{2^2}} = 4^{4x}\).</p>
+<div class="note math">A power tower is evaluated from the top down, not left to right: \(3^{2^2}\) means \(3^{(2^2)}=3^4=81\), never \((3^2)^2\). Once the tower on the left collapses to a single number, rewrite both sides over the same base &mdash; \(4=2^2\), so \(4^{4x}=(2^2)^{4x}=2^{8x}\) &mdash; and equate exponents, since \(t\mapsto 2^t\) is injective on the reals.</div>
+<pre><code># MATH: evaluate the exponent tower innermost-first (2^2=4, so
+# 3^(2^2)=3^4=81 -- towers associate top-down, never left-to-right),
+# then rewrite 4^(4x) as (2^2)^(4x)=2^(8x) so both sides share base 2,
+# and equate exponents (t -> 2^t is injective on the reals).
+import sympy as sp
+
+x = sp.symbols('x')
+tower = 3**(2**2)                     # = 3^4 = 81, evaluated top-down
+sol = sp.solve(sp.Eq(tower, 8*x), x)  # 4^(4x) = 2^(8x); match exponents
+print(tower, sol)                     # 81 [81/8]
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="hs-problem-5">HS &middot; Purple Comet 2004, Problem 5 &middot; <span class="tag">Easy</span> <span class="tag">Number Theory</span></h3>
+<p class="problem">The number \(2.5081081081081\ldots\) can be written as \(\dfrac{m}{n}\) where \(m\) and \(n\) are natural numbers with no common factors. Find \(m+n\).</p>
+<div class="note math">The identical problem appears as <a href="#ms-problem-8">MS Problem 8</a> above, with two solutions: the multiply-and-subtract algebraic trick, and summing the repeating block as an infinite geometric series.</div>
+<pre><code># MATH: see MS Problem 8 above -- multiplying by 10^(k+r) and 10^k
+# (k=1 non-repeating digit, r=3 repeating digits) and subtracting
+# cancels the infinite tail exactly.
+import sympy as sp
+
+k, r = 1, 3
+whole_digits = 25081
+nonrep_digits = 25
+x = sp.Rational(whole_digits - nonrep_digits, 10**(k+r) - 10**k)
+m, n = sp.fraction(x)
+print(x, m, n, m + n)   # 464/185 464 185 649
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="hs-problem-6">HS &middot; Purple Comet 2004, Problem 6 &middot; <span class="tag">Medium</span> <span class="tag">Algebra</span></h3>
+<p class="problem">Evaluate the product \(\left(1+\dfrac{2}{3}\right)\left(1+\dfrac{2}{4}\right)\left(1+\dfrac{2}{5}\right)\cdots\left(1+\dfrac{2}{98}\right)\).</p>
+<div class="note math">Each factor \(1+\frac{2}{k}\) simplifies to \(\frac{k+2}{k}\), so the whole product is \(\prod_{k=3}^{98}\frac{k+2}{k}\) &mdash; a <strong>telescoping product</strong>: the numerators run \(5,6,\ldots,100\) and the denominators run \(3,4,\ldots,98\), and every value from 5 through 98 appears once on top and once on bottom, cancelling completely. What survives is just the two numerators with no denominator partner (99, 100) over the two denominators with no numerator partner (3, 4).</div>
+<pre><code># MATH: each factor (1+2/k) = (k+2)/k. The product over k=3..98 is
+# (5*6*...*100) / (3*4*...*98) -- a telescoping product where every
+# integer from 5 to 98 appears once in the numerator run and once in
+# the denominator run and cancels, leaving only the leftover ends.
+import sympy as sp
+
+top = sp.factorial(100) / sp.factorial(4)    # 5*6*...*100
+bottom = sp.factorial(98) / sp.factorial(2)  # 3*4*...*98
+closed_form = sp.simplify(top / bottom)
+print(closed_form)   # 825
+
+# Sanity check only -- multiply out every factor directly.
+brute = sp.prod([sp.Rational(k+2, k) for k in range(3, 99)])
+print(brute)   # 825
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="hs-problem-7">HS &middot; Purple Comet 2004, Problem 7 &middot; <span class="tag">Easy</span> <span class="tag">Number Theory</span></h3>
+<p class="problem">How many positive integers less than 200 are relatively prime to either 15 or 24?</p>
+<div class="note math">The identical problem appears as <a href="#ms-problem-9">MS Problem 9</a> above &mdash; including a second, set-based solution there. Same inclusion&ndash;exclusion reduction (coprime to neither 15 nor 24 collapses to &ldquo;divisible by 3 or 10&rdquo;), same code.</div>
+<pre><code># MATH: see MS Problem 9 above for the full derivation -- the
+# complement (not coprime to 15 AND not coprime to 24) reduces exactly
+# to &quot;divisible by 3 or 10,&quot; counted by inclusion-exclusion.
+N = 199
+complement = (N // 3) + (N // 10) - (N // 30)
+print(N - complement)   # 120
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="hs-problem-8">HS &middot; Purple Comet 2004, Problem 8 &middot; <span class="tag">Medium</span> <span class="tag">Number Theory</span></h3>
+<p class="problem">One rainy afternoon you write the number 1 once, the number 2 twice, the number 3 three times, and so forth until you have written the number 99 ninety-nine times. What is the 2005th digit that you write?</p>
+<div class="note math">The identical problem appears as <a href="#ms-problem-10">MS Problem 10</a> above &mdash; same closed-form running digit-count \(m(m+1)-45\), same code.</div>
+<pre><code># MATH: see MS Problem 10 above -- the running digit total after
+# finishing two-digit number m is m(m+1)-45; find the smallest m that
+# reaches 2005, then locate the exact digit within its block.
+def cumulative(m):
+    return m*(m+1) - 45
+
+m = 10
+while cumulative(m) &lt; 2005:
+    m += 1
+before = cumulative(m-1)
+digit_index = (2005 - before - 1) % 2
+print(str(m)[digit_index])   # 5
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="hs-problem-9">HS &middot; Purple Comet 2004, Problem 9 &middot; <span class="tag">Easy</span> <span class="tag">Algebra</span></h3>
 <p class="problem">Let \(M\) and \(m\) be the largest and the smallest values of \(x\), respectively, which satisfy \(4x(x-5) \le 375\). Find \(M-m\).</p>
 <div class="note math">Rearranged, \(4x^2-20x-375 \le 0\) is an upward-opening parabola (positive leading coefficient), so the inequality holds exactly on the closed interval between its two roots. \(M\) and \(m\) are simply those two roots, found with the quadratic formula.</div>
 <pre><code># MATH: 4x(x-5) &lt;= 375 is a quadratic inequality. Rearranged to
@@ -507,7 +1344,97 @@ print(m, M, M - m)  # -7.5 12.5 20.0
 
 
 <div class="card example">
-<h3>HS &middot; Purple Comet 2004, Problem 12 &middot; <span class="tag">Medium</span> <span class="tag">Geometry</span></h3>
+<h3 id="hs-problem-10">HS &middot; Purple Comet 2004, Problem 10 &middot; <span class="tag">Hard</span> <span class="tag">Geometry</span></h3>
+<p class="problem">Three lines are drawn parallel to each of the three sides of \(\triangle ABC\) so that the three lines intersect in the interior of \(ABC\). The resulting three smaller triangles have areas 1, 4, and 9. Find the area of \(\triangle ABC\).</p>
+<figure class="diagram">
+<svg viewBox="0 0 180 200" xmlns="http://www.w3.org/2000/svg">
+  <polygon points="90,10 10,190 170,190" fill="none" stroke="#8c2600" stroke-width="1.5"/>
+  <polygon points="90,10 76.67,40 103.33,40" fill="#f2c14e" stroke="#8c2600" stroke-width="1"/>
+  <polygon points="10,190 36.67,130 63.33,190" fill="#fbe9c2" stroke="#b63200" stroke-width="1"/>
+  <polygon points="170,190 130,100 90,190" fill="#e8a33d" stroke="#8c2600" stroke-width="1"/>
+  <text x="82" y="8" font-size="13" fill="#4a2b00">A</text>
+  <text x="-2" y="200" font-size="13" fill="#4a2b00">B</text>
+  <text x="172" y="200" font-size="13" fill="#4a2b00">C</text>
+</svg>
+<figcaption>Each corner triangle is similar to \(ABC\) itself (its sides are parallel to \(ABC\)&rsquo;s), drawn here at its actual solved ratio &mdash; \(1/6\), \(1/3\), \(1/2\) of \(ABC\)&rsquo;s side length, for areas 1, 4, 9.</figcaption>
+</figure>
+<p><strong>Solution 1 &mdash; set up and solve the ratio system.</strong></p>
+<div class="note math">Each of the three corner triangles is similar to \(\triangle ABC\) (its sides are parallel to \(ABC\)&rsquo;s own sides), so if a corner triangle&rsquo;s sides are a fraction \(k_i\) of \(ABC\)&rsquo;s, its area is \(k_i^2\) times \(ABC\)&rsquo;s area \(S\). The key extra fact &mdash; true because the three parallel lines all pass through one common interior point &mdash; is that the three ratios add to exactly 1: \(k_1+k_2+k_3=1\). With \(k_i=\sqrt{\text{area}_i/S}\), that one linear identity pins down \(S\) completely.</div>
+<pre><code># MATH: each corner triangle is similar to ABC (parallel sides), so
+# with side-ratio k_i, its area is k_i^2 * S where S = area(ABC). The
+# three ratios satisfy k1+k2+k3=1 exactly, because the three lines
+# meet at one common interior point -- a genuine geometric fact, not
+# an assumption. Four unknowns (S,k1,k2,k3), four equations, solved
+# symbolically.
+import sympy as sp
+
+S, k1, k2, k3 = sp.symbols(&#x27;S k1 k2 k3&#x27;, positive=True)
+equations = [
+    sp.Eq(k1**2 * S, 1),
+    sp.Eq(k2**2 * S, 4),
+    sp.Eq(k3**2 * S, 9),
+    sp.Eq(k1 + k2 + k3, 1),
+]
+solution = sp.solve(equations, [S, k1, k2, k3], dict=True)
+print(solution)   # [{S: 36, k1: 1/6, k2: 1/3, k3: 1/2}]
+</code></pre>
+
+<p><strong>Solution 2 &mdash; linearize with a square-root substitution.</strong></p>
+<div class="note math">Solution 1&rsquo;s system is only nonlinear because of the squares; substituting \(t_i=\sqrt{\text{area}_i}=k_i\sqrt S\) turns \(k_1+k_2+k_3=1\) directly into \(\frac{t_1+t_2+t_3}{\sqrt S}=1\), i.e. \(\sqrt S=t_1+t_2+t_3=\sqrt1+\sqrt4+\sqrt9\). No system to solve at all &mdash; just one substitution collapses four unknowns into a single square root, evaluated directly.</div>
+<pre><code># MATH: substituting t_i = sqrt(area_i) turns the nonlinear system of
+# Solution 1 into ONE linear identity: sqrt(S) = t1+t2+t3, since
+# k_i = t_i/sqrt(S) and k1+k2+k3=1. A substitution that linearizes the
+# problem, rather than solving four equations simultaneously.
+import sympy as sp
+
+sqrt_S = sp.sqrt(1) + sp.sqrt(4) + sp.sqrt(9)
+S = sp.simplify(sqrt_S**2)
+print(sqrt_S, S)   # 6 36 -- matches Solution 1
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="hs-problem-11">HS &middot; Purple Comet 2004, Problem 11 &middot; <span class="tag">Medium</span> <span class="tag">Geometry</span></h3>
+<p class="problem">How far is it from the point \((9,17)\) to its reflection across the line \(3x+4y=15\)?</p>
+<figure class="diagram">
+<svg viewBox="0 0 400 360" xmlns="http://www.w3.org/2000/svg">
+  <line x1="40" y1="80" x2="360" y2="320" stroke="#8c2600" stroke-width="1.5"/>
+  <line x1="232" y1="64" x2="78.4" y2="268.8" stroke="#b63200" stroke-width="1" stroke-dasharray="5,4"/>
+  <circle cx="232" cy="64" r="4" fill="#8c2600"/>
+  <circle cx="78.4" cy="268.8" r="4" fill="#8c2600"/>
+  <circle cx="155.2" cy="166.4" r="3" fill="#f2c14e" stroke="#8c2600" stroke-width="1"/>
+  <text x="242" y="60" font-size="15" fill="#4a2b00">P(9, 17)</text>
+  <text x="88" y="285" font-size="15" fill="#4a2b00">P&#x2032;</text>
+  <text x="240" y="320" font-size="14" fill="#8c2600">3x + 4y = 15</text>
+</svg>
+<figcaption>The mirror line, the point \(P\), and its reflection \(P^\prime\) &mdash; drawn from the actual solved coordinates. The dashed segment \(PP^\prime\) is perpendicular to the line and bisected by it.</figcaption>
+</figure>
+<div class="note math">Reflecting a point across a line is a single, reusable piece of vector geometry, not a picture to eyeball: write the line as \(\mathbf{n}\cdot\mathbf{x}=15\) with normal \(\mathbf{n}=(3,4)\), compute the signed distance \(d=\frac{\mathbf{n}\cdot P-15}{|\mathbf{n}|^2}\), and then \(P^\prime = P - 2d\,\mathbf{n}\). The distance from \(P\) to its own reflection is always exactly twice the (unsigned) distance from \(P\) to the line &mdash; so the answer is \(2\cdot\frac{|3(9)+4(17)-15|}{5}\), no need to compute \(P^\prime\) explicitly at all, though doing so is a good independent check.</div>
+<pre><code># MATH: reflecting P across the line n.x = c (here n=(3,4), c=15) is
+# vector geometry: signed distance d = (n.P - c)/|n|^2, reflected point
+# P&#x27; = P - 2*d*n. The distance from P to P&#x27; is then always exactly
+# TWICE the unsigned distance from P to the line -- compute it two
+# independent ways as a cross-check.
+import sympy as sp
+
+P = sp.Matrix([9, 17])
+n = sp.Matrix([3, 4])
+c = 15
+
+d_signed = (n.dot(P) - c) / n.dot(n)
+P_reflected = P - 2*d_signed*n
+print(P_reflected.T)                                  # [-51/5, -43/5]
+
+dist_direct = sp.sqrt((P_reflected - P).dot(P_reflected - P))
+dist_via_formula = 2 * abs(3*P[0] + 4*P[1] - c) / sp.sqrt(3**2 + 4**2)
+print(sp.simplify(dist_direct), dist_via_formula)     # 32 32
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="hs-problem-12">HS &middot; Purple Comet 2004, Problem 12 &middot; <span class="tag">Hard</span> <span class="tag">Geometry</span></h3>
 <p class="problem">The diagram shows a circle with radius 24 which contains two circles with radius 12 tangent to each other and the larger circle. The smallest circle is tangent to the three other circles. What is the radius of the smallest circle?</p>
 <figure class="diagram">
 <svg viewBox="-30 -30 60 60" xmlns="http://www.w3.org/2000/svg">
@@ -518,6 +1445,8 @@ print(m, M, M - m)  # -7.5 12.5 20.0
 </svg>
 <figcaption>Centers and radii drawn exactly to the solved values: the two r=12 circles split the big circle&rsquo;s diameter; the r=8 circle sits in the gap above, tangent to all three.</figcaption>
 </figure>
+
+<p><strong>Solution 1 &mdash; Descartes&rsquo; Circle Theorem.</strong></p>
 <div class="note math">This is exactly the situation <strong>Descartes&rsquo; Circle Theorem</strong> was built for: four mutually tangent circles have curvatures (\(k=1/\text{radius}\), negative when a circle contains the others) related by \[k_4 = k_1+k_2+k_3 \pm 2\sqrt{k_1k_2+k_2k_3+k_3k_1}.\] Plugging in the big circle (curvature \(-1/24\)) and the two radius-12 circles gives the fourth curvature directly, with no coordinate geometry required.</div>
 <pre><code># MATH: Descartes&#x27; Circle Theorem. For four mutually tangent circles
 # with curvatures k1,k2,k3,k4 (k = 1/radius; NEGATIVE for a circle that
@@ -538,12 +1467,135 @@ p = k1*k2 + k2*k3 + k3*k1
 k4 = float(s) + 2 * math.sqrt(float(p))
 print(1 / k4)  # 8.0
 </code></pre>
+
+<p><strong>Solution 2 &mdash; coordinates.</strong></p>
+<div class="note math">Not every reader has Descartes&rsquo; theorem memorized, and this configuration is symmetric enough to set up directly: by the left-right symmetry of the two radius-12 circles, the small circle&rsquo;s center must lie on the vertical axis of symmetry, at some point \((0,y)\). Two tangency conditions &mdash; externally tangent to a radius-12 circle (distance between centers \(=12+r_4\)) and internally tangent to the big circle, sitting inside it (distance from the origin \(=24-r_4\)) &mdash; are two equations in the two unknowns \(y\) and \(r_4\), solved directly with no named theorem required.</div>
+<pre><code># MATH: symmetry places the small circle&#x27;s center at (0,y). It is
+# externally tangent to the circle at (12,0) -- distance between
+# centers equals the SUM of radii, 12+r4 -- and internally tangent to
+# the big circle, sitting inside it -- distance from the origin equals
+# the DIFFERENCE of radii, 24-r4. Two equations, two unknowns, solved
+# directly with sympy -- no theorem needed, just tangency definitions.
+import sympy as sp
+
+y, r4 = sp.symbols('y r4', positive=True)
+eq_tangent_to_r12 = sp.Eq(sp.sqrt(12**2 + y**2), 12 + r4)
+eq_tangent_to_R24 = sp.Eq(y, 24 - r4)
+
+solution = sp.solve([eq_tangent_to_r12, eq_tangent_to_R24], [y, r4], dict=True)
+print(solution)   # [{r4: 8, y: 16}]
+</code></pre>
 </div>
 
 
 <div class="card example">
-<h3>HS &middot; Purple Comet 2004, Problem 17 &middot; <span class="tag">Hard</span> <span class="tag">Combinatorics</span></h3>
+<h3 id="hs-problem-13">HS &middot; Purple Comet 2004, Problem 13 &middot; <span class="tag">Easy</span> <span class="tag">Algebra</span></h3>
+<p class="problem">A cubic block with dimensions \(n\) by \(n\) by \(n\) is made up of a collection of \(1\times1\times1\) unit cubes. What is the smallest value of \(n\) so that if the <strong>outer two layers</strong> of unit cubes are removed from the block, more than half the original unit cubes will still remain?</p>
+
+<p><strong>Solution 1 &mdash; check consecutive integers.</strong></p>
+<div class="note math">The same idea as <a href="#ms-problem-23">MS Problem 23</a>, one layer deeper: peeling <em>two</em> 1-unit layers off every face of an \(n\times n\times n\) block leaves an \((n-4)\times(n-4)\times(n-4)\) core. The inequality is the same shape, \(2(n-4)^3&gt;n^3\), just with the shrinkage doubled &mdash; worth solving fresh rather than assuming the answer merely shifts by the same offset as the layer count, since the inequality is cubic, not linear.</div>
+<pre><code># MATH: same reasoning as MS Problem 23, with a thicker shell removed.
+# Peeling 2 units off every face of an n x n x n block leaves an
+# (n-4)^3 core. &quot;More than half remains&quot; is 2*(n-4)^3 &gt; n^3 -- check
+# consecutive integers for the smallest n where this first holds.
+import sympy as sp
+
+n = sp.symbols('n', positive=True, integer=True)
+inequality = sp.Gt(2*(n - 4)**3, n**3)
+
+candidate = 5
+while not inequality.subs(n, candidate):
+    candidate += 1
+print(candidate)   # 20
+print((candidate-4)**3, '&gt;', sp.Rational(candidate**3, 2))   # 4096 > 4000
+</code></pre>
+
+<p><strong>Solution 2 &mdash; solve the real boundary, then round up.</strong></p>
+<div class="note math">Rather than testing integers one at a time, solve the continuous equation \(2(n-4)^3=n^3\) for its real root directly: dividing through gives \(\left(\frac{n}{n-4}\right)^3=2\), so \(\frac{n}{n-4}=\sqrt[3]2\), which rearranges to a closed form for \(n\). Since \(2(n-4)^3-n^3\) is increasing once \(n\) is past that root, the smallest <em>integer</em> satisfying the inequality is exactly the ceiling of that real root &mdash; a direct algebraic answer instead of a scan.</div>
+<pre><code># MATH: solve the boundary equation 2(n-4)^3 = n^3 for its real root
+# directly (dividing both sides by (n-4)^3 gives (n/(n-4))^3 = 2, i.e.
+# n/(n-4) = cbrt(2), solved for n in closed form) -- then the smallest
+# INTEGER n satisfying the strict inequality is the ceiling of that
+# real root, since the cubic difference is increasing past the root.
+import sympy as sp
+import math
+
+n = sp.symbols('n', real=True)
+all_roots = sp.solve(sp.Eq(2*(n - 4)**3, n**3), n)   # cubic: up to 3 roots
+real_root = [r for r in all_roots if r.is_real][0]   # exactly one is real
+print(sp.N(real_root))          # 19.389... (not an integer)
+
+answer = math.ceil(float(real_root))
+print(answer)                    # 20 -- matches Solution 1
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="hs-problem-14">HS &middot; Purple Comet 2004, Problem 14 &middot; <span class="tag">Medium</span> <span class="tag">Geometry</span></h3>
+<p class="problem">Two circles have radii 15 and 95. If the two external tangents to the circles intersect at 60 degrees, how far apart are the centers of the circles?</p>
+<div class="note math">The identical problem appears as <a href="#ms-problem-22">MS Problem 22</a> above, with two solutions: two right triangles subtracted, and the &ldquo;shrink the small circle to a point&rdquo; reduction used here.</div>
+<pre><code># MATH: see MS Problem 22 above -- both circles are tangent to the same
+# two lines at the same half-angle, so d = (R-r)/sin(half-angle).
+import sympy as sp
+
+R, r = 95, 15
+d = (R - r) / sp.sin(sp.rad(30))
+print(sp.simplify(d))   # 160
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="hs-problem-15">HS &middot; Purple Comet 2004, Problem 15 &middot; <span class="tag">Easy</span> <span class="tag">Algebra</span></h3>
+<p class="problem">Jerry purchased some stock for \(\$14{,}400\) at the same time that Susan purchased a bond for \(\$6{,}250\). Jerry&rsquo;s investment went up 20 percent the first year, fell 10 percent the second year, and rose another 20 percent the third year. Susan&rsquo;s investment grew at a constant rate of compound interest for three years. If both investments are worth the same after three years, what was the annual percentage increase of Susan&rsquo;s investment?</p>
+<div class="note math">Each year&rsquo;s percentage change is a multiplier, and consecutive multipliers just multiply &mdash; Jerry&rsquo;s three years compound to \(14{,}400\times1.2\times0.9\times1.2\) directly, no year-by-year recomputation of a running balance needed. Susan&rsquo;s constant rate \(r\) satisfies \(6{,}250(1+r)^3=\) that same final value, so \(r\) is simply a cube root away once Jerry&rsquo;s side is computed exactly.</div>
+<pre><code># MATH: a sequence of percentage changes compounds by MULTIPLYING the
+# year-by-year factors together -- 20% up, 10% down, 20% up is exactly
+# 1.2 * 0.9 * 1.2, applied once to the starting amount, not three
+# separate additions. Susan&#x27;s unknown constant rate r then solves
+# directly from 6250*(1+r)^3 equalling that one computed final value.
+import sympy as sp
+
+jerry_final = 14400 * sp.Rational(12,10) * sp.Rational(9,10) * sp.Rational(12,10)
+print(jerry_final)   # 93312/5 = 18662.4
+
+r = sp.symbols('r', positive=True)
+susan_rate = sp.solve(sp.Eq(6250*(1+r)**3, jerry_final), r)[0]
+print(susan_rate, float(susan_rate)*100)   # 11/25 44.0
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="hs-problem-16">HS &middot; Purple Comet 2004, Problem 16 &middot; <span class="tag">Medium</span> <span class="tag">Algebra</span></h3>
+<p class="problem">Find the total length of the set of real numbers satisfying \(\dfrac{x^2-80x+1500}{x^2-55x+700}&lt;0\).</p>
+<div class="note math">Factor both the numerator and denominator &mdash; \(x^2-80x+1500=(x-30)(x-50)\) and \(x^2-55x+700=(x-20)(x-35)\) &mdash; and the inequality becomes a sign-chart question over four critical points, \(20&lt;30&lt;35&lt;50\). A rational expression only changes sign at a root of the numerator or denominator, so checking the sign on each of the five resulting intervals (and excluding \(x=20,35\), where the expression is undefined) finds the exact solution set, which is then just two disjoint open intervals to add the lengths of.</div>
+<pre><code># MATH: factor numerator and denominator completely. A rational
+# function changes sign only at a root of the numerator or the
+# denominator, so the four roots 20, 30, 35, 50 split the real line
+# into intervals of constant sign -- check one point per interval,
+# never guess, and exclude the denominator&#x27;s roots (undefined there).
+import sympy as sp
+
+x = sp.symbols(&#x27;x&#x27;, real=True)
+expr = (x**2 - 80*x + 1500) / (x**2 - 55*x + 700)
+print(sp.factor(x**2 - 80*x + 1500))   # (x - 30)*(x - 50)
+print(sp.factor(x**2 - 55*x + 700))    # (x - 20)*(x - 35)
+
+solution_set = sp.solve_univariate_inequality(expr &lt; 0, x, relational=False)
+print(solution_set)   # Union(Interval.open(20, 30), Interval.open(35, 50))
+
+total_length = sum(iv.end - iv.start for iv in solution_set.args)
+print(total_length)   # 25
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="hs-problem-17">HS &middot; Purple Comet 2004, Problem 17 &middot; <span class="tag">Hard</span> <span class="tag">Combinatorics</span></h3>
 <p class="problem">We want to paint some identically-sized cubes so that each face of each cube is painted a solid color and each cube is painted with six different colors. If we have seven different colors to choose from, how many distinguishable cubes can we produce?</p>
+<p><strong>Solution 1 &mdash; Burnside&rsquo;s Lemma, no shortcuts assumed.</strong></p>
 <div class="note math">Two colorings that are rotations of each other are the <em>same</em> physical cube, so this is a counting-up-to-symmetry problem &mdash; exactly what <strong>Burnside&rsquo;s Lemma</strong> is for: the number of genuinely distinct colorings equals the average, over every symmetry of the cube, of how many colorings that symmetry leaves unchanged. Since every face gets a different color, only the &ldquo;do nothing&rdquo; symmetry can ever leave a coloring unchanged, which collapses the count to \(6!/24=30\) arrangements per choice of 6 colors, times \(\binom{7}{6}=7\) ways to choose which 6 of the 7 colors to use.</div>
 <pre><code># MATH: Burnside&#x27;s Lemma (orbit-counting theorem). Two colorings of the
 # cube&#x27;s faces are &quot;the same cube&quot; if a rotation of the cube turns one
@@ -594,6 +1646,304 @@ total_fixed = sum(
 )
 distinct_colorings = total_fixed // len(face_perms)          # -&gt; 30
 print(distinct_colorings, comb(7, 6) * distinct_colorings)   # 30 210
+</code></pre>
+
+<p><strong>Solution 2 &mdash; the shortcut, taken at face value.</strong></p>
+<div class="note math">Solution 1 deliberately doesn&rsquo;t assume the shortcut mentioned in the math note above &mdash; it checks every rotation directly. Solution 2 takes that shortcut at face value and just computes it: since every face is a <em>different</em> color, any rotation other than &ldquo;do nothing&rdquo; necessarily moves some face to a position with a different color, so it can never fix a coloring. Burnside&rsquo;s average then collapses from &ldquo;sum over 24 rotations&rdquo; to a single term &mdash; a much shorter computation that trusts the geometric argument instead of re-deriving it in code.</div>
+<pre><code># MATH: take the shortcut from the math note at face value -- with all
+# 6 colors distinct, only the identity rotation can ever fix a
+# coloring, so Burnside&#x27;s average is just (all 6! colorings) / 24
+# rotations, with no need to enumerate the rotation group at all.
+import math
+
+distinct_colorings = math.factorial(6) // 24
+answer = math.comb(7, 6) * distinct_colorings
+print(distinct_colorings, answer)   # 30 210 -- matches Solution 1
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="hs-problem-18">HS &middot; Purple Comet 2004, Problem 18 &middot; <span class="tag">Hard</span> <span class="tag">Algebra</span></h3>
+<p class="problem">As \(x\) ranges over the interval \((0,\infty)\), the function \(\sqrt{9x^2+173x+900}-\sqrt{9x^2+77x+900}\) ranges over the interval \((0,M)\). Find \(M\).</p>
+
+<p><strong>Solution 1 &mdash; rationalize by the conjugate.</strong></p>
+<div class="note math">A difference of two square roots that both grow like \(3x\) is exactly the situation for <strong>rationalizing by the conjugate</strong>: multiplying and dividing by the sum of the two roots turns the difference into \(\frac{96x}{\sqrt{9x^2+173x+900}+\sqrt{9x^2+77x+900}}\), a single fraction whose behavior as \(x\to\infty\) is now visible directly &mdash; both square roots behave like \(3x\), so the denominator behaves like \(6x\), and the whole expression approaches \(\frac{96x}{6x}=16\). The function increases toward that limit but never reaches it (the interval is open at \(M\)), so \(M\) is exactly that limiting value.</div>
+<pre><code># MATH: rationalize by the conjugate -- multiply and divide by the SUM
+# of the two square roots. The numerator becomes the difference of the
+# two expressions under the radicals (linear in x, no square roots
+# left), turning an opaque difference of large roots into one clean
+# fraction whose limit as x -&gt; infinity can be read off directly.
+import sympy as sp
+
+x = sp.symbols('x', positive=True)
+f = sp.sqrt(9*x**2 + 173*x + 900) - sp.sqrt(9*x**2 + 77*x + 900)
+
+numerator = sp.simplify((9*x**2+173*x+900) - (9*x**2+77*x+900))
+print(numerator)   # 96*x  -- exactly what the conjugate trick produces
+
+M = sp.limit(f, x, sp.oo)
+print(M)   # 16  -- f increases toward this but never reaches it
+</code></pre>
+
+<p><strong>Solution 2 &mdash; substitute \(x=1/t\) and expand near \(t=0\).</strong></p>
+<div class="note math">&ldquo;\(x\to\infty\)&rdquo; is the same limit as &ldquo;\(t\to0^+\)&rdquo; after substituting \(x=1/t\), and near \(t=0\) sympy&rsquo;s series expansion reads off the limiting value as the expansion&rsquo;s constant term directly &mdash; a genuinely different tool (asymptotic series, the same idea behind Taylor&rsquo;s theorem) from Solution 1&rsquo;s algebraic conjugate trick, and one that also shows <em>how fast</em> \(f\) approaches \(M\) (the next term, \(-\frac{1000}{9}t\), says the approach is linear in \(1/x\)).</div>
+<pre><code># MATH: substitute x = 1/t so x -&gt; infinity becomes t -&gt; 0+, then
+# expand f as a series in t near 0. The CONSTANT term of that
+# expansion is the limit -- an asymptotic-series approach, a different
+# tool from Solution 1&#x27;s conjugate rationalization, that also reveals
+# the rate of approach (the next term) for free.
+import sympy as sp
+
+t = sp.symbols('t', positive=True)
+x = 1/t
+f = sp.sqrt(9*x**2 + 173*x + 900) - sp.sqrt(9*x**2 + 77*x + 900)
+
+expansion = sp.series(f, t, 0, 2)
+print(expansion)                              # 16 - 1000*t/9 + O(t**2)
+
+M = expansion.removeO().subs(t, 0)
+print(M)                                       # 16 -- matches Solution 1
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="hs-problem-19">HS &middot; Purple Comet 2004, Problem 19 &middot; <span class="tag">Hard</span> <span class="tag">Combinatorics</span></h3>
+<p class="problem">There are three bags. One bag contains three green candies and one red candy. One bag contains two green candies and two red candies. One bag contains one green candy and three red candies. A child randomly selects one of the bags, randomly chooses a first candy from that bag, and eats the candy. If the first candy had been green, the child randomly chooses one of the other two bags and randomly selects a second candy from that bag. If the first candy had been red, the child randomly selects a second candy from the same bag as the first candy. If the probability that the second candy is green is \(\dfrac{m}{n}\) in lowest terms, find \(m+n\).</p>
+<figure class="diagram">
+<svg viewBox="0 0 400 210" xmlns="http://www.w3.org/2000/svg">
+  <line x1="200" y1="15" x2="60" y2="60" stroke="#8c2600" stroke-width="1"/>
+  <line x1="200" y1="15" x2="200" y2="60" stroke="#8c2600" stroke-width="1"/>
+  <line x1="200" y1="15" x2="340" y2="60" stroke="#8c2600" stroke-width="1"/>
+  <text x="180" y="10" font-size="12" fill="#4a2b00">child picks a bag</text>
+  <text x="30" y="75" font-size="12" fill="#4a2b00">Bag 1 (3G,1R)</text>
+  <text x="170" y="75" font-size="12" fill="#4a2b00">Bag 2 (2G,2R)</text>
+  <text x="305" y="75" font-size="12" fill="#4a2b00">Bag 3 (1G,3R)</text>
+  <line x1="60" y1="80" x2="30" y2="130" stroke="#b63200" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="60" y1="80" x2="90" y2="130" stroke="#b63200" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="14" y="145" font-size="11" fill="#4a2b00">1st: G (3/4)</text>
+  <text x="72" y="145" font-size="11" fill="#4a2b00">1st: R (1/4)</text>
+  <text x="10" y="165" font-size="10.5" fill="#8c2600">2nd draw: OTHER bag</text>
+  <text x="65" y="165" font-size="10.5" fill="#8c2600">2nd draw: SAME bag</text>
+  <text x="14" y="185" font-size="10.5" fill="#8c2600">(fresh, unaffected)</text>
+  <text x="65" y="185" font-size="10.5" fill="#8c2600">(one candy removed)</text>
+</svg>
+<figcaption>The branching structure for just Bag 1 &mdash; Bags 2 and 3 branch the same way, with their own G/R odds. The rule that decides whether the second draw comes from a fresh bag or a depleted one is exactly what the code enumerates in full below.</figcaption>
+</figure>
+<div class="note math">This is a small, fully enumerable probability tree, not a shortcut formula &mdash; the rule for the second draw genuinely depends on the outcome of the first (a different bag, untouched, if the first candy was green; the <em>same</em> bag with one candy already removed, if it was red), so every branch has to be walked through, weighted by its own probability, and summed. That case-dependence is the actual content of the problem; the arithmetic itself is elementary once every branch is accounted for.</div>
+<pre><code># MATH: full probability tree, exhaustively enumerated -- the rule for
+# the second draw is CASE-DEPENDENT on the first candy&#x27;s color (fresh
+# bag if green, same bag missing one candy if red), so every one of the
+# 3 (bag) x 2 (first color) x (2 or 1) (second bag/same bag) branches
+# must be weighted by its own probability and summed. No shortcut
+# formula applies here -- exhausting the tree correctly IS the math.
+from fractions import Fraction as F
+
+bags = {1: {'G': 3, 'R': 1}, 2: {'G': 2, 'R': 2}, 3: {'G': 1, 'R': 3}}
+
+total = F(0)
+for first_bag in [1, 2, 3]:
+    n = bags[first_bag]['G'] + bags[first_bag]['R']
+    for first_color in ['G', 'R']:
+        p_first = F(1,3) * F(bags[first_bag][first_color], n)
+        if first_color == 'G':
+            for second_bag in [b for b in [1,2,3] if b != first_bag]:
+                n2 = bags[second_bag]['G'] + bags[second_bag]['R']
+                p_second_green = F(bags[second_bag]['G'], n2)
+                total += p_first * F(1,2) * p_second_green
+        else:   # RED -> second draw from the SAME bag, one candy gone
+            p_second_green = F(bags[first_bag]['G'], n - 1)
+            total += p_first * p_second_green
+
+print(total)                                  # 73/144
+print(total.numerator + total.denominator)    # 217
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="hs-problem-20">HS &middot; Purple Comet 2004, Problem 20 &middot; <span class="tag">Medium</span> <span class="tag">Geometry</span></h3>
+<p class="problem">A 70-foot pole stands vertically in a plane, supported by three 490-foot wires, all attached to the top of the pole, pulled taut, and anchored to three equally spaced points in the plane. How many feet apart are any two of those anchor points?</p>
+<figure class="diagram">
+<svg viewBox="-60 -60 120 120" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="0" cy="0" r="50" fill="none" stroke="#b63200" stroke-width="0.8" stroke-dasharray="3,3"/>
+  <polygon points="0,-50 -43.3,25 43.3,25" fill="none" stroke="#8c2600" stroke-width="1.3"/>
+  <line x1="0" y1="0" x2="0" y2="-50" stroke="#b63200" stroke-width="0.8" stroke-dasharray="2,2"/>
+  <line x1="0" y1="0" x2="-43.3" y2="25" stroke="#b63200" stroke-width="0.8" stroke-dasharray="2,2"/>
+  <line x1="0" y1="0" x2="43.3" y2="25" stroke="#b63200" stroke-width="0.8" stroke-dasharray="2,2"/>
+  <circle cx="0" cy="0" r="2.5" fill="#4a2b00"/>
+  <circle cx="0" cy="-50" r="3" fill="#f2c14e" stroke="#8c2600" stroke-width="0.8"/>
+  <circle cx="-43.3" cy="25" r="3" fill="#f2c14e" stroke="#8c2600" stroke-width="0.8"/>
+  <circle cx="43.3" cy="25" r="3" fill="#f2c14e" stroke="#8c2600" stroke-width="0.8"/>
+  <text x="4" y="4" font-size="7" fill="#4a2b00">base of pole</text>
+  <text x="6" y="-52" font-size="7" fill="#4a2b00">anchor</text>
+  <text x="10" y="12" font-size="6.5" fill="#8c2600">R</text>
+</svg>
+<figcaption>Bird&rsquo;s-eye view: the pole&rsquo;s base is the center, and every anchor sits on the same circle of radius \(R=\sqrt{490^2-70^2}\) (each wire+pole+ground forms an identical right triangle). Equally spaced means the three anchors form an equilateral triangle inscribed in that circle.</figcaption>
+</figure>
+<div class="note math">Each wire, the pole, and the ground form a right triangle, so every anchor point sits at the same horizontal distance \(R=\sqrt{490^2-70^2}\) from the base of the pole &mdash; all three anchors lie on one circle of radius \(R\). &ldquo;Equally spaced&rdquo; on that circle means they form an equilateral triangle inscribed in it, and the side length of an equilateral triangle inscribed in a circle of radius \(R\) is the standard \(R\sqrt3\) &mdash; a fact worth deriving symbolically (via the law of cosines on the \(120^\circ\) central angle between adjacent anchors) rather than just quoting.</div>
+<pre><code># MATH: each wire+pole+ground is a right triangle, giving every anchor
+# the SAME horizontal distance R = sqrt(490^2-70^2) from the pole&#x27;s
+# base -- all three anchors lie on one circle of radius R. Equally
+# spaced on that circle means 120 degrees apart; the law of cosines on
+# that 120-degree central angle gives the chord (anchor-to-anchor)
+# length directly, which simplifies to the classic R*sqrt(3).
+import sympy as sp
+
+pole, wire = 70, 490
+R = sp.sqrt(wire**2 - pole**2)
+print(sp.simplify(R))                       # 280*sqrt(3)
+
+central_angle = sp.rad(120)
+chord = sp.sqrt(R**2 + R**2 - 2*R*R*sp.cos(central_angle))   # law of cosines
+print(sp.simplify(chord))                   # 840
+print(sp.simplify(R * sp.sqrt(3)))          # 840 -- matches the general R*sqrt(3) fact
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="hs-problem-21">HS &middot; Purple Comet 2004, Problem 21 &middot; <span class="tag">Hard</span> <span class="tag">Algebra</span></h3>
+<p class="problem">Define \(a_k=(k^2+1)k!\) and \(b_k=a_1+a_2+a_3+\cdots+a_k\). Let \(\dfrac{a_{100}}{b_{100}}=\dfrac{m}{n}\) where \(m\) and \(n\) are relatively prime natural numbers. Find \(n-m\).</p>
+<div class="note math">Computing \(b_{100}\) by literally adding 100 huge factorials would work, but it hides the real structure: \(b_k\) is a partial sum, so guess that it has a clean closed form and <em>prove</em> the guess symbolically rather than trusting a numeric coincidence. Trying \(b_k=k(k+1)!\) and checking \(b_k-b_{k-1}=a_k\) algebraically confirms it exactly. Once \(b_k=k(k+1)!\) is established, \(\frac{a_k}{b_k}=\frac{(k^2+1)k!}{k(k+1)!}\) has the entire \(k!\) cancel, collapsing to the simple rational function \(\frac{k^2+1}{k(k+1)}\) &mdash; no giant numbers anywhere in the final computation.</div>
+<pre><code># MATH: guess a closed form for the partial sum b_k -- try b_k=k*(k+1)!
+# and PROVE it by checking that consecutive differences reproduce a_k
+# exactly (b_k - b_(k-1) = a_k), symbolically, for general k. Once
+# proven, a_k/b_k simplifies algebraically: the k! cancels completely,
+# leaving a small rational function with no huge factorials left in it
+# at all.
+import sympy as sp
+
+k = sp.symbols('k', positive=True, integer=True)
+b_k, b_km1 = k*sp.factorial(k+1), (k-1)*sp.factorial(k)
+a_k = (k**2 + 1)*sp.factorial(k)
+print(sp.simplify(b_k - b_km1 - a_k))       # 0 -- confirms b_k = k*(k+1)! exactly
+
+ratio = sp.simplify(a_k / b_k)
+print(ratio)                                 # (k**2 + 1)/(k*(k + 1))
+
+value = ratio.subs(k, 100)
+print(value)                                 # 10001/10100
+m, n = sp.fraction(value)
+print(m, n, n - m)                           # 10001 10100 99
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="hs-problem-23">HS &middot; Purple Comet 2004, Problem 23 &middot; <span class="tag">Hard</span> <span class="tag">Algebra</span></h3>
+<p class="problem">Let \(a\) and \(b\) be real numbers satisfying \(a^4+8b=4(a^3-1)-16\sqrt3\) and \(b^4+8a=4(b^3-1)+16\sqrt3\). Find \(a^4+b^4\).</p>
+<div class="note math">Adding the two equations kills the \(\sqrt3\) terms entirely, leaving a single symmetric relation in \(a\) and \(b\) &mdash; a strong hint that the intended solution is symmetric too. The \(\pm16\sqrt3\) is the other hint: it suggests \(a\) and \(b\) sit equal distances on either side of some center, i.e. \(a=c+t\), \(b=c-t\) for constants \(c,t\). Testing the simplest case \(c=1\) (matching the \(4(a^3-1)\) and \(4(b^3-1)\) shift already in the equations) turns each quartic into a single-variable equation in \(t\); \(t=\sqrt3\) solves it exactly, which sympy confirms symbolically rather than approximately &mdash; an exact check, not a numeric coincidence.</div>
+<pre><code># MATH: adding the two equations cancels the +-16*sqrt(3) terms,
+# hinting at a symmetric solution a = 1+t, b = 1-t (the "1" matches
+# the 4(a^3-1)/4(b^3-1) shift already built into the equations).
+# Substituting collapses each quartic-in-two-variables into a single
+# quartic in t; solving (or, as here, verifying the natural candidate
+# t = sqrt(3)) closes it out. sympy checks the candidate EXACTLY --
+# simplify() reducing the residual to 0 is a real proof, not a
+# numerical near-miss.
+import sympy as sp
+
+a, b = sp.symbols('a b')
+sqrt3 = sp.sqrt(3)
+candidate_a, candidate_b = 1 + sqrt3, 1 - sqrt3     # a = 1+t, b = 1-t, t = sqrt(3)
+
+eq1_residual = sp.simplify((candidate_a**4 + 8*candidate_b) - (4*(candidate_a**3 - 1) - 16*sqrt3))
+eq2_residual = sp.simplify((candidate_b**4 + 8*candidate_a) - (4*(candidate_b**3 - 1) + 16*sqrt3))
+print(eq1_residual, eq2_residual)                    # 0 0 -- both equations hold exactly
+
+answer = sp.simplify(candidate_a**4 + candidate_b**4)
+print(answer)                                        # 56
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="hs-problem-24">HS &middot; Purple Comet 2004, Problem 24 &middot; <span class="tag">Medium</span> <span class="tag">Algebra</span></h3>
+<p class="problem">The determinant \(\begin{vmatrix}3&-2&5\\7&1&-4\\5&2&3\end{vmatrix}\) has the same value as the determinant \(\begin{vmatrix}x&1+x&2+x\\3&0&1\\1&1&0\end{vmatrix}\). Find \(x\).</p>
+<div class="note math">Both sides are just numbers once expanded &mdash; the left determinant is a fixed constant, and the right one is linear in \(x\) (cofactor-expand along the bottom row, which has two zeros, to see it collapses to a first-degree polynomial). Setting the two equal is then a one-line linear equation. Hand-expanding a \(3\times3\) determinant is exactly the kind of mechanical, sign-error-prone step that&rsquo;s worth handing to code &mdash; the real math is recognizing both sides are just numbers to be equated, not carrying nine products by hand.</div>
+<pre><code># MATH: expand both 3x3 determinants symbolically -- the left one is a
+# fixed constant, the right one is linear in x (cofactor expansion
+# along the bottom row, which has two zeros, makes this visible by
+# hand too). Equate them and solve the resulting linear equation.
+import sympy as sp
+
+x = sp.symbols('x')
+M1 = sp.Matrix([[3, -2, 5], [7, 1, -4], [5, 2, 3]])
+M2 = sp.Matrix([[x, 1 + x, 2 + x], [3, 0, 1], [1, 1, 0]])
+
+d1 = M1.det()
+d2 = sp.expand(M2.det())
+print(d1, d2)                          # 160 3*x + 7
+
+sol = sp.solve(sp.Eq(d1, d2), x)
+print(sol)                             # [51]
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="hs-problem-25">HS &middot; Purple Comet 2004, Problem 25 &middot; <span class="tag">Hard</span> <span class="tag">Number Theory</span></h3>
+<p class="problem">In the addition problem<br><code>&nbsp;&nbsp;WHITE<br>+WATER<br>PICNIC</code><br>each distinct letter represents a different digit. Find the number represented by the answer PICNIC.</p>
+<p>The identical problem appears as <a href="#ms-problem-25">MS Problem 25</a> above; both solutions below are the same two methods, repeated here so this track has its own complete, self-contained write-up.</p>
+
+<p><strong>Solution 1 &mdash; every bijection, exhaustively.</strong></p>
+<div class="note math">Exactly 10 distinct letters appear (\(W,H,I,T,E,A,R,P,C,N\)), matching the 10 available digits \(0\)&ndash;\(9\) &mdash; so every candidate solution is one of only \(10!=3{,}628{,}800\) bijections from letters to digits, a small and provably complete search space, not an open-ended guess.</div>
+<pre><code># MATH: exactly 10 distinct letters map onto the 10 digits 0-9, so
+# every candidate solution is a BIJECTION of letters to digits, and
+# there are only 10! = 3,628,800 of those -- small enough to check
+# completely, rejecting leading zeros and keeping only the ones where
+# the sum actually holds.
+from itertools import permutations
+
+letters = ['W', 'H', 'I', 'T', 'E', 'A', 'R', 'P', 'C', 'N']
+
+def to_num(word, assign):
+    return int(''.join(str(assign[ch]) for ch in word))
+
+found = set()
+for perm in permutations(range(10)):
+    assign = dict(zip(letters, perm))
+    if assign['W'] == 0 or assign['P'] == 0:
+        continue
+    if to_num('WHITE', assign) + to_num('WATER', assign) == to_num('PICNIC', assign):
+        found.add(to_num('PICNIC', assign))
+print(sorted(found))   # [169069]
+</code></pre>
+
+<p><strong>Solution 2 &mdash; use the arithmetic to shrink the search.</strong></p>
+<div class="note math">Four of the ten letters &mdash; \(P,I,C,N\) &mdash; aren&rsquo;t free choices: column-by-column addition <em>determines</em> each of them from the other six letters (\(W,H,T,E,A,R\)) and the running carry, the same way the last digit of \(7+8\) is determined, not chosen. Searching only the 6 free letters, then checking that \(C\) and \(I\) (each forced twice, by two different columns) agree, is a smaller and differently-structured search than Solution 1&rsquo;s flat guess over all 10.</div>
+<pre><code># MATH: standard column-addition logic. Adding column by column from
+# the units digit, each column's sum determines that PICNIC digit AND a
+# carry into the next column -- so C, I, N, P are all DERIVED from
+# W,H,T,E,A,R (only 6 truly free letters). C and I each appear in TWO
+# columns, so both derivations must agree -- that consistency check is
+# the real constraint, not just relabeling the same search.
+from itertools import permutations
+
+count = 0
+found = set()
+for W, H, T, E, A, R in permutations(range(10), 6):
+    if W == 0:
+        continue
+    count += 1
+    c1, C = divmod(E + R, 10)              # units column
+    c2, I = divmod(T + E + c1, 10)         # tens column
+    c3, N = divmod(I + T + c2, 10)         # hundreds column
+    c4, C_check = divmod(H + A + c3, 10)   # thousands column -- must reproduce C
+    if C_check != C:
+        continue
+    c5, I_check = divmod(W + W + c4, 10)   # ten-thousands column -- must reproduce I
+    if I_check != I:
+        continue
+    P = c5
+    if P == 0 or len({W,H,T,E,A,R,C,I,N,P}) != 10:
+        continue
+    found.add(int(f"{P}{I}{C}{N}{I}{C}"))
+
+print(count, "permutations checked (vs 10! = 3,628,800)")   # 136080 ...
+print(sorted(found))                                        # [169069] -- matches Solution 1
 </code></pre>
 </div>
 
