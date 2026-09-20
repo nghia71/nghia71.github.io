@@ -1,0 +1,158 @@
+<!-- MCC coding-lesson access gate.
+
+Checks a per-student link (this page's URL with ?student=<Student ID>
+appended) against the club's roster -- published from Google Sheets as a
+plain CSV, so editing the roster there takes effect immediately, no site
+rebuild needed. On a match, the student's id/name is remembered in this
+browser's localStorage (key "mcc_student") so later visits to any lesson
+page work without the link. That same stored id is meant to be reused as
+the student's identity for the Sunday coding-contest submissions later --
+keep the key name and shape (`{id, name}`) if you build that next, rather
+than inventing a second one.
+
+To include on a lesson page:
+  1. Put {% include lesson-gate.html %} right before the page's real content.
+  2. Wrap that real content in <div id="mcc-gate-content" style="display:none">
+     ... </div> -- the gate reveals it on a match, and leaves it hidden
+     (with an explanation in its place) otherwise.
+  3. Add `robots: noindex` to the page's front matter so it doesn't turn up
+     in search results.
+-->
+<div id="mcc-gate-screen" class="mcc-gate-screen">
+  <p id="mcc-gate-message">Checking your access&hellip;</p>
+</div>
+
+<style>
+  .mcc-gate-screen {
+    max-width: 480px;
+    margin: 2.5em auto;
+    padding: 22px 26px;
+    background: var(--white);
+    border: 2px solid var(--brand);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    text-align: center;
+  }
+  .mcc-gate-screen p { margin: 0.4em 0; line-height: 1.5; }
+  #mcc-gate-welcome {
+    color: var(--ink-soft);
+    font-style: italic;
+    margin: 0 0 1em;
+  }
+</style>
+
+<script>
+(function () {
+  // Published-to-web CSV of the coding-course roster (Student Name,
+  // Student ID, Student Email Address). Publicly fetchable by design --
+  // that's what lets a student's own browser check it with no server.
+  var ROSTER_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQxkm8DlgUpQhYr7wmkA3lx-t3bhPsUSMq9xnQnKPfyBKINs4_egnNFa25t2eUK3Vkmvw6ZQleNu5HY/pub?gid=1600479189&single=true&output=csv";
+  var STORAGE_KEY = "mcc_student";
+
+  var screen = document.getElementById("mcc-gate-screen");
+  var message = document.getElementById("mcc-gate-message");
+  var content = document.getElementById("mcc-gate-content");
+
+  function showDenied() {
+    message.innerHTML =
+      "This lesson is for registered MCC coding-course students only.<br>" +
+      "Use the personal link from your registration confirmation, or ask your coordinator for it.";
+  }
+
+  function showGranted(name) {
+    screen.style.display = "none";
+    if (content) content.style.display = "";
+    if (name && content && !document.getElementById("mcc-gate-welcome")) {
+      var w = document.createElement("p");
+      w.id = "mcc-gate-welcome";
+      w.textContent = "Welcome, " + name + ".";
+      content.insertBefore(w, content.firstChild);
+    }
+  }
+
+  // Minimal CSV parser -- handles quoted fields (with embedded commas or
+  // escaped quotes), which is all a Google Sheets export ever produces.
+  // No need for a library over three plain columns.
+  function parseCsv(text) {
+    var rows = [], row = [], field = "", inQuotes = false;
+    for (var i = 0; i < text.length; i++) {
+      var c = text[i];
+      if (inQuotes) {
+        if (c === '"') {
+          if (text[i + 1] === '"') { field += '"'; i++; } else { inQuotes = false; }
+        } else {
+          field += c;
+        }
+      } else if (c === '"') {
+        inQuotes = true;
+      } else if (c === ',') {
+        row.push(field); field = "";
+      } else if (c === '\n' || c === '\r') {
+        if (c === '\r' && text[i + 1] === '\n') i++;
+        row.push(field); field = "";
+        if (row.length > 1 || row[0] !== "") rows.push(row);
+        row = [];
+      } else {
+        field += c;
+      }
+    }
+    if (field !== "" || row.length) { row.push(field); rows.push(row); }
+    return rows;
+  }
+
+  function findStudent(rows, studentId) {
+    if (!rows.length) return null;
+    var header = rows[0].map(function (h) { return h.trim().toLowerCase(); });
+    var idCol = header.indexOf("student id");
+    var nameCol = header.indexOf("student name");
+    if (idCol === -1) return null;
+    var target = studentId.trim().toLowerCase();
+    for (var r = 1; r < rows.length; r++) {
+      var row = rows[r];
+      if (row[idCol] && row[idCol].trim().toLowerCase() === target) {
+        return { id: row[idCol].trim(), name: nameCol > -1 ? (row[nameCol] || "").trim() : "" };
+      }
+    }
+    return null;
+  }
+
+  function checkAccess(studentId, fromLink) {
+    fetch(ROSTER_CSV_URL)
+      .then(function (r) {
+        if (!r.ok) throw new Error("roster fetch failed: " + r.status);
+        return r.text();
+      })
+      .then(function (text) {
+        var student = findStudent(parseCsv(text), studentId);
+        if (student) {
+          try { localStorage.setItem(STORAGE_KEY, JSON.stringify(student)); } catch (e) { /* private browsing -- fine, just won't persist */ }
+          showGranted(student.name);
+        } else {
+          // A stored id that no longer matches (removed from the roster, or
+          // a stale/bad link) never grants access -- always clear it rather
+          // than trusting what's already in localStorage.
+          try { localStorage.removeItem(STORAGE_KEY); } catch (e) {}
+          showDenied();
+        }
+      })
+      .catch(function () {
+        message.textContent = "Couldn't check access right now — check your internet connection and reload the page.";
+      });
+  }
+
+  var params = new URLSearchParams(window.location.search);
+  var linkId = params.get("student");
+
+  if (linkId) {
+    checkAccess(linkId, true);
+  } else {
+    var stored = null;
+    try { stored = JSON.parse(localStorage.getItem(STORAGE_KEY) || "null"); } catch (e) {}
+    if (stored && stored.id) {
+      checkAccess(stored.id, false);
+    } else {
+      showDenied();
+    }
+  }
+})();
+</script>
