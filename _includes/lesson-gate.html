@@ -113,25 +113,49 @@ PIN directly (typed in, not from a URL) and sets the same localStorage.
       "Use the personal link from your registration confirmation, or ask your coordinator for it.";
   }
 
-  function showGranted(student) {
+  function showGranted(id, name) {
     screen.style.display = "none";
     if (content) content.style.display = "";
-    if (student.name && content && !document.getElementById("mcc-gate-welcome")) {
+    if (name && content && !document.getElementById("mcc-gate-welcome")) {
       var w = document.createElement("p");
       w.id = "mcc-gate-welcome";
-      w.textContent = "Welcome, " + student.name + ".";
+      w.textContent = "Welcome, " + name + ".";
       content.insertBefore(w, content.firstChild);
     }
   }
 
-  function rememberAndGrant(student) {
-    try { localStorage.setItem(MCCRoster.STORAGE_KEY, JSON.stringify(student)); } catch (e) { /* private browsing -- fine, just won't persist */ }
-    showGranted(student);
+  function rememberAndGrant(id, name) {
+    try { localStorage.setItem(MCCRoster.STORAGE_KEY, JSON.stringify({ id: id, name: name })); } catch (e) { /* private browsing -- fine, just won't persist */ }
+    showGranted(id, name);
   }
 
-  function askForPin(student) {
+  // Re-checking an id already remembered on this device: no PIN needed
+  // again (it already proved itself once), just confirm the id is still
+  // on the roster.
+  function recheckStoredId(id) {
+    MCCRoster.checkAccess(id)
+      .then(function (result) {
+        if (result && result.ok) {
+          showGranted(id, result.name);
+        } else {
+          // No longer on the roster -- never trust what's already in
+          // localStorage over what the server says now.
+          try { localStorage.removeItem(MCCRoster.STORAGE_KEY); } catch (e) {}
+          showDenied();
+        }
+      })
+      .catch(function () {
+        message.style.display = "";
+        message.textContent = "Couldn't check access right now — check your internet connection and reload the page.";
+      });
+  }
+
+  // Fresh link (a student query parameter): always ask for the PIN before
+  // granting anything, whether or not the id itself looks valid -- the
+  // check happens once, on submit, as a single id+PIN request.
+  function askForPin(id) {
     message.style.display = "none";
-    pinWelcome.textContent = student.name ? "Hi " + student.name + " — one more step." : "One more step.";
+    pinWelcome.textContent = "One more step.";
     pinError.style.display = "none";
     pinForm.style.display = "";
     pinInput.value = "";
@@ -140,65 +164,37 @@ PIN directly (typed in, not from a URL) and sets the same localStorage.
     pinForm.onsubmit = function (e) {
       e.preventDefault();
       var entered = pinInput.value.trim();
-      if (entered && student.pin && entered === student.pin) {
-        rememberAndGrant(student);
-      } else {
-        pinError.style.display = "";
-        pinInput.value = "";
-        pinInput.focus();
-      }
+      if (!entered) return;
+      pinForm.querySelector("button").disabled = true;
+      MCCRoster.checkAccess(id, entered)
+        .then(function (result) {
+          pinForm.querySelector("button").disabled = false;
+          if (result && result.ok) {
+            rememberAndGrant(id, result.name);
+          } else {
+            pinError.style.display = "";
+            pinInput.value = "";
+            pinInput.focus();
+          }
+        })
+        .catch(function () {
+          pinForm.querySelector("button").disabled = false;
+          pinError.style.display = "";
+          pinError.textContent = "Couldn't check access right now — check your internet connection and try again.";
+        });
     };
-  }
-
-  // fromLink: true when we got here via a student query parameter (a
-  // fresh link, PIN required); false when re-checking an id already
-  // remembered on this device (no PIN needed again -- the device already
-  // proved it once).
-  function checkAccess(studentId, fromLink) {
-    fetch(MCCRoster.ROSTER_CSV_URL)
-      .then(function (r) {
-        if (!r.ok) throw new Error("roster fetch failed: " + r.status);
-        return r.text();
-      })
-      .then(function (text) {
-        var student = MCCRoster.findStudent(MCCRoster.parseCsv(text), studentId);
-        if (!student) {
-          // A stored id that no longer matches (removed from the roster, or
-          // a stale/bad link) never grants access -- always clear it rather
-          // than trusting what's already in localStorage.
-          try { localStorage.removeItem(MCCRoster.STORAGE_KEY); } catch (e) {}
-          showDenied();
-          return;
-        }
-        if (!fromLink) {
-          // Already verified on this device earlier; just re-confirm they're
-          // still on the roster.
-          showGranted(student);
-          return;
-        }
-        if (!student.pin) {
-          message.style.display = "";
-          message.textContent = "Your access PIN hasn't been set up yet — ask your coordinator for it.";
-          return;
-        }
-        askForPin(student);
-      })
-      .catch(function () {
-        message.style.display = "";
-        message.textContent = "Couldn't check access right now — check your internet connection and reload the page.";
-      });
   }
 
   var params = new URLSearchParams(window.location.search);
   var linkId = params.get("student");
 
   if (linkId) {
-    checkAccess(linkId, true);
+    askForPin(linkId);
   } else {
     var stored = null;
     try { stored = JSON.parse(localStorage.getItem(MCCRoster.STORAGE_KEY) || "null"); } catch (e) {}
     if (stored && stored.id) {
-      checkAccess(stored.id, false);
+      recheckStoredId(stored.id);
     } else {
       showDenied();
     }

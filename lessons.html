@@ -170,16 +170,11 @@ robots: noindex
     loginError.style.display = "none";
     hubMessage.textContent = "Checking…";
 
-    fetch(MCCRoster.ROSTER_CSV_URL)
-      .then(function (r) {
-        if (!r.ok) throw new Error("roster fetch failed: " + r.status);
-        return r.text();
-      })
-      .then(function (text) {
-        var student = MCCRoster.findStudent(MCCRoster.parseCsv(text), studentId);
+    MCCRoster.checkAccess(studentId, pin)
+      .then(function (result) {
         hubMessage.textContent = "";
-        if (student && student.pin && pin === student.pin) {
-          rememberAndEnter(student);
+        if (result && result.ok) {
+          rememberAndEnter({ id: studentId, name: result.name });
         } else {
           loginError.style.display = "";
         }
@@ -190,16 +185,15 @@ robots: noindex
   });
 
   // Already verified on this device (via a personal lesson link, or an
-  // earlier visit here) -- skip straight to the lesson table.
+  // earlier visit here) -- skip straight to the lesson table. No PIN
+  // needed again, just a re-check that the id is still on the roster.
   var stored = null;
   try { stored = JSON.parse(localStorage.getItem(MCCRoster.STORAGE_KEY) || "null"); } catch (e) {}
   if (stored && stored.id) {
-    fetch(MCCRoster.ROSTER_CSV_URL)
-      .then(function (r) { return r.ok ? r.text() : Promise.reject(); })
-      .then(function (text) {
-        var student = MCCRoster.findStudent(MCCRoster.parseCsv(text), stored.id);
-        if (student) {
-          showLoggedIn(student);
+    MCCRoster.checkAccess(stored.id)
+      .then(function (result) {
+        if (result && result.ok) {
+          showLoggedIn({ id: stored.id, name: result.name });
         } else {
           try { localStorage.removeItem(MCCRoster.STORAGE_KEY); } catch (e) {}
         }
