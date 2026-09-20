@@ -1,0 +1,210 @@
+---
+title: Lessons
+robots: noindex
+---
+
+<!-- Coding-course lessons hub: one login (student id + PIN, typed in --
+     not from a URL), then a dense table of every lesson; clicking a row
+     loads that lesson into the iframe below and auto-resizes it to fit,
+     so switching lessons never leaves this page. Uses the same roster
+     check and the same localStorage key as lesson-gate.html (both load
+     assets/js/mcc-roster.js), so signing in here also unlocks a direct
+     link straight to lesson-1.html on this device, and vice versa: a
+     student who came in through their personal link can still open this
+     page afterward with no extra step. -->
+
+<div id="mcc-hub-login" class="mcc-gate-screen">
+  <p id="mcc-hub-message"></p>
+  <form id="mcc-hub-login-form">
+    <p id="mcc-hub-welcome"></p>
+    <label for="mcc-hub-id-input">Student ID</label><br>
+    <input type="text" id="mcc-hub-id-input" autocomplete="off" autocapitalize="off" spellcheck="false" maxlength="20"><br>
+    <label for="mcc-hub-pin-input">Access code</label><br>
+    <input type="text" id="mcc-hub-pin-input" autocomplete="off" autocapitalize="off" spellcheck="false" maxlength="40">
+    <button type="submit">Continue</button>
+    <p id="mcc-hub-login-error" style="display:none;">That id/code combination doesn't match &mdash; try again.</p>
+  </form>
+</div>
+
+<div id="mcc-hub-content" style="display:none">
+  <p id="mcc-hub-greeting" style="color: var(--ink-soft); font-style: italic;"></p>
+  <table id="mcc-hub-table" class="mcc-hub-table">
+    <thead>
+      <tr><th>#</th><th>Lesson</th><th>Topics</th></tr>
+    </thead>
+    <tbody>
+      <tr data-url="{{ '/lesson-1.html' | relative_url }}">
+        <td>1</td>
+        <td>Purple Comet 2004</td>
+        <td>Algebra &middot; Combinatorics &middot; Geometry &middot; Number Theory</td>
+      </tr>
+      <!-- Add one <tr data-url="..."> per lesson as they're published;
+           the click handler below works off data-url alone, nothing
+           else to wire up. -->
+    </tbody>
+  </table>
+  <iframe id="mcc-hub-frame" title="Lesson content" style="display:none"></iframe>
+</div>
+
+<style>
+  .mcc-gate-screen {
+    max-width: 480px;
+    margin: 2.5em auto;
+    padding: 22px 26px;
+    background: var(--white);
+    border: 2px solid var(--brand);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    text-align: center;
+  }
+  .mcc-gate-screen p { margin: 0.4em 0; line-height: 1.5; }
+  .mcc-gate-screen input {
+    font-size: 1em;
+    font-family: monospace;
+    padding: 6px 10px;
+    margin: 0.3em 0 0.8em;
+    border: 1px solid var(--ink-soft);
+    border-radius: 6px;
+    width: 16em;
+    max-width: 90%;
+    text-align: center;
+  }
+  .mcc-gate-screen button {
+    font-size: 1em;
+    padding: 6px 16px;
+    border-radius: 6px;
+    border: none;
+    background: var(--brand);
+    color: var(--white);
+    cursor: pointer;
+  }
+  #mcc-hub-login-error { color: #b3261e; }
+  #mcc-hub-welcome { font-weight: 600; }
+
+  .mcc-hub-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1em 0 1.5em;
+  }
+  .mcc-hub-table th, .mcc-hub-table td {
+    text-align: left;
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .mcc-hub-table th { font-size: 13px; text-transform: uppercase; letter-spacing: .04em; color: var(--ink-soft); }
+  .mcc-hub-table tbody tr { cursor: pointer; }
+  .mcc-hub-table tbody tr:hover { background: var(--gold-soft); }
+  .mcc-hub-table tbody tr.mcc-hub-active { background: var(--gold-soft); font-weight: 600; }
+
+  #mcc-hub-frame {
+    display: block;
+    width: 100%;
+    border: 2px solid var(--brand);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+  }
+</style>
+
+<script src="{{ '/assets/js/mcc-roster.js' | relative_url }}"></script>
+<script>
+(function () {
+  var loginScreen = document.getElementById("mcc-hub-login");
+  var hubMessage = document.getElementById("mcc-hub-message");
+  var loginForm = document.getElementById("mcc-hub-login-form");
+  var idInput = document.getElementById("mcc-hub-id-input");
+  var pinInput = document.getElementById("mcc-hub-pin-input");
+  var loginError = document.getElementById("mcc-hub-login-error");
+  var content = document.getElementById("mcc-hub-content");
+  var greeting = document.getElementById("mcc-hub-greeting");
+  var table = document.getElementById("mcc-hub-table");
+  var frame = document.getElementById("mcc-hub-frame");
+
+  function showLoggedIn(student) {
+    loginScreen.style.display = "none";
+    content.style.display = "";
+    greeting.textContent = student.name ? "Welcome, " + student.name + ". Pick a lesson below." : "Pick a lesson below.";
+  }
+
+  function rememberAndEnter(student) {
+    try { localStorage.setItem(MCCRoster.STORAGE_KEY, JSON.stringify(student)); } catch (e) { /* private browsing -- fine, just won't persist */ }
+    showLoggedIn(student);
+  }
+
+  function openLesson(row) {
+    var url = row.getAttribute("data-url");
+    if (!url) return;
+    Array.prototype.forEach.call(table.querySelectorAll("tbody tr"), function (r) {
+      r.classList.remove("mcc-hub-active");
+    });
+    row.classList.add("mcc-hub-active");
+    frame.style.display = "none";
+    frame.src = url;
+  }
+
+  // Auto-resize the iframe to fit its (same-origin) content, so it reads
+  // as part of the page rather than a boxed-in embed with its own
+  // scrollbar. Re-measures on load and once more shortly after, since
+  // KaTeX/Pyodide can still be adjusting layout a moment after load fires.
+  frame.addEventListener("load", function () {
+    function resize() {
+      try {
+        var doc = frame.contentWindow.document;
+        frame.style.height = doc.documentElement.scrollHeight + "px";
+      } catch (e) { /* cross-origin or not ready -- leave height as is */ }
+    }
+    resize();
+    frame.style.display = "";
+    setTimeout(resize, 400);
+    frame.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+
+  Array.prototype.forEach.call(table.querySelectorAll("tbody tr"), function (row) {
+    row.addEventListener("click", function () { openLesson(row); });
+  });
+
+  loginForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var studentId = idInput.value.trim();
+    var pin = pinInput.value.trim();
+    if (!studentId || !pin) return;
+    loginError.style.display = "none";
+    hubMessage.textContent = "Checking…";
+
+    fetch(MCCRoster.ROSTER_CSV_URL)
+      .then(function (r) {
+        if (!r.ok) throw new Error("roster fetch failed: " + r.status);
+        return r.text();
+      })
+      .then(function (text) {
+        var student = MCCRoster.findStudent(MCCRoster.parseCsv(text), studentId);
+        hubMessage.textContent = "";
+        if (student && student.pin && pin === student.pin) {
+          rememberAndEnter(student);
+        } else {
+          loginError.style.display = "";
+        }
+      })
+      .catch(function () {
+        hubMessage.textContent = "Couldn't check access right now — check your internet connection and try again.";
+      });
+  });
+
+  // Already verified on this device (via a personal lesson link, or an
+  // earlier visit here) -- skip straight to the lesson table.
+  var stored = null;
+  try { stored = JSON.parse(localStorage.getItem(MCCRoster.STORAGE_KEY) || "null"); } catch (e) {}
+  if (stored && stored.id) {
+    fetch(MCCRoster.ROSTER_CSV_URL)
+      .then(function (r) { return r.ok ? r.text() : Promise.reject(); })
+      .then(function (text) {
+        var student = MCCRoster.findStudent(MCCRoster.parseCsv(text), stored.id);
+        if (student) {
+          showLoggedIn(student);
+        } else {
+          try { localStorage.removeItem(MCCRoster.STORAGE_KEY); } catch (e) {}
+        }
+      })
+      .catch(function () { /* couldn't re-check -- just show the login form */ });
+  }
+})();
+</script>

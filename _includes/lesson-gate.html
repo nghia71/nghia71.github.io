@@ -1,40 +1,46 @@
 <!-- MCC coding-lesson access gate.
 
-Checks a per-student link (this page's URL with ?student=<Student ID>
-appended) against the club's roster -- published from Google Sheets as a
-plain CSV, so editing the roster there takes effect immediately, no site
-rebuild needed. A bare link is not enough by itself: the first time a
-student's id is recognized on a device, the gate also asks for their PIN
-(the roster's "PIN" column) before granting access -- so a link alone,
-if it leaks on its own, doesn't work. Once the correct PIN is entered,
-the student's id/name is remembered in this browser's localStorage (key
-"mcc_student") so later visits to any lesson page work without the link
-or the PIN again. That same stored id is meant to be reused as the
-student's identity for the Sunday coding-contest submissions later --
-keep the key name and shape (`{id, name}`) if you build that next, rather
-than inventing a second one.
+Checks a per-student link (this page's URL with a student query parameter
+appended) against the club's roster, via the shared helpers in
+assets/js/mcc-roster.js. A bare link is not enough by itself: the first
+time a student's id is recognized on a device, the gate also asks for
+their PIN (the roster's PIN column) before granting access -- so a link
+alone, if it leaks on its own, doesn't work. Once the correct PIN is
+entered, the student's id/name is remembered in this browser's
+localStorage so later visits to any lesson page -- or the lessons hub --
+work without the link or the PIN again. That same stored id is meant to
+be reused as the student's identity for the Sunday coding-contest
+submissions later -- keep the storage key and shape (id, name) if you
+build that next, rather than inventing a second one.
 
 To include on a lesson page:
-  1. Put the include tag for this file right before the page's real content.
-     (Written as literal Liquid syntax elsewhere in this comment, wrapped in
-     {% raw %}{% include lesson-gate.html %}{% endraw %} -- NEVER write that
-     tag unescaped in a comment in this file: Jekyll's Liquid engine parses
-     {% ... %} even inside HTML comments, so an unescaped copy of this
-     file's own include tag here would make it include itself and break
-     the whole site's build.)
-  2. Wrap that real content in <div id="mcc-gate-content" style="display:none">
-     ... </div> -- the gate reveals it on a match, and leaves it hidden
+  1. Put this file's include tag right before the page's real content.
+  2. Wrap that real content in a div with id mcc-gate-content, starting
+     hidden -- the gate reveals it on a match, and leaves it hidden
      (with an explanation in its place) otherwise.
-  3. Add `robots: noindex` to the page's front matter so it doesn't turn up
-     in search results.
+  3. Add a noindex robots entry to the page's front matter so it doesn't
+     turn up in search results.
 
-The student-facing link (roster's "Lesson Link" column) points at
-access.html, NOT at a specific lesson -- that's the one link + one PIN a
-student ever needs, since verifying there sets the same localStorage this
-include checks everywhere. Every lesson page still needs its own copy of
-the include tag above (a direct URL to a lesson, with no prior access.html
-visit on that device, must still be gated), but doesn't need its own
-per-student link.
+Do not write this file's own include tag as literal example text
+anywhere in this comment or in any other page's comment -- describe it
+in prose instead, the way the three lines above do. Jekyll's Liquid
+template engine scans this whole file for template tags before HTML (or
+HTML comments) mean anything to it, so literal example syntax in a
+comment is not inert documentation to Jekyll, it is a real instruction --
+and a real copy of this file's own include tag, written here, would make
+this file include itself and break the whole site's build. This is not
+a hypothetical: it happened on 2026-09-20 and took the whole site down
+for about an hour before anyone noticed, because the failure is
+completely silent -- GitHub Pages just keeps serving the last build that
+worked, forever, with no error shown anywhere on the site itself.
+
+The roster's "Lesson Link" column points students at lesson-1.html --
+that one link is all a student ever needs, even as more lessons are
+added: verifying there sets localStorage, and every later lesson page
+(each with its own copy of the include tag above) recognizes the same
+device automatically, no new link or PIN required. Students can also
+skip links entirely via lessons.html, which asks for the student id and
+PIN directly (typed in, not from a URL) and sets the same localStorage.
 -->
 <div id="mcc-gate-screen" class="mcc-gate-screen">
   <p id="mcc-gate-message">Checking your access&hellip;</p>
@@ -88,16 +94,9 @@ per-student link.
   #mcc-gate-pin-error { color: #b3261e; }
 </style>
 
+<script src="{{ '/assets/js/mcc-roster.js' | relative_url }}"></script>
 <script>
 (function () {
-  // Published-to-web CSV of the coding-course roster (Student Name,
-  // Student ID, Student Email Address, PIN). Publicly fetchable by design --
-  // that's what lets a student's own browser check it with no server. The
-  // sheet itself is NOT public (shared with coordinators only); this
-  // published CSV is a separate, narrower export of the same tab.
-  var ROSTER_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQxkm8DlgUpQhYr7wmkA3lx-t3bhPsUSMq9xnQnKPfyBKINs4_egnNFa25t2eUK3Vkmvw6ZQleNu5HY/pub?gid=1600479189&single=true&output=csv";
-  var STORAGE_KEY = "mcc_student";
-
   var screen = document.getElementById("mcc-gate-screen");
   var message = document.getElementById("mcc-gate-message");
   var content = document.getElementById("mcc-gate-content");
@@ -126,7 +125,7 @@ per-student link.
   }
 
   function rememberAndGrant(student) {
-    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(student)); } catch (e) { /* private browsing -- fine, just won't persist */ }
+    try { localStorage.setItem(MCCRoster.STORAGE_KEY, JSON.stringify(student)); } catch (e) { /* private browsing -- fine, just won't persist */ }
     showGranted(student);
   }
 
@@ -151,73 +150,23 @@ per-student link.
     };
   }
 
-  // Minimal CSV parser -- handles quoted fields (with embedded commas or
-  // escaped quotes), which is all a Google Sheets export ever produces.
-  // No need for a library over four plain columns.
-  function parseCsv(text) {
-    var rows = [], row = [], field = "", inQuotes = false;
-    for (var i = 0; i < text.length; i++) {
-      var c = text[i];
-      if (inQuotes) {
-        if (c === '"') {
-          if (text[i + 1] === '"') { field += '"'; i++; } else { inQuotes = false; }
-        } else {
-          field += c;
-        }
-      } else if (c === '"') {
-        inQuotes = true;
-      } else if (c === ',') {
-        row.push(field); field = "";
-      } else if (c === '\n' || c === '\r') {
-        if (c === '\r' && text[i + 1] === '\n') i++;
-        row.push(field); field = "";
-        if (row.length > 1 || row[0] !== "") rows.push(row);
-        row = [];
-      } else {
-        field += c;
-      }
-    }
-    if (field !== "" || row.length) { row.push(field); rows.push(row); }
-    return rows;
-  }
-
-  function findStudent(rows, studentId) {
-    if (!rows.length) return null;
-    var header = rows[0].map(function (h) { return h.trim().toLowerCase(); });
-    var idCol = header.indexOf("student id");
-    var nameCol = header.indexOf("student name");
-    var pinCol = header.indexOf("pin");
-    if (idCol === -1) return null;
-    var target = studentId.trim().toLowerCase();
-    for (var r = 1; r < rows.length; r++) {
-      var row = rows[r];
-      if (row[idCol] && row[idCol].trim().toLowerCase() === target) {
-        return {
-          id: row[idCol].trim(),
-          name: nameCol > -1 ? (row[nameCol] || "").trim() : "",
-          pin: pinCol > -1 ? (row[pinCol] || "").trim() : ""
-        };
-      }
-    }
-    return null;
-  }
-
-  // fromLink: true when we got here via ?student=... (a fresh link, PIN
-  // required); false when re-checking an id already remembered on this
-  // device (no PIN needed again -- the device already proved it once).
+  // fromLink: true when we got here via a student query parameter (a
+  // fresh link, PIN required); false when re-checking an id already
+  // remembered on this device (no PIN needed again -- the device already
+  // proved it once).
   function checkAccess(studentId, fromLink) {
-    fetch(ROSTER_CSV_URL)
+    fetch(MCCRoster.ROSTER_CSV_URL)
       .then(function (r) {
         if (!r.ok) throw new Error("roster fetch failed: " + r.status);
         return r.text();
       })
       .then(function (text) {
-        var student = findStudent(parseCsv(text), studentId);
+        var student = MCCRoster.findStudent(MCCRoster.parseCsv(text), studentId);
         if (!student) {
           // A stored id that no longer matches (removed from the roster, or
           // a stale/bad link) never grants access -- always clear it rather
           // than trusting what's already in localStorage.
-          try { localStorage.removeItem(STORAGE_KEY); } catch (e) {}
+          try { localStorage.removeItem(MCCRoster.STORAGE_KEY); } catch (e) {}
           showDenied();
           return;
         }
@@ -247,7 +196,7 @@ per-student link.
     checkAccess(linkId, true);
   } else {
     var stored = null;
-    try { stored = JSON.parse(localStorage.getItem(STORAGE_KEY) || "null"); } catch (e) {}
+    try { stored = JSON.parse(localStorage.getItem(MCCRoster.STORAGE_KEY) || "null"); } catch (e) {}
     if (stored && stored.id) {
       checkAccess(stored.id, false);
     } else {
