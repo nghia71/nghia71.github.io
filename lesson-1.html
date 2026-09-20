@@ -344,7 +344,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <p><em>Purple Comet 2004, worked in full &mdash; Middle School and High School &mdash; math, code, and (where it helps) a diagram, for every problem in the archive.</em></p>
 
 <div class="note">
-<strong>49 of the 50 Purple Comet 2004 problems are live below</strong> (25 Middle School, 24 High School &mdash; several shared problems get their own write-up under each track), several with two or more independent solutions. This is a standing lesson, not a one-time page &mdash; the last one, and any further alternate solutions, are added as they clear review. Come back for more.
+All 50 Purple Comet 2004 problems are live below (25 Middle School, 25 High School &mdash; several shared problems get their own write-up under each track), several with two or more independent solutions. This is a standing lesson, not a one-time page &mdash; alternate solutions and refinements are added as they clear review. Come back for more.
 </div>
 
 <h2>What Lesson 1 is for</h2>
@@ -903,7 +903,8 @@ print(min(c[2] for c in candidates))   # 12
 <div class="card example">
 <h3 id="ms-problem-17">MS &middot; Purple Comet 2004, Problem 17 &middot; <span class="tag">Hard</span> <span class="tag">Algebra</span></h3>
 <p class="problem">Find \(x\) so that \(2^{2^{3^{2^2}}} = 4^{4^x}\).</p>
-<div class="note math">Both sides are towers built entirely out of \(2\)'s, so rewrite everything as a power of \(2\) and compare exponents. Working from the top of the left tower down: \(2^2=4\), then \(3^{2^2}=3^4=81\), so the whole left side is \(2^{2^{81}}\). On the right, \(4=2^2\), so \(4^{4^x}=\left(2^2\right)^{4^x}=2^{2\cdot4^x}\); and since \(4^x=2^{2x}\), that exponent is \(2\cdot2^{2x}=2^{2x+1}\), making the right side \(2^{2^{2x+1}}\). Both sides now have the same outer base \(2\) raised to a power that is itself a power of \(2\) &mdash; so the two outermost exponents must match: \(2^{81}=2^{2x+1}\). Matching bases one level deeper forces the exponents themselves to be equal, \(81=2x+1\), which pins down \(x\) uniquely with no search at all.</div>
+<p><strong>[Official]</strong></p>
+<div class="note math">The identical problem appears as <a href="#hs-problem-4">HS Problem 4</a> below. Both sides are towers built entirely out of \(2\)'s, so rewrite everything as a power of \(2\) and compare exponents. Working from the top of the left tower down: \(2^2=4\), then \(3^{2^2}=3^4=81\), so the whole left side is \(2^{2^{81}}\). On the right, \(4=2^2\), so \(4^{4^x}=\left(2^2\right)^{4^x}=2^{2\cdot4^x}\); and since \(4^x=2^{2x}\), that exponent is \(2\cdot2^{2x}=2^{2x+1}\), making the right side \(2^{2^{2x+1}}\). Both sides now have the same outer base \(2\) raised to a power that is itself a power of \(2\) &mdash; so the two outermost exponents must match: \(2^{81}=2^{2x+1}\). Matching bases one level deeper forces the exponents themselves to be equal, \(81=2x+1\), which pins down \(x\) uniquely with no search at all.</div>
 <pre><code># MATH: rewrite the tower base by base. Left side: 2^2=4, then 3^4=81,
 # so the whole left side is 2^(2^81). Right side: 4=2^2, so
 # 4^(4^x) = 2^(2*4^x) = 2^(2^(2x+1)) since 4^x=2^(2x). Matching the two
@@ -1117,22 +1118,24 @@ print(d)   # 160 -- matches Solution 1
 
 <div class="card example">
 <h3 id="ms-problem-23">MS &middot; Purple Comet 2004, Problem 23 &middot; <span class="tag">Medium</span> <span class="tag">Algebra</span></h3>
-<p class="problem">A cubic block with dimensions \(n\) by \(n\) by \(n\) is made up of a collection of \(1\times1\times1\) unit cubes. What is the smallest value of \(n\) so that if the outer layer of unit cubes is removed from the block, more than half the original unit cubes will still remain?</p>
-<div class="note math">Removing the outer 1-unit-thick layer from an \(n\times n\times n\) block leaves an \((n-2)\times(n-2)\times(n-2)\) block inside &mdash; peel one layer off each of the six faces. &ldquo;More than half remains&rdquo; is the inequality \((n-2)^3 &gt; \frac{n^3}{2}\), and as \(n\) grows the surface layer becomes a shrinking fraction of the total volume, so this holds from some smallest \(n\) onward &mdash; exactly the kind of threshold a solved inequality (checked against consecutive integers) finds directly.</div>
-<pre><code># MATH: peeling the outer 1-unit shell off an n x n x n block leaves an
-# (n-2)^3 block. &quot;More than half remains&quot; is (n-2)^3 &gt; n^3/2. The
-# surface layer&#x27;s share of the total volume shrinks as n grows, so this
-# inequality flips true from some smallest n onward -- find it exactly.
+<p class="problem">A cubic block with dimensions \(n\) by \(n\) by \(n\) is made up of a collection of \(1\times1\times1\) unit cubes. What is the smallest value of \(n\) so that if the outer <strong>two layers</strong> of unit cubes are removed from the block, more than half the original unit cubes will still remain?</p>
+<p><strong>[Solution &mdash; direct integer check]</strong></p>
+<div class="note math">The identical problem appears as <a href="#hs-problem-13">HS Problem 13</a> below. Removing the outer two 1-unit-thick layers from an \(n\times n\times n\) block leaves an \((n-4)\times(n-4)\times(n-4)\) core &mdash; peel two layers off each of the six faces. &ldquo;More than half remains&rdquo; is the inequality \(2(n-4)^3 &gt; n^3\), and as \(n\) grows the two-layer shell becomes a shrinking fraction of the total volume, so this holds from some smallest \(n\) onward &mdash; exactly the kind of threshold a solved inequality (checked against consecutive integers) finds directly.</div>
+<pre><code># MATH: peeling the outer TWO 1-unit-thick layers off an n x n x n
+# block leaves an (n-4)^3 core. &quot;More than half remains&quot; is the
+# inequality 2*(n-4)^3 &gt; n^3. The two-layer shell&#x27;s share of the total
+# volume shrinks as n grows, so this flips true from some smallest n
+# onward -- check consecutive integers to find it exactly.
 import sympy as sp
 
 n = sp.symbols(&#x27;n&#x27;, positive=True, integer=True)
-inequality = sp.Gt(2*(n - 2)**3, n**3)   # (n-2)^3 &gt; n^3/2  <=>  2(n-2)^3 &gt; n^3
+inequality = sp.Gt(2*(n - 4)**3, n**3)
 
-candidate = 3
+candidate = 5
 while not inequality.subs(n, candidate):
     candidate += 1
-print(candidate)   # 10
-print((candidate - 2)**3, &#x27;>&#x27;, sp.Rational(candidate**3, 2))   # 512 > 500
+print(candidate)   # 20
+print((candidate - 4)**3 * 2, &#x27;>&#x27;, candidate**3)   # 8192 > 8000
 </code></pre>
 </div>
 
@@ -1299,19 +1302,29 @@ print(real_roots, len(real_roots))
 
 
 <div class="card example">
-<h3 id="hs-problem-4">HS &middot; Purple Comet 2004, Problem 4 &middot; <span class="tag">Easy</span> <span class="tag">Algebra</span></h3>
-<p class="problem">Find \(x\) so that \(2^{3^{2^2}} = 4^{4x}\).</p>
-<div class="note math">A power tower is evaluated from the top down, not left to right: \(3^{2^2}\) means \(3^{(2^2)}=3^4=81\), never \((3^2)^2\). Once the tower on the left collapses to a single number, rewrite both sides over the same base &mdash; \(4=2^2\), so \(4^{4x}=(2^2)^{4x}=2^{8x}\) &mdash; and equate exponents, since \(t\mapsto 2^t\) is injective on the reals.</div>
-<pre><code># MATH: evaluate the exponent tower innermost-first (2^2=4, so
-# 3^(2^2)=3^4=81 -- towers associate top-down, never left-to-right),
-# then rewrite 4^(4x) as (2^2)^(4x)=2^(8x) so both sides share base 2,
-# and equate exponents (t -> 2^t is injective on the reals).
+<h3 id="hs-problem-4">HS &middot; Purple Comet 2004, Problem 4 &middot; <span class="tag">Hard</span> <span class="tag">Algebra</span></h3>
+<p class="problem">Find \(x\) so that \(2^{2^{3^{2^2}}} = 4^{4^x}\).</p>
+<p><strong>[Official]</strong></p>
+<div class="note math">The identical problem appears as <a href="#ms-problem-17">MS Problem 17</a> above. Both sides are towers built entirely out of \(2\)'s, so rewrite everything as a power of \(2\) and compare exponents. Working from the top of the left tower down: \(2^2=4\), then \(3^{2^2}=3^4=81\), so the whole left side is \(2^{2^{81}}\). On the right, \(4=2^2\), so \(4^{4^x}=\left(2^2\right)^{4^x}=2^{2\cdot4^x}\); and since \(4^x=2^{2x}\), that exponent is \(2\cdot2^{2x}=2^{2x+1}\), making the right side \(2^{2^{2x+1}}\). Both sides now have the same outer base \(2\) raised to a power that is itself a power of \(2\) &mdash; so the two outermost exponents must match: \(2^{81}=2^{2x+1}\). Matching bases one level deeper forces the exponents themselves to be equal, \(81=2x+1\), which pins down \(x\) uniquely with no search at all.</div>
+<pre><code># MATH: rewrite the tower base by base. Left side: 2^2=4, then 3^4=81,
+# so the whole left side is 2^(2^81). Right side: 4=2^2, so
+# 4^(4^x) = 2^(2*4^x) = 2^(2^(2x+1)) since 4^x=2^(2x). Matching the two
+# base-2 towers level by level forces 2^81 = 2^(2x+1), then 81 = 2x+1 --
+# an exact algebraic match, not a numeric search (the numbers involved
+# are far too large to ever compute directly).
 import sympy as sp
 
 x = sp.symbols('x')
-tower = 3**(2**2)                     # = 3^4 = 81, evaluated top-down
-sol = sp.solve(sp.Eq(tower, 8*x), x)  # 4^(4x) = 2^(8x); match exponents
-print(tower, sol)                     # 81 [81/8]
+mid = 3**(2**2)                 # 81 -- the exponent atop the left tower
+eq = sp.Eq(mid, 2*x + 1)        # matching exponents one level below the shared base 2
+solution = sp.solve(eq, x)[0]
+print(mid, solution)            # 81 40
+
+# independent check: verify the algebraic identity that justifies the
+# level-matching step, using ordinary-sized numbers only
+xv = int(solution)
+print(2 * 4**xv == 2**(2*xv + 1))   # True  (this is 4^(4^x)'s exponent
+                                     #        rewritten as a power of 2)
 </code></pre>
 </div>
 
@@ -1561,8 +1574,8 @@ print(solution)   # [{r4: 8, y: 16}]
 <h3 id="hs-problem-13">HS &middot; Purple Comet 2004, Problem 13 &middot; <span class="tag">Easy</span> <span class="tag">Algebra</span></h3>
 <p class="problem">A cubic block with dimensions \(n\) by \(n\) by \(n\) is made up of a collection of \(1\times1\times1\) unit cubes. What is the smallest value of \(n\) so that if the <strong>outer two layers</strong> of unit cubes are removed from the block, more than half the original unit cubes will still remain?</p>
 
-<p><strong>Solution 1 &mdash; check consecutive integers.</strong></p>
-<div class="note math">The same idea as <a href="#ms-problem-23">MS Problem 23</a>, one layer deeper: peeling <em>two</em> 1-unit layers off every face of an \(n\times n\times n\) block leaves an \((n-4)\times(n-4)\times(n-4)\) core. The inequality is the same shape, \(2(n-4)^3&gt;n^3\), just with the shrinkage doubled &mdash; worth solving fresh rather than assuming the answer merely shifts by the same offset as the layer count, since the inequality is cubic, not linear.</div>
+<p><strong>Solution 1 &mdash; check consecutive integers. [Solution 1 &mdash; direct integer check]</strong></p>
+<div class="note math">The identical problem appears as <a href="#ms-problem-23">MS Problem 23</a> above. Peeling <em>two</em> 1-unit layers off every face of an \(n\times n\times n\) block leaves an \((n-4)\times(n-4)\times(n-4)\) core, so &ldquo;more than half remains&rdquo; is the inequality \(2(n-4)^3&gt;n^3\).</div>
 <pre><code># MATH: same reasoning as MS Problem 23, with a thicker shell removed.
 # Peeling 2 units off every face of an n x n x n block leaves an
 # (n-4)^3 core. &quot;More than half remains&quot; is 2*(n-4)^3 &gt; n^3 -- check
@@ -1579,7 +1592,7 @@ print(candidate)   # 20
 print((candidate-4)**3, '&gt;', sp.Rational(candidate**3, 2))   # 4096 > 4000
 </code></pre>
 
-<p><strong>Solution 2 &mdash; solve the real boundary, then round up.</strong></p>
+<p><strong>Solution 2 &mdash; solve the real boundary, then round up. [Official]</strong></p>
 <div class="note math">Rather than testing integers one at a time, solve the continuous equation \(2(n-4)^3=n^3\) for its real root directly: dividing through gives \(\left(\frac{n}{n-4}\right)^3=2\), so \(\frac{n}{n-4}=\sqrt[3]2\), which rearranges to a closed form for \(n\). Since \(2(n-4)^3-n^3\) is increasing once \(n\) is past that root, the smallest <em>integer</em> satisfying the inequality is exactly the ceiling of that real root &mdash; a direct algebraic answer instead of a scan.</div>
 <pre><code># MATH: solve the boundary equation 2(n-4)^3 = n^3 for its real root
 # directly (dividing both sides by (n-4)^3 gives (n/(n-4))^3 = 2, i.e.
@@ -1896,6 +1909,44 @@ value = ratio.subs(k, 100)
 print(value)                                 # 10001/10100
 m, n = sp.fraction(value)
 print(m, n, n - m)                           # 10001 10100 99
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="hs-problem-22">HS &middot; Purple Comet 2004, Problem 22 &middot; <span class="tag">Superhard</span> <span class="tag">Geometry</span></h3>
+<p class="problem">How many non-overlapping \(2\times2\) squares fit into a circle with radius 8?</p>
+<p><strong>[Official]</strong></p>
+<div class="note math">This is a packing problem, and packing problems have a built-in asymmetry: a lower bound is a <em>construction</em> you can check square by square, while the matching upper bound (that no arrangement does better) generally has no such short certificate &mdash; it is a genuinely hard claim, and the source itself calls a full optimality proof &ldquo;extremely difficult.&rdquo; What <em>is</em> checkable is a specific 40-square packing: seven vertical strips of width 2, offset from the circle&rsquo;s center rather than centered on it, with lengths chosen so each strip still fits entirely inside the circle. For each strip, only its two farthest corners (at the strip&rsquo;s outer edge, at the top or bottom) can leave the circle, so checking those two points against the Pythagorean bound \(x^2+y^2\le8^2\) is enough to certify the whole strip &mdash; and each strip length divides evenly by 2 into whole \(2\times2\) squares.</div>
+<pre><code># MATH: verify a specific 40-square packing (not a proof that 40 is
+# optimal -- packing upper bounds don&#x27;t reduce to a simple check).
+# Seven width-2 vertical strips, offset from center, with lengths
+# chosen so each strip's two farthest corners still satisfy the
+# circle's bound x^2+y^2 &lt;= 8^2. Each strip's length divides evenly by
+# 2 into whole 2x2 squares.
+import sympy as sp
+
+R = 8
+strips = [
+    (sp.Rational(-608, 100), 6),
+    (sp.Rational(-408, 100), 12),
+    (sp.Rational(-208, 100), 14),
+    (sp.Rational(-8, 100), 14),
+    (sp.Rational(192, 100), 14),
+    (sp.Rational(392, 100), 12),
+    (sp.Rational(592, 100), 8),
+]
+
+total = 0
+for xc, L in strips:
+    far_x = max(abs(xc - 1), abs(xc + 1))   # strip has half-width 1
+    far_y = sp.Rational(L, 2)               # strip's half-length
+    fits = (far_x**2 + far_y**2) &lt;= R**2    # farthest-corner check
+    assert fits, (xc, L)                    # every strip must fit -- no exceptions
+    assert L % 2 == 0                       # length divides evenly into 2x2 squares
+    total += L // 2
+
+print(total)   # 40
 </code></pre>
 </div>
 
