@@ -359,12 +359,12 @@ document.addEventListener("DOMContentLoaded", function () {
 <p><em>Purple Comet 2004, worked in full &mdash; Middle School and High School &mdash; math, code, and (where it helps) a diagram, for every problem in the archive.</em></p>
 
 <div class="note">
-All 50 Purple Comet 2004 problems are worked below: 25 under Middle School and 16 more under High School that don&rsquo;t already appear in the Middle School set (a problem shared between the two tracks is written up only once, under Middle School, with a note where it also appears on the High School contest), several with two or more independent solutions. This is a standing lesson, not a one-time page &mdash; alternate solutions and refinements are added as they clear review. Come back for more.
+All 50 Purple Comet 2004 problems are worked below: all 25 Middle School problems, plus 18 High School problems. Nine problems are shared word-for-word between the two contests; for those, each track only gets the write-up it needs &mdash; if every known solution is Middle-School-level, the problem is written up once, under Middle School, with a note that it also appeared on the High School contest; if the cleanest solution genuinely needs high-school technique (trigonometric notation, solving a cubic exactly, and the like), Middle School keeps its own elementary solution and High School gets a separate card with only that higher-level solution, cross-referenced in both directions. Several problems carry two or more independent solutions. This is a standing lesson, not a one-time page &mdash; alternate solutions and refinements are added as they clear review. Come back for more.
 </div>
 
 <h2>What Lesson 1 is for</h2>
 <p>Every problem below is solved with real math first &mdash; an identity, a similarity ratio, a theorem, a provably complete search &mdash; and a short Python program second, so the code is doing something a calculator can&rsquo;t: expressing that math directly, not guessing numbers until one works. This is exactly the standard your own contest submissions are held to. Read a few of these closely before your first coding contest.</p>
-<p>This page collects 47 problems at once, so it moves through more named techniques than any single week of class will. If a term or trick in a note is new to you, that&rsquo;s expected &mdash; don&rsquo;t worry about mastering it here; it will get its own proper treatment in a later chapter. Treat Lesson 1 as a preview of where the toolbox is headed, not a checklist of things you should already know.</p>
+<p>This page collects 43 problems at once, so it moves through more named techniques than any single week of class will. If a term or trick in a note is new to you, that&rsquo;s expected &mdash; don&rsquo;t worry about mastering it here; it will get its own proper treatment in a later chapter. Treat Lesson 1 as a preview of where the toolbox is headed, not a checklist of things you should already know.</p>
 
 <div class="requirements">
 <h2 id="what-s-required-and-acceptable-for-a-contest-submission">What&rsquo;s required and acceptable for a contest submission</h2>
@@ -1095,38 +1095,22 @@ print(sorted(solutions))  # matches an exhaustive brute-force check over N up to
 </svg>
 <figcaption>Both circles are tangent to the <em>same</em> two lines through \(P\), at the same 30&deg; half-angle &mdash; drawn to the actual solved radii ratio (15:95) and center distance (160), scaled down by 5.</figcaption>
 </figure>
+<p><em>(The high-school write-up of this same problem, HS Problem 14, uses trigonometric notation for the same idea below.)</em></p>
 
-<p><strong>Solution 1 &mdash; two right triangles, then subtract.</strong></p>
-<div class="note math">The two external tangent lines meet at the circles&rsquo; <strong>external center of similitude</strong> &mdash; the point from which both circles look tangent to the same pair of lines, which always lies on the line through both centers. From that point, each circle&rsquo;s radius and its distance to that point form a right triangle with the tangent line, so \(\sin(\text{half the 60}^\circ\text{ angle}) = \frac{r}{\text{distance to that circle}}\) for <em>both</em> circles &mdash; the same half-angle, since it&rsquo;s literally the same pair of lines. Subtracting the two distances (they&rsquo;re collinear) gives the center-to-center distance directly, in one formula: \(d=\frac{R-r}{\sin(30^\circ)}\).</div>
-<pre><code># MATH: both circles are tangent to the SAME two lines meeting at the
-# external point P, at the SAME half-angle (30 degrees). In each
-# tangent-radius right triangle, sin(half-angle) = radius / (distance
-# from P to that circle&#x27;s center) -- solve both distances, then
-# subtract (P, and both centers, are collinear).
-import sympy as sp
-
+<p><strong>[Solution &mdash; 30-60-90 triangle ratio]</strong></p>
+<div class="note math">The two tangent lines meet at a point \(P\) that lies on the line through both circles&rsquo; centers &mdash; the point from which both circles look the same size, angularly. Drop a perpendicular from a circle&rsquo;s center to one of the tangent lines: that makes a right triangle with a \(30^\circ\) angle at \(P\) (half of the given \(60^\circ\)), a right angle where the perpendicular meets the line, and the circle&rsquo;s radius as the side opposite that \(30^\circ\) angle. A \(30\)-\(60\)-\(90\) triangle always has its shortest side (opposite the \(30^\circ\) angle) equal to exactly <strong>half</strong> the hypotenuse &mdash; a fact you can see by joining two copies of the triangle into an equilateral one. So each circle&rsquo;s distance from \(P\) is exactly twice its radius, and subtracting the two distances (\(P\) and both centers are collinear) gives \(d=2R-2r\).</div>
+<pre><code># MATH: P (where the tangent lines meet) lies on the line through both
+# centers. For each circle, the radius and the distance from P to its
+# center form a 30-60-90 right triangle (half the 60-degree angle sits
+# at P) -- and in a 30-60-90 triangle, the side opposite the 30-degree
+# angle is always exactly half the hypotenuse. So the distance from P
+# to a circle&#x27;s center is 2 times that circle&#x27;s radius -- no
+# trigonometry needed, just that one triangle-ratio fact.
 R, r = 95, 15
-half_angle = sp.rad(30)
-dist_to_R = R / sp.sin(half_angle)
-dist_to_r = r / sp.sin(half_angle)
-d = sp.simplify(dist_to_R - dist_to_r)
+dist_to_R = 2 * R
+dist_to_r = 2 * r
+d = dist_to_R - dist_to_r
 print(d)   # 160
-</code></pre>
-
-<p><strong>Solution 2 &mdash; shrink the small circle to a point.</strong></p>
-<div class="note math">A classic trick for external tangents: shrink <em>both</em> circles&rsquo; radii by the same amount \(r\). Every external common tangent shifts inward by exactly \(r\), staying tangent to the (now radius-\((R-r)\)) big circle and passing through the (now radius-0) small circle&rsquo;s center &mdash; which is exactly a tangent line from an external point to a single circle. So the whole two-circle configuration reduces to the single-circle right triangle \(\sin(30^\circ)=\frac{R-r}{d}\), one equation instead of two subtracted ones &mdash; a genuinely different (and shorter) route to the identical distance.</div>
-<pre><code># MATH: shrinking both circles&#x27; radii by r turns the small circle into
-# a single point (the tangent lines pass exactly through its center)
-# and the big circle into radius R-r, WITHOUT moving either tangent
-# line or the point P where they meet -- a standard reduction for
-# external tangent problems. That collapses two right triangles into
-# one: sin(half-angle) = (R-r)/d, solved directly for d.
-import sympy as sp
-
-R, r = 95, 15
-half_angle = sp.rad(30)
-d = sp.simplify((R - r) / sp.sin(half_angle))
-print(d)   # 160 -- matches Solution 1
 </code></pre>
 </div>
 
@@ -1134,9 +1118,9 @@ print(d)   # 160 -- matches Solution 1
 <div class="card example">
 <h3 id="ms-problem-23">MS &middot; Purple Comet 2004, Problem 23 &middot; <span class="tag">Medium</span> <span class="tag">Algebra</span></h3>
 <p class="problem">A cubic block with dimensions \(n\) by \(n\) by \(n\) is made up of a collection of \(1\times1\times1\) unit cubes. What is the smallest value of \(n\) so that if the outer <strong>two layers</strong> of unit cubes are removed from the block, more than half the original unit cubes will still remain?</p>
-<p><em>(This problem is also 2004 Purple Comet High School Problem 13 &mdash; identical text, identical answer.)</em></p>
+<p><em>(This problem is also 2004 Purple Comet High School Problem 13, where it&rsquo;s solved instead by exactly solving a cubic equation &mdash; a high-school algebra technique.)</em></p>
 
-<p><strong>Solution 1 &mdash; check consecutive integers. [Solution 1 &mdash; direct integer check]</strong></p>
+<p><strong>[Solution &mdash; direct integer check]</strong></p>
 <div class="note math">Removing the outer two 1-unit-thick layers from an \(n\times n\times n\) block leaves an \((n-4)\times(n-4)\times(n-4)\) core &mdash; peel two layers off each of the six faces. &ldquo;More than half remains&rdquo; is the inequality \(2(n-4)^3 &gt; n^3\), and as \(n\) grows the two-layer shell becomes a shrinking fraction of the total volume, so this holds from some smallest \(n\) onward &mdash; exactly the kind of threshold a solved inequality (checked against consecutive integers) finds directly.</div>
 <pre><code># MATH: peeling the outer TWO 1-unit-thick layers off an n x n x n
 # block leaves an (n-4)^3 core. &quot;More than half remains&quot; is the
@@ -1153,24 +1137,6 @@ while not inequality.subs(n, candidate):
     candidate += 1
 print(candidate)   # 20
 print((candidate - 4)**3 * 2, &#x27;>&#x27;, candidate**3)   # 8192 > 8000
-</code></pre>
-
-<p><strong>Solution 2 &mdash; solve the real boundary, then round up. [Official]</strong></p>
-<div class="note math">Rather than testing integers one at a time, solve the continuous equation \(2(n-4)^3=n^3\) for its real root directly: dividing through gives \(\left(\frac{n}{n-4}\right)^3=2\), so \(\frac{n}{n-4}=\sqrt[3]2\), which rearranges to a closed form for \(n\). Since \(2(n-4)^3-n^3\) is increasing once \(n\) is past that root, the smallest <em>integer</em> satisfying the inequality is exactly the ceiling of that real root &mdash; a direct algebraic answer instead of a scan.</div>
-<pre><code># MATH: solve the boundary equation 2(n-4)^3 = n^3 for its real root
-# directly (dividing both sides by (n-4)^3 gives (n/(n-4))^3 = 2, i.e.
-# n/(n-4) = cbrt(2), solved for n in closed form) -- then the smallest
-# INTEGER n satisfying the strict inequality is the ceiling of that
-# real root, since the cubic difference is increasing past the root.
-import sympy as sp
-import math
-
-n = sp.symbols(&#x27;n&#x27;, real=True)
-all_roots = sp.solve(sp.Eq(2*(n - 4)**3, n**3), n)   # cubic: up to 3 roots
-real_root = [r for r in all_roots if r.is_real][0]   # exactly one is real
-print(sp.N(real_root))          # 19.389... (not an integer)
-answer = math.ceil(float(real_root))
-print(answer)                   # 20
 </code></pre>
 </div>
 
@@ -1491,6 +1457,71 @@ print(solution)   # [{r4: 8, y: 16}]
 
 
 <div class="card example">
+<h3 id="hs-problem-13">HS &middot; Purple Comet 2004, Problem 13 &middot; <span class="tag">Medium</span> <span class="tag">Algebra</span></h3>
+<p class="problem">A cubic block with dimensions \(n\) by \(n\) by \(n\) is made up of a collection of \(1\times1\times1\) unit cubes. What is the smallest value of \(n\) so that if the outer two layers of unit cubes are removed from the block, more than half the original unit cubes will still remain?</p>
+<p><em>(This problem is also 2004 Purple Comet Middle School Problem 23, where it&rsquo;s solved by directly checking consecutive integers &mdash; the elementary version of this same problem. The solution here uses a high-school algebra technique instead: solving a cubic equation exactly.)</em></p>
+
+<p><strong>[Official]</strong></p>
+<div class="note math">Removing the outer two 1-unit-thick layers from an \(n\times n\times n\) block leaves an \((n-4)\times(n-4)\times(n-4)\) core, so &ldquo;more than half remains&rdquo; is the inequality \(2(n-4)^3&gt;n^3\). Instead of testing integers one at a time, solve the continuous equation \(2(n-4)^3=n^3\) for its real root directly: dividing through gives \(\left(\frac{n}{n-4}\right)^3=2\), so \(\frac{n}{n-4}=\sqrt[3]2\), which rearranges to a closed form for \(n\). Since \(2(n-4)^3-n^3\) is increasing once \(n\) is past that root, the smallest <em>integer</em> satisfying the inequality is exactly the ceiling of that real root &mdash; a direct algebraic answer instead of a scan, and the kind of exact-root technique a high-school algebra course, but not yet a middle-school one, would use.</div>
+<pre><code># MATH: solve the boundary equation 2(n-4)^3 = n^3 for its real root
+# directly (dividing both sides by (n-4)^3 gives (n/(n-4))^3 = 2, i.e.
+# n/(n-4) = cbrt(2), solved for n in closed form) -- then the smallest
+# INTEGER n satisfying the strict inequality is the ceiling of that
+# real root, since the cubic difference is increasing past the root.
+import sympy as sp
+import math
+
+n = sp.symbols('n', real=True)
+all_roots = sp.solve(sp.Eq(2*(n - 4)**3, n**3), n)   # cubic: up to 3 roots
+real_root = [r for r in all_roots if r.is_real][0]   # exactly one is real
+print(sp.N(real_root))          # 19.389... (not an integer)
+answer = math.ceil(float(real_root))
+print(answer)                   # 20 -- matches MS Problem 23&#x27;s integer check
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="hs-problem-14">HS &middot; Purple Comet 2004, Problem 14 &middot; <span class="tag">Medium</span> <span class="tag">Geometry</span></h3>
+<p class="problem">Two circles have radii 15 and 95. If the two external tangents to the circles intersect at 60 degrees, how far apart are the centers of the circles?</p>
+<p><em>(This problem is also 2004 Purple Comet Middle School Problem 22, solved there with the plain 30-60-90 triangle ratio. The solutions here use trigonometric notation instead &mdash; the same underlying fact, written the way a high-school course would write it.)</em></p>
+
+<p><strong>Solution 1 &mdash; two right triangles, then subtract. [Official]</strong></p>
+<div class="note math">The two external tangent lines meet at the circles&rsquo; <strong>external center of similitude</strong> &mdash; the point from which both circles look tangent to the same pair of lines, which always lies on the line through both centers. From that point, each circle&rsquo;s radius and its distance to that point form a right triangle with the tangent line, so \(\sin(\text{half the 60}^\circ\text{ angle}) = \frac{r}{\text{distance to that circle}}\) for <em>both</em> circles &mdash; the same half-angle, since it&rsquo;s literally the same pair of lines. Subtracting the two distances (they&rsquo;re collinear) gives the center-to-center distance directly, in one formula: \(d=\frac{R-r}{\sin(30^\circ)}\).</div>
+<pre><code># MATH: both circles are tangent to the SAME two lines meeting at the
+# external point P, at the SAME half-angle (30 degrees). In each
+# tangent-radius right triangle, sin(half-angle) = radius / (distance
+# from P to that circle&#x27;s center) -- solve both distances, then
+# subtract (P, and both centers, are collinear).
+import sympy as sp
+
+R, r = 95, 15
+half_angle = sp.rad(30)
+dist_to_R = R / sp.sin(half_angle)
+dist_to_r = r / sp.sin(half_angle)
+d = sp.simplify(dist_to_R - dist_to_r)
+print(d)   # 160
+</code></pre>
+
+<p><strong>Solution 2 &mdash; shrink the small circle to a point.</strong></p>
+<div class="note math">A classic trick for external tangents: shrink <em>both</em> circles&rsquo; radii by the same amount \(r\). Every external common tangent shifts inward by exactly \(r\), staying tangent to the (now radius-\((R-r)\)) big circle and passing through the (now radius-0) small circle&rsquo;s center &mdash; which is exactly a tangent line from an external point to a single circle. So the whole two-circle configuration reduces to the single-circle right triangle \(\sin(30^\circ)=\frac{R-r}{d}\), one equation instead of two subtracted ones &mdash; a genuinely different (and shorter) route to the identical distance.</div>
+<pre><code># MATH: shrinking both circles&#x27; radii by r turns the small circle into
+# a single point (the tangent lines pass exactly through its center)
+# and the big circle into radius R-r, WITHOUT moving either tangent
+# line or the point P where they meet -- a standard reduction for
+# external tangent problems. That collapses two right triangles into
+# one: sin(half-angle) = (R-r)/d, solved directly for d.
+import sympy as sp
+
+R, r = 95, 15
+half_angle = sp.rad(30)
+d = sp.simplify((R - r) / sp.sin(half_angle))
+print(d)   # 160 -- matches Solution 1
+</code></pre>
+</div>
+
+
+<div class="card example">
 <h3 id="hs-problem-15">HS &middot; Purple Comet 2004, Problem 15 &middot; <span class="tag">Easy</span> <span class="tag">Algebra</span></h3>
 <p class="problem">Jerry purchased some stock for \(\$14{,}400\) at the same time that Susan purchased a bond for \(\$6{,}250\). Jerry&rsquo;s investment went up 20 percent the first year, fell 10 percent the second year, and rose another 20 percent the third year. Susan&rsquo;s investment grew at a constant rate of compound interest for three years. If both investments are worth the same after three years, what was the annual percentage increase of Susan&rsquo;s investment?</p>
 <div class="note math">Each year&rsquo;s percentage change is a multiplier, and consecutive multipliers just multiply &mdash; Jerry&rsquo;s three years compound to \(14{,}400\times1.2\times0.9\times1.2\) directly, no year-by-year recomputation of a running balance needed. Susan&rsquo;s constant rate \(r\) satisfies \(6{,}250(1+r)^3=\) that same final value, so \(r\) is simply a cube root away once Jerry&rsquo;s side is computed exactly.</div>
@@ -1656,22 +1687,22 @@ print(M)                                       # 16 -- matches Solution 1
 <h3 id="hs-problem-19">HS &middot; Purple Comet 2004, Problem 19 &middot; <span class="tag">Hard</span> <span class="tag">Combinatorics</span></h3>
 <p class="problem">There are three bags. One bag contains three green candies and one red candy. One bag contains two green candies and two red candies. One bag contains one green candy and three red candies. A child randomly selects one of the bags, randomly chooses a first candy from that bag, and eats the candy. If the first candy had been green, the child randomly chooses one of the other two bags and randomly selects a second candy from that bag. If the first candy had been red, the child randomly selects a second candy from the same bag as the first candy. If the probability that the second candy is green is \(\dfrac{m}{n}\) in lowest terms, find \(m+n\).</p>
 <figure class="diagram">
-<svg viewBox="0 0 400 210" xmlns="http://www.w3.org/2000/svg">
-  <line x1="200" y1="15" x2="60" y2="60" stroke="#8c2600" stroke-width="1"/>
-  <line x1="200" y1="15" x2="200" y2="60" stroke="#8c2600" stroke-width="1"/>
-  <line x1="200" y1="15" x2="340" y2="60" stroke="#8c2600" stroke-width="1"/>
-  <text x="180" y="10" font-size="12" fill="#4a2b00">child picks a bag</text>
-  <text x="30" y="75" font-size="12" fill="#4a2b00">Bag 1 (3G,1R)</text>
-  <text x="170" y="75" font-size="12" fill="#4a2b00">Bag 2 (2G,2R)</text>
-  <text x="305" y="75" font-size="12" fill="#4a2b00">Bag 3 (1G,3R)</text>
-  <line x1="60" y1="80" x2="30" y2="130" stroke="#b63200" stroke-width="1" stroke-dasharray="4,3"/>
-  <line x1="60" y1="80" x2="90" y2="130" stroke="#b63200" stroke-width="1" stroke-dasharray="4,3"/>
-  <text x="14" y="145" font-size="11" fill="#4a2b00">1st: G (3/4)</text>
-  <text x="72" y="145" font-size="11" fill="#4a2b00">1st: R (1/4)</text>
-  <text x="10" y="165" font-size="10.5" fill="#8c2600">2nd draw: OTHER bag</text>
-  <text x="65" y="165" font-size="10.5" fill="#8c2600">2nd draw: SAME bag</text>
-  <text x="14" y="185" font-size="10.5" fill="#8c2600">(fresh, unaffected)</text>
-  <text x="65" y="185" font-size="10.5" fill="#8c2600">(one candy removed)</text>
+<svg viewBox="0 0 420 195" xmlns="http://www.w3.org/2000/svg">
+  <line x1="215" y1="16" x2="75" y2="56" stroke="#8c2600" stroke-width="1"/>
+  <line x1="215" y1="16" x2="215" y2="56" stroke="#8c2600" stroke-width="1"/>
+  <line x1="215" y1="16" x2="355" y2="56" stroke="#8c2600" stroke-width="1"/>
+  <text x="215" y="11" font-size="13" text-anchor="middle" fill="#4a2b00">child picks a bag</text>
+  <text x="75" y="70" font-size="13" text-anchor="middle" fill="#4a2b00">Bag 1 (3G,1R)</text>
+  <text x="215" y="70" font-size="13" text-anchor="middle" fill="#4a2b00">Bag 2 (2G,2R)</text>
+  <text x="355" y="70" font-size="13" text-anchor="middle" fill="#4a2b00">Bag 3 (1G,3R)</text>
+  <line x1="75" y1="76" x2="20" y2="122" stroke="#b63200" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="75" y1="76" x2="130" y2="122" stroke="#b63200" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="20" y="138" font-size="12" text-anchor="middle" fill="#4a2b00">1st: G (3/4)</text>
+  <text x="130" y="138" font-size="12" text-anchor="middle" fill="#4a2b00">1st: R (1/4)</text>
+  <text x="20" y="156" font-size="11" text-anchor="middle" fill="#8c2600">2nd: other bag</text>
+  <text x="130" y="156" font-size="11" text-anchor="middle" fill="#8c2600">2nd: same bag</text>
+  <text x="20" y="172" font-size="11" text-anchor="middle" fill="#8c2600">(fresh)</text>
+  <text x="130" y="172" font-size="11" text-anchor="middle" fill="#8c2600">(1 removed)</text>
 </svg>
 <figcaption>The branching structure for just Bag 1 &mdash; Bags 2 and 3 branch the same way, with their own G/R odds. The rule that decides whether the second draw comes from a fresh bag or a depleted one is exactly what the code enumerates in full below.</figcaption>
 </figure>
@@ -1720,9 +1751,9 @@ print(total.numerator + total.denominator)    # 217
   <circle cx="0" cy="-50" r="3" fill="#f2c14e" stroke="#8c2600" stroke-width="0.8"/>
   <circle cx="-43.3" cy="25" r="3" fill="#f2c14e" stroke="#8c2600" stroke-width="0.8"/>
   <circle cx="43.3" cy="25" r="3" fill="#f2c14e" stroke="#8c2600" stroke-width="0.8"/>
-  <text x="4" y="4" font-size="7" fill="#4a2b00">base of pole</text>
+  <text x="0" y="21" font-size="7" text-anchor="middle" fill="#4a2b00">base of pole</text>
   <text x="6" y="-52" font-size="7" fill="#4a2b00">anchor</text>
-  <text x="10" y="12" font-size="6.5" fill="#8c2600">R</text>
+  <text x="9" y="-23" font-size="7" fill="#8c2600">R</text>
 </svg>
 <figcaption>Bird&rsquo;s-eye view: the pole&rsquo;s base is the center, and every anchor sits on the same circle of radius \(R=\sqrt{490^2-70^2}\) (each wire+pole+ground forms an identical right triangle). Equally spaced means the three anchors form an equilateral triangle inscribed in that circle.</figcaption>
 </figure>
