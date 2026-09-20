@@ -7,6 +7,22 @@
   <meta name="description" content="{{ page.description | default: site.description | strip_newlines | truncate: 300 }}">
   {% if page.robots %}<meta name="robots" content="{{ page.robots }}">{% endif %}
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <!-- When this page is loaded inside another page's iframe (the lessons
+       hub embeds each lesson this way), its own header/nav/footer would
+       just duplicate the hub's -- add a class as early as possible (before
+       first paint, so there's no flash of the full header) so CSS below
+       can hide them. Same-origin only, which is all this site ever
+       iframes. -->
+  <script>
+    if (window.self !== window.top) {
+      document.documentElement.className += " mcc-embedded";
+    }
+  </script>
+  <style>
+    html.mcc-embedded .site-header,
+    html.mcc-embedded .site-footer { display: none; }
+    html.mcc-embedded main.page { margin-top: 1.2em; }
+  </style>
 </head>
 <body>
 
