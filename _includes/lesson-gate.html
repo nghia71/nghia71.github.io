@@ -15,12 +15,26 @@ keep the key name and shape (`{id, name}`) if you build that next, rather
 than inventing a second one.
 
 To include on a lesson page:
-  1. Put {% include lesson-gate.html %} right before the page's real content.
+  1. Put the include tag for this file right before the page's real content.
+     (Written as literal Liquid syntax elsewhere in this comment, wrapped in
+     {% raw %}{% include lesson-gate.html %}{% endraw %} -- NEVER write that
+     tag unescaped in a comment in this file: Jekyll's Liquid engine parses
+     {% ... %} even inside HTML comments, so an unescaped copy of this
+     file's own include tag here would make it include itself and break
+     the whole site's build.)
   2. Wrap that real content in <div id="mcc-gate-content" style="display:none">
      ... </div> -- the gate reveals it on a match, and leaves it hidden
      (with an explanation in its place) otherwise.
   3. Add `robots: noindex` to the page's front matter so it doesn't turn up
      in search results.
+
+The student-facing link (roster's "Lesson Link" column) points at
+access.html, NOT at a specific lesson -- that's the one link + one PIN a
+student ever needs, since verifying there sets the same localStorage this
+include checks everywhere. Every lesson page still needs its own copy of
+the include tag above (a direct URL to a lesson, with no prior access.html
+visit on that device, must still be gated), but doesn't need its own
+per-student link.
 -->
 <div id="mcc-gate-screen" class="mcc-gate-screen">
   <p id="mcc-gate-message">Checking your access&hellip;</p>
