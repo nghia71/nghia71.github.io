@@ -30,24 +30,26 @@ robots: noindex
 
 <div id="mcc-hub-content" style="display:none">
   <p id="mcc-hub-greeting" style="color: var(--ink-soft); font-style: italic;"></p>
-  <table id="mcc-hub-table" class="mcc-hub-table">
-    <thead>
-      <tr><th>#</th><th>Lesson</th><th>Topics</th></tr>
-    </thead>
-    <tbody>
-      <tr data-url="{{ '/lesson-1.html' | relative_url }}">
-        <td>1</td>
-        <td>Purple Comet 2004</td>
-        <td>Divisibility &amp; Prime Factorization &middot; Linear Equations &middot; Similarity &amp; Proportional Geometry &middot; Inequalities &middot; Inclusion&ndash;Exclusion &middot; Circles &amp; Power of a Point &middot; Sequences &amp; Recurrences</td>
-      </tr>
-      <!-- Add one <tr data-url="..."> per lesson as they're published;
-           topics: read the lesson's own worked problems and name the
-           actual LPS VI/VII chapter-level techniques used (see
-           team-test-chapter-index.md), not a generic 4-subject list --
-           every lesson pulls from all 4 subjects, so that list says
-           nothing about what THIS lesson specifically covers. -->
-    </tbody>
-  </table>
+  <div class="mcc-hub-table-wrap">
+    <table id="mcc-hub-table" class="mcc-hub-table">
+      <thead>
+        <tr><th>#</th><th>Lesson</th><th>Topics</th></tr>
+      </thead>
+      <tbody>
+        <tr data-url="{{ '/lesson-1.html' | relative_url }}">
+          <td>1</td>
+          <td>Purple Comet 2004</td>
+          <td>Divisibility &amp; Prime Factorization &middot; Linear Equations &middot; Similarity &amp; Proportional Geometry &middot; Inequalities &middot; Inclusion&ndash;Exclusion &middot; Circles &amp; Power of a Point &middot; Sequences &amp; Recurrences</td>
+        </tr>
+        <!-- Add one <tr data-url="..."> per lesson as they're published;
+             topics: read the lesson's own worked problems and name the
+             actual LPS VI/VII chapter-level techniques used (see
+             team-test-chapter-index.md), not a generic 4-subject list --
+             every lesson pulls from all 4 subjects, so that list says
+             nothing about what THIS lesson specifically covers. -->
+      </tbody>
+    </table>
+  </div>
   <iframe id="mcc-hub-frame" title="Lesson content" style="display:none"></iframe>
 </div>
 
@@ -87,16 +89,27 @@ robots: noindex
   #mcc-hub-login-error { color: #b3261e; }
   #mcc-hub-welcome { font-weight: 600; }
 
+  /* A table this dense doesn't reflow to a narrow screen -- rather than
+     cramming it, let it scroll horizontally on its own (a fixed 44px "#"
+     column plus min-widths on the others) so a phone gets a normal
+     touch-scrollable table instead of squashed, wrapped-mid-word text. */
+  .mcc-hub-table-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 1em 0 1.5em;
+  }
   .mcc-hub-table {
     width: 100%;
+    min-width: 520px;
     border-collapse: collapse;
-    margin: 1em 0 1.5em;
+    margin: 0;
   }
   .mcc-hub-table th, .mcc-hub-table td {
     text-align: left;
     padding: 10px 14px;
     border-bottom: 1px solid var(--rule);
   }
+  .mcc-hub-table th:first-child, .mcc-hub-table td:first-child { width: 2.2em; }
   .mcc-hub-table th { font-size: 13px; text-transform: uppercase; letter-spacing: .04em; color: var(--ink-soft); }
   .mcc-hub-table tbody tr { cursor: pointer; }
   .mcc-hub-table tbody tr:hover { background: var(--gold-soft); }
@@ -108,6 +121,15 @@ robots: noindex
     border: 2px solid var(--brand);
     border-radius: var(--radius);
     box-shadow: var(--shadow);
+    /* Height is set in JS to match content exactly -- this is only a
+       floor so there's never a moment (first paint, a slow-loading
+       lesson) where the frame is 0-height and looks broken. */
+    min-height: 200px;
+  }
+
+  @media (max-width: 600px) {
+    .mcc-gate-screen { padding: 18px 16px; }
+    .mcc-hub-table th, .mcc-hub-table td { padding: 8px 10px; font-size: 14px; }
   }
 </style>
 
@@ -162,8 +184,13 @@ robots: noindex
 
   // Auto-resize the iframe to fit its (same-origin) content, so it reads
   // as part of the page rather than a boxed-in embed with its own
-  // scrollbar. Re-measures on load and once more shortly after, since
-  // KaTeX/Pyodide can still be adjusting layout a moment after load fires.
+  // scrollbar. A single re-measure after `load` isn't enough: KaTeX and
+  // Pyodide both mutate the DOM well after the load event fires, so a
+  // fixed-delay guess (this used to be a single setTimeout(resize, 400))
+  // was still catching the page mid-layout on slower connections, giving
+  // a too-short frame with its own internal scrollbar (2026-09-20). A
+  // ResizeObserver on the iframe's own <html> catches every later
+  // height change directly, for as long as this lesson stays open.
   frame.addEventListener("load", function () {
     function resize() {
       try {
@@ -173,8 +200,20 @@ robots: noindex
     }
     resize();
     frame.style.display = "";
-    setTimeout(resize, 400);
     frame.scrollIntoView({ behavior: "smooth", block: "start" });
+
+    if (frame._mccResizeObserver) frame._mccResizeObserver.disconnect();
+    try {
+      var ro = new ResizeObserver(resize);
+      ro.observe(frame.contentWindow.document.documentElement);
+      frame._mccResizeObserver = ro;
+    } catch (e) {
+      // No ResizeObserver (very old browser) -- fall back to a few
+      // spaced-out re-measures, which at least covers most real cases.
+      setTimeout(resize, 400);
+      setTimeout(resize, 1200);
+      setTimeout(resize, 3000);
+    }
   });
 
   Array.prototype.forEach.call(table.querySelectorAll("tbody tr"), function (row) {

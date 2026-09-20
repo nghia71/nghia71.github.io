@@ -86,7 +86,10 @@ worked, forever, with no error shown anywhere on the site itself.
     var content = document.getElementById("mcc-gate-content");
     screen.style.display = "none";
     if (content) content.style.display = "";
-    if (name && content && !document.getElementById("mcc-gate-welcome")) {
+    // Skip this when shown inside the lessons hub's iframe -- the hub
+    // already greets the student by name above the lesson table, so a
+    // second "Welcome, X" here would just duplicate it.
+    if (name && content && window.self === window.top && !document.getElementById("mcc-gate-welcome")) {
       var w = document.createElement("p");
       w.id = "mcc-gate-welcome";
       w.textContent = "Welcome, " + name + ".";
