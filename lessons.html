@@ -50,7 +50,10 @@ robots: noindex
       </tbody>
     </table>
   </div>
-  <iframe id="mcc-hub-frame" title="Lesson content" style="display:none"></iframe>
+  <!-- scrolling="no": the JS below sizes this iframe exactly to its
+       content's height, so its own scrollbar is never needed -- without
+       this, some browsers still draw one by default regardless. -->
+  <iframe id="mcc-hub-frame" title="Lesson content" scrolling="no" style="display:none"></iframe>
 </div>
 
 <style>
@@ -118,6 +121,7 @@ robots: noindex
   #mcc-hub-frame {
     display: block;
     width: 100%;
+    overflow: hidden;
     border: 2px solid var(--brand);
     border-radius: var(--radius);
     box-shadow: var(--shadow);
