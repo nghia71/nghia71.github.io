@@ -1,17 +1,16 @@
 <!-- MCC coding-lesson access gate.
 
-Checks a per-student link (this page's URL with a student query parameter
-appended) against the club's roster, via the shared helpers in
-assets/js/mcc-roster.js. A bare link is not enough by itself: the first
-time a student's id is recognized on a device, the gate also asks for
-their PIN (the roster's PIN column) before granting access -- so a link
-alone, if it leaks on its own, doesn't work. Once the correct PIN is
-entered, the student's id/name is remembered in this browser's
-localStorage so later visits to any lesson page -- or the lessons hub --
-work without the link or the PIN again. That same stored id is meant to
-be reused as the student's identity for the Sunday coding-contest
-submissions later -- keep the storage key and shape (id, name) if you
-build that next, rather than inventing a second one.
+The single point of entry is lessons.html: a student signs in there once
+(id + PIN, checked server-side -- see assets/js/mcc-roster.js), which
+remembers their id in this browser's localStorage. This gate, included at
+the top of every lesson page, only ever checks that stored id -- it never
+takes a link-based id or asks for a PIN itself, so there is exactly one way
+in, not two competing ones. A lesson page opened directly without having
+signed in at lessons.html first (or on a different device/browser) simply
+points the visitor there. That same stored id is meant to be reused as the
+student's identity for the Sunday coding-contest submissions later -- keep
+the storage key and shape (id, name) if you build that next, rather than
+inventing a second one.
 
 To include on a lesson page:
   1. Put this file's include tag right before the page's real content.
@@ -33,24 +32,9 @@ a hypothetical: it happened on 2026-09-20 and took the whole site down
 for about an hour before anyone noticed, because the failure is
 completely silent -- GitHub Pages just keeps serving the last build that
 worked, forever, with no error shown anywhere on the site itself.
-
-The roster's "Lesson Link" column points students at lesson-1.html --
-that one link is all a student ever needs, even as more lessons are
-added: verifying there sets localStorage, and every later lesson page
-(each with its own copy of the include tag above) recognizes the same
-device automatically, no new link or PIN required. Students can also
-skip links entirely via lessons.html, which asks for the student id and
-PIN directly (typed in, not from a URL) and sets the same localStorage.
 -->
 <div id="mcc-gate-screen" class="mcc-gate-screen">
   <p id="mcc-gate-message">Checking your access&hellip;</p>
-  <form id="mcc-gate-pin-form" style="display:none">
-    <p id="mcc-gate-pin-welcome"></p>
-    <label for="mcc-gate-pin-input">Paste your access code</label><br>
-    <input type="text" id="mcc-gate-pin-input" inputmode="text" autocomplete="off" autocapitalize="off" spellcheck="false" maxlength="40">
-    <button type="submit">Continue</button>
-    <p id="mcc-gate-pin-error" style="display:none;">That code doesn't match &mdash; try pasting it again.</p>
-  </form>
 </div>
 
 <style>
@@ -65,33 +49,12 @@ PIN directly (typed in, not from a URL) and sets the same localStorage.
     text-align: center;
   }
   .mcc-gate-screen p { margin: 0.4em 0; line-height: 1.5; }
+  .mcc-gate-screen a { color: var(--brand); font-weight: 600; }
   #mcc-gate-welcome {
     color: var(--ink-soft);
     font-style: italic;
     margin: 0 0 1em;
   }
-  #mcc-gate-pin-welcome { font-weight: 600; }
-  #mcc-gate-pin-input {
-    font-size: 1em;
-    font-family: monospace;
-    padding: 6px 10px;
-    margin: 0.5em 0.5em 0.5em 0;
-    border: 1px solid var(--ink-soft);
-    border-radius: 6px;
-    width: 16em;
-    max-width: 90%;
-    text-align: center;
-  }
-  #mcc-gate-pin-form button {
-    font-size: 1em;
-    padding: 6px 16px;
-    border-radius: 6px;
-    border: none;
-    background: var(--brand);
-    color: var(--white);
-    cursor: pointer;
-  }
-  #mcc-gate-pin-error { color: #b3261e; }
 </style>
 
 <script src="{{ '/assets/js/mcc-roster.js' | relative_url }}"></script>
@@ -100,20 +63,14 @@ PIN directly (typed in, not from a URL) and sets the same localStorage.
   var screen = document.getElementById("mcc-gate-screen");
   var message = document.getElementById("mcc-gate-message");
   var content = document.getElementById("mcc-gate-content");
-  var pinForm = document.getElementById("mcc-gate-pin-form");
-  var pinWelcome = document.getElementById("mcc-gate-pin-welcome");
-  var pinInput = document.getElementById("mcc-gate-pin-input");
-  var pinError = document.getElementById("mcc-gate-pin-error");
 
   function showDenied() {
-    pinForm.style.display = "none";
-    message.style.display = "";
     message.innerHTML =
       "This lesson is for registered MCC coding-course students only.<br>" +
-      "Use the personal link from your registration confirmation, or ask your coordinator for it.";
+      "Sign in at <a href=\"{{ '/lessons.html' | relative_url }}\">the lessons page</a> with your student id and access code.";
   }
 
-  function showGranted(id, name) {
+  function showGranted(name) {
     screen.style.display = "none";
     if (content) content.style.display = "";
     if (name && content && !document.getElementById("mcc-gate-welcome")) {
@@ -124,19 +81,16 @@ PIN directly (typed in, not from a URL) and sets the same localStorage.
     }
   }
 
-  function rememberAndGrant(id, name) {
-    try { localStorage.setItem(MCCRoster.STORAGE_KEY, JSON.stringify({ id: id, name: name })); } catch (e) { /* private browsing -- fine, just won't persist */ }
-    showGranted(id, name);
-  }
+  var stored = null;
+  try { stored = JSON.parse(localStorage.getItem(MCCRoster.STORAGE_KEY) || "null"); } catch (e) {}
 
-  // Re-checking an id already remembered on this device: no PIN needed
-  // again (it already proved itself once), just confirm the id is still
-  // on the roster.
-  function recheckStoredId(id) {
-    MCCRoster.checkAccess(id)
+  if (stored && stored.id) {
+    // No PIN needed again (this device already proved itself once at
+    // lessons.html) -- just re-confirm the id is still on the roster.
+    MCCRoster.checkAccess(stored.id)
       .then(function (result) {
         if (result && result.ok) {
-          showGranted(id, result.name);
+          showGranted(result.name);
         } else {
           // No longer on the roster -- never trust what's already in
           // localStorage over what the server says now.
@@ -145,59 +99,10 @@ PIN directly (typed in, not from a URL) and sets the same localStorage.
         }
       })
       .catch(function () {
-        message.style.display = "";
         message.textContent = "Couldn't check access right now — check your internet connection and reload the page.";
       });
-  }
-
-  // Fresh link (a student query parameter): always ask for the PIN before
-  // granting anything, whether or not the id itself looks valid -- the
-  // check happens once, on submit, as a single id+PIN request.
-  function askForPin(id) {
-    message.style.display = "none";
-    pinWelcome.textContent = "One more step.";
-    pinError.style.display = "none";
-    pinForm.style.display = "";
-    pinInput.value = "";
-    pinInput.focus();
-
-    pinForm.onsubmit = function (e) {
-      e.preventDefault();
-      var entered = pinInput.value.trim();
-      if (!entered) return;
-      pinForm.querySelector("button").disabled = true;
-      MCCRoster.checkAccess(id, entered)
-        .then(function (result) {
-          pinForm.querySelector("button").disabled = false;
-          if (result && result.ok) {
-            rememberAndGrant(id, result.name);
-          } else {
-            pinError.style.display = "";
-            pinInput.value = "";
-            pinInput.focus();
-          }
-        })
-        .catch(function () {
-          pinForm.querySelector("button").disabled = false;
-          pinError.style.display = "";
-          pinError.textContent = "Couldn't check access right now — check your internet connection and try again.";
-        });
-    };
-  }
-
-  var params = new URLSearchParams(window.location.search);
-  var linkId = params.get("student");
-
-  if (linkId) {
-    askForPin(linkId);
   } else {
-    var stored = null;
-    try { stored = JSON.parse(localStorage.getItem(MCCRoster.STORAGE_KEY) || "null"); } catch (e) {}
-    if (stored && stored.id) {
-      recheckStoredId(stored.id);
-    } else {
-      showDenied();
-    }
+    showDenied();
   }
 })();
 </script>
