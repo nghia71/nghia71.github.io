@@ -1848,27 +1848,34 @@ print(total)   # 40
 <div class="card example">
 <h3 id="hs-problem-23">HS &middot; Purple Comet 2004, Problem 23 &middot; <span class="tag">Hard</span> <span class="tag">Algebra</span></h3>
 <p class="problem">Let \(a\) and \(b\) be real numbers satisfying \(a^4+8b=4(a^3-1)-16\sqrt3\) and \(b^4+8a=4(b^3-1)+16\sqrt3\). Find \(a^4+b^4\).</p>
-<div class="note math">Adding the two equations kills the \(\sqrt3\) terms entirely, leaving a single symmetric relation in \(a\) and \(b\) &mdash; a strong hint that the intended solution is symmetric too. The \(\pm16\sqrt3\) is the other hint: it suggests \(a\) and \(b\) sit equal distances on either side of some center, i.e. \(a=c+t\), \(b=c-t\) for constants \(c,t\). Testing the simplest case \(c=1\) (matching the \(4(a^3-1)\) and \(4(b^3-1)\) shift already in the equations) turns each quartic into a single-variable equation in \(t\); \(t=\sqrt3\) solves it exactly, which sympy confirms symbolically rather than approximately &mdash; an exact check, not a numeric coincidence.</div>
-<pre><code># MATH: adding the two equations cancels the +-16*sqrt(3) terms,
-# hinting at a symmetric solution a = 1+t, b = 1-t (the "1" matches
-# the 4(a^3-1)/4(b^3-1) shift already built into the equations).
-# Substituting collapses each quartic-in-two-variables into a single
-# quartic in t; solving (or, as here, verifying the natural candidate
-# t = sqrt(3)) closes it out. sympy checks the candidate EXACTLY --
-# simplify() reducing the residual to 0 is a real proof, not a
-# numerical near-miss.
+<div class="note math">Shift both variables by the amount the equations already hint at: let \(x=a-1\), \(y=b-1\), matching the \(4(a^3-1)\) and \(4(b^3-1)\) already built into each side. Substituting and expanding turns the two equations into \(x^4-6x^2-8x+8y+9+16\sqrt3=0\) and \(y^4-6y^2-8y+8x+9-16\sqrt3=0\).<br><br><strong>Adding those two</strong> &mdash; not guessing anything, just adding &mdash; cancels every \(\sqrt3\) term and every linear term at once, collapsing straight down to \(x^4-6x^2+y^4-6y^2+18=0\), which is exactly \((x^2-3)^2+(y^2-3)^2=0\). A sum of two squares of real numbers is zero only when each square is individually zero, so this <em>forces</em> \(x^2=3\) and \(y^2=3\) &mdash; not a guess, a direct consequence of the addition. That leaves only the four sign combinations of \(x=\pm\sqrt3\), \(y=\pm\sqrt3\) to check against either original equation; exactly one of them, \(x=\sqrt3,\ y=-\sqrt3\) (i.e. \(a=1+\sqrt3\), \(b=1-\sqrt3\)), satisfies both.</div>
+<pre><code># MATH: shift a=1+x, b=1+y (matching the 4(a^3-1)/4(b^3-1) already
+# built into the equations). Substituting and expanding gives two
+# shifted equations; ADDING them cancels every sqrt(3) term and every
+# linear term, collapsing to (x^2-3)^2 + (y^2-3)^2 = 0 -- a sum of two
+# real squares, which is zero only when each square is zero. That
+# FORCES x^2=3 and y^2=3 exactly, with no guessing -- only the SIGN of
+# each root is left to pin down, by checking against the original
+# (unshifted) equations.
 import sympy as sp
 
-a, b = sp.symbols('a b')
+x, y = sp.symbols('x y', real=True)
 sqrt3 = sp.sqrt(3)
-candidate_a, candidate_b = 1 + sqrt3, 1 - sqrt3     # a = 1+t, b = 1-t, t = sqrt(3)
 
-eq1_residual = sp.simplify((candidate_a**4 + 8*candidate_b) - (4*(candidate_a**3 - 1) - 16*sqrt3))
-eq2_residual = sp.simplify((candidate_b**4 + 8*candidate_a) - (4*(candidate_b**3 - 1) + 16*sqrt3))
-print(eq1_residual, eq2_residual)                    # 0 0 -- both equations hold exactly
+eq1 = (1+x)**4 + 8*(1+y) - (4*((1+x)**3 - 1) - 16*sqrt3)   # = 0, this IS the first equation
+eq2 = (1+y)**4 + 8*(1+x) - (4*((1+y)**3 - 1) + 16*sqrt3)   # = 0, this IS the second equation
 
-answer = sp.simplify(candidate_a**4 + candidate_b**4)
-print(answer)                                        # 56
+sum_of_squares = sp.expand(eq1 + eq2)
+print(sum_of_squares)                                          # x**4-6x**2+y**4-6y**2+18
+print(sp.factor(sum_of_squares - ((x**2-3)**2 + (y**2-3)**2)))  # 0 -- confirms the identity exactly
+
+# x^2=3 and y^2=3 are forced; only the signs remain -- check every
+# combination against the two ORIGINAL equations (not the sum)
+for xv in (sqrt3, -sqrt3):
+    for yv in (sqrt3, -sqrt3):
+        if sp.simplify(eq1.subs({x: xv, y: yv})) == 0 and sp.simplify(eq2.subs({x: xv, y: yv})) == 0:
+            a_val, b_val = 1 + xv, 1 + yv
+            print(a_val, b_val, sp.simplify(a_val**4 + b_val**4))   # 1+sqrt(3) 1-sqrt(3) 56
 </code></pre>
 </div>
 
