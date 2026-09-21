@@ -37,14 +37,13 @@
 // STAGED ROLLOUT (added 2026-09-20):
 // "unlocked" tells the client whether gated content -- Test 1's start/
 // submit link, results, and Lesson 2 (the Test 1 solutions) -- should show
-// for this id right now. It's true once today is on or after LAUNCH_DATE
-// for EVERY student, or right now already for the ids listed in TESTERS,
-// so testing the full flow (test -> grade -> comments -> Lesson 2) doesn't
-// require waiting for the real launch date. Lesson 1 itself is unaffected
-// by this flag -- it's been live for everyone since before this existed,
-// and lesson-gate.html/lessons.html only need to start reading "unlocked"
-// once Lesson 2 and Test 1 are actually wired into the site; until then
-// this flag is present in the response but unused, which is harmless.
+// for this id right now. It's true right now for the ids listed in
+// TESTERS, so testing the full flow (test -> grade -> comments -> Lesson
+// 2) doesn't require waiting for the real launch. For every other
+// student it's true only once the clock passes LAUNCH_THRESHOLD -- see
+// the comment on that constant below for why this MUST be a specific
+// moment, not just a calendar date. Lesson 1 itself is unaffected by this
+// flag -- it's been live for everyone since before this existed.
 //
 // TESTERS matches the same way the roster match below does: trimmed,
 // case-insensitive, against Student ID. Add/remove ids here as the
@@ -52,18 +51,32 @@
 // the "Final" sheet so test accounts don't need special roster flags.
 var TESTERS = ['S007', 'S008'];
 
-// ISO date, America/Vancouver. On and after this date, "unlocked" is true
-// for every id, tester or not -- this is the real 4 October launch.
-var LAUNCH_DATE = '2026-10-04';
-var TIMEZONE = 'America/Vancouver';
+// The exact instant every non-tester student's "unlocked" flips to true.
+//
+// THIS MUST BE A TIME, NOT JUST A DATE. Test 1 runs 8:00-8:45 AM
+// America/Vancouver on 4 Oct, with an 8:50 hard cutoff (see
+// mcc-coding-contest-final.gs's isAfterCutoff_). An earlier version of
+// this file compared only the calendar date ("today >= '2026-10-04'"),
+// which flips true at 12:00 AM -- 8 hours before the contest even opens.
+// A real student could have signed in that morning, read Lesson 2's
+// official solutions, then sat the contest already knowing the answers.
+// Caught 2026-09-20 during a rehearsal with the TESTERS accounts, before
+// any real student was affected -- fixed same day.
+//
+// Set to 9:00 AM, a comfortable margin past the 8:45 close / 8:50 hard
+// cutoff so there's no race with weeklyCloseGate (which runs "near
+// minute 50", not at an exact second). The -07:00 offset is Vancouver's
+// PDT offset, still in effect on 4 Oct (PDT doesn't end until the first
+// Sunday of November) -- written explicitly so the comparison is correct
+// regardless of what timezone the Apps Script server itself runs in.
+var LAUNCH_THRESHOLD = new Date('2026-10-04T09:00:00-07:00');
 
 function isUnlocked_(id) {
   var target = id.toLowerCase();
   for (var i = 0; i < TESTERS.length; i++) {
     if (TESTERS[i].toLowerCase() === target) return true;
   }
-  var today = Utilities.formatDate(new Date(), TIMEZONE, 'yyyy-MM-dd');
-  return today >= LAUNCH_DATE;
+  return new Date().getTime() >= LAUNCH_THRESHOLD.getTime();
 }
 
 function doGet(e) {
