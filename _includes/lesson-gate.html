@@ -19,15 +19,20 @@ To include on a lesson page:
      (with an explanation in its place) otherwise.
   3. Add a noindex robots entry to the page's front matter so it doesn't
      turn up in search results.
-  4. Optional: pass a requires_unlock parameter set to true on the include
-     tag for a lesson that's staged behind the October launch date (see
-     mcc-access-check.gs's TESTERS/LAUNCH_DATE and its "unlocked" response
-     field). Without this parameter a lesson behaves exactly as before --
-     any signed-in student sees it the moment their id/PIN check succeeds.
-     With it, a signed-in student who is NOT yet unlocked sees a
-     "not open yet" message instead of the content, even though their
-     sign-in itself is perfectly valid. Lesson 1 should never pass this
-     parameter -- it's been open to everyone since before this existed.
+  4. Optional: pass a requires_unlock parameter set to that lesson's own
+     number (e.g. requires_unlock=2 for lesson-2.html) on the include tag
+     for a lesson that's staged behind its own round's contest (see
+     mcc-access-check.gs's TESTERS/LESSON_THRESHOLDS and its
+     "unlockedLessons" response field -- an array of lesson numbers
+     currently visible). Without this parameter a lesson behaves exactly
+     as before -- any signed-in student sees it the moment their id/PIN
+     check succeeds. With it, a signed-in student whose unlockedLessons
+     array does NOT contain this lesson's number sees a "not open yet"
+     message instead of the content, even though their sign-in itself is
+     perfectly valid. Lesson 1 should never pass this parameter -- it's
+     been open to everyone since before this existed. Do not pass `true`
+     here -- a plain boolean can't tell one lesson's round from another's
+     (see the 2026-09-20 fix in mcc-access-check.gs for why that matters).
 
 Do not write this file's own include tag as literal example text
 anywhere in this comment or in any other page's comment -- describe it
@@ -72,7 +77,7 @@ worked, forever, with no error shown anywhere on the site itself.
 <script src="{{ '/assets/js/mcc-roster.js' | relative_url }}?v=3"></script>
 <script>
 (function () {
-  var REQUIRES_UNLOCK = {{ include.requires_unlock | default: false }};
+  var REQUIRES_UNLOCK = {{ include.requires_unlock | default: false }}; // false, or this lesson's own number
   var screen = document.getElementById("mcc-gate-screen");
   var message = document.getElementById("mcc-gate-message");
   // Deliberately NOT looked up here at parse time: this script tag runs
@@ -93,9 +98,10 @@ worked, forever, with no error shown anywhere on the site itself.
   }
 
   // Shown for a student who IS signed in correctly, but this particular
-  // lesson has requires_unlock and today isn't the launch date yet (and
-  // this id isn't one of the early testers). Distinct from showDenied --
-  // the student did everything right, the lesson just isn't open yet.
+  // lesson has requires_unlock and its own round's contest hasn't closed
+  // yet (and this id isn't one of the early testers). Distinct from
+  // showDenied -- the student did everything right, the lesson just
+  // isn't open yet.
   function showLocked() {
     message.innerHTML =
       "This lesson opens once its contest window closes. Check back soon &mdash; " +
@@ -126,7 +132,9 @@ worked, forever, with no error shown anywhere on the site itself.
     MCCRoster.checkAccess(stored.id)
       .then(function (result) {
         if (result && result.ok) {
-          if (REQUIRES_UNLOCK && !result.unlocked) {
+          var lessonUnlocked = !REQUIRES_UNLOCK ||
+            (result.unlockedLessons && result.unlockedLessons.indexOf(REQUIRES_UNLOCK) !== -1);
+          if (!lessonUnlocked) {
             showLocked();
           } else {
             showGranted(result.name);

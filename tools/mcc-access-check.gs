@@ -31,52 +31,107 @@
 //                         re-confirm a previously-granted one.
 //   ?id=S008&pin=xxxx -- full check: grants access only if the PIN matches
 //                         that id's row.
-// Response shape either way: {"ok": true, "name": "Jason ...", "unlocked": true}
+// Response shape either way:
+//   {"ok": true, "name": "Jason ...", "unlocked": true, "unlockedLessons": [2]}
 // or {"ok": false}.
 //
-// STAGED ROLLOUT (added 2026-09-20):
-// "unlocked" tells the client whether gated content -- Test 1's start/
-// submit link, results, and Lesson 2 (the Test 1 solutions) -- should show
-// for this id right now. It's true right now for the ids listed in
-// TESTERS, so testing the full flow (test -> grade -> comments -> Lesson
-// 2) doesn't require waiting for the real launch. For every other
-// student it's true only once the clock passes LAUNCH_THRESHOLD -- see
-// the comment on that constant below for why this MUST be a specific
-// moment, not just a calendar date. Lesson 1 itself is unaffected by this
-// flag -- it's been live for everyone since before this existed.
+// STAGED ROLLOUT (added 2026-09-20; split into two flags later same day):
+//
+// "unlocked" gates the Start/Submit link on toml.html only -- true right
+// now for TESTERS, true for every other student once the coding-contest
+// pipeline has actually gone live (see SUBMIT_LIVE_DATE below). It is a
+// simple calendar-date check on purpose: the link just needs to appear
+// on the morning of the first round, comfortably before that round's own
+// 8:00 AM start, and once true it stays true forever -- the same Form/
+// URL is reused every future round, so this flag never needs touching
+// again after round 1. Do NOT reuse "unlocked" to gate Lesson content --
+// see the bug this caused, below.
+//
+// "unlockedLessons" gates each lesson's row on lessons.html (and, via
+// lesson-gate.html's requires_unlock=<n> parameter, that lesson's own
+// page if opened directly) -- a lesson number is in this array once its
+// own round's contest has actually closed, per LESSON_THRESHOLDS below.
+// This MUST be precise timestamps, not calendar dates, and MUST be
+// per-round, not one flag for everything:
+//
+//   - Per-round, because a single "unlocked" flag that flips true once
+//     and stays true forever (as "unlocked" itself deliberately does,
+//     above) is exactly right for "has the pipeline gone live" but
+//     exactly wrong for "which lessons are visible" -- Lesson 3 must
+//     stay hidden through round 2 even after Lesson 2 has opened.
+//   - Precise timestamps, because comparing only the calendar date
+//     ("today >= that round's date") flips true at 12:00 AM -- 8 hours
+//     before that round's contest even opens (8:00 AM), and well before
+//     its 8:45 close / 8:50 hard cutoff (see
+//     mcc-coding-contest-final.gs's isAfterCutoff_). A real student
+//     could sign in that morning, read the lesson's official solutions,
+//     then sit the contest already knowing the answers. This exact bug
+//     shipped once (as a single date-only "LAUNCH_DATE"/"unlocked" flag
+//     doing both jobs at once), was caught 2026-09-20 during a
+//     TESTERS-account rehearsal before any real student was affected,
+//     and got compounded by a first fix that moved the one shared
+//     threshold to 9:00 AM -- which incidentally also delayed the
+//     Start/Submit link past that round's own contest window, since at
+//     the time both were still gated by the same flag. Splitting into
+//     two independently-timed flags (this file, same day) is the actual
+//     fix: SUBMIT_LIVE_DATE stays a simple date for the link,
+//     LESSON_THRESHOLDS stays precise per-round timestamps for content.
 //
 // TESTERS matches the same way the roster match below does: trimmed,
 // case-insensitive, against Student ID. Add/remove ids here as the
 // rehearsal roster changes -- this list is intentionally separate from
 // the "Final" sheet so test accounts don't need special roster flags.
+// TESTERS see every lesson in LESSON_THRESHOLDS immediately, whether or
+// not its own threshold has passed -- lets a full test -> grade ->
+// comments -> Lesson rehearsal happen without waiting for the real date.
 var TESTERS = ['S007', 'S008'];
 
-// The exact instant every non-tester student's "unlocked" flips to true.
-//
-// THIS MUST BE A TIME, NOT JUST A DATE. Test 1 runs 8:00-8:45 AM
-// America/Vancouver on 4 Oct, with an 8:50 hard cutoff (see
-// mcc-coding-contest-final.gs's isAfterCutoff_). An earlier version of
-// this file compared only the calendar date ("today >= '2026-10-04'"),
-// which flips true at 12:00 AM -- 8 hours before the contest even opens.
-// A real student could have signed in that morning, read Lesson 2's
-// official solutions, then sat the contest already knowing the answers.
-// Caught 2026-09-20 during a rehearsal with the TESTERS accounts, before
-// any real student was affected -- fixed same day.
-//
-// Set to 9:00 AM, a comfortable margin past the 8:45 close / 8:50 hard
-// cutoff so there's no race with weeklyCloseGate (which runs "near
-// minute 50", not at an exact second). The -07:00 offset is Vancouver's
-// PDT offset, still in effect on 4 Oct (PDT doesn't end until the first
-// Sunday of November) -- written explicitly so the comparison is correct
-// regardless of what timezone the Apps Script server itself runs in.
-var LAUNCH_THRESHOLD = new Date('2026-10-04T09:00:00-07:00');
+var TIMEZONE = 'America/Vancouver';
 
-function isUnlocked_(id) {
+// Start/Submit link on toml.html: true for every id, tester or not, once
+// today is on/after this date. Set once for round 1; never needs
+// touching again (see the big comment above).
+var SUBMIT_LIVE_DATE = '2026-10-04';
+
+// Per-round Lesson unlock. Add one entry per round once that round's
+// Lesson number is decided -- a round with no entry here yet simply
+// never appears in unlockedLessons_, which is harmless (lessons.html and
+// lesson-gate.html both fail closed: no matching number in the array
+// means the row/page stays locked, exactly like "not listed yet" should
+// behave). The -07:00 offset is Vancouver's PDT offset; still correct
+// through early November (PDT doesn't end until the first Sunday of
+// November) -- re-check the offset (-08:00 for PST) for any round's
+// threshold added on/after that changeover.
+var LESSON_THRESHOLDS = [
+  { lesson: 2, threshold: new Date('2026-10-04T09:00:00-07:00') }
+  // { lesson: 3, threshold: new Date('2026-10-18T09:00:00-07:00') },
+  // add future rounds here once each one's Lesson number is decided
+];
+
+function isTester_(id) {
   var target = id.toLowerCase();
   for (var i = 0; i < TESTERS.length; i++) {
     if (TESTERS[i].toLowerCase() === target) return true;
   }
-  return new Date().getTime() >= LAUNCH_THRESHOLD.getTime();
+  return false;
+}
+
+function isSubmitUnlocked_(id) {
+  if (isTester_(id)) return true;
+  var today = Utilities.formatDate(new Date(), TIMEZONE, 'yyyy-MM-dd');
+  return today >= SUBMIT_LIVE_DATE;
+}
+
+function unlockedLessons_(id) {
+  if (isTester_(id)) {
+    return LESSON_THRESHOLDS.map(function (t) { return t.lesson; });
+  }
+  var now = new Date().getTime();
+  var out = [];
+  for (var i = 0; i < LESSON_THRESHOLDS.length; i++) {
+    if (now >= LESSON_THRESHOLDS[i].threshold.getTime()) out.push(LESSON_THRESHOLDS[i].lesson);
+  }
+  return out;
 }
 
 function doGet(e) {
@@ -103,11 +158,11 @@ function doGet(e) {
           var rowName = nameCol > -1 ? String(row[nameCol]).trim() : "";
           if (hasPin) {
             if (rowPin && pin === rowPin) {
-              result = { ok: true, name: rowName, unlocked: isUnlocked_(id) };
+              result = { ok: true, name: rowName, unlocked: isSubmitUnlocked_(id), unlockedLessons: unlockedLessons_(id) };
             }
           } else {
             // id-only re-check -- the device already proved itself once.
-            result = { ok: true, name: rowName, unlocked: isUnlocked_(id) };
+            result = { ok: true, name: rowName, unlocked: isSubmitUnlocked_(id), unlockedLessons: unlockedLessons_(id) };
           }
           break;
         }
