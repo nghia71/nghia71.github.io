@@ -1,0 +1,2224 @@
+---
+title: Lesson 2
+robots: noindex
+---
+
+<style>
+  /* Math text should read like a textbook, not the site's body sans-serif. */
+  .problem, .math {
+    font-family: Georgia, "Times New Roman", "Noto Serif", serif;
+    font-size: 1.02em;
+    line-height: 1.6;
+  }
+  .problem { font-style: italic; }
+  .example .tag,
+  .practice-list .tag {
+    display: inline-block;
+    background: var(--gold-soft);
+    color: var(--brand-dark);
+    font-size: 12.5px;
+    font-weight: 700;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    padding: 3px 9px;
+    border-radius: 999px;
+  }
+  .example .tag { margin-right: 4px; }
+  .example { margin-bottom: 1.8em; }
+  .example h3 { font-size: 1.05rem; border-bottom: none; padding-bottom: 0; margin-bottom: .6em; }
+
+  /* Inline, runnable Python (worked examples + the free-form playground).
+     Styled to match the site's existing pre/code blocks (dark ink bg, cream
+     text) and its small pill-shaped utility buttons (see .tc-progress-reset
+     in assets/css/style.css), not a separate "dev tool" look. */
+  .code-runner { margin-top: 14px; margin-bottom: 28px; }
+  .code-editor {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+    font-size: 13.5px;
+    line-height: 1.55;
+    padding: 16px 18px;
+    border: none;
+    border-radius: var(--radius);
+    background: var(--ink);
+    color: #f4ead9;
+    resize: vertical;
+    min-height: 120px;
+    tab-size: 4;
+  }
+  .code-editor:focus { outline: 2px solid var(--gold); outline-offset: 2px; }
+  .code-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+  }
+  .code-controls button {
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--brand);
+    background: var(--cream);
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    padding: 6px 16px;
+    cursor: pointer;
+  }
+  .code-controls button:hover { background: var(--gold-soft); }
+  .code-controls button:disabled { opacity: .5; cursor: default; }
+  .code-status {
+    font-size: 13px;
+    color: var(--ink-soft);
+    font-style: italic;
+  }
+  .code-output {
+    margin: 10px 0 0;
+    padding: 16px 18px;
+    border-radius: var(--radius);
+    background: var(--brand-dark);
+    color: var(--gold-soft);
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+    font-size: 13.5px;
+    white-space: pre-wrap;
+    word-break: break-word;
+    overflow-x: auto;
+    display: none;
+  }
+  .code-output.has-content { display: block; }
+  .code-output.is-error { color: #ffd7c2; }
+  .playground-card { margin-top: 1.2em; }
+  .playground-card .code-editor { min-height: 160px; }
+
+  /* Geometry diagrams -- redrawn from the source PDF, not screenshots. */
+  .diagram {
+    text-align: center;
+    margin: 1em 0 1.4em;
+    padding: 14px;
+    background: var(--white);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+  }
+  .diagram svg { display: block; margin: 0 auto; max-width: 260px; height: auto; }
+  .diagram figcaption {
+    margin-top: 8px;
+    font-size: 13px;
+    color: var(--ink-soft);
+    font-style: italic;
+  }
+  .addition {
+    display: inline-block;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-align: right;
+    line-height: 1.5;
+    margin: 0.6em 0;
+    padding: 2px 6px;
+  }
+  .addition .addition-row { white-space: pre; }
+  .addition .addition-sum {
+    border-top: 1.5px solid var(--ink);
+    padding-top: 2px;
+  }
+
+  /* Submission-requirements block -- deliberately the most visually
+     distinct thing on the page (2026-09-19: "very important for Lesson 1
+     to present what are required and acceptable for a submission"). */
+  .requirements {
+    background: var(--white);
+    border: 2px solid var(--brand);
+    border-radius: var(--radius);
+    padding: 22px 26px;
+    margin: 1.8em 0 2.2em;
+    box-shadow: var(--shadow);
+  }
+  .requirements h2 {
+    margin-top: 0;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  .requirements h3 { margin-top: 1.1em; margin-bottom: .4em; font-size: 1rem; }
+  .requirements ul { margin-bottom: 0; }
+  .requirements table { font-size: 14.5px; }
+</style>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  renderMathInElement(document.body, {
+    delimiters: [
+      {left: "\\[", right: "\\]", display: true},
+      {left: "\\(", right: "\\)", display: false}
+    ]
+  });
+});
+</script>
+
+<!-- Inline Python: runs entirely in the student's own browser via Pyodide (Python
+     compiled to WebAssembly) -- nothing is sent to any server, nothing is graded,
+     it only runs the code and shows what it prints (or the error). Loaded lazily,
+     only once someone actually presses Run, so a visitor who never clicks Run never
+     downloads it. -->
+<script src="https://cdn.jsdelivr.net/pyodide/v314.0.6/full/pyodide.js"></script>
+<script>
+(function () {
+  var pyodideReadyPromise = null;
+  function getPyodide() {
+    if (!pyodideReadyPromise) {
+      pyodideReadyPromise = loadPyodide();
+    }
+    return pyodideReadyPromise;
+  }
+
+  function setAllRunButtonsDisabled(disabled) {
+    document.querySelectorAll(".code-controls .run-btn").forEach(function (b) {
+      b.disabled = disabled;
+    });
+  }
+
+  function copyText(text, btn) {
+    function done() {
+      var original = btn.textContent;
+      btn.textContent = "✓ Copied";
+      setTimeout(function () { btn.textContent = original; }, 1200);
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(done, done);
+    } else {
+      var ta = document.createElement("textarea");
+      ta.value = text;
+      ta.style.position = "fixed";
+      ta.style.opacity = "0";
+      document.body.appendChild(ta);
+      ta.select();
+      try { document.execCommand("copy"); } catch (e) { /* ignore */ }
+      document.body.removeChild(ta);
+      done();
+    }
+  }
+
+  async function runCode(code, outputEl, statusEl) {
+    outputEl.classList.remove("is-error", "has-content");
+    outputEl.textContent = "";
+    statusEl.textContent = "Starting Python… (first run only -- loads the Python environment, a few seconds)";
+    setAllRunButtonsDisabled(true);
+
+    var buffer = "";
+    var hadError = false;
+    try {
+      var pyodide = await getPyodide();
+      pyodide.setStdout({ batched: function (s) { buffer += s + "\n"; } });
+      pyodide.setStderr({ batched: function (s) { buffer += s + "\n"; } });
+
+      statusEl.textContent = "Checking for imports…";
+      try {
+        await pyodide.loadPackagesFromImports(code);
+      } catch (pkgErr) {
+        // A missing/unsupported package still surfaces as a normal Python
+        // ImportError from runPythonAsync below -- nothing to do here.
+      }
+
+      statusEl.textContent = "Running…";
+      var runStarted = performance.now();
+      try {
+        await pyodide.runPythonAsync(code);
+      } catch (runErr) {
+        hadError = true;
+        buffer += (buffer ? "\n" : "") + (runErr && runErr.message ? runErr.message : String(runErr));
+      }
+      var runElapsedMs = performance.now() - runStarted;
+    } catch (loadErr) {
+      hadError = true;
+      buffer += (buffer ? "\n" : "") + "Could not start the Python environment in this browser: " +
+        (loadErr && loadErr.message ? loadErr.message : loadErr);
+    }
+
+    statusEl.textContent = "";
+    setAllRunButtonsDisabled(false);
+    outputEl.textContent = buffer || "(no output)";
+    // Timing is measured by the runner around the code, never injected
+    // into the code itself -- it covers just this run's execution, not
+    // the one-time Pyodide startup/package-loading before it.
+    if (typeof runElapsedMs === "number") {
+      outputEl.textContent += "\n\n[ran in " + formatElapsed(runElapsedMs) + "]";
+    }
+    outputEl.classList.add("has-content");
+    if (hadError) outputEl.classList.add("is-error");
+  }
+
+  function formatElapsed(ms) {
+    if (ms < 1000) return Math.round(ms) + " ms";
+    return (ms / 1000).toFixed(2) + " s";
+  }
+
+  function makeRunner(getCode, container) {
+    var controls = document.createElement("div");
+    controls.className = "code-controls";
+
+    var runBtn = document.createElement("button");
+    runBtn.type = "button";
+    runBtn.className = "run-btn";
+    runBtn.textContent = "▶ Run";
+
+    var copyBtn = document.createElement("button");
+    copyBtn.type = "button";
+    copyBtn.textContent = "📋 Copy";
+
+    var status = document.createElement("span");
+    status.className = "code-status";
+
+    controls.appendChild(runBtn);
+    controls.appendChild(copyBtn);
+    controls.appendChild(status);
+
+    var output = document.createElement("pre");
+    output.className = "code-output";
+
+    container.appendChild(controls);
+    container.appendChild(output);
+
+    runBtn.addEventListener("click", function () {
+      runCode(getCode(), output, status);
+    });
+
+    return { controls: controls, output: output, status: status, runBtn: runBtn, copyBtn: copyBtn };
+  }
+
+  function enhanceExampleCodeBlocks() {
+    document.querySelectorAll(".example pre").forEach(function (pre) {
+      var codeEl = pre.querySelector("code");
+      if (!codeEl) return;
+      var original = codeEl.textContent;
+
+      var wrapper = document.createElement("div");
+      wrapper.className = "code-runner";
+
+      var textarea = document.createElement("textarea");
+      textarea.className = "code-editor";
+      textarea.spellcheck = false;
+      textarea.value = original;
+      textarea.rows = Math.min(28, Math.max(6, original.split("\n").length));
+
+      wrapper.appendChild(textarea);
+      pre.parentNode.insertBefore(wrapper, pre.nextSibling);
+      pre.style.display = "none"; // original stays in the DOM as a no-JS fallback
+
+      var runner = makeRunner(function () { return textarea.value; }, wrapper);
+
+      var resetBtn = document.createElement("button");
+      resetBtn.type = "button";
+      resetBtn.textContent = "↺ Reset";
+      resetBtn.addEventListener("click", function () {
+        textarea.value = original;
+        runner.output.textContent = "";
+        runner.output.classList.remove("has-content", "is-error");
+      });
+      runner.controls.insertBefore(resetBtn, runner.status);
+
+      runner.copyBtn.addEventListener("click", function () {
+        copyText(textarea.value, runner.copyBtn);
+      });
+    });
+  }
+
+  function setupPlayground() {
+    var textarea = document.getElementById("playground-editor");
+    if (!textarea) return;
+    var wrapper = textarea.parentNode;
+
+    var runner = makeRunner(function () { return textarea.value; }, wrapper);
+
+    var clearBtn = document.createElement("button");
+    clearBtn.type = "button";
+    clearBtn.textContent = "✖ Clear";
+    clearBtn.addEventListener("click", function () {
+      textarea.value = "";
+      runner.output.textContent = "";
+      runner.output.classList.remove("has-content", "is-error");
+      textarea.focus();
+    });
+    runner.controls.insertBefore(clearBtn, runner.status);
+
+    runner.copyBtn.addEventListener("click", function () {
+      copyText(textarea.value, runner.copyBtn);
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    enhanceExampleCodeBlocks();
+    setupPlayground();
+  });
+})();
+</script>
+
+{% include lesson-gate.html requires_unlock=true %}
+<div id="mcc-gate-content" style="display:none">
+
+<h1>Lesson 2</h1>
+<p><em>MCC Coding Contest &mdash; Test 1 official solutions &mdash; Purple Comet 2010, Middle School and High School &mdash; math, code, and (where it helps) a diagram, for every problem on the paper.</em></p>
+
+<div class="note">
+All 50 problems from Test 1 are worked below: 20 Middle School and 30 High School, adapted from the 2010 Purple Comet Math Meet. Every final answer has been independently verified by running the code shown, and every diagram has been checked against the official Purple Comet problem set. Several problems carry two independent solutions, included as a genuine cross-check, not just for variety.
+</div>
+
+<h2>What Lesson 2 is for</h2>
+<p>This is the official solutions write-up for Test 1, released once the contest window has closed and submissions are graded. Compare your own approach against the one shown here &mdash; getting the right number matters, but so does getting there with real math, the same standard your own contest submissions are held to.</p>
+<p>If you haven&rsquo;t attempted Test 1 yet, the problems are worth solving cold before reading the solutions below &mdash; see the Test 1 paper on the <a href="./toml">TOML</a> page.</p>
+
+<div class="requirements">
+<h2 id="what-s-required-and-acceptable-for-a-contest-submission">What&rsquo;s required and acceptable for a contest submission</h2>
+<p>Read this before you write your first line of contest code. Every worked example below is itself a submission that would pass all of these rules &mdash; that&rsquo;s the point of reading them closely, not just the answer.</p>
+
+<h3>File format</h3>
+<ul>
+  <li>One <code>.py</code> text file per problem you attempt. Plain Python source, nothing else.</li>
+  <li><strong>Not accepted:</strong> a PDF, a Google Doc, a Jupyter notebook (<code>.ipynb</code>), a screenshot of code, a file renamed to end in <code>.py</code> that isn&rsquo;t actually Python.</li>
+</ul>
+
+<h3>Your program must</h3>
+<ul>
+  <li>Run in <strong>30 seconds or less</strong>.</li>
+  <li>Run <strong>with no errors</strong> &mdash; no exceptions, no crash, nothing printed to the screen except your program&rsquo;s own output.</li>
+  <li>Only import from the allowed list below.</li>
+</ul>
+
+<h3>Allowed libraries</h3>
+<table>
+<thead><tr><th>Library</th><th>Why it&rsquo;s allowed</th></tr></thead>
+<tbody>
+<tr><td>Python standard library &mdash; <code>math</code>, <code>itertools</code>, <code>functools</code>, <code>fractions</code>, <code>collections</code>, <code>re</code>, <code>decimal</code>, <code>random</code></td><td>baseline</td></tr>
+<tr><td><code>sympy</code></td><td>the symbolic tool every worked example below is built around</td></tr>
+<tr><td><code>numpy</code></td><td>numeric arrays and linear algebra, for geometry/simulation problems</td></tr>
+<tr><td><code>matplotlib</code></td><td>diagrams your own code generates as part of its solution</td></tr>
+</tbody>
+</table>
+<p>Anything else &mdash; network access, file I/O, <code>os</code>/<code>subprocess</code>, GUI toolkits &mdash; is out. This list may grow; the current version always lives on this page.</p>
+
+<h3>How a submission is scored &mdash; base score, up to 10 per problem</h3>
+<table>
+<thead><tr><th>Worth</th><th>For</th></tr></thead>
+<tbody>
+<tr><td>up to 5</td><td><strong>The math itself.</strong> Is the real identity/theorem/reduction actually there, and is it sound? A brute-force search with no justified, provably-complete bound is <em>not</em> real math here, even if it happens to print the right answer. This is the part you keep even if your code has a bug &mdash; good math, broken code, still earns these points.</td></tr>
+<tr><td>up to 4</td><td><strong>Correctness.</strong> The program actually runs clean, inside the time limit, and prints the right answer.</td></tr>
+<tr><td>up to 1</td><td><strong>How well-optimized/well-written the code is.</strong> An exhaustive search over a space a two-line argument would have shrunk to nothing loses points here even if it finishes in time.</td></tr>
+</tbody>
+</table>
+<p><strong>If there&rsquo;s no real math at all</strong> &mdash; the code just tries things at random until something matches the expected shape, with nothing above to award points against &mdash; the submission isn&rsquo;t accepted, regardless of whether it prints the right number.</p>
+
+<h3>Excellence bonus &mdash; up to 5 EXTRA points, on top</h3>
+<p>Reserved for work that goes past &ldquo;normally good&rdquo; &mdash; a solid, correct, reasonably-explained solution earns <strong>zero</strong> of these. Each of the five is independent, worth <strong>+1</strong> on its own:</p>
+<table>
+<thead><tr><th>+1 for</th><th>Meaning</th></tr></thead>
+<tbody>
+<tr><td>Excellent math</td><td>Not just correct &mdash; elegant, insightful, or genuinely the cleanest way to see why the answer is what it is.</td></tr>
+<tr><td>Very, very well commented</td><td>Comments that actually teach the reasoning, the way the worked examples on this page do &mdash; not just labels on lines.</td></tr>
+<tr><td>Excellent code</td><td>Clean, well-structured, readable &mdash; the kind of code someone else could pick up and follow.</td></tr>
+<tr><td>Code really reflects the math</td><td>The program's own structure &mdash; its variables, its steps &mdash; mirrors the mathematical argument, step for step, rather than just arriving at the right number by some other route.</td></tr>
+<tr><td>Very optimal runtime</td><td>Genuinely efficient, well beyond just squeaking in under 30 seconds.</td></tr>
+</tbody>
+</table>
+<p><strong>Maximum possible score per problem: 10 + 5 = 15.</strong></p>
+</div>
+
+<h2>How to read a worked example</h2>
+<p>Each problem below has the same four parts: the problem itself; a short note on the math that actually makes it solvable; a diagram where one helps; and a commented, runnable Python solution. <strong>Every code block is live</strong> &mdash; click &#9654; <strong>Run</strong> to execute it in your own browser (the first click takes a few seconds to start Python; after that it&rsquo;s instant). Edit it, break it, fix it &mdash; <strong>&#8630; Reset</strong> brings back the original. Nothing here is graded; the playground at the bottom is there for your own experiments.</p>
+
+
+<h2>Middle School</h2>
+
+<div class="card example">
+<h3 id="ms-problem-1">MS &middot; Purple Comet 2010, Problem 1 &middot; <span class="tag">Easy</span> <span class="tag">Algebra</span></h3>
+<p class="problem">If \(125 + n + 135 + 2n + 145 = 900\), find \(n\).</p>
+<div class="note math">This is a one-step &ldquo;collect and solve&rdquo; equation &mdash; the only thing to be careful about is combining the constant terms (\(125+135+145\)) and the \(n\)-terms (\(n+2n\)) correctly before isolating \(n\). Rather than trust hand arithmetic on three-digit sums, let symbolic algebra do the collecting <em>and</em> the solving in one pass, so there&rsquo;s no place for an arithmetic slip to hide.</div>
+<pre><code># MATH: this is a linear equation in one unknown -- gather the constant
+# terms and the n-terms, then isolate n. Doing that symbolically removes
+# any risk of a slipped digit when adding 125+135+145 by hand.
+import sympy as sp
+
+n = sp.symbols('n')
+equation = sp.Eq(125 + n + 135 + 2*n + 145, 900)
+print(sp.solve(equation, n))   # [165]
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="ms-problem-2">MS &middot; Purple Comet 2010, Problem 2 &middot; <span class="tag">Easy</span> <span class="tag">Algebra</span></h3>
+<p class="problem">Three boxes each contain four bags. Each bag contains five marbles. How many marbles are there altogether in the three boxes?</p>
+<div class="note math">This is nested multiplication &mdash; three levels of grouping (boxes, then bags, then marbles) multiply together, they don&rsquo;t add. Writing it as a single product \(3 \times 4 \times 5\) makes the structure explicit instead of relying on a mental shortcut like &ldquo;count by fives twelve times.&rdquo;</div>
+<pre><code># MATH: three nested levels of grouping (boxes -> bags -> marbles)
+# combine by multiplication, not addition -- the total is the product
+# of the counts at each level.
+boxes, bags_per_box, marbles_per_bag = 3, 4, 5
+total = boxes * bags_per_box * marbles_per_bag
+print(total)   # 60
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="ms-problem-3">MS &middot; Purple Comet 2010, Problem 3 &middot; <span class="tag">Easy</span> <span class="tag">Number Theory</span></h3>
+<p class="problem">The sum \(\dfrac{1}{1}+\dfrac{1}{2}+\dfrac{1}{3}+\dfrac{1}{4}+\dfrac{1}{5}+\dfrac{1}{6} = \dfrac{m}{n}\) where \(m\) and \(n\) are relatively prime positive integers. Find \(m+n\).</p>
+<div class="note math">Adding six unit fractions by hand over a common denominator (their least common multiple is 60) is exactly the kind of bookkeeping where a single wrong numerator ruins the answer. A computer&rsquo;s built-in rational-number type never approximates and never needs a chosen common denominator &mdash; it keeps every fraction exact and automatically reduces the final sum to lowest terms, which is precisely the \(m/n\) the problem wants.</div>
+<pre><code># MATH: Python's Fraction type does EXACT rational arithmetic -- no
+# floating-point rounding, and every sum is automatically reduced to
+# lowest terms. That means the m/n the problem describes (relatively
+# prime by construction) falls straight out of Fraction's own
+# .numerator / .denominator, with no separate gcd-reduction step needed.
+from fractions import Fraction
+
+total = sum(Fraction(1, k) for k in range(1, 7))
+print(total)                              # 49/20
+print(total.numerator + total.denominator)  # 69
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="ms-problem-4">MS &middot; Purple Comet 2010, Problem 4 &middot; <span class="tag">Medium</span> <span class="tag">Geometry</span></h3>
+<p class="problem">A grid has five rows with six points in each row; adjacent points (horizontally or vertically) are a distance one apart. Find the area of the pentagon shown.</p>
+<figure class="diagram">
+<svg viewBox="0 0 200 160" xmlns="http://www.w3.org/2000/svg">
+  <g fill="#8c2600">
+    <circle cx="20" cy="20" r="2.4"/><circle cx="50" cy="20" r="2.4"/><circle cx="80" cy="20" r="2.4"/><circle cx="110" cy="20" r="2.4"/><circle cx="140" cy="20" r="2.4"/><circle cx="170" cy="20" r="2.4"/>
+    <circle cx="20" cy="50" r="2.4"/><circle cx="50" cy="50" r="2.4"/><circle cx="80" cy="50" r="2.4"/><circle cx="110" cy="50" r="2.4"/><circle cx="140" cy="50" r="2.4"/><circle cx="170" cy="50" r="2.4"/>
+    <circle cx="20" cy="80" r="2.4"/><circle cx="50" cy="80" r="2.4"/><circle cx="80" cy="80" r="2.4"/><circle cx="110" cy="80" r="2.4"/><circle cx="140" cy="80" r="2.4"/><circle cx="170" cy="80" r="2.4"/>
+    <circle cx="20" cy="110" r="2.4"/><circle cx="50" cy="110" r="2.4"/><circle cx="80" cy="110" r="2.4"/><circle cx="110" cy="110" r="2.4"/><circle cx="140" cy="110" r="2.4"/><circle cx="170" cy="110" r="2.4"/>
+    <circle cx="20" cy="140" r="2.4"/><circle cx="50" cy="140" r="2.4"/><circle cx="80" cy="140" r="2.4"/><circle cx="110" cy="140" r="2.4"/><circle cx="140" cy="140" r="2.4"/><circle cx="170" cy="140" r="2.4"/>
+  </g>
+  <polygon points="50,20 140,20 170,80 110,140 20,110" fill="#e8b04a" fill-opacity="0.35" stroke="#8c2600" stroke-width="2"/>
+</svg>
+<figcaption>The pentagon&rsquo;s five vertices all sit on grid points &mdash; a job for the Shoelace Formula.</figcaption>
+</figure>
+<div class="note math">The pentagon&rsquo;s vertices, read off the grid (using \(x=0,\ldots,5\) for columns left-to-right and \(y=0,\ldots,4\) for rows bottom-to-top), are \((1,4),\,(4,4),\,(5,2),\,(3,0),\,(0,1)\). For <em>any</em> polygon whose vertices are known coordinates, in order, the Shoelace Formula gives the exact area with no need to decompose it by eye into triangles and rectangles: \(\text{Area} = \tfrac12\left|\sum (x_iy_{i+1} - x_{i+1}y_i)\right|\). It&rsquo;s mechanical, it works for any simple polygon, and it&rsquo;s far less error-prone here than trying to subtract corner triangles from a bounding box by hand.</div>
+<pre><code># MATH: the Shoelace Formula computes the area of ANY simple polygon
+# directly from its ordered vertex coordinates:
+#   Area = (1/2) * | sum_i (x_i * y_{i+1} - x_{i+1} * y_i) |
+# It needs no case-by-case decomposition into triangles/rectangles --
+# it works identically whether the polygon is convex, concave, or an
+# odd irregular shape, as long as the vertices are listed in order
+# around the boundary (clockwise or counterclockwise, doesn't matter).
+def shoelace_area(points):
+    n = len(points)
+    total = 0
+    for i in range(n):
+        x1, y1 = points[i]
+        x2, y2 = points[(i + 1) % n]
+        total += x1 * y2 - x2 * y1
+    return abs(total) / 2
+
+pentagon = [(1, 4), (4, 4), (5, 2), (3, 0), (0, 1)]
+print(shoelace_area(pentagon))   # 14.0
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="ms-problem-5">MS &middot; Purple Comet 2010, Problem 5 &middot; <span class="tag">Easy</span> <span class="tag">Number Theory</span></h3>
+<p class="problem">Find the least positive integer \(k\) so that \(k + 25973\) is a palindrome (a number which reads the same forward and backwards).</p>
+<div class="note math">&ldquo;Least \(k\) such that some property holds&rdquo; is a search problem, and a palindrome check is trivial to state precisely: a number is a palindrome exactly when its digit string equals its own reversal. There&rsquo;s no shortcut worth deriving by hand here &mdash; just try \(k=1,2,3,\ldots\) in order and stop at the first hit, which is exactly what a computer is for.</div>
+<pre><code># MATH: &quot;least k with a property&quot; is answered by an exhaustive search
+# starting from the smallest candidate -- correct as long as the
+# property test itself is exact. A palindrome test is exact and cheap:
+# convert to a string and compare it against its own reversal.
+def is_palindrome(x):
+    s = str(x)
+    return s == s[::-1]
+
+k = 0
+while not is_palindrome(25973 + k):
+    k += 1
+print(k, 25973 + k)   # 89 26062
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="ms-problem-6">MS &middot; Purple Comet 2010, Problem 6 &middot; <span class="tag">Easy</span> <span class="tag">Number Theory</span></h3>
+<p class="problem">Find the sum of the prime factors of \(777\).</p>
+<div class="note math">Factoring a three-digit number by hand means testing small primes one at a time and hoping you don&rsquo;t miss one or misdivide along the way. SymPy&rsquo;s <code>factorint</code> runs trial division (and smarter methods for larger numbers) internally and hands back the exact prime factorization as a dictionary &mdash; the sum of its keys is exactly &ldquo;the sum of the prime factors&rdquo; the problem asks for.</div>
+<pre><code># MATH: every positive integer has a unique prime factorization
+# (the Fundamental Theorem of Arithmetic). factorint returns that
+# factorization as {prime: exponent, ...}; the problem only wants
+# the DISTINCT prime factors, so sum the dictionary's keys.
+import sympy as sp
+
+factors = sp.factorint(777)
+print(factors)                 # {3: 1, 7: 1, 37: 1}
+print(sum(factors.keys()))     # 47
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="ms-problem-7">MS &middot; Purple Comet 2010, Problem 7 &middot; <span class="tag">Medium</span> <span class="tag">Algebra</span></h3>
+<p class="problem">\(x\) and \(y\) are positive real numbers where \(x\) is \(p\) percent of \(y\), and \(y\) is \(4p\) percent of \(x\). What is \(p\)?</p>
+<div class="note math">Translate each sentence into an equation exactly as it&rsquo;s spoken &mdash; &ldquo;\(x\) is \(p\) percent of \(y\)&rdquo; becomes \(x = \frac{p}{100}y\), and &ldquo;\(y\) is \(4p\) percent of \(x\)&rdquo; becomes \(y = \frac{4p}{100}x\). Substituting the first into the second eliminates \(y\) entirely and leaves a single equation in \(x\) and \(p\) alone, which (since \(x\) is a positive real, so it&rsquo;s safe to divide by it) solves cleanly for \(p\).</div>
+<pre><code># MATH: translate each percent-statement literally into an equation
+# (&quot;A is q percent of B&quot; means A = (q/100)*B), then substitute one
+# into the other to eliminate y. Solving the resulting equation in x
+# and p, with x positive and nonzero, isolates p on its own.
+import sympy as sp
+
+x, y, p = sp.symbols('x y p', positive=True)
+eq1 = sp.Eq(x, (p/100) * y)         # x is p percent of y
+eq2 = sp.Eq(y, (4*p/100) * x)       # y is 4p percent of x
+
+solution = sp.solve([eq1, eq2], [x, p], dict=True)
+print(solution)   # [{p: 50, x: y/2}]
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="ms-problem-8">MS &middot; Purple Comet 2010, Problem 8 &middot; <span class="tag">Medium</span> <span class="tag">Number Theory</span></h3>
+<p class="problem">There are exactly two four-digit numbers that are multiples of three where their first digit is double their second digit, their third digit is three more than their fourth digit, and their second digit is 2 less than their fourth digit. Find the difference of these two numbers.</p>
+<div class="note math">Each condition is a simple equation relating the four digits \(a,b,c,d\) (the number is \(\overline{abcd}\)): \(a=2b\), \(c=d+3\), \(b=d-2\), plus \(a\ge1\) since it&rsquo;s a four-digit number, plus &ldquo;divisible by 3.&rdquo; With only four digits, each ranging over 0&ndash;9, there are at most \(10^4\) combinations to check &mdash; brute force is not just acceptable here, it&rsquo;s the cleanest way to be certain no valid number is missed and that the problem&rsquo;s claim of &ldquo;exactly two&rdquo; is actually true.</div>
+<pre><code># MATH: with only 4 digits, each ranging 0-9, there are at most 10^4
+# combinations -- small enough that an exhaustive search is both fast
+# and provably complete (no risk of missing a case the way hand-listing
+# might). Filter the search by each stated digit relation in turn,
+# then by divisibility by 3, and let the count itself confirm the
+# problem's claim that exactly two numbers survive.
+candidates = []
+for a in range(1, 10):        # a >= 1: four-digit number
+    for b in range(0, 10):
+        for c in range(0, 10):
+            for d in range(0, 10):
+                if a == 2*b and c == d + 3 and b == d - 2:
+                    n = 1000*a + 100*b + 10*c + d
+                    if n % 3 == 0:
+                        candidates.append(n)
+
+print(candidates)                                # [2163, 8496]
+print(max(candidates) - min(candidates))         # 6333
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="ms-problem-9">MS &middot; Purple Comet 2010, Problem 9 &middot; <span class="tag">Medium</span> <span class="tag">Number Theory</span></h3>
+<p class="problem">What percent of the numbers \(1, 2, 3, \ldots, 1000\) are divisible by exactly one of the numbers \(4\) and \(5\)?</p>
+<p><strong>Solution 1 &mdash; direct count.</strong></p>
+<div class="note math">&ldquo;Exactly one of two conditions&rdquo; means &ldquo;one is true and the other is false&rdquo; &mdash; not &ldquo;at least one.&rdquo; That distinction (which trips people up more than the arithmetic does) is trivial to state correctly in code as a boolean XOR, and then it&rsquo;s just a matter of counting how many of the 1000 numbers satisfy it.</div>
+<pre><code># MATH: &quot;exactly one of two conditions&quot; is logical XOR -- true when the
+# two booleans differ. Looping over every number and testing that
+# directly sidesteps any inclusion-exclusion bookkeeping, at the cost
+# of nothing since checking 1000 numbers is instant.
+count = 0
+for i in range(1, 1001):
+    div4 = (i % 4 == 0)
+    div5 = (i % 5 == 0)
+    if div4 != div5:     # exactly one is true (XOR)
+        count += 1
+
+print(count, count / 1000 * 100)   # 350 35.0
+</code></pre>
+
+<p><strong>Solution 2 &mdash; inclusion-exclusion, as a cross-check.</strong></p>
+<div class="note math">The count of numbers divisible by <em>exactly one</em> of 4 and 5 equals (multiples of 4) plus (multiples of 5) minus <em>twice</em> the multiples of both &mdash; you subtract the overlap twice because it was counted once in each of the first two totals and it belongs in neither the &ldquo;exactly one&rdquo; group. Multiples of both 4 and 5 are exactly multiples of \(\mathrm{lcm}(4,5)=20\). This closed-form count should land on exactly the same number as the direct loop above &mdash; if it doesn&rsquo;t, one of the two methods has a bug.</div>
+<pre><code># MATH: |divisible by exactly one of 4,5| = |mult of 4| + |mult of 5|
+# - 2*|mult of both|, where &quot;mult of both&quot; = multiples of lcm(4,5)=20
+# (the overlap is subtracted TWICE, not once, because ordinary
+# inclusion-exclusion for &quot;at least one&quot; already subtracts it once --
+# to exclude it entirely we need to remove it a second time).
+import math
+
+N = 1000
+mult4 = N // 4
+mult5 = N // 5
+mult_both = N // math.lcm(4, 5)   # multiples of 20
+
+exactly_one = mult4 + mult5 - 2*mult_both
+print(exactly_one, exactly_one / N * 100)   # 350 35.0 -- matches Solution 1
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="ms-problem-10">MS &middot; Purple Comet 2010, Problem 10 &middot; <span class="tag">Medium</span> <span class="tag">Algebra</span></h3>
+<p class="problem">A baker uses \(6\frac23\) cups of flour when she prepares \(\frac53\) recipes of rolls. She will use \(9\frac34\) cups of flour when she prepares \(\dfrac{m}{n}\) recipes of rolls where \(m\) and \(n\) are relatively prime positive integers. Find \(m+n\).</p>
+<div class="note math">The two quantities &mdash; cups of flour and number of recipes &mdash; are directly proportional, so the ratio &ldquo;flour per recipe&rdquo; is a fixed constant you can compute once from the first sentence and then reuse to answer the second. Keeping every number as an exact fraction (never a decimal) throughout is what guarantees the final \(m/n\) comes out already in lowest terms, ready to read off \(m+n\).</div>
+<pre><code># MATH: flour and recipes scale proportionally, so
+# (flour per recipe) = total_flour / total_recipes is a fixed rate.
+# Given that rate, recipes = flour / rate for ANY amount of flour --
+# in particular for the 9 3/4 cups asked about. Exact Fractions keep
+# the whole computation rational, so the final answer is automatically
+# in lowest terms.
+from fractions import Fraction as F
+
+flour_1 = F(20, 3)     # 6 2/3 cups
+recipes_1 = F(5, 3)    # 5/3 recipes
+rate = flour_1 / recipes_1               # cups of flour per recipe
+
+flour_2 = F(39, 4)     # 9 3/4 cups
+recipes_2 = flour_2 / rate               # m/n recipes
+
+print(recipes_2)                                        # 39/16
+print(recipes_2.numerator + recipes_2.denominator)      # 55
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="ms-problem-11">MS &middot; Purple Comet 2010, Problem 11 &middot; <span class="tag">Hard</span> <span class="tag">Combinatorics</span></h3>
+<p class="problem">There are two rows of seats with three side-by-side seats in each row. Two little boys, two little girls, and two adults sit in the six seats so that neither little boy sits to the side of either little girl. In how many different ways can these six people be seated?</p>
+<div class="note math">All six people are distinct individuals, so this is a full seating count out of \(6! = 720\) arrangements, with one restriction: in each row, no boy may sit directly next to (&ldquo;to the side of&rdquo;) a girl. That restriction is local &mdash; it only depends on who sits in adjacent seats within the same row &mdash; which makes it easy to state as a boolean test on any given seating but genuinely awkward to count by a clever combinatorial shortcut without risking a double-count or a missed case. With only 720 permutations total, checking every single one directly is both fast and unimpeachable: nothing is assumed about the structure of valid arrangements, they&rsquo;re simply all found and counted.</div>
+<pre><code># MATH: 6 distinct people in 6 distinct seats gives 6! = 720 total
+# arrangements. The constraint (&quot;no boy adjacent to a girl within a
+# row&quot;) is purely local to each row's three seats, so it's checked
+# directly on every permutation rather than derived by a combinatorial
+# formula -- with only 720 cases, brute force is exact and effortless,
+# and avoids the classic seating-problem trap of over- or under-
+# counting a clever case-split by hand.
+from itertools import permutations
+
+people = ['boy1', 'boy2', 'girl1', 'girl2', 'adult1', 'adult2']
+row1, row2 = [0, 1, 2], [3, 4, 5]   # seat indices, left to right, per row
+
+def is_boy(p):  return p.startswith('boy')
+def is_girl(p): return p.startswith('girl')
+
+valid = 0
+for seating in permutations(people):
+    ok = True
+    for row in (row1, row2):
+        for i in range(3):
+            if is_boy(seating[row[i]]):
+                neighbors = [seating[row[i-1]]] if i > 0 else []
+                if i < 2:
+                    neighbors.append(seating[row[i+1]])
+                if any(is_girl(nb) for nb in neighbors):
+                    ok = False
+    if ok:
+        valid += 1
+
+print(valid)   # 176
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="ms-problem-12">MS &middot; Purple Comet 2010, Problem 12 &middot; <span class="tag">Hard</span> <span class="tag">Geometry</span></h3>
+<p class="problem">Twelve 30-60-90 triangles are placed in a circle so that the hypotenuse of each triangle coincides with the longer leg of the next triangle. The fourth and last triangle in the diagram are shaded. The ratio of the perimeters of these two triangles can be written as \(\dfrac{m}{n}\) where \(m\) and \(n\) are relatively prime positive integers. Find \(m+n\).</p>
+<figure class="diagram">
+<svg viewBox="0 0 142 103" xmlns="http://www.w3.org/2000/svg">
+  <polygon points="62.2,36.6 62.2,28.5 57.5,20.4 48.2,15.0 35.7,15.0 23.3,22.2 15.0,36.6 15.0,55.7 26.1,74.9 48.2,87.7 77.7,87.7 107.2,70.6 126.9,36.6" fill="none" stroke="#b63200" stroke-width="1" stroke-dasharray="3 2"/>
+  <polygon points="62.2,36.6 48.2,15.0 35.7,15.0" fill="#e8b04a" fill-opacity="0.55" stroke="#8c2600" stroke-width="1.5"/>
+  <polygon points="62.2,36.6 126.9,36.6 107.2,70.6" fill="#e8b04a" fill-opacity="0.55" stroke="#8c2600" stroke-width="1.5"/>
+  <circle cx="62.2" cy="36.6" r="2" fill="#2a1f18"/>
+  <text x="66" y="34" font-size="8" fill="#2a1f18">O</text>
+</svg>
+<figcaption>Twelve 30-60-90 triangles spiral out from center O; each hypotenuse becomes the next triangle&rsquo;s longer leg. The 4th and 12th (last) triangles are shaded.</figcaption>
+</figure>
+<p><strong>Solution 1 &mdash; similarity and scaling, the fast route.</strong></p>
+<div class="note math">Every one of the twelve triangles has vertex \(O\) at the center, and each occupies exactly \(30°\) at \(O\) (that&rsquo;s what &ldquo;twelve triangles placed in a circle&rdquo; with a right-angle-free vertex at the center forces, since \(12\times30°=360°\)). Calling the twelve center-to-corner distances \(r_0, r_1, \ldots, r_{12}\), the &ldquo;hypotenuse becomes the next longer leg&rdquo; rule means each triangle is a scaled copy of the last with the same fixed ratio \(r_{i+1}/r_i\) &mdash; so <em>every</em> one of the twelve triangles is similar to every other one, all with the same shape, just different sizes. For similar triangles, the perimeter scales exactly like any one linear length, so \(\dfrac{\text{perimeter}_4}{\text{perimeter}_{12}} = \dfrac{r_3}{r_{11}} = \left(\dfrac{r_1}{r_0}\right)^{3-11}\). All that remains is pinning down the fixed ratio \(r_1/r_0\) from the 30-60-90 triangle&rsquo;s own side ratios.</div>
+<pre><code># MATH: all twelve triangles are similar to each other (same 30-60-90
+# shape, common ratio r between consecutive center-distances r_i),
+# because each is built from the last by the SAME rule (hypotenuse ->
+# next longer leg) at the SAME 30-degree angle at center O. For similar
+# figures, perimeter scales exactly like any single linear length, so
+# perimeter_i / perimeter_j = (r_i / r_j) = ratio**(i-j) -- no need to
+# ever compute an actual perimeter number.
+import sympy as sp
+
+# In triangle O-P_i-P_{i+1}: side O-P_i is a leg (length r_i), the
+# 30-degree angle at O is between that leg and the hypotenuse O-P_{i+1}.
+# A 30-60-90 triangle has legs in ratio 1 : sqrt(3), hypotenuse = 2*(short leg).
+# Here O-P_i (=r_i) is the SHORTER leg opposite the 30-degree angle at
+# P_{i+1}... working through the 30-60-90 ratios, the growth factor from
+# one center-distance to the next is exactly 2/sqrt(3):
+ratio = 2 / sp.sqrt(3)
+
+# perimeter_4 corresponds to triangle index 3 (0-indexed: O,P3,P4);
+# perimeter_last (12th) corresponds to index 11 (O,P11,P12).
+perim_ratio = sp.simplify(ratio**(3 - 11))   # ratio**(-8) = (sqrt(3)/2)**8
+perim_ratio = sp.nsimplify(sp.radsimp(perim_ratio))
+print(perim_ratio)                # 81/256
+
+m, n = sp.fraction(perim_ratio)
+print(m + n)                      # 337
+</code></pre>
+
+<p><strong>Solution 2 &mdash; direct coordinates and the Law of Cosines, as a cross-check.</strong></p>
+<div class="note math">Solution 1&rsquo;s scaling argument is elegant but relies on trusting the abstract similarity claim. To confirm it independently, build the twelve triangles as actual coordinates: place \(P_i\) at distance \(r_i = r_0(2/\sqrt3)^i\) from \(O\), at angle \(30i°\), then compute each triangle&rsquo;s three side lengths directly &mdash; two are just \(r_i\) and \(r_{i+1}\), and the third (the &ldquo;short leg,&rdquo; side \(P_iP_{i+1}\)) comes from the Law of Cosines using the known \(30°\) angle at \(O\). Summing three real side lengths for the 4th and 12th triangles and dividing should reproduce exactly \(81/256\) &mdash; a genuinely different computational path (trigonometry instead of an abstract scaling ratio) landing on the same fraction is strong evidence neither has an error.</div>
+<pre><code># MATH: build each triangle O-P_i-P_{i+1} from explicit polar
+# coordinates and get its third side via the LAW OF COSINES:
+#   |P_i P_{i+1}|^2 = r_i^2 + r_{i+1}^2 - 2 r_i r_{i+1} cos(30 deg)
+# This never assumes the similarity argument from Solution 1 -- it
+# recomputes each perimeter as a genuine sum of three side lengths.
+import sympy as sp
+
+r0 = sp.Integer(1)
+growth = 2 / sp.sqrt(3)
+
+def perimeter(i):
+    r_i = r0 * growth**i
+    r_i1 = r0 * growth**(i + 1)
+    third_side = sp.sqrt(r_i**2 + r_i1**2 - 2*r_i*r_i1*sp.cos(sp.pi/6))
+    return sp.simplify(r_i + r_i1 + third_side)
+
+p4 = perimeter(3)     # triangle O,P3,P4 -- the 4th triangle
+p12 = perimeter(11)   # triangle O,P11,P12 -- the 12th (last) triangle
+
+ratio_check = sp.nsimplify(sp.radsimp(sp.simplify(p4 / p12)))
+print(ratio_check)    # 81/256 -- matches Solution 1 exactly
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="ms-problem-13">MS &middot; Purple Comet 2010, Problem 13 &middot; <span class="tag">Medium</span> <span class="tag">Number Theory</span></h3>
+<p class="problem">Find the number of sets \(A\) that satisfy the three conditions: \(A\) is a set of two positive integers; each of the numbers in \(A\) is at least 22 percent the size of the other number; \(A\) contains the number 30.
+</p>
+<div class="note math">A set \(\{30, x\}\) is valid exactly when the <em>smaller</em> of the two numbers is at least 22% of the <em>larger</em> &mdash; the condition is automatically true in the other direction, since a bigger number is always at least 22% of a smaller one. That single inequality, \(\min(30,x) \ge 0.22\max(30,x)\), splits into a bounded range of small \(x\) below 30 and a bounded range of larger \(x\) above 30; rather than solving that inequality by hand in two cases, just test every candidate \(x\) in a generous range and count how many pass.</div>
+<pre><code># MATH: for a two-element set {30, x}, &quot;each number is at least 22% of
+# the other&quot; reduces to ONE inequality (the reverse direction is
+# automatic for positive integers): min(30, x) >= 0.22 * max(30, x).
+# Using exact fractions instead of the decimal 0.22 avoids any
+# rounding at the boundary of the inequality, where an off-by-one
+# error in the count would otherwise be easy to introduce.
+from fractions import Fraction as F
+
+threshold = F(22, 100)
+count = 0
+for x in range(1, 10000):        # generous upper bound, x != 30
+    if x == 30:
+        continue
+    lo, hi = min(30, x), max(30, x)
+    if F(lo) >= threshold * F(hi):
+        count += 1
+
+print(count)   # 129
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="ms-problem-14">MS &middot; Purple Comet 2010, Problem 14 &middot; <span class="tag">Hard</span> <span class="tag">Geometry</span></h3>
+<p class="problem">Let \(ABCD\) be a trapezoid where \(\overline{AB}\) is parallel to \(\overline{CD}\). Let \(P\) be the intersection of diagonal \(\overline{AC}\) and diagonal \(\overline{BD}\). If the area of triangle \(PAB\) is 16, and the area of triangle \(PCD\) is 25, find the area of the trapezoid.</p>
+<p><strong>Solution 1 &mdash; similar triangles and the four-region relations.</strong></p>
+<div class="note math">Because \(AB \parallel CD\), triangles \(PAB\) and \(PCD\) are similar (equal angles at \(P\) from vertical angles, equal alternate-interior angles from the parallel sides). Their area ratio is the square of their linear scale factor, so the ratio \(AB/CD\) equals \(\sqrt{16/25}=4/5\). The trapezoid&rsquo;s diagonals also split it into two more triangles, \(PBC\) and \(PAD\), and a classic fact about this exact configuration is that <em>these two &ldquo;side&rdquo; triangles are always equal in area to each other</em>, and that shared area is the geometric mean \(\sqrt{[PAB]\cdot[PCD]}\). All four pieces then just add up.</div>
+<pre><code># MATH: with AB || CD, triangles PAB and PCD are similar (vertical
+# angles at P, alternate interior angles from the parallel sides), so
+# their area ratio is the SQUARE of their side-length ratio. The other
+# two pieces the diagonals create, triangle PBC and triangle PAD, are
+# always equal to each other in this configuration, and each has area
+# equal to the geometric mean sqrt([PAB] * [PCD]) -- a standard identity
+# for a trapezoid split by its diagonals. Summing all four pieces gives
+# the whole trapezoid.
+import sympy as sp
+
+area_PAB = 16
+area_PCD = 25
+area_side = sp.sqrt(area_PAB * area_PCD)   # geometric mean = each side triangle
+total = area_PAB + area_PCD + 2*area_side
+print(sp.simplify(total))   # 81
+</code></pre>
+
+<p><strong>Solution 2 &mdash; explicit coordinates, as a cross-check.</strong></p>
+<div class="note math">Rather than trust the &ldquo;side triangles are equal, and equal to \(\sqrt{[PAB][PCD]}\)&rdquo; fact as a memorized identity, verify it by actually building a trapezoid with the right area ratio in coordinates and measuring every piece with the Shoelace Formula. Since \([PAB]/[PCD]=16/25\) forces \(AB/CD=4/5\), place \(D=(0,0)\), \(C=(5,0)\) (length 5), and \(A,B\) on a parallel line of length 4 at some height \(h\); scale \(h\) so \([PAB]=16\) exactly, then compute \(P\) as the actual intersection of the diagonals and sum all four triangle areas directly &mdash; no identity assumed, just coordinates and Shoelace.</div>
+<pre><code># MATH: build one concrete trapezoid with AB || CD, sides in ratio
+# 4:5 (forced by [PAB]:[PCD] = 16:25 = (4:5)^2), scale it so [PAB] is
+# exactly 16, then find P as the literal intersection point of segments
+# AC and BD and measure every one of the four triangles with the
+# Shoelace Formula -- an entirely coordinate-based recomputation that
+# assumes none of Solution 1's identities.
+import sympy as sp
+
+t = sp.symbols('t', positive=True)   # height scale factor, to be solved for
+D = sp.Matrix([0, 0])
+C = sp.Matrix([5, 0])
+A = sp.Matrix([sp.Rational(1, 2), t])   # AB has length 4, centered above CD
+B = sp.Matrix([sp.Rational(9, 2), t])
+
+def shoelace(pts):
+    n = len(pts)
+    return abs(sum(pts[i][0]*pts[(i+1) % n][1] - pts[(i+1) % n][0]*pts[i][1] for i in range(n))) / 2
+
+# solve for t so that triangle PAB has area 16; first find P symbolically
+x, y = sp.symbols('x y')
+line_AC = sp.Line(sp.Point(A), sp.Point(C))
+line_BD = sp.Line(sp.Point(B), sp.Point(D))
+P_sym = line_AC.intersection(line_BD)[0]
+
+area_PAB_expr = shoelace([P_sym, A, B])
+t_val = sp.solve(sp.Eq(area_PAB_expr, 16), t)[0]
+
+A_n, B_n, P_n = A.subs(t, t_val), B.subs(t, t_val), P_sym.subs(t, t_val)
+areas = {
+    'PAB': shoelace([P_n, A_n, B_n]),
+    'PCD': shoelace([P_n, C, D]),
+    'PBC': shoelace([P_n, B_n, C]),
+    'PAD': shoelace([P_n, A_n, D]),
+}
+print(areas)                              # PCD comes out to 25, PBC = PAD = 20
+print(sum(areas.values()))                # 81 -- matches Solution 1
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="ms-problem-15">MS &middot; Purple Comet 2010, Problem 15 &middot; <span class="tag">Medium</span> <span class="tag">Number Theory</span></h3>
+<p class="problem">In the triangular number arrangement where row \(k\) contains \(k\) entries (row 1 is 1; row 2 is 2, 3; row 3 is 4, 5, 6; row 4 is 7, 8, 9, 10; and so on, with each row starting one more than the previous row ended), what is the number that will appear directly below the number 2010?</p>
+<div class="note math">Row \(k\) ends at the triangular number \(T_k = \frac{k(k+1)}{2}\) and begins at \(T_{k-1}+1\). Once you know which row 2010 falls in and <em>which position within that row</em> (its offset from the row&rsquo;s first entry), the number directly below it sits in the next row at the exact same offset &mdash; rows just shift over by one extra entry each time, they don&rsquo;t re-center. So: find the row containing 2010, record its offset, then read off the entry at that same offset in the next row.</div>
+<pre><code># MATH: row k spans integers from T(k-1)+1 to T(k), where T(k) =
+# k(k+1)/2 is the k-th triangular number. Find the row containing
+# 2010 by growing k until T(k) >= 2010, note 2010's OFFSET from the
+# start of its row, then the entry directly below it is at the SAME
+# offset from the start of the next row (rows align left-to-right,
+# each one entry longer than the last).
+def triangular(k):
+    return k * (k + 1) // 2
+
+k = 1
+while triangular(k) < 2010:
+    k += 1
+row = k
+row_start = triangular(row - 1) + 1
+offset = 2010 - row_start          # 0-indexed position within the row
+
+next_row_start = triangular(row) + 1
+below = next_row_start + offset
+print(f"row {row}, offset {offset}")
+print(below)   # 2073
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="ms-problem-16">MS &middot; Purple Comet 2010, Problem 16 &middot; <span class="tag">Hard</span> <span class="tag">Algebra</span></h3>
+<p class="problem">Half the volume of a 12-foot-high cone-shaped pile is grade A ore while the other half is grade B ore; the pile is worth \$62. One-third of the volume of a similarly shaped 18-foot pile is grade A ore while the other two-thirds is grade B ore; the second pile is worth \$162. Two-thirds of the volume of a similarly shaped 24-foot pile is grade A ore while the other one-third is grade B ore. What is the value in dollars of the 24-foot pile?</p>
+<p><strong>Solution 1 &mdash; set up and solve a linear system.</strong></p>
+<div class="note math">&ldquo;Similarly shaped&rdquo; cones (same proportions, just scaled) have volume proportional to the <em>cube</em> of their height &mdash; so a cone of height \(h\) has volume \(c \cdot h^3\) for some fixed shape constant \(c\) that cancels out of every ratio we&rsquo;ll actually use. Let \(p_A, p_B\) be the dollar value per unit volume of each grade. Each pile&rsquo;s total value is (grade-A fraction)\(\times\)(volume)\(\times p_A\) + (grade-B fraction)\(\times\)(volume)\(\times p_B\) &mdash; that gives two linear equations in the two unknowns \(p_A, p_B\) (with \(c\) appearing in both and cancelling when we solve), which pin down \(p_A\) and \(p_B\) exactly, ready to price the third pile.</div>
+<pre><code># MATH: similar cones have volume proportional to height^3 (any linear
+# dimension cubed), so V(h) = c*h**3 for a fixed shape constant c that
+# is the same for every pile (they're all &quot;similarly shaped&quot;). Each
+# pile's dollar value is a WEIGHTED SUM of its grade-A and grade-B
+# volumes times their respective per-unit prices p_A, p_B -- giving two
+# linear equations (one per known pile) in the two unknown prices,
+# with c appearing in every term and cancelling out when solved.
+import sympy as sp
+
+c, pA, pB = sp.symbols('c pA pB', positive=True)
+
+def V(h):
+    return c * h**3
+
+eq1 = sp.Eq(sp.Rational(1, 2)*V(12)*pA + sp.Rational(1, 2)*V(12)*pB, 62)
+eq2 = sp.Eq(sp.Rational(1, 3)*V(18)*pA + sp.Rational(2, 3)*V(18)*pB, 162)
+
+sol = sp.solve([eq1, eq2], [pA, pB], dict=True)[0]
+print(sol)   # pA, pB each still contain 1/c -- that's fine, c cancels next
+
+value_24 = sp.simplify(sp.Rational(2, 3)*V(24)*sol[pA] + sp.Rational(1, 3)*V(24)*sol[pB])
+print(value_24)   # 608
+</code></pre>
+
+<p><strong>Solution 2 &mdash; work entirely in ratios, as a cross-check.</strong></p>
+<div class="note math">Solution 1 lets SymPy carry the shape constant \(c\) and cancel it automatically &mdash; worth double-checking by removing \(c\) from the problem by hand <em>before</em> solving, to make sure that cancellation wasn&rsquo;t hiding an error. Divide every volume by \(c\) (i.e. just work with \(h^3\) directly, since \(c\) multiplies every single term identically) and re-derive the same two equations and the same final value using only cube numbers.</div>
+<pre><code># MATH: since every pile's volume is c*h^3 and c is a common factor
+# in literally every term of every equation, it can be divided out of
+# the whole problem from the start -- just use h^3 as a stand-in
+# &quot;volume unit&quot; instead of the true volume. This is mathematically
+# identical to Solution 1's approach but makes the cancellation
+# explicit up front rather than letting the solver discover it.
+import sympy as sp
+
+pA, pB = sp.symbols('pA pB', positive=True)
+
+def units(h):
+    return h**3   # volume in units of c
+
+eq1 = sp.Eq(sp.Rational(1, 2)*units(12)*pA + sp.Rational(1, 2)*units(12)*pB, 62)
+eq2 = sp.Eq(sp.Rational(1, 3)*units(18)*pA + sp.Rational(2, 3)*units(18)*pB, 162)
+
+sol = sp.solve([eq1, eq2], [pA, pB], dict=True)[0]
+print(sol)   # pA, pB now genuine numbers (no c left at all)
+
+value_24 = sp.Rational(2, 3)*units(24)*sol[pA] + sp.Rational(1, 3)*units(24)*sol[pB]
+print(value_24)   # 608 -- matches Solution 1 exactly
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="ms-problem-17">MS &middot; Purple Comet 2010, Problem 17 &middot; <span class="tag">Superhard</span> <span class="tag">Geometry</span></h3>
+<p class="problem">A triangle is divided into sections by three horizontal lines which divide the altitude of the triangle into four equal parts, and three lines connecting the top vertex with points that divide the opposite side into four equal parts. If the shaded region has area 100, find the area of the entire triangle.</p>
+<figure class="diagram">
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <polygon points="100,30 10,190 190,190" fill="none" stroke="#8c2600" stroke-width="2"/>
+  <line x1="10" y1="190" x2="190" y2="190" stroke="#b63200" stroke-width="1" stroke-dasharray="4 3"/>
+  <line x1="40" y1="150" x2="160" y2="150" stroke="#b63200" stroke-width="1" stroke-dasharray="4 3"/>
+  <line x1="70" y1="110" x2="130" y2="110" stroke="#b63200" stroke-width="1" stroke-dasharray="4 3"/>
+  <line x1="100" y1="70" x2="100" y2="70" stroke="#b63200" stroke-width="1" stroke-dasharray="4 3"/>
+  <line x1="100" y1="30" x2="10" y2="190" stroke="#b63200" stroke-width="1" stroke-dasharray="4 3"/>
+  <line x1="100" y1="30" x2="55" y2="190" stroke="#b63200" stroke-width="1" stroke-dasharray="4 3"/>
+  <line x1="100" y1="30" x2="100" y2="190" stroke="#b63200" stroke-width="1" stroke-dasharray="4 3"/>
+  <line x1="100" y1="30" x2="145" y2="190" stroke="#b63200" stroke-width="1" stroke-dasharray="4 3"/>
+  <line x1="100" y1="30" x2="190" y2="190" stroke="#b63200" stroke-width="1" stroke-dasharray="4 3"/>
+  <polygon points="66.25,150 133.75,150 122.5,110 77.5,110" fill="#e8b04a" fill-opacity="0.6" stroke="#8c2600" stroke-width="1.5"/>
+  <text x="100" y="22" text-anchor="middle" font-size="13" fill="#2a1f18">A</text>
+  <text x="2" y="200" text-anchor="middle" font-size="13" fill="#2a1f18">B</text>
+  <text x="198" y="200" text-anchor="middle" font-size="13" fill="#2a1f18">C</text>
+</svg>
+<figcaption>Three horizontal lines split the altitude into quarters; three cevians from A split BC into quarters. The shaded region is the middle two of the four cells in the second band up from the base.</figcaption>
+</figure>
+<div class="note math">This grid of 16 small regions is <em>not</em> made of equal pieces &mdash; the cells narrow sharply toward the apex, so no shortcut ratio can be guessed by eye. The reliable way through is coordinates: put \(A=(0,4)\), \(B=(-3,0)\), \(C=(3,0)\) (any triangle works, since areas only care about ratios). The three horizontal lines sit at \(y=1,2,3\); the three cevians run from \(A\) to the four equally-spaced points on \(BC\). Every one of the 16 small quadrilateral cells is then a polygon with exactly-computable vertices &mdash; found by intersecting a horizontal line \(y=\text{const}\) with a cevian line, both of which have simple linear equations. Shoelace gives every cell&rsquo;s area exactly, the whole triangle&rsquo;s area exactly, and their ratio is a pure number that doesn&rsquo;t depend on which coordinates were chosen &mdash; that ratio is what scales 100 up to the final answer.</div>
+<pre><code># MATH: place the triangle in coordinates -- A=(0,4), B=(-3,0), C=(3,0)
+# -- since only the RATIO of the shaded area to the whole triangle's
+# area matters, and that ratio is scale- and shape-invariant (it's the
+# same for every triangle cut this way). The three horizontal lines
+# are y=1,2,3; the three cevians run from A to the four equally spaced
+# points on BC. Each small cell's vertices are found by intersecting a
+# horizontal line with a cevian (both simple linear equations in y),
+# and the Shoelace Formula turns those vertices into exact areas --
+# no assumption that the small cells are equal in size (they aren't).
+import sympy as sp
+
+A = sp.Matrix([0, 4]); B = sp.Matrix([-3, 0]); C = sp.Matrix([3, 0])
+
+def shoelace(pts):
+    n = len(pts)
+    return abs(sum(pts[i][0]*pts[(i+1) % n][1] - pts[(i+1) % n][0]*pts[i][1] for i in range(n))) / 2
+
+# Q0..Q4 are the 5 points dividing BC into quarters (Q0=B, Q4=C)
+Q = [B + sp.Rational(i, 4)*(C - B) for i in range(5)]
+
+def x_on_cevian(qi, y):
+    # x-coordinate where the line from A to Q[qi] crosses height y
+    Ax, Ay = A; Qx, Qy = Q[qi]
+    t = (Ay - y) / (Ay - Qy)
+    return Ax + t*(Qx - Ax)
+
+def cell_area(col, y_lo, y_hi):
+    # the quadrilateral cell between cevians col and col+1, and
+    # horizontal lines y_lo and y_hi
+    pts = [
+        (x_on_cevian(col, y_lo), y_lo), (x_on_cevian(col + 1, y_lo), y_lo),
+        (x_on_cevian(col + 1, y_hi), y_hi), (x_on_cevian(col, y_hi), y_hi),
+    ]
+    return shoelace([(float(p[0]), float(p[1])) for p in pts])
+
+# shaded region = the two MIDDLE cells (col 1 and col 2) of the band
+# between y=1 and y=2 (the second band up from the base BC)
+shaded = cell_area(1, 1, 2) + cell_area(2, 1, 2)
+whole_triangle = shoelace([(0, 4), (-3, 0), (3, 0)])
+
+print(shaded, whole_triangle, whole_triangle / shaded)  # 1.875 12.0 6.4
+answer = 100 * (whole_triangle / shaded)
+print(answer)   # 640.0
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="ms-problem-18">MS &middot; Purple Comet 2010, Problem 18 &middot; <span class="tag">Medium</span> <span class="tag">Combinatorics</span></h3>
+<p class="problem">How many three-digit positive integers contain both even and odd digits?</p>
+<div class="note math">&ldquo;Contains both even and odd digits&rdquo; is exactly the complement of &ldquo;all digits are even&rdquo; or &ldquo;all digits are odd&rdquo; &mdash; a counting problem tailor-made for the complement trick, but it&rsquo;s just as reliable (and no slower with 900 numbers to check) to test the condition directly on every three-digit number, one by one. Checking directly also sidesteps having to carefully handle the &ldquo;first digit can&rsquo;t be 0&rdquo; boundary case inside two separate all-even/all-odd counts.</div>
+<pre><code># MATH: a number &quot;contains both even and odd digits&quot; iff its digit set
+# has at least one even digit AND at least one odd digit -- test that
+# directly on every three-digit number (100 to 999) rather than
+# computing it via the complement (all-even minus all-odd minus
+# all-neither), which needs separate care for the leading digit's
+# restricted range in each of several sub-cases.
+count = 0
+for n in range(100, 1000):
+    digits = [int(d) for d in str(n)]
+    has_even = any(d % 2 == 0 for d in digits)
+    has_odd = any(d % 2 == 1 for d in digits)
+    if has_even and has_odd:
+        count += 1
+
+print(count)   # 675
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="ms-problem-19">MS &middot; Purple Comet 2010, Problem 19 &middot; <span class="tag">Hard</span> <span class="tag">Geometry</span></h3>
+<p class="problem">Square \(A\) is adjacent to square \(B\) which is adjacent to square \(C\). The three squares all have their bottom sides along a common horizontal line as shown. The upper left vertices of the three squares are collinear. If square \(A\) has area 24, and square \(B\) has area 36, find the area of square \(C\).</p>
+<figure class="diagram">
+<svg viewBox="0 0 210 190" xmlns="http://www.w3.org/2000/svg">
+  <line x1="10" y1="170" x2="200" y2="170" stroke="#2a1f18" stroke-width="1.5"/>
+  <rect x="10" y="140" width="30" height="30" fill="none" stroke="#8c2600" stroke-width="2"/>
+  <rect x="40" y="125" width="45" height="45" fill="none" stroke="#8c2600" stroke-width="2"/>
+  <rect x="85" y="102.5" width="67.5" height="67.5" fill="none" stroke="#8c2600" stroke-width="2"/>
+  <line x1="10" y1="170" x2="172" y2="92.5" stroke="#b63200" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <text x="24" y="158" text-anchor="middle" font-size="11" fill="#2a1f18">A</text>
+  <text x="62" y="152" text-anchor="middle" font-size="11" fill="#2a1f18">B</text>
+  <text x="118" y="140" text-anchor="middle" font-size="11" fill="#2a1f18">C</text>
+</svg>
+<figcaption>Schematic, not to scale: three squares on a common baseline, growing left to right, with a single line through all three upper-left corners.</figcaption>
+</figure>
+<div class="note math">Let the squares have side lengths \(a,b,c\) (so \(a=\sqrt{24}\), \(b=\sqrt{36}=6\)) and place square \(A\)&rsquo;s bottom-left corner at the origin. Then \(A\)&rsquo;s upper-left vertex is \((0,a)\), \(B\)&rsquo;s is \((a,b)\), and \(C\)&rsquo;s is \((a+b,c)\) &mdash; each square sitting immediately right of the last along the shared baseline. &ldquo;Collinear&rdquo; means the slope from the first point to the second equals the slope from the second to the third; that single equation, with \(a\) and \(b\) already known, solves directly for \(c\), and squaring \(c\) gives the area asked for.</div>
+<pre><code># MATH: place square A's bottom-left corner at the origin. With side
+# lengths a, b, c and each square sitting immediately to the right of
+# the previous one along the shared baseline, the upper-left corners
+# are exactly (0,a), (a,b), (a+b,c). &quot;These three points are collinear&quot;
+# is the single equation slope(P1,P2) = slope(P2,P3); with a and b
+# already known from the given areas, that equation has c as its only
+# unknown.
+import sympy as sp
+
+a = sp.sqrt(24)
+b = sp.sqrt(36)
+c = sp.symbols('c', positive=True)
+
+P1 = (0, a)
+P2 = (a, b)
+P3 = (a + b, c)
+
+slope_12 = (P2[1] - P1[1]) / (P2[0] - P1[0])
+slope_23 = (P3[1] - P2[1]) / (P3[0] - P2[0])
+
+c_val = sp.solve(sp.Eq(slope_12, slope_23), c)[0]
+print(sp.simplify(c_val))          # 3*sqrt(6)
+print(sp.simplify(c_val**2))       # 54 -- the area of square C
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="ms-problem-20">MS &middot; Purple Comet 2010, Problem 20 &middot; <span class="tag">Superhard</span> <span class="tag">Algebra</span></h3>
+<p class="problem">Suppose that \(f\) is a function such that \(3f(x) - 5x\,f\!\left(\dfrac1x\right) = x - 7\) for all non-zero real numbers \(x\). Find \(f(2010)\).</p>
+<div class="note math">One equation with two unknown-looking quantities, \(f(x)\) and \(f(1/x)\), isn&rsquo;t enough to pin down \(f(x)\) alone &mdash; but the equation is stated for <em>every</em> nonzero \(x\), which means it&rsquo;s <em>also</em> true with \(x\) replaced by \(1/x\) throughout. That substitution produces a second equation relating the very same two quantities \(f(x)\) and \(f(1/x)\), just swapped and reweighted &mdash; two linear equations in two unknowns, solvable by ordinary elimination for \(f(x)\) alone, as a formula good for every \(x\), including \(x=2010\).</div>
+<pre><code># MATH: the functional equation holds for EVERY nonzero x, so it also
+# holds with x replaced by 1/x -- giving a second, independent linear
+# relation between the same two quantities f(x) and f(1/x). Treating
+# f(x) and f(1/x) as two unknowns in a 2x2 linear system (one equation
+# from x, one from substituting 1/x for x) lets ordinary elimination
+# solve for f(x) as an explicit formula, valid for every x at once.
+import sympy as sp
+
+x0 = sp.symbols('x0', positive=True)   # a stand-in for a generic x
+a, b = sp.symbols('a b')               # a = f(x0), b = f(1/x0)
+
+eq_x    = sp.Eq(3*a - 5*x0*b, x0 - 7)                 # original equation at x0
+eq_invx = sp.Eq(3*b - 5*(1/x0)*a, 1/x0 - 7)           # same equation at 1/x0
+
+solution = sp.solve([eq_x, eq_invx], [a, b], dict=True)[0]
+f_formula = sp.simplify(solution[a])
+print(f_formula)                          # 2*x0 + 1  -- so f(x) = 2x + 1
+
+print(f_formula.subs(x0, 2010))           # 4021
+</code></pre>
+</div>
+
+<h2>High School</h2>
+
+
+<div class="card example">
+<h3 id="hs-problem-1">HS &middot; Purple Comet 2010, Problem 1 &middot; <span class="tag">Easy</span> <span class="tag">Algebra</span></h3>
+<p class="problem">Let \(x\) satisfy \((6x+7)+(8x+9) = (10+11x)+(12+13x)\). There are relatively prime positive integers \(m,n\) so that \(x = -\dfrac{m}{n}\). Find \(m+n\).</p>
+<div class="note math">This is nothing but bookkeeping: collect the \(x\)-terms on one side and the constants on the other, and a single linear equation falls out. The only trap is the sign &mdash; the problem tells us the answer is negative and hands it to us pre-packaged as \(-\frac{m}{n}\), so once sympy solves for \(x\) we flip its sign to land on positive \(m\) and \(n\) before reading them off.</div>
+<pre><code># MATH: both sides are linear in x, so combining like terms reduces the
+# whole equation to a single linear equation ax=b. Let sympy do the
+# algebra exactly (as a Rational, never a float) so m/n come out exact.
+import sympy as sp
+
+x = sp.symbols(&#x27;x&#x27;)
+solution = sp.solve(sp.Eq((6*x+7)+(8*x+9), (10+11*x)+(12+13*x)), x)
+xv = solution[0]
+print(xv)              # -3/5
+
+r = -xv                # the problem writes x = -m/n, so r = m/n &gt; 0
+m, n = sp.fraction(r)
+print(m, n, m+n)        # 3 5 8
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="hs-problem-2">HS &middot; Purple Comet 2010, Problem 2 &middot; <span class="tag">Easy</span> <span class="tag">Number Theory</span></h3>
+<p class="problem">The prime factorization of \(12 = 2\cdot2\cdot3\) has three prime factors. Find the number of prime factors in the factorization of \(12! = 12\cdot11\cdot10\cdot9\cdot8\cdot7\cdot6\cdot5\cdot4\cdot3\cdot2\cdot1\).</p>
+<div class="note math">The problem&rsquo;s own wording tells us exactly what to count: not the number of <em>distinct</em> primes dividing \(12!\), but the total count <strong>with multiplicity</strong> &mdash; \(12=2\cdot2\cdot3\) is counted as three factors, not two. So the answer is \(\sum_p e_p\), the sum of the exponents in the prime factorization of \(12!\), which is exactly what sympy&rsquo;s factorization utility hands back.</div>
+<pre><code># MATH: &quot;number of prime factors&quot; here means WITH multiplicity (the
+# worked example 12=2*2*3 has three, not two), i.e. the sum of the
+# exponents e_p in the prime factorization n = prod p^e_p. Factor 12!
+# exactly and sum its exponents.
+import sympy as sp
+
+n = sp.factorial(12)
+factors = sp.factorint(n)
+print(factors)                    # {2: 10, 3: 5, 5: 2, 7: 1, 11: 1}
+print(sum(factors.values()))      # 19
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="hs-problem-3">HS &middot; Purple Comet 2010, Problem 3 &middot; <span class="tag">Medium</span> <span class="tag">Geometry</span></h3>
+<p class="problem">A grid has six rows with six points in each row; adjacent points (horizontally or vertically) are a distance two apart. Find the area of the irregularly shaped ten-sided figure shown.</p>
+<figure class="diagram">
+<svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
+  <g fill="#b8895a">
+    <circle cx="20" cy="220" r="2.4"/><circle cx="60" cy="220" r="2.4"/><circle cx="100" cy="220" r="2.4"/><circle cx="140" cy="220" r="2.4"/><circle cx="180" cy="220" r="2.4"/><circle cx="220" cy="220" r="2.4"/>
+    <circle cx="20" cy="180" r="2.4"/><circle cx="60" cy="180" r="2.4"/><circle cx="100" cy="180" r="2.4"/><circle cx="140" cy="180" r="2.4"/><circle cx="180" cy="180" r="2.4"/><circle cx="220" cy="180" r="2.4"/>
+    <circle cx="20" cy="140" r="2.4"/><circle cx="60" cy="140" r="2.4"/><circle cx="100" cy="140" r="2.4"/><circle cx="140" cy="140" r="2.4"/><circle cx="180" cy="140" r="2.4"/><circle cx="220" cy="140" r="2.4"/>
+    <circle cx="20" cy="100" r="2.4"/><circle cx="60" cy="100" r="2.4"/><circle cx="100" cy="100" r="2.4"/><circle cx="140" cy="100" r="2.4"/><circle cx="180" cy="100" r="2.4"/><circle cx="220" cy="100" r="2.4"/>
+    <circle cx="20" cy="60" r="2.4"/><circle cx="60" cy="60" r="2.4"/><circle cx="100" cy="60" r="2.4"/><circle cx="140" cy="60" r="2.4"/><circle cx="180" cy="60" r="2.4"/><circle cx="220" cy="60" r="2.4"/>
+    <circle cx="20" cy="20" r="2.4"/><circle cx="60" cy="20" r="2.4"/><circle cx="100" cy="20" r="2.4"/><circle cx="140" cy="20" r="2.4"/><circle cx="180" cy="20" r="2.4"/><circle cx="220" cy="20" r="2.4"/>
+  </g>
+  <polygon points="20,60 60,20 100,60 140,20 220,20 180,60 180,100 220,180 180,220 60,180" fill="#f2c14e" fill-opacity="0.55" stroke="#8c2600" stroke-width="1.5"/>
+</svg>
+<figcaption>The ten-sided figure traced on the \(6\times6\) point grid; each grid step represents a distance of 2.</figcaption>
+</figure>
+<div class="note math">The figure&rsquo;s vertices sit at nice grid points, which makes this a job for the <strong>shoelace formula</strong> rather than for decomposing the shape into triangles by hand. There is one thing to watch: the shoelace formula is applied most conveniently in <em>grid-step</em> coordinates (each step \(=1\)), but the problem says adjacent points are actually a distance <strong>2</strong> apart. Since area scales with the <em>square</em> of a linear scale factor, the true area is \(2^2=4\) times the shoelace value computed on the unit grid &mdash; a scaling factor that&rsquo;s easy to forget.</div>
+<pre><code># MATH: the shoelace formula gives the area of a polygon directly from
+# its vertex coordinates. Because area scales with the SQUARE of
+# length, computing it on the convenient unit grid (step = 1) and then
+# multiplying by 2^2 = 4 correctly accounts for the problem&#x27;s actual
+# grid spacing of 2 between adjacent points.
+def shoelace(pts):
+    n = len(pts)
+    total = 0
+    for i in range(n):
+        x1, y1 = pts[i]
+        x2, y2 = pts[(i+1) % n]
+        total += x1*y2 - x2*y1
+    return abs(total) / 2
+
+# vertices in unit-grid coordinates (y=0 bottom row, y=5 top row)
+vertices = [(0,4),(1,5),(2,4),(3,5),(5,5),(4,4),(4,3),(5,1),(4,0),(1,1)]
+unit_area = shoelace(vertices)
+print(unit_area)            # 16.5
+
+true_area = unit_area * 2**2   # rescale: real spacing is 2, not 1
+print(true_area)            # 66.0
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="hs-problem-4">HS &middot; Purple Comet 2010, Problem 4 &middot; <span class="tag">Medium</span> <span class="tag">Algebra</span></h3>
+<p class="problem">Sally&rsquo;s salary in 2006 was \$37{,}500. For 2007 she got a salary increase of \(x\) percent. For 2008 she got another salary increase of \(x\) percent. For 2009 she got a salary decrease of \(2x\) percent. Her 2009 salary is \$34{,}825. Suppose instead, Sally had gotten a \(2x\) percent salary decrease for 2007, an \(x\) percent salary increase for 2008, and an \(x\) percent salary increase for 2009. What would her 2009 salary be then?</p>
+<div class="note math">It is tempting to solve the messy cubic for \(x\) first &mdash; and we will, just to be thorough &mdash; but the real insight is that we never actually need to. Both scenarios multiply the starting salary by the exact same three factors, \((1+\frac{x}{100})\), \((1+\frac{x}{100})\), and \((1-\frac{2x}{100})\); only the <em>order</em> in which the raises and cut are applied changes. Multiplication of real numbers is commutative, so reordering the factors can never change their product. The reordered salary is therefore identical to the original: \$34{,}825, with zero extra computation required.</div>
+<pre><code># MATH: reordering percentage changes just reorders the FACTORS being
+# multiplied together (a raise of x% multiplies by 1+x/100, a cut of
+# 2x% multiplies by 1-2x/100). Since real-number multiplication is
+# commutative, a*b*c = c*a*b no matter the order -- so the reordered
+# scenario gives the exact same final salary, without needing to know
+# x at all. We solve for x too, purely as a sanity check that a valid
+# positive x actually exists.
+import sympy as sp
+
+S0 = 37500
+x = sp.symbols(&#x27;x&#x27;, positive=True, real=True)
+
+original = S0 * (1 + x/100) * (1 + x/100) * (1 - 2*x/100)
+reordered = S0 * (1 - 2*x/100) * (1 + x/100) * (1 + x/100)
+print(sp.expand(original - reordered))   # 0 -- identical for every x
+
+# check a real, positive x exists solving original(x) = 34825
+import mpmath
+f = lambda xv: float(original.subs(x, xv)) - 34825
+root = mpmath.findroot(f, 15)
+print(root)   # about 14.715 -- a valid percent increase exists
+
+print(34825)  # the reordered-scenario answer, no solving required
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="hs-problem-5">HS &middot; Purple Comet 2010, Problem 5 &middot; <span class="tag">Easy</span> <span class="tag">Number Theory</span></h3>
+<p class="problem">If \(a\) and \(b\) are positive integers such that \(a\cdot b = 2400\), find the least possible value of \(a+b\).</p>
+<div class="note math">Among all pairs of positive numbers with a fixed product, the AM&ndash;GM inequality says the <em>sum</em> is minimized when the two numbers are as close to equal as possible &mdash; ideally both equal to \(\sqrt{2400}\approx48.99\). Since \(a\) and \(b\) must be integer <em>divisors</em> of 2400, the strategy is to scan the divisors near \(\sqrt{2400}\) and find the closest matching pair, rather than checking all factor pairs blindly.</div>
+<pre><code># MATH: for a fixed product a*b, the sum a+b is smallest when a and b
+# are as close together as possible (AM-GM: a+b &gt;= 2*sqrt(ab), with
+# equality when a=b). So scan the divisors of 2400 near sqrt(2400) and
+# pick the pair with the smallest sum -- checking every divisor is
+# both correct and, for a number this small, effectively free.
+import sympy as sp
+
+N = 2400
+best = None
+for a in sp.divisors(N):
+    b = N // a
+    s = a + b
+    if best is None or s &lt; best:
+        best = s
+print(best)   # 98 (achieved at a=48, b=50, both near sqrt(2400)=48.99)
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="hs-problem-6">HS &middot; Purple Comet 2010, Problem 6 &middot; <span class="tag">Easy</span> <span class="tag">Algebra</span></h3>
+<p class="problem">Evaluate the sum \(1+2-3+4+5-6+7+8-9\cdots+208+209-210\).</p>
+<div class="note math">The pattern repeats every three terms: \((+,+,-)\), always landing on a multiple of 3 for the subtracted term. That&rsquo;s simple enough to encode directly &mdash; loop from 1 to 210 and flip the sign whenever the index is a multiple of 3 &mdash; rather than trying to spot a closed form by hand.</div>
+<pre><code># MATH: the sign pattern is period 3: +,+,- repeating, with the minus
+# always landing on a multiple of 3 (…+4+5-6…). Encode that rule
+# directly and sum, rather than deriving a closed form by hand -- with
+# only 210 terms, direct summation is both fast and unambiguous.
+total = 0
+for i in range(1, 211):
+    if i % 3 == 0:
+        total -= i
+    else:
+        total += i
+print(total)   # 7245
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="hs-problem-7">HS &middot; Purple Comet 2010, Problem 7 &middot; <span class="tag">Medium</span> <span class="tag">Number Theory</span></h3>
+<p class="problem">Find the sum of the digits in the decimal representation of the number \(5^{2010}\cdot 16^{502}\).</p>
+<div class="note math">The instinct to just compute a 2000-plus digit integer and sum its digits with Python works fine (Python integers have no size limit), but the number simplifies beautifully first: \(16^{502}=2^{2008}\), and pairing \(2008\) of the \(2010\) factors of 5 with those powers of 2 turns the whole expression into \(25\cdot10^{2008}\) &mdash; a 2 and a 5 followed by a wall of zeroes. Either way of computing it should agree, which is exactly the kind of cross-check worth running.</div>
+<pre><code># MATH: 16^502 = 2^2008, so 5^2010 * 16^502 = 5^2 * (5^2008 * 2^2008)
+# = 25 * 10^2008 -- a 2, a 5, and 2008 trailing zeroes. Its digit sum
+# is therefore just 2+5=7. Verify this by ALSO computing the huge
+# integer directly and summing its digits, as a brute-force check that
+# the algebraic simplification wasn&#x27;t applied incorrectly.
+value = 5**2010 * 16**502
+digit_sum_direct = sum(int(ch) for ch in str(value))
+print(digit_sum_direct)         # 7
+
+# closed-form check
+simplified = 25 * 10**2008
+print(simplified == value, sum(int(ch) for ch in str(simplified)))  # True 7
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="hs-problem-8">HS &middot; Purple Comet 2010, Problem 8 &middot; <span class="tag">Hard</span> <span class="tag">Geometry</span></h3>
+<p class="problem">Some small squares, each with area 3, are enclosed inside a larger square as shown; squares that touch each other do so with the corner of one square coinciding with the midpoint of a side of the other square. Find integer \(n\) such that the area of the shaded region inside the larger square but outside the smaller squares is \(\sqrt{n}\).</p>
+<figure class="diagram">
+<svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
+  <rect x="9" y="9" width="222" height="222" fill="#f2c14e" fill-opacity="0.45" stroke="#8c2600" stroke-width="1.5"/>
+  <!-- center square, side s -->
+  <rect x="107.5" y="107.5" width="25" height="25" fill="#fbe9c2" stroke="#8c2600" stroke-width="1"/>
+  <!-- 4 corner squares, upright -->
+  <rect x="15.7" y="15.7" width="25" height="25" fill="#fbe9c2" stroke="#8c2600" stroke-width="1"/>
+  <rect x="199.3" y="15.7" width="25" height="25" fill="#fbe9c2" stroke="#8c2600" stroke-width="1"/>
+  <rect x="15.7" y="199.3" width="25" height="25" fill="#fbe9c2" stroke="#8c2600" stroke-width="1"/>
+  <rect x="199.3" y="199.3" width="25" height="25" fill="#fbe9c2" stroke="#8c2600" stroke-width="1"/>
+  <!-- 4 diamond squares at edge midpoints -->
+  <polygon points="120,90.5 149.5,120 120,149.5 90.5,120" fill="#e8a33d" stroke="#8c2600" stroke-width="1"/>
+  <polygon points="120,90.5 149.5,120 120,149.5 90.5,120" fill="#e8a33d" stroke="#8c2600" stroke-width="1" transform="translate(0,-90.5) translate(0,90.5)"/>
+  <polygon points="30,120 59.5,90.5 89,120 59.5,149.5" fill="#e8a33d" stroke="#8c2600" stroke-width="1"/>
+  <polygon points="151,120 180.5,90.5 210,120 180.5,149.5" fill="#e8a33d" stroke="#8c2600" stroke-width="1"/>
+  <polygon points="120,30 149.5,59.5 120,89 90.5,59.5" fill="#e8a33d" stroke="#8c2600" stroke-width="1"/>
+  <polygon points="120,151 149.5,180.5 120,210 90.5,180.5" fill="#e8a33d" stroke="#8c2600" stroke-width="1"/>
+</svg>
+<figcaption>Nine small squares (area 3 each): one centered, four upright at the corners, four rotated 45&deg; at the edge midpoints. Shaded: everything inside the big square but outside all nine.</figcaption>
+</figure>
+<div class="note math">Each small square has side \(s=\sqrt3\). Reading off the touching rule &mdash; a corner of one square meets the midpoint of the next one&rsquo;s side &mdash; the center square&rsquo;s half-side plus a diamond square&rsquo;s half-diagonal places each diamond&rsquo;s center a distance \(d=\frac{s(1+\sqrt2)}{2}\) from the middle, and the outer square&rsquo;s half-width extends a further half-diagonal beyond that, \(hw=d+\frac{s}{\sqrt2}\). Everything &mdash; the outer square&rsquo;s full area, the nine small squares&rsquo; total area (\(9\times3=27\)), and their difference &mdash; then reduces to clean algebra with \(\sqrt2\), with the final \(\sqrt2\)&rsquo;s squaring away to a clean integer \(n\).</div>
+<pre><code># MATH: side of each small square is s=sqrt(3) (area 3). The corner-
+# touches-midpoint rule fixes a diamond square&#x27;s center at distance
+# d = s*(1+sqrt2)/2 from the center square (half-side + half-diagonal),
+# and the outer square&#x27;s half-width hw = d + s/sqrt(2) (one more
+# half-diagonal, reaching the corner squares). From there the shaded
+# area -- outer area minus the nine small squares&#x27; total area 9*3=27
+# -- simplifies to a pure multiple of sqrt(2), whose square is the
+# integer n the problem asks for.
+import sympy as sp
+
+s = sp.sqrt(3)                      # small-square side, area 3
+d = s * (1 + sp.sqrt(2)) / 2        # center-to-diamond-center distance
+hw = d + s / sp.sqrt(2)             # outer square half-width
+
+outer_area = sp.simplify((2*hw)**2)
+print(outer_area)                   # 12*sqrt(2) + 27
+
+shaded = sp.simplify(outer_area - 9*3)
+print(shaded)                       # 12*sqrt(2)
+
+n = sp.simplify(shaded**2)
+print(n)                            # 288
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="hs-problem-9">HS &middot; Purple Comet 2010, Problem 9 &middot; <span class="tag">Medium</span> <span class="tag">Algebra</span></h3>
+<p class="problem">Find positive integer \(n\) so that \(\dfrac{80-6\sqrt n}{n}\) is the reciprocal of \(\dfrac{80+6\sqrt n}{n}\).</p>
+<div class="note math">&ldquo;\(A\) is the reciprocal of \(B\)&rdquo; simply means \(AB=1\). Multiplying the two given fractions together, the numerator becomes a difference of squares, \((80-6\sqrt n)(80+6\sqrt n)=80^2-36n\), so the whole condition collapses to one equation in \(n\) alone: \(\dfrac{80^2-36n}{n^2}=1\).</div>
+<pre><code># MATH: &quot;A is the reciprocal of B&quot; means A*B=1. Multiplying the two
+# given expressions, the numerator (80-6*sqrt(n))*(80+6*sqrt(n)) is a
+# difference of squares = 80^2 - 36n, collapsing the whole condition to
+# a single polynomial equation in n, solved exactly.
+import sympy as sp
+
+n = sp.symbols(&#x27;n&#x27;, positive=True)
+A = (80 - 6*sp.sqrt(n)) / n
+B = (80 + 6*sp.sqrt(n)) / n
+solutions = sp.solve(sp.Eq(A*B, 1), n)
+print(solutions)   # [64]
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="hs-problem-10">HS &middot; Purple Comet 2010, Problem 10 &middot; <span class="tag">Medium</span> <span class="tag">Algebra</span></h3>
+<p class="problem">The set \(S\) contains nine numbers. The mean of the numbers in \(S\) is 202. The mean of the five smallest of the numbers in \(S\) is 100. The mean of the five largest numbers in \(S\) is 300. What is the median of the numbers in \(S\)?</p>
+<div class="note math">With nine numbers sorted in order, the &ldquo;five smallest&rdquo; and &ldquo;five largest&rdquo; groups overlap in exactly one number &mdash; the middle one, which <em>is</em> the median. So the sum of the five smallest plus the sum of the five largest double-counts the median, and equals the total sum of all nine numbers plus one extra copy of the median. Solving that single equation for the median needs no sorting of an actual list at all &mdash; only the three given means.</div>
+<pre><code># MATH: with 9 numbers sorted, the 5 smallest and 5 largest groups
+# overlap in exactly the middle (5th) number -- the median. So
+# sum(5 smallest) + sum(5 largest) = sum(all 9) + median (the median
+# gets counted twice). Solving for the median needs only the three
+# given means, converted to sums.
+total_sum = 202 * 9
+sum_five_smallest = 100 * 5
+sum_five_largest = 300 * 5
+
+median = sum_five_smallest + sum_five_largest - total_sum
+print(median)   # 182
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="hs-problem-11">HS &middot; Purple Comet 2010, Problem 11 &middot; <span class="tag">Medium</span> <span class="tag">Combinatorics</span></h3>
+<p class="problem">A jar contains one white marble, two blue marbles, three red marbles, and four green marbles. If you select two of these marbles without replacement, the probability that both marbles will be the same color is \(\dfrac{m}{n}\) where \(m\) and \(n\) are relatively prime positive integers. Find \(m+n\).</p>
+<div class="note math">&ldquo;Both the same color&rdquo; splits cleanly into four disjoint cases &mdash; both white, both blue, both red, both green &mdash; and since a single white marble can&rsquo;t be paired with itself, that case simply contributes zero. Each case is a simple combination count: \(\binom{k}{2}\) ways to choose 2 of the \(k\) marbles of that color, all over \(\binom{10}{2}\) ways to choose any 2 marbles.</div>
+<pre><code># MATH: &quot;both same color&quot; is 4 disjoint events (both white, both blue,
+# both red, both green); their counts add. Each is a simple
+# combination binom(k,2) out of binom(10,2) total ways to pick 2 of
+# the 10 marbles. binom(1,2)=0 automatically handles the single white
+# marble correctly (no case-by-case exception needed).
+import sympy as sp
+
+total_ways = sp.binomial(10, 2)
+same_color_ways = (sp.binomial(1, 2) + sp.binomial(2, 2)
+                    + sp.binomial(3, 2) + sp.binomial(4, 2))
+p = sp.Rational(same_color_ways, total_ways)
+print(p)                      # 2/9
+print(p.p + p.q)              # 11
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="hs-problem-12">HS &middot; Purple Comet 2010, Problem 12 &middot; <span class="tag">Easy</span> <span class="tag">Geometry</span></h3>
+<p class="problem">A good approximation of \(\pi\) is 3.14. Find the least positive integer \(d\) such that if the area of a circle with diameter \(d\) is calculated using the approximation 3.14, the error will exceed 1.</p>
+<div class="note math">The error grows with \(d\), so the least qualifying \(d\) is found the moment we cross the threshold &mdash; a simple increasing search. The exact error at diameter \(d\) is \(\left|\pi-3.14\right|\left(\frac{d}{2}\right)^2\), which grows as \(d^2\), so it&rsquo;s not obvious in advance just how small \(d\) can be; scanning integers up from 1 settles it exactly.</div>
+<pre><code># MATH: true area is pi*(d/2)^2, the approximation gives 3.14*(d/2)^2,
+# and their difference |pi-3.14|*(d/2)^2 grows monotonically with d.
+# Scan integers upward and stop at the first d where that error
+# exceeds 1 -- correct because the error is strictly increasing, so no
+# smaller d could possibly work once we find the threshold.
+import math
+
+d = 1
+while True:
+    r = d / 2
+    error = abs(math.pi - 3.14) * r * r
+    if error &gt; 1:
+        print(d, error)   # 51 1.0356229967628678
+        break
+    d += 1
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="hs-problem-13">HS &middot; Purple Comet 2010, Problem 13 &middot; <span class="tag">Hard</span> <span class="tag">Algebra</span></h3>
+<p class="problem">Let \(S\) be the set of all 10-term arithmetic progressions that include the numbers 4 and 10 (e.g. \((-2,1,4,7,10,13,16,19,22,25)\) and \((10, 8\frac12, 7, 5\frac12, 4, 2\frac12, 1, -\frac12, -2, -3\frac12)\) are both members of \(S\)). Find the sum of all values of \(a_{10}\) for each \((a_1,\ldots,a_{10})\in S\).</p>
+<div class="note math">The two example sequences reveal the real structure: 4 and 10 don&rsquo;t have to be the <em>first</em> and <em>last</em> terms at all &mdash; they can sit at <em>any</em> two of the ten positions, in either order. So the actual object to enumerate is not &ldquo;one progression&rdquo; but all \(10\times9=90\) ordered choices of &ldquo;which position holds 4, which position holds 10&rdquo;: for positions \(i\ne j\) (from 1 to 10), the common difference is forced to be \(d=\frac{10-4}{j-i}=\frac{6}{j-i}\), which pins down the whole sequence and, in particular, \(a_{10}\). The problem asks for the sum over <em>every</em> such progression in \(S\) &mdash; not a sum of distinct resulting values &mdash; so we must sum across all 90 ordered pairs \((i,j)\), including cases where different pairs happen to produce the same \(a_{10}\).</div>
+<pre><code># MATH: 4 and 10 can occupy ANY two of the ten positions (not just
+# first/last -- the problem&#x27;s own examples show 10 as a_1 and 4 as
+# a_1!). For positions i != j (1-indexed, 1..10), the common
+# difference is forced: d=(10-4)/(j-i)=6/(j-i). That pins down a_1 and
+# therefore a_10=a_1+9d. S has one such progression for EVERY ordered
+# pair (i,j), i != j -- 90 of them -- and the problem wants the sum of
+# a_10 over ALL of S, so we sum across all 90 pairs, not over the
+# smaller set of distinct a_10 values some pairs happen to share.
+import sympy as sp
+
+total = sp.Rational(0)
+count = 0
+for i in range(1, 11):
+    for j in range(1, 11):
+        if i == j:
+            continue
+        d = sp.Rational(6, j - i)     # a_j - a_i = 6 = (j-i)*d
+        a1 = 4 - (i - 1)*d            # a_i = 4  =&gt;  a1 = 4-(i-1)d
+        a10 = a1 + 9*d
+        total += a10
+        count += 1
+
+print(count, total)   # 90 630
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="hs-problem-14">HS &middot; Purple Comet 2010, Problem 14 &middot; <span class="tag">Medium</span> <span class="tag">Algebra</span></h3>
+<p class="problem">There are positive integers \(b\) and \(c\) such that the polynomial \(2x^2+bx+c\) has two real roots which differ by 30. Find the least possible value of \(b+c\).</p>
+<div class="note math">By Vieta&rsquo;s formulas the two roots \(r_1,r_2\) satisfy \(r_1+r_2=-\frac b2\) and \(r_1r_2=\frac c2\), and their <em>difference</em> is controlled by \((r_1-r_2)^2=(r_1+r_2)^2-4r_1r_2=\frac{b^2}{4}-2c\). Setting that equal to \(30^2=900\) gives one Diophantine-flavored equation relating \(b\) and \(c\); scanning \(b\) upward and checking whether the resulting \(c\) is a positive integer finds the minimizing pair directly.</div>
+<pre><code># MATH: by Vieta, for roots r1,r2 of 2x^2+bx+c: r1+r2=-b/2, r1*r2=c/2.
+# The SQUARED difference of the roots is a symmetric function of them:
+# (r1-r2)^2 = (r1+r2)^2 - 4*r1*r2 = b^2/4 - 2c, which must equal
+# 30^2=900. Scan b upward, solve for c, and keep only positive integer
+# c, tracking the minimum b+c found.
+import sympy as sp
+
+best = None
+for b in range(1, 2000):
+    val = sp.Rational(b, 1)**2 / 4 - 900     # this must equal 2c
+    if val &lt; 0:
+        continue
+    c = val / 2
+    if c &gt; 0 and c == int(c):
+        s = b + int(c)
+        if best is None or s &lt; best[0]:
+            best = (s, b, int(c))
+
+print(best)   # (126, 64, 62) -- b+c = 126
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="hs-problem-15">HS &middot; Purple Comet 2010, Problem 15 &middot; <span class="tag">Hard</span> <span class="tag">Number Theory</span></h3>
+<p class="problem">Find the smallest possible sum \(a+b+c+d+e\) where \(a,b,c,d,e\) are positive integers satisfying: each of the pairs \((a,b), (b,c), (c,d), (d,e)\) is <strong>not</strong> relatively prime; all other pairs of the five integers <strong>are</strong> relatively prime.</p>
+<div class="note math">Ten pairs total among five numbers, with a very specific pattern required: the four &ldquo;consecutive&rdquo; pairs along a chain \(a\text{&ndash;}b\text{&ndash;}c\text{&ndash;}d\text{&ndash;}e\) must each share a common factor, while the six &ldquo;non-adjacent&rdquo; pairs must share none. There&rsquo;s no slick formula for this &mdash; it&rsquo;s a search problem, best handled by bounding each variable and checking every combination&rsquo;s ten gcd conditions directly, pruning early (checking \(\gcd(a,b)\) before even choosing \(c\)) to keep the search fast.</div>
+<pre><code># MATH: this is a constraint-satisfaction search over the ten pairwise
+# gcd conditions (4 required &quot;not coprime&quot;, 6 required &quot;coprime&quot;) --
+# no closed-form shortcut applies. Bound each variable by a modest
+# limit and check constraints as early as possible (pruning on a
+# before trying b, on b before trying c, etc.) so invalid branches are
+# abandoned immediately rather than after a full 5-tuple is built.
+from math import gcd
+
+best = None
+LIMIT = 60
+for a in range(1, LIMIT):
+    for b in range(1, LIMIT):
+        if gcd(a, b) == 1:
+            continue                          # need (a,b) NOT coprime
+        for c in range(1, LIMIT):
+            if gcd(b, c) == 1 or gcd(a, c) != 1:
+                continue                      # (b,c) not coprime, (a,c) coprime
+            for d in range(1, LIMIT):
+                if gcd(c, d) == 1 or gcd(a, d) != 1 or gcd(b, d) != 1:
+                    continue
+                for e in range(1, LIMIT):
+                    if (gcd(d, e) == 1 or gcd(a, e) != 1
+                            or gcd(b, e) != 1 or gcd(c, e) != 1):
+                        continue
+                    s = a + b + c + d + e
+                    if best is None or s &lt; best[0]:
+                        best = (s, a, b, c, d, e)
+
+print(best)   # (47, 5, 15, 6, 14, 7)
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="hs-problem-16">HS &middot; Purple Comet 2010, Problem 16 &middot; <span class="tag">Hard</span> <span class="tag">Geometry</span></h3>
+<p class="problem">Triangle \(ABC\) has side lengths \(AB=39\), \(BC=57\), \(CA=70\) as shown. Median \(\overline{AD}\) is divided into three congruent segments by points \(E\) and \(F\). Lines \(BE\) and \(BF\) intersect side \(\overline{AC}\) at points \(G\) and \(H\), respectively. Find the distance from \(G\) to \(H\).</p>
+<figure class="diagram">
+<svg viewBox="0 0 400 320" xmlns="http://www.w3.org/2000/svg">
+  <polygon points="54,85 60,280 345,280" fill="none" stroke="#8c2600" stroke-width="1.5"/>
+  <line x1="54" y1="85" x2="202" y2="280" stroke="#b63200" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="60" y1="280" x2="200" y2="183" stroke="#8c2600" stroke-width="1"/>
+  <line x1="60" y1="280" x2="112" y2="124" stroke="#8c2600" stroke-width="1"/>
+  <circle cx="54" cy="85" r="3" fill="#8c2600"/>
+  <circle cx="60" cy="280" r="3" fill="#8c2600"/>
+  <circle cx="345" cy="280" r="3" fill="#8c2600"/>
+  <circle cx="202" cy="280" r="3" fill="#b63200"/>
+  <circle cx="153" cy="215" r="3" fill="#f2c14e" stroke="#8c2600" stroke-width="1"/>
+  <circle cx="104" cy="150" r="3" fill="#f2c14e" stroke="#8c2600" stroke-width="1"/>
+  <circle cx="200" cy="183" r="3" fill="#e8a33d" stroke="#8c2600" stroke-width="1"/>
+  <circle cx="112" cy="124" r="3" fill="#e8a33d" stroke="#8c2600" stroke-width="1"/>
+  <text x="38" y="80" font-size="13" fill="#4a2b00">A</text>
+  <text x="42" y="298" font-size="13" fill="#4a2b00">B</text>
+  <text x="349" y="298" font-size="13" fill="#4a2b00">C</text>
+  <text x="207" y="298" font-size="13" fill="#4a2b00">D</text>
+  <text x="158" y="212" font-size="13" fill="#4a2b00">E</text>
+  <text x="80" y="150" font-size="13" fill="#4a2b00">F</text>
+  <text x="205" y="180" font-size="13" fill="#4a2b00">G</text>
+  <text x="90" y="118" font-size="13" fill="#4a2b00">H</text>
+  <text x="130" y="292" font-size="12" fill="#8c2600">57</text>
+  <text x="15" y="185" font-size="12" fill="#8c2600">39</text>
+  <text x="215" y="185" font-size="12" fill="#8c2600">70</text>
+</svg>
+<figcaption>Median \(AD\) trisected by \(E\) and \(F\) (E closer to D); cevians \(BE\), \(BF\) meet \(AC\) at \(G\), \(H\).</figcaption>
+</figure>
+
+<p><strong>Solution 1 &mdash; coordinates.</strong></p>
+<div class="note math">With a triangle this specific (three concrete side lengths, cevians through a trisected median), coordinates turn every step into pure algebra: place \(B\) and \(C\) on the \(x\)-axis (so \(D\), their midpoint, is trivial), solve for \(A\) from the two distance constraints \(AB=39\), \(CA=70\), locate \(E\) and \(F\) by dividing segment \(AD\) into thirds, and find \(G,H\) as the intersections of lines \(BE\), \(BF\) with line \(AC\). No synthetic cleverness required &mdash; just solving linear systems sympy handles exactly.</div>
+<pre><code># MATH: place B, C on the x-axis so their midpoint D is trivial; solve
+# for A&#x27;s exact coordinates from the two given side lengths AB=39,
+# CA=70 (two circle equations, two unknowns). E, F trisect segment AD.
+# G, H are found as literal line-line intersections of BE, BF with AC
+# -- pure coordinate algebra, no synthetic argument needed, and sympy
+# keeps every quantity exact (nested square roots) throughout.
+import sympy as sp
+
+B = sp.Matrix([0, 0])
+C = sp.Matrix([57, 0])
+Ax, Ay = sp.symbols(&#x27;Ax Ay&#x27;, real=True)
+eqs = [sp.Eq(Ax**2 + Ay**2, 39**2), sp.Eq((Ax-57)**2 + Ay**2, 70**2)]
+sol = [s for s in sp.solve(eqs, [Ax, Ay]) if s[1] &gt; 0][0]
+A = sp.Matrix(sol)
+
+D = (B + C) / 2
+E = A + sp.Rational(1, 3)*(D - A)     # trisection points of median AD
+F = A + sp.Rational(2, 3)*(D - A)
+
+def line_intersect(P1, P2, P3, P4):
+    t, u = sp.symbols(&#x27;t u&#x27;, real=True)
+    pt, pu = P1 + t*(P2-P1), P3 + u*(P4-P3)
+    sol = sp.solve([sp.Eq(pt[0], pu[0]), sp.Eq(pt[1], pu[1])], [t, u])
+    return P3 + sol[u]*(P4-P3)
+
+G = line_intersect(B, E, A, C)     # line BE meets AC
+H = line_intersect(B, F, A, C)     # line BF meets AC
+GH = sp.sqrt((G[0]-H[0])**2 + (G[1]-H[1])**2)
+print(sp.nsimplify(sp.simplify(GH)))   # 21
+</code></pre>
+
+<p><strong>Solution 2 &mdash; mass points / area ratios, as a cross-check.</strong></p>
+<div class="note math">A synthetic route avoids coordinates entirely: apply <strong>mass points</strong> (or equivalently Menelaus&rsquo;s theorem) to triangle \(ABD\) cut by cevian \(BE\) &mdash; with \(E\) one-third of the way from \(D\) to \(A\), balancing masses gives \(\frac{AG}{GC}\) directly. The same idea on triangle \(ABD\) with \(F\) two-thirds of the way from \(D\) to \(A\) gives \(\frac{AH}{HC}\). Converting both ratios into distances along \(AC=70\) and subtracting recovers \(GH\) &mdash; and should land on exactly the same 21 found by brute-force coordinates.</div>
+<pre><code># MATH: Menelaus&#x27;s theorem on triangle ADC with transversal line B-E-G
+# (B off the triangle, E on AD, G on AC) gives
+#   (AE/ED)*(DB/BC)*(CG/GA) = 1.
+# With E splitting AD as AE:ED = 1:2 and D the midpoint of BC (so
+# DB/BC = 1/2, with a sign convention baked into the ratio being
+# treated as directed), this pins AG/GC exactly; the same theorem with
+# F splitting AD as AF:FD = 2:1 pins AH/HC. Converting each ratio to a
+# length along AC=70 and differencing gives GH independently of the
+# coordinate computation above.
+import sympy as sp
+
+AC = 70
+AE_ED = sp.Rational(1, 2)     # E is 1/3 of the way from A to D =&gt; AE:ED = 1:2
+AF_FD = sp.Rational(2, 1)     # F is 2/3 of the way from A to D =&gt; AF:FD = 2:1
+DB_BC = sp.Rational(1, 2)     # D is the midpoint of BC
+
+# Menelaus (unsigned form, since G, H are known to lie strictly between A and C):
+# (AE/ED)*(DB/BC)*(CG/GA) = 1  =&gt;  CG/GA = 1/(AE_ED*DB_BC)
+CG_GA = 1 / (AE_ED * DB_BC)
+AG = AC / (1 + CG_GA)          # since AG + GC = AC and CG/GA known
+CH_HA = 1 / (AF_FD * DB_BC)
+AH = AC / (1 + CH_HA)
+
+GH = abs(AH - AG)
+print(sp.nsimplify(GH))        # 21 -- matches Solution 1
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="hs-problem-17">HS &middot; Purple Comet 2010, Problem 17 &middot; <span class="tag">Hard</span> <span class="tag">Combinatorics</span></h3>
+<p class="problem">Alan, Barb, Cory, and Doug are on the golf team; Doug, Emma, Fran, and Greg are on the swim team; and Greg, Hope, Inga, and Alan are on the tennis team. These nine people sit in a circle in random order. The probability that no two people from the same team sit next to each other is \(\dfrac{m}{n}\) where \(m\) and \(n\) are relatively prime positive integers. Find \(m+n\).</p>
+<div class="note math">With three overlapping teams (some people belong to two of them), a hand inclusion&ndash;exclusion argument is a minefield of edge cases. But nine people is small enough that a computer doesn&rsquo;t need cleverness at all: fix one person&rsquo;s seat to account for rotational symmetry (it doesn&rsquo;t change the probability), brute-force every arrangement of the remaining eight, and directly check the adjacency condition around the circle for each one. \(9!=362{,}880\) is trivial for a computer, and this is far more trustworthy than a hand-count that might silently double-count or miss a case.</div>
+<pre><code># MATH: with 9 people and 3 overlapping teams (Doug and Alan and Greg
+# each belong to two teams), inclusion-exclusion by hand is error-prone.
+# Brute force instead: fix the first seat (rotations don&#x27;t change the
+# probability, so this just avoids 9x redundant work) and check every
+# permutation of the rest directly against the &quot;no two teammates
+# adjacent around the circle&quot; condition -- exhaustive and unambiguous.
+from itertools import permutations
+from fractions import Fraction
+
+people = [&#x27;A&#x27;,&#x27;B&#x27;,&#x27;C&#x27;,&#x27;D&#x27;,&#x27;E&#x27;,&#x27;F&#x27;,&#x27;G&#x27;,&#x27;H&#x27;,&#x27;I&#x27;]
+golf   = {&#x27;A&#x27;,&#x27;B&#x27;,&#x27;C&#x27;,&#x27;D&#x27;}
+swim   = {&#x27;D&#x27;,&#x27;E&#x27;,&#x27;F&#x27;,&#x27;G&#x27;}
+tennis = {&#x27;G&#x27;,&#x27;H&#x27;,&#x27;I&#x27;,&#x27;A&#x27;}
+
+def teams(p):
+    return {name for name, group in
+            [(&#x27;golf&#x27;, golf), (&#x27;swim&#x27;, swim), (&#x27;tennis&#x27;, tennis)]
+            if p in group}
+
+first, rest = people[0], people[1:]
+total = good = 0
+for perm in permutations(rest):
+    arrangement = [first] + list(perm)
+    total += 1
+    n = len(arrangement)
+    if all(not (teams(arrangement[i]) & teams(arrangement[(i+1) % n]))
+           for i in range(n)):
+        good += 1
+
+p = Fraction(good, total)
+print(good, total, p)              # 16 40320 1/2520
+print(p.numerator + p.denominator)  # 2521
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="hs-problem-18">HS &middot; Purple Comet 2010, Problem 18 &middot; <span class="tag">Medium</span> <span class="tag">Trigonometry</span></h3>
+<p class="problem">When \(4\cos\theta - 3\sin\theta = \dfrac{13}{3}\), it follows that \(7\cos2\theta - 24\sin2\theta = \dfrac{m}{n}\) where \(m\) and \(n\) are relatively prime positive integers. Find \(m+n\).</p>
+<div class="note math">Rather than chasing a clever identity connecting the two expressions, just solve directly: write \(c=\cos\theta\), \(s=\sin\theta\), and pair the given linear equation with the Pythagorean identity \(c^2+s^2=1\) to pin down \((c,s)\) exactly (there are two solutions, by symmetry). Then substitute into the double-angle formulas \(\cos2\theta=2c^2-1\) and \(\sin2\theta=2cs\) and simplify &mdash; both solutions for \((c,s)\) should give the <em>same</em> final value, since the target expression turns out to be independent of which root is taken.</div>
+<pre><code># MATH: solve directly for cos(theta) and sin(theta) as a system: the
+# given linear equation together with the Pythagorean identity
+# c^2+s^2=1 pins down both (up to the expected two-fold symmetry).
+# Substitute into the double-angle formulas cos(2t)=2c^2-1,
+# sin(2t)=2cs and simplify -- both solution branches should agree,
+# which is itself a built-in consistency check on the algebra.
+import sympy as sp
+
+c, s = sp.symbols(&#x27;c s&#x27;, real=True)
+solutions = sp.solve([sp.Eq(4*c - 3*s, sp.Rational(13, 3)),
+                       sp.Eq(c**2 + s**2, 1)], [c, s])
+
+for cc, ss in solutions:
+    cos2t, sin2t = 2*cc**2 - 1, 2*cc*ss
+    value = sp.nsimplify(sp.simplify(7*cos2t - 24*sin2t))
+    print(cc, ss, value)   # both branches -&gt; 113/9
+
+m, n = sp.fraction(sp.Rational(113, 9))
+print(m + n)   # 122
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="hs-problem-19">HS &middot; Purple Comet 2010, Problem 19 &middot; <span class="tag">Medium</span> <span class="tag">Geometry</span></h3>
+<p class="problem">The centers of three circles \(A\), \(B\), \(C\) are collinear, with the center of circle \(B\) lying between the centers of \(A\) and \(C\). Circles \(A\) and \(C\) are both externally tangent to circle \(B\), and the three circles share a common tangent line. Given that circle \(A\) has radius 12 and circle \(B\) has radius 42, find the radius of circle \(C\).</p>
+<div class="note math">Set up coordinates with the shared tangent line as the \(x\)-axis: each circle&rsquo;s center then sits directly above its tangent point, at height equal to its own radius. External tangency between two circles means the distance between their centers equals the <em>sum</em> of their radii. That gives two distance equations (\(A\)&ndash;\(B\) tangent, \(B\)&ndash;\(C\) tangent), plus the collinearity condition on the three centers &mdash; three equations, solved simultaneously for the unknown horizontal positions and the radius of \(C\).</div>
+<pre><code># MATH: with the common tangent line as the x-axis, each circle&#x27;s
+# center sits at height = its own radius (tangent to the line). Two
+# circles externally tangent to each other have centers a distance
+# APART equal to the SUM of their radii. Combined with the collinearity
+# of the three centers (a cross-product-based collinearity condition),
+# this is three equations in three unknowns (the two remaining
+# x-coordinates and r_C), solved exactly and symbolically.
+import sympy as sp
+
+rA, rB = 12, 42
+xA, xB, xC, rC = sp.symbols(&#x27;xA xB xC rC&#x27;, real=True)
+yA, yB, yC = rA, rB, rC                     # tangent to the x-axis
+
+tangent_AB = sp.Eq((xA-xB)**2 + (yA-yB)**2, (rA+rB)**2)
+tangent_BC = sp.Eq((xB-xC)**2 + (yB-yC)**2, (rB+rC)**2)
+collinear = sp.Eq((xB-xA)*(yC-yA) - (xC-xA)*(yB-yA), 0)
+
+solutions = sp.solve([tangent_AB, tangent_BC, collinear],
+                      [xA, xC, rC], dict=True)
+for sol in solutions:
+    print(sol[rC])   # 12 (degenerate: C coincides with A) and 147
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="hs-problem-20">HS &middot; Purple Comet 2010, Problem 20 &middot; <span class="tag">Hard</span> <span class="tag">Combinatorics</span></h3>
+<p class="problem">How many of the rearrangements of the digits 123456 have the property that for each digit, no more than two digits smaller than that digit appear to the right of that digit? (E.g. 315426 qualifies.)</p>
+<div class="note math">This condition &mdash; &ldquo;for every digit, at most two smaller digits sit to its right&rdquo; &mdash; has no clean combinatorial shortcut that&rsquo;s obviously safe to trust without checking. But \(6!=720\) permutations is nothing for a computer, so it&rsquo;s far safer to generate every rearrangement and test the condition directly on each one than to guess at a pattern and risk an off-by-one or a missed edge case.</div>
+<pre><code># MATH: the condition is a per-digit count over everything to its
+# right, which is exactly the kind of local, easily-mis-generalized
+# rule that&#x27;s safest checked exhaustively rather than derived by
+# combinatorial argument. With only 6! = 720 permutations, testing the
+# rule directly on every one is both fast and unambiguous.
+from itertools import permutations
+
+count = 0
+for perm in permutations([1, 2, 3, 4, 5, 6]):
+    ok = True
+    for i, d in enumerate(perm):
+        smaller_to_right = sum(1 for x in perm[i+1:] if x &lt; d)
+        if smaller_to_right &gt; 2:
+            ok = False
+            break
+    if ok:
+        count += 1
+
+print(count)   # 162
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="hs-problem-21">HS &middot; Purple Comet 2010, Problem 21 &middot; <span class="tag">Medium</span> <span class="tag">Number Theory</span></h3>
+<p class="problem">Let \(a\) be the sum of the numbers \(99\times0.9,\ 999\times0.9,\ 9999\times0.9,\ \ldots\), up to a term whose left factor is a string of 101 digits all equal to 9, times \(0.9\). Find the sum of the digits in the number \(a\).</p>
+<div class="note math">Each term is a repunit-of-nines (a string of \(k\) nines, for \(k=2,3,\ldots,101\)) scaled by 0.9. Since \(0.9=\frac{9}{10}\) and each of those all-nines numbers is a multiple of 10 minus something small, multiplying by \(0.9\) always produces a whole number &mdash; so the safest path is to build each huge all-nines integer as an actual Python integer (no floating point at all, since floats would lose precision on numbers this large), scale by the exact fraction \(9/10\), and let Python&rsquo;s big-integer arithmetic handle the digit sum directly.</div>
+<pre><code># MATH: each term is (a string of k nines) * 0.9, for k=2 up to k=101.
+# Floating point would silently lose precision on numbers with 100+
+# digits, so build every all-nines number as an exact Python integer,
+# sum them, then multiply the total by the exact fraction 9/10 (always
+# landing on an integer, since the sum of all-nines numbers is always
+# a multiple of 10 after this scaling -- verified below rather than
+# assumed). Digit-sum the resulting big integer directly.
+total_nines = 0
+for k in range(2, 102):              # k = 2, 3, ..., 101 nines
+    total_nines += int(&#x27;9&#x27; * k)
+
+from fractions import Fraction
+a = Fraction(9, 10) * total_nines
+assert a.denominator == 1, &quot;expected an exact integer&quot;
+a = int(a)
+
+print(sum(int(ch) for ch in str(a)))   # 891
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="hs-problem-22">HS &middot; Purple Comet 2010, Problem 22 &middot; <span class="tag">Medium</span> <span class="tag">Combinatorics</span></h3>
+<p class="problem">Ten distinct points are placed on a circle. All ten of the points are paired so that the line segments connecting the pairs do not intersect, as in the examples shown. In how many different ways can this pairing be done?</p>
+<figure class="diagram">
+<svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="120" cy="120" r="90" fill="none" stroke="#d8b98a" stroke-width="1"/>
+  <g fill="#8c2600">
+    <circle cx="120.0" cy="30.0" r="3"/><circle cx="172.9" cy="47.2" r="3"/>
+    <circle cx="205.6" cy="92.2" r="3"/><circle cx="205.6" cy="147.8" r="3"/>
+    <circle cx="172.9" cy="192.8" r="3"/><circle cx="120.0" cy="210.0" r="3"/>
+    <circle cx="67.1" cy="192.8" r="3"/><circle cx="34.4" cy="147.8" r="3"/>
+    <circle cx="34.4" cy="92.2" r="3"/><circle cx="67.1" cy="47.2" r="3"/>
+  </g>
+</svg>
+<figcaption>Ten points, evenly spaced on a circle, waiting to be paired without any two connecting chords crossing.</figcaption>
+</figure>
+<div class="note math">A pairing avoids crossings exactly when it has a recursive, &ldquo;nested-or-side-by-side&rdquo; structure: pick any one point (say the first) and pair it with <em>some</em> other point \(P\); every point strictly between them (going one way around the circle) must be paired only among themselves &mdash; otherwise a chord would have to cross the chord to \(P\) &mdash; and likewise for the points on the other side. This self-similar splitting is exactly the recurrence that defines the <strong>Catalan numbers</strong>: the number of non-crossing perfect matchings of \(2n\) points on a circle is \(C_n=\frac{1}{n+1}\binom{2n}{n}\). Here \(n=5\).</div>
+<figure class="diagram">
+<svg viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg">
+  <g transform="translate(0,0)">
+    <circle cx="50" cy="50" r="42" fill="none" stroke="#d8b98a" stroke-width="0.8"/>
+    <line x1="50.0" y1="8.0" x2="25.3" y2="16.0" stroke="#8c2600" stroke-width="1"/>
+    <line x1="74.7" y1="16.0" x2="10.1" y2="37.0" stroke="#8c2600" stroke-width="1"/>
+    <line x1="89.9" y1="37.0" x2="10.1" y2="63.0" stroke="#8c2600" stroke-width="1"/>
+    <line x1="89.9" y1="63.0" x2="25.3" y2="84.0" stroke="#8c2600" stroke-width="1"/>
+    <line x1="74.7" y1="84.0" x2="50.0" y2="92.0" stroke="#8c2600" stroke-width="1"/>
+  </g>
+  <g transform="translate(90,0)">
+    <circle cx="50" cy="50" r="42" fill="none" stroke="#d8b98a" stroke-width="0.8"/>
+    <line x1="50.0" y1="8.0" x2="74.7" y2="16.0" stroke="#8c2600" stroke-width="1"/>
+    <line x1="89.9" y1="37.0" x2="89.9" y2="63.0" stroke="#8c2600" stroke-width="1"/>
+    <line x1="74.7" y1="84.0" x2="50.0" y2="92.0" stroke="#8c2600" stroke-width="1"/>
+    <line x1="25.3" y1="84.0" x2="10.1" y2="63.0" stroke="#8c2600" stroke-width="1"/>
+    <line x1="10.1" y1="37.0" x2="25.3" y2="16.0" stroke="#8c2600" stroke-width="1"/>
+  </g>
+  <g transform="translate(180,0)">
+    <circle cx="50" cy="50" r="42" fill="none" stroke="#d8b98a" stroke-width="0.8"/>
+    <line x1="50.0" y1="8.0" x2="74.7" y2="16.0" stroke="#8c2600" stroke-width="1"/>
+    <line x1="89.9" y1="37.0" x2="25.3" y2="16.0" stroke="#8c2600" stroke-width="1"/>
+    <line x1="89.9" y1="63.0" x2="10.1" y2="37.0" stroke="#8c2600" stroke-width="1"/>
+    <line x1="74.7" y1="84.0" x2="10.1" y2="63.0" stroke="#8c2600" stroke-width="1"/>
+    <line x1="50.0" y1="92.0" x2="25.3" y2="84.0" stroke="#8c2600" stroke-width="1"/>
+  </g>
+  <g transform="translate(270,0)">
+    <circle cx="50" cy="50" r="42" fill="none" stroke="#d8b98a" stroke-width="0.8"/>
+    <line x1="50.0" y1="8.0" x2="50.0" y2="92.0" stroke="#8c2600" stroke-width="1"/>
+    <line x1="74.7" y1="16.0" x2="89.9" y2="37.0" stroke="#8c2600" stroke-width="1"/>
+    <line x1="25.3" y1="16.0" x2="10.1" y2="37.0" stroke="#8c2600" stroke-width="1"/>
+    <line x1="89.9" y1="63.0" x2="74.7" y2="84.0" stroke="#8c2600" stroke-width="1"/>
+    <line x1="10.1" y1="63.0" x2="25.3" y2="84.0" stroke="#8c2600" stroke-width="1"/>
+  </g>
+</svg>
+<figcaption>Four of the 42 valid non-crossing pairings, each one a genuine example (verified below, not just drawn).</figcaption>
+</figure>
+
+<p><strong>Solution 1 &mdash; the Catalan number formula.</strong></p>
+<pre><code># MATH: the number of non-crossing perfect matchings of 2n points on a
+# circle is the Catalan number C_n = binom(2n,n)/(n+1). Here we have
+# 10 points, so n=5. This closed form comes directly from the
+# recursive &quot;split into two independent sub-arcs&quot; structure described
+# above.
+import sympy as sp
+
+n = 5
+C_n = sp.binomial(2*n, n) // (n + 1)
+print(C_n)   # 42
+</code></pre>
+
+<p><strong>Solution 2 &mdash; independent brute-force enumeration, as a genuine cross-check.</strong></p>
+<div class="note math">Trusting a formula is not the same as verifying it. As a real independent check, generate <em>every</em> perfect matching of the 10 labeled points (945 of them, since \(9\times7\times5\times3\times1=945\)) and test each one directly for crossings, using nothing but the definition: two chords \((a,b)\) and \((c,d)\) cross exactly when \(c\) and \(d\) fall on opposite arcs determined by \(a\) and \(b\). Counting how many of the 945 pass this direct geometric test should land on exactly the same 42.</div>
+<pre><code># MATH: brute-force every perfect matching of 10 labeled points (there
+# are 9*7*5*3*1 = 945 of them) and test each pairing directly against
+# the DEFINITION of non-crossing: chord (a,b) and chord (c,d) cross
+# iff exactly one of c,d lies on the arc strictly between a and b
+# (going one fixed direction around the circle). This never assumes
+# the Catalan formula -- it&#x27;s a fully independent geometric check.
+import itertools
+
+def all_matchings(points):
+    if not points:
+        yield []
+        return
+    a = points[0]
+    for i in range(1, len(points)):
+        b = points[i]
+        rest = points[1:i] + points[i+1:]
+        for m in all_matchings(rest):
+            yield [(a, b)] + m
+
+def between(x, lo, hi, n=10):
+    i, j = (x - lo) % n, (hi - lo) % n
+    return 0 &lt; i &lt; j
+
+def crosses(a, b, c, d):
+    return between(c, a, b) != between(d, a, b)
+
+def is_noncrossing(matching):
+    return all(not crosses(a, b, c, d)
+               for (a, b), (c, d) in itertools.combinations(matching, 2))
+
+total = noncrossing = 0
+for m in all_matchings(list(range(10))):
+    total += 1
+    if is_noncrossing(m):
+        noncrossing += 1
+
+print(total, noncrossing)   # 945 42 -- matches Solution 1 exactly
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="hs-problem-23">HS &middot; Purple Comet 2010, Problem 23 &middot; <span class="tag">Hard</span> <span class="tag">Geometry</span></h3>
+<p class="problem">A disk with radius 10 and a disk with radius 8 are drawn so that the distance between their centers is 3. Two congruent small circles lie in the intersection of the two disks so that they are tangent to each other and to each of the larger circles as shown. The radii of the smaller circles are both \(\dfrac{m}{n}\) where \(m\) and \(n\) are relatively prime positive integers. Find \(m+n\).</p>
+<figure class="diagram">
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="150" cy="150" r="140" fill="none" stroke="#8c2600" stroke-width="1.2"/>
+  <circle cx="192" cy="150" r="112" fill="none" stroke="#b63200" stroke-width="1.2"/>
+  <circle cx="220" cy="97.5" r="52.5" fill="none" stroke="#e8a33d" stroke-width="1.4"/>
+  <circle cx="220" cy="202.5" r="52.5" fill="none" stroke="#e8a33d" stroke-width="1.4"/>
+  <text x="20" y="25" font-size="12" fill="#4a2b00">r = 10</text>
+  <text x="330" y="60" font-size="12" fill="#4a2b00">r = 8</text>
+</svg>
+<figcaption>Big circles centered at \((0,0)\) (radius 10) and \((3,0)\) (radius 8); the two small congruent circles sit stacked in the lens-shaped overlap, tangent to each other across the line joining the two big centers.</figcaption>
+</figure>
+<div class="note math">Place the big circle of radius 10 at the origin and the radius-8 circle at \((3,0)\). By the top&ndash;bottom symmetry of the picture, the two small circles have centers \((x_0, r)\) and \((x_0,-r)\) for some common radius \(r\) &mdash; their mutual tangency (touching along the \(x\)-axis) forces the vertical half-gap between them to equal \(r\). Each small circle also sits <em>inside</em> both big circles, tangent to them internally, which means the distance from each big circle&rsquo;s center to the small circle&rsquo;s center equals the <em>difference</em> of their radii: \(10-r\) from the origin, \(8-r\) from \((3,0)\). Two such distance equations, plus the tangency-to-each-other condition, is three equations in the three unknowns \(x_0, r\) (with \(y_0=r\) already substituted) &mdash; solved directly and exactly.</div>
+<pre><code># MATH: with big circles at (0,0) r=10 and (3,0) r=8, top-bottom
+# symmetry places the small circles&#x27; centers at (x0, r) and (x0, -r)
+# for common radius r (their tangency to EACH OTHER, across the axis,
+# forces their vertical half-separation to equal r). Each small circle
+# sits INSIDE both big circles, so internal tangency gives distance-to-
+# center = (big radius) - (small radius) for each big circle. Three
+# equations (two internal-tangency distances + the symmetry relation),
+# three unknowns (x0, y0, r), solved exactly with sympy.
+import sympy as sp
+
+x0, y0, r = sp.symbols(&#x27;x0 y0 r&#x27;, positive=True)
+eq_big10 = sp.Eq(x0**2 + y0**2, (10 - r)**2)       # internally tangent to r=10 circle
+eq_big8 = sp.Eq((x0-3)**2 + y0**2, (8 - r)**2)     # internally tangent to r=8 circle
+eq_mutual = sp.Eq(y0, r)                            # tangent to each other on the x-axis
+
+solution = sp.solve([eq_big10, eq_big8, eq_mutual], [x0, y0, r], dict=True)
+print(solution)   # [{x0: 5, y0: 15/4, r: 15/4}]
+
+r_val = solution[0][r]
+m, n = sp.fraction(r_val)
+print(m, n, m + n)   # 15 4 19
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="hs-problem-24">HS &middot; Purple Comet 2010, Problem 24 &middot; <span class="tag">Medium</span> <span class="tag">Number Theory</span></h3>
+<p class="problem">Find the number of ordered pairs of integers \((m,n)\) that satisfy \(20m - 10n = mn\).</p>
+<div class="note math">Rearranging to isolate \(n\), \(n=\dfrac{20m}{m+10}\) whenever \(m\ne-10\) &mdash; a divisibility condition, easy to scan over a wide integer range. The one genuinely easy trap: \(m=0\) is a perfectly valid integer, giving \(n=0\) and satisfying the original equation trivially (\(0-0=0\)); it&rsquo;s tempting to skip \(m=0\) out of habit (treating it like a &ldquo;degenerate&rdquo; case), but the problem never excludes it, so \((0,0)\) must be counted alongside every other solution the scan turns up.</div>
+<pre><code># MATH: rearranging 20m-10n=mn gives n=20m/(m+10) for m != -10, a
+# clean divisibility test to scan over a wide integer range. m=0 is a
+# perfectly ordinary integer satisfying the equation (0-0=0 with
+# n=20*0/10=0) -- it must NOT be skipped just because it looks like a
+# degenerate edge case; the problem sets no such restriction.
+solutions = []
+for m in range(-1000, 1000):
+    if m + 10 == 0:
+        continue                          # division undefined; check separately
+    if (20 * m) % (m + 10) == 0:
+        n = (20 * m) // (m + 10)
+        solutions.append((m, n))
+
+# m = -10 case, handled separately: original equation becomes
+# 20*(-10) - 10n = -10n, i.e. -200 = 0, which is never true -- no solution there.
+
+print(len(solutions))     # 24
+print((0, 0) in solutions)  # True -- confirms m=0 was correctly included
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="hs-problem-25">HS &middot; Purple Comet 2010, Problem 25 &middot; <span class="tag">Hard</span> <span class="tag">Algebra</span></h3>
+<p class="problem">Let \(x_1,x_2,x_3\) be the three roots of the polynomial \(x^3+3x+1\). There are relatively prime positive integers \(m,n\) so that \(\dfrac{m}{n} = \dfrac{x_1^2}{(5x_2+1)(5x_3+1)} + \dfrac{x_2^2}{(5x_1+1)(5x_3+1)} + \dfrac{x_3^2}{(5x_1+1)(5x_2+1)}\). Find \(m+n\).</p>
+
+<p><strong>Solution 1 &mdash; substitute the exact (radical) roots directly.</strong></p>
+<div class="note math">The cubic \(x^3+3x+1\) has no rational roots (its only candidates \(\pm1\) both fail), so its three roots involve nested cube roots &mdash; unpleasant to write by hand, but sympy can hold them exactly and symbolically. Substituting all three roots into the expression and simplifying should, despite the ugly intermediate radicals, collapse to a clean rational number: the expression is <em>symmetric</em> in a disguised way (built from the roots in a way that&rsquo;s invariant under permuting them), so all the irrational parts are guaranteed to cancel.</div>
+<pre><code># MATH: x^3+3x+1 has no rational roots (checking +-1 fails), so its
+# roots are genuinely irrational (nested radicals). Even so, the target
+# expression is a SYMMETRIC function of the three roots (permuting
+# x1,x2,x3 leaves it unchanged), so it must simplify to a rational
+# number even though each individual term is a mess of nested roots.
+# Let sympy hold the exact roots symbolically -- no floating point --
+# and simplify the full sum.
+import sympy as sp
+
+x = sp.symbols(&#x27;x&#x27;)
+roots = sp.solve(x**3 + 3*x + 1, x)   # 3 exact (radical) roots
+
+terms = []
+for i in range(3):
+    xi = roots[i]
+    xj, xk = [roots[j] for j in range(3) if j != i]
+    terms.append(xi**2 / ((5*xj + 1)*(5*xk + 1)))
+
+total = sp.simplify(sum(terms))
+print(total)                 # 3/7
+m, n = sp.fraction(total)
+print(m, n, m + n)           # 3 7 10
+</code></pre>
+
+<p><strong>Solution 2 &mdash; Vieta&rsquo;s formulas and Newton&rsquo;s identities, no radicals at all.</strong></p>
+<div class="note math">There&rsquo;s a cleaner route that never touches an explicit root. Writing \(D=(5x_1+1)(5x_2+1)(5x_3+1)\) for the common denominator, each term&rsquo;s missing factor is exactly \(5x_i+1\), so the whole sum becomes \(\dfrac{\sum x_i^2(5x_i+1)}{D}=\dfrac{5\sum x_i^3+\sum x_i^2}{D}\). Every piece here &mdash; \(D\), \(\sum x_i^2\), \(\sum x_i^3\) &mdash; is a <strong>symmetric function</strong> of the roots, expressible purely through the elementary symmetric sums \(e_1=x_1+x_2+x_3=0\), \(e_2=x_1x_2+x_2x_3+x_3x_1=3\), \(e_3=x_1x_2x_3=-1\) (read straight off the polynomial&rsquo;s coefficients via Vieta), with \(\sum x_i^2\) and \(\sum x_i^3\) obtained from Newton&rsquo;s identities. Not one radical appears anywhere in this computation.</div>
+<pre><code># MATH: with common denominator D=(5x1+1)(5x2+1)(5x3+1), each term&#x27;s
+# &quot;missing&quot; factor is exactly (5xi+1), so the sum equals
+# [5*sum(xi^3) + sum(xi^2)] / D -- entirely in terms of power sums of
+# the roots, which Newton&#x27;s identities compute directly from the
+# elementary symmetric sums e1,e2,e3 (read off the polynomial&#x27;s
+# coefficients via Vieta: e1=0, e2=3, e3=-1). No radical, floating
+# point, or explicit root ever appears.
+import sympy as sp
+
+e1, e2, e3 = 0, 3, -1     # Vieta: x^3 - e1*x^2 + e2*x - e3 = x^3+3x+1
+
+D = 125*e3 + 25*e2 + 5*e1 + 1        # (5x1+1)(5x2+1)(5x3+1), expanded
+p2 = e1**2 - 2*e2                     # Newton: sum xi^2
+p3 = e1*p2 - e2*e1 + 3*e3             # Newton: sum xi^3 (simplifies since e1=0)
+
+numerator = 5*p3 + p2
+total = sp.Rational(numerator, D)
+print(D, p2, p3, total)      # -49 -6 -3 3/7 -- matches Solution 1 exactly
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="hs-problem-26">HS &middot; Purple Comet 2010, Problem 26 &middot; <span class="tag">Hard</span> <span class="tag">Geometry</span></h3>
+<p class="problem">In the coordinate plane a parabola passes through the points \((7,6)\), \((7,12)\), \((18,19)\), and \((18,48)\). The axis of symmetry of the parabola is a line with slope \(\dfrac{r}{s}\) where \(r\) and \(s\) are relatively prime positive integers. Find \(r+s\).</p>
+<div class="note math">This is not an upright parabola \(y=ax^2+bx+c\) &mdash; its axis is tilted, so it needs the general conic \(Ax^2+Bxy+Cy^2+Dx+Ey+F=0\) with the parabola condition \(B^2=4AC\). The key geometric fact is the <strong>diameter property</strong> of a parabola: the midpoints of any family of <em>parallel</em> chords all lie on a line parallel to the axis. The two vertical segments \((7,6)\)&ndash;\((7,12)\) and \((18,19)\)&ndash;\((18,48)\) are exactly such a pair of parallel chords (both vertical), so the line through their midpoints is parallel to the axis &mdash; and its slope is the axis&rsquo;s slope.</div>
+<pre><code># MATH: for a parabola, the DIAMETER property says the midpoints of any
+# family of parallel chords lie on a line parallel to the axis of
+# symmetry. The two given vertical chords -- (7,6)-(7,12) and
+# (18,19)-(18,48) -- are parallel (both vertical), so the line joining
+# their midpoints is parallel to the axis, and its slope IS the axis&#x27;s
+# slope. No need to fit the full conic at all.
+import sympy as sp
+
+mid1 = (7, sp.Rational(6+12, 2))
+mid2 = (18, sp.Rational(19+48, 2))
+slope = sp.Rational(mid2[1]-mid1[1], mid2[0]-mid1[0])
+print(slope)                       # 49/22
+r, s = sp.fraction(slope)
+print(r, s, r+s)                   # 49 22 71
+
+# independent cross-check: fit the full general conic Ax^2+Bxy+Cy^2+Dx+Ey+F=0
+# through all 4 points with the parabola condition B^2=4AC, then find the
+# axis direction as the null eigenvector of the quadratic-form matrix.
+A, B, C, D, E, F = sp.symbols(&#x27;A B C D E F&#x27;)
+pts = [(7,6), (7,12), (18,19), (18,48)]
+lin_sol = sp.solve([sp.Eq(A*px**2+B*px*py+C*py**2+D*px+E*py+F, 0)
+                     for px, py in pts], [A, B, D, E], dict=True)[0]
+Fscale = sp.solve(sp.Eq(lin_sol[B]**2, 4*lin_sol[A]*C).subs(
+    {k: v for k, v in lin_sol.items()}), F)[0]
+Av = lin_sol[A].subs(F, Fscale)
+Bv = lin_sol[B]
+Cv = C
+M = sp.Matrix([[Av, Bv/2], [Bv/2, Cv]]).subs(C, 484)
+null_eigvec = [v for val, mult, v in M.eigenvects() if val == 0][0][0]
+axis_slope = sp.simplify(1 / (null_eigvec[0]/null_eigvec[1]))
+print(axis_slope)   # 49/22 -- matches
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="hs-problem-27">HS &middot; Purple Comet 2010, Problem 27 &middot; <span class="tag">Hard</span> <span class="tag">Trigonometry</span></h3>
+<p class="problem">Let \(a\) and \(b\) be real numbers satisfying \(2(\sin a+\cos a)\sin b = 3-\cos b\). Find \(3\tan^2a + 4\tan^2b\).</p>
+<div class="note math">Write \(\sin a+\cos a=\sqrt2\sin\!\left(a+\frac{\pi}{4}\right)\), so the equation becomes \(2\sqrt2\sin\!\left(a+\frac\pi4\right)\sin b = 3-\cos b\). The left side can never exceed \(2\sqrt2|\sin b|\) in magnitude (since \(|\sin(\cdot)|\le1\)), so for a real value of \(a\) to exist at all, we need \((3-\cos b)^2\le 8\sin^2b=8(1-\cos^2b)\). That inequality turns out to force <em>equality</em> &mdash; the only way a real \(a\) can exist is if the bound is met exactly &mdash; which does two things at once: it pins down \(\cos b\) to a single value, <em>and</em> it forces \(\sin\!\left(a+\frac\pi4\right)=\pm1\), which in turn forces \(\tan a=1\) exactly (since \(a=\frac\pi4+k\pi\)).</div>
+<pre><code># MATH: sin(a)+cos(a) = sqrt(2)*sin(a+pi/4) has magnitude at most
+# sqrt(2), so the LHS 2(sin a+cos a)sin b is bounded by 2*sqrt(2)*|sin
+# b| in absolute value. For a real a to satisfy the given equation, the
+# RHS 3-cos(b) must fit within that bound: (3-cos b)^2 &lt;= 8*sin^2(b).
+# Solving this as an EQUALITY (the boundary case, forced because it
+# turns out to be the only case admitting a real a) pins down cos(b)
+# exactly, and simultaneously forces sin(a+pi/4)=+-1, i.e. tan(a)=1.
+import sympy as sp
+
+cosb = sp.symbols(&#x27;cosb&#x27;, real=True)
+boundary_expr = (3 - cosb)**2 - 8*(1 - cosb**2)
+print(sp.factor(boundary_expr))          # (3*cosb - 1)**2  -- a perfect square!
+cosb_val = sp.solve(sp.Eq(boundary_expr, 0), cosb)[0]
+print(cosb_val)                          # 1/3 (the ONLY root -- a repeated root)
+
+sinb2 = 1 - cosb_val**2
+tan2b = sinb2 / cosb_val**2
+tan2a = 1                                # forced: sin(a+pi/4) = +-1 =&gt; tan(a) = 1
+
+answer = 3*tan2a + 4*tan2b
+print(answer)   # 35
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="hs-problem-28">HS &middot; Purple Comet 2010, Problem 28 &middot; <span class="tag">Medium</span> <span class="tag">Algebra</span></h3>
+<p class="problem">There are relatively prime positive integers \(p\) and \(q\) such that \(\dfrac{p}{q} = \displaystyle\sum_{n=3}^{\infty} \dfrac{1}{n^5-5n^3+4n}\). Find \(p+q\).</p>
+<div class="note math">The denominator factors completely into five consecutive-ish linear terms: \(n^5-5n^3+4n = n(n-1)(n+1)(n-2)(n+2)\) &mdash; a product of five integers spread evenly around \(n\). That&rsquo;s exactly the shape that yields to <strong>partial fractions</strong>: break \(\frac1{n(n-2)(n-1)(n+1)(n+2)}\) into five simple fractions with constant numerators, and the resulting sum telescopes (or, more simply, let sympy&rsquo;s own symbolic infinite-summation machinery handle the whole thing exactly, using the partial-fraction decomposition as the reason it&rsquo;s guaranteed to converge to a rational number rather than some messier closed form).</div>
+<pre><code># MATH: the denominator factors as n(n-1)(n+1)(n-2)(n+2) -- five
+# linear factors spread around n -- which is exactly the shape that
+# decomposes into simple partial fractions with constant numerators
+# over each linear factor. That guarantees the infinite sum collapses
+# to a RATIONAL number (each partial-fraction piece telescopes or sums
+# to a rational multiple of a harmonic-type tail that cancels). Do the
+# factoring and summation exactly in sympy, no floating point.
+import sympy as sp
+
+n = sp.symbols(&#x27;n&#x27;)
+denom = n**5 - 5*n**3 + 4*n
+print(sp.factor(denom))            # n*(n - 2)*(n - 1)*(n + 1)*(n + 2)
+
+expr = 1 / denom
+total = sp.summation(expr, (n, 3, sp.oo))
+total = sp.nsimplify(total)
+print(total)                       # 1/96
+p, q = sp.fraction(total)
+print(p, q, p + q)                 # 1 96 97
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="hs-problem-29">HS &middot; Purple Comet 2010, Problem 29 &middot; <span class="tag">Hard</span> <span class="tag">Geometry</span></h3>
+<p class="problem">Square \(ABCD\) is shown in the diagram below. Points \(E\), \(F\), \(G\) are on sides \(\overline{AB}\), \(\overline{BC}\), \(\overline{DA}\) respectively, so that lengths \(BE\), \(BF\), \(DG\) are equal. Points \(H\) and \(I\) are the midpoints of segments \(\overline{EF}\) and \(\overline{CG}\), respectively. Segment \(\overline{GJ}\) is the perpendicular bisector of segment \(\overline{HI}\). The ratio of the areas of pentagon \(AEHJG\) and quadrilateral \(CIHF\) can be written as \(\dfrac{m}{n}\) where \(m\) and \(n\) are relatively prime positive integers. Find \(m+n\).</p>
+<figure class="diagram">
+<svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <polygon points="20,20 20,236 236,236 236,20" fill="none" stroke="#8c2600" stroke-width="1.5"/>
+  <line x1="20" y1="68" x2="188" y2="236" stroke="#b63200" stroke-width="1"/>
+  <line x1="236" y1="236" x2="68" y2="20" stroke="#b63200" stroke-width="1"/>
+  <line x1="104" y1="152" x2="152" y2="128" stroke="#e8a33d" stroke-width="1.2" stroke-dasharray="4,3"/>
+  <line x1="68" y1="20" x2="128" y2="140" stroke="#8c2600" stroke-width="1"/>
+  <circle cx="20" cy="20" r="3" fill="#8c2600"/>
+  <circle cx="20" cy="236" r="3" fill="#8c2600"/>
+  <circle cx="236" cy="236" r="3" fill="#8c2600"/>
+  <circle cx="236" cy="20" r="3" fill="#8c2600"/>
+  <circle cx="20" cy="68" r="3" fill="#f2c14e" stroke="#8c2600" stroke-width="1"/>
+  <circle cx="188" cy="236" r="3" fill="#f2c14e" stroke="#8c2600" stroke-width="1"/>
+  <circle cx="68" cy="20" r="3" fill="#f2c14e" stroke="#8c2600" stroke-width="1"/>
+  <circle cx="104" cy="152" r="3" fill="#e8a33d" stroke="#8c2600" stroke-width="1"/>
+  <circle cx="152" cy="128" r="3" fill="#e8a33d" stroke="#8c2600" stroke-width="1"/>
+  <circle cx="128" cy="140" r="3" fill="#e8a33d" stroke="#8c2600" stroke-width="1"/>
+  <text x="6" y="15" font-size="13" fill="#4a2b00">A</text>
+  <text x="6" y="252" font-size="13" fill="#4a2b00">B</text>
+  <text x="240" y="252" font-size="13" fill="#4a2b00">C</text>
+  <text x="240" y="15" font-size="13" fill="#4a2b00">D</text>
+  <text x="0" y="65" font-size="12" fill="#4a2b00">E</text>
+  <text x="192" y="252" font-size="12" fill="#4a2b00">F</text>
+  <text x="55" y="15" font-size="12" fill="#4a2b00">G</text>
+  <text x="82" y="150" font-size="12" fill="#4a2b00">H</text>
+  <text x="156" y="122" font-size="12" fill="#4a2b00">I</text>
+  <text x="120" y="155" font-size="12" fill="#4a2b00">J</text>
+</svg>
+<figcaption>Square \(ABCD\) with \(BE=BF=DG\); \(H\), \(I\) are midpoints of \(EF\), \(CG\); \(GJ\) perpendicular-bisects \(HI\).</figcaption>
+</figure>
+<div class="note math">The one length the problem never states outright &mdash; how big \(BE=BF=DG\) is relative to the square&rsquo;s side &mdash; is exactly what the &ldquo;\(GJ\) is <em>the</em> perpendicular bisector of \(HI\)&rdquo; condition is there to pin down. So the real first task is <em>not</em> geometry but algebra: set the square&rsquo;s side to \(S\) and the shared length to an unknown \(t\), write \(H\) and \(I\) in coordinates, and impose that the segment from \(G\) to the midpoint of \(HI\) is perpendicular to \(HI\) &mdash; a single equation in \(t\) and \(S\) whose non-degenerate solution is \(t=\frac{7S}{9}\). Only after that ratio is nailed down does computing the two polygon areas (again by the shoelace formula) and their ratio become routine.</div>
+<pre><code># MATH: the ratio t/S (where t = BE = BF = DG) is NOT given directly --
+# it&#x27;s determined by the condition that GJ is THE perpendicular
+# bisector of HI, i.e. the segment from G to HI&#x27;s midpoint is
+# perpendicular to HI. Set up coordinates with an unknown ratio t
+# (relative to side S), impose that perpendicularity as one equation,
+# solve for t/S, THEN compute both polygon areas by the shoelace
+# formula and take their ratio -- getting the geometric constraint
+# right comes before any area computation.
+import sympy as sp
+
+S, t = sp.symbols(&#x27;S t&#x27;, positive=True)
+A = sp.Matrix([0, S]); B = sp.Matrix([0, 0])
+C = sp.Matrix([S, 0]); D = sp.Matrix([S, S])
+E = sp.Matrix([0, t]); F = sp.Matrix([t, 0]); G = sp.Matrix([S-t, S])
+H = (E + F) / 2
+I = (C + G) / 2
+mid_HI = (H + I) / 2
+
+# GJ perpendicular to HI, with J on segment HI (so J = mid_HI when the
+# perpendicular from G meets HI exactly at its midpoint):
+perpendicularity = sp.simplify((I - H).dot(mid_HI - G))
+t_solutions = sp.solve(sp.Eq(perpendicularity, 0), t)
+print(t_solutions)          # [7*S/9, S]  -- t=S is degenerate (E=B, F=C), discard
+
+t_val = sp.Rational(7, 9) * S
+Ev, Fv, Gv = E.subs(t, t_val), F.subs(t, t_val), G.subs(t, t_val)
+Hv, Iv = (Ev+Fv)/2, (C+Gv)/2
+Jv = (Hv + Iv) / 2
+
+def shoelace(pts):
+    n = len(pts)
+    s = sum(pts[i][0]*pts[(i+1) % n][1] - pts[(i+1) % n][0]*pts[i][1] for i in range(n))
+    return sp.simplify(sp.Abs(s) / 2)
+
+pentagon_AEHJG = [tuple(A), tuple(Ev), tuple(Hv), tuple(Jv), tuple(Gv)]
+quad_CIHF = [tuple(C), tuple(Iv), tuple(Hv), tuple(Fv)]
+area1 = shoelace(pentagon_AEHJG)
+area2 = shoelace(quad_CIHF)
+
+ratio = sp.nsimplify(sp.simplify(area1 / area2))
+print(area1, area2, ratio)   # 97*S**2/648 13*S**2/108 97/78
+m, n = sp.fraction(ratio)
+print(m, n, m + n)           # 97 78 175
+</code></pre>
+</div>
+
+
+<div class="card example">
+<h3 id="hs-problem-30">HS &middot; Purple Comet 2010, Problem 30 &middot; <span class="tag">Hard</span> <span class="tag">Algebra</span></h3>
+<p class="problem">Let \(x\) and \(y\) be real numbers satisfying \((x^2+x-1)(x^2-x+1) = 2(y^3-2\sqrt5-1)\) and \((y^2+y-1)(y^2-y+1) = 2(x^3+2\sqrt5-1)\). Find \(8x^2+4y^3\).</p>
+<div class="note math">Expanding the left side of each equation, \((x^2+x-1)(x^2-x+1)=x^4-x^2+2x-1\), so each equation has the same underlying shape: \(f(x)=2(y^3-2\sqrt5-1)\) and \(f(y)=2(x^3+2\sqrt5-1)\) where \(f(t)=t^4-t^2+2t-1\). The appearance of \(\sqrt5\) is the giveaway: it strongly suggests the golden ratio \(\varphi=\frac{1+\sqrt5}2\) and its conjugate \(\psi=\frac{1-\sqrt5}2\) &mdash; the two roots of \(t^2-t-1=0\) &mdash; are secretly the answer. Testing the natural guess \(x=\psi,\ y=\varphi\) directly (rather than trying to solve the quartic system by brute algebra) confirms both equations hold <em>exactly</em>, and then \(8x^2+4y^3\) is just arithmetic with \(\varphi,\psi\).</div>
+<pre><code># MATH: expanding, each equation has the shared shape f(t) = t^4-t^2+2t-1
+# on one side. The sqrt(5) in the problem is a strong hint toward the
+# golden ratio phi=(1+sqrt5)/2 and its conjugate psi=(1-sqrt5)/2, the
+# two roots of t^2-t-1=0. Rather than grinding through the full quartic
+# system, test the natural guess x=psi, y=phi directly -- substituting
+# exact radicals and checking both equations simplify to EXACTLY 0
+# confirms it&#x27;s a genuine solution, not a numerical coincidence.
+import sympy as sp
+
+x, y = sp.symbols(&#x27;x y&#x27;, real=True)
+eq1 = (x**2+x-1)*(x**2-x+1) - 2*(y**3 - 2*sp.sqrt(5) - 1)
+eq2 = (y**2+y-1)*(y**2-y+1) - 2*(x**3 + 2*sp.sqrt(5) - 1)
+
+phi = (1 + sp.sqrt(5)) / 2
+psi = (1 - sp.sqrt(5)) / 2
+x_val, y_val = psi, phi
+
+residual1 = sp.simplify(eq1.subs({x: x_val, y: y_val}))
+residual2 = sp.simplify(eq2.subs({x: x_val, y: y_val}))
+print(residual1, residual2)     # 0 0 -- confirms this is an exact solution
+
+answer = sp.simplify(8*x_val**2 + 4*y_val**3)
+print(answer)                   # 20
+
+# independent numeric cross-check: solve the system from scratch with
+# a numerical solver (scipy), starting near the golden-ratio guess,
+# with no reference to phi/psi at all.
+import numpy as np
+from scipy.optimize import fsolve
+
+s5 = np.sqrt(5)
+def system(v):
+    xx, yy = v
+    e1 = (xx**2+xx-1)*(xx**2-xx+1) - 2*(yy**3 - 2*s5 - 1)
+    e2 = (yy**2+yy-1)*(yy**2-yy+1) - 2*(xx**3 + 2*s5 - 1)
+    return [e1, e2]
+
+root = fsolve(system, [-0.6, 1.6])
+print(root, 8*root[0]**2 + 4*root[1]**3)   # [-0.618 1.618] 19.999999... -&gt; 20
+</code></pre>
+</div>
+
+<h2 id="playground">Try your own code</h2>
+<p>A blank scratchpad &mdash; paste in your own solution to any problem and run it. This isn&rsquo;t graded and isn&rsquo;t checked for correctness; it just runs whatever Python you give it and shows you what it prints, or the error if something&rsquo;s wrong.</p>
+<div class="card playground-card">
+<textarea id="playground-editor" class="code-editor" spellcheck="false" rows="10" placeholder="# Write or paste your Python here, then click Run.&#10;print('Hello, MCC!')"></textarea>
+</div>
+
+<h2>Questions?</h2>
+<p>Contact your regional coordinator on the <a href="./organization">Organization</a> page. For the coding contest itself, see <a href="./toml">TOML</a>.</p>
+
+</div><!-- #mcc-gate-content -->

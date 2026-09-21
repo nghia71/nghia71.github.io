@@ -26,9 +26,54 @@ title: TOML
 <h2>The coding contest</h2>
 <p>A coding contest is one of the activities that rotate through the club's weekly Sunday session, on its own two-week cycle (contest, then solution discussion) — separate from the shared Sunday rotation described in <a href="./programs#the-weekly-sunday-session">Programs</a>. See <a href="./organization">Organization</a> for who runs it regionally.</p>
 
-<div class="note">
+<!-- Start/Submit gate: static "coming soon" copy by default (identical to
+     what was here before this existed), replaced with the real submit
+     link only for a signed-in student whose checkAccess() result comes
+     back unlocked: true -- see mcc-access-check.gs's TESTERS/LAUNCH_DATE.
+     Never shown to a student who isn't signed in on this device (no way
+     to know their unlocked state without an id), and never shown before
+     a student's own unlocked flag is confirmed by the server -- no local
+     date math is duplicated here, the server's answer is the only
+     source of truth, same principle as lessons.html's gated row. -->
+<div class="note" id="mcc-toml-submit-note">
 <strong>Start / Submit form:</strong> link coming once the contest pipeline is live for the 4 October round. For that first round, expect a simpler, mostly-manual process — a shared read-only folder for the problem set and a plain submission form — while the fuller automated version (timed access, per-problem resubmission) is built and tested over the following contests.
 </div>
+
+<script src="{{ '/assets/js/mcc-roster.js' | relative_url }}?v=3"></script>
+<script>
+(function () {
+  var note = document.getElementById("mcc-toml-submit-note");
+  var SUBMIT_FORM_URL = "https://docs.google.com/forms/d/1TXVbQe8oXNMR2D8_TGb3EUBUIb6QqRnKpdX1NGBlsiI/viewform";
+
+  function showUnlocked() {
+    note.innerHTML =
+      "<strong>Start / Submit form:</strong> open now for you &mdash; " +
+      "<a href=\"" + SUBMIT_FORM_URL + "\" target=\"_blank\" rel=\"noopener\">submit here</a>. " +
+      "One submission per problem (Student ID, problem number, your <code>.py</code> code) &mdash; " +
+      "see <a href=\"./lesson-1#what-s-required-and-acceptable-for-a-contest-submission\">Lesson 1</a> for the full submission rules.";
+  }
+
+  var stored = null;
+  try { stored = JSON.parse(localStorage.getItem(MCCRoster.STORAGE_KEY) || "null"); } catch (e) {}
+
+  if (stored && stored.id) {
+    // Re-check (id-only, no PIN) -- same pattern as lesson-gate.html and
+    // lessons.html: this device already proved itself once, just ask
+    // the server for a fresh unlocked value.
+    MCCRoster.checkAccess(stored.id)
+      .then(function (result) {
+        if (result && result.ok && result.unlocked) {
+          showUnlocked();
+        }
+        // else: leave the default "coming soon" copy exactly as it was --
+        // no change for a student who's signed in but not unlocked yet.
+      })
+      .catch(function () { /* leave default copy on any error */ });
+  }
+  // Not signed in on this device at all: leave the default copy. This
+  // page never asks for id/PIN itself -- that only happens at Lessons.
+})();
+</script>
 
 <h3>What a submission must be</h3>
 <p>A single <code>.py</code> text file per problem — no PDFs, no Google Docs, no Jupyter notebooks. Full details, the allowed-library list, and the grading rubric are on <a href="./lesson-1#what-s-required-and-acceptable-for-a-contest-submission">Lesson 1</a> — read them before the contest, not during it.</p>

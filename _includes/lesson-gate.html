@@ -19,10 +19,19 @@ To include on a lesson page:
      (with an explanation in its place) otherwise.
   3. Add a noindex robots entry to the page's front matter so it doesn't
      turn up in search results.
+  4. Optional: pass a requires_unlock parameter set to true on the include
+     tag for a lesson that's staged behind the October launch date (see
+     mcc-access-check.gs's TESTERS/LAUNCH_DATE and its "unlocked" response
+     field). Without this parameter a lesson behaves exactly as before --
+     any signed-in student sees it the moment their id/PIN check succeeds.
+     With it, a signed-in student who is NOT yet unlocked sees a
+     "not open yet" message instead of the content, even though their
+     sign-in itself is perfectly valid. Lesson 1 should never pass this
+     parameter -- it's been open to everyone since before this existed.
 
 Do not write this file's own include tag as literal example text
 anywhere in this comment or in any other page's comment -- describe it
-in prose instead, the way the three lines above do. Jekyll's Liquid
+in prose instead, the way the lines above do. Jekyll's Liquid
 template engine scans this whole file for template tags before HTML (or
 HTML comments) mean anything to it, so literal example syntax in a
 comment is not inert documentation to Jekyll, it is a real instruction --
@@ -63,6 +72,7 @@ worked, forever, with no error shown anywhere on the site itself.
 <script src="{{ '/assets/js/mcc-roster.js' | relative_url }}?v=3"></script>
 <script>
 (function () {
+  var REQUIRES_UNLOCK = {{ include.requires_unlock | default: false }};
   var screen = document.getElementById("mcc-gate-screen");
   var message = document.getElementById("mcc-gate-message");
   // Deliberately NOT looked up here at parse time: this script tag runs
@@ -80,6 +90,16 @@ worked, forever, with no error shown anywhere on the site itself.
     message.innerHTML =
       "This lesson is for registered MCC coding-course students only.<br>" +
       "Sign in at <a href=\"{{ '/lessons.html' | relative_url }}\">the lessons page</a> with your student id and access code.";
+  }
+
+  // Shown for a student who IS signed in correctly, but this particular
+  // lesson has requires_unlock and today isn't the launch date yet (and
+  // this id isn't one of the early testers). Distinct from showDenied --
+  // the student did everything right, the lesson just isn't open yet.
+  function showLocked() {
+    message.innerHTML =
+      "This lesson opens once its contest window closes. Check back soon &mdash; " +
+      "your sign-in is working correctly.";
   }
 
   function showGranted(name) {
@@ -106,7 +126,11 @@ worked, forever, with no error shown anywhere on the site itself.
     MCCRoster.checkAccess(stored.id)
       .then(function (result) {
         if (result && result.ok) {
-          showGranted(result.name);
+          if (REQUIRES_UNLOCK && !result.unlocked) {
+            showLocked();
+          } else {
+            showGranted(result.name);
+          }
         } else {
           // No longer on the roster -- never trust what's already in
           // localStorage over what the server says now.

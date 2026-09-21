@@ -31,8 +31,40 @@
 //                         re-confirm a previously-granted one.
 //   ?id=S008&pin=xxxx -- full check: grants access only if the PIN matches
 //                         that id's row.
-// Response shape either way: {"ok": true, "name": "Jason ..."} or
-// {"ok": false}.
+// Response shape either way: {"ok": true, "name": "Jason ...", "unlocked": true}
+// or {"ok": false}.
+//
+// STAGED ROLLOUT (added 2026-09-20):
+// "unlocked" tells the client whether gated content -- Test 1's start/
+// submit link, results, and Lesson 2 (the Test 1 solutions) -- should show
+// for this id right now. It's true once today is on or after LAUNCH_DATE
+// for EVERY student, or right now already for the ids listed in TESTERS,
+// so testing the full flow (test -> grade -> comments -> Lesson 2) doesn't
+// require waiting for the real launch date. Lesson 1 itself is unaffected
+// by this flag -- it's been live for everyone since before this existed,
+// and lesson-gate.html/lessons.html only need to start reading "unlocked"
+// once Lesson 2 and Test 1 are actually wired into the site; until then
+// this flag is present in the response but unused, which is harmless.
+//
+// TESTERS matches the same way the roster match below does: trimmed,
+// case-insensitive, against Student ID. Add/remove ids here as the
+// rehearsal roster changes -- this list is intentionally separate from
+// the "Final" sheet so test accounts don't need special roster flags.
+var TESTERS = ['S007', 'S008'];
+
+// ISO date, America/Vancouver. On and after this date, "unlocked" is true
+// for every id, tester or not -- this is the real 4 October launch.
+var LAUNCH_DATE = '2026-10-04';
+var TIMEZONE = 'America/Vancouver';
+
+function isUnlocked_(id) {
+  var target = id.toLowerCase();
+  for (var i = 0; i < TESTERS.length; i++) {
+    if (TESTERS[i].toLowerCase() === target) return true;
+  }
+  var today = Utilities.formatDate(new Date(), TIMEZONE, 'yyyy-MM-dd');
+  return today >= LAUNCH_DATE;
+}
 
 function doGet(e) {
   var id = (e.parameter.id || "").trim();
@@ -58,11 +90,11 @@ function doGet(e) {
           var rowName = nameCol > -1 ? String(row[nameCol]).trim() : "";
           if (hasPin) {
             if (rowPin && pin === rowPin) {
-              result = { ok: true, name: rowName };
+              result = { ok: true, name: rowName, unlocked: isUnlocked_(id) };
             }
           } else {
             // id-only re-check -- the device already proved itself once.
-            result = { ok: true, name: rowName };
+            result = { ok: true, name: rowName, unlocked: isUnlocked_(id) };
           }
           break;
         }

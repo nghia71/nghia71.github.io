@@ -11,7 +11,18 @@ robots: noindex
      assets/js/mcc-roster.js), so signing in here also unlocks a direct
      link straight to lesson-1.html on this device, and vice versa: a
      student who came in through their personal link can still open this
-     page afterward with no extra step. -->
+     page afterward with no extra step.
+
+     A row can carry data-requires-unlock="true" (see lesson-2's row
+     below) for a lesson staged behind the October launch date -- see
+     mcc-access-check.gs's TESTERS/LAUNCH_DATE and its "unlocked"
+     response field. Such a row starts hidden (inline style, a fail-safe
+     default in case the unlock JS below never runs) and is only ever
+     revealed once the signed-in student's own checkAccess() result comes
+     back with unlocked: true -- never revealed by default, and never for
+     a student who isn't unlocked yet, even though they're validly signed
+     in. A row with no data-requires-unlock attribute (lesson-1's row) is
+     unaffected and always shows once signed in, exactly as before. -->
 
 <p id="mcc-hub-loading" style="text-align:center; color: var(--ink-soft); font-style: italic; margin: 2.5em 0;">Checking your access&hellip;</p>
 
@@ -41,12 +52,20 @@ robots: noindex
           <td>Purple Comet 2004</td>
           <td>Divisibility &amp; Prime Factorization &middot; Linear Equations &middot; Similarity &amp; Proportional Geometry &middot; Inequalities &middot; Inclusion&ndash;Exclusion &middot; Circles &amp; Power of a Point &middot; Sequences &amp; Recurrences</td>
         </tr>
+        <tr data-url="{{ '/lesson-2.html' | relative_url }}" data-requires-unlock="true" style="display:none">
+          <td>2</td>
+          <td>Purple Comet 2010 (Test 1 solutions)</td>
+          <td>Vieta&rsquo;s Formulas &amp; Root Relationships &middot; AM&ndash;GM &amp; Optimization &middot; Similar Triangles &amp; Coordinate Geometry &middot; Complementary Counting &amp; Casework &middot; Digit&ndash;Sum &amp; Modular Arithmetic &middot; Systems of Equations</td>
+        </tr>
         <!-- Add one <tr data-url="..."> per lesson as they're published;
              topics: read the lesson's own worked problems and name the
              actual LPS VI/VII chapter-level techniques used (see
              team-test-chapter-index.md), not a generic 4-subject list --
              every lesson pulls from all 4 subjects, so that list says
-             nothing about what THIS lesson specifically covers. -->
+             nothing about what THIS lesson specifically covers. Add
+             data-requires-unlock="true" plus style="display:none" for
+             any lesson that should stay staged behind the launch date,
+             the same way lesson-2's row above does. -->
       </tbody>
     </table>
   </div>
@@ -158,11 +177,27 @@ robots: noindex
   var table = document.getElementById("mcc-hub-table");
   var frame = document.getElementById("mcc-hub-frame");
 
+  // Shows/hides every row marked data-requires-unlock="true" based on
+  // this signed-in student's own "unlocked" flag from the last
+  // checkAccess() result. Rows with no such attribute (lesson-1) are
+  // untouched -- they show unconditionally once signed in, same as
+  // always. Called after every successful sign-in/re-check, so a tester
+  // account and a real student see a different table with identical
+  // markup and identical code path -- nothing client-side hardcodes
+  // "S007"/"S008", the server's "unlocked" field is the only source of
+  // truth (see mcc-access-check.gs).
+  function applyUnlockState(unlocked) {
+    Array.prototype.forEach.call(table.querySelectorAll('tbody tr[data-requires-unlock="true"]'), function (row) {
+      row.style.display = unlocked ? "" : "none";
+    });
+  }
+
   function showLoggedIn(student) {
     loading.style.display = "none";
     loginScreen.style.display = "none";
     content.style.display = "";
     greeting.textContent = student.name ? "Welcome, " + student.name + ". Pick a lesson below." : "Pick a lesson below.";
+    applyUnlockState(!!student.unlocked);
   }
 
   function showLoginForm() {
@@ -171,7 +206,7 @@ robots: noindex
   }
 
   function rememberAndEnter(student) {
-    try { localStorage.setItem(MCCRoster.STORAGE_KEY, JSON.stringify(student)); } catch (e) { /* private browsing -- fine, just won't persist */ }
+    try { localStorage.setItem(MCCRoster.STORAGE_KEY, JSON.stringify({ id: student.id, name: student.name })); } catch (e) { /* private browsing -- fine, just won't persist */ }
     showLoggedIn(student);
   }
 
@@ -236,7 +271,7 @@ robots: noindex
       .then(function (result) {
         hubMessage.textContent = "";
         if (result && result.ok) {
-          rememberAndEnter({ id: studentId, name: result.name });
+          rememberAndEnter({ id: studentId, name: result.name, unlocked: result.unlocked });
         } else {
           loginError.style.display = "";
         }
@@ -248,9 +283,11 @@ robots: noindex
 
   // Already verified on this device (via a personal lesson link, or an
   // earlier visit here) -- skip straight to the lesson table. No PIN
-  // needed again, just a re-check that the id is still on the roster.
-  // The login form starts hidden (see the style="display:none" on
-  // #mcc-hub-login) and #mcc-hub-loading shows in its place until this
+  // needed again, just a re-check that the id is still on the roster
+  // (and to get a fresh "unlocked" value -- it can flip from false to
+  // true between visits, e.g. on launch day, without the student doing
+  // anything). The login form starts hidden (see the style="display:none"
+  // on #mcc-hub-login) and #mcc-hub-loading shows in its place until this
   // resolves either way, so a returning, already-verified student never
   // sees the login form flash up before the lesson table replaces it.
   var stored = null;
@@ -259,7 +296,7 @@ robots: noindex
     MCCRoster.checkAccess(stored.id)
       .then(function (result) {
         if (result && result.ok) {
-          showLoggedIn({ id: stored.id, name: result.name });
+          showLoggedIn({ id: stored.id, name: result.name, unlocked: result.unlocked });
         } else {
           try { localStorage.removeItem(MCCRoster.STORAGE_KEY); } catch (e) {}
           showLoginForm();
