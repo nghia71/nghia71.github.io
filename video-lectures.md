@@ -5,7 +5,7 @@ robots: noindex
 
 # Video Lectures
 
-Every chapter of the two textbooks gets its own lecture, recorded by Teacher Nghia: **54 lectures for LPS VI** (Levels 1 & 2) and **55 for LPS VII** (Levels 3 & 4). Lectures are added here as they are released.
+Every chapter of the two textbooks gets its own lecture, recorded by Teacher Nghia: **54 lectures for LPS VI** (Levels 1 & 2) and **55 for LPS VII** (Levels 3 & 4).
 
 A lecture is a companion to the book, not a replacement for it. Watch it, then go back to the chapter: start with the easier problems and the ones you can follow, and don't give up when something doesn't make sense straight away. A little every day works; opening the book the night before a test does not.
 
@@ -36,13 +36,13 @@ Bài giảng đi kèm với sách chứ không thay thế sách. Xem bài giản
   {% assign anchor = "lps-vii" %}
 {% endif %}
 {% assign lectures = site.data.video_lectures[key] %}
-{% assign released = lectures | where_exp: "l", "l.url != ''" | size %}
+{% assign released = lectures | where_exp: "l", "l.url != ''" %}
 
 <h2 id="{{ anchor }}">{{ heading }}</h2>
-<p><strong>{{ sub }}</strong> — {{ released }} released so far.</p>
+<p><strong>{{ sub }}</strong> — {{ released.size }} released so far. New lectures appear here as they are released.</p>
 
 {% assign current_part = "" %}
-{% for l in lectures %}
+{% for l in released %}
 {% if l.part != current_part %}
 {% unless forloop.first %}</tbody></table>{% endunless %}
 <h3>{{ l.part }}</h3>
@@ -54,7 +54,7 @@ Bài giảng đi kèm với sách chứ không thay thế sách. Xem bài giản
 <tr>
   <td>{{ l.chapter }}</td>
   <td>{{ l.title }}</td>
-  <td>{% if l.url != "" %}<a href="{{ l.url }}" target="_blank" rel="noopener">▶ Watch</a>{% else %}<span class="soon">Coming soon</span>{% endif %}</td>
+  <td><a href="{{ l.url }}" target="_blank" rel="noopener">▶ Watch</a></td>
 </tr>
 {% if forloop.last %}</tbody></table>{% endif %}
 {% endfor %}
@@ -66,5 +66,4 @@ Bài giảng đi kèm với sách chứ không thay thế sách. Xem bài giản
   table.lectures td:first-child, table.lectures th:first-child { width: 5.5em; text-align: center; }
   table.lectures td:last-child, table.lectures th:last-child { width: 8em; white-space: nowrap; }
   table.lectures a { font-weight: 600; }
-  table.lectures .soon { color: var(--ink-soft); font-size: .92em; }
 </style>
