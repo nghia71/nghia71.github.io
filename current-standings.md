@@ -347,11 +347,11 @@ Click **"I'm ready to open my test paper"** only when you're actually about to s
 
 Either team member can click it — you don't both need to. A second click from your teammate (or an accidental repeat click) does nothing extra; it won't reset or restart the clock.
 
-**How much time you actually get:** your level's test duration, plus 10 extra minutes to cover the real gap between clicking and actually starting to read (loading the file, printing it, settling in — not extra working time). So a Level 3 test (150 minutes, see [Tests & Yearbook](./tests.md)) gives you until 160 minutes after you click.
+**How much time you actually get:** your level's test duration, plus 10 extra minutes to cover the real gap between clicking and actually starting to read (loading the file, printing it, settling in — not extra working time). So a Level 3 test (150 minutes, see [Tests](./tests.md)) gives you until 160 minutes after you click.
 
 ### Submitting your solution
 
-Once you're done, come back to the same Form and choose **"Submit my solution."** As always: **one PDF file, nothing else** — no photos, no multiple files, no email submissions (see [Tests & Yearbook](./tests.md#submitting-work) for why).
+Once you're done, come back to the same Form and choose **"Submit my solution."** As always: **one PDF file, nothing else** — no photos, no multiple files, no email submissions (see [Tests](./tests.md#submitting-work) for why).
 
 * You can submit more than once. If you realize something's wrong 10 minutes after submitting and you're still within time, submit again — the newer file replaces the older one as your official submission. Nothing is lost either way; if it ever matters, earlier files aren't deleted, only the link to "the" submission moves.
 * Once a submission is accepted, your team's access to the paper file is automatically removed. That's expected, not an error.
@@ -423,11 +423,11 @@ Chỉ bấm **"I'm ready to open my test paper"** khi đã thực sự sẵn sà
 
 Bất kỳ thành viên nào trong đội cũng bấm được — không cần cả hai người cùng bấm. Nếu bạn cùng đội bấm thêm lần nữa (hoặc bấm nhầm lần hai), sẽ không có gì thay đổi thêm; đồng hồ không bị đặt lại từ đầu.
 
-**Các em thực sự có bao nhiêu thời gian:** bằng thời lượng bài thi của level, cộng thêm 10 phút để bù cho khoảng thời gian thực từ lúc bấm đến lúc thực sự bắt đầu đọc đề (tải file, in ra, ổn định chỗ ngồi — không phải thời gian làm bài thêm). Vậy bài thi Level 3 (150 phút, xem [Tests & Yearbook](./tests.md)) cho các em đến 160 phút sau khi bấm.
+**Các em thực sự có bao nhiêu thời gian:** bằng thời lượng bài thi của level, cộng thêm 10 phút để bù cho khoảng thời gian thực từ lúc bấm đến lúc thực sự bắt đầu đọc đề (tải file, in ra, ổn định chỗ ngồi — không phải thời gian làm bài thêm). Vậy bài thi Level 3 (150 phút, xem [Tests](./tests.md)) cho các em đến 160 phút sau khi bấm.
 
 ### Nộp bài giải
 
-Khi làm xong, quay lại đúng Form đó và chọn **"Submit my solution"** *(Nộp bài giải)*. Như mọi khi: **chỉ một file PDF, không gì khác** — không ảnh chụp, không nhiều file, không nộp qua email (xem [Tests & Yearbook](./tests.md#submitting-work) để biết lý do).
+Khi làm xong, quay lại đúng Form đó và chọn **"Submit my solution"** *(Nộp bài giải)*. Như mọi khi: **chỉ một file PDF, không gì khác** — không ảnh chụp, không nhiều file, không nộp qua email (xem [Tests](./tests.md#submitting-work) để biết lý do).
 
 * Có thể nộp lại nhiều lần. Nếu 10 phút sau khi nộp phát hiện sai sót và vẫn còn thời gian, cứ nộp lại — file mới sẽ thay cho file cũ làm bài nộp chính thức. Không mất gì cả trong mọi trường hợp; nếu cần, file nộp trước đó vẫn còn, chỉ có đường link "bài nộp chính thức" chuyển sang file mới.
 * Sau khi một bài nộp được chấp nhận, quyền truy cập của đội vào file đề thi sẽ tự động bị thu hồi. Đây là điều bình thường, không phải lỗi.
@@ -679,7 +679,7 @@ Almost always: they're signed into an unregistered Google account. Confirm which
 
 ### A late or rejected submission
 
-The system automatically accepts a late submission up to 30 minutes past deadline (flagged, not penalized further by the system itself — see [Tests & Yearbook](./tests.md) for how grading works). Past that window, or a submission with no recorded start, is rejected outright and the family is told, on the sheet itself, exactly what to do. If a family reaches out to you about one of these, the fix is almost always what the `Status` message on their row already says — check that first.
+The system automatically accepts a late submission up to 30 minutes past deadline (flagged, not penalized further by the system itself — see [Tests](./tests.md) for how grading works). Past that window, or a submission with no recorded start, is rejected outright and the family is told, on the sheet itself, exactly what to do. If a family reaches out to you about one of these, the fix is almost always what the `Status` message on their row already says — check that first.
 
 <details class="vn" markdown="1">
 <summary>🇻🇳 Tiếng Việt — Tài nguyên cho quản lý vùng & ban tổ chức (click to expand)</summary>
@@ -774,7 +774,7 @@ Hầu như luôn là do đăng nhập bằng tài khoản Google chưa đăng k�
 
 ### Bài nộp trễ hoặc bị từ chối
 
-Hệ thống tự động chấp nhận bài nộp trễ trong vòng 30 phút sau hạn (được ghi nhận là trễ, không bị hệ thống tự trừ điểm thêm — xem [Tests & Yearbook](./tests.md) về cách chấm điểm). Quá thời hạn đó, hoặc một bài nộp mà không có ghi nhận đã bắt đầu làm bài, sẽ bị từ chối ngay và gia đình được thông báo ngay trên bảng cần làm gì tiếp theo. Nếu một gia đình liên hệ về việc này, cách xử lý hầu như luôn đúng như thông báo `Status` trên dòng của họ đã nêu — kiểm tra đó trước.
+Hệ thống tự động chấp nhận bài nộp trễ trong vòng 30 phút sau hạn (được ghi nhận là trễ, không bị hệ thống tự trừ điểm thêm — xem [Tests](./tests.md) về cách chấm điểm). Quá thời hạn đó, hoặc một bài nộp mà không có ghi nhận đã bắt đầu làm bài, sẽ bị từ chối ngay và gia đình được thông báo ngay trên bảng cần làm gì tiếp theo. Nếu một gia đình liên hệ về việc này, cách xử lý hầu như luôn đúng như thông báo `Status` trên dòng của họ đã nêu — kiểm tra đó trước.
 
 </details>
 

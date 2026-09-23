@@ -54,7 +54,7 @@ See [Current Standings](./current-standings.md#for-parents--students) for the fo
 
 ## Choose your own testing pace
 
-Learning without testing does not stick. Each family chooses how often their team sits a test — weekly, every two weeks, or every three weeks — and can change that choice during the year by asking their regional coordinator. See [Tests & Yearbook](./tests.md#choosing-your-pace) for the full options and the thinking behind them.
+Learning without testing does not stick. Each family chooses how often their team sits a test — weekly, every two weeks, or every three weeks — and can change that choice during the year by asking their regional coordinator. See [Tests](./tests.md#choosing-your-pace) for the full options and the thinking behind them.
 
 <div class="note" markdown="1">
 **How registration and testing work.** Each family registers its chosen level and testing pace with its **regional coordinator** (see [Organization](./organization.md) for who that is), who enters it into the system. From there everything described above runs on its own: the system schedules the next test from the pace on file, opens and closes access to the paper, and records when the team started and submitted. The assigned teacher grades the submission and results are published (see [Grading](#grading) below); your regional coordinator can see your team's status at any time and will follow up if something looks off.
@@ -99,7 +99,7 @@ The pass mark on any placement paper is **51 points out of 100**. Passing does n
 
 **If a student does not reach the bar**, the right next step is Beast Academy or the AoPS Introductory series, not a preparatory class. Two days of testing already show what a student can do; a few extra sessions do not change a wide gap, and starting a track that is out of reach helps nobody.
 
-For the test format itself — how the six problems are built and scored — see [Tests & Yearbook](./tests.md).
+For the test format itself — how the six problems are built and scored — see [Tests](./tests.md).
 
 ## Awards through the year
 
@@ -125,4 +125,4 @@ If the fee creates real difficulty for a family, please ask for a reduction or a
 
 ## Submitting work
 
-Team assignments and tests both go through a simple online form, and both follow the same rule: one PDF file, nothing else — see [Tests & Yearbook](./tests.md#submitting-work) for exactly why, and for how tests specifically use the dedicated **Test Paper Open/Submit Form** described under [How a cycle works](#how-a-cycle-works) above. All work is graded with comments; see [Tests & Yearbook](./tests.md#grading-and-feedback) for how grading and results work.
+Team assignments and tests both go through a simple online form, and both follow the same rule: one PDF file, nothing else — see [Tests](./tests.md#submitting-work) for exactly why, and for how tests specifically use the dedicated **Test Paper Open/Submit Form** described under [How a cycle works](#how-a-cycle-works) above. All work is graded with comments; see [Tests](./tests.md#grading-and-feedback) for how grading and results work.

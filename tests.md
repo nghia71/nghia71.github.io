@@ -1,8 +1,8 @@
 ---
-title: Tests & Yearbook
+title: Tests
 ---
 
-# Tests & Yearbook
+# Tests
 
 Learning without testing does not stick. A student can read a chapter, follow every worked example, and still not have the ideas available when a blank page demands them. Sitting a test is what forces what was learned to come back out — which is why testing sits at the centre of the year rather than at the end of it.
 

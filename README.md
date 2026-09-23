@@ -121,7 +121,7 @@ Students work in pairs, moving through the curriculum at their own pace: study a
 
   <div class="card">
     <span class="tag">Tests</span>
-    <h3>Tests & Yearbook</h3>
+    <h3>Tests</h3>
     <p>226 papers and over 1,350 problems across four levels — and, at the end of the year, the yearbook the students write with us.</p>
     <p><a href="./tests">How testing works →</a></p>
   </div>
@@ -172,7 +172,8 @@ Registration for 2026-2027 is closed. To hear about next year, join the [MCC mai
 * [**Organization**](./organization.md) — the Parents' Association, regional contacts, and how the year is run.
 * [**Programs 2026-2027**](./programs.md) — how the year works, entrance and reassessment, the calendar, awards.
 * [**Books**](./books.md) — the full curriculum and how to order it.
-* [**Tests & Yearbook**](./tests.md) — the test format, submission rules, grading, and the yearbook.
+* [**Video Lectures**](./video-lectures.md) — one recorded lecture per chapter of LPS VI and LPS VII, for club members.
+* [**Tests**](./tests.md) — the test format, submission rules, grading, and the yearbook.
 * [**Purple Comet 2026**](./purple-comet-2026.md) — teams, results, and student profiles.
 * [**Competition history**](./history.md) — our Purple Comet results, 2019 to 2026.
 * [**Registration 2026-2027**](./register.md) — the original announcement (registration is now closed), kept for reference.

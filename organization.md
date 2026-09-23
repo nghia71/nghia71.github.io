@@ -28,7 +28,7 @@ Because MCC families are spread across many time zones, the Parents' Association
 * **Mr. Toan** grades T3 and T4 papers.
 * Both grade at the start of each week and cover for each other when a paper needs an urgent turnaround.
 
-See [Programs](./programs.md#grading) for the full registration and grading workflow, and [Tests & Yearbook](./tests.md) for the test format itself.
+See [Programs](./programs.md#grading) for the full registration and grading workflow, and [Tests](./tests.md) for the test format itself.
 
 ## The weekly Sunday session
 
@@ -72,7 +72,7 @@ Vì học sinh MCC ở nhiều múi giờ khác nhau, Hội PH được chia th�
 * **Anh Toàn** chấm bài Level T3 và T4.
 * Cả hai chấm vào đầu mỗi tuần và có thể thay nhau khi có bài cần chấm gấp.
 
-Xem [Programs](./programs.md#grading) để biết đầy đủ quy trình đăng ký và chấm bài, và [Tests & Yearbook](./tests.md) để biết cấu trúc đề thi.
+Xem [Programs](./programs.md#grading) để biết đầy đủ quy trình đăng ký và chấm bài, và [Tests](./tests.md) để biết cấu trúc đề thi.
 
 ## Sinh hoạt Chủ nhật hàng tuần
 
