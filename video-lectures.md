@@ -39,7 +39,7 @@ Bài giảng đi kèm với sách chứ không thay thế sách. Xem bài giản
 {% assign released = lectures | where_exp: "l", "l.url != ''" %}
 
 <h2 id="{{ anchor }}">{{ heading }}</h2>
-<p><strong>{{ sub }}</strong> — {{ released.size }} released so far. New lectures appear here as they are released.</p>
+<p><strong>{{ sub }}</strong> — {{ released.size }} chapters released so far. New lectures appear here as they are released.</p>
 
 {% assign current_part = "" %}
 {% for l in released %}
@@ -56,6 +56,13 @@ Bài giảng đi kèm với sách chứ không thay thế sách. Xem bài giản
   <td>{{ l.title }}</td>
   <td><a href="{{ l.url }}" target="_blank" rel="noopener">▶ Watch</a></td>
 </tr>
+{% for x in l.extras %}{% if x.url != "" %}
+<tr>
+  <td>{{ x.label }}</td>
+  <td>{{ x.title }}</td>
+  <td><a href="{{ x.url }}" target="_blank" rel="noopener">▶ Watch</a></td>
+</tr>
+{% endif %}{% endfor %}
 {% if forloop.last %}</tbody></table>{% endif %}
 {% endfor %}
 {% endfor %}
