@@ -81,7 +81,7 @@ Learning without testing does not stick. This year each family chooses how often
 
 All assignments and tests go through an online form: **one PDF file, nothing else**. No email, no photographs, no multiple files. Submissions in the wrong format lose points. The rule looks harsh and is meant kindly — it takes about a term to become a habit, and after that nobody spends the year sending reminders.
 
-Results and individual evaluations will be **published on the site rather than emailed**, so that students and parents can see not only a score but how it has changed over time.
+Results will be **published on the site rather than emailed**, so that students and parents can see not only a score but how it has changed over time. Each team's detailed written evaluation goes to that team privately, through its coordinator: every team at a level takes the same paper at a different time, so evaluations are never made public.
 
 ---
 
@@ -150,7 +150,7 @@ Học mà không thi thì không đọng lại. Năm nay mỗi gia đình tự c
 
 Tất cả bài tập và bài thi đều nộp qua mẫu trực tuyến: **một file PDF duy nhất**, không gì khác. Không nộp qua email, không nộp ảnh chụp, không nộp nhiều file. Nộp sai quy cách sẽ bị trừ điểm. Quy định này nghe có vẻ khắt khe nhưng thực ra là để giúp mọi người: chỉ cần một học kỳ là thành thói quen, sau đó cả năm không ai phải nhắc nhở nữa.
 
-Kết quả và nhận xét từng học sinh sẽ được **đăng trên trang web thay vì gửi email**, để học sinh và phụ huynh không chỉ thấy điểm số mà còn thấy sự thay đổi theo thời gian.
+Kết quả sẽ được **đăng trên trang web thay vì gửi email**, để học sinh và phụ huynh không chỉ thấy điểm số mà còn thấy sự thay đổi theo thời gian. Nhận xét chi tiết từng bài của mỗi đội được gửi riêng cho đội đó qua coordinator: các đội cùng level thi cùng một đề vào những thời điểm khác nhau, nên nhận xét không bao giờ được công khai.
 
 ---
 
