@@ -6,7 +6,25 @@ title: Current Standings
 
 This page is the club's live index, for every role: where the roster and every team's exam status can be seen by anyone, exactly what happens on an actual test day and what each column and status message means, and where the coordinator and organizer spreadsheets live for the people who run the club.
 
-**Jump to:** [Start here](#start-here) · [Where the data lives](#where-the-clubs-data-lives) · [Glossary](#glossary) · [The public roster](#the-public-roster) · [For Parents & Students](#for-parents--students) · [Coordinator & organizer resources](#coordinator--organizer-resources) · [For Graders](#for-graders){% if site.show_test_material %} · [Test suites](#test-suites){% endif %}
+**Jump to:** [Team standings](#team-standings) · [Start here](#start-here) · [Where the data lives](#where-the-clubs-data-lives) · [Glossary](#glossary) · [The public roster](#the-public-roster) · [For Parents & Students](#for-parents--students) · [Coordinator & organizer resources](#coordinator--organizer-resources) · [For Graders](#for-graders){% if site.show_test_material %} · [Test suites](#test-suites){% endif %}
+
+## Team standings
+
+Every active team, by level. Teams are ranked by **chapters passed**, then by **points** (the sum of their passing scores); a team gets a rank once it has passed its first chapter. The C1, C2, … columns show the score with which each chapter was passed; ✗ means the chapter has been attempted but not passed yet. **Attempts** counts every graded test, retakes included. The table updates by itself: a result appears here as soon as it has been graded.
+
+Only team IDs and numbers are shown. Each team's detailed grading comments go to that team privately, through its coordinator.
+
+<div id="live-standings" class="live-standings"></div>
+<script src="{{ '/assets/js/live-standings.js' | relative_url }}?v=2"></script>
+
+<details class="vn" markdown="1">
+<summary>🇻🇳 Tiếng Việt — Bảng xếp hạng các đội (click to expand)</summary>
+
+Mọi đội đang hoạt động, chia theo level. Các đội được xếp hạng theo **số chương đã đạt**, rồi theo **điểm** (tổng điểm của các bài đạt); một đội có thứ hạng từ khi đạt chương đầu tiên. Các cột C1, C2, … là điểm của bài đạt ở chương đó; ✗ nghĩa là đội đã thi chương đó nhưng chưa đạt. Cột **Attempts** đếm mọi bài thi đã chấm, kể cả thi lại. Bảng tự cập nhật: kết quả xuất hiện ngay khi bài được chấm xong.
+
+Trang này chỉ hiện mã đội và điểm số. Nhận xét chi tiết của từng bài được gửi riêng cho đội đó, qua coordinator.
+
+</details>
 
 ## Start here
 
@@ -175,7 +193,7 @@ The club runs on three Google Sheets and one Form, kept deliberately separate so
 
 | Spreadsheet / Form | What it holds | Who can open it |
 |---|---|---|
-| **MCC Public Roster** | Every active team — name, team, level, region, status — plus a live row per test: placed, submitted, graded. | Anyone with the link |
+| **MCC Public Roster** | Every active team — name, team, level, region, status — plus a live row per test: placed, submitted, graded, with its points and result (never the grading comments). | Anyone with the link |
 | **MCC Master Registration** | Full student and parent details, team assignments, and the club's coordinator and grader lists. | Coordinators (edit) & club organizers (view only) |
 | **MCC Regional Pacing** | One tab per region (UK, FR, EC, WC, VN) — each team's next chapter, testing frequency, and next test date — hand-edited by that region's coordinator. | Coordinators (edit) & club organizers (view only) |
 | **Test Paper Open/Submit Form** | Where a student opens their test paper and, later, submits their solution — one permanent link, used all year for every team and every test. | Students only, identified by their own verified Google account |
@@ -191,7 +209,7 @@ Câu lạc bộ vận hành trên ba bảng tính Google Sheets và một Form, 
 
 | Bảng tính / Form | Chứa gì | Ai được mở |
 |---|---|---|
-| **MCC Public Roster** | Mọi đội đang hoạt động — tên, đội, level, khu vực, trạng thái — cùng một dòng theo dõi mỗi bài thi: đã mở đề, đã nộp, đã chấm. | Bất kỳ ai có link |
+| **MCC Public Roster** | Mọi đội đang hoạt động — tên, đội, level, khu vực, trạng thái — cùng một dòng theo dõi mỗi bài thi: đã mở đề, đã nộp, đã chấm, kèm điểm và kết quả (không bao giờ có nhận xét chấm bài). | Bất kỳ ai có link |
 | **MCC Master Registration** | Đầy đủ thông tin học sinh và phụ huynh, phân đội, và danh sách quản lý vùng, người chấm bài của câu lạc bộ. | Quản lý vùng (chỉnh sửa) & ban tổ chức (chỉ xem) |
 | **MCC Regional Pacing** | Mỗi khu vực một tab (UK, FR, EC, WC, VN) — chương kế tiếp, tần suất thi, và ngày thi kế tiếp của từng đội — do quản lý vùng đó tự tay chỉnh sửa. | Quản lý vùng (chỉnh sửa) & ban tổ chức (chỉ xem) |
 | **Test Paper Open/Submit Form** | Nơi học sinh mở đề thi và, sau đó, nộp bài giải — một link cố định, dùng suốt năm cho mọi đội và mọi bài thi. | Chỉ học sinh, xác định qua tài khoản Google đã xác thực của chính mình |
