@@ -12,6 +12,10 @@
 // the Public Roster at all (they live in the coordinator-only Regional
 // Pacing file).
 //
+// Team names: a team's own chosen name (Roster column TeamName, e.g. T205
+// "The Dragon Mathletes") is shown next to its ID when it differs from it.
+// The column is optional, so the page still works on an older roster.
+//
 // Ranking, within each level: chapters passed (more is better), then points
 // = the sum of the passing scores (equal on both = same rank); teams that
 // have not passed a chapter yet are listed without a rank.
@@ -70,7 +74,9 @@
       var r = res[0], e = res[1];
       need(r, ["FullName", "TeamID", "Level", "Status"], "Roster");
       need(e, ["TeamID", "Chapter", "Attempt", "Total", "Result", "GradedUTC"], "Exams");
-      var rosterQ = "select " + [r.TeamID, r.Level, r.Status].join(", ") +
+      var rosterCols = [r.TeamID, r.Level, r.Status];
+      if (r.TeamName) rosterCols.push(r.TeamName);
+      var rosterQ = "select " + rosterCols.join(", ") +
         " where " + r.TeamID + " is not null and not " + r.FullName + " starts with 'TEST'";
       var examsQ = "select " + [e.TeamID, e.Chapter, e.Attempt, e.Total, e.Result, e.GradedUTC].join(", ") +
         " where " + e.Result + " = 'Pass' or " + e.Result + " = 'Fail'";
@@ -78,7 +84,8 @@
     }).then(function (tables) {
       var teams = tables[0].rows.map(function (row) {
         return { teamId: String(cell(row, 0)).trim(), level: Number(cell(row, 1)) || 0,
-          status: String(cell(row, 2) || "").trim().toLowerCase() };
+          status: String(cell(row, 2) || "").trim().toLowerCase(),
+          teamName: row.c.length > 3 ? String(cell(row, 3) || "").trim() : "" };
       });
       var exams = tables[1].rows.map(function (row) {
         return { teamId: String(cell(row, 0)).trim(), chapter: Number(cell(row, 1)) || 0,
@@ -91,7 +98,7 @@
 
   // ---- pure computation ----------------------------------------------------
 
-  // teams: [{teamId, level, status}] (one per student row is fine)
+  // teams: [{teamId, level, status, teamName}] (one per student row is fine)
   // exams: [{teamId, chapter, attempt, total, result, graded}]
   // -> [{level, maxChapter, rows: [{rank, teamId, passed, points, attempts,
   //      chapters: {n: {score, passed}}, latest}]}], levels ascending
@@ -100,8 +107,12 @@
     teams.forEach(function (t) {
       if (!t.teamId || (t.status && t.status !== "active")) return;
       if (!byTeam[t.teamId]) {
-        byTeam[t.teamId] = { teamId: t.teamId, level: t.level, passed: 0, points: 0,
+        byTeam[t.teamId] = { teamId: t.teamId, teamName: "", level: t.level, passed: 0, points: 0,
           attempts: 0, chapters: {}, latest: null };
+      }
+      if (t.teamName && !byTeam[t.teamId].teamName &&
+          t.teamName.toLowerCase() !== t.teamId.toLowerCase()) {
+        byTeam[t.teamId].teamName = t.teamName;
       }
     });
     exams.forEach(function (x) {
@@ -168,7 +179,8 @@
           : '<span class="ls-date">not started</span>';
         // No rank until a team has passed a chapter: at 0 passed and 0
         // points everyone would tie for 1st, which says nothing.
-        return "<tr><td>" + (t.passed ? t.rank : "&ndash;") + "</td><td><strong>" + esc(t.teamId) + "</strong></td>" +
+        return "<tr><td>" + (t.passed ? t.rank : "&ndash;") + "</td><td><strong>" + esc(t.teamId) + "</strong>" +
+          (t.teamName ? ' <span class="ls-teamname">' + esc(t.teamName) + "</span>" : "") + "</td>" +
           '<td class="ls-num">' + t.passed + '</td><td class="ls-num">' + t.points + "</td>" +
           chCells + '<td class="ls-num">' + t.attempts + "</td><td>" + latest + "</td></tr>";
       }).join("");
