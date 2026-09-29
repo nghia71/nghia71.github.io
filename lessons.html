@@ -3,47 +3,15 @@ title: Lessons
 robots: noindex
 ---
 
-<!-- Coding-course lessons hub: one login (student id + PIN, typed in --
-     not from a URL), then a dense table of every lesson; clicking a row
-     loads that lesson into the iframe below and auto-resizes it to fit,
-     so switching lessons never leaves this page. Uses the same roster
-     check and the same localStorage key as lesson-gate.html (both load
-     assets/js/mcc-roster.js), so signing in here also unlocks a direct
-     link straight to lesson-1.html on this device, and vice versa: a
-     student who came in through their personal link can still open this
-     page afterward with no extra step.
-
-     A row can carry data-requires-unlock="<lesson number>" (see
-     lesson-2's row below, "2") for a lesson staged behind its own
-     round's contest -- see mcc-access-check.gs's TESTERS/
-     LESSON_THRESHOLDS and its "unlockedLessons" response field (an
-     array of lesson numbers currently visible). Such a row starts
-     hidden (inline style, a fail-safe default in case the unlock JS
-     below never runs) and is only ever revealed once the signed-in
-     student's own checkAccess() result's unlockedLessons array contains
-     that row's own number -- never revealed by default, and never for a
-     lesson whose own round hasn't closed yet, even though the student is
-     validly signed in and even if a LATER lesson has already opened. A
-     row with no data-requires-unlock attribute (lesson-1's row) is
-     unaffected and always shows once signed in, exactly as before. -->
-
-<p id="mcc-hub-loading" style="text-align:center; color: var(--ink-soft); font-style: italic; margin: 2.5em 0;">Checking your access&hellip;</p>
-
-<div id="mcc-hub-login" class="mcc-gate-screen" style="display:none">
-  <p id="mcc-hub-message"></p>
-  <form id="mcc-hub-login-form">
-    <p id="mcc-hub-welcome"></p>
-    <label for="mcc-hub-id-input">Student ID</label><br>
-    <input type="text" id="mcc-hub-id-input" autocomplete="off" autocapitalize="off" spellcheck="false" maxlength="20"><br>
-    <label for="mcc-hub-pin-input">Access code</label><br>
-    <input type="text" id="mcc-hub-pin-input" autocomplete="off" autocapitalize="off" spellcheck="false" maxlength="40"><br>
-    <button type="submit">Continue</button>
-    <p id="mcc-hub-login-error" style="display:none;">That id/code combination doesn't match &mdash; try again.</p>
-  </form>
-</div>
-
-<div id="mcc-hub-content" style="display:none">
-  <p id="mcc-hub-greeting" style="color: var(--ink-soft); font-style: italic;"></p>
+<!-- Coding-course lessons hub: a public table of every published lesson;
+     clicking a row loads that lesson into the iframe below and auto-resizes
+     it to fit. Lessons are public (no sign-in, since 2026-09-29). A contest's
+     problems and solutions are never committed before that contest ends --
+     the repo is public -- so a new row is added only once its lesson is
+     safe to publish. Student sign-in now lives on toml.html, where it is
+     still needed for the contest submit link. -->
+<div id="mcc-hub-content">
+  <p style="color: var(--ink-soft); font-style: italic;">Pick a lesson below. Every lesson is open to everyone &mdash; no sign-in needed.</p>
   <div class="mcc-hub-table-wrap">
     <table id="mcc-hub-table" class="mcc-hub-table">
       <thead>
@@ -52,26 +20,13 @@ robots: noindex
       <tbody>
         <tr data-url="{{ '/lesson-1.html' | relative_url }}">
           <td>1</td>
-          <td>Purple Comet 2004</td>
-          <td>Divisibility &amp; Prime Factorization &middot; Linear Equations &middot; Similarity &amp; Proportional Geometry &middot; Inequalities &middot; Inclusion&ndash;Exclusion &middot; Circles &amp; Power of a Point &middot; Sequences &amp; Recurrences</td>
+          <td>Worked examples (before Test 1)</td>
+          <td>Linear Diophantine Equations &middot; Triangle Inequality &middot; Recurrences &middot; Cryptarithms &amp; Complete Search &middot; Divisibility &amp; LCM &middot; Sums of Consecutive Integers &middot; Lattice Points &amp; GCD &middot; Arithmetic Sequences of Reciprocals &middot; Subset-Sum Counting &middot; Divisor Structure</td>
         </tr>
-        <tr data-url="{{ '/lesson-2.html' | relative_url }}" data-requires-unlock="2" style="display:none">
-          <td>2</td>
-          <td>Purple Comet 2010 (Test 1 solutions)</td>
-          <td>Vieta&rsquo;s Formulas &amp; Root Relationships &middot; AM&ndash;GM &amp; Optimization &middot; Similar Triangles &amp; Coordinate Geometry &middot; Complementary Counting &amp; Casework &middot; Digit&ndash;Sum &amp; Modular Arithmetic &middot; Systems of Equations</td>
-        </tr>
-        <!-- Add one <tr data-url="..."> per lesson as they're published;
-             topics: read the lesson's own worked problems and name the
-             actual LPS VI/VII chapter-level techniques used (see
-             team-test-chapter-index.md), not a generic 4-subject list --
-             every lesson pulls from all 4 subjects, so that list says
-             nothing about what THIS lesson specifically covers. Add
-             data-requires-unlock="<lesson number>" plus style="display:none"
-             for any lesson that should stay staged behind its own
-             round's launch date, the same way lesson-2's row above does
-             (it carries "2" since it's Lesson 2). Each lesson number
-             must also have a matching entry in mcc-access-check.gs's
-             LESSON_THRESHOLDS, or it never unlocks. -->
+        <!-- Add one <tr data-url="..."> per lesson as it is published; topics:
+             name the actual LPS VI/VII chapter-level techniques the lesson's
+             worked problems use, not a generic 4-subject list. A contest's
+             solutions lesson is added only AFTER that contest ends. -->
       </tbody>
     </table>
   </div>
@@ -162,63 +117,10 @@ robots: noindex
   }
 </style>
 
-<!-- ?v=N cache-busts this static asset -- browsers cache a JS file
-     aggressively by URL, so bump N here (and in lesson-gate.html) any
-     time mcc-roster.js's content actually changes, or a stale cached
-     copy keeps running after a real deploy (this bit us on 2026-09-20:
-     the CSV-fetch version stayed cached in a browser well after the
-     server-side-check version replaced it). -->
-<script src="{{ '/assets/js/mcc-roster.js' | relative_url }}?v=3"></script>
 <script>
 (function () {
-  var loading = document.getElementById("mcc-hub-loading");
-  var loginScreen = document.getElementById("mcc-hub-login");
-  var hubMessage = document.getElementById("mcc-hub-message");
-  var loginForm = document.getElementById("mcc-hub-login-form");
-  var idInput = document.getElementById("mcc-hub-id-input");
-  var pinInput = document.getElementById("mcc-hub-pin-input");
-  var loginError = document.getElementById("mcc-hub-login-error");
-  var content = document.getElementById("mcc-hub-content");
-  var greeting = document.getElementById("mcc-hub-greeting");
   var table = document.getElementById("mcc-hub-table");
   var frame = document.getElementById("mcc-hub-frame");
-
-  // Shows/hides every row marked data-requires-unlock="<n>" based on
-  // this signed-in student's own "unlockedLessons" array from the last
-  // checkAccess() result -- a row shows only if ITS OWN number is in
-  // that array, not just because *some* lesson has unlocked. Rows with
-  // no such attribute (lesson-1) are untouched -- they show
-  // unconditionally once signed in, same as always. Called after every
-  // successful sign-in/re-check, so a tester account and a real student
-  // see a different table with identical markup and identical code path
-  // -- nothing client-side hardcodes "S007"/"S008", the server's
-  // "unlockedLessons" field is the only source of truth (see
-  // mcc-access-check.gs).
-  function applyUnlockState(unlockedLessons) {
-    var set = {};
-    (unlockedLessons || []).forEach(function (n) { set[n] = true; });
-    Array.prototype.forEach.call(table.querySelectorAll('tbody tr[data-requires-unlock]'), function (row) {
-      row.style.display = set[row.getAttribute('data-requires-unlock')] ? "" : "none";
-    });
-  }
-
-  function showLoggedIn(student) {
-    loading.style.display = "none";
-    loginScreen.style.display = "none";
-    content.style.display = "";
-    greeting.textContent = student.name ? "Welcome, " + student.name + ". Pick a lesson below." : "Pick a lesson below.";
-    applyUnlockState(student.unlockedLessons);
-  }
-
-  function showLoginForm() {
-    loading.style.display = "none";
-    loginScreen.style.display = "";
-  }
-
-  function rememberAndEnter(student) {
-    try { localStorage.setItem(MCCRoster.STORAGE_KEY, JSON.stringify({ id: student.id, name: student.name })); } catch (e) { /* private browsing -- fine, just won't persist */ }
-    showLoggedIn(student);
-  }
 
   function openLesson(row) {
     var url = row.getAttribute("data-url");
@@ -269,52 +171,5 @@ robots: noindex
     row.addEventListener("click", function () { openLesson(row); });
   });
 
-  loginForm.addEventListener("submit", function (e) {
-    e.preventDefault();
-    var studentId = idInput.value.trim();
-    var pin = pinInput.value.trim();
-    if (!studentId || !pin) return;
-    loginError.style.display = "none";
-    hubMessage.textContent = "Checking…";
-
-    MCCRoster.checkAccess(studentId, pin)
-      .then(function (result) {
-        hubMessage.textContent = "";
-        if (result && result.ok) {
-          rememberAndEnter({ id: studentId, name: result.name, unlockedLessons: result.unlockedLessons });
-        } else {
-          loginError.style.display = "";
-        }
-      })
-      .catch(function () {
-        hubMessage.textContent = "Couldn't check access right now — check your internet connection and try again.";
-      });
-  });
-
-  // Already verified on this device (via a personal lesson link, or an
-  // earlier visit here) -- skip straight to the lesson table. No PIN
-  // needed again, just a re-check that the id is still on the roster
-  // (and to get a fresh "unlocked" value -- it can flip from false to
-  // true between visits, e.g. on launch day, without the student doing
-  // anything). The login form starts hidden (see the style="display:none"
-  // on #mcc-hub-login) and #mcc-hub-loading shows in its place until this
-  // resolves either way, so a returning, already-verified student never
-  // sees the login form flash up before the lesson table replaces it.
-  var stored = null;
-  try { stored = JSON.parse(localStorage.getItem(MCCRoster.STORAGE_KEY) || "null"); } catch (e) {}
-  if (stored && stored.id) {
-    MCCRoster.checkAccess(stored.id)
-      .then(function (result) {
-        if (result && result.ok) {
-          showLoggedIn({ id: stored.id, name: result.name, unlockedLessons: result.unlockedLessons });
-        } else {
-          try { localStorage.removeItem(MCCRoster.STORAGE_KEY); } catch (e) {}
-          showLoginForm();
-        }
-      })
-      .catch(function () { showLoginForm(); });
-  } else {
-    showLoginForm();
-  }
 })();
 </script>
