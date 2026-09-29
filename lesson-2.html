@@ -1,0 +1,668 @@
+---
+title: Lesson 2
+robots: noindex
+---
+
+<style>
+  /* Math text should read like a textbook, not the site's body sans-serif. */
+  .problem, .math {
+    font-family: Georgia, "Times New Roman", "Noto Serif", serif;
+    font-size: 1.02em;
+    line-height: 1.6;
+  }
+  .problem { font-style: italic; }
+  .example .tag,
+  .practice-list .tag {
+    display: inline-block;
+    background: var(--gold-soft);
+    color: var(--brand-dark);
+    font-size: 12.5px;
+    font-weight: 700;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    padding: 3px 9px;
+    border-radius: 999px;
+  }
+  .example .tag { margin-right: 4px; }
+  .example { margin-bottom: 1.8em; }
+  .example .source { font-size: 13px; color: var(--ink-soft); margin: -.3em 0 .8em; }
+  .example h3 { font-size: 1.05rem; border-bottom: none; padding-bottom: 0; margin-bottom: .6em; }
+
+  /* Inline, runnable Python (worked examples + the free-form playground).
+     Styled to match the site's existing pre/code blocks (dark ink bg, cream
+     text) and its small pill-shaped utility buttons (see .tc-progress-reset
+     in assets/css/style.css), not a separate "dev tool" look. */
+  .code-runner { margin-top: 14px; margin-bottom: 28px; }
+  .code-editor {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+    font-size: 13.5px;
+    line-height: 1.55;
+    padding: 16px 18px;
+    border: none;
+    border-radius: var(--radius);
+    background: var(--ink);
+    color: #f4ead9;
+    resize: vertical;
+    min-height: 120px;
+    tab-size: 4;
+  }
+  .code-editor:focus { outline: 2px solid var(--gold); outline-offset: 2px; }
+  .code-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+  }
+  .code-controls button {
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--brand);
+    background: var(--cream);
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    padding: 6px 16px;
+    cursor: pointer;
+  }
+  .code-controls button:hover { background: var(--gold-soft); }
+  .code-controls button:disabled { opacity: .5; cursor: default; }
+  .code-status {
+    font-size: 13px;
+    color: var(--ink-soft);
+    font-style: italic;
+  }
+  .code-output {
+    margin: 10px 0 0;
+    padding: 16px 18px;
+    border-radius: var(--radius);
+    background: var(--brand-dark);
+    color: var(--gold-soft);
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+    font-size: 13.5px;
+    white-space: pre-wrap;
+    word-break: break-word;
+    overflow-x: auto;
+    display: none;
+  }
+  .code-output.has-content { display: block; }
+  .code-output.is-error { color: #ffd7c2; }
+  .playground-card { margin-top: 1.2em; }
+  .playground-card .code-editor { min-height: 160px; }
+
+  /* Geometry diagrams -- redrawn from the source PDF, not screenshots. */
+  .diagram {
+    text-align: center;
+    margin: 1em 0 1.4em;
+    padding: 14px;
+    background: var(--white);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+  }
+  .diagram svg { display: block; margin: 0 auto; max-width: 260px; height: auto; }
+  .diagram figcaption {
+    margin-top: 8px;
+    font-size: 13px;
+    color: var(--ink-soft);
+    font-style: italic;
+  }
+  .addition {
+    display: inline-block;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-align: right;
+    line-height: 1.5;
+    margin: 0.6em 0;
+    padding: 2px 6px;
+  }
+  .addition .addition-row { white-space: pre; }
+  .addition .addition-sum {
+    border-top: 1.5px solid var(--ink);
+    padding-top: 2px;
+  }
+
+  /* Submission-requirements block -- deliberately the most visually
+     distinct thing on the page (2026-09-19: "very important for Lesson 1
+     to present what are required and acceptable for a submission"). */
+  .requirements {
+    background: var(--white);
+    border: 2px solid var(--brand);
+    border-radius: var(--radius);
+    padding: 22px 26px;
+    margin: 1.8em 0 2.2em;
+    box-shadow: var(--shadow);
+  }
+  .requirements h2 {
+    margin-top: 0;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  .requirements h3 { margin-top: 1.1em; margin-bottom: .4em; font-size: 1rem; }
+  .requirements ul { margin-bottom: 0; }
+  .requirements table { font-size: 14.5px; }
+</style>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  renderMathInElement(document.body, {
+    delimiters: [
+      {left: "\\[", right: "\\]", display: true},
+      {left: "\\(", right: "\\)", display: false}
+    ]
+  });
+});
+</script>
+
+<!-- Inline Python: runs entirely in the student's own browser via Pyodide (Python
+     compiled to WebAssembly) -- nothing is sent to any server, nothing is graded,
+     it only runs the code and shows what it prints (or the error). Loaded lazily,
+     only once someone actually presses Run, so a visitor who never clicks Run never
+     downloads it. -->
+<script src="https://cdn.jsdelivr.net/pyodide/v314.0.6/full/pyodide.js"></script>
+<script>
+(function () {
+  var pyodideReadyPromise = null;
+  function getPyodide() {
+    if (!pyodideReadyPromise) {
+      pyodideReadyPromise = loadPyodide();
+    }
+    return pyodideReadyPromise;
+  }
+
+  function setAllRunButtonsDisabled(disabled) {
+    document.querySelectorAll(".code-controls .run-btn").forEach(function (b) {
+      b.disabled = disabled;
+    });
+  }
+
+  function copyText(text, btn) {
+    function done() {
+      var original = btn.textContent;
+      btn.textContent = "✓ Copied";
+      setTimeout(function () { btn.textContent = original; }, 1200);
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(done, done);
+    } else {
+      var ta = document.createElement("textarea");
+      ta.value = text;
+      ta.style.position = "fixed";
+      ta.style.opacity = "0";
+      document.body.appendChild(ta);
+      ta.select();
+      try { document.execCommand("copy"); } catch (e) { /* ignore */ }
+      document.body.removeChild(ta);
+      done();
+    }
+  }
+
+  async function runCode(code, outputEl, statusEl) {
+    outputEl.classList.remove("is-error", "has-content");
+    outputEl.textContent = "";
+    statusEl.textContent = "Starting Python… (first run only -- loads the Python environment, a few seconds)";
+    setAllRunButtonsDisabled(true);
+
+    var buffer = "";
+    var hadError = false;
+    try {
+      var pyodide = await getPyodide();
+      pyodide.setStdout({ batched: function (s) { buffer += s + "\n"; } });
+      pyodide.setStderr({ batched: function (s) { buffer += s + "\n"; } });
+
+      statusEl.textContent = "Checking for imports…";
+      try {
+        await pyodide.loadPackagesFromImports(code);
+      } catch (pkgErr) {
+        // A missing/unsupported package still surfaces as a normal Python
+        // ImportError from runPythonAsync below -- nothing to do here.
+      }
+
+      statusEl.textContent = "Running…";
+      var runStarted = performance.now();
+      try {
+        await pyodide.runPythonAsync(code);
+      } catch (runErr) {
+        hadError = true;
+        buffer += (buffer ? "\n" : "") + (runErr && runErr.message ? runErr.message : String(runErr));
+      }
+      var runElapsedMs = performance.now() - runStarted;
+    } catch (loadErr) {
+      hadError = true;
+      buffer += (buffer ? "\n" : "") + "Could not start the Python environment in this browser: " +
+        (loadErr && loadErr.message ? loadErr.message : loadErr);
+    }
+
+    statusEl.textContent = "";
+    setAllRunButtonsDisabled(false);
+    outputEl.textContent = buffer || "(no output)";
+    // Timing is measured by the runner around the code, never injected
+    // into the code itself -- it covers just this run's execution, not
+    // the one-time Pyodide startup/package-loading before it.
+    if (typeof runElapsedMs === "number") {
+      outputEl.textContent += "\n\n[ran in " + formatElapsed(runElapsedMs) + "]";
+    }
+    outputEl.classList.add("has-content");
+    if (hadError) outputEl.classList.add("is-error");
+  }
+
+  function formatElapsed(ms) {
+    if (ms < 1000) return Math.round(ms) + " ms";
+    return (ms / 1000).toFixed(2) + " s";
+  }
+
+  function makeRunner(getCode, container) {
+    var controls = document.createElement("div");
+    controls.className = "code-controls";
+
+    var runBtn = document.createElement("button");
+    runBtn.type = "button";
+    runBtn.className = "run-btn";
+    runBtn.textContent = "▶ Run";
+
+    var copyBtn = document.createElement("button");
+    copyBtn.type = "button";
+    copyBtn.textContent = "📋 Copy";
+
+    var status = document.createElement("span");
+    status.className = "code-status";
+
+    controls.appendChild(runBtn);
+    controls.appendChild(copyBtn);
+    controls.appendChild(status);
+
+    var output = document.createElement("pre");
+    output.className = "code-output";
+
+    container.appendChild(controls);
+    container.appendChild(output);
+
+    runBtn.addEventListener("click", function () {
+      runCode(getCode(), output, status);
+    });
+
+    return { controls: controls, output: output, status: status, runBtn: runBtn, copyBtn: copyBtn };
+  }
+
+  function enhanceExampleCodeBlocks() {
+    document.querySelectorAll(".example pre").forEach(function (pre) {
+      var codeEl = pre.querySelector("code");
+      if (!codeEl) return;
+      var original = codeEl.textContent;
+
+      var wrapper = document.createElement("div");
+      wrapper.className = "code-runner";
+
+      var textarea = document.createElement("textarea");
+      textarea.className = "code-editor";
+      textarea.spellcheck = false;
+      textarea.value = original;
+      textarea.rows = Math.min(28, Math.max(6, original.split("\n").length));
+
+      wrapper.appendChild(textarea);
+      pre.parentNode.insertBefore(wrapper, pre.nextSibling);
+      pre.style.display = "none"; // original stays in the DOM as a no-JS fallback
+
+      var runner = makeRunner(function () { return textarea.value; }, wrapper);
+
+      var resetBtn = document.createElement("button");
+      resetBtn.type = "button";
+      resetBtn.textContent = "↺ Reset";
+      resetBtn.addEventListener("click", function () {
+        textarea.value = original;
+        runner.output.textContent = "";
+        runner.output.classList.remove("has-content", "is-error");
+      });
+      runner.controls.insertBefore(resetBtn, runner.status);
+
+      runner.copyBtn.addEventListener("click", function () {
+        copyText(textarea.value, runner.copyBtn);
+      });
+    });
+  }
+
+  function setupPlayground() {
+    var textarea = document.getElementById("playground-editor");
+    if (!textarea) return;
+    var wrapper = textarea.parentNode;
+
+    var runner = makeRunner(function () { return textarea.value; }, wrapper);
+
+    var clearBtn = document.createElement("button");
+    clearBtn.type = "button";
+    clearBtn.textContent = "✖ Clear";
+    clearBtn.addEventListener("click", function () {
+      textarea.value = "";
+      runner.output.textContent = "";
+      runner.output.classList.remove("has-content", "is-error");
+      textarea.focus();
+    });
+    runner.controls.insertBefore(clearBtn, runner.status);
+
+    runner.copyBtn.addEventListener("click", function () {
+      copyText(textarea.value, runner.copyBtn);
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    enhanceExampleCodeBlocks();
+    setupPlayground();
+  });
+})();
+</script>
+
+<h1>Lesson 2</h1>
+<p><em>Test 1 (Sunday 4 October 2026) &mdash; all ten contest problems, now with full solutions.</em></p>
+
+<div class="note">
+These are the exact problems from the first coding contest, in the same order: five for Middle School and five for High School, one from each area plus one harder problem. Try any you didn&rsquo;t finish on your own first &mdash; then compare with the math and code below.
+</div>
+<p>Problems marked &ldquo;Pi Journal&rdquo; come from the <em>Math Challenge</em> section of <a href="https://pi.edu.vn" target="_blank" rel="noopener">Pi Journal</a> and are used with the journal&rsquo;s permission; where Pi asks to &ldquo;find all&rdquo; or &ldquo;prove&rdquo;, the problem has been given a single numerical answer so it can be checked by a program.</p>
+
+<div class="requirements">
+<h2 id="what-s-required-and-acceptable-for-a-contest-submission">What&rsquo;s required and acceptable for a contest submission</h2>
+<p>A reminder of the rules every submission was scored against. Every worked example below is itself a submission that would pass all of these rules &mdash; that&rsquo;s the point of reading them closely, not just the answer.</p>
+
+<h3>File format</h3>
+<ul>
+  <li>One <code>.py</code> text file per problem you attempt. Plain Python source, nothing else.</li>
+  <li><strong>Not accepted:</strong> a PDF, a Google Doc, a Jupyter notebook (<code>.ipynb</code>), a screenshot of code, a file renamed to end in <code>.py</code> that isn&rsquo;t actually Python.</li>
+</ul>
+
+<h3>Your program must</h3>
+<ul>
+  <li>Run in <strong>30 seconds or less</strong>.</li>
+  <li>Run <strong>with no errors</strong> &mdash; no exceptions, no crash, nothing printed to the screen except your program&rsquo;s own output.</li>
+  <li>Only import from the allowed list below.</li>
+</ul>
+
+<h3>Allowed libraries</h3>
+<table>
+<thead><tr><th>Library</th><th>Why it&rsquo;s allowed</th></tr></thead>
+<tbody>
+<tr><td>Python standard library &mdash; <code>math</code>, <code>itertools</code>, <code>functools</code>, <code>fractions</code>, <code>collections</code>, <code>re</code>, <code>decimal</code>, <code>random</code></td><td>baseline</td></tr>
+<tr><td><code>sympy</code></td><td>symbolic algebra &mdash; exact equations, simplification, factoring</td></tr>
+<tr><td><code>numpy</code></td><td>numeric arrays and linear algebra, for geometry/simulation problems</td></tr>
+<tr><td><code>matplotlib</code></td><td>diagrams your own code generates as part of its solution</td></tr>
+</tbody>
+</table>
+<p>Anything else &mdash; network access, file I/O, <code>os</code>/<code>subprocess</code>, GUI toolkits &mdash; is out. This list may grow; the current version always lives on this page.</p>
+
+<h3>How a submission is scored &mdash; base score, up to 10 per problem</h3>
+<table>
+<thead><tr><th>Worth</th><th>For</th></tr></thead>
+<tbody>
+<tr><td>up to 5</td><td><strong>The math itself.</strong> Is the real identity/theorem/reduction actually there, and is it sound? A brute-force search with no justified, provably-complete bound is <em>not</em> real math here, even if it happens to print the right answer. This is the part you keep even if your code has a bug &mdash; good math, broken code, still earns these points.</td></tr>
+<tr><td>up to 4</td><td><strong>Correctness.</strong> The program actually runs clean, inside the time limit, and prints the right answer.</td></tr>
+<tr><td>up to 1</td><td><strong>How well-optimized/well-written the code is.</strong> An exhaustive search over a space a two-line argument would have shrunk to nothing loses points here even if it finishes in time.</td></tr>
+</tbody>
+</table>
+<p><strong>If there&rsquo;s no real math at all</strong> &mdash; the code just tries things at random until something matches the expected shape, with nothing above to award points against &mdash; the submission isn&rsquo;t accepted, regardless of whether it prints the right number.</p>
+
+<h3>Excellence bonus &mdash; up to 5 EXTRA points, on top</h3>
+<p>Reserved for work that goes past &ldquo;normally good&rdquo; &mdash; a solid, correct, reasonably-explained solution earns <strong>zero</strong> of these. Each of the five is independent, worth <strong>+1</strong> on its own:</p>
+<table>
+<thead><tr><th>+1 for</th><th>Meaning</th></tr></thead>
+<tbody>
+<tr><td>Excellent math</td><td>Not just correct &mdash; elegant, insightful, or genuinely the cleanest way to see why the answer is what it is.</td></tr>
+<tr><td>Very, very well commented</td><td>Comments that actually teach the reasoning, the way the worked examples on this page do &mdash; not just labels on lines.</td></tr>
+<tr><td>Excellent code</td><td>Clean, well-structured, readable &mdash; the kind of code someone else could pick up and follow.</td></tr>
+<tr><td>Code really reflects the math</td><td>The program's own structure &mdash; its variables, its steps &mdash; mirrors the mathematical argument, step for step, rather than just arriving at the right number by some other route.</td></tr>
+<tr><td>Very optimal runtime</td><td>Genuinely efficient, well beyond just squeaking in under 30 seconds.</td></tr>
+</tbody>
+</table>
+<p><strong>Maximum possible score per problem: 10 + 5 = 15.</strong></p>
+</div>
+
+<h2>How to read a worked example</h2>
+<p>Each problem below has the same parts: the problem itself; a note with the math that actually makes it solvable; and a commented, runnable Python solution whose structure follows that math. The tags show the difficulty (Easy, Medium, Hard) and the area (Algebra, Combinatorics, Geometry, Number Theory). <strong>Every code block is live</strong> &mdash; click &#9654; <strong>Run</strong> to execute it in your own browser (the first click takes a few seconds to start Python; after that it&rsquo;s instant). Edit it, break it, fix it &mdash; <strong>&#8630; Reset</strong> brings back the original. Nothing here is graded; the playground at the bottom is there for your own experiments.</p>
+
+<h2>Middle School</h2>
+
+<div class="card example">
+<h3 id="ms-problem-1">MS &middot; Problem 1 &middot; <span class="tag">Easy</span> <span class="tag">Number Theory</span></h3>
+<p class="problem">How many nine-digit numbers \(N = \overline{1a2b3c4d5}\) are there, where \(a, b, c, d\) are digits with \(1 \le a < b < c < d\), such that \(N\) is divisible by \(33\)?</p>
+<p class="source">Source: Pi Journal (pi.edu.vn), Problem P841. Used with permission.</p>
+<div class="note math">Since \(33 = 3 \cdot 11\) with \(\gcd(3, 11) = 1\), \(N\) must be divisible by both \(3\) and \(11\). Let \(s = a + b + c + d\). <strong>By 3:</strong> the digit sum is \(15 + s\), so \(3 \mid s\). <strong>By 11:</strong> the alternating sum of digits is \((1 + 2 + 3 + 4 + 5) - s = 15 - s\), so \(s \equiv 4 \pmod{11}\). Since \(1 + 2 + 3 + 4 \le s \le 6 + 7 + 8 + 9\), i.e. \(10 \le s \le 30\), the only values with \(s \equiv 4 \pmod{11}\) are \(15\) and \(26\), and of these only \(15\) is a multiple of \(3\). So we need four different digits \(a < b < c < d\) from \(1\) to \(9\) adding up to \(15\): \(\{1,2,3,9\}, \{1,2,4,8\}, \{1,2,5,7\}, \{1,3,4,7\}, \{1,3,5,6\}, \{2,3,4,6\}\) &mdash; six numbers. The code checks the \(\binom{9}{4} = 126\) choices both ways.</div>
+<pre><code># MATH: 33 | N  &lt;=&gt;  3 | N and 11 | N.  With s = a + b + c + d:
+#   3 | N   &lt;=&gt; 3 | (15 + s)          &lt;=&gt; 3 | s
+#   11 | N  &lt;=&gt; 11 | (1+2+3+4+5) - s   &lt;=&gt; s = 4 (mod 11)
+# 10 &lt;= s &lt;= 30, so s = 15 (26 fails the test for 3).
+from itertools import combinations
+
+by_math = [q for q in combinations(range(1, 10), 4) if sum(q) == 15]
+by_division = [(a, b, c, d) for a, b, c, d in combinations(range(1, 10), 4)
+               if int(f&quot;1{a}2{b}3{c}4{d}5&quot;) % 33 == 0]
+assert by_math == by_division
+print(by_math)
+print(len(by_math))        # 6
+</code></pre>
+</div>
+
+<div class="card example">
+<h3 id="ms-problem-2">MS &middot; Problem 2 &middot; <span class="tag">Easy</span> <span class="tag">Algebra</span></h3>
+<p class="problem">Lan bought \(20\) notebooks for a total of \(\$50\). Some cost \(\$1\) each, some cost \(\$3\) each, and some cost \(\$5\) each, and she bought at least one of each kind. What is the largest possible number of \(\$1\) notebooks she bought?</p>
+<div class="note math">Let \(x, y, z \ge 1\) be the numbers of \(\$1\), \(\$3\) and \(\$5\) notebooks. Then \(x + y + z = 20\) and \(x + 3y + 5z = 50\). Subtracting, \(2y + 4z = 30\), so \(y = 15 - 2z\), and then \(x = 20 - y - z = 5 + z\). So \(x\) grows with \(z\), and \(z\) is limited only by \(y = 15 - 2z \ge 1\), i.e. \(z \le 7\). The largest value is \(x = 5 + 7 = 12\) (with \(y = 1\), \(z = 7\): \(12 + 3 + 35 = 50\)). The code walks through every allowed \(z\).</div>
+<pre><code># MATH: x + y + z = 20 and x + 3y + 5z = 50  -&gt;  y = 15 - 2z, x = 5 + z.
+# y &gt;= 1 forces z &lt;= 7; x increases with z.
+options = []
+for z in range(1, 8):              # y = 15 - 2z &gt;= 1  &lt;=&gt;  z &lt;= 7
+    y = 15 - 2 * z
+    x = 5 + z
+    assert x + y + z == 20 and x + 3 * y + 5 * z == 50
+    options.append((x, y, z))
+print(options)
+print(max(x for x, y, z in options))    # 12
+</code></pre>
+</div>
+
+<div class="card example">
+<h3 id="ms-problem-3">MS &middot; Problem 3 &middot; <span class="tag">Medium</span> <span class="tag">Geometry</span></h3>
+<p class="problem">In trapezoid \(ABCD\), side \(AD\) is parallel to side \(BC\), \(\angle B = \angle C = 60^\circ\), and \(AB = DC\). All four side lengths are positive integers and the perimeter is \(100\). How many non-congruent trapezoids satisfy all these conditions?</p>
+<div class="note math">Call the legs \(AB = DC = L\) and the short base \(AD = s\). Drop perpendiculars from \(A\) and \(D\) to \(BC\). Each cuts off a \(30^\circ\)&ndash;\(60^\circ\)&ndash;\(90^\circ\) triangle whose side along \(BC\) is half the hypotenuse, \(L/2\). So the long base is \(BC = s + L\). The perimeter is \(L + s + L + (s + L) = 3L + 2s = 100\). Since \(3L = 100 - 2s\) is even, \(L\) is even; write \(L = 2t\). Then \(s = 50 - 3t \ge 1\) gives \(1 \le t \le 16\). Each \(t\) gives a different shape (different leg length), and the side lengths fix the trapezoid up to congruence. So there are \(16\).</div>
+<pre><code># MATH: legs L, short base s; each 60-degree corner cuts off L/2 from the
+# long base, so BC = s + L and the perimeter is 3L + 2s = 100.
+trapezoids = []
+for L in range(1, 100):
+    rest = 100 - 3 * L
+    if rest &gt;= 2 and rest % 2 == 0:     # s = rest / 2 must be a positive integer
+        s = rest // 2
+        trapezoids.append((L, s, s + L))  # (leg, short base, long base)
+print(trapezoids[:3], &quot;...&quot;)
+print(len(trapezoids))                    # 16
+</code></pre>
+</div>
+
+<div class="card example">
+<h3 id="ms-problem-4">MS &middot; Problem 4 &middot; <span class="tag">Medium</span> <span class="tag">Combinatorics</span></h3>
+<p class="problem">Mai writes the numbers \(1, 2, \dots, 12\) on twelve cards, one number per card. She wants to split the cards into \(3\) groups of \(4\) cards so that the three groups have the same sum. In how many ways can she do this? (The groups are not labelled: only which cards end up together matters.)</p>
+<div class="note math">The total is \(1 + 2 + \dots + 12 = 78\), so each group sums to \(26\). To count each split exactly once, always put card \(12\) in the &ldquo;first&rdquo; group, and the smallest remaining card in the &ldquo;second&rdquo;: then the three groups are listed in one fixed order, and no split is counted twice. So: choose the \(3\) partners of \(12\) (they must add to \(14\)); from the \(8\) cards left, the group containing the smallest one must add to \(26\); the last four cards then automatically add to \(26\). The code does exactly this and, as a check, also counts all ordered choices and divides by \(3! = 6\).</div>
+<pre><code># MATH: each group sums to 78 / 3 = 26. To count unordered splits once,
+# group 1 contains card 12, group 2 contains the smallest card left.
+from itertools import combinations
+
+cards = set(range(1, 13))
+count = 0
+for g1 in combinations(sorted(cards - {12}), 3):
+    if sum(g1) + 12 != 26:
+        continue
+    left = sorted(cards - {12} - set(g1))
+    first = left[0]
+    for g2 in combinations(left[1:], 3):
+        if first + sum(g2) == 26:          # the last 4 cards then sum to 26
+            count += 1
+print(count)                               # 32
+
+# check: ordered (labelled) splits = 3! times as many
+ordered = 0
+for A in combinations(sorted(cards), 4):
+    if sum(A) != 26:
+        continue
+    for B in combinations(sorted(cards - set(A)), 4):
+        if sum(B) == 26:
+            ordered += 1
+assert ordered == 6 * count
+</code></pre>
+</div>
+
+<div class="card example">
+<h3 id="ms-problem-5">MS &middot; Problem 5 &middot; <span class="tag">Hard</span> <span class="tag">Number Theory</span></h3>
+<p class="problem">Six positive integers \(x_1 < x_2 < x_3 < x_4 < x_5 < x_6\) satisfy \(x_1 x_6 = 64\), and one of the two products \(x_2 x_3\) and \(x_2 x_5\) equals \(22\). How many different values can the sum \(x_1 + x_2 + x_3 + x_4 + x_5 + x_6\) take?</p>
+<p class="source">Source: Pi Journal (pi.edu.vn), Problem P882. Used with permission.</p>
+<div class="note math"><strong>Pin down \(x_1, x_2, x_6\).</strong> The only way to write \(22\) as a product of two <em>different</em> positive integers where both are greater than \(1\) is \(2 \cdot 11\). (\(1 \cdot 22\) is impossible: \(x_2 > x_1 \ge 1\).) Since \(x_2\) is the smaller factor, \(x_2 = 2\), so \(x_1 = 1\) and \(x_6 = 64\). <strong>Case 1:</strong> \(x_3 = 11\). Then \(11 < x_4 < x_5 < 64\), and the sum is \(78 + x_4 + x_5\), where \(x_4 + x_5\) takes every value from \(12 + 13 = 25\) to \(62 + 63 = 125\): \(101\) values. <strong>Case 2:</strong> \(x_5 = 11\). Then \(2 < x_3 < x_4 < 11\), the sum is \(78 + x_3 + x_4\), and \(x_3 + x_4\) takes every value from \(3 + 4 = 7\) to \(9 + 10 = 19\): \(13\) values. The two ranges of sums, \(85\)&ndash;\(97\) and \(103\)&ndash;\(203\), don&rsquo;t overlap, so the answer is \(101 + 13 = 114\). Pi&rsquo;s editors noted that most wrong answers counted some sums twice &mdash; keeping the sums in a <em>set</em> makes that impossible.</div>
+<pre><code># MATH: 22 = 2 * 11 is the only split into two factors &gt; 1, and x2 is the
+# smaller one, so x2 = 2, x1 = 1, x6 = 64. Two cases: x3 = 11 or x5 = 11.
+x1, x2, x6 = 1, 2, 64
+sums = set()                               # a set: no sum counted twice
+
+# case 1: x3 = 11, then 11 &lt; x4 &lt; x5 &lt; 64
+for x4 in range(12, 64):
+    for x5 in range(x4 + 1, 64):
+        sums.add(x1 + x2 + 11 + x4 + x5 + x6)
+
+# case 2: x5 = 11, then 2 &lt; x3 &lt; x4 &lt; 11
+for x3 in range(3, 11):
+    for x4 in range(x3 + 1, 11):
+        sums.add(x1 + x2 + x3 + x4 + 11 + x6)
+
+print(min(sums), max(sums))                # 85 203
+print(len(sums))                           # 114
+</code></pre>
+</div>
+
+<h2>High School</h2>
+
+<div class="card example">
+<h3 id="hs-problem-1">HS &middot; Problem 1 &middot; <span class="tag">Easy</span> <span class="tag">Number Theory</span></h3>
+<p class="problem">It is known that the Mersenne number \(M_{179} = 2^{179} - 1\) has exactly two prime divisors not exceeding \(2024\). Find these two primes, and give their sum as your answer.</p>
+<p class="source">Source: Pi Journal (pi.edu.vn), Problem P869. Used with permission.</p>
+<div class="note math">Let \(p\) be a prime divisor of \(2^{179} - 1\); \(p\) is odd. Let \(r\) be the smallest positive integer with \(2^r \equiv 1 \pmod p\) (the <em>order</em> of \(2\) mod \(p\)). Then \(r \mid 179\), and \(r \ne 1\) because \(2^1 - 1 = 1\). Since \(179\) is prime, \(r = 179\). By Fermat&rsquo;s little theorem \(2^{p-1} \equiv 1 \pmod p\), so \(179 \mid p - 1\). With \(p\) odd, \(p - 1\) is even too, so \(p = 358k + 1\). Up to \(2024\) the candidates are \(359, 717, 1075, 1433, 1791\). Only \(359\) and \(1433\) are prime (\(717 = 3 \cdot 239\), \(1075 = 5^2 \cdot 43\), \(1791 = 3^2 \cdot 199\)), and both really divide \(2^{179} - 1\). Their sum is \(1792\). The code checks each candidate with fast modular powering, <code>pow(2, 179, p)</code>, instead of ever building the 54-digit number.</div>
+<pre><code># MATH: if p | 2^179 - 1, the order of 2 mod p divides the prime 179 and
+# is not 1, so it is 179; Fermat gives 179 | p - 1. p odd -&gt; p = 358k + 1.
+def is_prime(n):
+    return n &gt; 1 and all(n % d for d in range(2, int(n ** 0.5) + 1))
+
+candidates = [358 * k + 1 for k in range(1, 6)]          # all &lt;= 2024
+print(candidates)                                        # [359, 717, 1075, 1433, 1791]
+primes = [p for p in candidates if is_prime(p) and pow(2, 179, p) == 1]
+print(primes)                                            # [359, 1433]
+
+# sanity check: no OTHER prime &lt;= 2024 divides 2^179 - 1
+assert primes == [p for p in range(3, 2025, 2) if is_prime(p) and pow(2, 179, p) == 1]
+print(sum(primes))                                       # 1792
+</code></pre>
+</div>
+
+<div class="card example">
+<h3 id="hs-problem-2">HS &middot; Problem 2 &middot; <span class="tag">Easy</span> <span class="tag">Algebra</span></h3>
+<p class="problem">Let
+\[ S = \frac{7}{2+4} + \frac{25}{2+4+6} + \frac{61}{2+4+6+8} + \cdots + \frac{91081}{2+4+\cdots+90}, \]
+where for \(k = 2, 3, \dots, 45\) the term is \(\dfrac{k^3 - k + 1}{2 + 4 + \cdots + 2k}\). Find \(\lfloor 100S \rfloor\), the greatest integer not exceeding \(100S\). (Pi&rsquo;s original problem asks to prove that the fractional part of \(S\) lies strictly between \(\tfrac25\) and \(\tfrac12\).)</p>
+<p class="source">Source: Pi Journal (pi.edu.vn), Problem P971. Used with permission.</p>
+<div class="note math">The denominator is \(2(1 + 2 + \dots + k) = k(k+1)\), and the numerator splits nicely:
+\[ \frac{k^3 - k + 1}{k(k+1)} = \frac{k(k-1)(k+1) + 1}{k(k+1)} = (k - 1) + \frac{1}{k} - \frac{1}{k+1}. \]
+Adding over \(k = 2, \dots, 45\): the whole parts give \(1 + 2 + \dots + 44 = 990\), and the fractions <strong>telescope</strong> to \(\tfrac12 - \tfrac1{46} = \tfrac{11}{23}\). So \(S = 990 + \tfrac{11}{23}\), whose fractional part \(\tfrac{11}{23} \approx 0.478\) indeed lies between \(0.4\) and \(0.5\), and \(\lfloor 100S \rfloor = 99000 + \lfloor 1100/23 \rfloor = 99047\). The code checks the split term by term and adds all \(44\) terms with exact fractions.</div>
+<pre><code># MATH: (k^3 - k + 1) / (k(k+1)) = (k - 1) + 1/k - 1/(k+1), which telescopes:
+#   S = (1 + 2 + ... + 44) + (1/2 - 1/46) = 990 + 11/23.
+from fractions import Fraction as F
+from math import floor
+
+terms = [F(k**3 - k + 1, sum(range(2, 2 * k + 1, 2))) for k in range(2, 46)]
+print(terms[:3], 45**3 - 45 + 1)          # [7/6, 25/12, 61/20] 91081 (matches the problem)
+for k in range(2, 46):
+    assert terms[k - 2] == (k - 1) + F(1, k) - F(1, k + 1)
+
+S = sum(terms)
+closed = 990 + F(1, 2) - F(1, 46)
+assert S == closed
+print(S - floor(S))                       # 11/23
+print(floor(100 * S))                     # 99047
+</code></pre>
+</div>
+
+<div class="card example">
+<h3 id="hs-problem-3">HS &middot; Problem 3 &middot; <span class="tag">Medium</span> <span class="tag">Geometry</span></h3>
+<p class="problem">How many triangles with positive area have all three vertices at points \((i, j)\) of the coordinate plane, where \(i\) and \(j\) are integers from \(1\) to \(6\) inclusive?</p>
+<div class="note math">There are \(36\) points, so \(\binom{36}{3} = 7140\) triples; subtract the <strong>collinear</strong> ones. Count them by their two <em>outer</em> points: a collinear triple \(P, Q, R\) with \(Q\) between \(P\) and \(R\) is determined by the pair \(\{P, R\}\) and a lattice point strictly between them. The segment from \(P\) to \(R\), with \(\Delta x, \Delta y\) the differences of coordinates, contains exactly \(\gcd(|\Delta x|, |\Delta y|) - 1\) lattice points strictly inside. (They are \(P + t\cdot(\Delta x, \Delta y)/g\) for \(t = 1, \dots, g-1\), with \(g = \gcd\).) Every such point is in the grid, since the grid is convex. So the number of collinear triples is \(\sum_{\{P,R\}} (\gcd - 1)\), a sum over the \(630\) pairs. The code computes it, checks the collinear count by a direct area test, and subtracts.</div>
+<pre><code># MATH: collinear triples = sum over point pairs {P, R} of the number of
+# lattice points strictly between them, which is gcd(|dx|, |dy|) - 1.
+from itertools import combinations
+from math import comb, gcd
+
+pts = [(i, j) for i in range(1, 7) for j in range(1, 7)]
+collinear = sum(gcd(abs(P[0] - R[0]), abs(P[1] - R[1])) - 1
+                for P, R in combinations(pts, 2))
+print(comb(36, 3), collinear)          # 7140 372
+
+# direct check with the cross product (zero area &lt;=&gt; collinear)
+def area2(P, Q, R):
+    return (Q[0] - P[0]) * (R[1] - P[1]) - (Q[1] - P[1]) * (R[0] - P[0])
+assert collinear == sum(1 for T in combinations(pts, 3) if area2(*T) == 0)
+
+print(comb(36, 3) - collinear)         # 6768
+</code></pre>
+</div>
+
+<div class="card example">
+<h3 id="hs-problem-4">HS &middot; Problem 4 &middot; <span class="tag">Medium</span> <span class="tag">Combinatorics</span></h3>
+<p class="problem">A <em>factor chain</em> for a positive integer \(n > 1\) is an ordered list of integers, each at least \(2\), whose product is \(n\). For example, \(12\) has \(8\) factor chains:
+\[ (12),\ (2,6),\ (6,2),\ (3,4),\ (4,3),\ (2,2,3),\ (2,3,2),\ (3,2,2). \]
+How many factor chains does \(360\) have?</p>
+<div class="note math">Let \(D(n)\) be the number of factor chains of \(n\). Split by the <strong>first</strong> factor \(f\). Either \(f = n\) (the chain \((n)\) alone), or \(f\) is a divisor with \(1 < f < n\), followed by any factor chain of \(n/f\). These cases are disjoint and cover everything, so
+\[ D(n) = 1 + \sum_{\substack{f \mid n \\ 1 < f < n}} D(n/f). \]
+Each \(D(m)\) is needed many times, so we <strong>memoize</strong> it (compute it once, store it). We check the rule on the example, \(D(12) = 8\), then evaluate \(D(360)\).</div>
+<pre><code># MATH: split by the first factor f:  D(n) = 1 + sum of D(n/f)
+# over divisors 1 &lt; f &lt; n  (the &quot;1&quot; is the one-factor chain (n)).
+from functools import lru_cache
+
+@lru_cache(maxsize=None)
+def D(n):
+    return 1 + sum(D(n // f) for f in range(2, n) if n % f == 0)
+
+assert D(12) == 8          # the example in the problem
+print(D(360))              # 604
+</code></pre>
+</div>
+
+<div class="card example">
+<h3 id="hs-problem-5">HS &middot; Problem 5 &middot; <span class="tag">Hard</span> <span class="tag">Combinatorics</span></h3>
+<p class="problem">Ten people choose numbers one after another. The \(i\)-th person (\(i = 1, 2, \dots, 10\)) chooses an integer from \(0\) to \(i\) inclusive, uniformly at random. The probability that the ten chosen numbers are \(0, 1, 2, \dots, 9\) in some order is \(\dfrac{m}{n}\), where \(m\) and \(n\) are relatively prime positive integers. Find \(m + n\).</p>
+<p class="source">Source: Pi Journal (pi.edu.vn), Problem P967. Used with permission.</p>
+<div class="note math">There are \(2 \cdot 3 \cdots 11 = 11!\) equally likely outcomes. For a good outcome, all ten numbers must be different and none can be \(10\). <strong>Person 1</strong> may choose either of \(0, 1\): \(2\) ways. For \(2 \le i \le 9\), the \(i - 1\) earlier people chose different numbers, all \(\le i - 1\), i.e. all in person \(i\)&rsquo;s range \(\{0, \dots, i\}\); so <strong>person \(i\)</strong> has exactly \((i + 1) - (i - 1) = 2\) allowed choices. <strong>Person 10</strong> must avoid \(10\) and the nine numbers already used; since those nine are different numbers from \(0\) to \(9\), exactly one choice is left. So there are \(2^9 = 512\) good outcomes, and the probability is \(\dfrac{512}{11!} = \dfrac{2}{155925}\), giving \(m + n = 155927\). (Trying all \(11!\approx 4\times 10^7\) outcomes would be far too slow in Python. The code instead counts good sequences by a search that never extends a sequence that has already gone wrong.)</div>
+<pre><code># MATH: persons 1..9 each have exactly 2 allowed choices, person 10 has 1,
+# so there are 2^9 good outcomes out of 2 * 3 * ... * 11 = 11!.
+from fractions import Fraction as F
+from math import factorial
+
+def count_good(i, used):
+    # number of ways persons i..10 can finish a good sequence
+    if i == 11:
+        return 1
+    total = 0
+    for v in range(0, i + 1):
+        if v &lt;= 9 and v not in used:          # never 10, never repeated
+            total += count_good(i + 1, used | {v})
+    return total
+
+good = count_good(1, frozenset())
+assert good == 2 ** 9
+p = F(good, factorial(11))
+print(good, p)                             # 512 2/155925
+print(p.numerator + p.denominator)         # 155927
+</code></pre>
+</div>
+
+<h2 id="playground">Try your own code</h2>
+<p>A blank scratchpad &mdash; paste in your own solution to any problem and run it. This isn&rsquo;t graded and isn&rsquo;t checked for correctness; it just runs whatever Python you give it and shows you what it prints, or the error if something&rsquo;s wrong.</p>
+<div class="card playground-card">
+<textarea id="playground-editor" class="code-editor" spellcheck="false" rows="10" placeholder="# Write or paste your Python here, then click Run.&#10;print('Hello, MCC!')"></textarea>
+</div>
+
+<h2>Questions?</h2>
+<p>Contact your regional coordinator on the <a href="./organization">Organization</a> page. For the coding contest itself, see <a href="./toml">TOML</a>.</p>
