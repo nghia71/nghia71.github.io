@@ -27,6 +27,7 @@ title: TOML
   <li><strong>Find your Student ID and access code</strong> in your registration confirmation. You need both. If you can't find them, ask your regional coordinator (<a href="./organization">Organization</a>) <em>before</em> Sunday.</li>
   <li><strong>Read <a href="./lesson-1">Lesson 1</a></strong> — ten worked examples, five per track, shaped exactly like the contest paper. Read its section on <a href="./lesson-1#what-s-required-and-acceptable-for-a-contest-submission">what a submission must look like</a> closely: that is how your work is scored.</li>
   <li><strong>Set up Python on the computer you'll use</strong> (a laptop or desktop, not a phone). Any Python 3 works: install it from <a href="https://www.python.org/downloads/" target="_blank" rel="noopener">python.org</a> and use its IDLE editor, or any editor you already know. Check that you can write a small <code>.py</code> file, run it, and see what it prints. The Run buttons in Lesson 1 also work as a backup, right in the browser.</li>
+  <li><strong>Use the Google account whose email is on your registration.</strong> The contest papers are shared with that account at 7:55 AM, so be signed in to it in your browser (not a school or parent account). If your registration email is not a Google account, or you want to change it, tell your regional coordinator before Sunday.</li>
   <li><strong>Sign in on this page once</strong>, on that same computer and browser — use the <a href="#contest-sign-in">sign-in box below</a>. This browser then remembers you, and on contest day the problem set and submission form appear here automatically.</li>
 </ol>
 
@@ -35,7 +36,8 @@ title: TOML
 <thead><tr><th>Time (Victoria/BC)</th><th>What to do</th></tr></thead>
 <tbody>
 <tr><td><strong>7:45 AM</strong></td><td>At your computer, with Python open, and this page open. If the sign-in box below doesn't say you're signed in, sign in now.</td></tr>
-<tr><td><strong>8:00 AM</strong></td><td>Reload this page. Open the <strong>problem set for your own track</strong> (MS or HS) from the box below. Start with the Easy problems.</td></tr>
+<tr><td><strong>7:55 AM</strong></td><td>The papers are shared with you. Reload this page and open the paper for <strong>your own track</strong> (MS or HS) from the box below &mdash; it is also in Google Drive under <em>Shared with me</em>. Read page 1: the instructions and the definitions the problems use.</td></tr>
+<tr><td><strong>8:00 AM</strong></td><td>Start solving, beginning with the Easy problems on page 2.</td></tr>
 <tr><td><strong>8:00–8:45</strong></td><td>For each problem you solve, write <strong>one <code>.py</code> file</strong> that prints the answer, with comments explaining the math. Run it to check it works, then submit it on the <strong>submission form</strong> (link in the box below): your Student ID, the problem number exactly as printed on the paper (for example <code>MS1</code> or <code>HS3</code>), and your code pasted in. Submit each problem as soon as it's done — don't save them all for the end.</td></tr>
 <tr><td><strong>8:45 AM</strong></td><td>Submissions close. Anything not submitted by then doesn't count.</td></tr>
 </tbody>
@@ -59,7 +61,7 @@ title: TOML
      checkAccess() result comes back unlocked: true -- the server
      (mcc-access-check.gs, TESTERS / SUBMIT_LIVE_DATE) is the only source of
      truth; no date math here. The problem-set link is a Google Drive link
-     whose sharing is switched on at 8:00 AM on contest day, so showing the
+     whose sharing is switched on at 7:55 AM on contest day, so showing the
      link earlier on contest day reveals nothing. -->
 <div class="note" id="contest-sign-in">
   <div id="mcc-toml-status"><strong>Contest box:</strong> checking&hellip;</div>
@@ -77,9 +79,9 @@ title: TOML
 <script>
 (function () {
   var SUBMIT_FORM_URL = "https://docs.google.com/forms/d/1TXVbQe8oXNMR2D8_TGb3EUBUIb6QqRnKpdX1NGBlsiI/viewform";
-  // Google Drive links to the two Test 1 papers (sharing switched on at 8:00 AM, 4 Oct).
-  var PAPER_MS_URL = "";
-  var PAPER_HS_URL = "";
+  // Google Drive links to the two Test 1 papers (shared with every rostered student at 7:55 AM, 4 Oct).
+  var PAPER_MS_URL = "https://drive.google.com/file/d/1Q-omSIC1PdjzAxSHemLAoIF93TmWH00J/view";
+  var PAPER_HS_URL = "https://drive.google.com/file/d/1Q4wy9goqZTV2MpzopZlLCNtkKqhQmS_7/view";
 
   var status = document.getElementById("mcc-toml-status");
   var form = document.getElementById("mcc-toml-login");
@@ -90,9 +92,9 @@ title: TOML
   function esc(t) { var d = document.createElement("div"); d.textContent = t || ""; return d.innerHTML; }
 
   function paperLinks() {
-    if (!PAPER_MS_URL || !PAPER_HS_URL) return "the problem set link appears here at 8:00 AM";
+    if (!PAPER_MS_URL || !PAPER_HS_URL) return "the problem set links appear here";
     return "problem set: <a href=\"" + PAPER_MS_URL + "\" target=\"_blank\" rel=\"noopener\">Middle School</a> &middot; " +
-           "<a href=\"" + PAPER_HS_URL + "\" target=\"_blank\" rel=\"noopener\">High School</a> (opens at 8:00 AM)";
+           "<a href=\"" + PAPER_HS_URL + "\" target=\"_blank\" rel=\"noopener\">High School</a> (opens at 7:55 AM)";
   }
 
   function show(student, unlocked) {
