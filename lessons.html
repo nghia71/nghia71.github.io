@@ -15,15 +15,24 @@ robots: noindex
   <div class="mcc-hub-table-wrap">
     <table id="mcc-hub-table" class="mcc-hub-table">
       <thead>
-        <tr><th>#</th><th>Lesson</th><th>Topics</th></tr>
+        <tr><th>#</th><th>Lesson</th><th>Topics</th><th>Lecture</th></tr>
       </thead>
       <tbody>
         <tr data-url="{{ '/lesson-1.html' | relative_url }}">
           <td>1</td>
-          <td>Worked examples (before Test 1)</td>
+          <td>Lesson 1<span class="mcc-hub-sub">Worked examples (before Test 1)</span></td>
           <td>Linear Diophantine Equations &middot; Triangle Inequality &middot; Recurrences &middot; Cryptarithms &amp; Complete Search &middot; Divisibility &amp; LCM &middot; Sums of Consecutive Integers &middot; Lattice Points &amp; GCD &middot; Arithmetic Sequences of Reciprocals &middot; Subset-Sum Counting &middot; Divisor Structure</td>
+          <td class="mcc-hub-vid">
+            <a href="https://youtu.be/TNEU7bp_6hU" target="_blank" rel="noopener">&#9654; MS</a>
+            <a href="https://youtu.be/yd1S4NEjlGE" target="_blank" rel="noopener">&#9654; HS</a>
+          </td>
         </tr>
-        <!-- Add one <tr data-url="..."> per lesson as it is published; topics:
+        <!-- Add one <tr data-url="..."> per lesson as it is published. The
+             Lesson cell carries the lesson's OWN name (the <h1> of its page),
+             because the "#" column and the name come apart as soon as a
+             non-lesson row is added -- a contest's solutions page is row 2 but
+             is not "Lesson 2". The Lecture cell holds one link per track; the
+             JS below stops a link click from also loading the lesson. topics:
              name the actual LPS VI/VII chapter-level techniques the lesson's
              worked problems use, not a generic 4-subject list. A contest's
              solutions lesson is added only AFTER that contest ends. -->
@@ -93,6 +102,18 @@ robots: noindex
     border-bottom: 1px solid var(--rule);
   }
   .mcc-hub-table th:first-child, .mcc-hub-table td:first-child { width: 2.2em; }
+  /* The lesson's own name on the first line, what it covers under it. */
+  .mcc-hub-sub {
+    display: block;
+    font-weight: 400;
+    font-size: 13px;
+    color: var(--ink-soft);
+    margin-top: 2px;
+  }
+  /* One link per track. Kept to its own column so it reads the same way as
+     the Lecture column on the LPS video-lectures page. */
+  .mcc-hub-table th:last-child, .mcc-hub-table td.mcc-hub-vid { width: 6.5em; white-space: nowrap; }
+  .mcc-hub-vid a { display: block; font-weight: 600; padding: 1px 0; }
   .mcc-hub-table th { font-size: 13px; text-transform: uppercase; letter-spacing: .04em; color: var(--ink-soft); }
   .mcc-hub-table tbody tr { cursor: pointer; }
   .mcc-hub-table tbody tr:hover { background: var(--gold-soft); }
@@ -114,6 +135,15 @@ robots: noindex
   @media (max-width: 600px) {
     .mcc-gate-screen { padding: 18px 16px; }
     .mcc-hub-table th, .mcc-hub-table td { padding: 8px 10px; font-size: 14px; }
+    /* On a phone the topics list alone is wider than the screen, so the
+       whole table scrolls sideways and the Lecture links sit off the right
+       edge -- unreachable unless you think to swipe the table. Topics are
+       the one column a reader can do without here (the lesson page itself
+       lists them), so drop it and let the rest fit: lesson name and video
+       both visible with no horizontal scroll at all. */
+    .mcc-hub-table { min-width: 0; }
+    .mcc-hub-table th:nth-child(3), .mcc-hub-table td:nth-child(3) { display: none; }
+    .mcc-hub-table th:last-child, .mcc-hub-table td.mcc-hub-vid { width: 5.5em; }
   }
 </style>
 
@@ -165,6 +195,13 @@ robots: noindex
       setTimeout(resize, 1200);
       setTimeout(resize, 3000);
     }
+  });
+
+  // The whole row is clickable, so a real link inside it (the lecture links)
+  // would otherwise fire BOTH: open YouTube in a new tab and load the lesson
+  // in the iframe behind it.
+  Array.prototype.forEach.call(table.querySelectorAll("tbody tr a"), function (a) {
+    a.addEventListener("click", function (e) { e.stopPropagation(); });
   });
 
   Array.prototype.forEach.call(table.querySelectorAll("tbody tr"), function (row) {
