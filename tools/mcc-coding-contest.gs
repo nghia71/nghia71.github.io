@@ -25,7 +25,8 @@
 //
 // EVERY SUBMISSION
 //   The form asks Student ID, Problem number (validated: MS1-MS5 / HS1-HS5)
-//   and the pasted code. onFormSubmit saves the code as
+//   (validated against the roster IDs, see setStudentIdCheck_) and the
+//   pasted code. onFormSubmit saves the code as
 //   <Submissions folder>/<StudentID>/p<Problem>_attempt<k>.py, appends a row
 //   to the "Intake log" tab (every attempt, kept for audit) and upserts the
 //   "Official" tab (one row per student + problem = the latest attempt,
@@ -251,7 +252,39 @@ function openForm_() {
         .requireTextMatchesPattern('^(MS|HS)[1-5]$').build());
     }
   });
+  step_('student id check', function () { setStudentIdCheck_(form); });   // never blocks opening
   form.setAcceptingResponses(true);
+}
+
+// Student ID check on the form: the ID must be one on the roster (tab
+// "Final", column B), any letter case, spaces around it allowed. Forms can't
+// look up a sheet while a student types, so the roster's IDs are written
+// into the question's pattern -- rebuilt at every round start (openForm_),
+// so roster changes made before 7:55 are picked up. Run refreshIdCheck()
+// by hand after a roster change on contest morning.
+function setStudentIdCheck_(form) {
+  var sheet = SpreadsheetApp.openById(ROSTER_SHEET_ID).getSheetByName(ROSTER_TAB_NAME);
+  var rows = sheet.getRange(2, 2, Math.max(sheet.getLastRow() - 1, 1), 1).getValues();
+  var seen = {}, alts = [];
+  rows.forEach(function (r) {
+    var id = String(r[0]).trim().toUpperCase();
+    if (!/^[A-Z0-9]+$/.test(id) || seen[id]) return;
+    seen[id] = true;
+    alts.push(id.replace(/[A-Z]/g, function (c) { return '[' + c + c.toLowerCase() + ']'; }));
+  });
+  if (!alts.length) throw new Error('no Student IDs found in the roster');
+  var item = form.getItems(FormApp.ItemType.TEXT).filter(function (it) {
+    return /student id/i.test(it.getTitle());
+  })[0];
+  if (!item) throw new Error('no "Student ID" question on the form');
+  item.asTextItem().setValidation(FormApp.createTextValidation()
+    .setHelpText('That is not a Student ID on the club roster. Type your own ID exactly, e.g. S12 -- ask your coordinator if unsure.')
+    .requireTextMatchesPattern('^ *(' + alts.join('|') + ') *$').build());
+  return alts.length;
+}
+
+function refreshIdCheck() {
+  Logger.log('Student ID check set: ' + setStudentIdCheck_(FormApp.openById(FORM_ID)) + ' roster IDs');
 }
 
 // Runs one step; a failure is logged (Paper share log tab + execution log)
