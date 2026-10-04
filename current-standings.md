@@ -6,7 +6,50 @@ title: Current Standings
 
 This page is the club's live index, for every role: where the roster and every team's exam status can be seen by anyone, exactly what happens on an actual test day and what each column and status message means, and where the coordinator and organizer spreadsheets live for the people who run the club.
 
-**Jump to:** [Team standings](#team-standings) · [Start here](#start-here) · [Where the data lives](#where-the-clubs-data-lives) · [Glossary](#glossary) · [The public roster](#the-public-roster) · [For Parents & Students](#for-parents--students) · [Coordinator & organizer resources](#coordinator--organizer-resources) · [For Graders](#for-graders){% if site.show_test_material %} · [Test suites](#test-suites){% endif %}
+**Jump to:** [Sunday session](#sunday-session) · [Team standings](#team-standings) · [Start here](#start-here) · [Where the data lives](#where-the-clubs-data-lives) · [Glossary](#glossary) · [The public roster](#the-public-roster) · [For Parents & Students](#for-parents--students) · [Coordinator & organizer resources](#coordinator--organizer-resources) · [For Graders](#for-graders){% if site.show_test_material %} · [Test suites](#test-suites){% endif %}
+
+<div class="note" id="sunday-session" markdown="0">
+<strong>Next Sunday session: Sunday 11 October, 7:00–8:30 AM Victoria/BC time. Students present their perfect-score solutions from the Chapter 1 team tests.</strong>
+<p>Every problem on which a team scored full marks is presented once, by one team. When several teams solved it, the best-written solution was chosen, and the problems were shared out so that as many teams as possible present. Allow about 5 to 6 minutes per problem. The coding contest runs on the alternate Sundays (next: Test 2 on 18 October, see <a href="./toml.html">TOML</a>).</p>
+<h3>7:00–7:45 AM: Levels T1 and T2</h3>
+<div class="ls-wrap"><table class="ls-table">
+<thead><tr><th class="ls-num">#</th><th>Problem (Chapter 1 team test)</th><th>Presenting team</th></tr></thead>
+<tbody>
+<tr><td class="ls-num">1</td><td>T1 Problem 1</td><td>Tortoises</td></tr>
+<tr><td class="ls-num">2</td><td>T1 Problem 2 (also T2 Problem 1)</td><td>T104</td></tr>
+<tr><td class="ls-num">3</td><td>T1 Problem 3</td><td>T111</td></tr>
+<tr><td class="ls-num">4</td><td>T1 Problem 4</td><td>Westminster</td></tr>
+<tr><td class="ls-num">5</td><td>T1 Problem 5</td><td>T101</td></tr>
+<tr><td class="ls-num">6</td><td>T2 Problem 2</td><td>T204</td></tr>
+<tr><td class="ls-num">7</td><td>T2 Problem 5</td><td>T108</td></tr>
+</tbody></table></div>
+<h3>7:45–8:30 AM: Levels T3 and T4</h3>
+<div class="ls-wrap"><table class="ls-table">
+<thead><tr><th class="ls-num">#</th><th>Problem (Chapter 1 team test)</th><th>Presenting team</th></tr></thead>
+<tbody>
+<tr><td class="ls-num">1</td><td>T3 Problem 1 (also T4 Problem 1)</td><td>T302</td></tr>
+<tr><td class="ls-num">2</td><td>T3 Problem 2</td><td>T303</td></tr>
+<tr><td class="ls-num">3</td><td>T3 Problem 3</td><td>T212</td></tr>
+<tr><td class="ls-num">4</td><td>T4 Problem 2 (also T3 Problem 4)</td><td>T401</td></tr>
+<tr><td class="ls-num">5</td><td>T4 Problem 3</td><td>T401</td></tr>
+<tr><td class="ls-num">6</td><td>T4 Problem 4</td><td>T401</td></tr>
+<tr><td class="ls-num">7</td><td>T4 Problem 5</td><td>T401</td></tr>
+<tr><td class="ls-num">8</td><td>T4 Problem 6</td><td>T401</td></tr>
+</tbody></table></div>
+<p>T401 scored 100/100 and is the only team with full marks on T4 Problems 2 to 6, so it presents all five.</p>
+</div>
+
+<details class="vn" markdown="1">
+<summary>🇻🇳 Tiếng Việt — Buổi sinh hoạt Chủ nhật 11/10 (click to expand)</summary>
+
+Chủ nhật 11/10, 7:00–8:30 sáng giờ Victoria/BC: học sinh trình bày các lời giải đạt điểm tuyệt đối trong bài thi đội Chương 1. Mỗi bài có đội đạt điểm tối đa được trình bày một lần, bởi một đội. Khi nhiều đội cùng giải được một bài, chúng tôi chọn lời giải viết tốt nhất và chia các bài sao cho nhiều đội được trình bày nhất. Mỗi bài khoảng 5–6 phút.
+
+* **7:00–7:45:** T1 và T2 (bảng thứ nhất ở trên).
+* **7:45–8:30:** T3 và T4 (bảng thứ hai ở trên).
+
+T401 đạt 100/100 và là đội duy nhất đạt điểm tối đa ở các Bài 2 đến 6 của T4, nên đội trình bày cả năm bài. Cuộc thi lập trình diễn ra vào các Chủ nhật xen kẽ (bài thi tiếp theo: Test 2 ngày 18/10, xem trang [TOML](./toml.html)).
+
+</details>
 
 ## Team standings
 
