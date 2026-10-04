@@ -111,7 +111,7 @@ For the test format itself — how the six problems are built and scored — see
 
 🥚 **The Mystical Egg** *(April, just before Easter)* — "every problem hides a clever trick — can you find it?" For ingenuity on puzzle-style problems.
 
-📖 **Pi Challenge** *(monthly, September to June)* — every MCC student receives e-readership of *Pi Magazine*. Each month students receive the translated Pi problem-solving challenge in English; submissions go both to *Pi Magazine*, for international recognition, and to MCC teachers for our records. Winners are announced in June. This is the best training there is for writing to an international standard.
+<!-- 📖 **Pi Challenge** *(monthly, September to June)* — every MCC student receives e-readership of *Pi Magazine*. Each month students receive the translated Pi problem-solving challenge in English; submissions go both to *Pi Magazine*, for international recognition, and to MCC teachers for our records. Winners are announced in June. This is the best training there is for writing to an international standard. -->
 
 🌍 **Purple Comet! Math Meet** *(April)* — MCC teams compete internationally each spring. Top-performing teams are recognised publicly on [purplecomet.org](https://purplecomet.org).
 
