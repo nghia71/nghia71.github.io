@@ -1,0 +1,669 @@
+---
+title: Lesson 3
+robots: noindex
+---
+
+<style>
+  /* Math text should read like a textbook, not the site's body sans-serif. */
+  .problem, .math {
+    font-family: Georgia, "Times New Roman", "Noto Serif", serif;
+    font-size: 1.02em;
+    line-height: 1.6;
+  }
+  .problem { font-style: italic; }
+  .example .tag,
+  .practice-list .tag {
+    display: inline-block;
+    background: var(--gold-soft);
+    color: var(--brand-dark);
+    font-size: 12.5px;
+    font-weight: 700;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    padding: 3px 9px;
+    border-radius: 999px;
+  }
+  .example .tag { margin-right: 4px; }
+  .example { margin-bottom: 1.8em; }
+  .example .source { font-size: 13px; color: var(--ink-soft); margin: -.3em 0 .8em; }
+  .example h3 { font-size: 1.05rem; border-bottom: none; padding-bottom: 0; margin-bottom: .6em; }
+
+  /* Inline, runnable Python (worked examples + the free-form playground).
+     Styled to match the site's existing pre/code blocks (dark ink bg, cream
+     text) and its small pill-shaped utility buttons (see .tc-progress-reset
+     in assets/css/style.css), not a separate "dev tool" look. */
+  .code-runner { margin-top: 14px; margin-bottom: 28px; }
+  .code-editor {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+    font-size: 13.5px;
+    line-height: 1.55;
+    padding: 16px 18px;
+    border: none;
+    border-radius: var(--radius);
+    background: var(--ink);
+    color: #f4ead9;
+    resize: vertical;
+    min-height: 120px;
+    tab-size: 4;
+  }
+  .code-editor:focus { outline: 2px solid var(--gold); outline-offset: 2px; }
+  .code-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+  }
+  .code-controls button {
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--brand);
+    background: var(--cream);
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    padding: 6px 16px;
+    cursor: pointer;
+  }
+  .code-controls button:hover { background: var(--gold-soft); }
+  .code-controls button:disabled { opacity: .5; cursor: default; }
+  .code-status {
+    font-size: 13px;
+    color: var(--ink-soft);
+    font-style: italic;
+  }
+  .code-output {
+    margin: 10px 0 0;
+    padding: 16px 18px;
+    border-radius: var(--radius);
+    background: var(--brand-dark);
+    color: var(--gold-soft);
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+    font-size: 13.5px;
+    white-space: pre-wrap;
+    word-break: break-word;
+    overflow-x: auto;
+    display: none;
+  }
+  .code-output.has-content { display: block; }
+  .code-output.is-error { color: #ffd7c2; }
+  .playground-card { margin-top: 1.2em; }
+  .playground-card .code-editor { min-height: 160px; }
+
+  /* Geometry diagrams -- redrawn from the source PDF, not screenshots. */
+  .diagram {
+    text-align: center;
+    margin: 1em 0 1.4em;
+    padding: 14px;
+    background: var(--white);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+  }
+  .diagram svg { display: block; margin: 0 auto; max-width: 260px; height: auto; }
+  .diagram figcaption {
+    margin-top: 8px;
+    font-size: 13px;
+    color: var(--ink-soft);
+    font-style: italic;
+  }
+  .addition {
+    display: inline-block;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-align: right;
+    line-height: 1.5;
+    margin: 0.6em 0;
+    padding: 2px 6px;
+  }
+  .addition .addition-row { white-space: pre; }
+  .addition .addition-sum {
+    border-top: 1.5px solid var(--ink);
+    padding-top: 2px;
+  }
+
+  /* Submission-requirements block -- deliberately the most visually
+     distinct thing on the page (2026-09-19: "very important for Lesson 1
+     to present what are required and acceptable for a submission"). */
+  .requirements {
+    background: var(--white);
+    border: 2px solid var(--brand);
+    border-radius: var(--radius);
+    padding: 22px 26px;
+    margin: 1.8em 0 2.2em;
+    box-shadow: var(--shadow);
+  }
+  .requirements h2 {
+    margin-top: 0;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  .requirements h3 { margin-top: 1.1em; margin-bottom: .4em; font-size: 1rem; }
+  .requirements ul { margin-bottom: 0; }
+  .requirements table { font-size: 14.5px; }
+</style>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  renderMathInElement(document.body, {
+    delimiters: [
+      {left: "\\[", right: "\\]", display: true},
+      {left: "\\(", right: "\\)", display: false}
+    ]
+  });
+});
+</script>
+
+<!-- Inline Python: runs entirely in the student's own browser via Pyodide (Python
+     compiled to WebAssembly) -- nothing is sent to any server, nothing is graded,
+     it only runs the code and shows what it prints (or the error). Loaded lazily,
+     only once someone actually presses Run, so a visitor who never clicks Run never
+     downloads it. -->
+<script src="https://cdn.jsdelivr.net/pyodide/v314.0.6/full/pyodide.js"></script>
+<script>
+(function () {
+  var pyodideReadyPromise = null;
+  function getPyodide() {
+    if (!pyodideReadyPromise) {
+      pyodideReadyPromise = loadPyodide();
+    }
+    return pyodideReadyPromise;
+  }
+
+  function setAllRunButtonsDisabled(disabled) {
+    document.querySelectorAll(".code-controls .run-btn").forEach(function (b) {
+      b.disabled = disabled;
+    });
+  }
+
+  function copyText(text, btn) {
+    function done() {
+      var original = btn.textContent;
+      btn.textContent = "✓ Copied";
+      setTimeout(function () { btn.textContent = original; }, 1200);
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(done, done);
+    } else {
+      var ta = document.createElement("textarea");
+      ta.value = text;
+      ta.style.position = "fixed";
+      ta.style.opacity = "0";
+      document.body.appendChild(ta);
+      ta.select();
+      try { document.execCommand("copy"); } catch (e) { /* ignore */ }
+      document.body.removeChild(ta);
+      done();
+    }
+  }
+
+  async function runCode(code, outputEl, statusEl) {
+    outputEl.classList.remove("is-error", "has-content");
+    outputEl.textContent = "";
+    statusEl.textContent = "Starting Python… (first run only -- loads the Python environment, a few seconds)";
+    setAllRunButtonsDisabled(true);
+
+    var buffer = "";
+    var hadError = false;
+    try {
+      var pyodide = await getPyodide();
+      pyodide.setStdout({ batched: function (s) { buffer += s + "\n"; } });
+      pyodide.setStderr({ batched: function (s) { buffer += s + "\n"; } });
+
+      statusEl.textContent = "Checking for imports…";
+      try {
+        await pyodide.loadPackagesFromImports(code);
+      } catch (pkgErr) {
+        // A missing/unsupported package still surfaces as a normal Python
+        // ImportError from runPythonAsync below -- nothing to do here.
+      }
+
+      statusEl.textContent = "Running…";
+      var runStarted = performance.now();
+      try {
+        await pyodide.runPythonAsync(code);
+      } catch (runErr) {
+        hadError = true;
+        buffer += (buffer ? "\n" : "") + (runErr && runErr.message ? runErr.message : String(runErr));
+      }
+      var runElapsedMs = performance.now() - runStarted;
+    } catch (loadErr) {
+      hadError = true;
+      buffer += (buffer ? "\n" : "") + "Could not start the Python environment in this browser: " +
+        (loadErr && loadErr.message ? loadErr.message : loadErr);
+    }
+
+    statusEl.textContent = "";
+    setAllRunButtonsDisabled(false);
+    outputEl.textContent = buffer || "(no output)";
+    // Timing is measured by the runner around the code, never injected
+    // into the code itself -- it covers just this run's execution, not
+    // the one-time Pyodide startup/package-loading before it.
+    if (typeof runElapsedMs === "number") {
+      outputEl.textContent += "\n\n[ran in " + formatElapsed(runElapsedMs) + "]";
+    }
+    outputEl.classList.add("has-content");
+    if (hadError) outputEl.classList.add("is-error");
+  }
+
+  function formatElapsed(ms) {
+    if (ms < 1000) return Math.round(ms) + " ms";
+    return (ms / 1000).toFixed(2) + " s";
+  }
+
+  function makeRunner(getCode, container) {
+    var controls = document.createElement("div");
+    controls.className = "code-controls";
+
+    var runBtn = document.createElement("button");
+    runBtn.type = "button";
+    runBtn.className = "run-btn";
+    runBtn.textContent = "▶ Run";
+
+    var copyBtn = document.createElement("button");
+    copyBtn.type = "button";
+    copyBtn.textContent = "📋 Copy";
+
+    var status = document.createElement("span");
+    status.className = "code-status";
+
+    controls.appendChild(runBtn);
+    controls.appendChild(copyBtn);
+    controls.appendChild(status);
+
+    var output = document.createElement("pre");
+    output.className = "code-output";
+
+    container.appendChild(controls);
+    container.appendChild(output);
+
+    runBtn.addEventListener("click", function () {
+      runCode(getCode(), output, status);
+    });
+
+    return { controls: controls, output: output, status: status, runBtn: runBtn, copyBtn: copyBtn };
+  }
+
+  function enhanceExampleCodeBlocks() {
+    document.querySelectorAll(".example pre").forEach(function (pre) {
+      var codeEl = pre.querySelector("code");
+      if (!codeEl) return;
+      var original = codeEl.textContent;
+
+      var wrapper = document.createElement("div");
+      wrapper.className = "code-runner";
+
+      var textarea = document.createElement("textarea");
+      textarea.className = "code-editor";
+      textarea.spellcheck = false;
+      textarea.value = original;
+      textarea.rows = Math.min(28, Math.max(6, original.split("\n").length));
+
+      wrapper.appendChild(textarea);
+      pre.parentNode.insertBefore(wrapper, pre.nextSibling);
+      pre.style.display = "none"; // original stays in the DOM as a no-JS fallback
+
+      var runner = makeRunner(function () { return textarea.value; }, wrapper);
+
+      var resetBtn = document.createElement("button");
+      resetBtn.type = "button";
+      resetBtn.textContent = "↺ Reset";
+      resetBtn.addEventListener("click", function () {
+        textarea.value = original;
+        runner.output.textContent = "";
+        runner.output.classList.remove("has-content", "is-error");
+      });
+      runner.controls.insertBefore(resetBtn, runner.status);
+
+      runner.copyBtn.addEventListener("click", function () {
+        copyText(textarea.value, runner.copyBtn);
+      });
+    });
+  }
+
+  function setupPlayground() {
+    var textarea = document.getElementById("playground-editor");
+    if (!textarea) return;
+    var wrapper = textarea.parentNode;
+
+    var runner = makeRunner(function () { return textarea.value; }, wrapper);
+
+    var clearBtn = document.createElement("button");
+    clearBtn.type = "button";
+    clearBtn.textContent = "✖ Clear";
+    clearBtn.addEventListener("click", function () {
+      textarea.value = "";
+      runner.output.textContent = "";
+      runner.output.classList.remove("has-content", "is-error");
+      textarea.focus();
+    });
+    runner.controls.insertBefore(clearBtn, runner.status);
+
+    runner.copyBtn.addEventListener("click", function () {
+      copyText(textarea.value, runner.copyBtn);
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    enhanceExampleCodeBlocks();
+    setupPlayground();
+  });
+})();
+</script>
+
+<h1>Lesson 3</h1>
+<p><em>Test 2 (Sunday 18 October 2026) &mdash; all ten contest problems, now with full solutions.</em></p>
+
+<div class="note">
+These are the exact problems from the second coding contest, in the same order: five for Middle School and five for High School &mdash; one each from Algebra, Combinatorics, Geometry and Number Theory, plus a harder Geometry problem. Try any you didn&rsquo;t finish on your own first &mdash; then compare with the math and code below.
+</div>
+<p>Problems marked &ldquo;Pi Journal&rdquo; come from the <em>Math Challenge</em> section of <a href="https://pi.edu.vn" target="_blank" rel="noopener">Pi Journal</a> and are used with the journal&rsquo;s permission; where Pi asks to &ldquo;find all&rdquo; or &ldquo;prove&rdquo;, the problem has been given a single numerical answer so it can be checked by a program.</p>
+
+<div class="requirements">
+<h2 id="what-s-required-and-acceptable-for-a-contest-submission">What&rsquo;s required and acceptable for a contest submission</h2>
+<p>A reminder of the rules every submission was scored against. Every worked example below is itself a submission that would pass all of these rules &mdash; that&rsquo;s the point of reading them closely, not just the answer.</p>
+
+<h3>File format</h3>
+<ul>
+  <li>One <code>.py</code> text file per problem you attempt. Plain Python source, nothing else.</li>
+  <li><strong>Not accepted:</strong> a PDF, a Google Doc, a Jupyter notebook (<code>.ipynb</code>), a screenshot of code, a file renamed to end in <code>.py</code> that isn&rsquo;t actually Python.</li>
+</ul>
+
+<h3>Your program must</h3>
+<ul>
+  <li>Run in <strong>30 seconds or less</strong>.</li>
+  <li>Run <strong>with no errors</strong> &mdash; no exceptions, no crash, nothing printed to the screen except your program&rsquo;s own output.</li>
+  <li>Only import from the allowed list below.</li>
+</ul>
+
+<h3>Allowed libraries</h3>
+<table>
+<thead><tr><th>Library</th><th>Why it&rsquo;s allowed</th></tr></thead>
+<tbody>
+<tr><td>Python standard library &mdash; <code>math</code>, <code>itertools</code>, <code>functools</code>, <code>fractions</code>, <code>collections</code>, <code>re</code>, <code>decimal</code>, <code>random</code></td><td>baseline</td></tr>
+<tr><td><code>sympy</code></td><td>symbolic algebra &mdash; exact equations, simplification, factoring</td></tr>
+<tr><td><code>numpy</code></td><td>numeric arrays and linear algebra, for geometry/simulation problems</td></tr>
+<tr><td><code>matplotlib</code></td><td>diagrams your own code generates as part of its solution</td></tr>
+</tbody>
+</table>
+<p>Anything else &mdash; network access, file I/O, <code>os</code>/<code>subprocess</code>, GUI toolkits &mdash; is out. This list may grow; the current version always lives on this page.</p>
+
+<h3>How a submission is scored &mdash; base score, up to 10 per problem</h3>
+<table>
+<thead><tr><th>Worth</th><th>For</th></tr></thead>
+<tbody>
+<tr><td>up to 5</td><td><strong>The math itself.</strong> Is the real identity/theorem/reduction actually there, and is it sound? A brute-force search with no justified, provably-complete bound is <em>not</em> real math here, even if it happens to print the right answer. This is the part you keep even if your code has a bug &mdash; good math, broken code, still earns these points.</td></tr>
+<tr><td>up to 4</td><td><strong>Correctness.</strong> The program actually runs clean, inside the time limit, and prints the right answer.</td></tr>
+<tr><td>up to 1</td><td><strong>How well-optimized/well-written the code is.</strong> An exhaustive search over a space a two-line argument would have shrunk to nothing loses points here even if it finishes in time.</td></tr>
+</tbody>
+</table>
+<p><strong>If there&rsquo;s no real math at all</strong> &mdash; the code just tries things at random until something matches the expected shape, with nothing above to award points against &mdash; the submission isn&rsquo;t accepted, regardless of whether it prints the right number.</p>
+
+<h3>Excellence bonus &mdash; up to 5 EXTRA points, on top</h3>
+<p>Reserved for work that goes past &ldquo;normally good&rdquo; &mdash; a solid, correct, reasonably-explained solution earns <strong>zero</strong> of these. Each of the five is independent, worth <strong>+1</strong> on its own:</p>
+<table>
+<thead><tr><th>+1 for</th><th>Meaning</th></tr></thead>
+<tbody>
+<tr><td>Excellent math</td><td>Not just correct &mdash; elegant, insightful, or genuinely the cleanest way to see why the answer is what it is.</td></tr>
+<tr><td>Very, very well commented</td><td>Comments that actually teach the reasoning, the way the worked examples on this page do &mdash; not just labels on lines.</td></tr>
+<tr><td>Excellent code</td><td>Clean, well-structured, readable &mdash; the kind of code someone else could pick up and follow.</td></tr>
+<tr><td>Code really reflects the math</td><td>The program's own structure &mdash; its variables, its steps &mdash; mirrors the mathematical argument, step for step, rather than just arriving at the right number by some other route.</td></tr>
+<tr><td>Very optimal runtime</td><td>Genuinely efficient, well beyond just squeaking in under 30 seconds.</td></tr>
+</tbody>
+</table>
+<p><strong>Maximum possible score per problem: 10 + 5 = 15.</strong></p>
+</div>
+
+<h2>How to read a worked example</h2>
+<p>Each problem below has the same parts: the problem itself; a note with the math that actually makes it solvable; and a commented, runnable Python solution whose structure follows that math. The tags show the difficulty (Easy, Medium, Hard) and the area (Algebra, Combinatorics, Geometry, Number Theory). <strong>Every code block is live</strong> &mdash; click &#9654; <strong>Run</strong> to execute it in your own browser (the first click takes a few seconds to start Python; after that it&rsquo;s instant). Edit it, break it, fix it &mdash; <strong>&#8630; Reset</strong> brings back the original. Nothing here is graded; the playground at the bottom is there for your own experiments.</p>
+
+<h2>Middle School</h2>
+
+<div class="card example">
+<h3 id="ms-problem-1">MS &middot; Problem 1 &middot; <span class="tag">Easy</span> <span class="tag">Algebra</span></h3>
+<p class="problem">Yen works for FedEx and has to deliver \(5\) parcels. Her van uses \(3\) litres of fuel for every \(45\) km it drives. The fuel tank holds \(12\) litres, and it was full when she set off. She used a quarter of the tank to deliver the first parcel. To deliver the second and third parcels, she used half of the fuel that was left. After delivering the third parcel, Yen noticed that the fuel left was only three fifths of the fuel needed to deliver the last two parcels. She filled up the tank and finished her deliveries. How many kilometres did Yen drive in total to deliver all \(5\) parcels?</p>
+<p class="source">Source: Pi Journal (pi.edu.vn), Problem P911. Used with permission.</p>
+<div class="note math">Work in litres, with exact fractions. <strong>Parcel 1:</strong> a quarter of the tank, \(12 \cdot \tfrac14 = 3\) litres, leaving \(9\). <strong>Parcels 2 and 3:</strong> half of what was left, \(9 \cdot \tfrac12 = \tfrac92\) litres, leaving \(\tfrac92\). <strong>Parcels 4 and 5:</strong> the \(\tfrac92\) litres left are \(\tfrac35\) of what these two need, so they need \(\tfrac92 \div \tfrac35 = \tfrac{15}{2}\) litres. In total Yen used \(3 + \tfrac92 + \tfrac{15}{2} = 15\) litres. At \(3\) litres per \(45\) km, that is \(15 \cdot \tfrac{45}{3} = 225\) km. The code follows these steps with <code>Fraction</code>, so no decimal rounding can creep in.</div>
+<pre><code># MATH: follow the fuel, in litres, with exact fractions.
+#   parcel 1      : 1/4 of the full 12-litre tank
+#   parcels 2, 3  : 1/2 of what was left
+#   parcels 4, 5  : what was left is 3/5 of what they need -&gt; need = left / (3/5)
+# Distance = litres used * (45 km / 3 litres).
+from fractions import Fraction as F
+
+TANK = 12
+p1 = F(TANK) * F(1, 4)                 # 3 litres
+left = TANK - p1                       # 9
+p23 = left * F(1, 2)                   # 9/2
+left = left - p23                      # 9/2
+p45 = left / F(3, 5)                   # 15/2: &quot;left is 3/5 of what is needed&quot;
+
+litres = p1 + p23 + p45
+km = litres * F(45, 3)
+print(&quot;litres used:&quot;, litres)          # 15
+print(&quot;kilometres: &quot;, km)              # 225
+</code></pre>
+</div>
+
+<div class="card example">
+<h3 id="ms-problem-2">MS &middot; Problem 2 &middot; <span class="tag">Easy</span> <span class="tag">Geometry</span></h3>
+<p class="problem">Each student in a class draws a rectangle with integer side lengths and a perimeter of \(74\) units, and then works out its area. What is the difference between the largest and the smallest possible areas of these rectangles?</p>
+<div class="note math">If the sides are \(w\) and \(\ell\), then \(2(w + \ell) = 74\), so \(w + \ell = 37\) and the area is \(w(37 - w)\). Both sides are positive integers, so \(w\) runs from \(1\) to \(36\) &mdash; that is the whole list of possible rectangles, nothing is left out. The area \(w(37-w)\) is largest when the two sides are as close as possible (\(18 \times 19 = 342\)) and smallest when they are as far apart as possible (\(1 \times 36 = 36\)). The difference is \(342 - 36 = 306\). The code lists all \(36\) areas and checks both extremes.</div>
+<pre><code># MATH: perimeter 74 -&gt; w + l = 37, area = w * (37 - w), with 1 &lt;= w &lt;= 36.
+# That list of w is complete: every rectangle in the problem is one of them.
+P = 74
+half = P // 2                          # w + l = 37
+areas = [w * (half - w) for w in range(1, half)]
+print(max(areas), min(areas))          # 342 36
+assert max(areas) == 18 * 19 and min(areas) == 1 * 36   # sides close / far apart
+print(max(areas) - min(areas))         # 306
+</code></pre>
+</div>
+
+<div class="card example">
+<h3 id="ms-problem-3">MS &middot; Problem 3 &middot; <span class="tag">Medium</span> <span class="tag">Combinatorics</span></h3>
+<p class="problem">Dana has \(32\) identical marbles. In how many ways can she share them among herself and her three friends Eli, Finn and Gia, so that each of the four children gets at least \(3\) marbles? (Only how many marbles each child gets matters.)</p>
+<div class="note math">First give every child \(3\) marbles; that uses \(12\) and leaves \(20\). Now any way of handing out the remaining \(20\) marbles to the four children, with no further condition, gives exactly one sharing, and every sharing arises this way. Handing out \(20\) identical marbles to \(4\) children is the same as placing \(3\) dividers among \(20\) marbles in a row (<em>stars and bars</em>): choose the \(3\) divider positions among \(20 + 3 = 23\) places, so the answer is \(\binom{23}{3} = 1771\). The code computes this and checks it by listing every possible split.</div>
+<pre><code># MATH: give each child 3 first (12 marbles), leaving 20 to share freely.
+# Sharing 20 identical marbles among 4 children = placing 3 dividers among
+# 20 marbles: choose 3 of the 23 places -&gt; C(23, 3)   (&quot;stars and bars&quot;).
+from math import comb
+
+N, KIDS, MIN = 32, 4, 3
+free = N - KIDS * MIN                       # 20
+by_formula = comb(free + KIDS - 1, KIDS - 1)
+
+# check: Dana, Eli and Finn get a, b, c; Gia gets the rest (at least MIN)
+by_listing = sum(1 for a in range(MIN, N + 1)
+                   for b in range(MIN, N + 1)
+                   for c in range(MIN, N + 1)
+                   if N - a - b - c &gt;= MIN)
+assert by_formula == by_listing
+print(by_formula)                           # 1771
+</code></pre>
+</div>
+
+<div class="card example">
+<h3 id="ms-problem-4">MS &middot; Problem 4 &middot; <span class="tag">Medium</span> <span class="tag">Number Theory</span></h3>
+<p class="problem">How many four-digit positive integers leave a remainder of \(3\) when divided by \(7\), a remainder of \(4\) when divided by \(8\), and a remainder of \(5\) when divided by \(9\)?</p>
+<div class="note math">Look at what is <em>missing</em> instead of what is left over: each remainder is exactly \(4\) less than the divisor (\(3 = 7 - 4\), \(4 = 8 - 4\), \(5 = 9 - 4\)). So \(x + 4\) is divisible by \(7\), by \(8\) and by \(9\). These three numbers have no common factor pairwise, so \(x + 4\) is divisible by \(7 \cdot 8 \cdot 9 = 504\): \(x = 504t - 4\). For a four-digit \(x\) we need \(1000 \le 504t - 4 \le 9999\), i.e. \(2 \le t \le 19\) &mdash; that is \(18\) numbers, from \(1004\) to \(9572\). The code counts them from the formula and checks the three remainders of each.</div>
+<pre><code># MATH: each remainder is 4 short of its divisor, so x + 4 is a multiple of
+# 7, 8 and 9 (pairwise coprime) -&gt; of 7*8*9 = 504.  x = 504t - 4.
+from math import lcm
+
+L = lcm(7, 8, 9)                                   # 504
+xs = [L * t - 4 for t in range(1, 30) if 1000 &lt;= L * t - 4 &lt;= 9999]
+assert all(x % 7 == 3 and x % 8 == 4 and x % 9 == 5 for x in xs)
+print(xs[0], xs[-1])                               # 1004 9572
+print(len(xs))                                     # 18
+</code></pre>
+</div>
+
+<div class="card example">
+<h3 id="ms-problem-5">MS &middot; Problem 5 &middot; <span class="tag">Hard</span> <span class="tag">Geometry</span></h3>
+<p class="problem">Twelve points are arranged in a rectangular array of \(3\) rows and \(4\) columns: they are the points \((x, y)\) with \(x \in \{0, 1, 2, 3\}\) and \(y \in \{0, 1, 2\}\). How many non-congruent triangles have their three vertices at three of these points?</p>
+<div class="note math">There are only \(\binom{12}{3} = 220\) ways to choose three of the points, so we can look at every choice. Two things need care. <strong>Not every choice is a triangle:</strong> three points on one line give no triangle. Points \(A, B, C\) are on one line exactly when \((x_B - x_A)(y_C - y_A) - (y_B - y_A)(x_C - x_A) = 0\) (this number is twice the triangle&rsquo;s area, up to sign). <strong>Counting each shape once:</strong> two triangles are congruent exactly when their three side lengths are the same (SSS). So describe each triangle by its three <em>squared</em> side lengths, sorted &mdash; squared, because those are whole numbers by Pythagoras, so the comparison is exact &mdash; and count the different descriptions. There are \(21\).</div>
+<pre><code># MATH: 220 choices of 3 points -&gt; check them all (a complete search).
+#  * collinear (no triangle) &lt;=&gt; cross product (B-A) x (C-A) == 0
+#  * congruent &lt;=&gt; same three side lengths (SSS); compare SQUARED lengths,
+#    which are integers (Pythagoras), so the comparison is exact.
+from itertools import combinations
+
+points = [(x, y) for x in range(4) for y in range(3)]
+
+def sq_dist(P, Q):
+    return (P[0] - Q[0]) ** 2 + (P[1] - Q[1]) ** 2
+
+shapes = set()
+for A, B, C in combinations(points, 3):
+    cross = (B[0] - A[0]) * (C[1] - A[1]) - (B[1] - A[1]) * (C[0] - A[0])
+    if cross == 0:
+        continue                                   # on one line: not a triangle
+    shapes.add(tuple(sorted((sq_dist(A, B), sq_dist(B, C), sq_dist(A, C)))))
+
+print(len(shapes))                                 # 21
+</code></pre>
+</div>
+
+<h2>High School</h2>
+
+<div class="card example">
+<h3 id="hs-problem-1">HS &middot; Problem 1 &middot; <span class="tag">Easy</span> <span class="tag">Algebra</span></h3>
+<p class="problem">How many ordered pairs \((m, n)\) of positive integers with \(m > n\) satisfy \(m^2 - n^2 = 3600\)?</p>
+<div class="note math">Factor: \((m - n)(m + n) = 3600\). The two factors \(m - n\) and \(m + n\) differ by \(2n\), an even number, so they have the same parity; since their product is even, both are even. Write \(m - n = 2a\) and \(m + n = 2b\): then \(ab = 900\), and \(m = a + b\), \(n = b - a\), so \(n > 0\) means \(a < b\). Conversely, every factorization \(900 = a \cdot b\) with \(a < b\) gives a solution. Since \(900 = 2^2 \cdot 3^2 \cdot 5^2\) has \(3 \cdot 3 \cdot 3 = 27\) divisors and is a perfect square, the pairs with \(a < b\) number \((27 - 1)/2 = 13\). The code walks through the divisors and checks each pair.</div>
+<pre><code># MATH: (m - n)(m + n) = 3600, both factors even -&gt; m - n = 2a, m + n = 2b,
+# a * b = 900, a &lt; b (so n &gt; 0).  One solution per such factor pair of 900.
+from math import isqrt
+
+N = 3600
+pairs = []
+for a in range(1, isqrt(N // 4) + 1):       # a &lt; b means a &lt; 30 = sqrt(900)
+    if (N // 4) % a == 0:
+        b = (N // 4) // a
+        if a &lt; b:
+            m, n = a + b, b - a
+            assert m * m - n * n == N
+            pairs.append((m, n))
+print(pairs)
+print(len(pairs))                           # 13
+</code></pre>
+</div>
+
+<div class="card example">
+<h3 id="hs-problem-2">HS &middot; Problem 2 &middot; <span class="tag">Easy</span> <span class="tag">Geometry</span></h3>
+<p class="problem">How many squares whose sides are parallel to the axes and whose vertices have integer coordinates lie entirely within the region bounded by the line \(y = \sqrt{3}\,x\), the line \(y = -0.1\) and the line \(x = 8.1\)?</p>
+<div class="note math">Name a square by its lower-left corner \((a, b)\) and its side \(k \ge 1\). It lies in the region exactly when <strong>(1)</strong> \(b \ge 0\) (above \(y = -0.1\) with integer coordinates), <strong>(2)</strong> \(a + k \le 8\) (left of \(x = 8.1\)), and <strong>(3)</strong> its top-left corner \((a, b + k)\) is under the line: \(b + k \le \sqrt{3}\,a\). The top-left corner is the critical one, because the line rises to the right. Condition (3) involves an irrational number, so don&rsquo;t compare with a decimal approximation of \(\sqrt3\): both sides are non-negative, so square them, \((b + k)^2 \le 3a^2\), and everything is an exact integer comparison. For fixed \(a\) and \(k\) the allowed \(b\) are \(0, 1, \dots, \lfloor \sqrt{3a^2} \rfloor - k\), and Python&rsquo;s <code>math.isqrt</code> gives \(\lfloor \sqrt{3a^2} \rfloor\) exactly. Adding up gives \(92\).</div>
+<pre><code># MATH: square = lower-left corner (a, b) and side k.  Inside the region iff
+#   b &gt;= 0,   a + k &lt;= 8,   and the top-left corner (a, b + k) is under the
+#   line: b + k &lt;= sqrt(3)*a  &lt;=&gt;  (b + k)^2 &lt;= 3a^2  (exact, integers only).
+# For fixed a, k: b = 0 .. isqrt(3a^2) - k.
+from math import isqrt
+
+X = 8                                          # x &lt;= 8.1 -&gt; integer x &lt;= 8
+total = 0
+for k in range(1, X + 1):
+    for a in range(0, X - k + 1):
+        top = isqrt(3 * a * a)                 # floor(sqrt(3) * a), exactly
+        total += max(0, top - k + 1)           # b = 0 .. top - k
+
+# check with the squared comparison, square by square
+check = sum(1 for k in range(1, X + 1) for a in range(X - k + 1)
+            for b in range(0, 2 * X) if (b + k) ** 2 &lt;= 3 * a * a)
+assert total == check
+print(total)                                   # 92
+</code></pre>
+</div>
+
+<div class="card example">
+<h3 id="hs-problem-3">HS &middot; Problem 3 &middot; <span class="tag">Medium</span> <span class="tag">Combinatorics</span></h3>
+<p class="problem">Anna, Ben, Chloe, Dev, Ella and Finn sit in a row of six chairs. Anna refuses to sit next to Ben or to Chloe, and Dev refuses to sit next to Ella. In how many ways can the six of them be seated?</p>
+<div class="note math">Count the bad seatings with <strong>inclusion&ndash;exclusion</strong>. Let \(X\), \(Y\), \(Z\) be the seatings where Anna&ndash;Ben, Anna&ndash;Chloe, Dev&ndash;Ella sit together. Gluing a pair into one block (in \(2\) orders) leaves \(5\) blocks: \(|X| = |Y| = |Z| = 2 \cdot 5! = 240\). <strong>Two at once:</strong> \(X \cap Y\) means Anna sits between Ben and Chloe (block BAC or CAB): \(2 \cdot 4! = 48\); \(X \cap Z\) and \(Y \cap Z\) are two separate pairs: \(2 \cdot 2 \cdot 4! = 96\) each. <strong>All three:</strong> the block BAC/CAB and the block Dev&ndash;Ella with Finn: \(2 \cdot 2 \cdot 3! = 24\). So the good seatings number \(720 - 3 \cdot 240 + (48 + 96 + 96) - 24 = 216\). The code computes the same terms and checks them against all \(6! = 720\) seatings.</div>
+<pre><code># MATH: inclusion-exclusion over X = A~B adjacent, Y = A~C, Z = D~E.
+#   |X| = |Y| = |Z| = 2 * 5!         (glue the pair, 2 orders)
+#   |XY| = 2 * 4!  (A between B and C),   |XZ| = |YZ| = 2 * 2 * 4!
+#   |XYZ| = 2 * 2 * 3!
+# good = 6! - (|X|+|Y|+|Z|) + (|XY|+|XZ|+|YZ|) - |XYZ|
+from math import factorial as f
+from itertools import permutations
+
+by_ie = f(6) - 3 * (2 * f(5)) + (2 * f(4) + 2 * (2 * 2 * f(4))) - 2 * 2 * f(3)
+
+def ok(seats):
+    pos = {p: i for i, p in enumerate(seats)}
+    apart = lambda p, q: abs(pos[p] - pos[q]) != 1
+    return apart(&quot;A&quot;, &quot;B&quot;) and apart(&quot;A&quot;, &quot;C&quot;) and apart(&quot;D&quot;, &quot;E&quot;)
+
+by_listing = sum(1 for s in permutations(&quot;ABCDEF&quot;) if ok(s))
+assert by_ie == by_listing
+print(by_ie)                                   # 216
+</code></pre>
+</div>
+
+<div class="card example">
+<h3 id="hs-problem-4">HS &middot; Problem 4 &middot; <span class="tag">Medium</span> <span class="tag">Number Theory</span></h3>
+<p class="problem">For an integer \(n > 1\), let \(k(n)\) be the smallest positive integer \(k\) such that \(k^k + k\) is divisible by \(n\). Find the sum of all integers \(n\) with \(2 \le n \le 2026\) such that \(k(n) = n\). (Pi&rsquo;s original problem asks for all \(n > 1\) with \(k(n) = n\).)</p>
+<p class="source">Source: Pi Journal (pi.edu.vn), Problem P981. Used with permission.</p>
+<div class="note math"><strong>\(k(n)\) always exists and is at most \(n\)</strong>, because \(n^n + n\) is divisible by \(n\); so a search of \(k = 1, \dots, n\) is complete. With fast modular powers, <code>pow(k, k, n)</code>, checking every \(n \le 2026\) takes a couple of seconds. Pi&rsquo;s solution explains the pattern. <strong>\(n\) odd:</strong> \(k = n - 1\) works, since \((n-1)^{n-1} + (n-1) \equiv 1 - 1 = 0 \pmod n\) (\(n - 1\) is even), so \(k(n) < n\). <strong>\(n\) even with an odd prime factor:</strong> \(n = 2^m \ell\) with \(\ell > 1\) odd; by the Chinese Remainder Theorem take \(k < n\) with \(k \equiv 0 \pmod{2^m}\) and \(k \equiv -1 \pmod{\ell}\); then \(k^k + k\) is divisible by both, so \(k(n) < n\). <strong>\(n = 2^m\), \(m \ge 2\):</strong> \(k^k + k = k(k^{k-1} + 1)\). If \(k\) is odd, \(k^{k-1}\) is an odd square, so \(k^{k-1} + 1 \equiv 2 \pmod 4\) and \(k^k + k\) is not divisible by \(4\). So \(k\) is even, the second factor is odd, and \(2^m \mid k\): \(k(2^m) = 2^m\). (\(k(2) = 1\).) So the answers are \(4, 8, \dots, 1024\), with sum \(2044\).</div>
+<pre><code># MATH: k(n) &lt;= n always (n^n + n is a multiple of n), so trying k = 1..n is
+# a complete search.  Pi&#x27;s classification: k(n) = n  &lt;=&gt;  n = 2^m, m &gt;= 2.
+LIMIT = 2026
+
+def k_of(n):
+    for k in range(1, n + 1):
+        if (pow(k, k, n) + k) % n == 0:     # fast: never builds k**k
+            return k
+
+by_definition = [n for n in range(2, LIMIT + 1) if k_of(n) == n]
+by_theorem = [2 ** m for m in range(2, 11)]          # 4, 8, ..., 1024
+assert by_definition == by_theorem
+print(by_definition)
+print(sum(by_definition))                            # 2044
+</code></pre>
+</div>
+
+<div class="card example">
+<h3 id="hs-problem-5">HS &middot; Problem 5 &middot; <span class="tag">Hard</span> <span class="tag">Geometry</span></h3>
+<p class="problem">Call a positive integer \(x\) <em>good</em> if there is a triangle with side lengths \(13\), \(16\), \(x\), and a triangle with side lengths \(13\), \(16\), \(y\) for some integer \(y \ne x\), such that the two triangles have the same area. Find the sum of all good integers \(x\).</p>
+<div class="note math">Both triangles have sides \(13\) and \(16\); let \(\theta\) be the angle between them. The area is \(\tfrac12 \cdot 13 \cdot 16 \cdot \sin\theta\), so equal areas means equal \(\sin\theta\). Different third sides means different angles, so the two angles are \(\theta\) and \(180^\circ - \theta\), i.e. \(\cos\) changes sign. By the law of cosines, \(x^2 = 13^2 + 16^2 - 2 \cdot 13 \cdot 16 \cos\theta\) and \(y^2 = 13^2 + 16^2 + 2 \cdot 13 \cdot 16 \cos\theta\); adding, \[ x^2 + y^2 = 2(13^2 + 16^2) = 850. \] The triangle inequality needs \(3 < x, y < 29\). The ways to write \(850\) as a sum of two squares with both numbers in that range are \(11^2 + 27^2\) and \(15^2 + 25^2\), so the good numbers are \(11, 27, 15, 25\), with sum \(78\). The code checks this independently with Heron&rsquo;s formula in the exact integer form \(16\,[\text{area}]^2 = (a+b+c)(-a+b+c)(a-b+c)(a+b-c)\), comparing areas without any square roots.</div>
+<pre><code># MATH: same two sides 13, 16 and equal areas -&gt; sin of the included angle is
+# equal -&gt; the angles are t and 180 - t -&gt; cos changes sign -&gt; (law of cosines)
+#   x^2 + y^2 = 2 * (13^2 + 16^2) = 850,   with 3 &lt; x, y &lt; 29 (triangle inequality)
+from math import isqrt
+
+A, B = 13, 16
+lo, hi = abs(A - B) + 1, A + B - 1            # 4 .. 28
+S = 2 * (A * A + B * B)                       # 850
+
+by_math = set()
+for x in range(lo, hi + 1):
+    y2 = S - x * x
+    y = isqrt(y2) if y2 &gt; 0 else 0
+    if y * y == y2 and lo &lt;= y &lt;= hi and y != x:
+        by_math.add(x)
+
+# independent check: 16 * area^2 by Heron, exact integers, every pair (x, y)
+def area16(c):
+    return (A + B + c) * (-A + B + c) * (A - B + c) * (A + B - c)
+
+by_heron = {x for x in range(lo, hi + 1) for y in range(lo, hi + 1)
+            if x != y and area16(x) == area16(y)}
+assert by_math == by_heron
+print(sorted(by_math))                        # [11, 15, 25, 27]
+print(sum(by_math))                           # 78
+</code></pre>
+</div>
+
+<h2 id="playground">Try your own code</h2>
+<p>A blank scratchpad &mdash; paste in your own solution to any problem and run it. This isn&rsquo;t graded and isn&rsquo;t checked for correctness; it just runs whatever Python you give it and shows you what it prints, or the error if something&rsquo;s wrong.</p>
+<div class="card playground-card">
+<textarea id="playground-editor" class="code-editor" spellcheck="false" rows="10" placeholder="# Write or paste your Python here, then click Run.&#10;print('Hello, MCC!')"></textarea>
+</div>
+
+<h2>Questions?</h2>
+<p>Contact your regional coordinator on the <a href="./organization">Organization</a> page. For the coding contest itself, see <a href="./toml">TOML</a>.</p>
