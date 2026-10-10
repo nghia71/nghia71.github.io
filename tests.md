@@ -67,6 +67,58 @@ Three things about this design are deliberate:
 
 Papers at adjacent levels are almost entirely different, even when the chapter is the same. T1 and T2 share at most one problem in a paper; so do T3 and T4.
 
+## The semester exam
+
+Each semester ends with a **semester exam**, the club's own internal olympiad. The first one is on **Saturday 19 and Sunday 20 December 2026**, just before Christmas.
+
+**What it covers.** Only chapters your team has already studied and passed this semester, and nothing from outside the curriculum. Because every team moves at its own pace, every team's paper is different, drawn from its own chapters.
+
+**Format and length.** The same as a chapter test at your level: six problems, 100 points, a pass at 51, and the same duration of 90, 120, 150 or 180 minutes for T1 to T4.
+
+**When.** Your team chooses its own start time within the two days, whatever suits its time zone.
+
+**Proctored by another team's parent.** An unsupervised sitting is not an exam. Each team nominates one or two parents as proctors, and the Parents' Association assigns each of them to watch a *different* team over video, matched by time zone, never their own child's team. The proctor signs off on the sitting through a form; the Parents' Association will send the details before December.
+
+**Graded on the day.** Papers are graded straight after the sitting, so a team knows the same day whether it has passed.
+
+The best semester-exam results earn prizes.
+
+### How a semester is graded
+
+**The semester exam has to be passed.** The chapter tests during the semester are practice: they count toward the semester result only once the semester exam is passed.
+
+Once a team has passed it, its semester score is weighted half and half:
+
+| Component | Weight |
+|---|---|
+| Chapter tests taken this semester | 50% |
+| Semester exam | 50% |
+
+**If the semester exam is not passed, the semester is not passed**, and the chapter tests do not count toward a semester score. As at a university, the team resits a new semester exam at the start of the next semester, after studying over the holidays; taking a month or two to revise is fine. A team that does not pass the second time either sits down with Teacher Nghia and the Parents' Association to decide, case by case, what comes next.
+
+<details class="vn" markdown="1">
+<summary>🇻🇳 Tiếng Việt — Thi học kỳ (click to expand)</summary>
+
+**Thi học kỳ.** Mỗi học kỳ kết thúc bằng một kỳ thi học kỳ, cũng là kỳ thi Olympic nội bộ của câu lạc bộ. Kỳ thi đầu tiên diễn ra vào **thứ Bảy 19 và Chủ nhật 20 tháng 12 năm 2026**, trước Giáng sinh.
+
+**Phạm vi.** Chỉ các chương đội đã học và đã thi đạt trong học kỳ, không kiểm tra kiến thức ngoài chương trình. Vì mỗi đội học theo nhịp độ riêng, đề thi của mỗi đội khác nhau, lấy từ chính các chương của đội đó.
+
+**Hình thức và thời lượng.** Giống một bài kiểm tra chương của level: 6 bài, 100 điểm, đạt từ 51 điểm, thời lượng không đổi — 90, 120, 150, 180 phút cho T1 đến T4.
+
+**Giờ thi.** Mỗi đội tự chọn giờ bắt đầu trong hai ngày đó, tùy múi giờ.
+
+**Giám sát chéo.** Không có giám sát thì không phải là thi. Mỗi đội cử một hoặc hai phụ huynh làm giám thị; Hội Phụ huynh sẽ phân chéo các giám thị này giám sát **đội khác** qua video, theo múi giờ — không bao giờ giám sát đội của con mình. Giám thị xác nhận buổi thi qua một mẫu (form); Hội Phụ huynh sẽ gửi chi tiết trước tháng 12.
+
+**Chấm ngay trong ngày.** Bài được chấm ngay sau khi thi, nên đội biết kết quả đạt hay không ngay trong ngày.
+
+Những kết quả thi học kỳ xuất sắc nhất sẽ có giải.
+
+**Tính điểm học kỳ.** Thi học kỳ phải đạt. Các bài kiểm tra chương trong học kỳ là để luyện tập: chỉ được tính vào kết quả học kỳ khi đội đã thi học kỳ đạt. Khi đã đạt, điểm học kỳ tính **50% từ các bài kiểm tra chương** trong học kỳ và **50% từ bài thi học kỳ**.
+
+**Nếu thi học kỳ không đạt** thì học kỳ đó không đạt, và các bài kiểm tra chương không được tính điểm học kỳ. Giống như ở đại học, đội tự ôn tập qua kỳ nghỉ — ôn một hai tháng cũng được — rồi thi lại một đề học kỳ mới vào đầu học kỳ sau. Nếu lần thứ hai vẫn không đạt, Thầy Nghĩa và Hội Phụ huynh sẽ ngồi lại với gia đình để xem xét từng trường hợp.
+
+</details>
+
 ## Choosing your pace
 
 Each family chooses how often their team tests, and may change the choice during the year:

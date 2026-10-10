@@ -64,6 +64,10 @@ Learning without testing does not stick. Each family chooses how often their tea
 
 T1 and T2 papers are graded by Mr. Nghia; T3 and T4 papers are graded by Mr. Toan, each at the start of the week. The two graders back each other up, so a paper needing an urgent turnaround is never stuck waiting on one person. A submitted test is added to that week's grading sheet automatically the moment it comes in, so nothing has to be remembered or copied over by hand. Once a grader enters a score, the result is written back automatically too: on a pass, the team's pacing moves on to the next chapter; on a fail, a retake is scheduled automatically, as described above. The best-written solutions are kept for the year's [Yearbook](./tests.md).
 
+## The semester exam
+
+Each semester ends with a proctored **semester exam**, the club's internal olympiad; the first is on **19–20 December 2026**. It covers only the chapters a team has passed that semester, it has to be passed for the semester to count, and once it is passed the semester score is half chapter tests, half semester exam. See [Tests](./tests.md#the-semester-exam) for the format, the proctoring, and what happens if it is not passed.
+
 ## The weekly Sunday session
 
 Because each team now tests at its own pace, Sunday is the club's one shared session, rotating between two things from one week to the next:
@@ -108,6 +112,8 @@ For the test format itself — how the six problems are built and scored — see
 💯 **Top Perfect-Scorers** — the top 5 teams with the most perfect scores. This one rewards accuracy and persistence.
 
 ❄ **Snowflake Cup** *(December, just before Christmas)* — "every solution, like every snowflake, is unique." For the most elegant and best-written solutions of the first semester.
+
+🏅 **The semester exam** *(19–20 December 2026)* — the club's internal olympiad. The best results earn prizes.
 
 🥚 **The Mystical Egg** *(April, just before Easter)* — "every problem hides a clever trick — can you find it?" For ingenuity on puzzle-style problems.
 
