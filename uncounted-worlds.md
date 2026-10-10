@@ -42,7 +42,7 @@ Start here. It introduces the four students, the four worlds they live on, and t
 
 ### *Ba mươi giây trên bốn thế giới*
 
-<p><a class="btn" href="./uw/The-Uncounted-Worlds-001-Thirty-Seconds-on-Four-Worlds.pdf">Download Chapter 1 (PDF, bilingual)</a></p>
+<p><a class="btn" href="./uw/The-Uncounted-Worlds-001-Issue-1.pdf">Download Chapter 1 (PDF, bilingual)</a></p>
 
 About forty minutes: a bit over half an hour of story, then the four challenges.
 
