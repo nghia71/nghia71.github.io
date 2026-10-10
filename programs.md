@@ -1,8 +1,8 @@
 ---
-title: Programs 2026-2027
+title: Programs
 ---
 
-# Programs — 2026-2027
+# Programs
 
 MCC runs four team training tracks, **T1 to T4**. Every track uses the same rhythm and the same test structure; what changes is the difficulty of the material and the length of the test.
 
@@ -41,6 +41,12 @@ MCC runs four team training tracks, **T1 to T4**. Every track uses the same rhyt
 <div class="note" markdown="1">
 **This programme is not for absolute beginners.** LPS VI and LPS VII assume a student has already worked through Beast Academy or the Art of Problem Solving Introductory series. A student who is far from that footing will find the material exhausting rather than rewarding, and will make faster progress by building the foundation first. Screening honestly at the door is how we protect both the student and the family from that.
 </div>
+
+## The school year
+
+The year has two semesters: **September to December**, ending with the [semester exam](#the-semester-exam) (19–20 December 2026), and **January to June**. The club does not run in July and August.
+
+**New members can join at any time during the school year.** Because every team moves at its own pace, a team that joins mid-year starts at Chapter 1 like everyone else; there is nothing to catch up with. See [Join MCC](./register.md) for how.
 
 ## How a cycle works
 
@@ -87,9 +93,9 @@ Students work in **teams of two**. Teams of three are possible with approval.
 
 ## Entrance and reassessment
 
-Every student sits a placement test at the start of the year, unless they are exempt.
+New students sit an entrance test when they join; returning students are reassessed at the start of each school year, unless they are exempt.
 
-**New students** take the entrance test. It runs over **two days**; the two scores are averaged. If the first day goes much better or much worse than expected, the level can be adjusted before the second day — which is why papers are graded immediately after each sitting. A "fail" on day one is information, not a verdict.
+**New students** take the entrance test, which Teacher Nghia prepares when their registration arrives. It runs over **two days**; the two scores are averaged. If the first day goes much better or much worse than expected, the level can be adjusted before the second day — which is why papers are graded immediately after each sitting. A "fail" on day one is information, not a verdict.
 
 **Returning students** are reassessed on the same schedule. Think of it as restarting the habits of last year rather than as a judgement. The exemptions, based on last year's results:
 
@@ -125,7 +131,7 @@ For the test format itself — how the six problems are built and scored — see
 
 ## Membership
 
-Membership is **$100 per year**, the same across every track. It's a club membership fee, not tuition for a particular track — choosing a track is a separate, personal decision based on each student's goals and how much they want to take on.
+Membership is **$100 for twelve months, counted from the month you join**, the same across every track. It's a club membership fee, not tuition for a particular track — choosing a track is a separate, personal decision based on each student's goals and how much they want to take on.
 
 If the fee creates real difficulty for a family, please ask for a reduction or a waiver. And please remember that taking part in the club is entirely voluntary — if the structure does not suit your family, you are free not to continue.
 

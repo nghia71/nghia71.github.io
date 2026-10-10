@@ -81,6 +81,8 @@ Each semester ends with a **semester exam**, the club's own internal olympiad. T
 
 **Graded on the day.** Papers are graded straight after the sitting, so a team knows the same day whether it has passed.
 
+**Teams that joined mid-semester** sit the exam on the chapters they have passed so far. A team that has not yet passed any chapter by the exam starts with the next semester's exam instead.
+
 The best semester-exam results earn prizes.
 
 ### How a semester is graded
@@ -110,6 +112,8 @@ Once a team has passed it, its semester score is weighted half and half:
 **Giám sát chéo.** Không có giám sát thì không phải là thi. Mỗi đội cử một hoặc hai phụ huynh làm giám thị; Hội Phụ huynh sẽ phân chéo các giám thị này giám sát **đội khác** qua video, theo múi giờ — không bao giờ giám sát đội của con mình. Giám thị xác nhận buổi thi qua một mẫu (form); Hội Phụ huynh sẽ gửi chi tiết trước tháng 12.
 
 **Chấm ngay trong ngày.** Bài được chấm ngay sau khi thi, nên đội biết kết quả đạt hay không ngay trong ngày.
+
+**Đội vào giữa học kỳ** thi trên các chương đã đạt tính đến lúc đó. Đội chưa đạt chương nào trước kỳ thi sẽ bắt đầu từ kỳ thi học kỳ sau.
 
 Những kết quả thi học kỳ xuất sắc nhất sẽ có giải.
 
@@ -181,4 +185,4 @@ Collected across the year, the chapter tests form the third book of the curricul
 
 ## Entrance and reassessment
 
-The same format governs the placement tests at the start of the year — two days, averaged, with the level adjustable after the first day. Who has to sit them, and who is exempt, is set out on the [Programs page](./programs.md).
+The same format governs the placement tests — two days, averaged, with the level adjustable after the first day. New students sit an entrance test, prepared when their registration arrives; returning students are reassessed at the start of each school year. Who has to sit them, and who is exempt, is set out on the [Programs page](./programs.md).

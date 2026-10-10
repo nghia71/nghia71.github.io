@@ -17,26 +17,28 @@ We teach problem solving, not formulas. Our students learn to read a problem car
 
 </div>
 
-## 📣 The 2026-2027 school year is underway
+## 📣 MCC now welcomes new members all year round
 
 <div class="note" markdown="1">
 
-**Registration for 2026-2027 is closed**, and the school year began on **8 September 2026**. Each team now follows its own personalised pace through the curriculum, with **[LPS VI and LPS VII](./books.md)** as the two textbooks.
+The 2026-2027 school year began on **8 September 2026**, and **new members can join at any point during the school year**. Each team follows its own personalised pace through the curriculum, with **[LPS VI and LPS VII](./books.md)** as the two textbooks, so a team that joins mid-year simply starts at Chapter 1.
 
 Day-to-day organisation — team assignments, regional contacts, the testing workflow, and the weekly Sunday session — is run by the **Parents' Association**, under Ms. Minh Thu.
 
-[Meet the team & find your contact](./organization.md){: .btn}
+[How to join](./register.md){: .btn}
+[Meet the team & find your contact](./organization.md){: .btn .secondary}
 [See how the programme works](./programs.md){: .btn .secondary}
 
 </div>
 
 <div class="vn" markdown="1">
 
-**📣 Năm học 2026-2027 đã bắt đầu.** Đăng ký cho năm học 2026-2027 **đã đóng**, và năm học đã khai giảng ngày **8 tháng 9 năm 2026**. Mỗi đội nay học theo nhịp độ cá nhân hóa riêng qua bộ giáo trình **[LPS VI và LPS VII](./books.md)**.
+**📣 MCC nhận thành viên mới quanh năm.** Năm học 2026-2027 đã khai giảng ngày **8 tháng 9 năm 2026**, và **các em có thể tham gia vào bất kỳ thời điểm nào trong năm học**. Mỗi đội học theo nhịp độ cá nhân hóa riêng qua bộ giáo trình **[LPS VI và LPS VII](./books.md)**, nên một đội vào giữa năm chỉ đơn giản bắt đầu từ chương 1.
 
 Việc tổ chức hằng ngày — phân đội, đầu mối liên lạc theo khu vực, quy trình đăng ký học/thi, và buổi sinh hoạt Chủ nhật hàng tuần — do **Hội Phụ huynh** phụ trách, dưới sự điều phối của Cô Minh Thu.
 
-[Xem đầu mối liên lạc](./organization.md){: .btn}
+[Cách tham gia](./register.md){: .btn}
+[Xem đầu mối liên lạc](./organization.md){: .btn .secondary}
 [Xem chương trình học hoạt động ra sao](./programs.md){: .btn .secondary}
 
 </div>
@@ -162,19 +164,20 @@ Find your regional contact on the **[Organization](./organization.md)** page.
 
 ## How to join
 
-Registration for 2026-2027 is closed. To hear about next year, join the [MCC mailing list](https://groups.google.com/g/mcc-school-year-2025-2026), or write to
-[Ms. Thu Pham](mailto:tpham151st@gmail.com), [Ms. Ngoc Ha](mailto:lengocha45@gmail.com), [Ms. Ngoc Anh](mailto:tranngocanh0910@gmail.com), or [Ms. Quynh Anh](mailto:vquynhanh80@gmail.com).
+**You can join at any time during the school year (September to June).** Form a team of two, then write to the Parents' Association — your regional coordinator, or anyone you already know: [Ms. Minh Thu](mailto:tpham151st@gmail.com), [Ms. Ha](mailto:lengocha45@gmail.com), [Ms. Thoa](mailto:thoamai.nguyen84@gmail.com), [Mr. Son](mailto:sonhho@gmail.com), [Ms. Ngoc Anh](mailto:tranngocanh0910@gmail.com), or [Ms. Quynh Anh](mailto:vquynhanh80@gmail.com). An entrance test is prepared for you when your registration arrives. You can also join the [MCC mailing list](https://groups.google.com/g/mcc-school-year-2026-2027).
 
-*Muốn tham gia?* Đăng ký năm học 2026-2027 đã đóng. Để biết thông tin năm sau, xin đăng ký [Danh sách thư MCC](https://groups.google.com/g/mcc-school-year-2025-2026), hoặc email cho [Ms. Thu Pham](mailto:tpham151st@gmail.com), [Ms. Ngoc Ha](mailto:lengocha45@gmail.com), [Ms. Ngoc Anh](mailto:tranngocanh0910@gmail.com), [Ms. Quynh Anh](mailto:vquynhanh80@gmail.com).
+[How to join](./register.md){: .btn}
+
+*Muốn tham gia?* Các em có thể tham gia vào bất kỳ thời điểm nào trong năm học (tháng 9 đến tháng 6). Lập đội hai người, rồi liên hệ Hội Phụ huynh — người phụ trách khu vực, hoặc bất kỳ ai gia đình quen: [Cô Minh Thu](mailto:tpham151st@gmail.com), [Cô Hà](mailto:lengocha45@gmail.com), [Cô Thoa](mailto:thoamai.nguyen84@gmail.com), [Anh Sơn](mailto:sonhho@gmail.com), [Cô Ngọc Anh](mailto:tranngocanh0910@gmail.com), [Cô Quỳnh Anh](mailto:vquynhanh80@gmail.com). Đề thi đầu vào sẽ được soạn khi nhận được đăng ký. Có thể tham gia thêm [Danh sách thư MCC](https://groups.google.com/g/mcc-school-year-2026-2027).
 
 ## Everything else
 
 * [**Organization**](./organization.md) — the Parents' Association, regional contacts, and how the year is run.
-* [**Programs 2026-2027**](./programs.md) — how the year works, entrance and reassessment, the calendar, awards.
+* [**Programs**](./programs.md) — how the year works, entrance and reassessment, the calendar, awards.
 * [**Books**](./books.md) — the full curriculum and how to order it.
 * [**Video Lectures**](./video-lectures.md) — one recorded lecture per chapter of LPS VI and LPS VII, for club members.
 * [**Tests**](./tests.md) — the test format, submission rules, grading, and the yearbook.
 * [**Purple Comet 2026**](./purple-comet-2026.md) — teams, results, and student profiles.
 * [**Competition history**](./history.md) — our Purple Comet results, 2019 to 2026.
-* [**Registration 2026-2027**](./register.md) — the original announcement (registration is now closed), kept for reference.
+* [**Join MCC**](./register.md) — how to join at any time during the school year, and who to write to.
 * [**Archive**](./archive.md) — past curricula, standings, entrance tests, and earlier LPS volumes.

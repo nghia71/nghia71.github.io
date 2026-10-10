@@ -3,7 +3,7 @@ title: ICLT
 ---
 
 <div class="note" markdown="1">
-**Archived page.** This describes a previous school year and is kept for reference. For the current year see [Programs 2026-2027](./programs.md).
+**Archived page.** This describes a previous school year and is kept for reference. For the current year see [Programs](./programs.md).
 </div>
 
 ## Introductory Curriculum Level Test (ICLT)

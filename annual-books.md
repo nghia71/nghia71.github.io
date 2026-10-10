@@ -5,7 +5,7 @@ title: Annual school-year books
 # Annual school-year books, 2021–2025
 
 <div class="note" markdown="1">
-**Archive.** Each of these books collects a year's weekly readings, assignments, and tests. They remain useful for practice, and for judging where a student stands before the entrance test. For the current year, see [Programs 2026-2027](./programs.md).
+**Archive.** Each of these books collects a year's weekly readings, assignments, and tests. They remain useful for practice, and for judging where a student stands before the entrance test. For the current year, see [Programs](./programs.md).
 </div>
 
 ## School year 2024-2025
