@@ -25,7 +25,7 @@ The year has two semesters: **September to December**, ending with the [semester
 | Region | Coordinator | Email |
 |---|---|---|
 | Overall lead | Ms. Minh Thu | [tpham151st@gmail.com](mailto:tpham151st@gmail.com) |
-| United Kingdom (UK) | Ms. Ha | [lengocha45@gmail.com](mailto:lengocha45@gmail.com) |
+| United Kingdom (UK) | Ms. Ha | [halai2709@gmail.com](mailto:halai2709@gmail.com) |
 | France (FR) | Ms. Thoa | [thoamai.nguyen84@gmail.com](mailto:thoamai.nguyen84@gmail.com) |
 | US / Canada, East Coast (EC) | Mr. Son | [sonhho@gmail.com](mailto:sonhho@gmail.com) |
 | US / Canada, West Coast (WC) | Ms. Ngoc Anh | [tranngocanh0910@gmail.com](mailto:tranngocanh0910@gmail.com) |
@@ -53,7 +53,7 @@ You can also write to Ms. Quynh Anh ([vquynhanh80@gmail.com](mailto:vquynhanh80@
 | Khu vực | Người phụ trách | Email |
 |---|---|---|
 | Phụ trách chung | Cô Minh Thu | [tpham151st@gmail.com](mailto:tpham151st@gmail.com) |
-| Anh (UK) | Cô Hà | [lengocha45@gmail.com](mailto:lengocha45@gmail.com) |
+| Anh (UK) | Cô Hà | [halai2709@gmail.com](mailto:halai2709@gmail.com) |
 | Pháp (FR) | Cô Thoa | [thoamai.nguyen84@gmail.com](mailto:thoamai.nguyen84@gmail.com) |
 | Bờ Đông Mỹ/Canada (EC) | Anh Sơn | [sonhho@gmail.com](mailto:sonhho@gmail.com) |
 | Bờ Tây Mỹ/Canada (WC) | Cô Ngọc Anh | [tranngocanh0910@gmail.com](mailto:tranngocanh0910@gmail.com) |
