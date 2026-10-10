@@ -13,28 +13,28 @@ This page is the club's live index, for every role: where the roster and every t
 <p>Every problem on which a team scored full marks is presented once, by one team. When several teams solved it, the best-written solution was chosen, and the problems were shared out so that as many teams as possible present. Allow about 5 to 6 minutes per problem. The coding contest runs on the alternate Sundays (next: Test 2 on 18 October, see <a href="./toml.html">TOML</a>).</p>
 <h3>7:00–7:45 AM: Levels T1 and T2</h3>
 <div class="ls-wrap"><table class="ls-table">
-<thead><tr><th class="ls-num">#</th><th>Problem (Chapter 1 team test)</th><th>Presenting team</th></tr></thead>
+<thead><tr><th class="ls-num">#</th><th>Problem (Chapter 1 team test)</th><th>Presenting team</th><th>Region</th></tr></thead>
 <tbody>
-<tr><td class="ls-num">1</td><td>T1 Problem 1</td><td>Tortoises</td></tr>
-<tr><td class="ls-num">2</td><td>T1 Problem 2 (also T2 Problem 1)</td><td>T104</td></tr>
-<tr><td class="ls-num">3</td><td>T1 Problem 3</td><td>T111</td></tr>
-<tr><td class="ls-num">4</td><td>T1 Problem 4</td><td>Westminster</td></tr>
-<tr><td class="ls-num">5</td><td>T1 Problem 5</td><td>T101</td></tr>
-<tr><td class="ls-num">6</td><td>T2 Problem 2</td><td>T204</td></tr>
-<tr><td class="ls-num">7</td><td>T2 Problem 5</td><td>T108</td></tr>
+<tr><td class="ls-num">1</td><td>T1 Problem 1</td><td>Tortoises</td><td>UK</td></tr>
+<tr><td class="ls-num">2</td><td>T1 Problem 2 (also T2 Problem 1)</td><td>T104</td><td>FR</td></tr>
+<tr><td class="ls-num">3</td><td>T1 Problem 3</td><td>T111</td><td>WC</td></tr>
+<tr><td class="ls-num">4</td><td>T1 Problem 4</td><td>Westminster</td><td>UK</td></tr>
+<tr><td class="ls-num">5</td><td>T1 Problem 5</td><td>T101</td><td>FR</td></tr>
+<tr><td class="ls-num">6</td><td>T2 Problem 2</td><td>T204</td><td>FR</td></tr>
+<tr><td class="ls-num">7</td><td>T2 Problem 5</td><td>T108</td><td>FR</td></tr>
 </tbody></table></div>
 <h3>7:45–8:30 AM: Levels T3 and T4</h3>
 <div class="ls-wrap"><table class="ls-table">
-<thead><tr><th class="ls-num">#</th><th>Problem (Chapter 1 team test)</th><th>Presenting team</th></tr></thead>
+<thead><tr><th class="ls-num">#</th><th>Problem (Chapter 1 team test)</th><th>Presenting team</th><th>Region</th></tr></thead>
 <tbody>
-<tr><td class="ls-num">1</td><td>T3 Problem 1 (also T4 Problem 1)</td><td>T302</td></tr>
-<tr><td class="ls-num">2</td><td>T3 Problem 2</td><td>T303</td></tr>
-<tr><td class="ls-num">3</td><td>T3 Problem 3</td><td>T212</td></tr>
-<tr><td class="ls-num">4</td><td>T4 Problem 2 (also T3 Problem 4)</td><td>T401</td></tr>
-<tr><td class="ls-num">5</td><td>T4 Problem 3</td><td>T401</td></tr>
-<tr><td class="ls-num">6</td><td>T4 Problem 4</td><td>T401</td></tr>
-<tr><td class="ls-num">7</td><td>T4 Problem 5</td><td>T401</td></tr>
-<tr><td class="ls-num">8</td><td>T4 Problem 6</td><td>T401</td></tr>
+<tr><td class="ls-num">1</td><td>T3 Problem 1 (also T4 Problem 1)</td><td>T302</td><td>FR</td></tr>
+<tr><td class="ls-num">2</td><td>T3 Problem 2</td><td>T303</td><td>WC</td></tr>
+<tr><td class="ls-num">3</td><td>T3 Problem 3</td><td>T212</td><td>UK</td></tr>
+<tr><td class="ls-num">4</td><td>T4 Problem 2 (also T3 Problem 4)</td><td>T401</td><td>FR</td></tr>
+<tr><td class="ls-num">5</td><td>T4 Problem 3</td><td>T401</td><td>FR</td></tr>
+<tr><td class="ls-num">6</td><td>T4 Problem 4</td><td>T401</td><td>FR</td></tr>
+<tr><td class="ls-num">7</td><td>T4 Problem 5</td><td>T401</td><td>FR</td></tr>
+<tr><td class="ls-num">8</td><td>T4 Problem 6</td><td>T401</td><td>FR</td></tr>
 </tbody></table></div>
 <p>T401 scored 100/100 and is the only team with full marks on T4 Problems 2 to 6, so it presents all five.</p>
 </div>
