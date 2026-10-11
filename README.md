@@ -164,11 +164,11 @@ Find your regional contact on the **[Organization](./organization.md)** page.
 
 ## How to join
 
-**You can join at any time during the school year (September to June).** Form a team of two, then write to the Parents' Association — your regional coordinator, or anyone you already know: [Ms. Minh Thu](mailto:tpham151st@gmail.com), [Ms. Ha](mailto:lengocha45@gmail.com), [Ms. Thoa](mailto:thoamai.nguyen84@gmail.com), [Mr. Son](mailto:sonhho@gmail.com), [Ms. Ngoc Anh](mailto:tranngocanh0910@gmail.com), or [Ms. Quynh Anh](mailto:vquynhanh80@gmail.com). An entrance test is prepared for you when your registration arrives. You can also join the [MCC mailing list](https://groups.google.com/g/mcc-school-year-2026-2027).
+**You can join at any time during the school year (September to June).** Form a team of two, then write to the Parents' Association — your regional coordinator, or anyone you already know: [Ms. Minh Thu](mailto:tpham151st@gmail.com), [Ms. Ha](mailto:halai2709@gmail.com), [Ms. Thoa](mailto:thoamai.nguyen84@gmail.com), [Mr. Son](mailto:sonhho@gmail.com), [Ms. Ngoc Anh](mailto:tranngocanh0910@gmail.com), or [Ms. Quynh Anh](mailto:vquynhanh80@gmail.com). An entrance test is prepared for you when your registration arrives. You can also join the [MCC mailing list](https://groups.google.com/g/mcc-school-year-2026-2027).
 
 [How to join](./register.md){: .btn}
 
-*Muốn tham gia?* Các em có thể tham gia vào bất kỳ thời điểm nào trong năm học (tháng 9 đến tháng 6). Lập đội hai người, rồi liên hệ Hội Phụ huynh — người phụ trách khu vực, hoặc bất kỳ ai gia đình quen: [Cô Minh Thu](mailto:tpham151st@gmail.com), [Cô Hà](mailto:lengocha45@gmail.com), [Cô Thoa](mailto:thoamai.nguyen84@gmail.com), [Anh Sơn](mailto:sonhho@gmail.com), [Cô Ngọc Anh](mailto:tranngocanh0910@gmail.com), [Cô Quỳnh Anh](mailto:vquynhanh80@gmail.com). Đề thi đầu vào sẽ được soạn khi nhận được đăng ký. Có thể tham gia thêm [Danh sách thư MCC](https://groups.google.com/g/mcc-school-year-2026-2027).
+*Muốn tham gia?* Các em có thể tham gia vào bất kỳ thời điểm nào trong năm học (tháng 9 đến tháng 6). Lập đội hai người, rồi liên hệ Hội Phụ huynh — người phụ trách khu vực, hoặc bất kỳ ai gia đình quen: [Cô Minh Thu](mailto:tpham151st@gmail.com), [Cô Hà](mailto:halai2709@gmail.com), [Cô Thoa](mailto:thoamai.nguyen84@gmail.com), [Anh Sơn](mailto:sonhho@gmail.com), [Cô Ngọc Anh](mailto:tranngocanh0910@gmail.com), [Cô Quỳnh Anh](mailto:vquynhanh80@gmail.com). Đề thi đầu vào sẽ được soạn khi nhận được đăng ký. Có thể tham gia thêm [Danh sách thư MCC](https://groups.google.com/g/mcc-school-year-2026-2027).
 
 ## Everything else
 

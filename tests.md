@@ -63,9 +63,9 @@ Three things about this design are deliberate:
 
 **Every problem comes from an international competition**, rewritten to be clearer and more enjoyable to read. Nothing here is invented to fill a page.
 
-**Solutions are published step by step.** This makes grading straightforward for the parent volunteers, and it means a parent can sit down afterwards and work through the paper with their child.
+**Solutions are published step by step.** This makes grading straightforward for the volunteer graders, and it means a parent can sit down afterwards and work through the paper with their child.
 
-Papers at adjacent levels are almost entirely different, even when the chapter is the same. T1 and T2 share at most one problem in a paper; so do T3 and T4.
+Papers at adjacent levels on the same chapter share a number of problems: T1 with T2, and T3 with T4. The other problems are set for each level.
 
 ## The semester exam
 
@@ -155,7 +155,7 @@ For exactly what happens after that click — how the countdown works, the grace
 
 ## Grading and feedback
 
-All assignments and tests are graded with comments — briefly on assignments, in detail on tests. T1 and T2 papers are graded by Mr. Nghia; T3 and T4 by Mr. Toan, each at the start of the week, with each covering for the other when a paper needs urgent turnaround. A round of about forty teams can be graded in an evening, but results are released with about a week's spacing so that families, the parent group, and the club have time to actually discuss them.
+All assignments and tests are graded with comments — briefly on assignments, in detail on tests. T1 and T2 papers are graded by Mr. Nghia; T3 and T4 by Mr. Toan, each at the start of the week, with each covering for the other when a paper needs urgent turnaround. Results are published as soon as a paper is graded. The official solutions come out on video after the teams have presented theirs at the Sunday session, usually about a week later (the second Monday after the test).
 
 **Results are published on the site rather than emailed.** Every graded test appears on the [Current Standings](./current-standings.md#team-standings) page — the points, pass or fail, and each team's progress through the chapters — for everyone to see. That is a real change and worth being direct about: a team that is struggling will see it, and so will everyone else. The reason for doing it anyway is that a mark in an inbox tells you almost nothing, while a page you can return to shows a team where it stands among its peers and, more importantly, how it has moved over time. Knowing your child's actual position — rather than the one you hope for — is what makes it possible to help them.
 

@@ -15,7 +15,7 @@ Because MCC families are spread across many time zones, the Parents' Association
 | Region | Coordinator | Email |
 |---|---|---|
 | Overall lead | Ms. Minh Thu | [tpham151st@gmail.com](mailto:tpham151st@gmail.com) |
-| United Kingdom (UK) | Ms. Ha | [lengocha45@gmail.com](mailto:lengocha45@gmail.com) |
+| United Kingdom (UK) | Ms. Ha | [halai2709@gmail.com](mailto:halai2709@gmail.com) |
 | France (FR) | Ms. Thoa | [thoamai.nguyen84@gmail.com](mailto:thoamai.nguyen84@gmail.com) |
 | US / Canada, East Coast (EC) | Mr. Son | [sonhho@gmail.com](mailto:sonhho@gmail.com) |
 | US / Canada, West Coast (WC) | Ms. Ngoc Anh | [tranngocanh0910@gmail.com](mailto:tranngocanh0910@gmail.com) |
@@ -32,11 +32,10 @@ See [Programs](./programs.md#grading) for the full registration and grading work
 
 ## The weekly Sunday session
 
-Sunday is the club's one shared session for everyone, regardless of each team's own testing pace. It rotates between three things from one week to the next:
+Sunday is the club's one shared session for everyone, regardless of each team's own testing pace. It runs on a two-week cycle:
 
-* A lecture on a math theory or topic.
-* A lecture on recent test solutions.
-* A coding competition (see [TOML](./toml.html)).
+* **Math Sunday:** a lecture on a math topic or on the recent test solutions. Students who solved a problem perfectly may present their own solution.
+* **Coding Sunday, the week after:** the TOML coding contest (see [TOML](./toml.html)).
 
 Official solutions are recorded and posted to the club's YouTube channel, so no one is locked out by time zone.
 
@@ -59,7 +58,7 @@ Vì học sinh MCC ở nhiều múi giờ khác nhau, Hội PH được chia th�
 | Khu vực | Người phụ trách | Email |
 |---|---|---|
 | Phụ trách chung | Cô Minh Thu | [tpham151st@gmail.com](mailto:tpham151st@gmail.com) |
-| Anh (UK) | Cô Hà | [lengocha45@gmail.com](mailto:lengocha45@gmail.com) |
+| Anh (UK) | Cô Hà | [halai2709@gmail.com](mailto:halai2709@gmail.com) |
 | Pháp (FR) | Cô Thoa | [thoamai.nguyen84@gmail.com](mailto:thoamai.nguyen84@gmail.com) |
 | Bờ Đông Mỹ/Canada (EC) | Anh Sơn | [sonhho@gmail.com](mailto:sonhho@gmail.com) |
 | Bờ Tây Mỹ/Canada (WC) | Cô Ngọc Anh | [tranngocanh0910@gmail.com](mailto:tranngocanh0910@gmail.com) |
@@ -76,11 +75,10 @@ Xem [Programs](./programs.md#grading) để biết đầy đủ quy trình đăn
 
 ## Sinh hoạt Chủ nhật hàng tuần
 
-Chủ nhật là buổi sinh hoạt chung duy nhất cho toàn câu lạc bộ, không phụ thuộc vào nhịp độ kiểm tra riêng của từng đội. Luân phiên giữa ba nội dung:
+Chủ nhật là buổi sinh hoạt chung duy nhất cho toàn câu lạc bộ, không phụ thuộc vào nhịp độ kiểm tra riêng của từng đội. Sinh hoạt theo chu kỳ hai tuần:
 
-* Giảng một chuyên đề toán học.
-* Giảng lời giải các bài kiểm tra gần đây.
-* Thi lập trình (xem [TOML](./toml.html)).
+* **Chủ nhật Toán:** giảng một chuyên đề toán học hoặc lời giải các bài thi gần đây. Học sinh có lời giải đạt điểm tối đa có thể tự trình bày lời giải của mình.
+* **Chủ nhật Lập trình, tuần kế tiếp:** cuộc thi lập trình TOML (xem [TOML](./toml.html)).
 
 Lời giải chính thức được quay video và đăng lên kênh YouTube của câu lạc bộ, để không ai bị giới hạn bởi múi giờ.
 

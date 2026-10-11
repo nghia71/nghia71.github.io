@@ -6,6 +6,8 @@ title: Programs
 
 MCC runs four team training tracks, **T1 to T4**. Every track uses the same rhythm and the same test structure; what changes is the difficulty of the material and the length of the test.
 
+**Questions?** The [Q&A](./qa.md) answers the questions parents, students and coordinators ask most often, in English and Vietnamese.
+
 <div class="cards" markdown="0">
 
   <div class="card">
@@ -76,14 +78,12 @@ Each semester ends with a proctored **semester exam**, the club's internal olymp
 
 ## The weekly Sunday session
 
-Because each team now tests at its own pace, Sunday is the club's one shared session, rotating between two things from one week to the next:
+Because each team now tests at its own pace, Sunday is the club's one shared session. It runs on a two-week cycle:
 
-* A lecture on a math theory or topic.
-* A lecture on recent test solutions.
+* **Math Sunday:** a lecture on a math topic or on the recent test solutions. Official solutions are taught by Mr. Nghia, Mr. Toan, or one of the teachers, and students who solved a problem perfectly present their own solution.
+* **Coding Sunday, the week after:** the TOML coding contest — see [TOML](./toml.html) for the schedule and how to take part.
 
-Each of the two comes around roughly once every three weeks. Official solutions are taught by Mr. Nghia, Mr. Toan, or one of the teachers and recorded for the club's YouTube channel, so no one is locked out by time zone. Students with a particularly good solution may also be recorded presenting it themselves.
-
-The coding programme runs its own, separate cycle: a **coding contest**, then a **solution discussion** of that contest two weeks later, then repeat — see [TOML](./toml.html) for the schedule and how to take part.
+Sessions are recorded for the club's YouTube channel, so no one is locked out by time zone.
 
 ## Teams
 
@@ -127,7 +127,7 @@ For the test format itself — how the six problems are built and scored — see
 
 🌍 **Purple Comet! Math Meet** *(April)* — MCC teams compete internationally each spring. Top-performing teams are recognised publicly on [purplecomet.org](https://purplecomet.org).
 
-🎁 **Special recognition** *(June)* — any individual or team achieving **three perfect scores** during the year receives a copy of *100 Problems for Absolute Beginners*, personally dedicated. Keep it or give it to a friend.
+🎁 **Special recognition** *(June)* — any individual or team achieving **three perfect scores** during the year receives a copy of *100 Math Problems for Absolute Beginners*, personally dedicated. Keep it or give it to a friend.
 
 ## Membership
 

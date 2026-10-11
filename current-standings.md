@@ -111,7 +111,7 @@ A first-time checklist, in order, for whichever role brings you here. Everything
 
 <div class="tc-step">
 <div class="tc-step-text">
-<strong>7.</strong> Once graded, that same row fills in <code>Score</code>, <code>Result</code>, and a <code>Comment</code> from your grader — text, or a clickable link if they attached a PDF. A Fail isn't the end of it: your team gets up to three attempts (two retakes) per chapter, and a new session for a retake is created automatically — your coordinator will reach out to arrange it.
+<strong>7.</strong> Once graded, that same row fills in the points for each problem (<code>P 1</code> to <code>P 6</code>), the <code>Total</code> and the <code>Result</code>. The grader's comments are not on this sheet: they go to your coordinator, who passes them on to your team. A Fail isn't the end of it: your team gets up to three attempts (two retakes) per chapter, and a new session for a retake is created automatically — your coordinator will reach out to arrange it.
 </div>
 </div>
 
@@ -126,7 +126,7 @@ Danh sách các bước đầu tiên, theo thứ tự, cho bất kỳ vai trò n
 4. Đến ngày thi, khi thực sự sẵn sàng bắt đầu: đăng nhập bằng **email đã đăng ký của đội** (không phải email cá nhân của phụ huynh) và chọn **"I'm ready to open my test paper."** Đây là thao tác bắt đầu tính giờ và cấp quyền mở đề thi — một, hai phút sau, kiểm tra Google Drive để thấy file đề.
 5. Cùng làm bài ở nhà, rồi quay lại đúng Form đó và chọn **"Submit my solution"** — một file PDF, không gì khác. Có thể nộp lại nếu phát hiện sai sót và vẫn còn thời gian; file mới sẽ thay cho file cũ làm bài nộp chính thức.
 6. Thông báo xác nhận của Form không bao giờ cho biết thao tác vừa bấm có thành công hay không — đây là chủ ý, không phải lỗi. Muốn biết chắc, xem dòng của đội trên bảng **Exams & Standing**: *"In progress,"* *"Submitted on time,"* hoặc một trong các thông báo khác mà mục [dành cho Phụ huynh & Học sinh](#for-parents--students) liệt kê đầy đủ.
-7. Sau khi được chấm, cùng dòng đó sẽ điền `Score`, `Result`, và `Comment` từ người chấm — chữ thường, hoặc một đường link có thể bấm nếu người chấm gắn file PDF. Một lần Fail không phải là hết: đội được tối đa ba lần thi (hai lần thi lại) cho mỗi chương, và một buổi thi lại mới sẽ được tạo tự động — quản lý vùng sẽ liên hệ để sắp xếp.
+7. Sau khi được chấm, cùng dòng đó sẽ điền điểm từng bài (`P 1` đến `P 6`), `Total` và `Result`. Nhận xét của người chấm không nằm trên bảng này: nhận xét được gửi cho quản lý vùng, và quản lý vùng sẽ chuyển lại cho đội. Một lần Fail không phải là hết: đội được tối đa ba lần thi (hai lần thi lại) cho mỗi chương, và một buổi thi lại mới sẽ được tạo tự động — quản lý vùng sẽ liên hệ để sắp xếp.
 
 </details>
 
@@ -207,13 +207,13 @@ This is for Toan and Nghia, the two people who actually grade submissions each w
 
 <div class="tc-step">
 <div class="tc-step-text">
-<strong>2.</strong> For each submission: fill in <code>Score</code> (0–100), <code>Comments</code> (whatever you want the family to see), and <code>GradedBy</code>. Check <code>Done</code> only once a row is genuinely finished — a half-graded row should stay unchecked, since only <code>Done</code> rows ever get pulled in.
+<strong>2.</strong> For each submission: fill in the points and the comment for each problem, the overall comment, and <code>GradedBy</code>. Comments reach the family through its coordinator. Check <code>Done</code> only once a row is genuinely finished — a half-graded row should stay unchecked, since only <code>Done</code> rows ever get pulled in.
 </div>
 </div>
 
 <div class="tc-step">
 <div class="tc-step-text">
-<strong>3.</strong> Once your rows are marked <code>Done</code>, pull them in yourself — <strong>MCC Tools → Grader tools → Pull weekly grading</strong> now works for any real grader, not just Nghia. Click it any time after marking a batch <code>Done</code>; they'll then flow onto the public sheet automatically, with your comment landing in that row's <code>Comment</code> column — plain text, or a clickable link if you pasted one.
+<strong>3.</strong> Once your rows are marked <code>Done</code>, pull them in yourself — <strong>MCC Tools → Grader tools → Pull weekly grading</strong> now works for any real grader, not just Nghia. Click it any time after marking a batch <code>Done</code>; the points, <code>Total</code> and <code>Result</code> then flow onto the public sheet automatically, and your comments go to the Feedback tab of the Regional Pacing sheet, which only coordinators and graders can open. Coordinators pass them on to their teams.
 </div>
 </div>
 
@@ -223,8 +223,8 @@ This is for Toan and Nghia, the two people who actually grade submissions each w
 Phần này dành cho thầy Toàn và thầy Nghĩa, hai người trực tiếp chấm bài mỗi tuần.
 
 1. Mỗi tuần có một bảng tính chia sẻ riêng, `MCC Grading — <số tuần ISO>`, được tạo tự động khi cần lần đầu. Bấm **MCC Tools → Grader tools → Open this week's grading spreadsheet** (trên Master Registration Spreadsheet) để lấy link trực tiếp — hoặc kiểm tra mục "Shared with me" trên Drive, hoặc tìm "MCC Grading", nếu muốn.
-2. Với mỗi bài nộp: điền `Score` (0–100), `Comments` (bất cứ nhận xét nào muốn gia đình thấy), và `GradedBy`. Chỉ đánh dấu `Done` khi dòng đó thực sự đã chấm xong — một dòng chấm dở nên để trống, vì chỉ những dòng `Done` mới được đưa vào hệ thống.
-3. Sau khi đã đánh dấu `Done` các dòng của mình, tự đưa kết quả vào hệ thống được rồi — mục **MCC Tools → Grader tools → Pull weekly grading** giờ dùng được cho bất kỳ người chấm bài thật nào, không chỉ riêng thầy Nghĩa. Bấm vào đó bất cứ lúc nào sau khi đánh dấu `Done` một loạt bài; kết quả sẽ tự động chuyển vào bảng công khai, với nhận xét vào đúng cột `Comment` của dòng đó — chữ thường, hoặc một đường link có thể bấm nếu đã dán link.
+2. Với mỗi bài nộp: điền điểm và nhận xét cho từng bài, nhận xét chung, và `GradedBy`. Nhận xét đến tay gia đình qua quản lý vùng. Chỉ đánh dấu `Done` khi dòng đó thực sự đã chấm xong — một dòng chấm dở nên để trống, vì chỉ những dòng `Done` mới được đưa vào hệ thống.
+3. Sau khi đã đánh dấu `Done` các dòng của mình, tự đưa kết quả vào hệ thống được rồi — mục **MCC Tools → Grader tools → Pull weekly grading** giờ dùng được cho bất kỳ người chấm bài thật nào, không chỉ riêng thầy Nghĩa. Bấm vào đó bất cứ lúc nào sau khi đánh dấu `Done` một loạt bài; điểm, `Total` và `Result` sẽ tự động chuyển vào bảng công khai, còn nhận xét sẽ vào tab Feedback của bảng Regional Pacing, chỉ quản lý vùng và người chấm mở được. Quản lý vùng sẽ chuyển nhận xét cho các đội của mình.
 
 </details>
 
@@ -294,10 +294,10 @@ Quick reference for terms and column names used throughout this page and the she
 | Column | Meaning |
 |---|---|
 | `GradingStatus` | Set only by a grader. Once set, that session is closed — no further Start or Submit changes anything about it. |
-| `Score` | 0–100, filled in once a grader's weekly batch is pulled in. |
-| `Result` | `Pass` (51 or above) or `Fail`, computed from `Score`. |
+| `P 1` … `P 6` / `Total` | Points for each problem, and their sum out of 100, filled in once a grader's weekly batch is pulled in. |
+| `Result` | `Pass` (51 or above) or `Fail`, computed from `Total`. |
 | `GradedBy` / `GradedUTC` | Who graded it, and when. |
-| `Comment` | A grader's note, in its own column — plain text, or a clickable link when the grader attached a PDF. |
+| Comments | Not on this sheet. The grader's comments go to the Feedback tab of the Regional Pacing sheet (coordinators and graders only), and your coordinator passes them on to your team. |
 
 *(Coordinators: `NextExamDate`, `ExamFrequencyWeeks`, `NextChapter`, `LastExamDate`, and `Active` are covered where they're used, under "Changing a team's pace or date" and "Pausing vs. skipping" below — they live on the separate Regional Pacing sheet, not Exams & Standing.)*
 
@@ -333,10 +333,10 @@ Tài liệu tham khảo nhanh cho các thuật ngữ và tên cột dùng trong 
 | Cột | Ý nghĩa |
 |---|---|
 | `GradingStatus` | Chỉ do người chấm bài thiết lập. Khi đã thiết lập, bài thi đó coi như đóng — không có thao tác Start hay Submit nào làm thay đổi được nữa. |
-| `Score` | 0–100, được điền vào khi kết quả chấm bài hàng tuần được đưa vào hệ thống. |
-| `Result` | `Pass` (từ 51 điểm trở lên) hoặc `Fail`, tính từ `Score`. |
+| `P 1` … `P 6` / `Total` | Điểm từng bài và tổng điểm (trên 100), được điền vào khi kết quả chấm bài hàng tuần được đưa vào hệ thống. |
+| `Result` | `Pass` (từ 51 điểm trở lên) hoặc `Fail`, tính từ `Total`. |
 | `GradedBy` / `GradedUTC` | Ai chấm, và chấm lúc nào. |
-| `Comment` (nhận xét) | Ghi chú của người chấm bài, nằm trong cột riêng của chính nó — chữ thường, hoặc một đường link có thể bấm vào nếu người chấm gắn kèm file PDF. |
+| Nhận xét | Không nằm trên bảng này. Nhận xét của người chấm được đưa vào tab Feedback của bảng Regional Pacing (chỉ quản lý vùng và người chấm xem được), và quản lý vùng sẽ chuyển lại cho đội. |
 
 *(Dành cho quản lý vùng: `NextExamDate`, `ExamFrequencyWeeks`, `NextChapter`, `LastExamDate`, và `Active` đã được giải thích ở phần "Thay đổi nhịp độ hoặc ngày thi của một đội" và "Tạm ngưng so với bỏ qua một lần" bên dưới — các cột này nằm trên bảng Regional Pacing riêng, không phải Exams & Standing.)*
 
@@ -350,7 +350,7 @@ The **MCC Public Roster** is the one spreadsheet anyone — student, parent, or 
 
 **Roster columns:** `FullName`, `TeamID`, `Level`, `Region`, `Status` — a filtered, public-safe copy of `Students`.
 
-**`Exams` columns** (one row per test session) — see the [Glossary](#glossary) above for what each one means, including `Comment` and every message `Status` can show.
+**`Exams` columns** (one row per test session) — see the [Glossary](#glossary) above for what each one means, including every message `Status` can show.
 
 If anything on your row looks wrong — a misspelled name, the wrong team, level, or region — tell your regional coordinator; it isn't something you can edit yourself.
 
@@ -375,7 +375,7 @@ If anything on your row looks wrong — a misspelled name, the wrong team, level
 
 **Các cột trên `Roster`:** `FullName`, `TeamID`, `Level`, `Region`, `Status` — một bản sao đã lọc, an toàn để công khai, của tab `Students`.
 
-**Các cột trên `Exams`** (mỗi dòng là một bài thi) — xem mục [Bảng thuật ngữ](#glossary) ở trên để biết ý nghĩa từng cột, kể cả `Comment` và mọi thông báo mà `Status` có thể hiện ra.
+**Các cột trên `Exams`** (mỗi dòng là một bài thi) — xem mục [Bảng thuật ngữ](#glossary) ở trên để biết ý nghĩa từng cột, kể cả mọi thông báo mà `Status` có thể hiện ra.
 
 Nếu có gì trên dòng của mình trông không đúng — tên viết sai, sai đội, sai level, hay sai khu vực — hãy báo quản lý vùng; đây không phải điều tự sửa được.
 
@@ -427,7 +427,7 @@ This is rejected too, for the same honesty-of-the-record reason — the system h
 
 ### If you never come back at all
 
-Life happens — a team sometimes opens a paper and, for whatever reason, never submits anything. You don't need to do anything special in that case, and there's no penalty beyond what your coordinator decides for a missed test. What does happen automatically: once your 30-minute grace window fully closes with nothing submitted, the system removes your team's access to that paper on its own — you don't need to remember to "close it out," and nobody needs to chase down a forgotten open file. Your row on the Exams & Standing sheet keeps showing the plain "grace period has ended" message either way, so you'll always know where things stand.
+Life happens — a team sometimes opens a paper and, for whatever reason, never submits anything. A missed test counts as one of the team's three attempts for that chapter: that paper can't be taken again, and the next attempt is a new paper on a new date, which your coordinator arranges. The same applies to a test that is never opened on its date. What does happen automatically: once your 30-minute grace window fully closes with nothing submitted, the system removes your team's access to that paper on its own — you don't need to remember to "close it out," and nobody needs to chase down a forgotten open file. Your row on the Exams & Standing sheet keeps showing the plain "grace period has ended" message either way, so you'll always know where things stand.
 
 <div class="note" markdown="1">
 **Neither rejection costs you a valid submission you already have.** If you already have an accepted, on-time submission on record and a later resubmission attempt gets rejected (too late, or some mix-up), your earlier good submission still stands — it's never overwritten by a rejected attempt.
@@ -503,7 +503,7 @@ Trường hợp này cũng bị từ chối, cùng lý do giữ hồ sơ trung t
 
 ### Nếu không bao giờ trở lại nộp bài
 
-Đôi khi có chuyện xảy ra — một đội mở đề thi rồi vì lý do nào đó không nộp bài. Không cần làm gì đặc biệt trong trường hợp này, và không có hình phạt nào ngoài quyết định của quản lý vùng về một bài thi bị bỏ lỡ. Điều tự động xảy ra: khi hết 30 phút gia hạn mà chưa nộp gì, hệ thống sẽ tự thu hồi quyền truy cập file đề thi của đội — không cần nhớ "đóng" lại, và không ai phải đi tìm một file đang mở bị bỏ quên. Dòng của đội trên bảng Exams & Standing vẫn hiển thị đúng thông báo "hết thời gian gia hạn" để lúc nào cũng biết tình trạng của mình.
+Đôi khi có chuyện xảy ra — một đội mở đề thi rồi vì lý do nào đó không nộp bài. Một bài thi bị bỏ lỡ được tính là một trong ba lần thi của đội cho chương đó: đội không được làm lại đề đó nữa, và lần thi tiếp theo là một đề mới vào một ngày mới, do quản lý vùng sắp xếp. Bài thi không được mở vào đúng ngày thi cũng tính như vậy. Điều tự động xảy ra: khi hết 30 phút gia hạn mà chưa nộp gì, hệ thống sẽ tự thu hồi quyền truy cập file đề thi của đội — không cần nhớ "đóng" lại, và không ai phải đi tìm một file đang mở bị bỏ quên. Dòng của đội trên bảng Exams & Standing vẫn hiển thị đúng thông báo "hết thời gian gia hạn" để lúc nào cũng biết tình trạng của mình.
 
 <div class="note" markdown="1">
 **Một lần bị từ chối không làm mất bài nộp hợp lệ đã có.** Nếu đã có một bài nộp được chấp nhận, đúng hạn, và sau đó một lần nộp lại bị từ chối (quá trễ, hoặc nhầm lẫn), bài nộp tốt trước đó vẫn được giữ nguyên — không bao giờ bị ghi đè bởi một lần nộp bị từ chối.
@@ -599,7 +599,7 @@ Nếu đã kiểm tra cả hai mà vẫn không được, hãy liên hệ quản
 <summary>How to get a <code>DriveFileID</code> and add a new paper — nothing in the automation generates this for you</summary>
 
 1. Prepare the PDF and upload it to Drive yourself, into the papers folder.
-2. Name the file exactly `MCC-L<level>-Ch<chapter>-A<attempt>.pdf` — e.g. `MCC-L3-Ch7-A1.pdf` (the original), `MCC-L3-Ch7-A2.pdf` (first retake), `MCC-L3-Ch7-A3.pdf` (second retake). The `MCC-` prefix makes every paper easy to find with one Drive search regardless of which folder it's in; the rest matches the `Papers` columns exactly, so matching a physical file to its row is never a guessing game.
+2. Give the file a name that shows its level, chapter and attempt, so it is easy to match to its row.
 3. Get that file's Drive ID. Right-click the file in Drive → **Share** → **Copy link** (or just open the file and look at your browser's address bar). Either way you get a URL that looks like `https://drive.google.com/file/d/1AbCdEfGhIjKlMnOpQrStUvWxYz/view?usp=sharing` — the file ID is the long string of letters/numbers between `/d/` and the next `/` (here, `1AbCdEfGhIjKlMnOpQrStUvWxYz`). Paste just that string into the row's `DriveFileID` cell on the `Papers` tab — not the whole URL.
 4. In that same row's `Note` cell, spell out which attempt this is, e.g. `Level 3, Chapter 7, Attempt 2 (retake 1 of 2)` — so nobody miscounts the "at most 2 retakes" limit by reading `Attempt` alone.
 
@@ -624,7 +624,7 @@ Same columns on every region tab:
 |---|---|
 | `TeamID` / `TeamName` | Join key back to Master Registration; `TeamName` is copied at seed time, for readability only. |
 | `Level` | Copied from Master Registration when the team's row was first added here — **not kept in sync afterward.** If a team is promoted a level mid-year, this column needs a manual edit too. |
-| `NextChapter` | Which chapter the team tests next. Advances automatically once a test is graded (regardless of pass/fail — a coordinator who wants a team to redo a chapter still edits this by hand). |
+| `NextChapter` | Which chapter the team tests next. Moves to the next chapter automatically when a test is passed; on a fail it stays put (see "Grades now update a team's pacing automatically" below). |
 | `ExamFrequencyWeeks` | 1, 2, or 3 — the column families most often ask to change. Editable any time. |
 | `LastExamDate` | Set automatically once a test is graded. |
 | `NextExamDate` | `LastExamDate` + `ExamFrequencyWeeks` × 7 days, recomputed automatically after every graded test. This is the date a coordinator actually watches. |
@@ -650,7 +650,7 @@ The rest of this section assumes you're already familiar with [Organization](./o
 
 Once a family's `NextExamDate` is within a week, the system creates that test occurrence automatically overnight — no action needed from you. It skips (and logs why) any team that's inactive, already has an unresolved test pending, or has a stale/past date that needs a fresh one from you first.
 
-A team that opens its paper and never submits is also handled automatically: once their 30-minute grace window fully closes, their access to that paper is revoked on its own — you don't need to go clean anything up. Their row still needs your attention in one way, though: an abandoned test doesn't grade itself, so it'll keep showing as unresolved (blocking a fresh session for that team) until you record a result for it, most likely a no-show or a zero, the same way you'd handle any missed test.
+A team that opens its paper and never submits is also handled automatically: once their 30-minute grace window fully closes, their access to that paper is revoked on its own — you don't need to go clean anything up. Their row still needs your attention in one way, though: an abandoned test doesn't grade itself, so it'll keep showing as unresolved (blocking a fresh session for that team) until it is closed. A missed test counts as an attempt (the same goes for a test never opened on its date): that paper is gone for the team, and the next attempt is a new paper on a new date. The system doesn't do this by itself yet, so tell Mr. Nghia, who closes the row and sets up the next attempt.
 
 Before trusting this for a family whose team is about to test a new chapter for the first time, it's worth a quick sanity check that a paper actually exists for it — ask Nghia to run the club-wide readiness check if you're ever unsure a chapter is covered.
 
@@ -683,10 +683,11 @@ on the row. What happens to `NextChapter` depends on the result:
   you: repeat the chapter by hand, move them on anyway, or whatever
   fits that family's situation. The system deliberately doesn't guess.
 
-Family-visible comments from grading show up in their own row's
-`Comment` column — plain text, or a clickable link straight to the
-grader's PDF feedback if that's what they attached — without opening
-the (coordinator-only) grading spreadsheet.
+Grading comments are not on the public sheet. They go to the
+**Feedback** tab of the Regional Pacing sheet (one row per test, with
+the comment for each problem and the overall comment), which only
+coordinators and graders can open. Please pass them on to the students
+and parents of your own teams.
 
 ### A new Standings tab shows progress at a glance
 
@@ -775,7 +776,7 @@ Phần còn lại của mục này giả định đã quen với vai trò quản
 
 Khi `NextExamDate` của một gia đình còn trong vòng một tuần, hệ thống tự tạo buổi thi đó vào ban đêm — không cần quản lý vùng làm gì. Hệ thống sẽ bỏ qua (và ghi rõ lý do) bất kỳ đội nào đang ngưng hoạt động, đã có một buổi thi chưa xử lý xong, hoặc có ngày thi đã cũ/quá hạn cần quản lý vùng cập nhật lại trước.
 
-Một đội mở đề thi rồi không nộp bài cũng được xử lý tự động: khi hết 30 phút gia hạn, quyền truy cập đề thi của đội đó tự động bị thu hồi — không cần quản lý vùng dọn dẹp gì thêm. Tuy vậy dòng đó vẫn cần quản lý vùng chú ý một việc: một bài thi bị bỏ dở không tự chấm được, nên sẽ tiếp tục hiển thị là "chưa xử lý xong" (và chặn một buổi thi mới cho đội đó) cho đến khi quản lý vùng ghi nhận kết quả — nhiều khả năng là vắng thi hoặc điểm 0, giống cách xử lý mọi buổi thi bị bỏ lỡ khác.
+Một đội mở đề thi rồi không nộp bài cũng được xử lý tự động: khi hết 30 phút gia hạn, quyền truy cập đề thi của đội đó tự động bị thu hồi — không cần quản lý vùng dọn dẹp gì thêm. Tuy vậy dòng đó vẫn cần quản lý vùng chú ý một việc: một bài thi bị bỏ dở không tự chấm được, nên sẽ tiếp tục hiển thị là "chưa xử lý xong" (và chặn một buổi thi mới cho đội đó) cho đến khi dòng đó được đóng lại. Một bài thi bị bỏ lỡ được tính là một lần thi (bài thi không được mở vào đúng ngày cũng vậy): đội không được làm lại đề đó, và lần thi tiếp theo là một đề mới vào một ngày mới. Hệ thống chưa tự làm việc này, nên quản lý vùng xin báo Thầy Nghĩa để thầy đóng dòng đó và sắp xếp lần thi tiếp theo.
 
 Trước khi yên tâm rằng điều này sẽ tự động đúng cho một gia đình sắp thi chương mới lần đầu, nên kiểm tra nhanh xem đề thi cho chương đó đã có chưa — nếu không chắc một chương đã có đề hay không, nhờ thầy Nghĩa chạy kiểm tra sẵn sàng cho toàn câu lạc bộ.
 
@@ -791,7 +792,7 @@ Khi một kết quả bài thi được ghi nhận — thầy Toàn/thầy Nghĩ
 * **Không đạt, còn lượt thi lại** — `NextChapter` giữ nguyên, và một buổi thi mới cho CÙNG chương đó (lần thi kế tiếp) được tạo tự động. Dòng của đội trên bảng Exams & Standing sẽ hiện thông báo dạng *"Not passed — Attempt 1 of 3. Contact your coordinator to schedule a retake"* — đây là dấu hiệu để quản lý vùng chủ động liên hệ gia đình; hệ thống không tự gửi email cho ai cả. Mỗi chương, một đội được tối đa ba lần thi (hai lần thi lại).
 * **Không đạt, ở lần thi thứ 3 (cuối cùng)** — `NextChapter` giữ nguyên và không có buổi thi lại nào được tạo thêm. Dòng của đội sẽ hiện *"...This chapter needs your coordinator's decision"* — từ đây là quyết định của quản lý vùng: cho thi lại chương đó bằng tay, vẫn cho đội tiến lên, hay tùy theo hoàn cảnh gia đình. Hệ thống cố tình không tự đoán.
 
-Nhận xét của người chấm mà gia đình được phép xem sẽ hiện trong cột `Comment` riêng của đúng dòng đội đó — chữ thường, hoặc một đường link bấm được thẳng tới file PDF nhận xét nếu người chấm gắn kèm — mà không cần mở bảng chấm điểm (chỉ dành cho ban tổ chức).
+Nhận xét của người chấm không nằm trên bảng công khai. Nhận xét được đưa vào tab **Feedback** của bảng Regional Pacing (mỗi bài thi một dòng, có nhận xét từng bài và nhận xét chung), chỉ quản lý vùng và người chấm mở được. Quản lý vùng xin chuyển nhận xét cho học sinh và phụ huynh của các đội mình phụ trách.
 
 ### Tab Standings mới — nhìn nhanh tiến độ tất cả các đội
 
@@ -851,11 +852,11 @@ There's one shared spreadsheet per week, `MCC Grading — <ISO week>` (e.g. `MCC
 
 ### What to fill in, and when to mark a row Done
 
-Each row is one graded submission: fill in `Score` (0-100, the club's usual point system), `Comments` (whatever feedback you want the family to see -- per-problem or overall, your call), and `GradedBy` (your name). Check the `Done` box only once a row is genuinely finished. **A half-graded row should stay unchecked** -- the automation only ever reads rows marked `Done`, specifically so a score you're still second-guessing never gets pulled into a family's row by accident. There's no rush; grade at your own pace across the week. **You pull the results in yourself** — the "MCC Tools → Grader tools → Pull weekly grading" menu item now works for any real grader, not just Nghia; once you've marked your rows `Done`, click it and they'll be pulled in.
+Each row is one graded submission: fill in the points and the comment for each problem (the six problems add up to 100), the overall comment, and `GradedBy` (your name). Check the `Done` box only once a row is genuinely finished. **A half-graded row should stay unchecked** -- the automation only ever reads rows marked `Done`, specifically so a score you're still second-guessing never gets pulled into a family's row by accident. There's no rush; grade at your own pace across the week. **You pull the results in yourself** — the "MCC Tools → Grader tools → Pull weekly grading" menu item now works for any real grader, not just Nghia; once you've marked your rows `Done`, click it and they'll be pulled in.
 
 ### What happens automatically once you mark a row Done and pull results in
 
-Once a row is `Done` and the results are pulled in, the matching family's row on the public Exams & Standing sheet updates itself: `Score`, `Result` (`Pass` if the score is 51 or above, `Fail` otherwise -- the club's existing documented pass mark, nothing new), and a timestamp all get written automatically. Your `Comments` land in their own `Comment` column on that row -- plain text, or, if you pasted a link to a PDF, a clickable link straight to it -- so yes, your comments really do reach the family, without you needing to tell them separately or share anything new. A row you never marked `Done` is simply left alone; running the pull again later, once you do mark it, picks it up then.
+Once a row is `Done` and the results are pulled in, the matching family's row on the public Exams & Standing sheet updates itself: the points for each problem, `Total`, `Result` (`Pass` if the total is 51 or above, `Fail` otherwise -- the club's existing documented pass mark, nothing new), and a timestamp all get written automatically. Your comments go to the Feedback tab of the Regional Pacing sheet (coordinators and graders only), not to the public sheet; the coordinator passes them on to the family, so you don't need to send them yourself. A row you never marked `Done` is simply left alone; running the pull again later, once you do mark it, picks it up then.
 
 ### What a Fail means from here
 
@@ -874,11 +875,11 @@ Mỗi tuần có một bảng tính chia sẻ riêng, `MCC Grading — <số tu�
 
 ### Điền gì, và khi nào đánh dấu Done
 
-Mỗi dòng là một bài đã chấm: điền `Score` (0–100, theo thang điểm quen thuộc của câu lạc bộ), `Comments` (bất kỳ nhận xét nào muốn gia đình thấy — theo từng bài hay tổng quát, tùy ý), và `GradedBy` (tên mình). Chỉ đánh dấu `Done` khi dòng đó thực sự đã xong. **Một dòng chấm dở nên để trống ô Done** — hệ thống chỉ đọc những dòng đã đánh dấu `Done`, để một điểm số còn đang phân vân không bao giờ vô tình lọt vào dòng của một gia đình. Không cần vội, có thể chấm theo tốc độ của riêng mình trong tuần. **Tự đưa kết quả vào hệ thống được** — mục "MCC Tools → Grader tools → Pull weekly grading" giờ dùng được cho bất kỳ người chấm bài thật nào, không chỉ riêng thầy Nghĩa; sau khi đã đánh dấu `Done` các dòng của mình, bấm vào đó là kết quả sẽ được đưa vào.
+Mỗi dòng là một bài đã chấm: điền điểm và nhận xét cho từng bài (sáu bài cộng lại là 100 điểm), nhận xét chung, và `GradedBy` (tên mình). Chỉ đánh dấu `Done` khi dòng đó thực sự đã xong. **Một dòng chấm dở nên để trống ô Done** — hệ thống chỉ đọc những dòng đã đánh dấu `Done`, để một điểm số còn đang phân vân không bao giờ vô tình lọt vào dòng của một gia đình. Không cần vội, có thể chấm theo tốc độ của riêng mình trong tuần. **Tự đưa kết quả vào hệ thống được** — mục "MCC Tools → Grader tools → Pull weekly grading" giờ dùng được cho bất kỳ người chấm bài thật nào, không chỉ riêng thầy Nghĩa; sau khi đã đánh dấu `Done` các dòng của mình, bấm vào đó là kết quả sẽ được đưa vào.
 
 ### Điều gì tự động xảy ra sau khi đánh dấu Done và kết quả được đưa vào hệ thống
 
-Khi một dòng đã `Done` và kết quả được đưa vào, dòng tương ứng của gia đình trên bảng Exams & Standing công khai sẽ tự cập nhật: `Score`, `Result` (`Pass` nếu từ 51 điểm trở lên, `Fail` nếu không — thang điểm đã có từ trước, không có gì mới), và một mốc thời gian đều được ghi tự động. `Comments` của mình sẽ vào đúng cột `Comment` riêng trên dòng đó — chữ thường, hoặc nếu dán một đường link PDF, một link có thể bấm thẳng vào — nên đúng là nhận xét sẽ đến tay gia đình, không cần báo riêng hay chia sẻ gì thêm. Một dòng chưa đánh dấu `Done` sẽ được để yên; lần đưa kết quả sau, khi đã đánh dấu, sẽ tự động lấy dòng đó.
+Khi một dòng đã `Done` và kết quả được đưa vào, dòng tương ứng của gia đình trên bảng Exams & Standing công khai sẽ tự cập nhật: điểm từng bài, `Total`, `Result` (`Pass` nếu tổng điểm từ 51 trở lên, `Fail` nếu không — thang điểm đã có từ trước, không có gì mới), và một mốc thời gian đều được ghi tự động. Nhận xét của mình được đưa vào tab Feedback của bảng Regional Pacing (chỉ quản lý vùng và người chấm xem được), không lên bảng công khai; quản lý vùng sẽ chuyển nhận xét cho gia đình, nên không cần tự gửi. Một dòng chưa đánh dấu `Done` sẽ được để yên; lần đưa kết quả sau, khi đã đánh dấu, sẽ tự động lấy dòng đó.
 
 ### Một lần Fail nghĩa là gì từ đây
 
