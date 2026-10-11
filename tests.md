@@ -131,7 +131,7 @@ Each family chooses how often their team tests, and may change the choice during
 * **Every two weeks** — the standard pace, matching the study cycle.
 * **Every three weeks** — for teams moving through the material more slowly.
 
-A student who knows they are weak in one area can also ask for extra papers in it. If geometry is the weak spot, test on geometry repeatedly — it is the quickest way to find out where you actually are, and the quickest way to move.
+There are no extra tests: a team moves on by passing each chapter test, and a failed test is retaken (up to two retakes per chapter).
 
 The aim is that a student who can go fast is not held back, and a student who needs to go slowly knows precisely why. Both need their regional coordinator's support to work.
 
