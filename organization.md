@@ -20,7 +20,7 @@ Because MCC families are spread across many time zones, the Parents' Association
 | US / Canada, East Coast (EC) | Mr. Son | [sonhho@gmail.com](mailto:sonhho@gmail.com) |
 | US / Canada, West Coast (WC) | Ms. Ngoc Anh | [tranngocanh0910@gmail.com](mailto:tranngocanh0910@gmail.com) |
 
-**Please contact your own regional coordinator first** for questions about schedules, test registration, or results, rather than writing directly to Mr. Nghia or Mr. Toan.
+**Please contact your own regional coordinator first** for questions about schedules or test registration, rather than writing directly to Mr. Nghia or Mr. Toan. For a question about a grade, write to your coordinator or to the teacher who graded the test, whichever you prefer.
 
 ## Curriculum, tests, and grading
 
@@ -63,7 +63,7 @@ Vì học sinh MCC ở nhiều múi giờ khác nhau, Hội PH được chia th�
 | Bờ Đông Mỹ/Canada (EC) | Anh Sơn | [sonhho@gmail.com](mailto:sonhho@gmail.com) |
 | Bờ Tây Mỹ/Canada (WC) | Cô Ngọc Anh | [tranngocanh0910@gmail.com](mailto:tranngocanh0910@gmail.com) |
 
-**Xin liên hệ đúng người phụ trách khu vực của gia đình mình trước tiên** cho các câu hỏi về lịch học, đăng ký thi, và kết quả, thay vì liên hệ trực tiếp với Thầy Nghĩa hoặc Anh Toàn.
+**Xin liên hệ đúng người phụ trách khu vực của gia đình mình trước tiên** cho các câu hỏi về lịch học và đăng ký thi, thay vì liên hệ trực tiếp với Thầy Nghĩa hoặc Anh Toàn. Nếu có thắc mắc về điểm, gia đình có thể viết cho người phụ trách khu vực hoặc cho thầy đã chấm bài, tùy ý.
 
 ## Chương trình học, kiểm tra, và chấm bài
 

@@ -41,7 +41,7 @@ The club's curriculum is **Learning Problem Solving VI and VII** — two volumes
 * There are **no one-step, plug-in-the-formula problems**. Easy or hard, every problem asks the student to read, analyse, compute, and check. Routine drills belong to other curricula; these books assume you want to think.
 * Each section teaches **one idea deeply**. You may notice several problems circling the same piece of theory before the next section opens a different door — that is the design, not a lack of variety. A little material above grade level is deliberately mixed in, so that students meet the next idea before they need it.
 * Problems without an attributed source are the author's own.
-* **Use the books in a spiral, over two or more years.** The easy problems the first year, the medium ones the next, then the hard ones. This is why T1 and T2 share the same 54 chapters, and T3 and T4 the same 55.
+* **Use each book twice, over two years.** The first year (T1, or T3) works through the whole book, chapter 1 to the last, on the Easy and Medium problems; the second year (T2, or T4) starts again at chapter 1, on the Medium and Hard problems. This is why T1 and T2 share the same 54 chapters, and T3 and T4 the same 55.
 
 ### The four-year path
 
@@ -63,7 +63,7 @@ Please tell the club when you order: if a discount code is available, we will pa
 
 Khi đặt xin nhắn cho câu lạc bộ — nếu có mã giảm giá chúng tôi sẽ chuyển ngay. Đặt theo nhóm còn rẻ hơn nữa, nếu có phụ huynh nhận việc giao sách tại chỗ.
 
-**LPS VI: 54 chương, 217 chuyên mục, 1.395 bài (998 ví dụ + 397 bài tập), 672 trang A4. LPS VII: 55 chương, 216 chuyên mục, 1.326 bài (922 ví dụ + 404 bài tập), 648 trang A4.** Khoảng 30% là bài tập. Sách không có bài áp dụng công thức một bước ăn ngay; dù dễ hay khó, mỗi bài đều đòi hỏi đọc hiểu, phân tích, tính toán rồi kiểm tra. Sách được thiết kế để dùng theo kiểu **xoáy trôn ốc** trong hai năm trở lên: lần đầu học các bài dễ, năm sau chuyển sang bài trung bình, rồi bài khó. Bộ hai quyển là một chương trình bốn năm: **109 chương, 433 chuyên mục, 2.721 bài toán, 109+ kỳ kiểm tra và 4 mùa Purple Comet.**
+**LPS VI: 54 chương, 217 chuyên mục, 1.395 bài (998 ví dụ + 397 bài tập), 672 trang A4. LPS VII: 55 chương, 216 chuyên mục, 1.326 bài (922 ví dụ + 404 bài tập), 648 trang A4.** Khoảng 30% là bài tập. Sách không có bài áp dụng công thức một bước ăn ngay; dù dễ hay khó, mỗi bài đều đòi hỏi đọc hiểu, phân tích, tính toán rồi kiểm tra. Mỗi quyển được học **hai lần** trong hai năm: năm đầu (T1, hoặc T3) học cả quyển, từ chương 1 đến chương cuối, với các bài Dễ và Trung bình; năm sau (T2, hoặc T4) học lại từ chương 1, với các bài Trung bình và Khó. Bộ hai quyển là một chương trình bốn năm: **109 chương, 433 chuyên mục, 2.721 bài toán, 109+ kỳ kiểm tra và 4 mùa Purple Comet.**
 
 </div>
 
