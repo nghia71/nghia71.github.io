@@ -129,10 +129,10 @@
 
   var WORDS = {
     en: { all: "All", parents: "Parents & students", coords: "Coordinators", search: "Search the questions…",
-      more: "More information", none: "No question matches your search.", updated: "Last updated",
+      more: "More information", none: "No question matches your search.", nothing: "No questions have been published yet. Please check back soon.", updated: "Last updated",
       count: function (n) { return n + (n === 1 ? " question" : " questions"); } },
     vi: { all: "Tất cả", parents: "Phụ huynh & học sinh", coords: "Coordinator", search: "Tìm trong các câu hỏi…",
-      more: "Xem thêm", none: "Không có câu hỏi nào khớp.", updated: "Cập nhật lần cuối",
+      more: "Xem thêm", none: "Không có câu hỏi nào khớp.", nothing: "Chưa có câu hỏi nào được đăng. Xin quay lại sau.", updated: "Cập nhật lần cuối",
       count: function (n) { return n + " câu hỏi"; } }
   };
 
@@ -162,7 +162,7 @@
         g.items.map(function (it) { return itemHtml(it, g, lang); }).join("") + "</section>";
     }).join("");
     return '<div class="qa-index">' + index + "</div>" + body +
-      '<p class="qa-empty" hidden>' + esc(w.none) + "</p>";
+      '<p class="qa-empty" hidden>' + esc(data.groups.some(function (g) { return g.items.length; }) ? w.none : w.nothing) + "</p>";
   }
 
   function slug(s) { return String(s).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, ""); }
