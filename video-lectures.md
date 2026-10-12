@@ -47,7 +47,7 @@ Bài giảng đi kèm với sách chứ không thay thế sách. Xem bài giản
 {% unless forloop.first %}</tbody></table>{% endunless %}
 <h3>{{ l.part }}</h3>
 <table class="lectures">
-<thead><tr><th>Chapter</th><th>Title</th><th>Lecture</th></tr></thead>
+<thead><tr><th>Chapter</th><th>Title</th><th>Lecture</th><th>Solutions</th></tr></thead>
 <tbody>
 {% assign current_part = l.part %}
 {% endif %}
@@ -55,12 +55,14 @@ Bài giảng đi kèm với sách chứ không thay thế sách. Xem bài giản
   <td>{{ l.chapter }}</td>
   <td>{{ l.title }}</td>
   <td><a href="{{ l.url }}" target="_blank" rel="noopener">▶ Watch</a></td>
+  <td>{% for s in l.solutions %}{% if s.url != "" %}<a href="{{ s.url }}" target="_blank" rel="noopener">▶ {{ s.label }}</a><br>{% endif %}{% endfor %}</td>
 </tr>
 {% for x in l.extras %}{% if x.url != "" %}
 <tr>
   <td>{{ x.label }}</td>
   <td>{{ x.title }}</td>
   <td><a href="{{ x.url }}" target="_blank" rel="noopener">▶ Watch</a></td>
+  <td></td>
 </tr>
 {% endif %}{% endfor %}
 {% if forloop.last %}</tbody></table>{% endif %}
@@ -71,6 +73,6 @@ Bài giảng đi kèm với sách chứ không thay thế sách. Xem bài giản
 <style>
   table.lectures { width: 100%; }
   table.lectures td:first-child, table.lectures th:first-child { width: 5.5em; text-align: center; }
-  table.lectures td:last-child, table.lectures th:last-child { width: 8em; white-space: nowrap; }
+  table.lectures td:nth-child(n+3), table.lectures th:nth-child(n+3) { width: 7.5em; white-space: nowrap; }
   table.lectures a { font-weight: 600; }
 </style>
