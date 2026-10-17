@@ -9,45 +9,38 @@ This page is the club's live index, for every role: where the roster and every t
 **Jump to:** [Sunday session](#sunday-session) · [Team standings](#team-standings) · [Start here](#start-here) · [Where the data lives](#where-the-clubs-data-lives) · [Glossary](#glossary) · [The public roster](#the-public-roster) · [For Parents & Students](#for-parents--students) · [Coordinator & organizer resources](#coordinator--organizer-resources) · [For Graders](#for-graders){% if site.show_test_material %} · [Test suites](#test-suites){% endif %}
 
 <div class="note" id="sunday-session" markdown="0">
-<strong>Next Sunday session: Sunday 11 October, 7:00–8:30 AM Victoria/BC time. Students present their perfect-score solutions from the Chapter 1 team tests.</strong>
-<p>Every problem on which a team scored full marks is presented once, by one team. When several teams solved it, the best-written solution was chosen, and the problems were shared out so that as many teams as possible present. Allow about 5 to 6 minutes per problem. The coding contest runs on the alternate Sundays (next: Test 2 on 18 October, see <a href="./toml.html">TOML</a>).</p>
+<strong>Next Sunday session: Sunday 25 October, 7:00–8:30 AM Victoria/BC time. Students present their perfect-score solutions from the Chapter 2 team tests.</strong>
+<p>Every problem on which a team scored full marks is presented once, by one team. When several teams solved it, the best-written solution was chosen, and the problems were shared out so that as many teams as possible present. Allow about 5 to 6 minutes per problem. <em>Provisional:</em> more teams sit Chapter 2 up to 24 October, so this list will be updated as their tests are graded. The coding contest runs on the alternate Sundays (18 October and 1 November, see <a href="./toml.html">TOML</a>).</p>
 <h3>7:00–7:45 AM: Levels T1 and T2</h3>
 <div class="ls-wrap"><table class="ls-table">
-<thead><tr><th class="ls-num">#</th><th>Problem (Chapter 1 team test)</th><th>Presenting team</th><th>Region</th></tr></thead>
+<thead><tr><th class="ls-num">#</th><th>Problem (Chapter 2 team test)</th><th>Presenting team</th><th>Region</th></tr></thead>
 <tbody>
-<tr><td class="ls-num">1</td><td>T1 Problem 1</td><td>Tortoises</td><td>UK</td></tr>
-<tr><td class="ls-num">2</td><td>T1 Problem 2 (also T2 Problem 1)</td><td>T104</td><td>FR</td></tr>
-<tr><td class="ls-num">3</td><td>T1 Problem 3</td><td>T111</td><td>WC</td></tr>
-<tr><td class="ls-num">4</td><td>T1 Problem 4</td><td>Westminster</td><td>UK</td></tr>
-<tr><td class="ls-num">5</td><td>T1 Problem 5</td><td>T101</td><td>FR</td></tr>
-<tr><td class="ls-num">6</td><td>T2 Problem 2</td><td>T204</td><td>FR</td></tr>
-<tr><td class="ls-num">7</td><td>T2 Problem 5</td><td>T108</td><td>FR</td></tr>
+<tr><td class="ls-num">1</td><td>T1 Problem 1</td><td>T104</td><td>FR</td></tr>
+<tr><td class="ls-num">2</td><td>T1 Problem 3</td><td>T102</td><td>WC</td></tr>
+<tr><td class="ls-num">3</td><td>T1 Problem 4 (also T2 Problem 2)</td><td>Algebraic Uniformity</td><td>UK</td></tr>
 </tbody></table></div>
 <h3>7:45–8:30 AM: Levels T3 and T4</h3>
 <div class="ls-wrap"><table class="ls-table">
-<thead><tr><th class="ls-num">#</th><th>Problem (Chapter 1 team test)</th><th>Presenting team</th><th>Region</th></tr></thead>
+<thead><tr><th class="ls-num">#</th><th>Problem (Chapter 2 team test)</th><th>Presenting team</th><th>Region</th></tr></thead>
 <tbody>
-<tr><td class="ls-num">1</td><td>T3 Problem 1 (also T4 Problem 1)</td><td>T302</td><td>FR</td></tr>
-<tr><td class="ls-num">2</td><td>T3 Problem 2</td><td>T303</td><td>WC</td></tr>
-<tr><td class="ls-num">3</td><td>T3 Problem 3</td><td>T212</td><td>UK</td></tr>
-<tr><td class="ls-num">4</td><td>T4 Problem 2 (also T3 Problem 4)</td><td>T401</td><td>FR</td></tr>
+<tr><td class="ls-num">1</td><td>T3 Problem 1</td><td>T303</td><td>WC</td></tr>
+<tr><td class="ls-num">2</td><td>T3 Problem 2 (also T4 Problem 1)</td><td>T302</td><td>FR</td></tr>
+<tr><td class="ls-num">3</td><td>T3 Problem 4</td><td>T303</td><td>WC</td></tr>
+<tr><td class="ls-num">4</td><td>T4 Problem 2 (also T3 Problem 3)</td><td>T401</td><td>FR</td></tr>
 <tr><td class="ls-num">5</td><td>T4 Problem 3</td><td>T401</td><td>FR</td></tr>
-<tr><td class="ls-num">6</td><td>T4 Problem 4</td><td>T401</td><td>FR</td></tr>
-<tr><td class="ls-num">7</td><td>T4 Problem 5</td><td>T401</td><td>FR</td></tr>
-<tr><td class="ls-num">8</td><td>T4 Problem 6</td><td>T401</td><td>FR</td></tr>
 </tbody></table></div>
-<p>T401 scored 100/100 and is the only team with full marks on T4 Problems 2 to 6, so it presents all five.</p>
+<p>No team has full marks yet on the other problems. T401 is the only team with full marks on T4 Problems 2 and 3, so it presents both.</p>
 </div>
 
 <details class="vn" markdown="1">
-<summary>🇻🇳 Tiếng Việt — Buổi sinh hoạt Chủ nhật 11/10 (click to expand)</summary>
+<summary>🇻🇳 Tiếng Việt — Buổi sinh hoạt Chủ nhật 25/10 (click to expand)</summary>
 
-Chủ nhật 11/10, 7:00–8:30 sáng giờ Victoria/BC: học sinh trình bày các lời giải đạt điểm tuyệt đối trong bài thi đội Chương 1. Mỗi bài có đội đạt điểm tối đa được trình bày một lần, bởi một đội. Khi nhiều đội cùng giải được một bài, chúng tôi chọn lời giải viết tốt nhất và chia các bài sao cho nhiều đội được trình bày nhất. Mỗi bài khoảng 5–6 phút.
+Chủ nhật 25/10, 7:00–8:30 sáng giờ Victoria/BC: học sinh trình bày các lời giải đạt điểm tuyệt đối trong bài thi đội Chương 2. Mỗi bài có đội đạt điểm tối đa được trình bày một lần, bởi một đội. Khi nhiều đội cùng giải được một bài, chúng tôi chọn lời giải viết tốt nhất và chia các bài sao cho nhiều đội được trình bày nhất. Mỗi bài khoảng 5–6 phút.
 
 * **7:00–7:45:** T1 và T2 (bảng thứ nhất ở trên).
 * **7:45–8:30:** T3 và T4 (bảng thứ hai ở trên).
 
-T401 đạt 100/100 và là đội duy nhất đạt điểm tối đa ở các Bài 2 đến 6 của T4, nên đội trình bày cả năm bài. Cuộc thi lập trình diễn ra vào các Chủ nhật xen kẽ (bài thi tiếp theo: Test 2 ngày 18/10, xem trang [TOML](./toml.html)).
+Danh sách này còn tạm thời: các đội khác còn thi Chương 2 đến ngày 24/10, nên danh sách sẽ được cập nhật khi bài của các đội được chấm. Cuộc thi lập trình diễn ra vào các Chủ nhật xen kẽ (18/10 và 1/11, xem trang [TOML](./toml.html)).
 
 </details>
 
