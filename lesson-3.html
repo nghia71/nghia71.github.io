@@ -363,7 +363,6 @@ document.addEventListener("DOMContentLoaded", function () {
 <div class="note">
 These are the exact problems from the second coding contest, in the same order: five for Middle School and five for High School &mdash; one each from Algebra, Combinatorics, Geometry and Number Theory, plus a harder Geometry problem. Try any you didn&rsquo;t finish on your own first &mdash; then compare with the math and code below.
 </div>
-<p>Problems marked &ldquo;Pi Journal&rdquo; come from the <em>Math Challenge</em> section of <a href="https://pi.edu.vn" target="_blank" rel="noopener">Pi Journal</a> and are used with the journal&rsquo;s permission; where Pi asks to &ldquo;find all&rdquo; or &ldquo;prove&rdquo;, the problem has been given a single numerical answer so it can be checked by a program.</p>
 
 <div class="requirements">
 <h2 id="what-s-required-and-acceptable-for-a-contest-submission">What&rsquo;s required and acceptable for a contest submission</h2>
@@ -427,27 +426,22 @@ These are the exact problems from the second coding contest, in the same order: 
 
 <div class="card example">
 <h3 id="ms-problem-1">MS &middot; Problem 1 &middot; <span class="tag">Easy</span> <span class="tag">Algebra</span></h3>
-<p class="problem">Yen works for FedEx and has to deliver \(5\) parcels. Her van uses \(3\) litres of fuel for every \(45\) km it drives. The fuel tank holds \(12\) litres, and it was full when she set off. She used a quarter of the tank to deliver the first parcel. To deliver the second and third parcels, she used half of the fuel that was left. After delivering the third parcel, Yen noticed that the fuel left was only three fifths of the fuel needed to deliver the last two parcels. She filled up the tank and finished her deliveries. How many kilometres did Yen drive in total to deliver all \(5\) parcels?</p>
-<p class="source">Source: Pi Journal (pi.edu.vn), Problem P911. Used with permission.</p>
-<div class="note math">Work in litres, with exact fractions. <strong>Parcel 1:</strong> a quarter of the tank, \(12 \cdot \tfrac14 = 3\) litres, leaving \(9\). <strong>Parcels 2 and 3:</strong> half of what was left, \(9 \cdot \tfrac12 = \tfrac92\) litres, leaving \(\tfrac92\). <strong>Parcels 4 and 5:</strong> the \(\tfrac92\) litres left are \(\tfrac35\) of what these two need, so they need \(\tfrac92 \div \tfrac35 = \tfrac{15}{2}\) litres. In total Yen used \(3 + \tfrac92 + \tfrac{15}{2} = 15\) litres. At \(3\) litres per \(45\) km, that is \(15 \cdot \tfrac{45}{3} = 225\) km. The code follows these steps with <code>Fraction</code>, so no decimal rounding can creep in.</div>
-<pre><code># MATH: follow the fuel, in litres, with exact fractions.
-#   parcel 1      : 1/4 of the full 12-litre tank
-#   parcels 2, 3  : 1/2 of what was left
-#   parcels 4, 5  : what was left is 3/5 of what they need -&gt; need = left / (3/5)
-# Distance = litres used * (45 km / 3 litres).
-from fractions import Fraction as F
+<p class="problem">A bag holds only red, green, blue and yellow marbles. All but \(20\) of the marbles are red, all but \(22\) are green, all but \(25\) are blue, and all but \(23\) are yellow. How many marbles are in the bag?</p>
+<div class="note math">Let \(T\) be the number of marbles. &ldquo;All but \(20\) are red&rdquo; means exactly \(20\) are <em>not</em> red, so there are \(T - 20\) red marbles; in the same way there are \(T - 22\) green, \(T - 25\) blue and \(T - 23\) yellow. Every marble has exactly one of the four colours, so the four counts add up to \(T\): \[ (T - 20) + (T - 22) + (T - 25) + (T - 23) = T \iff 4T - 90 = T \iff T = 30. \] Check: \(10\) red, \(8\) green, \(5\) blue and \(7\) yellow marbles add up to \(30\), and all but \(20\) of them are red, and so on. The code solves the equation and checks every count.</div>
+<pre><code># MATH: with T marbles, &quot;all but k are red&quot; means T - k are red.
+# The four colour counts add up to T:
+#   (T - 20) + (T - 22) + (T - 25) + (T - 23) = T  -&gt;  3T = 90  -&gt;  T = 30
+ALL_BUT = {&quot;red&quot;: 20, &quot;green&quot;: 22, &quot;blue&quot;: 25, &quot;yellow&quot;: 23}
 
-TANK = 12
-p1 = F(TANK) * F(1, 4)                 # 3 litres
-left = TANK - p1                       # 9
-p23 = left * F(1, 2)                   # 9/2
-left = left - p23                      # 9/2
-p45 = left / F(3, 5)                   # 15/2: &quot;left is 3/5 of what is needed&quot;
+k = len(ALL_BUT)                    # 4 colours
+T = sum(ALL_BUT.values()) // (k - 1)
+assert (k - 1) * T == sum(ALL_BUT.values())     # the division is exact
 
-litres = p1 + p23 + p45
-km = litres * F(45, 3)
-print(&quot;litres used:&quot;, litres)          # 15
-print(&quot;kilometres: &quot;, km)              # 225
+counts = {c: T - n for c, n in ALL_BUT.items()}
+assert all(v &gt; 0 for v in counts.values())       # every colour really appears
+assert sum(counts.values()) == T
+print(counts)                       # {&#x27;red&#x27;: 10, &#x27;green&#x27;: 8, &#x27;blue&#x27;: 5, &#x27;yellow&#x27;: 7}
+print(T)                            # 30
 </code></pre>
 </div>
 
@@ -607,23 +601,30 @@ print(by_ie)                                   # 216
 
 <div class="card example">
 <h3 id="hs-problem-4">HS &middot; Problem 4 &middot; <span class="tag">Medium</span> <span class="tag">Number Theory</span></h3>
-<p class="problem">For an integer \(n > 1\), let \(k(n)\) be the smallest positive integer \(k\) such that \(k^k + k\) is divisible by \(n\). Find the sum of all integers \(n\) with \(2 \le n \le 2026\) such that \(k(n) = n\). (Pi&rsquo;s original problem asks for all \(n > 1\) with \(k(n) = n\).)</p>
-<p class="source">Source: Pi Journal (pi.edu.vn), Problem P981. Used with permission.</p>
-<div class="note math"><strong>\(k(n)\) always exists and is at most \(n\)</strong>, because \(n^n + n\) is divisible by \(n\); so a search of \(k = 1, \dots, n\) is complete. With fast modular powers, <code>pow(k, k, n)</code>, checking every \(n \le 2026\) takes a couple of seconds. Pi&rsquo;s solution explains the pattern. <strong>\(n\) odd:</strong> \(k = n - 1\) works, since \((n-1)^{n-1} + (n-1) \equiv 1 - 1 = 0 \pmod n\) (\(n - 1\) is even), so \(k(n) < n\). <strong>\(n\) even with an odd prime factor:</strong> \(n = 2^m \ell\) with \(\ell > 1\) odd; by the Chinese Remainder Theorem take \(k < n\) with \(k \equiv 0 \pmod{2^m}\) and \(k \equiv -1 \pmod{\ell}\); then \(k^k + k\) is divisible by both, so \(k(n) < n\). <strong>\(n = 2^m\), \(m \ge 2\):</strong> \(k^k + k = k(k^{k-1} + 1)\). If \(k\) is odd, \(k^{k-1}\) is an odd square, so \(k^{k-1} + 1 \equiv 2 \pmod 4\) and \(k^k + k\) is not divisible by \(4\). So \(k\) is even, the second factor is odd, and \(2^m \mid k\): \(k(2^m) = 2^m\). (\(k(2) = 1\).) So the answers are \(4, 8, \dots, 1024\), with sum \(2044\).</div>
-<pre><code># MATH: k(n) &lt;= n always (n^n + n is a multiple of n), so trying k = 1..n is
-# a complete search.  Pi&#x27;s classification: k(n) = n  &lt;=&gt;  n = 2^m, m &gt;= 2.
-LIMIT = 2026
+<p class="problem">For how many positive integers \(n \le 500\) is \(n!\) divisible by \(1 + 2 + \cdots + n\)?</p>
+<div class="note math">Since \(1 + 2 + \cdots + n = \tfrac{n(n+1)}{2}\), the question is whether \[ \frac{n!}{n(n+1)/2} = \frac{2\,(n-1)!}{n+1} \] is an integer. <strong>If \(n + 1\) is an odd prime \(p\):</strong> the numbers \(1, 2, \dots, n - 1\) are all less than \(p\), so \(p\) does not divide \((n-1)!\), nor \(2\); the fraction is not an integer. <strong>Otherwise it is:</strong> \(n = 1\) gives \(1\); if \(n + 1 = ab\) is composite with \(1 < a < b\), both \(a\) and \(b\) appear among \(1, \dots, n-1\), so \(ab \mid (n-1)!\); if \(n + 1 = a^2\) with \(a\) prime, then \(a\) and \(2a\) both appear when \(a > 2\) (so \(a^2 \mid (n-1)!\)), and \(n + 1 = 4\) gives \(2 \cdot 2!/4 = 1\). So \(n\) fails exactly when \(n + 1\) is an odd prime, i.e. \(n + 1 \in \{3, 5, 7, \dots, 499\}\). There are \(95\) primes up to \(501\) (the largest is \(499\)), \(94\) of them odd, so the answer is \(500 - 94 = 406\). The code counts the odd primes with a sieve and checks the divisibility directly for every \(n\), building \(n!\) step by step.</div>
+<pre><code># MATH: n! / (n(n+1)/2) = 2(n-1)! / (n+1).  This fails to be an integer
+# exactly when n + 1 is an odd prime p (p cannot divide 2 or any of 1..n-1);
+# in every other case (n = 1, n + 1 composite) it is an integer.
+LIMIT = 500
 
-def k_of(n):
-    for k in range(1, n + 1):
-        if (pow(k, k, n) + k) % n == 0:     # fast: never builds k**k
-            return k
+# sieve of Eratosthenes up to LIMIT + 1
+is_prime = [False, False] + [True] * LIMIT
+for p in range(2, int((LIMIT + 1) ** 0.5) + 1):
+    if is_prime[p]:
+        for q in range(p * p, LIMIT + 2, p):
+            is_prime[q] = False
+odd_primes = sum(1 for p in range(3, LIMIT + 2) if is_prime[p])
+by_math = LIMIT - odd_primes
 
-by_definition = [n for n in range(2, LIMIT + 1) if k_of(n) == n]
-by_theorem = [2 ** m for m in range(2, 11)]          # 4, 8, ..., 1024
-assert by_definition == by_theorem
-print(by_definition)
-print(sum(by_definition))                            # 2044
+# direct check: build n! one factor at a time (exact big integers)
+fact, by_definition = 1, 0
+for n in range(1, LIMIT + 1):
+    fact *= n
+    if fact % (n * (n + 1) // 2) == 0:
+        by_definition += 1
+assert by_math == by_definition
+print(odd_primes, by_math)          # 94 406
 </code></pre>
 </div>
 
