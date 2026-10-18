@@ -1,0 +1,678 @@
+---
+title: Lesson 4
+robots: noindex
+---
+
+<style>
+  /* Math text should read like a textbook, not the site's body sans-serif. */
+  .problem, .math {
+    font-family: Georgia, "Times New Roman", "Noto Serif", serif;
+    font-size: 1.02em;
+    line-height: 1.6;
+  }
+  .problem { font-style: italic; }
+  .example .tag,
+  .practice-list .tag {
+    display: inline-block;
+    background: var(--gold-soft);
+    color: var(--brand-dark);
+    font-size: 12.5px;
+    font-weight: 700;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    padding: 3px 9px;
+    border-radius: 999px;
+  }
+  .example .tag { margin-right: 4px; }
+  .example { margin-bottom: 1.8em; }
+  .example .source { font-size: 13px; color: var(--ink-soft); margin: -.3em 0 .8em; }
+  .example h3 { font-size: 1.05rem; border-bottom: none; padding-bottom: 0; margin-bottom: .6em; }
+
+  /* Inline, runnable Python (worked examples + the free-form playground).
+     Styled to match the site's existing pre/code blocks (dark ink bg, cream
+     text) and its small pill-shaped utility buttons (see .tc-progress-reset
+     in assets/css/style.css), not a separate "dev tool" look. */
+  .code-runner { margin-top: 14px; margin-bottom: 28px; }
+  .code-editor {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+    font-size: 13.5px;
+    line-height: 1.55;
+    padding: 16px 18px;
+    border: none;
+    border-radius: var(--radius);
+    background: var(--ink);
+    color: #f4ead9;
+    resize: vertical;
+    min-height: 120px;
+    tab-size: 4;
+  }
+  .code-editor:focus { outline: 2px solid var(--gold); outline-offset: 2px; }
+  .code-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+  }
+  .code-controls button {
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--brand);
+    background: var(--cream);
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    padding: 6px 16px;
+    cursor: pointer;
+  }
+  .code-controls button:hover { background: var(--gold-soft); }
+  .code-controls button:disabled { opacity: .5; cursor: default; }
+  .code-status {
+    font-size: 13px;
+    color: var(--ink-soft);
+    font-style: italic;
+  }
+  .code-output {
+    margin: 10px 0 0;
+    padding: 16px 18px;
+    border-radius: var(--radius);
+    background: var(--brand-dark);
+    color: var(--gold-soft);
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+    font-size: 13.5px;
+    white-space: pre-wrap;
+    word-break: break-word;
+    overflow-x: auto;
+    display: none;
+  }
+  .code-output.has-content { display: block; }
+  .code-output.is-error { color: #ffd7c2; }
+  .playground-card { margin-top: 1.2em; }
+  .playground-card .code-editor { min-height: 160px; }
+
+  /* Geometry diagrams -- redrawn from the source PDF, not screenshots. */
+  .diagram {
+    text-align: center;
+    margin: 1em 0 1.4em;
+    padding: 14px;
+    background: var(--white);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+  }
+  .diagram svg { display: block; margin: 0 auto; max-width: 260px; height: auto; }
+  .diagram figcaption {
+    margin-top: 8px;
+    font-size: 13px;
+    color: var(--ink-soft);
+    font-style: italic;
+  }
+  .addition {
+    display: inline-block;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-align: right;
+    line-height: 1.5;
+    margin: 0.6em 0;
+    padding: 2px 6px;
+  }
+  .addition .addition-row { white-space: pre; }
+  .addition .addition-sum {
+    border-top: 1.5px solid var(--ink);
+    padding-top: 2px;
+  }
+
+  /* Submission-requirements block -- deliberately the most visually
+     distinct thing on the page (2026-09-19: "very important for Lesson 1
+     to present what are required and acceptable for a submission"). */
+  .requirements {
+    background: var(--white);
+    border: 2px solid var(--brand);
+    border-radius: var(--radius);
+    padding: 22px 26px;
+    margin: 1.8em 0 2.2em;
+    box-shadow: var(--shadow);
+  }
+  .requirements h2 {
+    margin-top: 0;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  .requirements h3 { margin-top: 1.1em; margin-bottom: .4em; font-size: 1rem; }
+  .requirements ul { margin-bottom: 0; }
+  .requirements table { font-size: 14.5px; }
+</style>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  renderMathInElement(document.body, {
+    delimiters: [
+      {left: "\\[", right: "\\]", display: true},
+      {left: "\\(", right: "\\)", display: false}
+    ]
+  });
+});
+</script>
+
+<!-- Inline Python: runs entirely in the student's own browser via Pyodide (Python
+     compiled to WebAssembly) -- nothing is sent to any server, nothing is graded,
+     it only runs the code and shows what it prints (or the error). Loaded lazily,
+     only once someone actually presses Run, so a visitor who never clicks Run never
+     downloads it. -->
+<script src="https://cdn.jsdelivr.net/pyodide/v314.0.6/full/pyodide.js"></script>
+<script>
+(function () {
+  var pyodideReadyPromise = null;
+  function getPyodide() {
+    if (!pyodideReadyPromise) {
+      pyodideReadyPromise = loadPyodide();
+    }
+    return pyodideReadyPromise;
+  }
+
+  function setAllRunButtonsDisabled(disabled) {
+    document.querySelectorAll(".code-controls .run-btn").forEach(function (b) {
+      b.disabled = disabled;
+    });
+  }
+
+  function copyText(text, btn) {
+    function done() {
+      var original = btn.textContent;
+      btn.textContent = "✓ Copied";
+      setTimeout(function () { btn.textContent = original; }, 1200);
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(done, done);
+    } else {
+      var ta = document.createElement("textarea");
+      ta.value = text;
+      ta.style.position = "fixed";
+      ta.style.opacity = "0";
+      document.body.appendChild(ta);
+      ta.select();
+      try { document.execCommand("copy"); } catch (e) { /* ignore */ }
+      document.body.removeChild(ta);
+      done();
+    }
+  }
+
+  async function runCode(code, outputEl, statusEl) {
+    outputEl.classList.remove("is-error", "has-content");
+    outputEl.textContent = "";
+    statusEl.textContent = "Starting Python… (first run only -- loads the Python environment, a few seconds)";
+    setAllRunButtonsDisabled(true);
+
+    var buffer = "";
+    var hadError = false;
+    try {
+      var pyodide = await getPyodide();
+      pyodide.setStdout({ batched: function (s) { buffer += s + "\n"; } });
+      pyodide.setStderr({ batched: function (s) { buffer += s + "\n"; } });
+
+      statusEl.textContent = "Checking for imports…";
+      try {
+        await pyodide.loadPackagesFromImports(code);
+      } catch (pkgErr) {
+        // A missing/unsupported package still surfaces as a normal Python
+        // ImportError from runPythonAsync below -- nothing to do here.
+      }
+
+      statusEl.textContent = "Running…";
+      var runStarted = performance.now();
+      try {
+        await pyodide.runPythonAsync(code);
+      } catch (runErr) {
+        hadError = true;
+        buffer += (buffer ? "\n" : "") + (runErr && runErr.message ? runErr.message : String(runErr));
+      }
+      var runElapsedMs = performance.now() - runStarted;
+    } catch (loadErr) {
+      hadError = true;
+      buffer += (buffer ? "\n" : "") + "Could not start the Python environment in this browser: " +
+        (loadErr && loadErr.message ? loadErr.message : loadErr);
+    }
+
+    statusEl.textContent = "";
+    setAllRunButtonsDisabled(false);
+    outputEl.textContent = buffer || "(no output)";
+    // Timing is measured by the runner around the code, never injected
+    // into the code itself -- it covers just this run's execution, not
+    // the one-time Pyodide startup/package-loading before it.
+    if (typeof runElapsedMs === "number") {
+      outputEl.textContent += "\n\n[ran in " + formatElapsed(runElapsedMs) + "]";
+    }
+    outputEl.classList.add("has-content");
+    if (hadError) outputEl.classList.add("is-error");
+  }
+
+  function formatElapsed(ms) {
+    if (ms < 1000) return Math.round(ms) + " ms";
+    return (ms / 1000).toFixed(2) + " s";
+  }
+
+  function makeRunner(getCode, container) {
+    var controls = document.createElement("div");
+    controls.className = "code-controls";
+
+    var runBtn = document.createElement("button");
+    runBtn.type = "button";
+    runBtn.className = "run-btn";
+    runBtn.textContent = "▶ Run";
+
+    var copyBtn = document.createElement("button");
+    copyBtn.type = "button";
+    copyBtn.textContent = "📋 Copy";
+
+    var status = document.createElement("span");
+    status.className = "code-status";
+
+    controls.appendChild(runBtn);
+    controls.appendChild(copyBtn);
+    controls.appendChild(status);
+
+    var output = document.createElement("pre");
+    output.className = "code-output";
+
+    container.appendChild(controls);
+    container.appendChild(output);
+
+    runBtn.addEventListener("click", function () {
+      runCode(getCode(), output, status);
+    });
+
+    return { controls: controls, output: output, status: status, runBtn: runBtn, copyBtn: copyBtn };
+  }
+
+  function enhanceExampleCodeBlocks() {
+    document.querySelectorAll(".example pre").forEach(function (pre) {
+      var codeEl = pre.querySelector("code");
+      if (!codeEl) return;
+      var original = codeEl.textContent;
+
+      var wrapper = document.createElement("div");
+      wrapper.className = "code-runner";
+
+      var textarea = document.createElement("textarea");
+      textarea.className = "code-editor";
+      textarea.spellcheck = false;
+      textarea.value = original;
+      textarea.rows = Math.min(28, Math.max(6, original.split("\n").length));
+
+      wrapper.appendChild(textarea);
+      pre.parentNode.insertBefore(wrapper, pre.nextSibling);
+      pre.style.display = "none"; // original stays in the DOM as a no-JS fallback
+
+      var runner = makeRunner(function () { return textarea.value; }, wrapper);
+
+      var resetBtn = document.createElement("button");
+      resetBtn.type = "button";
+      resetBtn.textContent = "↺ Reset";
+      resetBtn.addEventListener("click", function () {
+        textarea.value = original;
+        runner.output.textContent = "";
+        runner.output.classList.remove("has-content", "is-error");
+      });
+      runner.controls.insertBefore(resetBtn, runner.status);
+
+      runner.copyBtn.addEventListener("click", function () {
+        copyText(textarea.value, runner.copyBtn);
+      });
+    });
+  }
+
+  function setupPlayground() {
+    var textarea = document.getElementById("playground-editor");
+    if (!textarea) return;
+    var wrapper = textarea.parentNode;
+
+    var runner = makeRunner(function () { return textarea.value; }, wrapper);
+
+    var clearBtn = document.createElement("button");
+    clearBtn.type = "button";
+    clearBtn.textContent = "✖ Clear";
+    clearBtn.addEventListener("click", function () {
+      textarea.value = "";
+      runner.output.textContent = "";
+      runner.output.classList.remove("has-content", "is-error");
+      textarea.focus();
+    });
+    runner.controls.insertBefore(clearBtn, runner.status);
+
+    runner.copyBtn.addEventListener("click", function () {
+      copyText(textarea.value, runner.copyBtn);
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    enhanceExampleCodeBlocks();
+    setupPlayground();
+  });
+})();
+</script>
+
+<h1>Lesson 4</h1>
+<p><em>Test 3 (Sunday 1 November 2026) &mdash; all ten contest problems, now with full solutions.</em></p>
+
+<div class="note">
+These are the exact problems from the third coding contest, in the same order: five for Middle School and five for High School &mdash; one each from Algebra, Combinatorics, Geometry and Number Theory, plus a harder Geometry problem. Try any you didn&rsquo;t finish on your own first &mdash; then compare with the math and code below.
+</div>
+
+<div class="requirements">
+<h2 id="what-s-required-and-acceptable-for-a-contest-submission">What&rsquo;s required and acceptable for a contest submission</h2>
+<p>A reminder of the rules every submission was scored against. Every worked example below is itself a submission that would pass all of these rules &mdash; that&rsquo;s the point of reading them closely, not just the answer.</p>
+
+<h3>File format</h3>
+<ul>
+  <li>One <code>.py</code> text file per problem you attempt. Plain Python source, nothing else.</li>
+  <li><strong>Not accepted:</strong> a PDF, a Google Doc, a Jupyter notebook (<code>.ipynb</code>), a screenshot of code, a file renamed to end in <code>.py</code> that isn&rsquo;t actually Python.</li>
+</ul>
+
+<h3>Your program must</h3>
+<ul>
+  <li>Run in <strong>30 seconds or less</strong>.</li>
+  <li>Run <strong>with no errors</strong> &mdash; no exceptions, no crash, nothing printed to the screen except your program&rsquo;s own output.</li>
+  <li>Only import from the allowed list below.</li>
+</ul>
+
+<h3>Allowed libraries</h3>
+<table>
+<thead><tr><th>Library</th><th>Why it&rsquo;s allowed</th></tr></thead>
+<tbody>
+<tr><td>Python standard library &mdash; <code>math</code>, <code>itertools</code>, <code>functools</code>, <code>fractions</code>, <code>collections</code>, <code>re</code>, <code>decimal</code>, <code>random</code></td><td>baseline</td></tr>
+<tr><td><code>sympy</code></td><td>symbolic algebra &mdash; exact equations, simplification, factoring</td></tr>
+<tr><td><code>numpy</code></td><td>numeric arrays and linear algebra, for geometry/simulation problems</td></tr>
+<tr><td><code>matplotlib</code></td><td>diagrams your own code generates as part of its solution</td></tr>
+</tbody>
+</table>
+<p>Anything else &mdash; network access, file I/O, <code>os</code>/<code>subprocess</code>, GUI toolkits &mdash; is out. This list may grow; the current version always lives on this page.</p>
+
+<h3>How a submission is scored &mdash; base score, up to 10 per problem</h3>
+<table>
+<thead><tr><th>Worth</th><th>For</th></tr></thead>
+<tbody>
+<tr><td>up to 5</td><td><strong>The math itself.</strong> Is the real identity/theorem/reduction actually there, and is it sound? A brute-force search with no justified, provably-complete bound is <em>not</em> real math here, even if it happens to print the right answer. This is the part you keep even if your code has a bug &mdash; good math, broken code, still earns these points.</td></tr>
+<tr><td>up to 4</td><td><strong>Correctness.</strong> The program actually runs clean, inside the time limit, and prints the right answer.</td></tr>
+<tr><td>up to 1</td><td><strong>How well-optimized/well-written the code is.</strong> An exhaustive search over a space a two-line argument would have shrunk to nothing loses points here even if it finishes in time.</td></tr>
+</tbody>
+</table>
+<p><strong>If there&rsquo;s no real math at all</strong> &mdash; the code just tries things at random until something matches the expected shape, with nothing above to award points against &mdash; the submission isn&rsquo;t accepted, regardless of whether it prints the right number.</p>
+
+<h3>Excellence bonus &mdash; up to 5 EXTRA points, on top</h3>
+<p>Reserved for work that goes past &ldquo;normally good&rdquo; &mdash; a solid, correct, reasonably-explained solution earns <strong>zero</strong> of these. Each of the five is independent, worth <strong>+1</strong> on its own:</p>
+<table>
+<thead><tr><th>+1 for</th><th>Meaning</th></tr></thead>
+<tbody>
+<tr><td>Excellent math</td><td>Not just correct &mdash; elegant, insightful, or genuinely the cleanest way to see why the answer is what it is.</td></tr>
+<tr><td>Very, very well commented</td><td>Comments that actually teach the reasoning, the way the worked examples on this page do &mdash; not just labels on lines.</td></tr>
+<tr><td>Excellent code</td><td>Clean, well-structured, readable &mdash; the kind of code someone else could pick up and follow.</td></tr>
+<tr><td>Code really reflects the math</td><td>The program's own structure &mdash; its variables, its steps &mdash; mirrors the mathematical argument, step for step, rather than just arriving at the right number by some other route.</td></tr>
+<tr><td>Very optimal runtime</td><td>Genuinely efficient, well beyond just squeaking in under 30 seconds.</td></tr>
+</tbody>
+</table>
+<p><strong>Maximum possible score per problem: 10 + 5 = 15.</strong></p>
+</div>
+
+<h2>How to read a worked example</h2>
+<p>Each problem below has the same parts: the problem itself; a note with the math that actually makes it solvable; and a commented, runnable Python solution whose structure follows that math. The tags show the difficulty (Easy, Medium, Hard) and the area (Algebra, Combinatorics, Geometry, Number Theory). <strong>Every code block is live</strong> &mdash; click &#9654; <strong>Run</strong> to execute it in your own browser (the first click takes a few seconds to start Python; after that it&rsquo;s instant). Edit it, break it, fix it &mdash; <strong>&#8630; Reset</strong> brings back the original. Nothing here is graded; the playground at the bottom is there for your own experiments.</p>
+
+<h2>Middle School</h2>
+
+<div class="card example">
+<h3 id="ms-problem-1">MS &middot; Problem 1 &middot; <span class="tag">Easy</span> <span class="tag">Number Theory</span></h3>
+<p class="problem">For an odd positive integer \(n\), the <em>double factorial</em> \(n!!\) is the product of all the odd numbers from \(1\) to \(n\). For example, \(7!! = 1 \cdot 3 \cdot 5 \cdot 7 = 105\). What are the last two digits of
+\[ 1!! + 3!! + 5!! + 7!! + \cdots + 2025!! \, ? \]
+(Give your answer as a number from \(0\) to \(99\).)</p>
+<div class="note math">The last two digits of a number are its remainder when divided by \(100\). The key fact is that remainders <em>travel through</em> sums and products: the last two digits of \(a + b\) and of \(a \cdot b\) depend only on the last two digits of \(a\) and of \(b\). So we never need the huge numbers themselves (\(2025!!\) has almost \(3000\) digits). Build each term from the one before it, \(n!! = (n-2)!! \cdot n\), keep only the remainder mod \(100\) of the term and of the running sum, and add up all \(1013\) terms. The answer is \(49\). A pattern helps check it: from \(15!!\) on every term contains the factors \(5\) and \(15\), so it is a multiple of \(25\); it is also odd, so it ends in \(25\) or \(75\). The code does the remainder method and also checks it once with Python&rsquo;s exact big integers.</div>
+<pre><code># MATH: last two digits = remainder mod 100, and remainders travel through
+# + and *, so we keep only (term mod 100) and (sum mod 100) at every step.
+# n!! = (n - 2)!! * n, so each term comes from the one before it.
+N = 2025
+term, total = 1, 0
+for n in range(1, N + 1, 2):        # odd n = 1, 3, 5, ..., 2025 (1013 terms)
+    term = term * n % 100           # n!! mod 100
+    total = (total + term) % 100
+print(total)                        # 49
+
+# check once with Python&#x27;s exact (big) integers
+term, exact = 1, 0
+for n in range(1, N + 1, 2):
+    term *= n
+    exact += term
+assert exact % 100 == total
+</code></pre>
+</div>
+
+<div class="card example">
+<h3 id="ms-problem-2">MS &middot; Problem 2 &middot; <span class="tag">Easy</span> <span class="tag">Geometry</span></h3>
+<p class="problem">A <em>regular polygon</em> has all its sides equal and all its angles equal. For how many whole numbers \(n\) with \(3 \le n \le 1000\) does each interior angle of a regular polygon with \(n\) sides measure a whole number of degrees?</p>
+<div class="note math">The interior angles of a polygon with \(n\) sides add up to \((n - 2) \cdot 180^\circ\) (cut it into \(n - 2\) triangles from one corner). In a regular polygon all \(n\) angles are equal, so each one is
+\[ \frac{(n-2) \cdot 180}{n} = 180 - \frac{360}{n} \ \text{degrees}. \]
+This is a whole number exactly when \(n\) divides \(360\). Now \(360 = 2^3 \cdot 3^2 \cdot 5\) has \((3+1)(2+1)(1+1) = 24\) divisors, and two of them (\(1\) and \(2\)) are too small to be a number of sides. So the answer is \(24 - 2 = 22\), from the triangle (\(60^\circ\)) up to the \(360\)-gon (\(179^\circ\)). Every \(n\) larger than \(360\) fails, because then \(0 < 360/n < 1\). The code tests every \(n\) up to \(1000\) and also checks the divisor count.</div>
+<pre><code># MATH: each interior angle of a regular n-gon is (n - 2) * 180 / n
+#       = 180 - 360 / n degrees -&gt; a whole number exactly when n | 360.
+good = [n for n in range(3, 1001) if (n - 2) * 180 % n == 0]
+print(good)                          # 3, 4, 5, 6, 8, 9, 10, 12, ..., 360
+
+divisors_360 = [d for d in range(1, 361) if 360 % d == 0]
+assert good == [d for d in divisors_360 if d &gt;= 3]   # 24 divisors minus 1 and 2
+print(len(good))                     # 22
+</code></pre>
+</div>
+
+<div class="card example">
+<h3 id="ms-problem-3">MS &middot; Problem 3 &middot; <span class="tag">Medium</span> <span class="tag">Combinatorics</span></h3>
+<p class="problem">How many different arrangements of the nine letters of the word <strong>TENNESSEE</strong> have no two letters E next to each other? (For example, ENSETENSE is allowed, but EENSETNSE is not.)</p>
+<div class="note math">TENNESSEE has \(4\) E&rsquo;s and \(5\) other letters: T, N, N, S, S. <strong>Step 1:</strong> line up the \(5\) other letters. Because the two N&rsquo;s look the same, and so do the two S&rsquo;s, there are \(\dfrac{5!}{2! \cdot 2!} = 30\) different lines. <strong>Step 2:</strong> the E&rsquo;s go into the gaps: before the first letter, between two letters, or after the last &mdash; \(6\) gaps in all. No two E&rsquo;s are next to each other exactly when each gap gets at most one E, so we choose \(4\) of the \(6\) gaps: \(\binom{6}{4} = 15\) ways. Each arrangement comes from exactly one choice in step 1 and one in step 2, so there are \(30 \cdot 15 = 450\). (The word has \(\frac{9!}{4!\,2!\,2!} = 3780\) arrangements in all.) The code builds every different arrangement with a set, and checks the gap count.</div>
+<pre><code># MATH (&quot;gap method&quot;): arrange T, N, N, S, S first: 5! / (2! 2!) = 30 ways.
+# The 4 E&#x27;s go into the 6 gaps around them, at most one per gap: C(6, 4) = 15.
+# So 30 * 15 = 450.
+from itertools import permutations
+from math import comb, factorial
+
+word = &quot;TENNESSEE&quot;
+arrangements = set(permutations(word))      # a set: equal letters, counted once
+print(len(arrangements))                    # 3780
+good = [w for w in arrangements if &quot;EE&quot; not in &quot;&quot;.join(w)]
+
+by_gaps = factorial(5) // (factorial(2) * factorial(2)) * comb(6, 4)
+assert len(good) == by_gaps
+print(len(good))                            # 450
+</code></pre>
+</div>
+
+<div class="card example">
+<h3 id="ms-problem-4">MS &middot; Problem 4 &middot; <span class="tag">Medium</span> <span class="tag">Algebra</span></h3>
+<p class="problem">Eighteen integers \(a_1, a_2, a_3, \dots, a_{18}\) are equally spaced on the number line, in this order: \(a_2 - a_1 = a_3 - a_2 = \cdots = a_{18} - a_{17}\). We also know that
+\[ 1 \le a_1 \le 10, \qquad 20 \le a_2 \le 27, \qquad 400 \le a_{18} \le 409. \]
+What is \(a_{17}\)?</p>
+<div class="note math">Call the common step \(d\), so \(a_k = a_1 + (k - 1)d\) and \(a_{18} = a_1 + 17d\). <strong>Bound the step:</strong> \(d = a_2 - a_1\) is a whole number, and \(a_{18} - a_1 = 17d\) lies between \(400 - 10 = 390\) and \(409 - 1 = 408\). The only multiples of \(17\) in that range are \(391 = 17 \cdot 23\) and \(408 = 17 \cdot 24\). <strong>If \(d = 23\):</strong> \(a_1 + 391 \ge 400\) forces \(a_1 \ge 9\), but then \(a_2 = a_1 + 23 \ge 32\), too big. <strong>If \(d = 24\):</strong> \(a_1 + 408 \le 409\) forces \(a_1 = 1\), and then \(a_2 = 25\) and \(a_{18} = 409\) both fit. So the sequence is \(1, 25, 49, \dots, 409\), and \(a_{17} = 1 + 16 \cdot 24 = 385\). The code tries every possible \(a_1\) and \(a_2\) and confirms that exactly one sequence fits.</div>
+<pre><code># MATH: a_k = a_1 + (k - 1) d.  17d = a_18 - a_1 lies in [390, 408], so
+# d = 23 or 24; d = 23 makes a_2 too big, d = 24 forces a_1 = 1.
+# Complete search: a_1 and a_2 decide the whole sequence.
+answers = []
+for a1 in range(1, 11):
+    for a2 in range(20, 28):
+        d = a2 - a1
+        seq = [a1 + k * d for k in range(18)]       # a_1 ... a_18
+        if 400 &lt;= seq[17] &lt;= 409:
+            answers.append(seq)
+assert len(answers) == 1                            # exactly one sequence fits
+seq = answers[0]
+print(seq[:3], seq[-1])                             # [1, 25, 49] 409
+print(seq[16])                                      # a_17 = 385
+</code></pre>
+</div>
+
+<div class="card example">
+<h3 id="ms-problem-5">MS &middot; Problem 5 &middot; <span class="tag">Hard</span> <span class="tag">Geometry</span></h3>
+<p class="problem">Consider the \(27\) points \((x, y, z)\) in space with each of \(x, y, z\) equal to \(0\), \(1\) or \(2\). (They are the corners, edge midpoints, face centres and centre of a \(2 \times 2 \times 2\) cube.) How many <em>equilateral</em> triangles have all three vertices among these \(27\) points?</p>
+<div class="note math">There are \(\binom{27}{3} = 2925\) ways to choose three of the points &mdash; few enough to test them all. A triangle is equilateral when its three sides are equal, and it is safest to compare <em>squared</em> lengths: by Pythagoras in space, the squared distance between \((x_1, y_1, z_1)\) and \((x_2, y_2, z_2)\) is \((x_2 - x_1)^2 + (y_2 - y_1)^2 + (z_2 - z_1)^2\), a whole number, so the test is exact (no square roots, no rounding). Three equal side lengths can never lie on one line, so every match really is a triangle. There are \(80\) of them, with squared sides \(2\), \(6\) or \(8\). Picture them: \(64\) small ones (side \(\sqrt2\)) cut off corners of the eight unit cubes, \(8\) big ones (side \(\sqrt8\)) cut off corners of the whole cube, and \(8\) tilted ones of side \(\sqrt6\) through the centre. The code checks all \(2925\) triples and reports how many of each size it finds.</div>
+<pre><code># MATH: test all C(27, 3) = 2925 triples. Compare SQUARED distances
+# (integers, by Pythagoras in 3D), so &quot;equal sides&quot; is an exact test.
+from itertools import combinations, product
+from collections import Counter
+
+points = list(product(range(3), repeat=3))          # 27 points
+
+def sq_dist(P, Q):
+    return sum((p - q) ** 2 for p, q in zip(P, Q))
+
+sizes = Counter()
+for A, B, C in combinations(points, 3):
+    ab, bc, ca = sq_dist(A, B), sq_dist(B, C), sq_dist(C, A)
+    if ab == bc == ca:                               # equilateral (never collinear)
+        sizes[ab] += 1
+print(sorted(sizes.items()))                         # [(2, 64), (6, 8), (8, 8)]
+print(sum(sizes.values()))                           # 80
+</code></pre>
+</div>
+
+<h2>High School</h2>
+
+<div class="card example">
+<h3 id="hs-problem-1">HS &middot; Problem 1 &middot; <span class="tag">Easy</span> <span class="tag">Algebra</span></h3>
+<p class="problem">For how many integers \(k\) does the equation \(x^2 + kx + 720 = 0\) have two different integer solutions?</p>
+<div class="note math">If the solutions are the integers \(r \ne s\), then \(x^2 + kx + 720 = (x - r)(x - s) = x^2 - (r + s)x + rs\), so (Vieta) \(rs = 720\) and \(k = -(r + s)\). Conversely, every pair of different integers with product \(720\) gives such a \(k\). The product is positive, so \(r\) and \(s\) are both positive or both negative. \(720 = 2^4 \cdot 3^2 \cdot 5\) has \(5 \cdot 3 \cdot 2 = 30\) positive divisors, which pair up as \(\{d, 720/d\}\) into \(15\) pairs (never \(d = 720/d\), since \(720\) is not a perfect square). With the negative pairs that makes \(30\) pairs. Different pairs give different \(k\): two numbers are fixed by their sum and their product. So there are \(30\) values of \(k\). The code collects the values of \(k\) in a set and checks each equation.</div>
+<pre><code># MATH (Vieta): roots r != s with r * s = 720 and k = -(r + s).
+# 30 positive divisors -&gt; 15 positive pairs, 15 negative pairs -&gt; 30 values.
+N = 720
+ks = set()
+for r in range(-N, N + 1):
+    if r != 0 and N % r == 0:
+        s = N // r
+        if r != s:
+            k = -(r + s)
+            assert r * r + k * r + N == 0 and s * s + k * s + N == 0
+            ks.add(k)
+print(sorted(ks)[:4], &quot;...&quot;)       # [-721, -362, -243, -184] ...
+print(len(ks))                     # 30
+</code></pre>
+</div>
+
+<div class="card example">
+<h3 id="hs-problem-2">HS &middot; Problem 2 &middot; <span class="tag">Easy</span> <span class="tag">Geometry</span></h3>
+<p class="problem">How many points with integer coordinates lie on the circle \(x^2 + y^2 = 5525\)?</p>
+<div class="note math">Every point on the circle has \(|x| \le \sqrt{5525} < 75\). So the whole search is: for each integer \(x\) from \(-74\) to \(74\), is \(5525 - x^2\) a perfect square? Use exact integer square roots (<code>math.isqrt</code>) rather than floating-point <code>sqrt</code>, and count both \(y\) and \(-y\) (only once when \(y = 0\)). There are \(48\) points. Number theory explains the count: \(5525 = 5^2 \cdot 13 \cdot 17\), and every prime factor leaves remainder \(1\) when divided by \(4\). For such a number the count of lattice points is \(4\) times its number of divisors, \(4 \cdot (3 \cdot 2 \cdot 2) = 48\). By symmetry each point \((a, b)\) with \(a, b > 0\) comes with seven partners, such as \((\pm a, \pm b)\) and \((\pm b, \pm a)\). The code does the search and checks the divisor formula.</div>
+<pre><code># MATH: |x| &lt;= sqrt(5525) &lt; 75, so try every x and test whether 5525 - x^2
+# is a perfect square (exact integer square root, no floating point).
+from math import isqrt
+
+R2 = 5525
+points = []
+for x in range(-isqrt(R2), isqrt(R2) + 1):
+    rest = R2 - x * x
+    y = isqrt(rest)
+    if y * y == rest:
+        points.append((x, y))
+        if y != 0:
+            points.append((x, -y))
+print(len(points))                 # 48
+
+# check: 5525 = 5^2 * 13 * 17, all primes 1 mod 4 -&gt; 4 * (number of divisors)
+divisors = sum(1 for d in range(1, R2 + 1) if R2 % d == 0)
+assert len(points) == 4 * divisors
+</code></pre>
+</div>
+
+<div class="card example">
+<h3 id="hs-problem-3">HS &middot; Problem 3 &middot; <span class="tag">Medium</span> <span class="tag">Combinatorics</span></h3>
+<p class="problem">Mia rolls a fair six-sided die \(6\) times and keeps a running total of the numbers rolled. The probability that her running total equals exactly \(10\) at some point is \(\dfrac{m}{n}\), where \(m\) and \(n\) are relatively prime positive integers. Find \(m + n\).</p>
+<div class="note math">Let \(p(k, t)\) be the probability of reaching total exactly \(10\) at some point when the running total is now \(t\) and \(k\) rolls have been used. Then \(p(k, 10) = 1\); \(p(k, t) = 0\) if \(t > 10\) (the total only grows, so it has jumped past \(10\)) or if all \(6\) rolls are used; and otherwise the next roll is \(1, \dots, 6\), each with probability \(\frac16\):
+\[ p(k, t) = \tfrac16 \sum_{i=1}^{6} p(k + 1, t + i). \]
+The answer is \(p(0, 0) = \dfrac{749}{2592}\) (exact fractions, no rounding), so \(m + n = 3341\). There are only \(6^6 = 46\,656\) possible roll sequences, so the code also checks the answer by trying every one of them.</div>
+<pre><code># MATH: p(k, t) = chance of hitting total 10 from total t after k rolls.
+# p = 1 at t == 10; p = 0 past 10 or with no rolls left; else average of
+# the six next states. Exact fractions -&gt; exact answer.
+from fractions import Fraction
+from functools import lru_cache
+from itertools import product, accumulate
+
+ROLLS, TARGET = 6, 10
+
+@lru_cache(maxsize=None)
+def p(k, t):
+    if t == TARGET:
+        return Fraction(1)
+    if t &gt; TARGET or k == ROLLS:
+        return Fraction(0)
+    return sum(p(k + 1, t + i) for i in range(1, 7)) / 6
+
+ans = p(0, 0)
+print(ans)                                   # 749/2592
+
+# check by trying all 6^6 = 46656 roll sequences
+hits = sum(1 for rolls in product(range(1, 7), repeat=ROLLS)
+           if TARGET in accumulate(rolls))
+assert Fraction(hits, 6 ** ROLLS) == ans
+print(ans.numerator + ans.denominator)       # 3341
+</code></pre>
+</div>
+
+<div class="card example">
+<h3 id="hs-problem-4">HS &middot; Problem 4 &middot; <span class="tag">Medium</span> <span class="tag">Number Theory</span></h3>
+<p class="problem">Let \(L\) be the least common multiple of \(1, 2, 3, \dots, 19\). The positive integer \(h\) satisfies
+\[ \frac11 + \frac12 + \frac13 + \cdots + \frac1{19} = \frac{h}{L}. \]
+What is the remainder when \(h\) is divided by \(19\)?</p>
+<div class="note math">Multiply both sides by \(L\): \(h = \dfrac{L}{1} + \dfrac{L}{2} + \cdots + \dfrac{L}{19}\), a sum of whole numbers because each \(k\) divides \(L\). The prime \(19\) appears in \(L\) exactly once (\(19^2 = 361 > 19\)), and \(19\) is the only multiple of \(19\) up to \(19\). So for \(k \ne 19\), \(L/k\) still contains the factor \(19\) and is divisible by \(19\). Only one term matters:
+\[ h \equiv \frac{L}{19} = \operatorname{lcm}(1, 2, \dots, 18) = 12\,252\,240 \pmod{19}, \]
+and \(12\,252\,240 = 19 \cdot 644\,854 + 14\). The remainder is \(14\). Python&rsquo;s integers are exact, so the code can compute \(h\) itself and check the shortcut.</div>
+<pre><code># MATH: h = sum of L / k. Every term with k != 19 still has the factor 19,
+# so h = L / 19 = lcm(1, ..., 18)  (mod 19).
+from math import lcm
+from fractions import Fraction
+
+N = 19
+L = lcm(*range(1, N + 1))
+h = sum(L // k for k in range(1, N + 1))
+assert Fraction(h, L) == sum(Fraction(1, k) for k in range(1, N + 1))
+
+shortcut = lcm(*range(1, N)) % N
+assert h % N == shortcut
+print(h % N)                       # 14
+</code></pre>
+</div>
+
+<div class="card example">
+<h3 id="hs-problem-5">HS &middot; Problem 5 &middot; <span class="tag">Hard</span> <span class="tag">Geometry</span></h3>
+<p class="problem">For each positive integer \(k\), let \(T_k\) be the transformation of the coordinate plane that first rotates the plane \(7k\) degrees counterclockwise about the origin and then reflects it across the line \(y = x\). What is the least positive integer \(n\) such that applying \(T_1\), then \(T_2\), then \(T_3\), &hellip;, then \(T_n\) returns the point \((1, 0)\) to itself?</p>
+<div class="note math">Both moves keep the distance to the origin, so it is enough to follow the <em>angle</em> \(\theta\) of the point (in degrees, measured from the positive \(x\)-axis). Rotating adds \(7k\); reflecting across \(y = x\) sends \(\theta\) to \(90 - \theta\). So
+\[ T_k : \theta \mapsto 90 - (\theta + 7k). \]
+<strong>Pair the steps.</strong> Applying \(T_k\) and then \(T_{k+1}\) gives \(90 - \big(90 - \theta - 7k\big) - 7(k+1) = \theta - 7\): every pair of steps is just a rotation by \(-7^\circ\). Start at \(\theta = 0\). After \(n = 2m\) steps the angle is \(-7m\); after \(n = 2m + 1\) steps it is \(90 - (-7m) - 7(2m+1) = 83 - 7m\). We need the angle to be a multiple of \(360\). Even \(n\): \(7m \equiv 0\), so \(m = 360\) and \(n = 720\). Odd \(n\): \(7m \equiv 83 \pmod{360}\). Since \(7 \cdot 103 = 721 \equiv 1\), this means \(m \equiv 83 \cdot 103 \equiv 269\), so \(n = 2 \cdot 269 + 1 = 539\). The smaller is \(539\). The code follows the angle with exact integers, step by step, and checks the result with real coordinates.</div>
+<pre><code># MATH: follow the angle theta (degrees). T_k: theta -&gt; 90 - (theta + 7k).
+# Two steps T_k then T_(k+1) = rotation by -7, so the angle is -7m after 2m
+# steps and 83 - 7m after 2m + 1 steps -&gt; first return at n = 539.
+from math import cos, sin, radians, isclose
+
+theta, n = 0, 0
+while True:
+    n += 1
+    theta = (90 - (theta + 7 * n)) % 360          # exact integer degrees
+    if theta == 0:
+        break
+print(n)                                          # 539
+
+# check with real coordinates: rotate, then swap x and y (reflect in y = x)
+x, y = 1.0, 0.0
+for k in range(1, n + 1):
+    a = radians(7 * k)
+    x, y = x * cos(a) - y * sin(a), x * sin(a) + y * cos(a)
+    x, y = y, x
+assert isclose(x, 1, abs_tol=1e-9) and isclose(y, 0, abs_tol=1e-9)
+</code></pre>
+</div>
+
+<h2 id="playground">Try your own code</h2>
+<p>A blank scratchpad &mdash; paste in your own solution to any problem and run it. This isn&rsquo;t graded and isn&rsquo;t checked for correctness; it just runs whatever Python you give it and shows you what it prints, or the error if something&rsquo;s wrong.</p>
+<div class="card playground-card">
+<textarea id="playground-editor" class="code-editor" spellcheck="false" rows="10" placeholder="# Write or paste your Python here, then click Run.&#10;print('Hello, MCC!')"></textarea>
+</div>
+
+<h2>Questions?</h2>
+<p>Contact your regional coordinator on the <a href="./organization">Organization</a> page. For the coding contest itself, see <a href="./toml">TOML</a>.</p>
