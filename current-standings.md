@@ -52,17 +52,17 @@ Danh sách này còn tạm thời: đội nào thi Chương 2 vào thứ Bảy 2
 
 Every active team, by level. Teams are ranked by **chapters passed**, then by **points** (the sum of their passing scores); a team gets a rank once it has passed its first chapter. The C1, C2, … columns show the score with which each chapter was passed; ✗ means the chapter has been attempted but not passed yet. **Attempts** counts every graded test, retakes included. The table updates by itself: a result appears here as soon as it has been graded.
 
-Only team IDs and numbers are shown. Each team's detailed grading comments go to that team privately, through its coordinator.
+Teams are shown by their own team name (or by their team ID if they have not chosen a name), with numbers only. Each team's detailed grading comments go to that team privately, through its coordinator.
 
 <div id="live-standings" class="live-standings"></div>
-<script src="{{ '/assets/js/live-standings.js' | relative_url }}?v=2"></script>
+<script src="{{ '/assets/js/live-standings.js' | relative_url }}?v=3"></script>
 
 <details class="vn" markdown="1">
 <summary>🇻🇳 Tiếng Việt — Bảng xếp hạng các đội (click to expand)</summary>
 
 Mọi đội đang hoạt động, chia theo level. Các đội được xếp hạng theo **số chương đã đạt**, rồi theo **điểm** (tổng điểm của các bài đạt); một đội có thứ hạng từ khi đạt chương đầu tiên. Các cột C1, C2, … là điểm của bài đạt ở chương đó; ✗ nghĩa là đội đã thi chương đó nhưng chưa đạt. Cột **Attempts** đếm mọi bài thi đã chấm, kể cả thi lại. Bảng tự cập nhật: kết quả xuất hiện ngay khi bài được chấm xong.
 
-Trang này chỉ hiện mã đội và điểm số. Nhận xét chi tiết của từng bài được gửi riêng cho đội đó, qua coordinator.
+Trang này chỉ hiện tên đội (hoặc mã đội nếu đội chưa đặt tên) và điểm số. Nhận xét chi tiết của từng bài được gửi riêng cho đội đó, qua coordinator.
 
 </details>
 

@@ -12,9 +12,10 @@
 // the Public Roster at all (they live in the coordinator-only Regional
 // Pacing file).
 //
-// Team names: a team's own chosen name (Roster column TeamName, e.g. T205
-// "The Dragon Mathletes") is shown next to its ID when it differs from it.
-// The column is optional, so the page still works on an older roster.
+// Team names: a team is shown, in bold, by its own chosen name (Roster
+// column TeamName, e.g. T205 "The Dragon Mathletes"); its ID appears only
+// when it has no name of its own (blank, or the same as the ID). The column
+// is optional, so the page still works on an older roster (IDs only).
 //
 // Ranking, within each level: chapters passed (more is better), then points
 // = the sum of the passing scores (equal on both = same rank); teams that
@@ -179,8 +180,7 @@
           : '<span class="ls-date">not started</span>';
         // No rank until a team has passed a chapter: at 0 passed and 0
         // points everyone would tie for 1st, which says nothing.
-        return "<tr><td>" + (t.passed ? t.rank : "&ndash;") + "</td><td><strong>" + esc(t.teamId) + "</strong>" +
-          (t.teamName ? ' <span class="ls-teamname">' + esc(t.teamName) + "</span>" : "") + "</td>" +
+        return "<tr><td>" + (t.passed ? t.rank : "&ndash;") + "</td><td><strong>" + esc(t.teamName || t.teamId) + "</strong></td>" +
           '<td class="ls-num">' + t.passed + '</td><td class="ls-num">' + t.points + "</td>" +
           chCells + '<td class="ls-num">' + t.attempts + "</td><td>" + latest + "</td></tr>";
       }).join("");
