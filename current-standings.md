@@ -15,23 +15,23 @@ This page is the club's live index, for every role: where the roster and every t
 <div class="ls-wrap"><table class="ls-table">
 <thead><tr><th class="ls-num">#</th><th>Problem (Chapter 2 team test)</th><th>Presenting team</th><th>Region</th></tr></thead>
 <tbody>
-<tr><td class="ls-num">1</td><td>T1 Problem 1</td><td>T104</td><td>FR</td></tr>
-<tr><td class="ls-num">2</td><td>T1 Problem 3</td><td>T102</td><td>WC</td></tr>
-<tr><td class="ls-num">3</td><td>T1 Problem 4 (also T2 Problem 2)</td><td>Algebraic Uniformity</td><td>UK</td></tr>
-<tr><td class="ls-num">4</td><td>T2 Problem 1</td><td>T108</td><td>FR</td></tr>
-<tr><td class="ls-num">5</td><td>T2 Problem 4 (also T1 Problem 5)</td><td>T103</td><td>WC</td></tr>
-<tr><td class="ls-num">6</td><td>T2 Problem 5</td><td>T103</td><td>WC</td></tr>
+<tr><td class="ls-num">1</td><td>T1 Problem 1</td><td><strong>Les deux Gourmands</strong></td><td>FR</td></tr>
+<tr><td class="ls-num">2</td><td>T1 Problem 3</td><td><strong>Dragons</strong></td><td>WC</td></tr>
+<tr><td class="ls-num">3</td><td>T1 Problem 4 (also T2 Problem 2)</td><td><strong>Algebraic Uniformity</strong></td><td>UK</td></tr>
+<tr><td class="ls-num">4</td><td>T2 Problem 1</td><td><strong>T108</strong></td><td>FR</td></tr>
+<tr><td class="ls-num">5</td><td>T2 Problem 4 (also T1 Problem 5)</td><td><strong>Baguette</strong></td><td>WC</td></tr>
+<tr><td class="ls-num">6</td><td>T2 Problem 5</td><td><strong>Baguette</strong></td><td>WC</td></tr>
 </tbody></table></div>
 <h3>7:45–8:30 AM: Levels T3 and T4</h3>
 <div class="ls-wrap"><table class="ls-table">
 <thead><tr><th class="ls-num">#</th><th>Problem (Chapter 2 team test)</th><th>Presenting team</th><th>Region</th></tr></thead>
 <tbody>
-<tr><td class="ls-num">1</td><td>T3 Problem 1</td><td>T205</td><td>EC</td></tr>
-<tr><td class="ls-num">2</td><td>T3 Problem 2 (also T4 Problem 1)</td><td>T302</td><td>FR</td></tr>
-<tr><td class="ls-num">3</td><td>T3 Problem 4</td><td>T303</td><td>WC</td></tr>
-<tr><td class="ls-num">4</td><td>T3 Problem 6</td><td>T208</td><td>UK</td></tr>
-<tr><td class="ls-num">5</td><td>T4 Problem 2 (also T3 Problem 3)</td><td>Manche</td><td>FR</td></tr>
-<tr><td class="ls-num">6</td><td>T4 Problem 3</td><td>T401</td><td>FR</td></tr>
+<tr><td class="ls-num">1</td><td>T3 Problem 1</td><td><strong>The Dragon Mathletes</strong></td><td>EC</td></tr>
+<tr><td class="ls-num">2</td><td>T3 Problem 2 (also T4 Problem 1)</td><td><strong>T302</strong></td><td>FR</td></tr>
+<tr><td class="ls-num">3</td><td>T3 Problem 4</td><td><strong>T303</strong></td><td>WC</td></tr>
+<tr><td class="ls-num">4</td><td>T3 Problem 6</td><td><strong>T208</strong></td><td>UK</td></tr>
+<tr><td class="ls-num">5</td><td>T4 Problem 2 (also T3 Problem 3)</td><td><strong>Manche</strong></td><td>FR</td></tr>
+<tr><td class="ls-num">6</td><td>T4 Problem 3</td><td><strong>T401</strong></td><td>FR</td></tr>
 </tbody></table></div>
 <p>No team has full marks yet on T3 Problem 5 or T4 Problems 4 to 6. When a team has full marks on two problems and another team that is not yet presenting also has full marks on one of them, that problem goes to the other team, so that more teams present.</p>
 </div>
