@@ -19,7 +19,7 @@ This page is the club's live index, for every role: where the roster and every t
 <tr><td class="ls-num">2</td><td>T1 Problem 3</td><td><strong>Dragons</strong></td><td>WC</td></tr>
 <tr><td class="ls-num">3</td><td>T1 Problem 4 (also T2 Problem 2)</td><td><strong>Algebraic Uniformity</strong></td><td>UK</td></tr>
 <tr><td class="ls-num">4</td><td>T2 Problem 1</td><td><strong>T108</strong></td><td>FR</td></tr>
-<tr><td class="ls-num">5</td><td>T2 Problem 4 (also T1 Problem 5)</td><td><strong>Baguette</strong></td><td>WC</td></tr>
+<tr><td class="ls-num">5</td><td>T2 Problem 4 (also T1 Problem 5)</td><td><strong>Cosmic Club</strong></td><td>WC</td></tr>
 <tr><td class="ls-num">6</td><td>T2 Problem 5</td><td><strong>Baguette</strong></td><td>WC</td></tr>
 </tbody></table></div>
 <h3>7:45–8:30 AM: Levels T3 and T4</h3>
