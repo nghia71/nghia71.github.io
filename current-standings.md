@@ -30,16 +30,16 @@ This page is the club's live index, for every role: where the roster and every t
 <tr><td class="ls-num">2</td><td>T3 Problem 2 (also T4 Problem 1)</td><td>T302</td><td>FR</td></tr>
 <tr><td class="ls-num">3</td><td>T3 Problem 4</td><td>T303</td><td>WC</td></tr>
 <tr><td class="ls-num">4</td><td>T3 Problem 6</td><td>T208</td><td>UK</td></tr>
-<tr><td class="ls-num">5</td><td>T4 Problem 2 (also T3 Problem 3)</td><td>T401</td><td>FR</td></tr>
+<tr><td class="ls-num">5</td><td>T4 Problem 2 (also T3 Problem 3)</td><td>Manche</td><td>FR</td></tr>
 <tr><td class="ls-num">6</td><td>T4 Problem 3</td><td>T401</td><td>FR</td></tr>
 </tbody></table></div>
-<p>No team has full marks yet on T3 Problem 5 or T4 Problems 4 to 6. T401 is the only team with full marks on T4 Problem 3, and it also presents T4 Problem 2.</p>
+<p>No team has full marks yet on T3 Problem 5 or T4 Problems 4 to 6. When a team has full marks on two problems and another team that is not yet presenting also has full marks on one of them, that problem goes to the other team, so that more teams present.</p>
 </div>
 
 <details class="vn" markdown="1">
 <summary>🇻🇳 Tiếng Việt — Buổi sinh hoạt Chủ nhật 25/10 (click to expand)</summary>
 
-Chủ nhật 25/10, 7:00–8:30 sáng giờ Victoria/BC: học sinh trình bày các lời giải đạt điểm tuyệt đối trong bài thi đội Chương 2. Mỗi bài có đội đạt điểm tối đa được trình bày một lần, bởi một đội. Khi nhiều đội cùng giải được một bài, chúng tôi chọn lời giải viết tốt nhất và chia các bài sao cho nhiều đội được trình bày nhất. Mỗi bài khoảng 5–6 phút.
+Chủ nhật 25/10, 7:00–8:30 sáng giờ Victoria/BC: học sinh trình bày các lời giải đạt điểm tuyệt đối trong bài thi đội Chương 2. Mỗi bài có đội đạt điểm tối đa được trình bày một lần, bởi một đội. Khi nhiều đội cùng giải được một bài, chúng tôi chọn lời giải viết tốt nhất và chia các bài sao cho nhiều đội được trình bày nhất: nếu một đội có hai bài trong danh sách và một đội chưa được mời cũng đạt điểm tối đa ở một trong hai bài đó, bài đó được chuyển cho đội kia. Mỗi bài khoảng 5–6 phút.
 
 * **7:00–7:45:** T1 và T2 (bảng thứ nhất ở trên).
 * **7:45–8:30:** T3 và T4 (bảng thứ hai ở trên).
@@ -413,6 +413,7 @@ Once you're done, come back to the same Form and choose **"Submit my solution."*
 
 * You can submit more than once. If you realize something's wrong 10 minutes after submitting and you're still within time, submit again — the newer file replaces the older one as your official submission. Nothing is lost either way; if it ever matters, earlier files aren't deleted, only the link to "the" submission moves.
 * Once a submission is accepted, your team's access to the paper file is automatically removed. That's expected, not an error.
+* **One solution per problem.** Agree as a team on one solution for each problem and part before you submit. If your file contains two different solutions or attempts for the same problem or part (for example one by each of you) and neither is crossed out, the grader marks each one separately and your team gets their average, rounded down. Cross out any version you don't want marked. (New rule from week 43, 19–25 October 2026.)
 
 ### If you're late
 
@@ -489,6 +490,7 @@ Khi làm xong, quay lại đúng Form đó và chọn **"Submit my solution"** *
 
 * Có thể nộp lại nhiều lần. Nếu 10 phút sau khi nộp phát hiện sai sót và vẫn còn thời gian, cứ nộp lại — file mới sẽ thay cho file cũ làm bài nộp chính thức. Không mất gì cả trong mọi trường hợp; nếu cần, file nộp trước đó vẫn còn, chỉ có đường link "bài nộp chính thức" chuyển sang file mới.
 * Sau khi một bài nộp được chấp nhận, quyền truy cập của đội vào file đề thi sẽ tự động bị thu hồi. Đây là điều bình thường, không phải lỗi.
+* **Mỗi bài một lời giải.** Trước khi nộp, cả đội thống nhất một lời giải cho mỗi bài và mỗi câu. Nếu file có hai lời giải hoặc hai lần làm khác nhau cho cùng một bài hay cùng một câu (ví dụ mỗi bạn viết một bản) và không bản nào bị gạch bỏ, giám khảo sẽ chấm riêng từng bản và đội nhận điểm trung bình, làm tròn xuống. Hãy gạch bỏ bản nào không muốn được chấm. (Quy định mới từ tuần 43, 19–25/10/2026.)
 
 ### Nếu nộp trễ
 
