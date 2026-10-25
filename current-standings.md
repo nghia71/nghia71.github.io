@@ -419,6 +419,8 @@ Once you're done, come back to the same Form and choose **"Submit my solution."*
 
 Submitting after your deadline is still accepted, automatically, up to **30 minutes** past it — you'll just be marked as late by however many minutes. **Past 30 minutes, a submission is not accepted automatically.** This isn't a judgment call the system makes about your work; it's a hard line so that the record of who submitted what, and when, stays honest. If this happens to you, contact your regional coordinator — don't just keep trying to resubmit through the Form.
 
+**How a late paper is graded** (from 25 October 2026): a paper submitted within your time (the 10 minutes to open the paper plus your level's test time: 90, 120, 150 or 180 minutes) is graded by the published grading guide, and Mr. Nghia may still add 1 or 2 encouragement points where it helps. A paper submitted after that, during the 30-minute grace window, gets no encouragement points: it is graded strictly by the marking scheme. There is no other penalty for being late.
+
 ### If you submit without ever clicking "open my test paper"
 
 This is rejected too, for the same honesty-of-the-record reason — the system has no starting point to measure your time from. Nothing is lost (Google keeps your uploaded file regardless), but you'll need to actually click **"I'm ready to open my test paper"** first, then submit again.
@@ -495,6 +497,8 @@ Khi làm xong, quay lại đúng Form đó và chọn **"Submit my solution"** *
 ### Nếu nộp trễ
 
 Nộp sau hạn vẫn được tự động chấp nhận, trong vòng **30 phút** sau hạn — chỉ bị ghi nhận trễ bao nhiêu phút. **Quá 30 phút, bài nộp sẽ không còn được tự động chấp nhận.** Đây không phải là hệ thống đang đánh giá bài làm của các em; đây chỉ là một mốc cố định để đảm bảo hồ sơ nộp bài — ai nộp, nộp gì, lúc nào — luôn chính xác. Nếu rơi vào trường hợp này, hãy liên hệ quản lý vùng — không nên cứ thử nộp lại qua Form.
+
+**Bài nộp trễ được chấm thế nào** (từ 25/10/2026): bài nộp trong giờ (10 phút mở đề + thời gian thi chính thức 90, 120, 150 hoặc 180 phút) được chấm theo tài liệu hướng dẫn chấm đã công khai, và khi cần, Thầy Nghĩa vẫn có thể cân nhắc cộng thêm 1–2 điểm động viên. Bài nộp ngoài giờ (trong 30 phút gia hạn) sẽ không có khoản điểm động viên này: bài được chấm chặt đúng theo barem. Ngoài ra không có hình phạt nào khác cho việc nộp trễ.
 
 ### Nếu nộp bài mà chưa từng bấm "mở đề thi"
 
@@ -740,7 +744,7 @@ Almost always: they're signed into an unregistered Google account. Confirm which
 
 ### A late or rejected submission
 
-The system automatically accepts a late submission up to 30 minutes past deadline (flagged, not penalized further by the system itself — see [Tests](./tests.md) for how grading works). Past that window, or a submission with no recorded start, is rejected outright and the family is told, on the sheet itself, exactly what to do. If a family reaches out to you about one of these, the fix is almost always what the `Status` message on their row already says — check that first.
+The system automatically accepts a late submission up to 30 minutes past deadline (flagged, not penalized further by the system itself — see [Tests](./tests.md) for how grading works). Since 25 October 2026, a paper submitted after the time limit gets no encouragement points and is graded strictly by the marking scheme (see "If you're late" under For Parents & Students). Past that window, or a submission with no recorded start, is rejected outright and the family is told, on the sheet itself, exactly what to do. If a family reaches out to you about one of these, the fix is almost always what the `Status` message on their row already says — check that first.
 
 <details class="vn" markdown="1">
 <summary>🇻🇳 Tiếng Việt — Tài nguyên cho quản lý vùng & ban tổ chức (click to expand)</summary>
@@ -835,7 +839,7 @@ Hầu như luôn là do đăng nhập bằng tài khoản Google chưa đăng k�
 
 ### Bài nộp trễ hoặc bị từ chối
 
-Hệ thống tự động chấp nhận bài nộp trễ trong vòng 30 phút sau hạn (được ghi nhận là trễ, không bị hệ thống tự trừ điểm thêm — xem [Tests](./tests.md) về cách chấm điểm). Quá thời hạn đó, hoặc một bài nộp mà không có ghi nhận đã bắt đầu làm bài, sẽ bị từ chối ngay và gia đình được thông báo ngay trên bảng cần làm gì tiếp theo. Nếu một gia đình liên hệ về việc này, cách xử lý hầu như luôn đúng như thông báo `Status` trên dòng của họ đã nêu — kiểm tra đó trước.
+Hệ thống tự động chấp nhận bài nộp trễ trong vòng 30 phút sau hạn (được ghi nhận là trễ, không bị hệ thống tự trừ điểm thêm — xem [Tests](./tests.md) về cách chấm điểm). Từ 25/10/2026, bài nộp ngoài giờ không có điểm động viên và được chấm chặt đúng theo barem (xem mục nộp trễ trong phần dành cho phụ huynh và học sinh). Quá thời hạn đó, hoặc một bài nộp mà không có ghi nhận đã bắt đầu làm bài, sẽ bị từ chối ngay và gia đình được thông báo ngay trên bảng cần làm gì tiếp theo. Nếu một gia đình liên hệ về việc này, cách xử lý hầu như luôn đúng như thông báo `Status` trên dòng của họ đã nêu — kiểm tra đó trước.
 
 </details>
 
