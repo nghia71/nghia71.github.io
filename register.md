@@ -34,10 +34,10 @@ You can also write to Ms. Quynh Anh ([vquynhanh80@gmail.com](mailto:vquynhanh80@
 
 ## Entrance test results
 
-Teams that joined during the year, newest first. Each team sits two papers on its two test dates; the two scores are averaged, and **51 or more** places the team at that level. Only Team IDs and Student IDs are shown, never names. A date means that day is scheduled; a score appears as soon as it has been graded.
+Teams that joined during the year, newest first. Each team sits two papers on its two test dates; the two scores are averaged, and **51 or more** places the team at that level. Each team is shown by its team name (or its Team ID if it has not chosen one), with Student IDs; student names are never shown. A date means that day is scheduled; a score appears as soon as it has been graded.
 
 <div id="entrance-results" class="live-standings"></div>
-<script src="{{ '/assets/js/entrance-results.js' | relative_url }}?v=1"></script>
+<script src="{{ '/assets/js/entrance-results.js' | relative_url }}?v=2"></script>
 
 <div class="vn" markdown="1">
 
@@ -67,6 +67,6 @@ Teams that joined during the year, newest first. Each team sits two papers on it
 
 Có thể liên hệ thêm Cô Quỳnh Anh ([vquynhanh80@gmail.com](mailto:vquynhanh80@gmail.com)), hoặc tham gia danh sách thư của câu lạc bộ, [mcc-school-year-2026-2027@googlegroups.com](https://groups.google.com/g/mcc-school-year-2026-2027).
 
-**Kết quả thi đầu vào** của các đội mới vào giữa năm nằm trong bảng *Entrance test results* ở trên: Day 1, Day 2 là điểm hai ngày thi, Average là điểm trung bình; từ 51 điểm trở lên là đạt level đó. Bảng chỉ ghi mã đội (Team ID) và mã học sinh (Student ID), không ghi tên.
+**Kết quả thi đầu vào** của các đội mới vào giữa năm nằm trong bảng *Entrance test results* ở trên: Day 1, Day 2 là điểm hai ngày thi, Average là điểm trung bình; từ 51 điểm trở lên là đạt level đó. Bảng ghi tên đội (hoặc mã đội, Team ID, nếu đội chưa đặt tên) và mã học sinh (Student ID), không ghi tên học sinh.
 
 </div>

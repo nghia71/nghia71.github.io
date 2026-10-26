@@ -7,8 +7,14 @@
 // Day 2 (set A), Attempt 3 / 4 = Day 1 / Day 2 (set B). The two days are
 // averaged; 51 or more places the team at that level.
 //
-// Privacy: only Team IDs, Student IDs and numbers are requested and shown,
-// never names (the Roster query selects only TeamID and StudentID).
+// Privacy: only team names, Team IDs, Student IDs and numbers are requested
+// and shown, never student names (the Roster query selects only TeamID,
+// StudentID and TeamName).
+//
+// Team names: as on the standings (live-standings.js), a team is shown, in
+// bold, by its own chosen name (Roster column TeamName); its ID appears only
+// when it has no name of its own (blank, or the same as the ID). The column
+// is optional, so the page still works on an older roster (IDs only).
 
 (function () {
   "use strict";
@@ -63,7 +69,8 @@
       var examsQ = "select " + [e.TeamID, e.Level, e.Attempt, e.ExamDate, e.Total, e.GradingStatus].join(", ") +
         " where " + e.Chapter + " = 0";
       var rosterQ = r.StudentID && r.TeamID
-        ? "select " + r.TeamID + ", " + r.StudentID + " where " + r.TeamID + " is not null"
+        ? "select " + r.TeamID + ", " + r.StudentID + (r.TeamName ? ", " + r.TeamName : "") +
+          " where " + r.TeamID + " is not null"
         : null;
       return Promise.all([gviz("Exams", examsQ), rosterQ ? gviz("Roster", rosterQ) : Promise.resolve(null)]);
     }).then(function (tables) {
@@ -71,19 +78,22 @@
         return { teamId: String(cell(row, 0) || "").trim(), level: cell(row, 1), attempt: Number(cell(row, 2)) || 1,
           date: parseDate(cell(row, 3)), total: cell(row, 4), graded: !!cell(row, 5) };
       });
-      var students = {};
+      var students = {}, names = {};
       if (tables[1]) {
         tables[1].rows.forEach(function (row) {
           var t = String(cell(row, 0) || "").trim(), s = String(cell(row, 1) || "").trim();
+          var n = row.c.length > 2 ? String(cell(row, 2) || "").trim() : "";
           if (t && s) (students[t] = students[t] || []).push(s);
+          if (t && n && !names[t] && n.toLowerCase() !== t.toLowerCase()) names[t] = n;
         });
       }
-      return { exams: exams, students: students };
+      return { exams: exams, students: students, names: names };
     });
   }
 
-  // -> [{teamId, level, students, day1, day2, average, state, latest}]
-  function compute(exams, students) {
+  // -> [{teamId, teamName, level, students, day1, day2, average, state, latest}]
+  function compute(exams, students, names) {
+    names = names || {};
     var byTeam = {};
     exams.forEach(function (x) {
       if (!x.teamId) return;
@@ -95,6 +105,7 @@
     });
     return Object.keys(byTeam).map(function (id) {
       var t = byTeam[id];
+      t.teamName = names[id] || "";
       t.students = (students[id] || []).sort(function (a, b) { return a.localeCompare(b, undefined, { numeric: true }); });
       var g1 = t.day1 && t.day1.graded && t.day1.total !== null && t.day1.total !== "";
       var g2 = t.day2 && t.day2.graded && t.day2.total !== null && t.day2.total !== "";
@@ -122,7 +133,7 @@
       var result = t.state === "pass" ? '<span class="ls-pass">Placed at T' + esc(t.level) + "</span>"
         : t.state === "fail" ? '<span class="ls-fail">Below 51</span>'
         : '<span class="ls-date">in progress</span>';
-      return "<tr><td><strong>" + esc(t.teamId) + "</strong></td><td>" + esc(t.students.join(", ")) + "</td>" +
+      return "<tr><td><strong>" + esc(t.teamName || t.teamId) + "</strong></td><td>" + esc(t.students.join(", ")) + "</td>" +
         '<td class="ls-num">T' + esc(t.level) + "</td>" + dayCell(t.day1) + dayCell(t.day2) +
         '<td class="ls-num">' + (t.average === null ? "" : esc(t.average)) + "</td><td>" + result + "</td></tr>";
     }).join("");
@@ -132,7 +143,7 @@
   function mount(el) {
     el.innerHTML = '<p class="ls-status">Loading the entrance results&hellip;</p>';
     load().then(function (d) {
-      el.innerHTML = render(compute(d.exams, d.students)) +
+      el.innerHTML = render(compute(d.exams, d.students, d.names)) +
         '<p class="ls-status">Live from the MCC Public Roster, loaded ' + esc(new Date().toLocaleString()) +
         ". A date means that day is scheduled; a score appears as soon as it is graded.</p>";
     }).catch(function (err) {
