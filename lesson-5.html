@@ -1,0 +1,714 @@
+---
+title: Lesson 5
+robots: noindex
+---
+
+<style>
+  /* Math text should read like a textbook, not the site's body sans-serif. */
+  .problem, .math {
+    font-family: Georgia, "Times New Roman", "Noto Serif", serif;
+    font-size: 1.02em;
+    line-height: 1.6;
+  }
+  .problem { font-style: italic; }
+  .example .tag,
+  .practice-list .tag {
+    display: inline-block;
+    background: var(--gold-soft);
+    color: var(--brand-dark);
+    font-size: 12.5px;
+    font-weight: 700;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    padding: 3px 9px;
+    border-radius: 999px;
+  }
+  .example .tag { margin-right: 4px; }
+  .example { margin-bottom: 1.8em; }
+  .example .source { font-size: 13px; color: var(--ink-soft); margin: -.3em 0 .8em; }
+  .example h3 { font-size: 1.05rem; border-bottom: none; padding-bottom: 0; margin-bottom: .6em; }
+
+  /* Inline, runnable Python (worked examples + the free-form playground).
+     Styled to match the site's existing pre/code blocks (dark ink bg, cream
+     text) and its small pill-shaped utility buttons (see .tc-progress-reset
+     in assets/css/style.css), not a separate "dev tool" look. */
+  .code-runner { margin-top: 14px; margin-bottom: 28px; }
+  .code-editor {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+    font-size: 13.5px;
+    line-height: 1.55;
+    padding: 16px 18px;
+    border: none;
+    border-radius: var(--radius);
+    background: var(--ink);
+    color: #f4ead9;
+    resize: vertical;
+    min-height: 120px;
+    tab-size: 4;
+  }
+  .code-editor:focus { outline: 2px solid var(--gold); outline-offset: 2px; }
+  .code-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+  }
+  .code-controls button {
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--brand);
+    background: var(--cream);
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    padding: 6px 16px;
+    cursor: pointer;
+  }
+  .code-controls button:hover { background: var(--gold-soft); }
+  .code-controls button:disabled { opacity: .5; cursor: default; }
+  .code-status {
+    font-size: 13px;
+    color: var(--ink-soft);
+    font-style: italic;
+  }
+  .code-output {
+    margin: 10px 0 0;
+    padding: 16px 18px;
+    border-radius: var(--radius);
+    background: var(--brand-dark);
+    color: var(--gold-soft);
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+    font-size: 13.5px;
+    white-space: pre-wrap;
+    word-break: break-word;
+    overflow-x: auto;
+    display: none;
+  }
+  .code-output.has-content { display: block; }
+  .code-output.is-error { color: #ffd7c2; }
+  .playground-card { margin-top: 1.2em; }
+  .playground-card .code-editor { min-height: 160px; }
+
+  /* Geometry diagrams -- redrawn from the source PDF, not screenshots. */
+  .diagram {
+    text-align: center;
+    margin: 1em 0 1.4em;
+    padding: 14px;
+    background: var(--white);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+  }
+  .diagram svg { display: block; margin: 0 auto; max-width: 260px; height: auto; }
+  .diagram figcaption {
+    margin-top: 8px;
+    font-size: 13px;
+    color: var(--ink-soft);
+    font-style: italic;
+  }
+  .addition {
+    display: inline-block;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-align: right;
+    line-height: 1.5;
+    margin: 0.6em 0;
+    padding: 2px 6px;
+  }
+  .addition .addition-row { white-space: pre; }
+  .addition .addition-sum {
+    border-top: 1.5px solid var(--ink);
+    padding-top: 2px;
+  }
+
+  /* Submission-requirements block -- deliberately the most visually
+     distinct thing on the page (2026-09-19: "very important for Lesson 1
+     to present what are required and acceptable for a submission"). */
+  .requirements {
+    background: var(--white);
+    border: 2px solid var(--brand);
+    border-radius: var(--radius);
+    padding: 22px 26px;
+    margin: 1.8em 0 2.2em;
+    box-shadow: var(--shadow);
+  }
+  .requirements h2 {
+    margin-top: 0;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  .requirements h3 { margin-top: 1.1em; margin-bottom: .4em; font-size: 1rem; }
+  .requirements ul { margin-bottom: 0; }
+  .requirements table { font-size: 14.5px; }
+</style>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  renderMathInElement(document.body, {
+    delimiters: [
+      {left: "\\[", right: "\\]", display: true},
+      {left: "\\(", right: "\\)", display: false}
+    ]
+  });
+});
+</script>
+
+<!-- Inline Python: runs entirely in the student's own browser via Pyodide (Python
+     compiled to WebAssembly) -- nothing is sent to any server, nothing is graded,
+     it only runs the code and shows what it prints (or the error). Loaded lazily,
+     only once someone actually presses Run, so a visitor who never clicks Run never
+     downloads it. -->
+<script src="https://cdn.jsdelivr.net/pyodide/v314.0.6/full/pyodide.js"></script>
+<script>
+(function () {
+  var pyodideReadyPromise = null;
+  function getPyodide() {
+    if (!pyodideReadyPromise) {
+      pyodideReadyPromise = loadPyodide();
+    }
+    return pyodideReadyPromise;
+  }
+
+  function setAllRunButtonsDisabled(disabled) {
+    document.querySelectorAll(".code-controls .run-btn").forEach(function (b) {
+      b.disabled = disabled;
+    });
+  }
+
+  function copyText(text, btn) {
+    function done() {
+      var original = btn.textContent;
+      btn.textContent = "✓ Copied";
+      setTimeout(function () { btn.textContent = original; }, 1200);
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(done, done);
+    } else {
+      var ta = document.createElement("textarea");
+      ta.value = text;
+      ta.style.position = "fixed";
+      ta.style.opacity = "0";
+      document.body.appendChild(ta);
+      ta.select();
+      try { document.execCommand("copy"); } catch (e) { /* ignore */ }
+      document.body.removeChild(ta);
+      done();
+    }
+  }
+
+  async function runCode(code, outputEl, statusEl) {
+    outputEl.classList.remove("is-error", "has-content");
+    outputEl.textContent = "";
+    statusEl.textContent = "Starting Python… (first run only -- loads the Python environment, a few seconds)";
+    setAllRunButtonsDisabled(true);
+
+    var buffer = "";
+    var hadError = false;
+    try {
+      var pyodide = await getPyodide();
+      pyodide.setStdout({ batched: function (s) { buffer += s + "\n"; } });
+      pyodide.setStderr({ batched: function (s) { buffer += s + "\n"; } });
+
+      statusEl.textContent = "Checking for imports…";
+      try {
+        await pyodide.loadPackagesFromImports(code);
+      } catch (pkgErr) {
+        // A missing/unsupported package still surfaces as a normal Python
+        // ImportError from runPythonAsync below -- nothing to do here.
+      }
+
+      statusEl.textContent = "Running…";
+      var runStarted = performance.now();
+      try {
+        await pyodide.runPythonAsync(code);
+      } catch (runErr) {
+        hadError = true;
+        buffer += (buffer ? "\n" : "") + (runErr && runErr.message ? runErr.message : String(runErr));
+      }
+      var runElapsedMs = performance.now() - runStarted;
+    } catch (loadErr) {
+      hadError = true;
+      buffer += (buffer ? "\n" : "") + "Could not start the Python environment in this browser: " +
+        (loadErr && loadErr.message ? loadErr.message : loadErr);
+    }
+
+    statusEl.textContent = "";
+    setAllRunButtonsDisabled(false);
+    outputEl.textContent = buffer || "(no output)";
+    // Timing is measured by the runner around the code, never injected
+    // into the code itself -- it covers just this run's execution, not
+    // the one-time Pyodide startup/package-loading before it.
+    if (typeof runElapsedMs === "number") {
+      outputEl.textContent += "\n\n[ran in " + formatElapsed(runElapsedMs) + "]";
+    }
+    outputEl.classList.add("has-content");
+    if (hadError) outputEl.classList.add("is-error");
+  }
+
+  function formatElapsed(ms) {
+    if (ms < 1000) return Math.round(ms) + " ms";
+    return (ms / 1000).toFixed(2) + " s";
+  }
+
+  function makeRunner(getCode, container) {
+    var controls = document.createElement("div");
+    controls.className = "code-controls";
+
+    var runBtn = document.createElement("button");
+    runBtn.type = "button";
+    runBtn.className = "run-btn";
+    runBtn.textContent = "▶ Run";
+
+    var copyBtn = document.createElement("button");
+    copyBtn.type = "button";
+    copyBtn.textContent = "📋 Copy";
+
+    var status = document.createElement("span");
+    status.className = "code-status";
+
+    controls.appendChild(runBtn);
+    controls.appendChild(copyBtn);
+    controls.appendChild(status);
+
+    var output = document.createElement("pre");
+    output.className = "code-output";
+
+    container.appendChild(controls);
+    container.appendChild(output);
+
+    runBtn.addEventListener("click", function () {
+      runCode(getCode(), output, status);
+    });
+
+    return { controls: controls, output: output, status: status, runBtn: runBtn, copyBtn: copyBtn };
+  }
+
+  function enhanceExampleCodeBlocks() {
+    document.querySelectorAll(".example pre").forEach(function (pre) {
+      var codeEl = pre.querySelector("code");
+      if (!codeEl) return;
+      var original = codeEl.textContent;
+
+      var wrapper = document.createElement("div");
+      wrapper.className = "code-runner";
+
+      var textarea = document.createElement("textarea");
+      textarea.className = "code-editor";
+      textarea.spellcheck = false;
+      textarea.value = original;
+      textarea.rows = Math.min(28, Math.max(6, original.split("\n").length));
+
+      wrapper.appendChild(textarea);
+      pre.parentNode.insertBefore(wrapper, pre.nextSibling);
+      pre.style.display = "none"; // original stays in the DOM as a no-JS fallback
+
+      var runner = makeRunner(function () { return textarea.value; }, wrapper);
+
+      var resetBtn = document.createElement("button");
+      resetBtn.type = "button";
+      resetBtn.textContent = "↺ Reset";
+      resetBtn.addEventListener("click", function () {
+        textarea.value = original;
+        runner.output.textContent = "";
+        runner.output.classList.remove("has-content", "is-error");
+      });
+      runner.controls.insertBefore(resetBtn, runner.status);
+
+      runner.copyBtn.addEventListener("click", function () {
+        copyText(textarea.value, runner.copyBtn);
+      });
+    });
+  }
+
+  function setupPlayground() {
+    var textarea = document.getElementById("playground-editor");
+    if (!textarea) return;
+    var wrapper = textarea.parentNode;
+
+    var runner = makeRunner(function () { return textarea.value; }, wrapper);
+
+    var clearBtn = document.createElement("button");
+    clearBtn.type = "button";
+    clearBtn.textContent = "✖ Clear";
+    clearBtn.addEventListener("click", function () {
+      textarea.value = "";
+      runner.output.textContent = "";
+      runner.output.classList.remove("has-content", "is-error");
+      textarea.focus();
+    });
+    runner.controls.insertBefore(clearBtn, runner.status);
+
+    runner.copyBtn.addEventListener("click", function () {
+      copyText(textarea.value, runner.copyBtn);
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    enhanceExampleCodeBlocks();
+    setupPlayground();
+  });
+})();
+</script>
+
+<h1>Lesson 5</h1>
+<p><em>Test 4 (Sunday 15 November 2026) &mdash; all ten contest problems, now with full solutions.</em></p>
+
+<div class="note">
+These are the exact problems from the fourth coding contest, in the same order: five for Middle School and five for High School &mdash; one each from Algebra, Combinatorics, Geometry and Number Theory, plus a harder Geometry problem. Try any you didn&rsquo;t finish on your own first &mdash; then compare with the math and code below.
+</div>
+
+<div class="requirements">
+<h2 id="what-s-required-and-acceptable-for-a-contest-submission">What&rsquo;s required and acceptable for a contest submission</h2>
+<p>A reminder of the rules every submission was scored against. Every worked example below is itself a submission that would pass all of these rules &mdash; that&rsquo;s the point of reading them closely, not just the answer.</p>
+
+<h3>File format</h3>
+<ul>
+  <li>One <code>.py</code> text file per problem you attempt. Plain Python source, nothing else.</li>
+  <li><strong>Not accepted:</strong> a PDF, a Google Doc, a Jupyter notebook (<code>.ipynb</code>), a screenshot of code, a file renamed to end in <code>.py</code> that isn&rsquo;t actually Python.</li>
+</ul>
+
+<h3>Your program must</h3>
+<ul>
+  <li>Run in <strong>30 seconds or less</strong>.</li>
+  <li>Run <strong>with no errors</strong> &mdash; no exceptions, no crash, nothing printed to the screen except your program&rsquo;s own output.</li>
+  <li>Only import from the allowed list below.</li>
+</ul>
+
+<h3>Allowed libraries</h3>
+<table>
+<thead><tr><th>Library</th><th>Why it&rsquo;s allowed</th></tr></thead>
+<tbody>
+<tr><td>Python standard library &mdash; <code>math</code>, <code>itertools</code>, <code>functools</code>, <code>fractions</code>, <code>collections</code>, <code>re</code>, <code>decimal</code>, <code>random</code></td><td>baseline</td></tr>
+<tr><td><code>sympy</code></td><td>symbolic algebra &mdash; exact equations, simplification, factoring</td></tr>
+<tr><td><code>numpy</code></td><td>numeric arrays and linear algebra, for geometry/simulation problems</td></tr>
+<tr><td><code>matplotlib</code></td><td>diagrams your own code generates as part of its solution</td></tr>
+</tbody>
+</table>
+<p>Anything else &mdash; network access, file I/O, <code>os</code>/<code>subprocess</code>, GUI toolkits &mdash; is out. This list may grow; the current version always lives on this page.</p>
+
+<h3>How a submission is scored &mdash; base score, up to 10 per problem</h3>
+<table>
+<thead><tr><th>Worth</th><th>For</th></tr></thead>
+<tbody>
+<tr><td>up to 5</td><td><strong>The math itself.</strong> Is the real identity/theorem/reduction actually there, and is it sound? A brute-force search with no justified, provably-complete bound is <em>not</em> real math here, even if it happens to print the right answer. This is the part you keep even if your code has a bug &mdash; good math, broken code, still earns these points.</td></tr>
+<tr><td>up to 4</td><td><strong>Correctness.</strong> The program actually runs clean, inside the time limit, and prints the right answer.</td></tr>
+<tr><td>up to 1</td><td><strong>How well-optimized/well-written the code is.</strong> An exhaustive search over a space a two-line argument would have shrunk to nothing loses points here even if it finishes in time.</td></tr>
+</tbody>
+</table>
+<p><strong>If there&rsquo;s no real math at all</strong> &mdash; the code just tries things at random until something matches the expected shape, with nothing above to award points against &mdash; the submission isn&rsquo;t accepted, regardless of whether it prints the right number.</p>
+
+<h3>Excellence bonus &mdash; up to 5 EXTRA points, on top</h3>
+<p>Reserved for work that goes past &ldquo;normally good&rdquo; &mdash; a solid, correct, reasonably-explained solution earns <strong>zero</strong> of these. Each of the five is independent, worth <strong>+1</strong> on its own:</p>
+<table>
+<thead><tr><th>+1 for</th><th>Meaning</th></tr></thead>
+<tbody>
+<tr><td>Excellent math</td><td>Not just correct &mdash; elegant, insightful, or genuinely the cleanest way to see why the answer is what it is.</td></tr>
+<tr><td>Very, very well commented</td><td>Comments that actually teach the reasoning, the way the worked examples on this page do &mdash; not just labels on lines.</td></tr>
+<tr><td>Excellent code</td><td>Clean, well-structured, readable &mdash; the kind of code someone else could pick up and follow.</td></tr>
+<tr><td>Code really reflects the math</td><td>The program's own structure &mdash; its variables, its steps &mdash; mirrors the mathematical argument, step for step, rather than just arriving at the right number by some other route.</td></tr>
+<tr><td>Very optimal runtime</td><td>Genuinely efficient, well beyond just squeaking in under 30 seconds.</td></tr>
+</tbody>
+</table>
+<p><strong>Maximum possible score per problem: 10 + 5 = 15.</strong></p>
+</div>
+
+<h2>How to read a worked example</h2>
+<p>Each problem below has the same parts: the problem itself; a note with the math that actually makes it solvable; and a commented, runnable Python solution whose structure follows that math. The tags show the difficulty (Easy, Medium, Hard) and the area (Algebra, Combinatorics, Geometry, Number Theory). <strong>Every code block is live</strong> &mdash; click &#9654; <strong>Run</strong> to execute it in your own browser (the first click takes a few seconds to start Python; after that it&rsquo;s instant). Edit it, break it, fix it &mdash; <strong>&#8630; Reset</strong> brings back the original. Nothing here is graded; the playground at the bottom is there for your own experiments.</p>
+
+<h2>Middle School</h2>
+
+<div class="card example">
+<h3 id="ms-problem-1">MS &middot; Problem 1 &middot; <span class="tag">Easy</span> <span class="tag">Number Theory</span></h3>
+<p class="problem">How many positive divisors of \(2700\) themselves have more than \(4\) positive divisors?</p>
+<div class="note math">Factor first: \(2700 = 2^2 \cdot 3^3 \cdot 5^2\). Every divisor has the form \(2^a 3^b 5^c\) with \(0 \le a \le 2\), \(0 \le b \le 3\), \(0 \le c \le 2\), so there are \((2+1)(3+1)(2+1) = 36\) divisors, and a divisor \(2^a 3^b 5^c\) itself has \((a+1)(b+1)(c+1)\) divisors. It is easier to count the divisors with <em>at most</em> \(4\) divisors and subtract. With \(1\) divisor: only \(1\). With \(2\): the primes \(2, 3, 5\). With \(3\): squares of primes, \(4, 9, 25\). With \(4\): a prime cubed, \(27\), or a product of two different primes, \(6, 10, 15\). That is \(1 + 3 + 3 + 4 = 11\) divisors, so the answer is \(36 - 11 = 25\). The code lists the divisors, counts the divisors of each, and checks the count of \(36\).</div>
+<pre><code># MATH: 2700 = 2^2 * 3^3 * 5^2 has (2+1)(3+1)(2+1) = 36 divisors.
+# Divisors with at most 4 divisors: 1; primes 2, 3, 5; prime squares 4, 9, 25;
+# 27 and 6, 10, 15 -&gt; 11 of them, so 36 - 11 = 25 have more than 4.
+N = 2700
+
+def divisors(n):
+    return [d for d in range(1, n + 1) if n % d == 0]
+
+divs = divisors(N)
+assert len(divs) == (2 + 1) * (3 + 1) * (2 + 1)          # 36
+small = [d for d in divs if len(divisors(d)) &lt;= 4]
+print(small)                     # [1, 2, 3, 4, 5, 6, 9, 10, 15, 25, 27]
+big = [d for d in divs if len(divisors(d)) &gt; 4]
+assert len(big) == len(divs) - len(small)
+print(len(big))                  # 25
+</code></pre>
+</div>
+
+<div class="card example">
+<h3 id="ms-problem-2">MS &middot; Problem 2 &middot; <span class="tag">Easy</span> <span class="tag">Geometry</span></h3>
+<p class="problem">The three lines \(y = 13\), \(y = 2x + 1\) and \(y = -x + 4\) enclose a triangle. What is its area?</p>
+<div class="note math">The corners of the triangle are the points where two of the lines cross. \(y = 13\) and \(y = 2x + 1\): \(2x + 1 = 13\), so \(x = 6\), the point \((6, 13)\). \(y = 13\) and \(y = -x + 4\): \(x = -9\), the point \((-9, 13)\). \(y = 2x + 1\) and \(y = -x + 4\): \(2x + 1 = -x + 4\), so \(x = 1\), the point \((1, 3)\). Two corners lie on the horizontal line \(y = 13\), so take that side as the base: its length is \(6 - (-9) = 15\), and the height is the vertical distance from \((1, 3)\) to that line, \(13 - 3 = 10\). The area is \(\frac12 \cdot 15 \cdot 10 = 75\). The code finds the three crossing points exactly (with fractions, so no rounding) and uses the <em>shoelace formula</em>, which works for any triangle given its corners.</div>
+<pre><code># MATH: corners = crossing points of two lines; base on y = 13 has length 15,
+# height 13 - 3 = 10, area = 15 * 10 / 2 = 75.
+# Code: each line as a*x + b*y = c, crossings by Cramer&#x27;s rule (exact
+# fractions), then the shoelace formula.
+from fractions import Fraction
+from itertools import combinations
+
+lines = [(0, 1, 13),      # y = 13
+         (-2, 1, 1),      # y = 2x + 1   -&gt;  -2x + y = 1
+         (1, 1, 4)]       # y = -x + 4   -&gt;   x + y = 4
+
+corners = []
+for (a1, b1, c1), (a2, b2, c2) in combinations(lines, 2):
+    det = a1 * b2 - a2 * b1                       # never 0: no two lines are parallel
+    corners.append((Fraction(c1 * b2 - c2 * b1, det), Fraction(a1 * c2 - a2 * c1, det)))
+print(corners)                                    # (6, 13), (-9, 13), (1, 3)
+
+(x1, y1), (x2, y2), (x3, y3) = corners
+area = abs((x2 - x1) * (y3 - y1) - (x3 - x1) * (y2 - y1)) / 2   # shoelace
+print(area)                                       # 75
+</code></pre>
+</div>
+
+<div class="card example">
+<h3 id="ms-problem-3">MS &middot; Problem 3 &middot; <span class="tag">Medium</span> <span class="tag">Combinatorics</span></h3>
+<p class="problem">Six different prizes are given to four students, Ana, Ben, Cai and Dee. Each prize goes to exactly one student, and every student must get at least one prize. In how many ways can the prizes be given?</p>
+<div class="note math">Without the condition, each of the \(6\) prizes can go to any of the \(4\) students: \(4^6 = 4096\) ways. Now remove the ways in which somebody gets nothing (<em>inclusion&ndash;exclusion</em>). The ways that leave out one named student: \(3^6\) each, \(4\) students, so subtract \(4 \cdot 3^6 = 2916\). But a way that leaves out two students was subtracted twice, so add back \(\binom42 \cdot 2^6 = 384\); a way that leaves out three students was subtracted three times and added back three times, so subtract \(\binom43 \cdot 1^6 = 4\) once more. Total: \(4096 - 2916 + 384 - 4 = 1560\). A check by cases: the prize counts are \(3, 1, 1, 1\) or \(2, 2, 1, 1\) in some order, giving \(4 \cdot \binom63 \cdot 3! = 480\) and \(\binom42 \cdot \binom62 \binom42 \cdot 2! = 1080\) ways, and \(480 + 1080 = 1560\). The code also tries all \(4096\) ways.</div>
+<pre><code># MATH (inclusion-exclusion): 4^6 - C(4,1) 3^6 + C(4,2) 2^6 - C(4,3) 1^6 = 1560.
+from itertools import product
+from math import comb
+
+PRIZES, STUDENTS = 6, 4
+by_formula = sum((-1) ** k * comb(STUDENTS, k) * (STUDENTS - k) ** PRIZES
+                 for k in range(STUDENTS + 1))
+
+# check: every way to give each prize to a student (4^6 = 4096 ways)
+by_listing = sum(1 for way in product(range(STUDENTS), repeat=PRIZES)
+                 if len(set(way)) == STUDENTS)          # everybody got something
+assert by_formula == by_listing
+print(by_formula)                                       # 1560
+</code></pre>
+</div>
+
+<div class="card example">
+<h3 id="ms-problem-4">MS &middot; Problem 4 &middot; <span class="tag">Medium</span> <span class="tag">Algebra</span></h3>
+<p class="problem">A machine takes a positive integer \(N\). If \(N\) is even, it outputs \(N/2\); if \(N\) is odd, it outputs \(3N + 1\). The output is fed back into the machine again and again; for example, starting from \(7\) the outputs are \(22, 11, 34, 17\), and so on. Find the sum of all positive integers \(N\) for which the output after exactly \(9\) steps is \(1\).</p>
+<div class="note math">Going forward from every possible \(N\) is hopeless (there are infinitely many). Go <em>backward</em> from \(1\) instead. Which numbers can produce a given output \(m\)? An even input gives \(m\) when the input is \(2m\), which always works. An odd input \(n\) gives \(m = 3n + 1\) when \(n = (m - 1)/3\), which works only if this is a whole number, positive and odd. So every \(m\) has the predecessor \(2m\), and sometimes one more. Start with the set \(\{1\}\) and replace it \(9\) times by the set of all predecessors: that gives every \(N\) whose \(9\)th output is \(1\), and nothing else. There are \(10\) such numbers, \(1, 8, 10, 12, 13, 64, 80, 84, 85, 512\) (note \(1\) itself: \(1 \to 4 \to 2 \to 1\) repeats), with sum \(869\). The code builds the sets backward and checks every number forward.</div>
+<pre><code># MATH: work backward. The inputs giving output m are 2m (always) and
+# (m - 1)/3 when that is a positive odd whole number. Nine backward steps
+# from {1} give exactly the N whose 9th output is 1.
+def machine(n):
+    return n // 2 if n % 2 == 0 else 3 * n + 1
+
+def predecessors(m):
+    found = {2 * m}
+    if (m - 1) % 3 == 0:
+        n = (m - 1) // 3
+        if n &gt; 0 and n % 2 == 1:
+            found.add(n)
+    return found
+
+STEPS = 9
+level = {1}
+for _ in range(STEPS):
+    level = {p for m in level for p in predecessors(m)}
+print(sorted(level))          # [1, 8, 10, 12, 13, 64, 80, 84, 85, 512]
+
+for n in level:               # forward check
+    x = n
+    for _ in range(STEPS):
+        x = machine(x)
+    assert x == 1
+print(sum(level))             # 869
+</code></pre>
+</div>
+
+<div class="card example">
+<h3 id="ms-problem-5">MS &middot; Problem 5 &middot; <span class="tag">Hard</span> <span class="tag">Geometry</span></h3>
+<p class="problem">In triangle \(ABC\), point \(D\) lies on side \(AC\) with \(AD : DC = 1 : 3\). Point \(E\) is the midpoint of \(BD\), and the line \(AE\) meets side \(BC\) at \(F\). The area of triangle \(ABC\) is \(480\). What is the area of triangle \(EBF\)?</p>
+<div class="note math">Ratios of areas do not change if the triangle is stretched or slanted, so we may place it where the arithmetic is easiest: \(A = (0, 0)\), \(C = (4, 0)\), \(B = (0, 4)\), which has area \(8\). Then \(D = (1, 0)\) (one quarter of the way from \(A\) to \(C\)), \(E = \left(\frac12, 2\right)\), and the line \(AE\) is \(y = 4x\). Side \(BC\) is \(x + y = 4\), so \(F = \left(\frac45, \frac{16}5\right)\): \(F\) is one fifth of the way from \(B\) to \(C\). Now two ratio steps. Triangle \(ABF\) has one fifth of the base \(BC\) and the same height as \(ABC\), so its area is \(\frac{480}{5} = 96\). On the line \(AF\), \(E\) is \(\frac58\) of the way from \(A\) (compare the \(x\)-coordinates \(\frac12\) and \(\frac45\)), so \(EF\) is \(\frac38\) of \(AF\), and triangle \(EBF\) has \(\frac38\) of the area of \(ABF\): \(\frac38 \cdot 96 = 36\). The code does the same with exact fractions and the shoelace formula.</div>
+<pre><code># MATH: area ratios survive stretching, so use A(0,0), C(4,0), B(0,4).
+# Then F is 1/5 of the way from B to C (area ABF = 480/5 = 96) and
+# EF = 3/8 of AF (area EBF = 3/8 of 96 = 36).
+from fractions import Fraction as Fr
+
+def area(P, Q, R):                               # shoelace formula
+    return abs((Q[0] - P[0]) * (R[1] - P[1]) - (R[0] - P[0]) * (Q[1] - P[1])) / 2
+
+A, B, C = (Fr(0), Fr(0)), (Fr(0), Fr(4)), (Fr(4), Fr(0))
+D = (A[0] + (C[0] - A[0]) / 4, A[1] + (C[1] - A[1]) / 4)     # AD : DC = 1 : 3
+E = ((B[0] + D[0]) / 2, (B[1] + D[1]) / 2)                   # midpoint of BD
+# F = t * E on line AE, and on BC: x + y = 4
+t = 4 / (E[0] + E[1])
+F = (t * E[0], t * E[1])
+print(E, F)                                      # E = (1/2, 2), F = (4/5, 16/5)
+
+ratio = area(E, B, F) / area(A, B, C)
+print(ratio)                                     # 3/40
+print(ratio * 480)                               # 36
+</code></pre>
+</div>
+
+<h2>High School</h2>
+
+<div class="card example">
+<h3 id="hs-problem-1">HS &middot; Problem 1 &middot; <span class="tag">Easy</span> <span class="tag">Algebra</span></h3>
+<p class="problem">How many ordered pairs \((b, c)\) of positive integers are there such that <em>neither</em> of the equations \(x^2 + bx + 2c = 0\) and \(x^2 + cx + 2b = 0\) has two different real solutions?</p>
+<div class="note math">A quadratic \(x^2 + px + q = 0\) has two different real solutions exactly when its discriminant \(p^2 - 4q\) is positive. So we need \(b^2 - 8c \le 0\) and \(c^2 - 8b \le 0\), that is \(b^2 \le 8c\) and \(c^2 \le 8b\). <strong>Bound the search:</strong> squaring the first, \(b^4 \le 64c^2 \le 64 \cdot 8b\), so \(b^3 \le 512\) and \(b \le 8\); in the same way \(c \le 8\). Now only \(8 \times 8 = 64\) pairs are left to test, and \(20\) of them work. The code tests them, and also a much larger square of pairs to confirm that nothing was missed.</div>
+<pre><code># MATH: no two different real roots &lt;=&gt; discriminant &lt;= 0:
+#   b^2 &lt;= 8c and c^2 &lt;= 8b.  Then b^4 &lt;= 64 c^2 &lt;= 512 b, so b &lt;= 8; same for c.
+def ok(b, c):
+    return b * b - 8 * c &lt;= 0 and c * c - 8 * b &lt;= 0
+
+pairs = [(b, c) for b in range(1, 9) for c in range(1, 9) if ok(b, c)]
+print(pairs)
+# check that the bound is right: nothing more up to 200
+assert pairs == [(b, c) for b in range(1, 201) for c in range(1, 201) if ok(b, c)]
+print(len(pairs))                # 20
+</code></pre>
+</div>
+
+<div class="card example">
+<h3 id="hs-problem-2">HS &middot; Problem 2 &middot; <span class="tag">Easy</span> <span class="tag">Geometry</span></h3>
+<p class="problem">A regular hexagon \(ABCDEF\) lies flat on level ground. A flat solar panel is held up by six vertical pillars, one standing at each vertex of the hexagon. The pillars at \(A\), \(B\) and \(C\) are \(15\), \(11\) and \(12\) metres tall. How tall, in metres, is the pillar at \(E\)?</p>
+<div class="note math">The panel is flat, so its height above a point \((x, y)\) is \(h = px + qy + r\) for some numbers \(p, q, r\): a linear function. A linear function respects midpoints, so <em>parallelograms</em> are the key: if \(PQRS\) is a parallelogram, then \(h(P) + h(R) = h(Q) + h(S)\) (both sides are twice the height above the centre). Let \(O\) be the centre of the hexagon. \(ABCO\) is a rhombus (all its sides equal the side of the hexagon), so \(h(A) + h(C) = h(B) + h(O)\): \(h(O) = 15 + 12 - 11 = 16\). \(E\) is opposite \(B\) through \(O\), so \(O\) is the midpoint of \(BE\): \(h(E) = 2h(O) - h(B) = 32 - 11 = 21\). The code avoids \(\sqrt3\) entirely: it writes every vertex as a whole-number combination of two side vectors and solves for the plane with exact fractions.</div>
+<pre><code># MATH: the panel is a plane, h(x, y) = p x + q y + r, so heights add up
+# across parallelograms: h(O) = h(A) + h(C) - h(B) = 16, h(E) = 2 h(O) - h(B) = 21.
+# Code: with centre O and u = A - O, v = B - O, the vertices are
+#   A = u, B = v, C = v - u, D = -u, E = -v, F = u - v,
+# and h(O + s u + t v) = h0 + s*hu + t*hv for three unknowns h0, hu, hv.
+from fractions import Fraction as Fr
+
+coords = {&#x27;A&#x27;: (1, 0), &#x27;B&#x27;: (0, 1), &#x27;C&#x27;: (-1, 1), &#x27;D&#x27;: (-1, 0), &#x27;E&#x27;: (0, -1), &#x27;F&#x27;: (1, -1)}
+known = {&#x27;A&#x27;: 15, &#x27;B&#x27;: 11, &#x27;C&#x27;: 12}
+
+# A gives h0 + hu = 15, B gives h0 + hv = 11, C gives h0 - hu + hv = 12.
+# Solve these three equations exactly (Gauss-Jordan elimination):
+rows = [[1, s, t, known[name]] for name, (s, t) in coords.items() if name in known]
+for i in range(3):
+    piv = next(k for k in range(i, 3) if rows[k][i] != 0)
+    rows[i], rows[piv] = rows[piv], rows[i]
+    rows[i] = [Fr(x) / rows[i][i] for x in rows[i]]
+    for k in range(3):
+        if k != i:
+            rows[k] = [a - rows[k][i] * b for a, b in zip(rows[k], rows[i])]
+h0, hu, hv = (rows[i][3] for i in range(3))
+height = {name: h0 + s * hu + t * hv for name, (s, t) in coords.items()}
+assert all(height[n] == known[n] for n in known)
+print({n: int(h) for n, h in height.items()})   # O is at height h0 = 16
+print(height[&#x27;E&#x27;])                               # 21
+</code></pre>
+</div>
+
+<div class="card example">
+<h3 id="hs-problem-3">HS &middot; Problem 3 &middot; <span class="tag">Medium</span> <span class="tag">Combinatorics</span></h3>
+<p class="problem">Eight juniors and eight seniors are split into four teams of four. Every team must have exactly two juniors and two seniors, and the teams have no names (only who is together matters). In how many ways can this be done?</p>
+<div class="note math">First count with <em>named</em> teams 1, 2, 3, 4. Team 1 chooses its \(2\) juniors and \(2\) seniors in \(\binom82\binom82\) ways, team 2 from the people left in \(\binom62\binom62\) ways, team 3 in \(\binom42\binom42\) ways, and team 4 takes the rest. That gives \((28 \cdot 15 \cdot 6)^2 = 2520^2 = 6\,350\,400\). Every split into unnamed teams was counted once for each way to put the four names on its four teams, that is \(4! = 24\) times, so the answer is \(6\,350\,400 / 24 = 264\,600\). The code checks this by building the splits directly, each exactly once: the team of the lowest-numbered junior who is still free is formed first.</div>
+<pre><code># MATH: named teams: C(8,2)^2 C(6,2)^2 C(4,2)^2 = 2520^2; divide by 4! for
+# unnamed teams -&gt; 264600.
+from math import comb, factorial
+from itertools import combinations
+
+N, TEAMS = 8, 4
+named = 1
+for k in range(N, 0, -2):
+    named *= comb(k, 2) ** 2
+by_formula = named // factorial(TEAMS)
+
+def count(juniors, seniors):
+    # each unnamed split once: the smallest free junior picks a partner and 2 seniors
+    if not juniors:
+        return 1
+    first, rest = juniors[0], juniors[1:]
+    total = 0
+    for partner in rest:
+        left = [j for j in rest if j != partner]
+        for pair in combinations(seniors, 2):
+            total += count(left, [s for s in seniors if s not in pair])
+    return total
+
+assert count(list(range(6)), list(range(6))) == 1350     # the 6 + 6 case, by hand: 8100 / 3!
+assert count(list(range(N)), list(range(N))) == by_formula
+print(by_formula)                                          # 264600
+</code></pre>
+</div>
+
+<div class="card example">
+<h3 id="hs-problem-4">HS &middot; Problem 4 &middot; <span class="tag">Medium</span> <span class="tag">Number Theory</span></h3>
+<p class="problem">For how many integers \(b\) with \(6 \le b \le 2026\) is the base-\(b\) numeral \(1115_b\) divisible by \(16\)?</p>
+<div class="note math">In base \(b\), \(1115_b = b^3 + b^2 + b + 5\) (the digit \(5\) needs \(b \ge 6\)). Whether this is divisible by \(16\) depends only on the remainder of \(b\) when divided by \(16\): replacing \(b\) by \(b + 16\) changes each power \(b^k\) by a multiple of \(16\). So test the \(16\) remainders once: only \(b \equiv 5\) and \(b \equiv 13 \pmod{16}\) work, i.e. \(b \equiv 5 \pmod 8\). (A reason: for even \(b\) the number is odd; for odd \(b\), \(b^3 + b^2 + b + 5 = (b + 1)(b^2 + 1) + 4\), and \(b^2 + 1 \equiv 2 \pmod 8\).) The bases \(b \equiv 5 \pmod 8\) between \(6\) and \(2026\) are \(13, 21, \dots, 2021\): there are \(\frac{2021 - 13}{8} + 1 = 252\) of them. The code finds the good remainders, counts with them, and checks by testing every base.</div>
+<pre><code># MATH: 1115_b = b^3 + b^2 + b + 5, and divisibility by 16 depends only on
+# b mod 16. Test the 16 remainders, then count the bases with a good one.
+LO, HI, M = 6, 2026, 16
+
+def value(b):
+    return b ** 3 + b ** 2 + b + 5
+
+good = [r for r in range(M) if value(r) % M == 0]
+print(good)                                          # [5, 13]
+count = sum(1 for b in range(LO, HI + 1) if b % M in good)
+
+# check: test every base directly (the digits 1, 1, 1, 5 need b &gt;= 6)
+assert count == sum(1 for b in range(LO, HI + 1) if value(b) % M == 0)
+print(count)                                         # 252
+</code></pre>
+</div>
+
+<div class="card example">
+<h3 id="hs-problem-5">HS &middot; Problem 5 &middot; <span class="tag">Hard</span> <span class="tag">Geometry</span></h3>
+<p class="problem">A bee starts at the origin \((0, 0, 0)\). A fair six-sided die has faces labelled \(x^+, x^-, y^+, y^-, z^+, z^-\). At each roll the bee moves one unit in the direction shown: for example, \(x^+\) moves it from \((a, b, c)\) to \((a + 1, b, c)\) and \(z^-\) moves it to \((a, b, c - 1)\). The die is rolled \(5\) times. The probability that the bee's path consists of five <em>different</em> edges of one single unit cube is \(\dfrac{m}{n}\), where \(m\) and \(n\) are relatively prime positive integers. Find \(m + n\).</p>
+<div class="note math">A unit cube here has corners with integer coordinates and edges of length \(1\). Five different edges cannot all lie on one face (a square has only \(4\) edges), so the path uses all three directions and fixes the cube: the cube spanned by the first move in each direction. Eight unit cubes have the origin as a corner, and by symmetry each one contributes the same number of good paths: walks of length \(5\) along the edges of a cube, starting at a corner, never using an edge twice. Count those walks in one cube by trying every choice at each corner (from each corner there are \(3\) edges). There are \(42\), so there are \(8 \cdot 42 = 336\) good roll sequences out of \(6^5 = 7776\), and the probability is \(\frac{336}{7776} = \frac{7}{162}\), giving \(m + n = 169\). The code counts the walks in one cube, and checks by following the bee for all \(7776\) roll sequences.</div>
+<pre><code># MATH: 5 different edges cannot fit in one square, so they fix one unit cube;
+# 8 cubes touch the origin, each with the same number of edge-walks of length 5
+# from that corner (no edge twice). Count them in the cube {0,1}^3.
+from fractions import Fraction
+from itertools import product
+
+ROLLS = 5
+
+def walks(at, used, left):
+    # walks along the edges of the unit cube {0,1}^3 that never repeat an edge
+    if left == 0:
+        return 1
+    total = 0
+    for axis in range(3):
+        nxt = list(at); nxt[axis] = 1 - nxt[axis]; nxt = tuple(nxt)
+        edge = frozenset((at, nxt))
+        if edge not in used:
+            total += walks(nxt, used | {edge}, left - 1)
+    return total
+
+per_cube = walks((0, 0, 0), frozenset(), ROLLS)
+good = 8 * per_cube
+print(per_cube, good)                                  # 42 336
+
+# check: follow the bee for every roll sequence
+MOVES = [(1, 0, 0), (-1, 0, 0), (0, 1, 0), (0, -1, 0), (0, 0, 1), (0, 0, -1)]
+direct = 0
+for rolls in product(MOVES, repeat=ROLLS):
+    p, pts, edges = (0, 0, 0), [(0, 0, 0)], set()
+    for m in rolls:
+        q = tuple(a + b for a, b in zip(p, m))
+        edges.add(frozenset((p, q))); p = q; pts.append(p)
+    one_cube = all(max(t[i] for t in pts) - min(t[i] for t in pts) &lt;= 1 for i in range(3))
+    if len(edges) == ROLLS and one_cube:
+        direct += 1
+assert direct == good
+
+prob = Fraction(good, 6 ** ROLLS)
+print(prob)                                            # 7/162
+print(prob.numerator + prob.denominator)               # 169
+</code></pre>
+</div>
+
+<h2 id="playground">Try your own code</h2>
+<p>A blank scratchpad &mdash; paste in your own solution to any problem and run it. This isn&rsquo;t graded and isn&rsquo;t checked for correctness; it just runs whatever Python you give it and shows you what it prints, or the error if something&rsquo;s wrong.</p>
+<div class="card playground-card">
+<textarea id="playground-editor" class="code-editor" spellcheck="false" rows="10" placeholder="# Write or paste your Python here, then click Run.&#10;print('Hello, MCC!')"></textarea>
+</div>
+
+<h2>Questions?</h2>
+<p>Contact your regional coordinator on the <a href="./organization">Organization</a> page. For the coding contest itself, see <a href="./toml">TOML</a>.</p>
