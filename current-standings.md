@@ -9,7 +9,7 @@ This page is the club's live index, for every role: where the roster and every t
 **Jump to:** [Sunday session](#sunday-session) · [Team standings](#team-standings) · [Start here](#start-here) · [Where the data lives](#where-the-clubs-data-lives) · [Glossary](#glossary) · [The public roster](#the-public-roster) · [For Parents & Students](#for-parents--students) · [Coordinator & organizer resources](#coordinator--organizer-resources) · [For Graders](#for-graders){% if site.show_test_material %} · [Test suites](#test-suites){% endif %}
 
 <div class="note" id="sunday-session" markdown="0">
-<strong>Next Sunday session: Sunday 8 November, 7:00–8:30 AM Victoria/BC time. Students present their perfect-score solutions from the Chapter 3 team tests.</strong>
+<strong>Next Sunday session: Sunday 8 November, 7:00–8:30 AM Pacific Standard Time (PST). Students present their perfect-score solutions from the Chapter 3 team tests.</strong>
 <p>Every problem on which a team scored full marks is presented once, by one team. When several teams solved it, the best-written solution is chosen, and the problems are shared out so that as many teams as possible present. Allow about 5 to 6 minutes per problem. <em>Provisional until Saturday 7 November:</em> a team that sits Chapter 3 by then and scores full marks on a problem will be added to this list, and problems may be moved so that as many teams as possible present. Teams that sit the test on Sunday 8 November are not invited this time. The coding contest runs on the alternate Sundays (1 and 15 November, see <a href="./toml.html">TOML</a>).</p>
 <h3>7:00–7:45 AM: Levels T1 and T2</h3>
 <div class="ls-wrap"><table class="ls-table">
@@ -35,7 +35,7 @@ This page is the club's live index, for every role: where the roster and every t
 <details class="vn" markdown="1">
 <summary>🇻🇳 Tiếng Việt — Buổi sinh hoạt Chủ nhật 8/11 (click to expand)</summary>
 
-Chủ nhật 8/11, 7:00–8:30 sáng giờ Victoria/BC: học sinh trình bày các lời giải đạt điểm tuyệt đối trong bài thi đội Chương 3. Mỗi bài có đội đạt điểm tối đa được trình bày một lần, bởi một đội. Khi nhiều đội cùng giải được một bài, chúng tôi chọn lời giải viết tốt nhất và chia các bài sao cho nhiều đội được trình bày nhất: nếu một đội có hai bài trong danh sách và một đội chưa được mời cũng đạt điểm tối đa ở một trong hai bài đó, bài đó được chuyển cho đội kia. Mỗi bài khoảng 5–6 phút.
+Chủ nhật 8/11, 7:00–8:30 sáng giờ Pacific Standard Time (PST): học sinh trình bày các lời giải đạt điểm tuyệt đối trong bài thi đội Chương 3. Mỗi bài có đội đạt điểm tối đa được trình bày một lần, bởi một đội. Khi nhiều đội cùng giải được một bài, chúng tôi chọn lời giải viết tốt nhất và chia các bài sao cho nhiều đội được trình bày nhất: nếu một đội có hai bài trong danh sách và một đội chưa được mời cũng đạt điểm tối đa ở một trong hai bài đó, bài đó được chuyển cho đội kia. Mỗi bài khoảng 5–6 phút.
 
 * **7:00–7:45:** T1 và T2 (bảng thứ nhất ở trên).
 * **7:45–8:30:** T3 và T4 (bảng thứ hai ở trên).
