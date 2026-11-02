@@ -17,6 +17,8 @@ This page is the club's live index, for every role: where the roster and every t
 <tbody>
 <tr><td class="ls-num">1</td><td>T1 Problem 1</td><td><strong>T105</strong></td><td>UK</td></tr>
 <tr><td class="ls-num">2</td><td>T1 Problem 3</td><td><strong>Algebraic Uniformity</strong></td><td>UK</td></tr>
+<tr><td class="ls-num">3</td><td>T2 Problem 1 (also T1 Problem 2)</td><td><strong>T107</strong></td><td>VN</td></tr>
+<tr><td class="ls-num">4</td><td>T2 Problem 4</td><td><strong>Baguette</strong></td><td>WC</td></tr>
 </tbody></table></div>
 <h3>7:45–8:30 AM: Levels T3 and T4</h3>
 <div class="ls-wrap"><table class="ls-table">
