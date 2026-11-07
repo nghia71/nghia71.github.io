@@ -19,17 +19,15 @@ This page is the club's live index, for every role: where the roster and every t
 <tr><td class="ls-num">2</td><td>T1 Problem 3</td><td><strong>Algebraic Uniformity</strong></td><td>UK</td></tr>
 <tr><td class="ls-num">3</td><td>T2 Problem 1 (also T1 Problem 2)</td><td><strong>T107</strong></td><td>VN</td></tr>
 <tr><td class="ls-num">4</td><td>T2 Problem 4</td><td><strong>Baguette</strong></td><td>WC</td></tr>
+<tr><td class="ls-num">5</td><td>T1 Problem 6</td><td><strong>Dragons</strong></td><td>WC</td></tr>
 </tbody></table></div>
-<h3>7:45–8:30 AM: Levels T3 and T4</h3>
+<h3>7:45–8:30 AM: Level T3</h3>
 <div class="ls-wrap"><table class="ls-table">
 <thead><tr><th class="ls-num">#</th><th>Problem (Chapter 3 team test)</th><th>Presenting team</th><th>Region</th></tr></thead>
 <tbody>
-<tr><td class="ls-num">1</td><td>T3 Problem 2</td><td><strong>T302</strong></td><td>FR</td></tr>
+<tr><td class="ls-num">1</td><td>T3 Problem 2</td><td><strong>The Dragon Mathletes</strong></td><td>EC</td></tr>
 <tr><td class="ls-num">2</td><td>T3 Problem 4</td><td><strong>T303</strong></td><td>WC</td></tr>
 <tr><td class="ls-num">3</td><td>T3 Problem 6</td><td><strong>T302</strong></td><td>FR</td></tr>
-<tr><td class="ls-num">4</td><td>T4 Problem 1</td><td><strong>T401</strong></td><td>FR</td></tr>
-<tr><td class="ls-num">5</td><td>T4 Problem 4</td><td><strong>T401</strong></td><td>FR</td></tr>
-<tr><td class="ls-num">6</td><td>T4 Problem 5</td><td><strong>T401</strong></td><td>FR</td></tr>
 </tbody></table></div>
 <p>No team has full marks yet on the other Chapter 3 problems. When a team has full marks on two problems and another team that is not yet presenting also has full marks on one of them, that problem goes to the other team, so that more teams present.</p>
 </div>
@@ -40,7 +38,7 @@ This page is the club's live index, for every role: where the roster and every t
 Chủ nhật 8/11, 7:00–8:30 sáng giờ Pacific Standard Time (PST): học sinh trình bày các lời giải đạt điểm tuyệt đối trong bài thi đội Chương 3. Mỗi bài có đội đạt điểm tối đa được trình bày một lần, bởi một đội. Khi nhiều đội cùng giải được một bài, chúng tôi chọn lời giải viết tốt nhất và chia các bài sao cho nhiều đội được trình bày nhất: nếu một đội có hai bài trong danh sách và một đội chưa được mời cũng đạt điểm tối đa ở một trong hai bài đó, bài đó được chuyển cho đội kia. Mỗi bài khoảng 5–6 phút.
 
 * **7:00–7:45:** T1 và T2 (bảng thứ nhất ở trên).
-* **7:45–8:30:** T3 và T4 (bảng thứ hai ở trên).
+* **7:45–8:30:** T3 (bảng thứ hai ở trên).
 
 Danh sách này còn tạm thời cho đến hết thứ Bảy 7/11: đội nào thi Chương 3 trước ngày đó và đạt điểm tối đa ở một bài sẽ được thêm vào danh sách, và các bài có thể được chia lại để nhiều đội được trình bày nhất. Các đội thi vào Chủ nhật 8/11 lần này không được mời. Cuộc thi lập trình diễn ra vào các Chủ nhật xen kẽ (1/11 và 15/11, xem trang [TOML](./toml.html)).
 
