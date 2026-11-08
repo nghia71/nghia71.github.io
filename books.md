@@ -4,7 +4,7 @@ title: Books
 
 # The MCC Curriculum
 
-The club's curriculum is **Learning Problem Solving VI and VII** — two volumes covering four years of training. Around them sit an entry book for students who are just starting out, the tests and the yearbook, and a free online course.
+The club's curriculum is **Learning Problem Solving VI and VII** — two volumes covering four years of training. Around them sit an entry book for students who are just starting out, a book of stories and puzzles, the tests and the yearbook, and a free online course.
 
 *Mỗi hành trình toán học đều bắt đầu từ một tia sáng tò mò. Để giúp học sinh khởi đầu đúng hướng, chúng tôi đã thiết kế một lộ trình phát triển rõ ràng.*
 
@@ -105,17 +105,59 @@ Tôi khuyên nên chọn bản in, vì đây là cuốn sách được thiết k
 
 </div>
 
-## 3. The tests and the yearbook
+## 3. Stories and puzzles — *Four Roads* {#four-roads}
+
+**The club's award book.** Mira, Bao, Tavi and Suri set out on four roads across Highmere. Past river landings, workshops and strange lands, every question opens a new road. Read straight through to follow the story, or stop with the characters and try each puzzle yourself. The puzzles use mathematics, logic and everyday science; hints and full solutions are in the book. For readers aged 10 and up.
+
+**Volume One: 25 chapters, 75 puzzles.** The English and Vietnamese editions are checked line by line, so they have the same pictures, map, puzzles and answers. Brothers, sisters and friends with different editions can work on the same puzzles together.
+
+<div class="cards wide" markdown="0">
+
+  <div class="card">
+    <span class="tag">English edition</span>
+    <a href="https://www.lulu.com/shop/nghia-doan/four-roads/hardcover/product-w46rpd4.html"><img class="cover" src="./img/four-roads-en-cover.jpg" alt="Four Roads — Tales from Highmere, Volume One"></a>
+    <h3>Four Roads — Volume One</h3>
+    <p><strong>25 chapters, 75 puzzles</strong>, illustrated, with hints and full solutions.<br>
+       <strong>306 pages, hardcover.</strong></p>
+    <p><a class="btn" href="https://www.lulu.com/shop/nghia-doan/four-roads/hardcover/product-w46rpd4.html">Order from Lulu</a></p>
+    <p><a class="btn secondary" href="./four-roads/leaflet-en.pdf">Leaflet (PDF)</a>
+       <a class="btn secondary" href="./four-roads/sample-en.pdf">Chapters 1–4 (PDF)</a></p>
+  </div>
+
+  <div class="card">
+    <span class="tag">Vietnamese edition · Bản tiếng Việt</span>
+    <a href="https://www.lulu.com/shop/nghia-doan/b%E1%BB%91n-ng%E1%BA%A3-%C4%91%C6%B0%E1%BB%9Dng/hardcover/product-84894k5.html"><img class="cover" src="./img/four-roads-vi-cover.jpg" alt="Bốn ngả đường — Tập một"></a>
+    <h3>Bốn ngả đường — Tập một</h3>
+    <p><strong>25 chương, 75 câu đố</strong>, có tranh minh họa, gợi ý và lời giải đầy đủ.<br>
+       <strong>297 trang, bìa cứng.</strong></p>
+    <p><a class="btn" href="https://www.lulu.com/shop/nghia-doan/b%E1%BB%91n-ng%E1%BA%A3-%C4%91%C6%B0%E1%BB%9Dng/hardcover/product-84894k5.html">Đặt sách từ Lulu</a></p>
+    <p><a class="btn secondary" href="./four-roads/leaflet-vi.pdf">Tờ giới thiệu (PDF)</a>
+       <a class="btn secondary" href="./four-roads/sample-vi.pdf">Đọc thử chương 1–4 (PDF)</a></p>
+  </div>
+
+</div>
+
+The leaflet is one two-sided page for families. The sample holds the first four chapters in full, with their puzzles, hints and solutions.
+
+<div class="vn" markdown="1">
+
+**Sách tặng thưởng của câu lạc bộ.** Mira, Bao, Tavi và Suri lên đường trên bốn ngả đường khắp Highmere. Qua những bến sông, xưởng thợ và miền đất lạ, mỗi câu hỏi lại mở ra một con đường mới. Có thể đọc liền một mạch để theo câu chuyện, hoặc dừng lại cùng các nhân vật và tự giải từng câu đố. Các câu đố dùng toán học, logic và khoa học đời thường; gợi ý và lời giải đầy đủ có trong sách. Dành cho các em từ 10 tuổi trở lên.
+
+**Tập một: 25 chương, 75 câu đố.** Bản tiếng Anh và bản tiếng Việt được đối chiếu từng dòng, nên có cùng tranh vẽ, bản đồ, câu đố và đáp số. Anh chị em và bạn bè đọc hai bản khác nhau vẫn cùng giải được những câu đố như nhau. Tờ giới thiệu là một trang hai mặt dành cho gia đình; bản đọc thử gồm trọn bốn chương đầu, có câu đố, gợi ý và lời giải.
+
+</div>
+
+## 4. The tests and the yearbook
 
 Every chapter closes with its own test, and those tests are collected into the third book of the set — **226 papers and over 1,350 problems**, across all four levels. At the end of the year comes the yearbook, written together with the students.
 
 [How testing works, and what goes in the yearbook →](./tests.md)
 
-## 4. Free online: The Online Mathematics Laboratory
+## 5. Free online: The Online Mathematics Laboratory
 
 **[TOML](./toml.html)** teaches mathematics investigated with a programming tool: explore a problem computationally, explain what you see, then establish it with a proof. Bilingual, with runnable Python on every page — copy it to your machine or run it in the browser. Free, with no book to buy.
 
-## 5. Earlier volumes
+## 6. Earlier volumes
 
 The Learning Problem Solving series began well before Volume VI. Volumes 1–3 and the Toolbox remain available, along with the annual school-year books.
 

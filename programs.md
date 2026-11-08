@@ -127,6 +127,8 @@ For the test format itself — how the six problems are built and scored — see
 
 🌍 **Purple Comet! Math Meet** *(April)* — MCC teams compete internationally each spring. Top-performing teams are recognised publicly on [purplecomet.org](https://purplecomet.org).
 
+📚 **The award book** — award winners receive *Four Roads*, Volume One, the club's book of stories and puzzles, in English or Vietnamese. Families who want a copy can order it directly: [Four Roads (English)](https://www.lulu.com/shop/nghia-doan/four-roads/hardcover/product-w46rpd4.html) · [Bốn ngả đường (tiếng Việt)](https://www.lulu.com/shop/nghia-doan/b%E1%BB%91n-ng%E1%BA%A3-%C4%91%C6%B0%E1%BB%9Dng/hardcover/product-84894k5.html). Leaflets and sample chapters are on the [Books](./books.md#four-roads) page.
+
 🎁 **Special recognition** *(June)* — any individual or team achieving **three perfect scores** during the year receives a copy of *100 Math Problems for Absolute Beginners*, personally dedicated. Keep it or give it to a friend.
 
 ## Membership
