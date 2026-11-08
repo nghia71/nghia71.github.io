@@ -7,9 +7,11 @@ permalink: /
 
 # Math Club & Competitions
 
-<p class="lede">A global mathematics club for students in Grades 4–12. Founded in Canada by Nghia Doan, MCC has grown over more than a decade from a small group of curious students into an international community spanning nine countries.</p>
+<p class="lede">A global online mathematics club for students in Grades 4–12. Founded in Canada by Nghia Doan, MCC has grown over more than a decade from a small group of curious students into an international community spanning nine countries.</p>
 
 We teach problem solving, not formulas. Our students learn to read a problem carefully, experiment with small cases, build and test a conjecture, and write an argument that convinces. They do it together, in teams, and they take that habit into national and international competition.
+
+*Câu lạc bộ toán trực tuyến cho học sinh lớp 4–12: luyện giải toán, luyện thi Olympic toán, học theo đội và thi đấu quốc tế.*
 
 [See the programs](./programs.md){: .btn}
 [Meet the team](./organization.md){: .btn .secondary}
