@@ -1,5 +1,6 @@
 ---
 title: Video Lectures
+sitemap: false
 robots: noindex
 ---
 
