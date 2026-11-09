@@ -48,15 +48,36 @@ Danh sách này còn tạm thời cho đến hết thứ Bảy 7/11: đội nào
 
 Every active team, by level. Teams are ranked by **chapters passed**, then by **points** (the sum of their passing scores); a team gets a rank once it has passed its first chapter. The C1, C2, … columns show the score with which each chapter was passed; ✗ means the chapter has been attempted but not passed yet. **Attempts** counts every graded test, retakes included. The table updates by itself: a result appears here as soon as it has been graded.
 
+The last five number columns show how strong a team is on a fresh paper. They count **first attempts only** (no retakes, no entrance tests) and are not used for the ranking:
+
+* **1st-try avg**: the average score of the team's first attempts.
+* **1st-try passes**: chapters passed at the first attempt, out of chapters attempted (a missed test counts as an attempt not passed).
+* **Perfect**: the number of problems solved for full marks.
+* **Perfect rate**: problems with full marks out of problems received, e.g. 7/18 · 39%.
+* **Hard-problem %**: the share of points the team earned on the hardest problems of each paper (those worth 20 points or more).
+
+Read the rates together with the counts: a team with one test behind it can show a high rate on a small number of problems.
+
 Teams are shown by their own team name (or by their team ID if they have not chosen a name), with numbers only. Each team's detailed grading comments go to that team privately, through its coordinator.
 
 <div id="live-standings" class="live-standings"></div>
-<script src="{{ '/assets/js/live-standings.js' | relative_url }}?v=3"></script>
+<script src="{{ '/assets/js/paper-points.js' | relative_url }}?v=1"></script>
+<script src="{{ '/assets/js/live-standings.js' | relative_url }}?v=4"></script>
 
 <details class="vn" markdown="1">
 <summary>🇻🇳 Tiếng Việt — Bảng xếp hạng các đội (click to expand)</summary>
 
 Mọi đội đang hoạt động, chia theo level. Các đội được xếp hạng theo **số chương đã đạt**, rồi theo **điểm** (tổng điểm của các bài đạt); một đội có thứ hạng từ khi đạt chương đầu tiên. Các cột C1, C2, … là điểm của bài đạt ở chương đó; ✗ nghĩa là đội đã thi chương đó nhưng chưa đạt. Cột **Attempts** đếm mọi bài thi đã chấm, kể cả thi lại. Bảng tự cập nhật: kết quả xuất hiện ngay khi bài được chấm xong.
+
+Năm cột số cuối cho thấy đội mạnh đến đâu khi gặp một đề mới. Các cột này **chỉ tính lần thi đầu** của mỗi chương (không tính thi lại, không tính bài thi đầu vào) và không dùng để xếp hạng:
+
+* **1st-try avg**: điểm trung bình các lần thi đầu.
+* **1st-try passes**: số chương đạt ngay lần thi đầu, trên số chương đã thi (bỏ lỡ một buổi thi được tính là một lần thi không đạt).
+* **Perfect**: số bài đạt điểm tối đa.
+* **Perfect rate**: số bài đạt điểm tối đa trên số bài đã nhận, ví dụ 7/18 · 39%.
+* **Hard-problem %**: tỉ lệ điểm đội giành được ở các bài khó nhất của mỗi đề (các bài từ 20 điểm trở lên).
+
+Nên đọc tỉ lệ cùng với con số: một đội mới thi một bài có thể có tỉ lệ cao chỉ nhờ ít bài.
 
 Trang này chỉ hiện tên đội (hoặc mã đội nếu đội chưa đặt tên) và điểm số. Nhận xét chi tiết của từng bài được gửi riêng cho đội đó, qua coordinator.
 
