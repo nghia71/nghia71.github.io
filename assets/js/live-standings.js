@@ -145,7 +145,7 @@
   // One first-attempt paper into a team's first-attempt measures.
   // A missed test (Fail, Total 0, no problem scores) is a used attempt: it
   // counts as a first attempt not passed, but there is no paper to average.
-  function addFirstAttempt(f, x, level) {
+  function addFirstAttempt(f, x, level, missing) {
     f.graded++;
     if (x.result === "Pass") f.passed++;
     var missed = x.total === 0 && (!x.p || x.p.every(function (v) { return v === null; }));
@@ -153,6 +153,9 @@
     f.scored++;
     f.totalSum += x.total;
     var max = paperPoints(x.level || level, x.chapter, x.attempt);
+    if (!max && missing && x.p && x.p.some(function (v) { return v !== null; })) {
+      missing["L" + (x.level || level) + "-C" + x.chapter + "-A" + x.attempt] = true;
+    }
     if (!max || !x.p || x.p.length !== 6 || x.p.some(function (v) { return v === null; })) return;
     for (var k = 0; k < 6; k++) {
       f.received++;
@@ -162,7 +165,7 @@
   }
 
   function compute(teams, exams) {
-    var byTeam = {};
+    var byTeam = {}, missing = {};
     teams.forEach(function (t) {
       if (!t.teamId || (t.status && t.status !== "active")) return;
       if (!byTeam[t.teamId]) {
@@ -178,7 +181,7 @@
       var t = byTeam[x.teamId];
       if (!t || !x.chapter || isNaN(x.total)) return;
       t.attempts++;
-      if (x.attempt === 1 && x.chapter >= 1) addFirstAttempt(t.first, x, t.level);
+      if (x.attempt === 1 && x.chapter >= 1) addFirstAttempt(t.first, x, t.level, missing);
       var ch = t.chapters[x.chapter] || (t.chapters[x.chapter] = { score: null, passed: false, best: null });
       if (ch.best === null || x.total > ch.best) ch.best = x.total;
       if (x.result === "Pass" && (!ch.passed || x.total > ch.score)) { ch.passed = true; ch.score = x.total; }
@@ -192,7 +195,7 @@
       });
       (levels[t.level] || (levels[t.level] = [])).push(t);
     });
-    return Object.keys(levels).map(Number).sort(function (a, b) { return a - b; }).map(function (lv) {
+    var result = Object.keys(levels).map(Number).sort(function (a, b) { return a - b; }).map(function (lv) {
       var rows = levels[lv].sort(function (a, b) {
         return b.passed - a.passed || b.points - a.points || a.teamId.localeCompare(b.teamId, undefined, { numeric: true });
       });
@@ -204,6 +207,10 @@
       });
       return { level: lv, maxChapter: maxChapter, rows: rows };
     });
+    // First-attempt papers that were graded but whose full marks per problem
+    // are not in paper-points.js yet (re-run tools/build-paper-points.js).
+    result.missingPapers = Object.keys(missing).sort();
+    return result;
   }
 
   // ---- rendering -------------------------------------------------------------
@@ -234,48 +241,110 @@
     return cells.map(function (c, i) { return '<td class="ls-num' + (i ? "" : " ls-first") + '">' + c + "</td>"; }).join("");
   }
 
-  function render(groups) {
-    if (!groups.length) return '<p class="ls-empty">No teams yet.</p>';
-    return groups.map(function (g) {
-      var chCols = [];
-      for (var n = 1; n <= g.maxChapter; n++) chCols.push(n);
-      var head = '<tr><th>#</th><th>Team</th><th class="ls-num">Chapters<br>passed</th><th class="ls-num">Points</th>' +
-        chCols.map(function (n) { return '<th class="ls-num">C' + n + "</th>"; }).join("") +
-        '<th class="ls-num">Attempts</th>' +
-        '<th class="ls-num ls-first" title="Average score of the team\'s first attempts (retakes and entrance tests not counted)">1st-try<br>avg</th>' +
-        '<th class="ls-num" title="Chapters passed at the first attempt / chapters attempted">1st-try<br>passes</th>' +
-        '<th class="ls-num" title="Problems with full marks / problems received, first attempts only">Perfect<br>problems</th>' +
-        '<th class="ls-num" title="Share of the points on each paper\'s hardest problems (worth 20+ points), first attempts only">Hard-<br>problem %</th>' +
-        "<th>Latest<br>result</th></tr>";
-      var body = g.rows.map(function (t) {
-        var chCells = chCols.map(function (n) {
-          var c = t.chapters[n];
-          if (!c) return '<td class="ls-num"></td>';
-          if (c.passed) return '<td class="ls-num ls-pass">' + esc(c.score) + "</td>";
-          return '<td class="ls-num ls-notyet" title="Not passed yet (best ' + esc(c.best) + ')">&#10007;</td>';
-        }).join("");
-        var latest = t.latest
-          ? "C" + esc(t.latest.chapter) + " &middot; " + esc(t.latest.total) + " &middot; " +
-            '<span class="' + (t.latest.result === "Pass" ? "ls-pass" : "ls-fail") + '">' + esc(t.latest.result) + "</span>" +
-            (t.latest.graded ? '<br><span class="ls-date">' + esc(shortDateNoYear(t.latest.graded)) + "</span>" : "")
-          : '<span class="ls-date">not started</span>';
-        // No rank until a team has passed a chapter: at 0 passed and 0
-        // points everyone would tie for 1st, which says nothing.
-        return "<tr><td>" + (t.passed ? t.rank : "&ndash;") + '</td><td class="ls-team"><strong>' + esc(t.teamName || t.teamId) + "</strong></td>" +
-          '<td class="ls-num">' + t.passed + '</td><td class="ls-num">' + t.points + "</td>" +
-          chCells + '<td class="ls-num">' + t.attempts + "</td>" + firstCells(t.first) + "<td>" + latest + "</td></tr>";
-      }).join("");
-      return '<h3 id="standings-level-' + g.level + '">Level ' + esc(g.level) + "</h3>" +
-        '<div class="ls-wrap"><table class="ls-table"><thead>' + head + "</thead><tbody>" + body + "</tbody></table></div>";
-    }).join("");
+  // Two views of the same standings (Nghia, 9 Nov 2026), so the page stays
+  // readable as chapters pile up during the year:
+  //   "summary"  (default) rank, team, totals, first-try measures, latest
+  //              result -- the same width whatever the number of chapters;
+  //   "chapters" one column per chapter, scrolling sideways when there are
+  //              many. In both views rank and team stay pinned on the left
+  //              while the rest scrolls (phones, or a long year).
+  var VIEWS = { summary: "Summary", chapters: "By chapter" };
+
+  function rankCell(t) {
+    // No rank until a team has passed a chapter: at 0 passed and 0 points
+    // everyone would tie for 1st, which says nothing.
+    return '<td class="ls-rank ls-pin1">' + (t.passed ? t.rank : "&ndash;") + "</td>";
   }
+  function teamCell(t) {
+    return '<td class="ls-team ls-pin2"><strong>' + esc(t.teamName || t.teamId) + "</strong></td>";
+  }
+
+  function latestCell(t) {
+    var html = t.latest
+      ? "C" + esc(t.latest.chapter) + " &middot; " + esc(t.latest.total) + " &middot; " +
+        '<span class="' + (t.latest.result === "Pass" ? "ls-pass" : "ls-fail") + '">' + esc(t.latest.result) + "</span>" +
+        (t.latest.graded ? '<br><span class="ls-date">' + esc(shortDateNoYear(t.latest.graded)) + "</span>" : "")
+      : '<span class="ls-date">not started</span>';
+    return "<td>" + html + "</td>";
+  }
+
+  function summaryTable(g) {
+    var head = '<tr><th class="ls-rank ls-pin1">#</th><th class="ls-pin2">Team</th><th class="ls-num">Chapters<br>passed</th><th class="ls-num">Points</th>' +
+      '<th class="ls-num">Attempts</th>' +
+      '<th class="ls-num ls-first" title="Average score of the team\'s first attempts (retakes and entrance tests not counted)">1st-try<br>avg</th>' +
+      '<th class="ls-num" title="Chapters passed at the first attempt / chapters attempted">1st-try<br>passes</th>' +
+      '<th class="ls-num" title="Problems with full marks / problems received, first attempts only">Perfect<br>problems</th>' +
+      '<th class="ls-num" title="Share of the points on each paper\'s hardest problems (worth 20+ points), first attempts only">Hard-<br>problem %</th>' +
+      "<th>Latest<br>result</th></tr>";
+    var body = g.rows.map(function (t) {
+      return "<tr>" + rankCell(t) + teamCell(t) +
+        '<td class="ls-num">' + t.passed + '</td><td class="ls-num">' + t.points + "</td>" +
+        '<td class="ls-num">' + t.attempts + "</td>" + firstCells(t.first) + latestCell(t) + "</tr>";
+    }).join("");
+    return '<div class="ls-wrap"><table class="ls-table"><thead>' + head + "</thead><tbody>" + body + "</tbody></table></div>";
+  }
+
+  function chaptersTable(g) {
+    var chCols = [];
+    for (var n = 1; n <= g.maxChapter; n++) chCols.push(n);
+    var head = '<tr><th class="ls-rank ls-pin1">#</th><th class="ls-pin2">Team</th>' +
+      chCols.map(function (n) { return '<th class="ls-num">C' + n + "</th>"; }).join("") +
+      '<th class="ls-num ls-first">Passed</th><th class="ls-num">Points</th></tr>';
+    var body = g.rows.map(function (t) {
+      var chCells = chCols.map(function (n) {
+        var c = t.chapters[n];
+        if (!c) return '<td class="ls-num"></td>';
+        if (c.passed) return '<td class="ls-num ls-pass">' + esc(c.score) + "</td>";
+        return '<td class="ls-num ls-notyet" title="Not passed yet (best ' + esc(c.best) + ')">&#10007;</td>';
+      }).join("");
+      return "<tr>" + rankCell(t) + teamCell(t) + chCells +
+        '<td class="ls-num ls-first">' + t.passed + '</td><td class="ls-num">' + t.points + "</td></tr>";
+    }).join("");
+    return '<div class="ls-wrap"><table class="ls-table ls-chapters"><thead>' + head + "</thead><tbody>" + body + "</tbody></table></div>";
+  }
+
+  // view: "summary" (default) or "chapters"
+  function render(groups, view) {
+    if (!groups.length) return '<p class="ls-empty">No teams yet.</p>';
+    var table = view === "chapters" ? chaptersTable : summaryTable;
+    var html = groups.map(function (g) {
+      return '<h3 id="standings-level-' + g.level + '">Level ' + esc(g.level) + "</h3>" + table(g);
+    }).join("");
+    if (view !== "chapters" && groups.missingPapers && groups.missingPapers.length) {
+      html += '<p class="ls-status">Full marks per problem are not loaded yet for ' +
+        esc(groups.missingPapers.join(", ")) + ", so those papers are left out of Perfect problems and Hard-problem %.</p>";
+    }
+    return html;
+  }
+
+  function switcher(view) {
+    return '<div class="ls-views" role="group" aria-label="Standings view">' +
+      Object.keys(VIEWS).map(function (v) {
+        return '<button type="button" data-view="' + v + '"' + (v === view ? ' class="active" aria-pressed="true"' : ' aria-pressed="false"') +
+          ">" + VIEWS[v] + "</button>";
+      }).join("") + "</div>";
+  }
+
+  function savedView() {
+    try { var v = global.localStorage.getItem("mccStandingsView"); return VIEWS[v] ? v : "summary"; } catch (e) { return "summary"; }
+  }
+  function saveView(v) { try { global.localStorage.setItem("mccStandingsView", v); } catch (e) { /* private mode */ } }
 
   function mount(el) {
     el.innerHTML = '<p class="ls-status">Loading the latest results&hellip;</p>';
     load().then(function (d) {
-      el.innerHTML = render(compute(d.teams, d.exams)) +
-        '<p class="ls-status">Live from the <a href="' + PUBLIC_ROSTER_URL + '">MCC Public Roster</a>, loaded ' +
+      var groups = compute(d.teams, d.exams), view = savedView();
+      var footer = '<p class="ls-status">Live from the <a href="' + PUBLIC_ROSTER_URL + '">MCC Public Roster</a>, loaded ' +
         esc(new Date().toLocaleString()) + ". A result appears here as soon as it is graded.</p>";
+      var draw = function () {
+        el.innerHTML = switcher(view) + render(groups, view) + footer;
+        Array.prototype.forEach.call(el.querySelectorAll(".ls-views button"), function (b) {
+          b.addEventListener("click", function () {
+            view = b.getAttribute("data-view"); saveView(view); draw();
+          });
+        });
+      };
+      draw();
     }).catch(function (err) {
       el.innerHTML = '<p class="ls-status">The standings could not be loaded right now (' + esc(err.message) +
         '). You can see every graded test on the <a href="' + PUBLIC_ROSTER_URL + '">MCC Public Roster</a>.</p>';

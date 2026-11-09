@@ -589,6 +589,23 @@ figure.screenshot figcaption {
 .ls-table th { line-height: 1.2; vertical-align: bottom; }
 .ls-table td.ls-team { white-space: normal; min-width: 7.5em; max-width: 12em; }
 .ls-table .ls-first { border-left: 2px solid #e2d6c8; }
+.ls-table .ls-rank { width: 2.4em; min-width: 2.4em; max-width: 2.4em; box-sizing: border-box; }
+/* View switch: Summary / By chapter */
+.ls-views { display: inline-flex; border: 1px solid var(--rule); border-radius: var(--radius); overflow: hidden; margin: .4em 0 0; }
+.ls-views button { border: 0; background: var(--white); color: var(--ink); padding: 6px 14px; font: inherit; font-size: 14.5px; cursor: pointer; }
+.ls-views button.active { background: var(--brand); color: var(--white); }
+/* Rank and team stay pinned while the rest scrolls (both views).
+   The global table rule sets overflow:hidden, which would stop sticky cells. */
+.ls-table { overflow: visible; }
+.ls-table.ls-chapters { width: auto; min-width: 100%; }
+.ls-table .ls-pin1, .ls-table .ls-pin2 { position: sticky; z-index: 1; background: var(--white); }
+.ls-table tbody tr:nth-child(even) .ls-pin1, .ls-table tbody tr:nth-child(even) .ls-pin2 { background: #fffdf8; }
+.ls-table th.ls-pin1, .ls-table th.ls-pin2 { background: var(--brand); z-index: 2; }
+.ls-table .ls-pin1 { left: 0; }
+.ls-table .ls-pin2 { left: 2.4em; box-shadow: 2px 0 0 #e2d6c8; }
+/* Phones: the site turns every table into its own scroller (display:block),
+   which stops the pinned columns; the .ls-wrap scrolls instead. */
+@media (max-width: 640px) { .ls-table { display: table; overflow: visible; } }
 .ls-table .ls-num { text-align: center; }
 .ls-pass { color: #2e7d32; font-weight: 700; }
 .ls-fail { color: #c62828; font-weight: 700; }
