@@ -9,7 +9,7 @@ This page is the club's live index, for every role: where the roster and every t
 **Jump to:** [Sunday session](#sunday-session) · [Team standings](#team-standings) · [Start here](#start-here) · [Where the data lives](#where-the-clubs-data-lives) · [Glossary](#glossary) · [The public roster](#the-public-roster) · [For Parents & Students](#for-parents--students) · [Coordinator & organizer resources](#coordinator--organizer-resources) · [For Graders](#for-graders){% if site.show_test_material %} · [Test suites](#test-suites){% endif %}
 
 <div class="note" id="sunday-session" markdown="0">
-<strong>Next Sunday session: Sunday 8 November, 7:00–8:30 AM Pacific Time (PT, UTC−7: Victoria/B.C. time, which no longer changes in winter). Students present their perfect-score solutions from the Chapter 3 team tests.</strong>
+<strong>Next Sunday session: Sunday 8 November, 7:00–8:30 AM Pacific Standard Time (PST), which is 8:00–9:30 AM in Victoria/B.C. Students present their perfect-score solutions from the Chapter 3 team tests.</strong>
 <p>Every problem on which a team scored full marks is presented once, by one team. When several teams solved it, the best-written solution is chosen, and the problems are shared out so that as many teams as possible present. Allow about 5 to 6 minutes per problem. <em>Provisional until Saturday 7 November:</em> a team that sits Chapter 3 by then and scores full marks on a problem will be added to this list, and problems may be moved so that as many teams as possible present. Teams that sit the test on Sunday 8 November are not invited this time. The coding contest runs on the alternate Sundays (1 and 15 November, see <a href="./toml.html">TOML</a>).</p>
 <h3>7:00–7:45 AM: Levels T1 and T2</h3>
 <div class="ls-wrap"><table class="ls-table">
@@ -35,7 +35,7 @@ This page is the club's live index, for every role: where the roster and every t
 <details class="vn" markdown="1">
 <summary>🇻🇳 Tiếng Việt — Buổi sinh hoạt Chủ nhật 8/11 (click to expand)</summary>
 
-Chủ nhật 8/11, 7:00–8:30 sáng giờ Victoria/B.C. (UTC−7; B.C. không còn đổi giờ vào mùa đông): học sinh trình bày các lời giải đạt điểm tuyệt đối trong bài thi đội Chương 3. Mỗi bài có đội đạt điểm tối đa được trình bày một lần, bởi một đội. Khi nhiều đội cùng giải được một bài, chúng tôi chọn lời giải viết tốt nhất và chia các bài sao cho nhiều đội được trình bày nhất: nếu một đội có hai bài trong danh sách và một đội chưa được mời cũng đạt điểm tối đa ở một trong hai bài đó, bài đó được chuyển cho đội kia. Mỗi bài khoảng 5–6 phút.
+Chủ nhật 8/11, 7:00–8:30 sáng giờ Pacific Standard Time (PST), tức 8:00–9:30 sáng giờ Victoria/B.C.: học sinh trình bày các lời giải đạt điểm tuyệt đối trong bài thi đội Chương 3. Mỗi bài có đội đạt điểm tối đa được trình bày một lần, bởi một đội. Khi nhiều đội cùng giải được một bài, chúng tôi chọn lời giải viết tốt nhất và chia các bài sao cho nhiều đội được trình bày nhất: nếu một đội có hai bài trong danh sách và một đội chưa được mời cũng đạt điểm tối đa ở một trong hai bài đó, bài đó được chuyển cho đội kia. Mỗi bài khoảng 5–6 phút.
 
 * **7:00–7:45:** T1 và T2 (bảng thứ nhất ở trên).
 * **7:45–8:30:** T3 (bảng thứ hai ở trên).
@@ -48,12 +48,11 @@ Danh sách này còn tạm thời cho đến hết thứ Bảy 7/11: đội nào
 
 Every active team, by level. Teams are ranked by **chapters passed**, then by **points** (the sum of their passing scores); a team gets a rank once it has passed its first chapter. The C1, C2, … columns show the score with which each chapter was passed; ✗ means the chapter has been attempted but not passed yet. **Attempts** counts every graded test, retakes included. The table updates by itself: a result appears here as soon as it has been graded.
 
-The last five number columns show how strong a team is on a fresh paper. They count **first attempts only** (no retakes, no entrance tests) and are not used for the ranking:
+The last four number columns show how strong a team is on a fresh paper. They count **first attempts only** (no retakes, no entrance tests) and are not used for the ranking:
 
 * **1st-try avg**: the average score of the team's first attempts.
 * **1st-try passes**: chapters passed at the first attempt, out of chapters attempted (a missed test counts as an attempt not passed).
-* **Perfect**: the number of problems solved for full marks.
-* **Perfect rate**: problems with full marks out of problems received, e.g. 7/18 · 39%.
+* **Perfect problems**: problems solved for full marks, out of problems received, e.g. 7/18 · 39%.
 * **Hard-problem %**: the share of points the team earned on the hardest problems of each paper (those worth 20 points or more).
 
 Read the rates together with the counts: a team with one test behind it can show a high rate on a small number of problems.
@@ -62,19 +61,18 @@ Teams are shown by their own team name (or by their team ID if they have not cho
 
 <div id="live-standings" class="live-standings"></div>
 <script src="{{ '/assets/js/paper-points.js' | relative_url }}?v=1"></script>
-<script src="{{ '/assets/js/live-standings.js' | relative_url }}?v=4"></script>
+<script src="{{ '/assets/js/live-standings.js' | relative_url }}?v=5"></script>
 
 <details class="vn" markdown="1">
 <summary>🇻🇳 Tiếng Việt — Bảng xếp hạng các đội (click to expand)</summary>
 
 Mọi đội đang hoạt động, chia theo level. Các đội được xếp hạng theo **số chương đã đạt**, rồi theo **điểm** (tổng điểm của các bài đạt); một đội có thứ hạng từ khi đạt chương đầu tiên. Các cột C1, C2, … là điểm của bài đạt ở chương đó; ✗ nghĩa là đội đã thi chương đó nhưng chưa đạt. Cột **Attempts** đếm mọi bài thi đã chấm, kể cả thi lại. Bảng tự cập nhật: kết quả xuất hiện ngay khi bài được chấm xong.
 
-Năm cột số cuối cho thấy đội mạnh đến đâu khi gặp một đề mới. Các cột này **chỉ tính lần thi đầu** của mỗi chương (không tính thi lại, không tính bài thi đầu vào) và không dùng để xếp hạng:
+Bốn cột số cuối cho thấy đội mạnh đến đâu khi gặp một đề mới. Các cột này **chỉ tính lần thi đầu** của mỗi chương (không tính thi lại, không tính bài thi đầu vào) và không dùng để xếp hạng:
 
 * **1st-try avg**: điểm trung bình các lần thi đầu.
 * **1st-try passes**: số chương đạt ngay lần thi đầu, trên số chương đã thi (bỏ lỡ một buổi thi được tính là một lần thi không đạt).
-* **Perfect**: số bài đạt điểm tối đa.
-* **Perfect rate**: số bài đạt điểm tối đa trên số bài đã nhận, ví dụ 7/18 · 39%.
+* **Perfect problems**: số bài đạt điểm tối đa trên số bài đã nhận, ví dụ 7/18 · 39%.
 * **Hard-problem %**: tỉ lệ điểm đội giành được ở các bài khó nhất của mỗi đề (các bài từ 20 điểm trở lên).
 
 Nên đọc tỉ lệ cùng với con số: một đội mới thi một bài có thể có tỉ lệ cao chỉ nhờ ít bài.
