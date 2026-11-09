@@ -6,7 +6,8 @@
 // Last rewritten 2026-09-29 after a full rehearsal with test students
 // S007/S008 (see "Tested" below).
 //
-// WHAT HAPPENS ON A CONTEST SUNDAY (America/Vancouver time)
+// WHAT HAPPENS ON A CONTEST SUNDAY (US Pacific time, America/Los_Angeles: PST in winter;
+// B.C. stays on UTC-7 since Nov 2026, so 8:00 PST = 9:00 in Victoria)
 //   7:55  roundStart  publish + open the form; share that round's two papers
 //                     (MCC-Coding-Test<n>-MS.pdf / -HS.pdf in the Papers
 //                     folder) as viewer with every email in the roster's
@@ -58,7 +59,7 @@ var PAPER_FOLDER_ID = '1sUwL0EFIWoCn-3Gkfsrb-3OGKPgIm_ZD';   // My Drive > mcc-a
 var SCHEDULE_TAB_NAME = 'Schedule';
 var PAPER_LOG_TAB = 'Paper share log';
 var INTAKE_LOG_TAB = 'Intake log';
-var TIMEZONE = 'America/Vancouver';
+var TIMEZONE = 'America/Los_Angeles';   // contest clock = US Pacific (Nghia, 9 Nov 2026: Seattle students)
 var TESTER_IDS = ['S007', 'S008'];
 
 // close = the late cutoff; closeTrigger is when the form actually stops.
