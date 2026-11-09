@@ -580,9 +580,15 @@ figure.screenshot figcaption {
 
 /* ---------- Live team standings (current-standings.md) ------------------- */
 .live-standings h3 { margin-top: 1.4em; }
-.ls-wrap { overflow-x: auto; }
-.ls-table { font-size: 14.5px; }
-.ls-table th, .ls-table td { padding: 7px 10px; white-space: nowrap; }
+.ls-wrap { overflow-x: auto; scrollbar-width: thin; scrollbar-color: #c9b9a8 transparent; }
+/* macOS hides overlay scrollbars: keep one visible so a cut-off column is noticed (phones) */
+.ls-wrap::-webkit-scrollbar { height: 8px; }
+.ls-wrap::-webkit-scrollbar-thumb { background: #c9b9a8; border-radius: 4px; }
+.ls-table { font-size: 13.5px; }
+.ls-table th, .ls-table td { padding: 6px 7px; white-space: nowrap; }
+.ls-table th { line-height: 1.2; vertical-align: bottom; }
+.ls-table td.ls-team { white-space: normal; min-width: 7.5em; max-width: 12em; }
+.ls-table .ls-first { border-left: 2px solid #e2d6c8; }
 .ls-table .ls-num { text-align: center; }
 .ls-pass { color: #2e7d32; font-weight: 700; }
 .ls-fail { color: #c62828; font-weight: 700; }

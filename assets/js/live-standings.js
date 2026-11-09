@@ -27,8 +27,8 @@
 //   1st-try avg    mean Total of the first-attempt papers (a missed test
 //                  counts in 1st-try passes but has no score to average)
 //   1st-try passes first attempts passed / first attempts graded
-//   Perfect        problems with full marks on first-attempt papers
-//   Perfect rate   Perfect / problems received on those papers (with the %)
+//   Perfect problems  problems with full marks / problems received on those
+//                  papers, with the % (one column, so the table fits the page)
 //   Hard-problem % points earned / points available on each paper's hardest
 //                  problems (those worth 20+ points: the 20-pt problems on
 //                  T1/T3 papers, the 25-pt ones on T2/T4)
@@ -216,20 +216,22 @@
 
   var MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
   function shortDate(d) { return d ? MONTHS[d.getMonth()] + " " + d.getDate() + ", " + d.getFullYear() : ""; }
+  // Latest result: the year is obvious within a school year and costs width.
+  function shortDateNoYear(d) { return d ? MONTHS[d.getMonth()] + " " + d.getDate() : ""; }
 
   function pct(a, b) { return Math.round(100 * a / b) + "%"; }
 
   function firstCells(f) {
-    if (!f || !f.graded) return '<td class="ls-num"></td><td class="ls-num"></td><td class="ls-num"></td><td class="ls-num"></td><td class="ls-num"></td>';
+    if (!f || !f.graded) return '<td class="ls-num ls-first"></td><td class="ls-num"></td><td class="ls-num"></td><td class="ls-num"></td>';
     var avg = f.scored ? Math.round(10 * f.totalSum / f.scored) / 10 : "";
     var cells = [avg, f.passed + "/" + f.graded];
     if (f.received) {
-      cells.push(f.perfect, f.perfect + "/" + f.received + " &middot; " + pct(f.perfect, f.received),
+      cells.push(f.perfect + "/" + f.received + ' <span class="ls-date">' + pct(f.perfect, f.received) + "</span>",
         f.hardAvail ? pct(f.hardEarned, f.hardAvail) : "");
     } else {
-      cells.push("", "", "");
+      cells.push("", "");
     }
-    return cells.map(function (c) { return '<td class="ls-num">' + c + "</td>"; }).join("");
+    return cells.map(function (c, i) { return '<td class="ls-num' + (i ? "" : " ls-first") + '">' + c + "</td>"; }).join("");
   }
 
   function render(groups) {
@@ -237,15 +239,14 @@
     return groups.map(function (g) {
       var chCols = [];
       for (var n = 1; n <= g.maxChapter; n++) chCols.push(n);
-      var head = "<tr><th>#</th><th>Team</th><th>Chapters passed</th><th>Points</th>" +
+      var head = '<tr><th>#</th><th>Team</th><th class="ls-num">Chapters<br>passed</th><th class="ls-num">Points</th>' +
         chCols.map(function (n) { return '<th class="ls-num">C' + n + "</th>"; }).join("") +
-        "<th>Attempts</th>" +
-        '<th class="ls-num" title="Average score of the team\'s first attempts (retakes and entrance tests not counted)">1st-try avg</th>' +
-        '<th class="ls-num" title="Chapters passed at the first attempt / chapters attempted">1st-try passes</th>' +
-        '<th class="ls-num" title="Problems solved for full marks on first-attempt papers">Perfect</th>' +
-        '<th class="ls-num" title="Problems with full marks / problems received, first attempts only">Perfect rate</th>' +
-        '<th class="ls-num" title="Share of the points on each paper\'s hardest problems (worth 20+ points), first attempts only">Hard-problem %</th>' +
-        "<th>Latest result</th></tr>";
+        '<th class="ls-num">Attempts</th>' +
+        '<th class="ls-num ls-first" title="Average score of the team\'s first attempts (retakes and entrance tests not counted)">1st-try<br>avg</th>' +
+        '<th class="ls-num" title="Chapters passed at the first attempt / chapters attempted">1st-try<br>passes</th>' +
+        '<th class="ls-num" title="Problems with full marks / problems received, first attempts only">Perfect<br>problems</th>' +
+        '<th class="ls-num" title="Share of the points on each paper\'s hardest problems (worth 20+ points), first attempts only">Hard-<br>problem %</th>' +
+        "<th>Latest<br>result</th></tr>";
       var body = g.rows.map(function (t) {
         var chCells = chCols.map(function (n) {
           var c = t.chapters[n];
@@ -256,11 +257,11 @@
         var latest = t.latest
           ? "C" + esc(t.latest.chapter) + " &middot; " + esc(t.latest.total) + " &middot; " +
             '<span class="' + (t.latest.result === "Pass" ? "ls-pass" : "ls-fail") + '">' + esc(t.latest.result) + "</span>" +
-            (t.latest.graded ? ' &middot; <span class="ls-date">' + esc(shortDate(t.latest.graded)) + "</span>" : "")
+            (t.latest.graded ? '<br><span class="ls-date">' + esc(shortDateNoYear(t.latest.graded)) + "</span>" : "")
           : '<span class="ls-date">not started</span>';
         // No rank until a team has passed a chapter: at 0 passed and 0
         // points everyone would tie for 1st, which says nothing.
-        return "<tr><td>" + (t.passed ? t.rank : "&ndash;") + "</td><td><strong>" + esc(t.teamName || t.teamId) + "</strong></td>" +
+        return "<tr><td>" + (t.passed ? t.rank : "&ndash;") + '</td><td class="ls-team"><strong>' + esc(t.teamName || t.teamId) + "</strong></td>" +
           '<td class="ls-num">' + t.passed + '</td><td class="ls-num">' + t.points + "</td>" +
           chCells + '<td class="ls-num">' + t.attempts + "</td>" + firstCells(t.first) + "<td>" + latest + "</td></tr>";
       }).join("");
