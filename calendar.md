@@ -46,7 +46,7 @@ These hold from November to mid-March 2027.
 | September – December | First semester, ending with the semester exam |
 | January – June | Second semester |
 | Every two weeks, on Sundays | Math Sunday and the TOML coding contest, in turn ([Programs](./programs.md#the-weekly-sunday-session)) |
-| Any time in the school year | New teams register and sit the two-day entrance test on dates they choose ([Programs](./programs.md#entrance-and-reassessment)) |
+| Any time in the school year | New teams register and sit the two-day entrance test on dates they choose ([Programs](./programs.md#entrance-and-reassessment)); try the free [readiness check](./readiness.md) first |
 | Spring 2027, before Easter | 🥚 The Mystical Egg, for ingenuity on puzzle-style problems |
 | April 2027 | 🌍 [Purple Comet! Math Meet](./purple-comet-2026.md) |
 | June 2027 | End of year: the MCC Championship, Top Perfect-Scorers and special recognition ([Awards](./programs.md#awards-through-the-year)) |

@@ -95,6 +95,8 @@ Students work in **teams of two**. Teams of three are possible with approval.
 
 New students sit an entrance test when they join; returning students are reassessed at the start of each school year, unless they are exempt.
 
+**Not sure your child is ready?** Try the free [readiness check](./readiness.md) first: four problems from a past entrance test, 60 minutes, answers checked on the page.
+
 **New students** take the entrance test, which Teacher Nghia prepares when their registration arrives. It runs over **two days**; the two scores are averaged. If the first day goes much better or much worse than expected, the level can be adjusted before the second day — which is why papers are graded immediately after each sitting. A "fail" on day one is information, not a verdict.
 
 **Returning students** are reassessed on the same schedule. Think of it as restarting the habits of last year rather than as a judgement. The exemptions, based on last year's results:
