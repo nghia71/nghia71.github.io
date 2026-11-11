@@ -69,7 +69,7 @@ Papers at adjacent levels on the same chapter share a number of problems: T1 wit
 
 ## The semester exam
 
-Each semester ends with a **semester exam**, the club's own internal olympiad. The first one is on **Saturday 19 and Sunday 20 December 2026**, just before Christmas.
+Each semester ends with a **semester exam**, the club's own internal olympiad. The first one is on **Saturday 12 and Sunday 13 December 2026**, just before Christmas.
 
 **What it covers.** Only chapters your team has already studied and passed this semester, and nothing from outside the curriculum. Because every team moves at its own pace, every team's paper is different, drawn from its own chapters.
 
@@ -101,7 +101,7 @@ Once a team has passed it, its semester score is weighted half and half:
 <details class="vn" markdown="1">
 <summary>🇻🇳 Tiếng Việt — Thi học kỳ (click to expand)</summary>
 
-**Thi học kỳ.** Mỗi học kỳ kết thúc bằng một kỳ thi học kỳ, cũng là kỳ thi Olympic nội bộ của câu lạc bộ. Kỳ thi đầu tiên diễn ra vào **thứ Bảy 19 và Chủ nhật 20 tháng 12 năm 2026**, trước Giáng sinh.
+**Thi học kỳ.** Mỗi học kỳ kết thúc bằng một kỳ thi học kỳ, cũng là kỳ thi Olympic nội bộ của câu lạc bộ. Kỳ thi đầu tiên diễn ra vào **thứ Bảy 12 và Chủ nhật 13 tháng 12 năm 2026**, trước Giáng sinh.
 
 **Phạm vi.** Chỉ các chương đội đã học và đã thi đạt trong học kỳ, không kiểm tra kiến thức ngoài chương trình. Vì mỗi đội học theo nhịp độ riêng, đề thi của mỗi đội khác nhau, lấy từ chính các chương của đội đó.
 
@@ -161,7 +161,7 @@ All assignments and tests are graded with comments — briefly on assignments, i
 
 **The written evaluation of each paper is private to the team.** It says what each problem was testing, what went wrong and why, and how to fix it. Every team at a level sits the same paper at a different time, so an evaluation is never made public: it goes to the students and parents of that team only, through their coordinator.
 
-Selected teams present their solutions as part of the club's weekly Sunday session (see [Programs](./programs.md#the-weekly-sunday-session)), or send a recording if both members are away.
+Selected teams present their solutions as part of the club's Sunday session (see [Programs](./programs.md#the-weekly-sunday-session)), or send a recording if both members are away.
 
 ## The yearbook
 

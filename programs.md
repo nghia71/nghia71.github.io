@@ -46,7 +46,7 @@ MCC runs four team training tracks, **T1 to T4**. Every track uses the same rhyt
 
 ## The school year
 
-The year has two semesters: **September to December**, ending with the [semester exam](#the-semester-exam) (19–20 December 2026), and **January to June**. The club does not run in July and August.
+The year has two semesters: **September to December**, ending with the [semester exam](#the-semester-exam) (12–13 December 2026), and **January to June**. The club does not run in July and August.
 
 **New members can join at any time during the school year.** Because every team moves at its own pace, a team that joins mid-year starts at Chapter 1 like everyone else; there is nothing to catch up with. See [Join MCC](./register.md) for how.
 
@@ -74,9 +74,9 @@ T1 and T2 papers are graded by Mr. Nghia; T3 and T4 papers are graded by Mr. Toa
 
 ## The semester exam
 
-Each semester ends with a proctored **semester exam**, the club's internal olympiad; the first is on **19–20 December 2026**. It covers only the chapters a team has passed that semester, it has to be passed for the semester to count, and once it is passed the semester score is half chapter tests, half semester exam. See [Tests](./tests.md#the-semester-exam) for the format, the proctoring, and what happens if it is not passed.
+Each semester ends with a proctored **semester exam**, the club's internal olympiad; the first is on **12–13 December 2026**. It covers only the chapters a team has passed that semester, it has to be passed for the semester to count, and once it is passed the semester score is half chapter tests, half semester exam. See [Tests](./tests.md#the-semester-exam) for the format, the proctoring, and what happens if it is not passed.
 
-## The weekly Sunday session
+## The Sunday session {#the-weekly-sunday-session}
 
 Because each team now tests at its own pace, Sunday is the club's one shared session. It runs on a two-week cycle:
 
@@ -119,7 +119,7 @@ For the test format itself — how the six problems are built and scored — see
 
 ❄ **Snowflake Cup** *(December, just before Christmas)* — "every solution, like every snowflake, is unique." For the most elegant and best-written solutions of the first semester.
 
-🏅 **The semester exam** *(19–20 December 2026)* — the club's internal olympiad. The best results earn prizes.
+🏅 **The semester exam** *(12–13 December 2026)* — the club's internal olympiad. The best results earn prizes.
 
 🥚 **The Mystical Egg** *(April, just before Easter)* — "every problem hides a clever trick — can you find it?" For ingenuity on puzzle-style problems.
 

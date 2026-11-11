@@ -30,7 +30,7 @@ Because MCC families are spread across many time zones, the Parents' Association
 
 See [Programs](./programs.md#grading) for the full registration and grading workflow, and [Tests](./tests.md) for the test format itself.
 
-## The weekly Sunday session
+## The Sunday session
 
 Sunday is the club's one shared session for everyone, regardless of each team's own testing pace. It runs on a two-week cycle:
 
@@ -73,7 +73,7 @@ Vì học sinh MCC ở nhiều múi giờ khác nhau, Hội PH được chia th�
 
 Xem [Programs](./programs.md#grading) để biết đầy đủ quy trình đăng ký và chấm bài, và [Tests](./tests.md) để biết cấu trúc đề thi.
 
-## Sinh hoạt Chủ nhật hàng tuần
+## Sinh hoạt Chủ nhật
 
 Chủ nhật là buổi sinh hoạt chung duy nhất cho toàn câu lạc bộ, không phụ thuộc vào nhịp độ kiểm tra riêng của từng đội. Sinh hoạt theo chu kỳ hai tuần:
 

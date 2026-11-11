@@ -25,7 +25,7 @@ We teach problem solving, not formulas. Our students learn to read a problem car
 
 The 2026-2027 school year began on **8 September 2026**, and **new members can join at any point during the school year**. Each team follows its own personalised pace through the curriculum, with **[LPS VI and LPS VII](./books.md)** as the two textbooks, so a team that joins mid-year simply starts at Chapter 1.
 
-Day-to-day organisation — team assignments, regional contacts, the testing workflow, and the weekly Sunday session — is run by the **Parents' Association**, under Ms. Minh Thu.
+Day-to-day organisation — team assignments, regional contacts, the testing workflow, and the Sunday session — is run by the **Parents' Association**, under Ms. Minh Thu.
 
 [How to join](./register.md){: .btn}
 [Meet the team & find your contact](./organization.md){: .btn .secondary}
@@ -37,7 +37,7 @@ Day-to-day organisation — team assignments, regional contacts, the testing wor
 
 **📣 MCC nhận thành viên mới quanh năm.** Năm học 2026-2027 đã khai giảng ngày **8 tháng 9 năm 2026**, và **các em có thể tham gia vào bất kỳ thời điểm nào trong năm học**. Mỗi đội học theo nhịp độ cá nhân hóa riêng qua bộ giáo trình **[LPS VI và LPS VII](./books.md)**, nên một đội vào giữa năm chỉ đơn giản bắt đầu từ chương 1.
 
-Việc tổ chức hằng ngày — phân đội, đầu mối liên lạc theo khu vực, quy trình đăng ký học/thi, và buổi sinh hoạt Chủ nhật hàng tuần — do **Hội Phụ huynh** phụ trách, dưới sự điều phối của Cô Minh Thu.
+Việc tổ chức hằng ngày — phân đội, đầu mối liên lạc theo khu vực, quy trình đăng ký học/thi, và buổi sinh hoạt Chủ nhật — do **Hội Phụ huynh** phụ trách, dưới sự điều phối của Cô Minh Thu.
 
 [Cách tham gia](./register.md){: .btn}
 [Xem đầu mối liên lạc](./organization.md){: .btn .secondary}
@@ -134,7 +134,7 @@ Students work in pairs, moving through the curriculum at their own pace: study a
 
 ## The Coding Programme
 
-**[TOML](./toml.html)** is now the home of the club's coding programme, open to Middle School and High School students alike: three problems a week at your level, solved and submitted online with feedback on each one, plus a coding competition every few weeks as part of the rotating weekly Sunday session.
+**[TOML](./toml.html)** is now the home of the club's coding programme, open to Middle School and High School students alike: three problems a week at your level, solved and submitted online with feedback on each one, plus a coding contest every other Sunday, alternating with the Math Sunday session.
 
 ## The club in 2026-2027
 

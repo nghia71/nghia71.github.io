@@ -8,7 +8,7 @@ title: Join MCC
 
 ## The school year
 
-The year has two semesters: **September to December**, ending with the [semester exam](./tests.md#the-semester-exam) (19–20 December 2026), and **January to June**. The club does not run in July and August; a registration that arrives over the summer starts in September.
+The year has two semesters: **September to December**, ending with the [semester exam](./tests.md#the-semester-exam) (12–13 December 2026), and **January to June**. The club does not run in July and August; a registration that arrives over the summer starts in September.
 
 ## How to join
 
@@ -45,7 +45,7 @@ Teams that joined during the year, newest first. Each team sits two papers on it
 
 **MCC nhận thành viên mới trong suốt năm học.** Mỗi đội đã học theo nhịp độ riêng, nên không có lớp nào phải đuổi theo: một đội vào tháng Giêng bắt đầu từ chương 1, như một đội vào tháng Chín.
 
-**Năm học** có hai học kỳ: **tháng 9 đến tháng 12**, kết thúc bằng [kỳ thi học kỳ](./tests.md#the-semester-exam) (19–20/12/2026), và **tháng 1 đến tháng 6**. Câu lạc bộ không hoạt động vào tháng 7 và tháng 8; đăng ký nhận được trong mùa hè sẽ bắt đầu từ tháng 9.
+**Năm học** có hai học kỳ: **tháng 9 đến tháng 12**, kết thúc bằng [kỳ thi học kỳ](./tests.md#the-semester-exam) (12–13/12/2026), và **tháng 1 đến tháng 6**. Câu lạc bộ không hoạt động vào tháng 7 và tháng 8; đăng ký nhận được trong mùa hè sẽ bắt đầu từ tháng 9.
 
 **Cách tham gia:**
 
