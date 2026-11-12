@@ -55,18 +55,26 @@ dl.notes{display:grid;grid-template-columns:150px 1fr;gap:6px 14px;margin:0;font
 @media (max-width:900px){.layout{grid-template-columns:1fr}nav{position:static;height:auto}.desc{grid-template-columns:1fr}dl.notes{grid-template-columns:1fr}}
 @media print{nav{display:none}.layout{display:block}body{background:#fff}.bar button{display:none}.card{break-inside:auto}.desc,table.can,.out,dl.notes{break-inside:avoid}h3,h4{break-after:avoid}}
 @page{size:900px 1300px;margin:12px}
+
+.vid{display:inline-block;font-size:12px;border-radius:999px;padding:1px 10px;margin:0 6px 4px 0;background:#fff7ed;color:#c2410c;border:1px solid #fed7aa;text-decoration:none;font-weight:600}
+.vid:hover{background:#ffedd5}
+.vid.off{background:#f3f4f6;color:var(--muted);border-color:var(--line);font-weight:400}
+ol.vids{margin:4px 0 0;padding-left:22px;font-size:14px;columns:2;column-gap:28px} ol.vids li{margin:2px 0;break-inside:avoid}
+nav a.navvid{display:block;margin:0 0 8px;padding:4px 8px;border-radius:6px;background:#fff7ed;color:#c2410c;font-weight:600}
+@media (max-width:900px){ol.vids{columns:1}}
+@media print{.vid{border:0;padding:0}}
 </style></head>
 <body><div class="layout"><nav><h1>TOML Toolkit</h1><div class="sub">71 cards · draft</div>
-<input id="q" placeholder="Search: divisors, paths, area…" autocomplete="off"><details open><summary>Finishing and exact tools (8)</summary><a href="#FIN.FRAC.tools" data-id="FIN.FRAC.tools">Fractions: exact arithmetic, m/n in lowest terms, m + n<span class="lv">MS</span></a><a href="#FIN.FRAC.from_float" data-id="FIN.FRAC.from_float">Turn a decimal answer into a fraction, with a warning if it doesn&#x27;t fit<span class="lv">MS</span></a><a href="#FIN.SQF.squarefree" data-id="FIN.SQF.squarefree">Simplify square roots: √n = a√b with b square-free<span class="lv">MS</span></a><a href="#FIN.ID.identify" data-id="FIN.ID.identify">Identify an exact form from a decimal: p/q, (a + b√c)/d, qπ, √(p/q)<span class="lv">HS</span></a><a href="#FIN.CHECK.compare" data-id="FIN.CHECK.compare">Compare two methods on many inputs (a twin check for your own code)<span class="lv">MS</span></a><a href="#FIN.DEC.precise" data-id="FIN.DEC.precise">50-digit arithmetic: sqrt, π, sin, cos, exp, ln<span class="lv">HS</span></a><a href="#FIN.ROUND.floor_exact" data-id="FIN.ROUND.floor_exact">Greatest integer and integer roots without float traps<span class="lv">MS</span></a><a href="#FIN.SEARCH.first" data-id="FIN.SEARCH.first">Least, greatest, count of n with a property (search with limits)<span class="lv">MS</span></a></details><details open><summary>Number theory (15)</summary><a href="#NT.FAC.factorize" data-id="NT.FAC.factorize">Prime factorisation {p: e}<span class="lv">MS</span></a><a href="#NT.GCD.basic" data-id="NT.GCD.basic">gcd and lcm of many numbers (and of fractions)<span class="lv">MS</span></a><a href="#NT.ARITH.phi" data-id="NT.ARITH.phi">Euler&#x27;s φ: how many k ≤ n are coprime to n<span class="lv">HS</span></a><a href="#NT.DIGIT.base" data-id="NT.DIGIT.base">Base conversion for integers and fractions<span class="lv">MS</span></a><a href="#NT.DIGIT.digits" data-id="NT.DIGIT.digits">Digits in any base: list, sum, product, reverse, palindrome<span class="lv">MS</span></a><a href="#NT.DIGIT.kth_digit" data-id="NT.DIGIT.kth_digit">The k-th digit of 123456789101112… and similar strings<span class="lv">MS</span></a><a href="#NT.DIV.count" data-id="NT.DIV.count">Divisors: list, count, sum<span class="lv">MS</span></a><a href="#NT.MOD.order" data-id="NT.MOD.order">Multiplicative order: when do the powers of a repeat mod m?<span class="lv">HS</span></a><a href="#NT.DIGIT.repeating" data-id="NT.DIGIT.repeating">Repeating decimals: to fraction and back, period length<span class="lv">MS</span></a><a href="#NT.FAC.legendre" data-id="NT.FAC.legendre">Exponent of a prime in n! (Legendre&#x27;s formula)<span class="lv">MS</span></a><a href="#NT.FAC.trailing_zeros" data-id="NT.FAC.trailing_zeros">Trailing zeros of n! in base 10 or any base; highest power of k in n!<span class="lv">MS</span></a><a href="#NT.GCD.ext" data-id="NT.GCD.ext">Extended Euclid and modular inverse<span class="lv">HS</span></a><a href="#NT.MOD.crt" data-id="NT.MOD.crt">Chinese remainder theorem: one number with given remainders<span class="lv">MS</span></a><a href="#NT.PRIME.is_prime" data-id="NT.PRIME.is_prime">Is n prime? (fast and exact for any size)<span class="lv">MS</span></a><a href="#NT.PRIME.sieve" data-id="NT.PRIME.sieve">All primes up to N; smallest prime factor table<span class="lv">MS</span></a></details><details open><summary>Counting (12)</summary><a href="#COMB.ALPHA.solve" data-id="COMB.ALPHA.solve">Cryptarithms: letters stand for digits<span class="lv">MS</span></a><a href="#COMB.BINOM.choose" data-id="COMB.BINOM.choose">Binomial coefficients, Pascal rows, multinomials<span class="lv">MS</span></a><a href="#COMB.FIG.count" data-id="COMB.FIG.count">Count figures: rectangles, squares, triangles among points<span class="lv">MS</span></a><a href="#COMB.PART.partitions" data-id="COMB.PART.partitions">Partitions and coin change: unordered sums from allowed parts<span class="lv">MS</span></a><a href="#COMB.PATH.grid" data-id="COMB.PATH.grid">Paths on a grid (right and up), with blocked points<span class="lv">MS</span></a><a href="#COMB.PERM.filter" data-id="COMB.PERM.filter">Permutations with restrictions (build step by step, prune early)<span class="lv">MS</span></a><a href="#COMB.PERM.multiset" data-id="COMB.PERM.multiset">Arrangements of letters with repeats: count and list<span class="lv">MS</span></a><a href="#COMB.PERM.rank" data-id="COMB.PERM.rank">Position of a word in alphabetical order (rank and unrank)<span class="lv">MS</span></a><a href="#COMB.SEQ.automaton" data-id="COMB.SEQ.automaton">Count strings that follow rules, with a state machine (DP)<span class="lv">HS</span></a><a href="#COMB.STARS.bounded" data-id="COMB.STARS.bounded">Stars and bars, with lower and upper bounds<span class="lv">MS</span></a><a href="#COMB.SYM.groups" data-id="COMB.SYM.groups">Symmetries as position lists: polygon, necklace, square grid, cube<span class="lv">HS</span></a><a href="#COMB.SYM.canonical" data-id="COMB.SYM.canonical">Count arrangements up to rotation and reflection (canonical forms)<span class="lv">HS</span></a></details><details open><summary>Probability (4)</summary><a href="#PROB.DIST.finite" data-id="PROB.DIST.finite">Finite distributions with exact probabilities (dice, coins, sums, maxima)<span class="lv">MS</span></a><a href="#PROB.ENUM.space" data-id="PROB.ENUM.space">Probability by listing equally likely outcomes<span class="lv">MS</span></a><a href="#PROB.EXP.value" data-id="PROB.EXP.value">Expected value: exact, and by linearity with indicators<span class="lv">HS</span></a><a href="#PROB.MARKOV.absorb" data-id="PROB.MARKOV.absorb">Random processes: absorbing Markov chains (exact probabilities and expected times)<span class="lv">HS</span></a></details><details open><summary>Algebra (16)</summary><a href="#ALG.CALC.integrate" data-id="ALG.CALC.integrate">Areas under curves: adaptive Simpson&#x27;s rule<span class="lv">HS</span></a><a href="#ALG.ROOT.bisect" data-id="ALG.ROOT.bisect">Bisection: pin down a root between a sign change<span class="lv">MS</span></a><a href="#ALG.ROOT.real_roots" data-id="ALG.ROOT.real_roots">All real roots of f(x) = 0 on an interval<span class="lv">HS</span></a><a href="#ALG.EQ.find" data-id="ALG.EQ.find">Find x (or n) so that an equation holds: integer search, then exact or numeric<span class="lv">MS</span></a><a href="#ALG.INEQ.solve" data-id="ALG.INEQ.solve">Inequalities: integer solutions and solution intervals<span class="lv">MS</span></a><a href="#ALG.LIN.solve" data-id="ALG.LIN.solve">Linear systems solved exactly (Gauss with Fractions; rank, free variables)<span class="lv">MS</span></a><a href="#ALG.MEAN.stats" data-id="ALG.MEAN.stats">Mean, median, mode and range, exactly; find a missing value<span class="lv">MS</span></a><a href="#ALG.OPT.min1d" data-id="ALG.OPT.min1d">Maximum or minimum of a function of one variable<span class="lv">HS</span></a><a href="#ALG.POLY.arith" data-id="ALG.POLY.arith">Polynomials as coefficient lists: add, multiply, divide, evaluate<span class="lv">MS</span></a><a href="#ALG.POLY.roots" data-id="ALG.POLY.roots">All roots of a polynomial, complex ones included<span class="lv">HS</span></a><a href="#ALG.POLY.vieta" data-id="ALG.POLY.vieta">Vieta&#x27;s formulas: sums and products of roots, power sums<span class="lv">HS</span></a><a href="#ALG.REC.iterate" data-id="ALG.REC.iterate">Recurrences and iterated functions: terms, cycles, periods<span class="lv">MS</span></a><a href="#ALG.ROOT.intersect" data-id="ALG.ROOT.intersect">Where two graphs meet: f(x) = g(x)<span class="lv">HS</span></a><a href="#ALG.ROOT.system" data-id="ALG.ROOT.system">Solve non-linear systems numerically (Newton in several unknowns)<span class="lv">HS</span></a><a href="#ALG.SUM.partial" data-id="ALG.SUM.partial">Exact sums and products of many terms; watch the partial sums<span class="lv">MS</span></a><a href="#ALG.SYM.values" data-id="ALG.SYM.values">Expressions in a, b, c from given relations: solve for the numbers, then evaluate<span class="lv">HS</span></a></details><details open><summary>Geometry (10)</summary><a href="#GEO.PT.vec2" data-id="GEO.PT.vec2">2D points and vectors: add, dot, cross, length, angle, rotate<span class="lv">MS</span></a><a href="#GEO.3D.solids" data-id="GEO.3D.solids">Solids: box, prism, pyramid, cylinder, cone, frustum, sphere<span class="lv">MS</span></a><a href="#GEO.3D.vec3" data-id="GEO.3D.vec3">3D vectors: cross product, planes, distances, volumes from coordinates<span class="lv">HS</span></a><a href="#GEO.AREA.region" data-id="GEO.AREA.region">Areas of curved regions: sectors, segments, lenses, regions between graphs<span class="lv">HS</span></a><a href="#GEO.AREA.shoelace" data-id="GEO.AREA.shoelace">Area of a polygon from its vertices (shoelace formula)<span class="lv">MS</span></a><a href="#GEO.LINE.tools" data-id="GEO.LINE.tools">Lines: through two points, intersection, foot of perpendicular, reflection, distance<span class="lv">MS</span></a><a href="#GEO.CIRC.tools" data-id="GEO.CIRC.tools">Circles: through three points, meeting a line, meeting a circle, tangent lengths<span class="lv">HS</span></a><a href="#GEO.LAT.pick" data-id="GEO.LAT.pick">Lattice points on segments, on and inside polygons (Pick&#x27;s theorem)<span class="lv">HS</span></a><a href="#GEO.TRI.sides" data-id="GEO.TRI.sides">Triangle from its three sides: area, angles, heights, medians, R and r<span class="lv">MS</span></a><a href="#GEO.TRI.solve" data-id="GEO.TRI.solve">Solve a triangle: SAS, ASA, AAS, SSA (law of sines and cosines)<span class="lv">HS</span></a></details><details open><summary>Everyday and process (2)</summary><a href="#PROC.DATE.calendar" data-id="PROC.DATE.calendar">Calendars: weekday of a date, days between, leap years, counting dates<span class="lv">MS</span></a><a href="#PROC.RATE.word" data-id="PROC.RATE.word">Rates, work, mixtures and percents with exact fractions<span class="lv">MS</span></a></details><details open><summary>Picture tools (4)</summary><a href="#VIS.svg.canvas" data-id="VIS.svg.canvas">Picture canvas in the toolkit&#x27;s house style<span class="lv">MS</span></a><a href="#VIS.svg.lattice" data-id="VIS.svg.lattice">Grids with numbers at points and a highlighted path<span class="lv">MS</span></a><a href="#VIS.svg.plot" data-id="VIS.svg.plot">Graph functions and mark points<span class="lv">MS</span></a><a href="#VIS.svg.shapes" data-id="VIS.svg.shapes">Draw a figure from named points<span class="lv">MS</span></a></details></nav>
+<input id="q" placeholder="Search: divisors, paths, area…" autocomplete="off"><a href="#videos" class="navvid">▶ Video lessons</a><details open><summary>Finishing and exact tools (8)</summary><a href="#FIN.FRAC.tools" data-id="FIN.FRAC.tools">Fractions: exact arithmetic, m/n in lowest terms, m + n<span class="lv">MS</span></a><a href="#FIN.FRAC.from_float" data-id="FIN.FRAC.from_float">Turn a decimal answer into a fraction, with a warning if it doesn&#x27;t fit<span class="lv">MS</span></a><a href="#FIN.SQF.squarefree" data-id="FIN.SQF.squarefree">Simplify square roots: √n = a√b with b square-free<span class="lv">MS</span></a><a href="#FIN.ID.identify" data-id="FIN.ID.identify">Identify an exact form from a decimal: p/q, (a + b√c)/d, qπ, √(p/q)<span class="lv">HS</span></a><a href="#FIN.CHECK.compare" data-id="FIN.CHECK.compare">Compare two methods on many inputs (a twin check for your own code)<span class="lv">MS</span></a><a href="#FIN.DEC.precise" data-id="FIN.DEC.precise">50-digit arithmetic: sqrt, π, sin, cos, exp, ln<span class="lv">HS</span></a><a href="#FIN.ROUND.floor_exact" data-id="FIN.ROUND.floor_exact">Greatest integer and integer roots without float traps<span class="lv">MS</span></a><a href="#FIN.SEARCH.first" data-id="FIN.SEARCH.first">Least, greatest, count of n with a property (search with limits)<span class="lv">MS</span></a></details><details open><summary>Number theory (15)</summary><a href="#NT.FAC.factorize" data-id="NT.FAC.factorize">Prime factorisation {p: e}<span class="lv">MS</span></a><a href="#NT.GCD.basic" data-id="NT.GCD.basic">gcd and lcm of many numbers (and of fractions)<span class="lv">MS</span></a><a href="#NT.ARITH.phi" data-id="NT.ARITH.phi">Euler&#x27;s φ: how many k ≤ n are coprime to n<span class="lv">HS</span></a><a href="#NT.DIGIT.base" data-id="NT.DIGIT.base">Base conversion for integers and fractions<span class="lv">MS</span></a><a href="#NT.DIGIT.digits" data-id="NT.DIGIT.digits">Digits in any base: list, sum, product, reverse, palindrome<span class="lv">MS</span></a><a href="#NT.DIGIT.kth_digit" data-id="NT.DIGIT.kth_digit">The k-th digit of 123456789101112… and similar strings<span class="lv">MS</span></a><a href="#NT.DIV.count" data-id="NT.DIV.count">Divisors: list, count, sum<span class="lv">MS</span></a><a href="#NT.MOD.order" data-id="NT.MOD.order">Multiplicative order: when do the powers of a repeat mod m?<span class="lv">HS</span></a><a href="#NT.DIGIT.repeating" data-id="NT.DIGIT.repeating">Repeating decimals: to fraction and back, period length<span class="lv">MS</span></a><a href="#NT.FAC.legendre" data-id="NT.FAC.legendre">Exponent of a prime in n! (Legendre&#x27;s formula)<span class="lv">MS</span></a><a href="#NT.FAC.trailing_zeros" data-id="NT.FAC.trailing_zeros">Trailing zeros of n! in base 10 or any base; highest power of k in n!<span class="lv">MS</span></a><a href="#NT.GCD.ext" data-id="NT.GCD.ext">Extended Euclid and modular inverse<span class="lv">HS</span></a><a href="#NT.MOD.crt" data-id="NT.MOD.crt">Chinese remainder theorem: one number with given remainders<span class="lv">MS</span></a><a href="#NT.PRIME.is_prime" data-id="NT.PRIME.is_prime">Is n prime? (fast and exact for any size)<span class="lv">MS</span></a><a href="#NT.PRIME.sieve" data-id="NT.PRIME.sieve">All primes up to N; smallest prime factor table<span class="lv">MS</span></a></details><details open><summary>Counting (12)</summary><a href="#COMB.ALPHA.solve" data-id="COMB.ALPHA.solve">Cryptarithms: letters stand for digits<span class="lv">MS</span></a><a href="#COMB.BINOM.choose" data-id="COMB.BINOM.choose">Binomial coefficients, Pascal rows, multinomials<span class="lv">MS</span></a><a href="#COMB.FIG.count" data-id="COMB.FIG.count">Count figures: rectangles, squares, triangles among points<span class="lv">MS</span></a><a href="#COMB.PART.partitions" data-id="COMB.PART.partitions">Partitions and coin change: unordered sums from allowed parts<span class="lv">MS</span></a><a href="#COMB.PATH.grid" data-id="COMB.PATH.grid">Paths on a grid (right and up), with blocked points<span class="lv">MS</span></a><a href="#COMB.PERM.filter" data-id="COMB.PERM.filter">Permutations with restrictions (build step by step, prune early)<span class="lv">MS</span></a><a href="#COMB.PERM.multiset" data-id="COMB.PERM.multiset">Arrangements of letters with repeats: count and list<span class="lv">MS</span></a><a href="#COMB.PERM.rank" data-id="COMB.PERM.rank">Position of a word in alphabetical order (rank and unrank)<span class="lv">MS</span></a><a href="#COMB.SEQ.automaton" data-id="COMB.SEQ.automaton">Count strings that follow rules, with a state machine (DP)<span class="lv">HS</span></a><a href="#COMB.STARS.bounded" data-id="COMB.STARS.bounded">Stars and bars, with lower and upper bounds<span class="lv">MS</span></a><a href="#COMB.SYM.groups" data-id="COMB.SYM.groups">Symmetries as position lists: polygon, necklace, square grid, cube<span class="lv">HS</span></a><a href="#COMB.SYM.canonical" data-id="COMB.SYM.canonical">Count arrangements up to rotation and reflection (canonical forms)<span class="lv">HS</span></a></details><details open><summary>Probability (4)</summary><a href="#PROB.DIST.finite" data-id="PROB.DIST.finite">Finite distributions with exact probabilities (dice, coins, sums, maxima)<span class="lv">MS</span></a><a href="#PROB.ENUM.space" data-id="PROB.ENUM.space">Probability by listing equally likely outcomes<span class="lv">MS</span></a><a href="#PROB.EXP.value" data-id="PROB.EXP.value">Expected value: exact, and by linearity with indicators<span class="lv">HS</span></a><a href="#PROB.MARKOV.absorb" data-id="PROB.MARKOV.absorb">Random processes: absorbing Markov chains (exact probabilities and expected times)<span class="lv">HS</span></a></details><details open><summary>Algebra (16)</summary><a href="#ALG.CALC.integrate" data-id="ALG.CALC.integrate">Areas under curves: adaptive Simpson&#x27;s rule<span class="lv">HS</span></a><a href="#ALG.ROOT.bisect" data-id="ALG.ROOT.bisect">Bisection: pin down a root between a sign change<span class="lv">MS</span></a><a href="#ALG.ROOT.real_roots" data-id="ALG.ROOT.real_roots">All real roots of f(x) = 0 on an interval<span class="lv">HS</span></a><a href="#ALG.EQ.find" data-id="ALG.EQ.find">Find x (or n) so that an equation holds: integer search, then exact or numeric<span class="lv">MS</span></a><a href="#ALG.INEQ.solve" data-id="ALG.INEQ.solve">Inequalities: integer solutions and solution intervals<span class="lv">MS</span></a><a href="#ALG.LIN.solve" data-id="ALG.LIN.solve">Linear systems solved exactly (Gauss with Fractions; rank, free variables)<span class="lv">MS</span></a><a href="#ALG.MEAN.stats" data-id="ALG.MEAN.stats">Mean, median, mode and range, exactly; find a missing value<span class="lv">MS</span></a><a href="#ALG.OPT.min1d" data-id="ALG.OPT.min1d">Maximum or minimum of a function of one variable<span class="lv">HS</span></a><a href="#ALG.POLY.arith" data-id="ALG.POLY.arith">Polynomials as coefficient lists: add, multiply, divide, evaluate<span class="lv">MS</span></a><a href="#ALG.POLY.roots" data-id="ALG.POLY.roots">All roots of a polynomial, complex ones included<span class="lv">HS</span></a><a href="#ALG.POLY.vieta" data-id="ALG.POLY.vieta">Vieta&#x27;s formulas: sums and products of roots, power sums<span class="lv">HS</span></a><a href="#ALG.REC.iterate" data-id="ALG.REC.iterate">Recurrences and iterated functions: terms, cycles, periods<span class="lv">MS</span></a><a href="#ALG.ROOT.intersect" data-id="ALG.ROOT.intersect">Where two graphs meet: f(x) = g(x)<span class="lv">HS</span></a><a href="#ALG.ROOT.system" data-id="ALG.ROOT.system">Solve non-linear systems numerically (Newton in several unknowns)<span class="lv">HS</span></a><a href="#ALG.SUM.partial" data-id="ALG.SUM.partial">Exact sums and products of many terms; watch the partial sums<span class="lv">MS</span></a><a href="#ALG.SYM.values" data-id="ALG.SYM.values">Expressions in a, b, c from given relations: solve for the numbers, then evaluate<span class="lv">HS</span></a></details><details open><summary>Geometry (10)</summary><a href="#GEO.PT.vec2" data-id="GEO.PT.vec2">2D points and vectors: add, dot, cross, length, angle, rotate<span class="lv">MS</span></a><a href="#GEO.3D.solids" data-id="GEO.3D.solids">Solids: box, prism, pyramid, cylinder, cone, frustum, sphere<span class="lv">MS</span></a><a href="#GEO.3D.vec3" data-id="GEO.3D.vec3">3D vectors: cross product, planes, distances, volumes from coordinates<span class="lv">HS</span></a><a href="#GEO.AREA.region" data-id="GEO.AREA.region">Areas of curved regions: sectors, segments, lenses, regions between graphs<span class="lv">HS</span></a><a href="#GEO.AREA.shoelace" data-id="GEO.AREA.shoelace">Area of a polygon from its vertices (shoelace formula)<span class="lv">MS</span></a><a href="#GEO.LINE.tools" data-id="GEO.LINE.tools">Lines: through two points, intersection, foot of perpendicular, reflection, distance<span class="lv">MS</span></a><a href="#GEO.CIRC.tools" data-id="GEO.CIRC.tools">Circles: through three points, meeting a line, meeting a circle, tangent lengths<span class="lv">HS</span></a><a href="#GEO.LAT.pick" data-id="GEO.LAT.pick">Lattice points on segments, on and inside polygons (Pick&#x27;s theorem)<span class="lv">HS</span></a><a href="#GEO.TRI.sides" data-id="GEO.TRI.sides">Triangle from its three sides: area, angles, heights, medians, R and r<span class="lv">MS</span></a><a href="#GEO.TRI.solve" data-id="GEO.TRI.solve">Solve a triangle: SAS, ASA, AAS, SSA (law of sines and cosines)<span class="lv">HS</span></a></details><details open><summary>Everyday and process (2)</summary><a href="#PROC.DATE.calendar" data-id="PROC.DATE.calendar">Calendars: weekday of a date, days between, leap years, counting dates<span class="lv">MS</span></a><a href="#PROC.RATE.word" data-id="PROC.RATE.word">Rates, work, mixtures and percents with exact fractions<span class="lv">MS</span></a></details><details open><summary>Picture tools (4)</summary><a href="#VIS.svg.canvas" data-id="VIS.svg.canvas">Picture canvas in the toolkit&#x27;s house style<span class="lv">MS</span></a><a href="#VIS.svg.lattice" data-id="VIS.svg.lattice">Grids with numbers at points and a highlighted path<span class="lv">MS</span></a><a href="#VIS.svg.plot" data-id="VIS.svg.plot">Graph functions and mark points<span class="lv">MS</span></a><a href="#VIS.svg.shapes" data-id="VIS.svg.shapes">Draw a figure from named points<span class="lv">MS</span></a></details></nav>
 <main><div class="intro"><h2>TOML Toolkit</h2><p>Ready-to-run Python tools for math problems. Every card uses only the standard library:
 press <b>Copy</b> and paste it into any Python, or press <b>▶ Run</b> to run the examples here (edit them first if you like).
-Each card has a slow <b>twin</b> that checks the fast code, and <b>Check it</b> runs the two against each other.</p></div>
+Each card has a slow <b>twin</b> that checks the fast code, and <b>Check it</b> runs the two against each other.</p><h3 id="videos" style="margin-top:12px">Video lessons: how to use every card</h3><p class="sub2">Eight videos walk through all the cards, one segment per card: when to use it, how to call it, its examples, its traps and how you know it is right. Each card below has a link that jumps to its own segment.</p><ol class="vids"><li><a href="https://youtu.be/ctmxsELmryI" target="_blank" rel="noopener">Video 1: Using the Toolkit, finishing tools, pictures</a></li><li><a href="https://youtu.be/F4uaVaJ8HLM" target="_blank" rel="noopener">Video 2: Number theory 1: primes, factors, divisors</a></li><li><a href="https://youtu.be/alDbovbDKLU" target="_blank" rel="noopener">Video 3: Number theory 2: remainders and digits</a></li><li><a href="https://youtu.be/CN_06W6ASSk" target="_blank" rel="noopener">Video 4: Counting</a></li><li><a href="https://youtu.be/EDctb8jut8o" target="_blank" rel="noopener">Video 5: Probability and everyday problems</a></li><li><a href="https://youtu.be/om9O72Wcrfc" target="_blank" rel="noopener">Video 6: Algebra 1: exact computation, equations, polynomials</a></li><li><a href="https://youtu.be/2snoz2lM6-M" target="_blank" rel="noopener">Video 7: Algebra 2: numerical tools</a></li><li><a href="https://youtu.be/KB6Gzg7gfJY" target="_blank" rel="noopener">Video 8: Geometry</a></li></ol></div>
 
 <article class="card" id="FIN.FRAC.tools" data-search="fin.frac.tools fractions: exact arithmetic, m/n in lowest terms, m + n relatively prime positive integers m and n find m + n common fraction lowest terms evaluate exact value">
  <header>
   <div class="idline"><span class="cid">FIN.FRAC.tools</span><span class="meta">Finishing and exact tools · MS · v1.0</span></div>
   <h2>Fractions: exact arithmetic, m/n in lowest terms, m + n</h2>
-  <div><span class="badge">∑ math</span></div>
+  <div><span class="badge">∑ math</span><a class="vid" href="https://www.youtube.com/watch?v=ctmxsELmryI&t=590s" target="_blank" rel="noopener" title="Using the Toolkit, finishing tools, pictures">▶ Watch how to use it: Video 1 at 9:50</a></div>
   <div class="refs"><b>Uses</b><span class="none">nothing</span> &nbsp; <b>Used by</b><a class="ref" href="#ALG.LIN.solve">ALG.LIN.solve</a> <a class="ref" href="#ALG.MEAN.stats">ALG.MEAN.stats</a> <a class="ref" href="#ALG.SUM.partial">ALG.SUM.partial</a> <a class="ref" href="#FIN.FRAC.from_float">FIN.FRAC.from_float</a> <a class="ref" href="#PROB.DIST.finite">PROB.DIST.finite</a> <a class="ref" href="#PROC.RATE.word">PROC.RATE.word</a> &nbsp; <b>Recipes</b><span class="ref">R.GEN.answer_form</span> <span class="ref">R.GEN.exact_or_float</span> <span class="ref">R.FIN.mn</span> <span class="ref">R.PROB.enumerate</span> <span class="ref">R.PROC.units_chain</span></div>
  </header>
  <section><h3>1 · Description</h3><div class="desc nopic"><div><p>Python's <code>Fraction</code> keeps every calculation exact, so 1/3 + 1/6 is exactly 1/2, never 0.4999999.
@@ -133,7 +141,7 @@ n = <span class="nu">0</span>
  <header>
   <div class="idline"><span class="cid">FIN.FRAC.from_float</span><span class="meta">Finishing and exact tools · MS · v1.0</span></div>
   <h2>Turn a decimal answer into a fraction, with a warning if it doesn&#x27;t fit</h2>
-  <div></div>
+  <div><a class="vid" href="https://www.youtube.com/watch?v=ctmxsELmryI&t=807s" target="_blank" rel="noopener" title="Using the Toolkit, finishing tools, pictures">▶ Watch how to use it: Video 1 at 13:27</a></div>
   <div class="refs"><b>Uses</b><a class="ref" href="#FIN.FRAC.tools">FIN.FRAC.tools</a> &nbsp; <b>Used by</b><a class="ref" href="#FIN.ID.identify">FIN.ID.identify</a></div>
  </header>
  <section><h3>1 · Description</h3><div class="desc nopic"><div><p>When a calculation gives a float such as 0.428571428571, <code>as_fraction()</code> finds the simplest fraction
@@ -174,7 +182,7 @@ n = <span class="nu">0</span>
  <header>
   <div class="idline"><span class="cid">FIN.SQF.squarefree</span><span class="meta">Finishing and exact tools · MS · v1.0</span></div>
   <h2>Simplify square roots: √n = a√b with b square-free</h2>
-  <div><span class="badge">∑ math</span></div>
+  <div><span class="badge">∑ math</span><a class="vid" href="https://www.youtube.com/watch?v=ctmxsELmryI&t=985s" target="_blank" rel="noopener" title="Using the Toolkit, finishing tools, pictures">▶ Watch how to use it: Video 1 at 16:25</a></div>
   <div class="refs"><b>Uses</b><a class="ref" href="#NT.FAC.factorize">NT.FAC.factorize</a> &nbsp; <b>Used by</b><a class="ref" href="#FIN.ID.identify">FIN.ID.identify</a> <a class="ref" href="#GEO.AREA.region">GEO.AREA.region</a> &nbsp; <b>Recipes</b><span class="ref">R.FIN.mn</span></div>
  </header>
  <section><h3>1 · Description</h3><div class="desc nopic"><div><p>Writes √n in simplest radical form a√b, where b has no square factor: √72 = 6√2. This is the
@@ -247,7 +255,7 @@ sqrt(8/3) = 2/3 * sqrt( 6 )</pre><div class="pics"></div></div><h4>Check it <spa
  <header>
   <div class="idline"><span class="cid">FIN.ID.identify</span><span class="meta">Finishing and exact tools · HS · v1.0</span></div>
   <h2>Identify an exact form from a decimal: p/q, (a + b√c)/d, qπ, √(p/q)</h2>
-  <div><span class="badge">∑ math</span></div>
+  <div><span class="badge">∑ math</span><a class="vid" href="https://www.youtube.com/watch?v=ctmxsELmryI&t=1629s" target="_blank" rel="noopener" title="Using the Toolkit, finishing tools, pictures">▶ Watch how to use it: Video 1 at 27:09</a></div>
   <div class="refs"><b>Uses</b><a class="ref" href="#FIN.FRAC.from_float">FIN.FRAC.from_float</a> <a class="ref" href="#FIN.SQF.squarefree">FIN.SQF.squarefree</a> &nbsp; <b>Used by</b><a class="ref" href="#ALG.EQ.find">ALG.EQ.find</a> <a class="ref" href="#ALG.SYM.values">ALG.SYM.values</a> &nbsp; <b>Recipes</b><span class="ref">R.FIN.mn</span> <span class="ref">R.FIN.numeric_to_exact</span> <span class="ref">R.ALG.solve_then_substitute</span> <span class="ref">R.ALG.optimise_identify</span> <span class="ref">R.ALG.trig_numbers</span> <span class="ref">R.ALG.nested_radicals</span> <span class="ref">R.GEO.coordinates</span> <span class="ref">R.GEO.constraint_place</span></div>
  </header>
  <section><h3>1 · Description</h3><div class="desc nopic"><div><p>You computed 1.6180339887 and the answer must be “(a + b√c)/d”. <code>identify(x)</code> searches the simple
@@ -337,7 +345,7 @@ cs = [c <span class="kw">for</span> c <span class="kw">in</span> <span class="bi
  <header>
   <div class="idline"><span class="cid">FIN.CHECK.compare</span><span class="meta">Finishing and exact tools · MS · v1.0</span></div>
   <h2>Compare two methods on many inputs (a twin check for your own code)</h2>
-  <div></div>
+  <div><a class="vid" href="https://www.youtube.com/watch?v=ctmxsELmryI&t=2026s" target="_blank" rel="noopener" title="Using the Toolkit, finishing tools, pictures">▶ Watch how to use it: Video 1 at 33:46</a></div>
   <div class="refs"><b>Uses</b><span class="none">nothing</span> &nbsp; <b>Used by</b><span class="none">none yet</span> &nbsp; <b>Recipes</b><span class="ref">R.GEN.two_routes</span> <span class="ref">R.GEN.scale_down</span> <span class="ref">R.GEN.sanity_checks</span> <span class="ref">R.COMB.bijection_check</span></div>
  </header>
  <section><h3>1 · Description</h3><div class="desc nopic"><div><p>Every toolkit card is checked against a slow, obvious twin. Do the same for your own solutions:
@@ -390,7 +398,7 @@ n = <span class="nu">0</span>
  <header>
   <div class="idline"><span class="cid">FIN.DEC.precise</span><span class="meta">Finishing and exact tools · HS · v1.0</span></div>
   <h2>50-digit arithmetic: sqrt, π, sin, cos, exp, ln</h2>
-  <div></div>
+  <div><a class="vid" href="https://www.youtube.com/watch?v=ctmxsELmryI&t=1163s" target="_blank" rel="noopener" title="Using the Toolkit, finishing tools, pictures">▶ Watch how to use it: Video 1 at 19:23</a></div>
   <div class="refs"><b>Uses</b><span class="none">nothing</span> &nbsp; <b>Used by</b><a class="ref" href="#FIN.ROUND.floor_exact">FIN.ROUND.floor_exact</a> &nbsp; <b>Recipes</b><span class="ref">R.GEN.exact_or_float</span> <span class="ref">R.FIN.numeric_to_exact</span> <span class="ref">R.FIN.floor_of_irrational</span> <span class="ref">R.ALG.nested_radicals</span></div>
  </header>
  <section><h3>1 · Description</h3><div class="desc nopic"><div><p>Floats keep about 16 digits, which is not enough to decide a floor near an integer or to recognise an exact
@@ -477,7 +485,7 @@ getcontext().prec = <span class="nu">80</span>; hi = <span class="bi">str</span>
  <header>
   <div class="idline"><span class="cid">FIN.ROUND.floor_exact</span><span class="meta">Finishing and exact tools · MS · v1.0</span></div>
   <h2>Greatest integer and integer roots without float traps</h2>
-  <div></div>
+  <div><a class="vid" href="https://www.youtube.com/watch?v=ctmxsELmryI&t=1385s" target="_blank" rel="noopener" title="Using the Toolkit, finishing tools, pictures">▶ Watch how to use it: Video 1 at 23:05</a></div>
   <div class="refs"><b>Uses</b><a class="ref" href="#FIN.DEC.precise">FIN.DEC.precise</a> &nbsp; <b>Used by</b><span class="none">none yet</span> &nbsp; <b>Recipes</b><span class="ref">R.GEN.answer_form</span> <span class="ref">R.FIN.floor_of_irrational</span></div>
  </header>
  <section><h3>1 · Description</h3><div class="desc nopic"><div><p><code>int(x)</code> on a float can be off by one when x is huge or extremely close to an integer.
@@ -541,7 +549,7 @@ n = <span class="nu">0</span>
  <header>
   <div class="idline"><span class="cid">FIN.SEARCH.first</span><span class="meta">Finishing and exact tools · MS · v1.0</span></div>
   <h2>Least, greatest, count of n with a property (search with limits)</h2>
-  <div></div>
+  <div><a class="vid" href="https://www.youtube.com/watch?v=ctmxsELmryI&t=1838s" target="_blank" rel="noopener" title="Using the Toolkit, finishing tools, pictures">▶ Watch how to use it: Video 1 at 30:38</a></div>
   <div class="refs"><b>Uses</b><span class="none">nothing</span> &nbsp; <b>Used by</b><span class="none">none yet</span> &nbsp; <b>Recipes</b><span class="ref">R.GEN.bound_then_search</span> <span class="ref">R.NT.count_property</span> <span class="ref">R.NT.remainder_puzzle</span></div>
  </header>
  <section><h3>1 · Description</h3><div class="desc nopic"><div><p>Most “find the least n such that…”, “how many integers…”, “the largest…” questions are a loop.
@@ -604,7 +612,7 @@ n = <span class="nu">0</span>
  <header>
   <div class="idline"><span class="cid">NT.FAC.factorize</span><span class="meta">Number theory · MS · v1.0</span></div>
   <h2>Prime factorisation {p: e}</h2>
-  <div><span class="badge">∑ math</span></div>
+  <div><span class="badge">∑ math</span><a class="vid" href="https://www.youtube.com/watch?v=F4uaVaJ8HLM&t=438s" target="_blank" rel="noopener" title="Number theory 1: primes, factors, divisors">▶ Watch how to use it: Video 2 at 7:18</a></div>
   <div class="refs"><b>Uses</b><span class="none">nothing</span> &nbsp; <b>Used by</b><a class="ref" href="#FIN.SQF.squarefree">FIN.SQF.squarefree</a> <a class="ref" href="#NT.ARITH.phi">NT.ARITH.phi</a> <a class="ref" href="#NT.DIV.count">NT.DIV.count</a> <a class="ref" href="#NT.FAC.trailing_zeros">NT.FAC.trailing_zeros</a> &nbsp; <b>Recipes</b><span class="ref">R.NT.conditional_divisors</span> <span class="ref">R.NT.factorial_power</span></div>
  </header>
  <section><h3>1 · Description</h3><div class="desc nopic"><div><p>Splits n into primes: 360 = 2³·3²·5 comes back as <code>{2: 3, 3: 2, 5: 1}</code>. Almost every number-theory
@@ -652,7 +660,7 @@ f = factorize(<span class="nu">10</span>**<span class="nu">12</span> + <span cla
  <header>
   <div class="idline"><span class="cid">NT.GCD.basic</span><span class="meta">Number theory · MS · v1.0</span></div>
   <h2>gcd and lcm of many numbers (and of fractions)</h2>
-  <div></div>
+  <div><a class="vid" href="https://www.youtube.com/watch?v=F4uaVaJ8HLM&t=1191s" target="_blank" rel="noopener" title="Number theory 1: primes, factors, divisors">▶ Watch how to use it: Video 2 at 19:51</a></div>
   <div class="refs"><b>Uses</b><span class="none">nothing</span> &nbsp; <b>Used by</b><a class="ref" href="#GEO.LAT.pick">GEO.LAT.pick</a> &nbsp; <b>Recipes</b><span class="ref">R.NT.gcd_pattern</span></div>
  </header>
  <section><h3>1 · Description</h3><div class="desc nopic"><div><p><code>gcd_all</code> and <code>lcm_all</code> handle any number of integers; <code>coprime(a, b)</code> tests
@@ -701,7 +709,7 @@ f = factorize(<span class="nu">10</span>**<span class="nu">12</span> + <span cla
  <header>
   <div class="idline"><span class="cid">NT.ARITH.phi</span><span class="meta">Number theory · HS · v1.0</span></div>
   <h2>Euler&#x27;s φ: how many k ≤ n are coprime to n</h2>
-  <div><span class="badge">∑ math</span></div>
+  <div><span class="badge">∑ math</span><a class="vid" href="https://www.youtube.com/watch?v=F4uaVaJ8HLM&t=1618s" target="_blank" rel="noopener" title="Number theory 1: primes, factors, divisors">▶ Watch how to use it: Video 2 at 26:58</a></div>
   <div class="refs"><b>Uses</b><a class="ref" href="#NT.FAC.factorize">NT.FAC.factorize</a> &nbsp; <b>Used by</b><a class="ref" href="#NT.MOD.order">NT.MOD.order</a></div>
  </header>
  <section><h3>1 · Description</h3><div class="desc nopic"><div><p>φ(n) counts the numbers 1, 2, …, n that share no factor with n. From the prime factorisation:
@@ -732,7 +740,7 @@ remainder patterns (Euler: a^φ(m) ≡ 1 mod m when gcd(a, m) = 1).</p><span cla
  <header>
   <div class="idline"><span class="cid">NT.DIGIT.base</span><span class="meta">Number theory · MS · v1.0</span></div>
   <h2>Base conversion for integers and fractions</h2>
-  <div><span class="badge">∑ math</span></div>
+  <div><span class="badge">∑ math</span><a class="vid" href="https://www.youtube.com/watch?v=alDbovbDKLU&t=673s" target="_blank" rel="noopener" title="Number theory 2: remainders and digits">▶ Watch how to use it: Video 3 at 11:13</a></div>
   <div class="refs"><b>Uses</b><span class="none">nothing</span> &nbsp; <b>Used by</b><span class="none">none yet</span> &nbsp; <b>Recipes</b><span class="ref">R.NT.two_bases</span></div>
  </header>
  <section><h3>1 · Description</h3><div class="desc nopic"><div><p>Write numbers in any base from 2 to 36 and read them back: <code>to_base(2026, 7)</code> gives
@@ -802,7 +810,7 @@ cases = <span class="nu">0</span>
  <header>
   <div class="idline"><span class="cid">NT.DIGIT.digits</span><span class="meta">Number theory · MS · v1.0</span></div>
   <h2>Digits in any base: list, sum, product, reverse, palindrome</h2>
-  <div></div>
+  <div><a class="vid" href="https://www.youtube.com/watch?v=alDbovbDKLU&t=468s" target="_blank" rel="noopener" title="Number theory 2: remainders and digits">▶ Watch how to use it: Video 3 at 7:48</a></div>
   <div class="refs"><b>Uses</b><span class="none">nothing</span> &nbsp; <b>Used by</b><span class="none">none yet</span> &nbsp; <b>Recipes</b><span class="ref">R.NT.digit_count</span></div>
  </header>
  <section><h3>1 · Description</h3><div class="desc nopic"><div><p>Turn a number into its list of digits (most significant first) in base 10 or any base, and back.
@@ -861,7 +869,7 @@ cases = <span class="bi">list</span>(<span class="bi">range</span>(<span class="
  <header>
   <div class="idline"><span class="cid">NT.DIGIT.kth_digit</span><span class="meta">Number theory · MS · v1.0</span></div>
   <h2>The k-th digit of 123456789101112… and similar strings</h2>
-  <div></div>
+  <div><a class="vid" href="https://www.youtube.com/watch?v=alDbovbDKLU&t=864s" target="_blank" rel="noopener" title="Number theory 2: remainders and digits">▶ Watch how to use it: Video 3 at 14:24</a></div>
   <div class="refs"><b>Uses</b><span class="none">nothing</span> &nbsp; <b>Used by</b><span class="none">none yet</span> &nbsp; <b>Recipes</b><span class="ref">R.PROC.build_strings</span></div>
  </header>
  <section><h3>1 · Description</h3><div class="desc nopic"><div><p>Write the numbers 1, 2, 3, … one after another. Which digit is in position k, and how many digits are used
@@ -905,7 +913,7 @@ the whole string. Works for any start and any base 10 sequence of consecutive in
  <header>
   <div class="idline"><span class="cid">NT.DIV.count</span><span class="meta">Number theory · MS · v1.0</span></div>
   <h2>Divisors: list, count, sum</h2>
-  <div><span class="badge">∑ math</span><span class="badge">🖼 diagram</span><span class="badge">▶ live picture</span></div>
+  <div><span class="badge">∑ math</span><span class="badge">🖼 diagram</span><span class="badge">▶ live picture</span><a class="vid" href="https://www.youtube.com/watch?v=F4uaVaJ8HLM&t=990s" target="_blank" rel="noopener" title="Number theory 1: primes, factors, divisors">▶ Watch how to use it: Video 2 at 16:30</a></div>
   <div class="refs"><b>Uses</b><a class="ref" href="#NT.FAC.factorize">NT.FAC.factorize</a> &nbsp; <b>Used by</b><a class="ref" href="#NT.MOD.order">NT.MOD.order</a> &nbsp; <b>Recipes</b><span class="ref">R.NT.conditional_divisors</span> <span class="ref">R.NT.factor_equation</span> <span class="ref">R.NT.divisor_sums</span></div>
  </header>
  <section><h3>1 · Description</h3><div class="desc"><div><p>Lists all positive divisors of n, counts them (τ), or adds them up (σ). It works from the prime
@@ -974,7 +982,7 @@ draw_divisor_grid(<span class="nu">2</span>, <span class="nu">3</span>, <span cl
  <header>
   <div class="idline"><span class="cid">NT.MOD.order</span><span class="meta">Number theory · HS · v1.0</span></div>
   <h2>Multiplicative order: when do the powers of a repeat mod m?</h2>
-  <div><span class="badge">⏭ step trace</span></div>
+  <div><span class="badge">⏭ step trace</span><a class="vid" href="https://www.youtube.com/watch?v=alDbovbDKLU&t=55s" target="_blank" rel="noopener" title="Number theory 2: remainders and digits">▶ Watch how to use it: Video 3 at 0:55</a></div>
   <div class="refs"><b>Uses</b><a class="ref" href="#NT.ARITH.phi">NT.ARITH.phi</a> <a class="ref" href="#NT.DIV.count">NT.DIV.count</a> &nbsp; <b>Used by</b><a class="ref" href="#NT.DIGIT.repeating">NT.DIGIT.repeating</a> &nbsp; <b>Recipes</b><span class="ref">R.NT.periodic_mod</span> <span class="ref">R.NT.repeating_decimal</span></div>
  </header>
  <section><h3>1 · Description</h3><div class="desc nopic"><div><p>The powers a, a², a³, … taken mod m eventually cycle. When gcd(a, m) = 1 they return to 1, and the
@@ -1027,7 +1035,7 @@ cases = <span class="nu">0</span>
  <header>
   <div class="idline"><span class="cid">NT.DIGIT.repeating</span><span class="meta">Number theory · MS · v1.0</span></div>
   <h2>Repeating decimals: to fraction and back, period length</h2>
-  <div><span class="badge">∑ math</span></div>
+  <div><span class="badge">∑ math</span><a class="vid" href="https://www.youtube.com/watch?v=alDbovbDKLU&t=1054s" target="_blank" rel="noopener" title="Number theory 2: remainders and digits">▶ Watch how to use it: Video 3 at 17:34</a></div>
   <div class="refs"><b>Uses</b><a class="ref" href="#NT.MOD.order">NT.MOD.order</a> &nbsp; <b>Used by</b><span class="none">none yet</span> &nbsp; <b>Recipes</b><span class="ref">R.NT.repeating_decimal</span></div>
  </header>
  <section><h3>1 · Description</h3><div class="desc nopic"><div><p>Turn 3.1(27) — “3.1272727…” — into an exact fraction, turn a fraction into its decimal with the repeating
@@ -1097,7 +1105,7 @@ w, f, r = fraction_to_rep(Fraction(<span class="nu">3</span>, <span class="nu">1
  <header>
   <div class="idline"><span class="cid">NT.FAC.legendre</span><span class="meta">Number theory · MS · v1.0</span></div>
   <h2>Exponent of a prime in n! (Legendre&#x27;s formula)</h2>
-  <div><span class="badge">∑ math</span><span class="badge">⏭ step trace</span></div>
+  <div><span class="badge">∑ math</span><span class="badge">⏭ step trace</span><a class="vid" href="https://www.youtube.com/watch?v=F4uaVaJ8HLM&t=615s" target="_blank" rel="noopener" title="Number theory 1: primes, factors, divisors">▶ Watch how to use it: Video 2 at 10:15</a></div>
   <div class="refs"><b>Uses</b><span class="none">nothing</span> &nbsp; <b>Used by</b><a class="ref" href="#NT.FAC.trailing_zeros">NT.FAC.trailing_zeros</a> &nbsp; <b>Recipes</b><span class="ref">R.NT.factorial_power</span></div>
  </header>
  <section><h3>1 · Description</h3><div class="desc nopic"><div><p>How many times does the prime p divide n!? Count the multiples of p, then of p², p³, … up to n and add.
@@ -1146,7 +1154,7 @@ n = <span class="nu">1</span>
  <header>
   <div class="idline"><span class="cid">NT.FAC.trailing_zeros</span><span class="meta">Number theory · MS · v1.0</span></div>
   <h2>Trailing zeros of n! in base 10 or any base; highest power of k in n!</h2>
-  <div><span class="badge">∑ math</span></div>
+  <div><span class="badge">∑ math</span><a class="vid" href="https://www.youtube.com/watch?v=F4uaVaJ8HLM&t=813s" target="_blank" rel="noopener" title="Number theory 1: primes, factors, divisors">▶ Watch how to use it: Video 2 at 13:33</a></div>
   <div class="refs"><b>Uses</b><a class="ref" href="#NT.FAC.factorize">NT.FAC.factorize</a> <a class="ref" href="#NT.FAC.legendre">NT.FAC.legendre</a> &nbsp; <b>Used by</b><span class="none">none yet</span> &nbsp; <b>Recipes</b><span class="ref">R.NT.factorial_power</span></div>
  </header>
  <section><h3>1 · Description</h3><div class="desc nopic"><div><p>n! ends in as many zeros (in base b) as the number of times b divides n!. Split b into primes
@@ -1183,7 +1191,7 @@ b = p₁^a₁ p₂^a₂ …; each prime can supply ⌊v_p(n!)/a⌋ copies of b; 
  <header>
   <div class="idline"><span class="cid">NT.GCD.ext</span><span class="meta">Number theory · HS · v1.0</span></div>
   <h2>Extended Euclid and modular inverse</h2>
-  <div><span class="badge">⏭ step trace</span></div>
+  <div><span class="badge">⏭ step trace</span><a class="vid" href="https://www.youtube.com/watch?v=F4uaVaJ8HLM&t=1394s" target="_blank" rel="noopener" title="Number theory 1: primes, factors, divisors">▶ Watch how to use it: Video 2 at 23:14</a></div>
   <div class="refs"><b>Uses</b><span class="none">nothing</span> &nbsp; <b>Used by</b><a class="ref" href="#NT.MOD.crt">NT.MOD.crt</a></div>
  </header>
  <section><h3>1 · Description</h3><div class="desc nopic"><div><p><code>ext_gcd(a, b)</code> returns g = gcd(a, b) together with integers x, y such that ax + by = g.
@@ -1244,7 +1252,7 @@ cases = <span class="nu">0</span>
  <header>
   <div class="idline"><span class="cid">NT.MOD.crt</span><span class="meta">Number theory · MS · v1.0</span></div>
   <h2>Chinese remainder theorem: one number with given remainders</h2>
-  <div><span class="badge">∑ math</span><span class="badge">⏭ step trace</span></div>
+  <div><span class="badge">∑ math</span><span class="badge">⏭ step trace</span><a class="vid" href="https://www.youtube.com/watch?v=alDbovbDKLU&t=261s" target="_blank" rel="noopener" title="Number theory 2: remainders and digits">▶ Watch how to use it: Video 3 at 4:21</a></div>
   <div class="refs"><b>Uses</b><a class="ref" href="#NT.GCD.ext">NT.GCD.ext</a> &nbsp; <b>Used by</b><span class="none">none yet</span> &nbsp; <b>Recipes</b><span class="ref">R.NT.last_digits</span> <span class="ref">R.NT.remainder_puzzle</span></div>
  </header>
  <section><h3>1 · Description</h3><div class="desc nopic"><div><p>Find x with x ≡ r₁ (mod m₁), x ≡ r₂ (mod m₂), … . <code>crt</code> returns (x, M): all solutions are
@@ -1304,7 +1312,7 @@ cases = <span class="nu">0</span>
  <header>
   <div class="idline"><span class="cid">NT.PRIME.is_prime</span><span class="meta">Number theory · MS · v1.0</span></div>
   <h2>Is n prime? (fast and exact for any size)</h2>
-  <div></div>
+  <div><a class="vid" href="https://www.youtube.com/watch?v=F4uaVaJ8HLM&t=67s" target="_blank" rel="noopener" title="Number theory 1: primes, factors, divisors">▶ Watch how to use it: Video 2 at 1:07</a></div>
   <div class="refs"><b>Uses</b><span class="none">nothing</span> &nbsp; <b>Used by</b><span class="none">none yet</span> &nbsp; <b>Recipes</b><span class="ref">R.NT.prime_conditions</span></div>
  </header>
  <section><h3>1 · Description</h3><div class="desc nopic"><div><p>Answers “is n prime?” instantly, even for numbers with 20 or more digits. Small numbers are checked by trial
@@ -1363,7 +1371,7 @@ cases = <span class="bi">list</span>(<span class="bi">range</span>(-<span class=
  <header>
   <div class="idline"><span class="cid">NT.PRIME.sieve</span><span class="meta">Number theory · MS · v1.0</span></div>
   <h2>All primes up to N; smallest prime factor table</h2>
-  <div><span class="badge">🖼 diagram</span><span class="badge">⏭ step trace</span></div>
+  <div><span class="badge">🖼 diagram</span><span class="badge">⏭ step trace</span><a class="vid" href="https://www.youtube.com/watch?v=F4uaVaJ8HLM&t=242s" target="_blank" rel="noopener" title="Number theory 1: primes, factors, divisors">▶ Watch how to use it: Video 2 at 4:02</a></div>
   <div class="refs"><b>Uses</b><span class="none">nothing</span> &nbsp; <b>Used by</b><span class="none">none yet</span> &nbsp; <b>Recipes</b><span class="ref">R.GEN.precompute</span> <span class="ref">R.NT.count_property</span> <span class="ref">R.NT.prime_conditions</span></div>
  </header>
  <section><h3>1 · Description</h3><div class="desc"><div><p>The sieve of Eratosthenes finds every prime up to N at once: cross out the multiples of 2, 3, 5, …
@@ -1424,7 +1432,7 @@ spf = spf_table(<span class="nu">3000</span>)
  <header>
   <div class="idline"><span class="cid">COMB.ALPHA.solve</span><span class="meta">Counting · MS · v1.0</span></div>
   <h2>Cryptarithms: letters stand for digits</h2>
-  <div></div>
+  <div><a class="vid" href="https://www.youtube.com/watch?v=CN_06W6ASSk&t=2029s" target="_blank" rel="noopener" title="Counting">▶ Watch how to use it: Video 4 at 33:49</a></div>
   <div class="refs"><b>Uses</b><span class="none">nothing</span> &nbsp; <b>Used by</b><span class="none">none yet</span></div>
  </header>
  <section><h3>1 · Description</h3><div class="desc nopic"><div><p>SEND + MORE = MONEY: each letter is a different digit, leading letters are not 0. <code>solve_alpha</code>
@@ -1480,7 +1488,7 @@ brute = [<span class="bi">dict</span>(<span class="bi">zip</span>(<span class="s
  <header>
   <div class="idline"><span class="cid">COMB.BINOM.choose</span><span class="meta">Counting · MS · v1.0</span></div>
   <h2>Binomial coefficients, Pascal rows, multinomials</h2>
-  <div><span class="badge">∑ math</span><span class="badge">🖼 diagram</span></div>
+  <div><span class="badge">∑ math</span><span class="badge">🖼 diagram</span><a class="vid" href="https://www.youtube.com/watch?v=CN_06W6ASSk&t=62s" target="_blank" rel="noopener" title="Counting">▶ Watch how to use it: Video 4 at 1:02</a></div>
   <div class="refs"><b>Uses</b><span class="none">nothing</span> &nbsp; <b>Used by</b><a class="ref" href="#COMB.PERM.multiset">COMB.PERM.multiset</a> <a class="ref" href="#COMB.STARS.bounded">COMB.STARS.bounded</a> &nbsp; <b>Recipes</b><span class="ref">R.COMB.restricted_first</span> <span class="ref">R.COMB.gap_method</span></div>
  </header>
  <section><h3>1 · Description</h3><div class="desc"><div><p>C(n, k) counts the ways to choose k items from n when order does not matter. <code>comb</code> is built
@@ -1537,7 +1545,7 @@ labelled groups) and the counts of ordered choices.</p><span class="katex-displa
  <header>
   <div class="idline"><span class="cid">COMB.FIG.count</span><span class="meta">Counting · MS · v1.0</span></div>
   <h2>Count figures: rectangles, squares, triangles among points</h2>
-  <div><span class="badge">🖼 diagram</span><span class="badge">▶ live picture</span></div>
+  <div><span class="badge">🖼 diagram</span><span class="badge">▶ live picture</span><a class="vid" href="https://www.youtube.com/watch?v=CN_06W6ASSk&t=1854s" target="_blank" rel="noopener" title="Counting">▶ Watch how to use it: Video 4 at 30:54</a></div>
   <div class="refs"><b>Uses</b><a class="ref" href="#GEO.PT.vec2">GEO.PT.vec2</a> &nbsp; <b>Used by</b><span class="none">none yet</span> &nbsp; <b>Recipes</b><span class="ref">R.COMB.figures_in_grid</span></div>
  </header>
  <section><h3>1 · Description</h3><div class="desc"><div><p>How many squares (of any tilt) have their corners on a 5 × 5 grid of dots? How many triangles with
@@ -1606,7 +1614,7 @@ T = [(x, y) <span class="kw">for</span> y <span class="kw">in</span> <span class
  <header>
   <div class="idline"><span class="cid">COMB.PART.partitions</span><span class="meta">Counting · MS · v1.0</span></div>
   <h2>Partitions and coin change: unordered sums from allowed parts</h2>
-  <div><span class="badge">🖼 diagram</span><span class="badge">⏭ step trace</span></div>
+  <div><span class="badge">🖼 diagram</span><span class="badge">⏭ step trace</span><a class="vid" href="https://www.youtube.com/watch?v=CN_06W6ASSk&t=945s" target="_blank" rel="noopener" title="Counting">▶ Watch how to use it: Video 4 at 15:45</a></div>
   <div class="refs"><b>Uses</b><span class="none">nothing</span> &nbsp; <b>Used by</b><span class="none">none yet</span> &nbsp; <b>Recipes</b><span class="ref">R.COMB.distributions</span></div>
  </header>
  <section><h3>1 · Description</h3><div class="desc"><div><p>In how many ways can n be written as a sum when the order of the parts does not matter? With parts from a
@@ -1676,7 +1684,7 @@ parts or make the parts distinct. <code>partitions_list</code> lists them for sm
  <header>
   <div class="idline"><span class="cid">COMB.PATH.grid</span><span class="meta">Counting · MS · v1.0</span></div>
   <h2>Paths on a grid (right and up), with blocked points</h2>
-  <div><span class="badge">∑ math</span><span class="badge">🖼 diagram</span><span class="badge">▶ live picture</span><span class="badge">⏭ step trace</span></div>
+  <div><span class="badge">∑ math</span><span class="badge">🖼 diagram</span><span class="badge">▶ live picture</span><span class="badge">⏭ step trace</span><a class="vid" href="https://www.youtube.com/watch?v=CN_06W6ASSk&t=1308s" target="_blank" rel="noopener" title="Counting">▶ Watch how to use it: Video 4 at 21:48</a></div>
   <div class="refs"><b>Uses</b><span class="none">nothing</span> &nbsp; <b>Used by</b><span class="none">none yet</span> &nbsp; <b>Recipes</b><span class="ref">R.COMB.complement</span> <span class="ref">R.COMB.paths_with_rules</span></div>
  </header>
  <section><h3>1 · Description</h3><div class="desc"><div><p>Counts the shortest paths from (0, 0) to (w, h) that move one unit right or up at a time and avoid any
@@ -1738,7 +1746,7 @@ count = <span class="nu">0</span>
  <header>
   <div class="idline"><span class="cid">COMB.PERM.filter</span><span class="meta">Counting · MS · v1.0</span></div>
   <h2>Permutations with restrictions (build step by step, prune early)</h2>
-  <div><span class="badge">⏭ step trace</span></div>
+  <div><span class="badge">⏭ step trace</span><a class="vid" href="https://www.youtube.com/watch?v=CN_06W6ASSk&t=585s" target="_blank" rel="noopener" title="Counting">▶ Watch how to use it: Video 4 at 9:45</a></div>
   <div class="refs"><b>Uses</b><span class="none">nothing</span> &nbsp; <b>Used by</b><span class="none">none yet</span> &nbsp; <b>Recipes</b><span class="ref">R.COMB.generate_filter</span> <span class="ref">R.COMB.backtrack</span> <span class="ref">R.COMB.restricted_first</span> <span class="ref">R.COMB.repeats</span></div>
  </header>
  <section><h3>1 · Description</h3><div class="desc nopic"><div><p>Count or list the orders of n items that obey rules like “A and B are not next to each other”,
@@ -1808,7 +1816,7 @@ cases = <span class="nu">0</span>
  <header>
   <div class="idline"><span class="cid">COMB.PERM.multiset</span><span class="meta">Counting · MS · v1.0</span></div>
   <h2>Arrangements of letters with repeats: count and list</h2>
-  <div><span class="badge">∑ math</span></div>
+  <div><span class="badge">∑ math</span><a class="vid" href="https://www.youtube.com/watch?v=CN_06W6ASSk&t=258s" target="_blank" rel="noopener" title="Counting">▶ Watch how to use it: Video 4 at 4:18</a></div>
   <div class="refs"><b>Uses</b><a class="ref" href="#COMB.BINOM.choose">COMB.BINOM.choose</a> &nbsp; <b>Used by</b><a class="ref" href="#COMB.PERM.rank">COMB.PERM.rank</a> &nbsp; <b>Recipes</b><span class="ref">R.GEN.wlog_order</span> <span class="ref">R.COMB.repeats</span></div>
  </header>
  <section><h3>1 · Description</h3><div class="desc nopic"><div><p>How many different words can be made from the letters of MISSISSIPPI? Count with the multinomial
@@ -1861,7 +1869,7 @@ cases = <span class="nu">0</span>
  <header>
   <div class="idline"><span class="cid">COMB.PERM.rank</span><span class="meta">Counting · MS · v1.0</span></div>
   <h2>Position of a word in alphabetical order (rank and unrank)</h2>
-  <div><span class="badge">⏭ step trace</span></div>
+  <div><span class="badge">⏭ step trace</span><a class="vid" href="https://www.youtube.com/watch?v=CN_06W6ASSk&t=413s" target="_blank" rel="noopener" title="Counting">▶ Watch how to use it: Video 4 at 6:53</a></div>
   <div class="refs"><b>Uses</b><a class="ref" href="#COMB.PERM.multiset">COMB.PERM.multiset</a> &nbsp; <b>Used by</b><span class="none">none yet</span></div>
  </header>
  <section><h3>1 · Description</h3><div class="desc nopic"><div><p>List all arrangements of some letters in alphabetical order: which position does a given word have, and
@@ -1919,7 +1927,7 @@ cases = <span class="nu">0</span>
  <header>
   <div class="idline"><span class="cid">COMB.SEQ.automaton</span><span class="meta">Counting · HS · v1.0</span></div>
   <h2>Count strings that follow rules, with a state machine (DP)</h2>
-  <div><span class="badge">🖼 diagram</span><span class="badge">⏭ step trace</span></div>
+  <div><span class="badge">🖼 diagram</span><span class="badge">⏭ step trace</span><a class="vid" href="https://www.youtube.com/watch?v=CN_06W6ASSk&t=1114s" target="_blank" rel="noopener" title="Counting">▶ Watch how to use it: Video 4 at 18:34</a></div>
   <div class="refs"><b>Uses</b><span class="none">nothing</span> &nbsp; <b>Used by</b><span class="none">none yet</span> &nbsp; <b>Recipes</b><span class="ref">R.GEN.memo_recursion</span> <span class="ref">R.COMB.story_to_dp</span></div>
  </header>
  <section><h3>1 · Description</h3><div class="desc"><div><p>“How many strings of length 20 over {A, B, C} have no two consecutive A's and never contain BCB?”
@@ -1985,7 +1993,7 @@ cases = <span class="nu">0</span>
  <header>
   <div class="idline"><span class="cid">COMB.STARS.bounded</span><span class="meta">Counting · MS · v1.0</span></div>
   <h2>Stars and bars, with lower and upper bounds</h2>
-  <div><span class="badge">∑ math</span><span class="badge">🖼 diagram</span></div>
+  <div><span class="badge">∑ math</span><span class="badge">🖼 diagram</span><a class="vid" href="https://www.youtube.com/watch?v=CN_06W6ASSk&t=774s" target="_blank" rel="noopener" title="Counting">▶ Watch how to use it: Video 4 at 12:54</a></div>
   <div class="refs"><b>Uses</b><a class="ref" href="#COMB.BINOM.choose">COMB.BINOM.choose</a> &nbsp; <b>Used by</b><span class="none">none yet</span> &nbsp; <b>Recipes</b><span class="ref">R.COMB.distributions</span></div>
  </header>
  <section><h3>1 · Description</h3><div class="desc"><div><p>Count solutions of x₁ + x₂ + … + x_k = n in integers with lo ≤ xᵢ ≤ hi: identical items into
@@ -2049,7 +2057,7 @@ draw_stars_bars((<span class="nu">3</span>, <span class="nu">0</span>, <span cla
  <header>
   <div class="idline"><span class="cid">COMB.SYM.groups</span><span class="meta">Counting · HS · v1.0</span></div>
   <h2>Symmetries as position lists: polygon, necklace, square grid, cube</h2>
-  <div><span class="badge">🖼 diagram</span></div>
+  <div><span class="badge">🖼 diagram</span><a class="vid" href="https://www.youtube.com/watch?v=CN_06W6ASSk&t=1489s" target="_blank" rel="noopener" title="Counting">▶ Watch how to use it: Video 4 at 24:49</a></div>
   <div class="refs"><b>Uses</b><span class="none">nothing</span> &nbsp; <b>Used by</b><a class="ref" href="#COMB.SYM.canonical">COMB.SYM.canonical</a> &nbsp; <b>Recipes</b><span class="ref">R.COMB.up_to_symmetry</span></div>
  </header>
  <section><h3>1 · Description</h3><div class="desc"><div><p>A symmetry moves positions around; write it as a list g where position i goes to position g[i].
@@ -2121,7 +2129,7 @@ symmetry (COMB.SYM.canonical) starts from these lists.</p><span class="katex-dis
  <header>
   <div class="idline"><span class="cid">COMB.SYM.canonical</span><span class="meta">Counting · HS · v1.0</span></div>
   <h2>Count arrangements up to rotation and reflection (canonical forms)</h2>
-  <div><span class="badge">🖼 diagram</span></div>
+  <div><span class="badge">🖼 diagram</span><a class="vid" href="https://www.youtube.com/watch?v=CN_06W6ASSk&t=1667s" target="_blank" rel="noopener" title="Counting">▶ Watch how to use it: Video 4 at 27:47</a></div>
   <div class="refs"><b>Uses</b><a class="ref" href="#COMB.SYM.groups">COMB.SYM.groups</a> &nbsp; <b>Used by</b><span class="none">none yet</span> &nbsp; <b>Recipes</b><span class="ref">R.COMB.up_to_symmetry</span> <span class="ref">R.COMB.circular</span></div>
  </header>
  <section><h3>1 · Description</h3><div class="desc"><div><p>Two colourings count as the same if a symmetry turns one into the other. Replace every arrangement by the
@@ -2183,7 +2191,7 @@ gs = cube_face_syms()
  <header>
   <div class="idline"><span class="cid">PROB.DIST.finite</span><span class="meta">Probability · MS · v1.0</span></div>
   <h2>Finite distributions with exact probabilities (dice, coins, sums, maxima)</h2>
-  <div><span class="badge">∑ math</span><span class="badge">🖼 diagram</span></div>
+  <div><span class="badge">∑ math</span><span class="badge">🖼 diagram</span><a class="vid" href="https://www.youtube.com/watch?v=EDctb8jut8o&t=56s" target="_blank" rel="noopener" title="Probability and everyday problems">▶ Watch how to use it: Video 5 at 0:56</a></div>
   <div class="refs"><b>Uses</b><a class="ref" href="#FIN.FRAC.tools">FIN.FRAC.tools</a> &nbsp; <b>Used by</b><a class="ref" href="#PROB.ENUM.space">PROB.ENUM.space</a> &nbsp; <b>Recipes</b><span class="ref">R.PROB.enumerate</span> <span class="ref">R.PROB.complement</span> <span class="ref">R.PROB.sequential</span> <span class="ref">R.PROB.convolution</span></div>
  </header>
  <section><h3>1 · Description</h3><div class="desc"><div><p>A distribution is a dict {value: probability} with Fraction probabilities. Build dice and coins, combine
@@ -2259,7 +2267,7 @@ three = repeat(die(<span class="nu">6</span>), <span class="nu">3</span>)
  <header>
   <div class="idline"><span class="cid">PROB.ENUM.space</span><span class="meta">Probability · MS · v1.0</span></div>
   <h2>Probability by listing equally likely outcomes</h2>
-  <div><span class="badge">🖼 diagram</span></div>
+  <div><span class="badge">🖼 diagram</span><a class="vid" href="https://www.youtube.com/watch?v=EDctb8jut8o&t=261s" target="_blank" rel="noopener" title="Probability and everyday problems">▶ Watch how to use it: Video 5 at 4:21</a></div>
   <div class="refs"><b>Uses</b><a class="ref" href="#PROB.DIST.finite">PROB.DIST.finite</a> &nbsp; <b>Used by</b><a class="ref" href="#PROB.EXP.value">PROB.EXP.value</a> &nbsp; <b>Recipes</b><span class="ref">R.PROB.enumerate</span> <span class="ref">R.PROB.condition_filter</span></div>
  </header>
  <section><h3>1 · Description</h3><div class="desc"><div><p>When every outcome is equally likely, probability is favourable ÷ total. Build the sample space with
@@ -2333,7 +2341,7 @@ cases = <span class="nu">0</span>
  <header>
   <div class="idline"><span class="cid">PROB.EXP.value</span><span class="meta">Probability · HS · v1.0</span></div>
   <h2>Expected value: exact, and by linearity with indicators</h2>
-  <div><span class="badge">∑ math</span></div>
+  <div><span class="badge">∑ math</span><a class="vid" href="https://www.youtube.com/watch?v=EDctb8jut8o&t=451s" target="_blank" rel="noopener" title="Probability and everyday problems">▶ Watch how to use it: Video 5 at 7:31</a></div>
   <div class="refs"><b>Uses</b><a class="ref" href="#PROB.ENUM.space">PROB.ENUM.space</a> &nbsp; <b>Used by</b><span class="none">none yet</span> &nbsp; <b>Recipes</b><span class="ref">R.PROB.indicators</span></div>
  </header>
  <section><h3>1 · Description</h3><div class="desc nopic"><div><p>The expected value of a count is the sum, over the things being counted, of the probability that each one
@@ -2387,7 +2395,7 @@ cases = <span class="nu">0</span>
  <header>
   <div class="idline"><span class="cid">PROB.MARKOV.absorb</span><span class="meta">Probability · HS · v1.0</span></div>
   <h2>Random processes: absorbing Markov chains (exact probabilities and expected times)</h2>
-  <div><span class="badge">🖼 diagram</span><span class="badge">⏭ step trace</span></div>
+  <div><span class="badge">🖼 diagram</span><span class="badge">⏭ step trace</span><a class="vid" href="https://www.youtube.com/watch?v=EDctb8jut8o&t=633s" target="_blank" rel="noopener" title="Probability and everyday problems">▶ Watch how to use it: Video 5 at 10:33</a></div>
   <div class="refs"><b>Uses</b><a class="ref" href="#ALG.LIN.solve">ALG.LIN.solve</a> &nbsp; <b>Used by</b><span class="none">none yet</span> &nbsp; <b>Recipes</b><span class="ref">R.PROB.first_step</span> <span class="ref">R.PROB.story_to_markov</span> <span class="ref">R.PROB.waiting_time</span></div>
  </header>
  <section><h3>1 · Description</h3><div class="desc"><div><p>A process moves between states at random until it reaches an end state: a game until someone wins, a
@@ -2473,7 +2481,7 @@ moves = {t: [(Fraction(<span class="nu">1</span>, <span class="nu">6</span>), <s
  <header>
   <div class="idline"><span class="cid">ALG.CALC.integrate</span><span class="meta">Algebra · HS · v1.0</span></div>
   <h2>Areas under curves: adaptive Simpson&#x27;s rule</h2>
-  <div><span class="badge">🖼 diagram</span><span class="badge">▶ live picture</span></div>
+  <div><span class="badge">🖼 diagram</span><span class="badge">▶ live picture</span><a class="vid" href="https://www.youtube.com/watch?v=2snoz2lM6-M&t=1477s" target="_blank" rel="noopener" title="Algebra 2: numerical tools">▶ Watch how to use it: Video 7 at 24:37</a></div>
   <div class="refs"><b>Uses</b><span class="none">nothing</span> &nbsp; <b>Used by</b><a class="ref" href="#GEO.AREA.region">GEO.AREA.region</a></div>
  </header>
  <section><h3>1 · Description</h3><div class="desc"><div><p>The area under y = f(x) from a to b (counted negative below the axis), to about 12 digits, by Simpson's rule
@@ -2524,7 +2532,7 @@ cases = <span class="nu">0</span>
  <header>
   <div class="idline"><span class="cid">ALG.ROOT.bisect</span><span class="meta">Algebra · MS · v1.0</span></div>
   <h2>Bisection: pin down a root between a sign change</h2>
-  <div><span class="badge">⏭ step trace</span></div>
+  <div><span class="badge">⏭ step trace</span><a class="vid" href="https://www.youtube.com/watch?v=2snoz2lM6-M&t=77s" target="_blank" rel="noopener" title="Algebra 2: numerical tools">▶ Watch how to use it: Video 7 at 1:17</a></div>
   <div class="refs"><b>Uses</b><span class="none">nothing</span> &nbsp; <b>Used by</b><a class="ref" href="#ALG.INEQ.solve">ALG.INEQ.solve</a> <a class="ref" href="#ALG.ROOT.real_roots">ALG.ROOT.real_roots</a></div>
  </header>
  <section><h3>1 · Description</h3><div class="desc nopic"><div><p>If f(a) and f(b) have opposite signs and f is continuous, there is a root between them. Halve the
@@ -2594,7 +2602,7 @@ cases = <span class="nu">0</span>
  <header>
   <div class="idline"><span class="cid">ALG.ROOT.real_roots</span><span class="meta">Algebra · HS · v1.0</span></div>
   <h2>All real roots of f(x) = 0 on an interval</h2>
-  <div><span class="badge">∑ math</span><span class="badge">🖼 diagram</span><span class="badge">▶ live picture</span><span class="badge">⏭ step trace</span></div>
+  <div><span class="badge">∑ math</span><span class="badge">🖼 diagram</span><span class="badge">▶ live picture</span><span class="badge">⏭ step trace</span><a class="vid" href="https://www.youtube.com/watch?v=2snoz2lM6-M&t=263s" target="_blank" rel="noopener" title="Algebra 2: numerical tools">▶ Watch how to use it: Video 7 at 4:23</a></div>
   <div class="refs"><b>Uses</b><a class="ref" href="#ALG.ROOT.bisect">ALG.ROOT.bisect</a> &nbsp; <b>Used by</b><a class="ref" href="#ALG.EQ.find">ALG.EQ.find</a> <a class="ref" href="#ALG.ROOT.intersect">ALG.ROOT.intersect</a> &nbsp; <b>Recipes</b><span class="ref">R.ALG.count_solutions</span> <span class="ref">R.ALG.log_exp_equations</span></div>
  </header>
  <section><h3>1 · Description</h3><div class="desc"><div><p>Finds every place on [lo, hi] where the graph of f crosses the x-axis. It walks along the interval in small
@@ -2657,7 +2665,7 @@ count = <span class="nu">0</span>
  <header>
   <div class="idline"><span class="cid">ALG.EQ.find</span><span class="meta">Algebra · MS · v1.0</span></div>
   <h2>Find x (or n) so that an equation holds: integer search, then exact or numeric</h2>
-  <div></div>
+  <div><a class="vid" href="https://www.youtube.com/watch?v=om9O72Wcrfc&t=1319s" target="_blank" rel="noopener" title="Algebra 1: exact computation, equations, polynomials">▶ Watch how to use it: Video 6 at 21:59</a></div>
   <div class="refs"><b>Uses</b><a class="ref" href="#ALG.ROOT.real_roots">ALG.ROOT.real_roots</a> <a class="ref" href="#FIN.ID.identify">FIN.ID.identify</a> &nbsp; <b>Used by</b><span class="none">none yet</span></div>
  </header>
  <section><h3>1 · Description</h3><div class="desc nopic"><div><p>“Find n so that …”: first try integers (and simple fractions) exactly, because most contest answers are integers;
@@ -2714,7 +2722,7 @@ cases = <span class="nu">0</span>
  <header>
   <div class="idline"><span class="cid">ALG.INEQ.solve</span><span class="meta">Algebra · MS · v1.0</span></div>
   <h2>Inequalities: integer solutions and solution intervals</h2>
-  <div><span class="badge">🖼 diagram</span></div>
+  <div><span class="badge">🖼 diagram</span><a class="vid" href="https://www.youtube.com/watch?v=2snoz2lM6-M&t=1055s" target="_blank" rel="noopener" title="Algebra 2: numerical tools">▶ Watch how to use it: Video 7 at 17:35</a></div>
   <div class="refs"><b>Uses</b><a class="ref" href="#ALG.ROOT.bisect">ALG.ROOT.bisect</a> &nbsp; <b>Used by</b><span class="none">none yet</span> &nbsp; <b>Recipes</b><span class="ref">R.ALG.inequality_count</span></div>
  </header>
  <section><h3>1 · Description</h3><div class="desc"><div><p><code>integer_solutions</code> lists the integers in a range that satisfy a condition (count them, add them,
@@ -2773,7 +2781,7 @@ cases = <span class="nu">0</span>
  <header>
   <div class="idline"><span class="cid">ALG.LIN.solve</span><span class="meta">Algebra · MS · v1.0</span></div>
   <h2>Linear systems solved exactly (Gauss with Fractions; rank, free variables)</h2>
-  <div><span class="badge">∑ math</span><span class="badge">⏭ step trace</span></div>
+  <div><span class="badge">∑ math</span><span class="badge">⏭ step trace</span><a class="vid" href="https://www.youtube.com/watch?v=om9O72Wcrfc&t=57s" target="_blank" rel="noopener" title="Algebra 1: exact computation, equations, polynomials">▶ Watch how to use it: Video 6 at 0:57</a></div>
   <div class="refs"><b>Uses</b><a class="ref" href="#FIN.FRAC.tools">FIN.FRAC.tools</a> &nbsp; <b>Used by</b><a class="ref" href="#ALG.ROOT.system">ALG.ROOT.system</a> <a class="ref" href="#PROB.MARKOV.absorb">PROB.MARKOV.absorb</a> <a class="ref" href="#PROC.RATE.word">PROC.RATE.word</a> &nbsp; <b>Recipes</b><span class="ref">R.PROB.first_step</span> <span class="ref">R.PROB.story_to_markov</span> <span class="ref">R.ALG.word_to_system</span> <span class="ref">R.ALG.ages_rates</span> <span class="ref">R.ALG.polynomial_conditions</span></div>
  </header>
  <section><h3>1 · Description</h3><div class="desc nopic"><div><p>Solve n linear equations in n unknowns exactly. Write each equation as a row of coefficients and its
@@ -2865,7 +2873,7 @@ cases = <span class="nu">0</span>
  <header>
   <div class="idline"><span class="cid">ALG.MEAN.stats</span><span class="meta">Algebra · MS · v1.0</span></div>
   <h2>Mean, median, mode and range, exactly; find a missing value</h2>
-  <div></div>
+  <div><a class="vid" href="https://www.youtube.com/watch?v=om9O72Wcrfc&t=1156s" target="_blank" rel="noopener" title="Algebra 1: exact computation, equations, polynomials">▶ Watch how to use it: Video 6 at 19:16</a></div>
   <div class="refs"><b>Uses</b><a class="ref" href="#FIN.FRAC.tools">FIN.FRAC.tools</a> &nbsp; <b>Used by</b><span class="none">none yet</span></div>
  </header>
  <section><h3>1 · Description</h3><div class="desc nopic"><div><p>Averages of lists, kept exact with Fractions, plus the usual statistics. <code>missing_for_mean</code> answers
@@ -2922,7 +2930,7 @@ cases = <span class="nu">0</span>
  <header>
   <div class="idline"><span class="cid">ALG.OPT.min1d</span><span class="meta">Algebra · HS · v1.0</span></div>
   <h2>Maximum or minimum of a function of one variable</h2>
-  <div><span class="badge">🖼 diagram</span><span class="badge">▶ live picture</span></div>
+  <div><span class="badge">🖼 diagram</span><span class="badge">▶ live picture</span><a class="vid" href="https://www.youtube.com/watch?v=2snoz2lM6-M&t=1268s" target="_blank" rel="noopener" title="Algebra 2: numerical tools">▶ Watch how to use it: Video 7 at 21:08</a></div>
   <div class="refs"><b>Uses</b><span class="none">nothing</span> &nbsp; <b>Used by</b><span class="none">none yet</span> &nbsp; <b>Recipes</b><span class="ref">R.ALG.optimise_identify</span> <span class="ref">R.GEO.slide_and_optimise</span></div>
  </header>
  <section><h3>1 · Description</h3><div class="desc"><div><p>Find the largest or smallest value of f on an interval: a coarse scan finds the best region, then the
@@ -2989,7 +2997,7 @@ cases = <span class="nu">0</span>
  <header>
   <div class="idline"><span class="cid">ALG.POLY.arith</span><span class="meta">Algebra · MS · v1.0</span></div>
   <h2>Polynomials as coefficient lists: add, multiply, divide, evaluate</h2>
-  <div><span class="badge">∑ math</span></div>
+  <div><span class="badge">∑ math</span><a class="vid" href="https://www.youtube.com/watch?v=om9O72Wcrfc&t=449s" target="_blank" rel="noopener" title="Algebra 1: exact computation, equations, polynomials">▶ Watch how to use it: Video 6 at 7:29</a></div>
   <div class="refs"><b>Uses</b><span class="none">nothing</span> &nbsp; <b>Used by</b><span class="none">none yet</span></div>
  </header>
  <section><h3>1 · Description</h3><div class="desc nopic"><div><p>Store a polynomial as its list of coefficients, lowest degree first: x² − 3x + 2 is <code>[2, -3, 1]</code>.
@@ -3078,7 +3086,7 @@ cases = <span class="nu">0</span>
  <header>
   <div class="idline"><span class="cid">ALG.POLY.roots</span><span class="meta">Algebra · HS · v1.0</span></div>
   <h2>All roots of a polynomial, complex ones included</h2>
-  <div><span class="badge">🖼 diagram</span><span class="badge">▶ live picture</span></div>
+  <div><span class="badge">🖼 diagram</span><span class="badge">▶ live picture</span><a class="vid" href="https://www.youtube.com/watch?v=om9O72Wcrfc&t=637s" target="_blank" rel="noopener" title="Algebra 1: exact computation, equations, polynomials">▶ Watch how to use it: Video 6 at 10:37</a></div>
   <div class="refs"><b>Uses</b><span class="none">nothing</span> &nbsp; <b>Used by</b><a class="ref" href="#ALG.POLY.vieta">ALG.POLY.vieta</a> &nbsp; <b>Recipes</b><span class="ref">R.ALG.symmetric_sums</span></div>
  </header>
  <section><h3>1 · Description</h3><div class="desc"><div><p>Finds all n roots of a degree-n polynomial at once (Durand–Kerner iteration), real and complex, then
@@ -3164,7 +3172,7 @@ cases = <span class="nu">0</span>
  <header>
   <div class="idline"><span class="cid">ALG.POLY.vieta</span><span class="meta">Algebra · HS · v1.0</span></div>
   <h2>Vieta&#x27;s formulas: sums and products of roots, power sums</h2>
-  <div><span class="badge">∑ math</span></div>
+  <div><span class="badge">∑ math</span><a class="vid" href="https://www.youtube.com/watch?v=om9O72Wcrfc&t=817s" target="_blank" rel="noopener" title="Algebra 1: exact computation, equations, polynomials">▶ Watch how to use it: Video 6 at 13:37</a></div>
   <div class="refs"><b>Uses</b><a class="ref" href="#ALG.POLY.roots">ALG.POLY.roots</a> &nbsp; <b>Used by</b><span class="none">none yet</span> &nbsp; <b>Recipes</b><span class="ref">R.ALG.symmetric_sums</span></div>
  </header>
  <section><h3>1 · Description</h3><div class="desc nopic"><div><p>Without finding the roots: their sum, the sum of their pairwise products, …, their product come straight
@@ -3231,7 +3239,7 @@ cases = <span class="nu">0</span>
  <header>
   <div class="idline"><span class="cid">ALG.REC.iterate</span><span class="meta">Algebra · MS · v1.0</span></div>
   <h2>Recurrences and iterated functions: terms, cycles, periods</h2>
-  <div><span class="badge">⏭ step trace</span></div>
+  <div><span class="badge">⏭ step trace</span><a class="vid" href="https://www.youtube.com/watch?v=om9O72Wcrfc&t=994s" target="_blank" rel="noopener" title="Algebra 1: exact computation, equations, polynomials">▶ Watch how to use it: Video 6 at 16:34</a></div>
   <div class="refs"><b>Uses</b><span class="none">nothing</span> &nbsp; <b>Used by</b><span class="none">none yet</span> &nbsp; <b>Recipes</b><span class="ref">R.GEN.memo_recursion</span> <span class="ref">R.NT.periodic_mod</span> <span class="ref">R.COMB.last_step</span> <span class="ref">R.ALG.recurrence_closed</span> <span class="ref">R.ALG.periodic_sequence</span></div>
  </header>
  <section><h3>1 · Description</h3><div class="desc nopic"><div><p>Compute the terms of a sequence defined by a rule (aₙ₊₁ from the previous terms, or x → f(x) applied
@@ -3294,7 +3302,7 @@ cases = <span class="nu">0</span>
  <header>
   <div class="idline"><span class="cid">ALG.ROOT.intersect</span><span class="meta">Algebra · HS · v1.0</span></div>
   <h2>Where two graphs meet: f(x) = g(x)</h2>
-  <div><span class="badge">🖼 diagram</span><span class="badge">▶ live picture</span></div>
+  <div><span class="badge">🖼 diagram</span><span class="badge">▶ live picture</span><a class="vid" href="https://www.youtube.com/watch?v=2snoz2lM6-M&t=490s" target="_blank" rel="noopener" title="Algebra 2: numerical tools">▶ Watch how to use it: Video 7 at 8:10</a></div>
   <div class="refs"><b>Uses</b><a class="ref" href="#ALG.ROOT.real_roots">ALG.ROOT.real_roots</a> &nbsp; <b>Used by</b><span class="none">none yet</span> &nbsp; <b>Recipes</b><span class="ref">R.ALG.count_solutions</span></div>
  </header>
  <section><h3>1 · Description</h3><div class="desc"><div><p>The solutions of f(x) = g(x) are where the two graphs cross. <code>intersections</code> returns the
@@ -3335,7 +3343,7 @@ cases = <span class="nu">0</span>
  <header>
   <div class="idline"><span class="cid">ALG.ROOT.system</span><span class="meta">Algebra · HS · v1.0</span></div>
   <h2>Solve non-linear systems numerically (Newton in several unknowns)</h2>
-  <div><span class="badge">⏭ step trace</span></div>
+  <div><span class="badge">⏭ step trace</span><a class="vid" href="https://www.youtube.com/watch?v=2snoz2lM6-M&t=652s" target="_blank" rel="noopener" title="Algebra 2: numerical tools">▶ Watch how to use it: Video 7 at 10:52</a></div>
   <div class="refs"><b>Uses</b><a class="ref" href="#ALG.LIN.solve">ALG.LIN.solve</a> &nbsp; <b>Used by</b><a class="ref" href="#ALG.SYM.values">ALG.SYM.values</a> &nbsp; <b>Recipes</b><span class="ref">R.ALG.solve_then_substitute</span> <span class="ref">R.GEO.constraint_place</span></div>
  </header>
  <section><h3>1 · Description</h3><div class="desc nopic"><div><p>Two or three equations in two or three unknowns that do not untangle by hand: write them as F(x) = 0 and let
@@ -3407,7 +3415,7 @@ cases = <span class="nu">0</span>
  <header>
   <div class="idline"><span class="cid">ALG.SUM.partial</span><span class="meta">Algebra · MS · v1.0</span></div>
   <h2>Exact sums and products of many terms; watch the partial sums</h2>
-  <div><span class="badge">∑ math</span><span class="badge">⏭ step trace</span></div>
+  <div><span class="badge">∑ math</span><span class="badge">⏭ step trace</span><a class="vid" href="https://www.youtube.com/watch?v=om9O72Wcrfc&t=251s" target="_blank" rel="noopener" title="Algebra 1: exact computation, equations, polynomials">▶ Watch how to use it: Video 6 at 4:11</a></div>
   <div class="refs"><b>Uses</b><a class="ref" href="#FIN.FRAC.tools">FIN.FRAC.tools</a> &nbsp; <b>Used by</b><span class="none">none yet</span> &nbsp; <b>Recipes</b><span class="ref">R.GEN.small_cases</span> <span class="ref">R.ALG.telescoping</span> <span class="ref">R.ALG.alternating_sums</span></div>
  </header>
  <section><h3>1 · Description</h3><div class="desc"><div><p>Compute Σ and Π exactly with Fractions, and print the partial sums S₁, S₂, S₃, … so a pattern
@@ -3474,7 +3482,7 @@ terms = [<span class="kw">lambda</span> k: F(<span class="nu">1</span>, k * (k +
  <header>
   <div class="idline"><span class="cid">ALG.SYM.values</span><span class="meta">Algebra · HS · v1.0</span></div>
   <h2>Expressions in a, b, c from given relations: solve for the numbers, then evaluate</h2>
-  <div></div>
+  <div><a class="vid" href="https://www.youtube.com/watch?v=2snoz2lM6-M&t=859s" target="_blank" rel="noopener" title="Algebra 2: numerical tools">▶ Watch how to use it: Video 7 at 14:19</a></div>
   <div class="refs"><b>Uses</b><a class="ref" href="#ALG.ROOT.system">ALG.ROOT.system</a> <a class="ref" href="#FIN.ID.identify">FIN.ID.identify</a> &nbsp; <b>Used by</b><span class="none">none yet</span> &nbsp; <b>Recipes</b><span class="ref">R.ALG.solve_then_substitute</span></div>
  </header>
  <section><h3>1 · Description</h3><div class="desc nopic"><div><p>“a + b = 5 and ab = 3; find a³ + b³.” The intended route is algebra, but you can also just find numbers
@@ -3515,7 +3523,7 @@ cases = <span class="nu">0</span>
  <header>
   <div class="idline"><span class="cid">GEO.PT.vec2</span><span class="meta">Geometry · MS · v1.0</span></div>
   <h2>2D points and vectors: add, dot, cross, length, angle, rotate</h2>
-  <div><span class="badge">🖼 diagram</span><span class="badge">▶ live picture</span></div>
+  <div><span class="badge">🖼 diagram</span><span class="badge">▶ live picture</span><a class="vid" href="https://www.youtube.com/watch?v=KB6Gzg7gfJY&t=64s" target="_blank" rel="noopener" title="Geometry">▶ Watch how to use it: Video 8 at 1:04</a></div>
   <div class="refs"><b>Uses</b><span class="none">nothing</span> &nbsp; <b>Used by</b><a class="ref" href="#COMB.FIG.count">COMB.FIG.count</a> <a class="ref" href="#GEO.LINE.tools">GEO.LINE.tools</a> &nbsp; <b>Recipes</b><span class="ref">R.COMB.figures_in_grid</span> <span class="ref">R.ALG.complex_geometry</span> <span class="ref">R.GEO.coordinates</span> <span class="ref">R.GEO.check_figure</span> <span class="ref">R.GEO.angles_numeric</span> <span class="ref">R.GEO.slide_and_optimise</span></div>
  </header>
  <section><h3>1 · Description</h3><div class="desc"><div><p>Points are pairs (x, y). These short functions do vector arithmetic, lengths, dot and cross products,
@@ -3594,7 +3602,7 @@ cases = <span class="nu">0</span>
  <header>
   <div class="idline"><span class="cid">GEO.3D.solids</span><span class="meta">Geometry · MS · v1.0</span></div>
   <h2>Solids: box, prism, pyramid, cylinder, cone, frustum, sphere</h2>
-  <div><span class="badge">∑ math</span><span class="badge">🖼 diagram</span></div>
+  <div><span class="badge">∑ math</span><span class="badge">🖼 diagram</span><a class="vid" href="https://www.youtube.com/watch?v=KB6Gzg7gfJY&t=1890s" target="_blank" rel="noopener" title="Geometry">▶ Watch how to use it: Video 8 at 31:30</a></div>
   <div class="refs"><b>Uses</b><span class="none">nothing</span> &nbsp; <b>Used by</b><span class="none">none yet</span> &nbsp; <b>Recipes</b><span class="ref">R.GEO.three_d_coordinates</span></div>
  </header>
  <section><h3>1 · Description</h3><div class="desc"><div><p>Volume and surface area formulas in one place, as functions: box, cube, prism and pyramid (from base area
@@ -3671,7 +3679,7 @@ cases = <span class="nu">0</span>
  <header>
   <div class="idline"><span class="cid">GEO.3D.vec3</span><span class="meta">Geometry · HS · v1.0</span></div>
   <h2>3D vectors: cross product, planes, distances, volumes from coordinates</h2>
-  <div><span class="badge">🖼 diagram</span></div>
+  <div><span class="badge">🖼 diagram</span><a class="vid" href="https://www.youtube.com/watch?v=KB6Gzg7gfJY&t=1690s" target="_blank" rel="noopener" title="Geometry">▶ Watch how to use it: Video 8 at 28:10</a></div>
   <div class="refs"><b>Uses</b><span class="none">nothing</span> &nbsp; <b>Used by</b><span class="none">none yet</span> &nbsp; <b>Recipes</b><span class="ref">R.GEO.three_d_coordinates</span></div>
  </header>
  <section><h3>1 · Description</h3><div class="desc"><div><p>Points in space are triples. Vector arithmetic, dot and cross products, the plane through three points,
@@ -3735,7 +3743,7 @@ cases = <span class="nu">0</span>
  <header>
   <div class="idline"><span class="cid">GEO.AREA.region</span><span class="meta">Geometry · HS · v1.0</span></div>
   <h2>Areas of curved regions: sectors, segments, lenses, regions between graphs</h2>
-  <div><span class="badge">🖼 diagram</span><span class="badge">▶ live picture</span></div>
+  <div><span class="badge">🖼 diagram</span><span class="badge">▶ live picture</span><a class="vid" href="https://www.youtube.com/watch?v=KB6Gzg7gfJY&t=1466s" target="_blank" rel="noopener" title="Geometry">▶ Watch how to use it: Video 8 at 24:26</a></div>
   <div class="refs"><b>Uses</b><a class="ref" href="#ALG.CALC.integrate">ALG.CALC.integrate</a> <a class="ref" href="#FIN.SQF.squarefree">FIN.SQF.squarefree</a> &nbsp; <b>Used by</b><span class="none">none yet</span> &nbsp; <b>Recipes</b><span class="ref">R.GEO.composite_area</span> <span class="ref">R.GEO.overlap_region</span></div>
  </header>
  <section><h3>1 · Description</h3><div class="desc"><div><p>Shaded regions made of circle pieces: a sector, the segment cut off by a chord, the lens where two circles
@@ -3818,7 +3826,7 @@ cases = <span class="nu">0</span>
  <header>
   <div class="idline"><span class="cid">GEO.AREA.shoelace</span><span class="meta">Geometry · MS · v1.0</span></div>
   <h2>Area of a polygon from its vertices (shoelace formula)</h2>
-  <div><span class="badge">∑ math</span><span class="badge">🖼 diagram</span><span class="badge">▶ live picture</span></div>
+  <div><span class="badge">∑ math</span><span class="badge">🖼 diagram</span><span class="badge">▶ live picture</span><a class="vid" href="https://www.youtube.com/watch?v=KB6Gzg7gfJY&t=502s" target="_blank" rel="noopener" title="Geometry">▶ Watch how to use it: Video 8 at 8:22</a></div>
   <div class="refs"><b>Uses</b><span class="none">nothing</span> &nbsp; <b>Used by</b><a class="ref" href="#GEO.LAT.pick">GEO.LAT.pick</a> &nbsp; <b>Recipes</b><span class="ref">R.PROB.geometric</span> <span class="ref">R.GEO.coordinates</span> <span class="ref">R.GEO.composite_area</span> <span class="ref">R.GEO.lattice_area</span></div>
  </header>
  <section><h3>1 · Description</h3><div class="desc"><div><p>Exact area of any simple polygon (no crossing sides), given its corners in order around the boundary,
@@ -3900,7 +3908,7 @@ count = <span class="nu">0</span>
  <header>
   <div class="idline"><span class="cid">GEO.LINE.tools</span><span class="meta">Geometry · MS · v1.0</span></div>
   <h2>Lines: through two points, intersection, foot of perpendicular, reflection, distance</h2>
-  <div><span class="badge">🖼 diagram</span><span class="badge">▶ live picture</span></div>
+  <div><span class="badge">🖼 diagram</span><span class="badge">▶ live picture</span><a class="vid" href="https://www.youtube.com/watch?v=KB6Gzg7gfJY&t=298s" target="_blank" rel="noopener" title="Geometry">▶ Watch how to use it: Video 8 at 4:58</a></div>
   <div class="refs"><b>Uses</b><a class="ref" href="#GEO.PT.vec2">GEO.PT.vec2</a> &nbsp; <b>Used by</b><a class="ref" href="#GEO.CIRC.tools">GEO.CIRC.tools</a> &nbsp; <b>Recipes</b><span class="ref">R.GEO.coordinates</span> <span class="ref">R.GEO.similar_ratios</span> <span class="ref">R.GEO.fold_reflect</span></div>
  </header>
  <section><h3>1 · Description</h3><div class="desc"><div><p>A line is stored as (a, b, c) for ax + by = c, which handles vertical lines too. Build it from two points,
@@ -3993,7 +4001,7 @@ cases = <span class="nu">0</span>
  <header>
   <div class="idline"><span class="cid">GEO.CIRC.tools</span><span class="meta">Geometry · HS · v1.0</span></div>
   <h2>Circles: through three points, meeting a line, meeting a circle, tangent lengths</h2>
-  <div><span class="badge">🖼 diagram</span><span class="badge">▶ live picture</span></div>
+  <div><span class="badge">🖼 diagram</span><span class="badge">▶ live picture</span><a class="vid" href="https://www.youtube.com/watch?v=KB6Gzg7gfJY&t=1258s" target="_blank" rel="noopener" title="Geometry">▶ Watch how to use it: Video 8 at 20:58</a></div>
   <div class="refs"><b>Uses</b><a class="ref" href="#GEO.LINE.tools">GEO.LINE.tools</a> &nbsp; <b>Used by</b><span class="none">none yet</span> &nbsp; <b>Recipes</b><span class="ref">R.GEO.circle_tangency</span> <span class="ref">R.GEO.locus_sampling</span></div>
  </header>
  <section><h3>1 · Description</h3><div class="desc"><div><p>A circle is (centre, radius). Find the circle through three points, where a line cuts a circle, where two
@@ -4086,7 +4094,7 @@ cases = <span class="nu">0</span>
  <header>
   <div class="idline"><span class="cid">GEO.LAT.pick</span><span class="meta">Geometry · HS · v1.0</span></div>
   <h2>Lattice points on segments, on and inside polygons (Pick&#x27;s theorem)</h2>
-  <div><span class="badge">∑ math</span><span class="badge">🖼 diagram</span><span class="badge">▶ live picture</span></div>
+  <div><span class="badge">∑ math</span><span class="badge">🖼 diagram</span><span class="badge">▶ live picture</span><a class="vid" href="https://www.youtube.com/watch?v=KB6Gzg7gfJY&t=677s" target="_blank" rel="noopener" title="Geometry">▶ Watch how to use it: Video 8 at 11:17</a></div>
   <div class="refs"><b>Uses</b><a class="ref" href="#NT.GCD.basic">NT.GCD.basic</a> <a class="ref" href="#GEO.AREA.shoelace">GEO.AREA.shoelace</a> &nbsp; <b>Used by</b><span class="none">none yet</span> &nbsp; <b>Recipes</b><span class="ref">R.GEO.lattice_area</span></div>
  </header>
  <section><h3>1 · Description</h3><div class="desc"><div><p>A segment between lattice points passes through gcd(|Δx|, |Δy|) + 1 lattice points. For a polygon whose
@@ -4147,7 +4155,7 @@ cases = <span class="nu">0</span>
  <header>
   <div class="idline"><span class="cid">GEO.TRI.sides</span><span class="meta">Geometry · MS · v1.0</span></div>
   <h2>Triangle from its three sides: area, angles, heights, medians, R and r</h2>
-  <div><span class="badge">∑ math</span><span class="badge">🖼 diagram</span><span class="badge">▶ live picture</span></div>
+  <div><span class="badge">∑ math</span><span class="badge">🖼 diagram</span><span class="badge">▶ live picture</span><a class="vid" href="https://www.youtube.com/watch?v=KB6Gzg7gfJY&t=855s" target="_blank" rel="noopener" title="Geometry">▶ Watch how to use it: Video 8 at 14:15</a></div>
   <div class="refs"><b>Uses</b><span class="none">nothing</span> &nbsp; <b>Used by</b><a class="ref" href="#GEO.TRI.solve">GEO.TRI.solve</a> &nbsp; <b>Recipes</b><span class="ref">R.GEO.triangle_all</span> <span class="ref">R.GEO.similar_ratios</span></div>
  </header>
  <section><h3>1 · Description</h3><div class="desc"><div><p>Give the three side lengths and get everything else: area by Heron's formula, the three angles, the heights,
@@ -4227,7 +4235,7 @@ cases = <span class="nu">0</span>
  <header>
   <div class="idline"><span class="cid">GEO.TRI.solve</span><span class="meta">Geometry · HS · v1.0</span></div>
   <h2>Solve a triangle: SAS, ASA, AAS, SSA (law of sines and cosines)</h2>
-  <div><span class="badge">∑ math</span><span class="badge">🖼 diagram</span></div>
+  <div><span class="badge">∑ math</span><span class="badge">🖼 diagram</span><a class="vid" href="https://www.youtube.com/watch?v=KB6Gzg7gfJY&t=1053s" target="_blank" rel="noopener" title="Geometry">▶ Watch how to use it: Video 8 at 17:33</a></div>
   <div class="refs"><b>Uses</b><a class="ref" href="#GEO.TRI.sides">GEO.TRI.sides</a> &nbsp; <b>Used by</b><span class="none">none yet</span> &nbsp; <b>Recipes</b><span class="ref">R.GEO.angles_numeric</span></div>
  </header>
  <section><h3>1 · Description</h3><div class="desc"><div><p>From two sides and the angle between them (SAS), two angles and a side (ASA/AAS), or two sides and an
@@ -4293,7 +4301,7 @@ cases = <span class="nu">0</span>
  <header>
   <div class="idline"><span class="cid">PROC.DATE.calendar</span><span class="meta">Everyday and process · MS · v1.0</span></div>
   <h2>Calendars: weekday of a date, days between, leap years, counting dates</h2>
-  <div></div>
+  <div><a class="vid" href="https://www.youtube.com/watch?v=EDctb8jut8o&t=828s" target="_blank" rel="noopener" title="Probability and everyday problems">▶ Watch how to use it: Video 5 at 13:48</a></div>
   <div class="refs"><b>Uses</b><span class="none">nothing</span> &nbsp; <b>Used by</b><span class="none">none yet</span> &nbsp; <b>Recipes</b><span class="ref">R.PROC.calendar</span></div>
  </header>
  <section><h3>1 · Description</h3><div class="desc nopic"><div><p>Python's <code>datetime</code> knows the calendar: day of the week for any date, days between two dates,
@@ -4349,7 +4357,7 @@ cases = <span class="nu">0</span>
  <header>
   <div class="idline"><span class="cid">PROC.RATE.word</span><span class="meta">Everyday and process · MS · v1.0</span></div>
   <h2>Rates, work, mixtures and percents with exact fractions</h2>
-  <div><span class="badge">∑ math</span></div>
+  <div><span class="badge">∑ math</span><a class="vid" href="https://www.youtube.com/watch?v=EDctb8jut8o&t=1011s" target="_blank" rel="noopener" title="Probability and everyday problems">▶ Watch how to use it: Video 5 at 16:51</a></div>
   <div class="refs"><b>Uses</b><a class="ref" href="#FIN.FRAC.tools">FIN.FRAC.tools</a> <a class="ref" href="#ALG.LIN.solve">ALG.LIN.solve</a> &nbsp; <b>Used by</b><span class="none">none yet</span> &nbsp; <b>Recipes</b><span class="ref">R.ALG.word_to_system</span> <span class="ref">R.ALG.ages_rates</span></div>
  </header>
  <section><h3>1 · Description</h3><div class="desc nopic"><div><p>Small exact helpers for the classic word problems: people or pipes working together, average speed over
@@ -4407,7 +4415,7 @@ cases = <span class="nu">0</span>
  <header>
   <div class="idline"><span class="cid">VIS.svg.canvas</span><span class="meta">Picture tools · MS · v1.0</span></div>
   <h2>Picture canvas in the toolkit&#x27;s house style</h2>
-  <div><span class="badge">▶ live picture</span></div>
+  <div><span class="badge">▶ live picture</span><a class="vid" href="https://www.youtube.com/watch?v=ctmxsELmryI&t=2234s" target="_blank" rel="noopener" title="Using the Toolkit, finishing tools, pictures">▶ Watch how to use it: Video 1 at 37:14</a></div>
   <div class="refs"><b>Uses</b><span class="none">nothing</span> &nbsp; <b>Used by</b><a class="ref" href="#VIS.svg.lattice">VIS.svg.lattice</a> <a class="ref" href="#VIS.svg.plot">VIS.svg.plot</a> <a class="ref" href="#VIS.svg.shapes">VIS.svg.shapes</a></div>
  </header>
  <section><h3>1 · Description</h3><div class="desc"><div><p>A tiny drawing kit that turns coordinates into a neat SVG picture, using only the standard library.
@@ -4585,7 +4593,7 @@ n = <span class="nu">0</span>
  <header>
   <div class="idline"><span class="cid">VIS.svg.lattice</span><span class="meta">Picture tools · MS · v1.0</span></div>
   <h2>Grids with numbers at points and a highlighted path</h2>
-  <div><span class="badge">▶ live picture</span></div>
+  <div><span class="badge">▶ live picture</span><a class="vid" href="https://www.youtube.com/watch?v=ctmxsELmryI&t=2681s" target="_blank" rel="noopener" title="Using the Toolkit, finishing tools, pictures">▶ Watch how to use it: Video 1 at 44:41</a></div>
   <div class="refs"><b>Uses</b><a class="ref" href="#VIS.svg.canvas">VIS.svg.canvas</a> &nbsp; <b>Used by</b><span class="none">none yet</span> &nbsp; <b>Recipes</b><span class="ref">R.GEN.draw_first</span></div>
  </header>
  <section><h3>1 · Description</h3><div class="desc"><div><p>Draw a w × h grid of points, write a number at each point (for example how many paths reach it),
@@ -4626,7 +4634,7 @@ n = <span class="nu">0</span>
  <header>
   <div class="idline"><span class="cid">VIS.svg.plot</span><span class="meta">Picture tools · MS · v1.0</span></div>
   <h2>Graph functions and mark points</h2>
-  <div><span class="badge">▶ live picture</span></div>
+  <div><span class="badge">▶ live picture</span><a class="vid" href="https://www.youtube.com/watch?v=ctmxsELmryI&t=2551s" target="_blank" rel="noopener" title="Using the Toolkit, finishing tools, pictures">▶ Watch how to use it: Video 1 at 42:31</a></div>
   <div class="refs"><b>Uses</b><a class="ref" href="#VIS.svg.canvas">VIS.svg.canvas</a> &nbsp; <b>Used by</b><span class="none">none yet</span> &nbsp; <b>Recipes</b><span class="ref">R.GEN.draw_first</span> <span class="ref">R.ALG.count_solutions</span> <span class="ref">R.GEO.locus_sampling</span></div>
  </header>
  <section><h3>1 · Description</h3><div class="desc"><div><p>Draw one or more graphs y = f(x) on a grid with axes, and mark special points such as roots,
@@ -4682,7 +4690,7 @@ n = <span class="nu">0</span>
  <header>
   <div class="idline"><span class="cid">VIS.svg.shapes</span><span class="meta">Picture tools · MS · v1.0</span></div>
   <h2>Draw a figure from named points</h2>
-  <div><span class="badge">▶ live picture</span></div>
+  <div><span class="badge">▶ live picture</span><a class="vid" href="https://www.youtube.com/watch?v=ctmxsELmryI&t=2415s" target="_blank" rel="noopener" title="Using the Toolkit, finishing tools, pictures">▶ Watch how to use it: Video 1 at 40:15</a></div>
   <div class="refs"><b>Uses</b><a class="ref" href="#VIS.svg.canvas">VIS.svg.canvas</a> &nbsp; <b>Used by</b><span class="none">none yet</span> &nbsp; <b>Recipes</b><span class="ref">R.GEN.draw_first</span> <span class="ref">R.GEO.check_figure</span></div>
  </header>
  <section><h3>1 · Description</h3><div class="desc"><div><p>Give your points names and coordinates, say which segments, polygons and circles to draw, and get a
