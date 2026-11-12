@@ -28,14 +28,30 @@ title: Readiness check
 
 # Readiness check
 
-A free self-check for students thinking of joining MCC. Pick a level, set aside **60 minutes**, and solve **4 problems** with pencil and paper. Then type your answers below: the page checks them at once and suggests where to start.
+A free self-check for students thinking of joining MCC, in two sizes: the **full entrance test** of August 2026 with its solutions, or a **quick check** of 4 problems in 60 minutes whose answers this page checks at once. For the quick check, pick a level, solve the problems with pencil and paper, then type your answers below.
 
 * **Nothing is sent anywhere.** No sign-in, no names; your answers stay in your browser.
 * **No calculators, no internet, no AI.** It is a check for you, so it only helps if the work is your own.
 * **Which level?** [T1](./t1.md) is the entry point to contest training, for students who have already worked through Beast Academy or the AoPS Introductory series. [T2](./t2.md): problems that need more than one idea. [T3](./t3.md): national olympiad problems. [T4](./t4.md): olympiad mastery. Not sure? Try T1 first, then the next level up.
-* The problems come from a past MCC entrance test. On the real test, students also write full solutions, and the parts that ask you to *show* or *explain* something are marked on that writing. Here only the answers are checked.
 
-This check does not place a student. Placement is by the club's [two-day entrance test](./programs.md#entrance-and-reassessment), sat as a team, after [registration](./register.md).
+Neither check places a student. Placement is by the club's [two-day entrance test](./programs.md#entrance-and-reassessment), sat as a team, after [registration](./register.md).
+
+## The full summer entrance test, free to try
+
+The quick check below uses four problems. For the real thing, here is the whole **MCC entrance test of August 2026**: two papers per level (Day 1 and Day 2), six problems each, exactly as students sat them, with full solutions to compare.
+
+| Level | Time | Day 1 | Day 2 |
+|---|---|---|---|
+| **T1** | 90 min | [Paper](./assets/papers/summer-2026/MCC-Summer-2026-T1-Day1.pdf) · [Solutions](./assets/papers/summer-2026/MCC-Summer-2026-T1-Day1-Solutions.pdf) | [Paper](./assets/papers/summer-2026/MCC-Summer-2026-T1-Day2.pdf) · [Solutions](./assets/papers/summer-2026/MCC-Summer-2026-T1-Day2-Solutions.pdf) |
+| **T2** | 120 min | [Paper](./assets/papers/summer-2026/MCC-Summer-2026-T2-Day1.pdf) · [Solutions](./assets/papers/summer-2026/MCC-Summer-2026-T2-Day1-Solutions.pdf) | [Paper](./assets/papers/summer-2026/MCC-Summer-2026-T2-Day2.pdf) · [Solutions](./assets/papers/summer-2026/MCC-Summer-2026-T2-Day2-Solutions.pdf) |
+| **T3** | 150 min | [Paper](./assets/papers/summer-2026/MCC-Summer-2026-T3-Day1.pdf) · [Solutions](./assets/papers/summer-2026/MCC-Summer-2026-T3-Day1-Solutions.pdf) | [Paper](./assets/papers/summer-2026/MCC-Summer-2026-T3-Day2.pdf) · [Solutions](./assets/papers/summer-2026/MCC-Summer-2026-T3-Day2-Solutions.pdf) |
+| **T4** | 180 min | [Paper](./assets/papers/summer-2026/MCC-Summer-2026-T4-Day1.pdf) · [Solutions](./assets/papers/summer-2026/MCC-Summer-2026-T4-Day1-Solutions.pdf) | [Paper](./assets/papers/summer-2026/MCC-Summer-2026-T4-Day2.pdf) · [Solutions](./assets/papers/summer-2026/MCC-Summer-2026-T4-Day2-Solutions.pdf) |
+
+**How to use it:** print the paper (or open it on a second screen), set a timer for the time shown, and write full solutions on paper, with no calculator, no internet and no AI. Then open the solutions and compare, problem by problem: the method matters as much as the answer. The pass mark on a real entrance paper is 51 out of 100, and the two days are averaged.
+
+## Quick check: 4 problems, 60 minutes
+
+The four problems come from the same August 2026 test. On the real test, students also write full solutions, and the parts that ask you to *show* or *explain* something are marked on that writing. Here only the answers are checked.
 
 <details class="vn" markdown="1">
 <summary>🇻🇳 Tiếng Việt — Bài tự kiểm tra (click to expand)</summary>
@@ -46,6 +62,17 @@ Bài tự kiểm tra miễn phí cho các em muốn tham gia MCC. Chọn một l
 * **Không dùng máy tính bỏ túi, internet hay AI.** Bài này để các em tự biết mình, nên chỉ có ích khi các em tự làm.
 * **Chọn level nào?** [T1](./t1.md) là bước đầu vào luyện toán thi đấu, cho các em đã học qua Beast Academy hoặc bộ AoPS Introductory. [T2](./t2.md): các bài cần kết hợp nhiều ý. [T3](./t3.md): bài thi olympic cấp quốc gia. [T4](./t4.md): thành thạo toán olympic. Chưa chắc? Thử T1 trước, rồi đến level cao hơn.
 * Các bài lấy từ một đề thi đầu vào cũ của MCC. Trong bài thi thật, học sinh còn phải viết lời giải đầy đủ, và các câu yêu cầu *chứng minh* hay *giải thích* được chấm trên bài viết đó. Ở đây chỉ kiểm tra đáp số.
+
+**Toàn bộ bài thi đầu vào mùa hè, miễn phí.** Ngoài bài tự kiểm tra nhanh 4 bài, đây là toàn bộ **đề thi đầu vào MCC tháng 8/2026**: mỗi level hai đề (Ngày 1 và Ngày 2), mỗi đề 6 bài, đúng như học sinh đã thi, kèm lời giải đầy đủ để so sánh.
+
+| Level | Thời gian | Ngày 1 | Ngày 2 |
+|---|---|---|---|
+| **T1** | 90 phút | [Đề](./assets/papers/summer-2026/MCC-Summer-2026-T1-Day1.pdf) · [Lời giải](./assets/papers/summer-2026/MCC-Summer-2026-T1-Day1-Solutions.pdf) | [Đề](./assets/papers/summer-2026/MCC-Summer-2026-T1-Day2.pdf) · [Lời giải](./assets/papers/summer-2026/MCC-Summer-2026-T1-Day2-Solutions.pdf) |
+| **T2** | 120 phút | [Đề](./assets/papers/summer-2026/MCC-Summer-2026-T2-Day1.pdf) · [Lời giải](./assets/papers/summer-2026/MCC-Summer-2026-T2-Day1-Solutions.pdf) | [Đề](./assets/papers/summer-2026/MCC-Summer-2026-T2-Day2.pdf) · [Lời giải](./assets/papers/summer-2026/MCC-Summer-2026-T2-Day2-Solutions.pdf) |
+| **T3** | 150 phút | [Đề](./assets/papers/summer-2026/MCC-Summer-2026-T3-Day1.pdf) · [Lời giải](./assets/papers/summer-2026/MCC-Summer-2026-T3-Day1-Solutions.pdf) | [Đề](./assets/papers/summer-2026/MCC-Summer-2026-T3-Day2.pdf) · [Lời giải](./assets/papers/summer-2026/MCC-Summer-2026-T3-Day2-Solutions.pdf) |
+| **T4** | 180 phút | [Đề](./assets/papers/summer-2026/MCC-Summer-2026-T4-Day1.pdf) · [Lời giải](./assets/papers/summer-2026/MCC-Summer-2026-T4-Day1-Solutions.pdf) | [Đề](./assets/papers/summer-2026/MCC-Summer-2026-T4-Day2.pdf) · [Lời giải](./assets/papers/summer-2026/MCC-Summer-2026-T4-Day2-Solutions.pdf) |
+
+**Cách dùng:** in đề (hoặc mở trên màn hình thứ hai), bấm giờ theo thời gian ghi trong bảng, và viết lời giải đầy đủ ra giấy, không dùng máy tính bỏ túi, internet hay AI. Sau đó mở lời giải và so sánh từng bài: cách làm quan trọng không kém đáp số. Điểm đạt của một đề thi đầu vào thật là 51/100, và điểm hai ngày được lấy trung bình.
 
 Bài này không dùng để xếp lớp. Việc xếp level dựa trên [bài thi đầu vào hai ngày](./programs.md#entrance-and-reassessment), làm theo đội, sau khi [đăng ký](./register.md).
 
