@@ -139,7 +139,7 @@ So $S_n/n$ is constant for $n\ge2$: it equals $S_2/2=\frac{284}2=142$. Therefore
 <div class="ct-meta">Algebra &middot; LPS VI, Chapter 53: Sequences, Series, and Recursive Patterns &middot; also AMC 10A Problem 10</div>
 <div class="ct-text"><p>For what positive integer $n$ is the mean of $1, 4, 9, 16, \ldots, n^2$ exactly $32\%$ greater than its median?</p></div>
 <div class="ct-choices ct-text"><span><b>(A)</b>$19$</span><span><b>(B)</b>$39$</span><span><b>(C)</b>$49$</span><span><b>(D)</b>$89$</span><span><b>(E)</b>$169$</span></div>
-<div class="ct-note"><p>Same problem as AMC 10A Problem 10, except that "odd" is left out. For even $n$ the median is $\frac{(n/2)^2+(n/2+1)^2}2=\frac{n^2+2n+2}4$, and $\frac{(n+1)(2n+1)}6=\frac{33}{25}\cdot\frac{n^2+2n+2}4$ becomes $n^2-48n-148=0$, whose discriminant $2896$ is not a perfect square. So no even $n$ works and the answer is still $49$.</p></div>
+<div class="ct-note"><p>Same problem as AMC 10A Problem 10, except that "odd" is left out. The solutions below treat odd $n$; this note completes them. For even $n$ the median is $\frac{(n/2)^2+(n/2+1)^2}2=\frac{n^2+2n+2}4$, and $\frac{(n+1)(2n+1)}6=\frac{33}{25}\cdot\frac{n^2+2n+2}4$ becomes $n^2-48n-148=0$, whose discriminant $2896$ is not a perfect square. So no even $n$ works and the answer is still $49$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><p class="ct-answer ct-text">(C) $49$</p></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Formulas for mean and median)</h4>
@@ -215,11 +215,11 @@ The cases do not overlap, so there are $\boxed{10}$ pairs.</p>
 <details class="ct-ans"><summary>Show the answer</summary><p class="ct-answer ct-text">(B) $8$</p></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Climb back up the tree)</h4>
-<p>Every entry is less than $1$. A child $\frac pq$ of $\frac ab$ has $q=a+b$ and $p=a$ or $p=b$, so its parent is $\frac{p}{q-p}$ or $\frac{q-p}{p}$; only the one that is less than $1$ can be in the tree. Going up from $\frac{20}{27}$:
+<p>Every entry is less than $1$, and every entry is in lowest terms: the root is, and $\gcd(a,a+b)=\gcd(b,a+b)=\gcd(a,b)=1$. So a child $\frac pq$ of $\frac ab$, written in lowest terms, has $q=a+b$ and $p=a$ or $p=b$, so its parent is $\frac{p}{q-p}$ or $\frac{q-p}{p}$; only the one that is less than $1$ can be in the tree. Going up from $\frac{20}{27}$:
 \[\tfrac{20}{27}\to\tfrac{7}{20}\to\tfrac{7}{13}\to\tfrac{6}{7}\to\tfrac16\to\tfrac15\to\tfrac14\to\tfrac13\to\tfrac12.\]
 That is $8$ steps up to row $0$, so $\frac{20}{27}$ is in row $\boxed{8}$.</p>
 <h4>Solution 2 (Continued fractions)</h4>
-<p>For an entry $\frac ab$ write $\frac ba$ as a continued fraction $[c_0;c_1,\dots,c_m]$. Moving to a child adds exactly $1$ to the sum $c_0+c_1+\cdots+c_m$: the left child $\frac{a}{a+b}$ turns $\frac ba$ into $\frac{a+b}a=1+\frac ba$, which raises $c_0$ by $1$, and the right child $\frac b{a+b}$ turns $\frac ba$ into $\frac{a+b}b=1+\frac ab$, which puts a new $1$ in front of the expansion. (One checks that the representations stay valid.) The root $\frac12$ has $\frac21=[2]$, sum $2$, so an entry in row $r$ has sum $r+2$.</p><p>$\frac{27}{20}=1+\frac{7}{20}$, $\frac{20}{7}=2+\frac67$, $\frac76=1+\frac16$, so $\frac{27}{20}=[1;2,1,6]$ with sum $10$. The row is $10-2=\boxed{8}$.</p>
+<p>For an entry $\frac ab$ write $\frac ba$ as a continued fraction $[c_0;c_1,\dots,c_m]$. Moving to a child adds exactly $1$ to the sum $c_0+c_1+\cdots+c_m$: the left child $\frac{a}{a+b}$ turns $\frac ba$ into $\frac{a+b}a=1+\frac ba$, which raises $c_0$ by $1$, and the right child $\frac b{a+b}$ turns $\frac ba$ into $\frac{a+b}b=1+\frac ab$, which puts a new $1$ in front of the expansion. (One checks that the representations stay valid.) The root $\frac12$ has $\frac21=[2]$, sum $2$, so an entry in row $r$ has sum $r+2$.</p><p>$\frac{27}{20}=1+\frac{7}{20}$, $\frac{20}{7}=2+\frac67$, $\frac76=1+\frac16$, so $\frac{27}{20}=[1;2,1,6]$ with sum $10$. The fraction does occur: undoing the moves (a leading $1$ is removed by taking the reciprocal of the rest, a leading term $c_0\ge2$ is lowered by $1$) walks $[1;2,1,6]\to[2;1,6]\to[1;1,6]\to[1;6]\to[6]\to[5]\to[4]\to[3]\to[2]$, which is exactly the chain of Solution 1. The row is $10-2=\boxed{8}$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p11">
@@ -236,10 +236,16 @@ For example, drawing $1$ red ball, $4$ black balls, and $2$ white balls would ea
 <details class="ct-ans"><summary>Show the answer</summary><p class="ct-answer ct-text">(D) $\tfrac{2}{429}$</p></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Find the lowest score, then count)</h4>
-<p>Let the draw have $r$ red, $k$ black and $w$ white balls, $r+k+w=7$.</p><p>If $r\ge3$, red gives $3$ points and $k+w=7-r\ge1$ gives at least $1$ more, so the score is at least $4$; it is exactly $4$ only when $k+w=1$, i.e. $r=6$: $(6,1,0)$ or $(6,0,1)$.</p><p>If $r\le2$, then $k+w\ge5$ with $k,w\le4$, so both $k,w\ge1$ and one of them is at least $3$: black and white give at least $2+1=3$ points. The score is at least $r+3$, which is $4$ only for $r=0$, $\{k,w\}=\{4,3\}$: $(0,4,3)$ or $(0,3,4)$.</p><p>So the lowest score is $4$. The number of ways: $2\binom66\binom41+2\binom44\binom43=8+8=16$, out of $\binom{14}7=3432$:
+<p>Let the draw have $r$ red, $k$ black and $w$ white balls, $r+k+w=7$.</p><p>If $r\ge3$, red gives $3$ points and $k+w=7-r\ge1$ gives at least $1$ more, so the score is at least $4$; it is exactly $4$ only when $k+w=1$, i.e. $r=6$: $(6,1,0)$ or $(6,0,1)$.</p><p>If $r=0$: $k+w=7$ with $k,w\le4$, so $\{k,w\}=\{4,3\}$ and the score is $2+2=4$: $(0,4,3)$ or $(0,3,4)$.</p><p>If $r=1$: $k+w=6$ with $k,w\le4$, so both are at least $2$ and the score is $1+2+2=5$.</p><p>If $r=2$: $k+w=5$, so both are at least $1$ and one is at least $3$; the score is at least $2+2+1=5$.</p><p>So the lowest score is $4$. The number of ways: $2\binom66\binom41+2\binom44\binom43=8+8=16$, out of $\binom{14}7=3432$:
 \[\frac{16}{3432}=\boxed{\tfrac{2}{429}}.\]</p>
 <h4>Solution 2 (Think about what stays in the urn)</h4>
-<p>The $7$ balls left in the urn determine the draw. Points are lost only through "extra" balls: each red beyond $3$, each black or white beyond $2$. A score of $4$ means $3$ extra balls among the $7$ drawn. Extra balls are possible only in a colour of which we drew many, so the draw must be very lopsided: all $6$ reds plus one more ball (extras: $3$ reds), or all $4$ of one colour of black/white plus $3$ of the other (extras: $2+1$). A score of $3$ would need $4$ extras, e.g. $7$ reds, which is impossible. Counting as in Solution 1 gives $16$ draws out of $3432$: $\boxed{\tfrac2{429}}$.</p>
+<p>The $7$ balls left in the urn determine the draw. Points are lost only through "extra" balls: each red beyond $3$, each black or white beyond $2$. The score is $7$ minus the number of extras, so we want the most extras possible. Count them by the number $r$ of reds:
+</p><ul>
+</li><li>$r=6$: $3$ red extras, and the seventh ball is not an extra: $3$ extras.
+</li><li>$3\le r\le5$: $r-3\le2$ red extras, and the $7-r\le4$ others give at most $\max(0,7-r-2)$, in total at most $2$.
+</li><li>$r=0,1,2$: the black and white counts add up to $7,6,5$; with each at most $4$ they have at most $3,2,2$ extras, and $3$ only for counts $4$ and $3$.
+</li></ul><p>
+So at most $3$ extras (the lowest score is $4$), reached exactly by all $6$ reds plus one other ball, or no reds with $4$ of one of black/white and $3$ of the other. Counting as in Solution 1 gives $16$ draws out of $3432$: $\boxed{\tfrac2{429}}$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p12">
@@ -461,11 +467,11 @@ The polynomial $x^3+x^2-1$ has no rational root ($\pm1$ fail), so $x$ is irratio
 \[9(3-h)^2=8h(h+3)\iff h^2-78h+81=0\iff h=39\pm12\sqrt{10}.\]
 The circles must fit inside, so $h=39-12\sqrt{10}\approx1.05$. The distance between the centres is $r+s=h+1=40-12\sqrt{10}$, and $m+n+p=40+12+10=\boxed{62}$.</p>
 <h4>Solution 2 (Tangent lengths and half-angles)</h4>
-<p>Let the radii be $r$ (at $A$) and $s$ (at $B$). Along $AB$ the tangency points are $r$ from $A$ and $s$ from $B$, and two touching circles on a common line have tangency points $2\sqrt{rs}$ apart:
+<p>Reflecting the figure in the perpendicular bisector of $AB$ swaps $A,B$, swaps $D,C$ and swaps the circles, without changing the distance we want; so we may assume $AD$ is the longer leg, $AD-BC=3$. Let the radii be $r$ (at $A$) and $s$ (at $B$). Along $AB$ the tangency points are $r$ from $A$ and $s$ from $B$, and two externally touching circles on a common line have tangency points $\sqrt{(r+s)^2-(r-s)^2}=2\sqrt{rs}$ apart:
 \[r+2\sqrt{rs}+s=4.\]
 Since $AD-BC=3$ and $CD=5$, $\cos\angle D=\frac35$, so $\tan\frac{\angle D}2=\frac{\sin D}{1+\cos D}=\frac12$ and $\tan\frac{\angle C}2=2$ ($\angle C=180^\circ-\angle D$). The centre of $\omega_1$ is on the bisector at $D$, so the tangent length from $D$ is $2r$: $AD=r+2r=3r$. Similarly the tangent length from $C$ to $\omega_2$ is $\frac s2$: $BC=\frac32s$. From $AD-BC=3$: $s=2r-2$. Substituting,
 \[3r-2+2\sqrt{r(2r-2)}=4\ \Longrightarrow\ (6-3r)^2=4(2r^2-2r)\ \Longrightarrow\ r^2-28r+36=0,\]
-so $r=14-4\sqrt{10}$ (the other root is too big). The distance between the centres is $r+s=3r-2=40-12\sqrt{10}$: $\boxed{62}$.</p>
+so $r=14-4\sqrt{10}\approx1.35$ (the other root exceeds $4$; at this root $s=2r-2&gt;0$ and $r+s&lt;4$, so the equation before squaring holds too). The distance between the centres is $r+s=3r-2=40-12\sqrt{10}$: $\boxed{62}$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p25">
@@ -479,9 +485,9 @@ so $r=14-4\sqrt{10}$ (the other root is too big). The distance between the centr
 <p>For $m\ge2$ we are counting the solutions of $x^2\equiv1\pmod m$ among $1,\dots,m-1$, i.e. all solutions mod $m$ ($x=0$ is never one). By the Chinese remainder theorem the count is a product over the prime powers in $m$:
 </p><ul>
 </li><li>an odd prime power $p^k$: $2$ solutions ($p^k\mid(x-1)(x+1)$ and $p$ cannot divide both factors);
-</li><li>$2$: $1$ solution; $4$: $2$; $2^k$ with $k\ge3$: $4$ ($\pm1$, $2^{k-1}\pm1$).
+</li><li>$2$: $1$ solution; $4$: $2$; $2^k$ with $k\ge3$: exactly $4$. (A solution is odd; of $x-1$ and $x+1$ one is $\equiv2\pmod4$, so the other is divisible by $2^{k-1}$. Hence $x\equiv\pm1\pmod{2^{k-1}}$, which gives the four residues $\pm1$, $2^{k-1}\pm1$, and all four work.)
 </li></ul><p>
-So the count is a power of $2$, and "at least $50$" means at least $64=2^6$. Each odd prime contributes a factor $2$ and the power of $2$ at most a factor $4$ (needing $8\mid m$). The cheapest ways to reach $2^6$: $8\cdot3\cdot5\cdot7\cdot11=9240$; $4\cdot3\cdot5\cdot7\cdot11\cdot13=60060$; $3\cdot5\cdot7\cdot11\cdot13\cdot17=255255$. The least is $m=9240$, with digit sum $\boxed{15}$.</p>
+So the count is a power of $2$, and "at least $50$" means at least $64=2^6$. Each odd prime contributes a factor $2$ and the power of $2$ at most a factor $4$ (needing $8\mid m$); a single factor $2$ in $m$ adds nothing, so it only makes $m$ larger. The cheapest ways to reach $2^6$: $8\cdot3\cdot5\cdot7\cdot11=9240$; $4\cdot3\cdot5\cdot7\cdot11\cdot13=60060$; $3\cdot5\cdot7\cdot11\cdot13\cdot17=255255$. The least is $m=9240$, with digit sum $\boxed{15}$.</p>
 </div></details>
 </section>
 {% endraw %}
