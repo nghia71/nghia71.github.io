@@ -297,6 +297,10 @@ Problems from the 2026 national and international olympiads, with our own soluti
 
 <div class="cards">
   <div class="card">
+    <h3><a href="{{ '/contests/germany-tst-2026' | relative_url }}">Germany TST 2026</a></h3>
+    <p>27 problems. German team selection tests for the IMO (VAIMO and AIMO): 27 problems.</p>
+  </div>
+  <div class="card">
     <h3><a href="{{ '/contests/israel-tst-2026' | relative_url }}">Israel TST 2026</a></h3>
     <p>18 problems. Israeli team selection tests for the IMO.</p>
   </div>
