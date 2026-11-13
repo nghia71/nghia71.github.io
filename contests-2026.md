@@ -63,6 +63,10 @@ Problems from the 2026 national and international olympiads, with our own soluti
 
 <div class="cards">
   <div class="card">
+    <h3><a href="{{ '/contests/romania-mo-2026' | relative_url }}">Romania NMO 2026</a></h3>
+    <p>8 problems. Romanian National Olympiad: grades 9 and 10, four problems each.</p>
+  </div>
+  <div class="card">
     <h3><a href="{{ '/contests/bundeswettbewerb-2026' | relative_url }}">Bundeswettbewerb Mathematik 2026</a></h3>
     <p>8 problems. German Bundeswettbewerb Mathematik: two rounds, four problems each.</p>
   </div>
