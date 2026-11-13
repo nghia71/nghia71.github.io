@@ -1,0 +1,198 @@
+---
+title: Balkan Mathematical Olympiad 2026
+permalink: /contests/balkan-mo-2026
+description: Balkan Mathematical Olympiad 2026: problems with answers and solutions
+---
+{% raw %}
+<style>
+  .ct-intro { margin-bottom: 1.2em; }
+  .ct-credit { font-size: 14px; color: var(--ink-soft); border-left: 3px solid var(--gold); padding: 6px 12px; background: var(--white); margin: 1em 0; }
+  .ct-toc { display: flex; flex-wrap: wrap; gap: 6px; margin: 1em 0 1.4em; }
+  .ct-toc a { display: inline-block; min-width: 2.4em; text-align: center; padding: 4px 8px; border: 1px solid var(--rule); border-radius: 4px; background: var(--white); text-decoration: none; font-size: 14px; }
+  .ct-problem { background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 14px 18px; margin: 1.1em 0; }
+  .ct-problem h3 { margin: 0 0 .3em; font-size: 1.08rem; border-bottom: none; padding-bottom: 0; }
+  .ct-meta { font-size: 13px; color: var(--ink-soft); margin-bottom: .6em; }
+  .ct-text { font-family: Georgia, "Times New Roman", "Noto Serif", serif; font-size: 1.02em; line-height: 1.6; }
+  .ct-text p { margin: .5em 0; }
+  .ct-fig { text-align: center; margin: .8em 0; }
+  .ct-fig img { max-width: 100%; height: auto; max-height: 340px; }
+  .ct-choices { display: flex; flex-wrap: wrap; gap: 6px 22px; margin: .6em 0 .2em; }
+  .ct-choices b { margin-right: .3em; }
+  .ct-problem details { margin-top: .8em; border-top: 1px dashed var(--rule); padding-top: .5em; }
+  .ct-problem summary { cursor: pointer; font-weight: 600; color: var(--brand); font-size: 15px; }
+  .ct-problem details[open] summary { margin-bottom: .5em; }
+  .ct-sol h4 { font-size: 1rem; margin: 1em 0 .3em; color: var(--ink); }
+  .ct-answer { font-weight: 600; }
+  .ct-parts { list-style: none; padding-left: .4em; }
+  .ct-parts li { margin: .35em 0; }
+  .ct-lbl { font-weight: 700; margin-right: .3em; }
+  .ct-note { font-size: 14px; color: var(--ink-soft); font-style: italic; }
+  .ct-bar { margin: .6em 0 1em; display: flex; gap: 10px; flex-wrap: wrap; }
+  .ct-bar button { font: inherit; font-size: 14px; padding: 5px 12px; border-radius: var(--radius); border: 1px solid var(--brand); background: var(--white); color: var(--brand); cursor: pointer; }
+</style>
+<script>
+  window.MathJax = { tex: { inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [['\\[','\\]']], processEscapes: true },
+                     options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] } };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script>
+  function ctAll(open) { document.querySelectorAll('.ct-problem details').forEach(function (d) { d.open = open; }); }
+</script>
+
+<style>
+  .ct-group { font-size: 1.25rem; margin: 1.6em 0 .2em; }
+  .ct-toc-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: .3em 0; }
+  .ct-toc-g { font-size: 13px; color: var(--ink-soft); min-width: 9em; }
+  .ct-toc-wrap { margin: 1em 0 1.4em; }
+  .ct-center { text-align: center; margin: .6em 0; }
+  .ct-tablewrap { overflow-x: auto; margin: .6em 0; text-align: center; }
+  .ct-table { border-collapse: collapse; margin: 0 auto; }
+  .ct-table td { padding: 2px 9px; text-align: center; }
+  .ct-table tr.ct-hl td { border-bottom: 1px solid var(--ink-soft); }
+  .ct-table.ct-vfirst td:first-child { border-right: 1px solid var(--ink-soft); }
+  .ct-ul { padding-left: 1.4em; }
+  .ct-ul li { margin: .3em 0; }
+  .ct-text li > p:first-child { margin-top: 0; }
+  .ct-text li > p:last-child { margin-bottom: 0; }
+  .ct-text mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
+</style>
+
+{% endraw %}
+<p><a href="{{ '/contests-2026' | relative_url }}">&larr; All contests 2026</a></p>
+
+<h1>Balkan Mathematical Olympiad 2026</h1>
+
+<div class="ct-intro">
+<p>The 4 problems of the Balkan Mathematical Olympiad 2026, each with our own solutions, hidden until you open them. 2 of them ask for an answer and 2 ask for a proof. Where a problem has a final answer, it is shown separately. Try a problem first, then check.</p><p>The Balkan olympiad is a one-day contest of four problems.</p>
+</div>
+<div class="ct-credit">Problems: Balkan Mathematical Olympiad 2026, from the AoPS contest collection. Solutions written by MCC.</div>
+<div class="ct-bar"><button type="button" onclick="ctAll(true)">Show all answers and solutions</button><button type="button" onclick="ctAll(false)">Hide all</button></div>
+<div class="ct-toc-wrap"><div class="ct-toc-row"><a href="#p1">1</a><a href="#p2">2</a><a href="#p3">3</a><a href="#p4">4</a></div></div>
+
+{% raw %}
+<section class="ct-problem" id="p1">
+<h3>Problem 1</h3>
+<div class="ct-meta">Algebra &middot; LPS VII, Chapter 31: Extremal Principle and Bounding Arguments</div>
+<div class="ct-text"><p>A set $S$ of positive real numbers is called <em>Aristotelian</em> if for any $x,y,z\in S$ satisfying $x&lt;y&lt;z$, we have
+\[\frac{z-x}{y}\in S.\]
+Find all integers $n\ge 4$ for which there exists an Aristotelian set with exactly $n$ elements.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$n=4$ only</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Two families of quotients)</h4>
+<p><strong>$n=4$ works.</strong> Let $t\approx0.7549$ be the positive root of $t^3+t^2=1$, i.e. $1-t^2=t^3$, and $S=\{t^3,t^2,t,1\}$.
+The four triples give
+\[\frac{t-t^3}{t^2}=\frac{1-t^2}{t}=t^2,\quad \frac{1-t^3}{t^2}=\frac{t^2}{t^2}=1,\quad\frac{1-t^3}{t}=t,\quad\frac{1-t^2}{t}=t^2,\]
+all in $S$ (here $1-t^3=t^2$ because $t^3+t^2=1$). So $S$ is Aristotelian.</p><p><em>Remark.</em> There is also a rational example, $S=\{\frac59,\frac23,1,\frac{11}9\}$: the four triples give
+\[\frac{1-\frac59}{\frac23}=\frac23,\quad\frac{\frac{11}9-\frac59}{\frac23}=1,\quad\frac{\frac{11}9-\frac59}{1}=\frac23,\quad\frac{\frac{11}9-\frac23}{1}=\frac59.\]</p><p><strong>$n\ge5$ is impossible.</strong> Let $S=\{s_1&lt;s_2&lt;\dots&lt;s_n\}$ be Aristotelian, $n\ge5$. Consider the two families
+\[F_1=\Bigl\{\frac{s_n-s_1}{s_j}:2\le j\le n-1\Bigr\},\qquad F_3=\Bigl\{\frac{s_n-s_i}{s_{n-1}}:1\le i\le n-2\Bigr\}.\]
+Each consists of $n-2$ distinct elements of $S$ ($F_1$ is decreasing in $j$, $F_3$ decreasing in $i$). The smallest element of $F_1$ and the
+largest element of $F_3$ are the same number $\frac{s_n-s_1}{s_{n-1}}=:s_a$; let $s_b=\frac{s_n-s_1}{s_2}$ be the largest element of $F_1$.
+Since $F_3\subseteq\{s_1,\dots,s_a\}$, we get $a\ge n-2$; since $F_1\subseteq\{s_a,\dots,s_b\}$ and $b\le n$, we get $n-a+1\ge n-2$, i.e.
+$a\le3$. Hence $n\le5$.</p><p>Let $n=5$. Then $a=3$, $b=5$, $F_1=\{s_3,s_4,s_5\}$ and $F_3=\{s_1,s_2,s_3\}$, and matching the orders ($F_1$ is decreasing in $j$, so $j=2,3,4$ give $s_5,s_4,s_3$;
+$F_3$ is decreasing in $i$, so $i=1,2,3$ give $s_3,s_2,s_1$):
+\[\frac{s_5-s_1}{s_2}=s_5,\quad\frac{s_5-s_1}{s_3}=s_4,\quad\frac{s_5-s_1}{s_4}=s_3,\quad\frac{s_5-s_2}{s_4}=s_2,\quad\frac{s_5-s_3}{s_4}=s_1.\]
+Subtracting the last three in pairs: $s_2-s_1=s_4(s_3-s_2)$ and $s_3-s_2=s_4(s_2-s_1)$, so $s_2-s_1=s_4^2(s_2-s_1)$ and $s_4=1$. Then
+$s_1,s_2,s_3$ is an arithmetic progression ($s_1+s_3=2s_2$), $s_5=s_1+s_3=2s_2$ and $s_3=s_2s_5$.</p><p>The triple $(s_2,s_3,s_5)$ gives $\frac{s_5-s_2}{s_3}=\frac{s_2}{s_3}\in S$, a number less than $1=s_4$. It is not $s_2$ (as $s_3\ne1$) and not
+$s_1$ (as $s_1s_3&lt;s_2^2&lt;s_2$ by AM&ndash;GM and $s_2&lt;1$), so $s_2/s_3=s_3$, i.e. $s_2=s_3^2$. With $w=s_3$: $s_5=s_3/s_2=1/w$ and $s_5=2s_2=2w^2$,
+so $w^3=\frac12$, and $S=\{2w^2-w,\ w^2,\ w,\ 1,\ 2w^2\}$. Since $0.79^3&lt;\frac12&lt;0.8^3$, we have $0.79&lt;w&lt;0.8$.</p><p>Finally the triple $(s_1,s_2,s_3)$ gives $v=\frac{s_3-s_1}{s_2}=\frac{2w-2w^2}{w^2}=\frac2w-2=4w^2-2$ (using $\frac1w=2w^2$). But
+\[v-s_1=2w^2+w-2&gt;2(0.79)^2+0.79-2&gt;0,\qquad s_2-v=2-3w^2&gt;2-3(0.8)^2&gt;0,\]
+because $2w^2+w-2$ is increasing and $2-3w^2$ is decreasing in $w&gt;0$. So $s_1&lt;v&lt;s_2$ and $v\notin S$, a contradiction. Hence no Aristotelian set has $5$ or more elements, and the answer is
+\[\boxed{n=4}\]</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p2">
+<h3>Problem 2</h3>
+<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 20: Parity, Coloring, and Process Termination</div>
+<div class="ct-text"><p>Let $n$ be a positive integer. A $2n\times 2n$ board is tiled with $2\times 1$ and $1\times 2$ dominoes. To <em>pivot</em> a domino is to select one of its two unit squares and rotate the entire domino by $90^\circ$ clockwise, $90^\circ$ anticlockwise, or $180^\circ$ about the centre of that unit square. Prove that it is always possible to simultaneously pivot every domino such that, after all pivots have been performed, the dominoes still tile the board.</p></div>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Keep the black square)</h4>
+<div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/balkan-mo-2_s1.svg" alt="Figure for the solution"></div>
+<p>Colour the board like a chessboard. Every domino covers one black and one white square.</p><p><strong>Pivots and tilings.</strong> Pivoting a domino about one of its squares keeps that square and moves the other square to one of the
+<em>other three</em> neighbours of the kept square (a $90^\circ$ turn gives the two side neighbours, a $180^\circ$ turn the opposite one).
+So it suffices to find a second tiling $T'$ of the board with no domino in common with the given tiling $T$: then pivot every domino of $T$
+about its black square $s$, so that it becomes the domino of $T'$ containing $s$. This is a legal pivot (the new partner is a neighbour of $s$
+different from the old one, because $T$ and $T'$ share no domino), and since every domino of $T'$ contains exactly one black square, the new
+dominoes are exactly the dominoes of $T'$, which tile the board.</p><p><strong>Construction of $T'$.</strong> Cut the $2n\times2n$ board into $n^2$ blocks of $2\times2$ squares. A $2\times2$ block cannot contain both a
+horizontal and a vertical domino of $T$ (two such dominoes inside four squares would overlap). Tile each block by two dominoes of the
+orientation that $T$ does <em>not</em> use inside this block (either orientation if $T$ has no domino inside it). The resulting tiling $T'$ shares
+no domino with $T$: every domino of $T'$ lies inside a block and has an orientation that no domino of $T$ inside that block has. This finishes
+the proof.</p><p><em>Remark (another way to choose the pivots).</em> The dominoes of $T$ and of $T'$ together form disjoint cycles $s_1s_2\dots s_{2r}$ whose
+edges alternate between $T$ ($s_1s_2$, $s_3s_4$, &hellip;) and $T'$ ($s_2s_3$, &hellip;, $s_{2r}s_1$). Pivoting every domino $s_{2i-1}s_{2i}$ about
+$s_{2i}$ also turns $T$ into $T'$; on each cycle the squares $s_{2i}$ have one colour, so this is the same construction with the colour chosen
+cycle by cycle. It shows a little more: for every tiling $T''$ sharing no domino with $T$, some simultaneous pivot of all dominoes of $T$
+produces exactly $T''$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p3">
+<h3>Problem 3</h3>
+<div class="ct-meta">Geometry &middot; LPS VII, Chapter 51: Spiral Similarity and Advanced Transformational Geometry</div>
+<div class="ct-text"><p>Let $ABCD$ be a parallelogram with $\angle DAB&lt;90^\circ$ and $AB&lt;AD$. Let $H$ be the orthocentre of $\triangle BCD$ and $H'$ be the reflection of $H$ over line $BD$. Line $AH$ intersects the lines $BD$, $CD$, and $BC$ at $E$, $F$, and $G$ respectively. Prove that the circumcircles of $\triangle HEH'$ and $\triangle CFG$ are tangent.</p></div>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (The Miquel point lies on line $C^*E$)</h4>
+<div class="ct-fig"><img style="width:267px" src="/assets/contests/2026-27/balkan-mo-3_s1.svg" alt="Figure for the solution"></div>
+<p>We use directed angles $\measuredangle(p,q)$ between lines, modulo $180^\circ$. Let $\omega$ be the circle $BCD$, $C^*$ the
+point of $\omega$ diametrically opposite to $C$, and $\ell$ the line $AH$ (which contains $E,F,G$).</p><p><strong>Step 1: $\ell\parallel CC^*$, and $H'\in\omega$, $H'\in CH$.</strong> Since $CC^*$ is a diameter, $C^*D\perp CD$ and $C^*B\perp CB$; also
+$BH\perp CD$ and $DH\perp BC$. So $BH\parallel C^*D$ and $DH\parallel C^*B$: $BHDC^*$ is a parallelogram, and the midpoint of $HC^*$ is the
+midpoint of $BD$, which is also the midpoint of $AC$. Hence $AHCC^*$ is a parallelogram and $\ell=AH\parallel CC^*$. Next, $CH\perp BD$, so the
+reflection in $BD$ maps line $CH$ to itself and $H'\in CH$; and the reflection of the orthocentre in a side lies on the circumcircle, so
+$H'\in\omega$.</p><p><strong>Degenerate positions.</strong> (a) $\ell\ne CC^*$; this is where $AB&lt;AD$ is used. Otherwise $A$, $C$ and the centre $Z$ of $\omega$ are
+collinear. $Z$ is not the midpoint of $BD$ (else $\angle BCD=90^\circ$, but $\angle BCD=\angle DAB&lt;90^\circ$), and $Z$ lies on the perpendicular
+bisector of $BD$, so line $AC$, which passes through the midpoint of $BD$, would be this bisector; then $CB=CD$, i.e. $AD=AB$. Hence
+$C\notin\ell$, so $F,G\ne C$ and $C^*\notin\ell$ (in particular $C^*\ne E$). (b) $\ell$ does not pass through $B$ or $D$. If $B\in\ell$, then
+$\ell=AB\parallel CD$, so $CC^*=CD$, $\angle CBD=90^\circ$, and in triangle $ABD$ (right-angled at $D$) $AB&gt;AD$, a contradiction. If $D\in\ell$,
+then similarly $\angle BDC=90^\circ$ and $H=E=H'=D$, so the triangle $HEH'$ of the statement does not exist.</p><p><strong>Step 2: the point $M$.</strong> Let $M$ be the second intersection of line $C^*E$ with $\omega$ ($M=C^*$ if this line is tangent to $\omega$).
+Then $M\ne C$, since $E\notin CC^*$ by (a); and $M\notin\ell$, since line $C^*E$ meets $\ell$ only at $E$, and $E\in\omega$ would put $E$ in
+$\omega\cap BD=\{B,D\}$, excluded by (b). If $M=C^*$, the line $MC^*$ below means the tangent at $C^*$, and the inscribed angle steps hold
+by the tangent&ndash;chord theorem. Since $CC^*$ is a diameter, $MC\perp ME$.
+Then, using $C^*\in ME$, inscribed angles in $\omega$ and $CC^*\parallel\ell$,
+\[\measuredangle(MD,ME)=\measuredangle(MD,MC^*)=\measuredangle(CD,CC^*)=\measuredangle(FD,\ell)=\measuredangle(FD,FE),\]
+so $M$ lies on circle $DEF$. Consequently
+\[\measuredangle(MF,MC)=\measuredangle(MF,MD)+\measuredangle(MD,MC)=\measuredangle(EF,ED)+\measuredangle(BD,BC)=\measuredangle(\ell,BC)=
+\measuredangle(GF,GC),\]
+so $M$ lies on circle $CFG$. (Thus $M$ is the Miquel point of the lines $BC$, $CD$, $DB$, $\ell$.)</p><p><strong>Step 3: $M$ lies on circle $HEH'$.</strong> Using $C^*\in ME$, $H'\in\omega$, $H'\in CH$ and $CC^*\parallel\ell$:
+\[\measuredangle(MH',ME)=\measuredangle(MH',MC^*)=\measuredangle(CH',CC^*)=\measuredangle(HH',\ell)=\measuredangle(HH',HE).\]</p><p><strong>Step 4: a tangency criterion.</strong> Let $\Gamma_1$, $\Gamma_2$ be circles through a point $M$ meeting a line $\ell\not\ni M$ at $E,H$ and at
+$F,G$. The tangents $t_1,t_2$ at $M$ satisfy $\measuredangle(t_1,ME)=\measuredangle(HM,\ell)$ and $\measuredangle(t_2,MF)=\measuredangle(GM,\ell)$
+(tangent&ndash;chord angle), so
+\[\measuredangle(t_1,t_2)=\measuredangle(HM,\ell)+\measuredangle(ME,MF)-\measuredangle(GM,\ell)=\measuredangle(ME,MF)-\measuredangle(MG,MH).\]
+Hence the circles are tangent at $M$ if and only if $\measuredangle(ME,MF)=\measuredangle(MG,MH)$.</p><p><strong>Step 5: the angles agree.</strong> From circle $DEF$: $\measuredangle(ME,MF)=\measuredangle(DE,DF)=\measuredangle(DB,DC)$. From circle $HEH'M$ and
+the reflection in $BD$ (which maps $\ell=HE$ to $H'E$, and $HH'\perp BD$):
+\[\measuredangle(ME,MH)=\measuredangle(H'E,H'H)=\measuredangle(H'E,BD)+\measuredangle(BD,HH')=\measuredangle(BD,\ell)+90^\circ,\]
+and with $\measuredangle(MC,ME)=90^\circ$ this gives $\measuredangle(MC,MH)=\measuredangle(BD,\ell)$. From circle $CFG$,
+$\measuredangle(MG,MC)=\measuredangle(FG,FC)=\measuredangle(\ell,DC)$. Therefore
+\[\measuredangle(MG,MH)=\measuredangle(\ell,DC)+\measuredangle(BD,\ell)=\measuredangle(DB,DC)=\measuredangle(ME,MF).\]
+By Step 4, the circles $HEH'$ and $CFG$, which both pass through $M$, are tangent at $M$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p4">
+<h3>Problem 4</h3>
+<div class="ct-meta">Algebra &middot; LPS VII, Chapter 18: Invariants and Monovariants</div>
+<div class="ct-text"><p>Let $n\ge 2$ be an integer. Initially, the number $1$ is written $n$ times on a blackboard. An operation consists of choosing two numbers $a$ and $b$ currently on the blackboard, not both zero, and replacing them with the numbers
+\[\frac{(a-b)^2}{a+b}\quad\text{and}\quad\frac{4ab}{a+b}.\]
+Determine all integers $n$ for which it is possible, after a finite number of operations, for the number $n$ to appear on the blackboard.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>the powers of two, $n=2^k$ ($k\ge1$)</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Divisibility by an odd prime cannot be created)</h4>
+<p>Note that $\frac{(a-b)^2}{a+b}+\frac{4ab}{a+b}=\frac{(a+b)^2}{a+b}=a+b$, so the sum of the numbers is always $n$. All numbers on the
+board are rational and non-negative (if $a,b\ge0$ are rational and not both $0$, so are the two new numbers). If $n$ appears, the other $n-1$ numbers are therefore $0$.</p><p><strong>Powers of two work.</strong> Applied to two equal numbers $x,x$ the operation gives $0$ and $2x$. If $n=2^k$, pair the $2^k$ ones into
+$2^{k-1}$ pairs and turn each pair into $0,2$; then pair the twos, and so on. After $k$ rounds the board shows $2^k=n$.</p><p><strong>Other $n$ fail.</strong> Let $p$ be an odd prime dividing $n$. Call a rational number <em>$p$-divisible</em> if it is $0$ or, in lowest terms,
+has a numerator divisible by $p$. Sums, differences and products of $p$-divisible numbers are $p$-divisible; a product of two of them is even
+&ldquo;$p^2$-divisible&rdquo;, and if $x^2$ is $p^2$-divisible then $x$ is $p$-divisible.</p><p><em>Lemma.</em> If an operation turns $a,b$ into $a',b'$ and both $a'$ and $b'$ are $p$-divisible, then $a$ and $b$ are $p$-divisible.</p><p><em>Proof.</em> $s=a+b=a'+b'$ is $p$-divisible and non-zero, and $(a-b)^2=a's$ is a product of two $p$-divisible numbers, so $a-b$ is
+$p$-divisible. Hence $2a=s+(a-b)$ and $2b=s-(a-b)$ are $p$-divisible, and since $p$ is odd, so are $a$ and $b$. $\square$</p><p>Suppose $n$ appears. Then the board shows $n,0,\dots,0$, and all numbers on it are $p$-divisible. By the lemma (the numbers not involved in
+an operation do not change), if all numbers are $p$-divisible after an operation, they were all $p$-divisible before it. Going back step by
+step, the initial board $1,1,\dots,1$ would consist of $p$-divisible numbers, which is false. Hence $n$ has no odd prime factor.</p><p>The answer is
+\[\boxed{n=2^k,\ k\ge1}\]</p>
+<h4>Solution 2 (Going backwards with the numbers $nm/2^j$)</h4>
+<p>As in Solution 1, the sum of the numbers is always $n$, all numbers on the board
+are rational and non-negative, a board showing $n$ is $n,0,\dots,0$, and powers of two work (the operation turns $x,x$ into $0,2x$).</p><p>Call a number <em>good</em> if it equals $\frac{nm}{2^j}$ for some integers $m\ge0$, $j\ge0$. Finitely many good numbers can be written with
+one common $j$ (multiply $m$ by a power of $2$).</p><p><em>Lemma.</em> If an operation turns $a,b$ into $a',b'$ and $a',b'$ are good, then $a$ and $b$ are good.</p><p><em>Proof.</em> Write $a'=\frac{nm_1}{2^j}$, $b'=\frac{nm_1'}{2^j}$, and $s=a+b=a'+b'=\frac{nm_2}{2^j}$ with $m_2=m_1+m_1'$; here $s&gt;0$, as
+$a,b$ are not both $0$. Since $a'=\frac{(a-b)^2}{s}$,
+\[(a-b)^2=a's=\frac{n^2m_1m_2}{4^j}.\]
+So $\sqrt{m_1m_2}=\frac{2^j|a-b|}{n}$ is rational, and the integer $m_1m_2$ is the square of an integer $r\ge0$. Then $|a-b|=\frac{nr}{2^j}$, and
+\[\{a,b\}=\Bigl\{\frac{s+|a-b|}2,\ \frac{s-|a-b|}2\Bigr\}=\Bigl\{\frac{n(m_2+r)}{2^{j+1}},\ \frac{n(m_2-r)}{2^{j+1}}\Bigr\},\]
+where $m_2-r\ge0$ because the smaller of $a,b$ is non-negative. So $a$ and $b$ are good. $\square$</p><p>Suppose $n$ appears. The board $n,0,\dots,0$ consists of good numbers ($n=\frac{n\cdot1}{2^0}$, $0=\frac{n\cdot0}{2^0}$). The numbers not
+involved in an operation do not change, so by the lemma every earlier board consists of good numbers, the initial one included: $1=\frac{nm}{2^j}$,
+i.e. $nm=2^j$. Thus $n$ divides a power of $2$, so it is a power of $2$, and $n\ge2$. Hence
+\[\boxed{n=2^k,\ k\ge1}\]</p>
+</div></details>
+</section>
+{% endraw %}

@@ -1,0 +1,234 @@
+---
+title: Polish Mathematical Olympiad 2026, Second Round
+permalink: /contests/poland-2nd-round-2026
+description: Polish Mathematical Olympiad 2026, Second Round: problems with answers and solutions
+---
+{% raw %}
+<style>
+  .ct-intro { margin-bottom: 1.2em; }
+  .ct-credit { font-size: 14px; color: var(--ink-soft); border-left: 3px solid var(--gold); padding: 6px 12px; background: var(--white); margin: 1em 0; }
+  .ct-toc { display: flex; flex-wrap: wrap; gap: 6px; margin: 1em 0 1.4em; }
+  .ct-toc a { display: inline-block; min-width: 2.4em; text-align: center; padding: 4px 8px; border: 1px solid var(--rule); border-radius: 4px; background: var(--white); text-decoration: none; font-size: 14px; }
+  .ct-problem { background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 14px 18px; margin: 1.1em 0; }
+  .ct-problem h3 { margin: 0 0 .3em; font-size: 1.08rem; border-bottom: none; padding-bottom: 0; }
+  .ct-meta { font-size: 13px; color: var(--ink-soft); margin-bottom: .6em; }
+  .ct-text { font-family: Georgia, "Times New Roman", "Noto Serif", serif; font-size: 1.02em; line-height: 1.6; }
+  .ct-text p { margin: .5em 0; }
+  .ct-fig { text-align: center; margin: .8em 0; }
+  .ct-fig img { max-width: 100%; height: auto; max-height: 340px; }
+  .ct-choices { display: flex; flex-wrap: wrap; gap: 6px 22px; margin: .6em 0 .2em; }
+  .ct-choices b { margin-right: .3em; }
+  .ct-problem details { margin-top: .8em; border-top: 1px dashed var(--rule); padding-top: .5em; }
+  .ct-problem summary { cursor: pointer; font-weight: 600; color: var(--brand); font-size: 15px; }
+  .ct-problem details[open] summary { margin-bottom: .5em; }
+  .ct-sol h4 { font-size: 1rem; margin: 1em 0 .3em; color: var(--ink); }
+  .ct-answer { font-weight: 600; }
+  .ct-parts { list-style: none; padding-left: .4em; }
+  .ct-parts li { margin: .35em 0; }
+  .ct-lbl { font-weight: 700; margin-right: .3em; }
+  .ct-note { font-size: 14px; color: var(--ink-soft); font-style: italic; }
+  .ct-bar { margin: .6em 0 1em; display: flex; gap: 10px; flex-wrap: wrap; }
+  .ct-bar button { font: inherit; font-size: 14px; padding: 5px 12px; border-radius: var(--radius); border: 1px solid var(--brand); background: var(--white); color: var(--brand); cursor: pointer; }
+</style>
+<script>
+  window.MathJax = { tex: { inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [['\\[','\\]']], processEscapes: true },
+                     options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] } };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script>
+  function ctAll(open) { document.querySelectorAll('.ct-problem details').forEach(function (d) { d.open = open; }); }
+</script>
+
+<style>
+  .ct-group { font-size: 1.25rem; margin: 1.6em 0 .2em; }
+  .ct-toc-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: .3em 0; }
+  .ct-toc-g { font-size: 13px; color: var(--ink-soft); min-width: 9em; }
+  .ct-toc-wrap { margin: 1em 0 1.4em; }
+  .ct-center { text-align: center; margin: .6em 0; }
+  .ct-tablewrap { overflow-x: auto; margin: .6em 0; text-align: center; }
+  .ct-table { border-collapse: collapse; margin: 0 auto; }
+  .ct-table td { padding: 2px 9px; text-align: center; }
+  .ct-table tr.ct-hl td { border-bottom: 1px solid var(--ink-soft); }
+  .ct-table.ct-vfirst td:first-child { border-right: 1px solid var(--ink-soft); }
+  .ct-ul { padding-left: 1.4em; }
+  .ct-ul li { margin: .3em 0; }
+  .ct-text li > p:first-child { margin-top: 0; }
+  .ct-text li > p:last-child { margin-bottom: 0; }
+  .ct-text mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
+</style>
+
+{% endraw %}
+<p><a href="{{ '/contests-2026' | relative_url }}">&larr; All contests 2026</a></p>
+
+<h1>Polish Mathematical Olympiad 2026, Second Round</h1>
+
+<div class="ct-intro">
+<p>The 6 problems of the Polish Mathematical Olympiad 2026, Second Round, each with our own solutions, hidden until you open them. 2 of them ask for an answer and 4 ask for a proof. Where a problem has a final answer, it is shown separately. Try a problem first, then check.</p><p>The second round has two days with three problems each.</p>
+</div>
+<div class="ct-credit">Problems: Polish Mathematical Olympiad 2026, Second Round, from the AoPS contest collection. Solutions written by MCC.</div>
+<div class="ct-bar"><button type="button" onclick="ctAll(true)">Show all answers and solutions</button><button type="button" onclick="ctAll(false)">Hide all</button></div>
+<div class="ct-toc-wrap"><div class="ct-toc-row"><a href="#p1">1</a><a href="#p2">2</a><a href="#p3">3</a><a href="#p4">4</a><a href="#p5">5</a><a href="#p6">6</a></div></div>
+
+{% raw %}
+<section class="ct-problem" id="p1">
+<h3>Problem 1</h3>
+<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 25: Diophantine Equations: Factorization and Algebraic Methods</div>
+<div class="ct-text"><p>Determine all positive integers $n$ such that there exists positive integer $k$ and primes $p_1,p_2,\dots,p_n,q$ (not necessarily distinct) that satisfy
+\[\sum_{i=1}^{n}\frac{k}{p_i}=\frac{q}{q^2+1}.\]</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$n=1$ and $n=2$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (A prime factor of $q^2+1$ must be one of the $p_i$)</h4>
+<p><em>Examples.</em> $n=1$: $k=2$, $p_1=5$, $q=2$ gives $\frac25=\frac{2}{2^2+1}$. $n=2$: $k=1$, $p_1=p_2=5$, $q=2$ gives
+$\frac15+\frac15=\frac25$.</p><p><em>No other $n$.</em> Let $\Pi=p_1p_2\cdots p_n$. Multiplying the equation by $\Pi(q^2+1)$ gives
+\[k(q^2+1)\sum_{i=1}^n\frac{\Pi}{p_i}=q\,\Pi .\]
+Let $r$ be any prime factor of $q^2+1$. Then $r$ divides $q\Pi$ and $r\nmid q$ (as $q\mid q^2$, a common factor would divide $1$), so $r\mid\Pi$:
+<em>every prime factor of $q^2+1$ is one of the $p_i$</em>. Also note that the right-hand side satisfies $\frac q{q^2+1}&lt;\frac1q\le\frac12$.</p><p>If $q$ is odd, then $2\mid q^2+1$, so some $p_i=2$ and the left side is at least $\frac k2\ge\frac12$, a contradiction. Hence $q=2$, the
+right side is $\frac25$, and $5$ is among the $p_i$; say it occurs $c\ge1$ times. Then $\frac{kc}5\le\frac25$, so $kc\in\{1,2\}$.</p><ul class="ct-ul"><li><p>$kc=2$: the $5$'s alone already give $\frac25$, so there is no other prime and $n=c$; this gives $n=1$ ($k=2$) or $n=2$ ($k=1$).</p></li><li><p>$kc=1$: then $k=c=1$ and the other primes $p_i\ne5$ (there are $n-1$ of them) satisfy $\sum\frac1{p_i}=\frac15$. Multiplying by their
+product $\Pi'$ gives $5\sum\frac{\Pi'}{p_i}=\Pi'$, so $5\mid\Pi'$, which is impossible. (If $n=1$ there are no other primes, the sum is $0\ne\frac15$.)</p></li></ul><p>Therefore the possible values are exactly $n\in\boxed{\{1,2\}}$.</p><p><em>Remark (a variant).</em> Odd $q$ can also be ruled out by size instead of parity. Let $r$ be a prime factor of $q^2+1$; it is one of the
+$p_i$, so $\frac q{q^2+1}\ge\frac kr\ge\frac1r$, i.e. $r\ge\frac{q^2+1}q&gt;q$, so $r\ge q+1$. If $q^2+1$ had two prime factors (counted with
+multiplicity), it would be at least $(q+1)^2&gt;q^2+1$. Hence $q^2+1$ is itself a prime. For odd $q$ the number $q^2+1\ge10$ is even, so it is not
+prime; thus $q=2$ and $q^2+1=5$, and the proof finishes as above.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p2">
+<h3>Problem 2</h3>
+<div class="ct-meta">Algebra &middot; LPS VII, Chapter 1: Inequalities: Core Classical Methods</div>
+<div class="ct-text"><p>Integer $n\ge 2$ is given. Real numbers $a_1,a_2,\dots,a_n$ satisfy</p><ul class="ct-ul"><li><p>$\displaystyle\sum_{k=1}^{n}a_k^2=n$,</p></li><li><p>$\dfrac{1}{k}\le a_k\le k$ &emsp;for all $k=1,2,\dots,n$.</p></li></ul><p>Prove that
+\[\sum_{k=1}^{n}\frac{k^2+1}{k}a_k&gt;2n.\]</p></div>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (A quadratic bound for each term, then the equality case)</h4>
+<p>For each $k$ we have $\frac1k\le a_k\le k$, hence $(k-a_k)\bigl(a_k-\frac1k\bigr)\ge0$. Expanding,
+\[\Bigl(k+\frac1k\Bigr)a_k-a_k^2-1\ge0,\qquad\text{i.e.}\qquad \frac{k^2+1}{k}\,a_k\ge a_k^2+1,\]
+with equality if and only if $a_k\in\{k,\frac1k\}$. Summing over $k$ and using $\sum a_k^2=n$:
+\[\sum_{k=1}^n\frac{k^2+1}{k}a_k\ \ge\ \sum_{k=1}^n a_k^2+n=2n .\]
+It remains to exclude equality. Equality would force $a_k\in\{k,\frac1k\}$ for every $k$, in particular $a_1=1$. Let $T$ be the set of
+$k\in\{2,\dots,n\}$ with $a_k=\frac1k$ and $T'$ the set with $a_k=k$. Then
+\[n=\sum a_k^2=1+\sum_{k\in T'}k^2+\sum_{k\in T}\frac1{k^2}.\]
+If $T=\emptyset$, the right side is $1+\sum_{k=2}^nk^2&gt;1+(n-1)=n$ (as $n\ge2$), a contradiction. If $T\ne\emptyset$, then
+\[0&lt;\sum_{k\in T}\frac1{k^2}\le\sum_{k=2}^{n}\frac1{k^2}&lt;\sum_{k=2}^n\frac1{k(k-1)}=1-\frac1n&lt;1,\]
+so the right side is an integer plus a number strictly between $0$ and $1$, and cannot equal the integer $n$. Hence equality is impossible and
+\[\sum_{k=1}^n\frac{k^2+1}{k}a_k&gt;2n.\]</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p3">
+<h3>Problem 3</h3>
+<div class="ct-meta">Geometry &middot; LPS VII, Chapter 55: Three-Dimensional and Spatial Geometry</div>
+<div class="ct-text"><p>Pyramid $ABCDS$ with a convex quadrilateral $ABCD$ as the base is given. Assume that the bisectors of plane angles $\angle BAD$, $\angle BSD$, $\angle BCD$ are concurrent. Prove that the incenters of $ABS$, $BCS$, $CDS$, $DAS$ lie on a common plane.</p></div>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Weighted averages (vectors))</h4>
+<div class="ct-fig"><img style="width:242px" src="/assets/contests/2026-27/poland-2nd-round-3_s1.svg" alt="Figure for the solution"></div>
+<p><strong>The hypothesis.</strong> The bisectors of $\angle BAD$ and $\angle BCD$ lie in the base plane $\pi$, and the bisector of $\angle BSD$
+lies in the plane $SBD$, which meets $\pi$ only along the line $BD$ (as $S\notin\pi$). So the common point $K$ lies on line $BD$. The bisector
+of $\angle BAD$ meets line $BD$ only at the foot of the bisector, and similarly for the other two angles; by the angle bisector theorem
+\[\frac{AB}{AD}=\frac{SB}{SD}=\frac{CB}{CD}=\frac{BK}{KD}=:\lambda .\]</p><p><strong>Incentres as weighted averages.</strong> For a triangle $UVW$ with opposite sides $u,v,w$ the incentre is
+$\frac{uU+vV+wW}{u+v+w}$ (position vectors). Put $x=SA$, $y=SB$, $z=SC$, $w=SD$, $e_1=AB$, $e_2=BC$, $e_3=CD$, $e_4=DA$; the hypothesis says
+$e_1=\lambda e_4$, $y=\lambda w$, $e_2=\lambda e_3$. With $N_j=t_jI_j$, where $t_j$ is the perimeter of the corresponding face,
+\[N_1=yA+xB+e_1S=\lambda(wA+e_4S)+xB,\qquad N_4=wA+xD+e_4S,\]
+\[N_2=zB+yC+e_2S=\lambda(wC+e_3S)+zB,\qquad N_3=wC+zD+e_3S .\]
+Hence
+\[\lambda N_4-N_1=x(\lambda D-B),\qquad \lambda N_3-N_2=z(\lambda D-B),\]
+and therefore
+\[-z\,t_1I_1+x\,t_2I_2-x\lambda\,t_3I_3+z\lambda\,t_4I_4=z(\lambda N_4-N_1)-x(\lambda N_3-N_2)=0 .\]
+The same computation with each point replaced by the number $1$ (i.e. comparing total weights) gives
+$\lambda t_4-t_1=x(\lambda-1)$ and $\lambda t_3-t_2=z(\lambda-1)$, so the coefficients sum to $z\,x(\lambda-1)-x\,z(\lambda-1)=0$.</p><p>So we have a relation $c_1I_1+c_2I_2+c_3I_3+c_4I_4=0$ with $c_1+c_2+c_3+c_4=0$ and not all $c_j=0$ (indeed $c_1=-zt_1\ne0$). Then
+$c_2(I_2-I_1)+c_3(I_3-I_1)+c_4(I_4-I_1)=0$ with $(c_2,c_3,c_4)\ne(0,0,0)$ (otherwise $c_1=0$ too), so the vectors $I_2-I_1$, $I_3-I_1$,
+$I_4-I_1$ are linearly dependent and the four incentres lie in one plane.</p>
+<h4>Solution 2 (Menelaus twice: the lines $I_1I_4$ and $I_2I_3$ meet on $BD$)</h4>
+<p><strong>The hypothesis.</strong> The common point of the three bisectors lies in the base plane and in the plane $SBD$, hence on
+line $BD$; it is the foot of each bisector, and the angle bisector theorem gives $\frac{AB}{AD}=\frac{SB}{SD}=\frac{CB}{CD}=\lambda$.</p><p><strong>Case $\lambda=1$.</strong> Then $A$, $S$, $C$ are equidistant from $B$ and $D$, so they lie in the perpendicular bisector plane $\Sigma$ of
+$BD$. The reflection in $\Sigma$ fixes $A,S,C$ and swaps $B,D$, so it maps triangle $ABS$ to $ADS$ and $CBS$ to $CDS$, hence $I_1\leftrightarrow I_4$
+and $I_2\leftrightarrow I_3$. These points are not in $\Sigma$ (an interior point of triangle $ABS$ is not in $\Sigma$, which meets that
+triangle only along $AS$), so both lines $I_1I_4$ and $I_2I_3$ are perpendicular to $\Sigma$, hence parallel, and the four points are coplanar.</p><p><strong>Case $\lambda\ne1$.</strong> Let $K'$ be the point of line $BD$ outside segment $BD$ with $\frac{K'B}{K'D}=\lambda$. We show that line $I_1I_4$
+passes through $K'$; by the same argument (with $C$ in place of $A$) so does $I_2I_3$. Then $I_1I_4$ and $I_2I_3$ meet at $K'$ and the four
+points are coplanar.</p><p>In triangle $ABS$ let the bisector from $S$ meet $AB$ at $E_1$, and in triangle $ADS$ let the bisector from $S$ meet $AD$ at $E_4$. Then
+$\frac{AE_1}{E_1B}=\frac{SA}{SB}$, $\frac{AE_4}{E_4D}=\frac{SA}{SD}$, and the incentres divide the bisectors as
+$\frac{SI_1}{I_1E_1}=\frac{SA+SB}{AB}$, $\frac{SI_4}{I_4E_4}=\frac{SA+SD}{AD}$.</p><p><em>Line $E_1E_4$ passes through $K'$.</em> By Menelaus in triangle $ABD$ for the line $E_1E_4$ (in the plane $\pi$), it meets line $BD$ at the
+point $R$ with $\frac{RB}{RD}=\frac{E_1B}{AE_1}\cdot\frac{AE_4}{E_4D}=\frac{SB}{SA}\cdot\frac{SA}{SD}=\lambda$, outside the segment (the line crosses
+the sides $AB$, $AD$ internally). So $R=K'$. Menelaus in triangle $AE_1E_4$ for the line $BDK'$ gives
+\[\frac{E_1K'}{K'E_4}=\frac{BE_1}{AB}\cdot\frac{AD}{DE_4}=\frac{SB}{SA+SB}\cdot\frac{SA+SD}{SD}. \tag{1}\]</p><p><em>Line $I_1I_4$ meets line $E_1E_4$ at the same point.</em> The points $I_1\in SE_1$, $I_4\in SE_4$ lie in the plane $SE_1E_4$; by Menelaus in
+triangle $SE_1E_4$, line $I_1I_4$ meets line $E_1E_4$ outside the segment at the point $R'$ with
+\[\frac{E_1R'}{R'E_4}=\frac{E_1I_1}{I_1S}\cdot\frac{SI_4}{I_4E_4}=\frac{AB}{SA+SB}\cdot\frac{SA+SD}{AD}=\lambda\,\frac{SA+SD}{SA+SB}.\]
+Since $\lambda=\frac{SB}{SD}$, this equals the ratio (1). On a line, the external point dividing $E_1E_4$ in a given ratio $\ne1$ is unique,
+so $R'=K'$ (the ratio is $\ne1$ because $\frac{SB(SA+SD)}{SD(SA+SB)}=1$ would mean $SB=SD$, i.e. $\lambda=1$).</p><p>Hence $K'\in I_1I_4$, likewise $K'\in I_2I_3$, and $I_1,I_2,I_3,I_4$ lie in the plane through these two intersecting lines. (If the two lines
+coincided, the points would be collinear, which is also coplanar.)</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p4">
+<h3>Problem 4</h3>
+<div class="ct-meta">Geometry &middot; LPS VII, Chapter 3: Foundational Angle and Configuration Chasing</div>
+<div class="ct-text"><p>Non-isosceles triangle $ABC$ with circumcircle $\Omega$ and circumcenter $O$ is given. Point $M$ is the midpoint of the arc $BC$ of $\Omega$ that doesn't contain $A$. Circumcircle of the triangle $AOM$ meets lines $AB$ and $AC$ at $P\ne A$ and $Q\ne A$, respectively. Assume that $A,B,P$ lie on the line $AB$ in that order and that $Q,A,C$ lie on the line $AC$ in that order. Prove that the perpendicular bisector of $PQ$, the line perpendicular to $BC$ passing through point $A$ meet on $\Omega$.</p></div>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Directed angles)</h4>
+<div class="ct-fig"><img style="width:314px" src="/assets/contests/2026-27/poland-2nd-round-4_s1.svg" alt="Figure for the solution"></div>
+<p>We use directed angles $\measuredangle(\ell,m)$ between lines, modulo $180^\circ$. Let $\omega$ be the circle $AOMPQ$ and let
+$A_1$ be the second intersection of the altitude from $A$ with $\Omega$; we show that the perpendicular bisector of $PQ$ is the line $MA_1$.
+Note $M\ne A_1$ and $M\ne A$: either equality would put $M$ on the altitude, so the bisector $AM$ would be perpendicular to $BC$ and $AB=AC$.</p><p><strong>Step 1: $MP=MQ$.</strong> In $\omega$, the chords $MP$ and $MQ$ are seen from $A$ under the angles between line $AM$ and lines $AB$, $AC$.
+Since $AM$ bisects $\angle BAC$, these angles are both $\frac{\angle A}2$ (as angles between lines), so $MP=2\rho\sin\frac{\angle A}2=MQ$, where
+$\rho$ is the radius of $\omega$. Thus $M$ lies on the perpendicular bisector of $PQ$, and it suffices to prove $MA_1\perp PQ$.</p><p><strong>Step 2: $OQ\perp CM$.</strong> Let $A^*$ be the antipode of $A$ on $\Omega$. Since $OA=OM$, $\measuredangle(MA,MO)=\measuredangle(AO,AM)$, and
+\[\measuredangle(AO,AM)=\measuredangle(CA^*,CM)=\measuredangle(CA^*,CA)+\measuredangle(CA,CM)=90^\circ+\measuredangle(CA,CM).\]
+As $A,O,M,Q$ lie on $\omega$ (and $Q\ne A$; also $Q\ne O$, since $O$ is not on line $AC$ outside segment $AC$, while $Q$ is),
+$\measuredangle(AC,QO)=\measuredangle(QA,QO)=\measuredangle(MA,MO)=90^\circ+\measuredangle(CA,CM)$, hence $\measuredangle(CM,QO)=90^\circ$.</p><p><strong>Step 3: the isogonal lines.</strong> $\measuredangle(AB,AA_1)=\measuredangle(AO,AC)$. Indeed
+$\measuredangle(AB,AA_1)=\measuredangle(AB,BC)+90^\circ$ since $AA_1\perp BC$, while
+$\measuredangle(AO,AC)=\measuredangle(AA^*,AC)=\measuredangle(BA^*,BC)=\measuredangle(BA^*,BA)+\measuredangle(BA,BC)=90^\circ+\measuredangle(BA,BC)$.</p><p><strong>Step 4: $MA_1\perp PQ$.</strong> Using $P\in AB$, $P\ne O$ (as for $Q$) and the circle $\omega$, then Step 2, then the circle $\Omega$:
+\[\measuredangle(PQ,AB)=\measuredangle(PQ,PA)=\measuredangle(OQ,OA)=\measuredangle(OQ,CM)+\measuredangle(CM,OA)=90^\circ+\measuredangle(CM,OA),\]
+\[\measuredangle(AB,MA_1)=\measuredangle(AB,AA_1)+\measuredangle(A_1A,A_1M)=\measuredangle(AO,AC)+\measuredangle(CA,CM).\]
+Adding, $\measuredangle(PQ,MA_1)=90^\circ+\measuredangle(CM,OA)+\measuredangle(AO,AC)+\measuredangle(CA,CM)=90^\circ+\measuredangle(CM,CM)=90^\circ$.</p><p>So the line through $M$ perpendicular to $PQ$, which is the perpendicular bisector of $PQ$ by Step 1, is the line $MA_1$. It meets the line
+through $A$ perpendicular to $BC$ at $A_1$ (the lines differ, since $M$ is not on the altitude), and $A_1\in\Omega$.</p>
+<h4>Solution 2 (Complex numbers)</h4>
+<p>Let $\Omega$ be the unit circle, $O=0$, and choose complex numbers $x,y,z$ of modulus $1$ with $A=a=x^2$, $B=b=y^2$, $C=c=z^2$.
+The two midpoints of the arcs $BC$ are the square roots $\pm yz$ of $bc$; replacing $z$ by $-z$ if necessary we may assume $M=m=-yz$.
+For points $u,v$ on the unit circle, the line $uv$ consists of the $w$ with $w+uv\bar w=u+v$, and chords $uv$, $u'v'$ are perpendicular iff
+$uv=-u'v'$. In particular the second intersection of the altitude from $A$ with $\Omega$ is $A_1=-\frac{bc}a$.</p><p><strong>The circle $\omega=(AOM)$.</strong> Its centre is $o=\frac{am}{a+m}$ (note $a+m\ne0$: otherwise $A=-m$ would be the midpoint of the arc $BC$ containing $A$, i.e. $AB=AC$): indeed $|o|=\frac{1}{|a+m|}$, $|o-a|=\bigl|\frac{-a^2}{a+m}\bigr|=\frac1{|a+m|}$, $|o-m|=\frac1{|a+m|}$.</p><p><strong>The points $P,Q$.</strong> The circle is $w\bar w=\bar o w+o\bar w$. Substituting $\bar w=\frac{a+b-w}{ab}$ (line $AB$) gives the quadratic
+\[w^2-(a+b-ab\bar o+o)\,w+o(a+b)=0,\]
+whose roots are $a$ and $p$; by Vieta $p=\frac{o(a+b)}a=\frac{m(a+b)}{a+m}$. Likewise $q=\frac{m(a+c)}{a+m}$.</p><p><strong>$A_1P=A_1Q$.</strong> Using $m=-yz$,
+\[A_1-p=-\frac{y^2z^2}{x^2}+\frac{yz(x^2+y^2)}{x^2-yz}=\frac{yz\,N_P}{x^2(x^2-yz)},\qquad N_P=x^4+x^2y^2-x^2yz+y^2z^2,\]
+\[A_1-q=\frac{yz\,N_Q}{x^2(x^2-yz)},\qquad N_Q=x^4+x^2z^2-x^2yz+y^2z^2 .\]
+Since $\bar x=1/x$ etc., $\overline{N_P}=\frac1{x^4}+\frac1{x^2y^2}-\frac1{x^2yz}+\frac1{y^2z^2}=\frac{N_Q}{x^4y^2z^2}$, so $|N_P|=|N_Q|$ and
+$|A_1-p|=|A_1-q|$. Thus $A_1$ lies on the perpendicular bisector of $PQ$; it also lies on the line through $A$ perpendicular to $BC$ and on
+$\Omega$. The two lines are different (the perpendicular bisector of $PQ$ also contains $M$, as $|m-p|=|m-q|$ follows from
+$m-p=\frac{m(m-b)}{a+m}$, $m-q=\frac{m(m-c)}{a+m}$ and $|m-b|=|m-c|$; and $M$ is not on the altitude because $AB\ne AC$), so they meet exactly at
+$A_1\in\Omega$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p5">
+<h3>Problem 5</h3>
+<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 52: Advanced Combinatorial Structure and Hybrid Methods</div>
+<div class="ct-text"><p>Integer $n\ge 2$ and points $A_1,A_2,\dots,A_n,B_1,B_2,\dots,B_n$ on a plane are given. Assume that</p><ul class="ct-ul"><li><p>$A_iB_i&gt;101$ &emsp;for all $i=1,2,\dots,n$,</p></li><li><p>$A_iB_j\le 100$ &emsp;for all $1\le i&lt;j\le n$.</p></li></ul><p>Prove that $n\le 10^6$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>proof (in fact $n\le 40402$)</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (The points $B_j$ are far apart; compare areas)</h4>
+<p><strong>Key observation.</strong> For $i&lt;j$ the triangle inequality gives
+\[B_iB_j\ \ge\ A_iB_i-A_iB_j\ &gt;\ 101-100=1 .\]
+So any two of the points $B_1,\dots,B_n$ are more than $1$ apart. Moreover $A_1B_j\le100$ for all $j\ge2$.</p><p><strong>Area count.</strong> The open discs of radius $\frac12$ around $B_2,\dots,B_n$ are pairwise disjoint (their centres are more than $1$ apart),
+and each lies inside the disc of radius $100+\frac12$ around $A_1$. Comparing areas,
+\[(n-1)\cdot\pi\Bigl(\frac12\Bigr)^2\le\pi\Bigl(100\tfrac12\Bigr)^2,\qquad\text{so}\qquad n-1\le 4\cdot100.5^2=40401 .\]
+Hence $n\le 40402&lt;10^6$.</p>
+<h4>Solution 2 (Pigeonhole in a grid)</h4>
+<p>For $i&lt;j$, the triangle inequality in triangle $A_iB_iB_j$ gives $B_iB_j\ge A_iB_i-A_iB_j&gt;101-100=1$. Thus the points
+$B_2,\dots,B_n$ are pairwise more than $1$ apart, and they all lie in the closed disc of radius $100$ around $A_1$, hence in the square of side
+$200$ centred at $A_1$ with sides parallel to fixed axes.</p><p>Divide this square into $283\times283$ closed squares of side $\frac{200}{283}$. Each point $B_j$ ($j\ge2$) lies in at least one of them
+(a point on a common edge lies in several); assign it to one such small square. Two points in the same closed small square are at distance at
+most its diagonal $\frac{200\sqrt2}{283}&lt;1$, since $283&gt;200\sqrt2\approx282.84$. So no small square is assigned two of the points
+$B_2,\dots,B_n$, and
+\[n-1\le283^2=80089,\qquad n\le80090&lt;10^6 .\]</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p6">
+<h3>Problem 6</h3>
+<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 49: Combinatorial Number Theory and Structure</div>
+<div class="ct-text"><p>Integer $n\ge 2$ and positive integers $a_1&lt;a_2&lt;\dots&lt;a_n$ are given. Assume that
+\[\sum_{i=1}^{n}\frac{x_i}{a_i}=1\]
+for some $x_1,x_2,\dots,x_n\in\{1,2\}$. Prove that $a_i\le(2n)^{2^{i-1}}$ for all $i=1,2,\dots,n$.</p></div>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (The remainder is at least $1/(a_1\cdots a_{i-1})$)</h4>
+<p>We prove $a_i\le(2n)^{2^{i-1}}$ by strong induction on $i$.</p><p>Fix $i$ and put
+\[r_i=1-\sum_{j&lt;i}\frac{x_j}{a_j}=\sum_{j\ge i}\frac{x_j}{a_j}.\]
+The right-hand form shows $r_i&gt;0$. The left-hand form shows that $r_i\cdot a_1a_2\cdots a_{i-1}$ is an integer; being positive, it is at least
+$1$, so $r_i\ge\dfrac1{a_1\cdots a_{i-1}}$ (for $i=1$: $r_1=1$, empty product). On the other hand $a_j\ge a_i$ and $x_j\le2$ for $j\ge i$, so
+\[r_i\le\sum_{j=i}^n\frac2{a_i}=\frac{2(n-i+1)}{a_i}\le\frac{2n}{a_i}.\]
+Combining, $a_i\le 2n\cdot a_1a_2\cdots a_{i-1}$. By the induction hypothesis $a_j\le(2n)^{2^{j-1}}$ for $j&lt;i$, hence
+\[a_i\le 2n\cdot(2n)^{1+2+\dots+2^{i-2}}=(2n)^{1+(2^{i-1}-1)}=(2n)^{2^{i-1}} .\]
+For $i=1$ this reads $a_1\le2n$, which is the case of the empty product. This completes the induction.</p>
+</div></details>
+</section>
+{% endraw %}

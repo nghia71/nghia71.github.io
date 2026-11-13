@@ -63,6 +63,34 @@ Problems from the 2026 national and international olympiads, with our own soluti
 
 <div class="cards">
   <div class="card">
+    <h3><a href="{{ '/contests/thailand-mo-2026' | relative_url }}">Thailand MO 2026</a></h3>
+    <p>10 problems. Thai national olympiad: two days, five problems each.</p>
+  </div>
+  <div class="card">
+    <h3><a href="{{ '/contests/thailand-online-mo-2026' | relative_url }}">Thailand Online MO 2026</a></h3>
+    <p>10 problems. Thailand Online Mathematical Olympiad: two days, five problems each.</p>
+  </div>
+  <div class="card">
+    <h3><a href="{{ '/contests/uzbekistan-mo-2026' | relative_url }}">Uzbekistan MO 2026</a></h3>
+    <p>5 problems. Uzbek national olympiad, final round: five problems.</p>
+  </div>
+  <div class="card">
+    <h3><a href="{{ '/contests/korea-mo-2026' | relative_url }}">FKMO 2026</a></h3>
+    <p>6 problems. Korean Mathematical Olympiad, final round: two days, three problems each.</p>
+  </div>
+  <div class="card">
+    <h3><a href="{{ '/contests/germany-mo-2026' | relative_url }}">Germany NMO 2026</a></h3>
+    <p>6 problems. German national olympiad (final round): two days, three problems each.</p>
+  </div>
+  <div class="card">
+    <h3><a href="{{ '/contests/poland-2nd-round-2026' | relative_url }}">Poland MO 2026 (Second Round)</a></h3>
+    <p>6 problems. Polish olympiad, second round: two days, three problems each.</p>
+  </div>
+  <div class="card">
+    <h3><a href="{{ '/contests/poland-mo-2026' | relative_url }}">Polish MO 2026</a></h3>
+    <p>6 problems. Polish olympiad, final round: two days, three problems each.</p>
+  </div>
+  <div class="card">
     <h3><a href="{{ '/contests/austria-mo-2026' | relative_url }}">Austria NC 2026</a></h3>
     <p>10 problems. Austrian national olympiad: preliminary round (4 problems) and final round (6 problems).</p>
   </div>
@@ -128,6 +156,26 @@ Problems from the 2026 national and international olympiads, with our own soluti
 
 <div class="cards">
   <div class="card">
+    <h3><a href="{{ '/contests/egmo-2026' | relative_url }}">EGMO 2026</a></h3>
+    <p>6 problems. European Girls’ Mathematical Olympiad: two days, three problems each.</p>
+  </div>
+  <div class="card">
+    <h3><a href="{{ '/contests/balkan-mo-2026' | relative_url }}">BMO 2026</a></h3>
+    <p>4 problems. Balkan Mathematical Olympiad: four problems.</p>
+  </div>
+  <div class="card">
+    <h3><a href="{{ '/contests/memo-2026' | relative_url }}">MEMO 2026</a></h3>
+    <p>12 problems. Middle European Mathematical Olympiad: individual (4) and team (8) competitions.</p>
+  </div>
+  <div class="card">
+    <h3><a href="{{ '/contests/francophone-mo-2026' | relative_url }}">OFM 2026</a></h3>
+    <p>8 problems. Francophone Mathematical Olympiad: Junior and Senior papers, four problems each.</p>
+  </div>
+  <div class="card">
+    <h3><a href="{{ '/contests/silk-road-2026' | relative_url }}">Silk Road MO 2026</a></h3>
+    <p>4 problems. Silk Road Mathematical Competition: four problems.</p>
+  </div>
+  <div class="card">
     <h3><a href="{{ '/contests/iberoamerican-2026' | relative_url }}">Iberoamerican 2026</a></h3>
     <p>6 problems. The Iberoamerican Olympiad of the Spanish- and Portuguese-speaking countries: two days, three problems each.</p>
   </div>
@@ -156,6 +204,14 @@ Problems from the 2026 national and international olympiads, with our own soluti
 ### Team selection tests
 
 <div class="cards">
+  <div class="card">
+    <h3><a href="{{ '/contests/turkey-egmo-tst-2026' | relative_url }}">Turkey EGMO TST 2026</a></h3>
+    <p>6 problems. Turkish selection test for the EGMO team: two days, three problems each.</p>
+  </div>
+  <div class="card">
+    <h3><a href="{{ '/contests/romania-egmo-tst-2026' | relative_url }}">Romania EGMO TST 2026</a></h3>
+    <p>6 problems. Romanian selection test for the EGMO team.</p>
+  </div>
   <div class="card">
     <h3><a href="{{ '/contests/argentina-tst-2026' | relative_url }}">Argentina TST 2026</a></h3>
     <p>6 problems. Argentina team selection test: two days, three problems each.</p>

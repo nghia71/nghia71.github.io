@@ -1,0 +1,219 @@
+---
+title: Silk Road Mathematical Competition 2026
+permalink: /contests/silk-road-2026
+description: Silk Road Mathematical Competition 2026: problems with answers and solutions
+---
+{% raw %}
+<style>
+  .ct-intro { margin-bottom: 1.2em; }
+  .ct-credit { font-size: 14px; color: var(--ink-soft); border-left: 3px solid var(--gold); padding: 6px 12px; background: var(--white); margin: 1em 0; }
+  .ct-toc { display: flex; flex-wrap: wrap; gap: 6px; margin: 1em 0 1.4em; }
+  .ct-toc a { display: inline-block; min-width: 2.4em; text-align: center; padding: 4px 8px; border: 1px solid var(--rule); border-radius: 4px; background: var(--white); text-decoration: none; font-size: 14px; }
+  .ct-problem { background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 14px 18px; margin: 1.1em 0; }
+  .ct-problem h3 { margin: 0 0 .3em; font-size: 1.08rem; border-bottom: none; padding-bottom: 0; }
+  .ct-meta { font-size: 13px; color: var(--ink-soft); margin-bottom: .6em; }
+  .ct-text { font-family: Georgia, "Times New Roman", "Noto Serif", serif; font-size: 1.02em; line-height: 1.6; }
+  .ct-text p { margin: .5em 0; }
+  .ct-fig { text-align: center; margin: .8em 0; }
+  .ct-fig img { max-width: 100%; height: auto; max-height: 340px; }
+  .ct-choices { display: flex; flex-wrap: wrap; gap: 6px 22px; margin: .6em 0 .2em; }
+  .ct-choices b { margin-right: .3em; }
+  .ct-problem details { margin-top: .8em; border-top: 1px dashed var(--rule); padding-top: .5em; }
+  .ct-problem summary { cursor: pointer; font-weight: 600; color: var(--brand); font-size: 15px; }
+  .ct-problem details[open] summary { margin-bottom: .5em; }
+  .ct-sol h4 { font-size: 1rem; margin: 1em 0 .3em; color: var(--ink); }
+  .ct-answer { font-weight: 600; }
+  .ct-parts { list-style: none; padding-left: .4em; }
+  .ct-parts li { margin: .35em 0; }
+  .ct-lbl { font-weight: 700; margin-right: .3em; }
+  .ct-note { font-size: 14px; color: var(--ink-soft); font-style: italic; }
+  .ct-bar { margin: .6em 0 1em; display: flex; gap: 10px; flex-wrap: wrap; }
+  .ct-bar button { font: inherit; font-size: 14px; padding: 5px 12px; border-radius: var(--radius); border: 1px solid var(--brand); background: var(--white); color: var(--brand); cursor: pointer; }
+</style>
+<script>
+  window.MathJax = { tex: { inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [['\\[','\\]']], processEscapes: true },
+                     options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] } };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script>
+  function ctAll(open) { document.querySelectorAll('.ct-problem details').forEach(function (d) { d.open = open; }); }
+</script>
+
+<style>
+  .ct-group { font-size: 1.25rem; margin: 1.6em 0 .2em; }
+  .ct-toc-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: .3em 0; }
+  .ct-toc-g { font-size: 13px; color: var(--ink-soft); min-width: 9em; }
+  .ct-toc-wrap { margin: 1em 0 1.4em; }
+  .ct-center { text-align: center; margin: .6em 0; }
+  .ct-tablewrap { overflow-x: auto; margin: .6em 0; text-align: center; }
+  .ct-table { border-collapse: collapse; margin: 0 auto; }
+  .ct-table td { padding: 2px 9px; text-align: center; }
+  .ct-table tr.ct-hl td { border-bottom: 1px solid var(--ink-soft); }
+  .ct-table.ct-vfirst td:first-child { border-right: 1px solid var(--ink-soft); }
+  .ct-ul { padding-left: 1.4em; }
+  .ct-ul li { margin: .3em 0; }
+  .ct-text li > p:first-child { margin-top: 0; }
+  .ct-text li > p:last-child { margin-bottom: 0; }
+  .ct-text mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
+</style>
+
+{% endraw %}
+<p><a href="{{ '/contests-2026' | relative_url }}">&larr; All contests 2026</a></p>
+
+<h1>Silk Road Mathematical Competition 2026</h1>
+
+<div class="ct-intro">
+<p>The 4 problems of the Silk Road Mathematical Competition 2026, each with our own solutions, hidden until you open them. All of them ask for a proof. Where a problem has a final answer, it is shown separately. Try a problem first, then check.</p><p>The competition has four problems.</p>
+</div>
+<div class="ct-credit">Problems: Silk Road Mathematical Competition 2026, from the AoPS contest collection. Solutions written by MCC.</div>
+<div class="ct-bar"><button type="button" onclick="ctAll(true)">Show all answers and solutions</button><button type="button" onclick="ctAll(false)">Hide all</button></div>
+<div class="ct-toc-wrap"><div class="ct-toc-row"><a href="#p1">1</a><a href="#p2">2</a><a href="#p3">3</a><a href="#p4">4</a></div></div>
+
+{% raw %}
+<section class="ct-problem" id="p1">
+<h3>Problem 1</h3>
+<div class="ct-meta">Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure</div>
+<div class="ct-text"><p>The line joining the midpoints of the diagonals of a cyclic quadrilateral $ABCD$ intersects segment $AB$ at point $X$, and the extension of line $BC$ beyond point $C$ at point $Y$. Prove that if the points $A,C,X,Y$ lie on the same circle, then the segments $AB$, $BC$, and $BD$ can form a right triangle.</p></div>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Vectors from $B$)</h4>
+<div class="ct-fig"><img style="width:251px" src="/assets/contests/2026-27/silk-road-1_s1.svg" alt="Figure for the solution"></div>
+<p>Let $K$ and $L$ be the midpoints of $AC$ and $BD$ (they are distinct, otherwise $ABCD$ would be a parallelogram and the line
+$KL$ would not be defined). Put the origin at $B$ and write points as vectors; $A$ and $C$ are linearly independent. Since $X$ lies on segment
+$AB$ and $Y$ on ray $BC$ beyond $C$,
+\[
+X=pA,\quad Y=qC\qquad(0&lt;p&lt;1&lt;q),
+\]
+and we write $D=\alpha A+\beta C$.</p><p><em>The Newton line.</em> $K=\tfrac12A+\tfrac12C$ lies on line $XY$, so $K=(1-s)pA+sqC$ for some $s$, i.e. $(1-s)p=\tfrac12$ and $sq=\tfrac12$.
+Adding $\tfrac1{2p}=1-s$ and $\tfrac1{2q}=s$:
+\[
+\frac1p+\frac1q=2 .
+\]
+Similarly $L=\tfrac12D$ lies on $XY$: $\tfrac\alpha2=(1-r)p$, $\tfrac\beta2=rq$ for some $r$, hence
+\[
+\frac\alpha p+\frac\beta q=2 .
+\]</p><p><em>The concyclicity.</em> $X$ and $A$ lie on one ray from $B$, $Y$ and $C$ on another, so $A,C,X,Y$ are concyclic iff the powers agree:
+$BX\cdot BA=BY\cdot BC$, i.e. $p|A|^2=q|C|^2=:t$. Then $\tfrac1p=|A|^2/t$ and $\tfrac1q=|C|^2/t$, and the two relations become
+\[
+|A|^2+|C|^2=2t,\qquad \alpha|A|^2+\beta|C|^2=2t .
+\]</p><p><em>The circle $ABCD$.</em> Let $O$ be its centre. Since $B$ (the origin) is on the circle, $|Z-O|^2=|O|^2$, i.e. $|Z|^2=2\,Z\cdot O$, for
+every point $Z$ of the circle. Applying this to $A$, $C$, $D$:
+\[
+BD^2=|D|^2=2D\cdot O=\alpha\,(2A\cdot O)+\beta\,(2C\cdot O)=\alpha|A|^2+\beta|C|^2=2t=AB^2+BC^2 .
+\]</p><p>Thus $BD^2=AB^2+BC^2$. In particular $BD&lt;AB+BC$ and $BD$ is the longest of the three segments, so they form a triangle, and by the converse of
+Pythagoras' theorem it is right-angled (with hypotenuse $BD$).</p>
+<h4>Solution 2 (An inversion centred at $B$)</h4>
+<p>Let $\Gamma$ be the circle $ABCD$ and $K$, $L$ the midpoints of $AC$, $BD$ (distinct: if $K=L$ the diagonals bisect each
+other, $ABCD$ is a parallelogram and the line $KL$ is not defined). As $X$ lies on ray $BA$
+and $Y$ on ray $BC$, the concyclicity of $A,C,X,Y$ means
+\[
+t:=BX\cdot BA=BY\cdot BC&gt;0 .
+\]
+Let $\iota$ be the inversion with centre $B$ and power $t$. It exchanges $A\leftrightarrow X$ and $C\leftrightarrow Y$. The circle $\Gamma$ passes
+through $B$, so $\iota(\Gamma)$ is a line, through $\iota(A)=X$ and $\iota(C)=Y$: the line $XY$, which contains $K$ and $L$. Hence $\iota(K)$ and
+$\iota(L)$ lie on $\Gamma$.</p><p><em>From $L$.</em> $\iota(L)$ lies on $\Gamma$ and on ray $BL=$ ray $BD$, and is different from $B$, so $\iota(L)=D$. Thus $BL\cdot BD=t$, and as
+$BL=\tfrac12BD$,
+\[
+BD^2=2t .
+\]</p><p><em>From $K$.</em> $K$ is the midpoint of the chord $AC$, so it is inside $\Gamma$, and ray $BK$ meets $\Gamma$ again at a point $K^*$ beyond $K$;
+as above $\iota(K)=K^*$, so $t=BK\cdot BK^*$. The power of $K$ gives $KB\cdot KK^*=KA\cdot KC=\tfrac14AC^2$, and the median formula gives
+$BK^2=\tfrac14(2AB^2+2BC^2-AC^2)$. Hence
+\[
+t=BK\,(BK+KK^*)=BK^2+\tfrac14AC^2=\tfrac12\bigl(AB^2+BC^2\bigr).
+\]</p><p>Therefore $BD^2=2t=AB^2+BC^2$, so $BD$ is the longest of the three segments and $BD&lt;AB+BC$; they form a triangle, right-angled by the
+converse of Pythagoras' theorem, with hypotenuse $BD$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p2">
+<h3>Problem 2</h3>
+<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 17: Sequences, Recurrences, and Discrete Dynamics</div>
+<div class="ct-text"><p>In an infinite sequence $a_1,a_2,\dots$ consisting of positive integers, for each $n\ge 2$, the term $a_{n+1}$ is determined as follows: the fraction
+\[\frac{a_1+a_2+\cdots+a_{n-1}}{a_n}\]
+is reduced to its lowest terms (irreducible form), and then $a_{n+1}$ is set equal to the numerator of this reduced fraction. Prove that there exists a positive integer $N$ such that for all $n\ge N$, the following equality holds:
+\[a_{n+2}=a_{n+1}+a_n.\]</p></div>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (The cancelled factor shrinks and then disappears)</h4>
+<p>Let $S_n=a_1+\dots+a_n$ and, for $n\ge2$, $g_n=\gcd(S_{n-1},a_n)$. The rule says
+\[
+a_{n+1}=\frac{S_{n-1}}{g_n}\qquad(n\ge2).
+\]</p><p><em>Step 1: $g_{n+1}\mid g_n$.</em> Let $d=g_{n+1}=\gcd(S_n,a_{n+1})$. Then $d\mid a_{n+1}$, and $a_{n+1}\mid S_{n-1}$, so $d\mid S_{n-1}$; also
+$d\mid S_n=S_{n-1}+a_n$, so $d\mid a_n$. Hence $d\mid\gcd(S_{n-1},a_n)=g_n$.</p><p><em>Step 2.</em> The positive integers $g_2\ge g_3\ge\cdots$ are non-increasing (by Step 1), so they are constant from some index $N$ on:
+$g_n=g$ for all $n\ge N$.</p><p><em>Step 3: $g=1$.</em> For $n\ge N$ we have $g\mid a_n$ (as $g=g_n\mid a_n$) and
+\[
+a_{n+2}=\frac{S_n}{g}=\frac{S_{n-1}+a_n}{g}=a_{n+1}+\frac{a_n}{g},\qquad\text{i.e.}\qquad a_n=g\,(a_{n+2}-a_{n+1}).
+\]
+We show by induction on $k$ that $g^k\mid a_n$ for all $n\ge N$. For $k=0$ this is clear; if it holds for $k$, then $g^k$ divides
+$a_{n+2}-a_{n+1}$, so $g^{k+1}\mid g(a_{n+2}-a_{n+1})=a_n$. If $g\ge2$, the positive integer $a_N$ would be divisible by arbitrarily large
+powers of $g$, which is impossible. So $g=1$.</p><p><em>Step 4.</em> For $n\ge N$ we now have $a_{n+1}=S_{n-1}$ and $a_{n+2}=S_n$, hence
+\[
+a_{n+2}=S_n=S_{n-1}+a_n=a_{n+1}+a_n\qquad\text{for all }n\ge N .
+\]</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p3">
+<h3>Problem 3</h3>
+<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 39: Graph Theory and Structural Combinatorics</div>
+<div class="ct-text"><p>On a horizontal segment of length $2025$, its endpoints and all points dividing it into unit segments are marked. Some pairs of marked points are connected by one-way teleporters transporting from the left point to the right point. It is known that several people, using only the teleporters, can travel from the left endpoint to the right endpoint in such a way that each teleporter is used exactly once. Prove that this can be done so that, for every $k=1,2,\dots,2025$, the teleporters transporting $k$ units to the right are used by at most $1013$ people.</p></div>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Let equal jumps follow each other)</h4>
+<p>Label the marked points $0,1,\dots,2025$. Each pair of points carries at most one teleporter (this is what &ldquo;some pairs are
+connected&rdquo; means; with parallel teleporters the claim would fail, e.g. for $1014$ copies of the teleporter $0\to2025$), and a teleporter from $i$ to $j&gt;i$ has length $j-i$.</p><p><em>Plans as matchings.</em> In a valid plan every passage of a person through an inner point $v$ uses one teleporter arriving at $v$ and one
+leaving $v$, and every teleporter is used exactly once; so at every inner point the numbers of arriving and leaving teleporters are equal.
+Conversely, suppose that at every inner point $v$ we fix a bijection $\pi_v$ from the teleporters arriving at $v$ to those leaving $v$. Send
+one person along each teleporter leaving $0$, and let a person arriving at $v$ by $e$ continue with $\pi_v(e)$. Teleporters go to the right,
+so every person reaches $2025$. Every teleporter $f$ is used exactly once: going backwards ($f=\pi_v(e)$ determines $e$, and so on) we reach a
+teleporter leaving $0$, whose person uses $f$; two persons cannot share a teleporter because their routes are determined forwards. So
+every such choice of bijections is a valid plan.</p><p><em>The choice.</em> At each inner point $v$ and for each $k$ such that both teleporters $v-k\to v$ and $v\to v+k$ exist, let $\pi_v$ send the
+first to the second. Different $k$ involve different teleporters, so this is a partial bijection; complete it arbitrarily to a bijection
+(possible since the numbers of arriving and leaving teleporters are equal).</p><p><em>Counting.</em> Fix $k$. Call a <em>$k$-chain</em> a maximal run $v_0\to v_0+k\to v_0+2k\to\dots\to v_0+mk$ ($m\ge1$) of existing teleporters of
+length $k$. By our rule, whoever uses the first teleporter of a $k$-chain uses all of them. Each length-$k$ teleporter lies in exactly one
+$k$-chain, so the number of people using teleporters of length $k$ is at most the number of $k$-chains.</p><p>Two $k$-chains share no marked point: a point $v$ has at most one arriving length-$k$ teleporter (from $v-k$) and at most one leaving one (to
+$v+k$), and if both exist they are consecutive in the same chain. Every $k$-chain contains at least $2$ marked points, and there are $2026$ marked
+points, so there are at most $1013$ $k$-chains.</p><p>Hence, with this plan, for every $k=1,\dots,2025$ at most $1013$ people use teleporters of length $k$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p4">
+<h3>Problem 4</h3>
+<div class="ct-meta">Algebra &middot; LPS VII, Chapter 5: Polynomial Structure and Algebraic Identities</div>
+<div class="ct-text"><p>Let $P(x,y,z)$ be a polynomial with real coefficients satisfying
+\[P(x,y,z)=P(y+z-x,y,z)=P(x,z+x-y,z)=P(x,y,x+y-z).\]</p><ul class="ct-parts"><li><p><span class="ct-lbl">(1)</span> Prove that there exists a polynomial $Q(x,y,z)$ with real coefficients such that
+\[P(x,y,z)=Q(x-y,y-z,z-x).\]</p></li><li><p><span class="ct-lbl">(2)</span> Prove that there exists a polynomial $R(x,y)$ with real coefficients such that
+\[P(x,y,z)=R\big(x^2+y^2+z^2-xy-yz-zx,\ (x-y)(y-z)(z-x)\big).\]</p></li></ul></div>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Composing the three symmetries)</h4>
+<p>Let $T_1(x,y,z)=(y+z-x,y,z)$, $T_2(x,y,z)=(x,z+x-y,z)$, $T_3(x,y,z)=(x,y,x+y-z)$. The hypothesis says $P\circ T_i=P$ for
+$i=1,2,3$, hence $P$ is invariant under every composition of these maps.</p><p><strong>(1)</strong> Apply $T_1$, then $T_2$, then $T_3$, then $T_2$:
+\[
+(x,y,z)\mapsto(y+z-x,\,y,\,z)\mapsto(y+z-x,\,2z-x,\,z)\mapsto(y+z-x,\,2z-x,\,y+2z-2x)\mapsto(y+z-x,\,2y+z-2x,\,y+2z-2x).
+\]
+The result is $(x,y,z)+d\,(1,1,1)$ with $d=y+z-2x$. Hence
+\[
+P(x+d,\,y+d,\,z+d)=P(x,y,z),\qquad d=y+z-2x .
+\]
+Adding the same number to $x,y,z$ does not change $y+z-2x$, so we may iterate: $P(x+jd,y+jd,z+jd)=P(x,y,z)$ for every integer $j\ge0$.
+Fix $(x,y,z)$ with $d\ne0$. The polynomial $s\mapsto P(x+s,y+s,z+s)-P(x,y,z)$ vanishes at the infinitely many points $s=jd$, so it is
+zero. Thus the polynomial
+\[
+G(x,y,z,s)=P(x+s,y+s,z+s)-P(x,y,z)
+\]
+vanishes whenever $y+z\ne2x$; then $(y+z-2x)\,G$ vanishes everywhere, so it is the zero polynomial, and so is $G$. Taking $s=-z$:
+\[
+P(x,y,z)=P(x-z,\,y-z,\,0)=Q(x-y,\,y-z,\,z-x)\qquad\text{with}\qquad Q(u,v,w)=P(-w,\,v,\,0).
+\]</p><p><strong>(2)</strong> Put $u=x-y$, $v=y-z$, $w=z-x$. A direct check shows how the maps act on the differences:
+\[
+T_1:\ (u,v,w)\mapsto(w,v,u),\qquad T_2:\ (u,v,w)\mapsto(v,u,w),\qquad T_3:\ (u,v,w)\mapsto(u,w,v).
+\]
+(For example, for $T_1$: $(y+z-x)-y=z-x$, $y-z$, $z-(y+z-x)=x-y$.) The triples $(x-y,y-z,z-x)$ fill the whole plane
+$\Pi=\{u+v+w=0\}$ (take $x=u+v$, $y=v$, $z=0$). So the invariance of $P$ gives $Q(w,v,u)=Q(v,u,w)=Q(u,w,v)=Q(u,v,w)$ on $\Pi$. These three
+transpositions generate all permutations, so $Q\circ\tau=Q$ on $\Pi$ for every permutation $\tau$ of the variables.</p><p>Let $\widetilde Q=\frac16\sum_\tau Q\circ\tau$. It is a symmetric polynomial that coincides with $Q$ on $\Pi$. By the fundamental theorem on
+symmetric polynomials, $\widetilde Q=F(e_1,e_2,e_3)$ for a real polynomial $F$, where $e_1=u+v+w$, $e_2=uv+vw+wu$, $e_3=uvw$. On $\Pi$ we have
+$e_1=0$ and $e_2=-\tfrac12(u^2+v^2+w^2)$, and
+\[
+u^2+v^2+w^2=(x-y)^2+(y-z)^2+(z-x)^2=2\,(x^2+y^2+z^2-xy-yz-zx).
+\]
+Hence, writing $\sigma=x^2+y^2+z^2-xy-yz-zx$ and $\pi=(x-y)(y-z)(z-x)$,
+\[
+P(x,y,z)=\widetilde Q(u,v,w)=F(0,-\sigma,\pi)=R(\sigma,\pi),\qquad R(s,p)=F(0,-s,p).
+\]</p>
+</div></details>
+</section>
+{% endraw %}
