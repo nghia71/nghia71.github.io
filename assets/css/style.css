@@ -38,20 +38,29 @@ body {
   border-bottom: 4px solid var(--gold);
 }
 
-/* Header: logo on the left, grouped menu on the right, one row on desktop.
-   Phones: logo + "Menu" button; the menu opens as a full-width panel. */
+/* Header: the logo lettering spans exactly the reading column; the menu sits
+   below it, starting at the column's left edge, with "Join MCC" at the right.
+   The logo image (1024x256) has red margins baked in: the lettering occupies
+   x 37-987 and y 45-210. The image is scaled so the lettering (950 px of
+   1024) fills the column, and the red margins hang outside it (clipped by
+   .site-header; same red as the header, so invisible). Percent margins are
+   relative to the column width. */
+.site-header { overflow: hidden; }
 .header-row {
   max-width: 1040px;
   margin: 0 auto;
-  padding: 14px 24px;
-  display: flex;
-  align-items: center;
-  gap: 18px;
+  padding: 22px 24px 12px;
 }
-.brand { display: block; flex: 0 1 340px; min-width: 200px; }
-.brand img { display: block; width: 100%; height: auto; }
+.brand { display: block; }
+.brand img {
+  display: block;
+  width: calc(100% * 1024 / 950);
+  max-width: none;
+  height: auto;
+  margin: calc(-100% * 45 / 950) 0 calc(-100% * 46 / 950) calc(-100% * 37 / 950);
+}
 
-.site-nav { display: flex; align-items: center; gap: 4px; margin-left: auto; flex-wrap: wrap; justify-content: flex-end; }
+.site-nav { display: flex; align-items: center; flex-wrap: wrap; gap: 4px; margin: 14px -14px 0; }
 .site-nav a, .nav-group-btn {
   display: inline-block;
   padding: 8px 14px;
@@ -69,7 +78,7 @@ body {
 .nav-group-btn::after { content: " ▾"; font-size: .8em; }
 .site-nav a:hover, .nav-group-btn:hover, .nav-group.open .nav-group-btn { background: rgba(255,255,255,.14); color: var(--white); }
 .nav-top.active, .nav-group.active > .nav-group-btn { background: var(--gold); color: var(--brand-dark); }
-.site-nav a.nav-cta { background: var(--gold); color: var(--brand-dark); margin-left: 6px; box-shadow: 0 1px 0 rgba(0,0,0,.15); }
+.site-nav a.nav-cta { background: var(--gold); color: var(--brand-dark); margin-left: auto; box-shadow: 0 1px 0 rgba(0,0,0,.15); }
 .site-nav a.nav-cta:hover { background: var(--white); color: var(--brand-dark); }
 
 .nav-group { position: relative; }
@@ -96,7 +105,7 @@ body {
 
 .nav-toggle {
   display: none;
-  margin-left: auto;
+  margin: 12px 0 0;
   border: 1px solid rgba(255,255,255,.5);
   border-radius: 999px;
   background: none;
@@ -108,11 +117,12 @@ body {
   cursor: pointer;
 }
 
+/* Phones and narrow windows: logo across the column, a "Menu" button below
+   it; the menu opens as a list with group headings. */
 @media (max-width: 860px) {
-  .header-row { flex-wrap: wrap; padding: 10px 16px; gap: 10px; }
-  .brand { flex: 0 1 240px; min-width: 160px; }
+  .header-row { padding: 16px 18px 12px; }
   .nav-toggle { display: inline-block; }
-  .site-nav { display: none; width: 100%; flex-direction: column; align-items: stretch; gap: 2px; margin: 0; padding-bottom: 8px; }
+  .site-nav { display: none; flex-direction: column; align-items: stretch; gap: 2px; margin: 8px 0 0; }
   .site-header.menu-open .site-nav { display: flex; }
   .site-header.menu-open .nav-toggle { background: rgba(255,255,255,.14); color: var(--white); }
   .site-nav a, .nav-group-btn { display: block; width: 100%; text-align: left; border-radius: 8px; }
