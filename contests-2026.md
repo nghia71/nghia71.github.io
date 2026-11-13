@@ -63,6 +63,18 @@ Problems from the 2026 national and international olympiads, with our own soluti
 
 <div class="cards">
   <div class="card">
+    <h3><a href="{{ '/contests/india-mo-2026' | relative_url }}">INMO 2026</a></h3>
+    <p>6 problems. Indian National Mathematical Olympiad (INMO): six problems.</p>
+  </div>
+  <div class="card">
+    <h3><a href="{{ '/contests/india-stems-a-2026' | relative_url }}">India STEMS 2026 (Category A)</a></h3>
+    <p>12 problems. India STEMS, Category A: objective and subjective problems.</p>
+  </div>
+  <div class="card">
+    <h3><a href="{{ '/contests/india-stems-b-2026' | relative_url }}">India STEMS 2026 (Cat. B)</a></h3>
+    <p>11 problems. India STEMS, Category B: objective and subjective problems.</p>
+  </div>
+  <div class="card">
     <h3><a href="{{ '/contests/china-mo-2026' | relative_url }}">China MO 2026</a></h3>
     <p>6 problems. Chinese Mathematical Olympiad (CMO): two days, three problems each.</p>
   </div>
