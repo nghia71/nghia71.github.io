@@ -224,6 +224,10 @@ Problems from the 2026 national and international olympiads, with our own soluti
 
 <div class="cards">
   <div class="card">
+    <h3><a href="{{ '/contests/sharygin-2026' | relative_url }}">Sharygin 2026</a></h3>
+    <p>48 problems. Sharygin Geometry Olympiad: correspondence round (24 problems) and final round (grades 8 to 10).</p>
+  </div>
+  <div class="card">
     <h3><a href="{{ '/contests/emo-2026' | relative_url }}">EMO 2026</a></h3>
     <p>8 problems. European Mathematical Olympiad (EMO): eight problems.</p>
   </div>
