@@ -1,0 +1,201 @@
+---
+title: Taiwan Mathematics Olympiad 2026
+permalink: /contests/taiwan-mo-2026
+description: Taiwan Mathematics Olympiad 2026: problems with answers and solutions
+---
+{% raw %}
+<style>
+  .ct-intro { margin-bottom: 1.2em; }
+  .ct-credit { font-size: 14px; color: var(--ink-soft); border-left: 3px solid var(--gold); padding: 6px 12px; background: var(--white); margin: 1em 0; }
+  .ct-toc { display: flex; flex-wrap: wrap; gap: 6px; margin: 1em 0 1.4em; }
+  .ct-toc a { display: inline-block; min-width: 2.4em; text-align: center; padding: 4px 8px; border: 1px solid var(--rule); border-radius: 4px; background: var(--white); text-decoration: none; font-size: 14px; }
+  .ct-problem { background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 14px 18px; margin: 1.1em 0; }
+  .ct-problem h3 { margin: 0 0 .3em; font-size: 1.08rem; border-bottom: none; padding-bottom: 0; }
+  .ct-meta { font-size: 13px; color: var(--ink-soft); margin-bottom: .6em; }
+  .ct-text { font-family: Georgia, "Times New Roman", "Noto Serif", serif; font-size: 1.02em; line-height: 1.6; }
+  .ct-text p { margin: .5em 0; }
+  .ct-fig { text-align: center; margin: .8em 0; }
+  .ct-fig img { max-width: 100%; height: auto; max-height: 340px; }
+  .ct-choices { display: flex; flex-wrap: wrap; gap: 6px 22px; margin: .6em 0 .2em; }
+  .ct-choices b { margin-right: .3em; }
+  .ct-problem details { margin-top: .8em; border-top: 1px dashed var(--rule); padding-top: .5em; }
+  .ct-problem summary { cursor: pointer; font-weight: 600; color: var(--brand); font-size: 15px; }
+  .ct-problem details[open] summary { margin-bottom: .5em; }
+  .ct-sol h4 { font-size: 1rem; margin: 1em 0 .3em; color: var(--ink); }
+  .ct-answer { font-weight: 600; }
+  .ct-parts { list-style: none; padding-left: .4em; }
+  .ct-parts li { margin: .35em 0; }
+  .ct-lbl { font-weight: 700; margin-right: .3em; }
+  .ct-note { font-size: 14px; color: var(--ink-soft); font-style: italic; }
+  .ct-bar { margin: .6em 0 1em; display: flex; gap: 10px; flex-wrap: wrap; }
+  .ct-bar button { font: inherit; font-size: 14px; padding: 5px 12px; border-radius: var(--radius); border: 1px solid var(--brand); background: var(--white); color: var(--brand); cursor: pointer; }
+</style>
+<script>
+  window.MathJax = { tex: { inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [['\\[','\\]']], processEscapes: true },
+                     options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] } };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script>
+  function ctAll(open) { document.querySelectorAll('.ct-problem details').forEach(function (d) { d.open = open; }); }
+</script>
+
+<style>
+  .ct-group { font-size: 1.25rem; margin: 1.6em 0 .2em; }
+  .ct-toc-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: .3em 0; }
+  .ct-toc-g { font-size: 13px; color: var(--ink-soft); min-width: 9em; }
+  .ct-toc-wrap { margin: 1em 0 1.4em; }
+  .ct-center { text-align: center; margin: .6em 0; }
+  .ct-tablewrap { overflow-x: auto; margin: .6em 0; text-align: center; }
+  .ct-table { border-collapse: collapse; margin: 0 auto; }
+  .ct-table td { padding: 2px 9px; text-align: center; }
+  .ct-table tr.ct-hl td { border-bottom: 1px solid var(--ink-soft); }
+  .ct-table.ct-vfirst td:first-child { border-right: 1px solid var(--ink-soft); }
+  .ct-ul { padding-left: 1.4em; }
+  .ct-ul li { margin: .3em 0; }
+  .ct-text li > p:first-child { margin-top: 0; }
+  .ct-text li > p:last-child { margin-bottom: 0; }
+  .ct-text mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
+</style>
+
+{% endraw %}
+<p><a href="{{ '/contests-2026' | relative_url }}">&larr; All contests 2026</a></p>
+
+<h1>Taiwan Mathematics Olympiad 2026</h1>
+
+<div class="ct-intro">
+<p>The 5 problems of the Taiwan Mathematics Olympiad 2026, each with our own solutions, hidden until you open them. 3 of them ask for an answer and 2 ask for a proof. Where a problem has a final answer, it is shown separately. Try a problem first, then check.</p><p>The olympiad has five problems.</p>
+</div>
+<div class="ct-credit">Problems: Taiwan Mathematics Olympiad 2026, from the AoPS contest collection. Solutions written by MCC.</div>
+<div class="ct-bar"><button type="button" onclick="ctAll(true)">Show all answers and solutions</button><button type="button" onclick="ctAll(false)">Hide all</button></div>
+<div class="ct-toc-wrap"><div class="ct-toc-row"><a href="#p1">1</a><a href="#p2">2</a><a href="#p3">3</a><a href="#p4">4</a><a href="#p5">5</a></div></div>
+
+{% raw %}
+<section class="ct-problem" id="p1">
+<h3>Problem 1</h3>
+<div class="ct-meta">Algebra &middot; LPS VII, Chapter 1: Inequalities: Core Classical Methods</div>
+<div class="ct-text"><p>Let $\pi_1,\pi_2,\ldots,\pi_n$ be a permutation of $1,\ldots,n$. Prove that for all real numbers $a_1\leq a_2\leq\cdots\leq a_n$ and $b_1\leq b_2\leq\cdots\leq b_n$, we have:
+\[\sum_{i=1}^n\min(a_{\pi_i},b_i)\leq\sum_{i=1}^n\min(a_i,b_i)\]</p></div>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Layer by layer)</h4>
+<p>Choose a number $m$ smaller than all $a_i$ and $b_i$. For real $x,y\ge m$,
+\[\min(x,y)=m+\int_m^{\infty}[t&lt;x]\,[t&lt;y]\,dt,\]
+where $[\,\cdot\,]$ is $1$ if the statement holds and $0$ otherwise (the integrand is $1$ exactly for $m\le t&lt;\min(x,y)$). Summing over $i$,
+\[\sum_{i=1}^n\min(a_{\pi_i},b_i)=nm+\int_m^\infty N_\pi(t)\,dt,\qquad N_\pi(t)=\#\{i:\ a_{\pi_i}&gt;t\ \text{and}\ b_i&gt;t\}.\]
+Fix $t$. Let $\alpha$ be the number of indices $j$ with $a_j&gt;t$ and $\beta$ the number with $b_j&gt;t$. Clearly $N_\pi(t)\le\min(\alpha,\beta)$. For the identity
+permutation, since both sequences are non-decreasing, $\{i:a_i&gt;t\}$ consists of the last $\alpha$ indices and $\{i:b_i&gt;t\}$ of the last $\beta$ indices; their
+intersection is the last $\min(\alpha,\beta)$ indices, so $N_{\mathrm{id}}(t)=\min(\alpha,\beta)\ge N_\pi(t)$. Integrating over $t$ gives
+$\sum\min(a_{\pi_i},b_i)\le\sum\min(a_i,b_i)$.</p>
+<h4>Solution 2 (Removing inversions)</h4>
+<p><strong>Lemma.</strong> If $x\le y$ and $u\le v$, then $\min(y,u)+\min(x,v)\le\min(x,u)+\min(y,v)$.</p><p><em>Proof.</em> If $u\le x$, then $\min(y,u)=\min(x,u)=u$ and the claim is $\min(x,v)\le\min(y,v)$, true as $x\le y$. If $u&gt;x$, then $v&gt;x$, so
+$\min(x,v)=\min(x,u)=x$ and the claim is $\min(y,u)\le\min(y,v)$, true as $u\le v$. $\square$</p><p>Now let $\pi$ be any permutation, not the identity. Then there is an index $i$ with $\pi_i&gt;\pi_{i+1}$. Put $x=a_{\pi_{i+1}}\le y=a_{\pi_i}$ and $u=b_i\le v=b_{i+1}$.
+Swapping the values $\pi_i$ and $\pi_{i+1}$ changes only two terms of the sum, from $\min(y,u)+\min(x,v)$ to $\min(x,u)+\min(y,v)$, so by the lemma the sum
+does not decrease. The swap reduces the number of inversions of the permutation (pairs $p&lt;q$ with $\pi_p&gt;\pi_q$) by exactly one. Repeating, we reach the identity
+after finitely many swaps, and the sum never decreases on the way. Hence $\sum\min(a_{\pi_i},b_i)\le\sum\min(a_i,b_i)$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p2">
+<h3>Problem 2</h3>
+<div class="ct-meta">Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure</div>
+<div class="ct-text"><p>Let $\triangle ABC$ be inscribed in a circle $\omega$. Denote $M$ as the midpoint of $BC$. Let $P$ be the midpoint of the chord of $\omega$ that passes through $M$ and is perpendicular to $AC$. Let $Q$ be the midpoint of the chord of $\omega$ that passes through $M$ and is perpendicular to $AB$. Prove that $PQ$ is perpendicular to $AO$, where $O$ is the center of $\omega$.</p></div>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (A circle on diameter $OM$)</h4>
+<div class="ct-fig"><img style="width:248px" src="/assets/contests/2026-27/taiwan-mo-2_s1.svg" alt="Figure for the solution"></div>
+<p>We use directed angles between lines, $\measuredangle(\ell,m)$, taken modulo $180^\circ$. We assume $\angle A\ne90^\circ$, as the statement tacitly does: if
+$\angle A=90^\circ$ then $M=O$, so $P=Q=O$ and the line $PQ$ does not exist.</p><p><strong>Degenerate positions.</strong> The chord through $M$ perpendicular to $AC$ has midpoint $M$ exactly when it is perpendicular to $OM$, i.e. when $OM\parallel AC$; as $OM\perp BC$,
+this means $\angle C=90^\circ$. Its midpoint is $O$ only if the chord is the line $OM$, i.e. $OM\perp AC$, which with $OM\perp BC$ is impossible. So $P\notin\{O,M\}$ unless
+$\angle C=90^\circ$, and likewise $Q\notin\{O,M\}$ unless $\angle B=90^\circ$. If $\angle C=90^\circ$ then $P=M$ and $O$ is the midpoint of $AB$; $\angle OQM=90^\circ$ and $OQ\parallel AB$
+(see below) give $PQ=MQ\perp AB=AO$. Likewise for $\angle B=90^\circ$. From now on $P,Q\notin\{O,M\}$.</p><p><strong>The general case.</strong></p><p>The midpoint of a chord is the foot of the perpendicular from $O$ to it, so $OP$ is perpendicular to the chord through $P$, which is perpendicular to $AC$: hence $OP\parallel AC$
+and $\angle OPM=90^\circ$. Likewise $OQ\parallel AB$ and $\angle OQM=90^\circ$. So $P$ and $Q$ lie on the circle with diameter $OM$, and
+\[\measuredangle(QP,AB)=\measuredangle(QP,QO)=\measuredangle(MP,MO).\]
+Now $MP\perp AC$ and $MO\perp BC$ (as $M$ is the midpoint of the chord $BC$). Turning both lines by $90^\circ$ does not change a directed angle, so
+$\measuredangle(MP,MO)=\measuredangle(AC,BC)$.</p><p>Let $t$ be the tangent to $\omega$ at $A$. By the tangent&ndash;chord angle, $\measuredangle(t,AB)=\measuredangle(CA,CB)=\measuredangle(AC,BC)$. Therefore
+$\measuredangle(QP,AB)=\measuredangle(t,AB)$, so $PQ\parallel t$. Since $t\perp AO$, we get $PQ\perp AO$.</p>
+<h4>Solution 2 (Vectors from the centre)</h4>
+<p>Put the origin at $O$ and write $\mathbf a,\mathbf b,\mathbf c$ for the position vectors of $A,B,C$, so $|\mathbf a|=|\mathbf b|=|\mathbf c|=R$, and $\mathbf m=\frac{\mathbf b+\mathbf c}2$.</p><p>$P$ is the foot of the perpendicular from $O$ to the chord through $M$ perpendicular to $AC$, so $\mathbf p$ is parallel to $\mathbf c-\mathbf a$: $\mathbf p=\lambda(\mathbf c-\mathbf a)$, and
+$P$ lies on the chord: $(\mathbf p-\mathbf m)\cdot(\mathbf c-\mathbf a)=0$, i.e. $\lambda|\mathbf c-\mathbf a|^2=\mathbf m\cdot(\mathbf c-\mathbf a)$. Since
+$(\mathbf c-\mathbf a)\cdot\mathbf a=\mathbf a\cdot\mathbf c-R^2=-\frac12|\mathbf c-\mathbf a|^2$,
+\[\mathbf p\cdot\mathbf a=-\tfrac12\lambda|\mathbf c-\mathbf a|^2=-\tfrac12\,\mathbf m\cdot(\mathbf c-\mathbf a).\]
+In the same way $\mathbf q\cdot\mathbf a=-\frac12\,\mathbf m\cdot(\mathbf b-\mathbf a)$. Subtracting,
+\[(\mathbf p-\mathbf q)\cdot\mathbf a=-\tfrac12\,\mathbf m\cdot(\mathbf c-\mathbf b)=-\tfrac14(\mathbf c+\mathbf b)\cdot(\mathbf c-\mathbf b)=-\tfrac14\bigl(|\mathbf c|^2-|\mathbf b|^2\bigr)=0 .\]
+So $PQ\perp AO$. (We assume $\angle A\ne90^\circ$, as the statement tacitly does: if $\angle A=90^\circ$ then $M=O$ and $P=Q=O$. For
+$\angle A\ne90^\circ$ we have $P\ne Q$: otherwise $\mathbf p=\mathbf q$ is parallel to both $\mathbf c-\mathbf a$ and $\mathbf b-\mathbf a$, so $P=Q=O$, and the chord through
+$M$ perpendicular to $AC$ is a diameter, i.e. the line $OM$ ($M\ne O$); then $OM\perp AC$ and $OM\perp BC$, which is impossible.)</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p3">
+<h3>Problem 3</h3>
+<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 20: Parity, Coloring, and Process Termination</div>
+<div class="ct-text"><p>A baby colors $2026$ blocks on a $2026\times 2026$ grid paper with red or yellow so no two blocks with the same coloring are on the same row or column. The father walks by and realizes that the uncolored part of the paper can be divided into several $1\times 2$ sub-papers by cutting along the grid lines. Prove that the maximum possible number of red blocks is $2025$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>proof (the maximum is $2025$)</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Chessboard count)</h4>
+<div class="ct-fig"><img style="width:223px" src="/assets/contests/2026-27/taiwan-mo-3_s1.svg" alt="Figure for the solution"></div>
+<p>Number rows and columns $1,\dots,2026$ and call cell $(i,j)$ black if $i+j$ is even.</p><p><strong>2026 red blocks are impossible.</strong> The red blocks lie in different rows, so $R\le2026$. If $R=2026$, then all $2026$ coloured blocks are red, one in each
+row and each column: they are the cells $(i,\sigma(i))$ for a permutation $\sigma$. Each domino covers one black and one white cell, and the board has equally many
+black and white cells, so the removed cells must contain equally many of each: $1013$ white cells, i.e. $1013$ indices $i$ with $i+\sigma(i)$ odd. But
+\[\sum_{i=1}^{2026}\bigl(i+\sigma(i)\bigr)=2(1+2+\dots+2026)\]
+is even, so the number of odd terms $i+\sigma(i)$ is even, not $1013$. Contradiction. So $R\le2025$.</p><p><strong>2025 red blocks are possible.</strong> Pair the rows as $(2t-1,2t)$, $t=1,\dots,1013$.</p><ul class="ct-ul"><li><p>Row pair $t=1$: red at $(1,1)$, yellow at $(2,1)$. The rest of these two rows is covered by vertical dominoes in columns $2,\dots,2026$.</p></li><li><p>Columns $2,\dots,2025$ consist of $1012$ even and $1012$ odd numbers; split them into $1012$ pairs $c&lt;c'$ of equal parity, e.g.
+$\{2,4\},\{6,8\},\dots,\{2022,2024\},\{3,5\},\dots,\{2023,2025\}$, and give the pairs to the row pairs $t=2,\dots,1013$. In row pair $t$ with columns
+$c&lt;c'$, colour $(2t-1,c)$ and $(2t,c')$ red. Cover columns left of $c$ and right of $c'$ by vertical dominoes, the cells $c+1,\dots,c'$ of the upper row
+and $c,\dots,c'-1$ of the lower row by horizontal dominoes (both runs have the even length $c'-c$).</p></li></ul><p>The $2025$ red blocks lie in different rows and in different columns (columns $1,\dots,2025$), there is one yellow block, and the rest is tiled. So the maximum is $2025$.</p>
+<h4>Solution 2 (Sum of coordinates: the same parity, counted differently)</h4>
+<p><strong>Impossibility of 2026.</strong> The red blocks lie in different rows, so there are at most $2026$
+of them; if there are $2026$, all coloured blocks are red, one in each row and each column, so they are the cells $(i,\sigma(i))$ for a permutation $\sigma$ of $\{1,\dots,2026\}$. Give cell $(i,j)$ the weight $i+j$.
+A domino covers two adjacent cells, whose weights differ by $1$, so it covers an odd total weight. The uncoloured part is covered by
+$\frac{2026^2-2026}{2}=1013\cdot2025$ dominoes, an odd number, so its total weight is odd. On the other hand
+\[\sum_{\text{all cells}}(i+j)=2\cdot2026\cdot\frac{2026\cdot2027}{2}\quad\text{and}\quad\sum_{i}\bigl(i+\sigma(i)\bigr)=2026\cdot2027\]
+are both even, so the uncoloured part has even total weight. Contradiction; hence $R\le2025$.</p><p><strong>Example with 2025 red blocks.</strong> The construction of Solution 1. (The figure shows one row pair: removed cells in columns $c&lt;c'$ of the same parity, and the tiling.)</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p4">
+<h3>Problem 4</h3>
+<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 4: Divisibility and Prime Structure</div>
+<div class="ct-text"><p>Let $\mathbb{Q}_{(0,1)}$ denote the set of all rational numbers $q$ satisfying $0&lt;q&lt;1$. Initially, a reduced fraction $\dfrac{b}{a}\in\mathbb{Q}_{(0,1)}$ is written on the blackboard. On each round, based on the reduced fraction $\dfrac{b}{a}\in\mathbb{Q}_{(0,1)}$ on the blackboard, Sunny first tries to find the smallest positive integer $k$ such that $a+k$ and $b+k$ are <strong>NOT</strong> coprime:</p><ul class="ct-ul"><li><p>If no such $k$ exists, then the game ends on that turn.</p></li><li><p>Otherwise, replace the reduced fraction $\dfrac{b}{a}$ on the blackboard by $\dfrac{b+k}{a+k}$, reduced to its lowest terms.</p></li></ul><p>For all $q\in\mathbb{Q}_{(0,1)}$, find all initial values $\dfrac{b}{a}\in\mathbb{Q}_{(0,1)}$ for which the game will end in a finite number of rounds, and the final number on the blackboard is exactly $q$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>If $q=\frac{m}{m+1}$ for a positive integer $m$: exactly the initial fractions with $\frac{m-1}{m}&lt;\frac ba\le\frac{m}{m+1}$. For every other $q$: none.</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (An invariant ceiling)</h4>
+<p>Let $d=a-b\ge1$. Since $\gcd(a,b)=1$, also $\gcd(b,d)=1$, and $\gcd(a+k,b+k)=\gcd(d,b+k)$.</p><p><strong>When does the game stop?</strong> If $d=1$, all gcds are $1$ and the game ends. If $d\ge2$, then $d\nmid b$; let $N=d\lceil b/d\rceil$ be the least multiple of $d$ above $b$.
+For $k=N-b$ we get $\gcd(d,b+k)=d&gt;1$, so the smallest valid $k$ exists and
+\[1\le k\le N-b. \tag{1}\]
+With $g=\gcd(d,b+k)\ge2$, the new reduced fraction is $\frac{b'}{a'}$ with $b'=\frac{b+k}{g}$, $a'=\frac{a+k}{g}$ (indeed $\gcd(a+k,b+k)=g$), and its difference is
+$d'=a'-b'=d/g&lt;d$.</p><p><strong>Invariant.</strong> Put $m(b,a)=\lceil b/d\rceil$. Then $\frac{b'}{d'}=\frac{b+k}{d}$, and by (1), $b&lt;b+k\le N$, so $\lceil (b+k)/d\rceil=\lceil b/d\rceil$. Hence
+$m(b',a')=m(b,a)$: the value $m$ never changes.</p><p><strong>Conclusion.</strong> The difference $d$ is a positive integer that strictly decreases each round, so the game always ends, and it ends exactly when $d=1$, at a fraction
+$\frac{b}{b+1}$; there $m=\lceil b/1\rceil=b$. So the final number is $\frac{m}{m+1}$ with $m=\bigl\lceil\frac{b}{a-b}\bigr\rceil$ computed from the initial fraction.</p><p>Consequently, if $q$ is not of the form $\frac{m}{m+1}$, no initial value works. If $q=\frac{m}{m+1}$, the initial fractions are those with
+\[m-1&lt;\frac{b}{a-b}\le m\iff (m-1)a&lt;mb\ \text{and}\ (m+1)b\le ma\iff\frac{m-1}{m}&lt;\frac ba\le\frac{m}{m+1}.\]</p>
+<h4>Solution 2 (Climbing towards a barrier)</h4>
+<p>Split $(0,1)$ into the intervals $I_m=\bigl(\frac{m-1}{m},\frac{m}{m+1}\bigr]$, $m=1,2,\dots$; every fraction lies in exactly one of them. We show that the game stays in the
+interval where it starts and ends at its right end.</p><p><strong>The fraction increases.</strong> If $\frac ba&lt;1$ and $k&gt;0$ then $\frac{b+k}{a+k}&gt;\frac ba$; reducing does not change the value. So the numbers on the board increase, and the
+board never moves to an interval on the left.</p><p><strong>It cannot pass $\frac{m}{m+1}$.</strong> Let $\frac ba\in I_m$, reduced, and put $k_0=ma-(m+1)b\ge0$. If $k_0=0$, then $(m+1)b=ma$ with $\gcd(a,b)=1$ forces $b=m$, $a=m+1$, and
+$\gcd(a+k,b+k)=\gcd(1,b+k)=1$ for all $k$: the game is over. If $k_0\ge1$, then
+\[a+k_0=(m+1)(a-b),\qquad b+k_0=m(a-b),\]
+so if $a-b\ge2$ the number $k_0$ is a valid choice, and Sunny's $k$ satisfies $k\le k_0$; then $\frac{b+k}{a+k}\le\frac{b+k_0}{a+k_0}=\frac{m}{m+1}$ (the map $k\mapsto\frac{b+k}{a+k}$ is increasing).
+If $a-b=1$, all gcds are $1$ and the game is over.</p><p>So the board stays in $I_m$. The game stops exactly when $a-b=1$ (for $a-b\ge2$ a valid $k$ exists, as just shown), and $a-b$ strictly decreases (it is divided by the gcd $\ge2$),
+so the game ends, at a fraction $\frac{b}{b+1}\in I_m$; the only such fraction is $\frac{m}{m+1}$. Hence the final number is the right end of the starting interval.</p><p>Consequently, if $q$ is not of the form $\frac{m}{m+1}$, no initial fraction works, and if $q=\frac m{m+1}$ the initial fractions are exactly those in $I_m$, that is, with
+$\frac{m-1}{m}&lt;\frac ba\le\frac{m}{m+1}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p5">
+<h3>Problem 5</h3>
+<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 10: Double Counting and Counting Identities</div>
+<div class="ct-text"><p>Let $S$ be a set of $100$ distinct points on the $xy$ plane. Let $N$ be the number of rectangles with vertices all in $S$ and edges all parallel to the coordinates. Find the maximum possible value of $N$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\boxed{2025}$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Two bounds at every vertex)</h4>
+<p><strong>Example.</strong> The $10\times10$ grid $\{1,\dots,10\}^2$ contains $\binom{10}{2}^2=45^2=2025$ such rectangles (choose two of the $x$-values and two of the $y$-values).</p><p><strong>Bound.</strong> For a point $P\in S$ let $h$ be the number of points of $S$ on the horizontal line through $P$ (including $P$) and $v$ the number on the vertical line. Let
+$r(P)$ be the number of counted rectangles having $P$ as a vertex. Such a rectangle is determined in two ways:</p><ul class="ct-ul"><li><p>by its vertex on $P$'s horizontal line and its vertex on $P$'s vertical line, so $r(P)\le(h-1)(v-1)$;</p></li><li><p>by its vertex opposite to $P$, a point of $S$ on neither of the two lines, so $r(P)\le 100-(h+v-1)=101-h-v$.</p></li></ul><p>Put $s=h+v-2\ge0$. By AM&ndash;GM, $(h-1)(v-1)\le\frac{s^2}{4}$, and the second bound is $99-s$. If $s\le18$, then $r(P)\le\frac{s^2}4\le81$; if $s\ge18$, then $r(P)\le99-s\le81$.
+So $r(P)\le81$ for every $P$.</p><p>Every rectangle has $4$ vertices, so $4N=\sum_{P\in S}r(P)\le100\cdot81$, i.e. $N\le2025$. Hence the maximum is $\boxed{2025}$.</p>
+<h4>Solution 2 (Counting by pairs of rows)</h4>
+<p><strong>Example.</strong> The $10\times10$ grid $\{1,\dots,10\}^2$ contains $\binom{10}{2}^2=45^2=2025$ such rectangles.</p><p><strong>Bound.</strong> Call a horizontal line containing points of $S$ a <em>row</em>; let there be $m$ rows, with $r_1\ge r_2\ge\dots\ge r_m\ge1$ points, $r_1+\dots+r_m=100$. A counted
+rectangle is determined by its two rows $i&lt;j$ and two $x$-coordinates that occur in both rows. Row $j$ has only $r_j$ points, so rows $i&lt;j$ have at most $r_j$ common $x$-coordinates, and
+\[N\le\sum_{i&lt;j}\binom{r_j}{2}=\sum_{j=1}^{m}(j-1)\binom{r_j}{2}.\]
+Since $r_i\ge r_j$ for $i&lt;j$, we have $(j-1)r_j\le S_{j-1}$, where $S_{j-1}=r_1+\dots+r_{j-1}$; and $r_j-1\ge0$. Hence
+\[N\le\frac12\sum_{j=1}^{m}S_{j-1}(r_j-1)=\frac12\Bigl(\sum_{i&lt;j}r_ir_j-\sum_{i=1}^{m}(m-i)r_i\Bigr),\]
+because $\sum_jS_{j-1}r_j=\sum_{i&lt;j}r_ir_j$ and $\sum_jS_{j-1}=\sum_i(m-i)r_i$ (the term $r_i$ appears in $S_{j-1}$ for the $m-i$ indices $j&gt;i$).</p><p>For the first sum, $\sum_{i&lt;j}r_ir_j=\frac12\bigl(100^2-\sum_ir_i^2\bigr)$ and $\sum_ir_i^2\ge\frac{100^2}{m}$ (Cauchy&ndash;Schwarz), so $\sum_{i&lt;j}r_ir_j\le5000-\frac{5000}{m}$.
+For the second, the sequences $r_i$ and $m-i$ are both non-increasing, so by Chebyshev's sum inequality
+\[\sum_{i=1}^m(m-i)r_i\ge\frac1m\Bigl(\sum_ir_i\Bigr)\Bigl(\sum_i(m-i)\Bigr)=\frac{100}{m}\cdot\frac{m(m-1)}{2}=50(m-1).\]
+(Chebyshev's inequality follows from $\sum_{i,k}(r_i-r_k)\bigl((m-i)-(m-k)\bigr)\ge0$, as every term is a product of two numbers of the same sign.) Therefore
+\[N\le\frac12\Bigl(5000-\frac{5000}{m}-50(m-1)\Bigr)=2525-25\Bigl(m+\frac{100}{m}\Bigr)\le2525-25\cdot20=2025,\]
+using $m+\frac{100}m\ge2\sqrt{100}=20$ (AM&ndash;GM). Hence the maximum is $\boxed{2025}$.</p>
+</div></details>
+</section>
+{% endraw %}

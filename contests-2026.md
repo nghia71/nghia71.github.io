@@ -63,6 +63,18 @@ Problems from the 2026 national and international olympiads, with our own soluti
 
 <div class="cards">
   <div class="card">
+    <h3><a href="{{ '/contests/abel-2026' | relative_url }}">Abel Final 2026</a></h3>
+    <p>8 problems. Norwegian Abel competition, final round.</p>
+  </div>
+  <div class="card">
+    <h3><a href="{{ '/contests/canada-mo-2026' | relative_url }}">CMO 2026</a></h3>
+    <p>5 problems. Canadian Mathematical Olympiad: five problems.</p>
+  </div>
+  <div class="card">
+    <h3><a href="{{ '/contests/taiwan-mo-2026' | relative_url }}">Taiwan MO 2026</a></h3>
+    <p>5 problems. Taiwan Mathematics Olympiad: five problems.</p>
+  </div>
+  <div class="card">
     <h3><a href="{{ '/contests/thailand-mo-2026' | relative_url }}">Thailand MO 2026</a></h3>
     <p>10 problems. Thai national olympiad: two days, five problems each.</p>
   </div>
@@ -168,6 +180,10 @@ Problems from the 2026 national and international olympiads, with our own soluti
     <p>12 problems. Middle European Mathematical Olympiad: individual (4) and team (8) competitions.</p>
   </div>
   <div class="card">
+    <h3><a href="{{ '/contests/open-239-2026' | relative_url }}">239 Open MO 2026</a></h3>
+    <p>5 problems. The 239 Open Mathematical Olympiad (St Petersburg): five posted problems.</p>
+  </div>
+  <div class="card">
     <h3><a href="{{ '/contests/francophone-mo-2026' | relative_url }}">OFM 2026</a></h3>
     <p>8 problems. Francophone Mathematical Olympiad: Junior and Senior papers, four problems each.</p>
   </div>
@@ -204,6 +220,10 @@ Problems from the 2026 national and international olympiads, with our own soluti
 ### Team selection tests
 
 <div class="cards">
+  <div class="card">
+    <h3><a href="{{ '/contests/dutch-tstst-2026' | relative_url }}">Dutch TSTST 2026</a></h3>
+    <p>5 problems. Dutch team selection test (TSTST): five problems.</p>
+  </div>
   <div class="card">
     <h3><a href="{{ '/contests/turkey-egmo-tst-2026' | relative_url }}">Turkey EGMO TST 2026</a></h3>
     <p>6 problems. Turkish selection test for the EGMO team: two days, three problems each.</p>

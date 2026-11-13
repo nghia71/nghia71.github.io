@@ -1,0 +1,223 @@
+---
+title: Canadian Mathematical Olympiad 2026
+permalink: /contests/canada-mo-2026
+description: Canadian Mathematical Olympiad 2026: problems with answers and solutions
+---
+{% raw %}
+<style>
+  .ct-intro { margin-bottom: 1.2em; }
+  .ct-credit { font-size: 14px; color: var(--ink-soft); border-left: 3px solid var(--gold); padding: 6px 12px; background: var(--white); margin: 1em 0; }
+  .ct-toc { display: flex; flex-wrap: wrap; gap: 6px; margin: 1em 0 1.4em; }
+  .ct-toc a { display: inline-block; min-width: 2.4em; text-align: center; padding: 4px 8px; border: 1px solid var(--rule); border-radius: 4px; background: var(--white); text-decoration: none; font-size: 14px; }
+  .ct-problem { background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 14px 18px; margin: 1.1em 0; }
+  .ct-problem h3 { margin: 0 0 .3em; font-size: 1.08rem; border-bottom: none; padding-bottom: 0; }
+  .ct-meta { font-size: 13px; color: var(--ink-soft); margin-bottom: .6em; }
+  .ct-text { font-family: Georgia, "Times New Roman", "Noto Serif", serif; font-size: 1.02em; line-height: 1.6; }
+  .ct-text p { margin: .5em 0; }
+  .ct-fig { text-align: center; margin: .8em 0; }
+  .ct-fig img { max-width: 100%; height: auto; max-height: 340px; }
+  .ct-choices { display: flex; flex-wrap: wrap; gap: 6px 22px; margin: .6em 0 .2em; }
+  .ct-choices b { margin-right: .3em; }
+  .ct-problem details { margin-top: .8em; border-top: 1px dashed var(--rule); padding-top: .5em; }
+  .ct-problem summary { cursor: pointer; font-weight: 600; color: var(--brand); font-size: 15px; }
+  .ct-problem details[open] summary { margin-bottom: .5em; }
+  .ct-sol h4 { font-size: 1rem; margin: 1em 0 .3em; color: var(--ink); }
+  .ct-answer { font-weight: 600; }
+  .ct-parts { list-style: none; padding-left: .4em; }
+  .ct-parts li { margin: .35em 0; }
+  .ct-lbl { font-weight: 700; margin-right: .3em; }
+  .ct-note { font-size: 14px; color: var(--ink-soft); font-style: italic; }
+  .ct-bar { margin: .6em 0 1em; display: flex; gap: 10px; flex-wrap: wrap; }
+  .ct-bar button { font: inherit; font-size: 14px; padding: 5px 12px; border-radius: var(--radius); border: 1px solid var(--brand); background: var(--white); color: var(--brand); cursor: pointer; }
+</style>
+<script>
+  window.MathJax = { tex: { inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [['\\[','\\]']], processEscapes: true },
+                     options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] } };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script>
+  function ctAll(open) { document.querySelectorAll('.ct-problem details').forEach(function (d) { d.open = open; }); }
+</script>
+
+<style>
+  .ct-group { font-size: 1.25rem; margin: 1.6em 0 .2em; }
+  .ct-toc-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: .3em 0; }
+  .ct-toc-g { font-size: 13px; color: var(--ink-soft); min-width: 9em; }
+  .ct-toc-wrap { margin: 1em 0 1.4em; }
+  .ct-center { text-align: center; margin: .6em 0; }
+  .ct-tablewrap { overflow-x: auto; margin: .6em 0; text-align: center; }
+  .ct-table { border-collapse: collapse; margin: 0 auto; }
+  .ct-table td { padding: 2px 9px; text-align: center; }
+  .ct-table tr.ct-hl td { border-bottom: 1px solid var(--ink-soft); }
+  .ct-table.ct-vfirst td:first-child { border-right: 1px solid var(--ink-soft); }
+  .ct-ul { padding-left: 1.4em; }
+  .ct-ul li { margin: .3em 0; }
+  .ct-text li > p:first-child { margin-top: 0; }
+  .ct-text li > p:last-child { margin-bottom: 0; }
+  .ct-text mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
+</style>
+
+{% endraw %}
+<p><a href="{{ '/contests-2026' | relative_url }}">&larr; All contests 2026</a></p>
+
+<h1>Canadian Mathematical Olympiad 2026</h1>
+
+<div class="ct-intro">
+<p>The 5 problems of the Canadian Mathematical Olympiad 2026, each with our own solutions, hidden until you open them. 4 of them ask for an answer and 1 asks for a proof. Where a problem has a final answer, it is shown separately. Try a problem first, then check.</p><p>The CMO has five problems.</p>
+</div>
+<div class="ct-credit">Problems: Canadian Mathematical Olympiad 2026, from the AoPS contest collection. Solutions written by MCC.</div>
+<div class="ct-bar"><button type="button" onclick="ctAll(true)">Show all answers and solutions</button><button type="button" onclick="ctAll(false)">Hide all</button></div>
+<div class="ct-toc-wrap"><div class="ct-toc-row"><a href="#p1">1</a><a href="#p2">2</a><a href="#p3">3</a><a href="#p4">4</a><a href="#p5">5</a></div></div>
+
+{% raw %}
+<section class="ct-problem" id="p1">
+<h3>Problem 1</h3>
+<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 22: Summation, Telescoping, and Discrete Transformation</div>
+<div class="ct-text"><p>Let $a,b\ge2$ be relatively prime integers. Let $S$ consist of the points in the plane with integer coordinates lying strictly inside the triangle with vertices $(0,0)$, $(a,0)$, $(0,b)$.</p><p>Determine, with proof,
+\[\sum_{(x,y)\in S}(a-2x)(b-2y)\]
+in terms of $a$ and $b$.</p><p><em>Remark.</em> Here the summation denotes that we sum the value $(a-2x)(b-2y)$ over all points $(x,y)$ in $S$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\boxed{0}$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Half of a rectangle)</h4>
+<p>Let $R$ be the set of lattice points strictly inside the rectangle $[0,a]\times[0,b]$, i.e. $1\le x\le a-1$, $1\le y\le b-1$.
+The diagonal from $(a,0)$ to $(0,b)$ is the line $bx+ay=ab$. A lattice point on it with $1\le x\le a-1$ would satisfy $a\mid bx$, hence
+$a\mid x$ (as $\gcd(a,b)=1$), which is impossible. So $R$ splits into $S$ (points with $bx+ay&lt;ab$) and $S'$ (points with $bx+ay&gt;ab$).</p><p>The map $(x,y)\mapsto(a-x,\,b-y)$ maps $R$ to itself and exchanges $S$ and $S'$ (it changes $bx+ay$ into $2ab-(bx+ay)$). It does not change the
+summand: $(a-2(a-x))(b-2(b-y))=(2x-a)(2y-b)=(a-2x)(b-2y)$. Hence the sums over $S$ and $S'$ are equal and
+\[\sum_{S}(a-2x)(b-2y)=\frac12\sum_{R}(a-2x)(b-2y)=\frac12\Bigl(\sum_{x=1}^{a-1}(a-2x)\Bigr)\Bigl(\sum_{y=1}^{b-1}(b-2y)\Bigr).\]
+But $\sum_{x=1}^{a-1}(a-2x)=a(a-1)-(a-1)a=0$. So the sum is $\boxed{0}$ for all coprime $a,b\ge2$.</p>
+<h4>Solution 2 (Column by column)</h4>
+<p>Fix $x$ with $1\le x\le a-1$ and put $q=\lfloor bx/a\rfloor$. Since $a\nmid bx$, the number $bx/a$ is not an integer. The points of $S$ in column $x$
+are $(x,y)$ with $1\le y&lt;b-\frac{bx}{a}$, i.e. $1\le y\le b-1-q$. Using $\sum_{y=1}^{Y}(b-2y)=Yb-Y(Y+1)=Y(b-1-Y)$ with $Y=b-1-q$, column $x$ contributes
+\[(a-2x)\,g(x),\qquad g(x)=q\,(b-1-q).\]
+Now compare columns $x$ and $a-x$. Since $\frac{b(a-x)}{a}=b-\frac{bx}a$ and $\frac{bx}a$ is not an integer, $\lfloor b(a-x)/a\rfloor=b-1-q$, so
+$g(a-x)=(b-1-q)q=g(x)$, while $a-2(a-x)=-(a-2x)$. Hence the contributions of columns $x$ and $a-x$ cancel when $x\ne a-x$, and the column
+$x=a/2$ (if $a$ is even) contributes $0\cdot g=0$. The total is $\boxed{0}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p2">
+<h3>Problem 2</h3>
+<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 49: Combinatorial Number Theory and Structure</div>
+<div class="ct-text"><p>There are $n$ types of coins in Wario's gold mine. Each coin of the $i$th type is worth $d_i$ cents, where $d_1,\dots,d_n$ are distinct positive integers. A positive integer $D$ is called <em>lucky</em> if the following holds: For each positive integer $k$, any collection of coins (containing any numbers of coins of each type) with a total value of exactly $kD$ cents can be split into $k$ groups, each worth $D$ cents.</p><p>Does a lucky number necessarily exist?</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p><strong>Yes</strong>; for example $D=(n-1)L$ for $n\ge2$ (and $D=d_1$ for $n=1$), or $D=nL$, where $L=\operatorname{lcm}(d_1,\dots,d_n)$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Blocks worth $L$)</h4>
+<p>The answer is <strong>yes</strong>. If $n=1$, $D=d_1$ is lucky (every coin is a group). Let $n\ge2$, $L=\operatorname{lcm}(d_1,\dots,d_n)$, $u_i=L/d_i$ and
+$D=(n-1)L$. We show that $D$ is lucky.</p><p>Take a collection with $c_i$ coins of type $i$ and total $kD$. Write $c_i=u_iq_i+r_i$ with $0\le r_i&lt;u_i$. Call a set of $u_i$ coins of type $i$ a
+<em>block</em>; it is worth exactly $L$. So the collection consists of $Q=q_1+\dots+q_n$ blocks and a remainder of $r_i$ coins of type $i$, worth
+\[W=\sum_i r_id_i\le\sum_i(u_i-1)d_i=nL-\sum_i d_i&lt;nL .\]
+Since the total $kD$ and the blocks are multiples of $L$, $W=sL$ for an integer $s$ with $0\le s\le n-1$, and $Q+s=k(n-1)$.</p><p><em>First group:</em> the remainder (worth $sL$) together with $n-1-s\ge0$ blocks; it is worth $(n-1)L=D$. This needs $n-1-s\le Q$, which holds because
+$Q=k(n-1)-s\ge n-1-s$.</p><p><em>Other groups:</em> the remaining $Q-(n-1-s)=(k-1)(n-1)$ blocks are split into $k-1$ groups of $n-1$ blocks each, each worth $(n-1)L=D$.</p><p>So every collection worth $kD$ splits into $k$ groups worth $D$, and $D$ is lucky.</p>
+<h4>Solution 2 (Take $D=nL$ and peel off whole groups of blocks)</h4>
+<p>The answer is <strong>yes</strong>: we show that $D=nL$ is lucky, where $L=\operatorname{lcm}(d_1,\dots,d_n)$.</p><p>Put $u_i=L/d_i$ (an integer) and call a set of $u_i$ coins of type $i$ a <em>block</em>; every block is worth exactly $L$. Take any collection worth $kD=knL$,
+with $c_i$ coins of type $i$, and write $c_i=u_iq_i+r_i$ with $0\le r_i&lt;u_i$. The collection is made of $Q=q_1+\dots+q_n$ blocks and a remainder of $r_i$ coins of
+type $i$ $(i=1,\dots,n)$, worth
+\[W=\sum_i r_id_i\le\sum_i(u_i-1)d_i=nL-\sum_id_i&lt;nL .\]
+The total $knL$ and every block are multiples of $L$, so $W$ is a multiple of $L$: $W=sL$ with $0\le s\le n-1$. Then $QL+sL=knL$ gives
+\[Q=kn-s\ge kn-(n-1)&gt;(k-1)n .\]
+So there are at least $(k-1)n$ blocks. Form $k-1$ groups, each consisting of $n$ blocks; each is worth $nL=D$. What is left (the other blocks and the remainder)
+is worth $kD-(k-1)D=D$, and it is the $k$-th group. Hence every collection worth $kD$ splits into $k$ groups worth $D$, and $D=nL$ is lucky.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p3">
+<h3>Problem 3</h3>
+<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 52: Advanced Combinatorial Structure and Hybrid Methods</div>
+<div class="ct-text"><p>Turbo the snail plays a game on a board with $2n$ rows and $2n$ columns. There are $2n^2$ monsters who first choose to occupy $2n^2$ distinct cells, with Turbo's knowledge. After this, Turbo chooses any cell and labels it $1$. Starting from this cell, Turbo then walks through all other $4n^2-1$ cells exactly once, labelling them in order with $2,3,\dots,4n^2$. Turbo only moves between cells which share an edge, and never returns to a cell.</p><p>The final score is the sum of the labels of the cells with monsters. The monsters are trying to place themselves to maximize the score, while Turbo is trying to minimize the score based on the monsters' positions.</p><p>Find, in terms of $n$, the largest score which the monsters can guarantee.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\boxed{4n^4}$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Chessboard for the monsters, cycle lemma for Turbo)</h4>
+<div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/canada-mo-3_s1.svg" alt="Figure for the solution"></div>
+<p>Let $N=4n^2$; there are $N/2=2n^2$ monsters.</p><p><strong>The monsters can get $4n^4$.</strong> Colour the board like a chessboard and let the monsters occupy the $2n^2$ black cells. Neighbouring cells have different
+colours, so Turbo's labels alternate in colour. If Turbo starts on a black cell, the monsters get the labels $1,3,5,\dots,N-1$, with sum $(N/2)^2=4n^4$;
+otherwise they get $2,4,\dots,N$, which is more. So the score is at least $4n^4$.</p><p><strong>Turbo can keep the score at most $4n^4$.</strong> The board has a closed walk through all cells (a Hamiltonian cycle): go along the first row from column $2$ to
+column $2n$, then snake through rows $2,3,\dots,2n$ using only columns $2,\dots,2n$ (row $2$ right to left, row $3$ left to right, and so on); since the number of rows
+is even, the snake ends in row $2n$, column $2$; then go up column $1$ from row $2n$ to row $1$, next to the starting cell. Call the cells along the cycle
+$c_0,c_1,\dots,c_{N-1}$.</p><p>Give a cell weight $w=+1$ if it holds a monster and $w=-1$ if not; the total weight is $0$. Let $P_j=w(c_0)+\dots+w(c_{j-1})$ for $0\le j\le N$, extended by
+$P_{j+N}=P_j$ (consistent since $P_N=P_0=0$). Choose $s\in\{0,\dots,N-1\}$ with $P_s$ smallest, and let Turbo start at $c_s$ and walk around the cycle:
+$c_s,c_{s+1},\dots,c_{N-1},c_0,\dots,c_{s-1}$. This is a valid walk through all cells.</p><p>The first $t$ cells of the walk have total weight $P_{s+t}-P_s\ge0$, so among the first $t$ labels at least half are monster cells. Taking $t=2j-1$, at least
+$j$ of the labels $1,\dots,2j-1$ are on monsters, so the $j$-th smallest monster label is at most $2j-1$. Therefore
+\[\text{score}\le\sum_{j=1}^{2n^2}(2j-1)=(2n^2)^2=4n^4 .\]</p><p>Both bounds together give the answer $\boxed{4n^4}$.</p>
+<h4>Solution 2 (Walking the cycle in both directions)</h4>
+<p>Let $N=4n^2$; there are $N/2=2n^2$ monsters.</p><p><strong>The monsters can get $4n^4$.</strong> Let the monsters occupy the black cells of a chessboard colouring. Turbo's consecutive cells are neighbours, so their colours alternate;
+the monsters receive either the odd labels $1,3,\dots,N-1$, with sum $(N/2)^2=4n^4$, or the even labels $2,4,\dots,N$, with a larger sum. So the score is at least $4n^4$.</p><p><strong>Turbo can keep the score at most $4n^4$.</strong> The board has a Hamiltonian cycle (a closed walk through all cells, consecutive cells sharing an edge): go along row $1$
+from column $2$ to column $2n$, snake through rows $2,\dots,2n$ inside columns $2,\dots,2n$ (row $2$ right to left, row $3$ left to right, and so on), which ends in row $2n$,
+column $2$ because the number of rows is even, and return up column $1$ to row $1$, next to the start. Number the cells along the cycle $c_0,c_1,\dots,c_{N-1}$ so that
+$c_0$ holds a monster.</p><p>Turbo can walk the cycle forwards, $c_0,c_1,\dots,c_{N-1}$, or backwards, $c_0,c_{N-1},c_{N-2},\dots,c_1$; both are valid walks. In the forward walk $c_i$ gets the
+label $i+1$; in the backward walk $c_0$ gets $1$ and $c_i$ $(i\ge1)$ gets $N-i+1$. So $c_0$ gets $1+1=2$ in total, and every other cell gets $(i+1)+(N+1-i)=N+2$ in total.
+Adding the two scores, the monster on $c_0$ contributes $2$ and each of the other $\frac N2-1$ monsters contributes $N+2$:
+\[\text{forward score}+\text{backward score}=2+\Bigl(\frac N2-1\Bigr)(N+2)=\frac{N^2}{2}=8n^4 .\]
+Hence one of the two walks gives a score of at most $4n^4$, whatever the monsters do.</p><p>Both bounds together give the answer $\boxed{4n^4}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p4">
+<h3>Problem 4</h3>
+<div class="ct-meta">Geometry &middot; LPS VII, Chapter 55: Three-Dimensional and Spatial Geometry</div>
+<div class="ct-text"><p>A sphere with center $I$ is inscribed in a tetrahedron $ABCD$. Suppose that the angle between any two faces of $ABCD$ is acute. Moreover, suppose that
+\[\frac{\operatorname{vol}(IABC)}{BC}=\frac{\operatorname{vol}(IACD)}{CD}=\frac{\operatorname{vol}(IADB)}{DB}.\]
+Show that $AI$ is perpendicular to the plane $BCD$.</p><p><em>Remark.</em> Here, $\operatorname{vol}(IABC)$ denotes the volume of tetrahedron $IABC$, and similarly for $IACD$ and $IADB$.</p></div>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Two incentres of the face $BCD$)</h4>
+<div class="ct-fig"><img style="width:234px" src="/assets/contests/2026-27/canada-mo-4_s1.svg" alt="Figure for the solution"></div>
+<p>Let $r$ be the inradius, $H$ the foot of the perpendicular from $A$ to the plane $BCD$, and $h_1,h_2,h_3$ the heights from $A$ in the faces $ABC$, $ACD$,
+$ADB$ (onto $BC$, $CD$, $DB$). Let $\theta_1,\theta_2,\theta_3$ be the dihedral angles of the tetrahedron at $BC$, $CD$, $DB$.</p><p><strong>The condition says $h_1=h_2=h_3$.</strong> The tetrahedron $IABC$ has base $ABC$ and height $r$ (the distance from $I$ to the face $ABC$), so
+$\operatorname{vol}(IABC)=\frac13 r\cdot\frac12 h_1\,BC$ and $\operatorname{vol}(IABC)/BC=rh_1/6$. Similarly for the other two, so the hypothesis gives $h_1=h_2=h_3=:h$.</p><p><strong>$H$ is the incentre of $BCD$.</strong> Let $P_1$ be the foot of the perpendicular from $H$ to $BC$; $H$ is not on $BC$, since otherwise the face $ABC$ would be perpendicular
+to $BCD$. Since $AH$ and $HP_1$ are perpendicular to $BC$, the plane $AHP_1$ is
+perpendicular to $BC$; so $AP_1\perp BC$, $AP_1=h_1$, and the angle between $P_1A$ and the plane $BCD$ is the dihedral angle at $BC$ if $H$ is on the same side of
+$BC$ as $D$, and its supplement otherwise. As $\theta_1$ is acute (and not right), $H$ lies strictly on $D$'s side of $BC$, and $\angle AP_1H=\theta_1$. Doing this for all
+three edges, $H$ is inside triangle $BCD$, and
+\[AH=h\sin\theta_i,\qquad HP_i=h\cos\theta_i\qquad(i=1,2,3).\]
+The first equation gives $\sin\theta_1=\sin\theta_2=\sin\theta_3$, hence (acute angles) $\theta_1=\theta_2=\theta_3=\theta$. Then $H$ has the same distance $h\cos\theta$ to the three
+sides of $BCD$ and lies inside it, so $H$ is the incentre of $BCD$.</p><p><strong>The touching point is also the incentre.</strong> Let the insphere touch the face $BCD$ at $T$; then $IT\perp BCD$, $IT=r$, and $T$ lies inside the face (it is a point of the face, and not on an edge, since the sphere cannot touch two faces at one point). Let $Q_1$ be the foot
+of the perpendicular from $T$ to $BC$. The plane through $T$ perpendicular to $BC$ contains $I$ (it contains the normal of $BCD$ at $T$) and cuts the two faces through $BC$ in
+two rays from $Q_1$ forming the angle $\theta$. The point $I$ is inside this angle at distance $r$ from both rays, so $Q_1I$ bisects it, and $TQ_1=r\cot\frac{\theta}{2}$. The
+same holds for the other two edges with the same $\theta$, so $T$ is a point inside triangle $BCD$ at equal distances from its sides: $T$ is the incentre of $BCD$.</p><p>Hence $T=H$. Both $I$ and $A$ lie on the perpendicular to the plane $BCD$ through this point, so $AI\perp BCD$.</p>
+<h4>Solution 2 (Reflections in the planes through $AH$)</h4>
+<p>Let $r$ be the inradius, $H$ the foot of the perpendicular from $A$ to the plane $BCD$, $h_1,h_2,h_3$ the heights from $A$ in the faces $ABC$, $ACD$,
+$ADB$ (onto $BC$, $CD$, $DB$), and $\theta_1,\theta_2,\theta_3$ the dihedral angles at $BC$, $CD$, $DB$.</p><p><strong>$H$ is the incentre of $BCD$.</strong> The tetrahedron $IABC$ has base area $\frac12h_1\,BC$ and height $r$, so $\operatorname{vol}(IABC)/BC=rh_1/6$; likewise for the other two, and the
+hypothesis gives $h_1=h_2=h_3=:h$. Let $P_1$ be the foot of the perpendicular from $H$ to $BC$ ($H\notin BC$, as the face
+$ABC$ is not perpendicular to $BCD$). The plane $AHP_1$ contains the lines $AH$ and $HP_1$, both perpendicular to $BC$, so it is perpendicular to $BC$, so $AP_1\perp BC$, $AP_1=h$, and the
+angle between $P_1A$ and the plane $BCD$ is $\theta_1$ if $H$ is on $D$'s side of $BC$ and $180^\circ-\theta_1$ otherwise; since $\theta_1$ is acute, $H$ is strictly on $D$'s side
+and $\angle AP_1H=\theta_1$. The same holds at $CD$ and $DB$, so $H$ is inside triangle $BCD$ and $AH=h\sin\theta_i$, $HP_i=h\cos\theta_i$. Then $\sin\theta_1=\sin\theta_2=\sin\theta_3$,
+so the acute angles $\theta_i$ are equal, the distances $HP_i$ are equal, and $H$ is the incentre of $BCD$.</p><p><strong>A reflection.</strong> Let $\Pi_B$ be the plane through $A$, $H$, $B$ and $\sigma$ the reflection in $\Pi_B$. As $\Pi_B$ contains the line $AH$, which is perpendicular to the plane $BCD$,
+the plane $\Pi_B$ is perpendicular to $BCD$; so $\sigma$ maps the plane $BCD$ to itself, acting on it as the reflection in the line $BH$. Since $H$ is the incentre, $BH$ bisects the angle
+$CBD$, so $\sigma$ exchanges the lines $BC$ and $BD$. It fixes $A$, hence it exchanges the planes $ABC$ and $ABD$.</p><p>Every point of $\Pi_B$ is therefore at equal distances from the planes $ABC$ and $ABD$. Look at the cross-section by a plane perpendicular to the edge $AB$: the two faces become the two
+sides of an angle smaller than $180^\circ$, the points equidistant from the two planes become the two angle bisectors (perpendicular lines), and the interior of the tetrahedron lies inside
+the angle, where only the internal bisector passes. The plane $\Pi_B$ contains interior points of the tetrahedron (for instance the midpoint of $AH$, as $H$ is inside the face $BCD$), so
+$\Pi_B$ is the internal bisector plane. The centre $I$ is an interior point at equal distances ($r$) from the planes $ABC$ and $ABD$, so $I\in\Pi_B$.</p><p><strong>Conclusion.</strong> In the same way $I$ lies on the plane $\Pi_C$ through $A,H,C$ and on $\Pi_D$ through $A,H,D$. The planes $\Pi_B$ and $\Pi_C$ meet the plane $BCD$ in the lines $HB$ and $HC$,
+which are different because $H$ is not on the line $BC$; so $\Pi_B\ne\Pi_C$, and these two planes meet exactly in their common line $AH$. Hence $I$ lies on $AH$, and $AI\perp BCD$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p5">
+<h3>Problem 5</h3>
+<div class="ct-meta">Algebra &middot; LPS VII, Chapter 42: Polynomial Reconstruction and Interpolation</div>
+<div class="ct-text"><p>For each $n\ge1$, determine the maximum integer $c_n$ for which there exists a polynomial $f$ of degree $n$ with rational coefficients, an irrational number $a$, and $c_n$ distinct rational numbers $a_1,a_2,\dots,a_{c_n}$ such that $f(a+a_i)$ is a rational number for all $1\le i\le c_n$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\boxed{c_n=n-1}$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Coordinates in the field $\mathbb{Q}(a)$)</h4>
+<p><strong>Upper bound.</strong> Let $f$, $a$ and rationals $a_1,\dots,a_c$ be as in the problem, $\deg f=n$, leading coefficient $\ell\in\mathbb{Q}$.</p><p>If $a$ is transcendental, then $f(a+a_i)=q$ with $q$ rational means that the rational polynomial $f(t+a_i)-q$ in $t$ vanishes at $t=a$; so it is the zero polynomial, and $f$ is
+constant, a contradiction. So $c=0$ in that case.</p><p>Let $a$ be algebraic of degree $d\ge2$ over $\mathbb{Q}$; then $1,a,\dots,a^{d-1}$ are linearly independent over $\mathbb{Q}$ and every element of $\mathbb{Q}(a)$ is a unique rational
+combination of them. The polynomial $h(x)=f(a+x)$ has coefficients in $\mathbb{Q}(a)$; writing each coefficient in this basis,
+\[h(x)=h_0(x)+a\,h_1(x)+\dots+a^{d-1}h_{d-1}(x)\qquad(h_j\in\mathbb{Q}[x]).\]
+For rational $r$, $h(r)=\sum_j a^jh_j(r)$ with $h_j(r)\in\mathbb{Q}$, so $h(r)$ is rational if and only if $h_1(r)=\dots=h_{d-1}(r)=0$. In particular every $a_i$ is a root of $h_1$.
+The coefficient of $x^n$ in $h$ is $\ell\in\mathbb{Q}$, so $\deg h_1\le n-1$; the coefficient of $x^{n-1}$ in $h$ is $n\ell a+f_{n-1}$ ($f_{n-1}$ the coefficient of $x^{n-1}$ in $f$),
+whose $a$-component is $n\ell\ne0$. So $h_1$ is a nonzero polynomial of degree $n-1$ and has at most $n-1$ roots: $c\le n-1$.</p><p><strong>Construction.</strong> Let $a=\sqrt2$. For $g\in\mathbb{Q}[x]$ put
+\[T(g)(x)=\frac{g(x+\sqrt2)-g(x-\sqrt2)}{2\sqrt2}=\sum_{k\text{ odd}}\frac{g^{(k)}(x)}{k!}\,2^{(k-1)/2},\]
+a polynomial with rational coefficients (Taylor expansion). We have $g(x+\sqrt2)=A(x)+\sqrt2\,T(g)(x)$ with $A\in\mathbb{Q}[x]$, so $g(\sqrt2+r)$ is rational exactly when
+$T(g)(r)=0$. The map $T$ is linear, and $T(x^k)$ has degree $k-1$ with leading coefficient $k$, so $T$ maps the polynomials of degree at most $n$ onto those of degree at most
+$n-1$ (triangular system). Choose $f$ of degree at most $n$ with $T(f)=(x-1)(x-2)\cdots(x-(n-1))$; its leading term is $\frac1n x^n$, so $\deg f=n$, and $f(\sqrt2+i)$ is rational for
+$i=1,\dots,n-1$. (For $n=2$: $f(x)=\frac{x^2}{2}-x$ and $f(\sqrt2+1)=\frac12$.)</p><p>Hence $\boxed{c_n=n-1}$ (in particular $c_1=0$).</p>
+<h4>Solution 2 (Conjugates)</h4>
+<p>Let $\ell$ be the leading coefficient of $f$.</p><p><strong>Upper bound.</strong> If $a$ is transcendental and $f(a+r)=q$ with $r,q$ rational, then the rational polynomial $f(t+r)-q$ vanishes at $t=a$, so it is the zero polynomial
+and $f$ is constant, which is false. So no $a_i$ exists in that case.</p><p>Let $a$ be algebraic with minimal polynomial $m$ over $\mathbb{Q}$; $\deg m\ge2$ since $a$ is irrational. The minimal polynomial has no repeated root, so $m$ has a root $a'\ne a$
+(complex in general), and there is a field isomorphism $\sigma:\mathbb{Q}(a)\to\mathbb{Q}(a')$ fixing $\mathbb{Q}$ with $\sigma(a)=a'$.
+If $f(a+r)=q\in\mathbb{Q}$ for a rational $r$, applying $\sigma$ gives $f(a'+r)=q$ as well. So every $a_i$ is a root of
+\[F(x)=f(x+a)-f(x+a') .\]
+The $x^n$ terms cancel, and the coefficient of $x^{n-1}$ is $n\ell(a-a')\ne0$. So $F$ is a nonzero polynomial of degree $n-1$, and there are at most $n-1$ numbers $a_i$.</p><p><strong>Construction.</strong> Take $a=\sqrt2$, $a'=-\sqrt2$, and look for $f$ with rational coefficients and
+\[f(x+\sqrt2)-f(x-\sqrt2)=2\sqrt2\,(x-1)(x-2)\cdots(x-(n-1)).\]
+By the binomial theorem $(x+\sqrt2)^k-(x-\sqrt2)^k$ keeps only the odd powers of $\sqrt2$, so it equals $2\sqrt2\,(kx^{k-1}+\text{terms of lower degree with rational coefficients})$.
+Thus the left side, divided by $2\sqrt2$, is a linear map from rational polynomials of degree at most $n$ to those of degree at most $n-1$ that sends $x^k$ to $kx^{k-1}+\dots$; the
+system for the coefficients of $f$ is triangular with nonzero diagonal, so it can be solved from the top coefficient down. The solution has leading coefficient $\frac1n$, so $\deg f=n$.
+Now write $f(x+\sqrt2)=A(x)+\sqrt2B(x)$ with $A,B\in\mathbb{Q}[x]$; then $f(x-\sqrt2)=A(x)-\sqrt2B(x)$, so $2\sqrt2B(x)=2\sqrt2\prod_{i&lt;n}(x-i)$ and $B(i)=0$ for $i=1,\dots,n-1$.
+Hence $f(\sqrt2+i)=A(i)$ is rational for these $n-1$ values of $i$. (For $n=2$: $f(x)=\frac{x^2}2-x$.)</p><p>Hence $\boxed{c_n=n-1}$.</p>
+</div></details>
+</section>
+{% endraw %}
