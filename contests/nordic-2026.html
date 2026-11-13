@@ -1,0 +1,232 @@
+---
+title: Nordic Mathematical Contest 2026
+permalink: /contests/nordic-2026
+description: Nordic Mathematical Contest 2026: problems with answers and solutions
+---
+{% raw %}
+<style>
+  .ct-intro { margin-bottom: 1.2em; }
+  .ct-credit { font-size: 14px; color: var(--ink-soft); border-left: 3px solid var(--gold); padding: 6px 12px; background: var(--white); margin: 1em 0; }
+  .ct-toc { display: flex; flex-wrap: wrap; gap: 6px; margin: 1em 0 1.4em; }
+  .ct-toc a { display: inline-block; min-width: 2.4em; text-align: center; padding: 4px 8px; border: 1px solid var(--rule); border-radius: 4px; background: var(--white); text-decoration: none; font-size: 14px; }
+  .ct-problem { background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 14px 18px; margin: 1.1em 0; }
+  .ct-problem h3 { margin: 0 0 .3em; font-size: 1.08rem; border-bottom: none; padding-bottom: 0; }
+  .ct-meta { font-size: 13px; color: var(--ink-soft); margin-bottom: .6em; }
+  .ct-text { font-family: Georgia, "Times New Roman", "Noto Serif", serif; font-size: 1.02em; line-height: 1.6; }
+  .ct-text p { margin: .5em 0; }
+  .ct-fig { text-align: center; margin: .8em 0; }
+  .ct-fig img { max-width: 100%; height: auto; max-height: 340px; }
+  .ct-choices { display: flex; flex-wrap: wrap; gap: 6px 22px; margin: .6em 0 .2em; }
+  .ct-choices b { margin-right: .3em; }
+  .ct-problem details { margin-top: .8em; border-top: 1px dashed var(--rule); padding-top: .5em; }
+  .ct-problem summary { cursor: pointer; font-weight: 600; color: var(--brand); font-size: 15px; }
+  .ct-problem details[open] summary { margin-bottom: .5em; }
+  .ct-sol h4 { font-size: 1rem; margin: 1em 0 .3em; color: var(--ink); }
+  .ct-answer { font-weight: 600; }
+  .ct-parts { list-style: none; padding-left: .4em; }
+  .ct-parts li { margin: .35em 0; }
+  .ct-lbl { font-weight: 700; margin-right: .3em; }
+  .ct-note { font-size: 14px; color: var(--ink-soft); font-style: italic; }
+  .ct-bar { margin: .6em 0 1em; display: flex; gap: 10px; flex-wrap: wrap; }
+  .ct-bar button { font: inherit; font-size: 14px; padding: 5px 12px; border-radius: var(--radius); border: 1px solid var(--brand); background: var(--white); color: var(--brand); cursor: pointer; }
+</style>
+<script>
+  window.MathJax = { tex: { inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [['\\[','\\]']], processEscapes: true },
+                     options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] } };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script>
+  function ctAll(open) { document.querySelectorAll('.ct-problem details').forEach(function (d) { d.open = open; }); }
+</script>
+
+<style>
+  .ct-group { font-size: 1.25rem; margin: 1.6em 0 .2em; }
+  .ct-toc-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: .3em 0; }
+  .ct-toc-g { font-size: 13px; color: var(--ink-soft); min-width: 9em; }
+  .ct-toc-wrap { margin: 1em 0 1.4em; }
+  .ct-center { text-align: center; margin: .6em 0; }
+  .ct-tablewrap { overflow-x: auto; margin: .6em 0; text-align: center; }
+  .ct-table { border-collapse: collapse; margin: 0 auto; }
+  .ct-table td { padding: 2px 9px; text-align: center; }
+  .ct-table tr.ct-hl td { border-bottom: 1px solid var(--ink-soft); }
+  .ct-table.ct-vfirst td:first-child { border-right: 1px solid var(--ink-soft); }
+  .ct-ul { padding-left: 1.4em; }
+  .ct-ul li { margin: .3em 0; }
+  .ct-text li > p:first-child { margin-top: 0; }
+  .ct-text li > p:last-child { margin-bottom: 0; }
+  .ct-text mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
+</style>
+
+{% endraw %}
+<p><a href="{{ '/contests-2026' | relative_url }}">&larr; All contests 2026</a></p>
+
+<h1>Nordic Mathematical Contest 2026</h1>
+
+<div class="ct-intro">
+<p>The 4 problems of the Nordic Mathematical Contest 2026, each with our own solutions, hidden until you open them. 1 of them asks for an answer and 3 ask for a proof. Where a problem has a final answer, it is shown separately. Try a problem first, then check.</p><p>The Nordic Mathematical Contest is a one-day contest of four problems.</p>
+</div>
+<div class="ct-credit">Problems: Nordic Mathematical Contest 2026, from the AoPS contest collection. Solutions written by MCC.</div>
+<div class="ct-bar"><button type="button" onclick="ctAll(true)">Show all answers and solutions</button><button type="button" onclick="ctAll(false)">Hide all</button></div>
+<div class="ct-toc-wrap"><div class="ct-toc-row"><a href="#p1">1</a><a href="#p2">2</a><a href="#p3">3</a><a href="#p4">4</a></div></div>
+
+{% raw %}
+<section class="ct-problem" id="p1">
+<h3>Problem 1</h3>
+<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 20: Parity, Coloring, and Process Termination</div>
+<div class="ct-text"><p>Let $n\ge 3$ be an integer. There are $n$ knights sitting around a round table. On the table there are $n$ candles, such that between each pair of adjacent knights there is a single candle. Some candles (possibly all, but possibly also none) are lit. For $i\in\{0,1,2\}$, let $m_i$ be the number of knights sitting next to exactly $i$ lit candles.</p><p>Find the smallest possible value of $m=\max\{m_0,m_1,m_2\}$ in terms of $n$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$m_{\min}=\lceil n/3\rceil$ if $n\not\equiv 3 \pmod 6$, and $m_{\min}=n/3+1$ if $n\equiv 3\pmod 6$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Counting runs of lit candles)</h4>
+<p>Number the knights $1,2,\dots,n$ around the table and let candle $i$ be the one between knights $i$ and $i+1$
+(indices modulo $n$). Put $x_i=1$ if candle $i$ is lit and $x_i=0$ otherwise. Knight $i$ sits between candles $i-1$ and $i$, so he is next to
+$x_{i-1}+x_i$ lit candles. Thus $m_1$ is the number of indices $i$ with $x_{i-1}\ne x_i$, $m_2$ the number with $x_{i-1}=x_i=1$ and $m_0$ the
+number with $x_{i-1}=x_i=0$.</p><p><em>Lower bound.</em> Since $m_0+m_1+m_2=n$, the largest of the three is at least $n/3$, so $m\ge\lceil n/3\rceil$.
+Walking once around the table, the value $x_i$ changes from $0$ to $1$ and from $1$ to $0$ alternately, and we end where we started; so the two
+kinds of changes are equally many and $m_1$ is <em>even</em>. Now let $n=6t+3$. If $m\le 2t+1$, then $m_0,m_1,m_2\le 2t+1$ and
+$m_0+m_1+m_2=6t+3$ force $m_0=m_1=m_2=2t+1$, which is odd, a contradiction. Hence $m\ge 2t+2=n/3+1$ in this case.</p><p><em>Constructions.</em> Let $k\ge 1$ and $p,q\ge 0$ be integers with $2k+p+q=n$. Going around the table, light a block of $p+1$ consecutive
+candles, leave $q+1$ unlit, and then $k-1$ times light one candle and leave the next one unlit. This uses $(p+1)+(q+1)+2(k-1)=n$ candles and gives
+$k$ lit blocks and $k$ unlit blocks, alternating. A value change happens exactly at the $2k$ ends of blocks, so $m_1=2k$; a lit block of length $\ell$
+contains $\ell-1$ knights between two lit candles, so $m_2=p$; similarly $m_0=q$. Choose</p><ul class="ct-ul"><li><p>$n=6t$ ($t\ge1$): $k=t$, $p=q=2t$, giving $m=2t$;</p></li><li><p>$n=6t+1$ ($t\ge1$): $k=t$, $p=2t+1$, $q=2t$, giving $m=2t+1$;</p></li><li><p>$n=6t+2$ ($t\ge1$): $k=t$, $p=q=2t+1$, giving $m=2t+1$;</p></li><li><p>$n=6t+3$ ($t\ge0$): $k=t+1$, $p=2t+1$, $q=2t$, giving $m=2t+2$;</p></li><li><p>$n=6t+4$ ($t\ge0$): $k=t+1$, $p=q=2t+1$, giving $m=2t+2$;</p></li><li><p>$n=6t+5$ ($t\ge0$): $k=t+1$, $p=2t+2$, $q=2t+1$, giving $m=2t+2$.</p></li></ul><p>(Since $n\ge 3$, the cases $n=1,2$ do not occur.) In every case $m$ equals the lower bound. Therefore
+\[
+m_{\min}=\boxed{\begin{cases}\lceil n/3\rceil, &amp; n\not\equiv 3\pmod 6,\\[2pt] n/3+1, &amp; n\equiv 3\pmod 6.\end{cases}}
+\]</p>
+<h4>Solution 2 (Double counting and periodic patterns)</h4>
+<p>Write each lighting as a cyclic string of $n$ digits ($1$ for a lit candle, $0$ for an unlit one), where each
+knight sits between two neighbouring digits. Then $m_2$, $m_1$, $m_0$ count the neighbouring pairs of digits equal to $11$, to $10$ or $01$, and
+to $00$, respectively.</p><p><em>Lower bound.</em> As $m_0+m_1+m_2=n$, we have $m\ge\lceil n/3\rceil$. Let $L$ be the number of lit candles and count pairs
+(knight, lit candle next to him). Each lit candle has two knights next to it, so the count is $2L$; counting by knights it is $m_1+2m_2$.
+Hence $m_1=2L-2m_2$ is even. If $n=6t+3$ and $m\le 2t+1$, then all three numbers would equal $2t+1$ (their sum is $6t+3$), so $m_1$ would be odd,
+which is impossible. So $m\ge 2t+2=n/3+1$ when $n\equiv 3\pmod 6$.</p><p><em>Constructions.</em> The block $111000$ contributes, inside it and at its junction with a following block that starts with $1$, two pairs of each
+kind. Hence the string $(111000)^t$ (the block repeated $t$ times) has $m_0=m_1=m_2=2t$. Now let $n=6t+r$ and use:</p><ul class="ct-ul"><li><p>$r=0$: $(111000)^t$, with $m=2t$;</p></li><li><p>$r=1$ ($t\ge1$): $1111000\,(111000)^{t-1}$; one more $11$ pair, so $(m_0,m_1,m_2)=(2t,2t,2t+1)$;</p></li><li><p>$r=2$ ($t\ge1$): $11110000\,(111000)^{t-1}$; one more $11$ and one more $00$ pair: $(2t+1,2t,2t+1)$;</p></li><li><p>$r=3$: $(111000)^t\,110$; the new runs $11$ and $0$ add two changes and one $11$ pair: $(2t,2t+2,2t+1)$;</p></li><li><p>$r=4$: $(111000)^t\,1100$: $(2t+1,2t+2,2t+1)$;</p></li><li><p>$r=5$: $(111000)^t\,11000$: $(2t+2,2t+2,2t+1)$.</p></li></ul><p>(For $t=0$ the strings $110$, $1100$, $11000$ cover $n=3,4,5$.) In each case $m=\lceil n/3\rceil$, except for $r=3$ where $m=2t+2=n/3+1$; these
+match the lower bounds. So the answer is
+\[
+\boxed{\begin{cases}\lceil n/3\rceil, &amp; n\not\equiv 3\pmod 6,\\[2pt] n/3+1, &amp; n\equiv 3\pmod 6.\end{cases}}
+\]</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p2">
+<h3>Problem 2</h3>
+<div class="ct-meta">Algebra &middot; LPS VII, Chapter 13: Systems, Symmetry, and Multi-Variable Algebra</div>
+<div class="ct-text"><p>Consider the system of equations:
+\[\begin{cases} x^2=y+1\\ xy=x+y\end{cases}\]
+Show that if $(x,y)=(x_0,y_0)$, where $x_0$ and $y_0$ are real numbers, is a solution to the above system of equations, then there is also a solution $(x,y)=(x_1,y_1)$, where $x_1$ and $y_1$ are real numbers and $y_1x_0=1$.</p></div>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (An explicit partner solution)</h4>
+<p>First, $x_0\ne 0$: if $x_0=0$, the first equation gives $y_0=-1$, and the second gives $0=x_0y_0=x_0+y_0=-1$,
+which is false. Also $x_0\ne 1$: if $x_0=1$, then $y_0=0$ and the second equation reads $0=1$.</p><p>Substituting $y_0=x_0^2-1$ into $x_0y_0=x_0+y_0$ gives $x_0^3-x_0=x_0^2+x_0-1$, that is,
+\[x_0^3-x_0^2-2x_0+1=0.\tag{1}\]
+(One checks that $(1-x)^3f\bigl(\frac1{1-x}\bigr)=-f(x)$ for $f(x)=x^3-x^2-2x+1$, so the map $x\mapsto\frac1{1-x}$ permutes the roots of (1); this
+suggests the partner below.) Define
+\[x_1=\frac{1}{1-x_0},\qquad y_1=\frac1{x_0},\]
+which are real numbers with $y_1x_0=1$. We check both equations.</p><p><em>Second equation.</em> $x_1y_1=\dfrac{1}{x_0(1-x_0)}$ and $x_1+y_1=\dfrac{x_0+(1-x_0)}{x_0(1-x_0)}=\dfrac{1}{x_0(1-x_0)}$, so they are equal.</p><p><em>First equation.</em>
+\[x_1^2-1=\frac{1-(1-x_0)^2}{(1-x_0)^2}=\frac{x_0(2-x_0)}{(1-x_0)^2}.\]
+This equals $y_1=\frac1{x_0}$ if and only if $x_0^2(2-x_0)=(1-x_0)^2$, i.e. $-x_0^3+2x_0^2=1-2x_0+x_0^2$, i.e.
+$x_0^3-x_0^2-2x_0+1=0$, which is (1). Hence $(x_1,y_1)$ is a real solution with $y_1x_0=1$.</p>
+<h4>Solution 2 (A reciprocal polynomial)</h4>
+<p>Let $(x,y)$ be any real solution. Then $y\ne 1$, since $y=1$ in the second equation gives $x=x+1$. So the
+second equation can be solved for $x$: $x(y-1)=y$, i.e. $x=\frac{y}{y-1}$. Substituting into the first equation, $y^2=(y+1)(y-1)^2$, which expands to
+\[g(y)=y^3-2y^2-y+1=0 .\]
+Conversely, if $y$ is a real root of $g$, then $y\ne1$ (as $g(1)=-1$), and $x=\frac{y}{y-1}$ satisfies $xy=x+y$ by construction and $x^2=y+1$
+because this is equivalent to $g(y)=0$. So the real solutions correspond exactly to the real roots $y$ of $g$.</p><p>Eliminating $y$ instead ($y=x^2-1$ in the second equation) shows that the first coordinate of every solution is a root of
+\[f(x)=x^3-x^2-2x+1 .\]
+Now $g$ is the reciprocal polynomial of $f$:
+\[x^3\,g\!\left(\tfrac1x\right)=1-2x-x^2+x^3=f(x).\]
+Since $f(0)=1\ne 0$, we have $x_0\ne 0$, and $g(1/x_0)=f(x_0)/x_0^3=0$. Thus $y_1=1/x_0$ is a real root of $g$, and with
+$x_1=\frac{y_1}{y_1-1}$ the pair $(x_1,y_1)$ is a real solution of the system with $y_1x_0=1$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p3">
+<h3>Problem 3</h3>
+<div class="ct-meta">Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure</div>
+<div class="ct-text"><p>Let $ABCD$ be a convex quadrilateral such that $AB=BC$. The internal angle bisectors of $\angle DBA$ and $\angle CBD$ intersect the perpendicular bisectors of $AD$ and $CD$ in $E$ and $F$, respectively. Prove that the circumcircles of $\triangle DAC$ and $\triangle DEF$ are tangent.</p></div>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Inversion at $D$ and Ptolemy)</h4>
+<div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/nordic-3_s1.svg" alt="Figure for the solution"></div>
+<p>For $E$ and $F$ to be defined we need $BA\ne BD$ (otherwise the bisector of $\angle DBA$ is the perpendicular
+bisector of $AD$); since $BA=BC$ this also gives $BC\ne BD$. We also use that $D,E,F$ are not collinear, as the circle $(DEF)$ exists.</p><p><em>Step 1: $E$ lies on the circle $(ABD)$.</em> Let $M$ be the midpoint of the arc $AD$ of the circle $(ABD)$ not containing $B$. Equal arcs give
+$\angle ABM=\angle MBD$, so $M$ is on the bisector of $\angle DBA$; and $MA=MD$, so $M$ is on the perpendicular bisector of $AD$. These two lines are
+different (if they coincided, $B$ would be on the perpendicular bisector of $AD$, i.e. $BA=BD$), so they meet only at $M$, and $E=M$. In the same
+way $F$ is the midpoint of the arc $CD$ of the circle $(CBD)$ not containing $B$.</p><p><em>Step 2: Ptolemy.</em> The points $A,E,D,B$ lie on a circle in this order, and $EA=ED$. Ptolemy's theorem gives
+$EA\cdot BD+ED\cdot AB=AD\cdot BE$, that is,
+\[ED\,(AB+BD)=AD\cdot BE.\tag{1}\]
+Likewise $FD\,(CB+BD)=CD\cdot BF$.</p><p><em>Step 3: inversion.</em> Invert about $D$ with any radius $\rho$, and write $X^*$ for the image of $X$. Recall $DX^*=\rho^2/DX$ and
+$X^*Y^*=\rho^2\,XY/(DX\cdot DY)$. A circle through $D$ goes to a line not through $D$. The circle $(ABED)$ goes to a line through $B^*,A^*,E^*$;
+the arc $BAE$ that avoids $D$ goes to the segment $B^*E^*$, so $A^*$ lies between $B^*$ and $E^*$. Using (1),
+\[\frac{B^*E^*}{B^*A^*}=\frac{BE/(DB\cdot DE)}{BA/(DB\cdot DA)}=\frac{BE\cdot AD}{ED\cdot AB}=\frac{AB+BD}{AB}.\]
+In the same way $F^*$ lies on ray $B^*C^*$ and $\dfrac{B^*F^*}{B^*C^*}=\dfrac{CB+BD}{CB}$, which is the same number $k=\dfrac{AB+BD}{AB}&gt;1$
+because $AB=CB$. So the homothety with centre $B^*$ and ratio $k$ maps $A^*\mapsto E^*$ and $C^*\mapsto F^*$, and therefore maps the line $A^*C^*$
+onto the line $E^*F^*$. Hence these lines are parallel.</p><p><em>Step 4: conclusion.</em> The line $A^*C^*$ is the image of the circle $(DAC)$, and $E^*F^*$ is the image of the circle $(DEF)$. If $B$ is not on
+the circle $(DAC)$, then $B^*\notin A^*C^*$, so a homothety with ratio $k\ne1$ moves the line: $A^*C^*$ and $E^*F^*$ are distinct parallel lines with
+no common point. Therefore the circles $(DAC)$ and $(DEF)$ have no common point other than $D$, so they touch at $D$. (If $ABCD$ is cyclic, the
+same argument shows that the two circles coincide, a degenerate form of tangency.)</p>
+<h4>Solution 2 (A common foot on $BD$ and isogonal lines)</h4>
+<div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/nordic-3_s2.svg" alt="Figure for the solution"></div>
+<p>Put $\angle ABD=2\alpha$ and $\angle DBC=2\beta$. We need $BA\ne BD$ (otherwise the
+bisector of $\angle DBA$ coincides with the perpendicular bisector of $AD$ and $E$ is not defined); as $BA=BC$, also $BC\ne BD$. Let $O_1$ and $O_2$
+be the centres of the circles $(DEF)$ and $(DAC)$. Two circles through $D$ are tangent at $D$ exactly when their centres are collinear with $D$
+(then they share the tangent line at $D$, perpendicular to that line). So we prove that $D,O_1,O_2$ are collinear.</p><p><em>Step 1: $EF\perp BD$.</em> Let $K$ and $H$ be the feet of the perpendiculars from $E$ to the lines $BA$ and $BD$. Since $E$ lies on the bisector of
+$\angle ABD$, $EK=EH$, and $K$, $H$ are at the same signed distance $s$ from $B$, measured along the rays $BA$ and $BD$. By Pythagoras,
+\[EA^2=EK^2+(s-BA)^2,\qquad ED^2=EH^2+(s-BD)^2 .\]
+From $EA=ED$ we get $|s-BA|=|s-BD|$, and as $BA\ne BD$ this means $s=\frac{BA+BD}2$. The same argument for $F$ (on the bisector of $\angle DBC$, with
+$FC=FD$) shows that the foot of $F$ on $BD$ is at distance $\frac{BC+BD}2=\frac{BA+BD}2$ from $B$, i.e. it is the same point $H$. Hence $E$ and $F$
+both project onto $BD$ at $H$, so $EF\perp BD$ at $H$, and $H\ne D$ because $BH=\frac{BA+BD}{2}\ne BD$. Thus the line $DB$ is the altitude from $D$ in
+triangle $DEF$.</p><p><em>Step 2: isogonal lines.</em> We use the classical fact that in any triangle the altitude from a vertex and the line from that vertex to the
+circumcentre are symmetric with respect to the bisector of the angle at that vertex (both make the angle $|90^\circ-\gamma|$ with the two sides, where
+$\gamma$ is the angle at the opposite end). To compute with it, measure the direction $\theta(\ell)$ of every line $\ell$ as an angle modulo
+$180^\circ$, counterclockwise. A reflection in a line of direction $\varphi$ sends direction $\theta$ to $2\varphi-\theta$, and for the bisector of the
+lines $DX$, $DY$ we have $2\varphi\equiv\theta(DX)+\theta(DY)$ (both bisectors give the same value modulo $180^\circ$). Hence
+\[\theta(DO_1)\equiv\theta(DE)+\theta(DF)-\theta(DB),\qquad \theta(DO_2)\equiv\theta(DA)+\theta(DC)-\theta(h),\]
+where $h$ is the altitude from $D$ in triangle $DAC$. Since $BA=BC$, the bisector $BM$ of $\angle ABC$ is perpendicular to $AC$, so $h\parallel BM$
+and $\theta(h)=\theta(BM)$.</p><p><em>Step 3: counting angles.</em> Choose the orientation so that $\theta(BD)=0^\circ$ and ray $BA$ is obtained from ray $BD$ by a counterclockwise turn
+of $2\alpha$; then ray $BC$ is obtained by a clockwise turn of $2\beta$ (as $ABCD$ is convex, ray $BD$ lies inside $\angle ABC$), so
+$\theta(BA)=2\alpha$, $\theta(BC)=-2\beta$, $\theta(BM)=\alpha-\beta$, $\theta(BE)=\alpha$, $\theta(BF)=-\beta$.
+The points $A,B,D,E$ lie on one circle: $E$ is on the perpendicular bisector of $AD$ and on the bisector of $\angle DBA$, and so is the midpoint of the
+arc $AD$ of $(ABD)$ not containing $B$; these two lines meet only once, since they are different ($BA\ne BD$). By the inscribed angle theorem for
+directed angles (on a circle through $A,E,B,D$, the chords $AE$ seen from $D$ and from $B$),
+\[\theta(DE)-\theta(DA)\equiv\theta(BE)-\theta(BA)=\alpha-2\alpha=-\alpha .\]
+Likewise $F$ lies on $(CBD)$ and $\theta(DF)-\theta(DC)\equiv\theta(BF)-\theta(BC)=-\beta+2\beta=\beta$. Therefore, modulo $180^\circ$,
+\[\theta(DO_1)-\theta(DO_2)\equiv\bigl(\theta(DE)-\theta(DA)\bigr)+\bigl(\theta(DF)-\theta(DC)\bigr)-\theta(DB)+\theta(BM)\equiv-\alpha+\beta-0+(\alpha-\beta)=0 .\]
+So the lines $DO_1$ and $DO_2$ have the same direction and both pass through $D$: they coincide, and $D,O_1,O_2$ are collinear. Hence the circles
+$(DAC)$ and $(DEF)$ have the same tangent at $D$ and are tangent there. (If $O_1=O_2$, which happens when $ABCD$ is cyclic, the circles coincide.)</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p4">
+<h3>Problem 4</h3>
+<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 4: Divisibility and Prime Structure</div>
+<div class="ct-text"><p>A pair of positive integers $(a,b)$ is good if all the fractions
+\[\frac{a}{b},\ \frac{a+1}{b+1},\ \dots,\ \frac{a+9}{b+9}\]
+are integers.</p><ul class="ct-parts"><li><p><span class="ct-lbl">a)</span> Prove that there are only finitely many good pairs $(a,b)$ with $b&lt;a&lt;b^9$.</p></li><li><p><span class="ct-lbl">b)</span> Prove that there are infinitely many good pairs $(a,b)$ with $b&lt;a&lt;b^{10}$.</p></li></ul></div>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (A gcd bound for the lcm)</h4>
+<p><em>Reformulation.</em> Since $\frac{a+i}{b+i}=1+\frac{a-b}{b+i}$, the pair $(a,b)$ with $a&gt;b$ is good exactly when
+each of $b,b+1,\dots,b+9$ divides $a-b$, i.e. when $L(b)=\operatorname{lcm}(b,b+1,\dots,b+9)$ divides $a-b$. Then $a-b\ge L(b)$.</p><p><em>Lemma.</em> For positive integers $x_1,\dots,x_m$,
+\[\operatorname{lcm}(x_1,\dots,x_m)\ \ge\ \frac{x_1x_2\cdots x_m}{\prod_{i&lt;j}\gcd(x_i,x_j)} .\]
+<em>Proof.</em> Induction on $m$; $m=1$ is clear. Let $\ell=\operatorname{lcm}(x_1,\dots,x_{m-1})$ and $y=x_m$. Then
+$\operatorname{lcm}(\ell,y)=\ell y/\gcd(\ell,y)$. For each prime $p$ with exponents $e_i$ in $x_i$ and $f$ in $y$, the exponent of $p$ in
+$\gcd(\ell,y)$ is $\min(\max_i e_i,f)=\max_i\min(e_i,f)\le\sum_i\min(e_i,f)$, so $\gcd(\ell,y)\le\prod_{i&lt;m}\gcd(x_i,y)$. Combining with the induction
+hypothesis for $\ell$ proves the lemma. $\square$</p><p><em>(a)</em> For $0\le i&lt;j\le 9$, $\gcd(b+i,b+j)$ divides $j-i$. By the lemma,
+\[L(b)\ge\frac{b(b+1)\cdots(b+9)}{K}&gt;\frac{b^{10}}{K},\qquad K=\prod_{0\le i&lt;j\le 9}(j-i),\]
+a fixed constant. If $(a,b)$ is good with $a&lt;b^9$, then $b^9&gt;a&gt;a-b\ge L(b)&gt;b^{10}/K$, so $b&lt;K$. Then $a&lt;b^9&lt;K^9$ as well, so only finitely many
+pairs are possible.</p><p><em>(b)</em> The lcm of several numbers divides the number obtained from their product by dividing out $\gcd$ of any two of them. Choose
+$i\in\{0,1\}$ with $b+i$ even; then $b+i$ and $b+i+2$ are both even, so $L(b)$ divides $\frac{1}{2}\,b(b+1)\cdots(b+9)$ and
+\[L(b)\le\tfrac12(b+9)^{10}=\tfrac12\,b^{10}\Bigl(1+\tfrac9b\Bigr)^{10}.\]
+Let $b\ge 900$, so $x=\frac9b\le\frac1{100}$. From $(1+x)^{10}(1-x)^{10}=(1-x^2)^{10}\le1$ and Bernoulli's inequality $(1-x)^{10}\ge1-10x$ we get
+$(1+x)^{10}\le\frac{1}{1-10x}\le\frac{1}{0.9}&lt;1.12$. Hence $L(b)&lt;0.56\,b^{10}$. Put $a=b+L(b)$. Then $a&gt;b$, $a-b=L(b)$ so $(a,b)$ is good, and
+$a&lt;b+0.56\,b^{10}&lt;b^{10}$. This gives a good pair for every $b\ge 900$, hence infinitely many.</p>
+<h4>Solution 2 (Valuations and an explicit family)</h4>
+<p>A pair $(a,b)$ with $a&gt;b$ is good if and only if $b+i\mid a-b$ for $i=0,\dots,9$ (because
+$\frac{a+i}{b+i}=1+\frac{a-b}{b+i}$), i.e. if and only if $L=\operatorname{lcm}(b,\dots,b+9)$ divides $a-b$.</p><p><em>(a) Lemma: $b(b+1)\cdots(b+9)$ divides $9!\cdot L$.</em> Fix a prime $p$ and let $M=\max_i v_p(b+i)=v_p(L)$. For $e\ge1$ let $N_e$ be the number
+of $i$ with $p^e\mid b+i$; then $v_p\bigl(\prod_i(b+i)\bigr)=\sum_{e\ge1}N_e$. We have $N_e=0$ for $e&gt;M$. If $N$ of ten consecutive integers are
+multiples of $p^e$, the largest and smallest of them differ by at least $(N-1)p^e$ and at most $9$, so $N_e\le\lfloor 9/p^e\rfloor+1$. By Legendre's
+formula $\sum_{e\ge1}\lfloor 9/p^e\rfloor=v_p(9!)$, hence
+\[v_p\Bigl(\prod_i(b+i)\Bigr)\le\sum_{e=1}^{M}\Bigl(\Bigl\lfloor\tfrac9{p^e}\Bigr\rfloor+1\Bigr)\le v_p(9!)+v_p(L).\]
+This holds for every prime, proving the lemma. So for a good pair, $a-b\ge L\ge\frac{b(b+1)\cdots(b+9)}{9!}&gt;\frac{b^{10}}{9!}$. If moreover
+$a&lt;b^9$, then $b^{10}/9!&lt;b^9$, so $b&lt;9!$ and $a&lt;(9!)^9$: finitely many pairs.</p><p><em>(b) The family $b=2520t$.</em> Let $t\ge1$ and $b=2520t$. Every $i\in\{1,\dots,9\}$ divides $2520=\operatorname{lcm}(1,\dots,9)$, so
+$q_i=\frac{b+i}{i}=\frac bi+1$ is an integer. Let $N=b\,q_1q_2\cdots q_9$. Then $b\mid N$, and for $i\ge1$,
+$b\,q_i=\frac bi\,(b+i)$ is a multiple of $b+i$, so $b+i\mid N$. Hence $L\mid N$ and $L\le N$. Now $q_1=b+1$, $q_2=\frac b2+1$, and
+$q_i\le\frac b3+1\le\frac b2$ for $3\le i\le 9$. Therefore
+\[L\le N\le b(b+1)\Bigl(\frac{b+2}{2}\Bigr)\Bigl(\frac b2\Bigr)^7=\frac{b^8(b+1)(b+2)}{256}\le\frac{b^{10}}{128},\]
+using $(b+1)(b+2)\le 2b^2$. Taking $a=b+L$ we get a good pair with $b&lt;a\le b+\frac{b^{10}}{128}&lt;b^{10}$, for every $t\ge1$.</p>
+</div></details>
+</section>
+{% endraw %}

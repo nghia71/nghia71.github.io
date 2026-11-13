@@ -23,6 +23,143 @@ Problems from the 2026 contests, each with the answer and our own solutions. Ans
   </div>
 </div>
 
-More 2026 contests (national and international olympiads) will be added here.
 
-<p class="note">The problems belong to their publishers: AMC problems &copy; Mathematical Association of America, COMC problems &copy; Canadian Mathematical Society. They are reproduced here for non-commercial teaching. The solutions are written by MCC.</p>
+## Olympiads 2026
+
+Problems from the 2026 national and international olympiads, with our own solutions. Most olympiad problems ask for a proof; where a problem has a final answer, it is shown separately. More olympiads will be added as their solutions are finished.
+
+
+### AIME
+
+<div class="cards">
+  <div class="card">
+    <h3><a href="{{ '/contests/aime-2026' | relative_url }}">AIME 2026</a></h3>
+    <p>30 problems. AIME I and AIME II, 15 each; every answer is an integer from 0 to 999.</p>
+  </div>
+</div>
+
+### Junior olympiads
+
+<div class="cards">
+  <div class="card">
+    <h3><a href="{{ '/contests/jbmo-2026' | relative_url }}">JBMO 2026</a></h3>
+    <p>4 problems. The Junior Balkan Mathematical Olympiad, a one-day contest.</p>
+  </div>
+  <div class="card">
+    <h3><a href="{{ '/contests/cono-sur-2026' | relative_url }}">Cono Sur 2026</a></h3>
+    <p>6 problems. The Cono Sur Olympiad of the South American countries: two days, three problems each.</p>
+  </div>
+  <div class="card">
+    <h3><a href="{{ '/contests/romania-jbmo-tst-2026' | relative_url }}">Romania JBMO TST 2026</a></h3>
+    <p>5 problems. Romanian selection test for the Junior Balkan team (Day 1).</p>
+  </div>
+  <div class="card">
+    <h3><a href="{{ '/contests/turkey-jbmo-tst-2026' | relative_url }}">Turkey JBMO TST 2026</a></h3>
+    <p>8 problems. Turkish selection test for the Junior Balkan team: two days, four problems each.</p>
+  </div>
+</div>
+
+### National olympiads
+
+<div class="cards">
+  <div class="card">
+    <h3><a href="{{ '/contests/austria-mo-2026' | relative_url }}">Austria NC 2026</a></h3>
+    <p>10 problems. Austrian national olympiad: preliminary round (4 problems) and final round (6 problems).</p>
+  </div>
+  <div class="card">
+    <h3><a href="{{ '/contests/austria-regional-2026' | relative_url }}">Austria Regional 2026</a></h3>
+    <p>4 problems. Austrian regional competition: four problems.</p>
+  </div>
+  <div class="card">
+    <h3><a href="{{ '/contests/ukraine-mo-2026' | relative_url }}">Ukraine MO 2026</a></h3>
+    <p>30 problems. Ukrainian national olympiad, grades 8 to 11: two days per grade.</p>
+  </div>
+  <div class="card">
+    <h3><a href="{{ '/contests/bulgaria-mo-2026' | relative_url }}">Bulgaria MO 2026</a></h3>
+    <p>6 problems. Bulgarian national olympiad: two days, three problems each.</p>
+  </div>
+  <div class="card">
+    <h3><a href="{{ '/contests/czech-slovak-mo-2026' | relative_url }}">Czech-Slovak MO 2026 (III-A)</a></h3>
+    <p>6 problems. Czech and Slovak national final, category A: two days, three problems each.</p>
+  </div>
+  <div class="card">
+    <h3><a href="{{ '/contests/kosovo-mo-2026' | relative_url }}">Kosovo MO 2026</a></h3>
+    <p>24 problems. Grades 7 to 12, four per grade; a good mix for younger students.</p>
+  </div>
+  <div class="card">
+    <h3><a href="{{ '/contests/kazakhstan-regional-2026' | relative_url }}">Kazakhstan Regional MO 2026</a></h3>
+    <p>18 problems. Regional round for grades 9, 10 and 11: two days, three problems each.</p>
+  </div>
+  <div class="card">
+    <h3><a href="{{ '/contests/mongolia-mo-2026' | relative_url }}">Mongolia MO 2026</a></h3>
+    <p>6 problems. The Mongolian national olympiad.</p>
+  </div>
+  <div class="card">
+    <h3><a href="{{ '/contests/serbia-mo-2026' | relative_url }}">Serbia MO 2026</a></h3>
+    <p>6 problems. Serbian national olympiad: two days, three problems each.</p>
+  </div>
+  <div class="card">
+    <h3><a href="{{ '/contests/philippines-mo-2026' | relative_url }}">PMO 2026</a></h3>
+    <p>8 problems. National stage of the Philippine olympiad: two days, four problems each.</p>
+  </div>
+  <div class="card">
+    <h3><a href="{{ '/contests/colombia-mo-2026' | relative_url }}">Colombia MO 2026</a></h3>
+    <p>6 problems. Colombian national olympiad: two days, three problems each.</p>
+  </div>
+  <div class="card">
+    <h3><a href="{{ '/contests/spain-mo-2026' | relative_url }}">Spain MO 2026</a></h3>
+    <p>6 problems. Spanish national olympiad: two days, three problems each.</p>
+  </div>
+  <div class="card">
+    <h3><a href="{{ '/contests/portugal-mo-2026' | relative_url }}">Portugal MO 2026</a></h3>
+    <p>6 problems. Portuguese national olympiad: two days, three problems each.</p>
+  </div>
+  <div class="card">
+    <h3><a href="{{ '/contests/macedonia-mo-2026' | relative_url }}">Macedonia MO 2026</a></h3>
+    <p>5 problems. The 33rd Macedonian Mathematical Olympiad.</p>
+  </div>
+  <div class="card">
+    <h3><a href="{{ '/contests/azerbaijan-mo-2026' | relative_url }}">Azerbaijan Senior NMO 2026</a></h3>
+    <p>6 problems. Azerbaijan national olympiad, seniors (grades 10&ndash;11): two days, three problems each.</p>
+  </div>
+</div>
+
+### International and regional olympiads
+
+<div class="cards">
+  <div class="card">
+    <h3><a href="{{ '/contests/iberoamerican-2026' | relative_url }}">Iberoamerican 2026</a></h3>
+    <p>6 problems. The Iberoamerican Olympiad of the Spanish- and Portuguese-speaking countries: two days, three problems each.</p>
+  </div>
+  <div class="card">
+    <h3><a href="{{ '/contests/caps-match-2026' | relative_url }}">CAPS 2026</a></h3>
+    <p>6 problems. The Czech-Austrian-Polish-Slovak Match: two days, three problems each.</p>
+  </div>
+  <div class="card">
+    <h3><a href="{{ '/contests/nordic-2026' | relative_url }}">Nordic 2026</a></h3>
+    <p>4 problems. The Nordic Mathematical Contest, a one-day contest.</p>
+  </div>
+  <div class="card">
+    <h3><a href="{{ '/contests/benelux-mo-2026' | relative_url }}">BxMO 2026</a></h3>
+    <p>4 problems. Benelux Mathematical Olympiad (Belgium, the Netherlands, Luxembourg), a one-day contest.</p>
+  </div>
+  <div class="card">
+    <h3><a href="{{ '/contests/pamo-2026' | relative_url }}">PAMO 2026</a></h3>
+    <p>6 problems. Pan African Mathematical Olympiad: two days, three problems each.</p>
+  </div>
+  <div class="card">
+    <h3><a href="{{ '/contests/caucasus-mo-2026' | relative_url }}">Caucasus MO 2026</a></h3>
+    <p>16 problems. XI Caucasus Mathematical Olympiad: Juniors and Seniors, two days each.</p>
+  </div>
+</div>
+
+### Team selection tests
+
+<div class="cards">
+  <div class="card">
+    <h3><a href="{{ '/contests/argentina-tst-2026' | relative_url }}">Argentina TST 2026</a></h3>
+    <p>6 problems. Argentina team selection test: two days, three problems each.</p>
+  </div>
+</div>
+
+<p class="note">The problems belong to their publishers: AMC problems &copy; Mathematical Association of America, COMC problems &copy; Canadian Mathematical Society; the olympiad problems are taken from the AoPS contest collections. They are reproduced here for non-commercial teaching. The solutions are written by MCC.</p>

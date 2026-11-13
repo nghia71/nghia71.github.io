@@ -1,0 +1,656 @@
+---
+title: American Invitational Mathematics Examination 2026 (AIME I and AIME II)
+permalink: /contests/aime-2026
+description: American Invitational Mathematics Examination 2026 (AIME I and AIME II): problems with answers and solutions
+---
+{% raw %}
+<style>
+  .ct-intro { margin-bottom: 1.2em; }
+  .ct-credit { font-size: 14px; color: var(--ink-soft); border-left: 3px solid var(--gold); padding: 6px 12px; background: var(--white); margin: 1em 0; }
+  .ct-toc { display: flex; flex-wrap: wrap; gap: 6px; margin: 1em 0 1.4em; }
+  .ct-toc a { display: inline-block; min-width: 2.4em; text-align: center; padding: 4px 8px; border: 1px solid var(--rule); border-radius: 4px; background: var(--white); text-decoration: none; font-size: 14px; }
+  .ct-problem { background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 14px 18px; margin: 1.1em 0; }
+  .ct-problem h3 { margin: 0 0 .3em; font-size: 1.08rem; border-bottom: none; padding-bottom: 0; }
+  .ct-meta { font-size: 13px; color: var(--ink-soft); margin-bottom: .6em; }
+  .ct-text { font-family: Georgia, "Times New Roman", "Noto Serif", serif; font-size: 1.02em; line-height: 1.6; }
+  .ct-text p { margin: .5em 0; }
+  .ct-fig { text-align: center; margin: .8em 0; }
+  .ct-fig img { max-width: 100%; height: auto; max-height: 340px; }
+  .ct-choices { display: flex; flex-wrap: wrap; gap: 6px 22px; margin: .6em 0 .2em; }
+  .ct-choices b { margin-right: .3em; }
+  .ct-problem details { margin-top: .8em; border-top: 1px dashed var(--rule); padding-top: .5em; }
+  .ct-problem summary { cursor: pointer; font-weight: 600; color: var(--brand); font-size: 15px; }
+  .ct-problem details[open] summary { margin-bottom: .5em; }
+  .ct-sol h4 { font-size: 1rem; margin: 1em 0 .3em; color: var(--ink); }
+  .ct-answer { font-weight: 600; }
+  .ct-parts { list-style: none; padding-left: .4em; }
+  .ct-parts li { margin: .35em 0; }
+  .ct-lbl { font-weight: 700; margin-right: .3em; }
+  .ct-note { font-size: 14px; color: var(--ink-soft); font-style: italic; }
+  .ct-bar { margin: .6em 0 1em; display: flex; gap: 10px; flex-wrap: wrap; }
+  .ct-bar button { font: inherit; font-size: 14px; padding: 5px 12px; border-radius: var(--radius); border: 1px solid var(--brand); background: var(--white); color: var(--brand); cursor: pointer; }
+</style>
+<script>
+  window.MathJax = { tex: { inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [['\\[','\\]']], processEscapes: true },
+                     options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] } };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script>
+  function ctAll(open) { document.querySelectorAll('.ct-problem details').forEach(function (d) { d.open = open; }); }
+</script>
+
+<style>
+  .ct-group { font-size: 1.25rem; margin: 1.6em 0 .2em; }
+  .ct-toc-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: .3em 0; }
+  .ct-toc-g { font-size: 13px; color: var(--ink-soft); min-width: 9em; }
+  .ct-toc-wrap { margin: 1em 0 1.4em; }
+  .ct-center { text-align: center; margin: .6em 0; }
+  .ct-tablewrap { overflow-x: auto; margin: .6em 0; text-align: center; }
+  .ct-table { border-collapse: collapse; margin: 0 auto; }
+  .ct-table td { padding: 2px 9px; text-align: center; }
+  .ct-table tr.ct-hl td { border-bottom: 1px solid var(--ink-soft); }
+  .ct-table.ct-vfirst td:first-child { border-right: 1px solid var(--ink-soft); }
+  .ct-ul { padding-left: 1.4em; }
+  .ct-ul li { margin: .3em 0; }
+  .ct-text li > p:first-child { margin-top: 0; }
+  .ct-text li > p:last-child { margin-bottom: 0; }
+  .ct-text mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
+</style>
+
+{% endraw %}
+<p><a href="{{ '/contests-2026' | relative_url }}">&larr; All contests 2026</a></p>
+
+<h1>American Invitational Mathematics Examination 2026 (AIME I and AIME II)</h1>
+
+<div class="ct-intro">
+<p>The 30 problems of the American Invitational Mathematics Examination 2026 (AIME I and AIME II), each with our own solutions, hidden until you open them. Where a problem has a final answer, it is shown separately. Try a problem first, then check.</p><p>AIME I was held on 5 February 2026 and AIME II on 11 February 2026, 15 problems each. Every answer is an integer from 0 to 999.</p>
+</div>
+<div class="ct-credit">Problems: American Invitational Mathematics Examination 2026 (AIME I and AIME II), from the AoPS contest collection. Solutions written by MCC.</div>
+<div class="ct-bar"><button type="button" onclick="ctAll(true)">Show all answers and solutions</button><button type="button" onclick="ctAll(false)">Hide all</button></div>
+<div class="ct-toc-wrap"><div class="ct-toc-row"><span class="ct-toc-g">AIME I</span><a href="#p1">1</a><a href="#p2">2</a><a href="#p3">3</a><a href="#p4">4</a><a href="#p5">5</a><a href="#p6">6</a><a href="#p7">7</a><a href="#p8">8</a><a href="#p9">9</a><a href="#p10">10</a><a href="#p11">11</a><a href="#p12">12</a><a href="#p13">13</a><a href="#p14">14</a><a href="#p15">15</a></div><div class="ct-toc-row"><span class="ct-toc-g">AIME II</span><a href="#p16">1</a><a href="#p17">2</a><a href="#p18">3</a><a href="#p19">4</a><a href="#p20">5</a><a href="#p21">6</a><a href="#p22">7</a><a href="#p23">8</a><a href="#p24">9</a><a href="#p25">10</a><a href="#p26">11</a><a href="#p27">12</a><a href="#p28">13</a><a href="#p29">14</a><a href="#p30">15</a></div></div>
+
+{% raw %}
+<h2 class="ct-group" id="aime-i">AIME I</h2>
+<section class="ct-problem" id="p1">
+<h3>Problem 1</h3>
+<div class="ct-meta">Algebra &middot; LPS VI, Chapter 13: Rates, Motion, and Work</div>
+<div class="ct-text"><p>Patrick started walking at a constant rate along a straight road from school to the park. One hour after Patrick left, Tanya started running along the same road from school to the park. One hour after Tanya left, Jose started bicycling along the same road from school to the park. Tanya ran at a constant rate of $2$ miles per hour faster than Patrick walked, Jose bicycled at a constant rate of $7$ miles per hour faster than Tanya ran, and all three arrived at the park at the same time. The distance from the school to the park is $\frac{m}{n}$ miles, where $m$ and $n$ are relatively prime positive integers. Find $m+n$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$277$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Equal distances)</h4>
+<p>Let Patrick walk at $v$ miles per hour for $T$ hours. Tanya starts one hour later and Jose two hours later, and all three arrive together, so Tanya runs for $T-1$ hours at $v+2$ miles per hour and Jose rides for $T-2$ hours at $v+9$ miles per hour. All three cover the same distance $D$:
+\[D=vT=(v+2)(T-1)=(v+9)(T-2).\]
+From $vT=(v+2)(T-1)=vT-v+2T-2$ we get $v=2T-2$. From $vT=(v+9)(T-2)=vT-2v+9T-18$ we get $2v=9T-18$. Substituting the first relation into the second gives $4T-4=9T-18$, so $T=\frac{14}{5}$ and $v=\frac{18}{5}$. Therefore
+\[D=vT=\frac{18}{5}\cdot\frac{14}{5}=\frac{252}{25}.\]
+Since $252=2^2\cdot 3^2\cdot 7$ and $25=5^2$ share no prime factor, $m+n=252+25=\boxed{277}$.</p>
+<h4>Solution 2 (Catching up)</h4>
+<p>All three arrive at the park at the same moment, so each later starter catches the person ahead of them exactly at the park.</p><p>When Tanya starts, Patrick has walked for one hour and is $v$ miles ahead, where $v$ is his speed. Tanya gains $2$ miles per hour on him, so she runs for $\frac{v}{2}$ hours. When Jose starts, Tanya has run for one hour and is $v+2$ miles ahead of him. Jose gains $7$ miles per hour on her, so he rides for $\frac{v+2}{7}$ hours. Jose starts one hour after Tanya and finishes at the same moment, so his ride is one hour shorter than her run:
+\[\frac{v}{2}-1=\frac{v+2}{7}\quad\Longrightarrow\quad 7v-14=2v+4\quad\Longrightarrow\quad v=\frac{18}{5}.\]
+Tanya runs for $\frac{v}{2}=\frac95$ hours at $v+2=\frac{28}{5}$ miles per hour, so the distance is $\frac{28}{5}\cdot\frac{9}{5}=\frac{252}{25}$ miles, and $m+n=\boxed{277}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p2">
+<h3>Problem 2</h3>
+<div class="ct-meta">Combinatorics &middot; LPS VI, Chapter 34: Distributions and Stars-and-Bars</div>
+<div class="ct-text"><p>Find the number of positive integer palindromes written in base $10$ with no zero digits, and whose digits add up to $13$. For example, $42124$ has these properties. Recall that a palindrome is a number whose representation reads the same from left to right as from right to left.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$62$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Split at the middle digit)</h4>
+<p>In a palindrome of even length every digit occurs in matching pairs, so the digit sum is even. Since $13$ is odd, the palindrome has odd length $2k+1$. Let $m$ be its middle digit and $s$ the sum of its first $k$ digits; the last $k$ digits are the first $k$ in reverse, so
+\[13=m+2s.\]
+A single digit cannot be $13$, so $k\ge 1$. Thus $m$ is odd, and $(m,s)$ is one of $(1,6),(3,5),(5,4),(7,3),(9,2)$.</p><p>The palindrome is determined by $m$ and its first $k$ digits, which form an ordered list of nonzero digits with sum $s$. Since $s\le 6$, every such list automatically has entries at most $9$, so we are counting compositions of $s$ (ordered lists of positive integers with sum $s$). Write $s$ as a row of $s$ ones; a composition is the same as a choice of which of the $s-1$ gaps get a divider. So there are $2^{s-1}$ compositions of $s$, and the total is
+\[2^5+2^4+2^3+2^2+2^1=32+16+8+4+2=\boxed{62}.\]</p>
+<h4>Solution 2 (Symmetric compositions of $13$)</h4>
+<p>Reading the digits of such a palindrome from left to right gives an ordered list of positive integers, each at most $9$, with sum $13$, and the list reads the same backwards. Conversely, every such list is the digit list of exactly one palindrome of the required kind. So we count <em>palindromic compositions</em> of $13$ with all parts at most $9$.</p><p>Write $13$ as a row of $13$ ones with $12$ gaps, numbered $1$ to $12$. A composition is a choice of a set of gaps at which to cut. Reversing the composition sends gap $i$ to gap $13-i$, so the composition is a palindrome exactly when its set of cuts is unchanged by $i\mapsto 13-i$. The gaps fall into the $6$ pairs $\{i,13-i\}$ for $i=1,\dots,6$ (no gap is paired with itself because $13$ is odd), and a symmetric set of cuts is any union of these pairs. Hence there are $2^6=64$ palindromic compositions of $13$.</p><p>Now remove those with a part of at least $10$. Such a part cannot appear twice (that would already exceed $13$), so it is the middle part, and the remaining $13-t$ (where $t$ is the big part) is split evenly between the two sides. So $13-t$ is even, giving $t=13$ (the composition $(13)$) or $t=11$ (the composition $(1,11,1)$). The answer is $64-2=\boxed{62}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p3">
+<h3>Problem 3</h3>
+<div class="ct-meta">Geometry &middot; LPS VI, Chapter 52: Solid Geometry and Spatial Visualization</div>
+<div class="ct-text"><p>A hemisphere with radius $200$ sits on top of a horizontal circular disk with radius $200$, and the hemisphere and disk have the same center. Let $\mathcal{T}$ be the region of points $P$ in the disk such that a sphere of radius $42$ can be placed on top of the disk at $P$ and lie completely inside the hemisphere. The area of $\mathcal{T}$ divided by the area of the disk is $\frac{p}{q}$, where $p$ and $q$ are relatively prime positive integers. Find $p+q$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$79$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (A vertical cross-section)</h4>
+<div class="ct-fig"><img style="width:370px" src="/assets/contests/2026-27/aime-3_s1.svg" alt="Figure for the solution"></div>
+<p>Let $O$ be the common centre of the disk and the hemisphere, so the hemisphere is the upper half of the ball of radius $200$ about $O$. A sphere of radius $42$ resting on the disk at $P$ has its centre $Q$ directly above $P$ at height $42$. Let $d=OP$; then $OQ^2=d^2+42^2$.</p><p>The sphere lies above the plane of the disk, so it lies inside the hemisphere exactly when it lies inside the ball of radius $200$. Every point $X$ of the small sphere satisfies $OX\le OQ+QX=OQ+42$, and equality holds for the point $X$ on ray $OQ$. So the small sphere lies inside the big ball if and only if $OQ+42\le 200$, that is,
+\[d^2+42^2\le 158^2\quad\Longleftrightarrow\quad d^2\le 158^2-42^2=(158-42)(158+42)=116\cdot 200=23200.\]
+Since $23200&lt;200^2$, every such $P$ lies in the disk, so $\mathcal{T}$ is a disk of radius $\sqrt{23200}$ about $O$. The ratio of areas is
+\[\frac{\pi\cdot 23200}{\pi\cdot 200^2}=\frac{23200}{40000}=\frac{29}{50},\]
+and $p+q=29+50=\boxed{79}$. (The figure shows the extreme position, where $OQ=158$ and the small sphere touches the hemisphere at $X$.)</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p4">
+<h3>Problem 4</h3>
+<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 25: Diophantine Equations: Factorization and Algebraic Methods</div>
+<div class="ct-text"><p>Find the number of integers less than or equal to $100$ that are equal to $a+b+ab$ for some choice of distinct positive integers $a$ and $b$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$70$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Add one and factor)</h4>
+<p>Since $a+b+ab=(a+1)(b+1)-1$, put $x=a+1$ and $y=b+1$. Then $n=a+b+ab$ with distinct positive integers $a,b$ if and only if
+\[n+1=xy\quad\text{for some integers } 2\le x&lt;y.\]
+We claim that an integer $N\ge 2$ can be written as $xy$ with $2\le x&lt;y$ if and only if $N$ is composite and not the square of a prime.</p><ul class="ct-ul"><li><p>If $N$ is prime, it has no factorization with both factors at least $2$.</p></li><li><p>If $N=p^2$ with $p$ prime, its divisors are $1,p,p^2$, so the only factorization with both factors at least $2$ is $p\cdot p$, whose factors are equal.</p></li><li><p>Otherwise $N$ is composite and not a prime square. Let $p$ be its smallest prime factor and write $N=p\cdot \frac{N}{p}$. Every prime factor of $\frac{N}{p}$ is at least $p$, so $\frac Np\ge p$, and $\frac Np\ne p$ because $N\ne p^2$. So $x=p$, $y=\frac Np$ works.</p></li></ul><p>The condition $n\le 100$ means $N=n+1\le 101$, and $N\ge 2\cdot 3=6$ guarantees $n\ge 5&gt;0$. Among $2,3,\dots,101$ (that is, $100$ integers) there are $26$ primes, hence $74$ composites. Removing the prime squares $4,9,25,49$ leaves $70$ values of $N$, and different $N$ give different $n$. The answer is $\boxed{70}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p5">
+<h3>Problem 5</h3>
+<div class="ct-meta">Geometry &middot; LPS VI, Chapter 48: Transformations and Symmetry</div>
+<div class="ct-text"><p>A plane contains points $A$ and $B$ with $AB=1$. Point $A$ is rotated in the plane counterclockwise through an acute angle $\theta$ around point $B$ to point $A'$. Then $B$ is rotated in the plane clockwise through angle $\theta$ around point $A'$ to point $B'$. Suppose that $AB'=\frac{4}{3}$. The value of $\cos\theta$ can be written as $\frac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. Find $m+n$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$65$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (A hidden parallelogram)</h4>
+<div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/aime-5_s1.svg" alt="Figure for the solution"></div>
+<p>First we show that $\overrightarrow{A'B'}=\overrightarrow{AB}$. The rotation about $B$ counterclockwise through $\theta$ sends $A$ to $A'$, so the vector $\overrightarrow{BA'}$ is $\overrightarrow{BA}$ turned counterclockwise through $\theta$. Hence $\overrightarrow{A'B}=-\overrightarrow{BA'}$ is $-\overrightarrow{BA}=\overrightarrow{AB}$ turned counterclockwise through $\theta$. The second rotation sends $B$ to $B'$ about $A'$ clockwise through $\theta$, so $\overrightarrow{A'B'}$ is $\overrightarrow{A'B}$ turned back clockwise through $\theta$, which is $\overrightarrow{AB}$ itself.</p><p>So $ABB'A'$ is a parallelogram with sides $AB=A'B'=1$ and $BB'=AA'$, and its diagonals are $AB'=\frac43$ and $BA'=1$. Triangle $ABA'$ is isosceles with $BA=BA'=1$ and apex angle $\theta$, so by the Law of Cosines $AA'^2=2-2\cos\theta$. In a parallelogram the sum of the squares of the diagonals equals the sum of the squares of the four sides:
+\[AB'^2+BA'^2=2\left(AB^2+BB'^2\right)\quad\Longrightarrow\quad \frac{16}{9}+1=2\left(1+2-2\cos\theta\right).\]
+So $6-4\cos\theta=\frac{25}{9}$, which gives $\cos\theta=\frac{29}{36}$. This is positive, so $\theta$ is indeed acute, and $\gcd(29,36)=1$. The answer is $29+36=\boxed{65}$.</p>
+<h4>Solution 2 (Complex numbers)</h4>
+<p>Place $B=0$ and $A=1$ in the complex plane. A counterclockwise rotation through $\theta$ about $B$ is multiplication by $e^{i\theta}$, so $A'=e^{i\theta}$. A clockwise rotation through $\theta$ about $A'$ sends $z$ to $A'+(z-A')e^{-i\theta}$, so
+\[B'=A'+(0-A')e^{-i\theta}=e^{i\theta}-1.\]
+Then
+\[AB'^2=\left|e^{i\theta}-2\right|^2=(\cos\theta-2)^2+\sin^2\theta=5-4\cos\theta.\]
+Setting this equal to $\frac{16}{9}$ gives $\cos\theta=\frac{29}{36}$, so the answer is $\boxed{65}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p6">
+<h3>Problem 6</h3>
+<div class="ct-meta">Algebra &middot; LPS VII, Chapter 50: Algebraic Modeling Beyond Standard Forms</div>
+<div class="ct-text"><p>A real number $x$ satisfies $\sqrt[20]{x^{\log_{2026} x}}=26x$. What is the number of positive divisors of the product of all possible positive values of $x$?</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$441$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Take logarithms base $2026$)</h4>
+<p>The expression $\log_{2026}x$ requires $x&gt;0$. Let $L=\log_{2026}x$ and $c=\log_{2026}26&gt;0$, so $x=2026^{L}$ and $26=2026^{c}$. Then $x^{\log_{2026}x}=\left(2026^{L}\right)^{L}=2026^{L^2}$, and the equation becomes
+\[2026^{L^2/20}=2026^{c+L}\quad\Longleftrightarrow\quad L^2-20L-20c=0.\]
+The discriminant $400+80c$ is positive, so there are two distinct real roots $L_1,L_2$, and each gives exactly one positive solution $x=2026^{L}$. By Vieta's formulas $L_1+L_2=20$, so the product of the two solutions is
+\[2026^{L_1}\cdot 2026^{L_2}=2026^{20}=2^{20}\cdot 1013^{20}.\]
+Here $1013$ is prime: $31^2=961&lt;1013&lt;32^2$, and $1013$ is not divisible by any of $2,3,5,7,11,13,17,19,23,29,31$. So the number of positive divisors is $(20+1)(20+1)=\boxed{441}$.</p>
+<h4>Solution 2 (Centring the logarithm)</h4>
+<p>Any solution has $x&gt;0$. Put $c=\log_{2026}26&gt;0$ and write $x=2026^{10+M}$, centring the logarithm at $10$. Then $x^{\log_{2026}x}=2026^{(10+M)^2}$ and $26x=2026^{c+10+M}$, so the equation becomes
+\[\frac{(10+M)^2}{20}=c+10+M\quad\Longleftrightarrow\quad 5+M+\frac{M^2}{20}=c+10+M\quad\Longleftrightarrow\quad M^2=20(c+5).\]
+Since $c+5&gt;0$, there are exactly two solutions, $M=\pm\sqrt{20(c+5)}$, and they are opposite. Hence the two values of $x$ are $2026^{10+M}$ and $2026^{10-M}$, whose product is $2026^{20}=2^{20}\cdot 1013^{20}$ ($1013$ is prime: it has no prime factor up to $31$, and $32^2&gt;1013$). The number of positive divisors is $21^2=\boxed{441}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p7">
+<h3>Problem 7</h3>
+<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 2: Fundamental Counting and Structured Enumeration</div>
+<div class="ct-text"><p>Find the number of functions $\pi$ mapping the set $A=\{1,2,3,4,5,6\}$ onto $A$ such that for every $a\in A$,
+\[\pi(\pi(\pi(\pi(\pi(\pi(a))))))=a.\]</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$396$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Complementary counting)</h4>
+<p>A function from the finite set $A$ onto $A$ is a bijection, so $\pi$ is a permutation of $A$. Write $\pi$ as a product of disjoint cycles. If $a$ lies in a cycle of length $\ell$, then $\pi^k(a)=a$ exactly when $\ell\mid k$. Hence $\pi^6$ is the identity if and only if every cycle length divides $6$, that is, every cycle has length $1$, $2$, $3$ or $6$.</p><p>There are $6!=720$ permutations in total. A permutation of $6$ elements fails the condition exactly when it has a cycle of length $4$ or $5$, and it cannot have both.</p><ul class="ct-ul"><li><p>A $5$-cycle: choose its $5$ elements in $6$ ways and arrange them in a cycle in $4!=24$ ways; the remaining element is fixed. This gives $144$ permutations.</p></li><li><p>A $4$-cycle: choose its $4$ elements in $\binom64=15$ ways and arrange them in a cycle in $3!=6$ ways; the remaining two elements are either both fixed or swapped, $2$ ways. This gives $180$ permutations.</p></li></ul><p>The answer is $720-144-180=\boxed{396}$.</p>
+<h4>Solution 2 (Counting by cycle type)</h4>
+<p>A function from the finite set $A$ onto $A$ is a permutation, and $\pi^6$ is the identity if and only if every cycle length of $\pi$ divides $6$ (a point on a cycle of length $\ell$ returns to itself after $k$ steps exactly when $\ell\mid k$). So we count permutations of $6$ elements whose cycle lengths all lie in $\{1,2,3,6\}$. The number of permutations of $6$ elements with $m_\ell$ cycles of length $\ell$ is $\dfrac{6!}{\prod_\ell \ell^{m_\ell}\, m_\ell!}$. The allowed cycle types are:</p><ul class="ct-ul"><li><p>$1+1+1+1+1+1$: $1$;</p></li><li><p>$2+1+1+1+1$: $\frac{720}{2\cdot 4!}=15$;</p></li><li><p>$2+2+1+1$: $\frac{720}{2^2\cdot 2!\cdot 2!}=45$;</p></li><li><p>$2+2+2$: $\frac{720}{2^3\cdot 3!}=15$;</p></li><li><p>$3+1+1+1$: $\frac{720}{3\cdot 3!}=40$;</p></li><li><p>$3+2+1$: $\frac{720}{3\cdot 2}=120$;</p></li><li><p>$3+3$: $\frac{720}{3^2\cdot 2!}=40$;</p></li><li><p>$6$: $\frac{720}{6}=120$.</p></li></ul><p>The total is $1+15+45+15+40+120+40+120=\boxed{396}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p8">
+<h3>Problem 8</h3>
+<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 8: Modular Arithmetic and Congruence Methods</div>
+<div class="ct-text"><p>Let $N$ be the number of positive integer divisors of $17017^{17}$ that leave a remainder of $5$ when divided by $12$. Find the remainder when $N$ is divided by $1000$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$244$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Work modulo $4$ and modulo $3$)</h4>
+<p>Since $17017=17\cdot 1001=7\cdot 11\cdot 13\cdot 17$, the divisors of $17017^{17}$ are the numbers
+\[7^{a}\,11^{b}\,13^{c}\,17^{e},\qquad 0\le a,b,c,e\le 17.\]
+A number leaves remainder $5$ when divided by $12$ exactly when it is $\equiv 1\pmod 4$ and $\equiv 2\pmod 3$.</p><ul class="ct-ul"><li><p>Modulo $4$: $7\equiv 11\equiv -1$ and $13\equiv 17\equiv 1$, so the divisor is $\equiv(-1)^{a+b}$. We need $a+b$ even.</p></li><li><p>Modulo $3$: $7\equiv 13\equiv 1$ and $11\equiv 17\equiv -1$, so the divisor is $\equiv(-1)^{b+e}$. We need $(-1)^{b+e}\equiv 2\equiv -1$, that is, $b+e$ odd.</p></li></ul><p>Each exponent has $18$ possible values, $9$ even and $9$ odd. Choose $b$ and $c$ freely ($18\cdot 18$ ways); then the parities of $a$ and $e$ are forced, leaving $9$ choices for each. So
+\[N=18\cdot 18\cdot 9\cdot 9=26244,\]
+and the remainder is $\boxed{244}$.</p>
+<h4>Solution 2 (All four residues are equally common)</h4>
+<p>Every divisor $7^{a}11^{b}13^{c}17^{e}$ ($0\le a,b,c,e\le 17$) is coprime to $12$, so its remainder modulo $12$ is one of $1,5,7,11$. There are $18^4$ divisors.</p><p>Pair the exponents $0\leftrightarrow1$, $2\leftrightarrow3$, &hellip;, $16\leftrightarrow17$; this works because $18$ is even. Changing $a$ to its partner multiplies the divisor by $7$ or by $7^{-1}$, and both act as multiplication by $7$ modulo $12$ because $7^2=49\equiv 1$. Multiplication by $7$ swaps the residues $1\leftrightarrow7$ and $5\leftrightarrow11$. So this pairing is a bijection between the divisors with residue $1$ and those with residue $7$, and between those with residue $5$ and those with residue $11$. In the same way, pairing the values of $b$ multiplies by $11$ (as $11^2\equiv1$), which swaps $1\leftrightarrow 11$ and $5\leftrightarrow 7$.</p><p>Hence the four residue classes $1,7,5,11$ all contain the same number of divisors, and
+\[N=\frac{18^4}{4}=\frac{104976}{4}=26244\equiv\boxed{244}\pmod{1000}.\]</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p9">
+<h3>Problem 9</h3>
+<div class="ct-meta">Combinatorics &middot; LPS VI, Chapter 38: Probability and Expected Value</div>
+<div class="ct-text"><p>Joanne has a blank fair six-sided die and six stickers each displaying a different integer from $1$ to $6$. Joanne rolls the die and then places the sticker labeled $1$ on the top face of the die. She then rolls the die again, places the sticker labeled $2$ on the top face, and continues this process to place the rest of the stickers in order. If the die ever lands with a sticker already on its top face, the new sticker is placed to cover the old sticker. Let $p$ be the conditional probability that at the end of the process exactly one face has been left blank, given that all the even-numbered stickers are visible on faces of the die. Then $p$ can be written as $\frac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. Find $m+n$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$29$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Read the rolls backwards)</h4>
+<p>Record the outcome as the sequence of faces rolled at steps $1,\dots,6$; all $6^6$ sequences are equally likely. Sticker $k$ stays visible exactly when the face rolled at step $k$ is not rolled again at a later step. Call step $k$ <em>fresh</em> in that case. The faces that receive stickers are the distinct faces rolled, and each of them shows the sticker of its last roll, which is a fresh step. So
+\[\#\{\text{covered faces}\}=\#\{\text{fresh steps}\}.\]
+The condition &ldquo;stickers $2,4,6$ are visible&rdquo; says steps $2,4,6$ are fresh. &ldquo;Exactly one face is blank&rdquo; says exactly $5$ steps are fresh, that is, exactly one of the steps $1,3,5$ is not fresh.</p><p>Process the steps in the order $6,5,4,3,2,1$ and keep track of $j$, the number of distinct faces among the steps already processed. When the current step is processed, it is fresh in $6-j$ ways (then $j$ increases by $1$) and not fresh in $j$ ways (then $j$ stays). Steps $6,4,2$ must be fresh; steps $5,3,1$ may be either. The list below gives the number of partial sequences for each value of $j$.</p><ul class="ct-ul"><li><p>After step $6$: $j=1$: $6$.</p></li><li><p>After step $5$: $j=2$: $6\cdot5=30$; $j=1$: $6\cdot1=6$.</p></li><li><p>After step $4$ (fresh): $j=3$: $30\cdot4=120$; $j=2$: $6\cdot5=30$.</p></li><li><p>After step $3$: $j=4$: $120\cdot3=360$; $j=3$: $120\cdot3+30\cdot4=480$; $j=2$: $30\cdot2=60$.</p></li><li><p>After step $2$ (fresh): $j=5$: $360\cdot2=720$; $j=4$: $480\cdot3=1440$; $j=3$: $60\cdot4=240$.</p></li></ul><p>Step $1$ is unrestricted for the condition, so the number of sequences in which all even stickers are visible is $6\cdot(720+1440+240)=14400$. Among them, exactly $5$ faces are covered when we end with $j=5$: from $j=5$ step $1$ repeats a face ($5$ ways), and from $j=4$ it is fresh ($2$ ways), giving $720\cdot 5+1440\cdot2=6480$. Therefore
+\[p=\frac{6480}{14400}=\frac{9}{20},\]
+and $m+n=\boxed{29}$.</p>
+<h4>Solution 2 (One repeated pair)</h4>
+<p>Record the outcome as the sequence of faces $r_1,\dots,r_6$ rolled at steps $1,\dots,6$; all $6^6$ sequences are equally likely. Sticker $k$ stays visible exactly when $r_k$ does not occur again among $r_{k+1},\dots,r_6$, because otherwise a later sticker is placed on top of it, and if not, nothing ever covers it.</p><p><strong>Denominator.</strong> We count sequences in which stickers $2,4,6$ are visible. Choose the faces in the order $r_6,r_5,r_4,r_3,r_2,r_1$: $r_6$ and $r_5$ are free, $r_4$ must avoid $\{r_5,r_6\}$, $r_3$ is free, $r_2$ must avoid $\{r_3,r_4,r_5,r_6\}$, and $r_1$ is free ($6$ ways). The number of choices for $r_4$ and $r_2$ depends on repetitions, so split by whether $r_5=r_6$ and whether $r_3$ equals one of $r_4,r_5,r_6$:</p><ul class="ct-ul"><li><p>$r_5\ne r_6$, $r_3$ new: $6\cdot5\cdot4\cdot3\cdot2=720$;</p></li><li><p>$r_5\ne r_6$, $r_3$ repeated: $6\cdot5\cdot4\cdot3\cdot3=1080$;</p></li><li><p>$r_5=r_6$, $r_3$ new: $6\cdot1\cdot5\cdot4\cdot3=360$;</p></li><li><p>$r_5=r_6$, $r_3$ repeated: $6\cdot1\cdot5\cdot2\cdot4=240$.</p></li></ul><p>(The factors are the choices for $r_6,r_5,r_4,r_3,r_2$ in turn.) With the $6$ choices of $r_1$, the total is $6\cdot2400=14400$.</p><p><strong>Numerator.</strong> Exactly one face is blank exactly when the six rolls show exactly $5$ different faces. That happens exactly when one face is rolled twice, at steps $i&lt;j$, and the other four rolls show four other faces, all different. In that case sticker $i$ is covered by sticker $j$, and every other sticker is the last one placed on its face, so it is visible. Thus all even stickers are visible exactly when $i$ is odd. The pairs $(i,j)$ with $i\in\{1,3,5\}$ and $i&lt;j\le 6$ number $5+3+1=9$. For each pair, the steps form five groups ($\{i,j\}$ and four single steps) that must receive five different faces, in $6\cdot5\cdot4\cdot3\cdot2=720$ ways. So the numerator is $9\cdot720=6480$, and
+\[p=\frac{6480}{14400}=\frac{9}{20},\qquad m+n=\boxed{29}.\]</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p10">
+<h3>Problem 10</h3>
+<div class="ct-meta">Geometry &middot; LPS VII, Chapter 32: Trigonometric Geometry and Metric Conversion</div>
+<div class="ct-text"><p>Let $\triangle ABC$ have side lengths $AB=13$, $BC=14$, and $CA=15$. Triangle $\triangle A'B'C'$ is obtained by rotating $\triangle ABC$ about its circumcenter so that $\overline{A'C'}$ is perpendicular to $\overline{BC}$, with $A'$ and $B$ not on the same side of line $B'C'$. Find the integer closest to the area of hexagon $AA'CC'BB'$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$156$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Central angles)</h4>
+<div class="ct-fig"><img style="width:329px" src="/assets/contests/2026-27/aime-10_s1.svg" alt="Figure for the solution"></div>
+<p><strong>The triangle.</strong> Let $a=BC=14$, $b=CA=15$, $c=AB=13$. By Heron's formula the area is $K=\sqrt{21\cdot7\cdot6\cdot8}=84$, and the circumradius is $R=\frac{abc}{4K}=\frac{65}{8}$. By the Law of Cosines,
+\[\cos A=\tfrac{33}{65},\ \cos B=\tfrac{5}{13},\ \cos C=\tfrac35,\qquad \sin A=\tfrac{56}{65},\ \sin B=\tfrac{12}{13},\ \sin C=\tfrac45.\]</p><p><strong>The rotation.</strong> Line $AC$ makes the angle $C$ with line $BC$, so the rotations that make $A'C'$ perpendicular to $BC$ are the clockwise rotation through $\theta=90^\circ-C$ and that rotation followed by a half-turn. Here $\cos\theta=\sin C=\frac45$ and $\sin\theta=\cos C=\frac35$, so $\theta\approx 36.9^\circ$. Label the triangle so that $A,B,C$ run counterclockwise around the circumcircle $\omega$. The chord $B'C'$ splits $\omega$ into two arcs, and $A'$ lies on one of them. Since $A'$ is the vertex of the triangle on that side, $A'$ and $B$ are on opposite sides of line $B'C'$ exactly when $B$ lies on the arc $B'C'$ not containing $A'$. That arc is the image of arc $BC$ not containing $A$, which measures $2A\approx 119^\circ$ and runs counterclockwise from $B$ to $C$. A clockwise rotation through $\theta&lt;2A$ moves this arc so that it still contains $B$. The other candidate is a counterclockwise rotation through $180^\circ-\theta\approx143^\circ$, which moves the arc completely past $B$. So the rotation is clockwise through $\theta$.</p><p><strong>The area.</strong> Going clockwise around $\omega$ the six points come in the order $A,A',C,C',B,B'$, with consecutive central angles
+\[\theta,\ 2B-\theta,\ \theta,\ 2A-\theta,\ \theta,\ 2C-\theta,\]
+all positive since $\theta&lt;2C&lt;2A&lt;2B$. Joining the centre $O$ to the vertices cuts the hexagon into six triangles with two sides $R$, so
+\[[AA'CC'BB']=\frac{R^2}{2}\Bigl(3\sin\theta+\sum_{X\in\{A,B,C\}}\sin(2X-\theta)\Bigr)=\frac{R^2}{2}\Bigl(3\sin\theta+\cos\theta\sum\sin 2X-\sin\theta\sum\cos 2X\Bigr).\]
+From the values above, $\sin 2A=\frac{3696}{4225}$, $\sin 2B=\frac{3000}{4225}$, $\sin 2C=\frac{4056}{4225}$, so $\sum\sin2X=\frac{10752}{4225}$; and $\cos2A=-\frac{2047}{4225}$, $\cos2B=-\frac{2975}{4225}$, $\cos 2C=-\frac{1183}{4225}$, so $\sum\cos 2X=-\frac{6205}{4225}$. With $R^2=\frac{4225}{64}$:
+\[[AA'CC'BB']=\frac{1}{128}\left(\frac45\cdot 10752+\frac35\left(3\cdot4225+6205\right)\right)=\frac{43008+56640}{640}=\frac{1557}{10}=155.7.\]
+The nearest integer is $\boxed{156}$.</p>
+<h4>Solution 2 (Coordinates and three ears)</h4>
+<p>Place $B=(0,0)$, $C=(14,0)$ and $A=(5,12)$; this gives $AB=13$ and $AC=15$. The circumcentre is $O=\left(7,\frac{33}{8}\right)$ (it is on $x=7$ and $OB^2=49+\frac{1089}{64}=\frac{4225}{64}=OA^2$). Vector $\overrightarrow{AC}=(9,-12)$ points in direction $(3,-4)$. A clockwise rotation through the angle $\theta$ with $\cos\theta=\frac45$, $\sin\theta=\frac35$ turns it into the vertical direction $(0,-5)$. This rotation about $O$ sends $O+(u,v)$ to $O+\left(\frac{4u+3v}{5},\frac{-3u+4v}{5}\right)$, which gives
+\[A'=\left(\tfrac{81}{8},\tfrac{93}{8}\right),\qquad C'=\left(\tfrac{81}{8},-\tfrac{27}{8}\right),\qquad B'=\left(-\tfrac{43}{40},\tfrac{201}{40}\right).\]
+Indeed $A'C'$ is vertical, so it is perpendicular to $BC$. Line $B'C'$ has direction $(4,-3)$ and equation $3x+4y=\frac{675}{40}$. At $A'$ we get $3x+4y=\frac{615}{8}&gt;\frac{675}{40}$, and at $B$ we get $0&lt;\frac{675}{40}$, so $A'$ and $B$ are on opposite sides, as required. The only other rotation making $A'C'\perp BC$ is this one followed by the half-turn about $O$, which sends $(x,y)$ to $(14-x,\frac{33}{4}-y)$. It moves line $B'C'$ to $3x+4y=\frac{465}{8}$ and $A'$ to $\left(\frac{31}{8},-\frac{27}{8}\right)$, where $3x+4y=-\frac{15}{8}$. Since $B$ gives $0$, both points lie below that line, so that rotation is excluded.</p><p>All six points lie on the circumcircle. Moreover, $A'$ and $B$ are on opposite sides of line $AC$: the expression $4x+3y$ equals $\frac{603}{8}&gt;56$ at $A'$ and $0&lt;56$ at $B$. Also $C'$ and $A$ are on opposite sides of line $BC$ ($y&lt;0$ at $C'$), and $B'$ and $C$ are on opposite sides of line $AB$ ($12x-5y&lt;0$ at $B'$, $&gt;0$ at $C$). So $A'$, $C'$, $B'$ lie on the arcs $AC$, $CB$, $BA$ that do not contain the third vertex of the triangle, and the hexagon $AA'CC'BB'$ is convex. It consists of triangle $ABC$ and the three &ldquo;ears&rdquo; $AA'C$, $CC'B$, $BB'A$. Using $[PQR]=\frac12\left|\det(\overrightarrow{PQ},\overrightarrow{PR})\right|$:</p><ul class="ct-ul"><li><p>$[AA'C]=\frac12\left|\tfrac{41}{8}\cdot(-12)-\left(-\tfrac38\right)\cdot 9\right|=\frac{465}{16}$;</p></li><li><p>$[CC'B]=\frac12\cdot 14\cdot\frac{27}{8}=\frac{189}{8}$ (base $BC$, height $\frac{27}{8}$);</p></li><li><p>$[BB'A]=\frac12\left|-\tfrac{43}{40}\cdot 12-\tfrac{201}{40}\cdot 5\right|=\frac{1521}{80}$.</p></li></ul><p>Adding $[ABC]=\frac12\cdot14\cdot12=84$, the area is $84+\frac{465}{16}+\frac{189}{8}+\frac{1521}{80}=\frac{1557}{10}=155.7$, and the answer is $\boxed{156}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p11">
+<h3>Problem 11</h3>
+<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 31: Extremal Principle and Bounding Arguments</div>
+<div class="ct-text"><p>The integers from $1$ to $64$ are placed in some order into an $8\times 8$ grid of cells with one number in each cell. Let $a_{i,j}$ be the number placed in the cell in row $i$ and column $j$, and let $M$ be the sum of the absolute differences between adjacent cells. That is,
+\[M=\sum_{i=1}^{8}\sum_{j=1}^{7}\left(|a_{i,j+1}-a_{i,j}|+|a_{j+1,i}-a_{j,i}|\right).\]
+Find the remainder when the maximum possible value of $M$ is divided by $1000$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$896$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Threshold cuts)</h4>
+<div class="ct-fig"><img style="width:224px" src="/assets/contests/2026-27/aime-11_s1.svg" alt="Figure for the solution"></div>
+<p>Call two cells sharing a side <em>adjacent</em>; there are $8\cdot 7+8\cdot 7=112$ adjacent pairs, and $M$ is the sum of $|x-y|$ over them. For a set $S$ of cells, let $c(S)$ be the number of adjacent pairs with exactly one cell in $S$. Note that $c(S)$ equals $c$ of the complement of $S$.</p><p><strong>Step 1: slicing.</strong> For $t=1,2,\dots,63$ let $S_t$ be the set of cells whose number exceeds $t$, so $|S_t|=64-t$. For an adjacent pair with numbers $x&lt;y$, the pair is split by $S_t$ exactly when $x\le t&lt;y$, which happens for $y-x$ values of $t$. Summing over all pairs,
+\[M=\sum_{t=1}^{63}c(S_t).\]</p><p><strong>Step 2: bounds on $c(S)$.</strong> Let $|S|=k\le 32$. A cell has $4$ neighbours if it lies in the inner $6\times6$ block, $3$ if it is a non-corner border cell, and $2$ if it is a corner. If $e(S)$ is the number of adjacent pairs inside $S$, then
+\[c(S)=\sum_{v\in S}\deg v-2e(S).\]</p><ul class="ct-parts"><li><p><span class="ct-lbl">1.</span> Since $\deg v\le 4$, we get $c(S)\le 4k$.</p></li><li><p><span class="ct-lbl">2.</span> Let $i$ be the number of inner cells in $S$. Then $\sum_{v\in S}\deg v\le 3k+i$. Tile the inner $6\times 6$ block by $18$ dominoes. Its $i$ cells in $S$ lie in $18$ dominoes, so at least $i-18$ dominoes lie entirely in $S$, and each gives a pair inside $S$. So $e(S)\ge i-18$, and
+\[c(S)\le 3k+i-2\max(0,i-18)\le 3k+18.\]</p></li><li><p><span class="ct-lbl">3.</span> For $k=31$: colour the board like a chessboard, let $W$ be the set of white cells, and let $D$ be the set of cells where $S$ and $W$ disagree, that is, cells in exactly one of $S$ and $W$. Every adjacent pair has one black and one white cell. Such a pair is split by $S$ when neither of its cells is in $D$ or both are, and it is <em>not</em> split exactly when one cell is in $D$ and the other is not. So $112-c(S)=c(D)$. Since $|S|=31\neq 32=|W|$, $D$ is nonempty; and $D$ is not the whole board, because then $S$ would be the black set, of size $32$. The board is connected. It stays connected when any single adjacent pair is removed, because the two cells of that pair are still joined through the other two cells of a $2\times2$ square containing them. Since $D$ and its complement are both nonempty, $c(D)\ge1$. If $c(D)=1$, removing that one pair would leave no pair joining $D$ to its complement, a contradiction. So $c(D)\ge 2$. So $c(S)\le 110$.</p></li></ul><p>Let $g(k)=4k$ for $k\le 18$, $g(k)=3k+18$ for $19\le k\le 30$, $g(31)=110$, $g(32)=112$ (the total number of adjacent pairs). Then $c(S)\le g(\min(k,64-k))$ for every set of $k$ cells. Therefore
+\[M\le 2\sum_{k=1}^{31}g(k)+g(32)=2\Bigl(4\cdot171+\bigl(3\cdot 294+12\cdot18\bigr)+110\Bigr)+112=2(684+1098+110)+112=3896.\]</p><p><strong>Step 3: a matching example.</strong> Each colour class has $18$ inner cells, $12$ non-corner border cells and $2$ corners. Put $64,\dots,47$ on the black inner cells, $46,\dots,35$ on the black border cells and $34,33$ on the black corners. Then put $32,31$ on the white corners, $30,\dots,19$ on the white border cells and $18,\dots,1$ on the white inner cells (see the figure). Every adjacent pair is black&ndash;white with the larger number on black, so each black number is counted with sign $+$ once per neighbour and each white number with sign $-$:
+\[M=\bigl(4\cdot999+3\cdot486+2\cdot67\bigr)-\bigl(2\cdot63+3\cdot294+4\cdot171\bigr)=5588-1692=3896.\]
+So the maximum is $3896$, and the remainder is $\boxed{896}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p12">
+<h3>Problem 12</h3>
+<div class="ct-meta">Geometry &middot; LPS VII, Chapter 55: Three-Dimensional and Spatial Geometry</div>
+<div class="ct-text"><p>Triangle $\triangle ABC$ lies in plane $\mathcal{P}$ with $AB=6$, $AC=4$, and $\angle BAC=90^\circ$. Let $D$ be the reflection across $\overline{BC}$ of the centroid of $\triangle ABC$. Four spheres, all on the same side of $\mathcal{P}$, have radii $1$, $2$, $3$, and $r$ and are tangent to $\mathcal{P}$ at points $A$, $B$, $C$, and $D$, respectively. The four spheres are also each tangent to a second plane $\mathcal{T}$ and are all on the same side of $\mathcal{T}$. The value of $r$ can be written as $\frac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. Find $m+n$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$161$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (The radius is an affine function)</h4>
+<p>Use coordinates in which $\mathcal{P}$ is the plane $z=0$ and the spheres lie in $z&gt;0$. A sphere of radius $\rho$ tangent to $\mathcal P$ at $(x,y,0)$ has centre $(x,y,\rho)$. Write $\mathcal T$ as $\{X: \mathbf n\cdot X=h\}$ with a unit vector $\mathbf n=(n_1,n_2,n_3)$. A sphere is tangent to $\mathcal T$ when its centre is at distance $\rho$ from $\mathcal T$, so $\mathbf n\cdot(x,y,\rho)-h=\pm\rho$, where the sign tells on which side of $\mathcal T$ the sphere lies. All four spheres are on the same side, and replacing $(\mathbf n,h)$ by $(-\mathbf n,-h)$ if necessary we may take the sign $+$:
+\[n_1x+n_2y+n_3\rho-h=\rho\quad\Longrightarrow\quad (1-n_3)\rho=n_1x+n_2y-h.\]
+If $n_3=1$, then $\mathbf n=(0,0,1)$ and the relation forces $h=0$, so $\mathcal T=\mathcal P$, which is not allowed. Hence $n_3\ne1$, and the radius is an affine function of the point of tangency:
+\[\rho=\alpha x+\beta y+\gamma\quad\text{for some constants }\alpha,\beta,\gamma.\]</p><p>In $\mathcal P$ take $A=(0,0)$, $B=(6,0)$, $C=(0,4)$. The conditions $\rho(A)=1$, $\rho(B)=2$, $\rho(C)=3$ give $\gamma=1$, $\alpha=\frac16$, $\beta=\frac12$, so $\rho=1+\frac x6+\frac y2$.</p><p>The centroid is $G=\left(2,\frac43\right)$, and line $BC$ is $2x+3y=12$. At $G$, $2x+3y=8$. Reflecting across the line moves $G$ by $2\cdot\frac{12-8}{2^2+3^2}(2,3)=\frac{8}{13}(2,3)$, so
+\[D=\left(2+\tfrac{16}{13},\ \tfrac43+\tfrac{24}{13}\right)=\left(\tfrac{42}{13},\tfrac{124}{39}\right),\qquad r=\rho(D)=1+\frac{7}{13}+\frac{62}{39}=\frac{122}{39}.\]
+Since $122=2\cdot61$ and $39=3\cdot13$, the fraction is in lowest terms and $m+n=\boxed{161}$.</p><p>(The problem guarantees that such a plane exists. One can also check it directly: with $k=\alpha^2+\beta^2$, the unit vector with $n_3=\frac{k-1}{k+1}$, $n_1=(1-n_3)\alpha$, $n_2=(1-n_3)\beta$ and $h=-(1-n_3)\gamma$ works.)</p>
+<h4>Solution 2 (Distance to the line $\mathcal P\cap\mathcal T$)</h4>
+<div class="ct-fig"><img style="width:319px" src="/assets/contests/2026-27/aime-12_s2.svg" alt="Figure for the solution"></div>
+<p>If $\mathcal T$ were parallel to $\mathcal P$, every sphere tangent to both on the same sides would have radius half the distance between the planes, but the radii differ. So the planes meet in a line $\ell$ and form a wedge with some angle $\varphi$; all four spheres lie in the same part of space cut out by the two planes, because they are on the same side of each. A sphere tangent to both faces of the wedge has its centre on the plane that bisects the wedge. Look at the cross-section through the centre, perpendicular to $\ell$. If the sphere touches $\mathcal P$ at $X$, the right triangle formed by the centre, $X$ and the foot of the perpendicular from $X$ to $\ell$ has acute angle $\frac{\varphi}{2}$ at $\ell$, so
+\[\rho=\tan\tfrac{\varphi}{2}\cdot \operatorname{dist}(X,\ell).\]
+All tangency points lie in the same half-plane of $\mathcal P$ bounded by $\ell$, and on such a half-plane the distance to $\ell$ is an affine function. So $\rho$ is an affine function of $X$, and it respects weighted averages of points.</p><p>Hence $\rho(G)=\frac{\rho(A)+\rho(B)+\rho(C)}{3}=2$. Let $F$ be the foot of the perpendicular from $G$ to $BC$; it is the midpoint of $GD$, so $\rho(D)=2\rho(F)-\rho(G)$. Write $F=B+t\,\overrightarrow{BC}$, so that $\rho(F)=(1-t)\cdot2+t\cdot3=2+t$. With $A$ at the origin, $B=(6,0)$, $C=(0,4)$, $G=(2,\frac43)$:
+\[t=\frac{\overrightarrow{BG}\cdot\overrightarrow{BC}}{BC^2}=\frac{(-4)(-6)+\frac43\cdot4}{52}=\frac{88/3}{52}=\frac{22}{39}.\]
+So $\rho(F)=\frac{100}{39}$ and $r=\rho(D)=\frac{200}{39}-2=\frac{122}{39}$, giving $\boxed{161}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p13">
+<h3>Problem 13</h3>
+<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 35: Generating Functions and Algebraic Encoding</div>
+<div class="ct-text"><p>For each nonnegative integer $r$ less than $502$, define
+\[S_r=\sum_{n\ge 0}\binom{10000}{502n+r},\]
+where $\binom{10000}{n}$ is defined to be $0$ when $n&gt;10000$. That is, $S_r$ is the sum of all binomial coefficients of the form $\binom{10000}{k}$ for which $0\le k\le 10000$ and $k-r$ is a multiple of $502$. Find the number of integers in the list $S_0,S_1,\dots,S_{501}$ that are multiples of the prime number $503$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$39$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Lucas's theorem and Vandermonde)</h4>
+<p>Let $p=503$, a prime, so $502=p-1$. In base $p$, $10000=19\cdot 503+443$. Write $k=503k_1+k_0$ with $0\le k_0\le 502$. By Lucas's theorem,
+\[\binom{10000}{k}\equiv\binom{19}{k_1}\binom{443}{k_0}\pmod{503},\]
+and this is $0$ unless $k_1\le 19$ and $k_0\le 443$. (Every such pair gives $k\le 19\cdot503+443=10000$, so each pair $(k_1,k_0)$ corresponds to exactly one $k$ in range.)</p><p>Since $503\equiv 1\pmod{502}$, we have $k\equiv k_1+k_0\pmod{502}$. For the nonzero terms $0\le k_1+k_0\le 19+443=462&lt;502$, so for $0\le r\le 501$ the condition $k\equiv r\pmod{502}$ means exactly $k_1+k_0=r$. Hence, by Vandermonde's identity,
+\[S_r\equiv\sum_{k_1+k_0=r}\binom{19}{k_1}\binom{443}{k_0}=\binom{462}{r}\pmod{503}.\]
+For $0\le r\le 462$ the number $\binom{462}{r}=\frac{462!}{r!\,(462-r)!}$ is not divisible by the prime $503$, because $503$ does not divide $462!$. For $463\le r\le 501$ we have $\binom{462}{r}=0$, so $503\mid S_r$. The count is $501-463+1=\boxed{39}$.</p>
+<h4>Solution 2 (Folding a polynomial)</h4>
+<p>Work with polynomials whose coefficients are taken modulo $p=503$. Since $p\mid\binom{p}{j}$ for $0&lt;j&lt;p$, we have $(1+x)^{p}\equiv 1+x^{p}$. Therefore
+\[(1+x)^{10000}=\bigl((1+x)^{503}\bigr)^{19}(1+x)^{443}\equiv\left(1+x^{503}\right)^{19}(1+x)^{443}.\]
+Now <em>fold</em> polynomials modulo $x^{502}-1$: replace each $x^k$ by $x^{k \bmod 502}$. Folding is the same as taking the remainder on division by $x^{502}-1$, so it respects sums and products, and congruences of coefficients modulo $p$. Folding $(1+x)^{10000}$ gives $\sum_{r=0}^{501}S_r x^r$ by the definition of $S_r$. Folding the right-hand side, $x^{503}$ becomes $x$, so we get the fold of $(1+x)^{19}(1+x)^{443}=(1+x)^{462}$. This polynomial has degree $462&lt;502$, so it is already folded. Comparing coefficients,
+\[S_r\equiv\binom{462}{r}\pmod{503}\qquad(0\le r\le 501).\]
+For $r&gt;462$ we have $\binom{462}{r}=0$, so $503\mid S_r$. For $r\le 462$, $\binom{462}{r}=\frac{462!}{r!\,(462-r)!}$ is not divisible by $503$, because the prime $503$ does not divide $462!$. So $503\mid S_r$ exactly for $463\le r\le 501$, which gives $\boxed{39}$ values.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p14">
+<h3>Problem 14</h3>
+<div class="ct-meta">Geometry &middot; LPS VII, Chapter 40: Vector Geometry and Affine Structure</div>
+<div class="ct-text"><p>In an equiangular pentagon, the sum of the squares of the side lengths equals $308$, and the sum of the squares of the diagonal lengths equals $800$. The square of the perimeter of the pentagon can be expressed as $m\sqrt{n}$, where $m$ and $n$ are positive integers and $n$ is not divisible by the square of any prime. Find $m+n$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$681$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Dot products of side vectors)</h4>
+<div class="ct-fig"><img style="width:260px" src="/assets/contests/2026-27/aime-14_s1.svg" alt="Figure for the solution"></div>
+<p>Walk around the pentagon and let $\mathbf v_1,\dots,\mathbf v_5$ be the side vectors, with $|\mathbf v_k|=s_k$ (indices modulo $5$). Each interior angle is $108^\circ$, so each side vector is the previous one turned through $72^\circ$. Thus the angle between $\mathbf v_j$ and $\mathbf v_k$ is $72^\circ$ when $k-j\equiv\pm1\pmod 5$ and $144^\circ$ when $k-j\equiv\pm2\pmod 5$. Let
+\[c_1=\cos72^\circ=\tfrac{\sqrt5-1}{4},\qquad \cos144^\circ=-c_2,\quad c_2=\tfrac{\sqrt5+1}{4},\]
+and define the cyclic sums
+\[Q=\sum s_k^2=308,\qquad U=\sum s_ks_{k+1},\qquad V=\sum s_ks_{k+2}.\]
+<strong>Diagonals.</strong> The five diagonals are $\mathbf v_k+\mathbf v_{k+1}$, so $d_k^2=s_k^2+s_{k+1}^2+2c_1s_ks_{k+1}$. Summing, $800=2Q+2c_1U$, so $2c_1U=184$ and $U=\frac{92}{c_1}=92(\sqrt5+1)$.</p><p><strong>Closing up.</strong> Since $\mathbf v_1+\dots+\mathbf v_5=\mathbf 0$, its squared length is $0$. Each of the $10$ pairs $\{j,k\}$ has $k-j\equiv\pm1$ or $\pm2$, so
+\[0=Q+2c_1U-2c_2V=308+184-2c_2V\quad\Longrightarrow\quad V=\frac{246}{c_2}=246(\sqrt5-1).\]
+<strong>Perimeter.</strong>
+\[\Bigl(\sum s_k\Bigr)^2=Q+2U+2V=308+184(\sqrt5+1)+492(\sqrt5-1)=676\sqrt5.\]
+So $m=676$, $n=5$, and $m+n=\boxed{681}$.</p>
+<h4>Solution 2 (Splitting the side lengths into frequencies)</h4>
+<p>Let $\omega=e^{2\pi i/5}$ and take the $k$-th side as the complex number $s_k\omega^{k}$ ($k=0,\dots,4$), turning $72^\circ$ each time. The pentagon closes, so $\sum s_k\omega^k=0$, and taking conjugates, $\sum s_k\omega^{-k}=0$.</p><p>Every real sequence $(s_0,\dots,s_4)$ can be written uniquely as
+\[s_k=\alpha+\beta\omega^{k}+\bar\beta\omega^{-k}+\gamma\omega^{2k}+\bar\gamma\omega^{-2k},\qquad \alpha=\tfrac15\textstyle\sum s_k,\ \beta=\tfrac15\sum s_k\omega^{-k},\ \gamma=\tfrac15\sum s_k\omega^{-2k}.\]
+This follows from $\sum_{k}\omega^{jk}=0$ for $j\not\equiv0\pmod 5$. The closing condition says exactly $\beta=0$. So $s_k=\alpha+\gamma\omega^{2k}+\bar\gamma\omega^{-2k}$, and the perimeter is $\sum s_k=5\alpha$.</p><p>Multiply out $s_ks_{k+j}$ and sum over $k$. Every term with a nonzero total power of $\omega$ sums to $0$, which leaves
+\[\sum_k s_ks_{k+j}=5\alpha^2+5|\gamma|^2\left(\omega^{2j}+\omega^{-2j}\right)=5\alpha^2+10|\gamma|^2\cos\tfrac{4\pi j}{5}.\]
+For $j=0$ this gives $5\alpha^2+10|\gamma|^2=308$. For $j=1$ we need $U=\sum s_ks_{k+1}$. The diagonal that skips the vertex between sides $k$ and $k+1$ is the sum of those two side vectors, whose directions differ by $72^\circ$, so $d_k^2=s_k^2+s_{k+1}^2+2\cos72^\circ\, s_ks_{k+1}$. Summing over the five diagonals, $800=2\cdot308+2\cos72^\circ\,U$, so $U=\frac{92}{\cos72^\circ}=92(\sqrt5+1)$, using $\cos72^\circ=\frac{\sqrt5-1}{4}$. With $c_2=-\cos144^\circ=\frac{\sqrt5+1}{4}$:
+\[92(\sqrt5+1)=5\alpha^2-c_2\left(308-5\alpha^2\right)=5\alpha^2\cdot\frac{5+\sqrt5}{4}-77(\sqrt5+1).\]
+Since $5+\sqrt5=\sqrt5(\sqrt5+1)$, dividing by $\sqrt5+1$ gives $\frac{5\sqrt5}{4}\alpha^2=169$, so $\alpha^2=\frac{676}{5\sqrt5}$ and
+\[\Bigl(\sum s_k\Bigr)^2=25\alpha^2=\frac{5\cdot 676}{\sqrt5}=676\sqrt5,\]
+giving $\boxed{681}$. This also shows that such a pentagon exists. We have $10|\gamma|^2=308-5\alpha^2\approx5.7&gt;0$, and choosing any $\gamma$ with this modulus gives side lengths at least $\alpha-2|\gamma|\approx 7.78-1.51&gt;0$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p15">
+<h3>Problem 15</h3>
+<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 23: Recurrence and Combinatorial Construction</div>
+<div class="ct-text"><p>Let $a$, $b$, and $n$ be positive integers with both $a$ and $b$ greater than or equal to $2$ and less than or equal to $2n$. Define an $a\times b$ <em>cell loop</em> in a $2n\times 2n$ grid of cells to be the $2a+2b-4$ cells that surround an $(a-2)\times(b-2)$ (possibly empty) rectangle of cells in the grid. For example, the following diagram shows a way to partition a $6\times 6$ grid of cells into $4$ cell loops.</p><div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/aime-15.svg" alt="Figure for AIME I, Problem 15"></div><p>Find the number of ways to partition a $10\times 10$ grid of cells into $5$ cell loops so that every cell of the grid belongs to exactly one cell loop.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$83$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Diagonals force a Catalan recursion)</h4>
+<div class="ct-fig"><img style="width:268px" src="/assets/contests/2026-27/aime-15_s1.svg" alt="Figure for the solution"></div>
+<p>Number the rows from the top and the columns from the left. (In the figure, which shows one of the partitions counted below, the cells of the main diagonal $D_0$ and of the anti-diagonal $A_0$ lie along the two dashed lines; each loop meets each of them in exactly two cells. Thick segments mark the empty interiors of the $2\times b$ loops, as in the statement's figure.) A loop is the ring of border cells of a rectangle of cells, called its <em>box</em>: rows $r$ to $R$, columns $c$ to $C$, with $R-r\ge1$ and $C-c\ge1$. The cells strictly inside the ring form the <em>interior</em> of the box.</p><p><strong>Fact 1 (diagonals).</strong> A loop contains at most two cells of any diagonal $\{(i,i+k)\}$ and at most two cells of any anti-diagonal $\{(i,k-i)\}$. Suppose three cells of a diagonal, in rows $i_1&lt;i_2&lt;i_3$, lie in a box. Then the middle one is strictly between the others in both its row and its column, so it lies in the interior and not on the ring. The same argument works for anti-diagonals.</p><p><strong>Fact 2 (nesting).</strong> Suppose a loop $L'$ in a partition has a cell in the interior of the box of another loop $L$. Then all of $L'$ lies in that interior. Indeed, $L'$ can be traversed through side-adjacent cells, and any such path from the interior to the outside of the box passes through a cell of $L$. Consequently the box of $L$ is exactly $L$ together with the loops lying in its interior, and every other loop is either inside that interior or disjoint from the box.</p><p><strong>Lower bound.</strong> Consider a $2p\times 2q$ rectangle with $p\le q$, partitioned into loops. Each of the diagonals $D_k=\{(i,i+k):1\le i\le 2p\}$ for $k=0,\dots,2q-2p$ and each of the anti-diagonals $A_k=\{(i,2p+1+k-i):1\le i\le2p\}$ has $2p$ cells, and each loop covers at most $2$ of them. So at least $p$ loops are needed. In a partition with exactly $p$ loops (call it <em>minimal</em>), every loop meets every $D_k$ and every $A_k$ in exactly $2$ cells. By Fact 2, the box of any loop then contains exactly $2\times(\text{number of loops in the box})$ cells of each $D_k$ and of each $A_k$, the same number for every $k$.</p><p><strong>Key Lemma.</strong> In a minimal partition of a $2p\times2q$ rectangle ($p\le q$), the box of the loop containing the top-left cell spans the full width, or, only when $p=q$, the full height.</p><p><em>Proof.</em> Let the box be rows $1$ to $R$ and columns $1$ to $C$. It contains $\min(R,C)$ cells of $D_0$. The cells of $A_k$ in it are those with $\max(1,2p+1+k-C)\le i\le R$.</p><p>If $p&lt;q$, put $K=2q-2p\ge2$ and suppose $C&lt;2q$. Then $2q+1-C\ge2$, so the box contains $\max(0,R+C-2q)$ cells of $A_K$ and $\max\bigl(0,R+1-\max(1,2p+1-C)\bigr)$ cells of $A_0$. Both counts equal twice the number of loops in the box, which is at least $2$ (the box contains $L$), so the expressions inside the outer maxima are these counts. They are equal, so $\max(1,2p+1-C)=2q+1-C$. That is impossible, since $2q+1-C$ exceeds both $1$ and $2p+1-C$. Hence $C=2q$.</p><p>If $p=q=n$ and $C&lt;2n$, the box contains $\max(0,R+C-2n)$ cells of $A_0$ and $\min(R,C)$ cells of $D_0$. Both counts equal twice the number of loops in the box, which is at least $2$, so the first is $R+C-2n$. Equality gives $\max(R,C)=2n$, so $R=2n$. $\square$</p><p><strong>Rectangles.</strong> Let $F(p,q)$ be the number of minimal partitions of a $2p\times 2q$ rectangle (height $2p\le$ width $2q$), with $F(0,q)=1$. Let $p&lt;q$ and let $L$ be the loop at the top-left cell. By the lemma its box is rows $1$ to $R$ across the full width. The box contains $R$ cells of $D_0$, so $R$ is even, say $R=2j$ with $1\le j\le p$. The interior is a $(2j-2)\times(2q-2)$ rectangle, filled by loops (Fact 2), so it needs at least $j-1$ of them. The rest of the grid is the $(2p-2j)\times 2q$ rectangle below the box, which needs at least $p-j$ loops. Since $1+(j-1)+(p-j)=p$, both pieces are filled minimally. Conversely, any minimal fillings of the two pieces together with $L$ form a minimal partition. Both pieces again have height less than width, so
+\[F(p,q)=\sum_{j=1}^{p}F(j-1,q-1)\,F(p-j,q)\qquad(p&lt;q).\]
+This is the Catalan recursion. By induction on $p$, $F(p,q)=C_p$ for all $q&gt;p$, where $C_0,C_1,\dots=1,1,2,5,14,42,\dots$ are the Catalan numbers, with $C_p=\sum_{j=1}^{p}C_{j-1}C_{p-j}$.</p><p><strong>The square.</strong> Let $G(n)$ be the number of minimal partitions of the $2n\times 2n$ square; the problem asks for $G(5)$, since $5$ loops is exactly the minimum for $10\times10$. By the lemma, the box of the top-left loop $L$ spans the full width or the full height.</p><ul class="ct-ul"><li><p>Both: $L$ is the outer ring and its interior is a $(2n-2)\times(2n-2)$ square filled minimally, giving $G(n-1)$ partitions.</p></li><li><p>Full width only: the box is rows $1$ to $2j$ with $1\le j\le n-1$. As above, the interior $(2j-2)\times(2n-2)$ and the part below, $(2n-2j)\times 2n$, are filled minimally, giving $\sum_{j=1}^{n-1}C_{j-1}C_{n-j}=C_n-C_{n-1}$ partitions.</p></li><li><p>Full height only: by symmetry (transpose the grid), another $C_n-C_{n-1}$.</p></li></ul><p>Hence $G(n)=G(n-1)+2(C_n-C_{n-1})$ with $G(1)=1$, so $G(n)=2C_n-1$. (This gives $G(2)=3$ and $G(3)=9$; the $6\times6$ example in the statement uses $4$ loops, which is not minimal.) For the $10\times 10$ grid the answer is
+\[G(5)=2\cdot 42-1=\boxed{83}.\]</p>
+</div></details>
+</section>
+<h2 class="ct-group" id="aime-ii">AIME II</h2>
+<section class="ct-problem" id="p16">
+<h3>Problem 1</h3>
+<div class="ct-meta">Number Theory &middot; LPS VI, Chapter 53: Sequences, Series, and Recursive Patterns</div>
+<div class="ct-text"><p>Find the sum of the $10$th terms of all arithmetic sequences of integers that have first term equal to $4$ and include both $24$ and $34$ as terms.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$178$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (The common difference divides both gaps)</h4>
+<p>Let $d$ be the common difference, so the terms are $4,\ 4+d,\ 4+2d,\dots$, that is, $4+jd$ for $j=0,1,2,\dots$. Since all terms are integers, $d=(4+d)-4$ is an integer.</p><p>The number $24$ is a term, so $jd=20$ for some integer $j\ge 0$. Then $j\ne 0$, and $d=20/j$ with $j$ a positive integer, so $d$ is a <em>positive</em> divisor of $20$. In the same way, $34$ being a term means $d$ is a positive divisor of $30$. Hence $d$ is a positive divisor of $\gcd(20,30)=10$, so $d\in\{1,2,5,10\}$. Conversely, each of these values works: $24=4+\tfrac{20}{d}\cdot d$ and $34=4+\tfrac{30}{d}\cdot d$ with $\tfrac{20}{d}$, $\tfrac{30}{d}$ positive integers.</p><p>The $10$th term is $4+9d$, so the required sum is
+\[(4+9)+(4+18)+(4+45)+(4+90)=4\cdot 4+9(1+2+5+10)=16+162=\boxed{178}.\]</p>
+<h4>Solution 2 (Where do 24 and 34 sit?)</h4>
+<p>Let $d$ be the (integer) common difference. Write $24=4+jd$ and $34=4+kd$, where $j$ and $k$ count the steps from the first term; they are positive integers, since $24\ne4$ and $34\ne4$. Then $jd=20$ and $kd=30$, so
+\[\frac kj=\frac{30}{20}=\frac32,\qquad\text{i.e.}\qquad 2k=3j .\]
+Hence $j$ is even, say $j=2m$, and then $k=3m$, with $m$ a positive integer. Now $d=\frac{20}{j}=\frac{10}{m}$ must be an integer, so $m\mid 10$ and $m\in\{1,2,5,10\}$. Conversely each such $m$ gives a valid sequence: with $d=\frac{10}m$, the number $24$ is term number $2m+1$ and $34$ is term number $3m+1$.</p><p>The $10$th term is $4+9d=4+\frac{90}{m}$, so the sum is
+\[4\cdot4+90\Bigl(1+\frac12+\frac15+\frac1{10}\Bigr)=16+90\cdot\frac{18}{10}=16+162=\boxed{178}.\]</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p17">
+<h3>Problem 2</h3>
+<div class="ct-meta">Combinatorics &middot; LPS VI, Chapter 42: Recursion, Paths, and Dynamic Counting</div>
+<div class="ct-text"><p>The figure below shows a grid of $10$ squares in a row. Each square has a diagonal connecting its lower left vertex to its upper right vertex. A bug moves along the line segments from vertex to vertex, never traversing the same segment twice and never moving from right to left along a horizontal or diagonal segment. Let $N$ be the number of paths the bug can take from the lower left corner ($A$) to the upper right corner ($B$). One such path from $A$ to $B$ is shown by the thick line segments in the figure. Find $\sqrt{N}$.</p><div class="ct-fig"><img style="width:319px" src="/assets/contests/2026-27/aime-17.svg" alt="Figure for AIME II, Problem 2"></div></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$243$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (One choice per square)</h4>
+<p>Put the strip in coordinates with $A=(0,0)$ and $B=(10,1)$; the vertical segments lie on the lines $x=0,1,\dots,10$. A vertical move does not change the $x$-coordinate of the bug, and every horizontal or diagonal move increases it by exactly $1$ (moves from right to left are forbidden). Hence the $x$-coordinate never decreases, and to go from $x=0$ to $x=10$ the bug passes from the line $x=k-1$ to the line $x=k$ exactly once for each $k=1,2,\dots,10$. It does so along one of the three segments of the $k$th square that go to the right: the bottom edge, the top edge, or the diagonal.</p><p>We claim that a path is determined by these ten choices, and that every list of ten choices gives a path. While the bug is on the line $x=k$, the only segment available to it is the vertical segment of that line, and it may use that segment at most once. So on each line $x=k$ the bug either stays at the vertex where it arrived, or moves once along the vertical segment. The vertex where it arrives on the line $x=k$ is $A$ (for $k=0$) or the right end of the $k$th crossing segment; the vertex where it must leave is the left end of the $(k+1)$st crossing segment (or $B$, for $k=10$). If these two vertices coincide the bug stays; otherwise it must use the vertical segment, which is allowed. Thus each of the $3^{10}$ lists of choices gives exactly one valid path, and different lists give different paths.</p><p>Therefore $N=3^{10}$ and $\sqrt N=3^5=\boxed{243}$.</p>
+<h4>Solution 2 (A recursion on the vertical lines)</h4>
+<p>Call the vertices on the line $x=k$ the bottom vertex $b_k$ and the top vertex $t_k$ (so $A=b_0$ and $B=t_{10}$). Since a horizontal or diagonal move increases the $x$-coordinate and nothing decreases it, a path visits the line $x=k$ during one unbroken stretch of time; there it can only use the vertical segment $b_kt_k$, at most once.</p><p>For $k\ge 0$ let $p_k$ be the number of valid paths from $A$ that have just arrived at $b_k$ from the left (for $k=0$: the empty path at $A$), and $q_k$ the number that have just arrived at $t_k$ from the left. From such a path the bug may stay where it is or use the vertical segment once. Hence the number of valid paths from $A$ that end at $b_k$, ready to leave the line $x=k$, is $p_k+q_k$ (arrive at $b_k$ and stay, or arrive at $t_k$ and go down), and the number that end at $t_k$ is also $p_k+q_k$. Write $s_k=p_k+q_k$.</p><p>To reach $b_{k+1}$ from the left the bug must use the bottom edge from $b_k$; to reach $t_{k+1}$ it uses the top edge from $t_k$ or the diagonal from $b_k$. Hence
+\[p_{k+1}=s_k,\qquad q_{k+1}=s_k+s_k=2s_k,\qquad s_{k+1}=3s_k.\]
+With $p_0=1$, $q_0=0$ we get $s_0=1$ and $s_k=3^k$. The paths from $A$ to $B$ are the paths ending at $t_{10}$, so $N=s_{10}=3^{10}$ and $\sqrt N=\boxed{243}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p18">
+<h3>Problem 3</h3>
+<div class="ct-meta">Geometry &middot; LPS VI, Chapter 32: Area by Measurement and Decomposition</div>
+<div class="ct-text"><p>Let $ABCDE$ be a nonconvex pentagon with internal angles $\angle A=\angle E=90^\circ$ and $\angle B=\angle D=45^\circ$. Suppose that $DE&lt;AB$, $AE=20$, $BC=14\sqrt{2}$, and points $B$, $C$, and $D$ lie on the same side of line $AE$. Suppose further that $AB$ is an integer with $AB&lt;2026$ and the area of pentagon $ABCDE$ is an integer multiple of $16$. Find the number of possible values of $AB$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$503$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Coordinates from the turning angles)</h4>
+<p>Let $a=AB$. The interior angles add up to $540^\circ$, so $\angle C=540^\circ-90^\circ-90^\circ-45^\circ-45^\circ=270^\circ$: the pentagon is reflex at $C$.</p><p>Place $A=(0,0)$, $B=(a,0)$ and $E=(0,20)$ (this is possible because $\angle A=90^\circ$; reflect if necessary). Near $A$ the interior of the pentagon lies above $AB$, so the boundary $A\to B\to C\to D\to E\to A$ is traversed counterclockwise. When we walk counterclockwise around a polygon, at a vertex with interior angle $\theta$ our direction turns left by $180^\circ-\theta$ (a negative left turn, i.e. a right turn, at a reflex vertex). Starting with direction $0^\circ$ along $AB$, the directions of the sides are therefore
+\[AB:\ 0^\circ,\quad BC:\ 0^\circ+135^\circ=135^\circ,\quad CD:\ 135^\circ-90^\circ=45^\circ,\quad DE:\ 45^\circ+135^\circ=180^\circ,\quad EA:\ 270^\circ .\]
+Since $BC=14\sqrt2$ in direction $135^\circ$, $C=(a-14,\,14)$. Side $DE$ is horizontal and ends at $E=(0,20)$, so $D$ has $y$-coordinate $20$; going from $C$ in direction $45^\circ$ we reach the line $y=20$ after rising $6$, so $D=(a-8,\,20)$ and $DE=a-8$. (In particular $DE&lt;AB$ holds automatically.)</p><p>The condition that $B,C,D$ lie on the same side of line $AE$ (the $y$-axis) means $a-14&gt;0$, so $a\ge 15$; then $D$ is also on that side, and the pentagon is a $20\times a$ rectangle with a notch cut from its right side, a simple pentagon with the required angles. By the shoelace formula with vertices $(0,0),(a,0),(a-14,14),(a-8,20),(0,20)$,
+\[2[ABCDE]=0+14a+\bigl(20(a-14)-14(a-8)\bigr)+20(a-8)+0=40a-328,\]
+so $[ABCDE]=20a-164$.</p><p>Now $20a-164=16(a-10)+4(a-1)$, which is a multiple of $16$ exactly when $4\mid a-1$. The integers $a$ with $15\le a\le 2025$ and $a\equiv 1\pmod 4$ are $17,21,\dots,2025$; there are $\frac{2025-17}{4}+1=\boxed{503}$ of them.</p>
+<h4>Solution 2 (Rectangle plus two right isosceles triangles)</h4>
+<div class="ct-fig"><img style="width:361px" src="/assets/contests/2026-27/aime-18_s2.svg" alt="Figure for the solution"></div>
+<p>Let $a=AB$. The interior angles add up to $540^\circ$, so the angle at $C$ is $270^\circ$, and $C$ is the only reflex vertex. Since $AB$ and $ED$ are both perpendicular to $AE$, they are parallel, at distance $AE=20$. The angles at $B$ and $D$ are acute ($45^\circ$), so the feet of the perpendiculars from $C$ to the lines $AB$ and $ED$ lie on the rays $BA$ and $DE$. Call these feet $F$ and $G$. The two perpendiculars are the same line (the line through $C$ perpendicular to both parallel lines), so $F$, $C$, $G$ are collinear and $AFGE$ is a rectangle with $FG=20$.</p><p>In triangle $CFB$ the angle at $F$ is $90^\circ$ and the angle at $B$ is $45^\circ$, so it is a right isosceles triangle with hypotenuse $BC=14\sqrt2$. Hence $FB=FC=14$. Near $B$ the pentagon lies on the same side of $AB$ as $E$, so $C$ is on that side, at distance $14&lt;20$ from $AB$. Thus $C$ lies strictly between the two parallel lines, and $CG=20-14=6$. Triangle $CGD$ has a right angle at $G$ and a $45^\circ$ angle at $D$, so it is also right isosceles: $GD=GC=6$.</p><p><em>Using the side condition.</em> $F$ lies on ray $BA$ with $BF=14$, and $AF$ equals the distance from $C$ to line $AE$, measured on the side of $B$. So $C$ is on the same side of $AE$ as $B$ exactly when $F$ lies strictly inside segment $AB$, i.e. when $a&gt;14$; then $AF=EG=a-14$. Moreover, $D$ is on that side as well, so $G$ lies between $E$ and $D$ and $ED=(a-14)+6=a-8$. (If $E$ were between $D$ and $G$, then $D$ would be on the other side of $AE$.) So $15\le a\le 2025$.</p><p>The pentagon is the union of the rectangle $AFGE$, of size $(a-14)\times 20$, and the triangles $CFB$ and $CGD$, and these three pieces do not overlap. Hence
+\[[ABCDE]=20(a-14)+\tfrac12\cdot 14^2+\tfrac12\cdot 6^2=20a-280+98+18=20a-164.\]
+Now $20a-164=16(a-10)+4(a-1)$ is divisible by $16$ if and only if $a\equiv 1\pmod 4$. This gives the values $a=17,21,\dots,2025$, and there are $\frac{2025-17}{4}+1=\boxed{503}$ of them.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p19">
+<h3>Problem 4</h3>
+<div class="ct-meta">Number Theory &middot; LPS VI, Chapter 27: Base Systems and Positional Arithmetic</div>
+<div class="ct-text"><p>For each positive integer $n$ let $f(n)$ be the value of the base-ten numeral $n$ viewed in base $b$, where $b$ is the least integer greater than the greatest digit in $n$. For example, if $n=72$, then $b=8$, and $72$ as a numeral in base $8$ equals $7\cdot 8+2=58$; therefore $f(72)=58$. Find the number of positive integers $n$ less than $1000$ such that $f(n)=n$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$279$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Only base ten can work)</h4>
+<p>If $n$ has one digit $d$, then $b=d+1&gt;d$ and $f(n)=d=n$. So all of $1,2,\dots,9$ work: $9$ numbers.</p><p>Now let $n$ have $k+1\ge 2$ digits, $n=\sum_{i=0}^{k} d_i10^i$ with $d_k\ge1$, and let $b$ be one more than the largest digit, so $b\le 10$ and $f(n)=\sum_{i=0}^{k} d_i b^i$. Then
+\[n-f(n)=\sum_{i=0}^{k} d_i\,(10^i-b^i).\]
+Every term is nonnegative. If $b&lt;10$, the term $d_k(10^k-b^k)$ is positive (as $d_k\ge 1$, $k\ge 1$), so $f(n)&lt;n$. If $b=10$, then $f(n)=n$. Hence a number with at least two digits works if and only if $b=10$, that is, if and only if it has a digit $9$.</p><p>Among the $990$ numbers from $10$ to $999$, those with no digit $9$ number $8\cdot 9=72$ (two digits) plus $8\cdot 9\cdot 9=648$ (three digits), so $990-720=270$ of them contain a $9$. The answer is $9+270=\boxed{279}$.</p><p><em>Remark (a quicker count).</em> Write every $n&lt;1000$ as a three-digit string with leading zeros. Exactly $1000-9^3=271$ of the strings $000$&ndash;$999$ contain a $9$; these are exactly the $n$ with $b=10$, the one-digit number $9$ included. The solutions are these $271$ numbers together with $1,\dots,8$: $271+8=279$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p20">
+<h3>Problem 5</h3>
+<div class="ct-meta">Combinatorics &middot; LPS VI, Chapter 14: Permutations, Combinations, and Binomial Structure</div>
+<div class="ct-text"><p>An urn contains $n$ marbles. Each marble is either red or blue, and there are at least $7$ marbles of each color. When $7$ marbles are drawn randomly from the urn without replacement, the probability that exactly $4$ of them are red equals the probability that exactly $5$ of them are red. Find the sum of the five least values of $n$ for which this is possible.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$190$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Ratios of binomial coefficients)</h4>
+<p>Let the urn hold $r$ red and $b$ blue marbles, $r,b\ge 7$, $n=r+b$. All $\binom n7$ draws are equally likely, so the condition is
+\[\binom r4\binom b3=\binom r5\binom b2 .\]
+Since $\binom r5=\binom r4\cdot\frac{r-4}{5}$ and $\binom b3=\binom b2\cdot\frac{b-2}{3}$, and $\binom r4\binom b2&gt;0$, the condition is equivalent to
+\[\frac{b-2}{3}=\frac{r-4}{5}\iff 5b-10=3r-12\iff 3r=5b+2 .\]
+Then $5b+2\equiv 0\pmod 3$, i.e. $2b+2\equiv 0$, i.e. $b\equiv 2\pmod 3$. Writing $b=3j+2$ gives $r=5j+4$ and $n=8j+6$. The condition $b\ge7$ means $j\ge2$, and then $r\ge 14\ge 7$ too. So the possible values of $n$ are $8j+6$ for $j\ge 2$, and the five least are $22,30,38,46,54$, with sum $\boxed{190}$.</p>
+<h4>Solution 2 (Double counting one-marble swaps)</h4>
+<p>Let the urn hold $r$ red and $b$ blue marbles ($r,b\ge7$). Let $\mathcal X$ be the set of $7$-marble handfuls with $4$ red and $3$ blue marbles, and $\mathcal Y$ the set of handfuls with $5$ red and $2$ blue. The two probabilities are $|\mathcal X|/\binom n7$ and $|\mathcal Y|/\binom n7$, so the condition is $|\mathcal X|=|\mathcal Y|$.</p><p>Count the pairs $(X,Y)$ with $X\in\mathcal X$, $Y\in\mathcal Y$ such that $Y$ is obtained from $X$ by replacing one blue marble with one red marble. Starting from $X$, we choose which of its $3$ blue marbles to remove and which of the $r-4$ red marbles outside $X$ to add: $3(r-4)$ pairs. Starting from $Y$, we choose which of its $5$ red marbles to remove and which of the $b-2$ blue marbles outside $Y$ to add back: $5(b-2)$ pairs. Hence
+\[|\mathcal X|\cdot 3(r-4)=|\mathcal Y|\cdot 5(b-2).\]
+Both sets are nonempty (as $r,b\ge 7$), so $|\mathcal X|=|\mathcal Y|$ holds if and only if $3(r-4)=5(b-2)$, i.e. $3r=5b+2$.</p><p>Since $3\mid 5b+2$, $b\equiv 2\pmod 3$; the solutions with $b\ge 7$ are $(b,r)=(8,14),(11,19),(14,24),(17,29),(20,34),\dots$, with $n=r+b=22,30,38,46,54,\dots$ increasing by $8$ each time. The sum of the five least values is $22+30+38+46+54=\boxed{190}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p21">
+<h3>Problem 6</h3>
+<div class="ct-meta">Algebra &middot; LPS VII, Chapter 36: Coordinate Geometry and Analytic Representation</div>
+<div class="ct-text"><p>Find the sum of all real numbers $r$ such that there is at least one point where the circle with radius $r$ centered at $(4,39)$ is tangent to the parabola with equation $2y=x^2-8x+12$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$50$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (The radius is along the normal)</h4>
+<div class="ct-fig"><img style="width:339px" src="/assets/contests/2026-27/aime-21_s1.svg" alt="Figure for the solution"></div>
+<p>Shift coordinates by $u=x-4$. The parabola is $y=\frac{(x-4)^2-4}{2}=\frac{u^2}{2}-2$, its points are $P=(4+u,\ \tfrac{u^2}2-2)$, and the centre is $O=(4,39)$.</p><p>The tangent line to $y=\frac{u^2}2-2$ at the point with parameter $u_0$ has slope $u_0$. (Indeed the line $y=u_0u+c$ meets the parabola where $\frac{u^2}{2}-u_0u-2-c=0$, and it touches it, giving a double root at $u=u_0$, exactly for the line through that point with slope $u_0$.) So $(1,u_0)$ is a direction vector of the tangent at $P$.</p><p>A circle centred at $O$ is tangent to the parabola at $P$ exactly when it passes through $P$ and its tangent at $P$, which is perpendicular to $OP$, is the parabola's tangent; that is, when $\overrightarrow{OP}\perp(1,u_0)$. Here $\overrightarrow{OP}=(u_0,\ \tfrac{u_0^2}{2}-41)$, so the condition is
+\[u_0+u_0\Bigl(\frac{u_0^2}{2}-41\Bigr)=u_0\Bigl(\frac{u_0^2}{2}-40\Bigr)=0 \iff u_0=0\ \text{ or }\ u_0^2=80 .\]
+For $u_0=0$, $P=(4,-2)$ and $r=OP=41$. For $u_0=\pm4\sqrt5$, $P=(4\pm4\sqrt5,\,38)$ and $r^2=80+1^2=81$, so $r=9$ (one circle, tangent at two symmetric points). The sum of all possible $r$ is $41+9=\boxed{50}$.</p>
+<h4>Solution 2 (A double root of the intersection equation)</h4>
+<p>Again let $u=x-4$, so the parabola consists of the points $(4+u,\ \frac{u^2}{2}-2)$, $u\in\mathbb R$. Such a point lies on the circle $(x-4)^2+(y-39)^2=r^2$ exactly when
+\[g(u)=u^2+\Bigl(\frac{u^2}{2}-41\Bigr)^2-r^2=0 .\]
+The circle is tangent to the parabola at the point with parameter $u_0$ exactly when $u_0$ is a root of $g$ of multiplicity at least $2$ (the curves meet there and have the same tangent line).</p><p>Now $g(u)=h(u^2)$ with
+\[h(Y)=Y+\Bigl(\frac Y2-41\Bigr)^2-r^2=\frac{Y^2}{4}-40Y+1681-r^2 .\]</p><ul class="ct-ul"><li><p>At $u_0\ne 0$: near $u_0$ the map $u\mapsto u^2$ has nonzero slope, so $u_0$ is a double root of $g$ exactly when $Y_0=u_0^2&gt;0$ is a double root of $h$. The discriminant condition $40^2-(1681-r^2)=0$ gives $r^2=81$, and then $Y_0=80&gt;0$, as needed. So $r=9$.</p></li><li><p>At $u_0=0$: $g$ is even, so $0$ is automatically a root of even multiplicity whenever $g(0)=0$, i.e. $h(0)=1681-r^2=0$. So $r=41$.</p></li></ul><p>The possible radii are $9$ and $41$, with sum $\boxed{50}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p22">
+<h3>Problem 7</h3>
+<div class="ct-meta">Combinatorics &middot; LPS VI, Chapter 38: Probability and Expected Value</div>
+<div class="ct-text"><p>A standard fair six-sided die is rolled repeatedly. Each time the die reads $1$ or $2$, Alice gets a coin; each time it reads $3$ or $4$, Bob gets a coin; and each time it reads $5$ or $6$, Carol gets a coin. The probability that Alice and Bob each receive at least two coins before Carol receives any coins can be written as $\frac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. Find $100m+n$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$754$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Inclusion-exclusion on two races)</h4>
+<p>Each roll is an A-roll (Alice), a B-roll or a C-roll, each with probability $\frac13$, independently. Let $X$ and $Y$ be the numbers of A-rolls and B-rolls before the first C-roll (with probability $1$ a C-roll eventually occurs). We want $P(X\ge2,\ Y\ge2)$. By inclusion-exclusion,
+\[P(X\ge 2,\,Y\ge 2)=1-P(X\le1)-P(Y\le1)+P(X\le1,\,Y\le1).\]
+To find the distribution of $X$, ignore the B-rolls: among A-rolls and C-rolls, each is equally likely to be A or C, independently. So $P(X=k)=\left(\frac12\right)^{k+1}$ and $P(X\le1)=\frac12+\frac14=\frac34$; similarly $P(Y\le1)=\frac34$.</p><p>The event $X\le1,\ Y\le1$ means that the rolls up to and including the first C-roll are one of: C; AC; BC; ABC; BAC. Their probabilities add up to
+\[\frac13+\frac19+\frac19+\frac2{27}=\frac{17}{27}.\]
+Therefore
+\[P=1-\frac34-\frac34+\frac{17}{27}=\frac{17}{27}-\frac12=\frac{7}{54},\]
+so $m=7$, $n=54$ (coprime) and $100m+n=\boxed{754}$.</p>
+<h4>Solution 2 (States and a recursion)</h4>
+<p>Only the counts of Alice and Bob up to $2$ matter. For $i,j\in\{0,1,2\}$ let $p(i,j)$ be the probability of success when Alice already has $\min(\text{coins},2)=i$ and Bob has $j$, and Carol has none. Each roll gives Alice, Bob or Carol a coin with probability $\frac13$ each; a coin for Carol ends the game in failure. Clearly $p(2,2)=1$.</p><p>If Alice already has $2$ (state $(2,j)$ with $j&lt;2$), an A-roll changes nothing, so
+\[p(2,j)=\tfrac13p(2,j)+\tfrac13p(2,j+1)\ \Longrightarrow\ p(2,j)=\tfrac12p(2,j+1),\]
+giving $p(2,1)=\frac12$ and $p(2,0)=\frac14$; by symmetry $p(1,2)=\frac12$, $p(0,2)=\frac14$. For $i,j&lt;2$,
+\[p(i,j)=\tfrac13p(i+1,j)+\tfrac13p(i,j+1).\]
+Hence
+\[p(1,1)=\tfrac13\left(\tfrac12+\tfrac12\right)=\tfrac13,\qquad p(1,0)=p(0,1)=\tfrac13\left(\tfrac14+\tfrac13\right)=\tfrac{7}{36},\qquad p(0,0)=\tfrac13\cdot\tfrac{14}{36}=\tfrac{7}{54}.\]
+The answer is $100\cdot 7+54=\boxed{754}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p23">
+<h3>Problem 8</h3>
+<div class="ct-meta">Geometry &middot; LPS VII, Chapter 19: Triangle Centers and Classical Triangle Geometry</div>
+<div class="ct-text"><p>Isosceles triangle $\triangle ABC$ has $AB=BC$. Let $I$ be the incenter of $\triangle ABC$. The perimeters of $\triangle ABC$ and $\triangle AIC$ are in the ratio $125:6$, and all the sides of both triangles have integer lengths. Find the minimum possible value of $AB$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$245$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Half-angle cosines)</h4>
+<div class="ct-fig"><img style="width:251px" src="/assets/contests/2026-27/aime-23_s1.svg" alt="Figure for the solution"></div>
+<p>Let $AB=BC=s$, $AC=c$, and $AI=CI=t$ (equal by symmetry about the axis of the isosceles triangle). Let the base angles be $\angle BAC=\angle BCA=2\varphi$, with $0&lt;2\varphi&lt;90^\circ$. Since $AI$ and $CI$ bisect these angles, triangle $AIC$ is isosceles with base angles $\varphi$. Let $M$ be the midpoint of $AC$; then $BM\perp AC$, $I$ lies on $BM$, and
+\[\frac c2=t\cos\varphi=s\cos2\varphi .\]
+Put $u=\cos\varphi=\frac{c}{2t}$, so $0&lt;u&lt;1$ and $\cos 2\varphi=2u^2-1&gt;0$. Then $2t=\frac cu$ and $2s=\frac{c}{2u^2-1}$, and the ratio of perimeters is
+\[\frac{2s+c}{2t+c}=\frac{\frac{1}{2u^2-1}+1}{\frac1u+1}=\frac{2u^2}{2u^2-1}\cdot\frac{u}{1+u}=\frac{2u^3}{(2u^2-1)(1+u)}=\frac{125}{6}.\]
+Clearing denominators, $12u^3=125(2u^3+2u^2-u-1)$, that is,
+\[238u^3+250u^2-125u-125=0\iff (7u-5)(34u^2+60u+25)=0 .\]
+The quadratic factor has positive coefficients, so it has no positive root. Hence $u=\frac57$, i.e. $\frac{c}{t}=\frac{10}{7}$. As $\gcd(10,7)=1$ and $c,t$ are integers, $c=10k$ and $t=7k$ for a positive integer $k$. Then $2u^2-1=\frac{50}{49}-1=\frac1{49}$ and $s=\frac{c}{2(2u^2-1)}=\frac{49c}{2}=245k$.</p><p>Conversely, for $k=1$ the triangle with sides $245,245,10$ has $AI=CI=7$ (as $u=\frac{5}{7}$), integer sides throughout, and perimeters $500$ and $24$, in the ratio $125:6$. So the minimum of $AB$ is $\boxed{245}$.</p>
+<h4>Solution 2 (Angle bisector theorem and a rational root)</h4>
+<p>Keep the notation $s=AB=BC$, $c=AC$, $t=AI=CI$, and let $M$ be the midpoint of $AC$. The altitude $BM$ is the axis of symmetry, so $I$ lies on it. In right triangle $ABM$ the segment $AI$ bisects $\angle BAM$, so by the angle bisector theorem
+\[\frac{BI}{IM}=\frac{AB}{AM}=\frac{2s}{c},\qquad\text{hence}\qquad BM=IM\cdot\frac{2s+c}{c}.\]
+By Pythagoras, $BM^2=s^2-\frac{c^2}4$ and $IM^2=t^2-\frac{c^2}{4}$. Squaring the last relation and multiplying by $4c^2$:
+\[(2s-c)(2s+c)\,c^2=(4t^2-c^2)(2s+c)^2\iff (2s-c)c^2=(4t^2-c^2)(2s+c)\iff s\,(c^2-2t^2)=c\,t^2 .\]
+So $c^2&gt;2t^2$, $s=\dfrac{ct^2}{c^2-2t^2}$, and $2s+c=\dfrac{c^3}{c^2-2t^2}$. The perimeter condition $6(2s+c)=125(2t+c)$ becomes
+\[6c^3=125\,(2t+c)(c^2-2t^2).\]
+With $x=\frac tc&gt;0$ this reads $6=125(2x+1)(1-2x^2)$, i.e.
+\[500x^3+250x^2-250x-119=0\iff (10x-7)(50x^2+60x+17)=0 .\]
+(The rational root $x=\frac7{10}$ can be found with the rational root theorem.) The quadratic factor has only negative roots, so $\frac tc=\frac7{10}$, $c=10k$, $t=7k$, and $s=\dfrac{10k\cdot 49k^2}{100k^2-98k^2}=245k$. The smallest value is $AB=\boxed{245}$, attained by the triangle $245,245,10$ with $AI=CI=7$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p24">
+<h3>Problem 9</h3>
+<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 22: Summation, Telescoping, and Discrete Transformation</div>
+<div class="ct-text"><p>Let $S$ denote the value of the infinite sum
+\[\frac{1}{9}+\frac{1}{99}+\frac{1}{999}+\frac{1}{9999}+\cdots\]
+Find the remainder when the greatest integer less than or equal to $10^{100}S$ is divided by $1000$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$669$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Counting divisors)</h4>
+<p>Expanding each term as a geometric series,
+\[\frac1{10^k-1}=\frac{10^{-k}}{1-10^{-k}}=\sum_{j\ge1}10^{-jk}.\]
+All terms are positive, so we may collect equal powers: $10^{-n}$ appears once for each pair $(j,k)$ with $jk=n$, i.e. $d(n)$ times, where $d(n)$ is the number of positive divisors of $n$. Hence
+\[S=\sum_{n\ge1}\frac{d(n)}{10^n},\qquad 10^{100}S=\underbrace{\sum_{n=1}^{100}d(n)\,10^{100-n}}_{\text{an integer }J}+\underbrace{\sum_{m\ge1}\frac{d(100+m)}{10^m}}_{R}.\]
+We show $0&lt;R&lt;1$. Divisors of $N$ pair up as $e\leftrightarrow N/e$ with one member of each pair at most $\sqrt N$, so $d(N)\le2\sqrt N$. Now $d(101)=2$ (prime), $d(102)=8$, and for $m\ge3$, $d(100+m)\le 2\sqrt{100+m}\le 2(10+m)\le 26\cdot 2^{m-3}$. Thus
+\[R\le\frac{2}{10}+\frac8{100}+26\sum_{m\ge3}\frac{2^{m-3}}{10^m}=0.2+0.08+\frac{26}{1000}\cdot\frac{1}{1-\frac15}=0.3125&lt;1 .\]
+Hence $\lfloor10^{100}S\rfloor=J$. Modulo $1000$, only $n=98,99,100$ contribute to $J$:
+\[J\equiv 100\,d(98)+10\,d(99)+d(100)=100\cdot 6+10\cdot 6+9=669 \pmod{1000},\]
+using $98=2\cdot7^2$, $99=3^2\cdot 11$, $100=2^2\cdot5^2$. The remainder is $\boxed{669}$.</p>
+<h4>Solution 2 (Repeating decimals, term by term)</h4>
+<p>Work with each term $\frac{10^{100}}{10^k-1}$ separately. For $k\le 100$ write $100=qk+\rho$ with $0\le\rho&lt;k$. The telescoping identity
+\[(10^k-1)\sum_{j=1}^{q}10^{100-jk}=\sum_{j=1}^{q}\bigl(10^{100-(j-1)k}-10^{100-jk}\bigr)=10^{100}-10^{\rho}\]
+shows that
+\[\frac{10^{100}}{10^k-1}=I_k+\varepsilon_k,\qquad I_k=\sum_{j=1}^{q}10^{100-jk}\in\mathbb Z,\quad \varepsilon_k=\frac{10^{\rho}}{10^k-1}\in(0,1).\]
+(This is the familiar fact that $\frac1{10^k-1}=0.\overline{0\cdots01}$.) For $k&gt;100$ put $I_k=0$ and $\varepsilon_k=\frac{10^{100}}{10^k-1}$. Then $10^{100}S=\sum_k I_k+\sum_k\varepsilon_k$, where $\sum_k I_k$ is an integer.</p><p><em>The fractional parts add up to less than $1$.</em> For every $k$ put $j=k-\rho$ (with $\rho=100$ when $k&gt;100$), so $j\ge 1$, $k\ge j$, and $k\mid 100+j$. Also $\varepsilon_k\le\frac{10}{9}\cdot 10^{\rho-k}=\frac{10}{9}\cdot10^{-j}$. Each $j$ arises from at most $d(100+j)$ values of $k$, where $d(N)$ is the number of divisors of $N$. Divisors of $N$ pair up as $e\leftrightarrow N/e$ with one member of each pair at most $\sqrt N$, so $d(N)\le 2\sqrt N$. Using $d(101)=2$, $d(102)=8$, and $d(100+j)\le 2\sqrt{100+j}\le2(10+j)\le 26\cdot 2^{j-3}$ for $j\ge3$,
+\[\sum_k\varepsilon_k\le\frac{10}{9}\sum_{j\ge1}\frac{d(100+j)}{10^{j}}\le\frac{10}{9}\Bigl(0.2+0.08+\frac{26}{1000}\cdot\frac{1}{1-\frac15}\Bigr)=\frac{10}{9}\cdot 0.3125&lt;1 .\]
+Hence $\lfloor 10^{100}S\rfloor=\sum_k I_k$.</p><p><em>The last three digits.</em> In $I_k$ the powers $10^{100-jk}$ with $100-jk\ge 3$ are $0$ modulo $1000$. A power $10^0$, $10^1$ or $10^2$ occurs exactly when $jk=100$, $99$ or $98$. Summing over all $k$, the term $1$ occurs once for each divisor $k$ of $100$, the term $10$ once for each divisor of $99$, and the term $100$ once for each divisor of $98$:
+\[\lfloor10^{100}S\rfloor\equiv d(100)+10\,d(99)+100\,d(98)=9+60+600=669\pmod{1000}.\]
+The remainder is $\boxed{669}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p25">
+<h3>Problem 10</h3>
+<div class="ct-meta">Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure</div>
+<div class="ct-text"><p>Let $\triangle ABC$ be a triangle with $D$ on $\overline{BC}$ such that $\overline{AD}$ bisects $\angle BAC$. Let $\omega$ be the circle that passes through $A$ and is tangent to segment $\overline{BC}$ at $D$. Let $E\ne A$ and $F\ne A$ be the intersections of $\omega$ with segments $\overline{AB}$ and $\overline{AC}$, respectively. Suppose that $AB=200$, $AC=225$, and all of $AE$, $AF$, $BD$, and $CD$ are positive integers. Find the sum of all possible values of $BC$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$850$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Angle bisector theorem and power of a point)</h4>
+<p>By the angle bisector theorem, $\frac{BD}{CD}=\frac{AB}{AC}=\frac{200}{225}=\frac89$. Since $BD$ and $CD$ are integers, $k=CD-BD$ is a positive integer, and $BD=8k$, $CD=9k$, $BC=17k$.</p><p>Line $BC$ is tangent to $\omega$ at $D$, so $B$ lies outside $\omega$ and its power is $BD^2$. Line $BA$ meets $\omega$ at $A$ and $E$, so $BE\cdot BA=BD^2$; similarly $CF\cdot CA=CD^2$. Hence
+\[BE=\frac{64k^2}{200}=\frac{8k^2}{25},\qquad CF=\frac{81k^2}{225}=\frac{9k^2}{25}.\]
+$AE=200-BE$ is an integer, so $25\mid 8k^2$, which forces $5\mid k$. Write $k=5j$; then $BE=8j^2$, $CF=9j^2$, $AE=200-8j^2$, $AF=225-9j^2$, $BC=85j$. Positivity of $AE$ requires $8j^2&lt;200$, i.e. $j\le 4$. For $j=1,2,3,4$ everything works: $BE&lt;BA$ and $CF&lt;CA$, so $E$ and $F$ lie inside the segments; all four lengths are positive integers; and $BC=85j$ satisfies the triangle inequality $25&lt;BC&lt;425$.</p><p>The possible values of $BC$ are $85,170,255,340$, and their sum is $85\cdot 10=\boxed{850}$.</p>
+<h4>Solution 2 (EF is parallel to BC)</h4>
+<div class="ct-fig"><img style="width:350px" src="/assets/contests/2026-27/aime-25_s2.svg" alt="Figure for the solution"></div>
+<p>Since $AD$ bisects $\angle EAF$, the inscribed angles $\angle EAD$ and $\angle DAF$ of $\omega$ are equal, so $D$ is the midpoint of the arc $EF$ of $\omega$ not containing $A$. The tangent at the midpoint of an arc is parallel to the chord of that arc (both are perpendicular to the radius through $D$). The tangent at $D$ is $BC$, so $EF\parallel BC$.</p><p>Hence triangle $AEF$ is similar to triangle $ABC$: $AE=200\lambda$ and $AF=225\lambda$ for some $0&lt;\lambda&lt;1$. The power of $B$ with respect to $\omega$ gives
+\[BD^2=BE\cdot BA=200(1-\lambda)\cdot200,\qquad\text{so}\qquad BD=200\sqrt{1-\lambda},\]
+and in the same way $CD=225\sqrt{1-\lambda}$, so $BC=425\sqrt{1-\lambda}$.</p><p>Now $25\lambda=AF-AE$ is an integer $q$ with $1\le q\le 24$, and then
+\[BD=200\sqrt{\frac{25-q}{25}}=40\sqrt{25-q}.\]
+For $BD$ to be an integer, $\sqrt{25-q}$ must be rational, hence an integer: $25-q\in\{1,4,9,16\}$. In each case $AE=8q$, $AF=9q$, $BD=40\sqrt{25-q}$, $CD=45\sqrt{25-q}$ are positive integers. So $BC=85\sqrt{25-q}\in\{85,170,255,340\}$. All of these satisfy $25&lt;BC\le 340&lt;425$, so the triangle inequality holds and each triangle exists. The sum is $\boxed{850}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p26">
+<h3>Problem 11</h3>
+<div class="ct-meta">Algebra &middot; LPS VII, Chapter 9: Polynomials and Root-Coefficient Strategy</div>
+<div class="ct-text"><p>Find the greatest integer $n$ such that the cubic polynomial
+\[x^3-\frac{n}{6}x^2+(n-11)x-400\]
+has roots $\alpha^2$, $\beta^2$, and $\gamma^2$, where $\alpha$, $\beta$, and $\gamma$ are complex numbers, and there are exactly seven different possible values for $\alpha+\beta+\gamma$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$132$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Seven values force a zero sum)</h4>
+<p>Let $r_1,r_2,r_3$ be the roots of the cubic and fix square roots $a,b,c$ of them ($a^2=r_1$, $b^2=r_2$, $c^2=r_3$). Every admissible triple $(\alpha,\beta,\gamma)$ is, up to order, $(\pm a,\pm b,\pm c)$, so the set of possible values of $\alpha+\beta+\gamma$ is
+\[V=\{\pm a\pm b\pm c\}.\]
+If $v\in V$ then $-v\in V$, and $v=-v$ only for $v=0$. So the nonzero elements of $V$ come in pairs, and $|V|$ is odd if and only if $0\in V$. Since $|V|=7$, we can choose $\alpha,\beta,\gamma$ with $\alpha+\beta+\gamma=0$.</p><p>Let $e_2=\alpha\beta+\beta\gamma+\gamma\alpha$ and $e_3=\alpha\beta\gamma$. Vieta's formulas for the cubic give
+\[\alpha^2+\beta^2+\gamma^2=\frac n6,\qquad \alpha^2\beta^2+\beta^2\gamma^2+\gamma^2\alpha^2=n-11,\qquad \alpha^2\beta^2\gamma^2=400 .\]
+With $\alpha+\beta+\gamma=0$ we have $\alpha^2+\beta^2+\gamma^2=-2e_2$ and $\alpha^2\beta^2+\beta^2\gamma^2+\gamma^2\alpha^2=e_2^2-2e_3(\alpha+\beta+\gamma)=e_2^2$. Hence $e_2=-\frac n{12}$ and
+\[\frac{n^2}{144}=n-11\iff n^2-144n+1584=0\iff (n-12)(n-132)=0 .\]
+So $n\le 132$. We check that $n=132$ really gives seven values. Then $e_2=-11$; take $e_3=20$, so $\alpha,\beta,\gamma$ are the roots of
+\[z^3-11z-20=(z-4)(z^2+4z+5),\]
+namely $4,\ -2+i,\ -2-i$. Their squares $16,\ 3-4i,\ 3+4i$ have sum $22=\frac{132}6$, pairwise-product sum $16\cdot 6+25=121=132-11$ and product $16\cdot25=400$, so they are the roots of the cubic for $n=132$. With $a=4$, $b=-2+i$, $c=-2-i$:
+\[a+b+c=0,\quad a+b-c=4+2i,\quad a-b+c=4-2i,\quad a-b-c=8,\]
+together with their negatives. This is the set $\{0,\ \pm8,\ \pm(4+2i),\ \pm(4-2i)\}$, which has exactly $7$ elements. The greatest $n$ is $\boxed{132}$.</p>
+<h4>Solution 2 (A Heron-type product)</h4>
+<p>Let $a,b,c$ be fixed square roots of the roots $r_1,r_2,r_3$ of the cubic. The possible values of $\alpha+\beta+\gamma$ form the set $V=\{\pm a\pm b\pm c\}$. The nonzero values in $V$ come in pairs $v,-v$, so $|V|$ is odd only if $0\in V$; hence $|V|=7$ forces $0\in V$. The value $0$ lies in $V$ if and only if one of $a+b+c$, $-a+b+c$, $a-b+c$, $a+b-c$ is $0$, that is, if and only if
+\[\Pi=(a+b+c)(-a+b+c)(a-b+c)(a+b-c)=0 .\]
+Grouping as $\bigl[(b+c)^2-a^2\bigr]\bigl[a^2-(b-c)^2\bigr]$ and expanding (the computation behind Heron's formula) gives
+\[\Pi=2(a^2b^2+b^2c^2+c^2a^2)-(a^4+b^4+c^4)=4\sigma_2-\sigma_1^2,\]
+where $\sigma_1=r_1+r_2+r_3=\frac n6$ and $\sigma_2=r_1r_2+r_2r_3+r_3r_1=n-11$, by Vieta; we used $a^4+b^4+c^4=\sigma_1^2-2\sigma_2$. So $0\in V$ if and only if
+\[4(n-11)=\frac{n^2}{36}\iff n^2-144n+1584=0\iff n\in\{12,132\}.\]
+For $n=132$ the cubic is $x^3-22x^2+121x-400=(x-16)(x^2-6x+25)$, with roots $16$ and $3\pm4i=(2\pm i)^2$. Taking $a=4$, $b=2+i$, $c=2-i$, the eight sign choices give
+\[\pm(a+b+c)=\pm8,\quad \pm(a+b-c)=\pm(4+2i),\quad \pm(a-b+c)=\pm(4-2i),\quad \pm(-a+b+c)=0,\]
+exactly $7$ distinct values. Hence the answer is $\boxed{132}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p27">
+<h3>Problem 12</h3>
+<div class="ct-meta">Geometry &middot; LPS VII, Chapter 55: Three-Dimensional and Spatial Geometry</div>
+<div class="ct-text"><p>Consider a tetrahedron with two isosceles triangle faces with side lengths $5\sqrt{10}$, $5\sqrt{10}$, and $10$ and two isosceles triangle faces with side lengths $5\sqrt{10}$, $5\sqrt{10}$, and $18$. The four vertices of the tetrahedron lie on a sphere with center $S$, and the four faces of the tetrahedron are tangent to a sphere with center $R$. The distance $RS$ can be written as $\frac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. Find $m+n$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$223$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Coordinates)</h4>
+<div class="ct-fig"><img style="width:226px" src="/assets/contests/2026-27/aime-27_s1.svg" alt="Figure for the solution"></div>
+<p>Write $L=5\sqrt{10}$, so $L^2=250$. <em>The shape.</em> Each edge lies in exactly two faces. The faces contain the length $10$ twice in total, so exactly one edge has length $10$; likewise exactly one edge has length $18$, and the other four have length $L$. No face contains both $10$ and $18$, so these two edges do not share a face; since two edges of a tetrahedron that share a vertex lie in a common face, they are opposite edges. Name the tetrahedron $ABCD$ with $AB=10$, $CD=18$ and the other edges $L$.</p><p><em>Coordinates.</em> $C$ and $D$ are equidistant from $A$ and $B$, so they lie in the perpendicular bisector plane $\Pi_1$ of $AB$; $A$ and $B$ lie in the perpendicular bisector plane $\Pi_2$ of $CD$. Since $\Pi_1$ contains the line $CD$ and $\Pi_2\perp CD$, the two planes are perpendicular. Take $\Pi_1$ as $x=0$, $\Pi_2$ as $y=0$, and the midpoint $M$ of $AB$ as the origin. Then $A=(5,0,0)$, $B=(-5,0,0)$, $C=(0,9,h)$, $D=(0,-9,h)$ with $h&gt;0$, and $AC^2=25+81+h^2=250$ gives $h=12$.</p><p><em>Circumcentre.</em> $S$ is equidistant from $A,B$ and from $C,D$, so $S$ lies in both planes: $S=(0,0,z)$, and $SA=SC$ gives $25+z^2=81+(12-z)^2$, so $24z=200$ and $z=\frac{25}3$.</p><p><em>Incentre.</em> The reflections in the planes $x=0$ and $y=0$ map the tetrahedron to itself, so they fix its unique inscribed sphere, and $R=(0,0,\rho)$ with $0&lt;\rho&lt;12$. The plane $ABC$ contains the $x$-axis and $C$, so its equation is $4y-3z=0$; the plane $ACD$ contains $A$ and the line $x=0,\ z=12$, so its equation is $12x+5z=60$. Equal distances from $R$:
+\[\frac{3\rho}{5}=\frac{60-5\rho}{13}\iff 39\rho=300-25\rho\iff \rho=\frac{75}{16}.\]
+(The other two faces follow by symmetry; the common distance, the inradius, is $\frac{45}{16}$.)</p><p>Therefore $RS=\frac{25}3-\frac{75}{16}=\frac{400-225}{48}=\frac{175}{48}$, and $m+n=175+48=\boxed{223}$.</p>
+<h4>Solution 2 (Volume, inradius and a cross-section)</h4>
+<p>As in Solution 1, the edges of length $10$ and $18$ are opposite: $AB=10$, $CD=18$, all other edges $5\sqrt{10}$. Let $M$ and $N$ be the midpoints of $AB$ and $CD$. The plane $MCD$ is the perpendicular bisector plane of $AB$ (it contains $M$ and the points $C,D$, which are equidistant from $A$ and $B$), and likewise the plane $NAB$ is the perpendicular bisector plane of $CD$. So $MN$, which lies in both planes, is perpendicular to both $AB$ and $CD$, and the whole figure is symmetric under the reflections in these two planes. Hence both $S$ and $R$ lie on the line $MN$.</p><p><em>Lengths.</em> In face $ABC$, the median $CM$ is an altitude: $CM=\sqrt{250-25}=15$. In face $ACD$, $AN=\sqrt{250-81}=13$. In right triangle $CNM$ (right angle at $N$), $MN=\sqrt{15^2-9^2}=12$.</p><p><em>Inradius.</em> The plane $MCD$ cuts the tetrahedron into two congruent tetrahedra with base $MCD$ (area $\frac12\cdot18\cdot12=108$) and height $MA=5$, since $AB\perp$ plane $MCD$. So the volume is $V=2\cdot\frac13\cdot108\cdot5=360$. The faces have areas $\frac12\cdot10\cdot15=75$ (twice) and $\frac12\cdot18\cdot13=117$ (twice), total $384$. Splitting the tetrahedron into four pyramids with apex at the incentre, $V=\frac13 r\cdot 384$, so $r=\frac{1080}{384}=\frac{45}{16}$.</p><p><em>Locating $R$.</em> Plane $ABC$ contains $AB$, which is perpendicular to the plane $MCD$, so plane $ABC$ is perpendicular to plane $MCD$ and meets it along the line $MC$. Hence the distance from $R\in MN$ to plane $ABC$ equals the distance from $R$ to line $MC$, which is $RM\sin\angle NMC=RM\cdot\frac{CN}{CM}=RM\cdot\frac{9}{15}$. Setting this equal to $r$ gives $RM=\frac53\cdot\frac{45}{16}=\frac{75}{16}$.</p><p><em>Locating $S$.</em> Let $SM=z$, measured along $MN$ towards $N$, so $SN$ has signed length $12-z$. Then $SA^2=z^2+25$ and $SC^2=(12-z)^2+81$; equating them gives $24z=200$, $z=\frac{25}{3}$.</p><p>Both points lie on the same side of $M$, so $RS=\frac{25}{3}-\frac{75}{16}=\frac{175}{48}$ and $m+n=\boxed{223}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p28">
+<h3>Problem 13</h3>
+<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 23: Recurrence and Combinatorial Construction</div>
+<div class="ct-text"><p>Call finite sets of integers $S$ and $T$ <em>cousins</em> if</p><ul class="ct-ul"><li><p>$S$ and $T$ have the same number of elements,</p></li><li><p>$S$ and $T$ are disjoint, and</p></li><li><p>the elements of $S$ can be paired with the elements of $T$ so that the elements in each pair differ by exactly $1$.</p></li></ul><p>For example, $\{1,2,5\}$ and $\{0,3,4\}$ are cousins. Suppose that the set $S$ has exactly $4040$ cousins. Find the least number of elements the set $S$ can have.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$107$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Runs of spaced-out elements)</h4>
+<div class="ct-fig"><img style="width:227px" src="/assets/contests/2026-27/aime-28_s1.svg" alt="Figure for the solution"></div>
+<p>A cousin $T$ of $S$ comes with a bijection $\varphi:S\to T$ with $\varphi(s)=s\pm1$ and $\varphi(s)\notin S$.</p><p><em>Step 1: $T$ determines $\varphi$.</em> Suppose $\varphi,\psi$ are two such bijections onto the same $T$, and let $s$ be the least element with $\varphi(s)\ne\psi(s)$, say $\varphi(s)=s-1$, $\psi(s)=s+1$. Since $s-1\in T$, we have $s-1=\psi(s')$ for some $s'\in S$; as $s'\ne s$, $s'=s-2&lt;s$, so $\varphi(s')=\psi(s')=s-1=\varphi(s)$, contradicting injectivity. So the number of cousins equals the number of maps $\varphi$: each $s$ chooses $s-1$ or $s+1$ (not in $S$), with all choices distinct.</p><p><em>Step 2: chains.</em> If $s-1,s,s+1\in S$, then $s$ has no option and there are no cousins; so assume $S$ has no three consecutive integers. Split $S$ into <em>chains</em>: maximal sequences $s_1&lt;\dots&lt;s_m$ of elements of $S$ in which consecutive elements differ by $1$ or $2$. Elements of different chains differ by at least $3$, so their options never collide, and the count is the product of the counts for the chains.</p><p>A chain in which all differences are $2$ will be called a <em>run</em> of length $m$. Its elements choose L (left) or R (right); the only collision is $s_i$ choosing R and $s_{i+1}$ choosing L (both pick $s_i+1$). The valid choice sequences have no R directly before an L, so they are $\mathrm{L}\cdots\mathrm{L}\mathrm{R}\cdots\mathrm{R}$: there are $m+1$ of them. In other words, $T$ is all the $m+1$ free spots around the run except one skipped spot (see the figure).</p><p>A chain containing a difference $1$, say $s_i+1=s_{i+1}$, has $s_i$ forced to choose L and $s_{i+1}$ forced to choose R. Then $s_{i-1}=s_i-2$ (if present) cannot choose R, so it chooses L, and so on to the left; similarly everything to the right is forced to R. So such a chain contributes a factor $0$ or $1$.</p><p><em>Step 3: optimisation.</em> If $S$ has exactly $4040$ cousins, then $4040=\prod_i(m_i+1)$, where $m_1,m_2,\dots$ are the lengths of the runs, and $|S|\ge\sum_i m_i$. Put $f_i=m_i+1\ge2$. For integers $x,y\ge2$,
+\[(xy-1)-\bigl[(x-1)+(y-1)\bigr]=(x-1)(y-1)&gt;0,\]
+so replacing a factor $f=xy$ by the two factors $x,y$ lowers $\sum(f_i-1)$. Repeating this until every factor is prime, we get
+\[|S|\ge\sum_i(f_i-1)\ge\sum_{p^e\,\|\,4040}e\,(p-1)=1+1+1+4+100=107,\]
+since $4040=2^3\cdot5\cdot101$.</p><p><em>Construction.</em> Take five runs of lengths $1,1,1,4,100$ with step $2$ inside each run, and with consecutive runs $4$ apart (for example, the run $\{0,2,\dots,198\}$, then $\{202,204,206,208\}$, then $\{212\},\{216\},\{220\}$). The runs are chains, the counts multiply, and $S$ has $2\cdot2\cdot2\cdot5\cdot101=4040$ cousins with $|S|=107$. The answer is $\boxed{107}$.</p><p><em>Remark (the same count in the language of matchings).</em> Join $x$ and $x+1$ whenever exactly one of them lies in $S$. The resulting graph is a disjoint union of paths along which membership in $S$ alternates, and a cousin is the same as a matching that covers $S$. A path with both ends outside $S$ and $m$ vertices in $S$ has $m+1$ such matchings (choose which of its $m+1$ vertices outside $S$ stays uncovered). A path with exactly one end in $S$ has one matching, and a path with both ends in $S$ has none. These paths are exactly the runs and chains above, so the optimisation is the same.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p29">
+<h3>Problem 14</h3>
+<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 23: Recurrence and Combinatorial Construction</div>
+<div class="ct-text"><p>For integers $a$ and $b$, let $a\circ b=a-b$ if $a$ is odd and $b$ is even, and $a+b$ otherwise. Find the number of sequences $a_1,a_2,a_3,\dots,a_n$ of positive integers such that
+\[a_1+a_2+a_3+\cdots+a_n=12\quad\text{and}\quad a_1\circ a_2\circ a_3\circ\cdots\circ a_n=0\]
+where the operations are performed from left to right; that is, $a_1\circ a_2\circ a_3$ means $(a_1\circ a_2)\circ a_3$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$157$</p></div></details>
+<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Which terms are subtracted)</h4>
+<p>Let $s_k=a_1+\dots+a_k$ and $v_k=a_1\circ\cdots\circ a_k$ (so $v_1=s_1=a_1$, $s_0=0$).</p><p><em>Parity.</em> Since $x-y\equiv x+y\pmod 2$, we have $v_{k+1}=v_k\pm a_{k+1}\equiv v_k+a_{k+1}$, so by induction $v_k\equiv s_k\pmod 2$. Hence the $(k+1)$st term is subtracted exactly when $s_k$ is odd and $a_{k+1}$ is even, and otherwise added. If $D$ is the sum of the subtracted terms, then $v_n=12-2D$, so the condition $v_n=0$ means $D=6$.</p><p><em>Structure.</em> The parity of $s_k$ changes exactly at the odd terms. Since $s_n=12$ is even, there is an even number $2t$ of odd terms. They cut the sequence into $2t+1$ <em>blocks</em> of even terms (some possibly empty): block $0$ before the first odd term, block $i$ between the $i$th and $(i+1)$st odd terms, block $2t$ after the last. The partial sum is odd exactly inside the blocks with odd index $1,3,\dots,2t-1$, so the subtracted terms are exactly the terms in these $t$ &ldquo;negative&rdquo; blocks. Therefore the sequence is good if and only if</p><ul class="ct-ul"><li><p>the $t$ negative blocks have total $6$, and</p></li><li><p>the $2t$ odd terms together with the $t+1$ &ldquo;positive&rdquo; blocks have total $12-6=6$.</p></li></ul><p>In particular $t\ge1$, and $2t\le 6$ gives $t\le 3$. The sequence is determined by the odd terms and the contents of the blocks, and the two conditions involve disjoint parts, so for each $t$ the count is a product.</p><p><em>A counting lemma.</em> Let $W(g,h)$ be the number of ways to fill $g$ ordered blocks with finite sequences of positive even numbers of total $2h$. Halving every term, this is the number of ways to fill $g$ blocks with sequences of positive integers of total $h$. Choosing a composition of $h$ into $p$ parts ($\binom{h-1}{p-1}$ ways) and then splitting this list of parts, in order, into $g$ possibly empty blocks ($\binom{p+g-1}{g-1}$ ways), we get $W(g,0)=1$ and
+\[W(g,h)=\sum_{p=1}^{h}\binom{h-1}{p-1}\binom{p+g-1}{g-1}\quad(h\ge1).\]
+In particular: $W(1,3)=1+2+1=4$; $W(2,3)=1\cdot2+2\cdot3+1\cdot4=12$; $W(3,3)=1\cdot3+2\cdot6+1\cdot10=25$; $W(2,2)=2+3=5$; $W(2,1)=2$; $W(3,1)=3$.</p><p><em>Case $t=1$.</em> Negative part: $W(1,3)=4$. Positive part (odd terms $o_1,o_2$ and two blocks, total $6$): $o_1+o_2=2$ with blocks totalling $4$: $1\cdot W(2,2)=5$; $o_1+o_2=4$, i.e. $(1,3)$ or $(3,1)$, blocks totalling $2$: $2\cdot W(2,1)=4$; $o_1+o_2=6$, i.e. $(1,5),(5,1),(3,3)$, empty blocks: $3$. Total $12$, contributing $4\cdot12=48$.</p><p><em>Case $t=2$.</em> Negative part: $W(2,3)=12$. Positive part (four odd terms, three blocks, total $6$): odd terms all $1$ and blocks totalling $2$: $W(3,1)=3$; or one odd term equal to $3$ and the rest $1$, blocks empty: $4$. Total $7$, contributing $12\cdot7=84$.</p><p><em>Case $t=3$.</em> Negative part: $W(3,3)=25$. Positive part: six odd terms with total $6$ must all be $1$, and the blocks are empty: $1$. Contribution $25$.</p><p>The number of sequences is $48+84+25=\boxed{157}$.</p>
+<h4>Solution 2 (Generating functions)</h4>
+<p>Use the reformulation of Solution 1: a good sequence consists of $2t$ odd terms ($t\ge1$) which cut it into $2t+1$ blocks of even terms; the $t$ blocks with odd index must total $6$, and the odd terms with the other $t+1$ blocks must total $6$.</p><p>A block is a finite sequence of positive even numbers, so its generating function (by total) is
+\[\frac{1}{1-\frac{x^2}{1-x^2}}=\frac{1-x^2}{1-2x^2}.\]
+An odd term has generating function $x+x^3+x^5+\cdots=\frac{x}{1-x^2}$. Put $y=x^2$. The number of good sequences with $2t$ odd terms is $N_t\cdot P_t$, where
+\[N_t=[x^6]\Bigl(\frac{1-x^2}{1-2x^2}\Bigr)^{t}=[y^3]\frac{(1-y)^t}{(1-2y)^t},\]
+\[P_t=[x^6]\Bigl(\frac{x}{1-x^2}\Bigr)^{2t}\Bigl(\frac{1-x^2}{1-2x^2}\Bigr)^{t+1}=[y^{3-t}]\frac{(1-y)^{1-t}}{(1-2y)^{t+1}} .\]
+We use $(1-2y)^{-1}=\sum2^ky^k$, $(1-2y)^{-2}=\sum(k+1)2^ky^k$, $(1-2y)^{-3}=\sum\binom{k+2}{2}2^ky^k$.</p><ul class="ct-ul"><li><p>$t=1$: $N_1=[y^3](1-y)(1-2y)^{-1}=8-4=4$ and $P_1=[y^2](1-2y)^{-2}=3\cdot4=12$.</p></li><li><p>$t=2$: $N_2=[y^3](1-2y+y^2)(1-2y)^{-2}=32-2\cdot12+4=12$ and $P_2=[y^1](1-y)^{-1}(1-2y)^{-3}=1+6=7$.</p></li><li><p>$t=3$: $N_3=[y^3](1-3y+3y^2-y^3)(1-2y)^{-3}=80-3\cdot24+3\cdot6-1=25$ and $P_3=[y^0]\,(\cdots)=1$.</p></li></ul><p>For $t\ge4$, $P_t=0$. The total is $4\cdot12+12\cdot7+25\cdot1=\boxed{157}$.</p>
+<h4>Solution 3 (Partial sums as cut points)</h4>
+<p>Encode the sequence by the set $C\subseteq\{1,\dots,11\}$ of its partial sums $s_1,\dots,s_{n-1}$; this is the usual bijection between compositions of $12$ and subsets of $\{1,\dots,11\}$. Put $s_0=0$, $s_n=12$, and $v_k=a_1\circ\cdots\circ a_k$.</p><p><em>Which steps are subtracted.</em> Since $x-y\equiv x+y\pmod 2$, we get $v_{k+1}\equiv v_k+a_{k+1}$, so by induction $v_k\equiv s_k\pmod2$. Hence $a_{k+1}$ is subtracted exactly when $s_k$ is odd and $a_{k+1}$ is even, that is, when <em>both</em> $s_k$ and $s_{k+1}$ are odd. Then $v_n=12-2D$, where $D$ is the total length of the steps between consecutive cut points that are both odd. We need $D=6$.</p><p><em>Gaps between even points.</em> The even points of $C$, together with $0$ and $12$, split $[0,12]$ into gaps of lengths $2g_1,\dots,2g_r$ with $g_1+\dots+g_r=6$. A gap of length $2g$ contains $g$ odd numbers (the odd &ldquo;slots&rdquo;), and inside it we choose any set of odd cut points. Two consecutive cut points that are both odd lie in the same gap. If the chosen odd points of a gap are $o_1&lt;\dots&lt;o_j$, the gap contributes $o_j-o_1=2\delta$ to $D$, where $\delta$ is the half-span ($\delta=0$ if $j\le1$). Different gaps are chosen independently, and we need the half-spans to add up to $3$.</p><p><em>One gap.</em> Among the $2^g$ subsets of the $g$ slots, $g+1$ have half-span $0$ (the empty set and the singletons). For $\delta\ge1$ we choose the position of the smallest point ($g-\delta$ ways), the largest is then fixed, and the $\delta-1$ slots in between are free: $(g-\delta)2^{\delta-1}$ subsets. Let $z$ mark the half-span, and keep only powers up to $z^3$:
+\[f_1=2,\ \ f_2=3+z,\ \ f_3=4+2z+2z^2,\ \ f_4=5+3z+4z^2+4z^3,\]
+\[f_5=6+4z+6z^2+8z^3,\ \ f_6=7+5z+8z^2+12z^3 .\]</p><p><em>All gaps.</em> Let $A_h$ be the polynomial for the segment $[0,2h]$ (sum over the gap structures). Splitting off the first gap gives $A_0=1$ and $A_h=f_1A_{h-1}+f_2A_{h-2}+\dots+f_hA_0$. Truncating at $z^3$:
+\[A_1=2,\quad A_2=7+z,\quad A_3=24+6z+2z^2,\quad A_4=82+29z+13z^2+4z^3,\]
+\[A_5=280+128z+68z^2+28z^3,\quad A_6=956+536z+323z^2+157z^3 .\]
+(For example, $A_2=f_1A_1+f_2A_0=4+3+z$.) As a check, setting $z=1$ gives $f_g(1)=2^g$ and $A_6(1)=2^{11}=2048$, the number of all compositions of $12$. The answer is the coefficient of $z^3$ in $A_6$, namely $\boxed{157}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p30">
+<h3>Problem 15</h3>
+<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 52: Advanced Combinatorial Structure and Hybrid Methods</div>
+<div class="ct-text"><p>Find the number of ordered $7$-tuples $(a_1,a_2,a_3,\dots,a_7)$ having the following properties:</p><ul class="ct-ul"><li><p>$a_k\in\{1,2,3\}$ for all $k$.</p></li><li><p>$a_1+a_2+a_3+a_4+a_5+a_6+a_7$ is a multiple of $3$.</p></li><li><p>$a_1a_2a_4+a_2a_3a_5+a_3a_4a_6+a_4a_5a_7+a_5a_6a_1+a_6a_7a_2+a_7a_1a_3$ is a multiple of $3$.</p></li></ul></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$393$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (The Fano plane and the zero set)</h4>
+<p>Work modulo $3$ and replace each $a_k$ by $x_k\in\{0,1,-1\}$ (so $3\mapsto0$, $1\mapsto 1$, $2\mapsto -1$). The conditions are $\sum x_k\equiv0$ and $Q=\sum_{\ell}\prod_{k\in\ell}x_k\equiv0$, where $\ell$ runs over the seven index triples
+\[\{1,2,4\},\{2,3,5\},\{3,4,6\},\{4,5,7\},\{5,6,1\},\{6,7,2\},\{7,1,3\},\]
+which we call <em>lines</em>. They are $\{i,i+1,i+3\}$ modulo $7$.</p><p><em>Facts about the lines.</em> (i) Any two indices lie on exactly one line: the differences within $\{0,1,3\}$ are $\pm1,\pm2,\pm3$, each nonzero residue modulo $7$ exactly once. (ii) Each index lies on $3$ lines, and two lines meet in exactly one index. (Two common indices would make the lines equal by (i); and the $3\cdot2=6$ other lines through the points of a line $\ell$ are distinct by (i), so they are all the other lines.) Consequences, for a set $N$ of indices:</p><ul class="ct-ul"><li><p>$|N|=4$: $N$ contains at most one line (two lines cover $5$ indices). Each line lies in $4$ such sets, so $28$ four-sets contain a line and $7$ do not.</p></li><li><p>$|N|=5$, $N$ the complement of $\{p,q\}$: it contains $7-3-3+1=2$ lines, which meet at one index $c$.</p></li><li><p>$|N|=6$, the complement of $\{p\}$: it contains the $4$ lines avoiding $p$. Every two of them meet at an index of $N$, and the $\binom42=6$ meeting points are distinct by (i), so the indices of $N$ correspond to the pairs of these $4$ lines.</p></li></ul><p>Let $N$ be the set of indices with $x_k\ne0$, $|N|=k$. A line through a zero contributes $0$ to $Q$; a line inside $N$ contributes the product $\pm1$ of its signs. The sum of $k$ signs is $\equiv 0 \pmod 3$ only in the cases below. We use repeatedly: changing the sign of one entry changes the products of exactly the lines through it.</p><ul class="ct-ul"><li><p>$k=0$: $1$ tuple. $k=1$: the sum is $\pm1$, none.</p></li><li><p>$k=2$: opposite signs, no line inside: $21\cdot2=42$.</p></li><li><p>$k=3$: all signs equal ($2$ ways); $Q=0$ unless $N$ is a line: $(35-7)\cdot2=56$.</p></li><li><p>$k=4$: two $+$ and two $-$ ($6$ ways); if $N$ contains a line then $Q=\pm1$, otherwise $Q=0$: $7\cdot6=42$.</p></li><li><p>$k=5$: sum $\pm3$, i.e. one entry $m$ has the minority sign ($2\cdot5=10$ ways). With the two lines $\ell_1,\ell_2\subset N$, $Q=\pi_1+\pi_2$ vanishes iff $\pi_1=-\pi_2$. When all signs are equal, $\pi_1=\pi_2$; flipping $m$ makes them differ iff $m$ lies on exactly one of the lines, i.e. $m\in(\ell_1\cup\ell_2)\setminus\{c\}$: $4$ positions, $2$ majority signs. Total $21\cdot8=168$.</p></li><li><p>$k=6$: sum $0$ or $\pm6$. $Q$ is a sum of four signs, so $Q\in\{0,\pm2,\pm4\}$, and $Q\equiv0$ iff exactly two of the four lines have product $-1$. All signs equal gives $Q=\pm4$. With three $+$ and three $-$, view the $4$ lines as the vertices of $K_4$ and the indices of $N$ as its edges. The three minus-indices form a $3$-edge graph $H$, and a line has product $-1$ iff its vertex has odd degree in $H$. Of the $\binom63=20$ graphs $H$, the $4$ triangles have no odd vertex, the $4$ stars have four, and the remaining $12$ paths have exactly two. Total $7\cdot12=84$.</p></li><li><p>$k=7$: sum $\pm3$, i.e. exactly two entries $p,q$ have the minority sign. Starting from all signs equal (all seven products equal to $\varepsilon$), flipping $p$ and $q$ changes the lines through exactly one of them: $2+2=4$ lines. So $Q=\varepsilon(3-4)=-\varepsilon\ne0$: none.</p></li></ul><p>The total is $1+42+56+42+168+84+0=\boxed{393}$.</p><p><em>Check by the complement.</em> Of the $3^6=729$ tuples with sum $\equiv0$ ($a_1,\dots,a_6$ free, $a_7$ determined), the same casework shows that $Q\not\equiv0$ for $7\cdot2+28\cdot6+21\cdot2+7\cdot10+42=336$ tuples, and indeed $729-336=393$.</p>
+<h4>Solution 2 (A linear change of variables modulo 3)</h4>
+<p>Work in $\mathbb F_3$ with $x_k\equiv a_k\pmod 3$; the map $(a_k)\mapsto(x_k)$ is a bijection from $\{1,2,3\}^7$ to $\mathbb F_3^7$. The sum condition gives $x_7=-(x_1+\dots+x_6)$, so the answer is the number of $(x_1,\dots,x_6)\in\mathbb F_3^6$ for which $Q=0$. The lines through index $7$ are $\{4,5,7\},\{6,7,2\},\{7,1,3\}$, so
+\[Q=x_7\,(x_1x_3+x_2x_6+x_4x_5)+Q',\qquad Q'=x_1x_2x_4+x_1x_5x_6+x_2x_3x_5+x_3x_4x_6 .\]
+The three lines through $7$ split the other indices into the pairs $\{1,3\},\{2,6\},\{4,5\}$, and each of the four lines in $Q'$ takes one index from each pair.</p><p><em>New variables.</em> Put
+\[a=x_1+x_3,\ d=x_1-x_3;\qquad b=x_2+x_6,\ e=x_2-x_6;\qquad c=x_4+x_5,\ f=x_4-x_5 .\]
+Each pair map $(u,v)\mapsto(u+v,u-v)$ has determinant $-2\ne0$ in $\mathbb F_3$, so this is a bijection of $\mathbb F_3^6$. Since $4=1$ in $\mathbb F_3$, $a^2-d^2=4x_1x_3=x_1x_3$, and similarly for the other pairs. Also $x_1+\dots+x_6=a+b+c=:\sigma$, so $x_7=-\sigma$. Expanding $abc+def$, the products that use an odd number of second members ($x_3,x_6,x_5$) cancel, and those with an even number appear twice. Those four products are exactly the terms of $Q'$, so $abc+def=2Q'$ and $Q'=-(abc+def)$. Hence
+\[Q=-\sigma\bigl(a^2+b^2+c^2-d^2-e^2-f^2\bigr)-abc-def,\]
+and $Q=0$ is equivalent to
+\[\sigma\,(d^2+e^2+f^2)-def\;=\;\sigma\,(a^2+b^2+c^2)+abc=:K .\]
+In $\mathbb F_3$, $t^2$ is $1$ if $t\ne0$ and $0$ if $t=0$, so $d^2+e^2+f^2$ is the number $w$ of nonzero entries among $d,e,f$.</p><p><em>The left side.</em> Let $g_\sigma(K)$ be the number of triples $(d,e,f)$ with $\sigma w-def=K$. There are $1,6,12,8$ triples with $w=0,1,2,3$, and for $w=3$ the product $def$ is $1$ for $4$ of them and $-1$ for the other $4$.</p><ul class="ct-ul"><li><p>$\sigma=0$: the value is $-def$; it is $0$ for the $19$ triples with a zero entry, and $1$ or $2$ for $4$ triples each.</p></li><li><p>$\sigma=1$: the value is $w-def$, which equals $0$ (once), $1$ ($6$ triples), $2$ ($12$ triples), and $-def$ when $w=3$. So $g_1=(1,10,16)$ for $K=(0,1,2)$.</p></li><li><p>$\sigma=2$: the value is $2w-def$, which equals $0$ (once), $2$ ($6$), $4=1$ ($12$), and $6-def=-def$ when $w=3$. So $g_2=(1,16,10)$.</p></li></ul><p><em>Summing over the $27$ triples $(a,b,c)$.</em></p><ul class="ct-ul"><li><p>$(0,0,0)$: $\sigma=K=0$, giving $19$.</p></li><li><p>One nonzero entry $t$ ($6$ triples): $\sigma=t$, $K=t$, giving $g_1(1)=g_2(2)=10$ each, total $60$.</p></li><li><p>Two nonzero entries of opposite signs ($6$ triples): $\sigma=0$, $K=0$, giving $19$ each, total $114$.</p></li><li><p>Two equal nonzero entries $t,t$ ($6$ triples): $\sigma=2t$, $K=2\sigma=4t=t$. For $t=1$ this is $g_2(1)=16$, and for $t=2$ it is $g_1(2)=16$; total $96$.</p></li><li><p>$(1,1,1)$ and $(2,2,2)$: $\sigma=0$, $K=abc=\pm1$, giving $4$ each, total $8$.</p></li><li><p>Three nonzero entries, not all equal ($6$ triples): $K=3\sigma+abc=abc$. For two $1$s and one $2$: $\sigma=1$, $K=2$, giving $16$. For two $2$s and one $1$: $\sigma=2$, $K=1$, giving $16$. Total $96$.</p></li></ul><p>The number of $7$-tuples is $19+60+114+96+8+96=\boxed{393}$.</p>
+</div></details>
+</section>
+{% endraw %}

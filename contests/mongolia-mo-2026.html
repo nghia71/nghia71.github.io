@@ -1,0 +1,309 @@
+---
+title: Mongolian Mathematical Olympiad 2026
+permalink: /contests/mongolia-mo-2026
+description: Mongolian Mathematical Olympiad 2026: problems with answers and solutions
+---
+{% raw %}
+<style>
+  .ct-intro { margin-bottom: 1.2em; }
+  .ct-credit { font-size: 14px; color: var(--ink-soft); border-left: 3px solid var(--gold); padding: 6px 12px; background: var(--white); margin: 1em 0; }
+  .ct-toc { display: flex; flex-wrap: wrap; gap: 6px; margin: 1em 0 1.4em; }
+  .ct-toc a { display: inline-block; min-width: 2.4em; text-align: center; padding: 4px 8px; border: 1px solid var(--rule); border-radius: 4px; background: var(--white); text-decoration: none; font-size: 14px; }
+  .ct-problem { background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 14px 18px; margin: 1.1em 0; }
+  .ct-problem h3 { margin: 0 0 .3em; font-size: 1.08rem; border-bottom: none; padding-bottom: 0; }
+  .ct-meta { font-size: 13px; color: var(--ink-soft); margin-bottom: .6em; }
+  .ct-text { font-family: Georgia, "Times New Roman", "Noto Serif", serif; font-size: 1.02em; line-height: 1.6; }
+  .ct-text p { margin: .5em 0; }
+  .ct-fig { text-align: center; margin: .8em 0; }
+  .ct-fig img { max-width: 100%; height: auto; max-height: 340px; }
+  .ct-choices { display: flex; flex-wrap: wrap; gap: 6px 22px; margin: .6em 0 .2em; }
+  .ct-choices b { margin-right: .3em; }
+  .ct-problem details { margin-top: .8em; border-top: 1px dashed var(--rule); padding-top: .5em; }
+  .ct-problem summary { cursor: pointer; font-weight: 600; color: var(--brand); font-size: 15px; }
+  .ct-problem details[open] summary { margin-bottom: .5em; }
+  .ct-sol h4 { font-size: 1rem; margin: 1em 0 .3em; color: var(--ink); }
+  .ct-answer { font-weight: 600; }
+  .ct-parts { list-style: none; padding-left: .4em; }
+  .ct-parts li { margin: .35em 0; }
+  .ct-lbl { font-weight: 700; margin-right: .3em; }
+  .ct-note { font-size: 14px; color: var(--ink-soft); font-style: italic; }
+  .ct-bar { margin: .6em 0 1em; display: flex; gap: 10px; flex-wrap: wrap; }
+  .ct-bar button { font: inherit; font-size: 14px; padding: 5px 12px; border-radius: var(--radius); border: 1px solid var(--brand); background: var(--white); color: var(--brand); cursor: pointer; }
+</style>
+<script>
+  window.MathJax = { tex: { inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [['\\[','\\]']], processEscapes: true },
+                     options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] } };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script>
+  function ctAll(open) { document.querySelectorAll('.ct-problem details').forEach(function (d) { d.open = open; }); }
+</script>
+
+<style>
+  .ct-group { font-size: 1.25rem; margin: 1.6em 0 .2em; }
+  .ct-toc-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: .3em 0; }
+  .ct-toc-g { font-size: 13px; color: var(--ink-soft); min-width: 9em; }
+  .ct-toc-wrap { margin: 1em 0 1.4em; }
+  .ct-center { text-align: center; margin: .6em 0; }
+  .ct-tablewrap { overflow-x: auto; margin: .6em 0; text-align: center; }
+  .ct-table { border-collapse: collapse; margin: 0 auto; }
+  .ct-table td { padding: 2px 9px; text-align: center; }
+  .ct-table tr.ct-hl td { border-bottom: 1px solid var(--ink-soft); }
+  .ct-table.ct-vfirst td:first-child { border-right: 1px solid var(--ink-soft); }
+  .ct-ul { padding-left: 1.4em; }
+  .ct-ul li { margin: .3em 0; }
+  .ct-text li > p:first-child { margin-top: 0; }
+  .ct-text li > p:last-child { margin-bottom: 0; }
+  .ct-text mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
+</style>
+
+{% endraw %}
+<p><a href="{{ '/contests-2026' | relative_url }}">&larr; All contests 2026</a></p>
+
+<h1>Mongolian Mathematical Olympiad 2026</h1>
+
+<div class="ct-intro">
+<p>The 6 problems of the Mongolian Mathematical Olympiad 2026, each with our own solutions, hidden until you open them. 2 of them ask for an answer and 4 ask for a proof. Where a problem has a final answer, it is shown separately. Try a problem first, then check.</p><p>The olympiad has six problems.</p>
+</div>
+<div class="ct-credit">Problems: Mongolian Mathematical Olympiad 2026, from the AoPS contest collection. Solutions written by MCC.</div>
+<div class="ct-bar"><button type="button" onclick="ctAll(true)">Show all answers and solutions</button><button type="button" onclick="ctAll(false)">Hide all</button></div>
+<div class="ct-toc-wrap"><div class="ct-toc-row"><a href="#p1">1</a><a href="#p2">2</a><a href="#p3">3</a><a href="#p4">4</a><a href="#p5">5</a><a href="#p6">6</a></div></div>
+
+{% raw %}
+<section class="ct-problem" id="p1">
+<h3>Problem 1</h3>
+<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 17: Sequences, Recurrences, and Discrete Dynamics</div>
+<div class="ct-text"><p>Let $a_1, a_2$ be fixed positive integers. For $n \ge 2$, define the sequence $(a_n)_{n\ge 1}$ by $a_{n+1} = \frac{a_2}{a_1}a_n - a_{n-1}$. Suppose that $a_n$ is a positive integer for all positive integers $n$. Prove that the ratio $\frac{a_2}{a_1}$ is an integer.</p></div>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (A closed form with integer polynomials)</h4>
+<p>Write $r=\frac{a_2}{a_1}=\frac{p}{q}$ in lowest terms, with $p,q$ positive integers and $\gcd(p,q)=1$. We must show $q=1$.</p><p>Define polynomials $c_1(x)=1$, $c_2(x)=x$ and $c_{n+1}(x)=x\,c_n(x)-c_{n-1}(x)$ for $n\ge 2$. By induction on $n$, each $c_n$ has integer
+coefficients, degree $n-1$ and leading coefficient $1$ (the step multiplies a monic polynomial of degree $n-1$ by $x$ and subtracts one of
+smaller degree). Also $a_n=a_1c_n(r)$ for all $n\ge1$: this holds for $n=1,2$, and both sides satisfy the same recurrence
+$u_{n+1}=ru_n-u_{n-1}$.</p><p>Write $c_n(x)=x^{n-1}+e_{n-2}x^{n-2}+\dots+e_0$ with integers $e_j$. Then
+\[
+N_n:=q^{n-1}c_n\!\left(\tfrac pq\right)=p^{n-1}+e_{n-2}p^{n-2}q+\dots+e_0q^{n-1}
+\]
+is an integer with $N_n\equiv p^{n-1}\pmod q$, and $q^{n-1}a_n=a_1N_n$.</p><p>Suppose $q&gt;1$ and let $\ell$ be a prime factor of $q$. Since $\gcd(p,q)=1$, $\ell\nmid p^{n-1}$, so $\ell\nmid N_n$. As $a_n$ is an integer,
+$\ell^{n-1}$ divides $q^{n-1}a_n=a_1N_n$, and therefore $\ell^{n-1}\mid a_1$. This holds for every $n$, which is impossible for the positive
+integer $a_1$. Hence $q=1$, that is, $\frac{a_2}{a_1}$ is an integer.</p>
+<h4>Solution 2 (Powers of a prime drop at every step)</h4>
+<p>Write $r=\frac{a_2}{a_1}$ and suppose $r$ is not an integer. Then there is a prime $\ell$ that divides the denominator of $r$ in
+lowest terms. For a nonzero rational number $x$, let $v(x)$ be the exponent of $\ell$ in $x$ (so $x=\ell^{v(x)}\frac{u}{w}$ with $u,w$ integers
+not divisible by $\ell$). Then $v(xy)=v(x)+v(y)$, and if $v(x)\ne v(y)$ then $v(x-y)=\min(v(x),v(y))$. Also $v(x)\ge 0$ for every nonzero
+integer $x$. Put $e=-v(r)\ge 1$.</p><p><em>Claim.</em> $v(a_{n+1})=v(a_n)-e$ for every $n\ge1$.</p><p>For $n=1$, $a_2=ra_1$ gives $v(a_2)=v(a_1)-e$. Suppose $v(a_n)=v(a_{n-1})-e$ for some $n\ge2$. Then
+\[
+v(ra_n)=v(a_n)-e&lt;v(a_n)+e=v(a_{n-1}),
+\]
+so in $a_{n+1}=ra_n-a_{n-1}$ the two terms have different exponents, and $v(a_{n+1})=v(ra_n)=v(a_n)-e$. (All $a_n$ are positive, so the
+exponents are defined.) This proves the claim.</p><p>Consequently $v(a_n)=v(a_1)-(n-1)e$, which is negative once $n&gt;1+v(a_1)$. But $a_n$ is a positive integer, so $v(a_n)\ge0$, a contradiction.
+Therefore $\frac{a_2}{a_1}$ is an integer.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p2">
+<h3>Problem 2</h3>
+<div class="ct-meta">Geometry &middot; LPS VII, Chapter 19: Triangle Centers and Classical Triangle Geometry</div>
+<div class="ct-text"><p>Let $ABC$ be a triangle with circumcircle $\omega$. Let $I$ be its incenter, and the points $E$ and $F$ lie on sides $AC$ and $AB$, respectively, such that $E, I, F$ are collinear and $EF \perp AI$. The lines $BI$ and $CI$ intersect $\omega$ again at $M_B$ and $M_C$, respectively, and the circumcircles of triangles $BFM_B$ and $CEM_C$ intersect the line $BC$ again at points $X$ and $Y$, respectively.</p><p>Prove that $BX = CY$.</p></div>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Chords from a vertex along the bisector)</h4>
+<div class="ct-fig"><img style="width:390px" src="/assets/contests/2026-27/mongolia-mo-2_s1.svg" alt="Figure for the solution"></div>
+<p>Let $a=BC$, $b=CA$, $c=AB$. Since $AI$ bisects $\angle EAF$ and $AI\perp EF$, the right triangles $AIE$ and $AIF$ are
+congruent (common side $AI$, equal angles at $A$), so $AE=AF$.</p><p><em>Lemma.</em> Let a circle $\Gamma$ pass through $B$ and meet the lines $BA$, $BC$ and the bisector of $\angle ABC$ again at $U$, $V$, $W$. Measure
+$BU$, $BV$, $BW$ as signed lengths, positive along the rays $BA$, $BC$ and the internal bisector. Then
+\[
+BU+BV=2\cos\tfrac{B}{2}\cdot BW .
+\]
+<em>Proof.</em> Put $B$ at the origin, let $\mathbf u,\mathbf v$ be the unit vectors along rays $BA,BC$, and let $\mathbf o$ be the centre of
+$\Gamma$. Since $\Gamma$ passes through the origin, a point $\mathbf z$ lies on $\Gamma$ iff $|\mathbf z|^2=2\,\mathbf z\cdot\mathbf o$. For
+$\mathbf z=t\mathbf u$ this reads $t^2=2t\,\mathbf u\cdot\mathbf o$, whose nonzero root is $t=2\,\mathbf u\cdot\mathbf o$; hence
+$BU=2\,\mathbf u\cdot\mathbf o$ (this is $0$ if $\Gamma$ is tangent to $BA$). Likewise $BV=2\,\mathbf v\cdot\mathbf o$ and
+$BW=2\,\mathbf w\cdot\mathbf o$, where $\mathbf w=(\mathbf u+\mathbf v)/|\mathbf u+\mathbf v|$ and $|\mathbf u+\mathbf v|=2\cos\frac B2$. So
+$BU+BV=2(\mathbf u+\mathbf v)\cdot\mathbf o=2\cos\frac B2\cdot BW$. $\square$</p><p>The line $BI$ is the bisector of $\angle ABC$; as $I$ lies inside $\omega$, the point $M_B$ lies on the ray $BI$, so $BM_B&gt;0$.
+Apply the lemma to $\omega$ (here $U=A$, $V=C$, $W=M_B$): $c+a=2\cos\frac B2\cdot BM_B$. Apply it to the circle $BFM_B$ (here $U=F$, $V=X$,
+$W=M_B$): $BF+BX=2\cos\frac B2\cdot BM_B$ with $BX$ signed. Subtracting,
+\[
+BX=a+c-BF=a+AF&gt;a ,
+\]
+so $X$ lies on ray $BC$ beyond $C$ and $BX=a+AF$. In the same way, at vertex $C$ with the circles $\omega$ and $CEM_C$, the point $Y$ lies on ray
+$CB$ beyond $B$ and $CY=a+b-CE=a+AE$. Since $AE=AF$, we conclude $BX=CY$.</p>
+<h4>Solution 2 (Congruent triangles at the arc midpoint)</h4>
+<p>Let $a=BC$. Since $AI$ bisects $\angle EAF$ and is perpendicular to $EF$, the right triangles $AIE$ and $AIF$ are congruent, so
+$AE=AF$. Note $F\ne A$ (otherwise $A$ would lie on $EF$, but $AI\perp EF$ at $I\ne A$).</p><p>Because $BI$ bisects $\angle ABC$, the point $M_B$ is the midpoint of the arc $AC$ of $\omega$ not containing $B$; hence $M_BA=M_BC$, and
+$A,B,C,M_B$ lie on $\omega$ in this cyclic order, so $\angle BAM_B+\angle BCM_B=180^\circ$.</p><p>Let $X'$ be the point on ray $BC$ beyond $C$ with $CX'=AF$. Since $F$ lies on segment $AB$,
+\[
+\angle FAM_B=\angle BAM_B=180^\circ-\angle BCM_B=\angle X'CM_B .
+\]
+Together with $M_BA=M_BC$ and $AF=CX'$, this shows that triangles $M_BAF$ and $M_BCX'$ are congruent (SAS). Hence
+$\angle M_BFA=\angle M_BX'C=\angle M_BX'B$, and so
+\[
+\angle BFM_B+\angle BX'M_B=(180^\circ-\angle AFM_B)+\angle AFM_B=180^\circ .
+\]
+The points $F$ (on ray $BA$) and $X'$ (on ray $BC$) lie on opposite sides of the internal bisector $BM_B$; therefore $B,F,M_B,X'$ are concyclic.
+So $X'$ is a point of line $BC$, different from $B$, on the circle $BFM_B$; that circle meets the line in only two points, hence $X'=X$ and
+$BX=BC+CX'=a+AF$.</p><p>The same argument at vertex $C$ (with $M_C$, the midpoint of arc $AB$, and the point $Y'$ on ray $CB$ beyond $B$ with $BY'=AE$) gives
+$CY=a+AE$. As $AE=AF$, we get $BX=CY$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p3">
+<h3>Problem 3</h3>
+<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 39: Graph Theory and Structural Combinatorics</div>
+<div class="ct-text"><p>A country consists of $62$ islands. Some pairs of islands are connected by bridges; we say two islands are adjacent if they are joined by a bridge. Suppose that:</p><ul class="ct-ul"><li><p>Each island is adjacent to at least $3$ other islands.</p></li><li><p>For any two adjacent islands, there exists an island adjacent to both of them.</p></li><li><p>There do not exist $4$ islands such that every pair among them is adjacent.</p></li></ul><p>Determine the minimum possible number of bridges.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$100$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (A neighbour of large degree, then double counting)</h4>
+<div class="ct-fig"><img style="width:374px" src="/assets/contests/2026-27/mongolia-mo-3_s1.svg" alt="Figure for the solution"></div>
+<p>Think of islands as vertices and bridges as edges of a graph $G$ with $62$ vertices and $E$ edges. The conditions say: every degree
+is at least $3$; every edge lies in a triangle; there is no $K_4$ (four pairwise adjacent vertices).</p><p><em>Lemma.</em> Every vertex of degree $3$ has a neighbour of degree at least $4$.</p><p><em>Proof.</em> Let $v$ have neighbours $x,y,z$. For each edge $vx$ there is a vertex adjacent to both $v$ and $x$, that is, $x$ is adjacent to
+$y$ or $z$; the same holds for $y$ and $z$. So among $x,y,z$ there are at least two edges, and not three (that would give the $K_4$ $vxyz$).
+Say $xy$ and $yz$ are edges and $xz$ is not. If $\deg y\ge4$ we are done; otherwise $N(y)=\{v,x,z\}$. Suppose also $\deg x=3$, so
+$N(x)=\{v,y,w\}$ with $w\notin\{v,y,z\}$. The edge $xw$ lies in a triangle, so $w$ is adjacent to $v$ or to $y$. But $N(v)=\{x,y,z\}$ and
+$N(y)=\{v,x,z\}$ do not contain $w$. This contradiction shows $\deg x\ge4$. $\square$</p><p><em>Lower bound.</em> Let $T$ be the set of vertices of degree $3$, $|T|=t$, let $U$ be the other $u=62-t$ vertices (each of degree at least
+$4$), and let $s$ be the sum of the degrees of the vertices in $U$. Then $2E=3t+s$ and $s\ge 4u$. By the lemma, at least $t$ edges join $T$ to
+$U$, and each of them is counted in $s$; so $s\ge t$. Hence
+\[
+2E=3t+\tfrac15 s+\tfrac45 s\ \ge\ 3t+\tfrac15 t+\tfrac45\cdot 4u=\tfrac{16}{5}(t+u)=\tfrac{16\cdot 62}{5}=198.4,
+\]
+so $E\ge 99.2$, i.e. $E\ge 100$.</p><p><em>Construction.</em> The wheel $W_k$ is a cycle of $k$ vertices together with a hub joined to all of them; it has $k+1$ vertices and $2k$
+edges. Take $11$ copies of $W_4$ and one copy of $W_6$: $11\cdot5+7=62$ islands and $11\cdot8+12=100$ bridges. Every rim vertex has degree
+$3$ and the hubs have degrees $4$ and $6$. Each rim edge forms a triangle with the hub, and each spoke forms a triangle with a rim edge at its
+end. Four pairwise adjacent islands would lie in one wheel and contain at least three rim vertices, which would form a triangle in the rim
+cycle of length $4$ or $6$; this is impossible. So all conditions hold.</p><p>The minimum number of bridges is $\boxed{100}$. (The statement does not require the bridges to connect all islands, and the example above is not
+connected; a connected network needs at least $101$ bridges, see the remark after Solution 2.)</p>
+<h4>Solution 2 (Discharging along triangles)</h4>
+<p>Use the graph language: $62$ vertices, minimum degree $3$, every edge in a triangle, no $K_4$. Give every vertex $w$ the charge
+$\deg w-\frac{16}{5}$; the total charge is $2E-\frac{16\cdot 62}{5}$. We move charge without changing the total and show that all final
+charges are nonnegative.</p><p><em>Local structure.</em> Let $v$ have degree $3$ and neighbours $x,y,z$. Each of $x,y,z$ is adjacent to another of them (the edges at $v$ lie in
+triangles), and not all three pairs are adjacent (no $K_4$). So, after renaming, $xy,yz$ are edges and $xz$ is not: we call $y$ the
+<em>middle</em> neighbour of $v$ and $x,z$ its <em>end</em> neighbours. If $\deg y=3$, then $N(y)=\{v,x,z\}$, and $\deg x\ge 4$: otherwise
+$N(x)=\{v,y,w\}$ with $w\notin\{v,y,z\}$, and the edge $xw$ would need a common neighbour in $\{v,y\}$, while neither $v$ nor $y$ is adjacent to
+$w$. By symmetry $\deg z\ge4$ as well.</p><p><em>Rule.</em> Each vertex $v$ of degree $3$ receives $\frac15$: from its middle neighbour if that has degree at least $4$, and otherwise
+$\frac1{10}$ from each of its two end neighbours (which then have degree at least $4$). Vertices of degree $3$ never give.</p><p>A vertex of degree $3$ ends with $3-\frac{16}5+\frac15=0$. A vertex $w$ of degree $d\ge4$ gives at most $\frac15$ to each neighbour (for a fixed
+receiver $v$, $w$ is either its middle or one of its ends), so it ends with at least $d-\frac{16}{5}-\frac d5=\frac{4(d-4)}{5}\ge 0$.</p><p>Hence $2E-\frac{16\cdot62}{5}\ge 0$, so $E\ge 99.2$ and $E\ge100$.</p><p>Equality-type examples show $100$ is attained: in the wheel $W_4$ (a $4$-cycle plus a hub joined to its four vertices) the hub has degree $4$
+and gives $\frac15$ to each rim vertex, and every charge ends at exactly $0$ (here $E=8=\frac{16}{5}\cdot 5/2$). Taking $11$ copies of $W_4$
+and one wheel $W_6$ (a $6$-cycle plus a hub) gives $55+7=62$ islands and $88+12=100$ bridges. Every condition holds: rim vertices have degree
+$3$, every edge is a rim edge or a spoke and lies in a triangle with the hub or with a rim edge, and four pairwise adjacent vertices would have to
+include three rim vertices of one wheel forming a triangle, which a $4$-cycle or $6$-cycle does not contain.</p><p>So the minimum is $\boxed{100}$.</p><p><em>Remark (connected networks).</em> The statement does not require the network to be connected. If it had to be, at least $101$ bridges would be
+needed. In the rule above, a vertex $w$ of degree $4$ gives at most $\frac35$ unless its component is a $W_4$ with hub $w$. Indeed, the graph induced
+on $N(w)$ is triangle-free (a triangle together with $w$ would be a $K_4$). If $w$ is the middle neighbour of three neighbours $v_1,v_2,v_3$, each
+$v_i$ has degree $3$ and two neighbours in $N(w)$; a triangle-free graph on four vertices in which three vertices have degree $2$ is a $4$-cycle, so
+the fourth neighbour $v_4$ also has two neighbours in $N(w)$; if $\deg v_4=3$ the component is a $W_4$, and otherwise $v_4$ receives nothing from
+$w$, so $w$ gives $\frac35$. If $w$ is the middle neighbour of at most two of them, it gives at most $\frac25+2\cdot\frac1{10}=\frac35$. Now let a
+$62$-vertex graph with our properties have no $W_4$ component, let $t$ be the number of vertices of degree $3$, $u_4$ the number of degree $4$, and
+$\sigma=\sum(\deg w-3)$ over the vertices of degree at least $4$. Each degree-$3$ vertex receives $\frac15$, so
+$\frac t5\le\frac35u_4+\sum_{\deg w\ge5}\frac{\deg w}5$. With $t=62-u_4-\#\{\deg w\ge5\}$ this gives
+$62\le4u_4+\sum_{\deg w\ge5}(\deg w+1)\le4\sigma$ (as $d+1\le4(d-3)$ for $d\ge5$). So $\sigma\ge16$ and $2E=3\cdot62+\sigma\ge202$, i.e. $E\ge101$.
+A connected network on $62$ islands has no $W_4$ component, so it needs at least $101$ bridges.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p4">
+<h3>Problem 4</h3>
+<div class="ct-meta">Algebra &middot; LPS VII, Chapter 42: Polynomial Reconstruction and Interpolation</div>
+<div class="ct-text"><p>Let $a_1, a_2, a_3, b_1, b_2, b_3$ be real numbers. Define the sequences $(x_n)_{n\ge 1}$ and $(y_n)_{n\ge 1}$ by
+\[x_1 = 0,\ y_1 = 1,\]
+and for all positive integers $n \ge 1$,
+\[\begin{cases} x_{n+1} = a_1x_n + a_2y_n + a_3\\ y_{n+1} = b_1x_n + b_2y_n + b_3\end{cases}\]
+Suppose that $y_n = x_n^3 + 1$ for all $n \ge 1$. Prove that the sequence $(x_n)_{n\ge 1}$ takes only finitely many distinct values.</p></div>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (All terms are roots of one polynomial)</h4>
+<p>Since $y_n=x_n^3+1$, the recurrence for $x$ becomes
+\[
+x_{n+1}=a_1x_n+a_2(x_n^3+1)+a_3=g(x_n),\qquad g(t)=a_2t^3+a_1t+(a_2+a_3).
+\]
+On the other hand $y_{n+1}=b_1x_n+b_2y_n+b_3=b_2x_n^3+b_1x_n+b_2+b_3$ and also $y_{n+1}=x_{n+1}^3+1=g(x_n)^3+1$. Hence every $x_n$ is a root of
+\[
+h(t)=g(t)^3+1-\bigl(b_2t^3+b_1t+b_2+b_3\bigr).
+\]</p><p><em>Case 1: $h$ is not the zero polynomial.</em> Then $h$ has degree at most $9$ and at most $9$ real roots, so the sequence $(x_n)$ takes at most
+$9$ distinct values.</p><p><em>Case 2: $h$ is the zero polynomial.</em> If $a_2\ne0$, then $g$ has degree $3$, $g^3$ has degree $9$ with leading coefficient $a_2^3$, and $h$
+has degree $9$, a contradiction. So $a_2=0$ and $g(t)=a_1t+a_3$. The coefficient of $t^2$ in $h(t)=(a_1t+a_3)^3+1-b_2t^3-b_1t-b_2-b_3$ is
+$3a_1^2a_3$, so $a_1=0$ or $a_3=0$.</p><ul class="ct-ul"><li><p>If $a_1=0$, then $x_{n+1}=g(x_n)=a_3$ for all $n$, so the sequence takes at most the two values $0$ and $a_3$.</p></li><li><p>If $a_3=0$, then $x_{n+1}=a_1x_n$, and from $x_1=0$ we get $x_n=0$ for all $n$.</p></li></ul><p>In every case the sequence $(x_n)$ takes only finitely many distinct values.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p5">
+<h3>Problem 5</h3>
+<div class="ct-meta">Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure</div>
+<div class="ct-text"><p>Let $ABC$ be a triangle with circumcircle $\omega$. The points $E$ and $F$ lie on sides $AC$ and $AB$, respectively, such that the quadrilateral $BCEF$ is cyclic. Let $D$ be a point on segment $EF$. The lines $BD$ and $CD$ meet $\omega$ again at $K$ and $L$, respectively.</p><p>Suppose that the circumcircles of $\triangle BFK$ and $\triangle CEL$ intersect at two distinct points $X$ and $Y$. Prove that the midpoint of the segment $XY$ lies on $\omega$.</p></div>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Radical axis and signed powers on one line)</h4>
+<div class="ct-fig"><img style="width:396px" src="/assets/contests/2026-27/mongolia-mo-5_s1.svg" alt="Figure for the solution"></div>
+<p>Let $\Gamma_1$ be the circle $BFK$ and $\Gamma_2$ the circle $CEL$. They are different circles (they meet in exactly two points), and
+their radical axis is the line $XY$. For a point $Z$ and a circle $\Gamma$ we write $\operatorname{pow}_\Gamma(Z)$ for the power of $Z$.</p><p><em>Step 1: $A$ and $D$ lie on line $XY$.</em> Since $BCEF$ is cyclic, the power of $A$ with respect to that circle gives $AF\cdot AB=AE\cdot AC$.
+Line $AB$ meets $\Gamma_1$ at $F$ and $B$, and line $AC$ meets $\Gamma_2$ at $E$ and $C$, so
+$\operatorname{pow}_{\Gamma_1}(A)=AF\cdot AB=AE\cdot AC=\operatorname{pow}_{\Gamma_2}(A)$. Line $BK$ passes through $D$ and meets both $\Gamma_1$ and
+$\omega$ at $B$ and $K$, so $\operatorname{pow}_{\Gamma_1}(D)=\operatorname{pow}_\omega(D)$; similarly, using line $CL$,
+$\operatorname{pow}_{\Gamma_2}(D)=\operatorname{pow}_\omega(D)$. Hence $A$ and $D$ have equal powers with respect to $\Gamma_1,\Gamma_2$ and lie
+on their radical axis. As $A\notin EF$, $A\ne D$, so line $XY$ is the line $AD$; call it $\ell$.</p><p><em>Step 2: a cyclic quadrilateral.</em> Let $P$ be the second intersection of $\ell$ with $\omega$. Using directed angles between lines
+(modulo $180^\circ$),
+\[
+\measuredangle BPD=\measuredangle BPA=\measuredangle BCA=\measuredangle BCE=\measuredangle BFE=\measuredangle BFD,
+\]
+using that $A,B,C,P$ lie on $\omega$ and $B,C,E,F$ are concyclic. Hence $B,F,D,P$ are concyclic, and the power of $A$ with respect to this
+circle gives $AD\cdot AP=AF\cdot AB$.</p><p><em>Step 3: computing on $\ell$.</em> Put a coordinate on $\ell$ with $A$ at $0$ and $D$ at $d&gt;0$; let $P$, $X$, $Y$ have coordinates $p,x,y$.
+For a point $Z$ of $\ell$ with coordinate $z$, $\operatorname{pow}_{\Gamma_1}(Z)=(z-x)(z-y)$ and $\operatorname{pow}_\omega(Z)=z(z-p)$, because
+$\ell$ meets $\Gamma_1$ at $X,Y$ and $\omega$ at $A,P$. Let $k=AF\cdot AB&gt;0$. Then
+\[
+xy=\operatorname{pow}_{\Gamma_1}(A)=k,\qquad dp=k\ \ \text{(Step 2, $D$ and $P$ are on the same side of $A$)},
+\]
+and from $\operatorname{pow}_{\Gamma_1}(D)=\operatorname{pow}_\omega(D)$,
+\[
+(d-x)(d-y)=d(d-p)\ \Longrightarrow\ xy-d(x+y)=-dp\ \Longrightarrow\ k-d(x+y)=-k\ \Longrightarrow\ x+y=\frac{2k}{d}=2p .
+\]
+So the midpoint of $XY$ has coordinate $\frac{x+y}{2}=p$: it is the point $P$, which lies on $\omega$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p6">
+<h3>Problem 6</h3>
+<div class="ct-meta">Algebra &middot; LPS VII, Chapter 46: Functional Equations: Iteration, Rigidity, and Deep Structure</div>
+<div class="ct-text"><p>A function $f : \mathbb{N} \to \mathbb{N}$ is called <em>khongor</em> if $f(1) = 1$ and for all positive integers $m, n$,
+\[f(f(n)f(n+m)) = f(f(n)f(m)) + f(f(n))^2.\]
+Let $f$ be a khongor function. Determine the maximum possible number of primes $p$ among the first $2026$ primes for which $f(p) &lt; p$.</p><p><em>Note:</em> The set $\mathbb{N}$ denotes the set of positive integers.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$1013$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (The error term depends only on the gcd)</h4>
+<p><em>Step 1: $f$ is an involution.</em> With $n=1$ and $f(1)=1$ the equation gives $f(f(m+1))=f(f(m))+1$. Since $f(f(1))=f(1)=1$,
+induction gives $f(f(m))=m$ for all $m$. So $f$ is a bijection of $\mathbb N$ and $f(f(n))^2=n^2$.</p><p><em>Step 2.</em> Define $G(n,m)=f(f(n)f(m))-nm$, an integer. The equation reads $G(n,n+m)+n(n+m)=G(n,m)+nm+n^2$, that is,
+\[
+G(n,n+m)=G(n,m)\qquad\text{for all } n,m\ge1 .
+\]
+$G$ is symmetric, so $G$ does not change when the larger argument is replaced by the difference of the two. Running the subtractive Euclidean
+algorithm, $G(n,m)=G(d,d)$ with $d=\gcd(n,m)$. Put $e(d)=G(d,d)$; note $e(1)=f(f(1))-1=0$. Writing $n=f(a)$, $m=f(b)$ (possible since $f$ is onto)
+and using $f(f(a))=a$, we get for all $a,b$:
+\[
+f(ab)=f(a)f(b)+e\bigl(\gcd(f(a),f(b))\bigr). \tag{$\star$}
+\]
+For fixed $a$ the error $E_a(b)=f(ab)-f(a)f(b)$ takes only the values $e(d)$ with $d\mid f(a)$, so $|E_a(b)|\le C_a$ for a constant $C_a$.</p><p><em>Step 3: $e\equiv0$.</em> Compute $f(a^2b)$ twice with $(\star)$. First, with the pair $(a,ab)$ and then $(a,b)$:
+$f(a^2b)=f(a)f(ab)+E_a(ab)=f(a)^2f(b)+f(a)E_a(b)+E_a(ab)$. Second, with the pair $(a^2,b)$, and $f(a^2)=f(a)^2+e(f(a))$ (from $(\star)$ with $b=a$):
+$f(a^2b)=f(a)^2f(b)+e(f(a))f(b)+E_{a^2}(b)$. Therefore
+\[
+e(f(a))\,f(b)=f(a)E_a(b)+E_a(ab)-E_{a^2}(b).
+\]
+The right side is bounded by $f(a)C_a+C_a+C_{a^2}$ for all $b$, while $f(b)$ takes every positive integer value. Hence $e(f(a))=0$; as $f$ is onto,
+$e\equiv 0$. Now $(\star)$ says $f(ab)=f(a)f(b)$ for all $a,b$: $f$ is completely multiplicative.</p><p><em>Step 4: primes go to primes.</em> If $p$ is prime, $f(p)\ne1=f(1)$. If $f(p)=uv$ with $u,v&gt;1$, then $p=f(f(p))=f(u)f(v)$ with $f(u),f(v)&gt;1$,
+impossible. So $f(p)$ is prime.</p><p><em>Step 5: the bound.</em> Let $\mathcal P$ be the set of the first $2026$ primes and $S=\{p\in\mathcal P: f(p)&lt;p\}$. For $p\in S$, $q=f(p)$ is a
+prime smaller than $p$, hence $q\in\mathcal P$, and $f(q)=p&gt;q$, so $q\notin S$. Since $f$ is injective, $f$ maps $S$ injectively into
+$\mathcal P\setminus S$, so $|S|\le 2026-|S|$, i.e. $|S|\le 1013$.</p><p><em>Step 6: construction.</em> Let $p_1&lt;p_2&lt;\dots$ be the primes. Let $\sigma$ swap $p_{2i-1}\leftrightarrow p_{2i}$ for $1\le i\le1013$ and fix all
+other primes, and set $f(\prod p^{\alpha_p})=\prod\sigma(p)^{\alpha_p}$. Then $f(1)=1$, $f$ is completely multiplicative and $f(f(n))=n$, so
+\[
+f(f(n)f(n+m))=n(n+m)=nm+n^2=f(f(n)f(m))+f(f(n))^2 .
+\]
+Among the first $2026$ primes exactly $p_2,p_4,\dots,p_{2026}$ satisfy $f(p)&lt;p$. The maximum is $\boxed{1013}$.</p>
+<h4>Solution 2 (Bounded periodic errors and a squaring trick)</h4>
+<p><em>Involution.</em> Putting $n=1$ and using $f(1)=1$ gives $f(f(m+1))=f(f(m))+1$, and with $f(f(1))=1$ we get $f(f(m))=m$ for all $m$.
+So $f$ is a bijection and $f(f(n))^2=n^2$.</p><p><em>Periodic errors.</em> Let $c_n(m)=f(f(n)f(m))-nm$. The equation says exactly that $c_n(m+n)=c_n(m)$. So for fixed $n$ the function $c_n$ is
+periodic with period $n$, takes finitely many values, and $|c_n(m)|\le K_n$ for some constant $K_n$. Substituting $n=f(a)$, $m=f(b)$:
+\[
+\bigl|f(ab)-f(a)f(b)\bigr|=\bigl|c_{f(a)}(f(b))\bigr|\le K_{f(a)}\qquad\text{for all } a,b .
+\]</p><p><em>Squares.</em> Fix $a$ and write $L=K_{f(a)}$, $L'=K_{f(a^2)}$. On one hand $f(a^2b)=f(a)f(ab)+\varepsilon_1=f(a)^2f(b)+f(a)\varepsilon_2+\varepsilon_1$ with
+$|\varepsilon_1|,|\varepsilon_2|\le L$; on the other hand $f(a^2b)=f(a^2)f(b)+\varepsilon_3$ with $|\varepsilon_3|\le L'$. So
+$\bigl(f(a^2)-f(a)^2\bigr)f(b)$ is bounded as $b$ varies; since $f(b)$ takes all positive integer values, $f(a^2)=f(a)^2$ for every $a$.</p><p><em>All errors vanish.</em> For any $n,m$, using $f(u^2)=f(u)^2$ twice,
+\[
+\bigl(nm+c_n(m)\bigr)^2=f(f(n)f(m))^2=f\bigl(f(n)^2f(m)^2\bigr)=f\bigl(f(n^2)f(m^2)\bigr)=n^2m^2+c_{n^2}(m^2),
+\]
+so $2nm\,c_n(m)+c_n(m)^2=c_{n^2}(m^2)$. Fix $n$ and a residue $r$ modulo $n$, and let $m$ run through $m\equiv r\pmod n$. Then $c_n(m)=c_n(r)=:\gamma$ is
+constant and the right side stays bounded by $K_{n^2}$, while the left side is $2nm\gamma+\gamma^2$. Letting $m\to\infty$ forces $\gamma=0$. Thus
+$c_n\equiv0$, i.e. $f(f(n)f(m))=nm$; with $n=f(a)$, $m=f(b)$ this is $f(ab)=f(a)f(b)$.</p><p><em>Conclusion.</em> If $p$ is prime and $f(p)=uv$ with $u,v&gt;1$, then $p=f(u)f(v)$ with both factors larger than $1$; so $f$ maps primes to primes.
+If $p$ is among the first $2026$ primes and $f(p)&lt;p$, then $q=f(p)$ is also among them and $f(q)=p&gt;q$; pairing $p$ with $q$ shows that at most
+half of the $2026$ primes, i.e. at most $1013$, satisfy $f(p)&lt;p$. Conversely the completely multiplicative $f$ that swaps the $(2i-1)$-th and
+$(2i)$-th primes for $i\le 1013$ and fixes all other primes satisfies $f(1)=1$, $f(f(n))=n$ and
+$f(f(n)f(n+m))=n(n+m)=f(f(n)f(m))+f(f(n))^2$, and exactly $1013$ of the first $2026$ primes have $f(p)&lt;p$. The answer is $\boxed{1013}$.</p>
+</div></details>
+</section>
+{% endraw %}

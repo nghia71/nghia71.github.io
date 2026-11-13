@@ -1,0 +1,234 @@
+---
+title: Junior Balkan Mathematical Olympiad 2026
+permalink: /contests/jbmo-2026
+description: Junior Balkan Mathematical Olympiad 2026: problems with answers and solutions
+---
+{% raw %}
+<style>
+  .ct-intro { margin-bottom: 1.2em; }
+  .ct-credit { font-size: 14px; color: var(--ink-soft); border-left: 3px solid var(--gold); padding: 6px 12px; background: var(--white); margin: 1em 0; }
+  .ct-toc { display: flex; flex-wrap: wrap; gap: 6px; margin: 1em 0 1.4em; }
+  .ct-toc a { display: inline-block; min-width: 2.4em; text-align: center; padding: 4px 8px; border: 1px solid var(--rule); border-radius: 4px; background: var(--white); text-decoration: none; font-size: 14px; }
+  .ct-problem { background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 14px 18px; margin: 1.1em 0; }
+  .ct-problem h3 { margin: 0 0 .3em; font-size: 1.08rem; border-bottom: none; padding-bottom: 0; }
+  .ct-meta { font-size: 13px; color: var(--ink-soft); margin-bottom: .6em; }
+  .ct-text { font-family: Georgia, "Times New Roman", "Noto Serif", serif; font-size: 1.02em; line-height: 1.6; }
+  .ct-text p { margin: .5em 0; }
+  .ct-fig { text-align: center; margin: .8em 0; }
+  .ct-fig img { max-width: 100%; height: auto; max-height: 340px; }
+  .ct-choices { display: flex; flex-wrap: wrap; gap: 6px 22px; margin: .6em 0 .2em; }
+  .ct-choices b { margin-right: .3em; }
+  .ct-problem details { margin-top: .8em; border-top: 1px dashed var(--rule); padding-top: .5em; }
+  .ct-problem summary { cursor: pointer; font-weight: 600; color: var(--brand); font-size: 15px; }
+  .ct-problem details[open] summary { margin-bottom: .5em; }
+  .ct-sol h4 { font-size: 1rem; margin: 1em 0 .3em; color: var(--ink); }
+  .ct-answer { font-weight: 600; }
+  .ct-parts { list-style: none; padding-left: .4em; }
+  .ct-parts li { margin: .35em 0; }
+  .ct-lbl { font-weight: 700; margin-right: .3em; }
+  .ct-note { font-size: 14px; color: var(--ink-soft); font-style: italic; }
+  .ct-bar { margin: .6em 0 1em; display: flex; gap: 10px; flex-wrap: wrap; }
+  .ct-bar button { font: inherit; font-size: 14px; padding: 5px 12px; border-radius: var(--radius); border: 1px solid var(--brand); background: var(--white); color: var(--brand); cursor: pointer; }
+</style>
+<script>
+  window.MathJax = { tex: { inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [['\\[','\\]']], processEscapes: true },
+                     options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] } };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script>
+  function ctAll(open) { document.querySelectorAll('.ct-problem details').forEach(function (d) { d.open = open; }); }
+</script>
+
+<style>
+  .ct-group { font-size: 1.25rem; margin: 1.6em 0 .2em; }
+  .ct-toc-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: .3em 0; }
+  .ct-toc-g { font-size: 13px; color: var(--ink-soft); min-width: 9em; }
+  .ct-toc-wrap { margin: 1em 0 1.4em; }
+  .ct-center { text-align: center; margin: .6em 0; }
+  .ct-tablewrap { overflow-x: auto; margin: .6em 0; text-align: center; }
+  .ct-table { border-collapse: collapse; margin: 0 auto; }
+  .ct-table td { padding: 2px 9px; text-align: center; }
+  .ct-table tr.ct-hl td { border-bottom: 1px solid var(--ink-soft); }
+  .ct-table.ct-vfirst td:first-child { border-right: 1px solid var(--ink-soft); }
+  .ct-ul { padding-left: 1.4em; }
+  .ct-ul li { margin: .3em 0; }
+  .ct-text li > p:first-child { margin-top: 0; }
+  .ct-text li > p:last-child { margin-bottom: 0; }
+  .ct-text mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
+</style>
+
+{% endraw %}
+<p><a href="{{ '/contests-2026' | relative_url }}">&larr; All contests 2026</a></p>
+
+<h1>Junior Balkan Mathematical Olympiad 2026</h1>
+
+<div class="ct-intro">
+<p>The 4 problems of the Junior Balkan Mathematical Olympiad 2026, each with our own solutions, hidden until you open them. 2 of them ask for an answer and 2 ask for a proof. Where a problem has a final answer, it is shown separately. Try a problem first, then check.</p><p>The Junior Balkan Mathematical Olympiad is a one-day contest of four problems.</p>
+</div>
+<div class="ct-credit">Problems: Junior Balkan Mathematical Olympiad 2026, from the AoPS contest collection. Solutions written by MCC.</div>
+<div class="ct-bar"><button type="button" onclick="ctAll(true)">Show all answers and solutions</button><button type="button" onclick="ctAll(false)">Hide all</button></div>
+<div class="ct-toc-wrap"><div class="ct-toc-row"><a href="#p1">1</a><a href="#p2">2</a><a href="#p3">3</a><a href="#p4">4</a></div></div>
+
+{% raw %}
+<section class="ct-problem" id="p1">
+<h3>Problem 1</h3>
+<div class="ct-meta">Algebra &middot; LPS VII, Chapter 1: Inequalities: Core Classical Methods</div>
+<div class="ct-text"><p>Let $a,b,c$ be positive real numbers such that
+\[a^2+b^2+c^2\ge 3.\]
+Prove that
+\[\frac{a^4}{a^2+2b+2c}+\frac{b^4}{b^2+2c+2a}+\frac{c^4}{c^2+2a+2b}\ge\frac{3}{5}.\]</p></div>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Titu's lemma and the power mean)</h4>
+<p>Write $s=a^2+b^2+c^2\ge 3$ and $p=a+b+c$. The three denominators add up to
+\[(a^2+2b+2c)+(b^2+2c+2a)+(c^2+2a+2b)=s+4p .\]
+By the Cauchy&ndash;Schwarz inequality in Engel form (Titu's lemma),
+\[\frac{a^4}{a^2+2b+2c}+\frac{b^4}{b^2+2c+2a}+\frac{c^4}{c^2+2a+2b}\ge\frac{(a^2+b^2+c^2)^2}{s+4p}=\frac{s^2}{s+4p}.\]
+By the QM&ndash;AM inequality, $p=a+b+c\le\sqrt{3(a^2+b^2+c^2)}=\sqrt{3s}$, so the denominator is at most $s+4\sqrt{3s}$ and
+\[\text{LHS}\ge\frac{s^2}{s+4\sqrt{3s}} .\]
+Put $t=\sqrt{s/3}$, so $t\ge 1$ and $s=3t^2$, $\sqrt{3s}=3t$. Then
+\[\frac{s^2}{s+4\sqrt{3s}}=\frac{9t^4}{3t^2+12t}=\frac{3t^3}{t+4},\qquad
+\frac{3t^3}{t+4}-\frac35=\frac{3(5t^3-t-4)}{5(t+4)}=\frac{3(t-1)(5t^2+5t+4)}{5(t+4)}\ge 0\]
+because $t\ge 1$. Hence the left-hand side is at least $\frac35$. Equality needs $t=1$ and $a=b=c$, that is $a=b=c=1$, and there the
+left-hand side is indeed $3\cdot\frac15=\frac35$.</p>
+<h4>Solution 2 (AM-GM on each term)</h4>
+<p>Let $s=a^2+b^2+c^2\ge 3$, $p=a+b+c$ and $D_a=a^2+2b+2c$, $D_b=b^2+2c+2a$, $D_c=c^2+2a+2b$ (all positive).
+The weight $\frac1{25}$ below is chosen so that the AM&ndash;GM step is an equality at $a=b=c=1$, where $D_a=5$.
+By AM&ndash;GM,
+\[\frac{a^4}{D_a}+\frac{D_a}{25}\ge 2\sqrt{\frac{a^4}{25}}=\frac{2a^2}{5},\]
+and similarly for $b$ and $c$. Adding the three inequalities and using $D_a+D_b+D_c=s+4p$,
+\[\text{LHS}\ge\frac{2s}{5}-\frac{s+4p}{25}=\frac{9s-4p}{25}.\]
+From $(a-1)^2\ge 0$ we get $2a\le a^2+1$, and similarly for $b,c$; adding, $2p\le s+3$. Therefore
+\[9s-4p\ge 9s-2(s+3)=7s-6\ge 7\cdot 3-6=15,\]
+and the left-hand side is at least $\frac{15}{25}=\frac35$. Equality holds for $a=b=c=1$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p2">
+<h3>Problem 2</h3>
+<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 4: Divisibility and Prime Structure</div>
+<div class="ct-text"><p>Determine all pairs $(a,b)$ of positive integers such that $a+1$ divides $b+2$ and $b$ divides $2a^2$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$(a,b)=(a,2a)$ for every positive integer $a$, together with $(2,1)$, $(3,2)$ and $(3,18)$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Working with both quotients)</h4>
+<p>Write
+\[b+2=k(a+1),\qquad 2a^2=mb\]
+with positive integers $k,m$.</p><p><em>The case $k=1$.</em> Then $b=a-1$, so $a\ge 2$. Since $\gcd(a-1,a)=1$, the condition $a-1\mid 2a^2$ forces $a-1\mid 2$, so
+$a=2$ or $a=3$. This gives $(2,1)$ and $(3,2)$; both work ($3\mid 3$, $1\mid 8$ and $4\mid 4$, $2\mid 18$).</p><p><em>The case $k\ge 2$.</em> Modulo $a+1$ we have $a\equiv-1$, so $2a^2\equiv 2$ and $b\equiv-2$. Hence
+$2\equiv 2a^2=mb\equiv-2m\pmod{a+1}$, that is, $a+1\mid 2m+2$. Let $t=\frac{2m+2}{a+1}$, a positive integer; then
+$m=\frac{t(a+1)}{2}-1$. Multiplying $b+2=k(a+1)$ by $m$ gives $mk(a+1)=2a^2+2m=2(a-1)(a+1)+(2m+2)$, and dividing by $a+1$,
+\[mk=2(a-1)+t.\tag{*}\]
+Since $k\ge 2$, $(*)$ gives $2(a-1)+t\ge 2m=t(a+1)-2$, i.e. $2a\ge ta$, so $t\le 2$.</p><ul class="ct-ul"><li><p>$t=2$: then $m=a$, and $(*)$ reads $ak=2a$, so $k=2$ and $b=2(a+1)-2=2a$. Every pair $(a,2a)$ works:
+$a+1\mid 2a+2$ and $2a\mid 2a^2$.</p></li><li><p>$t=1$: then $m=\frac{a-1}{2}$, so $a$ is odd and $a\ge 3$ (as $m\ge 1$). Now $(*)$ reads $k(a-1)=2(2a-1)=4(a-1)+2$, so
+$a-1\mid 2$ and $a=3$, $m=1$, $k=5$, $b=5\cdot 4-2=18$. Indeed $4\mid 20$ and $18\mid 18$.</p></li></ul><p>Hence the solutions are
+\[(a,b)=\boxed{(a,2a)\ (a\ge 1),\ (2,1),\ (3,2),\ (3,18)}.\]</p>
+<h4>Solution 2 (Squaring the congruence)</h4>
+<p>Write $b+2=k(a+1)$ with $k$ a positive integer.</p><p>If $k=1$, then $b=a-1$ (so $a\ge 2$); since $b=a-1\mid 2a^2$ and $\gcd(a-1,a)=1$, we get $a-1\mid 2$: the pairs $(2,1)$ and $(3,2)$, which both work.
+If $k=2$, then $b=2a$, which divides $2a^2$: every pair $(a,2a)$ is a solution.</p><p>Now let $k\ge 3$. From $ka=b+2-k$ we get $k^2a^2\equiv(k-2)^2\pmod b$. Since $b\mid 2a^2$, also $b\mid 2k^2a^2$, hence
+\[b\mid 2(k-2)^2 .\]
+As $k\ne 2$, the right-hand side is positive, so $b\le 2(k-2)^2&lt;2k^2$. On the other hand $b=ka+(k-2)&gt;ka$. Therefore $ka&lt;2k^2$,
+i.e. $a&lt;2k$. Let $m=\frac{2a^2}{b}$ (a positive integer). Then
+\[m&lt;\frac{2a^2}{ka}=\frac{2a}{k}&lt;4,\]
+so $m\in\{1,2,3\}$. The equation $mb=2a^2$ becomes $mk(a+1)=2a^2+2m$. Since $2a^2+2m\equiv 2+2m\pmod{a+1}$, we need
+$a+1\mid 2m+2$, and then $k=\frac{2a^2+2m}{m(a+1)}$:</p><ul class="ct-ul"><li><p>$m=1$: $a+1\mid 4$, so $a\in\{1,3\}$, giving $k=2$ (not allowed here) or $k=\frac{20}{4}=5$; the latter gives $(a,b)=(3,18)$.</p></li><li><p>$m=2$: $a+1\mid 6$, so $a\in\{1,2,5\}$, giving $k=\frac32,\ 2,\ \frac92$; none is an integer $\ge 3$.</p></li><li><p>$m=3$: $a+1\mid 8$, so $a\in\{1,3,7\}$, giving $k=\frac43,\ 2,\ \frac{13}{3}$; none is an integer $\ge 3$.</p></li></ul><p>So $k\ge 3$ gives only $(3,18)$ (check: $4\mid 20$, $18\mid 18$). All solutions:
+\[(a,b)=\boxed{(a,2a)\ (a\ge 1),\ (2,1),\ (3,2),\ (3,18)}.\]</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p3">
+<h3>Problem 3</h3>
+<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 18: Invariants and Monovariants</div>
+<div class="ct-text"><p>Let $n\ge 3$ be an integer. There are $n$ colored lamps arranged in a circle. Pressing the button of a lamp once changes its color as follows:
+\[\text{green}\to\text{red},\quad\text{red}\to\text{blue},\quad\text{blue}\to\text{green}.\]
+Initially, all lamps are colored red. Aladdin makes moves on these lamps. Each move consists of the following three steps:</p><ul class="ct-ul"><li><p>he chooses a lamp $L$, without pressing its button;</p></li><li><p>he presses the button of the clockwise neighbor of $L$ once;</p></li><li><p>he presses the button of the counterclockwise neighbor of $L$ twice.</p></li></ul><p>For each $n$, determine the maximum possible number of lamps that are colored green simultaneously, after finitely many moves.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$n$ if $3\mid n$; $n-1$ if $3\nmid n$ and $n$ is odd; $n-2$ if $3\nmid n$ and $n$ is even</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Invariants and telescoping moves)</h4>
+<p>Number the lamps $0,1,\dots,n-1$ clockwise (indices modulo $n$), so the clockwise neighbour of lamp $i$ is
+lamp $i+1$. Record the colours as residues modulo $3$: red $=0$, blue $=1$, green $=2$. Pressing a button adds $1$ (modulo $3$),
+so a move at lamp $i$ adds $1$ to the value $x_{i+1}$ and $2\equiv-1$ to the value $x_{i-1}$ (these are different lamps since
+$n\ge 3$). Initially all $x_j=0$.</p><p><strong>Invariants.</strong> A move adds $1+2=3\equiv 0$ to the total, so $\sum_j x_j\equiv 0\pmod 3$ at all times. If $n$ is even, the
+lamps $i-1$ and $i+1$ have the same parity, so a move adds $+1$ and $-1$ inside one parity class; hence the sum over the
+even-numbered lamps and the sum over the odd-numbered lamps are each $\equiv 0\pmod 3$ at all times.</p><p><strong>Upper bound.</strong> Let $n$ be odd. If all $n$ lamps were green, the total would be $2n$, which is $\equiv 0\pmod 3$ only when
+$3\mid n$. So for $3\nmid n$ at most $n-1$ lamps are green. Let $n=2h$ be even. Each parity class has $h$ lamps; if all of them
+were green, its sum would be $2h$, which is $\equiv 0\pmod 3$ only when $3\mid h$, i.e. $3\mid n$. So for $3\nmid n$ each class has
+at most $h-1$ green lamps, and at most $n-2$ lamps are green.</p><p><strong>The transfer move.</strong> For any lamp $j$ and $k\ge 1$, make one move at each of the lamps $j+1,j+3,\dots,j+2k-1$. The move at
+$j+2r-1$ adds $+1$ at $j+2r$ and $-1$ at $j+2r-2$; adding up, all intermediate changes cancel and the net effect is $+1$ at lamp
+$j+2k$ and $-1$ at lamp $j$, nothing else. So we can move one unit from lamp $j$ to lamp $j+2k$. When $n$ is odd, the numbers
+$j+2k$ cover all residues modulo $n$, so a unit can be moved between any two lamps; when $n$ is even, between any two lamps of the
+same parity class.</p><p><strong>Construction.</strong> Take any target values $y_j$ whose sum (for odd $n$), or whose sum in each parity class (for even $n$), is
+$\equiv 0\pmod 3$. Fix a base lamp $r$ (one in each class if $n$ is even). For every other lamp $j$ in the same class, move $y_j$
+units from $r$ to $j$. Now lamp $j$ shows $y_j$, and lamp $r$ shows $-\sum_{j\ne r}y_j\equiv y_r$. So every such target is
+reachable. We use the targets:</p><ul class="ct-ul"><li><p>$n$ odd, $3\mid n$: all lamps green (total $2n\equiv 0$): $n$ green lamps.</p></li><li><p>$n$ odd, $3\nmid n$: $n-1$ green lamps and one lamp with value $v\equiv-2(n-1)\equiv n+2\pmod 3$, which is $0$ (red) if
+$n\equiv 1$ and $1$ (blue) if $n\equiv 2\pmod 3$: $n-1$ green lamps.</p></li><li><p>$n=2h$ even: in each class, all $h$ lamps green if $3\mid h$; otherwise $h-1$ green lamps and one lamp with value
+$\equiv h+2\pmod 3$, which is red or blue. This gives $n$ green lamps if $3\mid n$ and $n-2$ otherwise.</p></li></ul><p>Hence the maximum is
+\[\boxed{\ n\ \text{if } 3\mid n;\qquad n-1\ \text{if } 3\nmid n,\ n\text{ odd};\qquad n-2\ \text{if } 3\nmid n,\ n\text{ even}\ }.\]</p>
+<h4>Solution 2 (Counting moves per lamp)</h4>
+<p>Use the numbering and residues of Solution 1: a move at lamp $i$ adds $1$ to $x_{i+1}$ and $-1$ to $x_{i-1}$
+(modulo $3$). The effects of moves simply add up, so the final state depends only on how many moves were made at each lamp, and
+only modulo $3$. If $c_i\in\{0,1,2\}$ moves are made at lamp $i$, lamp $j$ ends with
+\[x_j\equiv c_{j-1}-c_{j+1}\pmod 3,\]
+because lamp $j$ is the clockwise neighbour of lamp $j-1$ and the counterclockwise neighbour of lamp $j+1$. Conversely every
+choice of $(c_0,\dots,c_{n-1})$ can be realised. So the reachable states are exactly the vectors $(x_j)$ for which the system
+$c_{j+1}\equiv c_{j-1}-x_j$ $(j=0,\dots,n-1)$ has a solution.</p><p>Follow this system in steps of $2$: it determines $c_{j+1}$ from $c_{j-1}$. Starting from $c_1$ and walking $1\to3\to5\to\cdots$, we
+return to the start after $L$ steps, where $L=n$ if $n$ is odd and $L=n/2$ if $n$ is even. Going once around the walk, the value of
+$c$ changes by $-\sum x_j$, the sum taken over the lamps $j$ passed in between. Hence a solution exists iff these sums are
+$\equiv 0\pmod 3$:</p><ul class="ct-ul"><li><p>$n$ odd: the walk visits every index, so the condition is $\sum_{j}x_j\equiv 0\pmod 3$ (and then any start value $c_1$ works);</p></li><li><p>$n$ even: the walk from $c_1$ uses the even lamps $j$, and the walk from $c_0$ uses the odd lamps; the conditions are
+$\sum_{j\text{ even}}x_j\equiv 0$ and $\sum_{j\text{ odd}}x_j\equiv 0\pmod 3$.</p></li></ul><p>So the reachable states are precisely the colourings with these sums divisible by $3$. It remains to maximise the number of
+greens ($x_j=2$) under these conditions. For $n$ odd: all $n$ green needs $3\mid 2n$; otherwise $n-1$ greens plus one lamp of value
+$\equiv-2(n-1)\pmod 3$, which is $0$ or $1$ (never $2$, because $3\nmid n$), is allowed. For $n=2h$ even: each class of $h$ lamps
+can be all green iff $3\mid h$, and otherwise holds $h-1$ greens and one red or blue lamp. Therefore the maximum is
+\[\boxed{\ n\ \text{if } 3\mid n;\qquad n-1\ \text{if } 3\nmid n,\ n\text{ odd};\qquad n-2\ \text{if } 3\nmid n,\ n\text{ even}\ }.\]</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p4">
+<h3>Problem 4</h3>
+<div class="ct-meta">Geometry &middot; LPS VII, Chapter 48: Inversion and Circle-Preserving Transformation</div>
+<div class="ct-text"><p>Let $ABC$ be a triangle with $AB\ne AC$ and let $I$ be its incenter. Let $P$ and $Q$ be points inside $\triangle ABC$ such that $BP=PC&gt;BQ=QC$. Lines $BP$ and $CQ$ meet at $X$. Suppose that the line $AI$ is tangent to the circumcircle of triangle $IPQ$. Prove that the circumcircles of triangles $ABQ$, $ACP$ and $PQX$ have a common point.</p></div>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Inversion turns it into Miquel)</h4>
+<div class="ct-fig"><img style="width:381px" src="/assets/contests/2026-27/jbmo-4_s1.svg" alt="Figure for the solution"></div>
+<p>Throughout, $\Gamma$ is the circumcircle of $ABC$, $M$ is the second intersection of line $AI$ with
+$\Gamma$ (the midpoint of arc $BC$ not containing $A$), $D=AI\cap BC$, and $N$ is the midpoint of $BC$. Let $\angle A$ denote
+$\angle BAC$.</p><p><strong>Step 1: the basic facts.</strong></p><ul class="ct-ul"><li><p>$MB=MC=MI$ (incenter&ndash;excenter lemma): $\angle MBI=\angle MBC+\angle CBI=\frac{\angle A}{2}+\frac{\angle B}{2}=\angle BAI+\angle ABI
+=\angle MIB$, so $MB=MI$; similarly $MC=MI$. Let $\omega$ be the circle with center $M$ and radius $MB$; it passes through
+$B,I,C$.</p></li><li><p>$PB=PC$ and $QB=QC$, so $P$ and $Q$ lie on the perpendicular bisector $m$ of $BC$; as $P\ne Q$, line $PQ$ is $m$. The line
+$m$ passes through $M$ and $N$. Since $AB\ne AC$, the line $AI$ is not $m$, so $M$ is the only common point of $AI$ and $PQ$.</p></li><li><p>The line $AI$ touches the circle $IPQ$ at $I$, and $M$ lies on this tangent and on the secant $PQ$. Computing the power of $M$
+in two ways, $MP\cdot MQ=MI^2=MB^2$, and since this power is positive, $P$ and $Q$ lie on the same ray from $M$.</p></li></ul><p><strong>Step 2: $X$ lies on $\omega$.</strong> Triangles $MBP$ and $MQB$ have the common angle at $M$ and $MB:MP=MQ:MB$, so they are
+similar and $\angle MBP=\angle MQB$. Let $x=\angle PBC=\angle PCB$ and $y=\angle QBC=\angle QCB$. As $M$ and $P$ are on opposite
+sides of $BC$, $\angle MBP=\angle MBC+\angle CBP=\frac{\angle A}{2}+x$. Also $N$ lies between $M$ and $Q$, so in the right
+triangle $QNB$, $\angle MQB=\angle NQB=90^\circ-y$. Hence
+\[x+y=90^\circ-\tfrac{\angle A}{2}.\]
+In triangle $XBC$ we have $\angle XBC=x$ and $\angle XCB=y$, so $\angle BXC=90^\circ+\frac{\angle A}{2}=\angle BIC$. As $X$ and $I$ are
+on the same side of $BC$, the point $X$ lies on the circle $BIC$, which is $\omega$.</p><p><strong>Step 3: inversion.</strong> Let $\Psi$ be the inversion with center $M$ and radius $MB$. It fixes $B$, $C$, $X$ (they lie on
+$\omega$) and swaps $P$ and $Q$ (because $MP\cdot MQ=MB^2$ with $P,Q$ on one ray from $M$). The circle $\Gamma$ passes through $M$,
+$B$, $C$, so $\Psi$ maps it to the line $BC$; hence $\Psi(A)$ is the point of $BC$ on line $MA$, namely $\Psi(A)=D$.</p><p><strong>Step 4: Miquel.</strong> In triangle $XBC$ the points $D$, $P$, $Q$ lie on the lines $BC$, $XB$, $XC$ and differ from the vertices
+($D$ is inside segment $BC$; $P\ne X$ because line $CQ$ meets $m$ only at $Q$; similarly $Q\ne X$). By Miquel's theorem the circles
+$(BDP)$, $(CDQ)$ and $(XPQ)$ have a common point $W$.</p><p>The circle $(XPQ)$ does not pass through $M$: otherwise $\Psi$ would map it to a line through $\Psi(X)=X$, $\Psi(P)=Q$,
+$\Psi(Q)=P$, but $X\notin m$ (line $BP$ meets $m$ only at $P\ne X$). So $W\ne M$; let $Z=\Psi(W)$. The circle $(BDP)$ does not pass
+through $M$ either, since otherwise its image would be a line through $B$, $A$, $Q$, and these are not collinear ($Q$ is inside the
+triangle). So $\Psi$ maps it to the circle through $\Psi(B)=B$, $\Psi(D)=A$, $\Psi(P)=Q$, i.e. to the circle $(ABQ)$. In the same way
+$\Psi$ maps $(CDQ)$ to $(ACP)$, and it maps $(XPQ)$ to the circle through $X$, $Q$, $P$, i.e. to itself.</p><p>Since $W$ lies on $(BDP)$, $(CDQ)$ and $(XPQ)$, its image $Z$ lies on the circumcircles of $ABQ$, $ACP$ and $PQX$. So these three
+circles have a common point.</p>
+<h4>Solution 2 (A trigonometric lemma and an angle chase)</h4>
+<p>Let $M$ be the midpoint of arc $BC$ of the circumcircle not containing $A$; it lies on $AI$, and $MB=MC=MI$ (incenter&ndash;excenter
+lemma). Since $PB=PC$ and $QB=QC$, the points $P,Q$ lie on the perpendicular bisector of $BC$, which passes through $M$ and meets
+$AI$ only at $M$ (as $AB\ne AC$). The line $AI$ touches the circle $IPQ$ at $I$, so the power of $M$ gives
+$MP\cdot MQ=MI^2=MB^2&gt;0$; in particular $P,Q$ lie on one ray from $M$.</p><p><strong>Lemma: $\angle PBC+\angle QBC=\frac{\angle B+\angle C}{2}$.</strong> Let $N$ be the midpoint of $BC$ and choose the unit so that $BN=1$.
+With $x=\angle PBC$, $y=\angle QBC$, $\alpha=\frac{\angle A}{2}=\angle MBN$ we have $NP=\tan x$, $NQ=\tan y$, $NM=\tan\alpha$,
+$MB=\frac1{\cos\alpha}$, and $N$ lies between $M$ and $P,Q$. So $MP\cdot MQ=MB^2$ reads
+\[(\tan x+\tan\alpha)(\tan y+\tan\alpha)=\frac1{\cos^2\alpha}.\]
+Using $\tan u+\tan v=\frac{\sin(u+v)}{\cos u\cos v}$ this becomes $\sin(x+\alpha)\sin(y+\alpha)=\cos x\cos y$, i.e.
+\[\cos(x-y)-\cos(x+y+2\alpha)=\cos(x-y)+\cos(x+y),\]
+so $\cos(x+y+2\alpha)+\cos(x+y)=2\cos(x+y+\alpha)\cos\alpha=0$. As $\cos\alpha\ne 0$ and $0&lt;x+y+\alpha&lt;270^\circ$, we get
+$x+y+\alpha=90^\circ$, i.e. $x+y=90^\circ-\frac{\angle A}{2}=\frac{\angle B+\angle C}{2}$.</p><p><strong>The angle chase.</strong> We use directed angles between lines, modulo $180^\circ$. Place $B$ to the left of $C$ with $A$ above $BC$,
+and measure the direction of each line counterclockwise from $BC$. By symmetry in the perpendicular bisector,
+$\angle PCB=x$ and $\angle QCB=y$. The directions are: $BA$: $\angle B$; $BQ$: $y$; $BP$: $x$; $CQ$: $-y$; $CP$: $-x$; $CA$: $-\angle C$.</p><p>Let $Z$ be the second common point of the circles $(ABQ)$ and $(PQX)$ (if they touch at $Q$, take $Z=Q$ and read $ZQ$ as the common
+tangent). Using these two circles,
+\[\measuredangle(ZA,ZP)=\measuredangle(ZA,ZQ)+\measuredangle(ZQ,ZP)=\measuredangle(BA,BQ)+\measuredangle(XQ,XP)
+=(y-\angle B)+(x+y),\]
+since $XQ$ is the line $CQ$ and $XP$ is the line $BP$. On the other hand $\measuredangle(CA,CP)=-x+\angle C$. The difference is
+\[(x+2y-\angle B)-(\angle C-x)=2(x+y)-(\angle B+\angle C)=0\]
+by the Lemma. Hence $\measuredangle(ZA,ZP)=\measuredangle(CA,CP)$, so $Z$ lies on the circle $(ACP)$. (If $Z=A$ or $Z=P$, there is
+nothing to prove: then $A$, respectively $P$, already lies on all three circles.) Thus $Z$ is a common point of the circumcircles of
+$ABQ$, $ACP$ and $PQX$.</p>
+</div></details>
+</section>
+{% endraw %}

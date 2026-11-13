@@ -1,0 +1,235 @@
+---
+title: 33rd Macedonian Mathematical Olympiad (2026)
+permalink: /contests/macedonia-mo-2026
+description: 33rd Macedonian Mathematical Olympiad (2026): problems with answers and solutions
+---
+{% raw %}
+<style>
+  .ct-intro { margin-bottom: 1.2em; }
+  .ct-credit { font-size: 14px; color: var(--ink-soft); border-left: 3px solid var(--gold); padding: 6px 12px; background: var(--white); margin: 1em 0; }
+  .ct-toc { display: flex; flex-wrap: wrap; gap: 6px; margin: 1em 0 1.4em; }
+  .ct-toc a { display: inline-block; min-width: 2.4em; text-align: center; padding: 4px 8px; border: 1px solid var(--rule); border-radius: 4px; background: var(--white); text-decoration: none; font-size: 14px; }
+  .ct-problem { background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 14px 18px; margin: 1.1em 0; }
+  .ct-problem h3 { margin: 0 0 .3em; font-size: 1.08rem; border-bottom: none; padding-bottom: 0; }
+  .ct-meta { font-size: 13px; color: var(--ink-soft); margin-bottom: .6em; }
+  .ct-text { font-family: Georgia, "Times New Roman", "Noto Serif", serif; font-size: 1.02em; line-height: 1.6; }
+  .ct-text p { margin: .5em 0; }
+  .ct-fig { text-align: center; margin: .8em 0; }
+  .ct-fig img { max-width: 100%; height: auto; max-height: 340px; }
+  .ct-choices { display: flex; flex-wrap: wrap; gap: 6px 22px; margin: .6em 0 .2em; }
+  .ct-choices b { margin-right: .3em; }
+  .ct-problem details { margin-top: .8em; border-top: 1px dashed var(--rule); padding-top: .5em; }
+  .ct-problem summary { cursor: pointer; font-weight: 600; color: var(--brand); font-size: 15px; }
+  .ct-problem details[open] summary { margin-bottom: .5em; }
+  .ct-sol h4 { font-size: 1rem; margin: 1em 0 .3em; color: var(--ink); }
+  .ct-answer { font-weight: 600; }
+  .ct-parts { list-style: none; padding-left: .4em; }
+  .ct-parts li { margin: .35em 0; }
+  .ct-lbl { font-weight: 700; margin-right: .3em; }
+  .ct-note { font-size: 14px; color: var(--ink-soft); font-style: italic; }
+  .ct-bar { margin: .6em 0 1em; display: flex; gap: 10px; flex-wrap: wrap; }
+  .ct-bar button { font: inherit; font-size: 14px; padding: 5px 12px; border-radius: var(--radius); border: 1px solid var(--brand); background: var(--white); color: var(--brand); cursor: pointer; }
+</style>
+<script>
+  window.MathJax = { tex: { inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [['\\[','\\]']], processEscapes: true },
+                     options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] } };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script>
+  function ctAll(open) { document.querySelectorAll('.ct-problem details').forEach(function (d) { d.open = open; }); }
+</script>
+
+<style>
+  .ct-group { font-size: 1.25rem; margin: 1.6em 0 .2em; }
+  .ct-toc-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: .3em 0; }
+  .ct-toc-g { font-size: 13px; color: var(--ink-soft); min-width: 9em; }
+  .ct-toc-wrap { margin: 1em 0 1.4em; }
+  .ct-center { text-align: center; margin: .6em 0; }
+  .ct-tablewrap { overflow-x: auto; margin: .6em 0; text-align: center; }
+  .ct-table { border-collapse: collapse; margin: 0 auto; }
+  .ct-table td { padding: 2px 9px; text-align: center; }
+  .ct-table tr.ct-hl td { border-bottom: 1px solid var(--ink-soft); }
+  .ct-table.ct-vfirst td:first-child { border-right: 1px solid var(--ink-soft); }
+  .ct-ul { padding-left: 1.4em; }
+  .ct-ul li { margin: .3em 0; }
+  .ct-text li > p:first-child { margin-top: 0; }
+  .ct-text li > p:last-child { margin-bottom: 0; }
+  .ct-text mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
+</style>
+
+{% endraw %}
+<p><a href="{{ '/contests-2026' | relative_url }}">&larr; All contests 2026</a></p>
+
+<h1>33rd Macedonian Mathematical Olympiad (2026)</h1>
+
+<div class="ct-intro">
+<p>The 5 problems of the 33rd Macedonian Mathematical Olympiad (2026), each with our own solutions, hidden until you open them. 3 of them ask for an answer and 2 ask for a proof. Where a problem has a final answer, it is shown separately. Try a problem first, then check.</p><p>The olympiad has five problems.</p>
+</div>
+<div class="ct-credit">Problems: 33rd Macedonian Mathematical Olympiad (2026), from the AoPS contest collection. Solutions written by MCC.</div>
+<div class="ct-bar"><button type="button" onclick="ctAll(true)">Show all answers and solutions</button><button type="button" onclick="ctAll(false)">Hide all</button></div>
+<div class="ct-toc-wrap"><div class="ct-toc-row"><a href="#p1">1</a><a href="#p2">2</a><a href="#p3">3</a><a href="#p4">4</a><a href="#p5">5</a></div></div>
+
+{% raw %}
+<section class="ct-problem" id="p1">
+<h3>Problem 1</h3>
+<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 31: Extremal Principle and Bounding Arguments</div>
+<div class="ct-text"><p>Some cells ($1\times 1$ squares) in a rectangular grid are colored in such a way that no row nor column contains more than $n$ colored cells, where $n\geq 2$ is a given number. We call a set $M$ of colored cells <em>good</em> if, for any two cells positioned in different rows and columns, there exists a colored cell in the same row as one of the two cells and the same column as the other one.
+Determine, as a function of $n$, the largest possible cardinality of a good set $M$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$n^2$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (A line with the most cells of $M$)</h4>
+<p>Throughout, the two cells in the definition of a good set are cells of $M$.</p><p><em>Example.</em> The size of the grid is not prescribed, so take a grid with at least $n$ rows and $n$ columns. Colour an $n\times n$ block of cells and let $M$ be the whole block. Each row and
+column contains at most $n$ coloured cells, and for two cells $(r_1,c_1),(r_2,c_2)$ of the block, the cell $(r_1,c_2)$ is in the block, hence coloured.
+So $|M|=n^2$ is possible.</p><p><em>Bound.</em> Let $M$ be good and non-empty. Call rows and columns <em>lines</em>, and let $d$ be the largest number of cells of $M$ in one line; so
+$d\le n$. Transposing the grid if necessary, we may assume that this maximum is attained by a row $\rho$; let its cells of $M$ lie in the columns
+$\gamma_1,\dots,\gamma_d$. Let
+\[R^*=\{\text{rows } r\ne\rho:\ \text{the cells }(r,\gamma_1),\dots,(r,\gamma_d)\text{ are all coloured}\}.\]
+Column $\gamma_1$ has at most $n$ coloured cells and one of them is $(\rho,\gamma_1)$, so $|R^*|\le n-1$. Split $M$ into three parts.</p><ul class="ct-ul"><li><p>$M_1$: cells of $M$ in the columns $\gamma_1,\dots,\gamma_d$. Each column has at most $d$ cells of $M$, so $|M_1|\le d^2$.</p></li><li><p>$M_2$: cells $(r,\gamma)\in M$ with $\gamma\notin\{\gamma_i\}$ and $r\in R^*$. Row $r$ has coloured cells in the $d$ columns $\gamma_i$, so it has at most
+$n-d$ further coloured cells; thus $|M_2|\le(n-1)(n-d)$.</p></li><li><p>$M_3$: the other cells $(r,\gamma)\in M$: $\gamma\notin\{\gamma_i\}$ and $r\notin R^*$. Then $r\ne\rho$ (all cells of $M$ in row $\rho$ are in the
+columns $\gamma_i$), and some cell $(r,\gamma_i)$ is not coloured. The cells $(\rho,\gamma_i)$ and $(r,\gamma)$ of $M$ are in different rows and
+columns, so $(\rho,\gamma)$ or $(r,\gamma_i)$ is coloured; hence $(\rho,\gamma)$ is coloured. So $\gamma$ is one of the at most $n-d$ columns, other than
+the $\gamma_i$, in which row $\rho$ has a coloured cell. Each such column contains at most $d$ cells of $M$, so $|M_3|\le d(n-d)$.</p></li></ul><p>Adding,
+\[|M|\le d^2+(n-1)(n-d)+d(n-d)=d^2+(n-d)(n-1+d)=n^2-n+d\le n^2 .\]
+Hence the largest possible size of a good set is $\boxed{n^2}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p2">
+<h3>Problem 2</h3>
+<div class="ct-meta">Algebra &middot; LPS VII, Chapter 1: Inequalities: Core Classical Methods</div>
+<div class="ct-text"><p>Let $a,b,c$ be positive real numbers. Prove that
+\[\frac{a(a-b)}{\sqrt{b^2+1}}+\frac{b(b-c)}{\sqrt{c^2+1}}+\frac{c(c-a)}{\sqrt{a^2+1}}\geq 0.\]</p></div>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Removing the products, then AM-GM)</h4>
+<p>Write $f(x)=\frac1{\sqrt{x^2+1}}&gt;0$ and sum cyclically over $(a,b,c)$.</p><p><em>Step 1.</em> $a(a-b)-\frac{a^2-b^2}{2}=\frac{(a-b)^2}{2}\ge0$, so
+\[\sum a(a-b)f(b)\ \ge\ \frac12\sum\,(a^2-b^2)f(b).\]
+<em>Step 2.</em> Put $A=a^2+1$, $B=b^2+1$, $C=c^2+1$; then $a^2-b^2=A-B$ and $f(b)=\frac1{\sqrt B}$, so we must show
+\[\frac{A-B}{\sqrt B}+\frac{B-C}{\sqrt C}+\frac{C-A}{\sqrt A}\ge0,\qquad\text{i.e.}\qquad \frac{A}{\sqrt B}+\frac{B}{\sqrt C}+\frac{C}{\sqrt A}\ge\sqrt A+\sqrt B+\sqrt C .\]
+By AM-GM, $\frac{A}{\sqrt B}+\sqrt B\ge2\sqrt A$, and similarly $\frac{B}{\sqrt C}+\sqrt C\ge2\sqrt B$, $\frac{C}{\sqrt A}+\sqrt A\ge2\sqrt C$. Adding these
+three inequalities and cancelling $\sqrt A+\sqrt B+\sqrt C$ gives exactly the claim. Hence the original sum is $\ge0$; equality holds for
+$a=b=c$.</p>
+<h4>Solution 2 (Cauchy-Schwarz and the rearrangement inequality)</h4>
+<p>Write $f(x)=\frac1{\sqrt{x^2+1}}&gt;0$ and sum cyclically over $(a,b,c)$. We must show $\sum ab\,f(b)\le\sum a^2f(b)$.</p><p><em>Cauchy-Schwarz:</em>
+\[\sum ab\,f(b)=\sum\bigl(a\sqrt{f(b)}\bigr)\bigl(b\sqrt{f(b)}\bigr)\le\sqrt{\sum a^2f(b)}\ \sqrt{\sum b^2f(b)} .\]
+<em>Rearrangement:</em> the numbers $a^2,b^2,c^2$ and $f(a),f(b),f(c)$ are oppositely ordered, since $f$ is decreasing on $(0,\infty)$. By the
+rearrangement inequality, pairing each $x^2$ with its own $f(x)$ gives the <em>smallest</em> sum among all pairings, so
+\[\sum b^2f(b)=a^2f(a)+b^2f(b)+c^2f(c)\le a^2f(b)+b^2f(c)+c^2f(a)=\sum a^2f(b).\]
+Combining, $\sum ab\,f(b)\le\sqrt{\sum a^2f(b)}\sqrt{\sum a^2f(b)}=\sum a^2f(b)$, which is the inequality. Equality holds for $a=b=c$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p3">
+<h3>Problem 3</h3>
+<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 12: Exponential Congruences and Order Structure</div>
+<div class="ct-text"><p>Determine all positive integers $z$ such that $z$, $z+7$, and $z+11$ are prime powers (a prime power is a number of the form $p^n$, where $p$ is a prime number, and $n$ is a positive integer).</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$z\in\{2,\,16\}$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Parity, then powers of $3$)</h4>
+<p>Recall that $1$ is not a prime power, so $z\ge2$.</p><p><em>$z$ is a power of $2$.</em> If $z$ were odd, then $z+7$ and $z+11$ would be even prime powers, i.e. powers of $2$, say $2^u$ and $2^v$, with
+$2^u=z+7\ge10$, so $u\ge4$. But $2^v-2^u=4$ gives $2^u\mid4$, a contradiction. So $z$ is even, i.e. $z=2^a$ with $a\ge1$.</p><p><em>One of the numbers is a power of $3$.</em> Modulo $3$ the numbers $z,\ z+7,\ z+11$ are $z,\ z+1,\ z+2$, so one of them is divisible by $3$; it is
+not $z=2^a$. So $z+7$ or $z+11$ is a power of $3$.</p><p><em>Case $2^a+7=3^b$.</em> If $a\ge3$, then $3^b\equiv7\pmod8$, impossible because powers of $3$ are $\equiv1$ or $3\pmod 8$. For $a=2$, $11$ is not a power
+of $3$. For $a=1$: $z=2$, and $2,9,13$ are prime powers.</p><p><em>Case $2^a+11=3^c$.</em> For $a=1,2,3$ we get $13,15,19$, not powers of $3$; for $a=4$: $z=16$, and $16,23,27$ are prime powers. Let $a\ge5$. Then
+$3^c\equiv11\pmod{32}$. The powers $3^1,3^2,\dots$ modulo $32$ are $3,9,27,17,19,25,11,1$ and then repeat, so $c\equiv7\pmod8$. Modulo $41$ we have
+$3^4=81\equiv-1$, hence $3^8\equiv1$ and $3^c\equiv3^7=3^4\cdot27\equiv-27\equiv14$, so
+\[2^a\equiv14-11=3\pmod{41}.\]
+But $2^{10}=1024=25\cdot41-1\equiv-1$, so the powers of $2$ modulo $41$ repeat with period $20$ and are
+$1,2,4,8,16,32,23,5,10,20,40,39,37,33,25,9,18,36,31,21$; the residue $3$ does not occur. Contradiction.</p><p>Therefore $z\in\boxed{\{2,16\}}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p4">
+<h3>Problem 4</h3>
+<div class="ct-meta">Geometry &middot; LPS VII, Chapter 53: Barycentric and Projective-Flavored Geometry</div>
+<div class="ct-text"><p>Let $ABC$ be a triangle with orthocenter $H$, and let $\omega$ be the circle with diameter $AH$. Let $P,Q\in\omega$, $M\in AB$, $N\in AC$ be such that $PQ\parallel MN\parallel BC$. Let $K$ be the midpoint of the segment $BC$, $T=AK\cap\omega$, and $S=PM\cap QN$. Prove that the lines $AS$, $BH$, and $QT$ are concurrent, i.e. they either have a common point or are all parallel.</p></div>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Coordinates)</h4>
+<div class="ct-fig"><img style="width:334px" src="/assets/contests/2026-27/macedonia-mo-4_s1.svg" alt="Figure for the solution"></div>
+<p><em>Replacing $S$.</em> Let $A'$ be the intersection of the line through $P$ parallel to $AB$ with the line through $Q$ parallel to $AC$. The triangles
+$A'PQ$ and $AMN$ have pairwise parallel sides ($A'P\parallel AM$, $A'Q\parallel AN$, $PQ\parallel MN$), so they are homothetic, and the centre of the
+homothety lies on $PM$, $QN$ and $A'A$; that centre is $S$. Hence the line $AS$ is the line $AA'$. (We assume, as the problem does, that $S$
+exists and $S\neq A$.)</p><p><em>Set-up.</em> Take the foot of the altitude from $A$ as origin, $BC$ as the $x$-axis and the altitude as unit: $A=(0,1)$, $B=(b,0)$, $C=(c,0)$ with
+$b\ne c$ and $bc\ne-1$ (the angle at $A$ is not right, otherwise $H=A$ and $\omega$ does not exist), and $b\ne0$ (otherwise $H=B$ and the line $BH$
+does not exist). Then $H=(0,-bc)$, since $(H-B)\cdot(C-A)=(-b,-bc)\cdot(c,-1)=0$. The circle
+with diameter $AH$ is
+\[\omega:\ x^2+(y-1)(y+bc)=0 ,\]
+and the line $BH$, the perpendicular from $B$ to $AC$, is $cx-y-bc=0$.
+As $PQ\parallel BC$ and $\omega$ is symmetric in the $y$-axis, $Q=(p,k)$ and $P=(-p,k)$ with $p\ne0$ and
+\[p^2+(k-1)(k+bc)=0. \tag{$\dagger$}\]
+<em>The point $A'$.</em> Solving $P+s(B-A)=Q+s'(C-A)$ gives $s=s'=\frac{2p}{b-c}$ and
+$A'=\bigl(\frac{p(b+c)}{b-c},\ k-\frac{2p}{b-c}\bigr)$.</p><p><em>Slopes through $A$.</em> Write $u=y-1$ and $w=1+bc\ne0$. Then $A$ is the origin of the $(x,u)$-coordinates and
+\[\omega:\ x^2+u^2+wu=0,\qquad BH:\ u=cx-w .\]
+The line $u=mx$ through $A$ meets $\omega$ again at the point $Z_m$ with $x(1+m^2)=-wm$. For two such points
+$Z_m,Z_{m'}$ ($m\ne m'$) the line
+\[(m+m')\,x+(mm'-1)\,u+w\,mm'=0 \tag{$\ast$}\]
+passes through both: substituting $u=mx$, $x=-\frac{wm}{1+m^2}$ gives
+$-\frac{wm}{1+m^2}\bigl(m+m'+m^2m'-m\bigr)+wmm'=0$, and the equation is symmetric in $m,m'$.</p><p>Let $m$ be the slope of $AQ$ (it exists, as $p\ne0$), so $Q=Z_m$ and $k-1=mp$. If $b+c=0$, then $K$ is the foot of
+the altitude, $T=H$, and $A'$ has $x$-coordinate $0$; so $AA'$, $BH$ and $QT=QH$ all pass through $H$. Let $b+c\ne0$.
+The median $AK$ has slope $\tau=-\frac{2}{b+c}$, so $T=Z_\tau$, and (for $Q\ne T$, i.e. $m\ne\tau$, so that the line $QT$ is defined) by $(\ast)$
+\[QT:\ (m+\tau)\,x+(m\tau-1)\,u+w\,m\tau=0 .\]
+From the formula for $A'$,
+\[A'-A=\Bigl(\frac{p(b+c)}{b-c},\ mp-\frac{2p}{b-c}\Bigr)=\frac{p}{b-c}\,\bigl(b+c,\ m(b-c)-2\bigr),\]
+so
+\[AA':\ u=\sigma x,\qquad \sigma=\frac{m(b-c)-2}{b+c}=m\Bigl(1+\tau c\Bigr)+\tau=m+\tau+m\tau c ,\]
+because $1+\tau c=\frac{b-c}{b+c}$. Now
+\[(\sigma x-u)-m\tau\,(cx-u-w)=(\sigma-m\tau c)\,x+(m\tau-1)\,u+w\,m\tau=(m+\tau)\,x+(m\tau-1)\,u+w\,m\tau .\]
+So the equation of $QT$ is a combination of the equations of $AA'$ and $BH$. These two lines are different
+($A\notin BH$ because $w\ne0$); hence $QT$ passes through their common point, or, if they are parallel, is parallel
+to both. Therefore $AS=AA'$, $BH$ and $QT$ are concurrent or all parallel.</p>
+<h4>Solution 2 (A projective map from $\omega$ to $BH$)</h4>
+<p><em>Replacing $S$.</em> Let $A'$ be the point where the line through $P$ parallel to $AB$ meets the line through $Q$ parallel to $AC$. The triangles
+$A'PQ$ and $AMN$ have pairwise parallel sides, so they are homothetic with centre $PM\cap QN=S$, and $A,A',S$ are collinear: the line $AS$ is $AA'$.
+(We assume $S$ exists and $S\ne A$.)</p><p><em>$A'$ depends affinely on $Q$.</em> The circle $\omega$ has its diameter $AH$ on the altitude from $A$, and $PQ\perp AH$, so $P$ is the reflection
+of $Q$ in the line $AH$. Let $e=\frac{C-B}{BC}$ (a unit vector along $BC$) and $\ell(Z)=(Z-A)\cdot e$; the reflection in $AH$ is $Z\mapsto Z-2\ell(Z)e$.
+Writing $A'=P+s(B-A)=Q+t(C-A)$ and comparing components along $AH$ (where $B-A$ and $C-A$ agree) gives $s=t$, and then $P-Q=t(C-B)$, i.e.
+$t=-2\ell(Q)/BC$. So $A'=\Phi(Q)$ for the affine map
+\[\Phi(Z)=Z-\frac{2\ell(Z)}{BC}\,(C-A).\]
+Note $\Phi(A)=A$ and $\Phi(H)=H$. The linear part of $\Phi$ fixes the vectors along $AH$ (for them $\ell=0$) and sends $e$ to
+$e-\frac{2}{BC}(C-A)=\frac{2A-B-C}{BC}=\frac{2(A-K)}{BC}$, where $K$ is the midpoint of $BC$.</p><p>If $AB=AC$, then $K$ is the foot of the altitude, $T=H$, and $A'=\Phi(Q)$ lies on $AH$, so $AA'$, $BH$ and $QT=QH$ all pass through $H$.
+From now on $AB\ne AC$; then $A-K\nparallel AH$, so $\Phi$ is invertible. So $A'$ runs over the conic $\omega'=\Phi(\omega)$, which passes through $A$. The tangent to $\omega$ at $A$ has direction $e$ (as $AH$ is a
+diameter); its image, the tangent to $\omega'$ at $A$, has direction $A-K$, i.e. it is the median $AK$.</p><p><em>Two projectivities.</em> For $Q\in\omega$ define two points of the (projectively extended) line $BH$:
+\[f(Q)=QT\cap BH,\qquad g(Q)=A\Phi(Q)\cap BH,\]
+where for $Q=T$ the line $QT$ means the tangent at $T$, and for $Q=A$ the line $A\Phi(Q)$ means the tangent $AK$ to $\omega'$ at $A$. The map $f$
+is the projection of the conic $\omega$ from its point $T$ onto the line $BH$, hence a projectivity. The map $g$ is the affine (so projective)
+map $\Phi:\omega\to\omega'$ followed by the projection of $\omega'$ from its point $A$ onto $BH$, hence also a projectivity. Two projectivities
+from a conic to a line that agree at three points are equal. We check three points of $\omega$:</p><ul class="ct-ul"><li><p>$Q=H$: $f(H)=H$ as $H\in BH$ (the projection from $T$ is defined because $T\notin BH$: the only points of $\omega$ on $BH$ are $H$ and $E$;
+$T\ne H$ because $AB\ne AC$, and $T\ne E$ because $E\in AC$, $T\in AK$ and $T\ne A$); $\Phi(H)=H$, so $g(H)=AH\cap BH=H$.</p></li><li><p>$Q=E$, the foot of the altitude from $B$ (it lies on $\omega$ since $\angle AEH=90^\circ$, and on $AC$ and $BH$): $f(E)=E$; and
+$\Phi(E)=E+t(C-A)$ lies on $AC$, so $g(E)=AC\cap BH=E$.</p></li><li><p>$Q=A$: $f(A)=AT\cap BH=AK\cap BH$ since $T\in AK$; and $g(A)=AK\cap BH$ by the choice of the tangent.</p></li></ul><p>If $\angle C\ne90^\circ$, the three points $H,E,A$ are distinct: $E\ne A$ and $H\ne A$ as $\angle A\ne90^\circ$, and $H=E$ would put $H$ on $AC$,
+so the altitude from $A$ would be the line $AC$, i.e. $\angle C=90^\circ$. Then $f=g$. For our $Q$ this says that $QT$ and $AA'=AS$ meet $BH$ at the
+same point (possibly at infinity): the lines $AS$, $BH$, $QT$ are concurrent or all parallel.</p><p>If $\angle C=90^\circ$, then $H=E=C$ and only two test points remain. This case follows from Solution 1, or by continuity: for fixed $Q$
+(moving with the triangle) both $f(Q)$ and $g(Q)$ depend continuously on the triangle, and they agree for all nearby triangles with
+$\angle C\ne90^\circ$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p5">
+<h3>Problem 5</h3>
+<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 39: Graph Theory and Structural Combinatorics</div>
+<div class="ct-text"><p>Let $n\geq 3$ be an integer. Each cell of an $n\times n$ board is colored so that adjacent cells (sharing a side) are of different colors. A coloring is called <em>nice</em> if, for every cell, no color appears exactly twice or exactly four times among its adjacent cells. Determine, as a function of $n$, the minimum number of colors required for a nice coloring.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$5$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Diagonal pairs and parity)</h4>
+<div class="ct-fig"><img style="width:347px" src="/assets/contests/2026-27/macedonia-mo-5_s1.svg" alt="Figure for the solution"></div>
+<p>The answer is $5$.</p><p><em>Five colours suffice.</em> Number rows and columns from $0$ and colour the cell $(i,j)$ with $(i+2j)\bmod 5$. If a cell has colour $x$, its
+neighbours have colours $x\pm1$ (vertical neighbours) and $x\pm2$ (horizontal neighbours) modulo $5$. These four values are distinct and differ
+from $x$. So adjacent cells have different colours, and every colour appears at most once around each cell: the colouring is nice for every
+$n$ (left part of the figure).</p><p><em>What a nice colouring with at most four colours must look like.</em> Suppose a nice colouring uses at most $4$ colours.</p><ul class="ct-ul"><li><p>An inner cell has $4$ neighbours. They cannot have $4$ different colours (together with the cell's own colour that would be $5$ colours), and
+no colour may appear exactly $2$ or $4$ times; so one colour appears $3$ times and another once (pattern $3+1$). In particular exactly one of the
+two opposite pairs (left/right, up/down) is monochromatic.</p></li><li><p>A cell on a side (not a corner) has $3$ neighbours: they all have the same colour, or all have different colours.</p></li><li><p>At a corner the two neighbours have different colours.</p></li></ul><p><em>Diagonal pairs.</em> Number the rows and columns $0,1,\dots,n-1$ and let $c(i,j)$ be the colour of the cell $(i,j)$.
+For $1\le x,y\le n-1$ look at the $2\times2$ block formed by the rows $x-1,x$ and the columns $y-1,y$, and put
+\[\alpha(x,y)=\begin{cases}1&amp;\text{if } c(x-1,y)=c(x,y-1),\\ 0&amp;\text{otherwise,}\end{cases}\qquad
+\beta(x,y)=\begin{cases}1&amp;\text{if } c(x-1,y-1)=c(x,y),\\ 0&amp;\text{otherwise.}\end{cases}\]</p><ul class="ct-parts"><li><p><span class="ct-lbl">(A)</span> <em>Inner cells.</em> Let $1\le i,j\le n-2$ and let $N,E,S,W$ be the colours of the cells above, to the right of, below
+and to the left of $(i,j)$. Three of them are equal and the fourth is different. If the different one is $N$ or
+$W$, then $N\ne W$ and $S=E$; if it is $S$ or $E$, then $S\ne E$ and $N=W$. So exactly one of $N=W$, $S=E$ holds. Now
+$N=W$ means $c(i-1,j)=c(i,j-1)$, i.e. $\alpha(i,j)=1$, and $S=E$ means $c(i+1,j)=c(i,j+1)$, i.e. $\alpha(i+1,j+1)=1$. Hence
+\[\alpha(i,j)+\alpha(i+1,j+1)=1 .\]</p></li><li><p><span class="ct-lbl">(B)</span> <em>Two side cells.</em> The neighbours of $(0,1)$ are $(0,0),(0,2),(1,1)$; they are all equal or all different,
+so $c(0,0)=c(1,1)$ holds exactly when $c(0,2)=c(1,1)$: $\ \beta(1,1)=\alpha(1,2)$. In the same way the neighbours
+$(n-3,n-1),(n-1,n-1),(n-2,n-2)$ of the cell $(n-2,n-1)$ give $\alpha(n-2,n-1)=\beta(n-1,n-1)$.</p></li><li><p><span class="ct-lbl">(C)</span> <em>Corners.</em> The two neighbours of a corner are different: $\alpha(1,1)=0$ and $\alpha(n-1,n-1)=0$.</p></li></ul><p><em>Odd $n$.</em> By (A) with $i=j=k$, $\alpha(k+1,k+1)=1-\alpha(k,k)$ for $k=1,\dots,n-2$. Starting from $\alpha(1,1)=0$ and
+making $n-2$ steps (an odd number) we get $\alpha(n-1,n-1)=1$, against (C).</p><p><em>Even $n$</em> (so $n\ge4$; the cells used are shaded in the right part of the figure). We first show that a corner cell has the colour of its diagonal neighbour:
+\[c(0,0)=c(1,1),\quad\text{i.e. }\beta(1,1)=1,\qquad\text{and likewise}\qquad\beta(n-1,n-1)=1. \tag{D}\]
+The neighbours of the inner cell $(1,1)$ are $(0,1),(1,0),(1,2),(2,1)$, and $c(0,1)\ne c(1,0)$ by (C). Three of the four are
+equal, so $c(1,2)=c(2,1)=:e$, and $e$ equals $c(0,1)$ or $c(1,0)$; by the symmetry in the diagonal we may assume
+$e=c(0,1)$. Consider the side cell $(1,0)$ with neighbours $(0,0),(1,1),(2,0)$, and suppose $c(0,0)\ne c(1,1)$. Then these
+three neighbours have three different colours, all different from $c(1,0)$; with at most four colours, they are all the
+colours except $c(1,0)$. As $e=c(0,1)\ne c(1,0)$, one of the three has colour $e$. But $(0,0)$ and $(1,1)$ are adjacent to
+$(0,1)$, and $(2,0)$ is adjacent to $(2,1)$, which have colour $e$: a contradiction. Hence $c(0,0)=c(1,1)$. Turning the
+board by $180^\circ$ gives the second equality in (D).</p><p>Now $\beta(1,1)=1$ gives $\alpha(1,2)=1$ by (B). By (A) with $(i,j)=(k,k+1)$, $\alpha(k+1,k+2)=1-\alpha(k,k+1)$ for
+$k=1,\dots,n-3$; after $n-3$ steps (an odd number) $\alpha(n-2,n-1)=0$. By (B), $\beta(n-1,n-1)=0$, against (D).</p><p>So no nice colouring uses at most four colours, and the minimum is $\boxed{5}$ for every $n\ge3$.</p>
+</div></details>
+</section>
+{% endraw %}
