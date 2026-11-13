@@ -75,6 +75,18 @@ Problems from the 2026 national and international olympiads, with our own soluti
     <p>5 problems. Taiwan Mathematics Olympiad: five problems.</p>
   </div>
   <div class="card">
+    <h3><a href="{{ '/contests/iran-2nd-round-2026' | relative_url }}">Iran MO 2nd Round 2026</a></h3>
+    <p>6 problems. Iranian olympiad, second round: two days, three problems each.</p>
+  </div>
+  <div class="card">
+    <h3><a href="{{ '/contests/kazakhstan-mo-2026' | relative_url }}">Kazakhstan NMO 2026</a></h3>
+    <p>12 problems. Kazakh national olympiad.</p>
+  </div>
+  <div class="card">
+    <h3><a href="{{ '/contests/vietnam-mo-2026' | relative_url }}">VMO 2026</a></h3>
+    <p>7 problems. Vietnamese national olympiad (VMO): two days.</p>
+  </div>
+  <div class="card">
     <h3><a href="{{ '/contests/thailand-mo-2026' | relative_url }}">Thailand MO 2026</a></h3>
     <p>10 problems. Thai national olympiad: two days, five problems each.</p>
   </div>
