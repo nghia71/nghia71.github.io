@@ -63,6 +63,10 @@ Problems from the 2026 national and international olympiads, with our own soluti
 
 <div class="cards">
   <div class="card">
+    <h3><a href="{{ '/contests/belarus-mo-2026' | relative_url }}">Belarus MO 2026</a></h3>
+    <p>32 problems. Belarusian national olympiad, final stage: grades 8 to 11, eight problems each.</p>
+  </div>
+  <div class="card">
     <h3><a href="{{ '/contests/romania-mo-2026' | relative_url }}">Romania NMO 2026</a></h3>
     <p>8 problems. Romanian National Olympiad: grades 9 and 10, four problems each.</p>
   </div>
