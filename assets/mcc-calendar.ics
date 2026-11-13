@@ -1,50 +1,21 @@
+---
+layout: null
+permalink: /assets/mcc-calendar.ics
+---
 BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//MCC Math Club and Competitions//Club calendar//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:MCC club calendar
-BEGIN:VEVENT
-UID:mcc-2026-11-15-toml-test4@nghia71.github.io
-DTSTAMP:20261111T000000Z
-DTSTART:20261115T160000Z
-DTEND:20261115T164500Z
-SUMMARY:MCC coding contest - TOML Test 4
-DESCRIPTION:8:00-8:45 AM PST (9:00 Victoria). Details: https://nghia71.github.io/toml.html
-URL:https://nghia71.github.io/toml.html
+{% for e in site.data.calendar %}{% if e.ics %}BEGIN:VEVENT
+UID:mcc-{{ e.id }}@nghia71.github.io
+DTSTAMP:{{ site.time | date: "%Y%m%dT%H%M%SZ" }}
+{% if e.ics.start contains "T" %}DTSTART:{{ e.ics.start }}
+DTEND:{{ e.ics.end }}
+{% else %}DTSTART;VALUE=DATE:{{ e.ics.start }}
+DTEND;VALUE=DATE:{{ e.ics.end }}
+{% endif %}SUMMARY:{{ e.ics.summary }}
+URL:{{ e.ics.url }}
 END:VEVENT
-BEGIN:VEVENT
-UID:mcc-2026-11-22-math-sunday@nghia71.github.io
-DTSTAMP:20261111T000000Z
-DTSTART:20261122T150000Z
-DTEND:20261122T163000Z
-SUMMARY:MCC Math Sunday - Chapter 4 presentations
-DESCRIPTION:7:00-8:30 AM PST (8:00-9:30 Victoria). T1 and T2 first\, then T3 and T4. Agenda: https://nghia71.github.io/current-standings#sunday-session
-URL:https://nghia71.github.io/current-standings#sunday-session
-END:VEVENT
-BEGIN:VEVENT
-UID:mcc-2026-11-29-toml-test5@nghia71.github.io
-DTSTAMP:20261111T000000Z
-DTSTART:20261129T160000Z
-DTEND:20261129T164500Z
-SUMMARY:MCC coding contest - TOML Test 5
-DESCRIPTION:8:00-8:45 AM PST (9:00 Victoria). Details: https://nghia71.github.io/toml.html
-URL:https://nghia71.github.io/toml.html
-END:VEVENT
-BEGIN:VEVENT
-UID:mcc-2026-12-06-semester-cutoff@nghia71.github.io
-DTSTAMP:20261111T000000Z
-DTSTART;VALUE=DATE:20261206
-DTEND;VALUE=DATE:20261207
-SUMMARY:MCC - last day for chapter tests counting toward semester 1
-URL:https://nghia71.github.io/calendar
-END:VEVENT
-BEGIN:VEVENT
-UID:mcc-2026-12-12-semester-exam@nghia71.github.io
-DTSTAMP:20261111T000000Z
-DTSTART;VALUE=DATE:20261212
-DTEND;VALUE=DATE:20261214
-SUMMARY:MCC semester exam (each team at its own slot)
-URL:https://nghia71.github.io/tests#the-semester-exam
-END:VEVENT
-END:VCALENDAR
+{% endif %}{% endfor %}END:VCALENDAR

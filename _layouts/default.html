@@ -6,7 +6,7 @@
   <title>{% if page.title and page.url != '/' %}{{ page.title }} · {{ site.title }}{% else %}{{ site.title }} (MCC) · {{ site.tagline }}{% endif %}</title>
   <meta name="description" content="{{ page.description | default: site.description | strip_newlines | truncate: 300 }}">
   {% if page.robots %}<meta name="robots" content="{{ page.robots }}">{% endif %}
-  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}?v={{ site.time | date: '%s' }}">
   <!-- When this page is loaded inside another page's iframe (the lessons
        hub embeds each lesson this way), its own header/nav/footer would
        just duplicate the hub's -- add a class as early as possible (before
@@ -27,20 +27,32 @@
 <body>
 
 <header class="site-header">
-  <a class="brand" href="{{ '/' | relative_url }}">
-    <img src="{{ '/img/MCC-2024-Logo-Large.png' | relative_url }}" alt="Math Club &amp; Competitions">
-  </a>
-  <nav class="site-nav" aria-label="Main">
-    {% for item in site.nav %}
-      {% assign target = item.url | relative_url %}
+  <div class="header-row">
+    <a class="brand" href="{{ '/' | relative_url }}">
+      <img src="{{ '/img/MCC-2024-Logo-Large.png' | relative_url }}" alt="Math Club &amp; Competitions">
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
       {% assign here = page.url | remove: '.html' %}
-      {% if here == item.url or page.url == item.url %}
-        <a class="active" href="{{ target }}">{{ item.title }}</a>
-      {% else %}
-        <a href="{{ target }}">{{ item.title }}</a>
-      {% endif %}
-    {% endfor %}
-  </nav>
+      {% for item in site.nav %}
+        {% if item.children %}
+          {% assign group_active = false %}
+          {% for c in item.children %}{% assign cu = c.url | remove: '.html' %}{% if cu == here %}{% assign group_active = true %}{% endif %}{% endfor %}
+          <div class="nav-group{% if group_active %} active{% endif %}">
+            <button type="button" class="nav-group-btn" aria-expanded="false">{{ item.title }}</button>
+            <div class="nav-menu">
+              {% for c in item.children %}{% assign cu = c.url | remove: '.html' %}
+                <a href="{{ c.url | relative_url }}"{% if cu == here %} class="active" aria-current="page"{% endif %}>{{ c.title }}</a>
+              {% endfor %}
+            </div>
+          </div>
+        {% else %}
+          <a class="nav-top{% if here == item.url or page.url == item.url %} active{% endif %}" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+        {% endif %}
+      {% endfor %}
+      {% if site.nav_cta %}<a class="nav-cta" href="{{ site.nav_cta.url | relative_url }}">{{ site.nav_cta.title }}</a>{% endif %}
+    </nav>
+  </div>
 </header>
 
 <main class="page">
@@ -59,9 +71,34 @@
 </footer>
 
 <script>
-  // Phones: the menu is one sliding row; bring the current page's item into view.
-  (function () { try { var a = document.querySelector('.site-nav a.active');
-    if (a && window.matchMedia('(max-width: 640px)').matches) a.scrollIntoView({ inline: 'center', block: 'nearest' }); } catch (e) {} })();
+  // Main menu: drop-down groups (click or keyboard; hover on desktop via CSS),
+  // and a Menu button that opens the whole menu on phones.
+  (function () {
+    try {
+      var header = document.querySelector('.site-header'), toggle = header.querySelector('.nav-toggle');
+      var groups = header.querySelectorAll('.nav-group');
+      function closeAll(except) {
+        Array.prototype.forEach.call(groups, function (g) {
+          if (g !== except) { g.classList.remove('open'); g.querySelector('.nav-group-btn').setAttribute('aria-expanded', 'false'); }
+        });
+      }
+      Array.prototype.forEach.call(groups, function (g) {
+        var btn = g.querySelector('.nav-group-btn');
+        btn.addEventListener('click', function (e) {
+          e.stopPropagation();
+          var open = !g.classList.contains('open');
+          closeAll(g); g.classList.toggle('open', open); btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+      });
+      document.addEventListener('click', function () { if (!header.classList.contains('menu-open')) closeAll(null); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') { closeAll(null); header.classList.remove('menu-open'); toggle.setAttribute('aria-expanded', 'false'); } });
+      toggle.addEventListener('click', function (e) {
+        e.stopPropagation();
+        var open = !header.classList.contains('menu-open');
+        header.classList.toggle('menu-open', open); toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    } catch (e) {}
+  })();
 </script>
 </body>
 </html>

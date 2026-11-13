@@ -14,17 +14,15 @@ Every club-wide date in one place. Your team's own chapter-test dates are on the
 
 ## Coming up
 
-| Date | What | Time |
-|---|---|---|
-| **Sun 15 Nov 2026** | Coding contest, [TOML](./toml.html) Test 4 | 8:00–8:45 AM PST |
-| **Sun 22 Nov 2026** | Math Sunday: perfect-score solutions from the Chapter 4 team tests (T1 and T2 first, then T3 and T4) | 7:00–8:30 AM PST |
-| **Sun 29 Nov 2026** | Coding contest, TOML Test 5 | 8:00–8:45 AM PST |
-| **Sun 6 Dec 2026** | Last day for chapter tests that count toward the first semester | |
-| **Sat 12 – Sun 13 Dec 2026** | [Semester exam](./tests.md#the-semester-exam), proctored, one sitting per team | each team's own slot |
-| **December** | ❄ Snowflake Cup, for the best-written solutions of the first semester | |
-| **January 2027** | Second semester begins; TOML Test 6 (date to be announced) | |
-
-No coding contest on 13 December: that Sunday belongs to the semester exam.
+<div class="cal-wrap" markdown="0">
+<table class="cal-upcoming">
+<thead><tr><th>Date</th><th>What</th><th>Time</th></tr></thead>
+<tbody>
+{% for e in site.data.calendar %}<tr data-until="{{ e.until }}"><td><strong>{{ e.when_en }}</strong></td><td>{{ e.what_en | markdownify | remove: '<p>' | remove: '</p>' | strip }}</td><td>{{ e.time_en }}</td></tr>
+{% endfor %}</tbody>
+</table>
+<p class="cal-none" hidden>Nothing is scheduled right now. New dates appear here as soon as they are set.</p>
+</div>
 
 ### The same times around the world
 
@@ -63,20 +61,35 @@ Mọi mốc chung của câu lạc bộ ở một chỗ. Ngày thi chương củ
 
 **Sắp tới**
 
-| Ngày | Nội dung | Giờ |
-|---|---|---|
-| **CN 15/11/2026** | Thi lập trình, [TOML](./toml.html) Test 4 | 8:00–8:45 sáng PST |
-| **CN 22/11/2026** | Chủ nhật Toán: trình bày các lời giải đạt điểm tối đa của bài thi đội Chương 4 (T1 và T2 trước, rồi T3 và T4) | 7:00–8:30 sáng PST |
-| **CN 29/11/2026** | Thi lập trình, TOML Test 5 | 8:00–8:45 sáng PST |
-| **CN 6/12/2026** | Ngày cuối cùng các bài thi chương được tính cho học kỳ 1 | |
-| **T7 12 – CN 13/12/2026** | [Thi học kỳ](./tests.md#the-semester-exam), có giám thị, mỗi đội một buổi | theo giờ riêng của từng đội |
-| **Tháng 12** | ❄ Snowflake Cup, cho các lời giải viết đẹp nhất học kỳ 1 | |
-| **Tháng 1/2027** | Bắt đầu học kỳ 2; TOML Test 6 (sẽ thông báo ngày) | |
-
-Không có thi lập trình ngày 13/12: Chủ nhật đó dành cho thi học kỳ.
+<div class="cal-wrap" markdown="0">
+<table class="cal-upcoming">
+<thead><tr><th>Ngày</th><th>Nội dung</th><th>Giờ</th></tr></thead>
+<tbody>
+{% for e in site.data.calendar %}<tr data-until="{{ e.until }}"><td><strong>{{ e.when_vn }}</strong></td><td>{{ e.what_vn | markdownify | remove: '<p>' | remove: '</p>' | strip }}</td><td>{{ e.time_vn }}</td></tr>
+{% endfor %}</tbody>
+</table>
+<p class="cal-none" hidden>Hiện chưa có lịch mới. Các ngày mới sẽ xuất hiện ở đây ngay khi được ấn định.</p>
+</div>
 
 **Giờ ở các nơi** (từ tháng 11 đến giữa tháng 3/2027): Chủ nhật Toán 7:00–8:30 sáng PST = 8:00–9:30 sáng Victoria = 10:00–11:30 sáng Toronto = 4:00–5:30 chiều Paris = 10:00–11:30 tối Việt Nam. Thi lập trình 8:00–8:45 sáng PST = 9:00–9:45 sáng Victoria = 11:00–11:45 sáng Toronto = 5:00–5:45 chiều Paris = 11:00–11:45 tối Việt Nam.
 
 **Trong năm học:** học kỳ 1 từ tháng 9 đến tháng 12, kết thúc bằng thi học kỳ; học kỳ 2 từ tháng 1 đến tháng 6. Chủ nhật Toán và thi lập trình TOML luân phiên hai tuần một lần. Đội mới đăng ký và thi đầu vào hai ngày bất cứ lúc nào trong năm học. 🥚 The Mystical Egg vào mùa xuân, trước lễ Phục sinh. 🌍 Purple Comet! Math Meet vào tháng 4/2027. Cuối năm (tháng 6): MCC Championship, Top Perfect-Scorers và các giải đặc biệt. Tháng 7 và tháng 8 câu lạc bộ nghỉ.
 
 </details>
+
+<script>
+  // Hide dates that have passed (US Pacific time), so the page never shows
+  // stale rows. The dates themselves live in _data/calendar.yml.
+  (function () {
+    try {
+      var today = new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Los_Angeles' }).format(new Date()); // YYYY-MM-DD
+      Array.prototype.forEach.call(document.querySelectorAll('.cal-wrap'), function (w) {
+        var shown = 0;
+        Array.prototype.forEach.call(w.querySelectorAll('tr[data-until]'), function (tr) {
+          if (tr.getAttribute('data-until') < today) tr.hidden = true; else shown++;
+        });
+        if (!shown) { w.querySelector('table').hidden = true; w.querySelector('.cal-none').hidden = false; }
+      });
+    } catch (e) {}
+  })();
+</script>
