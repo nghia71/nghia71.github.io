@@ -63,6 +63,14 @@ Problems from the 2026 national and international olympiads, with our own soluti
 
 <div class="cards">
   <div class="card">
+    <h3><a href="{{ '/contests/bundeswettbewerb-2026' | relative_url }}">Bundeswettbewerb Mathematik 2026</a></h3>
+    <p>8 problems. German Bundeswettbewerb Mathematik: two rounds, four problems each.</p>
+  </div>
+  <div class="card">
+    <h3><a href="{{ '/contests/poland-r1-2026' | relative_url }}">Poland MO 2026 Round 1</a></h3>
+    <p>12 problems. Polish Mathematical Olympiad, first round: twelve problems.</p>
+  </div>
+  <div class="card">
     <h3><a href="{{ '/contests/all-russian-mo-2026' | relative_url }}">All-Russian MO 2026</a></h3>
     <p>21 problems. All-Russian Olympiad, final round: grades 9, 10 and 11, eight problems each.</p>
   </div>
@@ -207,6 +215,10 @@ Problems from the 2026 national and international olympiads, with our own soluti
 ### International and regional olympiads
 
 <div class="cards">
+  <div class="card">
+    <h3><a href="{{ '/contests/emo-2026' | relative_url }}">EMO 2026</a></h3>
+    <p>8 problems. European Mathematical Olympiad (EMO): eight problems.</p>
+  </div>
   <div class="card">
     <h3><a href="{{ '/contests/imo-2026' | relative_url }}">IMO 2026</a></h3>
     <p>6 problems. International Mathematical Olympiad: two days, three problems each.</p>
