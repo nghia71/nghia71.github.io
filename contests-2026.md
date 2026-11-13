@@ -63,6 +63,10 @@ Problems from the 2026 national and international olympiads, with our own soluti
 
 <div class="cards">
   <div class="card">
+    <h3><a href="{{ '/contests/all-russian-mo-2026' | relative_url }}">All-Russian MO 2026</a></h3>
+    <p>21 problems. All-Russian Olympiad, final round: grades 9, 10 and 11, eight problems each.</p>
+  </div>
+  <div class="card">
     <h3><a href="{{ '/contests/india-mo-2026' | relative_url }}">INMO 2026</a></h3>
     <p>6 problems. Indian National Mathematical Olympiad (INMO): six problems.</p>
   </div>
@@ -268,6 +272,14 @@ Problems from the 2026 national and international olympiads, with our own soluti
 ### Team selection tests
 
 <div class="cards">
+  <div class="card">
+    <h3><a href="{{ '/contests/romania-tst-2026' | relative_url }}">Romania TST 2026</a></h3>
+    <p>13 problems. Romanian team selection tests for the IMO: four days.</p>
+  </div>
+  <div class="card">
+    <h3><a href="{{ '/contests/vietnam-tst-2026' | relative_url }}">Vietnam TST 2026</a></h3>
+    <p>6 problems. Vietnamese team selection test for the IMO: two days, three problems each.</p>
+  </div>
   <div class="card">
     <h3><a href="{{ '/contests/iran-tst-2026' | relative_url }}">Iran TST 2026</a></h3>
     <p>12 problems. Iranian team selection tests for the IMO: four tests, three problems each.</p>
