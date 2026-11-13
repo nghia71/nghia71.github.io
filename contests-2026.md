@@ -269,6 +269,18 @@ Problems from the 2026 national and international olympiads, with our own soluti
 
 <div class="cards">
   <div class="card">
+    <h3><a href="{{ '/contests/iran-tst-2026' | relative_url }}">Iran TST 2026</a></h3>
+    <p>12 problems. Iranian team selection tests for the IMO: four tests, three problems each.</p>
+  </div>
+  <div class="card">
+    <h3><a href="{{ '/contests/turkey-tst-2026' | relative_url }}">Turkey TST 2026</a></h3>
+    <p>9 problems. Turkish team selection test for the IMO: nine problems.</p>
+  </div>
+  <div class="card">
+    <h3><a href="{{ '/contests/serbia-tst-2026' | relative_url }}">Serbia TST 2026</a></h3>
+    <p>6 problems. Serbian team selection test for the IMO: two days, three problems each.</p>
+  </div>
+  <div class="card">
     <h3><a href="{{ '/contests/usa-tst-2026' | relative_url }}">USA TST 2026</a></h3>
     <p>6 problems. USA team selection test for the IMO: six problems.</p>
   </div>
