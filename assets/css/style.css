@@ -50,6 +50,7 @@ body {
   width: 100%;
   max-width: 620px;
   height: auto;
+  margin: 0 auto;          /* centred: a left-aligned logo left the right of the band empty */
 }
 
 .site-nav {
@@ -58,6 +59,7 @@ body {
   padding: 0 24px 14px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 6px;
 }
 
@@ -150,6 +152,7 @@ blockquote {
 }
 
 code {
+  overflow-wrap: anywhere;  /* long identifiers/URLs must not push the page sideways on phones */
   background: var(--gold-soft);
   padding: .15em .4em;
   border-radius: 4px;
@@ -637,3 +640,14 @@ figure.screenshot figcaption {
 .qa-term { padding: 0 3px; border-radius: 4px; font-weight: 700; }
 .qa-aud { font-size: 12px; font-weight: 600; color: var(--ink-soft); border: 1px solid var(--rule); border-radius: 999px; padding: 1px 8px; margin-left: 6px; white-space: nowrap; }
 .qa-empty { color: var(--ink-soft); font-style: italic; }
+
+/* Phones: one row of menu pills that slides sideways, instead of six rows
+   pushing the page content below the first screen. */
+@media (max-width: 640px) {
+  .brand { padding: 12px 16px 4px; }
+  .site-nav { flex-wrap: nowrap; justify-content: flex-start; overflow-x: auto; padding: 0 12px 10px;
+              scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+  .site-nav::-webkit-scrollbar { display: none; }
+  .site-nav a { flex: 0 0 auto; padding: 6px 12px; font-size: 14px; }
+  .site-nav { -webkit-mask-image: linear-gradient(to right, #000 85%, transparent); mask-image: linear-gradient(to right, #000 85%, transparent); }
+}
