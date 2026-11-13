@@ -63,6 +63,14 @@ Problems from the 2026 national and international olympiads, with our own soluti
 
 <div class="cards">
   <div class="card">
+    <h3><a href="{{ '/contests/iran-3rd-round-2026' | relative_url }}">Iran MO 3rd Round 2025</a></h3>
+    <p>18 problems. Iranian olympiad, third round: algebra, combinatorics, geometry and number theory exams.</p>
+  </div>
+  <div class="card">
+    <h3><a href="{{ '/contests/usamo-2026' | relative_url }}">USAMO 2026</a></h3>
+    <p>6 problems. USA Mathematical Olympiad: two days, three problems each.</p>
+  </div>
+  <div class="card">
     <h3><a href="{{ '/contests/abel-2026' | relative_url }}">Abel Final 2026</a></h3>
     <p>8 problems. Norwegian Abel competition, final round.</p>
   </div>
@@ -180,6 +188,10 @@ Problems from the 2026 national and international olympiads, with our own soluti
 
 <div class="cards">
   <div class="card">
+    <h3><a href="{{ '/contests/usemo-2026' | relative_url }}">USEMO 2026</a></h3>
+    <p>12 problems. US Ersatz Math Olympiad: Eastern and Western zones, six problems each.</p>
+  </div>
+  <div class="card">
     <h3><a href="{{ '/contests/egmo-2026' | relative_url }}">EGMO 2026</a></h3>
     <p>6 problems. European Girls’ Mathematical Olympiad: two days, three problems each.</p>
   </div>
@@ -232,6 +244,10 @@ Problems from the 2026 national and international olympiads, with our own soluti
 ### Team selection tests
 
 <div class="cards">
+  <div class="card">
+    <h3><a href="{{ '/contests/usa-tst-2026' | relative_url }}">USA TST 2026</a></h3>
+    <p>6 problems. USA team selection test for the IMO: six problems.</p>
+  </div>
   <div class="card">
     <h3><a href="{{ '/contests/dutch-tstst-2026' | relative_url }}">Dutch TSTST 2026</a></h3>
     <p>5 problems. Dutch team selection test (TSTST): five problems.</p>
