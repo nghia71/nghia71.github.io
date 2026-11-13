@@ -63,6 +63,10 @@ Problems from the 2026 national and international olympiads, with our own soluti
 
 <div class="cards">
   <div class="card">
+    <h3><a href="{{ '/contests/china-mo-2026' | relative_url }}">China MO 2026</a></h3>
+    <p>6 problems. Chinese Mathematical Olympiad (CMO): two days, three problems each.</p>
+  </div>
+  <div class="card">
     <h3><a href="{{ '/contests/iran-3rd-round-2026' | relative_url }}">Iran MO 3rd Round 2025</a></h3>
     <p>18 problems. Iranian olympiad, third round: algebra, combinatorics, geometry and number theory exams.</p>
   </div>
@@ -187,6 +191,14 @@ Problems from the 2026 national and international olympiads, with our own soluti
 ### International and regional olympiads
 
 <div class="cards">
+  <div class="card">
+    <h3><a href="{{ '/contests/imo-2026' | relative_url }}">IMO 2026</a></h3>
+    <p>6 problems. International Mathematical Olympiad: two days, three problems each.</p>
+  </div>
+  <div class="card">
+    <h3><a href="{{ '/contests/rmm-2026' | relative_url }}">RMM 2026</a></h3>
+    <p>6 problems. Romanian Master of Mathematics: two days, three problems each.</p>
+  </div>
   <div class="card">
     <h3><a href="{{ '/contests/usemo-2026' | relative_url }}">USEMO 2026</a></h3>
     <p>12 problems. US Ersatz Math Olympiad: Eastern and Western zones, six problems each.</p>
