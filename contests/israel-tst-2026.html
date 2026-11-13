@@ -1,0 +1,564 @@
+---
+title: Israel Team Selection Test 2026
+permalink: /contests/israel-tst-2026
+description: Israel Team Selection Test 2026: problems with answers and solutions
+---
+{% raw %}
+<style>
+  .ct-intro { margin-bottom: 1.2em; }
+  .ct-credit { font-size: 14px; color: var(--ink-soft); border-left: 3px solid var(--gold); padding: 6px 12px; background: var(--white); margin: 1em 0; }
+  .ct-toc { display: flex; flex-wrap: wrap; gap: 6px; margin: 1em 0 1.4em; }
+  .ct-toc a { display: inline-block; min-width: 2.4em; text-align: center; padding: 4px 8px; border: 1px solid var(--rule); border-radius: 4px; background: var(--white); text-decoration: none; font-size: 14px; }
+  .ct-problem { background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 14px 18px; margin: 1.1em 0; }
+  .ct-problem h3 { margin: 0 0 .3em; font-size: 1.08rem; border-bottom: none; padding-bottom: 0; }
+  .ct-meta { font-size: 13px; color: var(--ink-soft); margin-bottom: .6em; }
+  .ct-text { font-family: Georgia, "Times New Roman", "Noto Serif", serif; font-size: 1.02em; line-height: 1.6; }
+  .ct-text p { margin: .5em 0; }
+  .ct-fig { text-align: center; margin: .8em 0; }
+  .ct-fig img { max-width: 100%; height: auto; max-height: 340px; }
+  .ct-choices { display: flex; flex-wrap: wrap; gap: 6px 22px; margin: .6em 0 .2em; }
+  .ct-choices b { margin-right: .3em; }
+  .ct-problem details { margin-top: .8em; border-top: 1px dashed var(--rule); padding-top: .5em; }
+  .ct-problem summary { cursor: pointer; font-weight: 600; color: var(--brand); font-size: 15px; }
+  .ct-problem details[open] summary { margin-bottom: .5em; }
+  .ct-sol h4 { font-size: 1rem; margin: 1em 0 .3em; color: var(--ink); }
+  .ct-answer { font-weight: 600; }
+  .ct-parts { list-style: none; padding-left: .4em; }
+  .ct-parts li { margin: .35em 0; }
+  .ct-lbl { font-weight: 700; margin-right: .3em; }
+  .ct-note { font-size: 14px; color: var(--ink-soft); font-style: italic; }
+  .ct-bar { margin: .6em 0 1em; display: flex; gap: 10px; flex-wrap: wrap; }
+  .ct-bar button { font: inherit; font-size: 14px; padding: 5px 12px; border-radius: var(--radius); border: 1px solid var(--brand); background: var(--white); color: var(--brand); cursor: pointer; }
+</style>
+<script>
+  window.MathJax = { tex: { inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [['\\[','\\]']], processEscapes: true },
+                     options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] } };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script>
+  function ctAll(open) { document.querySelectorAll('.ct-problem details').forEach(function (d) { d.open = open; }); }
+</script>
+
+<style>
+  .ct-group { font-size: 1.25rem; margin: 1.6em 0 .2em; }
+  .ct-toc-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: .3em 0; }
+  .ct-toc-g { font-size: 13px; color: var(--ink-soft); min-width: 9em; }
+  .ct-toc-wrap { margin: 1em 0 1.4em; }
+  .ct-center { text-align: center; margin: .6em 0; }
+  .ct-tablewrap { overflow-x: auto; margin: .6em 0; text-align: center; }
+  .ct-table { border-collapse: collapse; margin: 0 auto; }
+  .ct-table td { padding: 2px 9px; text-align: center; }
+  .ct-table tr.ct-hl td { border-bottom: 1px solid var(--ink-soft); }
+  .ct-table.ct-vfirst td:first-child { border-right: 1px solid var(--ink-soft); }
+  .ct-ul { padding-left: 1.4em; }
+  .ct-ul li { margin: .3em 0; }
+  .ct-text li > p:first-child { margin-top: 0; }
+  .ct-text li > p:last-child { margin-bottom: 0; }
+  .ct-text mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
+</style>
+
+{% endraw %}
+<p><a href="{{ '/contests-2026' | relative_url }}">&larr; All contests 2026</a></p>
+
+<h1>Israel Team Selection Test 2026</h1>
+
+<div class="ct-intro">
+<p>The 18 problems of the Israel Team Selection Test 2026, each with our own solutions, hidden until you open them. 8 of them ask for an answer and 10 ask for a proof. Where a problem has a final answer, it is shown separately. Try a problem first, then check.</p><p>The Israeli TST is a series of tests with three problems each. A few problems are still only partly solved; their notes say what is missing.</p>
+</div>
+<div class="ct-credit">Problems: Israel Team Selection Test 2026, from the AoPS contest collection. Solutions written by MCC.</div>
+<div class="ct-bar"><button type="button" onclick="ctAll(true)">Show all answers and solutions</button><button type="button" onclick="ctAll(false)">Hide all</button></div>
+<div class="ct-toc-wrap"><div class="ct-toc-row"><span class="ct-toc-g">Test 1</span><a href="#p1">1</a><a href="#p2">2</a><a href="#p3">3</a></div><div class="ct-toc-row"><span class="ct-toc-g">Test 2</span><a href="#p4">1</a><a href="#p5">2</a><a href="#p6">3</a></div><div class="ct-toc-row"><span class="ct-toc-g">Test 4</span><a href="#p7">1</a><a href="#p8">2</a><a href="#p9">3</a></div><div class="ct-toc-row"><span class="ct-toc-g">Test 5</span><a href="#p10">1</a><a href="#p11">2</a><a href="#p12">3</a></div><div class="ct-toc-row"><span class="ct-toc-g">Test 7</span><a href="#p13">1</a><a href="#p14">2</a><a href="#p15">3</a></div><div class="ct-toc-row"><span class="ct-toc-g">Test 9</span><a href="#p16">1</a><a href="#p17">2</a><a href="#p18">3</a></div></div>
+
+{% raw %}
+<h2 class="ct-group" id="test-1">Test 1</h2>
+<section class="ct-problem" id="p1">
+<h3>Problem 1</h3>
+<div class="ct-meta">Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure</div>
+<div class="ct-text"><p>Let $ABC$ be a triangle, denote the feet of the perpendiculars from $A$ to the angle bisectors of $\angle ABC$, $\angle ACB$ by $E$, $F$ respectively. Let $I$ be the incenter of $ABC$. The circumcircles of $BIF$, $CIE$ intersect again at $P$. Let $N$ be the midpoint of the arc $BC$ containing $A$. Prove that $P$, $I$, $N$ are collinear.</p></div>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Power of a point is an affine function)</h4>
+<div class="ct-fig"><img style="width:298px" src="/assets/contests/2026-27/israel-tst-1_s1.svg" alt="Figure for the solution"></div>
+<p>Let $a,b,c$ be the side lengths, $s$ the semiperimeter, $r$ the inradius, and let $A,B,C$ also denote the angles. Put
+$\omega_1=(BIF)$ and $\omega_2=(CIE)$. These circles are different (they meet in exactly the two points $I$ and $P$).</p><p><strong>An affine function.</strong> For a point $X$ let $\varphi(X)=\operatorname{pow}(X,\omega_1)-\operatorname{pow}(X,\omega_2)$. If $\omega_i$ has centre $O_i$ and radius $R_i$,
+then, with vectors,
+\[\varphi(X)=|X-O_1|^2-R_1^2-|X-O_2|^2+R_2^2=2X\cdot(O_2-O_1)+\text{const},\]
+so $\varphi$ is affine: $\varphi(\alpha U+\beta V+\gamma W)=\alpha\varphi(U)+\beta\varphi(V)+\gamma\varphi(W)$ whenever $\alpha+\beta+\gamma=1$.
+Its zero set is the radical axis of $\omega_1,\omega_2$, which is the line $IP$. So we must show $\varphi(N)=0$.</p><p><strong>Three values.</strong> Clearly $\varphi(I)=0$. The line $CI$ meets $\omega_1$ at $I$ and $F$ (and $F\ne I$, since $\angle AIC=90^\circ+\frac B2$ is not a right
+angle). As $\angle ACI=\frac C2&lt;90^\circ$, the foot $F$ lies on ray $CI$ with $CF=b\cos\frac C2$. If the incircle touches $BC$ at $D$, the right triangle $CDI$
+gives $CI=\dfrac{CD}{\cos\frac C2}=\dfrac{s-c}{\cos\frac C2}$. Hence
+\[\operatorname{pow}(C,\omega_1)=CF\cdot CI=b(s-c),\qquad \operatorname{pow}(B,\omega_2)=BE\cdot BI=c(s-b)\]
+(the second in the same way).
+Since $C\in\omega_2$ and $B\in\omega_1$, we get $\varphi(C)=b(s-c)$ and $\varphi(B)=-c(s-b)$.</p><p><strong>Where $N$ is.</strong> As $N$ is on arc $BAC$, we have $NB=NC$ and $\angle BNC=\angle BAC$, so $\angle NBC=\angle NCB=90^\circ-\frac A2=\frac{B+C}2$.
+Both $N$ and $I$ lie on the same side of $BC$ as $A$, and $\angle ICB=\frac C2&lt;\angle NCB$, so ray $CI$ lies inside $\angle BCN$:
+$N$ and $B$ are on opposite sides of line $CI$, and $\angle ICN=\frac B2$. Likewise $N$ and $C$ are on opposite sides of $BI$ and $\angle IBN=\frac C2$.</p><p>Write $N=\alpha B+\beta C+\gamma I$ with $\alpha+\beta+\gamma=1$ (barycentric coordinates with respect to triangle $BCI$). Then
+$|\alpha|=[NCI]/[BCI]$, $|\beta|=[NBI]/[BCI]$, and by the previous paragraph $\alpha&lt;0$ and $\beta&lt;0$. Using $NB=NC$, $CI=r/\sin\frac C2$ and
+$BI=r/\sin\frac B2$,
+\[\frac{|\alpha|}{|\beta|}=\frac{\frac12 NC\cdot CI\sin\frac B2}{\frac12 NB\cdot BI\sin\frac C2}=\frac{\sin^2\frac B2}{\sin^2\frac C2}
+=\frac{(s-a)(s-c)/(ac)}{(s-a)(s-b)/(ab)}=\frac{b(s-c)}{c(s-b)},\]
+by the half-angle formulas $\sin^2\frac B2=\frac{(s-a)(s-c)}{ac}$, $\sin^2\frac C2=\frac{(s-a)(s-b)}{ab}$.</p><p><strong>Conclusion.</strong> By affinity,
+\[\varphi(N)=\alpha\varphi(B)+\beta\varphi(C)+\gamma\varphi(I)=|\alpha|\,c(s-b)-|\beta|\,b(s-c)=0 .\]
+So $N$ lies on the radical axis $IP$, that is, $P$, $I$, $N$ are collinear.</p>
+<h4>Solution 2 (Barycentric coordinates)</h4>
+<p>Use barycentric coordinates with respect to $ABC$, with side lengths $a,b,c$ and semiperimeter $s$. Every circle has an equation
+\[-a^2yz-b^2zx-c^2xy+(x+y+z)(ux+vy+wz)=0,\]
+and for a point with normalised coordinates ($x+y+z=1$) the left side is its power with respect to the circle. In particular the power of $C=(0,0,1)$ is $w$,
+and the power of $B$ is $v$.</p><p><strong>The two circles.</strong> Let $\omega_1=(BIF)$ with coefficients $u_1,v_1,w_1$ and $\omega_2=(CIE)$ with $u_2,v_2,w_2$. Since $B\in\omega_1$ and $C\in\omega_2$:
+$v_1=w_2=0$. Next, $w_1=\operatorname{pow}(C,\omega_1)$. The line $CI$ meets $\omega_1$ at $I$ and at $F$; $F$ lies on ray $CI$ (because $\angle ACI&lt;90^\circ$)
+with $CF=b\cos\frac C2$, and $CI=\frac{s-c}{\cos(C/2)}$ (right triangle formed by $C$, $I$ and the touch point of the incircle on $BC$). Hence
+$w_1=CF\cdot CI=b(s-c)$, and in the same way $v_2=\operatorname{pow}(B,\omega_2)=BE\cdot BI=c(s-b)$.</p><p><strong>The radical axis.</strong> Subtracting the two equations, the radical axis is
+\[(u_1-u_2)x-c(s-b)\,y+b(s-c)\,z=0 .\]
+It passes through $I=(a:b:c)$, so $(u_1-u_2)a=bc(s-b)-bc(s-c)=bc(c-b)$, and (multiplying by $a$) the radical axis is
+\[bc(c-b)\,x-ac(s-b)\,y+ab(s-c)\,z=0. \tag{$*$}\]</p><p><strong>The point $N$.</strong> The midpoint of arc $BAC$ is the second intersection of the external bisector of angle $A$ with the circumcircle
+$a^2yz+b^2zx+c^2xy=0$. The external bisector consists of the points $(x:b:-c)$; substituting gives $-a^2bc+xbc(c-b)=0$, so
+\[N=\bigl(a^2:\;b(c-b):\;-c(c-b)\bigr)\]
+(when $b=c$ this is $(1:0:0)=A$, which is indeed the arc midpoint). Substituting $N$ into $(*)$:
+\[abc(c-b)\bigl[a-(s-b)-(s-c)\bigr]=abc(c-b)\cdot 0=0,\]
+because $(s-b)+(s-c)=a$. So $N$ lies on the radical axis of $\omega_1$ and $\omega_2$, which is the line $IP$. Hence $P$, $I$, $N$ are collinear.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p2">
+<h3>Problem 2</h3>
+<div class="ct-meta">Algebra &middot; LPS VII, Chapter 30: Functional Equations: Core Olympiad Methods</div>
+<div class="ct-text"><p>Find all functions $f:\mathbb{R}\to\mathbb{R}$ that satisfy
+\[f(x+f(y))+f(f(f(x))-y)=2x\]
+for all $x,y\in\mathbb{R}$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$f(x)=x$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Bijectivity, then the function f(x) minus x)</h4>
+<p>The identity $f(x)=x$ works: $(x+y)+(x-y)=2x$. We show it is the only solution. Write $\mathcal P(x,y)$ for the equation and $f^2=f\circ f$.</p><p><strong>Surjective.</strong> $\mathcal P\bigl(x,f^2(x)\bigr)$ gives $f\bigl(x+f^3(x)\bigr)=2x-f(0)$, and the right side takes every real value.</p><p><strong>Injective.</strong> Let $f(y_1)=f(y_2)$. Comparing $\mathcal P(x,y_1)$ and $\mathcal P(x,y_2)$ gives $f(f^2(x)-y_1)=f(f^2(x)-y_2)$ for all $x$. As $f^2$ is
+surjective, $f(t-y_1)=f(t-y_2)$ for all $t$, so $d=y_1-y_2$ is a period of $f$ (and of $f^2$). Then $\mathcal P(x+d,y)$ has the same left side as
+$\mathcal P(x,y)$, so $2(x+d)=2x$ and $d=0$.</p><p><strong>A key identity.</strong> Let $h(x)=f^2(x)-x$. Given $x,y$, choose $y'$ with $f(y')=h(x)-y$. Then $x+f(y')=f^2(x)-y$, and $\mathcal P(x,y')$ reads
+$f(f^2(x)-y)+f(f^2(x)-y')=2x$. Comparing with $\mathcal P(x,y)$: $f(f^2(x)-y')=f(x+f(y))$, so by injectivity $y'=h(x)-f(y)$. Since $f(y')=h(x)-y$,
+\[f\bigl(h(x)-f(y)\bigr)=h(x)-y\qquad\text{for all }x,y. \tag{1}\]
+Put $y=f(z)$: $f\bigl(h(x)-f^2(z)\bigr)=h(x)-f(z)$. With $x=z$ the argument is $-z$, so
+\[h(z)=f(z)+f(-z). \tag{2}\]</p><p><strong>Periods of $g=f-\mathrm{id}$.</strong> By the line before (2), $g\bigl(h(x)-f^2(z)\bigr)=\bigl(h(x)-f(z)\bigr)-\bigl(h(x)-f^2(z)\bigr)=f^2(z)-f(z)$, which does
+not depend on $x$. Let $D$ be the set of differences $h(x_1)-h(x_2)$. For $\delta=h(x_1)-h(x_2)\in D$ and any $w$, choose $z$ with $f^2(z)=h(x_2)-w$; then
+$w$ and $w+\delta$ are $h(x_2)-f^2(z)$ and $h(x_1)-f^2(z)$, so $g(w+\delta)=g(w)$. <em>Every element of $D$ is a period of $g$.</em></p><p><strong>A symmetry.</strong> Let $a=f(0)$ and $c=f^2(0)$. $\mathcal P(0,y)$ gives $f^2(y)=-f(c-y)$, i.e. $y+h(y)=-(c-y)-g(c-y)$:
+\[h(y)=-c-g(c-y). \tag{3}\]
+By (2), $h(y)=g(y)+g(-y)$, so $g(y)+g(-y)+g(c-y)=-c$. Writing this also for $c-y$ in place of $y$ and subtracting, $g(-y)=g(y-c)$, that is,
+\[g(t)=g(-t-c)\qquad\text{for all }t. \tag{4}\]
+Also $c=h(0)=2g(0)=2a$ by (2).</p><p><strong>Values lie in one coset.</strong> Every $h(x)$ satisfies $h(x)-c=h(x)-h(0)\in D$. By (3), every value of $g$ lies in $-c-h(\cdot)\subseteq -2c+D$.
+Put $\gamma=-2c$. Because elements of $D$ are periods of $g$: $g(w+g(t))=g(w+\gamma)$ and $g(w+h(t))=g(w+c)$ for all $w,t$.</p><p><strong>The equation in terms of $g$.</strong> Substituting $f=\mathrm{id}+g$ into $\mathcal P(x,y)$ gives
+$g(y)+h(x)+g\bigl(x+y+g(y)\bigr)+g\bigl(x+h(x)-y\bigr)=0$. By the previous paragraph and (4),
+$g(x+y+g(y))=g(x+y+\gamma)$ and $g(x+h(x)-y)=g(x+c-y)=g(y-x-2c)=g(y-x+\gamma)$. Replacing $y$ by $y-\gamma$:
+\[g(y-\gamma)+h(x)+g(y+x)+g(y-x)=0\qquad\text{for all }x,y. \tag{5}\]
+With $x=0$ (and $h(0)=c$): $g(y-\gamma)+c+2g(y)=0$. Subtracting this from (5): $h(x)+g(y+x)+g(y-x)=c+2g(y)$. Now put $y=0$ and use (2):
+$2h(x)=c+2a=2c$. Hence $h\equiv c$, i.e. $f^2(x)=x+c$.</p><p><strong>Finish.</strong> From $\mathcal P(0,y)$: $y+c=f^2(y)=-f(c-y)$, so $f(t)=t-2c$ for all $t$. A function $f(x)=x+m$ gives
+$f(x+f(y))+f(f^2(x)-y)=(x+y+2m)+(x+3m-y)=2x+5m$, so $m=0$. Therefore the only solution is $\boxed{f(x)=x}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p3">
+<h3>Problem 3</h3>
+<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 21: Arithmetic Functions and Multiplicative Structure</div>
+<div class="ct-text"><p>For a positive integer $n$ let $\sigma(n)$ be the sum of divisors of $n$. Prove that there are infinitely many positive integers $m$ for which there is exactly one positive integer $n$ such that $\sigma(n)=m$.</p></div>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Partial progress)</h4>
+<p><strong>This is not a complete solution.</strong></p><p>Easy facts that any proof will use: $\sigma(n)\ge n+1$ for $n&gt;1$, with equality exactly for primes, and $\sigma(n)\ge n+\sqrt n+1$ for composite $n$
+(it has a divisor $d$ with $\sqrt n\le d&lt;n$). Hence every preimage $n$ of $m$ satisfies $n&lt;m$, and if $m-1$ is prime then $n=m-1$ is a preimage, the only
+other candidates being composite $n\le m-\sqrt n-1$. Also, if $m$ is prime, every preimage is a prime power $q^e$ with $e+1$ prime, because $\sigma$
+is multiplicative and each factor $\sigma(q^e)$ is at least $3$.</p><p>The missing step is a family of values $m$ (for instance of the form $p+1$, or prime values $\sigma(q^e)$) for which all other preimages can be ruled
+out; I could not find one that can be handled with a complete proof.</p><p><strong>A promising family.</strong> Take $m=2^k-1=\sigma(2^{k-1})$. Since $m$ is odd, every preimage $n$ has $\sigma(n)$ odd, so $n=2^at^2$ with $t$ odd, and
+$(2^{a+1}-1)\,\sigma(t^2)=2^k-1$. Then $2^{a+1}-1\mid 2^k-1$ forces $a+1\mid k$, and a second preimage exists iff $\frac{2^k-1}{2^b-1}=\sigma(t^2)$ for some divisor $b&lt;k$ of $k$
+and some odd $t&gt;1$. A computer search finds that $2^k-1$ has the single preimage $2^{k-1}$ for every $2\le k\le49$ except $k=5$ ($\sigma(16)=\sigma(25)=31$). What is
+missing is a proof that $\frac{2^k-1}{2^b-1}$ is not of the form $\sigma(t^2)$ ($t$ odd, $t&gt;1$) for infinitely many $k$ (for example for $k=2^j$, where the quotient is a product
+of Fermat numbers).</p>
+</div></details>
+</section>
+<h2 class="ct-group" id="test-2">Test 2</h2>
+<section class="ct-problem" id="p4">
+<h3>Problem 1</h3>
+<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 8: Modular Arithmetic and Congruence Methods</div>
+<div class="ct-text"><p>Let $b,c,d,x,y$ be positive integers. A sequence $a_n$ is defined in the following way: $a_0=x$, $a_1=y$ and for all $n\ge 2$:
+\[a_n=ba_{n-1}+ca_{n-2}+d.\]
+Prove that for all positive integers $m$ there exists an index $i$ such that none of the numbers $a_i,a_{i+1},\dots,a_{i+m-1}$ are prime.</p></div>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Periodicity modulo one prime per position)</h4>
+<p><strong>Growth.</strong> All terms are positive integers, and for $n\ge2$,
+$a_n=ba_{n-1}+ca_{n-2}+d\ge a_{n-1}+1+1&gt;a_{n-1}$. So $a_1&lt;a_2&lt;a_3&lt;\cdots$ and $a_n\ge a_2\ge 3$ for $n\ge2$.</p><p><strong>Lemma.</strong> For every prime $p$, the sequence $(a_n \bmod p)_{n\ge2}$ is purely periodic: there is $T\ge1$ with $a_{n+T}\equiv a_n\pmod p$ for all $n\ge2$.</p><p><em>Proof.</em> <em>Case $p\nmid c$.</em> Then $c$ is invertible mod $p$ and $a_{n-2}\equiv c^{-1}(a_n-ba_{n-1}-d)$, so the pair $(a_{n},a_{n+1})\bmod p$
+determines the previous pair. There are only $p^2$ pairs, so two of them coincide, say at positions $i&lt;j$; going backwards step by step, the pair at
+position $0$ equals the pair at position $j-i$, and going forwards, $a_{n+j-i}\equiv a_n$ for all $n\ge0$.
+<em>Case $p\mid c$, $p\nmid b$.</em> For $n\ge2$, $a_n\equiv ba_{n-1}+d\pmod p$. The map $t\mapsto bt+d$ is a permutation of $\mathbb Z_p$, so
+$(a_n\bmod p)_{n\ge1}$ is an orbit of a permutation, hence purely periodic.
+<em>Case $p\mid b$, $p\mid c$.</em> Then $a_n\equiv d$ for all $n\ge2$. $\square$</p><p><strong>Construction.</strong> Fix $m$. For $t=0,1,\dots,m-1$ let $p_t$ be a prime divisor of $a_{2+t}$ (possible since $a_{2+t}\ge3$) and let $T_t$ be a period of
+$(a_n\bmod p_t)_{n\ge2}$ from the lemma. Put $L=T_0T_1\cdots T_{m-1}$ and $i=2+L$. For each $t$, $L$ is a multiple of $T_t$, so
+\[a_{i+t}=a_{2+t+L}\equiv a_{2+t}\equiv0\pmod{p_t},\]
+while $a_{i+t}&gt;a_{2+t}\ge p_t$ by the growth. So $a_{i+t}$ has a prime divisor smaller than itself and is not prime. Hence none of
+$a_i,a_{i+1},\dots,a_{i+m-1}$ is prime.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p5">
+<h3>Problem 2</h3>
+<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 18: Invariants and Monovariants</div>
+<div class="ct-text"><p>A finite amount of ants are walking in a circular table of radius $1$, each having speed $1$. Every time two ants meet they choose a direction. One of the ants turns in that direction and the other ant goes in the opposite direction (both at speed $1$). Assume that there are never $3$ or more ants in the same place. The process ends when all ants fall off the table.</p><ul class="ct-parts"><li><p><span class="ct-lbl">a)</span> Can the process last forever?</p></li><li><p><span class="ct-lbl">b)</span> Is there a constant $C$, independent on the number of ants, such that all ants will fall after at most $C$ units of time?</p></li></ul></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>not determined</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Partial progress)</h4>
+<p><strong>This is not a complete solution; neither part is answered.</strong></p><p>Observations. Between meetings every ant moves in a straight line, so an ant that takes part in no further meeting falls off within $2$ units of time
+(it crosses at most a diameter). The number of ants on the table changes only when an ant falls off. A meeting replaces the velocities $v_1,v_2$ of the
+two ants by $u,-u$, so it destroys their total momentum $v_1+v_2$; the process is not time-reversible, and this is presumably what makes it finite.</p><p>If all ants move on one line (a diameter), a meeting is head-on and the outgoing pair again moves along the line in opposite directions; forgetting
+which ant is which, this is the same as the two ants passing through each other, so everything ends within time $2$. In the plane, however, a meeting can
+send an ant back towards the centre, and I found neither a monovariant proving termination for (a) nor a construction or a bound for (b).</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p6">
+<h3>Problem 3</h3>
+<div class="ct-meta">Geometry &middot; LPS VII, Chapter 11: Similarity, Homothety, and Ratio Geometry</div>
+<div class="ct-text"><p>Let $ABC$ be a triangle, denote its incircle by $\omega$ and its incenter by $I$. A line $\ell$ tangent to $\omega$ intersects the lines $BC$, $AC$, $AB$ at points $D$, $E$, $F$ respectively, and the circumcircles of $BDF$ and $CDE$ are not congruent. Prove that one of the two centres of similitude of these circles is a point $X$ with $\angle AIX=90^\circ$.</p></div>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Inversion in the incircle)</h4>
+<div class="ct-fig"><img style="width:339px" src="/assets/contests/2026-27/israel-tst-6_s1.svg" alt="Figure for the solution"></div>
+<p>We solve the edited statement: $\ell$ meets the lines $BC$, $CA$, $AB$ at $D$, $E$, $F$; the circumcircles $\omega_1=(BDF)$ and $\omega_2=(CDE)$
+(centres $O_1,O_2$, radii $R_1\ne R_2$) have a centre of similitude $X$ with $\angle AIX=90^\circ$. Let $r$ be the inradius and let $\omega$ touch $BC$, $CA$, $AB$, $\ell$
+at $K$, $N$, $L$, $T$. Vectors are taken from $I$; for instance $\vec K=\overrightarrow{IK}$.</p><p><strong>Lemma.</strong> Let a circle $k$ with centre $J$ and radius $\rho$ touch the three side lines of a triangle at $K_1,K_2,K_3$, and let the triangle have circumcentre $O$ and
+circumradius $R$. Put $p=JO^2-R^2$ (the power of $J$ with respect to the circumcircle). Then $|p|=2R\rho$ and
+\[\overrightarrow{JO}=\frac{p}{2\rho^2}\bigl(\overrightarrow{JK_1}+\overrightarrow{JK_2}+\overrightarrow{JK_3}\bigr).\]</p><p><em>Proof.</em> Invert in $k$. Let $V_1$ be the vertex where the side lines touching $k$ at $K_2,K_3$ meet. Then $V_1K_2=V_1K_3$, so $JV_1$ is the perpendicular bisector of
+$K_2K_3$ and meets it at its midpoint $M_1$; in the right triangle $JK_2V_1$ the altitude from $K_2$ has foot $M_1$, so $JM_1\cdot JV_1=\rho^2$. Thus $V_1$ is mapped to
+$M_1$, and likewise the other vertices go to the midpoints $M_2,M_3$ of $K_3K_1$, $K_1K_2$. These midpoints are not collinear, so the circumcircle does not pass through
+$J$ (otherwise its image would be a line), and its image is the circle through $M_1,M_2,M_3$. Triangle $M_1M_2M_3$ is the image of $K_1K_2K_3$ under the homothety with
+centre the centroid $G$ of $K_1K_2K_3$ and ratio $-\frac12$; as $K_1K_2K_3$ has circumcentre $J$ and circumradius $\rho$, the image circle has radius $\frac\rho2$ and
+centre $Z=G-\frac12(J-G)$, so that $\overrightarrow{JZ}=\frac32\overrightarrow{JG}=\frac12(\overrightarrow{JK_1}+\overrightarrow{JK_2}+\overrightarrow{JK_3})$.</p><p>On the other hand, for a point $Q$ of the circumcircle let $Q'$ be the second point of the circumcircle on line $JQ$; then $\overrightarrow{JQ'}=\frac{p}{JQ^2}\overrightarrow{JQ}$
+(power of a point), so the inverse of $Q$, namely $J+\frac{\rho^2}{JQ^2}\overrightarrow{JQ}$, equals $J+\frac{\rho^2}{p}\overrightarrow{JQ'}$. Hence the image of the
+circumcircle is its image under the homothety with centre $J$ and ratio $\rho^2/p$: a circle with centre $J+\frac{\rho^2}{p}\overrightarrow{JO}$ and radius $\frac{\rho^2R}{|p|}$.
+Comparing, $\frac{\rho^2R}{|p|}=\frac\rho2$ and $\frac{\rho^2}{p}\overrightarrow{JO}=\frac12\sum\overrightarrow{JK_i}$, which is the claim. $\square$</p><p><strong>The two circles.</strong> The side lines of triangle $BDF$ are $BC$, $AB$, $\ell$, touching $\omega$ at $K$, $L$, $T$; those of $CDE$ are $BC$, $AC$, $\ell$, touching at
+$K$, $N$, $T$. Let $p_1,p_2$ be the powers of $I$ with respect to $\omega_1,\omega_2$. By the lemma, $|p_i|=2R_ir\ne0$ (so $p_1\ne p_2$, as $R_1\ne R_2$) and
+\[\vec O_1=\frac{p_1}{2r^2}\bigl(\vec K+\vec L+\vec T\bigr),\qquad \vec O_2=\frac{p_2}{2r^2}\bigl(\vec K+\vec N+\vec T\bigr).\]</p><p><strong>The point $X$.</strong> Define $X$ by $\vec X=\dfrac{p_2\vec O_1-p_1\vec O_2}{p_2-p_1}$. Then
+\[\vec X=\frac{p_1p_2}{p_2-p_1}\Bigl(\frac{\vec O_1}{p_1}-\frac{\vec O_2}{p_2}\Bigr)=\frac{p_1p_2}{2r^2(p_2-p_1)}\,(\vec L-\vec N)=\frac{p_1p_2}{2r^2(p_2-p_1)}\,\overrightarrow{NL}.\]
+So $X\ne I$ and $IX\parallel NL$. Since $AL=AN$ and $IL=IN$, the line $AI$ is the perpendicular bisector of $LN$; hence $IX\perp AI$, i.e. $\angle AIX=90^\circ$.</p><p>Finally $X$ is a centre of similitude: from the definition, $\vec O_1-\vec X=\frac{p_1}{p_2-p_1}(\vec O_2-\vec O_1)$ and $\vec O_2-\vec X=\frac{p_2}{p_2-p_1}(\vec O_2-\vec O_1)$,
+so $\overrightarrow{XO_1}=\frac{p_1}{p_2}\overrightarrow{XO_2}$ with $\bigl|\frac{p_1}{p_2}\bigr|=\frac{R_1}{R_2}$. The homothety with centre $X$ and ratio $p_1/p_2$ therefore maps
+$\omega_2$ onto $\omega_1$. It is the <em>external</em> centre (where the two common tangents meet) when $p_1p_2&gt;0$, that is when $I$ lies inside both circles or outside both,
+and the internal centre otherwise. This proves the statement.</p>
+<h4>Solution 2 (Complex numbers with the incircle as unit circle)</h4>
+<p>We solve the edited statement ($\ell$ meets the lines $BC$, $CA$, $AB$ at $D$, $E$, $F$).
+Let $\omega_1=(BDF)$ and $\omega_2=(CDE)$ have centres $O_1,O_2$ and radii $R_1\ne R_2$. Take the incircle as the unit circle, $I=0$, and let $k,n,l,t$ be the points where it touches $BC$, $CA$, $AB$, $\ell$
+(so $|k|=|n|=|l|=|t|=1$). The tangents at unit points $u,v$ meet at $\frac{2uv}{u+v}$; thus $A=\frac{2ln}{l+n}$, and $B,D,F$ (resp. $C,D,E$) are the pairwise intersections of the
+tangents at $k,l,t$ (resp. $k,n,t$).</p><p><strong>Circumcentre of a tangential triangle.</strong> Let a triangle be formed by the tangents at $u,v,w$ and put
+\[\lambda=\frac{2uvw}{(u+v)(v+w)(w+u)},\qquad O=\lambda(u+v+w).\]
+For the vertex $V_w=\frac{2uv}{u+v}$ we get $O-V_w=\frac{2uv\,[w(u+v+w)-(v+w)(w+u)]}{(u+v)(v+w)(w+u)}=\frac{-2u^2v^2}{(u+v)(v+w)(w+u)}$, whose modulus
+$\frac{2}{|(u+v)(v+w)(w+u)|}$ is symmetric in $u,v,w$. So $O$ is the circumcentre and the circumradius is $|\lambda|$. Moreover $\lambda$ is <em>real</em>: using
+$\bar u=1/u$ and $\overline{u+v}=\frac{u+v}{uv}$,
+\[\bar\lambda=\frac{2/(uvw)}{(u+v)(v+w)(w+u)/(u^2v^2w^2)}=\lambda .\]</p><p><strong>Conclusion.</strong> Hence $O_1=\lambda_1(k+l+t)$ and $O_2=\lambda_2(k+n+t)$ with real $\lambda_1,\lambda_2$, $|\lambda_i|=R_i$; as $R_1\ne R_2$, $\lambda_1\ne\lambda_2$. Put
+\[X=\frac{\lambda_2O_1-\lambda_1O_2}{\lambda_2-\lambda_1}=\frac{\lambda_1\lambda_2}{\lambda_2-\lambda_1}\,(l-n).\]
+Then $O_1-X=\frac{\lambda_1}{\lambda_2-\lambda_1}(O_2-O_1)$ and $O_2-X=\frac{\lambda_2}{\lambda_2-\lambda_1}(O_2-O_1)$, so $X$ is the centre of the homothety with ratio
+$\lambda_1/\lambda_2$ (of absolute value $R_1/R_2$) taking $\omega_2$ to $\omega_1$: a centre of similitude. Finally
+\[\frac{X}{A}=\frac{\lambda_1\lambda_2}{\lambda_2-\lambda_1}\cdot\frac{(l-n)(l+n)}{2ln}=\frac{\lambda_1\lambda_2}{2(\lambda_2-\lambda_1)}\Bigl(\frac ln-\frac nl\Bigr),\]
+and $\frac ln-\frac nl$ is purely imaginary because $\overline{l/n}=n/l$. So $X/A$ is a nonzero purely imaginary number, i.e. $IX\perp IA$ and $\angle AIX=90^\circ$.</p>
+</div></details>
+</section>
+<h2 class="ct-group" id="test-4">Test 4</h2>
+<section class="ct-problem" id="p7">
+<h3>Problem 1</h3>
+<div class="ct-meta">Algebra &middot; LPS VII, Chapter 1: Inequalities: Core Classical Methods</div>
+<div class="ct-text"><p>Let $n\ge 3$ be a positive integer and let $a_1,\dots,a_n$ be positive real numbers. The following product is written on the board:
+\[a_1\times a_2\times\cdots\times a_n\]
+It is known that replacing any one of the multiplication signs by an addition sign will increase the value of the expression. Prove that replacing all of the multiplication signs by addition signs will also increase the value of the expression.</p></div>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Merging two neighbours)</h4>
+<p>Write $P=a_1a_2\cdots a_n$ and $S=a_1+\dots+a_n$. We prove the statement for every $n\ge2$ by induction on $n$. The hypothesis says:
+for each $k\in\{1,\dots,n-1\}$, $(a_1\cdots a_k)+(a_{k+1}\cdots a_n)&gt;P$.</p><p><strong>$n=2$.</strong> The hypothesis is $a_1+a_2&gt;a_1a_2$, which is exactly the claim.</p><p><strong>Step $n\ge3$.</strong> First we find two neighbours with $a_i+a_{i+1}\ge a_ia_{i+1}$.</p><ul class="ct-ul"><li><p>If some $a_j\le1$, take any neighbour $a_{j'}$ of it: $a_ja_{j'}\le a_{j'}&lt;a_j+a_{j'}$.</p></li><li><p>If all $a_j&gt;1$: the hypothesis for $k=1$ says $a_1+R&gt;a_1R$ with $R=a_2a_3\cdots a_n$, i.e. $(a_1-1)(R-1)&lt;1$. Since $a_3,\dots,a_n&gt;1$ we have
+$R&gt;a_2&gt;1$, so $(a_1-1)(a_2-1)&lt;(a_1-1)(R-1)&lt;1$, i.e. $a_1+a_2&gt;a_1a_2$.</p></li></ul><p>Now replace the two neighbours $a_i,a_{i+1}$ by the single number $a_ia_{i+1}$. The new list has $n-1\ge2$ positive terms, the same product $P$, and
+its &ldquo;cut&rdquo; values $(\text{product of a prefix})+(\text{product of the rest})$ are exactly the original cut values for $k\ne i$. So the new list satisfies the
+hypothesis, and by induction its sum $S'$ is greater than $P$. Finally $S=S'-a_ia_{i+1}+a_i+a_{i+1}\ge S'&gt;P$, which completes the induction.</p>
+<h4>Solution 2 (The cut where the prefix product jumps)</h4>
+<p>Let $P=a_1\cdots a_n$, $S=a_1+\dots+a_n$, $L_k=a_1\cdots a_k$ (with $L_0=1$, $L_n=P$).</p><p><strong>Small product.</strong> If $P&lt;4$, AM&ndash;GM gives $S\ge nP^{1/n}$, and $nP^{1/n}&gt;P$ because $P^{(n-1)/n}&lt;4^{(n-1)/n}\le n$ for $n\ge3$
+($4^{2/3}&lt;3$, and $4^{(n-1)/n}&lt;4\le n$ for $n\ge4$). So $S&gt;P$.</p><p><strong>Large product.</strong> Let $P\ge4$ and let $r_1\le r_2$ be the roots of $t^2-Pt+P=0$. For $t&gt;0$, $t+\frac Pt&gt;P$ holds iff $t&lt;r_1$ or $t&gt;r_2$. Since the
+quadratic is positive at $t=1$ and $t=P$ and non-positive at $t=2$, we have $1&lt;r_1\le2\le r_2&lt;P$. The hypothesis says $L_k\notin[r_1,r_2]$ for
+$1\le k\le n-1$; also $L_0=1&lt;r_1$ and $L_n=P&gt;r_2$.</p><p>Let $s$ be the least index with $L_s&gt;r_2$; then $L_{s-1}&lt;r_1$. Put $A=L_{s-1}=a_1\cdots a_{s-1}$ and $B=a_{s+1}\cdots a_n=P/L_s$ (empty products are $1$),
+and let $\sigma_A,\sigma_B$ be the sums of the same groups. Then $P=Aa_sB$, $A&lt;r_1\le2$ and $B&lt;P/r_2=r_1\le2$.</p><p><em>Claim: a non-empty group with product $X&lt;2$ has sum at least $X$.</em> With $q$ terms, AM&ndash;GM gives sum $\ge qX^{1/q}$; for $q=1$ this is $X$, and for
+$q\ge2$, $X^{1-1/q}&lt;2\le q$.</p><p>We need $S=a_s+\sigma_A+\sigma_B&gt;P=a_s+P\bigl(1-\frac1{AB}\bigr)$, i.e. $\sigma_A+\sigma_B&gt;P\bigl(1-\frac1{AB}\bigr)$. If $A&gt;1$, the group of $A$ is
+non-empty and the hypothesis for $k=s-1$ gives $A+\frac PA&gt;P$, i.e. $P(1-\frac1A)&lt;A\le\sigma_A$. Similarly, if $B&gt;1$ then $P(1-\frac1B)&lt;B\le\sigma_B$.</p><ul class="ct-ul"><li><p>$AB\le1$: the right side is $\le0&lt;\sigma_A+\sigma_B$ (for $n\ge3$ at least one group is non-empty).</p></li><li><p>$A\ge1$, $B\ge1$, $AB&gt;1$: since $1-\frac1{AB}=(1-\frac1A)+\frac1A(1-\frac1B)\le(1-\frac1A)+(1-\frac1B)$, we get
+$P(1-\frac1{AB})\le P(1-\frac1A)+P(1-\frac1B)$. Each term is $0\le\sigma$ if the product is $1$, and $&lt;\sigma$ if it is $&gt;1$; at least one of $A,B$ exceeds $1$,
+so the total is $&lt;\sigma_A+\sigma_B$.</p></li><li><p>$A&lt;1&lt;B$, $AB&gt;1$: $1-\frac1{AB}&lt;1-\frac1B$, so $P(1-\frac1{AB})&lt;P(1-\frac1B)&lt;B\le\sigma_B$. The case $B&lt;1&lt;A$ is symmetric.</p></li></ul><p>In all cases $S&gt;P$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p8">
+<h3>Problem 2</h3>
+<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 21: Arithmetic Functions and Multiplicative Structure</div>
+<div class="ct-text"><p>Define the <em>pseudo-derivative</em> $\Delta:\mathbb{N}_{&gt;1}\to\mathbb{N}$ as follows: for a prime $p$ and a positive integer $a$ let $\Delta(p^a)=ap^{a-1}$ and for coprime integers $m,n$ let $\Delta(mn)=\Delta(m)\cdot\Delta(n)$.
+Is it true that for any positive integer $k$ there exists a positive integer $n$ for which $\Delta^{(k)}(n)=n$ but $\Delta^{(m)}(n)\ne n$ for every $m&lt;k$?</p><p><em>Comment:</em> $\Delta^{(1)}(n)=\Delta(n)$, $\Delta^{(k+1)}(n)=\Delta\left(\Delta^{(k)}(n)\right)$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>Yes</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (A rotating pattern of exponents)</h4>
+<p>The answer is $\boxed{\text{Yes}}$. If $n=\prod q_i^{e_i}$ (distinct primes $q_i$, $e_i\ge1$), then $\Delta(n)=\prod e_iq_i^{e_i-1}$. In particular, a prime that divides $n$ exactly once contributes the factor $1\cdot q^0=1$.</p><p><strong>$k=1$.</strong> $\Delta(4)=2\cdot2=4$.</p><p><strong>The mechanism ($k\ge2$).</strong> Fix distinct odd primes $p_1,\dots,p_k$, and read indices modulo $k$ (so $p_{k+1}=p_1$). For a positive integer $x$ let $x'$ be $x$ with all factors $p_1,\dots,p_k$ removed. Suppose that positive integers $a_1,\dots,a_k$ satisfy</p><ul class="ct-parts"><li><p><span class="ct-lbl">(i)</span> $a_i\equiv1\pmod 4$, and $a_i$ and $a_i+1$ are squarefree;</p></li><li><p><span class="ct-lbl">(ii)</span> $p_i\mid a_i$, $p_{i+1}\mid a_i+1$, and no other $p_j$ divides $a_i(a_i+1)$;</p></li><li><p><span class="ct-lbl">(iii)</span> for $i\ne j$: $\gcd(a_i',a_j')=1$ and $\gcd\bigl((a_i+1)',a_j'\bigr)=1$.</p></li></ul><p>For each $i$ let $c_i=(a_i+1)\prod_{j\ne i}a_j$, let $E_i$ be the exponent vector $(a_1,\dots,a_k)$ with its $i$-th entry increased by $1$, and put
+\[n_i=c_{i-1}'\cdot\prod_{j=1}^k p_j^{(E_i)_j}.\]
+The $k$ factors $(a_{i-1}+1)'$ and $a_j'$ ($j\ne i-1$) of $c_{i-1}'$ are squarefree by (i), and pairwise coprime by (iii): the odd numbers $a_j'$ are pairwise coprime, and $(a_{i-1}+1)'$ is coprime to each of them (two different numbers $a_j+1$ never occur together in one $c_i$). So $c_{i-1}'$ is squarefree and coprime to every $p_j$, and each of its primes contributes the factor $1$ to $\Delta$. As every exponent $(E_i)_j$ is at least $1$,
+\[\Delta(n_i)=\prod_j (E_i)_j\,p_j^{(E_i)_j-1}=c_i\prod_j p_j^{(E_i)_j-1}.\]
+By (ii) and (i), each $a_j$ ($j\ne i$) contributes to $c_i$ exactly one factor $p_j$ and no other $p$, and $a_i+1$ contributes exactly one factor $p_{i+1}$ and no other $p$. Since $p_i\ne p_{i+1}$, this gives: $p_j$ divides $c_i$ exactly once for $j\notin\{i,i+1\}$, $p_i\nmid c_i$, and $p_{i+1}^2$ divides $c_i$ but $p_{i+1}^3$ does not. So the exponent of $p_j$ in $\Delta(n_i)$ is
+\[a_j-1+1=a_j\ \ (j\notin\{i,i+1\}),\qquad (a_i+1)-1=a_i\ \ (j=i),\qquad a_{i+1}-1+2=a_{i+1}+1\ \ (j=i+1).\]
+This is the vector $E_{i+1}$, and the part of $\Delta(n_i)$ free of the $p_j$ is $c_i'$. Thus $\Delta(n_i)=n_{i+1}$ for every $i$ (also when $k=2$, where $i+1$ and $i-1$ coincide modulo $2$).</p><p>Consequently $\Delta^{(m)}(n_1)=n_{1+m}$ for all $m\ge1$, and $\Delta^{(k)}(n_1)=n_{k+1}=n_1$. For $1\le m&lt;k$ the exponent of $p_1$ is $a_1+1$ in $n_1$ but $a_1$ in $n_{1+m}$ (since $1+m\not\equiv1\pmod k$), so $\Delta^{(m)}(n_1)\ne n_1$. Hence $n=n_1$ has the required property.</p><p><strong>Choosing the $a_i$.</strong> We choose $a_1,a_2,\dots,a_k$ in turn. Suppose $a_1,\dots,a_{i-1}$ are already chosen. Let $S$ be the (finite) set of odd primes dividing $p_1p_2\cdots p_k\prod_{j&lt;i}a_j(a_j+1)$, and let $Q=4\prod_{q\in S}q^2$. Since $p_i\ne p_{i+1}$, the Chinese remainder theorem gives an integer $c$ with $1\le c\le Q$ and
+\[c\equiv1\ (\mathrm{mod}\ 4),\qquad c\equiv p_i\ (\mathrm{mod}\ p_i^2),\qquad c\equiv p_{i+1}-1\ (\mathrm{mod}\ p_{i+1}^2),\qquad c\equiv1\ (\mathrm{mod}\ q^2)\ \text{for the other }q\in S .\]
+Every $t\equiv c\pmod Q$ then has these properties: $t\equiv1\pmod4$, so $t$ is odd and $t+1\equiv2\pmod 4$; $p_i$ divides $t$ exactly once and does not divide $t+1$; $p_{i+1}$ divides $t+1$ exactly once and does not divide $t$; and for every other $q\in S$ we have $t\equiv1$ and $t+1\equiv2\pmod q$, so $q\nmid t(t+1)$. Hence $a_i=t$ satisfies (ii). It also satisfies (iii) together with $a_1,\dots,a_{i-1}$: an odd prime dividing $t'$ or $(t+1)'$ and also some $a_j$ or $a_j+1$ with $j&lt;i$ would lie in $S$ but not among the $p$'s, and such primes divide neither $t$ nor $t+1$ (the prime $2$ divides no $a_j'$ and not $t'$). It remains to find such a $t$ for which $t$ and $t+1$ are squarefree. By what we just showed, $4\nmid t(t+1)$ and $q^2\nmid t(t+1)$ for $q\in S$, so we only need $q^2\nmid t$ and $q^2\nmid t+1$ for every odd prime $q\notin S$.</p><p>Let $t=c+Qu$ with $u=0,1,\dots,U-1$, where $U$ is a large integer. Fix an odd prime $q\notin S$. It is prime to $Q$, so $q^2\mid c+Qu$ holds for $u$ in a single residue class modulo $q^2$, that is, for at most $\frac U{q^2}+1$ values of $u$; the same holds for $q^2\mid c+Qu+1$. Moreover $t+1\le c+QU$, so only primes $q\le\sqrt{c+QU}$ can occur. Since $\frac1{m^2}&lt;\frac1{m^2-1}=\frac12\bigl(\frac1{m-1}-\frac1{m+1}\bigr)$, the sum of $\frac1{m^2}$ over odd $m\ge3$ is less than $\frac12\cdot\frac12=\frac14$ (the sum telescopes). So the number of bad values of $u$ is at most
+\[\sum_{q}2\Bigl(\frac U{q^2}+1\Bigr)&lt;2\cdot\frac U4+2\sqrt{c+QU},\]
+which is less than $U$ once $U$ is large enough. So a good $t$ exists, we take it as $a_i$, and the construction goes through for every $k\ge2$.</p><p><em>Example.</em> For $k=2$ and $p_1=3$, $p_2=5$ one may take $a_1=129=3\cdot43$ (with $130=2\cdot5\cdot13$) and $a_2=3305=5\cdot661$ (with $3306=2\cdot3\cdot19\cdot29$); then
+\[n_1=2\cdot19\cdot29\cdot43\cdot3^{130}5^{3305}\ \longrightarrow\ 2\cdot13\cdot661\cdot3^{129}5^{3306}\ \longrightarrow\ n_1 .\]</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p9">
+<h3>Problem 3</h3>
+<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 18: Invariants and Monovariants</div>
+<div class="ct-text"><p>On a horizontal line $\ell$ there are $n$ blue points $b_1,b_2,\dots,b_n$. Above that line are given $n$ red points $r_1,\dots,r_n$ such that every line passing through two red points doesn't contain another red or blue point. Ayala and Barvaz play a game. Ayala draws $n$ segments such that every red point is connected to a blue point and vice versa. In every turn, Barvaz can choose two intersecting segments $b_ir_j$, $b_kr_l$ and replace them by the segments $b_kr_j$, $b_ir_l$. Prove that Barvaz can make all of the segments to not intersect each other after at most $\binom{n}{2}$ turns.</p></div>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Untangle from the highest red point)</h4>
+<p>Take $\ell$ as the $x$-axis with the red points above it. A <em>flip</em> replaces two crossing segments $b_ir_j$, $b_kr_l$ by $b_kr_j$, $b_ir_l$.
+We describe a strategy for Barvaz and show that it uses at most $\binom n2$ flips.</p><p><strong>Normalisation.</strong> For small $\varepsilon&gt;0$ the map $(x,y)\mapsto\bigl(\frac{x}{1+\varepsilon x},\frac{y}{1+\varepsilon x}\bigr)$ is a projective transformation, defined on a
+region containing all the given points; it maps segments to segments, maps $\ell$ to itself keeping the order of points on it, and keeps the upper half-plane and all
+collinearities. So it turns the problem into an equivalent one. Two red points $(x_1,y_1)\ne(x_2,y_2)$ get the same new height only if
+$y_1-y_2+\varepsilon(y_1x_2-y_2x_1)=0$, which holds for at most one $\varepsilon$. Hence we may assume that <em>the red points have pairwise different heights</em>.</p><p><strong>Shadows and good pairs.</strong> If a red point $y$ is lower than a red point $x$, the ray from $x$ through $y$ meets $\ell$; call this point the <em>shadow</em> $\pi_x(y)$.
+It is not a blue point (no line through two red points contains a blue point). Consider two segments of a matching with red ends $x$, $y$ ($x$ higher) and blue ends
+$\beta_x,\beta_y$; the points $\beta_x,\beta_y,\pi_x(y)$ of $\ell$ are distinct.</p><p><em>Claim 1. The two segments cross if and only if $\beta_x$ lies between $\beta_y$ and $\pi_x(y)$.</em> The line $x\beta_x$ meets $\ell$ only at $\beta_x$, so two points of
+$\ell$ are on the same side of this line iff they are on the same side of $\beta_x$. The point $y$ lies on the segment from $x$ to $\pi_x(y)$, which meets line $x\beta_x$ only at $x$,
+so $y$ is on the side of $\pi_x(y)$. If $\beta_x$ is not between $\beta_y$ and $\pi_x(y)$, the points $y,\beta_y$ are on one side and the segments do not cross. Otherwise the
+segment $y\beta_y$ meets line $x\beta_x$ at a point of height between $0$ and the height of $y$, which is less than that of $x$; such a point lies on the segment $x\beta_x$.</p><p>Call the pair <em>good</em> if $\beta_y$ lies between $\beta_x$ and $\pi_x(y)$, and <em>bad</em> otherwise; crossing pairs are bad. For a set $G$ of segments let $\Phi(G)$ be the
+number of bad pairs in $G$; clearly $\Phi(G)\le\binom{|G|}2$.</p><p><em>Claim 2. If red points $w$ above $q$ are both lower than a red point $r$, then $\pi_r(q)$ lies strictly between $\pi_r(w)$ and $\pi_w(q)$.</em> The point $q$ is inside the segment
+from $w$ to $\pi_w(q)$; the rays from $r$ through the points of this segment sweep the triangle $r\,w\,\pi_w(q)$ in order and meet $\ell$ along the segment from $\pi_r(w)$ to
+$\pi_w(q)$, so the ray through $q$ meets it strictly between the ends.</p><p><strong>The strategy.</strong> <span>Untangle</span>$(G)$, for a set $G$ of current segments: if $|G|\le1$, stop. Otherwise let $r$ be the highest red end in $G$ and $s$ its segment.
+While $s$ crosses some segment of $G$, flip $s$ with the crossing segment <em>whose red end is highest</em> (the new segment at $r$ is again called $s$). When $s$ crosses
+nothing, let $b$ be its blue end and let $G_L$, $G_R$ be the segments of $G$ with blue end left, resp. right, of $b$; run <span>Untangle</span>$(G_L)$, then
+<span>Untangle</span>$(G_R)$. Barvaz runs <span>Untangle</span> on the whole matching.</p><p><strong>Claim 3 (one flip lowers $\Phi$).</strong> Let $s=br$ (with $r$ highest in $G$) be flipped with $t=b'q$ as in the strategy, giving $s'=b'r$, $t'=bq$. Then $\Phi(G)$ drops by at least $1$.</p><p><em>Proof.</em> Pairs not containing $s$ or $t$ do not change. Reflecting the picture in a vertical line if necessary, $b'$ is left of $b$; by Claim 1 (with $x=r$),
+$b$ lies between $b'$ and $\hat q=\pi_r(q)$, so $b'&lt;b&lt;\hat q$ on $\ell$. The pair $\{s,t\}$ was bad (crossing), and $\{s',t'\}$ is good, since the blue end $b$ of $q$ lies
+between the blue end $b'$ of $r$ and $\hat q$. Now let $u=b''w$ be another segment of $G$ and $\hat w=\pi_r(w)$. With $x=r$:
+good$(s,u)$ $\iff$ $b''$ is between $b$ and $\hat w$; good$(s',u)$ $\iff$ $b''$ is between $b'$ and $\hat w$. We show that $\{s',u\},\{t',u\}$ contain at least as many good
+pairs as $\{s,u\},\{t,u\}$. If $b''&lt;b'$ or $b''&gt;b$, then $b$ and $b'$ are on the same side of $b''$ and the two conditions for $s,s'$ coincide.</p><p><em>Case A: $w$ is higher than $q$.</em> Put $\tilde q=\pi_w(q)$; good$(t,u)$ $\iff$ $b'$ is between $b''$ and $\tilde q$; good$(t',u)$ $\iff$ $b$ is between $b''$ and $\tilde q$.
+By the choice of $t$, the segment $u$ (whose red end is higher than $q$) does not cross $s$, so by Claim 1 $b$ is not between $b''$ and $\hat w$. By Claim 2, $\hat q$ is between
+$\hat w$ and $\tilde q$, and $\hat q&gt;b$, so $\hat w&gt;b$ or $\tilde q&gt;b$.</p><ul class="ct-ul"><li><p>$b''&lt;b'$: then $\hat w&lt;b$ (else $b$ would be between $b''$ and $\hat w$), so $\tilde q&gt;b&gt;b'$ and both $t$-pairs are good.</p></li><li><p>$b''&gt;b$: good$(t,u)\iff\tilde q&lt;b'$, good$(t',u)\iff\tilde q&lt;b$, and the first implies the second.</p></li><li><p>$b'&lt;b''&lt;b$: again $\hat w&lt;b$, so $\tilde q&gt;b$; then $\{t',u\}$ is good and $\{t,u\}$ is bad, which makes up for a possible loss of one good pair among the $s$-pairs.</p></li></ul><p><em>Case B: $w$ is lower than $q$.</em> Put $\tilde w=\pi_q(w)$; good$(t,u)$ $\iff$ $b''$ is between $b'$ and $\tilde w$; good$(t',u)$ $\iff$ $b''$ is between $b$ and $\tilde w$.
+If $b''&lt;b'$ or $b''&gt;b$, nothing changes. If $b'&lt;b''&lt;b$, the four conditions read $\hat w&lt;b''$, $\hat w&gt;b''$ (for $s,s'$) and $\tilde w&gt;b''$, $\tilde w&lt;b''$ (for $t,t'$), so the number
+of good pairs can drop only if $\hat w&lt;b''&lt;\tilde w$. But by Claim 2 (with $q$ above $w$), $\hat w$ lies between $\hat q$ and $\tilde w$; as $\hat w&lt;\tilde w$ this forces
+$\hat q&lt;\hat w&lt;b''&lt;b$, contradicting $\hat q&gt;b$. $\square$</p><p><strong>Claim 4 (splitting).</strong> When the loop stops, every segment of $G_L$ lies in the open half-plane on the left of line $s$, and every segment of $G_R$ on the right. Indeed, no red end other than $r$ lies on line $s$ (otherwise the line through $r$ and that red point would contain the blue point $b$), and a
+segment with blue end left of $b$ and red end on the right of line $s$ would cross this line at a height below its red end, hence below $r$, i.e. on $s$. The blue ends left of
+$b$ are on the left side as well, and a half-plane is convex. Flips inside $G_L$ only re-pair these endpoints, so $G_L$ stays in its half-plane, and likewise $G_R$. Hence
+no segment of $G_L$ ever crosses $s$ or a segment of $G_R$, and $s$ is never touched again. (The same argument, applied at every level, shows that the segments outside the
+group being processed never interact with it.)</p><p><strong>Counting.</strong> We show by induction on $|G|$ that <span>Untangle</span>$(G)$ makes at most $\Phi(G)$ flips (with $\Phi$ computed at the start) and leaves $G$ without
+crossings. By Claim 3 each flip of the loop lowers $\Phi(G)$ by at least $1$; as $\Phi\ge0$, the loop stops after at most $\Phi(G)-\Phi_{\mathrm{end}}$ flips. At that moment
+$\Phi_{\mathrm{end}}\ge\Phi(G_L)+\Phi(G_R)$, because the pairs inside $G_L$ and inside $G_R$ are pairs of $G$. By induction the two recursive calls make at most
+$\Phi(G_L)+\Phi(G_R)$ flips and remove all crossings inside $G_L$ and $G_R$; by Claim 4 there are no other crossings. The total is at most $\Phi(G)$.</p><p>For the whole matching this gives at most $\Phi\le\binom n2$ flips, after which no two segments intersect.</p>
+</div></details>
+</section>
+<h2 class="ct-group" id="test-5">Test 5</h2>
+<section class="ct-problem" id="p10">
+<h3>Problem 1</h3>
+<div class="ct-meta">Algebra &middot; LPS VII, Chapter 1: Inequalities: Core Classical Methods</div>
+<div class="ct-text"><p>A grasshopper jumps on the number line. It starts at the point $x=1$ with $E$ energy. At each step, the grasshopper can jump to the right; if it jumps from point $y$ to point $z$, it must spend $\frac{z}{y^2}$ energy.
+Find the minimum $E$ such that for every $n$, the grasshopper can perform $n$ jumps.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$E=4$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (A recursive AM-GM bound)</h4>
+<p>A run of $n$ jumps is a sequence $1=x_0&lt;x_1&lt;\dots&lt;x_n$, with cost $\sum_{i=0}^{n-1}x_{i+1}/x_i^2$.</p><p><strong>$E=4$ suffices.</strong> Jump to $x_i=2^i$. The cost is $\sum_{i=0}^{n-1}\frac{2^{i+1}}{2^{2i}}=\sum_{i=0}^{n-1}2^{1-i}=4-2^{2-n}&lt;4$ for every $n$.</p><p><strong>Lower bound.</strong> Define $f_1=1$ and $f_{j+1}=2\sqrt{f_j}$. Taking $\log_2$, $g_j=\log_2f_j$ satisfies $g_1=0$, $g_{j+1}=1+\frac{g_j}2$, so
+$g_j=2-2^{2-j}$ and $f_j=2^{\,2-2^{2-j}}$; thus $f_j&lt;4$ and $f_j\to4$.</p><p><em>Claim.</em> For every $y&gt;0$ and every $j$ jumps $y=x_0&lt;x_1&lt;\dots&lt;x_j$, the cost $\sum_{i&lt;j}x_{i+1}/x_i^2$ is greater than $f_j/y$.</p><p><em>Proof by induction on $j$.</em> For $j=1$: $x_1/y^2&gt;y/y^2=1/y$. Step: the first jump costs $x_1/y^2$, and the remaining $j$ jumps start at $x_1$, so by
+the induction hypothesis the total exceeds
+\[\frac{x_1}{y^2}+\frac{f_j}{x_1}\ \ge\ 2\sqrt{\frac{x_1}{y^2}\cdot\frac{f_j}{x_1}}=\frac{2\sqrt{f_j}}{y}=\frac{f_{j+1}}y\]
+by AM&ndash;GM. $\square$</p><p>So $n$ jumps from $x=1$ always cost more than $f_n$. If $E&lt;4$, choose $n$ with $f_n&gt;E$; then $n$ jumps are impossible. Hence the minimum is
+$\boxed{4}$.</p>
+<h4>Solution 2 (One weighted AM-GM)</h4>
+<p>A run of $n$ jumps is $1=x_0&lt;x_1&lt;\dots&lt;x_n$ with cost $\sum_{i=0}^{n-1}t_i$, where $t_i=x_{i+1}/x_i^2$.</p><p><strong>$E=4$ suffices.</strong> With $x_i=2^i$ the cost is $\sum_{i=0}^{n-1}2^{1-i}=4-2^{2-n}&lt;4$.</p><p><strong>Lower bound.</strong> For $n=1$ the cost is $x_1&gt;1$. Let $n\ge2$ and take the weights
+\[\lambda_i=2^{-(i+1)}\ (0\le i\le n-2),\qquad \lambda_{n-1}=2^{-(n-1)},\qquad \textstyle\sum\lambda_i=1 .\]
+Weighted AM&ndash;GM gives $\sum t_i=\sum\lambda_i\frac{t_i}{\lambda_i}\ge\prod\bigl(\frac{t_i}{\lambda_i}\bigr)^{\lambda_i}$. In $\prod t_i^{\lambda_i}$ the exponent of
+$x_j$ for $1\le j\le n-2$ is $\lambda_{j-1}-2\lambda_j=0$, the exponent of $x_{n-1}$ is $\lambda_{n-2}-2\lambda_{n-1}=-2^{-(n-1)}$ and that of $x_n$ is
+$2^{-(n-1)}$ (and $x_0=1$). So $\prod t_i^{\lambda_i}=(x_n/x_{n-1})^{2^{-(n-1)}}&gt;1$, and
+\[\sum t_i&gt;\prod\lambda_i^{-\lambda_i}=2^{\,\sum_{j=1}^{n-1}j2^{-j}+(n-1)2^{-(n-1)}}=2^{\,2-2^{2-n}},\]
+using $\sum_{j=1}^{m}j2^{-j}=2-(m+2)2^{-m}$. The bound $2^{2-2^{2-n}}$ tends to $4$, so for any $E&lt;4$ some $n$ has bound $&gt;E$ and $n$ jumps are impossible.
+The answer is $\boxed{4}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p11">
+<h3>Problem 2</h3>
+<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 31: Extremal Principle and Bounding Arguments</div>
+<div class="ct-text"><p>Let $n&gt;2026^{2026}$. A kangaroo hops on an $n\times n$ grid of squares. In each move, it can jump from a square to a side-adjacent square. In every $2026\times 2026$ subgrid, the kangaroo can visit at most $r$ times in total.
+Find the minimum $r$ for which the kangaroo can visit at least $\frac{n^2}{10^{100}}$ distinct squares.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$r=4051$ (upper bound proved; lower bound not proved)</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Partial progress)</h4>
+<p><strong>This is not a complete solution: only $r=4051$ works is proved.</strong> Let $k=2026$; &ldquo;visits&rdquo; are counted with multiplicity.</p><p><strong>$r=2k-1=4051$ works.</strong> Use a snake: the rows $y=0,k,2k,3k,\dots$ are traversed completely, alternately left to right and right to left, and
+consecutive traversed rows are joined by vertical segments of length $k$ in the first or last column (alternately). The walk never repeats a square.
+A $k\times k$ window contains at most one traversed row (they are $k$ apart), hence at most $k$ squares of rows. The vertical connectors in the last
+column occupy the intervals $[0,k],[2k,3k],\dots$, separated by gaps of $k-1$ rows, so the window meets at most one connector, in at most $k$ squares, and
+if it meets both a connector and a row, they share the corner square of the window's row. So every window has at most $k+k-1=2k-1$ visits. The walk visits
+about $n^2/k$ squares, far more than $n^2/10^{100}$.</p><p><strong>Evidence for the lower bound.</strong> A sub-walk whose bounding box is exactly $k\times k$ makes at least $2(k-1)$ steps inside one window, i.e. it gives at
+least $2k-1$ visits there; in particular an $L$-shaped corner with both arms of length $k$ is forbidden when $r\le2k-2$. For $k=2$ the lower bound is
+easy: with $r=2$ the walk can neither turn (three consecutive squares forming an $L$ lie in one $2\times2$ window) nor step back (a square visited twice
+plus its neighbour gives $3$ visits), so it is a straight segment and visits at most $n$ squares. For $k=3$ and $k=4$ an exhaustive computer search shows
+that with $r=2k-2$ a walk that has gone straight for $k+1$ steps cannot later go straight in a perpendicular direction for $k+1$ steps (within the search
+length).</p><p><strong>What is missing.</strong> A proof for $k=2026$ that if every window has at most $2k-2$ visits, the walk is &ldquo;almost monotone&rdquo; and so covers only
+$O(nk)$ squares. The hard part is to show that turning from mostly horizontal to mostly vertical motion (which any walk covering a positive proportion of
+the board must do) forces a window with $2k-1$ visits.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p12">
+<h3>Problem 3</h3>
+<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 33: Residues, Quadratic Structure, and Higher Congruences</div>
+<div class="ct-text"><p>Let $f:\mathbb{Z}[x,y]\to\mathbb{Z}[x,y]$ be a function satisfying the following conditions:</p><ul class="ct-ul"><li><p>$f(1)=1$, where $1$ denotes the constant polynomial $1$;</p></li><li><p>For all $P,Q\in\mathbb{Z}[x,y]$, $f(P+Q)=f(P)+f(Q)$;</p></li><li><p>For every $P\in\mathbb{Z}[x,y]$ and for every prime number $r$, there exist $n_0,m_0\in\mathbb{Z}$ such that $r\mid P(n_0,m_0)$ if and only if there exist $n_1,m_1\in\mathbb{Z}$ such that $r\mid f(P)(n_1,m_1)$.</p></li></ul><p>Prove that $f(PQ)=f(P)f(Q)$ for all $P,Q\in\mathbb{Z}[x,y]$.</p></div>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Value sets modulo primes force f of a square to be a square)</h4>
+<p><strong>Linearity.</strong> Additivity gives $f(0)=2f(0)$, so $f(0)=0$; then $f(-P)=-f(P)$ and $f(kP)=kf(P)$ for every $k\in\mathbb Z$. With $f(1)=1$ we get $f(c)=c$ for every constant polynomial $c$.</p><p><strong>Same value sets.</strong> For a polynomial $R\in\mathbb Z[x,y]$ and a prime $r$ let $V_r(R)=\{R(u,v)\bmod r:\ u,v\in\mathbb Z\}\subseteq\mathbb Z_r$. Let $c$ be an integer. Apply the third condition to $P-c$, using $f(P-c)=f(P)-c$: some value of $P$ at an integer point is $\equiv c\pmod r$ if and only if some value of $f(P)$ is $\equiv c\pmod r$. Hence
+\[V_r\bigl(f(P)\bigr)=V_r(P)\qquad\text{for every }P\text{ and every prime }r .\]</p><p><strong>Squares.</strong> Fix $R\in\mathbb Z[x,y]$, an odd prime $r$ and a point $(u,v)\in\mathbb Z^2$, and put $\alpha=f(R)(u,v)$ and $\beta=f(R^2)(u,v)$ (integers). Let $\mathcal Q\subseteq\mathbb Z_r$ be the set of squares modulo $r$, including $0$; it has $\frac{r+1}2$ elements. For every integer $t$, linearity gives $f(R^2-2tR)=f(R^2)-2tf(R)$, and $R^2-2tR=(R-t)^2-t^2$ takes only values in $\mathcal Q-t^2$ modulo $r$. Therefore
+\[\beta-2t\alpha\in V_r\bigl(f(R^2-2tR)\bigr)=V_r(R^2-2tR)\subseteq \mathcal Q-t^2,\]
+that is, $(t-\alpha)^2+\delta\in\mathcal Q$ for every integer $t$, where $\delta=\beta-\alpha^2$. As $t$ runs over all integers, $t-\alpha$ runs over all residues modulo $r$, so $\mathcal Q+\delta\subseteq\mathcal Q$. Both sets have $\frac{r+1}2$ elements, so $\mathcal Q+\delta=\mathcal Q$, and by repetition $\mathcal Q+j\delta=\mathcal Q$ for every integer $j$. If $\delta\not\equiv0\pmod r$, the multiples $j\delta$ run over all of $\mathbb Z_r$, and since $0\in\mathcal Q$, every residue $0+j\delta$ would lie in $\mathcal Q$. This is false, because there are $\frac{r-1}2\ge1$ non-squares modulo an odd prime $r$. So $\beta\equiv\alpha^2\pmod r$.</p><p>Hence the integer $f(R^2)(u,v)-f(R)(u,v)^2$ is divisible by every odd prime, so it is $0$, for every $(u,v)\in\mathbb Z^2$. A polynomial in $\mathbb Z[x,y]$ that vanishes on all of $\mathbb Z^2$ is the zero polynomial: write it as $\sum_i g_i(x)y^i$; for each integer $u$ the polynomial $\sum_i g_i(u)y^i$ in $y$ has infinitely many roots, so every $g_i(u)=0$; then each $g_i$ has infinitely many roots, so $g_i=0$. Therefore
+\[f(R^2)=f(R)^2\qquad\text{for every }R\in\mathbb Z[x,y].\]</p><p><strong>Products.</strong> Since $4PQ=(P+Q)^2-(P-Q)^2$, linearity and the previous step give
+\[4f(PQ)=f\bigl((P+Q)^2\bigr)-f\bigl((P-Q)^2\bigr)=\bigl(f(P)+f(Q)\bigr)^2-\bigl(f(P)-f(Q)\bigr)^2=4f(P)f(Q).\]
+The coefficients of $f(PQ)$ and $f(P)f(Q)$ are integers whose fourfolds agree, so $f(PQ)=f(P)f(Q)$ for all $P,Q\in\mathbb Z[x,y]$.</p>
+</div></details>
+</section>
+<h2 class="ct-group" id="test-7">Test 7</h2>
+<section class="ct-problem" id="p13">
+<h3>Problem 1</h3>
+<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 39: Graph Theory and Structural Combinatorics</div>
+<div class="ct-text"><p>Given positive integers $n$, $m$ and a complete graph on $n$ vertices. On each edge of the graph, Ayala writes an integer between $1$ and $m$. Barvaz chooses a vertex of the graph, an integer $k$, and a sequence $a_1,a_2,\dots,a_k$ of integers between $1$ and $m$. Ayala then walks along the vertices of the graph: she starts at the vertex chosen by Barvaz, and at the $i$-th step, she must walk along an edge labeled with the number $a_i$ (she is allowed to traverse the same edge more than once). Ayala is forbidden from returning to the starting vertex. If Ayala cannot make a move, she loses.
+Find all pairs $(n,m)$ for which Ayala loses.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>Ayala loses exactly when $n\le 2m$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (A label used once at every vertex)</h4>
+<p>We show: Ayala loses (Barvaz can always win) if and only if $n\le2m$. Ayala knows the whole sequence before walking; this does not matter
+below, because in the first part her moves are forced and in the second part she never needs to look ahead.</p><p><strong>$n\le 2m$: Barvaz wins.</strong> Fix any labelling.
+If some vertex $u$ has no edge with some label $\ell$, Barvaz chooses $u$, $k=1$, $a_1=\ell$, and Ayala cannot move.
+Otherwise every label occurs at every vertex. A vertex has $n-1\le2m-1$ edges, so some label occurs <em>exactly once</em> at it (if all $m$ labels occurred
+twice, there would be at least $2m$ edges). For each vertex $u$ choose such a label $c(u)$ and let $g(u)$ be the other end of the unique edge at $u$ labelled
+$c(u)$. Then $g(u)\ne u$, and the map $g$ on the finite vertex set has a cycle $v,\,g(v),\dots,g^{j-1}(v)$ of distinct vertices with $g^j(v)=v$, $j\ge2$.</p><p>Barvaz chooses the start $v$, $k=j$ and $a_i=c\bigl(g^{i-1}(v)\bigr)$. By induction, before step $i$ Ayala stands at $g^{i-1}(v)$: the only edge there
+with label $a_i$ goes to $g^{i}(v)$, which for $i&lt;j$ is not the start, so her move is forced. At step $j$ the only edge with label $a_j$ leads to
+$g^j(v)=v$, the forbidden start. So she loses.</p><p><strong>$n\ge 2m+1$: Ayala wins.</strong> Number the vertices by $\mathbb Z_n$ and let $d(i,j)$ be their distance around the cycle ($1\le d\le n/2$). Ayala writes
+$\min\{d(i,j),m\}$ on edge $ij$. For a vertex $u$ and a label $\ell\le m$, the two vertices $u\pm\ell$ are distinct (as $0&lt;2\ell\le2m&lt;n$), both at distance
+exactly $\ell$, so both edges get label $\ell$. Thus <em>every label occurs at least twice at every vertex.</em></p><p>Whatever Barvaz chooses, Ayala moves greedily: at the current vertex $x$ there are at least two edges with the required label, and at most one of them
+leads to the start (none if $x$ is the start). So she can always move and never loses.</p><p>Hence Ayala loses exactly for the pairs $\boxed{(n,m)\text{ with }n\le2m}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p14">
+<h3>Problem 2</h3>
+<div class="ct-meta">Algebra &middot; LPS VII, Chapter 31: Extremal Principle and Bounding Arguments</div>
+<div class="ct-text"><p>Find all sequences $a_n$ of real numbers such that $a_1=1$, $a_2=2$, and for all pairwise distinct positive integers $m,n,k$, at least one of the following equations holds:
+\[a_n+a_m=a_{n+m},\qquad a_n+a_k=a_{n+k},\qquad a_m+a_k=a_{m+k}.\]</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$a_n=n$ for all $n$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (A minimal counterexample and triangles of bad pairs, computer-assisted for small n)</h4>
+<p>The sequence $a_n=n$ works, since then all three equations hold. We show it is the only one.</p><p><strong>Reformulation.</strong> Put $b_n=a_n-n$, so $b_1=b_2=0$. Since $n$ is additive, for $i\ne j$ we have $a_i+a_j=a_{i+j}$ iff $b_i+b_j=b_{i+j}$; call the pair $\{i,j\}$
+<em>good</em> in that case and <em>bad</em> otherwise. The hypothesis says: <em>among any three distinct positive integers some pair is good.</em> We must show $b\equiv0$.</p><p>Suppose not and let $n$ be the least index with $b_n\ne0$; then $n\ge3$. The condition is unchanged if all $b_i$ are multiplied by the same nonzero number, so we may assume
+$b_n=1$. Write $u_j=b_{n+j}$ ($j\ge0$, so $u_0=1$), $N=\{j\ge0:u_j\ne0\}$ and $O=\{j\ge1:u_j=1\}$.</p><p><strong>(F1)</strong> For distinct $x,y&lt;n$: $b_x+b_y=0$, so $\{x,y\}$ is bad iff $x+y\ge n$ and $x+y-n\in N$ (if $x+y&lt;n$ then $b_{x+y}=0$).</p><p><strong>(F2)</strong> For $x&lt;n$, $\{x,n\}$ is good iff $b_{n+x}=1$, i.e. $x\in O$.</p><p><strong>Lemma 1.</strong> If $1\le x\le n-1$ and $2x\ne n$, then $x\in O$ or $n-x\in O$. <em>Proof:</em> in the triple $\{x,n-x,n\}$ the pair $\{x,n-x\}$ is bad by (F1) ($0\in N$),
+so $\{x,n\}$ or $\{n-x,n\}$ is good; apply (F2).</p><p><strong>Lemma 2.</strong> Let $j,k,l\in N$ and suppose $x=\frac{n+j+k-l}2$, $y=\frac{n+j-k+l}2$, $z=\frac{n-j+k+l}2$ are distinct integers in $[1,n-1]$. This is impossible.
+<em>Proof:</em> $x+y=n+j$, $x+z=n+k$, $y+z=n+l$, so by (F1) all three pairs of $\{x,y,z\}$ are bad. Two special cases:</p><ul class="ct-parts"><li><p><span class="ct-lbl">(2a)</span> ($l=0$) There are no distinct $j,k\ge1$ in $N$ with $j+k&lt;n$ and $j+k\equiv n\pmod 2$. (Then $x=\frac{n+j+k}2&lt;n$, $y=\frac{n+j-k}2&gt;j\ge1$, $z&gt;k\ge1$, and
+$x,y,z$ are distinct because $j\ne k$ and $j,k\ne0$.)</p></li><li><p><span class="ct-lbl">(2b)</span> There are no distinct $a,b,c\in[1,n-1]$ with $n-a,n-b,n-c\in O$, $a+b+c$ even, and each of $a,b,c$ less than the sum of the other two. (Take
+$j=n-a$, $k=n-b$, $l=n-c$: then $x=n-\frac{a+b-c}2$, $y=n-\frac{a-b+c}2$, $z=n-\frac{-a+b+c}2$ lie in $[1,n-1]$ and are distinct.)</p></li></ul><p><strong>Even $n=2m$, $m\ge9$.</strong> Two numbers of the same parity in $[1,m-1]$ have an even sum less than $n$, so by (2a) $N$ contains at most one odd and at most one even
+number of $[1,m-1]$. Every other $x\in[1,m-1]$ has $u_x=0$, so $x\notin O$ and, by Lemma 1, $n-x\in O$. Removing at most one odd and one even number from
+$\{1,\dots,8\}$ always leaves one of the triples
+\[(4,6,8),\ (3,4,5),\ (5,6,7),\ (3,5,6),\ (3,7,8),\ (5,7,8),\ (3,6,7)\]
+(if the removed even number is not $4,6,8$ use $(4,6,8)$; if it is $4$, use $(5,6,7)$, $(3,7,8)$ or $(3,5,6)$ according as the removed odd number is not $5,7$ / is $5$ / is
+$7$; if it is $6$, use $(3,4,5)$, $(5,7,8)$ or $(3,7,8)$ according as it is not $3,5$ / is $3$ / is $5$; if it is $8$, use $(3,4,5)$, $(5,6,7)$ or $(3,6,7)$ according as it is
+not $3,5$ / is $3$ / is $5$). Each listed triple has even sum and satisfies the triangle inequalities, and its numbers $a$ satisfy $n-a\in O$. This contradicts (2b).</p><p><strong>Odd $n=2m+1$, $m\ge8$.</strong> Two numbers of different parity in $[1,m]$ have an odd sum less than $n$, so by (2a) $N\cap[1,m]$ lies in one parity class.</p><ul class="ct-ul"><li><p>If no even number of $[1,m]$ is in $O$, then $4,6,8\notin O$, so $n-4,n-6,n-8\in O$ by Lemma 1, contradicting (2b) for $(4,6,8)$. Hence some even number is in
+$O\subseteq N$, and $N\cap[1,m]$ consists of even numbers. So $u_x=0$ for every odd $x\le m$; in particular $u_1=u_5=0$, and by Lemma 1, $n-x\in O$ for odd $x\le m$.</p></li><li><p>Let $c$ be even with $4\le c\le m-1$. If $c\notin O$, then $n-c\in O$, and also $n-(c-1),n-(c+1)\in O$; the triple $(c-1,c,c+1)$ has even sum $3c$ and satisfies the
+triangle inequalities ($c+1&lt;2c-1$), contradicting (2b). So $c\in O$; in particular $u_4=u_6=1$.</p></li></ul><p>Now look at the triple $\{1,n-1,n+5\}$: $\{1,n-1\}$ is bad, and $\{1,n+5\}$ is bad since $b_1+b_{n+5}=u_5=0\ne1=u_6=b_{n+6}$. Hence $\{n-1,n+5\}$ is good:
+$b_{2n+4}=b_{n-1}+b_{n+5}=0$. In the triple $\{1,n,n+4\}$: $\{1,n\}$ is bad ($b_{n+1}=u_1=0\ne1$) and $\{1,n+4\}$ is bad ($b_{n+5}=0\ne u_4=1$). Hence $\{n,n+4\}$ is
+good: $b_{2n+4}=b_n+b_{n+4}=2$. This contradiction finishes the case.</p><p><strong>Small $n$.</strong> The cases $3\le n\le16$ are finite problems: for each such $n$, the conditions coming from all triples $\{i,j,l\}$ with $i+j,\,i+l,\,j+l\le M_n$ (with $b_1=\dots=b_{n-1}=0$,
+$b_n=1$) have no real solution, where $M_n=12,13,12,13,16,15,20,18,24,21,28,24,32,27$ for $n=3,\dots,16$. This was checked exactly by computer (an SMT solver over the reals); <em>this part of the proof is computer-assisted</em>; for example, for $n=10$ the triples
+$\{2,8,9\},\{2,8,10\},\{3,7,8\},\{3,7,9\},\{3,7,11\},\{4,6,10\},\{4,6,11\},\{4,6,12\}$ already give a contradiction.</p><p>So $b\equiv0$, and the only sequence is $\boxed{a_n=n}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p15">
+<h3>Problem 3</h3>
+<div class="ct-meta">Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure</div>
+<div class="ct-text"><p>Let $P$ be a point on the circumcircle of triangle $ABC$. The reflections of $P$ with respect to the sides $AB$, $AC$ are denoted by $P_B$, $P_C$, respectively. The lines $PP_C$, $PP_B$ intersect $BC$ at $X$, $Y$ respectively. Let $U$ be the intersection point of $P_BP_C$ with $BC$. Let $\Gamma$ denote the circumcircle of $\triangle PXY$. Let $T$ be the second intersection point of the perpendicular from $P$ to $BC$ with $\Gamma$. Prove that the circumcircles of $\triangle AP_BP_C$, $\Gamma$, and the line $UT$ share a common point.</p></div>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Power of the point U)</h4>
+<div class="ct-fig"><img style="width:338px" src="/assets/contests/2026-27/israel-tst-15_s1.svg" alt="Figure for the solution"></div>
+<p>Directed lengths along a line are written with a bar, e.g. $\overline{UX}$. Let $\omega$ be the circumcircle of $AP_BP_C$, $H$ the orthocentre of
+$ABC$, $H_A$ and $P_A$ the reflections of $H$ and $P$ in $BC$; $H_A$ lies on the circumcircle of $ABC$ (a standard fact). We assume the configuration is non-degenerate
+(the points in the statement exist, $\angle B,\angle C\ne90^\circ$, and $U\ne A,T$).</p><p><strong>Step 0 (Steiner line).</strong> For $P$ on the circumcircle, $P_A$, $P_B$, $P_C$ and $H$ lie on one line $s$ (the Steiner line of $P$). So $U=s\cap BC$. Reflecting in
+$BC$ maps $s$ to the line through $P$ and $H_A$ and fixes $U$; hence $U$ lies on line $PH_A$.</p><p><strong>Step 1 ($A$, $U$, $T$ are collinear).</strong> Take $BC$ as the $x$-axis and the foot of the altitude from $A$ as origin: $A=(0,h)$, $B=(\beta,0)$, $C=(\gamma,0)$,
+$P=(p,q)$, with $\beta\gamma\ne0$, $q\ne0$. The line through $P$ perpendicular to $AC$ (direction $(\gamma,-h)$) is $\gamma(x-p)-h(y-q)=0$, so $X=\bigl(p-\frac{hq}{\gamma},0\bigr)$;
+similarly $Y=\bigl(p-\frac{hq}{\beta},0\bigr)$. The foot $F=(p,0)$ of the perpendicular from $P$ lies on the chords $XY$ and $PT$ of $\Gamma$, so
+$\overline{FP}\cdot\overline{FT}=\overline{FX}\cdot\overline{FY}=\frac{h^2q^2}{\beta\gamma}$ and $T=\bigl(p,\kappa q\bigr)$ with $\kappa=\frac{h^2}{\beta\gamma}$. The power of the
+origin with respect to the circumcircle is $\beta\gamma=h\cdot y_{H_A}$, so $H_A=\bigl(0,\frac{\beta\gamma}h\bigr)$.</p><p>Let $\varphi(x,y)=(x,\kappa y)$. This affine map fixes $BC$ pointwise and sends $P\mapsto T$, $H_A\mapsto A$. It maps lines to lines and keeps ratios of directed lengths on a
+line. Since $U\in BC$ lies on line $PH_A$, $U=\varphi(U)$ lies on line $TA$, and
+\[\frac{\overline{UT}}{\overline{UA}}=\frac{\overline{UP}}{\overline{UH_A}}=\frac{\overline{UP_A}}{\overline{UH}},\tag{1}\]
+the last equality by reflecting in $BC$ (which maps line $PH_A$ to $s$, $P\mapsto P_A$, $H_A\mapsto H$).</p><p><strong>Step 2 (a lemma on $B$ and $C$).</strong> We show $\overline{BU}\cdot\overline{BY}=BP^2$ and $\overline{CU}\cdot\overline{CX}=CP^2$ (directed along $BC$).
+The points $P,P_A,P_B$ are at distance $BP$ from $B$ (reflections of $P$ in lines through $B$), so $B$ is the circumcentre of triangle $PP_AP_B$, and $BC$ is the perpendicular
+bisector of $PP_A$; it meets line $P_BP_A$ at $U$ and line $P_BP$ at $Y$. Choose coordinates with $B$ at the origin, $BC$ as the $y$-axis, $P=(-\sigma,k)$, $P_A=(\sigma,k)$,
+$P_B=(z_1,z_2)$, where $z_1^2+z_2^2=\sigma^2+k^2=BP^2$. The lines $P_BP$ and $P_BP_A$ meet the $y$-axis at
+\[y_Y=\frac{kz_1+\sigma z_2}{z_1+\sigma},\qquad y_U=\frac{kz_1-\sigma z_2}{z_1-\sigma},\qquad
+y_Uy_Y=\frac{k^2z_1^2-\sigma^2z_2^2}{z_1^2-\sigma^2}=\frac{(k^2+\sigma^2)(z_1^2-\sigma^2)}{z_1^2-\sigma^2}=BP^2,\]
+using $z_2^2=\sigma^2+k^2-z_1^2$. The same argument with $C$ (triangle $PP_AP_C$) gives the second relation. Consequently, for the circle $\kappa_B$ with centre $B$ through
+$P$ (which also passes through $P_A,P_B$),
+\[\operatorname{pow}(U,\kappa_B)=UB^2-BP^2=\overline{UB}^{\,2}-\overline{BU}\cdot\overline{BY}=\overline{UB}\,(\overline{UB}+\overline{BY})=\overline{UB}\cdot\overline{UY},\]
+and similarly $\operatorname{pow}(U,\kappa_C)=\overline{UC}\cdot\overline{UX}$. Since $U$ lies on $s$, which meets $\kappa_B$ at $P_A,P_B$ and $\kappa_C$ at $P_A,P_C$,
+\[\overline{UP_A}\cdot\overline{UP_B}=\overline{UB}\cdot\overline{UY},\qquad \overline{UP_A}\cdot\overline{UP_C}=\overline{UC}\cdot\overline{UX}.\tag{2}\]</p><p><strong>Step 3 (the common point).</strong> Let $Z$ be the second intersection of line $UT$ (that is, line $AT$) with $\Gamma$, so $\overline{UZ}\cdot\overline{UT}=\operatorname{pow}(U,\Gamma)=\overline{UX}\cdot\overline{UY}$.
+The line $UA$ meets $\omega$ at $A$ and a second point $Z'$ with $\overline{UZ'}\cdot\overline{UA}=\operatorname{pow}(U,\omega)=\overline{UP_B}\cdot\overline{UP_C}$ (as $U\in P_BP_C$).
+So $Z=Z'$ if and only if
+\[\overline{UX}\cdot\overline{UY}\cdot\overline{UA}=\overline{UP_B}\cdot\overline{UP_C}\cdot\overline{UT}
+\iff \overline{UX}\cdot\overline{UY}\cdot\overline{UH}=\overline{UP_B}\cdot\overline{UP_C}\cdot\overline{UP_A}\]
+by (1). Multiply both sides by $\overline{UP_A}\ne0$. On the left, $\overline{UH}\cdot\overline{UP_A}=\overline{UH_A}\cdot\overline{UP}$ (reflection in $BC$), which is the power of $U$
+with respect to the circumcircle, i.e. $\overline{UB}\cdot\overline{UC}$. On the right we get $(\overline{UP_A}\cdot\overline{UP_B})(\overline{UP_A}\cdot\overline{UP_C})$, which by (2) is
+$\overline{UB}\cdot\overline{UY}\cdot\overline{UC}\cdot\overline{UX}$. Both sides equal $\overline{UX}\cdot\overline{UY}\cdot\overline{UB}\cdot\overline{UC}$, so $Z=Z'$.</p><p>Hence the point $Z$ lies on $\Gamma$, on the circumcircle of $AP_BP_C$ and on the line $UT$ (which also passes through $A$), as required.</p>
+</div></details>
+</section>
+<h2 class="ct-group" id="test-9">Test 9</h2>
+<section class="ct-problem" id="p16">
+<h3>Problem 1</h3>
+<div class="ct-meta">Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure</div>
+<div class="ct-text"><p>Let $G$ be the centroid of triangle $ABC$. Let $K$, $N$, $M$ be the midpoints of the sides $AB$, $AC$, $BC$, respectively. Let $B_M$, $C_M$, $A_N$, $C_N$, $A_K$, $B_K$ be the midpoints of the segments $BM$, $CM$, $AN$, $CN$, $AK$, $BK$, respectively.
+Prove that $G$ lies on the radical axis of the circumcircles of triangles $B_MC_NA_K$ and $C_MA_NB_K$.</p></div>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Power of the centroid of a triangle)</h4>
+<div class="ct-fig"><img style="width:326px" src="/assets/contests/2026-27/israel-tst-16_s1.svg" alt="Figure for the solution"></div>
+<p><strong>Lemma.</strong> If triangle $XYZ$ has centroid $G$ and circumcircle $\omega$, then $\operatorname{pow}(G,\omega)=-\frac19\,(XY^2+YZ^2+ZX^2)$.</p><p><em>Proof.</em> For any point $Q$, with vectors from $G$ (so $X+Y+Z=0$): $QX^2+QY^2+QZ^2=3QG^2+GX^2+GY^2+GZ^2$, and
+$XY^2+YZ^2+ZX^2=3(GX^2+GY^2+GZ^2)$ (expand, using $X+Y+Z=0$). Taking $Q$ to be the circumcentre $O$ (radius $R$):
+$3R^2=3OG^2+\frac13(XY^2+YZ^2+ZX^2)$, so $\operatorname{pow}(G,\omega)=OG^2-R^2=-\frac19(XY^2+YZ^2+ZX^2)$. $\square$</p><p><strong>The two triangles.</strong> With position vectors, $M=\frac{B+C}2$ gives $B_M=\frac{B+M}2=\frac{3B+C}4$; similarly
+\[B_M=\tfrac{3B+C}4,\quad C_N=\tfrac{3C+A}4,\quad A_K=\tfrac{3A+B}4;\]
+\[C_M=\tfrac{3C+B}4,\quad A_N=\tfrac{3A+C}4,\quad B_K=\tfrac{3B+A}4 .\]
+Each triangle has centroid $\frac{4A+4B+4C}{12}=G$. Each is non-degenerate: its area is $\bigl(\frac{27}{64}+\frac1{64}\bigr)=\frac7{16}$ of $[ABC]$
+(determinant of the coefficient matrix). The second triangle is obtained from the first by exchanging the letters $B$ and $C$.</p><p><strong>Sum of squared sides.</strong> Let $a=BC$, $b=CA$, $c=AB$. With $u=B-A$, $v=C-A$ we have $|u|=c$, $|v|=b$, $u\cdot v=\frac{b^2+c^2-a^2}2$, and
+\[B_M-A_K=\tfrac{2u+v}4,\qquad 16\,A_KB_M^2=4c^2+b^2+2(b^2+c^2-a^2)=6c^2+3b^2-2a^2 .\]
+The other two sides are obtained by the cyclic shift $A\to B\to C\to A$ (which maps $A_K\to B_M\to C_N\to A_K$), so
+\[16\,(A_KB_M^2+B_MC_N^2+C_NA_K^2)=(6+3-2)(a^2+b^2+c^2)=7(a^2+b^2+c^2).\]
+This is symmetric in $a,b,c$, so exchanging $B$ and $C$ gives the same value for triangle $C_MA_NB_K$.</p><p><strong>Conclusion.</strong> By the lemma, $G$ has power $-\frac{7}{144}(a^2+b^2+c^2)$ with respect to both circumcircles, so $G$ lies on their radical axis.</p>
+<h4>Solution 2 (Adding the three circle equations)</h4>
+<p>Place the origin at $G$, so that $A+B+C=0$. A circle through points $Z$ is given by $|Z|^2-2\,O\cdot Z+k=0$, where $O$ is its centre and
+$k$ is the power of the origin $G$.</p><p>As computed from the midpoints, $B_M=\frac{3B+C}4$, $C_N=\frac{3C+A}4$, $A_K=\frac{3A+B}4$ and $C_M=\frac{3C+B}4$, $A_N=\frac{3A+C}4$, $B_K=\frac{3B+A}4$; each triple
+is non-collinear (its triangle has area $\frac7{16}[ABC]$) and has sum $A+B+C=0$.</p><p>Write the equation of the circumcircle of $X_1X_2X_3$ at its three points and add:
+\[\textstyle\sum|X_i|^2-2\,O\cdot\sum X_i+3k=0\quad\Longrightarrow\quad k=-\frac13\sum|X_i|^2 ,\]
+because $\sum X_i=0$. So the power of $G$ is $-\frac13$ of the sum of the squared distances from $G$ to the three points. Write $\sum|A|^2$ for $|A|^2+|B|^2+|C|^2$. For the first triangle,
+\[16\textstyle\sum|X_i|^2=|3A+B|^2+|3B+C|^2+|3C+A|^2=10\sum|A|^2+6\,(A\cdot B+B\cdot C+C\cdot A),\]
+and for the second,
+\[16\textstyle\sum|X_i|^2=|3A+C|^2+|3B+A|^2+|3C+B|^2=10\sum|A|^2+6\,(A\cdot C+B\cdot A+C\cdot B),\]
+the same number. Hence $G$ has equal powers with respect to the two circumcircles, i.e. $G$ lies on their radical axis.
+(In fact the common power is $-\frac7{144}(a^2+b^2+c^2)$.)</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p17">
+<h3>Problem 2</h3>
+<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 39: Graph Theory and Structural Combinatorics</div>
+<div class="ct-text"><p>Let $T$ be a tree. Denote by $S(T)$ the sum of the distances between every pair of leaves in $T$.
+Determine the maximum possible value of $S(T)$ over all trees with $2026$ vertices.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$309371400$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Counting each edge separately)</h4>
+<p>Let $T$ have $n=2026$ vertices and $L$ leaves; $2\le L\le n-1$. For an edge $e$, removing $e$ splits the leaves into $\ell_e$ and $L-\ell_e$; the path
+between two leaves uses $e$ exactly when $e$ separates them. Hence
+\[S(T)=\sum_{e}\ell_e\,(L-\ell_e).\]
+Each leaf has exactly one edge, and no edge joins two leaves (as $n\ge3$), so there are $L$ <em>leaf edges</em>, each with $\ell_e=1$, contributing $L-1$
+each, and $n-1-L$ other edges, each contributing $\ell_e(L-\ell_e)\le\lfloor L^2/4\rfloor$. Therefore
+\[S(T)\le F(L):=L(L-1)+(n-1-L)\Bigl\lfloor\frac{L^2}4\Bigr\rfloor .\]
+<strong>Equality.</strong> Take a path $v_0v_1\cdots v_d$ with $d=n-1-L$, and attach $\lfloor L/2\rfloor$ leaves to $v_0$ and $\lceil L/2\rceil$ leaves to $v_d$
+(for $d=0$ this is a star). It has $L+d+1=n$ vertices and exactly $L$ leaves, and every path edge separates $\lfloor L/2\rfloor$ leaves from $\lceil L/2\rceil$,
+so $S=F(L)$.</p><p><strong>Maximising $F$ for $n-1=2025$.</strong>
+For $L=2k$: $F=2k(2k-1)+(2025-2k)k^2=G(k):=-2k^3+2029k^2-2k$, and $G(k+1)-G(k)=-6k^2+4052k+2025$, which is positive for $1\le k\le675$
+(it equals $3375$ at $k=675$ and the quadratic decreases for $k\ge338$) and negative for $k\ge676$ (it is $-679$ at $k=676$). So the even case is
+largest at $k=676$, $L=1352$.</p><p>For $L=2k+1$: $F=(2k+1)2k+(2024-2k)(k^2+k)=H(k):=-2k^3+2026k^2+2026k$, and $H(k+1)-H(k)=-6k^2+4046k+4050$, which is $1350&gt;0$ at $k=675$ and $-2710&lt;0$ at $k=676$;
+as before the odd case is largest at $k=676$, $L=1353$.</p><p>Finally, with $676^2=456976$ and $676^3=308915776$,
+\[G(676)=H(676)=309\,371\,400 .\]
+So the maximum of $S(T)$ is $\boxed{309371400}$, attained for example by the double broom with $L=1352$ leaves split $676+676$ and a path of $673$ edges
+between the two centres (or with $L=1353$, split $676+677$, path of $672$ edges).</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p18">
+<h3>Problem 3</h3>
+<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 54: Advanced Number Theory Synthesis</div>
+<div class="ct-text"><p>Let $M$ be a positive integer. A sequence of positive integers $a_1,a_2,\dots$ is called <em>Almost Fibonacci</em> if
+\[M\ge|a_n-a_{n-1}-a_{n-2}|\]
+for every $n\ge 3$.
+Prove that for every unbounded almost Fibonacci sequence there are infinitely many primes dividing an element of the sequence.</p></div>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Partial progress)</h4>
+<p><strong>This is not a complete solution.</strong> (The condition is read for $n\ge3$, as edited.)</p><p><strong>Growth.</strong> Write $a_n=a_{n-1}+a_{n-2}+e_n$ with $|e_n|\le M$. If two consecutive terms $a_{n-2},a_{n-1}$ both exceed $M$, then
+$a_n\ge a_{n-1}+a_{n-2}-M&gt;a_{n-1}$, so from then on the sequence is strictly increasing. An unbounded sequence must contain such a pair: if some
+$a_n&gt;2M$ then $a_{n+1}\ge a_n+a_{n-1}-M&gt;M$, so $a_n,a_{n+1}$ both exceed $M$. Hence the sequence is eventually strictly increasing and tends to infinity.</p><p><strong>One prime is impossible.</strong> Suppose every term is a power of a single prime $p$. For large $n$ the terms $p^{\alpha}=a_n&gt;p^{\beta}=a_{n-1}&gt;p^{\gamma}=a_{n-2}$
+have $\alpha&gt;\beta&gt;\gamma$, and
+\[a_n-a_{n-1}-a_{n-2}=p^{\gamma}\bigl(p^{\alpha-\gamma}-p^{\beta-\gamma}-1\bigr),\]
+where the bracket is $\equiv-1\pmod p$, hence non-zero. So $|e_n|\ge p^{\gamma}\to\infty$, a contradiction.</p><p><strong>What is missing.</strong> The case where the terms are built from two or more fixed primes $p_1,\dots,p_s$: one has to rule out infinitely many
+solutions of $|x-y-z|\le M$ in such numbers along the sequence, and this needs a genuinely new idea (I did not find one).</p>
+</div></details>
+</section>
+{% endraw %}

@@ -293,6 +293,10 @@ Problems from the 2026 national and international olympiads, with our own soluti
 
 <div class="cards">
   <div class="card">
+    <h3><a href="{{ '/contests/israel-tst-2026' | relative_url }}">Israel TST 2026</a></h3>
+    <p>18 problems. Israeli team selection tests for the IMO.</p>
+  </div>
+  <div class="card">
     <h3><a href="{{ '/contests/romania-tst-2026' | relative_url }}">Romania TST 2026</a></h3>
     <p>13 problems. Romanian team selection tests for the IMO: four days.</p>
   </div>
