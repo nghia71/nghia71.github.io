@@ -89,6 +89,8 @@ body {
   top: calc(100% + 6px);
   left: 0;
   min-width: 210px;
+  width: max-content;      /* long item names (e.g. "The Online Mathematics Laboratory (TOML)") stay on one line */
+  max-width: 360px;
   z-index: 50;
   background: var(--white);
   border-radius: var(--radius);
@@ -130,7 +132,7 @@ body {
   .nav-group-btn { pointer-events: none; color: var(--gold); font-size: 13px; text-transform: uppercase; letter-spacing: .05em; padding: 10px 14px 2px; }
   .nav-group-btn::after { content: none; }
   .nav-group.active > .nav-group-btn { background: none; color: var(--gold); }
-  .nav-menu { display: block; position: static; box-shadow: none; background: none; padding: 0; min-width: 0; }
+  .nav-menu { display: block; position: static; box-shadow: none; background: none; padding: 0; min-width: 0; width: auto; max-width: none; }
   .nav-menu a { color: var(--gold-soft); padding: 7px 14px 7px 24px; }
   .nav-menu a:hover, .nav-menu a.active { background: rgba(255,255,255,.14); color: var(--white); }
   .site-nav a.nav-cta { margin: 8px 0 0; text-align: center; }
