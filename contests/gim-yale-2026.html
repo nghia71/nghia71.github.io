@@ -1,0 +1,301 @@
+---
+title: Girls in Math at Yale 2026: selected problems
+permalink: /contests/gim-yale-2026
+description: Girls in Math at Yale 2026: selected problems: problems with answers and solutions
+---
+{% raw %}
+<style>
+  .ct-intro { margin-bottom: 1.2em; }
+  .ct-credit { font-size: 14px; color: var(--ink-soft); border-left: 3px solid var(--gold); padding: 6px 12px; background: var(--white); margin: 1em 0; }
+  .ct-toc { display: flex; flex-wrap: wrap; gap: 6px; margin: 1em 0 1.4em; }
+  .ct-toc a { display: inline-block; min-width: 2.4em; text-align: center; padding: 4px 8px; border: 1px solid var(--rule); border-radius: 4px; background: var(--white); text-decoration: none; font-size: 14px; }
+  .ct-problem { background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 14px 18px; margin: 1.1em 0; }
+  .ct-problem h3 { margin: 0 0 .3em; font-size: 1.08rem; border-bottom: none; padding-bottom: 0; }
+  .ct-meta { font-size: 13px; color: var(--ink-soft); margin-bottom: .6em; }
+  .ct-text { font-family: Georgia, "Times New Roman", "Noto Serif", serif; font-size: 1.02em; line-height: 1.6; }
+  .ct-text p { margin: .5em 0; }
+  .ct-fig { text-align: center; margin: .8em 0; }
+  .ct-fig img { max-width: 100%; height: auto; max-height: 340px; }
+  .ct-choices { display: flex; flex-wrap: wrap; gap: 6px 22px; margin: .6em 0 .2em; }
+  .ct-choices b { margin-right: .3em; }
+  .ct-problem details { margin-top: .8em; border-top: 1px dashed var(--rule); padding-top: .5em; }
+  .ct-problem summary { cursor: pointer; font-weight: 600; color: var(--brand); font-size: 15px; }
+  .ct-problem details[open] summary { margin-bottom: .5em; }
+  .ct-sol h4 { font-size: 1rem; margin: 1em 0 .3em; color: var(--ink); }
+  .ct-answer { font-weight: 600; }
+  .ct-parts { list-style: none; padding-left: .4em; }
+  .ct-parts li { margin: .35em 0; }
+  .ct-lbl { font-weight: 700; margin-right: .3em; }
+  .ct-note { font-size: 14px; color: var(--ink-soft); font-style: italic; }
+  .ct-bar { margin: .6em 0 1em; display: flex; gap: 10px; flex-wrap: wrap; }
+  .ct-bar button { font: inherit; font-size: 14px; padding: 5px 12px; border-radius: var(--radius); border: 1px solid var(--brand); background: var(--white); color: var(--brand); cursor: pointer; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
+</style>
+<script>
+  window.MathJax = { tex: { inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [['\\[','\\]']], processEscapes: true },
+                     options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] } };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script>
+  function ctAll(open) { document.querySelectorAll('.ct-problem details').forEach(function (d) { d.open = open; }); }
+</script>
+
+<style>
+  .ct-group { font-size: 1.25rem; margin: 1.6em 0 .2em; }
+  .ct-toc-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: .3em 0; }
+  .ct-toc-g { font-size: 13px; color: var(--ink-soft); min-width: 9em; }
+  .ct-toc-wrap { margin: 1em 0 1.4em; }
+  .ct-center { text-align: center; margin: .6em 0; }
+  .ct-tablewrap { overflow-x: auto; margin: .6em 0; text-align: center; }
+  .ct-table { border-collapse: collapse; margin: 0 auto; }
+  .ct-table td { padding: 2px 9px; text-align: center; }
+  .ct-table tr.ct-hl td { border-bottom: 1px solid var(--ink-soft); }
+  .ct-table.ct-vfirst td:first-child { border-right: 1px solid var(--ink-soft); }
+  .ct-ul { padding-left: 1.4em; }
+  .ct-ul li { margin: .3em 0; }
+  .ct-text li > p:first-child { margin-top: 0; }
+  .ct-text li > p:last-child { margin-bottom: 0; }
+  .ct-text mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
+</style>
+
+<style>
+  .ct-tags { display: flex; flex-wrap: wrap; gap: 5px; margin: 0 0 .55em; }
+  .ct-tg { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .03em; padding: 2px 8px; border-radius: 999px; line-height: 1.5; }
+  .ct-lv { background: #eee7dc; color: #4a3d33; }
+  .ct-df-Starter { background: #dcf1dc; color: #245c24; }
+  .ct-df-Explorer { background: #d6efec; color: #155e57; }
+  .ct-df-Challenger { background: #dce8f7; color: #1f4c80; }
+  .ct-df-Olympiad { background: #e7defa; color: #4b2a8a; }
+  .ct-df-Advanced { background: #fbe4cc; color: #8a4a0b; }
+  .ct-df-Expert { background: #f8d6cf; color: #8c2600; }
+  .ct-band { margin: 1.3em 0 .5em; font-size: 14px; color: var(--ink-soft); }
+  .ct-band .ct-tg { font-size: 13px; margin-right: .4em; }
+  .ct-legend { font-size: 14.5px; background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 10px 16px; margin: 1em 0 1.4em; }
+  .ct-legend p { margin: .35em 0; }
+  .ct-legend ul { margin: .2em 0 .4em; padding-left: 1.1em; }
+  .ct-legend li { margin: .2em 0; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
+</style>
+{% endraw %}
+<p><a href="{{ '/contests-2026' | relative_url }}">&larr; All contests 2026</a></p>
+
+<h1>Girls in Math at Yale 2026: selected problems</h1>
+
+<div class="ct-intro">
+<p>The 15 problems of the Girls in Math at Yale 2026: selected problems, each with our own solutions, hidden until you open them. Where a problem has a final answer, it is shown separately. Try a problem first, then check.</p><p>A selection of the best problems of Girls in Math at Yale 2026: individual, team, guts and tiebreaker rounds.</p>
+</div>
+<div class="ct-credit">Problems: Girls in Math at Yale 2026: selected problems, from the AoPS contest collection or the official paper. Solutions written by MCC.</div>
+<div class="ct-bar"><button type="button" onclick="ctAll(true)">Show all answers and solutions</button><button type="button" onclick="ctAll(false)">Hide all</button></div>
+<div class="ct-toc-wrap"><div class="ct-toc-row"><span class="ct-toc-g">Individual Round</span><a href="#p1">5</a><a href="#p2">6</a><a href="#p3">7</a><a href="#p4">8</a><a href="#p5">9</a><a href="#p6">10</a><a href="#p7">12</a></div><div class="ct-toc-row"><span class="ct-toc-g">Team Round</span><a href="#p8">5</a><a href="#p9">6</a><a href="#p10">8</a><a href="#p11">9</a></div><div class="ct-toc-row"><span class="ct-toc-g">Guts Round</span><a href="#p12">12</a><a href="#p13">19</a></div><div class="ct-toc-row"><span class="ct-toc-g">Tiebreaker Round</span><a href="#p14">1</a><a href="#p15">2</a></div></div>
+
+{% raw %}
+<h2 class="ct-group" id="individual-round">Individual Round</h2>
+<section class="ct-problem" id="p1">
+<h3>Problem 5</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VII scale">E</span>Combinatorics &middot; LPS VII, Chapter 49: Combinatorial Number Theory and Structure &middot; Additive Structure and Sums of Integers</div>
+<div class="ct-text"><p>For a finite set of integers $A$, we define the difference set $A-A:=\{a_i-a_j\mid a_i,a_j\in A\}$ to be the set of all differences of two (possibly not distinct) elements of $A$. Let $N$ be the minimum of $|A-A|$ over all subsets $A\subset\mathbb Z$ with $|A|=99$, and let $M$ be the maximum of $|A-A|$ over all subsets $A\subset\mathbb Z$ with $|A|=99$. Find $N+M$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$9900$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Extreme examples)</h4>
+<p>Let $A=\{a_1&lt;a_2&lt;\dots&lt;a_{99}\}$.</p><p><em>Minimum.</em> The numbers $a_i-a_1$ ($2\le i\le 99$) are $98$ distinct positive differences, their negatives are $98$ distinct negative ones, and $0$ is also a difference: $|A-A|\ge 197$. For $A=\{1,2,\dots,99\}$, $A-A=\{-98,\dots,98\}$ has exactly $197$ elements. So $N=197$.</p><p><em>Maximum.</em> $A-A$ consists of $0$ and the $99\cdot98$ differences $a_i-a_j$ with $i\neq j$, so $|A-A|\le 9703$. For $A=\{2,4,8,\dots,2^{99}\}$ all these differences are distinct: $2^i-2^j$ with $i&gt;j$ has binary form $1\dots10\dots0$ ($i-j$ ones followed by $j$ zeros), which determines $i$ and $j$, and its sign tells which is larger. So $M=9703$ and $N+M=\boxed{9900}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p2">
+<h3>Problem 6</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Geometry &middot; LPS VI, Chapter 40: Coordinate Geometry and Analytic Methods &middot; Coordinate Area Methods</div>
+<div class="ct-text"><p>$ABCD$ is a square with side length $40$. Points $E,F$ are chosen on $\overline{AB},\overline{CD}$, respectively, such that $AE=1$ and $CF=9$. Point $X_1$ is chosen on $\overline{AB}$, points $X_2$ and $X_3$ are chosen on $\overline{BC}$, and point $X_4$ is chosen on $\overline{CD}$ so that $\angle EX_iF=90^\circ$ for $i=1,2,3,4$. Given that the polygon $X_1X_2X_3X_4$ is non-degenerate, find its area.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$648$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Thales' circle in coordinates)</h4>
+<div class="ct-fig"><img style="width:312px" src="/assets/contests/2026-27/gim-yale-2_s1.svg" alt="Figure for the solution"></div>
+<p>Put $A=(0,0)$, $B=(40,0)$, $C=(40,40)$, $D=(0,40)$, so $E=(1,0)$ and $F=(31,40)$. By Thales' theorem, $\angle EXF=90^\circ$ exactly when $X\ne E,F$ lies on the circle with diameter $EF$: centre $(16,20)$, radius $\frac12\sqrt{30^2+40^2}=25$.</p><ul class="ct-ul"><li><p>On $AB$ ($y=0$): $(x-16)^2=625-400=225$, so $x=1$ (the point $E$) or $x=31$: $X_1=(31,0)$.</p></li><li><p>On $BC$ ($x=40$): $(y-20)^2=625-576=49$: $X_2=(40,13)$, $X_3=(40,27)$.</p></li><li><p>On $CD$ ($y=40$): $x=1$ or $31$ (the point $F$): $X_4=(1,40)$.</p></li></ul><p>By the shoelace formula,
+\begin{align*}
+2[X_1X_2X_3X_4]&amp;=(31\cdot13-40\cdot0)+(40\cdot27-40\cdot13)\\
+&amp;\quad+(40\cdot40-1\cdot27)+(1\cdot0-31\cdot40)=1296,
+\end{align*}
+so the area is $\boxed{648}$.
+(Check by subtraction: the square minus the triangles $X_1BX_2$ ($58.5$), $X_3CX_4$ ($253.5$) and the quadrilateral $AX_1X_4D$ ($640$) leaves $1600-952=648$.)</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p3">
+<h3>Problem 7</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VII scale">E</span>Combinatorics &middot; LPS VII, Chapter 2: Fundamental Counting and Structured Enumeration &middot; Permutations and Arrangements</div>
+<div class="ct-text"><p>Let $N$ be the number of functions $f$ from the integers $\{1,2,\dots,25\}$ to integers in $\{1,2,\dots,25\}$ such that $f(i)\neq f(j)$ for all $i\neq j$ and $f(i)+j\equiv i+f(j)\pmod 5$ for all $1\le i&lt;j\le 25$. How many divisors does $N$ have?</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$672$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (A constant shift of residues)</h4>
+<p>The congruence says $f(i)-i\equiv f(j)-j\pmod5$ for all $i&lt;j$, so $f(i)\equiv i+c\pmod 5$ for a constant $c$. As $f$ is injective on a $25$-element set, it is a bijection of $\{1,\dots,25\}$; it maps the residue class $r$ (five numbers) into the class $r+c$ (five numbers), hence bijectively onto it. Conversely, any $c$ and any choice of five bijections between the classes $r$ and $r+c$ give a valid $f$. Therefore
+\[N=5\cdot(5!)^5=5\cdot2^{15}3^55^5=2^{15}\cdot3^5\cdot5^6,\]
+which has $(15+1)(5+1)(6+1)=\boxed{672}$ divisors.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p4">
+<h3>Problem 8</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Number Theory &middot; LPS VI, Chapter 3: Divisibility and Prime Factorization &middot; Prime Factorization</div>
+<div class="ct-text"><p>For a positive integer $n$, let $\Omega(n)$ denote the number of prime factors of $n$, counted with multiplicity. What is the smallest positive integer $n$ for which $2^{\Omega(n)}&lt;n&lt;2.2^{\Omega(n)}$?</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$48$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Replace one factor 2 by 3)</h4>
+<p>Let $k=\Omega(n)$. Every $n$ with $\Omega(n)=k$ is at least $2^k$, with equality only for $n=2^k$; any other such $n$ has a prime factor at least $3$, so $n\ge3\cdot2^{k-1}=1.5\cdot2^k$. Hence a solution with $\Omega(n)=k$ needs $1.5\cdot2^k&lt;2.2^k$, i.e. $1.1^k&gt;1.5$. Since $1.1^4=1.4641&lt;1.5&lt;1.61051=1.1^5$, we need $k\ge5$.</p><p>For $k=5$, the smallest candidate is $3\cdot2^4=48$, and indeed $32&lt;48&lt;2.2^5=51.53\ldots$. Every $n$ with $\Omega(n)\ge6$ is at least $2^6=64&gt;48$. So the answer is $\boxed{48}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p5">
+<h3>Problem 9</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 8: Modular Arithmetic and Congruence Methods &middot; Residue Classes and Case Analysis</div>
+<div class="ct-text"><p>Let $S$ be the set of prime numbers less than $2026$. For $p\neq q$, $p$ and $q$ are considered <em>connected</em> if $pq\equiv k\pmod{2026}$, for some integer $k$ with $0&lt;k&lt;2026$. The degree of $p$ is the number of $q\in S$ such that $p$ and $q$ are connected. For what value of $k$ is the maximum degree of an element in $S$ maximized?</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$1013$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Only the prime 1013 can have a large degree)</h4>
+<p>Note $2026=2\cdot1013$ with $1013$ prime. Fix $k$ and consider the degree of $p\in S$.</p><ul class="ct-ul"><li><p>If $p\nmid 2026$, then $p$ is invertible mod $2026$ and $pq\equiv k$ forces $q\equiv kp^{-1}\pmod{2026}$: at most one $q&lt;2026$. Degree $\le1$.</p></li><li><p>If $p=2$: $2q\equiv k\pmod{2026}$ forces $q\equiv\frac k2\pmod{1013}$: at most two $q&lt;2026$. Degree $\le2$.</p></li><li><p>If $p=1013$: for odd $q$, $1013q\equiv1013\pmod{2026}$, and for $q=2$, $1013q\equiv0$. So $p=1013$ has positive degree only for $k=1013$, and then it is connected to every odd prime $q\neq1013$ below $2026$.</p></li></ul><p>There are $306$ primes below $2026$, so for $k=1013$ the degree of $1013$ is $306-2=304$, far more than any degree possible for another $k$ (at most $2$). The answer is $k=\boxed{1013}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p6">
+<h3>Problem 10</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 32: Trigonometric Geometry and Metric Conversion &middot; Angle Expressions and Trigonometric Identities</div>
+<div class="ct-text"><p>Triangle $ABC$ is inscribed in a circle centered at $O$ with radius $5$. It is given that $BC=6$ and the three distances from $O$ to the sides of $ABC$ form the side lengths of a right triangle. The area of $ABC$ can be expressed as $\frac mn$, where $m$ and $n$ are relatively prime positive integers. What is $m+n$?</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$79$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Distances are R times cosines)</h4>
+<div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/gim-yale-6_s1.svg" alt="Figure for the solution"></div>
+<p>The distance from $O$ to $BC$ is $\sqrt{25-9}=4$. In general the distance from $O$ to side $BC$ is $R|\cos A|$ (the central angle on $BC$ is $2A$ or $360^\circ-2A$), so with $R=5$ the distances are $5|u|,5|v|,5|w|$, where $u=\cos A$, $v=\cos B$, $w=\cos C$ and $u^2=\frac{16}{25}$. We use the identity $u^2+v^2+w^2+2uvw=1$, valid in every triangle.</p><p><em>The hypotenuse is the distance $4$.</em> Suppose instead, say, $w^2=u^2+v^2$ (the case $v^2=u^2+w^2$ is the same with $B,C$ exchanged). Put $t=w^2\ge\frac{16}{25}$. The identity gives $2w^2+2uvw=1$, so $(2uvw)^2=(1-2t)^2$, i.e. $4\cdot\frac{16}{25}\left(t-\frac{16}{25}\right)t=(1-2t)^2$, which simplifies to $900t^2-1476t+625=0$. Its discriminant $1476^2-4\cdot900\cdot625=-71424$ is negative: impossible.</p><p>So $v^2+w^2=u^2$, and the identity gives $2u^2+2uvw=1$, i.e. $vw=\frac{1-2u^2}{2u}=\frac{-7/25}{2u}$. Also $\cos(B+C)=-u$ gives $\sin B\sin C=vw+u$.</p><ul class="ct-ul"><li><p>$u=-\frac45$: $vw=\frac7{40}$ and $\sin B\sin C=\frac7{40}-\frac45&lt;0$, impossible.</p></li><li><p>$u=\frac45$: $vw=-\frac7{40}$ and $\sin B\sin C=\frac{25}{40}=\frac58$, with $\sin A=\frac35$.</p></li></ul><p>Hence $[ABC]=\frac12\,bc\sin A=2R^2\sin A\sin B\sin C=50\cdot\frac35\cdot\frac58=\frac{75}4$. (Such a triangle exists, e.g. $A=\left(\frac{\sqrt{319}}4,\frac94\right)$, $B=(-3,-4)$, $C=(3,-4)$ with $O$ the origin.) The answer is $75+4=\boxed{79}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p7">
+<h3>Problem 12</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Combinatorics &middot; LPS VI, Chapter 38: Probability and Expected Value &middot; Expected Value and Fairness</div>
+<div class="ct-text"><p>Twenty points are evenly spaced on a unit circle. Three distinct points $A$, $B$, and $C$ are chosen from them uniformly at random. The expected value of $AB^2+BC^2+CA^2$ can be expressed in the form $\frac mn$, where $m$ and $n$ are relatively prime positive integers. What is $m+n$?</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$139$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Linearity over the three sides)</h4>
+<p>By linearity, the expectation is $3E[AB^2]$, where $A,B$ is a uniformly random pair of distinct points among the twenty. Fix $A$; then $B$ is equally likely to be any of the other $19$ points, at angle $\frac{2\pi k}{20}$, $1\le k\le19$, and $AB^2=2-2\cos\frac{2\pi k}{20}$. Since the $20$th roots of unity sum to $0$, $\sum_{k=1}^{19}\cos\frac{2\pi k}{20}=-1$, so
+\[E[AB^2]=\frac{38+2}{19}=\frac{40}{19},\qquad E\left[AB^2+BC^2+CA^2\right]=\frac{120}{19},\]
+and $m+n=\boxed{139}$.</p>
+<h4>Solution 2 (Vectors and the centroid)</h4>
+<p>Treat the points as unit vectors. Then
+\[AB^2+BC^2+CA^2=6-2(A\cdot B+B\cdot C+C\cdot A)=9-|A+B+C|^2,\]
+because $|A+B+C|^2=3+2(A\cdot B+B\cdot C+C\cdot A)$. For two distinct random points, $E[A\cdot B]=\frac1{19}\sum_{k=1}^{19}\cos\frac{2\pi k}{20}=-\frac1{19}$ (the twenty points sum to the zero vector). So $E|A+B+C|^2=3-\frac6{19}=\frac{51}{19}$, and the expectation is $9-\frac{51}{19}=\frac{120}{19}$. Hence $m+n=\boxed{139}$.</p>
+</div></details>
+</section>
+<h2 class="ct-group" id="team-round">Team Round</h2>
+<section class="ct-problem" id="p8">
+<h3>Problem 5</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VII scale">E</span>Geometry &middot; LPS VII, Chapter 3: Foundational Angle and Configuration Chasing &middot; Angle Chasing and Hidden Equalities</div>
+<div class="ct-text"><p>Let $ABC$ be a triangle with circumcircle $\Omega$. Let $D$ and $E$ be the feet of the altitudes from $B$ and $C$, respectively. Extend $\overline{DE}$ to intersect $\Omega$ at distinct points $K$ and $L$. Let $M$ be the midpoint of $\overline{KL}$. If $\angle B=40^\circ$ and $\angle C=70^\circ$, what is the measure of $\angle BAM$, in degrees?</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$20^\circ$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (AO is perpendicular to DE)</h4>
+<div class="ct-fig"><img style="width:241px" src="/assets/contests/2026-27/gim-yale-8_s1.svg" alt="Figure for the solution"></div>
+<p>The angles are $\angle A=70^\circ$, $\angle B=40^\circ$, $\angle C=70^\circ$, so the triangle is acute and $O$, the centre of $\Omega$, lies inside it.</p><p><em>$AO\perp DE$.</em> Since $\angle BDC=\angle BEC=90^\circ$, the points $B,C,D,E$ lie on the circle with diameter $BC$, so $\angle AED=\angle ACB$. If $t$ is the tangent to $\Omega$ at $A$, the tangent-chord angle between $t$ and $AB$ also equals $\angle ACB$. Hence $t\parallel DE$, and since $OA\perp t$, $OA\perp DE$.</p><p><em>$M$ lies on ray $AO$.</em> $M$ is the midpoint of the chord $KL$ of $\Omega$, so $OM\perp KL$; as $OA\perp KL$ too, $M$ lies on line $AO$. Moreover the ray $AO$ lies inside $\angle BAC$, so it crosses the segment $DE$ (from ray $AC$ to ray $AB$); that crossing point is $M$. Therefore
+\[\angle BAM=\angle BAO=90^\circ-\angle ACB=90^\circ-70^\circ=\boxed{20^\circ}.\]
+(Here $\angle BAO=90^\circ-\angle C$ because triangle $AOB$ is isosceles with apex angle $\angle AOB=2\angle C$.)</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p9">
+<h3>Problem 6</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VII scale">E</span>Algebra &middot; LPS VII, Chapter 9: Polynomials and Root-Coefficient Strategy &middot; Remainder, Factor, and Evaluation Logic</div>
+<div class="ct-text"><p>Define a sequence of polynomials by $F_1(x)=(x-1)(x-2)\cdots(x-2025)$, $F_2(x)=\left(x-1^2\right)\left(x-2^2\right)\cdots\left(x-2025^2\right)$, and for $n\ge3$, $F_n=F_{n-1}^2+F_1^2$ if $n$ is odd and $F_n=F_{n-1}^2F_2^2$ if $n$ is even. How many distinct real roots does $F_{2025}$ have?</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$45$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Zero sets of sums and products of squares)</h4>
+<p>All $F_n$ have real coefficients. For real $x$: a sum of two squares $F_{n-1}(x)^2+F_1(x)^2$ vanishes iff both terms vanish, and a product vanishes iff a factor does. Writing $Z_n$ for the set of real roots of $F_n$,
+\[Z_n=Z_{n-1}\cap Z_1\ (n\text{ odd}),\qquad Z_n=Z_{n-1}\cup Z_2\ (n\text{ even}),\]
+with $Z_1=\{1,\dots,2025\}$ and $Z_2=\{1^2,2^2,\dots,2025^2\}$. Then $Z_3=Z_2\cap Z_1=\{1^2,2^2,\dots,45^2\}$ (as $45^2=2025&lt;46^2$), which is contained in $Z_2$, so $Z_4=Z_3\cup Z_2=Z_2$ and $Z_5=Z_2\cap Z_1=Z_3$. By induction $Z_n=Z_3$ for odd $n\ge3$ and $Z_n=Z_2$ for even $n\ge2$. Hence $F_{2025}$ has $\boxed{45}$ distinct real roots.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p10">
+<h3>Problem 8</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Geometry &middot; LPS VI, Chapter 36: Power of a Point and Circle Measurement &middot; Secant-Tangent Power</div>
+<div class="ct-text"><p>Equilateral triangle $ADG$, where the vertices are labeled clockwise, has side length $27$. A circle is drawn such that it intersects each side of the equilateral triangle twice. Clockwise from $A$, label these intersections $B,C,E,F,H$, and $I$. If $AI=6$, $GF=7$, $DC=15$, and the other six edges each have integer length, find $BC\cdot EF\cdot HI$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$128$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Power of the three vertices)</h4>
+<div class="ct-fig"><img style="width:309px" src="/assets/contests/2026-27/gim-yale-10_s1.svg" alt="Figure for the solution"></div>
+<p>On side $AD$ the order is $A,B,C,D$; on $DG$ it is $D,E,F,G$; on $GA$ it is $G,H,I,A$. Let $AB=x$ and $HI=h$. Then $AC=27-15=12$, $BC=12-x$, $AH=6+h$, $GH=21-h$, $DF=27-7=20$; let $DE=e$, $EF=20-e$.</p><p>The powers of $A$, $D$, $G$ with respect to the circle give
+\begin{align*}
+AB\cdot AC=AI\cdot AH&amp;:\quad 12x=6(6+h),\\
+DC\cdot DB=DE\cdot DF&amp;:\quad 15(27-x)=20e,\\
+GF\cdot GE=GI\cdot GH&amp;:\quad 7(27-e)=21(21-h).
+\end{align*}
+From the first, $h=2x-6$; the third becomes $27-e=3(27-2x)$, so $e=6x-54$; the second becomes $15(27-x)=20(6x-54)$, i.e. $405-15x=120x-1080$, so $x=11$. Then $h=16$, $e=12$, and $BC=1$, $EF=8$, $HI=16$ (all nine segments $11,1,15;12,8,7;5,16,6$ are positive integers). Hence $BC\cdot EF\cdot HI=\boxed{128}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p11">
+<h3>Problem 9</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 33: Residues, Quadratic Structure, and Higher Congruences &middot; Quadratic Residues</div>
+<div class="ct-text"><p>Find the remainder when $\displaystyle\prod_{k=0}^{2026}\left(k^2+1\right)$ is divided by $2027$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$4$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Quadratic residues)</h4>
+<p>Let $p=2027$, a prime with $p\equiv3\pmod4$, so $k^2+1\not\equiv0$ for all $k$. The term $k=0$ is $1$, and $k$ and $p-k$ give the same factor, so
+\[\prod_{k=0}^{p-1}(k^2+1)\equiv\Bigl(\prod_{k=1}^{(p-1)/2}(k^2+1)\Bigr)^2=\Bigl(\prod_{q\in Q}(q+1)\Bigr)^2,\]
+where $Q$ is the set of the $\frac{p-1}2$ nonzero quadratic residues (each is $k^2$ for exactly one $k\in\{1,\dots,\frac{p-1}{2}\}$). By Euler's criterion the residues are exactly the roots of $x^{(p-1)/2}-1$, so $\prod_{q\in Q}(x-q)\equiv x^{(p-1)/2}-1$. Putting $x=-1$ and using that $\frac{p-1}2=1013$ is odd:
+\[\prod_{q\in Q}(-1-q)\equiv(-1)^{1013}-1=-2,\qquad\prod_{q\in Q}(q+1)\equiv(-1)^{1013}(-2)=2 .\]
+Hence the product is $\equiv2^2=\boxed{4}\pmod{2027}$.</p>
+<h4>Solution 2 (Factor over the field with i)</h4>
+<p>Let $p=2027$; since $p\equiv3\pmod4$, $-1$ is not a square mod $p$, so we can adjoin a square root $i$ of $-1$ and work in the field $\mathbb F_p[i]$ of $p^2$ elements, where $(a+bi)^p=a-bi$ for $a,b\in\mathbb F_p$ (Frobenius, as $i^p=i\cdot(i^2)^{(p-1)/2}=i(-1)^{1013}=-i$).</p><p>The identity $\prod_{k\in\mathbb F_p}(x-k)=x^p-x$ gives, at $x=i$ and $x=-i$,
+\[\prod_k(i-k)=i^p-i=-2i,\qquad\prod_k(-i-k)=(-i)^p+i=2i .\]
+Since $k^2+1=(k-i)(k+i)=(i-k)(-i-k)$,
+\[\prod_{k=0}^{p-1}(k^2+1)=(-2i)(2i)=-4i^2=4 .\]
+The remainder is $\boxed{4}$.</p>
+</div></details>
+</section>
+<h2 class="ct-group" id="guts-round">Guts Round</h2>
+<section class="ct-problem" id="p12">
+<h3>Problem 12</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Geometry &middot; LPS VI, Chapter 8: Triangle Congruence and Rigid Geometry &middot; Isosceles and Equilateral Structure</div>
+<div class="ct-text"><p>Point $P$ is inside square $ABCD$. Given that $\angle DAP=\angle ADP=15^\circ$, find $\angle CPD$, in degrees.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$75^\circ$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (The hidden equilateral triangle)</h4>
+<div class="ct-fig"><img style="width:244px" src="/assets/contests/2026-27/gim-yale-12_s1.svg" alt="Figure for the solution"></div>
+<p>Let $Q$ be the point inside the square such that $BCQ$ is equilateral. Then $\angle ABQ=90^\circ-60^\circ=30^\circ$ and $BA=BC=BQ$, so triangle $ABQ$ is isosceles with apex angle $30^\circ$ and $\angle BAQ=75^\circ$, i.e. $\angle DAQ=15^\circ$. In the same way $\angle ADQ=15^\circ$. The rays from $A$ and $D$ making $15^\circ$ with $AD$ meet in a single point, so $Q=P$.</p><p>Hence $CP=CB=CD$ and $\angle PCD=90^\circ-60^\circ=30^\circ$. Triangle $CPD$ is isosceles with apex angle $30^\circ$, so $\angle CPD=\frac{180^\circ-30^\circ}{2}=\boxed{75^\circ}$.</p>
+<h4>Solution 2 (Coordinates)</h4>
+<p>Let the side be $2$, $A=(0,0)$, $B=(2,0)$, $C=(2,2)$, $D=(0,2)$. Triangle $APD$ is isosceles, so $P$ is on the line $y=1$, and $\angle DAP=15^\circ$ gives $P=(\tan15^\circ,1)=(2-\sqrt3,1)$. Then
+\[CP^2=(\sqrt3)^2+1^2=4=CD^2,\qquad PD^2=(2-\sqrt3)^2+1=8-4\sqrt3=(\sqrt6-\sqrt2)^2 .\]
+Since $CP=CD$, the foot of the perpendicular from $C$ to $PD$ is its midpoint, so $\cos\angle CPD=\frac{PD/2}{CP}=\frac{\sqrt6-\sqrt2}{4}=\cos75^\circ$. Hence $\angle CPD=\boxed{75^\circ}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p13">
+<h3>Problem 19</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Number Theory &middot; LPS VI, Chapter 15: GCD, LCM, and Multiplicative Interaction &middot; GCD Logic</div>
+<div class="ct-text"><p>For how many nonnegative integers $n$ does $2^n+3^n$ divide $4^n+9^n$?</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$1$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Complete the square)</h4>
+<p>We have $4^n+9^n=(2^n+3^n)^2-2\cdot6^n$, so $2^n+3^n\mid4^n+9^n$ iff $2^n+3^n\mid2\cdot6^n$. For $n\ge1$, $2^n+3^n$ is odd and not divisible by $3$, so it is coprime to $2\cdot6^n$; then it would have to divide $2$, which is impossible as $2^n+3^n\ge5$. So no $n\ge1$ works, while $n=0$ works ($2\mid2$). The answer is $\boxed{1}$.</p>
+</div></details>
+</section>
+<h2 class="ct-group" id="tiebreaker-round">Tiebreaker Round</h2>
+<section class="ct-problem" id="p14">
+<h3>Problem 1</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 7: Congruence, Rigidity, and Isometric Structure &middot; Geometric Reflection and Isometry</div>
+<div class="ct-text"><p>A bee and a flower are a distance of $\frac{14}{15}$ apart on the same side of a unit square, and the bee is a distance of $\frac{1}{150}$ from the nearest vertex of the square. The length of the shortest path that the bee can take to reach the flower that touches all four sides of the square at least once can be expressed as $\frac mn$, where $m$ and $n$ are relatively prime positive integers. Find $m+n$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$49$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Unfolding by reflections)</h4>
+<div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/gim-yale-14_s1.svg" alt="Figure for the solution"></div>
+<p>Place the square as $[0,1]^2$ with the bee at $B=\left(\frac1{150},0\right)$ and the flower at $F=\left(\frac{141}{150},0\right)$ on the bottom side (the bee is near the vertex $(0,0)$, and $\frac1{150}+\frac{14}{15}=\frac{141}{150}$). The path already touches the bottom side; it must also touch the left side $x=0$, the right side $x=1$ and the top $y=1$. Let $\rho_L,\rho_R,\rho_T$ be the reflections in these lines.</p><p><em>Lower bound.</em> Suppose the path first touches the three sides in the order $s_1,s_2,s_3$, at points $P_1,P_2,P_3$. Since $P_3$ lies on $s_3$, $|P_2P_3|+|P_3F|=|P_2P_3|+|P_3\rho_{s_3}F|\ge|P_2\,\rho_{s_3}F|$; then, as $P_2\in s_2$, $|P_2\,\rho_{s_3}F|=|P_2\,\rho_{s_2}\rho_{s_3}F|$, and so on. Hence the length is at least $|B\,\rho_{s_1}\rho_{s_2}\rho_{s_3}F|$. The reflection $\rho_T$ changes only $y$, giving $y=2$; and $\rho_L\rho_R(x)=x-2$, $\rho_R\rho_L(x)=x+2$. So the image of $F$ is $\left(\frac{141}{150}-2,2\right)=\left(-\frac{159}{150},2\right)$ if $L$ comes before $R$, and $\left(\frac{441}{150},2\right)$ otherwise. The first is closer to $B$:
+\[\left|B\left(-\tfrac{159}{150},2\right)\right|=\sqrt{\left(\tfrac{160}{150}\right)^2+2^2}=\sqrt{\tfrac{256}{225}+\tfrac{900}{225}}=\tfrac{34}{15}.\]</p><p><em>The bound is attained.</em> The segment from $B$ to $\left(-\frac{159}{150},2\right)$ crosses $x=0$ at height $\frac1{80}$, then $y=1$ at $x=-\frac{79}{150}$, then $x=-1$ at height $\frac{151}{80}$. Folding back gives the path $B\to\left(0,\frac1{80}\right)\to\left(\frac{79}{150},1\right)\to\left(1,\frac{9}{80}\right)\to F$, of length $\frac{34}{15}$, touching all four sides. Hence $m+n=34+15=\boxed{49}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p15">
+<h3>Problem 2</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VII scale">E</span>Algebra &middot; LPS VII, Chapter 9: Polynomials and Root-Coefficient Strategy &middot; Vieta&#x27;s Relations</div>
+<div class="ct-text"><p>The polynomial $x^5-4x^4+2x^3-3x^2+x+1$ has $3$ real roots and $2$ pure imaginary roots. If the real roots are $a$, $b$, and $c$, find $abc-(3-a)(3-b)(3-c)$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$4$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Split off the imaginary pair)</h4>
+<p>The pure imaginary roots come in a conjugate pair $\pm ti$, so $x^2+t^2$ divides the polynomial. Indeed
+\[x^5-4x^4+2x^3-3x^2+x+1=(x^2+1)(x^3-4x^2+x+1),\]
+as expanding the right side shows. So $a,b,c$ are the roots of $Q(x)=x^3-4x^2+x+1$, whence $abc=-1$ and $(3-a)(3-b)(3-c)=Q(3)=27-36+3+1=-5$. The answer is $-1-(-5)=\boxed{4}$.</p>
+</div></details>
+</section>
+{% endraw %}

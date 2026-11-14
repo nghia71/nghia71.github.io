@@ -29,6 +29,11 @@ description: India Team Selection Test 2026: problems with answers and solutions
   .ct-note { font-size: 14px; color: var(--ink-soft); font-style: italic; }
   .ct-bar { margin: .6em 0 1em; display: flex; gap: 10px; flex-wrap: wrap; }
   .ct-bar button { font: inherit; font-size: 14px; padding: 5px 12px; border-radius: var(--radius); border: 1px solid var(--brand); background: var(--white); color: var(--brand); cursor: pointer; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
 </style>
 <script>
   window.MathJax = { tex: { inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [['\\[','\\]']], processEscapes: true },
@@ -57,6 +62,28 @@ description: India Team Selection Test 2026: problems with answers and solutions
   .ct-text mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
 </style>
 
+<style>
+  .ct-tags { display: flex; flex-wrap: wrap; gap: 5px; margin: 0 0 .55em; }
+  .ct-tg { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .03em; padding: 2px 8px; border-radius: 999px; line-height: 1.5; }
+  .ct-lv { background: #eee7dc; color: #4a3d33; }
+  .ct-df-Starter { background: #dcf1dc; color: #245c24; }
+  .ct-df-Explorer { background: #d6efec; color: #155e57; }
+  .ct-df-Challenger { background: #dce8f7; color: #1f4c80; }
+  .ct-df-Olympiad { background: #e7defa; color: #4b2a8a; }
+  .ct-df-Advanced { background: #fbe4cc; color: #8a4a0b; }
+  .ct-df-Expert { background: #f8d6cf; color: #8c2600; }
+  .ct-band { margin: 1.3em 0 .5em; font-size: 14px; color: var(--ink-soft); }
+  .ct-band .ct-tg { font-size: 13px; margin-right: .4em; }
+  .ct-legend { font-size: 14.5px; background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 10px 16px; margin: 1em 0 1.4em; }
+  .ct-legend p { margin: .35em 0; }
+  .ct-legend ul { margin: .2em 0 .4em; padding-left: 1.1em; }
+  .ct-legend li { margin: .2em 0; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
+</style>
 {% endraw %}
 <p><a href="{{ '/contests-2026' | relative_url }}">&larr; All contests 2026</a></p>
 
@@ -73,7 +100,7 @@ description: India Team Selection Test 2026: problems with answers and solutions
 <h2 class="ct-group" id="day-1">Day 1</h2>
 <section class="ct-problem" id="p1">
 <h3>Problem 1</h3>
-<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 49: Combinatorial Number Theory and Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 49: Combinatorial Number Theory and Structure &middot; Sequences with Arithmetic Constraints</div>
 <div class="ct-text"><p>Let $a_1,a_2,a_3,\dots$ be a strictly increasing sequence of positive integers such that $a_ia_{i+1}-1$ is a perfect square for each positive integer $i$. Find the minimum possible value of $a_{46}$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$2026$</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -98,7 +125,7 @@ and as $b&gt;a$ this means $\sqrt{b-1}\ge\sqrt{a-1}+1$. $\square$</p><p><strong>
 </section>
 <section class="ct-problem" id="p2">
 <h3>Problem 2</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 52: Advanced Combinatorial Structure and Hybrid Methods</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 52: Advanced Combinatorial Structure and Hybrid Methods &middot; Combinatorics with Algebraic Interaction</div>
 <div class="ct-text"><p>Let $k$ be a positive integer. Find the largest positive integer $n$ such that the cells of an $n\times n$ grid can be filled with positive integers satisfying:</p><ul class="ct-ul"><li><p>Each row and column contains the numbers $1,2,3,\dots,n$ in some order, and</p></li><li><p>The sum of numbers in any two $k\times k$ sub-squares is the same.</p></li></ul><p><em>Note:</em> A $k\times k$ sub-square is a contiguous $k\times k$ subgrid of the grid consisting of $k^2$ cells that are in $k$ consecutive columns and $k$ consecutive rows.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$n=k^2$</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -129,7 +156,7 @@ where every $D_{i+tk}$ is defined because $i+tk\le i'-k\le n-1-k$. Hence
 </section>
 <section class="ct-problem" id="p3">
 <h3>Problem 3</h3>
-<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 54: Advanced Number Theory Synthesis</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-S" title="Superhard, on the LPS VII scale">S</span>Number Theory &middot; LPS VII, Chapter 54: Advanced Number Theory Synthesis &middot; Deep Structural Classification Problems</div>
 <div class="ct-text"><p>For a polynomial $P$, a pair of integers $(x,y)$ is called $P$-good if there exists an integer $z$ such that $P(x)P(y)=P(z)$. Determine all monic polynomials $P$ with integer coefficients such that for all positive integers $n$ at least $n^{1.01}$ pairs from the set $\{(a,b)\mid 1\le a,b\le n,\ a,b\in\mathbb{Z}\}$ are $P$-good.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$P=1$ and $P(x)=(x+c)^d$ with $c\in\mathbb Z$ and an integer $d\ge1$</p></div></details>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
@@ -152,7 +179,7 @@ using $\sum_{x\le n}\frac1x\le1+\ln n$. This is less than $n^{1.01}$ for all lar
 <h2 class="ct-group" id="day-2">Day 2</h2>
 <section class="ct-problem" id="p4">
 <h3>Problem 4</h3>
-<div class="ct-meta">Algebra &middot; LPS VII, Chapter 13: Systems, Symmetry, and Multi-Variable Algebra</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Algebra &middot; LPS VII, Chapter 13: Systems, Symmetry, and Multi-Variable Algebra &middot; Symmetric and Cyclic Systems</div>
 <div class="ct-text"><p>Suppose $p$, $q$, and $r\in\mathbb{R}^+$ are pairwise distinct and are such that there is only one triple $(a,b,c)\in\mathbb{R}^3$ satisfying:
 \[a+b+c=1\]
 \[\frac{b^2+bc+c^2}{p}=\frac{c^2+ca+a^2}{q}=\frac{a^2+ab+b^2}{r}.\]
@@ -180,7 +207,7 @@ By the claim, if $(\frac13,\frac13,\frac13)+\mathbf v$ is a solution, so is $(\f
 </section>
 <section class="ct-problem" id="p5">
 <h3>Problem 5</h3>
-<div class="ct-meta">Geometry &middot; LPS VII, Chapter 45: Complex Numbers in Geometry</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 45: Complex Numbers in Geometry &middot; Circle and Line Structure via Complex Equations</div>
 <div class="ct-text"><p>Given a triangle $\triangle ABC$ with circumcircle $\Omega$, suppose that the tangent to $\Omega$ at $C$ intersects the $B$-altitude at $B_C$. Similarly, suppose the tangent to $\Omega$ at $B$ intersects the $C$-altitude at $C_B$. Let $T_A$ denote the intersection point of tangents to $\Omega$ at $B$, $C$. Denote by $\omega_A$ the circumcircle of $\triangle T_AB_CC_B$. Define the points $T_B,T_C,A_C,C_A,B_A,A_B$ and the circles $\omega_B$ and $\omega_C$ analogously. Show that $\omega_A$, $\omega_B$ and $\omega_C$ concur at a point.</p></div>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
 <h4>Solution (Complex numbers: a symmetric point on all three circles)</h4>
@@ -200,7 +227,7 @@ So $\rho$ is real, which means that $X,T_A,B_C,C_B$ lie on one circle or one lin
 </section>
 <section class="ct-problem" id="p6">
 <h3>Problem 6</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 39: Graph Theory and Structural Combinatorics</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-S" title="Superhard, on the LPS VII scale">S</span>Combinatorics &middot; LPS VII, Chapter 39: Graph Theory and Structural Combinatorics &middot; Extremal Graph Structure</div>
 <div class="ct-text"><p>There are $n$ guests at a party, each pair of which is either friends or enemies (but not both). Akbar and Birbal are measuring the <em>drama</em> of this party.</p><p>For each non-empty subset $S$ of guests at the party, Akbar awards one point if all guests in $S$ have a common friend outside $S$ (i.e. a guest not in $S$ who is a friend of every guest in $S$). Similarly, Birbal awards one point if all guests in $S$ have a common enemy outside $S$.</p><p>The <em>drama</em> of a party is the sum of points given by Akbar and Birbal.</p><ul class="ct-parts"><li><p><span class="ct-lbl">(a)</span> For a fixed $n\ge 2$ find the maximum possible <em>drama</em> achievable.</p></li><li><p><span class="ct-lbl">(b)</span> We say two parties are <em>different</em> if we cannot permute the guests in one so that a pair of guests in the first party is friends if and only if the corresponding permuted pair in the second party is friends. How many <em>different</em> parties achieve the maximum possible <em>drama</em>?</p></li></ul><p><em>Note:</em> If both Akbar and Birbal award a point to a subset, both points contribute to the <em>drama</em> of the party.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(a) $2^n-2$; (b) $2^{n-1}$</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -219,7 +246,7 @@ We build the partition by placing vertices one at a time: a vertex may be put in
 <h2 class="ct-group" id="day-3">Day 3</h2>
 <section class="ct-problem" id="p7">
 <h3>Problem 7</h3>
-<div class="ct-meta">Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure &middot; Radical Axis and Radical Center</div>
 <div class="ct-text"><p>Let $ABC$ be a triangle and let $K\,(\ne A)$ be a fixed point on the line through $A$ perpendicular to $BC$. Assume that $A$ and $K$ lie on the same side of $BC$. Let $w_B$, $w_C$ be the circles with diameters $AB$, $AC$ respectively. We call a point $X$ <em>good</em> if one can draw tangents $KP$ onto $w_B$ and $KQ$ onto $w_C$ (where $P$ and $Q$ are the tangency points) such that $P$, $Q$, and $X$ are collinear points. Prove that $B$ is good if and only if $C$ is good.</p></div>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
 <h4>Solution (Power functions and a pencil of conics)</h4>
@@ -237,7 +264,7 @@ So $C$ lies on line $P_1Q_j$ or on line $P_2Q_{j'}$: $C$ is good. (If $B$ lies o
 </section>
 <section class="ct-problem" id="p8">
 <h3>Problem 8</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 20: Parity, Coloring, and Process Termination</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-S" title="Superhard, on the LPS VII scale">S</span>Combinatorics &middot; LPS VII, Chapter 20: Parity, Coloring, and Process Termination &middot; Process Termination and Reachability</div>
 <div class="ct-text"><p>Let $n$ and $d$ be positive integers greater than $1$. The numbers $1,2,\dots,n$ are written on a blackboard. In a move, we may pick two numbers on the board that differ by at least $d$, erase them both, and write their average instead. For a fixed $d$, let $m$ be the smallest positive integer choice for $n&gt;1$ such that it is possible to perform operations so that we end with exactly one number written on the board. Show that
 \[3d-2026&lt;m&lt;3d+2026.\]</p></div>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
@@ -254,7 +281,7 @@ since $\frac12-t\le-\frac12$ on $[w,\frac32]$. Therefore the initial potential i
 </section>
 <section class="ct-problem" id="p9">
 <h3>Problem 9</h3>
-<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 49: Combinatorial Number Theory and Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-S" title="Superhard, on the LPS VII scale">S</span>Number Theory &middot; LPS VII, Chapter 49: Combinatorial Number Theory and Structure &middot; Additive Structure and Sums of Integers</div>
 <div class="ct-text"><p>For a positive integer $n$, let $f(n)$ denote the number of subsets $S$ of $\{1,2,\dots,n\}$ so that the sum of 2026th powers of the elements of $S$ is itself a perfect 2026th power. Prove that there exist positive real constants $c_1,c_2$ and a fixed integer $N$, so that for all positive integers $n$ where $n&gt;N$, we have
 \[\frac{1}{n^{c_1}}\leqslant\frac{f(n)}{2^n}\leqslant\frac{1}{n^{c_2}}.\]</p></div>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
@@ -291,7 +318,7 @@ and $c_1=C_6$ works.</p><p>Together, for all $n$ larger than a suitable $N$, $\f
 <h2 class="ct-group" id="day-4">Day 4</h2>
 <section class="ct-problem" id="p10">
 <h3>Problem 10</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 44: Combinatorial Games and Strategy</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 44: Combinatorial Games and Strategy &middot; Winning and Losing Positions</div>
 <div class="ct-text"><p>Let $n$ be a fixed positive integer. Alice and Bob play the following game on the integer number line. Alice starts at $0$ and Bob starts at $n$. They take turns making moves. On the $i^{th}$ turn,</p><ul class="ct-ul"><li><p>If $i$ is odd, Alice moves to an integer at most $2^i-1$ distance away from her current position.</p></li><li><p>If $i$ is even, Bob moves to an integer at most $2^i-1$ distance away from his current position.</p></li></ul><p>Note that both players have the option to stay where they are on their turn. The game ends only when one player moves to the same position as the other player, in which case the player who moved wins. Find all positive integers $n$ for which Alice has a winning strategy, and find all positive integers $n$ for which Bob has a winning strategy.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>Bob wins exactly for $\frac{4^{k+1}+2}{3}\le n\le\frac{2\cdot 4^{k+1}-2}{3}$ ($k\ge 0$), i.e. $n\in\{2\}\cup[6,10]\cup[22,42]\cup[86,170]\cup\dots$; Alice wins for all other $n$</p></div></details>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
@@ -306,7 +333,7 @@ which gives $n=2$, $6\le n\le 10$, $22\le n\le 42$, $86\le n\le 170$, and so on.
 </section>
 <section class="ct-problem" id="p11">
 <h3>Problem 11</h3>
-<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 54: Advanced Number Theory Synthesis</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Number Theory &middot; LPS VII, Chapter 54: Advanced Number Theory Synthesis &middot; Deep Structural Classification Problems</div>
 <div class="ct-text"><p>Let $\alpha&gt;0$ be a fixed positive real number. Find all polynomials $P$ with integer coefficients such that
 \[\gcd(P(m),P(n))\ge\gcd(m,n)^{\alpha}\]
 for all positive integers $m,n$. (Here $\gcd(0,0)=0$.)</p></div>
@@ -325,7 +352,7 @@ where we used that $\gcd(X,k^sY)$ divides $\gcd(k^sX,k^sY)=k^s\gcd(X,Y)$. The co
 </section>
 <section class="ct-problem" id="p12">
 <h3>Problem 12</h3>
-<div class="ct-meta">Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-S" title="Superhard, on the LPS VII scale">S</span>Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure &middot; Radical Axis and Radical Center</div>
 <div class="ct-text"><p>Let $ABCD$ be a convex quadrilateral such that $AB\cdot CD=AD\cdot BC$. Let $I_a,I_b,I_c,I_d$ be the incenters of the triangles $BCD,CDA,DAB,ABC$ respectively. Lines $AI_c$, $CI_a$ intersect at $P$ and lines $BI_d$, $DI_b$ intersect at $Q$. Let the circumcircles of the two triangles $PI_bI_d$ and $QI_aI_c$ intersect at two distinct points $X,Y$. Prove that the lines $AC$, $BD$ and $XY$ concur.</p></div>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
 <h4>Solution (Angle-bisector feet and the foot of an altitude)</h4>
@@ -346,7 +373,7 @@ which is $0$ by (2). So $Z'=F$, i.e. $F\in\omega$. $\square$</p><p><strong>Step 
 <h2 class="ct-group" id="practice-test-day-1">Practice Test Day 1</h2>
 <section class="ct-problem" id="p13">
 <h3>Problem 13</h3>
-<div class="ct-meta">Algebra &middot; LPS VII, Chapter 1: Inequalities: Core Classical Methods</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VII scale">E</span>Algebra &middot; LPS VII, Chapter 1: Inequalities: Core Classical Methods &middot; AM-GM and Mean Inequalities</div>
 <div class="ct-text"><p>Suppose $a,b,c,d$ are positive real numbers satisfying $d&lt;1$. Prove that
 \[8\left(b\cdot\sqrt{a+1}+c\cdot\sqrt{b+1}+d\cdot\sqrt{c+1}+a\cdot\sqrt{1-d}\right)&lt;(2a+1)^2+(2b+1)^2+(2c+1)^2+(1-2d)^2+12.\]</p></div>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -368,7 +395,7 @@ Expanding, $(2a+1)^2+(2b+1)^2+(2c+1)^2+(1-2d)^2+12=4(a^2+b^2+c^2+d^2)+4(a+b+c-d)
 </section>
 <section class="ct-problem" id="p14">
 <h3>Problem 14</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 44: Combinatorial Games and Strategy</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 44: Combinatorial Games and Strategy &middot; Invariant-Based Game Analysis</div>
 <div class="ct-text"><p>You are playing a game against a dealer. At the start of the game, there are 2023 chips on the board, worth the numbers from 1 to 2024, except 2020. Each round, you remove two chips $a$ and $b$ from the board, and the dealer puts down a chip worth $(a+b)$ or $|a-b|$. The game ends if either there is only one chip on the board, or if there is a chip on the board worth more than the sum of the remaining chips on the board. When the game ends, the dealer pays you an amount equal to the sum of the remaining numbers on board. If the dealer wants to minimize the payout and play optimally, what is the maximum payout you can get?</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$0$</p></div></details>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
@@ -378,7 +405,7 @@ Expanding, $(2a+1)^2+(2b+1)^2+(2c+1)^2+(1-2d)^2+12=4(a^2+b^2+c^2+d^2)+4(a+b+c-d)
 </section>
 <section class="ct-problem" id="p15">
 <h3>Problem 15</h3>
-<div class="ct-meta">Geometry &middot; LPS VII, Chapter 51: Spiral Similarity and Advanced Transformational Geometry</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 51: Spiral Similarity and Advanced Transformational Geometry &middot; Miquel and Rotational Circle Structure</div>
 <div class="ct-text"><p>Let $A,B,C,D_1,D_2$ be five points in the plane such that no two lines obtained by joining pairs of them are parallel. Let $M_1$ and $M_2$ be the Miquel points of quadrilaterals $ABCD_1$ and $ABCD_2$. Suppose that $M_1$ is the midpoint of $BM_2$. Prove that $BD_2$ passes through the centroid of triangle $ACD_1$.</p><p><em>Note.</em> For a quadrilateral $ABCD$ with non-parallel sides, let lines $AB$ and $CD$ meet at $E$ and lines $AD$ and $BC$ meet at $F$. The Miquel point $M$ of $ABCD$ is the common point of intersection of the circumcircles of the four triangles $EBC$, $EAD$, $FAB$, $FCD$.</p></div>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Complex numbers and the spiral similarity)</h4>
@@ -398,7 +425,7 @@ where $G=\tfrac13(A+C+D_1)$ is the centroid of $ACD_1$. Hence $B$, $G$, $D_2$ ar
 <h2 class="ct-group" id="practice-test-day-2">Practice Test Day 2</h2>
 <section class="ct-problem" id="p16">
 <h3>Problem 16</h3>
-<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 4: Divisibility and Prime Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VII scale">E</span>Number Theory &middot; LPS VII, Chapter 4: Divisibility and Prime Structure &middot; Prime Factorization and Structure</div>
 <div class="ct-text"><p>For any positive integer $n$, let $f(n)$ be the largest odd divisor of $n$. Find $f(2024)+f(2025)+\dots+f(4048)$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$4096829$</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -415,7 +442,7 @@ With $n=2024$ we get $f(2025)+\dots+f(4048)=2024^2=4096576$, and adding $f(2024)
 </section>
 <section class="ct-problem" id="p17">
 <h3>Problem 17</h3>
-<div class="ct-meta">Geometry &middot; LPS VII, Chapter 55: Three-Dimensional and Spatial Geometry</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 55: Three-Dimensional and Spatial Geometry &middot; Planes, Lines, and Incidence in Space</div>
 <div class="ct-text"><p>Through the vertex $A$ of a tetrahedron $ABCD$ is drawn a plane tangent to its circumsphere. Prove that the lines formed by the intersection of this plane with the planes $ABC$, $ACD$, $ADB$ form six equal angles if and only if
 \[AB\cdot CD=AC\cdot BD=AD\cdot BC.\]</p></div>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
@@ -428,7 +455,7 @@ Multiplying by $AB\cdot AC\cdot AD$ turns this into $BC\cdot AD=CD\cdot AB=DB\cd
 </section>
 <section class="ct-problem" id="p18">
 <h3>Problem 18</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 47: Probabilistic Method and Random Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 47: Probabilistic Method and Random Structure &middot; Random Construction</div>
 <div class="ct-text"><p>There are $n$ people at a party with distinct heights; however, only their names are known &ndash; not their heights. Let $f(n)$ be the minimum number of orderings of the people you need to choose beforehand so that for every group of $3$ people, you are guaranteed to have an ordering where those three are in increasing order of height. Show that there are absolute constants $0&lt;c_1&lt;c_2$ such that for every $n\ge 3$
 \[c_1\log_2 n\le f(n)\le c_2\log_2 n.\]</p></div>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -443,7 +470,7 @@ If $f=\bigl\lceil 3\log_{6/5}n\bigr\rceil$ this is at most $1$, so some family o
 <h2 class="ct-group" id="lmao-day-1">LMAO Day 1</h2>
 <section class="ct-problem" id="p19">
 <h3>Problem 19</h3>
-<div class="ct-meta">Algebra &middot; LPS VII, Chapter 42: Polynomial Reconstruction and Interpolation</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Algebra &middot; LPS VII, Chapter 42: Polynomial Reconstruction and Interpolation &middot; Reconstruction from Functional Conditions</div>
 <div class="ct-text"><p>Let $P(x)$ and $Q(x)$ be polynomials with real coefficients such that
 \[P(ab)=\lfloor Q(a)\rfloor\lfloor Q(b)\rfloor\]
 for all positive integers $a,b$. Determine all possible values of $P$.</p></div>
@@ -461,7 +488,7 @@ The two-variable polynomial $D(x,y)=c^2P(xy)-P(x)P(y)$ vanishes on all pairs of 
 </section>
 <section class="ct-problem" id="p20">
 <h3>Problem 20</h3>
-<div class="ct-meta">Geometry &middot; LPS VII, Chapter 45: Complex Numbers in Geometry</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 45: Complex Numbers in Geometry &middot; Complex Reformulation of Olympiad Geometry</div>
 <div class="ct-text"><p>Let $ABC$ be a scalene triangle with circumcenter $O$ and orthocenter $H$. A point $K$ lies inside $\triangle ABC$ such that $\angle KAB=\angle KCA$ and $\angle KAC=\angle KBA$. Let $M$ be the midpoint of $BC$, and let $Z$ be the reflection of $A$ across line $OM$. Let lines $HM$ and $ZO$ meet at $P$. If points $O,H,K$ are collinear, prove that quadrilateral $KPMZ$ is cyclic.</p></div>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
 <h4>Solution (Complex numbers with BC symmetric about the real axis)</h4>
@@ -484,7 +511,7 @@ which vanishes by (1). Therefore $K,P,M,Z$ are concyclic.</p>
 </section>
 <section class="ct-problem" id="p21">
 <h3>Problem 21</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 44: Combinatorial Games and Strategy</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 44: Combinatorial Games and Strategy &middot; Strategy Stealing and Symmetry</div>
 <div class="ct-text"><p>There are $100$ boxes on a table, each containing some number of cookies. Freddie the Frog and Toby the Toad each own a shelf that holds up to $50$ boxes. They play a game, with Freddie going first, and players alternating turns until no boxes remain on the table. On a player's turn, they choose a box on the table, and the other player places it on either shelf, provided the shelf is not yet full.</p><p>Prove that Toby can guarantee to get at least as many cookies as Freddie.</p></div>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
 <h4>Solution (Partial progress: small cases and what a proof must use)</h4>
@@ -494,7 +521,7 @@ which vanishes by (1). Therefore $K,P,M,Z$ are concyclic.</p>
 <h2 class="ct-group" id="lmao-day-2">LMAO Day 2</h2>
 <section class="ct-problem" id="p22">
 <h3>Problem 22</h3>
-<div class="ct-meta">Algebra &middot; LPS VII, Chapter 46: Functional Equations: Iteration, Rigidity, and Deep Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Algebra &middot; LPS VII, Chapter 46: Functional Equations: Iteration, Rigidity, and Deep Structure &middot; Iteration and Self-Composition</div>
 <div class="ct-text"><p>Let $k\ge 2$ be a fixed integer. Determine all functions $f:\mathbb{N}\to\mathbb{N}$ such that, for every $n\in\mathbb{N}$, $f^k(n)$ is the number of distinct integers in the set $\{f(1),f(2),\dots,f(n)\}$.</p><p><em>Note:</em> $f^k=f\circ f\circ\dots\circ f$ ($k$ times).</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>either $f$ is a permutation of $\mathbb N$ with $f^k=\mathrm{id}$, or for some $m\ge1$ $f$ permutes $\{1,\dots,m\}$ with $f^k=\mathrm{id}$ there and $f(n)=f(m)$ for all $n&gt;m$</p></div></details>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
@@ -504,7 +531,7 @@ which vanishes by (1). Therefore $K,P,M,Z$ are concyclic.</p>
 </section>
 <section class="ct-problem" id="p23">
 <h3>Problem 23</h3>
-<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 49: Combinatorial Number Theory and Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-S" title="Superhard, on the LPS VII scale">S</span>Number Theory &middot; LPS VII, Chapter 49: Combinatorial Number Theory and Structure &middot; Sequences with Arithmetic Constraints</div>
 <div class="ct-text"><p>A sequence $a_1,a_2,a_3,\dots$ of positive integers is called <em>senior</em> if
 \[a_n&lt;n\quad\text{and}\quad a_n\mid a_{n-1}+a_{n-2}+\dots+a_{n-a_n}\]
 for all $n\ge 2$. Does there exist a constant $c&gt;0$ and a <em>senior</em> sequence $a_1,a_2,a_3,\dots$ such that $a_n&gt;cn$ for all $n$?</p></div>
@@ -516,7 +543,7 @@ for all $n\ge 2$. Does there exist a constant $c&gt;0$ and a <em>senior</em> seq
 </section>
 <section class="ct-problem" id="p24">
 <h3>Problem 24</h3>
-<div class="ct-meta">Algebra &middot; LPS VII, Chapter 46: Functional Equations: Iteration, Rigidity, and Deep Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Algebra &middot; LPS VII, Chapter 46: Functional Equations: Iteration, Rigidity, and Deep Structure &middot; Monotonicity, Boundedness, and Regularity</div>
 <div class="ct-text"><p>Find all functions $f:\mathbb{R}^+\to\mathbb{R}^+$ satisfying
 \[f(2x)f(y)=f(x)\bigl(f(x+y)-f(x-y)\bigr)\]
 for all positive real numbers $x&gt;y$.</p></div>
@@ -534,7 +561,7 @@ So $\dfrac{f''(y)}{f(y)}=\dfrac{g''(x)}{g(x)}$ whenever $x&gt;y$. For any $y_1,y
 <h2 class="ct-group" id="lmao-revenge-day-1">LMAO Revenge Day 1</h2>
 <section class="ct-problem" id="p25">
 <h3>Problem 25</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 52: Advanced Combinatorial Structure and Hybrid Methods</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-S" title="Superhard, on the LPS VII scale">S</span>Combinatorics &middot; LPS VII, Chapter 52: Advanced Combinatorial Structure and Hybrid Methods &middot; High-Level Olympiad Synthesis</div>
 <div class="ct-text"><p>Tom and Jerry are playing a game on an $n\times n$ grid. Initially, Tom colors each square with one of two colors. Jerry picks a square on the grid to start on. In each move, Jerry moves to a square sharing a side with the current square he is occupying, under the constraint that he can visit a square for the $k^{\text{th}}$ time only if he has visited every square at least $k-1$ times. Every time Jerry completes a move, Jerry reports the color of his new square to Tom.</p><p>Tom wins the game if either</p><ul class="ct-ul"><li><p>Jerry cannot make a move, or</p></li><li><p>Tom can determine the square Jerry started on.</p></li></ul><p>Find all $n\ge 2$ for which Tom can guarantee a win.</p><p><strong>Note</strong>: Starting on a square counts as a visit.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>Tom can guarantee a win exactly for odd $n$</p></div></details>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
@@ -546,7 +573,7 @@ where $c$ is the colour. Applying the first relation to the block at $(i,j)$ and
 </section>
 <section class="ct-problem" id="p26">
 <h3>Problem 26</h3>
-<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 29: Valuations and Lifting the Exponent</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Number Theory &middot; LPS VII, Chapter 29: Valuations and Lifting the Exponent &middot; Comparing Valuations Across Terms</div>
 <div class="ct-text"><p>We call a positive integer $n$ <em>insomniac</em> if
 \[\varphi(n!)+\varphi(n)!=m^2\]
 for some integer $m$. Prove that there exist only finitely many positive integers which are <em>insomniac</em>.</p><p><em>Note:</em> $\varphi(n)$ is the number of positive integers less than or equal to $n$ that are coprime to $n$.</p></div>
@@ -568,7 +595,7 @@ N/n &amp; p/n &amp; n/p &amp; N/p &amp; v_p(A) &amp; v_p(B)\\ \hline
 </section>
 <section class="ct-problem" id="p27">
 <h3>Problem 27</h3>
-<div class="ct-meta">Geometry &middot; LPS VII, Chapter 48: Inversion and Circle-Preserving Transformation</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 48: Inversion and Circle-Preserving Transformation &middot; Inversion with Power and Radical Structure</div>
 <div class="ct-text"><p>Let $ABC$ be a scalene triangle with $D,E,F$ the feet of altitudes from $A$, $B$, and $C$. Let $(AEF)$ meet $(ABC)$ at $H$ and $A$, and let $AH$ meet $BC$ at $O$. Let $M$ be the midpoint of $BC$. Let $(AOM)$ meet $(AEF)$ at $L$ and $A$, and $(MEF)$ at $M$ and $P$. Let $AL$ and $(APD)$ meet $(ABC)$ at $Z$ and $R$ respectively, apart from $A$. Show that $O$, $R$ and $Z$ are collinear.</p><p><em>Note:</em> $(XYZ)$ denotes the circumcircle of $\triangle XYZ$.</p></div>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
 <h4>Solution (Two inversions, at O and at the orthocentre)</h4>
@@ -582,7 +609,7 @@ using the isosceles triangle $MLZ$, the collinearity of $A,L,Z$, and $L\in(AOM)$
 <h2 class="ct-group" id="lmao-revenge-day-2">LMAO Revenge Day 2</h2>
 <section class="ct-problem" id="p28">
 <h3>Problem 28</h3>
-<div class="ct-meta">Algebra &middot; LPS VII, Chapter 1: Inequalities: Core Classical Methods</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VII scale">E</span>Algebra &middot; LPS VII, Chapter 1: Inequalities: Core Classical Methods &middot; AM-GM and Mean Inequalities</div>
 <div class="ct-text"><p>Call a function $f:\mathbb{R}^-\to\mathbb{R}^-$ <em>auraic</em> if for all $x,y,z&lt;0$, we have
 \[\frac{xf(y)}{f(z)}+\frac{yf(z)}{f(x)}+\frac{zf(x)}{f(y)}\le f(x)+f(y)+f(z).\]
 Determine all auraic functions. (<strong>Note:</strong> $\mathbb{R}^-$ denotes the set of all negative real numbers.)</p></div>
@@ -598,7 +625,7 @@ Finally $\frac{uv}{w}+\frac{vw}{u}+\frac{wu}{v}\ge u+v+w$: with $X=\frac{uv}{w},
 </section>
 <section class="ct-problem" id="p29">
 <h3>Problem 29</h3>
-<div class="ct-meta">Geometry &middot; LPS VII, Chapter 43: Locus, Transformation, and Construction Geometry</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-S" title="Superhard, on the LPS VII scale">S</span>Geometry &middot; LPS VII, Chapter 43: Locus, Transformation, and Construction Geometry &middot; Compass-and-Straightedge Style Construction</div>
 <div class="ct-text"><p>Ali draws a non-degenerate quadrilateral $COPE$ that is not cyclic. Shalin may draw the line through two drawn points, mark the intersection point of two drawn lines, mark finitely many points on a drawn line (without control over where on the line they fall), and use a tool that marks the symmedian point of any triangle whose three vertices are drawn. If Shalin can draw the $C$-Sharky point of $\triangle COE$, Ali pays him $1$ coin; otherwise Shalin pays Ali $1$ coin. If Shalin can draw the isogonal conjugate of $P$ with respect to $\triangle COE$, Ali pays him $2$ coins; otherwise Shalin pays Ali $2$ coins. Ali chooses the quadrilateral so as to make Shalin's net gain as small as possible. Find the net gain of each player.</p><p><em>Note:</em> $A$-Sharky point, $S$ of $ABC$ is the point on the circumcircle of $ABC$ such that $\angle ASI=90^\circ$ where $I$ is the incenter of $ABC$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>Shalin can draw the isogonal conjugate but (for a suitable choice by Ali) not the Sharky point: Shalin gains $2-1=1$ coin, Ali loses $1$ coin</p></div></details>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
@@ -612,7 +639,7 @@ Its coordinates are algebraic but irrational, and a purely transcendental extens
 </section>
 <section class="ct-problem" id="p30">
 <h3>Problem 30</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 31: Extremal Principle and Bounding Arguments</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 31: Extremal Principle and Bounding Arguments &middot; Bounding and Limiting Arguments</div>
 <div class="ct-text"><p>Let $n\ge 2$ be a positive integer. Apollo wants to place countesses on an $n\times(2n-2)$ chessboard. A countess can attack horizontally, vertically, or along the downright/up-left diagonal, including the cells they occupy. Determine the minimum number of countesses needed so Apollo can place them such that every cell in the board is attacked by at least one countess.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$n-1$ if $4\nmid n$, and $n$ if $4\mid n$</p></div></details>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">

@@ -29,6 +29,11 @@ description: Romania Team Selection Test 2026, for the EGMO: problems with answe
   .ct-note { font-size: 14px; color: var(--ink-soft); font-style: italic; }
   .ct-bar { margin: .6em 0 1em; display: flex; gap: 10px; flex-wrap: wrap; }
   .ct-bar button { font: inherit; font-size: 14px; padding: 5px 12px; border-radius: var(--radius); border: 1px solid var(--brand); background: var(--white); color: var(--brand); cursor: pointer; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
 </style>
 <script>
   window.MathJax = { tex: { inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [['\\[','\\]']], processEscapes: true },
@@ -57,6 +62,28 @@ description: Romania Team Selection Test 2026, for the EGMO: problems with answe
   .ct-text mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
 </style>
 
+<style>
+  .ct-tags { display: flex; flex-wrap: wrap; gap: 5px; margin: 0 0 .55em; }
+  .ct-tg { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .03em; padding: 2px 8px; border-radius: 999px; line-height: 1.5; }
+  .ct-lv { background: #eee7dc; color: #4a3d33; }
+  .ct-df-Starter { background: #dcf1dc; color: #245c24; }
+  .ct-df-Explorer { background: #d6efec; color: #155e57; }
+  .ct-df-Challenger { background: #dce8f7; color: #1f4c80; }
+  .ct-df-Olympiad { background: #e7defa; color: #4b2a8a; }
+  .ct-df-Advanced { background: #fbe4cc; color: #8a4a0b; }
+  .ct-df-Expert { background: #f8d6cf; color: #8c2600; }
+  .ct-band { margin: 1.3em 0 .5em; font-size: 14px; color: var(--ink-soft); }
+  .ct-band .ct-tg { font-size: 13px; margin-right: .4em; }
+  .ct-legend { font-size: 14.5px; background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 10px 16px; margin: 1em 0 1.4em; }
+  .ct-legend p { margin: .35em 0; }
+  .ct-legend ul { margin: .2em 0 .4em; padding-left: 1.1em; }
+  .ct-legend li { margin: .2em 0; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
+</style>
 {% endraw %}
 <p><a href="{{ '/contests-2026' | relative_url }}">&larr; All contests 2026</a></p>
 
@@ -73,7 +100,7 @@ description: Romania Team Selection Test 2026, for the EGMO: problems with answe
 <h2 class="ct-group" id="day-1">Day 1</h2>
 <section class="ct-problem" id="p1">
 <h3>Problem 1</h3>
-<div class="ct-meta">Algebra &middot; LPS VII, Chapter 22: Summation, Telescoping, and Discrete Transformation</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Algebra &middot; LPS VII, Chapter 22: Summation, Telescoping, and Discrete Transformation &middot; Telescoping Sums and Products</div>
 <div class="ct-text"><p>Let $n$ be a positive integer and $x_1, x_2, \ldots, x_n \in [0,1]$ be real numbers. Prove the following inequality holds and specify the equality cases:
 \[(nx_1+(n-1)x_2+\ldots+2x_{n-1}+x_n)^2 \ge x_1^3+(x_1+x_2)^3+\ldots+(x_1+x_2+\ldots+x_n)^3.\]</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>proof; equality iff $(x_1,\dots,x_n)=(0,\dots,0,1,\dots,1)$ (any number of zeros followed by ones)</p></div></details>
@@ -113,7 +140,7 @@ all-one tuples.</p>
 </section>
 <section class="ct-problem" id="p2">
 <h3>Problem 2</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 20: Parity, Coloring, and Process Termination</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 20: Parity, Coloring, and Process Termination &middot; Parity and Coloring Arguments</div>
 <div class="ct-text"><p>Let $T$ be a $99 \times 99$ square grid from which we remove the $1 \times 1$ square in the center. We want to partition $T$ into smaller squares with integer side lengths and sides parallel to the edges of $T$. Call a square in such a partition <em>good</em> if it has an odd side length.</p><ul class="ct-parts"><li><p><span class="ct-lbl">(a)</span> What is the minimum number of good squares in a partition of $T$?</p></li><li><p><span class="ct-lbl">(b)</span> What is the smallest value of the sum of the side lengths of the good squares in a partition of $T$?</p></li></ul></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(a) $8$; (b) $104$</p></div></details>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
@@ -149,7 +176,7 @@ unit squares and the hole cover the board exactly once.</p><p>This partition has
 </section>
 <section class="ct-problem" id="p3">
 <h3>Problem 3</h3>
-<div class="ct-meta">Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure &middot; Tangency and Tangent Geometry</div>
 <div class="ct-text"><p>Let $ABCD$ be a cyclic quadrilateral, and $I_1, I_2$ be the incenters of triangles $ABC$ and $ABD$ respectively. Let line $I_1I_2$ meet $BC$ and $AD$ at $E$ and $F$.</p><ul class="ct-parts"><li><p><span class="ct-lbl">(a)</span> Prove that there exists a circle $\omega$ tangent to $BC$ at point $E$ and to $AD$ at point $F$.</p></li><li><p><span class="ct-lbl">(b)</span> Prove that $\omega$ is tangent to the circumcircle of quadrilateral $ABCD$.</p></li></ul></div>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Reim, the shooting lemma and a homothety)</h4>
@@ -266,7 +293,7 @@ $|r|$, with $0&lt;|r|&lt;1$: the circle $\omega$ is internally tangent to $\Gamm
 </section>
 <section class="ct-problem" id="p4">
 <h3>Problem 4</h3>
-<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 12: Exponential Congruences and Order Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 12: Exponential Congruences and Order Structure &middot; Lifting and Refinement of Congruences</div>
 <div class="ct-text"><p>Let $p &gt; 3$ be a prime number, and denote by $k = \left\lfloor \frac{2p}{3} \right\rfloor$. Prove that $p^2$ divides the following expression:
 \[\binom{p}{1} + \binom{p}{2} + \ldots + \binom{p}{k}.\]</p></div>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -316,7 +343,7 @@ $\binom p1+\dots+\binom pk=T-U$ is divisible by $p^2$.</p>
 <h2 class="ct-group" id="day-2">Day 2</h2>
 <section class="ct-problem" id="p5">
 <h3>Problem 1</h3>
-<div class="ct-meta">Algebra &middot; LPS VII, Chapter 30: Functional Equations: Core Olympiad Methods</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Algebra &middot; LPS VII, Chapter 30: Functional Equations: Core Olympiad Methods &middot; Substitution and Special Inputs</div>
 <div class="ct-text"><p>Find all functions $f : \mathbb{Z} \to \mathbb{Z}$, with $f(0) \ne 0$, satisfying the following relation:
 \[f(x^2 - f(y)) = f(x+y)f(x-y), \quad \forall x, y \in \mathbb{Z}.\]</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$f\equiv1$, and $f(x)=-1$ for $3\mid x$, $f(x)=1$ for $3\nmid x$</p></div></details>
@@ -342,7 +369,7 @@ is $-1$.</p><p>The solutions are $\boxed{f\equiv1}$ and $\boxed{f(x)=\begin{case
 </section>
 <section class="ct-problem" id="p6">
 <h3>Problem 3</h3>
-<div class="ct-meta">Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure &middot; Radical Axis and Radical Center</div>
 <div class="ct-text"><p>In an acute-angled non-isosceles triangle $ABC$ with orthocenter $H$, the perpendicular bisectors of the segments $AB$ and $AC$ meet the line $BC$ at points $D$ and $E$ respectively. Let $S$ be the second intersection of the circles $(ABC)$ and $(ADE)$, distinct from $A$.</p><p>Prove that $\angle ASH = 90^\circ$ if and only if $\angle BAC = 45^\circ$.</p></div>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
 <h4>Solution (Radical axes and a computation on $BC$)</h4>

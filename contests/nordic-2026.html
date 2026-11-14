@@ -29,6 +29,11 @@ description: Nordic Mathematical Contest 2026: problems with answers and solutio
   .ct-note { font-size: 14px; color: var(--ink-soft); font-style: italic; }
   .ct-bar { margin: .6em 0 1em; display: flex; gap: 10px; flex-wrap: wrap; }
   .ct-bar button { font: inherit; font-size: 14px; padding: 5px 12px; border-radius: var(--radius); border: 1px solid var(--brand); background: var(--white); color: var(--brand); cursor: pointer; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
 </style>
 <script>
   window.MathJax = { tex: { inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [['\\[','\\]']], processEscapes: true },
@@ -57,6 +62,28 @@ description: Nordic Mathematical Contest 2026: problems with answers and solutio
   .ct-text mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
 </style>
 
+<style>
+  .ct-tags { display: flex; flex-wrap: wrap; gap: 5px; margin: 0 0 .55em; }
+  .ct-tg { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .03em; padding: 2px 8px; border-radius: 999px; line-height: 1.5; }
+  .ct-lv { background: #eee7dc; color: #4a3d33; }
+  .ct-df-Starter { background: #dcf1dc; color: #245c24; }
+  .ct-df-Explorer { background: #d6efec; color: #155e57; }
+  .ct-df-Challenger { background: #dce8f7; color: #1f4c80; }
+  .ct-df-Olympiad { background: #e7defa; color: #4b2a8a; }
+  .ct-df-Advanced { background: #fbe4cc; color: #8a4a0b; }
+  .ct-df-Expert { background: #f8d6cf; color: #8c2600; }
+  .ct-band { margin: 1.3em 0 .5em; font-size: 14px; color: var(--ink-soft); }
+  .ct-band .ct-tg { font-size: 13px; margin-right: .4em; }
+  .ct-legend { font-size: 14.5px; background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 10px 16px; margin: 1em 0 1.4em; }
+  .ct-legend p { margin: .35em 0; }
+  .ct-legend ul { margin: .2em 0 .4em; padding-left: 1.1em; }
+  .ct-legend li { margin: .2em 0; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
+</style>
 {% endraw %}
 <p><a href="{{ '/contests-2026' | relative_url }}">&larr; All contests 2026</a></p>
 
@@ -72,7 +99,7 @@ description: Nordic Mathematical Contest 2026: problems with answers and solutio
 {% raw %}
 <section class="ct-problem" id="p1">
 <h3>Problem 1</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 20: Parity, Coloring, and Process Termination</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 20: Parity, Coloring, and Process Termination &middot; Parity and Coloring Arguments</div>
 <div class="ct-text"><p>Let $n\ge 3$ be an integer. There are $n$ knights sitting around a round table. On the table there are $n$ candles, such that between each pair of adjacent knights there is a single candle. Some candles (possibly all, but possibly also none) are lit. For $i\in\{0,1,2\}$, let $m_i$ be the number of knights sitting next to exactly $i$ lit candles.</p><p>Find the smallest possible value of $m=\max\{m_0,m_1,m_2\}$ in terms of $n$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$m_{\min}=\lceil n/3\rceil$ if $n\not\equiv 3 \pmod 6$, and $m_{\min}=n/3+1$ if $n\equiv 3\pmod 6$</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -106,7 +133,7 @@ match the lower bounds. So the answer is
 </section>
 <section class="ct-problem" id="p2">
 <h3>Problem 2</h3>
-<div class="ct-meta">Algebra &middot; LPS VII, Chapter 13: Systems, Symmetry, and Multi-Variable Algebra</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VII scale">E</span>Algebra &middot; LPS VII, Chapter 13: Systems, Symmetry, and Multi-Variable Algebra &middot; Elimination and Reduction</div>
 <div class="ct-text"><p>Consider the system of equations:
 \[\begin{cases} x^2=y+1\\ xy=x+y\end{cases}\]
 Show that if $(x,y)=(x_0,y_0)$, where $x_0$ and $y_0$ are real numbers, is a solution to the above system of equations, then there is also a solution $(x,y)=(x_1,y_1)$, where $x_1$ and $y_1$ are real numbers and $y_1x_0=1$.</p></div>
@@ -137,7 +164,7 @@ $x_1=\frac{y_1}{y_1-1}$ the pair $(x_1,y_1)$ is a real solution of the system wi
 </section>
 <section class="ct-problem" id="p3">
 <h3>Problem 3</h3>
-<div class="ct-meta">Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure &middot; Tangency and Tangent Geometry</div>
 <div class="ct-text"><p>Let $ABCD$ be a convex quadrilateral such that $AB=BC$. The internal angle bisectors of $\angle DBA$ and $\angle CBD$ intersect the perpendicular bisectors of $AD$ and $CD$ in $E$ and $F$, respectively. Prove that the circumcircles of $\triangle DAC$ and $\triangle DEF$ are tangent.</p></div>
 <details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Inversion at $D$ and Ptolemy)</h4>
@@ -226,7 +253,7 @@ $C=(\tfrac12,-\tfrac{\sqrt3}2)$, where $ABCD$ is cyclic; this is the degenerate 
 </section>
 <section class="ct-problem" id="p4">
 <h3>Problem 4</h3>
-<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 4: Divisibility and Prime Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 4: Divisibility and Prime Structure &middot; GCD and LCM Structure</div>
 <div class="ct-text"><p>A pair of positive integers $(a,b)$ is good if all the fractions
 \[\frac{a}{b},\ \frac{a+1}{b+1},\ \dots,\ \frac{a+9}{b+9}\]
 are integers.</p><ul class="ct-parts"><li><p><span class="ct-lbl">a)</span> Prove that there are only finitely many good pairs $(a,b)$ with $b&lt;a&lt;b^9$.</p></li><li><p><span class="ct-lbl">b)</span> Prove that there are infinitely many good pairs $(a,b)$ with $b&lt;a&lt;b^{10}$.</p></li></ul></div>

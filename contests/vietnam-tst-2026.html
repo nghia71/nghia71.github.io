@@ -29,6 +29,11 @@ description: Vietnam Team Selection Test 2026: problems with answers and solutio
   .ct-note { font-size: 14px; color: var(--ink-soft); font-style: italic; }
   .ct-bar { margin: .6em 0 1em; display: flex; gap: 10px; flex-wrap: wrap; }
   .ct-bar button { font: inherit; font-size: 14px; padding: 5px 12px; border-radius: var(--radius); border: 1px solid var(--brand); background: var(--white); color: var(--brand); cursor: pointer; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
 </style>
 <script>
   window.MathJax = { tex: { inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [['\\[','\\]']], processEscapes: true },
@@ -57,6 +62,28 @@ description: Vietnam Team Selection Test 2026: problems with answers and solutio
   .ct-text mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
 </style>
 
+<style>
+  .ct-tags { display: flex; flex-wrap: wrap; gap: 5px; margin: 0 0 .55em; }
+  .ct-tg { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .03em; padding: 2px 8px; border-radius: 999px; line-height: 1.5; }
+  .ct-lv { background: #eee7dc; color: #4a3d33; }
+  .ct-df-Starter { background: #dcf1dc; color: #245c24; }
+  .ct-df-Explorer { background: #d6efec; color: #155e57; }
+  .ct-df-Challenger { background: #dce8f7; color: #1f4c80; }
+  .ct-df-Olympiad { background: #e7defa; color: #4b2a8a; }
+  .ct-df-Advanced { background: #fbe4cc; color: #8a4a0b; }
+  .ct-df-Expert { background: #f8d6cf; color: #8c2600; }
+  .ct-band { margin: 1.3em 0 .5em; font-size: 14px; color: var(--ink-soft); }
+  .ct-band .ct-tg { font-size: 13px; margin-right: .4em; }
+  .ct-legend { font-size: 14.5px; background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 10px 16px; margin: 1em 0 1.4em; }
+  .ct-legend p { margin: .35em 0; }
+  .ct-legend ul { margin: .2em 0 .4em; padding-left: 1.1em; }
+  .ct-legend li { margin: .2em 0; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
+</style>
 {% endraw %}
 <p><a href="{{ '/contests-2026' | relative_url }}">&larr; All contests 2026</a></p>
 
@@ -73,7 +100,7 @@ description: Vietnam Team Selection Test 2026: problems with answers and solutio
 <h2 class="ct-group" id="day-1">Day 1</h2>
 <section class="ct-problem" id="p1">
 <h3>Problem 1</h3>
-<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 12: Exponential Congruences and Order Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 12: Exponential Congruences and Order Structure &middot; Fermat and Euler Type Results</div>
 <div class="ct-text"><p>For a positive integer $k$, a set $\mathcal{S}$ of positive integers is called <em>$k$-Olympic</em> if it satisfies</p><ul class="ct-ul"><li><p>$\mathcal{S} \ne \emptyset$,</p></li><li><p>For all $n \in \mathcal{S}$ then all positive divisors of $(25^n - 3^n)k^n$ are also in $\mathcal{S}$.</p></li></ul><p>Find all positive integers $k$ such that there exists a unique $k$-Olympic set.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>all $k$ divisible by $15$</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -92,7 +119,7 @@ If $5\nmid k$, the set of positive integers not divisible by $5$ works in the sa
 </section>
 <section class="ct-problem" id="p2">
 <h3>Problem 2</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 39: Graph Theory and Structural Combinatorics</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 39: Graph Theory and Structural Combinatorics &middot; Extremal Graph Structure</div>
 <div class="ct-text"><p>Let $n$ be a positive integer. In a country, there are $8n+3$ airports. For any two airports, either there exists a direct route or not. Assume that for any two airports that do not have a direct route, the difference between the number of direct routes of the two airports is $2$. Determine the minimal number of direct routes in the country.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$16n^2+12n+3$</p></div></details>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
@@ -109,7 +136,7 @@ while the $\Delta$ neighbours of $v_0$ are in the other class. Hence $2a+3\ge\De
 </section>
 <section class="ct-problem" id="p3">
 <h3>Problem 3</h3>
-<div class="ct-meta">Geometry &middot; LPS VII, Chapter 45: Complex Numbers in Geometry</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 45: Complex Numbers in Geometry &middot; Circle and Line Structure via Complex Equations</div>
 <div class="ct-text"><p>Let $ABC$ be an acute, scalene triangle with altitudes $AD, BE, CF$. The projections of $A$ onto lines $EF, FD, DE$ are $X, Y, Z$ respectively. Line $BZ$ intersects the circumcircle of triangle $BDY$ at $P \ne B$, line $CY$ intersects the circumcircle of triangle $CDZ$ at $Q \ne C$. Prove that $X$ has equal power with respect to the circumcircles of triangles $YFP$, $ZEQ$.</p></div>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
 <h4>Solution (P and Q lie on the circle XYZ; then complex numbers on that circle)</h4>
@@ -144,7 +171,7 @@ So the power of $X$ with respect to $c_2$ is given by (4) with $y$ and $z$ inter
 <h2 class="ct-group" id="day-2">Day 2</h2>
 <section class="ct-problem" id="p4">
 <h3>Problem 4</h3>
-<div class="ct-meta">Geometry &middot; LPS VII, Chapter 48: Inversion and Circle-Preserving Transformation</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 48: Inversion and Circle-Preserving Transformation &middot; Inversion with Power and Radical Structure</div>
 <div class="ct-text"><p>In triangle $ABC$, let $AE$ and $AF$ be tangents to circle $(O)$ with diameter $BC$, where $E, F \in (O)$. Let $K$ and $L$ be the intersections of $AE$ and $AF$ with $BC$, such that $B$ lies between $K$ and $C$. Suppose $KF$ and $LE$ meet $(O)$ again at $M$ and $N$. Let $D$ be the foot of the altitude from $A$; it lies on the circles $(AB)$ and $(AC)$ with diameters $AB$ and $AC$. If the circumcircle of $\triangle MON$ meets $(AB)$ and $(AC)$ at points $X\ne D$ and $Y\ne D$ respectively, prove that
 \[\angle XAB = \angle YAC.\]</p></div>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -189,7 +216,7 @@ Therefore $\angle XAB=\angle YAC$.</p>
 </section>
 <section class="ct-problem" id="p5">
 <h3>Problem 5</h3>
-<div class="ct-meta">Algebra &middot; LPS VII, Chapter 42: Polynomial Reconstruction and Interpolation</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Algebra &middot; LPS VII, Chapter 42: Polynomial Reconstruction and Interpolation &middot; Uniqueness by Degree Constraints</div>
 <div class="ct-text"><p>Given positive integers $k, n$ with $k &lt; n$. Find all monic polynomials $P(x)$ of degree $kn$ such that the degree of
 \[Q(x) = P(x^n+1) - (P(x))^n\]
 is at most $kn(n-1)$.</p></div>
@@ -223,7 +250,7 @@ The first bracket has degree $n(k-1)=kn-n&lt;kn-k$ and the second has degree at 
 </section>
 <section class="ct-problem" id="p6">
 <h3>Problem 6</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 10: Double Counting and Counting Identities</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 10: Double Counting and Counting Identities &middot; Weighted Counting</div>
 <div class="ct-text"><p>Let $\mathcal{H}$ be a family of subsets of $\{1, 2, 3, \ldots, 2027\}$ such that for any $A \in \mathcal{H}$ and for any subset $B \subset A$, then $B \in \mathcal{H}$. Let $l_{\mathcal{H}}, c_{\mathcal{H}}$ denote the number of sets of $\mathcal{H}$ having an even and odd number of elements respectively. Prove that
 \[l_{\mathcal{H}} - c_{\mathcal{H}} \le \binom{2026}{1013}.\]</p></div>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">

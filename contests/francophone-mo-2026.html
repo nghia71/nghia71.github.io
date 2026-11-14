@@ -29,6 +29,11 @@ description: Francophone Mathematical Olympiad 2026: problems with answers and s
   .ct-note { font-size: 14px; color: var(--ink-soft); font-style: italic; }
   .ct-bar { margin: .6em 0 1em; display: flex; gap: 10px; flex-wrap: wrap; }
   .ct-bar button { font: inherit; font-size: 14px; padding: 5px 12px; border-radius: var(--radius); border: 1px solid var(--brand); background: var(--white); color: var(--brand); cursor: pointer; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
 </style>
 <script>
   window.MathJax = { tex: { inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [['\\[','\\]']], processEscapes: true },
@@ -57,6 +62,28 @@ description: Francophone Mathematical Olympiad 2026: problems with answers and s
   .ct-text mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
 </style>
 
+<style>
+  .ct-tags { display: flex; flex-wrap: wrap; gap: 5px; margin: 0 0 .55em; }
+  .ct-tg { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .03em; padding: 2px 8px; border-radius: 999px; line-height: 1.5; }
+  .ct-lv { background: #eee7dc; color: #4a3d33; }
+  .ct-df-Starter { background: #dcf1dc; color: #245c24; }
+  .ct-df-Explorer { background: #d6efec; color: #155e57; }
+  .ct-df-Challenger { background: #dce8f7; color: #1f4c80; }
+  .ct-df-Olympiad { background: #e7defa; color: #4b2a8a; }
+  .ct-df-Advanced { background: #fbe4cc; color: #8a4a0b; }
+  .ct-df-Expert { background: #f8d6cf; color: #8c2600; }
+  .ct-band { margin: 1.3em 0 .5em; font-size: 14px; color: var(--ink-soft); }
+  .ct-band .ct-tg { font-size: 13px; margin-right: .4em; }
+  .ct-legend { font-size: 14.5px; background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 10px 16px; margin: 1em 0 1.4em; }
+  .ct-legend p { margin: .35em 0; }
+  .ct-legend ul { margin: .2em 0 .4em; padding-left: 1.1em; }
+  .ct-legend li { margin: .2em 0; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
+</style>
 {% endraw %}
 <p><a href="{{ '/contests-2026' | relative_url }}">&larr; All contests 2026</a></p>
 
@@ -73,7 +100,7 @@ description: Francophone Mathematical Olympiad 2026: problems with answers and s
 <h2 class="ct-group" id="junior">Junior</h2>
 <section class="ct-problem" id="p1">
 <h3>Problem 1</h3>
-<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 21: Arithmetic Functions and Multiplicative Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 21: Arithmetic Functions and Multiplicative Structure &middot; Function Equations on Integers</div>
 <div class="ct-text"><p>Let $\mathbb N_{\ge1}$ denote the set of strictly positive integers. Let $f:\mathbb N_{\ge1}\to\mathbb N_{\ge1}$ be a function such that:</p><ul class="ct-ul"><li><p>$f(f(n))$ divides a power of $n$ for every integer $n\ge1$,</p></li><li><p>$f(mn)\in\{f(m),f(n)\}$ for all integers $m\ge1$ and $n\ge1$, and</p></li><li><p>$f(k)=2026$ for at least one integer $k\ge1$.</p></li></ul><p>Determine all possible values of $f(2026)$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$f(2026)=1$</p></div></details>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
@@ -93,7 +120,7 @@ $m=n=1$; otherwise $mn&gt;1$ is coprime to $2026$, $f(mn)=2026$, and the factor 
 </section>
 <section class="ct-problem" id="p2">
 <h3>Problem 2</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 18: Invariants and Monovariants</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 18: Invariants and Monovariants &middot; Monovariants and Directional Change</div>
 <div class="ct-text"><p>Albert has just finished writing a book, but unfortunately, his printer has shuffled the order of the $N$ pages of his book. Brigitte offers to help him put the pages back in the correct order. Brigitte only allows herself the following two operations, which she can perform in any order and repeatedly:</p><ul class="ct-ul"><li><p>Reverse the order of all pages by placing the first page in the last position, the second in the second-to-last position, and so on, until the last page is placed in the first position.</p></li><li><p>If the first page bears the number $M$, then Brigitte sorts the first $M$ pages in descending order.</p></li></ul><p>For example, if the order of the pages was $3,1,2,5,4$, the first operation would give $4,5,2,1,3$, while the second operation would give $3,2,1,5,4$.</p><p>Show that Brigitte can always put the pages of Albert's book back in the correct order using these two operations.</p></div>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
 <h4>Solution (The first page can only grow)</h4>
@@ -113,7 +140,7 @@ book in the correct order.</p>
 </section>
 <section class="ct-problem" id="p3">
 <h3>Problem 3</h3>
-<div class="ct-meta">Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure &middot; Tangency and Tangent Geometry</div>
 <div class="ct-text"><p>Let $ABC$ be an acute-angled triangle and $P$ be the foot of the altitude from $C$. The bisector of the angle $\angle ABC$ intersects the segment $[PC]$ at $D$ and intersects the circle with diameter $[AD]$ at $D$ and $E$. Show that if the line $(EC)$ is tangent to the circle with diameter $[AD]$, then the line $(PE)$ is the bisector of the angle $\angle APC$.</p></div>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Coordinates along the bisector)</h4>
@@ -171,7 +198,7 @@ $\angle APE$ and $\angle EPD$ are equal. Since $D$ lies on segment $PC$, $\angle
 </section>
 <section class="ct-problem" id="p4">
 <h3>Problem 4</h3>
-<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 21: Arithmetic Functions and Multiplicative Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 21: Arithmetic Functions and Multiplicative Structure &middot; Euler Totient and Related Functions</div>
 <div class="ct-text"><p>Determine the number of triplets $(a,b,c)$ of strictly positive integers such that
 \[a+b+2c=28^{29}\quad\text{and}\quad ab=c^2.\]</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$2^{29}\cdot 7^{14}-1$</p></div></details>
@@ -225,7 +252,7 @@ L-1=\boxed{2^{29}\cdot7^{14}-1}.
 <h2 class="ct-group" id="senior">Senior</h2>
 <section class="ct-problem" id="p5">
 <h3>Problem 1</h3>
-<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 9: Polynomials and Root-Coefficient Strategy</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 9: Polynomials and Root-Coefficient Strategy &middot; Remainder, Factor, and Evaluation Logic</div>
 <div class="ct-text"><p>Find all polynomials $P$ with integer coefficients such that, for all integers $a\ge1$ and $b\ge1$, the number $P(a)-P(b)$ is divisible by $a+2b$ or by $2a+b$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>exactly the constant polynomials</p></div></details>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
@@ -248,7 +275,7 @@ $c_i\bigl((-\tfrac12)^i-1\bigr)=0$, so $c_i=0$ for all $i\ge1$.</p><p>Therefore 
 </section>
 <section class="ct-problem" id="p6">
 <h3>Problem 2</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 31: Extremal Principle and Bounding Arguments</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 31: Extremal Principle and Bounding Arguments &middot; Bounding and Limiting Arguments</div>
 <div class="ct-text"><p>Judith has gathered her $2026$ friends in a circle, so that each of her friends has a person to their left and a person to their right. Judith wishes to explain to them her clever solution to an Olympiad problem that can be told in a few seconds.</p><p>At 17:00, Judith chooses one of her friends and tells them her solution. Thereafter, every minute starting from 17:01, two things happen:</p><ul class="ct-parts"><li><p><span class="ct-lbl">1.</span> First, every friend who knows the solution tells it to their two neighbors.</p></li><li><p><span class="ct-lbl">2.</span> Then, Judith chooses one of her friends and tells them her solution.</p></li></ul><p>Determine the smallest integer $n$ such that it is possible for all of Judith's friends to know her solution after $n$ minutes.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$n=45$</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -284,7 +311,7 @@ knows the solution after $45$ minutes, whoever Judith tells in minutes $37$ to $
 </section>
 <section class="ct-problem" id="p7">
 <h3>Problem 3</h3>
-<div class="ct-meta">Geometry &middot; LPS VII, Chapter 19: Triangle Centers and Classical Triangle Geometry</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 19: Triangle Centers and Classical Triangle Geometry &middot; Angle Bisector and Median Geometry</div>
 <div class="ct-text"><p>Let $ABC$ be an acute-angled triangle such that $AB\ne AC$. Let $H$ be the orthocenter of $ABC$ and $M$ be the midpoint of $[BC]$. Let $D$ and $E$ be the orthogonal projections of $H$ onto the internal and external bisectors, respectively, of the angle $\angle BAC$. Show that the points $D$, $E$, and $M$ are collinear.</p></div>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
 <h4>Solution 1 (A rectangle and isogonal lines)</h4>
@@ -322,7 +349,7 @@ So $M$ lies on line $DE$.</p>
 </section>
 <section class="ct-problem" id="p8">
 <h3>Problem 4</h3>
-<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 6: Pigeonhole Principle and Density Arguments</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 6: Pigeonhole Principle and Density Arguments &middot; Density and Averaging Arguments</div>
 <div class="ct-text"><p>Show that there exists an integer $n\ge1$ for which there exist at least $2026$ triplets $(a,b,c)$ of strictly positive integers such that
 \[a^2+b^3+c^4=n.\]</p></div>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">

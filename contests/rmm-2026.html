@@ -29,6 +29,11 @@ description: Romanian Master of Mathematics 2026: problems with answers and solu
   .ct-note { font-size: 14px; color: var(--ink-soft); font-style: italic; }
   .ct-bar { margin: .6em 0 1em; display: flex; gap: 10px; flex-wrap: wrap; }
   .ct-bar button { font: inherit; font-size: 14px; padding: 5px 12px; border-radius: var(--radius); border: 1px solid var(--brand); background: var(--white); color: var(--brand); cursor: pointer; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
 </style>
 <script>
   window.MathJax = { tex: { inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [['\\[','\\]']], processEscapes: true },
@@ -57,6 +62,28 @@ description: Romanian Master of Mathematics 2026: problems with answers and solu
   .ct-text mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
 </style>
 
+<style>
+  .ct-tags { display: flex; flex-wrap: wrap; gap: 5px; margin: 0 0 .55em; }
+  .ct-tg { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .03em; padding: 2px 8px; border-radius: 999px; line-height: 1.5; }
+  .ct-lv { background: #eee7dc; color: #4a3d33; }
+  .ct-df-Starter { background: #dcf1dc; color: #245c24; }
+  .ct-df-Explorer { background: #d6efec; color: #155e57; }
+  .ct-df-Challenger { background: #dce8f7; color: #1f4c80; }
+  .ct-df-Olympiad { background: #e7defa; color: #4b2a8a; }
+  .ct-df-Advanced { background: #fbe4cc; color: #8a4a0b; }
+  .ct-df-Expert { background: #f8d6cf; color: #8c2600; }
+  .ct-band { margin: 1.3em 0 .5em; font-size: 14px; color: var(--ink-soft); }
+  .ct-band .ct-tg { font-size: 13px; margin-right: .4em; }
+  .ct-legend { font-size: 14.5px; background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 10px 16px; margin: 1em 0 1.4em; }
+  .ct-legend p { margin: .35em 0; }
+  .ct-legend ul { margin: .2em 0 .4em; padding-left: 1.1em; }
+  .ct-legend li { margin: .2em 0; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
+</style>
 {% endraw %}
 <p><a href="{{ '/contests-2026' | relative_url }}">&larr; All contests 2026</a></p>
 
@@ -73,7 +100,7 @@ description: Romanian Master of Mathematics 2026: problems with answers and solu
 <h2 class="ct-group" id="day-1">Day 1</h2>
 <section class="ct-problem" id="p1">
 <h3>Problem 1</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 39: Graph Theory and Structural Combinatorics</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 39: Graph Theory and Structural Combinatorics &middot; Paths, Cycles, and Connectivity</div>
 <div class="ct-text"><p>Let $n$ be a positive integer. Alice draws a unit area triangle on the board. Then she draws additional triangles by performing $n$ moves in a row. On each move, she chooses a drawn triangle $\Delta$ with no marked points in its interior, marks a point $P$ in its interior, and draws three smaller triangles by joining $P$ to each vertex of $\Delta$ with a segment.</p><p>Once these $n$ moves have been performed, Bob chooses three distinct drawn triangles $\Delta_1$, $\Delta_2$ and $\Delta_3$ which contain no marked points in their interiors, such that $\Delta_2$ shares one side with $\Delta_1$ and another with $\Delta_3$. In terms of $n$, determine the largest possible constant $c$ such that Bob can guarantee that the sum of the areas of $\Delta_1$, $\Delta_2$ and $\Delta_3$ is at least $c$, regardless of Alice's choices.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$c=\dfrac{3}{2n+1}$</p></div></details>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
@@ -97,7 +124,7 @@ $2n+1$ triples add up to $3$. Hence some triple has area at least $\frac3{2n+1}$
 </section>
 <section class="ct-problem" id="p2">
 <h3>Problem 2</h3>
-<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 33: Residues, Quadratic Structure, and Higher Congruences</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Number Theory &middot; LPS VII, Chapter 33: Residues, Quadratic Structure, and Higher Congruences &middot; Quadratic Residues</div>
 <div class="ct-text"><p>Let $p\ge 11$ be a prime. Suppose that, if $a$ and $b$ are integers such that $1\le a&lt;b\le p-3$, then $b!-a!$ is not divisible by $p$. Prove that $p-5$ is divisible by $8$.</p></div>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Wilson pairs and the product of all residues)</h4>
@@ -137,7 +164,7 @@ which means $p\equiv5\pmod8$.</p>
 </section>
 <section class="ct-problem" id="p3">
 <h3>Problem 3</h3>
-<div class="ct-meta">Algebra &middot; LPS VII, Chapter 50: Algebraic Modeling Beyond Standard Forms</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-S" title="Superhard, on the LPS VII scale">S</span>Algebra &middot; LPS VII, Chapter 50: Algebraic Modeling Beyond Standard Forms &middot; Hybrid Olympiad Algebra</div>
 <div class="ct-text"><p>Let $\mathcal{S}$ be a finite subset of $\mathbb{R}^3$. Prove that there exist three polynomials $P(x,y,z)$, $Q(x,y,z)$ and $R(x,y,z)$ with real coefficients, such that a triple of real numbers $(a,b,c)$ is in $\mathcal{S}$ if and only if the system of equations
 \[\begin{cases}P(x,y,z)=a\\ Q(x,y,z)=b\\ R(x,y,z)=c,\end{cases}\]
 does <strong>not</strong> have a solution in real numbers $x$, $y$, and $z$.</p></div>
@@ -175,7 +202,7 @@ So the system $P=a$, $Q=b$, $R=c$ has no real solution exactly when $(a,b,c)\in\
 <h2 class="ct-group" id="day-2">Day 2</h2>
 <section class="ct-problem" id="p4">
 <h3>Problem 4</h3>
-<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 21: Arithmetic Functions and Multiplicative Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 21: Arithmetic Functions and Multiplicative Structure &middot; Euler Totient and Related Functions</div>
 <div class="ct-text"><p>For any positive integer $m$, let $\varphi(m)$ be the number of positive integers less than or equal to $m$ and coprime to $m$. Define $\varphi_0(m)=m$ and, for each positive integer $k$, $\varphi_k(m)=\varphi(\varphi_{k-1}(m))$. For any integer $n\ge 3$, prove that
 \[\varphi_0(2^n-3)\cdot\varphi_1(2^n-3)\cdot\varphi_2(2^n-3)\cdot\ldots\cdot\varphi_n(2^n-3)\]
 has at most $n$ distinct prime divisors.</p></div>
@@ -199,7 +226,7 @@ Counting also the prime $2$, the product has at most $n$ distinct prime divisors
 </section>
 <section class="ct-problem" id="p5">
 <h3>Problem 5</h3>
-<div class="ct-meta">Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure &middot; Tangency and Tangent Geometry</div>
 <div class="ct-text"><p>Let $ABC$ be a triangle with $AB&lt;AC$, let $O$ be its circumcentre and let $XYZT$ be a parallelogram inside triangle $ABC$ such that
 \[\angle AXB=\angle AZC,\ \angle AZB=\angle AXC,\]
 \[\angle AYB=\angle ATC,\ \angle ATB=\angle AYC.\]
@@ -288,7 +315,7 @@ Write $\psi$ for the directed angle from the ray $AC$ to the ray $AB$, so $\frac
 </section>
 <section class="ct-problem" id="p6">
 <h3>Problem 6</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 52: Advanced Combinatorial Structure and Hybrid Methods</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-S" title="Superhard, on the LPS VII scale">S</span>Combinatorics &middot; LPS VII, Chapter 52: Advanced Combinatorial Structure and Hybrid Methods &middot; High-Level Olympiad Synthesis</div>
 <div class="ct-text"><p>Let $k&gt;1$ be an integer, and let $S$ denote the set of all $(k+1)$-tuples of integers $X=(x_1,\ldots,x_{k+1})$ such that $1\le x_1&lt;\cdots&lt;x_{k+1}\le k^2+1$. If $\sigma$ is a permutation of the numbers $1,2,\ldots,k^2+1$, say that an element $X$ of $S$ is $\sigma$-nice if the sequence $\sigma(x_1),\sigma(x_2),\ldots,\sigma(x_{k+1})$ is monotone. Prove that
 \[\min_{1\le i\le k}\left\lfloor\frac{x_i}{i}\right\rfloor+\min_{2\le i\le k+1}\left\lfloor\frac{k^2+2-x_i}{k+2-i}\right\rfloor\ge k+1\]
 if and only if there exists a permutation $\sigma$ such that $X$ is the unique $\sigma$-nice tuple in $S$.</p></div>

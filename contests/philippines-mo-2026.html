@@ -29,6 +29,11 @@ description: Philippine Mathematical Olympiad 2026, National Stage: problems wit
   .ct-note { font-size: 14px; color: var(--ink-soft); font-style: italic; }
   .ct-bar { margin: .6em 0 1em; display: flex; gap: 10px; flex-wrap: wrap; }
   .ct-bar button { font: inherit; font-size: 14px; padding: 5px 12px; border-radius: var(--radius); border: 1px solid var(--brand); background: var(--white); color: var(--brand); cursor: pointer; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
 </style>
 <script>
   window.MathJax = { tex: { inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [['\\[','\\]']], processEscapes: true },
@@ -57,6 +62,28 @@ description: Philippine Mathematical Olympiad 2026, National Stage: problems wit
   .ct-text mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
 </style>
 
+<style>
+  .ct-tags { display: flex; flex-wrap: wrap; gap: 5px; margin: 0 0 .55em; }
+  .ct-tg { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .03em; padding: 2px 8px; border-radius: 999px; line-height: 1.5; }
+  .ct-lv { background: #eee7dc; color: #4a3d33; }
+  .ct-df-Starter { background: #dcf1dc; color: #245c24; }
+  .ct-df-Explorer { background: #d6efec; color: #155e57; }
+  .ct-df-Challenger { background: #dce8f7; color: #1f4c80; }
+  .ct-df-Olympiad { background: #e7defa; color: #4b2a8a; }
+  .ct-df-Advanced { background: #fbe4cc; color: #8a4a0b; }
+  .ct-df-Expert { background: #f8d6cf; color: #8c2600; }
+  .ct-band { margin: 1.3em 0 .5em; font-size: 14px; color: var(--ink-soft); }
+  .ct-band .ct-tg { font-size: 13px; margin-right: .4em; }
+  .ct-legend { font-size: 14.5px; background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 10px 16px; margin: 1em 0 1.4em; }
+  .ct-legend p { margin: .35em 0; }
+  .ct-legend ul { margin: .2em 0 .4em; padding-left: 1.1em; }
+  .ct-legend li { margin: .2em 0; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
+</style>
 {% endraw %}
 <p><a href="{{ '/contests-2026' | relative_url }}">&larr; All contests 2026</a></p>
 
@@ -73,7 +100,7 @@ description: Philippine Mathematical Olympiad 2026, National Stage: problems wit
 <h2 class="ct-group" id="day-1">Day 1</h2>
 <section class="ct-problem" id="p1">
 <h3>Problem 1</h3>
-<div class="ct-meta">Geometry &middot; LPS VII, Chapter 19: Triangle Centers and Classical Triangle Geometry</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 19: Triangle Centers and Classical Triangle Geometry &middot; Angle Bisector and Median Geometry</div>
 <div class="ct-text"><p>Let $ABC$ be a triangle such that $AC-AB=BC-AC=d&gt;0$. Let $\Omega$ be the circumcircle of $ABC$, $D$ the point on $\Omega$ which bisects the minor arc $AC$, and $E$ the foot of the altitude from $B$ to $AC$. The segment $BD$ meets $AC$ at a point $F$. Show that $EF=3d/2$.</p></div>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Projections onto $AC$ and the angle bisector theorem)</h4>
@@ -115,7 +142,7 @@ and $EF=x_F-x_E=\frac{3d}{2}$.</p>
 </section>
 <section class="ct-problem" id="p2">
 <h3>Problem 2</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 44: Combinatorial Games and Strategy</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 44: Combinatorial Games and Strategy &middot; Recursive Game Structure</div>
 <div class="ct-text"><p>Alice and Bob are playing a game on a grid of squares with $m$ rows and $n$ columns, which initially is empty. At the start of the game, each player owns $mn$ coins. When it is a player's turn to move, they choose a row or column with at least one empty cell, and place one of their coins in each of the empty cells in that row or column. Starting with Alice, the players take turns making moves until there are no more empty cells in the grid. Both players want to maximize the number of coins they have left at the end of the game. If they both play optimally, for how many ordered pairs $(m,n)$ of positive integers will Alice be left with $2025$ coins?</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$60$</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -157,7 +184,7 @@ with $m&lt;n$ and, swapped, $15$ with $m&gt;n$. Altogether $\boxed{60}$ ordered 
 </section>
 <section class="ct-problem" id="p3">
 <h3>Problem 3</h3>
-<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 8: Modular Arithmetic and Congruence Methods</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Number Theory &middot; LPS VII, Chapter 8: Modular Arithmetic and Congruence Methods &middot; Modular Equations and Solutions</div>
 <div class="ct-text"><p>Let $d\ge 2$ be an integer. An integer $n=\overline{a_1a_2\cdots a_d}$ with $a_1\ne 0$ is <em>left-rotatable</em> if $a_2\ne 0$. In this case, define $L(n)=\overline{a_2a_3\cdots a_da_1}$, which also has $d$ digits like $n$. Similarly, an integer $n=\overline{a_1a_2\cdots a_d}$ with $a_1\ne 0$ is <em>right-rotatable</em> if $a_d\ne 0$. In this case, define $R(n)=\overline{a_da_1a_2\cdots a_{d-1}}$, which also has $d$ digits like $n$.</p><ul class="ct-parts"><li><p><span class="ct-lbl">(a)</span> Show that there exists a $d$ for which there are at least $24$ left-rotatable $d$-digit integers $n$ such that $L(n)\mid n$.</p></li><li><p><span class="ct-lbl">(b)</span> Does there exist a $d$ for which there are at least $24$ right-rotatable $d$-digit integers $n$ such that $R(n)\mid n$?</p></li></ul></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(a) proof ($d=18$ works); (b) $\boxed{\text{No}}$</p></div></details>
 <details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
@@ -208,7 +235,7 @@ Then $\frac T{10}&lt;x=\frac{a(3T-1)}7&lt;T$, so $n=10x+a$ has $d$ digits, is ri
 </section>
 <section class="ct-problem" id="p4">
 <h3>Problem 4</h3>
-<div class="ct-meta">Algebra &middot; LPS VII, Chapter 46: Functional Equations: Iteration, Rigidity, and Deep Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Algebra &middot; LPS VII, Chapter 46: Functional Equations: Iteration, Rigidity, and Deep Structure &middot; Monotonicity, Boundedness, and Regularity</div>
 <div class="ct-text"><p>Let $\mathbb{N}_0$ be the set of nonnegative integers. Find all nondecreasing functions $f:\mathbb{R}^+\to\mathbb{N}_0$ such that
 \[f(x)=f\left(\frac{x}{n}\right)+f\left(\frac{x+1}{n}\right)+f\left(\frac{x+2}{n}\right)+\dots+f\left(\frac{x+n-1}{n}\right)\]
 for all positive real numbers $x$ and positive integers $n$.
@@ -257,7 +284,7 @@ $f(k)=\alpha k+\beta(k-1)$, $f(x)=(\alpha+\beta)\lfloor x\rfloor$ off the intege
 <h2 class="ct-group" id="day-2">Day 2</h2>
 <section class="ct-problem" id="p5">
 <h3>Problem 5</h3>
-<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 22: Summation, Telescoping, and Discrete Transformation</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VII scale">E</span>Number Theory &middot; LPS VII, Chapter 22: Summation, Telescoping, and Discrete Transformation &middot; Telescoping Sums and Products</div>
 <div class="ct-text"><p>Prove that there are infinitely many positive integers $k$ satisfying the following property: there exist positive integers $a_1,\dots,a_k$, not all equal, such that
 \[\frac{1}{a_1(a_1+1)}+\frac{1}{a_2(a_2+1)}+\dots+\frac{1}{a_k(a_k+1)}=1.\]</p></div>
 <details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
@@ -292,7 +319,7 @@ first step keeps the entry $1$ and contains entries at least $2$, so its entries
 </section>
 <section class="ct-problem" id="p6">
 <h3>Problem 6</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 6: Pigeonhole Principle and Density Arguments</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 6: Pigeonhole Principle and Density Arguments &middot; Density and Averaging Arguments</div>
 <div class="ct-text"><p>What is the smallest value of $n$ such that if you color any $n$ squares of an $11\times 11$ grid black, there is guaranteed to be at least one $1\times 5$ or $5\times 1$ tile in the grid such that its first, third, and fifth squares are black?</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$82$</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -327,7 +354,7 @@ These $81$ cells contain no bad tile.</p><p>Hence the smallest $n$ is $\boxed{82
 </section>
 <section class="ct-problem" id="p7">
 <h3>Problem 7</h3>
-<div class="ct-meta">Geometry &middot; LPS VII, Chapter 36: Coordinate Geometry and Analytic Representation</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 36: Coordinate Geometry and Analytic Representation &middot; Cartesian Coordinate Setup</div>
 <div class="ct-text"><p>Let $A_1A_2A_3A_4$ be a square inscribed in convex quadrilateral $B_1B_2B_3B_4$, such that for each $i\in\{1,2,3,4\}$, point $A_i$ lies on $B_iB_{i+1}$, where we take $B_5=B_1$. Let $m$ be an integer. Let $C_1C_2C_3C_4$ be a quadrilateral such that for each $i\in\{1,2,3,4\}$, point $C_i$ is the foot of the perpendicular from $B_i$ to line $A_{i+m}A_{i+m+1}$, where we take indices modulo $4$. Find all integers $m$ such that the following holds: if $C_1C_2C_3C_4$ is a square, then $B_1B_2B_3B_4$ is also a square.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>exactly the even integers $m$</p></div></details>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
@@ -389,7 +416,7 @@ triangles are congruent (equal hypotenuses, equal angles), which again forces al
 </section>
 <section class="ct-problem" id="p8">
 <h3>Problem 8</h3>
-<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 29: Valuations and Lifting the Exponent</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Number Theory &middot; LPS VII, Chapter 29: Valuations and Lifting the Exponent &middot; Lifting the Exponent (LTE)</div>
 <div class="ct-text"><p>Find all triples of positive integers $(a,b,n)$ where $n\ge 2$, and both $a^n+b$ and $b^n+a$ are powers of $2$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$(a,b,n)=(1,1,n)$ for every $n\ge2$, and $(3,5,3)$, $(5,3,3)$</p></div></details>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">

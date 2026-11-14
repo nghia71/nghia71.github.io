@@ -29,6 +29,11 @@ description: Turkey Team Selection Test 2026: problems with answers and solution
   .ct-note { font-size: 14px; color: var(--ink-soft); font-style: italic; }
   .ct-bar { margin: .6em 0 1em; display: flex; gap: 10px; flex-wrap: wrap; }
   .ct-bar button { font: inherit; font-size: 14px; padding: 5px 12px; border-radius: var(--radius); border: 1px solid var(--brand); background: var(--white); color: var(--brand); cursor: pointer; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
 </style>
 <script>
   window.MathJax = { tex: { inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [['\\[','\\]']], processEscapes: true },
@@ -57,6 +62,28 @@ description: Turkey Team Selection Test 2026: problems with answers and solution
   .ct-text mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
 </style>
 
+<style>
+  .ct-tags { display: flex; flex-wrap: wrap; gap: 5px; margin: 0 0 .55em; }
+  .ct-tg { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .03em; padding: 2px 8px; border-radius: 999px; line-height: 1.5; }
+  .ct-lv { background: #eee7dc; color: #4a3d33; }
+  .ct-df-Starter { background: #dcf1dc; color: #245c24; }
+  .ct-df-Explorer { background: #d6efec; color: #155e57; }
+  .ct-df-Challenger { background: #dce8f7; color: #1f4c80; }
+  .ct-df-Olympiad { background: #e7defa; color: #4b2a8a; }
+  .ct-df-Advanced { background: #fbe4cc; color: #8a4a0b; }
+  .ct-df-Expert { background: #f8d6cf; color: #8c2600; }
+  .ct-band { margin: 1.3em 0 .5em; font-size: 14px; color: var(--ink-soft); }
+  .ct-band .ct-tg { font-size: 13px; margin-right: .4em; }
+  .ct-legend { font-size: 14.5px; background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 10px 16px; margin: 1em 0 1.4em; }
+  .ct-legend p { margin: .35em 0; }
+  .ct-legend ul { margin: .2em 0 .4em; padding-left: 1.1em; }
+  .ct-legend li { margin: .2em 0; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
+</style>
 {% endraw %}
 <p><a href="{{ '/contests-2026' | relative_url }}">&larr; All contests 2026</a></p>
 
@@ -73,7 +100,7 @@ description: Turkey Team Selection Test 2026: problems with answers and solution
 <h2 class="ct-group" id="day-1">Day 1</h2>
 <section class="ct-problem" id="p1">
 <h3>Problem 1</h3>
-<div class="ct-meta">Algebra &middot; LPS VII, Chapter 9: Polynomials and Root-Coefficient Strategy</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Algebra &middot; LPS VII, Chapter 9: Polynomials and Root-Coefficient Strategy &middot; Integer and Rational Root Structure</div>
 <div class="ct-text"><p>Let $a_1,a_2,\dots$ be an infinite sequence of integers. For all $n\ge 1$ integers, number $a_{n+34}$ is root of polynomial
 \[P_n(x)=a_{n+33}x^{33}+\dots+a_{n+1}x+a_n\]
 If the number $2026$ is element of this sequence find all possible values of $a_1$.</p></div>
@@ -104,7 +131,7 @@ and $R_{i+2}=0$.</p></li></ul><p>Starting from $R_0=0$ we run through the whole 
 </section>
 <section class="ct-problem" id="p2">
 <h3>Problem 2</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 20: Parity, Coloring, and Process Termination</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 20: Parity, Coloring, and Process Termination &middot; Process Termination and Reachability</div>
 <div class="ct-text"><p>There are $n$ balls labeled from $1$ to $n$, placed in a line in a random order. In each move, Aslı takes the ball at position $k$ and places it at the end of the line, where $k$ is the number written on the ball currently at the end of the line. The process stops when the number on the ball at the end of the line is $n$. What is the maximum possible number of moves Aslı can make?</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$2^{n-1}-1$</p></div></details>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
@@ -125,7 +152,7 @@ Now $\ast$ is at position $p=L-j-1\ge1$. After subtracting $p$ from the labels l
 </section>
 <section class="ct-problem" id="p3">
 <h3>Problem 3</h3>
-<div class="ct-meta">Geometry &middot; LPS VII, Chapter 11: Similarity, Homothety, and Ratio Geometry</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 11: Similarity, Homothety, and Ratio Geometry &middot; Homothety Centers and Image Tracking</div>
 <div class="ct-text"><p>Let $\omega$ be the incircle of triangle $ABC$ with center $I$. Let the points where $\omega$ is tangent to sides $BC$, $CA$, and $AB$ be $D$, $E$, and $F$, respectively. Let $\Omega$ be the circle passing through $A$ and tangent to $BC$ at $D$. Let the second intersection points of lines $DF$ and $DE$ with $\Omega$ be $F_1$ and $E_1$, respectively. Let $T$ be the intersection point of lines $BF_1$ and $CE_1$. Let $U$ be the second intersection point of the circumcircles of triangles $DBF_1$ and $DCE_1$. Prove that
 \[\angle BTA=\angle CTU.\]</p></div>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -241,7 +268,7 @@ that is, $\angle BTA=\angle CTU$. (Because the factor $\lambda$ is positive, not
 <h2 class="ct-group" id="day-2">Day 2</h2>
 <section class="ct-problem" id="p4">
 <h3>Problem 4</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 44: Combinatorial Games and Strategy</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 44: Combinatorial Games and Strategy &middot; Invariant-Based Game Analysis</div>
 <div class="ct-text"><p>Aslı and Zehra play a game on a board with $m$ rows and $n$ columns. Initially, Aslı writes integers on each cell of the board such that all rows contain different numbers internally. After that, Aslı and Zehra take turns making moves, with Zehra making the first move. In each of her moves, Zehra chooses an integer that hasn't been chosen yet, and colors all cells containing that number red. In each of her moves, Aslı chooses an integer that hasn't been chosen yet, and colors all cells containing that number blue. If Aslı can guarantee that there are at least $N$ rows that contain only blue cells after all the cells are colored, find the maximum possible value of $N$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\left\lfloor \dfrac{m}{2^{n}}\right\rfloor$</p></div></details>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
@@ -259,7 +286,7 @@ and she fills the remaining $m-q\,2^n$ rows with copies of one of these rows. Th
 </section>
 <section class="ct-problem" id="p5">
 <h3>Problem 5</h3>
-<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 21: Arithmetic Functions and Multiplicative Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Number Theory &middot; LPS VII, Chapter 21: Arithmetic Functions and Multiplicative Structure &middot; Euler Totient and Related Functions</div>
 <div class="ct-text"><p>Find all infinite positive integer sequences $a_1,a_2,\dots$ such that
 \[\varphi(a_i)\varphi(a_{i+1})=a_i^2\]
 holds for all positive integers $i$.</p><p><em>Note: For each positive integer $n$, define $\varphi(n)$ as the number of positive integers coprime with $n$ which are at most $n$.</em></p></div>
@@ -286,7 +313,7 @@ Thus $q-1$ divides $2^{a+1}q^{e+1}$; it is prime to $q$ and is twice an odd numb
 </section>
 <section class="ct-problem" id="p6">
 <h3>Problem 6</h3>
-<div class="ct-meta">Algebra &middot; LPS VII, Chapter 46: Functional Equations: Iteration, Rigidity, and Deep Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-S" title="Superhard, on the LPS VII scale">S</span>Algebra &middot; LPS VII, Chapter 46: Functional Equations: Iteration, Rigidity, and Deep Structure &middot; Iteration and Self-Composition</div>
 <div class="ct-text"><p>Find all functions $f:\mathbb{R}^+\to\mathbb{R}^+$ such that for all $x,y\in\mathbb{R}^+$
 \[f(x+yf(x))=f(f(x))f(x^2+y)\]</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$f(x)=1$ for all $x$, and $f(x)=\dfrac1x$ for all $x$</p></div></details>
@@ -336,7 +363,7 @@ Hence $f(f(x))=1/f(x)$: every value $u=f(x)$ satisfies $f(u)=1/u$. For $f(x)=\fr
 <h2 class="ct-group" id="day-3">Day 3</h2>
 <section class="ct-problem" id="p7">
 <h3>Problem 7</h3>
-<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 12: Exponential Congruences and Order Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 12: Exponential Congruences and Order Structure &middot; Orders and Primitive Behavior</div>
 <div class="ct-text"><p>Let $a,d,r$ be positive integers. Define the integer sequence $x_1,x_2,\dots$ by letting, for each $n\ge 1$, $x_n$ be the smallest prime divisor of $a^{dn+r}+1$.</p><ul class="ct-parts"><li><p><span class="ct-lbl">(a)</span> Prove that there exists a number that appears infinitely many times in the sequence $(x_n)$.</p></li><li><p><span class="ct-lbl">(b)</span> Determine all triples $(a,d,r)$ for which the sequence $(x_n)$ is unbounded above.</p></li></ul></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(b) Exactly the triples with $a$ even and $v_2(d)\le v_2(r)$ (the highest power of $2$ dividing $d$ also divides $r$)</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -352,7 +379,7 @@ So $p$ is a prime divisor of $a^{k_n}+1$ and $x_n\le p$; by the choice of $p$ al
 </section>
 <section class="ct-problem" id="p8">
 <h3>Problem 8</h3>
-<div class="ct-meta">Geometry &middot; LPS VII, Chapter 51: Spiral Similarity and Advanced Transformational Geometry</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 51: Spiral Similarity and Advanced Transformational Geometry &middot; Miquel and Rotational Circle Structure</div>
 <div class="ct-text"><p>Let $P$ be a point on the circumcircle of triangle $ABC$. Let $D$ and $K$ be points on line $AB$, and let $E$ and $L$ be points on line $AC$, chosen so that $PKDLE$ is a cyclic pentagon. Let $U$ be the second intersection point of the circumcircles of triangles $PBD$ and $PCL$, and let $V$ be the second intersection point of the circumcircles of triangles $PCE$ and $PBK$. Let $X$ be the intersection point of lines $BE$ and $DV$, and let $Y$ be the intersection point of lines $CD$ and $EU$. Prove that the lines $XL$, $YK$, and $BC$ are concurrent.</p></div>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
 <h4>Solution (Three Miquel points and Desargues twice)</h4>
@@ -386,7 +413,7 @@ are collinear. (Here $DB$ is the line $AB$ and $EV$ is the line $KE$, which meet
 </section>
 <section class="ct-problem" id="p9">
 <h3>Problem 9</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 39: Graph Theory and Structural Combinatorics</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 39: Graph Theory and Structural Combinatorics &middot; Paths, Cycles, and Connectivity</div>
 <div class="ct-text"><p>On a planet with finitely many cities, some pairs of cities are connected by one-way flights. Show that the cities can be partitioned into several countries, and in each country one city can be chosen as the capital, in such a way that the following conditions hold (a city $v$ can be reached from a city $u$ if one can fly from $u$ to $v$ using one or more flights):</p><ul class="ct-ul"><li><p>In each country, there do not exist two distinct cities such that one can be reached from the other.</p></li><li><p>For any two distinct capitals, at least one of them can be reached from the other.</p></li></ul></div>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
 <h4>Solution (Heaviest chains of clusters)</h4>

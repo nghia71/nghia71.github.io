@@ -29,6 +29,11 @@ description: Grades 3-4 Selection 2026: selected problems from 2026 contests: pr
   .ct-note { font-size: 14px; color: var(--ink-soft); font-style: italic; }
   .ct-bar { margin: .6em 0 1em; display: flex; gap: 10px; flex-wrap: wrap; }
   .ct-bar button { font: inherit; font-size: 14px; padding: 5px 12px; border-radius: var(--radius); border: 1px solid var(--brand); background: var(--white); color: var(--brand); cursor: pointer; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
 </style>
 <script>
   window.MathJax = { tex: { inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [['\\[','\\]']], processEscapes: true },
@@ -57,6 +62,28 @@ description: Grades 3-4 Selection 2026: selected problems from 2026 contests: pr
   .ct-text mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
 </style>
 
+<style>
+  .ct-tags { display: flex; flex-wrap: wrap; gap: 5px; margin: 0 0 .55em; }
+  .ct-tg { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .03em; padding: 2px 8px; border-radius: 999px; line-height: 1.5; }
+  .ct-lv { background: #eee7dc; color: #4a3d33; }
+  .ct-df-Starter { background: #dcf1dc; color: #245c24; }
+  .ct-df-Explorer { background: #d6efec; color: #155e57; }
+  .ct-df-Challenger { background: #dce8f7; color: #1f4c80; }
+  .ct-df-Olympiad { background: #e7defa; color: #4b2a8a; }
+  .ct-df-Advanced { background: #fbe4cc; color: #8a4a0b; }
+  .ct-df-Expert { background: #f8d6cf; color: #8c2600; }
+  .ct-band { margin: 1.3em 0 .5em; font-size: 14px; color: var(--ink-soft); }
+  .ct-band .ct-tg { font-size: 13px; margin-right: .4em; }
+  .ct-legend { font-size: 14.5px; background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 10px 16px; margin: 1em 0 1.4em; }
+  .ct-legend p { margin: .35em 0; }
+  .ct-legend ul { margin: .2em 0 .4em; padding-left: 1.1em; }
+  .ct-legend li { margin: .2em 0; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
+</style>
 {% endraw %}
 <p><a href="{{ '/contests-2026' | relative_url }}">&larr; All contests 2026</a></p>
 
@@ -65,14 +92,14 @@ description: Grades 3-4 Selection 2026: selected problems from 2026 contests: pr
 <div class="ct-intro">
 <p>The 23 problems of the Grades 3-4 Selection 2026: selected problems from 2026 contests, each with our own solutions, hidden until you open them. Where a problem has a final answer, it is shown separately. Try a problem first, then check.</p><p>Selected problems for grades 3 and 4, chosen from the 2026 Primary Kangaroo, Junior Mathematical Challenge, Gauss and AMC 8 papers. Each problem names its source; the problems go from easy to hard.</p>
 </div>
-<div class="ct-credit">Problems selected from the 2026 contests named under each problem (UKMT, CEMC, MAA, MIMC, SMOPS and CLMC); they belong to their publishers. Solutions written by MCC.</div>
+<div class="ct-credit">Problems selected from the 2026 contests named under each problem (UKMT, CEMC, MAA, MATHCOUNTS, MIMC, SMOPS, CLMC and Vietnamese entrance exams); they belong to their publishers. Solutions written by MCC.</div>
 <div class="ct-bar"><button type="button" onclick="ctAll(true)">Show all answers and solutions</button><button type="button" onclick="ctAll(false)">Hide all</button></div>
 <div class="ct-toc-wrap"><div class="ct-toc-row"><a href="#p1">1</a><a href="#p2">2</a><a href="#p3">3</a><a href="#p4">4</a><a href="#p5">5</a><a href="#p6">6</a><a href="#p7">7</a><a href="#p8">8</a><a href="#p9">9</a><a href="#p10">10</a><a href="#p11">11</a><a href="#p12">12</a><a href="#p13">13</a><a href="#p14">14</a><a href="#p15">15</a><a href="#p16">16</a><a href="#p17">17</a><a href="#p18">18</a><a href="#p19">19</a><a href="#p20">20</a><a href="#p21">21</a><a href="#p22">22</a><a href="#p23">23</a></div></div>
 
 {% raw %}
 <section class="ct-problem" id="p1">
 <h3>Problem 1</h3>
-<div class="ct-meta">Algebra &middot; LPS VI, Chapter 53: Sequences, Series, and Recursive Patterns</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Algebra &middot; LPS VI, Chapter 53: Sequences, Series, and Recursive Patterns &middot; Series and Summation Patterns</div>
 <div class="ct-text"><p>Beverly creates a sequence of integers. She begins by setting $\mathrm{sum}=0$ and $\mathrm{a}=1$. She then writes down the value of $\mathrm{sum}$ as the first term of the sequence. Beverly continues the sequence by applying the following steps:</p><ul class="ct-ul"><li><p>Step 1: She sets $\mathrm{sum}=\mathrm{sum}+\mathrm{a}$.</p></li><li><p>Step 2: She writes down the value of $\mathrm{sum}$ as the next term of the sequence.</p></li><li><p>Step 3: If $\mathrm{a}=9$, she stops; otherwise she sets $\mathrm{a}=\mathrm{a}+2$ and returns to Step 1.</p></li></ul><p>What is the last term in Beverly's sequence?</p><p>(A) $36$&emsp;(B) $81$&emsp;(C) $16$&emsp;(D) $9$&emsp;(E) $25$</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(E) $25$</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -85,7 +112,7 @@ description: Grades 3-4 Selection 2026: selected problems from 2026 contests: pr
 </section>
 <section class="ct-problem" id="p2">
 <h3>Problem 2</h3>
-<div class="ct-meta">Algebra &middot; LPS VI, Chapter 25: Algebraic Word Problem Models</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Algebra &middot; LPS VI, Chapter 25: Algebraic Word Problem Models &middot; Heads, Legs, and Two-Type Counting</div>
 <div class="ct-text"><p>In a village, there are two types of monsters:</p><ul class="ct-ul"><li><p>monsters with $1$ eye and $4$ legs,</p></li><li><p>monsters with $3$ eyes and $2$ legs.</p></li></ul><p>Altogether the monsters have $9$ eyes and $16$ legs. How many monsters with $1$ eye are there?</p><p>(A) $1$&emsp;(B) $2$&emsp;(C) $3$&emsp;(D) $4$&emsp;(E) $5$</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(C) $3$</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -97,7 +124,7 @@ description: Grades 3-4 Selection 2026: selected problems from 2026 contests: pr
 </section>
 <section class="ct-problem" id="p3">
 <h3>Problem 3</h3>
-<div class="ct-meta">Geometry &middot; LPS VI, Chapter 50: Combinatorial Geometry</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Geometry &middot; LPS VI, Chapter 50: Combinatorial Geometry &middot; Tilings, Boards, and Lattice Arrangements</div>
 <div class="ct-text"><p>Alina has a red number line that runs from $0$ to $12$. She bends it out of shape and places it on a grid, as shown below. What number is at the $\star$?</p><p>(A) $5$&emsp;(B) $6$&emsp;(C) $7$&emsp;(D) $8$&emsp;(E) $10$</p><div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/grade-3-4-3.svg" alt="Figure for Problem 3"></div></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(D) $8$</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -110,7 +137,7 @@ description: Grades 3-4 Selection 2026: selected problems from 2026 contests: pr
 </section>
 <section class="ct-problem" id="p4">
 <h3>Problem 4</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VI, Chapter 10: Logical Deduction and Constraint Puzzles</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Combinatorics &middot; LPS VI, Chapter 10: Logical Deduction and Constraint Puzzles &middot; Constraint Satisfaction</div>
 <div class="ct-text"><p>Dela, Ela, and Fela go to an ice cream shop. One of the girls buys strawberry ice cream, another buys vanilla ice cream, and another buys chocolate ice cream. Each girl buys a different number of scoops: $1$, $2$, or $3$. We know that:</p><ul class="ct-ul"><li><p>Dela does not buy strawberry ice cream and chooses the smallest amount,</p></li><li><p>Ela does not buy chocolate ice cream,</p></li><li><p>The chocolate ice cream is the largest.</p></li></ul><p>Which ice cream does Fela buy? (The five options (A)&ndash;(E) are shown in the picture below.)</p><div class="ct-fig"><img style="width:443px" src="/assets/contests/2026-27/grade-3-4-4.svg" alt="Figure for Problem 4"></div></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(E) chocolate, $3$ scoops</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -122,7 +149,7 @@ description: Grades 3-4 Selection 2026: selected problems from 2026 contests: pr
 </section>
 <section class="ct-problem" id="p5">
 <h3>Problem 5</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VI, Chapter 10: Logical Deduction and Constraint Puzzles</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Combinatorics &middot; LPS VI, Chapter 10: Logical Deduction and Constraint Puzzles &middot; Contradiction and Elimination</div>
 <div class="ct-text"><p>Abel, Brock, Callie, Duan, and Edith are sitting around a circular table. Brock sits in the chair between Abel and Duan. Edith is not beside Duan. Who is sitting to Edith's immediate left and right?</p><p>(A) Abel and Callie&emsp;(B) Brock and Duan&emsp;(C) Abel and Brock&emsp;(D) Brock and Callie&emsp;(E) Callie and Duan</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(A) Abel and Callie</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -134,7 +161,7 @@ description: Grades 3-4 Selection 2026: selected problems from 2026 contests: pr
 </section>
 <section class="ct-problem" id="p6">
 <h3>Problem 6</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VI, Chapter 10: Logical Deduction and Constraint Puzzles</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Combinatorics &middot; LPS VI, Chapter 10: Logical Deduction and Constraint Puzzles &middot; Contradiction and Elimination</div>
 <div class="ct-text"><p>A floor is made of five different tiles. The tiles are laid in a repeating pattern. Evan takes a picture of part of the floor on his phone, as shown below. Which of the following is the repeating pattern of the five tiles? (The options (A)&ndash;(E) are shown below the phone.)</p><div class="ct-fig"><img style="width:353px" src="/assets/contests/2026-27/grade-3-4-6.svg" alt="Figure for Problem 6"></div></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(C)</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -146,7 +173,7 @@ description: Grades 3-4 Selection 2026: selected problems from 2026 contests: pr
 </section>
 <section class="ct-problem" id="p7">
 <h3>Problem 7</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VI, Chapter 2: Fundamental Counting Principles</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Combinatorics &middot; LPS VI, Chapter 2: Fundamental Counting Principles &middot; Simple Overcount Correction</div>
 <div class="ct-text"><p>How many different four-digit integers greater than $2000$ can be made using each of the four digits $2$, $0$, $2$, $6$ exactly once?</p><p>(A) $6$&emsp;(B) $8$&emsp;(C) $10$&emsp;(D) $7$&emsp;(E) $9$</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(E) $9$</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -158,7 +185,7 @@ description: Grades 3-4 Selection 2026: selected problems from 2026 contests: pr
 </section>
 <section class="ct-problem" id="p8">
 <h3>Problem 8</h3>
-<div class="ct-meta">Number Theory &middot; LPS VI, Chapter 15: GCD, LCM, and Multiplicative Interaction</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Number Theory &middot; LPS VI, Chapter 15: GCD, LCM, and Multiplicative Interaction &middot; LCM Logic</div>
 <div class="ct-text"><p>A train has an engine that pulls $18$ coaches. The picture below shows the engine and the first four coaches of the train.</p><p>The colour of each coach goes in this repeating sequence:</p><div class="ct-center"><p>red, red, red, yellow, yellow, blue.</p></div><p>Each coach has a roof and the roofs are coloured according to the repeating sequence:</p><div class="ct-center"><p>yellow, red, yellow, red.</p></div><p>How many of the $18$ coaches are red with a red roof?</p><p>(A) $1$&emsp;(B) $3$&emsp;(C) $4$&emsp;(D) $6$&emsp;(E) $8$</p><div class="ct-fig"><img style="width:401px" src="/assets/contests/2026-27/grade-3-4-8.svg" alt="Figure for Problem 8"></div></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(B) $3$</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -170,7 +197,7 @@ description: Grades 3-4 Selection 2026: selected problems from 2026 contests: pr
 </section>
 <section class="ct-problem" id="p9">
 <h3>Problem 9</h3>
-<div class="ct-meta">Geometry &middot; LPS VI, Chapter 50: Combinatorial Geometry</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Geometry &middot; LPS VI, Chapter 50: Combinatorial Geometry &middot; Counting Figures in Diagrams</div>
 <div class="ct-text"><p>Dan takes a cream-coloured square of paper. He places a blue square on top of it, and then places a green square on top of that, covering a corner of the blue square and part of the cream square, as shown below. Then he cuts the pile of paper along the two lines shown. How many of the pieces that he ends up with are squares?</p><p>(A) $3$&emsp;(B) $4$&emsp;(C) $5$&emsp;(D) $7$&emsp;(E) $9$</p><div class="ct-fig"><img style="width:224px" src="/assets/contests/2026-27/grade-3-4-9.svg" alt="Figure for Problem 9"></div></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(C) $5$</p></div></details>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
@@ -181,7 +208,7 @@ description: Grades 3-4 Selection 2026: selected problems from 2026 contests: pr
 </section>
 <section class="ct-problem" id="p10">
 <h3>Problem 10</h3>
-<div class="ct-meta">Number Theory &middot; LPS VI, Chapter 11: Divisors and Arithmetic Functions of a Number</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Number Theory &middot; LPS VI, Chapter 11: Divisors and Arithmetic Functions of a Number &middot; Counting Divisors</div>
 <div class="ct-text"><p>Asha is asked to cut a $36$ m length of ribbon into smaller pieces so that each piece has equal length, and the ribbon width does not change. The length of each of the pieces must be a whole number of metres. If she must make at least $1$ cut, how many possibilities are there for the length of the smaller ribbons?</p><p>(A) $10$&emsp;(B) $7$&emsp;(C) $6$&emsp;(D) $5$&emsp;(E) $8$</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(E) $8$</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -195,7 +222,7 @@ So the possible lengths are $1, 2, 3, 4, 6, 9, 12, 18$ and $36$ metres. A length
 </section>
 <section class="ct-problem" id="p11">
 <h3>Problem 11</h3>
-<div class="ct-meta">Geometry &middot; LPS VI, Chapter 32: Area by Measurement and Decomposition</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Geometry &middot; LPS VI, Chapter 32: Area by Measurement and Decomposition &middot; Grid and Lattice Area</div>
 <div class="ct-text"><p>Beth is making a heart-shaped puzzle for her mother, as shown below. She intends to use four of the following pieces to finish it. Which of these pieces does she have to leave out? (The pieces (A)&ndash;(E) are shown to the right of the puzzle.)</p><div class="ct-fig"><img style="width:392px" src="/assets/contests/2026-27/grade-3-4-11.svg" alt="Figure for Problem 11"></div></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(A)</p></div></details>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
@@ -206,7 +233,7 @@ So the possible lengths are $1, 2, 3, 4, 6, 9, 12, 18$ and $36$ metres. A length
 </section>
 <section class="ct-problem" id="p12">
 <h3>Problem 12</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VI, Chapter 10: Logical Deduction and Constraint Puzzles</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Combinatorics &middot; LPS VI, Chapter 10: Logical Deduction and Constraint Puzzles &middot; Implication Chains</div>
 <div class="ct-text"><p>Each tile in the grid below has an arrow. The arrow shows the direction in which Indira must walk from one tile to the next. From which tile should Indira start in order to walk over <strong>all</strong> of the tiles exactly once?</p><p>(A) P1&emsp;(B) Q1&emsp;(C) R2&emsp;(D) S2&emsp;(E) S3</p><div class="ct-fig"><img style="width:397px" src="/assets/contests/2026-27/grade-3-4-12.svg" alt="Figure for Problem 12"></div></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(D) S2</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -221,7 +248,7 @@ No tile points to S2, and this chain uses all $12$ tiles. So Indira starts at $\
 </section>
 <section class="ct-problem" id="p13">
 <h3>Problem 13</h3>
-<div class="ct-meta">Number Theory &middot; LPS VI, Chapter 47: Combinatorial Number Theory</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Number Theory &middot; LPS VI, Chapter 47: Combinatorial Number Theory &middot; Residue-Class Counting</div>
 <div class="ct-text"><p>Carl counts in a curious way! He starts at $1$, but then always misses out multiples of three and multiples of five. What number would Carl say last when he counts $15$ items?</p><p>(A) $22$&emsp;(B) $23$&emsp;(C) $26$&emsp;(D) $28$&emsp;(E) $29$</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(D) $28$</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -237,7 +264,7 @@ These are the $9$th to $15$th numbers, so the $15$th is $\boxed{\text{(D) } 28}$
 </section>
 <section class="ct-problem" id="p14">
 <h3>Problem 14</h3>
-<div class="ct-meta">Algebra &middot; LPS VI, Chapter 45: Inequalities and Absolute Value</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Algebra &middot; LPS VI, Chapter 45: Inequalities and Absolute Value &middot; Comparative Constraints</div>
 <div class="ct-text"><p>Five runners completed the grueling Xmarathon: Luke, Melina, Nico, Olympia, and Pedro.</p><ul class="ct-ul"><li><p>Nico finished $11$ minutes behind Pedro.</p></li><li><p>Olympia finished $2$ minutes ahead of Melina, but $3$ minutes behind Pedro.</p></li><li><p>Olympia finished $6$ minutes ahead of Luke.</p></li></ul><p>Which runner finished fourth?</p><p>(A) Luke&emsp;(B) Melina&emsp;(C) Nico&emsp;(D) Olympia&emsp;(E) Pedro</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(A) Luke</p></div></details>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
@@ -248,7 +275,7 @@ These are the $9$th to $15$th numbers, so the $15$th is $\boxed{\text{(D) } 28}$
 </section>
 <section class="ct-problem" id="p15">
 <h3>Problem 15</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VI, Chapter 10: Logical Deduction and Constraint Puzzles</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Combinatorics &middot; LPS VI, Chapter 10: Logical Deduction and Constraint Puzzles &middot; Constraint Satisfaction</div>
 <div class="ct-text"><p>Rosie wishes to write the numbers $2$, $0$, $2$, $6$ in the square grid shown below, so that in each row and in each column there are exactly two $2$s, one $0$ and one $6$. She has already written some of the numbers. When Rosie has finished, what will be the sum of the numbers in the squares with the question marks?</p><p>(A) $0$&emsp;(B) $2$&emsp;(C) $4$&emsp;(D) $6$&emsp;(E) $8$</p><div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/grade-3-4-15.svg" alt="Figure for Problem 15"></div></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(C) $4$</p></div></details>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
@@ -259,7 +286,7 @@ These are the $9$th to $15$th numbers, so the $15$th is $\boxed{\text{(D) } 28}$
 </section>
 <section class="ct-problem" id="p16">
 <h3>Problem 16</h3>
-<div class="ct-meta">Geometry &middot; LPS VI, Chapter 49: Systems of Equations and Multiple Constraints</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Geometry &middot; LPS VI, Chapter 49: Systems of Equations and Multiple Constraints &middot; Partial Totals and Cyclic Sums</div>
 <div class="ct-text"><p>In the triangle shown, $S$ is a point on the base $PQ$. The perimeter of triangle $PQR$ is $80$ cm. The perimeter of triangle $RPS$ is $44$ cm. The perimeter of triangle $RSQ$ is $60$ cm. What is the length of $RS$?</p><p>(A) $20$ cm&emsp;(B) $18$ cm&emsp;(C) $16$ cm&emsp;(D) $14$ cm&emsp;(E) $12$ cm</p><div class="ct-fig"><img style="width:232px" src="/assets/contests/2026-27/grade-3-4-16.svg" alt="Figure for Problem 16"></div></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(E) $12$ cm</p></div></details>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
@@ -272,7 +299,7 @@ that is $104 = 80 + 2\times RS$. Then $2\times RS = 24$ cm and $RS=\boxed{\text{
 </section>
 <section class="ct-problem" id="p17">
 <h3>Problem 17</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VI, Chapter 21: Digits, Place Value, and Decimal Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Combinatorics &middot; LPS VI, Chapter 21: Digits, Place Value, and Decimal Structure &middot; Digit Conditions and Search</div>
 <div class="ct-text"><p>The five rows of patterns shown below each represent one of the three-digit numbers
 \[183,\quad 451,\quad 521,\quad 872,\quad 882,\]
 though the five numbers are not necessarily in that order. Each digit from $0$ to $9$ has its own unique pattern. Which of the numbers is represented by the pattern with the question mark?</p><p>(A) $183$&emsp;(B) $451$&emsp;(C) $521$&emsp;(D) $872$&emsp;(E) $882$</p><div class="ct-fig"><img style="width:318px" src="/assets/contests/2026-27/grade-3-4-17.svg" alt="Figure for Problem 17"></div></div>
@@ -287,7 +314,7 @@ though the five numbers are not necessarily in that order. Each digit from $0$ t
 </section>
 <section class="ct-problem" id="p18">
 <h3>Problem 18</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VI, Chapter 10: Logical Deduction and Constraint Puzzles</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VI scale">H</span>Combinatorics &middot; LPS VI, Chapter 10: Logical Deduction and Constraint Puzzles &middot; Constraint Satisfaction</div>
 <div class="ct-text"><p>Five children, Jun, Kim, Lea, Mai and Nao, lie down and hold hands to make a circle, as in the picture.</p><ul class="ct-ul"><li><p>Jun holds Kim's left hand,</p></li><li><p>Mai does not hold Lea's hand,</p></li><li><p>Lea holds Nao's right hand.</p></li></ul><p>Who is Mai holding hands with?</p><p>(A) Nao and Kim&emsp;(B) Jun and Kim&emsp;(C) Lea and Kim&emsp;(D) Jun and Nao&emsp;(E) Lea and Nao</p><div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/grade-3-4-18.svg" alt="Figure for Problem 18"></div></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(A) Nao and Kim</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -300,7 +327,7 @@ though the five numbers are not necessarily in that order. Each digit from $0$ t
 </section>
 <section class="ct-problem" id="p19">
 <h3>Problem 19</h3>
-<div class="ct-meta">Geometry &middot; LPS VI, Chapter 52: Solid Geometry and Spatial Visualization</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VI scale">H</span>Geometry &middot; LPS VI, Chapter 52: Solid Geometry and Spatial Visualization &middot; Nets and Folding</div>
 <div class="ct-text"><p>The diagram shows the net of a cube. When it is folded to create a cube, each arrow points to an adjacent face. What is the sum of the two numbers on those faces?</p><p>(A) $3$&emsp;(B) $4$&emsp;(C) $5$&emsp;(D) $6$&emsp;(E) $7$</p><div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/grade-3-4-19.svg" alt="Figure for Problem 19"></div></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(D) $6$</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -313,7 +340,7 @@ though the five numbers are not necessarily in that order. Each digit from $0$ t
 </section>
 <section class="ct-problem" id="p20">
 <h3>Problem 20</h3>
-<div class="ct-meta">Number Theory &middot; LPS VI, Chapter 19: Modular Arithmetic and Remainder Tracking</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VI scale">H</span>Number Theory &middot; LPS VI, Chapter 19: Modular Arithmetic and Remainder Tracking &middot; Remainder Evolution</div>
 <div class="ct-text"><p>Three girls Non, Ida and Zoe, each have a box of sticks. One of the girls has a box of $1$ cm sticks, another of the girls a box of $2$ cm sticks, and another a box of $3$ cm sticks; however, we do not know which girl has which box.</p><p>Non places one of her sticks flat on the ground. Then each girl places one of her sticks to the right of the previous stick in the order Ida, Zoe, Non, Ida, Zoe, Non and so on, making a long straight line. They stop when the line is exactly $50$ cm long.</p><p>Which two sticks are at the beginning and at the end of the line? (The options (A)&ndash;(E) are shown below.)</p><div class="ct-fig"><img style="width:471px" src="/assets/contests/2026-27/grade-3-4-20.svg" alt="Figure for Problem 20"></div></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(E) $2$ cm and $2$ cm</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -325,7 +352,7 @@ though the five numbers are not necessarily in that order. Each digit from $0$ t
 </section>
 <section class="ct-problem" id="p21">
 <h3>Problem 21</h3>
-<div class="ct-meta">Number Theory &middot; LPS VI, Chapter 18: Parity, Invariants, and Monovariants</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VI scale">H</span>Number Theory &middot; LPS VI, Chapter 18: Parity, Invariants, and Monovariants &middot; Parity Arguments</div>
 <div class="ct-text"><p>The numbers $1$, $2$, $3$, $4$, $5$, and $6$ are to be placed in the six circles shown so that:</p><ul class="ct-parts"><li><p><span class="ct-lbl">(i)</span> there is one number in each circle, and</p></li><li><p><span class="ct-lbl">(ii)</span> the sum of the numbers in each pair of adjacent circles is a prime number.</p></li></ul><p>The number $1$ has already been placed. Which number should go in the circle marked $x$?</p><p>(A) $2$&emsp;(B) $3$&emsp;(C) $4$&emsp;(D) $5$&emsp;(E) $6$</p><div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/grade-3-4-21.svg" alt="Figure for Problem 21"></div></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(A) $2$</p></div></details>
 <details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
@@ -343,7 +370,7 @@ and one circle is left, between $5$ and $3$. The only number left is $2$, and it
 </section>
 <section class="ct-problem" id="p22">
 <h3>Problem 22</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VI, Chapter 10: Logical Deduction and Constraint Puzzles</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VI scale">H</span>Combinatorics &middot; LPS VI, Chapter 10: Logical Deduction and Constraint Puzzles &middot; Contradiction and Elimination</div>
 <div class="ct-text"><p>Jack has $13$ cards, each of which has a digit or an arithmetic symbol ($+$, $-$ or $=$), as shown in the top row of the picture. He chose six of these cards and, without rotating any of them, he placed them together to form a valid calculation. Then he placed a large card over the top half of them (bottom row of the picture). What is the sum of the four digits Jack used?</p><p>(A) $19$&emsp;(B) $21$&emsp;(C) $23$&emsp;(D) $25$&emsp;(E) $33$</p><div class="ct-fig"><img style="width:386px" src="/assets/contests/2026-27/grade-3-4-22.svg" alt="Figure for Problem 22"></div></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(C) $23$</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -357,7 +384,7 @@ The two-digit number must end in $6$ or $8$, and only $16$ does. So the cards sa
 </section>
 <section class="ct-problem" id="p23">
 <h3>Problem 23</h3>
-<div class="ct-meta">Geometry &middot; LPS VI, Chapter 52: Solid Geometry and Spatial Visualization</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VI scale">H</span>Geometry &middot; LPS VI, Chapter 52: Solid Geometry and Spatial Visualization &middot; Views and Projections</div>
 <div class="ct-text"><p>A big cube, made out of $16$ blue cubes and $11$ yellow cubes, all of the same size, is shown below. Markiyan is looking towards the cube from its left, in the direction shown by the arrow. Which of the following could be the face that he sees? (The options (A)&ndash;(E) are shown below the cube.)</p><div class="ct-fig"><img style="width:469px" src="/assets/contests/2026-27/grade-3-4-23.svg" alt="Figure for Problem 23"></div></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(B)</p></div></details>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">

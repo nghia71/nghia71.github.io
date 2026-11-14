@@ -1,0 +1,740 @@
+---
+title: HMMT February 2026: Team and Guts rounds
+permalink: /contests/hmmt-feb-tg-2026
+description: HMMT February 2026: Team and Guts rounds: problems with answers and solutions
+---
+{% raw %}
+<style>
+  .ct-intro { margin-bottom: 1.2em; }
+  .ct-credit { font-size: 14px; color: var(--ink-soft); border-left: 3px solid var(--gold); padding: 6px 12px; background: var(--white); margin: 1em 0; }
+  .ct-toc { display: flex; flex-wrap: wrap; gap: 6px; margin: 1em 0 1.4em; }
+  .ct-toc a { display: inline-block; min-width: 2.4em; text-align: center; padding: 4px 8px; border: 1px solid var(--rule); border-radius: 4px; background: var(--white); text-decoration: none; font-size: 14px; }
+  .ct-problem { background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 14px 18px; margin: 1.1em 0; }
+  .ct-problem h3 { margin: 0 0 .3em; font-size: 1.08rem; border-bottom: none; padding-bottom: 0; }
+  .ct-meta { font-size: 13px; color: var(--ink-soft); margin-bottom: .6em; }
+  .ct-text { font-family: Georgia, "Times New Roman", "Noto Serif", serif; font-size: 1.02em; line-height: 1.6; }
+  .ct-text p { margin: .5em 0; }
+  .ct-fig { text-align: center; margin: .8em 0; }
+  .ct-fig img { max-width: 100%; height: auto; max-height: 340px; }
+  .ct-choices { display: flex; flex-wrap: wrap; gap: 6px 22px; margin: .6em 0 .2em; }
+  .ct-choices b { margin-right: .3em; }
+  .ct-problem details { margin-top: .8em; border-top: 1px dashed var(--rule); padding-top: .5em; }
+  .ct-problem summary { cursor: pointer; font-weight: 600; color: var(--brand); font-size: 15px; }
+  .ct-problem details[open] summary { margin-bottom: .5em; }
+  .ct-sol h4 { font-size: 1rem; margin: 1em 0 .3em; color: var(--ink); }
+  .ct-answer { font-weight: 600; }
+  .ct-parts { list-style: none; padding-left: .4em; }
+  .ct-parts li { margin: .35em 0; }
+  .ct-lbl { font-weight: 700; margin-right: .3em; }
+  .ct-note { font-size: 14px; color: var(--ink-soft); font-style: italic; }
+  .ct-bar { margin: .6em 0 1em; display: flex; gap: 10px; flex-wrap: wrap; }
+  .ct-bar button { font: inherit; font-size: 14px; padding: 5px 12px; border-radius: var(--radius); border: 1px solid var(--brand); background: var(--white); color: var(--brand); cursor: pointer; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
+</style>
+<script>
+  window.MathJax = { tex: { inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [['\\[','\\]']], processEscapes: true },
+                     options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] } };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script>
+  function ctAll(open) { document.querySelectorAll('.ct-problem details').forEach(function (d) { d.open = open; }); }
+</script>
+
+<style>
+  .ct-group { font-size: 1.25rem; margin: 1.6em 0 .2em; }
+  .ct-toc-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: .3em 0; }
+  .ct-toc-g { font-size: 13px; color: var(--ink-soft); min-width: 9em; }
+  .ct-toc-wrap { margin: 1em 0 1.4em; }
+  .ct-center { text-align: center; margin: .6em 0; }
+  .ct-tablewrap { overflow-x: auto; margin: .6em 0; text-align: center; }
+  .ct-table { border-collapse: collapse; margin: 0 auto; }
+  .ct-table td { padding: 2px 9px; text-align: center; }
+  .ct-table tr.ct-hl td { border-bottom: 1px solid var(--ink-soft); }
+  .ct-table.ct-vfirst td:first-child { border-right: 1px solid var(--ink-soft); }
+  .ct-ul { padding-left: 1.4em; }
+  .ct-ul li { margin: .3em 0; }
+  .ct-text li > p:first-child { margin-top: 0; }
+  .ct-text li > p:last-child { margin-bottom: 0; }
+  .ct-text mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
+</style>
+
+<style>
+  .ct-tags { display: flex; flex-wrap: wrap; gap: 5px; margin: 0 0 .55em; }
+  .ct-tg { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .03em; padding: 2px 8px; border-radius: 999px; line-height: 1.5; }
+  .ct-lv { background: #eee7dc; color: #4a3d33; }
+  .ct-df-Starter { background: #dcf1dc; color: #245c24; }
+  .ct-df-Explorer { background: #d6efec; color: #155e57; }
+  .ct-df-Challenger { background: #dce8f7; color: #1f4c80; }
+  .ct-df-Olympiad { background: #e7defa; color: #4b2a8a; }
+  .ct-df-Advanced { background: #fbe4cc; color: #8a4a0b; }
+  .ct-df-Expert { background: #f8d6cf; color: #8c2600; }
+  .ct-band { margin: 1.3em 0 .5em; font-size: 14px; color: var(--ink-soft); }
+  .ct-band .ct-tg { font-size: 13px; margin-right: .4em; }
+  .ct-legend { font-size: 14.5px; background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 10px 16px; margin: 1em 0 1.4em; }
+  .ct-legend p { margin: .35em 0; }
+  .ct-legend ul { margin: .2em 0 .4em; padding-left: 1.1em; }
+  .ct-legend li { margin: .2em 0; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
+</style>
+{% endraw %}
+<p><a href="{{ '/contests-2026' | relative_url }}">&larr; All contests 2026</a></p>
+
+<h1>HMMT February 2026: Team and Guts rounds</h1>
+
+<div class="ct-intro">
+<p>The 42 problems of the HMMT February 2026: Team and Guts rounds, each with our own solutions, hidden until you open them. 37 of them ask for an answer and 5 ask for a proof. Where a problem has a final answer, it is shown separately. Try a problem first, then check.</p><p>HMMT February 2026 was held at MIT on 14 February 2026. These are its Team Round (10 problems, some with proofs) and Guts Round (32 short-answer problems; the four estimation problems are left out), in full.</p>
+</div>
+<div class="ct-credit">Problems: HMMT February 2026: Team and Guts rounds, from the AoPS contest collection or the official paper. Solutions written by MCC.</div>
+<div class="ct-bar"><button type="button" onclick="ctAll(true)">Show all answers and solutions</button><button type="button" onclick="ctAll(false)">Hide all</button></div>
+<div class="ct-toc-wrap"><div class="ct-toc-row"><span class="ct-toc-g">Team Round</span><a href="#p1">1</a><a href="#p2">2</a><a href="#p3">3</a><a href="#p4">4</a><a href="#p5">5</a><a href="#p6">6</a><a href="#p7">7</a><a href="#p8">8</a><a href="#p9">9</a><a href="#p10">10</a></div><div class="ct-toc-row"><span class="ct-toc-g">Guts Round</span><a href="#p11">1</a><a href="#p12">2</a><a href="#p13">3</a><a href="#p14">4</a><a href="#p15">5</a><a href="#p16">6</a><a href="#p17">7</a><a href="#p18">8</a><a href="#p19">9</a><a href="#p20">10</a><a href="#p21">11</a><a href="#p22">12</a><a href="#p23">13</a><a href="#p24">14</a><a href="#p25">15</a><a href="#p26">16</a><a href="#p27">17</a><a href="#p28">18</a><a href="#p29">19</a><a href="#p30">20</a><a href="#p31">21</a><a href="#p32">22</a><a href="#p33">23</a><a href="#p34">24</a><a href="#p35">25</a><a href="#p36">26</a><a href="#p37">27</a><a href="#p38">28</a><a href="#p39">29</a><a href="#p40">30</a><a href="#p41">31</a><a href="#p42">32</a></div></div>
+
+{% raw %}
+<h2 class="ct-group" id="team-round">Team Round</h2>
+<section class="ct-problem" id="p1">
+<h3>Problem 1</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VII scale">E</span>Geometry &middot; LPS VII, Chapter 28: Area Methods and Geometric Measurement &middot; Height-Based and Base-Based Comparisons</div>
+<div class="ct-text"><p>Let $\mathcal{P}$ be a regular hexagon with center $O$. Distinct points $A$ and $B$ lie on the boundary of $\mathcal{P}$. The segments $OA$ and $OB$ divide the interior of $\mathcal{P}$ into two polygons $\mathcal{R}_1$ and $\mathcal{R}_2$. Let $a_1$ and $a_2$ be the areas of $\mathcal{R}_1$ and $\mathcal{R}_2$ respectively, and let $p_1$ and $p_2$ be the perimeters of $\mathcal{R}_1$ and $\mathcal{R}_2$ respectively. Given that $a_1/p_1=a_2/p_2$, prove that $a_1=a_2$.</p></div>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Area as apothem times boundary length)</h4>
+<div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/hmmt-feb-tg-1_s1.svg" alt="Figure for the solution"></div>
+<p>Let $h$ be the apothem of $\mathcal P$, the distance from $O$ to each side, and let $s=OA+OB&gt;0$. For $i=1,2$ let $\ell_i$ be the length of the part of the boundary of $\mathcal P$ that belongs to the boundary of $\mathcal R_i$; then the boundary of $\mathcal R_i$ consists of the segments $OA$, $OB$ and this part, so
+\[p_i=\ell_i+s .\]</p><p><strong>The areas.</strong> Cut the boundary part of $\mathcal R_i$ at the vertices of the hexagon that it contains. Each resulting piece $XY$ lies on one side of $\mathcal P$, and the triangles $OXY$ fill $\mathcal R_i$ without overlapping (they are the fan of triangles seen from $O$). The triangle $OXY$ has base $XY$ on a side of $\mathcal P$ and height $h$, so its area is $\frac12h\cdot XY$. Adding,
+\[a_i=\tfrac12 h\,\ell_i .\]</p><p><strong>Conclusion.</strong> The hypothesis $a_1p_2=a_2p_1$ becomes
+\[\tfrac12h\,\ell_1(\ell_2+s)=\tfrac12h\,\ell_2(\ell_1+s)\iff \tfrac12hs\,(\ell_1-\ell_2)=0 .\]
+Since $h&gt;0$ and $s&gt;0$, we get $\ell_1=\ell_2$, and therefore $a_1=\frac12h\ell_1=\frac12h\ell_2=a_2$. (Equivalently: $a_i/p_i=\frac h2\cdot\frac{\ell_i}{\ell_i+s}$ is a strictly increasing function of $\ell_i$.)</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p2">
+<h3>Problem 2</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VII scale">E</span>Combinatorics &middot; LPS VII, Chapter 2: Fundamental Counting and Structured Enumeration &middot; Constraint-Based Enumeration</div>
+<div class="ct-text"><p>Jessica the jackrabbit wants to climb down a wall. The wall consists of $2026$ horizontal layers stacked vertically. The $n$th layer from the top is partitioned into $2^n-1$ identical rectangular bricks arranged side by side. Jessica begins in the topmost layer, which contains a single brick. A move consists of Jessica going down one layer to a brick that shares a side with the brick she is currently on.</p><p>Determine, with proof, the total number of distinct sequences of moves Jessica can take to reach the $2026$th layer.</p><div class="ct-fig"><img style="width:267px" src="/assets/contests/2026-27/hmmt-feb-tg-2.svg" alt="Figure for Team Round, Problem 2"></div></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$3^{2025}$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Locating the three bricks below)</h4>
+<p>Take the width of the wall as the unit of length, so that brick $k$ ($0\le k\le N-1$) of layer $n$, where $N=2^n-1$, occupies the horizontal interval $\bigl[\frac kN,\frac{k+1}N\bigr]$. Two bricks in consecutive layers share a side exactly when their intervals overlap in a segment of positive length (touching at a single corner is not sharing a side).</p><p><strong>Claim.</strong> Every brick of layer $n$ shares a side with exactly $3$ bricks of layer $n+1$.</p><p>Layer $n+1$ has $N'=2^{n+1}-1=2N+1$ bricks. Measure lengths in units of $\frac1{N'}$; then brick $j$ of layer $n+1$ is $[j,j+1]$ and brick $k$ of layer $n$ is
+\[\Bigl[\frac{k(2N+1)}N,\ \frac{(k+1)(2N+1)}N\Bigr]=\Bigl[2k+\frac kN,\ 2k+2+\frac{k+1}N\Bigr].\]
+Because $0\le\frac kN&lt;1$ and $0&lt;\frac{k+1}N\le1$, the left end lies in $[2k,2k+1)$ and the right end lies in $(2k+2,2k+3]$. Hence $[j,j+1]$ overlaps it in positive length exactly for $j=2k,\,2k+1,\,2k+2$: for $j\le 2k-1$ we have $j+1\le 2k\le$ left end, and for $j\ge 2k+3$ we have $j\ge$ right end. This proves the claim.</p><p><strong>Counting.</strong> A sequence of moves is a choice of a brick in each of the layers $2,3,\dots,2026$, each sharing a side with the previous one. By the claim there are $3$ choices at each of the $2025$ moves, whatever was chosen before, so the number of sequences is $\boxed{3^{2025}}$.</p>
+<h4>Solution 2 (Double counting the common refinement)</h4>
+<p>Take the width of the wall as the unit of length; brick $k$ ($0\le k\le N-1$) of layer $n$, with $N=2^n-1$, is the interval $\bigl[\frac kN,\frac{k+1}N\bigr]$, and two bricks of consecutive layers share a side exactly when their intervals overlap in positive length. Fix $n\le 2025$ and put $N'=2^{n+1}-1=2N+1$, the number of bricks of layer $n+1$.</p><p><strong>Each brick has at least $3$ neighbours below.</strong> A brick of layer $n$ has width $\frac1N&gt;\frac2{2N+1}=\frac2{N'}$. If it overlapped in positive length at most two bricks of layer $n+1$, those bricks would be adjacent (the overlapped bricks form a run) and would cover it, so its width would be at most $\frac 2{N'}$, a contradiction.</p><p><strong>In total there are exactly $3N$ neighbouring pairs.</strong> The interior cut points of the two layers are $\frac kN$ ($0&lt;k&lt;N$) and $\frac j{N'}$ ($0&lt;j&lt;N'$). They are all different: $\frac kN=\frac j{N'}$ would give $kN'=jN$, and since $\gcd(N,N')=\gcd(N,2N+1)=1$ this forces $N\mid k$, impossible for $0&lt;k&lt;N$. So together they cut $[0,1]$ into $(N-1)+(N'-1)+1=N+N'-1=3N$ pieces. Each piece lies in exactly one brick of each layer, and conversely the overlap of a neighbouring pair contains no cut point in its interior, so it is exactly one piece. Thus the neighbouring pairs correspond one-to-one to the $3N$ pieces.</p><p><strong>Conclusion.</strong> $N$ bricks, each with at least $3$ neighbours below, and $3N$ neighbouring pairs in total: every brick has exactly $3$ neighbours in the next layer. A sequence of moves chooses one of these $3$ neighbours at each of the $2025$ moves, so there are $\boxed{3^{2025}}$ sequences.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p3">
+<h3>Problem 3</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Algebra &middot; LPS VII, Chapter 34: Complex Numbers as an Olympiad Tool &middot; Complex Factorization and Algebraic Cleanup</div>
+<div class="ct-text"><p>Let $\alpha$ and $\beta$ be complex numbers such that $\alpha\beta+\alpha+\beta+100=0$. Suppose that $|\alpha|=|\beta|=M$ for some nonnegative real number $M$. Determine, with proof, all possible values of $M$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$M=10$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Solving for beta and comparing moduli)</h4>
+<p>The only possible value is $M=10$; it occurs, for example, for $\alpha=10$, $\beta=-10$: indeed $-100+10-10+100=0$.</p><p>Now let $\alpha,\beta$ satisfy the conditions. The equation reads $(\alpha+1)(\beta+1)=-99$, so $\alpha\ne-1$ and
+\[\beta=-\frac{\alpha+100}{\alpha+1}.\]
+Also $M\ne0$, since $\alpha=\beta=0$ does not satisfy the equation. Write $\alpha=M(\cos\theta+i\sin\theta)$ and $c=\cos\theta\in[-1,1]$. The condition $|\beta|=M$ is $|\alpha+100|^2=M^2|\alpha+1|^2$, that is,
+\[M^2+200Mc+10000=M^2\bigl(M^2+2Mc+1\bigr).\]
+Rearranging, $2Mc\,(100-M^2)=M^4-10000=(M^2-100)(M^2+100)$, that is,
+\[(M^2-100)\bigl(M^2+100+2Mc\bigr)=0 .\]
+The second factor is positive: $M^2+100+2Mc\ge M^2-2M+100=(M-1)^2+99&gt;0$. Hence $M^2=100$, and the only possible value is $\boxed{M=10}$.</p>
+<h4>Solution 2 (Conjugating the equation)</h4>
+<p>For $\alpha=10$, $\beta=-10$ we get $-100+10-10+100=0$ and $|\alpha|=|\beta|=10$, so $M=10$ occurs. We show no other value does.</p><p>$M=0$ is impossible, because $\alpha=\beta=0$ does not satisfy the equation. So $M&gt;0$, and $\overline\alpha=M^2/\alpha$, $\overline\beta=M^2/\beta$. Let $s=\alpha+\beta$ and $p=\alpha\beta$; the equation says $p+s=-100$. Conjugating the equation gives $\overline\alpha\,\overline\beta+\overline\alpha+\overline\beta+100=0$, that is,
+\[\frac{M^4}{p}+\frac{M^2 s}{p}+100=0\quad\Longrightarrow\quad M^4+M^2s+100p=0 .\]
+Substituting $s=-100-p$:
+\[M^4-100M^2-p(M^2-100)=0\iff (M^2-100)(M^2-p)=0 .\]
+Suppose $M^2\ne100$. Then $\alpha\beta=p=M^2=\alpha\overline\alpha$, so $\beta=\overline\alpha$. Then $s=\alpha+\overline\alpha=2\operatorname{Re}\alpha$, and $p+s=-100$ gives $M^2+2\operatorname{Re}\alpha+100=0$. But $2\operatorname{Re}\alpha\ge-2M$, so $0\ge M^2-2M+100=(M-1)^2+99&gt;0$, a contradiction. Therefore $M^2=100$, and the answer is $\boxed{M=10}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p4">
+<h3>Problem 4</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 29: Valuations and Lifting the Exponent &middot; p-adic Valuation Basics</div>
+<div class="ct-text"><p>A set of rational numbers $S$ is called <em>inclusive</em> if $0$ is not an element of $S$, and for any (not necessarily distinct) elements $x$, $y$, and $z$ of $S$, the number $xy+z$ is also an element of $S$. Determine, with proof, all rational numbers $a$ for which there exists an inclusive set containing $a$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>All rational $a$ except $a=0$ and $a=-\frac1n$ for positive integers $n$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Repeated addition of a square, and valuation classes)</h4>
+<p>We show that an inclusive set containing $a$ exists exactly when $a\ne0$ and $a\ne-\frac1n$ for every positive integer $n$.</p><p><strong>$a=0$ and $a=-\frac1n$ are impossible.</strong> $0$ is never in an inclusive set. Let $a=-\frac1n$ lie in an inclusive set $S$. Taking $x=y=a$ shows that $z\in S$ implies $z+a^2=z+\frac1{n^2}\in S$. Starting from $z=a$ and applying this $n$ times, $S$ contains
+\[-\frac1n+n\cdot\frac1{n^2}=0,\]
+which is impossible.</p><p><strong>Positive $a$.</strong> The set $S=\mathbb Q_{&gt;0}$ of positive rationals is inclusive: if $x,y,z&gt;0$ then $xy+z&gt;0$. It contains every positive $a$.</p><p><strong>Negative $a$ not of the form $-\frac1n$.</strong> Write $a=-\frac uw$ in lowest terms with $u,w$ positive integers. Since $a\ne-\frac1n$, we have $u\ge2$; let $q$ be a prime dividing $u$, and let $k=v_q(a)\ge1$ be the exponent of $q$ in $a$ (for a nonzero rational $x$, $v_q(x)$ is the exponent of $q$ in its factorisation, negative if $q$ divides the denominator). Let
+\[S=\{x\in\mathbb Q:\ x\ne0,\ v_q(x)=k\}.\]
+Then $a\in S$ and $0\notin S$. If $x,y,z\in S$, then $v_q(xy)=2k&gt;k=v_q(z)$, so $xy$ has a higher power of $q$ than $z$; writing $xy=q^{k}\cdot q^{k}r$ and $z=q^{k}t$ with $v_q(r)\ge0$, $v_q(t)=0$, we get $xy+z=q^k(q^kr+t)$, where $q^kr+t$ has numerator and denominator prime to $q$ (its value modulo $q$ is that of $t$). So $xy+z\ne0$ and $v_q(xy+z)=k$, i.e. $xy+z\in S$. Thus $S$ is inclusive.</p><p><strong>Answer.</strong> Inclusive sets containing $a$ exist exactly for the rationals $a$ other than $0$ and $-\frac11,-\frac12,-\frac13,\dots$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p5">
+<h3>Problem 5</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 31: Extremal Principle and Bounding Arguments &middot; Bounding and Limiting Arguments</div>
+<div class="ct-text"><p>The numbers $1, 2, \ldots, 2026$ are written on a blackboard. An operation consists of replacing any number on the blackboard with the positive difference between the largest and smallest numbers currently on the blackboard. Determine, with proof, the least number of operations required to make all the numbers on the blackboard equal.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$3037$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (The window at the first write of the final value)</h4>
+<p>Think of the board as $2026$ slots; an operation replaces the content of one slot by $D=\max-\min$. Two basic facts:</p><ul class="ct-ul"><li><p>As long as the numbers are not all equal, $D\ge1$; so all numbers stay positive integers.</p></li><li><p>The maximum never increases, since $D=\max-\min&lt;\max$.</p></li></ul><p><strong>Construction with $3037$ operations.</strong> First replace the current minimum $1012$ times: replacing $i$ (for $i=1,2,\dots,1012$) when the board contains $i,i+1,\dots,2026$ together with earlier written values, all of which lie between $i$ and $2026$, writes $2026-i$. After these $1012$ operations the minimum is $1013$, the maximum is $2026$, and $D=1013$. Now replace, one at a time, every number different from $1013$ except one copy of $2026$ by $1013$; during this the minimum stays $1013$ and the maximum stays $2026$, so each operation writes $1013$. Finally replace the last $2026$ by $D=1013$. The numbers different from $1013$ after the first phase are $1014,\dots,2026$ and the written values $1014,\dots,2025$, that is $1013+1012=2025$ numbers, so the second phase uses $2025$ operations. In total $1012+2025=3037$ operations, and all numbers become $1013$.</p><p><strong>Lower bound.</strong> Consider any sequence of operations making all numbers equal; cutting it at the first moment when all numbers are equal can only shorten it, so we may assume the numbers are not all equal before its last operation. Let $v$ be the final common value. Before the last operation the numbers are not all equal and all but one equal $v$; let the remaining one be $y\ne v$. The operation writes $D=|y-v|$ into the slot of $y$, and $D=v$; since $y&gt;0$ this gives $y=2v$. So at that moment the maximum is $2v$, and since the maximum never increases, $2v\le2026$, i.e. $v\le1013$.</p><p>Let $T$ be the first operation that writes $v$ (the last operation writes $v$, so $T$ exists). Just before $T$, $\max-\min=v$, so all numbers lie in a window $[m,m+v]$, which contains $v+1$ integers. Let $w\le v+1$ be the number of slots whose initial value lies in this window. Classify the slots:</p><ul class="ct-ul"><li><p>A slot whose initial value is outside the window was overwritten before $T$, by an operation writing a value different from $v$ (no earlier operation writes $v$). Since it ends with $v$, it is written at least once more: at least $2$ operations.</p></li><li><p>A slot whose initial value is in the window but different from $v$ is written at least once.</p></li></ul><p>At most one initial value equals $v$, so the number of operations is at least
+\[2(2026-w)+(w-1)=4051-w\ge 4051-(v+1)=4050-v\ge 4050-1013=3037 .\]</p><p>Hence the least number of operations is $\boxed{3037}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p6">
+<h3>Problem 6</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 36: Coordinate Geometry and Analytic Representation &middot; Cartesian Coordinate Setup</div>
+<div class="ct-text"><p>Let $ABCD$ be a cyclic quadrilateral with circumcenter $O$, and let $M$ be the midpoint of $\overline{AB}$. Suppose that $\angle CMD=90^\circ$ and $\overline{AD}\perp\overline{BC}$. Prove that the reflection of $O$ over $\overline{AB}$ lies on line $CD$.</p></div>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Axes along the two perpendicular sides)</h4>
+<div class="ct-fig"><img style="width:294px" src="/assets/contests/2026-27/hmmt-feb-tg-6_s1.svg" alt="Figure for the solution"></div>
+<p>The lines $AD$ and $BC$ are perpendicular, so they meet at a point $P$. No vertex equals $P$: for instance $P=A$ would put $A$ on line $BC$, and three distinct points of a circle are never collinear. Take $P$ as origin, line $AD$ as the $x$-axis and line $BC$ as the $y$-axis:
+\[A=(a,0),\quad D=(d,0),\quad B=(0,b),\quad C=(0,c),\qquad a,b,c,d\ne0 .\]
+The power of $P$ with respect to the circle gives (with signs) $ad=bc$. The center $O$ lies on the perpendicular bisectors $x=\frac{a+d}2$ of $AD$ and $y=\frac{b+c}2$ of $BC$, so $O=\bigl(\frac{a+d}2,\frac{b+c}2\bigr)$. Also $M=\bigl(\frac a2,\frac b2\bigr)$.</p><p>Since $OM\perp AB$ and $M\in AB$, the reflection of $O$ over $AB$ is $O'=2M-O=\bigl(\frac{a-d}2,\frac{b-c}2\bigr)$.</p><p><strong>The right angle.</strong> $\angle CMD=90^\circ$ means $(C-M)\cdot(D-M)=0$:
+\[-\frac a2\Bigl(d-\frac a2\Bigr)-\frac b2\Bigl(c-\frac b2\Bigr)=0\iff a^2+b^2=2(ad+bc)=4ad .\]</p><p><strong>$O'$ on $CD$.</strong> The line $CD$ is $\frac xd+\frac yc=1$. For $O'$,
+\[\frac{a-d}{2d}+\frac{b-c}{2c}=\frac12\Bigl(\frac ad+\frac bc\Bigr)-1=\frac12\cdot\frac{a^2+b^2}{ad}-1=\frac12\cdot4-1=1,\]
+where we used $\frac bc=\frac{b^2}{bc}=\frac{b^2}{ad}$. Hence $O'$ lies on line $CD$.</p>
+<h4>Solution 2 (Vectors from the corner and equal-length vectors)</h4>
+<p>Let $P$ be the intersection of the perpendicular lines $AD$ and $BC$; it is not a vertex, because three distinct points of a circle are not collinear. Use vectors with origin $P$. Then $A,D$ lie on one line through $P$ and $B,C$ on the perpendicular line, so $A\cdot B=A\cdot C=D\cdot B=D\cdot C=0$, and the power of $P$ gives $A\cdot D=B\cdot C$.</p><p><strong>The center.</strong> The projection of $O$ on line $AD$ is the midpoint $\frac{A+D}2$ and its projection on line $BC$ is $\frac{B+C}2$; as these lines are perpendicular through the origin, $O=\frac{A+D}2+\frac{B+C}2$. With $M=\frac{A+B}2$ and $N=\frac{C+D}2$ (the midpoint of $CD$) this reads $O=M+N$. The reflection of $O$ over $AB$ is $O'=2M-O=M-N$ (as $OM\perp AB$), so
+\[O'-N=u+w,\qquad u=M-N,\quad w=-N .\]</p><p><strong>Three facts.</strong></p><ul class="ct-ul"><li><p>$|w|=\frac{CD}2$: since $C\cdot D=0$, $|C+D|^2=|C|^2+|D|^2=|C-D|^2$.</p></li><li><p>$|u|=\frac{CD}2$: $\angle CMD=90^\circ$ puts $M$ on the circle with diameter $CD$, centered at $N$ ($M\ne C,D$, because $M$ is inside the circumcircle).</p></li><li><p>$u-w=M$ is perpendicular to $CD$: $2M\cdot(D-C)=A\cdot D-A\cdot C+B\cdot D-B\cdot C=A\cdot D-B\cdot C=0$.</p></li></ul><p><strong>Conclusion.</strong> From $|u|=|w|$ we get $(u+w)\cdot(u-w)=|u|^2-|w|^2=0$, so $u+w\perp M$. Also $M\ne0$ (otherwise $P=M$ would lie on $AB$ and on $AD$, forcing $P=A$). In the plane, the two vectors $u+w$ and $D-C$ are both perpendicular to the nonzero vector $M$, so they are parallel. Hence $O'-N\parallel D-C$, and as $N$ lies on $CD$, so does $O'$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p7">
+<h3>Problem 7</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 31: Extremal Principle and Bounding Arguments &middot; Bounding and Limiting Arguments</div>
+<div class="ct-text"><p>An infinite sequence $a_1, a_2, a_3, \ldots$ of integers is called <em>$r$-close</em> if every integer appears in the sequence exactly once and $|a_{n+2}-a_{n+1}|\ge r|a_{n+1}-a_n|$ for all integers $n\ge 1$. Determine, with proof, all nonnegative real numbers $r$ for which an $r$-close sequence exists.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$0\le r&lt;2$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (A distance lemma for r at least 2 and a block construction)</h4>
+<p>Write $d_n=|a_{n+1}-a_n|$; since the terms are distinct, $d_n\ge1$. We prove that $r$-close sequences exist exactly for $0\le r&lt;2$.</p><p><strong>No sequence for $r\ge2$.</strong> Then $d_{n+1}\ge2d_n$ for all $n$. First, for $m\ge n$,
+\[d_n+d_{n+1}+\dots+d_m\le d_{m+1}-d_n ,\]
+by induction on $m$: for $m=n$ it is $2d_n\le d_{n+1}$, and if it holds for $m$ then $d_n+\dots+d_{m+1}\le 2d_{m+1}-d_n\le d_{m+2}-d_n$. Consequently, for $k\ge n+2$,
+\[|a_k-a_n|\ \ge\ d_{k-1}-(d_n+\dots+d_{k-2})\ \ge\ d_{k-1}-(d_{k-1}-d_n)=d_n ,\]
+and also $|a_{n+1}-a_n|=d_n$. Apply this with $n=2$: every term $a_k$ with $k\ne2$, $k\ge 3$, is at distance at least $d_2\ge 2d_1\ge2$ from $a_2$. So the two integers $a_2-1$ and $a_2+1$ can only appear as $a_1$, which is impossible for both. Hence no $r$-close sequence exists.</p><p><strong>A sequence for $0\le r&lt;2$.</strong> Fix a rational $q=\frac uv$ ($u&gt;v\ge1$ integers) with $\max(r,1)&lt;q&lt;2$. Since $\sum_{j\ge1}q^{-j}=\frac1{q-1}&gt;1&gt;r-1$, we can fix an integer $m\ge3$ with
+\[\sigma=\sum_{j=1}^{m-2}q^{-j}&gt;r-1 .\]
+Start with $a_1=0$ and build the sequence in blocks. Each block starts at the last term $p$ written so far and ends at a <em>target</em> $t$: the integer of smallest absolute value not yet in the sequence (taking the nonnegative one in case of a tie). Let $\Delta=t-p$. Choose a positive integer $X$ and put
+\[x_i=X\,v^{m-1-i}u^{i-1}\ (1\le i\le m-1),\qquad x_m=x_1+\dots+x_{m-1}-\Delta .\]
+The block consists of the steps $+x_1,+x_2,\dots,+x_{m-1}$ followed by $-x_m$; it ends at $p+\sum_{i&lt;m}x_i-x_m=p+\Delta=t$. We take $X$ so large that</p><ul class="ct-ul"><li><p>$p+x_1$ exceeds every term written so far and also the target $t$,</p></li><li><p>$x_1\ge r\cdot$(the last step of the previous block), and</p></li><li><p>$(\sigma-(r-1))\,x_{m-1}\ge\Delta$.</p></li></ul><p>Then the ratios inside the block are fine: $x_{i+1}=q\,x_i\ge r\,x_i$, and, as $x_1+\dots+x_{m-2}=\sigma x_{m-1}$,
+\[x_m=x_{m-1}+\sigma x_{m-1}-\Delta\ \ge\ x_{m-1}+(r-1)x_{m-1}=r\,x_{m-1}&gt;0 .\]
+Between blocks the condition holds by the second requirement. The new terms $p+x_1&lt;p+x_1+x_2&lt;\dots&lt;p+x_1+\dots+x_{m-1}$ are larger than every earlier term and than $t$, hence new, distinct from each other and from $t$; and the last new term $t$ was not yet used. So no integer is repeated, and $|a_{n+2}-a_{n+1}|\ge r|a_{n+1}-a_n|$ holds throughout.</p><p>Finally every integer $w$ appears: as long as $w$ is missing, each block's target has absolute value at most $|w|$, and there are only $2|w|+1$ such integers, each targeted at most once; so after at most $2|w|+1$ blocks $w$ has appeared.</p><p>Therefore an $r$-close sequence exists if and only if $\boxed{0\le r&lt;2}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p8">
+<h3>Problem 8</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 18: Invariants and Monovariants &middot; Monovariants and Directional Change</div>
+<div class="ct-text"><p>Let $n\ge 2$ be a positive integer and let $(a_1,\ldots,a_n)$ be a permutation of the numbers $1, 2, \ldots, n$. Marin makes a single move on this permutation by performing the following steps:</p><ul class="ct-ul"><li><p>First, he chooses an integer $1\le k\le\lfloor n/2\rfloor$. This integer can be different for different moves.</p></li><li><p>Then, he picks two nonintersecting sets $I=\{i_1,i_2,\ldots,i_k\}$ and $J=\{j_1,j_2,\ldots,j_k\}$ such that $1\le i_1&lt;i_2&lt;\cdots&lt;i_k\le n$ and $1\le j_1&lt;j_2&lt;\cdots&lt;j_k\le n$.</p></li><li><p>Finally, he swaps the numbers $a_{i_s}$ and $a_{j_s}$ in the current permutation for all integers $1\le s\le k$.</p></li></ul><p>Let $f(n)$ denote the smallest positive integer such that it is possible for Marin to reach $(1,2,\ldots,n)$ from any starting permutation in at most $f(n)$ moves. Prove that $\lceil\log_3 n\rceil\le f(n)\le\lceil\log_2 n\rceil$.</p></div>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Longest decreasing subsequence and halving)</h4>
+<p>Call a move with sets $I,J$ as in the statement; it moves the entry in position $i_s$ to position $j_s$ and the entry in position $j_s$ to position $i_s$, and leaves the other positions fixed.</p><p><strong>Lower bound $f(n)\ge\lceil\log_3n\rceil$.</strong> Let $L(\pi)$ be the length of the longest decreasing subsequence of a permutation $\pi$. We claim one move decreases $L$ by at most a factor $3$: if $\pi'$ is obtained from $\pi$ by a move, then $L(\pi')\ge L(\pi)/3$.</p><p>Split the positions into three classes: $I$, $J$, and the rest $K$. On each class the move preserves the order of positions: positions of $K$ stay; $i_s\mapsto j_s$ with $i_s&lt;i_t\Rightarrow j_s&lt;j_t$; and similarly $j_s\mapsto i_s$. Take a decreasing subsequence of $\pi$ of length $L(\pi)$; one of the three classes contains at least $L(\pi)/3$ of its positions. The entries in these positions keep their values and the relative order of their positions after the move, so they still form a decreasing subsequence of $\pi'$. This proves the claim.</p><p>Start from $(n,n-1,\dots,1)$, with $L=n$. After $t$ moves $L\ge n/3^t$, while the identity has $L=1$. So reaching the identity needs $3^t\ge n$, i.e. $t\ge\lceil\log_3n\rceil$.</p><p><strong>Upper bound $f(n)\le\lceil\log_2n\rceil$.</strong></p><p><em>One split move.</em> Let a block of consecutive positions of length $\ell\ge2$ contain some set of values, and let $z=\lceil \ell/2\rceil$. Call the $z$ smallest values of the block <em>small</em>. Let $I$ be the set of positions among the first $z$ positions of the block holding a value that is not small, and $J$ the set of positions among the last $\ell-z$ holding a small value. Counting small values gives $|I|=|J|$, and $|I|\le\min(z,\ell-z)$. Swapping $I$ with $J$ in increasing order puts all small values into the first $z$ positions.</p><p><em>Doing many blocks at once.</em> If the positions $1,\dots,n$ are cut into consecutive blocks, the split moves of all blocks can be performed as a single move: take $I$ and $J$ to be the unions over blocks. Because all positions of an earlier block precede those of a later block, listing $I$ and $J$ in increasing order pairs the $I$-positions of each block with the $J$-positions of the same block, as required; $I\cap J=\varnothing$; and $|I|=|J|\le\lfloor n/2\rfloor$ since the blocks are disjoint and each contributes at most half of its length. (If $I$ is empty, skip the move.)</p><p><em>The algorithm.</em> Start with the single block $\{1,\dots,n\}$ holding the values $1,\dots,n$. In each round, perform the combined split move and then cut every block of length $\ell\ge2$ into its first $\lceil \ell/2\rceil$ and its last $\lfloor \ell/2\rfloor$ positions. By induction, after each round every block holds exactly the values equal to its positions (as a set): this is true at the start, and a split puts the smallest $\lceil\ell/2\rceil$ values of a block into its first $\lceil \ell/2\rceil$ positions. Block lengths go from $\ell$ to at most $\lceil\ell/2\rceil$, and $\lceil\lceil x\rceil/2\rceil=\lceil x/2\rceil$, so after $t$ rounds all blocks have length at most $\lceil n/2^t\rceil$. After $t=\lceil\log_2n\rceil$ rounds all blocks have length $1$, so each position holds its own value: the permutation is $(1,2,\dots,n)$. Hence $f(n)\le\lceil\log_2n\rceil$.</p><p>Together, $\lceil\log_3 n\rceil\le f(n)\le\lceil\log_2 n\rceil$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p9">
+<h3>Problem 9</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 36: Coordinate Geometry and Analytic Representation &middot; Cartesian Coordinate Setup</div>
+<div class="ct-text"><p>Let $ABC$ be an acute scalene triangle. Let $D$ be the foot of the altitude from $A$ to $\overline{BC}$, and let $M$ be the midpoint of $\overline{BC}$. There exists a unique point $P$ strictly inside triangle $ABC$ such that $\angle DPM=90^\circ$ and $PB/PC=AB/AC$. Prove that $\angle BPC=180^\circ-|\angle ABC-\angle ACB|$.</p></div>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Two circles centred on BC, then a tangent computation)</h4>
+<div class="ct-fig"><img style="width:277px" src="/assets/contests/2026-27/hmmt-feb-tg-9_s1.svg" alt="Figure for the solution"></div>
+<p>Both conditions and the claim are unchanged by the reflection in the perpendicular bisector of $BC$ (it swaps $B$ and $C$ and the angles $\angle ABC$, $\angle ACB$). Since the triangle is scalene, $D\ne M$, and we may assume that $D$ lies between $M$ and $C$. Choose coordinates with
+\[M=(0,0),\quad B=(-1,0),\quad C=(1,0),\quad A=(\delta,h),\quad D=(\delta,0),\qquad 0&lt;\delta&lt;1,\ h&gt;0 .\]
+($|\delta|&lt;1$ because the triangle is acute, so $D$ lies inside $BC$.)</p><p><strong>Finding $P$.</strong> The condition $\angle DPM=90^\circ$ says that $P$ lies on the circle with diameter $DM$: $x^2+y^2=\delta x$. The condition $PB/PC=AB/AC$ reads $AC^2\cdot PB^2=AB^2\cdot PC^2$. Here $AB^2=(1+\delta)^2+h^2$, $AC^2=(1-\delta)^2+h^2$, so $AC^2-AB^2=-4\delta$ and $AC^2+AB^2=2(1+\delta^2+h^2)$. Expanding $AC^2\bigl((x+1)^2+y^2\bigr)=AB^2\bigl((x-1)^2+y^2\bigr)$:
+\[(AC^2-AB^2)(x^2+y^2+1)+2x(AC^2+AB^2)=0\iff -4\delta(x^2+y^2+1)+4x(1+\delta^2+h^2)=0 .\]
+Substituting $x^2+y^2=\delta x$ gives $-4\delta^2x-4\delta+4x(1+\delta^2+h^2)=0$, so $x=\frac{\delta}{1+h^2}$, and then $y^2=x(\delta-x)=\frac{\delta^2h^2}{(1+h^2)^2}$. As $P$ is inside the triangle, $y&gt;0$:
+\[P=(t,\,th),\qquad t=\frac{\delta}{1+h^2}\in(0,1).\]</p><p><strong>The angle.</strong> Let $x=\angle PBC$ and $y=\angle PCB$. Then $\tan x=\frac{th}{1+t}$ and $\tan y=\frac{th}{1-t}$, so
+\[\tan(x+y)=\frac{\frac{2th}{1-t^2}}{1-\frac{t^2h^2}{1-t^2}}=\frac{2th}{1-t^2(1+h^2)}=\frac{2th}{1-t\delta}=\frac{2\delta h}{1+h^2-\delta^2},\]
+using $t(1+h^2)=\delta$. On the other hand $\tan\angle ABC=\frac h{1+\delta}$ and $\tan\angle ACB=\frac h{1-\delta}$, so
+\[\tan(\angle ACB-\angle ABC)=\frac{\frac h{1-\delta}-\frac h{1+\delta}}{1+\frac{h^2}{1-\delta^2}}=\frac{2\delta h}{1-\delta^2+h^2}.\]
+Since the triangle is acute, $0&lt;\angle ACB-\angle ABC&lt;90^\circ$, so this common tangent is positive and finite. The angle $x+y$ lies in $(0^\circ,180^\circ)$ and has the same positive tangent, so $x+y=\angle ACB-\angle ABC$. Therefore
+\[\angle BPC=180^\circ-(x+y)=180^\circ-\bigl|\angle ABC-\angle ACB\bigr| .\]</p>
+<h4>Solution 2 (A spiral similarity with angle ninety degrees)</h4>
+<p>We use directed angles $\angle(\ell,m)$ between lines, modulo $180^\circ$, and orient $ABC$ counterclockwise, so that $\angle(BA,BC)=-\angle B$ and $\angle(CA,CB)=\angle C$ (writing $\angle B=\angle ABC$, $\angle C=\angle ACB$).</p><p><strong>At most two candidates.</strong> The points $X$ with $\angle DXM=90^\circ$ lie on the circle with diameter $DM$; the points with $XB/XC=AB/AC$ lie on the Apollonius circle of $B,C$ through $A$. Both circles have their centers on line $BC$, and they are different (the Apollonius circle passes through $A$, while $\angle ADM=90^\circ$ shows $A$ is not on the first circle). So they have at most two common points, symmetric in $BC$.</p><p><strong>A point satisfying both conditions.</strong> Let $A'$ be the reflection of $A$ in $BC$; the line $AA'$ meets $BC$ at $D$, the midpoint of $AA'$. Let $Q$ be the center of the spiral similarity $S$ with $S(A)=B$, $S(A')=C$; its angle is the angle from $AA'$ to $BC$, which is $90^\circ$. Then:</p><ul class="ct-ul"><li><p>$S$ maps the midpoint $D$ of $AA'$ to the midpoint $M$ of $BC$, so $\angle DQM=90^\circ$ ($Q\ne D,M$ because $S(D)=M\ne D$).</p></li><li><p>The spiral similarity with center $Q$ taking $A$ to $A'$ takes $B$ to $C$ (triangles $QAB$ and $QA'C$ are similar), so $\frac{QB}{QC}=\frac{AB}{A'C}=\frac{AB}{AC}$.</p></li></ul><p>Hence the given point $P$ is $Q$ or the reflection of $Q$ in $BC$.</p><p><strong>The angle at $Q$.</strong> Since $\angle(QA,QB)$ equals the angle of $S$, which equals $\angle(DA,DB)$, the points $Q,D,A,B$ are concyclic; likewise $Q,D,A',C$ are concyclic. The similarity $QAB\sim QA'C$ gives $\angle(QB,QC)=\angle(QA,QA')$, and
+\[\angle(QA,QA')=\angle(QA,QD)+\angle(QD,QA')=\angle(BA,BD)+\angle(CD,CA')=\angle(BA,BC)+\angle(CA,CB),\]
+where $\angle(CB,CA')=\angle(CA,CB)$ because $A'$ is the reflection of $A$ in $BC$. So $\angle(QB,QC)=\angle C-\angle B$. A reflection in $BC$ only changes the sign of a directed angle, so in both cases $\angle(PB,PC)=\pm(\angle C-\angle B)$, and the undirected angle $\angle BPC$ equals $|\angle B-\angle C|$ or $180^\circ-|\angle B-\angle C|$.</p><p><strong>Choosing the right value.</strong> $P$ is strictly inside the triangle, so $\angle BPC&gt;\angle BAC$. Since $\angle B,\angle C&lt;90^\circ$, we have $\angle BAC=180^\circ-\angle B-\angle C&gt;|\angle B-\angle C|$. Therefore $\angle BPC\ne|\angle B-\angle C|$, and
+\[\angle BPC=180^\circ-|\angle ABC-\angle ACB| .\]</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p10">
+<h3>Problem 10</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Number Theory &middot; LPS VII, Chapter 21: Arithmetic Functions and Multiplicative Structure &middot; Divisor and Sum Functions</div>
+<div class="ct-text"><p>Prove that there exists a real constant $M$ such that for every prime $p\ge M$ and any positive integer $2\le m\le p-1$, there exist positive integers $a$ and $b$ such that $m\le a\le 1.01m$, $p^{0.99}\le b\le p$, and $p$ divides $ab-1$.</p></div>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Small m directly; large m by counting with the divisor bound)</h4>
+<p>Write $d(N)$ for the number of positive divisors of $N$.</p><p><strong>Lemma (divisor bound).</strong> For every $\varepsilon&gt;0$ there is a constant $C_\varepsilon$ with $d(N)\le C_\varepsilon N^{\varepsilon}$ for all $N\ge1$.</p><p><em>Proof.</em> If $N=\prod q^{e_q}$, then $\frac{d(N)}{N^\varepsilon}=\prod_q\frac{e_q+1}{q^{e_q\varepsilon}}$. For a prime $q\ge2^{1/\varepsilon}$ we have $q^{e\varepsilon}\ge2^e\ge e+1$, so the factor is at most $1$. For each of the fewer than $2^{1/\varepsilon}$ primes $q&lt;2^{1/\varepsilon}$, the factor is at most $c_\varepsilon=\max_{e\ge0}(e+1)2^{-e\varepsilon}$, which is finite because $(e+1)2^{-e\varepsilon}\to0$. So $C_\varepsilon=c_\varepsilon^{\,2^{1/\varepsilon}}$ works. $\square$</p><p>Let $C=C_{1/1000}$, let $p$ be a prime, $2\le m\le p-1$, and put $B=p^{0.99}$. We show that the required $a,b$ exist as soon as $p\ge M:=\max\bigl(200^{100},(202C)^{1000/7}\bigr)$.</p><p><strong>Case $m\le p^{0.01}$.</strong> Take $a=m$ and let $b\in\{1,\dots,p-1\}$ be the inverse of $m$ modulo $p$. Then $mb\equiv1\pmod p$ and $mb\ge2$, so $mb\ge p+1$, hence $b&gt;p/m\ge p^{0.99}$. So $a=m$ and $b$ work.</p><p><strong>Case $m&gt;p^{0.01}$.</strong> Then $m&gt;200$. The integers in $[m,1.01m]$ are $m,m+1,\dots,\lfloor1.01m\rfloor$, more than $0.01m$ of them; the interval has length $0.01m&lt;p$, so at most one of them is a multiple of $p$. Let $\mathcal I$ be the set of those not divisible by $p$; then $|\mathcal I|&gt;0.01m-1&gt;0.005m$.</p><p>For $a\in\mathcal I$ let $b_a\in\{1,\dots,p-1\}$ be its inverse modulo $p$. If some $b_a\ge B$ we are done, with $b=b_a\le p$. Suppose instead that $b_a&lt;B$ for all $a\in\mathcal I$. Write $ab_a=1+k_ap$; since $ab_a\ge2$ we have $k_a\ge1$, and
+\[k_a&lt;\frac{ab_a}p&lt;\frac{1.01m\,B}{p}=1.01\,m\,p^{-0.01}.\]
+For a fixed $k$, every $a$ with $k_a=k$ is a divisor of $kp+1&lt;1.01mB+1\le p^3$, so there are at most $d(kp+1)\le C p^{0.003}$ of them. Counting over the fewer than $1.01mp^{-0.01}$ possible values of $k$,
+\[0.005m&lt;|\mathcal I|\le 1.01\,m\,p^{-0.01}\cdot Cp^{0.003}=1.01\,C\,m\,p^{-0.007},\]
+so $p^{0.007}&lt;202C$, contradicting $p\ge(202C)^{1000/7}$. Hence some $a\in\mathcal I$ has $b_a\ge B$, and this pair satisfies $m\le a\le1.01m$, $p^{0.99}\le b\le p$, $p\mid ab-1$.</p><p>This proves the statement with the constant $M$ above.</p>
+</div></details>
+</section>
+<h2 class="ct-group" id="guts-round">Guts Round</h2>
+<section class="ct-problem" id="p11">
+<h3>Problem 1</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Number Theory &middot; LPS VI, Chapter 21: Digits, Place Value, and Decimal Structure &middot; Digit Conditions and Search</div>
+<div class="ct-text"><p>Let $H$, $M$, and $T$ be (not necessarily distinct) digits such that $H$ is nonzero and
+\[\underline{HMMT}=\underline{HTM}\times\underline{HT}.\]
+Compute the only possible value of the four-digit positive integer $\underline{HMMT}$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$1000$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Size first, then the digit equation)</h4>
+<p><strong>$H=1$.</strong> We have $\underline{HTM}\ge100H$ and $\underline{HT}\ge10H$, so the product is at least $1000H^2$, while $\underline{HMMT}&lt;1000(H+1)$. Hence $H^2&lt;H+1$, which forces $H=1$.</p><p><strong>The digits $M$, $T$.</strong> With $H=1$ the equation is
+\[1000+110M+T=(100+10T+M)(10+T)=1000+200T+10T^2+10M+MT,\]
+that is,
+\[M(100-T)=T(199+10T).\]
+If $T=0$ then $M=0$. If $T\ge4$, the right side is at least $4\cdot239=956$, while the left side is at most $9\cdot96=864$; impossible. For $T=1,2,3$ we would need $M=\frac{209}{99},\frac{438}{98},\frac{687}{97}$, none an integer. So $T=M=0$ and $\underline{HMMT}=\boxed{1000}=100\times10$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p12">
+<h3>Problem 2</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Combinatorics &middot; LPS VI, Chapter 6: Casework, Complement, and Constructive Counting &middot; Exhaustive Casework</div>
+<div class="ct-text"><p>Compute the number of ways to fill each of the outer $8$ cells of a $3\times 3$ grid with exactly one of the numbers $1$, $2$, and $3$ such that the top row, bottom row, left column, and right column each contain no repeated numbers.</p><div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/hmmt-feb-tg-12.svg" alt="Figure for Guts Round, Problem 2"></div></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$18$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (The corners decide everything)</h4>
+<p>Call the corners $a$ (top left), $b$ (top right), $c$ (bottom left), $d$ (bottom right). The top row $a,x,b$ has no repeated number exactly when $a\ne b$ and $x$ is the third number; so the middle cell of each outer line is determined by its two corners, which must differ. Hence a filling is the same as a choice of corners with $a\ne b$, $a\ne c$, $b\ne d$, $c\ne d$.</p><p>Choose $a$ ($3$ ways) and $b\ne a$ ($2$ ways), then $c\ne a$ ($2$ ways):</p><ul class="ct-ul"><li><p>if $c=b$, then $d$ must differ from $b$: $2$ ways;</p></li><li><p>if $c$ is the third number, then $d$ must differ from $b$ and $c$, so $d=a$: $1$ way.</p></li></ul><p>The total is $3\cdot2\cdot(2+1)=\boxed{18}$.</p>
+<h4>Solution 2 (Colouring a four-cycle)</h4>
+<p>As in any such filling the middle cell of each outer line is forced to be the number different from its two corners, and the corners of each line must differ, the fillings correspond to colourings of the four corners with $3$ colours in which corners joined by a side of the grid get different colours. The corners joined this way form a cycle of length $4$: top left, top right, bottom right, bottom left.</p><p>Count the colourings of the path top left $-$ top right $-$ bottom right $-$ bottom left: $3\cdot2\cdot2\cdot2=24$. From these remove those in which the two ends (top left and bottom left) have the same colour; gluing these two ends gives a proper colouring of a triangle, and there are $3\cdot2\cdot1=6$ of those. So the number is $24-6=\boxed{18}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p13">
+<h3>Problem 3</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Geometry &middot; LPS VI, Chapter 32: Area by Measurement and Decomposition &middot; Additive and Subtractive Area</div>
+<div class="ct-text"><p>A rectangle with length $4$ and height $2$ is placed in the bottom left corner of a square with side length $10$. Regions $A$ and $B$ are separated by a line segment drawn from the rectangle's upper right corner to some point on the boundary of the square. Given that regions $A$ and $B$ have the same perimeter, compute the positive difference between the areas of regions $A$ and $B$.</p><div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/hmmt-feb-tg-13.svg" alt="Figure for Guts Round, Problem 3"></div></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$4$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Locating the endpoint by perimeters)</h4>
+<p>Put the square as $[0,10]\times[0,10]$ and the rectangle as $[0,4]\times[0,2]$; the cut starts at $R=(4,2)$ and ends at a point $Q$ of the boundary; let $L=RQ$. Both perimeters contain $L$, so we compare the rest.</p><ul class="ct-ul"><li><p>$Q=(x,10)$ on the top side: region $A$ has perimeter $L+x+8+4$ and region $B$ has $L+(10-x)+10+6+2$. Equality gives $x=8$.</p></li><li><p>$Q=(10,y)$ on the right side: the perimeters are $L+(10-y)+10+8+4$ and $L+y+6+2$, giving $y=12$, impossible.</p></li><li><p>$Q$ on the left side above the rectangle or on the bottom side to its right: one region is a small triangle with perimeter at most $L+12$, while the other has perimeter at least $L+28$ (the boundary of the region outside the rectangle has total length $40$); impossible.</p></li></ul><p>So $Q=(8,10)$. Region $A$ is the trapezoid with vertices $(0,2),(4,2),(8,10),(0,10)$: parallel sides $4$ and $8$, height $8$, area $\frac{4+8}2\cdot8=48$. The two regions together have area $100-8=92$, so $B$ has area $44$ and the difference is $\boxed{4}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p14">
+<h3>Problem 4</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Algebra &middot; LPS VI, Chapter 17: Factoring and Structural Decomposition &middot; Factoring to Solve</div>
+<div class="ct-text"><p>Over all nonnegative integers $a$, $b$, $c$, and $d$ such that
+\[ab+cd=31\qquad\text{and}\qquad ac+bd=29,\]
+compute the minimum possible value of $a+b+c+d$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$17$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Sum and difference factor)</h4>
+<p>Adding and subtracting the two equations:
+\[(a+d)(b+c)=ab+cd+ac+bd=60,\qquad (a-d)(b-c)=ab+cd-ac-bd=2 .\]
+So $a+b+c+d=x+\frac{60}x$ where $x=a+d$ divides $60$. The values $x+\frac{60}x$ for the divisor pairs $(1,60),(2,30),(3,20),(4,15),(5,12),(6,10)$ are $61,32,23,19,17,16$.</p><p>The value $16$ is impossible. Since $(a-d)(b-c)=2$, exactly one of $a-d$, $b-c$ is odd. As $a+d\equiv a-d$ and $b+c\equiv b-c\pmod2$, exactly one of $a+d$, $b+c$ is odd; but $6$ and $10$ are both even.</p><p>The value $17$ is attained: $a+d=5$, $a-d=1$, $b+c=12$, $b-c=2$ give $(a,b,c,d)=(3,7,5,2)$, and indeed $21+10=31$, $15+14=29$. The minimum is $\boxed{17}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p15">
+<h3>Problem 5</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Geometry &middot; LPS VI, Chapter 28: Right Triangles and the Pythagorean Framework &middot; Pythagorean Theorem</div>
+<div class="ct-text"><p>Let $ABC$ be a right triangle with $\angle ABC=90^\circ$ and $AB&lt;BC$. Let $M$ be the midpoint of $\overline{AC}$. Let $T$ be the unique point lying on the segment $\overline{BC}$ such that $\angle BMT=90^\circ$. Given that $AB=5$ and $MT=3$, compute $CT$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\frac{7\sqrt{11}}{11}$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Coordinates)</h4>
+<div class="ct-fig"><img style="width:232px" src="/assets/contests/2026-27/hmmt-feb-tg-15_s1.svg" alt="Figure for the solution"></div>
+<p>Put $B=(0,0)$, $A=(0,5)$, $C=(c,0)$ with $c&gt;5$. Then $M=\bigl(\frac c2,\frac52\bigr)$, and $T=(t,0)$ satisfies $\overrightarrow{BM}\cdot\overrightarrow{MT}=0$:
+\[\frac c2\Bigl(t-\frac c2\Bigr)-\frac{25}4=0\quad\Longrightarrow\quad t-\frac c2=\frac{25}{2c}.\]
+Then $MT^2=\bigl(t-\frac c2\bigr)^2+\frac{25}4=\frac{625}{4c^2}+\frac{25}4=9$, so $c^2=\frac{625}{11}$, $c=\frac{25}{\sqrt{11}}$. Finally
+\[CT=c-t=\frac c2-\frac{25}{2c}=\frac{c^2-25}{2c}=\frac{350/11}{50/\sqrt{11}}=\frac7{\sqrt{11}}=\boxed{\frac{7\sqrt{11}}{11}}.\]</p>
+<h4>Solution 2 (The isosceles triangle BMC)</h4>
+<p>Let $BC=x$. Since $M$ is the midpoint of the hypotenuse, $MB=MC=\frac{AC}2=\frac{\sqrt{25+x^2}}2$, so $\angle MBC=\angle MCB=\angle C$. In the right triangle $BMT$ (right angle at $M$), $\tan\angle MBT=\frac{MT}{MB}$; in triangle $ABC$, $\tan C=\frac{AB}{BC}$. Hence
+\[\frac5x=\frac{3}{\sqrt{25+x^2}/2}\quad\Longrightarrow\quad 25(25+x^2)=36x^2\quad\Longrightarrow\quad x^2=\frac{625}{11}.\]
+Also $BT=\frac{MB}{\cos C}=\frac{\sqrt{25+x^2}}2\cdot\frac{\sqrt{25+x^2}}x=\frac{25+x^2}{2x}$, so
+\[CT=x-\frac{25+x^2}{2x}=\frac{x^2-25}{2x}=\frac{350/11}{2\cdot25/\sqrt{11}}=\boxed{\frac{7\sqrt{11}}{11}}.\]</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p16">
+<h3>Problem 6</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Number Theory &middot; LPS VI, Chapter 35: Factorials and Prime Counting &middot; Divisibility by Factorials</div>
+<div class="ct-text"><p>Compute the largest positive integer $n$ such that $n!$ divides
+\[\binom{256}{128}^1\cdot\binom{128}{64}^2\cdot\binom{64}{32}^4\cdot\binom{32}{16}^8\cdot\binom{16}{8}^{16}\cdot\binom{8}{4}^{32}\cdot\binom{4}{2}^{64}\cdot\binom{2}{1}^{128}.\]</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$256$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (A telescoping product)</h4>
+<p>Using $\binom{2m}{m}=\frac{(2m)!}{(m!)^2}$, the $j$th factor ($j=1,\dots,8$) is
+\[\binom{2^j}{2^{j-1}}^{2^{8-j}}=\frac{\bigl((2^j)!\bigr)^{2^{8-j}}}{\bigl((2^{j-1})!\bigr)^{2^{9-j}}} .\]
+The numerator of factor $j$ equals the denominator of factor $j+1$, both being $\bigl((2^j)!\bigr)^{2^{8-j}}$. So the product telescopes to
+\[\frac{(2^8)!}{\bigl((2^0)!\bigr)^{2^8}}=256!\,.\]
+Now $n!\mid 256!$ exactly when $n\le256$, so the answer is $\boxed{256}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p17">
+<h3>Problem 7</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Combinatorics &middot; LPS VI, Chapter 42: Recursion, Paths, and Dynamic Counting &middot; Recursive Counting Rules</div>
+<div class="ct-text"><p>A tromino is any connected figure constructed by joining $3$ unit squares edge-to-edge. Compute the number of ways to tile a $2\times 6$ rectangular grid with $4$ nonoverlapping trominoes.</p><p>(Two tilings that differ by a rotation or reflection are considered distinct.)</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$11$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Casework on the first column)</h4>
+<p>Number the rows $1,2$ and the columns $1,\dots,6$. A tromino in a $2$-row strip is either a horizontal $1\times3$ bar or an L (a $2\times2$ square minus one cell). First, a $2\times3$ rectangle has exactly $3$ tilings: two bars, or two L's in $2$ ways.</p><p>Look at the two cells of column $1$.</p><ul class="ct-ul"><li><p><em>They lie in different pieces.</em> A piece containing $(2,1)$ but not $(1,1)$ is a bar or the L $\{(2,1),(2,2),(1,2)\}$; the latter would isolate $(1,1)$. The same holds for $(1,1)$. So both are bars, covering columns $1$&ndash;$3$, and columns $4$&ndash;$6$ are tiled in $3$ ways: $3$ tilings.</p></li><li><p><em>They lie in one L</em>, which also covers $(1,2)$ or $(2,2)$; by symmetry say $(1,2)$. The cell $(2,2)$ is then covered by the L $\{(2,2),(2,3),(1,3)\}$, after which columns $4$&ndash;$6$ remain ($3$ ways), or by the bar $\{(2,2),(2,3),(2,4)\}$. In the latter case $(1,3)$ can only be covered by the bar $\{(1,3),(1,4),(1,5)\}$, and the remaining cells $(2,5),(2,6),(1,6)$ form an L: $1$ way. So $3+1=4$ tilings, and $8$ for both orientations.</p></li></ul><p>The total is $3+8=\boxed{11}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p18">
+<h3>Problem 8</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Number Theory &middot; LPS VI, Chapter 54: Prime Patterns and Number-Theoretic Search &middot; Pattern Search Among Special Integers</div>
+<div class="ct-text"><p>Let $a_1, a_2, \ldots$ be a sequence of positive integers such that $a_1=2$ and for all $n\ge 2$, it holds that $a_n$ is the sum of $a_{n-1}$ and the largest prime divisor of $a_{n-1}$. Compute the smallest integer greater than $2026$ that appears in this sequence.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$2068$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (The sequence passes through all prime squares)</h4>
+<p><strong>Claim.</strong> If $a_n=p^2$ for a prime $p$, and $q$ is the next prime after $p$, then the sequence continues
+\[p^2,\ p(p+1),\ \dots,\ pq,\ q(p+1),\ q(p+2),\ \dots,\ q^2 .\]</p><p><em>Proof.</em> For $p\le j&lt;q$ every prime factor of $j$ is at most $p$: a prime factor $r&gt;p$ would satisfy $r\le j&lt;q$, contradicting that $q$ is the next prime. So the largest prime factor of $pj$ is $p$, and the terms $p\cdot j$ go up by $p$ until $pq$. The largest prime factor of $pq$ is $q$, and for $p\le j&lt;q$ the largest prime factor of $qj$ is $q$ (all prime factors of $j$ are at most $p&lt;q$); so the terms $q\cdot j$ go up by $q$ from $j=p$ to $j=q$. $\square$</p><p>Since $a_1=2$ and $a_2=4=2^2$, the sequence passes through the square of every prime. Now $43^2=1849$ and the next prime is $47$, so the sequence continues
+\[1849,\ 1892,\ 1935,\ 1978,\ 2021=43\cdot47,\ 2068=47\cdot44,\ \dots\]
+The smallest term greater than $2026$ is $\boxed{2068}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p19">
+<h3>Problem 9</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Geometry &middot; LPS VI, Chapter 40: Coordinate Geometry and Analytic Methods &middot; Equation-Based Figure Analysis</div>
+<div class="ct-text"><p>Let $ABCD$ be a rectangle. Let $E$ be the reflection of $C$ over $B$. The circumcircle of triangle $ACE$ intersects line $CD$ at a point $F\ne C$. Given that $AC=8$ and $AF=6$, compute the area of rectangle $ABCD$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\frac{768}{25}$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Coordinates)</h4>
+<div class="ct-fig"><img style="width:261px" src="/assets/contests/2026-27/hmmt-feb-tg-19_s1.svg" alt="Figure for the solution"></div>
+<p>Let $B=(0,0)$, $A=(0,h)$, $C=(w,0)$, $D=(w,h)$, so $E=(-w,0)$. The center of the circle $ACE$ lies on the perpendicular bisector $x=0$ of $CE$; call it $(0,k)$. From $w^2+k^2=(h-k)^2$ we get $k=\frac{h^2-w^2}{2h}$. The line $CD$ is $x=w$; it meets the circle where $w^2+(y-k)^2=w^2+k^2$, i.e. $y=0$ (the point $C$) or $y=2k$. So $F=(w,2k)$ and $h-2k=\frac{w^2}h$, giving
+\[AF^2=w^2+\frac{w^4}{h^2}=\frac{w^2(w^2+h^2)}{h^2}=\frac{64w^2}{h^2}.\]
+With $AF=6$ this gives $\frac wh=\frac34$; with $w^2+h^2=64$ we get $w=\frac{24}5$, $h=\frac{32}5$, and the area is $wh=\boxed{\frac{768}{25}}$.</p>
+<h4>Solution 2 (An inscribed angle)</h4>
+<p>Since $B$ is the midpoint of $CE$ and $AB\perp CE$, we have $AE=AC$, so $\angle AEC=\angle ACE=\angle ACB$. The points $A,C,E,F$ are concyclic, so the angle between the lines $FA$ and $FC$ equals the angle between $EA$ and $EC$ (inscribed angles on the chord $AC$, as angles between lines); hence the acute angle $\angle AFD$ in the right triangle $ADF$ equals $\angle ACB$.</p><p>In the right triangle $ADF$, $\sin\angle AFD=\frac{AD}{AF}$; in the right triangle $ABC$, $\sin\angle ACB=\frac{AB}{AC}$. Hence
+\[\frac{BC}{6}=\frac{AD}{AF}=\frac{AB}{AC}=\frac{AB}8,\qquad\text{so}\qquad \frac{BC}{AB}=\frac34 .\]
+With $AB^2+BC^2=64$ this gives $AB=\frac{32}5$, $BC=\frac{24}5$, and the area is $\boxed{\frac{768}{25}}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p20">
+<h3>Problem 10</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 7: Congruence, Rigidity, and Isometric Structure &middot; Geometric Reflection and Isometry</div>
+<div class="ct-text"><p>Srinivas picks a uniformly random direction and shoots a laser starting at point $(0,1)$ at his chosen direction. The laser bounces off the graph of $y=|x|$ whenever it makes contact. Compute the expected number of times the laser contacts the graph of $y=|x|$.</p><p>(When the laser bounces, the angle at which it arrives mirrors the angle at which it departs. See the diagram below.)</p><div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/hmmt-feb-tg-20.svg" alt="Figure for Guts Round, Problem 10"></div></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$1$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Unfolding the right-angled wedge)</h4>
+<div class="ct-fig"><img style="width:280px" src="/assets/contests/2026-27/hmmt-feb-tg-20_s1.svg" alt="Figure for the solution"></div>
+<p>The laser travels in the wedge $W=\{y&gt;|x|\}$, whose angle is $90^\circ$. Instead of reflecting the laser at a wall, reflect the wedge: the reflections of $W$ in its walls, and so on, are the four quarter-planes $W,W_1,W_2,W_3$ cut out by the two lines $y=x$ and $y=-x$, and they tile the plane. In this unfolded picture the laser path becomes a straight ray from $S=(0,1)$, and each contact with the graph $y=|x|$ corresponds to the ray crossing one of the lines $y=x$, $y=-x$. (We ignore the directions aimed exactly at the origin, which have probability $0$.)</p><p>A ray from $S$ crosses a line through the origin not containing $S$ exactly when it points towards that line. For the direction $(\cos\theta,\sin\theta)$:</p><ul class="ct-ul"><li><p>it crosses $y=x$ iff $\sin\theta-\cos\theta&lt;0$, which has probability $\frac12$;</p></li><li><p>it crosses $y=-x$ iff $\sin\theta+\cos\theta&lt;0$, which also has probability $\frac12$.</p></li></ul><p>By linearity of expectation, the expected number of contacts is $\frac12+\frac12=\boxed{1}$. (In fact there are $0$, $1$, $2$ contacts with probabilities $\frac14,\frac12,\frac14$.)</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p21">
+<h3>Problem 11</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Number Theory &middot; LPS VI, Chapter 15: GCD, LCM, and Multiplicative Interaction &middot; GCD Logic</div>
+<div class="ct-text"><p>Compute the number of ordered pairs $(a,b)$ of positive integers such that $\operatorname{lcm}(a,b)+\gcd(a,b)=2026$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$13$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Divide by the gcd)</h4>
+<p>Let $g=\gcd(a,b)$, $a=gx$, $b=gy$ with $\gcd(x,y)=1$; then $\operatorname{lcm}(a,b)=gxy$ and the equation is $g(xy+1)=2026=2\cdot1013$. Ordered pairs $(a,b)$ correspond to choices of $g$ and ordered coprime pairs $(x,y)$ with $xy=\frac{2026}g-1$. A number $N$ with $\omega(N)$ distinct prime factors has $2^{\omega(N)}$ ordered coprime factorisations $N=xy$ (each prime power goes wholly to $x$ or to $y$).</p><ul class="ct-ul"><li><p>$g=1$: $xy=2025=3^4\cdot5^2$, $2^2=4$ pairs.</p></li><li><p>$g=2$: $xy=1012=2^2\cdot11\cdot23$, $2^3=8$ pairs.</p></li><li><p>$g=1013$: $xy=1$, $1$ pair.</p></li><li><p>$g=2026$: $xy=0$, impossible.</p></li></ul><p>The total is $4+8+1=\boxed{13}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p22">
+<h3>Problem 12</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Algebra &middot; LPS VI, Chapter 29: Exponents, Powers, and Growth &middot; Laws of Exponents</div>
+<div class="ct-text"><p>Let $a$, $b$, $c$, and $d$ be positive real numbers such that $ac=100$ and $bd=101$. Compute the largest possible value of
+\[a^{\log_{10}b}\cdot b^{\log_{10}c}\cdot c^{\log_{10}d}\cdot d^{\log_{10}a}.\]</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$10201$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Taking logarithms)</h4>
+<p>Let $x=\log_{10}a$, $y=\log_{10}b$, $z=\log_{10}c$, $w=\log_{10}d$; then $x+z=2$ and $y+w=\log_{10}101$. The logarithm of the expression is
+\[xy+yz+zw+wx=(x+z)(y+w)=2\log_{10}101 .\]
+So the expression always equals $10^{2\log_{10}101}=101^2$; in particular its largest value is $\boxed{10201}$.</p>
+<h4>Solution 2 (Swapping base and exponent)</h4>
+<p>For positive $u,v$ we have $u^{\log_{10}v}=10^{\log_{10}u\,\log_{10}v}=v^{\log_{10}u}$. Hence $b^{\log_{10}c}=c^{\log_{10}b}$ and $d^{\log_{10}a}=a^{\log_{10}d}$, and the expression equals
+\[a^{\log_{10}b}c^{\log_{10}b}\cdot c^{\log_{10}d}a^{\log_{10}d}=(ac)^{\log_{10}b+\log_{10}d}=100^{\log_{10}(bd)}=100^{\log_{10}101}=101^{\log_{10}100}=101^2 .\]
+It is constant, so the largest value is $\boxed{10201}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p23">
+<h3>Problem 13</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Combinatorics &middot; LPS VI, Chapter 19: Modular Arithmetic and Remainder Tracking &middot; Remainder Evolution</div>
+<div class="ct-text"><p>The <em>concatenation</em> of two base-$10$ numbers (possibly with leading $0$s) is defined as the base-$10$ number formed by joining them together. For example, the concatenation of $1402$ and $00213$ is $140200213$. Compute the number of $2026$-digit multiples of $3$ which <strong>cannot</strong> be expressed as the concatenation of two smaller multiples of $3$ (possibly with leading $0$s).</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$18\cdot7^{2024}$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Prefix digit sums modulo 3)</h4>
+<p>Let $X=\overline{x_1x_2\dots x_{2026}}$ be a $2026$-digit multiple of $3$ ($x_1\ne0$) and let $s_i=x_1+\dots+x_i$. Splitting $X$ after the $i$th digit ($1\le i\le2025$) gives the numbers $\overline{x_1\dots x_i}$ and $\overline{x_{i+1}\dots x_{2026}}$, both smaller than $X$; the first is a multiple of $3$ iff $3\mid s_i$, and then the second is too, since $3\mid s_{2026}$. So $X$ cannot be split iff
+\[s_1,s_2,\dots,s_{2025}\not\equiv0\pmod3,\qquad s_{2026}\equiv0\pmod 3 .\]
+Among the ten digits, four are $\equiv0$ and three each are $\equiv1$ and $\equiv2\pmod3$. Count digit by digit:</p><ul class="ct-ul"><li><p>$x_1\in\{1,\dots,9\}$ with $x_1\not\equiv0$: $6$ ways;</p></li><li><p>for $2\le i\le2025$, given $s_{i-1}\not\equiv0$, the digit $x_i$ must avoid the residue $-s_{i-1}$ (three digits): $7$ ways;</p></li><li><p>$x_{2026}$ must have residue $-s_{2025}\not\equiv0$: $3$ ways.</p></li></ul><p>The count is $6\cdot7^{2024}\cdot3=\boxed{18\cdot7^{2024}}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p24">
+<h3>Problem 14</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Number Theory &middot; LPS VI, Chapter 21: Digits, Place Value, and Decimal Structure &middot; Digit Conditions and Search</div>
+<div class="ct-text"><p>There exists exactly one ordered pair of positive integers $(m,n)$, both greater than $1$, with the property that, when written out in base $10$, $m\cdot n=\underline{ABCD}$ and $\binom{m}{n}=\underline{CDAB}$ for distinct nonzero digits $A$, $B$, $C$, and $D$. Compute $m+n$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$136$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Bounding, then divisibility by 101)</h4>
+<p>We need $1000\le mn\le9999$ and $1000\le\binom mn\le9999$; so $n&lt;m$ (as $\binom mm=1$), and let $k=\min(n,m-n)$.</p><ul class="ct-ul"><li><p>$k=1$: then $n=m-1$ (since $n\ge2$) and $\binom mn=m$; but $m(m-1)\ge1000$ forces $m\ge33$, while $\binom mn=m\ge1000$ would make $mn$ too big. Impossible.</p></li><li><p>$k\ge4$: from $mn\ge1000$ and $n&lt;m$, $m\ge32$, so $\binom mn\ge\binom m4\ge\binom{32}4=35960$. Impossible.</p></li><li><p>$n\in\{2,3\}$: $mn\ge1000$ gives $m\ge334$, and $\binom m n$ is far beyond $9999$. Impossible.</p></li></ul><p>So $n=m-2$ or $n=m-3$. Write $mn=100X+Y$ with two-digit blocks $X=\underline{AB}$, $Y=\underline{CD}$; the condition says $\binom mn=100Y+X$, hence $101\mid mn+\binom mn$.</p><p><em>Case $n=m-2$:</em> $\binom m2\in[1000,9999]$ and $m(m-2)\le9999$ give $46\le m\le101$, and $mn+\binom mn=\frac{m(3m-5)}2$. Since $101$ is prime, $101\mid m$ or $3m\equiv5\pmod{101}$, i.e. $m\equiv69$. $m=101$ gives $mn=9999$ (repeated digits); $m=69$ gives $mn=69\cdot67=4623$ and $\binom{69}{2}=2346$, which works with $A,B,C,D=4,6,2,3$.</p><p><em>Case $n=m-3$:</em> $\binom m3\in[1000,9999]$ and $m(m-3)\ge1000$ give $34\le m\le40$, and $mn+\binom m3=\frac{m(m^2+3m-16)}6$. For $m=34,\dots,40$ the values of $m^2+3m-16$ modulo $101$ are $30,1,75,50,27,6,88$, never $0$. No solutions.</p><p>So $(m,n)=(69,67)$ and $m+n=\boxed{136}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p25">
+<h3>Problem 15</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Combinatorics &middot; LPS VI, Chapter 27: Base Systems and Positional Arithmetic &middot; Digit Patterns Across Bases</div>
+<div class="ct-text"><p>Compute the number of ways to partition $2026$ into the unordered sum of distinct positive integers, each of which is a power of $2$ or a power of $6$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$16$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Uniqueness of binary representation)</h4>
+<p>The allowed parts are the powers of $2$ up to $1024$ (including $1=2^0=6^0$) and the powers $6,36,216,1296$ of $6$ that are not powers of $2$. A partition is a set of allowed parts with sum $2026$.</p><p>Choose first which of $6,36,216,1296$ are used; call their sum $\Sigma$. Since $6+36+216+1296=1554\le2026$, every one of the $2^4=16$ choices leaves $2026-\Sigma\in[472,2026]$. This remainder must be a sum of distinct powers of $2$, and every positive integer less than $2048$ is such a sum in exactly one way (its binary representation, which uses only powers up to $1024$). So each choice gives exactly one partition, and the answer is $\boxed{16}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p26">
+<h3>Problem 16</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 19: Triangle Centers and Classical Triangle Geometry &middot; Centroid, Incenter, Circumcenter, and Orthocenter</div>
+<div class="ct-text"><p>Let $O$ and $G$ be the circumcenter and centroid of triangle $ABC$, respectively, and let $M$ be the midpoint of side $\overline{BC}$. Given that $OG=1$, $OM=\sqrt2$, and $GM=\sqrt3$, compute the area of triangle $ABC$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$3\sqrt{30}$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (A right angle at O)</h4>
+<div class="ct-fig"><img style="width:257px" src="/assets/contests/2026-27/hmmt-feb-tg-26_s1.svg" alt="Figure for the solution"></div>
+<p>Since $OG^2+OM^2=1+2=3=GM^2$, the angle $GOM$ is right. Put $O=(0,0)$, $M=(\sqrt2,0)$, $G=(0,1)$. The centroid divides the median $AM$ with $AG=2GM$, so
+\[A=M+3(G-M)=(-2\sqrt2,\,3),\qquad R^2=OA^2=8+9=17 .\]
+The side $BC$ is the chord through $M$ perpendicular to $OM$, i.e. the line $x=\sqrt2$, so $BC=2\sqrt{R^2-OM^2}=2\sqrt{15}$. The distance from $A$ to this line is $\sqrt2-(-2\sqrt2)=3\sqrt2$. Hence
+\[[ABC]=\tfrac12\cdot2\sqrt{15}\cdot3\sqrt2=\boxed{3\sqrt{30}}.\]</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p27">
+<h3>Problem 17</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Geometry &middot; LPS VI, Chapter 12: Circle Angles and Cyclic Geometry &middot; Diameter and Semicircle Geometry</div>
+<div class="ct-text"><p>A point $P$ is selected uniformly at random on one of the straight edges of a quarter circle, and another point $Q$ is chosen independently and uniformly at random on the other straight edge. Compute the probability there exists a point $A$ on the arc of the quarter circle such that $\angle PAQ$ is obtuse.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$1-\frac{\pi}{4}$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (The circle on diameter PQ)</h4>
+<div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/hmmt-feb-tg-27_s1.svg" alt="Figure for the solution"></div>
+<p>Let the quarter circle have center $O=(0,0)$ and radius $1$, with $P=(p,0)$ and $Q=(0,q)$, $p,q$ independent and uniform on $[0,1]$. A point $A$ sees $PQ$ at an obtuse angle exactly when $A$ lies strictly inside the circle $\gamma$ with diameter $PQ$.</p><p>Since $\angle POQ=90^\circ$, the circle $\gamma$ passes through $O$; its center is $N=\bigl(\frac p2,\frac q2\bigr)$ and its radius is $\rho=\frac12\sqrt{p^2+q^2}$. Among the points of the arc, the one closest to $N$ is the point $X$ in the direction of $N$ (this direction lies in the quarter plane), at distance $|1-\rho|$ from $N$. So some arc point lies inside $\gamma$ iff $|1-\rho|&lt;\rho$, i.e. iff $\rho&gt;\frac12$, i.e. iff $p^2+q^2&gt;1$.</p><p>The point $(p,q)$ is uniform in the unit square, and the part with $p^2+q^2\le1$ is a quarter disk of area $\frac\pi4$. The probability is $\boxed{1-\frac\pi4}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p28">
+<h3>Problem 18</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Geometry &middot; LPS VI, Chapter 44: Area Ratios and Cevian Geometry &middot; Shared-Altitude Ratios</div>
+<div class="ct-text"><p>Let $ABCD$ be a trapezoid with side $\overline{AB}$ parallel to side $\overline{CD}$. Let $P$ be the intersection of diagonals $\overline{AC}$ and $\overline{BD}$. Given that the distances from $P$ to sides $\overline{AB}$, $\overline{BC}$, $\overline{CD}$, and $\overline{DA}$ are $3$, $6$, $8$, and $8$, respectively, compute the perimeter of $ABCD$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\frac{165}{2}$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Areas give the sides, a right triangle gives the scale)</h4>
+<div class="ct-fig"><img style="width:431px" src="/assets/contests/2026-27/hmmt-feb-tg-28_s1.svg" alt="Figure for the solution"></div>
+<p>The height of the trapezoid is $3+8=11$. Triangles $PAB$ and $PCD$ are similar ($AB\parallel CD$) with corresponding heights $3$ and $8$, so $AB=3k$ and $CD=8k$ for some $k&gt;0$.</p><p><strong>The legs.</strong> The triangles $ABC$ and $ABD$ both have base $AB$ and height $11$, so
+\[[PBC]=[ABC]-[PAB]=\tfrac12\cdot3k\cdot11-\tfrac12\cdot3k\cdot3=12k=[ABD]-[PAB]=[PDA].\]
+With the given distances, $\frac12\cdot BC\cdot6=12k$ and $\frac12\cdot DA\cdot8=12k$, so $BC=4k$ and $DA=3k$.</p><p><strong>The scale.</strong> Let the parallel to $AD$ through $B$ meet $CD$ at $E$. Since $CD&gt;AB$, $E$ lies on segment $CD$, $ABED$ is a parallelogram, $BE=3k$ and $EC=8k-3k=5k$. So triangle $BEC$ has sides $3k,4k,5k$ and a right angle at $B$; its height from $B$ is the height of the trapezoid:
+\[11=\frac{3k\cdot4k}{5k}=\frac{12k}5,\qquad k=\frac{55}{12}.\]
+The perimeter is $3k+4k+8k+3k=18k=\boxed{\frac{165}2}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p29">
+<h3>Problem 19</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Number Theory &middot; LPS VI, Chapter 11: Divisors and Arithmetic Functions of a Number &middot; Counting Divisors</div>
+<div class="ct-text"><p>Compute the smallest positive integer $n$ for which $n$ has exactly $10$ positive integer divisors and $n+1$ has exactly $9$ positive integer divisors.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$6723$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Factor n as (m-1)(m+1))</h4>
+<p>A number with $9$ divisors is $q^8$ or $q^2r^2$ ($q\ne r$ primes); a number with $10$ divisors is $q^9$ or $q^4r$. So $n+1=m^2$ with $m=q^4$ or $m=qr$, and $n=(m-1)(m+1)$.</p><p><strong>$m=q^4$.</strong> $n+1=256$ gives $n=255=3\cdot5\cdot17$ ($8$ divisors); $n+1=3^8=6561$ gives $n=6560=2^5\cdot5\cdot41$ ($24$ divisors); larger $q$ give $n&gt;10^5$.</p><p><strong>$m=qr$ odd.</strong> Then $m\pm1$ are even with $\gcd 2$, so $8\mid n$. A number $q^9$ or $q^4r$ divisible by $8$ is $2^9$ or $16s$ ($s$ an odd prime). $n=512$ is not $m^2-1$. If $n=16s$, write $m-1=2x$, $m+1=2y$ with $y=x+1$: $xy=4s$ with $x,y$ consecutive, so $\{x,y\}=\{4,s\}$, $s\in\{3,5\}$, $m\in\{7,9\}$; neither is a product of two distinct primes.</p><p><strong>$m=qr$ even</strong>, so $m=2r$ with $r$ an odd prime. Then $m-1$ and $m+1$ are odd and coprime, both larger than $1$, so $n=q^9$ is impossible and $n=q^4r'$ forces $\{m-1,m+1\}=\{q^4,r'\}$ with $q$ an odd prime. The smallest such $m$: $q=3$ gives $m\in\{80,82\}$; $80$ is not twice a prime, $82=2\cdot41$ works, with $m-1=81=3^4$ and $m+1=83$ prime. Any larger $q$ gives $m\ge5^4-1$.</p><p>So the smallest $n$ is $81\cdot83=\boxed{6723}=3^4\cdot83$, and $n+1=6724=2^2\cdot41^2$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p30">
+<h3>Problem 20</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Combinatorics &middot; LPS VI, Chapter 38: Probability and Expected Value &middot; Classical Probability</div>
+<div class="ct-text"><p>Derek is at the front of a line, with six clones named Derek #1, Derek #2, Derek #3, Derek #4, Derek #5, and Derek #6 standing behind him in a uniformly random order. For all positive integers $k$ between $1$ and $6$, inclusive, on the $k$th minute from now, Derek #$k$ will swap positions with whoever is standing directly in front of him in the line. Compute the probability that after $6$ minutes, Derek is still at the front of the line.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\frac{53}{144}$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (The initial decreasing run)</h4>
+<p>Write the clones' numbers in line order as $c_0,c_1,\dots,c_5$ ($c_0$ directly behind Derek). A person only moves back when the person directly behind swaps forward, and clone $\#k$ moves forward only at minute $k$. Say that $c_i$ is <em>knocked back</em> if the person behind $c_i$ swaps with $c_i$ before minute $c_i$.</p><p><strong>Claim.</strong> $c_i$ is knocked back iff $c_{i+1}&lt;c_i$ and $c_{i+1}$ is not knocked back (and $c_5$ is never knocked back).</p><p>Indeed, until $c_i$ is knocked back or moves, the person behind $c_i$ is $c_{i+1}$ unless $c_{i+1}$ has been knocked back. A person who arrives behind $c_i$ after knocking back $c_{i+1}$ has already used its only move, so it never swaps with $c_i$. Hence the only possible attacker is $c_{i+1}$ itself, at minute $c_{i+1}$; it succeeds iff that minute comes before minute $c_i$ and $c_{i+1}$ is still in place.</p><p>Derek is displaced exactly when $c_0$ is still directly behind him at minute $c_0$, i.e. when $c_0$ is not knocked back (only $c_0$ can attack Derek, by the same reasoning). Let $c_0&gt;c_1&gt;\dots&gt;c_j$ be the initial decreasing run, of length $j+1$. By the claim, $c_j$ is not knocked back, $c_{j-1}$ is, $c_{j-2}$ is not, and so on; so $c_0$ is knocked back iff $j$ is odd. Thus Derek stays at the front iff the initial decreasing run has even length.</p><p>The first $\ell$ numbers are decreasing with probability $\frac1{\ell!}$, so the run has length exactly $\ell$ with probability $\frac1{\ell!}-\frac1{(\ell+1)!}$ for $\ell&lt;6$ and $\frac1{6!}$ for $\ell=6$. The probability of an even length is
+\[\frac1{2!}-\frac1{3!}+\frac1{4!}-\frac1{5!}+\frac1{6!}=\frac{360-120+30-6+1}{720}=\frac{265}{720}=\boxed{\frac{53}{144}}.\]</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p31">
+<h3>Problem 21</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 4: Divisibility and Prime Structure &middot; Divisibility Chains and Factor Relations</div>
+<div class="ct-text"><p>Compute the largest possible value of
+\[\gcd\left(\binom{n}{3}-1,\ \binom{n}{4}-1\right)\]
+as $n$ ranges through all positive integers greater than $3$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$102$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Eliminate the binomials)</h4>
+<p>Let $g$ divide both $\binom n3-1$ and $\binom n4-1$. From $\binom n4=\binom n3\cdot\frac{n-3}4$,
+\[4\Bigl(\binom n4-1\Bigr)=\binom n3(n-3)-4\equiv (n-3)-4=n-7\pmod g,\]
+so $g\mid n-7$, i.e. $n\equiv7\pmod g$. Then
+\[6\Bigl(\binom n3-1\Bigr)=n(n-1)(n-2)-6\equiv7\cdot6\cdot5-6=204\pmod g,\]
+so $g\mid204=2^2\cdot3\cdot17$.</p><p><strong>$4\nmid g$.</strong> Suppose $4$ divides both numbers. The argument above with $g=4$ gives $n\equiv3\pmod4$, and moreover $\binom n3(n-3)\equiv4\pmod{16}$ with $\binom n3$ odd, so $v_2(n-3)=2$, i.e. $n\equiv7\pmod8$. Write $n=8t+7$: then $\binom n3=\frac{(8t+7)(4t+3)(8t+5)}3$, and modulo $4$ (where $3^{-1}\equiv3$) this is $3\cdot3\cdot1\cdot3\equiv3$, contradicting $\binom n3\equiv1\pmod4$.</p><p>Hence $g\mid102$. The value $102$ is attained: for $n=823$, $\gcd\bigl(\binom{823}3-1,\binom{823}4-1\bigr)=102$. The answer is $\boxed{102}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p32">
+<h3>Problem 22</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Combinatorics &middot; LPS VI, Chapter 38: Probability and Expected Value &middot; Expected Value and Fairness</div>
+<div class="ct-text"><p>An equilateral triangle-shaped cake of side length $5$ is cut into $25$ unit equilateral triangle pieces. Jacob selects two distinct edges of the cake, then picks one point independently and uniformly at random on each of the two selected edges. He cuts along the line through these two points. Compute the expected number of pieces of cake after all cuts.</p><p>Below is an example of the process, with the dots being the selected points and the dashed line being Jacob's cut. This cut results in $32$ pieces.</p><div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/hmmt-feb-tg-32.svg" alt="Figure for Guts Round, Problem 22"></div></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\frac{158}{5}$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Counting crossings of grid lines)</h4>
+<p>With probability $1$ the cut misses all grid vertices. Each unit triangle whose interior the cut meets is split into two pieces, and the others stay whole, so the number of pieces is $25+K$, where $K$ is the number of unit triangles crossed. Going along the cut, we enter a new unit triangle exactly when we cross one of the interior grid lines, so $K=1+(\text{number of interior grid lines crossed})$.</p><p>The interior grid lines form three families of four lines, parallel to the three sides at distances corresponding to $1,2,3,4$. Use coordinates $u_1,u_2,u_3\ge0$ with $u_1+u_2+u_3=5$, $u_i$ measuring the (scaled) distance to side $i$; the family parallel to side $i$ consists of the lines $u_i=1,2,3,4$. Along a segment each $u_i$ changes linearly, so the number of lines of family $i$ crossed is the number of integers strictly between the end values of $u_i$.</p><p>By symmetry, take the points on sides $u_3=0$ and $u_1=0$: $P=(s,5-s,0)$ and $Q=(0,5-t,t)$ with $s,t$ independent and uniform on $[0,5]$.</p><ul class="ct-ul"><li><p>Family $1$: integers strictly between $0$ and $s$: $\lfloor s\rfloor$, of mean $\frac{0+1+2+3+4}5=2$.</p></li><li><p>Family $3$: likewise $\lfloor t\rfloor$, of mean $2$.</p></li><li><p>Family $2$: integers strictly between $5-s$ and $5-t$: $|\lfloor s\rfloor-\lfloor t\rfloor|$, whose mean, with $\lfloor s\rfloor,\lfloor t\rfloor$ independent and uniform on $\{0,\dots,4\}$, is $\frac{2(4\cdot1+3\cdot2+2\cdot3+1\cdot4)}{25}=\frac85$.</p></li></ul><p>So $\mathbb E[K]=1+2+2+\frac85=\frac{33}5$, and the expected number of pieces is $25+\frac{33}5=\boxed{\frac{158}5}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p33">
+<h3>Problem 23</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 55: Three-Dimensional and Spatial Geometry &middot; Distance and Angle in Space</div>
+<div class="ct-text"><p>Let $\Gamma$ be a sphere of radius $5$. Let $A$, $B$, $C$, and $D$ be points on $\Gamma$ such that $AB=BC=CD=DA=8$ and $\angle ABC=\angle BCD=\angle CDA=\angle DAB$. Compute $AC$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$6\sqrt2$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Coordinates adapted to the two diagonals)</h4>
+<div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/hmmt-feb-tg-33_s1.svg" alt="Figure for the solution"></div>
+<p>By SAS, the triangles $ABC$ and $BCD$ (sides $8,8$ with equal included angles) are congruent, so $AC=BD$; call this length $x$. Let $K$ be the midpoint of $AC$ and $L$ the midpoint of $BD$.</p><p>Since $BA=BC$ and $DA=DC$, the points $B$, $D$ lie on the perpendicular bisector plane of $AC$, and $BK=DK=\sqrt{64-\frac{x^2}4}$. Then $KL\perp BD$ (triangle $KBD$ is isosceles), and $KL\perp AC$ (the line $KL$ lies in the bisector plane through $K$). Choose coordinates with $K$ at the origin, $AC$ on the $x$-axis, $L=(0,0,\tau)$ with $\tau=KL\ge0$, and $BD$ parallel to the $y$-axis:
+\[A=\Bigl(-\tfrac x2,0,0\Bigr),\ C=\Bigl(\tfrac x2,0,0\Bigr),\ B=\Bigl(0,\tfrac x2,\tau\Bigr),\ D=\Bigl(0,-\tfrac x2,\tau\Bigr),\qquad AB^2=\tfrac{x^2}2+\tau^2=64 .\]
+The center of $\Gamma$ is equidistant from $A,C$ and from $B,D$, so it lies on the planes $x=0$ and $y=0$: it is $(0,0,z)$. Then
+\[\tfrac{x^2}4+z^2=\tfrac{x^2}4+(\tau-z)^2\ \Rightarrow\ z=\tfrac\tau2,\qquad 25=\tfrac{x^2}4+\tfrac{\tau^2}4=\tfrac{x^2}4+16-\tfrac{x^2}8 .\]
+Hence $x^2=72$ and $AC=\boxed{6\sqrt2}$. (Here $\tau^2=28&gt;0$, so the four points are not coplanar; they are alternate vertices of a $6\times2\sqrt7\times6$ box, as in the figure.)</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p34">
+<h3>Problem 24</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 47: Probabilistic Method and Random Structure &middot; Expectation Arguments</div>
+<div class="ct-text"><p>Two mice and $100$ pieces of cheese are uniformly and independently placed at random on the boundary of a circle. Each mouse walks to the piece of cheese closest to it, with ties broken independently at random. Compute the probability that the two mice walk to the same piece of cheese.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\frac{3}{202}$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Squared Voronoi cells)</h4>
+<p>Take the circumference to be $1$ and let $n=100$. Ties have probability $0$. Given the cheese positions, each piece of cheese $i$ attracts the mice in its cell: half of each of the two gaps next to it, of total length $L_i=\frac{g_{i-1}+g_i}2$, where $g_1,\dots,g_n$ are the gaps between consecutive pieces of cheese. The mice are independent and uniform, so
+\[\Pr(\text{same cheese})=\mathbb E\Bigl[\sum_{i=1}^nL_i^2\Bigr]=n\,\mathbb E\Bigl[\Bigl(\frac{g_1+g_2}2\Bigr)^2\Bigr],\]
+using that the gaps are exchangeable.</p><p><strong>Moments of the gaps.</strong> The gap after a given piece exceeds $s$ iff the other $n-1$ pieces avoid an arc of length $s$, so $\Pr(g_1&gt;s)=(1-s)^{n-1}$ and
+\[\mathbb E[g_1^2]=\int_0^1 2s(1-s)^{n-1}\,ds=\frac2{n(n+1)} .\]
+From $\sum g_i=1$: $1=\mathbb E\bigl[(\sum g_i)^2\bigr]=n\,\mathbb E[g_1^2]+n(n-1)\,\mathbb E[g_1g_2]$, so $\mathbb E[g_1g_2]=\frac1{n(n+1)}$.</p><p><strong>Result.</strong>
+\[n\cdot\frac{2\cdot\frac2{n(n+1)}+2\cdot\frac1{n(n+1)}}4=\frac3{2(n+1)}=\boxed{\frac3{202}}.\]</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p35">
+<h3>Problem 25</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Algebra &middot; LPS VII, Chapter 9: Polynomials and Root-Coefficient Strategy &middot; Remainder, Factor, and Evaluation Logic</div>
+<div class="ct-text"><p>Let $p(x)$ be the unique polynomial of degree at most $8$ and with rational coefficients such that $p\bigl(\sqrt[3]{2}+\sqrt[3]{3}\bigr)=\sqrt[3]{6}$. Compute $p(1)$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\frac{42}{25}$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Inverting alpha with its minimal polynomial)</h4>
+<p>Let $\alpha=\sqrt[3]2+\sqrt[3]3$ and $w=\sqrt[3]6$. Cubing, $\alpha^3=2+3+3w\alpha$, so
+\[w=\frac{\alpha^3-5}{3\alpha}.\]
+Cubing $\alpha^3-5=3w\alpha$ gives $(\alpha^3-5)^3=162\alpha^3$, i.e. $m(\alpha)=0$ for
+\[m(x)=x^9-15x^6-87x^3-125 .\]
+Hence $\alpha(\alpha^8-15\alpha^5-87\alpha^2)=125$, so $\frac1\alpha=\frac{\alpha^8-15\alpha^5-87\alpha^2}{125}$, and
+\[w=\frac{\alpha^2(\alpha^3-5)(\alpha^6-15\alpha^3-87)}{375}.\]
+Using $\alpha^3(\alpha^6-15\alpha^3-87)=125$, the numerator is $125\alpha^2-5\alpha^2(\alpha^6-15\alpha^3-87)=-5\alpha^8+75\alpha^5+560\alpha^2$. So
+\[p(x)=\frac{-x^8+15x^5+112x^2}{75}\]
+has rational coefficients, degree $8$, and $p(\alpha)=w$; by the uniqueness in the statement it is the polynomial. Therefore $p(1)=\frac{126}{75}=\boxed{\frac{42}{25}}$.</p>
+<h4>Solution 2 (Comparing with the minimal polynomial at x=1)</h4>
+<p>Let $\alpha=\sqrt[3]2+\sqrt[3]3$. Cubing gives $\alpha^3=5+3\sqrt[3]6\,\alpha$, so $\sqrt[3]6=\frac{\alpha^3-5}{3\alpha}$; cubing $\alpha^3-5=3\sqrt[3]6\,\alpha$ shows that $\alpha$ is a root of $m(x)=x^9-15x^6-87x^3-125$. This polynomial is the minimal polynomial of $\alpha$ over $\mathbb Q$, because the stated uniqueness of $p$ means that no nonzero rational polynomial of degree at most $8$ vanishes at $\alpha$ (the difference of two such $p$ would be one).</p><p>Consider $r(x)=3x\,p(x)-(x^3-5)$. It has rational coefficients, degree at most $9$, and $r(\alpha)=3\alpha\sqrt[3]6-(\alpha^3-5)=0$. So $m$ divides $r$, and comparing degrees, $r=c\,m$ for a rational constant $c$. At $x=0$: $r(0)=5$ and $m(0)=-125$, so $c=-\frac1{25}$. At $x=1$:
+\[3p(1)-1+5=-\frac{m(1)}{25}=-\frac{1-15-87-125}{25}=\frac{226}{25},\]
+so $3p(1)=\frac{126}{25}$ and $p(1)=\boxed{\frac{42}{25}}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p36">
+<h3>Problem 26</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VI scale">H</span>Combinatorics &middot; LPS VI, Chapter 38: Probability and Expected Value &middot; Expected Value and Fairness</div>
+<div class="ct-text"><p>Marin is taking a random walk on a line. For each integer $n$ ranging from $1$ to $10$, inclusive and in order, Marin takes a step of length $F_n$ either left or right with equal probability, where $F_n$ is the $n$th Fibonacci number. Compute Marin's expected distance from his starting point.</p><p>(The Fibonacci numbers are defined by $F_1=F_2=1$ and the recurrence $F_n=F_{n-1}+F_{n-2}$ for all $n\ge 3$.)</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\frac{3741}{64}$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (A recursion with step three)</h4>
+<p>Let $S_n=\varepsilon_1F_1+\dots+\varepsilon_nF_n$ be the position after $n$ steps ($\varepsilon_i=\pm1$ independent and fair) and $E_n=\mathbb E|S_n|$. We use:</p><ul class="ct-ul"><li><p>(a) for $x\ge0$, $F&gt;0$: the average of $|x+F|$ and $|x-F|$ is $\max(x,F)=F+(x-F)^+$;</p></li><li><p>(b) $|S_k|\le F_1+\dots+F_k=F_{k+2}-1$.</p></li></ul><p>By (a), $E_n=F_n+\mathbb E\bigl[(|S_{n-1}|-F_n)^+\bigr]$.</p><p>Now $|S_{n-1}|=|S_{n-2}|+F_{n-1}$ when $\varepsilon_{n-1}$ has the sign of $S_{n-2}$ (probability $\frac12$; if $S_{n-2}=0$ either sign), and otherwise $|S_{n-1}|=\bigl||S_{n-2}|-F_{n-1}\bigr|\le\max(|S_{n-2}|,F_{n-1})&lt;F_n$ by (b). Hence
+\[\mathbb E\bigl[(|S_{n-1}|-F_n)^+\bigr]=\tfrac12\,\mathbb E\bigl[(|S_{n-2}|-F_{n-2})^+\bigr].\]
+Similarly, with $x=|S_{n-3}|$: $(|S_{n-2}|-F_{n-2})^+$ equals $x$ when the signs agree, and $\bigl(|x-F_{n-2}|-F_{n-2}\bigr)^+=0$ otherwise: if $x\ge F_{n-2}$ it is $(x-2F_{n-2})^+=0$ because $x\le F_{n-1}-1&lt;2F_{n-2}$ by (b), and if $x&lt;F_{n-2}$ it is $(-x)^+=0$. So $\mathbb E\bigl[(|S_{n-2}|-F_{n-2})^+\bigr]=\frac12E_{n-3}$. Altogether, for $n\ge4$,
+\[E_n=F_n+\tfrac14E_{n-3}.\]
+With $E_1=1$: $E_4=3+\frac14=\frac{13}4$, $E_7=13+\frac{13}{16}=\frac{221}{16}$, and
+\[E_{10}=55+\frac{221}{64}=\boxed{\frac{3741}{64}}.\]</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p37">
+<h3>Problem 27</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Algebra &middot; LPS VII, Chapter 13: Systems, Symmetry, and Multi-Variable Algebra &middot; Symmetric and Cyclic Systems</div>
+<div class="ct-text"><p>Let $a$, $b$, and $c$ be positive real numbers such that
+\[\begin{aligned}\sqrt{ab+1}+\sqrt{ca+1}&amp;=2a,\\ \sqrt{bc+1}+\sqrt{ab+1}&amp;=3b,\\ \sqrt{ca+1}+\sqrt{bc+1}&amp;=5c.\end{aligned}\]
+Compute $a$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\frac{14\sqrt{11}}{33}$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Square roots as new unknowns)</h4>
+<p>Let $x=\sqrt{bc+1}$, $y=\sqrt{ca+1}$, $z=\sqrt{ab+1}$. The system says
+\[a=\frac{y+z}2,\qquad b=\frac{z+x}3,\qquad c=\frac{x+y}5 .\]
+Substituting into $x^2-1=bc$, $y^2-1=ca$, $z^2-1=ab$ and writing $Q=xy+yz+zx$:
+\[15x^2-15=(z+x)(x+y)=x^2+Q,\quad 10y^2-10=y^2+Q,\quad 6z^2-6=z^2+Q,\]
+that is,
+\[x^2=\frac{Q+15}{14},\qquad y^2=\frac{Q+10}9,\qquad z^2=\frac{Q+6}5 .\]
+So $Q&gt;0$ satisfies $h(Q)=0$, where
+\[h(Q)=\sqrt{\tfrac{(Q+15)(Q+10)}{126}}+\sqrt{\tfrac{(Q+10)(Q+6)}{45}}+\sqrt{\tfrac{(Q+6)(Q+15)}{70}}-Q .\]
+Each square root of a product of two positive linear functions is concave, so $h$ is concave on $[0,\infty)$; $h(0)&gt;0$ and $h(Q)\to-\infty$ (the coefficients $\frac1{\sqrt{126}}+\frac1{\sqrt{45}}+\frac1{\sqrt{70}}&lt;1$). A concave function that is positive at $0$ and eventually negative has exactly one positive zero, so $Q$ (and with it $x,y,z,a,b,c$) is unique.</p><p>Try $Q=\frac{59}{11}$: then $x^2=\frac{16}{11}$, $y^2=\frac{169}{99}$, $z^2=\frac{25}{11}$, so $x=\frac{12}{\sqrt{99}}$, $y=\frac{13}{\sqrt{99}}$, $z=\frac{15}{\sqrt{99}}$, and indeed $xy+yz+zx=\frac{156+195+180}{99}=\frac{531}{99}=\frac{59}{11}$. Hence
+\[a=\frac{y+z}2=\frac{14}{\sqrt{99}}=\boxed{\frac{14\sqrt{11}}{33}}\]
+(with $b=\frac9{\sqrt{99}}$, $c=\frac5{\sqrt{99}}$; one checks $ab+1=\frac{225}{99}=z^2$, $ca+1=\frac{169}{99}=y^2$, $bc+1=\frac{144}{99}=x^2$).</p>
+<h4>Solution 2 (Find one solution, then compare ratios)</h4>
+<p><strong>A solution.</strong> Solving the system numerically (for instance by Newton's method) gives $a\approx1.40705$, $b\approx0.90453$, $c\approx0.50252$. These are nearly in the ratio $14:9:5$, and $a\sqrt{99}\approx14.0000$. So try $a=14k$, $b=9k$, $c=5k$ with $k=\frac1{\sqrt{99}}$, so that $k^2=\frac1{99}$. Then
+\[ab+1=\frac{126+99}{99}=225k^2,\qquad ca+1=\frac{70+99}{99}=169k^2,\qquad bc+1=\frac{45+99}{99}=144k^2,\]
+so $\sqrt{ab+1}=15k$, $\sqrt{ca+1}=13k$, $\sqrt{bc+1}=12k$, and
+\[15k+13k=28k=2a,\qquad 12k+15k=27k=3b,\qquad 13k+12k=25k=5c .\]
+So $(a,b,c)=(14k,9k,5k)$ is a solution.</p><p><strong>It is the only one.</strong> We use two inequalities, valid for every $u\ge0$:
+\[\sqrt{t^2u+1}&lt;t\sqrt{u+1}\ \text{ if } t&gt;1,\qquad \sqrt{t^2u+1}&gt;t\sqrt{u+1}\ \text{ if } 0&lt;t&lt;1 .\]
+Both follow by squaring, since $t^2u+1$ is compared with $t^2u+t^2$.</p><p>Let $(a',b',c')$ be any positive solution and let $p=\frac{a'}a$, $q=\frac{b'}b$, $r=\frac{c'}c$. Note that each equation of the system belongs to one variable ($a$, $b$ or $c$ on the right) and contains exactly the two products involving that variable.</p><p>Let $t=\max(p,q,r)$ and suppose $t&gt;1$. Each product of two primed variables is at most $t^2$ times the corresponding unprimed product, e.g. $a'b'=pq\,ab\le t^2ab$. If $t=p$, the first equation gives
+\[2a'=\sqrt{a'b'+1}+\sqrt{c'a'+1}\le\sqrt{t^2ab+1}+\sqrt{t^2ca+1}&lt;t\bigl(\sqrt{ab+1}+\sqrt{ca+1}\bigr)=t\cdot2a=2a',\]
+a contradiction. If $t=q$ or $t=r$, the same computation with the second or third equation gives $3b'&lt;3b'$ or $5c'&lt;5c'$. Hence $t\le1$.</p><p>Now let $s=\min(p,q,r)$ and suppose $s&lt;1$. Every primed product is at least $s^2$ times the unprimed one, and the second inequality reverses each step: for $s=p$,
+\[2a'\ge\sqrt{s^2ab+1}+\sqrt{s^2ca+1}&gt;s\bigl(\sqrt{ab+1}+\sqrt{ca+1}\bigr)=2a',\]
+and similarly for $s=q$ or $s=r$. Hence $s\ge1$.</p><p>So $p=q=r=1$, i.e. $(a',b',c')=(a,b,c)$: the solution is unique, and
+\[a=\frac{14}{\sqrt{99}}=\boxed{\frac{14\sqrt{11}}{33}}.\]</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p38">
+<h3>Problem 28</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 32: Trigonometric Geometry and Metric Conversion &middot; Law of Sines and Law of Cosines</div>
+<div class="ct-text"><p>Let $ABC$ be a triangle such that $\angle BAC=105^\circ$, $AB=12\sqrt2$, and $AC=17$. Let $P$ be a point such that $P$ and $A$ lie on different sides of line $BC$, and $\angle APB=\angle APC=60^\circ$. Compute $AP$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\frac{136\sqrt3}{13}$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Law of sines in the two triangles)</h4>
+<div class="ct-fig"><img style="width:258px" src="/assets/contests/2026-27/hmmt-feb-tg-38_s1.svg" alt="Figure for the solution"></div>
+<p>Since $\angle APB=\angle APC=60^\circ$ and $P\notin BC$, the points $B$ and $C$ lie on opposite sides of line $AP$ (otherwise rays $PB$ and $PC$ would coincide); as also $P$ and $A$ lie on opposite sides of line $BC$, the segments $PA$ and $BC$ cross. So $AP$ splits $\angle BAC$ into $\angle BAP=\theta$ and $\angle PAC=105^\circ-\theta$. Then $\angle ABP=120^\circ-\theta$ and $\angle ACP=\theta+15^\circ$. The law of sines in triangles $ABP$ and $ACP$ gives
+\[AP=\frac{AB\sin(120^\circ-\theta)}{\sin60^\circ}=\frac{AC\sin(\theta+15^\circ)}{\sin60^\circ}.\]
+Put $\beta=\theta+15^\circ$, so $120^\circ-\theta=135^\circ-\beta$ and $\sin(135^\circ-\beta)=\frac{\sqrt2}2(\cos\beta+\sin\beta)$. The equation becomes
+\[12\sqrt2\cdot\tfrac{\sqrt2}2(\cos\beta+\sin\beta)=17\sin\beta\iff 12\cos\beta=5\sin\beta,\]
+so $\tan\beta=\frac{12}5$ and $\sin\beta=\frac{12}{13}$. Therefore
+\[AP=\frac{17\cdot\frac{12}{13}}{\frac{\sqrt3}2}=\frac{408}{13\sqrt3}=\boxed{\frac{136\sqrt3}{13}}.\]</p>
+<h4>Solution 2 (The equilateral point and Ptolemy)</h4>
+<p>Let $X$ be the point on the same side of $BC$ as $A$ with $XBC$ equilateral. Since $\angle BPC=120^\circ$ and $P$ is on the other side, $P$ lies on the circle $BXC$, and since $PA$ bisects $\angle BPC$ it passes through the midpoint of the arc $BC$ not containing $P$, which is $X$. So $X,A,P$ are collinear, with $A$ between them ($A$ is inside the circle because $\angle BAC&gt;60^\circ$). By Ptolemy in $PBXC$, $PX\cdot BC=PB\cdot XC+PC\cdot XB$, i.e. $PX=PB+PC$.</p><p><strong>$AX=13$.</strong> The rotation about $C$ by $60^\circ$ taking $X$ to $B$ takes $A$ to a point $A'$ with $ACA'$ equilateral and $A'B=AX$; then $\angle BAA'=105^\circ-60^\circ=45^\circ$, $AA'=17$, so
+\[AX^2=A'B^2=288+289-2\cdot12\sqrt2\cdot17\cdot\tfrac{\sqrt2}2=169 .\]</p><p><strong>Law of cosines.</strong> Let $t=AP$, $u=PB$, $v=PC$; then $u+v=PX=t+13$. In triangles $ABP$, $ACP$ (angle $60^\circ$ at $P$): $288=t^2+u^2-tu$ and $289=t^2+v^2-tv$. Subtracting, $-1=(u-v)(u+v-t)=13(u-v)$, so $u-v=-\frac1{13}$. Adding, $577=2t^2+\frac{(u+v)^2+(u-v)^2}2-t(u+v)$; with $u+v=t+13$ this simplifies to
+\[577=\tfrac32t^2+\tfrac{169}2+\tfrac1{338},\qquad t^2=\frac{55488}{169},\qquad t=\boxed{\frac{136\sqrt3}{13}}.\]</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p39">
+<h3>Problem 29</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Number Theory &middot; LPS VII, Chapter 21: Arithmetic Functions and Multiplicative Structure &middot; Euler Totient and Related Functions</div>
+<div class="ct-text"><p>Compute
+\[\sum_{k=1}^{4004}\gcd(k,4004)\cos\left(\frac{\pi k}{2002}\right).\]</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$1440$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (gcd as a sum of totients)</h4>
+<p>Let $N=4004$ and $e(t)=\cos2\pi t+i\sin2\pi t$; the sum is the real part of $\sum_{k=1}^N\gcd(k,N)\,e(k/N)$. Use $\gcd(k,N)=\sum_{d\mid\gcd(k,N)}\varphi(d)$:
+\[\sum_{k=1}^N\gcd(k,N)e\Bigl(\frac kN\Bigr)=\sum_{d\mid N}\varphi(d)\sum_{j=1}^{N/d}e\Bigl(\frac{jd}N\Bigr).\]
+The inner sum is the sum of all $(N/d)$th roots of unity: $0$ unless $N/d=1$, when it is $1$. So the total is $\varphi(N)$, which is real. With $4004=2^2\cdot7\cdot11\cdot13$,
+\[\varphi(4004)=2\cdot6\cdot10\cdot12=\boxed{1440}.\]</p>
+<h4>Solution 2 (Grouping by the gcd: Ramanujan sums)</h4>
+<p>Let $N=4004$. Group the terms by $d=\gcd(k,N)$: writing $k=dj$ with $\gcd(j,N/d)=1$,
+\[\sum_{k=1}^N\gcd(k,N)\cos\frac{2\pi k}N=\sum_{d\mid N}d\,c_{N/d},\qquad c_q=\sum_{\substack{1\le j\le q\\ \gcd(j,q)=1}}\cos\frac{2\pi j}q .\]
+$c_q$ is the real part of the sum of the primitive $q$th roots of unity, which equals the Möbius value $\mu(q)$ (by Möbius inversion of $\sum_{d\mid q}(\text{sum of primitive }d\text{th roots})=[q=1]$). So the sum is $\sum_{d\mid N}d\,\mu(N/d)$, the Möbius inversion of $\sum_{d\mid n}\varphi(d)=n$, i.e. $\varphi(N)$. For $N=2^2\cdot7\cdot11\cdot13$ this is $\boxed{1440}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p40">
+<h3>Problem 30</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure &middot; Radical Axis and Radical Center</div>
+<div class="ct-text"><p>Let $ABC$ be a triangle with $AB=60$, $AC=67$, and $BC=69$. The incircle $\omega$ of triangle $ABC$ touches sides $\overline{BC}$, $\overline{CA}$, and $\overline{AB}$ at $D$, $E$, and $F$, respectively. Let $D'$ be the point diametrically opposite to $D$ in $\omega$. Let the common chord of the circumcircles of triangles $BD'F$ and $CD'E$ meet line $BC$ at $X$. Compute $BX$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$45$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Coordinates centred at D)</h4>
+<div class="ct-fig"><img style="width:356px" src="/assets/contests/2026-27/hmmt-feb-tg-40_s1.svg" alt="Figure for the solution"></div>
+<p>Let $x=BD=s-b$ and $y=CD=s-c$, where $s=98$: $x=31$, $y=38$. Let $r$ be the inradius and $\beta=\angle ABC$. Put $D=(0,0)$, $B=(-x,0)$, $C=(y,0)$, $D'=(0,2r)$.</p><p><strong>Circle $BD'F$ meets $BC$ again at $U=(2x,0)$.</strong> The circle through $B$, $D'$, $U$ has center $\bigl(\frac x2,k\bigr)$ with $\frac{9x^2}4+k^2=\frac{x^2}4+(2r-k)^2$, i.e. $k=\frac{2r^2-x^2}{2r}$. With $\tau=\tan\frac\beta2=\frac rx$, the tangency point is $F=B+x(\cos\beta,\sin\beta)$, and $\cos\beta=\frac{1-\tau^2}{1+\tau^2}$, $\sin\beta=\frac{2\tau}{1+\tau^2}$. The squared distance from $F$ to the center minus the squared radius equals
+\[x^2\Bigl(1-3\cos\beta\Bigr)-2kx\sin\beta=x\cdot\frac{x(4\tau^2-2)-4k\tau}{1+\tau^2}=0,\]
+since $k=\frac{x(2\tau^2-1)}{2\tau}$. So $F$ is on this circle, and it is the circle $BD'F$. In the same way the circle $CD'E$ meets $BC$ again at $V=(-2y,0)$.</p><p><strong>The radical axis.</strong> $X=(X_0,0)$ has equal powers: $(X_0+x)(X_0-2x)=(X_0-y)(X_0+2y)$, so $-(x+y)X_0=2(x^2-y^2)$ and $X_0=2(y-x)=14$. Hence $BX=X_0+x=2y-x=76-31=\boxed{45}$.</p>
+<h4>Solution 2 (Power of the point D)</h4>
+<p>Let $x=BD=31$ and $y=CD=38$, and let $I$, $r$ be the incenter and inradius.</p><p><strong>A fourth point on circle $BD'F$.</strong> Let the external bisector of $\angle B$ meet the line $DD'$ at $Y$ (below $BC$). In the right triangle $BDY$, $\angle DBY=90^\circ-\frac{\angle B}2$, so $\angle BYD=\frac{\angle B}2$. On the other hand, triangle $BDF$ is isosceles ($BD=BF$), so $\angle BFD=90^\circ-\frac{\angle B}2$, and $\angle DFD'=90^\circ$ ($DD'$ is a diameter), hence $\angle BFD'=180^\circ-\frac{\angle B}2$. As $F$ and $Y$ lie on opposite sides of $BD'$, $\angle BFD'+\angle BYD'=180^\circ$ shows that $B,F,D',Y$ are concyclic.</p><p><strong>Where the circle meets $BC$.</strong> Since $BI\perp BY$ and $BD\perp IY$, the right triangle $IBY$ has altitude $BD$, so $DY\cdot DI=BD^2$, i.e. $DY=\frac{x^2}r$. The power of $D$ (inside the circle) is $DD'\cdot DY=2r\cdot\frac{x^2}r=2x^2$; if the circle meets line $BC$ again at $U$, then $DB\cdot DU=2x^2$, so $DU=2x$ on the side of $C$. Likewise the circle $CD'E$ meets line $BC$ again at $V$ with $DV=2y$ on the side of $B$.</p><p><strong>The radical axis.</strong> The common chord is the radical axis, so $X$ on $BC$ has equal powers $XB\cdot XU=XC\cdot XV$ (signed). With coordinate $X_0$ measured from $D$ towards $C$: $(X_0+x)(X_0-2x)=(X_0-y)(X_0+2y)$, giving $X_0=2(y-x)=14$ and $BX=x+14=\boxed{45}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p41">
+<h3>Problem 31</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-S" title="Superhard, on the LPS VII scale">S</span>Algebra &middot; LPS VII, Chapter 34: Complex Numbers as an Olympiad Tool &middot; Roots of Unity</div>
+<div class="ct-text"><p>Let $\zeta=\cos\frac{2\pi}{19}+i\sin\frac{2\pi}{19}$. It is given that the polynomial $x^3+16x^2+3x-229$ has three distinct real roots, and its largest root can be uniquely written in the form
+\[a_1\zeta+a_2\zeta^2+\cdots+a_{18}\zeta^{18}\]
+for some rational numbers $a_1, \ldots, a_{18}$. Compute $a_1^2+a_2^2+\cdots+a_{18}^2$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$564$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Gaussian periods and symmetric sums)</h4>
+<p><strong>Setup.</strong> The powers $\zeta,\dots,\zeta^{18}$ form a basis of $\mathbb Q(\zeta)$ over $\mathbb Q$, which explains the uniqueness. The automorphisms of $\mathbb Q(\zeta)$ are $\sigma_t:\zeta\mapsto\zeta^t$, $t=1,\dots,18$; they form a cyclic group generated by $\sigma=\sigma_2$ ($2$ is a primitive root mod $19$). The cubic $f(x)=x^3+16x^2+3x-229$ has no rational roots (none of $\pm1,\pm229$ is a root), so it is irreducible; its roots lie in $\mathbb Q(\zeta)$ (one of them does, and $\sigma$ maps roots to roots). The cyclic group of order $18$ acts transitively on the three roots, through a cyclic group of order $3$; so $\sigma^3=\sigma_8$ fixes every root and $\sigma$ permutes the roots cyclically.</p><p>The subgroup $H=\{1,7,8,11,12,18\}$ of cubes mod $19$ is generated by $8$, with cosets $H$, $2H$, $4H$. A number $\sum a_k\zeta^k$ is fixed by $\sigma_8$ iff $a_k$ is constant on these cosets. Let $\eta_0,\eta_1,\eta_2$ be the sums of $\zeta^k$ over $H$, $2H$, $4H$ (Gaussian periods); $\sigma$ maps $\eta_0\to\eta_1\to\eta_2\to\eta_0$. So the largest root is $\rho=u\eta_0+v\eta_1+w\eta_2$ with rational $u,v,w$, and the three roots are $\rho$ and its cyclic shifts. The answer is $6(u^2+v^2+w^2)$.</p><p><strong>Period sums.</strong> $\eta_0+\eta_1+\eta_2=\sum_{k=1}^{18}\zeta^k=-1$. Next, $\sum_i\eta_i^2$ is a sum of $3\cdot36=108$ terms $\zeta^{a+b}$ ($a,b$ in the same coset). Since $-1=18\in H$, exactly $18$ of them have $a+b\equiv0$; the map $(a,b)\mapsto(2a,2b)$ permutes the pairs and multiplies $a+b$ by $2$, so each nonzero residue occurs equally often, $\frac{90}{18}=5$ times. Hence $\sum\eta_i^2=18-5=13$, and $\eta_0\eta_1+\eta_1\eta_2+\eta_2\eta_0=\frac{1-13}2=-6$.</p><p><strong>Matching.</strong> The sum of the roots is $-(u+v+w)=-16$. The sum of their squares is $16^2-2\cdot3=250$, and also
+\[\sum_i(u\eta_i+v\eta_{i+1}+w\eta_{i+2})^2=13(u^2+v^2+w^2)+2(uv+vw+wu)(-6).\]
+With $T=u^2+v^2+w^2$ and $uv+vw+wu=\frac{256-T}2$: $250=13T-6(256-T)=19T-1536$, so $T=94$. The answer is $6\cdot94=\boxed{564}$.</p>
+<h4>Solution 2 (Summing over all conjugates)</h4>
+<p>Write $x=\sum_{j=1}^{18}a_j\zeta^j$ for the largest root and $f(t)=t^3+16t^2+3t-229$. Let $A=a_1+\dots+a_{18}$ and $S=a_1^2+\dots+a_{18}^2$; we want $S$.</p><p><strong>Conjugates.</strong> For $k=1,\dots,18$ let $\sigma_k$ be the map $\sum c_j\zeta^j\mapsto\sum c_j\zeta^{jk}$ ($c_j$ rational). It respects sums and products (it replaces $\zeta$ by $\zeta^k$, another root of $t^{18}+\dots+t+1$), so $f(\sigma_k(x))=\sigma_k(f(x))=0$: every $x_k=\sigma_k(x)$ is a root of $f$, hence real.</p><p>We show that each root of $f$ appears exactly six times among $x_1,\dots,x_{18}$. The set $G=\{k:\ x_k=x\}$ is closed under multiplication mod $19$, so it is a subgroup of the nonzero residues, and $x_k=x_l$ exactly when $l\equiv km$ for some $m\in G$. So each value taken by the $x_k$ is taken exactly $|G|$ times; let $v_1,\dots,v_d$ be the distinct values, so $d\,|G|=18$ and $d\le3$. Each $\sigma_m$ permutes $v_1,\dots,v_d$ (as $\sigma_m(x_k)=x_{km}$), so it fixes every coefficient of $g(t)=(t-v_1)\cdots(t-v_d)$. A number $\sum c_j\zeta^j$ fixed by all $\sigma_m$ has $c_{jm}=c_j$ for all $j,m$, so all $c_j$ equal some $c$, and the number is $c(\zeta+\dots+\zeta^{18})=-c$, rational. Hence $g$ has rational coefficients and the root $x$. Now $f$ has no rational root (modulo $2$ it is $t^3+t+1$, which has no root $0$ or $1$; a rational root of this monic integer cubic would be an integer), so $f$ is irreducible over $\mathbb Q$ (a cubic with a factorization has a linear factor). Let $h$ be a nonzero rational polynomial of least degree with root $x$. Dividing any rational polynomial with root $x$ by $h$, the remainder has root $x$ and smaller degree, so it is $0$: $h$ divides every such polynomial. In particular $h\mid f$, so $h$ is a constant multiple of $f$ by irreducibility, and $h\mid g$ gives $\deg g\ge3$. Thus $d=3$ and $|G|=6$.</p><p><strong>Two sums.</strong> For an integer $m$, $\sum_{k=1}^{18}\zeta^{mk}$ equals $18$ if $19\mid m$, and $-1$ otherwise (it is the sum of all nontrivial $19$th roots of unity). Hence
+\[\sum_{k=1}^{18}x_k=\sum_ja_j\sum_k\zeta^{jk}=-A .\]
+Since $x_k$ is real, $x_k^2=x_k\overline{x_k}$ with $\overline{x_k}=\sum_la_l\zeta^{-lk}$, so
+\[\sum_{k=1}^{18}x_k^2=\sum_{j,l}a_ja_l\sum_k\zeta^{(j-l)k}=18\sum_ja_j^2-\sum_{j\ne l}a_ja_l=19S-A^2 .\]</p><p><strong>Using the cubic.</strong> Each root appears six times, and by Vieta the roots have sum $-16$ and sum of squares $16^2-2\cdot3=250$. So $-A=6\cdot(-16)$, i.e. $A=96$, and $19S-96^2=6\cdot250=1500$. Therefore
+\[S=\frac{1500+9216}{19}=\frac{10716}{19}=\boxed{564}.\]</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p42">
+<h3>Problem 32</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 14: Inclusion-Exclusion and Overcounting Control &middot; Basic Inclusion-Exclusion</div>
+<div class="ct-text"><p>Kelvin the frog starts at the center of a regular hexagon $ABCDEF$ with side length $100$, facing towards $A$. He hops forward an integer distance between $0$ and $200$ units, inclusive, then turns $120^\circ$ clockwise. He repeats this process two more times (possibly jumping different distances), ending up within hexagon $ABCDEF$ (possibly on its boundary). Compute the number of distinct paths he could have taken.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$4060401$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Triangular coordinates and sliding windows)</h4>
+<p>Let $\mathbf u$ point from the center to $A$, and let $\mathbf v,\mathbf w$ be $\mathbf u$ turned by $120^\circ$ and $240^\circ$ clockwise; $\mathbf u+\mathbf v+\mathbf w=\mathbf 0$. Hops of lengths $a,b,c$ end at
+\[a\mathbf u+b\mathbf v+c\mathbf w=(a-c)\mathbf u+(b-c)\mathbf v=(a-c)\mathbf u-(b-c)\mathbf e,\]
+where $\mathbf e=-\mathbf v$ is the unit vector at $60^\circ$ from $\mathbf u$. In the coordinates $X\mathbf u+Y\mathbf e$ the hexagon (vertices $100\mathbf u,100\mathbf e,100(\mathbf e-\mathbf u),\dots$) is $|X|,|Y|,|X+Y|\le100$. With $X=a-c$, $Y=c-b$, $X+Y=a-b$, Kelvin ends inside iff
+\[\max(a,b,c)-\min(a,b,c)\le100 .\]
+Different triples give different paths, so we count triples in $\{0,\dots,200\}^3$ with range at most $100$. Each such triple lies in a window $\{m,\dots,m+100\}$ with $0\le m\le100$, and the windows containing it are consecutive. So, counting windows minus overlaps of consecutive windows,
+\[101\cdot101^3-100\cdot100^3=101^4-100^4=\boxed{4060401}.\]</p>
+<h4>Solution 2 (Counting by the range)</h4>
+<p>Let $\mathbf u$ be the unit vector from the center towards $A$ and $\mathbf e$ the unit vector at $60^\circ$ from it, towards $B$ (the case of the opposite orientation is symmetric). The three hop directions are $\mathbf u$, $-\mathbf e$ and $\mathbf e-\mathbf u$ (each turned $120^\circ$ clockwise from the previous), so hops of lengths $a,b,c$ end at
+\[a\mathbf u-b\mathbf e+c(\mathbf e-\mathbf u)=(a-c)\mathbf u+(c-b)\mathbf e .\]
+The hexagon, with vertices $\pm100\mathbf u$, $\pm100\mathbf e$, $\pm100(\mathbf e-\mathbf u)$, is the set of points $X\mathbf u+Y\mathbf e$ with $|X|,|Y|,|X+Y|\le100$. With $X=a-c$, $Y=c-b$, $X+Y=a-b$, Kelvin ends in the hexagon iff $\max(a,b,c)-\min(a,b,c)\le100$, and different triples are different paths.</p><p>Count the triples by their range $r=\max-\min$. The number of triples with minimum exactly $m$ and maximum exactly $m+r$ is $1$ for $r=0$ and, by inclusion-exclusion, $(r+1)^3-2r^3+(r-1)^3=6r$ for $r\ge1$; there are $201-r$ choices of $m$. So the count is
+\[201+\sum_{r=1}^{100}6r(201-r)=201+6\Bigl(201\cdot5050-\frac{100\cdot101\cdot201}6\Bigr)=201+6\cdot676700=\boxed{4060401}.\]</p>
+</div></details>
+</section>
+{% endraw %}

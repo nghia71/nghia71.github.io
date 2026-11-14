@@ -1,0 +1,457 @@
+---
+title: Grade 9 Selection 2026: selected problems from 2026 contests
+permalink: /contests/grade-9-2026
+description: Grade 9 Selection 2026: selected problems from 2026 contests: problems with answers and solutions
+---
+{% raw %}
+<style>
+  .ct-intro { margin-bottom: 1.2em; }
+  .ct-credit { font-size: 14px; color: var(--ink-soft); border-left: 3px solid var(--gold); padding: 6px 12px; background: var(--white); margin: 1em 0; }
+  .ct-toc { display: flex; flex-wrap: wrap; gap: 6px; margin: 1em 0 1.4em; }
+  .ct-toc a { display: inline-block; min-width: 2.4em; text-align: center; padding: 4px 8px; border: 1px solid var(--rule); border-radius: 4px; background: var(--white); text-decoration: none; font-size: 14px; }
+  .ct-problem { background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 14px 18px; margin: 1.1em 0; }
+  .ct-problem h3 { margin: 0 0 .3em; font-size: 1.08rem; border-bottom: none; padding-bottom: 0; }
+  .ct-meta { font-size: 13px; color: var(--ink-soft); margin-bottom: .6em; }
+  .ct-text { font-family: Georgia, "Times New Roman", "Noto Serif", serif; font-size: 1.02em; line-height: 1.6; }
+  .ct-text p { margin: .5em 0; }
+  .ct-fig { text-align: center; margin: .8em 0; }
+  .ct-fig img { max-width: 100%; height: auto; max-height: 340px; }
+  .ct-choices { display: flex; flex-wrap: wrap; gap: 6px 22px; margin: .6em 0 .2em; }
+  .ct-choices b { margin-right: .3em; }
+  .ct-problem details { margin-top: .8em; border-top: 1px dashed var(--rule); padding-top: .5em; }
+  .ct-problem summary { cursor: pointer; font-weight: 600; color: var(--brand); font-size: 15px; }
+  .ct-problem details[open] summary { margin-bottom: .5em; }
+  .ct-sol h4 { font-size: 1rem; margin: 1em 0 .3em; color: var(--ink); }
+  .ct-answer { font-weight: 600; }
+  .ct-parts { list-style: none; padding-left: .4em; }
+  .ct-parts li { margin: .35em 0; }
+  .ct-lbl { font-weight: 700; margin-right: .3em; }
+  .ct-note { font-size: 14px; color: var(--ink-soft); font-style: italic; }
+  .ct-bar { margin: .6em 0 1em; display: flex; gap: 10px; flex-wrap: wrap; }
+  .ct-bar button { font: inherit; font-size: 14px; padding: 5px 12px; border-radius: var(--radius); border: 1px solid var(--brand); background: var(--white); color: var(--brand); cursor: pointer; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
+</style>
+<script>
+  window.MathJax = { tex: { inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [['\\[','\\]']], processEscapes: true },
+                     options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] } };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script>
+  function ctAll(open) { document.querySelectorAll('.ct-problem details').forEach(function (d) { d.open = open; }); }
+</script>
+
+<style>
+  .ct-group { font-size: 1.25rem; margin: 1.6em 0 .2em; }
+  .ct-toc-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: .3em 0; }
+  .ct-toc-g { font-size: 13px; color: var(--ink-soft); min-width: 9em; }
+  .ct-toc-wrap { margin: 1em 0 1.4em; }
+  .ct-center { text-align: center; margin: .6em 0; }
+  .ct-tablewrap { overflow-x: auto; margin: .6em 0; text-align: center; }
+  .ct-table { border-collapse: collapse; margin: 0 auto; }
+  .ct-table td { padding: 2px 9px; text-align: center; }
+  .ct-table tr.ct-hl td { border-bottom: 1px solid var(--ink-soft); }
+  .ct-table.ct-vfirst td:first-child { border-right: 1px solid var(--ink-soft); }
+  .ct-ul { padding-left: 1.4em; }
+  .ct-ul li { margin: .3em 0; }
+  .ct-text li > p:first-child { margin-top: 0; }
+  .ct-text li > p:last-child { margin-bottom: 0; }
+  .ct-text mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
+</style>
+
+<style>
+  .ct-tags { display: flex; flex-wrap: wrap; gap: 5px; margin: 0 0 .55em; }
+  .ct-tg { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .03em; padding: 2px 8px; border-radius: 999px; line-height: 1.5; }
+  .ct-lv { background: #eee7dc; color: #4a3d33; }
+  .ct-df-Starter { background: #dcf1dc; color: #245c24; }
+  .ct-df-Explorer { background: #d6efec; color: #155e57; }
+  .ct-df-Challenger { background: #dce8f7; color: #1f4c80; }
+  .ct-df-Olympiad { background: #e7defa; color: #4b2a8a; }
+  .ct-df-Advanced { background: #fbe4cc; color: #8a4a0b; }
+  .ct-df-Expert { background: #f8d6cf; color: #8c2600; }
+  .ct-band { margin: 1.3em 0 .5em; font-size: 14px; color: var(--ink-soft); }
+  .ct-band .ct-tg { font-size: 13px; margin-right: .4em; }
+  .ct-legend { font-size: 14.5px; background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 10px 16px; margin: 1em 0 1.4em; }
+  .ct-legend p { margin: .35em 0; }
+  .ct-legend ul { margin: .2em 0 .4em; padding-left: 1.1em; }
+  .ct-legend li { margin: .2em 0; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
+</style>
+{% endraw %}
+<p><a href="{{ '/contests-2026' | relative_url }}">&larr; All contests 2026</a></p>
+
+<h1>Grade 9 Selection 2026: selected problems from 2026 contests</h1>
+
+<div class="ct-intro">
+<p>The 20 problems of the Grade 9 Selection 2026: selected problems from 2026 contests, each with our own solutions, hidden until you open them. 19 of them ask for an answer and 1 asks for a proof. Where a problem has a final answer, it is shown separately. Try a problem first, then check.</p><p>Selected problems for grade 9, chosen from the 2026 UKMT Intermediate Challenge and Kangaroo papers, the Mathematical Competition for Girls, MATHCOUNTS State, and two Vietnamese papers: the 2026 PTNK entrance exam and the 2026 Duyen hai Bac Bo olympiad. Each problem names its source; the problems go from easy to hard.</p>
+</div>
+<div class="ct-credit">Problems selected from the 2026 contests named under each problem (UKMT, CEMC, MAA, MATHCOUNTS, MIMC, SMOPS, CLMC and Vietnamese entrance exams); they belong to their publishers. Solutions written by MCC.</div>
+<div class="ct-bar"><button type="button" onclick="ctAll(true)">Show all answers and solutions</button><button type="button" onclick="ctAll(false)">Hide all</button></div>
+<div class="ct-toc-wrap"><div class="ct-toc-row"><a href="#p1">1</a><a href="#p2">2</a><a href="#p3">3</a><a href="#p4">4</a><a href="#p5">5</a><a href="#p6">6</a><a href="#p7">7</a><a href="#p8">8</a><a href="#p9">9</a><a href="#p10">10</a><a href="#p11">11</a><a href="#p12">12</a><a href="#p13">13</a><a href="#p14">14</a><a href="#p15">15</a><a href="#p16">16</a><a href="#p17">17</a><a href="#p18">18</a><a href="#p19">19</a><a href="#p20">20</a></div></div>
+
+{% raw %}
+<section class="ct-problem" id="p1">
+<h3>Problem 1</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Algebra &middot; LPS VI, Chapter 29: Exponents, Powers, and Growth &middot; Laws of Exponents</div>
+<div class="ct-text"><p>If $x$ is a positive real number satisfying $x^x=3$, what is $x^{x^{x+1}}$?</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$27$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Rewrite the top exponent)</h4>
+<p>The top exponent is $x^{x+1}=x^x\cdot x=3x$. Hence
+\[x^{x^{x+1}}=x^{3x}=\left(x^x\right)^3=3^3=27.\]
+The answer is $\boxed{27}$.</p>
+<h4>Solution 2 (Write $x$ as a power of $3$)</h4>
+<p>Raise both sides of $x^x=3$ to the power $\frac1x$: since $\left(x^x\right)^{1/x}=x$, we get $x=3^{1/x}$. Then
+\[x^{x^{x+1}}=\left(3^{1/x}\right)^{x^{x+1}}=3^{\,x^{x+1}/x}=3^{\,x^{x}}=3^3=27.\]
+The answer is $\boxed{27}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p2">
+<h3>Problem 2</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Geometry &middot; LPS VI, Chapter 12: Circle Angles and Cyclic Geometry &middot; Tangent and External Angle Relations</div>
+<div class="ct-text"><p>The diagram shows a large circle of radius $10$ and nine smaller circles, each tangential to two other small circles and also tangential to the large circle. The sum of the distances between the centres of the smaller circles and the centre of the large circle is equal to $d$.</p><p>What is the perimeter of the shaded polygon in terms of $d$?</p><p><strong>(A)</strong>&nbsp;$90-2d$&emsp;<strong>(B)</strong>&nbsp;$90-d$&emsp;<strong>(C)</strong>&nbsp;$180-d$&emsp;<strong>(D)</strong>&nbsp;$180-2d$&emsp;<strong>(E)</strong>&nbsp;$180+2d$</p><div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/grade-9-2.svg" alt="Figure for Problem 2"></div></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p><strong>(D)</strong> $180-2d$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Two tangency facts)</h4>
+<p>Let $O$ be the centre of the large circle, and let the small circles have centres $O_1,O_2,\dots,O_9$ (in order around the ring) and radii $r_1,r_2,\dots,r_9$.</p><p>When two circles touch, the point of contact lies on the line through their centres. Hence:</p><ul class="ct-ul"><li><p>small circle $i$ touches the large circle from inside, so $OO_i=10-r_i$;</p></li><li><p>neighbouring small circles touch from outside, so $O_iO_{i+1}=r_i+r_{i+1}$ (with $O_{10}=O_1$, $r_{10}=r_1$).</p></li></ul><p>The perimeter of the shaded polygon is
+\[(r_1+r_2)+(r_2+r_3)+\dots+(r_9+r_1)=2(r_1+r_2+\dots+r_9),\]
+since every radius appears in exactly two sides. Also
+\[d=(10-r_1)+(10-r_2)+\dots+(10-r_9)=90-(r_1+\dots+r_9),\]
+so $r_1+\dots+r_9=90-d$ and the perimeter is $2(90-d)=\boxed{\textbf{(D)}\ 180-2d}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p3">
+<h3>Problem 3</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Geometry &middot; LPS VI, Chapter 32: Area by Measurement and Decomposition &middot; Additive and Subtractive Area</div>
+<div class="ct-text"><p>Two regular hexagons with side-lengths of $60$ are shown in the diagram which is not drawn to scale. The right-hand hexagon was created by shifting the left-hand hexagon horizontally by the length of the segment $AB$. This creates three regions of equal area. What is the length of $AB$?</p><p><strong>(A)</strong>&nbsp;$30$&emsp;<strong>(B)</strong>&nbsp;$39$&emsp;<strong>(C)</strong>&nbsp;$40$&emsp;<strong>(D)</strong>&nbsp;$45$&emsp;<strong>(E)</strong>&nbsp;$52$</p><div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/grade-9-3.svg" alt="Figure for Problem 3"></div></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p><strong>(D)</strong> $45$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Two parallelograms)</h4>
+<div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/grade-9-3_s1.svg" alt="Figure for the solution"></div>
+<p>Let $x=AB$. A regular hexagon of side $60$ is made of six equilateral triangles of side $60$, each of height $30\sqrt3$ and area $\frac12\cdot60\cdot30\sqrt3=900\sqrt3$. So each hexagon has area $5400\sqrt3$ and height $60\sqrt3$.</p><p>Each hexagon consists of the shaded overlap and one white region. The three regions have equal areas, so the white region on the left has area $\frac12\cdot5400\sqrt3=2700\sqrt3$.</p><p>Cut the left white region (blue in the figure) by the horizontal segment joining the left corners of the two hexagons. That segment has length $x$, because the second hexagon is the first one shifted by $x$. The upper piece has two horizontal sides of length $x$ (the segment $AB$ and the cut), and its two slanted sides are parallel, since one is the shift of the other. So it is a parallelogram with base $x$ and height $30\sqrt3$. The lower piece is its mirror image. Therefore the white region has area $2\cdot x\cdot30\sqrt3=60\sqrt3\,x$, and
+\[60\sqrt3\,x=2700\sqrt3\quad\Longrightarrow\quad x=45.\]
+The answer is $\boxed{\textbf{(D)}\ 45}$.</p>
+<h4>Solution 2 (Area of the overlap)</h4>
+<p>Let $x=AB$; in the diagram $x&lt;60$, since $B$ lies on the top side of the left hexagon. A regular hexagon of side $60$ is made of six equilateral triangles of side $60$ and height $30\sqrt3$, so its area is $6\cdot\frac12\cdot60\cdot30\sqrt3=5400\sqrt3$.</p><p>The overlap is a hexagon. Its top side runs from $B$ to the top right corner of the left hexagon, so it has length $60-x$; the same holds for its bottom side. Its horizontal middle line runs from the left corner of the right hexagon to the right corner of the left hexagon, so it has length $120-x$. This middle line cuts the overlap into two trapezoids with parallel sides $60-x$ and $120-x$ and height $30\sqrt3$. Hence
+\[\text{overlap}=2\cdot\frac{(60-x)+(120-x)}2\cdot30\sqrt3=30\sqrt3\,(180-2x).\]
+The left hexagon is the overlap plus one white region, and these two have equal area, so the overlap is half of a hexagon:
+\[30\sqrt3\,(180-2x)=2700\sqrt3\quad\Longrightarrow\quad180-2x=90\quad\Longrightarrow\quad x=45.\]
+The answer is $\boxed{\textbf{(D)}\ 45}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p4">
+<h3>Problem 4</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Geometry &middot; LPS VI, Chapter 12: Circle Angles and Cyclic Geometry &middot; Diameter and Semicircle Geometry</div>
+<div class="ct-text"><p>Square $ABCD$ with side length $4$ inches is inscribed in a circle. Let $M$ and $N$ be the midpoints of minor arcs $AB$ and $CD$, respectively. What is the value of $AM\times AN$? Express your answer in simplest radical form.</p><div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/grade-9-4.svg" alt="Figure for Problem 4"></div></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$8\sqrt2$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Area of a right triangle)</h4>
+<div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/grade-9-4_s1.svg" alt="Figure for the solution"></div>
+<p>Let $O$ be the centre. The diagonal of the square is $4\sqrt2$ and is a diameter, so the radius is $2\sqrt2$.</p><p>The line through $O$ perpendicular to $AB$ is a line of symmetry of the figure; it cuts both arcs $AB$ and $CD$ in their midpoints. So $M$ and $N$ lie on it and $MN$ is a diameter, $MN=4\sqrt2$. Hence $\angle MAN=90^\circ$ (angle in a semicircle).</p><p>Let $P$ be the foot of the perpendicular from $A$ to $MN$; it is the midpoint of $AB$, so $AP=2$. Computing the area of the right triangle $AMN$ in two ways,
+\[\tfrac12\,AM\cdot AN=\tfrac12\,MN\cdot AP\quad\Longrightarrow\quad AM\cdot AN=4\sqrt2\cdot2=8\sqrt2.\]
+The answer is $\boxed{8\sqrt2}$.</p>
+<h4>Solution 2 (Coordinates)</h4>
+<p>Put the centre at the origin with the sides of the square parallel to the axes. Then $A=(-2,2)$, and the radius is the half-diagonal $2\sqrt2$. The arc midpoints lie on the vertical axis of symmetry: $M=(0,2\sqrt2)$ and $N=(0,-2\sqrt2)$. Then
+\[AM^2=2^2+(2\sqrt2-2)^2=16-8\sqrt2,\qquad AN^2=2^2+(2\sqrt2+2)^2=16+8\sqrt2,\]
+so $AM^2\cdot AN^2=16^2-(8\sqrt2)^2=256-128=128$ and $AM\cdot AN=\sqrt{128}=\boxed{8\sqrt2}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p5">
+<h3>Problem 5</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Number Theory &middot; LPS VI, Chapter 21: Digits, Place Value, and Decimal Structure &middot; Place-Value Decomposition</div>
+<div class="ct-text"><p>Anni places the digits $1,2,\dots,9$ on a circle in some order. She reads three adjacent digits clockwise to form a three-digit number, such as $\blacktriangle\,\blacksquare\,\bigstar$ as in the diagram, and writes down all nine such numbers. One of these numbers is $a$, which is a factor of the sum of the remaining $8$ numbers. How many possible values of $a$ are there?</p><p><strong>(A)</strong>&nbsp;$1$&emsp;<strong>(B)</strong>&nbsp;$2$&emsp;<strong>(C)</strong>&nbsp;$3$&emsp;<strong>(D)</strong>&nbsp;$4$&emsp;<strong>(E)</strong>&nbsp;$5$</p><div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/grade-9-5.svg" alt="Figure for Problem 5"></div></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p><strong>(B)</strong> $2$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (The total is always 4995)</h4>
+<p>Each of the nine numbers uses three neighbouring digits. Going round the circle, every digit is the hundreds digit of exactly one number, the tens digit of exactly one number and the units digit of exactly one number. So the total of all nine numbers is always
+\[T=100(1+2+\dots+9)+10(1+2+\dots+9)+(1+2+\dots+9)=111\cdot45=4995.\]
+The number $a$ divides the sum of the other eight, $T-a$, exactly when $a$ divides $T$ (because $a$ divides $a$).</p><p>Now $4995=3^3\cdot5\cdot37$, and its divisors are
+\[1,3,5,9,15,27,37,45,111,135,185,333,555,999,1665,4995.\]
+The three-digit ones are $111$, $135$, $185$, $333$, $555$, $999$. The number $a$ is made of three different digits, so $111$, $333$, $555$, $999$ are impossible. Both $135$ and $185$ do occur: put $1,3,5$ (or $1,8,5$) next to each other clockwise and the other digits anywhere.</p><p>So there are $\boxed{\textbf{(B)}\ 2}$ possible values of $a$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p6">
+<h3>Problem 6</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Combinatorics &middot; LPS VI, Chapter 6: Casework, Complement, and Constructive Counting &middot; Complementary Counting</div>
+<div class="ct-text"><p>Zoe has an unusual method of choosing when to go swimming. At the beginning of the year she randomly chooses three different days of the week, then always has a swim on those days only. Using this method, what is the probability her schedule will include at least three days in a row without a swim?</p><p><strong>(A)</strong>&nbsp;$\frac25$&emsp;<strong>(B)</strong>&nbsp;$\frac12$&emsp;<strong>(C)</strong>&nbsp;$\frac35$&emsp;<strong>(D)</strong>&nbsp;$\frac7{10}$&emsp;<strong>(E)</strong>&nbsp;$\frac45$</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p><strong>(C)</strong> $\frac35$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Count the bad schedules)</h4>
+<p>The schedule repeats every week, so the days form a cycle: Sunday is followed by Monday. There are $\binom73=35$ equally likely choices of the three swim days.</p><p>Going round the week, the four days without a swim fall into three gaps between consecutive swim days. The gap sizes $g_1,g_2,g_3\ge0$ satisfy $g_1+g_2+g_3=4$. The schedule is <em>bad</em> (no three non-swim days in a row) exactly when every gap is at most $2$. With sum $4$ and each gap at most $2$, the gaps are $2,2,0$ or $2,1,1$ in some order.</p><ul class="ct-ul"><li><p>Gaps $2,2,0$: two swim days are neighbours. Choose this pair of consecutive days ($7$ ways); then the rest is forced: two days off, a swim, two days off. That gives $7$ schedules.</p></li><li><p>Gaps $2,1,1$: choose the two consecutive days off ($7$ ways); then the rest is forced: swim, day off, swim, day off, swim. That gives $7$ schedules.</p></li></ul><p>So $14$ schedules are bad and $35-14=21$ are good. The probability is $\frac{21}{35}=\boxed{\textbf{(C)}\ \frac35}$.</p><p>(If Sunday and Monday were not counted as neighbours, the same kind of count would give $\frac{16}{35}$, which is not among the options; so the cyclic reading is the intended one.)</p>
+<h4>Solution 2 (Count the good schedules directly)</h4>
+<p>Treat the week as a cycle (Sunday is followed by Monday), since the schedule repeats every week. There are $\binom73=35$ equally likely choices.</p><p>There are only four days without a swim, so a schedule has at most one run of three or more such days. Count by the length of that run.</p><ul class="ct-ul"><li><p>A run of $4$ days off: then the three swim days are consecutive. There are $7$ such schedules (one for each starting day).</p></li><li><p>A run of exactly $3$ days off: choose the run ($7$ ways, by its first day). The day just before and the day just after the run must be swim days. Of the two remaining days, one is a swim day and one is not: $2$ ways. That gives $14$ schedules.</p></li></ul><p>So $7+14=21$ schedules are good, and the probability is $\frac{21}{35}=\boxed{\textbf{(C)}\ \frac35}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p7">
+<h3>Problem 7</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Geometry &middot; LPS VI, Chapter 12: Circle Angles and Cyclic Geometry &middot; Diameter and Semicircle Geometry</div>
+<div class="ct-text"><ul class="ct-parts"><li><p><span class="ct-lbl">(a)</span> Triangle $PQR$ has a right angle at $Q$ and $W$ is the midpoint of the side $PR$. Given that $PQ=6$ and $QR=8$, use the diagram below to find the length of $QW$.</p></li><li><p><span class="ct-lbl">(b)</span> Triangle $ABC$ has a right angle at $B$ and $AB&lt;BC$. Let $M$ be the midpoint of $AC$. Let $D$ be the reflection of $C$ in the line $BM$ (extended beyond $M$).</p><p>Given that angle $DAC$ is $56^\circ$ find the size of the angle</p><ul class="ct-parts"><li><p><span class="ct-lbl">(i)</span> $ACD$,</p></li><li><p><span class="ct-lbl">(ii)</span> $BAC$.</p></li></ul></li></ul><div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/grade-9-7.svg" alt="Figure for Problem 7"></div></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(a) $QW=5$; (b)(i) $\angle ACD=34^\circ$, (ii) $\angle BAC=62^\circ$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (The circle on the hypotenuse)</h4>
+<div class="ct-fig"><img style="width:238px" src="/assets/contests/2026-27/grade-9-7_s1.svg" alt="Figure for the solution"></div>
+<p><strong>(a)</strong> Complete the rectangle $PQRS$ as in the diagram. The diagonals of a rectangle are equal and bisect each other, so the midpoint $W$ of $PR$ is also the midpoint of $QS$, and
+\[QW=\tfrac12QS=\tfrac12PR=\tfrac12\sqrt{6^2+8^2}=\boxed{5}.\]</p><p><strong>(b)</strong> By the same fact, in the right triangle $ABC$ the midpoint $M$ of the hypotenuse satisfies $MA=MB=MC$. The reflection in line $BM$ fixes $M$, so $MD=MC$. Hence $A$, $B$, $C$, $D$ all lie on the circle with centre $M$ and diameter $AC$.</p><p>(i) Since $AC$ is a diameter, $\angle ADC=90^\circ$. In triangle $ADC$, $\angle ACD=180^\circ-90^\circ-56^\circ=\boxed{34^\circ}$.</p><p>(ii) Let $\alpha=\angle BAC$. In a triangle the longer side is opposite the larger angle; $AB&lt;BC$ gives $\angle ACB&lt;\angle BAC$, and since these two angles add up to $90^\circ$, $\alpha&gt;45^\circ$.</p><p>Triangle $MBC$ is isosceles ($MB=MC$) with base angles $\angle MCB=90^\circ-\alpha$, so $\angle BMC=180^\circ-2(90^\circ-\alpha)=2\alpha&gt;90^\circ$.</p><p>Triangle $MCD$ is isosceles ($MC=MD$). As $M$ lies on segment $AC$, its base angle is $\angle MCD=\angle ACD=34^\circ$, so $\angle CMD=180^\circ-2\cdot34^\circ=112^\circ$. The reflection swaps $C$ and $D$ and fixes the line $BM$, so this line is the axis of symmetry of triangle $MCD$: one of the two rays from $M$ along the line $BM$ bisects $\angle CMD$ and makes an angle of $56^\circ$ with $MC$. The ray $MB$ makes the angle $2\alpha&gt;90^\circ$ with $MC$, so it is the other ray, the extension of $BM$ beyond $M$. That ray makes the angle $180^\circ-2\alpha$ with $MC$. Hence $180^\circ-2\alpha=56^\circ$, so $\alpha=\boxed{62^\circ}$.</p>
+<h4>Solution 2 (Isosceles triangles and inscribed angles)</h4>
+<p><strong>(a)</strong> Put $Q=(0,0)$, $P=(0,6)$, $R=(8,0)$. The midpoint of $PR$ is $W=(4,3)$, so $QW=\sqrt{4^2+3^2}=\boxed{5}$. (This is the diagram's rectangle $PQRS$ in coordinates: $S=(8,6)$ and $W$ is the common midpoint of both diagonals.)</p><p><strong>(b)</strong> The midpoint $M$ of the hypotenuse of a right triangle is equally far from the three vertices (as in (a)): $MA=MB=MC$. The reflection in line $BM$ fixes $M$ and $B$, so $MD=MC$ and $BD=BC$.</p><p>(i) Let $y=\angle ACD$. Triangle $MAD$ is isosceles ($MA=MD$), so $\angle MDA=\angle MAD=56^\circ$. Triangle $MDC$ is isosceles ($MD=MC$), so $\angle MDC=\angle MCD=y$. Since $M$ lies inside the segment $AC$, the ray $DM$ runs inside the angle $ADC$, so $\angle ADC=56^\circ+y$. The angles of triangle $ADC$ give $56^\circ+(56^\circ+y)+y=180^\circ$, so $y=\boxed{34^\circ}$.</p><p>(ii) Let $\alpha=\angle BAC$; then $\angle BCA=90^\circ-\alpha$. As $AB&lt;BC$, the angle opposite $AB$ is smaller than the angle opposite $BC$: $90^\circ-\alpha&lt;\alpha$, so $\alpha&gt;45^\circ$. In the isosceles triangle $MBC$, $\angle MBC=\angle MCB=90^\circ-\alpha$. The line $BM$ is the mirror, so it bisects the angle $CBD$; the half-angle is $\angle CBM=90^\circ-\alpha$ (the bisecting ray is $BM$, because the opposite ray makes an obtuse angle with $BC$, and half of an angle is never obtuse). Thus $\angle CBD=180^\circ-2\alpha$.</p><p>The four points $A$, $B$, $C$, $D$ lie on the circle with centre $M$. The inscribed angles $\angle CAD=56^\circ$ and $\angle CBD$ stand on the same chord $CD$, so they are equal if $A$ and $B$ are on the same side of $CD$, and they add up to $180^\circ$ otherwise. In the second case $180^\circ-2\alpha=124^\circ$ would give $\alpha=28^\circ&lt;45^\circ$, which is impossible. So $180^\circ-2\alpha=56^\circ$ and $\alpha=\boxed{62^\circ}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p8">
+<h3>Problem 8</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Geometry &middot; LPS VI, Chapter 24: Quadrilaterals and Polygon Structure &middot; Regular Polygons</div>
+<div class="ct-text"><p>Aadi draws a regular hexagon and two squares inside the hexagon, as shown. What is the ratio of the area of the striped triangle to the area of the shaded triangle?</p><p><strong>(A)</strong>&nbsp;$1:4$&emsp;<strong>(B)</strong>&nbsp;$\sqrt3:6$&emsp;<strong>(C)</strong>&nbsp;$1:3$&emsp;<strong>(D)</strong>&nbsp;$2:5$&emsp;<strong>(E)</strong>&nbsp;$1:2$</p><div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/grade-9-8.svg" alt="Figure for Problem 8"></div></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p><strong>(C)</strong> $1:3$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Angle chase)</h4>
+<div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/grade-9-8_s1.svg" alt="Figure for the solution"></div>
+<p>Take the side of the hexagon as $1$ and use the labels of the figure: the first square stands on the bottom side $OU$ and has top right corner $R$ (above $U$); the second square stands on the side $UV$ and $P$ is its corner next to $U$; its side from $P$ meets the top side of the first square at $Q$. The shaded triangle is $PUR$ and the striped triangle is $PQR$.</p><p>The angle of the hexagon at $U$ is $120^\circ$ and $\angle OUR=90^\circ$, so $\angle RUV=30^\circ$. As $\angle VUP=90^\circ$, we get $\angle RUP=90^\circ-30^\circ=60^\circ$. Also $UR=UP=1$ (sides of the two squares). So triangle $PUR$ is isosceles with a $60^\circ$ angle between the equal sides: it is equilateral with side $1$, and its area is $\frac{\sqrt3}4$.</p><p>In the striped triangle: $\angle PRQ=90^\circ-\angle PRU=90^\circ-60^\circ=30^\circ$, and $\angle RPQ=90^\circ-\angle UPR=90^\circ-60^\circ=30^\circ$ (the angle of the second square at $P$ is $90^\circ$). So triangle $PQR$ is isosceles with $QP=QR$ and base $PR=1$. Its height from $Q$ falls on the midpoint of $PR$ and equals $\frac12\tan30^\circ=\frac1{2\sqrt3}$. Hence its area is $\frac12\cdot1\cdot\frac1{2\sqrt3}=\frac{\sqrt3}{12}$.</p><p>The ratio of the areas is $\frac{\sqrt3}{12}:\frac{\sqrt3}{4}=\boxed{\textbf{(C)}\ 1:3}$.</p>
+<h4>Solution 2 (Coordinates)</h4>
+<p>Take the side of the hexagon as $1$, with bottom side from $O=(0,0)$ to $U=(1,0)$. The first square is $O$, $U$, $R=(1,1)$, $(0,1)$. The next vertex of the hexagon is $V=\left(\frac32,\frac{\sqrt3}2\right)$, so $\overrightarrow{UV}=\left(\frac12,\frac{\sqrt3}2\right)$. Turning it through $90^\circ$ towards the inside of the hexagon gives $\left(-\frac{\sqrt3}2,\frac12\right)$, so the second square has the corner
+\[P=U+\left(-\tfrac{\sqrt3}2,\tfrac12\right)=\left(1-\tfrac{\sqrt3}2,\ \tfrac12\right),\]
+and its side from $P$ goes in the direction $\left(\frac12,\frac{\sqrt3}2\right)$.</p><p><em>Shaded triangle</em> $PUR$: its side $UR$ (length $1$) lies on the line $x=1$, and $P$ is at distance $\frac{\sqrt3}2$ from that line. Its area is $\frac12\cdot1\cdot\frac{\sqrt3}2=\frac{\sqrt3}4$.</p><p><em>Striped triangle</em> $PQR$: the side of the second square from $P$ reaches the line $y=1$ after rising $\frac12$, that is after moving $\frac12\cdot\frac{1}{\sqrt3}$ to the right. So $Q=\left(1-\frac{\sqrt3}2+\frac{\sqrt3}6,\,1\right)=\left(1-\frac{\sqrt3}3,\,1\right)$ and $QR=\frac{\sqrt3}3$. The height from $P$ to the line $y=1$ is $\frac12$, so the area is $\frac12\cdot\frac{\sqrt3}3\cdot\frac12=\frac{\sqrt3}{12}$.</p><p>The ratio is $\frac{\sqrt3}{12}:\frac{\sqrt3}4=\boxed{\textbf{(C)}\ 1:3}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p9">
+<h3>Problem 9</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Number Theory &middot; LPS VI, Chapter 17: Factoring and Structural Decomposition &middot; Difference of Squares and Related Forms</div>
+<div class="ct-text"><p>What is the sum of all prime factors of $2^{49}-2$ that can be written in the form $2^n+1$ for some integer $n$?</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$284$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Factor completely)</h4>
+<p>Use $x^2-1=(x-1)(x+1)$ again and again:
+\[2^{49}-2=2\left(2^{48}-1\right)=2\left(2^{3}-1\right)\left(2^{3}+1\right)\left(2^{6}+1\right)\left(2^{12}+1\right)\left(2^{24}+1\right)=2\cdot7\cdot9\cdot65\cdot4097\cdot\left(2^{24}+1\right).\]
+Here $9=3^2$, $65=5\cdot13$, $4097=17\cdot241$, and with $a^3+1=(a+1)(a^2-a+1)$ for $a=2^8$:
+\[2^{24}+1=\left(2^8+1\right)\left(2^{16}-2^8+1\right)=257\cdot65281=257\cdot97\cdot673.\]
+(Each of $13$, $17$, $97$, $241$, $257$, $673$ is prime: none has a prime factor up to its square root.) So the prime factors are
+\[2,\ 3,\ 5,\ 7,\ 13,\ 17,\ 97,\ 241,\ 257,\ 673.\]
+For a negative integer $n$, $2^n+1$ lies strictly between $1$ and $2$, so it is not an integer. The numbers of the form $2^n+1$ are therefore $2,3,5,9,17,33,65,129,257,513,1025,\dots$ (for $n=0,1,2,\dots$). Among our primes, exactly $2=2^0+1$, $3$, $5$, $17$ and $257$ have this form. Their sum is
+\[2+3+5+17+257=\boxed{284}.\]
+(Do not forget $2=2^0+1$: $n=0$ is an integer.)</p>
+<h4>Solution 2 (Which numbers $2^n+1$ divide $2^{48}-1$)</h4>
+<p>We have $2^{49}-2=2\left(2^{48}-1\right)$, and $2=2^0+1$ is a prime of the required form. Every other prime factor $p$ is odd and divides $2^{48}-1$. Suppose $p=2^n+1$ for an integer $n$. Then $n\ge1$: for $n&lt;0$ the number $2^n+1$ lies strictly between $1$ and $2$, and $n=0$ gives $2$, which is even.</p><p><em>Step 1: $n$ is a power of $2$.</em> If $n$ had an odd factor $m&gt;1$, say $n=mk$, then $2^k+1$ would divide $\left(2^k\right)^m+1=2^n+1$ (for odd $m$, $x+1$ divides $x^m+1$), and $1&lt;2^k+1&lt;2^n+1$, so $2^n+1$ would not be prime.</p><p><em>Step 2: $p$ divides $2^m-1$ exactly when $2n$ divides $m$.</em> Look at the remainders of $2^1,2^2,\dots$ when divided by $p$. For $1\le j\le n$, $2^j$ lies between $2$ and $p-1$, so it is not $1$ more than a multiple of $p$. Since $2^n=p-1$, we have $2^{n+j}=2^n\cdot2^j\equiv-2^j\pmod p$, so for $1\le j&lt;n$ the remainder of $2^{n+j}$ is $p-2^j$, which lies between $2$ and $p-2$; and $2^{2n}\equiv(-1)^2=1$. So the remainders repeat with period exactly $2n$, and the remainder is $1$ exactly at multiples of $2n$.</p><p>With $m=48$: we need $2n\mid48$, so $n\mid24$, and $n$ is a power of $2$: $n=1,2,4,8$. These give $3$, $5$, $17$, $257$, all prime, so all are factors. ($n=16$ gives the prime $65537$, but $32\nmid48$.)</p><p>The sum is $2+3+5+17+257=\boxed{284}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p10">
+<h3>Problem 10</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Algebra &middot; LPS VI, Chapter 37: Polynomials and Algebraic Identities &middot; Polynomial Structure</div>
+<div class="ct-text"><p>Consider the equations $x^2+2ax+3b=0$ and $x^2+2bx+3a=0$, where $a$ and $b$ are parameters. It is known that each of these equations has two distinct roots.</p><ul class="ct-parts"><li><p><span class="ct-lbl">(a)</span> Prove that $\left(a-\frac32\right)^2+\left(b-\frac32\right)^2&gt;\frac92$.</p></li><li><p><span class="ct-lbl">(b)</span> Suppose that the two equations have exactly one common root. Let $r$ be the other root of the first equation and $s$ the other root of the second equation. Prove that $r+s$ does not depend on $a$ and $b$.</p></li></ul></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>proof ($r+s=-\frac32$ always)</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Sum of the roots)</h4>
+<p><strong>(a)</strong> A quadratic $x^2+2px+q=0$ has two distinct roots exactly when $p^2-q&gt;0$ (its discriminant is $4(p^2-q)$). So
+\[a^2-3b&gt;0\qquad\text{and}\qquad b^2-3a&gt;0.\]
+Adding, $a^2-3a+b^2-3b&gt;0$. Completing the squares,
+\[\left(a-\tfrac32\right)^2+\left(b-\tfrac32\right)^2=a^2-3a+b^2-3b+\tfrac92&gt;\tfrac92 .\]</p><p><strong>(b)</strong> Let $x_0$ be the common root. Subtracting the two equations at $x=x_0$ gives
+\[2(a-b)x_0+3(b-a)=0,\qquad\text{that is}\qquad (a-b)(2x_0-3)=0.\]
+If $a=b$, the two equations are the same equation, so they have both roots in common, not exactly one. Hence $a\ne b$ and $x_0=\frac32$. Putting $x_0=\frac32$ into the first equation: $\frac94+3a+3b=0$, so $a+b=-\frac34$.</p><p>By Vieta's formulas (sum of the roots), $x_0+r=-2a$ and $x_0+s=-2b$. Adding,
+\[r+s=-2(a+b)-2x_0=\tfrac32-3=-\tfrac32,\]
+which does not depend on $a$ and $b$.</p><p>(Such $a,b$ exist, for example $a=0$, $b=-\frac34$: the equations $x^2-\frac94=0$ and $x^2-\frac32x=0$ have roots $\pm\frac32$ and $0,\frac32$.)</p>
+<h4>Solution 2 (Product of the roots)</h4>
+<p><strong>(a)</strong> The equations have two distinct roots, so their discriminants are positive: $4a^2-12b&gt;0$ and $4b^2-12a&gt;0$, that is $a^2-3b&gt;0$ and $b^2-3a&gt;0$. Expanding,
+\[\left(a-\tfrac32\right)^2+\left(b-\tfrac32\right)^2-\tfrac92=\left(a^2-3b\right)+\left(b^2-3a\right)&gt;0.\]</p><p><strong>(b)</strong> Let $x_0$ be the common root. Then $x_0^2+2ax_0+3b=0=x_0^2+2bx_0+3a$, so $2(a-b)x_0=3(a-b)$. If $a=b$ the two equations coincide and share both roots, which is excluded; so $a\ne b$ and $x_0=\frac32$.</p><p>By Vieta's formulas (product of the roots), $x_0r=3b$ and $x_0s=3a$, so $r=2b$ and $s=2a$, and $r+s=2(a+b)$. Finally, $x_0=\frac32$ satisfies the second equation: $\frac94+3b+3a=0$, so $a+b=-\frac34$ and
+\[r+s=2\cdot\left(-\tfrac34\right)=-\tfrac32,\]
+a constant.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p11">
+<h3>Problem 11</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Geometry &middot; LPS VI, Chapter 48: Transformations and Symmetry &middot; Symmetry as Method</div>
+<div class="ct-text"><p>Two perpendicular chords are drawn in a circle with radius $12$ cm, dividing the circle into four regions, as labelled in the diagram. One chord lies $3$ cm from the centre, and the other lies $4$ cm from the centre. The sum of the areas of regions $J$ and $M$ is $X$ cm$^2$ larger than the sum of the areas of regions $K$ and $L$. What is the value of $X$?</p><p><strong>(A)</strong>&nbsp;$9$&emsp;<strong>(B)</strong>&nbsp;$16$&emsp;<strong>(C)</strong>&nbsp;$36$&emsp;<strong>(D)</strong>&nbsp;$48$&emsp;<strong>(E)</strong>&nbsp;$60$</p><div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/grade-9-11.svg" alt="Figure for Problem 11"></div></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p><strong>(D)</strong> $48$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Nine pieces)</h4>
+<div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/grade-9-11_s1.svg" alt="Figure for the solution"></div>
+<p>Let $O$ be the centre. As in the diagram, one chord is vertical, $3$ cm to the left of $O$, and the other is horizontal, $4$ cm above $O$. (Swapping the distances changes nothing below.)</p><p>Draw also the mirror images of the two chords in $O$: a vertical chord $3$ cm to the right of $O$ and a horizontal chord $4$ cm below $O$. The four chords cut the disc into nine pieces:</p><ul class="ct-ul"><li><p>a central rectangle of size $6\times8$, area $48$ (its corners are at distance $\sqrt{3^2+4^2}=5&lt;12$ from $O$, so it lies inside the circle);</p></li><li><p>four corner pieces, all congruent by the symmetry of the picture in the horizontal and vertical diameters; call the area of each $c$;</p></li><li><p>a left and a right side piece, mirror images of each other, each of area $s$;</p></li><li><p>a top and a bottom piece, mirror images of each other, each of area $t$.</p></li></ul><p>Now read off the four regions: $J$ is the top left corner piece, so $J=c$; $K=t+c$ (top piece and top right corner); $L=s+c$ (left piece and bottom left corner); and $M$ is everything else: $M=48+s+t+c$. Therefore
+\[J+M-K-L=c+(48+s+t+c)-(t+c)-(s+c)=48,\]
+so $X=\boxed{\textbf{(D)}\ 48}$.</p>
+<h4>Solution 2 (Reflect each half)</h4>
+<p>Let $O$ be the centre, with the vertical chord $3$ cm to the left of $O$ and the horizontal chord $4$ cm above $O$, as in the diagram. Write $S$ for the horizontal strip of the disc between the lines $4$ cm above and $4$ cm below $O$.</p><p><em>Right part.</em> The part of the disc to the right of the vertical chord is $K\cup M$; it is symmetric in the horizontal diameter. Reflecting $K$ (the part above the horizontal chord) in that diameter gives the part of $M$ lying more than $4$ cm below $O$. So $M-K$ is the area of what is left of $M$: the right part of the strip $S$.</p><p><em>Left part.</em> In the same way, $L-J$ is the area of the left part of the strip $S$ (the part to the left of the vertical chord).</p><p>So $(J+M)-(K+L)=(M-K)-(L-J)$ equals the area of the strip $S$ to the right of the chord, minus the area of $S$ to the left of the chord. The strip $S$ is symmetric in the vertical diameter, so the piece of $S$ left of the chord (more than $3$ cm left of $O$) has the same area as the piece of $S$ more than $3$ cm right of $O$. Removing these equal pieces leaves the part of $S$ between $3$ cm left and $3$ cm right of $O$: a $6\times8$ rectangle (its corners are at distance $5&lt;12$ from $O$). Hence
+\[X=6\cdot8=\boxed{\textbf{(D)}\ 48}.\]</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p12">
+<h3>Problem 12</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Number Theory &middot; LPS VI, Chapter 15: GCD, LCM, and Multiplicative Interaction &middot; Prime-Exponent Bookkeeping</div>
+<div class="ct-text"><p>How many ordered pairs of two-digit positive integers $(a,b)$ are there such that $\gcd(30,a,b)\times\mathrm{lcm}(30,a,b)=30ab$?</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$542$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Prime by prime)</h4>
+<p>Fix a prime $p$ and let $x$, $y$, $z$ be the exponents of $p$ in $30$, $a$, $b$. The exponent of $p$ in the gcd is the smallest of $x,y,z$ and in the lcm it is the largest. So the equation holds exactly when, for every prime $p$,
+\[\min(x,y,z)+\max(x,y,z)=x+y+z,\]
+that is, when the middle one of the three exponents is $0$, i.e. at least two of $x,y,z$ are $0$.</p><ul class="ct-ul"><li><p>For $p=2,3,5$ we have $x=1$, so $y=z=0$: neither $a$ nor $b$ is divisible by $2$, $3$ or $5$.</p></li><li><p>For every other prime $x=0$, so $y=0$ or $z=0$: $p$ does not divide both $a$ and $b$.</p></li></ul><p>So the condition is: $a$ and $b$ are both coprime to $30$, and $\gcd(a,b)=1$.</p><p>The two-digit numbers coprime to $30$ are
+\[11,13,17,19,23,29,31,37,41,43,47,49,53,59,61,67,71,73,77,79,83,89,91,97,\]
+$24$ numbers. All are primes except $49=7^2$, $77=7\cdot11$ and $91=7\cdot13$. Of the $24^2=576$ ordered pairs, remove</p><ul class="ct-ul"><li><p>the $24$ pairs with $a=b$ (then $\gcd(a,b)=a&gt;1$);</p></li><li><p>pairs of different numbers with a common prime: $\{49,77\}$, $\{49,91\}$, $\{77,91\}$ (common factor $7$), $\{11,77\}$, $\{13,91\}$; that is $5$ unordered, $10$ ordered pairs.</p></li></ul><p>The answer is $576-24-10=\boxed{542}$.</p>
+<h4>Solution 2 (Peel off one number at a time)</h4>
+<p>For two numbers, $\gcd(m,n)\cdot\mathrm{lcm}(m,n)=mn$. Let $L=\mathrm{lcm}(30,a)=\frac{30a}{\gcd(30,a)}$. Then
+\[\mathrm{lcm}(30,a,b)=\mathrm{lcm}(L,b)=\frac{Lb}{\gcd(L,b)}=\frac{30ab}{\gcd(30,a)\cdot\gcd(L,b)}.\]
+So the equation becomes
+\[\gcd(30,a,b)=\gcd(30,a)\cdot\gcd(L,b).\]
+But $\gcd(30,a,b)$ divides $\gcd(30,a)$, so it is at most $\gcd(30,a)$, while $\gcd(L,b)\ge1$. Equality forces $\gcd(L,b)=1$ and $\gcd(30,a,b)=\gcd(30,a)$.</p><p>The primes of $L$ are those of $30$ and of $a$, so $\gcd(L,b)=1$ means: $b$ is coprime to $30$ and to $a$. Then $\gcd(30,a,b)=1$, so also $\gcd(30,a)=1$. Conversely, if $a$, $b$ are coprime to $30$ and to each other, then $\gcd(30,a,b)=1$ and $\mathrm{lcm}(30,a,b)=30ab$, so the equation holds.</p><p>Counting: the two-digit numbers coprime to $30$ are the $24$ numbers $11$, $13$, $17$, $19$, $23$, $29$, $31$, $37$, $41$, $43$, $47$, $49$, $53$, $59$, $61$, $67$, $71$, $73$, $77$, $79$, $83$, $89$, $91$, $97$. Every one of them has a prime factor, so a pair with $a=b$ never works; this removes $24$ of the $24^2=576$ ordered pairs. The only numbers in the list with a common prime factor are $49,77,91$ (all multiples of $7$), $11$ and $77$, and $13$ and $91$: $5$ unordered pairs, $10$ ordered. The answer is $576-24-10=\boxed{542}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p13">
+<h3>Problem 13</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Number Theory &middot; LPS VI, Chapter 19: Modular Arithmetic and Remainder Tracking &middot; Strategic Residues</div>
+<div class="ct-text"><p>For each positive integer $n$, let $f(n)=(n+4)^4-n^4$.</p><ul class="ct-parts"><li><p><span class="ct-lbl">(a)</span> Prove that $f(n)$ is divisible by $16$ for every $n$.</p></li><li><p><span class="ct-lbl">(b)</span> Find $n$ such that $f(n)$ is divisible by $3$.</p></li><li><p><span class="ct-lbl">(c)</span> Find $n$ such that $f(n)$ is divisible by $24^2$.</p></li></ul></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(b) $n\equiv1\pmod 3$; (c) $n\equiv16\pmod{18}$, i.e. $n=18k+16$ ($k\ge0$)</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Factor first)</h4>
+<p>Using $X^2-Y^2=(X-Y)(X+Y)$ twice,
+\[f(n)=\big((n+4)^2-n^2\big)\big((n+4)^2+n^2\big)=(8n+16)(2n^2+8n+16)=16(n+2)\big((n+2)^2+4\big).\]
+Write $m=n+2$, so $f(n)=16\,m\,(m^2+4)$.</p><p><strong>(a)</strong> The factor $16$ shows that $16\mid f(n)$ for every $n$.</p><p><strong>(b)</strong> Since $3\nmid16$, we need $3\mid m(m^2+4)$. A square leaves remainder $0$ or $1$ when divided by $3$. If $3\nmid m$, then $m^2\equiv1$ and $m^2+4\equiv5\equiv2\pmod3$, so $3\nmid m(m^2+4)$. If $3\mid m$, then $3\mid f(n)$. So $3\mid f(n)$ exactly when $3\mid n+2$, that is
+\[\boxed{n\equiv1\pmod3},\qquad n=1,4,7,10,\dots\]</p><p><strong>(c)</strong> $24^2=576=2^6\cdot3^2=16\cdot36$, so we need $36\mid m(m^2+4)$, i.e. $9\mid m(m^2+4)$ and $4\mid m(m^2+4)$.</p><ul class="ct-ul"><li><p>By (b), $3\nmid m^2+4$ in every case (if $3\mid m$ then $m^2+4\equiv1$). So $9\mid m(m^2+4)$ exactly when $9\mid m$.</p></li><li><p>If $m$ is odd, $m(m^2+4)$ is odd. If $m=2t$ is even, $m(m^2+4)=2t(4t^2+4)=8t(t^2+1)$ is a multiple of $4$. So $4\mid m(m^2+4)$ exactly when $m$ is even.</p></li></ul><p>So we need $m$ even and $9\mid m$, that is $18\mid m=n+2$:
+\[\boxed{n\equiv16\pmod{18}},\qquad n=16,34,52,\dots\]</p>
+<h4>Solution 2 (Expand and test remainders)</h4>
+<p>Expanding, $(n+4)^4=n^4+16n^3+96n^2+256n+256$, so
+\[f(n)=16n^3+96n^2+256n+256=16\,g(n),\qquad g(n)=n^3+6n^2+16n+16.\]</p><p><strong>(a)</strong> $f(n)=16g(n)$ with $g(n)$ an integer, so $16\mid f(n)$.</p><p><strong>(b)</strong> $3\nmid16$, so we need $3\mid g(n)$. Modulo $3$: $g(n)\equiv n^3+n+1$. For $n\equiv0,1,2$ this is $1$, $3\equiv0$, $8+2+1=11\equiv2$. So $3\mid f(n)$ exactly when $\boxed{n\equiv1\pmod3}$.</p><p><strong>(c)</strong> $24^2=576=16\cdot36$, so we need $36\mid g(n)$, i.e. $4\mid g(n)$ and $9\mid g(n)$.</p><ul class="ct-ul"><li><p>If $n$ is odd, $g(n)=n^3+6n^2+16n+16$ is odd. If $n=2t$, then $g(n)=8t^3+24t^2+32t+16$ is a multiple of $8$. So $4\mid g(n)$ exactly when $n$ is even.</p></li><li><p>The remainder of $g(n)$ mod $9$ depends only on $n$ mod $9$. For $n=0,1,\dots,8$:
+\[g(n)=16,\ 39,\ 80,\ 145,\ 240,\ 371,\ 544,\ 765,\ 1040,\]
+with remainders $7,3,8,1,6,2,4,0,5$. Only $n\equiv7\pmod9$ gives a multiple of $9$ ($765=9\cdot85$).</p></li></ul><p>So $n$ is even and $n\equiv7\pmod9$. Among $7,16$ (the two numbers below $18$ that are $\equiv7\pmod9$) only $16$ is even, so $\boxed{n\equiv16\pmod{18}}$: $n=16,34,52,\dots$</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p14">
+<h3>Problem 14</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Algebra &middot; LPS VI, Chapter 53: Sequences, Series, and Recursive Patterns &middot; Series and Summation Patterns</div>
+<div class="ct-text"><p>Ford has an unfair random number generator that generates positive integers. When the generator is run, each positive integer $n$ comes up with probability $\dfrac{1}{n(n+1)}$. For example, the probability of generating an $8$ is $\dfrac1{72}$. Ford calls a positive integer &ldquo;interdimensional&rdquo; if it is one less than a triangular number. (The first few interdimensional numbers are $2$, $5$, $9$, $14$, &hellip;) What is the probability that Ford's random number generator shows an interdimensional number when run? Express your answer as a common fraction.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\frac29$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (One telescoping sum)</h4>
+<p>The triangular numbers are $T_k=\frac{k(k+1)}2$. The interdimensional numbers are $n=T_k-1$ for $k\ge2$ (for $k=1$ we get $0$). Then
+\[n=\frac{k^2+k-2}2=\frac{(k-1)(k+2)}2,\qquad n+1=\frac{k(k+1)}2,\qquad \frac1{n(n+1)}=\frac{4}{(k-1)k(k+1)(k+2)}.\]
+Different $k$ give different $n$, so the required probability is the sum of these numbers over $k\ge2$. Put $u_k=\frac1{(k-1)k(k+1)}$. Then
+\[u_k-u_{k+1}=\frac{(k+2)-(k-1)}{(k-1)k(k+1)(k+2)}=\frac{3}{(k-1)k(k+1)(k+2)},\]
+so the $k$-th term is $\frac43(u_k-u_{k+1})$. The sum from $k=2$ to $k=K$ telescopes to $\frac43(u_2-u_{K+1})$, which tends to $\frac43u_2=\frac43\cdot\frac16$ as $K$ grows. The probability is
+\[\frac43\cdot\frac16=\boxed{\frac29}.\]</p>
+<h4>Solution 2 (Two telescoping sums)</h4>
+<p>Since $\frac1{n(n+1)}=\frac1n-\frac1{n+1}$ and the interdimensional numbers are $n=T_k-1$ ($k\ge2$, with $T_k=\frac{k(k+1)}2$), the probability is
+\[\sum_{k\ge2}\left(\frac1{T_k-1}-\frac1{T_k}\right).\]
+Now $\frac1{T_k}=\frac2{k(k+1)}=2\left(\frac1k-\frac1{k+1}\right)$, so $\sum_{k\ge2}\frac1{T_k}=2\cdot\frac12=1$ (the sum telescopes to $2\cdot\frac12$).</p><p>Also $T_k-1=\frac{(k-1)(k+2)}2$, and $\frac2{(k-1)(k+2)}=\frac23\left(\frac1{k-1}-\frac1{k+2}\right)$. Summing over $k\ge2$, every $\frac1j$ with $j\ge4$ appears once with $+$ and once with $-$, and only $\frac11+\frac12+\frac13$ remain:
+\[\sum_{k\ge2}\frac1{T_k-1}=\frac23\left(1+\frac12+\frac13\right)=\frac23\cdot\frac{11}6=\frac{11}9.\]
+The probability is $\frac{11}9-1=\boxed{\frac29}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p15">
+<h3>Problem 15</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Geometry &middot; LPS VI, Chapter 28: Right Triangles and the Pythagorean Framework &middot; Pythagorean Theorem</div>
+<div class="ct-text"><p>A convex quadrilateral $ABCD$ has sides $BC=7$ and $DA=1$, and its two diagonals $AC$ and $BD$ are perpendicular. Find the largest possible value of the perimeter of quadrilateral $ABCD$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$18$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Pythagoras four times)</h4>
+<div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/grade-9-15_s1.svg" alt="Figure for the solution"></div>
+<p>Since $ABCD$ is convex, its diagonals meet at a point $O$ inside both of them. Let $OA=p$, $OB=q$, $OC=r$, $OD=t$. The four angles at $O$ are right angles, so by Pythagoras
+\[AB^2=p^2+q^2,\quad BC^2=q^2+r^2,\quad CD^2=r^2+t^2,\quad DA^2=t^2+p^2.\]
+Hence $AB^2+CD^2=p^2+q^2+r^2+t^2=BC^2+DA^2=49+1=50$.</p><p>For any two numbers, $(AB+CD)^2=2\left(AB^2+CD^2\right)-(AB-CD)^2\le2\cdot50=100$, so $AB+CD\le10$ and the perimeter is at most $10+7+1=18$.</p><p>Equality needs $AB=CD=5$. Take $p=t=\frac1{\sqrt2}$ and $q=r=\frac7{\sqrt2}$: then
+\[AB^2=\tfrac12+\tfrac{49}2=25,\quad BC^2=\tfrac{49}2+\tfrac{49}2=49,\quad CD^2=25,\quad DA^2=\tfrac12+\tfrac12=1.\]
+Placing the four points on two perpendicular lines through $O$ at these distances (with $A$, $C$ on opposite sides of $O$ and $B$, $D$ on opposite sides), the diagonals cross inside each other, so $ABCD$ is convex. Its perimeter is $5+7+5+1=18$.</p><p>The largest perimeter is $\boxed{18}$.</p>
+<h4>Solution 2 (Coordinates and a circle)</h4>
+<p>Put the intersection point $O$ of the diagonals at the origin, with $AC$ on the $y$-axis and $BD$ on the $x$-axis (they are perpendicular, and since $ABCD$ is convex, $O$ lies inside both diagonals): $A=(0,p)$, $C=(0,-r)$, $B=(-q,0)$, $D=(t,0)$ with $p,q,r,t&gt;0$. The distance formula gives
+\[AB^2+CD^2=(q^2+p^2)+(t^2+r^2)=(q^2+r^2)+(t^2+p^2)=BC^2+DA^2=50.\]
+Let $x=AB$ and $y=CD$. The point $(x,y)$ lies on the circle $x^2+y^2=50$ of radius $5\sqrt2$ around the origin. If $x+y=c$, this point is also on the line $x+y=c$, whose distance from the origin is $\frac{c}{\sqrt2}$. A line meets a circle only if its distance from the centre is at most the radius: $\frac c{\sqrt2}\le5\sqrt2$, so $c\le10$. Hence the perimeter $x+y+8\le18$.</p><p>The value $18$ occurs: $p=t=\frac1{\sqrt2}$, $q=r=\frac7{\sqrt2}$ give $AB=CD=5$, $BC=7$, $DA=1$, and the quadrilateral is convex because its diagonals cross inside each other. The largest perimeter is $\boxed{18}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p16">
+<h3>Problem 16</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Combinatorics &middot; LPS VI, Chapter 34: Distributions and Stars-and-Bars &middot; Identical Objects into Distinct Boxes</div>
+<div class="ct-text"><ul class="ct-parts"><li><p><span class="ct-lbl">(a)</span> You have three red and four blue cubes. The cubes of the same colour are identical.</p><p>This part of the question is about the number of ways to distribute all seven cubes among some boxes, following these rules:</p><ul class="ct-ul"><li><p>A box may be empty (so it is possible to put all seven cubes in one box).</p></li><li><p>The boxes are considered different (so putting all seven cubes in the first box counts as a different solution from putting all seven cubes in the second box).</p></li></ul><ul class="ct-parts"><li><p><span class="ct-lbl">(i)</span> How many ways are there to distribute all seven cubes among two boxes?</p></li><li><p><span class="ct-lbl">(ii)</span> How many ways are there to distribute all seven cubes among three boxes, so that no colour appears in all three boxes?</p></li></ul></li><li><p><span class="ct-lbl">(b)</span> The <em>factorial</em> of a positive integer $n$ is defined as $n!=1\times2\times3\times\dots\times n$. For example, $3!=1\times2\times3=6$.</p><p>In how many ways can we write $10!=abc$, where $a$, $b$, $c$ are positive integers, such that there is no factor greater than one which is common to all three of them?</p><p>Reorderings of $a$, $b$, $c$ count as different solutions. For example, $120\times54\times560$ is not allowed because all three numbers share a common factor of $2$, while $640\times162\times35$ is allowed and counts as a different solution from $162\times640\times35$.</p><p><em>Note: This question part may have a four digit answer.</em></p></li></ul></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(a)(i) $20$, (ii) $108$; (b) $5184$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Complements, colour by colour and prime by prime)</h4>
+<p>We use the stars-and-bars count: a whole number $e$ can be written as an ordered sum of three non-negative whole numbers in $\binom{e+2}2$ ways, and as an ordered sum of three positive whole numbers in $\binom{e-1}2$ ways.</p><p><strong>(a)(i)</strong> The red cubes and the blue cubes can be distributed independently. The first box gets $0$, $1$, $2$ or $3$ red cubes ($4$ ways) and $0$ to $4$ blue cubes ($5$ ways); the second box gets the rest. So there are $4\cdot5=\boxed{20}$ ways.</p><p><strong>(ii)</strong> Red cubes into three boxes: $\binom52=10$ ways, of which $\binom22=1$ puts red in all three boxes (one cube in each). So $9$ ways leave some box without red. Blue: $\binom62=15$ ways, of which $\binom32=3$ put blue in all three boxes; $12$ ways remain. The colours are independent, so there are $9\cdot12=\boxed{108}$ ways.</p><p><strong>(b)</strong> $10!=2^8\cdot3^4\cdot5^2\cdot7$. Choosing $a,b,c$ with $abc=10!$ is the same as splitting, for each prime, its exponent into three parts (the exponents of that prime in $a$, $b$, $c$). The three numbers have no common factor greater than $1$ exactly when no prime divides all three, i.e. for each prime the three parts are not all positive. For a prime with exponent $e$ this leaves $\binom{e+2}2-\binom{e-1}2$ splits:
+\[e=8:\ 45-21=24,\qquad e=4:\ 15-3=12,\qquad e=2:\ 6-0=6,\qquad e=1:\ 3-0=3.\]
+The primes are independent, so the number of ways is $24\cdot12\cdot6\cdot3=\boxed{5184}$.</p>
+<h4>Solution 2 (Inclusion-exclusion)</h4>
+<p><strong>(a)(i)</strong> List by the number of red cubes in the first box ($0,1,2,3$); for each, the number of blue cubes in the first box is $0,1,2,3$ or $4$; the second box takes what is left. That is $4\times5=\boxed{20}$ ways.</p><p><strong>(ii)</strong> &ldquo;Red does not appear in all three boxes&rdquo; means some box has no red cube. Let $E_k$ be the set of ways (for the red cubes alone) in which box $k$ has no red cube. If box $1$ is red-free, the $3$ red cubes go into two boxes: $4$ ways; if boxes $1$ and $2$ are both red-free, there is $1$ way; all three boxes cannot be red-free. By inclusion-exclusion,
+\[|E_1\cup E_2\cup E_3|=3\cdot4-3\cdot1+0=9.\]
+For blue in the same way: $3\cdot5-3\cdot1+0=12$. The colours are independent: $9\cdot12=\boxed{108}$ ways.</p><p><strong>(b)</strong> Write $10!=2^8\cdot3^4\cdot5^2\cdot7$. A factorisation $abc$ is the same as choosing, for each prime $p$ with exponent $e$, the exponents $(x,y,z)$ of $p$ in $a,b,c$ with $x+y+z=e$. The condition &ldquo;no common factor greater than $1$&rdquo; says: for every prime, at least one of $x,y,z$ is $0$.</p><p>For one prime with exponent $e\ge1$, count the triples with at least one zero by inclusion-exclusion: $x=0$ leaves $y+z=e$, which has $e+1$ solutions; two zeros leave $1$ solution; three zeros are impossible. So the count is $3(e+1)-3\cdot1=3e$.</p><p>This gives $24$, $12$, $6$, $3$ for the exponents $8,4,2,1$, and the total is $24\cdot12\cdot6\cdot3=\boxed{5184}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p17">
+<h3>Problem 17</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Combinatorics &middot; LPS VI, Chapter 10: Logical Deduction and Constraint Puzzles &middot; Constraint Satisfaction</div>
+<div class="ct-text"><p>Consider a $3\times3$ square grid, made of $3$ rows, $3$ columns and $2$ diagonals, as shown in the figure. A positive integer $n$ is called a <em>good number</em> if one can find $9$ distinct positive integers and write them in the cells of the grid, one number in each cell, so that the sum of the numbers in each row, in each column and in each diagonal is equal to $n$.</p><ul class="ct-parts"><li><p><span class="ct-lbl">(a)</span> Show a way to write the positive integers from $1$ to $9$ in the cells of the grid so that the sums of the numbers in each row, each column and each diagonal are all equal.</p></li><li><p><span class="ct-lbl">(b)</span> Prove that if $n\ge15$ and $n$ is divisible by $3$, then $n$ is a good number.</p></li><li><p><span class="ct-lbl">(c)</span> Prove that if $n$ is a good number, then $n\ge15$ and $n$ is divisible by $3$.</p></li></ul><div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/grade-9-17.svg" alt="Figure for Problem 17"></div></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>proof (good numbers are exactly the multiples of $3$ from $15$ on)</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Shift a magic square; count the lines through the centre)</h4>
+<div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/grade-9-17_s1.svg" alt="Figure for the solution"></div>
+<p>Label the cells
+\[\begin{array}{ccc} a&amp;b&amp;c\\ d&amp;e&amp;f\\ g&amp;h&amp;i\end{array}\]</p><p><strong>(a)</strong> The square in the figure works: every row ($2+7+6$, $9+5+1$, $4+3+8$), every column ($2+9+4$, $7+5+3$, $6+1+8$) and both diagonals ($2+5+8$, $6+5+4$) add up to $15$.</p><p><strong>(b)</strong> Let $n=3k$ with $k\ge5$. Add $k-5$ to each number of the square in (a). The new numbers $k-4,k-3,\dots,k+4$ are distinct and positive (the smallest is $k-4\ge1$). Each row, column and diagonal has three cells, so each sum grows by $3(k-5)$ and becomes $15+3k-15=3k=n$. So $n$ is good.</p><p><strong>(c)</strong> Let $n$ be good and fill the grid as required. The middle row, the middle column and the two diagonals all pass through the centre; together their sums are $4n$. These four lines cover every cell exactly once, except the centre $e$, which is covered four times. So
+\[4n=(a+b+\dots+i)+3e.\]
+The three rows cover every cell once, so $a+b+\dots+i=3n$. Hence $4n=3n+3e$, so $n=3e$ is divisible by $3$.</p><p>The nine numbers are distinct positive integers, so their sum is at least $1+2+\dots+9=45$. Thus $3n\ge45$ and $n\ge15$.</p>
+<h4>Solution 2 (A formula for all such squares; pairs through the centre)</h4>
+<p>Label the cells
+\[\begin{array}{ccc} a&amp;b&amp;c\\ d&amp;e&amp;f\\ g&amp;h&amp;i\end{array}\]</p><p><strong>(b) first.</strong> Let $n=3k$ with $k\ge5$ and fill the grid with
+\[\begin{array}{ccc} k+1&amp;k-4&amp;k+3\\ k+2&amp;k&amp;k-2\\ k-3&amp;k+4&amp;k-1\end{array}\]
+Each row, each column and each diagonal consists of $k+u$, $k+v$, $k+w$ with $u+v+w=0$ (for example the first row: $1-4+3=0$; the first column: $1+2-3=0$; a diagonal: $1+0-1=0$), so every sum is $3k=n$. The nine numbers $k-4,\dots,k+4$ are distinct and positive because $k\ge5$. So $n$ is good.</p><p><strong>(a)</strong> The case $k=5$ uses exactly the numbers $1,\dots,9$:
+\[\begin{array}{ccc} 6&amp;1&amp;8\\ 7&amp;5&amp;3\\ 2&amp;9&amp;4\end{array}\]
+with all eight sums equal to $15$.</p><p><strong>(c)</strong> Suppose $n$ is good. The four lines through the centre give
+\[a+i=c+g=b+h=d+f=n-e.\]
+Adding all nine numbers in two ways (three rows; or four pairs plus the centre): $3n=4(n-e)+e$, so $n=3e$, a multiple of $3$.</p><p>Now each pair, for instance $\{a,i\}$, consists of two different numbers with sum $n-e=2e$, so one of them is smaller than $e$ and the other larger. This gives four different positive integers smaller than $e$ (one from each pair), so $e-1\ge4$, i.e. $e\ge5$, and $n=3e\ge15$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p18">
+<h3>Problem 18</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VI scale">H</span>Combinatorics &middot; LPS VI, Chapter 26: Double Counting and Combinatorial Proof &middot; Handshake and Degree Logic</div>
+<div class="ct-text"><p>In a chess tournament there are $20$ players. In each round, the players are split into $10$ pairs, and the two players of each pair play each other. Any two players play each other at most once. Find the largest positive integer $k$ with the following property: after $4$ rounds, no matter how the pairings were made, one can certainly choose $k$ players no two of whom have played each other.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$k=5$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (A largest set of strangers)</h4>
+<p>Call two players <em>strangers</em> if they have not played each other. After $4$ rounds every player has played exactly $4$ different opponents.</p><p><em>$k\le5$.</em> Split the players into five groups of four. In rounds $1$, $2$, $3$ pair the players inside each group so that each two players of a group meet once (in a group $\{w,x,y,z\}$: $wx,yz$; then $wy,xz$; then $wz,xy$). In round $4$ pair players from different groups: number the groups $1,\dots,5$ and their members $1,\dots,4$, and pair member $1$ of group $j$ with member $2$ of group $j+1$, and member $3$ of group $j$ with member $4$ of group $j+1$ (group $6$ means group $1$). Every player gets exactly one partner, and no pair meets twice. Now any two players of the same group have played, so a set of strangers contains at most one player from each group: at most $5$ players. So $k\le5$.</p><p><em>$k\ge5$.</em> Take a set $S$ of strangers that is as large as possible, $|S|=s$. Every player outside $S$ has played someone in $S$ (otherwise we could add him to $S$). Count the games between a player in $S$ and a player outside: there are at most $4s$ of them (each member of $S$ plays $4$ games) and at least $20-s$ of them. So $20-s\le4s$ and $s\ge4$.</p><p>Suppose $s=4$. Then $20-s=16=4s$, so both counts are exact: each player outside $S$ has played <em>exactly one</em> member of $S$. Take $v\in S$ and its four opponents $u_1,u_2,u_3,u_4$ (all outside $S$, since $S$ consists of strangers). Each $u_i$ has played no member of $S$ other than $v$. If two of them, $u_i$ and $u_j$, were strangers, then removing $v$ from $S$ and adding $u_i$, $u_j$ would give a set of $5$ strangers, contradicting the choice of $S$. So $u_1,\dots,u_4$ have all played each other. Then each $u_i$ has played $v$ and the three other $u$'s, which are all its $4$ games, and $v$ has played only the $u$'s. So these five players have played only among themselves. But in round $1$ each of them was paired with an opponent from the same five players, which splits five players into pairs: impossible, since $5$ is odd.</p><p>Hence $s\ge5$: one can always choose $5$ strangers. The answer is $\boxed{k=5}$.</p>
+<h4>Solution 2 (Greedy choice with a good start)</h4>
+<p>Call two players <em>strangers</em> if they have not played each other. After $4$ rounds every player has exactly $4$ opponents.</p><p><em>$k\le5$.</em> Divide the players into five groups of four. In rounds $1$&ndash;$3$ every group plays its own round robin (in a group $\{w,x,y,z\}$: $wx,yz$; $wy,xz$; $wz,xy$). In round $4$, with groups numbered $1,\dots,5$ cyclically and members numbered $1,\dots,4$, pair member $1$ of group $j$ with member $2$ of group $j+1$, and member $3$ of group $j$ with member $4$ of group $j+1$; this is a valid round with only new pairs. Two players of the same group are never strangers, so at most one player per group can be chosen: at most $5$.</p><p><em>$k\ge5$.</em> <em>Step 1: some player $v$ has two opponents $u$, $w$ who are strangers.</em> If not, take any player $v$: its four opponents have all played each other, so each of them has played $v$ and three others among them, which is all of its $4$ games. Then $v$ and its opponents form a group of five who have played only among themselves; in round $1$ these five players would be split into pairs among themselves, impossible as $5$ is odd.</p><p><em>Step 2.</em> Choose $u$ and $w$, and cross out $u$, $w$ and all their opponents. Since $v$ is an opponent of both, at most $2+4+4-1=9$ players are crossed out, so at least $11$ players remain, none of whom has played $u$ or $w$.</p><p><em>Step 3.</em> Now repeat: choose any player who is not crossed out, then cross out him and his opponents (at most $5$ players each time). After two such choices at most $9+10=19$ players are crossed out, so a third choice is still possible.</p><p>Every chosen player was not crossed out when chosen, so he has not played any earlier chosen player. Thus the chosen players $u,w$ and the three others are $5$ strangers. Together with the example, the answer is $\boxed{k=5}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p19">
+<h3>Problem 19</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VI scale">H</span>Geometry &middot; LPS VI, Chapter 36: Power of a Point and Circle Measurement &middot; Secant-Tangent Power</div>
+<div class="ct-text"><p>Let $ABC$ be an acute triangle with $AB&lt;AC$. Its incircle $(I)$ touches the sides $BC$, $CA$, $AB$ at $D$, $E$, $F$, respectively. Let $J$ be the midpoint of $EF$ and let $K$ be the intersection point of $AD$ and $EF$.</p><ul class="ct-parts"><li><p><span class="ct-lbl">(a)</span> Prove that $ID^2=IJ\cdot IA$ and that triangle $IJD$ is similar to triangle $IDA$.</p></li><li><p><span class="ct-lbl">(b)</span> Let $H$ be the intersection point, other than $I$, of $IK$ with the circle with diameter $AI$. Prove that $\angle IHD=\angle IDK$ and that the points $I$, $D$, $J$, $H$ lie on one circle $(S)$.</p></li><li><p><span class="ct-lbl">(c)</span> Let $L$ and $G$ be the intersection points, other than $D$, of $DJ$ with $(I)$ and of $(S)$ with $(I)$, respectively. Prove that $A$, $G$, $D$ are collinear and that the lines $AL$ and $GJ$ meet on $(I)$.</p></li></ul></div>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Similar triangles and a reflection)</h4>
+<div class="ct-fig"><img style="width:480px" src="/assets/contests/2026-27/grade-9-19_s1.svg" alt="Figure for the solution"></div>
+<p>Let $r$ be the radius of $(I)$, so $ID=IE=IF=r$, with $IE\perp CA$ and $IF\perp AB$.</p><p><em>Basic facts.</em> Tangent segments from $A$ are equal, $AE=AF$, and $IE=IF$, so $A$ and $I$ both lie on the perpendicular bisector of $EF$. Hence $AI\perp EF$ at the midpoint $J$ of $EF$. In the right triangle $AEI$ (right angle at $E$), $EJ$ is the altitude to the hypotenuse, so $J$ lies between $A$ and $I$ and
+\[IE^2=IJ\cdot IA,\qquad AE^2=AJ\cdot AI\]
+(from the similar triangles $IJE\sim IEA$ and $AJE\sim AEI$). Also $D$ is not on line $AI$: otherwise the bisector $AI$ would be perpendicular to $BC$ (as $ID\perp BC$), forcing $AB=AC$. So the line $AD$ is different from $AI$ and $K\ne J$. The segment $EF$ separates $A$ from side $BC$, so $K$ lies strictly between $A$ and $D$ and strictly between $E$ and $F$; in particular $K$ is inside $(I)$.</p><p><strong>(a)</strong> $ID^2=IE^2=IJ\cdot IA$. So $\frac{IJ}{ID}=\frac{ID}{IA}$, and the triangles $IJD$ and $IDA$ have the same angle at $I$ (as $J$ lies on ray $IA$). By SAS similarity, $\triangle IJD\sim\triangle IDA$; in particular $\angle IJD=\angle IDA$.</p><p><strong>(b)</strong> $H$ lies on the circle with diameter $AI$, so $\angle AHI=90^\circ$: $H$ is the foot of the perpendicular from $A$ to line $IK$. Triangle $IJK$ has a right angle at $J$, so $\angle AIK=\angle JIK$ is acute; therefore the foot $H$ lies on the ray $IK$. The right triangles $IJK$ (right angle at $J$) and $IHA$ (right angle at $H$) share the angle at $I$, so they are similar and $\frac{IJ}{IH}=\frac{IK}{IA}$:
+\[IH\cdot IK=IJ\cdot IA=ID^2 .\]
+So $\frac{IH}{ID}=\frac{ID}{IK}$, and triangles $IHD$ and $IDK$ share the angle at $I$ ($H$ is on ray $IK$). By SAS similarity $\triangle IHD\sim\triangle IDK$, hence $\angle IHD=\angle IDK$.</p><p>Since $K$ lies on segment $AD$, $\angle IDK=\angle IDA=\angle IJD$ by (a). So $\angle IHD=\angle IJD$. The points $J$ and $H$ lie on the same side of line $ID$: $J$ is on segment $IA$, $H$ is on ray $IK$, and $A$, $K$ are on the same side of $ID$ (the line $AD$ meets line $ID$ only at $D$). Two points on the same side of $ID$ that see the segment $ID$ under equal angles lie on one circle with $I$ and $D$. So $I$, $D$, $J$, $H$ lie on one circle $(S)$.</p><p><strong>(c)</strong> <em>$A$, $G$, $D$ are collinear.</em> The segment from $A$ (outside $(I)$) to $K$ (inside $(I)$) crosses $(I)$ at a point $G'$ between $A$ and $K$; it is the second intersection of line $AD$ with $(I)$. By the tangent-secant theorem, $AG'\cdot AD=AE^2=AJ\cdot AI$.</p><p>The line $AI$ meets $(S)$ at $J$ and $I$, both on the same side of $A$, so $A$ is outside $(S)$. Let line $AD$ meet $(S)$ again at $G''$ (if $AD$ were tangent to $(S)$, take $G''=D$). By the secant theorem for $(S)$, $AG''\cdot AD=AJ\cdot AI=AG'\cdot AD$, so $AG''=AG'$; both points are on ray $AD$, so $G''=G'$. Thus $G'$ lies on $(S)$ and on $(I)$, and $G'\ne D$. The circles $(S)$ and $(I)$ are different ($I$ is on $(S)$ but not on $(I)$), so they have at most two common points, $D$ and $G$. Hence $G=G'$, and $A$, $G$, $D$ are collinear, with $G$ between $A$ and $D$.</p><p><em>$G$ is the mirror image of $L$ in the line $AI$.</em> From $AG\cdot AD=AJ\cdot AI$ we get $\frac{AG}{AI}=\frac{AJ}{AD}$ and $\frac{AJ}{AG}=\frac{AD}{AI}$; with the common angle at $A$ this gives $\triangle AGJ\sim\triangle AID$ and $\triangle AJD\sim\triangle AGI$. Hence
+\[\angle AJG=\angle ADI,\qquad \angle AJD=\angle AGI.\]
+Let $\beta=\angle IDG=\angle IGD$ (triangle $IGD$ is isosceles, $IG=ID$). As $G$ lies between $A$ and $D$: $\angle ADI=\beta$ and $\angle AGI=180^\circ-\beta$. So $\angle AJG=\beta$ and $\angle AJD=180^\circ-\beta$, hence $\angle IJD=\beta$ ($J$ lies between $A$ and $I$). The point $J$ is inside $(I)$, so on the chord $DL$ it lies between $D$ and $L$, and $\angle AJL=\angle IJD=\beta$ (vertical angles).</p><p>So the rays $JG$ and $JL$ make the same angle $\beta$ with the ray $JA$. They are different rays: otherwise $G$, $L$, $J$, $D$ would be on one line through $D$, which would be line $AD$, putting $J$ on $AD$, which is false. Hence ray $JG$ is the mirror image of ray $JL$ in line $AI$. The reflection in $AI$ maps the circle $(I)$ to itself (its centre is on $AI$), and a ray from the inside point $J$ meets $(I)$ exactly once. Therefore $G$ is the mirror image of $L$.</p><p><em>The lines $AL$ and $GJ$ meet on $(I)$.</em> Let $X$ be the mirror image of $D$ in line $AI$; it lies on $(I)$. Reflect the whole picture in $AI$: $A$ and $J$ stay, $L\mapsto G$, $D\mapsto X$.</p><ul class="ct-ul"><li><p>$D$, $J$, $L$ are collinear, so their images $X$, $J$, $G$ are collinear: $X$ is on line $GJ$.</p></li><li><p>$A$, $G$, $D$ are collinear, so their images $A$, $L$, $X$ are collinear: $X$ is on line $AL$.</p></li></ul><p>The lines $AL$ and $GJ$ are different (if $A$ were on line $GJ$, then $G$ would be on line $AI$ and $L=G$, which is false). So they meet exactly at $X$, a point of $(I)$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p20">
+<h3>Problem 20</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VI scale">H</span>Algebra &middot; LPS VI, Chapter 41: Functions and Algebraic Graphs &middot; Function as Rule</div>
+<div class="ct-text"><ul class="ct-parts"><li><p><span class="ct-lbl">(a)</span> Does there exist a bijection $f:\mathbb{Z}\to\mathbb{Z}$ such that $f(2f(n))=2n+3$ for all $n\in\mathbb{Z}$?</p></li><li><p><span class="ct-lbl">(b)</span> Does there exist a bijection $f:\mathbb{N}\to\mathbb{N}$ such that $f(2f(n))=2n+3$ for all $n\in\mathbb{N}$?</p></li></ul><p><em>Note:</em> as usual in Vietnam, $\mathbb{N}=\{0,1,2,\dots\}$ is the set of non-negative integers.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(a) <strong>Yes</strong>, e.g. $f(n)=-n-3$; (b) <strong>Yes</strong> (construction)</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (An explicit map and a step-by-step construction)</h4>
+<p><strong>(a) Yes.</strong> Let $f(n)=-n-3$. Then $f(f(n))=-(-n-3)-3=n$, so $f$ is its own inverse and is a bijection of $\mathbb{Z}$. And
+\[f(2f(n))=f(-2n-6)=2n+6-3=2n+3 .\]</p><p><strong>(b) Yes.</strong> <em>Where the idea comes from.</em> If such an $f$ exists, then as $n$ runs over $\mathbb{N}$, $f(n)$ runs over all of $\mathbb{N}$, so $2f(n)$ runs over all even numbers; the equation says that $f$ maps the even numbers exactly onto the numbers $2n+3$, the odd numbers from $3$ on. So $f$ must map the odd numbers onto the remaining numbers
+\[V=\{0,1,2,4,6,8,\dots\}\quad(\text{$0$, $1$ and the even numbers}).\]
+We build $f$ in this way. Write $T=\{3,5,7,\dots\}$ for the odd numbers from $3$ on, and pair the odd numbers with $V$ by
+\[h(1)=0,\qquad h(3)=1,\qquad h(2j+1)=2j-2\ \ (j\ge2),\]
+that is $1\mapsto0$, $3\mapsto1$, $5\mapsto2$, $7\mapsto4$, $9\mapsto6$, &hellip;; this is a one-to-one correspondence between the odd numbers and $V$.</p><p>We define two functions $f$ and $g$ on $\mathbb{N}$ ($g$ will be the inverse of $f$) by four rules:</p><ul class="ct-parts"><li><p><span class="ct-lbl">(R1)</span> for odd $n$: $f(n)=h(n)$;</p></li><li><p><span class="ct-lbl">(R2)</span> for even $n$: $f(n)=2g\!\left(\tfrac n2\right)+3$;</p></li><li><p><span class="ct-lbl">(R3)</span> for $y\in V$: $g(y)$ is the odd number $m$ with $h(m)=y$;</p></li><li><p><span class="ct-lbl">(R4)</span> for $y\in T$: $g(y)=2f\!\left(\tfrac{y-3}2\right)$.</p></li></ul><p>These rules really define all values. Go through $N=0,1,2,\dots$ in order and compute $f(N)$ and $g(N)$: rules (R1) and (R3) are direct; (R2) needs $g$ at $\frac N2$, which is smaller than $N$ when $N\ge2$, and for $N=0$ it needs $g(0)=1$, given by (R3); (R4) needs $f$ at $\frac{N-3}2&lt;N$. So every value only uses values computed earlier. (For example $f(0)=2g(0)+3=5$, $f(2)=2g(1)+3=9$, $g(5)=2f(1)=0$, $f(10)=2g(5)+3=3$.)</p><p><em>Claim: for every $N\in\mathbb{N}$, $g(f(N))=N$ and $f(g(N))=N$.</em> We prove both statements together by strong induction on $N$.</p><ul class="ct-ul"><li><p>$g(f(N))=N$. If $N$ is odd, $f(N)=h(N)\in V$ and $g(h(N))=N$ by (R3). If $N=0$: $f(0)=5\in T$ and $g(5)=2f(1)=2h(1)=0$. If $N\ge2$ is even, $f(N)=2g(\frac N2)+3\in T$, so by (R4) $g(f(N))=2f\!\left(g(\tfrac N2)\right)=2\cdot\tfrac N2=N$, using the induction hypothesis for $\frac N2&lt;N$.</p></li><li><p>$f(g(N))=N$. If $N\in V$, $g(N)$ is the odd $m$ with $h(m)=N$, and $f(m)=h(m)=N$. If $N\in T$, $g(N)=2f(\frac{N-3}2)$ is even, so by (R2) $f(g(N))=2g\!\left(f(\tfrac{N-3}2)\right)+3=2\cdot\tfrac{N-3}2+3=N$, using the induction hypothesis for $\frac{N-3}2&lt;N$.</p></li></ul><p>So $f$ and $g$ undo each other, and $f$ is a bijection of $\mathbb{N}$. Finally, $2f(n)$ is even, so by (R2) and the claim,
+\[f(2f(n))=2g(f(n))+3=2n+3\qquad\text{for all }n\in\mathbb{N}.\]</p><p><em>Remark.</em> If $\mathbb{N}$ is read as $\{1,2,3,\dots\}$, the answer is still yes: the same construction works with $T=\{5,7,9,\dots\}$ (the values $2n+3$, $n\ge1$), $V=\{1,2,3,4,6,8,\dots\}$ and $h(1)=1$, $h(3)=2$, $h(5)=3$, $h(2j+1)=2j-2$ for $j\ge3$; rule (R2) is then used only for $n\ge2$, where $\frac n2\ge1$.</p>
+<h4>Solution 2 (A shift, and a formula by remainders modulo 4)</h4>
+<p><strong>(a) Yes.</strong> Let $f(n)=n+1$. It is a bijection of $\mathbb{Z}$ (its inverse is $n\mapsto n-1$), and
+\[f(2f(n))=f(2n+2)=2n+3 .\]</p><p><strong>(b) Yes.</strong> Define $f$ on $\mathbb{N}=\{0,1,2,\dots\}$ according to the remainder of $n$ modulo $4$:
+\[
+f(n)=\begin{cases}
+1, &amp; n=1,\\
+n-3, &amp; n\ \text{odd},\ n\ge3,\\
+n+9, &amp; n\equiv0\pmod 4,\\
+5, &amp; n=2,\\
+4f(t)+3, &amp; n=4t+6\ \ (t\ge0).
+\end{cases}
+\]
+Every $n$ falls under exactly one line (the numbers leaving remainder $2$ on division by $4$ are $2$ and $6,10,14,\dots$). The last line uses the value at $t&lt;n$, so going through $n=0,1,2,\dots$ in order defines every value, and all values are in $\mathbb{N}$. The first values are
+\[f(0),f(1),\dots,f(11)=9,\ 1,\ 5,\ 0,\ 13,\ 2,\ 39,\ 4,\ 17,\ 6,\ 7,\ 8 .\]</p><p><em>$f$ is a bijection.</em> We show by strong induction on $y$ that every $y\in\mathbb{N}$ is $f(n)$ for exactly one $n$. Look at the values of each line:</p><ul class="ct-ul"><li><p>the odd $n\ge3$ give $0,2,4,\dots$, every even number once;</p></li><li><p>$n=1$ and $n=2$ give $1$ and $5$, and the multiples of $4$ give $9,13,17,\dots$; together, every number leaving remainder $1$ on division by $4$ exactly once;</p></li><li><p>the last line gives numbers leaving remainder $3$.</p></li></ul><p>So an even $y$, or a $y$ leaving remainder $1$, has exactly one $n$ with $f(n)=y$. If $y=4z+3$, then $f(n)=y$ happens only on the last line, that is for $n=4t+6$ with $4f(t)+3=4z+3$, i.e. $f(t)=z$. Since $z&lt;y$, by the induction hypothesis there is exactly one such $t$, hence exactly one such $n$.</p><p><em>The equation.</em> We check $f(2f(n))=2n+3$ by strong induction on $n$.</p><ul class="ct-ul"><li><p>$n$ odd, $n\ge3$: $2f(n)=2n-6$ is a multiple of $4$ (as $n-3$ is even), so $f(2f(n))=2n-6+9=2n+3$.</p></li><li><p>$n=1$: $f(2f(1))=f(2)=5$. &emsp;$n=2$: $f(2f(2))=f(10)=f(4\cdot1+6)=4f(1)+3=7$.</p></li><li><p>$n=4t$: $2f(n)=8t+18=4(2t+3)+6$, so $f(2f(n))=4f(2t+3)+3=4\cdot2t+3=2n+3$, since $2t+3$ is odd and at least $3$. (This includes $n=0$.)</p></li><li><p>$n=4t+6$: $2f(n)=8f(t)+6=4\cdot2f(t)+6$, so
+\[f(2f(n))=4f(2f(t))+3=4(2t+3)+3=8t+15=2n+3,\]
+using the induction hypothesis for $t&lt;n$.</p></li></ul><p>So $f$ is a bijection of $\mathbb{N}$ with $f(2f(n))=2n+3$ for all $n$, and the answer to (b) is <strong>yes</strong>.</p><p><em>Remark.</em> If $\mathbb{N}$ is read as $\{1,2,3,\dots\}$, the answer is still yes, with the same idea: $f(1)=1$, $f(3)=3$, $f(n)=n-3$ for odd $n\ge5$, $f(n)=n+9$ for $n\equiv0\pmod4$, $f(2)=5$, $f(6)=9$ and $f(4t+6)=4f(t)+3$ for $t\ge1$; the checks are the same, with the new cases $f(2f(3))=f(6)=9$ and $f(2f(6))=f(18)=4f(3)+3=15$.</p>
+</div></details>
+</section>
+{% endraw %}

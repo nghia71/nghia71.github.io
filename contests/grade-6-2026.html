@@ -29,6 +29,11 @@ description: Grade 6 Selection 2026: selected problems from 2026 contests: probl
   .ct-note { font-size: 14px; color: var(--ink-soft); font-style: italic; }
   .ct-bar { margin: .6em 0 1em; display: flex; gap: 10px; flex-wrap: wrap; }
   .ct-bar button { font: inherit; font-size: 14px; padding: 5px 12px; border-radius: var(--radius); border: 1px solid var(--brand); background: var(--white); color: var(--brand); cursor: pointer; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
 </style>
 <script>
   window.MathJax = { tex: { inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [['\\[','\\]']], processEscapes: true },
@@ -57,6 +62,28 @@ description: Grade 6 Selection 2026: selected problems from 2026 contests: probl
   .ct-text mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
 </style>
 
+<style>
+  .ct-tags { display: flex; flex-wrap: wrap; gap: 5px; margin: 0 0 .55em; }
+  .ct-tg { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .03em; padding: 2px 8px; border-radius: 999px; line-height: 1.5; }
+  .ct-lv { background: #eee7dc; color: #4a3d33; }
+  .ct-df-Starter { background: #dcf1dc; color: #245c24; }
+  .ct-df-Explorer { background: #d6efec; color: #155e57; }
+  .ct-df-Challenger { background: #dce8f7; color: #1f4c80; }
+  .ct-df-Olympiad { background: #e7defa; color: #4b2a8a; }
+  .ct-df-Advanced { background: #fbe4cc; color: #8a4a0b; }
+  .ct-df-Expert { background: #f8d6cf; color: #8c2600; }
+  .ct-band { margin: 1.3em 0 .5em; font-size: 14px; color: var(--ink-soft); }
+  .ct-band .ct-tg { font-size: 13px; margin-right: .4em; }
+  .ct-legend { font-size: 14.5px; background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 10px 16px; margin: 1em 0 1.4em; }
+  .ct-legend p { margin: .35em 0; }
+  .ct-legend ul { margin: .2em 0 .4em; padding-left: 1.1em; }
+  .ct-legend li { margin: .2em 0; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
+</style>
 {% endraw %}
 <p><a href="{{ '/contests-2026' | relative_url }}">&larr; All contests 2026</a></p>
 
@@ -65,14 +92,14 @@ description: Grade 6 Selection 2026: selected problems from 2026 contests: probl
 <div class="ct-intro">
 <p>The 22 problems of the Grade 6 Selection 2026: selected problems from 2026 contests, each with our own solutions, hidden until you open them. Where a problem has a final answer, it is shown separately. Try a problem first, then check.</p><p>Selected problems for grade 6, chosen from the 2026 MIMC, SMOPS, Junior Mathematical Challenge and AMC 8 papers. Each problem names its source; the problems go from easy to hard.</p>
 </div>
-<div class="ct-credit">Problems selected from the 2026 contests named under each problem (UKMT, CEMC, MAA, MIMC, SMOPS and CLMC); they belong to their publishers. Solutions written by MCC.</div>
+<div class="ct-credit">Problems selected from the 2026 contests named under each problem (UKMT, CEMC, MAA, MATHCOUNTS, MIMC, SMOPS, CLMC and Vietnamese entrance exams); they belong to their publishers. Solutions written by MCC.</div>
 <div class="ct-bar"><button type="button" onclick="ctAll(true)">Show all answers and solutions</button><button type="button" onclick="ctAll(false)">Hide all</button></div>
 <div class="ct-toc-wrap"><div class="ct-toc-row"><a href="#p1">1</a><a href="#p2">2</a><a href="#p3">3</a><a href="#p4">4</a><a href="#p5">5</a><a href="#p6">6</a><a href="#p7">7</a><a href="#p8">8</a><a href="#p9">9</a><a href="#p10">10</a><a href="#p11">11</a><a href="#p12">12</a><a href="#p13">13</a><a href="#p14">14</a><a href="#p15">15</a><a href="#p16">16</a><a href="#p17">17</a><a href="#p18">18</a><a href="#p19">19</a><a href="#p20">20</a><a href="#p21">21</a><a href="#p22">22</a></div></div>
 
 {% raw %}
 <section class="ct-problem" id="p1">
 <h3>Problem 1</h3>
-<div class="ct-meta">Algebra &middot; LPS VI, Chapter 49: Systems of Equations and Multiple Constraints</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Algebra &middot; LPS VI, Chapter 49: Systems of Equations and Multiple Constraints &middot; Partial Totals and Cyclic Sums</div>
 <div class="ct-text"><p>Five different numbers are written in ascending order.
 The mean of the first four numbers is $5$. The mean of the last four numbers is $7$.
 What is the range of the numbers?</p><p><strong>(A)</strong>&nbsp;$2$&emsp;<strong>(B)</strong>&nbsp;$4$&emsp;<strong>(C)</strong>&nbsp;$6$&emsp;<strong>(D)</strong>&nbsp;$7$&emsp;<strong>(E)</strong>&nbsp;$8$</p></div>
@@ -90,7 +117,7 @@ The two totals share $q+r+s$; the second total has $t$ where the first has $p$. 
 </section>
 <section class="ct-problem" id="p2">
 <h3>Problem 2</h3>
-<div class="ct-meta">Geometry &middot; LPS VI, Chapter 36: Power of a Point and Circle Measurement</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Geometry &middot; LPS VI, Chapter 36: Power of a Point and Circle Measurement &middot; Sector and Arc Measurement</div>
 <div class="ct-text"><p>Squares of side length $1$, $1$, $2$, $3$, and $5$ are arranged to form the rectangle shown below. A curve is drawn by inscribing a quarter circle in each square and joining the quarter circles in order, from shortest to longest. What is the length of the curve?</p><p><strong>(A)</strong>&nbsp;$4\pi$&emsp;<strong>(B)</strong>&nbsp;$6\pi$&emsp;<strong>(C)</strong>&nbsp;$\frac{13}{2}\pi$&emsp;<strong>(D)</strong>&nbsp;$8\pi$&emsp;<strong>(E)</strong>&nbsp;$13\pi$</p><div class="ct-fig"><img style="width:279px" src="/assets/contests/2026-27/grade-6-2.svg" alt="Figure for Problem 2"></div></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(B) $6\pi$</p></div></details>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
@@ -104,7 +131,7 @@ The answer is $\boxed{\text{(B)}\ 6\pi}$.</p><p>(Check of the picture: the squar
 </section>
 <section class="ct-problem" id="p3">
 <h3>Problem 3</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VI, Chapter 42: Recursion, Paths, and Dynamic Counting</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Combinatorics &middot; LPS VI, Chapter 42: Recursion, Paths, and Dynamic Counting &middot; Fibonacci-Type Models</div>
 <div class="ct-text"><p>The land of Catania uses gold coins and silver coins. Gold coins are $1$ mm thick and silver coins are $3$ mm thick. In how many ways can Taylor make a stack of coins that is $8$ mm tall using any arrangement of gold and silver coins, assuming order matters?</p><p><strong>(A)</strong>&nbsp;$3$&emsp;<strong>(B)</strong>&nbsp;$7$&emsp;<strong>(C)</strong>&nbsp;$10$&emsp;<strong>(D)</strong>&nbsp;$13$&emsp;<strong>(E)</strong>&nbsp;$16$</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(D) $13$</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -121,7 +148,7 @@ The answer is $\boxed{\text{(D)}\ 13}$.</p>
 </section>
 <section class="ct-problem" id="p4">
 <h3>Problem 4</h3>
-<div class="ct-meta">Algebra &middot; LPS VI, Chapter 49: Systems of Equations and Multiple Constraints</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Algebra &middot; LPS VI, Chapter 49: Systems of Equations and Multiple Constraints &middot; Partial Totals and Cyclic Sums</div>
 <div class="ct-text"><p>In the figure below, each circle will be filled with a digit from $1$ to $6$. Each digit must appear exactly once. The sum of the digits in neighboring circles is shown in the box between them. What digit must be placed in the top circle?</p><p><strong>(A)</strong>&nbsp;$2$&emsp;<strong>(B)</strong>&nbsp;$3$&emsp;<strong>(C)</strong>&nbsp;$4$&emsp;<strong>(D)</strong>&nbsp;$5$&emsp;<strong>(E)</strong>&nbsp;It is impossible to fill the circles</p><div class="ct-fig"><img style="width:243px" src="/assets/contests/2026-27/grade-6-4.svg" alt="Figure for Problem 4"></div></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(D) $5$</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -135,7 +162,7 @@ If $t=5$: $5,4,6,2,3,1$, all different. So the top circle must hold $\boxed{\tex
 </section>
 <section class="ct-problem" id="p5">
 <h3>Problem 5</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VI, Chapter 47: Combinatorial Number Theory</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Combinatorics &middot; LPS VI, Chapter 47: Combinatorial Number Theory &middot; Residue-Class Counting</div>
 <div class="ct-text"><p>Five distinct integers are selected from the set $\{1, 4, 7, 10, 13, 16, 19, 22, 25, 28\}$ such that the difference between any two selected numbers is not divisible by $5$. How many different selections are possible?</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$32$</p></div></details>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
@@ -147,7 +174,7 @@ Each remainder occurs exactly twice: $\{10,25\}$, $\{1,16\}$, $\{7,22\}$, $\{13,
 </section>
 <section class="ct-problem" id="p6">
 <h3>Problem 6</h3>
-<div class="ct-meta">Algebra &middot; LPS VI, Chapter 37: Polynomials and Algebraic Identities</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Algebra &middot; LPS VI, Chapter 37: Polynomials and Algebraic Identities &middot; Special Identities</div>
 <div class="ct-text"><p>Given that
 \[A=\frac{4051\times4051}{2026\times2025}-\frac{2025\times2025}{2026\times4051}-\frac{2026\times2026}{2025\times4051}.\]
 What is the numerical value of $A$?</p></div>
@@ -171,7 +198,7 @@ Hence
 </section>
 <section class="ct-problem" id="p7">
 <h3>Problem 7</h3>
-<div class="ct-meta">Geometry &middot; LPS VI, Chapter 8: Triangle Congruence and Rigid Geometry</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Geometry &middot; LPS VI, Chapter 8: Triangle Congruence and Rigid Geometry &middot; Isosceles and Equilateral Structure</div>
 <div class="ct-text"><p>In the triangle $QPR$, $\angle QPR = 100^\circ$, $QP = QS$ and $RP = RT$.
 What is the size of $\angle TPS$?</p><p><strong>(A)</strong>&nbsp;$30^\circ$&emsp;<strong>(B)</strong>&nbsp;$35^\circ$&emsp;<strong>(C)</strong>&nbsp;$40^\circ$&emsp;<strong>(D)</strong>&nbsp;$45^\circ$&emsp;<strong>(E)</strong>&nbsp;it depends on the size of $\angle RQP$</p><div class="ct-fig"><img style="width:310px" src="/assets/contests/2026-27/grade-6-7.svg" alt="Figure for Problem 7"></div></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(C) $40^\circ$</p></div></details>
@@ -191,7 +218,7 @@ That is, $180^\circ-\frac{\beta+\gamma}{2}=100^\circ+\angle TPS$, so $180^\circ-
 </section>
 <section class="ct-problem" id="p8">
 <h3>Problem 8</h3>
-<div class="ct-meta">Number Theory &middot; LPS VI, Chapter 11: Divisors and Arithmetic Functions of a Number</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Number Theory &middot; LPS VI, Chapter 11: Divisors and Arithmetic Functions of a Number &middot; Sum and Product of Divisors</div>
 <div class="ct-text"><p>A positive integer $N$ is the product of two prime numbers. It is given that the sum of all positive divisors of $N$ is $3042$. Find the value of $N$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$2026$</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -208,7 +235,7 @@ In every pair except the first, one of the numbers is not prime (none of $506$, 
 </section>
 <section class="ct-problem" id="p9">
 <h3>Problem 9</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VI, Chapter 26: Double Counting and Combinatorial Proof</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Combinatorics &middot; LPS VI, Chapter 26: Double Counting and Combinatorial Proof &middot; Average from Total Contribution</div>
 <div class="ct-text"><p>The 2026 FIFA World Cup consists of $48$ teams divided into $12$ groups of $4$ teams each. In every group, each team plays every other team exactly once. A win earns $3$ points, a draw earns $1$ point, and a loss earns $0$ points. After all group matches have been played, exactly $k$ teams finish with $6$ points. What is the largest possible value of $k$?</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$36$</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -220,7 +247,7 @@ In every pair except the first, one of the numbers is not prime (none of $506$, 
 </section>
 <section class="ct-problem" id="p10">
 <h3>Problem 10</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VI, Chapter 6: Casework, Complement, and Constructive Counting</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Combinatorics &middot; LPS VI, Chapter 6: Casework, Complement, and Constructive Counting &middot; Exhaustive Casework</div>
 <div class="ct-text"><p>Four students are seated in a row. They chat with the people sitting next to them, then rearrange themselves so that they are no longer seated next to any of the same people. How many rearrangements are possible?</p><p><strong>(A)</strong>&nbsp;$2$&emsp;<strong>(B)</strong>&nbsp;$4$&emsp;<strong>(C)</strong>&nbsp;$9$&emsp;<strong>(D)</strong>&nbsp;$12$&emsp;<strong>(E)</strong>&nbsp;$24$</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(A) $2$</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -236,7 +263,7 @@ and both work ($4$ and $1$ were not neighbours before). The answer is $\boxed{\t
 </section>
 <section class="ct-problem" id="p11">
 <h3>Problem 11</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VI, Chapter 30: Inclusion-Exclusion and Overlapping Sets</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Combinatorics &middot; LPS VI, Chapter 30: Inclusion-Exclusion and Overlapping Sets &middot; Three-Set Overlap</div>
 <div class="ct-text"><p>A library has $100$ books in total. System records show that A, B, and C borrowed $33$, $44$, and $55$ books respectively. Among them, A and B both borrowed $29$ books; A and C both borrowed $25$ books; B and C both borrowed $36$ books.
 What is the maximum possible number of books that were never borrowed by any of the three people?</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$37$</p></div></details>
@@ -253,7 +280,7 @@ so the number never borrowed is $58-x$. We want $x$ as small as possible.</p><p>
 </section>
 <section class="ct-problem" id="p12">
 <h3>Problem 12</h3>
-<div class="ct-meta">Geometry &middot; LPS VI, Chapter 44: Area Ratios and Cevian Geometry</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Geometry &middot; LPS VI, Chapter 44: Area Ratios and Cevian Geometry &middot; Shared-Altitude Ratios</div>
 <div class="ct-text"><p>As shown in the diagram below, $ABCD$ is a convex quadrilateral where points $M$, $N$, $P$ and $Q$ lie on sides $AB$, $BC$, $CD$ and $AD$, respectively such that $\frac{AM}{MB}=\frac35$, $\frac{BN}{NC}=\frac13$, $\frac{CP}{PD}=\frac45$ and $\frac{DQ}{QA}=\frac18$.
 If the area of $ABCD$ is $45$ cm$^2$, what is the area, in cm$^2$, of hexagon $MBNPDQ$?</p><div class="ct-fig"><img style="width:244px" src="/assets/contests/2026-27/grade-6-12.svg" alt="Figure for Problem 12"></div></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$30$</p></div></details>
@@ -271,7 +298,7 @@ so the hexagon has area $45-15=\boxed{30}$ cm$^2$.</p>
 </section>
 <section class="ct-problem" id="p13">
 <h3>Problem 13</h3>
-<div class="ct-meta">Number Theory &middot; LPS VI, Chapter 31: Linear Diophantine Equations</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Number Theory &middot; LPS VI, Chapter 31: Linear Diophantine Equations &middot; Bounded Positive Solutions</div>
 <div class="ct-text"><p>Let $x$, $y$, $z$ be positive integers satisfying the equation $39x + 40y + 41z = 567$. Find the value of $29x + 30y + 31z$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$427$</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -292,7 +319,7 @@ $s=14$ gives $z-x=7$, fine since $7\le12$; $s=13$ gives $z-x=47&gt;11$; $s=15$ g
 </section>
 <section class="ct-problem" id="p14">
 <h3>Problem 14</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VI, Chapter 14: Permutations, Combinations, and Binomial Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Combinatorics &middot; LPS VI, Chapter 14: Permutations, Combinations, and Binomial Structure &middot; Permutation Structure</div>
 <div class="ct-text"><p>Four runners entered a race. We are told that at most two tied at the finish line (and were therefore given the same finishing position). How many possible finishing orders were there for the race?</p><p><strong>(A)</strong>&nbsp;$30$&emsp;<strong>(B)</strong>&nbsp;$60$&emsp;<strong>(C)</strong>&nbsp;$75$&emsp;<strong>(D)</strong>&nbsp;$81$&emsp;<strong>(E)</strong>&nbsp;$96$</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(B) $60$</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -304,7 +331,7 @@ $s=14$ gives $z-x=7$, fine since $7\le12$; $s=13$ gives $z-x=47&gt;11$; $s=15$ g
 </section>
 <section class="ct-problem" id="p15">
 <h3>Problem 15</h3>
-<div class="ct-meta">Number Theory &middot; LPS VI, Chapter 15: GCD, LCM, and Multiplicative Interaction</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Number Theory &middot; LPS VI, Chapter 15: GCD, LCM, and Multiplicative Interaction &middot; GCD Logic</div>
 <div class="ct-text"><p>Let $x, y, z, w$ be four positive integers satisfying the following conditions:</p><ul class="ct-ul"><li><p>The pairs $(x, y)$, $(y, z)$, and $(z, w)$ are not coprime;</p></li><li><p>All other pairs among these four numbers are coprime.</p></li></ul><p>Find the minimum value of $x + y + z + w$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$24$</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -319,7 +346,7 @@ These primes are all different: if $p=q$, then $p$ divides $x$ and $z$, which mu
 </section>
 <section class="ct-problem" id="p16">
 <h3>Problem 16</h3>
-<div class="ct-meta">Number Theory &middot; LPS VI, Chapter 50: Combinatorial Geometry</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Number Theory &middot; LPS VI, Chapter 50: Combinatorial Geometry &middot; Tilings, Boards, and Lattice Arrangements</div>
 <div class="ct-text"><p>What is the smallest number of rectangles, each measuring $5$ cm by $30$ cm, which can be fitted together without gaps or overlapping to form a rectangle whose side-lengths are in the ratio $4:5$?</p><p><strong>(A)</strong>&nbsp;$15$&emsp;<strong>(B)</strong>&nbsp;$30$&emsp;<strong>(C)</strong>&nbsp;$45$&emsp;<strong>(D)</strong>&nbsp;$60$&emsp;<strong>(E)</strong>&nbsp;$75$</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(B) $30$</p></div></details>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
@@ -332,7 +359,7 @@ This must be a whole number, so $3$ divides $10m^2$, so $3$ divides $m$. Hence $
 </section>
 <section class="ct-problem" id="p17">
 <h3>Problem 17</h3>
-<div class="ct-meta">Number Theory &middot; LPS VI, Chapter 21: Digits, Place Value, and Decimal Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VI scale">H</span>Number Theory &middot; LPS VI, Chapter 21: Digits, Place Value, and Decimal Structure &middot; Place-Value Decomposition</div>
 <div class="ct-text"><p>Three four-digit positive integers are written on a board. If every digit $2$ written in the three numbers is replaced with $3$, then the sum of the resulting numbers is $15301$. If every digit $4$ in the three original numbers is replaced with $7$, then the sum of the resulting numbers is $16176$. What is the sum of the three original numbers?</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$15270$</p></div></details>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
@@ -349,7 +376,7 @@ where each bracket is between $-3$ and $9$.</p><p><em>Units.</em> $3b_0-a_0$ mus
 </section>
 <section class="ct-problem" id="p18">
 <h3>Problem 18</h3>
-<div class="ct-meta">Geometry &middot; LPS VI, Chapter 32: Area by Measurement and Decomposition</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VI scale">H</span>Geometry &middot; LPS VI, Chapter 32: Area by Measurement and Decomposition &middot; Additive and Subtractive Area</div>
 <div class="ct-text"><p>As shown in the diagram below, the area of rectangle $ABCD$ is $408$ cm$^2$. Points $M$ and $N$ lie on side $CD$, such that $DN : NM : MC = 2 : 3 : 1$. Points $P$ and $Q$ are the midpoints of sides $BC$ and $AD$, respectively. If the areas of the four shaded regions are $a$, $b$, $c$ and $d$ cm$^2$, respectively, what is the value of $(a + d) - (b + c)$?</p><div class="ct-fig"><img style="width:252px" src="/assets/contests/2026-27/grade-6-18.svg" alt="Figure for Problem 18"></div></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$17$</p></div></details>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
@@ -366,7 +393,7 @@ so $[AMP]=xy\big(1-\frac{10}{24}-\frac1{24}-\frac6{24}\big)=\frac{7xy}{24}=119$.
 </section>
 <section class="ct-problem" id="p19">
 <h3>Problem 19</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VI, Chapter 6: Casework, Complement, and Constructive Counting</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VI scale">H</span>Combinatorics &middot; LPS VI, Chapter 6: Casework, Complement, and Constructive Counting &middot; Constructive Counting</div>
 <div class="ct-text"><p>Place the digits $1, 2, 3, 4, 5, 6, 7, 8, 9$ into each of the nine squares shown in the diagram below, using each digit exactly once.</p><p>The digit in each shaded square must be at least $3$ greater than the digit in every square sharing a side with it.
 For example, if a shaded square contains the digit $9$, all squares sharing a side with it may contain any of the digits $1$, $2$, $3$, $4$, $5$ or $6$ but not $7$ or $8$.
 In how many ways can the digits be placed in the diagram?</p><div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/grade-6-19.svg" alt="Figure for Problem 19"></div></div>
@@ -380,7 +407,7 @@ In how many ways can the digits be placed in the diagram?</p><div class="ct-fig"
 </section>
 <section class="ct-problem" id="p20">
 <h3>Problem 20</h3>
-<div class="ct-meta">Number Theory &middot; LPS VI, Chapter 19: Modular Arithmetic and Remainder Tracking</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VI scale">H</span>Number Theory &middot; LPS VI, Chapter 19: Modular Arithmetic and Remainder Tracking &middot; Strategic Residues</div>
 <div class="ct-text"><p>For any positive integer $m$, $n$, define $r(m, n)$ as the remainder of $m \div n$ (for example, $r(8, 3) = 2$), then the smallest positive integer solution of $m$ that satisfies the equation
 \[r(m, 1) + r(m, 2) + r(m, 3) + \cdots + r(m, 10) = 4\]
 is $\underline{\qquad\qquad}$.</p></div>
@@ -392,7 +419,7 @@ is $\underline{\qquad\qquad}$.</p></div>
 </section>
 <section class="ct-problem" id="p21">
 <h3>Problem 21</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VI, Chapter 10: Logical Deduction and Constraint Puzzles</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VI scale">H</span>Combinatorics &middot; LPS VI, Chapter 10: Logical Deduction and Constraint Puzzles &middot; Constraint Satisfaction</div>
 <div class="ct-text"><p>A, B, and C are playing table tennis. In each game, only two players compete. After each game, the loser leaves and is replaced by the third player who was not playing.
 At a certain moment, it is known that A has played $9$ games in total and B has played $6$ games in total. What is the maximum possible number of games that C could have played?</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$11$</p></div></details>
@@ -407,7 +434,7 @@ The player who sits out a game plays in the next one. So nobody sits out two gam
 </section>
 <section class="ct-problem" id="p22">
 <h3>Problem 22</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VI, Chapter 10: Logical Deduction and Constraint Puzzles</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VI scale">H</span>Combinatorics &middot; LPS VI, Chapter 10: Logical Deduction and Constraint Puzzles &middot; Truth and Lies</div>
 <div class="ct-text"><p>At a party, there are $200$ people, each of whom is either a liar (a person who always tells a lie) or a truth teller (a person who always tells the truth). During the party, some of them shake hands with each other. However, the room is too dark, so it is impossible to determine which pairs of people shook hands.
 After the party, each person was asked:</p><div class="ct-center"><p>&ldquo;How many truth tellers did you shake hands with?&rdquo;</p></div><p>The answer the $n$th person gives is $n-1$, where $n = 1, 2, 3, \ldots, 200$.
 How many liars were at the party?</p></div>

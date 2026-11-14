@@ -29,6 +29,11 @@ description: India STEMS Mathematics 2026, Category A: problems with answers and
   .ct-note { font-size: 14px; color: var(--ink-soft); font-style: italic; }
   .ct-bar { margin: .6em 0 1em; display: flex; gap: 10px; flex-wrap: wrap; }
   .ct-bar button { font: inherit; font-size: 14px; padding: 5px 12px; border-radius: var(--radius); border: 1px solid var(--brand); background: var(--white); color: var(--brand); cursor: pointer; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
 </style>
 <script>
   window.MathJax = { tex: { inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [['\\[','\\]']], processEscapes: true },
@@ -57,6 +62,28 @@ description: India STEMS Mathematics 2026, Category A: problems with answers and
   .ct-text mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
 </style>
 
+<style>
+  .ct-tags { display: flex; flex-wrap: wrap; gap: 5px; margin: 0 0 .55em; }
+  .ct-tg { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .03em; padding: 2px 8px; border-radius: 999px; line-height: 1.5; }
+  .ct-lv { background: #eee7dc; color: #4a3d33; }
+  .ct-df-Starter { background: #dcf1dc; color: #245c24; }
+  .ct-df-Explorer { background: #d6efec; color: #155e57; }
+  .ct-df-Challenger { background: #dce8f7; color: #1f4c80; }
+  .ct-df-Olympiad { background: #e7defa; color: #4b2a8a; }
+  .ct-df-Advanced { background: #fbe4cc; color: #8a4a0b; }
+  .ct-df-Expert { background: #f8d6cf; color: #8c2600; }
+  .ct-band { margin: 1.3em 0 .5em; font-size: 14px; color: var(--ink-soft); }
+  .ct-band .ct-tg { font-size: 13px; margin-right: .4em; }
+  .ct-legend { font-size: 14.5px; background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 10px 16px; margin: 1em 0 1.4em; }
+  .ct-legend p { margin: .35em 0; }
+  .ct-legend ul { margin: .2em 0 .4em; padding-left: 1.1em; }
+  .ct-legend li { margin: .2em 0; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
+</style>
 {% endraw %}
 <p><a href="{{ '/contests-2026' | relative_url }}">&larr; All contests 2026</a></p>
 
@@ -73,7 +100,7 @@ description: India STEMS Mathematics 2026, Category A: problems with answers and
 <h2 class="ct-group" id="objectives">Objectives</h2>
 <section class="ct-problem" id="p1">
 <h3>Problem 1</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 2: Fundamental Counting and Structured Enumeration</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 2: Fundamental Counting and Structured Enumeration &middot; Constraint-Based Enumeration</div>
 <div class="ct-text"><p>How many valid equations (must only contain one equality symbol) of length exactly 6 can be made with symbols from the set $\{1,2,3,4,5,6,7,8,9,\times,+,-,\div,=\}$? (For example $5+6=11$ is valid but $6+7=12$ is not valid.) Digits written next to each other form one number, and the symbols $+$, $-$, $\times$, $\div$ are used only between two numbers.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$344$</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -91,7 +118,7 @@ where $\overline{AB}$ is the sum or the product. These are $4$ different strings
 </section>
 <section class="ct-problem" id="p2">
 <h3>Problem 2</h3>
-<div class="ct-meta">Algebra &middot; LPS VII, Chapter 42: Polynomial Reconstruction and Interpolation</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Algebra &middot; LPS VII, Chapter 42: Polynomial Reconstruction and Interpolation &middot; Interpolation from Data Points</div>
 <div class="ct-text"><p>Let $P(x)$ be a polynomial with integer coefficients and $\deg(P)\le 2027$ such that $P(n)\equiv 3^n\pmod{2029}$ for $n=1,2,\dots,2028$. Find the integer $r$ with $0\le r&lt;2029$ such that $P(0)\equiv r\pmod{2029}$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$r=0$</p></div></details>
 <details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
@@ -117,7 +144,7 @@ Hence $r=\boxed{0}$.</p>
 </section>
 <section class="ct-problem" id="p3">
 <h3>Problem 3</h3>
-<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 21: Arithmetic Functions and Multiplicative Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 21: Arithmetic Functions and Multiplicative Structure &middot; Function Equations on Integers</div>
 <div class="ct-text"><p>Find all functions $f:\mathbb{N}\to\mathbb{N}$ satisfying
 \[f(ab)=\frac{\gcd\bigl(f(a)+f(b),\,f(a)f(b)\bigr)}{\gcd\bigl(f(a),f(b)\bigr)}\]
 for all natural numbers $a$ and $b$.</p></div>
@@ -132,7 +159,7 @@ Let $Q$ be the set of primes in $S$. By induction on the number of prime factors
 </section>
 <section class="ct-problem" id="p4">
 <h3>Problem 4</h3>
-<div class="ct-meta">Geometry &middot; LPS VII, Chapter 19: Triangle Centers and Classical Triangle Geometry</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 19: Triangle Centers and Classical Triangle Geometry &middot; Centroid, Incenter, Circumcenter, and Orthocenter</div>
 <div class="ct-text"><p>$ABC$ is an acute triangle with $AC=5$, $BC=10$ and $AB&gt;AC$. Orthocentre of $ABC$ is $H$. $BH$ and $CH$ intersects circumcircle $ABC$ at $Q$ and $R$ respectively. $H$-median of triangle $BHC$ intersects circumcircle of $ABC$ at $K$ where $K$ and $A$ are on opposite side of $BC$. $L$ is a point on segment $BC$ such that $BD=CL$ where $D$ is foot of perpendicular from $A$ to $BC$. Bisector of $\angle AQB$ and $BC$ intersect at $Y$. If $A,K,L,Y$ are concyclic and
 \[AB^2=\frac{a+b\sqrt{c}}{d}\]
 where $a,b,c,d$ are positive integers with $\gcd(a,b,d)=1$ and $c$ square free. Compute $a+b+c+d$.</p></div>
@@ -162,7 +189,7 @@ and $a+b+c+d=75+25+33+2=\boxed{135}$.</p>
 </section>
 <section class="ct-problem" id="p5">
 <h3>Problem 5</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 27: Bijections and Structural Equivalence</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 27: Bijections and Structural Equivalence &middot; Encoding and Representation</div>
 <div class="ct-text"><p>$\text{reverse-}n$ on a permutation of $\{1,2,\dots,mn\}$ is defined as dividing the set into $m$ consecutive blocks of length $n$ and reversing order of the blocks keeping order of elements in the same block unchanged. For example $\text{reverse-}2$ on $1,2,3,4,5,6$ gives $5,6,3,4,1,2$. For any prime $p$, let $f(p)$ be the number of permutations that can be obtained by starting with $1,2,\dots,p^{10}$ and then applying operations of the form $\text{reverse-}p^i$ where $0\leqslant i\leqslant 9$, finitely many times in any order. Compute $f(23)$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$1024$</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -177,7 +204,7 @@ Let $c_j$ denote the map that replaces only the digit $d_j$ by $p-1-d_j$. These 
 </section>
 <section class="ct-problem" id="p6">
 <h3>Problem 6</h3>
-<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 21: Arithmetic Functions and Multiplicative Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 21: Arithmetic Functions and Multiplicative Structure &middot; Divisor and Sum Functions</div>
 <div class="ct-text"><p>For any $n\in\mathbb{N}$, let $S_n$ denote the set of all natural numbers of the form $p_i^r+1$ where $p_i$ is a prime, $p_i\mid n$, and $r\in\mathbb{N}$ with $r&lt;p_i-1$. For any square free number $n$, $f(n)$ is the maximum number which is divisible by $n$ and has $n$ divisors. Denote $T_n=\sum_{m\mid n}f(m)$. Find sum of all square free $n$, where all prime divisors of $n$ are greater than $1$ and less than $15$, and no element of $S_n$ is proper divisor of $T_n$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$17$ (with $n=1$ counted; $16$ if $n=1$ is excluded)</p></div></details>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
@@ -189,7 +216,7 @@ Let $c_j$ denote the map that replaces only the digit $d_j$ by $p-1-d_j$. These 
 <h2 class="ct-group" id="subjectives">Subjectives</h2>
 <section class="ct-problem" id="p7">
 <h3>Problem 1</h3>
-<div class="ct-meta">Algebra &middot; LPS VII, Chapter 1: Inequalities: Core Classical Methods</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Algebra &middot; LPS VII, Chapter 1: Inequalities: Core Classical Methods &middot; Elementary Bounding and Local Estimates</div>
 <div class="ct-text"><p>A finite sequence $(a_i)_{i=1}^{n}$ of positive integers is called Verstappian if it satisfies the following two conditions:</p><ul class="ct-parts"><li><p><span class="ct-lbl">1.</span> $1\le a_1&lt;a_2&lt;\dots&lt;a_n$,</p></li><li><p><span class="ct-lbl">2.</span> $\displaystyle\sum_{i=1}^{n}\frac{a_i^{\tau(i)}}{i+1}\le 2\sum_{i=1}^{n}\frac{\tau(i)}{i+1}a_i$,</p></li></ul><p>where $\tau(i)$ denotes the number of positive divisors of $i$.</p><p>Find all such sequences that are Verstappian.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>all one-term sequences $(a_1)$; the two-term sequences $(1,2)$, $(1,3)$, $(1,4)$, $(2,3)$, $(2,4)$, $(3,4)$, $(4,5)$; the three-term sequences $(1,2,3)$, $(1,2,4)$, $(1,2,5)$, $(1,3,4)$, $(1,3,5)$, $(2,3,4)$, $(2,3,5)$, $(3,4,5)$; none with four or more terms</p></div></details>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
@@ -202,7 +229,7 @@ Write $x=a_1\ge1$; since the sequence is strictly increasing, $a_i\ge x+i-1$.</p
 </section>
 <section class="ct-problem" id="p8">
 <h3>Problem 2</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 52: Advanced Combinatorial Structure and Hybrid Methods</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 52: Advanced Combinatorial Structure and Hybrid Methods &middot; Combinatorics with Algebraic Interaction</div>
 <div class="ct-text"><p>Let $n$ be a fixed integer $(n&gt;2026)$. Professor Calculus has a secret set $\mathcal{S}$ consisting of $m$ distinct non-identity permutations of the numbers $1,2,\dots,n$. He wants to perform a magic trick with Tintin. The trick proceeds as follows:</p><ul class="ct-ul"><li><p>Tintin chooses any permutation $\sigma$ from the set $\mathcal{S}$ and any positive integer $k$, such that $\sigma^k$ is not the identity permutation.</p></li><li><p>Tintin computes the function $g(x)=\sigma^k(x)$ for all $x\in 1,\dots,n$.</p></li><li><p>Professor Calculus does not know $\sigma$ or $k$, but he is allowed to ask Tintin for the value of $g(x)$ for $2$ specific values of $x$ of his choice (at the same time, before knowing any values of $g$).</p></li></ul><p>Professor Calculus claims that no matter which $\sigma\in\mathcal{S}$ and which $k$ Tintin picks, he can always identify $\sigma$ with certainty after his questions. Find, in terms of $n$ the maximum possible size $m$ of Professor Calculus' set $\mathcal{S}$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$m=n^2-2n+2$</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -222,7 +249,7 @@ the set of answers Tintin may give for $\sigma$. The trick works exactly when th
 </section>
 <section class="ct-problem" id="p9">
 <h3>Problem 3</h3>
-<div class="ct-meta">Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure &middot; Power of a Point</div>
 <div class="ct-text"><p>Let $ABC$ be an acute scalene triangle with orthocenter $H$. Let $\Omega$ be the circumcircle of $ABC$. Let the tangents to $\Omega$ at $B$, $C$ intersect at $T$. Let $A'$ be the diametrically opposite point to $A$ in $\Omega$ and let $AA'$ intersect the line through $T$ parallel to $BC$ at $P$. Let the circle with diameter $AH$ intersect $\Omega$ again at $X$ and let $PX$ intersect $\Omega$ again at $Q$. Prove that $A',T,P,Q$ are concyclic.</p></div>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Poles, polars and power of a point)</h4>
@@ -244,7 +271,7 @@ whose roots $x=0$ and $x=-\frac{(1+d^2)p}{d(q-d)}$ are exactly $T$ and $P$. Henc
 </section>
 <section class="ct-problem" id="p10">
 <h3>Problem 4</h3>
-<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 29: Valuations and Lifting the Exponent</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Number Theory &middot; LPS VII, Chapter 29: Valuations and Lifting the Exponent &middot; Comparing Valuations Across Terms</div>
 <div class="ct-text"><p>Let $\mathcal{P}(x)=\displaystyle\sum_{\ell=0}^{2^{2025}}a_{2\ell+1}x^{2\ell+1}$ be a polynomial of degree $2^{2026}+1$ with integer coefficients, such that
 \[2\mathcal{P}(x)=\left(x+\sqrt{x^2-1}\right)^{2^{2026}+1}+\left(x-\sqrt{x^2-1}\right)^{2^{2026}+1}\]
 $\forall x\in\mathbb{R}$.</p><p>Prove that $8\nmid a_1$ and $v_2(a_{2\ell+1})\ge 2026$ for all integers $\ell$ with $1&lt;\ell\le 2^{2025}$, where $v_2(n)$ is the largest integer $k$ such that $2^k$ divides $n$.</p></div>
@@ -275,7 +302,7 @@ which is odd, so $8\nmid a_1$. This proves both claims.</p>
 </section>
 <section class="ct-problem" id="p11">
 <h3>Problem 5</h3>
-<div class="ct-meta">Geometry &middot; LPS VII, Chapter 48: Inversion and Circle-Preserving Transformation</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 48: Inversion and Circle-Preserving Transformation &middot; Inversion with Power and Radical Structure</div>
 <div class="ct-text"><p>$ABC$ is an acute triangle with orthocentre $H$, circumcentre $O$ and $AB&lt;AC$. $F$ is the midpoint of $BC$, and $E_b$, $E_c$ are the feet of the altitudes from $B$ and $C$. The circle with diameter $AH$ intersects $AF$ at $G\ne A$, and $G\ne F$. Prove that the second intersection of the circumcircle of triangle $FGO$ and line $AO$ (which is $O$ itself if the line $AO$ is tangent to this circle) is the reflection of $A$ in the line $E_bE_c$.</p></div>
 <details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Inversion at A)</h4>
@@ -307,7 +334,7 @@ One root is $\lambda=1$ (the point $O$), and the product of the roots is $\frac{
 </section>
 <section class="ct-problem" id="p12">
 <h3>Problem 6</h3>
-<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 33: Residues, Quadratic Structure, and Higher Congruences</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Number Theory &middot; LPS VII, Chapter 33: Residues, Quadratic Structure, and Higher Congruences &middot; Higher Power Residues</div>
 <div class="ct-text"><p>Determine the minimal integer $n\ge 1$ for which there exist integer polynomials $f_1,f_2,\dots,f_n$ such that $\displaystyle\sum_{j=1}^{n}(f_j(x))^3-(x^4-10x^2+1)$ has all its coefficients divisible by $13$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$n=3$</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">

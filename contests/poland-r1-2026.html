@@ -29,6 +29,11 @@ description: Polish Mathematical Olympiad 2026, First Round: problems with answe
   .ct-note { font-size: 14px; color: var(--ink-soft); font-style: italic; }
   .ct-bar { margin: .6em 0 1em; display: flex; gap: 10px; flex-wrap: wrap; }
   .ct-bar button { font: inherit; font-size: 14px; padding: 5px 12px; border-radius: var(--radius); border: 1px solid var(--brand); background: var(--white); color: var(--brand); cursor: pointer; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
 </style>
 <script>
   window.MathJax = { tex: { inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [['\\[','\\]']], processEscapes: true },
@@ -57,6 +62,28 @@ description: Polish Mathematical Olympiad 2026, First Round: problems with answe
   .ct-text mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
 </style>
 
+<style>
+  .ct-tags { display: flex; flex-wrap: wrap; gap: 5px; margin: 0 0 .55em; }
+  .ct-tg { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .03em; padding: 2px 8px; border-radius: 999px; line-height: 1.5; }
+  .ct-lv { background: #eee7dc; color: #4a3d33; }
+  .ct-df-Starter { background: #dcf1dc; color: #245c24; }
+  .ct-df-Explorer { background: #d6efec; color: #155e57; }
+  .ct-df-Challenger { background: #dce8f7; color: #1f4c80; }
+  .ct-df-Olympiad { background: #e7defa; color: #4b2a8a; }
+  .ct-df-Advanced { background: #fbe4cc; color: #8a4a0b; }
+  .ct-df-Expert { background: #f8d6cf; color: #8c2600; }
+  .ct-band { margin: 1.3em 0 .5em; font-size: 14px; color: var(--ink-soft); }
+  .ct-band .ct-tg { font-size: 13px; margin-right: .4em; }
+  .ct-legend { font-size: 14.5px; background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 10px 16px; margin: 1em 0 1.4em; }
+  .ct-legend p { margin: .35em 0; }
+  .ct-legend ul { margin: .2em 0 .4em; padding-left: 1.1em; }
+  .ct-legend li { margin: .2em 0; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
+</style>
 {% endraw %}
 <p><a href="{{ '/contests-2026' | relative_url }}">&larr; All contests 2026</a></p>
 
@@ -72,7 +99,7 @@ description: Polish Mathematical Olympiad 2026, First Round: problems with answe
 {% raw %}
 <section class="ct-problem" id="p1">
 <h3>Problem 1</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 17: Sequences, Recurrences, and Discrete Dynamics</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 17: Sequences, Recurrences, and Discrete Dynamics &middot; Closed Forms and Hidden Structure</div>
 <div class="ct-text"><p>Piotrek is playing with pebbles. He starts with an empty stack. In $i$-th move, Piotrek removes $i$ pebbles from the stack if he can. If he can't, he adds $i$ pebbles to the stack. For example, after first $5$ moves, Piotrek has $1,3,0,4,9$ pebbles respectively. Find all positive integers $n$ such that Piotrek has $0$ pebbles after $n$ moves.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$n=\dfrac{3^k-3}{2}$ with $k\ge2$, i.e. $n=3,12,39,120,363,\dots$</p></div></details>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
@@ -89,7 +116,7 @@ $n_{k+1}+\frac32=3\bigl(n_k+\frac32\bigr)$, we get $n_k=\frac32(3^k-1)=\frac{3^{
 </section>
 <section class="ct-problem" id="p2">
 <h3>Problem 2</h3>
-<div class="ct-meta">Geometry &middot; LPS VII, Chapter 3: Foundational Angle and Configuration Chasing</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 3: Foundational Angle and Configuration Chasing &middot; Cyclic Quadrilateral Recognition</div>
 <div class="ct-text"><p>Let $I$ be the incenter of an acute triangle $ABC$. Circle $o$ passes through $I$ and is tangent to $BC$ at $C$. Ray $BI$ meets $o$ again at $D\ne I$. Ray $BA$ meets the circumcircle of $ADI$ again at $E\ne A$, which lies outside the segment $AB$. Prove that the intersection of lines $DE$ and $AI$ lies on $o$.</p></div>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
 <h4>Solution 1 (A directed angle chase)</h4>
@@ -127,7 +154,7 @@ by (1), so $\lambda'=\lambda$: the intersection $P$ of $DE$ and $AI$ lies on $o$
 </section>
 <section class="ct-problem" id="p3">
 <h3>Problem 3</h3>
-<div class="ct-meta">Algebra &middot; LPS VII, Chapter 1: Inequalities: Core Classical Methods</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Algebra &middot; LPS VII, Chapter 1: Inequalities: Core Classical Methods &middot; Elementary Bounding and Local Estimates</div>
 <div class="ct-text"><p>Positive integer $n$ and real numbers $x_1,x_2,\dots,x_{2n+1}$ are given. Assume that $x_i+x_{i+1}\ge 0$ for $i=1,2,\dots,2n+1$, where $x_{2n+2}=x_1$. Prove that
 \[\sum_{i=1}^{2n+1}|x_i|\le(2n+1)\sum_{i=1}^{2n+1}x_i.\]</p></div>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -151,7 +178,7 @@ and $\sum|x_i|=2n+1$.</p>
 </section>
 <section class="ct-problem" id="p4">
 <h3>Problem 4</h3>
-<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 25: Diophantine Equations: Factorization and Algebraic Methods</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 25: Diophantine Equations: Factorization and Algebraic Methods &middot; Factorization-Based Solutions</div>
 <div class="ct-text"><p>Positive integers $a,b$ are given. Assume that $a^2+ab$ is a product of two consecutive integers. Prove that if $b&gt;1$, then
 \[b\ge 1+\sqrt{4a+1}\]
 and find all $a,b$ for which equality occurs.</p></div>
@@ -180,7 +207,7 @@ hypothesis: $a^2+ab=(m^2-1)m^2$. So equality occurs exactly for $\boxed{(a,b)=(m
 </section>
 <section class="ct-problem" id="p5">
 <h3>Problem 5</h3>
-<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 8: Modular Arithmetic and Congruence Methods</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 8: Modular Arithmetic and Congruence Methods &middot; Modular Equations and Solutions</div>
 <div class="ct-text"><p>Find all positive integers $k,n$ such that
 \[3^k+n^3+6=\prod_{i=k}^{k+n-1}i.\]</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$(k,n)=(3,3)$</p></div></details>
@@ -194,7 +221,7 @@ So for $k\ge5$ the left side $3^k+33$ is larger than the right side.</p><p>Hence
 </section>
 <section class="ct-problem" id="p6">
 <h3>Problem 6</h3>
-<div class="ct-meta">Algebra &middot; LPS VII, Chapter 18: Invariants and Monovariants</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Algebra &middot; LPS VII, Chapter 18: Invariants and Monovariants &middot; Monovariants and Directional Change</div>
 <div class="ct-text"><p>A sequence of $2025$ real numbers with sum $0$ is given. We will modify the sequence using the following procedure: Let $A$ be the number of positive terms in this sequence, $B$ be the number of negative terms in this sequence and let $S$ be the sum of the positive terms. From every positive term, we subtract $\frac{S}{A}$ and we add $\frac{S}{B}$ to every negative term. Assume that after every application of this procedure, at least one term of the sequence is nonzero. Prove that after a finite number of such procedures, absolute values of all the terms will be smaller than $\frac{1}{2025}$.</p></div>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
 <h4>Solution 1 (The sum of squares shrinks geometrically)</h4>
@@ -222,7 +249,7 @@ this bound is below $\frac1N=\frac1{2025}$, and then all terms have absolute val
 </section>
 <section class="ct-problem" id="p7">
 <h3>Problem 7</h3>
-<div class="ct-meta">Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure &middot; Tangency and Tangent Geometry</div>
 <div class="ct-text"><p>Let $AD$ be an altitude in an acute triangle $ABC$. Points $E,F$ are the projections of $D$ onto lines $AB$ and $AC$ respectively. Points $K,L,M$ are the midpoints of $BD,BC,DC$ respectively. Prove that the lines $EK,AL,FM$ are concurrent.</p></div>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Tangents and the symmedian)</h4>
@@ -250,7 +277,7 @@ $C,F,M$, fixes $A,D,L$, and turns the formula for $T$ into itself; so the same i
 </section>
 <section class="ct-problem" id="p8">
 <h3>Problem 8</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 10: Double Counting and Counting Identities</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 10: Double Counting and Counting Identities &middot; Direct Double Counting</div>
 <div class="ct-text"><p>Positive integer $n$ is given. We will call every injective function $f:\{1,\dots,n\}\to\{1,\dots,n\}$ a permutation. Pairwise distinct permutations $f_1,\dots,f_N$ are given. Assume that for every pair of indices (not necessarily distinct) $i,j$, there exists $k$ such that $f_i\circ f_j=f_k$. For $1\le i&lt;j\le n$ let $Z(i,j)$ denote the number of indices $l$ such that $f_l(i)&gt;f_l(j)$. Prove that
 \[\frac{N}{2}\cdot\sum_{1\le i&lt;j\le n}Z(i,j)=\sum_{1\le i&lt;j\le n}Z(i,j)^2.\]</p></div>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -281,7 +308,7 @@ $+1$, so $(Tv_0)(i,j)=1-\frac{2Z(i,j)}N$ and $(Ev_0)(i,j)=\frac{2Z(i,j)}N$. Then
 </section>
 <section class="ct-problem" id="p9">
 <h3>Problem 9</h3>
-<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 49: Combinatorial Number Theory and Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 49: Combinatorial Number Theory and Structure &middot; Additive Structure and Sums of Integers</div>
 <div class="ct-text"><p>A sequence $a_1,a_2,\dots$ of positive integers is given. Assume that $\gcd(a_2-a_1,a_3-a_2,\dots)=1$. Prove that there exists a positive integer $N$ such that the sum of some $N$ elements (not necessarily distinct) of the sequence is equal to the sum of some $N+1$ elements (not necessarily distinct) of the sequence.</p></div>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
 <h4>Solution (An integer combination with coefficient sum $1$)</h4>
@@ -298,7 +325,7 @@ are elements of the sequence with equal sums, as required.</p>
 </section>
 <section class="ct-problem" id="p10">
 <h3>Problem 10</h3>
-<div class="ct-meta">Geometry &middot; LPS VII, Chapter 51: Spiral Similarity and Advanced Transformational Geometry</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 51: Spiral Similarity and Advanced Transformational Geometry &middot; Spiral Similarity Centers</div>
 <div class="ct-text"><p>A cyclic convex quadrilateral $ABCD$ is given. Rays $AB$ and $DC$ meet at $X$. Rays $AD$ and $BC$ meet at $Y$. Let $I,J$ be the incenters of $BCX$ and $CDY$ respectively. Circumcircles of $BCX$ and $CDY$ meet again at $Z\ne C$. Assume that $CX=CY$. Prove that $ZI=ZJ$.</p></div>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Equal circles and a rotation about $Z$)</h4>
@@ -343,7 +370,7 @@ perpendicular bisector of $IJ$, and $ZI=ZJ$.</p>
 </section>
 <section class="ct-problem" id="p11">
 <h3>Problem 11</h3>
-<div class="ct-meta">Algebra &middot; LPS VII, Chapter 38: Inequalities: Convexity and Functional Methods</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Algebra &middot; LPS VII, Chapter 38: Inequalities: Convexity and Functional Methods &middot; Jensen and Convexity</div>
 <div class="ct-text"><p>A sequence of positive real numbers $a_0,a_1,\dots,a_n$ satisfies $a_k^2\ge a_{k-1}a_{k+1}$ for $1\le k\le n-1$. Assume that the sequence $b_0,b_1,\dots,b_n$ is geometric, has positive terms and satisfies
 \[\sum_{k=0}^{n}a_k=\sum_{k=0}^{n}b_k\quad\text{and}\quad\sum_{k=0}^{n}ka_k=\sum_{k=0}^{n}kb_k.\]
 Prove that
@@ -379,7 +406,7 @@ that is, $\sum k^2d_k&lt;0$. So $\sum k^2a_k\le\sum k^2b_k$, with equality only 
 </section>
 <section class="ct-problem" id="p12">
 <h3>Problem 12</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 49: Combinatorial Number Theory and Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 49: Combinatorial Number Theory and Structure &middot; Additive Structure and Sums of Integers</div>
 <div class="ct-text"><p>If $X,Y$ are subsets of $\mathbb{Z}$, by $X+Y$ we will denote the set of all numbers of the type $x+y$ where $x\in X$ and $y\in Y$. In particular $X+Y+Z=(X+Y)+Z$.
 Non-empty and finite subsets $A,B,C$ of $\mathbb{Z}$ are given. Prove that
 \[2|A+B+C|+1\ge|A+B|+|B+C|+|C+A|.\]</p></div>

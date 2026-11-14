@@ -29,6 +29,11 @@ description: Grade 5 Selection 2026: selected problems from 2026 contests: probl
   .ct-note { font-size: 14px; color: var(--ink-soft); font-style: italic; }
   .ct-bar { margin: .6em 0 1em; display: flex; gap: 10px; flex-wrap: wrap; }
   .ct-bar button { font: inherit; font-size: 14px; padding: 5px 12px; border-radius: var(--radius); border: 1px solid var(--brand); background: var(--white); color: var(--brand); cursor: pointer; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
 </style>
 <script>
   window.MathJax = { tex: { inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [['\\[','\\]']], processEscapes: true },
@@ -57,6 +62,28 @@ description: Grade 5 Selection 2026: selected problems from 2026 contests: probl
   .ct-text mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
 </style>
 
+<style>
+  .ct-tags { display: flex; flex-wrap: wrap; gap: 5px; margin: 0 0 .55em; }
+  .ct-tg { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .03em; padding: 2px 8px; border-radius: 999px; line-height: 1.5; }
+  .ct-lv { background: #eee7dc; color: #4a3d33; }
+  .ct-df-Starter { background: #dcf1dc; color: #245c24; }
+  .ct-df-Explorer { background: #d6efec; color: #155e57; }
+  .ct-df-Challenger { background: #dce8f7; color: #1f4c80; }
+  .ct-df-Olympiad { background: #e7defa; color: #4b2a8a; }
+  .ct-df-Advanced { background: #fbe4cc; color: #8a4a0b; }
+  .ct-df-Expert { background: #f8d6cf; color: #8c2600; }
+  .ct-band { margin: 1.3em 0 .5em; font-size: 14px; color: var(--ink-soft); }
+  .ct-band .ct-tg { font-size: 13px; margin-right: .4em; }
+  .ct-legend { font-size: 14.5px; background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 10px 16px; margin: 1em 0 1.4em; }
+  .ct-legend p { margin: .35em 0; }
+  .ct-legend ul { margin: .2em 0 .4em; padding-left: 1.1em; }
+  .ct-legend li { margin: .2em 0; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
+</style>
 {% endraw %}
 <p><a href="{{ '/contests-2026' | relative_url }}">&larr; All contests 2026</a></p>
 
@@ -65,14 +92,14 @@ description: Grade 5 Selection 2026: selected problems from 2026 contests: probl
 <div class="ct-intro">
 <p>The 17 problems of the Grade 5 Selection 2026: selected problems from 2026 contests, each with our own solutions, hidden until you open them. Where a problem has a final answer, it is shown separately. Try a problem first, then check.</p><p>Selected problems for grade 5, chosen from the 2026 Junior Mathematical Challenge, MIMC, SMOPS, Gauss and Primary Kangaroo papers. Each problem names its source; the problems go from easy to hard.</p>
 </div>
-<div class="ct-credit">Problems selected from the 2026 contests named under each problem (UKMT, CEMC, MAA, MIMC, SMOPS and CLMC); they belong to their publishers. Solutions written by MCC.</div>
+<div class="ct-credit">Problems selected from the 2026 contests named under each problem (UKMT, CEMC, MAA, MATHCOUNTS, MIMC, SMOPS, CLMC and Vietnamese entrance exams); they belong to their publishers. Solutions written by MCC.</div>
 <div class="ct-bar"><button type="button" onclick="ctAll(true)">Show all answers and solutions</button><button type="button" onclick="ctAll(false)">Hide all</button></div>
 <div class="ct-toc-wrap"><div class="ct-toc-row"><a href="#p1">1</a><a href="#p2">2</a><a href="#p3">3</a><a href="#p4">4</a><a href="#p5">5</a><a href="#p6">6</a><a href="#p7">7</a><a href="#p8">8</a><a href="#p9">9</a><a href="#p10">10</a><a href="#p11">11</a><a href="#p12">12</a><a href="#p13">13</a><a href="#p14">14</a><a href="#p15">15</a><a href="#p16">16</a><a href="#p17">17</a></div></div>
 
 {% raw %}
 <section class="ct-problem" id="p1">
 <h3>Problem 1</h3>
-<div class="ct-meta">Number Theory &middot; LPS VI, Chapter 18: Parity, Invariants, and Monovariants</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Number Theory &middot; LPS VI, Chapter 18: Parity, Invariants, and Monovariants &middot; Parity Arguments</div>
 <div class="ct-text"><p>Sam is asked to write $2026$ as the sum of a list of five different primes. How many possibilities are there for the smallest prime in Sam's list?</p><p><strong>(A)</strong>&nbsp;one&emsp;<strong>(B)</strong>&nbsp;two&emsp;<strong>(C)</strong>&nbsp;three&emsp;<strong>(D)</strong>&nbsp;four&emsp;<strong>(E)</strong>&nbsp;more than four</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p><strong>(A)</strong> one</p></div></details>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
@@ -86,7 +113,7 @@ where $2003$ is prime (it is not divisible by any prime up to $43$, and $47\time
 </section>
 <section class="ct-problem" id="p2">
 <h3>Problem 2</h3>
-<div class="ct-meta">Geometry &middot; LPS VI, Chapter 52: Solid Geometry and Spatial Visualization</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Geometry &middot; LPS VI, Chapter 52: Solid Geometry and Spatial Visualization &middot; Nets and Folding</div>
 <div class="ct-text"><p>The numbers on the opposite faces of a standard six-sided die have a sum of $7$. Which of the following is <em>not</em> the net of a standard six-sided die?</p><p>The five options <strong>(A)</strong>&ndash;<strong>(E)</strong> are the five nets shown below.</p><div class="ct-fig"><img style="width:383px" src="/assets/contests/2026-27/grade-5-2.svg" alt="Figure for Problem 2"></div></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p><strong>(C)</strong></p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -113,7 +140,7 @@ column, so $6$ is opposite $1$. Good.</p></li><li><p>(E): $1,5,6$ is a straight 
 </section>
 <section class="ct-problem" id="p3">
 <h3>Problem 3</h3>
-<div class="ct-meta">Geometry &middot; LPS VI, Chapter 24: Quadrilaterals and Polygon Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Geometry &middot; LPS VI, Chapter 24: Quadrilaterals and Polygon Structure &middot; Quadrilateral Families</div>
 <div class="ct-text"><p>Rectangle $PQRS$ has perimeter $30$ cm. The area of square $PUTX$ is $9$ cm$^2$. What is the perimeter of rectangle $TVRW$?</p><p><strong>(A)</strong>&nbsp;$12$ cm&emsp;<strong>(B)</strong>&nbsp;$15$ cm&emsp;<strong>(C)</strong>&nbsp;$18$ cm&emsp;<strong>(D)</strong>&nbsp;$21$ cm&emsp;<strong>(E)</strong>&nbsp;$24$ cm</p><div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/grade-5-3.svg" alt="Figure for Problem 3"></div></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p><strong>(C)</strong> $18$ cm</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -136,7 +163,7 @@ The answer is $\boxed{\textbf{(C)}\ 18\text{ cm}}$.</p>
 </section>
 <section class="ct-problem" id="p4">
 <h3>Problem 4</h3>
-<div class="ct-meta">Number Theory &middot; LPS VI, Chapter 21: Digits, Place Value, and Decimal Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Number Theory &middot; LPS VI, Chapter 21: Digits, Place Value, and Decimal Structure &middot; Place-Value Decomposition</div>
 <div class="ct-text"><p>The letters $p$, $q$ and $r$ represent digits. The sum of the two-digit numbers `$pq$' and `$pr$' is $75$. What is the value of $p+q+r$?</p><p><strong>(A)</strong>&nbsp;$12$&emsp;<strong>(B)</strong>&nbsp;$14$&emsp;<strong>(C)</strong>&nbsp;$15$&emsp;<strong>(D)</strong>&nbsp;$16$&emsp;<strong>(E)</strong>&nbsp;$18$</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p><strong>(E)</strong> $18$</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -152,7 +179,7 @@ and the units digit of the total must be $5$. So $q+r=5$ or $q+r=15$.</p><ul cla
 </section>
 <section class="ct-problem" id="p5">
 <h3>Problem 5</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VI, Chapter 10: Logical Deduction and Constraint Puzzles</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Combinatorics &middot; LPS VI, Chapter 10: Logical Deduction and Constraint Puzzles &middot; Contradiction and Elimination</div>
 <div class="ct-text"><p>Five children, Amy, Bob, Cat, Dan and Eve each make a statement about the number of pencils they have in their pencil case.</p><p>Amy: &ldquo;I have more than Bob.&rdquo;<br>
 Bob: &ldquo;I have more than Cat and more than Dan.&rdquo;<br>
 Cat: &ldquo;I have more than Dan.&rdquo;<br>
@@ -172,7 +199,7 @@ Bob ($3&gt;2$ and $3&gt;1$), Cat ($2&gt;1$) and Eve ($5&gt;4$) tell the truth; o
 </section>
 <section class="ct-problem" id="p6">
 <h3>Problem 6</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VI, Chapter 18: Parity, Invariants, and Monovariants</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Combinatorics &middot; LPS VI, Chapter 18: Parity, Invariants, and Monovariants &middot; Parity Arguments</div>
 <div class="ct-text"><p>There are four buttons in a row on a touch screen. Two of them show circles and two show triangles.</p><p>When a button is pressed, its shape and the shapes of any buttons directly next to it change. A circle becomes a triangle and a triangle becomes a circle.</p><p>What is the smallest number of button presses needed for the screen to show four circles?</p><p><strong>(A)</strong>&nbsp;$2$&emsp;<strong>(B)</strong>&nbsp;$3$&emsp;<strong>(C)</strong>&nbsp;$4$&emsp;<strong>(D)</strong>&nbsp;$5$&emsp;<strong>(E)</strong>&nbsp;$6$</p><div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/grade-5-6.svg" alt="Figure for Problem 6"></div></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p><strong>(B)</strong> $3$</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -193,7 +220,7 @@ $\boxed{\textbf{(B)}\ 3}$.</p>
 </section>
 <section class="ct-problem" id="p7">
 <h3>Problem 7</h3>
-<div class="ct-meta">Algebra &middot; LPS VI, Chapter 25: Algebraic Word Problem Models</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Algebra &middot; LPS VI, Chapter 25: Algebraic Word Problem Models &middot; Age and Time Shifts</div>
 <div class="ct-text"><p>Two candles with the same thickness and material have initial lengths in the ratio $19:15$. They are lit at the same time and burn at the same constant rate. After $34$ minutes of burning, the ratio of their remaining lengths becomes $10:7$. How many more minutes does the longer candle need to burn completely?</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$80$ minutes</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -215,7 +242,7 @@ minutes it has $114-34=\boxed{80}$ minutes left. (Check: the shorter one has $90
 </section>
 <section class="ct-problem" id="p8">
 <h3>Problem 8</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VI, Chapter 6: Casework, Complement, and Constructive Counting</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Combinatorics &middot; LPS VI, Chapter 6: Casework, Complement, and Constructive Counting &middot; Exhaustive Casework</div>
 <div class="ct-text"><p>Hanlin writes down three 1s and three 0s, according to the following rule: while writing down the numbers, he must always have written at least as many 1s as he has written 0s. How many such numbers can he form from the six digits?</p><p><strong>(A)</strong>&nbsp;$4$&emsp;<strong>(B)</strong>&nbsp;$5$&emsp;<strong>(C)</strong>&nbsp;$6$&emsp;<strong>(D)</strong>&nbsp;$7$&emsp;<strong>(E)</strong>&nbsp;$8$</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p><strong>(B)</strong> $5$</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -246,7 +273,7 @@ The box for three $1$s and three $0$s gives $\boxed{\textbf{(B)}\ 5}$.</p>
 </section>
 <section class="ct-problem" id="p9">
 <h3>Problem 9</h3>
-<div class="ct-meta">Algebra &middot; LPS VI, Chapter 13: Rates, Motion, and Work</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Algebra &middot; LPS VI, Chapter 13: Rates, Motion, and Work &middot; Distance, Rate, and Time</div>
 <div class="ct-text"><p>During the Naadam festival, three warriors namely Andy, Ben and Charlie, competed in a $1$ km horse race across the vast Mongolian grasslands. Each of their horses ran at a constant speed throughout the race. When Andy crossed the finish line, Ben was $40$ meters behind him. When Ben crossed the finish line, Charlie was $25$ meters behind him. How many meters behind Andy was Charlie at the exact moment Andy crossed the finish line?</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$64$ meters</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -264,7 +291,7 @@ behind Andy.</p>
 </section>
 <section class="ct-problem" id="p10">
 <h3>Problem 10</h3>
-<div class="ct-meta">Number Theory &middot; LPS VI, Chapter 21: Digits, Place Value, and Decimal Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Number Theory &middot; LPS VI, Chapter 21: Digits, Place Value, and Decimal Structure &middot; Digit Conditions and Search</div>
 <div class="ct-text"><p>When $246$ is added to its reverse $642$, the sum is $888$. Find the largest integer such that the sum of the integer and its reverse is $786$. (Note: The leading digit of the integer and its reverse cannot be $0$.)</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$591$</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -284,7 +311,7 @@ $\boxed{591}$.</p>
 </section>
 <section class="ct-problem" id="p11">
 <h3>Problem 11</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VI, Chapter 26: Double Counting and Combinatorial Proof</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Combinatorics &middot; LPS VI, Chapter 26: Double Counting and Combinatorial Proof &middot; Incidence Counting</div>
 <div class="ct-text"><p>In how many ways can all the digits $1$, $2$, $3$, $4$, $5$, $6$, $7$, $8$ and $9$ be placed in a $3\times3$ grid so that the sum of the numbers in each row is even and the sum of the numbers in each column is odd?</p><p><strong>(A)</strong>&nbsp;$0$&emsp;<strong>(B)</strong>&nbsp;$1$&emsp;<strong>(C)</strong>&nbsp;$2$&emsp;<strong>(D)</strong>&nbsp;$3$&emsp;<strong>(E)</strong>&nbsp;more than $3$</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p><strong>(A)</strong> $0$</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -300,7 +327,7 @@ $1,\dots,9$ contain five odd digits: $1,3,5,7,9$. Five is odd, so this is imposs
 </section>
 <section class="ct-problem" id="p12">
 <h3>Problem 12</h3>
-<div class="ct-meta">Algebra &middot; LPS VI, Chapter 49: Systems of Equations and Multiple Constraints</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Algebra &middot; LPS VI, Chapter 49: Systems of Equations and Multiple Constraints &middot; Partial Totals and Cyclic Sums</div>
 <div class="ct-text"><p>The diagram shows nine squares arranged so that they form two lines, each consisting of five squares.</p><p>The squares are to be filled with the positive integers from $1$ to $9$ inclusive so that the totals of the five numbers in each line are equal. Three of the numbers have already been placed. What is the sum of the different values which the central number $N$ can take?</p><p><strong>(A)</strong>&nbsp;$17$&emsp;<strong>(B)</strong>&nbsp;$21$&emsp;<strong>(C)</strong>&nbsp;$22$&emsp;<strong>(D)</strong>&nbsp;$25$&emsp;<strong>(E)</strong>&nbsp;$28$</p><div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/grade-5-12.svg" alt="Figure for Problem 12"></div></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p><strong>(A)</strong> $17$</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -327,7 +354,7 @@ $L,M,P,Q$ simply take the remaining four numbers. The sum is $9+7+1=\boxed{\text
 </section>
 <section class="ct-problem" id="p13">
 <h3>Problem 13</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VI, Chapter 14: Permutations, Combinations, and Binomial Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Combinatorics &middot; LPS VI, Chapter 14: Permutations, Combinations, and Binomial Structure &middot; Combination Structure</div>
 <div class="ct-text"><p>A seven-digit number formed using each of the digits $1,2,3,4,5,6,7$ exactly once is called a &ldquo;valley number&rdquo; if its digits strictly decrease from the beginning to the smallest digit and then strictly increase to the end.</p><p>For example, $4312567$ is a valley number, while $1234567$ is not.</p><p>How many different valley numbers can be formed?</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$62$</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -348,7 +375,7 @@ Total: $6+15+20+15+6=\boxed{62}$.</p>
 </section>
 <section class="ct-problem" id="p14">
 <h3>Problem 14</h3>
-<div class="ct-meta">Geometry &middot; LPS VI, Chapter 48: Transformations and Symmetry</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VI scale">H</span>Geometry &middot; LPS VI, Chapter 48: Transformations and Symmetry &middot; Reflection</div>
 <div class="ct-text"><p>John is given a $5\times5$ array of biscuits as shown. He is told that he can eat these one by one, provided that each time the remaining array has at least one line of symmetry. What is the largest number of biscuits that John can eat?</p><p><strong>(A)</strong>&nbsp;$5$&emsp;<strong>(B)</strong>&nbsp;$9$&emsp;<strong>(C)</strong>&nbsp;$13$&emsp;<strong>(D)</strong>&nbsp;$17$&emsp;<strong>(E)</strong>&nbsp;$25$</p><div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/grade-5-14.svg" alt="Figure for Problem 14"></div></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p><strong>(D)</strong> $17$</p></div></details>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
@@ -381,7 +408,7 @@ John can eat is $\boxed{\textbf{(D)}\ 17}$.</p>
 </section>
 <section class="ct-problem" id="p15">
 <h3>Problem 15</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VI, Chapter 50: Combinatorial Geometry</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VI scale">H</span>Combinatorics &middot; LPS VI, Chapter 50: Combinatorial Geometry &middot; Counting Figures in Diagrams</div>
 <div class="ct-text"><p>How many different rectangles (including squares) in different locations in the diagram below can be formed using the grid lines?</p><p>Note: For example, the unit squares count as $21$ different rectangles.</p><div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/grade-5-15.svg" alt="Figure for Problem 15"></div></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$126$</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -409,7 +436,7 @@ Adding up all the stages: $1+4+10+20+35+56=\boxed{126}$.</p>
 </section>
 <section class="ct-problem" id="p16">
 <h3>Problem 16</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VI, Chapter 6: Casework, Complement, and Constructive Counting</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VI scale">H</span>Combinatorics &middot; LPS VI, Chapter 6: Casework, Complement, and Constructive Counting &middot; Exhaustive Casework</div>
 <div class="ct-text"><p>In a $3\times3$ grid, at least one cell is to be shaded. In how many ways can the grid be shaded such that no two shaded cells have a common side?</p><p>(Note: Shaded cells are allowed to meet at corners.)</p><div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/grade-5-16.svg" alt="Figure for Problem 16"></div></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$62$</p></div></details>
 <details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
@@ -438,7 +465,7 @@ answer is $63-1=\boxed{62}$.</p>
 </section>
 <section class="ct-problem" id="p17">
 <h3>Problem 17</h3>
-<div class="ct-meta">Geometry &middot; LPS VI, Chapter 32: Area by Measurement and Decomposition</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VI scale">H</span>Geometry &middot; LPS VI, Chapter 32: Area by Measurement and Decomposition &middot; Additive and Subtractive Area</div>
 <div class="ct-text"><p>A $6$ by $6$ grid is shown in the diagram below, where each unit square has a side length of $7$ cm. Each curve is a quarter of a circle, where the radius of this circle is equal to one or more side lengths of a unit square. What is the area, in cm$^2$, of the shaded region? (Note: Take $\pi=\frac{22}{7}$.)</p><div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/grade-5-17.svg" alt="Figure for Problem 17"></div></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$560$ cm$^2$</p></div></details>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">

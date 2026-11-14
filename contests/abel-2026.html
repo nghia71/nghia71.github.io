@@ -29,6 +29,11 @@ description: Norwegian Mathematical Olympiad 2026, Abel Competition Final: probl
   .ct-note { font-size: 14px; color: var(--ink-soft); font-style: italic; }
   .ct-bar { margin: .6em 0 1em; display: flex; gap: 10px; flex-wrap: wrap; }
   .ct-bar button { font: inherit; font-size: 14px; padding: 5px 12px; border-radius: var(--radius); border: 1px solid var(--brand); background: var(--white); color: var(--brand); cursor: pointer; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
 </style>
 <script>
   window.MathJax = { tex: { inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [['\\[','\\]']], processEscapes: true },
@@ -57,6 +62,28 @@ description: Norwegian Mathematical Olympiad 2026, Abel Competition Final: probl
   .ct-text mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
 </style>
 
+<style>
+  .ct-tags { display: flex; flex-wrap: wrap; gap: 5px; margin: 0 0 .55em; }
+  .ct-tg { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .03em; padding: 2px 8px; border-radius: 999px; line-height: 1.5; }
+  .ct-lv { background: #eee7dc; color: #4a3d33; }
+  .ct-df-Starter { background: #dcf1dc; color: #245c24; }
+  .ct-df-Explorer { background: #d6efec; color: #155e57; }
+  .ct-df-Challenger { background: #dce8f7; color: #1f4c80; }
+  .ct-df-Olympiad { background: #e7defa; color: #4b2a8a; }
+  .ct-df-Advanced { background: #fbe4cc; color: #8a4a0b; }
+  .ct-df-Expert { background: #f8d6cf; color: #8c2600; }
+  .ct-band { margin: 1.3em 0 .5em; font-size: 14px; color: var(--ink-soft); }
+  .ct-band .ct-tg { font-size: 13px; margin-right: .4em; }
+  .ct-legend { font-size: 14.5px; background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 10px 16px; margin: 1em 0 1.4em; }
+  .ct-legend p { margin: .35em 0; }
+  .ct-legend ul { margin: .2em 0 .4em; padding-left: 1.1em; }
+  .ct-legend li { margin: .2em 0; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
+</style>
 {% endraw %}
 <p><a href="{{ '/contests-2026' | relative_url }}">&larr; All contests 2026</a></p>
 
@@ -72,7 +99,7 @@ description: Norwegian Mathematical Olympiad 2026, Abel Competition Final: probl
 {% raw %}
 <section class="ct-problem" id="p1">
 <h3>Problem 1a</h3>
-<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 25: Diophantine Equations: Factorization and Algebraic Methods</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VII scale">E</span>Number Theory &middot; LPS VII, Chapter 25: Diophantine Equations: Factorization and Algebraic Methods &middot; Bounding and Size Arguments</div>
 <div class="ct-text"><p>Determine all pairs of positive integers $a, b$ for which both $a^2+2b+1$ and $b^2+2a+1$ are perfect squares.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>all pairs $(a,a)$ with $a$ a positive integer</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -90,7 +117,7 @@ Conversely, if $a=b$ then both expressions equal $a^2+2a+1=(a+1)^2$, so every pa
 </section>
 <section class="ct-problem" id="p2">
 <h3>Problem 1b</h3>
-<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 8: Modular Arithmetic and Congruence Methods</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 8: Modular Arithmetic and Congruence Methods &middot; Periodic and Cyclic Behavior Modulo $n$</div>
 <div class="ct-text"><p>Write $S(n) = 1^1 + 2^2 + \ldots + n^n$ for every positive integer $n$. Show that there are infinitely many positive integers $n$ such that the first digit of $S(n)$ equals the first digit of $n$, while simultaneously the final digit of $S(n)$ equals the final digit of $n$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>proof (for example every $n=10^m$ with $m\ge2$ works)</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -136,7 +163,7 @@ Hence the first digit of $S(n)$ is $1$, the first digit of $n$.</p><p>So all $n=
 </section>
 <section class="ct-problem" id="p3">
 <h3>Problem 2a</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 18: Invariants and Monovariants</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 18: Invariants and Monovariants &middot; Invariant Quantities</div>
 <div class="ct-text"><p>Harald has a stack of $n$ cards, marked with numbers $1, 2, \ldots, n$ in order from top to bottom. Then he reduces the stack repeatedly: Each reduction consists of removing two adjacent cards from the stack, subtracting the number $a$ on the lower card from the number $b$ on the one above, writing the difference $b-a$, on a blank card, and inserting the new card at a freely chosen location in the stack. After $n-1$ such reductions, he is left with just one card. For which positive integers $n$ can the number on this card be zero?</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>exactly the $n\ge4$ with $n\equiv0$ or $3\pmod 4$</p></div></details>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
@@ -156,7 +183,7 @@ $0-0=0$ reduces it to a single card $0$.</p><p>Hence the answer is all $n\ge4$ w
 </section>
 <section class="ct-problem" id="p4">
 <h3>Problem 2b</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 18: Invariants and Monovariants</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 18: Invariants and Monovariants &middot; Invariant Quantities</div>
 <div class="ct-text"><p>Let $m$ and $n$ be positive integers. An $m \times n$ grid is called <em>oriented</em> if every unit edge has an arrow pointing on one of the two directions along the edge. A <em>move</em> consists of rotating a grid cell, along with the direction of each of the cell's four edges, by $90^\circ$. Two oriented grids are called <em>friends</em> if some sequences of moves will turn the first grid into the second one. Determine the largest possible size of a collection of oriented $m \times n$ grids so that no two of them are friends.</p><p><em>Example:</em> The oriented $3 \times 2$ grid on the right is the result of rotating the shaded grid cell of the left grid $90^\circ$ counterclockwise.</p><div class="ct-fig"><img style="width:257px" src="/assets/contests/2026-27/abel-4.svg" alt="Figure for Problem 2b"></div></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$2mn+m+n+1$ (the number of unit edges plus one), except $6$ when $m=n=1$</p></div></details>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
@@ -188,7 +215,7 @@ product of transpositions, and each transposition (exchange of two labels) can b
 </section>
 <section class="ct-problem" id="p5">
 <h3>Problem 3a</h3>
-<div class="ct-meta">Algebra &middot; LPS VII, Chapter 31: Extremal Principle and Bounding Arguments</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Algebra &middot; LPS VII, Chapter 31: Extremal Principle and Bounding Arguments &middot; Extremal Element Selection</div>
 <div class="ct-text"><p>Find all infinite sequences $a_1, a_2, \ldots$ of positive integers, such that for every positive integer $n$ there exists a positive integer $k$ satisfying,
 \[k = \frac{a_n}{a_{n+1}} + \ldots + \frac{a_n}{a_{n+k}}.\]</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>exactly the constant sequences</p></div></details>
@@ -203,7 +230,7 @@ which contradicts the condition. Hence $N=1$ and $a_n=m$ for all $n$: the sequen
 </section>
 <section class="ct-problem" id="p6">
 <h3>Problem 3b</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 39: Graph Theory and Structural Combinatorics</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 39: Graph Theory and Structural Combinatorics &middot; Extremal Graph Structure</div>
 <div class="ct-text"><p>Given $4052$ distinct non-zero integers $a_1, a_2, \ldots, a_{2026}, b_1, b_2, \ldots, b_{2026}$, let $M$ be the number of pairs of indices $(i, j)$ such that $1 \le i &lt; j \le 2026$ and,
 \[2(a_ib_j + a_jb_i)^2 = (a_i^2+b_i^2)(a_j^2+b_j^2).\]
 What is the largest value of $M$, given all permitted choices of the 4052 numbers?</p></div>
@@ -241,7 +268,7 @@ mixed pairs is of type $P$ and satisfies the condition. Hence the largest value 
 </section>
 <section class="ct-problem" id="p7">
 <h3>Problem 4a</h3>
-<div class="ct-meta">Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure &middot; Tangency and Tangent Geometry</div>
 <div class="ct-text"><p>Let $D$ be an interior point of the triangle $ABC$. Let $E$ be the point on the line segment $AC$ such that $\angle ADE = \angle ABC$, and $F$ be the point on the line segment $AB$ such that $\angle ADF = \angle ACB$. Show that the circumcircles of $ABC$ and $DEF$ are mutually tangent.</p></div>
 <details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 (The circle passes through $A$; homothety)</h4>
@@ -285,7 +312,7 @@ are tangent at $A$.</p>
 </section>
 <section class="ct-problem" id="p8">
 <h3>Problem 4b</h3>
-<div class="ct-meta">Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure &middot; Power of a Point</div>
 <div class="ct-text"><p>Let $ABC$ be a triangle with $AB\ne AC$ and with no right angle at $B$ or $C$, and $E$ and $F$ be the points satisfying
 \[\angle BCE = \angle EAC = \angle CBF = \angle FAB = 90^\circ.\]
 Let $D$ be the point of intersection of the lines $BC$ and $EF$. Show that the line $AD$ is tangent to the circumcircle of $ABC$.</p></div>

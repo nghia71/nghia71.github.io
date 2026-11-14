@@ -29,6 +29,11 @@ description: Grade 7 Selection 2026: selected problems from 2026 contests: probl
   .ct-note { font-size: 14px; color: var(--ink-soft); font-style: italic; }
   .ct-bar { margin: .6em 0 1em; display: flex; gap: 10px; flex-wrap: wrap; }
   .ct-bar button { font: inherit; font-size: 14px; padding: 5px 12px; border-radius: var(--radius); border: 1px solid var(--brand); background: var(--white); color: var(--brand); cursor: pointer; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
 </style>
 <script>
   window.MathJax = { tex: { inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [['\\[','\\]']], processEscapes: true },
@@ -57,6 +62,28 @@ description: Grade 7 Selection 2026: selected problems from 2026 contests: probl
   .ct-text mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
 </style>
 
+<style>
+  .ct-tags { display: flex; flex-wrap: wrap; gap: 5px; margin: 0 0 .55em; }
+  .ct-tg { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .03em; padding: 2px 8px; border-radius: 999px; line-height: 1.5; }
+  .ct-lv { background: #eee7dc; color: #4a3d33; }
+  .ct-df-Starter { background: #dcf1dc; color: #245c24; }
+  .ct-df-Explorer { background: #d6efec; color: #155e57; }
+  .ct-df-Challenger { background: #dce8f7; color: #1f4c80; }
+  .ct-df-Olympiad { background: #e7defa; color: #4b2a8a; }
+  .ct-df-Advanced { background: #fbe4cc; color: #8a4a0b; }
+  .ct-df-Expert { background: #f8d6cf; color: #8c2600; }
+  .ct-band { margin: 1.3em 0 .5em; font-size: 14px; color: var(--ink-soft); }
+  .ct-band .ct-tg { font-size: 13px; margin-right: .4em; }
+  .ct-legend { font-size: 14.5px; background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 10px 16px; margin: 1em 0 1.4em; }
+  .ct-legend p { margin: .35em 0; }
+  .ct-legend ul { margin: .2em 0 .4em; padding-left: 1.1em; }
+  .ct-legend li { margin: .2em 0; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
+</style>
 {% endraw %}
 <p><a href="{{ '/contests-2026' | relative_url }}">&larr; All contests 2026</a></p>
 
@@ -65,14 +92,14 @@ description: Grade 7 Selection 2026: selected problems from 2026 contests: probl
 <div class="ct-intro">
 <p>The 24 problems of the Grade 7 Selection 2026: selected problems from 2026 contests, each with our own solutions, hidden until you open them. Where a problem has a final answer, it is shown separately. Try a problem first, then check.</p><p>Selected problems for grade 7, chosen from the 2026 MIMC, SMOPS, CEMC Gauss and AMC 8 papers. Each problem names its source; the problems go from easy to hard.</p>
 </div>
-<div class="ct-credit">Problems selected from the 2026 contests named under each problem (UKMT, CEMC, MAA, MIMC, SMOPS and CLMC); they belong to their publishers. Solutions written by MCC.</div>
+<div class="ct-credit">Problems selected from the 2026 contests named under each problem (UKMT, CEMC, MAA, MATHCOUNTS, MIMC, SMOPS, CLMC and Vietnamese entrance exams); they belong to their publishers. Solutions written by MCC.</div>
 <div class="ct-bar"><button type="button" onclick="ctAll(true)">Show all answers and solutions</button><button type="button" onclick="ctAll(false)">Hide all</button></div>
 <div class="ct-toc-wrap"><div class="ct-toc-row"><a href="#p1">1</a><a href="#p2">2</a><a href="#p3">3</a><a href="#p4">4</a><a href="#p5">5</a><a href="#p6">6</a><a href="#p7">7</a><a href="#p8">8</a><a href="#p9">9</a><a href="#p10">10</a><a href="#p11">11</a><a href="#p12">12</a><a href="#p13">13</a><a href="#p14">14</a><a href="#p15">15</a><a href="#p16">16</a><a href="#p17">17</a><a href="#p18">18</a><a href="#p19">19</a><a href="#p20">20</a><a href="#p21">21</a><a href="#p22">22</a><a href="#p23">23</a><a href="#p24">24</a></div></div>
 
 {% raw %}
 <section class="ct-problem" id="p1">
 <h3>Problem 1</h3>
-<div class="ct-meta">Number Theory &middot; LPS VI, Chapter 31: Linear Diophantine Equations</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Number Theory &middot; LPS VI, Chapter 31: Linear Diophantine Equations &middot; Bounded Positive Solutions</div>
 <div class="ct-text"><p>Two bowls each contain both some blueberries and some raspberries. In the first bowl, the ratio of the number of blueberries to the number of raspberries is $3:7$. In the second bowl, the ratio of the number of blueberries to the number of raspberries is $2:5$. If there are $89$ raspberries in total, the smallest possible number of blueberries is</p><p><strong>(A)</strong>&nbsp;$36$&emsp;<strong>(B)</strong>&nbsp;$38$&emsp;<strong>(C)</strong>&nbsp;$35$&emsp;<strong>(D)</strong>&nbsp;$37$&emsp;<strong>(E)</strong>&nbsp;$34$</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(A) $36$</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -88,7 +115,7 @@ So the number of blueberries grows with $a$, and we want the smallest possible $
 </section>
 <section class="ct-problem" id="p2">
 <h3>Problem 2</h3>
-<div class="ct-meta">Geometry &middot; LPS VI, Chapter 36: Power of a Point and Circle Measurement</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Geometry &middot; LPS VI, Chapter 36: Power of a Point and Circle Measurement &middot; Sector and Arc Measurement</div>
 <div class="ct-text"><p>Lakshmi has $5$ round coins of diameter $4$ centimeters. She arranges the coins in $2$ rows on a table top, as shown below, and wraps an elastic band tightly around them. In centimeters, what will be the length of the band?</p><p><strong>(A)</strong>&nbsp;$2\pi+20$&emsp;<strong>(B)</strong>&nbsp;$\frac52\pi+20$&emsp;<strong>(C)</strong>&nbsp;$4\pi+20$&emsp;<strong>(D)</strong>&nbsp;$\frac92\pi+20$&emsp;<strong>(E)</strong>&nbsp;$5\pi+20$</p><div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/grade-7-2.svg" alt="Figure for Problem 2"></div></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(C) $4\pi+20$</p></div></details>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
@@ -99,7 +126,7 @@ So the number of blueberries grows with $a$, and we want the smallest possible $
 </section>
 <section class="ct-problem" id="p3">
 <h3>Problem 3</h3>
-<div class="ct-meta">Number Theory &middot; LPS VI, Chapter 17: Factoring and Structural Decomposition</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Number Theory &middot; LPS VI, Chapter 17: Factoring and Structural Decomposition &middot; Difference of Squares and Related Forms</div>
 <div class="ct-text"><p>In how many ways can $60$ be written as the sum of two or more consecutive odd positive integers that are arranged in increasing order?</p><p><strong>(A)</strong>&nbsp;$1$&emsp;<strong>(B)</strong>&nbsp;$2$&emsp;<strong>(C)</strong>&nbsp;$3$&emsp;<strong>(D)</strong>&nbsp;$4$&emsp;<strong>(E)</strong>&nbsp;$5$</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(B) $2$</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -117,7 +144,7 @@ We need $(b-a)(b+a)=60$. The two factors have the same parity (their difference 
 </section>
 <section class="ct-problem" id="p4">
 <h3>Problem 4</h3>
-<div class="ct-meta">Algebra &middot; LPS VI, Chapter 13: Rates, Motion, and Work</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Algebra &middot; LPS VI, Chapter 13: Rates, Motion, and Work &middot; Relative Motion</div>
 <div class="ct-text"><p>Miguel is walking with his dog, Luna. When they reach the entrance to a park, Miguel throws a ball straight ahead and continues to walk at a steady pace. Luna sprints toward the ball, which stops by a tree. As soon as the dog reaches the ball, she brings it back to Miguel. Luna runs $5$ times faster than Miguel walks. What fraction of the distance between the entrance and the tree does Miguel cover by the time Luna brings him the ball?</p><p><strong>(A)</strong>&nbsp;$\frac16$&emsp;<strong>(B)</strong>&nbsp;$\frac15$&emsp;<strong>(C)</strong>&nbsp;$\frac14$&emsp;<strong>(D)</strong>&nbsp;$\frac13$&emsp;<strong>(E)</strong>&nbsp;$\frac25$</p><div class="ct-fig"><img style="width:364px" src="/assets/contests/2026-27/grade-7-4.svg" alt="Figure for Problem 4"></div></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(D) $\frac13$</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -131,7 +158,7 @@ Miguel covers $\frac13$ of the distance. The answer is $\boxed{\text{(D)}\ \tfra
 </section>
 <section class="ct-problem" id="p5">
 <h3>Problem 5</h3>
-<div class="ct-meta">Geometry &middot; LPS VI, Chapter 28: Right Triangles and the Pythagorean Framework</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Geometry &middot; LPS VI, Chapter 28: Right Triangles and the Pythagorean Framework &middot; Pythagorean Theorem</div>
 <div class="ct-text"><p>The figure below shows a tiling of $1\times1$ unit squares. Each row of unit squares is shifted horizontally by half a unit relative to the row above it. A shaded square is drawn on top of the tiling. Each vertex of the shaded square is a vertex of one of the unit squares. In square units, what is the area of the shaded square?</p><p><strong>(A)</strong>&nbsp;$10$&emsp;<strong>(B)</strong>&nbsp;$\frac{21}{2}$&emsp;<strong>(C)</strong>&nbsp;$\frac{32}{3}$&emsp;<strong>(D)</strong>&nbsp;$11$&emsp;<strong>(E)</strong>&nbsp;$\frac{34}{3}$</p><div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/grade-7-5.svg" alt="Figure for Problem 5"></div></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(A) $10$</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -147,7 +174,7 @@ The answer is $\boxed{\text{(A)}\ 10}$.</p>
 </section>
 <section class="ct-problem" id="p6">
 <h3>Problem 6</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VI, Chapter 38: Probability and Expected Value</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Combinatorics &middot; LPS VI, Chapter 38: Probability and Expected Value &middot; Dependent and Independent Events</div>
 <div class="ct-text"><p>Charlotte the spider is walking along a web shaped like a $5$-pointed star, shown in the figure below. The web has $5$ outer points and $5$ inner points. Each time Charlotte reaches a point, she randomly chooses a neighboring point and moves to that point. Charlotte starts at one of the outer points and makes $3$ moves (re-visiting points is allowed). What is the probability she is now at one of the outer points?</p><p><strong>(A)</strong>&nbsp;$\frac15$&emsp;<strong>(B)</strong>&nbsp;$\frac14$&emsp;<strong>(C)</strong>&nbsp;$\frac25$&emsp;<strong>(D)</strong>&nbsp;$\frac12$&emsp;<strong>(E)</strong>&nbsp;$\frac35$</p><div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/grade-7-6.svg" alt="Figure for Problem 6"></div></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(B) $\frac14$</p></div></details>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
@@ -157,7 +184,7 @@ The answer is $\boxed{\text{(A)}\ 10}$.</p>
 </section>
 <section class="ct-problem" id="p7">
 <h3>Problem 7</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VI, Chapter 14: Permutations, Combinations, and Binomial Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Combinatorics &middot; LPS VI, Chapter 14: Permutations, Combinations, and Binomial Structure &middot; Symmetry in Choosing</div>
 <div class="ct-text"><p>Let $x_1, x_2, \ldots, x_{10}$ be a permutation of the numbers $1, 2, 3, 4, 5, 6, 7, 8, 9, 10$. How many different permutations satisfy the following conditions?
 \[x_1&lt;x_2&lt;x_3&lt;x_4&lt;x_5,\]
 \[x_6&lt;x_7&lt;x_8&lt;x_9&lt;x_{10},\]
@@ -172,7 +199,7 @@ ways to choose the first five.</p><p>Now look at the sums. The total is $1+2+\cd
 </section>
 <section class="ct-problem" id="p8">
 <h3>Problem 8</h3>
-<div class="ct-meta">Number Theory &middot; LPS VI, Chapter 39: Perfect Powers and Prime Exponents</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Number Theory &middot; LPS VI, Chapter 39: Perfect Powers and Prime Exponents &middot; Difference of Powers in Number Theory</div>
 <div class="ct-text"><p>Let $A$ and $B$ be positive integers with $B\ne1$. If both $A+B$ and $A+B^2$ are perfect squares, find the smallest possible value of $B$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$5$</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -186,7 +213,7 @@ Two facts about a difference of two squares help: the factors $n-m$ and $n+m$ ha
 </section>
 <section class="ct-problem" id="p9">
 <h3>Problem 9</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VI, Chapter 47: Combinatorial Number Theory</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Combinatorics &middot; LPS VI, Chapter 47: Combinatorial Number Theory &middot; Extremal Integer Configurations</div>
 <div class="ct-text"><p>The integers from $1$ through $25$ are arbitrarily separated into five groups of $5$ numbers each. The median of each group is identified. Let $M$ equal the median of the five medians. What is the least possible value of $M$?</p><p><strong>(A)</strong>&nbsp;$9$&emsp;<strong>(B)</strong>&nbsp;$10$&emsp;<strong>(C)</strong>&nbsp;$12$&emsp;<strong>(D)</strong>&nbsp;$13$&emsp;<strong>(E)</strong>&nbsp;$14$</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(A) $9$</p></div></details>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
@@ -199,7 +226,7 @@ Every number from $1$ to $25$ is used once. The medians are $3,6,9,12,17$, and t
 </section>
 <section class="ct-problem" id="p10">
 <h3>Problem 10</h3>
-<div class="ct-meta">Number Theory &middot; LPS VI, Chapter 3: Divisibility and Prime Factorization</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Number Theory &middot; LPS VI, Chapter 3: Divisibility and Prime Factorization &middot; Divisibility Tests</div>
 <div class="ct-text"><p>Consider all five-digit palindromic numbers, $\overline{abcba}$, where $a\ne0$, which are divisible by $99$. Let $M$ and $m$ be the largest and the smallest of these numbers. What is the value of $M+m$?</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$154044$</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -216,7 +243,7 @@ Since $1\le a\le9$, $2\le 2a+20b+c\le18+180+9=207$, so $2a+20b+c$ is $99$ or $19
 </section>
 <section class="ct-problem" id="p11">
 <h3>Problem 11</h3>
-<div class="ct-meta">Algebra &middot; LPS VI, Chapter 53: Sequences, Series, and Recursive Patterns</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Algebra &middot; LPS VI, Chapter 53: Sequences, Series, and Recursive Patterns &middot; Arithmetic Sequences</div>
 <div class="ct-text"><p>An arithmetic sequence is a sequence in which the difference between any two consecutive terms is constant. If an $8$-term arithmetic sequence contains both $20$ and $26$, then it is called a &ldquo;good sequence&rdquo;.</p><p>For example,
 \[(18, 20, 22, 24, 26, 28, 30, 32)\quad\text{and}\quad\left(26, 24\tfrac12, 23, 21\tfrac12, 20, 18\tfrac12, 17, 15\tfrac12\right)\]
 are both good sequences.</p><p>Find the sum of all possible first terms $a_1$ of all good sequences $(a_1,\allowbreak a_2,\allowbreak a_3,\allowbreak a_4,\allowbreak a_5,\allowbreak a_6,\allowbreak a_7,\allowbreak a_8)$.</p></div>
@@ -236,7 +263,7 @@ Adding over $k=1,\ldots,7$ gives $-(7+6+\cdots+1)=-28$. Therefore
 </section>
 <section class="ct-problem" id="p12">
 <h3>Problem 12</h3>
-<div class="ct-meta">Geometry &middot; LPS VI, Chapter 44: Area Ratios and Cevian Geometry</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Geometry &middot; LPS VI, Chapter 44: Area Ratios and Cevian Geometry &middot; Cevian Partitions</div>
 <div class="ct-text"><p>In the figure below, triangle $ABC$ has side lengths $AB=20$, $BC=18$, and $CA=15$. Point $D$ is the midpoint of $BC$. Points $E$ and $F$ trisect the line segment $AD$. The lines $CE$ and $CF$ intersect $AB$ at points $G$ and $H$, respectively. Find the length of segment $GH$.</p><div class="ct-fig"><img style="width:336px" src="/assets/contests/2026-27/grade-7-12.svg" alt="Figure for Problem 12"></div></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$6$</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -250,7 +277,7 @@ Adding over $k=1,\ldots,7$ gives $-(7+6+\cdots+1)=-28$. Therefore
 </section>
 <section class="ct-problem" id="p13">
 <h3>Problem 13</h3>
-<div class="ct-meta">Number Theory &middot; LPS VI, Chapter 11: Divisors and Arithmetic Functions of a Number</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Number Theory &middot; LPS VI, Chapter 11: Divisors and Arithmetic Functions of a Number &middot; Counting Divisors</div>
 <div class="ct-text"><p>What is the smallest prime number $p$ such that $p^3+3p^2$ has exactly $18$ positive divisors?</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$17$</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -264,7 +291,7 @@ So $p$ is $29$, or $4r-3$, or $2q^2-3$. The smallest candidates:</p><ul class="c
 </section>
 <section class="ct-problem" id="p14">
 <h3>Problem 14</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VI, Chapter 42: Recursion, Paths, and Dynamic Counting</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Combinatorics &middot; LPS VI, Chapter 42: Recursion, Paths, and Dynamic Counting &middot; Recursive Counting Rules</div>
 <div class="ct-text"><p>There are $10$ distinct points on a circle. We want to pair up these points and connect each pair with a line segment such that no two segments intersect.</p><p>For example, the figure shows one such pairing method.</p><p>How many different non-intersecting pairing configurations are there?</p><div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/grade-7-14.svg" alt="Figure for Problem 14"></div></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$42$</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -293,7 +320,7 @@ The answer is $\boxed{42}$.</p>
 </section>
 <section class="ct-problem" id="p15">
 <h3>Problem 15</h3>
-<div class="ct-meta">Number Theory &middot; LPS VI, Chapter 21: Digits, Place Value, and Decimal Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Number Theory &middot; LPS VI, Chapter 21: Digits, Place Value, and Decimal Structure &middot; Digit Conditions and Search</div>
 <div class="ct-text"><p>A <em>Sorrol number</em> is a five-digit positive integer $abcde$ for which</p><ul class="ct-ul"><li><p>each of $a$, $b$, $c$, $d$, and $e$ is a different digit from $1$ to $9$ inclusive,</p></li><li><p>the three-digit integer $abc$ is divisible by $5$,</p></li><li><p>the three-digit integer $bcd$ is divisible by $3$, and</p></li><li><p>the three-digit integer $cde$ is divisible by $11$.</p></li></ul><p>The positive difference between the largest Sorrol number and the smallest Sorrol number is</p><p><strong>(A)</strong>&nbsp;$84\,978$&emsp;<strong>(B)</strong>&nbsp;$83\,989$&emsp;<strong>(C)</strong>&nbsp;$85\,015$&emsp;<strong>(D)</strong>&nbsp;$84\,038$&emsp;<strong>(E)</strong>&nbsp;$85\,968$</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(A) $84\,978$</p></div></details>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
@@ -305,7 +332,7 @@ The answer is $\boxed{42}$.</p>
 </section>
 <section class="ct-problem" id="p16">
 <h3>Problem 16</h3>
-<div class="ct-meta">Geometry &middot; LPS VI, Chapter 44: Area Ratios and Cevian Geometry</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Geometry &middot; LPS VI, Chapter 44: Area Ratios and Cevian Geometry &middot; Shared-Altitude Ratios</div>
 <div class="ct-text"><p>As shown in the diagram below, the diagonals of convex quadrilateral $ABCD$ intersect at point $O$. If triangle $AOB$ has an area of $144$ cm$^2$ and triangle $COD$ has an area of $169$ cm$^2$, what is the minimum possible area, in cm$^2$, of quadrilateral $ABCD$?</p><div class="ct-fig"><img style="width:221px" src="/assets/contests/2026-27/grade-7-16.svg" alt="Figure for Problem 16"></div></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$625$</p></div></details>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
@@ -318,7 +345,7 @@ we get $x+y\ge312$, with equality when $x=y=156$.</p><p><strong>It can happen.</
 </section>
 <section class="ct-problem" id="p17">
 <h3>Problem 17</h3>
-<div class="ct-meta">Number Theory &middot; LPS VI, Chapter 53: Sequences, Series, and Recursive Patterns</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Number Theory &middot; LPS VI, Chapter 53: Sequences, Series, and Recursive Patterns &middot; Series and Summation Patterns</div>
 <div class="ct-text"><p>Find the largest prime number that divides
 \[1\times2\times3+2\times3\times4+\cdots+2023\times2024\times2025+2024\times2025\times2026.\]</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$2027$</p></div></details>
@@ -339,7 +366,7 @@ that is, $S=506\cdot2025\cdot2026\cdot2027$. Every prime factor of $506\cdot2025
 </section>
 <section class="ct-problem" id="p18">
 <h3>Problem 18</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VI, Chapter 6: Casework, Complement, and Constructive Counting</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Combinatorics &middot; LPS VI, Chapter 6: Casework, Complement, and Constructive Counting &middot; Complementary Counting</div>
 <div class="ct-text"><p>Before the Naadam Festival, a merchant is preparing his goods to sell. He has $7$ different traditional Mongolian items namely deel (tunic), airag (mare's milk), morin khuur (horsehead fiddle), shirdeg (felt rug), gutal (leather boots), malgai (hat) and boortsog (fried cookies).</p><p>The merchant can create a small package using any non-empty combination of the items, with no item included more than once. The merchant can then select two small packages that do not share any items to form a special value deal (the ordering of the packages does not matter). What is the total number of distinct special value deals that the merchant can create?</p><p><em>Note:</em> The special value deal \{(deel, airag, shirdeg), (morin khuur, gutal)\} is considered the same as \{(morin khuur, gutal), (deel, airag, shirdeg)\}, but different from \{(deel, airag, morin khuur), (shirdeg, gutal)\}.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$966$</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -358,7 +385,7 @@ Total: $21+105+245+315+217+63=\boxed{966}$.</p>
 </section>
 <section class="ct-problem" id="p19">
 <h3>Problem 19</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VI, Chapter 34: Distributions and Stars-and-Bars</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Combinatorics &middot; LPS VI, Chapter 34: Distributions and Stars-and-Bars &middot; Bounded Distributions</div>
 <div class="ct-text"><p>How many six-digit numbers are there such that the product of their digits equals $6^6$?</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$1071$</p></div></details>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
@@ -370,7 +397,7 @@ The exponents of $3$ in the six digits add up to $6$, and the exponents of $2$ a
 </section>
 <section class="ct-problem" id="p20">
 <h3>Problem 20</h3>
-<div class="ct-meta">Algebra &middot; LPS VI, Chapter 13: Rates, Motion, and Work</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VI scale">H</span>Algebra &middot; LPS VI, Chapter 13: Rates, Motion, and Work &middot; Combined Work</div>
 <div class="ct-text"><p>A Mongolian yak herdsman manages two different grazing areas: Pasture A and Pasture B. In each pasture, the grass grows at a constant daily rate, although the growth rates may differ between the two pastures. Each yak consumes grass at the same constant rate.</p><p>Through years of experience, the herdsman has made the following observations:</p><p>For Pasture A:</p><ul class="ct-ul"><li><p>$29$ yaks can completely consume all the grass in exactly $7$ days,</p></li><li><p>$17$ yaks can completely consume all the grass in exactly $28$ days.</p></li></ul><p>For Pasture B:</p><ul class="ct-ul"><li><p>$41$ yaks can completely consume all the grass in exactly $6$ days,</p></li><li><p>$21$ yaks can completely consume all the grass in exactly $26$ days.</p></li></ul><p>The herdsman currently owns $32$ yaks, all of which must graze every day. On any given day, he may divide the yaks between the two pastures in any way he chooses, and the allocation of yaks may vary from day to day.</p><p>What is the maximum number of days the $32$ yaks can continue grazing before the grass in both pastures is completely consumed?</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$67$</p></div></details>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
@@ -380,7 +407,7 @@ The exponents of $3$ in the six digits add up to $6$, and the exponents of $2$ a
 </section>
 <section class="ct-problem" id="p21">
 <h3>Problem 21</h3>
-<div class="ct-meta">Number Theory &middot; LPS VI, Chapter 21: Digits, Place Value, and Decimal Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VI scale">H</span>Number Theory &middot; LPS VI, Chapter 21: Digits, Place Value, and Decimal Structure &middot; Digit Conditions and Search</div>
 <div class="ct-text"><p>Let $A$, $B$ and $C$ be three-digit integers whose decimal representations together use exactly nine distinct digits. If $A&lt;B&lt;C$ and $A+B+C=2026$, what is the smallest possible value of $C$?</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$901$</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -400,7 +427,7 @@ where $473&lt;652&lt;901$ and the nine digits $4,7,3,6,5,2,9,0,1$ are all differ
 </section>
 <section class="ct-problem" id="p22">
 <h3>Problem 22</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VI, Chapter 18: Parity, Invariants, and Monovariants</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VI scale">H</span>Combinatorics &middot; LPS VI, Chapter 18: Parity, Invariants, and Monovariants &middot; Invariants</div>
 <div class="ct-text"><p>At the beginning, there are $5051$ jars, each containing exactly one candy. In each turn, one candy is removed from each non-empty jar, then a new empty jar is added, and all the candies collected during this turn are placed into the newly added jar. After $5051$ turns, what is the largest number of candies in any jar?</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$100$</p></div></details>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
@@ -410,7 +437,7 @@ where $473&lt;652&lt;901$ and the nine digits $4,7,3,6,5,2,9,0,1$ are all differ
 </section>
 <section class="ct-problem" id="p23">
 <h3>Problem 23</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VI, Chapter 6: Casework, Complement, and Constructive Counting</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VI scale">H</span>Combinatorics &middot; LPS VI, Chapter 6: Casework, Complement, and Constructive Counting &middot; Exhaustive Casework</div>
 <div class="ct-text"><p>An ancient Mongolian iron chest is secured by a circular lock consisting of eight empty slots arranged in a ring. To unlock the chest, an explorer must place eight sacred medallions, numbered $0$, $1$, $2$, $3$, $4$, $5$, $6$ and $7$ into the slots, such that exactly one medallion occupies each slot. According to the description on the lid, the chest only opens if the difference between every pair of adjacent medallions is a prime number (that is $2$, $3$, $5$ or $7$).</p><p>Two circular configurations are considered identical if one can be rotated to match the other. How many unique circular configurations can unlock the chest?</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$32$</p></div></details>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
@@ -426,7 +453,7 @@ In an opening configuration, each medallion sits between two of its friends.</p>
 </section>
 <section class="ct-problem" id="p24">
 <h3>Problem 24</h3>
-<div class="ct-meta">Number Theory &middot; LPS VI, Chapter 45: Inequalities and Absolute Value</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VI scale">H</span>Number Theory &middot; LPS VI, Chapter 45: Inequalities and Absolute Value &middot; Bounding Integer Solutions</div>
 <div class="ct-text"><p>Let $A$, $B$, $C$ and $D$ be four distinct positive integers such that
 \[\frac1A+\frac1B+\frac1C+\frac1D=\frac{21}{22}.\]
 What are all possible values of $A+B+C+D$?</p></div>

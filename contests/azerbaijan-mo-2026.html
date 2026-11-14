@@ -29,6 +29,11 @@ description: Azerbaijan National Mathematical Olympiad 2026, Seniors: problems w
   .ct-note { font-size: 14px; color: var(--ink-soft); font-style: italic; }
   .ct-bar { margin: .6em 0 1em; display: flex; gap: 10px; flex-wrap: wrap; }
   .ct-bar button { font: inherit; font-size: 14px; padding: 5px 12px; border-radius: var(--radius); border: 1px solid var(--brand); background: var(--white); color: var(--brand); cursor: pointer; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
 </style>
 <script>
   window.MathJax = { tex: { inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [['\\[','\\]']], processEscapes: true },
@@ -57,6 +62,28 @@ description: Azerbaijan National Mathematical Olympiad 2026, Seniors: problems w
   .ct-text mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
 </style>
 
+<style>
+  .ct-tags { display: flex; flex-wrap: wrap; gap: 5px; margin: 0 0 .55em; }
+  .ct-tg { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .03em; padding: 2px 8px; border-radius: 999px; line-height: 1.5; }
+  .ct-lv { background: #eee7dc; color: #4a3d33; }
+  .ct-df-Starter { background: #dcf1dc; color: #245c24; }
+  .ct-df-Explorer { background: #d6efec; color: #155e57; }
+  .ct-df-Challenger { background: #dce8f7; color: #1f4c80; }
+  .ct-df-Olympiad { background: #e7defa; color: #4b2a8a; }
+  .ct-df-Advanced { background: #fbe4cc; color: #8a4a0b; }
+  .ct-df-Expert { background: #f8d6cf; color: #8c2600; }
+  .ct-band { margin: 1.3em 0 .5em; font-size: 14px; color: var(--ink-soft); }
+  .ct-band .ct-tg { font-size: 13px; margin-right: .4em; }
+  .ct-legend { font-size: 14.5px; background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 10px 16px; margin: 1em 0 1.4em; }
+  .ct-legend p { margin: .35em 0; }
+  .ct-legend ul { margin: .2em 0 .4em; padding-left: 1.1em; }
+  .ct-legend li { margin: .2em 0; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
+</style>
 {% endraw %}
 <p><a href="{{ '/contests-2026' | relative_url }}">&larr; All contests 2026</a></p>
 
@@ -73,7 +100,7 @@ description: Azerbaijan National Mathematical Olympiad 2026, Seniors: problems w
 <h2 class="ct-group" id="day-1">Day 1</h2>
 <section class="ct-problem" id="p1">
 <h3>Problem 1</h3>
-<div class="ct-meta">Algebra &middot; LPS VII, Chapter 13: Systems, Symmetry, and Multi-Variable Algebra</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VII scale">E</span>Algebra &middot; LPS VII, Chapter 13: Systems, Symmetry, and Multi-Variable Algebra &middot; Symmetric and Cyclic Systems</div>
 <div class="ct-text"><p>Let $x,y,a,b,c$ be real numbers such that
 \[\begin{cases} a+b+c=1,\\ a^2+b^2+c^2=3,\\ bc-x-2ya=0,\\ ca-x-2yb=0,\\ ab-x-2yc=0.\end{cases}\]
 Prove that $abc\in\left\{-1,\frac{5}{27}\right\}$.</p></div>
@@ -96,7 +123,7 @@ So $abc\in\{-1,\frac5{27}\}$.</p>
 </section>
 <section class="ct-problem" id="p2">
 <h3>Problem 2</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 44: Combinatorial Games and Strategy</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 44: Combinatorial Games and Strategy &middot; Invariant-Based Game Analysis</div>
 <div class="ct-text"><p>Two players $A$ and $B$ play the following game on an $8\times 8$ chessboard with one knight. A knight's &ldquo;direction&rdquo; is defined as the direction he moves two cells. For example: If a knight moves two cells upward and one cell left, then his &ldquo;direction&rdquo; is up. If it moves two cells right and one cell down then his &ldquo;direction&rdquo; is right. First, $A$ places the knight on some cell of the board and every round goes as follows: Firstly $B$ advises a &ldquo;direction&rdquo; for the move, if there exist two possible moves with that &ldquo;direction&rdquo; then $A$ chooses one of them and changes the knight's position, if there is only one possible move then $A$ can either reject or accept to do that move. It is known that $B$ cannot advise the same &ldquo;direction&rdquo; twice in a round and $A$ cannot reject $B$'s propositions infinitely many times. The round ends when the knight's position has been changed. When a knight moves to a cell that cell gets marked (including the beginning cell). Find the least positive integer $k$, such that regardless of the advices of $B$, $A$ can make the number of marked cells in the board at most $k$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$12$</p></div></details>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
@@ -153,7 +180,7 @@ quarters. Hence every self-safe set has at least $12$ cells, so $k\ge12$, and wi
 </section>
 <section class="ct-problem" id="p3">
 <h3>Problem 3</h3>
-<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 33: Residues, Quadratic Structure, and Higher Congruences</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VII scale">E</span>Number Theory &middot; LPS VII, Chapter 33: Residues, Quadratic Structure, and Higher Congruences &middot; Higher Power Residues</div>
 <div class="ct-text"><p>Find all nonnegative integers $a,b,c$ such that
 \[20^a+b^4=2024^c.\]</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$(a,b,c)=(0,0,0)$</p></div></details>
@@ -171,7 +198,7 @@ Hence $(a,b,c)=\boxed{(0,0,0)}$ is the only solution.</p>
 <h2 class="ct-group" id="day-2">Day 2</h2>
 <section class="ct-problem" id="p4">
 <h3>Problem 4</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 31: Extremal Principle and Bounding Arguments</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VII scale">E</span>Combinatorics &middot; LPS VII, Chapter 31: Extremal Principle and Bounding Arguments &middot; Bounding and Limiting Arguments</div>
 <div class="ct-text"><p>A Sudoku is a puzzle played on a $9\times 9$ grid. The grid is divided into nine $3\times 3$ subgrids. The cells are filled with the numbers $\{1,2,3,\dots,9\}$ in such a way that each row, each column, and each $3\times 3$ subgrid contains each of these digits exactly once. Let $M$ and $N$ denote the products of the numbers on the two main diagonals.</p><ul class="ct-parts"><li><p><span class="ct-lbl">(a)</span> Prove that there exists such a Sudoku for which $2025^3\mid MN$.</p></li><li><p><span class="ct-lbl">(b)</span> Prove that there does not exist such a Sudoku for which $2025^4\mid MN$.</p></li></ul></div>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
 <h4>Solution (Counting factors $3$ and $5$ on the diagonals)</h4>
@@ -192,7 +219,7 @@ cell and at most $1$ otherwise. Hence $MN$ contains at most $4+2=6$ factors $5$,
 </section>
 <section class="ct-problem" id="p5">
 <h3>Problem 5</h3>
-<div class="ct-meta">Geometry &middot; LPS VII, Chapter 51: Spiral Similarity and Advanced Transformational Geometry</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 51: Spiral Similarity and Advanced Transformational Geometry &middot; Spiral Similarity Centers</div>
 <div class="ct-text"><p>Let $ABC$ be a triangle, and let $D$ be a point on the segment $BC$, different from $B$, $C$ and the midpoint of $BC$.
 The lines through $D$ parallel to $AB$ and $AC$ meet $AC$ and $AB$ at $E$ and $F$, respectively.
 Let the circumcircles of triangles $AEF$ and $ABC$ intersect again at $X$.
@@ -253,7 +280,7 @@ So $X$, $M$, $Z$ are collinear.</p><p><em>Conclusion.</em> $M$ is inside the cir
 </section>
 <section class="ct-problem" id="p6">
 <h3>Problem 6</h3>
-<div class="ct-meta">Algebra &middot; LPS VII, Chapter 42: Polynomial Reconstruction and Interpolation</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Algebra &middot; LPS VII, Chapter 42: Polynomial Reconstruction and Interpolation &middot; Reconstruction from Functional Conditions</div>
 <div class="ct-text"><p>Prove that there exist polynomials $P(x)$ and $Q(x)$ with real coefficients such that $\deg P\ge 2026$, $\deg Q\ge 2$, and for all real numbers $x$,
 \[P(Q(x)-x-1)=Q(P(x)).\]</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>e.g. $Q(x)=\frac{x^2+5x}{2}$ and $P=U^{\circ11}-1$ with $U(x)=\frac{x^2+3x-2}{2}$ ($\deg P=2048$)</p></div></details>

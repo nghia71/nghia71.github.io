@@ -1,0 +1,407 @@
+---
+title: Southern California Mathematics Competition 2026: selected problems
+permalink: /contests/scmc-2026
+description: Southern California Mathematics Competition 2026: selected problems: problems with answers and solutions
+---
+{% raw %}
+<style>
+  .ct-intro { margin-bottom: 1.2em; }
+  .ct-credit { font-size: 14px; color: var(--ink-soft); border-left: 3px solid var(--gold); padding: 6px 12px; background: var(--white); margin: 1em 0; }
+  .ct-toc { display: flex; flex-wrap: wrap; gap: 6px; margin: 1em 0 1.4em; }
+  .ct-toc a { display: inline-block; min-width: 2.4em; text-align: center; padding: 4px 8px; border: 1px solid var(--rule); border-radius: 4px; background: var(--white); text-decoration: none; font-size: 14px; }
+  .ct-problem { background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 14px 18px; margin: 1.1em 0; }
+  .ct-problem h3 { margin: 0 0 .3em; font-size: 1.08rem; border-bottom: none; padding-bottom: 0; }
+  .ct-meta { font-size: 13px; color: var(--ink-soft); margin-bottom: .6em; }
+  .ct-text { font-family: Georgia, "Times New Roman", "Noto Serif", serif; font-size: 1.02em; line-height: 1.6; }
+  .ct-text p { margin: .5em 0; }
+  .ct-fig { text-align: center; margin: .8em 0; }
+  .ct-fig img { max-width: 100%; height: auto; max-height: 340px; }
+  .ct-choices { display: flex; flex-wrap: wrap; gap: 6px 22px; margin: .6em 0 .2em; }
+  .ct-choices b { margin-right: .3em; }
+  .ct-problem details { margin-top: .8em; border-top: 1px dashed var(--rule); padding-top: .5em; }
+  .ct-problem summary { cursor: pointer; font-weight: 600; color: var(--brand); font-size: 15px; }
+  .ct-problem details[open] summary { margin-bottom: .5em; }
+  .ct-sol h4 { font-size: 1rem; margin: 1em 0 .3em; color: var(--ink); }
+  .ct-answer { font-weight: 600; }
+  .ct-parts { list-style: none; padding-left: .4em; }
+  .ct-parts li { margin: .35em 0; }
+  .ct-lbl { font-weight: 700; margin-right: .3em; }
+  .ct-note { font-size: 14px; color: var(--ink-soft); font-style: italic; }
+  .ct-bar { margin: .6em 0 1em; display: flex; gap: 10px; flex-wrap: wrap; }
+  .ct-bar button { font: inherit; font-size: 14px; padding: 5px 12px; border-radius: var(--radius); border: 1px solid var(--brand); background: var(--white); color: var(--brand); cursor: pointer; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
+</style>
+<script>
+  window.MathJax = { tex: { inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [['\\[','\\]']], processEscapes: true },
+                     options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] } };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script>
+  function ctAll(open) { document.querySelectorAll('.ct-problem details').forEach(function (d) { d.open = open; }); }
+</script>
+
+<style>
+  .ct-group { font-size: 1.25rem; margin: 1.6em 0 .2em; }
+  .ct-toc-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: .3em 0; }
+  .ct-toc-g { font-size: 13px; color: var(--ink-soft); min-width: 9em; }
+  .ct-toc-wrap { margin: 1em 0 1.4em; }
+  .ct-center { text-align: center; margin: .6em 0; }
+  .ct-tablewrap { overflow-x: auto; margin: .6em 0; text-align: center; }
+  .ct-table { border-collapse: collapse; margin: 0 auto; }
+  .ct-table td { padding: 2px 9px; text-align: center; }
+  .ct-table tr.ct-hl td { border-bottom: 1px solid var(--ink-soft); }
+  .ct-table.ct-vfirst td:first-child { border-right: 1px solid var(--ink-soft); }
+  .ct-ul { padding-left: 1.4em; }
+  .ct-ul li { margin: .3em 0; }
+  .ct-text li > p:first-child { margin-top: 0; }
+  .ct-text li > p:last-child { margin-bottom: 0; }
+  .ct-text mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
+</style>
+
+<style>
+  .ct-tags { display: flex; flex-wrap: wrap; gap: 5px; margin: 0 0 .55em; }
+  .ct-tg { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .03em; padding: 2px 8px; border-radius: 999px; line-height: 1.5; }
+  .ct-lv { background: #eee7dc; color: #4a3d33; }
+  .ct-df-Starter { background: #dcf1dc; color: #245c24; }
+  .ct-df-Explorer { background: #d6efec; color: #155e57; }
+  .ct-df-Challenger { background: #dce8f7; color: #1f4c80; }
+  .ct-df-Olympiad { background: #e7defa; color: #4b2a8a; }
+  .ct-df-Advanced { background: #fbe4cc; color: #8a4a0b; }
+  .ct-df-Expert { background: #f8d6cf; color: #8c2600; }
+  .ct-band { margin: 1.3em 0 .5em; font-size: 14px; color: var(--ink-soft); }
+  .ct-band .ct-tg { font-size: 13px; margin-right: .4em; }
+  .ct-legend { font-size: 14.5px; background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 10px 16px; margin: 1em 0 1.4em; }
+  .ct-legend p { margin: .35em 0; }
+  .ct-legend ul { margin: .2em 0 .4em; padding-left: 1.1em; }
+  .ct-legend li { margin: .2em 0; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
+</style>
+{% endraw %}
+<p><a href="{{ '/contests-2026' | relative_url }}">&larr; All contests 2026</a></p>
+
+<h1>Southern California Mathematics Competition 2026: selected problems</h1>
+
+<div class="ct-intro">
+<p>The 21 problems of the Southern California Mathematics Competition 2026: selected problems, each with our own solutions, hidden until you open them. Where a problem has a final answer, it is shown separately. Try a problem first, then check.</p><p>A selection of the best problems of the Southern California Mathematics Competition, Edition VII (28 March 2026).</p>
+</div>
+<div class="ct-credit">Problems: Southern California Mathematics Competition 2026: selected problems, from the AoPS contest collection or the official paper. Solutions written by MCC.</div>
+<div class="ct-bar"><button type="button" onclick="ctAll(true)">Show all answers and solutions</button><button type="button" onclick="ctAll(false)">Hide all</button></div>
+<div class="ct-toc-wrap"><div class="ct-toc-row"><span class="ct-toc-g">Individual Round A</span><a href="#p1">6</a><a href="#p2">7</a><a href="#p3">8</a><a href="#p4">9</a><a href="#p5">12</a><a href="#p6">14</a></div><div class="ct-toc-row"><span class="ct-toc-g">Individual Round B</span><a href="#p7">8</a><a href="#p8">9</a><a href="#p9">14</a></div><div class="ct-toc-row"><span class="ct-toc-g">Team Round A</span><a href="#p10">3</a><a href="#p11">4</a><a href="#p12">5</a></div><div class="ct-toc-row"><span class="ct-toc-g">Team Round B</span><a href="#p13">2</a><a href="#p14">6</a><a href="#p15">10</a></div><div class="ct-toc-row"><span class="ct-toc-g">Guts Round</span><a href="#p16">3-3</a><a href="#p17">4-1</a><a href="#p18">5-2</a><a href="#p19">8-1</a><a href="#p20">8-2</a><a href="#p21">8-3</a></div></div>
+
+{% raw %}
+<h2 class="ct-group" id="individual-round-a">Individual Round A</h2>
+<section class="ct-problem" id="p1">
+<h3>Problem 6</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Number Theory &middot; LPS VI, Chapter 21: Digits, Place Value, and Decimal Structure &middot; Digit Conditions and Search &middot; also Individual Round B, Problem 10</div>
+<div class="ct-text"><p>For positive integer $n$, define $s(n)$ as the sum of the digits of $n$. Compute the number of $n&lt;10000$ such that $\dfrac{s(n)}{s(n+1)}$ is an integer.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$56$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Count the trailing nines)</h4>
+<p>Write $n$ with exactly $k\ge0$ trailing nines. Adding $1$ turns these $k$ nines into zeros and raises the digit before them (which is not $9$) by $1$, so
+\[s(n+1)=s(n)-9k+1.\]
+Put $t=s(n+1)$. Then $s(n)=t+9k-1$, and $t\mid s(n)$ if and only if $t\mid 9k-1$.</p><p>If $k=0$, then $t\mid -1$ forces $t=1$, i.e. $s(n)=0$, impossible. So $k\ge1$. Write $n$ with four digits (leading zeros allowed, $1\le n\le 9999$) as a prefix $p$ of $4-k$ digits, whose last digit is not $9$, followed by $k$ nines. Then $n+1$ is $p+1$ followed by zeros, and $t=s(p)+1$ (no carry, since the last digit of $p$ is not $9$). The number of strings of $j$ digits with digit sum $\sigma\le9$ is $\binom{\sigma+j-1}{j-1}$.</p><ul class="ct-ul"><li><p>$k=1$: $t\mid8$, so $s(p)\in\{0,1,3,7\}$ with $p$ of $3$ digits (a digit sum $\le7$ never has last digit $9$): $1+3+10+36=50$.</p></li><li><p>$k=2$: $t\mid17$, so $s(p)\in\{0,16\}$ with $p$ of $2$ digits, last digit not $9$: $00$, $88$, $97$: $3$.</p></li><li><p>$k=3$: $t\mid26$, so $s(p)\in\{0,1,12,25\}$ with $p$ a single digit other than $9$: $p=0,1$: $2$.</p></li><li><p>$k=4$: $n=9999$, $s(n+1)=1$ divides $36$: $1$.</p></li></ul><p>The prefix $p=0\cdots0$ gives $n=9,99,999$, which are positive, so all are allowed. The total is $50+3+2+1=\boxed{56}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p2">
+<h3>Problem 7</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Combinatorics &middot; LPS VI, Chapter 6: Casework, Complement, and Constructive Counting &middot; Exhaustive Casework &middot; also Individual Round B, Problem 11</div>
+<div class="ct-text"><p>Consider a bijection $f:\{1,2,\dots,7\}\to\{1,2,\dots,7\}$ such that for every $x$, either $x\mid f(x)$ or $f(x)\mid x$. Compute the number of possible functions $f$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$41$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Remove $1$ from its cycle)</h4>
+<p>Call $x,y$ <em>compatible</em> if $x\mid y$ or $y\mid x$. Every number is compatible with $1$ and with itself. Among $2,\dots,7$ the other compatible pairs are $\{2,4\}$, $\{2,6\}$, $\{3,6\}$; the numbers $5$ and $7$ are compatible only with $1$ and themselves.</p><p><em>Removing $1$.</em> Let $b=f^{-1}(1)$ and $a=f(1)$. Define $g$ on $\{2,\dots,7\}$ by $g(b)=a$ if $b\ne1$, and $g(x)=f(x)$ otherwise (that is, cut $1$ out of its cycle). If $f(1)=1$, $g$ is a valid permutation of $\{2,\dots,7\}$. If $f(1)\ne1$, $g$ is a permutation of $\{2,\dots,7\}$ in which every $x\ne b$ goes to a compatible number, while $g(b)$ is arbitrary; and conversely any such $g$ and choice of $b$ give back a valid $f$ (insert $1$ between $b$ and $g(b)$; $b$ and $g(b)$ are compatible with $1$). So the answer is $Q+\sum_{b=2}^{7}Q_b$, where $Q$ counts valid permutations of $\{2,\dots,7\}$ and $Q_b$ those in which $b$ is free.</p><p><em>The numbers $5$, $7$.</em> If $5$ is not free, it must be fixed; if $5$ is free, all of $2,3,4,6,7$ map into $\{2,3,4,6,7\}$ (no number other than $5$ is compatible with $5$), so again $g(5)=5$. The same holds for $7$. So everything happens on $\{2,3,4,6\}$, with allowed images $2\to\{2,4,6\}$, $3\to\{3,6\}$, $4\to\{2,4\}$, $6\to\{2,3,6\}$.</p><p><em>No free number</em> ($Q$, also $Q_5$ and $Q_7$). If $g(3)=3$: on $\{2,4,6\}$ we get the identity, $(2\,4)$ and $(2\,6)$; if $g(3)=6$, then only $6$ can go to $3$, so $g(6)=3$, and $\{2,4\}$ gives $2$ ways. So $Q=Q_5=Q_7=5$.</p><p><em>One free number.</em> Choose the images of the other three numbers injectively; the free number takes the leftover.</p><ul class="ct-ul"><li><p>$b=2$: $(g(3),g(4),g(6))\in\{(3,2,6),(3,4,2),(3,4,6),(6,4,2),(6,2,3),(6,4,3)\}$: $Q_2=6$.</p></li><li><p>$b=3$: $(g(2),g(4),g(6))\in\{(4,2,3),(4,2,6),(6,2,3),(2,4,3),(2,4,6),(6,4,2),(6,4,3)\}$: $Q_3=7$.</p></li><li><p>$b=4$: $(g(2),g(3),g(6))\in\{(2,3,6),(4,3,2),(4,3,6),(6,3,2),(2,6,3),(4,6,2),(4,6,3)\}$: $Q_4=7$.</p></li><li><p>$b=6$: $(g(2),g(3),g(4))\in\{(2,3,4),(4,3,2),(6,3,2),(6,3,4),(2,6,4),(4,6,2)\}$: $Q_6=6$.</p></li></ul><p>The total is $5+(6+7+7+5+6+5)=\boxed{41}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p3">
+<h3>Problem 8</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VII scale">E</span>Geometry &middot; LPS VII, Chapter 19: Triangle Centers and Classical Triangle Geometry &middot; Angle Bisector and Median Geometry &middot; also Individual Round B, Problem 12</div>
+<div class="ct-text"><p>$\triangle ABC$ has a right angle at $A$, $AC=1$, and $AB=2$. Points $D$ and $M$ lie on $BC$ such that $AD$ and $AM$ are the angle bisector and median, respectively, from $A$ to $BC$. The reflection of $AM$ over $AD$ intersects $BC$ at $M'$. Then the value of $AM'$ can be expressed in the form $\dfrac{a\sqrt b}{c}$, where $a,b,c$ are positive integers, $b$ is squarefree, and $a,c$ are relatively prime. Compute $a+b+c$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$12$ (from $AM\'=\frac{2\sqrt5}{5}$)</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Coordinates)</h4>
+<div class="ct-fig"><img style="width:277px" src="/assets/contests/2026-27/scmc-3_s1.svg" alt="Figure for the solution"></div>
+<p>Put $A=(0,0)$, $B=(2,0)$, $C=(0,1)$. The bisector of the right angle at $A$ is the line $y=x$, and $M=\left(1,\tfrac12\right)$. Reflection in $y=x$ swaps the coordinates, so the reflected line passes through $\left(\tfrac12,1\right)$: it is $y=2x$. Line $BC$ is $\frac x2+y=1$; substituting $y=2x$ gives $x=\frac25$, $y=\frac45$. Hence
+\[AM'=\sqrt{\tfrac4{25}+\tfrac{16}{25}}=\frac{2\sqrt5}{5},\]
+so $a=2$, $b=5$, $c=5$ and $a+b+c=\boxed{12}$.</p>
+<h4>Solution 2 (The reflected median is the altitude)</h4>
+<p>The midpoint $M$ of the hypotenuse is the circumcentre, so $MA=MB$ and $\angle MAB=\angle B$. Reflecting in the bisector of $\angle A$ exchanges the rays $AB$ and $AC$, so the reflected line $AM'$ makes the same angle with $AC$: $\angle M'AC=\angle B$. In triangle $AM'C$,
+\[\angle AM'C=180^\circ-\angle C-\angle B=90^\circ,\]
+since $\angle B+\angle C=90^\circ$. So $AM'$ is the altitude from $A$, and comparing two expressions for twice the area,
+\[AM'=\frac{AB\cdot AC}{BC}=\frac{2\cdot1}{\sqrt5}=\frac{2\sqrt5}{5}.\]
+Thus $a+b+c=2+5+5=\boxed{12}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p4">
+<h3>Problem 9</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 12: Exponential Congruences and Order Structure &middot; Orders and Primitive Behavior &middot; also Individual Round B, Problem 15</div>
+<div class="ct-text"><p>For each integer $m$ with $1\le m\le2026$, define
+\[g(m)=\gcd\left(2^m+1,\ 2^{2026}+1\right).\]
+Find the remainder when
+\[\sum_{m=1}^{2026}g(m)\]
+is divided by $1000$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$914$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (The gcd of $2^m+1$ and $2^n+1$)</h4>
+<p><em>Lemma.</em> Let $n\ge1$, $m\ge1$, $h=\gcd(m,n)$, $m=hm'$, $n=hn'$. Then $\gcd(2^m+1,2^n+1)=2^h+1$ if $m'$ and $n'$ are both odd, and $1$ otherwise.</p><p><em>Proof.</em> Let $d=\gcd(2^m+1,2^n+1)$; $d$ is odd. Since $d\mid 2^{2m}-1$ and $d\mid2^{2n}-1$, and $\gcd(2^{2m}-1,2^{2n}-1)=2^{\gcd(2m,2n)}-1=2^{2h}-1$ (Euclid's algorithm on the exponents), we get $d\mid(2^h-1)(2^h+1)$. Since $h\mid m$, $2^h-1$ divides $2^m-1$, so any common divisor of $2^m+1$ and $2^h-1$ divides $(2^m+1)-(2^m-1)=2$; both numbers are odd, so $\gcd(2^m+1,2^h-1)=1$. Hence $d$ is coprime to $2^h-1$, and $d\mid2^h+1$.</p><ul class="ct-ul"><li><p>If $m'$ is even, then $2^m=(2^{2h})^{m'/2}\equiv1\pmod{2^h+1}$, so modulo $d$ we have $-1\equiv2^m\equiv1$, and $d\mid2$, i.e. $d=1$. The same if $n'$ is even.</p></li><li><p>If $m',n'$ are odd, then $2^h+1\mid(2^h)^{m'}+1=2^m+1$ (as $x+1\mid x^k+1$ for odd $k$), and likewise $2^h+1\mid2^n+1$; so $d=2^h+1$. $\square$</p></li></ul><p><em>Apply it with $n=2026=2\cdot1013$</em> ($1013$ is prime). Then $h=\gcd(m,2026)\in\{1,2,1013,2026\}$, and $n'=2026/h$ is odd only for $h\in\{2,2026\}$.</p><ul class="ct-ul"><li><p>$m=2026$: $g(m)=2^{2026}+1$.</p></li><li><p>$h=2$ with $m'=m/2$ odd: $m\equiv2\pmod 4$ and $m\ne2026$. The numbers $2,6,\dots,2026$ are $507$, so there are $506$ such $m$, each with $g(m)=5$.</p></li><li><p>All other $2026-507=1519$ values give $g(m)=1$.</p></li></ul><p>So $\sum g(m)=2^{2026}+1+5\cdot506+1519=2^{2026}+4050$.</p><p>Finally $2^{2026}\bmod1000$: it is $\equiv0\pmod8$, and modulo $125$ (where $2^{100}\equiv1$ by Euler) $2^{2026}\equiv2^{26}=67108864\equiv114$. The number below $1000$ that is $\equiv114\pmod{125}$ and divisible by $8$ is $864$. Hence the sum is $\equiv864+4050\equiv\boxed{914}\pmod{1000}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p5">
+<h3>Problem 12</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 19: Triangle Centers and Classical Triangle Geometry &middot; Angle Bisector and Median Geometry</div>
+<div class="ct-text"><p>Consider triangle $ABC$ with $AB=6$, $AC=8$, and suppose the angle bisector of $\angle BAC$ meets $BC$ at $D$. Denote the inradius of $\triangle ABD$ by $r$ and the radius of the $A$-excircle of $\triangle ADC$ by $R$. Given that
+\[\frac rR=\frac12,\]
+find $BC$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$7$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Tangent lengths from $A$)</h4>
+<div class="ct-fig"><img style="width:256px" src="/assets/contests/2026-27/scmc-5_s1.svg" alt="Figure for the solution"></div>
+<p>Let $a=BC$, $d=AD$. By the angle bisector theorem $BD=\frac{3a}{7}$ and $DC=\frac{4a}{7}$.</p><p>Both circles are inscribed in an angle of size $\frac12\angle A$ with vertex $A$: the incircle of $ABD$ in the angle $BAD$, the $A$-excircle of $ADC$ in the angle $DAC$. A circle of radius $\rho$ inscribed in an angle $\theta$ touches its sides at distance $\rho\cot\frac\theta2$ from the vertex, so the radii are in the same ratio as the tangent lengths from $A$:
+\[\frac rR=\frac{\tfrac12(AB+AD-BD)}{\tfrac12(AD+DC+CA)}=\frac{6+d-\frac{3a}7}{8+d+\frac{4a}7}.\]
+(The tangent length from $A$ to the incircle is $s-BD$, and to the $A$-excircle it is the semiperimeter.) Setting this equal to $\frac12$:
+\[12+2d-\tfrac{6a}{7}=8+d+\tfrac{4a}{7}\quad\Longrightarrow\quad d=\tfrac{10a}{7}-4.\]
+The length of the bisector is given by $d^2=AB\cdot AC-BD\cdot DC=48-\frac{12a^2}{49}$ (Stewart's theorem). Hence
+\[\left(\tfrac{10a}{7}-4\right)^2=48-\tfrac{12a^2}{49}\iff\tfrac{16a^2}{7}-\tfrac{80a}{7}-32=0\iff a^2-5a-14=0,\]
+so $a=7$ (the other root is negative). Then $d=6&gt;0$, and $a=7$ does give a triangle. So $BC=\boxed{7}$.</p>
+<h4>Solution 2 (Areas and semiperimeters)</h4>
+<p>Let $a=BC$, $d=AD$, so $BD=\frac{3a}7$, $DC=\frac{4a}7$, and $d^2=48-\frac{12a^2}{49}$ (Stewart's theorem). Let $\phi=\frac12\angle BAC$. Then
+\[[ABD]=\tfrac12\cdot6d\sin\phi,\qquad [ADC]=\tfrac12\cdot8d\sin\phi,\]
+so $[ADC]=\frac43[ABD]$. With $s_1=\frac12(6+d+\frac{3a}7)$ the semiperimeter of $ABD$ and $s_2=\frac12(8+d+\frac{4a}7)$ that of $ADC$, we have $r=\frac{[ABD]}{s_1}$ and $R=\frac{[ADC]}{s_2-DC}$. Therefore
+\[\frac rR=\frac{3}{4}\cdot\frac{s_2-DC}{s_1}=\frac34\cdot\frac{8+d-\frac{4a}7}{6+d+\frac{3a}7}=\frac12,\]
+which gives $3\left(8+d-\frac{4a}7\right)=2\left(6+d+\frac{3a}{7}\right)$, that is, $d=\frac{18a}{7}-12$. Combining with $d^2=48-\frac{12a^2}{49}$:
+\[\left(\tfrac{18a}{7}-12\right)^2=48-\tfrac{12a^2}{49}\iff 336a^2-3024a+4704=0\iff a^2-9a+14=0,\]
+so $a\in\{2,7\}$. For $a=2$ we get $d=\frac{36}{7}-12&lt;0$, impossible. Hence $BC=\boxed{7}$ (and then $d=6$).</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p6">
+<h3>Problem 14</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 39: Graph Theory and Structural Combinatorics &middot; Basic Graph Properties</div>
+<div class="ct-text"><p>The vertices of a regular decagon are labeled $1,2,\dots,10$ in clockwise order. A <em>noncrossing perfect matching</em> is a set of $5$ chords connecting the vertices in pairs so that every vertex is an endpoint of exactly one chord and no two chords intersect in their interiors. A chord is called <em>short</em> if it connects two adjacent vertices of the decagon. How many noncrossing perfect matchings have exactly $2$ short chords?</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$5$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (The regions form a tree)</h4>
+<div class="ct-fig"><img style="width:228px" src="/assets/contests/2026-27/scmc-6_s1.svg" alt="Figure for the solution"></div>
+<p>The $5$ chords cut the decagon into $6$ regions. Join two regions when they share a chord; since every chord separates the decagon into two parts, this graph is a tree with $6$ vertices and $5$ edges.</p><p>A region is a leaf (it touches only one chord) exactly when it is cut off by a single chord with no other vertex on its side, i.e. by a short chord; and each short chord cuts off exactly one such region (the other side contains $8$ vertices and further chords). So the number of short chords equals the number of leaves of the tree.</p><p>A tree with exactly $2$ leaves is a path. Then every region other than the two end regions touches exactly two chords, say $PQ$ and $P'Q'$, and two arcs of the boundary. These arcs contain no vertex strictly between the chord endpoints (such a vertex would need a chord inside the region), so $P'$ is adjacent to $P$ and $Q'$ to $Q$. Starting from a short chord $\{i,i+1\}$, the matching is forced to be
+\[\{i,i+1\},\ \{i-1,i+2\},\ \{i-2,i+3\},\ \{i-3,i+4\},\ \{i-4,i+5\}\]
+(indices mod $10$): five parallel chords. Its short chords are exactly the first and the last, so it does have exactly $2$.</p><p>There are $10$ choices of the short chord $\{i,i+1\}$, and each such matching contains exactly $2$ short chords, so it is counted twice. The answer is $10/2=\boxed{5}$.</p>
+</div></details>
+</section>
+<h2 class="ct-group" id="individual-round-b">Individual Round B</h2>
+<section class="ct-problem" id="p7">
+<h3>Problem 8</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 4: Divisibility and Prime Structure &middot; GCD and LCM Structure</div>
+<div class="ct-text"><p>Let $N=2^8\cdot3^7\cdot5^4$. Count the ordered pairs $(a,b)$ of positive divisors of $N$ such that $ab$ is a perfect square and $\dfrac{\operatorname{lcm}(a,b)}{\gcd(a,b)}$ is a perfect cube.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$900$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (One prime at a time)</h4>
+<p>For a prime $p\in\{2,3,5\}$ let $x,y$ be the exponents of $p$ in $a,b$, with $0\le x,y\le e$ where $e=8,7,4$ respectively. The exponent of $p$ in $ab$ is $x+y$, and in $\frac{\operatorname{lcm}(a,b)}{\gcd(a,b)}$ it is $\max(x,y)-\min(x,y)=|x-y|$. So the conditions are, for each prime separately,
+\[x+y\ \text{even}\quad\text{and}\quad 3\mid x-y,\qquad\text{i.e.}\qquad x\equiv y\pmod 6.\]
+Count pairs $(x,y)$ in $\{0,\dots,e\}$ with $x\equiv y\pmod6$ by residue class: a class with $k$ members contributes $k^2$.</p><ul class="ct-ul"><li><p>$e=8$: classes $\{0,6\},\{1,7\},\{2,8\},\{3\},\{4\},\{5\}$: $3\cdot4+3=15$.</p></li><li><p>$e=7$: $\{0,6\},\{1,7\},\{2\},\{3\},\{4\},\{5\}$: $2\cdot4+4=12$.</p></li><li><p>$e=4$: five singletons: $5$.</p></li></ul><p>The choices for different primes are independent, so the number of pairs is $15\cdot12\cdot5=\boxed{900}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p8">
+<h3>Problem 9</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 27: Bijections and Structural Equivalence &middot; Explicit Bijections</div>
+<div class="ct-text"><p>Let $P$ be the number of lattice paths from $(0,0)$ to $(10,10)$ using only unit steps $U=(0,1)$ and $R=(1,0)$ that never go above the line $y=x+2$ and that touch the line $y=x+2$ at least once. Compute $P$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$48450$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Reflection principle, twice)</h4>
+<p>All paths have $20$ steps, $10$ of each kind.</p><p><em>Paths touching a line.</em> Let $c\ge1$. A path from $(0,0)$ to $(10,10)$ touches $y=x+c$ if and only if it meets that line; reflect the part of the path up to its first point on the line in the line $y=x+c$ (this swaps $U$ and $R$ steps). The result is a path from $(-c,c)$ to $(10,10)$, and every path from $(-c,c)$ to $(10,10)$ must cross the line (it starts above it and ends below it), so the map is a bijection. Paths from $(-c,c)$ to $(10,10)$ have $10+c$ steps $R$ and $10-c$ steps $U$, so there are $\binom{20}{10-c}$ of them.</p><p>A path never goes above $y=x+2$ and touches it exactly when it touches $y=x+2$ but not $y=x+3$ (a lattice path that goes above $y=x+2$ must touch $y=x+3$, and to reach $y=x+3$ it must first touch $y=x+2$). Hence
+\[P=\binom{20}{8}-\binom{20}{7}=125970-77520=\boxed{48450}.\]</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p9">
+<h3>Problem 14</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VII scale">E</span>Combinatorics &middot; LPS VII, Chapter 35: Generating Functions and Algebraic Encoding &middot; Extraction of Coefficients</div>
+<div class="ct-text"><p>Let
+\[F(x)=\left(1+x+x^3\right)^6.\]
+When $F(x)$ is expanded, let $S$ be the sum of the coefficients of all terms $x^k$ for which $3\mid k$. Compute $S$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$225$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Roots of unity filter)</h4>
+<p>Let $\omega=e^{2\pi i/3}$. For a polynomial $F(x)=\sum c_kx^k$,
+\[\frac{F(1)+F(\omega)+F(\omega^2)}{3}=\sum_{3\mid k}c_k,\]
+because $1+\omega^k+\omega^{2k}$ is $3$ when $3\mid k$ and $0$ otherwise. Here $\omega^3=1$, so $1+\omega+\omega^3=2+\omega=\frac32+\frac{\sqrt3}{2}i=\sqrt3\,e^{i\pi/6}$, hence $F(\omega)=(\sqrt3)^6e^{i\pi}=-27$, and likewise $F(\omega^2)=\overline{F(\omega)}=-27$. With $F(1)=3^6=729$,
+\[S=\frac{729-27-27}{3}=\boxed{225}.\]</p>
+<h4>Solution 2 (Count the choices)</h4>
+<p>Expanding $(1+x+x^3)^6$ means choosing one of $1$, $x$, $x^3$ from each of the six factors; each choice sequence contributes $1$ to the coefficient of $x^k$, where $k$ is the total exponent. The exponents $0$ and $3$ are $\equiv0\pmod3$, so $k\equiv j\pmod3$, where $j$ is the number of factors from which $x$ is chosen. Hence $S$ is the number of choice sequences with $j\in\{0,3,6\}$: choose the $j$ factors giving $x$, and each of the others gives $1$ or $x^3$:
+\[S=\binom60 2^6+\binom63 2^3+\binom66 2^0=64+160+1=\boxed{225}.\]</p>
+</div></details>
+</section>
+<h2 class="ct-group" id="team-round-a">Team Round A</h2>
+<section class="ct-problem" id="p10">
+<h3>Problem 3</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Algebra &middot; LPS VII, Chapter 9: Polynomials and Root-Coefficient Strategy &middot; Remainder, Factor, and Evaluation Logic &middot; also Team Round B, Problem 7</div>
+<div class="ct-text"><p>For how many ordered quadruples of integers $(a,b,c,d)$ satisfying $-10\le a,b,c,d\le10$ is the polynomial
+\[(x-a)(x-b)\left(x^2+cx+d\right)\]
+nonnegative for all real $x$?</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$2091$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Equal or distinct linear roots)</h4>
+<p>Let $q(x)=x^2+cx+d$ and $f(x)=(x-a)(x-b)q(x)$.</p><p><em>Case $a=b$.</em> Then $f(x)=(x-a)^2q(x)\ge0$ for all $x$ if and only if $q(x)\ge0$ for all $x\ne a$, which (by continuity of $q$) means $q(x)\ge0$ for all $x$, i.e. $c^2\le4d$. For each $c$ the admissible $d\le10$ are $d\ge\lceil c^2/4\rceil$:
+\[\begin{array}{c|ccccccc}
+|c| &amp; 0&amp;1&amp;2&amp;3&amp;4&amp;5&amp;6\\\hline
+\#d &amp; 11&amp;10&amp;10&amp;8&amp;7&amp;4&amp;2
+\end{array}\]
+and $|c|\ge7$ is impossible ($c^2/4&gt;10$). Counting both signs of $c$: $11+2(10+10+8+7+4+2)=93$ pairs $(c,d)$. With $21$ choices of $a$ this gives $21\cdot93=1953$.</p><p><em>Case $a\ne b$</em>, say $a&lt;b$. On $(a,b)$ we have $(x-a)(x-b)&lt;0$, so we need $q\le0$ there, and $q\ge0$ outside $[a,b]$. By continuity $q(a)=0=q(b)$, so $q(x)=(x-a)(x-b)$; conversely then $f=((x-a)(x-b))^2\ge0$. So we need $c=-(a+b)$ and $d=ab$ in $[-10,10]$: count ordered pairs $a\ne b$ in $[-10,10]$ with $|a+b|\le10$ and $|ab|\le10$.</p><ul class="ct-ul"><li><p>One of them is $0$: $|a+b|\le10$ and $ab=0$ hold automatically: $20+20=40$ pairs.</p></li><li><p>Both nonzero: the number of ordered pairs of positive integers $(u,v)$ with $uv\le10$ is $\sum_{u=1}^{10}\lfloor10/u\rfloor=27$; with signs, $4\cdot27=108$ pairs with $|ab|\le10$. Remove $a=b$ ($a\in\{\pm1,\pm2,\pm3\}$: $6$) and $|a+b|=11$ ($(1,10),(10,1),(-1,-10),(-10,-1)$: $4$; for all other pairs $|a+b|\le|a|+|b|\le10$). This leaves $98$.</p></li></ul><p>So this case gives $138$, and the total is $1953+138=\boxed{2091}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p11">
+<h3>Problem 4</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 27: Bijections and Structural Equivalence &middot; Implicit or Structural Correspondence &middot; also Team Round B, Problem 8</div>
+<div class="ct-text"><p>A binary necklace of length $10$ is a cyclic arrangement of $10$ beads, each colored either black or white. A necklace is <em>valid</em> if no two adjacent beads are both black, where bead $10$ is adjacent to bead $1$. Two necklaces are considered the same if one can be rotated to obtain the other. Compute the number of distinct valid necklaces.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$15$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Burnside with Lucas numbers)</h4>
+<p>Let $L_m$ be the number of strings of $m$ beads (positions $1,\dots,m$, with $m$ adjacent to $1$) with no two adjacent blacks. If bead $1$ is white, the rest is a row of $m-1$ beads with no two adjacent blacks; if bead $1$ is black, beads $2$ and $m$ are white and the middle $m-3$ beads form such a row. A row of $k$ beads can be filled in $F_{k+2}$ ways (Fibonacci numbers $F_1=F_2=1$; split on the first bead). Hence $L_m=F_{m+1}+F_{m-1}$ for $m\ge3$: $L_{10}=89+34=123$ and $L_5=8+3=11$. Directly, $L_2=3$ (both white, or exactly one black) and $L_1=1$ (one bead adjacent to itself must be white).</p><p>By Burnside's lemma, the number of necklaces is the average number of valid strings fixed by the $10$ rotations. A string is fixed by rotation by $r$ positions exactly when it has period $g=\gcd(r,10)$, i.e. it repeats a block of $g$ beads; it is valid exactly when the block is valid as a cyclic string of length $g$. So rotation by $r$ fixes $L_{\gcd(r,10)}$ strings:
+\[\frac{1}{10}\Bigl(\underbrace{L_{10}}_{r=0}+\underbrace{4L_1}_{r=1,3,7,9}+\underbrace{4L_2}_{r=2,4,6,8}+\underbrace{L_5}_{r=5}\Bigr)=\frac{123+4+12+11}{10}=\boxed{15}.\]</p>
+<h4>Solution 2 (Classify by the number of black beads)</h4>
+<p>Let $k$ be the number of black beads; then $0\le k\le5$. For $k\ge1$, going around the circle, the black beads are separated by gaps of white beads $g_1,\dots,g_k\ge1$ with $g_1+\cdots+g_k=10-k$, and a necklace is a cyclic sequence of gaps up to rotation.</p><ul class="ct-ul"><li><p>$k=0$: $1$; $k=1$: $1$.</p></li><li><p>$k=2$: $\{g_1,g_2\}$ with sum $8$: $\{1,7\},\{2,6\},\{3,5\},\{4,4\}$: $4$.</p></li><li><p>$k=3$: compositions of $7$ into $3$ parts: $\binom62=15$; none is fixed by a rotation ($3\nmid7$), so $15/3=5$.</p></li><li><p>$k=4$: compositions of $6$ into $4$ parts: $\binom53=10$; the two of period $2$, $(1,2,1,2)$ and $(2,1,2,1)$, form one necklace, and the other $8$ form $8/4=2$: $3$.</p></li><li><p>$k=5$: all gaps are $1$: $1$.</p></li></ul><p>Total: $1+1+4+5+3+1=\boxed{15}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p12">
+<h3>Problem 5</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 21: Arithmetic Functions and Multiplicative Structure &middot; Euler Totient and Related Functions &middot; also Team Round B, Problem 9</div>
+<div class="ct-text"><p>Find the sum of all positive integers $n$ such that $\varphi(n)=4\sqrt n$.</p><p><em>The Euler totient function $\varphi(n)$ returns the number of positive integers not exceeding $n$ and relatively prime to $n$.</em></p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$333$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Reduce to $\varphi(m)=4$)</h4>
+<p>Since $\varphi(n)$ is an integer, $4\sqrt n$ is an integer, so $\sqrt n$ is rational and hence $n=m^2$ for a positive integer $m$. The numbers $m^2$ and $m$ have the same prime factors, so
+\[\varphi(m^2)=m^2\prod_{p\mid m}\Bigl(1-\frac1p\Bigr)=m\,\varphi(m).\]
+The equation becomes $m\varphi(m)=4m$, i.e. $\varphi(m)=4$.</p><p><em>Solving $\varphi(m)=4$.</em> If $p^e\parallel m$, then $p^{e-1}(p-1)\mid4$. So $p-1\mid4$, i.e. $p\in\{2,3,5\}$, with $e\le1$ for $p=3,5$ and $e\le3$ for $p=2$. Write $m=2^x3^y5^z$.</p><ul class="ct-ul"><li><p>$z=1$: the factor $4$ comes from $5$, so $\varphi(2^x3^y)=1$: $m=5$ or $m=10$.</p></li><li><p>$z=0$, $y=1$: $\varphi(2^x)=2$, so $x=2$: $m=12$.</p></li><li><p>$z=0$, $y=0$: $\varphi(2^x)=4$, so $x=3$: $m=8$.</p></li></ul><p>So $m\in\{5,8,10,12\}$ and $n\in\{25,64,100,144\}$ (check: $\varphi(25)=20$, $\varphi(64)=32$, $\varphi(100)=40$, $\varphi(144)=48$). The sum is $25+64+100+144=\boxed{333}$.</p>
+</div></details>
+</section>
+<h2 class="ct-group" id="team-round-b">Team Round B</h2>
+<section class="ct-problem" id="p13">
+<h3>Problem 2</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 4: Divisibility and Prime Structure &middot; GCD and LCM Structure</div>
+<div class="ct-text"><p>If $\gcd\left(a^3,b^2\right)=64000000$, evaluate the sum of all possible values of $\gcd(a,b)$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$16800$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Exponent of each prime)</h4>
+<p>We have $64000000=2^{12}\cdot5^6$. For a prime $p$ let $x,y$ be its exponents in $a,b$. Then the exponent of $p$ in $\gcd(a^3,b^2)$ is $\min(3x,2y)$, and in $\gcd(a,b)$ it is $\min(x,y)$.</p><ul class="ct-ul"><li><p>$p\ne2,5$: $\min(3x,2y)=0$, so $x=0$ or $y=0$, and $\min(x,y)=0$.</p></li><li><p>$p=2$: $\min(3x,2y)=12$. Either $3x=12\le2y$, i.e. $x=4$, $y\ge6$, giving $\min=4$; or $2y=12\le3x$, i.e. $y=6$, $x\ge4$, giving $\min(x,6)\in\{4,5,6\}$. All of $4,5,6$ occur (e.g. $x=4,5,6$ with $y=6$).</p></li><li><p>$p=5$: $\min(3x,2y)=6$. Either $x=2$, $y\ge3$ ($\min=2$), or $y=3$, $x\ge2$ ($\min\in\{2,3\}$).</p></li></ul><p>The two primes can be chosen independently, so the possible values of $\gcd(a,b)$ are $2^i5^j$ with $i\in\{4,5,6\}$, $j\in\{2,3\}$, and their sum is
+\[(2^4+2^5+2^6)(5^2+5^3)=112\cdot150=\boxed{16800}.\]</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p14">
+<h3>Problem 6</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 36: Coordinate Geometry and Analytic Representation &middot; Cartesian Coordinate Setup</div>
+<div class="ct-text"><p>Three circles have radii $1$, $2$, and $3$, and they are mutually externally tangent. A fourth circle lies in the interior of the triangle connecting the centers of the first three circles and is externally tangent to all three. Its radius can be expressed in the form $\dfrac ab$ for relatively prime positive integers $a,b$; compute $a+b$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$29$ (radius $\frac{6}{23}$)</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Coordinates)</h4>
+<div class="ct-fig"><img style="width:268px" src="/assets/contests/2026-27/scmc-14_s1.svg" alt="Figure for the solution"></div>
+<p>The centres $O_1,O_2,O_3$ (radii $1,2,3$) are at distances $O_1O_2=3$, $O_1O_3=4$, $O_2O_3=5$, a right triangle with the right angle at $O_1$. Put $O_1=(0,0)$, $O_2=(3,0)$, $O_3=(0,4)$, and let the fourth circle have centre $(x,y)$ and radius $\rho$. External tangency gives
+\[x^2+y^2=(1+\rho)^2,\qquad(x-3)^2+y^2=(2+\rho)^2,\qquad x^2+(y-4)^2=(3+\rho)^2.\]
+Subtracting the first equation from the other two: $-6x+9=3+2\rho$ and $-8y+16=8+4\rho$, so $x=1-\frac\rho3$, $y=1-\frac\rho2$. Substituting into the first equation:
+\[\left(1-\tfrac\rho3\right)^2+\left(1-\tfrac\rho2\right)^2=(1+\rho)^2\iff 23\rho^2+132\rho-36=0\iff(23\rho-6)(\rho+6)=0.\]
+So $\rho=\frac{6}{23}$, with centre $\left(\frac{21}{23},\frac{20}{23}\right)$, which is inside the triangle ($\frac{x}{3}+\frac y4&lt;1$). The answer is $6+23=\boxed{29}$.</p>
+<h4>Solution 2 (Descartes circle theorem)</h4>
+<p>For four mutually externally tangent circles with curvatures $k_i=1/r_i$, Descartes' theorem states $(k_1+k_2+k_3+k_4)^2=2(k_1^2+k_2^2+k_3^2+k_4^2)$, whose solution for $k_4$ is
+\[k_4=k_1+k_2+k_3\pm2\sqrt{k_1k_2+k_2k_3+k_3k_1}.\]
+The small circle in the gap between the three circles corresponds to the plus sign (the minus sign gives the circle that encloses or lies outside the three). With $k_1,k_2,k_3=1,\frac12,\frac13$: $k_1+k_2+k_3=\frac{11}6$ and $k_1k_2+k_2k_3+k_3k_1=\frac12+\frac16+\frac13=1$, so
+\[k_4=\frac{11}{6}+2=\frac{23}{6},\qquad r_4=\frac{6}{23}.\]
+This circle lies in the curvilinear gap bounded by the three circles, which is inside the triangle of centres. The answer is $6+23=\boxed{29}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p15">
+<h3>Problem 10</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 3: Foundational Angle and Configuration Chasing &middot; Cyclic Quadrilateral Recognition</div>
+<div class="ct-text"><p>Consider acute triangle $ABC$ with $AB=6$, $AC=10$. Denote the incenter of $\triangle ABC$ as $I$. The circumcircles of $\triangle BIC$ and $\triangle AIC$ meet segments $AC$ and $BC$ at points $E$ and $F$ respectively such that $EF\perp BC$. The length of $BC$ can be expressed as $\dfrac{a+\sqrt b}{c}$, where $a,b,c$ are positive integers, $\gcd(a,c)=1$, and $b$ is squarefree; find $a+b+c$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$500$ (from $BC=\frac{15+\sqrt{481}}{4}$)</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Locate $E$ and $F$, then compute)</h4>
+<div class="ct-fig"><img style="width:334px" src="/assets/contests/2026-27/scmc-15_s1.svg" alt="Figure for the solution"></div>
+<p>Write $a=BC$ and let $\beta=\angle B$, $\gamma=\angle C$, $\alpha=\angle A$.</p><p><em>$E$ is the point of segment $AC$ with $AE=AB=6$.</em> Let $E_0$ be that point (it lies on segment $AC$ since $6&lt;10$). Triangles $ABI$ and $AE_0I$ are congruent (SAS: $AB=AE_0$, common side $AI$, equal angles $\frac\alpha2$ at $A$), so $\angle AE_0I=\angle ABI=\frac\beta2$, hence $\angle IE_0C=180^\circ-\frac\beta2$. Since $\angle IBC=\frac\beta2$, the quadrilateral $BCE_0I$ has opposite angles at $B$ and $E_0$ adding to $180^\circ$, so it is cyclic: $E_0$ lies on the circle $BIC$. A line meets a circle at most twice, and line $AC$ meets this circle at $C$ and $E_0$, so $E=E_0$.</p><p><em>$F$ is the point of segment $BC$ with $BF=BA=6$</em>, by the same argument with the roles of $A$ and $B$ exchanged (it lies on segment $BC$ because $a&gt;6$, see below).</p><p><em>The condition.</em> $EF\perp BC$ means that $F$ is the foot of the perpendicular from $E$ to $BC$. Since $CE=10-6=4$ and the angle at $C$ is acute, this foot is at distance $4\cos\gamma$ from $C$, so
+\[a-6=CF=4\cos\gamma=4\cdot\frac{a^2+100-36}{20a}=\frac{a^2+64}{5a}.\]
+Hence $5a^2-30a=a^2+64$, i.e. $2a^2-15a-32=0$, and $a=\frac{15+\sqrt{481}}{4}\approx9.23$ (the other root is negative). This $a$ exceeds $6$ and gives an acute triangle ($a^2\approx85.2&lt;136=6^2+10^2$ and $a^2+36&gt;100$). So $a+b+c=15+481+4=\boxed{500}$.</p>
+<h4>Solution 2 (Chords through the vertex $C$)</h4>
+<div class="ct-fig"><img style="width:294px" src="/assets/contests/2026-27/scmc-15_s2.svg" alt="Figure for the solution"></div>
+<p>Write $x=BC$ and $s=\tfrac{x+16}{2}$ for the semiperimeter.</p><p><strong>A lemma about circles through $C$ and $I$.</strong> Put $C$ at the origin and let $\mathbf a$, $\mathbf b$ be the unit vectors from $C$ along $CA$ and $CB$; let $\mathbf w=\overrightarrow{CI}$. A circle through $C$ with centre $\tfrac12\mathbf u$ has equation $|X-\tfrac12\mathbf u|^2=\tfrac14|\mathbf u|^2$, that is,
+\[|X|^2=\mathbf u\cdot X .\]
+For a unit vector $\mathbf v$, the point $X=t\mathbf v$ lies on it exactly when $t^2=t\,(\mathbf u\cdot\mathbf v)$; so the line through $C$ in direction $\mathbf v$ meets the circle again at the point $t\mathbf v$ with $t=\mathbf u\cdot\mathbf v$ (a signed length: positive means on the ray from $C$ in direction $\mathbf v$).</p><p>Now suppose the circle also passes through $I$, so $|\mathbf w|^2=\mathbf u\cdot\mathbf w$. Because $CI$ bisects the angle $ACB$, the vector $\mathbf a+\mathbf b$ (the diagonal of a rhombus with sides $\mathbf a,\mathbf b$) points along $CI$: $\mathbf a+\mathbf b=\lambda\mathbf w$ for some $\lambda&gt;0$. Hence
+\[\mathbf u\cdot\mathbf a+\mathbf u\cdot\mathbf b=\lambda\,\mathbf u\cdot\mathbf w=\lambda|\mathbf w|^2=\mathbf w\cdot\mathbf a+\mathbf w\cdot\mathbf b .\]
+Here $\mathbf w\cdot\mathbf a$ is the length of the projection of $CI$ on $CA$, that is, the distance from $C$ to the point $T$ where the incircle touches $CA$; similarly $\mathbf w\cdot\mathbf b=CU$, where $U$ is the touch point on $CB$. By equal tangents, $CT=CU=s-AB=\tfrac{x+4}{2}$. So:</p><div class="ct-center"><p><em>every circle through $C$ and $I$ cuts the lines $CA$ and $CB$ again at signed distances from $C$ whose sum is $x+4$.</em></p></div><p><strong>Locating $E$ and $F$.</strong> The circle $BIC$ meets line $CB$ again at $B$, at distance $x$; so it meets line $CA$ again at signed distance $x+4-x=4$. Thus $E$ is the point of segment $CA$ with $CE=4$. The circle $AIC$ meets line $CA$ again at $A$, at distance $10$; so it meets line $CB$ again at signed distance $x+4-10=x-6$, and $F$ is the point of ray $CB$ with $CF=x-6$ (on the segment when $6&lt;x$).</p><p><strong>The condition.</strong> $EF\perp BC$ means that $F$ is the foot of the perpendicular from $E$ to $BC$, which lies at signed distance $CE\cos C=4\cos C$ from $C$. By the law of cosines $\cos C=\dfrac{x^2+10^2-6^2}{2\cdot10\cdot x}=\dfrac{x^2+64}{20x}$, so
+\[x-6=\frac{x^2+64}{5x},\qquad 5x^2-30x=x^2+64,\qquad 2x^2-15x-32=0 .\]
+The positive root is $x=\dfrac{15+\sqrt{481}}{4}\approx9.23$. It exceeds $6$, so $F$ lies on segment $BC$, and the triangle is acute ($x^2+36&gt;100$ and $x^2&lt;136$). Since $481=13\cdot37$ is squarefree, $a+b+c=15+481+4=\boxed{500}$.</p>
+</div></details>
+</section>
+<h2 class="ct-group" id="guts-round">Guts Round</h2>
+<section class="ct-problem" id="p16">
+<h3>Problem 3-3</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Combinatorics &middot; LPS VI, Chapter 42: Recursion, Paths, and Dynamic Counting &middot; Fibonacci-Type Models</div>
+<div class="ct-text"><p>Let $S$ be a subset of the first twenty positive integers such that for every two elements $x,y\in S$ we have $|x-y|\ne2$. Compute the number of possible sets $S$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$20736$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Split by parity)</h4>
+<p>Two numbers differing by $2$ have the same parity, so the condition concerns the odd numbers $1,3,\dots,19$ and the even numbers $2,4,\dots,20$ separately. In each class, listed in increasing order ($10$ numbers), the forbidden pairs are consecutive terms. So $S$ is any pair (odd part, even part) where each part is a subset of a $10$-term row with no two consecutive terms.</p><p>Let $f_k$ be the number of such subsets of a row of $k$ terms. Splitting on whether the last term is used, $f_k=f_{k-1}+f_{k-2}$, with $f_1=2$, $f_2=3$. Hence $f_3=5,\ f_4=8,\ 13,\ 21,\ 34,\ 55,\ 89$, and $f_{10}=144$. The number of sets $S$ (the empty set included) is $144^2=\boxed{20736}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p17">
+<h3>Problem 4-1</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 8: Modular Arithmetic and Congruence Methods &middot; Residue Classes and Case Analysis</div>
+<div class="ct-text"><p>How many integers $a$ with $1\le a\le2025$ satisfy that the last three digits of $a^a$ are $625$? Equivalently,
+\[a^a\equiv625\pmod{1000}.\]</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$51$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Split $1000=8\cdot125$)</h4>
+<p>Since $1000=8\cdot125$, the condition is $a^a\equiv625\equiv0\pmod{125}$ and $a^a\equiv625\equiv1\pmod 8$.</p><p><em>Modulo $125$.</em> $125\mid a^a$ forces $5\mid a$; conversely, if $5\mid a$ then $a\ge5$ and $5^a\mid a^a$, so $125\mid a^a$.</p><p><em>Modulo $8$.</em> If $a$ is even, $a^a$ is even, not $\equiv1$. If $a$ is odd, then $a^2\equiv1\pmod 8$, so $a^a=a\cdot(a^2)^{(a-1)/2}\equiv a\pmod8$. So we need $a\equiv1\pmod 8$.</p><p>Together: $a\equiv0\pmod5$ and $a\equiv1\pmod8$, i.e. $a\equiv25\pmod{40}$. The numbers $25,65,\dots,2025$ in $[1,2025]$ are $\frac{2025-25}{40}+1=\boxed{51}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p18">
+<h3>Problem 5-2</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Combinatorics &middot; LPS VI, Chapter 38: Probability and Expected Value &middot; Dependent and Independent Events</div>
+<div class="ct-text"><p>Two fair dice are rolled repeatedly. Maintain a &ldquo;six-count&rdquo; that starts at $0$. On any roll:</p><ul class="ct-ul"><li><p>if the total is $6$, increase the six-count by $1$;</p></li><li><p>if the total is $7$, reset the six-count to $0$;</p></li><li><p>if the total is $10$, the game ends immediately with a loss;</p></li><li><p>any other total leaves the six-count unchanged.</p></li></ul><p>The game ends immediately upon either the six-count first reaching $2$ (win) or a roll totaling $10$ (loss). If the probability of winning is $\frac mn$ in lowest terms, compute $m+n$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$107$ (probability $\frac{25}{82}$)</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Two states)</h4>
+<p>With two dice, $P(6)=\frac5{36}$, $P(7)=\frac6{36}$, $P(10)=\frac3{36}$. Rolls with any other total change nothing, so we may ignore them and look only at the next roll that is a $6$, $7$ or $10$; given that it is one of those, it is $6$, $7$, $10$ with probabilities proportional to $5:6:3$.</p><p>Let $W_0$, $W_1$ be the winning probabilities when the six-count is $0$, $1$.</p><ul class="ct-ul"><li><p>At count $0$ a $7$ also changes nothing, so only $6$ (prob. $\frac58$ among $6,10$) or $10$ matters: $W_0=\frac58W_1$.</p></li><li><p>At count $1$: a $6$ wins, a $7$ returns to count $0$, a $10$ loses: $W_1=\frac5{14}+\frac6{14}W_0$.</p></li></ul><p>Then $W_0=\frac58\left(\frac5{14}+\frac{6}{14}W_0\right)=\frac{25}{112}+\frac{30}{112}W_0$, so $82W_0=25$ and $W_0=\frac{25}{82}$. The game ends with probability $1$ (each roll ends it with probability at least $\frac{3}{36}$), and $\gcd(25,82)=1$, so $m+n=\boxed{107}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p19">
+<h3>Problem 8-1</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 29: Valuations and Lifting the Exponent &middot; Lifting the Exponent (LTE)</div>
+<div class="ct-text"><p>Let $n$ be the least positive integer such that
+\[2^8\cdot3^3\cdot5^2\mid 11^n-1,\]
+but
+\[2^9\nmid 11^n-1,\qquad 3^4\nmid 11^n-1,\qquad 5^3\nmid 11^n-1.\]
+Find $n$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$2880$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Lifting the exponent for each prime)</h4>
+<p>We need $v_2(11^n-1)=8$, $v_3(11^n-1)=3$ and $v_5(11^n-1)=2$ exactly.</p><p><em>$p=3$.</em> $11\equiv2\pmod3$, so $3\mid11^n-1$ forces $n$ even. With $n=2k$, $11^n-1=121^k-1$ and $3\parallel121-1=120$, so by LTE $v_3(11^n-1)=1+v_3(k)=1+v_3(n)$. We need $v_3(n)=2$.</p><p><em>$p=5$.</em> $11\equiv1\pmod5$ and $5\parallel10$, so by LTE $v_5(11^n-1)=1+v_5(n)$. We need $v_5(n)=1$.</p><p><em>$p=2$.</em> For even $n$ (already required), LTE for $p=2$ gives $v_2(11^n-1)=v_2(11-1)+v_2(11+1)+v_2(n)-1=1+2+v_2(n)-1=2+v_2(n)$. We need $v_2(n)=6$.</p><p>So $n$ must be divisible by $2^6\cdot3^2\cdot5=2880$, and $n=2880$ itself has exactly these valuations. Hence the least $n$ is $\boxed{2880}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p20">
+<h3>Problem 8-2</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Number Theory &middot; LPS VII, Chapter 21: Arithmetic Functions and Multiplicative Structure &middot; Euler Totient and Related Functions</div>
+<div class="ct-text"><p>Find the sum of all positive integers $n$ such that $\varphi(n)=144$ and the congruence $x^2\equiv1\pmod n$ has exactly $16$ solutions.</p><p><em>The Euler totient function $\varphi(n)$ counts the number of positive integers not exceeding $n$ that are relatively prime to $n$.</em></p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$960$ ($n=456$ and $n=504$)</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Count square roots of $1$, then match $\varphi$)</h4>
+<p><em>Square roots of $1$.</em> For an odd prime power $p^e$, $p^e\mid(x-1)(x+1)$ and $\gcd(x-1,x+1)\mid2$ force $x\equiv\pm1$: $2$ solutions. Modulo $2^a$ there are $1$ solution for $a\le1$, $2$ for $a=2$, and $4$ for $a\ge3$ (namely $\pm1$, $2^{a-1}\pm1$: one of $x\pm1$ is $\equiv2\pmod4$, so the other is divisible by $2^{a-1}$). By the Chinese remainder theorem, if $n=2^a\cdot m$ with $m$ odd having $k$ distinct prime factors, the number of solutions is $c_a\cdot2^k$ with $c_a\in\{1,2,4\}$ as above. So $16$ solutions means: $a\le1,k=4$; or $a=2,k=3$; or $a\ge3,k=2$.</p><p><em>The power of $2$ in $\varphi(n)$.</em> $\varphi(n)=\varphi(2^a)\prod p^{e-1}(p-1)$, and $144=2^4\cdot3^2$. Each odd prime $p\mid n$ contributes $v_2(p-1)\ge1$ (the factor $p^{e-1}$ is odd), and $\varphi(2^a)$ contributes $a-1$ for $a\ge1$ and $0$ for $a=0$; the total must be exactly $4$. Also $p-1\mid144$ with $v_2(p-1)=1$ allows only $p-1\in\{2,6,18\}$, i.e. $p\in\{3,7,19\}$.</p><ul class="ct-ul"><li><p>$a\le1$, $k=4$: four odd primes with total $v_2$ at most $4$, so each has $v_2(p-1)=1$; but only $3,7,19$ qualify. Impossible.</p></li><li><p>$a=2$, $k=3$: $1+\sum v_2(p-1)=4$ forces $p\in\{3,7,19\}$, all three; then $\varphi(n)\ge2\cdot2\cdot6\cdot18&gt;144$. Impossible.</p></li><li><p>$a\ge3$, $k=2$: $(a-1)+\sum v_2(p-1)=4$ with two terms $\ge1$ forces $a=3$ (for $a\ge4$ the sum would exceed $4$) and $v_2(p-1)=1$ for both primes, so $p,q\in\{3,7,19\}$; moreover $\varphi(p^e)\varphi(q^f)=144/\varphi(8)=36$. For $\{3,7\}$: $2\cdot3^{e-1}\cdot6\cdot7^{f-1}=36$ gives $e=2,f=1$, $n=8\cdot9\cdot7=504$. For $\{3,19\}$: $2\cdot3^{e-1}\cdot18\cdot19^{f-1}=36$ gives $e=f=1$, $n=8\cdot3\cdot19=456$. For $\{7,19\}$: $6\cdot18&gt;36$.</p></li></ul><p>Both work ($\varphi(504)=4\cdot6\cdot6=144$, $\varphi(456)=4\cdot2\cdot18=144$, and each has $4\cdot2\cdot2=16$ square roots of $1$). The sum is $504+456=\boxed{960}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p21">
+<h3>Problem 8-3</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 27: Bijections and Structural Equivalence &middot; Implicit or Structural Correspondence</div>
+<div class="ct-text"><p>A circular word of length $8$ is a sequence $(a_1,a_2,\dots,a_8)$ with each $a_i\in\{0,1,2\}$, where indices are taken modulo $8$. How many such circular words satisfy both $a_i\ne a_{i+1}$ for all $i$, and
+\[a_1+a_2+\cdots+a_8\equiv0\pmod3?\]</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$86$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Shifting all letters)</h4>
+<p><em>All valid words.</em> Let $d_i=a_{i+1}-a_i\pmod 3$, so each $d_i\in\{1,2\}$, and $d_1+\cdots+d_8\equiv0$. Conversely, $a_1$ and $d_1,\dots,d_7$ determine the word, and the wrap-around condition $a_1\ne a_8$ is the requirement that $d_8=-(d_1+\cdots+d_7)\not\equiv0$. Writing $d_i=1+e_i$ with $e_i\in\{0,1\}$, the condition $\sum_{i=1}^8d_i\equiv0$ becomes $\sum e_i\equiv1\pmod3$, i.e. $\sum e_i\in\{1,4,7\}$: $\binom81+\binom84+\binom87=86$ sequences $(d_1,\dots,d_8)$. With $3$ choices of $a_1$, there are $258$ valid words.</p><p><em>The sum condition.</em> Adding $1$ to every letter keeps the word valid and changes the sum by $8\equiv2\pmod 3$. This map permutes the valid words and sends words with sum $\equiv0$ to sum $\equiv2$, those to sum $\equiv1$, and those back to sum $\equiv0$. So the three residue classes have the same size, and the answer is $258/3=\boxed{86}$.</p>
+<h4>Solution 2 (One good starting letter for each difference pattern)</h4>
+<p>Since consecutive letters differ, the differences $d_i=a_{i+1}-a_i\pmod 3$ ($i=1,\dots,8$, indices mod $8$) lie in $\{1,2\}$, and $d_1+\cdots+d_8\equiv a_9-a_1=0$. Conversely, $a_1$ and any $d_1,\dots,d_8\in\{1,2\}$ with $d_1+\cdots+d_8\equiv0$ give exactly one valid word (the sum condition makes the word close up at $a_9=a_1$). There are $\binom81+\binom84+\binom87=86$ admissible difference sequences (write $d_i=1+e_i$, $e_i\in\{0,1\}$; the condition is $\sum e_i\in\{1,4,7\}$).</p><p>Fix the differences. Then $a_j=a_1+D_j$ with $D_j=d_1+\cdots+d_{j-1}$, and
+\[\sum_{j=1}^8a_j=8a_1+\sum_jD_j\equiv2a_1+\sum_jD_j\pmod3.\]
+As $a_1$ runs over $0,1,2$, the value $2a_1$ runs over all residues, so exactly one choice of $a_1$ makes the sum $\equiv0$. Hence the number of words is the number of difference sequences, $\boxed{86}$.</p>
+</div></details>
+</section>
+{% endraw %}

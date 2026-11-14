@@ -29,6 +29,11 @@ description: Macedonian Mathematical Olympiad 2026: problems with answers and so
   .ct-note { font-size: 14px; color: var(--ink-soft); font-style: italic; }
   .ct-bar { margin: .6em 0 1em; display: flex; gap: 10px; flex-wrap: wrap; }
   .ct-bar button { font: inherit; font-size: 14px; padding: 5px 12px; border-radius: var(--radius); border: 1px solid var(--brand); background: var(--white); color: var(--brand); cursor: pointer; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
 </style>
 <script>
   window.MathJax = { tex: { inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [['\\[','\\]']], processEscapes: true },
@@ -57,6 +62,28 @@ description: Macedonian Mathematical Olympiad 2026: problems with answers and so
   .ct-text mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
 </style>
 
+<style>
+  .ct-tags { display: flex; flex-wrap: wrap; gap: 5px; margin: 0 0 .55em; }
+  .ct-tg { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .03em; padding: 2px 8px; border-radius: 999px; line-height: 1.5; }
+  .ct-lv { background: #eee7dc; color: #4a3d33; }
+  .ct-df-Starter { background: #dcf1dc; color: #245c24; }
+  .ct-df-Explorer { background: #d6efec; color: #155e57; }
+  .ct-df-Challenger { background: #dce8f7; color: #1f4c80; }
+  .ct-df-Olympiad { background: #e7defa; color: #4b2a8a; }
+  .ct-df-Advanced { background: #fbe4cc; color: #8a4a0b; }
+  .ct-df-Expert { background: #f8d6cf; color: #8c2600; }
+  .ct-band { margin: 1.3em 0 .5em; font-size: 14px; color: var(--ink-soft); }
+  .ct-band .ct-tg { font-size: 13px; margin-right: .4em; }
+  .ct-legend { font-size: 14.5px; background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 10px 16px; margin: 1em 0 1.4em; }
+  .ct-legend p { margin: .35em 0; }
+  .ct-legend ul { margin: .2em 0 .4em; padding-left: 1.1em; }
+  .ct-legend li { margin: .2em 0; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
+</style>
 {% endraw %}
 <p><a href="{{ '/contests-2026' | relative_url }}">&larr; All contests 2026</a></p>
 
@@ -72,7 +99,7 @@ description: Macedonian Mathematical Olympiad 2026: problems with answers and so
 {% raw %}
 <section class="ct-problem" id="p1">
 <h3>Problem 1</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 31: Extremal Principle and Bounding Arguments</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 31: Extremal Principle and Bounding Arguments &middot; Bounding and Limiting Arguments</div>
 <div class="ct-text"><p>Some cells ($1\times 1$ squares) in a rectangular grid are colored in such a way that no row nor column contains more than $n$ colored cells, where $n\geq 2$ is a given number. We call a set $M$ of colored cells <em>good</em> if, for any two cells positioned in different rows and columns, there exists a colored cell in the same row as one of the two cells and the same column as the other one.
 Determine, as a function of $n$, the largest possible cardinality of a good set $M$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$n^2$</p></div></details>
@@ -95,7 +122,7 @@ Hence the largest possible size of a good set is $\boxed{n^2}$.</p>
 </section>
 <section class="ct-problem" id="p2">
 <h3>Problem 2</h3>
-<div class="ct-meta">Algebra &middot; LPS VII, Chapter 1: Inequalities: Core Classical Methods</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Algebra &middot; LPS VII, Chapter 1: Inequalities: Core Classical Methods &middot; AM-GM and Mean Inequalities</div>
 <div class="ct-text"><p>Let $a,b,c$ be positive real numbers. Prove that
 \[\frac{a(a-b)}{\sqrt{b^2+1}}+\frac{b(b-c)}{\sqrt{c^2+1}}+\frac{c(c-a)}{\sqrt{a^2+1}}\geq 0.\]</p></div>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -118,7 +145,7 @@ Combining, $\sum ab\,f(b)\le\sqrt{\sum a^2f(b)}\sqrt{\sum a^2f(b)}=\sum a^2f(b)$
 </section>
 <section class="ct-problem" id="p3">
 <h3>Problem 3</h3>
-<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 12: Exponential Congruences and Order Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 12: Exponential Congruences and Order Structure &middot; Exponential Equation Modulo n</div>
 <div class="ct-text"><p>Determine all positive integers $z$ such that $z$, $z+7$, and $z+11$ are prime powers (a prime power is a number of the form $p^n$, where $p$ is a prime number, and $n$ is a positive integer).</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$z\in\{2,\,16\}$</p></div></details>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
@@ -136,7 +163,7 @@ $1,2,4,8,16,32,23,5,10,20,40,39,37,33,25,9,18,36,31,21$; the residue $3$ does no
 </section>
 <section class="ct-problem" id="p4">
 <h3>Problem 4</h3>
-<div class="ct-meta">Geometry &middot; LPS VII, Chapter 53: Barycentric and Projective-Flavored Geometry</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 53: Barycentric and Projective-Flavored Geometry &middot; Projective Incidence Structure</div>
 <div class="ct-text"><p>Let $ABC$ be a triangle with orthocenter $H$, and let $\omega$ be the circle with diameter $AH$. Let $P,Q\in\omega$, $M\in AB$, $N\in AC$ be such that $PQ\parallel MN\parallel BC$. Let $K$ be the midpoint of the segment $BC$, $T\ne A$ the second intersection of line $AK$ with $\omega$, and $S=PM\cap QN$. Prove that the lines $AS$, $BH$, and $QT$ are concurrent, i.e. they either have a common point or are all parallel.</p></div>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Coordinates)</h4>
@@ -207,7 +234,7 @@ different lines, as $A\notin BH$), the line $QT$ passes through their common poi
 </section>
 <section class="ct-problem" id="p5">
 <h3>Problem 5</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 39: Graph Theory and Structural Combinatorics</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 39: Graph Theory and Structural Combinatorics &middot; Graph Coloring and Labeling</div>
 <div class="ct-text"><p>Let $n\geq 3$ be an integer. Each cell of an $n\times n$ board is colored so that adjacent cells (sharing a side) are of different colors. A coloring is called <em>nice</em> if, for every cell, no color appears exactly twice or exactly four times among its adjacent cells. Determine, as a function of $n$, the minimum number of colors required for a nice coloring.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$5$</p></div></details>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">

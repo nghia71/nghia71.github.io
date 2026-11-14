@@ -29,6 +29,11 @@ description: Korean Mathematical Olympiad 2026, Final Round: problems with answe
   .ct-note { font-size: 14px; color: var(--ink-soft); font-style: italic; }
   .ct-bar { margin: .6em 0 1em; display: flex; gap: 10px; flex-wrap: wrap; }
   .ct-bar button { font: inherit; font-size: 14px; padding: 5px 12px; border-radius: var(--radius); border: 1px solid var(--brand); background: var(--white); color: var(--brand); cursor: pointer; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
 </style>
 <script>
   window.MathJax = { tex: { inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [['\\[','\\]']], processEscapes: true },
@@ -57,6 +62,28 @@ description: Korean Mathematical Olympiad 2026, Final Round: problems with answe
   .ct-text mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
 </style>
 
+<style>
+  .ct-tags { display: flex; flex-wrap: wrap; gap: 5px; margin: 0 0 .55em; }
+  .ct-tg { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .03em; padding: 2px 8px; border-radius: 999px; line-height: 1.5; }
+  .ct-lv { background: #eee7dc; color: #4a3d33; }
+  .ct-df-Starter { background: #dcf1dc; color: #245c24; }
+  .ct-df-Explorer { background: #d6efec; color: #155e57; }
+  .ct-df-Challenger { background: #dce8f7; color: #1f4c80; }
+  .ct-df-Olympiad { background: #e7defa; color: #4b2a8a; }
+  .ct-df-Advanced { background: #fbe4cc; color: #8a4a0b; }
+  .ct-df-Expert { background: #f8d6cf; color: #8c2600; }
+  .ct-band { margin: 1.3em 0 .5em; font-size: 14px; color: var(--ink-soft); }
+  .ct-band .ct-tg { font-size: 13px; margin-right: .4em; }
+  .ct-legend { font-size: 14.5px; background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 10px 16px; margin: 1em 0 1.4em; }
+  .ct-legend p { margin: .35em 0; }
+  .ct-legend ul { margin: .2em 0 .4em; padding-left: 1.1em; }
+  .ct-legend li { margin: .2em 0; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
+</style>
 {% endraw %}
 <p><a href="{{ '/contests-2026' | relative_url }}">&larr; All contests 2026</a></p>
 
@@ -73,7 +100,7 @@ description: Korean Mathematical Olympiad 2026, Final Round: problems with answe
 <h2 class="ct-group" id="day-1">Day 1</h2>
 <section class="ct-problem" id="p1">
 <h3>Problem 1</h3>
-<div class="ct-meta">Geometry &middot; LPS VII, Chapter 36: Coordinate Geometry and Analytic Representation</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 36: Coordinate Geometry and Analytic Representation &middot; Cartesian Coordinate Setup</div>
 <div class="ct-text"><p>Let $ABC$ be an acute triangle with orthocenter $H$. Let $D$ and $E$ be the feet of the altitudes from $A$ and $C$ onto the opposite sides, respectively.</p><p>Let $P\,(\ne B,E)$ be a point on segment $BE$, and let line $PH$ meet $AC$ at $Q$.</p><p>Let $\ell$ be the angle bisector of $\angle BAC$. A line through $H$ parallel to $\ell$ meets the circumcircle of triangle $BDH$ and the circumcircle of triangle $HDC$ at $X\,(\ne H)$ and $Y\,(\ne H)$, respectively.</p><p>Show that the three lines $PX$, $QY$, and $\ell$ are concurrent.</p></div>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Coordinates with the bisector as an axis)</h4>
@@ -126,7 +153,7 @@ identity, so $\psi=\mathrm{id}$: for every $P$, the lines $PX$ and $QY$ meet $\e
 </section>
 <section class="ct-problem" id="p2">
 <h3>Problem 2</h3>
-<div class="ct-meta">Algebra &middot; LPS VII, Chapter 17: Sequences, Recurrences, and Discrete Dynamics</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Algebra &middot; LPS VII, Chapter 17: Sequences, Recurrences, and Discrete Dynamics &middot; Nonlinear Recurrences</div>
 <div class="ct-text"><p>A sequence $\{a_n\}$ $(n\ge1)$ satisfies</p><ul class="ct-ul"><li><p>$a_1=a_2=1$,</p></li><li><p>for all positive integers $n$, $\displaystyle a_{n+2}=a_n+\frac{1}{a_{n+1}^2+a_n^2}$.</p></li></ul><p>Determine whether there exist infinitely many positive integers $n$ such that
 \[a_{2n}^3&gt;\frac{3n}{2}-2026\sqrt n.\]</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p><strong>No</strong>: the inequality holds for only finitely many $n$</p></div></details>
@@ -200,7 +227,7 @@ large $n$, and then $a_{2n}^3&lt;\frac{3n}2-2026\sqrt n$. So the inequality hold
 </section>
 <section class="ct-problem" id="p3">
 <h3>Problem 3</h3>
-<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 54: Advanced Number Theory Synthesis</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-S" title="Superhard, on the LPS VII scale">S</span>Number Theory &middot; LPS VII, Chapter 54: Advanced Number Theory Synthesis &middot; Hybrid Congruence and Factorization Arguments</div>
 <div class="ct-text"><p>Show that there exists a positive integer $M\,(\ge3)$ such that the following holds:</p><p>For any integer $n\,(\ge M)$ and any positive integers $a,b,c$ with $1\le a&lt;b&lt;c\le n$,
 \[\gcd(a+b+c,\ ab+bc+ca,\ abc)&lt;3n-\sqrt{3n}-2^{2026}.\]
 (Here, for positive integers $p,q,r$, $\gcd(p,q,r)$ denotes the greatest positive integer dividing all of $p,q,r$.)</p></div>
@@ -263,7 +290,7 @@ $\gcd(a+b+c,\,ab+bc+ca,\,abc)&lt;3n-\sqrt{3n}-2^{2026}$. $\blacksquare$</p>
 <h2 class="ct-group" id="day-2">Day 2</h2>
 <section class="ct-problem" id="p4">
 <h3>Problem 4</h3>
-<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 8: Modular Arithmetic and Congruence Methods</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 8: Modular Arithmetic and Congruence Methods &middot; Residue Classes and Case Analysis</div>
 <div class="ct-text"><p>Prove that there does not exist an ordered quadruple of positive integers $(p,q,r,n)$ satisfying both of the following conditions:</p><ul class="ct-ul"><li><p>$p,q,r$ are prime numbers.</p></li><li><p>$p^n+q^n+r^n=2026(p+q)(q+r)(r+p)$.</p></li></ul></div>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
 <h4>Solution (Parity, then divisibility by p+q)</h4>
@@ -276,7 +303,7 @@ $r\mid q+2$ with $0&lt;q+2&lt;2r$ gives $q+2=r$, and then $q\mid r+2=q+4$ gives 
 </section>
 <section class="ct-problem" id="p5">
 <h3>Problem 5</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 52: Advanced Combinatorial Structure and Hybrid Methods</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 52: Advanced Combinatorial Structure and Hybrid Methods &middot; High-Level Olympiad Synthesis</div>
 <div class="ct-text"><p>Minsu participates in a quiz show. The host chooses a positive integer less than or equal to $5$ as the &ldquo;Password of the Day,&rdquo; and Minsu must determine it by asking questions.</p><p>The questions and answers follow these rules:</p><ul class="ct-ul"><li><p>In each question, Minsu chooses a positive integer $m$ and asks whether the secret number is at least $m$.</p></li><li><p>For each question, the host answers either &ldquo;yes&rdquo; or &ldquo;no,&rdquo; and throughout the entire game, the host may lie at most once.</p></li></ul><p>Find the minimum number of questions required for Minsu to determine the Password of the Day with certainty, regardless of the host's choice.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$6$</p></div></details>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
@@ -303,7 +330,7 @@ $12$ questions in all.</p>
 </section>
 <section class="ct-problem" id="p6">
 <h3>Problem 6</h3>
-<div class="ct-meta">Algebra &middot; LPS VII, Chapter 30: Functional Equations: Core Olympiad Methods</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Algebra &middot; LPS VII, Chapter 30: Functional Equations: Core Olympiad Methods &middot; Algebraic Forcing of Function Form</div>
 <div class="ct-text"><p>Let $\mathbb R^+$ be the set of positive real numbers. Determine all possible values of $f(2026)$ for functions $f:\mathbb R^+\to\mathbb R^+$ that satisfy the following condition.</p><p>(Condition) For any real numbers $x\,(&gt;0)$ and $y\,(&gt;1)$,
 \[f(f(x))+\frac1y=\bigl(f(f(xy))+1\bigr)f(y).\]</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>every number in the interval $\left[\frac1{2026},\ \frac{2027}{4052}\right]$</p></div></details>

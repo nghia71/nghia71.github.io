@@ -29,6 +29,11 @@ description: Vietnamese Mathematical Olympiad 2026: problems with answers and so
   .ct-note { font-size: 14px; color: var(--ink-soft); font-style: italic; }
   .ct-bar { margin: .6em 0 1em; display: flex; gap: 10px; flex-wrap: wrap; }
   .ct-bar button { font: inherit; font-size: 14px; padding: 5px 12px; border-radius: var(--radius); border: 1px solid var(--brand); background: var(--white); color: var(--brand); cursor: pointer; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
 </style>
 <script>
   window.MathJax = { tex: { inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [['\\[','\\]']], processEscapes: true },
@@ -57,6 +62,28 @@ description: Vietnamese Mathematical Olympiad 2026: problems with answers and so
   .ct-text mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
 </style>
 
+<style>
+  .ct-tags { display: flex; flex-wrap: wrap; gap: 5px; margin: 0 0 .55em; }
+  .ct-tg { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .03em; padding: 2px 8px; border-radius: 999px; line-height: 1.5; }
+  .ct-lv { background: #eee7dc; color: #4a3d33; }
+  .ct-df-Starter { background: #dcf1dc; color: #245c24; }
+  .ct-df-Explorer { background: #d6efec; color: #155e57; }
+  .ct-df-Challenger { background: #dce8f7; color: #1f4c80; }
+  .ct-df-Olympiad { background: #e7defa; color: #4b2a8a; }
+  .ct-df-Advanced { background: #fbe4cc; color: #8a4a0b; }
+  .ct-df-Expert { background: #f8d6cf; color: #8c2600; }
+  .ct-band { margin: 1.3em 0 .5em; font-size: 14px; color: var(--ink-soft); }
+  .ct-band .ct-tg { font-size: 13px; margin-right: .4em; }
+  .ct-legend { font-size: 14.5px; background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 10px 16px; margin: 1em 0 1.4em; }
+  .ct-legend p { margin: .35em 0; }
+  .ct-legend ul { margin: .2em 0 .4em; padding-left: 1.1em; }
+  .ct-legend li { margin: .2em 0; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
+</style>
 {% endraw %}
 <p><a href="{{ '/contests-2026' | relative_url }}">&larr; All contests 2026</a></p>
 
@@ -73,7 +100,7 @@ description: Vietnamese Mathematical Olympiad 2026: problems with answers and so
 <h2 class="ct-group" id="day-1">Day 1</h2>
 <section class="ct-problem" id="p1">
 <h3>Problem 1</h3>
-<div class="ct-meta">Algebra &middot; LPS VII, Chapter 50: Algebraic Modeling Beyond Standard Forms</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Algebra &middot; LPS VII, Chapter 50: Algebraic Modeling Beyond Standard Forms &middot; Change of Variables and Strategic Reparameterization</div>
 <div class="ct-text"><p>For each positive integer $n$, consider the polynomial $P_n(x)=x^{3n}-3\cdot 4^{n-1}x^n-2^{3n-3}$.</p><ul class="ct-parts"><li><p><span class="ct-lbl">(a)</span> Prove that $P_n(x)$ has exactly one positive real zero, denoted by $a_n$.</p></li><li><p><span class="ct-lbl">(b)</span> Let $b_n=\dfrac{2-a_n}{n}$ and $c_n=b_1+b_2+\cdots+b_n$. Prove that the sequence $(c_n)_{n=1}^{\infty}$ converges.</p></li></ul></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>proof ($a_n=2\cos^{1/n}\frac{\pi}{9}$)</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -98,7 +125,7 @@ so $(c_n)$ is increasing, and since $\sum_{k\le n}\frac1{k^2}&lt;2$ it is bounde
 </section>
 <section class="ct-problem" id="p2">
 <h3>Problem 2</h3>
-<div class="ct-meta">Algebra &middot; LPS VII, Chapter 36: Coordinate Geometry and Analytic Representation</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VII scale">E</span>Algebra &middot; LPS VII, Chapter 36: Coordinate Geometry and Analytic Representation &middot; Coordinate Optimization of Synthetic Figures</div>
 <div class="ct-text"><p>To explore space, scientists often need to observe distant objects such as comets, asteroids, and other astronomical phenomena. To this end, scientists design and launch observation satellites into orbit around the Earth. Most satellites do not move in perfect circles but have elliptical orbits, with the Earth located at one of the ellipse's foci. As the satellite moves in an elliptical orbit, the distance between it and the object being observed constantly changes. Generally, if the distance from the satellite to the object being observed is minimized, the sensors on the satellite will receive the best signal.</p><p>Consider a satellite (considered as a point particle) moving around the Earth in an elliptical orbit. In space with a rectangular coordinate system $Oxyz$ (the unit on each axis $Ox,Oy,Oz$ is $6400$ km), assume that the satellite moves on the plane $(Oxy)$ in an orbit that has the equation $x^2+3y^2=17$. The satellite needs to observe an object (also considered as a point particle) moving in space. According to research results, when the object moves to position $A\left(2,\dfrac{16}{\sqrt3},8\right)$, the observation of that object is the best. Determine the coordinates of point $C$ (on the elliptical orbit of the satellite) in space with the mentioned $Oxyz$ coordinate system so that the distance from position $C$ to position $A$ is minimized.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$C\left(1,\dfrac{4}{\sqrt3},0\right)$, with $CA=\sqrt{113}$</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -122,7 +149,7 @@ line, i.e. $C=C_0$. Hence the answer is $\boxed{C\bigl(1,\frac4{\sqrt3},0\bigr)}
 </section>
 <section class="ct-problem" id="p3">
 <h3>Problem 3</h3>
-<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 25: Diophantine Equations: Factorization and Algebraic Methods</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 25: Diophantine Equations: Factorization and Algebraic Methods &middot; Bounding and Size Arguments</div>
 <div class="ct-text"><p>Let $n,a,b$ be positive integers such that $1&lt;n^2&lt;a&lt;b&lt;n^2+n+3$. Find all possible positive divisors in range $(n^2;n^2+n+3)$ of $ab$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>only $a$ and $b$</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -146,7 +173,7 @@ $n^2+1\mid n^2+n$ means $n^2+1\mid n-1$, impossible as $0&lt;n-1&lt;n^2+1$.</p><
 </section>
 <section class="ct-problem" id="p4">
 <h3>Problem 4</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 17: Sequences, Recurrences, and Discrete Dynamics</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 17: Sequences, Recurrences, and Discrete Dynamics &middot; Closed Forms and Hidden Structure</div>
 <div class="ct-text"><p>An plays a game where he writes triples on a board from left to right. Initially, the triple $(1,1,1)$ is written on the board. In each turn, An performs one of the following two operations with the current triple $(x,y,z)$:</p><ul class="ct-parts"><li><p><span class="ct-lbl">(i)</span> Delete the triple $(x,y,z)$ and write on the board $(y,z,x+z)$,</p></li><li><p><span class="ct-lbl">(ii)</span> Delete the triple $(x,y,z)$ and write on the board $(x+z+1,x+y+z+1,x+y+2z+1)$.</p></li></ul><ul class="ct-parts"><li><p><span class="ct-lbl">(a)</span> Prove that An needs exactly $4$ turns to write on the board the triple $(a,b,6)$.</p></li><li><p><span class="ct-lbl">(b)</span> Find the smallest natural number $k$ for which there is a way to play such that after $k$ turns, An can write on the board the triple $(c,d,129)$.</p></li></ul></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(a) proof; (b) $k=12$</p></div></details>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
@@ -168,7 +195,7 @@ The smallest $k$ is $\boxed{12}$.</p>
 <h2 class="ct-group" id="day-2">Day 2</h2>
 <section class="ct-problem" id="p5">
 <h3>Problem 5</h3>
-<div class="ct-meta">Geometry &middot; LPS VII, Chapter 51: Spiral Similarity and Advanced Transformational Geometry</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-S" title="Superhard, on the LPS VII scale">S</span>Geometry &middot; LPS VII, Chapter 51: Spiral Similarity and Advanced Transformational Geometry &middot; Miquel and Rotational Circle Structure</div>
 <div class="ct-text"><p>Let $ABC$ be an acute triangle $(AB&lt;AC)$ with circumcenter $O$. Let $E,F$ be the reflection of $A$ across $B,C$ respectively. Let $M$ be the midpoint of $BC$. Points $I,P$ are chosen on line $AM$ such that triangle $AIE$, $APF$ are isosceles triangles with $IA=IE$, $PA=PF$. Let $T$ be the intersection of $IE$ and $PF$.</p><ul class="ct-parts"><li><p><span class="ct-lbl">(a)</span> Prove that $T$ lies on the circumcircle of triangle $ABC$.</p></li><li><p><span class="ct-lbl">(b)</span> Let $D$ be the intersection of lines $BI$ and $CP$. Let $J$ be the intersection of lines $TD$ and $IP$. Let $X$ be the intersection of line $OT$ and $BC$. Lines $AT$, $AX$ intersect $EF$ at $L,U$ respectively. Prove that the circumcircles of triangles $TAJ$, $TIP$, $TEF$, $TLU$ all have a common point other than $T$.</p></li></ul></div>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Reflections, an Apollonius circle and a Miquel point)</h4>
@@ -265,7 +292,7 @@ In the same way $\iota-\kappa_2\varepsilon=0$ is the circle $TLU$. The point $Z$
 </section>
 <section class="ct-problem" id="p6">
 <h3>Problem 6</h3>
-<div class="ct-meta">Algebra &middot; LPS VII, Chapter 9: Polynomials and Root-Coefficient Strategy</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Algebra &middot; LPS VII, Chapter 9: Polynomials and Root-Coefficient Strategy &middot; Integer and Rational Root Structure</div>
 <div class="ct-text"><ul class="ct-parts"><li><p><span class="ct-lbl">(a)</span> Find the number of distinct positive zeroes of the polynomial $Q(x)=x^3-5x^2+4x-1$.</p></li><li><p><span class="ct-lbl">(b)</span> Let $a,b,c,d$ be integers such that the polynomial $P(x)=ax^3+bx^2+cx+d$ has three distinct, positive zeroes, none of which are rational. Find the minimal value of $S=|a|+|b|+|c|+|d|$.</p></li></ul></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(a) $1$; (b) $13$</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -298,7 +325,7 @@ irrational because the only possible rational roots $\pm1$ are not roots. The mi
 </section>
 <section class="ct-problem" id="p7">
 <h3>Problem 7</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 49: Combinatorial Number Theory and Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 49: Combinatorial Number Theory and Structure &middot; Additive Structure and Sums of Integers</div>
 <div class="ct-text"><p>In a game, Mario needs to move forward by jumping, where in each move he can jump either $1$, $a$ or $b$ meters, where $a,b$ are positive integers such that $1&lt;a&lt;b$. Given a route to travel with length $m$ meters, Mario uses the following strategy to jump: First, Mario performs $b$-meter jumps (with the maximal number of jumps as long as Mario does not exceed the finish). If Mario has not reached the finish yet, Mario will then perform $a$-meter jumps (with the maximal number of jumps as long as Mario does not exceed the finish), and finally, if Mario still has not reached the finish, Mario will perform $1$-meter jumps. Mario wins if there is no way to move to the finish with the number of jumps fewer than the number of jumps in the above strategy, else Mario loses.</p><ul class="ct-parts"><li><p><span class="ct-lbl">(a)</span> With $a=6$, $b=14$, prove that there is a positive integer $m$ so that Mario loses.</p></li><li><p><span class="ct-lbl">(b)</span> Find the number of pairs $(a,b)$ with $1&lt;a&lt;b\leq 100$ such that Mario wins with the above strategy for all positive integers $m$.</p></li></ul></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(a) proof ($m=18$); (b) $1086$</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">

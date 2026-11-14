@@ -29,6 +29,11 @@ description: Bulgarian Mathematical Olympiad 2026: problems with answers and sol
   .ct-note { font-size: 14px; color: var(--ink-soft); font-style: italic; }
   .ct-bar { margin: .6em 0 1em; display: flex; gap: 10px; flex-wrap: wrap; }
   .ct-bar button { font: inherit; font-size: 14px; padding: 5px 12px; border-radius: var(--radius); border: 1px solid var(--brand); background: var(--white); color: var(--brand); cursor: pointer; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
 </style>
 <script>
   window.MathJax = { tex: { inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [['\\[','\\]']], processEscapes: true },
@@ -57,6 +62,28 @@ description: Bulgarian Mathematical Olympiad 2026: problems with answers and sol
   .ct-text mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
 </style>
 
+<style>
+  .ct-tags { display: flex; flex-wrap: wrap; gap: 5px; margin: 0 0 .55em; }
+  .ct-tg { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .03em; padding: 2px 8px; border-radius: 999px; line-height: 1.5; }
+  .ct-lv { background: #eee7dc; color: #4a3d33; }
+  .ct-df-Starter { background: #dcf1dc; color: #245c24; }
+  .ct-df-Explorer { background: #d6efec; color: #155e57; }
+  .ct-df-Challenger { background: #dce8f7; color: #1f4c80; }
+  .ct-df-Olympiad { background: #e7defa; color: #4b2a8a; }
+  .ct-df-Advanced { background: #fbe4cc; color: #8a4a0b; }
+  .ct-df-Expert { background: #f8d6cf; color: #8c2600; }
+  .ct-band { margin: 1.3em 0 .5em; font-size: 14px; color: var(--ink-soft); }
+  .ct-band .ct-tg { font-size: 13px; margin-right: .4em; }
+  .ct-legend { font-size: 14.5px; background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 10px 16px; margin: 1em 0 1.4em; }
+  .ct-legend p { margin: .35em 0; }
+  .ct-legend ul { margin: .2em 0 .4em; padding-left: 1.1em; }
+  .ct-legend li { margin: .2em 0; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
+</style>
 {% endraw %}
 <p><a href="{{ '/contests-2026' | relative_url }}">&larr; All contests 2026</a></p>
 
@@ -73,7 +100,7 @@ description: Bulgarian Mathematical Olympiad 2026: problems with answers and sol
 <h2 class="ct-group" id="day-1">Day 1</h2>
 <section class="ct-problem" id="p1">
 <h3>Problem 1</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 49: Combinatorial Number Theory and Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 49: Combinatorial Number Theory and Structure &middot; Additive Structure and Sums of Integers</div>
 <div class="ct-text"><p>Let $N$ be a positive integer. We have coins of denominations the distinct positive integers $a_1,a_2,\dots,a_N$, so that there are exactly $i$ coins of denomination $a_i$ for every $i=1,2,\dots,N$. Determine, in terms of $N$, the largest integer $S$, for which there exist distinct integers $a_1,a_2,\dots,a_N$, so that every sum from $1$ to $S$ can be obtained as a sum of one or more of the coins.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$S=(N+1)!-1$</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -112,7 +139,7 @@ $(c_1,\dots,c_N)$, one of them zero, so at most $(N+1)!-1$ positive sums occur a
 </section>
 <section class="ct-problem" id="p2">
 <h3>Problem 2</h3>
-<div class="ct-meta">Algebra &middot; LPS VII, Chapter 1: Inequalities: Core Classical Methods</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Algebra &middot; LPS VII, Chapter 1: Inequalities: Core Classical Methods &middot; Elementary Bounding and Local Estimates</div>
 <div class="ct-text"><p>Let $n\ge 2$ be an integer. The real numbers $a$ and $b$ are such that $a(b-1)^n+b(a-1)^n=0$. Determine the maximum possible value of $ab$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$1$</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -147,7 +174,7 @@ Hence $a^{-1}&gt;a^{-2/n}$. But $a&gt;1$ and $-1&lt;-2/n$ (as $n\ge 3$), so $a^{
 </section>
 <section class="ct-problem" id="p3">
 <h3>Problem 3</h3>
-<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 34: Complex Numbers as an Olympiad Tool</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 34: Complex Numbers as an Olympiad Tool &middot; Roots of Unity</div>
 <div class="ct-text"><p>Let $a&gt;1$ be an integer and $p&gt;2$ be a prime. Determine the remainder of $(a-1)(a^2-1)\cdots(a^{p-1}-1)$ when divided by $1+a+\dots+a^{p-1}$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$p$</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -195,7 +222,7 @@ $0\le p&lt;M$, so the remainder is $\boxed{p}$.</p>
 <h2 class="ct-group" id="day-2">Day 2</h2>
 <section class="ct-problem" id="p4">
 <h3>Problem 4</h3>
-<div class="ct-meta">Geometry &middot; LPS VII, Chapter 48: Inversion and Circle-Preserving Transformation</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 48: Inversion and Circle-Preserving Transformation &middot; Tangency and Inversion Cleanup</div>
 <div class="ct-text"><p>Let $ABC$ be a triangle with circumcircle $\Gamma$. A circle $\Omega$ through $B$ and $C$ intersects the sides $AB$ and $AC$ at $D$ and $E$, respectively. Let $F$ be a point on the smaller arc $\widehat{DE}$ of $\Omega$. Denote by $\omega$ the circle, passing through $A$ and $F$, and tangent to $\Omega$. Prove that $\omega$ is tangent to $\Gamma$ if and only if the line $AF$ bisects $\angle DFE$.</p></div>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Inversion centred at $A$)</h4>
@@ -248,7 +275,7 @@ $F'$ is parallel to $DE$ $\iff$ (by (1)) $AF$ bisects $\angle DFE$. $\blacksquar
 </section>
 <section class="ct-problem" id="p5">
 <h3>Problem 5</h3>
-<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 49: Combinatorial Number Theory and Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Number Theory &middot; LPS VII, Chapter 49: Combinatorial Number Theory and Structure &middot; Sequences with Arithmetic Constraints</div>
 <div class="ct-text"><p>Let $(a_n)_{n\ge 1}$ be a strictly increasing sequence of positive integers. Suppose there exists an integer $m$ such that $a_{i+1}-a_i&lt;m$ for all $i\ge 1$. Prove that there exist pairwise distinct indices $p,q,r,s$ such that $a_pa_q=a_ra_s$.</p></div>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
 <h4>Solution (Dilations of the sequence and double counting)</h4>
@@ -278,7 +305,7 @@ pairwise distinct indices $p,q,r,s$ with $a_pa_q=a_ra_s$. $\blacksquare$</p>
 </section>
 <section class="ct-problem" id="p6">
 <h3>Problem 6</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 39: Graph Theory and Structural Combinatorics</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 39: Graph Theory and Structural Combinatorics &middot; Graph Coloring and Labeling</div>
 <div class="ct-text"><p>In the country of Baron Munchausen there are $2^n$ cities, numbered with the integers from $0$ to $2^n-1$. Two cities, numbered as $a$ and $b$, are <em>friendly</em> if in their binary representations the numbers $a$ and $b$ differ in exactly one digit. (For example, for $n=3$, the cities numbered $0$ and $4$ are friendly, as well as those numbered $5$ and $7$).</p><p>Between every two friendly cities there are two one-way roads &ndash; one in each direction. Each road has a category, which is an integer from $1$ to $n$. While traveling through the country, Baron Munchausen observed the following:</p><ul class="ct-parts"><li><p><span class="ct-lbl">(1)</span> For every city, the categories of the outgoing roads from it are all distinct.</p></li><li><p><span class="ct-lbl">(2)</span> For every city, all incoming roads to it have the same category.</p></li></ul><p>Find all $n$ for which this is possible.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>exactly the powers of two, $n=2^k$ ($k\ge 0$)</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">

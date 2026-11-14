@@ -29,6 +29,11 @@ description: Czech and Slovak Mathematical Olympiad 2026, Final Round, Category 
   .ct-note { font-size: 14px; color: var(--ink-soft); font-style: italic; }
   .ct-bar { margin: .6em 0 1em; display: flex; gap: 10px; flex-wrap: wrap; }
   .ct-bar button { font: inherit; font-size: 14px; padding: 5px 12px; border-radius: var(--radius); border: 1px solid var(--brand); background: var(--white); color: var(--brand); cursor: pointer; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
 </style>
 <script>
   window.MathJax = { tex: { inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [['\\[','\\]']], processEscapes: true },
@@ -57,6 +62,28 @@ description: Czech and Slovak Mathematical Olympiad 2026, Final Round, Category 
   .ct-text mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
 </style>
 
+<style>
+  .ct-tags { display: flex; flex-wrap: wrap; gap: 5px; margin: 0 0 .55em; }
+  .ct-tg { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .03em; padding: 2px 8px; border-radius: 999px; line-height: 1.5; }
+  .ct-lv { background: #eee7dc; color: #4a3d33; }
+  .ct-df-Starter { background: #dcf1dc; color: #245c24; }
+  .ct-df-Explorer { background: #d6efec; color: #155e57; }
+  .ct-df-Challenger { background: #dce8f7; color: #1f4c80; }
+  .ct-df-Olympiad { background: #e7defa; color: #4b2a8a; }
+  .ct-df-Advanced { background: #fbe4cc; color: #8a4a0b; }
+  .ct-df-Expert { background: #f8d6cf; color: #8c2600; }
+  .ct-band { margin: 1.3em 0 .5em; font-size: 14px; color: var(--ink-soft); }
+  .ct-band .ct-tg { font-size: 13px; margin-right: .4em; }
+  .ct-legend { font-size: 14.5px; background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 10px 16px; margin: 1em 0 1.4em; }
+  .ct-legend p { margin: .35em 0; }
+  .ct-legend ul { margin: .2em 0 .4em; padding-left: 1.1em; }
+  .ct-legend li { margin: .2em 0; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
+</style>
 {% endraw %}
 <p><a href="{{ '/contests-2026' | relative_url }}">&larr; All contests 2026</a></p>
 
@@ -73,7 +100,7 @@ description: Czech and Slovak Mathematical Olympiad 2026, Final Round, Category 
 <h2 class="ct-group" id="day-1">Day 1</h2>
 <section class="ct-problem" id="p1">
 <h3>Problem 1</h3>
-<div class="ct-meta">Algebra &middot; LPS VII, Chapter 13: Systems, Symmetry, and Multi-Variable Algebra</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Algebra &middot; LPS VII, Chapter 13: Systems, Symmetry, and Multi-Variable Algebra &middot; Constraint Geometry in Algebraic Systems</div>
 <div class="ct-text"><p>Let $x,y,z$ be positive real numbers such that $x^2+y^2+z^2=75$. Suppose that at least two of the three sums $x+y$, $y+z$ and $z+x$ are greater than or equal to $10$. Determine the minimum and maximum possible values of the remaining sum.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>minimum $\tfrac{10}{3}$, maximum $10$</p></div></details>
 <details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
@@ -120,7 +147,7 @@ Multiplying by $4$, this is $3s^2-40s+100\le 0$, that is, $(3s-10)(s-10)\le 0$. 
 </section>
 <section class="ct-problem" id="p2">
 <h3>Problem 2</h3>
-<div class="ct-meta">Geometry &middot; LPS VII, Chapter 11: Similarity, Homothety, and Ratio Geometry</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 11: Similarity, Homothety, and Ratio Geometry &middot; Homothety Centers and Image Tracking</div>
 <div class="ct-text"><p>Let $T$ be the centroid of an acute triangle $ABC$. Let $P$ be a point on the minor arc $BC$ of the circumcircle of triangle $ABC$. Let $P'$ be the foot of the perpendicular from $P$ to line segment $BC$. Let $X$ be the intersection of line $P'T$ with the line through $A$ parallel to $BC$. Finally, let $S$ be the midpoint of segment $PX$. Prove that $\angle BAP=\angle SAC$.</p></div>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Homothety at the centroid and a mirror point)</h4>
@@ -165,7 +192,7 @@ $(-\pi,\pi)$. A real number with argument in $(-\pi,\pi)$ has argument $0$, so $
 </section>
 <section class="ct-problem" id="p3">
 <h3>Problem 3</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 39: Graph Theory and Structural Combinatorics</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 39: Graph Theory and Structural Combinatorics &middot; Paths, Cycles, and Connectivity</div>
 <div class="ct-text"><p>We say that a group of people is <em>triple</em> if each member of the group is acquainted with exactly $3$ other members, and the group cannot be partitioned into two nonempty subsets such that every person has all their acquaintances within their own subset. The acquaintance relation is mutual. Determine the greatest integer $k\ge 3$ for which there exists a positive integer $n$ such that, from every triple group with at least $n$ people, one can select at least $k$ people and seat them around a round table so that every two adjacent people are acquainted.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$k=5$</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -206,7 +233,7 @@ So an edge between two of $v_2,v_4,w$ would close a $5$-cycle; there is none.</p
 <h2 class="ct-group" id="day-2">Day 2</h2>
 <section class="ct-problem" id="p4">
 <h3>Problem 4</h3>
-<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 4: Divisibility and Prime Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 4: Divisibility and Prime Structure &middot; Prime Factorization and Structure</div>
 <div class="ct-text"><p>Let $a$ and $b$ be distinct positive integers such that the numbers $a^2+1$ and $ab+1$ have the same sets of prime divisors. Prove that $a^2+b^2+2$ is divisible by the square of some prime.</p></div>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
 <h4>Solution (Primes of $a^2+1$ divide $a-b$; then a size argument)</h4>
@@ -224,7 +251,7 @@ is divisible by $p^2$, the square of a prime. $\blacksquare$</p>
 </section>
 <section class="ct-problem" id="p5">
 <h3>Problem 5</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 31: Extremal Principle and Bounding Arguments</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 31: Extremal Principle and Bounding Arguments &middot; Extremal Element Selection</div>
 <div class="ct-text"><p>Let $\mathcal{P}=(a_1,a_2,\ldots,a_{2026})$ be an arbitrary permutation of the numbers $1,2,\ldots,2026$. We say that an index $i\in\{1,2,\ldots,2026\}$ is <em>good</em> if each of the following numbers is nonnegative:
 \[\begin{array}{l}
 a_i\\
@@ -287,7 +314,7 @@ number of terms and positive after an odd number. All $1013$ odd indices are goo
 </section>
 <section class="ct-problem" id="p6">
 <h3>Problem 6</h3>
-<div class="ct-meta">Geometry &middot; LPS VII, Chapter 40: Vector Geometry and Affine Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 40: Vector Geometry and Affine Structure &middot; Affine Geometry of Lines and Midpoints</div>
 <div class="ct-text"><p>Let $ABCDEF$ be a hexagon inscribed in a circle with center $O$, such that each pair of opposite sides is parallel. The lines $AB$, $CD$ and $EF$ form a triangle $\Delta_1$, and the lines $BC$, $DE$ and $FA$ form a triangle $\Delta_2$. Prove that the circumcenters of triangles $\Delta_1$ and $\Delta_2$ are symmetric with respect to point $O$.</p></div>
 <details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Projections onto the parallel sides and two parallelograms)</h4>

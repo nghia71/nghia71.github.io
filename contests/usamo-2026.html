@@ -29,6 +29,11 @@ description: USA Mathematical Olympiad 2026: problems with answers and solutions
   .ct-note { font-size: 14px; color: var(--ink-soft); font-style: italic; }
   .ct-bar { margin: .6em 0 1em; display: flex; gap: 10px; flex-wrap: wrap; }
   .ct-bar button { font: inherit; font-size: 14px; padding: 5px 12px; border-radius: var(--radius); border: 1px solid var(--brand); background: var(--white); color: var(--brand); cursor: pointer; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
 </style>
 <script>
   window.MathJax = { tex: { inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [['\\[','\\]']], processEscapes: true },
@@ -57,6 +62,28 @@ description: USA Mathematical Olympiad 2026: problems with answers and solutions
   .ct-text mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
 </style>
 
+<style>
+  .ct-tags { display: flex; flex-wrap: wrap; gap: 5px; margin: 0 0 .55em; }
+  .ct-tg { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .03em; padding: 2px 8px; border-radius: 999px; line-height: 1.5; }
+  .ct-lv { background: #eee7dc; color: #4a3d33; }
+  .ct-df-Starter { background: #dcf1dc; color: #245c24; }
+  .ct-df-Explorer { background: #d6efec; color: #155e57; }
+  .ct-df-Challenger { background: #dce8f7; color: #1f4c80; }
+  .ct-df-Olympiad { background: #e7defa; color: #4b2a8a; }
+  .ct-df-Advanced { background: #fbe4cc; color: #8a4a0b; }
+  .ct-df-Expert { background: #f8d6cf; color: #8c2600; }
+  .ct-band { margin: 1.3em 0 .5em; font-size: 14px; color: var(--ink-soft); }
+  .ct-band .ct-tg { font-size: 13px; margin-right: .4em; }
+  .ct-legend { font-size: 14.5px; background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 10px 16px; margin: 1em 0 1.4em; }
+  .ct-legend p { margin: .35em 0; }
+  .ct-legend ul { margin: .2em 0 .4em; padding-left: 1.1em; }
+  .ct-legend li { margin: .2em 0; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
+</style>
 {% endraw %}
 <p><a href="{{ '/contests-2026' | relative_url }}">&larr; All contests 2026</a></p>
 
@@ -73,7 +100,7 @@ description: USA Mathematical Olympiad 2026: problems with answers and solutions
 <h2 class="ct-group" id="day-1">Day 1</h2>
 <section class="ct-problem" id="p1">
 <h3>Problem 1</h3>
-<div class="ct-meta">Algebra &middot; LPS VII, Chapter 22: Summation, Telescoping, and Discrete Transformation</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Algebra &middot; LPS VII, Chapter 22: Summation, Telescoping, and Discrete Transformation &middot; Finite Difference and Summation Transformation</div>
 <div class="ct-text"><p>Let $n$ be an integer greater than $1$. For which real numbers $x$ is
 \[\lfloor nx\rfloor-\sum_{k=1}^{n}\frac{\lfloor kx\rfloor}{k}\]
 maximal, and what is the maximal value that this expression can take?</p><p><em>Note:</em> $\lfloor z\rfloor$ denotes the greatest integer less than or equal to $z$.</p></div>
@@ -104,7 +131,7 @@ with equality in the first step only if $r_1\ge r_2\ge\dots\ge r_{n-1}$ (otherwi
 </section>
 <section class="ct-problem" id="p2">
 <h3>Problem 2</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 27: Bijections and Structural Equivalence</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 27: Bijections and Structural Equivalence &middot; Encoding and Representation</div>
 <div class="ct-text"><p>Annie is playing a game where she starts with a row of positive integers, written on a blackboard, each of which is a power of $2$. On each turn, she can erase two adjacent numbers and replace them with a power of $2$ that is greater than either of the erased numbers. This shortens the row of numbers, and she continues to take turns until only one number remains. Annie wins the game if the final remaining number is less than $4$ times the sum of the original numbers. Is it always possible for Annie to win, regardless of the starting row of numbers?</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p><strong>Yes</strong></p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -120,7 +147,7 @@ The idea is to cut the row into a left part $a_1,\dots,a_j$ and a right part $a_
 </section>
 <section class="ct-problem" id="p3">
 <h3>Problem 3</h3>
-<div class="ct-meta">Geometry &middot; LPS VII, Chapter 48: Inversion and Circle-Preserving Transformation</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-S" title="Superhard, on the LPS VII scale">S</span>Geometry &middot; LPS VII, Chapter 48: Inversion and Circle-Preserving Transformation &middot; Tangency and Inversion Cleanup</div>
 <div class="ct-text"><p>Let $ABC$ be an acute scalene triangle with no angle equal to $60^\circ$. Let $\omega$ be the circumcircle of $ABC$. Let $\Delta_B$ be the equilateral triangle with three vertices on $\omega$, one of which is $B$. Let $\ell_B$ be the line through the two vertices of $\Delta_B$ other than $B$. Let $\Delta_C$ and $\ell_C$ be defined analogously. Let $Y$ be the intersection of $AC$ and $\ell_B$, and let $Z$ be the intersection of $AB$ and $\ell_C$.</p><p>Let $N$ be the midpoint of minor arc $BC$ on $\omega$. Let $\mathcal{R}$ be the triangle formed by $\ell_B$, $\ell_C$, and the tangent to $\omega$ through $N$. Prove that the circumcircle of $AYZ$ and the incircle of $\mathcal{R}$ are tangent.</p></div>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Inversion in the circumcircle: both circles become circles with centers at distance 1)</h4>
@@ -185,8 +212,8 @@ whose sum is $4c^3+4c^2x+2c^2+2cx+c+\frac12=(1+2c)\bigl(2cx+2c^2+\frac12\bigr)$,
 <h2 class="ct-group" id="day-2">Day 2</h2>
 <section class="ct-problem" id="p4">
 <h3>Problem 4</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VI, Chapter 21: Digits, Place Value, and Decimal Structure</div>
-<div class="ct-text"><p>A positive integer $n$ is called <em>solitary</em> if, for any nonnegative integers $a$ and $b$ such that $a+b=n$, either $a$ or $b$ contains the digit &ldquo;1&rdquo;. Determine, with proof, the number of solitary integers less than $10^{2026}$.</p></div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Combinatorics &middot; LPS VI, Chapter 21: Digits, Place Value, and Decimal Structure &middot; Digit Conditions and Search</div>
+<div class="ct-text"><p>A positive integer $n$ is called <em>solitary</em> if, for any nonnegative integers $a$ and $b$ such that $a+b=n$, either $a$ or $b$ contains the digit $1$ when written in base $10$. Determine, with proof, the number of solitary integers less than $10^{2026}$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$2^{2026}-1$</p></div></details>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
 <h4>Solution (Following the carries)</h4>
@@ -198,7 +225,7 @@ and with $c_i=0$ for all large $i$ (when $x_i=y_i=d_i=0$, the equation gives $c_
 </section>
 <section class="ct-problem" id="p5">
 <h3>Problem 5</h3>
-<div class="ct-meta">Geometry &middot; LPS VII, Chapter 51: Spiral Similarity and Advanced Transformational Geometry</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 51: Spiral Similarity and Advanced Transformational Geometry &middot; Spiral Similarity Centers</div>
 <div class="ct-text"><p>Let $ABC$ be a triangle. Points $D$, $E$, and $F$ lie on sides $BC$, $CA$, and $AB$, respectively, such that
 \[\angle AFE=\angle BDF=\angle CED.\]
 Let $O_A$, $O_B$, and $O_C$ be the circumcenters of triangles $AFE$, $BDF$, and $CED$, respectively. Let $M$, $N$, and $O$ be the circumcenters of triangles $ABC$, $DEF$, and $O_AO_BO_C$, respectively. Prove that $OM=ON$.</p></div>
@@ -234,7 +261,7 @@ So $\psi$ maps the triangle $AEO_A$ to the triangle $MNO$. Since $O_AA=O_AE$, we
 </section>
 <section class="ct-problem" id="p6">
 <h3>Problem 6</h3>
-<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 54: Advanced Number Theory Synthesis</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-S" title="Superhard, on the LPS VII scale">S</span>Number Theory &middot; LPS VII, Chapter 54: Advanced Number Theory Synthesis &middot; Deep Structural Classification Problems</div>
 <div class="ct-text"><p>Let $a$ and $b$ be positive integers such that $\varphi(ab+1)$ divides $a^2+b^2+1$. Prove that $a$ and $b$ are Fibonacci numbers.</p></div>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Parity, prime powers, and Vieta jumping)</h4>

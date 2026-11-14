@@ -29,6 +29,11 @@ description: Iberoamerican Mathematical Olympiad 2026: problems with answers and
   .ct-note { font-size: 14px; color: var(--ink-soft); font-style: italic; }
   .ct-bar { margin: .6em 0 1em; display: flex; gap: 10px; flex-wrap: wrap; }
   .ct-bar button { font: inherit; font-size: 14px; padding: 5px 12px; border-radius: var(--radius); border: 1px solid var(--brand); background: var(--white); color: var(--brand); cursor: pointer; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
 </style>
 <script>
   window.MathJax = { tex: { inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [['\\[','\\]']], processEscapes: true },
@@ -57,6 +62,28 @@ description: Iberoamerican Mathematical Olympiad 2026: problems with answers and
   .ct-text mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
 </style>
 
+<style>
+  .ct-tags { display: flex; flex-wrap: wrap; gap: 5px; margin: 0 0 .55em; }
+  .ct-tg { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .03em; padding: 2px 8px; border-radius: 999px; line-height: 1.5; }
+  .ct-lv { background: #eee7dc; color: #4a3d33; }
+  .ct-df-Starter { background: #dcf1dc; color: #245c24; }
+  .ct-df-Explorer { background: #d6efec; color: #155e57; }
+  .ct-df-Challenger { background: #dce8f7; color: #1f4c80; }
+  .ct-df-Olympiad { background: #e7defa; color: #4b2a8a; }
+  .ct-df-Advanced { background: #fbe4cc; color: #8a4a0b; }
+  .ct-df-Expert { background: #f8d6cf; color: #8c2600; }
+  .ct-band { margin: 1.3em 0 .5em; font-size: 14px; color: var(--ink-soft); }
+  .ct-band .ct-tg { font-size: 13px; margin-right: .4em; }
+  .ct-legend { font-size: 14.5px; background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 10px 16px; margin: 1em 0 1.4em; }
+  .ct-legend p { margin: .35em 0; }
+  .ct-legend ul { margin: .2em 0 .4em; padding-left: 1.1em; }
+  .ct-legend li { margin: .2em 0; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
+</style>
 {% endraw %}
 <p><a href="{{ '/contests-2026' | relative_url }}">&larr; All contests 2026</a></p>
 
@@ -73,7 +100,7 @@ description: Iberoamerican Mathematical Olympiad 2026: problems with answers and
 <h2 class="ct-group" id="day-1">Day 1</h2>
 <section class="ct-problem" id="p1">
 <h3>Problem 1</h3>
-<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 8: Modular Arithmetic and Congruence Methods</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 8: Modular Arithmetic and Congruence Methods &middot; Residue Classes and Case Analysis</div>
 <div class="ct-text"><p>Let $a_1, a_2, \ldots, a_{1000}$ be the integers from $1$ to $1000$ in some order. For which values of $a_1$ can we guarantee that there is a positive integer $k$, $1 \le k \le 1000$, such that $\underbrace{a_1+a_2+\cdots+a_k}_{k \text{ summands}}$ is a multiple of $3$?</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>exactly when $a_1\equiv 0$ or $a_1\equiv 2\pmod 3$ (i.e. $a_1\not\equiv1\pmod 3$)</p></div></details>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
@@ -93,7 +120,7 @@ $333$. Only the class $1$ has $334$ members, which explains at once why $a_1\equ
 </section>
 <section class="ct-problem" id="p2">
 <h3>Problem 2</h3>
-<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 49: Combinatorial Number Theory and Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Number Theory &middot; LPS VII, Chapter 49: Combinatorial Number Theory and Structure &middot; Sequences with Arithmetic Constraints</div>
 <div class="ct-text"><p>Let $\mathbb{Z}^+$ denote the set of positive integers. Determine whether there exists a bijective function $f : \mathbb{Z}^+ \to \mathbb{Z}^+$ satisfying all of the following conditions:</p><ul class="ct-parts"><li><p><span class="ct-lbl">(i)</span> $n \mid f(1)+f(2)+\cdots+f(n)$ for every positive integer $n$;</p></li><li><p><span class="ct-lbl">(ii)</span> $f(1)+f(2)+\cdots+f(n) \le n^2$ for every positive integer $n$;</p></li><li><p><span class="ct-lbl">(iii)</span> $f(1)+f(2)+\cdots+f(n) = n^2$ for infinitely many positive integers $n$.</p></li></ul><p><strong>Note:</strong> A function $f : \mathbb{Z}^+ \to \mathbb{Z}^+$ is bijective if every positive integer appears exactly once in the infinite list $f(1), f(2), f(3), \ldots$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p><strong>No</strong>, no such bijection exists</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -122,7 +149,7 @@ $1$, $2$ or $4$, so there are at most three of them, contradicting (iii). <stron
 </section>
 <section class="ct-problem" id="p3">
 <h3>Problem 3</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 52: Advanced Combinatorial Structure and Hybrid Methods</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 52: Advanced Combinatorial Structure and Hybrid Methods &middot; Combinatorics with Geometric Insight</div>
 <div class="ct-text"><p>Mafalda dreams that she is on an interstellar journey with her friends. During the journey, she discovers a room in the shape of a cube, inside which $2026$ alfajores are floating motionless. She then chooses a vertex of the cube, where she places all the friends accompanying her. Each friend must travel to the opposite vertex of the cube, moving only in directions parallel to its edges and always moving away from the vertex from which they all started. Along the way, each friend collects the alfajores that lie on their path. What is the minimum number of friends Mafalda needs in order to be certain that all the alfajores that were in the cube are collected?</p><p><strong>Note:</strong> Consider the alfajores and the friends to be points in space.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$1519$</p></div></details>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
@@ -164,7 +191,7 @@ whichever vertex Mafalda chooses, she needs at least $1519$ friends.</p><p>Hence
 <h2 class="ct-group" id="day-2">Day 2</h2>
 <section class="ct-problem" id="p4">
 <h3>Problem 4</h3>
-<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 49: Combinatorial Number Theory and Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 49: Combinatorial Number Theory and Structure &middot; Sequences with Arithmetic Constraints</div>
 <div class="ct-text"><p>A sequence $a_1, a_2, a_3, \ldots$ of positive integers is called <em>porteña</em> if it satisfies all of the following conditions:</p><ul class="ct-parts"><li><p><span class="ct-lbl">(i)</span> $a_1 &lt; a_2 &lt; a_3 &lt; \cdots$;</p></li><li><p><span class="ct-lbl">(ii)</span> $2a_n - n$ is a perfect square for every integer $n \ge 1$;</p></li><li><p><span class="ct-lbl">(iii)</span> $a_{n-1} + a_n \le n^2$ for every integer $n \ge 2$.</p></li></ul><p>Determine all porteña sequences.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>only $a_n=\dfrac{n(n+1)}{2}$</p></div></details>
 <details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
@@ -208,7 +235,7 @@ $a_n=T_n$ for every $n\ge1$.</p><p>So the only porteña sequence is $\boxed{a_n=
 </section>
 <section class="ct-problem" id="p5">
 <h3>Problem 5</h3>
-<div class="ct-meta">Geometry &middot; LPS VII, Chapter 51: Spiral Similarity and Advanced Transformational Geometry</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 51: Spiral Similarity and Advanced Transformational Geometry &middot; Spiral Similarity Centers</div>
 <div class="ct-text"><p>Let $ABC$ be an acute triangle with $AB &gt; AC$, inscribed in a circle $\Gamma$. Let $X$ be a variable point on the arc $AC$ of $\Gamma$ not containing $B$, with $X$ different from $A$ and $C$. The line $AX$ meets the line $BC$ at $P$. The line through $P$ parallel to $AB$ and the tangent to $\Gamma$ at $B$ meet at $D$. The line through $P$ parallel to $AC$ and the tangent to $\Gamma$ at $C$ meet at $E$. Prove that the circumcenter of triangle $XDE$ lies on a fixed line as $X$ varies over the arc $AC$ of $\Gamma$.</p><p><strong>Note:</strong> The circumcenter of a triangle is the center of the circle passing through its three vertices.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>proof (the circumcentre lies on the perpendicular bisector of $TF$, where $T$ is the pole of $BC$ and $F$ a fixed point)</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -258,7 +285,7 @@ fixed line ($v\ne0$, because $\delta$ is not constant).</p><p>Hence the circumce
 </section>
 <section class="ct-problem" id="p6">
 <h3>Problem 6</h3>
-<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 9: Polynomials and Root-Coefficient Strategy</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-S" title="Superhard, on the LPS VII scale">S</span>Number Theory &middot; LPS VII, Chapter 9: Polynomials and Root-Coefficient Strategy &middot; Remainder, Factor, and Evaluation Logic</div>
 <div class="ct-text"><p>Determine all integers $n &gt; 1$ for which there exist a permutation $d_1, \ldots, d_k$ of all the positive divisors of $n$ and a polynomial $P(x)$ with integer coefficients such that $P(d_j) = d_{j+1}$ for every $1 \le j \le k-1$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$n$ is a prime power, or $n=p(2p-1)$ with $p$ and $2p-1$ both prime ($n=6,15,91,703,\dots$)</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">

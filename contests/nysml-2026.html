@@ -1,0 +1,317 @@
+---
+title: New York State Mathematics League 2026: selected problems
+permalink: /contests/nysml-2026
+description: New York State Mathematics League 2026: selected problems: problems with answers and solutions
+---
+{% raw %}
+<style>
+  .ct-intro { margin-bottom: 1.2em; }
+  .ct-credit { font-size: 14px; color: var(--ink-soft); border-left: 3px solid var(--gold); padding: 6px 12px; background: var(--white); margin: 1em 0; }
+  .ct-toc { display: flex; flex-wrap: wrap; gap: 6px; margin: 1em 0 1.4em; }
+  .ct-toc a { display: inline-block; min-width: 2.4em; text-align: center; padding: 4px 8px; border: 1px solid var(--rule); border-radius: 4px; background: var(--white); text-decoration: none; font-size: 14px; }
+  .ct-problem { background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 14px 18px; margin: 1.1em 0; }
+  .ct-problem h3 { margin: 0 0 .3em; font-size: 1.08rem; border-bottom: none; padding-bottom: 0; }
+  .ct-meta { font-size: 13px; color: var(--ink-soft); margin-bottom: .6em; }
+  .ct-text { font-family: Georgia, "Times New Roman", "Noto Serif", serif; font-size: 1.02em; line-height: 1.6; }
+  .ct-text p { margin: .5em 0; }
+  .ct-fig { text-align: center; margin: .8em 0; }
+  .ct-fig img { max-width: 100%; height: auto; max-height: 340px; }
+  .ct-choices { display: flex; flex-wrap: wrap; gap: 6px 22px; margin: .6em 0 .2em; }
+  .ct-choices b { margin-right: .3em; }
+  .ct-problem details { margin-top: .8em; border-top: 1px dashed var(--rule); padding-top: .5em; }
+  .ct-problem summary { cursor: pointer; font-weight: 600; color: var(--brand); font-size: 15px; }
+  .ct-problem details[open] summary { margin-bottom: .5em; }
+  .ct-sol h4 { font-size: 1rem; margin: 1em 0 .3em; color: var(--ink); }
+  .ct-answer { font-weight: 600; }
+  .ct-parts { list-style: none; padding-left: .4em; }
+  .ct-parts li { margin: .35em 0; }
+  .ct-lbl { font-weight: 700; margin-right: .3em; }
+  .ct-note { font-size: 14px; color: var(--ink-soft); font-style: italic; }
+  .ct-bar { margin: .6em 0 1em; display: flex; gap: 10px; flex-wrap: wrap; }
+  .ct-bar button { font: inherit; font-size: 14px; padding: 5px 12px; border-radius: var(--radius); border: 1px solid var(--brand); background: var(--white); color: var(--brand); cursor: pointer; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
+</style>
+<script>
+  window.MathJax = { tex: { inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [['\\[','\\]']], processEscapes: true },
+                     options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] } };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script>
+  function ctAll(open) { document.querySelectorAll('.ct-problem details').forEach(function (d) { d.open = open; }); }
+</script>
+
+<style>
+  .ct-group { font-size: 1.25rem; margin: 1.6em 0 .2em; }
+  .ct-toc-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: .3em 0; }
+  .ct-toc-g { font-size: 13px; color: var(--ink-soft); min-width: 9em; }
+  .ct-toc-wrap { margin: 1em 0 1.4em; }
+  .ct-center { text-align: center; margin: .6em 0; }
+  .ct-tablewrap { overflow-x: auto; margin: .6em 0; text-align: center; }
+  .ct-table { border-collapse: collapse; margin: 0 auto; }
+  .ct-table td { padding: 2px 9px; text-align: center; }
+  .ct-table tr.ct-hl td { border-bottom: 1px solid var(--ink-soft); }
+  .ct-table.ct-vfirst td:first-child { border-right: 1px solid var(--ink-soft); }
+  .ct-ul { padding-left: 1.4em; }
+  .ct-ul li { margin: .3em 0; }
+  .ct-text li > p:first-child { margin-top: 0; }
+  .ct-text li > p:last-child { margin-bottom: 0; }
+  .ct-text mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
+</style>
+
+<style>
+  .ct-tags { display: flex; flex-wrap: wrap; gap: 5px; margin: 0 0 .55em; }
+  .ct-tg { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .03em; padding: 2px 8px; border-radius: 999px; line-height: 1.5; }
+  .ct-lv { background: #eee7dc; color: #4a3d33; }
+  .ct-df-Starter { background: #dcf1dc; color: #245c24; }
+  .ct-df-Explorer { background: #d6efec; color: #155e57; }
+  .ct-df-Challenger { background: #dce8f7; color: #1f4c80; }
+  .ct-df-Olympiad { background: #e7defa; color: #4b2a8a; }
+  .ct-df-Advanced { background: #fbe4cc; color: #8a4a0b; }
+  .ct-df-Expert { background: #f8d6cf; color: #8c2600; }
+  .ct-band { margin: 1.3em 0 .5em; font-size: 14px; color: var(--ink-soft); }
+  .ct-band .ct-tg { font-size: 13px; margin-right: .4em; }
+  .ct-legend { font-size: 14.5px; background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 10px 16px; margin: 1em 0 1.4em; }
+  .ct-legend p { margin: .35em 0; }
+  .ct-legend ul { margin: .2em 0 .4em; padding-left: 1.1em; }
+  .ct-legend li { margin: .2em 0; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
+</style>
+{% endraw %}
+<p><a href="{{ '/contests-2026' | relative_url }}">&larr; All contests 2026</a></p>
+
+<h1>New York State Mathematics League 2026: selected problems</h1>
+
+<div class="ct-intro">
+<p>The 15 problems of the New York State Mathematics League 2026: selected problems, each with our own solutions, hidden until you open them. 12 of them ask for an answer and 3 ask for a proof. Where a problem has a final answer, it is shown separately. Try a problem first, then check.</p><p>A selection of the best problems of the New York State Mathematics League 2026 Championships (team, power, individual and tiebreaker rounds).</p>
+</div>
+<div class="ct-credit">Problems: New York State Mathematics League 2026: selected problems, from the AoPS contest collection or the official paper. Solutions written by MCC.</div>
+<div class="ct-bar"><button type="button" onclick="ctAll(true)">Show all answers and solutions</button><button type="button" onclick="ctAll(false)">Hide all</button></div>
+<div class="ct-toc-wrap"><div class="ct-toc-row"><span class="ct-toc-g">Team Round</span><a href="#p1">1</a><a href="#p2">4</a><a href="#p3">6</a><a href="#p4">8</a></div><div class="ct-toc-row"><span class="ct-toc-g">Power Question</span><a href="#p5">4(b)</a><a href="#p6">6</a><a href="#p7">8</a><a href="#p8">10</a></div><div class="ct-toc-row"><span class="ct-toc-g">Individual Round</span><a href="#p9">4</a><a href="#p10">6</a><a href="#p11">8</a><a href="#p12">10</a></div><div class="ct-toc-row"><a href="#p13">Tiebreaker 1</a><a href="#p14">Tiebreaker 2</a><a href="#p15">Tiebreaker 3</a></div></div>
+
+{% raw %}
+<h2 class="ct-group" id="team-round">Team Round</h2>
+<section class="ct-problem" id="p1">
+<h3>Problem 1</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Geometry &middot; LPS VI, Chapter 32: Area by Measurement and Decomposition &middot; Cut-and-Reassemble Area</div>
+<div class="ct-text"><p>The figure below shows a shaded polygon $P$ inscribed in a square. The polygon $P$ has each of its sides parallel to one of the sides of the square.</p><p>Given that $P$ has perimeter $36$ units and area $30$ square units, compute the fraction of the area of the square that $P$ covers.</p><div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/nysml-1.svg" alt="Figure for Team Round, Problem 1"></div></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\dfrac{10}{27}$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Sliding the sides outward)</h4>
+<p>As in the figure, $P$ is a staircase: every horizontal or vertical line meets $P$ in one segment, and $P$ touches all four sides of the square. Let the square have side $s$.</p><p>Look at the vertical sides of $P$ that face left (the left boundary of $P$). Sliding each of them horizontally to the left side of the square, they cover that side exactly once, without overlap: each horizontal line meets the left boundary of $P$ in exactly one point. So their total length is $s$. The same holds for the right-facing vertical sides and for the upward- and downward-facing horizontal sides. Hence the perimeter of $P$ equals the perimeter $4s$ of the square: $4s=36$, $s=9$, and the square has area $81$.</p><p>The fraction covered is $\frac{30}{81}=\boxed{\tfrac{10}{27}}$.</p>
+<h4>Solution 2 (Projections onto the axes)</h4>
+<p>The polygon $P$ is a staircase as in the figure: each vertical line $x=t$ crossing the square meets $P$ in a single segment, and so does each horizontal line; $P$ touches all four sides of the square of side $s$.</p><p>Every horizontal side of $P$ projects onto the bottom side of the square. A generic vertical line $x=t$ ($0&lt;t&lt;s$) meets the boundary of $P$ in exactly two points, the top and bottom ends of the segment $P\cap\{x=t\}$, and both lie on horizontal sides. So the projections of the horizontal sides cover $[0,s]$ exactly twice, and the horizontal sides have total length $2s$. In the same way the vertical sides have total length $2s$. Therefore the perimeter is $4s=36$, so $s=9$.</p><p>The fraction of the square covered by $P$ is $\frac{30}{81}=\boxed{\tfrac{10}{27}}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p2">
+<h3>Problem 4</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Number Theory &middot; LPS VI, Chapter 35: Factorials and Prime Counting &middot; Prime Exponents in Factorials</div>
+<div class="ct-text"><p>Compute the least positive integer that does not divide $26!$ and also is not divisible by any prime greater than $26$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$289$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (One prime exponent too large)</h4>
+<p>By Legendre's formula the exponents of the primes in $26!$ are
+\[v_2=13+6+3+1=23,\ v_3=8+2=10,\ v_5=5+1=6,\ v_7=3,\ v_{11}=2,\ v_{13}=2,\ v_{17}=v_{19}=v_{23}=1 .\]
+Let $m$ be a positive integer whose prime factors are all at most $23$ (the primes up to $26$). If $v_p(m)\le v_p(26!)$ for every $p$, then $m\mid 26!$. So $m\nmid 26!$ forces $v_p(m)\ge v_p(26!)+1$ for some $p$, hence $m\ge p^{v_p(26!)+1}$. The candidates are
+\[2^{24},\ 3^{11},\ 5^{7},\ 7^4=2401,\ 11^3=1331,\ 13^3=2197,\ 17^2=289,\ 19^2=361,\ 23^2=529,\]
+and the smallest is $17^2=289$, which indeed does not divide $26!$. The answer is $\boxed{289}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p3">
+<h3>Problem 6</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 6: Pigeonhole Principle and Density Arguments &middot; Existence via Overcrowding</div>
+<div class="ct-text"><p>Compute the number of eight-digit positive integers that have no contiguous substring divisible by $9$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$40320$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Partial sums form a permutation)</h4>
+<p>A number is divisible by $9$ iff its digit sum is. For an eight-digit number $d_1d_2\dots d_8$ let $S_0=0$ and $S_k=d_1+\dots+d_k$. The substring $d_{i+1}\dots d_j$ ($0\le i&lt;j\le8$) has digit sum $S_j-S_i$. So the number is good iff $S_0,S_1,\dots,S_8$ are pairwise distinct modulo $9$.</p><p>Nine pairwise distinct residues modulo $9$ with $S_0=0$ means that $(S_1,\dots,S_8)$ modulo $9$ is an ordering of the residues $1,2,\dots,8$. Conversely, for every ordering $(r_1,\dots,r_8)$ of $1,\dots,8$ there is exactly one good number with $S_k\equiv r_k$: the digit $d_k$ must satisfy $d_k\equiv r_k-r_{k-1}\not\equiv0\pmod 9$ (with $r_0=0$), and exactly one digit in $\{1,\dots,8\}$ does (the digits $0$ and $9$ are $\equiv0$). The first digit is then nonzero, as needed.</p><p>Hence the count is $8!=\boxed{40320}$.</p>
+<h4>Solution 2 (Choosing the digits one at a time)</h4>
+<p>A block of consecutive digits is divisible by $9$ iff its digit sum is. Write $S_k$ for the sum of the first $k$ digits, $S_0=0$; the block from position $i+1$ to $j$ has sum $S_j-S_i$.</p><p>Build the number from left to right. Suppose the first $k-1$ digits have been chosen and $S_0,\dots,S_{k-1}$ are distinct modulo $9$ (true for $k=1$). The new digit $d_k$ creates the new blocks ending at position $k$, with sums $S_k-S_i$ for $i&lt;k$; they are all non-multiples of $9$ iff $S_k\not\equiv S_i$ for all $i&lt;k$. As $d_k$ runs through $0,1,\dots,9$, the residue $S_k=S_{k-1}+d_k$ takes the value $S_{k-1}$ (for $d_k=0,9$) and each other residue exactly once (for $d_k=1,\dots,8$). The forbidden residues are the $k$ residues $S_0,\dots,S_{k-1}$, which include $S_{k-1}$; so exactly $9-k$ residues are allowed and each comes from exactly one digit. (For $k=1$ this also rules out a leading $0$.)</p><p>So the number of good eight-digit numbers is $8\cdot7\cdot6\cdots1=8!=\boxed{40320}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p4">
+<h3>Problem 8</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 29: Valuations and Lifting the Exponent &middot; p-adic Valuation Basics</div>
+<div class="ct-text"><p>After expanding $(x+3y+2z)^9$ and collecting like terms, some of the terms are expressible as $n^2x^ay^bz^c$, where $a$, $b$, and $c$ are nonnegative integers and $n$ is a positive integer. Compute the sum of all possible values of $n$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$322$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (The prime 7 decides)</h4>
+<p>By the multinomial theorem the coefficient of $x^ay^bz^c$ ($a+b+c=9$) is
+\[\binom{9}{a,b,c}3^b2^c=\frac{9!}{a!\,b!\,c!}\,3^b2^c .\]
+The factor $7$ appears exactly once in $9!$, and in $a!\,b!\,c!$ only if one of $a,b,c$ is at least $7$. So if $a,b,c\le6$, the coefficient is divisible by $7$ but not by $7^2$, and it is not a square. It remains to check the permutations of $(7,1,1)$, $(7,2,0)$, $(8,1,0)$, $(9,0,0)$, whose multinomial coefficients are $72=2^33^2$, $36=2^23^2$, $9=3^2$ and $1$.</p><ul class="ct-ul"><li><p>$(7,1,1)$ in any order: we need $3^b2^{c+3}$ to be a square, so $b$ even; but $b\in\{1,7\}$ is odd. None.</p></li><li><p>$(7,2,0)$ in any order: we need $b$ and $c$ even: $(a,b,c)=(7,2,0)$ gives $36\cdot9=18^2$ and $(7,0,2)$ gives $36\cdot4=12^2$.</p></li><li><p>$(8,1,0)$ in any order: we need $b,c$ even: $(1,8,0)$ gives $9\cdot3^8=243^2$ and $(1,0,8)$ gives $9\cdot2^8=48^2$.</p></li><li><p>$(9,0,0)$ in any order: only $(9,0,0)$ itself, coefficient $1=1^2$ ($3^9$ and $2^9$ are not squares).</p></li></ul><p>The possible values of $n$ are $1,12,18,48,243$, with sum $\boxed{322}$.</p>
+</div></details>
+</section>
+<h2 class="ct-group" id="power-question">Power Question</h2>
+<section class="ct-problem" id="p5">
+<h3>Problem 4(b)</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VII scale">E</span>Number Theory &middot; LPS VII, Chapter 8: Modular Arithmetic and Congruence Methods &middot; Residue Classes and Case Analysis</div>
+<div class="ct-text"><p>A <em>Heronian triangle</em> is a triangle with positive integer side lengths and positive integer area. (Heron's formula: a triangle with sides $a,b,c$ and semiperimeter $s=\frac{a+b+c}2$ has area $K=\sqrt{s(s-a)(s-b)(s-c)}$.) Show that all Heronian triangles have an even perimeter.</p></div>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Heron's formula times 16)</h4>
+<p>Let the sides be $a,b,c$, the perimeter $p=a+b+c$, and the area $K$, a positive integer. Heron's formula, multiplied by $16$, reads
+\[16K^2=p\,(p-2a)(p-2b)(p-2c).\]
+If $p$ were odd, then $p-2a$, $p-2b$, $p-2c$ would also be odd, so the right side would be odd. But the left side is even. Hence $p$ is even.</p>
+<h4>Solution 2 (A symmetric form of Heron's formula)</h4>
+<p>Expanding Heron's formula gives the well-known form
+\[16K^2=2(a^2b^2+b^2c^2+c^2a^2)-(a^4+b^4+c^4),\]
+where $K$ is the (integer) area and $a,b,c$ are the sides. Suppose the perimeter $a+b+c$ is odd. Then an odd number of the sides (one or three) are odd, so $a^4+b^4+c^4$ is odd (a fourth power has the parity of its base). The right side is then even minus odd, which is odd, while $16K^2$ is even. This contradiction shows the perimeter is even.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p6">
+<h3>Problem 6</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VII scale">E</span>Number Theory &middot; LPS VII, Chapter 25: Diophantine Equations: Factorization and Algebraic Methods &middot; Bounding and Size Arguments</div>
+<div class="ct-text"><p>A <em>Heronian triangle</em> is a triangle with positive integer side lengths and positive integer area. (Heron's formula: a triangle with sides $a,b,c$ and semiperimeter $s=\frac{a+b+c}2$ has area $K=\sqrt{s(s-a)(s-b)(s-c)}$.) Not all positive integers can be the side length of a Heronian triangle.</p><ul class="ct-parts"><li><p><span class="ct-lbl">a)</span> Prove that no Heronian triangle has a side length of $1$.</p></li><li><p><span class="ct-lbl">b)</span> Prove that no Heronian triangle has a side length of $2$.</p></li></ul></div>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Heron's formula directly)</h4>
+<p>We use $16K^2=(a+b+c)(-a+b+c)(a-b+c)(a+b-c)$ for a triangle with sides $a,b,c$ and area $K$.</p><p><strong>a)</strong> If one side is $1$ and the others are $x\le y$, the triangle inequality $y&lt;x+1$ forces $y=x$. Then $16K^2=(2x+1)(2x-1)\cdot1\cdot1=4x^2-1$. Since $(2x-1)^2&lt;4x^2-1&lt;(2x)^2$, this is not a perfect square, so $4K$ is irrational and $K$ is not an integer.</p><p><strong>b)</strong> If one side is $2$ and the others are $x\le y$, then $y&lt;x+2$, so $y=x$ or $y=x+1$.</p><ul class="ct-ul"><li><p>$y=x$: $16K^2=(2x+2)(2x-2)\cdot2\cdot2=16(x^2-1)$, so $K^2=x^2-1$. For $x\ge2$, $(x-1)^2&lt;x^2-1&lt;x^2$, so $K$ is not an integer; for $x=1$ the triangle $(1,1,2)$ is degenerate.</p></li><li><p>$y=x+1$: $16K^2=(2x+3)(2x-1)\cdot3\cdot1$ is odd, so it is not $16$ times an integer square.</p></li></ul><p>In all cases the area is not a positive integer.</p>
+<h4>Solution 2 (Parity and the isosceles altitude)</h4>
+<p><em>Parity lemma.</em> A Heronian triangle has even perimeter: $16K^2=p(p-2a)(p-2b)(p-2c)$ with $p=a+b+c$, and if $p$ were odd the right side would be odd, while $16K^2$ is even.</p><p><strong>a)</strong> A triangle with sides $1,x,y$ ($x\le y$) must have $y&lt;x+1$, so $y=x$, and its perimeter $2x+1$ is odd. By the lemma it is not Heronian.</p><p><strong>b)</strong> A triangle with sides $2,x,y$ ($x\le y&lt;x+2$) has $y=x+1$ or $y=x$. If $y=x+1$, the perimeter $2x+3$ is odd, so it is not Heronian. If $y=x$, the triangle is isosceles with base $2$; the altitude to the base bisects it, so its length is $h=\sqrt{x^2-1}$ and the area is $\frac12\cdot2\cdot h=\sqrt{x^2-1}$. For this to be a positive integer $k$ we need $x^2-k^2=1$, i.e. $(x-k)(x+k)=1$, so $x=1$, $k=0$: area $0$, impossible.</p><p>So no Heronian triangle has a side of length $1$ or $2$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p7">
+<h3>Problem 8</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VII scale">E</span>Geometry &middot; LPS VII, Chapter 32: Trigonometric Geometry and Metric Conversion &middot; Law of Sines and Law of Cosines</div>
+<div class="ct-text"><p>A <em>Heronian triangle</em> is a triangle with positive integer side lengths and positive integer area. (Heron's formula: a triangle with sides $a,b,c$ and semiperimeter $s=\frac{a+b+c}2$ has area $K=\sqrt{s(s-a)(s-b)(s-c)}$.) Prove that the sine and cosine of each angle of a Heronian triangle are rational numbers.</p></div>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Law of cosines and the area formula)</h4>
+<p>Let the triangle be $ABC$ with integer sides $a=BC$, $b=CA$, $c=AB$ and integer area $K$. By the law of cosines
+\[\cos A=\frac{b^2+c^2-a^2}{2bc},\]
+a quotient of integers, hence rational. From $K=\frac12bc\sin A$ we get
+\[\sin A=\frac{2K}{bc},\]
+also rational. The same formulas with the letters permuted handle the angles $B$ and $C$.</p>
+<h4>Solution 2 (Coordinates)</h4>
+<p>Let the triangle be $ABC$ with integer sides $a=BC$, $b=CA$, $c=AB$ and integer area $K$. Place $A=(0,0)$ and $B=(c,0)$, and $C=(x,y)$ with $y&gt;0$. Then $y=\frac{2K}{c}$ (the height to $AB$), which is rational. From $x^2+y^2=b^2$ and $(x-c)^2+y^2=a^2$, subtracting, $x=\frac{b^2+c^2-a^2}{2c}$, also rational.</p><p>Since $C=(b\cos A,\,b\sin A)$, we get $\cos A=\frac xb$ and $\sin A=\frac yb$, both rational. Repeating with $B$ or $C$ placed at the origin gives the same conclusion for the other two angles.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p8">
+<h3>Problem 10</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 41: Continued Fractions and Rational Approximation &middot; Applications to Integer Equations</div>
+<div class="ct-text"><p>A <em>Heronian triangle</em> is a triangle with positive integer side lengths and positive integer area. (Heron's formula: a triangle with sides $a,b,c$ and semiperimeter $s=\frac{a+b+c}2$ has area $K=\sqrt{s(s-a)(s-b)(s-c)}$.) Prove that there are infinitely many Heronian triangles with side lengths that are consecutive positive integers. Then state, without proof, the smallest five Heronian triangles whose sides have lengths that are consecutive positive integers.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$(3,4,5)$, $(13,14,15)$, $(51,52,53)$, $(193,194,195)$, $(723,724,725)$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Heron's formula and a Pell equation)</h4>
+<p>Let the sides be $n-1,n,n+1$ with $n\ge3$. Then $s=\frac{3n}2$ and Heron's formula gives
+\[16K^2=3n\cdot(n+2)\cdot n\cdot(n-2)=3n^2(n^2-4).\]
+If $n$ is odd the right side is odd, which is impossible for an integer $K$. So $n=2m$, and $K^2=3m^2(m^2-1)$. Thus $K$ is an integer iff $3(m^2-1)$ is a perfect square $t^2$; then $3\mid t$, $t=3u$, and
+\[m^2-3u^2=1 ,\qquad K=3mu .\]
+Conversely every solution with $m\ge2$, $u\ge1$ gives the Heronian triangle $(2m-1,2m,2m+1)$ with area $3mu$.</p><p><em>Infinitely many.</em> If $m^2-3u^2=1$, then $(2m+3u)^2-3(m+2u)^2=m^2-3u^2=1$, so $(m,u)\mapsto(2m+3u,m+2u)$ produces larger and larger solutions from $(2,1)$:
+\[(2,1),\ (7,4),\ (26,15),\ (97,56),\ (362,209),\ \dots\]</p><p><em>The smallest five.</em> By the theory of the Pell equation all positive solutions are given by $m+u\sqrt3=(2+\sqrt3)^k$, which is exactly the list above. So the five smallest triangles are $n=4,14,52,194,724$:
+\[(3,4,5),\ (13,14,15),\ (51,52,53),\ (193,194,195),\ (723,724,725),\]
+with areas $6$, $84$, $1170$, $16296$, $226974$.</p>
+<h4>Solution 2 (The altitude to the middle side, and doubling)</h4>
+<p>Take sides $n-1,n,n+1$ and drop the altitude $h$ to the side of length $n$; let its foot be at distance $x$ from the end of that side where the side $n-1$ starts. From $(n-1)^2-x^2=h^2=(n+1)^2-(n-x)^2$ we get $x=\frac{n-4}{2}$ and
+\[h^2=(n-1)^2-\Bigl(\frac{n-4}{2}\Bigr)^2=\frac{3(n^2-4)}{4},\qquad K=\frac{nh}2 .\]
+For $n=2m$ this is $h^2=3(m^2-1)$, so whenever $3(m^2-1)$ is a perfect square, $h$ is an integer and $K=mh$ is an integer.</p><p><em>A doubling step.</em> Suppose $3(m^2-1)=h^2$. Put $m'=2m^2-1$. Then
+\[3(m'^2-1)=3\bigl((2m^2-1)^2-1\bigr)=3\cdot4m^2(m^2-1)=(2mh)^2,\]
+again a perfect square. Starting from $m=2$ ($h=3$, triangle $(3,4,5)$) we get $m=7,\,97,\,18817,\dots$, a strictly increasing sequence, hence infinitely many Heronian triangles $(2m-1,2m,2m+1)$.</p><p><em>The smallest five</em> (no proof required): $(3,4,5)$, $(13,14,15)$, $(51,52,53)$, $(193,194,195)$, $(723,724,725)$; the middle sides $4,14,52,194,724$ satisfy $n_{k+1}=4n_k-n_{k-1}$.</p>
+</div></details>
+</section>
+<h2 class="ct-group" id="individual-round">Individual Round</h2>
+<section class="ct-problem" id="p9">
+<h3>Problem 4</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VII scale">E</span>Combinatorics &middot; LPS VII, Chapter 23: Recurrence and Combinatorial Construction &middot; State-Based Construction</div>
+<div class="ct-text"><p>Alice and Bob play a game, taking turns flipping a fair coin, with Alice going first. The first player to flip heads immediately after the other player flipped heads wins. Compute the probability Alice wins.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\dfrac25$</p></div></details>
+<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Four states)</h4>
+<p>Before each flip the situation is described by whose turn it is and whether the previous flip was heads. Let $x$ and $y$ be Alice's winning probabilities when it is Alice's turn and the previous flip was not heads (or there was none), respectively was heads; let $u$ and $v$ be her winning probabilities when it is Bob's turn and the previous flip was not heads, respectively was heads. Conditioning on the next flip:
+\[x=\tfrac12v+\tfrac12u,\qquad y=\tfrac12\cdot1+\tfrac12u,\qquad u=\tfrac12y+\tfrac12x,\qquad v=\tfrac12\cdot0+\tfrac12x .\]
+Then $v=\frac x2$, $u=\frac{x+y}2$, and the first equation gives $4x=x+x+y$, i.e. $y=2x$. The second gives $2x=\frac12+\frac{3x}{4}$, so $x=\frac25$. Alice wins with probability $\boxed{\tfrac25}$.</p>
+<h4>Solution 2 (Where the first HH occurs)</h4>
+<p>The game ends at the first occurrence of two consecutive heads in the sequence of flips, and the winner is the player who made the second of these heads. Alice makes flips $1,3,5,\dots$, so she wins iff the first $HH$ ends at an odd position $n$.</p><p>The first $HH$ ends at position $n\ge3$ iff flips $n-1,n$ are heads, flip $n-2$ is tails and the first $n-3$ flips contain no $HH$. The number of binary strings of length $L$ without $HH$ is the Fibonacci number $F_{L+2}$ ($F_1=F_2=1$), so this happens with probability $F_{n-1}/2^n$ (also correct for $n=2$). Hence
+\[P(\text{Alice})=\sum_{j\ge1}\frac{F_{2j}}{2^{2j+1}}=\frac12\sum_{j\ge1}F_{2j}\Bigl(\frac14\Bigr)^j .\]
+The even-indexed Fibonacci numbers satisfy $F_{2j+2}=3F_{2j}-F_{2j-2}$, so $\sum_{j\ge1}F_{2j}t^j=\frac{t}{1-3t+t^2}$ (for small $t$). At $t=\frac14$ this equals $\frac{1/4}{5/16}=\frac45$, and $P(\text{Alice})=\frac12\cdot\frac45=\boxed{\tfrac25}$.</p>
+<h4>Solution 3 (Restarting after a tails)</h4>
+<p>Call a moment <em>fresh</em> if no coin has been flipped yet or the last flip was tails. At a fresh moment the past does not matter: nobody can win with the next flip. Let $p$ be the probability that the player who is about to flip at a fresh moment wins the game; by this observation $p$ does not depend on who that player is or on how many flips came before.</p><p>The game ends with probability $1$: flips $1,2$, flips $3,4$, and so on are disjoint pairs, each pair is $HH$ with probability $\frac14$ independently, so the probability that the game lasts beyond $2k$ flips is at most $\left(\frac34\right)^k\to0$. Hence at a fresh moment the player who is <em>not</em> about to flip wins with probability $1-p$.</p><p>Start at the beginning, a fresh moment with Alice to flip, and look at the first one or two flips.</p><ul class="ct-ul"><li><p>Alice flips tails (probability $\frac12$). The moment is fresh with Bob to flip, so Alice now wins with probability $1-p$.</p></li><li><p>Alice flips heads and then Bob flips heads (probability $\frac14$). Bob wins at once.</p></li><li><p>Alice flips heads and then Bob flips tails (probability $\frac14$). The moment is fresh with Alice to flip, so she wins with probability $p$.</p></li></ul><p>Therefore
+\[p=\frac12(1-p)+\frac14\cdot0+\frac14\,p,\qquad\text{so}\qquad \frac54\,p=\frac12,\]
+and Alice wins with probability $p=\boxed{\tfrac25}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p10">
+<h3>Problem 6</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure &middot; Tangency and Tangent Geometry</div>
+<div class="ct-text"><p>Suppose that $\triangle ABC$ has a right angle at $C$, and suppose that $AC=20$ and $AB=25$. Vertex $C$ is on a circle with center $O$, and the circle is tangent to $\overline{AB}$ at $G$. Given that chord $\overline{GC}$ has length $13$, compute the area of $\triangle GOC$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\dfrac{845}{48}$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Coordinates with the tangent as an axis)</h4>
+<div class="ct-fig"><img style="width:301px" src="/assets/contests/2026-27/nysml-10_s1.svg" alt="Figure for the solution"></div>
+<p>By the Pythagorean theorem $BC=15$, and the altitude from $C$ to $AB$ is $CH=\frac{15\cdot20}{25}=12$. Since $GC=13$, $GH=\sqrt{13^2-12^2}=5$.</p><p>Put $G$ at the origin and the line $AB$ on the $x$-axis, with $C=(\pm5,12)$. The circle is tangent to the $x$-axis at $G$, so its center is $O=(0,r)$ with $r&gt;0$ (on the side of $C$). It passes through $C$: $25+(12-r)^2=r^2$, so $169=24r$ and $r=\frac{169}{24}$.</p><p>Triangle $GOC$ has the side $GO$ of length $r$ on the $y$-axis, and $C$ is at distance $5$ from that axis, so its area is
+\[\frac12\cdot\frac{169}{24}\cdot5=\boxed{\tfrac{845}{48}}.\]
+(Either position of $G$ on $AB$, $5$ units from $H$, gives the same area.)</p>
+<h4>Solution 2 (The tangent-chord angle)</h4>
+<p>As before $BC=15$ and the altitude $CH=12$, so in right triangle $CHG$ the angle $\theta=\angle CGH$ between the chord $GC$ and the tangent line $AB$ satisfies $\sin\theta=\frac{12}{13}$, $\cos\theta=\frac5{13}$.</p><p>Since $OG\perp AB$ and $O$, $C$ lie on the same side of $AB$, $\angle OGC=90^\circ-\theta$; the triangle $GOC$ is isosceles ($OG=OC=r$), so $\angle OCG=90^\circ-\theta$ and $\angle GOC=2\theta$. The chord satisfies $GC=2r\sin\theta$, so $r=\frac{13}{2\cdot12/13}=\frac{169}{24}$. Therefore
+\[[GOC]=\frac12r^2\sin2\theta=r^2\sin\theta\cos\theta=\Bigl(\frac{169}{24}\Bigr)^2\cdot\frac{60}{169}=\frac{169\cdot60}{576}=\boxed{\tfrac{845}{48}}.\]</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p11">
+<h3>Problem 8</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 8: Modular Arithmetic and Congruence Methods &middot; Modular Equations and Solutions</div>
+<div class="ct-text"><p>The four-digit base-ten number $\underline{A}\,\underline{B}\,\underline{C}\,\underline{D}$ is a multiple of $13$, where $A$, $B$, $C$, and $D$ are not necessarily distinct digits. The sum of its digits is also a multiple of $13$. The base-eight number $\underline{A}\,\underline{B}\,\underline{C}\,\underline{D}_{\,\text{eight}}$ is also a multiple of thirteen. Compute <strong>both</strong> possible values of $\underline{A}\,\underline{B}\,\underline{C}\,\underline{D}$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$4225$ and $6331$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Three congruences modulo 13)</h4>
+<p>Since $\underline{ABCD}_{\,\text{eight}}$ is a base-eight numeral, $A,B,C,D\in\{0,\dots,7\}$ and $A\ge1$. Reduce modulo $13$: $1000\equiv-1$, $100\equiv9$, $10\equiv10$, and $512\equiv5$, $64\equiv-1$. The conditions are
+\[N\equiv-A+9B+10C+D\equiv0,\qquad M\equiv5A-B+8C+D\equiv0,\qquad S=A+B+C+D\equiv0 .\]
+Subtracting the third from the first two:
+\[-2A+8B+9C\equiv0,\qquad 4A-2B+7C\equiv0\pmod{13}.\]
+Multiplying the first by $7$ and the second by $9$ and subtracting eliminates $C$: $-14A+56B-36A+18B\equiv0$, i.e. $50A\equiv74B$, i.e. $11A\equiv9B$; multiplying by $6$ (the inverse of $11$) gives $A\equiv2B\pmod{13}$. With digits $0$&ndash;$7$ and $A\ge1$: $(A,B)\in\{(2,1),(4,2),(6,3),(1,7)\}$.</p><p>From $9C\equiv2A-8B$ and $9^{-1}\equiv3$: $C\equiv6A-24B\equiv6A+2B\pmod{13}$, giving $C=1,2,3,7$ respectively. Finally $S\equiv0$ with $S\le28$ means $S\in\{13,26\}$, so $D=13-(A+B+C)$ or $26-(A+B+C)$ must be a digit from $0$ to $7$:</p><ul class="ct-ul"><li><p>$(2,1,1)$: $D=9$ or $22$; impossible.</p></li><li><p>$(4,2,2)$: $D=5$, giving $4225$.</p></li><li><p>$(6,3,3)$: $D=1$, giving $6331$.</p></li><li><p>$(1,7,7)$: $D=-2$ or $11$; impossible.</p></li></ul><p>Check: $4225=13\cdot325$, $4+2+2+5=13$, $4225_8=2197=13^3$; $6331=13\cdot487$, $6+3+3+1=13$, $6331_8=3289=13\cdot 253$. The two numbers are $\boxed{4225\text{ and }6331}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p12">
+<h3>Problem 10</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Algebra &middot; LPS VII, Chapter 1: Inequalities: Core Classical Methods &middot; Elementary Bounding and Local Estimates</div>
+<div class="ct-text"><p>Compute the value of $x$ that minimizes
+\[|x-100|+|2x-99|+|3x-98|+\dots+|98x-3|+|99x-2|+|100x-1|.\]</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\dfrac{30}{71}$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (A weighted median)</h4>
+<p>Write the $k$th term as $|kx-(101-k)|=k\,|x-c_k|$ with $c_k=\frac{101-k}{k}=\frac{101}{k}-1$, so
+\[g(x)=\sum_{k=1}^{100}k\,|x-c_k|,\qquad c_1&gt;c_2&gt;\dots&gt;c_{100}.\]
+$g$ is convex and piecewise linear; on an interval containing no $c_k$ its slope is (total weight of the $c_k$ to the left of $x$) minus (total weight to the right). The total weight is $1+2+\dots+100=5050$.</p><p>Just to the left of $c_j$, the points to the right are $c_1,\dots,c_j$, with weight $\frac{j(j+1)}2$, so the slope is $5050-j(j+1)$. Just to the right of $c_j$, the points to the right are $c_1,\dots,c_{j-1}$, and the slope is $5050-j(j-1)$. For $j=71$: the slope is $5050-71\cdot72=-62&lt;0$ on the left and $5050-71\cdot70=80&gt;0$ on the right. So $g$ decreases up to $c_{71}$ and increases after it, and the unique minimizer is
+\[x=c_{71}=\frac{101-71}{71}=\boxed{\tfrac{30}{71}}.\]</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p13">
+<h3>Tiebreaker 1</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 8: Modular Arithmetic and Congruence Methods &middot; Residue Classes and Case Analysis</div>
+<div class="ct-text"><p>For each positive integer $n$, let $f(n)$ denote the sum of the first $n$ positive perfect squares. For example, $f(3)=1+4+9=14$. Compute the least positive integer $m$ for which $f(m)$ and $f(2026)$ have the same remainder upon division by $2026$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$506$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (The formula for $f$)</h4>
+<p>We have $f(n)=\frac{n(n+1)(2n+1)}6$, and $2026=2\cdot1013$ with $1013$ prime. Then
+\[f(2026)=\frac{2026\cdot2027\cdot4053}{6}=1013\cdot2027\cdot1351,\]
+an odd multiple of $1013$, so $f(2026)\equiv1013\pmod{2026}$. We need the least $m$ with $f(m)$ an odd multiple of $1013$.</p><p>Since $\gcd(1013,6)=1$, $1013\mid f(m)$ iff $1013\mid m(m+1)(2m+1)$, i.e. (as $1013$ is prime) $m\equiv0$, $m\equiv-1$, or $2m+1\equiv0\pmod{1013}$. The least positive solutions of these are $1013$, $1012$, and $506$ (from $2m+1=1013$). Finally $f(506)=\frac{506\cdot507\cdot1013}{6}=253\cdot169\cdot1013$ is odd. So the answer is $\boxed{506}$.</p>
+<h4>Solution 2 (Symmetry of squares modulo 1013)</h4>
+<p>Let $p=1013$ (prime), so $2026=2p$, and we compare $f(m)$ and $f(2026)$ modulo $2$ and modulo $p$.</p><p><em>Modulo $2$.</em> $k^2$ has the parity of $k$, so $f(n)\equiv$ (number of odd $k\le n$) $=\lceil n/2\rceil\pmod 2$. Thus $f(2026)\equiv1013\equiv1$.</p><p><em>Modulo $p$.</em> Since $k^2\equiv(p-k)^2$, the sum of $k^2$ over $k=1,\dots,p-1$ is twice the sum over $k=1,\dots,\frac{p-1}{2}$; and it is $\frac{(p-1)p(2p-1)}{6}\equiv0$ because $p&gt;3$. Hence $f(\frac{p-1}2)=f(506)\equiv0$ (as $2$ is invertible), and $f(2026)=f(2p)\equiv2f(p-1)\equiv0$. So we need $f(m)\equiv0\pmod p$ and $f(m)$ odd.</p><p>$m=506$ works: $f(506)\equiv0\pmod p$ and $\lceil 506/2\rceil=253$ is odd. No smaller $m$ works: for $m&lt;506$, $6f(m)=m(m+1)(2m+1)$ is a product of three positive integers less than $p$, so $p\nmid 6f(m)$ and $p\nmid f(m)$. The answer is $\boxed{506}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p14">
+<h3>Tiebreaker 2</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VII scale">E</span>Algebra &middot; LPS VII, Chapter 17: Sequences, Recurrences, and Discrete Dynamics &middot; Nonlinear Recurrences</div>
+<div class="ct-text"><p>Define the sequence $\{a_n\}$ by $a_1=1$, and for all $k\ge1$,
+\[a_{k+1}=\left\lfloor\frac{k+1}{a_k+1}\right\rfloor .\]
+Compute $a_{2026}$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$1013$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Guess and prove by induction)</h4>
+<p>Computing, $a_1=1$, $a_2=\lfloor\frac22\rfloor=1$, $a_3=\lfloor\frac32\rfloor=1$, $a_4=2$, $a_5=1$, $a_6=3$, $a_7=1$, $a_8=4$. We claim $a_k=1$ for odd $k$ and $a_k=\frac k2$ for even $k$.</p><p>This holds for $k\le 2$. Assume it for $k$.</p><ul class="ct-ul"><li><p>If $k$ is odd, $a_k=1$ and $a_{k+1}=\lfloor\frac{k+1}{2}\rfloor=\frac{k+1}2$ since $k+1$ is even.</p></li><li><p>If $k$ is even, $a_k=\frac k2$ and $a_{k+1}=\left\lfloor\frac{k+1}{k/2+1}\right\rfloor=\left\lfloor\frac{2k+2}{k+2}\right\rfloor=1$, because $k+2\le 2k+2&lt;2(k+2)$.</p></li></ul><p>So the claim holds for all $k$, and $a_{2026}=\boxed{1013}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p15">
+<h3>Tiebreaker 3</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Geometry &middot; LPS VI, Chapter 40: Coordinate Geometry and Analytic Methods &middot; Slope, Parallelism, and Perpendicularity</div>
+<div class="ct-text"><p>A square is in the coordinate plane. The product of the slopes of two sides of the square is $2026$. Compute the product of the slopes of the other two sides.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\dfrac{1}{2026}$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Parallel and perpendicular sides)</h4>
+<p>A square has two pairs of parallel sides, and adjacent sides are perpendicular. Since a product of two slopes is given, the two sides have slopes; if they were adjacent, their slopes $m$ and $-\frac1m$ would have product $-1\ne2026$. So they are opposite sides, both with slope $m$, and $m^2=2026$. The other two sides are perpendicular to them, both with slope $-\frac1m$, so their product is $\frac1{m^2}=\boxed{\tfrac{1}{2026}}$.</p>
+</div></details>
+</section>
+{% endraw %}

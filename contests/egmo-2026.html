@@ -29,6 +29,11 @@ description: European Girls' Mathematical Olympiad 2026: problems with answers a
   .ct-note { font-size: 14px; color: var(--ink-soft); font-style: italic; }
   .ct-bar { margin: .6em 0 1em; display: flex; gap: 10px; flex-wrap: wrap; }
   .ct-bar button { font: inherit; font-size: 14px; padding: 5px 12px; border-radius: var(--radius); border: 1px solid var(--brand); background: var(--white); color: var(--brand); cursor: pointer; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
 </style>
 <script>
   window.MathJax = { tex: { inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [['\\[','\\]']], processEscapes: true },
@@ -57,6 +62,28 @@ description: European Girls' Mathematical Olympiad 2026: problems with answers a
   .ct-text mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
 </style>
 
+<style>
+  .ct-tags { display: flex; flex-wrap: wrap; gap: 5px; margin: 0 0 .55em; }
+  .ct-tg { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .03em; padding: 2px 8px; border-radius: 999px; line-height: 1.5; }
+  .ct-lv { background: #eee7dc; color: #4a3d33; }
+  .ct-df-Starter { background: #dcf1dc; color: #245c24; }
+  .ct-df-Explorer { background: #d6efec; color: #155e57; }
+  .ct-df-Challenger { background: #dce8f7; color: #1f4c80; }
+  .ct-df-Olympiad { background: #e7defa; color: #4b2a8a; }
+  .ct-df-Advanced { background: #fbe4cc; color: #8a4a0b; }
+  .ct-df-Expert { background: #f8d6cf; color: #8c2600; }
+  .ct-band { margin: 1.3em 0 .5em; font-size: 14px; color: var(--ink-soft); }
+  .ct-band .ct-tg { font-size: 13px; margin-right: .4em; }
+  .ct-legend { font-size: 14.5px; background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 10px 16px; margin: 1em 0 1.4em; }
+  .ct-legend p { margin: .35em 0; }
+  .ct-legend ul { margin: .2em 0 .4em; padding-left: 1.1em; }
+  .ct-legend li { margin: .2em 0; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
+</style>
 {% endraw %}
 <p><a href="{{ '/contests-2026' | relative_url }}">&larr; All contests 2026</a></p>
 
@@ -73,7 +100,7 @@ description: European Girls' Mathematical Olympiad 2026: problems with answers a
 <h2 class="ct-group" id="day-1">Day 1</h2>
 <section class="ct-problem" id="p1">
 <h3>Problem 1</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 20: Parity, Coloring, and Process Termination</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 20: Parity, Coloring, and Process Termination &middot; Parity and Coloring Arguments</div>
 <div class="ct-text"><p>A $2026\times 2026$ board is said to be <em>bordeaux</em> if at least one of its $2026^2$ unit cells is coloured red. A rectangular region made of cells is <em>oddly-rectangular</em> if it contains an odd number of red cells. Determine the largest positive integer $M$ such that, in every possible $2026\times 2026$ bordeaux board, there exists an oddly-rectangular region of at least $M$ cells.</p><p><em>Note:</em> A rectangular region has sides that are parallel to the sides of the board and contains all of its interior.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$M=1013^2=1026169$</p></div></details>
 <details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
@@ -131,7 +158,7 @@ columns. Hence $R$ has at least $m^2$ cells.</p><p>Therefore
 </section>
 <section class="ct-problem" id="p2">
 <h3>Problem 2</h3>
-<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 49: Combinatorial Number Theory and Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 49: Combinatorial Number Theory and Structure &middot; Sequences with Arithmetic Constraints</div>
 <div class="ct-text"><p>Given a positive integer $n$, Marie plays a game where she starts with the number $1$ on a blackboard. As many times as she wants, she can choose an integer $j$ such that $1\le j\le n$ and replace the number $V$ on the blackboard with the number $j\cdot R\left(\frac{V}{j}\right)$. Here $R(x)$ denotes the nearest integer to $x$; if $x$ is exactly halfway between two consecutive integers, it is rounded up. For example, $R(1.3)=1$ and $R(1.5)=R(1.8)=2$.</p><ul class="ct-parts"><li><p><span class="ct-lbl">(a)</span> Prove that for each given $n$, there is a positive integer $B$ such that Marie can never end up with a number larger than $B$ on the blackboard.</p></li><li><p><span class="ct-lbl">(b)</span> For any given $n$, let $f(n)$ be the maximum number obtainable on the blackboard after finitely many replacements. Show that there exists a positive integer $N$ such that for all $n\ge N$, we have that $2026$ divides $f(n)$.</p></li></ul></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>proof (one may take $N=1024\cdot1013$)</p></div></details>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
@@ -149,7 +176,7 @@ which forces $u\bmod 1013=0$. Hence $1024\cdot1013\mid f$, and in particular $20
 </section>
 <section class="ct-problem" id="p3">
 <h3>Problem 3</h3>
-<div class="ct-meta">Algebra &middot; LPS VII, Chapter 30: Functional Equations: Core Olympiad Methods</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Algebra &middot; LPS VII, Chapter 30: Functional Equations: Core Olympiad Methods &middot; Injectivity and Surjectivity</div>
 <div class="ct-text"><p>Let $\mathbb{R}$ be the set of real numbers. Determine all functions $f:\mathbb{R}\to\mathbb{R}$ such that for all real numbers $x,y$, the following holds:
 \[f\left((f(x)+f(y))^2\right)=(x+y)f(x+y).\]</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$f(x)=0$, $f(x)=x$ and $f(x)=-x$</p></div></details>
@@ -227,7 +254,7 @@ So $D\equiv0$ and $f(u)=du$. Then $D(d)=0$, and $d^2+D(d)-1=0$ gives $d^2=1$: $f
 <h2 class="ct-group" id="day-2">Day 2</h2>
 <section class="ct-problem" id="p4">
 <h3>Problem 4</h3>
-<div class="ct-meta">Algebra &middot; LPS VII, Chapter 17: Sequences, Recurrences, and Discrete Dynamics</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Algebra &middot; LPS VII, Chapter 17: Sequences, Recurrences, and Discrete Dynamics &middot; Invariant and Monotone Sequence Behavior</div>
 <div class="ct-text"><p>Let $1=a_1\ge a_2\ge a_3\ge\dots$ be an infinite sequence of real numbers such that $a_n=a_{2n}+a_{2n+1}$ for all positive integers $n$. For $r=2026^{2026}$, prove that
 \[\frac{1}{r}\le a_r\le\frac{2}{r+1}.\]</p></div>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
@@ -244,7 +271,7 @@ $a_1=1$ is shared out exactly over it.</p>
 </section>
 <section class="ct-problem" id="p5">
 <h3>Problem 5</h3>
-<div class="ct-meta">Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure &middot; Power of a Point</div>
 <div class="ct-text"><p>Let $ABC$ be an acute triangle with $AC&gt;AB$. Denote by $\omega$ its circumcircle and by $O$ its circumcentre. Let $K$ be the intersection of the tangents to $\omega$ at $B$ and $C$. Circle $ABK$ intersects line $BC$ again at $Z\ne B$. Let $L$ be the midpoint of $KZ$. Let $X$ be the intersection of the lines $KZ$ and $AB$. Let $V$ be the point on circle $ABL$ on the same side of $BC$ as $A$ such that $OV$ is perpendicular to $KZ$. Prove that $LV$ is perpendicular to $CX$.</p></div>
 <details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 ($L$ lies on $AC$, and $V$ is the antipode of $L$)</h4>
@@ -336,7 +363,7 @@ As $L\ne V$ and $X\ne C$ ($X$ lies on line $KZ$, which meets line $BC$ only at $
 </section>
 <section class="ct-problem" id="p6">
 <h3>Problem 6</h3>
-<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 21: Arithmetic Functions and Multiplicative Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Number Theory &middot; LPS VII, Chapter 21: Arithmetic Functions and Multiplicative Structure &middot; Divisor and Sum Functions</div>
 <div class="ct-text"><p>Let $p$ be a prime number and let $n$ be a positive integer such that $p$ does <strong>not</strong> divide $n$. Denote by $k$ the number of positive divisors of $n$, and by $1=d_1&lt;d_2&lt;\cdots&lt;d_k=n$ the positive divisors of $n$. For $i=1,2,\dots,k$, let $c_i$ be the number of positive divisors $\ell$ of $d_i^2$ such that $d_i-\ell$ is divisible by $p$. Prove that
 \[(p-1)(c_1+c_2+\cdots+c_k)\ge k^2.\]</p></div>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">

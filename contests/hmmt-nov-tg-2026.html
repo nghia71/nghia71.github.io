@@ -1,0 +1,739 @@
+---
+title: HMMT November 2026: Team and Guts rounds
+permalink: /contests/hmmt-nov-tg-2026
+description: HMMT November 2026: Team and Guts rounds: problems with answers and solutions
+---
+{% raw %}
+<style>
+  .ct-intro { margin-bottom: 1.2em; }
+  .ct-credit { font-size: 14px; color: var(--ink-soft); border-left: 3px solid var(--gold); padding: 6px 12px; background: var(--white); margin: 1em 0; }
+  .ct-toc { display: flex; flex-wrap: wrap; gap: 6px; margin: 1em 0 1.4em; }
+  .ct-toc a { display: inline-block; min-width: 2.4em; text-align: center; padding: 4px 8px; border: 1px solid var(--rule); border-radius: 4px; background: var(--white); text-decoration: none; font-size: 14px; }
+  .ct-problem { background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 14px 18px; margin: 1.1em 0; }
+  .ct-problem h3 { margin: 0 0 .3em; font-size: 1.08rem; border-bottom: none; padding-bottom: 0; }
+  .ct-meta { font-size: 13px; color: var(--ink-soft); margin-bottom: .6em; }
+  .ct-text { font-family: Georgia, "Times New Roman", "Noto Serif", serif; font-size: 1.02em; line-height: 1.6; }
+  .ct-text p { margin: .5em 0; }
+  .ct-fig { text-align: center; margin: .8em 0; }
+  .ct-fig img { max-width: 100%; height: auto; max-height: 340px; }
+  .ct-choices { display: flex; flex-wrap: wrap; gap: 6px 22px; margin: .6em 0 .2em; }
+  .ct-choices b { margin-right: .3em; }
+  .ct-problem details { margin-top: .8em; border-top: 1px dashed var(--rule); padding-top: .5em; }
+  .ct-problem summary { cursor: pointer; font-weight: 600; color: var(--brand); font-size: 15px; }
+  .ct-problem details[open] summary { margin-bottom: .5em; }
+  .ct-sol h4 { font-size: 1rem; margin: 1em 0 .3em; color: var(--ink); }
+  .ct-answer { font-weight: 600; }
+  .ct-parts { list-style: none; padding-left: .4em; }
+  .ct-parts li { margin: .35em 0; }
+  .ct-lbl { font-weight: 700; margin-right: .3em; }
+  .ct-note { font-size: 14px; color: var(--ink-soft); font-style: italic; }
+  .ct-bar { margin: .6em 0 1em; display: flex; gap: 10px; flex-wrap: wrap; }
+  .ct-bar button { font: inherit; font-size: 14px; padding: 5px 12px; border-radius: var(--radius); border: 1px solid var(--brand); background: var(--white); color: var(--brand); cursor: pointer; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
+</style>
+<script>
+  window.MathJax = { tex: { inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [['\\[','\\]']], processEscapes: true },
+                     options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] } };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script>
+  function ctAll(open) { document.querySelectorAll('.ct-problem details').forEach(function (d) { d.open = open; }); }
+</script>
+
+<style>
+  .ct-group { font-size: 1.25rem; margin: 1.6em 0 .2em; }
+  .ct-toc-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: .3em 0; }
+  .ct-toc-g { font-size: 13px; color: var(--ink-soft); min-width: 9em; }
+  .ct-toc-wrap { margin: 1em 0 1.4em; }
+  .ct-center { text-align: center; margin: .6em 0; }
+  .ct-tablewrap { overflow-x: auto; margin: .6em 0; text-align: center; }
+  .ct-table { border-collapse: collapse; margin: 0 auto; }
+  .ct-table td { padding: 2px 9px; text-align: center; }
+  .ct-table tr.ct-hl td { border-bottom: 1px solid var(--ink-soft); }
+  .ct-table.ct-vfirst td:first-child { border-right: 1px solid var(--ink-soft); }
+  .ct-ul { padding-left: 1.4em; }
+  .ct-ul li { margin: .3em 0; }
+  .ct-text li > p:first-child { margin-top: 0; }
+  .ct-text li > p:last-child { margin-bottom: 0; }
+  .ct-text mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
+</style>
+
+<style>
+  .ct-tags { display: flex; flex-wrap: wrap; gap: 5px; margin: 0 0 .55em; }
+  .ct-tg { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .03em; padding: 2px 8px; border-radius: 999px; line-height: 1.5; }
+  .ct-lv { background: #eee7dc; color: #4a3d33; }
+  .ct-df-Starter { background: #dcf1dc; color: #245c24; }
+  .ct-df-Explorer { background: #d6efec; color: #155e57; }
+  .ct-df-Challenger { background: #dce8f7; color: #1f4c80; }
+  .ct-df-Olympiad { background: #e7defa; color: #4b2a8a; }
+  .ct-df-Advanced { background: #fbe4cc; color: #8a4a0b; }
+  .ct-df-Expert { background: #f8d6cf; color: #8c2600; }
+  .ct-band { margin: 1.3em 0 .5em; font-size: 14px; color: var(--ink-soft); }
+  .ct-band .ct-tg { font-size: 13px; margin-right: .4em; }
+  .ct-legend { font-size: 14.5px; background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 10px 16px; margin: 1em 0 1.4em; }
+  .ct-legend p { margin: .35em 0; }
+  .ct-legend ul { margin: .2em 0 .4em; padding-left: 1.1em; }
+  .ct-legend li { margin: .2em 0; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
+</style>
+{% endraw %}
+<p><a href="{{ '/contests-2026' | relative_url }}">&larr; All contests 2026</a></p>
+
+<h1>HMMT November 2026: Team and Guts rounds</h1>
+
+<div class="ct-intro">
+<p>The 43 problems of the HMMT November 2026: Team and Guts rounds, each with our own solutions, hidden until you open them. Where a problem has a final answer, it is shown separately. Try a problem first, then check.</p><p>HMMT November 2026 was held at Harvard on 7 November 2026. These are its Team Round (10 problems) and Guts Round (33 short-answer problems; the three estimation problems are left out), in full.</p>
+</div>
+<div class="ct-credit">Problems: HMMT November 2026: Team and Guts rounds, from the AoPS contest collection or the official paper. Solutions written by MCC.</div>
+<div class="ct-bar"><button type="button" onclick="ctAll(true)">Show all answers and solutions</button><button type="button" onclick="ctAll(false)">Hide all</button></div>
+<div class="ct-toc-wrap"><div class="ct-toc-row"><span class="ct-toc-g">Team Round</span><a href="#p1">1</a><a href="#p2">2</a><a href="#p3">3</a><a href="#p4">4</a><a href="#p5">5</a><a href="#p6">6</a><a href="#p7">7</a><a href="#p8">8</a><a href="#p9">9</a><a href="#p10">10</a></div><div class="ct-toc-row"><span class="ct-toc-g">Guts Round</span><a href="#p11">1</a><a href="#p12">2</a><a href="#p13">3</a><a href="#p14">4</a><a href="#p15">5</a><a href="#p16">6</a><a href="#p17">7</a><a href="#p18">8</a><a href="#p19">9</a><a href="#p20">10</a><a href="#p21">11</a><a href="#p22">12</a><a href="#p23">13</a><a href="#p24">14</a><a href="#p25">15</a><a href="#p26">16</a><a href="#p27">17</a><a href="#p28">18</a><a href="#p29">19</a><a href="#p30">20</a><a href="#p31">21</a><a href="#p32">22</a><a href="#p33">23</a><a href="#p34">24</a><a href="#p35">25</a><a href="#p36">26</a><a href="#p37">27</a><a href="#p38">28</a><a href="#p39">29</a><a href="#p40">30</a><a href="#p41">31</a><a href="#p42">32</a><a href="#p43">33</a></div></div>
+
+{% raw %}
+<h2 class="ct-group" id="team-round">Team Round</h2>
+<section class="ct-problem" id="p1">
+<h3>Problem 1</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Number Theory &middot; LPS VI, Chapter 10: Logical Deduction and Constraint Puzzles &middot; Contradiction and Elimination</div>
+<div class="ct-text"><p>Jerry and Sophie are each given a number. They are both told the following information:</p><ul class="ct-ul"><li><p>Their numbers are distinct integers between $2$ and $50$, inclusive.</p></li><li><p>Jerry's number is an integer power of Sophie's number.</p></li></ul><p>However, neither of them can determine the other's number given this information. Compute the sum of their numbers.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$18$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Who can be unsure)</h4>
+<p>Let Sophie's number be $s$ and Jerry's number be $j=s^k$. Since $j\ne s$ and both lie in $[2,50]$, the exponent satisfies $k\ge 2$ (the exponent $1$ gives $j=s$, and exponents $k\le 0$ give $1$ or a non-integer).</p><p><strong>Sophie is unsure.</strong> Sophie knows $s$, so she cannot determine $j$ exactly when at least two of the powers $s^2,s^3,\dots$ are at most $50$, that is, when $s^3\le 50$. Hence $s\in\{2,3\}$ (for $s=2$ the candidates are $4,8,16,32$; for $s=3$ they are $9,27$).</p><p><strong>Jerry is unsure.</strong> Jerry knows $j$, so $j$ must be a $k$-th power ($k\ge2$) of at least two different integers in $[2,50]$. The perfect powers up to $50$ are
+\[4=2^2,\ 8=2^3,\ 9=3^2,\ 16=2^4=4^2,\ 25=5^2,\ 27=3^3,\ 32=2^5,\ 36=6^2,\ 49=7^2,\]
+and only $16$ has two different bases. So $j=16$.</p><p>Now $s\in\{2,3\}$ and $16$ is a power of $s$, so $s=2$. Conversely, for $(s,j)=(2,16)$ Sophie hesitates between $4,8,16,32$ and Jerry between $2$ and $4$, so the pair is consistent. The sum is $2+16=\boxed{18}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p2">
+<h3>Problem 2</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Algebra &middot; LPS VI, Chapter 33: Radicals and Irrational Expressions &middot; Operations with Radicals</div>
+<div class="ct-text"><p>Across all positive integers $m$ and $n$, compute the least possible integer value of
+\[(\sqrt{21}+\sqrt{55})^2+(\sqrt{m}-\sqrt{n})^2.\]</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$144$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Cancel the irrational part)</h4>
+<p>Expanding,
+\[(\sqrt{21}+\sqrt{55})^2+(\sqrt m-\sqrt n)^2=76+m+n+2\bigl(\sqrt{1155}-\sqrt{mn}\bigr).\]
+If this is an integer, then $q=\sqrt{mn}-\sqrt{1155}$ is rational, and squaring $\sqrt{mn}=q+\sqrt{1155}$ gives $mn=q^2+1155+2q\sqrt{1155}$. Since $1155=3\cdot5\cdot7\cdot11$ is not a perfect square, $\sqrt{1155}$ is irrational, so $q=0$ and $mn=1155$. Conversely, $mn=1155$ makes the value equal to the integer $76+m+n$.</p><p>So we must minimise $m+n$ subject to $mn=1155$. The factor pairs are
+\[(1,1155),\ (3,385),\ (5,231),\ (7,165),\ (11,105),\ (15,77),\ (21,55),\ (33,35),\]
+and the smallest sum is $33+35=68$ (as it must be, since $m+n\ge 2\sqrt{1155}&gt;67$). The least integer value is $76+68=\boxed{144}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p3">
+<h3>Problem 3</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Geometry &middot; LPS VI, Chapter 4: Angle Chasing and Line Configurations &middot; Composite Angle Chases</div>
+<div class="ct-text"><p>Let points $A$ and $D$ lie on parallel lines $\ell_1$ and $\ell_2$, respectively, and let points $B$ and $C$ lie between $\ell_1$ and $\ell_2$ such that $AB=BC=CD$, and $B$, $C$ are on the same side of $AD$. Suppose the angle between $\overline{AB}$ and $\ell_1$ is $20^\circ$, the angle between $\overline{CD}$ and $\ell_2$ is $26^\circ$, and $\angle ABD=84^\circ$. Compute the degree measure of $\angle ACD$.</p><div class="ct-fig"><img style="width:281px" src="/assets/contests/2026-27/hmmt-nov-tg-3.svg" alt="Figure for Team Round, Problem 3"></div></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$75^\circ$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Angle chase with two isosceles triangles)</h4>
+<p>We work in the configuration of the figure: $A$ is to the right of $B$ and $D$ to the right of $C$, with $B$ and $C$ to the left of line $AD$. Let $\beta=\angle ABC$ and $\gamma=\angle BCD$.</p><p><strong>Step 1: $\beta+\gamma=226^\circ$.</strong> Extend line $BC$ beyond $B$ to meet $\ell_1$ at $X$ and beyond $C$ to meet $\ell_2$ at $Y$. In triangle $ABX$ the angle at $A$ is the angle between $AB$ and $\ell_1$, namely $20^\circ$, and $\angle ABC$ is the exterior angle at $B$, so $\beta=20^\circ+\angle BXA$. Similarly, in triangle $CDY$, $\gamma=26^\circ+\angle CYD$. The lines $\ell_1,\ell_2$ are parallel and $A$, $D$ lie on the same side of the transversal $XY$, so $\angle BXA+\angle CYD=180^\circ$ (co-interior angles). Hence $\beta+\gamma=226^\circ$.</p><p><strong>Step 2: the isosceles triangles.</strong> Since $BA=BC$, triangle $ABC$ is isosceles and $\angle BCA=\frac{180^\circ-\beta}{2}$. Since $CB=CD$, $\angle CBD=\frac{180^\circ-\gamma}{2}$. Ray $BD$ lies inside angle $ABC$, so
+\[84^\circ=\angle ABD=\angle ABC-\angle CBD=\beta-90^\circ+\frac{\gamma}{2},\qquad\text{so}\qquad \beta+\frac{\gamma}{2}=174^\circ.\]
+Subtracting this from $\beta+\gamma=226^\circ$ gives $\gamma=104^\circ$ and then $\beta=122^\circ$.</p><p><strong>Step 3.</strong> Ray $CA$ lies inside angle $BCD$, so
+\[\angle ACD=\angle BCD-\angle BCA=104^\circ-\frac{180^\circ-122^\circ}{2}=104^\circ-29^\circ=\boxed{75^\circ}.\]</p>
+<h4>Solution 2 (Sums of unit vectors)</h4>
+<p>Take $AB=BC=CD=1$ and measure directions as angles counterclockwise from the direction of the arrows on $\ell_1,\ell_2$. Write $e(\theta)=(\cos\theta,\sin\theta)$. In the configuration of the figure, $\overrightarrow{BA}=e(20^\circ)$ and $\overrightarrow{CD}=e(-26^\circ)$; let $\overrightarrow{BC}=e(\psi)$.</p><p>The key fact: for unit vectors,
+\[e(\alpha)+e(\beta)=2\cos\tfrac{\alpha-\beta}{2}\;e\bigl(\tfrac{\alpha+\beta}{2}\bigr),\]
+so the sum points along one of the two directions $\frac{\alpha+\beta}{2}$, $\frac{\alpha+\beta}{2}+180^\circ$ (the bisector of the two vectors).</p><p><strong>Finding $\psi$.</strong> $\overrightarrow{BD}=e(\psi)+e(-26^\circ)$ points along the bisector of directions $\psi$ and $-26^\circ$. Seen from $B$, $D$ is $84^\circ$ clockwise from $A$, so $\overrightarrow{BD}$ has direction $20^\circ-84^\circ=-64^\circ$. Hence $\frac{\psi-26^\circ}{2}\equiv-64^\circ\pmod{180^\circ}$, i.e. $\psi\equiv-102^\circ\pmod{360^\circ}$. (Check: $\cos\frac{-102^\circ+26^\circ}{2}=\cos 38^\circ&gt;0$, so the sum really points along $-64^\circ$.)</p><p><strong>The angle at $C$.</strong> $\overrightarrow{CA}=\overrightarrow{CB}+\overrightarrow{BA}=e(78^\circ)+e(20^\circ)=2\cos29^\circ\,e(49^\circ)$, which has direction $49^\circ$. Also $\overrightarrow{CD}$ has direction $-26^\circ$. Therefore
+\[\angle ACD=49^\circ-(-26^\circ)=\boxed{75^\circ}.\]</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p4">
+<h3>Problem 4</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 17: Sequences, Recurrences, and Discrete Dynamics &middot; Closed Forms and Hidden Structure</div>
+<div class="ct-text"><p>Let $F_0,F_1,F_2,\dots$ be a sequence of positive integers with $F_0=F_1=F_2=\dots=F_{2025}=1$ and $F_i=F_{i-2025}+F_{i-2026}$ for all positive integers $i\ge 2026$. Compute the number of positive integers $n&lt;2026$ such that there exists a positive integer $k$ satisfying $F_k=n$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$64$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (A closed form by induction)</h4>
+<p>Write $L=2025$, so $F_0=\dots=F_L=1$ and $F_i=F_{i-L}+F_{i-L-1}$ for $i\ge L+1$. Every index $n\ge L$ is $n=QL+r$ with $Q\ge1$ and $0\le r\le L-1$.</p><p><strong>Claim.</strong> For $1\le Q\le L$ and $0\le r\le L-1$,
+\[F_{QL+r}=2^{Q-1}+\sum_{j=0}^{r-1}\binom{Q-1}{j}.\]
+<em>Proof by induction on $Q$.</em> For $Q=1$: $F_L=1=2^0$, and for $r\ge1$, $F_{L+r}=F_r+F_{r-1}=2=1+\binom00$.
+Let $Q\ge2$. If $r\ge1$, then by the induction hypothesis and Pascal's rule
+\[F_{QL+r}=F_{(Q-1)L+r}+F_{(Q-1)L+r-1}=2^{Q-1}+\sum_{j=0}^{r-1}\binom{Q-2}{j}+\sum_{j=0}^{r-2}\binom{Q-2}{j}=2^{Q-1}+\sum_{j=0}^{r-1}\binom{Q-1}{j}.\]
+If $r=0$, then $F_{QL}=F_{(Q-1)L}+F_{(Q-2)L+(L-1)}$. The first term is $2^{Q-2}$. The second is $F_{L-1}=1=2^{0}$ if $Q=2$, and for $Q\ge3$ it is $2^{Q-3}+\sum_{j=0}^{L-2}\binom{Q-3}{j}=2^{Q-3}+2^{Q-3}$ because $L-2\ge Q-3$. Either way $F_{QL}=2^{Q-1}$. $\square$</p><p><strong>Reading off the values.</strong> Put $m=Q-1$ and $T_r(m)=\sum_{j&lt;r}\binom mj$. As $r$ goes from $0$ to $m+1$, $T_r(m)$ increases strictly from $0$ to $2^m$, and it stays $2^m$ for larger $r$. So the values in block $Q=m+1$ are exactly the $m+2$ numbers $2^m+T_r(m)$ $(0\le r\le m+1)$, running from $2^m$ to $2^{m+1}$; the indices $n&lt;L$ give only the value $1$, which is also the value for $m=0$, $r=0$. Thus the values lying in $[2^m,2^{m+1})$ are the $m+1$ numbers with $0\le r\le m$, and every value has a positive index (the value $1$ is $F_1$).</p><p>Values below $2026$: each $m=0,1,\dots,9$ contributes $m+1$ values (all below $1024$), in total $1+2+\dots+10=55$. For $m=10$ we need $1024+T_r(10)\le2025$, i.e. $T_r(10)\le1001$; since $T_8(10)=1+10+45+120+210+252+210+120=968$ and $T_9(10)=1013$, this gives $r=0,\dots,8$: $9$ values. For $m\ge11$ (that is, $12\le Q\le L$) every value is at least $2^{11}=2048$. The Claim does not cover indices beyond $L^2+L-1$, but these terms are also at least $2048$: the $L+1$ consecutive terms with indices $12L,\dots,13L$ are at least $2048$ by the Claim, and every later term $F_i=F_{i-L}+F_{i-L-1}$ is a sum of two earlier terms with indices at least $12L$, so by strong induction it is at least $2048$ too. The answer is $55+9=\boxed{64}$.</p>
+<h4>Solution 2 (Generating function)</h4>
+<p>Write $L=2025$ and $G(x)=\sum_{n\ge0}F_nx^n$. The coefficient of $x^n$ in $(1-x^L-x^{L+1})G(x)$ is $F_n-F_{n-L}-F_{n-L-1}$ (terms with negative index are $0$): it is $1$ for $n\le L-1$, it is $F_L-F_0=0$ for $n=L$, and it is $0$ for $n\ge L+1$ by the recurrence. Hence
+\[G(x)=\frac{1+x+\dots+x^{L-1}}{1-x^L(1+x)}=(1+x+\dots+x^{L-1})\sum_{q\ge0}x^{qL}(1+x)^q,\]
+so
+\[F_n=\sum_{q\ge0}\ \sum_{j=0}^{q}\binom qj\,\bigl[\,0\le n-qL-j\le L-1\,\bigr].\]
+Take $n=QL+r$ with $1\le Q&lt;L$ and $0\le r\le L-1$. For $q=Q$ the bracket holds exactly when $j\le r$; for $q=Q-1$ it holds exactly when $j\ge r+1$; for $q\le Q-2$ we have $n-qL-j\ge 2L+r-(Q-2)&gt;L-1$, and for $q\ge Q+1$ we have $n-qL-j&lt;0$. So
+\[F_{QL+r}=\sum_{j\le r}\binom Qj+\sum_{j\ge r+1}\binom{Q-1}{j}=\sum_{j\le r}\binom{Q-1}{j}+\sum_{j\le r-1}\binom{Q-1}{j}+\sum_{j\ge r+1}\binom{Q-1}{j}=2^{Q-1}+\sum_{j=0}^{r-1}\binom{Q-1}{j},\]
+using Pascal's rule $\binom Qj=\binom{Q-1}j+\binom{Q-1}{j-1}$. For $n&lt;L$, $F_n=1$.</p><p><strong>Counting.</strong> With $m=Q-1$ and $T_r(m)=\sum_{j&lt;r}\binom mj$, the values for $Q=m+1$ are $2^m+T_r(m)$; as $r$ runs over $0,\dots,m+1$ these increase strictly from $2^m$ to $2^{m+1}$ and then stay at $2^{m+1}$. Hence each interval $[2^m,2^{m+1})$ contains exactly $m+1$ values of the sequence (for $m=0$ this is the value $1=F_1$). Below $1024$ we get $\sum_{m=0}^{9}(m+1)=55$ values. In $[1024,2026)$ we need $T_r(10)\le 1001$: the partial sums $0,1,11,56,176,386,638,848,968$ qualify and the next one, $1013$, does not, giving $9$ more values. For $12\le Q&lt;L$ (i.e. $m\ge11$) every value is at least $2^{11}=2048$. The remaining indices $n\ge L^2$ also give terms at least $2048$: the $L+1$ consecutive terms with indices $12L,\dots,13L$ are at least $2048$ by the formula, and each later term $F_n=F_{n-L}+F_{n-L-1}$ is a sum of two earlier terms with indices at least $12L$, so by strong induction it is at least $2048$. Total: $\boxed{64}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p5">
+<h3>Problem 5</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 55: Three-Dimensional and Spatial Geometry &middot; Distance and Angle in Space</div>
+<div class="ct-text"><p>A right circular cone with apex $A$ has base radius $1$ and height $7$. Two perpendicular planes are tangent to the cone's lateral surface along segments $\overline{AP}$ and $\overline{AQ}$, where $P$ and $Q$ lie on the base of the cone. Compute $PQ$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\frac{10}{7}$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Normal vectors)</h4>
+<p>Place the base in the plane $z=0$ with centre at the origin and the apex at $A=(0,0,7)$. A point of the base circle is $P=(\cos\varphi,\sin\varphi,0)$. The plane tangent to the lateral surface along $AP$ contains the generator $AP$ and the tangent line to the base circle at $P$, whose direction is $(-\sin\varphi,\cos\varphi,0)$. The vector
+\[\mathbf n(\varphi)=(7\cos\varphi,\,7\sin\varphi,\,1)\]
+is perpendicular to both: $\mathbf n\cdot(P-A)=7\cos^2\varphi+7\sin^2\varphi-7=0$ and $\mathbf n\cdot(-\sin\varphi,\cos\varphi,0)=0$. So it is a normal vector of that tangent plane.</p><p>Two planes are perpendicular exactly when their normals are. For $P$ at angle $\varphi_1$ and $Q$ at angle $\varphi_2$,
+\[\mathbf n(\varphi_1)\cdot\mathbf n(\varphi_2)=49\cos(\varphi_1-\varphi_2)+1=0\quad\Longrightarrow\quad\cos(\varphi_1-\varphi_2)=-\tfrac1{49}.\]
+$P$ and $Q$ lie on the unit circle, so
+\[PQ^2=2-2\cos(\varphi_1-\varphi_2)=2+\tfrac{2}{49}=\tfrac{100}{49},\qquad PQ=\boxed{\tfrac{10}{7}}.\]</p>
+<h4>Solution 2 (The dihedral angle along the common line)</h4>
+<div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/hmmt-nov-tg-5_s2.svg" alt="Figure for the solution"></div>
+<p>Let $O$ be the centre of the base and $\theta=\frac12\angle POQ$, so $PQ=2\sin\theta$. If $P,Q$ were diametrically opposite, the two tangent planes would be mirror images in the plane through the axis perpendicular to $PQ$, each making the small angle $\arctan\frac17$ with the axis, so they would meet at angle $2\arctan\frac17&lt;90^\circ$; hence $0&lt;\theta&lt;90^\circ$, and the tangent lines to the base circle at $P$ and $Q$ meet at a point $T$ on ray $OT$ bisecting angle $POQ$, with $PT=QT=\tan\theta$.</p><p>The first tangent plane contains $AP$ and the tangent line $PT$, the second contains $AQ$ and $QT$, so the planes meet along line $AT$. Moreover $PT\perp OP$ and $PT\perp AO$ (the axis is perpendicular to the base), so $PT\perp$ plane $AOP$ and $\angle APT=90^\circ$; similarly $\angle AQT=90^\circ$.</p><p>Let $H$ be the foot of the perpendicular from $P$ to $AT$. Reflection in the plane $AOT$ swaps $P$ and $Q$ and fixes line $AT$, so $H$ is also the foot from $Q$, and $QH=PH$. The segments $HP$ and $HQ$ lie in the two planes and are perpendicular to their common line, so $\angle PHQ$ is the angle between the planes: $90^\circ$. Hence $PQ=\sqrt2\,PH$.</p><p>In right triangle $APT$, $AP=\sqrt{1+49}=5\sqrt2$, $PT=\tan\theta$ and $AT=\sqrt{50+\tan^2\theta}$, so $PH=\frac{AP\cdot PT}{AT}$. The condition $2\sin\theta=\sqrt2\,PH$ becomes
+\[2\sin\theta=\frac{10\tan\theta}{\sqrt{50+\tan^2\theta}}\iff 50+\tan^2\theta=\frac{25}{\cos^2\theta}=25+25\tan^2\theta\iff\tan^2\theta=\frac{25}{24}.\]
+Then $\sin^2\theta=\frac{25}{49}$, $\sin\theta=\frac57$, and $PQ=2\sin\theta=\boxed{\frac{10}{7}}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p6">
+<h3>Problem 6</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 29: Valuations and Lifting the Exponent &middot; Comparing Valuations Across Terms</div>
+<div class="ct-text"><p>Given that $a$ and $b$ are integers greater than $1$ such that $\frac{a+b^2}{a^2}$ is an integer, compute the least possible value of $b$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$35$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Prime-by-prime valuations)</h4>
+<p>We need $a^2\mid a+b^2$. Let $p$ be a prime dividing $a$, with $e=v_p(a)\ge1$ and $f=v_p(b)$.</p><ul class="ct-ul"><li><p>If $2f&lt;e$, then $v_p(a+b^2)=2f&lt;e&lt;2e$, impossible.</p></li><li><p>If $2f&gt;e$, then $v_p(a+b^2)=e&lt;2e$, impossible.</p></li></ul><p>So $2f=e$ for every prime $p\mid a$. Hence $a=c^2$ is a perfect square ($c&gt;1$), $c\mid b$, and for each prime $p\mid c$ we have $v_p(b)=v_p(c)$ exactly. Writing $b=cm$, the last condition says $\gcd(m,c)=1$, and the divisibility becomes
+\[c^4\mid c^2+c^2m^2\iff c^2\mid m^2+1 .\]
+(Conversely, $c^2\mid m^2+1$ forces $\gcd(m,c)=1$, and then $a=c^2$, $b=cm$ work.)</p><p>So we want the least $b=cm$ with $c\ge2$, $m\ge1$, $c^2\mid m^2+1$. Since $m^2+1\equiv1$ or $2\pmod4$, $c$ is odd; since $-1$ is not a square modulo $3$, $7$ or $11$, none of these divides $c$. Also $m=1$ is impossible ($c^2\mid2$), so $m\ge2$ and $b\ge2c$. If $b&lt;35$ then $c\le17$, so $c\in\{5,13,17\}$:</p><ul class="ct-ul"><li><p>$c=5$, $m\le6$: $m^2+1\in\{2,5,10,17,26,37\}$, none divisible by $25$;</p></li><li><p>$c=13$ or $17$: $m\le2$, and $m^2+1\le5$.</p></li></ul><p>Hence $b\ge35$. Equality: $c=5$, $m=7$, i.e. $a=25$, $b=35$, and indeed $\frac{25+35^2}{25^2}=\frac{1250}{625}=2$. The least $b$ is $\boxed{35}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p7">
+<h3>Problem 7</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 2: Fundamental Counting and Structured Enumeration &middot; Permutations and Arrangements</div>
+<div class="ct-text"><p>Alice has $8$ balls labeled $1,2,3,\dots,8$ and $8$ boxes labeled $1,2,3,\dots,8$. Compute the number of ways for Alice to place exactly $1$ ball in every box such that exactly $1$ ball is labeled with a strictly higher number than its box.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$247$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Cycle structure)</h4>
+<p>Let $\pi(i)$ be the label of the ball in box $i$; $\pi$ is a permutation of $\{1,\dots,8\}$, and we need exactly one $i$ with $\pi(i)&gt;i$ (an <em>excedance</em>).</p><p><strong>Every cycle of length at least $2$ contains an excedance.</strong> If $M$ is the largest element of such a cycle and $\pi(k)=M$, then $k\ne M$, so $k&lt;M=\pi(k)$.</p><p>Hence $\pi$ has exactly one cycle of length $\ge2$; all other points are fixed. Follow this cycle starting from its maximum $M$: each step $x\mapsto\pi(x)$ is either an ascent or a descent, and the step into $M$ is an ascent. As there is only one ascent, all other steps descend, so the cycle visits its elements in decreasing order from $M$ down to its minimum and then returns to $M$. Thus the cycle is completely determined by its set of elements $S$, $|S|\ge2$; conversely, for every such $S$ this cycle has exactly one excedance (minimum $\to$ maximum).</p><p>The number of subsets of $\{1,\dots,8\}$ with at least two elements is $2^8-1-8=\boxed{247}$.</p>
+<h4>Solution 2 (Filling the boxes in order)</h4>
+<p>Suppose box $i$ is the only box whose ball has a higher label, and its ball is $j&gt;i$. Every other box $k$ must receive a ball with label at most $k$. Fill the boxes $1,2,\dots,8$ in this order.</p><p>When we reach box $k\ne i$, the boxes $1,\dots,k-1$ hold $k-1$ balls, all with labels at most $k-1$ except that box $i$ (if $i&lt;k$) holds $j$. Counting labels $\le k$ that are still unused:</p><ul class="ct-ul"><li><p>for $k&lt;i$: exactly $1$ (so box $k$ gets ball $k$);</p></li><li><p>for $i&lt;k&lt;j$: exactly $2$ (labels $\le k$ are $k$ in number, and only $k-2$ of them are used, since box $i$ holds $j&gt;k$);</p></li><li><p>for $k\ge j$ (with $k\ne i$): exactly $1$ (now $j\le k$ is also used).</p></li></ul><p>Box $i$ itself gets $j$, which is unused because boxes $1,\dots,i-1$ hold $1,\dots,i-1$. These counts do not depend on earlier choices, and after box $8$ every ball has been placed. So for each pair $i&lt;j$ there are $2^{\,j-i-1}$ arrangements, and the total is
+\[\sum_{d=1}^{7}(8-d)\,2^{d-1}=7+12+20+32+48+64+64=\boxed{247}.\]</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p8">
+<h3>Problem 8</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 11: Similarity, Homothety, and Ratio Geometry &middot; Direct Similarity</div>
+<div class="ct-text"><p>Let $ABC$ be a triangle with $AB=13$, $BC=14$, and $CA=15$. Point $D$ is chosen on segment $BC$. Points $P$ and $Q$ are such that $\angle PBC=90^\circ$, $\angle QCB=90^\circ$, and $APDQ$ is a kite with axis of symmetry $PQ$. Suppose that $D$ is chosen such that $\angle PAQ$ is maximized. Compute $AD$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$4\sqrt{10}$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (A similar triangle with a sliding base)</h4>
+<div class="ct-fig"><img style="width:355px" src="/assets/contests/2026-27/hmmt-nov-tg-8_s1.svg" alt="Figure for the solution"></div>
+<p>Since $APDQ$ is a kite with axis $PQ$, $D$ is the reflection of $A$ in line $PQ$: $PA=PD$, $QA=QD$, and $PQ$ bisects angles $APD$ and $AQD$.</p><p>Let $D'$ and $D''$ be the reflections of $D$ in $B$ and in $C$ (on line $BC$). As $PB\perp BC$, $P$ lies on the perpendicular bisector of $DD'$, so $PD'=PD=PA$: $P$ is the circumcentre of triangle $ADD'$. Similarly $Q$ is the circumcentre of $ADD''$.</p><p>Let $F$ be the foot of the altitude from $A$; from $13^2-BF^2=15^2-(14-BF)^2$ we get $BF=5$, $AF=12$. Since $D'$ lies on the opposite side of $B$ from $C$ and $F$ lies on segment $BC$, the angle $\angle AD'D$ is acute; so $P$ and $D'$ lie on the same side of $AD$ and the central angle is $\angle APD=2\angle AD'D$. As $PQ$ bisects $\angle APD$, $\angle APQ=\angle AD'D=\angle AD'D''$. In the same way $\angle AQP=\angle AD''D'$. (If $D=B$, then $D'=B$ and the circle centred at $P$ is tangent to $BC$ at $B$; the tangent-chord angle gives the same equality, and similarly if $D=C$.) Therefore triangles $APQ$ and $AD'D''$ are similar and
+\[\angle PAQ=\angle D'AD''.\]</p><p>Now $D'=2B-D$ and $D''=2C-D$, so $D'D''=2BC=28$ for every $D$: a segment of fixed length $28$ slides along line $BC$, and its midpoint $B+C-D$ is the reflection of $D$ in the midpoint of $BC$. Put coordinates along $BC$ with $F$ at $0$, so the segment is $[t-14,\,t+14]$ and $A$ is at height $12$. For a segment $[u,v]$ on the axis seen from $(0,h)$, the angle $\theta$ satisfies $\cot\theta=\frac{h^2+uv}{h(v-u)}$ (dot product over cross product of the vectors to $u$ and $v$). Here
+\[\cot\angle D'AD''=\frac{144+t^2-196}{12\cdot28}=\frac{t^2-52}{336},\]
+which is smallest, so the angle is largest, exactly when $t=0$: the midpoint of $D'D''$ is $F$. Then $D$ is the reflection of $F$ in the midpoint of $BC$, so $BD=CF=9$, $FD=4$, and
+\[AD=\sqrt{4^2+12^2}=\sqrt{160}=\boxed{4\sqrt{10}}.\]</p>
+<h4>Solution 2 (Coordinates)</h4>
+<p>Put $B=(0,0)$, $C=(14,0)$, $A=(5,12)$ (from $AB=13$, $AC=15$) and $D=(d,0)$ with $0\le d\le14$. The kite condition says that $P$ and $Q$ lie on the perpendicular bisector of $AD$; with $P=(0,p)$ on the perpendicular to $BC$ at $B$ and $Q=(14,q)$ on the one at $C$:
+\[\begin{aligned}PA^2=PD^2&amp;:\ 25+(12-p)^2=d^2+p^2\ \Longrightarrow\ p=\frac{169-d^2}{24},\\ QA^2=QD^2&amp;:\ 81+(12-q)^2=(14-d)^2+q^2\ \Longrightarrow\ q=\frac{225-(14-d)^2}{24}.\end{aligned}\]
+Then
+\[\overrightarrow{AP}=\Bigl(-5,\ -\frac{d^2+119}{24}\Bigr),\qquad \overrightarrow{AQ}=\Bigl(9,\ -\frac{d^2-28d+259}{24}\Bigr).\]
+Their cross product and dot product are
+\[\overrightarrow{AP}\times\overrightarrow{AQ}=\frac{5(d^2-28d+259)+9(d^2+119)}{24}=\frac{7(d^2-10d+169)}{12},\]
+\[\overrightarrow{AP}\cdot\overrightarrow{AQ}=-45+\frac{(d^2+119)(d^2-28d+259)}{576}=\frac{(d^2-18d+29)(d^2-10d+169)}{576},\]
+where the last equality is checked by expanding both sides to $\frac{d^4-28d^3+378d^2-3332d+4901}{576}$. The cross product is positive ($d^2-10d+169&gt;0$), so $\angle PAQ\in(0^\circ,180^\circ)$ and
+\[\cot\angle PAQ=\frac{d^2-18d+29}{336}=\frac{(d-9)^2-52}{336}.\]
+Since $\cot$ is decreasing on $(0^\circ,180^\circ)$, the angle is largest when $(d-9)^2$ is smallest, i.e. $d=9$. Then $AD=\sqrt{(9-5)^2+12^2}=\boxed{4\sqrt{10}}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p9">
+<h3>Problem 9</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Algebra &middot; LPS VII, Chapter 13: Systems, Symmetry, and Multi-Variable Algebra &middot; Elimination and Reduction</div>
+<div class="ct-text"><p>Let $x$, $y$, and $z$ be real numbers satisfying
+\[\begin{aligned}
+x+y-\sqrt{z^2+1}&amp;=-5,\\
+y+z-\sqrt{x^2+1}&amp;=0,\\
+z+x-\sqrt{y^2+1}&amp;=5.
+\end{aligned}\]
+Compute $x+y+z$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\sqrt{14+3\sqrt{19}}$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Express each variable through the sum)</h4>
+<p>Let $S=x+y+z$. The three equations say
+\[\sqrt{x^2+1}=S-x,\qquad \sqrt{y^2+1}=S-5-y,\qquad \sqrt{z^2+1}=S+5-z .\]
+Squaring the first gives $x^2+1=S^2-2Sx+x^2$, so $S\ne0$ and $x=\frac{S^2-1}{2S}$; then $\sqrt{x^2+1}=S-x=\frac{S^2+1}{2S}$, which must be positive, so $S&gt;0$. In the same way
+\[y=\frac{(S-5)^2-1}{2(S-5)},\quad S-5-y=\frac{(S-5)^2+1}{2(S-5)}&gt;0,\qquad z=\frac{(S+5)^2-1}{2(S+5)},\]
+so in particular $S&gt;5$. Each variable has the form $\frac t2-\frac1{2t}$ with $t=S,\ S-5,\ S+5$. Adding,
+\[S=\frac{3S}{2}-\frac12\Bigl(\frac1S+\frac1{S-5}+\frac1{S+5}\Bigr)\iff S=\frac1S+\frac{2S}{S^2-25}.\]
+Multiplying by $S(S^2-25)$: $S^2(S^2-25)=S^2-25+2S^2$, i.e. $S^4-28S^2+25=0$, so $S^2=14\pm3\sqrt{19}$. Since $S&gt;5$ we need $S^2&gt;25$, and $14-3\sqrt{19}&lt;1$, so $S^2=14+3\sqrt{19}$.</p><p>Conversely, for $S=\sqrt{14+3\sqrt{19}}&gt;5$ define $x,y,z$ by the formulas above; the quartic gives $x+y+z=S$, and the displayed square roots are then $S-x$, $S-5-y$, $S+5-z$, so all three equations hold. Hence $x+y+z=\boxed{\sqrt{14+3\sqrt{19}}}$.</p>
+<h4>Solution 2 (A hyperbolic-type parametrisation)</h4>
+<p>For a real $t$ put $u=t+\sqrt{t^2+1}&gt;0$; then $u^{-1}=\sqrt{t^2+1}-t$, so
+\[t=\frac{u-u^{-1}}2,\qquad \sqrt{t^2+1}=\frac{u+u^{-1}}2 .\]
+Let $a,b,c&gt;0$ correspond in this way to $x,y,z$, and let $S=x+y+z$. The equations rearrange to
+\[x+\sqrt{x^2+1}=S,\qquad y+\sqrt{y^2+1}=S-5,\qquad z+\sqrt{z^2+1}=S+5,\]
+(e.g. the second given equation is $y+z=\sqrt{x^2+1}$; add $x$ to both sides). So $a=S$, $b=S-5$, $c=S+5$, and positivity forces $S&gt;5$. Now
+\[2S=2(x+y+z)=(a+b+c)-\Bigl(\frac1a+\frac1b+\frac1c\Bigr)=3S-\Bigl(\frac1S+\frac{1}{S-5}+\frac1{S+5}\Bigr),\]
+that is, $S=\frac1S+\frac{2S}{S^2-25}$. Clearing denominators, $S^4-28S^2+25=0$, so $S^2=14\pm3\sqrt{19}$; only $14+3\sqrt{19}$ exceeds $25$. Conversely, with $S=\sqrt{14+3\sqrt{19}}$, the numbers $a=S$, $b=S-5$, $c=S+5$ define $x,y,z$ satisfying the three rearranged equations, because their sum is $S$. Therefore $x+y+z=\boxed{\sqrt{14+3\sqrt{19}}}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p10">
+<h3>Problem 10</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 23: Recurrence and Combinatorial Construction &middot; Combinatorial Decomposition</div>
+<div class="ct-text"><p>Let $N$ denote the number of ways to tile a $2\times 199$ grid with O-tetrominoes, T-tetrominoes, and L-trominoes, shown below. Compute the remainder when $N$ is divided by $128$. (The tiles can be rotated, and tilings that differ by rotation or reflection are considered distinct.)</p><div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/hmmt-nov-tg-10.svg" alt="Figure for Team Round, Problem 10"></div></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$44$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Recurrences and a generating function)</h4>
+<p>Let $a_n$ be the number of tilings of the $2\times n$ grid, and let $c_m$ be the number of tilings of a $2\times m$ grid with one extra cell attached to the left of its top row (by reflection, the same count holds with the extra cell on the bottom row). Inside a $2$-row strip the T-tetromino must lie as three cells in one row plus the middle cell of the other row, and the L-tromino occupies three cells of a $2\times2$ box.</p><p><strong>The first column of a $2\times n$ grid.</strong> If an O covers it, $a_{n-2}$ tilings remain. If an L covers both cells of column $1$ and one cell of column $2$ ($2$ ways), the rest is a $2\times(n-2)$ grid with one extra cell on the left: $c_{n-2}$ tilings. Any other tile covering a cell of column 1 covers only that one cell of the column and also the cell to its right, which isolates the other cell of column 1. So $a_n=a_{n-2}+2c_{n-2}$ $(n\ge2)$, with $a_0=1$, $a_1=0$.</p><p><strong>The extra cell $e$.</strong> The tile covering $e$ cannot use the cell below $e$. Either it is the L formed by $e$ and the whole next column (leaving a $2\times(m-1)$ grid), or it is the T formed by $e$, the next two cells of the top row and the bottom cell of the first column (leaving a $2\times(m-2)$ grid with one extra cell). So $c_m=a_{m-1}+c_{m-2}$ $(m\ge1)$, with $c_0=0$, $c_{-1}=0$.</p><p>With $A(x)=\sum a_nx^n$ and $C(x)=\sum c_mx^m$ these say $A=1+x^2A+2x^2C$ and $C=xA+x^2C$. Hence $C=\frac{xA}{1-x^2}$ and
+\[A=\frac{1}{1-x^2-\frac{2x^3}{1-x^2}}=\frac{1}{1-x^2}\cdot\frac{1}{1-\frac{2x^3}{(1-x^2)^2}}=\sum_{k\ge0}\frac{2^kx^{3k}}{(1-x^2)^{2k+1}}.\]
+Since $[x^{2M}](1-x^2)^{-(2k+1)}=\binom{M+2k}{2k}$, we get $a_n=\sum_k 2^k\binom{\frac{n-3k}2+2k}{2k}$ over $k$ with $n-3k$ even and nonnegative. For $n=199$, $k$ is odd, and terms with $k\ge7$ are divisible by $128$:
+\[a_{199}\equiv 2\binom{100}{2}+8\binom{101}{6}+32\binom{102}{10}\pmod{128}.\]
+By Legendre's formula $v_2\binom{101}{6}=97-4-89=4$ and $v_2\binom{102}{10}=98-8-88=2$, so the last two terms are divisible by $128$. Finally $2\binom{100}2=9900=128\cdot77+44$, so $N\equiv\boxed{44}\pmod{128}$.</p>
+<h4>Solution 2 (Fault-free blocks and stars and bars)</h4>
+<p>Cut a tiling along every vertical grid line that no tile crosses. The pieces are <em>blocks</em>, tilings of a $2\times\ell$ grid crossed by no vertical line. We find all blocks. Inside a $2$-row strip a T-tetromino is three cells of one row plus the middle cell of the other row, and an L-tromino is three cells of a $2\times2$ box.</p><p>The left column of a block is covered either by an O (and then the O alone is a block of length $2$) or by an L that also covers one cell of the second column ($2$ choices). In the second case the boundary has one protruding cell, and the empty cell next to it must be covered. Either an L fills it together with the whole next column, which ends the block, or a T fills it with two more cells of its row and the middle cell of the other row, which leaves the same situation two columns further on with the protrusion in the other row. (Any other tile isolates a cell.) Hence the blocks are: the O (length $2$, one way) and, for each $t\ge0$, the block L, $t$ T's, L of length $3+2t$ (two ways, decided by the first L).</p><p>So $N$ is a sum over sequences of blocks: blocks of length $2$ (weight $1$) and odd blocks of length $3+2t$ (weight $2$). A sequence with $k$ odd blocks has weight $2^k$, and since $199$ is odd, $k$ is odd. Modulo $128$ only $k=1,3,5$ matter.</p><p>For fixed $k$, let the odd blocks have lengths $3+2t_1,\dots,3+2t_k$ and let there be $j$ blocks of length $2$. Then $t_1+\dots+t_k+j=M:=\frac{199-3k}{2}$. Encode the sequence as a word: write $\star$ for each $2$-block and $|\,\star^{t_i}\,|$ for each odd block. This is a word with $M$ stars and $2k$ bars, and every such word decodes uniquely (pair the bars as 1st&ndash;2nd, 3rd&ndash;4th, ...). So there are $\binom{M+2k}{2k}$ sequences, and
+\[N\equiv 2\binom{100}{2}+8\binom{101}{6}+32\binom{102}{10}\pmod{128}.\]
+Counting factors of $2$ (Legendre): $v_2(101!)=97$, $v_2(6!)=4$, $v_2(95!)=89$, so $16\mid\binom{101}6$; and $v_2(102!)=98$, $v_2(10!)=8$, $v_2(92!)=88$, so $4\mid\binom{102}{10}$. Thus $N\equiv 2\cdot4950=9900\equiv\boxed{44}\pmod{128}$.</p>
+</div></details>
+</section>
+<h2 class="ct-group" id="guts-round">Guts Round</h2>
+<section class="ct-problem" id="p11">
+<h3>Problem 1</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Number Theory &middot; LPS VI, Chapter 3: Divisibility and Prime Factorization &middot; Divisibility Tests</div>
+<div class="ct-text"><p>Each cell of the following $1\times 9$ grid is labeled with a single-digit nonnegative integer such that any two adjacent cells have a product that is divisible by $6$. Compute the least possible sum of all nine numbers in the grid.
+\[\begin{array}{|c|c|c|c|c|c|c|c|c|}\hline ?&amp;6&amp;1&amp;?&amp;0&amp;2&amp;?&amp;?&amp;3\\ \hline\end{array}\]</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$12$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Zeros everywhere)</h4>
+<p>All labels are nonnegative, so the sum is at least the sum of the given entries, $6+1+0+2+3=12$. Putting $0$ in all four cells marked ? works: every adjacent pair then contains a $0$, except the pair $6,1$ whose product $6$ is divisible by $6$. So the least sum is $\boxed{12}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p12">
+<h3>Problem 2</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Geometry &middot; LPS VI, Chapter 28: Right Triangles and the Pythagorean Framework &middot; Pythagorean Theorem</div>
+<div class="ct-text"><p>Squares are erected outside of right triangle $ABC$, as shown below. Given that the square along leg $\overline{AB}$ has perimeter $3$, and the square along leg $\overline{BC}$ has perimeter $5$, compute the perimeter of the square along hypotenuse $\overline{AC}$.</p><div class="ct-fig"><img style="width:270px" src="/assets/contests/2026-27/hmmt-nov-tg-12.svg" alt="Figure for Guts Round, Problem 2"></div></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\sqrt{34}$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Pythagoras)</h4>
+<p>The square on $AB$ has perimeter $3$, so $AB=\frac34$; similarly $BC=\frac54$. The right angle is at $B$, so
+\[AC=\sqrt{\tfrac{9}{16}+\tfrac{25}{16}}=\frac{\sqrt{34}}4,\]
+and the square on $AC$ has perimeter $4\cdot AC=\boxed{\sqrt{34}}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p13">
+<h3>Problem 3</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Combinatorics &middot; LPS VI, Chapter 2: Fundamental Counting Principles &middot; Ordered Arrangements</div>
+<div class="ct-text"><p>Compute the number of nine-letter strings consisting of three $A$'s, three $B$'s, and three $C$'s such that each $A$ appears directly next to another $A$, each $B$ appears directly next to another $B$, and each $C$ appears directly next to another $C$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$6$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Runs of equal letters)</h4>
+<p>Look at the maximal runs of consecutive $A$'s. Their lengths are positive and add up to $3$. A run of length $1$ would be an $A$ with no neighbouring $A$, which is forbidden, so every run has length at least $2$; the only possibility is a single run of length $3$. The same holds for $B$ and $C$. So the string is $AAA$, $BBB$, $CCC$ in some order, giving $3!=\boxed{6}$ strings.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p14">
+<h3>Problem 4</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Number Theory &middot; LPS VI, Chapter 21: Digits, Place Value, and Decimal Structure &middot; Digit Rearrangement</div>
+<div class="ct-text"><p>Compute the greatest $2$-digit positive integer $\underline{ab}$ such that $\underline{ab}+\underline{ba}$ is a perfect square.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$92$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (A multiple of 11)</h4>
+<p>We have $\underline{ab}+\underline{ba}=(10a+b)+(10b+a)=11(a+b)$. For this to be a perfect square, $11\mid a+b$; since $1\le a+b\le18$, $a+b=11$ and the sum is $121=11^2$. The greatest two-digit number with digit sum $11$ is $\boxed{92}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p15">
+<h3>Problem 5</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Geometry &middot; LPS VI, Chapter 36: Power of a Point and Circle Measurement &middot; Sector and Arc Measurement</div>
+<div class="ct-text"><p>Three quarter-circles of radius $1$ are inscribed in a larger quarter-circle, as shown in the diagram. Compute the area of the shaded region.</p><div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/hmmt-nov-tg-15.svg" alt="Figure for Guts Round, Problem 5"></div></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\frac{\pi}{2}$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Locate the corners)</h4>
+<p>Put the corner $O$ of the large quarter-circle at the origin, with its edges along the negative $x$-axis and the positive $y$-axis. In the figure, one small quarter-circle has its corner at $O$, so it fills the region of the unit square next to $O$ and reaches $(-1,0)$ and $(0,1)$. The bottom-left one touches it at $(-1,0)$, so its corner is $(-2,0)$ and its vertical edge ends at $(-2,1)$. The top one touches it at $(0,1)$, so its corner is $(0,2)$ and its horizontal edge ends at $(-1,2)$. The points $(-2,1)$ and $(-1,2)$ lie on the large arc, so its radius $R$ satisfies $R^2=4+1=5$.</p><p>The three small quarter-disks do not overlap, and the shaded region is everything else inside the large quarter-disk. Its area is
+\[\frac{\pi R^2}{4}-3\cdot\frac{\pi}{4}=\frac{5\pi}4-\frac{3\pi}4=\boxed{\frac{\pi}{2}}.\]</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p16">
+<h3>Problem 6</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Combinatorics &middot; LPS VI, Chapter 38: Probability and Expected Value &middot; Classical Probability</div>
+<div class="ct-text"><p>Snow White and the seven dwarfs are sitting in a circle facing inward. Initially, Snow White holds a basket containing $100$ apples, of which $1$ is poisoned and the rest are harmless. Every minute, whoever is holding the basket must choose an apple uniformly and independently at random from the basket and eat it, then pass the basket to the person to their left. This process continues until someone eats the poisoned apple.</p><p>Compute the probability that Snow White does <strong>not</strong> eat the poisoned apple.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\frac{87}{100}$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (A random order of the apples)</h4>
+<p>Imagine the apples are eaten in a uniformly random order (continuing even after the poisoned one). The poisoned apple is equally likely to be in each of the $100$ positions. The basket goes around $8$ people, so Snow White eats on turns $1,9,17,\dots,97$, which are $13$ turns. She eats the poisoned apple with probability $\frac{13}{100}$, so the answer is $1-\frac{13}{100}=\boxed{\frac{87}{100}}$.</p>
+<h4>Solution 2 (Direct computation)</h4>
+<p>The poisoned apple is eaten on turn $t$ exactly when it is avoided on turns $1,\dots,t-1$ and chosen on turn $t$. On turn $s$ there are $101-s$ apples left, so
+\[\Pr(\text{turn } t)=\frac{99}{100}\cdot\frac{98}{99}\cdots\frac{101-t}{102-t}\cdot\frac1{101-t}=\frac{101-t}{100}\cdot\frac{1}{101-t}=\frac1{100}.\]
+Snow White holds the basket on turns $t\equiv1\pmod 8$, i.e. $t=1,9,\dots,97$: $13$ turns. So she avoids the poison with probability $1-\frac{13}{100}=\boxed{\frac{87}{100}}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p17">
+<h3>Problem 7</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Algebra &middot; LPS VI, Chapter 37: Polynomials and Algebraic Identities &middot; Polynomial Structure</div>
+<div class="ct-text"><p>Suppose $P(x)$ is a quadratic polynomial with real coefficients for which $P(10)-P(1)-P(9)=62$ and $P(10)-P(2)-P(8)=118$. Compute $P(10)-P(3)-P(7)$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$158$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Coefficients)</h4>
+<p>Let $P(x)=ax^2+bx+c$ and $E(k)=P(10)-P(k)-P(10-k)$. The linear terms cancel ($10b-bk-b(10-k)=0$), and
+\[E(k)=a\bigl(100-k^2-(10-k)^2\bigr)-c=2ak(10-k)-c.\]
+So $E(1)=18a-c=62$ and $E(2)=32a-c=118$, giving $a=4$, $c=10$. Then $E(3)=42a-c=168-10=\boxed{158}$.</p>
+<h4>Solution 2 (Linear in $k(10-k)$)</h4>
+<p>For any quadratic $P$, the expression $E(k)=P(10)-P(k)-P(10-k)$ depends on $k$ only through $k(10-k)$, and linearly: writing $P(x)=ax^2+bx+c$, the terms in $b$ cancel and $k^2+(10-k)^2=100-2k(10-k)$, so $E(k)=\alpha\,k(10-k)+\beta$ for constants $\alpha,\beta$. The values $k(10-k)$ for $k=1,2,3$ are $9,16,21$. From $E=62$ at $9$ and $E=118$ at $16$ the slope is $\frac{56}{7}=8$, so at $21$ we get $118+8\cdot5=\boxed{158}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p18">
+<h3>Problem 8</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Geometry &middot; LPS VI, Chapter 50: Combinatorial Geometry &middot; Extremal Geometric Configurations</div>
+<div class="ct-text"><p>Jason splits a $5\times 5$ square into $25$ unit squares and removes $9$ of them to form the following hashtag shape:</p><p>Jason then draws a line segment inside the hashtag. Compute the maximum possible length of such a segment.</p><div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/hmmt-nov-tg-18.svg" alt="Figure for Guts Round, Problem 8"></div></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$4\sqrt2$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Projections on the axes)</h4>
+<div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/hmmt-nov-tg-18_s1.svg" alt="Figure for the solution"></div>
+<p>Place the $5\times5$ square as $[0,5]^2$. The hashtag is the union of the horizontal bars $[0,5]\times[1,2]$, $[0,5]\times[3,4]$ and the vertical bars $[1,2]\times[0,5]$, $[3,4]\times[0,5]$.</p><p><strong>The value $4\sqrt2$ is attained</strong> by the segment from $(0,1)$ to $(4,5)$ on the line $y=x+1$: for $0\le x\le1$ it is in the lower horizontal bar, for $1\le x\le2$ in a vertical bar, for $2\le x\le3$ in the upper horizontal bar, and for $3\le x\le4$ in the right vertical bar.</p><p><strong>Upper bound.</strong> Let a segment in the hashtag have horizontal extent $a$ and vertical extent $b$, so its length is $\sqrt{a^2+b^2}$ and $a,b\le5$. We show $a\le4$; by symmetry $b\le4$, and then the length is at most $\sqrt{32}=4\sqrt2$.</p><p>Suppose $a&gt;4$. Then the segment has points with $x&lt;1$ and points with $x&gt;4$; its two endpoints are its leftmost and rightmost points, and all points of the hashtag with $x&lt;1$ or $x&gt;4$ lie in the horizontal bars, so both endpoints have $y\in[1,4]$ and $b\le3$. If both endpoints are in the same bar, $b\le1$ and the length is at most $\sqrt{25+1}&lt;4\sqrt2$. Otherwise the segment crosses the band $2&lt;y&lt;3$. The points of the hashtag in this band have $x\in[1,2]\cup[3,4]$, and the part of the segment inside the band is a connected piece, so its horizontal extent is at most $1$ while its vertical extent is $1$. Hence the slope of the segment is at least $1$ in absolute value, so $b\ge a&gt;4$, contradicting $b\le3$.</p><p>So the maximum length is $\boxed{4\sqrt2}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p19">
+<h3>Problem 9</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Combinatorics &middot; LPS VI, Chapter 38: Probability and Expected Value &middot; Dependent and Independent Events</div>
+<div class="ct-text"><p>Hannah has $16$ colored pencils of different colors and is drawing a tricolor flag with $3$ horizontal stripes. The pencils come in $8$ pairs of complementary colors. Hannah randomly colors each stripe such that no two stripes have exactly the same color. Compute the probability that no two adjacent stripes have complementary colors.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\frac{13}{15}$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Count stripe by stripe)</h4>
+<p>All ordered choices of three different colours (top, middle, bottom) are equally likely: $16\cdot15\cdot14$ of them. For a good flag, the top has $16$ choices; the middle must differ from the top and from its complement: $14$ choices; the bottom must differ from the middle, from the complement of the middle, and from the top, three different colours (the top is not the complement of the middle): $13$ choices. The probability is $\frac{16\cdot14\cdot13}{16\cdot15\cdot14}=\boxed{\frac{13}{15}}$.</p>
+<h4>Solution 2 (Condition on the middle stripe)</h4>
+<p>Fix the middle colour $M$. The top and bottom stripes then form a uniformly random ordered pair of different colours from the other $15$, one of which is the complement $\overline M$. The flag is bad exactly when $\overline M$ is used on the top or the bottom, which happens with probability $\frac{2}{15}$. Hence the probability is $1-\frac2{15}=\boxed{\frac{13}{15}}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p20">
+<h3>Problem 10</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Geometry &middot; LPS VI, Chapter 36: Power of a Point and Circle Measurement &middot; Sector and Arc Measurement</div>
+<div class="ct-text"><p>A semicircle with diameter $\overline{XY}$ is drawn inside of a larger semicircle with diameter $\overline{XZ}$, as shown below. Furthermore, the larger semicircle is divided by radius $\overline{OP}$ into two congruent quarter-circles.</p><p>Suppose that the two shaded regions shown above have equal area. Given that $XZ=10$, compute $XY$.</p><div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/hmmt-nov-tg-20.svg" alt="Figure for Guts Round, Problem 10"></div></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$5\sqrt2$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Add the common piece)</h4>
+<p>Let $U$ be the part of the small semicircle to the left of $OP$. The left shaded region together with $U$ is the left quarter-disk of the large semicircle, and the right shaded region together with $U$ is the whole small half-disk. The shaded regions have equal areas, so the quarter-disk of radius $5$ and the half-disk of radius $\frac{XY}2$ have equal areas:
+\[\frac{25\pi}{4}=\frac12\pi\Bigl(\frac{XY}{2}\Bigr)^2\quad\Longrightarrow\quad XY^2=50,\qquad XY=\boxed{5\sqrt2}.\]
+(Indeed $5&lt;5\sqrt2&lt;10$, so $Y$ lies between $O$ and $Z$, as in the figure.)</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p21">
+<h3>Problem 11</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Number Theory &middot; LPS VI, Chapter 38: Probability and Expected Value &middot; Classical Probability</div>
+<div class="ct-text"><p>Mark rolls a fair $6$-sided die $6$ times and writes down his results in order, creating a $6$-digit number. Compute the probability that this number is a multiple of $15$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\frac1{18}$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Divisibility by 5 and by 3)</h4>
+<p>The number is a multiple of $15$ iff it is a multiple of $5$ and of $3$. The last digit is between $1$ and $6$, so divisibility by $5$ means the last roll is $5$: probability $\frac16$. Then divisibility by $3$ means the sum of the first five rolls is $\equiv1\pmod3$. Whatever the first four rolls are, exactly $2$ of the $6$ values of the fifth roll give the required residue (each residue mod $3$ occurs twice among $1,\dots,6$), so this has probability $\frac13$, independent of the last roll. The answer is $\frac16\cdot\frac13=\boxed{\frac1{18}}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p22">
+<h3>Problem 12</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Number Theory &middot; LPS VI, Chapter 15: GCD, LCM, and Multiplicative Interaction &middot; LCM Logic</div>
+<div class="ct-text"><p>Compute the smallest positive integer $n\ge 5$ such that</p><ul class="ct-ul"><li><p>$\binom{n}{0}$ divides $\binom{n}{1}$,</p></li><li><p>$\binom{n}{1}$ divides $\binom{n}{2}$,</p></li><li><p>$\binom{n}{2}$ divides $\binom{n}{3}$,</p></li><li><p>$\binom{n}{3}$ divides $\binom{n}{4}$,</p></li><li><p>$\binom{n}{4}$ divides $\binom{n}{5}$.</p></li></ul></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$59$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Ratio of consecutive binomial coefficients)</h4>
+<p>Since $\binom{n}{k+1}=\binom nk\cdot\frac{n-k}{k+1}$, the coefficient $\binom nk$ divides $\binom n{k+1}$ exactly when $\frac{n-k}{k+1}$ is an integer, i.e. when $k+1\mid n-k$, i.e. when $k+1\mid n+1$. For $k=0,1,2,3,4$ we need $1,2,3,4,5$ all to divide $n+1$, i.e. $60\mid n+1$. The smallest such $n\ge5$ is $\boxed{59}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p23">
+<h3>Problem 13</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Combinatorics &middot; LPS VI, Chapter 10: Logical Deduction and Constraint Puzzles &middot; Implication Chains</div>
+<div class="ct-text"><p>A circular necklace has $20$ red beads and $30$ green beads. Stella cuts the necklace into two halves, each with an equal number of beads, and takes one of the halves. The beads are arranged such that across all the ways Stella could have cut the necklace, the minimum possible number of red beads in Stella's half is $6$, and the minimum possible number of green beads in Stella's half is $N$. Compute the maximum possible value of $N$ across all such arrangements of beads.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$11$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Complementary halves)</h4>
+<p>A half is a block of $25$ consecutive beads, and the other half is its complement. If a half has $r$ red beads, the other half has $20-r$. As the cut varies, the halves and their complements are the same family, so the minimum $6$ of the red counts forces the maximum to be $20-6=14$. A half with $r$ red beads has $25-r$ green ones, so the minimum number of green beads is $25-14=11$. Thus $N=11$ for every arrangement with the stated property.</p><p>Such arrangements exist: number the beads $1$ to $50$ around the circle and make beads $1$&ndash;$6$ and $26$&ndash;$39$ red. The half starting at bead $s$ ($1\le s\le25$; the other halves are complements) contains $\max(0,7-s)+\min(14,s-1)$ red beads, which is $6$ for $s\le7$, $s-1\in[6,14]$ for $7\le s\le15$, and $14$ for $s\ge15$. So the minimum is $6$, and the maximum possible $N$ is $\boxed{11}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p24">
+<h3>Problem 14</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Algebra &middot; LPS VI, Chapter 37: Polynomials and Algebraic Identities &middot; Special Identities</div>
+<div class="ct-text"><p>Suppose $a_1,a_2,a_3,a_4$ is a geometric sequence of real numbers satisfying $a_2+a_3=20$ and $a_1+a_4=26$. Compute $\sqrt[3]{a_1}+\sqrt[3]{a_4}$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\sqrt[3]{86}$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Cube of a sum)</h4>
+<p>Let $x=\sqrt[3]{a_1}$ and $y=\sqrt[3]{a_4}$ (real cube roots; $a_1\ne0$ since $a_2+a_3\neq0$). If $r$ is the common ratio, $r^3=\frac{a_4}{a_1}=\frac{y^3}{x^3}$, so $r=\frac yx$ (the only real cube root). Hence $a_2=a_1r=x^2y$ and $a_3=a_1r^2=xy^2$, and
+\[(x+y)^3=x^3+y^3+3xy(x+y)=(a_1+a_4)+3(a_2+a_3)=26+60=86.\]
+So $\sqrt[3]{a_1}+\sqrt[3]{a_4}=\boxed{\sqrt[3]{86}}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p25">
+<h3>Problem 15</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VII scale">E</span>Geometry &middot; LPS VII, Chapter 32: Trigonometric Geometry and Metric Conversion &middot; Angle Expressions and Trigonometric Identities</div>
+<div class="ct-text"><p>An equilateral hexagon is divided into a square and two rhombi, as shown below. Given that the rhombi have areas $2$ and $3$, compute the side length of the hexagon.</p><div class="ct-fig"><img style="width:222px" src="/assets/contests/2026-27/hmmt-nov-tg-25.svg" alt="Figure for Guts Round, Problem 15"></div></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\sqrt[4]{13}$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Areas as sines)</h4>
+<p>Let $s$ be the side length; the square and both rhombi have side $s$. Let $\theta$ be the angle between the top side of the square and the slanted edge shared by the two rhombi. The top rhombus has sides along these two directions, so its area is $s^2\sin\theta=2$. The right rhombus has sides along the vertical side of the square and the same slanted edge, which make the angle $90^\circ-\theta$, so its area is $s^2\cos\theta=3$. Squaring and adding,
+\[s^4(\sin^2\theta+\cos^2\theta)=4+9=13,\qquad s=\boxed{\sqrt[4]{13}}.\]</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p26">
+<h3>Problem 16</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 21: Arithmetic Functions and Multiplicative Structure &middot; Divisor and Sum Functions</div>
+<div class="ct-text"><p>Let $N$ be the smallest positive integer divisible by $2026$ with the property that for every positive divisor $k$ of $N$, the number of positive divisors of $k$ is also a divisor of $N$. Compute $\frac{N}{2026}$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$240$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Forced factors, then a check)</h4>
+<p>Write $d(k)$ for the number of divisors of $k$; recall $d(2^a3^b5^c\cdots)=(a+1)(b+1)(c+1)\cdots$. Note $2026=2\cdot1013$ with $1013$ prime. We use divisors $k$ of $N$ one after another; each gives a new factor of $N$.</p><ul class="ct-ul"><li><p>$k=2\cdot1013$: $d(k)=4$, so $4\mid N$.</p></li><li><p>$k=4\cdot1013$: $d(k)=6$, so $3\mid N$.</p></li><li><p>$k=2\cdot3\cdot1013$: $d(k)=8$, so $8\mid N$.</p></li><li><p>$k=8\cdot3\cdot1013$: $d(k)=16$, so $16\mid N$.</p></li><li><p>$k=16$: $d(k)=5$, so $5\mid N$.</p></li><li><p>$k=8\cdot3\cdot5\cdot1013$: $d(k)=32$, so $32\mid N$.</p></li></ul><p>Hence $2^5\cdot3\cdot5\cdot1013\mid N$, so $N\ge2026\cdot240$.</p><p>Conversely, $N=2^5\cdot3\cdot5\cdot1013$ works: a divisor $k=2^a3^b5^c1013^e$ has $d(k)=(a+1)(b+1)(c+1)(e+1)$ with $a+1\in\{1,\dots,6\}$ and the other three factors in $\{1,2\}$. Each of $1,\dots,6$ divides $2^2\cdot3\cdot5$, so $d(k)$ divides $2^2\cdot3\cdot5\cdot2^3=2^5\cdot3\cdot5$, which divides $N$. Therefore $\frac N{2026}=2^4\cdot3\cdot5=\boxed{240}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p27">
+<h3>Problem 17</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Number Theory &middot; LPS VI, Chapter 21: Digits, Place Value, and Decimal Structure &middot; Digit Conditions and Search</div>
+<div class="ct-text"><p>On Monday, Steve writes a single-digit nonzero multiple of $4$ on a blackboard. Each following day, Steve inserts a nonzero digit at any position into the number on the blackboard&mdash;possibly at the front, in the middle, or at the end&mdash;such that the number on the blackboard remains a multiple of $4$. Compute the number of $4$-digit numbers that could possibly appear on the blackboard on Thursday.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$648$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (The last digit stays 4 or 8)</h4>
+<p>All digits on the board are nonzero. A number is a multiple of $4$ iff its last two digits $\underline{tu}$ are, i.e. $2t+u\equiv0\pmod4$.</p><p><strong>Every number on the board ends in $4$ or $8$, and (if it has at least two digits) its tens digit is even.</strong> Monday's number is $4$ or $8$. Suppose the current number ends in $u\in\{4,8\}$. Inserting a digit anywhere except at the end keeps the last digit $u$; if the new tens digit $t$ is the inserted digit, $2t+u\equiv0\pmod 4$ forces $t$ even, and otherwise the tens digit is unchanged. Appending a digit $u'$ at the end makes $u$ the tens digit, and $2u+u'\equiv u'\equiv0\pmod4$ forces $u'\in\{4,8\}$, with even tens digit $u$. So the property persists.</p><p>Hence a Thursday number $\underline{d_1d_2d_3d_4}$ has nonzero digits, $d_3\in\{2,4,6,8\}$ and $d_4\in\{4,8\}$: at most $9\cdot9\cdot4\cdot2=648$ numbers.</p><p><strong>All of them occur.</strong> Write $d_4$ on Monday, then put $d_3$, $d_2$, $d_1$ in front on Tuesday, Wednesday, Thursday. Each intermediate number ends in $\underline{d_3d_4}$ (or is $d_4$), and $2d_3+d_4\equiv0\pmod4$, so all are multiples of $4$. The answer is $\boxed{648}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p28">
+<h3>Problem 18</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 32: Trigonometric Geometry and Metric Conversion &middot; Metric Geometry via Trigonometric Reformulation</div>
+<div class="ct-text"><p>Point $D$ lies on side $\overline{BC}$ of triangle $ABC$ such that $AB=BD=14$ and $DC=9$. Let $T$ be a point on line $AD$ such that $\angle BCT=90^\circ$ and $D$ lies between $A$ and $T$. Compute the minimum possible value of $AT$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$12\sqrt7$</p></div></details>
+<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Trigonometry and AM-GM)</h4>
+<div class="ct-fig"><img style="width:239px" src="/assets/contests/2026-27/hmmt-nov-tg-28_s1.svg" alt="Figure for the solution"></div>
+<p>Let $\beta=\angle ABC$ and $s=\sin\frac\beta2\in(0,1)$. In isosceles triangle $ABD$ ($BA=BD=14$), $AD=28\sin\frac\beta2=28s$.</p><p>Project $A$, $D$, $T$ perpendicularly onto line $BC$; they go to $A_0$, $D$, $C$, where $BA_0=14\cos\beta$ (signed). Since $A,D,T$ are collinear, ratios along the line are preserved by projection:
+\[\frac{AT}{AD}=\frac{A_0C}{A_0D}=\frac{23-14\cos\beta}{14-14\cos\beta}.\]
+With $1-\cos\beta=2s^2$ we get $14-14\cos\beta=28s^2$ and $23-14\cos\beta=9+28s^2$, so
+\[AT=28s\cdot\frac{9+28s^2}{28s^2}=\frac9s+28s\ \ge\ 2\sqrt{9\cdot28}=12\sqrt7\]
+by AM-GM, with equality when $28s^2=9$, which is possible since $\frac9{28}&lt;1$. The minimum is $\boxed{12\sqrt7}$.</p>
+<h4>Solution 2 (Coordinates on a circle)</h4>
+<p>Put $B=(0,0)$, $D=(14,0)$, $C=(23,0)$, and $A=(u,v)$ with $u^2+v^2=196$, $v&gt;0$, $-14&lt;u&lt;14$. The point $T$ is where line $AD$ meets the vertical line $x=23$. Horizontal distances along the line $AD$ are proportional to lengths, so
+\[AT=AD\cdot\frac{23-u}{14-u},\qquad AD^2=(14-u)^2+v^2=392-28u=28(14-u).\]
+With $w=14-u\in(0,28)$,
+\[AT=\sqrt{28w}\cdot\frac{9+w}{w}=\sqrt{28}\Bigl(\frac{9}{\sqrt w}+\sqrt w\Bigr)\ge\sqrt{28}\cdot2\cdot3=12\sqrt7,\]
+with equality at $w=9$, i.e. $A=(5,\sqrt{171})$. The minimum is $\boxed{12\sqrt7}$.</p>
+<h4>Solution 3 (Power of the point D)</h4>
+<div class="ct-fig"><img style="width:370px" src="/assets/contests/2026-27/hmmt-nov-tg-28_s3.svg" alt="Figure for the solution"></div>
+<p>Let $E$ be the point of line $BC$ with $B$ the midpoint of $\overline{ED}$; so $EB=BD=14$, $ED=28$, and $E,B,D,C$ lie on the line in this order with $DC=9$.</p><p><strong>Two right angles.</strong> Since $BA=BE=BD=14$, the point $A$ lies on the circle with diameter $\overline{ED}$, and $A$ is not on line $BC$; by Thales' theorem $\angle EAD=90^\circ$. The point $T$ lies on line $AD$, so $\angle EAT=90^\circ$ as well. Also $E$ lies on line $BC$ on the same side of $C$ as $B$, so $\angle ECT=\angle BCT=90^\circ$. Hence $A$ and $C$ both lie on the circle $\omega$ with diameter $\overline{ET}$.</p><p><strong>The product $AD\cdot DT$.</strong> The chords $\overline{AT}$ and $\overline{EC}$ of $\omega$ meet at $D$, which lies between $A$ and $T$ (given) and between $E$ and $C$. By the intersecting chords theorem,
+\[AD\cdot DT=ED\cdot DC=28\cdot9=252 .\]</p><p><strong>Minimising.</strong> By AM-GM,
+\[AT=AD+DT\ge2\sqrt{AD\cdot DT}=2\sqrt{252}=12\sqrt7,\]
+with equality exactly when $AD=DT=6\sqrt7$. This is attainable: as $A$ moves along the upper half of the circle with diameter $\overline{ED}$, the length $AD$ takes every value strictly between $0$ and $ED=28$, and $6\sqrt7&lt;28$. For such $A$, the line $AD$ goes on past $D$ (away from $A$) and meets the perpendicular to $BC$ at $C$ in a point $T$ with $D$ between $A$ and $T$. (In coordinates with $B$ at the origin, $A=(5,\sqrt{171})$.)</p><p>The minimum is $\boxed{12\sqrt7}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p29">
+<h3>Problem 19</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Number Theory &middot; LPS VI, Chapter 15: GCD, LCM, and Multiplicative Interaction &middot; Prime-Exponent Bookkeeping</div>
+<div class="ct-text"><p>Let $\frac{a_1}{a_2}$, $\frac{b_1}{b_2}$, $\frac{c_1}{c_2}$, and $\frac{d_1}{d_2}$ be four positive simplified fractions for which
+\[\frac{a_1}{a_2}\cdot\frac{b_1}{b_2}\cdot\frac{c_1}{c_2}=\frac{d_1}{d_2}.\]
+Given that $a_1a_2=720$, $b_1b_2=108$, and $c_1c_2=250$, compute the minimum possible value of $d_1d_2$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$150$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Signed exponents prime by prime)</h4>
+<p>For a positive rational $\frac{x_1}{x_2}$ in lowest terms and a prime $p$, let $e_p=v_p(x_1)-v_p(x_2)$; then $v_p(x_1x_2)=|e_p|$, because $p$ divides at most one of $x_1,x_2$. So for $\frac{a_1}{a_2}$ the exponent of $p$ is $\pm v_p(720)$, and similarly for the others, and $d_1d_2=\prod_p p^{|e_p(d)|}$ with $e_p(d)=e_p(a)+e_p(b)+e_p(c)$.</p><p>Now $720=2^4\cdot3^2\cdot5$, $108=2^2\cdot3^3$, $250=2\cdot5^3$. The signs can be chosen independently for each prime and each fraction:</p><ul class="ct-ul"><li><p>$p=2$: $\pm4\pm2\pm1$ is odd, smallest absolute value $1$ (e.g. $4-2-1$);</p></li><li><p>$p=3$: $\pm2\pm3$, smallest absolute value $1$;</p></li><li><p>$p=5$: $\pm1\pm3$, smallest absolute value $2$.</p></li></ul><p>Hence $d_1d_2\ge2\cdot3\cdot5^2=150$, with equality for example for
+\[\frac{16}{45}\cdot\frac{27}{4}\cdot\frac{125}{2}=\frac{150}{1}.\]
+The minimum is $\boxed{150}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p30">
+<h3>Problem 20</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure &middot; Tangency and Tangent Geometry</div>
+<div class="ct-text"><p>Let $ABC$ be a triangle with $BC=8$. Let $\omega$ be the circle centered at $A$ passing through the midpoint of side $\overline{BC}$. Suppose that there exist parallel tangent lines to $\omega$ through $B$ and $C$. Given that the distance from $A$ to $BC$ is $3$, compute the radius of $\omega$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$2\sqrt3$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (The midline of the two tangents)</h4>
+<div class="ct-fig"><img style="width:256px" src="/assets/contests/2026-27/hmmt-nov-tg-30_s1.svg" alt="Figure for the solution"></div>
+<p>Let $M$ be the midpoint of $BC$ and $r=AM$ the radius. Two different parallel tangent lines of a circle lie on opposite sides of its centre, each at distance $r$; so $A$ lies on the midline $m$ of the strip between the tangent through $B$ and the tangent through $C$. The midpoint $M$ of the segment $BC$, which joins the two lines, also lies on $m$. So $m=AM$, and the tangent through $B$ is the line through $B$ parallel to $AM$; its distance from $A$ equals the distance from $B$ to line $AM$, and this must be $r$.</p><p>Let $\varphi=\angle AMB$. Then the distance from $B$ to line $AM$ is $BM\sin\varphi=4\sin\varphi$, and the distance from $A$ to $BC$ is $AM\sin\varphi=r\sin\varphi=3$. So $r=4\sin\varphi$ and $r\sin\varphi=3$, giving $\frac{r^2}{4}=3$, $r=\boxed{2\sqrt3}$ (with $\sin\varphi=\frac{\sqrt3}2$, so such a triangle exists).</p>
+<h4>Solution 2 (Coordinates)</h4>
+<p>Put $M=(0,0)$, $B=(-4,0)$, $C=(4,0)$, $A=(h,3)$, so $r^2=AM^2=h^2+9$. Let the two parallel tangent lines have unit normal $\mathbf n$. Tangency means $|\mathbf n\cdot(A-B)|=r=|\mathbf n\cdot(A-C)|$. If $\mathbf n\cdot(A-B)=\mathbf n\cdot(A-C)$, then $\mathbf n\cdot(B-C)=0$, so both lines are horizontal through $B$ and $C$, i.e. both are the line $BC$ — not two different lines. Hence $\mathbf n\cdot(A-B)=-\mathbf n\cdot(A-C)$, i.e. $\mathbf n\cdot(2A-B-C)=2\,\mathbf n\cdot A=0$. So $\mathbf n=\pm\frac{(3,-h)}{r}$ and
+\[r=|\mathbf n\cdot(A-B)|=|\mathbf n\cdot B|=\frac{|-12|}{r},\]
+so $r^2=12$ and $r=\boxed{2\sqrt3}$ (attained with $h=\sqrt3$).</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p31">
+<h3>Problem 21</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 22: Summation, Telescoping, and Discrete Transformation &middot; Telescoping Sums and Products</div>
+<div class="ct-text"><p>Compute the number of $10$-letter strings of $A$'s and $B$'s that contain the same number of substrings of the form $ABB$ as substrings of the form $BBA$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$640$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Telescoping indicator sum)</h4>
+<p>Let the string be $s_1s_2\dots s_{10}$, and for $1\le i\le9$ let $f_i=1$ if $s_i=s_{i+1}=B$ and $f_i=0$ otherwise. For $1\le i\le8$, the block $s_is_{i+1}s_{i+2}$ is $ABB$ exactly when $f_{i+1}=1$ and it is not $BBB$, and it is $BBA$ exactly when $f_i=1$ and it is not $BBB$. So
+\[[\,ABB\text{ at }i\,]-[\,BBA\text{ at }i\,]=f_{i+1}-f_i,\]
+and summing over $i=1,\dots,8$,
+\[\#ABB-\#BBA=f_9-f_1 .\]
+The counts are equal iff $f_1=f_9$. Both equal to $1$: $s_1=s_2=s_9=s_{10}=B$, with $2^6=64$ strings. Both equal to $0$: $3$ choices for $s_1s_2\ne BB$, $3$ for $s_9s_{10}\ne BB$, $2^6$ for the middle: $576$ strings. Total $\boxed{640}$.</p>
+<h4>Solution 2 (Runs of B)</h4>
+<p>An occurrence of $ABB$ is an $A$ followed by a maximal run of $B$'s of length at least $2$, and each such run preceded by an $A$ gives exactly one occurrence. So $\#ABB$ is the number of maximal $B$-runs of length $\ge2$ that do not start the string, and likewise $\#BBA$ is the number of such runs that do not end it. If $R$ is the number of maximal $B$-runs of length $\ge2$,
+\[\#ABB=R-[\text{string starts with }BB],\qquad \#BBA=R-[\text{string ends with }BB]\]
+(this also holds when one run is the whole string). So the counts agree iff the string starts with $BB$ and ends with $BB$, or does neither. That is $2^6+3\cdot3\cdot2^6=64+576=\boxed{640}$ strings.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p32">
+<h3>Problem 22</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Number Theory &middot; LPS VI, Chapter 7: Fractions, Decimals, and Repeating Patterns &middot; Repeating Decimal Conversion</div>
+<div class="ct-text"><p>Compute the sum of the digits in the base $10$ representation of
+\[\left\lfloor 10^{99}\cdot\frac{100\,008}{700\,007}\right\rfloor.\]
+(Here, $\lfloor x\rfloor$ denotes the greatest integer less than or equal to $x$.)</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$440$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Adjusting the digits of 1/7)</h4>
+<p>Since $700007=7\cdot100001$ and $100008=100001+7$,
+\[x=\frac{100008}{700007}=\frac17+\frac1{100001},\qquad \frac{1}{100001}=\frac{10^{-5}}{1+10^{-5}}=10^{-5}-10^{-10}+10^{-15}-\cdots.\]
+So $x$ is obtained from $\frac17=0.142857142857\ldots$ by adding $1$ to the $5$th, $15$th, $25$th, &hellip; digits and subtracting $1$ from the $10$th, $20$th, &hellip; digits after the point. The digits of $\frac17$ are $1,4,2,8,5,7$, never $0$ or $9$, so these changes give digits in $0,\dots,9$ without carries or borrows; the resulting digit string is therefore exactly the decimal expansion of $x$.</p><p>As $x&lt;1$, $\lfloor10^{99}x\rfloor$ is the number formed by the first $99$ digits of $x$. Among positions $5,10,\dots,95$ there are $10$ with $+1$ (odd multiples of $5$) and $9$ with $-1$. The first $99$ digits of $\frac17$ are $16$ full periods (sum $16\cdot27=432$) followed by $1,4,2$, sum $439$. Hence the digit sum is $439+10-9=\boxed{440}$.</p>
+<h4>Solution 2 (Complementary half-periods)</h4>
+<p>Write $x=\frac{100008}{700007}=\frac17+\frac1{100001}$. Since $10^3\equiv-1\pmod7$ and $10^5\equiv-1\pmod{100001}$, we get $10^{15}\equiv-1$ modulo both, hence modulo $700007=7\cdot100001$. Let $t_k=\{10^kx\}$ be the fractional parts; they are fractions with denominator $700007$, coprime to $10$, and the $(k+1)$-st digit of $x$ is $d_{k+1}=\lfloor10t_k\rfloor$. Because $10^kx(10^{15}+1)$ is an integer and $t_k\neq0$, we have $t_{k+15}=1-t_k$, and as $10t_k$ is never an integer, $d_{k+16}=9-d_{k+1}$. So any $30$ consecutive digits sum to $15\cdot9=135$.</p><p>$\lfloor10^{99}x\rfloor$ is formed by digits $1$ to $99$. Digits $10$ to $99$ are three blocks of $30$, sum $405$. For the first nine digits add the expansions in $5$-digit groups:
+\[\begin{array}{r}14285\ 71428\ 57142\ 85714\ \cdots\\ +\ 00000\ 99999\ 00000\ 99999\ \cdots\\ \hline 14286\ 71427\ 57143\ 85713\ \cdots\end{array}\]
+(each carry stops in the group before, since no group of $\frac17$ is $99999$). The first nine digits are $142867142$, with sum $35$. The total is $405+35=\boxed{440}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p33">
+<h3>Problem 23</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 29: Valuations and Lifting the Exponent &middot; p-adic Valuation Basics</div>
+<div class="ct-text"><p>Call a set $S$ of positive integers <em>divisorful</em> if for any ordered triple $(a,b,c)$ consisting of not necessarily distinct elements of $S$, $a$ divides $bc$. Compute the least positive integer $n$ such that there exists a divisorful set with exactly $25$ elements containing $n$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$720$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Exponents between m and 2m)</h4>
+<p>Let $S$ be divisorful with $25$ elements and $n\in S$. Fix a prime $p$, and let $m_p$ and $M_p$ be the least and greatest exponent of $p$ among the elements of $S$. Taking $a$ with exponent $M_p$ and $b=c$ with exponent $m_p$, the condition $a\mid bc$ gives $M_p\le2m_p$. In particular, if $p$ divides some element then $m_p\ge1$, so $p$ divides every element.</p><p>Let $g=\prod_pp^{m_p}$. Every $s\in S$ has $v_p(s)\in[m_p,2m_p]$, so $s/g$ is a divisor of $g$, and $s\mapsto s/g$ is injective. Hence $25=|S|\le d(g)$, the number of divisors of $g$. Also $g\mid n$, so $n\ge g\ge n_0$, the least positive integer with at least $25$ divisors.</p><p><strong>$n_0=720$.</strong> Rearranging exponents in decreasing order onto the primes $2,3,5,\dots$ does not increase a number and keeps $d$, so consider $n=2^a3^b5^c\cdots$ with $a\ge b\ge c\ge\cdots$.</p><ul class="ct-ul"><li><p>One prime: $n\ge2^{24}$.</p></li><li><p>Two primes, $(a+1)(b+1)\ge25$: $b=1\Rightarrow a\ge12$; $b=2\Rightarrow a\ge8$ ($2304$); $b=3\Rightarrow a\ge6$ ($1728$); $b\ge4\Rightarrow n\ge2^43^4=1296$.</p></li><li><p>Three primes: if $c\ge2$, $n\ge2^23^25^2=900$. If $c=1$ we need $(a+1)(b+1)\ge13$: $b=1\Rightarrow a\ge6$ ($960$); $b=2\Rightarrow a\ge4$, $n\ge2^4\cdot3^2\cdot5=720$; $b\ge3\Rightarrow n\ge2^33^35=1080$.</p></li><li><p>Four primes: all exponents $1$ give only $16$ divisors, so $a\ge2$; $a=2$ with $b=1$ gives $24&lt;25$, so $a\ge3$ ($n\ge2^3\cdot3\cdot5\cdot7=840$) or $b\ge2$ ($n\ge1260$).</p></li><li><p>Five or more primes: $n\ge2310$.</p></li></ul><p>So $n_0=720$ (with $d(720)=30$), and $n\ge720$.</p><p><strong>Construction.</strong> The $30$ numbers $720k$, $k\mid720$, form a divisorful set: for $a=720k_1$, $b=720k_2$, $c=720k_3$ we have $bc=720^2k_2k_3$, which is divisible by $720k_1$ because $k_1\mid720$. Any $25$ of them including $720$ (take $k=1$) form a divisorful set with $25$ elements containing $720$. The answer is $\boxed{720}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p34">
+<h3>Problem 24</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 43: Locus, Transformation, and Construction Geometry &middot; Transformation of Moving Points</div>
+<div class="ct-text"><p>Gregasaurus has a unit square piece of paper with a red dot in one of its corners. A <em>fold</em> consists of the following:</p><ul class="ct-parts"><li><p><span class="ct-lbl">1.</span> Selecting a line $\ell$ passing through the interior of the square that divides the square into two regions.</p></li><li><p><span class="ct-lbl">2.</span> Picking one of the two regions, and reflecting it across $\ell$.</p></li></ul><p>Gregasaurus folds the square exactly once. Compute the area of the smallest region $R$ such that the red dot must remain in $R$, no matter how Gregasaurus folds the square.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$2+2\pi$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (The locus of reflections)</h4>
+<div class="ct-fig"><img style="width:225px" src="/assets/contests/2026-27/hmmt-nov-tg-34_s1.svg" alt="Figure for the solution"></div>
+<p>Put the square at $[0,1]^2$ with the dot at $O=(0,0)$. If the dot is not in the reflected region it stays at $O$; otherwise it goes to the reflection $X$ of $O$ in $\ell$, and every line $\ell$ through the interior can be used with the region containing $O$. So $R$ must contain $O$ and every such $X$, and the smallest $R$ is this set of points.</p><p>For $X\neq O$, the line $\ell$ is the perpendicular bisector of $OX$, and $\ell$ passes through the interior of the square iff the open square contains points on both sides of $\ell$. Points of the open square near $O$ are closer to $O$; so the condition is that some point $Y$ of the open square is closer to $X$ than to $O$:
+\[|Y-X|^2&lt;|Y|^2\iff |X|^2&lt;2\,X\cdot Y .\]
+As $Y=(y_1,y_2)$ ranges over the open square, $X\cdot Y$ comes arbitrarily close to (but need not reach) $x^++y^+$, where $X=(x,y)$ and $t^+=\max(t,0)$. So $X$ is reachable iff
+\[x^2+y^2&lt;2(x^++y^+).\]</p><ul class="ct-ul"><li><p>$x,y\ge0$: $(x-1)^2+(y-1)^2&lt;2$, the disk of radius $\sqrt2$ about $(1,1)$ cut by the two axes. Each axis is a chord at distance $1$ from the centre, cutting off a segment with central angle $90^\circ$ and area $\frac12\cdot2\,(\frac\pi2-1)=\frac\pi2-1$. The part in this quadrant has area $2\pi-2(\frac\pi2-1)=\pi+2$.</p></li><li><p>$x\ge0&gt;y$: $(x-1)^2+y^2&lt;1$, a half-disk of area $\frac\pi2$; similarly $\frac\pi2$ for $x&lt;0\le y$.</p></li><li><p>$x,y&lt;0$: impossible.</p></li></ul><p>The total area is $\pi+2+\frac\pi2+\frac\pi2=\boxed{2+2\pi}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p35">
+<h3>Problem 25</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Algebra &middot; LPS VII, Chapter 42: Polynomial Reconstruction and Interpolation &middot; Interpolation from Data Points</div>
+<div class="ct-text"><p>Let $p(x)$ be a polynomial of degree at most $6$ such that $p(n)=1+\frac12+\frac13+\dots+\frac1n$ for all $n\in\{2,3,4,5,6,7,8\}$. Compute $p(0)$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\frac{15}{56}$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (The difference polynomial)</h4>
+<p>Let $D(x)=p(x)-p(x-1)$, a polynomial of degree at most $5$. For $n=3,\dots,8$, $D(n)=H_n-H_{n-1}=\frac1n$. So $xD(x)-1$ has degree at most $6$ and vanishes at $x=3,4,\dots,8$:
+\[xD(x)-1=c(x-3)(x-4)\cdots(x-8).\]
+At $x=0$: $-1=c\cdot(3\cdot4\cdots8)=20160c$, so $c=-\frac1{20160}$. Then
+\[D(2)=\frac{1+c\cdot(-1)(-2)\cdots(-6)}{2}=\frac{1-\frac{720}{20160}}{2}=\frac{27}{56},\qquad D(1)=1+c\,(-2)(-3)\cdots(-7)=1-\frac{5040}{20160}=\frac34.\]
+Since $p(2)=\frac32$: $p(1)=p(2)-D(2)=\frac{57}{56}$ and $p(0)=p(1)-D(1)=\frac{57}{56}-\frac{42}{56}=\boxed{\frac{15}{56}}$.</p>
+<h4>Solution 2 (A binomial formula for harmonic numbers)</h4>
+<p>For $n\ge1$ we have $H_n=\sum_{k=1}^{n}\frac{(-1)^{k-1}}{k}\binom nk$ (both sides equal $1$ for $n=1$, and both increase by $\frac1{n+1}$ from $n$ to $n+1$, because $\sum_k\frac{(-1)^{k-1}}{k}\binom n{k-1}=\frac1{n+1}\sum_k(-1)^{k-1}\binom{n+1}{k}=\frac1{n+1}$). So the degree-$8$ polynomial
+\[q(x)=\sum_{k=1}^{8}\frac{(-1)^{k-1}}{k}\binom xk\]
+satisfies $q(n)=H_n$ for $n=1,\dots,8$, and $q(0)=0$. Then $p-q$ has degree $8$ and vanishes at $2,\dots,8$, so $p(x)-q(x)=(x-2)(x-3)\cdots(x-8)(\alpha x+\beta)$. Comparing the coefficients of $x^8$ and $x^7$ (those of $p$ are $0$):
+\[[x^8]q=-\frac{1}{8\cdot8!},\qquad [x^7]q=-\frac18\cdot\frac{-(0+1+\dots+7)}{8!}+\frac17\cdot\frac1{7!}=\frac{28}{8\cdot8!}+\frac1{7\cdot7!},\]
+so $\alpha=\frac{1}{8\cdot8!}$ and $\beta-35\alpha=-[x^7]q$, i.e. $\beta=\frac{7}{8\cdot8!}-\frac{1}{7\cdot7!}$. Finally
+\[p(0)=q(0)+(-2)(-3)\cdots(-8)\,\beta=-8!\,\beta=-\frac78+\frac87=\boxed{\frac{15}{56}}.\]</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p36">
+<h3>Problem 26</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 39: Graph Theory and Structural Combinatorics &middot; Paths, Cycles, and Connectivity</div>
+<div class="ct-text"><p>Sophia has a $5\times 5$ grid of dots, and selects $10$ of them uniformly at random. Given that she selects exactly $2$ dots in each row and each column, compute the probability that some $4$ selected dots form a rectangle with grid-aligned sides.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\frac5{17}$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Cycles in a bipartite graph)</h4>
+<p>Given the condition, the selection is uniform among the $0$-$1$ matrices with all row and column sums $2$. View such a matrix as a graph joining row $i$ to column $j$ when $(i,j)$ is selected. Every vertex has degree $2$, so the graph is a disjoint union of cycles; cycles alternate rows and columns, and a cycle through $k$ rows and $k$ columns needs $k\ge2$. A rectangle of selected dots means two rows sharing the same two columns, i.e. a $4$-cycle ($k=2$).</p><p>The number of single cycles through $k$ given rows and $k$ given columns is $\frac{k!\,(k-1)!}{2}$ (list the rows in cyclic order starting at a fixed row, $(k-1)!$ ways, interleave the columns, $k!$ ways, and divide by $2$ for the direction). The rows split into cycles as $5$ or $2+3$:</p><ul class="ct-ul"><li><p>one $10$-cycle: $\frac{5!\,4!}{2}=1440$ matrices;</p></li><li><p>a $4$-cycle and a $6$-cycle: choose its $2$ rows and $2$ columns, $10\cdot10$ ways, then $1\cdot\frac{3!\,2!}2=6$ ways: $600$ matrices.</p></li></ul><p>The total is $2040$ and the rectangle occurs exactly in the $600$, so the probability is $\frac{600}{2040}=\boxed{\frac5{17}}$.</p>
+<h4>Solution 2 (Rows as edges between columns)</h4>
+<p>Given the condition, the selection is uniform among the $0$-$1$ matrices with all row and column sums $2$. Let each row be an edge joining the two columns it uses. We get a multigraph on the $5$ columns with $5$ edges labelled by the rows, no loops, and every column of degree $2$. A rectangle means two rows using the same pair of columns: a double edge.</p><p>A loopless multigraph with all degrees $2$ is a union of cycles, where a double edge counts as a cycle of length $2$. On $5$ vertices the cycle lengths are $5$ or $2+3$.</p><ul class="ct-ul"><li><p>A $5$-cycle: $\frac{4!}{2}=12$ shapes, and the $5$ row labels can be placed on its edges in $5!=120$ ways, all giving different matrices: $1440$.</p></li><li><p>A double edge plus a triangle: $\binom52=10$ choices of the double edge; $5!$ placements of labels, but exchanging the labels of the two parallel edges gives the same matrix: $60$ each, $600$ in all.</p></li></ul><p>So there are $2040$ matrices, $600$ of them with a rectangle, and the probability is $\boxed{\frac{5}{17}}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p37">
+<h3>Problem 27</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VI scale">H</span>Number Theory &middot; LPS VI, Chapter 21: Digits, Place Value, and Decimal Structure &middot; Digit Conditions and Search</div>
+<div class="ct-text"><p>Crystal writes two $5$-digit positive integers in her journal using every digit exactly once (where leading zeros are not allowed). Compute the maximum possible sum of the digits of the absolute difference between her numbers.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$40$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Borrows in the column subtraction)</h4>
+<p>Let the numbers be $a&gt;b$ and $D=a-b$. Index digit positions $1$ (units) to $5$, write $a_i,b_i,D_i$ for the digits, and let $\beta_i\in\{0,1\}$ be the borrow out of position $i$ in the column subtraction ($\beta_0=\beta_5=0$). Then
+\[D_i=a_i-b_i-\beta_{i-1}+10\beta_i .\]
+A borrow at position $i$ means $a_i-\beta_{i-1}&lt;b_i$, and since $a_i\ne b_i$ this gives $a_i&lt;b_i$.</p><p><strong>Fact 1.</strong> If $\beta_{i-1}=1$ then $D_i\le8$: without a borrow out, $D_i=a_i-b_i-1\le8$; with one, $a_i&lt;b_i$ and $D_i=9+a_i-b_i\le8$. Also $D_5=a_5-b_5-\beta_4\le8$, because $b_5\ge1$. Hence
+\[S(D)\le 9+\sum_{i=2}^{4}(9-\beta_{i-1})+8=44-(\beta_1+\beta_2+\beta_3).\]</p><p><strong>Fact 2.</strong> Summing the column equations, $S(D)=S(a)-S(b)+9k$ with $k=\beta_1+\dots+\beta_4$. As every digit is used once, $S(a)+S(b)=45$, so $S(D)=45-2S(b)+9k$, and $S(b)\ge0+1+2+3+4=10$.</p><p>Suppose $S(D)\ge41$.</p><ul class="ct-ul"><li><p>$k\le1$: $S(D)\le45-20+9=34$. Impossible.</p></li><li><p>$k=2$: $S(b)\le11$, so $b$'s digits are $\{0,1,2,3,4\}$ or $\{0,1,2,3,5\}$. Then at most one position has $a_i&lt;b_i$ (only $a_i=4&lt;b_i=5$ is possible), but each of the two borrows needs such a position. Impossible.</p></li><li><p>$k=3$: $S(D)=72-2S(b)$ is even and, by Fact 1, at most $44-2=42$; so $S(D)=42$, and Fact 1 must be tight. Then $\beta_4=1$ (three borrows, only two among positions $1$&ndash;$3$) and $D_5=8$, i.e. $a_5-b_5=9$, forcing $b_5=0$. Impossible.</p></li><li><p>$k=4$: by Fact 1, $S(D)\le41$, so equality holds throughout, again $D_5=a_5-b_5-1=8$ forces $b_5=0$. Impossible.</p></li></ul><p>Hence $S(D)\le40$, and $82469-13570=68899$ has digit sum $40$. The answer is $\boxed{40}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p38">
+<h3>Problem 28</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Combinatorics &middot; LPS VI, Chapter 38: Probability and Expected Value &middot; Dependent and Independent Events</div>
+<div class="ct-text"><p>One hundred players $P_1,P_2,\dots,P_{100}$ are playing a game. Each player $P_i$ has an unfair coin that lands heads with probability $p_i$. On the $n^{\text{th}}$ turn of the game, player $P_n$ flips their coin, where indices are taken modulo $100$. If it lands heads, the game ends immediately and they win. Otherwise, the game continues with the next player's turn.</p><p>Given that each player has a $\frac{1}{100}$ probability of winning and that $p_{100}=\frac67$, compute $p_1$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\frac{6}{601}$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Equal first-round chances)</h4>
+<p>Let $q_i=\prod_{j&lt;i}(1-p_j)$ be the probability that the first round reaches $P_i$ ($q_1=1$), and $Q=q_{101}$, the probability that a whole round passes with no heads ($Q&lt;1$ since $p_{100}&gt;0$). Player $P_i$ wins with probability $q_ip_i(1+Q+Q^2+\cdots)=\frac{q_ip_i}{1-Q}$. These are all equal, so $q_ip_i=c$ is the same for every $i$. Then $q_{i+1}=q_i(1-p_i)=q_i-c$, so $q_i=1-(i-1)c$, and
+\[p_{100}=\frac{c}{q_{100}}=\frac{c}{1-99c}=\frac67\ \Longrightarrow\ 7c=6-594c\ \Longrightarrow\ c=\frac6{601}.\]
+(Each winning probability is then $\frac{c}{1-q_{101}}=\frac{c}{100c}=\frac1{100}$, as required.) Finally $p_1=\frac{c}{q_1}=\boxed{\frac{6}{601}}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p39">
+<h3>Problem 29</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 7: Congruence, Rigidity, and Isometric Structure &middot; Geometric Reflection and Isometry</div>
+<div class="ct-text"><p>Convex pentagon $BRYAN$ has area $128$ with $\angle A+\angle B=180^\circ$ and side lengths $BR=2$, $RY=12$, $YA=10$, $AN=11$ and $NB=11$. Compute $\sin(\angle A)$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\frac{32}{33}$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Rotate triangle NAY onto NB)</h4>
+<div class="ct-fig"><img style="width:268px" src="/assets/contests/2026-27/hmmt-nov-tg-39_s1.svg" alt="Figure for the solution"></div>
+<p>Let $\rho$ be the rotation about $N$ taking $A$ to $B$ (possible as $NA=NB=11$) and let $Y'=\rho(Y)$. Triangles $NAY$ and $NBY'$ are congruent, so $BY'=AY=10$, $NY'=NY$ and $\angle NBY'=\angle NAY=\angle A$.</p><p>List the convex pentagon $B,R,Y,A,N$ counterclockwise. Then triangle $N,B,R$ is counterclockwise while $N,A,Y$ is clockwise; the rotation keeps orientation, so $N,B,Y'$ is clockwise and $Y'$, $R$ lie on opposite sides of line $NB$. As $\angle NBY'+\angle NBR=\angle A+\angle B=180^\circ$, the points $R,B,Y'$ are collinear with $B$ between them, and $RY'=2+10=12=RY$.</p><p>So triangles $NRY$ and $NRY'$ have equal sides ($NY=NY'$, $RY=RY'$, $NR$ common) and equal areas. Splitting the convex pentagon from $N$,
+\[128=[NBR]+[NRY]+[NYA]=[NBR]+[NBY']+[NRY]=[NRY']+[NRY]=2[NRY'].\]
+So $[NRY']=64=\frac12\cdot12\cdot h$, where $h=\frac{32}3$ is the distance from $N$ to line $RY'$. In right triangle formed by $N$, $B$ and the foot of this distance, $\sin\angle NBY'=\frac{h}{NB}=\frac{32}{33}$. Hence $\sin\angle A=\boxed{\frac{32}{33}}$.</p>
+<h4>Solution 2 (Law of cosines and Heron)</h4>
+<p>Let $c=\cos\angle B$ and $s=\sin\angle B$; since $\angle A=180^\circ-\angle B$, $\cos\angle A=-c$ and $\sin\angle A=s$. Split the convex pentagon from $N$ into triangles $NBR$, $NRY$, $NYA$:
+\[[NBR]=\tfrac12\cdot11\cdot2\,s=11s,\qquad [NYA]=\tfrac12\cdot11\cdot10\,s=55s.\]
+By the law of cosines, $NR^2=121+4-44c=125-44c$ and $NY^2=121+100+220c=221+220c$. Heron's formula in the form $16K^2=4u^2v^2-(u^2+v^2-w^2)^2$ for triangle $NRY$ ($u=NR$, $v=NY$, $w=RY=12$) gives
+\[\begin{aligned}16[NRY]^2&amp;=4(125-44c)(221+220c)-(202+176c)^2\\&amp;=(110500+71104c-38720c^2)-(40804+71104c+30976c^2)=69696(1-c^2).\end{aligned}\]
+As $69696=264^2$, $[NRY]=\frac{264}{4}s=66s$. So the area is $11s+66s+55s=132s=128$, and $\sin\angle A=s=\boxed{\frac{32}{33}}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p40">
+<h3>Problem 30</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Algebra &middot; LPS VII, Chapter 42: Polynomial Reconstruction and Interpolation &middot; Finite Difference and Discrete Polynomial Behavior</div>
+<div class="ct-text"><p>There exists a polynomial $p(x,y)$ with real coefficients and total degree at most $4$ such that $p(m,n)$ is the entry in the $m^{\text{th}}$ row and the $n^{\text{th}}$ column of the following table.
+\[\begin{array}{|c|c|c|c|}\hline 4&amp;8&amp;*&amp;?\\ \hline 3&amp;5&amp;9&amp;*\\ \hline 2&amp;3&amp;5&amp;9\\ \hline 0&amp;1&amp;2&amp;2\\ \hline\end{array}\]
+Compute $p(4,4)$, i.e., the top-right entry in the table.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$30$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Mixed finite differences)</h4>
+<p>Write $p(m,n)$ with row $m$ ($m=1$ is the bottom row) and column $n$. Let $\Delta_x f(x,y)=f(x+1,y)-f(x,y)$ and $\Delta_y$ similarly. For a monomial, $\Delta_x^a\Delta_y^b(x^iy^j)=(\Delta^ax^i)(\Delta^by^j)$, which vanishes if $i&lt;a$ or $j&lt;b$. If $a+b\ge5$ and $i+j\le4$, one of these holds, so
+\[\Delta_x^a\Delta_y^b\,p=0\qquad\text{whenever }a+b\ge5 .\]
+Let $X=p(3,4)$, $Z=p(4,3)$, $Y=p(4,4)$.</p><p><strong>Using $\Delta_x^2\Delta_y^3$.</strong> The third difference along row $m$ is $g(m)=p(m,4)-3p(m,3)+3p(m,2)-p(m,1)$:
+\[g(1)=2-6+3-0=-1,\quad g(2)=9-15+9-2=1,\quad g(3)=X-27+15-3=X-15,\quad g(4)=Y-3Z+24-4.\]
+$g(1)-2g(2)+g(3)=0$ gives $X=18$, and $g(2)-2g(3)+g(4)=0$ gives $1-6+Y-3Z+20=0$, i.e. $Y=3Z-15$.</p><p><strong>Using $\Delta_x^3\Delta_y^2$.</strong> The third difference down column $n$ is $h(n)=p(4,n)-3p(3,n)+3p(2,n)-p(1,n)$:
+\[h(1)=4-9+6-0=1,\quad h(2)=8-15+9-1=1,\quad h(3)=Z-27+15-2=Z-14 .\]
+$h(1)-2h(2)+h(3)=0$ gives $Z=15$. Hence $p(4,4)=Y=3\cdot15-15=\boxed{30}$.</p><p>(A polynomial with these values exists, as the problem states; the computation shows that the value $p(4,4)$ is forced.)</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p41">
+<h3>Problem 31</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 11: Similarity, Homothety, and Ratio Geometry &middot; Nested and Overlapping Similarity</div>
+<div class="ct-text"><p>Let $ABCD$ be a cyclic quadrilateral, and suppose rays $BA$ and $CD$ meet at $E$ and rays $CB$ and $DA$ meet at $F$. Suppose the inradii of triangles $EDA$, $EBC$, $FAB$, and $FCD$ are $5$, $10$, $6$, and $10$, respectively. Compute the area of $ABCD$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$80\sqrt{30}$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Two pairs of similar triangles)</h4>
+<div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/hmmt-nov-tg-41_s1.svg" alt="Figure for the solution"></div>
+<p>Since $ABCD$ is cyclic, $\angle EAD=180^\circ-\angle BAD=\angle BCD$, so triangles $EAD$ and $ECB$ are similar (common angle at $E$). The ratio of similarity equals the ratio of inradii, $\frac5{10}=\frac12$:
+\[EA=\tfrac12EC,\qquad ED=\tfrac12EB,\qquad AD=\tfrac12BC.\]
+Likewise $\angle FAB=180^\circ-\angle BAD=\angle FCD$, so triangles $FAB$ and $FCD$ are similar with ratio $\frac6{10}=\frac35$:
+\[FA=\tfrac35FC,\qquad FB=\tfrac35FD,\qquad AB=\tfrac35CD.\]
+The lines $AB$, $CD$ meet outside the circle, so $A$ lies between $E$ and $B$, and $D$ between $E$ and $C$; similarly $B$ is between $F$ and $C$, and $A$ between $F$ and $D$.</p><p>Let $EB=x$, $EC=y$, $FC=u$, $FD=w$. Then
+\[AB=x-\tfrac y2,\quad CD=y-\tfrac x2,\quad BC=u-\tfrac{3w}5,\quad DA=w-\tfrac{3u}5.\]
+From $5AB=3CD$: $13x=11y$; from $2DA=BC$: $13w=11u$. Put $x=11t$, $y=13t$, $w=11v$, $u=13v$; then $CD=\frac{15t}2$ and $BC=\frac{32v}5$.</p><p>Areas: $[ABCD]=[EBC]-[EAD]=\frac34[EBC]$ and $[ABCD]=[FCD]-[FAB]=\frac{16}{25}[FCD]$. Both large triangles have inradius $10$, so area $=10\times$semiperimeter, and therefore
+\[\tfrac34\,(x+y+BC)=\tfrac{16}{25}\,(u+w+CD):\qquad 75\Bigl(24t+\tfrac{32v}{5}\Bigr)=64\Bigl(24v+\tfrac{15t}{2}\Bigr),\]
+i.e. $1320t=1056v$, $v=\frac{5t}4$, and $BC=8t$. So triangle $EBC$ has sides $11t,13t,8t$, semiperimeter $16t$ and area $\sqrt{16t\cdot5t\cdot3t\cdot8t}=8\sqrt{30}\,t^2$. Its inradius is $\frac{8\sqrt{30}t^2}{16t}=\frac{\sqrt{30}}2t=10$, so $t=\frac{20}{\sqrt{30}}$ and $[EBC]=8\sqrt{30}\cdot\frac{400}{30}=\frac{320\sqrt{30}}3$. Finally
+\[[ABCD]=\tfrac34\cdot\tfrac{320\sqrt{30}}{3}=\boxed{80\sqrt{30}}.\]</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p42">
+<h3>Problem 32</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 47: Probabilistic Method and Random Structure &middot; Expectation Arguments</div>
+<div class="ct-text"><p>Mark has a radioactive ball weighing $1$ gram. During the $n^{\text{th}}$ minute, each radioactive ball has a $1/2$ chance of splitting into two radioactive balls, each of weight $2^{-n}$ grams (regardless of the ball's initial weight or when it was initially formed). After $7$ minutes, compute the expected value of the total weight in grams of Mark's radioactive balls.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\frac{2123}{8192}$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Recursion for expectations)</h4>
+<p>Let $W_n$ and $N_n$ be the expected total weight and expected number of balls after $n$ minutes ($W_0=N_0=1$). During minute $n$, a ball of weight $w$ keeps weight $w$ with probability $\frac12$ and otherwise becomes two balls of total weight $2\cdot2^{-n}$; its expected contribution is $\frac w2+2^{-n}$, and its expected number of descendants is $\frac32$. By linearity,
+\[W_n=\tfrac12W_{n-1}+2^{-n}N_{n-1},\qquad N_n=\tfrac32N_{n-1}=\bigl(\tfrac32\bigr)^n.\]
+Hence $W_1=1$, $W_2=\frac78$, $W_3=\frac{23}{32}$, $W_4=\frac{73}{128}$, $W_5=\frac{227}{512}$, $W_6=\frac{697}{2048}$, and
+\[W_7=\frac{697}{4096}+\frac1{128}\cdot\frac{729}{64}=\frac{1394+729}{8192}=\boxed{\frac{2123}{8192}}.\]</p>
+<h4>Solution 2 (Sort the final balls by birth time)</h4>
+<p>Each ball present at the end is either the original ball, never split (probability $2^{-7}$, weight $1$), or a ball born in some minute $m\in\{1,\dots,7\}$ that did not split in minutes $m+1,\dots,7$ (weight $2^{-m}$, survival probability $2^{-(7-m)}$, independent of its past).</p><p>The expected number of balls at the start of minute $m$ is $(\frac32)^{m-1}$ (each minute multiplies the expected count by $\frac12\cdot1+\frac12\cdot2$). Each of them splits with probability $\frac12$ into two newborns, so the expected number of balls born in minute $m$ is $(\frac32)^{m-1}$. By linearity, the expected final weight is
+\[2^{-7}+\sum_{m=1}^{7}\Bigl(\tfrac32\Bigr)^{m-1}2^{-m}\,2^{-(7-m)}=2^{-7}\Bigl(1+\sum_{m=1}^{7}\Bigl(\tfrac32\Bigr)^{m-1}\Bigr)=2^{-7}\Bigl(1+2\Bigl(\tfrac{3^7}{2^7}-1\Bigr)\Bigr)=\frac{2\cdot2187-128}{2^{14}}=\boxed{\frac{2123}{8192}}.\]</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p43">
+<h3>Problem 33</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 12: Exponential Congruences and Order Structure &middot; Orders and Primitive Behavior</div>
+<div class="ct-text"><p>The decimal expansion of $1/179$ has a repeating period of length $178$. Compute the sum of the squares of the digits in this period.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$5049$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Remainders run through all residues)</h4>
+<p>In the long division of $1$ by $179$, the remainder before the $(k+1)$-st digit is $r_k\equiv10^k\pmod{179}$, $0&lt;r_k&lt;179$, and the digit is $\lfloor\frac{10r_k}{179}\rfloor$. The period has length $178$, so $r_0,\dots,r_{177}$ are distinct (a repeated remainder would make the period shorter); hence they are exactly $1,2,\dots,178$. So the required sum is
+\[\sum_{r=1}^{178}\Bigl\lfloor\frac{10r}{179}\Bigr\rfloor^2 .\]
+The digit equals $d$ for $\frac{179d}{10}\le r&lt;\frac{179(d+1)}{10}$: this is $r=1,\dots,17$ for $d=0$, then blocks of $18$ ($18$&ndash;$35$, $36$&ndash;$53$, $54$&ndash;$71$, $72$&ndash;$89$, $90$&ndash;$107$, $108$&ndash;$125$, $126$&ndash;$143$, $144$&ndash;$161$) for $d=1,\dots,8$, and $r=162,\dots,178$ ($17$ values) for $d=9$. Hence the sum is
+\[18\sum_{d=0}^{9}d^2-0^2-9^2=18\cdot285-81=\boxed{5049}.\]</p>
+</div></details>
+</section>
+{% endraw %}

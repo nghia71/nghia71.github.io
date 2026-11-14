@@ -29,6 +29,11 @@ description: All-Russian Mathematical Olympiad 2026, Final Round: problems with 
   .ct-note { font-size: 14px; color: var(--ink-soft); font-style: italic; }
   .ct-bar { margin: .6em 0 1em; display: flex; gap: 10px; flex-wrap: wrap; }
   .ct-bar button { font: inherit; font-size: 14px; padding: 5px 12px; border-radius: var(--radius); border: 1px solid var(--brand); background: var(--white); color: var(--brand); cursor: pointer; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
 </style>
 <script>
   window.MathJax = { tex: { inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [['\\[','\\]']], processEscapes: true },
@@ -57,6 +62,28 @@ description: All-Russian Mathematical Olympiad 2026, Final Round: problems with 
   .ct-text mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
 </style>
 
+<style>
+  .ct-tags { display: flex; flex-wrap: wrap; gap: 5px; margin: 0 0 .55em; }
+  .ct-tg { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .03em; padding: 2px 8px; border-radius: 999px; line-height: 1.5; }
+  .ct-lv { background: #eee7dc; color: #4a3d33; }
+  .ct-df-Starter { background: #dcf1dc; color: #245c24; }
+  .ct-df-Explorer { background: #d6efec; color: #155e57; }
+  .ct-df-Challenger { background: #dce8f7; color: #1f4c80; }
+  .ct-df-Olympiad { background: #e7defa; color: #4b2a8a; }
+  .ct-df-Advanced { background: #fbe4cc; color: #8a4a0b; }
+  .ct-df-Expert { background: #f8d6cf; color: #8c2600; }
+  .ct-band { margin: 1.3em 0 .5em; font-size: 14px; color: var(--ink-soft); }
+  .ct-band .ct-tg { font-size: 13px; margin-right: .4em; }
+  .ct-legend { font-size: 14.5px; background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 10px 16px; margin: 1em 0 1.4em; }
+  .ct-legend p { margin: .35em 0; }
+  .ct-legend ul { margin: .2em 0 .4em; padding-left: 1.1em; }
+  .ct-legend li { margin: .2em 0; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
+</style>
 {% endraw %}
 <p><a href="{{ '/contests-2026' | relative_url }}">&larr; All contests 2026</a></p>
 
@@ -73,7 +100,7 @@ description: All-Russian Mathematical Olympiad 2026, Final Round: problems with 
 <h2 class="ct-group" id="grade-9">Grade 9</h2>
 <section class="ct-problem" id="p1">
 <h3>Problem 1</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 44: Combinatorial Games and Strategy</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 44: Combinatorial Games and Strategy &middot; Strategy Stealing and Symmetry</div>
 <div class="ct-text"><p>Initially, there are $75$ candies on a plate. Petya and Vasya take turns removing any positive number of candies from the plate until none remain. Petya goes first. For what smallest $k$ can Petya play in such a way that he guarantees that at the end of the game the numbers of candies taken by the boys differ by at most $k$?</p><p>(The boys do not eat the candies during the game.)</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$k=25$</p></div></details>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
@@ -87,7 +114,7 @@ that is, $v\le 25$, and $P-V=75-2v\ge 25$.</p></li></ul><p>So Petya cannot guara
 </section>
 <section class="ct-problem" id="p2">
 <h3>Problem 2</h3>
-<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 4: Divisibility and Prime Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 4: Divisibility and Prime Structure &middot; Arithmetic Structure of Products and Powers</div>
 <div class="ct-text"><p>Call a natural number $n$ <em>strange</em> if there exist pairwise distinct natural numbers $a,b,c,d,e&gt;1$ such that
 \[n=a^{a^a}=b^{b^c}=d^{e^e}.\]
 Are there finitely or infinitely many strange numbers?</p><p>(Recall that $x^{y^z}$ means $x$ raised to the power $y^z$.)</p></div>
@@ -109,7 +136,7 @@ So $n_u=2^{2^c}=a^{a^a}=b^{b^c}=d^{e^e}$.</p><p><strong>The five numbers are dis
 </section>
 <section class="ct-problem" id="p3">
 <h3>Problem 3</h3>
-<div class="ct-meta">Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure &middot; Tangency and Tangent Geometry</div>
 <div class="ct-text"><p>$\triangle ABC$ is a scalene triangle with $\angle A=60^\circ$. Points $X,Y$ lie on segment $BC$ such that $2BX=AB$ and $2CY=AC$. Prove that there exists a circle through $X,Y$ that is tangent to the incircle and some excircle of $\triangle ABC$.</p></div>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
 <h4>Solution 1 (The circle on a diameter cut from the bisector)</h4>
@@ -137,7 +164,7 @@ So $f-g$ is a polynomial of degree at most $1$ with two different roots $0$ and 
 </section>
 <section class="ct-problem" id="p4">
 <h3>Problem 4</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 39: Graph Theory and Structural Combinatorics &middot; also Grade 11, Problem 3</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 39: Graph Theory and Structural Combinatorics &middot; Graph Coloring and Labeling &middot; also Grade 11, Problem 3</div>
 <div class="ct-text"><p>Several participants from $n&gt;1$ regions arrived at a competition. Some of them are friends (friendship is always mutual). It turned out that for any seating of several participants (at least three) around a round table such that every two neighbors are friends, the number of participants from each region at the table does not exceed half of the total number of participants seated at the table. Prove that we can partition the participants into $n$ rooms such that any two friends end up in different rooms.</p></div>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
 <h4>Solution (Repairing two classes at a time)</h4>
@@ -146,7 +173,7 @@ So $f-g$ is a polynomial of degree at most $1$ with two different roots $0$ and 
 </section>
 <section class="ct-problem" id="p5">
 <h3>Problem 5</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 18: Invariants and Monovariants</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 18: Invariants and Monovariants &middot; Invariant Quantities</div>
 <div class="ct-text"><p>Katya has $2n$ spools of ribbon, where $n$ is a positive integer. Initially, the lengths of ribbon wound on the spools are
 \[1^2,\ 2^2,\ \dots,\ (2n)^2\]
 decimeters, respectively. Every hour Katya chooses a positive integer $i$ and cuts off $i$ decimeters of ribbon from every spool that still has at least $i$ decimeters left. After some time, all spools whose initial ribbon lengths were odd become empty. Prove that at that moment the amount of ribbon remaining on each of the other spools is less than $4n$ decimeters.</p></div>
@@ -165,7 +192,7 @@ Thus each of the other spools has less than $4n$ decimeters left.</p>
 </section>
 <section class="ct-problem" id="p6">
 <h3>Problem 6</h3>
-<div class="ct-meta">Geometry &middot; LPS VII, Chapter 3: Foundational Angle and Configuration Chasing</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 3: Foundational Angle and Configuration Chasing &middot; Cyclic Quadrilateral Recognition</div>
 <div class="ct-text"><p>Let $O$ be the center of the circumcircle of an acute scalene triangle $ABC$. From point $A$, drop perpendiculars $AP$ and $AQ$ to the extensions of segments $BO$ and $CO$ beyond $O$, respectively. A circle centered at $T$ passes through points $P$ and $Q$ and is tangent to segment $BC$. Prove that
 \[TO\parallel BC.\]</p></div>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -191,7 +218,7 @@ If a circle through $P,Q$ touches the line $BC$ at $K'$, then $SK'^2=SP\cdot SQ$
 </section>
 <section class="ct-problem" id="p7">
 <h3>Problem 7</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 52: Advanced Combinatorial Structure and Hybrid Methods</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 52: Advanced Combinatorial Structure and Hybrid Methods &middot; Combinatorics with Geometric Insight</div>
 <div class="ct-text"><p>Let $n$ be an odd positive integer. Consider an $n\times n$ grid. Define the distance between two cells to be the minimum number of steps needed to move from one cell to the other, moving each time to a side-adjacent cell. Thus, the distance between two side-adjacent cells is $1$. Suppose $R$ cells are colored red and $B$ cells are colored blue. It is known that any line joining the centers of a red cell and a blue cell is not parallel to either diagonal of the grid. In addition, the distance between any red cell and any blue cell is never equal to $n$. Prove that
 \[\sqrt{R}+\sqrt{B}\le n.\]</p></div>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
@@ -207,7 +234,7 @@ All red images lie in the intersection of their $r_1$ rows and $c_1$ columns, an
 </section>
 <section class="ct-problem" id="p8">
 <h3>Problem 8</h3>
-<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 25: Diophantine Equations: Factorization and Algebraic Methods &middot; also Grade 10, Problem 8</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Number Theory &middot; LPS VII, Chapter 25: Diophantine Equations: Factorization and Algebraic Methods &middot; Bounding and Size Arguments &middot; also Grade 10, Problem 8</div>
 <div class="ct-text"><p>Let a triangle have pairwise distinct positive integer side lengths $a$, $b$, and $c$. Prove that at least one of the numbers
 \[ab+1,\quad bc+1,\quad ca+1\]
 is not a perfect square.</p></div>
@@ -239,7 +266,7 @@ So $d_1&gt;4abc&gt;2(ab+bc+ca)+4&gt;d_1$, a contradiction. Hence the three numbe
 <h2 class="ct-group" id="grade-10">Grade 10</h2>
 <section class="ct-problem" id="p9">
 <h3>Problem 1</h3>
-<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 20: Parity, Coloring, and Process Termination &middot; also Grade 11, Problem 1</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 20: Parity, Coloring, and Process Termination &middot; Parity and Coloring Arguments &middot; also Grade 11, Problem 1</div>
 <div class="ct-text"><p>Is it possible to divide the $2026$ numbers
 \[1+\sqrt2,\ 1+2\sqrt2,\ \dots,\ 1+2026\sqrt2\]
 into two nonempty groups such that the products of the numbers in the groups have the same fractional part?</p></div>
@@ -265,7 +292,7 @@ By (ii) the factor $1-2k^2$ is $\equiv-1\pmod8$ for odd $k$ and $\equiv1\pmod 8$
 </section>
 <section class="ct-problem" id="p10">
 <h3>Problem 2</h3>
-<div class="ct-meta">Algebra &middot; LPS VII, Chapter 17: Sequences, Recurrences, and Discrete Dynamics</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Algebra &middot; LPS VII, Chapter 17: Sequences, Recurrences, and Discrete Dynamics &middot; Invariant and Monotone Sequence Behavior</div>
 <div class="ct-text"><p>A sequence of natural numbers $a_1,a_2,\dots$ satisfies
 \[a_1+a_2+\dots+a_{2n-1}=a_n^2\]
 for all natural $n$. Find all such sequences that contain the number $3$.</p></div>
@@ -293,7 +320,7 @@ and each $a_i$ on the left is at least the corresponding $2i-1$ on the right; so
 </section>
 <section class="ct-problem" id="p11">
 <h3>Problem 3</h3>
-<div class="ct-meta">Geometry &middot; LPS VII, Chapter 19: Triangle Centers and Classical Triangle Geometry</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 19: Triangle Centers and Classical Triangle Geometry &middot; Euler Line and Nine-Point Circle Structure</div>
 <div class="ct-text"><p>An acute scalene triangle $ABC$ is inscribed in a circle with center $O$, and its altitudes intersect at $H$. The tangents to the circumcircle of $BHC$ at $B$, to the circumcircle of $AHB$ at $A$, and to the circumcircle of $CHA$ at $C$ form a triangle $T_1$. Similarly, the tangents to the circumcircle of $BHC$ at $C$, to the circumcircle of $AHB$ at $B$, and to the circumcircle of $CHA$ at $A$ form a triangle $T_2$. Let $I_1$ and $I_2$ be the incenters of $T_1$ and $T_2$.</p><p>Prove that $HI_1OI_2$ is a parallelogram, or that the points $H,I_1,O,I_2$ are collinear.</p></div>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Vectors from the circumcentre)</h4>
@@ -314,7 +341,7 @@ So $W\cdot(A-B)=W\cdot(A-C)=0$; as $A-B$ and $A-C$ are not parallel, $W=0$. Thus
 </section>
 <section class="ct-problem" id="p12">
 <h3>Problem 4</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 44: Combinatorial Games and Strategy</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 44: Combinatorial Games and Strategy &middot; Strategy Stealing and Symmetry</div>
 <div class="ct-text"><p>Let $m$ and $k$ be natural numbers with $m&gt;100$ and $1&lt;k&lt;2m$.</p><p>Initially, $2m$ clay balls of mass $1$ are arranged in a row. Petya and Vasya alternate moves, starting with Petya, for a total of $2m-1$ moves. Each move consists of merging two adjacent balls into one.</p><p>Petya wins if at some moment there is a ball of mass $k$. Otherwise, Vasya wins. Who has a winning strategy?</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>Petya wins if $2\le k\le m+1$; Vasya wins if $m+2\le k\le 2m-1$</p></div></details>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
@@ -326,7 +353,7 @@ which cover all the other marks; he again answers inside the pair. After Petya's
 </section>
 <section class="ct-problem" id="p13">
 <h3>Problem 5</h3>
-<div class="ct-meta">Geometry &middot; LPS VI, Chapter 50: Combinatorial Geometry</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Geometry &middot; LPS VI, Chapter 50: Combinatorial Geometry &middot; Extremal Geometric Configurations</div>
 <div class="ct-text"><p>Does there exist a convex $201$-gon in which every diagonal is perpendicular to some other diagonal?</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p><strong>Yes</strong></p></div></details>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
@@ -339,7 +366,7 @@ which cover all the other marks; he again answers inside the pair. After Petya's
 </section>
 <section class="ct-problem" id="p14">
 <h3>Problem 6</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 39: Graph Theory and Structural Combinatorics</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 39: Graph Theory and Structural Combinatorics &middot; Extremal Graph Structure</div>
 <div class="ct-text"><p>A country has exactly $1000$ cities, and some pairs of cities are connected by two-way flight routes. It is known that for every positive integer $k\le 500$, the following statement holds:</p><p><em>If one chooses any set $A$ of $k$ cities, then there exist at least $k$ cities not in $A$, each of which is connected by a flight route to at least one city in $A$.</em></p><p>What is the smallest possible number of flight routes in this country?</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$250\,000$</p></div></details>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
@@ -349,7 +376,7 @@ which cover all the other marks; he again answers inside the pair. After Petya's
 </section>
 <section class="ct-problem" id="p15">
 <h3>Problem 7</h3>
-<div class="ct-meta">Algebra &middot; LPS VII, Chapter 9: Polynomials and Root-Coefficient Strategy</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Algebra &middot; LPS VII, Chapter 9: Polynomials and Root-Coefficient Strategy &middot; Remainder, Factor, and Evaluation Logic</div>
 <div class="ct-text"><p>In the coordinate plane, the vertices of a convex quadrilateral have integer coordinates and lie on the graph of a polynomial with integer coefficients. Prove that if the diagonals of this quadrilateral are perpendicular, then they are equal in length.</p></div>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
 <h4>Solution (All chords have integer slopes)</h4>
@@ -366,7 +393,7 @@ because $p,q&gt;0$. An integer of absolute value less than $1$ is $0$; hence $p=
 <h2 class="ct-group" id="grade-11">Grade 11</h2>
 <section class="ct-problem" id="p16">
 <h3>Problem 2</h3>
-<div class="ct-meta">Geometry &middot; LPS VII, Chapter 11: Similarity, Homothety, and Ratio Geometry</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 11: Similarity, Homothety, and Ratio Geometry &middot; Homothety Centers and Image Tracking</div>
 <div class="ct-text"><p>The medians of an acute triangle $ABC$ meet at $M$. Points $K$ and $N$ lie on $BC$ such that
 \[BK=KN=NC.\]
 The altitudes of triangle $MKN$ meet at $H$.</p><p>Prove that the circle through the midpoints of $AH$, $BH$, and $CH$ is tangent to the circumcircle of triangle $MKN$.</p></div>
@@ -388,7 +415,7 @@ The distance between the centres equals the difference of the radii, so the circ
 </section>
 <section class="ct-problem" id="p17">
 <h3>Problem 4</h3>
-<div class="ct-meta">Algebra &middot; LPS VII, Chapter 9: Polynomials and Root-Coefficient Strategy</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Algebra &middot; LPS VII, Chapter 9: Polynomials and Root-Coefficient Strategy &middot; Power Sums and Newton-Type Relations</div>
 <div class="ct-text"><p>Let $P(x)$ be a polynomial of degree $n$ with real coefficients and leading coefficient $1$.</p><p>Suppose there exist $100$ pairwise distinct real roots $x_1,\dots,x_{100}$ of $P(x)$ and $100$ pairwise distinct real roots $y_1,\dots,y_{100}$ of $P(x)-1$ such that
 \[|x_i-y_i|=1\quad\text{for all } i=1,\dots,100.\]
 What is the smallest possible value of $n$?</p></div>
@@ -429,7 +456,7 @@ Thus every root $x_0$ of $Q$ satisfies $P(x_0)=0$, $P(x_0+1)=1$. The polynomial 
 </section>
 <section class="ct-problem" id="p18">
 <h3>Problem 5</h3>
-<div class="ct-meta">Algebra &middot; LPS VII, Chapter 18: Invariants and Monovariants</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Algebra &middot; LPS VII, Chapter 18: Invariants and Monovariants &middot; Monovariants and Directional Change</div>
 <div class="ct-text"><p>Sasha places a chip at some point of the coordinate plane. In one move, it is allowed to move a chip from the point with coordinates $(a_i,b_i)$ to another point $(a_{i+1},b_{i+1})$ if the equation of the line joining these two points has the form
 \[y=a_ix+c_i,\]
 where $i$ is the number of the move. Is it possible for the chip to return to its starting point after several such moves?</p></div>
@@ -446,7 +473,7 @@ Thus $h$ strictly decreases with every move, so the chip can never be at the sam
 </section>
 <section class="ct-problem" id="p19">
 <h3>Problem 6</h3>
-<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 49: Combinatorial Number Theory and Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Number Theory &middot; LPS VII, Chapter 49: Combinatorial Number Theory and Structure &middot; Hybrid Combinatorial-Arithmetic Arguments</div>
 <div class="ct-text"><p>A board contains $2026$ pairwise distinct integers greater than $1$. It turns out that for every number $a$ written on the board, there exist at least $k$ pairs of written numbers $b&lt;c$ such that
 \[bc-1\]
 is divisible by
@@ -462,7 +489,7 @@ pairs.</p><p>So in this example every written number $a$ has at least $1012$ pai
 </section>
 <section class="ct-problem" id="p20">
 <h3>Problem 7</h3>
-<div class="ct-meta">Geometry &middot; LPS VII, Chapter 55: Three-Dimensional and Spatial Geometry</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 55: Three-Dimensional and Spatial Geometry &middot; Volume and Spatial Measurement</div>
 <div class="ct-text"><p>A sphere centered at $I$ is inscribed in tetrahedron $ABCD$ and touches its faces $BCD$, $CDA$, $DAB$, and $ABC$ at points $A_1$, $B_1$, $C_1$, and $D_1$, respectively. Segment $A_1B_1$ intersects the plane $C_1D_1I$ at point $E$. Prove that the midpoint of edge $AB$ lies in the plane $CDE$.</p></div>
 <details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Two ways to cut the segment in the ratio of the altitudes)</h4>
@@ -508,7 +535,7 @@ Since $\mathbf a,\mathbf b$ are not parallel and $u,v&gt;0$, the vector $v\mathb
 </section>
 <section class="ct-problem" id="p21">
 <h3>Problem 8</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 52: Advanced Combinatorial Structure and Hybrid Methods</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-S" title="Superhard, on the LPS VII scale">S</span>Combinatorics &middot; LPS VII, Chapter 52: Advanced Combinatorial Structure and Hybrid Methods &middot; Combinatorics with Geometric Insight</div>
 <div class="ct-text"><p>Let $a\le b$ be odd integers greater than $1$. On an infinite square grid of cell side length $1$, square napkins of size $2\times2$ are placed along the grid lines so that no cell is covered by more than one napkin. It turns out that for every axis-parallel grid rectangle with horizontal side length $a$ and vertical side length $b$, its lower-left corner is the center of one of the napkins if and only if its upper-right corner is the center of one of the napkins. Find the smallest positive number $\alpha$ such that for every positive integer $N$, one can always find an $N\times N$ grid square containing at most
 \[\alpha N^2\]
 napkins entirely inside it.</p></div>

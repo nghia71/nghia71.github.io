@@ -29,6 +29,11 @@ description: Iran Team Selection Test 2026: problems with answers and solutions
   .ct-note { font-size: 14px; color: var(--ink-soft); font-style: italic; }
   .ct-bar { margin: .6em 0 1em; display: flex; gap: 10px; flex-wrap: wrap; }
   .ct-bar button { font: inherit; font-size: 14px; padding: 5px 12px; border-radius: var(--radius); border: 1px solid var(--brand); background: var(--white); color: var(--brand); cursor: pointer; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
 </style>
 <script>
   window.MathJax = { tex: { inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [['\\[','\\]']], processEscapes: true },
@@ -57,6 +62,28 @@ description: Iran Team Selection Test 2026: problems with answers and solutions
   .ct-text mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
 </style>
 
+<style>
+  .ct-tags { display: flex; flex-wrap: wrap; gap: 5px; margin: 0 0 .55em; }
+  .ct-tg { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .03em; padding: 2px 8px; border-radius: 999px; line-height: 1.5; }
+  .ct-lv { background: #eee7dc; color: #4a3d33; }
+  .ct-df-Starter { background: #dcf1dc; color: #245c24; }
+  .ct-df-Explorer { background: #d6efec; color: #155e57; }
+  .ct-df-Challenger { background: #dce8f7; color: #1f4c80; }
+  .ct-df-Olympiad { background: #e7defa; color: #4b2a8a; }
+  .ct-df-Advanced { background: #fbe4cc; color: #8a4a0b; }
+  .ct-df-Expert { background: #f8d6cf; color: #8c2600; }
+  .ct-band { margin: 1.3em 0 .5em; font-size: 14px; color: var(--ink-soft); }
+  .ct-band .ct-tg { font-size: 13px; margin-right: .4em; }
+  .ct-legend { font-size: 14.5px; background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 10px 16px; margin: 1em 0 1.4em; }
+  .ct-legend p { margin: .35em 0; }
+  .ct-legend ul { margin: .2em 0 .4em; padding-left: 1.1em; }
+  .ct-legend li { margin: .2em 0; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
+</style>
 {% endraw %}
 <p><a href="{{ '/contests-2026' | relative_url }}">&larr; All contests 2026</a></p>
 
@@ -73,7 +100,7 @@ description: Iran Team Selection Test 2026: problems with answers and solutions
 <h2 class="ct-group" id="test-1">Test 1</h2>
 <section class="ct-problem" id="p1">
 <h3>Problem 1</h3>
-<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 12: Exponential Congruences and Order Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Number Theory &middot; LPS VII, Chapter 12: Exponential Congruences and Order Structure &middot; Fermat and Euler Type Results</div>
 <div class="ct-text"><p>A <em>Shift</em> operation on a positive integer is defined as deleting its first non-zero digit (from left to right) and placing it on its right side. For example, by applying three <em>Shift</em> operations on $13025$, we will get $5132$. Prove that for all $a,k\in\mathbb N$ with $\gcd(a,10)=1$, there exist $k$ pairwise distinct positive integers $n_1,n_2,\dots,n_k$ such that $\gcd(n_1,n_2,\dots,n_k)=a$ and for any two of them, one is achievable from the other one by a number of <em>Shifts</em>.</p></div>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
 <h4>Solution (A repunit plus a moving multiple of a)</h4>
@@ -89,7 +116,7 @@ They are pairwise distinct, since $n_0&lt;n_1&lt;\dots&lt;n_{k-1}$. For $j\le k-
 </section>
 <section class="ct-problem" id="p2">
 <h3>Problem 2</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 39: Graph Theory and Structural Combinatorics</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 39: Graph Theory and Structural Combinatorics &middot; Paths, Cycles, and Connectivity</div>
 <div class="ct-text"><p>A <em>Triangular</em> operation is defined on $n$-vertex trees as follows: Starting with a tree $T$, we first add an edge such that there will exist a cycle of length $3$. Then we delete a different edge from that cycle, to obtain a new tree. The new tree is the result of a <em>Triangular</em> operation on $T$. The figure shows a sample of <em>Triangular</em> operation.</p><div class="ct-fig"><img style="width:505px" src="/assets/contests/2026-27/iran-tst-2.svg" alt="Figure for Test 1, Problem 2"></div><p>Prove that there exists a positive integer $N$ such that for all integers $n&gt;N$ and any two $n$-vertex trees $T_1,T_2$ we can achieve $T_2$ from $T_1$ by using at most $2n-1405$ <em>Triangular</em> operations.</p></div>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Through a star or through a path)</h4>
@@ -105,7 +132,7 @@ operations.</p></li></ul><p>In both cases at most $2n-1405$ operations are used,
 </section>
 <section class="ct-problem" id="p3">
 <h3>Problem 3</h3>
-<div class="ct-meta">Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure &middot; Power of a Point</div>
 <div class="ct-text"><p>In triangle $ABC$, points $D,E,F$ lie on sides $BC,AC,AB$ such that
 \[BD=DE=EA\quad\text{and}\quad CD=DF=FA.\]
 Let $BE$ and $CF$ meet at $P$. Prove that the orthocenter of $\triangle PEF$ lies on $BC$.</p></div>
@@ -153,7 +180,7 @@ By (1) its right side and the term $(t^2+3)\mathcal G$ vanish, so $2(1+t^2)J_0=0
 <h2 class="ct-group" id="test-2">Test 2</h2>
 <section class="ct-problem" id="p4">
 <h3>Problem 4</h3>
-<div class="ct-meta">Algebra &middot; LPS VII, Chapter 9: Polynomials and Root-Coefficient Strategy</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Algebra &middot; LPS VII, Chapter 9: Polynomials and Root-Coefficient Strategy &middot; Remainder, Factor, and Evaluation Logic</div>
 <div class="ct-text"><p>Positive reals $a&lt;b$ and a positive integer $n$ are given. Initially Arash writes a polynomial of degree $n$ with real coefficients on the board and then plays the following game with Babak:</p><p>In each turn, Arash chooses a number $c$ in the interval $(a,b)$ and gives it to Babak. Then Babak chooses one of the $n+1$ coefficients of the polynomial currently written on the board, adds $c$ to that coefficient and replaces the polynomial written on the board with the new polynomial. Prove that Babak can play in such a way that, after finitely many moves, the polynomial on the board always has $n$ real roots, regardless of Arash's moves.</p></div>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
 <h4>Solution (Keeping the coefficients in a fixed proportion)</h4>
@@ -173,7 +200,7 @@ and Lemma 1 applies. Each move increases $S$ by more than $a&gt;0$, so after $t$
 </section>
 <section class="ct-problem" id="p5">
 <h3>Problem 5</h3>
-<div class="ct-meta">Geometry &middot; LPS VII, Chapter 48: Inversion and Circle-Preserving Transformation</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 48: Inversion and Circle-Preserving Transformation &middot; Inversion with Power and Radical Structure</div>
 <div class="ct-text"><p>Two circles $\omega_1$ and $\omega_2$ intersect at points $A$ and $B$. A fixed point $C$ lies on $\omega_1$ and $P$ is a point varying on the line $AB$ and outside of the segment $AB$. Points $R$ and $S$ are the tangency points of the lines through $P$ tangent to $\omega_2$, and $Q$ is the second intersection of the line $CP$ with $\omega_1$. Let $O$ be the center of $\omega_2$. Prove that as $P$ varies, the circumcircle of $\triangle QRS$ always passes through a fixed point on the line $OC$.</p></div>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Inversion about R: two perpendicular mirrors)</h4>
@@ -203,7 +230,7 @@ so both sides of $(\ast)$, multiplied by $m$, are equal to $-\dfrac{r^2}{|c|^2}\
 </section>
 <section class="ct-problem" id="p6">
 <h3>Problem 6</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VI, Chapter 50: Combinatorial Geometry</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-S" title="Superhard, on the LPS VI scale">S</span>Combinatorics &middot; LPS VI, Chapter 50: Combinatorial Geometry &middot; Extremal Geometric Configurations</div>
 <div class="ct-text"><p>A natural number $n$ is given. Ali is located at a point in the plane where $n$ points have been colored blue, and he can move according to the following rule. His goal is to escape from the blue points!</p><p>In each move, Ali can choose an equilateral triangle such that one of its vertices is at his current point and no blue point lies <strong>inside</strong> it, and then move to an arbitrary point on the perimeter of that triangle. (Note that points on the perimeter are not considered inside the triangle, and Ali's location may coincide with blue points as well.) We say he has <em>escaped</em> if he reaches a point with the following property: For every positive real number $C$, he can make a move to a point whose distance from all blue points is at least $C$.</p><p>Find the smallest value of $k$ in terms of $n$ such that, regardless of the initial placement of the $n$ blue points, Ali can escape in at most $k$ moves.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\left\lfloor n/7\right\rfloor$</p></div></details>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
@@ -217,7 +244,7 @@ with centre $O$, where Ali starts. Put $\rho_0=0$ and $\rho_i=3r_i$.</p><p><em>C
 <h2 class="ct-group" id="test-3">Test 3</h2>
 <section class="ct-problem" id="p7">
 <h3>Problem 7</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 44: Combinatorial Games and Strategy</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 44: Combinatorial Games and Strategy &middot; Invariant-Based Game Analysis</div>
 <div class="ct-text"><p>Given natural numbers $n,k$, Pink Panther and Mr. White play on an $n\times n$ board in turns. Initially, all cells are white. Pink Panther starts. In each turn, Pink Panther chooses a row or column and paints all its cells pink (regardless of whether they were white or pink). In each turn, Mr. White chooses $n-1$ consecutive cells on a row or column and paints them white.</p><p>If at any stage after Mr. White's turn, at least $k$ cells are pink, Pink Panther wins. Otherwise, the game continues. Find the largest value of $k$ in terms of $n$ for which Pink Panther can be certain to win in a finite number of turns, regardless of Mr. White's play.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$2n-2$ for $n\ge 2$ (and $1$ for $n=1$)</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -235,7 +262,7 @@ After Pink Panther paints a line, Mr. White whitens the $n-1$ other cells of tha
 </section>
 <section class="ct-problem" id="p8">
 <h3>Problem 8</h3>
-<div class="ct-meta">Algebra &middot; LPS VII, Chapter 17: Sequences, Recurrences, and Discrete Dynamics</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Algebra &middot; LPS VII, Chapter 17: Sequences, Recurrences, and Discrete Dynamics &middot; Invariant and Monotone Sequence Behavior</div>
 <div class="ct-text"><p>A positive integer $N$ and positive reals $a_1,a_2,\dots,a_N$ are given. For indices larger than $N$, we define the sequence $(a_i)_{i=1}^{\infty}$ inductively as follows:</p><p>If for $m\ge N$, the numbers $a_1,\dots,a_m$ are defined, we consider all of the $\frac{m(m+1)}{2}$ numbers of the form $a_i+a_j$ with $1\le i\le j\le m$ in decreasing order and denote them by $t_1\ge t_2\ge\dots\ge t_{\frac{m(m+1)}{2}}$. Now we define $a_{m+1}=t_m$. Prove that for all reals $c$, there exists a positive integer $M$ such that for all $n&gt;M$ we have $a_{n+1}&gt;a_n+c$.</p></div>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
 <h4>Solution (Counting the sums in a short interval)</h4>
@@ -255,7 +282,7 @@ This holds for all sufficiently large $m$, which is the statement.</p>
 </section>
 <section class="ct-problem" id="p9">
 <h3>Problem 9</h3>
-<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 12: Exponential Congruences and Order Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Number Theory &middot; LPS VII, Chapter 12: Exponential Congruences and Order Structure &middot; Orders and Primitive Behavior</div>
 <div class="ct-text"><p>For a prime $p&gt;7$ we define:
 \[S_p=\{1,2,3,\dots,p(p-1)\}.\]
 Find all functions $f:S_p\to S_p$ such that for all $c\in\{0,1,\dots,p-1\}$ there exists $a\in S_p$ such that $f(a)\equiv c\pmod p$, and also for all $m,n\in S_p$ we have:
@@ -280,7 +307,7 @@ where $D_\delta$ is the subgroup of $\mathbb F_p^*$ generated by all $c\mu(\mu+\
 <h2 class="ct-group" id="test-4">Test 4</h2>
 <section class="ct-problem" id="p10">
 <h3>Problem 10</h3>
-<div class="ct-meta">Geometry &middot; LPS VII, Chapter 11: Similarity, Homothety, and Ratio Geometry</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 11: Similarity, Homothety, and Ratio Geometry &middot; Direct Similarity</div>
 <div class="ct-text"><p>Let $ABCD$ be a cyclic quadrilateral with circumcenter $O$. Let $P$ be the intersection of $AC$ and $BD$. Points $X$ and $Y$ are in the plane such that $PX\parallel AB$ and $PY\parallel CD$. It is also known that $AC$ bisects $\angle XCD$ and $BD$ bisects $\angle ABY$. Prove that $XY\perp OP$.</p></div>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Similar triangles and projections of O)</h4>
@@ -317,7 +344,7 @@ Finally $bu-a=bu-\frac{bd}c=-\frac bc\,(d-cu)$ and $|d-cu|=|d\overline u-c|=|du-
 </section>
 <section class="ct-problem" id="p11">
 <h3>Problem 11</h3>
-<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 29: Valuations and Lifting the Exponent</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Number Theory &middot; LPS VII, Chapter 29: Valuations and Lifting the Exponent &middot; Lifting the Exponent (LTE)</div>
 <div class="ct-text"><p>For every positive integer $n$ with factorization $n=p_1^{\alpha_1}p_2^{\alpha_2}\cdots p_k^{\alpha_k}$ (where $p_1,p_2,\dots,p_k$ are its distinct prime divisors and $\alpha_1,\alpha_2,\dots,\alpha_k\in\mathbb N$) we define
 \[f(n)=\alpha_1\times\alpha_2\times\dots\times\alpha_k.\]
 We also define $f(n)=f(-n)$ for all $n\in\mathbb N$ and $f(1)=f(0)=1$. Find all polynomials $Q\in\mathbb Z[x]$ such that there exist positive integers $N$ and $a&gt;1$ such that for all integers $n&gt;N$ we have:
@@ -339,7 +366,7 @@ Let $M_0=2^{e_2+1}\,p\prod_{q\in\mathcal Q,\ q\ \mathrm{odd}}q^{\,e_q+1}$. For e
 </section>
 <section class="ct-problem" id="p12">
 <h3>Problem 12</h3>
-<div class="ct-meta">Algebra &middot; LPS VII, Chapter 46: Functional Equations: Iteration, Rigidity, and Deep Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Algebra &middot; LPS VII, Chapter 46: Functional Equations: Iteration, Rigidity, and Deep Structure &middot; Monotonicity, Boundedness, and Regularity</div>
 <div class="ct-text"><p>A function $f:\mathbb C\to\mathbb C$ and a real number $c$ are given such that for all $z\in\mathbb C$, the following inequality holds:
 \[|f(z)-z|&lt;|z|^{0.99}+c.\]
 We also know that for any four distinct complex numbers $\omega_1,\omega_2,\omega_3,\omega_4$ such that the corresponding points on the complex plane are the vertices of a convex quadrilateral (not necessarily in this order), the corresponding points of $f(\omega_1),f(\omega_2),f(\omega_3),f(\omega_4)$ on the complex plane are the vertices of a convex quadrilateral (not necessarily in this order) as well.</p><p>Prove that there exists a complex number $a\in\mathbb C$ such that for all $z\in\mathbb C$ we have $f(z)=z+a$.</p></div>

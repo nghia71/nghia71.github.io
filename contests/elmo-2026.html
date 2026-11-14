@@ -1,0 +1,192 @@
+---
+title: ELMO 2026
+permalink: /contests/elmo-2026
+description: ELMO 2026: problems with answers and solutions
+---
+{% raw %}
+<style>
+  .ct-intro { margin-bottom: 1.2em; }
+  .ct-credit { font-size: 14px; color: var(--ink-soft); border-left: 3px solid var(--gold); padding: 6px 12px; background: var(--white); margin: 1em 0; }
+  .ct-toc { display: flex; flex-wrap: wrap; gap: 6px; margin: 1em 0 1.4em; }
+  .ct-toc a { display: inline-block; min-width: 2.4em; text-align: center; padding: 4px 8px; border: 1px solid var(--rule); border-radius: 4px; background: var(--white); text-decoration: none; font-size: 14px; }
+  .ct-problem { background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 14px 18px; margin: 1.1em 0; }
+  .ct-problem h3 { margin: 0 0 .3em; font-size: 1.08rem; border-bottom: none; padding-bottom: 0; }
+  .ct-meta { font-size: 13px; color: var(--ink-soft); margin-bottom: .6em; }
+  .ct-text { font-family: Georgia, "Times New Roman", "Noto Serif", serif; font-size: 1.02em; line-height: 1.6; }
+  .ct-text p { margin: .5em 0; }
+  .ct-fig { text-align: center; margin: .8em 0; }
+  .ct-fig img { max-width: 100%; height: auto; max-height: 340px; }
+  .ct-choices { display: flex; flex-wrap: wrap; gap: 6px 22px; margin: .6em 0 .2em; }
+  .ct-choices b { margin-right: .3em; }
+  .ct-problem details { margin-top: .8em; border-top: 1px dashed var(--rule); padding-top: .5em; }
+  .ct-problem summary { cursor: pointer; font-weight: 600; color: var(--brand); font-size: 15px; }
+  .ct-problem details[open] summary { margin-bottom: .5em; }
+  .ct-sol h4 { font-size: 1rem; margin: 1em 0 .3em; color: var(--ink); }
+  .ct-answer { font-weight: 600; }
+  .ct-parts { list-style: none; padding-left: .4em; }
+  .ct-parts li { margin: .35em 0; }
+  .ct-lbl { font-weight: 700; margin-right: .3em; }
+  .ct-note { font-size: 14px; color: var(--ink-soft); font-style: italic; }
+  .ct-bar { margin: .6em 0 1em; display: flex; gap: 10px; flex-wrap: wrap; }
+  .ct-bar button { font: inherit; font-size: 14px; padding: 5px 12px; border-radius: var(--radius); border: 1px solid var(--brand); background: var(--white); color: var(--brand); cursor: pointer; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
+</style>
+<script>
+  window.MathJax = { tex: { inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [['\\[','\\]']], processEscapes: true },
+                     options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] } };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script>
+  function ctAll(open) { document.querySelectorAll('.ct-problem details').forEach(function (d) { d.open = open; }); }
+</script>
+
+<style>
+  .ct-group { font-size: 1.25rem; margin: 1.6em 0 .2em; }
+  .ct-toc-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: .3em 0; }
+  .ct-toc-g { font-size: 13px; color: var(--ink-soft); min-width: 9em; }
+  .ct-toc-wrap { margin: 1em 0 1.4em; }
+  .ct-center { text-align: center; margin: .6em 0; }
+  .ct-tablewrap { overflow-x: auto; margin: .6em 0; text-align: center; }
+  .ct-table { border-collapse: collapse; margin: 0 auto; }
+  .ct-table td { padding: 2px 9px; text-align: center; }
+  .ct-table tr.ct-hl td { border-bottom: 1px solid var(--ink-soft); }
+  .ct-table.ct-vfirst td:first-child { border-right: 1px solid var(--ink-soft); }
+  .ct-ul { padding-left: 1.4em; }
+  .ct-ul li { margin: .3em 0; }
+  .ct-text li > p:first-child { margin-top: 0; }
+  .ct-text li > p:last-child { margin-bottom: 0; }
+  .ct-text mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
+</style>
+
+<style>
+  .ct-tags { display: flex; flex-wrap: wrap; gap: 5px; margin: 0 0 .55em; }
+  .ct-tg { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .03em; padding: 2px 8px; border-radius: 999px; line-height: 1.5; }
+  .ct-lv { background: #eee7dc; color: #4a3d33; }
+  .ct-df-Starter { background: #dcf1dc; color: #245c24; }
+  .ct-df-Explorer { background: #d6efec; color: #155e57; }
+  .ct-df-Challenger { background: #dce8f7; color: #1f4c80; }
+  .ct-df-Olympiad { background: #e7defa; color: #4b2a8a; }
+  .ct-df-Advanced { background: #fbe4cc; color: #8a4a0b; }
+  .ct-df-Expert { background: #f8d6cf; color: #8c2600; }
+  .ct-band { margin: 1.3em 0 .5em; font-size: 14px; color: var(--ink-soft); }
+  .ct-band .ct-tg { font-size: 13px; margin-right: .4em; }
+  .ct-legend { font-size: 14.5px; background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 10px 16px; margin: 1em 0 1.4em; }
+  .ct-legend p { margin: .35em 0; }
+  .ct-legend ul { margin: .2em 0 .4em; padding-left: 1.1em; }
+  .ct-legend li { margin: .2em 0; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
+</style>
+{% endraw %}
+<p><a href="{{ '/contests-2026' | relative_url }}">&larr; All contests 2026</a></p>
+
+<h1>ELMO 2026</h1>
+
+<div class="ct-intro">
+<p>The 6 problems of the ELMO 2026, each with our own solutions, hidden until you open them. 4 of them ask for an answer and 2 ask for a proof. Where a problem has a final answer, it is shown separately. Try a problem first, then check.</p><p>The 28th ELMO (June 2026, Greensboro), an olympiad written by and for students at MOP: six problems over two days.</p>
+</div>
+<div class="ct-credit">Problems: ELMO 2026, from the AoPS contest collection or the official paper. Solutions written by MCC.</div>
+<div class="ct-bar"><button type="button" onclick="ctAll(true)">Show all answers and solutions</button><button type="button" onclick="ctAll(false)">Hide all</button></div>
+<div class="ct-toc-wrap"><div class="ct-toc-row"><span class="ct-toc-g">Day 1</span><a href="#p1">1</a><a href="#p2">2</a><a href="#p3">3</a></div><div class="ct-toc-row"><span class="ct-toc-g">Day 2</span><a href="#p4">4</a><a href="#p5">5</a><a href="#p6">6</a></div></div>
+
+{% raw %}
+<h2 class="ct-group" id="day-1">Day 1</h2>
+<section class="ct-problem" id="p1">
+<h3>Problem 1</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 51: Spiral Similarity and Advanced Transformational Geometry &middot; Transformation Chains in Geometry</div>
+<div class="ct-text"><p>Let $P_1$, $P_2$ and $P_3$ be distinct points on a circle $\Omega$. For all positive integers $1\le i\le23$, define $P_{i+3}$ as the reflection of $P_i$ over line $P_{i+1}P_{i+2}$. Prove that $P_{20}P_{26}$ is tangent to $\Omega$.</p></div>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (A glide reflection whose axis is parallel to the tangent at $P_2$)</h4>
+<div class="ct-fig"><img style="width:388px" src="/assets/contests/2026-27/elmo-1_s1.svg" alt="Figure for the solution"></div>
+<p><em>Lemma ($P_{k+3}=G(P_k)$ for all $k$).</em> Write $s_a,s_b,s_c$ for the reflections in the lines $P_2P_3$, $P_3P_1$, $P_1P_2$, and $g_k$ for the reflection in $P_{k+1}P_{k+2}$, so $P_{k+3}=g_k(P_k)$. Since $g_1$ fixes $P_3$ and maps $P_1$ to $P_4$, the line $P_3P_4$ is $g_1(P_3P_1)$, hence $g_2=g_1s_bg_1$ and $g_2g_1=g_1s_b$. Next $g_2g_1$ maps $P_1\mapsto P_4$ (as $g_2$ fixes $P_4$) and $P_2\mapsto P_5$ (as $g_1$ fixes $P_2$), so the line $P_4P_5$ is $(g_2g_1)(P_1P_2)$ and $g_3=(g_2g_1)s_c(g_2g_1)^{-1}$. Therefore
+\[G:=g_3g_2g_1=(g_2g_1)s_c=g_1s_bs_c=s_as_bs_c .\]
+$G$ maps $P_1\mapsto P_4$, $P_2\mapsto P_5$, $P_3\mapsto P_6$ (each $g_i$ fixes the points on its mirror). The rule defining the sequence commutes with isometries, so by induction $P_{k+6}=\text{refl}_{P_{k+4}P_{k+5}}(P_{k+3})=\text{refl}_{G(P_{k+1})G(P_{k+2})}(G(P_k))=G(P_{k+3})$, given $P_{j+3}=G(P_j)$ for $j\le k+2$. Hence $P_{k+3}=G(P_k)$ for all $k\ge1$, and $P_{k+6}=G^2(P_k)$. (All triangles $P_kP_{k+1}P_{k+2}$ are congruent to $P_1P_2P_3$, so the lines are always defined.)</p><p><em>The glide.</em> $G=s_as_bs_c$ is a product of three reflections, so it reverses orientation: it is a reflection or a glide reflection. It is not a reflection $s_\ell$: otherwise $s_as_b=s_\ell s_c$, but the left side is a rotation about $P_3=P_2P_3\cap P_3P_1$ by a nonzero angle, while the right side is a rotation about a point of line $P_1P_2$ or a translation, and $P_3\notin P_1P_2$. So $G$ is a glide reflection with a nonzero glide vector $v$ along its axis, and $G^2$ is the translation by $w=2v\ne0$.</p><p><em>Direction of the axis.</em> The linear part of a reflection in a line of direction angle $\theta$ is the reflection $\rho_\theta$, and $\rho_\alpha\rho_\beta\rho_\gamma=\rho_{\alpha-\beta+\gamma}$ (as $\rho_\alpha\rho_\beta$ is the rotation by $2(\alpha-\beta)$). Put $P_1,P_2,P_3$ at angles $\alpha_1,\alpha_2,\alpha_3$ on $\Omega$; the chord between angles $x$ and $y$ has direction $\frac{x+y}2+90^\circ$. So the axis of $G$ has direction
+\[\Bigl(\tfrac{\alpha_2+\alpha_3}2+90^\circ\Bigr)-\Bigl(\tfrac{\alpha_3+\alpha_1}2+90^\circ\Bigr)+\Bigl(\tfrac{\alpha_1+\alpha_2}2+90^\circ\Bigr)=\alpha_2+90^\circ\pmod{180^\circ},\]
+the direction of the tangent to $\Omega$ at $P_2$.</p><p><em>Conclusion.</em> $P_{2+6k}=P_2+kw$ with $w\ne0$ parallel to the tangent $t$ at $P_2$. So $P_{20}=P_2+3w$ and $P_{26}=P_2+4w$ are two distinct points of $t$, and the line $P_{20}P_{26}$ is $t$, tangent to $\Omega$.</p>
+<h4>Solution 2 (Complex numbers for the glide)</h4>
+<p><em>Lemma ($P_{k+3}=G(P_k)$ for all $k$).</em> Write $s_a,s_b,s_c$ for the reflections in the lines $P_2P_3$, $P_3P_1$, $P_1P_2$, and $g_k$ for the reflection in $P_{k+1}P_{k+2}$, so $P_{k+3}=g_k(P_k)$. Since $g_1$ fixes $P_3$ and maps $P_1$ to $P_4$, the line $P_3P_4$ is $g_1(P_3P_1)$, hence $g_2=g_1s_bg_1$ and $g_2g_1=g_1s_b$. Next $g_2g_1$ maps $P_1\mapsto P_4$ (as $g_2$ fixes $P_4$) and $P_2\mapsto P_5$ (as $g_1$ fixes $P_2$), so the line $P_4P_5$ is $(g_2g_1)(P_1P_2)$ and $g_3=(g_2g_1)s_c(g_2g_1)^{-1}$. Therefore
+\[G:=g_3g_2g_1=(g_2g_1)s_c=g_1s_bs_c=s_as_bs_c .\]
+$G$ maps $P_1\mapsto P_4$, $P_2\mapsto P_5$, $P_3\mapsto P_6$ (each $g_i$ fixes the points on its mirror). The rule defining the sequence commutes with isometries, so by induction $P_{k+6}=\text{refl}_{P_{k+4}P_{k+5}}(P_{k+3})=\text{refl}_{G(P_{k+1})G(P_{k+2})}(G(P_k))=G(P_{k+3})$, given $P_{j+3}=G(P_j)$ for $j\le k+2$. Hence $P_{k+3}=G(P_k)$ for all $k\ge1$, and $P_{k+6}=G^2(P_k)$. (All triangles $P_kP_{k+1}P_{k+2}$ are congruent to $P_1P_2P_3$, so the lines are always defined.)</p><p><em>Computing $G$.</em> Let $\Omega$ be the unit circle and $P_1,P_2,P_3=a,b,c$. The reflection in the chord through $u,v$ is $z\mapsto u+v-uv\bar z$. Hence
+\[s_c(z)=a+b-ab\bar z,\qquad s_bs_c(z)=c+a-ca\,\overline{s_c(z)}=a-\frac{ca}{b}+\frac{c}{b}z,\]
+\[G(z)=s_a\bigl(s_bs_c(z)\bigr)=b+c-bc\Bigl(\frac1a-\frac{b}{ca}+\frac bc\bar z\Bigr)=-b^2\bar z+\mu,\qquad \mu=b+c+\frac{b(b-c)}{a}.\]
+Then $G^2(z)=-b^2\,\overline{(-b^2\bar z+\mu)}+\mu=z+w$ with $w=\mu-b^2\bar\mu$.</p><p><em>Direction.</em> $\dfrac wb=\dfrac\mu b-b\bar\mu=\dfrac\mu b-\overline{\Bigl(\dfrac\mu b\Bigr)}=2i\,\mathrm{Im}\dfrac\mu b$ is purely imaginary, so $w$ is a real multiple of $ib$, i.e. parallel to the tangent $t$ at $b=P_2$.</p><p><em>$w\ne0$.</em> The map $G(z)=-b^2\bar z+\mu$ is an orientation-reversing isometry, i.e. a reflection or a glide reflection, and $G^2$ is the translation by $w$. If $w=0$, then $G^2=\mathrm{id}$ and $G$ is a reflection $s_\ell$. Then $s_as_b=Gs_c=s_\ell s_c$; the left side is a rotation about $c$ by a nonzero angle, the right side is a rotation about a point of the line $ab$ or a translation, and $c$ is not on line $ab$. This contradiction shows $w\ne0$.</p><p><em>Conclusion.</em> $P_{2+6k}=G^{2k}(P_2)=b+kw$, so $P_{20}=b+3w$ and $P_{26}=b+4w$ are distinct points of the tangent $t=\{b+\lambda ib:\lambda\in\mathbb R\}$, and $P_{20}P_{26}=t$ is tangent to $\Omega$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p2">
+<h3>Problem 2</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 52: Advanced Combinatorial Structure and Hybrid Methods &middot; Combinatorics with Algebraic Interaction</div>
+<div class="ct-text"><p>An $n\times n$ <em>Latin square</em> is an $n\times n$ grid of cells where each cell contains exactly one positive integer between $1$ and $n$, each row contains the numbers $1$ to $n$ in some order, and each column contains the numbers $1$ to $n$ in some order. Call four numbers <em>stable</em> if there are either exactly two or exactly four distinct values among them. For which positive integers $n$ is it possible to construct an $n\times n$ Latin square such that every quadruple of four distinct cells forming the corners of a grid rectangle has entries which are stable?</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>exactly the powers of $2$: $n=2^k$, $k\ge0$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Row quotients form a group of involutions)</h4>
+<p><em>Answer:</em> $n$ must be a power of $2$ ($n=1$ is included: there is no rectangle, so the condition holds vacuously).</p><p><em>Construction.</em> For $n=2^k$ label rows, columns and values by $\{0,\dots,n-1\}$ and put $L(i,j)=i\oplus j$ (bitwise XOR); this is a Latin square. For rows $i_1\ne i_2$ and columns $j_1\ne j_2$ the entries in the same row or column differ, and
+\[i_1\oplus j_1=i_2\oplus j_2\iff i_1\oplus i_2=j_1\oplus j_2\iff i_1\oplus j_2=i_2\oplus j_1 .\]
+So either both diagonals have equal entries (two values) or the four entries are distinct.</p><p><em>Necessity.</em> Let the square be good. Four corners can never show exactly one value or three values with a repeat in a row or column, so &ldquo;stable&rdquo; means: for rows $r\ne r'$ and columns $c\ne c'$, $L(r,c)=L(r',c')\iff L(r,c')=L(r',c)$. For rows $r,r'$ let $\pi_{r,r'}$ be the permutation of values with $\pi(L(r,c))=L(r',c)$ for every column $c$. With $x=L(r,c)$, $y=L(r,c')$ the condition reads $\pi(y)=x\iff\pi(x)=y$, for all $x\ne y$. Hence $\pi_{r,r'}$ is an involution, and it has no fixed point (columns are Latin).</p><p>Let $\sigma_r=\pi_{1,r}$, so $L(r,c)=\sigma_r(L(1,c))$ and $\sigma_r\sigma_{r'}^{-1}=\pi_{r',r}$. Each $\sigma_r$ $(r\ge2)$ is an involution and $\sigma_1=\mathrm{id}$. For $r\ne r'$, $\sigma_r\sigma_{r'}=\sigma_r\sigma_{r'}^{-1}$ is an involution, so $\sigma_r\sigma_{r'}=(\sigma_r\sigma_{r'})^{-1}=\sigma_{r'}\sigma_r$. Thus the group $H$ generated by $\sigma_1,\dots,\sigma_n$ is abelian and every element has order at most $2$.</p><p>$H$ acts transitively on the values: by the columns being Latin, $\{\sigma_r(x)\}_{r}$ is the set of all values for each $x$. An abelian transitive group acts freely: if $h(x)=x$, then for $y=g(x)$, $h(y)=hg(x)=gh(x)=y$, so $h=\mathrm{id}$. Hence $|H|=n$ (orbit-stabiliser). Finally an abelian group in which every element has order dividing $2$ has order a power of $2$: it is a vector space over $\mathbb F_2$ (or: choose generators one at a time; each new generator outside the current subgroup doubles its size). So $n=|H|$ is a power of $2$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p3">
+<h3>Problem 3</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-S" title="Superhard, on the LPS VII scale">S</span>Number Theory &middot; LPS VII, Chapter 54: Advanced Number Theory Synthesis &middot; Deep Structural Classification Problems</div>
+<div class="ct-text"><p>Determine all integers $n\ge2$ such that there exists an integer polynomial $P(x)\in\mathbb{Z}[x]$ of degree at most $0.9n$ such that the range of $P$ modulo $n$ is the same as the set of zeros of $P$ modulo $n$.</p><p><em>The range of $P$ modulo $n$ is the set of all integers $0\le y\le n-1$ such that there exists a positive integer $x$ where $P(x)-y$ is a multiple of $n$.</em></p><p><em>The set of zeros of $P$ modulo $n$ is the set of all integers $0\le x\le n-1$ such that $P(x)$ is a multiple of $n$.</em></p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>all $n\ge2$ with $n\not\equiv2\pmod 4$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Chinese remainder theorem and prime-power constructions)</h4>
+<p><em>Answer:</em> exactly the $n\ge2$ with $n\not\equiv2\pmod4$. For a modulus $q$ write $R_q(P)$ and $Z_q(P)$ for the range and the zero set of $P$ modulo $q$.</p><p><em>Splitting.</em> If $n=q_1q_2$ with $\gcd(q_1,q_2)=1$, then $P(x)\bmod q_i$ depends only on $x\bmod q_i$, and $x\bmod q_1$, $x\bmod q_2$ vary independently. Hence, under the Chinese remainder bijection $\mathbb Z_n\cong\mathbb Z_{q_1}\times\mathbb Z_{q_2}$,
+\[R_n(P)=R_{q_1}(P)\times R_{q_2}(P),\qquad Z_n(P)=Z_{q_1}(P)\times Z_{q_2}(P).\]</p><p><em>$n\equiv2\pmod4$ fails.</em> Let $n=2q$, $q$ odd, and suppose $R_n=Z_n$. The range is nonempty, so all four factors are nonempty and $R_2(P)=Z_2(P)$. Let $f(x)=P(x)\bmod2$ on $\{0,1\}$. Some value is a zero, so $0\in R_2=Z_2$, i.e. $f(0)=0$. If $f(1)=0$ then $R_2=\{0\}\ne\{0,1\}=Z_2$; if $f(1)=1$ then $R_2=\{0,1\}\ne\{0\}=Z_2$. Contradiction.</p><p><em>Constructions for prime powers $q=p^k\ne2$.</em> Throughout, $x$ runs over residues mod $q$.</p><ul class="ct-ul"><li><p>$k=2j$ even: $P(x)=p^jx$. Range: the multiples of $p^j$. Zeros: $p^{2j}\mid p^jx\iff p^j\mid x$. Equal; degree $1$.</p></li><li><p>$k=1$, $p$ odd: choose $c$ with $-2c$ a quadratic non-residue and let $P(x)=c\,x\,(x^{(p-1)/2}-1)$. Zeros: $0$ and the non-zero squares (Euler's criterion). For a non-residue $x$, $P(x)=-2cx$, a product of two non-residues, hence a non-zero square, and as $x$ runs over the non-residues $-2cx$ runs over all non-zero squares. So range $=\{0\}\cup\{\text{squares}\}=$ zeros. Degree $\frac{p+1}2\le0.9p$.</p></li><li><p>$k=2j+1\ge3$ (any prime $p$, including $p=2$): let $N=p^j(p-1)$ and $P(x)=p^j\,x\,(x^N-1+p)$, of degree $N+1\le0.9p^{2j+1}$. If $p\nmid x$, then $x^N\equiv1\pmod{p^{j+1}}$ (Euler, $N=\varphi(p^{j+1})$), so $P(x)\equiv p^jx\cdot p=p^{j+1}x\pmod{p^{2j+1}}$; these are exactly the elements $p^{j+1}u$ with $u$ a unit. If $x=p^tu$ with $1\le t$ and $u$ a unit, then $tN\ge N\ge j+1$, so $P(x)\equiv p^{j+t}u(p-1)\pmod{p^{2j+1}}$: this is $0$ iff $t\ge j+1$, and for $1\le t\le j$ it runs over all $p^{j+t}\cdot$unit. Hence both the range and the zero set equal the set of multiples of $p^{j+1}$.</p></li></ul><p>In every case the degree is at most $0.9q$ (for $q=3$: degree $2\le2.7$).</p><p><em>All $n\not\equiv2\pmod 4$ work.</em> Write $n=\prod q_i$ with pairwise coprime prime powers $q_i$; no $q_i$ equals $2$. Take the polynomials $P_i$ above and, coefficient by coefficient, an integer polynomial $P$ with $P\equiv P_i\pmod{q_i}$ for all $i$ (Chinese remainder theorem). Then $\deg P\le\max_i\deg P_i\le0.9\max_i q_i\le0.9n$, and by the splitting $R_n(P)=\prod R_{q_i}(P_i)=\prod Z_{q_i}(P_i)=Z_n(P)$.</p>
+</div></details>
+</section>
+<h2 class="ct-group" id="day-2">Day 2</h2>
+<section class="ct-problem" id="p4">
+<h3>Problem 4</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Number Theory &middot; LPS VII, Chapter 21: Arithmetic Functions and Multiplicative Structure &middot; Divisor and Sum Functions</div>
+<div class="ct-text"><p>For an integer $n$, let $\tau(n)$ denote the number of positive integer divisors of $n$. For each positive integer $k$, let $S_k=\{\tau(k),\tau(2k),\tau(3k),\dots\}$. If $S_a=S_b$ for two positive integers $a$ and $b$, prove that $\tau(a^n)=\tau(b^n)$ for all positive integers $n\ge1$.</p><p><em>Two sets are equal if and only if every number which appears in one set also appears in the other set.</em></p></div>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Reading the exponents off $S_a$ with large primes)</h4>
+<p><em>Description of $S_a$.</em> Let $a=\prod_{i=1}^rp_i^{e_i}$ and $u_i=e_i+1\ge2$, ordered so that $u_1\le\dots\le u_r$. For $m=\prod p_i^{g_i}\cdot m'$ with $\gcd(m',a)=1$ we have $\tau(am)=\prod_i(u_i+g_i)\cdot\tau(m')$, and $\tau(m')$ takes every positive value (e.g. $m'=q^{t-1}$ for a prime $q\nmid a$). Absorbing the factor $\tau(m')$ into one of the $u_i+g_i$:
+\[S_a=\{\,c_1c_2\cdots c_r:\ c_i\ge u_i\text{ integers}\,\}\quad(\text{and }S_1=\mathbb Z_{&gt;0}).\]
+Since $\tau(a^n)=\prod_i(n(u_i-1)+1)$, it suffices to show that $S_a$ determines the multiset $\{u_1,\dots,u_r\}$.</p><p>Fix distinct primes $q_1&lt;q_2&lt;\cdots$ all larger than $\tau(a)$ (hence larger than every $u_i$).</p><p><em>$r$ is determined:</em> $q_1\cdots q_s\in S_a\iff s\ge r$. Indeed, a factorisation $q_1\cdots q_s=c_1\cdots c_r$ with all $c_i\ge2$ needs $s\ge r$; conversely, if $s\ge r$, let $c_1,\dots,c_{r-1}$ be single primes and $c_r$ the product of the rest (each $\ge q_1&gt;u_i$).</p><p><em>$\pi_k=u_1u_2\cdots u_k$ is determined</em> for $1\le k\le r$, as the least $m&lt;q_1$ with $m\,q_1\cdots q_{r-k}\in S_a$. We show that for $m&lt;q_1$:
+\[m\,q_1\cdots q_{r-k}\in S_a\iff m=d_1\cdots d_k\ \text{with}\ d_j\ge u_j .\]
+($\Leftarrow$) take $c_j=d_j$ for $j\le k$ and the $r-k$ primes as the other $c_i$. ($\Rightarrow$) In $m\,q_1\cdots q_{r-k}=c_1\cdots c_r$ each prime $q_t$ divides at most one $c_i$ (and $q_t\nmid m$ as $m&lt;q_1$), so at least $k$ of the $c_i$, say $c_{i_1},\dots,c_{i_k}$ with $i_1&lt;\dots&lt;i_k$, are coprime to all $q_t$; their product divides $m$, say $m=c_{i_1}\cdots c_{i_k}\cdot t$. As $i_j\ge j$, $c_{i_j}\ge u_{i_j}\ge u_j$; take $d_j=c_{i_j}$ for $j&lt;k$ and $d_k=c_{i_k}t$.
+The smallest product $d_1\cdots d_k$ with $d_j\ge u_j$ is $u_1\cdots u_k=\pi_k\le\tau(a)&lt;q_1$, which proves the claim.</p><p><em>Conclusion.</em> If $S_a=S_b$, use the same primes $q_t$ (larger than $\tau(a)$ and $\tau(b)$). Then $a$ and $b$ have the same $r$ and the same $\pi_1,\dots,\pi_r$, hence the same sorted $u_k=\pi_k/\pi_{k-1}$, i.e. the same multiset of exponents. Therefore $\tau(a^n)=\prod(ne_i+1)=\tau(b^n)$ for every $n$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p5">
+<h3>Problem 5</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Number Theory &middot; LPS VII, Chapter 21: Arithmetic Functions and Multiplicative Structure &middot; Function Equations on Integers</div>
+<div class="ct-text"><p>Let $\mathbb{N}$ denote the set of all positive integers. Find all functions $f:\mathbb{N}\to\mathbb{N}$ such that
+\[f\bigl(f(n)^m\bigr)=2^{f(m)^n}\]
+for all $m,n\in\mathbb{N}$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$f(n)=2^n$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Pin down $f(1)$, then a recursion)</h4>
+<p><em>Answer:</em> $\boxed{f(n)=2^n}$. It works: $f\bigl((2^n)^m\bigr)=2^{2^{nm}}=2^{(2^m)^n}$.</p><p>Let $Q(n,m)$ denote $f(f(n)^m)=2^{f(m)^n}$ and $c=f(1)$.</p><ul class="ct-ul"><li><p>$Q(1,m)$: $f(c^m)=2^{f(m)}$. $\quad Q(n,1)$: $f(f(n))=2^{c^n}$.</p></li><li><p>$c\ne1$: otherwise $f(1)=f(1^m)=2^{f(m)}\ge2$. So $c\ge2$. Also $f(c)=2^{f(1)}=2^c$, hence $f(2^c)=f(f(c))=2^{c^c}$.</p></li></ul><p><em>$c$ is a power of $2$.</em> $Q(2^c,m)$: $f(2^{c^cm})=2^{f(m)^{2^c}}$. $Q(c,m')$ with $m'=c^{c-1}m$: $f(2^{c\cdot c^{c-1}m})=2^{f(c^{c-1}m)^c}$. Comparing, $f(m)^{2^c}=f(c^{c-1}m)^c$; at $m=1$, using $f(c^{c-1})=2^{f(c-1)}$ (valid as $c-1\ge1$): $c^{2^c}=2^{c\,f(c-1)}$. So $c$ is a power of $2$; write $c=2^s$, $s\ge1$.</p><p><em>$c=2$.</em> By $Q(1,\cdot)$, $f(2^{sm})=f(c^m)=2^{f(m)}$; with $m=c$: $f(2^{sc})=2^{f(c)}=2^{2^c}$. By $Q(c,m)$, $f(2^{cm})=2^{f(m)^c}$; with $m=s$: $f(2^{cs})=2^{f(s)^c}$. Hence $f(s)^c=2^c$ and $f(s)=2$. Now $Q(s,m)$ gives $f(2^m)=2^{f(m)^s}$ for all $m$. Then $2^{f(m)}=f(2^{sm})=2^{f(sm)^s}$, so $f(m)=f(sm)^s$; at $m=s$: $2=f(s^2)^s$, which forces $s=1$. So $c=f(1)=2$.</p><p><em>All values.</em> Now $Q(1,m)$ reads $f(2^m)=2^{f(m)}$; in particular $f(2)=2^{f(1)}=4$. Then $Q(2,m)$: $f(4^m)=2^{f(m)^2}$, while $f(4^m)=f(2^{2m})=2^{f(2m)}$; so $f(2m)=f(m)^2$. For $m\ge2$:
+\[2^{f(m)}=f(2^m)=f\bigl(2\cdot2^{m-1}\bigr)=f(2^{m-1})^2=\bigl(2^{f(m-1)}\bigr)^2=2^{2f(m-1)},\]
+so $f(m)=2f(m-1)$. With $f(1)=2$ this gives $f(m)=2^m$ for all $m$.</p>
+<h4>Solution 2 (One recursion for all $n$ at once)</h4>
+<p><em>Answer:</em> $\boxed{f(n)=2^n}$. It works, since $f\bigl((2^n)^m\bigr)=2^{2^{nm}}=2^{(2^m)^n}$.</p><p>Let $Q(n,m)$ denote the equation $f(f(n)^m)=2^{f(m)^n}$ and put $c=f(1)$.</p><ul class="ct-ul"><li><p>$Q(1,m)$: $f(c^m)=2^{f(m)}$ for all $m$. If $c=1$, this says $1=f(1)=2^{f(m)}\ge2$, which is impossible; so $c\ge2$. With $m=1$: $f(c)=2^c$.</p></li><li><p>$Q(n,1)$: $f(f(n))=2^{c^n}$ for all $n$.</p></li></ul><p><em>A recursion.</em> Let $n\ge2$. Applying $Q(\cdot,1)$ to the number $f(n)$ gives $f\bigl(f(f(n))\bigr)=2^{c^{f(n)}}$, while applying $f$ to $Q(n,1)$ gives $f\bigl(f(f(n))\bigr)=f\bigl(2^{c^n}\bigr)$. On the other hand, $Q(c,c^{n-1})$ together with $f(c)=2^c$ and $Q(1,n-1)$ gives
+\[f\bigl(2^{c^n}\bigr)=f\bigl((2^c)^{c^{n-1}}\bigr)=f\bigl(f(c)^{c^{n-1}}\bigr)=2^{f(c^{n-1})^c}=2^{(2^{f(n-1)})^c}=2^{2^{c\,f(n-1)}} .\]
+Comparing the exponents of $2$ twice,
+\[c^{f(n)}=2^{c\,f(n-1)}\qquad(n\ge2).\]</p><p><em>$f$ is geometric.</em> The right side is a power of $2$ and $c\ge2$, so $c=2^t$ for an integer $t\ge1$. Then $2^{t f(n)}=2^{c f(n-1)}$, so $t f(n)=c f(n-1)$ for $n\ge2$, and therefore
+\[f(n)=c\Bigl(\frac ct\Bigr)^{n-1}\qquad\text{for all }n\ge1 .\]</p><p><em>$c=2$.</em> Take $n=c\ge2$ and use $f(c)=2^c$: $c\,(c/t)^{c-1}=2^c$. Write $t=2^ju$ with $u$ odd. Then $c/t=2^{t-j}/u$ (note $t-j\ge0$, since $2^j\le t$), so
+\[2^{t+(t-j)(c-1)}=2^c\,u^{c-1}.\]
+The left side is a power of $2$ and $c-1\ge1$, so $u=1$ and $t=2^j$; comparing exponents, $t+(t-j)(c-1)=c$, i.e. $c\,(t-j-1)=-j$. Now $j&lt;2^j=t&lt;2^t=c$, so if $j\ge1$ the number $-j/c$ is not an integer, a contradiction. Hence $j=0$, $t=1$ and $c=2$.</p><p><em>Conclusion.</em> With $c=2$ and $t=1$ the formula reads $f(n)=2\cdot2^{n-1}=2^n$ for every $n$, and this function was checked above. So $f(n)=2^n$ is the only solution.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p6">
+<h3>Problem 6</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-S" title="Superhard, on the LPS VII scale">S</span>Combinatorics &middot; LPS VII, Chapter 52: Advanced Combinatorial Structure and Hybrid Methods &middot; High-Level Olympiad Synthesis</div>
+<div class="ct-text"><p>Let $n$ be a positive integer. There are $n(n+1)$ points chosen on the circumference of a circle, and each of these points is colored one of $n$ colors such that each color appears exactly $n+1$ times. Elmo wishes to choose $n$ non-overlapping arcs of the circle such that both endpoints of each arc are selected points of the same color, and this color is different for each of the $n$ chosen arcs.</p><p>Prove that Elmo can select the arcs in at least $n+1$ distinct ways.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>proof (only partly proved here)</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Partial progress: a selection avoiding any given cut)</h4>
+<p><em>This is partial progress only: we prove that a valid choice of arcs exists (indeed one avoiding any prescribed place on the circle), not that there are at least $n+1$.</em></p><p><em>Line lemma.</em> Points on a segment are coloured with $k$ colours, each used at least $k+1$ times. Then one can choose $k$ pairwise disjoint intervals, each with both endpoints of one colour, the colours all different.</p><p><em>Proof</em> by induction on $k$ ($k=0$ is trivial). Read the points from the left and stop at the first point $e$ whose colour, say $\gamma$, already occurred; let $q$ be that earlier point. The points before $e$ have distinct colours, so the prefix up to $e$ contains at most one point of each colour other than $\gamma$. Take the interval $[q,e]$ for colour $\gamma$, delete the prefix up to $e$ and all remaining points of colour $\gamma$. What is left lies to the right of $e$ and has $k-1$ colours, each used at least $k$ times. By induction it carries $k-1$ suitable intervals, which are disjoint from $[q,e]$.</p><p><em>Consequence for the circle.</em> Cut the circle at any place $\theta$ between two consecutive chosen points. We obtain a segment with $n$ colours, each used $n+1$ times, and the lemma gives $n$ disjoint arcs of distinct colours, none of which passes over $\theta$. So at least one valid selection exists.</p><p><em>What is missing.</em> One has to show that the selections obtained in this way (or otherwise) include at least $n+1$ distinct ones. The bound is sharp: for the colouring $1,2,\dots,n,1,2,\dots,n,\dots$ any arc joining two points of the same colour contains at least $n+1$ points, so $n$ disjoint arcs use all $n(n+1)$ points and tile the circle; such a tiling is fixed by the position of one arc's first point modulo $n+1$, so there are exactly $n+1$ selections. Counting arguments based on &ldquo;every arc of a certain kind lies in some selection&rdquo; do not suffice in general (see the note).</p>
+</div></details>
+</section>
+{% endraw %}

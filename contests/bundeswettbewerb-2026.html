@@ -29,6 +29,11 @@ description: Bundeswettbewerb Mathematik 2026, German National Mathematics Compe
   .ct-note { font-size: 14px; color: var(--ink-soft); font-style: italic; }
   .ct-bar { margin: .6em 0 1em; display: flex; gap: 10px; flex-wrap: wrap; }
   .ct-bar button { font: inherit; font-size: 14px; padding: 5px 12px; border-radius: var(--radius); border: 1px solid var(--brand); background: var(--white); color: var(--brand); cursor: pointer; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
 </style>
 <script>
   window.MathJax = { tex: { inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [['\\[','\\]']], processEscapes: true },
@@ -57,6 +62,28 @@ description: Bundeswettbewerb Mathematik 2026, German National Mathematics Compe
   .ct-text mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
 </style>
 
+<style>
+  .ct-tags { display: flex; flex-wrap: wrap; gap: 5px; margin: 0 0 .55em; }
+  .ct-tg { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .03em; padding: 2px 8px; border-radius: 999px; line-height: 1.5; }
+  .ct-lv { background: #eee7dc; color: #4a3d33; }
+  .ct-df-Starter { background: #dcf1dc; color: #245c24; }
+  .ct-df-Explorer { background: #d6efec; color: #155e57; }
+  .ct-df-Challenger { background: #dce8f7; color: #1f4c80; }
+  .ct-df-Olympiad { background: #e7defa; color: #4b2a8a; }
+  .ct-df-Advanced { background: #fbe4cc; color: #8a4a0b; }
+  .ct-df-Expert { background: #f8d6cf; color: #8c2600; }
+  .ct-band { margin: 1.3em 0 .5em; font-size: 14px; color: var(--ink-soft); }
+  .ct-band .ct-tg { font-size: 13px; margin-right: .4em; }
+  .ct-legend { font-size: 14.5px; background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 10px 16px; margin: 1em 0 1.4em; }
+  .ct-legend p { margin: .35em 0; }
+  .ct-legend ul { margin: .2em 0 .4em; padding-left: 1.1em; }
+  .ct-legend li { margin: .2em 0; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
+</style>
 {% endraw %}
 <p><a href="{{ '/contests-2026' | relative_url }}">&larr; All contests 2026</a></p>
 
@@ -73,7 +100,7 @@ description: Bundeswettbewerb Mathematik 2026, German National Mathematics Compe
 <h2 class="ct-group" id="round-1">Round 1</h2>
 <section class="ct-problem" id="p1">
 <h3>Problem 1</h3>
-<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 8: Modular Arithmetic and Congruence Methods</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VII scale">E</span>Number Theory &middot; LPS VII, Chapter 8: Modular Arithmetic and Congruence Methods &middot; Basic Congruence Manipulation</div>
 <div class="ct-text"><p>Romeo and Juliet meet at a romantic place. She writes her $10$-digit phone number on a piece of paper for him.</p><p>Later, Romeo finds the note again, but he can no longer read one of the digits; he only knows that it was not zero. Therefore, he asks Juliet for the missing digit.</p><p>Juliet enjoys playing with numbers and says to Romeo: If I count how many digits of my phone number are smaller than $1$, then how many digits are smaller than $2$, and so on, and finally how many digits are smaller than $10$, and then add these ten numbers together, the result is divisible by $9$.</p><p>How can Romeo determine the missing digit using this information?</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>The missing digit is the unique $x\in\{1,\dots,9\}$ with $x\equiv 1-s\pmod 9$, where $s$ is the sum of the nine digits Romeo can read.</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -94,7 +121,7 @@ class modulo $9$ exactly once, so this determines $x$ uniquely: Romeo computes $
 </section>
 <section class="ct-problem" id="p2">
 <h3>Problem 2</h3>
-<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 25: Diophantine Equations: Factorization and Algebraic Methods</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 25: Diophantine Equations: Factorization and Algebraic Methods &middot; Symmetric and Polynomial Diophantine Forms</div>
 <div class="ct-text"><p>Determine all triples of positive integers $(a,b,c)$ that satisfy the following properties:</p><ul class="ct-parts"><li><p><span class="ct-lbl">(1)</span> The sum $a+b+c$ is a prime number.</p></li><li><p><span class="ct-lbl">(2)</span> The number $ab+bc+ca$ is a divisor of the number $a^2+b^2+c^2$.</p></li></ul></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$(a,b,c)=(1,1,1)$ only</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -118,7 +145,7 @@ The answer is $\boxed{(1,1,1)}$.</p>
 </section>
 <section class="ct-problem" id="p3">
 <h3>Problem 3</h3>
-<div class="ct-meta">Geometry &middot; LPS VII, Chapter 55: Three-Dimensional and Spatial Geometry</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 55: Three-Dimensional and Spatial Geometry &middot; Planes, Lines, and Incidence in Space</div>
 <div class="ct-text"><p>We consider a tetrahedron $ABCD$, which is not necessarily regular.</p><p>A line in space is called a twofold symmetry axis of this tetrahedron if a rotation of $180^\circ$ around this line maps the tetrahedron onto itself.</p><p>Prove that the following two properties are equivalent:</p><ul class="ct-parts"><li><p><span class="ct-lbl">(1)</span> All three lines connecting the midpoints of opposite edges of the tetrahedron are twofold symmetry axes.</p></li><li><p><span class="ct-lbl">(2)</span> All faces of the tetrahedron have the same perimeter.</p></li></ul></div>
 <details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Half-turns and congruent opposite edges)</h4>
@@ -187,7 +214,7 @@ axes, which is (1).</p>
 </section>
 <section class="ct-problem" id="p4">
 <h3>Problem 4</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 44: Combinatorial Games and Strategy</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 44: Combinatorial Games and Strategy &middot; Winning and Losing Positions</div>
 <div class="ct-text"><p>Luna and Marie play the following game:</p><p>A number is written on the board. On each turn, a player adds one of its divisors (but not the number itself) to the number on the board and replaces the number on the board with the resulting sum.</p><p>The player who is forced to write a number greater than $2026$ loses the game.</p><p>Initially, the number $2$ is written on the board, and Luna starts.
 Who can force a win?</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>Luna can force a win.</p></div></details>
@@ -210,7 +237,7 @@ for the opponent by induction, or a number above $2026$, which loses at once. He
 <h2 class="ct-group" id="round-2">Round 2</h2>
 <section class="ct-problem" id="p5">
 <h3>Problem 1</h3>
-<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 29: Valuations and Lifting the Exponent</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 29: Valuations and Lifting the Exponent &middot; Lifting the Exponent (LTE)</div>
 <div class="ct-text"><p>Prove that the representation of $2026^{2026}$ in base $3$ ends with the base $3$ representation of $2026$.</p></div>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Lifting the exponent)</h4>
@@ -235,7 +262,7 @@ $2026^{2026}$ are those of $2026$.</p>
 </section>
 <section class="ct-problem" id="p6">
 <h3>Problem 2</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 31: Extremal Principle and Bounding Arguments</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 31: Extremal Principle and Bounding Arguments &middot; Bounding and Limiting Arguments</div>
 <div class="ct-text"><p>Let $k,m,n$ be positive integers. Prove that: for a set with $n$ elements, there exist $m$ subsets of it, no two of which are equal, such that any two of them have fewer than $k$ common elements, if and only if
 \[m\le\sum_{j=0}^{k}\binom{n}{j}.\]</p></div>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -259,7 +286,7 @@ This completes the induction and the proof of the equivalence.</p>
 </section>
 <section class="ct-problem" id="p7">
 <h3>Problem 3</h3>
-<div class="ct-meta">Geometry &middot; LPS VII, Chapter 28: Area Methods and Geometric Measurement</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 28: Area Methods and Geometric Measurement &middot; Area Ratios in Triangles and Polygons</div>
 <div class="ct-text"><p>One considers an equilateral triangle with area $1$ and a real number $0&lt;q&lt;1$. A point $P$ that is part of the triangle is colored green if and only if $P$ lies in every triangle of area $q$ whose vertices are part of the given triangle. Calculate the area of the green-colored region.</p><p><em>Note:</em> &ldquo;Part of the triangle&rdquo; means the inner part of the triangle and the sides of the triangle.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$0$ if $q\le\frac12$, and $\dfrac{2(2q-1)^2}{(1+q)(2-q)}$ if $\frac12&lt;q&lt;1$</p></div></details>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
@@ -300,7 +327,7 @@ one side of the hexagon lies on $CZ$.</p>
 </section>
 <section class="ct-problem" id="p8">
 <h3>Problem 4</h3>
-<div class="ct-meta">Geometry &middot; LPS VII, Chapter 43: Locus, Transformation, and Construction Geometry</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 43: Locus, Transformation, and Construction Geometry &middot; Transformation of Moving Points</div>
 <div class="ct-text"><p>A mapping $f$ of the set of points of the plane into itself has the following two properties:</p><ul class="ct-parts"><li><p><span class="ct-lbl">(1)</span> There are no two distinct points $P$ and $Q$ with $f(P)=f(Q)$.</p></li><li><p><span class="ct-lbl">(2)</span> The mapping $f$ maps every rectangle $R$ of the plane onto a rectangle $R'$ of the plane, i.e., the set of image points $f(P)$ of all points $P$ of the rectangle $R$ is the set of all points of $R'$.</p></li></ul><p>Determine whether $f$ then also maps every square onto a square, and whether every point of the plane is an image point $f(P)$ of a point $P$ of the plane.</p><p><em>Note:</em> Every rectangle has positive area and consists of its sides and its inner points.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p><strong>Yes</strong> (squares go to squares) and <strong>yes</strong> (every point is an image point).</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">

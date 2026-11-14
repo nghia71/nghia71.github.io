@@ -29,6 +29,11 @@ description: German Mathematical Olympiad 2026, Final Round: problems with answe
   .ct-note { font-size: 14px; color: var(--ink-soft); font-style: italic; }
   .ct-bar { margin: .6em 0 1em; display: flex; gap: 10px; flex-wrap: wrap; }
   .ct-bar button { font: inherit; font-size: 14px; padding: 5px 12px; border-radius: var(--radius); border: 1px solid var(--brand); background: var(--white); color: var(--brand); cursor: pointer; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
 </style>
 <script>
   window.MathJax = { tex: { inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [['\\[','\\]']], processEscapes: true },
@@ -57,6 +62,28 @@ description: German Mathematical Olympiad 2026, Final Round: problems with answe
   .ct-text mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
 </style>
 
+<style>
+  .ct-tags { display: flex; flex-wrap: wrap; gap: 5px; margin: 0 0 .55em; }
+  .ct-tg { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .03em; padding: 2px 8px; border-radius: 999px; line-height: 1.5; }
+  .ct-lv { background: #eee7dc; color: #4a3d33; }
+  .ct-df-Starter { background: #dcf1dc; color: #245c24; }
+  .ct-df-Explorer { background: #d6efec; color: #155e57; }
+  .ct-df-Challenger { background: #dce8f7; color: #1f4c80; }
+  .ct-df-Olympiad { background: #e7defa; color: #4b2a8a; }
+  .ct-df-Advanced { background: #fbe4cc; color: #8a4a0b; }
+  .ct-df-Expert { background: #f8d6cf; color: #8c2600; }
+  .ct-band { margin: 1.3em 0 .5em; font-size: 14px; color: var(--ink-soft); }
+  .ct-band .ct-tg { font-size: 13px; margin-right: .4em; }
+  .ct-legend { font-size: 14.5px; background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 10px 16px; margin: 1em 0 1.4em; }
+  .ct-legend p { margin: .35em 0; }
+  .ct-legend ul { margin: .2em 0 .4em; padding-left: 1.1em; }
+  .ct-legend li { margin: .2em 0; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
+</style>
 {% endraw %}
 <p><a href="{{ '/contests-2026' | relative_url }}">&larr; All contests 2026</a></p>
 
@@ -73,7 +100,7 @@ description: German Mathematical Olympiad 2026, Final Round: problems with answe
 <h2 class="ct-group" id="day-1">Day 1</h2>
 <section class="ct-problem" id="p1">
 <h3>Problem 1</h3>
-<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 29: Valuations and Lifting the Exponent</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VII scale">E</span>Number Theory &middot; LPS VII, Chapter 29: Valuations and Lifting the Exponent &middot; p-adic Valuation Basics</div>
 <div class="ct-text"><p>Find all positive integers $n$ with the property that the binomial coefficients
 \[\binom{n}{0},\ \binom{n}{1},\ \binom{n}{2},\ \ldots,\ \binom{n}{n-1}\ \text{and}\ \binom{n}{n}\]
 are all odd numbers.</p></div>
@@ -103,7 +130,7 @@ is even.</p><p>Therefore all binomial coefficients in row $n$ are odd exactly fo
 </section>
 <section class="ct-problem" id="p2">
 <h3>Problem 2</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 20: Parity, Coloring, and Process Termination</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 20: Parity, Coloring, and Process Termination &middot; Process Termination and Reachability</div>
 <div class="ct-text"><p>Let two integers $m$ and $n$ with $0&lt;m&lt;n$ be given. Consider all non-negative integers. Initially, only $m$ and $n$ are colored red, while all others are white.</p><p>The following process recolors the numbers step by step. In each step, the following happens:</p><ul class="ct-parts"><li><p><span class="ct-lbl">1.</span> It is checked whether there are red numbers. If there is at most one, the process terminates.</p></li><li><p><span class="ct-lbl">2.</span> Otherwise, let $k$ be the smallest red number. This number $k$ is now colored black.</p></li><li><p><span class="ct-lbl">3.</span> Next, $k+m$ and $k+n$ are considered. Any red number among these two is colored black, any white number among these two is colored red, and any black number among these two remains black.</p></li></ul><p>Show that:</p><ul class="ct-parts"><li><p><span class="ct-lbl">(a)</span> This process always terminates after a finite number of steps with a single red number $r$, regardless of how the numbers $m$ and $n$ were chosen.</p></li><li><p><span class="ct-lbl">(b)</span> For the single red number at termination, $r\leq 2^n-1$ holds.</p></li></ul></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>proof (the last red number is the least $r&gt;0$ for which $1+x^m+x^n$ divides $1+x^r$ over $\mathbb F_2$)</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -160,7 +187,7 @@ terminates with a single red number $r\le 2^n-1$, which proves (a) and (b).</p>
 </section>
 <section class="ct-problem" id="p3">
 <h3>Problem 3</h3>
-<div class="ct-meta">Algebra &middot; LPS VII, Chapter 26: Inequalities: Symmetry, Homogenization, and Advanced Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Algebra &middot; LPS VII, Chapter 26: Inequalities: Symmetry, Homogenization, and Advanced Structure &middot; Symmetric and Cyclic Inequalities</div>
 <div class="ct-text"><p>Let $a$, $b$, and $c$ be the side lengths of a triangle. Determine the largest positive integer $M$ with the property that
 \[\left|\frac{a-b}{a+b}+\frac{b-c}{b+c}+\frac{c-a}{c+a}\right|&lt;\frac1M\]
 holds for all such $a$, $b$, and $c$.</p></div>
@@ -198,7 +225,7 @@ the inequality with $M=23$ fails, and so it fails for every $M\ge23$.</p><p>The 
 <h2 class="ct-group" id="day-2">Day 2</h2>
 <section class="ct-problem" id="p4">
 <h3>Problem 4</h3>
-<div class="ct-meta">Algebra &middot; LPS VII, Chapter 17: Sequences, Recurrences, and Discrete Dynamics</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Algebra &middot; LPS VII, Chapter 17: Sequences, Recurrences, and Discrete Dynamics &middot; Nonlinear Recurrences</div>
 <div class="ct-text"><p>For a sequence $(a_n)$, let two integers $a_1$ and $a_2$ be given; the subsequent terms are then defined by the recursive formula
 \[a_n=a_{n-1}+(-1)^{a_{n-1}}\cdot a_{n-2},\qquad n=3,4,5\ldots\]
 Determine all possibilities for the initial values $a_1$ and $a_2$ for which the sequence becomes periodic, and find the corresponding period length in each case.</p><p><em>Note:</em> A sequence $(a_n)$ is called periodic if there exist positive integers $k$ and $l$ such that $a_{n+l}=a_n$ holds for all $n\geq k$. In this context, $l$ is called the period length of the sequence if, additionally, for no $k'\geq k$ a smaller value $0&lt;l'&lt;l$ already exists such that $a_{n+l'}=a_n$ holds for all $n\geq k'$.</p></div>
@@ -250,7 +277,7 @@ The products $c_i=a_ia_{i+1}$ also satisfy $c_{i+l}=c_i$ for $i\ge k$, so the su
 </section>
 <section class="ct-problem" id="p5">
 <h3>Problem 5</h3>
-<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 12: Exponential Congruences and Order Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 12: Exponential Congruences and Order Structure &middot; Fermat and Euler Type Results</div>
 <div class="ct-text"><p>Let a prime $p$ and a positive integer $a$ be given such that $a-1$ is not divisible by $p$. Furthermore, let
 \[n=1+a^p+a^{2p}+\cdots+a^{(p-1)p}.\qquad(1)\]
 Show that $a^n-a$ is then divisible by $n$.</p><p><em>Note:</em> For $p=2$, the sum in (1) is contextually understood to be $1+a^2$, and for $p=3$ as $1+a^3+a^6$.</p></div>
@@ -275,7 +302,7 @@ Hence $v_p(n-1)=0+v_p(a^{p(p-1)}-1)-v_p(a^p-1)\ge2$.</p><p>In both cases $p^2\mi
 </section>
 <section class="ct-problem" id="p6">
 <h3>Problem 6</h3>
-<div class="ct-meta">Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure &middot; Power of a Point</div>
 <div class="ct-text"><p>Let $k$ and $k'$ be two intersecting circles and $P$ one of the two intersection points. Let line $g$ run parallel to the common tangent to $k$ and $k'$ that is further away from $P$. This line intersects $k$ in $A$ and $C$, and $k'$ in $B$ and $D$, such that the four points $A$, $B$, $C$, and $D$ lie on $g$ in this order. The intersection points of $g$ with the angle bisectors of $\angle APB$ and $\angle CPD$ are denoted by $X$ and $Y$, respectively.</p><p>Prove that the circumcircles of triangles $PXC$ and $PBY$, as well as the angle bisector of $\angle BPC$, have a point in common that is different from $P$.</p></div>
 <details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Ptolemy, the angle bisector theorem and one identity)</h4>

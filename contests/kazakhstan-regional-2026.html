@@ -29,6 +29,11 @@ description: Kazakhstan Mathematical Olympiad 2026, Regional Round: problems wit
   .ct-note { font-size: 14px; color: var(--ink-soft); font-style: italic; }
   .ct-bar { margin: .6em 0 1em; display: flex; gap: 10px; flex-wrap: wrap; }
   .ct-bar button { font: inherit; font-size: 14px; padding: 5px 12px; border-radius: var(--radius); border: 1px solid var(--brand); background: var(--white); color: var(--brand); cursor: pointer; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
 </style>
 <script>
   window.MathJax = { tex: { inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [['\\[','\\]']], processEscapes: true },
@@ -57,6 +62,28 @@ description: Kazakhstan Mathematical Olympiad 2026, Regional Round: problems wit
   .ct-text mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
 </style>
 
+<style>
+  .ct-tags { display: flex; flex-wrap: wrap; gap: 5px; margin: 0 0 .55em; }
+  .ct-tg { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .03em; padding: 2px 8px; border-radius: 999px; line-height: 1.5; }
+  .ct-lv { background: #eee7dc; color: #4a3d33; }
+  .ct-df-Starter { background: #dcf1dc; color: #245c24; }
+  .ct-df-Explorer { background: #d6efec; color: #155e57; }
+  .ct-df-Challenger { background: #dce8f7; color: #1f4c80; }
+  .ct-df-Olympiad { background: #e7defa; color: #4b2a8a; }
+  .ct-df-Advanced { background: #fbe4cc; color: #8a4a0b; }
+  .ct-df-Expert { background: #f8d6cf; color: #8c2600; }
+  .ct-band { margin: 1.3em 0 .5em; font-size: 14px; color: var(--ink-soft); }
+  .ct-band .ct-tg { font-size: 13px; margin-right: .4em; }
+  .ct-legend { font-size: 14.5px; background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 10px 16px; margin: 1em 0 1.4em; }
+  .ct-legend p { margin: .35em 0; }
+  .ct-legend ul { margin: .2em 0 .4em; padding-left: 1.1em; }
+  .ct-legend li { margin: .2em 0; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
+</style>
 {% endraw %}
 <p><a href="{{ '/contests-2026' | relative_url }}">&larr; All contests 2026</a></p>
 
@@ -73,7 +100,7 @@ description: Kazakhstan Mathematical Olympiad 2026, Regional Round: problems wit
 <h2 class="ct-group" id="grade-9-day-1">Grade 9, Day 1</h2>
 <section class="ct-problem" id="p1">
 <h3>Problem 1</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 39: Graph Theory and Structural Combinatorics</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 39: Graph Theory and Structural Combinatorics &middot; Paths, Cycles, and Connectivity</div>
 <div class="ct-text"><p>A problem committee consists of several authors. It is known that among any two authors exactly one trusts the other. Every day, each author invents one new problem and sends it to everyone he trusts, together with all problems received before that day (problems received on the same day are not forwarded). Prove that if on the third day some author does not receive back the problem he sent on the first day, then there exists a problem that does not reach all authors.</p></div>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Split the authors around $u$)</h4>
@@ -86,7 +113,7 @@ be a shortest directed cycle through $u$. Here $k\ge3$, because $k=1$ is impossi
 </section>
 <section class="ct-problem" id="p2">
 <h3>Problem 2</h3>
-<div class="ct-meta">Geometry &middot; LPS VII, Chapter 7: Congruence, Rigidity, and Isometric Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 7: Congruence, Rigidity, and Isometric Structure &middot; Geometric Reflection and Isometry</div>
 <div class="ct-text"><p>In triangle $ABC$ with $AC&gt;BC$, point $K$ is the reflection of point $A$ across the angle bisector $CD$. Let $L$ be such that $BDCL$ is a parallelogram, and let $H$ be the foot of the perpendicular dropped from $C$ to line $BL$. Suppose that lines $AH$ and $CL$ intersect at point $M$. Prove that lines $CD$ and $KM$ are parallel.</p></div>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Coordinates along the bisector)</h4>
@@ -108,7 +135,7 @@ Here $F\neq O$: otherwise $K=M$, but $K$ lies on line $CB$, $M$ on line $CL$, an
 </section>
 <section class="ct-problem" id="p3">
 <h3>Problem 3</h3>
-<div class="ct-meta">Algebra &middot; LPS VII, Chapter 9: Polynomials and Root-Coefficient Strategy</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Algebra &middot; LPS VII, Chapter 9: Polynomials and Root-Coefficient Strategy &middot; Remainder, Factor, and Evaluation Logic</div>
 <div class="ct-text"><p>Find all quadratic polynomials $P(x)$ and $Q(x)$ with real coefficients such that
 \[P(1)=5,\quad Q(1)=6,\]
 and
@@ -142,7 +169,7 @@ As $P,Q$ are quadratic, $P=-1+\alpha(x^2-x+1)$ and $Q=1+\beta(x^2-x+1)$, and $P(
 <h2 class="ct-group" id="grade-9-day-2">Grade 9, Day 2</h2>
 <section class="ct-problem" id="p4">
 <h3>Problem 4</h3>
-<div class="ct-meta">Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure &middot; Tangency and Tangent Geometry</div>
 <div class="ct-text"><p>Two non-intersecting circles $\omega_1$ and $\omega_2$ have centers $O_1$ and $O_2$, respectively. Let $AB$ be a common external tangent segment to $\omega_1$ and $\omega_2$. From a point $M$ on segment $AB$, tangents $MP$ and $MQ$ are drawn to $\omega_1$ and $\omega_2$, respectively (here $P\in\omega_1$ and $Q\in\omega_2$ are the points of tangency of the tangents from $M$ other than $MA$ and $MB$). Prove that if $\angle AMP=\angle BMQ$, then lines $AQ$, $BP$, and $O_1O_2$ intersect at a single point.</p></div>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
 <h4>Solution 1 ($BP$ and $AQ$ are the diagonals of a symmetric trapezoid)</h4>
@@ -167,7 +194,7 @@ and $\lambda(a^2+2abc+b^2)=a(a+b)$ by the formula for $\lambda$. Hence $X\in O_1
 </section>
 <section class="ct-problem" id="p5">
 <h3>Problem 5</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 44: Combinatorial Games and Strategy</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 44: Combinatorial Games and Strategy &middot; Invariant-Based Game Analysis</div>
 <div class="ct-text"><p>The numbers $1,2,3,\dots,2026$ are written on a board. Eldana and Elaman play the following game. Eldana starts, and then they move alternately. In one move, a player chooses any two numbers $m$ and $n$ on the board, erases them, and writes the number $m^n$ instead. The game continues until only one number remains. If this number ends in the digit $2,3,7$, or $8$, Elaman wins; otherwise, Eldana wins. Who wins under optimal play?</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>Eldana wins</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -179,7 +206,7 @@ and $\lambda(a^2+2abc+b^2)=a(a+b)$ by the formula for $\lambda$. Hence $X\in O_1
 </section>
 <section class="ct-problem" id="p6">
 <h3>Problem 6</h3>
-<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 8: Modular Arithmetic and Congruence Methods</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VII scale">E</span>Number Theory &middot; LPS VII, Chapter 8: Modular Arithmetic and Congruence Methods &middot; Modular Equations and Solutions</div>
 <div class="ct-text"><p>Solve in natural numbers the equation
 \[x^4+y^4=n!+2026.\]</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>no solutions</p></div></details>
@@ -191,7 +218,7 @@ and $\lambda(a^2+2abc+b^2)=a(a+b)$ by the formula for $\lambda$. Hence $X\in O_1
 <h2 class="ct-group" id="grade-10-day-1">Grade 10, Day 1</h2>
 <section class="ct-problem" id="p7">
 <h3>Problem 1</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 18: Invariants and Monovariants</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 18: Invariants and Monovariants &middot; Invariant Quantities</div>
 <div class="ct-text"><p>From city $A$ to city $B$, $2025$ trucks depart at equal time intervals, each carrying $2026$ kg of rice. Similarly, from city $B$ to city $A$, $2026$ trucks depart at the same intervals, each carrying $2025$ kg of wheat.</p><p>Whenever two trucks meet, they completely exchange their cargos; during the exchange, exactly $1$ kg of each type of grain is spilled onto the ground. After the exchange, both trucks turn around and continue moving. Every truck that leaves a city ($A$ or $B$) eventually arrives at one of the cities $A$, $B$ and finishes its route there.</p><p>Assume all trucks have the same speed, exchanges are instantaneous, and at some moment all trucks are simultaneously between cities $A$ and $B$.</p><p>After the last truck finishes its journey, how many kilograms of rice and wheat are in each city?</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$0$ kg of rice and $0$ kg of wheat in each city</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -205,7 +232,7 @@ and $\lambda(a^2+2abc+b^2)=a(a+b)$ by the formula for $\lambda$. Hence $X\in O_1
 </section>
 <section class="ct-problem" id="p8">
 <h3>Problem 2</h3>
-<div class="ct-meta">Algebra &middot; LPS VII, Chapter 31: Extremal Principle and Bounding Arguments</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Algebra &middot; LPS VII, Chapter 31: Extremal Principle and Bounding Arguments &middot; Extremal Element Selection</div>
 <div class="ct-text"><p>Let $n\ge 3$ be an integer, and let $\{a_1,a_2,\dots,a_n\}$ be a set of $n$ pairwise distinct positive real numbers. It is known that for every $1\le i\le n$, there exist indices $j\ne k\ne i$ such that
 \[a_i=1+\frac{a_j}{a_k}.\]
 (Prove that all $a_i,a_j,a_k$ are distinct.)
@@ -222,7 +249,7 @@ By AM-HM (or $(m+M)\bigl(\frac1m+\frac1M\bigr)\ge4$, which is $(m-M)^2\ge0$), $m
 </section>
 <section class="ct-problem" id="p9">
 <h3>Problem 3</h3>
-<div class="ct-meta">Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure &middot; Radical Axis and Radical Center</div>
 <div class="ct-text"><p>In an acute scalene triangle $ABC$, altitudes $BD$ and $CE$ are drawn. On line $DE$, points $P$ and $Q$ are chosen such that $PC\perp BC$ and $QB\perp BC$. Let $A_1$ be the point diametrically opposite to $A$ on the circumcircle of triangle $ABC$.
 Prove that point $A_1$ lies on the line containing the common chord of the circumcircles of triangles $BDQ$ and $CEP$.</p></div>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -249,7 +276,7 @@ using $1-\xi=\frac{2sw}{1+sw}$. (The coefficient $2sw$ is not $0$, so $\Gamma_1\
 <h2 class="ct-group" id="grade-10-day-2">Grade 10, Day 2</h2>
 <section class="ct-problem" id="p10">
 <h3>Problem 4</h3>
-<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 4: Divisibility and Prime Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VII scale">E</span>Number Theory &middot; LPS VII, Chapter 4: Divisibility and Prime Structure &middot; Divisibility Chains and Factor Relations</div>
 <div class="ct-text"><p>Let $a,b,n$ be integers. Suppose that the numbers $b^2-ab$ and $a^2$ are divisible by $n$.
 Prove that the number
 \[a^5+ab^4+b^5\]
@@ -269,7 +296,7 @@ Hence $a^5+ab^4+b^5\equiv0\pmod n$.</p>
 </section>
 <section class="ct-problem" id="p11">
 <h3>Problem 5</h3>
-<div class="ct-meta">Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure &middot; Tangency and Tangent Geometry</div>
 <div class="ct-text"><p>Two non-intersecting circles $\omega_1$ and $\omega_2$ are given. Segments $AB$ and $CD$ are common external tangents to $\omega_1$ and $\omega_2$ (with $A,C\in\omega_1$ and $B,D\in\omega_2$). Line $CB$ intersects $\omega_1$ again at point $P$, and line $AD$ intersects $\omega_2$ again at point $Q$.
 Prove that the tangent to $\omega_1$ at $P$ and the tangent to $\omega_2$ at $Q$ intersect on line $AB$.</p></div>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -290,7 +317,7 @@ By Thales' theorem $\overrightarrow{CB}\cdot\overrightarrow{CE}=0$ (also if $C=E
 </section>
 <section class="ct-problem" id="p12">
 <h3>Problem 6</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 39: Graph Theory and Structural Combinatorics</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 39: Graph Theory and Structural Combinatorics &middot; Extremal Graph Structure</div>
 <div class="ct-text"><p>An infinite chessboard is colored in black and white in the standard checkerboard pattern. From it, a connected polyomino consisting of $25$ white and $25$ black cells is cut out, such that any cell of the figure can be reached from any other by moving only through cells of the figure and only via common sides (not diagonally).</p><p>What is the maximum number of dominoes (rectangles of size $1\times 2$ or $2\times 1$) that can be guaranteed to be cut from this figure?</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$13$</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -306,7 +333,7 @@ touch every pair of adjacent cells: an edge of the row $(x,0)$&ndash;$(x+1,0)$ c
 <h2 class="ct-group" id="grade-11-day-1">Grade 11, Day 1</h2>
 <section class="ct-problem" id="p13">
 <h3>Problem 1</h3>
-<div class="ct-meta">Algebra &middot; LPS VII, Chapter 30: Functional Equations: Core Olympiad Methods</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VII scale">E</span>Algebra &middot; LPS VII, Chapter 30: Functional Equations: Core Olympiad Methods &middot; Substitution and Special Inputs</div>
 <div class="ct-text"><p>Find all functions $f:\mathbb{R}\to\mathbb{R}$ such that for all real numbers $x,y$ the equality
 \[f(f(y)+x-y)+f(x-y)=f(xf(y)-y)\]
 holds.
@@ -323,7 +350,7 @@ So $f(t)=\tfrac12f(-z)$ for every real $t$: $f$ is a constant $k$. Then the equa
 </section>
 <section class="ct-problem" id="p14">
 <h3>Problem 2</h3>
-<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 33: Residues, Quadratic Structure, and Higher Congruences</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 33: Residues, Quadratic Structure, and Higher Congruences &middot; Quadratic Residues</div>
 <div class="ct-text"><p>Call an integer <em>wonderful</em> if it can be represented as the sum of squares of two integers. Consider a set consisting of $n$ consecutive integers. If every element of this set is wonderful, we call such a set a <em>super set</em>. Find the largest natural number $n$ for which there exist infinitely many super sets consisting of $n$ elements.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$3$</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -343,7 +370,7 @@ are infinitely many. Hence the answer is $\boxed{3}$.</p>
 </section>
 <section class="ct-problem" id="p15">
 <h3>Problem 3</h3>
-<div class="ct-meta">Geometry &middot; LPS VII, Chapter 19: Triangle Centers and Classical Triangle Geometry</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 19: Triangle Centers and Classical Triangle Geometry &middot; Angle Bisector and Median Geometry</div>
 <div class="ct-text"><p>Through vertex $C$ of triangle $ABC$ a line $\ell$ parallel to $AB$ is drawn. A circle with center $O_1$ is inscribed in angle $BAC$ and tangent to $\ell$, and a circle with center $O_2$ is inscribed in angle $ABC$ and tangent to $\ell$. On segment $AB$ a point $N$ is chosen such that $\angle AO_1N=\angle BO_2N$. The angle bisector of $\angle ACB$ intersects lines $O_1N$ and $O_2N$ at points $M$ and $K$, respectively. Prove that if $CA\ne CB$, then the midpoint of $AB$ is the circumcenter of triangle $MNK$.</p></div>
 <details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Lengths, then a vector lemma)</h4>
@@ -400,7 +427,7 @@ which vanishes for $M$ and for $K$ by the formula for their heights. So $M$, $N$
 <h2 class="ct-group" id="grade-11-day-2">Grade 11, Day 2</h2>
 <section class="ct-problem" id="p16">
 <h3>Problem 4</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 20: Parity, Coloring, and Process Termination</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 20: Parity, Coloring, and Process Termination &middot; Parity and Coloring Arguments</div>
 <div class="ct-text"><p>Is it possible to place the $64$ consecutive integers into the cells of an $8\times 8$ board (one number per cell) so that in every T-tetromino the sum of the four numbers is divisible by $7$?
 (A T-tetromino is a T-shaped figure consisting of $4$ cells.)</p><div class="ct-fig"><img style="width:289px" src="/assets/contests/2026-27/kazakhstan-regional-16.svg" alt="Figure for Grade 11, Day 2, Problem 4"></div></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>No</p></div></details>
@@ -425,7 +452,7 @@ Subtracting, $2(b-a)\equiv0$, so $a\equiv b$ (as $2$ is invertible modulo $7$), 
 </section>
 <section class="ct-problem" id="p17">
 <h3>Problem 5</h3>
-<div class="ct-meta">Geometry &middot; LPS VII, Chapter 51: Spiral Similarity and Advanced Transformational Geometry</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 51: Spiral Similarity and Advanced Transformational Geometry &middot; Miquel and Rotational Circle Structure</div>
 <div class="ct-text"><p>An isosceles triangle $ABC$ with $AC=BC$ is inscribed in a circle $\omega$. On segment $AB$ a point $D$ is chosen ($D$ is closer to $A$ than to $B$). On the smaller arc $CB$ of $\omega$ a point $K\ne C,B$ is chosen. The line through $D$ perpendicular to $CK$ intersects lines $AK$ and $BK$ at points $P$ and $Q$, respectively. Prove that all circumcircles of triangles $PQK$ pass through a fixed point independent of the choice of $K$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>proof (the fixed point is the second intersection of line $C^{\prime}D$ with $\omega$, where $C^{\prime}$ is the antipode of $C$)</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -453,7 +480,7 @@ using $e/u=m^2/(1+m^2)$. Since $\gamma m^2u=\gamma e(1+m^2)$, this equals $x_D$.
 </section>
 <section class="ct-problem" id="p18">
 <h3>Problem 6</h3>
-<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 29: Valuations and Lifting the Exponent</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Number Theory &middot; LPS VII, Chapter 29: Valuations and Lifting the Exponent &middot; Comparing Valuations Across Terms</div>
 <div class="ct-text"><p>Find all natural numbers $n$ such that
 \[2^{n!}-1\]
 is divisible by

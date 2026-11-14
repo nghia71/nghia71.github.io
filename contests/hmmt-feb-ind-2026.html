@@ -1,0 +1,603 @@
+---
+title: HMMT February 2026: individual rounds
+permalink: /contests/hmmt-feb-ind-2026
+description: HMMT February 2026: individual rounds: problems with answers and solutions
+---
+{% raw %}
+<style>
+  .ct-intro { margin-bottom: 1.2em; }
+  .ct-credit { font-size: 14px; color: var(--ink-soft); border-left: 3px solid var(--gold); padding: 6px 12px; background: var(--white); margin: 1em 0; }
+  .ct-toc { display: flex; flex-wrap: wrap; gap: 6px; margin: 1em 0 1.4em; }
+  .ct-toc a { display: inline-block; min-width: 2.4em; text-align: center; padding: 4px 8px; border: 1px solid var(--rule); border-radius: 4px; background: var(--white); text-decoration: none; font-size: 14px; }
+  .ct-problem { background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 14px 18px; margin: 1.1em 0; }
+  .ct-problem h3 { margin: 0 0 .3em; font-size: 1.08rem; border-bottom: none; padding-bottom: 0; }
+  .ct-meta { font-size: 13px; color: var(--ink-soft); margin-bottom: .6em; }
+  .ct-text { font-family: Georgia, "Times New Roman", "Noto Serif", serif; font-size: 1.02em; line-height: 1.6; }
+  .ct-text p { margin: .5em 0; }
+  .ct-fig { text-align: center; margin: .8em 0; }
+  .ct-fig img { max-width: 100%; height: auto; max-height: 340px; }
+  .ct-choices { display: flex; flex-wrap: wrap; gap: 6px 22px; margin: .6em 0 .2em; }
+  .ct-choices b { margin-right: .3em; }
+  .ct-problem details { margin-top: .8em; border-top: 1px dashed var(--rule); padding-top: .5em; }
+  .ct-problem summary { cursor: pointer; font-weight: 600; color: var(--brand); font-size: 15px; }
+  .ct-problem details[open] summary { margin-bottom: .5em; }
+  .ct-sol h4 { font-size: 1rem; margin: 1em 0 .3em; color: var(--ink); }
+  .ct-answer { font-weight: 600; }
+  .ct-parts { list-style: none; padding-left: .4em; }
+  .ct-parts li { margin: .35em 0; }
+  .ct-lbl { font-weight: 700; margin-right: .3em; }
+  .ct-note { font-size: 14px; color: var(--ink-soft); font-style: italic; }
+  .ct-bar { margin: .6em 0 1em; display: flex; gap: 10px; flex-wrap: wrap; }
+  .ct-bar button { font: inherit; font-size: 14px; padding: 5px 12px; border-radius: var(--radius); border: 1px solid var(--brand); background: var(--white); color: var(--brand); cursor: pointer; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
+</style>
+<script>
+  window.MathJax = { tex: { inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [['\\[','\\]']], processEscapes: true },
+                     options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] } };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script>
+  function ctAll(open) { document.querySelectorAll('.ct-problem details').forEach(function (d) { d.open = open; }); }
+</script>
+
+<style>
+  .ct-group { font-size: 1.25rem; margin: 1.6em 0 .2em; }
+  .ct-toc-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: .3em 0; }
+  .ct-toc-g { font-size: 13px; color: var(--ink-soft); min-width: 9em; }
+  .ct-toc-wrap { margin: 1em 0 1.4em; }
+  .ct-center { text-align: center; margin: .6em 0; }
+  .ct-tablewrap { overflow-x: auto; margin: .6em 0; text-align: center; }
+  .ct-table { border-collapse: collapse; margin: 0 auto; }
+  .ct-table td { padding: 2px 9px; text-align: center; }
+  .ct-table tr.ct-hl td { border-bottom: 1px solid var(--ink-soft); }
+  .ct-table.ct-vfirst td:first-child { border-right: 1px solid var(--ink-soft); }
+  .ct-ul { padding-left: 1.4em; }
+  .ct-ul li { margin: .3em 0; }
+  .ct-text li > p:first-child { margin-top: 0; }
+  .ct-text li > p:last-child { margin-bottom: 0; }
+  .ct-text mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
+</style>
+
+<style>
+  .ct-tags { display: flex; flex-wrap: wrap; gap: 5px; margin: 0 0 .55em; }
+  .ct-tg { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .03em; padding: 2px 8px; border-radius: 999px; line-height: 1.5; }
+  .ct-lv { background: #eee7dc; color: #4a3d33; }
+  .ct-df-Starter { background: #dcf1dc; color: #245c24; }
+  .ct-df-Explorer { background: #d6efec; color: #155e57; }
+  .ct-df-Challenger { background: #dce8f7; color: #1f4c80; }
+  .ct-df-Olympiad { background: #e7defa; color: #4b2a8a; }
+  .ct-df-Advanced { background: #fbe4cc; color: #8a4a0b; }
+  .ct-df-Expert { background: #f8d6cf; color: #8c2600; }
+  .ct-band { margin: 1.3em 0 .5em; font-size: 14px; color: var(--ink-soft); }
+  .ct-band .ct-tg { font-size: 13px; margin-right: .4em; }
+  .ct-legend { font-size: 14.5px; background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 10px 16px; margin: 1em 0 1.4em; }
+  .ct-legend p { margin: .35em 0; }
+  .ct-legend ul { margin: .2em 0 .4em; padding-left: 1.1em; }
+  .ct-legend li { margin: .2em 0; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
+</style>
+{% endraw %}
+<p><a href="{{ '/contests-2026' | relative_url }}">&larr; All contests 2026</a></p>
+
+<h1>HMMT February 2026: individual rounds</h1>
+
+<div class="ct-intro">
+<p>The 30 problems of the HMMT February 2026: individual rounds, each with our own solutions, hidden until you open them. Where a problem has a final answer, it is shown separately. Try a problem first, then check.</p><p>HMMT February 2026 was held at MIT on 14 February 2026. These are its three individual subject rounds, Algebra and Number Theory, Combinatorics and Geometry, ten problems each, in full.</p>
+</div>
+<div class="ct-credit">Problems: HMMT February 2026: individual rounds, from the AoPS contest collection or the official paper. Solutions written by MCC.</div>
+<div class="ct-bar"><button type="button" onclick="ctAll(true)">Show all answers and solutions</button><button type="button" onclick="ctAll(false)">Hide all</button></div>
+<div class="ct-toc-wrap"><div class="ct-toc-row"><span class="ct-toc-g">Algebra and Number Theory</span><a href="#p1">1</a><a href="#p2">2</a><a href="#p3">3</a><a href="#p4">4</a><a href="#p5">5</a><a href="#p6">6</a><a href="#p7">7</a><a href="#p8">8</a><a href="#p9">9</a><a href="#p10">10</a></div><div class="ct-toc-row"><span class="ct-toc-g">Combinatorics</span><a href="#p11">1</a><a href="#p12">2</a><a href="#p13">3</a><a href="#p14">4</a><a href="#p15">5</a><a href="#p16">6</a><a href="#p17">7</a><a href="#p18">8</a><a href="#p19">9</a><a href="#p20">10</a></div><div class="ct-toc-row"><span class="ct-toc-g">Geometry</span><a href="#p21">1</a><a href="#p22">2</a><a href="#p23">3</a><a href="#p24">4</a><a href="#p25">5</a><a href="#p26">6</a><a href="#p27">7</a><a href="#p28">8</a><a href="#p29">9</a><a href="#p30">10</a></div></div>
+
+{% raw %}
+<h2 class="ct-group" id="algebra-and-number-theory">Algebra and Number Theory</h2>
+<section class="ct-problem" id="p1">
+<h3>Problem 1</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VII scale">E</span>Algebra &middot; LPS VII, Chapter 9: Polynomials and Root-Coefficient Strategy &middot; Vieta&#x27;s Relations</div>
+<div class="ct-text"><p>A line intersects the graph of $y=x^2+\frac{2}{x}$ at three distinct points. Given that the $x$-coordinates of two of the points are $6$ and $7$, respectively, compute the $x$-coordinate of the third point.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$-\frac{1}{21}$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Vieta on a cubic)</h4>
+<p>Let the line be $y=mx+c$. A point of the graph with abscissa $x\ne 0$ lies on the line exactly when
+\[x^2+\frac2x=mx+c\iff x^3-mx^2-cx+2=0 .\]
+The three intersection points have three distinct abscissas, all nonzero, and each is a root of this cubic; a cubic has at most three roots, so the three abscissas $6$, $7$, $r$ are exactly its roots. By Vieta's formulas the product of the roots is $-2$, so
+\[6\cdot 7\cdot r=-2,\qquad r=\boxed{-\frac{1}{21}}.\]</p>
+<h4>Solution 2 (Equal slopes)</h4>
+<p>Write $f(x)=x^2+\frac2x$. For $u\ne v$ (both nonzero) the slope of the chord between the graph points over $u$ and $v$ is
+\[\frac{f(u)-f(v)}{u-v}=\frac{u^2-v^2}{u-v}+\frac{\frac2u-\frac2v}{u-v}=u+v-\frac{2}{uv}.\]
+The three points lie on one line, so the chords over $\{6,7\}$, $\{6,r\}$ and $\{7,r\}$ have the same slope:
+\[6+r-\frac{2}{6r}=7+r-\frac{2}{7r}\quad\Longrightarrow\quad 1=\frac{2}{7r}-\frac{1}{3r}=-\frac{1}{21r}.\]
+Hence $r=\boxed{-\frac{1}{21}}$. (Check: both slopes equal $13-\frac1{21}$.)</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p2">
+<h3>Problem 2</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VII scale">E</span>Number Theory &middot; LPS VII, Chapter 8: Modular Arithmetic and Congruence Methods &middot; Modular Equations and Solutions</div>
+<div class="ct-text"><p>Compute the second smallest positive integer $n$ such that</p><ul class="ct-ul"><li><p>$n$ is divisible by $101$, and</p></li><li><p>the decimal representation of $n$ contains the number $2026$ as a consecutive sequence of digits.</p></li></ul></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$420261$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Check by number of digits)</h4>
+<p>Since $101\cdot 99=9999$, we have $10^4\equiv 1$ and $10^2\equiv -1\pmod{101}$; also $2026=20\cdot101+6\equiv 6$ and $10^5=10\cdot 10^4\equiv 10\pmod{101}$.</p><p><em>Four or five digits.</em> The only $4$-digit candidate is $2026\equiv 6$, not a multiple. A $5$-digit candidate is $2026d$ or $d2026$ with a digit $d$ ($d\ne 0$ in the second form). Now $2026d=10\cdot 2026+d\equiv 60+d$, which is never $0$ for $0\le d\le 9$; and $d2026=d\cdot 10^4+2026\equiv d+6$, also never $0$. So no multiple of $101$ below $10^5$ works.</p><p><em>Six digits.</em> The block $2026$ sits in one of three places.</p><ul class="ct-ul"><li><p>$\overline{2026ab}=202600+\overline{ab}$ and $202600=101\cdot 2005+95$, so we need $\overline{ab}\equiv 6$, i.e. $\overline{ab}=06$: the number $202606=101\cdot 2006$.</p></li><li><p>$\overline{a2026b}=a\cdot 10^5+20260+b\equiv 10a+60+b$, so $10a+b\equiv 41$; with $1\le a\le 9$, $0\le b\le 9$ the value $10a+b$ lies in $[10,99]$, so $10a+b=41$: the number $420261=101\cdot 4161$.</p></li><li><p>$\overline{ab2026}=\overline{ab}\cdot 10^4+2026\equiv \overline{ab}+6$, so $\overline{ab}=95$: the number $952026=101\cdot 9426$.</p></li></ul><p>So the multiples of $101$ containing $2026$, in increasing order, begin $202606&lt;420261&lt;\cdots$, and the second smallest is $\boxed{420261}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p3">
+<h3>Problem 3</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 21: Arithmetic Functions and Multiplicative Structure &middot; Divisor and Sum Functions</div>
+<div class="ct-text"><p>Compute the sum of all positive integers $n$ such that $n$ has at least $6$ positive integer divisors and the $6$th largest divisor of $n$ is $6$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$48$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Divisors below $n/6$)</h4>
+<p>Pair each divisor $d$ of $n$ with $n/d$. This reverses the order of the divisors, so the $6$th largest divisor is $6$ exactly when $6\mid n$ and exactly five divisors of $n$ are larger than $6$; equivalently, exactly five divisors $e$ of $n$ satisfy $e&lt;n/6$ (the divisors larger than $6$ are the numbers $n/e$ with $e&lt;n/6$).</p><p><em>Small $n$.</em> If $n\le 36$, then $n/6\le 6$, so the divisors $e&lt;n/6$ are among $1,2,3,4,5$; five of them would force $1,2,3,4,5\mid n$, i.e. $60\mid n$, impossible. So $n&gt;36$ and $n/6&gt;6$.</p><p>Now $1,2,3,6$ are four divisors below $n/6$, so there is exactly one more divisor $e&lt;n/6$, and $e\notin\{1,2,3,6\}$.</p><ul class="ct-ul"><li><p>If $4\mid n$, then $e=4$, so $5\nmid n$ and no divisor lies strictly between $6$ and $n/6$. Since $12\mid n$, we need $12\ge n/6$, i.e. $n\le 72$. The multiples of $12$ in $(36,72]$ not divisible by $5$ are $48$ and $72$. For $72$ the divisor $8$ lies below $n/6=12$, too many. For $48$: $n/6=8$ and the divisors below $8$ are exactly $1,2,3,4,6$. So $n=48$ works.</p></li><li><p>If $5\mid n$ but $4\nmid n$, then $e=5$ and $30\mid n$; the divisor $10$ must satisfy $10\ge n/6$, so $n\le 60$, i.e. $n=60$, but $4\mid 60$. No solutions.</p></li><li><p>If $4\nmid n$ and $5\nmid n$, write $n=6m$ with $m=n/6&gt;6$; then $m$ is odd and $5\nmid m$, and exactly one divisor $e$ of $n$ lies strictly between $6$ and $m$. If $m$ is a prime $p$, the divisors of $6p$ below $p$ are only $1,2,3,6$: too few. Otherwise $m=qr$ with $q$ the smallest prime factor of $m$ and $r\ge q\ge 3$, $q\ne 5$. If $q\ge 7$, both $q$ and $2q$ are divisors in $(6,m)$ (as $2q&lt;qr$). If $q=3$: $r=3$ gives $n=54$, whose divisors below $9$ are only $1,2,3,6$; $r=5$ is excluded; and $r\ge 7$ gives two divisors $r&lt;2r$ in $(6,3r)$. No solutions.</p></li></ul><p>Hence $n=48$ is the only such integer, and the sum is $\boxed{48}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p4">
+<h3>Problem 4</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Algebra &middot; LPS VII, Chapter 13: Systems, Symmetry, and Multi-Variable Algebra &middot; Elimination and Reduction</div>
+<div class="ct-text"><p>Let $a$, $b$, and $c$ be pairwise distinct complex numbers such that
+\[\begin{aligned} a^2+ab+b^2&amp;=3(a+b),\\ a^2+ac+c^2&amp;=3(a+c),\\ b^2+bc+c^2&amp;=5(b+c)+1.\end{aligned}\]
+Compute $a$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\frac72$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Two roots of one quadratic)</h4>
+<p>The first two equations say that $t=b$ and $t=c$ both satisfy
+\[t^2+at+a^2=3a+3t,\qquad\text{i.e.}\qquad t^2+(a-3)t+(a^2-3a)=0 .\]
+Since $b\ne c$, they are the two roots of this quadratic, so by Vieta
+\[b+c=3-a,\qquad bc=a^2-3a .\]
+The third equation is $(b+c)^2-bc=5(b+c)+1$, which becomes
+\[(3-a)^2-(a^2-3a)=5(3-a)+1\iff 9-3a=16-5a\iff a=\tfrac72 .\]
+Conversely, for $a=\frac72$ take $b,c$ to be the roots of $t^2+\frac12t+\frac74=0$; they are non-real and distinct (the discriminant is $\frac14-7&lt;0$), hence also different from $a$, and the computation above runs backwards, so all three equations hold. Therefore $a=\boxed{\frac72}$.</p>
+<h4>Solution 2 (Subtract, then symmetric functions)</h4>
+<p>Subtracting the second equation from the first gives $a(b-c)+(b^2-c^2)=3(b-c)$; dividing by $b-c\ne 0$,
+\[a+b+c=3 .\]
+Then the first equation reads $a^2+ab+b^2=(a+b+c)(a+b)=(a+b)^2+c(a+b)$, i.e. $-ab=ca+cb$, so
+\[ab+bc+ca=0 .\]
+Hence $b+c=3-a$ and $bc=-a(b+c)=-a(3-a)$. The third equation is $(b+c)^2-bc=5(b+c)+1$:
+\[(3-a)^2+a(3-a)=5(3-a)+1\iff 3(3-a)=16-5a\iff a=\tfrac72 .\]
+This value is attained: with $b+c=-\frac12$, $bc=\frac74$ the numbers $b,c$ are distinct non-real conjugates, all three equations hold (each step above is reversible once $a+b+c=3$ and $ab+bc+ca=0$), and $a,b,c$ are pairwise distinct. So $a=\boxed{\frac72}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p5">
+<h3>Problem 5</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 12: Exponential Congruences and Order Structure &middot; Fermat and Euler Type Results</div>
+<div class="ct-text"><p>Compute the largest positive integer $n$ such that
+\[n\ \text{divides}\ \bigl(\lfloor\sqrt{n}\rfloor\bigr)!^{\,n!}+450.\]</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$1230$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Small primes and large primes)</h4>
+<p>Let $m=\lfloor\sqrt n\rfloor$, so $m^2\le n&lt;(m+1)^2$, and let $N=m!^{\,n!}+450$.</p><p><em>Primes $p\le m$.</em> If $p^k\,\|\,n$ with $p\le m$, then $p\mid m!$ and $n!\ge n\ge k$, so $p^k\mid m!^{\,n!}$. Hence $p^k\mid n\mid N$ forces $p^k\mid 450=2\cdot 3^2\cdot 5^2$.</p><p><em>Primes $p&gt;m$.</em> Then $p\ge m+1&gt;\sqrt n$, so $p^2&gt;n$ and $p$ divides $n$ at most once; also two such primes cannot both divide $n$ (their product would exceed $n$). For such a $p$ we have $p\nmid m!$ and $p-1\mid n!$ (as $p-1&lt;p\le n$), so by Fermat $m!^{\,n!}\equiv 1\pmod p$, and $p\mid N$ means $p\mid 451=11\cdot 41$.</p><p>So $n=d$ or $n=dp$ with $d\mid 450$ and $p\in\{11,41\}$, $p&gt;\sqrt n$.</p><ul class="ct-ul"><li><p>$n=d\mid 450$ gives $n\le 450$.</p></li><li><p>$n=11d$ with $11&gt;\sqrt{11d}$ gives $d&lt;11$, so $n\le 110$.</p></li><li><p>$n=41d$ with $41&gt;\sqrt{41d}$ gives $d&lt;41$; the largest divisor of $450$ below $41$ is $30$, so $n\le 1230$.</p></li></ul><p>Finally $n=1230=2\cdot3\cdot5\cdot41$ works: $m=\lfloor\sqrt{1230}\rfloor=35$, so $2,3,5\mid 35!$ and $N\equiv 450\equiv 0$ modulo $2$, $3$ and $5$; and $41\nmid 35!$, $40\mid 1230!$, so $N\equiv 1+450=451=11\cdot 41\equiv 0\pmod{41}$. Thus the answer is $\boxed{1230}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p6">
+<h3>Problem 6</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 18: Invariants and Monovariants &middot; Invariant Quantities</div>
+<div class="ct-text"><p>The numbers $1, 2, \ldots, 2100$ are written on a board. Every second, Mark takes two numbers on the board, $a$ and $b$, erases them, and replaces them with $\gcd(a,b)$ and $\operatorname{lcm}(a,b)$. Mark stops once any move he makes will not change the numbers written on the board. Compute the number of divisors of the $2026$th smallest positive integer written on the board when he finishes.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$3840$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Exponents are sorted prime by prime)</h4>
+<p><em>The process stops.</em> If $a\nmid b$ and $b\nmid a$, then $g=\gcd(a,b)$ and $l=\operatorname{lcm}(a,b)$ satisfy $gl=ab$ and $g&lt;\min(a,b)$, so $g+l&gt;a+b$ (for a fixed product, the sum grows as the two numbers spread apart). So every move that changes the board increases the sum of the numbers, and every number always divides $\operatorname{lcm}(1,\dots,2100)$; hence only finitely many changing moves are possible.</p><p><em>The final board.</em> A move on $a,b$ changes nothing exactly when one divides the other. So at the end the $2100$ numbers form a chain under divisibility: sorted increasingly, each divides the next.</p><p><em>An invariant.</em> Fix a prime $p$. Replacing $a,b$ by $\gcd(a,b),\operatorname{lcm}(a,b)$ replaces the exponents $v_p(a),v_p(b)$ by their minimum and maximum, so the multiset of $p$-exponents of the numbers on the board never changes. In the final chain the $p$-exponents increase along the chain, so the $k$th smallest final number has, for every prime $p$, the $k$th smallest exponent of $p$ among $v_p(1),\dots,v_p(2100)$.</p><p><em>The $2026$th number.</em> It is the $75$th largest ($2100-2026+1=75$). Among $1,\dots,2100$ exactly $\lfloor 2100/p^e\rfloor$ numbers have $v_p\ge e$, so the $75$th largest exponent of $p$ is the largest $e$ with $\lfloor 2100/p^e\rfloor\ge 75$, i.e. with $p^e\le 28$. This gives $2^4,3^3,5^2$ and $7,11,13,17,19,23$ to the first power, so the number is
+\[2^4\cdot 3^3\cdot 5^2\cdot 7\cdot 11\cdot 13\cdot 17\cdot 19\cdot 23,\]
+with $5\cdot4\cdot3\cdot 2^6=\boxed{3840}$ divisors.</p>
+<h4>Solution 2 (Counting multiples of prime powers)</h4>
+<p><em>The process stops and ends in a chain.</em> If $a\nmid b$ and $b\nmid a$, the pair $\gcd(a,b)&lt;\min(a,b)$, $\operatorname{lcm}(a,b)$ has the same product and a larger sum than $a,b$; all numbers stay divisors of $\operatorname{lcm}(1,\dots,2100)$, so there are finitely many changing moves. At the end no move changes the board, so any two numbers are comparable under divisibility: the final numbers $c_1\le c_2\le\dots\le c_{2100}$ satisfy $c_1\mid c_2\mid\cdots\mid c_{2100}$.</p><p><em>An invariant.</em> For a prime power $q=p^e$ let $N_q$ be the number of entries divisible by $q$. A move on $a,b$ keeps $N_q$: $q$ divides $\operatorname{lcm}(a,b)$ iff it divides $a$ or $b$, and divides $\gcd(a,b)$ iff it divides both. So $N_q=\lfloor 2100/q\rfloor$ forever.</p><p><em>Reading off $c_{2026}$.</em> In the chain, the entries divisible by $q$ form a final segment $c_j,\dots,c_{2100}$ of length $N_q$. So $q\mid c_{2026}$ iff the last $75$ entries $c_{2026},\dots,c_{2100}$ are all divisible by $q$, iff $\lfloor 2100/q\rfloor\ge 75$, iff $q\le 28$. Therefore
+\[c_{2026}=\operatorname{lcm}(1,2,\dots,28)=2^4\cdot3^3\cdot5^2\cdot7\cdot11\cdot13\cdot17\cdot19\cdot23,\]
+whose number of divisors is $5\cdot 4\cdot 3\cdot 2^6=\boxed{3840}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p7">
+<h3>Problem 7</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Algebra &middot; LPS VII, Chapter 13: Systems, Symmetry, and Multi-Variable Algebra &middot; Elementary Symmetric Substitution</div>
+<div class="ct-text"><p>Positive real numbers $x$, $y$, and $z$ satisfy the following equations:
+\[\begin{aligned} xyz&amp;=3,\\ (x-y)(y-z)(z-x)&amp;=4,\\ (x+y)(y+z)(z+x)&amp;=40.\end{aligned}\]
+Compute the minimum possible value for $x$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\sqrt[3]{\frac{3-\sqrt6}{3}}=\frac{1}{\sqrt[3]{3+\sqrt6}}$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Ratios of the variables)</h4>
+<p>Put $L=(x+y)(y+z)(z+x)$ and $K=(x-y)(y-z)(z-x)$. Expanding,
+\[L+K=2(xy^2+yz^2+zx^2)+2xyz,\qquad L-K=2(x^2y+y^2z+z^2x)+2xyz .\]
+With $L=40$, $K=4$, $xyz=3$ this gives $xy^2+yz^2+zx^2=19$ and $x^2y+y^2z+z^2x=15$. Divide by $xyz=3$ and set $u=\frac xy$, $v=\frac yz$, $w=\frac zx$ (so $uvw=1$):
+\[u+v+w=\frac yz+\frac zx+\frac xy=\frac{19}{3},\qquad uv+vw+wu=\frac1u+\frac1v+\frac1w=\frac xz+\frac yx+\frac zy=5 .\]
+So $u,v,w$ are the roots of $3t^3-19t^2+15t-3=(3t-1)(t^2-6t+3)$, namely $\frac13$ and $3\pm\sqrt6$, in some order.</p><p>Conversely, for any assignment of these three numbers to $u,v,w$ the positive reals $x=\sqrt[3]{3u/w}$, $y=x/u$, $z=y/v$ satisfy $xyz=3$ (since $x^3=xyz\cdot\frac xy\cdot\frac xz$), and the two sums above, hence $L=40$ and $K=4$. Since $x^3=3\cdot\frac{u}{w}$ with $u\ne w$ taken from $\{\frac13,3-\sqrt6,3+\sqrt6\}$, the minimum is at $u=\frac13$, $w=3+\sqrt6$:
+\[x^3=\frac{1}{3+\sqrt6}=\frac{3-\sqrt6}{3},\qquad x_{\min}=\boxed{\sqrt[3]{\frac{3-\sqrt6}{3}}}\approx 0.568 .\]</p>
+<h4>Solution 2 (Divide each factor by a variable)</h4>
+<p>Let $u=\frac xy$, $v=\frac yz$, $w=\frac zx$, so $uvw=1$. Dividing the two cubic equations by $xyz=3$, with $\frac{x+y}{y}=1+u$, $\frac{y+z}{z}=1+v$, $\frac{z+x}{x}=1+w$ (and the same with minus signs),
+\[(1+u)(1+v)(1+w)=\frac{40}{3},\qquad (u-1)(v-1)(w-1)=\frac43 .\]
+Write $s=u+v+w$ and $q=uv+vw+wu$. Expanding with $uvw=1$: $2+s+q=\frac{40}3$ and $1-q+s-1=\frac43$, so $s=\frac{19}3$ and $q=5$. Thus $u,v,w$ are the roots of $t^3-\frac{19}{3}t^2+5t-1$; since $t=\frac13$ is a root, the polynomial is $\frac13(3t-1)(t^2-6t+3)$, and the roots are $\frac13$, $3-\sqrt6\approx0.55$, $3+\sqrt6\approx5.45$.</p><p>Now $x^3=xyz\cdot\frac xy\cdot\frac xz=3\cdot\frac uw$. Every ordering of the three roots as $(u,v,w)$ gives positive reals $x,y,z$ (via $x^3=3u/w$, $y=x/u$, $z=y/v$) satisfying all three equations, because the equations depend only on $s$, $q$ and $uvw$. So the possible values of $x^3$ are the numbers $3u/w$ with $u\ne w$ from the root set, and the smallest is
+\[3\cdot\frac{1/3}{3+\sqrt6}=\frac1{3+\sqrt6}.\]
+Hence the minimum of $x$ is $\boxed{\frac{1}{\sqrt[3]{3+\sqrt6}}}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p8">
+<h3>Problem 8</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 22: Summation, Telescoping, and Discrete Transformation &middot; Telescoping Sums and Products</div>
+<div class="ct-text"><p>Let $a_0, a_1, a_2, \ldots$ be the unique sequence of nonnegative integers less than $397$ with $a_0=1$ and
+\[a_{n+1}(a_n+1)^2\equiv a_n \pmod{397}\]
+for all nonnegative integers $n$. Given that $a_{2026}=9$, compute the remainder when $a_0+a_1+\cdots+a_{2026}$ is divided by $397$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$279$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Reciprocals telescope)</h4>
+<p>Work modulo the prime $p=397$. If some $a_n$ were $0$, then $a_{n+1}(a_n+1)^2\equiv 0$ gives $a_{n+1}=0$, and all later terms would vanish, contradicting $a_{2026}=9$. So every $a_n$ ($0\le n\le 2026$) is invertible, and for $n\le 2025$ also $a_n+1\not\equiv 0$ (otherwise $a_n\equiv 0$). Hence
+\[\frac1{a_{n+1}}\equiv\frac{(a_n+1)^2}{a_n}=a_n+2+\frac1{a_n},\qquad\text{i.e.}\qquad a_n+2\equiv\frac1{a_{n+1}}-\frac1{a_n}.\]
+Summing over $n=0,\dots,2025$ telescopes:
+\[\sum_{n=0}^{2025}a_n+2\cdot 2026\equiv\frac1{a_{2026}}-\frac1{a_0}=\frac19-1 .\]
+Since $9\cdot 44=396\equiv-1$, we have $\frac19\equiv-44$. Therefore
+\[\sum_{n=0}^{2026}a_n\equiv -44-1-4052+9=-4088\equiv -4088+11\cdot 397=279\pmod{397},\]
+and the remainder is $\boxed{279}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p9">
+<h3>Problem 9</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Number Theory &middot; LPS VII, Chapter 22: Summation, Telescoping, and Discrete Transformation &middot; Discrete Summation Identities</div>
+<div class="ct-text"><p>Compute
+\[\sum_{k=1}^{\infty}\left(2^{-\lfloor 101k/1\rfloor}+2^{-\lfloor 101k/2\rfloor}+\cdots+2^{-\lfloor 101k/100\rfloor}\right).\]</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$50-\frac{50}{2^{101}-1}$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (How often each exponent occurs)</h4>
+<p>Group the terms by the exponent: the sum is $\sum_{n\ge1}c_n2^{-n}$, where $c_n$ is the number of pairs $(j,k)$ with $1\le j\le 100$, $k\ge1$ and $\lfloor 101k/j\rfloor=n$, i.e. $nj\le 101k&lt;(n+1)j$. For fixed $j$ the interval $[nj,nj+j)$ has length $j&lt;101$, so it contains at most one multiple of $101$; thus $c_n$ counts the $j$ for which $[nj,nj+j)$ contains a multiple of $101$. With $r$ the remainder of $nj$ mod $101$, this happens iff $r=0$ or $r&gt;101-j$.</p><p>Pair $j$ with $j'=101-j$. Then $nj'\equiv -nj$, so its remainder is $r'=0$ if $r=0$ and $r'=101-r$ otherwise; $j'$ counts iff $r=0$ or $101-r&gt;j$, i.e. $r&lt;101-j$. Hence:</p><ul class="ct-ul"><li><p>if $101\mid n$ (so $r=0$), both $j$ and $j'$ count;</p></li><li><p>if $r=101-j$, i.e. $101\mid (n+1)j$, i.e. $101\mid n+1$, neither counts;</p></li><li><p>otherwise exactly one of them counts.</p></li></ul><p>With $50$ pairs, $c_n=100$ if $101\mid n$, $c_n=0$ if $101\mid n+1$, and $c_n=50$ otherwise. Therefore
+\[\sum_{n\ge1}c_n2^{-n}=50\sum_{n\ge1}2^{-n}+50\sum_{m\ge1}2^{-101m}-50\sum_{m\ge1}2^{-101m+1}=50-50\sum_{m\ge1}2^{-101m}=\boxed{50-\frac{50}{2^{101}-1}} .\]</p>
+<h4>Solution 2 (Complementary floor sequences)</h4>
+<p>Fix $j\in\{1,\dots,50\}$ and put $j'=101-j$. We show that, among the numbers $\lfloor 101k/j\rfloor$ and $\lfloor 101k/j'\rfloor$ ($k\ge1$), each positive integer $N$ occurs once, except that multiples of $101$ occur twice and numbers $\equiv -1\pmod{101}$ do not occur.</p><p>For $x&gt;0$, the number of $k\ge1$ with $\lfloor 101k/j\rfloor\le N$, i.e. $k&lt;\frac{(N+1)j}{101}$, is $\lceil x\rceil-1$ with $x=\frac{(N+1)j}{101}$; for $j'$ it is $\lceil (N+1)-x\rceil-1$. If $x$ is not an integer, the total is $\lceil x\rceil+\lceil N+1-x\rceil-2=N$; if $x$ is an integer, i.e. $101\mid N+1$ (as $\gcd(j,101)=1$), the total is $N-1$. So the number of terms $\le N$ is $F(N)=N-[\,101\mid N+1\,]$, and the number of terms equal to $N$ is
+\[F(N)-F(N-1)=1-[\,101\mid N+1\,]+[\,101\mid N\,].\]
+Summing $2^{-N}$ over the terms of the pair $\{j,j'\}$ therefore gives
+\[\sum_{N\ge1}2^{-N}+\sum_{m\ge1}2^{-101m}-\sum_{m\ge1}2^{-(101m-1)}=1-\sum_{m\ge1}2^{-101m}=1-\frac1{2^{101}-1}.\]
+The $100$ values of $j$ form $50$ such pairs, so the whole sum is $50\left(1-\frac{1}{2^{101}-1}\right)=\boxed{50-\frac{50}{2^{101}-1}}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p10">
+<h3>Problem 10</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Number Theory &middot; LPS VII, Chapter 33: Residues, Quadratic Structure, and Higher Congruences &middot; Quadratic Residues</div>
+<div class="ct-text"><p>Let
+\[S=\sum_{k=0}^{2026}k\binom{2k}{k}2^k.\]
+Compute the remainder when $S$ is divided by $2027$. (Note that $2027$ is prime.)</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$289$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Central binomials modulo $p$)</h4>
+<p>Let $p=2027$ and $h=\frac{p-1}2=1013$, so $2h\equiv-1\pmod p$.</p><p><em>Step 1: $\binom{2k}{k}\equiv(-4)^k\binom hk\pmod p$ for $0\le k\le p-1$.</em> For $k&gt;h$ we have $2k\ge p&gt;k$, so $p$ divides $(2k)!$ but not $(k!)^2$, and both sides are $0$ (since $\binom hk=0$). For $k\le h$,
+\[\binom{2k}{k}=\frac{2^k\cdot 1\cdot3\cdot5\cdots(2k-1)}{k!},\qquad 2i-1\equiv-(p-2i+1)=-2(h+1-i),\]
+so $1\cdot3\cdots(2k-1)\equiv(-2)^k\,h(h-1)\cdots(h-k+1)$ and $\binom{2k}k\equiv 2^k(-2)^k\binom hk$, as claimed ($k!$ is invertible mod $p$).</p><p><em>Step 2: the sum.</em> Hence, with $\binom hk=0$ for $k&gt;h$,
+\[S\equiv\sum_{k=0}^{h}k\binom hk(-8)^k=h\cdot(-8)\cdot(1-8)^{h-1}=-8h\cdot 7^{h-1},\]
+using $\sum_k k\binom hk y^k=hy(1+y)^{h-1}$ and that $h-1$ is even. Since $2h\equiv-1$, $-8h\equiv 4$, so $S\equiv 4\cdot 7^{h-1}=\frac47\cdot 7^{h}$.</p><p><em>Step 3: Euler's criterion.</em> $7^h\equiv\left(\frac{7}{2027}\right)$. Both $7$ and $2027$ are $\equiv 3\pmod 4$, so quadratic reciprocity gives $\left(\frac{7}{2027}\right)=-\left(\frac{2027}{7}\right)=-\left(\frac{4}{7}\right)=-1$ (as $2027=7\cdot289+4$). Hence $S\equiv-\frac47\pmod{2027}$. Since $7\cdot 289=2023\equiv-4$, we get $-\frac47\equiv 289$, and the remainder is $\boxed{289}$.</p>
+</div></details>
+</section>
+<h2 class="ct-group" id="combinatorics">Combinatorics</h2>
+<section class="ct-problem" id="p11">
+<h3>Problem 1</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VII scale">E</span>Combinatorics &middot; LPS VII, Chapter 14: Inclusion-Exclusion and Overcounting Control &middot; Basic Inclusion-Exclusion</div>
+<div class="ct-text"><p>A math test has $4$ questions. The topic of each question is randomly and independently chosen from algebra, combinatorics, geometry, and number theory. Given that the math test has at least one algebra question, at least one combinatorics question, and at least one geometry question, compute the probability that this test has at least one number theory question.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\frac25$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Inclusion-exclusion)</h4>
+<p>All $4^4$ topic sequences are equally likely, so we count sequences. Let $X$ be the set of sequences containing algebra, combinatorics and geometry. By inclusion-exclusion over the three topics that might be missing,
+\[|X|=4^4-3\cdot 3^4+3\cdot 2^4-1^4=256-243+48-1=60 .\]
+A sequence in $X$ that also contains number theory uses all four topics in its four questions, so it is a permutation of the four topics: $4!=24$ sequences. The probability is $\frac{24}{60}=\boxed{\frac25}$.</p>
+<h4>Solution 2 (Shapes of the test)</h4>
+<p>A test containing algebra, combinatorics and geometry has one of two shapes. Either all four topics appear once each: $4!=24$ tests. Or number theory is absent, the topics are A, C, G and one of them appears twice: choose the repeated topic ($3$ ways) and arrange the multiset of four labels ($\frac{4!}{2!}=12$ ways), giving $36$ tests. All $4^4$ tests are equally likely, so the conditional probability is
+\[\frac{24}{24+36}=\boxed{\frac25}.\]</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p12">
+<h3>Problem 2</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VII scale">E</span>Combinatorics &middot; LPS VII, Chapter 47: Probabilistic Method and Random Structure &middot; Expectation Arguments</div>
+<div class="ct-text"><p>Jacopo is rolling a fair $4$-sided die with faces labeled $1$, $2$, $3$, and $4$. He starts with a score of $0$. Every time he rolls a face with label $i$, he adds $i$ to his score, and then replaces the label of that face with $0$. Compute Jacopo's expected score after $4$ rolls.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\frac{875}{128}$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Linearity of expectation)</h4>
+<p>Face $i$ contributes $i$ to the score exactly once if it is rolled at least once in the $4$ rolls (its label then becomes $0$), and $0$ otherwise. The chance that face $i$ is never rolled is $\left(\frac34\right)^4=\frac{81}{256}$. By linearity,
+\[E=\sum_{i=1}^4 i\left(1-\frac{81}{256}\right)=10\cdot\frac{175}{256}=\boxed{\frac{875}{128}} .\]</p>
+<h4>Solution 2 (Count distinct faces, then use symmetry)</h4>
+<p>The score is the sum of the original labels of the distinct faces that appeared. Let $D$ be the number of distinct faces among the $4$ rolls. Given $D=d$, every set of $d$ faces is equally likely by symmetry, so each face is in the set with probability $\frac d4$ and the conditional expected score is $\frac d4(1+2+3+4)=\frac{5d}{2}$. Hence $E=\frac52\,E[D]$.</p><p>Counting the $256$ roll sequences by $D$: $D=1$: $4$; $D=2$: $\binom42(2^4-2)=84$; $D=3$: $\binom43\cdot\binom42\cdot 3!=144$; $D=4$: $4!=24$. So
+\[E[D]=\frac{4+168+432+96}{256}=\frac{700}{256},\qquad E=\frac52\cdot\frac{700}{256}=\boxed{\frac{875}{128}} .\]</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p13">
+<h3>Problem 3</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 2: Fundamental Counting and Structured Enumeration &middot; Permutations and Arrangements</div>
+<div class="ct-text"><p>The numbers $1$, $2$, $3$, $4$, $5$, $6$, and $7$ are written on a blackboard in some order. Jacob repeatedly swaps numbers at adjacent positions on the blackboard until the numbers are sorted in ascending order. Compute the number of initial orderings for which it is possible that the number $4$ was included in a swap at most once.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$324$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Inversions involving 4)</h4>
+<p>Call $x$ <em>in conflict</em> with $4$ if $x&gt;4$ stands left of $4$ or $x&lt;4$ stands right of $4$ initially. An adjacent swap changes the relative order of only the two numbers swapped, and the final order is sorted, so each conflicting $x$ must be swapped with $4$ an odd number of times, in particular at least once; each swap involving $4$ handles one partner. So $4$ is in at least as many swaps as conflicts. Conversely bubble sort (swap adjacent pairs that are out of order) swaps each out-of-order pair exactly once, so $4$ can be in exactly that many swaps. We count orderings with at most one conflict.</p><p>Let $4$ be in position $i$ with $a$ larger numbers before it. Then $i-1-a$ smaller numbers are before it and $3-(i-1-a)$ smaller numbers after it, so the number of conflicts is $a+(4-i+a)=2a+4-i$.</p><ul class="ct-ul"><li><p>$0$ conflicts: $i=4$, $a=0$: left part $\{1,2,3\}$, right part $\{5,6,7\}$: $3!\cdot3!=36$.</p></li><li><p>$1$ conflict with $a=0$: $i=3$; two of $1,2,3$ on the left, the rest on the right: $\binom32\cdot2!\cdot4!=144$.</p></li><li><p>$1$ conflict with $a=1$: $i=5$; the left holds $1,2,3$ and one of $5,6,7$: $3\cdot4!\cdot2!=144$.</p></li></ul><p>(There are no other cases: at most three smaller numbers precede $4$, so $i-1-a\le3$, i.e. $i\le a+4$, and the number of conflicts is $2a+4-i\ge a$. So at most one conflict forces $a\le1$; for $a=0$ the count $4-i\le1$ with $i\le4$ gives $i\in\{3,4\}$, and for $a=1$ the count $6-i\le1$ with $i\le5$ gives $i=5$.) Total: $36+144+144=\boxed{324}$.</p>
+<h4>Solution 2 (Insert 4 into the other six)</h4>
+<p>As in any sorting by adjacent swaps, $4$ must be swapped at least once with every number it is out of order with (a larger number to its left or a smaller one to its right), and bubble sort achieves exactly this many swaps for $4$, because it swaps each out-of-order pair once. So we count orderings in which $4$ is out of order with at most one number.</p><p>Start from an ordering of $1,2,3,5,6,7$ and insert $4$ into one of the $7$ gaps. In the leftmost gap $4$ is out of order with the three small numbers: count $3$. Moving $4$ one gap to the right past a small number lowers the count by $1$; past a large number it raises it by $1$. So, reading the six numbers as steps D (small) and U (large), the count at gap $g$ is $3-(\#D-\#U)$ among the first $g$ steps, and we need $\#D-\#U\ge 2$ there.</p><p>Count pairs (step pattern with three D's and three U's, gap $g$) with this property: $g=2$: first two steps DD, then any arrangement of one D and three U's: $4$; $g=3$: DDD then UUU: $1$; $g=4$: three D's and one U in the first four, then UU: $4$; other $g$ give a difference of at most $1$. That is $9$ pairs, and each pattern corresponds to $3!\cdot3!$ orderings of the six numbers. Total $9\cdot 36=\boxed{324}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p14">
+<h3>Problem 4</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 47: Probabilistic Method and Random Structure &middot; Expectation Arguments</div>
+<div class="ct-text"><p>Sarunyu has a stick of length $1$ with one endpoint marked in red. Every minute, he picks one of his sticks uniformly at random and breaks it into two halves of equal length. Compute the expected length of the stick with the red endpoint after $5$ minutes.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\frac{63}{256}$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Independent halving factors)</h4>
+<p>During minute $t$ ($t=1,\dots,5$) there are $t$ sticks, one of which carries the red endpoint, and the chosen stick is uniform among them. If the red stick is chosen it is halved (the red end stays on one half); otherwise its length is unchanged. So the red stick's length is multiplied by a factor $F_t$ with $P(F_t=\frac12)=\frac1t$, $P(F_t=1)=1-\frac1t$, and these choices are independent. Hence
+\[E\Bigl[\prod_{t=1}^5F_t\Bigr]=\prod_{t=1}^{5}\Bigl(1-\frac{1}{2t}\Bigr)=\frac12\cdot\frac34\cdot\frac56\cdot\frac78\cdot\frac9{10}=\frac{945}{3840}=\boxed{\frac{63}{256}} .\]</p>
+<h4>Solution 2 (A random point stays with the red end)</h4>
+<p>Pick a point $U$ uniformly on the original stick, independent of everything. The expected length of the red stick equals the probability that $U$ lies on the red stick at the end (condition on the final red stick, whose length is exactly the conditional probability).</p><p>Track the event that $U$ is still on the red stick. Suppose after $t-1$ minutes it is, and condition on the current sticks: then $U$ is uniform on the red stick. In minute $t$ (with $t$ sticks present) the red stick is chosen with probability $\frac1t$, and then $U$ stays with the red half with probability $\frac12$. So the event survives minute $t$ with probability $1-\frac1t\cdot\frac12$, and after a survival $U$ is again uniform on the (new) red stick. Multiplying,
+\[P=\prod_{t=1}^5\frac{2t-1}{2t}=\frac{1\cdot3\cdot5\cdot7\cdot9}{2\cdot4\cdot6\cdot8\cdot10}=\frac{\binom{10}{5}}{4^5}=\frac{252}{1024}=\boxed{\frac{63}{256}} .\]</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p15">
+<h3>Problem 5</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 27: Bijections and Structural Equivalence &middot; Explicit Bijections</div>
+<div class="ct-text"><p>Let $S$ be the set of positive integer divisors of $10^9$. Compute the number of subsets $T$ of $S$ such that</p><ul class="ct-ul"><li><p>for every element $s$ of $S$, exactly one of $s$ and $10^9/s$ is in $T$, and</p></li><li><p>for every element $t$ of $T$, all positive integer divisors of $t$ are in $T$.</p></li></ul></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$252$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Column heights)</h4>
+<p>Write each divisor as $2^a5^b$ with $0\le a,b\le 9$, so $S$ is a $10\times10$ grid and $10^9/s$ corresponds to $(9-a,9-b)$. The second condition says $T$ is closed downward: if $(a,b)\in T$ then $(a',b')\in T$ whenever $a'\le a$, $b'\le b$. Such a set is described by the column heights $h_a=\#\{b:(a,b)\in T\}$: column $a$ of $T$ is $\{0,\dots,h_a-1\}$, and $10\ge h_0\ge h_1\ge\dots\ge h_9\ge 0$.</p><p>The first condition says $(a,b)\in T\iff(9-a,9-b)\notin T$, i.e. $b&lt;h_a\iff 9-b\ge h_{9-a}$, i.e. $b&lt;h_a\iff b\le 9-h_{9-a}$, i.e. $h_a=10-h_{9-a}$ for all $a$.</p><p>So $T$ is determined by $h_0\ge\dots\ge h_4$, with $h_5,\dots,h_9$ forced to be $10-h_4,\dots,10-h_0$; the whole sequence is nonincreasing iff $h_4\ge 10-h_4$, i.e. $h_4\ge5$. The number of nonincreasing sequences $10\ge h_0\ge\dots\ge h_4\ge 5$ (five terms from six values) is $\binom{5+6-1}{5}=\boxed{252}$.</p>
+<h4>Solution 2 (A symmetric staircase)</h4>
+<p>Draw the divisors $2^a5^b$ ($0\le a,b\le9$) as unit cells of a $10\times10$ board. A set $T$ closed under taking divisors is a &ldquo;staircase&rdquo; anchored at the corner cell $(0,0)$, and its boundary with the complement is a lattice path of $20$ unit steps (ten in each direction) across the board from one side corner to the opposite one; different sets give different paths and every such path gives such a set.</p><p>The map $s\mapsto 10^9/s$ is the half-turn of the board about its centre. The first condition says exactly that the half-turn maps $T$ onto the complement of $T$ (no cell is fixed, as the centre is not a cell centre). The half-turn maps the boundary of $T$ to the boundary of its image, so the condition holds iff the boundary path is mapped to itself. Rotating a monotone path by $180^\circ$ and reading it from its new start reverses the sequence of steps and keeps each step's type, so the path is invariant iff its step sequence is a palindrome.</p><p>A palindrome of length $20$ is determined by its first $10$ steps, which must contain $5$ steps of each kind (so that the whole path has $10$ of each). Hence there are $\binom{10}{5}=\boxed{252}$ sets $T$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p16">
+<h3>Problem 6</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 17: Sequences, Recurrences, and Discrete Dynamics &middot; Nonlinear Recurrences</div>
+<div class="ct-text"><p>Derek currently owes $\pi$ units of a currency called Money of Indiscrete Type, or MIT for short. Every day, the following happens:</p><ul class="ct-ul"><li><p>He flips a fair coin to decide how much of his debt to pay. If he flips heads, he decreases his debt by $1$ MIT. If he flips tails, he decreases his debt by $2$ MITs. If Derek's debt ever becomes nonpositive, Derek becomes debt-free.</p></li><li><p>Afterwards, his remaining debt doubles.</p></li></ul><p>Compute the probability that Derek ever becomes debt-free. (MITs are continuous, so the debt is never rounded.)</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\frac{4-\pi}{2}$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (A self-similar probability)</h4>
+<p>Let $p(x)$ be the probability of becoming debt-free from debt $x&gt;0$.</p><p>If $x\le 2$, a tails frees him; a heads (when $x&gt;1$) leads to debt $2(x-1)\le 2$ again. So from any debt in $(0,2]$ he stays in $(0,2]$ until the first tails, which comes eventually with probability $1$: $p(x)=1$ for $0&lt;x\le2$. If $x\ge4$, the new debt is $2(x-1)&gt;4$ or $2(x-2)\ge4$, so it never drops below $4$: $p(x)=0$.</p><p>For $2&lt;x&lt;4$ put $v=\frac{4-x}{2}\in(0,1)$ and $P(v)=p(x)$; extend by $P(v)=0$ for $v\le0$ and $P(v)=1$ for $v\ge1$, matching the two facts above. A tails gives debt $2x-4$, i.e. new $v'=2v$; a heads gives debt $2x-2$, i.e. $v'=2v-1$. So
+\[P(v)=\tfrac12P(2v)+\tfrac12P(2v-1)\qquad(0&lt;v&lt;1).\]
+If $v&lt;\frac12$ this reads $P(v)=\frac12P(2v)$; if $v\ge\frac12$ it reads $P(v)=\frac12+\frac12P(2v-1)$. Writing $v=0.b_1b_2b_3\ldots$ in binary, both cases say $P(v)=\frac{b_1}{2}+\frac12P(T v)$, where $Tv=0.b_2b_3\ldots$ (when $2v=1$ or $2v-1=0$ the boundary values $P(1)=1$, $P(0)=0$ give the same). Iterating $N$ times,
+\[P(v)=\sum_{i=1}^{N}\frac{b_i}{2^i}+\frac{1}{2^N}P(T^Nv),\]
+and letting $N\to\infty$ (as $0\le P\le1$) gives $P(v)=v$. For $x=\pi$: $p(\pi)=\boxed{\frac{4-\pi}{2}}\approx 0.429$.</p>
+<h4>Solution 2 (Comparing with a random binary number)</h4>
+<p>Let $v=\frac{4-\pi}{2}\approx0.429$. While the debt $x$ is in $(2,4)$, write $v_n=\frac{4-x}{2}$ after $n$ days. A tails changes the debt to $2x-4$, i.e. $v\mapsto 2v$; a heads changes it to $2x-2$, i.e. $v\mapsto 2v-1$. If the debt reaches $(0,2]$ (that is, $v_n\ge1$) he is eventually debt-free with probability $1$ (from $x\le2$ every tails frees him and every heads keeps the debt at most $2$). If the debt reaches $[4,\infty)$ (that is, $v_n\le0$) it never goes below $4$ again, so he is never free.</p><p>Let $h_i=1$ if day $i$ is heads and $0$ if tails, and let $U=0.h_1h_2h_3\ldots$ in binary: $U$ is uniform on $[0,1]$. By induction, as long as the process is in the middle range,
+\[v_n=2^n\bigl(v-0.h_1h_2\ldots h_n\bigr).\]
+So the middle range persists while $0.h_1\ldots h_n&lt;v&lt;0.h_1\ldots h_n+2^{-n}$, i.e. while $v$ lies inside the dyadic interval of length $2^{-n}$ that contains $U$. The first time it does not, either $v\ge$ the right end (win, $v_n\ge1$) or $v\le$ the left end (loss, $v_n\le0$). Since $v$ is irrational it differs from $U$ almost surely, and then he wins exactly when $U&lt;v$. Therefore the probability is $P(U&lt;v)=v=\boxed{\frac{4-\pi}{2}}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p17">
+<h3>Problem 7</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 52: Advanced Combinatorial Structure and Hybrid Methods &middot; Combinatorics with Geometric Insight</div>
+<div class="ct-text"><p>Let $S$ be the set of vertices of a right prism whose bases are regular decagons $A_1A_2\ldots A_{10}$ and $B_1B_2\ldots B_{10}$. A plane, not passing through any vertex of $S$, partitions the vertices of $S$ into two sets, one of which is $M$. Compute the number of possible sets $M$ that can arise out of such a partition.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$1574$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Reduce to caps of one decagon)</h4>
+<p><em>Reading of the statement.</em> A plane through no vertex may also miss the prism altogether; it still splits the vertices into the two sides of the plane, one of them empty, so $M=\emptyset$ and $M=S$ are counted (the official answer counts them too; without them the count would be $1572$).</p><p>Let $V_1,\dots,V_{10}$ be the vertices of a regular decagon in the plane $z=0$, with $B_i=(V_i,0)$ and $A_i=(V_i,h)$. An open half-space is $\{(v,z):u\cdot v+\gamma z&gt;c\}$ with $u\in\mathbb R^2$, $\gamma,c\in\mathbb R$ not all of $u,\gamma$ zero. The set $M$ of vertices on one side of a plane avoiding all vertices is such a half-space intersected with $S$. Its top part is $\{i:u\cdot V_i&gt;c-\gamma h\}$ and its bottom part is $\{i:u\cdot V_i&gt;c\}$.</p><p>Call a subset $X$ of $\{1,\dots,10\}$ a <em>$u$-cap</em> if $X=\{i:u\cdot V_i&gt;t\}$ for some real $t$ ($\emptyset$ and the full set are $u$-caps for every $u$). Since $c-\gamma h$ and $c$ can be chosen independently, the possible $M$ correspond exactly to ordered pairs (top part, bottom part) $=(X,Y)$ such that $X$ and $Y$ are $u$-caps for one common $u$ (if $u=0$, both parts are $\emptyset$ or everything, which is also covered); thresholds avoiding the finitely many values $u\cdot V_i$ give a plane through no vertex. For a fixed $u$ the caps are nested, so $X\subseteq Y$ or $Y\subseteq X$.</p><p><em>Which caps occur.</em> Put the vertices at angles $36^\circ i$. A cap with $k$ elements, $1\le k\le 9$, is a set of $k$ consecutive vertices (an arc). For an arc with middle direction $\mu$, its end vertices are at angular distance $18(k-1)^\circ$ from $\mu$ and the nearest vertices outside it at $18(k+1)^\circ$. If $u$ points in direction $\mu+\delta$, the arc is a cap iff every arc vertex is closer in angle to $u$ than every outside vertex, i.e. $18(k-1)+|\delta|&lt;18(k+1)-|\delta|$, i.e. $|\delta|&lt;18^\circ$. So each arc has an open <em>window</em> of directions of width $36^\circ$ centred at its middle direction, and two arcs are caps for a common $u$ iff their windows overlap, i.e. their middle directions differ by less than $36^\circ$.</p><p><em>Counting.</em> There are $90$ arcs with $1\le k\le9$, plus $\emptyset$ and the full set.</p><ul class="ct-ul"><li><p>$X=Y$: $92$ pairs.</p></li><li><p>$X\subsetneq Y$, both proper nonempty arcs: let $Y$ have $j$ vertices and $X$ have $i&lt;j$ vertices at offset $t$ inside $Y$ ($0\le t\le j-i$). The middle directions differ by $36\,|t-\frac{j-i}{2}|$ degrees, which is less than $36$ for exactly one $t$ if $j-i$ is even and two values if $j-i$ is odd. For fixed $j$ the number of $X$ is $\sum_{d=1}^{j-1}(1\text{ or }2)$, which is $2,3,5,6,8,9,11,12$ for $j=2,\dots,9$, total $56$; with $10$ choices of $Y$ for each size, $560$ pairs.</p></li><li><p>$X=\emptyset$ with $Y\ne\emptyset$: $91$; $Y$ the full set with $X$ a proper nonempty arc: $90$.</p></li></ul><p>So there are $560+91+90=741$ nested pairs with $X\subsetneq Y$, the same number with $Y\subsetneq X$, and the total is $92+2\cdot741=\boxed{1574}$. This includes the pairs $(\emptyset,\emptyset)$ and $(\text{all},\text{all})$, i.e. $M=\emptyset$ and $M=S$, which come from planes missing the prism.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p18">
+<h3>Problem 8</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 52: Advanced Combinatorial Structure and Hybrid Methods &middot; Combinatorics with Geometric Insight</div>
+<div class="ct-text"><p>A regular hexagon with side length $4$ is subdivided into a lattice of $96$ equilateral triangles of side length $1$. Let $S$ be the set of all vertices of this lattice. Compute the number of nondegenerate triangles with vertices in $S$ that contain the center of the hexagon strictly in their interior.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$6992$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Count the triples in a half-plane)</h4>
+<p>Let $O$ be the centre. The $61$ points of $S$ are $O$ and $60$ others, and $S$ is symmetric under the half-turn about $O$. Group the $60$ points by the ray from $O$ through them. Using unit vectors $e_1,e_2$ at $60^\circ$, the points in the closed sector between $e_1$ and $e_2$ are $pe_1+qe_2$ with $p,q\ge0$ and $p+q\le4$; the ray through such a point is determined by the primitive vector $(p,q)/\gcd(p,q)$, and a ray whose primitive vector has $p+q=m$ contains $\lfloor 4/m\rfloor$ points of $S$. In each of the six sectors (counting the ray along $e_1$ but not the one along $e_2$) the rays are: $e_1$ with $4$ points; $e_1+e_2$ with $2$ points; $2e_1+e_2$, $e_1+2e_2$, $3e_1+e_2$, $e_1+3e_2$ with $1$ point each. So there are $36$ rays: $6$ with $4$ points, $6$ with $2$ points and $24$ with $1$ point ($24+12+24=60$), and the opposite ray of each ray carries the same number of points.</p><p>A triangle whose vertices are in $S$ contains $O$ strictly inside iff $O$ is not a vertex and the three vertices do <em>not</em> lie in one closed half-plane bounded by a line through $O$. (If $O$ is strictly inside, every line through $O$ has vertices strictly on both sides; otherwise a supporting line through $O$ puts the closed triangle on one side.) Degenerate triples lie on a line, hence in such a half-plane, so the answer is $\binom{60}{3}$ minus the number $Z$ of triples of non-centre points lying in a closed half-plane through $O$.</p><p>For such a triple, call a ray $\rho$ through one of its points a <em>start</em> if all three points lie in the closed half-plane swept counterclockwise from $\rho$ through $180^\circ$. Each such triple has exactly one start, except triples lying on one line through $O$ with points on both opposite rays, which have two. For a ray $\rho$ with $m$ points, the points strictly inside that half-plane or on the opposite ray number $\frac{60-2m}{2}+m=30$ (half of the points off the line, by symmetry, plus the opposite ray). The triples with start $\rho$ are those using at least one point of $\rho$ and the rest from these $30$: $\binom{m+30}{3}-\binom{30}{3}$. Hence
+\[Z=6\Bigl[\tbinom{34}3-\tbinom{30}3\Bigr]+6\Bigl[\tbinom{32}3-\tbinom{30}3\Bigr]+24\Bigl[\tbinom{31}3-\tbinom{30}3\Bigr]-E,\]
+where $E$ corrects the double starts: for a line with $m$ points on each ray it is $\binom{2m}{3}-2\binom m3$, giving $3\cdot48+3\cdot4+12\cdot0=156$. Thus
+\[Z=6\cdot1924+6\cdot900+24\cdot435-156=27228,\qquad \binom{60}{3}-Z=34220-27228=\boxed{6992}.\]</p>
+<h4>Solution 2 (Each good triangle hides three &ldquo;narrow triples)</h4>
+<p>Let $O$ be the centre. The $61$ points of $S$ are $O$ and $60$ others, and $S$ is symmetric under the half-turn about $O$. Group the $60$ points by the ray from $O$ through them. Using unit vectors $e_1,e_2$ at $60^\circ$, the points in the closed sector between $e_1$ and $e_2$ are $pe_1+qe_2$ with $p,q\ge0$ and $p+q\le4$; the ray through such a point is determined by the primitive vector $(p,q)/\gcd(p,q)$, and a ray whose primitive vector has $p+q=m$ contains $\lfloor 4/m\rfloor$ points of $S$. In each of the six sectors (counting the ray along $e_1$ but not the one along $e_2$) the rays are: $e_1$ with $4$ points; $e_1+e_2$ with $2$ points; $2e_1+e_2$, $e_1+2e_2$, $3e_1+e_2$, $e_1+3e_2$ with $1$ point each. So there are $36$ rays: $6$ with $4$ points, $6$ with $2$ points and $24$ with $1$ point ($24+12+24=60$), and the opposite ray of each ray carries the same number of points.</p><p>Call a triple of non-centre points <em>spread</em> if its three rays are distinct. A spread triple is of exactly one of three kinds: (i) the triangle contains $O$ strictly inside (all three angular gaps between consecutive rays are less than $180^\circ$); (ii) two of the rays are opposite; (iii) all three rays lie in an open half-plane (one gap exceeds $180^\circ$), a <em>narrow</em> triple. Triples that are not spread never contain $O$ strictly inside (two vertices on one ray put $O$ outside or on an edge line), so the answer is the number $T$ of kind (i).</p><p><em>Claim: there are exactly $3T$ narrow triples.</em> Take a triangle $PQR$ of kind (i) and one of its vertices, say $R$. The point $R'=-R$ is in $S$, and since $O$ is strictly inside, the ray of $R'$ lies strictly inside the angle $\angle POQ$ (which is less than $180^\circ$). So $\{P,Q,R'\}$ is narrow with $R'$ as its middle point. Conversely, a narrow triple with middle point $X$ and outer points $P,Q$ gives the kind (i) triangle $PQ(-X)$: its gaps are $\angle POQ&lt;180^\circ$ and two angles of the form $180^\circ-(\text{part of }\angle POQ)&lt;180^\circ$. These maps are inverse, so (triangle, chosen vertex) pairs correspond to narrow triples.</p><p><em>Counting.</em> Spread triples: from $\binom{60}3=34220$ remove those with at least two points on one ray: $6\bigl[\binom42\cdot56+\binom43\bigr]+6\bigl[\binom22\cdot58\bigr]=2040+348=2388$, leaving $31832$. Kind (ii): pick an opposite pair of rays with $m$ points each and a point on another ray: $3\cdot16\cdot52+3\cdot4\cdot56+12\cdot1\cdot58=2496+672+696=3864$. So $T+3T=31832-3864=27968$ and $T=\boxed{6992}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p19">
+<h3>Problem 9</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 31: Extremal Principle and Bounding Arguments &middot; Bounding and Limiting Arguments</div>
+<div class="ct-text"><p>Let $A_1, A_2, A_3, \ldots$ be a sequence of finite nonempty sets of positive integers. Given that $|A_i\cap A_j|=\gcd(i,j)$ for all (not necessarily distinct) positive integers $i$ and $j$, compute the minimum possible value of
+\[\sum_{d\mid 250}\max A_d,\]
+where the sum ranges over all positive integer divisors $d$ of $250$.</p><p>(For a finite nonempty set $S$, we define $\max S$ as the largest element of $S$.)</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$499$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Pair up the divisors)</h4>
+<p>Taking $i=j$ gives $|A_i|=i$. For divisors $d$ of $250=2\cdot5^3$ group the eight sets as
+\[A_1,\quad (A_2,A_5),\quad (A_{10},A_{25}),\quad (A_{50},A_{125}),\quad A_{250}.\]
+A set of $k$ positive integers has maximum at least $k$, so $\max A_1\ge1$ and $\max A_{250}\ge250$. For a pair $(A_{2\cdot5^k},A_{5^{k+1}})$ with $k=0,1,2$, the union has
+\[2\cdot5^k+5^{k+1}-\gcd(2\cdot5^k,5^{k+1})=6\cdot5^k\]
+elements, so the larger of the two maxima is at least $6\cdot5^k$, while the other is at least the size of its own set, which is at least $\min(2\cdot5^k,5^{k+1})=2\cdot5^k$. So each pair contributes at least $8\cdot5^k$, and
+\[\sum_{d\mid250}\max A_d\ge 1+8+40+200+250=499 .\]
+<em>Construction.</em> For every positive integer $d$ choose a block $B_d$ of $\varphi(d)$ positive integers, all blocks disjoint, with
+\[B_1=\{1\},\ B_2=\{2\},\ B_5=\{3,\dots,6\},\ B_{10}=\{7,\dots,10\},\ B_{25}=\{11,\dots,30\},\]
+\[B_{50}=\{31,\dots,50\},\ B_{125}=\{51,\dots,150\},\ B_{250}=\{151,\dots,250\},\]
+and all other blocks above $250$. Let $A_n=\bigcup_{d\mid n}B_d$. Then $|A_i\cap A_j|=\sum_{d\mid\gcd(i,j)}\varphi(d)=\gcd(i,j)$, and the maxima over $d\mid250$ are $1,2,6,10,30,50,150,250$, with sum $\boxed{499}$.</p>
+<h4>Solution 2 (The sets are forced to be unions of blocks)</h4>
+<p><em>Structure.</em> From $i=j$ we get $|A_i|=i$. If $d\mid n$ then $|A_d\cap A_n|=d=|A_d|$, so $A_d\subseteq A_n$. For any $i,j$ the set $A_{\gcd(i,j)}$ lies in $A_i\cap A_j$ and has the same size, so $A_i\cap A_j=A_{\gcd(i,j)}$. Restrict to $d\mid250$ and let $U=A_{250}$. For $x\in U$ the divisors $d$ of $250$ with $x\in A_d$ are closed under $\gcd$, so they have a least element $\ell(x)$ (in the divisibility order), and $x\in A_n\iff\ell(x)\mid n$. With $B_d=\{x:\ell(x)=d\}$ we get $A_n=\bigcup_{d\mid n}B_d$ (disjoint), and Möbius inversion of $|A_n|=\sum_{d\mid n}|B_d|=n$ gives $|B_d|=\varphi(d)$: sizes $1,1,4,4,20,20,100,100$ for $d=1,2,5,10,25,50,125,250$.</p><p><em>Optimisation.</em> Now list the $250$ elements of $U$ in increasing order. For $n\mid250$, if the largest element of $A_n$ is the $k$th in this list, then $\max A_n\ge k$ (it exceeds $k-1$ distinct positive integers), and $k\ge|A_n|$ because all of $A_n$ has appeared by then. For a pair $(2\cdot5^k,5^{k+1})$, the set whose largest element comes later in the list has all of $A_{2\cdot5^k}\cup A_{5^{k+1}}$ listed by then, so its maximum is at least $|A_{2\cdot5^k}\cup A_{5^{k+1}}|=6\cdot5^k$, and the other maximum is at least the size of its own set. So
+\[\sum\max A_d\ge 1+(2+6)+(10+30)+(50+150)+250=499,\]
+and listing the blocks in the order $B_1,B_2,B_5,B_{10},B_{25},B_{50},B_{125},B_{250}$ (positions $1$; $2$; $3$&ndash;$6$; $7$&ndash;$10$; $11$&ndash;$30$; $31$&ndash;$50$; $51$&ndash;$150$; $151$&ndash;$250$) gives the maxima $1,2,6,10,30,50,150,250$. The remaining sets $A_n$, $n\nmid250$, are built from further disjoint blocks of sizes $\varphi(d)$ placed above $250$, which keeps $|A_i\cap A_j|=\sum_{d\mid\gcd(i,j)}\varphi(d)=\gcd(i,j)$. The minimum is $\boxed{499}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p20">
+<h3>Problem 10</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-S" title="Superhard, on the LPS VII scale">S</span>Combinatorics &middot; LPS VII, Chapter 27: Bijections and Structural Equivalence &middot; Implicit or Structural Correspondence</div>
+<div class="ct-text"><p>Let $S$ be the set of all ordered pairs $(x,y)$ of nonnegative integers $0\le x\le 19$ and $0\le y\le 2$. Compute the number of permutations $(x_1,y_1), (x_2,y_2), \ldots, (x_{60},y_{60})$ of the elements of $S$ such that</p><ul class="ct-ul"><li><p>$y_1=2$ and $y_{60}=0$;</p></li><li><p>for all nonnegative integers $1\le i\le 59$, exactly one of the following holds:</p><ul class="ct-ul"><li><p>$x_i=x_{i+1}$ and $|y_i-y_{i+1}|=1$,</p></li><li><p>$y_i=y_{i+1}$ and $x_i-x_{i+1}$ is $-1$ or $19$.</p></li></ul></li></ul></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$20460$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Unroll the cylinder)</h4>
+<p>Think of the pairs as cells of a cylinder: $20$ columns $x\in\mathbb Z/20$ and rows $y=0,1,2$. Allowed steps are up or down within a column, or one column to the right ($x\to x+1$, with $19\to0$). We count Hamiltonian paths from row $2$ to row $0$. By rotating the columns, the number of paths starting in column $c$ does not depend on $c$; we count paths starting at $(0,2)$ and multiply by $20$. Write $n=20$.</p><p><em>Unrolling.</em> Lift the path to the strip $\mathbb Z\times\{0,1,2\}$, starting at $(0,2)$; it moves right $h$ times and ends in column $h$. Call $P$ the lifted path and $P_k=P+(kn,0)$ its translates. Since the path visits every cell of the cylinder once, the $P_k$ are pairwise disjoint and cover every lattice point of the strip. Each $P_k$ meets each column of its range in one vertical run (it never returns to a column). If $P_k$ and $P_{k+1}$ both meet a column, one run lies above the other, and the order cannot change from a column to the next (the two horizontal steps would cross). $P_{k+1}$ starts at the top cell of column $(k+1)n$, so $P_{k+1}$ is above $P_k$ throughout. Consequently, for $0\le u&lt;n$ the column $u$ is cut, top to bottom, into $c(u)=\lfloor (h-u)/n\rfloor+1$ intervals, and the run of $P$ in column $u+jn$ is the $(j+1)$st interval from the top. Conversely, any $h$ and any such cuts give a Hamiltonian path, provided consecutive runs connect: each run is entered at one end of its interval and left at the other, the first run is entered at row $2$, the exit row of each run is the entry row of the next, and the last run is left at row $0$.</p><p>Write $h=qn+s$ with $0\le s&lt;n$. Then $c(u)=q+1$ for $u\le s$ and $c(u)=q$ for $u&gt;s$. Every column must be covered and has only $3$ cells, so every $c(u)\in\{1,2,3\}$; hence either $q=0$ and $s=n-1$, i.e. $h=n-1$ (all $c=1$), or $q=1$ ($c=2$ for $u\le s$, $c=1$ for $u&gt;s$), or $q=2$ ($c=3$ for $u\le s$, $c=2$ for $u&gt;s$, $s\le n-2$, since all $c=3$ would allow no vertical step at all). A column cut in two parts is of type $\mathsf A$ (parts $\{2\}$, $\{0,1\}$) or $\mathsf B$ (parts $\{1,2\}$, $\{0\}$).</p><p><em>$h=n-1$.</em> Every run is a full column, so the exit rows alternate $0,2,0,\dots$; the last ($n$th) run exits at row $2$ since $n$ is even. Impossible.</p><p><em>$q=1$.</em> The runs are: tops of columns $0..s$, then full columns $s+1..n-1$ (there are $f=n-1-s$ of them), then bottoms of columns $0..s$. In the top phase the row stays $2$ through $\mathsf A$ and switches $2\leftrightarrow1$ through $\mathsf B$; in the bottom phase it stays $0$ through $\mathsf B$ and switches $0\leftrightarrow1$ through $\mathsf A$. A full column must be entered at row $0$ or $2$, and the bottom phase entered at row $0$ or $1$. If $f\ge1$: the top phase must end at row $2$ (even number of $\mathsf B$'s); then $f$ must be odd to reach row $0$; then the bottom phase starts and must end at row $0$ (even number of $\mathsf A$'s). An $\mathsf A$ needs an even number of $\mathsf B$'s before it (top phase) and a $\mathsf B$ needs an even number of $\mathsf A$'s before it (bottom phase): so the word in $\mathsf A,\mathsf B$ of length $m=s+1$ is a product of blocks $\mathsf{AA}$ and $\mathsf{BB}$, and $m$ is even; but $m=n-f$ is odd. No paths. If $f=0$ ($m=n$): the top phase ends at row $1$ (odd number of $\mathsf B$'s), the bottom phase starts at row $1$ and ends at $0$ (odd number of $\mathsf A$'s); now an $\mathsf A$ needs an even number of $\mathsf B$'s before it and a $\mathsf B$ an odd number of $\mathsf A$'s before it. Tracking the parities $(\#\mathsf A,\#\mathsf B)\bmod 2$: from $(0,0)$ only $\mathsf A$, to $(1,0)$; from $(1,0)$ either $\mathsf A$ back to $(0,0)$ or $\mathsf B$ to $(1,1)$; from $(1,1)$ only $\mathsf B$ back to $(1,0)$. Walks of length $n$ from $(0,0)$ to $(1,1)$ on this path of three states: every odd-numbered step lands on $(1,0)$, every even-numbered step chooses $(0,0)$ or $(1,1)$, and the last must be $(1,1)$: $2^{n/2-1}$ words.</p><p><em>$q=2$.</em> Columns $0..s$ are three singletons, used by the three laps; the other $m=n-1-s\ge1$ columns have types $\mathsf A/\mathsf B$. Lap $1$ runs along row $2$ through columns $0..s$, then through the tops of columns $s+1..n-1$, and must end at row $1$ (to continue along the middle singletons); lap $2$ runs along row $1$, through the bottoms, and must end at row $0$; lap $3$ runs along row $0$. These are exactly the conditions of the case $f=0$ above for a word of length $m$, giving $2^{m/2-1}$ words for even $m$ and none for odd $m$. Summing over $m=2,4,\dots,n-2$: $1+2+\dots+2^{n/2-2}=2^{n/2-1}-1$.</p><p><em>Total.</em> Paths from $(0,2)$: $2^{n/2-1}+2^{n/2-1}-1=2^{n/2}-1=1023$. Over all $20$ starting columns: $20\cdot1023=\boxed{20460}$.</p>
+</div></details>
+</section>
+<h2 class="ct-group" id="geometry">Geometry</h2>
+<section class="ct-problem" id="p21">
+<h3>Problem 1</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VII scale">E</span>Geometry &middot; LPS VII, Chapter 7: Congruence, Rigidity, and Isometric Structure &middot; Triangle Congruence and Exact Matching</div>
+<div class="ct-text"><p>Let $ABCD$ and $WXYZ$ be squares such that $W$ lies on segment $\overline{AD}$, $X$ lies on segment $\overline{AB}$, and points $Y$ and $Z$ lie strictly inside $ABCD$. Given that $AW=4$, $AX=5$, and $AB=12$, compute the area of triangle $\triangle BCY$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$18$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Coordinates)</h4>
+<div class="ct-fig"><img style="width:286px" src="/assets/contests/2026-27/hmmt-feb-ind-21_s1.svg" alt="Figure for the solution"></div>
+<p>Put $A=(0,0)$, $B=(12,0)$, $C=(12,12)$, $D=(0,12)$, so $W=(0,4)$ and $X=(5,0)$. Then $\overrightarrow{WX}=(5,-4)$, and $Y=X+(4,5)$, $Z=W+(4,5)$ (the other choice $X+(-4,-5)$ leaves the big square). So $Y=(9,5)$ and $Z=(4,9)$, both strictly inside $ABCD$. Triangle $BCY$ has base $BC=12$ on the line $x=12$ and height $12-9=3$, so its area is $\frac12\cdot12\cdot3=\boxed{18}$.</p>
+<h4>Solution 2 (Congruent right triangles)</h4>
+<p>Let $F$ be the foot of the perpendicular from $Y$ to $AB$. In the right triangles $WAX$ and $XFY$ we have $WX=XY$ and
+\[\angle FXY=180^\circ-90^\circ-\angle AXW=\angle AWX,\]
+so the triangles are congruent: $XF=AW=4$ and $FY=AX=5$. Hence $AF=AX+XF=9$, and the distance from $Y$ to the side $BC$ is $AB-AF=3$. The area of $\triangle BCY$ is $\frac12\cdot BC\cdot 3=\boxed{18}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p22">
+<h3>Problem 2</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VII scale">E</span>Geometry &middot; LPS VII, Chapter 28: Area Methods and Geometric Measurement &middot; Decomposition and Rearrangement of Regions</div>
+<div class="ct-text"><p>Let $HORSE$ be a convex pentagon such that $\angle EHO=\angle ORS=\angle SEH=90^\circ$ and $\angle HOR=\angle RSE=135^\circ$. Given that $HO=20$, $SE=26$, and $OS=10$, compute the area of $HORSE$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$191$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Coordinates and the shoelace formula)</h4>
+<div class="ct-fig"><img style="width:347px" src="/assets/contests/2026-27/hmmt-feb-ind-22_s1.svg" alt="Figure for the solution"></div>
+<p>Walk around the pentagon $H\to O\to R\to S\to E$ counterclockwise. The exterior angles are $90^\circ$ at $H,R,E$ and $45^\circ$ at $O,S$. Put $H=(0,0)$, $O=(20,0)$, $E=(0,e)$. From $O$ we head at $45^\circ$: $R=(20+p,p)$; at $R$ we turn $90^\circ$ and head at $135^\circ$: $S=(20+p-q,\,p+q)$; at $S$ we turn $45^\circ$ and head west to $E$, so $S=(26,e)$. Thus $p-q=6$ and $e=p+q$. From $OS=10$ and $\overrightarrow{OS}=(6,e)$ we get $e=8$, so $p=7$, $q=1$: $R=(27,7)$, $S=(26,8)$. The shoelace formula gives
+\[2[HORSE]=(20\cdot7-0)+(27\cdot8-26\cdot7)+(26\cdot8-0)=140+34+208=382,\]
+so the area is $\boxed{191}$.</p>
+<h4>Solution 2 (A trapezoid and a right triangle)</h4>
+<p>Since $\angle EHO=\angle SEH=90^\circ$, the sides $HO$ and $ES$ are both perpendicular to $HE$, so $HOSE$ is a right trapezoid with parallel sides $HO=20$, $ES=26$. Dropping the perpendicular from $O$ to $ES$ gives a right triangle with hypotenuse $OS=10$ and one leg $26-20=6$, so the height is $HE=8$ and
+\[[HOSE]=\frac{20+26}{2}\cdot8=184 .\]
+In the trapezoid, $\cos\angle HOS=-\frac35$ and $\sin\angle HOS=\frac45$. The diagonal $OS$ lies inside the convex pentagon, so $\angle ROS=135^\circ-\angle HOS$, and
+\[\cos\angle ROS=\cos135^\circ\cdot\Bigl(-\frac35\Bigr)+\sin135^\circ\cdot\frac45=\frac{7\sqrt2}{10},\qquad\sin\angle ROS=\sin135^\circ\cdot\Bigl(-\frac35\Bigr)-\cos135^\circ\cdot\frac45=\frac{\sqrt2}{10}.\]
+Triangle $ORS$ has a right angle at $R$ and hypotenuse $10$, so $OR=7\sqrt2$, $RS=\sqrt2$ and $[ORS]=\frac12\cdot7\sqrt2\cdot\sqrt2=7$. The area is $184+7=\boxed{191}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p23">
+<h3>Problem 3</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VII scale">E</span>Geometry &middot; LPS VII, Chapter 36: Coordinate Geometry and Analytic Representation &middot; Cartesian Coordinate Setup</div>
+<div class="ct-text"><p>Let $ABCD$ be a rectangle with $AB=12$ and $BC=16$. Points $W$, $X$, $Y$, and $Z$ lie on sides $\overline{AB}$, $\overline{BC}$, $\overline{CD}$, and $\overline{DA}$, respectively, such that $WXYZ$ is a rhombus with area $120$. Compute $XY$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$5\sqrt5$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Diagonals through the centre)</h4>
+<div class="ct-fig"><img style="width:263px" src="/assets/contests/2026-27/hmmt-feb-ind-23_s1.svg" alt="Figure for the solution"></div>
+<p>Put $A=(0,0)$, $B=(12,0)$, $C=(12,16)$, $D=(0,16)$. A rhombus is a parallelogram, so its diagonals $WY$ and $XZ$ bisect each other. The midpoint of $WY$ has $y$-coordinate $8$ (as $W$, $Y$ lie on $y=0$, $y=16$) and the midpoint of $XZ$ has $x$-coordinate $6$; so both are the centre $(6,8)$ of the rectangle. Write $W=(6-p,0)$, $Y=(6+p,16)$, $X=(12,8-r)$, $Z=(0,8+r)$. The diagonals of a rhombus are perpendicular:
+\[(2p,16)\cdot(-12,2r)=0\iff r=\tfrac34p .\]
+The area is half the product of the diagonals:
+\[\frac12\cdot2\sqrt{p^2+64}\cdot2\sqrt{36+\tfrac9{16}p^2}=2\sqrt{p^2+64}\cdot\tfrac34\sqrt{p^2+64}=\tfrac32(p^2+64)=120,\]
+so $p^2=16$ and $r^2=9$. Then
+\[XY^2=\Bigl(\tfrac{WY}2\Bigr)^2+\Bigl(\tfrac{XZ}2\Bigr)^2=(p^2+64)+(36+r^2)=80+45=125,\qquad XY=\boxed{5\sqrt5}.\]
+(For example $p=4$: $W=(2,0)$, $X=(12,5)$, $Y=(10,16)$, $Z=(0,11)$.)</p>
+<h4>Solution 2 (Four corner triangles)</h4>
+<p>As a parallelogram inscribed with one vertex on each side, the rhombus is symmetric about the centre of the rectangle (its diagonals bisect each other, and the midpoint of $WY$ lies on the horizontal midline while the midpoint of $XZ$ lies on the vertical midline). So the corner triangles $ZAW$, $XCY$ are congruent, and so are $WBX$, $YDZ$. Let $WB=a$, $BX=b$; then $AW=CY=12-a$ and $XC=AZ=16-b$.</p><p>Equal sides $WX=XY$: $a^2+b^2=(16-b)^2+(12-a)^2$, i.e. $3a+4b=50$.</p><p>Area: the rhombus is the rectangle minus the four corner triangles,
+\[192-ab-(12-a)(16-b)=120\iff ab-8a-6b+60=0 .\]
+Substituting $b=\frac{50-3a}{4}$ gives $a^2-12a+20=0$, so $a=2$, $b=11$ or $a=10$, $b=5$; in both cases $XY^2=WX^2=a^2+b^2=125$, and $XY=\boxed{5\sqrt5}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p24">
+<h3>Problem 4</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure &middot; Power of a Point</div>
+<div class="ct-text"><p>Let $ABC$ be a triangle with $\angle BAC=90^\circ$. Points $X$ and $Y$ are such that $B$, $X$, $Y$, and $C$ lie on segment $\overline{BC}$ in that order, $BX=4$, $XY=5$, and $YC=3$. Let $T$ be a point lying on segment $\overline{AC}$ such that $TA=TX=TY=\ell$ for some $\ell$. Compute $\ell$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\frac{7\sqrt3}{3}$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Coordinates)</h4>
+<div class="ct-fig"><img style="width:243px" src="/assets/contests/2026-27/hmmt-feb-ind-24_s1.svg" alt="Figure for the solution"></div>
+<p>Put $A=(0,0)$, $B=(b,0)$, $C=(0,c)$ with $b^2+c^2=BC^2=144$, and $T=(0,t)$. Since $BX=\frac13BC$ and $BY=\frac34BC$,
+\[X=\Bigl(\tfrac{2b}3,\tfrac c3\Bigr),\qquad Y=\Bigl(\tfrac b4,\tfrac{3c}4\Bigr).\]
+$TX=TA=t$ gives $\frac{4b^2}{9}+\bigl(\frac c3-t\bigr)^2=t^2$, i.e. $t=\frac{4b^2+c^2}{6c}$; $TY=t$ gives $\frac{b^2}{16}+\bigl(\frac{3c}4-t\bigr)^2=t^2$, i.e. $t=\frac{b^2+9c^2}{24c}$. Equating, $4(4b^2+c^2)=b^2+9c^2$, so $c^2=3b^2$; with $b^2+c^2=144$ this gives $b=6$, $c=6\sqrt3$, and
+\[\ell=t=\frac{4\cdot36+108}{36\sqrt3}=\frac{7}{\sqrt3}=\boxed{\frac{7\sqrt3}{3}} .\]
+Here $0&lt;t&lt;c$, so $T$ indeed lies on segment $AC$.</p>
+<h4>Solution 2 (Power of a point)</h4>
+<p>The circle $\gamma$ with centre $T$ and radius $\ell$ passes through $A$, $X$, $Y$. Its centre lies on $AC$ and $AB\perp AC$, so $AB$ is tangent to $\gamma$ at $A$. The power of $B$ gives
+\[BA^2=BX\cdot BY=4\cdot9=36,\qquad BA=6,\qquad AC=\sqrt{12^2-6^2}=6\sqrt3 .\]
+Line $AC$ meets $\gamma$ at $A$ and at $A'$ with $AA'=2\ell$; $A'$ lies on segment $AC$ because $C$ is outside $\gamma$ (its power $CY\cdot CX=3\cdot8&gt;0$). The power of $C$ gives
+\[CY\cdot CX=CA\cdot CA'\iff 24=6\sqrt3\,(6\sqrt3-2\ell)=108-12\sqrt3\,\ell,\]
+so $\ell=\frac{84}{12\sqrt3}=\boxed{\frac{7\sqrt3}{3}}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p25">
+<h3>Problem 5</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure &middot; Tangency and Tangent Geometry</div>
+<div class="ct-text"><p>In the diagram below, three circles of radius $2$ are internally tangent to a circle $\Omega$ centered at $O$ of radius $11$, and three chords of $\Omega$ are each tangent to two of the three circles. Given that $O$ lies inside the triangle formed by the three chords and two of the chords have length $4\sqrt{30}$, compute the length of the third chord.</p><div class="ct-fig"><img style="width:268px" src="/assets/contests/2026-27/hmmt-feb-ind-25.svg" alt="Figure for Geometry, Problem 5"></div></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$8\sqrt6$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Distances from the circumcentre)</h4>
+<div class="ct-fig"><img style="width:268px" src="/assets/contests/2026-27/hmmt-feb-ind-25_s1.svg" alt="Figure for the solution"></div>
+<p>Let $C_1,C_2,C_3$ be the centres of the small circles; internal tangency gives $OC_i=11-2=9$. As in the diagram, each chord has its two circles on the side away from $O$ (the circles lie outside the triangle of chords, which contains $O$). A line tangent to two circles of equal radius $2$ lying on the same side of it is parallel to the line of their centres, at distance $2$. So the line $C_iC_j$ is parallel to its chord, on the far side from $O$, and
+\[\operatorname{dist}(O,C_iC_j)=\operatorname{dist}(O,\text{chord})+2 .\]
+In particular $O$ lies inside triangle $C_1C_2C_3$, which is inscribed in the circle of radius $9$ about $O$.</p><p>A chord of $\Omega$ of length $4\sqrt{30}$ is at distance $\sqrt{121-120}=1$ from $O$, so the corresponding side of triangle $C_1C_2C_3$ is at distance $3$ from its circumcentre $O$. For an acute-or-right inscribed triangle the distance from the circumcentre to a side is $9\cos$ of the opposite angle; so two angles of triangle $C_1C_2C_3$ have cosine $\frac13$. Call them $\alpha$; the third angle is $180^\circ-2\alpha$ and
+\[\cos(180^\circ-2\alpha)=-\cos2\alpha=1-2\cos^2\alpha=\frac79 .\]
+So the third side is at distance $9\cdot\frac79=7$ from $O$, the third chord at distance $5$, and its length is $2\sqrt{121-25}=\boxed{8\sqrt6}$.</p>
+<h4>Solution 2 (Coordinates)</h4>
+<p>Let $C_1,C_2,C_3$ be the centres of the small circles, at distance $9$ from $O$. In the diagram each chord separates $O$ from the two circles it touches; a line tangent to two equal circles on one side of it is parallel to their line of centres at distance $2$, so each line $C_iC_j$ is $2$ farther from $O$ than its chord. A chord of length $4\sqrt{30}$ is at distance $\sqrt{121-120}=1$ from $O$, so the corresponding line of centres is at distance $3$.</p><p>The two long chords share a circle; put its centre at $C_1=(0,9)$, $O=(0,0)$. A line through $C_1$ at distance $3$ from $O$ meets the circle $x^2+y^2=81$ again at a point $(u,-v)$ with
+\[\frac{9|u|}{\sqrt{u^2+(9+v)^2}}=3\iff 8u^2=(9+v)^2,\]
+the distance from $O$ to the line through $(0,9)$ and $(u,-v)$ being $|9u|$ divided by the length of $C_1(u,-v)$. With $u^2=81-v^2$: $648-8v^2=81+18v+v^2$, i.e. $v^2+2v-63=0$, so $v=7$ (the root $v=-9$ is $C_1$ itself). Hence $C_2,C_3=(\pm4\sqrt2,-7)$, the line $C_2C_3$ is $y=-7$, the third chord is the line $y=-5$, and its length is $2\sqrt{121-25}=\boxed{8\sqrt6}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p26">
+<h3>Problem 6</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure &middot; Power of a Point</div>
+<div class="ct-text"><p>Let $ABC$ be a triangle, and $M$ be the midpoint of segment $\overline{BC}$. Points $P$ and $Q$ lie on segments $\overline{AB}$ and $\overline{AC}$, respectively, so that $\angle PMB=\angle QMC=\frac12\angle BAC$. Given that $AP=1$, $AQ=3$, and $BC=8$, compute $BP$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\sqrt{17}-1$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 ($BP=CQ$ and a circle through $A,P,M,Q$)</h4>
+<div class="ct-fig"><img style="width:324px" src="/assets/contests/2026-27/hmmt-feb-ind-26_s1.svg" alt="Figure for the solution"></div>
+<p>Let $\alpha=\angle BAC$, $\beta=\angle B$, $\gamma=\angle C$. In triangle $BPM$ the angles at $B$ and $M$ are $\beta$ and $\frac\alpha2$, so $\angle BPM=180^\circ-\beta-\frac\alpha2$; similarly $\angle CQM=180^\circ-\gamma-\frac\alpha2$. These two angles add up to $360^\circ-(\alpha+\beta+\gamma)=180^\circ$, so their sines are equal, and the law of sines gives
+\[BP=\frac{BM\sin\frac\alpha2}{\sin\angle BPM}=\frac{CM\sin\frac\alpha2}{\sin\angle CQM}=CQ .\]
+Call this common value $x$; then $AB=1+x$, $AC=3+x$.</p><p>Next, $\angle PMQ=180^\circ-\angle PMB-\angle QMC=180^\circ-\alpha$, and $A$, $M$ lie on opposite sides of $PQ$, so $APMQ$ is cyclic. Let this circle meet line $BC$ again at $K$. The points $B$, $C$ lie outside the circle (beyond $P$ on ray $AP$, beyond $Q$ on ray $AQ$), so their powers are positive; hence $K$ is on the same side of $B$ as $M$ and on the same side of $C$ as $M$, i.e. $K$ lies on segment $BC$, and
+\[BP\cdot BA=BM\cdot BK,\qquad CQ\cdot CA=CM\cdot CK .\]
+Adding, with $BM=CM=4$ and $BK+KC=8$: $x(1+x)+x(3+x)=32$, i.e. $x^2+2x-16=0$, so $BP=x=\boxed{\sqrt{17}-1}$.</p>
+<h4>Solution 2 (Mollweide)</h4>
+<p>Let $a=BC=8$, $b=CA$, $c=AB$, and $\alpha,\beta,\gamma$ the angles. In triangle $BPM$, $\angle BMP=\frac\alpha2$ and $\angle BPM=180^\circ-\beta-\frac\alpha2$, so by the law of sines
+\[\frac{BP}{BM}=\frac{\sin\frac\alpha2}{\sin(\beta+\frac\alpha2)} .\]
+Since $\beta+\frac\alpha2=90^\circ+\frac{\beta-\gamma}{2}$, the denominator is $\cos\frac{\beta-\gamma}2$, and Mollweide's formula $\frac{b+c}{a}=\frac{\cos\frac{\beta-\gamma}{2}}{\sin\frac\alpha2}$ turns this into
+\[BP=BM\cdot\frac{a}{b+c}=\frac{32}{b+c}.\]
+By the same computation in triangle $CQM$, $CQ=\frac{32}{b+c}$ too. Writing $x=BP=CQ$, we have $c=1+x$, $b=3+x$, so
+\[x=\frac{32}{4+2x}\iff x^2+2x-16=0\iff x=\sqrt{17}-1 .\]
+So $BP=\boxed{\sqrt{17}-1}$. (Check: the sides $\sqrt{17}$, $\sqrt{17}+2$, $8$ form a triangle.)</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p27">
+<h3>Problem 7</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 7: Congruence, Rigidity, and Isometric Structure &middot; Isosceles and Equilateral Rigidity</div>
+<div class="ct-text"><p>Let $ABC$ be an isosceles triangle with $AB=AC$. Points $P$ and $Q$ are located inside triangle $ABC$ such that $BP=PQ=QC$. Suppose that $\angle BAP=20^\circ$, $\angle PAQ=46^\circ$, and $\angle QAC=26^\circ$. Compute the measure of $\angle APC$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$74^\circ$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Two equilateral triangles)</h4>
+<div class="ct-fig"><img style="width:293px" src="/assets/contests/2026-27/hmmt-feb-ind-27_s1.svg" alt="Figure for the solution"></div>
+<p>Here $\angle BAC=20^\circ+46^\circ+26^\circ=92^\circ$, so $\angle ABC=\angle ACB=44^\circ$.</p><p><em>Step 1: an equilateral triangle.</em> Rotate about $A$ by $92^\circ$ so that $C$ goes to $B$, and let $Q'$ be the image of $Q$. Then $BQ'=CQ$, $AQ'=AQ$ and $\angle Q'AB=\angle QAC=26^\circ$, with $Q'$ on the other side of $AB$ from $C$. So $\angle Q'AP=26^\circ+20^\circ=46^\circ=\angle QAP$, and triangles $Q'AP$ and $QAP$ are congruent (SAS), giving $PQ'=PQ$. Hence $BP=PQ'=Q'B$ $(=PQ=QC)$: triangle $BPQ'$ is equilateral, and $\angle Q'BP=60^\circ$ is made up of $\angle Q'BA$ and $\angle ABP$ (the rays $BQ'$ and $BP$ lie on opposite sides of $BA$).</p><p><em>Step 2: rotate about $B$.</em> Let $B^*$ be the point on the same side of $AB$ as $C$ with $ABB^*$ equilateral. The rotation about $B$ by $60^\circ$ towards $C$ maps $A\mapsto B^*$ and, by Step 1, $Q'\mapsto P$. So triangle $BB^*P$ is congruent to $BAQ'$: $\angle BB^*P=\angle BAQ'=26^\circ$, and $P$ is on the same side of $BB^*$ as $A$ (the image of the side of $AB$ containing $Q'$). Therefore $\angle AB^*P=60^\circ-26^\circ=34^\circ$. Also $\angle B^*AP=60^\circ-20^\circ=40^\circ$, so in triangle $AB^*P$
+\[\angle APB^*=180^\circ-40^\circ-34^\circ=106^\circ .\]</p><p><em>Step 3: a cyclic quadrilateral.</em> $AB^*=AB=AC$ and $\angle B^*AC=92^\circ-60^\circ=32^\circ$, so triangle $AB^*C$ is isosceles with $\angle ACB^*=\angle AB^*C=74^\circ$. The points $P$ ($\angle BAP=20^\circ&lt;60^\circ$) and $C$ ($92^\circ&gt;60^\circ$) lie on opposite sides of line $AB^*$, and $\angle APB^*+\angle ACB^*=106^\circ+74^\circ=180^\circ$, so $A,P,B^*,C$ are concyclic. Finally $P$ and $B^*$ are on the same side of $AC$, so they see the chord $AC$ under equal angles:
+\[\angle APC=\angle AB^*C=\boxed{74^\circ}.\]</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p28">
+<h3>Problem 8</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 32: Trigonometric Geometry and Metric Conversion &middot; Law of Sines and Law of Cosines</div>
+<div class="ct-text"><p>Let $ABC$ be a triangle with orthocenter $H$. The internal angle bisector of $\angle BAC$ meets the circumcircles of triangles $ABH$, $ACH$, and $ABC$ again at points $P$, $Q$, and $M$, respectively. Suppose that points $A$, $P$, $Q$, and $M$ are distinct and lie on the internal angle bisector of $\angle BAC$ in that order. Given that $AP=4$, $AQ=5$, and $BC=7$, compute $AM$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\sqrt{69}$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Law of sines in three triangles)</h4>
+<div class="ct-fig"><img style="width:352px" src="/assets/contests/2026-27/hmmt-feb-ind-28_s1.svg" alt="Figure for the solution"></div>
+<p>Let $\alpha,\beta,\gamma$ be the angles of $ABC$ and $R$ its circumradius. The reflection of $H$ in $AB$ lies on the circumcircle, so the circle $ABH$ is the reflection of the circumcircle in $AB$ and also has radius $R$.</p><p><em>$AP$.</em> In circle $ABH$, $AB=2R\sin\angle APB$; since $AB=2R\sin\gamma$, $\angle APB$ is $\gamma$ or $180^\circ-\gamma$. As a point $X$ moves along the ray from $A$ through $M$, the angle $\angle AXB$ decreases strictly, and $\angle AMB=\angle ACB=\gamma$; since $P\ne M$, we get $\angle APB=180^\circ-\gamma$. Then $\angle ABP=\gamma-\frac\alpha2$ (in particular $\gamma&gt;\frac\alpha2$) and
+\[AP=2R\sin\Bigl(\gamma-\frac\alpha2\Bigr).\]
+In the same way $AQ=2R\sin(\beta-\frac\alpha2)$. In triangle $ABM$, $\angle AMB=\gamma$ and $\angle ABM=\beta+\frac\alpha2=90^\circ+u$ with $u=\frac{\beta-\gamma}2$, so $AM=\frac{AB\sin(90^\circ+u)}{\sin\gamma}=2R\cos u$.</p><p><em>Sum and difference.</em> Since $\beta-\frac\alpha2=90^\circ-\alpha+u$ and $\gamma-\frac\alpha2=90^\circ-\alpha-u$,
+\[AQ-AP=2R\bigl[\cos(\alpha-u)-\cos(\alpha+u)\bigr]=4R\sin\alpha\sin u=2\,BC\sin u,\]
+\[AQ+AP=4R\cos\alpha\cos u=2\,AM\cos\alpha .\]
+So $\sin u=\frac1{14}$ and $\cos\alpha=\frac{9}{2AM}$. Also $\sin\alpha=\frac{BC}{2R}=\frac{7\cos u}{AM}$, with $\cos^2u=\frac{195}{196}$. From $\sin^2\alpha+\cos^2\alpha=1$:
+\[AM^2=49\cdot\frac{195}{196}+\frac{81}4=\frac{195+81}{4}=69,\qquad AM=\boxed{\sqrt{69}} .\]</p>
+<h4>Solution 2 (Vectors from the circumcentre)</h4>
+<p>Let $O$ be the circumcentre, $R$ the circumradius, and $d$ the unit vector along the bisector from $A$ towards $M$. A line $A+td$ meets a circle with centre $Z$ through $A$ again at $t=2(Z-A)\cdot d$.</p><p>The circle $ABH$ is the reflection of the circumcircle in $AB$ (the reflection of $H$ in $AB$ lies on the circumcircle), so its centre is the reflection of $O$ in $AB$; as $OA=OB$, $AOBZ$ is a rhombus and $Z=A+B-O$. Hence (all lengths measured along $d$)
+\[AP=2(B-O)\cdot d,\qquad AQ=2(C-O)\cdot d,\qquad AM=2(O-A)\cdot d .\]
+<em>Difference.</em> $AQ-AP=2(C-B)\cdot d=2\cdot7\cos\varphi$, where $\varphi$ is the angle between $\overrightarrow{BC}$ and $d$; so $\cos\varphi=\frac1{14}$.</p><p><em>Sum.</em> Let $N$ be the midpoint of $BC$ and $e$ the unit normal to $BC$ pointing away from $A$. Then $N-O=R\cos\alpha\,e$ (with $\alpha=\angle BAC$), and $e\cdot d=\sin\varphi&gt;0$ since $d$ crosses $BC$ towards $M$. So $AP+AQ=4(N-O)\cdot d=4R\cos\alpha\sin\varphi$.</p><p><em>$AM$.</em> $M$ is the midpoint of arc $BC$ not containing $A$, so $M=O+Re$. From $M=A+AM\,d$: $AM=(M-O)\cdot d-(A-O)\cdot d=R\sin\varphi+\frac{AM}2$, so $AM=2R\sin\varphi$.</p><p>Therefore $\cos\alpha=\frac{AP+AQ}{2AM}=\frac{9}{2AM}$ and $\sin\alpha=\frac{BC}{2R}=\frac{7\sin\varphi}{AM}$, with $\sin^2\varphi=1-\frac1{196}=\frac{195}{196}$. Then $\cos^2\alpha+\sin^2\alpha=1$ gives $AM^2=\frac{81}4+\frac{195}4=69$, so $AM=\boxed{\sqrt{69}}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p29">
+<h3>Problem 9</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure &middot; Radical Axis and Radical Center</div>
+<div class="ct-text"><p>Let $ABC$ be triangle with incenter $I$ and incircle $\omega$. The circumcircle of triangle $BIC$ intersects $\omega$ at points $E$ and $F$. Suppose that $\Gamma\neq\omega$ is a circle passing through $E$ and $F$ and tangent to lines $AB$ and $AC$. If $AB=5$, $AC=7$, and $\Gamma$ has twice the radius of $\omega$, compute $BC$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$3+\sqrt{11}$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Distances along the bisector)</h4>
+<div class="ct-fig"><img style="width:289px" src="/assets/contests/2026-27/hmmt-feb-ind-29_s1.svg" alt="Figure for the solution"></div>
+<p>Let $a=BC$, $b=7$, $c=5$, $r$ the inradius, $\alpha=\angle A$, $\sigma=\sin\frac\alpha2$, and let $L$ be the midpoint of arc $BC$; the circle $BIC$ has centre $L$ (on line $AI$) and radius $LI$. Put coordinates on line $AI$ with $I$ at $0$ and $L$ at $\delta=LI&gt;0$, and $A$ at $-m$, $m=AI=\frac r\sigma$.</p><p>Every circle through $E$ and $F$ has its centre on the line of centres $IL$, i.e. on line $AI$; a circle with centre at coordinate $z$ on this line and radius $\rho$ passes through $E,F$ iff its power function agrees on the common chord, which lies at coordinate $x_0$ with $x_0^2-r^2=x_0^2-2\delta x_0$ (powers with respect to $\omega$ and to circle $BIC$), i.e. $x_0=\frac{r^2}{2\delta}$, and $E,F=(x_0,\pm\sqrt{r^2-x_0^2})$. The condition is $(x_0-z)^2+r^2-x_0^2=\rho^2$, i.e.
+\[z^2-2zx_0+r^2=\rho^2 .\]
+A circle tangent to lines $AB,AC$ with centre on line $AI$ and radius $2r$ is the image of $\omega$ under a homothety at $A$ of ratio $\pm2$: centre at $z=m$ or $z=-3m$. For $z=-3m$: $9m^2+3m\frac{r^2}{\delta}=3r^2$ is impossible as $m&gt;r$. For $z=m$: $m^2-\frac{mr^2}{\delta}=3r^2$, so $\delta=\frac{mr^2}{m^2-3r^2}=\frac{r\sigma}{1-3\sigma^2}$.</p><p>Now use $\delta=LI=LB=2R\sigma$ and $r=4R\sigma\sin\frac\beta2\sin\frac\gamma2$ ($R$ the circumradius):
+\[1-3\sigma^2=2\sigma\sin\tfrac\beta2\sin\tfrac\gamma2=\sigma\Bigl(\cos\tfrac{\beta-\gamma}2-\sigma\Bigr)\iff 1-2\sigma^2=\sigma\cos\tfrac{\beta-\gamma}{2}.\]
+By Mollweide, $\cos\frac{\beta-\gamma}2=\frac{(b+c)\sigma}{a}$, so $\cos\alpha=\frac{(b+c)(1-\cos\alpha)}{2a}$, i.e. $\cos\alpha=\frac{6}{a+6}$. The law of cosines gives $a^2=74-\frac{420}{a+6}$, i.e.
+\[a^3+6a^2-74a-24=(a+12)(a^2-6a-2)=0,\]
+so $BC=a=\boxed{3+\sqrt{11}}$.</p>
+<h4>Solution 2 (Power functions of a pencil)</h4>
+<p>Let $a=BC$, $s$ the semiperimeter, $r$ the inradius, $L$ the midpoint of arc $BC$, $I_A$ the $A$-excenter, and $K$ the circle $BIC$ (centre $L$; it passes through $I$ and $I_A$). For a circle $\kappa$ write $\operatorname{pow}_\kappa(X)=|XZ|^2-\rho^2$. Circles through the two points $E,F$ of $\omega\cap K$ form a pencil: $\operatorname{pow}_\Gamma=\lambda\operatorname{pow}_\omega+(1-\lambda)\operatorname{pow}_K$ for some real $\lambda$.</p><p>$\Gamma$ is tangent to $AB$, $AC$ and its centre is on the line of centres $IL=AI$, so it is the image of $\omega$ under the homothety at $A$ of ratio $2$ or $-2$; call its centre $G_\pm=A\pm2(I-A)$. Evaluate at $I$ and at $A$, using $\operatorname{pow}_\omega(I)=-r^2$, $\operatorname{pow}_K(I)=0$, $\operatorname{pow}_\omega(A)=(s-a)^2$, $\operatorname{pow}_K(A)=AI\cdot AI_A=bc$ and $\operatorname{pow}_\Gamma(A)=4(s-a)^2$ (tangent length doubled). Put $t=\frac{(s-a)^2}{r^2}$, so $AI^2=r^2(1+t)$.</p><p><em>Ratio $+2$.</em> $\operatorname{pow}_\Gamma(I)=AI^2-4r^2=-\lambda r^2$ gives $\lambda=3-t$. Then at $A$: $4(s-a)^2=(3-t)(s-a)^2+(t-2)bc$, i.e. $(1+t)(s-a)^2=(t-2)bc$, i.e. $AI^2\,t=(t-2)\,bc$. Using $AI^2=\frac{bc(s-a)}{s}$ and $t=\frac{s(s-a)}{(s-b)(s-c)}$:
+\[\frac{s-a}{s}=1-\frac2t\iff\frac as=\frac2t\iff a(s-a)=2(s-b)(s-c).\]
+<em>Ratio $-2$.</em> Here $\operatorname{pow}_\Gamma(I)=9AI^2-4r^2$, so $\lambda=-5-9t$ and the equation at $A$ becomes $9AI^2t=(6+9t)bc$, i.e. $\frac{AI^2}{bc}&gt;1$, impossible since $\frac{AI^2}{bc}=\frac{s-a}{s}&lt;1$.</p><p>With $b=7$, $c=5$: $s-a=\frac{12-a}2$, $s-b=\frac{a-2}2$, $s-c=\frac{a+2}2$, and $a(12-a)=a^2-4$, i.e. $a^2-6a-2=0$. So $BC=\boxed{3+\sqrt{11}}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p30">
+<h3>Problem 10</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 19: Triangle Centers and Classical Triangle Geometry &middot; Centroid, Incenter, Circumcenter, and Orthocenter</div>
+<div class="ct-text"><p>Let $ABC$ be a triangle with centroid $G$ and circumcenter $O$. Suppose that the orthocenter of triangle $AGO$ lies on line $BC$. Given that $AB=11$ and $AC=13$, compute $BC$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\frac{2\sqrt{435}}{3}=\frac{\sqrt{1740}}{3}$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Coordinates centred at the midpoint of $BC$)</h4>
+<div class="ct-fig"><img style="width:316px" src="/assets/contests/2026-27/hmmt-feb-ind-30_s1.svg" alt="Figure for the solution"></div>
+<p>Let $N$ be the midpoint of $BC$ and put $N=(0,0)$, $B=(-m,0)$, $C=(m,0)$ with $2m=BC$, and $A=(p,q)$, $q&gt;0$. Then $G=\bigl(\frac p3,\frac q3\bigr)$ and $O=(0,k)$ with $k=\frac{p^2+q^2-m^2}{2q}$ (from $OA=OB$). Let $X=(x,0)$ be the orthocenter of $AGO$, assumed on line $BC$. (If $p=0$, then $AB=AC$; so $p\ne0$, and $O\ne G$.)</p><ul class="ct-ul"><li><p>$OX\perp AG$, and $AG$ lies along $AN$, direction $(p,q)$: $(x,-k)\cdot(p,q)=0$, i.e. $xp=kq$.</p></li><li><p>$AX\perp OG$: $(x-p,-q)\cdot\bigl(\frac p3,\frac q3-k\bigr)=0$, i.e. $xp=p^2+q^2-3kq$.</p></li></ul><p>(These two altitudes determine the orthocenter, and the third passes through it automatically.) Hence $kq=p^2+q^2-3kq$, so $4kq=p^2+q^2$; with $2kq=p^2+q^2-m^2$ this gives $p^2+q^2=2m^2$, i.e.
+\[AN^2=2\Bigl(\frac{BC}{2}\Bigr)^2=\frac{BC^2}{2}.\]
+By the median formula $AN^2=\frac{2AB^2+2AC^2-BC^2}{4}$, so $2(AB^2+AC^2)=3BC^2$ and
+\[BC^2=\frac{2(121+169)}{3}=\frac{580}{3},\qquad BC=\boxed{\frac{2\sqrt{435}}{3}}\approx13.90 .\]
+Conversely, for this value the computation reverses and the orthocenter lies on line $BC$ (outside the segment, as in the figure).</p>
+</div></details>
+</section>
+{% endraw %}

@@ -1,0 +1,330 @@
+---
+title: ARML 2026: selected problems
+permalink: /contests/arml-2026
+description: ARML 2026: selected problems: problems with answers and solutions
+---
+{% raw %}
+<style>
+  .ct-intro { margin-bottom: 1.2em; }
+  .ct-credit { font-size: 14px; color: var(--ink-soft); border-left: 3px solid var(--gold); padding: 6px 12px; background: var(--white); margin: 1em 0; }
+  .ct-toc { display: flex; flex-wrap: wrap; gap: 6px; margin: 1em 0 1.4em; }
+  .ct-toc a { display: inline-block; min-width: 2.4em; text-align: center; padding: 4px 8px; border: 1px solid var(--rule); border-radius: 4px; background: var(--white); text-decoration: none; font-size: 14px; }
+  .ct-problem { background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 14px 18px; margin: 1.1em 0; }
+  .ct-problem h3 { margin: 0 0 .3em; font-size: 1.08rem; border-bottom: none; padding-bottom: 0; }
+  .ct-meta { font-size: 13px; color: var(--ink-soft); margin-bottom: .6em; }
+  .ct-text { font-family: Georgia, "Times New Roman", "Noto Serif", serif; font-size: 1.02em; line-height: 1.6; }
+  .ct-text p { margin: .5em 0; }
+  .ct-fig { text-align: center; margin: .8em 0; }
+  .ct-fig img { max-width: 100%; height: auto; max-height: 340px; }
+  .ct-choices { display: flex; flex-wrap: wrap; gap: 6px 22px; margin: .6em 0 .2em; }
+  .ct-choices b { margin-right: .3em; }
+  .ct-problem details { margin-top: .8em; border-top: 1px dashed var(--rule); padding-top: .5em; }
+  .ct-problem summary { cursor: pointer; font-weight: 600; color: var(--brand); font-size: 15px; }
+  .ct-problem details[open] summary { margin-bottom: .5em; }
+  .ct-sol h4 { font-size: 1rem; margin: 1em 0 .3em; color: var(--ink); }
+  .ct-answer { font-weight: 600; }
+  .ct-parts { list-style: none; padding-left: .4em; }
+  .ct-parts li { margin: .35em 0; }
+  .ct-lbl { font-weight: 700; margin-right: .3em; }
+  .ct-note { font-size: 14px; color: var(--ink-soft); font-style: italic; }
+  .ct-bar { margin: .6em 0 1em; display: flex; gap: 10px; flex-wrap: wrap; }
+  .ct-bar button { font: inherit; font-size: 14px; padding: 5px 12px; border-radius: var(--radius); border: 1px solid var(--brand); background: var(--white); color: var(--brand); cursor: pointer; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
+</style>
+<script>
+  window.MathJax = { tex: { inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [['\\[','\\]']], processEscapes: true },
+                     options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] } };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script>
+  function ctAll(open) { document.querySelectorAll('.ct-problem details').forEach(function (d) { d.open = open; }); }
+</script>
+
+<style>
+  .ct-group { font-size: 1.25rem; margin: 1.6em 0 .2em; }
+  .ct-toc-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: .3em 0; }
+  .ct-toc-g { font-size: 13px; color: var(--ink-soft); min-width: 9em; }
+  .ct-toc-wrap { margin: 1em 0 1.4em; }
+  .ct-center { text-align: center; margin: .6em 0; }
+  .ct-tablewrap { overflow-x: auto; margin: .6em 0; text-align: center; }
+  .ct-table { border-collapse: collapse; margin: 0 auto; }
+  .ct-table td { padding: 2px 9px; text-align: center; }
+  .ct-table tr.ct-hl td { border-bottom: 1px solid var(--ink-soft); }
+  .ct-table.ct-vfirst td:first-child { border-right: 1px solid var(--ink-soft); }
+  .ct-ul { padding-left: 1.4em; }
+  .ct-ul li { margin: .3em 0; }
+  .ct-text li > p:first-child { margin-top: 0; }
+  .ct-text li > p:last-child { margin-bottom: 0; }
+  .ct-text mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
+</style>
+
+<style>
+  .ct-tags { display: flex; flex-wrap: wrap; gap: 5px; margin: 0 0 .55em; }
+  .ct-tg { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .03em; padding: 2px 8px; border-radius: 999px; line-height: 1.5; }
+  .ct-lv { background: #eee7dc; color: #4a3d33; }
+  .ct-df-Starter { background: #dcf1dc; color: #245c24; }
+  .ct-df-Explorer { background: #d6efec; color: #155e57; }
+  .ct-df-Challenger { background: #dce8f7; color: #1f4c80; }
+  .ct-df-Olympiad { background: #e7defa; color: #4b2a8a; }
+  .ct-df-Advanced { background: #fbe4cc; color: #8a4a0b; }
+  .ct-df-Expert { background: #f8d6cf; color: #8c2600; }
+  .ct-band { margin: 1.3em 0 .5em; font-size: 14px; color: var(--ink-soft); }
+  .ct-band .ct-tg { font-size: 13px; margin-right: .4em; }
+  .ct-legend { font-size: 14.5px; background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 10px 16px; margin: 1em 0 1.4em; }
+  .ct-legend p { margin: .35em 0; }
+  .ct-legend ul { margin: .2em 0 .4em; padding-left: 1.1em; }
+  .ct-legend li { margin: .2em 0; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
+</style>
+{% endraw %}
+<p><a href="{{ '/contests-2026' | relative_url }}">&larr; All contests 2026</a></p>
+
+<h1>ARML 2026: selected problems</h1>
+
+<div class="ct-intro">
+<p>The 16 problems of the ARML 2026: selected problems, each with our own solutions, hidden until you open them. 14 of them ask for an answer and 2 ask for a proof. Where a problem has a final answer, it is shown separately. Try a problem first, then check.</p><p>A selection of the best problems of ARML 2026, the American Regions Mathematics League (team, power, individual and tiebreaker rounds).</p>
+</div>
+<div class="ct-credit">Problems: ARML 2026: selected problems, from the AoPS contest collection or the official paper. Solutions written by MCC.</div>
+<div class="ct-bar"><button type="button" onclick="ctAll(true)">Show all answers and solutions</button><button type="button" onclick="ctAll(false)">Hide all</button></div>
+<div class="ct-toc-wrap"><div class="ct-toc-row"><span class="ct-toc-g">Team Round</span><a href="#p1">1</a><a href="#p2">4</a><a href="#p3">6</a><a href="#p4">7</a><a href="#p5">8</a><a href="#p6">9</a></div><div class="ct-toc-row"><span class="ct-toc-g">Power Round</span><a href="#p7">3</a><a href="#p8">7</a></div><div class="ct-toc-row"><span class="ct-toc-g">Individual Round</span><a href="#p9">2</a><a href="#p10">5</a><a href="#p11">6</a><a href="#p12">7</a><a href="#p13">8</a><a href="#p14">9</a></div><div class="ct-toc-row"><span class="ct-toc-g">Tiebreaker Round</span><a href="#p15">1</a><a href="#p16">2</a></div></div>
+
+{% raw %}
+<h2 class="ct-group" id="team-round">Team Round</h2>
+<section class="ct-problem" id="p1">
+<h3>Problem 1</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Number Theory &middot; LPS VI, Chapter 19: Modular Arithmetic and Remainder Tracking &middot; Strategic Residues</div>
+<div class="ct-text"><p>Given that the product $20262025\times20262023$ is the fifteen-digit number $410549\underline{A}165765\underline{B}5$, compute the ordered pair $(A,B)$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$(6,7)$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Casting out nines and elevens)</h4>
+<p><em>Modulo $9$.</em> The digit sums of the factors are $19$ and $17$, so the product is $\equiv1\cdot8=8\pmod 9$. The known digits of $410549\underline{A}165765\underline{B}5$ add up to $58\equiv4$, so $A+B\equiv4\pmod9$, i.e. $A+B\in\{4,13\}$.</p><p><em>Modulo $11$.</em> Alternating digit sums from the right give $20262025\equiv5-2+0-2+6-2+0-2=3$ and $20262023\equiv3-2+0-2+6-2+0-2=1$, so the product is $\equiv3$. For the product, the alternating sum from the right is
+\[5-B+5-6+7-5+6-1+A-9+4-5+0-1+4=4+A-B,\]
+so $A-B\equiv-1\pmod{11}$; as $-9\le A-B\le9$, $A-B=-1$.</p><p>Then $A+B$ is odd, so $A+B=13$, and $(A,B)=\boxed{(6,7)}$. (Indeed the product is $410549616576575$.)</p>
+<h4>Solution 2 (Last two digits, then nines)</h4>
+<p>The last two digits of the product are those of $25\cdot23=575$, namely $75$; so $B=7$.</p><p>The digit sums of the factors are $19\equiv1$ and $17\equiv8\pmod 9$, so the product is $\equiv8\pmod9$. Its digit sum is $58+A+B=65+A\equiv2+A\pmod 9$. Hence $A\equiv6\pmod9$, and as $A$ is a digit, $A=6$. The answer is $\boxed{(6,7)}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p2">
+<h3>Problem 4</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VII scale">E</span>Algebra &middot; LPS VII, Chapter 22: Summation, Telescoping, and Discrete Transformation &middot; Discrete Summation Identities</div>
+<div class="ct-text"><p>Let $P$ be the infinite product $\sqrt[3]{2}\times\sqrt[9]{4}\times\sqrt[27]{8}\times\sqrt[81]{16}\times\dots\times\sqrt[3^n]{2^n}\times\cdots$. Compute $P^4$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$8$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Shift and subtract)</h4>
+<p>The $n$th factor is $(2^n)^{1/3^n}=2^{n/3^n}$, so $P=2^S$ with $S=\sum_{n\ge1}\frac{n}{3^n}$ (the partial products converge because the partial sums do). Then
+\[S-\frac S3=\sum_{n\ge1}\frac{n}{3^n}-\sum_{n\ge1}\frac{n-1}{3^{n}}=\sum_{n\ge1}\frac1{3^n}=\frac12,\]
+so $S=\frac34$, $P=2^{3/4}$ and $P^4=2^3=\boxed{8}$.</p>
+<h4>Solution 2 (Differentiating a geometric series)</h4>
+<p>Write $P=2^{S}$ with $S=\sum_{n\ge1}n x^n$ at $x=\frac13$, since the $n$th factor is $2^{n/3^n}$. For $|x|&lt;1$, differentiating $\sum_{n\ge0}x^n=\frac1{1-x}$ and multiplying by $x$ gives $\sum_{n\ge1}nx^n=\frac{x}{(1-x)^2}$. At $x=\frac13$: $S=\frac{1/3}{4/9}=\frac34$. Hence $P^4=2^{4S}=2^3=\boxed{8}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p3">
+<h3>Problem 6</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Algebra &middot; LPS VII, Chapter 13: Systems, Symmetry, and Multi-Variable Algebra &middot; Symmetric and Cyclic Systems</div>
+<div class="ct-text"><p>Compute the least real number $c$ such that the graphs of $y=x^2+c$ and $x=y^2+c$ intersect at an odd number of points.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\dfrac14$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Counting all intersection points)</h4>
+<p>Subtracting the equations $y=x^2+c$ and $x=y^2+c$ gives $y-x=x^2-y^2$, i.e. $(x-y)(x+y+1)=0$.</p><p><em>Points with $y=x$</em>: $x^2-x+c=0$, with $2$, $1$, $0$ real roots for $c&lt;\frac14$, $c=\frac14$, $c&gt;\frac14$.</p><p><em>Points with $y=-1-x$</em>: then $-1-x=x^2+c$, i.e. $x^2+x+1+c=0$, with discriminant $-3-4c$: two roots for $c&lt;-\frac34$, a double root $x=-\frac12$ for $c=-\frac34$, none for $c&gt;-\frac34$. A root gives a point off the line $y=x$ unless $x=-\frac12$, which only happens for $c=-\frac34$, and then the point $(-\frac12,-\frac12)$ is already among the points with $y=x$.</p><p>So the number of intersection points is $4$ for $c&lt;-\frac34$; $2$ for $-\frac34\le c&lt;\frac14$; $1$ for $c=\frac14$; $0$ for $c&gt;\frac14$. It is odd only for $c=\frac14$, so the answer is $\boxed{\tfrac14}$.</p>
+<h4>Solution 2 (Reflection in the line $y=x$)</h4>
+<p>The reflection $(x,y)\mapsto(y,x)$ swaps the two curves $y=x^2+c$ and $x=y^2+c$, so it maps the set of intersection points to itself. Points off the line $y=x$ are paired with their distinct mirror images, so the number of intersection points has the same parity as the number of those on the line $y=x$, i.e. the number of real roots of $x=x^2+c$. (The total is finite: every intersection point satisfies $(x-y)(x+y+1)=0$, so it lies on one of two lines, each meeting the parabola $y=x^2+c$ at most twice.)</p><p>The quadratic $x^2-x+c=0$ has exactly one real root iff its discriminant $1-4c$ vanishes. Hence the number of intersection points is odd iff $c=\frac14$, and the least (indeed the only) such $c$ is $\boxed{\tfrac14}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p4">
+<h3>Problem 7</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 23: Recurrence and Combinatorial Construction &middot; State-Based Construction</div>
+<div class="ct-text"><p>An <em>Alphabubu Blind Box</em> is a box containing one tile, on which is one letter of the alphabet. When Glenn opens a box, the tile inside is equally likely to contain each of the $26$ letters of the alphabet. Compute the expected number of boxes that Glenn would need to open in order to spell <span>GLENN</span> with his tiles.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\dfrac{1625}{24}$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (States and first-step analysis)</h4>
+<p>Glenn needs one G, one L, one E and two N's. Describe the situation by $(a,b)$, where $a\in\{0,1,2,3\}$ is the number of the letters G, L, E still missing and $b\in\{0,1,2\}$ the number of N's still needed. Let $E(a,b)$ be the expected number of further boxes. In state $(a,b)\ne(0,0)$ a box is useful with probability $\frac{u}{26}$, where $u=a+[b&gt;0]$; the expected wait for a useful box is $\frac{26}{u}$, and the useful box is equally likely to be any of the $u$ needed letters. Hence
+\[E(a,b)=\frac{26+a\,E(a-1,b)+[b&gt;0]\,E(a,b-1)}{a+[b&gt;0]},\qquad E(0,0)=0 .\]
+Filling the table:
+\[\begin{array}{c|ccc}
+ &amp; b=0 &amp; b=1 &amp; b=2\\ \hline
+a=0 &amp; 0 &amp; 26 &amp; 52\\
+a=1 &amp; 26 &amp; 39 &amp; \frac{117}{2}\\
+a=2 &amp; 39 &amp; \frac{143}{3} &amp; \frac{572}{9}\\
+a=3 &amp; \frac{143}{3} &amp; \frac{325}{6} &amp; \frac{1625}{24}
+\end{array}\]
+For example $E(3,2)=\frac{26+3\cdot\frac{572}{9}+\frac{325}{6}}{4}=\frac{1625}{24}$. The answer is $\boxed{\tfrac{1625}{24}}$.</p>
+<h4>Solution 2 (Opening boxes in continuous time)</h4>
+<p>Let Glenn open boxes at the arrival times of a Poisson process of rate $1$. The expected time at which he finishes equals the expected number $N$ of boxes he opens (the time is a sum of $N$ independent exponential waiting times with mean $1$, and $N$ is determined by the letters seen so far, so Wald's identity applies). In this model the arrivals of each letter form independent Poisson processes of rate $\frac1{26}$.</p><p>Measure time in units of $26$, i.e. put $u=t/26$, so each letter arrives at rate $1$ in $u$. Glenn is done by time $u$ iff each of G, L, E has appeared (probability $1-e^{-u}$ each) and N has appeared at least twice (probability $1-e^{-u}-ue^{-u}$). With $x=e^{-u}$,
+\[\mathbb E[N]=26\int_0^\infty\Bigl(1-(1-x)^3(1-x-ux)\Bigr)\,du=26\int_0^\infty\Bigl(1-(1-x)^4\Bigr)du+26\int_0^\infty u\,x(1-x)^3\,du .\]
+Expanding in powers of $x=e^{-u}$ and using $\int_0^\infty e^{-ju}du=\frac1j$, $\int_0^\infty ue^{-ju}du=\frac1{j^2}$:
+\[\int_0^\infty\bigl(1-(1-x)^4\bigr)du=\frac41-\frac62+\frac43-\frac14=\frac{25}{12},\qquad \int_0^\infty u\,x(1-x)^3du=1-\frac34+\frac39-\frac1{16}=\frac{25}{48}.\]
+So $\mathbb E[N]=26\left(\frac{25}{12}+\frac{25}{48}\right)=26\cdot\frac{125}{48}=\boxed{\tfrac{1625}{24}}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p5">
+<h3>Problem 8</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 32: Trigonometric Geometry and Metric Conversion &middot; Angle Expressions and Trigonometric Identities</div>
+<div class="ct-text"><p>In rectangle $ARML$, point $X$ lies on side $\overline{AR}$, and point $Y$ lies on side $\overline{RM}$. The line that passes through $Y$ and is perpendicular to $\overleftrightarrow{MX}$ intersects $\overleftrightarrow{MX}$ and $\overleftrightarrow{MA}$ at $P$ and $Q$, respectively. Given that $AX=14$, $XR=10$, and $7\cdot YP=13\cdot PQ$, compute $[ARML]$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$120\sqrt6$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Tangents of the angles at $M$)</h4>
+<div class="ct-fig"><img style="width:325px" src="/assets/contests/2026-27/arml-5_s1.svg" alt="Figure for the solution"></div>
+<p>Let $h=RM$, so $AR=24$ and $[ARML]=24h$. The lines $MY$ $(=MR)$, $MX$ and $MA$ all pass through $M$, and the line $YQ$ is perpendicular to $MX$ at $P$. Let $\alpha=\angle RMX$ and $\beta=\angle XMA$; since $X$ lies between $A$ and $R$, ray $MX$ lies inside $\angle RMA$, so $P$ lies between $Y$ and $Q$, and in the right triangles $MPY$ and $MPQ$:
+\[YP=MP\tan\alpha,\qquad PQ=MP\tan\beta .\]
+So $7\tan\alpha=13\tan\beta$. In right triangle $MRX$, $\tan\alpha=\frac{XR}{RM}=\frac{10}{h}$, and in right triangle $MRA$, $\tan(\alpha+\beta)=\frac{24}{h}$. Therefore
+\[\tan\beta=\frac{\frac{24}h-\frac{10}h}{1+\frac{240}{h^2}}=\frac{14h}{h^2+240}.\]
+The condition becomes $\frac{70}{h}=\frac{182h}{h^2+240}$, i.e. $70h^2+16800=182h^2$, so $h^2=150$ and $h=5\sqrt6$. The area is $24\cdot5\sqrt6=\boxed{120\sqrt6}$. (The position of $Y$ does not matter.)</p>
+<h4>Solution 2 (Coordinates with $M$ at the origin)</h4>
+<p>Put $M=(0,0)$, $R=(0,-h)$, $A=(-24,-h)$, $X=(-10,-h)$, where $h=RM$; then $[ARML]=24h$. The lines $MR$, $MX$, $MA$ are the lines through the origin with direction vectors $(0,-1)$, $(-10,-h)$, $(-24,-h)$.</p><p>Rotate the picture so that line $MX$ becomes the positive $x$-axis direction; a line perpendicular to $MX$ is then a vertical line $x=d&gt;0$, and a line through $M$ making angle $\theta$ with $MX$ meets it at height $d\tan\theta$. Here $MR$ and $MA$ make angles $\alpha$ and $\beta$ with $MX$ on opposite sides, where $\cos\alpha=\frac{h}{\sqrt{h^2+100}}$, $\sin\alpha=\frac{10}{\sqrt{h^2+100}}$ (from the dot and cross products of $(0,-1)$ and $(-10,-h)$), and similarly from $(-10,-h)$ and $(-24,-h)$:
+\[\cos\beta=\frac{240+h^2}{\sqrt{h^2+100}\sqrt{h^2+576}},\qquad \sin\beta=\frac{14h}{\sqrt{h^2+100}\sqrt{h^2+576}} .\]
+So $YP=d\tan\alpha=\frac{10d}{h}$ and $PQ=d\tan\beta=\frac{14hd}{h^2+240}$, and $7\cdot YP=13\cdot PQ$ gives $70(h^2+240)=182h^2$, so $h^2=150$, $h=5\sqrt6$, and $[ARML]=24h=\boxed{120\sqrt6}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p6">
+<h3>Problem 9</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 25: Diophantine Equations: Factorization and Algebraic Methods &middot; Symmetric and Polynomial Diophantine Forms</div>
+<div class="ct-text"><p>Let $a$ and $b$ be positive real numbers such that $\dfrac{a+b}{2}$, $\sqrt{ab}$, and $\dfrac{2}{\frac1a+\frac1b}$ are integers with sum $335$. Compute $|a-b|$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$210\sqrt5$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Parametrizing $AH=G^2$)</h4>
+<p>Let $M=\frac{a+b}{2}$, $G=\sqrt{ab}$, $H=\frac{2ab}{a+b}$ (positive integers with $M+G+H=335$). Then $MH=ab=G^2$.</p><p>Let $k=\gcd(M,H)$, $M=kx$, $H=ky$ with $\gcd(x,y)=1$. Then $k^2xy=G^2$, so $xy$ is a square, and since $\gcd(x,y)=1$, $x=u^2$, $y=v^2$ with $\gcd(u,v)=1$, and $G=kuv$. The sum condition becomes
+\[k(u^2+uv+v^2)=335=5\cdot67 .\]
+If $u=v$ then $u=v=1$ and $3k=335$, impossible. So $u&gt;v\ge1$ (as $M\ge G\ge H$), and $u^2+uv+v^2\ge7$ divides $335$, so it is $67$ or $335$. The form $u^2+uv+v^2$ never takes the value $335$: $4(u^2+uv+v^2)=(2u+v)^2+3v^2$, and $(2u+v)^2+3v^2\equiv0\pmod5$ forces $5\mid v$ and $5\mid u$ (as $-3$ is not a square mod $5$), contradicting $\gcd(u,v)=1$. For $67$, checking $v=1,2,3,4$ gives $u^2+u+1=67$ (no), $u^2+2u+4=67$ ($u=7$), $u^2+3u+9=67$ (no), $u^2+4u+16=67$ (no), and $v\ge5$ gives $u^2+uv+v^2&gt;67$. So $(u,v)=(7,2)$, $k=5$:
+\[M=245,\qquad G=70,\qquad H=20 .\]
+Finally $(a-b)^2=(a+b)^2-4ab=4(M^2-G^2)=4\cdot(245^2-70^2)=4\cdot175\cdot315=4\cdot 105^2\cdot5$, so $|a-b|=\boxed{210\sqrt5}$.</p>
+</div></details>
+</section>
+<h2 class="ct-group" id="power-round">Power Round</h2>
+<section class="ct-problem" id="p7">
+<h3>Problem 3</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VII scale">E</span>Number Theory &middot; LPS VII, Chapter 21: Arithmetic Functions and Multiplicative Structure &middot; Divisor and Sum Functions</div>
+<div class="ct-text"><p>For a positive integer $n$, let $\sigma(n)$ denote the sum of the positive divisors of $n$, and define the <em>abundancy</em> of $n$ to be $A(n)=\dfrac{\sigma(n)}{n}$. (For example, $A(3)=\frac43$ and $A(4)=\frac74$.) You may use without proof that $\sigma(ab)=\sigma(a)\sigma(b)$ whenever $a$ and $b$ are relatively prime. Prove that if $m$ divides $n$, then $A(m)\le A(n)$.</p></div>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Abundancy as a sum of reciprocals)</h4>
+<p>As $d$ runs over the divisors of $n$, so does $\frac nd$. Hence
+\[A(n)=\frac{\sigma(n)}{n}=\sum_{d\mid n}\frac{d}{n}=\sum_{d\mid n}\frac{1}{n/d}=\sum_{e\mid n}\frac1e .\]
+If $m\mid n$, every divisor of $m$ is a divisor of $n$, so the sum $\sum_{e\mid m}\frac1e$ is part of the sum $\sum_{e\mid n}\frac1e$, whose terms are positive. Therefore $A(m)\le A(n)$ (with equality only when $m=n$).</p>
+<h4>Solution 2 (Prime by prime)</h4>
+<p>For a prime power, $A(p^k)=1+\frac1p+\dots+\frac1{p^k}$, which increases with $k$. By the given fact, $\sigma$ and hence $A$ is multiplicative: $A(ab)=\frac{\sigma(a)\sigma(b)}{ab}=A(a)A(b)$ for coprime $a,b$.</p><p>Let $n=\prod p_i^{e_i}$. If $m\mid n$, then $m=\prod p_i^{f_i}$ with $0\le f_i\le e_i$ (where $A(p^0)=A(1)=1$). Hence
+\[A(m)=\prod_i A\bigl(p_i^{f_i}\bigr)\le\prod_i A\bigl(p_i^{e_i}\bigr)=A(n),\]
+since each factor on the left is at most the corresponding (positive) factor on the right.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p8">
+<h3>Problem 7</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 21: Arithmetic Functions and Multiplicative Structure &middot; Divisor and Sum Functions</div>
+<div class="ct-text"><p>For a positive integer $n$, let $\sigma(n)$ denote the sum of the positive divisors of $n$, and define the <em>abundancy</em> of $n$ to be $A(n)=\dfrac{\sigma(n)}{n}$. (For example, $A(3)=\frac43$ and $A(4)=\frac74$.) You may use without proof that $\sigma(ab)=\sigma(a)\sigma(b)$ whenever $a$ and $b$ are relatively prime. A rational number $x&gt;1$ is called an <em>abundancy outlaw</em> if there is no positive integer $n$ such that $A(n)=x$. Prove that if $m$ and $k$ are positive integers with $m&lt;k&lt;\sigma(m)$ and $k$ is relatively prime to $m$, then $\dfrac km$ is an abundancy outlaw.</p></div>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Force $m$ to divide $n$)</h4>
+<p><em>Lemma.</em> If $m\mid n$ then $A(m)\le A(n)$. Indeed $A(n)=\frac{\sigma(n)}n=\sum_{d\mid n}\frac dn=\sum_{e\mid n}\frac1e$ (put $e=\frac nd$), and the divisors of $m$ are among those of $n$.</p><p>Now let $\gcd(k,m)=1$ and $m&lt;k&lt;\sigma(m)$; note $\frac km&gt;1$. Suppose $A(n)=\frac km$ for some $n$. Then $m\,\sigma(n)=k\,n$, so $m\mid kn$, and since $\gcd(m,k)=1$, $m\mid n$. By the lemma,
+\[\frac km=A(n)\ge A(m)=\frac{\sigma(m)}{m}&gt;\frac km,\]
+a contradiction. Hence no $n$ has abundancy $\frac km$: it is an abundancy outlaw. (For example $m=6$, $k=7$ gives the outlaw $\frac76$.)</p>
+</div></details>
+</section>
+<h2 class="ct-group" id="individual-round">Individual Round</h2>
+<section class="ct-problem" id="p9">
+<h3>Problem 2</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Number Theory &middot; LPS VI, Chapter 27: Base Systems and Positional Arithmetic &middot; Base Conversion</div>
+<div class="ct-text"><p>Let $P$ be a polynomial each of whose coefficients is either $0$, $2$, or $6$. Given that $P(4)=2026$, compute $P(10)$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$66622$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Base four digits)</h4>
+<p>Write $P=2Q$, where $Q$ has coefficients in $\{0,1,3\}$; then $Q(4)=1013$. If $Q(x)=\sum c_ix^i$ with $c_i\in\{0,1,3\}\subset\{0,1,2,3\}$, then $\sum c_i4^i$ is the base-$4$ representation of $1013$, which is unique. Since
+\[1013=3\cdot256+3\cdot64+3\cdot16+1\cdot4+1=33311_4,\]
+all digits lie in $\{0,1,3\}$, so $Q(x)=3x^4+3x^3+3x^2+x+1$ is the only possibility. Then $Q(10)=33311$ and $P(10)=\boxed{66622}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p10">
+<h3>Problem 5</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Geometry &middot; LPS VI, Chapter 24: Quadrilaterals and Polygon Structure &middot; Polygon Angle and Diagonal Structure</div>
+<div class="ct-text"><p>Compute the greatest possible number of sides of a convex polygon whose angle measures (in degrees) in some order are distinct consecutive integers.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$16$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Average angle and integrality)</h4>
+<p>Let the polygon have $n$ sides and angles $a,a+1,\dots,a+n-1$ (degrees, integers). Their sum is $180(n-2)$, so the average angle is
+\[a+\frac{n-1}2=180-\frac{360}n .\]
+Convexity requires $a+n-1&lt;180$, i.e. $a+n-1\le179$. Combining, $180-\frac{360}n+\frac{n-1}2\le179$, so $\frac{n(n+1)}2\le360$, which gives $n\le26$.</p><p>Also $a=180-\frac{360}{n}-\frac{n-1}2$ must be an integer, so $\frac{720}{n}+(n-1)$ must be an even integer; in particular $n\mid720$. The divisors of $720$ up to $26$, from the top, are $24,20,18,16,\dots$: $n=24$ gives $30+23$, $n=20$ gives $36+19$, $n=18$ gives $40+17$ (all odd), while $n=16$ gives $45+15=60$, even. For $n=16$: $a=180-22.5-7.5=150$, and the angles $150^\circ,151^\circ,\dots,165^\circ$ add up to $2520^\circ=180\cdot14$. A convex polygon with these angles exists: take unit vectors $u_1,\dots,u_{16}$ whose directions turn successively by the exterior angles $15^\circ,16^\circ,\dots,30^\circ$ (total $360^\circ$). Consecutive directions differ by less than $180^\circ$, so the $u_i$ do not lie in a closed half-plane, and $0$ is a combination $\sum w_iu_i$ with all $w_i&gt;0$; the closed path with edges $w_1u_1,\dots,w_{16}u_{16}$ is a convex polygon with the required angles. The answer is $\boxed{16}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p11">
+<h3>Problem 6</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 32: Trigonometric Geometry and Metric Conversion &middot; Law of Sines and Law of Cosines</div>
+<div class="ct-text"><p>Suppose that $\triangle PQR$ has $PQ=QR=2026$ and $PR=4051$. Let $\triangle ABC$ have integer side lengths and $\angle C\le\angle R$. Compute the minimum possible perimeter of $\triangle ABC$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$93$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Law of cosines and $45^2=2025$)</h4>
+<p>In the isosceles triangle $PQR$, $\cos R=\frac{4051/2}{2026}=\frac{4051}{4052}$. Angles of a triangle lie in $(0^\circ,180^\circ)$, where cosine is decreasing, so $\angle C\le\angle R$ means $\cos C\ge\frac{4051}{4052}$. With $a=BC$, $b=CA$, $c=AB$:
+\[c^2=a^2+b^2-2ab\cos C\le a^2+b^2-\frac{4051}{2026}ab=(a-b)^2+\frac{ab}{2026}.\]
+Let $d=|a-b|$. By the triangle inequality $c\ge d+1$, so $(d+1)^2\le d^2+\frac{ab}{2026}$, i.e. $ab\ge2026(2d+1)$.</p><ul class="ct-ul"><li><p>If $d\ge1$: $ab\ge6078$, so $a+b\ge2\sqrt{ab}&gt;155$ and the perimeter exceeds $155$.</p></li><li><p>If $d=0$: $a=b$ and $a^2\ge2026&gt;45^2$, so $a\ge46$ and the perimeter is at least $46+46+1=93$.</p></li></ul><p>The triangle $(46,46,1)$ works: $\cos C=\frac{46^2+46^2-1}{2\cdot46^2}=1-\frac{1}{4232}\ge1-\frac1{4052}$. The minimum perimeter is $\boxed{93}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p12">
+<h3>Problem 7</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VII scale">E</span>Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure &middot; Power of a Point</div>
+<div class="ct-text"><p>In triangle $ABC$, a circle that is tangent to side $\overline{BC}$ intersects side $\overline{AB}$ at points $P$ and $Q$, where $P$ is the point closer to $A$, and intersects side $\overline{AC}$ at points $R$ and $S$, where $R$ is the point closer to $A$, as shown. Given that $AB=13$, $AC=15$, $AP=4$, $AQ=9$, and $AR=3$, compute $BC$.</p><div class="ct-fig"><img style="width:260px" src="/assets/contests/2026-27/arml-12.svg" alt="Figure for Individual Round, Problem 7"></div></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$12$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Power of a point three times)</h4>
+<div class="ct-fig"><img style="width:260px" src="/assets/contests/2026-27/arml-12_s1.svg" alt="Figure for the solution"></div>
+<p>Let the circle touch $BC$ at $T$.</p><ul class="ct-ul"><li><p>Power of $A$: $AP\cdot AQ=AR\cdot AS$, so $4\cdot9=3\cdot AS$ and $AS=12$.</p></li><li><p>Power of $B$: $BQ=13-9=4$ and $BP=13-4=9$, so $BT^2=BQ\cdot BP=36$ and $BT=6$.</p></li><li><p>Power of $C$: $CS=15-12=3$ and $CR=15-3=12$, so $CT^2=CS\cdot CR=36$ and $CT=6$.</p></li></ul><p>Since $T$ lies on side $BC$, $BC=BT+TC=\boxed{12}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p13">
+<h3>Problem 8</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 10: Double Counting and Counting Identities &middot; Direct Double Counting</div>
+<div class="ct-text"><p>The $60$ students of the West Coast ARML team and the $120$ students of the East Coast ARML team are at a party. A total of $1800$ handshakes occur between a West Coast student and an East Coast student, with no pair of people shaking hands more than once and no other handshakes occurring. For each pair of students at the party, the coaches record how many students shook hands with both. Compute the minimum possible average of the $\binom{180}{2}$ numbers recorded by the coaches.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\dfrac{430}{179}$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Count common neighbours from the middle person)</h4>
+<p>Consider the handshake graph. The total $T$ of the recorded numbers counts triples (pair $\{x,y\}$, person $v$) with $v$ shaking hands with both $x$ and $y$. Grouping by $v$,
+\[T=\sum_v\binom{d_v}{2},\]
+where $d_v$ is the number of handshakes of $v$. The West degrees sum to $1800$ over $60$ people and the East degrees to $1800$ over $120$ people. Since $\binom{d}{2}$ is convex in $d$, for a fixed sum the total is least when the degrees are equal:
+\[\sum_{\text{West}}\binom{d_v}2\ge60\binom{30}{2}=26100,\qquad\sum_{\text{East}}\binom{d_v}2\ge120\binom{15}2=12600 .\]
+(For integers: if $d_v\ge d_w+2$, moving one handshake count from $v$ to $w$ lowers $\binom{d_v}2+\binom{d_w}2$ by $d_v-d_w-1&gt;0$.) Equality is possible: number the West students $i=0,\dots,59$ and East students $j=0,\dots,119$, and let $i$ and $j$ shake hands iff $j-2i\bmod120\in\{0,1,\dots,29\}$; each West student shakes $30$ hands, and each East student $15$ (the window of $30$ consecutive residues ending at $j$ contains $15$ even residues $2i$).</p><p>So the minimum average is $\dfrac{38700}{\binom{180}2}=\dfrac{38700}{16110}=\boxed{\tfrac{430}{179}}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p14">
+<h3>Problem 9</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VII scale">E</span>Number Theory &middot; LPS VII, Chapter 41: Continued Fractions and Rational Approximation &middot; Applications to Integer Equations</div>
+<div class="ct-text"><p>Compute the second least positive integer $n$ such that $n+1$ and $5n+1$ are perfect squares.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$24$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Check the small squares)</h4>
+<p>We need $n+1=x^2$ with $x\ge2$, and then $5n+1=5x^2-4$ must be a square. Going through $x=2,3,4,5$:
+\[x=2:\ 16=4^2\ (n=3);\quad x=3:\ 41;\quad x=4:\ 76;\quad x=5:\ 121=11^2\ (n=24).\]
+$41$ and $76$ are not squares. So the least such $n$ is $3$ and the second least is $\boxed{24}$.</p>
+<h4>Solution 2 (Fibonacci and Lucas numbers)</h4>
+<p>With $n+1=x^2$ and $5n+1=y^2$ we need $y^2-5x^2=-4$. The Lucas and Fibonacci numbers satisfy $L_k^2-5F_k^2=4(-1)^k$, so the odd-indexed pairs $(x,y)=(F_{2j+1},L_{2j+1})$ are solutions: $(1,1)$, $(2,4)$, $(5,11)$, $(13,29)$, &hellip;, giving $n=x^2-1=0,3,24,168,\dots$. It is classical that these are all positive solutions of $y^2-5x^2=-4$; in any case only $x=2,3,4$ lie between $1$ and $5$, and $5x^2-4=16,41,76$ is a square only for $x=2$. So the positive values of $n$ begin $3,24,\dots$, and the second least is $\boxed{24}$.</p>
+</div></details>
+</section>
+<h2 class="ct-group" id="tiebreaker-round">Tiebreaker Round</h2>
+<section class="ct-problem" id="p15">
+<h3>Problem 1</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 8: Modular Arithmetic and Congruence Methods &middot; Modular Equations and Solutions</div>
+<div class="ct-text"><p>Suppose that $m$ and $n$ are positive integers such that $99$ is a divisor of
+\[\gcd(20m+26n+73,\;17m+76n+12).\]
+Compute the least possible value of $mn$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$442$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Solve modulo 9 and modulo 11)</h4>
+<p>We need both numbers divisible by $9$ and by $11$.</p><p><em>Modulo $9$:</em> $2m-n+1\equiv0$ and $-m+4n+3\equiv0$. Substituting $n\equiv2m+1$ into the second gives $7m+7\equiv0$, so $m\equiv8$ and $n\equiv17\equiv8\pmod9$.</p><p><em>Modulo $11$:</em> $9m+4n+7\equiv0$ and $6m+10n+1\equiv0$. The first gives $n\equiv3(-9m-7)\equiv6m+1$ (as $4^{-1}\equiv3$); then the second becomes $66m+11\equiv0$, which always holds. So the condition is $n\equiv6m+1\pmod{11}$.</p><p>So $m,n\equiv8\pmod 9$ (i.e. $m,n\in\{8,17,26,\dots\}$) and $n\equiv 6m+1\pmod{11}$. If $mn&lt;442$ then $\min(m,n)&lt;21$, so $m$ or $n$ is $8$ or $17$:</p><ul class="ct-ul"><li><p>$m=8$: $n\equiv5\pmod{11}$, $n\equiv8\pmod9$: least $n=71$, $mn=568$.</p></li><li><p>$m=17$: $n\equiv4\pmod{11}$: least $n=26$, $mn=442$.</p></li><li><p>$n=8$: $6m\equiv7$, $m\equiv3\pmod{11}$: least $m=80$, $mn=640$.</p></li><li><p>$n=17$: $6m\equiv16$, $m\equiv10\pmod{11}$: least $m=98$.</p></li></ul><p>Hence the least value is $mn=\boxed{442}$ ($m=17$, $n=26$: $20\cdot17+26\cdot26+73=1089=11\cdot99$ and $17\cdot17+76\cdot26+12=2277=23\cdot99$).</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p16">
+<h3>Problem 2</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Algebra &middot; LPS VII, Chapter 13: Systems, Symmetry, and Multi-Variable Algebra &middot; Elimination and Reduction</div>
+<div class="ct-text"><p>Suppose that positive real numbers $a$, $b$, and $c$ satisfy
+\[\frac{a}{b+c+4}=\frac{b}{c+a+8}=\frac{c}{a+b+12}=\frac{a+b+c}{4}-4 .\]
+Compute $a+b+c$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$3+\sqrt{201}$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Adding numerators and denominators)</h4>
+<p>Let $s=a+b+c$ and let $k$ be the common value. Since $a=k(b+c+4)$, $b=k(c+a+8)$, $c=k(a+b+12)$, adding gives
+\[s=k\bigl(2s+24\bigr),\qquad k=\frac{s}{2s+24}.\]
+Also $k=\frac s4-4$. Hence $4s=(s-16)(2s+24)$, i.e. $2s^2-12s-384=0$, $s^2-6s-192=0$, and $s=3\pm\sqrt{201}$; as $s&gt;0$, $s=3+\sqrt{201}$.</p><p>Conversely, with this $s$ and $k=\frac{s}{2s+24}&gt;0$, the equations $a=k(s-a+4)$ etc. give $a=\frac{k(s+4)}{1+k}$, $b=\frac{k(s+8)}{1+k}$, $c=\frac{k(s+12)}{1+k}$, which are positive and add up to $\frac{k(3s+24)}{1+k}=s$ (because $k(2s+24)=s$); and $k=\frac s4-4$ holds by the choice of $s$. So $a+b+c=\boxed{3+\sqrt{201}}$.</p>
+</div></details>
+</section>
+{% endraw %}

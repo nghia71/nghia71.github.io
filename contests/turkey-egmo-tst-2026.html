@@ -29,6 +29,11 @@ description: Turkey Team Selection Test 2026, for the EGMO: problems with answer
   .ct-note { font-size: 14px; color: var(--ink-soft); font-style: italic; }
   .ct-bar { margin: .6em 0 1em; display: flex; gap: 10px; flex-wrap: wrap; }
   .ct-bar button { font: inherit; font-size: 14px; padding: 5px 12px; border-radius: var(--radius); border: 1px solid var(--brand); background: var(--white); color: var(--brand); cursor: pointer; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
 </style>
 <script>
   window.MathJax = { tex: { inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [['\\[','\\]']], processEscapes: true },
@@ -57,6 +62,28 @@ description: Turkey Team Selection Test 2026, for the EGMO: problems with answer
   .ct-text mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
 </style>
 
+<style>
+  .ct-tags { display: flex; flex-wrap: wrap; gap: 5px; margin: 0 0 .55em; }
+  .ct-tg { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .03em; padding: 2px 8px; border-radius: 999px; line-height: 1.5; }
+  .ct-lv { background: #eee7dc; color: #4a3d33; }
+  .ct-df-Starter { background: #dcf1dc; color: #245c24; }
+  .ct-df-Explorer { background: #d6efec; color: #155e57; }
+  .ct-df-Challenger { background: #dce8f7; color: #1f4c80; }
+  .ct-df-Olympiad { background: #e7defa; color: #4b2a8a; }
+  .ct-df-Advanced { background: #fbe4cc; color: #8a4a0b; }
+  .ct-df-Expert { background: #f8d6cf; color: #8c2600; }
+  .ct-band { margin: 1.3em 0 .5em; font-size: 14px; color: var(--ink-soft); }
+  .ct-band .ct-tg { font-size: 13px; margin-right: .4em; }
+  .ct-legend { font-size: 14.5px; background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 10px 16px; margin: 1em 0 1.4em; }
+  .ct-legend p { margin: .35em 0; }
+  .ct-legend ul { margin: .2em 0 .4em; padding-left: 1.1em; }
+  .ct-legend li { margin: .2em 0; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
+</style>
 {% endraw %}
 <p><a href="{{ '/contests-2026' | relative_url }}">&larr; All contests 2026</a></p>
 
@@ -73,7 +100,7 @@ description: Turkey Team Selection Test 2026, for the EGMO: problems with answer
 <h2 class="ct-group" id="day-1">Day 1</h2>
 <section class="ct-problem" id="p1">
 <h3>Problem 1</h3>
-<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 49: Combinatorial Number Theory and Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 49: Combinatorial Number Theory and Structure &middot; Sequences with Arithmetic Constraints</div>
 <div class="ct-text"><p>Let $n$ be a positive integer. Consider a sequence of positive integers $a_1,a_2,\ldots,a_n$ such that for every integer $1\le i\le n$, the number $a_{i+1}$ equals the number of indices $j$ with $1\le j\le n$ satisfying $\gcd(a_i,a_j)=1$ (where $a_{n+1}=a_1$). Determine all possible values of $n$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$n=1$ and $n=2$</p></div></details>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
@@ -101,7 +128,7 @@ with $c(2)=c(4)$ above avoids Bertrand's postulate.</p>
 </section>
 <section class="ct-problem" id="p2">
 <h3>Problem 2</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 31: Extremal Principle and Bounding Arguments</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 31: Extremal Principle and Bounding Arguments &middot; Bounding and Limiting Arguments</div>
 <div class="ct-text"><p>Let $n$ be a positive integer. Real numbers are written at the vertices of a regular $n$-gon, and the sum of all written numbers is $0$.</p><p>For any two distinct vertices, let the numbers at these vertices be $x$ and $y$. Let $S$ be the sum of the numbers written at the vertices lying strictly on one side of the line joining these two vertices, and let $T$ be the sum of the numbers written at the vertices lying strictly on the other side.</p><p>If
 \[|x-y|\ge|S-T|,\]
 we call this pair of vertices a good pair. Find the minimum possible value of the number of good pairs.</p></div>
@@ -153,7 +180,7 @@ pairs. The minimum is $\boxed{n-1}$.</p>
 </section>
 <section class="ct-problem" id="p3">
 <h3>Problem 3</h3>
-<div class="ct-meta">Geometry &middot; LPS VII, Chapter 19: Triangle Centers and Classical Triangle Geometry</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 19: Triangle Centers and Classical Triangle Geometry &middot; Centroid, Incenter, Circumcenter, and Orthocenter</div>
 <div class="ct-text"><p>Let $ABC$ be an acute scalene triangle with orthocenter $H$ and circumcenter $O$. Let $M$ be the midpoint of $BC$, and let $P$ be the second intersection point of the line $AH$ with the circumcircle of triangle $ABC$. Let $Q$ be the intersection of the line through $A$ perpendicular to $HM$ and the line through $H$ parallel to $BC$. Finally, let $R$ be the intersection point of the ray $HO$ with the circumcircle of triangle $APQ$.</p><p>Prove that $|AR|=2|HM|$.</p></div>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
 <h4>Solution 1 ($R$ is the reflection of $H$ in $O$)</h4>
@@ -202,7 +229,7 @@ so $AR=2HM$.</p>
 <h2 class="ct-group" id="day-2">Day 2</h2>
 <section class="ct-problem" id="p4">
 <h3>Problem 4</h3>
-<div class="ct-meta">Algebra &middot; LPS VII, Chapter 31: Extremal Principle and Bounding Arguments</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Algebra &middot; LPS VII, Chapter 31: Extremal Principle and Bounding Arguments &middot; Bounding and Limiting Arguments</div>
 <div class="ct-text"><p>Let $0\le x_1,x_2,\ldots,x_{1001}\le 1$ be real numbers. Find the maximum possible value of
 \[\sum_{i=1}^{1001}x_i-\sum_{i=1}^{1001}x_ix_{i+1}-\sum_{i=1}^{1001}x_ix_{i+2},\]
 where $x_{1002}=x_1$ and $x_{1003}=x_2$.</p></div>
@@ -248,7 +275,7 @@ F(x)=\mathbb{E}\bigl[\,|S|-e(S)\,\bigr].
 </section>
 <section class="ct-problem" id="p5">
 <h3>Problem 5</h3>
-<div class="ct-meta">Geometry &middot; LPS VII, Chapter 3: Foundational Angle and Configuration Chasing</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 3: Foundational Angle and Configuration Chasing &middot; Local Configuration Cleanup</div>
 <div class="ct-text"><p>In a triangle $ABC$ with $|AB|\ne|AC|$ and $\angle BAC\ne 90^\circ$, let $D$ be a point on the line $AC$ lying on the side of $A$ opposite to $C$, chosen so that $|AD|=|AB|$. Let $E$ be the intersection point of the line $AB$ with the line through $C$ perpendicular to $BD$. Let $M$ and $N$ be the midpoints of the segments $[CD]$ and $[BE]$, respectively. Let $P$ be the midpoint of the arc $BC$ of the circumcircle of $ABC$ that contains $A$, and let $Q$ be the midpoint of the arc $BC$ that does not contain $A$. Let $K$ be the intersection point of the lines $CE$ and $BD$, and let $L$ be the intersection point of the lines $PM$ and $QN$. Prove that the lines $KL$ and $MN$ are perpendicular.</p></div>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Coordinates with the bisectors as axes)</h4>
@@ -309,7 +336,7 @@ $\angle BAC=90^\circ$, which the statement excludes.)</p>
 </section>
 <section class="ct-problem" id="p6">
 <h3>Problem 6</h3>
-<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 54: Advanced Number Theory Synthesis</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 54: Advanced Number Theory Synthesis &middot; Hybrid Congruence and Factorization Arguments</div>
 <div class="ct-text"><p>Find all polynomials $P$ with integer coefficients such that for all coprime positive integers $m$ and $n$,
 \[\gcd\big(n+P(m),\,mP(n)\big)=1.\]</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$P(x)=x^k$ and $P(x)=-x^k$ with $k\ge1$</p></div></details>

@@ -29,6 +29,11 @@ description: China Team Selection Test 2026: problems with answers and solutions
   .ct-note { font-size: 14px; color: var(--ink-soft); font-style: italic; }
   .ct-bar { margin: .6em 0 1em; display: flex; gap: 10px; flex-wrap: wrap; }
   .ct-bar button { font: inherit; font-size: 14px; padding: 5px 12px; border-radius: var(--radius); border: 1px solid var(--brand); background: var(--white); color: var(--brand); cursor: pointer; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
 </style>
 <script>
   window.MathJax = { tex: { inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [['\\[','\\]']], processEscapes: true },
@@ -57,6 +62,28 @@ description: China Team Selection Test 2026: problems with answers and solutions
   .ct-text mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
 </style>
 
+<style>
+  .ct-tags { display: flex; flex-wrap: wrap; gap: 5px; margin: 0 0 .55em; }
+  .ct-tg { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .03em; padding: 2px 8px; border-radius: 999px; line-height: 1.5; }
+  .ct-lv { background: #eee7dc; color: #4a3d33; }
+  .ct-df-Starter { background: #dcf1dc; color: #245c24; }
+  .ct-df-Explorer { background: #d6efec; color: #155e57; }
+  .ct-df-Challenger { background: #dce8f7; color: #1f4c80; }
+  .ct-df-Olympiad { background: #e7defa; color: #4b2a8a; }
+  .ct-df-Advanced { background: #fbe4cc; color: #8a4a0b; }
+  .ct-df-Expert { background: #f8d6cf; color: #8c2600; }
+  .ct-band { margin: 1.3em 0 .5em; font-size: 14px; color: var(--ink-soft); }
+  .ct-band .ct-tg { font-size: 13px; margin-right: .4em; }
+  .ct-legend { font-size: 14.5px; background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 10px 16px; margin: 1em 0 1.4em; }
+  .ct-legend p { margin: .35em 0; }
+  .ct-legend ul { margin: .2em 0 .4em; padding-left: 1.1em; }
+  .ct-legend li { margin: .2em 0; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
+</style>
 {% endraw %}
 <p><a href="{{ '/contests-2026' | relative_url }}">&larr; All contests 2026</a></p>
 
@@ -73,7 +100,7 @@ description: China Team Selection Test 2026: problems with answers and solutions
 <h2 class="ct-group" id="round-one-test-1">Round One, Test 1</h2>
 <section class="ct-problem" id="p1">
 <h3>Problem 1</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 52: Advanced Combinatorial Structure and Hybrid Methods</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 52: Advanced Combinatorial Structure and Hybrid Methods &middot; Combinatorics with Algebraic Interaction</div>
 <div class="ct-text"><p>Let $\{F_n\}$ be the Fibonacci sequence, where $F_0=0$, $F_1=1$, and define $F_{-1},F_{-2},\dots$ by recurrence. Initially, the pair $(0,0)$ is written on the blackboard. In one operation, we erase the current pair $(x,y)$ and write either $(x+F_k,\,y+F_{k+1})$ or $(x-F_k,\,y-F_{k+1})$, where $k$ is any integer. Prove that there exists a constant $C$ such that for any positive integers $p,q$, we can obtain $(p,q)$ in at most $C\ln(p+q)$ operations.</p></div>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Powers of the golden ratio)</h4>
@@ -90,7 +117,7 @@ so $v_k+(-1)^{k+1}v_{-k-2}=(F_k+F_{k+2},\,F_{k+1}-F_{k+1})=(L_{k+1},0)$. Thus $(
 </section>
 <section class="ct-problem" id="p2">
 <h3>Problem 2</h3>
-<div class="ct-meta">Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-S" title="Superhard, on the LPS VII scale">S</span>Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure &middot; Power of a Point</div>
 <div class="ct-text"><p>Given a circle $\Omega$, two points $A,B$ on $\Omega$, and a point $C$ inside $\Omega$ such that $\angle ACB=90^\circ$ and $AC&lt;BC$. Let $M$ be the midpoint of $AB$, and let $P$ be a moving point on the major arc $AB$ such that $\angle CMP&gt;90^\circ$. Define $Q$ by $CQ\parallel PM$ and $\angle QPM=\angle MCP$. Prove that there exists a fixed point $K$ in the plane such that we always have $\angle PQK=\angle PCK$.</p></div>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
 <h4>Solution 1 (The inverse point and a linear power function)</h4>
@@ -133,7 +160,7 @@ Here $\cos\frac\gamma2&gt;0$ because $45^\circ&lt;\frac\gamma2&lt;90^\circ$; $\o
 </section>
 <section class="ct-problem" id="p3">
 <h3>Problem 3</h3>
-<div class="ct-meta">Algebra &middot; LPS VII, Chapter 34: Complex Numbers as an Olympiad Tool</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-S" title="Superhard, on the LPS VII scale">S</span>Algebra &middot; LPS VII, Chapter 34: Complex Numbers as an Olympiad Tool &middot; Complex Factorization and Algebraic Cleanup</div>
 <div class="ct-text"><p>Let integers $n&gt;k&gt;1$, and let $z_1,z_2,\dots,z_n$ be complex numbers with modulus at most $1$. Prove that
 \[\left|\binom{n}{k}-\sum_{1\le i_1&lt;i_2&lt;\cdots&lt;i_k\le n} z_{i_1}z_{i_2}\cdots z_{i_k}\right|\le\binom{n-1}{k-1}\left|n-\sum_{i=1}^{n} z_i\right|,\]
 and find the condition for equality.</p></div>
@@ -172,7 +199,7 @@ and the only zero of $f$ in the closed unit disk is $w=1$. Also $f\not\equiv0$ (
 <h2 class="ct-group" id="round-one-test-2">Round One, Test 2</h2>
 <section class="ct-problem" id="p4">
 <h3>Problem 4</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 52: Advanced Combinatorial Structure and Hybrid Methods</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 52: Advanced Combinatorial Structure and Hybrid Methods &middot; Combinatorics with Algebraic Interaction</div>
 <div class="ct-text"><p>Let $G=(V,E)$ be a simple graph, where $V=\{(x,y,z)\mid 1\le x,y,z\le 2026\}$ and vertices $(x,y,z)$ and $(x',y',z')$ are connected if and only if $|x-x'|+|y-y'|+|z-z'|=1$. Each vertex $v$ is labelled with a real number $f(v)$ so that the sum of all labels is $0$. For an edge $e\in E$, let $g(e)$ denote the absolute value of the difference between the labels of the two endpoints of $e$. Prove that, for any real number $p\ge 1$, we have
 \[\sum_{v\in V}|f(v)|^p\le 6677^p\cdot\sum_{e\in E} g(e)^p.\]</p></div>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -191,7 +218,7 @@ Since $3n=6078&lt;6677$, we get $\sum_v|f(v)|^p\le6078^p\sum_eg(e)^p\le6677^p\su
 </section>
 <section class="ct-problem" id="p5">
 <h3>Problem 5</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 39: Graph Theory and Structural Combinatorics</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-S" title="Superhard, on the LPS VII scale">S</span>Combinatorics &middot; LPS VII, Chapter 39: Graph Theory and Structural Combinatorics &middot; Extremal Graph Structure</div>
 <div class="ct-text"><p>Find the least integer $k$ for which the edges of the complete graph $K_{2026}$ can be labelled with the numbers $1,2,\dots,\binom{2026}{2}$, with each number being used exactly once, such that between any two vertices, there exists a path whose sum of edge labels does not exceed $k$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$k=3962$</p></div></details>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
@@ -203,7 +230,7 @@ Since $3n=6078&lt;6677$, we get $\sum_v|f(v)|^p\le6078^p\sum_eg(e)^p\le6677^p\su
 </section>
 <section class="ct-problem" id="p6">
 <h3>Problem 6</h3>
-<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 54: Advanced Number Theory Synthesis</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-S" title="Superhard, on the LPS VII scale">S</span>Number Theory &middot; LPS VII, Chapter 54: Advanced Number Theory Synthesis &middot; Olympiad-Level Synthesis</div>
 <div class="ct-text"><p>Let $\{a_n\}$ be a sequence satisfying $a_1=2$, and for $n\ge 2$, $a_n$ is the smallest prime number that does not divide
 \[\prod_{k=1}^{n-1}(a_k+n-k).\]
 For a prime $p$, let $f(p)$ denote the number of times $p$ appears in this sequence. Prove that for any positive integer $m$ and any $m$ distinct primes $p_1,p_2,\dots,p_m$ we have
@@ -219,7 +246,7 @@ For a prime $p$, let $f(p)$ denote the number of times $p$ appears in this seque
 <h2 class="ct-group" id="round-one-test-3">Round One, Test 3</h2>
 <section class="ct-problem" id="p7">
 <h3>Problem 7</h3>
-<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 49: Combinatorial Number Theory and Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Number Theory &middot; LPS VII, Chapter 49: Combinatorial Number Theory and Structure &middot; Additive Structure and Sums of Integers</div>
 <div class="ct-text"><p>For a finite set $X$ and an integer $t$, define $X+t=\{x+t\mid x\in X\}$, and let $\sigma(X)$ denote the sum of the elements of $X$.</p><p>Is it true that for every integer $m\ge 2$, there exist a set $A$ of $m$ positive integers and $m$ pairwise distinct integers $t_1,t_2,\dots,t_m$ such that
 \[\sigma(A\cup(A+t_1))=\sigma(A\cup(A+t_2))=\cdots=\sigma(A\cup(A+t_m))?\]</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>Yes.</p></div></details>
@@ -239,7 +266,7 @@ For example, $m=2$: $A=\{1,4\}$, $t\in\{1,3\}$ (both sums are $12$); $m=3$: $A=\
 </section>
 <section class="ct-problem" id="p8">
 <h3>Problem 8</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 39: Graph Theory and Structural Combinatorics</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 39: Graph Theory and Structural Combinatorics &middot; Extremal Graph Structure</div>
 <div class="ct-text"><p>Given integers $m,n$ satisfying $n&gt;2m&gt;2$. There is a group of $n$ members, and some pairs of members are friends, with friendship being mutual. They are to be divided into $m$ committees, each member participating in exactly one committee. First, the chair and vice-chair of each committee are determined. At this point, it is found that there is exactly one way to assign the remaining $n-2m$ members to the committees such that in each committee, all members (including the chair and vice-chair) are pairwise friends. It is allowed that a committee consists only of the chair and vice-chair. Find the maximum possible number of (unordered) friend pairs among the $n$ members.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\dbinom n2-(m-1)(n-2m)$</p></div></details>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
@@ -251,7 +278,7 @@ so there are at most $\binom n2-(m-1)(n-2m)$ friend pairs.</p><p><strong>Constru
 </section>
 <section class="ct-problem" id="p9">
 <h3>Problem 9</h3>
-<div class="ct-meta">Algebra &middot; LPS VII, Chapter 42: Polynomial Reconstruction and Interpolation</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-S" title="Superhard, on the LPS VII scale">S</span>Algebra &middot; LPS VII, Chapter 42: Polynomial Reconstruction and Interpolation &middot; Reconstruction from Functional Conditions</div>
 <div class="ct-text"><p>Let $m,n$ be positive integers, $P_1,P_2$ be non-constant polynomials of $m$ variables with integer coefficients, and $Q_1,Q_2$ be non-constant polynomials of $n$ variables with integer coefficients. It is known that for any integers $a_1,a_2,\dots,a_m,b_1,b_2,\dots,b_n$ such that $P_1(a_1,a_2,\dots,a_m)\ne Q_1(b_1,b_2,\dots,b_n)$,
 \[\frac{P_2(a_1,a_2,\dots,a_m)-Q_2(b_1,b_2,\dots,b_n)}{P_1(a_1,a_2,\dots,a_m)-Q_1(b_1,b_2,\dots,b_n)}\]
 is an integer.</p><p>Show that there exists a one variable polynomial $R(x)$ with rational coefficients, such that $P_2=R(P_1)$, $Q_2=R(Q_1)$.</p></div>
@@ -266,7 +293,7 @@ and the right side has degree less than $D=\deg(p_1-c)$, so $\sum_tc^tA_t(x)=d$ 
 <h2 class="ct-group" id="round-one-test-4">Round One, Test 4</h2>
 <section class="ct-problem" id="p10">
 <h3>Problem 10</h3>
-<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 21: Arithmetic Functions and Multiplicative Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Number Theory &middot; LPS VII, Chapter 21: Arithmetic Functions and Multiplicative Structure &middot; Divisor and Sum Functions</div>
 <div class="ct-text"><p>Let $n&gt;1$ be an integer. For a positive integer $k$, let $d_k$ denote the number of divisors of $n$ in the interval $[1,n^{\frac{1}{k}}]$. Prove that for any integer $k\ge 2$, we have
 \[d_{k+1}\ge\sqrt{2d_k}-k-\frac{1}{2}.\]</p></div>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
@@ -278,7 +305,7 @@ Taking square roots, $\sqrt{2d_k}\le d_{k+1}+k+\frac12$, which is the required i
 </section>
 <section class="ct-problem" id="p11">
 <h3>Problem 11</h3>
-<div class="ct-meta">Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure &middot; Tangency and Tangent Geometry</div>
 <div class="ct-text"><p>Let $ABCD$ be a convex quadrilateral. The incircle of $\triangle ABC$ touches $AB$ and $BC$ at $S$ and $T$, respectively; the incircle of $\triangle BCD$ touches $BC$ and $CD$ at $U$ and $V$, respectively; the incircle of $\triangle CDA$ touches $CD$ and $DA$ at $X$ and $Y$, respectively; the incircle of $\triangle DAB$ touches $DA$ and $AB$ at $Z$ and $W$, respectively; the $A$-excircle of $\triangle DAB$ touches $DA$ and $AB$ at $E$ and $F$, respectively; and the $C$-excircle of $\triangle BCD$ touches $BC$ and $CD$ at $G$ and $H$, respectively. Prove that if the quadrilateral whose consecutive sides lie on the lines $SY$, $UW$, $TX$, $VZ$ (in this order) is cyclic, then $E$, $F$, $G$ and $H$ are concyclic.</p></div>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
 <h4>Solution (Both conditions mean that ABCD is tangential)</h4>
@@ -300,7 +327,7 @@ and $\delta=0$ gives $d-a=c-b$ and $a-d=b-c$, so $BF=BG$ and $DE=DH$.</p><ul cla
 </section>
 <section class="ct-problem" id="p12">
 <h3>Problem 12</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 47: Probabilistic Method and Random Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 47: Probabilistic Method and Random Structure &middot; Random Construction</div>
 <div class="ct-text"><p>Let $A$ be a set with $n$ elements, $\mathcal{F}$ be a family of subsets of $A$, such that the union of all sets in $\mathcal{F}$ is $A$. Prove that there is a subset $\mathcal{G}$ of $\mathcal{F}$, such that there is a subset $T$ of $A$, satisfying:</p><ul class="ct-parts"><li><p><span class="ct-lbl">(i)</span> $|T|\ge\dfrac{n}{1+\frac{1}{2}+\cdots+\frac{1}{n}}$;</p></li><li><p><span class="ct-lbl">(ii)</span> $T$ is included in the union of all sets in $\mathcal{G}$;</p></li><li><p><span class="ct-lbl">(iii)</span> $X\cap Y\cap T=\varnothing$ for every pair of distinct sets $X,Y$ in $\mathcal{G}$.</p></li></ul></div>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
 <h4>Solution (A random subfamily of random size)</h4>
@@ -315,7 +342,7 @@ since $i\binom mi=\frac{m!}{(i-1)!\,(m-i)!}$, $\binom mc=\frac{m!}{c!\,(m-c)!}$ 
 <h2 class="ct-group" id="round-2-test-1">Round 2, Test 1</h2>
 <section class="ct-problem" id="p13">
 <h3>Problem 13</h3>
-<div class="ct-meta">Geometry &middot; LPS VII, Chapter 48: Inversion and Circle-Preserving Transformation</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-S" title="Superhard, on the LPS VII scale">S</span>Geometry &middot; LPS VII, Chapter 48: Inversion and Circle-Preserving Transformation &middot; Inversion with Power and Radical Structure</div>
 <div class="ct-text"><p>In an acute triangle $ABC$ with $AB\ne AC$, let $D$ be a point on the circumcircle such that $AD\perp BC$. Points $P,Q$ lie inside $\triangle ABC$ satisfying
 \[\angle APB=\angle APC=180^\circ-\angle ACB,\]
 \[\angle AQB=\angle AQC=180^\circ-\angle ABC.\]
@@ -352,7 +379,7 @@ and its coefficient of $\sigma$ is $-(1-z)(4z-1)+z(3-4z)=1-2z$. So the two sides
 </section>
 <section class="ct-problem" id="p14">
 <h3>Problem 14</h3>
-<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 41: Continued Fractions and Rational Approximation</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-S" title="Superhard, on the LPS VII scale">S</span>Number Theory &middot; LPS VII, Chapter 41: Continued Fractions and Rational Approximation &middot; Diophantine Approximation</div>
 <div class="ct-text"><p>Find the smallest real number $\lambda$ such that for any positive integer $n$ and any set of $n+100$ consecutive positive integers, there exists an integer $k$ among them that satisfies:
 \[\{k\sqrt{2}\}\le\frac{\lambda}{n}.\]</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\lambda=\dfrac{4+3\sqrt2}{4}$</p></div></details>
@@ -368,7 +395,7 @@ With $n=N-100=y_{j+2}-101$ this gives $n\cdot\min\{k\sqrt2\}\ge(y_{j+2}-101)(\al
 </section>
 <section class="ct-problem" id="p15">
 <h3>Problem 15</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 52: Advanced Combinatorial Structure and Hybrid Methods</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-S" title="Superhard, on the LPS VII scale">S</span>Combinatorics &middot; LPS VII, Chapter 52: Advanced Combinatorial Structure and Hybrid Methods &middot; Combinatorics with Algebraic Interaction</div>
 <div class="ct-text"><p>Find the smallest real number $\alpha$ such that for any positive integer $n$, if a graph $G$ has $n$ vertices and its minimum degree is at least $\alpha n$, then for any $3$-coloring (red, yellow, blue) of the edges of $G$, there always exist one red connected component, one yellow connected component, and one blue connected component that together cover all vertices of $G$.</p><p><em>Note:</em> A &ldquo;red connected component&rdquo; refers to a connected component in the red subgraph (the subgraph consisting of all vertices and only the red edges).</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\alpha=\tfrac78$</p></div></details>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
@@ -382,7 +409,7 @@ a contradiction. So every coloring is good when the minimum degree is at least $
 <h2 class="ct-group" id="round-2-test-2">Round 2, Test 2</h2>
 <section class="ct-problem" id="p16">
 <h3>Problem 16</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 52: Advanced Combinatorial Structure and Hybrid Methods</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 52: Advanced Combinatorial Structure and Hybrid Methods &middot; Hybrid Counting and Structure</div>
 <div class="ct-text"><p>Let $l\ge 3$ be an odd integer. Suppose $x_0,x_1,\dots,x_{2^l}$ is a permutation of $0,1,\dots,2^l$. Find the maximum possible value of
 \[S=\sum_{t=0}^{l-1}\sum_{i=0}^{2^l}|x_i-x_{i+2^t}|,\]
 where indices are taken modulo $2^l+1$.</p></div>
@@ -403,7 +430,7 @@ Hence $\sum_T(\max_T-\min_T)\le3l\cdot K\cdot2K=6lK^2$ and $S\le\frac23\cdot6lK^
 </section>
 <section class="ct-problem" id="p17">
 <h3>Problem 17</h3>
-<div class="ct-meta">Geometry &middot; LPS VII, Chapter 55: Three-Dimensional and Spatial Geometry</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-S" title="Superhard, on the LPS VII scale">S</span>Geometry &middot; LPS VII, Chapter 55: Three-Dimensional and Spatial Geometry &middot; Distance and Angle in Space</div>
 <div class="ct-text"><ul class="ct-parts"><li><p><span class="ct-lbl">(1)</span> A regular octahedron lies inside (including the boundary) a unit cube. Find the maximum possible edge length of the octahedron.</p></li><li><p><span class="ct-lbl">(2)</span> A cube lies inside (including the boundary) a regular octahedron of edge length $1$. Find the maximum possible edge length of the cube.</p></li></ul></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(1) $\dfrac{3\sqrt2}{4}$; (2) $2-\sqrt2$</p></div></details>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
@@ -420,7 +447,7 @@ contradicting $p\cdot q=-\frac13$.</p><p><em>Claim 2: a unit vector $m$ with $\m
 </section>
 <section class="ct-problem" id="p18">
 <h3>Problem 18</h3>
-<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 21: Arithmetic Functions and Multiplicative Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-S" title="Superhard, on the LPS VII scale">S</span>Number Theory &middot; LPS VII, Chapter 21: Arithmetic Functions and Multiplicative Structure &middot; Function Equations on Integers</div>
 <div class="ct-text"><p>Find all functions $f:\mathbb{N}_+\to\mathbb{N}_+$ such that for any positive integers $x$ and $y$,
 \[f(x)+f(y)+xy\mid xf(x)-yf(y).\]</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$f(x)=x^2+bx$ for a fixed integer $b\ge0$</p></div></details>
@@ -449,7 +476,7 @@ and comparing the coefficients of $x$ gives $e=a^2+(c-1)a$. Thus $f(a)=a^2+(c-1)
 <h2 class="ct-group" id="round-2-test-3">Round 2, Test 3</h2>
 <section class="ct-problem" id="p19">
 <h3>Problem 19</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 31: Extremal Principle and Bounding Arguments</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 31: Extremal Principle and Bounding Arguments &middot; Bounding and Limiting Arguments</div>
 <div class="ct-text"><p>Given positive integers $m,n$. Cover a $2m\times 2n$ chessboard with $2mn$ dominoes without overlap or omission. A <strong>Z-shape</strong> is one of the following configurations formed by a pair of dominoes:</p><div class="ct-fig"><img style="width:332px" src="/assets/contests/2026-27/china-tst-19.svg" alt="Figure for Round 2, Test 3, Problem 19"></div><p>Find the maximum possible number of Z-shapes.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$4(m-1)(n-1)$</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -476,7 +503,7 @@ $W-1-c$ and $W-2-c$. All these pairs are different, so the number of Z-shapes is
 </section>
 <section class="ct-problem" id="p20">
 <h3>Problem 20</h3>
-<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 12: Exponential Congruences and Order Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-S" title="Superhard, on the LPS VII scale">S</span>Number Theory &middot; LPS VII, Chapter 12: Exponential Congruences and Order Structure &middot; Orders and Primitive Behavior</div>
 <div class="ct-text"><p>Do there exist primes $q,p_1,p_2$ and positive integers $m,n,\alpha_1,\alpha_2$ satisfying simultaneously:</p><ul class="ct-parts"><li><p><span class="ct-lbl">(1)</span> $q^{\alpha_1}\mid p_1^m-1$, &emsp;$q^{\alpha_2}\mid p_2^m-1$, &emsp;$m&gt;3n^2$;</p></li><li><p><span class="ct-lbl">(2)</span> $p_1&lt;p_2&lt;p_1^{9/8}$, &emsp;$q^{n\alpha_1}&gt;p_1^{m-1}$, &emsp;$q^{n\alpha_2}&gt;p_2^{m-1}$?</p></li></ul></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>No.</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -500,7 +527,7 @@ is a lattice whose index in $\mathbb Z^2$, i.e. whose determinant, is $|H|\le m$
 </section>
 <section class="ct-problem" id="p21">
 <h3>Problem 21</h3>
-<div class="ct-meta">Algebra &middot; LPS VII, Chapter 42: Polynomial Reconstruction and Interpolation</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-S" title="Superhard, on the LPS VII scale">S</span>Algebra &middot; LPS VII, Chapter 42: Polynomial Reconstruction and Interpolation &middot; Finite Difference and Discrete Polynomial Behavior</div>
 <div class="ct-text"><p>Let $n&gt;k$ be positive integers, and let $d_1,d_2,\dots,d_k$ be positive integers. For $I\subseteq\{1,2,\dots,k\}$, define $d_I=\sum_{i\in I}d_i$ (with $d_\varnothing=0$). Define the polynomial
 \[f(t)=\sum_{I\subseteq\{1,2,\dots,k\}}(-1)^{|I|}\binom{t+n-d_I}{n},\]
 where $\binom{x}{n}=\frac{x(x-1)\cdots(x-n+1)}{n!}$. Prove that all coefficients of $f(t)$ are non-negative if and only if $\sum_{i=1}^{k}d_i\le n+1$.</p></div>
@@ -536,7 +563,7 @@ which is negative if $D&gt;n+1$.</p><p>Therefore all coefficients of $f$ are non
 <h2 class="ct-group" id="round-2-test-4">Round 2, Test 4</h2>
 <section class="ct-problem" id="p22">
 <h3>Problem 22</h3>
-<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 25: Diophantine Equations: Factorization and Algebraic Methods</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-S" title="Superhard, on the LPS VII scale">S</span>Number Theory &middot; LPS VII, Chapter 25: Diophantine Equations: Factorization and Algebraic Methods &middot; Bounding and Size Arguments</div>
 <div class="ct-text"><p>Let $C&gt;0$ be a fixed real number. A positive integer $a$ is called `good' if there exist positive integers $x,y$ such that
 \[a=xy\quad\text{and}\quad|x-y|\le C\sqrt[4]{a}.\]
 List all good numbers in increasing order as
@@ -554,7 +581,7 @@ Since $4\delta+C^2=\frac{4+C^2}2&lt;4$, for large $u$ the right side is less tha
 </section>
 <section class="ct-problem" id="p23">
 <h3>Problem 23</h3>
-<div class="ct-meta">Geometry &middot; LPS VII, Chapter 45: Complex Numbers in Geometry</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-S" title="Superhard, on the LPS VII scale">S</span>Geometry &middot; LPS VII, Chapter 45: Complex Numbers in Geometry &middot; Circle and Line Structure via Complex Equations</div>
 <div class="ct-text"><p>Let triangle $ABC$ have side lengths $a,b,c$ and circumcircle $\Gamma$. For a point $P\in\Gamma$, denote by $\ell_P$ the Simson line of $P$ with respect to triangle $ABC$. Define the set
 \[S=\{\ell_{P_1}\cap\ell_{P_2}:P_1,P_2\in\Gamma,\ P_1\ne P_2\}.\]
 Find the area of the smallest convex set containing $S$ in terms of $a,b,c$.</p></div>
@@ -576,7 +603,7 @@ so $X\in\ell_p$, and by symmetry $X\in\ell_q$. Since $\sigma/p\ne\sigma/q$, the 
 </section>
 <section class="ct-problem" id="p24">
 <h3>Problem 24</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 49: Combinatorial Number Theory and Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-S" title="Superhard, on the LPS VII scale">S</span>Combinatorics &middot; LPS VII, Chapter 49: Combinatorial Number Theory and Structure &middot; Hybrid Combinatorial-Arithmetic Arguments</div>
 <div class="ct-text"><p>There are several coins, each with a positive integer value, and the total value is $S$. Prove that there exists a positive integer $S_0$ such that whenever $S\ge S_0$, one can select some of the coins (possibly a single coin) and split them into several piles (possibly one pile) satisfying:</p><ul class="ct-ul"><li><p>Every pile contains the same number of coins, and that number does not exceed $100$;</p></li><li><p>All piles have the same total value;</p></li><li><p>The total value of the selected coins is greater than $S^{0.98}$.</p></li></ul></div>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
 <h4>Solution (A heavy dyadic class, pigeonhole on sums, and a sunflower)</h4>

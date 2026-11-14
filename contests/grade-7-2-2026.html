@@ -1,0 +1,378 @@
+---
+title: Grade 7 Selection 2026, Part 2: selected problems from 2026 contests
+permalink: /contests/grade-7-2-2026
+description: Grade 7 Selection 2026, Part 2: selected problems from 2026 contests: problems with answers and solutions
+---
+{% raw %}
+<style>
+  .ct-intro { margin-bottom: 1.2em; }
+  .ct-credit { font-size: 14px; color: var(--ink-soft); border-left: 3px solid var(--gold); padding: 6px 12px; background: var(--white); margin: 1em 0; }
+  .ct-toc { display: flex; flex-wrap: wrap; gap: 6px; margin: 1em 0 1.4em; }
+  .ct-toc a { display: inline-block; min-width: 2.4em; text-align: center; padding: 4px 8px; border: 1px solid var(--rule); border-radius: 4px; background: var(--white); text-decoration: none; font-size: 14px; }
+  .ct-problem { background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 14px 18px; margin: 1.1em 0; }
+  .ct-problem h3 { margin: 0 0 .3em; font-size: 1.08rem; border-bottom: none; padding-bottom: 0; }
+  .ct-meta { font-size: 13px; color: var(--ink-soft); margin-bottom: .6em; }
+  .ct-text { font-family: Georgia, "Times New Roman", "Noto Serif", serif; font-size: 1.02em; line-height: 1.6; }
+  .ct-text p { margin: .5em 0; }
+  .ct-fig { text-align: center; margin: .8em 0; }
+  .ct-fig img { max-width: 100%; height: auto; max-height: 340px; }
+  .ct-choices { display: flex; flex-wrap: wrap; gap: 6px 22px; margin: .6em 0 .2em; }
+  .ct-choices b { margin-right: .3em; }
+  .ct-problem details { margin-top: .8em; border-top: 1px dashed var(--rule); padding-top: .5em; }
+  .ct-problem summary { cursor: pointer; font-weight: 600; color: var(--brand); font-size: 15px; }
+  .ct-problem details[open] summary { margin-bottom: .5em; }
+  .ct-sol h4 { font-size: 1rem; margin: 1em 0 .3em; color: var(--ink); }
+  .ct-answer { font-weight: 600; }
+  .ct-parts { list-style: none; padding-left: .4em; }
+  .ct-parts li { margin: .35em 0; }
+  .ct-lbl { font-weight: 700; margin-right: .3em; }
+  .ct-note { font-size: 14px; color: var(--ink-soft); font-style: italic; }
+  .ct-bar { margin: .6em 0 1em; display: flex; gap: 10px; flex-wrap: wrap; }
+  .ct-bar button { font: inherit; font-size: 14px; padding: 5px 12px; border-radius: var(--radius); border: 1px solid var(--brand); background: var(--white); color: var(--brand); cursor: pointer; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
+</style>
+<script>
+  window.MathJax = { tex: { inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [['\\[','\\]']], processEscapes: true },
+                     options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] } };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script>
+  function ctAll(open) { document.querySelectorAll('.ct-problem details').forEach(function (d) { d.open = open; }); }
+</script>
+
+<style>
+  .ct-group { font-size: 1.25rem; margin: 1.6em 0 .2em; }
+  .ct-toc-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: .3em 0; }
+  .ct-toc-g { font-size: 13px; color: var(--ink-soft); min-width: 9em; }
+  .ct-toc-wrap { margin: 1em 0 1.4em; }
+  .ct-center { text-align: center; margin: .6em 0; }
+  .ct-tablewrap { overflow-x: auto; margin: .6em 0; text-align: center; }
+  .ct-table { border-collapse: collapse; margin: 0 auto; }
+  .ct-table td { padding: 2px 9px; text-align: center; }
+  .ct-table tr.ct-hl td { border-bottom: 1px solid var(--ink-soft); }
+  .ct-table.ct-vfirst td:first-child { border-right: 1px solid var(--ink-soft); }
+  .ct-ul { padding-left: 1.4em; }
+  .ct-ul li { margin: .3em 0; }
+  .ct-text li > p:first-child { margin-top: 0; }
+  .ct-text li > p:last-child { margin-bottom: 0; }
+  .ct-text mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
+</style>
+
+<style>
+  .ct-tags { display: flex; flex-wrap: wrap; gap: 5px; margin: 0 0 .55em; }
+  .ct-tg { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .03em; padding: 2px 8px; border-radius: 999px; line-height: 1.5; }
+  .ct-lv { background: #eee7dc; color: #4a3d33; }
+  .ct-df-Starter { background: #dcf1dc; color: #245c24; }
+  .ct-df-Explorer { background: #d6efec; color: #155e57; }
+  .ct-df-Challenger { background: #dce8f7; color: #1f4c80; }
+  .ct-df-Olympiad { background: #e7defa; color: #4b2a8a; }
+  .ct-df-Advanced { background: #fbe4cc; color: #8a4a0b; }
+  .ct-df-Expert { background: #f8d6cf; color: #8c2600; }
+  .ct-band { margin: 1.3em 0 .5em; font-size: 14px; color: var(--ink-soft); }
+  .ct-band .ct-tg { font-size: 13px; margin-right: .4em; }
+  .ct-legend { font-size: 14.5px; background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 10px 16px; margin: 1em 0 1.4em; }
+  .ct-legend p { margin: .35em 0; }
+  .ct-legend ul { margin: .2em 0 .4em; padding-left: 1.1em; }
+  .ct-legend li { margin: .2em 0; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
+</style>
+{% endraw %}
+<p><a href="{{ '/contests-2026' | relative_url }}">&larr; All contests 2026</a></p>
+
+<h1>Grade 7 Selection 2026, Part 2: selected problems from 2026 contests</h1>
+
+<div class="ct-intro">
+<p>The 20 problems of the Grade 7 Selection 2026, Part 2: selected problems from 2026 contests, each with our own solutions, hidden until you open them. Where a problem has a final answer, it is shown separately. Try a problem first, then check.</p><p>A second set of problems for grade 7, chosen from the 2026 UKMT papers and the 2026 MATHCOUNTS State competition. Each problem names its source; the problems go from easy to hard.</p>
+</div>
+<div class="ct-credit">Problems selected from the 2026 contests named under each problem (UKMT, CEMC, MAA, MATHCOUNTS, MIMC, SMOPS, CLMC and Vietnamese entrance exams); they belong to their publishers. Solutions written by MCC.</div>
+<div class="ct-bar"><button type="button" onclick="ctAll(true)">Show all answers and solutions</button><button type="button" onclick="ctAll(false)">Hide all</button></div>
+<div class="ct-toc-wrap"><div class="ct-toc-row"><a href="#p1">1</a><a href="#p2">2</a><a href="#p3">3</a><a href="#p4">4</a><a href="#p5">5</a><a href="#p6">6</a><a href="#p7">7</a><a href="#p8">8</a><a href="#p9">9</a><a href="#p10">10</a><a href="#p11">11</a><a href="#p12">12</a><a href="#p13">13</a><a href="#p14">14</a><a href="#p15">15</a><a href="#p16">16</a><a href="#p17">17</a><a href="#p18">18</a><a href="#p19">19</a><a href="#p20">20</a></div></div>
+
+{% raw %}
+<section class="ct-problem" id="p1">
+<h3>Problem 1</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Algebra &middot; LPS VI, Chapter 6: Casework, Complement, and Constructive Counting &middot; Exhaustive Casework</div>
+<div class="ct-text"><p>Noah writes down the numbers $1$, $2$, $4$ and $13$. He then adds a fifth integer $x$ which then becomes the mean, median or mode of the five numbers. How many possible choices for $x$ are there?</p><p><strong>(A)</strong>&nbsp;$2$&emsp;<strong>(B)</strong>&nbsp;$3$&emsp;<strong>(C)</strong>&nbsp;$4$&emsp;<strong>(D)</strong>&nbsp;$5$&emsp;<strong>(E)</strong>&nbsp;$6$</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(E) $6$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (One role at a time)</h4>
+<p>We find the values of $x$ for each role separately and then combine the lists.</p><p><strong>Mean.</strong> The five numbers add up to $1+2+4+13+x=20+x$, so the mean is $\frac{20+x}{5}$. It equals $x$ when $20+x=5x$, that is, $x=5$.</p><p><strong>Median.</strong> The median is the third number when the five numbers are written in increasing order. Without $x$ the list is $1,2,4,13$. If $x&lt;2$, the third number is $2$, not $x$; if $x&gt;4$, the third number is $4$, not $x$. If $2\le x\le 4$, then $x$ sits in the middle (when $x=2$ the ordered list is $1,2,2,4,13$, and the middle number $2$ equals $x$; similarly for $x=4$). So $x=2,3,4$.</p><p><strong>Mode.</strong> If $x$ is different from $1,2,4,13$, every number appears once and there is no mode. If $x$ equals one of them, that number appears twice and all others once, so $x$ is the mode. So $x=1,2,4,13$.</p><p>Together the possible values are $1,2,3,4,5,13$: six choices. The answer is $\boxed{\text{(E)}\ 6}$.</p>
+<h4>Solution 2 (Walk along the number line)</h4>
+<p>The five numbers are $1,2,4,13$ and $x$, with sum $20+x$ and mean $\frac{20+x}{5}$. We move $x$ through the integers from left to right and ask each time whether $x$ is the mean, the median or the mode.</p><ul class="ct-ul"><li><p>$x\le 0$: $x$ is the smallest number, so it is not the median (the median is $2$); it appears once, so it is not the mode; the mean is $\frac{20+x}{5}$, which equals $x$ only for $x=5$. No values here.</p></li><li><p>$x=1$: the number $1$ appears twice, so $x$ is the mode. Yes.</p></li><li><p>$x=2$: the list $1,2,2,4,13$ has median $2$ (and mode $2$). Yes.</p></li><li><p>$x=3$: the list $1,2,3,4,13$ has median $3$. Yes.</p></li><li><p>$x=4$: the list $1,2,4,4,13$ has median $4$. Yes.</p></li><li><p>$5\le x\le 12$: the median is $4$, so $x$ is not the median, and $x$ appears once, so it is not the mode. The mean is $\frac{20+x}{5}=x$ only when $x=5$, and indeed $1+2+4+13+5=25=5\cdot5$. So only $x=5$.</p></li><li><p>$x=13$: the number $13$ appears twice, so $x$ is the mode. Yes.</p></li><li><p>$x\ge 14$: the median is $4$, $x$ appears once, and the mean $\frac{20+x}{5}$ is smaller than $x$. No values.</p></li></ul><p>We collected $x=1,2,3,4,5,13$, six values. The answer is $\boxed{\text{(E)}\ 6}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p2">
+<h3>Problem 2</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Algebra &middot; LPS VI, Chapter 9: Ratios, Proportions, and Percent Change &middot; Ratio Interpretation</div>
+<div class="ct-text"><p>Three kangaroos wanted to share some radishes. Initially, they shared them in the ratio $7:6:5$ but then changed their minds and shared them in the ratio $6:5:4$ in the same order. As a result of this change, one kangaroo received four extra radishes. How many radishes did they share?</p><p><strong>(A)</strong>&nbsp;$270$&emsp;<strong>(B)</strong>&nbsp;$300$&emsp;<strong>(C)</strong>&nbsp;$360$&emsp;<strong>(D)</strong>&nbsp;$420$&emsp;<strong>(E)</strong>&nbsp;$480$</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(C) $360$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Fractions of the total)</h4>
+<p>Let $T$ be the number of radishes. In the first sharing the parts are $\frac{7}{18}T$, $\frac{6}{18}T$, $\frac{5}{18}T$; in the second they are $\frac{6}{15}T$, $\frac{5}{15}T$, $\frac{4}{15}T$. Over the common denominator $90$:
+\[\text{first: } \tfrac{35}{90}T,\ \tfrac{30}{90}T,\ \tfrac{25}{90}T; \qquad \text{second: } \tfrac{36}{90}T,\ \tfrac{30}{90}T,\ \tfrac{24}{90}T.\]
+So the first kangaroo gains $\frac{1}{90}T$, the second keeps its share, and the third loses $\frac{1}{90}T$. The gain is $4$ radishes, so $\frac{T}{90}=4$ and $T=360$. The answer is $\boxed{\text{(C)}\ 360}$.</p>
+<h4>Solution 2 (Test the options)</h4>
+<p>The first sharing splits the radishes into $7+6+5=18$ equal parts and the second into $6+5+4=15$ equal parts, so the number of radishes is a multiple of both $18$ and $15$, that is, a multiple of $90$. Among the options only $270$ and $360$ are multiples of $90$ ($300$, $420$ and $480$ are not multiples of $18$).</p><ul class="ct-ul"><li><p>$270$: shares $105,90,75$, then $108,90,72$. The changes are $3$, not $4$.</p></li><li><p>$360$: shares $140,120,100$, then $144,120,96$. The first kangaroo gets $4$ extra radishes.</p></li></ul><p>The answer is $\boxed{\text{(C)}\ 360}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p3">
+<h3>Problem 3</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Geometry &middot; LPS VI, Chapter 32: Area by Measurement and Decomposition &middot; Base and Height</div>
+<div class="ct-text"><p>A circle with area $25\pi$ is inscribed in a rhombus with area $120$. What is the perimeter of the rhombus?</p><div class="ct-fig"><img style="width:242px" src="/assets/contests/2026-27/grade-7-2-3.svg" alt="Figure for Problem 3"></div></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$48$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Base times height)</h4>
+<p>The circle has area $\pi r^2=25\pi$, so its radius is $r=5$ and its diameter is $10$.</p><p>A rhombus is a parallelogram, and its opposite sides are parallel. The inscribed circle touches two opposite sides, so the distance between these parallel sides is a diameter of the circle, $10$. This distance is the height of the rhombus when one of these sides is taken as the base.</p><p>If the side length is $s$, the area is base times height: $10s=120$, so $s=12$. The perimeter is $4\cdot12=\boxed{48}$.</p>
+<h4>Solution 2 (Four triangles from the centre)</h4>
+<div class="ct-fig"><img style="width:242px" src="/assets/contests/2026-27/grade-7-2-3_s2.svg" alt="Figure for the solution"></div>
+<p>The circle has area $\pi r^2=25\pi$, so its radius is $r=5$. Let $O$ be its centre and $s$ the side of the rhombus.</p><p>Join $O$ to the four vertices. This cuts the rhombus into four triangles, each with one side of the rhombus as its base. The circle touches each side, and the radius to the point of contact is perpendicular to that side, so each triangle has height $5$ on a base of length $s$. Hence
+\[120=4\cdot\frac{s\cdot5}{2}=10s,\]
+so $s=12$ and the perimeter is $4s=\boxed{48}$. (In general, the area of a polygon with an inscribed circle is the radius times half the perimeter.)</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p4">
+<h3>Problem 4</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Combinatorics &middot; LPS VI, Chapter 26: Double Counting and Combinatorial Proof &middot; Incidence Counting</div>
+<div class="ct-text"><p>In the first round of a chess tournament, each player plays against every other player exactly once. A player gets $3$, $1$ or $-1$ points respectively for winning, drawing or losing a match. At the end of the first round, the sum of the scores of all the players is $90$. How many players are there in the tournament?</p><p><strong>(A)</strong>&nbsp;$10$&emsp;<strong>(B)</strong>&nbsp;$11$&emsp;<strong>(C)</strong>&nbsp;$12$&emsp;<strong>(D)</strong>&nbsp;$13$&emsp;<strong>(E)</strong>&nbsp;$14$</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(A) $10$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Points per game)</h4>
+<p>Look at one game. If someone wins, the two players get $3$ and $-1$ points, $2$ in total. If it is a draw, they get $1$ and $1$, again $2$ in total. So every game adds exactly $2$ points to the sum of all scores, whatever happens.</p><p>With $n$ players there are $\frac{n(n-1)}{2}$ games (each of the $n$ players meets $n-1$ others, and each game is counted twice this way). So the sum of the scores is
+\[2\cdot\frac{n(n-1)}{2}=n(n-1)=90.\]
+Since $10\cdot9=90$, there are $10$ players. The answer is $\boxed{\text{(A)}\ 10}$.</p>
+<h4>Solution 2 (Points per player and game)</h4>
+<p>Rewrite the scoring: in every game, each player first receives $1$ point; then the winner receives $2$ more and the loser has $2$ taken away (win $=1+2=3$, loss $=1-2=-1$, draw $=1$). The extra $+2$ and $-2$ in a decided game cancel, so the sum of all scores equals the number of times some player received the basic $1$ point.</p><p>With $n$ players, each player plays $n-1$ games and receives $1$ point in each, so the sum of all scores is $n(n-1)$. We need $n(n-1)=90=10\cdot 9$, so $n=10$. The answer is $\boxed{\text{(A)}\ 10}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p5">
+<h3>Problem 5</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Algebra &middot; LPS VI, Chapter 13: Rates, Motion, and Work &middot; Relative Motion</div>
+<div class="ct-text"><p>Two buses left at 08:00, one travelling from Ell to Em and one travelling from Em to Ell, along the same road. The buses both travelled at constant speeds, without stopping. They passed each other at 8:30 and continued along their routes. One bus arrived at its destination at 8:45.</p><p>At what time did the other bus arrive at its destination?</p><p><strong>(A)</strong>&nbsp;8:45&emsp;<strong>(B)</strong>&nbsp;9:00&emsp;<strong>(C)</strong>&nbsp;9:15&emsp;<strong>(D)</strong>&nbsp;9:30&emsp;<strong>(E)</strong>&nbsp;9:45</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(D) 9:30</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Fractions of the road)</h4>
+<p>Call the bus that arrives at 8:45 bus A, and the other bus B. Bus A drives the whole road in $45$ minutes at constant speed. When they meet, at 8:30, it has driven for $30$ minutes, so it has covered $\frac{30}{45}=\frac23$ of the road.</p><p>At that moment bus B has covered the rest of the road, from its own town to the meeting point, which is $1-\frac23=\frac13$ of the road, in $30$ minutes. So bus B needs $3\cdot30=90$ minutes for the whole road, and it arrives at 8:00 plus $90$ minutes, which is 9:30. The answer is $\boxed{\text{(D)}\ \text{9:30}}$.</p>
+<h4>Solution 2 (Compare the two pieces of road)</h4>
+<p>The meeting point cuts the road into two pieces. Call the bus that arrives at 8:45 bus A and the other bus B.</p><ul class="ct-ul"><li><p>The piece in front of bus A after the meeting was driven by bus A in $15$ minutes (8:30 to 8:45), and by bus B in $30$ minutes (8:00 to 8:30, before the meeting). So bus B takes twice as long as bus A for the same distance.</p></li><li><p>The piece in front of bus B after the meeting was driven by bus A in $30$ minutes (before the meeting). Bus B takes twice as long, so it needs $60$ minutes for it.</p></li></ul><p>Bus B therefore arrives $60$ minutes after 8:30, at 9:30. The answer is $\boxed{\text{(D)}\ \text{9:30}}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p6">
+<h3>Problem 6</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Combinatorics &middot; LPS VI, Chapter 22: Pigeonhole Principle and Guaranteed Existence &middot; Worst-Case Thresholds</div>
+<div class="ct-text"><p>A sports storeroom contains three types of bats: cricket bats, table tennis bats and baseball bats. On Monday, some children each remove two bats chosen at random.</p><p>What is the smallest number of children who could remove bats to be sure that at least two of them have exactly the same types of bat?</p><p><strong>(A)</strong>&nbsp;$8$&emsp;<strong>(B)</strong>&nbsp;$7$&emsp;<strong>(C)</strong>&nbsp;$6$&emsp;<strong>(D)</strong>&nbsp;$5$&emsp;<strong>(E)</strong>&nbsp;$4$</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(B) $7$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Count the kinds of pairs)</h4>
+<p>Write C, T and B for cricket, table tennis and baseball bats. A child's two bats form one of these kinds of pair:
+\[\text{CC},\ \text{TT},\ \text{BB},\ \text{CT},\ \text{CB},\ \text{TB},\]
+six kinds in all (three with two bats of the same type, three with two different types).</p><p>Six children are not enough: they might take six different kinds of pair. With seven children, there are seven pairs but only six kinds, so two children must have the same kind of pair (the pigeonhole principle). The smallest number is therefore $7$. The answer is $\boxed{\text{(B)}\ 7}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p7">
+<h3>Problem 7</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Number Theory &middot; LPS VI, Chapter 54: Prime Patterns and Number-Theoretic Search &middot; Pattern Search Among Special Integers</div>
+<div class="ct-text"><p>$PQR$ is an acute-angled triangle. Each of its angles, in degrees, is a triangular number. What is the smallest angle in the triangle?</p><p><strong>(A)</strong>&nbsp;$21^\circ$&emsp;<strong>(B)</strong>&nbsp;$28^\circ$&emsp;<strong>(C)</strong>&nbsp;$36^\circ$&emsp;<strong>(D)</strong>&nbsp;$45^\circ$&emsp;<strong>(E)</strong>&nbsp;$55^\circ$</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(C) $36^\circ$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Start from the largest angle)</h4>
+<p>The triangular numbers are $1,3,6,10,15,21,28,36,45,55,66,78,91,\dots$ Each angle of an acute triangle is less than $90^\circ$, so every angle is one of
+\[1,3,6,10,15,21,28,36,45,55,66,78,\]
+and the three angles add up to $180$.</p><p>Let the largest angle be $c$. The other two add up to $180-c$, and each is at most $c$, so $180-c\le 2c$, which gives $c\ge 60$. So $c$ is $66$ or $78$.</p><ul class="ct-ul"><li><p>$c=78$: the other two add up to $102$, and the larger of them is at least $51$, so it is $55$, $66$ or $78$. Then the smaller is $47$, $36$ or $24$; only $36$ is triangular. This gives $36,66,78$.</p></li><li><p>$c=66$: the other two add up to $114$, and the larger is at least $57$ and at most $66$, so it is $66$. Then the smaller is $48$, which is not triangular.</p></li></ul><p>The only possibility is $36^\circ,66^\circ,78^\circ$ (indeed $36+66+78=180$), and the smallest angle is $36^\circ$. The answer is $\boxed{\text{(C)}\ 36^\circ}$.</p>
+<h4>Solution 2 (Test each option as the smallest angle)</h4>
+<p>Each angle is a triangular number below $90$ (the triangle is acute), so every angle is one of $1,3,6,10,15,21,28,36,45,55,66,78$. Suppose the smallest angle is $a$; the other two angles then add up to $180-a$, and each of them is at most $78$.</p><ul class="ct-ul"><li><p>$a=21$: the other two add up to $159&gt;78+78$. Impossible.</p></li><li><p>$a=28$: they add up to $152$, so each is at least $152-78=74$, hence both are $78$, but $78+78=156\ne152$. Impossible.</p></li><li><p>$a=36$: they add up to $144=66+78$. This works: $36+66+78=180$.</p></li><li><p>$a=45$: they add up to $135$, so each is at least $135-78=57$: both are $66$ or $78$, with sums $132,144,156$, never $135$. Impossible.</p></li><li><p>$a=55$: they add up to $125$, each is at least $55$, so each is $55$, $66$ or $78$, with sums $110,121,133,132,144,156$, never $125$. Impossible.</p></li></ul><p>Only $36^\circ$ is possible. The answer is $\boxed{\text{(C)}\ 36^\circ}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p8">
+<h3>Problem 8</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Geometry &middot; LPS VI, Chapter 9: Ratios, Proportions, and Percent Change &middot; Proportion and Scaling</div>
+<div class="ct-text"><p>The rectangle shown is divided into six rectangular parts. The areas of five of the parts are given. What is the area of the sixth part?</p><p><strong>(A)</strong>&nbsp;$14$&emsp;<strong>(B)</strong>&nbsp;$15$&emsp;<strong>(C)</strong>&nbsp;$16$&emsp;<strong>(D)</strong>&nbsp;$18$&emsp;<strong>(E)</strong>&nbsp;$21$</p><div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/grade-7-2-8.svg" alt="Figure for Problem 8"></div></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(B) $15$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Choose convenient lengths)</h4>
+<p>Rectangles in the same row have the same height, so their areas are in the ratio of their widths; rectangles in the same column have the same width, so their areas are in the ratio of their heights.</p><p>Let the bottom row have height $2$. The $9$-rectangle and the $18$-rectangle have the same width, so the $9$-row has height $1$. The left column has width $12\div2=6$, so the $24$-rectangle has height $24\div6=4$. The $24$-rectangle covers the $42$-row and the $9$-row, so the $42$-row has height $4-1=3$.</p><p>The middle column has width $18\div2=9$ (check: $9\cdot1=9$). The $42$-rectangle has height $3$, so its width is $14$, and the shaded rectangle has width $14-9=5$. It covers the $9$-row and the bottom row, so its height is $1+2=3$ and its area is $5\cdot3=15$. The answer is $\boxed{\text{(B)}\ 15}$.</p>
+<h4>Solution 2 (Areas only)</h4>
+<p>Use two facts: rectangles in the same row have areas in the ratio of their widths, and rectangles in the same column have areas in the ratio of their heights.</p><p>The $12$- and $18$-rectangles share a row, so the middle column is $\frac{18}{12}=\frac32$ times as wide as the left column. Both columns run the full height of the big rectangle: the left column consists of $24$ and $12$ (area $36$), and the middle column consists of the part of the $42$-rectangle above the $9$, then $9$, then $18$. Columns of equal height have areas in the ratio of their widths, so the middle column has area $\frac32\cdot36=54$. Its part inside the $42$-rectangle is $54-9-18=27$.</p><p>So the $42$-rectangle consists of $27$ (above the $9$) and $15$ (above the shaded part). In the middle column, the top part $27$ and the lower part $9+18=27$ are equal, so the top row is exactly as high as the $9$-row and the bottom row together. The shaded rectangle and the $15$-piece have the same width and equal heights, so the shaded area is $15$. The answer is $\boxed{\text{(B)}\ 15}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p9">
+<h3>Problem 9</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Geometry &middot; LPS VI, Chapter 4: Angle Chasing and Line Configurations &middot; Composite Angle Chases</div>
+<div class="ct-text"><p>In the diagram, $JK=JL$, $JN=JM$ and angle $KJM=30^\circ$. What is the value of angle $NML$?</p><p><strong>(A)</strong>&nbsp;$7\frac12^\circ$&emsp;<strong>(B)</strong>&nbsp;$12\frac12^\circ$&emsp;<strong>(C)</strong>&nbsp;$15^\circ$&emsp;<strong>(D)</strong>&nbsp;$17\frac12^\circ$&emsp;<strong>(E)</strong>&nbsp;$20^\circ$</p><div class="ct-fig"><img style="width:307px" src="/assets/contests/2026-27/grade-7-2-9.svg" alt="Figure for Problem 9"></div></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(C) $15^\circ$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Two exterior angles)</h4>
+<p>Let $\angle NML=x$. Since $JK=JL$, the base angles $\angle JKL$ and $\angle JLK$ are equal; call them $b$. Since $JN=JM$, the angles $\angle JMN$ and $\angle JNM$ are equal; call them $m$.</p><p>The exterior angle of a triangle equals the sum of the two opposite interior angles.</p><ul class="ct-ul"><li><p>In triangle $MNL$, the angle $\angle JNM$ is exterior at $N$: $m=x+b$.</p></li><li><p>In triangle $JKM$, the angle $\angle JML$ is exterior at $M$: $\angle JML=b+30^\circ$. But $\angle JML=\angle JMN+\angle NML=m+x$.</p></li></ul><p>So $b+30^\circ=m+x=(x+b)+x$, which gives $2x=30^\circ$ and $x=15^\circ$. The answer is $\boxed{\text{(C)}\ 15^\circ}$.</p>
+<h4>Solution 2 (Everything in terms of one angle)</h4>
+<p>Let $y=\angle MJN$, so $\angle KJL=30^\circ+y$.</p><p>Triangle $JKL$ is isosceles with $JK=JL$, so $\angle JKL=\frac{180^\circ-30^\circ-y}{2}=75^\circ-\frac y2$.</p><p>Triangle $JMN$ is isosceles with $JM=JN$, so $\angle JMN=\frac{180^\circ-y}{2}=90^\circ-\frac y2$.</p><p>In triangle $JKM$, $\angle JMK=180^\circ-30^\circ-\left(75^\circ-\frac y2\right)=75^\circ+\frac y2$.</p><p>The angles $\angle JMK$, $\angle JMN$ and $\angle NML$ together make the straight angle at $M$ on line $KL$, so
+\[\angle NML=180^\circ-\left(75^\circ+\tfrac y2\right)-\left(90^\circ-\tfrac y2\right)=15^\circ.\]
+The answer is $\boxed{\text{(C)}\ 15^\circ}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p10">
+<h3>Problem 10</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Geometry &middot; LPS VI, Chapter 4: Angle Chasing and Line Configurations &middot; Triangle and Polygon Angle Sums</div>
+<div class="ct-text"><p>What is the sum of the shaded angles?</p><p><strong>(A)</strong>&nbsp;$180^\circ$&emsp;<strong>(B)</strong>&nbsp;$240^\circ$&emsp;<strong>(C)</strong>&nbsp;$270^\circ$&emsp;<strong>(D)</strong>&nbsp;$360^\circ$&emsp;<strong>(E)</strong>&nbsp;$450^\circ$</p><div class="ct-fig"><img style="width:284px" src="/assets/contests/2026-27/grade-7-2-10.svg" alt="Figure for Problem 10"></div></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(D) $360^\circ$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Four triangles and a quadrilateral)</h4>
+<div class="ct-fig"><img style="width:284px" src="/assets/contests/2026-27/grade-7-2-10_s1.svg" alt="Figure for the solution"></div>
+<p>The figure is made of eight straight segments forming four thin &ldquo;spikes&rdquo;. Each spike is a small triangle: its two shaded angles are two of its angles, and its third vertex is a crossing point $X_1$, $X_2$, $X_3$ or $X_4$ of two segments. These four crossing points are the corners of a quadrilateral in the middle of the figure.</p><p>The four triangles have angle sum $4\cdot180^\circ=720^\circ$. This is the sum of the eight shaded angles plus the four angles at $X_1,X_2,X_3,X_4$. At each crossing point, the angle of the triangle and the angle of the quadrilateral are vertically opposite, so they are equal. The angles of the quadrilateral add up to $360^\circ$, so
+\[\text{shaded sum}=720^\circ-360^\circ=360^\circ.\]
+The answer is $\boxed{\text{(D)}\ 360^\circ}$.</p>
+<h4>Solution 2 (Exterior angles of the middle quadrilateral)</h4>
+<p>The figure is made of eight straight segments forming four thin spikes; the two segments of each spike cross at a point, and the four crossing points $X_1,X_2,X_3,X_4$ are the corners of a quadrilateral in the middle.</p><p>Take one spike: its two shaded angles and the angle at the crossing point $X$ form a triangle. The angle of this triangle at $X$ is vertically opposite to the angle of the quadrilateral at $X$, so the two shaded angles add up to $180^\circ$ minus the quadrilateral's angle at $X$, which is exactly the exterior angle of the quadrilateral at $X$.</p><p>So the eight shaded angles add up to the four exterior angles of the quadrilateral. Walking once around a convex quadrilateral you turn through one full turn, so its exterior angles add up to $360^\circ$. The answer is $\boxed{\text{(D)}\ 360^\circ}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p11">
+<h3>Problem 11</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Combinatorics &middot; LPS VI, Chapter 24: Quadrilaterals and Polygon Structure &middot; Regular Polygons</div>
+<div class="ct-text"><p>Fifteen points are equally spaced around a circle. How many regular polygons can be drawn by selecting the vertices of each polygon from these points?</p><p><strong>(A)</strong>&nbsp;$5$&emsp;<strong>(B)</strong>&nbsp;$7$&emsp;<strong>(C)</strong>&nbsp;$9$&emsp;<strong>(D)</strong>&nbsp;$11$&emsp;<strong>(E)</strong>&nbsp;$13$</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(C) $9$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Equal gaps)</h4>
+<p>Number the points $0,1,\dots,14$ around the circle. A regular polygon whose vertices lie on the circle has equal sides, so equal chords, so its vertices cut the circle into equal arcs. Hence its $k$ vertices are equally spaced among the $15$ points: going around, consecutive vertices are $g$ steps apart, with $k\cdot g=15$. So $k$ is a divisor of $15$ that is at least $3$: $k=3$, $5$ or $15$.</p><ul class="ct-ul"><li><p>Triangles ($g=5$): $\{0,5,10\},\{1,6,11\},\dots,\{4,9,14\}$, that is, $5$ triangles.</p></li><li><p>Pentagons ($g=3$): $\{0,3,6,9,12\},\{1,4,\dots\},\{2,5,\dots\}$, that is, $3$ pentagons.</p></li><li><p>The $15$-gon ($g=1$): $1$.</p></li></ul><p>In total $5+3+1=9$. The answer is $\boxed{\text{(C)}\ 9}$.</p>
+<h4>Solution 2 (Count polygon-point pairs)</h4>
+<p>A regular polygon whose vertices lie on the circle has equal sides, so its vertices are equally spaced around the circle; with $k$ vertices taken from the $15$ points, they are every $\frac{15}{k}$-th point, so $k$ divides $15$: $k=3$, $5$ or $15$. Such a polygon is fixed by the number $k$ and any one of its vertices.</p><p>Fix a point $P$. Exactly one regular triangle, one regular pentagon and one regular $15$-gon have $P$ as a vertex. So for each $k$, counting (polygon, vertex) pairs in two ways gives
+\[(\text{number of }k\text{-gons})\cdot k=15\cdot1.\]
+There are $\frac{15}{3}=5$ triangles, $\frac{15}{5}=3$ pentagons and $\frac{15}{15}=1$ fifteen-gon, $9$ polygons in all. The answer is $\boxed{\text{(C)}\ 9}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p12">
+<h3>Problem 12</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Combinatorics &middot; LPS VI, Chapter 18: Parity, Invariants, and Monovariants &middot; Parity Arguments</div>
+<div class="ct-text"><p>Sanika wants to write the numbers $1$, $2$, $3$, $4$, $5$, $6$ and $7$ in the boxes in the diagram. She has already written two numbers, as shown.</p><p>She wants the sum of the numbers in each pair of adjacent boxes to be odd, and to avoid the sum of the numbers in any three consecutive boxes being a multiple of $3$.</p><p>What is the sum of the numbers she will need to write in the shaded boxes?</p><p><strong>(A)</strong>&nbsp;$5$&emsp;<strong>(B)</strong>&nbsp;$7$&emsp;<strong>(C)</strong>&nbsp;$9$&emsp;<strong>(D)</strong>&nbsp;$11$&emsp;<strong>(E)</strong>&nbsp;$13$</p><div class="ct-fig"><img style="width:221px" src="/assets/contests/2026-27/grade-7-2-12.svg" alt="Figure for Problem 12"></div></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(B) $7$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Parity first, then multiples of 3)</h4>
+<p>Number the boxes $1$ to $7$ from left to right; box $2$ holds $2$ and box $7$ holds $5$.</p><p><strong>Parity.</strong> Two adjacent numbers have an odd sum exactly when one is even and the other odd, so even and odd numbers alternate. Box $2$ is even, so boxes $2,4,6$ hold the even numbers $2,4,6$ and boxes $1,3,5,7$ hold the odd numbers $1,3,5,7$. Thus boxes $4$ and $6$ hold $4$ and $6$ in some order, and boxes $1,3,5$ hold $1,3,7$ in some order.</p><p><strong>Case box $4=6$, box $6=4$.</strong> The boxes $2,3,4$ give $2+(\text{box }3)+6$, so box $3$ is not $1$ or $7$ (sums $9$, $15$); hence box $3=3$. Then boxes $1,2,3$ give $(\text{box }1)+2+3$, which is a multiple of $3$ when box $1$ is $1$ or $7$ ($6$ or $12$), and box $1$ must be $1$ or $7$. Impossible.</p><p><strong>Case box $4=4$, box $6=6$.</strong> Boxes $5,6,7$ give $(\text{box }5)+11$, so box $5$ is not $1$ or $7$ (sums $12$, $18$); hence box $5=3$. Now box $1$ and box $3$ are $1$ and $7$, and all triples work:
+\[1,2,7,4,3,6,5\ \ \text{(triple sums }10,13,14,13,14)\]
+and
+\[7,2,1,4,3,6,5\ \ \text{(triple sums }10,7,8,13,14).\]
+In both arrangements the shaded boxes (boxes $4$ and $5$) hold $4$ and $3$, with sum $7$. The answer is $\boxed{\text{(B)}\ 7}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p13">
+<h3>Problem 13</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Number Theory &middot; LPS VI, Chapter 21: Digits, Place Value, and Decimal Structure &middot; Digit Conditions and Search</div>
+<div class="ct-text"><p>In the addition shown, the digits $C$, $I$, $K$, $M$, $T$ and $U$ represent different digits.
+\[\begin{array}{cccc} U&amp;K&amp;M&amp;T\\ +&amp;I&amp;M&amp;C\\ \hline 2&amp;0&amp;2&amp;6\end{array}\]
+What is the value of $T+I+C+K$?</p><p><strong>(A)</strong>&nbsp;$6$&emsp;<strong>(B)</strong>&nbsp;$15$&emsp;<strong>(C)</strong>&nbsp;$16$&emsp;<strong>(D)</strong>&nbsp;$25$&emsp;<strong>(E)</strong>&nbsp;More information needed</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(B) $15$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Column by column)</h4>
+<p>The number $IMC$ has three digits ($I$ is its first digit, so $I\ne0$). It is at least $100$ and less than $1000$, so $UKMT=2026-IMC$ lies between $1027$ and $1926$. Hence $U=1$, and the addition becomes $KMT+IMC=1026$.</p><p><strong>Units.</strong> $T+C$ ends in $6$, so $T+C=6$ or $16$.</p><p><strong>Tens.</strong> $M+M$ plus the carry from the units ends in $2$. If $T+C=16$, the carry is $1$ and $2M+1$ is odd, so it cannot end in $2$. So $T+C=6$, there is no carry, and $2M$ ends in $2$: $M=1$ or $M=6$. Since $U=1$ and the digits are different, $M=6$, and $2M=12$ gives a carry of $1$.</p><p><strong>Hundreds.</strong> $K+I+1=10$, so $K+I=9$.</p><p>Therefore $T+I+C+K=(T+C)+(K+I)=6+9=15$. This really happens, for example $1062+964=2026$ (and also $1064+962=2026$), so the answer is determined even though the digits are not. The answer is $\boxed{\text{(B)}\ 15}$.</p>
+<h4>Solution 2 (One equation for the sums)</h4>
+<p>Since $IMC$ is a three-digit number, $IMC\ge100$, so the number $UKMT=2026-IMC$ is at most $1926$, and it is at least $2026-999=1027$, so $U=1$.</p><p>Write the addition by place value:
+\[1000+100K+10M+T+100I+10M+C=2026,\]
+that is, with $Q=K+I$ and $S=T+C$,
+\[100Q+20M+S=1026.\]
+The left side minus $S$ is a multiple of $20$, so $S$ leaves the same remainder as $1026$ on division by $20$, which is $6$. As $S$ is a sum of two different digits, $0\le S\le 17$, hence $S=6$. Then $100Q+20M=1020$, so $5Q+M=51$. Thus $M$ leaves remainder $1$ on division by $5$, so $M=1$ or $6$; $M=1$ is taken by $U$, so $M=6$ and $Q=9$.</p><p>So $T+I+C+K=S+Q=6+9=15$, and such digits exist, for example $1062+964=2026$. The answer is $\boxed{\text{(B)}\ 15}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p14">
+<h3>Problem 14</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Number Theory &middot; LPS VI, Chapter 47: Combinatorial Number Theory &middot; Extremal Integer Configurations</div>
+<div class="ct-text"><p>A farmer has dogs, sheep, goats, pigs and chickens on her farm. There are more chickens than pigs, more pigs than goats, more goats than sheep and more sheep than dogs. There are half as many dogs as chickens. The total number of animals is as small as it could be. How many animals are there on her farm?</p><p><strong>(A)</strong>&nbsp;$28$&emsp;<strong>(B)</strong>&nbsp;$30$&emsp;<strong>(C)</strong>&nbsp;$32$&emsp;<strong>(D)</strong>&nbsp;$34$&emsp;<strong>(E)</strong>&nbsp;$36$</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(B) $30$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Room between the dogs and the chickens)</h4>
+<p>Let there be $d$ dogs, so there are $2d$ chickens. The numbers of sheep, goats and pigs are three different whole numbers strictly between $d$ and $2d$:
+\[d&lt;\text{sheep}&lt;\text{goats}&lt;\text{pigs}&lt;2d.\]
+So sheep $\ge d+1$, goats $\ge d+2$, pigs $\ge d+3$, and $d+3&lt;2d$, which means $d\ge4$.</p><p>The total is therefore at least
+\[d+(d+1)+(d+2)+(d+3)+2d=6d+6.\]
+For $d=4$ this is $30$, reached by $4$ dogs, $5$ sheep, $6$ goats, $7$ pigs and $8$ chickens. For $d\ge5$ it is at least $6\cdot5+6=36$.</p><p>So the smallest total is $30$. The answer is $\boxed{\text{(B)}\ 30}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p15">
+<h3>Problem 15</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VI scale">H</span>Number Theory &middot; LPS VI, Chapter 42: Recursion, Paths, and Dynamic Counting &middot; Fibonacci-Type Models</div>
+<div class="ct-text"><p>Nico has eight sticks with distinct integer lengths, no three of which are able to form a triangle. What is the shortest possible length of the longest stick?</p><p><strong>(A)</strong>&nbsp;$30$&emsp;<strong>(B)</strong>&nbsp;$31$&emsp;<strong>(C)</strong>&nbsp;$32$&emsp;<strong>(D)</strong>&nbsp;$33$&emsp;<strong>(E)</strong>&nbsp;$34$</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(E) $34$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Each stick is at least the sum of the two before it)</h4>
+<p>Three sticks with lengths $x\le y\le z$ form a triangle exactly when $x+y&gt;z$ (the other two triangle inequalities hold automatically because $z$ is the longest). So &ldquo;no triangle&rdquo; means $x+y\le z$ for every three sticks.</p><p>Order the lengths: $a_1&lt;a_2&lt;\dots&lt;a_8$. Taking the three sticks $a_{k-2},a_{k-1},a_k$, we need
+\[a_k\ge a_{k-1}+a_{k-2}\qquad(k=3,4,\dots,8).\]
+The lengths are distinct positive integers, so $a_1\ge1$ and $a_2\ge2$. Then step by step:
+\[a_3\ge3,\ a_4\ge5,\ a_5\ge8,\ a_6\ge13,\ a_7\ge21,\ a_8\ge34.\]
+So the longest stick has length at least $34$.</p><p>The lengths $1,2,3,5,8,13,21,34$ show that $34$ is possible: each is the sum of the two before it, so for any three of them $x&lt;y&lt;z$, the sticks $x$ and $y$ are at most the two lengths just below $z$, and $x+y\le z$. No three of them form a triangle. The answer is $\boxed{\text{(E)}\ 34}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p16">
+<h3>Problem 16</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Number Theory &middot; LPS VI, Chapter 45: Inequalities and Absolute Value &middot; Bounding Integer Solutions</div>
+<div class="ct-text"><p>For how many positive integers $n$ is there <em>no</em> positive integer strictly between one-half of $n$ and three-fifths of $n$?</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$8$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Long gaps always contain an integer)</h4>
+<p>The gap from $\frac n2$ to $\frac{3n}{5}$ has length $\frac{3n}{5}-\frac n2=\frac{n}{10}$.</p><p>If $n\ge11$, the gap is longer than $1$, and an open interval longer than $1$ always contains an integer (the first integer larger than $\frac n2$ is at most $\frac n2+1&lt;\frac{3n}{5}$). So only $n\le10$ can work. Check them:
+\[\begin{array}{c|cccccccccc}
+n&amp;1&amp;2&amp;3&amp;4&amp;5&amp;6&amp;7&amp;8&amp;9&amp;10\\ \hline
+\frac n2&amp;0.5&amp;1&amp;1.5&amp;2&amp;2.5&amp;3&amp;3.5&amp;4&amp;4.5&amp;5\\
+\frac{3n}{5}&amp;0.6&amp;1.2&amp;1.8&amp;2.4&amp;3&amp;3.6&amp;4.2&amp;4.8&amp;5.4&amp;6\\
+\text{integer?}&amp;\text{no}&amp;\text{no}&amp;\text{no}&amp;\text{no}&amp;\text{no}&amp;\text{no}&amp;4&amp;\text{no}&amp;5&amp;\text{no}
+\end{array}\]
+(For $n=5$ and $n=10$ the integers $3$ and $6$ are endpoints, not strictly inside.) So $n=1,2,3,4,5,6,8,10$ work: $\boxed{8}$ integers.</p>
+<h4>Solution 2 (Even and odd n separately)</h4>
+<p><strong>$n$ even, $n=2m$.</strong> The interval is from $m$ to $\frac{6m}{5}$. The first integer after $m$ is $m+1$, so there is an integer strictly inside exactly when $m+1&lt;\frac{6m}{5}$, that is, $5m+5&lt;6m$, that is, $m&gt;5$. So there is none for $m=1,2,3,4,5$: $n=2,4,6,8,10$.</p><p><strong>$n$ odd, $n=2m+1$ ($m\ge0$).</strong> The interval is from $m+\frac12$ to $\frac{6m+3}{5}$. The first integer after $m+\frac12$ is $m+1$, so there is an integer inside exactly when $m+1&lt;\frac{6m+3}{5}$, that is, $5m+5&lt;6m+3$, that is, $m&gt;2$. So there is none for $m=0,1,2$: $n=1,3,5$.</p><p>Altogether $5+3=\boxed{8}$ values of $n$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p17">
+<h3>Problem 17</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Geometry &middot; LPS VI, Chapter 45: Inequalities and Absolute Value &middot; Comparative Constraints</div>
+<div class="ct-text"><p>A triangle has one of its side lengths equal to the product of the other two. If two of its side lengths are $3$ and $4$, what is the length of the third side? Express your answer as a common fraction.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\frac43$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Three cases and the triangle inequality)</h4>
+<p>Let the third side be $x$. One side is the product of the other two, so there are three cases. In each case we use the triangle inequality: the longest side must be shorter than the sum of the other two.</p><ul class="ct-ul"><li><p>$x=3\cdot4=12$: the sides $3,4,12$ fail, since $3+4=7&lt;12$.</p></li><li><p>$4=3x$, so $x=\frac43$: the sides are $\frac43,3,4$, and $\frac43+3=\frac{13}{3}&gt;4$. This is a triangle.</p></li><li><p>$3=4x$, so $x=\frac34$: the sides are $\frac34,3,4$, and $\frac34+3=\frac{15}{4}&lt;4$. Not a triangle.</p></li></ul><p>The third side is $\boxed{\frac43}$.</p>
+<h4>Solution 2 (When can a product be a side?)</h4>
+<p>Suppose a side $c$ equals the product $ab$ of the other two sides. The triangle inequality $c&lt;a+b$ becomes $ab&lt;a+b$, that is, $ab-a-b+1&lt;1$, or
+\[(a-1)(b-1)&lt;1.\]
+With two sides $3$ and $4$ and a third side $x$:</p><ul class="ct-ul"><li><p>if the product side is $x$, then $(a,b)=(3,4)$ and $(3-1)(4-1)=6\ge1$: impossible;</p></li><li><p>if the product side is $3=4x$, then $(a,b)=(4,x)$ with $x=\frac34$, and $(4-1)(\frac34-1)&lt;0&lt;1$ holds, but now $4$ is the longest side and $3+\frac34&lt;4$: impossible;</p></li><li><p>if the product side is $4=3x$, then $x=\frac43$ and $(3-1)(\frac43-1)=\frac23&lt;1$, and $4$ is the longest side, so the triangle exists.</p></li></ul><p>The third side is $\boxed{\frac43}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p18">
+<h3>Problem 18</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VI scale">H</span>Geometry &middot; LPS VI, Chapter 52: Solid Geometry and Spatial Visualization &middot; Volume and Surface Area</div>
+<div class="ct-text"><p>A large cube, of side-length $4$, is made up from small cubes of side-length $1$. What is the smallest number of small cubes that could be removed from the large cube to leave a shape whose surface area is $50\%$ larger than that of the large cube?</p><p><strong>(A)</strong>&nbsp;$6$&emsp;<strong>(B)</strong>&nbsp;$8$&emsp;<strong>(C)</strong>&nbsp;$10$&emsp;<strong>(D)</strong>&nbsp;$12$&emsp;<strong>(E)</strong>&nbsp;$18$</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(D) $12$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (At most 4 extra faces per cube)</h4>
+<p>The large cube has surface area $6\cdot16=96$, and we want $96\cdot1.5=144$, that is, $48$ more unit squares.</p><p>Removing one small cube that lies in the middle of a face (one face on the outside, five faces touching other cubes) takes away $1$ square of surface and uncovers $5$ new ones: a gain of $4$. We show that no removal can do better on average.</p><p>Group the removed cubes into pieces of cubes that touch face to face. Take one piece with $c$ cubes. Its cubes have $6c$ faces in total. Since the piece is connected, at least $c-1$ pairs of its cubes are glued face to face, using at least $2(c-1)$ of these faces; these faces become neither old nor new surface. We read the problem in the natural way: the cubes are taken out of the large cube, so every hole is open to the outside (a cube buried inside can only be taken out through an opening). So at least one face of the piece lay on the old surface and is lost. All other faces become new surface. So the change in surface area for the piece is at most
+\[\bigl(6c-2(c-1)-1\bigr)-1=4c.\]
+Adding over all pieces, removing $n$ cubes increases the surface by at most $4n$. We need $48$, so $n\ge12$.</p><p>Twelve cubes are enough: on each of the six faces, remove two diagonally opposite cubes of the central $2\times2$ block. No two removed cubes touch, and each gives a gain of $4$, so the surface area becomes $96+48=144$. The answer is $\boxed{\text{(D)}\ 12}$.</p>
+<h4>Solution 2 (One cube at a time)</h4>
+<p>The large cube has surface area $6\cdot16=96$; we want $144$, a gain of $48$ unit squares.</p><p>Remove the cubes one by one, always taking next a cube that touches the air (the outside, or a hole already made); this is possible because the cubes are taken out of the large cube, so every hole is open to the outside (a cube buried inside can only be taken out through an opening). Suppose the cube being removed has $k$ faces touching remaining cubes; its other $6-k$ faces touch the air. Removing it loses those $6-k$ squares of surface and uncovers $k$ new ones, a change of $k-(6-k)=2k-6$. Since it touches the air, $k\le5$, so each removal gains at most $2\cdot5-6=4$.</p><p>Hence $n$ removed cubes gain at most $4n$, and $4n\ge48$ needs $n\ge12$.</p><p>Twelve suffice: on each face of the large cube remove two diagonally opposite cubes from the central $2\times2$ block. Each of these has $k=5$ when removed (no two of them touch), so each gains $4$, and the total gain is $12\cdot4=48$. The answer is $\boxed{\text{(D)}\ 12}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p19">
+<h3>Problem 19</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Combinatorics &middot; LPS VI, Chapter 10: Logical Deduction and Constraint Puzzles &middot; Truth and Lies</div>
+<div class="ct-text"><p>How many of the four statements below are true?</p><ul class="ct-parts"><li><p><span class="ct-lbl">1.</span> Exactly two of the statements are false.</p></li><li><p><span class="ct-lbl">2.</span> This statement is true.</p></li><li><p><span class="ct-lbl">3.</span> The previous statement is true.</p></li><li><p><span class="ct-lbl">4.</span> The first three statements are false.</p></li></ul><p><strong>(A)</strong>&nbsp;$0$&emsp;<strong>(B)</strong>&nbsp;$1$&emsp;<strong>(C)</strong>&nbsp;$2$&emsp;<strong>(D)</strong>&nbsp;$3$&emsp;<strong>(E)</strong>&nbsp;$4$</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(B) $1$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Cases on statement 2)</h4>
+<p>Statement 3 says that statement 2 is true, so statements 2 and 3 are both true or both false.</p><p><strong>Suppose 2 and 3 are true.</strong> Then statement 4 (&ldquo;the first three are false&rdquo;) is false. If statement 1 were true, the only false statement would be 4, so &ldquo;exactly two are false&rdquo; would be false; contradiction. If statement 1 were false, the false statements would be 1 and 4, exactly two, so statement 1 would be true; contradiction. So this case is impossible.</p><p><strong>Suppose 2 and 3 are false.</strong> If statement 1 were true, then 4 is false (because 1 is true), and the false statements are 2, 3, 4, three of them, so statement 1 is false; contradiction. So statement 1 is false. Then statements 1, 2, 3 are all false, so statement 4 is true, and everything is consistent: exactly $3$ statements are false, so statement 1 is indeed false.</p><p>Exactly one statement (statement 4) is true. The answer is $\boxed{\text{(B)}\ 1}$.</p>
+<h4>Solution 2 (Try each number of true statements)</h4>
+<p>Statement 3 says statement 2 is true, so statements 2 and 3 are both true or both false. Let $t$ be the number of true statements.</p><ul class="ct-ul"><li><p>$t=0$: then statements 1, 2, 3 are false, so statement 4 is true; contradiction.</p></li><li><p>$t=1$: statements 2 and 3 cannot be the single true one together, so both are false, and the true one is 1 or 4. Statement 1 is false, since three statements are false, not two. So statement 4 is the true one, and it is indeed true (1, 2, 3 are false). Consistent.</p></li><li><p>$t=2$: if 2 and 3 are the true ones, then 1 is false, but exactly two statements (1 and 4) are false, which makes 1 true; contradiction. Otherwise 1 and 4 are the true ones, but 4 says 1 is false; contradiction.</p></li><li><p>$t=3$: exactly one statement is false, so statement 1 is false; then 2, 3, 4 are true, but 4 says 2 is false; contradiction.</p></li><li><p>$t=4$: statement 4 is true, so statement 1 is false; contradiction.</p></li></ul><p>Only $t=1$ is possible. The answer is $\boxed{\text{(B)}\ 1}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p20">
+<h3>Problem 20</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VI scale">H</span>Combinatorics &middot; LPS VI, Chapter 6: Casework, Complement, and Constructive Counting &middot; Exhaustive Casework</div>
+<div class="ct-text"><p>Deindra wants to arrange the five numbers $1$, $2$, $3$, $4$, and $5$ into a row such that the last number is odd, and the sum of any three adjacent numbers is divisible by the first number of the three. How many such arrangements could she make?</p><p><strong>(A)</strong>&nbsp;$1$&emsp;<strong>(B)</strong>&nbsp;$2$&emsp;<strong>(C)</strong>&nbsp;$3$&emsp;<strong>(D)</strong>&nbsp;$4$&emsp;<strong>(E)</strong>&nbsp;$5$</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(E) $5$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Place the even numbers first)</h4>
+<p>Write the row as $p_1,p_2,p_3,p_4,p_5$. Each of the three triples is $(p_i,p_{i+1},p_{i+2})$ with $i=1,2,3$, and $p_i$ divides $p_i+p_{i+1}+p_{i+2}$ exactly when $p_i$ divides $p_{i+1}+p_{i+2}$. So the conditions are (the sign $a\mid b$ means &ldquo;$a$ divides $b$&rdquo;)
+\[p_1\mid p_2+p_3,\qquad p_2\mid p_3+p_4,\qquad p_3\mid p_4+p_5,\qquad p_5 \text{ odd}.\]</p><p><strong>Where are $2$ and $4$?</strong> If an even number is $p_i$ (with $i\le3$), then $p_{i+1}+p_{i+2}$ is even, so $p_{i+1}$ and $p_{i+2}$ have the same parity. The two even numbers are among $p_1,\dots,p_4$ (as $p_5$ is odd). Test each pair of positions:</p><ul class="ct-ul"><li><p>positions $1,2$ or $1,3$: $p_1$ even forces $p_2,p_3$ to have the same parity, so both are even, but there are only two even numbers; impossible.</p></li><li><p>positions $2,3$ or $2,4$: $p_2$ even forces $p_3,p_4$ to have the same parity, so both are even; impossible.</p></li><li><p>positions $3,4$: $p_3$ even forces $p_4,p_5$ to have the same parity, but $p_4$ is even and $p_5$ is odd; impossible.</p></li><li><p>positions $1,4$: $p_2,p_3$ are both odd, which is fine.</p></li></ul><p>So $\{p_1,p_4\}=\{2,4\}$ and $p_2,p_3,p_5$ are $1,3,5$ in some order.</p><p><strong>Case $p_1=2$, $p_4=4$.</strong> The conditions are $2\mid p_2+p_3$ (true, two odd numbers), $p_2\mid p_3+4$, $p_3\mid 4+p_5$. Check the six orders $(p_2,p_3,p_5)$: $(1,3,5)$ works ($1\mid7$, $3\mid9$); $(1,5,3)$ fails ($5\nmid7$); $(3,1,5)$ fails ($3\nmid5$); $(3,5,1)$ works ($3\mid9$, $5\mid5$); $(5,1,3)$ works ($5\mid5$, $1\mid7$); $(5,3,1)$ fails ($5\nmid7$). Three arrangements.</p><p><strong>Case $p_1=4$, $p_4=2$.</strong> Now $4\mid p_2+p_3$, so $\{p_2,p_3\}$ is $\{1,3\}$ (sum $4$) or $\{3,5\}$ (sum $8$), not $\{1,5\}$. Also $p_2\mid p_3+2$ and $p_3\mid 2+p_5$: $(1,3,5)$ fails ($3\nmid7$); $(3,1,5)$ works ($3\mid3$, $1\mid7$); $(3,5,1)$ fails ($3\nmid7$); $(5,3,1)$ works ($5\mid5$, $3\mid3$). Two arrangements.</p><p>In total there are $3+2=5$ arrangements: $21345$, $23541$, $25143$, $43125$, $45321$. The answer is $\boxed{\text{(E)}\ 5}$.</p>
+</div></details>
+</section>
+{% endraw %}

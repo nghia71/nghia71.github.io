@@ -1,0 +1,389 @@
+---
+title: Grade 6 Selection 2026, Part 2: selected problems from 2026 contests
+permalink: /contests/grade-6-2-2026
+description: Grade 6 Selection 2026, Part 2: selected problems from 2026 contests: problems with answers and solutions
+---
+{% raw %}
+<style>
+  .ct-intro { margin-bottom: 1.2em; }
+  .ct-credit { font-size: 14px; color: var(--ink-soft); border-left: 3px solid var(--gold); padding: 6px 12px; background: var(--white); margin: 1em 0; }
+  .ct-toc { display: flex; flex-wrap: wrap; gap: 6px; margin: 1em 0 1.4em; }
+  .ct-toc a { display: inline-block; min-width: 2.4em; text-align: center; padding: 4px 8px; border: 1px solid var(--rule); border-radius: 4px; background: var(--white); text-decoration: none; font-size: 14px; }
+  .ct-problem { background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 14px 18px; margin: 1.1em 0; }
+  .ct-problem h3 { margin: 0 0 .3em; font-size: 1.08rem; border-bottom: none; padding-bottom: 0; }
+  .ct-meta { font-size: 13px; color: var(--ink-soft); margin-bottom: .6em; }
+  .ct-text { font-family: Georgia, "Times New Roman", "Noto Serif", serif; font-size: 1.02em; line-height: 1.6; }
+  .ct-text p { margin: .5em 0; }
+  .ct-fig { text-align: center; margin: .8em 0; }
+  .ct-fig img { max-width: 100%; height: auto; max-height: 340px; }
+  .ct-choices { display: flex; flex-wrap: wrap; gap: 6px 22px; margin: .6em 0 .2em; }
+  .ct-choices b { margin-right: .3em; }
+  .ct-problem details { margin-top: .8em; border-top: 1px dashed var(--rule); padding-top: .5em; }
+  .ct-problem summary { cursor: pointer; font-weight: 600; color: var(--brand); font-size: 15px; }
+  .ct-problem details[open] summary { margin-bottom: .5em; }
+  .ct-sol h4 { font-size: 1rem; margin: 1em 0 .3em; color: var(--ink); }
+  .ct-answer { font-weight: 600; }
+  .ct-parts { list-style: none; padding-left: .4em; }
+  .ct-parts li { margin: .35em 0; }
+  .ct-lbl { font-weight: 700; margin-right: .3em; }
+  .ct-note { font-size: 14px; color: var(--ink-soft); font-style: italic; }
+  .ct-bar { margin: .6em 0 1em; display: flex; gap: 10px; flex-wrap: wrap; }
+  .ct-bar button { font: inherit; font-size: 14px; padding: 5px 12px; border-radius: var(--radius); border: 1px solid var(--brand); background: var(--white); color: var(--brand); cursor: pointer; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
+</style>
+<script>
+  window.MathJax = { tex: { inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [['\\[','\\]']], processEscapes: true },
+                     options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] } };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script>
+  function ctAll(open) { document.querySelectorAll('.ct-problem details').forEach(function (d) { d.open = open; }); }
+</script>
+
+<style>
+  .ct-group { font-size: 1.25rem; margin: 1.6em 0 .2em; }
+  .ct-toc-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: .3em 0; }
+  .ct-toc-g { font-size: 13px; color: var(--ink-soft); min-width: 9em; }
+  .ct-toc-wrap { margin: 1em 0 1.4em; }
+  .ct-center { text-align: center; margin: .6em 0; }
+  .ct-tablewrap { overflow-x: auto; margin: .6em 0; text-align: center; }
+  .ct-table { border-collapse: collapse; margin: 0 auto; }
+  .ct-table td { padding: 2px 9px; text-align: center; }
+  .ct-table tr.ct-hl td { border-bottom: 1px solid var(--ink-soft); }
+  .ct-table.ct-vfirst td:first-child { border-right: 1px solid var(--ink-soft); }
+  .ct-ul { padding-left: 1.4em; }
+  .ct-ul li { margin: .3em 0; }
+  .ct-text li > p:first-child { margin-top: 0; }
+  .ct-text li > p:last-child { margin-bottom: 0; }
+  .ct-text mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
+</style>
+
+<style>
+  .ct-tags { display: flex; flex-wrap: wrap; gap: 5px; margin: 0 0 .55em; }
+  .ct-tg { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .03em; padding: 2px 8px; border-radius: 999px; line-height: 1.5; }
+  .ct-lv { background: #eee7dc; color: #4a3d33; }
+  .ct-df-Starter { background: #dcf1dc; color: #245c24; }
+  .ct-df-Explorer { background: #d6efec; color: #155e57; }
+  .ct-df-Challenger { background: #dce8f7; color: #1f4c80; }
+  .ct-df-Olympiad { background: #e7defa; color: #4b2a8a; }
+  .ct-df-Advanced { background: #fbe4cc; color: #8a4a0b; }
+  .ct-df-Expert { background: #f8d6cf; color: #8c2600; }
+  .ct-band { margin: 1.3em 0 .5em; font-size: 14px; color: var(--ink-soft); }
+  .ct-band .ct-tg { font-size: 13px; margin-right: .4em; }
+  .ct-legend { font-size: 14.5px; background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 10px 16px; margin: 1em 0 1.4em; }
+  .ct-legend p { margin: .35em 0; }
+  .ct-legend ul { margin: .2em 0 .4em; padding-left: 1.1em; }
+  .ct-legend li { margin: .2em 0; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
+</style>
+{% endraw %}
+<p><a href="{{ '/contests-2026' | relative_url }}">&larr; All contests 2026</a></p>
+
+<h1>Grade 6 Selection 2026, Part 2: selected problems from 2026 contests</h1>
+
+<div class="ct-intro">
+<p>The 21 problems of the Grade 6 Selection 2026, Part 2: selected problems from 2026 contests, each with our own solutions, hidden until you open them. Where a problem has a final answer, it is shown separately. Try a problem first, then check.</p><p>A second set of problems for grade 6, chosen from the 2026 UKMT Junior Kangaroo, Grey Kangaroo, JMC and IMC papers and the 2026 MATHCOUNTS State competition. Each problem names its source; the problems go from easy to hard.</p>
+</div>
+<div class="ct-credit">Problems selected from the 2026 contests named under each problem (UKMT, CEMC, MAA, MATHCOUNTS, MIMC, SMOPS, CLMC and Vietnamese entrance exams); they belong to their publishers. Solutions written by MCC.</div>
+<div class="ct-bar"><button type="button" onclick="ctAll(true)">Show all answers and solutions</button><button type="button" onclick="ctAll(false)">Hide all</button></div>
+<div class="ct-toc-wrap"><div class="ct-toc-row"><a href="#p1">1</a><a href="#p2">2</a><a href="#p3">3</a><a href="#p4">4</a><a href="#p5">5</a><a href="#p6">6</a><a href="#p7">7</a><a href="#p8">8</a><a href="#p9">9</a><a href="#p10">10</a><a href="#p11">11</a><a href="#p12">12</a><a href="#p13">13</a><a href="#p14">14</a><a href="#p15">15</a><a href="#p16">16</a><a href="#p17">17</a><a href="#p18">18</a><a href="#p19">19</a><a href="#p20">20</a><a href="#p21">21</a></div></div>
+
+{% raw %}
+<section class="ct-problem" id="p1">
+<h3>Problem 1</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Algebra &middot; LPS VI, Chapter 45: Inequalities and Absolute Value &middot; Absolute Value as Distance</div>
+<div class="ct-text"><p>The sum of two different positive integers is $8$ more than the absolute difference between the two integers. What is the least possible value of the sum of the two integers?</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$9$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Sum minus difference)</h4>
+<p>Call the smaller number $a$ and the larger number $b$. The absolute difference is $b-a$. We are told
+\[a+b=(b-a)+8.\]
+Take $b$ away from both sides: $a=-a+8$, so $2a=8$ and $a=4$.</p><p>So the smaller number must be $4$, and the larger number can be any whole number bigger than $4$. The smallest choice is $b=5$, which gives the sum $4+5=9$. Check: $9$ is $8$ more than the difference $5-4=1$. The least possible sum is $\boxed{9}$.</p>
+<h4>Solution 2 (Search by the sum)</h4>
+<p>Suppose the sum is $s$. Then the difference is $s-8$. The two numbers are different, so the difference is at least $1$; hence $s-8\ge 1$ and $s\ge 9$.</p><p>For $s=9$ the difference must be $1$: two numbers adding to $9$ and differing by $1$ are $4$ and $5$. They are different positive integers, so $s=9$ really happens. The least possible sum is $\boxed{9}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p2">
+<h3>Problem 2</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Algebra &middot; LPS VI, Chapter 9: Ratios, Proportions, and Percent Change &middot; Weighted Average and Mixture Ratios</div>
+<div class="ct-text"><p>Mirko the mouse has three different-sized blocks of cheese, each made up of identically-sized small cubes, as shown in the diagram. He ate $40\%$ of the first block, $40\%$ of the second and $20\%$ of the third. What percentage of the total amount of cheese did Mirko eat?</p><p><strong>(A)</strong>&nbsp;$21\%$&emsp;<strong>(B)</strong>&nbsp;$22\%$&emsp;<strong>(C)</strong>&nbsp;$23\%$&emsp;<strong>(D)</strong>&nbsp;$24\%$&emsp;<strong>(E)</strong>&nbsp;$25\%$</p><div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/grade-6-2-2.svg" alt="Figure for Problem 2"></div></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(E) $25\%$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Count small cubes)</h4>
+<p>The blocks are cubes with edges of $1$, $2$ and $3$ small cubes, so they contain
+\[1,\qquad 2\times2\times2=8,\qquad 3\times3\times3=27\]
+small cubes: $36$ small cubes in all. Mirko ate
+\[40\%\text{ of }1=0.4,\qquad 40\%\text{ of }8=3.2,\qquad 20\%\text{ of }27=5.4,\]
+which is $0.4+3.2+5.4=9$ small cubes. As a part of the total this is $\frac{9}{36}=\frac14=25\%$. The answer is $\boxed{\text{(E)}\ 25\%}$.</p>
+<h4>Solution 2 (Group the blocks)</h4>
+<p>The blocks hold $1$, $8$ and $27$ small cubes, $36$ in all. The first two blocks together hold $9$ cubes, which is $\frac{9}{36}=\frac14$ of the cheese, and Mirko ate $40\%$ of both of them. The third block holds $27$ cubes, which is $\frac34$ of the cheese, and he ate $20\%$ of it.</p><p>So he ate $40\%$ of one quarter and $20\%$ of three quarters of the cheese:
+\[\tfrac14\times40\%+\tfrac34\times20\%=10\%+15\%=25\%.\]
+The answer is $\boxed{\text{(E)}\ 25\%}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p3">
+<h3>Problem 3</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Algebra &middot; LPS VI, Chapter 9: Ratios, Proportions, and Percent Change &middot; Ratio Interpretation</div>
+<div class="ct-text"><p>On Iyla's island there are some lions, some tigers and some jaguars. Two-thirds of the animals are not lions; three-quarters of the animals are not tigers; $84$ of the animals are not jaguars. How many animals are on Iyla's island?</p><p><strong>(A)</strong>&nbsp;$88$&emsp;<strong>(B)</strong>&nbsp;$108$&emsp;<strong>(C)</strong>&nbsp;$120$&emsp;<strong>(D)</strong>&nbsp;$144$&emsp;<strong>(E)</strong>&nbsp;$160$</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(D) $144$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Fractions of the whole)</h4>
+<p>If two-thirds of the animals are not lions, then the lions are $\frac13$ of the animals. If three-quarters are not tigers, the tigers are $\frac14$ of the animals. The jaguars are the rest:
+\[1-\tfrac13-\tfrac14=\tfrac{12-4-3}{12}=\tfrac{5}{12}.\]
+So the animals that are not jaguars make up $\frac{7}{12}$ of all the animals, and there are $84$ of them. One twelfth of the animals is $84\div7=12$, so there are $12\times12=144$ animals. The answer is $\boxed{\text{(D)}\ 144}$.</p>
+<h4>Solution 2 (Test the options)</h4>
+<p>The lions are $\frac13$ of the animals and the tigers $\frac14$, so the number of animals divides by both $3$ and $4$, that is, by $12$. Among the options only $108$, $120$ and $144$ do.</p><ul class="ct-ul"><li><p>$108$ animals: $36$ lions and $27$ tigers, so $63$ are not jaguars.</p></li><li><p>$120$ animals: $40$ lions and $30$ tigers, so $70$ are not jaguars.</p></li><li><p>$144$ animals: $48$ lions and $36$ tigers, so $84$ are not jaguars.</p></li></ul><p>Only the last one gives $84$. The answer is $\boxed{\text{(D)}\ 144}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p4">
+<h3>Problem 4</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Geometry &middot; LPS VI, Chapter 4: Angle Chasing and Line Configurations &middot; Composite Angle Chases</div>
+<div class="ct-text"><p>The diagram shows kite $FGHI$, in which $IF=FG$ and $GH=HI$, and parallelogram $HIJK$. Points $G$, $H$ and $K$ lie on a straight line. Angle $JKH$ is $80^\circ$ and angle $FGH$ is $85^\circ$. What is the size of angle $IFG$?</p><p><strong>(A)</strong>&nbsp;$100^\circ$&emsp;<strong>(B)</strong>&nbsp;$110^\circ$&emsp;<strong>(C)</strong>&nbsp;$120^\circ$&emsp;<strong>(D)</strong>&nbsp;$125^\circ$&emsp;<strong>(E)</strong>&nbsp;$150^\circ$</p><div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/grade-6-2-4.svg" alt="Figure for Problem 4"></div></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(B) $110^\circ$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Angles of the kite)</h4>
+<p>In parallelogram $HIJK$ the angles at $H$ and $K$ are next to each other, so they add up to $180^\circ$: $\angle IHK=180^\circ-80^\circ=100^\circ$. Since $G$, $H$, $K$ lie on a straight line, $\angle IHG=180^\circ-100^\circ=80^\circ$.</p><p>The kite $FGHI$ is symmetric about the line $FH$ (because $FI=FG$ and $HI=HG$), so its angles at $G$ and $I$ are equal: $\angle FIH=\angle FGH=85^\circ$. The four angles of a quadrilateral add up to $360^\circ$, so
+\[\angle IFG=360^\circ-85^\circ-85^\circ-80^\circ=110^\circ.\]
+The answer is $\boxed{\text{(B)}\ 110^\circ}$.</p>
+<h4>Solution 2 (Cut the kite in half)</h4>
+<p>In parallelogram $HIJK$ the opposite angles are equal, so $\angle JIH=80^\circ$. Because $IJ$ is parallel to $KH$, which lies along the line $GH$, the angles $\angle JIH$ and $\angle IHG$ are alternate angles, so $\angle IHG=80^\circ$.</p><p>Draw the line $FH$. Triangles $FGH$ and $FIH$ have equal sides ($FG=FI$, $HG=HI$, $FH$ shared), so they are congruent, and $FH$ cuts the angles at $H$ and at $F$ in half. Hence $\angle FHG=40^\circ$. In triangle $FGH$:
+\[\angle GFH=180^\circ-85^\circ-40^\circ=55^\circ,\]
+and so $\angle IFG=2\times55^\circ=110^\circ$. The answer is $\boxed{\text{(B)}\ 110^\circ}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p5">
+<h3>Problem 5</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Number Theory &middot; LPS VI, Chapter 21: Digits, Place Value, and Decimal Structure &middot; Place-Value Decomposition</div>
+<div class="ct-text"><p>The units digit of a number is $1$. Julio removes this digit to obtain a new number that is $2026$ less than the original number. What is the sum of the digits of the original number?</p><p><strong>(A)</strong>&nbsp;$10$&emsp;<strong>(B)</strong>&nbsp;$12$&emsp;<strong>(C)</strong>&nbsp;$14$&emsp;<strong>(D)</strong>&nbsp;$16$&emsp;<strong>(E)</strong>&nbsp;$18$</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(A) $10$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Place value)</h4>
+<p>Let $a$ be the new number (the original number with its last digit removed). Putting the digit $1$ back on the end multiplies $a$ by $10$ and adds $1$, so the original number is $10a+1$. We are told
+\[(10a+1)-a=2026,\qquad\text{so}\qquad 9a=2025,\qquad a=225.\]
+The original number is $2251$, and its digit sum is $2+2+5+1=10$. The answer is $\boxed{\text{(A)}\ 10}$.</p>
+<h4>Solution 2 (Rebuild the number digit by digit)</h4>
+<p>Call the new number $X$. Then $X+2026$ is the original number, which is $X$ with a $1$ written after it.</p><ul class="ct-ul"><li><p>The units digit of $X+2026$ is $1$, so the units digit of $X$ is $5$ (as $5+6=11$; we carry $1$).</p></li><li><p>The tens digit of the original number is the units digit of $X$, which is $5$. The tens digit of $X+2026$ is (tens digit of $X$) $+2+1$, so the tens digit of $X$ is $2$.</p></li><li><p>The hundreds digit of the original number is then $2$; adding the $0$ of $2026$ gives the hundreds digit of $X$ as $2$.</p></li><li><p>The thousands digit of the original number is $2$, and $2026$ has $2$ thousands (with no carry from the hundreds), so $X$ has thousands digit $0$. Then the original number has no ten-thousands digit, so $X$ has none either, and in the same way $X$ has no digits further to the left.</p></li></ul><p>So $X=225$, the original number is $2251$ (and indeed $2251-225=2026$), and its digit sum is $10$. The answer is $\boxed{\text{(A)}\ 10}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p6">
+<h3>Problem 6</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Algebra &middot; LPS VI, Chapter 9: Ratios, Proportions, and Percent Change &middot; Percent Increase and Decrease</div>
+<div class="ct-text"><p>In an orchard, $80\%$ of the trees were apple trees and the rest were pear trees. Last summer, the apple weevil killed some of the apple trees but no pear trees. Now $50\%$ of the trees are apple trees. What percentage of the apple trees were killed by the apple weevil?</p><p><strong>(A)</strong>&nbsp;$30\%$&emsp;<strong>(B)</strong>&nbsp;$40\%$&emsp;<strong>(C)</strong>&nbsp;$50\%$&emsp;<strong>(D)</strong>&nbsp;$60\%$&emsp;<strong>(E)</strong>&nbsp;$75\%$</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(E) $75\%$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Imagine 100 trees)</h4>
+<p>Suppose there were $100$ trees: $80$ apple trees and $20$ pear trees. No pear tree died, so there are still $20$ pear trees. Now the apple trees are $50\%$ of the trees, so the pear trees are the other $50\%$; the orchard now has $40$ trees, of which $20$ are apple trees.</p><p>So $80-20=60$ of the $80$ apple trees were killed, which is $\frac{60}{80}=75\%$. The answer is $\boxed{\text{(E)}\ 75\%}$.</p>
+<h4>Solution 2 (Measure everything in pear trees)</h4>
+<p>The number of pear trees never changes, so use it as the unit. Before, pear trees were $\frac15$ of the orchard, so there were $4$ apple trees for every pear tree. Afterwards, apple trees and pear trees are equal in number, so there is $1$ apple tree for every pear tree.</p><p>For every $4$ apple trees, $3$ died: that is $\frac34=75\%$. The answer is $\boxed{\text{(E)}\ 75\%}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p7">
+<h3>Problem 7</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Algebra &middot; LPS VI, Chapter 49: Systems of Equations and Multiple Constraints &middot; Substitution and Elimination</div>
+<div class="ct-text"><p>Mariam has $13$ dollars less than the total amount that Ria and Emma have. Ria has $5$ dollars more than the total amount that Mariam and Emma have. How many dollars does Emma have?</p><p><strong>(A)</strong>&nbsp;$18$&emsp;<strong>(B)</strong>&nbsp;$12$&emsp;<strong>(C)</strong>&nbsp;$8$&emsp;<strong>(D)</strong>&nbsp;$7$&emsp;<strong>(E)</strong>&nbsp;$4$</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(E) $4$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Add the two facts)</h4>
+<p>Let Mariam, Ria and Emma have $m$, $r$ and $e$ dollars. The two facts say
+\[m=r+e-13\qquad\text{and}\qquad r=m+e+5.\]
+Add the two equations:
+\[m+r=r+m+2e-8.\]
+Take $m+r$ away from both sides: $0=2e-8$, so $e=4$. Emma has $\boxed{\text{(E)}\ 4}$ dollars.</p><p>(Any $m$ works with $r=m+9$; for example $m=10$, $r=19$, $e=4$ satisfies both facts.)</p>
+<h4>Solution 2 (Compare two gaps)</h4>
+<p>Look at Ria compared with Mariam.</p><ul class="ct-ul"><li><p>Ria has $5$ dollars more than Mariam and Emma together, so Ria is ahead of Mariam by $5$ dollars plus Emma's money.</p></li><li><p>Ria and Emma together have $13$ dollars more than Mariam, so Ria is ahead of Mariam by $13$ dollars minus Emma's money.</p></li></ul><p>Both describe the same gap, so $5+e=13-e$, where $e$ is Emma's money. Then $2e=8$ and $e=4$. The answer is $\boxed{\text{(E)}\ 4}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p8">
+<h3>Problem 8</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Number Theory &middot; LPS VI, Chapter 15: GCD, LCM, and Multiplicative Interaction &middot; LCM Logic</div>
+<div class="ct-text"><p>In Kush's Cake shop, there are chocolate cakes, cherry cakes, cream cakes and coffee cakes. For every seven chocolate cakes, there are six cherry cakes. For every five cherry cakes, there are four cream cakes. For every three cream cakes, there are two coffee cakes. Which of these could be the total number of cakes in Kush's shop?</p><p><strong>(A)</strong>&nbsp;$60$&emsp;<strong>(B)</strong>&nbsp;$150$&emsp;<strong>(C)</strong>&nbsp;$240$&emsp;<strong>(D)</strong>&nbsp;$330$&emsp;<strong>(E)</strong>&nbsp;$420$</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(E) $420$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Join the ratios)</h4>
+<p>Write the three ratios with matching middle terms.</p><ul class="ct-ul"><li><p>chocolate : cherry $=7:6=35:30$;</p></li><li><p>cherry : cream $=5:4=30:24$;</p></li><li><p>cream : coffee $=3:2=24:16$.</p></li></ul><p>So chocolate : cherry : cream : coffee $=35:30:24:16$. In particular chocolate : coffee $=35:16$, and $35$ and $16$ have no common factor larger than $1$, so this ratio cannot be simplified: there are $35k$ chocolate cakes and $16k$ coffee cakes for some whole number $k$. Then there are $30k$ cherry cakes and $24k$ cream cakes, and the total is $35k+30k+24k+16k=105k$, a multiple of $105$ (and every multiple of $105$ can happen). Among the options only $420=4\times105$ is a multiple of $105$. The answer is $\boxed{\text{(E)}\ 420}$.</p>
+<h4>Solution 2 (Start from the cherry cakes)</h4>
+<p>The number of cherry cakes is $\frac67$ of the number of chocolate cakes, so it is a multiple of $6$; it is also cut into fifths (four cream cakes for every five cherry cakes), so it is a multiple of $5$. Hence there are $30t$ cherry cakes for some whole number $t$. Then
+\[\text{chocolate}=\tfrac76\cdot30t=35t,\quad \text{cream}=\tfrac45\cdot30t=24t,\quad \text{coffee}=\tfrac23\cdot24t=16t,\]
+all whole numbers. The total is $35t+30t+24t+16t=105t$. Of $60,150,240,330,420$ only $420$ (with $t=4$) has this form. The answer is $\boxed{\text{(E)}\ 420}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p9">
+<h3>Problem 9</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Number Theory &middot; LPS VI, Chapter 3: Divisibility and Prime Factorization &middot; Prime and Composite Structure</div>
+<div class="ct-text"><p>Five children each writes down a different positive integer. One writes down a square, one writes down a cube, one writes down a prime, one writes down an odd integer and one writes down an even integer. What is the smallest possible total of the five integers?</p><p><strong>(A)</strong>&nbsp;$15$&emsp;<strong>(B)</strong>&nbsp;$17$&emsp;<strong>(C)</strong>&nbsp;$19$&emsp;<strong>(D)</strong>&nbsp;$21$&emsp;<strong>(E)</strong>&nbsp;$23$</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(A) $15$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Smallest possible, then check it works)</h4>
+<p>Five different positive integers add up to at least $1+2+3+4+5=15$. So the total cannot be less than $15$.</p><p>Can $1,2,3,4,5$ be shared out to fit the five roles? The only cube among them is $1$ ($=1^3$), so the cube-writer takes $1$. The square-writer then takes $4$ ($=2^2$). The other three numbers $2,3,5$ are all prime, so give $3$ to the prime-writer, $5$ to the odd-writer and $2$ to the even-writer. Every child has a different number that fits, and the total is $15$. The answer is $\boxed{\text{(A)}\ 15}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p10">
+<h3>Problem 10</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Geometry &middot; LPS VI, Chapter 32: Area by Measurement and Decomposition &middot; Additive and Subtractive Area</div>
+<div class="ct-text"><p>Rafael uses three squares to create a shape. The first has side-length $3$ cm. The second has side-length $5$ cm and one of its vertices is placed in the centre of the first square. The third square has side-length $7$ cm and one of its vertices is placed in the centre of the second square, as shown in the diagram. The top edges of all three squares are parallel. What is the total shaded area in cm$^2$?</p><p><strong>(A)</strong>&nbsp;$66$&emsp;<strong>(B)</strong>&nbsp;$74.5$&emsp;<strong>(C)</strong>&nbsp;$75$&emsp;<strong>(D)</strong>&nbsp;$77.5$&emsp;<strong>(E)</strong>&nbsp;$83$</p><div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/grade-6-2-10.svg" alt="Figure for Problem 10"></div></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(B) $74.5$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Add the squares, remove the overlaps)</h4>
+<div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/grade-6-2-10_s1.svg" alt="Figure for the solution"></div>
+<p>The second square has a corner at the centre of the first square, and its sides are parallel to the sides of the first. It is bigger than the first square, so it covers exactly the quarter of the first square next to that corner: a square of side $\frac32$ cm, with area $\frac94=2.25$ cm$^2$. In the same way the third square covers a quarter of the second square: a square of side $\frac52$ cm, area $\frac{25}{4}=6.25$ cm$^2$. The first and third squares do not meet (the first square ends $3$ cm from its top-left corner, and the third starts $1.5+2.5=4$ cm across and down).</p><p>Adding the three areas counts each overlap twice, so the shaded area is
+\[9+25+49-2.25-6.25=74.5\ \text{cm}^2.\]
+The answer is $\boxed{\text{(B)}\ 74.5}$.</p>
+<h4>Solution 2 (Count what can be seen)</h4>
+<p>Look at the shape as three cards laid one on top of the next. The third square ($49$ cm$^2$) is seen whole. The second square shows everything except the quarter hidden under the third square, so it shows $\frac34\times25=18.75$ cm$^2$. The first square shows everything except the quarter hidden under the second square, so it shows $\frac34\times9=6.75$ cm$^2$. (Each hidden part is a quarter because a corner of the larger square sits at the centre of the smaller one, with sides parallel.)</p><p>Total: $49+18.75+6.75=74.5$ cm$^2$. The answer is $\boxed{\text{(B)}\ 74.5}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p11">
+<h3>Problem 11</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Geometry &middot; LPS VI, Chapter 13: Rates, Motion, and Work &middot; Relative Motion</div>
+<div class="ct-text"><p>On Planet Mathian, the Mathinian folk measure time on an $8$ &ldquo;hour&rdquo; clock with $90$ &ldquo;minutes&rdquo; per &ldquo;hour&rdquo;. How many degrees are in the measure of the smaller angle formed by the hands of this clock when the time is $2{:}24$?</p><div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/grade-6-2-11.svg" alt="Figure for Problem 11"></div></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$6$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Degrees for each hand)</h4>
+<div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/grade-6-2-11_s1.svg" alt="Figure for the solution"></div>
+<p>The clock has $8$ hours around $360^\circ$, so each hour mark is $360^\circ\div8=45^\circ$ apart. Measure both hands from the top (the $8$), clockwise.</p><p><em>Minute hand.</em> It goes once round in $90$ minutes. After $24$ minutes it has turned $\frac{24}{90}\times360^\circ=96^\circ$.</p><p><em>Hour hand.</em> At $2{:}00$ it points at the $2$, which is $2\times45^\circ=90^\circ$. In $24$ of the $90$ minutes of an hour it moves $\frac{24}{90}$ of the next $45^\circ$, which is $12^\circ$. So it is at $102^\circ$.</p><p>The angle between the hands is $102^\circ-96^\circ=$ $\boxed{6}$ degrees.</p>
+<h4>Solution 2 (Fractions of a full turn)</h4>
+<p>Count the time since the clock last showed $8{:}00$, when both hands pointed to the top, in Mathian minutes. A whole turn of the hour hand takes $8\times90=720$ minutes, and it is now $2\times90+24=204$ minutes after the top. So the hour hand has made $\frac{204}{720}$ of a turn.</p><p>The minute hand makes a whole turn in $90$ minutes, and $24$ minutes have passed since the hour began, so it has made $\frac{24}{90}=\frac{192}{720}$ of a turn.</p><p>The hands are $\frac{204-192}{720}=\frac{12}{720}=\frac{1}{60}$ of a turn apart, and $\frac1{60}\times360^\circ=6^\circ$. The answer is $\boxed{6}$ degrees.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p12">
+<h3>Problem 12</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Number Theory &middot; LPS VI, Chapter 3: Divisibility and Prime Factorization &middot; Prime Factorization</div>
+<div class="ct-text"><p>The five numbers $95$, $96$, $97$, $98$, $99$ are each paired with one of the five numbers $1$, $3$, $5$, $7$, $9$ (each number used once). The larger number of each pair is then divided by the smaller, giving five integer answers. What is the difference between the smallest and the largest of the five integer answers?</p><p><strong>(A)</strong>&nbsp;$96$&emsp;<strong>(B)</strong>&nbsp;$86$&emsp;<strong>(C)</strong>&nbsp;$76$&emsp;<strong>(D)</strong>&nbsp;$66$&emsp;<strong>(E)</strong>&nbsp;$56$</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(B) $86$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (The pairing is forced)</h4>
+<p>Each big number must be divisible by its partner. Factorise the big numbers:
+\[95=5\times19,\quad 96=2^5\times3,\quad 97\ \text{is prime},\quad 98=2\times7^2,\quad 99=3^2\times11.\]</p><ul class="ct-ul"><li><p>$97$ is prime, so its only possible partner from $1,3,5,7,9$ is $1$.</p></li><li><p>With $1$ used, $95$ must take $5$ and $98$ must take $7$ (their only other divisors in the list).</p></li><li><p>$96$ is divisible by $3$ but not by $9$, so $96$ takes $3$, and $99$ takes $9$.</p></li></ul><p>The answers are $95\div5=19$, $96\div3=32$, $97\div1=97$, $98\div7=14$ and $99\div9=11$. The difference between the largest and the smallest is $97-11=86$. The answer is $\boxed{\text{(B)}\ 86}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p13">
+<h3>Problem 13</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Combinatorics &middot; LPS VI, Chapter 2: Fundamental Counting Principles &middot; Unordered Selections</div>
+<div class="ct-text"><p>Nell wants to write the numbers $1$, $2$, $3$, $4$ and $5$ in the five cells in the diagram so that any number directly below another number is greater than that number and any number directly to the right of another number is greater than that number. In how many ways can she do this?</p><p><strong>(A)</strong>&nbsp;$3$&emsp;<strong>(B)</strong>&nbsp;$4$&emsp;<strong>(C)</strong>&nbsp;$5$&emsp;<strong>(D)</strong>&nbsp;$6$&emsp;<strong>(E)</strong>&nbsp;$8$</p><div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/grade-6-2-13.svg" alt="Figure for Problem 13"></div></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(D) $6$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Choose the numbers for the row)</h4>
+<p>The top-left cell has a number to its right and a number below it, and every other number is reached from it by moving right or down, so it holds the smallest number, $1$.</p><p>The remaining numbers $2,3,4,5$ go into two arms: two cells to the right of $1$ and two cells below $1$. Each arm must increase, and the two arms do not affect each other. So Nell only has to choose which two numbers go in the row; they are then written in increasing order, and the other two go down the column in increasing order. The number of ways to choose $2$ numbers out of $4$ is $\frac{4\times3}{2}=6$:
+\[\{2,3\},\ \{2,4\},\ \{2,5\},\ \{3,4\},\ \{3,5\},\ \{4,5\}.\]
+The answer is $\boxed{\text{(D)}\ 6}$.</p>
+<h4>Solution 2 (Place the largest number first)</h4>
+<p>Place the numbers from $5$ down to $1$. At each step the largest remaining number must go at the end of an arm (the right end of the row or the bottom of the column, among the cells still empty), since nothing in that arm may come after it.</p><p>The top-left cell must be the last one filled (it gets $1$). So we fill the two row cells and the two column cells, always taking the outermost empty cell of the arm we choose. A filling is just the order in which we choose the arms, for example row, column, column, row. We need two <em>row</em> choices and two <em>column</em> choices, in some order:
+\[RRCC,\ RCRC,\ RCCR,\ CRRC,\ CRCR,\ CCRR,\]
+which is $6$ orders. The answer is $\boxed{\text{(D)}\ 6}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p14">
+<h3>Problem 14</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Number Theory &middot; LPS VI, Chapter 31: Linear Diophantine Equations &middot; Contextual Integer Models</div>
+<div class="ct-text"><p>In Poppy's pond there are frogs and snakes. Four-fifths of the frogs are green frogs and six-sevenths of the snakes are black snakes. Which of the following could <em>not</em> be the total number of creatures in Poppy's pond?</p><p><strong>(A)</strong>&nbsp;$22$&emsp;<strong>(B)</strong>&nbsp;$23$&emsp;<strong>(C)</strong>&nbsp;$24$&emsp;<strong>(D)</strong>&nbsp;$26$&emsp;<strong>(E)</strong>&nbsp;$27$</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(B) $23$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Check each option)</h4>
+<p>Four-fifths of the frogs is a whole number, so the number of frogs is a multiple of $5$. Six-sevenths of the snakes is a whole number, so the number of snakes is a multiple of $7$. There are frogs and there are snakes, so neither number is $0$.</p><p>Try to write each option as (a multiple of $5$) $+$ (a multiple of $7$):
+\[22=15+7,\qquad 24=10+14,\qquad 26=5+21,\qquad 27=20+7.\]
+For $23$: subtract $7$, $14$ or $21$ snakes and we get $16$, $9$ or $2$ frogs, none a multiple of $5$. So the total cannot be $23$. The answer is $\boxed{\text{(B)}\ 23}$.</p>
+<h4>Solution 2 (Use remainders on division by 5)</h4>
+<p>The frogs come in fives, so the total has the same remainder on division by $5$ as the number of snakes. The number of snakes is $7$, $14$, $21$, $28$, &hellip;, with remainders $2$, $4$, $1$, $3$, &hellip; on division by $5$.</p><p>The total $23$ has remainder $3$, so it would need at least $28$ snakes, which is more than $23$ creatures. The other options are fine: $22$ and $27$ (remainder $2$) use $7$ snakes; $24$ (remainder $4$) uses $14$ snakes; $26$ (remainder $1$) uses $21$ snakes, and the rest are frogs in each case. The answer is $\boxed{\text{(B)}\ 23}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p15">
+<h3>Problem 15</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Number Theory &middot; LPS VI, Chapter 21: Digits, Place Value, and Decimal Structure &middot; Digit Conditions and Search</div>
+<div class="ct-text"><p>In the addition shown, each letter represents a single digit and different letters represent different digits. What is the value of $L+M+N$?
+\[\begin{array}{cccc} &amp; L &amp; M &amp; N\\ + &amp; L &amp; N &amp; M\\ \hline &amp; N &amp; 4 &amp; L\end{array}\]</p><p><strong>(A)</strong>&nbsp;$16$&emsp;<strong>(B)</strong>&nbsp;$17$&emsp;<strong>(C)</strong>&nbsp;$18$&emsp;<strong>(D)</strong>&nbsp;$19$&emsp;<strong>(E)</strong>&nbsp;$20$</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(A) $16$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Column by column)</h4>
+<p>Write $s=M+N$. The units column and the tens column both add $M$ and $N$.</p><p><em>Units:</em> $N+M=s$ ends in $L$.</p><p><em>Tens:</em> $s$ plus the carry from the units ends in $4$.</p><p><em>Hundreds:</em> $L+L$ plus the carry from the tens is $N$ (no carry out, since the answer has three digits).</p><p>If there were no carry from the units, then $s=L$ and $s$ would end in $4$, so $L=4$ and $s=4$. But then $N\ge 2L=8$, which is more than $s=M+N=4$. Impossible.</p><p>So the units carry $1$: $s=L+10$, and $s+1$ ends in $4$, so $s=13$ (since $s$ is between $10$ and $18$). Then $L=3$, there is a carry of $1$ into the hundreds, and $N=2\times3+1=7$, $M=13-7=6$. Check: $367+376=743$. So $L+M+N=3+13=16$. The answer is $\boxed{\text{(A)}\ 16}$.</p>
+<h4>Solution 2 (Try the few possible values of L)</h4>
+<p>The hundreds column says $N=2L$ or $N=2L+1$ (depending on a carry), and $N$ is a digit, so $L$ is $1$, $2$, $3$ or $4$. Also, adding the units column and the tens column, the units digit of $N+M$ is $L$.</p><ul class="ct-ul"><li><p>$L=1$: $N$ is $2$ or $3$, and $N+M$ ends in $1$, so $N+M=11$ and $M$ is $9$ or $8$. Then the tens column is $N+M+1=12$, which does not end in $4$.</p></li><li><p>$L=2$: $N$ is $4$ or $5$; $N+M=12$ ($N+M=2$ is too small), and the tens give $13$. No.</p></li><li><p>$L=3$: $N$ is $6$ or $7$; $N+M=13$, and the tens give $14$, ending in $4$ with a carry, so $N=2\cdot3+1=7$ and $M=6$. This works: $367+376=743$.</p></li><li><p>$L=4$: $N$ is $8$ or $9$; $N+M=14$, and the tens give $15$. No.</p></li></ul><p>So $L=3$, $M=6$, $N=7$, and $L+M+N=16$. The answer is $\boxed{\text{(A)}\ 16}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p16">
+<h3>Problem 16</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Combinatorics &middot; LPS VI, Chapter 22: Pigeonhole Principle and Guaranteed Existence &middot; Worst-Case Thresholds</div>
+<div class="ct-text"><p>A bag contains only red marbles and green marbles. For every five marbles that are chosen, at least one will be red. For every six marbles that are chosen, at least one will be green. What is the largest number of marbles the bag can contain?</p><p><strong>(A)</strong>&nbsp;$11$&emsp;<strong>(B)</strong>&nbsp;$10$&emsp;<strong>(C)</strong>&nbsp;$9$&emsp;<strong>(D)</strong>&nbsp;$8$&emsp;<strong>(E)</strong>&nbsp;$7$</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(C) $9$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Bound each colour)</h4>
+<p>If the bag had $5$ or more green marbles, we could choose $5$ green marbles, and there would be no red one among them. So there are at most $4$ green marbles.</p><p>If the bag had $6$ or more red marbles, we could choose $6$ red marbles with no green one. So there are at most $5$ red marbles.</p><p>Hence the bag has at most $4+5=9$ marbles. A bag with $5$ red and $4$ green marbles works: any $5$ marbles cannot all be green (there are only $4$ green), and any $6$ cannot all be red (there are only $5$ red). The largest number is $\boxed{\text{(C)}\ 9}$.</p>
+<h4>Solution 2 (Rule out the larger options)</h4>
+<p>Suppose the bag had $10$ or more marbles. It has at most $4$ green marbles (otherwise $5$ green marbles chosen together would contain no red one). So it has at least $10-4=6$ red marbles, and choosing $6$ of them gives six marbles with no green: a contradiction. So $10$ and $11$ are impossible.</p><p>With $9$ marbles, $5$ red and $4$ green, both rules hold: any five marbles include a red one (only four are green), and any six include a green one (only five are red). The answer is $\boxed{\text{(C)}\ 9}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p17">
+<h3>Problem 17</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Combinatorics &middot; LPS VI, Chapter 18: Parity, Invariants, and Monovariants &middot; Monovariants</div>
+<div class="ct-text"><p>Eight kangaroos stood in a line, as shown. At some point, two kangaroos standing next to each other and facing each other exchanged places. This was repeated until no further exchanges were possible. How many exchanges were made?</p><p><strong>(A)</strong>&nbsp;$8$&emsp;<strong>(B)</strong>&nbsp;$10$&emsp;<strong>(C)</strong>&nbsp;$12$&emsp;<strong>(D)</strong>&nbsp;$13$&emsp;<strong>(E)</strong>&nbsp;$17$</p><div class="ct-fig"><img style="width:355px" src="/assets/contests/2026-27/grade-6-2-17.svg" alt="Figure for Problem 17"></div></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(D) $13$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Count the pairs that must pass)</h4>
+<div class="ct-fig"><img style="width:270px" src="/assets/contests/2026-27/grade-6-2-17_s1.svg" alt="Figure for the solution"></div>
+<p>Write $R$ for a kangaroo facing right and $L$ for one facing left. From left to right the line is
+\[R\,R\,R\,L\,R\,R\,L\,L.\]
+Two neighbours face each other exactly when an $R$ stands just left of an $L$. When they swap, the $R$ moves one place right and the $L$ one place left, and they now face away from each other. An $R$ only ever moves right and an $L$ only ever moves left, so each $R$ and $L$ pass each other at most once.</p><p>The exchanges stop only when no $R$ stands just left of an $L$, that is, when all the $L$s are to the left of all the $R$s. So every pair ($R$, $L$) with the $R$ starting on the left must pass, exactly once, and each exchange is one such passing. Count those pairs: the $L$ in place $4$ has $3$ $R$s to its left, and each of the $L$s in places $7$ and $8$ has $5$. In total $3+5+5=13$ exchanges. The answer is $\boxed{\text{(D)}\ 13}$.</p>
+<h4>Solution 2 (Follow the left-facing kangaroos)</h4>
+<p>Number the places $1$ to $8$ from the left. Each exchange moves exactly one left-facing kangaroo one place to the left (and one right-facing kangaroo one place to the right).</p><p>At the end no right-facing kangaroo stands just left of a left-facing one, so the three left-facing kangaroos stand in places $1$, $2$, $3$. They never pass each other, so the one starting in place $4$ ends in place $1$, and those from places $7$ and $8$ end in places $2$ and $3$. Their moves add up to
+\[(4-1)+(7-2)+(8-3)=3+5+5=13,\]
+and each exchange contributes exactly one of these moves. So $13$ exchanges were made, whatever the order. The answer is $\boxed{\text{(D)}\ 13}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p18">
+<h3>Problem 18</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Combinatorics &middot; LPS VI, Chapter 2: Fundamental Counting Principles &middot; Ordered Arrangements</div>
+<div class="ct-text"><p>Julia has four different coloured pencils and wants to use some or all of them to colour the map of four regions shown in the diagram. She wants to ensure that two regions that share a common border are shaded in different colours. In how many different ways can she colour the map?</p><p><strong>(A)</strong>&nbsp;$12$&emsp;<strong>(B)</strong>&nbsp;$18$&emsp;<strong>(C)</strong>&nbsp;$24$&emsp;<strong>(D)</strong>&nbsp;$36$&emsp;<strong>(E)</strong>&nbsp;$48$</p><div class="ct-fig"><img style="width:305px" src="/assets/contests/2026-27/grade-6-2-18.svg" alt="Figure for Problem 18"></div></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(E) $48$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Colour the busiest regions first)</h4>
+<div class="ct-fig"><img style="width:305px" src="/assets/contests/2026-27/grade-6-2-18_s1.svg" alt="Figure for the solution"></div>
+<p>Name the regions $A$ (large, top left), $B$ (right), $C$ (small, bottom left) and $D$ (bottom middle). From the map: $A$ borders $B$, $C$ and $D$; $D$ borders $A$, $B$ and $C$; but $B$ and $C$ do not touch.</p><p>Colour in the order $A$, $D$, $B$, $C$.</p><ul class="ct-ul"><li><p>$A$: any of the $4$ colours.</p></li><li><p>$D$: it touches $A$, so $3$ choices.</p></li><li><p>$B$: it touches $A$ and $D$, which have different colours, so $2$ choices.</p></li><li><p>$C$: it touches $A$ and $D$ (not $B$), so again $2$ choices.</p></li></ul><p>In total $4\times3\times2\times2=48$ ways. The answer is $\boxed{\text{(E)}\ 48}$.</p>
+<h4>Solution 2 (Same or different colours for B and C)</h4>
+<p>Use the same names. $A$ and $D$ touch each other and both touch $B$ and $C$; only $B$ and $C$ do not touch.</p><p><em>$B$ and $C$ the same colour.</em> Then three different colours are needed for $A$, $D$ and the pair $B,C$: $4\times3\times2=24$ ways.</p><p><em>$B$ and $C$ different colours.</em> Then all four regions have different colours: $4\times3\times2\times1=24$ ways.</p><p>Together $24+24=48$ ways. The answer is $\boxed{\text{(E)}\ 48}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p19">
+<h3>Problem 19</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Combinatorics &middot; LPS VI, Chapter 18: Parity, Invariants, and Monovariants &middot; Invariants</div>
+<div class="ct-text"><p>A magic coin exchange machine can exchange coins as follows:</p><ul class="ct-ul"><li><p>$3$ silver coins $\to$ $2$ gold $+$ $1$ bronze</p></li><li><p>$3$ gold coins $\to$ $1$ silver $+$ $4$ bronze</p></li></ul><p>Johnny starts with $10$ gold coins. After exchanging coins as many times as possible, how many coins will he have in total?</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$18$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Follow the machine)</h4>
+<p>Bronze coins are never exchanged, so only silver and gold matter. At every moment at most one exchange is possible (with $10$ gold coins there are never $3$ silver and $3$ gold at the same time, as we will see), so the process is forced. Write (silver, gold, bronze):</p><ul class="ct-ul"><li><p>start: $(0,10,0)$;</p></li><li><p>three times $3$ gold $\to$ $1$ silver $+$ $4$ bronze: $(1,7,4)$, $(2,4,8)$, $(3,1,12)$;</p></li><li><p>$3$ silver $\to$ $2$ gold $+$ $1$ bronze: $(0,3,13)$;</p></li><li><p>$3$ gold $\to$ $1$ silver $+$ $4$ bronze: $(1,0,17)$.</p></li></ul><p>Now there are fewer than $3$ silver and fewer than $3$ gold coins, so no more exchanges are possible. Johnny has $1+0+17=$ $\boxed{18}$ coins.</p>
+<h4>Solution 2 (A value that never changes)</h4>
+<p>Give each coin a number of points: a bronze coin $7$ points, a silver coin $11$ points and a gold coin $13$ points. Then
+\[3\times11=33=2\times13+7\qquad\text{and}\qquad 3\times13=39=11+4\times7,\]
+so neither exchange changes the total number of points. Johnny starts with $10\times13=130$ points, so he always has $130$ points.</p><p>The exchanges must stop at some point: every exchange adds at least one bronze coin, and he can never have more than $130\div7&lt;19$ bronze coins. When they stop he has at most $2$ silver and at most $2$ gold coins. Try each of the nine cases: the points from bronze, $130-11s-13g$, must be a multiple of $7$. Only $s=1$, $g=0$ works ($130-11=119=17\times7$). So he ends with $1$ silver, $0$ gold and $17$ bronze coins: $\boxed{18}$ coins in total. This method also shows that the answer does not depend on the order of the exchanges.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p20">
+<h3>Problem 20</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VI scale">H</span>Number Theory &middot; LPS VI, Chapter 18: Parity, Invariants, and Monovariants &middot; Parity Arguments</div>
+<div class="ct-text"><p>Jacques wants to write a positive integer in each box in the diagram so that each integer above the bottom row is the sum of the two integers immediately below it. What is the largest number of odd integers that Jacques can write?</p><p><strong>(A)</strong>&nbsp;$4$&emsp;<strong>(B)</strong>&nbsp;$5$&emsp;<strong>(C)</strong>&nbsp;$6$&emsp;<strong>(D)</strong>&nbsp;$7$&emsp;<strong>(E)</strong>&nbsp;$8$</p><div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/grade-6-2-20.svg" alt="Figure for Problem 20"></div></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(D) $7$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Small triangles of three boxes)</h4>
+<div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/grade-6-2-20_s1.svg" alt="Figure for the solution"></div>
+<p>Look at any box above the bottom row together with the two boxes it sits on. If the two lower numbers were both odd, their sum (the upper number) would be even. So in each such group of three boxes, at least one number is even.</p><p>The pyramid contains three such groups with no box in common (shaded in three colours in the picture): the left two bottom boxes with the box above them, the right two bottom boxes with the box above them, and the two boxes of the third row with the top box. So at least $3$ of the $10$ numbers are even, and at most $7$ are odd.</p><p>Seven is possible. Put $1,1,2,1$ in the bottom row; then the rows above are $2,3,3$, then $5,6$, then $11$, and the odd numbers are $1,1,1,3,3,5,11$: seven of them.</p><div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/grade-6-2-20_s1x.svg" alt="Figure for the solution"></div><p>The answer is $\boxed{\text{(D)}\ 7}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p21">
+<h3>Problem 21</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Combinatorics &middot; LPS VI, Chapter 10: Logical Deduction and Constraint Puzzles &middot; Constraint Satisfaction</div>
+<div class="ct-text"><p>Liam is reading two books, one with $100$ pages and one with $200$ pages. He can read up to $20$ pages a night, but refuses to read from the same book two nights in a row. What is the fewest number of days it could take Liam to finish both books?</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$19$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (The long book sets the pace)</h4>
+<p>The $200$-page book needs at least $200\div20=10$ nights. Liam never reads it two nights in a row, so between any two of these nights there is at least one other night. Ten nights with a gap between each two need at least $10+9=19$ nights.</p><p>Nineteen nights are enough: read $20$ pages of the long book on nights $1,3,5,\ldots,19$ (ten nights, $200$ pages) and the short book on nights $2,4,\ldots,18$ (nine nights; for example $12$ pages on each of the first eight of them and $4$ pages on the last). Each night he reads at most $20$ pages and never the same book twice in a row. The fewest number of days is $\boxed{19}$.</p>
+<h4>Solution 2 (Look at nights in pairs)</h4>
+<p>Group the nights in pairs: nights $1$ and $2$, nights $3$ and $4$, and so on. In each pair Liam reads the long book on at most one night (never two nights in a row), so at most $20$ pages of it per pair.</p><p>In $18$ nights there are $9$ pairs, so at most $9\times20=180$ pages of the $200$-page book: not enough. So he needs at least $19$ nights.</p><p>He can do it in $19$: long book on the odd nights $1,3,\ldots,19$ ($10\times20=200$ pages) and the short book on the even nights $2,4,\ldots,18$ (nine nights are plenty for $100$ pages). The answer is $\boxed{19}$ days.</p>
+</div></details>
+</section>
+{% endraw %}

@@ -29,6 +29,11 @@ description: Indian National Mathematical Olympiad 2026: problems with answers a
   .ct-note { font-size: 14px; color: var(--ink-soft); font-style: italic; }
   .ct-bar { margin: .6em 0 1em; display: flex; gap: 10px; flex-wrap: wrap; }
   .ct-bar button { font: inherit; font-size: 14px; padding: 5px 12px; border-radius: var(--radius); border: 1px solid var(--brand); background: var(--white); color: var(--brand); cursor: pointer; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
 </style>
 <script>
   window.MathJax = { tex: { inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [['\\[','\\]']], processEscapes: true },
@@ -57,6 +62,28 @@ description: Indian National Mathematical Olympiad 2026: problems with answers a
   .ct-text mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
 </style>
 
+<style>
+  .ct-tags { display: flex; flex-wrap: wrap; gap: 5px; margin: 0 0 .55em; }
+  .ct-tg { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .03em; padding: 2px 8px; border-radius: 999px; line-height: 1.5; }
+  .ct-lv { background: #eee7dc; color: #4a3d33; }
+  .ct-df-Starter { background: #dcf1dc; color: #245c24; }
+  .ct-df-Explorer { background: #d6efec; color: #155e57; }
+  .ct-df-Challenger { background: #dce8f7; color: #1f4c80; }
+  .ct-df-Olympiad { background: #e7defa; color: #4b2a8a; }
+  .ct-df-Advanced { background: #fbe4cc; color: #8a4a0b; }
+  .ct-df-Expert { background: #f8d6cf; color: #8c2600; }
+  .ct-band { margin: 1.3em 0 .5em; font-size: 14px; color: var(--ink-soft); }
+  .ct-band .ct-tg { font-size: 13px; margin-right: .4em; }
+  .ct-legend { font-size: 14.5px; background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 10px 16px; margin: 1em 0 1.4em; }
+  .ct-legend p { margin: .35em 0; }
+  .ct-legend ul { margin: .2em 0 .4em; padding-left: 1.1em; }
+  .ct-legend li { margin: .2em 0; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
+</style>
 {% endraw %}
 <p><a href="{{ '/contests-2026' | relative_url }}">&larr; All contests 2026</a></p>
 
@@ -72,7 +99,7 @@ description: Indian National Mathematical Olympiad 2026: problems with answers a
 {% raw %}
 <section class="ct-problem" id="p1">
 <h3>Problem 1</h3>
-<div class="ct-meta">Algebra &middot; LPS VII, Chapter 17: Sequences, Recurrences, and Discrete Dynamics</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Algebra &middot; LPS VII, Chapter 17: Sequences, Recurrences, and Discrete Dynamics &middot; Nonlinear Recurrences</div>
 <div class="ct-text"><p>Let $x_1,x_2,x_3,\dots$ be a sequence of positive integers defined as follows: $x_1=1$ and for each $n\ge 1$ we have
 \[x_{n+1}=x_n+\left\lfloor\sqrt{x_n}\right\rfloor.\]
 Determine all positive integers $m$ for which $x_n=m^2$ for some $n\ge 1$. (Here $\lfloor x\rfloor$ denotes the greatest integer less or equal to $x$ for every real number $x$.)</p></div>
@@ -91,7 +118,7 @@ with $e_t\ne0$ for $s&lt;t&lt;2s$ (for $s=1$ we simply get $e_2=0$). Starting fr
 </section>
 <section class="ct-problem" id="p2">
 <h3>Problem 2</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 17: Sequences, Recurrences, and Discrete Dynamics</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 17: Sequences, Recurrences, and Discrete Dynamics &middot; Invariant and Monotone Sequence Behavior</div>
 <div class="ct-text"><p>Let $f:\mathbb{N}\to\mathbb{N}$ be a function satisfying the following condition: for each $k&gt;2026$, the number $f(k)$ equals the maximum number of times a number appears in the list $f(1),f(2),\dots,f(k-1)$. Prove that
 \[f(n)=f(n+f(n))\]
 for infinitely many $n\in\mathbb{N}$.</p><p>(Here $\mathbb{N}$ denotes the set $\{1,2,3,\dots\}$ of positive integers.)</p></div>
@@ -102,7 +129,7 @@ for infinitely many $n\in\mathbb{N}$.</p><p>(Here $\mathbb{N}$ denotes the set $
 </section>
 <section class="ct-problem" id="p3">
 <h3>Problem 3</h3>
-<div class="ct-meta">Geometry &middot; LPS VII, Chapter 40: Vector Geometry and Affine Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 40: Vector Geometry and Affine Structure &middot; Dot Product and Metric Recovery</div>
 <div class="ct-text"><p>Let $ABC$ be an acute-angled scalene triangle with circumcircle $\Gamma$. Let $M$ be the midpoint of $BC$ and $N$ be the midpoint of the minor arc $BC$ of $\Gamma$. Points $P$ and $Q$ lie on segments $AB$ and $AC$ respectively such that $BP=BN$ and $CQ=CN$. Point $K\ne N$ lies on line $AN$ with $MK=MN$. Prove that $\angle PKQ=90^\circ$.</p></div>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Coordinates on the angle bisector, Ptolemy and the law of cosines)</h4>
@@ -130,7 +157,7 @@ and since $N'=B+C-N$, also $d(N')=d(B)+d(C)-d(N)=(c-b)\sin\frac\alpha2$. Therefo
 </section>
 <section class="ct-problem" id="p4">
 <h3>Problem 4</h3>
-<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 21: Arithmetic Functions and Multiplicative Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 21: Arithmetic Functions and Multiplicative Structure &middot; Function Equations on Integers</div>
 <div class="ct-text"><p>Two integers $a$ and $b$ are called companions if every prime number $p$ either divides both or none of $a$, $b$. Determine all functions $f:\mathbb{N}_0\to\mathbb{N}_0$ such that $f(0)=0$ and the numbers $f(m)+n$ and $f(n)+m$ are companions for all $m,n\in\mathbb{N}_0$.</p><p>(Here $\mathbb{N}_0$ denotes the set of all non-negative integers.)</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$f(n)=n$ for all $n\in\mathbb N_0$</p></div></details>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
@@ -142,7 +169,7 @@ and since $N'=B+C-N$, also $d(N')=d(B)+d(C)-d(N)=(c-b)\sin\frac\alpha2$. Therefo
 </section>
 <section class="ct-problem" id="p5">
 <h3>Problem 5</h3>
-<div class="ct-meta">Geometry &middot; LPS VII, Chapter 7: Congruence, Rigidity, and Isometric Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 7: Congruence, Rigidity, and Isometric Structure &middot; Geometric Reflection and Isometry</div>
 <div class="ct-text"><p>Three lines $\ell_1,\ell_2,\ell_3$ form an acute angled triangle $\mathcal{T}$ in the plane. Point $P$ lies in the interior of $\mathcal{T}$. Let $\tau_i$ denote the transformation of the plane such that the image $\tau_i(X)$ of any point $X$ in the plane is the reflection of $X$ in $\ell_i$, for each $i\in\{1,2,3\}$. Denote by $P_{ijk}$ the point $\tau_k(\tau_j(\tau_i(P)))$ for each permutation $(i,j,k)$ of $(1,2,3)$.</p><p>Prove that $P_{123},P_{132},P_{213},P_{231},P_{312},P_{321}$ are concyclic if and only if $P$ coincides with the orthocentre of $\mathcal{T}$.</p></div>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Complex numbers)</h4>
@@ -166,7 +193,7 @@ where $\delta_V$ is the distance from $P$ to the corresponding side of $DEF$. Th
 </section>
 <section class="ct-problem" id="p6">
 <h3>Problem 6</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 20: Parity, Coloring, and Process Termination</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 20: Parity, Coloring, and Process Termination &middot; Process Termination and Reachability</div>
 <div class="ct-text"><p>Two decks $\mathcal{A}$ and $\mathcal{B}$ of $40$ cards each are placed on a table at noon. Every minute thereafter, we pick the top cards $a\in\mathcal{A}$ and $b\in\mathcal{B}$ and perform a duel.</p><p>For any two cards $a\in\mathcal{A}$ and $b\in\mathcal{B}$, each time $a$ and $b$ duel, the outcome remains the same and is independent of all other duels. A duel has three possible outcomes:</p><ul class="ct-ul"><li><p>If a card wins, it is placed back at the top of its deck and the losing card is placed at the bottom of its deck.</p></li><li><p>If $a$ and $b$ are evenly matched, they are both removed from their respective decks.</p></li><li><p>If $a$ and $b$ do not interact with each other, then both are placed at the bottom of their respective decks.</p></li></ul><p>The process ends when both decks are empty. A process is called a game if it ends. Prove that the maximum time a game can last equals $356$ hours.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$356$ hours ($21360$ minutes)</p></div></details>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">

@@ -1,0 +1,450 @@
+---
+title: CMIMC 2026: selected problems
+permalink: /contests/cmimc-2026
+description: CMIMC 2026: selected problems: problems with answers and solutions
+---
+{% raw %}
+<style>
+  .ct-intro { margin-bottom: 1.2em; }
+  .ct-credit { font-size: 14px; color: var(--ink-soft); border-left: 3px solid var(--gold); padding: 6px 12px; background: var(--white); margin: 1em 0; }
+  .ct-toc { display: flex; flex-wrap: wrap; gap: 6px; margin: 1em 0 1.4em; }
+  .ct-toc a { display: inline-block; min-width: 2.4em; text-align: center; padding: 4px 8px; border: 1px solid var(--rule); border-radius: 4px; background: var(--white); text-decoration: none; font-size: 14px; }
+  .ct-problem { background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 14px 18px; margin: 1.1em 0; }
+  .ct-problem h3 { margin: 0 0 .3em; font-size: 1.08rem; border-bottom: none; padding-bottom: 0; }
+  .ct-meta { font-size: 13px; color: var(--ink-soft); margin-bottom: .6em; }
+  .ct-text { font-family: Georgia, "Times New Roman", "Noto Serif", serif; font-size: 1.02em; line-height: 1.6; }
+  .ct-text p { margin: .5em 0; }
+  .ct-fig { text-align: center; margin: .8em 0; }
+  .ct-fig img { max-width: 100%; height: auto; max-height: 340px; }
+  .ct-choices { display: flex; flex-wrap: wrap; gap: 6px 22px; margin: .6em 0 .2em; }
+  .ct-choices b { margin-right: .3em; }
+  .ct-problem details { margin-top: .8em; border-top: 1px dashed var(--rule); padding-top: .5em; }
+  .ct-problem summary { cursor: pointer; font-weight: 600; color: var(--brand); font-size: 15px; }
+  .ct-problem details[open] summary { margin-bottom: .5em; }
+  .ct-sol h4 { font-size: 1rem; margin: 1em 0 .3em; color: var(--ink); }
+  .ct-answer { font-weight: 600; }
+  .ct-parts { list-style: none; padding-left: .4em; }
+  .ct-parts li { margin: .35em 0; }
+  .ct-lbl { font-weight: 700; margin-right: .3em; }
+  .ct-note { font-size: 14px; color: var(--ink-soft); font-style: italic; }
+  .ct-bar { margin: .6em 0 1em; display: flex; gap: 10px; flex-wrap: wrap; }
+  .ct-bar button { font: inherit; font-size: 14px; padding: 5px 12px; border-radius: var(--radius); border: 1px solid var(--brand); background: var(--white); color: var(--brand); cursor: pointer; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
+</style>
+<script>
+  window.MathJax = { tex: { inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [['\\[','\\]']], processEscapes: true },
+                     options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] } };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script>
+  function ctAll(open) { document.querySelectorAll('.ct-problem details').forEach(function (d) { d.open = open; }); }
+</script>
+
+<style>
+  .ct-group { font-size: 1.25rem; margin: 1.6em 0 .2em; }
+  .ct-toc-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: .3em 0; }
+  .ct-toc-g { font-size: 13px; color: var(--ink-soft); min-width: 9em; }
+  .ct-toc-wrap { margin: 1em 0 1.4em; }
+  .ct-center { text-align: center; margin: .6em 0; }
+  .ct-tablewrap { overflow-x: auto; margin: .6em 0; text-align: center; }
+  .ct-table { border-collapse: collapse; margin: 0 auto; }
+  .ct-table td { padding: 2px 9px; text-align: center; }
+  .ct-table tr.ct-hl td { border-bottom: 1px solid var(--ink-soft); }
+  .ct-table.ct-vfirst td:first-child { border-right: 1px solid var(--ink-soft); }
+  .ct-ul { padding-left: 1.4em; }
+  .ct-ul li { margin: .3em 0; }
+  .ct-text li > p:first-child { margin-top: 0; }
+  .ct-text li > p:last-child { margin-bottom: 0; }
+  .ct-text mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
+</style>
+
+<style>
+  .ct-tags { display: flex; flex-wrap: wrap; gap: 5px; margin: 0 0 .55em; }
+  .ct-tg { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .03em; padding: 2px 8px; border-radius: 999px; line-height: 1.5; }
+  .ct-lv { background: #eee7dc; color: #4a3d33; }
+  .ct-df-Starter { background: #dcf1dc; color: #245c24; }
+  .ct-df-Explorer { background: #d6efec; color: #155e57; }
+  .ct-df-Challenger { background: #dce8f7; color: #1f4c80; }
+  .ct-df-Olympiad { background: #e7defa; color: #4b2a8a; }
+  .ct-df-Advanced { background: #fbe4cc; color: #8a4a0b; }
+  .ct-df-Expert { background: #f8d6cf; color: #8c2600; }
+  .ct-band { margin: 1.3em 0 .5em; font-size: 14px; color: var(--ink-soft); }
+  .ct-band .ct-tg { font-size: 13px; margin-right: .4em; }
+  .ct-legend { font-size: 14.5px; background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 10px 16px; margin: 1em 0 1.4em; }
+  .ct-legend p { margin: .35em 0; }
+  .ct-legend ul { margin: .2em 0 .4em; padding-left: 1.1em; }
+  .ct-legend li { margin: .2em 0; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
+</style>
+{% endraw %}
+<p><a href="{{ '/contests-2026' | relative_url }}">&larr; All contests 2026</a></p>
+
+<h1>CMIMC 2026: selected problems</h1>
+
+<div class="ct-intro">
+<p>The 20 problems of the CMIMC 2026: selected problems, each with our own solutions, hidden until you open them. Where a problem has a final answer, it is shown separately. Try a problem first, then check.</p><p>A selection of the best problems of the Carnegie Mellon Informatics and Mathematics Competition 2026 (algebra and number theory, combinatorics, geometry and team rounds).</p>
+</div>
+<div class="ct-credit">Problems: CMIMC 2026: selected problems, from the AoPS contest collection or the official paper. Solutions written by MCC.</div>
+<div class="ct-bar"><button type="button" onclick="ctAll(true)">Show all answers and solutions</button><button type="button" onclick="ctAll(false)">Hide all</button></div>
+<div class="ct-toc-wrap"><div class="ct-toc-row"><span class="ct-toc-g">Algebra and Number Theory Round</span><a href="#p1">3</a><a href="#p2">4</a><a href="#p3">6</a><a href="#p4">7</a><a href="#p5">8</a></div><div class="ct-toc-row"><span class="ct-toc-g">Combinatorics Round</span><a href="#p6">3</a><a href="#p7">4</a><a href="#p8">5</a><a href="#p9">6</a><a href="#p10">7</a></div><div class="ct-toc-row"><span class="ct-toc-g">Geometry Round</span><a href="#p11">1</a><a href="#p12">2</a><a href="#p13">3</a><a href="#p14">5</a></div><div class="ct-toc-row"><span class="ct-toc-g">Team Round</span><a href="#p15">3</a><a href="#p16">4</a><a href="#p17">5</a><a href="#p18">6</a><a href="#p19">7</a><a href="#p20">10</a></div></div>
+
+{% raw %}
+<h2 class="ct-group" id="algebra-and-number-theory-round">Algebra and Number Theory Round</h2>
+<section class="ct-problem" id="p1">
+<h3>Problem 3</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Number Theory &middot; LPS VI, Chapter 11: Divisors and Arithmetic Functions of a Number &middot; Counting Divisors</div>
+<div class="ct-text"><p>Let $k$ be the sum of the first $2^{89}-1$ positive integers. It is a fact that $k$ has $178$ factors. If $n$ is the sum of the first $2^{89}-1$ positive cubes, how many factors does $n$ have?</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$531$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Read off the prime factorization)</h4>
+<p>Put $N=2^{89}-1$. Then
+\[k=1+2+\dots+N=\frac{N(N+1)}{2}=2^{88}N .\]
+Since $N$ is odd, the divisors of $k$ are the products of a divisor of $2^{88}$ and a divisor of $N$, so $d(k)=89\cdot d(N)$, where $d$ counts divisors. From $d(k)=178$ we get $d(N)=2$, so $N$ is a prime $q$.</p><p>The sum of the first $N$ cubes is the square of the sum of the first $N$ integers:
+\[n=1^3+2^3+\dots+N^3=\left(\frac{N(N+1)}{2}\right)^2=k^2=2^{176}q^2 .\]
+Hence $d(n)=(176+1)(2+1)=\boxed{531}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p2">
+<h3>Problem 4</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Algebra &middot; LPS VII, Chapter 22: Summation, Telescoping, and Discrete Transformation &middot; Telescoping Sums and Products</div>
+<div class="ct-text"><p>Consider the arithmetic sequence $a_1,a_2,\dots,a_{43}$ with common difference $d&gt;0$ and $a_{22}=1$. Given that
+\[\frac{1}{a_1\cdot a_2\cdot a_3}+\frac{1}{a_2\cdot a_3\cdot a_4}+\dots+\frac{1}{a_{41}\cdot a_{42}\cdot a_{43}}=41,\]
+compute $d$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\frac{29}{420}$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Telescoping)</h4>
+<p>Since $a_{i+2}-a_i=2d$,
+\[\frac{1}{a_ia_{i+1}}-\frac{1}{a_{i+1}a_{i+2}}=\frac{a_{i+2}-a_i}{a_ia_{i+1}a_{i+2}}=\frac{2d}{a_ia_{i+1}a_{i+2}} .\]
+Summing over $i=1,\dots,41$, the right-hand sides telescope:
+\[\sum_{i=1}^{41}\frac{1}{a_ia_{i+1}a_{i+2}}=\frac{1}{2d}\left(\frac{1}{a_1a_2}-\frac{1}{a_{42}a_{43}}\right).\]
+Because $a_{22}=1$, we have $a_1=1-21d$, $a_2=1-20d$, $a_{42}=1+20d$, $a_{43}=1+21d$. Then
+\begin{align*}
+\frac{1}{(1-21d)(1-20d)}-\frac{1}{(1+20d)(1+21d)}&amp;=\frac{(1+20d)(1+21d)-(1-20d)(1-21d)}{(1-400d^2)(1-441d^2)}\\
+&amp;=\frac{82d}{(1-400d^2)(1-441d^2)} .
+\end{align*}
+So the sum equals $\dfrac{41}{(1-400d^2)(1-441d^2)}$, and the condition becomes $(1-400d^2)(1-441d^2)=1$, that is,
+\[d^2\left(176400\,d^2-841\right)=0 .\]
+As $d&gt;0$, $d^2=\frac{841}{176400}$ and $d=\frac{29}{420}$. With this $d$ no term $a_i=1+(i-22)\frac{29}{420}$ is zero (that would need $420\mid 29(22-i)$ with $|22-i|\le 21$), so every fraction is defined. The answer is $\boxed{\dfrac{29}{420}}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p3">
+<h3>Problem 6</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 29: Valuations and Lifting the Exponent &middot; p-adic Valuation Basics</div>
+<div class="ct-text"><p>How many multiples of $3$ are in the $2026$th row of Pascal's Triangle, i.e. the row with $2027$ entries? (We number the rows starting from $0$.)</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$1991$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Lucas's theorem)</h4>
+<p>In base $3$,
+\[2026=2\cdot 729+2\cdot 243+1\cdot 81+0\cdot 27+0\cdot 9+0\cdot 3+1=(2210001)_3 .\]
+By Lucas's theorem, if $j=(j_6j_5\dots j_0)_3$, then
+\[\binom{2026}{j}\equiv\binom{2}{j_6}\binom{2}{j_5}\binom{1}{j_4}\binom{0}{j_3}\binom{0}{j_2}\binom{0}{j_1}\binom{1}{j_0}\pmod 3 ,\]
+and this is nonzero modulo $3$ exactly when every digit of $j$ is at most the corresponding digit of $2026$ (each factor is then $1$ or $2$). The number of such $j$ is $3\cdot3\cdot2\cdot1\cdot1\cdot1\cdot2=36$. So $36$ entries of the row are not multiples of $3$, and $2027-36=\boxed{1991}$ are.</p>
+<h4>Solution 2 (Frobenius in polynomials mod 3)</h4>
+<p>Work with polynomials whose coefficients are taken modulo $3$. Since $3\mid\binom{3}{1},\binom{3}{2}$, we have $(1+x)^3\equiv 1+x^3$, and by repeating, $(1+x)^{3^t}\equiv 1+x^{3^t}$. As $2026=2\cdot 3^6+2\cdot 3^5+3^4+1$,
+\[(1+x)^{2026}\equiv(1+x^{729})^2(1+x^{243})^2(1+x^{81})(1+x)\pmod 3 .\]
+Expanding the right side, we choose a term $x^{729c_6}$ with $c_6\in\{0,1,2\}$ (coefficient $1,2,1$), a term $x^{243c_5}$ with $c_5\in\{0,1,2\}$, a term $x^{81c_4}$ with $c_4\in\{0,1\}$ and a term $x^{c_0}$ with $c_0\in\{0,1\}$. Different choices give different exponents $729c_6+243c_5+81c_4+c_0$ (these are base-$3$ expansions), so no terms combine, and each coefficient is a product of $1$s and $2$s, nonzero mod $3$. Hence $(1+x)^{2026}$ has exactly $3\cdot 3\cdot 2\cdot 2=36$ coefficients not divisible by $3$, and the remaining $2027-36=\boxed{1991}$ binomial coefficients are multiples of $3$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p4">
+<h3>Problem 7</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 33: Residues, Quadratic Structure, and Higher Congruences &middot; Quadratic Residues</div>
+<div class="ct-text"><p>Consider the solutions to
+\[3x^2+4xy+y^2+2x+4y\equiv 1\pmod{83},\]
+where $x,y$ are nonnegative integers less than $83$. For how many values of $x$ does there exist a solution for $y$?</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$42$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Completing the square and a character sum)</h4>
+<p>Work modulo the prime $p=83$. As a quadratic in $y$ the congruence reads $y^2+4(x+1)y+(3x^2+2x-1)\equiv 0$, and completing the square gives
+\[(y+2x+2)^2\equiv(2x+2)^2-(3x^2+2x-1)=x^2+6x+5=(x+1)(x+5).\]
+Since $y\mapsto y+2x+2$ is a bijection of residues, a solution $y$ exists exactly when $(x+1)(x+5)$ is a square modulo $83$ (possibly $0$).</p><p>Let $\left(\frac{\cdot}{p}\right)$ be the Legendre symbol. We claim $\sum_{x}\left(\frac{(x+1)(x+5)}{p}\right)=-1$, the sum over all residues $x$. For $x\not\equiv-5$,
+\[\left(\frac{(x+1)(x+5)}{p}\right)=\left(\frac{(x+1)(x+5)^{-1}}{p}\right)=\left(\frac{1-4(x+5)^{-1}}{p}\right),\]
+because multiplying by the square $(x+5)^{-2}$ does not change the symbol. As $x$ runs over the residues other than $-5$, $1-4(x+5)^{-1}$ runs over all residues except $1$. The sum of the symbol over all residues is $0$, so the sum over residues $\ne 1$ is $-1$; the term $x=-5$ adds $0$. This proves the claim.</p><p>The value $(x+1)(x+5)$ is $0$ for exactly two residues ($x\equiv-1,-5$). If $N_+$ and $N_-$ count the other $x$ with symbol $+1$ and $-1$, then $N_++N_-=81$ and $N_+-N_-=-1$, so $N_+=40$. The number of good $x$ is $40+2=\boxed{42}$.</p>
+<h4>Solution 2 (A parametrization of the conic)</h4>
+<p>Completing the square in $y$ gives
+\[(y+2x+2)^2\equiv(2x+2)^2-(3x^2+2x-1)=(x+1)(x+5)\pmod{83},\]
+so $x$ works exactly when $(x+1)(x+5)$ is a square modulo $83$. Put $u=x+3$; then $(x+1)(x+5)=u^2-4$, and $x$ works iff $u^2-t^2\equiv 4$ for some $t$, i.e. $(u-t)(u+t)\equiv 4$.</p><p>If such $t$ exists, $a=u-t$ is nonzero and $u+t\equiv 4a^{-1}$, so $u\equiv\frac12\left(a+4a^{-1}\right)$. Conversely, for any nonzero $a$, the values $u=\frac12(a+4a^{-1})$ and $t=\frac12(4a^{-1}-a)$ satisfy $(u-t)(u+t)=a\cdot 4a^{-1}=4$. So the good values of $u$ are exactly the values of $g(a)=\frac12(a+4a^{-1})$ for the $82$ nonzero residues $a$.</p><p>Now $g(a)=g(b)$ means $(a-b)\left(1-\frac{4}{ab}\right)\equiv 0$, i.e. $b=a$ or $b=4a^{-1}$. The pairing $a\leftrightarrow 4a^{-1}$ has fixed points only when $a^2\equiv 4$, i.e. $a\equiv\pm 2$. So $g$ takes $2+\frac{82-2}{2}=42$ distinct values, and since $x=u-3$ determines $x$, there are $\boxed{42}$ good values of $x$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p5">
+<h3>Problem 8</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Algebra &middot; LPS VII, Chapter 9: Polynomials and Root-Coefficient Strategy &middot; Power Sums and Newton-Type Relations</div>
+<div class="ct-text"><p>Compute $\tan^4(20^\circ)+\tan^4(40^\circ)+\tan^4(60^\circ)+\tan^4(80^\circ)$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$1044$</p></div></details>
+<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
+<h4>Solution 1 (A cubic for the tangents and Newton's sums)</h4>
+<p>If $t=\tan\theta$, then $\tan 3\theta=\dfrac{3t-t^3}{1-3t^2}$. The angles $\theta=20^\circ,80^\circ,140^\circ$ satisfy $\tan3\theta=\tan60^\circ=\sqrt3$, so $t=\tan20^\circ,\tan80^\circ,\tan140^\circ$ are roots of
+\[3t-t^3=\sqrt3(1-3t^2)\iff t^3-3\sqrt3\,t^2-3t+\sqrt3=0 .\]
+These three values are distinct, so they are all the roots. Note $\tan140^\circ=-\tan40^\circ$, which has the same fourth power. The elementary symmetric functions are $e_1=3\sqrt3$, $e_2=-3$, $e_3=-\sqrt3$. With $p_k$ the sum of the $k$th powers of the roots, Newton's identities give
+\begin{align*}
+p_1&amp;=e_1=3\sqrt3,\qquad p_2=e_1p_1-2e_2=27+6=33,\\
+p_3&amp;=e_1p_2-e_2p_1+3e_3=99\sqrt3+9\sqrt3-3\sqrt3=105\sqrt3,\\
+p_4&amp;=e_1p_3-e_2p_2+e_3p_1=945+99-9=1035 .
+\end{align*}
+Adding $\tan^460^\circ=(\sqrt3)^4=9$, the answer is $1035+9=\boxed{1044}$.</p>
+<h4>Solution 2 (A cubic for the squared tangents)</h4>
+<p>Let $u=\tan^2\theta$ and $t=\tan\theta$. For $\theta\in\{20^\circ,40^\circ,80^\circ\}$ we have $\tan^2 3\theta=3$ (as $3\theta$ is $60^\circ$, $120^\circ$ or $240^\circ$). From $\tan3\theta=\frac{3t-t^3}{1-3t^2}$ we get $t^2(3-t^2)^2=3(1-3t^2)^2$, that is,
+\[u(3-u)^2=3(1-3u)^2\iff u^3-33u^2+27u-3=0 .\]
+The three numbers $\tan^220^\circ&lt;\tan^240^\circ&lt;\tan^280^\circ$ are distinct roots of this cubic, hence all its roots. By Vieta, their sum is $33$ and the sum of their pairwise products is $27$, so
+\[\tan^420^\circ+\tan^440^\circ+\tan^480^\circ=33^2-2\cdot 27=1035 .\]
+With $\tan^460^\circ=9$ the total is $\boxed{1044}$.</p>
+<h4>Solution 3 (A cosecant identity and a differential equation)</h4>
+<p>Work in radians and put $u(x)=\csc^2x=\dfrac1{\sin^2x}$, so that $\cot^2x=u(x)-1$.</p><p><em>Step 1: a product formula.</em> From $\sin3x=3\sin x-4\sin^3x=\sin x\,(3-4\sin^2x)$ and
+\[\sin\Bigl(x+\frac\pi3\Bigr)\sin\Bigl(x-\frac\pi3\Bigr)=\sin^2x\cos^2\frac\pi3-\cos^2x\sin^2\frac\pi3=\sin^2x-\frac34,\]
+we get $\sin3x=-4\sin x\,\sin\bigl(x+\frac\pi3\bigr)\sin\bigl(x-\frac\pi3\bigr)$.</p><p><em>Step 2: a sum of cosecants.</em> On an interval where none of the four sines vanishes, take logarithms of absolute values and differentiate:
+\[3\cot3x=\cot x+\cot\Bigl(x+\frac\pi3\Bigr)+\cot\Bigl(x-\frac\pi3\Bigr).\]
+Differentiating again, using $(\cot x)'=-\csc^2x$, and writing $u_j=u\bigl(x+\frac{j\pi}3\bigr)$ for $j=-1,0,1$ and $U=u(3x)$,
+\[u_{-1}+u_0+u_1=9U. \tag{1}\]</p><p><em>Step 3: squares.</em> Since $u'=-2\csc^2x\cot x$, we get $u''=4\csc^2x\cot^2x+2\csc^4x=4u(u-1)+2u^2=6u^2-4u$. Differentiate (1) twice; the right side becomes $81u''(3x)$, so
+\[\sum_j\left(6u_j^2-4u_j\right)=81\left(6U^2-4U\right).\]
+Using (1) for $\sum_j u_j$, this gives $6\sum_j u_j^2=486U^2-324U+36U$, that is,
+\[u_{-1}^2+u_0^2+u_1^2=81U^2-48U. \tag{2}\]</p><p><em>Step 4: evaluate at $x=\frac\pi{18}$ ($10^\circ$).</em> Then $U=\csc^230^\circ=4$, so (1) and (2) give $\sum u_j=36$ and $\sum u_j^2=81\cdot16-48\cdot4=1104$. The three angles $x+\frac{j\pi}3$ are $10^\circ$, $70^\circ$ and $-50^\circ$, and the numbers $u_j-1=\cot^2\bigl(x+\frac{j\pi}3\bigr)$ are $\cot^210^\circ=\tan^280^\circ$, $\cot^270^\circ=\tan^220^\circ$ and $\cot^250^\circ=\tan^240^\circ$.
+Hence
+\begin{align*}\tan^420^\circ+\tan^440^\circ+\tan^480^\circ&amp;=\sum_j(u_j-1)^2=\sum_ju_j^2-2\sum_ju_j+3\\&amp;=1104-72+3=1035.\end{align*}
+Adding $\tan^460^\circ=9$, the answer is $\boxed{1044}$.</p>
+</div></details>
+</section>
+<h2 class="ct-group" id="combinatorics-round">Combinatorics Round</h2>
+<section class="ct-problem" id="p6">
+<h3>Problem 3</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Combinatorics &middot; LPS VI, Chapter 10: Logical Deduction and Constraint Puzzles &middot; Contradiction and Elimination</div>
+<div class="ct-text"><p>Alice wrote $6$ numbers in a ring formation. (Rotations and reflections are deemed distinct.) Each number is either $1$ or $0$. A jester secretly flips $2$ of these numbers at random (either $1\to 0$ or $0\to 1$). Alice hires Bob the investigator to help her.</p><p>Bob has a tool that checks $3$ neighboring numbers and ONLY returns how many numbers are flipped by the jester. He can use this tool as much as he wants.</p><p>What is the probability that Bob can figure out where the defects are?</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\frac45$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (List the readings)</h4>
+<p>Number the positions $0,1,\dots,5$ around the ring (indices mod $6$) and let $W_i=\{i,i+1,i+2\}$. The tool tells Bob how many flipped positions lie in $W_i$; using it on all six windows, Bob learns the vector $(c_0,\dots,c_5)$ of these counts, and nothing more. (Alice's numbers play no role.) Bob succeeds exactly when the flipped pair is the only pair giving its vector. There are $\binom62=15$ equally likely pairs.</p><ul class="ct-ul"><li><p><em>Adjacent pair $\{i,i+1\}$</em> (6 pairs): $W_{i-1},W_i$ contain both, $W_{i-2},W_{i+1}$ contain one, $W_{i+2},W_{i+3}$ contain none. The vector has two entries $2$, in positions $i-1,i$.</p></li><li><p><em>Pair at distance two $\{i,i+2\}$</em> (6 pairs): only $W_i$ contains both; $W_{i+3}=\{i+3,i+4,i+5\}$ contains none; the other four contain one. The vector has exactly one entry $2$, in position $i$.</p></li><li><p><em>Opposite pair $\{i,i+3\}$</em> (3 pairs): every window of three consecutive positions contains exactly one of them, so the vector is $(1,1,1,1,1,1)$.</p></li></ul><p>The three kinds give different numbers of $2$s, and within the first two kinds the positions of the $2$s recover $i$. So the $12$ non-opposite pairs are identified, while the $3$ opposite pairs all give the same reading. The probability is $\frac{12}{15}=\boxed{\dfrac45}$.</p>
+<h4>Solution 2 (Which differences are invisible)</h4>
+<p>Number the positions $0,\dots,5$ mod $6$. Bob can read the number of flipped positions in each window $\{i,i+1,i+2\}$, and this is all he can learn. Write a flip pattern as a $0/1$ vector $f$ with two ones.</p><p>Suppose two patterns $f\neq g$ give the same six readings, and put $h=f-g$, with entries in $\{-1,0,1\}$. Then $h_i+h_{i+1}+h_{i+2}=0$ for every $i$; subtracting consecutive equations gives $h_{i+3}=h_i$. So $h=(x,y,z,x,y,z)$ with $x+y+z=0$, and since $h\ne 0$, the numbers $x,y,z$ are $1,-1,0$ in some order. The pattern $f$ has a $1$ wherever $h=1$; these are two opposite positions, and as $f$ has only two ones, $f$ is an opposite pair. Likewise $g$ is an opposite pair.</p><p>So a non-opposite pair is never confused with anything, while the three opposite pairs $\{0,3\},\{1,4\},\{2,5\}$ all give the reading $1$ in every window and cannot be told apart. Out of $\binom62=15$ equally likely pairs, Bob succeeds for $12$: the probability is $\boxed{\dfrac45}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p7">
+<h3>Problem 4</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 17: Sequences, Recurrences, and Discrete Dynamics &middot; Invariant and Monotone Sequence Behavior</div>
+<div class="ct-text"><p>I'm going to write $100$ numbers $a_1,\dots,a_{100}$. For $a_1$ through $a_6$, I independently assign each of them a random integer between $0$ and $6$ inclusive. For $i&gt;6$, I write $a_i=\operatorname{MEX}(\{a_{i-1},\dots,a_{i-6}\})$, where $\operatorname{MEX}(S)$ denotes the smallest nonnegative integer which is not in the set $S$. The probability that $a_{100}=6$ can be written as $\frac{m}{n}$ where $\gcd(m,n)=1$. Find $m+n$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$18607$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (The sequence becomes periodic at once)</h4>
+<p><em>Step 1: from $a_7$ on, the sequence has period $7$.</em> For $i\ge7$, $a_i$ is not among $a_{i-6},\dots,a_{i-1}$, and $a_i\le 6$ (a set of six numbers misses one of $0,\dots,6$). Hence for $j\ge 7$, the seven terms $a_j,\dots,a_{j+6}$ are pairwise distinct (each one differs from the six before it), so they are $0,1,\dots,6$ in some order. Then $a_{j+7}$, the MEX of $a_{j+1},\dots,a_{j+6}$, is the only value of $\{0,\dots,6\}$ missing from them, namely $a_j$. So $a_{i+7}=a_i$ for $i\ge7$, and $a_{100}=a_{9}$ because $100=9+7\cdot 13$.</p><p><em>Step 2: when is $a_9=6$?</em> The MEX of six numbers is $6$ exactly when they are $0,1,\dots,5$ in some order. So we need $\{a_3,\dots,a_8\}=\{0,\dots,5\}$. Then $a_3,a_4,a_5,a_6$ are distinct elements of $\{0,\dots,5\}$; let $u&lt;v$ be the two values of $\{0,\dots,5\}$ they miss. We need $\{a_7,a_8\}=\{u,v\}$.</p><p>Since $0,\dots,5$ other than $u,v$ already occur among $a_3,\dots,a_6$, the value $a_7=\operatorname{MEX}(a_1,\dots,a_6)$ is the smallest of $u,v,6$ not in $\{a_1,a_2\}$, and similarly $a_8$ is the smallest of $u,v,6$ not in $\{a_2,a_7\}$.</p><ul class="ct-ul"><li><p>$a_7=u$ and $a_8=v$: need $u\notin\{a_1,a_2\}$ and $v\ne a_2$.</p></li><li><p>$a_7=v$ and $a_8=u$: need $u\in\{a_1,a_2\}$, $v\notin\{a_1,a_2\}$ and $u\ne a_2$, i.e. $a_1=u$ and $a_2\notin\{u,v\}$.</p></li></ul><p>Together: $a_2\notin\{u,v\}$ (5 choices), and $a_1$ is arbitrary ($a_1\ne u$ in the first case, $a_1=u$ in the second: 7 choices). The ordered quadruple $(a_3,\dots,a_6)$ has $6\cdot5\cdot4\cdot3=360$ choices. So the number of good starts is $360\cdot 7\cdot 5=12600$ out of $7^6$, and
+\[P(a_{100}=6)=\frac{12600}{7^6}=\frac{1800}{7^5}=\frac{1800}{16807}.\]
+Since $\gcd(1800,7)=1$, $m+n=1800+16807=\boxed{18607}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p8">
+<h3>Problem 5</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 10: Double Counting and Counting Identities &middot; Summation from Combinatorial Interpretation</div>
+<div class="ct-text"><p>What is the average value of the product $abc$ over all ordered triples of non-negative integers $(a,b,c)$ where $a+b+c=100$?</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$16170$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Stars, bars and marked stars)</h4>
+<p>The number of ordered triples is $\binom{102}{2}$ (stars and bars: $100$ stars and $2$ bars in $102$ slots).</p><p>For the sum of $abc$, note that $abc$ counts the ways to mark one star in each of the three groups. Given $5$ slots $q_1&lt;q_2&lt;q_3&lt;q_4&lt;q_5$ among the $102$, put the two bars at $q_2,q_4$ and stars elsewhere, and mark the stars at $q_1,q_3,q_5$: this gives a triple with one marked star in each group, and every such marked triple arises from exactly one $5$-set (the marked stars and the bars, read left to right, alternate star, bar, star, bar, star). Hence
+\[\sum_{a+b+c=100}abc=\binom{102}{5}.\]
+The average is
+\[\frac{\binom{102}{5}}{\binom{102}{2}}=\frac{2!\,100!}{5!\,97!}=\frac{100\cdot 99\cdot 98}{60}=\boxed{16170}.\]</p>
+<h4>Solution 2 (Generating functions)</h4>
+<p>We have
+\[\sum_{a,b,c\ge0}abc\,x^{a+b+c}=\left(\sum_{a\ge0}ax^a\right)^3=\left(\frac{x}{(1-x)^2}\right)^3=\frac{x^3}{(1-x)^6}.\]
+Since $\frac{1}{(1-x)^6}=\sum_{j\ge0}\binom{j+5}{5}x^j$, the coefficient of $x^{100}$ is $\binom{97+5}{5}=\binom{102}{5}$; this is $\sum_{a+b+c=100}abc$. Similarly $\frac{1}{(1-x)^3}=\sum_j\binom{j+2}{2}x^j$ shows that there are $\binom{102}{2}$ triples. The average is
+\[\frac{\binom{102}{5}}{\binom{102}{2}}=\frac{100\cdot99\cdot98}{3\cdot4\cdot5}=\boxed{16170}.\]</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p9">
+<h3>Problem 6</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 39: Graph Theory and Structural Combinatorics &middot; Paths, Cycles, and Connectivity</div>
+<div class="ct-text"><p>Three airlines operate flights that fly between $2026$ cities. Each flight is operated by one airline and connects two cities in both ways. The three airlines want to make sure that if any one of the airlines stops operating, each city can still be reached from any other city via some path of flights operated by the other two airlines. Compute the minimum number of total flights needed across all three airlines for this to be possible.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$3038$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Counting edges of connected graphs, and a windmill)</h4>
+<p>Let the airlines operate $x$, $y$, $z$ flights. A connected network on $2026$ cities needs at least $2025$ flights (each flight can join at most two components into one). If the third airline stops, the other two must connect all cities, so $x+y\ge 2025$; likewise $y+z\ge2025$ and $z+x\ge2025$. Adding, $2(x+y+z)\ge 6075$, so $x+y+z\ge 3037.5$, i.e. at least $3038$ flights.</p><p><em>Construction with $3038$ flights.</em> Call the airlines $A,B,C$. Take a hub $H$ and $1012$ pairs of cities $X_j,Y_j$ ($j=1,\dots,1012$): $1+2024=2025$ cities. For each $j$, let $A$ fly $H X_j$, $B$ fly $X_jY_j$, and $C$ fly $Y_jH$ (a triangle with one flight of each airline). Add the last city $Z$ with flights $ZX_1$ by $A$ and $ZY_1$ by $B$. The total is $3\cdot1012+2=3038$.</p><ul class="ct-ul"><li><p>Without $A$: $Y_j$ reaches $H$ by $C$, $X_j$ reaches $Y_j$ by $B$, $Z$ reaches $Y_1$ by $B$.</p></li><li><p>Without $B$: $X_j$ and $Y_j$ reach $H$ by $A$ and $C$; $Z$ reaches $X_1$ by $A$.</p></li><li><p>Without $C$: $X_j$ reaches $H$ by $A$, $Y_j$ reaches $X_j$ by $B$, $Z$ reaches $X_1$ by $A$.</p></li></ul><p>In each case all cities are connected to $H$. The minimum is $\boxed{3038}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p10">
+<h3>Problem 7</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 18: Invariants and Monovariants &middot; Invariant Quantities</div>
+<div class="ct-text"><p>For an undirected simple graph $G$, consider the following triangle toggling operation: select distinct vertices $u,v,w$, and toggle each of $(u,v)$, $(v,w)$, $(w,u)$ (here, toggling means that if the edge exists, remove it, otherwise add it). What is the maximum integer $E$ such that given any undirected simple graph $G$ on $2025$ vertices, one can apply the triangle toggling operation a finite number of times to create a graph with at least $E$ edges?</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$2048288$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Degree parities and the cycle space)</h4>
+<p>Let $n=2025$, so $\binom n2=2025\cdot1012=2049300$, and every vertex of $K_n$ has even degree $2024$.</p><p><em>Invariant.</em> A toggle on $u,v,w$ changes the degree of each of $u,v,w$ by $\pm1\pm1$, an even number, and leaves other degrees alone. So the parity of every degree is invariant.</p><p><em>Upper bound.</em> Take $G$ to be a matching of $1012$ edges (one vertex unused). Its $2024$ matched vertices have odd degree forever. In any reachable graph each of them has odd degree, hence degree at most $2023$, so each misses at least one edge; a missing edge covers at most two such vertices, so at least $1012$ edges are missing. Thus $E\le 2049300-1012$.</p><p><em>Every graph reaches $2049300-1012$ edges.</em> Toggling is adding (mod $2$) the edge set of a triangle. Every graph $C$ in which all degrees are even is a union of edge-disjoint cycles, and a cycle $v_1v_2\dots v_k$ is the mod-$2$ sum of the triangles $v_1v_iv_{i+1}$ ($2\le i\le k-1$), since every chord $v_1v_i$ appears twice. So from $G$ we can reach $G\oplus C$ for every even-degree graph $C$.</p><p>Let $T$ be the set of odd-degree vertices of $G$; $|T|$ is even and at most $2024$. Let $M$ be a perfect matching of $T$ and $G'=K_n\setminus M$. Then $\deg_{G'}(v)=2024-[v\in T]\equiv\deg_G(v)\pmod 2$, so $G\oplus G'$ has all degrees even and $G'$ is reachable. It has $\binom n2-\frac{|T|}2\ge 2049300-1012$ edges. Hence $E=\boxed{2048288}$.</p>
+<h4>Solution 2 (A greedy process on missing edges)</h4>
+<p>Let $n=2025$, $\binom n2=2049300$, and call an edge of $K_n$ not in the current graph a <em>gap</em>.</p><p><em>Every graph reaches $2049300-1012$ edges.</em> While two gaps share a vertex, say $uv$ and $vw$ are gaps, toggle the triangle $uvw$: $uv$ and $vw$ become edges and $uw$ changes, so the number of edges grows by $1$ or $3$. The number of edges is bounded, so this stops, and then no two gaps share a vertex: the gaps form a matching, with at most $\lfloor 2025/2\rfloor=1012$ edges. The final graph has at least $2049300-1012$ edges.</p><p><em>Some graph cannot do better.</em> A toggle changes the degree of each of its three vertices by $-2$, $0$ or $2$, so every degree keeps its parity. Start from a matching of $1012$ edges. Its $2024$ matched vertices always have odd degree, so at most $2023&lt;2024$; each lies on a gap, and a gap covers at most two of them, so there are always at least $1012$ gaps. Hence $E=2049300-1012=\boxed{2048288}$.</p>
+</div></details>
+</section>
+<h2 class="ct-group" id="geometry-round">Geometry Round</h2>
+<section class="ct-problem" id="p11">
+<h3>Problem 1</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Geometry &middot; LPS VI, Chapter 12: Circle Angles and Cyclic Geometry &middot; Diameter and Semicircle Geometry</div>
+<div class="ct-text"><p>Consider triangle $ABC$ with side lengths $6$, $7$, and $10$. Sebastian places a point $P$ somewhere in the plane and calculates $\max(AP,BP,CP)$. What is the minimum possible number he could have calculated?</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$5$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (The circle on the longest side)</h4>
+<div class="ct-fig"><img style="width:289px" src="/assets/contests/2026-27/cmimc-11_s1.svg" alt="Figure for the solution"></div>
+<p>Name the triangle so that $AB=10$, $AC=7$, $BC=6$, and let $M$ be the midpoint of $AB$.</p><p><em>Lower bound.</em> For any point $P$, $AP+BP\ge AB=10$, so $\max(AP,BP,CP)\ge\max(AP,BP)\ge5$.</p><p><em>The bound is reached at $P=M$.</em> Since $6^2+7^2=85&lt;100=10^2$, the angle at $C$ is obtuse, so $C$ lies strictly inside the circle with diameter $AB$ (a point sees a diameter at a right angle exactly on the circle and at an obtuse angle inside it). Hence $MC&lt;5$; indeed, by the median formula $MC^2=\frac{2\cdot 6^2+2\cdot 7^2-10^2}{4}=\frac{70}{4}$. So $\max(MA,MB,MC)=5$, and the minimum is $\boxed{5}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p12">
+<h3>Problem 2</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 55: Three-Dimensional and Spatial Geometry &middot; Distance and Angle in Space</div>
+<div class="ct-text"><p>Two spheres are externally tangent to each other, one with radius $7$ and one with radius $5$. What is the side length of the smallest cube that fully contains both?</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$12+4\sqrt3$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Coordinates of the centres)</h4>
+<div class="ct-fig"><img style="width:302px" src="/assets/contests/2026-27/cmimc-12_s1.svg" alt="Figure for the solution"></div>
+<p>Let the cube be $[0,s]^3$ and let $O_1=(x_1,y_1,z_1)$, $O_2=(x_2,y_2,z_2)$ be the centres of the spheres of radii $7$ and $5$. The big ball lies in the cube iff $7\le x_1,y_1,z_1\le s-7$, and the small one iff $5\le x_2,y_2,z_2\le s-5$. Since the spheres are externally tangent, $O_1O_2=12$.</p><p><em>Lower bound.</em> Each coordinate difference satisfies $|x_1-x_2|\le (s-5)-7=s-12$ (and the same for $y,z$). Hence
+\[144=O_1O_2^2\le 3(s-12)^2,\qquad s\ge 12+\frac{12}{\sqrt3}=12+4\sqrt3 .\]</p><p><em>Equality.</em> For $s=12+4\sqrt3$ take $O_1=(7,7,7)$ and $O_2=(s-5,s-5,s-5)$, both on the main diagonal of the cube. Then $O_1O_2=\sqrt3\,(s-12)=12$, so the spheres are tangent, and both balls are inside the cube (note $s&gt;14$). The smallest side length is $\boxed{12+4\sqrt3}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p13">
+<h3>Problem 3</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 41: Continued Fractions and Rational Approximation &middot; Applications to Integer Equations</div>
+<div class="ct-text"><p>Non-degenerate triangle $ABC$ has side lengths $n$, $n+1$, $n+2$, where $n$ is an integer. Interestingly, the median altitude of this triangle is also an integer. Find the sum of the three lowest possible $n$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$67$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Heron's formula and a Pell equation)</h4>
+<div class="ct-fig"><img style="width:282px" src="/assets/contests/2026-27/cmimc-13_s1.svg" alt="Figure for the solution"></div>
+<p>The altitudes are inversely proportional to the sides, so the median altitude is the altitude $h$ to the side $n+1$. The triangle is non-degenerate iff $n+(n+1)&gt;n+2$, i.e. $n\ge2$. With $s=\frac{3(n+1)}2$, Heron's formula gives
+\[[ABC]^2=\frac{3(n+1)}2\cdot\frac{n+3}2\cdot\frac{n+1}2\cdot\frac{n-1}2=\frac{3(n+1)^2\left((n+1)^2-4\right)}{16},\]
+and $h=\frac{2[ABC]}{n+1}$, so $4h^2=3\left((n+1)^2-4\right)$.</p><p>If $n+1$ were odd, the right side would be odd; so $n+1=2c$ and $h^2=3(c^2-1)$. Then $3\mid h$; writing $h=3k$ gives $c^2-3k^2=1$ with $k\ge1$ (as $n\ge2$). Conversely each such pair gives an integer altitude $h=3k$ for $n=2c-1$.</p><p>Since $c$ grows with $k$, the smallest solutions come from the smallest $k$ with $3k^2+1$ a square: for $k=1,\dots,15$ the values of $3k^2+1$ are
+\[4,13,28,49,76,109,148,193,244,301,364,433,508,589,676,\]
+and the squares among them are $4,49,676$ ($k=1,4,15$). So $c=2,7,26$ and $n=3,13,51$: the triangles $3,4,5$; $13,14,15$; $51,52,53$ with $h=3,12,45$. The sum is $3+13+51=\boxed{67}$.</p>
+<h4>Solution 2 (The foot of the altitude)</h4>
+<p>Let $BC=n+1$ be the middle side, $AB=n$, $CA=n+2$, and let $H$ be the foot of the altitude $AH=h$; it is the altitude of middle length because altitudes are inversely proportional to the sides. Measure $HB$ and $HC$ as signed lengths along line $BC$ with $HB+HC=BC=n+1$ (this covers the case of an obtuse angle at $B$, which happens for $n=2$). From $AC^2-AB^2=HC^2-HB^2=(HC-HB)(HC+HB)$, i.e. $4(n+1)=(HC-HB)(n+1)$, we get $HC-HB=4$, so $HB=\frac{n-3}{2}$ (signed) and
+\[h^2=n^2-\left(\frac{n-3}{2}\right)^2=\frac{3n^2+6n-9}{4}=\frac{3\left((n+1)^2-4\right)}4 .\]
+If $h$ is an integer then $3(n+1)^2-12=4h^2$ is even, so $n+1=2c$ is even and $h^2=3(c^2-1)$. Hence $h=3k$ and $c^2-3k^2=1$, with $k\ge 1$ since $n\ge2$ (non-degeneracy).</p><p>The solutions of $c^2-3k^2=1$ in positive integers are $(c+k\sqrt3)=(2+\sqrt3)^j$, $j\ge1$: $(2,1)$, $(7,4)$, $(26,15)$, $(97,56)$, $\dots$ (the smallest three can also be confirmed by checking $k\le 15$ directly). They give $n=2c-1=3,13,51$, and the answer is $3+13+51=\boxed{67}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p14">
+<h3>Problem 5</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure &middot; Power of a Point</div>
+<div class="ct-text"><p>Let $ABC$ be an isosceles triangle with $AB=AC$. Let $D\neq B$ be the point on line $\overline{BC}$ such that the circle passing through $A$, $B$, and $D$ is tangent to line $\overline{AC}$ at $A$. Let $E$ be the point on line $\overline{BC}$ such that $AE\perp AC$. Given that $CD=30$ and $AE=3AC$, compute the area of triangle $ADE$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$270$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Power of the point C)</h4>
+<div class="ct-fig"><img style="width:344px" src="/assets/contests/2026-27/cmimc-14_s1.svg" alt="Figure for the solution"></div>
+<p>Let $AB=AC=b$ and $\gamma=\angle ACB$, an acute base angle. In the right triangle $CAE$ (right angle at $A$), $CE^2=b^2+9b^2$, so $CE=b\sqrt{10}$ and $\cos\gamma=\frac{AC}{CE}=\frac1{\sqrt{10}}$, $\sin\gamma=\frac{3}{\sqrt{10}}$. Since $\gamma$ is acute, $E$ lies on ray $CB$.</p><p>Line $CA$ is tangent at $A$ to the circle through $A,B,D$, and line $CB$ meets that circle at $B$ and $D$; by the power of $C$, $CA^2=CB\cdot CD$, with $D$ on ray $CB$ (the power is positive). Now $CB=2b\cos\gamma=\frac{2b}{\sqrt{10}}$, so
+\[b^2=\frac{2b}{\sqrt{10}}\cdot30,\qquad b=6\sqrt{10}.\]
+Then $CE=b\sqrt{10}=60$, and $D,E$ lie on the same ray from $C$ at distances $30$ and $60$, so $DE=30$. The distance from $A$ to line $BC$ is $b\sin\gamma=18$. Therefore
+\[[ADE]=\tfrac12\cdot DE\cdot 18=\boxed{270}.\]</p>
+<h4>Solution 2 (Coordinates)</h4>
+<p>Put $A=(0,h)$, $B=(-m,0)$, $C=(m,0)$ with $h,m&gt;0$, so $AB=AC=\sqrt{m^2+h^2}$.</p><p><em>Point $E$.</em> $E=(e,0)$ with $\overrightarrow{AE}\cdot\overrightarrow{AC}=em+h^2=0$, so $e=-\frac{h^2}{m}$. The condition $AE^2=9AC^2$ reads $\frac{h^4}{m^2}+h^2=9(m^2+h^2)$, i.e. $\frac{h^2(h^2+m^2)}{m^2}=9(h^2+m^2)$, so $h=3m$ and $E=(-9m,0)$.</p><p><em>Point $D$.</em> The circle through $A,B,D$ is tangent to $CA$ at $A$, so its centre $O=(p,q)$ satisfies $\overrightarrow{OA}\cdot\overrightarrow{AC}=0$: $(-p)m+(h-q)(-h)=0$. Also $OA=OB$: $p^2+(q-h)^2=(p+m)^2+q^2$. With $h=3m$ these give $pm=3m(q-3m)$ and $-6mq+9m^2=2pm+m^2$, i.e. $p=3q-9m$ and $8m=6q+2p=12q-18m$, so $q=\frac{13m}{6}$ and $p=-\frac{5m}{2}$. The second intersection of the circle with the $x$-axis is the reflection of $B$ in $x=p$: $D=(2p+m,0)=(-4m,0)$. Then $CD=5m=30$, so $m=6$.</p><p>So $D=(-24,0)$, $E=(-54,0)$, $A=(0,18)$, and $[ADE]=\frac12\cdot 30\cdot 18=\boxed{270}$.</p>
+</div></details>
+</section>
+<h2 class="ct-group" id="team-round">Team Round</h2>
+<section class="ct-problem" id="p15">
+<h3>Problem 3</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 55: Three-Dimensional and Spatial Geometry &middot; Spatial Coordinate and Vector Methods</div>
+<div class="ct-text"><p>James runs a business making customized helmets, and recently received a commission from Michael. Michael's head shape is quite strange however, so he sent James a front, side, and top down view of his head. In each of the three images, Michael's head appears to be a circle of radius $1$. Given that James only makes spherical helmets, he is wondering: what is the minimum $R$ such that Michael's head is guaranteed to fit in a sphere of radius $R$?</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\frac{\sqrt6}{2}$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (The three cylinders)</h4>
+<div class="ct-fig"><img style="width:275px" src="/assets/contests/2026-27/cmimc-15_s1.svg" alt="Figure for the solution"></div>
+<p>Take the three viewing directions as the coordinate axes. The front view shows the projection of the head onto the $xz$-plane, and so on. The $x$-extent of the head is seen both in the front view and in the top view, so the two circles have the same $x$-centre; similarly for $y$ and $z$. After a translation all three circles are centred at the origin, and every point $(x,y,z)$ of the head satisfies
+\[x^2+y^2\le1,\qquad y^2+z^2\le1,\qquad z^2+x^2\le1 .\]
+Adding, $2(x^2+y^2+z^2)\le3$, so the whole head lies in the ball of radius $\sqrt{3/2}=\frac{\sqrt6}2$ about the origin. So $R=\frac{\sqrt6}2$ always suffices.</p><p>It is also needed: the solid $K$ defined by the three inequalities is a possible head, since its projection onto the $xy$-plane is the unit disk (for $x^2+y^2\le1$ the point $(x,y,0)$ lies in $K$), and similarly for the other two views. The points $\pm Q$ with $Q=\left(\frac1{\sqrt2},\frac1{\sqrt2},\frac1{\sqrt2}\right)$ lie in $K$ and are $2\cdot\frac{\sqrt6}2=\sqrt6$ apart, so no ball of radius less than $\frac{\sqrt6}2$ contains $K$. The answer is $R=\boxed{\dfrac{\sqrt6}2}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p16">
+<h3>Problem 4</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 21: Arithmetic Functions and Multiplicative Structure &middot; Divisor and Sum Functions</div>
+<div class="ct-text"><p>Find the greatest $\epsilon$ such that $f(n)=\dfrac{\sigma(n)}{n^{\epsilon}}$ is maximized at some $n$ divisible by $2026$, where $\sigma(n)$ is the number of positive factors of $n$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\log_{1013}2=\frac{\ln 2}{\ln 1013}$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Optimise prime by prime)</h4>
+<p>Fix $\epsilon&gt;0$. For $n=\prod p^{a_p}$,
+\[f(n)=\frac{\sigma(n)}{n^\epsilon}=\prod_p g_p(a_p),\qquad g_p(a)=\frac{a+1}{p^{a\epsilon}},\]
+with $g_p(0)=1$. So $f(n)$ is maximal exactly when every exponent $a_p$ maximizes $g_p$ (only finitely many primes have $p^\epsilon&lt;2$, and for the others $a_p=0$ is optimal, as shown next; so a maximum exists).</p><p>Put $q=p^\epsilon$. If $q&gt;2$, then for $a\ge1$, $q^a&gt;2^a\ge a+1$, so $g_p(a)&lt;1=g_p(0)$ and the only optimal exponent is $0$. If $q\le2$, then $g_p(1)=\frac2q\ge1=g_p(0)$, so some optimal exponent is at least $1$ (the maximum of $g_p$ is attained since $g_p(a)\to0$).</p><p>A maximizer divisible by $2026=2\cdot1013$ exists iff both $2$ and $1013$ can have positive optimal exponent, i.e. $2^\epsilon\le2$ and $1013^\epsilon\le2$. The binding condition is $\epsilon\le\frac{\ln2}{\ln1013}$. At $\epsilon=\frac{\ln 2}{\ln 1013}$ we have $g_{1013}(0)=g_{1013}(1)=1$, so the maximum is attained both at some $n$ coprime to $1013$ and at some $n$ divisible by $2026$. The greatest $\epsilon$ is $\boxed{\log_{1013}2}$ (about $0.1002$).</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p17">
+<h3>Problem 5</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure &middot; Radical Axis and Radical Center</div>
+<div class="ct-text"><p>There is a unique nonzero complex number $z$ such that the system of equations
+\[|w-8|=5,\qquad |w+2+5i|=5\sqrt2,\qquad |w|=|w-z|\]
+has more than one solution in $w$. Find $z$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$z=\frac{24}{5}+\frac{12}{5}i$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (The two common points)</h4>
+<div class="ct-fig"><img style="width:339px" src="/assets/contests/2026-27/cmimc-17_s1.svg" alt="Figure for the solution"></div>
+<p>The first two equations describe the circle $\omega_1$ with centre $8$ and radius $5$ and the circle $\omega_2$ with centre $-2-5i$ and radius $5\sqrt2$. Writing $w=x+yi$,
+\[\omega_1:\ x^2+y^2-16x+39=0,\qquad \omega_2:\ x^2+y^2+4x+10y-21=0 .\]
+Subtracting, any common point satisfies $20x+10y=60$, i.e. $y=6-2x$; substituting in $\omega_1$ gives $5x^2-40x+75=0$, so $x=3$ or $x=5$. The circles meet at exactly two points, $w_1=3$ and $w_2=5-4i$.</p><p>The third equation $|w|=|w-z|$ says that $w$ lies on the perpendicular bisector of $0$ and $z$. The system has more than one solution iff both $w_1$ and $w_2$ lie on it, i.e. iff the perpendicular bisector of $0z$ is the line $w_1w_2$: $2x+y=6$. So $z$ is the reflection of $0$ in this line. The foot of the perpendicular from $0$ to $2x+y=6$ is $\frac{6}{5}(2,1)$, hence $z=\frac{12}{5}(2,1)$, i.e.
+\[z=\boxed{\frac{24}{5}+\frac{12}{5}i}.\]</p>
+<h4>Solution 2 (Radical axis)</h4>
+<p>The equation $|w|=|w-z|$ is equivalent to $|w|^2-|w-z|^2=0$, which is a <em>linear</em> equation $\ell_z$ in $w$ (the $|w|^2$ terms cancel); its solution set is the perpendicular bisector of $0$ and $z$. The first two equations are circles $\omega_1$ (centre $8$, radius $5$) and $\omega_2$ (centre $-2-5i$, radius $5\sqrt 2$). The distance between the centres is $\sqrt{125}$, which lies between $5\sqrt2-5$ and $5\sqrt2+5$, so the circles meet in two points, and their common points are exactly the intersections of $\omega_1$ with the radical axis
+\[\left(|w-8|^2-25\right)-\left(|w+2+5i|^2-50\right)=0\iff 20x+10y=60 .\]
+A line meets this two-point set in two points only if it is the line through them, which is the radical axis. So we need $\ell_z$ to be the line $2x+y=6$. The perpendicular bisector of $0$ and $z$ is perpendicular to $z$ and passes through $\frac z2$; the line $2x+y=6$ has normal direction $(2,1)$ and meets this direction at $t(2,1)$ with $5t=6$. So $\frac z2=\frac65(2,1)$ and $z=\boxed{\frac{24}5+\frac{12}5i}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p18">
+<h3>Problem 6</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VI scale">H</span>Number Theory &middot; LPS VI, Chapter 39: Perfect Powers and Prime Exponents &middot; Power Compatibility Conditions</div>
+<div class="ct-text"><p>The superfactorial of a positive integer $n$ is $F(n)=1!\cdot 2!\cdot 3!\cdots n!$.</p><p>Find the product of all positive integers $n\le 20$ such that there exists a positive integer $m$ where $\dfrac{F(n)}{m!}$ and $\dfrac{F(n)}{(m+1)!}$ are both perfect squares.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$1792$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Squarefree parts)</h4>
+<p>Write $Q(N)$ for the squarefree part of a positive integer $N$ (the product of the primes appearing to an odd power), so that $N_1/N_2$ is a perfect square iff $Q(N_1)=Q(N_2)$ (when $N_2\mid N_1$).</p><p><em>Which $m$?</em> If $\frac{F(n)}{m!}$ and $\frac{F(n)}{(m+1)!}$ are both perfect squares, their quotient $m+1$ is a quotient of two squares, hence (being an integer) a perfect square: $m\in\{3,8,15,24,\dots\}$. For $n\le20$, $F(n)$ has no prime factor above $19$, so $(m+1)!\mid F(n)$ forces $m+1\le22$, i.e. $m\in\{3,8,15\}$, with
+\begin{align*}
+Q(3!)&amp;=2\cdot3,\qquad Q(8!)=Q(2^7\cdot3^2\cdot5\cdot7)=2\cdot5\cdot7,\\
+Q(15!)&amp;=Q(2^{11}3^65^37^2\cdot11\cdot13)=2\cdot5\cdot11\cdot13 .
+\end{align*}
+Conversely, if $Q(F(n))=Q(m!)$, $m+1$ is a square and $n\ge m+1$, both quotients are perfect squares.</p><p><em>Squarefree part of $F(n)$.</em> Pairing factors, $(2j-1)!\,(2j)!=\left((2j-1)!\right)^2\cdot 2j$, so
+\[F(2k)=\Bigl(\prod_{j=1}^{k}(2j-1)!\Bigr)^2\cdot 2^k k!,\qquad F(2k+1)=F(2k)\cdot(2k+1)! .\]
+Hence $Q(F(2k))=Q(2^kk!)$ and $Q(F(2k+1))=Q(2^kk!\,(2k+1)!)$. This gives, for $n=1,\dots,20$:
+\[\begin{array}{c|cccccccccc}
+n&amp;1&amp;2&amp;3&amp;4&amp;5&amp;6&amp;7&amp;8&amp;9&amp;10\\\hline
+Q&amp;1&amp;2&amp;3&amp;2&amp;15&amp;3&amp;105&amp;6&amp;105&amp;15\\[2pt]
+n&amp;11&amp;12&amp;13&amp;14&amp;15&amp;16&amp;17&amp;18&amp;19&amp;20\\\hline
+Q&amp;1155&amp;5&amp;15015&amp;70&amp;1001&amp;70&amp;17017&amp;35&amp;323323&amp;7
+\end{array}\]
+The value $6=Q(3!)$ occurs only for $n=8$ (and $8\ge4$); the value $70=Q(8!)$ occurs for $n=14,16$ (both $\ge9$); the value $1430=Q(15!)$ never occurs. So $n\in\{8,14,16\}$, with $m=3,8,8$ respectively, and the product is $8\cdot14\cdot16=\boxed{1792}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p19">
+<h3>Problem 7</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 47: Probabilistic Method and Random Structure &middot; Expectation Arguments</div>
+<div class="ct-text"><p>An $8$-sided die is crafted, and the probability $p_i$ of the $i$-th face being rolled is generated as follows: $p_1$ is a uniformly random number from $0$ to $1$, and $p_k$ is a uniformly random number from $0$ to $1-\sum_{i=1}^{k-1}p_i$ for all $k$ from $2$ to $7$, with the $p_k$ generated iteratively in order. The $8$th side has all the leftover probability: $p_8=1-\sum_{i=1}^{7}p_i$. This die is then rolled $8$ times. Find the probability that in these $8$ rolls, each face from $1$ to $8$ shows up exactly once.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\frac{1}{181440}$</p></div></details>
+<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Independent uniform fractions)</h4>
+<p><em>Reformulation.</em> Let $r_k=1-(p_1+\dots+p_k)$ be the probability left after $k$ steps ($r_0=1$). Choosing $p_k$ uniformly in $[0,r_{k-1}]$ is the same as choosing $U_k$ uniform in $[0,1]$, independent of the past, and putting $p_k=U_kr_{k-1}$. Then $r_k=(1-U_k)r_{k-1}$, so with independent uniform $U_1,\dots,U_7$,
+\[p_k=U_k\prod_{j&lt;k}(1-U_j)\ (k\le7),\qquad p_8=\prod_{j\le7}(1-U_j).\]</p><p><em>The probability.</em> For fixed $p_1,\dots,p_8$, the probability that $8$ rolls show each face once is $8!\,p_1p_2\cdots p_8$. Collecting the factors $U_k$ and $1-U_k$ ($1-U_k$ appears in $p_{k+1},\dots,p_8$, that is $8-k$ times),
+\[p_1\cdots p_8=\prod_{k=1}^{7}U_k(1-U_k)^{8-k}.\]
+By independence the expectation is $\prod_{k=1}^7E\left[U(1-U)^{8-k}\right]$, and
+\[E\left[U(1-U)^m\right]=\int_0^1u(1-u)^m\,du=\int_0^1(1-v)v^m\,dv=\frac{1}{(m+1)(m+2)} .\]
+For $m=1,\dots,7$ the product of the $(m+1)$ is $8!$ and the product of the $(m+2)$ is $\frac{9!}{2}$. So the answer is
+\[8!\cdot\frac{2}{8!\cdot 9!}=\frac{2}{9!}=\boxed{\frac{1}{181440}} .\]</p>
+<h4>Solution 2 (Ranking random points)</h4>
+<p>Choosing $p_k$ uniformly in what is left is the same as taking a uniform fraction $U_k$ of what is left, so the construction is equivalent to $p_k=U_k\prod_{j&lt;k}(1-U_j)$ for $k\le 7$ and $p_8=\prod_{j\le7}(1-U_j)$ with independent uniform $U_1,\dots,U_7$. For fixed $p_1,\dots,p_8$, the $8$ rolls show each face once with probability $8!\,p_1\cdots p_8$, and $p_1\cdots p_8=\prod_{k=1}^{7}U_k(1-U_k)^{8-k}$ (the factor $1-U_k$ occurs in $p_{k+1},\dots,p_8$). By independence the required probability is $8!\,E[p_1\cdots p_8]=8!\prod_{k=1}^{7}E\left[U_k(1-U_k)^{8-k}\right]$.</p><p>To evaluate $E[U(1-U)^m]$ without integrals, take $m+2$ independent uniform points $V_0,V_1,\dots,V_{m+1}$ in $[0,1]$. Given $V_0=u$, the probability that $V_1&lt;u$ and $V_2,\dots,V_{m+1}&gt;u$ is $u(1-u)^m$; so $E[U(1-U)^m]$ is the probability that, among the $m+2$ points, $V_1$ is the smallest and $V_0$ the second smallest. All $(m+2)!$ orders are equally likely, and this event fixes the first two places, so its probability is $\frac{m!}{(m+2)!}=\frac{1}{(m+1)(m+2)}$.</p><p>Hence
+\[8!\prod_{m=1}^{7}\frac{1}{(m+1)(m+2)}=8!\cdot\frac{1}{8!}\cdot\frac{2}{9!}=\boxed{\frac1{181440}} .\]</p>
+<h4>Solution 3 (Recursion on the number of faces)</h4>
+<p>Generalize: for $r\ge1$, build an $r$-sided die by choosing $p_1$ uniformly in $[0,1]$, then each $p_k$ ($k\le r-1$) uniformly in $[0,1-p_1-\dots-p_{k-1}]$, and $p_r=1-p_1-\dots-p_{r-1}$. Let $P_r$ be the probability that $r$ rolls show every face exactly once. Then $P_1=1$, and we want $P_8$.</p><p><em>Conditioning on the first face.</em> Let $p_1=u$, uniform in $[0,1]$. Given $u$, the chance that face $1$ appears in exactly one of the $r$ rolls is $ru(1-u)^{r-1}$. Given that, and given which roll shows face $1$, the other $r-1$ rolls are independent and each shows face $k\ge2$ with probability $q_k=\frac{p_k}{1-u}$.</p><p><em>The renormalized die.</em> Write $p_k=U_k\,(1-p_1-\dots-p_{k-1})$ with independent uniform $U_k\in[0,1]$; this is exactly the rule &ldquo;uniform in what is left&rdquo;. Dividing by $1-u$, the numbers $q_2,\dots,q_r$ satisfy $q_k=U_k\,(1-q_2-\dots-q_{k-1})$ for $k\le r-1$ and $q_r=1-q_2-\dots-q_{r-1}$. So $(q_2,\dots,q_r)$ is built by the same rule for $r-1$ faces, from $U_2,\dots,U_{r-1}$, which are independent of $u=U_1$. Therefore the probability that the remaining $r-1$ rolls show faces $2,\dots,r$ once each is $P_{r-1}$, whatever $u$ is.</p><p><em>The recursion.</em> Hence
+\[P_r=P_{r-1}\int_0^1ru(1-u)^{r-1}\,du=P_{r-1}\cdot r\cdot\frac{1}{r(r+1)}=\frac{P_{r-1}}{r+1},\]
+where $\int_0^1u(1-u)^{r-1}du=\int_0^1(1-v)v^{r-1}dv=\frac1r-\frac1{r+1}=\frac1{r(r+1)}$. Starting from $P_1=1$,
+\[P_8=\frac{1}{3\cdot4\cdot5\cdot6\cdot7\cdot8\cdot9}=\frac{2}{9!}=\boxed{\frac1{181440}}.\]</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p20">
+<h3>Problem 10</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Algebra &middot; LPS VII, Chapter 42: Polynomial Reconstruction and Interpolation &middot; Finite Difference and Discrete Polynomial Behavior</div>
+<div class="ct-text"><p>Suppose $P(x)$ is a polynomial of degree $2024$ such that for all $0\le n\le 2024$, we have $P(n)=F_n$. (Here, $F_n$ is the Fibonacci sequence given by $F_0=0$, $F_1=1$, and $F_n=F_{n-1}+F_{n-2}$ for $n\ge 2$.) Find $P(2025)$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$0$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Finite differences of the Fibonacci sequence)</h4>
+<p>Let $\Delta g(n)=g(n+1)-g(n)$, and extend the Fibonacci numbers to negative indices by $F_{n}=F_{n+2}-F_{n+1}$; then $F_{-k}=(-1)^{k+1}F_k$ (e.g. $F_{-1}=1$, $F_{-2}=-1$). Since $F_{n+1}-F_n=F_{n-1}$, we get $\Delta^kF(n)=F_{n-k}$, so $\Delta^kF(0)=F_{-k}$.</p><p>For any function $g$ and $N\ge0$, $g(N)=\sum_{k=0}^{N}\binom Nk\Delta^kg(0)$ (expand $g(N)=(1+\Delta)^N g(0)$, where $1$ is the identity and $(1+\Delta)g(n)=g(n+1)$). Put $M=2025$. Since $P$ and $F$ agree at $0,1,\dots,2024$, their differences $\Delta^kP(0)$ and $\Delta^kF(0)$ agree for $k\le 2024$ (each depends only on these values), and $\Delta^{2025}P(0)=0$ because $\deg P=2024$. Therefore
+\[P(2025)=\sum_{k=0}^{2024}\binom{2025}{k}F_{-k}=F_{2025}-\binom{2025}{2025}F_{-2025}=F_{2025}-(-1)^{2026}F_{2025}=\boxed{0}.\]</p>
+<h4>Solution 2 (Binet's formula and an alternating sum)</h4>
+<p>For a polynomial of degree at most $2024$, the $2025$th finite difference vanishes:
+\[\sum_{k=0}^{2025}(-1)^{2025-k}\binom{2025}{k}P(k)=0 .\]
+(Indeed $\sum_k(-1)^{M-k}\binom Mk k^j=0$ for $j&lt;M$, which follows by applying $\left(x\frac{d}{dx}\right)^j$ to $(x-1)^M$ and setting $x=1$.) So
+\[P(2025)=-\sum_{k=0}^{2024}(-1)^{2025-k}\binom{2025}{k}F_k=F_{2025}-S,\qquad S=\sum_{k=0}^{2025}(-1)^{2025-k}\binom{2025}kF_k .\]
+With $\varphi=\frac{1+\sqrt5}2$, $\psi=\frac{1-\sqrt5}2$ and $F_k=\frac{\varphi^k-\psi^k}{\sqrt5}$, the binomial theorem gives
+\[S=\frac{(\varphi-1)^{2025}-(\psi-1)^{2025}}{\sqrt5}.\]
+Since $\varphi+\psi=1$, we have $\varphi-1=-\psi$ and $\psi-1=-\varphi$, so $S=\frac{-\psi^{2025}+\varphi^{2025}}{\sqrt5}=F_{2025}$. Therefore $P(2025)=F_{2025}-F_{2025}=\boxed{0}$.</p>
+</div></details>
+</section>
+{% endraw %}

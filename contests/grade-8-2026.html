@@ -29,6 +29,11 @@ description: Grade 8 Selection 2026: selected problems from 2026 contests: probl
   .ct-note { font-size: 14px; color: var(--ink-soft); font-style: italic; }
   .ct-bar { margin: .6em 0 1em; display: flex; gap: 10px; flex-wrap: wrap; }
   .ct-bar button { font: inherit; font-size: 14px; padding: 5px 12px; border-radius: var(--radius); border: 1px solid var(--brand); background: var(--white); color: var(--brand); cursor: pointer; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
 </style>
 <script>
   window.MathJax = { tex: { inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [['\\[','\\]']], processEscapes: true },
@@ -57,6 +62,28 @@ description: Grade 8 Selection 2026: selected problems from 2026 contests: probl
   .ct-text mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
 </style>
 
+<style>
+  .ct-tags { display: flex; flex-wrap: wrap; gap: 5px; margin: 0 0 .55em; }
+  .ct-tg { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .03em; padding: 2px 8px; border-radius: 999px; line-height: 1.5; }
+  .ct-lv { background: #eee7dc; color: #4a3d33; }
+  .ct-df-Starter { background: #dcf1dc; color: #245c24; }
+  .ct-df-Explorer { background: #d6efec; color: #155e57; }
+  .ct-df-Challenger { background: #dce8f7; color: #1f4c80; }
+  .ct-df-Olympiad { background: #e7defa; color: #4b2a8a; }
+  .ct-df-Advanced { background: #fbe4cc; color: #8a4a0b; }
+  .ct-df-Expert { background: #f8d6cf; color: #8c2600; }
+  .ct-band { margin: 1.3em 0 .5em; font-size: 14px; color: var(--ink-soft); }
+  .ct-band .ct-tg { font-size: 13px; margin-right: .4em; }
+  .ct-legend { font-size: 14.5px; background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 10px 16px; margin: 1em 0 1.4em; }
+  .ct-legend p { margin: .35em 0; }
+  .ct-legend ul { margin: .2em 0 .4em; padding-left: 1.1em; }
+  .ct-legend li { margin: .2em 0; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
+</style>
 {% endraw %}
 <p><a href="{{ '/contests-2026' | relative_url }}">&larr; All contests 2026</a></p>
 
@@ -65,14 +92,14 @@ description: Grade 8 Selection 2026: selected problems from 2026 contests: probl
 <div class="ct-intro">
 <p>The 17 problems of the Grade 8 Selection 2026: selected problems from 2026 contests, each with our own solutions, hidden until you open them. Where a problem has a final answer, it is shown separately. Try a problem first, then check.</p><p>Selected problems for grade 8, chosen from the 2026 MIMC, Canada Lynx (CLMC), CEMC Gauss and AMC 8 papers. Each problem names its source; the problems go from easy to hard.</p>
 </div>
-<div class="ct-credit">Problems selected from the 2026 contests named under each problem (UKMT, CEMC, MAA, MIMC, SMOPS and CLMC); they belong to their publishers. Solutions written by MCC.</div>
+<div class="ct-credit">Problems selected from the 2026 contests named under each problem (UKMT, CEMC, MAA, MATHCOUNTS, MIMC, SMOPS, CLMC and Vietnamese entrance exams); they belong to their publishers. Solutions written by MCC.</div>
 <div class="ct-bar"><button type="button" onclick="ctAll(true)">Show all answers and solutions</button><button type="button" onclick="ctAll(false)">Hide all</button></div>
 <div class="ct-toc-wrap"><div class="ct-toc-row"><a href="#p1">1</a><a href="#p2">2</a><a href="#p3">3</a><a href="#p4">4</a><a href="#p5">5</a><a href="#p6">6</a><a href="#p7">7</a><a href="#p8">8</a><a href="#p9">9</a><a href="#p10">10</a><a href="#p11">11</a><a href="#p12">12</a><a href="#p13">13</a><a href="#p14">14</a><a href="#p15">15</a><a href="#p16">16</a><a href="#p17">17</a></div></div>
 
 {% raw %}
 <section class="ct-problem" id="p1">
 <h3>Problem 1</h3>
-<div class="ct-meta">Algebra &middot; LPS VI, Chapter 17: Factoring and Structural Decomposition</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Algebra &middot; LPS VI, Chapter 17: Factoring and Structural Decomposition &middot; Higher-Degree Factoring</div>
 <div class="ct-text"><p>Let $f(x)=(x^2+4x+3)(x^2-4x+3)$. Over all possible values of $x$, what is the minimum possible value of $f(x)$?</p><p><strong>(A)</strong>&nbsp;$-16$&emsp;<strong>(B)</strong>&nbsp;$-15$&emsp;<strong>(C)</strong>&nbsp;$-9$&emsp;<strong>(D)</strong>&nbsp;$0$&emsp;<strong>(E)</strong>&nbsp;$9$</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p><strong>(A)</strong> $-16$</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -95,7 +122,7 @@ or $x^2=5$. The minimum value is $\boxed{\textbf{(A)}\ -16}$.</p>
 </section>
 <section class="ct-problem" id="p2">
 <h3>Problem 2</h3>
-<div class="ct-meta">Number Theory &middot; LPS VI, Chapter 31: Linear Diophantine Equations</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Number Theory &middot; LPS VI, Chapter 31: Linear Diophantine Equations &middot; Contextual Integer Models</div>
 <div class="ct-text"><p>Serafine and Jamie are playing catch with special rules. They start by standing $1500$ cm apart. One throws the ball to the other. If the ball is caught, both players each take a $60$ cm step away from each other. If the ball is not caught, the person who missed the catch takes a $20$ cm step towards the other player. When they stop playing catch, they are $1720$ cm apart. Of the following, which number of throws is <em>not</em> possible?</p><p><strong>(A)</strong>&nbsp;$17$&emsp;<strong>(B)</strong>&nbsp;$21$&emsp;<strong>(C)</strong>&nbsp;$73$&emsp;<strong>(D)</strong>&nbsp;$45$&emsp;<strong>(E)</strong>&nbsp;$10$</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p><strong>(B)</strong> $21$</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -119,7 +146,7 @@ $11$ has remainder $4$). Only $21$ fails. The answer is $\boxed{\textbf{(B)}\ 21
 </section>
 <section class="ct-problem" id="p3">
 <h3>Problem 3</h3>
-<div class="ct-meta">Number Theory &middot; LPS VI, Chapter 35: Factorials and Prime Counting</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Number Theory &middot; LPS VI, Chapter 35: Factorials and Prime Counting &middot; Prime Exponents in Factorials</div>
 <div class="ct-text"><p>The notation $n!$ (read &ldquo;$n$ factorial&rdquo;) is defined as the product of the first $n$ positive integers. (For example, $3!=1\cdot2\cdot3=6$.) Define the <em>superfactorial</em> of a positive integer, denoted by $n^{!}$, to be the product of the factorials of the first $n$ integers. (For example, $3^{!}=1!\cdot2!\cdot3!=12$.) How many factors of $7$ appear in the prime factorization of $51^{!}$, the superfactorial of $51$?</p><p><strong>(A)</strong>&nbsp;$147$&emsp;<strong>(B)</strong>&nbsp;$150$&emsp;<strong>(C)</strong>&nbsp;$156$&emsp;<strong>(D)</strong>&nbsp;$168$&emsp;<strong>(E)</strong>&nbsp;$171$</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p><strong>(E)</strong> $171$</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -135,7 +162,7 @@ that is, $52-j$ times. Only multiples of $7$ contribute factors of $7$:</p><ul c
 </section>
 <section class="ct-problem" id="p4">
 <h3>Problem 4</h3>
-<div class="ct-meta">Geometry &middot; LPS VI, Chapter 48: Transformations and Symmetry</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Geometry &middot; LPS VI, Chapter 48: Transformations and Symmetry &middot; Reflection</div>
 <div class="ct-text"><p>What is the minimum value of
 \[f(x)=\sqrt{x^2-4x+5}+\sqrt{x^2-10x+34}\]
 over all real numbers $x$?</p></div>
@@ -165,7 +192,7 @@ and indeed $f\left(\tfrac{11}4\right)=\tfrac54+\tfrac{15}4=5$. The minimum value
 </section>
 <section class="ct-problem" id="p5">
 <h3>Problem 5</h3>
-<div class="ct-meta">Algebra &middot; LPS VI, Chapter 53: Sequences, Series, and Recursive Patterns</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Algebra &middot; LPS VI, Chapter 53: Sequences, Series, and Recursive Patterns &middot; Series and Summation Patterns</div>
 <div class="ct-text"><p>Let $f(x)=ax^2+bx+c$ be the quadratic function for which $f(1)=19$, $f(2)=37$, and $f(3)=61$.</p><p>For each positive integer $n$, define $S(n)=f(1)+f(2)+f(3)+\dots+f(n)$. For example, $S(3)=f(1)+f(2)+f(3)=19+37+61=117$.</p><p>What is the smallest integer $n$ for which $S(n)&gt;1{,}000{,}000$?</p><p><strong>(A)</strong>&nbsp;$98$&emsp;<strong>(B)</strong>&nbsp;$99$&emsp;<strong>(C)</strong>&nbsp;$100$&emsp;<strong>(D)</strong>&nbsp;$101$&emsp;<strong>(E)</strong>&nbsp;$102$</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p><strong>(B)</strong> $99$</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -190,7 +217,7 @@ Since every $f(k)$ is positive, $S$ increases, so the answer is $\boxed{\textbf{
 </section>
 <section class="ct-problem" id="p6">
 <h3>Problem 6</h3>
-<div class="ct-meta">Number Theory &middot; LPS VI, Chapter 15: GCD, LCM, and Multiplicative Interaction</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Number Theory &middot; LPS VI, Chapter 15: GCD, LCM, and Multiplicative Interaction &middot; GCD Logic</div>
 <div class="ct-text"><p>How many ordered pairs $(a,b)$ of positive integers are there which satisfy
 \[a\times b+57=29\times\gcd(a,b)+2\times\mathrm{lcm}(a,b)?\]
 (Note: $\gcd(a,b)$ denotes the greatest common divisor of $a$ and $b$; $\mathrm{lcm}(a,b)$ denotes the least common multiple of $a$ and $b$.)</p></div>
@@ -210,7 +237,7 @@ That is $4+4=\boxed{8}$ ordered pairs $(a,b)$.</p>
 </section>
 <section class="ct-problem" id="p7">
 <h3>Problem 7</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VI, Chapter 50: Combinatorial Geometry</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Combinatorics &middot; LPS VI, Chapter 50: Combinatorial Geometry &middot; Point Sets, Distances, and Neighbors</div>
 <div class="ct-text"><p>Five distinct points are located on a line. There are ten distances between pairs of points. Nine of the ten distances are $2$, $3$, $4$, $5$, $7$, $9$, $11$, $13$, $16$. The remaining distance is $n$, and it is possible that $n$ is equal to one of the other nine distances. If $n$ is a positive integer from $1$ to $15$ inclusive, how many values of $n$ are possible?</p><p><strong>(A)</strong>&nbsp;$1$&emsp;<strong>(B)</strong>&nbsp;$2$&emsp;<strong>(C)</strong>&nbsp;$3$&emsp;<strong>(D)</strong>&nbsp;$4$&emsp;<strong>(E)</strong>&nbsp;$5$</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p><strong>(C)</strong> $3$</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -242,7 +269,7 @@ The answer is $\boxed{\textbf{(C)}\ 3}$.</p>
 </section>
 <section class="ct-problem" id="p8">
 <h3>Problem 8</h3>
-<div class="ct-meta">Geometry &middot; LPS VI, Chapter 8: Triangle Congruence and Rigid Geometry</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Geometry &middot; LPS VI, Chapter 8: Triangle Congruence and Rigid Geometry &middot; Auxiliary Lines for Congruence</div>
 <div class="ct-text"><p>As shown in the diagram below, $ABCD$ is a rhombus with $\angle D=52^\circ$. Point $M$ is the midpoint of $DC$ and point $E$ lies on segment $BM$ such that $AE\perp BM$. What is the measure, in degrees, of $\angle BEC$?</p><div class="ct-fig"><img style="width:294px" src="/assets/contests/2026-27/grade-8-8.svg" alt="Figure for Problem 8"></div></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$116^\circ$</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -271,7 +298,7 @@ $\angle BEC=360^\circ-90^\circ-154^\circ=\boxed{116^\circ}$.</p>
 </section>
 <section class="ct-problem" id="p9">
 <h3>Problem 9</h3>
-<div class="ct-meta">Geometry &middot; LPS VI, Chapter 50: Combinatorial Geometry</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Geometry &middot; LPS VI, Chapter 50: Combinatorial Geometry &middot; Counting Figures in Diagrams</div>
 <div class="ct-text"><p>In an equiangular hexagon, all interior angles measure $120^\circ$. An example of such a hexagon with side lengths of $2$, $3$, $1$, $3$, $2$, and $2$ is shown below, inscribed in equilateral triangle $ABC$. Consider all equiangular hexagons with positive integer side lengths that can be inscribed in $\triangle ABC$, with all six vertices on the sides of the triangle. What is the total number of such hexagons? Hexagons that differ only by a rotation or a reflection are considered the same.</p><p><strong>(A)</strong>&nbsp;$4$&emsp;<strong>(B)</strong>&nbsp;$5$&emsp;<strong>(C)</strong>&nbsp;$6$&emsp;<strong>(D)</strong>&nbsp;$7$&emsp;<strong>(E)</strong>&nbsp;$8$</p><div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/grade-8-9.svg" alt="Figure for Problem 9"></div></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p><strong>(E)</strong> $8$</p></div></details>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
@@ -292,7 +319,7 @@ So we count triples $a\le b\le c$ with $b+c\le5$:</p><ul class="ct-ul"><li><p>$c
 </section>
 <section class="ct-problem" id="p10">
 <h3>Problem 10</h3>
-<div class="ct-meta">Number Theory &middot; LPS VI, Chapter 11: Divisors and Arithmetic Functions of a Number</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Number Theory &middot; LPS VI, Chapter 11: Divisors and Arithmetic Functions of a Number &middot; Counting Divisors</div>
 <div class="ct-text"><p>What is the fifth smallest positive integer $N$ such that $2026\times N$ has exactly $100$ positive integer divisors?</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$11016$</p></div></details>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
@@ -311,7 +338,7 @@ and the fifth is $\boxed{11016}$. Check: $2026\cdot11016=2^4\cdot3^4\cdot17\cdot
 </section>
 <section class="ct-problem" id="p11">
 <h3>Problem 11</h3>
-<div class="ct-meta">Geometry &middot; LPS VI, Chapter 8: Triangle Congruence and Rigid Geometry</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VI scale">H</span>Geometry &middot; LPS VI, Chapter 8: Triangle Congruence and Rigid Geometry &middot; Isosceles and Equilateral Structure</div>
 <div class="ct-text"><p>As shown in the diagram below, $ABC$ is a right triangle. Points $D$ and $E$ lie on side $BC$ such that $\angle BAD=20^\circ$, $\angle DAE=15^\circ$ and $\angle EAC=20^\circ$. If $EC=4$ cm, what is the length, in cm, of $BD$?</p><div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/grade-8-11.svg" alt="Figure for Problem 11"></div></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$2$ cm</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -334,7 +361,7 @@ Since the ratio $EC:BD=2$ does not depend on the size of the triangle, $EC=4$ gi
 </section>
 <section class="ct-problem" id="p12">
 <h3>Problem 12</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VI, Chapter 42: Recursion, Paths, and Dynamic Counting</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VI scale">H</span>Combinatorics &middot; LPS VI, Chapter 42: Recursion, Paths, and Dynamic Counting &middot; Recursive Counting Rules</div>
 <div class="ct-text"><p>A $2\times2026$ rectangular board is tiled completely by using $2026$ identical dominoes, each of size $2\times1$. Let $a$ denote the number of such tilings in which no two vertical dominoes share a common side as shown in the diagram below. What is the remainder when $a$ is divided by $6$?</p><div class="ct-fig"><img style="width:305px" src="/assets/contests/2026-27/grade-8-12.svg" alt="Figure for Problem 12"></div></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$4$</p></div></details>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
@@ -353,7 +380,7 @@ $2026=13\cdot155+11$, $a_{2026}\equiv a_{11}=16\equiv1\pmod 3$.</p><p>An even nu
 </section>
 <section class="ct-problem" id="p13">
 <h3>Problem 13</h3>
-<div class="ct-meta">Number Theory &middot; LPS VI, Chapter 39: Perfect Powers and Prime Exponents</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Number Theory &middot; LPS VI, Chapter 39: Perfect Powers and Prime Exponents &middot; Power Compatibility Conditions</div>
 <div class="ct-text"><p>It is known that there exists a positive integer $x$ such that each of the following numbers:
 \[x,\quad 2x,\quad 3x,\quad 4x\quad\text{and}\quad 5x\]
 is a perfect power. Provide one example of such an integer $x$ and explain how you obtained it.</p><p>(Note: $a^i$ is a perfect power where $a$ and $i$ are positive integers and $i&gt;1$.)</p></div>
@@ -371,7 +398,7 @@ The same idea works with any assignment of different exponents; for example the 
 </section>
 <section class="ct-problem" id="p14">
 <h3>Problem 14</h3>
-<div class="ct-meta">Geometry &middot; LPS VI, Chapter 12: Circle Angles and Cyclic Geometry</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VI scale">H</span>Geometry &middot; LPS VI, Chapter 12: Circle Angles and Cyclic Geometry &middot; Arcs, Central Angles, and Inscribed Angles</div>
 <div class="ct-text"><p>As shown in the diagram below, triangle $ABC$ is acute and $AH$ is the altitude from $A$ to side $BC$. Point $D$ lies on segment $AH$, where $\angle DBA=\angle DAC=20^\circ$ and $\angle DBC=10^\circ$. What is the measure, in degrees, of $\angle DCB$?</p><div class="ct-fig"><img style="width:278px" src="/assets/contests/2026-27/grade-8-14.svg" alt="Figure for Problem 14"></div></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$40^\circ$</p></div></details>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
@@ -390,7 +417,7 @@ In the equilateral triangle $AOC$ this line bisects the angle at $C$: $\angle AC
 </section>
 <section class="ct-problem" id="p15">
 <h3>Problem 15</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VI, Chapter 19: Modular Arithmetic and Remainder Tracking</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VI scale">H</span>Combinatorics &middot; LPS VI, Chapter 19: Modular Arithmetic and Remainder Tracking &middot; Congruence and Residue Classes</div>
 <div class="ct-text"><p>On an infinite strip of adjacent squares (which can be associated with the integers), there is exactly one ball in each square. Written on these squares is a pattern of numbers that repeats periodically forever. The pattern is formed by a permutation of the numbers from $1$ to $n$ ($n\ge3$) which we denote as $\overline{a_1a_2\ldots a_n}$.</p><p>At a given signal, each ball jumps to the right over a number of squares equal to the value written in its starting square. The pattern is called <em>collision-free</em> if, after the jump, there is no square in which two or more balls land. For example, the patterns $\overline{123}$, $\overline{231}$, $\overline{312}$ are collision-free, as shown below. On the other hand, the pattern $\overline{213}$ is not collision-free, as also shown below.</p><p>Two patterns are considered identical if they can be obtained from one another through a cyclic shift. For example, $\overline{123}$ produces the same infinite strip as $\overline{231}$ or $\overline{312}$, that is $\overline{123}=\overline{231}=\overline{312}$. For $n=3$, there is only one collision-free pattern.</p><p>How many different collision-free patterns exist for $n=5$? Explain your reasoning in complete detail. Simply listing down the correct collision-free patterns will not receive full credit.</p><div class="ct-fig"><img style="width:560px" src="/assets/contests/2026-27/grade-8-15.svg" alt="Figure for Problem 15"></div></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$3$</p></div></details>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
@@ -410,7 +437,7 @@ $\overline{12345}$, $\overline{13524}$ $(=\overline{52413})$ and $\overline{1425
 </section>
 <section class="ct-problem" id="p16">
 <h3>Problem 16</h3>
-<div class="ct-meta">Number Theory &middot; LPS VI, Chapter 15: GCD, LCM, and Multiplicative Interaction</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VI scale">H</span>Number Theory &middot; LPS VI, Chapter 15: GCD, LCM, and Multiplicative Interaction &middot; LCM Logic</div>
 <div class="ct-text"><p>A subset $S$ of $\{1,2,3,\ldots,2025,2026\}$ is called <em>good</em>, if for any three elements of $S$, their least common multiple also belongs to $S$. For example, $\{3,9,12,36\}$ is good. What is the maximum possible number of elements in a good subset of $\{1,2,3,\ldots,2025,2026\}$?</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$40$</p></div></details>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
@@ -427,7 +454,7 @@ $M=2^a3^b5^c7^e$ with $a\ge b\ge c\ge e$.</p><ul class="ct-ul"><li><p>Four prime
 </section>
 <section class="ct-problem" id="p17">
 <h3>Problem 17</h3>
-<div class="ct-meta">Number Theory &middot; LPS VI, Chapter 18: Parity, Invariants, and Monovariants</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VI scale">H</span>Number Theory &middot; LPS VI, Chapter 18: Parity, Invariants, and Monovariants &middot; Invariants</div>
 <div class="ct-text"><p>The numbers $1,2,3,\ldots,32$ and $33$ are written on a board. A student repeatedly performs the following operation: erase two numbers such that one is a multiple of the other, and write down their integer quotient on the board. The process stops when no number on the board is a multiple of another. At least how many numbers remain on the board?</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$7$</p></div></details>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">

@@ -29,6 +29,11 @@ description: Portuguese Mathematical Olympiad 2026: problems with answers and so
   .ct-note { font-size: 14px; color: var(--ink-soft); font-style: italic; }
   .ct-bar { margin: .6em 0 1em; display: flex; gap: 10px; flex-wrap: wrap; }
   .ct-bar button { font: inherit; font-size: 14px; padding: 5px 12px; border-radius: var(--radius); border: 1px solid var(--brand); background: var(--white); color: var(--brand); cursor: pointer; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
 </style>
 <script>
   window.MathJax = { tex: { inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [['\\[','\\]']], processEscapes: true },
@@ -57,6 +62,28 @@ description: Portuguese Mathematical Olympiad 2026: problems with answers and so
   .ct-text mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
 </style>
 
+<style>
+  .ct-tags { display: flex; flex-wrap: wrap; gap: 5px; margin: 0 0 .55em; }
+  .ct-tg { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .03em; padding: 2px 8px; border-radius: 999px; line-height: 1.5; }
+  .ct-lv { background: #eee7dc; color: #4a3d33; }
+  .ct-df-Starter { background: #dcf1dc; color: #245c24; }
+  .ct-df-Explorer { background: #d6efec; color: #155e57; }
+  .ct-df-Challenger { background: #dce8f7; color: #1f4c80; }
+  .ct-df-Olympiad { background: #e7defa; color: #4b2a8a; }
+  .ct-df-Advanced { background: #fbe4cc; color: #8a4a0b; }
+  .ct-df-Expert { background: #f8d6cf; color: #8c2600; }
+  .ct-band { margin: 1.3em 0 .5em; font-size: 14px; color: var(--ink-soft); }
+  .ct-band .ct-tg { font-size: 13px; margin-right: .4em; }
+  .ct-legend { font-size: 14.5px; background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 10px 16px; margin: 1em 0 1.4em; }
+  .ct-legend p { margin: .35em 0; }
+  .ct-legend ul { margin: .2em 0 .4em; padding-left: 1.1em; }
+  .ct-legend li { margin: .2em 0; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
+</style>
 {% endraw %}
 <p><a href="{{ '/contests-2026' | relative_url }}">&larr; All contests 2026</a></p>
 
@@ -73,7 +100,7 @@ description: Portuguese Mathematical Olympiad 2026: problems with answers and so
 <h2 class="ct-group" id="day-1">Day 1</h2>
 <section class="ct-problem" id="p1">
 <h3>Problem 1</h3>
-<div class="ct-meta">Number Theory &middot; LPS VI, Chapter 21: Digits, Place Value, and Decimal Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Number Theory &middot; LPS VI, Chapter 21: Digits, Place Value, and Decimal Structure &middot; Digit Conditions and Search</div>
 <div class="ct-text"><p>Francisca wrote the numbers from $1$ to $2026$ in the first row of a table as shown:
 \[\begin{array}{|c|c|c|c|c|c|c|}\hline
 1&amp;2&amp;3&amp;4&amp;5&amp;\cdots&amp;2026\\\hline
@@ -99,7 +126,7 @@ come first there, in increasing order, in columns $1997,\dots,2012$.</p><p>So co
 </section>
 <section class="ct-problem" id="p2">
 <h3>Problem 2</h3>
-<div class="ct-meta">Geometry &middot; LPS VI, Chapter 8: Triangle Congruence and Rigid Geometry</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Geometry &middot; LPS VI, Chapter 8: Triangle Congruence and Rigid Geometry &middot; Auxiliary Lines for Congruence</div>
 <div class="ct-text"><p>In trapezoid $ABCD$, with $AB\parallel CD$, the midpoint $M$ of $BC$ satisfies $\angle BAM=\angle MAD$.
 Show that $AD=AB+CD$.</p></div>
 <details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
@@ -132,7 +159,7 @@ and dividing by $\frac h4$ gives $AB+CD+AD=2(AB+CD)$, that is, $AD=AB+CD$.</p>
 </section>
 <section class="ct-problem" id="p3">
 <h3>Problem 3</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 39: Graph Theory and Structural Combinatorics</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 39: Graph Theory and Structural Combinatorics &middot; Paths, Cycles, and Connectivity</div>
 <div class="ct-text"><p>We want to connect twelve cities by a road network with the following condition: for any three distinct cities $X$, $Y$, and $Z$, it is possible to travel by road from $X$ to $Y$ without passing through $Z$.</p><p>What is the greatest value of $n$ such that, regardless of how the cities are connected under this condition, there exists a path along the roads passing through at least $n$ cities, in which one city is visited twice (at the start and at the end of the path) and each of the other cities in the path is visited exactly once?</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$4$</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -161,7 +188,7 @@ a route from $v_1$ avoiding $v_3$ must start $v_1v_2$ and then leave $v_2$ along
 <h2 class="ct-group" id="day-2">Day 2</h2>
 <section class="ct-problem" id="p4">
 <h3>Problem 4</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 31: Extremal Principle and Bounding Arguments</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 31: Extremal Principle and Bounding Arguments &middot; Extremal Element Selection</div>
 <div class="ct-text"><p>Pêro filled each cell of the following figure with a positive integer, obeying two rules:</p><ul class="ct-parts"><li><p><span class="ct-lbl">1.</span> In each of the eight rows, all numbers are distinct;</p></li><li><p><span class="ct-lbl">2.</span> Each number not in the last row is equal to the sum of the two numbers immediately below it.</p></li></ul><div class="ct-fig"><img style="width:335px" src="/assets/contests/2026-27/portugal-mo-4.svg" alt="Figure for Day 2, Problem 4"></div><p>In this way, Pêro wrote $29$ distinct numbers in the $36$ cells.</p><p>Pêro realized that it is possible to fill the $36$ cells using fewer distinct numbers.</p><p>What is the minimum number of distinct numbers that Pêro can write?</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$15$</p></div></details>
 <details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
@@ -190,7 +217,7 @@ strictly, so rule 1 holds, and the numbers used are exactly the $15$ numbers $F_
 </section>
 <section class="ct-problem" id="p5">
 <h3>Problem 5</h3>
-<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 49: Combinatorial Number Theory and Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Number Theory &middot; LPS VII, Chapter 49: Combinatorial Number Theory and Structure &middot; Additive Structure and Sums of Integers</div>
 <div class="ct-text"><p>A set $S$ is called <em>$n$-extremal</em> if it consists of $n$ distinct integers and, for every integer $k$ with $1\leq k\leq n$, the sum of the $k$ smallest elements of $S$ or the sum of the $k$ largest elements of $S$ (or both) is a multiple of $n$.</p><p>Determine, for each $n$, the minimum possible number of multiples of $n$ that an $n$-extremal set can contain.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$1$ if $n$ is odd, $2$ if $n$ is even</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -222,7 +249,7 @@ Since $s_k=P_k-P_{k-1}$, if $z_{k-1}=z_k=1$ then $n\mid s_k$. So the number of m
 </section>
 <section class="ct-problem" id="p6">
 <h3>Problem 6</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 52: Advanced Combinatorial Structure and Hybrid Methods</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 52: Advanced Combinatorial Structure and Hybrid Methods &middot; Combinatorics with Geometric Insight</div>
 <div class="ct-text"><p>In the plane, $44$ vertices of a convex polygon and $2026$ additional points inside the polygon are marked, in such a way that no line passes through three or more of the $2070$ marked points.</p><p>Campos proposes the following challenge to Melo. First, Campos colors each of the $2070$ points either green or red. Melo's task is to draw some straight-line segments joining pairs of points of the same color, so that no two segments intersect except possibly at endpoints, and such that any two points of the same color are connected by a path formed by these segments.</p><p>In how many ways can Campos color the points so that it is possible for Melo to complete the task?</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$1894\cdot2^{2026}=947\cdot2^{2027}$</p></div></details>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">

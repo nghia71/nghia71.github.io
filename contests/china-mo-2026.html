@@ -29,6 +29,11 @@ description: Chinese Mathematical Olympiad 2026: problems with answers and solut
   .ct-note { font-size: 14px; color: var(--ink-soft); font-style: italic; }
   .ct-bar { margin: .6em 0 1em; display: flex; gap: 10px; flex-wrap: wrap; }
   .ct-bar button { font: inherit; font-size: 14px; padding: 5px 12px; border-radius: var(--radius); border: 1px solid var(--brand); background: var(--white); color: var(--brand); cursor: pointer; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
 </style>
 <script>
   window.MathJax = { tex: { inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [['\\[','\\]']], processEscapes: true },
@@ -57,6 +62,28 @@ description: Chinese Mathematical Olympiad 2026: problems with answers and solut
   .ct-text mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
 </style>
 
+<style>
+  .ct-tags { display: flex; flex-wrap: wrap; gap: 5px; margin: 0 0 .55em; }
+  .ct-tg { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .03em; padding: 2px 8px; border-radius: 999px; line-height: 1.5; }
+  .ct-lv { background: #eee7dc; color: #4a3d33; }
+  .ct-df-Starter { background: #dcf1dc; color: #245c24; }
+  .ct-df-Explorer { background: #d6efec; color: #155e57; }
+  .ct-df-Challenger { background: #dce8f7; color: #1f4c80; }
+  .ct-df-Olympiad { background: #e7defa; color: #4b2a8a; }
+  .ct-df-Advanced { background: #fbe4cc; color: #8a4a0b; }
+  .ct-df-Expert { background: #f8d6cf; color: #8c2600; }
+  .ct-band { margin: 1.3em 0 .5em; font-size: 14px; color: var(--ink-soft); }
+  .ct-band .ct-tg { font-size: 13px; margin-right: .4em; }
+  .ct-legend { font-size: 14.5px; background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 10px 16px; margin: 1em 0 1.4em; }
+  .ct-legend p { margin: .35em 0; }
+  .ct-legend ul { margin: .2em 0 .4em; padding-left: 1.1em; }
+  .ct-legend li { margin: .2em 0; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
+</style>
 {% endraw %}
 <p><a href="{{ '/contests-2026' | relative_url }}">&larr; All contests 2026</a></p>
 
@@ -73,7 +100,7 @@ description: Chinese Mathematical Olympiad 2026: problems with answers and solut
 <h2 class="ct-group" id="day-1">Day 1</h2>
 <section class="ct-problem" id="p1">
 <h3>Problem 1</h3>
-<div class="ct-meta">Algebra &middot; LPS VII, Chapter 34: Complex Numbers as an Olympiad Tool</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Algebra &middot; LPS VII, Chapter 34: Complex Numbers as an Olympiad Tool &middot; Polar Form and De Moivre Structure</div>
 <div class="ct-text"><p>Define the subsets of the complex numbers $\mathbb{C}$:
 \[A=\{z\in\mathbb{C}\mid z=re^{i\theta},\ r\geq 0,\ \theta\in[0,\pi/41]\},\]
 \[B=\{z\in\mathbb{C}\mid z=x+iy,\ x,y\in\mathbb{R},\ |x-y|&lt;2025\},\]
@@ -116,7 +143,7 @@ Letting $\rho\to\infty$ gives $f_d=0$, a contradiction. So $P$ is constant, $P=c
 </section>
 <section class="ct-problem" id="p2">
 <h3>Problem 2</h3>
-<div class="ct-meta">Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure &middot; Power of a Point</div>
 <div class="ct-text"><p>Let convex quadrilateral $ABCD$ be inscribed in a circle with center $O$ and radius $1$ and satisfy $\angle ABC&lt;\angle BCD&lt;90^\circ$. Let $P$ be the intersection of lines $BA$ and $CD$, and $Q$ be the intersection of diagonals $AC$ and $BD$. Suppose there exists a point $K$ on segment $BC$ such that $P,A,K,D$ are concyclic, and $KB\cdot KC=\frac12 OP^2$. The line perpendicular to $BC$ and passing through $Q$ intersects line $OP$ at point $T$.</p><ul class="ct-ul"><li><p>Find all possible values of $OP$;</p></li><li><p>Find all possible values of $TB+TC$.</p></li></ul></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$OP=\dfrac{2\sqrt3}{3}$; $TB+TC$ takes exactly the values in the open interval $(2\sqrt2,\,3)$</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -186,7 +213,7 @@ as $A$ and $D$ lie on opposite sides of the line $PK$, $\angle AKD=\angle ABC+\a
 </section>
 <section class="ct-problem" id="p3">
 <h3>Problem 3</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 18: Invariants and Monovariants</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-S" title="Superhard, on the LPS VII scale">S</span>Combinatorics &middot; LPS VII, Chapter 18: Invariants and Monovariants &middot; Monovariants and Directional Change</div>
 <div class="ct-text"><p>Let $n$ be a positive integer. Initially there are $n$ red cards and $n$ blue cards. One writes one $0$ on every red card and one $1$ on every blue card. An operation is to choose a red card and a blue card, such that the number on the red card is smaller than the number on the blue card, and then replace the two numbers by their arithmetic mean.</p><p>Determine the smallest $n$ such that it is possible to execute finitely many operations, so that the sum of the numbers on the red cards is larger than $100$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$n=106$</p></div></details>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
@@ -223,7 +250,7 @@ which hold because the middle term minus the left side is $\frac1{4k^2}&gt;0$, a
 <h2 class="ct-group" id="day-2">Day 2</h2>
 <section class="ct-problem" id="p4">
 <h3>Problem 4</h3>
-<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 18: Invariants and Monovariants</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 18: Invariants and Monovariants &middot; Monovariants and Directional Change</div>
 <div class="ct-text"><p>There are $30$ colors of cards, with $70$ cards of each color. Initially, any $70$ cards are chosen and arranged from top to bottom into a stack. One operation is defined as follows: from the bottom $20$ cards, choose a card $X$ whose color does not appear among the top $50$ cards; then, from the top $50$ cards, choose a card $Y$ whose color appears at least twice among the top $50$ cards; extract $X$ and insert it back immediately above $Y$. Repeat the above operations until no such $X$ can be selected.</p><ul class="ct-ul"><li><p>Prove that the number of operations that can be performed is finite;</p></li><li><p>For all possible initial situations and operation methods, find the maximum possible number of operations.</p></li></ul></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>finite; the maximum number of operations is $390$</p></div></details>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
@@ -240,7 +267,7 @@ Starting with $(u,s)=(41,9)$ this proves the claim; colour $0$ always keeps at l
 </section>
 <section class="ct-problem" id="p5">
 <h3>Problem 5</h3>
-<div class="ct-meta">Algebra &middot; LPS VII, Chapter 26: Inequalities: Symmetry, Homogenization, and Advanced Structure</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Algebra &middot; LPS VII, Chapter 26: Inequalities: Symmetry, Homogenization, and Advanced Structure &middot; Symmetric and Cyclic Inequalities</div>
 <div class="ct-text"><p>Determine all real numbers $\lambda$ such that there exists $N&gt;0$ satisfying the following property:</p><p>For any integer $n\geq N$ and $n$ non-negative reals $x_1,\cdots,x_n$ with sum $1$, the following inequality holds:
 \[\Bigl(\sum_{1\leq i&lt;j\leq n}x_ix_j\Bigr)^2\leq\lambda\sum_{1\leq i&lt;j&lt;k\leq n}x_ix_jx_k+\frac1n\sum_{1\leq i&lt;j\leq n}(x_i-x_j)^2.\]</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>all $\lambda&gt;\dfrac32$</p></div></details>
@@ -295,7 +322,7 @@ which is the required inequality. Hence the answer is $\boxed{\lambda&gt;\dfrac3
 </section>
 <section class="ct-problem" id="p6">
 <h3>Problem 6</h3>
-<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 54: Advanced Number Theory Synthesis</div>
+<div class="ct-meta"><span class="ct-pd ct-pd-S" title="Superhard, on the LPS VII scale">S</span>Number Theory &middot; LPS VII, Chapter 54: Advanced Number Theory Synthesis &middot; Deep Structural Classification Problems</div>
 <div class="ct-text"><p>Let $n\geq 3$ be an odd integer such that $\gcd(p-1,n)=1$ for every prime divisor $p$ of $n$. Find the number of $(a,b,c)\in\mathbb{Z}_n^3$ in terms of $n$ such that $\gcd(a,b,c,n)=1$ and there is a permutation $(x_1,x_2,\ldots,x_n)$ of $\{1,2,\ldots,n\}$ satisfying that $n\mid ax_{k+2}+bx_{k+1}+cx_k$ for $1\leq k\leq n$, where indices are taken modulo $n$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\varphi(n)\Bigl(\dfrac{n}{\operatorname{rad}(n)}\Bigr)^{2}$ if $9\nmid n$, and $\dfrac23\,\varphi(n)\Bigl(\dfrac{n}{\operatorname{rad}(n)}\Bigr)^{2}$ if $9\mid n$ (here $\operatorname{rad}(n)$ is the product of the distinct primes dividing $n$)</p></div></details>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">

@@ -1,0 +1,395 @@
+---
+title: Cornell Big Red Math Competition 2026: selected problems
+permalink: /contests/big-red-2026
+description: Cornell Big Red Math Competition 2026: selected problems: problems with answers and solutions
+---
+{% raw %}
+<style>
+  .ct-intro { margin-bottom: 1.2em; }
+  .ct-credit { font-size: 14px; color: var(--ink-soft); border-left: 3px solid var(--gold); padding: 6px 12px; background: var(--white); margin: 1em 0; }
+  .ct-toc { display: flex; flex-wrap: wrap; gap: 6px; margin: 1em 0 1.4em; }
+  .ct-toc a { display: inline-block; min-width: 2.4em; text-align: center; padding: 4px 8px; border: 1px solid var(--rule); border-radius: 4px; background: var(--white); text-decoration: none; font-size: 14px; }
+  .ct-problem { background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 14px 18px; margin: 1.1em 0; }
+  .ct-problem h3 { margin: 0 0 .3em; font-size: 1.08rem; border-bottom: none; padding-bottom: 0; }
+  .ct-meta { font-size: 13px; color: var(--ink-soft); margin-bottom: .6em; }
+  .ct-text { font-family: Georgia, "Times New Roman", "Noto Serif", serif; font-size: 1.02em; line-height: 1.6; }
+  .ct-text p { margin: .5em 0; }
+  .ct-fig { text-align: center; margin: .8em 0; }
+  .ct-fig img { max-width: 100%; height: auto; max-height: 340px; }
+  .ct-choices { display: flex; flex-wrap: wrap; gap: 6px 22px; margin: .6em 0 .2em; }
+  .ct-choices b { margin-right: .3em; }
+  .ct-problem details { margin-top: .8em; border-top: 1px dashed var(--rule); padding-top: .5em; }
+  .ct-problem summary { cursor: pointer; font-weight: 600; color: var(--brand); font-size: 15px; }
+  .ct-problem details[open] summary { margin-bottom: .5em; }
+  .ct-sol h4 { font-size: 1rem; margin: 1em 0 .3em; color: var(--ink); }
+  .ct-answer { font-weight: 600; }
+  .ct-parts { list-style: none; padding-left: .4em; }
+  .ct-parts li { margin: .35em 0; }
+  .ct-lbl { font-weight: 700; margin-right: .3em; }
+  .ct-note { font-size: 14px; color: var(--ink-soft); font-style: italic; }
+  .ct-bar { margin: .6em 0 1em; display: flex; gap: 10px; flex-wrap: wrap; }
+  .ct-bar button { font: inherit; font-size: 14px; padding: 5px 12px; border-radius: var(--radius); border: 1px solid var(--brand); background: var(--white); color: var(--brand); cursor: pointer; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
+</style>
+<script>
+  window.MathJax = { tex: { inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [['\\[','\\]']], processEscapes: true },
+                     options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] } };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script>
+  function ctAll(open) { document.querySelectorAll('.ct-problem details').forEach(function (d) { d.open = open; }); }
+</script>
+
+<style>
+  .ct-group { font-size: 1.25rem; margin: 1.6em 0 .2em; }
+  .ct-toc-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: .3em 0; }
+  .ct-toc-g { font-size: 13px; color: var(--ink-soft); min-width: 9em; }
+  .ct-toc-wrap { margin: 1em 0 1.4em; }
+  .ct-center { text-align: center; margin: .6em 0; }
+  .ct-tablewrap { overflow-x: auto; margin: .6em 0; text-align: center; }
+  .ct-table { border-collapse: collapse; margin: 0 auto; }
+  .ct-table td { padding: 2px 9px; text-align: center; }
+  .ct-table tr.ct-hl td { border-bottom: 1px solid var(--ink-soft); }
+  .ct-table.ct-vfirst td:first-child { border-right: 1px solid var(--ink-soft); }
+  .ct-ul { padding-left: 1.4em; }
+  .ct-ul li { margin: .3em 0; }
+  .ct-text li > p:first-child { margin-top: 0; }
+  .ct-text li > p:last-child { margin-bottom: 0; }
+  .ct-text mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
+</style>
+
+<style>
+  .ct-tags { display: flex; flex-wrap: wrap; gap: 5px; margin: 0 0 .55em; }
+  .ct-tg { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .03em; padding: 2px 8px; border-radius: 999px; line-height: 1.5; }
+  .ct-lv { background: #eee7dc; color: #4a3d33; }
+  .ct-df-Starter { background: #dcf1dc; color: #245c24; }
+  .ct-df-Explorer { background: #d6efec; color: #155e57; }
+  .ct-df-Challenger { background: #dce8f7; color: #1f4c80; }
+  .ct-df-Olympiad { background: #e7defa; color: #4b2a8a; }
+  .ct-df-Advanced { background: #fbe4cc; color: #8a4a0b; }
+  .ct-df-Expert { background: #f8d6cf; color: #8c2600; }
+  .ct-band { margin: 1.3em 0 .5em; font-size: 14px; color: var(--ink-soft); }
+  .ct-band .ct-tg { font-size: 13px; margin-right: .4em; }
+  .ct-legend { font-size: 14.5px; background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 10px 16px; margin: 1em 0 1.4em; }
+  .ct-legend p { margin: .35em 0; }
+  .ct-legend ul { margin: .2em 0 .4em; padding-left: 1.1em; }
+  .ct-legend li { margin: .2em 0; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
+</style>
+{% endraw %}
+<p><a href="{{ '/contests-2026' | relative_url }}">&larr; All contests 2026</a></p>
+
+<h1>Cornell Big Red Math Competition 2026: selected problems</h1>
+
+<div class="ct-intro">
+<p>The 19 problems of the Cornell Big Red Math Competition 2026: selected problems, each with our own solutions, hidden until you open them. 18 of them ask for an answer and 1 asks for a proof. Where a problem has a final answer, it is shown separately. Try a problem first, then check.</p><p>A selection of the best problems of the Cornell Big Red Math Competition (24 October 2026): individual, team and proof rounds.</p>
+</div>
+<div class="ct-credit">Problems: Cornell Big Red Math Competition 2026: selected problems, from the AoPS contest collection or the official paper. Solutions written by MCC.</div>
+<div class="ct-bar"><button type="button" onclick="ctAll(true)">Show all answers and solutions</button><button type="button" onclick="ctAll(false)">Hide all</button></div>
+<div class="ct-toc-wrap"><div class="ct-toc-row"><span class="ct-toc-g">Individual Round</span><a href="#p1">3</a><a href="#p2">5</a><a href="#p3">7</a><a href="#p4">8</a><a href="#p5">9</a><a href="#p6">11</a><a href="#p7">12</a><a href="#p8">13</a><a href="#p9">14</a><a href="#p10">15</a></div><div class="ct-toc-row"><span class="ct-toc-g">Team Round</span><a href="#p11">4</a><a href="#p12">6</a><a href="#p13">7</a><a href="#p14">8</a><a href="#p15">9</a></div><div class="ct-toc-row"><span class="ct-toc-g">Proof Round</span><a href="#p16">1</a><a href="#p17">2</a><a href="#p18">3</a><a href="#p19">4</a></div></div>
+
+{% raw %}
+<h2 class="ct-group" id="individual-round">Individual Round</h2>
+<section class="ct-problem" id="p1">
+<h3>Problem 3</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VII scale">E</span>Algebra &middot; LPS VII, Chapter 13: Systems, Symmetry, and Multi-Variable Algebra &middot; Elementary Symmetric Substitution</div>
+<div class="ct-text"><p>Let $x$ be a real number with $x\neq 0,1$. Define
+\[y=1-\frac1x\qquad\text{and}\qquad z=1-\frac1y .\]
+Suppose $x+y+z=7$. Find $x^2+y^2+z^2$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$41$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Reciprocals)</h4>
+<p>From $y=1-\frac1x$ we get $\frac1x=1-y$, and from $z=1-\frac1y$ we get $\frac1y=1-z$. Also $z=1-\frac{x}{x-1}=\frac{1}{1-x}$, so $\frac1z=1-x$. (All of $x,y,z$ are nonzero and different from $1$: $y=0$ would need $x=1$, and $y=1$ is impossible.) Adding,
+\[\frac1x+\frac1y+\frac1z=3-(x+y+z)=-4 .\]
+Moreover $xyz=x\cdot\frac{x-1}{x}\cdot\frac{1}{1-x}=-1$. Hence
+\[xy+yz+zx=xyz\left(\frac1x+\frac1y+\frac1z\right)=(-1)(-4)=4,\]
+and $x^2+y^2+z^2=(x+y+z)^2-2(xy+yz+zx)=49-8=\boxed{41}$.</p>
+<h4>Solution 2 (Express everything in x)</h4>
+<p>We have $y=\frac{x-1}{x}$ and $z=1-\frac{x}{x-1}=\frac{1}{1-x}$. Then
+\[xy=x-1,\qquad yz=\frac{x-1}{x}\cdot\frac1{1-x}=-\frac1x,\qquad zx=\frac{x}{1-x},\]
+while $x+y+z=x+1-\frac1x+\frac1{1-x}$. Subtracting,
+\[(xy+yz+zx)-(x+y+z)=-2+\frac{x}{1-x}-\frac{1}{1-x}=-2-1=-3 .\]
+So $xy+yz+zx=7-3=4$ and $x^2+y^2+z^2=7^2-2\cdot4=\boxed{41}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p2">
+<h3>Problem 5</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Number Theory &middot; LPS VI, Chapter 15: GCD, LCM, and Multiplicative Interaction &middot; GCD Logic</div>
+<div class="ct-text"><p>What is the largest value of $n$ for which it is possible to arrange $n$ distinct positive integers, each less than or equal to $20$, around a circle so that any two adjacent numbers have greatest common divisor greater than $1$?</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$14$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Exclude, then build)</h4>
+<p>Every number in the circle needs two neighbours sharing a prime factor with it.</p><ul class="ct-ul"><li><p>$1$ shares no factor with anything.</p></li><li><p>$11,13,17,19$: their only multiples up to $20$ are themselves, so they have no possible neighbour.</p></li><li><p>$7$: the only other multiple of $7$ up to $20$ is $14$, so $7$ has at most one possible neighbour.</p></li></ul><p>This excludes $1$, $7$, $11$, $13$, $17$, $19$, leaving at most $20-6=14$ numbers:
+\[2,\ 3,\ 4,\ 5,\ 6,\ 8,\ 9,\ 10,\ 12,\ 14,\ 15,\ 16,\ 18,\ 20 .\]
+All $14$ fit:
+\[2,\ 4,\ 8,\ 16,\ 14,\ 20,\ 5,\ 15,\ 3,\ 9,\ 18,\ 12,\ 6,\ 10\ (\text{back to } 2),\]
+where consecutive numbers share the factor $2,2,2,2,2,5,5,3,3,3,6,6,2,2$ respectively. The answer is $\boxed{14}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p3">
+<h3>Problem 7</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Algebra &middot; LPS VII, Chapter 9: Polynomials and Root-Coefficient Strategy &middot; Remainder, Factor, and Evaluation Logic</div>
+<div class="ct-text"><p>Let $P(x)$ be a polynomial with integer coefficients satisfying $P(1)=1$ and $P(3)=5$. Find the smallest possible value of $|P(7)|$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$11$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Division by (x-1)(x-3))</h4>
+<p>Divide $P$ by the monic polynomial $(x-1)(x-3)$: $P(x)=(x-1)(x-3)Q(x)+R(x)$ with $Q$ having integer coefficients and $R$ linear. From $R(1)=1$, $R(3)=5$ we get $R(x)=2x-1$. Hence
+\[P(7)=6\cdot4\cdot Q(7)+13=13+24Q(7),\]
+where $Q(7)$ is an integer. Every integer occurs as $Q(7)$ (take $Q$ constant). So the possible values of $P(7)$ are exactly the numbers $\equiv 13\pmod{24}$, and the smallest absolute value is $|13-24|=\boxed{11}$, attained by $P(x)=2x-1-(x-1)(x-3)$.</p><p>(The tempting answer $1$, from $P(7)\equiv P(3)\pmod 4$ and $P(7)\equiv P(1)\pmod 6$, is not attainable.)</p>
+<h4>Solution 2 (The factor theorem twice)</h4>
+<p>Since $P(x)-P(1)$ vanishes at $x=1$, $P(x)=1+(x-1)U(x)$ with $U$ having integer coefficients. Then $P(3)=1+2U(3)=5$ gives $U(3)=2$. Since $U(7)-U(3)$ is divisible by $7-3=4$, we get $U(7)=2+4t$ for an integer $t$, and
+\[P(7)=1+6U(7)=13+24t .\]
+Every $t$ occurs: $U(x)=2+t(x-3)$ gives a valid $P$. The values $13+24t$ closest to $0$ are $13$ and $-11$, so the minimum of $|P(7)|$ is $\boxed{11}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p4">
+<h3>Problem 8</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 28: Area Methods and Geometric Measurement &middot; Area Ratios in Triangles and Polygons</div>
+<div class="ct-text"><p>Square $ABCD$ has side length $12$. Points $E$ and $F$ lie on sides $BC$ and $CD$, respectively, such that triangle $AEF$ is equilateral. Lines $BF$ and $DE$ intersect at $P$. Find $AP^2$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$96$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Coordinates)</h4>
+<div class="ct-fig"><img style="width:271px" src="/assets/contests/2026-27/big-red-4_s1.svg" alt="Figure for the solution"></div>
+<p>Put $A=(0,0)$, $B=(12,0)$, $C=(12,12)$, $D=(0,12)$. Since $AE=AF$, the right triangles $ABE$ and $ADF$ are congruent, so $BE=DF$; write $E=(12,t)$, $F=(t,12)$. Then $AE^2=EF^2$ reads $144+t^2=2(12-t)^2$, i.e. $t^2-48t+144=0$, and as $0\le t\le12$, $t=24-12\sqrt3$.</p><p>The figure is symmetric in the line $AC$ (it swaps $B\leftrightarrow D$, $E\leftrightarrow F$), so $P=BF\cap DE$ lies on $y=x$. Line $DE$ is $y=12-\frac{12-t}{12}x$; setting $y=x$ gives $x\cdot\frac{24-t}{12}=12$, so
+\[x=\frac{144}{24-t}=\frac{144}{12\sqrt3}=4\sqrt3 .\]
+Thus $P=(4\sqrt3,4\sqrt3)$ and $AP^2=2\cdot48=\boxed{96}$.</p>
+<h4>Solution 2 (An area ratio)</h4>
+<p>As $AE=AF$, the right triangles $ABE$ and $ADF$ are congruent, so the figure is symmetric about the diagonal $AC$ and $P$ lies on $AC$. Let $CE=CF=u$; then $EF=u\sqrt2$ and $AE^2=12^2+(12-u)^2$, so $AE=EF$ gives $2u^2=144+(12-u)^2$, i.e. $u^2+24u-288=0$ and $u=12\sqrt3-12$.</p><p>Since $P$ is on line $DE$, the ratio $AP:PC$ equals the ratio of the distances from $A$ and $C$ to line $DE$, which is $[ADE]:[CDE]$. Now $[ADE]=\frac12\cdot12\cdot12=72$ (base $AD$, height $12$) and $[CDE]=\frac12\cdot CE\cdot CD=6u=72(\sqrt3-1)$. Hence
+\[\frac{AP}{AC}=\frac{72}{72+72(\sqrt3-1)}=\frac1{\sqrt3},\qquad AP^2=\frac{AC^2}{3}=\frac{288}{3}=\boxed{96}.\]</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p5">
+<h3>Problem 9</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Number Theory &middot; LPS VI, Chapter 15: GCD, LCM, and Multiplicative Interaction &middot; Prime-Exponent Bookkeeping</div>
+<div class="ct-text"><p>Suppose that $a,b,c$ are positive integers satisfying
+\[a\gcd(b,c)=1200,\qquad b\gcd(c,a)=432,\qquad c\gcd(a,b)=1344 .\]
+Find the greatest possible value of $\operatorname{lcm}(a,b,c)$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$302400$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (A bound by divisibility and an example)</h4>
+<p>Since $a\mid 1200$, $b\mid432$ and $c\mid1344$, the number $\operatorname{lcm}(a,b,c)$ divides
+\[\operatorname{lcm}(1200,432,1344)=\operatorname{lcm}(2^4\cdot3\cdot5^2,\ 2^4\cdot3^3,\ 2^6\cdot3\cdot7)=2^6\cdot3^3\cdot5^2\cdot7=302400 .\]
+This bound is attained by $(a,b,c)=(25,432,1344)$: indeed $\gcd(432,1344)=48$, so $a\gcd(b,c)=25\cdot48=1200$; $\gcd(1344,25)=1$, so $b\gcd(c,a)=432$; $\gcd(25,432)=1$, so $c\gcd(a,b)=1344$. And $\operatorname{lcm}(25,432,1344)=2^6\cdot3^3\cdot5^2\cdot7$. The answer is $\boxed{302400}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p6">
+<h3>Problem 11</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 36: Coordinate Geometry and Analytic Representation &middot; Equation of Loci and Curves</div>
+<div class="ct-text"><p>Let $s$ be a positive integer, and let $ABCD$ be a square of side length $s$. Suppose that there is at least one point $P$ strictly inside the circumcircle of $ABCD$ with $AP=20$ and $CP=40$, and that every such point $P$ lies outside the square. Find the sum of all possible values of $s$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$170$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Coordinates centred at the square)</h4>
+<div class="ct-fig"><img style="width:300px" src="/assets/contests/2026-27/big-red-6_s1.svg" alt="Figure for the solution"></div>
+<p>Let $d=\frac{s}{\sqrt2}$ be the half-diagonal and put the centre $O$ at the origin with $A=(-d,0)$, $B=(0,d)$, $C=(d,0)$, $D=(0,-d)$. The circumcircle is $x^2+y^2=d^2$ and the square is $|x|+|y|\le d$.</p><p><em>Inside the circle.</em> $AC$ is a diameter, so $P$ is strictly inside the circle iff $\angle APC&gt;90^\circ$, iff $AP^2+CP^2&lt;AC^2$, i.e. $2000&lt;2s^2$, i.e. $s^2&gt;1000$.</p><p><em>The points $P$.</em> For $P=(x,y)$: $AP^2-CP^2=4dx=400-1600$, so $x=-\frac{300}{d}$; and $AP^2+CP^2=2(x^2+y^2)+2d^2=2000$. Hence
+\[y^2=1000-d^2-\frac{90000}{d^2}=400-\left(d-\frac{300}{d}\right)^2 .\]
+There are two such points $(x,\pm y)$, symmetric about $AC$, when the right side is positive.</p><p><em>Outside the square.</em> With $s^2&gt;1000$ we have $d^2&gt;500$, so $d-\frac{300}d&gt;0$. The point is outside iff $\frac{300}{d}+|y|&gt;d$, i.e. $y^2&gt;\left(d-\frac{300}d\right)^2$, i.e. $\left(d-\frac{300}{d}\right)^2&lt;200$ (this also makes $y^2&gt;0$, so $P$ exists). Since $d-\frac{300}{d}=\frac{s}{\sqrt2}-\frac{300\sqrt2}{s}$, the condition $d-\frac{300}{d}&lt;10\sqrt2$ becomes
+\[\frac s2-\frac{300}{s}&lt;10\iff s^2-20s-600&lt;0\iff s&lt;10+10\sqrt7\approx36.46 .\]
+Together with $s^2&gt;1000$ (so $s\ge32$), the possible values are $s=32,33,34,35,36$, with sum $\boxed{170}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p7">
+<h3>Problem 12</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 23: Recurrence and Combinatorial Construction &middot; State-Based Construction</div>
+<div class="ct-text"><p>Aryaan wants to place the numbers $1,2,\dots,200$ in the cells of a $2\times 100$ grid, one number per cell, so that each pair of consecutive numbers lies in cells that share a side. In how many ways can Aryaan accomplish this task?</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$19804$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (The path is forced by its two ends)</h4>
+<p>A valid placement is a path through all $200$ cells, moving each time to a side-neighbour, starting at the cell of $1$ and ending at the cell of $200$. Write cells as $(r,c)$ with row $r\in\{1,2\}$ and column $c\in\{1,\dots,n\}$, $n=100$; for a row $r$ let $\bar r$ be the other row. Let the path start at $u=(r,i)$ and end at $v$ in column $j$. Every cell other than $u,v$ has exactly two path-neighbours, and $u,v$ have one each.</p><p><em>A useful fact.</em> If a block of consecutive columns, say columns $1,\dots,m$, contains neither endpoint, then the path crosses into it and out of it through the two edges joining column $m$ and column $m+1$; inside the block it goes from $(\rho,m)$ along row $\rho$ to column $1$ and back along row $\bar\rho$ to $(\bar\rho,m)$. Indeed, the corner cells $(1,1),(2,1)$ have only two grid-neighbours each, so the path uses the edges $(1,1)(2,1)$, $(1,1)(1,2)$, $(2,1)(2,2)$; deleting column $1$ and joining $(1,2)$ to $(2,2)$ gives the same situation with one column less, and induction finishes. The same holds for a block of columns at the right end.</p><p><em>Case $i&lt;j$.</em> Columns $1,\dots,i-1$ contain no endpoint, so the path crosses into them through both cells of column $i$; as $u$ has only one path-edge, the path begins $u\to(r,i-1)\to\cdots\to(\bar r,i-1)\to(\bar r,i)$ (if $i=1$: simply $u\to(\bar r,1)$). Then it moves to $(\bar r,i+1)$. Suppose the path has covered exactly the columns before $c$, where $i&lt;c&lt;j$, and enters column $c$ at $(s,c)$. If it then moved right, the cell $(\bar s,c)$ could later be reached only from $(\bar s,c+1)$, so it would be an endpoint, which is impossible. So the path goes $(s,c)\to(\bar s,c)\to(\bar s,c+1)$: it zigzags, and enters column $j$ at a cell $(t,j)$ determined by $u$ and $j$. The end $v$ cannot be $(t,j)$ (the other cell of column $j$ would be left out), so $v=(\bar t,j)$, and by the useful fact the path finishes along row $t$ to column $n$ and back along row $\bar t$ to $v$.</p><p>So for each start $u$ and each column $j&gt;i$ there is exactly one valid path ending in column $j$; by left-right symmetry the same holds for $j&lt;i$. This gives $2n\cdot(n-1)$ paths.</p><p><em>Case $i=j$.</em> Then $u,v$ are the two cells of column $i$. If $1&lt;i&lt;n$, both the block to the left and the block to the right of column $i$ need both edges joining them to column $i$, so $u$ would need two path-edges: impossible. If $i=1$ or $i=n$, the useful fact gives exactly one path for each order of the two endpoints: $4$ paths.</p><p>Hence the number of placements is $2n(n-1)+4=2\cdot100\cdot99+4=\boxed{19804}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p8">
+<h3>Problem 13</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 8: Modular Arithmetic and Congruence Methods &middot; Periodic and Cyclic Behavior Modulo $n$</div>
+<div class="ct-text"><p>An integer $x_0$ is chosen uniformly at random from $\{1,2,\dots,2025\}$. For each integer $j\ge 0$, define $x_{j+1}$ to be the least positive residue of $45x_j$ modulo $2026$. Suppose the probability that $x_0&lt;x_1&lt;x_2$ is $\frac mn$, where $m$ and $n$ are relatively prime positive integers. Find $m+n$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$2531$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Multiplication by 45 is a quarter turn)</h4>
+<p>The key fact is $45^2=2025\equiv-1\pmod{2026}$. So $x_2\equiv-x_0$, i.e. $x_2=2026-x_0$, and the map $T(x)=45x\bmod 2026$ permutes $\{1,\dots,2025\}$ with $T^4=\mathrm{id}$. Write $\bar x=2026-x$.</p><p>$T$ fixes $1013$ ($45\cdot1013=22\cdot2026+1013$). For any other $x$, the points $x,T(x),\bar x,\overline{T(x)}$ are distinct: $T(x)=x$ or $T(x)=\bar x$ would mean $2026\mid44x$ or $2026\mid 46x$, i.e. $1013\mid 11x$ or $1013\mid 23x$, so $x=1013$ ($1013$ is prime). So the other $2024$ numbers split into $506$ orbits $\{x,y,\bar x,\bar y\}$ with $T:x\mapsto y\mapsto\bar x\mapsto\bar y\mapsto x$. In each orbit let $p=\min(x,\bar x)&lt;1013$ and $q=\min(y,\bar y)&lt;1013$; then $p\neq q$, and the orbit is $\{p,\bar p,q,\bar q\}$.</p><p>The condition $x_0&lt;x_1&lt;x_2=\bar x_0$ forces $x_0&lt;1013$, so $x_0\in\{p,q\}$. If $x_0=p$, then $x_1\in\{q,\bar q\}$ and the condition is $p&lt;x_1&lt;\bar p$, which holds iff $p&lt;q$. If $x_0=q$, it holds iff $q&lt;p$. So exactly one starting value per orbit works, and $1013$ fails. The probability is $\frac{506}{2025}$, already in lowest terms ($506=2\cdot11\cdot23$, $2025=3^45^2$), and $m+n=\boxed{2531}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p9">
+<h3>Problem 14</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 34: Complex Numbers as an Olympiad Tool &middot; Complex Factorization and Algebraic Cleanup</div>
+<div class="ct-text"><p>For each nonzero complex number $z$, define the bidirectional geometric sequence $S_z=(a_n)_{n\in\mathbb Z}$ by
+\[a_0=z,\qquad a_{n+1}=(1+i)a_n\ \text{ for all integers } n .\]
+For example, $S_1$ contains the values
+\[1,\quad 1+i,\quad 2i,\quad -2+2i,\quad -4\]
+at indices $0,1,2,3,4$, respectively. Moreover, $S_{1+i}$ contains exactly the same values as $S_1$, but at different indices.</p><p>There exists a set of nonzero complex numbers $\{z_1,z_2,\dots,z_k\}$ such that, for all integers $a,b$ satisfying $1\le a^2+b^2\le 36$, the complex number $a+bi$ occurs in at least one of $S_{z_1},S_{z_2},\dots,S_{z_k}$. Compute the smallest positive integer $k$ for which such a set exists.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$52$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Odd parts of Gaussian integers)</h4>
+<p>Call $a+bi$ (with $a,b$ integers) a lattice point. Since $\frac{a+bi}{1+i}=\frac{(a+b)+(b-a)i}{2}$, the number $1+i$ divides $a+bi$ (with lattice quotient) iff $a+b$ is even. Call a lattice point <em>odd</em> if $a+b$ is odd. Every nonzero lattice point can be written uniquely as $w=(1+i)^e o$ with $e\ge0$ and $o$ odd: divide by $1+i$ as long as possible (the absolute value drops by $\sqrt2$ each time, so this stops). Call $o$ the odd part of $w$.</p><p><em>Two lattice points lie in a common $S_z$ iff they have the same odd part.</em> If $w_1,w_2\in S_z$, then $w_2=(1+i)^m w_1$ for some integer $m$, say $m\ge0$ (otherwise swap them); then $w_2=(1+i)^{e_1+m}o_1$ with $o_1$ odd, so $o_2=o_1$. Conversely, if both have odd part $o$, both lie in $S_o$.</p><p>So each $S_{z_t}$ covers lattice points of at most one odd part, and $S_o$ covers all points with odd part $o$. Hence the minimum $k$ is the number of different odd parts of the lattice points with $1\le a^2+b^2\le36$. The odd part $o$ of such a point satisfies $|o|\le|w|\le6$, so it is an odd point of the same disc; and every odd point of the disc is its own odd part. Therefore $k$ is the number of lattice points with $a+b$ odd and $a^2+b^2\le36$. Counting by $|a|$:
+\[\begin{array}{c|ccccccc}
+|a|&amp;0&amp;1&amp;2&amp;3&amp;4&amp;5&amp;6\\\hline
+\text{allowed } b&amp;\pm1,\pm3,\pm5&amp;0,\pm2,\pm4&amp;\pm1,\pm3,\pm5&amp;0,\pm2,\pm4&amp;\pm1,\pm3&amp;0,\pm2&amp;\text{none}\\
+\text{points}&amp;6&amp;2\cdot5&amp;2\cdot6&amp;2\cdot5&amp;2\cdot4&amp;2\cdot3&amp;0
+\end{array}\]
+The total is $6+10+12+10+8+6=\boxed{52}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p10">
+<h3>Problem 15</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Algebra &middot; LPS VII, Chapter 17: Sequences, Recurrences, and Discrete Dynamics &middot; Closed Forms and Hidden Structure</div>
+<div class="ct-text"><p>For a real number $x$, define a sequence $a_0,a_1,\dots$ by
+\[a_0=x,\qquad a_{n+1}=a_n^2-2\quad(n\ge 0).\]
+Let $S$ be the set of all real numbers $x$ such that $a_5=a_0$ but $a_1\neq a_0$. Find $\displaystyle\sum_{x\in S}x^2$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$59$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Cosine substitution and root-of-unity sums)</h4>
+<p><em>Only $|x|\le2$ matters.</em> If $a_n&gt;2$ then $a_{n+1}-a_n=(a_n-2)(a_n+1)&gt;0$ and $a_{n+1}&gt;2$. If $|x|&gt;2$, then $a_1=x^2-2&gt;2$ and $a_1&gt;x$ (for $x&gt;2$ since $(x-2)(x+1)&gt;0$; for $x&lt;-2$ trivially), so $a_5\ge a_1&gt;a_0$. So every $x\in S$ has $|x|\le 2$.</p><p>Write $x=2\cos\theta$ with $\theta\in[0,\pi]$. Since $(2\cos\phi)^2-2=2\cos2\phi$, we get $a_n=2\cos(2^n\theta)$. The condition $a_5=a_0$ is $\cos32\theta=\cos\theta$, i.e. $32\theta\equiv\pm\theta\pmod{2\pi}$, i.e. $\theta=\frac{2\pi k}{31}$ or $\theta=\frac{2\pi k}{33}$. In $[0,\pi]$ these are $\frac{2\pi k}{31}$ ($0\le k\le15$) and $\frac{2\pi k}{33}$ ($0\le k\le16$), and they coincide only at $\theta=0$. The condition $a_1\neq a_0$ excludes the solutions of $\cos2\theta=\cos\theta$, namely $\theta=0$ and $\theta=\frac{2\pi}{3}=\frac{2\pi\cdot11}{33}$. As $\cos$ is injective on $[0,\pi]$, $S$ consists of $2\cos\theta$ for $\theta=\frac{2\pi k}{31}$, $1\le k\le15$, and $\theta=\frac{2\pi k}{33}$, $1\le k\le16$, $k\ne11$: $30$ numbers.</p><p>Now $x^2=4\cos^2\theta=2+2\cos2\theta$. For an odd modulus $N$, the residues $\pm2k$ ($1\le k\le\frac{N-1}2$) are all the nonzero residues mod $N$, so
+\[\sum_{k=1}^{(N-1)/2}\cos\frac{4\pi k}{N}=\frac12\sum_{j=1}^{N-1}\cos\frac{2\pi j}{N}=-\frac12 .\]
+For $N=31$: $\sum(2+2\cos2\theta)=30-1=29$. For $N=33$ over $1\le k\le16$: $32-1=31$, minus the term $k=11$, which is $2+2\cos\frac{4\pi}{3}=1$: this gives $30$. Hence $\sum_{x\in S}x^2=29+30=\boxed{59}$.</p>
+<h4>Solution 2 (Vieta on the degree-32 polynomial)</h4>
+<p>By induction, $a_n$ is a polynomial in $x$ of the form $a_n=x^{2^n}-2^nx^{2^n-2}+(\text{lower terms})$: if this holds for $n$, then $a_n^2-2=x^{2^{n+1}}-2\cdot2^nx^{2^{n+1}-2}+\cdots$. So
+\[Q(x)=a_5-x=x^{32}+0\cdot x^{31}-32x^{30}+\cdots .\]</p><p><em>All roots of $Q$ are real and distinct.</em> For $\theta\in[0,\pi]$ and $x=2\cos\theta$ we have $a_5=2\cos32\theta$ (from $(2\cos\phi)^2-2=2\cos2\phi$), so $Q(2\cos\theta)=0$ whenever $32\theta\equiv\pm\theta\pmod{2\pi}$, i.e. for $\theta=\frac{2\pi k}{31}$ ($0\le k\le15$) and $\theta=\frac{2\pi k}{33}$ ($0\le k\le16$). These are $16+17-1=32$ different angles in $[0,\pi]$ (only $\theta=0$ is repeated), giving $32$ different real roots, hence all roots of $Q$, each simple.</p><p>By Vieta, the sum of the squares of the roots is $0^2-2(-32)=64$. The set $S$ consists of the roots with $a_1\neq a_0$, i.e. all roots except those of $x^2-2=x$, namely $x=2$ and $x=-1$ (both are roots of $Q$, being fixed points). Therefore
+\[\sum_{x\in S}x^2=64-2^2-(-1)^2=\boxed{59}.\]</p>
+</div></details>
+</section>
+<h2 class="ct-group" id="team-round">Team Round</h2>
+<section class="ct-problem" id="p11">
+<h3>Problem 4</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VII scale">E</span>Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure &middot; Tangency and Tangent Geometry</div>
+<div class="ct-text"><p>Let $AB$ be a diameter of a unit circle $\omega_1$ centered at $O$. Circles $\omega_2$ and $\omega_3$ lie inside $\omega_1$ and are each tangent to both $\omega_1$ and $AB$. Suppose that both $O$ and the center of $\omega_3$ lie on $\omega_2$. Find the radius of $\omega_3$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\frac{3-\sqrt5}{2}$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Coordinates of the centres)</h4>
+<div class="ct-fig"><img style="width:276px" src="/assets/contests/2026-27/big-red-11_s1.svg" alt="Figure for the solution"></div>
+<p>Put $O=(0,0)$ and $AB$ on the $x$-axis. A circle of radius $r$ inside $\omega_1$, tangent to $AB$ and to $\omega_1$, has centre $(h,\pm r)$ with distance $1-r$ from $O$ (internal tangency), so
+\[h^2+r^2=(1-r)^2,\qquad h^2=1-2r .\]
+For $\omega_2$, $O$ lies on it, so its centre is at distance $r_2$ from $O$: $h_2^2+r_2^2=r_2^2$, hence $h_2=0$ and $r_2=\frac12$; $\omega_2$ has centre $\left(0,\frac12\right)$, say.</p><p>Let $\omega_3$ have centre $(h,\pm r)$ with $h^2=1-2r$. It lies on $\omega_2$: $h^2+\left(\pm r-\frac12\right)^2=\frac14$. With the sign $+$: $1-2r+r^2-r=0$, i.e. $r^2-3r+1=0$, so $r=\frac{3-\sqrt5}2$ (the other root exceeds $1$). With the sign $-$: $1-2r+r^2+r=0$, i.e. $r^2-r+1=0$, which has no real root. Hence the radius of $\omega_3$ is $\boxed{\dfrac{3-\sqrt5}{2}}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p12">
+<h3>Problem 6</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Algebra &middot; LPS VII, Chapter 1: Inequalities: Core Classical Methods &middot; AM-GM and Mean Inequalities</div>
+<div class="ct-text"><p>Let $a_1,a_2,\dots,a_{10}$ be positive real numbers satisfying $a_1a_2\cdots a_{10}=1$. Find the minimum possible value of
+\[a_1+a_2^2+a_3^2+a_4^3+a_5^3+a_6^3+a_7^4+a_8^4+a_9^4+a_{10}^4 .\]</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$4\sqrt[4]{24}$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Weighted AM-GM)</h4>
+<p>Let $e_i$ be the exponent of $a_i$ in the sum, so $(e_1,\dots,e_{10})=(1,2,2,3,3,3,4,4,4,4)$ and $\sum_i\frac1{e_i}=1+1+1+1=4$. Apply weighted AM-GM to the numbers $e_ia_i^{e_i}$ with weights $\frac{1}{4e_i}$ (which add up to $1$):
+\[\sum_i a_i^{e_i}=4\sum_i\frac{1}{4e_i}\left(e_ia_i^{e_i}\right)\ge4\prod_i\left(e_ia_i^{e_i}\right)^{1/(4e_i)}=4\Bigl(\prod_ie_i^{1/e_i}\Bigr)^{1/4}\Bigl(\prod_i a_i\Bigr)^{1/4}.\]
+Here $\prod_ie_i^{1/e_i}=1\cdot(2^{1/2})^2(3^{1/3})^3(4^{1/4})^4=24$ and $\prod a_i=1$, so the sum is at least $4\sqrt[4]{24}$. Equality holds when all $e_ia_i^{e_i}$ are equal to $\lambda=\sqrt[4]{24}$, i.e. $a_i=(\lambda/e_i)^{1/e_i}$; then $\prod a_i=\lambda^4/24=1$, so this choice is allowed. The minimum is $\boxed{4\sqrt[4]{24}}$.</p>
+<h4>Solution 2 (Tangent line to the exponential)</h4>
+<p>Let $e_i$ be the exponent of $a_i$ in the sum and $\lambda=\sqrt[4]{24}$. Choose $c_i&gt;0$ with $c_i^{e_i}=\lambda/e_i$; then $\prod c_i=\lambda^{\sum 1/e_i}\big/\prod e_i^{1/e_i}=\lambda^4/24=1$.</p><p>Using $e^t\ge1+t$ with $t=e_i\ln(a_i/c_i)$,
+\[a_i^{e_i}=c_i^{e_i}\left(\frac{a_i}{c_i}\right)^{e_i}\ge\frac{\lambda}{e_i}\left(1+e_i\ln\frac{a_i}{c_i}\right)=\frac{\lambda}{e_i}+\lambda\ln\frac{a_i}{c_i}.\]
+Summing over $i$,
+\[\sum_ia_i^{e_i}\ge\lambda\sum_i\frac1{e_i}+\lambda\ln\frac{\prod a_i}{\prod c_i}=4\lambda+\lambda\ln 1=4\sqrt[4]{24},\]
+with equality when $a_i=c_i$ for all $i$. The minimum is $\boxed{4\sqrt[4]{24}}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p13">
+<h3>Problem 7</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Number Theory &middot; LPS VI, Chapter 27: Base Systems and Positional Arithmetic &middot; Digit Patterns Across Bases</div>
+<div class="ct-text"><p>Call an integer $n\ge 2$ <em>Ithacan</em> if, for every nonnegative integer $k$ such that $2^{k+2}\le n$,
+\[\binom{n}{2^k}+\binom{n}{2^{k+1}}+\binom{n}{2^{k+2}}\equiv 1\pmod 2 .\]
+For example, $4$ is Ithacan, since the only possible value of $k$ is $0$, and
+\[\binom41+\binom42+\binom44=4+6+1=11\equiv 1\pmod 2 .\]
+Find the sum of all Ithacan integers less than or equal to $63$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$188$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Lucas's theorem in base 2)</h4>
+<p>Write $n=\sum_k b_k2^k$ in binary, with $L$ digits ($2^{L-1}\le n&lt;2^L$). By Lucas's theorem, $\binom{n}{2^k}\equiv\binom{b_k}{1}=b_k\pmod2$. The condition $2^{k+2}\le n$ means $k+2\le L-1$. So $n$ is Ithacan iff
+\[b_k+b_{k+1}+b_{k+2}\ \text{is odd for } 0\le k\le L-3 .\]</p><ul class="ct-ul"><li><p>If $L\le2$ ($n=2,3$) there is no condition: both are Ithacan.</p></li><li><p>If $L\ge3$, subtracting consecutive conditions gives $b_{k+3}=b_k$, so the digits repeat with period $3$, and the block $(b_0,b_1,b_2)$ has odd weight: it is $111$ or has a single $1$.</p></li></ul><p>Block $111$: $n=2^L-1$, giving $7,15,31,63$. A single $1$ in the positions $\equiv\rho\pmod 3$: the top digit $b_{L-1}=1$ forces $\rho\equiv L-1$, so for $L=3,4,5,6$ we get $n=100_2=4$, $1001_2=9$, $10010_2=18$, $100100_2=36$. The Ithacan numbers up to $63$ are $2,3,4,7,9,15,18,31,36,63$, with sum $\boxed{188}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p14">
+<h3>Problem 8</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 6: Pigeonhole Principle and Density Arguments &middot; Density and Averaging Arguments</div>
+<div class="ct-text"><p>A necklace consists of $2026$ blue beads and some red beads, arranged in a circle. Every block of consecutive beads that contains exactly $8$ blue beads contains at least $5$ red beads. What is the smallest possible number of red beads on the necklace?</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$1448$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Averaging over windows of gaps)</h4>
+<p>Number the blue beads $1,\dots,2026$ around the circle and let $g_i\ge0$ be the number of red beads between blue bead $i$ and blue bead $i+1$ (indices mod $2026$). A block with exactly $8$ blue beads contains the $7$ gaps between its first and last blue bead, and the block running exactly from blue bead $i$ to blue bead $i+7$ contains nothing else. So the condition is
+\[g_i+g_{i+1}+\dots+g_{i+6}\ge5\quad\text{for every } i .\]</p><p><em>Lower bound.</em> Adding these $2026$ inequalities, every gap is counted $7$ times: $7R\ge5\cdot2026$, where $R=\sum g_i$. So $R\ge\frac{10130}{7}&gt;1447$, i.e. $R\ge1448$.</p><p><em>Construction.</em> Make $578$ gaps equal to $0$ and the other $1448$ equal to $1$, placing the zero gaps around the circle so that the distances between consecutive zero gaps are $3$ and $4$ alternately, except that three of the $3$s are replaced by $4$s: $286$ distances $3$ and $292$ distances $4$, total $858+1168=2026$. Any two consecutive distances add up to at least $7$, so any $7$ consecutive gaps contain at most $2$ zero gaps, hence at least $5$ ones. The minimum is $\boxed{1448}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p15">
+<h3>Problem 9</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Number Theory &middot; LPS VII, Chapter 49: Combinatorial Number Theory and Structure &middot; Additive Structure and Sums of Integers</div>
+<div class="ct-text"><p>Determine the smallest integer $n\ge 4$ such that, among any $n$ distinct positive integers relatively prime to $13$, one can choose four pairwise distinct numbers $a,b,c,d$ satisfying
+\[13\mid ad-bc .\]</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$8$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Discrete logarithms and pair sums)</h4>
+<p>The powers of $2$ modulo $13$ are $2,4,8,3,6,12,11,9,5,10,7,1$, so $2$ is a primitive root and every integer coprime to $13$ is $\equiv2^{e}$ for a unique $e\in\mathbb Z_{12}$, its exponent. Then $13\mid ad-bc$ iff $e_a+e_d\equiv e_b+e_c\pmod{12}$. So we need two disjoint pairs among our numbers with equal exponent sums.</p><p><em>Any $8$ numbers work.</em> (1) If some exponent occurs at least $4$ times, take four such numbers. (2) If two different exponents $x\ne y$ each occur at least twice, take $a,c$ with exponent $x$ and $b,d$ with exponent $y$: $e_a+e_d=x+y=e_b+e_c$. (3) Otherwise at most one exponent repeats, at most $3$ times, so there are at least $6$ different exponents. Pick one number for each of six different exponents. They form $\binom62=15$ pairs, but there are only $12$ possible sums mod $12$, so two pairs have equal sums. They cannot share a number (the other two numbers would then have equal exponents), so they give four distinct numbers.</p><p><em>Seven numbers may fail.</em> Take $1,14,27,2,4,3,11$, with exponents $0,0,0,1,2,4,7$. The sums of two of them are: $0+0=0$; $0+x=1,2,4,7$; and the sums of two of $1,2,4,7$: $3,5,8,6,9,11$. These eleven values are all different mod $12$. Two disjoint pairs with equal sums would therefore be of the same kind with the same values: $\{0,0\}$ twice needs four zeros, $\{0,x\}$ twice needs $x$ twice, $\{x,y\}$ twice needs two copies of $x$; none is available. So no such $a,b,c,d$ exist.</p><p>The answer is $n=\boxed{8}$.</p>
+</div></details>
+</section>
+<h2 class="ct-group" id="proof-round">Proof Round</h2>
+<section class="ct-problem" id="p16">
+<h3>Problem 1</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VII scale">E</span>Number Theory &middot; LPS VII, Chapter 31: Extremal Principle and Bounding Arguments &middot; Bounding and Limiting Arguments</div>
+<div class="ct-text"><p>A nonempty finite set $A$ of positive integers is called <em>quadratic</em> if the sum of its elements equals the square of the number of its elements. For example, $\{1,2,3,10\}$ is quadratic, since it is a set with $4$ elements and $1+2+3+10=4^2$. Recall that the elements of a set must be distinct.</p><ul class="ct-parts"><li><p><span class="ct-lbl">(a)</span> Give an example of a quadratic set with $2026$ elements.</p></li><li><p><span class="ct-lbl">(b)</span> Prove that every quadratic set contains at least one odd element.</p></li><li><p><span class="ct-lbl">(c)</span> Prove that any two quadratic sets with the same number of elements must have at least one element in common.</p></li></ul></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>proof; for (a) e.g. $\{1,2,\dots,2025,2053351\}$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Smallest possible sums)</h4>
+<p>Throughout, the key fact is that $k$ distinct positive integers have sum at least $1+2+\dots+k=\frac{k(k+1)}2$.</p><p>(a) Take $A=\{1,2,\dots,2025,N\}$ with $N=2026^2-\frac{2025\cdot2026}{2}=4104676-2051325=2053351$. Since $N&gt;2025$, the $2026$ elements are distinct, and their sum is $2026^2$. So $A$ is quadratic.</p><p>(b) Let $A$ have $n$ elements. If all of them were even, they would be $n$ distinct even positive integers, with sum at least $2+4+\dots+2n=n(n+1)&gt;n^2$. So a quadratic set has an odd element.</p><p>(c) Suppose $A$ and $B$ are quadratic sets with $n$ elements each and no common element. Then $A\cup B$ consists of $2n$ distinct positive integers with sum $n^2+n^2=2n^2$. But such a sum is at least $\frac{2n(2n+1)}{2}=2n^2+n&gt;2n^2$, a contradiction. Hence $A$ and $B$ share an element.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p17">
+<h3>Problem 2</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 25: Diophantine Equations: Factorization and Algebraic Methods &middot; Bounding and Size Arguments</div>
+<div class="ct-text"><p>Let $a$, $b$, and $c$ be positive integers. Determine all triples $(a,b,c)$ for which
+\[(b^2-c^2)^2=a^2+b+3 .\]
+Justify your answer.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$(a,b,c)=(2,2,1)$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Squeezing between consecutive squares)</h4>
+<p>Let $D=|b^2-c^2|$, a nonnegative integer with $D^2=a^2+b+3$. Then $D^2&gt;a^2$, so $D\ge a+1$ and $a^2+b+3=D^2\ge a^2+2a+1$, which gives $2a\le b+2$. Therefore
+\[D^2=a^2+b+3\le\frac{(b+2)^2}{4}+b+3=\frac{(b+4)^2}{4},\qquad D\le\frac{b+4}{2}.\]
+On the other hand $D&gt;0$, so $b\ne c$ and $D=|b-c|(b+c)\ge b+c\ge b+1$. Hence $b+1\le\frac{b+4}2$, i.e. $b\le2$.</p><ul class="ct-ul"><li><p>$b=1$: $c\ge2$ and $D=c^2-1\ge3&gt;\frac52$, impossible.</p></li><li><p>$b=2$: $D\le3$. For $c=1$, $D=3$ and $9=a^2+5$ gives $a=2$. For $c\ge3$, $D\ge5$, impossible.</p></li></ul><p>Check: $(4-1)^2=9=2^2+2+3$. The only solution is $\boxed{(a,b,c)=(2,2,1)}$.</p>
+<h4>Solution 2 (Factoring a difference of squares)</h4>
+<p>Let $D=|b^2-c^2|$. The equation reads $(D-a)(D+a)=b+3&gt;0$, so $D&gt;a$ and $D-a\ge1$. Since $D\ne0$ we have $b\ne c$, and $D=|b-c|(b+c)\ge b+c\ge b+1$.</p><p>If $D-a\ge2$, then $b+3=(D-a)(D+a)\ge2(D+a)\ge2D\ge 2b+2$, so $b\le1$. Then $b=1$, $c\ge2$, $D=c^2-1\ge3$, and $4=(D-a)(D+a)\ge 2(D+a)\ge 8$, a contradiction. So $D-a=1$, and then $D+a=b+3$, i.e. $2D=b+4$. Combined with $D\ge b+1$ this gives $b+4\ge2b+2$, i.e. $b\le2$, and $b$ must be even, so $b=2$ and $D=3$. Then $|4-c^2|=3$ forces $c=1$, and $a=D-1=2$.</p><p>The only solution is $\boxed{(a,b,c)=(2,2,1)}$, which indeed satisfies $(4-1)^2=9=4+2+3$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p18">
+<h3>Problem 3</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 31: Extremal Principle and Bounding Arguments &middot; Bounding and Limiting Arguments</div>
+<div class="ct-text"><p>The Cornellia school district is a circular region $15$ miles in diameter. Students may live anywhere in the district, and elementary schools may be built anywhere in it, including on its boundary.</p><p>The district wants every student to live within $5$ miles of at least one school. Distances are measured in straight lines.</p><ul class="ct-parts"><li><p><span class="ct-lbl">(a)</span> Show how to place $8$ elementary schools so that every student lives within $5$ miles of a school.</p></li><li><p><span class="ct-lbl">(b)</span> Show that $6$ elementary schools suffice to provide the same guarantee.</p></li><li><p><span class="ct-lbl">(c)</span> What is the smallest number of elementary schools needed to provide this guarantee? Exhibit a placement that works for this number of schools and prove that fewer schools cannot suffice. Depending on your approach, you may find it helpful to know $\cos 36^\circ=\frac{1+\sqrt5}{4}$.</p></li></ul></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$5$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Five sectors, and arcs of the boundary)</h4>
+<div class="ct-fig"><img style="width:327px" src="/assets/contests/2026-27/big-red-18_s1.svg" alt="Figure for the solution"></div>
+<p>Let $O$ be the centre, so the district is the disc of radius $\frac{15}{2}$ about $O$, with boundary circle $\Gamma$. A school covers the closed disc of radius $5$ around it.</p><p><em>Five schools suffice.</em> Place schools $S_1,\dots,S_5$ at distance $5$ from $O$, in the directions $90^\circ+72^\circ k$. Cut the district into five sectors of angle $72^\circ$, each centred on the direction of one school. We show that $S_1$ covers its sector; by symmetry the same holds for the others. The disc around $S_1$ contains $O$ (as $OS_1=5$). Let $Q$ be a point of the arc of the sector, at angle $\varphi$ from $OS_1$ with $|\varphi|\le36^\circ$. By the law of cosines,
+\[S_1Q^2=\tfrac{225}{4}+25-75\cos\varphi\le\tfrac{325}{4}-75\cos36^\circ=\tfrac{325}{4}-\tfrac{75(1+\sqrt5)}{4}=\tfrac{250-75\sqrt5}{4}\le25,\]
+the last step because $75\sqrt5\ge150$, i.e. $\sqrt5\ge2$. So the disc contains $O$ and every point $Q$ of the arc; being convex, it contains every segment $OQ$, i.e. the whole sector. Hence five schools suffice. This answers (a) and (b) as well: add any $3$ (or $1$) further schools.</p><p><em>Four schools do not suffice.</em> A disc of radius $5$ meets the circle $\Gamma$ in an arc (possibly empty), and any two points of this arc are at most $10$ apart. Such an arc has angle $\alpha&lt;180^\circ$, since otherwise it would contain two diametrically opposite points of $\Gamma$, which are $15$ apart. A chord of $\Gamma$ subtending a central angle $\alpha\le180^\circ$ has length $15\sin\frac\alpha2$; applied to the endpoints of the arc, this gives $\sin\frac\alpha2\le\frac{10}{15}=\frac23&lt;\frac{\sqrt2}2$, i.e. $\alpha&lt;90^\circ$. Four such arcs cover less than $360^\circ$ of $\Gamma$, so some point $Q$ of $\Gamma$ is more than $5$ miles from every school. The uncovered set is open, so points of the district near $Q$, where students live, are uncovered too.</p><p>The smallest number of schools is $\boxed{5}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p19">
+<h3>Problem 4</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 51: Spiral Similarity and Advanced Transformational Geometry &middot; Spiral Similarity Centers</div>
+<div class="ct-text"><p>Let $ABCD$ be a convex quadrilateral with $\angle ABC=\angle ADC$. Let $M$ and $N$ lie in the interiors of sides $AB$ and $AD$, respectively, such that $\angle MCD=\angle NCB$.</p><p>Suppose that the circumcircles of triangles $AMN$ and $ABD$ intersect at $A$ and at a second point $K\neq A$. Prove that $AK\perp CK$.</p><div class="ct-fig"><img style="width:267px" src="/assets/contests/2026-27/big-red-19.svg" alt="Figure for Proof Round, Problem 4"></div></div>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Two similarities that agree on line AB)</h4>
+<div class="ct-fig"><img style="width:267px" src="/assets/contests/2026-27/big-red-19_s1.svg" alt="Figure for the solution"></div>
+<p>Let $X$ and $Y$ be the feet of the perpendiculars from $C$ to the lines $AB$ and $AD$, and let $\Omega$ be the circle with diameter $AC$; it passes through $X$ and $Y$ (a foot may coincide with $A$). The points $X,Y,C$ are distinct: $C$ is not on line $AB$ or line $AD$, and $X=Y$ would force $X=Y=A$, with $CA$ perpendicular to both $AB$ and $AD$. So $\Omega$ is the circle through $C$, $X$, $Y$. We use directed angles between lines, modulo $180^\circ$.</p><p><em>Step 1: a mirror similarity centred at $C$.</em> Let $\sigma$ be the reflection in the bisector of $\angle BCD$ followed by the dilation about $C$ with ratio $\frac{CD}{CB}$. Then $\sigma(B)=D$. Since $ABCD$ is convex, $A$ lies on the same side of $BC$ as $D$ and on the same side of $CD$ as $B$, and $\sigma$ exchanges these two sides. As $\angle CBA=\angle CDA$, $\sigma$ maps the ray $BA$ to the ray $DA$, so $\sigma$ maps line $AB$ onto line $AD$, and it maps the foot $X$ to the foot $Y$. Next, the rays $CM$ and $CN$ lie inside $\angle BCD$, and
+\[\angle BCM=\angle BCD-\angle MCD=\angle BCD-\angle NCB=\angle DCN .\]
+The image of ray $CM$ under $\sigma$ makes the angle $\angle BCM$ with $CD$ inside $\angle BCD$, so it is the ray $CN$. Hence $\sigma(M)$, which lies on line $AD$ and on ray $CN$, is $N$.</p><p><em>Step 2: the spiral similarity centred at $K$.</em> The point $K$ is not on line $AB$: this line meets the circle $ABD$ only at $A,B$ and the circle $AMN$ only at $A,M$, and $B\ne M$. Likewise $K$ is not on line $AD$. Since $A,B,D,K$ are concyclic and $A,M,N,K$ are concyclic,
+\begin{align*}
+\angle(BK,BM)&amp;=\angle(BK,BA)=\angle(DK,DA)=\angle(DK,DN),\\
+\angle(MK,MB)&amp;=\angle(MK,MA)=\angle(NK,NA)=\angle(NK,ND).
+\end{align*}
+So triangles $KBM$ and $KDN$ are directly similar, and the spiral similarity $\tau$ with centre $K$ taking $B$ to $D$ takes $M$ to $N$; it maps line $AB$ onto line $AD$.</p><p><em>Step 3: $\tau(X)=Y$.</em> Restricted to line $AB$, both $\sigma$ and $\tau$ are maps onto line $AD$ that multiply all distances by a fixed factor; such a map is determined by the images of two distinct points. They agree at $B$ and $M$, so they agree on all of line $AB$; in particular $\tau(X)=\sigma(X)=Y$.</p><p><em>Step 4: $K$ lies on $\Omega$.</em> A spiral similarity turns every line through the same angle $\theta$. Since $K$ is not on lines $AB$, $AD$, we have $K\ne X,Y$, and $\tau$ maps line $KX$ to line $KY$, so $\angle(KX,KY)=\theta$. Also $\tau$ maps line $CX$, the perpendicular to $AB$ at $X$, to the perpendicular to $\tau(AB)=AD$ at $\tau(X)=Y$, which is line $CY$; so $\angle(CX,CY)=\theta$. Hence $\angle(KX,KY)=\angle(CX,CY)$, and $K$ lies on the circle through $C,X,Y$, which is $\Omega$.</p><p><em>Step 5: $K\ne C$, and the conclusion.</em> Suppose $K=C$. Then $C$ lies on the circle $ABD$, so $\angle ABC+\angle ADC=180^\circ$ and both angles are $90^\circ$. In the right triangle $MBC$, $\angle BMC&lt;90^\circ$, so $\angle AMC&gt;90^\circ$; likewise $\angle ANC&gt;90^\circ$. But $C$ also lies on the circle $AMN$, and $M,N$ are on opposite sides of $AC$ (as $B,D$ are), so $AMCN$ is a cyclic quadrilateral with $\angle AMC+\angle ANC=180^\circ$, a contradiction. So $K\ne C$, and also $K\ne A$. The angle $\angle AKC$ is inscribed in a semicircle of $\Omega$, so $\angle AKC=90^\circ$, that is, $AK\perp CK$.</p>
+<h4>Solution 2 (Inversion at A and two projections)</h4>
+<p>We use position vectors with origin $A$; $P\cdot Q$ is the dot product and $|P|$ the length of $P$.</p><p><em>Step 1: two similar triangles.</em> Since $ABCD$ is convex and $M$, $N$ are interior points of the sides $AB$, $AD$, the rays $CM$ and $CN$ lie inside the angle $BCD$. Hence
+\[\angle BCM=\angle BCD-\angle MCD=\angle BCD-\angle NCB=\angle DCN .\]
+As $M$ lies on the segment $AB$, the ray $BM$ is the ray $BA$, so $\angle CBM=\angle CBA=\angle CDA=\angle CDN$. Therefore triangles $BCM$ and $DCN$ are similar ($B\leftrightarrow D$, $C\leftrightarrow C$, $M\leftrightarrow N$), and
+\[\frac{BM}{BC}=\frac{DN}{DC}=\lambda\qquad\text{for some }\lambda&gt;0 .\]</p><p><em>Step 2: notation and two projections.</em> Let $u$ and $v$ be the unit vectors in the directions of $AB$ and $AD$; they are not parallel, since $A$, $B$, $D$ are not collinear. Write $B=bu$, $D=dv$, $M=mu$, $N=nv$ with $0&lt;m&lt;b$ and $0&lt;n&lt;d$, so $BM=b-m$, $DN=d-n$, and by Step 1, $BC=\frac{b-m}{\lambda}$, $DC=\frac{d-n}{\lambda}$. Let $\gamma=\angle ABC=\angle ADC$. The angle at $B$ between the direction $-u$ (towards $A$) and $C-B$ is $\gamma$, so $(C-B)\cdot(-u)=BC\cos\gamma$, that is,
+\[C\cdot u=b-BC\cos\gamma=b-\frac{(b-m)\cos\gamma}{\lambda},\quad\text{and likewise}\quad C\cdot v=d-\frac{(d-n)\cos\gamma}{\lambda}.\]</p><p><em>Step 3: inversion.</em> Consider the inversion with centre $A$ and radius $1$, which sends each point $P\ne A$ to $P'=\frac{P}{|P|^2}$. A circle through $A$ with centre $O$ has equation $|P|^2=2\,O\cdot P$; dividing by $|P|^2$ shows that its points $P\ne A$ go to the points of the line $2\,O\cdot P'=1$. So the circle $ABD$ is sent to the line through $B'=\frac ub$ and $D'=\frac vd$, and the circle $AMN$ to the line through $M'=\frac um$ and $N'=\frac vn$. Since $K\ne A$ lies on both circles, $K'$ lies on both lines:
+\[K'=r\,\frac ub+(1-r)\,\frac vd=s\,\frac um+(1-s)\,\frac vn\qquad\text{for some real }r,s .\]
+As $u$, $v$ are not parallel, the coefficients agree: $\frac rb=\frac sm$ and $\frac{1-r}d=\frac{1-s}n$. So $s=\frac{rm}b$ and $1-s=\frac{(1-r)n}d$; adding, $\frac{rm}b+\frac{(1-r)n}d=1$. Subtracting this from $r+(1-r)=1$ gives
+\[\frac{r(b-m)}b+\frac{(1-r)(d-n)}d=0. \tag{1}\]</p><p><em>Step 4: $K'\cdot C=1$.</em> By Step 2 and (1),
+\begin{align*}K'\cdot C&amp;=\frac rb\,C\cdot u+\frac{1-r}d\,C\cdot v\\&amp;=r+(1-r)-\frac{\cos\gamma}{\lambda}\Bigl(\frac{r(b-m)}b+\frac{(1-r)(d-n)}d\Bigr)=1 .\end{align*}
+(Nothing is divided by $\cos\gamma$, so the case $\gamma=90^\circ$ is included.) Since $K'=\frac K{|K|^2}$, this says $K\cdot C=|K|^2$, that is,
+\[(A-K)\cdot(C-K)=(-K)\cdot(C-K)=|K|^2-K\cdot C=0 .\]</p><p><em>Step 5: $K\ne C$, and the conclusion.</em> Suppose $K=C$. Then $C$ lies on the circle $ABD$, so $ABCD$ is cyclic, $\angle ABC+\angle ADC=180^\circ$ and $\gamma=90^\circ$. In the right triangle $MBC$ the angle $\angle BMC$ is acute, so $\angle AMC&gt;90^\circ$; likewise $\angle ANC&gt;90^\circ$. But $C$ also lies on the circle $AMN$, and $M$, $N$ lie on opposite sides of $AC$ (as $B$, $D$ do), so $AMCN$ is a quadrilateral inscribed in a circle and $\angle AMC+\angle ANC=180^\circ$, a contradiction. So $K\ne C$, and $K\ne A$ is given. The vectors $A-K$ and $C-K$ are therefore nonzero with dot product $0$, which means $AK\perp CK$.</p>
+</div></details>
+</section>
+{% endraw %}
