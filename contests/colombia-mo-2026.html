@@ -360,7 +360,7 @@ be added legally, which fills the $3\times 3$ square, and then the board is fill
 \boxed{\begin{cases} n^2-2n, &amp; n \text{ even},\\ n^2-2n-1, &amp; n\ge 3 \text{ odd},\\ 1, &amp; n=1.\end{cases}}
 \]</p>
 <h4>Solution 2 (Counting edges, and cycles with nothing inside)</h4>
-<p>We read the rule as in Solution 1: after each painting, every white cell must have at least two white neighbours (cells sharing a
+<p>We read the rule as: after each painting, every white cell must have at least two white neighbours (cells sharing a
 side). For $n=1$ the single cell can be painted, so the answer is $1$; from now on $n\ge2$.</p><p><em>Edge count.</em> Join two cells by an edge when they share a side; the board has $2n(n-1)$ edges. For a set $X$ of cells let $e(X)$ be the
 number of edges with both ends in $X$. Let $W_0\supset W_1\supset\dots\supset W_k=W$ be the white sets during a legal painting, $W_0$ the whole board,
 $W_t=W_{t+1}\cup\{z_t\}$. The cell $z_t$ has at least two neighbours in $W_t$ (for $t=0$ because $n\ge2$, for $t\ge1$ by the rule), and they lie in
@@ -383,8 +383,20 @@ them, then, as its inside is connected and contains no lattice point by (i), two
 other than its endpoints are inside the region, so $\sigma$ is not a side of $\Gamma$; its endpoints are lattice points of the closed region, so by
 (i) they lie on $\Gamma$. Thus two cells of the cycle are adjacent through an edge that is not a cycle edge, and they have three neighbours in $W$,
 a contradiction. So $\Gamma$ is a single unit square, i.e. the piece is a $2\times2$ block of cells.</p><p>Hence $W$ consists of $2\times2$ blocks and $w$ is a multiple of $4$; but for odd $n$, $2n\equiv2\pmod4$. So $w\ge2n+1$, and at most $n^2-2n-1$
-cells are black.</p><p><em>Constructions.</em> The constructions of Solution 1 (diagonal $2\times2$ blocks, and for odd $n$ a $3\times3$ block without two opposite corners
-at the end) leave exactly $2n$ white cells for even $n$ and $2n+1$ for odd $n\ge3$. Therefore the greatest number of black cells is
+cells are black.</p><p><em>Constructions.</em> Write $(r,c)$ for the cell in row $r$ and column $c$. Call it <em>legal</em> to add to a set of cells a cell with at least
+two neighbours in the set. Suppose $W$ satisfies the rule (every cell of $W$ has at least two neighbours in $W$) and the whole board can be
+obtained from $W$ by legal additions. Then painting the added cells in the reverse order is a legal painting that ends with white set $W$: each
+intermediate white set $Y$ is obtained from $W$ by legal additions, and adding cells never lowers a cell's number of neighbours in the set, so each
+cell of $Y$ has at least two neighbours in $Y$ (a cell of $W$ already has two in $W$; an added cell had two when it was added).</p><p><em>Filling the board.</em> Let $Q_m$ be the square of rows and columns $1,\dots,m$. Suppose a set contains $Q_m$ and the cell $(m+1,m+1)$, with
+$m&lt;n$. The cell $(m,m+1)$ has the neighbours $(m,m)$ and $(m+1,m+1)$, so it can be added. Going up the column, each of $(m-1,m+1),\dots,(1,m+1)$
+has a neighbour in $Q_m$ and the neighbour just added, so it can be added. Going left along row $m+1$ from $(m+1,m+1)$, each of
+$(m+1,m),\dots,(m+1,1)$ has a neighbour in $Q_m$ and the neighbour just added. Now the set contains $Q_{m+1}$. (Cells already in the set are
+simply skipped.) Hence, if a set contains every diagonal cell $(i,i)$, $1\le i\le n$, then starting from $Q_1=\{(1,1)\}$ and repeating this step
+fills the whole board by legal additions.</p><ul class="ct-ul"><li><p>$n$ even: let $W$ be the union of the $n/2$ blocks $\{2i-1,2i\}\times\{2i-1,2i\}$, $1\le i\le n/2$. Each cell of $W$ has two neighbours in its
+block, and $W$ contains the whole diagonal. So $W$ can be reached, $w=2n$, and $n^2-2n$ cells are black.</p></li><li><p>$n$ odd, $n\ge3$: let $W$ be the union of the $(n-3)/2$ blocks $\{2i-1,2i\}\times\{2i-1,2i\}$, $1\le i\le(n-3)/2$, and the $3\times3$ square
+of rows and columns $n-2,n-1,n$ without its corners $(n-2,n)$ and $(n,n-2)$. Each of these $7$ cells has at least two neighbours among them (the
+centre has four; each of the other six has two, for example $(n-2,n-1)$ has $(n-2,n-2)$ and $(n-1,n-1)$), and $W$ contains the whole diagonal. So
+$W$ can be reached, $w=4\cdot\frac{n-3}2+7=2n+1$, and $n^2-2n-1$ cells are black.</p></li></ul><p>Therefore the greatest number of black cells is
 \[
 \boxed{\begin{cases} n^2-2n, &amp; n \text{ even},\\ n^2-2n-1, &amp; n\ge 3 \text{ odd},\\ 1, &amp; n=1.\end{cases}}
 \]</p>
