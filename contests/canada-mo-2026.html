@@ -123,7 +123,7 @@ is worth $kD-(k-1)D=D$, and it is the $k$-th group. Hence every collection worth
 <div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 52: Advanced Combinatorial Structure and Hybrid Methods</div>
 <div class="ct-text"><p>Turbo the snail plays a game on a board with $2n$ rows and $2n$ columns. There are $2n^2$ monsters who first choose to occupy $2n^2$ distinct cells, with Turbo's knowledge. After this, Turbo chooses any cell and labels it $1$. Starting from this cell, Turbo then walks through all other $4n^2-1$ cells exactly once, labelling them in order with $2,3,\dots,4n^2$. Turbo only moves between cells which share an edge, and never returns to a cell.</p><p>The final score is the sum of the labels of the cells with monsters. The monsters are trying to place themselves to maximize the score, while Turbo is trying to minimize the score based on the monsters' positions.</p><p>Find, in terms of $n$, the largest score which the monsters can guarantee.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\boxed{4n^4}$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Chessboard for the monsters, cycle lemma for Turbo)</h4>
 <div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/canada-mo-3_s1.svg" alt="Figure for the solution"></div>
 <p>Let $N=4n^2$; there are $N/2=2n^2$ monsters.</p><p><strong>The monsters can get $4n^4$.</strong> Colour the board like a chessboard and let the monsters occupy the $2n^2$ black cells. Neighbouring cells have different
@@ -146,6 +146,18 @@ label $i+1$; in the backward walk $c_0$ gets $1$ and $c_i$ $(i\ge1)$ gets $N-i+1
 Adding the two scores, the monster on $c_0$ contributes $2$ and each of the other $\frac N2-1$ monsters contributes $N+2$:
 \[\text{forward score}+\text{backward score}=2+\Bigl(\frac N2-1\Bigr)(N+2)=\frac{N^2}{2}=8n^4 .\]
 Hence one of the two walks gives a score of at most $4n^4$, whatever the monsters do.</p><p>Both bounds together give the answer $\boxed{4n^4}$.</p>
+<h4>Solution 3 (Averaging over all starting cells of a cycle)</h4>
+<p>Let $N=4n^2$ and $K=N/2=2n^2$, the number of monsters.</p><p><strong>The monsters can get $4n^4$.</strong> Let the monsters occupy the black cells of a chessboard colouring. Turbo's consecutive cells share an edge, so their colours alternate;
+the monsters receive either the odd labels $1,3,\dots,N-1$, with sum $K^2=4n^4$, or the even labels $2,4,\dots,N$, with a larger sum. So the score is at least $4n^4$.</p><p><strong>Turbo can keep the score at most $4n^4$.</strong> The board has a Hamiltonian cycle (a closed walk through all cells, consecutive cells sharing an edge): go along row $1$
+from column $2$ to column $2n$, snake through rows $2,\dots,2n$ inside columns $2,\dots,2n$ (row $2$ right to left, row $3$ left to right, and so on), which ends in row $2n$,
+column $2$ because the number of rows is even, and return up column $1$ to row $1$, next to the start. Number the cells along the cycle $c_0,c_1,\dots,c_{N-1}$, indices taken
+modulo $N$.</p><p>For each $s$, Turbo may start at $c_s$ and walk $c_s,c_{s+1},\dots,c_{s+N-1}$; then $c_j$ gets the label $((j-s)\bmod N)+1$. Let $S(s)$ be the resulting score.</p><p><em>The mean of $S$.</em> As $s$ runs over $0,1,\dots,N-1$, each monster cell receives every label $1,2,\dots,N$ exactly once. Hence
+\[\sum_{s=0}^{N-1}S(s)=K\,(1+2+\dots+N)=K\cdot\frac{N(N+1)}{2},\]
+so the mean of $S$ is $\frac{K(N+1)}{2}=K^2+\frac K2$.</p><p><em>Consecutive starts.</em> Passing from the start $c_s$ to the start $c_{s+1}$, every cell other than $c_s$ has its label lowered by $1$, while $c_s$ goes from label $1$ to label $N$.
+If $c_s$ holds a monster, the score changes by $-(K-1)+(N-1)=K$; otherwise it changes by $-K$. In both cases
+\[|S(s+1)-S(s)|=K .\]</p><p><em>Pairing.</em> Split the $N$ starts into the $K$ pairs $\{0,1\},\{2,3\},\dots,\{N-2,N-1\}$. In each pair the two scores differ by exactly $K$, so the smaller one equals the average
+of the pair minus $\frac K2$. Averaging over the $K$ pairs, the mean of the $K$ smaller scores equals the mean of all $N$ scores minus $\frac K2$, that is, $K^2$. So at least one
+of these smaller scores is at most $K^2$, and Turbo, starting at the corresponding cell, gets a score of at most $K^2=4n^4$, whatever the monsters do.</p><p>Both bounds together give the answer $\boxed{4n^4}$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p4">

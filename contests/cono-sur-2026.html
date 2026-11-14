@@ -75,7 +75,7 @@ description: Cono Sur Mathematical Olympiad 2026: problems with answers and solu
 <h3>Problem 1</h3>
 <div class="ct-meta">Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure</div>
 <div class="ct-text"><p>Let $ABC$ be a triangle. Let $M$ be the midpoint of segment $AC$ and $N$ the midpoint of segment $BM$. If $\angle BAN=\angle ACN$, prove that $AN=AM$.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Completing a parallelogram and the power of $A$)</h4>
 <div class="ct-fig"><img style="width:246px" src="/assets/contests/2026-27/cono-sur-1_s1.svg" alt="Figure for the solution"></div>
 <p>Let $D$ be the point such that $N$ is the midpoint of $AD$. The diagonals $AD$ and $BM$ of the quadrilateral
@@ -114,6 +114,42 @@ p^2+2p+q^2=3 .
 AN^2=\frac{(p+1)^2+q^2}{4}=\frac{(p^2+2p+q^2)+1}{4}=\frac{3+1}{4}=1=AM^2,
 \]
 so $AN=AM$.</p>
+<h4>Solution 3 (Areas, the cosine rule and the median formula)</h4>
+<p>Write $s=AM=MC$, $u=AN$, $v=CN$, $b=AB$ and $w=BN=NM$, and let $\theta=\angle BAN=\angle ACN$. The triangles
+$ABN$, $ACN$ and $ABM$ are not degenerate, because $B$ does not lie on line $AC$ and $N$ lies strictly between $B$ and $M$.</p><p><em>Step 1: an area relation.</em> Let $h$ be the distance from $B$ to line $AC$. Since $N$ is the midpoint of $BM$ and $M$ lies on $AC$, the
+distance from $N$ to line $AC$ is $h/2$. Hence
+\[
+[ACN]=\tfrac12\cdot AC\cdot\tfrac h2=\tfrac12\cdot 2s\cdot\tfrac h2=\tfrac12\,s\,h=[ABM].
+\]
+Also $[ABN]=\tfrac12[ABM]$, since the triangles $ABN$ and $ABM$ have the same height from $A$ and the base $BN$ is half of $BM$. So
+$[ACN]=2[ABN]$. The angle $\theta$ lies between the sides $AB$, $AN$ of triangle $ABN$ and between the sides $CA$, $CN$ of triangle $ACN$, so
+\[
+[ABN]=\tfrac12\,b\,u\sin\theta,\qquad [ACN]=\tfrac12\cdot 2s\cdot v\sin\theta .
+\]
+Since $\sin\theta&gt;0$, the relation $[ACN]=2[ABN]$ gives
+\[
+sv=bu. \tag{1}
+\]</p><p><em>Step 2: the cosine rule.</em> In triangle $ABN$ the side opposite $\theta$ is $BN=w$, and in triangle $ACN$ the side opposite $\theta$ is
+$AN=u$. So
+\[
+2bu\cos\theta=b^2+u^2-w^2,\qquad 4sv\cos\theta=4s^2+v^2-u^2 .
+\]
+By (1) the second left side is twice the first, hence
+\[
+4s^2+v^2-u^2=2\left(b^2+u^2-w^2\right). \tag{2}
+\]
+(We never divide by $\cos\theta$, which may be $0$.)</p><p><em>Step 3: the median formula.</em> If $W$ is the midpoint of $YZ$, then $XY^2+XZ^2=2XW^2+2WY^2$ for every point $X$: with vectors from $W$,
+write $\vec x=\overrightarrow{WX}$ and $\vec y=\overrightarrow{WY}$, so that $\overrightarrow{WZ}=-\vec y$, and then
+$|\vec x-\vec y|^2+|\vec x+\vec y|^2=2|\vec x|^2+2|\vec y|^2$. Applying this to the midpoint $N$ of $BM$ with $X=A$, and to the midpoint $M$
+of $AC$ with $X=N$, gives
+\[
+b^2+s^2=2u^2+2w^2,\qquad u^2+v^2=2w^2+2s^2 .
+\]
+So $b^2=2u^2+2w^2-s^2$ and $v^2=2s^2+2w^2-u^2$. Substituting into (2):
+\[
+6s^2+2w^2-2u^2=2\left(3u^2+w^2-s^2\right)=6u^2+2w^2-2s^2 ,
+\]
+that is, $8s^2=8u^2$. Hence $AN=u=s=AM$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p2">
@@ -216,7 +252,7 @@ then each row and column sum of the board equals a row or column sum of a block,
 <h3>Problem 5</h3>
 <div class="ct-meta">Geometry &middot; LPS VII, Chapter 40: Vector Geometry and Affine Structure</div>
 <div class="ct-text"><p>Let $ABC$ be a triangle and let $P$ be a point in the plane (distinct from the vertices of the triangle). Denote by $A_1$, $B_1$, $C_1$ the midpoints of sides $BC$, $CA$ and $AB$, respectively. We will also denote by $A_2$, $B_2$ and $C_2$ the midpoints of $AP$, $BP$ and $CP$, respectively. If the segments $A_1A_2$, $B_1B_2$, $C_1C_2$ have the same length then prove that $P$ is the orthocenter of triangle $ABC$.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Vectors from the circumcentre)</h4>
 <p>Put the origin at the circumcentre $O$ of $ABC$ and write $\vec a,\vec b,\vec c,\vec p$ for the position vectors of
 $A,B,C,P$; then $|\vec a|=|\vec b|=|\vec c|=R$, the circumradius. Let $\vec u=\vec p-(\vec a+\vec b+\vec c)$. Since
@@ -248,6 +284,29 @@ B_1B_2^2-C_1C_2^2=\frac{|\vec u+\vec v|^2-|\vec u-\vec v|^2}{4}=\vec u\cdot\vec 
 As $P\ne A$, this means $AP\perp BC$: $P$ lies on the altitude from $A$.</p><p>In exactly the same way, the parallelogram $A_1C_2A_2C_1$ (sides parallel to $BP$ and $CA$, diagonals $C_1C_2$ and $A_1A_2$) gives
 $C_1C_2^2-A_1A_2^2=\overrightarrow{BP}\cdot\overrightarrow{AC}$, so $A_1A_2=C_1C_2$ and $P\ne B$ give $BP\perp CA$: $P$ lies on the altitude
 from $B$. Two altitudes meet only at the orthocentre, so $P$ is the orthocentre of $ABC$.</p>
+<h4>Solution 3 (The common midpoint of the three segments and a homothety)</h4>
+<div class="ct-fig"><img style="width:354px" src="/assets/contests/2026-27/cono-sur-5_s3.svg" alt="Figure for the solution"></div>
+<p>Let $G$ be the centroid and $O$ the circumcentre of $ABC$. Put the origin at $G$ and write
+$\vec a,\vec b,\vec c,\vec p,\vec o$ for the position vectors of $A,B,C,P,O$; then $\vec a+\vec b+\vec c=\vec 0$.</p><p><em>Step 1: the three segments have a common midpoint.</em> The midpoint $A_1$ of $BC$ has position vector $\frac{\vec b+\vec c}{2}=-\frac{\vec a}2$,
+and $A_2$ has position vector $\frac{\vec a+\vec p}{2}$. So the midpoint of $A_1A_2$ has position vector
+\[
+\frac12\left(-\frac{\vec a}{2}+\frac{\vec a+\vec p}{2}\right)=\frac{\vec p}{4}.
+\]
+In the same way the midpoints of $B_1B_2$ and $C_1C_2$ have position vector $\frac{\vec p}{4}$. Call this common midpoint $K$. Then
+$KA_1=\frac12A_1A_2$, $KB_1=\frac12B_1B_2$ and $KC_1=\frac12C_1C_2$, so the hypothesis says $KA_1=KB_1=KC_1$. The points $A_1,B_1,C_1$ are not
+collinear (see the homothety below), so $K$ is the circumcentre of triangle $A_1B_1C_1$.</p><p><em>Step 2: a homothety.</em> Let $\eta$ be the homothety with centre $G$ and ratio $-\frac12$, that is, $\vec x\mapsto-\frac12\vec x$. It sends
+$A,B,C$ to $A_1,B_1,C_1$ (for instance $-\frac12\vec a=A_1$), so $A_1B_1C_1$ is a triangle. It multiplies all distances by $\frac12$, so the
+point $\eta(O)$ is equidistant from $A_1,B_1,C_1$; hence $\eta(O)$ is the circumcentre $K$ of $A_1B_1C_1$. Thus $-\frac12\vec o=\frac14\vec p$,
+i.e. $\vec p=-2\vec o$, and therefore $\eta(P)=O$.</p><p><em>Step 3: $AP$ is perpendicular to $BC$.</em> Since $\eta$ maps $A\mapsto A_1$ and $P\mapsto O$, it multiplies vectors by $-\frac12$:
+\[
+\overrightarrow{A_1O}=-\tfrac12\,\overrightarrow{AP}.
+\]
+As $P\ne A$, the vector $\overrightarrow{AP}$ is not zero, so $O\ne A_1$ and the line $A_1O$ is parallel to $AP$. The point $O$ is equidistant
+from $B$ and $C$, and $A_1$ is the midpoint of $BC$, so the line $A_1O$ is the perpendicular bisector of $BC$. Hence $AP\perp BC$, and $P$ lies
+on the altitude from $A$.</p><p>In the same way $\eta$ maps $B\mapsto B_1$ and $P\mapsto O$, so $\overrightarrow{B_1O}=-\frac12\overrightarrow{BP}\ne\vec 0$ (as $P\ne B$), the line
+$B_1O$ is the perpendicular bisector of $CA$, and $BP\perp CA$. The altitudes from $A$ and $B$ are not parallel and meet only at the
+orthocentre, so $P$ is the orthocentre of $ABC$. (The figure shows the configuration: $P$, $K$, $G$, $O$ lie on one line, with
+$\overrightarrow{GP}=-2\overrightarrow{GO}$ and $\overrightarrow{GK}=-\frac12\overrightarrow{GO}$.)</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p6">

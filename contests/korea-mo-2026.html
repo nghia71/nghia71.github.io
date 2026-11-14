@@ -125,7 +125,7 @@ identity, so $\psi=\mathrm{id}$: for every $P$, the lines $PX$ and $QY$ meet $\e
 <div class="ct-text"><p>A sequence $\{a_n\}$ $(n\ge1)$ satisfies</p><ul class="ct-ul"><li><p>$a_1=a_2=1$,</p></li><li><p>for all positive integers $n$, $\displaystyle a_{n+2}=a_n+\frac{1}{a_{n+1}^2+a_n^2}$.</p></li></ul><p>Determine whether there exist infinitely many positive integers $n$ such that
 \[a_{2n}^3&gt;\frac{3n}{2}-2026\sqrt n.\]</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p><strong>No</strong>: the inequality holds for only finitely many $n$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 (The odd terms stay ahead)</h4>
 <p><em>Answer: no.</em> Write $x_k=a_{2k-1}$ and $y_k=a_{2k}$ $(k\ge1)$. The recurrence says
 \[x_{k+1}=x_k+\frac1{x_k^2+y_k^2},\qquad y_{k+1}=y_k+\frac1{x_{k+1}^2+y_k^2}.\]
@@ -170,6 +170,26 @@ If $y_k^3\le k$, then $y_k^3\le k&lt;\frac{3k}2-2026\sqrt k$ as soon as $k&gt;4\
 which is less than $\frac{3k}2-2026\sqrt k$ for all large $k$, because $\frac{3\delta}2k^{2/3}-2026\sqrt k-\frac{13}2\ln k-6\to\infty$ (as
 $k^{2/3}/\sqrt k=k^{1/6}\to\infty$). Either way $a_{2k}^3=y_k^3&lt;\frac{3k}2-2026\sqrt k$ for all large $k$, so the inequality holds for only finitely
 many $n$; the answer is <strong>no</strong>.</p>
+<h4>Solution 3 (A shifted cube for the even terms)</h4>
+<p><em>Answer: no.</em> Write $x_k=a_{2k-1}$ and $y_k=a_{2k}$ $(k\ge1)$. The recurrence says
+\[x_{k+1}=x_k+h_k,\quad h_k=\frac1{x_k^2+y_k^2},\qquad y_{k+1}=y_k+\varepsilon_k,\quad \varepsilon_k=\frac1{x_{k+1}^2+y_k^2},\]
+so all terms are at least $1$ and both sequences are increasing.</p><p><em>Step 1: the gap.</em> Let $D_k=x_k-y_k$, so $D_1=0$ and $D_{k+1}-D_k=h_k-\varepsilon_k&gt;0$ because $x_{k+1}&gt;x_k$. From $a_3=\frac32$ and
+$a_4=1+\frac4{13}=\frac{17}{13}$ we get $D_2=\frac5{26}$. Put $d=\frac5{52}$; then $D_k\ge2d$ for $k\ge2$, so for every $k\ge1$
+\[x_{k+1}=y_{k+1}+D_{k+1}&gt;y_k+2d.\]
+The gap is also less than $\frac12$: since $y_{k+1}&gt;y_k$ we have $\varepsilon_k&gt;h_{k+1}$, hence
+\[D_k=\sum_{j=1}^{k-1}(h_j-\varepsilon_j)&lt;\sum_{j=1}^{k-1}(h_j-h_{j+1})=h_1-h_k&lt;h_1=\tfrac12 .\]
+<em>Step 2: a lower bound for $y_k^3$.</em> By Step 1, $x_{k+1}=x_k+h_k&lt;y_k+\frac12+\frac12\le2y_k$, so $\varepsilon_k&gt;\frac1{5y_k^2}$ and
+$y_{k+1}^3-y_k^3&gt;3y_k^2\varepsilon_k&gt;\frac35$. Hence $y_k^3\ge1+\frac35(k-1)&gt;\frac{3k}5$ for all $k\ge1$.</p><p><em>Step 3: the shifted cube.</em> Let $U_k=y_k+d\ (\ge1)$. By Step 1,
+\[\varepsilon_k&lt;\frac1{(y_k+2d)^2+y_k^2}=\frac1{2(y_k+d)^2+2d^2}&lt;\frac1{2U_k^2}.\]
+Therefore, writing $U=U_k$,
+\[U_{k+1}^3-U_k^3=3U^2\varepsilon_k+3U\varepsilon_k^2+\varepsilon_k^3&lt;\frac32+\frac3{4U^3}+\frac1{8U^6}\le\frac32+\frac1{U^3},\]
+the last step because $\frac1{8U^6}\le\frac1{4U^3}$ for $U\ge1$. By Step 2, $\frac1{U_k^3}&lt;\frac1{y_k^3}&lt;\frac5{3k}$. Summing from $k=1$ to $n-1$ and using
+$U_1^3=(1+d)^3&lt;2$ and $1+\frac12+\dots+\frac1{n-1}\le1+\ln n$,
+\[U_n^3&lt;2+\frac32(n-1)+\frac53(1+\ln n)&lt;\frac{3n}2+2+\frac53\ln n .\]
+<em>Step 4: the shift costs a term of order $n^{2/3}$.</em> We have $U_n^3-y_n^3=3dy_n^2+3d^2y_n+d^3&gt;3dy_n^2&gt;3d\bigl(\frac{3n}5\bigr)^{2/3}$ by Step 2. Hence
+\[a_{2n}^3=y_n^3&lt;\frac{3n}2+2+\frac53\ln n-\frac{15}{52}\Bigl(\frac{3n}5\Bigr)^{2/3}.\]
+Since $n^{2/3}/\sqrt n=n^{1/6}\to\infty$ and $(\ln n)/\sqrt n\to0$, the quantity $\frac{15}{52}\bigl(\frac{3n}5\bigr)^{2/3}-\frac53\ln n-2$ exceeds $2026\sqrt n$ for all
+large $n$, and then $a_{2n}^3&lt;\frac{3n}2-2026\sqrt n$. So the inequality holds for only finitely many $n$; the answer is <strong>no</strong>.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p3">
@@ -178,7 +198,7 @@ many $n$; the answer is <strong>no</strong>.</p>
 <div class="ct-text"><p>Show that there exists a positive integer $M\,(\ge3)$ such that the following holds:</p><p>For any integer $n\,(\ge M)$ and any positive integers $a,b,c$ with $1\le a&lt;b&lt;c\le n$,
 \[\gcd(a+b+c,\ ab+bc+ca,\ abc)&lt;3n-\sqrt{3n}-2^{2026}.\]
 (Here, for positive integers $p,q,r$, $\gcd(p,q,r)$ denotes the greatest positive integer dividing all of $p,q,r$.)</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Dividing out the common factor)</h4>
 <p>Write $K=2^{2026}$, $s=a+b+c$, $e_2=ab+bc+ca$, $e_3=abc$ and $g=\gcd(s,e_2,e_3)$. Note that $t\mapsto 3t-\sqrt{3t}$ is
 increasing for $t\ge1$ (its derivative is $3-\frac{\sqrt3}{2\sqrt t}&gt;0$).</p><p><em>Case $g&lt;s$.</em> Then $g\mid s$ gives $g\le\frac s2\le\frac{3n-3}2$, which is less than $3n-\sqrt{3n}-K$ for all $n$ larger than some $M_1$.</p><p><em>Case $g=s$</em>, i.e. $s\mid e_2$ and $s\mid e_3$. Put $x=c-a$, $y=c-b$ (so $x&gt;y\ge1$), $w=x+y$ and $Q=x^2-xy+y^2&gt;0$. Then $s=3c-w$.</p><p><em>Step 1: $s\mid Q$.</em> Modulo $s$ we have $c\equiv-(a+b)$, so $e_2=ab+c(a+b)\equiv ab-(a+b)^2=-(a^2+ab+b^2)$; hence $s\mid a^2+ab+b^2$. From
@@ -211,6 +231,25 @@ Also $3c=s+w=w^2+w-3xy&lt;w^2$ (since $3xy\ge 3x&gt;x+y=w$), so $\sqrt{3c}&lt;w$
 \[w-\sqrt{3c}=\frac{w^2-3c}{w+\sqrt{3c}}&gt;\frac{3xy-w}{2w}&gt;\frac{3xy-2x}{4x}=\frac{3y-2}4\ \ge\ \frac{3(c/3)^{1/3}-2}{4}.\]</p></li></ul><p>In both cases there is $C_0$ such that $w-\sqrt{3c}&gt;K$ whenever $c\ge C_0$.</p><p><em>Conclusion of the case $g=s$.</em> If $c\ge C_0$, then, as $n\ge c$ and $3t-\sqrt{3t}$ is increasing,
 \[3n-\sqrt{3n}-K-s\ \ge\ (3c-\sqrt{3c})-K-(3c-w)=w-\sqrt{3c}-K&gt;0 .\]
 If $c&lt;C_0$, then $s&lt;3C_0&lt;3n-\sqrt{3n}-K$ for all $n$ larger than some $M_2$.</p><p>Taking $M=\max(M_1,M_2,3)$, for every $n\ge M$ and every $1\le a&lt;b&lt;c\le n$ we get $\gcd(a+b+c,\,ab+bc+ca,\,abc)&lt;3n-\sqrt{3n}-2^{2026}$. $\blacksquare$</p>
+<h4>Solution 3 (A small positive multiple of the gcd)</h4>
+<p>Write $K=2^{2026}$, $s=a+b+c$, $e_2=ab+bc+ca$, $e_3=abc$ and $g=\gcd(s,e_2,e_3)$. Call $(n;a,b,c)$ <em>bad</em> if
+$1\le a&lt;b&lt;c\le n$ and $g\ge3n-\sqrt{3n}-K$. We show that $n$ is bounded for bad quadruples; then any $M\ge3$ above that bound works.</p><p>Let $(n;a,b,c)$ be bad and put $E=3n-g$. Since $g\le s\le3n-3$, we have $0&lt;E\le\sqrt{3n}+K$.</p><p><em>Step 1: $g=s$ for large $n$.</em> Choose $n_1$ with $\sqrt{3n}+K&lt;\frac{3n}2$ for $n&gt;n_1$. If $n&gt;n_1$, then $g=3n-E&gt;\frac{3n}2&gt;\frac s2$; as $g$ divides
+$s$, this forces $g=s$. From now on $n&gt;n_1$.</p><p><em>Step 2: two divisibilities.</em> Put $x=c-a$, $y=c-b$ (so $x&gt;y\ge1$), $w=x+y$ and $Q=x^2-xy+y^2=w^2-3xy&gt;0$. Then $s=3c-w$. Since
+$a^2+b^2+c^2-e_2=\frac12\bigl((a-b)^2+(b-c)^2+(c-a)^2\bigr)=Q$, we get $s^2=a^2+b^2+c^2+2e_2=3e_2+Q$; as $s\mid e_2$, this gives $s\mid Q$.
+Next, modulo $s$ we have $3c\equiv w$, $3a=3c-3x\equiv w-3x$ and $3b\equiv w-3y$, so
+\[0\equiv27e_3\equiv w(w-3x)(w-3y)=w\bigl(9xy-2w^2\bigr)=-2wQ+3xyw\pmod s .\]
+Hence $s\mid3xyw$. As $xw=x^2+xy=Q+2xy-y^2$, we have $3xyw=3yQ+3y^2(2x-y)$, so $s$ divides
+\[N=3y^2(2x-y),\]
+which is a positive integer because $2x&gt;y$.</p><p><em>Step 3: sizes.</em> As $c\le n$, $w=3c-s\le3n-g=E$, so $s\le Q&lt;w^2\le E^2$ (the first inequality because $s\mid Q$ and $Q&gt;0$). Suppose $E&gt;4K+2$. From
+$E-K\le\sqrt{3n}$ we get $3n\ge(E-K)^2$, so
+\[g=3n-E\ge(E-K)^2-E&gt;E^2-(2K+1)E&gt;\frac{E^2}2 .\]
+Then $0&lt;Q&lt;E^2&lt;2g$ and $g\mid Q$, so $Q=g$. Consequently $w^2&gt;Q=g&gt;\frac{E^2}2$, so $w&gt;\frac E2$, and $x&gt;\frac w2&gt;\frac E4$ (as $x&gt;y$). Also
+\[3xy=w^2-Q\le E^2-g&lt;(2K+1)E,\qquad\text{so}\qquad y&lt;\frac{(2K+1)E}{3x}&lt;\frac{4(2K+1)}3 .\]
+Finally $g\mid N$ with $N&gt;0$, and $N&lt;6xy^2&lt;6E\cdot\frac{16(2K+1)^2}{9}$ because $x&lt;w\le E$. Together with $g&gt;\frac{E^2}2$ this gives
+\[\frac{E^2}2&lt;\frac{32}3(2K+1)^2E,\qquad\text{i.e.}\qquad E&lt;E_0:=\frac{64}3(2K+1)^2 .\]
+Since $E_0&gt;4K+2$, in every case $E&lt;E_0$.</p><p><em>Conclusion.</em> For a bad quadruple with $n&gt;n_1$ we have $\frac{3n}2&lt;g=s\le E^2&lt;E_0^2$ (Steps 1 and 3), so $n&lt;\frac23E_0^2$. Hence with
+$M=\max\bigl(3,\ n_1+1,\ \lceil\tfrac23E_0^2\rceil\bigr)$ there is no bad quadruple with $n\ge M$: for every $n\ge M$ and all $1\le a&lt;b&lt;c\le n$,
+$\gcd(a+b+c,\,ab+bc+ca,\,abc)&lt;3n-\sqrt{3n}-2^{2026}$. $\blacksquare$</p>
 </div></details>
 </section>
 <h2 class="ct-group" id="day-2">Day 2</h2>

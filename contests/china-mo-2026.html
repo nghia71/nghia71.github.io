@@ -79,7 +79,7 @@ description: Chinese Mathematical Olympiad 2026: problems with answers and solut
 \[B=\{z\in\mathbb{C}\mid z=x+iy,\ x,y\in\mathbb{R},\ |x-y|&lt;2025\},\]
 where $i$ is the imaginary unit, and $re^{i\theta}=r(\cos\theta+i\sin\theta)$.</p><p>Find all complex-coefficient polynomials $P(z)$ such that for every $z\in A$, we have $P(z)\in B$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>the constant polynomials $P(z)=c$ with $|\operatorname{Re}c-\operatorname{Im}c|&lt;2025$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 (A bounded polynomial on every ray)</h4>
 <p><strong>Answer:</strong> exactly the constant polynomials $P(z)=c$ with $c\in B$, i.e. $|\operatorname{Re}c-\operatorname{Im}c|&lt;2025$.</p><p>A constant $c\in B$ clearly works. Conversely, let $P$ satisfy the condition and put
 \[Q(z)=(1+i)P(z)=\sum_{k=0}^{d}q_kz^k .\]
@@ -101,6 +101,16 @@ As $r\to\infty$, the left side tends to $0$ (its absolute value is less than $20
 \[\operatorname{Re}\bigl(q_de^{id\theta}\bigr)=0\qquad\text{for every }\theta\in[0,\pi/41].\]
 For $\theta=0$ this says that $q_d$ is purely imaginary, $q_d=it$ with a real $t\ne0$. For $\theta=\frac{\pi}{41d}$ it says that $q_de^{i\pi/41}$ is purely imaginary too; but
 $\operatorname{Re}\bigl(it\,e^{i\pi/41}\bigr)=-t\sin\frac{\pi}{41}\ne0$. This contradiction shows that $P$ is constant, $P=c$, and then the condition says $c\in B$:
+\[\boxed{P(z)=c\ \text{ with }c=x_0+iy_0,\ |x_0-y_0|&lt;2025}.\]</p>
+<h4>Solution 3 (Averaging over a circle inside the sector)</h4>
+<p><strong>Answer:</strong> exactly the constant polynomials $P(z)=c$ with $c\in B$, i.e. $|\operatorname{Re}c-\operatorname{Im}c|&lt;2025$.</p><p>A constant $c\in B$ clearly works. For $w=u+iv$ we have $(1+i)w=(u-v)+i(u+v)$, so $w\in B$ if and only if $\bigl|\operatorname{Re}\bigl((1+i)w\bigr)\bigr|&lt;2025$.
+Suppose that a polynomial $P$ of degree $d\ge1$ satisfies the condition and put $F(z)=(1+i)P(z)$, a polynomial of degree $d$ with leading coefficient $f_d\ne0$. Then $|\operatorname{Re}F(z)|&lt;2025$ for all $z\in A$.</p><p><strong>Discs inside the sector.</strong> Let $\alpha=\frac{\pi}{82}$ (half the opening angle of $A$), let $\rho&gt;0$ and $z_0=\frac{\rho}{\sin\alpha}e^{i\alpha}$. The distance from $z_0$ to each of the two boundary rays of $A$ is $|z_0|\sin\alpha=\rho$, so the circle $|z-z_0|=\rho$ lies in $A$.</p><p><strong>Extracting the leading coefficient.</strong> Expand $F$ around $z_0$: $F(z_0+\zeta)=\sum_{j=0}^d\beta_j\zeta^j$; the top coefficient is $\beta_d=f_d$. Choose an integer $m&gt;2d$, let $\omega=e^{2\pi i/m}$ and $\zeta_k=\rho\,\omega^k$ $(k=0,\dots,m-1)$. Recall that for an integer $l$,
+\[\frac1m\sum_{k=0}^{m-1}\omega^{kl}=\begin{cases}1,&amp;m\mid l,\\0,&amp;m\nmid l.\end{cases}\]
+Since $|\omega|=1$, $\overline{\zeta_k^{\,j}}=\rho^j\omega^{-kj}$, and $\operatorname{Re}F=\frac12(F+\overline F)$ gives
+\[\frac1m\sum_{k=0}^{m-1}\operatorname{Re}F(z_0+\zeta_k)\,\omega^{-kd}=\frac12\sum_{j=0}^d\beta_j\rho^j\cdot\frac1m\sum_k\omega^{k(j-d)}+\frac12\sum_{j=0}^d\overline{\beta_j}\rho^j\cdot\frac1m\sum_k\omega^{-k(j+d)} .\]
+In the first sum $-d\le j-d\le0$, and $m\mid j-d$ only for $j=d$; in the second sum $d\le j+d\le2d&lt;m$, so $m\nmid j+d$. Hence the left side equals $\frac12f_d\rho^d$.</p><p><strong>Conclusion.</strong> All points $z_0+\zeta_k$ lie in $A$, so each $|\operatorname{Re}F(z_0+\zeta_k)|&lt;2025$, and $|\omega^{-kd}|=1$. The average therefore has absolute value less than $2025$:
+\[\frac12|f_d|\,\rho^d&lt;2025\qquad\text{for every }\rho&gt;0 .\]
+Letting $\rho\to\infty$ gives $f_d=0$, a contradiction. So $P$ is constant, $P=c$, and the condition says $c\in B$:
 \[\boxed{P(z)=c\ \text{ with }c=x_0+iy_0,\ |x_0-y_0|&lt;2025}.\]</p>
 </div></details>
 </section>
@@ -234,7 +244,7 @@ Starting with $(u,s)=(41,9)$ this proves the claim; colour $0$ always keeps at l
 <div class="ct-text"><p>Determine all real numbers $\lambda$ such that there exists $N&gt;0$ satisfying the following property:</p><p>For any integer $n\geq N$ and $n$ non-negative reals $x_1,\cdots,x_n$ with sum $1$, the following inequality holds:
 \[\Bigl(\sum_{1\leq i&lt;j\leq n}x_ix_j\Bigr)^2\leq\lambda\sum_{1\leq i&lt;j&lt;k\leq n}x_ix_jx_k+\frac1n\sum_{1\leq i&lt;j\leq n}(x_i-x_j)^2.\]</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>all $\lambda&gt;\dfrac32$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Power sums and one variable)</h4>
 <p><strong>Answer:</strong> exactly the numbers $\lambda&gt;\frac32$.</p><p><strong>Rewriting with power sums.</strong> Let $S_k=\sum x_i^k$, so $S_1=1$; write $s=S_2$. Then
 \[\sum_{i&lt;j}x_ix_j=\frac{1-s}2,\qquad e_3:=\sum_{i&lt;j&lt;k}x_ix_jx_k=\frac{1-3s+2S_3}6,\qquad\sum_{i&lt;j}(x_i-x_j)^2=nS_2-S_1^2=ns-1 ,\]
@@ -269,6 +279,18 @@ Let $t=\frac1n\le s$. Factoring the differences of the polynomial parts,
 because $s+t\ge0$. Finally
 \[h(t)=\frac{3n+1}{4n^2}-\frac1n+\varepsilon\,\frac{(n-1)(n-2)}{6n^2}=\frac{(n-1)\bigl(2\varepsilon(n-2)-3\bigr)}{12n^2}\ge0\qquad\text{for }n\ge2+\frac3{2\varepsilon}.\]
 So (1) holds for all $n\ge N:=2+\frac3{2\varepsilon}$, and the required numbers are $\boxed{\lambda&gt;\dfrac32}$.</p>
+<h4>Solution 3 (Pairwise averaging for a fixed n)</h4>
+<p><strong>Answer:</strong> exactly the numbers $\lambda&gt;\frac32$.</p><p>Write $e_2=\sum_{i&lt;j}x_ix_j$, $e_3=\sum_{i&lt;j&lt;k}x_ix_jx_k$ and $S_2=\sum_ix_i^2$. Since $\sum_{i&lt;j}(x_i-x_j)^2=(n-1)S_2-2e_2$ and $S_2+2e_2=1$, the last term of the inequality is $\frac1n\bigl(nS_2-1\bigr)=S_2-\frac1n$.</p><p><strong>The uniform vector.</strong> For $n\ge3$ and $x_1=\dots=x_n=\frac1n$: $e_2=\binom n2\frac1{n^2}=\frac{n-1}{2n}$, $e_3=\binom n3\frac1{n^3}=\frac{(n-1)(n-2)}{6n^2}&gt;0$, and $S_2-\frac1n=0$. So the inequality holds exactly when
+\[\lambda\ \ge\ \frac{e_2^2}{e_3}=\frac{(n-1)^2}{4n^2}\cdot\frac{6n^2}{(n-1)(n-2)}=L_n,\qquad L_n=\frac{3(n-1)}{2(n-2)}=\frac32+\frac3{2(n-2)} .\]
+<em>Necessity.</em> $L_n&gt;\frac32$ for every $n\ge3$. So if $\lambda\le\frac32$, the inequality fails at the uniform vector for every $n\ge3$, and no $N$ exists.</p><p><strong>Claim: for $n\ge5$ the inequality holds with $\lambda=L_n$.</strong> Note $L_n\le2$ for $n\ge5$ (this is $3n-3\le4n-8$). Consider
+\[\Phi(x_1,\dots,x_n)=e_2^2-L_ne_3-S_2+\frac1n\]
+on the set $\Delta$ of vectors with non-negative entries and sum $1$; we must show $\Phi\le0$ on $\Delta$. We already know that $\Phi=0$ at the uniform vector.</p><p><em>Averaging two entries.</em> Fix all entries except $x_a,x_b$, and fix their sum $x_a+x_b=\mu$. Let $S'$ be the sum of the other $n-2$ entries (so $S'\le1$), and $e_2',e_3'$ their elementary symmetric sums. With $t=x_ax_b$,
+\[e_2=C+t,\qquad e_3=D+S't,\qquad S_2=E-2t,\qquad\text{where}\quad C=\mu S'+e_2',\ D=\mu e_2'+e_3',\ E=\mu^2+\sum_{i\ne a,b}x_i^2\]
+do not depend on $t$. Hence, if $t$ changes from $t_1$ to $t_2$,
+\[\Phi(t_2)-\Phi(t_1)=(t_2-t_1)\bigl(2C+t_1+t_2\bigr)-L_nS'(t_2-t_1)+2(t_2-t_1)=(t_2-t_1)\bigl(2C+t_1+t_2+2-L_nS'\bigr).\]
+Here $C\ge0$ and $2-L_nS'\ge2-2\cdot1=0$. Replacing $x_a,x_b$ by their mean $\frac\mu2$ changes $t$ from $t_1=x_ax_b$ to $t_2=\frac{\mu^2}4$, and $t_2-t_1=\frac{(x_a-x_b)^2}4$. If $x_a\ne x_b$, then $t_2&gt;t_1\ge0$, so the bracket is at least $t_1+t_2&gt;0$ and $\Phi$ strictly increases.</p><p><em>The maximum.</em> $\Phi$ is a continuous function on the closed bounded set $\Delta$, so it attains a maximum at some vector $x^*$. If $x^*$ had two different entries, averaging them would give a vector of $\Delta$ with a larger value of $\Phi$. So all entries of $x^*$ are equal, $x^*$ is the uniform vector, and $\max_\Delta\Phi=0$. This proves the claim.</p><p><strong>Sufficiency.</strong> Let $\lambda&gt;\frac32$. Since $L_n=\frac32+\frac3{2(n-2)}$ decreases to $\frac32$, there is $N\ge5$ with $L_n\le\lambda$ for all $n\ge N$. For such $n$, as $e_3\ge0$,
+\[e_2^2\le L_ne_3+S_2-\frac1n\le\lambda e_3+S_2-\frac1n ,\]
+which is the required inequality. Hence the answer is $\boxed{\lambda&gt;\dfrac32}$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p6">

@@ -200,7 +200,7 @@ Let $M$ be the midpoint of $BC$.
 The line $XM$ meets the circumcircle of $ABC$ again at $Y$.
 Let $AY$ intersect $BC$ at $K$.
 Prove that $MD=MK$.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Complex numbers)</h4>
 <div class="ct-fig"><img style="width:295px" src="/assets/contests/2026-27/azerbaijan-mo-5_s1.svg" alt="Figure for the solution"></div>
 <p><em>The point $X$.</em> The lines $FB$ and $EC$ meet at $A$, so the second intersection $X$ of the circles $AFE$ and $ABC$ is the centre of the spiral
@@ -228,6 +228,24 @@ $X,M,Y$ are collinear), hence
 \[\measuredangle(YX,MN)=\measuredangle(YX,YA),\]
 so $MN\parallel YA$, i.e. $MN\parallel AK$.</p><p><em>Midline.</em> In triangle $ADK$ the line through the midpoint $N$ of $AD$ parallel to $AK$ meets $DK$ (the line $BC$) at the midpoint of $DK$. That
 point is $M$, because $M$ lies on $BC$ and on this line. Hence $MD=MK$.</p>
+<h4>Solution 3 (Oblique coordinates and the reflected point)</h4>
+<p>We may assume that $D$ lies strictly between $B$ and $C$ and that $D\ne M$ (for $D=M$ the circles $AEF$ and $ABC$ are tangent at $A$ and $X$ does not exist).</p><p><em>Coordinates.</em> Let $\mathbf p=\overrightarrow{AB}$, $\mathbf q=\overrightarrow{AC}$, and give the point $A+\xi\mathbf p+\eta\mathbf q$ the coordinates $(\xi,\eta)$. Then $A=(0,0)$, $B=(1,0)$, $C=(0,1)$, $M=(\frac12,\frac12)$, and $D=(1-t,t)$ with $0&lt;t&lt;1$, $t\ne\frac12$. Since $DE\parallel AB$ and $DF\parallel AC$, we get $E=(0,t)$ and $F=(1-t,0)$. Put $b=AB^2$, $c=AC^2$, $g=\mathbf p\cdot\mathbf q$. The squared distance from $A$ to $(\xi,\eta)$ is
+\[\varphi(\xi,\eta)=b\xi^2+2g\xi\eta+c\eta^2,\]
+which is positive for $(\xi,\eta)\ne(0,0)$.</p><p><em>Powers of a point.</em> If a circle with centre $O$ passes through $A$, put $\mathbf w=\overrightarrow{AO}$; the power of a point $P$ is $|\overrightarrow{AP}-\mathbf w|^2-|\mathbf w|^2=AP^2-2\,\mathbf w\cdot\overrightarrow{AP}$. For the circle $ABC$, the points $B$ and $C$ give $2\mathbf w\cdot\mathbf p=b$ and $2\mathbf w\cdot\mathbf q=c$; for the circle $AEF$, the points $F=A+(1-t)\mathbf p$ and $E=A+t\mathbf q$ give $2\mathbf w'\cdot\mathbf p=(1-t)b$ and $2\mathbf w'\cdot\mathbf q=tc$. So the two powers are
+\[f_1=\varphi(\xi,\eta)-b\xi-c\eta,\qquad f_2=\varphi(\xi,\eta)-(1-t)b\xi-tc\eta .\]
+At $X$ both vanish, so $f_1-f_2=-tb\xi-(1-t)c\eta=0$ there: $X$ lies on the line through $A$ with direction $U=\bigl(c(1-t),\,-bt\bigr)$.</p><p><em>Second intersections.</em> For a direction $w=(w_1,w_2)\ne(0,0)$, the point $\lambda w$ is on the circle $ABC$ exactly when $\lambda^2\varphi(w)-\lambda(bw_1+cw_2)=0$. So the line through $A$ with direction $w$ meets the circle again at
+\[R(w)=\frac{bw_1+cw_2}{\varphi(w)}\,w .\]
+For $U$ we have $L_U:=bU_1+cU_2=bc(1-2t)\ne0$, so $X=R(U)=\frac{L_U}{D_U}U$ with $D_U=\varphi(U)$.</p><p><em>The reflected point.</em> Let $K'=(t,1-t)$; it lies on $BC$ (its coordinates add up to $1$), and $D+K'=(1,1)$ in coordinates, so $K'$ is the reflection of $D$ in $M$. Let $V=(t,1-t)$, $L_V=bt+c(1-t)&gt;0$, $D_V=\varphi(V)$, and $Z=R(V)=\frac{L_V}{D_V}V$: the second intersection of the line $AK'$ with the circle $ABC$; $Z\ne A$ as $L_V\ne0$. We show that $Z$ lies on the line $XM$.</p><p>Write $[P,Q]=P_1Q_2-P_2Q_1$; then $P,M,Q$ are collinear exactly when $[P-M,Q-M]=0$, and
+\[[P-M,Q-M]=[P,Q]-[P,M]+[Q,M],\qquad [P,M]=\tfrac12(P_1-P_2).\]
+Let $\Delta=[U,V]=c(1-t)^2+bt^2&gt;0$. Directly,
+\[D_U=bc^2(1-t)^2-2gbc\,t(1-t)+b^2c\,t^2,\qquad D_V=bt^2+2g\,t(1-t)+c(1-t)^2,\]
+so the terms with $g$ cancel in
+\[D_U+bc\,D_V=2bc\bigl(c(1-t)^2+bt^2\bigr)=2bc\,\Delta. \tag{1}\]
+Moreover $U_1-U_2=c(1-t)+bt=L_V$ and $V_1-V_2=2t-1$. Hence
+\[[X-M,Z-M]=\frac{L_UL_V\Delta}{D_UD_V}-\frac{L_UL_V}{2D_U}+\frac{L_V(2t-1)}{2D_V},\]
+and, using $L_U=bc(1-2t)$ and (1),
+\[2D_UD_V\,[X-M,Z-M]=(1-2t)L_V\bigl(2bc\,\Delta-bc\,D_V-D_U\bigr)=0 .\]
+So $X$, $M$, $Z$ are collinear.</p><p><em>Conclusion.</em> $M$ is inside the circle $ABC$ (it is an interior point of the chord $BC$), so $X\ne M$ and the line $XM$ meets the circle in exactly the two points $X$ and $Y$. The point $Z$ is on the circle and on this line. Also $Z\ne X$: both differ from $A$, and they lie on the lines through $A$ with directions $U$ and $V$, which are different lines since $[U,V]=\Delta\ne0$. Hence $Z=Y$, and the line $AY$ is the line $AK'$. This line is not parallel to $BC$ (its direction $V$ satisfies $[V,(-1,1)]=1\ne0$), so it meets $BC$ only at $K'$. Therefore $K=K'$, the reflection of $D$ in $M$, and $MD=MK$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p6">
@@ -236,8 +254,8 @@ point is $M$, because $M$ lies on $BC$ and on this line. Hence $MD=MK$.</p>
 <div class="ct-text"><p>Prove that there exist polynomials $P(x)$ and $Q(x)$ with real coefficients such that $\deg P\ge 2026$, $\deg Q\ge 2$, and for all real numbers $x$,
 \[P(Q(x)-x-1)=Q(P(x)).\]</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>e.g. $Q(x)=\frac{x^2+5x}{2}$ and $P=U^{\circ11}-1$ with $U(x)=\frac{x^2+3x-2}{2}$ ($\deg P=2048$)</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Conjugating by a translation)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Conjugating by a translation)</h4>
 <p><em>Idea.</em> Write $U(x)=Q(x)-x-1$; the equation is $P\circ U=Q\circ P$. If $Q$ were <em>conjugate</em> to $U$ by a translation $L(x)=x-1$,
 that is $Q\circ L=L\circ U$, then $P=L\circ U^{\circ m}$ (with $U^{\circ m}=U\circ\dots\circ U$, $m$ times) would work for every $m$. The condition
 $Q(x-1)=U(x)-1=Q(x)-x-2$ says $Q(x)-Q(x-1)=x+2$, which a quadratic $Q$ can satisfy.</p><p><em>The example.</em> Let
@@ -248,6 +266,15 @@ Now for every real $x$, using (1) with $z=U^{\circ11}(x)$,
 \[Q(P(x))=Q\bigl(U^{\circ11}(x)-1\bigr)=U\bigl(U^{\circ11}(x)\bigr)-1=U^{\circ12}(x)-1,\]
 \[P\bigl(Q(x)-x-1\bigr)=P(U(x))=U^{\circ11}\bigl(U(x)\bigr)-1=U^{\circ12}(x)-1 .\]
 So $P(Q(x)-x-1)=Q(P(x))$. Finally $\deg Q=2$, and since $U$ has degree $2$, $\deg P=2^{11}=2048\ge2026$.</p>
+<h4>Solution 2 (A monomial ansatz)</h4>
+<p><em>Finding the example.</em> Try $Q(x)=kx^2+x+1$, so that $Q(x)-x-1=kx^2$, and $P(x)=p+qx^m$ with $m$ even. Then $P(Q(x)-x-1)=p+qk^mx^{2m}$ is $p$ plus a monomial, and $Q(P(x))=Q(p+qx^m)$ has the same shape if $Q(p+u)=p+ku^2$ for all $u$, that is, if the vertex of the parabola $y=Q(x)$ is at $x=p$ and $Q(p)=p$. The vertex is at $-\frac1{2k}$, so $k=-\frac1{2p}$, and $Q(p)=kp^2+p+1=p$ gives $-\frac p2+1=0$: $p=2$, $k=-\frac14$.</p><p><em>The example.</em> Let $m=2048$, $\gamma=4^{1-m}$ and
+\[Q(x)=1+x-\frac{x^2}{4},\qquad P(x)=2-\gamma x^{m}.\]
+Then $Q(x)-x-1=-\frac{x^2}{4}$, and for every real $u$
+\[Q(2+u)=1+(2+u)-\frac{4+4u+u^2}{4}=2-\frac{u^2}{4}.\]
+Since $m$ is even,
+\[P\bigl(Q(x)-x-1\bigr)=2-\gamma\Bigl(-\frac{x^2}{4}\Bigr)^{m}=2-\gamma\,4^{-m}x^{2m},\]
+\[Q(P(x))=Q\bigl(2+(-\gamma x^m)\bigr)=2-\frac{\gamma^2}{4}x^{2m}.\]
+These are equal because $\frac{\gamma^2}{4}=\gamma\cdot\frac{4^{1-m}}{4}=\gamma\,4^{-m}$. So $P(Q(x)-x-1)=Q(P(x))$ for all real $x$, with $\deg P=2048\ge2026$ and $\deg Q=2$. (Any even $m\ge2026$ works with $\gamma=4^{1-m}$.)</p>
 </div></details>
 </section>
 {% endraw %}

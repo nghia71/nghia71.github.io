@@ -200,7 +200,7 @@ and $2a_0$ cannot divide a number that is $\equiv2\pmod4$. Contradiction.</p><p>
 <h3>Problem 1</h3>
 <div class="ct-meta">Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure</div>
 <div class="ct-text"><p>Let $ABC$ be an acute triangle with orthocenter $H$ and circumcircle $k$. Let $S$ be the intersection point of the tangents to $k$ at points $A$ and $B$, let $M$ be the midpoint of $AB$, and let $H'$ be the reflection of $H$ with respect to $AB$. Let $P$ be the intersection point of the line $MH$ with the circumcircle $k$ such that $H$ lies between $M$ and $P$.</p><p>Prove that the points $S$, $H'$ and $P$ are collinear.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Equal ratios $PA:PB=H'A:H'B$)</h4>
 <div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/austria-mo-5_s1.svg" alt="Figure for the solution"></div>
 <p>Let $C'$ be the point of $k$ diametrically opposite $C$. If $CA=CB$, the points $S$, $H$, $M$, $C$ all lie on the symmetry axis
@@ -251,6 +251,26 @@ Note $s\ne h'$, as $|a+b+2c|\ge 2-|a+b|&gt;0$. The ratio is
 \]
 Taking conjugates ($a\mapsto 1/a$ etc.): $(a+b)(a+c)(b+c)\mapsto\frac{(a+b)(a+c)(b+c)}{a^2b^2c^2}$, $\;a+b+2c\mapsto\frac{2ab+bc+ca}{abc}$
 and $2ab+bc+ca\mapsto\frac{a+b+2c}{abc}$. Hence $\bar\rho=\rho$, so $\rho$ is real, and $S$, $H'$, $P$ are collinear.</p>
+<h4>Solution 3 (Coordinates centred at $M$: $P$ is the inverse of $H$)</h4>
+<p>Choose the unit of length and the axes so that $M=(0,0)$, $A=(-1,0)$, $B=(1,0)$ and $C$ lies above the $x$-axis. The circumcentre $O$ lies on the perpendicular bisector of $AB$, which is the $y$-axis, so $O=(0,o)$; as the triangle is acute, $O$ lies inside it and $o&gt;0$. Since $OA^2=1+o^2$, the circle $k$ has the equation
+\[
+X^2+Y^2-2oY=1 .
+\]</p><p><em>The point $S$.</em> The tangent at $A$ is perpendicular to $OA$, so it consists of the points $(X,Y)$ with $(X+1)\cdot(-1)+Y\cdot(-o)=0$. It meets the $y$-axis at $Y=-1/o$. By the symmetry of $k$ in the $y$-axis, the tangent at $B$ passes through the same point, so $S=(0,-1/o)$.</p><p><em>The point $H'$.</em> Let $A_1$, $B_1$ be the feet of the altitudes from $A$ and $B$. The quadrilateral $CA_1HB_1$ has right angles at $A_1$ and $B_1$, so $\angle AHB=\angle A_1HB_1=180^\circ-\angle ACB$. Reflection in $AB$ gives $\angle AH'B=\angle AHB=180^\circ-\angle ACB$, and $H'$ lies on the other side of $AB$ than $C$ (because $H$, inside the triangle, lies on the same side as $C$). Hence $AH'BC$ is cyclic and $H'\in k$.</p><p>Write $H=(x,y)$; then $y&gt;0$ and $H'=(x,-y)$. Put $q=x^2+y^2$. Substituting $H'$ into the equation of $k$ gives
+\[
+q+2oy=1, \qquad\text{so}\qquad 0&lt;q=1-2oy&lt;1 .
+\]</p><p><em>The point $P$.</em> The points of the ray from $M$ through $H$ are $(tx,ty)$ with $t&gt;0$, and such a point lies on $k$ exactly when
+\[
+qt^2-2oy\,t-1=0 .
+\]
+The product of the two roots of this quadratic is $-1/q&lt;0$, so exactly one root is positive. The number $t=1/q$ is a root, since $q\cdot\frac1{q^2}-\frac{2oy}{q}-1=\frac{1-2oy-q}{q}=0$. As $1/q&gt;1$, the point $H$ (at $t=1$) lies between $M$ and this point, so
+\[
+P=\Bigl(\frac xq,\ \frac yq\Bigr).
+\]
+In other words, $P$ is the inverse of $H$ in the circle with diameter $AB$.</p><p><em>Collinearity.</em> If $x=0$, the points $S$, $H'$, $P$ all lie on the $y$-axis. Let $x\ne0$. Since $q\ne1$, the points $H'$ and $P$ have different $x$-coordinates, so the line $H'P$ is not vertical. Its points are $H'+\lambda(P-H')=\bigl(x+\lambda x\frac{1-q}{q},\ -y+\lambda y\frac{1+q}{q}\bigr)$, and the $x$-coordinate vanishes for $\lambda=-\frac{q}{1-q}$. There the $y$-coordinate is
+\[
+-y-\frac{y(1+q)}{1-q}=-\frac{2y}{1-q}=-\frac{2y}{2oy}=-\frac1o ,
+\]
+using $1-q=2oy$. So the line $H'P$ passes through $(0,-1/o)=S$, and $S$, $H'$, $P$ are collinear.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p6">
@@ -330,14 +350,20 @@ $u_{2n}&gt;0$, and $u_{2n+1}=\frac{u_{2n}+u_{2n+2}}{2}$ by the definition of $u_
 \[f(f(x)+y)=\alpha x+f(x+f(f(y)))\]
 for all real numbers $x$ and $y$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\alpha=0$ and $\alpha=2$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Surjective, injective, then linear)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Surjective, injective, then linear)</h4>
 <p><strong>Answer:</strong> $\alpha\in\{0,2\}$.</p><p><em>Examples.</em> For $\alpha=0$, $f(x)=x$ works: both sides equal $x+y$. For $\alpha=2$, $f(x)=-x$ works: the left side is $-(-x+y)=x-y$ and the
 right side is $2x-(x+y)=x-y$.</p><p><em>No other $\alpha$.</em> Let $\alpha\ne0$ and let $f$ be a solution; write $Q(x,y)$ for the equation and $c=f(0)$.</p><ul class="ct-parts"><li><p><span class="ct-lbl">1.</span> $Q(0,y)$: $f(c+y)=f\bigl(f(f(y))\bigr)$ for all $y$.</p></li><li><p><span class="ct-lbl">2.</span> $Q(x,-f(x))$: $c=\alpha x+f\bigl(x+f(f(-f(x)))\bigr)$, so $f$ takes the value $c-\alpha x$ for every real $x$. As $\alpha\ne0$, $f$ is
 <em>surjective</em>.</p></li><li><p><span class="ct-lbl">3.</span> <em>$f$ is injective.</em> Let $f(u)=f(v)$. Comparing $Q(x,u)$ and $Q(x,v)$ (their right-hand sides agree since $f(f(u))=f(f(v))$) gives
 $f(f(x)+u)=f(f(x)+v)$ for all $x$. As $f(x)$ runs through all reals, $f(t+u)=f(t+v)$ for all $t$, i.e. $f$ has period $p=u-v$. Now compare
 $Q(x+p,y)$ with $Q(x,y)$: the left sides are equal because $f(x+p)=f(x)$, and the right sides differ by $\alpha p$. So $\alpha p=0$ and $u=v$.</p></li><li><p><span class="ct-lbl">4.</span> From 1 and injectivity: $f(f(y))=y+c$ for all $y$; in particular $f(f(0))=c$.</p></li><li><p><span class="ct-lbl">5.</span> $Q(x,0)$: $f(f(x))=\alpha x+f(x+f(f(0)))=\alpha x+f(x+c)$. With 4 this gives $x+c=\alpha x+f(x+c)$, so $f(t)=(1-\alpha)(t-c)+c$ for all
 $t$.</p></li><li><p><span class="ct-lbl">6.</span> Then $f(f(y))=(1-\alpha)^2(y-c)+c$. Comparing with $f(f(y))=y+c$ (the coefficients of $y$) gives $(1-\alpha)^2=1$, so $\alpha=2$.</p></li></ul><p>Hence a solution exists exactly for $\boxed{\alpha\in\{0,2\}}$.</p>
+<h4>Solution 2 (Injectivity from equal images)</h4>
+<p><strong>Answer:</strong> $\alpha\in\{0,2\}$.</p><p><em>Examples.</em> For $\alpha=0$ the constant function $f(x)=0$ works: both sides are $0$. For $\alpha=2$, $f(x)=-x$ works: the left side is $-(-x+y)=x-y$ and the right side is $2x-(x+y)=x-y$.</p><p><em>No other $\alpha$.</em> Let $\alpha\ne0$ and let $f$ be a solution; write $Q(x,y)$ for the equation, $c=f(0)$, and $\operatorname{im} g$ for the set of values of a function $g$.</p><ul class="ct-parts"><li><p><span class="ct-lbl">1.</span> $Q(0,y)$ gives $f(y+c)=f\bigl(f(f(y))\bigr)$ for all $y$. So every value $f(z)=f\bigl(f(f(z-c))\bigr)$ of $f$ is a value of $f\circ f\circ f$. Since $\operatorname{im}(f\circ f\circ f)\subseteq\operatorname{im}(f\circ f)\subseteq\operatorname{im} f$, all three sets are equal; call this set $T$. It is not empty.</p></li><li><p><span class="ct-lbl">2.</span> <em>$f$ is injective.</em> Let $f(u)=f(v)$. The left sides of $Q(u,y)$ and $Q(v,y)$ are equal, so $\alpha u+f\bigl(u+f(f(y))\bigr)=\alpha v+f\bigl(v+f(f(y))\bigr)$, that is,
+\[
+f(u+t)-f(v+t)=\alpha(v-u)\qquad\text{for every } t\in\operatorname{im}(f\circ f)=T .
+\]
+On the other hand, the right sides of $Q(x,u)$ and $Q(x,v)$ are equal, because $f(f(u))=f(f(v))$. So $f(f(x)+u)=f(f(x)+v)$ for all $x$, that is, $f(t+u)=f(t+v)$ for every $t\in\operatorname{im} f=T$. Taking any $t\in T$ in both relations gives $\alpha(v-u)=0$, and as $\alpha\ne0$, $u=v$.</p></li><li><p><span class="ct-lbl">3.</span> By injectivity, step 1 gives $f(f(y))=y+c$ for all $y$; in particular $f(f(0))=c$.</p></li><li><p><span class="ct-lbl">4.</span> $Q(x,0)$ reads $f(f(x))=\alpha x+f\bigl(x+f(f(0))\bigr)=\alpha x+f(x+c)$. With step 3 this becomes $x+c=\alpha x+f(x+c)$, so $f(t)=(1-\alpha)(t-c)+c$ for all $t$.</p></li><li><p><span class="ct-lbl">5.</span> Then $f(f(y))=(1-\alpha)^2(y-c)+c$. Comparing with $f(f(y))=y+c$ (the coefficients of $y$) gives $(1-\alpha)^2=1$, and as $\alpha\ne0$, $\alpha=2$.</p></li></ul><p>Hence a solution exists exactly for $\boxed{\alpha\in\{0,2\}}$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p9">

@@ -244,13 +244,23 @@ So $d_1&gt;4abc&gt;2(ab+bc+ca)+4&gt;d_1$, a contradiction. Hence the three numbe
 \[1+\sqrt2,\ 1+2\sqrt2,\ \dots,\ 1+2026\sqrt2\]
 into two nonempty groups such that the products of the numbers in the groups have the same fractional part?</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p><strong>No</strong></p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Parity of the coefficient of the square root)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Parity of the coefficient of the square root)</h4>
 <p><strong>No.</strong> Every product of some of the given numbers can be written uniquely as $p+q\sqrt2$ with integers $p,q$ (uniquely because $\sqrt2$ is irrational).</p><p><strong>Claim.</strong> If $p+q\sqrt2$ is the product of the numbers $1+k\sqrt2$ over $k$ in a set $S$, then $p$ is odd and $q\equiv\sum_{k\in S}k\pmod 2$.</p><p><em>Proof</em> by induction on $|S|$. For a single number $1+k\sqrt2$ this is clear. If it holds for $p+q\sqrt2$ and we multiply by one more number $1+k\sqrt2$, then
 \[(p+q\sqrt2)(1+k\sqrt2)=(p+2kq)+(q+kp)\sqrt2 ,\]
 where $p+2kq$ is odd and $q+kp\equiv q+k\pmod2$ because $p$ is odd. $\blacksquare$</p><p>Now suppose the numbers are divided into two non-empty groups with products $p_1+q_1\sqrt2$ and $p_2+q_2\sqrt2$. By the claim
 \[q_1+q_2\equiv 1+2+\dots+2026=\frac{2026\cdot2027}{2}=1013\cdot2027\equiv1\pmod 2,\]
 so $q_1\ne q_2$. Two real numbers have the same fractional part exactly when their difference is an integer. But the difference of the two products is $(p_1-p_2)+(q_1-q_2)\sqrt2$ with $q_1-q_2\ne0$, which is irrational. Hence the two products never have the same fractional part.</p>
+<h4>Solution 2 (The norm modulo 8)</h4>
+<p><strong>No.</strong> Every number of the form $x+y\sqrt2$ with integers $x,y$ determines $x$ and $y$ uniquely, because $\sqrt2$ is irrational. For such a number put
+\[N(x+y\sqrt2)=x^2-2y^2 .\]
+<strong>Two properties of $N$.</strong> (i) $N$ is multiplicative: since $(x+y\sqrt2)(x'+y'\sqrt2)=(xx'+2yy')+(xy'+x'y)\sqrt2$, expanding gives
+\[(xx'+2yy')^2-2(xy'+x'y)^2=x^2x'^2+4y^2y'^2-2x^2y'^2-2x'^2y^2=(x^2-2y^2)(x'^2-2y'^2).\]
+(ii) If $x$ is odd, then $N(x+y\sqrt2)\equiv1\pmod 8$ when $y$ is even and $N(x+y\sqrt2)\equiv-1\pmod 8$ when $y$ is odd. Indeed $x^2\equiv1\pmod8$ for odd $x$, while $2y^2\equiv0\pmod 8$ for even $y$ and $2y^2\equiv2\pmod8$ for odd $y$ (as then $y^2\equiv1\pmod4$).</p><p><strong>Rational parts are odd.</strong> If $x$ and $x'$ are odd, the rational part $xx'+2yy'$ of the product is odd. Each given number $1+k\sqrt2$ has rational part $1$, so every product of some of the given numbers has an odd rational part, and (ii) applies to it.</p><p><strong>The contradiction.</strong> Suppose the numbers are divided into two non-empty groups with products $\alpha_1=p_1+q_1\sqrt2$ and $\alpha_2=p_2+q_2\sqrt2$ having the same fractional part. Then $\alpha_1-\alpha_2=(p_1-p_2)+(q_1-q_2)\sqrt2$ is an integer, so $q_1=q_2$. By (ii) the norms $N(\alpha_1)$ and $N(\alpha_2)$ are congruent to the same number $\pm1$ modulo $8$, hence by (i)
+\[N(\alpha_1\alpha_2)=N(\alpha_1)N(\alpha_2)\equiv(\pm1)^2=1\pmod 8 .\]
+On the other hand $\alpha_1\alpha_2$ is the product of all $2026$ numbers, so by (i)
+\[N(\alpha_1\alpha_2)=\prod_{k=1}^{2026}N(1+k\sqrt2)=\prod_{k=1}^{2026}\bigl(1-2k^2\bigr).\]
+By (ii) the factor $1-2k^2$ is $\equiv-1\pmod8$ for odd $k$ and $\equiv1\pmod 8$ for even $k$. There are $1013$ odd numbers among $1,\dots,2026$, so $N(\alpha_1\alpha_2)\equiv(-1)^{1013}=-1\pmod8$. This contradicts $N(\alpha_1\alpha_2)\equiv1\pmod8$. Hence no such division exists.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p10">
@@ -260,8 +270,8 @@ so $q_1\ne q_2$. Two real numbers have the same fractional part exactly when the
 \[a_1+a_2+\dots+a_{2n-1}=a_n^2\]
 for all natural $n$. Find all such sequences that contain the number $3$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$a_n=2n-1$ for all $n$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Monotonicity and strong induction)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Monotonicity and strong induction)</h4>
 <p>Write $S_m=a_1+\dots+a_m$, so the condition is $S_{2n-1}=a_n^2$ for all $n\ge1$.</p><p><strong>Step 1: first consequences.</strong> For $n=1$: $a_1=a_1^2$, so $a_1=1$. Subtracting the conditions for $n+1$ and $n$,
 \[a_{2n}+a_{2n+1}=a_{n+1}^2-a_n^2\qquad(n\ge1).\tag{1}\]
 The left side is positive, hence $a_{n+1}&gt;a_n$: <em>the sequence is strictly increasing</em>.</p><p><strong>Step 2: where is the $3$?</strong> Since $a_1=1$ and the sequence increases, $3$ can only be $a_2$ or $a_3$, and $a_3=3$ would force $a_2=2$. But for $n=1$ relation (1) gives $a_3=a_2^2-a_2-1$, which is $1$ for $a_2=2$. So $a_2=3$ and $a_3=9-3-1=5$.</p><p><strong>Step 3: $a_k=2k-1$ for all $k$.</strong> We prove by induction on $n\ge2$ that $a_k=2k-1$ for all $k\le 2n-1$; for $n=2$ this is Step 2. Assume it for some $n\ge2$. Since $n+1\le 2n-1$, relation (1) gives
@@ -273,6 +283,12 @@ Suppose the second one holds. Apply (1) with $2n-1$ in place of $n$:
 But $4n-2&gt;2n+1$ (as $n\ge2$), so both $a_{4n-2}$ and $a_{4n-1}$ are greater than $a_{2n+1}=4n+2$, and their sum exceeds $8n+4$. This is a contradiction. Hence $a_{2n}=4n-1$ and $a_{2n+1}=4n+1$, which is the statement for $n+1$.</p><p><strong>Step 4: check.</strong> The sequence $a_n=2n-1$ contains $3$ and satisfies the condition, because the sum of the first $m$ odd numbers is $m^2$:
 \[a_1+\dots+a_{2n-1}=(2n-1)^2=a_n^2 .\]
 So the only such sequence is $\boxed{a_n=2n-1}$.</p>
+<h4>Solution 2 (A lower bound through the infimum)</h4>
+<p>Write $S_m=a_1+\dots+a_m$, so the condition is $S_{2n-1}=a_n^2$ for all $n\ge1$.</p><p><strong>Monotonicity.</strong> For $n=1$ we get $a_1=a_1^2$, so $a_1=1$. Since all terms are positive, $a_{n+1}^2-a_n^2=S_{2n+1}-S_{2n-1}=a_{2n}+a_{2n+1}&gt;0$, so the sequence is strictly increasing. As its terms are natural numbers and $a_1=1$, it follows that $a_n\ge n$ for all $n$.</p><p><strong>Claim: $a_n\ge 2n-1$ for all $n$.</strong> Put $x_n=\dfrac{a_n}{2n-1}$ and let $q$ be the greatest lower bound (infimum) of the numbers $x_1,x_2,\dots$. From $a_n\ge n$ we get $x_n\ge\frac{n}{2n-1}&gt;\frac12$, so $q\ge\frac12&gt;0$. By the definition of $q$ we have $a_i\ge q(2i-1)$ for every $i$, and the sum of the first $2n-1$ odd numbers is $(2n-1)^2$, so
+\[a_n^2=\sum_{i=1}^{2n-1}a_i\ \ge\ q\sum_{i=1}^{2n-1}(2i-1)=q\,(2n-1)^2,\qquad\text{that is,}\qquad x_n\ge\sqrt q\quad\text{for every }n .\]
+Thus $\sqrt q$ is a lower bound of the $x_n$, and since $q$ is the greatest one, $q\ge\sqrt q$. As $q&gt;0$, this gives $q\ge1$, which is the claim.</p><p><strong>Where the $3$ is.</strong> If $a_j=3$, then $2j-1\le a_j=3$ by the claim, so $j\le2$; since $a_1=1$, we get $a_2=3$.</p><p><strong>Equality spreads.</strong> Suppose $a_n=2n-1$ for some $n$. Then
+\[\sum_{i=1}^{2n-1}a_i=a_n^2=(2n-1)^2=\sum_{i=1}^{2n-1}(2i-1),\]
+and each $a_i$ on the left is at least the corresponding $2i-1$ on the right; so equality holds term by term: $a_i=2i-1$ for all $i\le 2n-1$. In particular $a_{2n-1}=2(2n-1)-1$, so the same holds with $2n-1$ in place of $n$. Starting from $n_0=2$ and putting $n_{j+1}=2n_j-1$ we get $n_j=2^j+1$, which grows without bound, and $a_i=2i-1$ for all $i\le 2n_j-1$. Hence $a_i=2i-1$ for every $i$.</p><p><strong>Check.</strong> The sequence of odd numbers contains $3$, and $a_1+\dots+a_{2n-1}=(2n-1)^2=a_n^2$. So the only such sequence is $\boxed{a_n=2n-1}$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p11">
@@ -448,7 +464,7 @@ pairs.</p><p>So in this example every written number $a$ has at least $1012$ pai
 <h3>Problem 7</h3>
 <div class="ct-meta">Geometry &middot; LPS VII, Chapter 55: Three-Dimensional and Spatial Geometry</div>
 <div class="ct-text"><p>A sphere centered at $I$ is inscribed in tetrahedron $ABCD$ and touches its faces $BCD$, $CDA$, $DAB$, and $ABC$ at points $A_1$, $B_1$, $C_1$, and $D_1$, respectively. Segment $A_1B_1$ intersects the plane $C_1D_1I$ at point $E$. Prove that the midpoint of edge $AB$ lies in the plane $CDE$.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Two ways to cut the segment in the ratio of the altitudes)</h4>
 <div class="ct-fig"><img style="width:425px" src="/assets/contests/2026-27/all-russian-mo-20_s1.svg" alt="Figure for the solution"></div>
 <p>Let $r$ be the radius of the sphere, $M$ the midpoint of $AB$, and $h_A$, $h_B$ the distances from $A$ to the plane $BCD$ and from $B$ to the plane $ACD$. Tangent segments from a point to a sphere are equal, so we may put
@@ -478,6 +494,16 @@ lies on the segment $A_1B_1$ and in this plane. The segment is not contained in 
 and $A_1$, $B_1$ are on opposite sides of $\Pi$.</p><p><strong>Step 4: $A$ and $B$.</strong> The point $B$ lies in the half-plane of the face $BCD$, at distance $\dfrac{2S_A}{CD}$ from the line $CD$; the point $A$ lies in the half-plane of the face $ACD$, at distance $\dfrac{2S_B}{CD}$ from $CD$. Therefore
 \[\operatorname{dist}(B,\Pi)=\frac{2S_A\sin\theta_1}{CD}=\frac{2S_B\sin\theta_2}{CD}=\operatorname{dist}(A,\Pi),\]
 and $A$, $B$ are on opposite sides of $\Pi$ (as $B_1$ and $A_1$ are). A plane that separates $A$ and $B$ and is equidistant from them passes through the midpoint of $AB$. So the midpoint of $AB$ lies in the plane $\Pi=CDE$.</p>
+<h4>Solution 3 (A pencil of planes through CD)</h4>
+<p>Take $I$ as the origin and the radius of the sphere as the unit of length. Write $\mathbf a$ and $\mathbf b$ for the position vectors of $A_1$ and $B_1$; they are distinct unit vectors, and $\mathbf a\ne-\mathbf b$, because the planes $BCD$ and $CDA$ are not parallel (they share the line $CD$). The face $BCD$ is the plane tangent to the sphere at $A_1$, that is $\{X:\ \mathbf a\cdot X=1\}$; similarly the face $CDA$ is $\{X:\ \mathbf b\cdot X=1\}$. Consider the affine functions
+\[F(X)=1-\mathbf a\cdot X,\qquad G(X)=1-\mathbf b\cdot X .\]
+<strong>Values at the vertices.</strong> The points $C$ and $D$ lie on both faces, so $F$ and $G$ vanish at $C$, at $D$ and hence on the whole line $CD$. Also $F(B)=0$ and $G(A)=0$. Put $u=F(A)$ and $v=G(B)$. The vertex $A$ is not on the face $BCD$ and lies on the same side of it as $I$, where $F(I)=1&gt;0$; so $u&gt;0$, and in the same way $v&gt;0$.</p><p><strong>The plane $C_1D_1I$.</strong> The radius $IC_1$ is perpendicular to the face $DAB$ and $ID_1$ to the face $ABC$; both faces contain $AB$. So the position vectors of $C_1$ and $D_1$ are perpendicular to $B-A$, and they are not parallel (the two faces are different planes through $AB$). Hence the plane through $I$, $C_1$, $D_1$ is $\{X:\ X\cdot(B-A)=0\}$.</p><p><strong>The point $E$.</strong> A point of the segment $A_1B_1$ is $t\mathbf a+(1-t)\mathbf b$ with $0\le t\le1$. Using $\mathbf a\cdot B=1$, $\mathbf a\cdot A=1-u$, $\mathbf b\cdot A=1$, $\mathbf b\cdot B=1-v$,
+\[\bigl(t\mathbf a+(1-t)\mathbf b\bigr)\cdot(B-A)=t\,u-(1-t)\,v .\]
+So $E=t\mathbf a+(1-t)\mathbf b$ with $tu=(1-t)v$, i.e. $t=\dfrac{v}{u+v}$, and $0&lt;t&lt;1$. Then
+\[F(E)=1-t-(1-t)\,\mathbf a\cdot\mathbf b=(1-t)(1-\mathbf a\cdot\mathbf b),\qquad G(E)=t(1-\mathbf a\cdot\mathbf b).\]
+<strong>The midpoint.</strong> Let $M$ be the midpoint of $AB$. An affine function takes at a midpoint the average of its values at the ends, so $F(M)=\frac u2$ and $G(M)=\frac v2$.</p><p><strong>One plane through all of them.</strong> Let
+\[L(X)=v\,F(X)-u\,G(X)=(v-u)-(v\,\mathbf a-u\,\mathbf b)\cdot X .\]
+Since $\mathbf a,\mathbf b$ are not parallel and $u,v&gt;0$, the vector $v\mathbf a-u\mathbf b$ is not zero, so $\Pi=\{X:\ L(X)=0\}$ is a plane. It contains the line $CD$ (where $F=G=0$), the point $M$ (as $v\cdot\frac u2-u\cdot\frac v2=0$) and the point $E$ (as $L(E)=(1-\mathbf a\cdot\mathbf b)\bigl(v(1-t)-ut\bigr)=0$). Finally, $E$ is not on the line $CD$, because $F(E)=(1-t)(1-\mathbf a\cdot\mathbf b)&gt;0$ (recall $t&lt;1$ and $\mathbf a\cdot\mathbf b&lt;1$ for distinct unit vectors). Therefore $\Pi$ is the plane $CDE$, and it contains the midpoint $M$ of $AB$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p21">

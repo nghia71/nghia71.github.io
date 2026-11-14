@@ -76,7 +76,7 @@ description: Thailand Online Mathematical Olympiad 2026: problems with answers a
 <div class="ct-meta">Geometry &middot; LPS VII, Chapter 32: Trigonometric Geometry and Metric Conversion</div>
 <div class="ct-text"><p>Let $ABCD$ be a quadrilateral inscribed in a circle of radius $1$. If lines $AD$ and $BC$ are perpendicular, determine all possible values of $AB^2+CD^2$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$4$ (the only possible value)</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Extended law of sines)</h4>
 <p>Let $E$ be the intersection of the perpendicular lines $AD$ and $BC$. Note $E\ne B$ (otherwise $B$ would lie on line $AD$, which
 meets the circle only at $A$ and $D$) and similarly $E\ne D$.</p><p>By the extended law of sines in the circle of radius $1$,
@@ -97,6 +97,19 @@ $D=(x_D,0)$, Pythagoras gives
 \[AB^2+CD^2=(x_A^2+y_B^2)+(y_C^2+x_D^2)=(2p^2-2q^2+2)+(2q^2-2p^2+2)=\boxed{4}.\]
 (The figure also shows the feet $M_1,M_2$ of the perpendiculars from $O$: $OM_1EM_2$ is a rectangle, which is the geometric meaning of the
 computation.)</p>
+<h4>Solution 3 (Two reflections and a diameter)</h4>
+<p>Let $O$ be the centre of the circle. Let $\sigma_1$ be the reflection in the line through $O$ perpendicular to $AD$, and
+$\sigma_2$ the reflection in the line through $O$ perpendicular to $BC$. The line through $O$ perpendicular to the chord $AD$ is its perpendicular
+bisector, so $\sigma_1$ maps the circle to itself and swaps $A$ and $D$; likewise $\sigma_2$ maps the circle to itself and swaps $B$ and $C$.</p><p>Since $AD\perp BC$, the two axes are perpendicular lines through $O$. In coordinates with these axes as the coordinate axes, the two reflections are
+$(x,y)\mapsto(x,-y)$ and $(x,y)\mapsto(-x,y)$, so applying both (in either order) gives the half-turn $(x,y)\mapsto(-x,-y)$ about $O$.</p><p>Let $B'=\sigma_1(B)$, a point of the circle. Then $B'=\sigma_1(\sigma_2(C))$ is the point diametrically opposite to $C$, so $B'C=2$. A reflection
+preserves distances, hence
+\[AB=\sigma_1(A)\,\sigma_1(B)=DB' .\]
+If $D\ne B'$, then $D$ (which is also different from $C$) sees the diameter $B'C$ at a right angle, and Pythagoras in triangle $B'DC$ gives
+$DB'^2+DC^2=B'C^2=4$. If $D=B'$, then $DB'=0$ and $DC=B'C=2$, so again $DB'^2+DC^2=4$. In both cases
+\[AB^2+CD^2=DB'^2+DC^2=4 .\]
+The value is attained: on the unit circle take $A,B,C,D$ at the polar angles $30^\circ,60^\circ,120^\circ,330^\circ$. Then $ABCD$ is a convex
+inscribed quadrilateral, $A$ and $D$ have the same $x$-coordinate (so $AD$ is vertical) and $B$ and $C$ have the same $y$-coordinate (so $BC$ is
+horizontal). Hence the only possible value is $\boxed{4}$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p2">
@@ -105,8 +118,8 @@ computation.)</p>
 <div class="ct-text"><p>Let $n\ge 3$ be a positive integer. Let $S=\{x_1,x_2,\dots,x_n\}$ be a set of positive real numbers $x_1&lt;x_2&lt;\cdots&lt;x_n$ satisfying the following condition:
 \[\text{for all distinct elements } a \text{ and } b \text{ of } S,\ |a^2-b^2| \text{ is also an element of } S.\]
 Prove that $x_2-x_1&lt;\frac{1}{2}$.</p></div>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Largest element and the two smallest)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Largest element and the two smallest)</h4>
 <p>Write $a=x_1$, $b=x_2$ and $M=x_n$ (the largest element). For distinct $u&gt;v$ in $S$ the number $u^2-v^2$ is a positive
 element of $S$, hence at most $M$.</p><p><em>Step 1: every element of $S$ is less than $a+1$.</em> Since $M^2-a^2\in S$, we have $M^2-a^2\le M$, so $M^2-M-a^2\le0$ and
 \[M\le\frac{1+\sqrt{1+4a^2}}2&lt;\frac{1+(1+2a)}2=a+1 .\]
@@ -119,6 +132,16 @@ $b^2-a^2=(M^2-a^2)-(M^2-b^2)=M-a$, which is an element of $S$ smaller than $M$ a
 $M^2-a^2=M$:
 \[(a+b)^2-a^2=a+b\iff 2ab+b^2=a+b\iff 2ab+(a^2+b)=a+b\iff a(a+2b-1)=0,\]
 using $b^2=a^2+b$. As $a&gt;0$, $a+2b=1$, so $b&lt;\frac12$, contradicting Step 2.</p><p>Hence $b-a&lt;\frac12$, that is, $x_2-x_1&lt;\frac12$.</p>
+<h4>Solution 2 (The differences from the smallest element)</h4>
+<p>Suppose, for contradiction, that $x_2-x_1\ge\frac12$. For each $j=2,3,\dots,n$ put $d_j=x_j^2-x_1^2$; by the condition,
+$d_j\in S$. Since $x_j-x_1\ge x_2-x_1\ge\frac12$ and $x_j&gt;x_1$,
+\[d_j=(x_j-x_1)(x_j+x_1)\ \ge\ \frac{x_j+x_1}2\ &gt;\ x_1 .\]
+So $d_2,d_3,\dots,d_n$ are elements of $S$ different from $x_1$, that is, elements of the $(n-1)$-element set $\{x_2,x_3,\dots,x_n\}$. Moreover
+$d_2&lt;d_3&lt;\dots&lt;d_n$, because $x_2&lt;x_3&lt;\dots&lt;x_n$. Thus $d_2,\dots,d_n$ are $n-1$ distinct elements of $\{x_2,\dots,x_n\}$ listed in increasing
+order, so they are exactly $x_2,\dots,x_n$ in this order: $d_j=x_j$ for every $j\ge2$. In particular (here we use $n\ge3$)
+\[x_2^2-x_2-x_1^2=0\qquad\text{and}\qquad x_3^2-x_3-x_1^2=0,\]
+so $x_2$ and $x_3$ are both positive roots of $z^2-z-x_1^2=0$. But the product of the two roots of this quadratic is $-x_1^2&lt;0$, so it has
+exactly one positive root, and $x_2=x_3$, a contradiction.</p><p>Hence $x_2-x_1&lt;\frac12$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p3">
@@ -144,8 +167,8 @@ AM-GM step $1+1+t^3\ge3t$.</p>
 <h3>Problem 4</h3>
 <div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 23: Recurrence and Combinatorial Construction</div>
 <div class="ct-text"><p>Let $n$ be a positive integer. Initially, the numbers $1,2,2^2,\dots,2^n$ are arranged around a circle in some order. Every minute, Alyssa chooses two consecutive numbers, say $a$ and $b$, on the circle, write the nonnegative difference $|a-b|$ between them, and then erase the original two numbers. She keeps doing this until there is only one number remaining on the circle. Prove that for all odd positive integers $m&lt;2^n$, no matter what the initial configuration is, Alyssa can perform the operations so that the remaining number is $m$.</p></div>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Induction by doubling: insert the 1 at the right moment)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Induction by doubling: insert the 1 at the right moment)</h4>
 <p><em>Language.</em> At every moment each number on the circle is the result of combining the original numbers of an arc; call
 such an arc with its current value a <em>block</em>. A <em>procedure</em> is a sequence of operations, each combining two adjacent blocks with values
 $x,y$ into one block of value $|x-y|$.</p><p><em>A fact about values.</em> If the original numbers are distinct powers of $2$, every block value is of the form $\sum\pm2^{j}$ over the distinct
@@ -164,6 +187,25 @@ them is replaced by $x+\delta'$ with $\delta'=\pm1$, the order of the two values
 $\delta''=\delta'$ if $x&gt;y$ and $\delta''=-\delta'$ if $x&lt;y$; the new value is still positive. Hence, step by step, the block containing $1$ always
 has value (old value)$\,+\,(\pm\delta)$, where the sign $\pm$ depends only on the comparisons made in $\Pi$, not on our choice of $\delta$. So the final
 number is $2k+\tau\delta$ for a fixed $\tau\in\{1,-1\}$. Choosing $\delta=\tau\varepsilon$ gives the final number $2k+\varepsilon=m$.</p><p>This proves $S(n)$, and by induction the statement holds for all $n$.</p>
+<h4>Solution 2 (Signed sums with the largest number kept aside)</h4>
+<p>Write $L=2^n$ and let $m$ be odd with $1\le m&lt;L$.</p><p><em>Signs.</em> Put $s=\frac{m-1}2$, an integer with $0\le s\le2^{n-1}-1$. Writing $s$ in binary, $s$ is a sum of distinct powers among
+$1,2,\dots,2^{n-2}$ (no powers if $s=0$). Give the sign $+$ to these powers and to $L$, and the sign $-$ to all other numbers among
+$1,2,\dots,2^{n-1}$. As $1+2+\dots+2^{n-1}=L-1$, the signed sum of all $n+1$ numbers is
+\[L+s-(L-1-s)=2s+1=m .\]
+<em>A fact.</em> A sum $\pm2^{j_1}\pm2^{j_2}\pm\dots\pm2^{j_r}$ with $r\ge1$ distinct exponents is not $0$ and has the sign of its term with the largest
+power, because a power of $2$ exceeds the sum of all smaller powers of $2$ ($2^j&gt;2^{j-1}+\dots+2+1$).</p><p><em>Labels.</em> At every moment each number on the circle has been obtained from the original numbers on an arc of the circle; we give it the
+<em>label</em> equal to the signed sum of those original numbers. At the start the labels are the signed numbers. We keep the invariant
+<em>each number on the circle equals the absolute value of its label</em>; by the fact, labels are never $0$, so each has a sign.</p><p><em>Phase 1.</em> We never touch $L$ in this phase. Without $L$, the other numbers form a row whose two ends are the two neighbours of $L$. As long as
+two adjacent numbers of the row have labels $\lambda,\mu$ of opposite signs, combine them. The new number is
+$\bigl||\lambda|-|\mu|\bigr|=|\lambda+\mu|$ (opposite signs), and its arc is the union of the two arcs, with label $\lambda+\mu$; so the invariant
+is kept, and the sum of all labels on the circle is still $m$. Each operation shortens the row, which always keeps at least one number, so
+Phase 1 ends, and then all labels in the row have the same sign. They cannot all be positive, since then the sum of all labels would exceed $L&gt;m$.
+So all are negative; if $e_1,e_2,\dots,e_k$ are the numbers of the row, read from one end, then
+\[L-(e_1+e_2+\dots+e_k)=m,\qquad\text{so}\qquad e_1+\dots+e_k=L-m .\]
+<em>Phase 2.</em> Now $L$ is adjacent to $e_1$. Combine $L$ with $e_1$, then the result with $e_2$ (now adjacent to it), and so on. Before the
+$i$-th of these operations the number in place of $L$ is $L-(e_1+\dots+e_{i-1})$, and
+\[L-(e_1+\dots+e_{i-1})-e_i\ \ge\ L-(e_1+\dots+e_k)=m&gt;0,\]
+so the operation writes $L-(e_1+\dots+e_i)$. After the $k$-th operation one number is left, namely $L-(L-m)=m$.</p><p>Hence, from every initial arrangement, Alyssa can finish with any odd $m&lt;2^n$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p5">
@@ -222,8 +264,8 @@ $9$ and $15$ are composite; so $\pi(2n-1)\le 1+(n-3)=n-2$, a contradiction.</p><
 <h3>Problem 8</h3>
 <div class="ct-meta">Geometry &middot; LPS VII, Chapter 51: Spiral Similarity and Advanced Transformational Geometry</div>
 <div class="ct-text"><p>Let $ABC$ be a triangle, and let $D\ne B,C$ be a point on the side $BC$. Let $\Omega_B$ be the circle passing through $B$ and $D$ and tangent to $AB$ at $B$. Let $\Omega_C$ be the circle passing through $C$ and $D$ and tangent to $AC$ at $C$. Let $\gamma$ be the circle passing through $A$ and $D$ and tangent to $BC$ at $D$. Suppose $\gamma$ intersects $\Omega_B$ and $\Omega_C$ again at points $X$ and $Y$, respectively ($X,Y\ne D$). Lines $BX$ and $CY$ intersect at $Z$.</p><p>Prove that the circumcircles of triangles $XYZ$ and $ABC$ are tangent, and the tangency point lies on both $\Omega_B$ and $\Omega_C$.</p></div>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Directed angle chase)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Directed angle chase)</h4>
 <div class="ct-fig"><img style="width:273px" src="/assets/contests/2026-27/thailand-online-mo-8_s1.svg" alt="Figure for the solution"></div>
 <p>We use directed angles $\measuredangle(\ell,m)$ between lines, taken modulo $180^\circ$; recall the tangent-chord theorem in the form:
 if $t$ is the tangent at $U$ to a circle through $U,V,W$, then $\measuredangle(t,UV)=\measuredangle(WU,WV)$.</p><p><em>Step 0: three tangent-chord facts.</em> For $X$ on $\Omega_B$ (tangent $BA$ at $B$) and on $\gamma$ (tangent $BC$ at $D$):
@@ -249,6 +291,33 @@ So the lines $MA$ and $MZ$ make the same angle with $MX$; they coincide, and $Z$
 As $Z$ lies on $AM$ (Step 3) and on $BX$, this equals $\measuredangle(ZM,ZX)$. By the converse of the tangent-chord theorem, $t$ is also tangent at $M$
 to the circle through $M,X,Z$, which is $(XYZ)$ by Step 2. Hence $(XYZ)$ and $(ABC)$ are tangent at $M$, and $M$ lies on both $\Omega_B$ and
 $\Omega_C$. $\blacksquare$</p>
+<h4>Solution 2 (Inversion at D and a homothety)</h4>
+<div class="ct-fig"><img style="width:351px" src="/assets/contests/2026-27/thailand-online-mo-8_s2.svg" alt="Figure for the solution"></div>
+<p>We use directed angles $\measuredangle(\ell,m)$ between lines, modulo $180^\circ$, and the tangent-chord theorem: if $t$ is tangent at $U$
+to a circle through $U,V,W$, then $\measuredangle(t,UV)=\measuredangle(WU,WV)$. As in the (edited) statement, $X,Y\ne D$, and $X,Y,Z$ form a
+nondegenerate triangle.</p><p><em>Inversion.</em> Let $P\mapsto P'$ be an inversion centred at $D$ (any radius). It is a bijection of the plane without $D$; it maps a line through
+$D$ to itself, a circle through $D$ to a line not through $D$ (and conversely), and a circle not through $D$ to a circle not through $D$. A line and a
+circle, or two circles, are tangent exactly when they have one common point, so tangency at a point other than $D$ is preserved. Let $\ell$ be the
+line $BC$.</p><ul class="ct-ul"><li><p>$B',C'$ lie on $\ell$. The circle $\gamma$ meets $\ell$ only at $D$, so $\gamma'$ is a line with no point on $\ell$: $\gamma'\parallel\ell$,
+and $A',X',Y'\in\gamma'$.</p></li><li><p>$\Omega_B$ passes through $D$, so $\Omega_B'$ is a line $b$ through $B'$ and $X'$; likewise $\Omega_C'$ is a line $c$ through $C'$ and $Y'$.</p></li><li><p>Line $AB$ avoids $D$ (as $D$ is strictly between $B$ and $C$), so its image is a circle $\omega_B$ through $D,A',B'$, and $b$ is tangent to
+$\omega_B$ at $B'$ because $\Omega_B$ is tangent to $AB$ at $B$. Likewise $c$ is tangent at $C'$ to the circle $\omega_C$ through $D,A',C'$.</p></li><li><p>Line $BX$ avoids $D$ (otherwise $X$ would lie on line $BD=\ell$, but $\Omega_B$ meets $\ell$ only at $B$ and $D$), so its image is a circle
+through $D,B',X'$; likewise line $CY$ becomes a circle through $D,C',Y'$. The point $Z'$ is a common point of these two circles, other than $D$.</p></li><li><p>The circle $(ABC)$ avoids $D$ ($D$ is inside it), so its image is the circle $F=(A'B'C')$.</p></li></ul><p><em>Step 1: $b$ and $c$ meet at a point $W$ of $F$.</em> By the tangent-chord theorem in $\omega_B$ and in $\omega_C$,
+\[\measuredangle(b,\ell)=\measuredangle(A'B',A'D),\qquad \measuredangle(c,\ell)=\measuredangle(A'C',A'D),\]
+so $\measuredangle(b,c)=\measuredangle(b,\ell)-\measuredangle(c,\ell)=\measuredangle(A'B',A'C')\ne0$ (the points $A',B',C'$ lie on the circle $F$,
+so they are not collinear). Hence $b$ and $c$ meet at one point $W$. Also $\measuredangle(c,\ell)\ne0$ since $A'\notin\ell$, so $c\ne\ell$ and $c$
+meets $\ell$ only at $C'$; thus $B'\notin c$ and $W\ne B'$. Similarly $W\ne C'$. Therefore
+$\measuredangle(WB',WC')=\measuredangle(b,c)=\measuredangle(A'B',A'C')$, and $W$ lies on $F$.</p><p><em>Step 2: a homothety.</em> If $X'=W$, then $W\in\gamma'$ and $Y'=c\cap\gamma'=W=X'$, which is impossible as $X\ne Y$. So $X'\ne W$, and there is a
+homothety $h$ with centre $W$ and $h(B')=X'$ (both points lie on $b$). It maps $\ell$ to the line through $X'$ parallel to $\ell$, which is
+$\gamma'$, and maps the line $c$ through $W$ to itself; hence $h(C')=h(\ell\cap c)=\gamma'\cap c=Y'$. So $h$ maps $F=(WB'C')$ onto the circle
+$H=(WX'Y')$. As $h$ fixes $W$, it maps the tangent to $F$ at $W$ to a parallel line through $W$, i.e. to itself; so $F$ and $H$ have a common
+tangent at $W$. They are different circles: $F$ meets $b$ only at $B'$ and $W$, while $X'\in H$ is on $b$ and differs from both ($X'\in\gamma'$,
+$B'\in\ell$). Hence $F$ and $H$ are tangent at $W$.</p><p><em>Step 3: $Z'$ lies on $H$ (Miquel).</em> Using the circles through $D,B',X',Z'$ and through $D,C',Y',Z'$,
+\begin{align*}\measuredangle(Z'X',Z'Y')&amp;=\measuredangle(Z'X',Z'D)+\measuredangle(Z'D,Z'Y')=\measuredangle(B'X',B'D)+\measuredangle(C'D,C'Y')\\
+&amp;=\measuredangle(b,\ell)+\measuredangle(\ell,c)=\measuredangle(WX',WY'),\end{align*}
+so $Z'$ lies on the circle $H$ through $W,X',Y'$.</p><p><em>Step 4: back to the original figure.</em> The points $X',Y',Z'$ are three distinct points of $H$. The circle $H$ does not pass through $D$:
+otherwise its image would be a line containing $X,Y,Z$. So the image of $H$ is a circle through $X,Y,Z$, namely $(XYZ)$, and the image of $F$ is
+$(ABC)$. Since $F$ and $H$ are tangent at $W\ne D$, the circles $(ABC)$ and $(XYZ)$ are tangent at the image $M$ of $W$. Finally $W$ lies on $b$ and
+on $c$, so $M$ lies on $\Omega_B$ and on $\Omega_C$ (and $M\ne D$). $\blacksquare$</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p9">
@@ -287,7 +356,7 @@ Hence $f(z)=z^2$ for all $z$, and the solutions are $\boxed{f\equiv0}$ and $\box
 <div class="ct-meta">Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure</div>
 <div class="ct-text"><p>Let $ABC$ be an acute-angled triangle with circumcircle $\Omega$. Let $\Omega_B$ be the circle centered at $B$ which is tangent to $AC$, and $\Omega_C$ be the circle centered at $C$ which is tangent to $AB$. Let $\ell_B$ be the common chord of $\Omega_B$ and $\Omega$, and $\ell_C$ be the common chord of $\Omega_C$ and $\Omega$. The tangent lines to $\Omega$ at $B$ and $C$ intersect at $T$.
 Prove that lines $AT$, $\ell_B$, and $\ell_C$ are concurrent.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Power as a linear function along AT)</h4>
 <div class="ct-fig"><img style="width:314px" src="/assets/contests/2026-27/thailand-online-mo-10_s1.svg" alt="Figure for the solution"></div>
 <p>Let $a,b,c$ be the side lengths, $R$ the circumradius, and $h_b=c\sin A$, $h_c=b\sin A$ the radii of $\Omega_B$, $\Omega_C$
@@ -313,6 +382,27 @@ The point $A$ is also inside angle $BTC$, and by the lemma
 $\frac{\operatorname{dist}(A,TB)}{\operatorname{dist}(A,TC)}=\frac{AB^2/2R}{AC^2/2R}=\frac{c^2}{b^2}$.</p><p>For a point $P$ inside an angle with vertex $T$, if the ray $TP$ makes angles $\alpha$ and $\beta$ with the two sides ($\alpha+\beta=\angle BTC$
 fixed), then $\frac{\operatorname{dist}(P,TB)}{\operatorname{dist}(P,TC)}=\frac{\sin\alpha}{\sin\beta}$, which is strictly increasing in $\alpha$. So the ratio
 determines the ray $TP$. Hence $X$ lies on ray $TA$, i.e. $AT$, $\ell_B$, $\ell_C$ are concurrent.</p>
+<h4>Solution 3 (Cartesian coordinates)</h4>
+<p>Place $B=(0,0)$, $C=(1,0)$, $A=(u,v)$ with $v&gt;0$, and write $s=u^2+v^2=AB^2$, $t=(1-u)^2+v^2=AC^2$. The angle at $A$
+is acute, so $\overrightarrow{AB}\cdot\overrightarrow{AC}=u^2-u+v^2=s-u&gt;0$. Put $w=\frac{u-s}v$; then $w&lt;0$.</p><p><em>Circle and tangents.</em> The circle $\Omega$ is $x^2+y^2-x+wy=0$: it passes through $B$ and $C$, and through $A$ because $s-u+wv=0$. Its centre
+is $O=(\frac12,-\frac w2)$. The tangent at $B$ is perpendicular to $\overrightarrow{OB}$: it is $\frac x2-\frac{wy}2=0$, i.e. $x=wy$. The tangent at
+$C$ is perpendicular to $\overrightarrow{OC}=(\frac12,\frac w2)$: it is $(x-1)+wy=0$, i.e. $x=1-wy$. As $w\ne0$, they meet at
+$T=\bigl(\frac12,\frac1{2w}\bigr)$.</p><p><em>The two circles.</em> The radius $r_B$ of $\Omega_B$ is the distance from $B$ to $AC$, i.e. $\frac{2[ABC]}{AC}=\frac v{\sqrt t}$; so
+$r_B^2=\frac{v^2}t$, and likewise $r_C^2=\frac{v^2}s$. The circle $\Omega_B$ has its centre on $\Omega$ and radius $r_B&lt;AB\le 2R$ ($R$ the
+radius of $\Omega$); as $Q$ moves along either arc of $\Omega$ from $B$ to the point opposite $B$, the distance $BQ$ grows continuously from $0$ to
+$2R$, so it equals $r_B$ once on each arc and $\Omega_B$ meets $\Omega$ at two points. The same holds for $\Omega_C$. The common chord of two
+intersecting circles lies on the line obtained by subtracting their equations. With $\Omega_B: x^2+y^2-\frac{v^2}t=0$ and
+$\Omega_C: x^2+y^2-2x+1-\frac{v^2}s=0$ this gives
+\[\ell_B:\ x-wy=\frac{v^2}t,\qquad\qquad \ell_C:\ 1-x-wy=\frac{v^2}s .\]
+<em>The intersection.</em> Adding and subtracting the two equations, the lines meet at the point $P=(x_0,y_0)$ with
+\[2x_0-1=v^2\Bigl(\frac1t-\frac1s\Bigr),\qquad 1-2wy_0=v^2\Bigl(\frac1t+\frac1s\Bigr),\]
+that is,
+\[x_0-\frac12=\frac{v^2}{st}\cdot\frac{s-t}2,\qquad y_0-\frac1{2w}=-\frac{v^2}{st}\cdot\frac{s+t}{2w}.\]
+Now $s-t=2u-1$, and $s+t=2(s-u)+1=1-2wv$ because $s-u=-wv$. Therefore
+\[x_0-\frac12=\frac{v^2}{st}\Bigl(u-\frac12\Bigr),\qquad y_0-\frac1{2w}=\frac{v^2}{st}\Bigl(v-\frac1{2w}\Bigr),\qquad\text{i.e.}\qquad
+\overrightarrow{TP}=\frac{v^2}{st}\,\overrightarrow{TA}.\]
+So $P$ lies on line $AT$ ($A\ne T$, as $T$ lies outside $\Omega$), and the lines $AT$, $\ell_B$, $\ell_C$ are concurrent. (Since
+$v=2[ABC]=AB\cdot AC\sin A$, the factor $\frac{v^2}{st}$ equals $\sin^2A$.)</p>
 </div></details>
 </section>
 {% endraw %}

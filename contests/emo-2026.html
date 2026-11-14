@@ -102,8 +102,8 @@ blocks are disjoint because $n-u-1&lt;n-u+r\le 2n-u-1&lt;2n-u+1$, so $|\mathcal 
 <h3>Problem 2</h3>
 <div class="ct-meta">Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure</div>
 <div class="ct-text"><p>Given a triangle $ABC$, let $K$ and $L$ be distinct points on side $AC$ such that $\angle ABK=\angle CBL$. Rays $BK$ and $BL$ are not orthogonal to $AC$, and intersect the circumcircle of triangle $ABC$ for the second time at points $K_1$ and $L_1$, respectively. Points $K_2$ and $L_2$ lie on the tangents to the circumcircle of triangle $ABC$ at points $K_1$ and $L_1$, respectively, such that $\angle BKK_2=\angle BLL_2=90^\circ$.</p><p>Prove that the points $A,C,K_2$, and $L_2$ lie on a circle.</p></div>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (An auxiliary point on both perpendiculars)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (An auxiliary point on both perpendiculars)</h4>
 <div class="ct-fig"><img style="width:283px" src="/assets/contests/2026-27/emo-2_s1.svg" alt="Figure for the solution"></div>
 <p>We use directed angles $\measuredangle(\ell,m)$ between lines, taken modulo $180^\circ$, and signed products of collinear segments.
 If $K=A$ then $\angle ABK=0$, so $L=C$, $K_1=K_2=A$ and $L_1=L_2=C$, and there is nothing to prove; so $K,L$ are interior points of the side $AC$, and $K\ne L$.</p><p>Let $\ell_K$ and $\ell_L$ be the lines through $K$ and $L$ perpendicular to $BK$ and $BL$; $K_2\in\ell_K$, $L_2\in\ell_L$. As $BK\ne BL$, these lines meet at a point $V$.
@@ -120,6 +120,37 @@ because $K$ lies inside $\omega$, between $B$ and $K_1$, while $W=V$ would give 
 and $C$). By the converse of the power of a point (the circle through $A,C,V$ meets $\ell_K$ a second time at the point $X$ with $KV\cdot KX=KA\cdot KC$), the point
 $K_2$ lies on the circle $\Gamma$ through $A,C,V$.</p><p><strong>Step 5.</strong> The hypothesis is symmetric under exchanging $A\leftrightarrow C$ and $K\leftrightarrow L$, and $V$ is defined symmetrically. Repeating Steps 2&ndash;4 for
 $L$ shows that $L_2$ also lies on the circle through $A,C,V$, which is $\Gamma$. Hence $A,C,K_2,L_2$ lie on one circle.</p>
+<h4>Solution 2 (Coordinates and the circles through $A$ and $C$)</h4>
+<p>If $K=A$, then $L=C$ and there is nothing to prove (see Solution 1); so $K$ and $L$ are interior points of the side $AC$.</p><p>Take $AC$ as the $x$-axis and the distance from $B$ to $AC$ as the unit of length: $B=(0,1)$, $A=(a,0)$, $C=(c,0)$ with $a&lt;c$. Put
+\[s=a+c,\qquad p=ac,\qquad h=1-p,\qquad \Omega(x,y)=x^2+y^2-sx-(1+p)y+p .\]
+One checks $\Omega(A)=\Omega(C)=\Omega(B)=0$, so $\Omega=0$ is the circumcircle $\omega$ of $ABC$. Let $K=(t,0)$ and $L=(u,0)$; then $a&lt;t,u&lt;c$, and
+$t\ne0$, $u\ne0$ because $BK$ and $BL$ are not perpendicular to $AC$.</p><p><strong>Step 1: the angle condition.</strong> Identify points with complex numbers. The vectors from $B$ to $A,C,K,L$ are $a-i$, $c-i$, $t-i$, $u-i$. As $K$ and $L$ lie
+inside the angle $ABC$, the condition $\angle ABK=\angle CBL$ says that the rotation taking ray $BA$ to ray $BK$ equals the rotation taking ray $BL$ to ray $BC$, so
+$\frac{(t-i)(u-i)}{(a-i)(c-i)}$ is a positive real number. Hence $(t-i)(u-i)\,(a+i)(c+i)$ is real. Since $(t-i)(u-i)=(tu-1)-(t+u)i$ and
+$(a+i)(c+i)=(p-1)+si$, its imaginary part is $s(tu-1)-(t+u)(p-1)$, so
+\[h(t+u)=s(1-tu). \tag{1}\]</p><p><strong>Step 2: the point $K_2$.</strong> Put $v=1+t^2$, $w=h+st$, $d=ht-s$. Then $v-w=t^2-st+p=(t-a)(t-c)&lt;0$, so $w&gt;v&gt;0$.
+The points of line $BK$ are $B+\lambda(t,-1)=(\lambda t,1-\lambda)$, and a short expansion gives $\Omega(\lambda t,1-\lambda)=v\lambda^2-w\lambda$. So
+$K_1=B+\frac wv(t,-1)$.</p><p><em>Tangent criterion.</em> A point $X$ lies on the tangent to $\omega$ at $K_1$ if and only if $\Omega(X)=XK_1^2$. Indeed, $\Omega(X)=XO^2-\rho^2$, where $O$
+and $\rho$ are the centre and the radius of $\omega$. The function $X\mapsto\Omega(X)-XK_1^2$ is affine (the quadratic terms cancel); it vanishes on the tangent
+(there $XO^2=\rho^2+XK_1^2$ by Pythagoras) and not at $X=O$ (where it equals $-2\rho^2$). So its zero set is exactly the tangent.</p><p>The line through $K$ perpendicular to $BK$ has direction $(1,t)$, so $K_2=(t+e,\,te)$ for some real $e$. Then
+\[K_2-K_1=\Bigl(1-\frac wv\Bigr)(t,-1)+e\,(1,t),\]
+a sum of two orthogonal vectors, so $K_1K_2^2=\frac{(w-v)^2}{v}+ve^2$. Expanding, $\Omega(K_2)=(v-w)+de+ve^2$. By the tangent criterion,
+\[de=\frac{(w-v)^2}{v}+(w-v)=\frac{w(w-v)}{v}&gt;0. \tag{2}\]
+Hence $d\ne0$, $e\ne0$, and $K_2$ is not on $AC$ (its $y$-coordinate $te$ is not $0$).</p><p><strong>Step 3: the circle through $A$, $C$, $K_2$.</strong> A circle $x^2+y^2+Dx+Ey+F=0$ passes through $A$ and $C$ exactly when $x^2+Dx+F$ has the roots $a,c$, that
+is, $D=-s$ and $F=p$. So the circles through $A$ and $C$ are the curves $\Omega(x,y)+\mu y=0$, and since $K_2\notin AC$, exactly one of them passes through $K_2$,
+namely the one with $\mu_K=-\Omega(K_2)/(te)$. By (2), $\Omega(K_2)=\frac{(w-v)^2}{v}+ve^2$ with $e=\frac{w(w-v)}{vd}$, and
+$d^2+w^2=(ht-s)^2+(h+st)^2=(h^2+s^2)v$. Therefore
+\[\Omega(K_2)=\frac{(w-v)^2(d^2+w^2)}{vd^2}=\frac{(h^2+s^2)(w-v)^2}{d^2},\]
+and dividing by $te=\frac{tw(w-v)}{vd}$,
+\[\mu_K=-\frac{(h^2+s^2)\,v\,(w-v)}{t\,w\,d}.\]</p><p><strong>Step 4: symmetry.</strong> By (1), $u(h+st)=s-ht$, that is, $uw=-d$. So $twd=-tuw^2$ and
+\[\mu_K=\frac{h^2+s^2}{tu}\cdot\frac vw\Bigl(1-\frac vw\Bigr),\qquad \frac vw=\frac{1+t^2}{h+st}.\]
+Everything above applies to $L$ as well (with $t$ and $u$ exchanged; relation (1) is symmetric), so
+$\mu_L=\frac{h^2+s^2}{tu}\cdot\frac{v'}{w'}\bigl(1-\frac{v'}{w'}\bigr)$ with $\frac{v'}{w'}=\frac{1+u^2}{h+su}$. It remains to show
+$(h+su)(1+t^2)=(h+st)(1+u^2)$. From $uw=-d$,
+\[w(h+su)=h(h+st)-s(ht-s)=h^2+s^2,\qquad w^2(1+u^2)=w^2+d^2=(h^2+s^2)(1+t^2).\]
+Dividing the second equation by the first gives $w(1+u^2)=(h+su)(1+t^2)$, as needed. Hence $\mu_K=\mu_L$: the circle $\Omega(x,y)+\mu_Ky=0$ passes
+through $A$, $C$, $K_2$ and $L_2$.</p><p><em>Remark.</em> Since $\frac{(t-a)(t-c)}{1+t^2}=1-\frac wv$, the key equality $\frac vw=\frac{v'}{w'}$ says $\frac{KA\cdot KC}{KB^2}=\frac{LA\cdot LC}{LB^2}$,
+a known property of two cevians symmetric about the bisector of angle $B$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p3">
@@ -148,8 +179,8 @@ and the average is $\frac{n+1}3$. Hence the largest achievable average is $\boxe
 <div class="ct-meta">Number Theory &middot; LPS VII, Chapter 21: Arithmetic Functions and Multiplicative Structure</div>
 <div class="ct-text"><p>Let $\mathbb{N}$ be the set of positive integers. Find all functions $f:\mathbb{N}\to\mathbb{N}$ that simultaneously satisfy the following properties:</p><ul class="ct-parts"><li><p><span class="ct-lbl">(i)</span> $f(mn)=f(m)f(n)$ for all positive integers $m$ and $n$;</p></li><li><p><span class="ct-lbl">(ii)</span> There exists a positive integer $c$ such that $f(n)\leq n^c$ for all positive integers $n$;</p></li><li><p><span class="ct-lbl">(iii)</span> The numbers $f(n)+m$ and $f(m)+n+1$ are coprime for all positive integers $m$ and $n$.</p></li></ul></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$f(n)=n$ for all $n$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Primes in progressions kill every exponent but one)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Primes in progressions kill every exponent but one)</h4>
 <p><strong>The identity works.</strong> For $f(n)=n$, (i) holds, (ii) holds with $c=1$, and $n+m$ and $m+n+1$ are consecutive integers, hence coprime.</p><p>Conversely, let $f$ satisfy (i)&ndash;(iii). From (i), $f(1)=f(1)^2$, so $f(1)=1$. Condition (iii) with $m=1$, $n=2$ says that $f(2)+1$ and $f(1)+3=4$ are coprime, so
 $f(2)+1$ is odd and <em>$f(2)$ is even</em>. We use one theorem without proof:</p><p><em>Dirichlet's theorem.</em> If $Q\ge1$ and $b$ are coprime integers, then there are infinitely many primes $r$ with $r\equiv b\pmod Q$.</p><p><strong>Step 1: $f(p)=p^{a_p}$ with $0\le a_p\le c$ for every prime $p$.</strong> Suppose a prime $r\ne p$ divides $f(p)$. As $p$ is invertible modulo $r$, there is
 $t\in\{1,\dots,r\}$ with $pt\equiv-1-f(r)\pmod r$. Take $n=pt$ and $m=r$. Then $f(n)+m=f(p)f(t)+r$ and $f(m)+n+1=f(r)+pt+1$ are both divisible by $r$,
@@ -168,6 +199,28 @@ $q_l$.</p><p>Now $f(s_l)=f(p)^{j_l}=p^{kj_l}=s_l^{\,k}$, so $q_l\nmid f(s_l)$ an
 theorem there is an integer $b$, coprime to $Q=q_1q_2\cdots q_c$, with $b\equiv-s_l^{\,k}\pmod{q_l}$ for $l=1,\dots,c$. By Dirichlet's theorem there is a prime
 $r\equiv b\pmod Q$. Then $a_r\ne l$ for every $l\in\{1,\dots,c\}$; but $1\le a_r\le c$ by Steps 1 and 3. This contradiction proves Step 4.</p><p><strong>Conclusion.</strong> By Steps 1&ndash;4, $f(p)=p$ for every prime $p$. As $f(1)=1$ and $f$ is completely multiplicative by (i), $f(n)=n$ for every positive integer $n$.
 So the only function is $\boxed{f(n)=n}$.</p>
+<h4>Solution 2 (An elementary proof with powers of $2$)</h4>
+<p>The identity works (Solution 1). Conversely, let $f$ satisfy (i) and (iii); condition (ii) will not be needed. By (i), $f(1)=1$.</p><p><strong>Step 1: if a prime $p$ divides $f(u)$, then $p\mid u$.</strong> Suppose $p\mid f(u)$ and $p\nmid u$. Since $u$ is invertible modulo $p$, every residue class
+modulo $p$ contains a multiple $n=ux$ of $u$, and then $p\mid f(u)f(x)=f(n)$. Take such an $n\equiv-1\pmod p$ and $m=p$: then $p\mid f(n)+m$, while
+$f(m)+n+1\equiv f(p)\pmod p$; by (iii), $p\nmid f(p)$. Now take $m=p^{p-1}$, so that $f(m)=f(p)^{p-1}\equiv1\pmod p$ by Fermat's little theorem, and a multiple
+$n$ of $u$ with $n\equiv-2\pmod p$. Then $f(n)+m\equiv0$ and $f(m)+n+1\equiv1-2+1=0\pmod p$, contradicting (iii).</p><p>Consequently $f(q)=q^{e_q}$ with $e_q\ge0$ for every prime $q$. Also, (iii) with $m=1$, $n=2$ says that $f(2)+1$ and $f(1)+3=4$ are coprime, so $f(2)$ is
+even. Hence $f(2)=2^e$ with $e\ge1$, and $f(2^k)=2^{ek}$.</p><p><strong>Step 2: two facts about primes $q\equiv3,5\pmod 8$.</strong></p><ul class="ct-ul"><li><p><em>If $q\equiv3$ or $5\pmod8$ is prime, then $2^{(q-1)/2}\equiv-1\pmod q$.</em> Let $g=\frac{q-1}2$. For $k=1,\dots,g$ write $2k\equiv\varepsilon_kr_k$
+with $r_k\in\{1,\dots,g\}$: $r_k=2k$, $\varepsilon_k=1$ if $2k\le g$, and $r_k=q-2k$, $\varepsilon_k=-1$ if $2k&gt;g$. The $r_k$ are distinct (equal values would need
+$2k=2l$ or $2k+2l=q$, and $q$ is odd), so they are $1,\dots,g$ in some order. Multiplying, $2^g\,g!\equiv(\prod\varepsilon_k)\,g!$, so $2^g\equiv(-1)^{g-\lfloor g/2\rfloor}$.
+For $q=8j+3$, $g-\lfloor g/2\rfloor=(4j+1)-2j$, and for $q=8j+5$, it is $(4j+2)-(2j+1)$; both are odd.</p><p>In particular, for every integer $z$ (also negative, reading $2^z$ as an inverse modulo $q$) each of $2^z$ and $-2^z\equiv2^{z+g}$ is congruent to $2^r$ for some
+integer $r\ge0$, since $2^{q-1}\equiv1$.</p></li><li><p><em>Every integer $N$ with $|N|&gt;1$ and $N\equiv3$ or $5\pmod 8$ has a prime factor $q\equiv3$ or $5\pmod8$.</em> Indeed $|N|$ is odd and $|N|\equiv3$ or
+$5\pmod8$, while a product of primes that are all $\equiv\pm1\pmod8$ is $\equiv\pm1\pmod 8$.</p></li></ul><p><strong>Step 3: $f(2)=2$.</strong></p><ul class="ct-ul"><li><p>If $e$ is even, let $q$ be a prime factor of the odd number $2^e+1&gt;1$, so $2^e\equiv-1\pmod q$. For $n=2^{e+1}\equiv-2$ we get
+$f(n)=(2^e)^{e+1}\equiv(-1)^{e+1}=-1\pmod q$. With $m=1$: $f(n)+1\equiv0$ and $f(1)+n+1=n+2\equiv0\pmod q$, contradicting (iii).</p></li><li><p>If $e\ge3$ is odd, then $N=2^{e^2}-3\equiv5\pmod8$ and $N&gt;1$; let $q\equiv3,5\pmod 8$ be a prime factor of $N$ (Step 2). Choose $r\ge0$ with
+$2^r\equiv-2^e\pmod q$ and put $m=2^r$, $n=2$. Then $f(n)+m=2^e+2^r\equiv0$, and $f(m)=(2^r)^e\equiv(-2^e)^e=-2^{e^2}\equiv-3$, so $f(m)+n+1\equiv0\pmod q$,
+contradicting (iii).</p></li></ul><p>So $e=1$, $f(2)=2$, and $f(2^kx)=2^kf(x)$ for all $k\ge0$, $x\ge1$.</p><p><strong>Step 4: $f(f(n))=n$ for every $n$.</strong> Suppose $f(f(n))\ne n$ and write $n-f(f(n))=2^\nu\delta$ with $\nu\ge0$ and $\delta$ odd (possibly negative).
+Then $N=4\delta+1\equiv5\pmod 8$ and $|N|\ge3$, so $N$ has a prime factor $q\equiv3,5\pmod8$. By Step 2 there are $r,s\ge0$ with $2^r\equiv2^{2-\nu}$ and
+$2^s\equiv-2^{2-\nu}\pmod q$. Apply (iii) to $n'=2^rn$ and $m'=2^sf(n)$:
+\begin{align*}
+f(n')+m'&amp;=(2^r+2^s)f(n)\equiv0\pmod q,\\
+f(m')+n'+1&amp;=2^sf(f(n))+2^rn+1\equiv2^r\bigl(n-f(f(n))\bigr)+1\equiv2^{2-\nu}\,2^\nu\delta+1=N\equiv0\pmod q,
+\end{align*}
+a contradiction.</p><p><strong>Step 5: conclusion.</strong> For a prime $q$, Step 1 gives $f(q)=q^{e_q}$. If $e_q=0$, then $f(f(q))=1\ne q$; otherwise $f(f(q))=f(q)^{e_q}=q^{e_q^2}$, and
+Step 4 forces $e_q=1$. So $f(q)=q$ for every prime $q$, and by (i) and $f(1)=1$, $\boxed{f(n)=n}$ for all $n$.</p>
 </div></details>
 </section>
 <h2 class="ct-group" id="day-2">Day 2</h2>
@@ -222,8 +275,8 @@ Hence $\gcd(E_1,E_2)=1$, so $N_d\ne1$ and the exponents of $N_d$ have no common 
 <h3>Problem 7</h3>
 <div class="ct-meta">Geometry &middot; LPS VII, Chapter 51: Spiral Similarity and Advanced Transformational Geometry</div>
 <div class="ct-text"><p>Let $ABC$ be an acute angle triangle with $AB&lt;AC$. Let $M$ be the midpoint of segment $BC$. Let $E$ and $F$ be points on segments $AC$ and $AB$, respectively, such that the circumcircle of triangle $MEF$ is tangent to $BC$. The circumcircles of triangles $AEF$ and $ABC$ intersect at a point $P\neq A$. Let $Q$ be a point on the circumcircle of triangle $AEF$ such that $AQ$ is perpendicular to $BC$.</p><p>Prove that $PQ$ passes through the circumcenter of triangle $MEF$.</p></div>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (The spiral similarity at $P$)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (The spiral similarity at $P$)</h4>
 <div class="ct-fig"><img style="width:260px" src="/assets/contests/2026-27/emo-7_s1.svg" alt="Figure for the solution"></div>
 <p>Directed angles $\measuredangle(\ell,m)$ are taken modulo $180^\circ$. Let $\omega=(ABC)$, $\omega_1=(AEF)$, let $\sigma=(MEF)$ with centre $O'$, and let
 $M_1$ be the midpoint of $EF$.</p><p><strong>Step 0.</strong> The circle $\sigma$ passes through $M\in BC$ and is tangent to $BC$, so it touches $BC$ at $M$ and $O'M\perp BC$. Also $O'M_1\perp EF$. The line $EF$ is
@@ -240,6 +293,27 @@ through $M,M_1,T$, which contains $P$ by Step 1. So $P,M,O',T$ are concyclic.</p
 $BC$, hence parallel, so $\measuredangle(QP,QA)=\measuredangle(QP,O'M)$. Thus $\measuredangle(O'P,O'M)=\measuredangle(QP,O'M)$: the lines $O'P$ and $QP$ are parallel,
 and since they share $P$, they coincide. Hence $PQ$ passes through $O'$, the circumcentre of $MEF$.</p><p><em>Remark.</em> Tangency was used only to place $O'$ on the perpendicular bisector of $BC$. The proof shows more: for any $E\in AC$, $F\in AB$, the line $PQ$ passes
 through the intersection of the perpendicular bisectors of $EF$ and $BC$.</p>
+<h4>Solution 2 (Coordinates)</h4>
+<p>Put $A=(0,0)$ and let $BC$ be the line $y=-h$ with $h&gt;0$: $B=(b,-h)$, $C=(c,-h)$. As the triangle is acute, the foot $(0,-h)$ of the altitude from
+$A$ lies strictly between $B$ and $C$, so $b&lt;0&lt;c$. Let $m=\frac{b+c}2$, so $M=(m,-h)$, and let $O'$ be the centre of the circle $\sigma=(MEF)$.</p><p><strong>The three circles.</strong> Circles through $A$ have equations $x^2+y^2+\alpha x+\beta y=0$.</p><ul class="ct-ul"><li><p>$\omega=(ABC)$: its centre lies on the perpendicular bisector $x=m$ of $BC$, so $\omega$ is $x^2+y^2-2mx+Vy=0$. On $y=-h$ this reads
+$x^2-2mx+h^2-Vh=0$, with roots $b,c$; hence $bc=h(h-V)$.</p></li><li><p>$\omega_1=(AEF)$: $x^2+y^2+ux+vy=0$.</p></li><li><p>$\sigma$ passes through $M\in BC$ and is tangent to $BC$, so it touches $BC$ at $M$ and $O'=(m,k-h)$ for some $k$. Since $M\in\sigma$, $\sigma$ is
+$x^2+y^2-2mx+2(h-k)y+C_0=0$ with $C_0=m^2+h^2-2hk$.</p></li></ul><p><strong>$E$, $F$, $Q$, $P$.</strong> Substituting $\lambda(X,-h)$ into the equation of $\omega_1$ shows that the point of $\omega_1$ other than $A$ on the line through $A$ and
+$(X,-h)$ is $\lambda(X,-h)$ with $\lambda=\frac{vh-uX}{X^2+h^2}$. For $X=b$ this is $F$, for $X=c$ it is $E$, and $0&lt;\lambda\le1$ in both cases. In particular
+$vh-ub&gt;0$ and $vh-uc&gt;0$; multiplying by $c&gt;0$ and $-b&gt;0$ and adding gives $vh(c-b)&gt;0$, so $v&gt;0$. The line $AQ\perp BC$ is $x=0$, which meets $\omega_1$ again at
+$Q=(0,-v)$.</p><p>The circles $\omega_1$ and $\omega$ are different: otherwise $E$ would be a point of $\omega$ on segment $AC$ other than $A$, so $E=C$, likewise $F=B$, and $M,E,F$
+would be collinear. Subtracting their equations, the common chord $AP$ is $lx+jy=0$ with $l=u+2m$, $j=v-V$, $(l,j)\ne(0,0)$. Substituting $P=\tau(j,-l)$ into
+the equation of $\omega_1$ gives $\tau=\frac{vl-uj}{l^2+j^2}$, and a short computation gives
+\[P-Q=\frac{j}{l^2+j^2}\,\bigl(vl-uj,\ vj+ul\bigr).\]
+Here $j\ne0$: if $V=v$, then for $X=b,c$ we have $X^2+h^2-2mX=Vh$, so $\lambda=1-\frac{lX}{X^2+h^2}$; now $\lambda\le1$ at $X=b&lt;0$ and at $X=c&gt;0$ gives $l\le0$
+and $l\ge0$, so $l=j=0$, which is impossible. Also $(vl-uj,vj+ul)\ne(0,0)$, as this linear system in $(l,j)$ has determinant $v^2+u^2&gt;0$. So $P\ne Q$.</p><p><strong>Two relations from $M,E,F$ concyclic.</strong> Put $R=k-h+v$, so that $O'-Q=(m,R)$. Subtracting the equation of $\omega_1$ from that of $\sigma$, the points $E,F$
+satisfy $-lx+(v-2R)y+C_0=0$. Substituting $\lambda(X,-h)$ and multiplying by $X^2+h^2$:
+\[\Phi(X):=(vh-uX)\bigl(h(2R-v)-lX\bigr)+C_0(X^2+h^2)=0\qquad\text{for }X=b,c .\]
+$\Phi$ is a polynomial of degree at most $2$ with leading coefficient $D=lu+C_0$ and the two zeros $b\ne c$, so $\Phi(X)=D(X-b)(X-c)$ (if $D=0$, both sides are
+$0$). Comparing the coefficients of $X$ and the constant terms, with $b+c=2m$ and $bc=h(h-V)$, gives (using $l-u=2m$)
+\[uR=m\Bigl(\frac Dh-v\Bigr),\qquad 2vR=v^2+lu-\frac{VD}h . \tag{$*$}\]</p><p><strong>Collinearity.</strong> The points $P,Q,O'$ are collinear if and only if $\Delta=m(vj+ul)-R(vl-uj)=0$. Since $vl-uj=v(u+2m)-u(v-V)=2mv+uV$ and
+$vj=v^2-vV$,
+\[\Delta=m\bigl(v^2-vV+ul-2vR\bigr)-uVR=m\Bigl(\frac{VD}h-vV\Bigr)-uVR=V\Bigl(m\Bigl(\frac Dh-v\Bigr)-uR\Bigr)=0,\]
+by the second and then the first relation in $(*)$. Hence the line $PQ$ passes through $O'$, the circumcentre of $MEF$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p8">

@@ -120,7 +120,7 @@ The answer is $\boxed{(1,1,1)}$.</p>
 <h3>Problem 3</h3>
 <div class="ct-meta">Geometry &middot; LPS VII, Chapter 55: Three-Dimensional and Spatial Geometry</div>
 <div class="ct-text"><p>We consider a tetrahedron $ABCD$, which is not necessarily regular.</p><p>A line in space is called a twofold symmetry axis of this tetrahedron if a rotation of $180^\circ$ around this line maps the tetrahedron onto itself.</p><p>Prove that the following two properties are equivalent:</p><ul class="ct-parts"><li><p><span class="ct-lbl">(1)</span> All three lines connecting the midpoints of opposite edges of the tetrahedron are twofold symmetry axes.</p></li><li><p><span class="ct-lbl">(2)</span> All faces of the tetrahedron have the same perimeter.</p></li></ul></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Half-turns and congruent opposite edges)</h4>
 <div class="ct-fig"><img style="width:263px" src="/assets/contests/2026-27/bundeswettbewerb-3_s1.svg" alt="Figure for the solution"></div>
 <p>Write $AB=a$, $CD=a'$, $AC=b$, $BD=b'$, $AD=c$, $BC=c'$ (so $a,a'$; $b,b'$; $c,c'$ are the pairs of opposite edges), and let $M,N$ be the
@@ -161,6 +161,25 @@ the same perimeter.</p><p><strong>(2) $\Rightarrow$ (1).</strong> Now opposite e
 Adding the first two gives $|\mathbf a|=|\mathbf d|$; adding the first and third gives $|\mathbf a|=|\mathbf c|$; adding the last two gives $|\mathbf a|=|\mathbf b|$.
 So $|\mathbf a|=|\mathbf b|=|\mathbf c|=|\mathbf d|$, and by (1) the half-turn about the line through the midpoints of $AB$ and $CD$ swaps $A\leftrightarrow B$ and
 $C\leftrightarrow D$, i.e. maps the tetrahedron onto itself. The same holds for the other two lines, so all three are twofold symmetry axes.</p>
+<h4>Solution 3 (A congruence that swaps the vertices)</h4>
+<p>As in Step 0 of Solution 1, property (2) is equivalent to
+\[AB=CD,\qquad AC=BD,\qquad AD=BC, \tag{$*$}\]
+and Solution 1 shows that (1) implies $(*)$: the half-turn about the line through the midpoints of $AB$ and $CD$ must swap $A\leftrightarrow B$ and
+$C\leftrightarrow D$, which gives $AC=BD$ and $AD=BC$, and the axis through the midpoints of $AC$ and $BD$ gives $AB=CD$. Here we prove $(*)\Rightarrow(1)$ by
+building the symmetry directly. Let $M,N$ be the midpoints of $AB$ and $CD$; they are distinct (Solution 1).</p><p><strong>A congruence.</strong> Put $\mathbf x_1=B-A$, $\mathbf x_2=C-A$, $\mathbf x_3=D-A$ and $\mathbf y_1=A-B$, $\mathbf y_2=D-B$, $\mathbf y_3=C-B$. By $(*)$,
+\[|\mathbf x_1|=|\mathbf y_1|=AB,\quad |\mathbf x_2|=AC=BD=|\mathbf y_2|,\quad |\mathbf x_3|=AD=BC=|\mathbf y_3|,\]
+\[|\mathbf x_2-\mathbf x_1|=BC=AD=|\mathbf y_2-\mathbf y_1|,\quad |\mathbf x_3-\mathbf x_1|=BD=AC=|\mathbf y_3-\mathbf y_1|,\quad
+|\mathbf x_3-\mathbf x_2|=CD=|\mathbf y_3-\mathbf y_2|.\]
+Since $\mathbf x_i\cdot\mathbf x_j=\frac12\bigl(|\mathbf x_i|^2+|\mathbf x_j|^2-|\mathbf x_i-\mathbf x_j|^2\bigr)$, we get
+$\mathbf x_i\cdot\mathbf x_j=\mathbf y_i\cdot\mathbf y_j$ for all $i,j$. The vectors $\mathbf x_1,\mathbf x_2,\mathbf x_3$ are linearly independent (the
+tetrahedron is not flat), so there is a linear map $T$ with $T\mathbf x_i=\mathbf y_i$; it preserves the dot products of basis vectors, hence of all vectors, so $T$ is
+orthogonal. The map $\varphi(X)=B+T(X-A)$ is therefore an isometry, and
+\[\varphi(A)=B,\qquad \varphi(B)=B+\mathbf y_1=A,\qquad \varphi(C)=B+\mathbf y_2=D,\qquad \varphi(D)=B+\mathbf y_3=C .\]</p><p><strong>It is a half-turn about $MN$.</strong></p><ul class="ct-ul"><li><p>$\varphi\circ\varphi$ is an affine map fixing $A,B,C,D$, which are not coplanar; so $\varphi\circ\varphi$ is the identity.</p></li><li><p>An affine map preserves midpoints, so $\varphi(M)=M$ and $\varphi(N)=N$, and $T(N-M)=\varphi(N)-\varphi(M)=N-M$.</p></li><li><p>$\det T=1$: $\det(\mathbf y_1,\mathbf y_2,\mathbf y_3)$ and $\det(\mathbf x_1,\mathbf x_2,\mathbf x_3)$ are $6$ times the signed volumes of the ordered
+tetrahedra $BADC$ and $ABCD$; exchanging two vertices changes the sign, and $BADC$ arises from $ABCD$ by two exchanges. So the two determinants are equal.</p></li></ul><p>Take $M$ as origin and an orthonormal basis $\mathbf e_1,\mathbf e_2,\mathbf e_3$ with $\mathbf e_1$ along $MN$. Then $T\mathbf e_1=\mathbf e_1$, and the
+orthogonal map $T$ maps the plane spanned by $\mathbf e_2,\mathbf e_3$ onto itself, with determinant $1$ there; so it acts on this plane as a rotation by some angle
+$\theta$, and $\varphi$ is the rotation by $\theta$ about the line $MN$. As $\varphi\circ\varphi$ is the identity, $2\theta$ is a multiple of $360^\circ$, and as
+$\varphi(A)=B\ne A$, $\theta\ne0^\circ$. Hence $\theta=180^\circ$: the half-turn about $MN$ maps the tetrahedron onto itself.</p><p>The same argument for the pairs $AC,BD$ and $AD,BC$ (rename the vertices) shows that all three lines joining midpoints of opposite edges are twofold symmetry
+axes, which is (1).</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p4">
@@ -277,8 +296,8 @@ one side of the hexagon lies on $CZ$.</p>
 <div class="ct-meta">Geometry &middot; LPS VII, Chapter 43: Locus, Transformation, and Construction Geometry</div>
 <div class="ct-text"><p>A mapping $f$ of the set of points of the plane into itself has the following two properties:</p><ul class="ct-parts"><li><p><span class="ct-lbl">(1)</span> There are no two distinct points $P$ and $Q$ with $f(P)=f(Q)$.</p></li><li><p><span class="ct-lbl">(2)</span> The mapping $f$ maps every rectangle $R$ of the plane onto a rectangle $R'$ of the plane, i.e., the set of image points $f(P)$ of all points $P$ of the rectangle $R$ is the set of all points of $R'$.</p></li></ul><p>Determine whether $f$ then also maps every square onto a square, and whether every point of the plane is an image point $f(P)$ of a point $P$ of the plane.</p><p><em>Note:</em> Every rectangle has positive area and consists of its sides and its inner points.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p><strong>Yes</strong> (squares go to squares) and <strong>yes</strong> (every point is an image point).</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Segments, then squares, then midpoints)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Segments, then squares, then midpoints)</h4>
 <div class="ct-fig"><img style="width:354px" src="/assets/contests/2026-27/bundeswettbewerb-8_s1.svg" alt="Figure for the solution"></div>
 <p>By the note in the statement, every rectangle has positive area and is closed (sides included). We use only injectivity and property (2).</p><p><strong>Step 1: $f$ maps every segment $[P,Q]$ onto the segment $[f(P),f(Q)]$.</strong> Let $P\ne Q$. The two rectangles $R_1,R_2$ with common side $PQ$ lying on opposite sides
 of line $PQ$ (say squares) satisfy $R_1\cap R_2=[P,Q]$. As $f$ is injective, $f([P,Q])=f(R_1)\cap f(R_2)$, an intersection of two closed rectangles; so
@@ -300,6 +319,24 @@ Hence $f(Q_k)$ is the image of the square $f(Q_0)$ under the homothety with cent
 of a diagonal). So $f(Q_0)$ contains a disc of some radius $r&gt;0$ around $f(O)$, $f(Q_k)$ contains the disc of radius $2^kr$, and these discs exhaust the plane. Hence
 <strong>every point of the plane is an image point</strong>.</p><p><em>Remark.</em> Step 3 also gives $f\bigl(\frac{X+Y}2\bigr)=\frac{f(X)+f(Y)}2$; with Step 1 (betweenness on lines) this forces $f$ to be affine, and an affine map that
 preserves right angles is a similarity.</p>
+<h4>Solution 2 (Midpoints make $f$ a similarity)</h4>
+<p>We use Steps 1 and 2 of Solution 1: $f$ maps every segment $[P,Q]$ onto the segment $[f(P),f(Q)]$, and it maps every rectangle $ABCD$ onto the
+rectangle $f(A)f(B)f(C)f(D)$, with the vertices in this order. In particular $f$ preserves right angles: if $\angle XYZ=90^\circ$, complete $X,Y,Z$ to a rectangle;
+then $\angle f(X)f(Y)f(Z)=90^\circ$.</p><p><strong>Step A: $f$ preserves midpoints.</strong> Let $X\ne Y$ and let $XUYW$ be a square with diagonal $XY$; its centre $O$ is the midpoint of $XY$. Then
+$f(X)f(U)f(Y)f(W)$ is a rectangle, and $f(O)$ lies on both of its diagonals $[f(X),f(Y)]$ and $[f(U),f(W)]$. So $f(O)$ is the centre of this rectangle, the
+midpoint of $f(X)f(Y)$:
+\[f\Bigl(\frac{X+Y}2\Bigr)=\frac{f(X)+f(Y)}2\qquad\text{for all points }X,Y\]
+(trivially also for $X=Y$). Here points are identified with their position vectors from a fixed origin $0$.</p><p><strong>Step B: $f$ is affine.</strong> Let $g(X)=f(X)-f(0)$; then $g(0)=0$ and $g$ also preserves midpoints. With $Y=0$ this gives $g\bigl(\frac X2\bigr)=\frac{g(X)}2$,
+hence $g(X+Y)=2g\bigl(\frac{X+Y}2\bigr)=g(X)+g(Y)$. From additivity, $g(kX)=kg(X)$ for integers $k$ and then $g(qX)=qg(X)$ for rationals $q$. The square
+$Q_0$ with vertices $(\pm1,\pm1)$ is mapped onto a rectangle, so $|g(X)|\le c$ on $Q_0$ for some constant $c$. If $X\in\frac1kQ_0$ for a positive integer $k$, then
+$kX\in Q_0$ and $|g(X)|=\frac1k|g(kX)|\le\frac ck$. So $g$ is continuous at $0$, and by $g(X)-g(Y)=g(X-Y)$ it is continuous everywhere. For real $\lambda$ choose
+rationals $q_n\to\lambda$; then $g(\lambda X)=\lim g(q_nX)=\lim q_ng(X)=\lambda g(X)$. Thus $g$ is linear.</p><p>As $f$ is injective, so is the linear map $g$; an injective linear map of the plane is invertible, so $g$ and hence $f$ is onto: <strong>every point of the plane is an
+image point</strong>.</p><p><strong>Step C: $f$ is a similarity.</strong> Let $\mathbf e_1=(1,0)$, $\mathbf e_2=(0,1)$ and $\mathbf u=g(\mathbf e_1)$, $\mathbf w=g(\mathbf e_2)$; both are non-zero.
+The angle $\mathbf e_1,0,\mathbf e_2$ is right, so the angle $f(\mathbf e_1),f(0),f(\mathbf e_2)$ is right: $\mathbf u\cdot\mathbf w=0$. The vectors
+$\mathbf e_1+\mathbf e_2$ and $\mathbf e_1-\mathbf e_2$ are also perpendicular, so $(\mathbf u+\mathbf w)\cdot(\mathbf u-\mathbf w)=0$, i.e.
+$|\mathbf u|=|\mathbf w|=:\kappa$. Hence $|g(x\mathbf e_1+y\mathbf e_2)|^2=|x\mathbf u+y\mathbf w|^2=\kappa^2(x^2+y^2)$, so
+$|f(X)-f(Y)|=|g(X-Y)|=\kappa|X-Y|$ for all $X,Y$: $f$ is a similarity with ratio $\kappa$. A square $ABCD$ with side $a$ is mapped onto the rectangle
+$f(A)f(B)f(C)f(D)$ (Step 2 of Solution 1), whose sides all have length $\kappa a$; so it is a square, and <strong>every square is mapped onto a square</strong>.</p>
 </div></details>
 </section>
 {% endraw %}

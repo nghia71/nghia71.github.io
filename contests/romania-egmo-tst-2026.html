@@ -151,8 +151,8 @@ unit squares and the hole cover the board exactly once.</p><p>This partition has
 <h3>Problem 3</h3>
 <div class="ct-meta">Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure</div>
 <div class="ct-text"><p>Let $ABCD$ be a cyclic quadrilateral, and $I_1, I_2$ be the incenters of triangles $ABC$ and $ABD$ respectively. Let line $I_1I_2$ meet $BC$ and $AD$ at $E$ and $F$.</p><ul class="ct-parts"><li><p><span class="ct-lbl">(a)</span> Prove that there exists a circle $\omega$ tangent to $BC$ at point $E$ and to $AD$ at point $F$.</p></li><li><p><span class="ct-lbl">(b)</span> Prove that $\omega$ is tangent to the circumcircle of quadrilateral $ABCD$.</p></li></ul></div>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Reim, the shooting lemma and a homothety)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Reim, the shooting lemma and a homothety)</h4>
 <div class="ct-fig"><img style="width:244px" src="/assets/contests/2026-27/romania-egmo-tst-3_s1.svg" alt="Figure for the solution"></div>
 <p>We use directed angles $\angle(\ell,m)$ between lines, modulo $180^\circ$; so the argument does not depend on the position of $E$,
 $F$ on the lines $BC$, $AD$. Let $\Gamma$ be the circumcircle, $M_1$ the midpoint of the arc $BC$ not containing $A$ (nor $D$) and $M_2$ the
@@ -181,6 +181,84 @@ $EF$ by (F2); these lines meet only at $F$ (Step 2; they are different lines, si
 $h(M_2)=F$, and the tangent to $\omega$ at $F$ is parallel to the tangent to $\Gamma$ at $M_2$, which is parallel to $AD$; as it passes
 through $F\in AD$, it is $AD$.</p><p>Therefore $\omega$ is tangent to $BC$ at $E$ and to $AD$ at $F$, which proves (a), and $\omega$ is tangent to $\Gamma$ at $T$, which
 proves (b). (A circle tangent to two given lines at two given points is unique, so this $\omega$ is the circle of part (a).)</p>
+<h4>Solution 2 (Complex coordinates with square roots)</h4>
+<p>Put the circumcircle $\Gamma$ of $ABCD$ as the unit circle of the complex plane, centred at $O=0$, so that $A,B,C,D$ follow each other
+counterclockwise. We can choose real numbers $\alpha_1&lt;\alpha_2&lt;\alpha_3&lt;\alpha_4&lt;\alpha_1+\pi$ with
+$A=e^{2i\alpha_1}$, $B=e^{2i\alpha_2}$, $C=e^{2i\alpha_3}$, $D=e^{2i\alpha_4}$ (take $2\alpha_1$ to be an argument of $A$ and the arguments of
+$B,C,D$ in the interval $(2\alpha_1,2\alpha_1+2\pi)$). Adding the same number to all $\alpha_i$ rotates the figure about $O$, so we may assume
+$\alpha_1+\alpha_2+\alpha_3+\alpha_4=0$. Let $a=e^{i\alpha_1}$, $b=e^{i\alpha_2}$, $c=e^{i\alpha_3}$, $d=e^{i\alpha_4}$; then $A=a^2$, $B=b^2$,
+$C=c^2$, $D=d^2$, $abcd=1$, and $\bar z=1/z$ for every $z$ on the unit circle. Write $u=\alpha_2-\alpha_1$, $v=\alpha_3-\alpha_2$,
+$w=\alpha_4-\alpha_3$; these are positive and $u+v+w&lt;\pi$.</p><p><em>Step 1: the incentres.</em> For distinct points $s,t$ of the unit circle, the line $st$ has the equation $z+st\,\bar z=s+t$: this is the
+condition that $(z-s)/(t-s)$ equals its conjugate, rewritten with $\bar s=1/s$, $\bar t=1/t$. The arc from $B$ to $C$ counterclockwise
+(arguments $2\alpha_2$ to $2\alpha_3$) does not contain $A$, so its midpoint is $e^{i(\alpha_2+\alpha_3)}=bc$. The arc from $C$ to $A$
+counterclockwise (arguments $2\alpha_3$ to $2\alpha_1+2\pi$) does not contain $B$, so its midpoint is $e^{i(\alpha_1+\alpha_3+\pi)}=-ac$. The
+internal bisector from a vertex passes through the midpoint of the opposite arc not containing that vertex, so the bisectors from $A$ and $B$
+in triangle $ABC$ are
+\[
+z+a^2bc\,\bar z=a^2+bc,\qquad z-ab^2c\,\bar z=b^2-ac .
+\]
+The point $z=ab-ac+bc$ has $\bar z=\frac1{ab}-\frac1{ac}+\frac1{bc}=\frac{c-b+a}{abc}$, so $a^2bc\,\bar z=ac-ab+a^2$ and
+$-ab^2c\,\bar z=-bc+b^2-ab$; hence $z$ satisfies both equations. Two distinct lines meet in one point, so
+\[
+I_1=ab-ac+bc,\qquad\text{and in the same way (triangle $ABD$, with $\alpha_4$ in place of $\alpha_3$)}\qquad I_2=ab-ad+bd .
+\]</p><p><em>Step 2: the line $I_1I_2$ is horizontal.</em> We have $I_1-I_2=(b-a)(c-d)\ne0$ and
+\[
+\overline{I_1-I_2}=\Bigl(\frac1b-\frac1a\Bigr)\Bigl(\frac1c-\frac1d\Bigr)=\frac{(b-a)(c-d)}{abcd}=I_1-I_2 .
+\]
+So $I_1-I_2$ is real, and the line $I_1I_2$ is $y=h$, where $h$ is the imaginary part of $I_1$. Put
+\[
+\theta=\alpha_2+\alpha_3,\quad \varphi=\alpha_1+\alpha_2,\quad \psi=\alpha_1+\alpha_3,\qquad p=\sin\theta,\quad q=\sin\varphi,\quad k=\sin\psi .
+\]
+Then $bc=e^{i\theta}$, $ab=e^{i\varphi}$, $ac=e^{i\psi}$, so $h=q-k+p$. From $\alpha_1+\alpha_2+\alpha_3+\alpha_4=0$ we get
+$\alpha_1=-\tfrac14(3u+2v+w)$ and then
+\[
+\theta=\tfrac12(u-w),\qquad \psi=-\tfrac12(u+w),\qquad \varphi=-\tfrac12(u+2v+w).
+\]
+Since $u+v+w&lt;\pi$: $\theta\in(-\tfrac\pi2,\tfrac\pi2)$, so $\cos\theta&gt;0$ and $p&gt;-1$; and $\psi\in(-\tfrac\pi2,0)$, so $-1&lt;k&lt;0$.</p><p><em>Step 3: the lines $BC$, $AD$ and the points $E$, $F$.</em> We have
+$\tfrac12(b^2+c^2)=bc\cdot\tfrac12\bigl(\tfrac bc+\tfrac cb\bigr)=\cos(\alpha_2-\alpha_3)\,e^{i\theta}$ and
+$c^2-b^2=bc\bigl(\tfrac cb-\tfrac bc\bigr)=2i\sin(\alpha_3-\alpha_2)\,e^{i\theta}$. So the line $BC$ is perpendicular to the unit vector
+$e^{i\theta}$ and passes through the point $\cos(\alpha_2-\alpha_3)\,e^{i\theta}$. As $\alpha_2-\alpha_3=\varphi-\psi$, the line $BC$ is
+\[
+x\cos\theta+y\sin\theta=\cos(\varphi-\psi).
+\]
+In the same way, with $ad=1/(bc)=e^{-i\theta}$, the line $AD$ is perpendicular to $e^{-i\theta}$ and passes through
+$\cos(\alpha_1-\alpha_4)\,e^{-i\theta}$, and $\alpha_1-\alpha_4=2\alpha_1+\alpha_2+\alpha_3=\varphi+\psi$, so
+$AD$ is
+\[
+x\cos\theta-y\sin\theta=\cos(\varphi+\psi).
+\]
+As $\cos\theta\ne0$, neither line is horizontal, so the line $y=h$ meets them in single points $E=(x_E,h)$ and $F=(x_F,h)$ with
+\[
+x_E=\frac{\cos(\varphi-\psi)-hp}{\cos\theta},\qquad x_F=\frac{\cos(\varphi+\psi)+hp}{\cos\theta}.
+\]
+(This also covers the case $BC\parallel AD$, which happens exactly when $p=0$.)</p><p><em>Step 4: the circle of part (a).</em> Let $n_1=(\cos\theta,\sin\theta)$ and $n_2=(\cos\theta,-\sin\theta)$ be the unit normals of $BC$ and
+$AD$, let $x_0=\tfrac12(x_E+x_F)=\dfrac{\cos\varphi\cos\psi}{\cos\theta}$ and $r=\dfrac{x_0-x_E}{\cos\theta}=\dfrac{x_F-x_0}{\cos\theta}$.
+Then
+\[
+E+r\,n_1=(x_0,\;h+rp)=F-r\,n_2 ;
+\]
+call this point $Z$. The segment $ZE$ is perpendicular to $BC$ and $ZF$ is perpendicular to $AD$, both of length $|r|$. We show below that
+$r\ne0$; then the circle $\omega$ with centre $Z$ and radius $|r|$ is tangent to $BC$ at $E$ and to $AD$ at $F$, which proves (a).</p><p>Using $\cos(\varphi+\psi)-\cos(\varphi-\psi)=-2qk$ and $\cos^2\theta=1-p^2$,
+\[
+r=\frac{x_F-x_E}{2\cos^2\theta}=\frac{hp-qk}{1-p^2}=\frac{(p+q)(p-k)}{1-p^2},
+\]
+since $hp-qk=p^2+pq-pk-qk=(p+q)(p-k)$. Now, with $\theta-\psi=u$, $\theta+\psi=-w$, $\theta+\varphi=-(v+w)$, $\theta-\varphi=u+v$,
+\[
+p-k=2\cos\tfrac w2\,\sin\tfrac u2&gt;0,\qquad p+q=-2\sin\tfrac{v+w}2\,\cos\tfrac{u+v}2&lt;0,
+\]
+because $u,w,v+w,u+v$ all lie in $(0,\pi)$. Hence $r&lt;0$. Also $q\ge-1$ gives $p+q\ge-(1-p)$, so
+$r\ge-\dfrac{(1-p)(p-k)}{(1-p)(1+p)}=-\dfrac{p-k}{1+p}&gt;-1$, the last step because $k&gt;-1$. Thus $-1&lt;r&lt;0$.</p><p><em>Step 5: $\omega$ is tangent to $\Gamma$.</em> Let $N=(p+q)(p-k)=hp-qk$ and $D_0=1-p^2&gt;0$, so $r=N/D_0$. We have
+$x_0^2=\dfrac{(1-q^2)(1-k^2)}{D_0}$, and
+\[
+OZ^2-(1+r)^2=x_0^2+h^2-1+2r(hp-1)-r^2D_0 .
+\]
+Multiply by $D_0$. First, $(1-q^2)(1-k^2)+D_0(h^2-1)=(h^2+p^2-q^2-k^2)+(q^2k^2-p^2h^2)$. Expanding $h^2=(p+q-k)^2$ gives
+$h^2+p^2-q^2-k^2=2(p^2+pq-pk-qk)=2N$, and $q^2k^2-p^2h^2=(qk-ph)(qk+ph)=-N(ph+qk)$. Therefore
+\[
+D_0\bigl(OZ^2-(1+r)^2\bigr)=2N-N(ph+qk)+2N(hp-1)-N^2=N(ph-qk-N)=0 .
+\]
+So $OZ=|1+r|=1-|r|$, as $-1&lt;r&lt;0$. The distance between the centres of $\Gamma$ and $\omega$ equals the difference of their radii $1$ and
+$|r|$, with $0&lt;|r|&lt;1$: the circle $\omega$ is internally tangent to $\Gamma$, which proves (b).</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p4">
@@ -188,8 +266,8 @@ proves (b). (A circle tangent to two given lines at two given points is unique, 
 <div class="ct-meta">Number Theory &middot; LPS VII, Chapter 12: Exponential Congruences and Order Structure</div>
 <div class="ct-text"><p>Let $p &gt; 3$ be a prime number, and denote by $k = \left\lfloor \frac{2p}{3} \right\rfloor$. Prove that $p^2$ divides the following expression:
 \[\binom{p}{1} + \binom{p}{2} + \ldots + \binom{p}{k}.\]</p></div>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Harmonic sums modulo $p$)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Harmonic sums modulo $p$)</h4>
 <p>All congruences below are modulo $p$ between rationals whose denominators are not divisible by $p$.</p><p><em>Step 1.</em> For $1\le i\le p-1$, $\binom pi=\frac pi\binom{p-1}{i-1}$ and $\binom{p-1}{i-1}=\prod_{t=1}^{i-1}\frac{p-t}{t}\equiv(-1)^{i-1}$. Hence
 \[
 \frac1p\sum_{i=1}^{k}\binom pi=\sum_{i=1}^{k}\frac1i\binom{p-1}{i-1}\equiv\sum_{i=1}^{k}\frac{(-1)^{i-1}}{i},
@@ -206,6 +284,30 @@ H_{p-1}-H_{p-1-t}=\sum_{i=p-t}^{p-1}\frac1i=\sum_{j=1}^{t}\frac1{p-j}\equiv-\sum
 \]
 Hence $H_{p-1-t}\equiv H_t$, i.e. $H_k-H_{\lfloor k/2\rfloor}\equiv0$. By Step 1, $\frac1p\sum_{i=1}^k\binom pi$ is an integer divisible by
 $p$, so $p^2\mid\sum_{i=1}^{k}\binom pi$.</p>
+<h4>Solution 2 (A roots-of-unity filter)</h4>
+<p>Let $m=\lfloor p/3\rfloor$. As $p&gt;3$ is a prime, $3\nmid p$, so $p=3m+1$ or $p=3m+2$, and then $k=\lfloor 2p/3\rfloor$ equals $2m$ or
+$2m+1$ respectively; in both cases $k=p-1-m$. Put
+\[
+T=2^p-2=\sum_{j=1}^{p-1}\binom pj,\qquad U=\sum_{j=1}^{m}\binom pj,\qquad V=\sum_{j=1}^{m}\binom p{3j}.
+\]</p><p><em>Step 1: the sum equals $T-U$.</em> By $\binom pj=\binom p{p-j}$, the terms $\binom pj$ with $k+1\le j\le p-1$ are the terms $\binom pi$ with
+$1\le i\le p-1-k=m$. So $\sum_{j=1}^{k}\binom pj=T-U$.</p><p><em>Step 2: $3V=T$.</em> Let $\omega=e^{2\pi i/3}$. Since $1+\omega+\omega^2=0$, the sum $1+\omega^j+\omega^{2j}$ equals $3$ if $3\mid j$ and $0$
+otherwise. Hence, by the binomial theorem,
+\[
+2^p+(1+\omega)^p+(1+\omega^2)^p=\sum_{j=0}^{p}\binom pj\bigl(1+\omega^j+\omega^{2j}\bigr)=3\sum_{\substack{0\le j\le p\\ 3\mid j}}\binom pj=3(1+V),
+\]
+because the multiples of $3$ in $[0,p]$ are $0,3,\dots,3m$. Now $1+\omega=e^{i\pi/3}$ and $1+\omega^2=e^{-i\pi/3}$, and $p$ is odd and not
+divisible by $3$, so $p\equiv\pm1\pmod 6$ and $(1+\omega)^p+(1+\omega^2)^p=2\cos\frac{p\pi}3=2\cos\frac\pi3=1$. Thus $2^p+1=3+3V$, that is,
+$3V=T$.</p><p><em>Step 3: $3\binom p{3j}\equiv\binom pj\pmod{p^2}$ for $1\le j\le m$.</em> For $1\le i\le p-1$ we have $i\binom pi=p\binom{p-1}{i-1}$ and
+\[
+(i-1)!\binom{p-1}{i-1}=(p-1)(p-2)\cdots(p-i+1)\equiv(-1)^{i-1}(i-1)!\pmod p ;
+\]
+as $(i-1)!$ is prime to $p$, $\binom{p-1}{i-1}\equiv(-1)^{i-1}\pmod p$, and so $i\binom pi\equiv(-1)^{i-1}p\pmod{p^2}$. For $1\le j\le m$ we
+have $3j\le 3m&lt;p$, so we may use this with $i=j$ and $i=3j$:
+\[
+j\cdot3\binom p{3j}=3j\binom p{3j}\equiv(-1)^{3j-1}p=(-1)^{j-1}p\equiv j\binom pj\pmod{p^2}.
+\]
+Since $j$ is prime to $p$, we can cancel it: $3\binom p{3j}\equiv\binom pj\pmod{p^2}$.</p><p><em>Conclusion.</em> Adding Step 3 over $j=1,\dots,m$ gives $3V\equiv U\pmod{p^2}$, so by Step 2 $T\equiv U\pmod{p^2}$, and by Step 1 the sum
+$\binom p1+\dots+\binom pk=T-U$ is divisible by $p^2$.</p>
 </div></details>
 </section>
 <h2 class="ct-group" id="day-2">Day 2</h2>

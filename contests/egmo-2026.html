@@ -76,7 +76,7 @@ description: European Girls' Mathematical Olympiad 2026: problems with answers a
 <div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 20: Parity, Coloring, and Process Termination</div>
 <div class="ct-text"><p>A $2026\times 2026$ board is said to be <em>bordeaux</em> if at least one of its $2026^2$ unit cells is coloured red. A rectangular region made of cells is <em>oddly-rectangular</em> if it contains an odd number of red cells. Determine the largest positive integer $M$ such that, in every possible $2026\times 2026$ bordeaux board, there exists an oddly-rectangular region of at least $M$ cells.</p><p><em>Note:</em> A rectangular region has sides that are parallel to the sides of the board and contains all of its interior.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$M=1013^2=1026169$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Corner parities)</h4>
 <div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/egmo-1_s1.svg" alt="Figure for the solution"></div>
 <p>Write $N=2026$ and $m=1013$, so $N=2m$. Number the rows and the columns $1,2,\dots,N$, and number the grid lines
@@ -110,6 +110,23 @@ which produces $e_{m+1},\dots,e_N$ and $e_1,\dots,e_m$.</p><p>Suppose every regi
 $e_j$ is a sum of such indicator vectors, so by bilinearity $A_{ij}=e_i^TAe_j=0$ for all $i,j$: no cell is red, a contradiction. Hence some
 oddly-rectangular region has both sides of length at least $m$, so at least $m^2$ cells.</p><p>So
 \[\boxed{M=1013^2=1026169}\]</p>
+<h4>Solution 3 (A largest odd region)</h4>
+<p>Write $N=2026$ and $m=1013$, so $N=2m$, and number the rows and the columns $1,2,\dots,N$.</p><p><strong>An example with no large odd region.</strong> Colour red only the four central cells, in rows $m,m+1$ and columns $m,m+1$. A rectangular
+region meets this $2\times2$ block in a rectangle, that is, in $0$, $1$, $2$ or $4$ red cells, so it is oddly-rectangular exactly when it
+contains exactly one red cell. Then its rows contain exactly one of the rows $m,m+1$, so they lie within rows $1,\dots,m$ or within rows
+$m+1,\dots,N$: at most $m$ rows. Likewise it has at most $m$ columns, hence at most $m^2$ cells. So $M\le m^2$.</p><p><strong>Every bordeaux board has an odd region with at least $m^2$ cells.</strong> A single red cell is an oddly-rectangular region, so there is an
+oddly-rectangular region $R$ with the largest possible number of cells. Let $R$ consist of rows $r_1,\dots,r_2$ and columns $c_1,\dots,c_2$; its
+height is $h=r_2-r_1+1$. We show $h\ge m$. Suppose instead $h&lt;m$. Throughout we keep the columns $c_1,\dots,c_2$, and for a set $I$ of consecutive
+rows we write $n(I)$ for the number of red cells in the region formed by the rows of $I$ and the columns $c_1,\dots,c_2$. Such a region has more cells than
+$R$ as soon as $I$ has more than $h$ rows. Let $u=r_1-1$ and $v=N-r_2$ be the numbers of rows above and below $R$; then $u+v=2m-h&gt;m$.</p><ul class="ct-ul"><li><p>If $u\ge m$: the rows $1,\dots,r_2$ consist of the rows $1,\dots,u$ and the rows of $R$, so $n(\{1,\dots,r_2\})=n(\{1,\dots,u\})+n(R)$
+with $n(R)$ odd. Hence one of the two regions with rows $1,\dots,u$ and rows $1,\dots,r_2$ is oddly-rectangular. Both have at least $u\ge m&gt;h$
+rows, so this region is larger than $R$.</p></li><li><p>If $v\ge m$: the same argument applies to the rows $r_2+1,\dots,N$ and $r_1,\dots,N$.</p></li><li><p>If $u&lt;m$ and $v&lt;m$: then $u=2m-h-v&gt;m-h\ge1$ and likewise $v\ge1$. Consider the three regions with rows $1,\dots,N$, rows $r_1,\dots,N$
+and rows $1,\dots,r_2$. Every red cell of $R$ is counted in all three, and every other red cell in the columns $c_1,\dots,c_2$ is counted in
+exactly two of them (a cell above $R$ in the first and third, a cell below $R$ in the first and second). So the sum of the three counts is
+congruent to $3n(R)$, which is odd, and one of the three regions is oddly-rectangular. Their numbers of rows are $N$, $h+v$ and $h+u$, all
+greater than $h$, so this region is larger than $R$.</p></li></ul><p>Each case contradicts the choice of $R$, so $h\ge m$. The same argument with rows and columns exchanged shows that $R$ has at least $m$
+columns. Hence $R$ has at least $m^2$ cells.</p><p>Therefore
+\[\boxed{M=m^2=1013^2=1026169}\]</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p2">
@@ -136,8 +153,8 @@ which forces $u\bmod 1013=0$. Hence $1024\cdot1013\mid f$, and in particular $20
 <div class="ct-text"><p>Let $\mathbb{R}$ be the set of real numbers. Determine all functions $f:\mathbb{R}\to\mathbb{R}$ such that for all real numbers $x,y$, the following holds:
 \[f\left((f(x)+f(y))^2\right)=(x+y)f(x+y).\]</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$f(x)=0$, $f(x)=x$ and $f(x)=-x$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Zeros, injectivity, additivity)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Zeros, injectivity, additivity)</h4>
 <p>All three functions work: for $f\equiv0$ both sides are $0$; for $f(x)=\varepsilon x$ with $\varepsilon=\pm1$ the left side is
 $\varepsilon(\varepsilon x+\varepsilon y)^2=\varepsilon(x+y)^2$ and so is the right side. Conversely let $f$ be a solution, write $P(x,y)$
 for the equation, $c=f(0)$ and $g(t)=tf(t)$. Note that if $f$ is a solution, so is $-f$ (both sides change sign).</p><p><strong>Step 1: $f(0)=0$.</strong> $P(0,0)$ gives $f(4c^2)=0$, and then $P(4c^2,0)$ gives $f(c^2)=4c^2f(4c^2)=0$. If $z_1,z_2$ are zeros of $f$,
@@ -165,6 +182,46 @@ $2k=k^3+k$, so $k^2=1$. Replacing $f$ by $-f$ if necessary (also a non-zero solu
 Fix $x$ and put $v=f(x)-x$. By (6), $f(v)=f(f(x))-f(x)=-v/2$. By (1) at $v$, $f(v^2/4)=v\cdot(-v/2)$, i.e. $f(w)=-2w$ for $w=v^2$. Then
 $f(f(w))=f(-2w)=4w$, while (6) gives $f(f(w))=(w+f(w))/2=-w/2$. So $w=0$, $v=0$ and $f(x)=x$.</p><p>Hence the solutions are
 \[\boxed{f\equiv0,\qquad f(x)=x,\qquad f(x)=-x}\]</p>
+<h4>Solution 2 (Infinitely many preimages, then a derivation)</h4>
+<p>All three functions work: for $f\equiv0$ both sides are $0$; for $f(x)=\varepsilon x$ with $\varepsilon=\pm1$ the left side is
+$\varepsilon(\varepsilon x+\varepsilon y)^2=\varepsilon(x+y)^2$ and so is the right side. Conversely, let $f$ be a solution that is not
+identically zero. Write $P(x,y)$ for the equation and $g(t)=tf(t)$.</p><p><strong>Step 1: equal values are zero.</strong> If $f(a)=f(b)$, then $P(a,y)$ and $P(b,y)$ have the same left side, so $g(a+y)=g(b+y)$ for all $y$:
+the number $a-b$ is a period of $g$. With $y=0$ this gives $af(a)=bf(b)=bf(a)$, so $(a-b)f(a)=0$. Hence
+\[f(a)=f(b),\ a\ne b\ \Longrightarrow\ f(a)=f(b)=0. \tag{1}\]</p><p><strong>Step 2: $f$ is injective.</strong> Suppose $f(a)=f(b)$ with $a\ne b$. By Step 1, $T=a-b\ne0$ is a period of $g$, so $Tf(T)=g(T)=g(0)=0$ and
+$f(T)=0$. Then $P(w,T)$ reads
+\[f\bigl(f(w)^2\bigr)=g(w+T)=g(w)\qquad\text{for all }w. \tag{2}\]
+The function $g$ is not identically zero: otherwise $f(x)=0$ for all $x\ne0$, and $P(1,-1)$ gives $f(0)=f\bigl((f(1)+f(-1))^2\bigr)=0\cdot f(0)=0$,
+so $f\equiv0$, which we excluded. Choose $x_0$ with $c_0=g(x_0)\ne0$. For every integer $k$ the number $w_k=x_0+kT$ satisfies $g(w_k)=c_0\ne0$, so
+$w_k\ne0$, $f(w_k)=c_0/w_k$, and by (2)
+\[f\Bigl(\frac{c_0^2}{w_k^2}\Bigr)=c_0.\]
+The numbers $w_k$ are pairwise distinct, and each value of $w_k^2$ occurs for at most two of them; so the arguments $c_0^2/w_k^2$ take
+infinitely many different values, all with the same non-zero image $c_0$. This contradicts (1). So $f$ is injective.</p><p><strong>Step 3: $f$ is odd and additive.</strong> Let $c=f(0)$. $P(0,0)$ gives $f(4c^2)=0$, and then $P(4c^2,0)$ gives $f(c^2)=4c^2f(4c^2)=0$. By
+injectivity $4c^2=c^2$, so $c=0$. Now $P(x,-x)$ gives $f\bigl((f(x)+f(-x))^2\bigr)=0=f(0)$, so $f(-x)=-f(x)$. Comparing $P(x,y)$ with
+$P(x+y,0)$, whose right sides are both $(x+y)f(x+y)$, injectivity gives
+\[f(x+y)^2=\bigl(f(x)+f(y)\bigr)^2\qquad\text{for all }x,y. \tag{3}\]
+Fix $x,y$ and suppose $f(x+y)=-(f(x)+f(y))$. Applying (3) to the numbers $x+y$ and $-y$ and using oddness,
+$f(x)^2=\bigl(f(x+y)-f(y)\bigr)^2=\bigl(f(x)+2f(y)\bigr)^2$, so $4f(y)\bigl(f(x)+f(y)\bigr)=0$. If $f(y)=0$, then $y=0$ and
+$f(x+y)=f(x)=f(x)+f(y)$; if $f(x)+f(y)=0$, then $f(x+y)=0=f(x)+f(y)$. In every case $f(x+y)=f(x)+f(y)$: $f$ is additive. In particular
+$f(2t)=2f(t)$.</p><p><strong>Step 4: a product identity.</strong> $P(x,0)$ gives $f\bigl(f(x)^2\bigr)=xf(x)$. Apply this to $x+y$ and expand with additivity:
+\[f\bigl(f(x)^2\bigr)+2f\bigl(f(x)f(y)\bigr)+f\bigl(f(y)^2\bigr)=(x+y)\bigl(f(x)+f(y)\bigr),\]
+and the two outer terms on the left are $xf(x)$ and $yf(y)$. Hence
+\[2f\bigl(f(x)f(y)\bigr)=xf(y)+yf(x)\qquad\text{for all }x,y. \tag{4}\]</p><p><strong>Step 5: $f$ is bijective, and a formula for its inverse.</strong> Let $d=f(1)$; $d\ne0$ because $f(0)=0$ and $f$ is injective. Putting
+$y=1$ in (4) gives $dx=2f(df(x))-f(x)=f\bigl(2df(x)-x\bigr)$ by additivity. As $x$ runs over $\mathbb R$, so does $dx$; hence $f$ is
+surjective, so bijective. Let $F$ be its inverse function. For any reals $u,v$ put $x=F(u)$, $y=F(v)$ in (4):
+\[2f(uv)=F(u)\,v+F(v)\,u. \tag{5}\]
+With $u=v=1$ this gives $F(1)=f(1)=d$, and then $v=1$ gives $F(u)=2f(u)-du$. Substituting this into (5) and dividing by $2$,
+\[f(uv)=vf(u)+uf(v)-duv.\]</p><p><strong>Step 6: $f(x)=\pm x$.</strong> Let $D(u)=f(u)-du$. Then $D$ is additive, and the last identity becomes
+\[D(uv)=uD(v)+vD(u)\qquad\text{for all }u,v. \tag{6}\]
+With $u=v=1$, $D(1)=2D(1)$, so $D(1)=0$. Also $F(u)=2f(u)-du=du+2D(u)$ and $f(w)=dw+D(w)$. Using additivity and (6) for $D(du)$,
+\[\begin{aligned}u=f\bigl(F(u)\bigr)&amp;=d\bigl(du+2D(u)\bigr)+D(du)+2D\bigl(D(u)\bigr)\\&amp;=d^2u+2dD(u)+uD(d)+dD(u)+2D\bigl(D(u)\bigr),\end{aligned}\]
+that is,
+\[\bigl(d^2+D(d)-1\bigr)u+3dD(u)+2D\bigl(D(u)\bigr)=0\qquad\text{for all }u.\]
+At $u=1$ (where $D(1)=0$ and $D(0)=0$) this gives $d^2+D(d)-1=0$, so
+\[E(u):=2D\bigl(D(u)\bigr)+3dD(u)=0\qquad\text{for all }u.\]
+By (6), $D(u^2)=2uD(u)$, and, using additivity and (6) again, $D\bigl(D(u^2)\bigr)=2D\bigl(uD(u)\bigr)=2uD\bigl(D(u)\bigr)+2D(u)^2$. Therefore
+\[0=E(u^2)=4uD\bigl(D(u)\bigr)+4D(u)^2+6duD(u)=2u\,E(u)+4D(u)^2=4D(u)^2.\]
+So $D\equiv0$ and $f(u)=du$. Then $D(d)=0$, and $d^2+D(d)-1=0$ gives $d^2=1$: $f(x)=x$ or $f(x)=-x$.</p><p>Hence the solutions are
+\[\boxed{f\equiv0,\qquad f(x)=x,\qquad f(x)=-x}\]</p>
 </div></details>
 </section>
 <h2 class="ct-group" id="day-2">Day 2</h2>
@@ -189,7 +246,7 @@ $a_1=1$ is shared out exactly over it.</p>
 <h3>Problem 5</h3>
 <div class="ct-meta">Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure</div>
 <div class="ct-text"><p>Let $ABC$ be an acute triangle with $AC&gt;AB$. Denote by $\omega$ its circumcircle and by $O$ its circumcentre. Let $K$ be the intersection of the tangents to $\omega$ at $B$ and $C$. Circle $ABK$ intersects line $BC$ again at $Z\ne B$. Let $L$ be the midpoint of $KZ$. Let $X$ be the intersection of the lines $KZ$ and $AB$. Let $V$ be the point on circle $ABL$ on the same side of $BC$ as $A$ such that $OV$ is perpendicular to $KZ$. Prove that $LV$ is perpendicular to $CX$.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 ($L$ lies on $AC$, and $V$ is the antipode of $L$)</h4>
 <div class="ct-fig"><img style="width:277px" src="/assets/contests/2026-27/egmo-5_s1.svg" alt="Figure for the solution"></div>
 <p>Let $\alpha,\beta,\gamma$ be the angles of $ABC$, let $\Gamma$ be the circle $ABL$, $N$ the midpoint of $BC$ and $S$ the
@@ -235,6 +292,45 @@ $y$-coordinate is positive, so it is on $A$'s side of $BC$. The other point of $
 $O$ to $KZ$, whose $y$-coordinate $-\frac{sP}{t((2st+1)^2+s^2)}$ is negative. Hence $V=V_0$.</p><p><em>Conclusion.</em> $V-L=\frac{1}{2t(st+1)}\,(-P,\ Q)$, so
 \[(V-L)\cdot(X-C)=\frac{-s}{2t^2(st+1)(2s^2t^2+s^2-1)}\bigl(-PQ+QP\bigr)=0,\]
 i.e. $LV\perp CX$. (The point $X$ exists, so $2s^2t^2+s^2-1\ne0$.)</p>
+<h4>Solution 3 (Powers of points along the line $KZ$)</h4>
+<div class="ct-fig"><img style="width:284px" src="/assets/contests/2026-27/egmo-5_s3.svg" alt="Figure for the solution"></div>
+<p>Let $\alpha,\beta,\gamma$ be the angles of $ABC$, $R$ the radius of $\omega$, $N$ the midpoint of $BC$, $\Gamma$ the circle $ABL$, $Q$ the foot of
+the perpendicular from $O$ to line $KZ$, and $D$ the midpoint of $ZC$. Recall that $KB=KC$, $KN\perp BC$, $\angle KBC=\angle KCB=\alpha$
+(tangent&ndash;chord angle), and, as the triangle is acute, $A$ and $K$ lie on opposite sides of $BC$. For a point $P$ and a circle we use the
+power of $P$: $PO_1^2-r^2$ for a circle with centre $O_1$ and radius $r$; if a line through $P$ meets the circle at $U,W$, it equals the signed
+product $PU\cdot PW$.</p><p><strong>Step 1: $Z$ lies beyond $C$.</strong> Since $\angle ABC+\angle CBK=\beta+\alpha&lt;180^\circ$, the ray $BC$ lies inside the angle $ABK$, so $C$
+and $K$ are on the same side of $AB$. In triangle $ABK$, $\angle AKB=180^\circ-(\alpha+\beta)-\angle BAK=\gamma-\angle BAK&lt;\gamma=\angle ACB$.
+So $C$ lies inside the circle $ABK$, and line $BC$ leaves this circle at a point $Z$ of ray $BC$ beyond $C$. In particular $Z\ne N$, so $KZ$ is
+not perpendicular to $BC$.</p><p><strong>Step 2: coordinates on line $KZ$.</strong> Take $KZ$ as the unit of length, and give each point $P$ of line $KZ$ the coordinate $w$ with
+$\overrightarrow{ZP}=w\,\mathbf e$, where $\mathbf e$ is the unit vector from $Z$ towards $K$. So $Z$, $L$, $K$ have coordinates $0$,
+$\tfrac12$, $1$; let $q$ and $x$ be the coordinates of $Q$ and $X$.</p><p>The powers of $Z$ and $K$ with respect to $\omega$ are $ZB\cdot ZC=ZN^2-NB^2$ (as $B,C$ lie on the same side of $Z$) and $KB^2=KN^2+NB^2$;
+their sum is $ZN^2+KN^2=KZ^2=1$. For the point $P$ with coordinate $w$, $OP^2=(w-q)^2+OQ^2$, so its power is $w^2-2qw+\bigl(q^2+OQ^2-R^2\bigr)$,
+and the bracket is the power of $Z$. Adding the powers of $Z$ ($w=0$) and $K$ ($w=1$) gives $1=1-2q+2\,ZB\cdot ZC$, so
+\[q=ZB\cdot ZC,\qquad KB^2=KC^2=1-q,\qquad\text{power of }P\text{ w.r.t. }\omega=w^2-2qw+q.\]
+As both powers are positive, $0&lt;q&lt;1$: $Q$ lies strictly between $Z$ and $K$, on the same side of $BC$ as $K$.</p><p><strong>Step 3: the point $X$.</strong> The circle $ABK$ passes through $Z$ and $K$, so the power of $P$ with respect to it is $PZ\cdot PK=w(w-1)$.
+The point $X$ lies on line $AB$, so its powers with respect to $\omega$ and to circle $ABK$ both equal $XA\cdot XB$. Hence
+$x^2-2qx+q=x^2-x$, that is,
+\[(2q-1)\,x=q.\]
+Since $X$ exists, $q\ne\tfrac12$. Also $x\ne\tfrac12$ (otherwise $q-\tfrac12=q$).</p><p><strong>Step 4: $Q$ and $D$ lie on $\Gamma$.</strong> Line $KZ$ meets $\Gamma$ at $L$ and at a second point $W$ (with $W=L$ if the line is tangent);
+let $w_0$ be its coordinate. The power of $X$ with respect to $\Gamma$ is $(x-\tfrac12)(x-w_0)$, and also $XA\cdot XB=x(x-1)$. On the other
+hand, by Step 3,
+\[\bigl(x-\tfrac12\bigr)(x-q)=x^2-x-\bigl(q-\tfrac12\bigr)x+\tfrac q2=x^2-x.\]
+As $x\ne\tfrac12$, the equation $(x-\frac12)(x-w_0)=x(x-1)$ determines $w_0$, so $w_0=q$: the point $Q$ lies on $\Gamma$, and $Q\ne L$.</p><p>The power of $Z$ with respect to $\Gamma$ is $ZL\cdot ZQ=\tfrac q2&gt;0$. Line $BC$ meets $\Gamma$ at $B$ and at a second point $D'$ with
+$ZB\cdot ZD'=\tfrac q2=\tfrac12\,ZB\cdot ZC$; so $D'$ lies on ray $ZB$ with $ZD'=\tfrac12ZC$, i.e. $D'=D$. Thus $D\in\Gamma$.</p><p><strong>Step 5: $V$ is the antipode of $L$ on $\Gamma$.</strong> The line through $O$ perpendicular to $KZ$ is line $OQ$. It is not parallel to $BC$
+(Step 1), so it meets $BC$ at a point $T$; in the right triangle $ZQT$, $ZT=ZQ/\cos\angle KZN=q\cdot\frac{ZK}{ZN}=\frac{ZN^2-NB^2}{ZN}$, with $T$
+on ray $ZN$. Since $0&lt;NB&lt;ZN$,
+\[ZC=ZN-NB&lt;ZN-\frac{NB^2}{ZN}=ZT&lt;ZN+NB=ZB,\]
+so $T$ lies strictly between $C$ and $B$, hence strictly inside the chord $DB$ of $\Gamma$, i.e. inside $\Gamma$. Therefore line $OQ$ meets
+$\Gamma$ at $Q$ and at one more point, on the other side of $T$. As $Q$ is strictly on $K$'s side of $BC$, that point is strictly on $A$'s side,
+so it is $V$. Since $\angle LQV=90^\circ$ and $Q,L,V$ are distinct points of $\Gamma$, the segment $LV$ is a diameter of $\Gamma$. The point $D$
+lies on $BC$ while $L$ and $V$ do not, so $D\ne L,V$ and $\angle LDV=90^\circ$.</p><p><strong>Step 6: $LV\perp CX$.</strong> In triangle $ZKC$, $L$ and $D$ are the midpoints of $ZK$ and $ZC$, so $\overrightarrow{LD}=\tfrac12\overrightarrow{KC}$.
+Since $\overrightarrow{DV}\perp\overrightarrow{LD}$, we get $\overrightarrow{LV}\cdot\overrightarrow{LD}=LD^2$, and so
+\[\overrightarrow{LV}\cdot\overrightarrow{KC}=2\,\overrightarrow{LV}\cdot\overrightarrow{LD}=2LD^2=\tfrac12KC^2=\tfrac{1-q}2.\]
+The projection of $V$ onto line $KZ$ is $Q$, so $\overrightarrow{LV}\cdot\mathbf e=q-\tfrac12$, while $\overrightarrow{KX}=(x-1)\,\mathbf e$ with
+$x-1=\frac{q}{2q-1}-1=\frac{1-q}{2q-1}$. Hence
+\[\overrightarrow{LV}\cdot\overrightarrow{KX}=\frac{1-q}{2q-1}\Bigl(q-\frac12\Bigr)=\frac{1-q}2,\qquad
+\overrightarrow{LV}\cdot\overrightarrow{XC}=\overrightarrow{LV}\cdot\overrightarrow{KC}-\overrightarrow{LV}\cdot\overrightarrow{KX}=0.\]
+As $L\ne V$ and $X\ne C$ ($X$ lies on line $KZ$, which meets line $BC$ only at $Z\ne C$), this means $LV\perp CX$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p6">

@@ -186,7 +186,7 @@ As $s&gt;0$, this gives $x+y=s\ge2$, with equality when $x=y=1$.</p>
 <div class="ct-meta">Geometry &middot; LPS VI, Chapter 16: Special Segments and Triangle Centers</div>
 <div class="ct-text"><p>Let $\triangle ABC$ be a triangle with $\angle BAC=120^\circ$ and lengths $AB=1$, $AC=2$. Let $D$ be a point on side $BC$ such that line $AD$ bisects angle $\angle BAC$. Find the length of segment $AD$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\dfrac23$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Split the area)</h4>
 <p>Since $AD$ bisects the $120^\circ$ angle, $\angle BAD=\angle DAC=60^\circ$. The bisector $AD$ cuts triangle $ABC$ into triangles $ABD$ and $ADC$, so their areas add up:
 \[\tfrac12\cdot AB\cdot AD\sin60^\circ+\tfrac12\cdot AC\cdot AD\sin60^\circ=\tfrac12\cdot AB\cdot AC\sin120^\circ .\]
@@ -197,6 +197,14 @@ Since $\sin60^\circ=\sin120^\circ$, this simplifies to $AD\,(AB+AC)=AB\cdot AC$,
 <p>Extend $BA$ beyond $A$ to the point $E$ with $AE=AC=2$ (see the figure). Then $\angle CAE=180^\circ-\angle BAC=60^\circ$, and triangle $ACE$ has $AE=AC$ with an apex angle of $60^\circ$, so it is equilateral; in particular $\angle AEC=60^\circ$.</p><p>The bisector makes $\angle BAD=60^\circ=\angle BEC$, so the lines $AD$ and $EC$ make equal corresponding angles with line $BE$, and therefore $AD\parallel EC$. Triangles $BAD$ and $BEC$ are thus similar (parallel cut), with ratio
 \[\frac{AD}{EC}=\frac{BA}{BE}=\frac{1}{1+2}=\frac13 .\]
 Since $EC=AC=2$, we get $AD=\boxed{\dfrac23}$.</p>
+<h4>Solution 3 (Coordinates along the bisector)</h4>
+<p>Put $A$ at the origin and let the positive $x$-axis be the ray $AD$. Since $AD$ bisects the $120^\circ$ angle, the rays $AB$ and $AC$ make angles of $60^\circ$ with the $x$-axis, on opposite sides of it. With $AB=1$ and $AC=2$,
+\[B=\Bigl(\tfrac12,\tfrac{\sqrt3}2\Bigr),\qquad C=\bigl(1,-\sqrt3\bigr).\]
+The point $D$ is where segment $BC$ meets the $x$-axis. A point of segment $BC$ is $B+t(C-B)$ with $0\le t\le1$, and its $y$-coordinate is
+\[\frac{\sqrt3}2+t\Bigl(-\sqrt3-\frac{\sqrt3}2\Bigr)=\frac{\sqrt3}2\,(1-3t),\]
+which is $0$ exactly for $t=\frac13$. Hence
+\[D=B+\tfrac13(C-B)=\tfrac13(2B+C)=\Bigl(\tfrac{1+1}{3},\ \tfrac{\sqrt3-\sqrt3}{3}\Bigr)=\Bigl(\tfrac23,0\Bigr),\]
+and $AD=\boxed{\dfrac23}$. (As a by-product, $BD:DC=t:(1-t)=1:2=AB:AC$, the angle bisector theorem.)</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p8">
@@ -494,7 +502,7 @@ For $x=1$ we have $u=v=f(1)$, and (A) gives $f(1)^2=1$, so $f(1)=1$.</p><p><em>S
 <h3>Problem 4</h3>
 <div class="ct-meta">Geometry &middot; LPS VII, Chapter 40: Vector Geometry and Affine Structure</div>
 <div class="ct-text"><p>Let $\triangle ABC$ be a triangle with centroid $G$. A line passing through $G$ intersects sides $AB$ and $AC$ at points $M$ and $N$, respectively. Let $M'$ and $N'$ be the reflections of points $M$ and $N$ across the midpoints of sides $AB$ and $AC$, respectively. Let $p$ be the line passing through $B$ and parallel to $MN'$, and let $q$ be the line passing through $C$ and parallel to $NM'$. Prove that the lines $p$ and $q$ intersect on the line $MN$.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 (The fourth vertex of a parallelogram)</h4>
 <div class="ct-fig"><img style="width:282px" src="/assets/contests/2026-27/kosovo-mo-24_s1.svg" alt="Figure for the solution"></div>
 <p>Use vectors with origin $A$: write $\vec b=\overrightarrow{AB}$, $\vec c=\overrightarrow{AC}$ (not parallel), and $\overrightarrow{AM}=m\vec b$, $\overrightarrow{AN}=n\vec c$ with $0&lt;m,n\le1$. Reflecting across the midpoint of a side swaps the distances to its endpoints, so $\overrightarrow{AM'}=(1-m)\vec b$ and $\overrightarrow{AN'}=(1-n)\vec c$.</p><p><em>The centroid condition.</em> A point $\lambda\,\overrightarrow{AM}+\mu\,\overrightarrow{AN}$ lies on line $MN$ exactly when $\lambda+\mu=1$. Since
@@ -515,6 +523,14 @@ As $2n-1\ne0$, this determines $\lambda=\dfrac{(1-m)(1-n)}{m(2n-1)}$, and $P$ is
 So it suffices to show $\dfrac{(1-m)(1-n)}{m(2n-1)}+\dfrac{(1-m)(1-n)}{n(2m-1)}=1$. Using $m+n=3mn$,
 \[\frac1{m(2n-1)}+\frac1{n(2m-1)}=\frac{4mn-m-n}{mn(2m-1)(2n-1)}=\frac{1}{(2m-1)(2n-1)},\]
 and $(2m-1)(2n-1)=4mn-2(m+n)+1=1-2mn=1-(m+n)+mn=(1-m)(1-n)$. Hence the sum equals $1$, so $P$ lies on $q$ as well.</p><p>Therefore $p$ and $q$ both pass through the point $P$ of line $MN$; that is, they intersect on $MN$.</p>
+<h4>Solution 3 (A homothety centred at the centroid)</h4>
+<p>Let $J$ be the midpoint of $BC$ and $T$ the midpoint of $MN$. All vectors below start at $A$.</p><p><em>The points $M,N$ differ from $A$.</em> If $M=A$, the line through $G$ would be line $AG$, which meets line $AC$ only at $A$; then $N=A=M$ and line $MN$ would not be defined. So $M\neq A$, and likewise $N\ne A$.</p><p><em>The reflected points.</em> The midpoint of $AB$ is also the midpoint of $MM'$, so $\overrightarrow{AM}+\overrightarrow{AM'}=\overrightarrow{AB}$, i.e. $\overrightarrow{AM'}=\overrightarrow{AB}-\overrightarrow{AM}$. In the same way $\overrightarrow{AN'}=\overrightarrow{AC}-\overrightarrow{AN}$.</p><p><em>A point on $p$ and $q$.</em> Let $Z$ be the point with $\overrightarrow{AZ}=\overrightarrow{AM'}+\overrightarrow{AN'}$. Then
+\[\overrightarrow{BZ}=\overrightarrow{AZ}-\overrightarrow{AB}=\overrightarrow{AN'}-\overrightarrow{AM}=\overrightarrow{MN'},\qquad
+\overrightarrow{CZ}=\overrightarrow{AZ}-\overrightarrow{AC}=\overrightarrow{AM'}-\overrightarrow{AN}=\overrightarrow{NM'} .\]
+Here $M\ne N'$ (they lie on lines $AB$ and $AC$, which meet only at $A$, and $M\neq A$), and likewise $N\neq M'$; so $\overrightarrow{MN'}$ and $\overrightarrow{NM'}$ are nonzero and give the directions of $p$ and $q$. Hence $Z$ lies on $p$ and on $q$.</p><p><em>$Z$ lies on $MN$.</em> The centroid lies on the median $AJ$ with $AG=\frac23AJ$, so $\overrightarrow{AB}+\overrightarrow{AC}=2\overrightarrow{AJ}=3\overrightarrow{AG}$; also $\overrightarrow{AM}+\overrightarrow{AN}=2\overrightarrow{AT}$. Therefore
+\[\overrightarrow{AZ}=\bigl(\overrightarrow{AB}+\overrightarrow{AC}\bigr)-\bigl(\overrightarrow{AM}+\overrightarrow{AN}\bigr)=3\overrightarrow{AG}-2\overrightarrow{AT},
+\qquad\text{so}\qquad \overrightarrow{GZ}=\overrightarrow{AZ}-\overrightarrow{AG}=-2\,\overrightarrow{GT}.\]
+In words, $Z$ is the image of $T$ under the homothety with centre $G$ and ratio $-2$. Both $G$ and $T$ lie on line $MN$. If $T\neq G$, then $Z$ lies on line $GT=MN$; if $T=G$, then $Z=G$, which is on $MN$ as well.</p><p><em>The lines $p$ and $q$ are different.</em> Write $\overrightarrow{AM}=m\,\overrightarrow{AB}$ and $\overrightarrow{AN}=n\,\overrightarrow{AC}$ with $0&lt;m,n\le1$. Since $\overrightarrow{AM}$ and $\overrightarrow{AN}$ are not parallel, a point $x\overrightarrow{AM}+y\overrightarrow{AN}$ lies on line $MN$ exactly when $x+y=1$. As $\overrightarrow{AG}=\frac13\overrightarrow{AB}+\frac13\overrightarrow{AC}=\frac1{3m}\overrightarrow{AM}+\frac1{3n}\overrightarrow{AN}$ and $G$ is on $MN$, we get $\frac1m+\frac1n=3$, i.e. $m+n=3mn$. Now suppose $p=q$. This line passes through $B$ and $C$, so it is line $BC$, and $MN'\parallel BC$. Since $\overrightarrow{MN'}=-m\,\overrightarrow{AB}+(1-n)\overrightarrow{AC}$ and $\overrightarrow{BC}=-\overrightarrow{AB}+\overrightarrow{AC}$, this means $m=1-n$, i.e. $m+n=1$. Then $mn=\frac13$, and $(m+n)^2\ge4mn$ would give $1\ge\frac43$, a contradiction.</p><p>So $p$ and $q$ are two different lines through the point $Z$, which lies on $MN$: they intersect on line $MN$.</p>
 </div></details>
 </section>
 {% endraw %}

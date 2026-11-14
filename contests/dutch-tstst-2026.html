@@ -74,7 +74,7 @@ description: Netherlands Team Selection Test 2026, TSTST: problems with answers 
 <h3>Problem 1</h3>
 <div class="ct-meta">Geometry &middot; LPS VII, Chapter 19: Triangle Centers and Classical Triangle Geometry</div>
 <div class="ct-text"><p>Let $ABCD$ be a rectangle with $|AB|&lt;|BC|$, and let $\Gamma$ be its circumcircle. Point $P$ lies on the arc $BC$ of $\Gamma$ not containing $A$, and point $Q$ lies on the arc $CD$ of $\Gamma$ not containing $A$, such that $|BP|=|CQ|$. The perpendicular from $B$ to $AQ$ intersects the line $AP$ at $X$.</p><p>Prove that $|PQ|=|XQ|$.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 ($X$ is an orthocentre)</h4>
 <div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/dutch-tstst-1_s1.svg" alt="Figure for the solution"></div>
 <p>The vertices lie on $\Gamma$ in the order $A,B,P,C,Q,D$, and $AC$, $BD$ are diameters. Arcs below are arcs of $\Gamma$ not containing the
@@ -98,6 +98,24 @@ $(a-b)+\frac{w(b^2-a^2)}{b}=\frac{(a-b)\bigl(b-w(a+b)\bigr)}{b}$, so
 Therefore
 \[x-q=a+b-aw+aw=a+b,\qquad p-q=bw+aw=w(a+b),\]
 and since $|w|=1$, $|XQ|=|a+b|=|PQ|$.</p>
+<h4>Solution 3 (Lengths along the line $AP$)</h4>
+<p>Let $\Gamma$ be the unit circle, with the vertices in the counterclockwise order $A,B,P,C,Q,D$ and $A=(1,0)$. We write $\operatorname{e}(\varphi)$ for the point $(\cos\varphi,\sin\varphi)$; recall that the
+points $\operatorname{e}(x)$ and $\operatorname{e}(y)$ with $|x-y|\le2\pi$ are at distance $2\sin\frac{|x-y|}2$.</p><p><strong>Coordinates.</strong> Since $AC$ and $BD$ are diameters, $C=\operatorname{e}(\pi)$, $B=\operatorname{e}(2\beta)$ and $D=\operatorname{e}(\pi+2\beta)$ for some $0&lt;\beta&lt;\frac\pi2$. Then
+$P=\operatorname{e}(2\beta+2t')$ with $0\le t'\le\frac\pi2-\beta$ and $Q=\operatorname{e}(\pi+2t)$ with $0\le t\le\beta$, and $BP=2\sin t'$, $CQ=2\sin t$. Both $t,t'$ lie in $[0,\frac\pi2]$,
+where the sine is increasing, so $BP=CQ$ gives $t'=t$. Put $\theta=\beta+t$, so $0&lt;\theta&lt;\pi$ and $0\le t&lt;\frac\pi2$.</p><p>From $\cos2\varphi-1=-2\sin^2\varphi$ and $\sin2\varphi=2\sin\varphi\cos\varphi$, and from $\operatorname{e}(\pi+2t)=(-\cos2t,-\sin2t)$,
+\[P-A=2\sin\theta\,\mathbf u,\qquad Q-A=2\cos t\,\mathbf v,\qquad B-A=2\sin\beta\,(-\sin\beta,\cos\beta),\]
+where $\mathbf u=(-\sin\theta,\cos\theta)$ and $\mathbf v=(-\cos t,-\sin t)$.
+The vectors $\mathbf u,\mathbf v$ are unit vectors along the lines $AP$ and $AQ$ (note $\sin\theta&gt;0$ and $\cos t&gt;0$, so $P\ne A$ and $Q\ne A$), and by the subtraction formula
+\begin{align*}
+\mathbf u\cdot\mathbf v&amp;=\sin\theta\cos t-\cos\theta\sin t=\sin\beta,\\
+(B-A)\cdot\mathbf v&amp;=2\sin\beta\,(\sin\beta\cos t-\cos\beta\sin t)=2\sin\beta\sin(\beta-t).
+\end{align*}</p><p><strong>The point $X$.</strong> Write $X=A+s\,\mathbf u$. The condition $BX\perp AQ$ is $(X-B)\cdot\mathbf v=0$, that is, $s\,\mathbf u\cdot\mathbf v=(B-A)\cdot\mathbf v$, i.e.
+$s\sin\beta=2\sin\beta\sin(\beta-t)$. Here $\mathbf u\cdot\mathbf v=\sin\beta\ne0$, so $AP$ is not perpendicular to $AQ$ and meets the perpendicular from $B$ to $AQ$ in exactly one point; dividing by $\sin\beta$,
+\[s=2\sin(\beta-t).\]</p><p><strong>The foot of the perpendicular from $Q$.</strong> On the line $AP$ use the coordinate $\lambda$ of the point $A+\lambda\mathbf u$. Then $X$ has coordinate $s=2\sin(\beta-t)$, $P$ has
+coordinate $2\sin(\beta+t)$, and the foot $H$ of the perpendicular from $Q$ to $AP$ has coordinate
+\[(Q-A)\cdot\mathbf u=2\cos t\,\sin\beta .\]
+By the sum-to-product formula, $\frac12\bigl(2\sin(\beta-t)+2\sin(\beta+t)\bigr)=2\sin\beta\cos t$. So $H$ is the midpoint of $XP$, the line $QH$ is the perpendicular bisector of $XP$
+(if $X=P$, which happens for $t=0$, there is nothing to prove), and therefore $|PQ|=|XQ|$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p2">

@@ -165,8 +165,8 @@ so $P$ is the midpoint of $BQ$.</p>
 \[a_{n+1} = \begin{cases} \sqrt{a_n} &amp; \text{if } \sqrt{a_n} \text{ is an integer,}\\ a_n + c(a_n) &amp; \text{otherwise.}\end{cases}\]
 Determine all integers that are in all <em>Colombian</em> sequences.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$2,\ 3,\ 4$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Squarefree parts and a descent)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Squarefree parts and a descent)</h4>
 <p><em>Notation.</em> Every positive integer $x$ can be written uniquely as $x=c(x)\,m(x)$ with $c(x)$ the largest square
 dividing $x$ and $m(x)$ squarefree (take each prime to the largest even power not exceeding its exponent). Then $x$ is a square iff $m(x)=1$,
 and for a square $s$ we have $c(sy)=s\,c(y)$ and $m(sy)=m(y)$.</p><p><em>Only $2,3,4$ can work.</em> For $a=2$ the sequence is $2,3,4,2,3,4,\dots$ ($c(2)=c(3)=1$ and $\sqrt4=2$). So an integer lying in all
@@ -193,6 +193,30 @@ $p_R\ge 2$; with $b_0=2$, $b_{i+1}=4b_i-4$, i.e. $b_i=\frac{2\cdot 4^i+4}{3}$, i
 not a square and $x\ge 9$, the lemma gives a later square $S&lt;9x\le x^2$, followed by $\sqrt S&lt;x$. The remaining non-squares are $3,5,6,7,8$:
 $3\to4\to2$, and $5\to6\to7\to8\to12\to16\to4$, so each of them is followed by $2$ or $4$, which is smaller.</p><p><em>(d) Conclusion.</em> Let $\mu$ be the smallest term of the sequence. By (c), $\mu\le 2$, and by (a), $\mu=2$. So $2$, and hence $3$ and $4$,
 appear in every Colombian sequence.</p><p>The integers in all Colombian sequences are exactly $\boxed{2,\ 3,\ 4}$.</p>
+<h4>Solution 2 (A quantity that never grows from one square jump to the next)</h4>
+<p><em>Notation.</em> Every positive integer $x$ can be written uniquely as $x=s^2b$ with $s\ge1$ and $b$ squarefree (take each prime
+to the largest even power not exceeding its exponent in $x$). Then $c(x)=s^2$, and $x$ is a square iff $b=1$. Put
+\[
+\varphi(x)=s\,b .
+\]
+Note that $\varphi(x)\le s^2b=x$, with equality only if $s=1$. Also, for a square $s^2$ and any $y$ we have $c(s^2y)=s^2c(y)$.</p><p><em>Only $2,3,4$ can work.</em> For $a=2$ the sequence is $2,3,4,2,3,4,\dots$ (as $c(2)=c(3)=1$ and $\sqrt4=2$). So an integer lying in all
+Colombian sequences is one of $2,3,4$. We show that every Colombian sequence contains $2$; then it also contains the next two terms $3$ and $4$.</p><p><em>All terms are at least $2$.</em> If $a_n\ge2$ is a square, then $a_n\ge4$ and $a_{n+1}=\sqrt{a_n}\ge2$; otherwise $a_{n+1}&gt;a_n$.</p><p><em>Lemma.</em> Let $x=s^2b$ be a non-square, so $b\ge2$. Then the sequence starting from $x$ reaches a square $S$, and $\sqrt S\le s\,b$, with
+strict inequality unless $b=2$.</p><p><em>Proof.</em> Let $j\ge1$ be the least integer such that $b+j$ is not squarefree. For $0\le i&lt;j$ the number $s^2(b+i)$ is a non-square with
+square part $s^2c(b+i)=s^2$, so it is followed by $s^2(b+i+1)$. Hence the terms after $x$ are $s^2(b+1),\dots,s^2(b+j)$. Since $b$ is
+squarefree, $4\nmid b$, so one of $b+1,b+2,b+3$ is a multiple of $4$, and $j\le3$. Write $b+j=t^2b_1$ with $t\ge2$ and $b_1$ squarefree. The term
+reached is $x_1=(st)^2b_1$, and
+\[
+\varphi(x_1)=s\,t\,b_1=\frac{s(b+j)}{t}\le\frac{s(b+3)}{2}.
+\]
+If $b\ge4$, then $(b+3)/2&lt;b$, so $\varphi(x_1)&lt;\varphi(x)$. If $b=2$ or $b=3$, the first non-squarefree number after $b$ is $4$, so $t=2$,
+$b_1=1$ and $\varphi(x_1)=2s\le sb$, with strict inequality for $b=3$. In every case $\varphi(x_1)\le\varphi(x)$, strictly unless $b=2$; moreover
+$b_1=(b+j)/t^2\le(b+3)/4&lt;b$.</p><p>If $b_1=1$, then $x_1$ is a square and $\sqrt{x_1}=st=\varphi(x_1)$. Otherwise repeat the argument from $x_1$. The squarefree parts $b&gt;b_1&gt;\cdots$
+strictly decrease, so after finitely many such stages the squarefree part is $1$: the sequence reaches a square $S$ with
+$\sqrt S=\varphi(S)\le\cdots\le\varphi(x_1)\le\varphi(x)=sb$, and the first inequality $\varphi(x_1)\le\varphi(x)$ is strict unless $b=2$.
+$\square$</p><p><em>Every term $x\ge3$ is followed later by a smaller term.</em> If $x$ is a square, then $x\ge4$ and the next term is $\sqrt x&lt;x$. If $x=s^2b$ is not
+a square, the Lemma gives a later square $S$ with $\sqrt S\le sb\le s^2b=x$. Equality throughout would need both $b=2$ and $s=1$, that is $x=2$,
+which is excluded. So $\sqrt S&lt;x$, and $\sqrt S$ is the term after $S$.</p><p><em>Conclusion.</em> Let $\mu$ be the smallest term of the sequence. Then $\mu\ge2$, and $\mu\ge3$ is impossible by the previous paragraph, so
+$\mu=2$. Hence $2$, and therefore $3$ and $4$, appear in every Colombian sequence.</p><p>The integers in all Colombian sequences are exactly $\boxed{2,\ 3,\ 4}$.</p>
 </div></details>
 </section>
 <h2 class="ct-group" id="day-2">Day 2</h2>
@@ -236,8 +260,8 @@ x_1^{100} &amp;= x_{99} + x_{100}\\
 x_2^{100} &amp;= x_{100} + x_1
 \end{aligned}\]</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$x_1=\dots=x_{100}=0$ or $x_1=\dots=x_{100}=\sqrt[99]{2}$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Looking at the smallest and the largest unknown)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Looking at the smallest and the largest unknown)</h4>
 <p>Take indices modulo $100$; the system says $x_{i+2}^{100}=x_i+x_{i+1}$ for every $i$. In particular
 \[
 x_i+x_{i+1}\ge 0\qquad\text{for every } i. \tag{1}
@@ -254,6 +278,37 @@ $M\le\sqrt[99]2\le m\le M$, and all unknowns equal $\sqrt[99]2$.</p></li></ul><p
 \[
 \boxed{(x_1,\dots,x_{100})=(0,\dots,0)\quad\text{or}\quad(x_1,\dots,x_{100})=\big(\sqrt[99]{2},\dots,\sqrt[99]{2}\big)} .
 \]</p>
+<h4>Solution 2 (Signs of consecutive differences)</h4>
+<p>Take indices modulo $100$; the system says $x_{i+2}^{100}=x_i+x_{i+1}$ for every $i$ (call this equation $(E_i)$). In
+particular
+\[
+x_i+x_{i+1}\ge0\qquad\text{for every } i. \tag{1}
+\]
+Put $d_i=x_{i+1}-x_i$ and $D_i=x_{i+1}^{100}-x_i^{100}$. Note $d_0+d_1+\dots+d_{99}=0$.</p><p><em>Lemma.</em> If $D_i&gt;0$ then $d_i&gt;0$, and if $D_i&lt;0$ then $d_i&lt;0$. Indeed, $u\mapsto u^{50}$ is strictly increasing for $u\ge0$, so $D_i$ has
+the same sign as $x_{i+1}^2-x_i^2=d_i\,(x_i+x_{i+1})$. If $D_i&gt;0$, this product is positive; its second factor is $\ge0$ by (1), hence positive,
+and so $d_i&gt;0$. The case $D_i&lt;0$ is the same.</p><p><em>A recursion.</em> Subtracting $(E_i)$ from $(E_{i+1})$ gives
+\[
+D_{i+2}=x_{i+3}^{100}-x_{i+2}^{100}=x_{i+2}-x_i=d_i+d_{i+1}. \tag{2}
+\]</p><p><em>Step 1: the differences are all $0$ or strictly alternate in sign.</em> Suppose $d_i\ge0$ and $d_{i+1}\ge0$, not both $0$. By (2), $D_{i+2}&gt;0$,
+so $d_{i+2}&gt;0$ by the Lemma; now the pair $d_{i+1},d_{i+2}$ has the same property, and by induction $d_k&gt;0$ for all $k\ge i+2$. Going once around
+the cycle, all $100$ differences are positive, contradicting $\sum d_k=0$. In the same way (with all signs reversed) we cannot have $d_i\le0$,
+$d_{i+1}\le0$, not both $0$. Consequently, if some $d_i=0$, then $d_{i+1}=0$ (otherwise the pair $d_i,d_{i+1}$ is of a forbidden kind), and then
+all differences are $0$. If no difference is $0$, any two consecutive differences have opposite signs.</p><p><em>Step 2: alternating signs are impossible.</em> Suppose the $d_i$ are nonzero and alternate in sign. Then the unknowns with indices of one
+parity are each larger than both neighbours; let $H$ be this set of indices ($d_{h-1}&gt;0&gt;d_h$ for $h\in H$). The map $h\mapsto h+1$ is a bijection
+from $H$ onto the other parity class. For $h\in H$ we have $d_h&lt;0$, so the Lemma rules out $D_h&gt;0$; that is,
+\[
+x_h^{100}\ge x_{h+1}^{100}\qquad (h\in H). \tag{3}
+\]
+On the other hand, adding the equations $(E_i)$ over all even $i$ gives $\sum_{k\text{ even}}x_k^{100}=\sum_{i\text{ even}}(x_i+x_{i+1})=\sum_k x_k$,
+and over all odd $i$ gives $\sum_{k\text{ odd}}x_k^{100}=\sum_k x_k$. So the two parity classes have the same sum of $100$th powers, that is,
+$\sum_{h\in H}x_h^{100}=\sum_{h\in H}x_{h+1}^{100}$. Together with (3), every inequality in (3) is an equality: $|x_h|=|x_{h+1}|$. As
+$x_h\ne x_{h+1}$, we get $x_{h+1}=-x_h$, and $(E_h)$ gives $x_{h+2}^{100}=x_h+x_{h+1}=0$. Since $h+2$ runs over all of $H$ as $h$ does, $x_h=0$ for
+every $h\in H$, and then $x_{h+1}=-x_h=0$ too. So all unknowns are $0$, contradicting $d_i\ne0$.</p><p><em>Step 3: the constant solutions.</em> By Steps 1 and 2 all unknowns are equal to some $t$, and $t^{100}=2t$. So $t=0$ or $t^{99}=2$; the
+latter has the single real solution $t=\sqrt[99]2$, as $u\mapsto u^{99}$ is strictly increasing. Both work: $0=0+0$ and
+$\big(\sqrt[99]2\big)^{100}=2\sqrt[99]2$. The solutions are
+\[
+\boxed{(x_1,\dots,x_{100})=(0,\dots,0)\quad\text{or}\quad(x_1,\dots,x_{100})=\big(\sqrt[99]{2},\dots,\sqrt[99]{2}\big)} .
+\]</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p6">
@@ -261,8 +316,8 @@ $M\le\sqrt[99]2\le m\le M$, and all unknowns equal $\sqrt[99]2$.</p></li></ul><p
 <div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 18: Invariants and Monovariants</div>
 <div class="ct-text"><p>Let $n$ be a positive integer. Initially, all cells of a $n \times n$ board are painted white. On each turn, it is allowed to paint one cell of the board black, as long as for every white cell there exist at least two other white cells that share a side with it. Find the greatest amount of cells that might be painted black.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$n^2-2n$ for even $n$, $n^2-2n-1$ for odd $n\ge 3$ (and $1$ for $n=1$)</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (The perimeter of the white region)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (The perimeter of the white region)</h4>
 <div class="ct-fig"><img style="width:282px" src="/assets/contests/2026-27/colombia-mo-6_s1.svg" alt="Figure for the solution"></div>
 <p>We read the rule as: after each painting, every white cell must have at least two white neighbours (cells sharing a
 side). For $n=1$ the single cell can be painted (no white cell remains), so the answer is $1$; from now on $n\ge2$.</p><p><em>Perimeter.</em> For a set $X$ of cells let $\operatorname{per}(X)$ be the number of unit edges that separate a cell of $X$ from a cell outside $X$
@@ -301,6 +356,35 @@ square of rows and columns $1,\dots,2i$ is filled, the cell $(2i,2i+1)$ has the 
 filling of (ii), applied four times, fills rows and columns $1,\dots,2i+2$. So the board is filled, $|W|=2n$, and $n^2-2n$ cells are black.</p></li><li><p>$n$ odd, $n\ge3$: take $(n-3)/2$ such squares in rows and columns $1,\dots,n-3$, together with the $3\times3$ square in rows and columns
 $n-2,n-1,n$ without its corners $(n-2,n)$ and $(n,n-2)$ (these $7$ cells each have at least two of them as neighbours). The two missing corners can
 be added legally, which fills the $3\times 3$ square, and then the board is filled exactly as before. Here $|W|=2(n-3)+7=2n+1$.</p></li></ul><p>Therefore the greatest number of black cells is
+\[
+\boxed{\begin{cases} n^2-2n, &amp; n \text{ even},\\ n^2-2n-1, &amp; n\ge 3 \text{ odd},\\ 1, &amp; n=1.\end{cases}}
+\]</p>
+<h4>Solution 2 (Counting edges, and cycles with nothing inside)</h4>
+<p>We read the rule as in Solution 1: after each painting, every white cell must have at least two white neighbours (cells sharing a
+side). For $n=1$ the single cell can be painted, so the answer is $1$; from now on $n\ge2$.</p><p><em>Edge count.</em> Join two cells by an edge when they share a side; the board has $2n(n-1)$ edges. For a set $X$ of cells let $e(X)$ be the
+number of edges with both ends in $X$. Let $W_0\supset W_1\supset\dots\supset W_k=W$ be the white sets during a legal painting, $W_0$ the whole board,
+$W_t=W_{t+1}\cup\{z_t\}$. The cell $z_t$ has at least two neighbours in $W_t$ (for $t=0$ because $n\ge2$, for $t\ge1$ by the rule), and they lie in
+$W_{t+1}$; so $e(W_t)\ge e(W_{t+1})+2$. Also every cell of $W$ has at least two neighbours in $W$, so $e(W)=\frac12\sum_{z\in W}\deg_W(z)\ge|W|$.
+With $w=|W|$,
+\[
+2n(n-1)=e(W_0)\ge e(W)+2(n^2-w)\ge w+2n^2-2w,\qquad\text{so}\qquad w\ge 2n .
+\]
+Hence at most $n^2-2n$ cells are black.</p><p><em>Odd $n$: $w=2n$ is impossible.</em> Suppose $w=2n$. Then all the inequalities above are equalities: every cell of $W$ has exactly two
+neighbours in $W$, and every $z_t$ has exactly two neighbours in $W_{t+1}$. Represent each cell by its centre, a lattice point, and each edge by the
+unit segment joining the centres. Each connected piece of $W$ is then a cycle, drawn as a simple closed lattice polygon $\Gamma$. Two different
+unit lattice segments meet at most at a common endpoint, so a segment joining two adjacent cells crosses $\Gamma$ only at a lattice point of $\Gamma$.
+Consequently a neighbour of a cell whose centre is strictly inside $\Gamma$ is itself strictly inside $\Gamma$ or on $\Gamma$.</p><p><em>(i) No cell centre lies strictly inside $\Gamma$.</em> Let $I$ be the set of cells with centres strictly inside $\Gamma$, and suppose
+$I\ne\varnothing$.</p><ul class="ct-ul"><li><p>If some cell of $I$ is not in $W$, let $z$ be the one among them restored last when the painting is reversed ($z=z_t$ with $t$ smallest).
+All four neighbours of $z$ are in $I$ or on $\Gamma$; those on $\Gamma$ and those in $I\cap W$ lie in $W$, and the others were restored earlier. So
+$z$ has four neighbours in $W_{t+1}$, not two, a contradiction.</p></li><li><p>If $I\subseteq W$, start at a cell of $I$ and walk to the right along its row. The walk eventually leaves the inside of $\Gamma$, so at some
+step it goes from a cell $y\in I$ to a cell $y'$ not in $I$, and $y'$ lies on $\Gamma$. Then $y'$ has three neighbours in $W$: its two neighbours on
+the cycle and $y\notin\Gamma$, a contradiction.</p></li></ul><p><em>(ii) $\Gamma$ is a unit square.</em> The region bounded by $\Gamma$ is a union of unit squares of the lattice. If it consisted of two or more of
+them, then, as its inside is connected and contains no lattice point by (i), two of these unit squares share a side $\sigma$. The points of $\sigma$
+other than its endpoints are inside the region, so $\sigma$ is not a side of $\Gamma$; its endpoints are lattice points of the closed region, so by
+(i) they lie on $\Gamma$. Thus two cells of the cycle are adjacent through an edge that is not a cycle edge, and they have three neighbours in $W$,
+a contradiction. So $\Gamma$ is a single unit square, i.e. the piece is a $2\times2$ block of cells.</p><p>Hence $W$ consists of $2\times2$ blocks and $w$ is a multiple of $4$; but for odd $n$, $2n\equiv2\pmod4$. So $w\ge2n+1$, and at most $n^2-2n-1$
+cells are black.</p><p><em>Constructions.</em> The constructions of Solution 1 (diagonal $2\times2$ blocks, and for odd $n$ a $3\times3$ block without two opposite corners
+at the end) leave exactly $2n$ white cells for even $n$ and $2n+1$ for odd $n\ge3$. Therefore the greatest number of black cells is
 \[
 \boxed{\begin{cases} n^2-2n, &amp; n \text{ even},\\ n^2-2n-1, &amp; n\ge 3 \text{ odd},\\ 1, &amp; n=1.\end{cases}}
 \]</p>

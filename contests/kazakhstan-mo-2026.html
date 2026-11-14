@@ -128,8 +128,8 @@ to $7\cdot13$. As $F_i$ divides $7^c13^de$, it divides $e$, and $e$ divides $a$.
 <div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 31: Extremal Principle and Bounding Arguments</div>
 <div class="ct-text"><p>Let $n\ge 4$ be an integer. What is the maximum number of cells that can be colored black on an $n\times n$ board so that for any two black cells $(a,b)$ and $(c,d)$, the condition $|a-c|+|b-d|\ne n-1$ holds? (Here $(x,y)$ denotes the cell in the $x$-th row and $y$-th column. The cell in the bottom-left corner corresponds to $(1,1)$.)</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\dfrac{n^2}{2}$ for even $n$, $\dfrac{(n-1)^2}{2}$ for odd $n$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (A perfect matching and diagonal bookkeeping)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (A perfect matching and diagonal bookkeeping)</h4>
 <p>Call two cells <em>in conflict</em> if their distance $|a-c|+|b-d|$ equals $n-1$. We need the largest set of pairwise non-conflicting cells.</p><p><strong>Even $n=2k$: the answer is $\frac{n^2}{2}$.</strong></p><p><em>Construction.</em> Take the cells with $a+b$ odd (one colour of the chessboard colouring). The distance between two such cells is even, while $n-1$ is
 odd, so there are no conflicts; there are $\frac{n^2}{2}$ of them.</p><p><em>Bound.</em> Pair the cells as follows:</p><ul class="ct-ul"><li><p>$(1,j)$ with $(n,j)$ for $1\le j\le n$;</p></li><li><p>for $2\le i\le k$: $(i,j)$ with $(i+k-1,\,j+k)$ if $j\le k$, and with $(i+k-1,\,j-k)$ if $j\ge k+1$.</p></li></ul><p>In each pair the distance is $n-1$ (namely $(n-1)+0$, or $(k-1)+k$). Rows $2,\dots,k$ are sent bijectively onto rows $k+1,\dots,2k-1$ (the columns are
 shifted cyclically by $k$), so every cell lies in exactly one pair. A set without conflicts contains at most one cell of each of the $\frac{n^2}{2}$ pairs.</p><p><strong>Odd $n=2k+1$: the answer is $\frac{(n-1)^2}{2}=2k^2$.</strong></p><p><em>Construction.</em> Use coordinates $p=a-k-1$, $q=b-k-1\in[-k,k]$ centred at the middle cell, and take the cells with $|p|+|q|\le k-1$, together with the
@@ -145,6 +145,22 @@ $A_{2k+2}$ in at most $k$ cells, or avoids it (then the chain gives at most $2\l
 contains $k+1$ cells of $A_{2k+2}$, including $(1,n)\in D_{-2k}$ and $(n,1)\in D_{2k}$; then $X$ avoids the main diagonal $D_0$, and the same count done with
 diagonals ($k-1$ pairs $\{D_t,D_{t+2k}\}$, $t=-2k+2,\dots,-2$, plus the chain $D_{-2k},D_0,D_{2k}$ of which only the two one-cell diagonals are used) gives at most
 $k(k-1)+2\le k^2$.</p><p>Hence $|X|\le 2k^2=\frac{(n-1)^2}{2}$.</p><p><strong>Answer.</strong> The maximum is $\boxed{\frac{n^2}{2}}$ for even $n$ and $\boxed{\frac{(n-1)^2}{2}}$ for odd $n$.</p>
+<h4>Solution 2 (Rotated coordinates and residue classes)</h4>
+<p>Call two cells <em>in conflict</em> if their distance $|a-c|+|b-d|$ equals $n-1$. We need the largest set of pairwise non-conflicting cells.</p><p><strong>Even $n=2m$: the answer is $\frac{n^2}{2}$.</strong> The cells with $a+b$ odd form one colour of the chessboard colouring. Two of them are at even distance,
+while $n-1$ is odd, so there are no conflicts, and there are $\frac{n^2}{2}$ such cells.</p><p>For the bound, number the rows and the columns $0,1,\dots,2m-1$ and split all cells into pairs of conflicting cells:</p><ul class="ct-ul"><li><p>$(0,c)$ with $(2m-1,c)$ for every column $c$ (distance $2m-1$);</p></li><li><p>for $1\le r\le m-1$ and $0\le j\le m-1$: $(r,j)$ with $(r+m-1,j+m)$, and $(r,j+m)$ with $(r+m-1,j)$ (distance $(m-1)+m=2m-1$).</p></li></ul><p>The rows $1,\dots,m-1$ are matched with the rows $m,\dots,2m-2$ and the columns $j$ with $j+m$, so every cell lies in exactly one pair. A conflict-free set
+contains at most one cell of each of the $\frac{n^2}{2}$ pairs.</p><p><strong>Odd $n=2m+1$ (so $m\ge2$): the answer is $2m^2=\frac{(n-1)^2}{2}$.</strong> Describe a cell by $(i,j)$ with $-m\le i,j\le m$ (the row and column
+numbers minus $m+1$), and put $u=i+j$, $v=i-j$. For real $\alpha,\beta$ we have $|\alpha|+|\beta|=\max(|\alpha+\beta|,|\alpha-\beta|)$, so the distance
+between two cells is $\max(|\Delta u|,|\Delta v|)$. The cells correspond exactly to the integer points $(u,v)$ with $u\equiv v\pmod 2$ and $|u|+|v|\le2m$
+(because $|i|,|j|\le m$ means $|u+v|,|u-v|\le2m$). Two cells conflict exactly when $\max(|\Delta u|,|\Delta v|)=2m$.</p><p><em>Bound.</em> Sort the cells into classes by the pair $(u\bmod 2m,\ v\bmod 2m)$. As $u\equiv v\pmod 2$ and $2m$ is even, the two residues have equal
+parity, so there are $2m\cdot m=2m^2$ classes. In one class, two distinct cells have $\Delta u$ and $\Delta v$ divisible by $2m$, not both zero, and of absolute
+value at most $4m$. The value $4m$ needs $u=2m$ and $u=-2m$ (or the same for $v$), and then the other coordinate is $0$; such cells lie in the class $C_0$ of the
+residues $(0,0)$. Hence in every class other than $C_0$ any two cells are at distance exactly $2m$, and the class contains at most one black cell.</p><p>The class $C_0$ consists of the centre $O=(0,0)$ and the four tips $(\pm2m,0)$, $(0,\pm2m)$. The centre conflicts with every tip, and two perpendicular tips,
+such as $(2m,0)$ and $(0,2m)$, also conflict. So $C_0$ contains at most two black cells, and if it contains two, they are opposite tips. Suppose these are
+$(2m,0)$ and $(-2m,0)$, and look at the class of the residues $(0,2)$, which differs from $C_0$ as $m\ge2$. Its cells have $u\in\{0,\pm2m\}$; $u=\pm2m$ forces
+$v=0\not\equiv2$, so $u=0$ and $|v|\le 2m-2$. Each such cell has $|\Delta u|=2m$ and $|\Delta v|&lt;2m$ to the tip $(2m,0)$, so it conflicts with it and is not
+black. If the two black tips are $(0,\pm2m)$, the class $(2,0)$ is empty of black cells in the same way. In every case the black cells number at most the number
+of classes, $2m^2$.</p><p><em>Construction.</em> Take the cells with $1-m\le u,v\le m$ and $u\equiv v\pmod2$. They satisfy $|u|+|v|\le2m$, so they are cells of the board; there are
+$\frac{(2m)^2}{2}=2m^2$ of them; and any two have $|\Delta u|,|\Delta v|\le2m-1$, so no two conflict.</p><p><strong>Answer.</strong> The maximum is $\boxed{\frac{n^2}{2}}$ for even $n$ and $\boxed{\frac{(n-1)^2}{2}}$ for odd $n$.</p>
 </div></details>
 </section>
 <h2 class="ct-group" id="grade-9-day-2">Grade 9, Day 2</h2>
@@ -197,7 +213,7 @@ The answer is $\boxed{1+\sqrt{\frac{2}{n-1}}}$.</p>
 <h3>Problem 6</h3>
 <div class="ct-meta">Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure</div>
 <div class="ct-text"><p>Let $BE$ and $CF$ be the altitudes of an acute triangle $ABC$ with $AB\ne AC$, and let them intersect at $H$. Let $M$ be the midpoint of side $BC$, and let $N$ be an arbitrary point on segment $AM$. A circle $\omega$ passes through points $B$ and $F$ and is tangent to line $BC$. Line $FN$ meets $\omega$ again at $X$. Prove that the circumcenter of triangle $BXC$ lies on line $HN$.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 (A hidden circle and a pencil of circles)</h4>
 <div class="ct-fig"><img style="width:383px" src="/assets/contests/2026-27/kazakhstan-mo-6_s1.svg" alt="Figure for the solution"></div>
 <p>Let $D$ be the foot of the altitude from $A$, $P$ the foot of the perpendicular from $H$ to $AM$, $\Omega$ the circle with diameter $BC$
@@ -229,6 +245,31 @@ perpendicular to $BC$ at $B$, like $U$. So $UK(A)\parallel\ell$; also $HA\parall
 $M$ ($MB=MF$). So $\varphi(M)=M=\psi(M)$.</p></li><li><p>$N=P$: $K(P)$ lies on the perpendicular to $AM$ at $P$, which is line $HP$. Also $U\in HP$: the circles $(BFMP)$ and $(BFMU)$ (the latter has diameter
 $MU$, since $\angle MBU=\angle MFU=90^\circ$, $MF$ being tangent to $\omega$) share $B,F,M$, so they coincide and $\angle MPU=90^\circ$. Hence
 $UK(P)=HP$ and $\varphi(P)=\psi(P)$.</p></li></ul><p>Therefore $\varphi=\psi$, and the circumcenter of $BXC$ lies on $HN$.</p>
+<h4>Solution 3 (Inversion at B)</h4>
+<p>Put $M=(0,0)$, $B=(-1,0)$, $C=(1,0)$, $A=(p,q)$ with $q&gt;0$, $p\ne0$ (as $AB\ne AC$), and $a=p^2+q^2&gt;1$ (the angle at $A$ is acute,
+so $A$ lies outside the circle with diameter $BC$). The altitude from $A$ is $x=p$, and $H=(p,h)$ with $h=\frac{1-p^2}{q}$ (from $\overrightarrow{BH}\perp
+\overrightarrow{AC}$); note $q-h=\frac{a-1}{q}&gt;0$. Write $N=sA$ with $0\le s\le1$.</p><p>For $N=A$ the line $FN$ is $AB$, which meets $\omega$ at $B$ and $F$ only, so $X=B$ and the triangle $BXC$ degenerates; let $0\le s&lt;1$ from now on.</p><p><strong>The target point.</strong> The line $HN$ (with $H\ne N$, as $sp\ne p$) meets the perpendicular bisector $x=0$ of $BC$ at $H+\frac1{1-s}(N-H)$
+(the first coordinate is $p+\frac{sp-p}{1-s}=0$), whose second coordinate is
+\[z=h+\frac{sq-h}{1-s}=\frac{s(q-h)}{1-s}=\frac{s(a-1)}{q(1-s)} .\]
+Let $\Gamma$ be the circle through $B$ and $C$ with centre $(0,z)$: $x^2+y^2-1-2zy=0$. We show $X\in\Gamma$ and $X\notin BC$; then $\Gamma$ is the
+circumcircle of $BXC$ and its centre $(0,z)$ lies on $HN$.</p><p><strong>Inversion.</strong> For a point $(x,y)$ let $(\xi,\eta)=(x+1,y)$ be its coordinates relative to $B$, and invert in the unit circle centred at $B$:
+$(\xi,\eta)\mapsto(U,V)=\frac{(\xi,\eta)}{\xi^2+\eta^2}$. A circle through $B$ with equation $\xi^2+\eta^2=\alpha\xi+\beta\eta$ goes to the line
+$\alpha U+\beta V=1$, and a line $\alpha\xi+\beta\eta=1$ (not through $B$) goes to the circle $U^2+V^2=\alpha U+\beta V$ through $B$; both follow by
+dividing the equation by $(\xi^2+\eta^2)^2$. Lines through $B$ go to themselves, and the inversion preserves the sign of $\eta$.</p><ul class="ct-ul"><li><p>The circle $\Omega$ with diameter $BC$ is $x^2+y^2=1$, i.e. $\xi^2+\eta^2=2\xi$; its image is the line $U=\frac12$.</p></li><li><p>$\Gamma$ is $\xi^2+\eta^2=2\xi+2z\eta$; its image is the line $2U+2zV=1$.</p></li><li><p>$\omega$ is tangent to $BC$ at $B$, so its centre lies on the line $\xi=0$, and its equation is $\xi^2+\eta^2=g\eta$ for some $g$; its image is the line
+$V=\frac1g$.</p></li><li><p>$F$ lies on $\Omega$ (as $\angle BFC=90^\circ$) and on line $AB$, so $F'$ lies on $U=\frac12$ and on line $AB$, whose points are $\lambda(p+1,q)$ in the
+coordinates $(\xi,\eta)$. Hence $F'=\bigl(\frac12,\frac{q}{2(p+1)}\bigr)$. As $F'$ lies on the image of $\omega$, $g=\frac{2(p+1)}{q}$, that is,
+$\frac{qg}{2}=p+1$.</p></li></ul><p><strong>The line $FN$.</strong> It does not pass through $B$: otherwise $N$ would lie on $AB$, and $AB$ meets $AM$ only at $A$. Also $F\ne N$, as $F\ne A$
+lies on $AB$. So $FN$ has an equation $\alpha\xi+\beta\eta=1$, and its image is the circle $\varphi$: $U^2+V^2=\alpha U+\beta V$. The line $FN$ meets $\omega$
+at $F$ and $X$ (with $X=F$ if it is tangent), so $\varphi$ meets the line $V=\frac1g$ at $F'$ and $X'$ (tangency is preserved). On $V=\frac1g$ the
+equation of $\varphi$ is $U^2-\alpha U+\frac1{g^2}-\frac\beta g=0$, whose two roots are the first coordinates of $F'$ and $X'$. Their sum is $\alpha$, so
+\[X'=\Bigl(\alpha-\tfrac12,\ \tfrac1g\Bigr).\]</p><p><strong>Computing $\alpha$.</strong> $F'\in\varphi$ gives $\frac14+\frac1{g^2}=\frac\alpha2+\frac\beta g$, so $\beta=\frac g4+\frac1g-\frac{\alpha g}2$. The point $N$
+has $(\xi,\eta)=(sp+1,sq)$, and $N\in FN$ gives $\alpha(sp+1)+\beta sq=1$. Substituting $\beta$ and using $\frac{qg}2=p+1$:
+\[\alpha\bigl(sp+1-s(p+1)\bigr)=1-s\Bigl(\frac{qg}4+\frac qg\Bigr),\qquad \frac{qg}4+\frac qg=\frac{p+1}2+\frac{q^2}{2(p+1)}=1+\frac{a-1}{2(p+1)} .\]
+The left side is $\alpha(1-s)$, so
+\[\alpha=1-\frac{s(a-1)}{2(p+1)(1-s)}=1-\frac{z}{g}\qquad\Bigl(\text{as } \frac zg=\frac{s(a-1)}{q(1-s)}\cdot\frac{q}{2(p+1)}\Bigr).\]</p><p><strong>Conclusion.</strong> Then $2U+2zV=2\alpha-1+\frac{2z}g=1$ at $X'$, so $X'$ lies on the image of $\Gamma$ and $X\in\Gamma$. Moreover $X'$ has $V=\frac1g&gt;0$
+(as $p+1&gt;0$, the angle at $B$ being acute), so $X$ lies above $BC$; in particular $X\ne B,C$ and $B,X,C$ are not collinear. Hence $\Gamma$ is the circumcircle of $BXC$, and its centre
+$(0,z)$ lies on $HN$. (For $s=0$, that is $N=M$, this gives $z=0$, $\alpha=1$ and $X'=F'$: the line $FM$ is tangent to $\omega$ at $F$, $X=F$, and the
+circumcentre is $M\in HM$.)</p>
 </div></details>
 </section>
 <h2 class="ct-group" id="grades-10-11-day-1">Grades 10-11, Day 1</h2>
@@ -277,8 +318,8 @@ and the three points lie inside the sides, so by Ceva's theorem $CM$, $NF$, $AG$
 <div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 44: Combinatorial Games and Strategy</div>
 <div class="ct-text"><p>Two players play the following game. There is an empty graph on $S$ vertices and $k$ pencils of distinct colors. The first player names a color, after which the second player draws an edge that has not been drawn before using a pencil of the chosen color. Then the first player again names a color, and the second player draws another edge, and so on.</p><p>If at some moment a monochromatic cycle appears, the game ends and the second player wins. If all edges are drawn and no monochromatic cycle appears, then the first player wins.</p><p>For a fixed $S&gt;2$, determine the maximum $k$ for which the second player can guarantee a win.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\left\lfloor\frac{(S-1)^2}{4}\right\rfloor$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Open cherries and a count of unsafe colours)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Open cherries and a count of unsafe colours)</h4>
 <div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/kazakhstan-mo-9_s1.svg" alt="Figure for the solution"></div>
 <p>Let $E=\binom S2$ and write $S=2s$ or $S=2s+1$. We prove that the answer is
 \[k_0=\Bigl\lfloor\frac{(S-1)^2}{4}\Bigr\rfloor=\begin{cases}s(s-1),&amp;S=2s,\\ s^2,&amp;S=2s+1.\end{cases}\]
@@ -305,6 +346,24 @@ $\frac{w(w-2)}{4}$ cherries.</p></li></ul><p>So the number of unsafe colours wit
 because the middle expression increases with $w$ for $w\le S-1$ and $w\le2j\le2t&lt;S-1$. A safe colour with two edges exists if
 $k-t+j&gt;j(S-1-j)$, i.e. if $k-t&gt;j(S-2-j)$. The right side increases with $j$ for $j\le\frac{S-2}{2}$, and $j\le t=s-2\le\frac{S-2}2$, so it suffices that
 $k-t&gt;t(S-2-t)$:</p><ul class="ct-ul"><li><p>$S=2s$: $k-t=s^2-2s+3$ and $t(S-2-t)=(s-2)s=s^2-2s$;</p></li><li><p>$S=2s+1$: $k-t=s^2-s+3$ and $t(S-2-t)=(s-2)(s+1)=s^2-s-2$.</p></li></ul><p>In both cases the inequality holds, which completes Phase 2.</p><p>Therefore the largest $k$ for which the second player can guarantee a win is $\boxed{\left\lfloor\dfrac{(S-1)^2}{4}\right\rfloor}$.</p>
+<h4>Solution 2 (A reserved matching and a count of closing paths)</h4>
+<p>Let $L=\binom S2$, $m=\lfloor\frac S2\rfloor$ and $k_0=\lfloor\frac{(S-1)^2}4\rfloor$. Then $L-m=2k_0$: for $S=2m$,
+$m(2m-1)-m=2(m^2-m)$, and for $S=2m+1$, $m(2m+1)-m=2m^2$. We prove that the answer is $k_0$.</p><p><strong>The second player wins if $k\le k_0$.</strong> Split the vertices into pairs $\{x_i,y_i\}$, $1\le i\le m$, with one extra vertex $z$ if $S$ is odd. Consider
+the two-edge paths
+\[x_j-x_i-y_j\quad\text{and}\quad x_j-y_i-y_j\qquad(1\le i&lt;j\le m),\qquad\text{and, if $S$ is odd,}\quad x_i-z-y_i\quad(1\le i\le m).\]
+Every edge that is not a pair edge $x_iy_i$ lies in exactly one of these paths, and the two ends of each path form a pair. So there are $\frac{L-m}{2}=k_0$
+paths. When a colour is named for the first time, the second player assigns to it a path not yet assigned (possible as $k\le k_0$) and draws its first edge in
+that colour; at the second call he draws the second edge of its path; at the third call he draws the pair edge joining the ends of the path, closing a
+monochromatic triangle. That pair edge is still undrawn, because until then all drawn edges belong to paths. While every colour has been named at most twice,
+at most $2k\le2k_0=L-m&lt;L$ edges are drawn, so the game is not over, and some colour must eventually be named a third time. The second player wins.</p><p><strong>The first player wins if $k\ge k_0+1$.</strong> Call a colour <em>safe</em> if no undrawn edge joins two vertices in the same connected component of the
+edges of that colour. At every move the first player names a safe colour; then the new edge joins two different components of that colour and creates no
+monochromatic cycle. It suffices to show that a safe colour exists whenever some edge is undrawn.</p><p>Suppose that at some moment $r\ge1$ edges are undrawn and no colour is safe. For each colour $c$ choose an undrawn edge $u_cv_c$ with $u_c,v_c$ in the same
+component of colour $c$, and a path $\pi_c$ of colour $c$ from $u_c$ to $v_c$. It has at least two edges (a single edge would be $u_cv_c$, which is undrawn),
+and paths of different colours have no common edge. Hence $2k\le L-r$.</p><ul class="ct-ul"><li><p>If $r\ge m$, then $2k\le L-m=2k_0$, contradicting $k\ge k_0+1$.</p></li><li><p>If $r&lt;m$, let $W$ be the set of endpoints of the undrawn edges; $|W|\le2r$. The first and the last edge of $\pi_c$ are two distinct drawn edges, each with an
+endpoint ($u_c$ or $v_c$) in $W$. All $\binom{S-|W|}2\ge\binom{S-2r}2$ edges with no endpoint in $W$ are drawn, and none of them is a first or last edge of a
+path. So
+\[2k\le L-r-\binom{S-2r}{2}.\]
+Put $d=m-r\ge1$. Then $S-2r\ge2m-2r=2d$, so $\binom{S-2r}2\ge\binom{2d}2=d(2d-1)\ge d$, and $2k\le L-r-d=L-m=2k_0$, again a contradiction.</p></li></ul><p>Thus the first player can always name a safe colour, all edges get drawn without a monochromatic cycle, and he wins.</p><p>Therefore the largest $k$ for which the second player can guarantee a win is $\boxed{\left\lfloor\dfrac{(S-1)^2}{4}\right\rfloor}$.</p>
 </div></details>
 </section>
 <h2 class="ct-group" id="grades-10-11-day-2">Grades 10-11, Day 2</h2>

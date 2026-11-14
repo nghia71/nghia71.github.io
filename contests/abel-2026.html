@@ -93,8 +93,8 @@ $(a+1)^2$. The answer is all pairs $(a,a)$.</p>
 <div class="ct-meta">Number Theory &middot; LPS VII, Chapter 8: Modular Arithmetic and Congruence Methods</div>
 <div class="ct-text"><p>Write $S(n) = 1^1 + 2^2 + \ldots + n^n$ for every positive integer $n$. Show that there are infinitely many positive integers $n$ such that the first digit of $S(n)$ equals the first digit of $n$, while simultaneously the final digit of $S(n)$ equals the final digit of $n$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>proof (for example every $n=10^m$ with $m\ge2$ works)</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Powers of ten)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Powers of ten)</h4>
 <p>We show that every $n=10^m$ with $m\ge2$ has the property.</p><p><strong>Last digit.</strong> We claim that $k^k \bmod 10$ depends only on $k \bmod 20$. Modulo $2$, $k^k\equiv k$. Modulo $5$: if $5\mid k$ then
 $k^k\equiv0$; otherwise $k^4\equiv1 \pmod 5$ by Fermat's little theorem, so $k^k\equiv k^{r}\pmod 5$ where $r\in\{0,1,2,3\}$ is the remainder
 of $k$ modulo $4$. Both $k\bmod5$ and $k\bmod4$ are determined by $k\bmod20$, so $k^k \bmod 2$ and $k^k\bmod 5$, hence $k^k\bmod10$, depend
@@ -105,6 +105,33 @@ For $n=10^m$ we have $t=n/20=5\cdot10^{m-2}$, so $S(n)\equiv 20\cdot 10^{m-2}\eq
 last digit of $n$.</p><p><strong>First digit.</strong> For $1\le k\le n-1$ we have $k^k\le n^k$, so
 \[n^n&lt; S(n)=n^n+\sum_{k=1}^{n-1}k^k\le n^n+\sum_{k=1}^{n-1}n^k=n^n+\frac{n^n-n}{n-1}&lt;2n^n .\]
 With $n=10^m$, $n^n=10^{mn}$, so $10^{mn}&lt;S(n)&lt;2\cdot10^{mn}$ and the first digit of $S(n)$ is $1$, the first digit of $n$.</p><p>Since this holds for every $m\ge2$, there are infinitely many such $n$.</p>
+<h4>Solution 2 (Numbers just above a power of ten)</h4>
+<p>We show that every $n=10^k+65$ with $k\ge5$ has the property. Such an $n$ has first digit $1$ and last digit $5$.</p><p><strong>Last digit.</strong> The last digit of $j^j$ depends only on $j\bmod 20$. Indeed, modulo $2$ we have $j^j\equiv j$; modulo $5$, if $5\mid j$ then
+$j^j\equiv0$, and otherwise $j^4\equiv1\pmod 5$ by Fermat's little theorem, so $j^j\equiv j^{r}\pmod5$ where $r$ is the remainder of $j$ modulo $4$.
+Both $j\bmod 5$ and $j\bmod 4$ are determined by $j\bmod 20$. The last digits of $j^j$ for $j=1,\dots,20$ are
+\[1,4,7,6,5,6,3,6,9,0,\ 1,6,3,6,5,6,7,4,9,0,\]
+with sum $94$, so every $20$ consecutive values of $j$ contribute $4$ modulo $10$, and every $100$ consecutive values contribute $20\equiv0$.
+Hence $S(n)\bmod 10$ depends only on $n\bmod100$. As $n\equiv65\pmod{100}$,
+\[S(n)\equiv S(65)\equiv 3\cdot4+(1+4+7+6+5)=35\equiv5\pmod{10},\]
+so $S(n)$ ends in $5$, like $n$.</p><p><strong>First digit.</strong> Put $N=10^k$, so $n=N+65$.</p><p><em>(a) $S(n)$ is close to $n^n$.</em> For $1\le j\le n-1$ we have $j^j\le n^j$, so
+\[n^n&lt;S(n)\le n^n+\sum_{j=1}^{n-1}n^j=n^n+\frac{n^n-n}{n-1}&lt;n^n\Bigl(1+\frac1{n-1}\Bigr).\]</p><p><em>(b) The size of $n^n$.</em> We have $n^n=N^n\bigl(1+\frac{65}{N}\bigr)^{n}=10^{kn}q$ with $q=\bigl(1+\frac{65}N\bigr)^{N+65}$. For $y&gt;0$,
+\[\frac{y}{1+y}&lt;\ln(1+y)&lt;y,\]
+because $\ln(1+y)=\int_0^y\frac{dt}{1+t}$ and the integrand lies between $\frac1{1+y}$ and $1$. With $y=\frac{65}N$,
+the number $\ln q=(N+65)\ln\bigl(1+\frac{65}N\bigr)$ lies between
+\[(N+65)\cdot\frac{65/N}{1+65/N}=65\qquad\text{and}\qquad(N+65)\cdot\frac{65}N=65+\frac{4225}N,\]
+so $e^{65}&lt;q&lt;e^{65}e^{4225/N}$.</p><p><em>(c) The size of $e^{65}$.</em> From $e=\sum_{j\ge0}\frac1{j!}$, the terms up to $j=7$ give $2.71825\ldots$, and the rest is less than
+$\frac1{8!}\bigl(1+\frac19+\frac1{81}+\dots\bigr)=\frac{9}{8\cdot8!}&lt;0.00003$; hence $2.718&lt;e&lt;2.7183$. Squaring six times and multiplying once more
+(rounding down for the lower bound, up for the upper bound):
+\begin{align*}
+&amp;2.718^{2}&gt;7.387,\ \ 2.718^{4}&gt;54.56,\ \ 2.718^{8}&gt;2976,\ \ 2.718^{16}&gt;8.856\cdot10^{6},\\
+&amp;2.718^{32}&gt;7.842\cdot10^{13},\ \ 2.718^{64}&gt;6.149\cdot10^{27},\ \ 2.718^{65}&gt;1.671\cdot10^{28};\\
+&amp;2.7183^{2}&lt;7.390,\ \ 2.7183^{4}&lt;54.62,\ \ 2.7183^{8}&lt;2984,\ \ 2.7183^{16}&lt;8.905\cdot10^{6},\\
+&amp;2.7183^{32}&lt;7.930\cdot10^{13},\ \ 2.7183^{64}&lt;6.289\cdot10^{27},\ \ 2.7183^{65}&lt;1.710\cdot10^{28}.
+\end{align*} So $10^{28}&lt;e^{65}&lt;1.8\cdot10^{28}$.</p><p><em>(d) Conclusion.</em> Let $k\ge5$, so $N\ge10^5$. Since $e^{-x}&gt;1-x$ for $0&lt;x&lt;1$, we have $e^{x}&lt;\frac1{1-x}$, so
+$e^{4225/N}\le e^{0.04225}&lt;\frac1{1-0.04225}&lt;1.045$; also $1+\frac1{n-1}&lt;1.0001$. By (a), (b), (c),
+\[10^{kn+28}&lt;10^{kn}e^{65}&lt;10^{kn}q=n^n&lt;S(n),\]
+\[S(n)&lt;1.0001\cdot n^n=1.0001\cdot10^{kn}q&lt;1.0001\cdot1.045\cdot1.8\cdot10^{kn+28}&lt;2\cdot10^{kn+28}.\]
+Hence the first digit of $S(n)$ is $1$, the first digit of $n$.</p><p>So all $n=10^k+65$ with $k\ge5$ work, and there are infinitely many such $n$. (The bound $k\ge5$ matters: for $n=10065$ the first digit of $S(n)$ is $2$.)</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p3">
@@ -216,7 +243,7 @@ mixed pairs is of type $P$ and satisfies the condition. Hence the largest value 
 <h3>Problem 4a</h3>
 <div class="ct-meta">Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure</div>
 <div class="ct-text"><p>Let $D$ be an interior point of the triangle $ABC$. Let $E$ be the point on the line segment $AC$ such that $\angle ADE = \angle ABC$, and $F$ be the point on the line segment $AB$ such that $\angle ADF = \angle ACB$. Show that the circumcircles of $ABC$ and $DEF$ are mutually tangent.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 (The circle passes through $A$; homothety)</h4>
 <div class="ct-fig"><img style="width:233px" src="/assets/contests/2026-27/abel-7_s1.svg" alt="Figure for the solution"></div>
 <p>Write $\alpha,\beta,\gamma$ for the angles of triangle $ABC$ at $A,B,C$, and $\alpha_1=\angle FAD$, $\alpha_2=\angle DAE$, so $\alpha_1+\alpha_2=\alpha$
@@ -237,6 +264,23 @@ In the same way, $t$ makes with the chord $AE$ the angle $\angle ABC=\angle ADE$
 perpendicular to $t$ at $A$ and on the perpendicular bisector of $AD$; these lines meet in one point since $D\notin t$). Hence $\omega_1=\omega_2$, so
 $A,D,E,F$ lie on one circle, which is the circumcircle of $DEF$, and it is tangent to $t$ at $A$. The circumcircle of $ABC$ is also tangent to $t$ at $A$,
 so the two circles are tangent to each other at $A$.</p>
+<h4>Solution 3 (Inversion at $A$)</h4>
+<p>Write $\beta=\angle ABC$ and $\gamma=\angle ACB$. Invert about $A$ with any radius $r$, and write $X'$ for the image of a point $X\ne A$.
+We use three facts about inversion.</p><ul class="ct-ul"><li><p>$X'$ lies on the ray $AX$ and $AX\cdot AX'=r^2$.</p></li><li><p>If $X,Y,A$ are not collinear, then $\frac{AX}{AY}=\frac{AY'}{AX'}$, and the triangles $AXY$ and $AY'X'$ share the angle at $A$; so they are similar and
+$\angle AY'X'=\angle AXY$.</p></li><li><p>A circle through $A$ is mapped (without the point $A$) onto a line not through $A$, and conversely.</p></li></ul><p>By the second fact,
+\[\angle AE'D'=\angle ADE=\beta,\qquad \angle AF'D'=\angle ADF=\gamma,\]
+\[\angle AC'B'=\angle ABC=\beta,\qquad \angle AB'C'=\angle ACB=\gamma .\]
+Here $B',F'$ lie on the ray $AB$, $C',E'$ on the ray $AC$, and $D'$ on the ray $AD$; in particular $D'$ lies on the same side of $AC$ as $B$, and on
+the same side of $AB$ as $C$.</p><p><strong>$D',E',F'$ lie on a line parallel to $B'C'$.</strong> Let $\ell$ be the line through $E'$ parallel to $B'C'$; it meets the line $AB$ at a point $P$
+with $\frac{AP}{AB'}=\frac{AE'}{AC'}&gt;0$, so $P\ne A$ lies on the ray $AB$. Corresponding angles give $\angle AE'P=\angle AC'B'=\beta$. The rays $E'P$ and
+$E'D'$ make the same angle $\beta$ with the ray $E'A$ and lie on the same side of the line $AC$ (the side of $B$), so they coincide: $D'\in\ell$.
+In the same way, the line $m$ through $F'$ parallel to $B'C'$ contains $D'$, because $\angle AF'D'=\gamma=\angle AB'C'$ and $D'$ lies on the side of $AB$
+containing $C'$. Two lines parallel to $B'C'$ through the same point $D'$ coincide, so $\ell=m$ contains $D',E',F'$.</p><p>Moreover $\ell\ne B'C'$: otherwise $D'$ would lie on $B'C'$, the image of the circumcircle $\Gamma$ of $ABC$, so $D$ would lie on $\Gamma$; but $D$ is inside
+triangle $ABC$, hence inside $\Gamma$.</p><p><strong>Back to circles.</strong> The line $\ell$ does not pass through $A$ (it contains $E'\ne A$ on line $AC$ and $F'\ne A$ on line $AB$, and these lines
+meet only at $A$). So $\ell$ is the image of a circle through $A$, and this circle contains $D,E,F$: it is the circumcircle $\omega$ of $DEF$.
+The image of $\Gamma$ is the line $B'C'$.</p><p>If $\Gamma$ and $\omega$ had a common point $X\ne A$, then $X'$ would lie on both $\ell$ and $B'C'$, which are distinct parallel lines. Hence the
+two (distinct) circles meet only at $A$, and two circles with exactly one common point are tangent there. So the circumcircles of $ABC$ and $DEF$
+are tangent at $A$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p8">

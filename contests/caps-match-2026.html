@@ -78,8 +78,8 @@ description: Czech-Austrian-Polish-Slovak Match 2026: problems with answers and 
 \[a_1+\dots+a_{i-1}=a_{i+1}+\dots+a_{100}.\]
 What is the largest possible number of good indices?</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$66$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Consecutive good indices and an explicit sequence)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Consecutive good indices and an explicit sequence)</h4>
 <p>For $2\le i\le 99$ let $D_i=(a_1+\dots+a_{i-1})-(a_{i+1}+\dots+a_{100})$; the index $i$ is good iff $D_i=0$. Moving from $i$
 to $i+1$, the term $a_i$ joins the left sum and $a_{i+1}$ leaves the right sum, so
 \[
@@ -99,6 +99,29 @@ So all $66$ indices $i\not\equiv 1\pmod 3$ with $2\le i\le 99$ are good. The ter
 the $c_j$ are even, nonzero ($613$ is not a square) and strictly decreasing; and $c_j=-c_l$ would mean $(j+2)^2+(l+2)^2=1226$ with
 $2\le j+2,\,l+2\le 34$. This is impossible: the larger square would be at least $613$, so the larger base would be at least $25$,
 but $1226-25^2,\dots,1226-34^2$ are $601,550,497,442,385,326,265,202,137,70$, none of which is a square.</p><p>The largest possible number of good indices is $\boxed{66}$.</p>
+<h4>Solution 2 (Prefix sums that alternate in sign)</h4>
+<p>Let $s_0=0$ and $s_i=a_1+a_2+\dots+a_i$ for $1\le i\le 100$, so $a_i=s_i-s_{i-1}$. The left sum in the definition is $s_{i-1}$ and
+the right sum is $s_{100}-s_i$, so the index $i$ is good if and only if
+\[
+s_{i-1}+s_i=s_{100}.
+\]</p><p><strong>Upper bound.</strong> If $i$, $i+1$, $i+2$ were all good, then $s_{i-1}+s_i=s_i+s_{i+1}=s_{i+1}+s_{i+2}$, so $s_{i-1}=s_{i+1}$ and
+$s_i=s_{i+2}$. Hence $a_i+a_{i+1}=s_{i+1}-s_{i-1}=0$ and $a_{i+1}+a_{i+2}=s_{i+2}-s_i=0$, which give $a_i=a_{i+2}$, contradicting
+distinctness. So no three consecutive indices are good. Split the $98$ candidates $2,3,\dots,99$ into the $32$ blocks
+$\{2,3,4\},\{5,6,7\},\dots,\{95,96,97\}$ and the block $\{98,99\}$. Each block of three contains at most $2$ good indices, so there are
+at most $32\cdot2+2=66$ good indices.</p><p><strong>Example with $66$.</strong> We prescribe the prefix sums and aim at total $s_{100}=0$, so that $i$ is good exactly when
+$s_{i-1}=-s_i$. For $j=0,1,\dots,32$ put
+\[
+s_{3j+1}=10^j,\qquad s_{3j+2}=-10^j,\qquad s_{3j+3}=10^j,
+\]
+and $s_0=s_{100}=0$; this defines $s_1,\dots,s_{99}$, and we set $a_i=s_i-s_{i-1}$. Then $s_{3j+1}+s_{3j+2}=0$ and $s_{3j+2}+s_{3j+3}=0$,
+so the indices $3j+2$ and $3j+3$ ($0\le j\le 32$), that is, all $66$ indices $i\not\equiv1\pmod 3$ with $2\le i\le 99$, are good.
+The terms are
+\[
+a_1=1,\qquad a_{100}=-10^{32},\qquad a_{3j+2}=-2\cdot10^j,\quad a_{3j+3}=2\cdot10^j\quad(0\le j\le32),
+\]
+and $a_{3j+4}=s_{3j+4}-s_{3j+3}=9\cdot10^j$ for $0\le j\le31$.
+They are distinct: the positive terms are $1$, the numbers $2\cdot10^j$ and the numbers $9\cdot10^j$, which differ in their leading
+digit or in their number of digits; the negative terms are $-2\cdot10^j$ and $-10^{32}$, which differ in their leading digit.</p><p>The largest possible number of good indices is $\boxed{66}$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p2">

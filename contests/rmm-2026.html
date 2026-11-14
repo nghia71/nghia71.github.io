@@ -142,8 +142,8 @@ which means $p\equiv5\pmod8$.</p>
 \[\begin{cases}P(x,y,z)=a\\ Q(x,y,z)=b\\ R(x,y,z)=c,\end{cases}\]
 does <strong>not</strong> have a solution in real numbers $x$, $y$, and $z$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>proof (explicit construction)</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Points on a line first, then a change of coordinates)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Points on a line first, then a change of coordinates)</h4>
 <p>We must find a polynomial map $\Phi=(P,Q,R):\mathbb R^3\to\mathbb R^3$ whose image is exactly $\mathbb R^3\setminus\mathcal S$.
 If $\mathcal S=\emptyset$, take $(P,Q,R)=(x,y,z)$. Let $\mathcal S$ have $m\ge1$ points.</p><p><strong>Step 1: the points $(a_1,0,0),\dots,(a_m,0,0)$.</strong> Let $a_1,\dots,a_m$ be distinct real numbers and $A(t)=\prod_{i=1}^m(t-a_i)$. Define
 \[F(x,y,z)=(x,\ u,\ v),\qquad u=yz-1+A(x)\,y-y^3z,\qquad v=y^2u-z .\]
@@ -160,6 +160,16 @@ By Lagrange interpolation there are real polynomials $p,q$ with $p(a_i)=b_i$ and
 is a bijection of $\mathbb R^3$ (its inverse subtracts $p(t)$ and $q(t)$) and $\Psi(a_i,0,0)=(a_i,b_i,c_i)$. So the polynomial bijection $\Lambda^{-1}\circ\Psi$ maps $\{(a_i,0,0)\}$ onto $\mathcal S$.</p><p><strong>Step 3: the answer.</strong> Let $\Phi=\Lambda^{-1}\circ\Psi\circ F$ with $F$ from Step 1 for these $a_1,\dots,a_m$. Its three components $P,Q,R$ are polynomials, and since $\Lambda^{-1}\circ\Psi$ is a bijection,
 \[\Phi(\mathbb R^3)=\Lambda^{-1}\Psi\bigl(\mathbb R^3\setminus\{(a_i,0,0)\}\bigr)=\mathbb R^3\setminus\mathcal S .\]
 Thus the system $P=a$, $Q=b$, $R=c$ has no real solution exactly when $(a,b,c)\in\mathcal S$.</p>
+<h4>Solution 2 (A fixed product and a quadratic with negative constant term)</h4>
+<p>We must find a polynomial map $\Phi=(P,Q,R):\mathbb R^3\to\mathbb R^3$ whose image is exactly $\mathbb R^3\setminus\mathcal S$. If $\mathcal S=\emptyset$, take $(P,Q,R)=(x,y,z)$. Let $\mathcal S$ have $m\ge1$ points.</p><p><strong>Step 1: points on a line.</strong> Let $a_1,\dots,a_m$ be distinct reals and $A(t)=\prod_{i=1}^m(t-a_i)$. Define
+\[F(x,y,z)=\bigl(x,\ u,\ v\bigr),\qquad u=yz-1,\qquad v=z-yz\bigl(u^2+A(x)^2\bigr)\,y .\]
+<em>Claim: the image of $F$ is $\mathbb R^3\setminus\{(a_i,0,0):1\le i\le m\}$.</em> Fix a target $(t,\beta,\gamma)$; we need $x=t$ and real $y,z$ with $u=\beta$, $v=\gamma$. Put $k=\beta^2+A(t)^2\ge0$.</p><ul class="ct-ul"><li><p>If $\beta=-1$, take $y=0$, $z=\gamma$: then $u=-1$ and $v=z=\gamma$.</p></li><li><p>If $\beta\ne-1$, then $u=\beta$ means $yz=\beta+1\ne0$, so $z\ne0$ and $y=\frac{\beta+1}z$. Then $v=z-(\beta+1)k\frac{\beta+1}z$, and $v=\gamma$ becomes, after multiplying by $z$,
+\[z^2-\gamma z-(\beta+1)^2k=0,\qquad z\ne0 .\tag{1}\]
+Conversely every real root $z\ne0$ of (1), with $y=\frac{\beta+1}z$, gives $u=\beta$ and $v=\gamma$.</p><ul class="ct-ul"><li><p>If $k&gt;0$, the constant term $-(\beta+1)^2k$ of (1) is negative, so the discriminant $\gamma^2+4(\beta+1)^2k$ is positive and (1) has two real roots whose product is negative; both are non-zero.</p></li><li><p>If $k=0$, then $\beta=0$ and $A(t)=0$, and (1) reads $z^2-\gamma z=0$; it has a non-zero root ($z=\gamma$) exactly when $\gamma\ne0$.</p></li></ul></li></ul><p>So the only targets that are not attained are $(t,0,0)$ with $A(t)=0$, which proves the claim.</p><p><strong>Step 2: moving $\mathcal S$ onto the line.</strong> If two different points of $\mathcal S$ differ by $(d_1,d_2,d_3)\ne(0,0,0)$, then $d_1+\lambda d_2+\lambda^2d_3$ is a non-zero polynomial in $\lambda$ of degree at most $2$, with at most two roots. So we can choose a real $\lambda$ for which the numbers
+$x+\lambda y+\lambda^2z$, $(x,y,z)\in\mathcal S$, are pairwise distinct. The map $\Lambda(x,y,z)=(x+\lambda y+\lambda^2z,\,y,\,z)$ is a bijection of $\mathbb R^3$ with the polynomial inverse $\Lambda^{-1}(x,y,z)=(x-\lambda y-\lambda^2z,\,y,\,z)$,
+and $\Lambda(\mathcal S)=\{(a_i,b_i,c_i):1\le i\le m\}$ with distinct $a_i$. By Lagrange interpolation there are real polynomials $p,q$ with $p(a_i)=b_i$ and $q(a_i)=c_i$ for all $i$. The map $\Psi(t,u,v)=(t,\,u+p(t),\,v+q(t))$ is a bijection of $\mathbb R^3$ (its inverse subtracts $p(t)$ and $q(t)$), and $\Psi(a_i,0,0)=(a_i,b_i,c_i)$.</p><p><strong>Step 3: the answer.</strong> Take $F$ from Step 1 for these $a_1,\dots,a_m$ and let $\Phi=\Lambda^{-1}\circ\Psi\circ F$. Its components $P,Q,R$ are polynomials with real coefficients, and since $\Lambda^{-1}\circ\Psi$ is a bijection of $\mathbb R^3$ mapping $\{(a_i,0,0)\}$ onto $\mathcal S$,
+\[\Phi(\mathbb R^3)=\Lambda^{-1}\Psi\bigl(\mathbb R^3\setminus\{(a_i,0,0)\}\bigr)=\mathbb R^3\setminus\mathcal S .\]
+So the system $P=a$, $Q=b$, $R=c$ has no real solution exactly when $(a,b,c)\in\mathcal S$.</p>
 </div></details>
 </section>
 <h2 class="ct-group" id="day-2">Day 2</h2>
@@ -194,7 +204,7 @@ Counting also the prime $2$, the product has at most $n$ distinct prime divisors
 \[\angle AXB=\angle AZC,\ \angle AZB=\angle AXC,\]
 \[\angle AYB=\angle ATC,\ \angle ATB=\angle AYC.\]
 Prove that the diagonals $XZ$ and $YT$ of the parallelogram intersect on the circumcircle of $BOC$.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 (A tangent circle, then coordinates)</h4>
 <div class="ct-fig"><img style="width:460px" src="/assets/contests/2026-27/rmm-5_s1.svg" alt="Figure for the solution"></div>
 <p>Let $A,B,C$ be labelled counterclockwise, let $a$ be the line through $A$ parallel to $BC$ and $m$ the perpendicular bisector of $BC$.
@@ -257,6 +267,23 @@ The points with this property form the line $\{P:\ PS^2-PA^2=SB^2\}$, perpendicu
 on the perpendicular to $GJ$ at $J$; if $J=G$, both lie on the line $GE$ ($J\ne E$ because $E\in a$). Either way $X,Y,Z,T$ would be collinear, which is impossible for a parallelogram.</p></li><li><p>$\kappa\ne\kappa'$. The circle with diameter $GE_G$ meets $m$ exactly in $\{G,W\}$ (a point $P\in m$ with $\overrightarrow{PG}\cdot\overrightarrow{PE_G}=0$ is $G$ or has $PE_G\perp m$, i.e. $P=W$). As $G\ne G'$, the sets $\{G,W\}$ and $\{G',W\}$ differ.</p></li><li><p>$J\ne W$, since $J$ is inside the triangle and $W\in a$.</p></li><li><p>$D\ne W$. Let $A_2$ be the reflection of $A$ in $m$; it lies on $\Omega$ and on $a$, and $A_2\ne A$. So $W$, the midpoint of the chord $AA_2$, is inside $\Omega$, and $W\ne S$; as $S\in m$ and $a\cap m=\{W\}$, $S\notin a$.
 If $D$ were on $a$, then the line $AD$ would be $a$ and would contain $S$. Hence $D\notin a$.</p></li></ul><p>Two different circles have at most two common points, and $J,D,W$ are common points of $\kappa$ and $\kappa'$ with $J\ne W$ and $D\ne W$. Hence $J=D$.</p><p><strong>Step 7: conclusion.</strong> The tangents give $\angle OBS=\angle OCS=90^\circ$, so the circle with diameter $OS$ passes through $B$ and $C$: it is the circle $BOC$. Since $S$ lies on the line $AA'$ and
 $OD\perp AA'$ (or $D=O$), $\overrightarrow{DO}\cdot\overrightarrow{DS}=0$, so $D$ lies on this circle. As $J=D$, the diagonals of the parallelogram meet on the circumcircle of $BOC$.</p>
+<h4>Solution 3 (Reciprocals of complex coordinates)</h4>
+<p>We use complex numbers with $A=0$ and the line $BC$ horizontal: $B=b=B_0+ih$ and $C=c=C_0+ih$ with real $B_0\ne C_0$ and $h\ne0$. The line through $A$ parallel to $BC$ is the real axis, and every interior point of the triangle has imaginary part strictly between $0$ and $h$.
+Since $|b|=AB&lt;AC=|c|$, we have $|B_0|&lt;|C_0|$, hence $B_0+C_0\ne0$.</p><p><strong>Step 1: one pair of opposite vertices.</strong> Let $x,z$ be the coordinates of $X,Z$; they are interior points, so $x,z\ne0$. For a point $U\ne A,B$ the number $1-\frac bu=\frac{u-b}{u}$ has argument equal to the directed angle from the ray $UA$ to the ray $UB$.
+For an interior point $U$ the rotations from $UA$ to $UB$ and from $UA$ to $UC$ have opposite senses ($B$ and $C$ lie on different sides of the line $AU$), each of size less than $180^\circ$. So $\arg\bigl(1-\frac bx\bigr)=\pm\angle AXB$ and $\arg\bigl(1-\frac cz\bigr)=\mp\angle AZC$ with opposite signs, and the hypothesis $\angle AXB=\angle AZC$ says that
+\[P_1=\Bigl(1-\frac bx\Bigr)\Bigl(1-\frac cz\Bigr)\quad\text{is a positive real number;}\qquad\text{likewise}\quad P_2=\Bigl(1-\frac bz\Bigr)\Bigl(1-\frac cx\Bigr)\quad\text{is positive real}\]
+by $\angle AZB=\angle AXC$. Put
+\[\sigma=\frac12\Bigl(\frac1z+\frac1x\Bigr),\qquad \tau=\frac12\Bigl(\frac1z-\frac1x\Bigr),\qquad d=\frac{x+z}2 ,\]
+so $\frac1x=\sigma-\tau$, $\frac1z=\sigma+\tau$, and $d$ is the midpoint $J$ of $XZ$. Expanding, $P_1-P_2=(b-c)\bigl(\frac1z-\frac1x\bigr)=2\tau(b-c)$. This is real and $b-c=B_0-C_0$ is a non-zero real, so <em>$\tau$ is real</em>. Next, $\frac1{xz}=\sigma^2-\tau^2$ and $\frac1{xz}=\frac{1}{x+z}\bigl(\frac1x+\frac1z\bigr)=\frac{2\sigma}{2d}$, so $\sigma\ne0$ and
+\[\tau^2=\sigma^2-\frac\sigma d .\tag{1}\]
+Finally $P_1=1-b(\sigma-\tau)-c(\sigma+\tau)+\frac{bc\,\sigma}d=1+\tau(b-c)+\sigma\kappa$ with $\kappa=\frac{bc}d-b-c$. Since $P_1$ and $\tau(b-c)$ are real,
+\[\operatorname{Im}(\sigma\kappa)=0 .\tag{2}\]</p><p><strong>Step 2: two pairs with the same midpoint force $\kappa=0$.</strong> The pair $Y,T$ satisfies the same hypotheses and, $XYZT$ being a parallelogram, has the same midpoint $d$. So (1) and (2) hold for both pairs, with the same $d$ and $\kappa$ and with numbers $\sigma,\tau$ and $\sigma',\tau'$.
+Note that $\sigma$ and $\tau$ determine the unordered pair $\{x,z\}$, and changing the sign of $\tau$ exchanges $x$ and $z$. Suppose $\kappa\ne0$. By (2), $\sigma$ is a real multiple of $\eta=\bar\kappa\ne0$: $\sigma=r\eta$ with $r$ real, $r\ne0$. As $\tau^2$ is real, (1) gives $\operatorname{Im}(\sigma^2)=\operatorname{Im}(\sigma/d)$, that is,
+\[r\operatorname{Im}(\eta^2)=\operatorname{Im}(\eta/d).\tag{3}\]</p><ul class="ct-ul"><li><p>If $\operatorname{Im}(\eta^2)$ and $\operatorname{Im}(\eta/d)$ are not both $0$, then (3) has at most one solution $r$. So $\sigma=\sigma'$, then $\tau^2=\tau'^2$ by (1), and $\{x,z\}=\{y,t\}$ (the coordinates of $Y,T$): impossible, as the four vertices are different.</p></li><li><p>If both are $0$, then $\operatorname{Im}(\eta^2)=0$ makes $\eta$ real or purely imaginary, and $\operatorname{Im}(\eta/d)=0$ means that $d$ is a real multiple of $\eta$. If $\eta$ is real, $d$ is real, so $J$ lies on the parallel to $BC$ through $A$: impossible for an interior point.
+If $\eta$ is purely imaginary, so are $d=iy_0$ and $\kappa=\bar\eta$. Since $bc=B_0C_0-h^2+ih(B_0+C_0)$, the real part of $\kappa=\frac{bc}{iy_0}-b-c$ is $\frac{h(B_0+C_0)}{y_0}-(B_0+C_0)=(B_0+C_0)\bigl(\frac h{y_0}-1\bigr)$. It vanishes only if $y_0=h$, i.e. $J\in BC$: impossible again.</p></li></ul><p>Hence $\kappa=0$, i.e. $bc=d(b+c)$; here $b+c\ne0$ because its real part is $B_0+C_0\ne0$. So
+\[d=\frac{bc}{b+c}.\]</p><p><strong>Step 3: $J$ lies on the circle $BOC$.</strong> From $d=\frac{bc}{b+c}$ we get $d-b=-\frac{b^2}{b+c}$ and $d-c=-\frac{c^2}{b+c}$, hence
+\[\frac{d-b}{d-c}=\Bigl(\frac bc\Bigr)^2 .\]
+Write $\psi$ for the directed angle from the ray $AC$ to the ray $AB$, so $\frac bc$ has argument $\psi$; then the rotation from $JC$ to $JB$ is $2\psi$ modulo $360^\circ$. By the inscribed angle theorem the rotation from $OC$ to $OB$ is also $2\psi$ modulo $360^\circ$.</p><ul class="ct-ul"><li><p>If $\angle BAC=90^\circ$, then $2\psi\equiv180^\circ$, so $\frac{d-b}{d-c}$ is a negative real and $J$ lies on the segment $BC$: impossible. So $\angle BAC\ne90^\circ$ and $B,O,C$ are not collinear.</p></li><li><p>If $J=O$, there is nothing to prove. Otherwise $J\ne B,C$, and the lines $JB,JC$ and $OB,OC$ make the same directed angle modulo $180^\circ$; so $B,C,O,J$ are concyclic.</p></li></ul><p>Thus the diagonals $XZ$ and $YT$ meet at $J$, a point of the circumcircle of $BOC$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p6">

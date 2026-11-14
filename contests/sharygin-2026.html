@@ -289,8 +289,8 @@ Hence $C,P,Q,T$ lie on one circle. $\blacksquare$</p>
 <h3>Problem 8</h3>
 <div class="ct-meta">Geometry &middot; LPS VII, Chapter 3: Foundational Angle and Configuration Chasing</div>
 <div class="ct-text"><p>Let $ABC$ be a triangle with $\angle B=30^\circ$, $O$ be the circumcenter of $ABC$, $I$ be its incenter. The circles $AIB$, $CIB$ meet $BC$, $AB$ respectively at points $D$, $E$. Prove that $D$ is the orthocenter of triangle $OEI$.</p></div>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Directions of the lines)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Directions of the lines)</h4>
 <div class="ct-fig"><img style="width:247px" src="/assets/contests/2026-27/sharygin-8_s1.svg" alt="Figure for the solution"></div>
 <p>Write $\alpha=\angle A$, $\gamma=\angle C$, so $\alpha+\gamma=150^\circ$; let $R$ be the circumradius.</p><p><strong>The points $D$ and $E$.</strong> The centre of the circle $AIB$ is the midpoint of the arc $AB$, which lies on the bisector $CI$; so this circle is
 symmetric in the line $CI$. The reflection in $CI$ swaps the lines $CA$ and $CB$, hence maps $A$ to the point of line $CB$ at distance $CA$ from $C$,
@@ -307,6 +307,22 @@ of the angle $OCD$, whose direction is $135^\circ+\frac\alpha2$. So $OD$ has dir
 argument above used only $\angle B=30^\circ$. Applied to the mirror image it gives $OE\perp DI$.</p><p>So $D$ lies on the altitude of triangle $OEI$ from $O$ and on the altitude from $I$, i.e. $D$ is its orthocentre. (When $\alpha=90^\circ$ we get $D=O$, and
 the two relations say that the angle $EOI$ is right, which is the same statement. If $\gamma=90^\circ$ then $E=O$ and the triangle $OEI$ degenerates;
 this case is excluded.) $\blacksquare$</p>
+<h4>Solution 2 (Coordinates on the bisector of angle B)</h4>
+<p>Write $a=BC$, $b=CA$, $c=AB$, $k=\cos\frac{\angle B}2=\cos15^\circ$, $h=\sin\frac{\angle B}2=\sin15^\circ$. Put $B$ at the origin with the bisector $BI$ along the positive $x$-axis, $A$ on the ray of direction $(k,h)$ and $C$ on the ray of direction $(k,-h)$:
+\[A=c\,(k,h),\qquad C=a\,(k,-h),\qquad I=(i,0),\quad i=BI .\]</p><p><strong>Two facts about $i$.</strong> The inradius is the distance from $I$ to the line $BA$, i.e. $r=i\sin\frac{\angle B}2=ih$. The area of $ABC$ is $\frac12ac\sin\angle B=ackh$ and also $\frac12r(a+b+c)$, so
+\[i=\frac{2ack}{a+b+c},\qquad\text{i.e.}\qquad b=\frac{2ack}{i}-a-c. \tag{1}\]
+By the law of cosines and $1+\cos\angle B=2k^2$, $b^2=a^2+c^2-2ac\cos\angle B=(a+c)^2-4ack^2$. Substituting (1),
+\[\frac{4a^2c^2k^2}{i^2}-\frac{4ack(a+c)}{i}+4ack^2=0,\qquad\text{and after multiplying by }\frac{i^2}{4ack}:\qquad F:=ack-(a+c)i+ki^2=0. \tag{2}\]</p><p><strong>The circumcentre.</strong> $OB=OA$ and $OB=OC$ with $B$ at the origin mean $O\cdot A=\frac12|A|^2$ and $O\cdot C=\frac12|C|^2$, i.e. $kO_x+hO_y=\frac c2$ and $kO_x-hO_y=\frac a2$. Hence
+\[O=\Bigl(\frac{a+c}{4k},\ \frac{c-a}{4h}\Bigr).\]</p><p><strong>The points $D$ and $E$.</strong> A circle through the origin $B$ has an equation $x^2+y^2=\lambda x+\mu y$, and it passes through $I$ iff $\lambda=i$. The points of the line $BC$ are $t(k,-h)$; substituting gives $t^2=t(ik-\mu h)$, so the second common point with $BC$ has parameter $t=ik-\mu h$. Similarly the second common point with the line $BA$ (points $t(k,h)$) has $t=ik+\mu h$. For the circle $AIB$ the point $A$ ($t=c$ on $BA$) gives $\mu h=c-ik$, so $D=(ik-\mu h)(k,-h)$, and for the circle $CIB$ the point $C$ ($t=a$ on $BC$) gives $\mu h=ik-a$, so $E=(ik+\mu h)(k,h)$:
+\[D=(2ik-c)\,(k,-h),\qquad E=(2ik-a)\,(k,h).\]</p><p><strong>The altitude from $E$.</strong> We have $D-E=\bigl((a-c)k,\ -(4ik-a-c)h\bigr)$ and $I-O=\bigl(i-\frac{a+c}{4k},\ \frac{a-c}{4h}\bigr)$, so
+\[(D-E)\cdot(I-O)=(a-c)ki-\frac{(a-c)(a+c)}4-\frac{(a-c)(4ik-a-c)}4=0 .\]
+So $D$ lies on the line through $E$ perpendicular to $OI$, the altitude of triangle $OEI$ from $E$. (This part holds for every angle $B$.)</p><p><strong>The altitude from $I$.</strong> Now $D-I=\bigl(2ik^2-ck-i,\ -(2ik-c)h\bigr)$ and $4k(E-O)=\bigl(8ik^3-4ak^2-a-c,\ 4kh(2ik-a)-\frac{(c-a)k}h\bigr)$, so
+\[4k\,(D-I)\cdot(E-O)=(2ik^2-ck-i)(8ik^3-4ak^2-a-c)-4kh^2(2ik-c)(2ik-a)+k(c-a)(2ik-c).\]
+Replacing $h^2$ by $1-k^2$ and expanding, this equals
+\[8ack^3-2ack+(a+c)i\,(1+8k^2-16k^4)+i^2(32k^5-24k^3),\]
+which can be regrouped (expand to check) as
+\[4k\,(D-I)\cdot(E-O)=8k^2(4k^2-3)\,F+(16k^4-16k^2+1)\bigl((a+c)i-2ack\bigr).\]
+Here $F=0$ by (2), and $16k^4-16k^2+1=1-16k^2h^2=1-4\sin^2\angle B=0$ because $\angle B=30^\circ$ (we used $2kh=\sin\angle B$). Hence $(D-I)\cdot(E-O)=0$: $D$ lies on the line through $I$ perpendicular to $OE$, the altitude of triangle $OEI$ from $I$.</p><p><strong>Conclusion.</strong> The two altitudes from $E$ and from $I$ of the (non-degenerate) triangle $OEI$ meet at its orthocentre, and $D$ lies on both, so $D$ is the orthocentre of $OEI$. (If $\angle C=90^\circ$, then $E=O$ and the triangle degenerates; this case is excluded, as in the statement.) $\blacksquare$</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p9">
@@ -606,7 +622,7 @@ line $CD$, which passes through $S$, and $\angle MKS=90^\circ$; so $K$ lies on t
 <h3>Problem 17</h3>
 <div class="ct-meta">Geometry &middot; LPS VII, Chapter 32: Trigonometric Geometry and Metric Conversion</div>
 <div class="ct-text"><p>Let $O$ and $H$ be the circumcenter and the orthocenter of an acute-angled triangle $ABC$. The tangents to the circumcircle of $ABC$ at $B$ and $C$ meet at point $T$. Points $X$ and $Y$ lie on $AB$ and $AC$ in such a way that $\angle AOX=\angle AOY=\angle BTC$. Prove that $HT\perp XY$.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Equal power differences)</h4>
 <div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/sharygin-17_s1.svg" alt="Figure for the solution"></div>
 <p>Let $\alpha,\beta,\gamma$ be the angles and $R$ the circumradius. Since $\angle BOC=2\alpha$ and $\angle OBT=\angle OCT=90^\circ$, we have
@@ -654,6 +670,19 @@ and with $OX^2-(R-OX)^2=2R\cdot OX-R^2$ and $R=TO\cos\alpha$ it equals
 =4\,TO\bigl(OX\cos\beta\cos(\beta-\alpha)-OY\cos\gamma\cos(\gamma-\alpha)\bigr).\]
 By the formulas for $OX$ and $OY$, $OX\cos\beta\cos(\beta-\alpha)=R\cos\beta\cos\gamma=OY\cos\gamma\cos(\gamma-\alpha)$. So the difference is $0$, (1)
 holds, and $HT\perp XY$. $\blacksquare$</p>
+<h4>Solution 3 (Complex numbers on the circumcircle)</h4>
+<p>Take the circumcircle as the unit circle, so $O=0$, and put $A=1$, $B=b=e^{i\beta}$, $C=c=e^{-i\gamma}$ with $B$ above and $C$ below the real axis. A bar denotes complex conjugation; for $|z|=1$, $\bar z=1/z$. The arc $AB$ not containing $C$ measures $2\angle C$, so $\beta=2\angle C$; likewise $\gamma=2\angle B$. As the triangle is acute, $0&lt;\beta&lt;\pi$ and $0&lt;\gamma&lt;\pi$.</p><p><strong>The angle.</strong> In the quadrilateral $OBTC$ the angles at $B$ and $C$ are right and $\angle BOC=2\angle A$, so
+\[\tau:=\angle BTC=180^\circ-2\angle A=2\angle B+2\angle C-180^\circ=\beta+\gamma-\pi .\]
+Here $\tau&gt;0$ (as $\angle A&lt;90^\circ$), $\tau&lt;\beta$ (as $\gamma&lt;\pi$) and $\tau&lt;\gamma$.</p><p><strong>The rays $OX$ and $OY$.</strong> The segment $AB$ lies in the angle between the rays from $O$ of arguments $0$ and $\beta&lt;\pi$, and its points have all the arguments from $0$ to $\beta$. Since $0&lt;\tau&lt;\beta$, the only ray from $O$ making the angle $\tau$ with $OA$ that meets the segment $AB$ is the ray of argument $\tau$; its direction is
+\[d=e^{i\tau}=e^{i(\beta+\gamma)}e^{-i\pi}=-\frac bc .\]
+In the same way $Y$ lies on the ray of direction $e^{-i\tau}=-\frac cb$.</p><p><strong>The points $X$, $Y$.</strong> A point $z$ lies on the line through $0$ with unit direction $d$ iff $z/d$ is real, i.e. $z\bar d=\bar zd$, i.e. $z=d^2\bar z$. So $x=\frac{b^2}{c^2}\bar x$ and $y=\frac{c^2}{b^2}\bar y$. The chord through two points $p,q$ of the unit circle is $z+pq\,\bar z=p+q$ (both $p$ and $q$ satisfy it), so the line $AB$ is $z+b\bar z=1+b$. Substituting $\bar x=\frac{c^2}{b^2}x$ gives $x\bigl(1+\frac{c^2}b\bigr)=1+b$; the coefficient is nonzero because the line $OX$ meets the line $AB$ in exactly one point. Hence, and likewise for $Y$,
+\[x=\frac{b(1+b)}{b+c^2},\qquad y=\frac{c(1+c)}{c+b^2}.\]</p><p><strong>The points $T$, $H$.</strong> The tangent at $b$ is $z+b^2\bar z=2b$ and the tangent at $c$ is $z+c^2\bar z=2c$. Eliminating $\bar z$: $z(b^2-c^2)=2bc(b-c)$, so $T=\frac{2bc}{b+c}$ ($b+c\ne0$, since $BC$ is not a diameter). With the circumcentre at the origin, $H=1+b+c$.</p><p><strong>The computation.</strong> First
+\[H-T=\frac{(1+b+c)(b+c)-2bc}{b+c}=\frac{b+c+b^2+c^2}{b+c}.\]
+Next, $b(1+b)(c+b^2)-c(1+c)(b+c^2)=b^4-c^4+b^3-c^3+b^2c-bc^2=(b-c)(b+c)(b^2+c^2+b+c)$, so
+\[x-y=\frac{(b-c)(b+c)(b^2+c^2+b+c)}{(b+c^2)(b^2+c)}=w\,(H-T),\qquad w=\frac{(b-c)(b+c)^2}{(b+c^2)(b^2+c)} .\]
+The points $X\ne A$ and $Y\ne A$ lie on the different lines $AB$ and $AC$, so $X\ne Y$; hence $x-y\ne0$, and therefore $H\ne T$ and $w\ne0$.</p><p><strong>$w$ is purely imaginary.</strong> Using $\bar b=\frac1b$, $\bar c=\frac1c$ and multiplying numerator and denominator by $b^3c^3$,
+\[\bar w=\frac{\bigl(\frac1b-\frac1c\bigr)\bigl(\frac1b+\frac1c\bigr)^2}{\bigl(\frac1b+\frac1{c^2}\bigr)\bigl(\frac1{b^2}+\frac1c\bigr)}=\frac{(c-b)(b+c)^2}{(c^2+b)(c+b^2)}=-w .\]
+So $w$ is a nonzero purely imaginary number, and $x-y=w(H-T)$ says that the vector $\overrightarrow{YX}$ is the vector $\overrightarrow{TH}$ turned through $90^\circ$ and scaled. Therefore $HT\perp XY$. $\blacksquare$</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p18">
@@ -1325,8 +1354,8 @@ Substituting the expressions for $u,v,w,\tau$, multiplying by the denominators a
 <div class="ct-text"><p>Does there exist a convex hexagon $A_1B_2A_3B_1A_2B_3$ such that
 \[A_1A_2=2B_1B_2,\qquad A_1A_3=2B_1B_3,\qquad A_2A_3=2B_2B_3?\]</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>No</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (The B-triangle is congruent to the medial triangle)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (The B-triangle is congruent to the medial triangle)</h4>
 <div class="ct-fig"><img style="width:329px" src="/assets/contests/2026-27/sharygin-45_s1.svg" alt="Figure for the solution"></div>
 <p>The answer is <strong>no</strong>.</p><p>Suppose such a convex hexagon $A_1B_2A_3B_1A_2B_3$ exists. Let $M_1,M_2,M_3$ be the midpoints of $A_2A_3$, $A_3A_1$, $A_1A_2$. By the midline theorem $M_1M_2=\frac12A_1A_2=B_1B_2$, $M_1M_3=\frac12A_1A_3=B_1B_3$, $M_2M_3=\frac12A_2A_3=B_2B_3$. So the triangles $M_1M_2M_3$ and $B_1B_2B_3$ are congruent (SSS) with $M_i\leftrightarrow B_i$: there is an isometry $g$ of the plane with $g(M_i)=B_i$.</p><p><strong>What convexity gives.</strong> In the convex hexagon $A_1B_2A_3B_1A_2B_3$ the diagonal $A_3A_2$ cuts off the vertex $B_1$; so $B_1$ lies strictly on the other side of the line $A_2A_3$ than $A_1$. Similarly $B_2$ is strictly beyond $A_1A_3$ and $B_3$ strictly beyond $A_1A_2$. Let the vertices $A_1,A_2,A_3$ be in counterclockwise order and let $N_1$ be the outward normal of the side $A_2A_3$ of length $A_2A_3$ (the vector $\overrightarrow{A_2A_3}$ turned by $90^\circ$ clockwise); define $N_2,N_3$ likewise. Since $M_i$ lies on the side opposite $A_i$,
 \[N_i\cdot(B_i-M_i)&gt;0\quad(i=1,2,3),\qquad\text{hence}\qquad \Sigma:=\sum_{i=1}^3N_i\cdot(B_i-M_i)&gt;0. \tag{1}\]
@@ -1335,6 +1364,18 @@ Substituting the expressions for $u,v,w,\tau$, multiplying by the denominators a
 where $S&gt;0$ is the area of $A_1A_2A_3$. The isometry is $g(z)=e^{i\theta}z+t$ (direct) or $g(z)=e^{i\theta}\bar z+t$ (opposite). In both cases the translation part contributes $\sum N_i\cdot t=0$, because $N_1+N_2+N_3=0$.</p><ul class="ct-ul"><li><p>Direct: $B_i-M_i=(e^{i\theta}-1)M_i+t$, and
 \[\Sigma=\operatorname{Re}\Bigl(\sum i(\bar A_k-\bar A_j)(e^{i\theta}-1)\bigl(-\tfrac12A_i\bigr)\Bigr)=-\tfrac12\operatorname{Re}\bigl(i(e^{i\theta}-1)\cdot4iS\bigr)=2S(\cos\theta-1)\le0 .\]</p></li><li><p>Opposite: $B_i-M_i=e^{i\theta}\bar M_i-M_i+t$, and
 \[\Sigma=\operatorname{Re}\Bigl(\sum i(\bar A_k-\bar A_j)\bigl(-\tfrac12e^{i\theta}\bar A_i+\tfrac12A_i\bigr)\Bigr)=0+\tfrac12\operatorname{Re}(i\cdot4iS)=-2S&lt;0 .\]</p></li></ul><p>Both contradict (1). Hence no such convex hexagon exists. (The bound is sharp: $B_i=M_i$ gives $\Sigma=0$ and a degenerate hexagon with three straight angles.)</p>
+<h4>Solution 2 (The trace of the similarity in barycentric coordinates)</h4>
+<p>The answer is <strong>no</strong>.</p><p>Suppose such a convex hexagon $A_1B_2A_3B_1A_2B_3$ exists.</p><p><strong>The similarity.</strong> The triangle with vertices $2B_1,2B_2,2B_3$ (vectors from any fixed origin) has the same side lengths as $A_1A_2A_3$, so by SSS there is an isometry $\sigma$ of the plane with $\sigma(A_i)=2B_i$. Then $g=\frac12\sigma$ maps $A_i$ to $B_i$, and $g(Z)=L(Z)+t$ for a vector $t$ and a linear map $L$ which is $\frac12$ times a rotation or $\frac12$ times a reflection in a line through the origin. A rotation through $\theta$ has the matrix $\begin{pmatrix}\cos\theta&amp;-\sin\theta\\ \sin\theta&amp;\cos\theta\end{pmatrix}$, of trace $2\cos\theta$; a reflection has the eigenvalues $1,-1$, so its trace is $0$. Hence
+\[\operatorname{tr}L=\cos\theta\ \text{ or }\ 0,\qquad\text{in both cases}\qquad 1+\operatorname{tr}L\ge0. \tag{1}\]</p><p><strong>Barycentric coordinates.</strong> Since $A_1,A_2,A_3$ are not collinear, every point $Z$ can be written uniquely as $Z=f_1(Z)A_1+f_2(Z)A_2+f_3(Z)A_3$ with $f_1(Z)+f_2(Z)+f_3(Z)=1$. The functions $f_i$ are affine, $f_i(A_j)$ is $1$ for $i=j$ and $0$ otherwise, and $f_1$ vanishes on the line $A_2A_3$ and is positive exactly on the side of this line containing $A_1$ (similarly for $f_2,f_3$).</p><p><strong>What convexity gives.</strong> In the convex hexagon $A_1B_2A_3B_1A_2B_3$ the diagonal $A_3A_2$ cuts off the vertex $B_1$, so $B_1$ lies strictly on the other side of the line $A_2A_3$ than $A_1$, and $f_1(B_1)&lt;0$. Similarly $f_2(B_2)&lt;0$ and $f_3(B_3)&lt;0$, so
+\[f_1(B_1)+f_2(B_2)+f_3(B_3)&lt;0. \tag{2}\]</p><p><strong>A matrix for $g$.</strong> Write $\varphi(Z)=(f_1(Z),f_2(Z),f_3(Z))^{T}\in\mathbb R^3$ and let $M$ be the $3\times3$ matrix whose $i$-th column is $\varphi(B_i)$. Its diagonal entries are $f_i(B_i)$, so by (2), $\operatorname{tr}M&lt;0$. Since $\varphi$ is affine, $\varphi(Z)-\varphi(W)$ depends only on the vector $Z-W$; write $\psi(Z-W)=\varphi(Z)-\varphi(W)$. Then $\psi$ is a linear map from plane vectors to $\mathbb R^3$, and with $e_1,e_2,e_3$ the standard basis,
+\[u_1:=\psi(A_2-A_1)=e_2-e_1,\qquad u_2:=\psi(A_3-A_1)=e_3-e_1,\qquad u_3:=\varphi(A_1)=e_1\]
+form a basis of $\mathbb R^3$. Let $\begin{pmatrix}p_{11}&amp;p_{12}\\ p_{21}&amp;p_{22}\end{pmatrix}$ be the matrix of $L$ in the basis $A_2-A_1$, $A_3-A_1$ of the plane, i.e. $L(A_2-A_1)=p_{11}(A_2-A_1)+p_{21}(A_3-A_1)$ and $L(A_3-A_1)=p_{12}(A_2-A_1)+p_{22}(A_3-A_1)$; its trace is $p_{11}+p_{22}=\operatorname{tr}L$. Now
+\[Mu_1=Me_2-Me_1=\varphi(B_2)-\varphi(B_1)=\psi(B_2-B_1)=\psi\bigl(L(A_2-A_1)\bigr)=p_{11}u_1+p_{21}u_2,\]
+because $B_2-B_1=g(A_2)-g(A_1)=L(A_2-A_1)$. In the same way $Mu_2=p_{12}u_1+p_{22}u_2$. Finally $Mu_3=\varphi(B_1)=u_3+\psi(B_1-A_1)$, and $\psi(B_1-A_1)$ is a combination of $u_1,u_2$. So in the basis $u_1,u_2,u_3$ the matrix of $M$ is
+\[\begin{pmatrix}p_{11}&amp;p_{12}&amp;*\\ p_{21}&amp;p_{22}&amp;*\\ 0&amp;0&amp;1\end{pmatrix},\]
+whose trace is $p_{11}+p_{22}+1$. The trace of a matrix does not change under a change of basis, hence
+\[\operatorname{tr}M=1+\operatorname{tr}L\ge0\]
+by (1). This contradicts $\operatorname{tr}M&lt;0$. Hence no such convex hexagon exists.</p><p><em>Remark.</em> The bound is sharp: if $B_i$ is the midpoint of the side of $A_1A_2A_3$ opposite $A_i$, then $L=-\frac12\,\mathrm{id}$, $\operatorname{tr}L=-1$ and $f_i(B_i)=0$; the "hexagon" is the triangle $A_1A_2A_3$ with its three side midpoints, which has three straight angles.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p46">

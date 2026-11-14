@@ -139,7 +139,7 @@ $x_1=\frac{y_1}{y_1-1}$ the pair $(x_1,y_1)$ is a real solution of the system wi
 <h3>Problem 3</h3>
 <div class="ct-meta">Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure</div>
 <div class="ct-text"><p>Let $ABCD$ be a convex quadrilateral such that $AB=BC$. The internal angle bisectors of $\angle DBA$ and $\angle CBD$ intersect the perpendicular bisectors of $AD$ and $CD$ in $E$ and $F$, respectively. Prove that the circumcircles of $\triangle DAC$ and $\triangle DEF$ are tangent.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Inversion at $D$ and Ptolemy)</h4>
 <div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/nordic-3_s1.svg" alt="Figure for the solution"></div>
 <p>For $E$ and $F$ to be defined we need $BA\ne BD$ (otherwise the bisector of $\angle DBA$ is the perpendicular
@@ -188,6 +188,40 @@ Likewise $F$ lies on $(CBD)$ and $\theta(DF)-\theta(DC)\equiv\theta(BF)-\theta(B
 \[\theta(DO_1)-\theta(DO_2)\equiv\bigl(\theta(DE)-\theta(DA)\bigr)+\bigl(\theta(DF)-\theta(DC)\bigr)-\theta(DB)+\theta(BM)\equiv-\alpha+\beta-0+(\alpha-\beta)=0 .\]
 So the lines $DO_1$ and $DO_2$ have the same direction and both pass through $D$: they coincide, and $D,O_1,O_2$ are collinear. Hence the circles
 $(DAC)$ and $(DEF)$ have the same tangent at $D$ and are tangent there. (If $O_1=O_2$, which happens when $ABCD$ is cyclic, the circles coincide.)</p>
+<h4>Solution 3 (Coordinates centred at $D$)</h4>
+<p>For $E$ to be defined we need $BA\ne BD$: otherwise $B$ lies on the perpendicular bisector of $AD$, and this
+bisector is the bisector of $\angle DBA$. Put $B$ at the origin with the positive $x$-axis along ray $BD$, and choose the unit of length so that
+$BA=BC=1$. Then $D=(d,0)$ with $d&gt;0$ and $d\ne1$. Since $ABCD$ is convex, ray $BD$ lies inside $\angle ABC$, so $A$ and $C$ are on opposite sides of
+line $BD$; take $A$ above it. Let $\angle ABD=2\alpha$ and $\angle DBC=2\beta$, where $0&lt;\alpha,\beta&lt;90^\circ$, and put $u=\tan\alpha&gt;0$,
+$v=\tan\beta&gt;0$. By the half-angle formulas,
+\[A=\Bigl(\frac{1-u^2}{1+u^2},\ \frac{2u}{1+u^2}\Bigr),\qquad C=\Bigl(\frac{1-v^2}{1+v^2},\ -\frac{2v}{1+v^2}\Bigr).\]</p><p><em>The points $E$ and $F$.</em> The bisector of $\angle DBA$ consists of the points $(t,tu)$ with $t&gt;0$. For $P=(t,tu)$,
+\[\begin{aligned}PA^2-PD^2&amp;=\bigl(t^2(1+u^2)-2t(A_x+uA_y)+1\bigr)-\bigl(t^2(1+u^2)-2td+d^2\bigr)\\&amp;=2t(d-1)-(d^2-1),\end{aligned}\]
+because $A_x+uA_y=\frac{1-u^2+2u^2}{1+u^2}=1$. As $d\ne1$, this vanishes only for $t=\frac{d+1}2$. So $E=(e,eu)$ with $e=\frac{d+1}2$, and in the
+same way (replace $u$ by $-v$) $F=(e,-ev)$.</p><p><em>New origin at $D$.</em> Use the coordinates $X=x-d$, $Y=y$ and put $g=e-d=\frac{1-d}2$. Then
+\[e+g=1,\qquad g\ne0,\qquad E=(g,\,eu),\qquad F=(g,\,-ev).\]
+Also $(1+u^2)X_A=(1-u^2)-d(1+u^2)=2g-2eu^2$ and $(1+u^2)Y_A=2u$, hence, using $1-2ge=g^2+e^2$ (which is $(e+g)^2=1$),
+\[(1+u^2)^2(X_A^2+Y_A^2)=4\bigl(g^2-2geu^2+e^2u^4+u^2\bigr)=4(1+u^2)(g^2+e^2u^2),\]
+that is, $X_A^2+Y_A^2=\dfrac{4(g^2+e^2u^2)}{1+u^2}$.</p><p>A circle through the new origin $D$ has an equation $X^2+Y^2+LX+MY=0$; its centre is $(-L/2,-M/2)$, so its tangent at $D$ is the line
+$LX+MY=0$. The points $D,E,F$ are not collinear ($E\ne F$ lie on the line $X=g$, which misses $D$). Substituting $E$ and $F$:
+\[g^2+e^2u^2+Lg+Meu=0,\qquad g^2+e^2v^2+Lg-Mev=0.\]
+Subtracting gives $e^2(u^2-v^2)+Me(u+v)=0$, so $M=e(v-u)$, and then $Lg=-(g^2+e^2uv)$. Thus the circle $(DEF)$ has
+\[L=-\frac{g^2+e^2uv}{g},\qquad M=e(v-u),\]
+and $L\ne0$ because $g^2+e^2uv&gt;0$.</p><p><em>Key identity.</em> Let $\lambda=\dfrac{euv-g}{2g}$. We claim
+\[LX_A+MY_A=\lambda\,(X_A^2+Y_A^2).\tag{1}\]
+Multiply the left side by $(1+u^2)g$:
+\[\begin{aligned}(1+u^2)g\,(LX_A+MY_A)&amp;=-(g^2+e^2uv)(2g-2eu^2)+2geu(v-u)\\&amp;=-2\bigl(g^3-g^2eu^2+ge^2uv-e^3u^3v-geuv+geu^2\bigr).\end{aligned}\]
+Since $e+g=1$, we have $ge^2uv-geuv=geuv(e-1)=-g^2euv$ and $geu^2-g^2eu^2=geu^2(1-g)=ge^2u^2$. So the bracket equals
+\[g^3-g^2euv+ge^2u^2-e^3u^3v=(g^2+e^2u^2)(g-euv),\]
+and the left side of (1), times $(1+u^2)g$, is $2(euv-g)(g^2+e^2u^2)$. The right side of (1), times $(1+u^2)g$, is
+$\frac{euv-g}{2}\cdot4(g^2+e^2u^2)$, the same. Dividing by $(1+u^2)g\ne0$ proves (1).</p><p>This computation used only algebra, valid for all real $u,v$. Replacing $(u,v)$ by $(-v,-u)$ turns $A$ into $C$ and leaves $L$, $M$, $\lambda$
+unchanged (they depend on $u,v$ only through $uv$ and $v-u$). Hence also
+\[LX_C+MY_C=\lambda\,(X_C^2+Y_C^2).\tag{2}\]</p><p><em>Conclusion.</em> If $\lambda=0$, then (1) and (2) say that $A$ and $C$ lie on the line $LX+MY=0$ through $D$, so $A,C,D$ would be collinear,
+which is impossible in a convex quadrilateral. So $\lambda\ne0$, and (1), (2) say that $A$ and $C$ lie on the circle
+\[X^2+Y^2-\frac L\lambda X-\frac M\lambda Y=0,\]
+which also passes through $D$. As $A,C,D$ are not collinear, this is the circle $(DAC)$. Its tangent at $D$ is $-\frac L\lambda X-\frac M\lambda Y=0$,
+the same line as the tangent $LX+MY=0$ of $(DEF)$ at $D$. Two circles through $D$ with the same tangent line at $D$ touch each other at $D$, so the
+circumcircles of $DAC$ and $DEF$ are tangent. (They coincide exactly when $\lambda=-1$, for example for $D=(2,0)$, $A=(\tfrac12,\tfrac{\sqrt3}2)$,
+$C=(\tfrac12,-\tfrac{\sqrt3}2)$, where $ABCD$ is cyclic; this is the degenerate form of tangency.)</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p4">
@@ -196,7 +230,7 @@ $(DAC)$ and $(DEF)$ have the same tangent at $D$ and are tangent there. (If $O_1
 <div class="ct-text"><p>A pair of positive integers $(a,b)$ is good if all the fractions
 \[\frac{a}{b},\ \frac{a+1}{b+1},\ \dots,\ \frac{a+9}{b+9}\]
 are integers.</p><ul class="ct-parts"><li><p><span class="ct-lbl">a)</span> Prove that there are only finitely many good pairs $(a,b)$ with $b&lt;a&lt;b^9$.</p></li><li><p><span class="ct-lbl">b)</span> Prove that there are infinitely many good pairs $(a,b)$ with $b&lt;a&lt;b^{10}$.</p></li></ul></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 (A gcd bound for the lcm)</h4>
 <p><em>Reformulation.</em> Since $\frac{a+i}{b+i}=1+\frac{a-b}{b+i}$, the pair $(a,b)$ with $a&gt;b$ is good exactly when
 each of $b,b+1,\dots,b+9$ divides $a-b$, i.e. when $L(b)=\operatorname{lcm}(b,b+1,\dots,b+9)$ divides $a-b$. Then $a-b\ge L(b)$.</p><p><em>Lemma.</em> For positive integers $x_1,\dots,x_m$,
@@ -227,6 +261,25 @@ $b\,q_i=\frac bi\,(b+i)$ is a multiple of $b+i$, so $b+i\mid N$. Hence $L\mid N$
 $q_i\le\frac b3+1\le\frac b2$ for $3\le i\le 9$. Therefore
 \[L\le N\le b(b+1)\Bigl(\frac{b+2}{2}\Bigr)\Bigl(\frac b2\Bigr)^7=\frac{b^8(b+1)(b+2)}{256}\le\frac{b^{10}}{128},\]
 using $(b+1)(b+2)\le 2b^2$. Taking $a=b+L$ we get a good pair with $b&lt;a\le b+\frac{b^{10}}{128}&lt;b^{10}$, for every $t\ge1$.</p>
+<h4>Solution 3 (A partial-fraction identity)</h4>
+<p><em>Reformulation.</em> Since $\frac{a+i}{b+i}=1+\frac{a-b}{b+i}$, a pair with $a&gt;b$ is good exactly when each of
+$b,b+1,\dots,b+9$ divides $a-b$.</p><p><em>An identity.</em> For every positive integer $b$,
+\[\sum_{i=0}^{9}\frac{(-1)^i\binom9i}{b+i}=\frac{9!}{b(b+1)\cdots(b+9)}.\tag{1}\]
+To prove it, multiply by $b(b+1)\cdots(b+9)$: the left side becomes $S(b)=\sum_{i=0}^9(-1)^i\binom9i\prod_{j\ne i}(b+j)$, a polynomial in $b$ of
+degree at most $9$. At $b=-k$ with $k\in\{0,1,\dots,9\}$, every term with $i\ne k$ contains the factor $b+k=0$, so
+\[S(-k)=(-1)^k\binom9k\prod_{j&lt;k}(j-k)\prod_{j&gt;k}(j-k)=(-1)^k\binom9k\,(-1)^k k!\,(9-k)!=9!.\]
+So $S(b)-9!$ has degree at most $9$ and ten roots; it is the zero polynomial, and $S(b)=9!$ for all $b$, which is (1).</p><p><em>(a)</em> Let $(a,b)$ be good with $a&gt;b$. Multiplying (1) by $a-b$ gives
+\[\sum_{i=0}^{9}(-1)^i\binom9i\,\frac{a-b}{b+i}=\frac{9!\,(a-b)}{b(b+1)\cdots(b+9)}.\]
+Every fraction on the left is an integer, so the right side is an integer; it is positive, so it is at least $1$. Hence
+\[a-b\ge\frac{b(b+1)\cdots(b+9)}{9!}&gt;\frac{b^{10}}{9!}.\]
+If also $a&lt;b^9$, then $\frac{b^{10}}{9!}&lt;a-b&lt;b^9$, so $b&lt;9!$, and then $a&lt;b^9&lt;(9!)^9$. Only finitely many pairs remain.</p><p><em>(b)</em> Let $b\ge200$, $P=b(b+1)\cdots(b+9)$ and $a=b+\frac P2$. Among ten consecutive integers five are even, so for each $i$ the product
+$\frac{P}{b+i}$ of the other nine factors still contains an even factor; hence $\frac{P}{2(b+i)}$ is an integer, i.e. $b+i\mid a-b$ for all $i$, and
+$(a,b)$ is good with $a&gt;b$. For the upper bound, $P\le(b+9)^{10}$ and $\frac9b&lt;\frac1{20}$, so
+\[\frac{a-b}{b^{10}}\le\frac12\Bigl(1+\frac1{20}\Bigr)^{10}=\frac12\sum_{j=0}^{10}\binom{10}{j}\frac1{20^j}.\]
+Using $\binom{10}{j}\le\frac{10^j}{j!}$ and $j!\ge2^{j-1}$ for $j\ge2$, the sum is at most
+\[1+\frac12+\sum_{j\ge2}\frac{(1/2)^j}{2^{j-1}}=\frac32+2\sum_{j\ge2}\frac1{4^j}=\frac32+\frac16=\frac53.\]
+So $a-b\le\frac56b^{10}$, and $a\le b+\frac56b^{10}&lt;b^{10}$ because $b&lt;\frac16b^{10}$. Every $b\ge200$ gives a good pair with $b&lt;a&lt;b^{10}$, so there
+are infinitely many.</p>
 </div></details>
 </section>
 {% endraw %}

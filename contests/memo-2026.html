@@ -192,8 +192,8 @@ Then $a=2u(2v-1)\ge1$, $ab+c=n^2-4u^2+4u^2=n^2$, and $a+b+c=2n+4u^2=n\bigl(2+\fr
 <div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 31: Extremal Principle and Bounding Arguments</div>
 <div class="ct-text"><p>Consider an infinite square grid consisting of white cells. Let $n$ be a positive integer. Kekec coloured $4n+1$ of the cells red such that both the set $R$ of red cells and the set $W$ of white cells are connected.</p><p>The resultant red shape is a $k$-gon. An example with $5$ red cells forming a $6$-gon is shown.</p><div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/memo-7.svg" alt="Figure for Team, Problem 3"></div><p>Determine the largest possible value of $k$ in terms of $n$.</p><p><em>Remark</em>: A set $S$ of cells is said to be <em>connected</em>, if for any two cells $a,b\in S$, there exists an integer $m\ge 1$ and cells $c_1,c_2,\dots,c_m\in S$ where $c_1=a$, $c_m=b$, and cells $c_i,c_{i+1}$ for $1\le i\le m-1$ share an edge.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$k=8n+4$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Perimeter of a connected shape)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Perimeter of a connected shape)</h4>
 <div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/memo-7_s1.svg" alt="Figure for the solution"></div>
 <p>Let $m=4n+1$. Since $R$ and $W$ are both connected, the boundary of the red shape is a single closed polygon with $k$ sides (it may touch itself
 at a vertex; the bound below does not use that it is simple).</p><p><strong>Upper bound.</strong> Every side of the polygon consists of whole unit edges separating a red cell from a white cell, and different sides use
@@ -208,6 +208,35 @@ row, two such edges are separated by a tooth, and next to the outer edge of a to
 outer continuation of a tooth's side, runs between two white cells, and the inner continuation of a tooth's side runs between two red cells of
 the row.</p></li></ul><p>Hence the largest possible value is
 \[\boxed{k=8n+4}\]</p>
+<h4>Solution 2 (Count cell corners and use the angle sum)</h4>
+<div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/memo-7_s2.svg" alt="Figure for the solution"></div>
+<p>Let $m=4n+1$, and let cell $(x,y)$ be the unit square $[x,x+1]\times[y,y+1]$.</p><p><strong>The boundary is a simple polygon.</strong> The statement treats the boundary of the red shape as a polygon; we check that it is a single
+closed curve without self-contact, so that the angle sum of a polygon applies.</p><ul class="ct-ul"><li><p>There are no holes: a hole would be a set of white cells enclosed by red cells, and these could not be joined to the white cells far
+away, against the connectedness of $W$. As $R$ is connected, the boundary is a single closed curve.</p></li><li><p>There is no <em>pinch</em>, that is, a grid vertex $v$ where two red cells $U,V$ meet only at $v$ and the other two cells $U',V'$ at $v$
+are white. Suppose there were. Join the centres of a chain of red cells from $U$ to $V$ (consecutive cells sharing an edge) by segments, and
+close it by the two half-diagonals from the centres of $U$ and $V$ to $v$. Every piece of this closed curve lies inside red cells and meets
+the grid lines only at midpoints of edges between two red cells or at $v$; so the curve does not cross itself. Near $v$ it is the diagonal
+through $v$, so the centres of $U'$ and $V'$ (on the other diagonal) lie on opposite sides of it, and by the Jordan curve theorem every path
+from $U'$ to $V'$ meets the curve. But a chain of white cells from $U'$ to $V'$, joined through centres and edge midpoints, stays inside white
+cells and away from all grid vertices, so it misses the curve. This contradicts the connectedness of $W$.</p></li></ul><p><strong>Two counts.</strong> Let $c$ and $d$ be the numbers of vertices of the polygon with interior angle $90^\circ$ and $270^\circ$; so $k=c+d$.
+The angle sum gives $90^\circ c+270^\circ d=(c+d-2)\cdot180^\circ$, that is,
+\[c-d=4.\]
+Now classify the grid vertices by the number of red cells among the four cells around them. With exactly one red cell, the vertex is a
+$90^\circ$ vertex of the polygon; with three, a $270^\circ$ vertex; with two, the two red cells share an edge (there is no pinch) and the
+boundary passes straight through the vertex; with four, the vertex is inside the shape. Let $s$ and $i$ be the numbers of vertices with two
+and with four red cells. Counting the pairs (red cell, one of its four corners) by vertices gives
+\[4m=c+3d+2s+4i .\]
+Substituting $c=d+4$ and $m=4n+1$: $16n+4=4+4d+2s+4i$, so $d=4n-\frac s2-i\le4n$. Hence
+\[k=c+d=2d+4\le8n+4.\]</p><p><strong>Construction.</strong> Colour red the cells $(0,j)$ for $0\le j\le 2n$ (a column of $2n+1$ cells) and the cells $(-1,j)$ and $(1,j)$ for the
+odd $j$ with $1\le j\le 2n-1$ (one cell on each side of every second column cell; figure: $n=2$). These are $(2n+1)+2n=4n+1$ cells. $R$ is
+connected, since each side cell shares an edge with the column. $W$ is connected: a white cell of column $0$ lies above or below the whole
+shape, a white cell $(\pm1,j)$ can step sideways to $(\pm2,j)$, and all white cells outside the columns $-1,0,1$ or outside the rows
+$0,\dots,2n$ are joined around the shape.</p><p>We count the vertices with three red cells. A $2\times2$ block of cells inside the columns $1,2$ (or $-2,-1$) contains at most one red cell,
+because the side cells are never in adjacent rows. A block in the columns $0,1$ with rows $y-1,y$ contains three red cells exactly when
+both column cells $(0,y-1),(0,y)$ are red, i.e. $1\le y\le 2n$; then exactly one of $y-1,y$ is odd and lies in $[1,2n-1]$, so exactly one of
+$(1,y-1),(1,y)$ is red. This gives $2n$ such vertices on the right of the column and, symmetrically, $2n$ on the left: $d=4n$. By the
+first part ($c=d+4$), the polygon has $k=2d+4=8n+4$ sides.</p><p>Hence the largest possible value is
+\[\boxed{k=8n+4}\]</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p8">
@@ -215,8 +244,8 @@ the row.</p></li></ul><p>Hence the largest possible value is
 <div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 39: Graph Theory and Structural Combinatorics</div>
 <div class="ct-text"><p>Let $n$ be a positive integer. A treasure chest has $2n-1$ locks on it labeled from $1$ to $2n-1$. The $i^{th}$ lock has $i$ keys that can open that lock, but none of the other locks. There are $2n-1$ people such that each one of them owns $n$ keys (one person can own multiple keys opening the same lock).</p><p>Determine the smallest positive integer $k$, such that no matter how the keys are distributed to the $2n-1$ people, there exists a group of $k$ people that can open all the locks together.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$k=\left\lfloor\frac{3n-1}{2}\right\rfloor$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Small locks first, then a forest)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Small locks first, then a forest)</h4>
 <p>Let $m=\lfloor n/2\rfloor$; note $\lfloor\frac{3n-1}2\rfloor=2n-1-m$. Call lock $i$ <em>small</em> if $i\le n$ and <em>big</em> if $i&gt;n$.
 A big lock has more than $n$ keys, so it has at least two holders.</p><p><strong>Lower bound: a distribution needing $2n-1-m$ people.</strong> Let $s=2n-1-2m$ ($s=n$ for odd $n$, $s=n-1$ for even $n$). Take $s$ "solo"
 people $P_1,\dots,P_s$ and $m$ pairs $Q_i,Q_i'$ ($1\le i\le m$). Person $P_j$ gets all $j$ keys of lock $j$; person $Q_i$ gets $n$ keys of lock
@@ -245,13 +274,35 @@ of $U$ through $W'$. Its size is at most
 opens all locks. Therefore the smallest $k$ is
 \[\boxed{k=\Bigl\lfloor\frac{3n-1}{2}\Bigr\rfloor}\]
 that is, $\frac{3n-1}2$ for odd $n$ and $\frac{3n}2-1$ for even $n$.</p>
+<h4>Solution 2 (Distinct representatives and distances to a free person)</h4>
+<p>Let $t=\lfloor\frac{n-1}2\rfloor$. Note that $n+t=\lfloor\frac{3n-1}2\rfloor$ (for $n=2t+1$ both equal $3t+1$, for $n=2t+2$ both equal
+$3t+2$). We show that the answer is $n+t$.</p><p><strong>A distribution that needs $n+t$ people.</strong> Call the people $P_1,\dots,P_{2n-1}$. For $i=1,\dots,n$ give all $i$ keys of lock $i$ to $P_i$.
+For $j=1,\dots,t$ give $n$ keys of lock $n+j$ to $P_{n+2j-1}$ and its other $j$ keys to $P_{n+2j}$; these people exist because
+$n+2t\le2n-1$. Nobody has more than $n$ keys so far, and the keys of the locks $n+t+1,\dots,2n-1$ can fill all the remaining places in any way,
+because there are $1+2+\dots+(2n-1)=n(2n-1)$ keys and $n(2n-1)$ places. Now lock $i\le n$ is opened only by $P_i$, and lock $n+j$ only by
+$P_{n+2j-1}$ or $P_{n+2j}$. These $n+t$ sets of people are pairwise disjoint, so a group that opens all locks has at least $n+t$ people.</p><p><strong>Every distribution allows $n+t$ people.</strong> Fix a distribution. For each lock $i\le n$ choose one holder of a key of it, and let $S$ be the set
+of chosen people, $s=|S|\le n$. Let $W$ be the set of the other $2n-1-s$ people and $U$ the set of locks with no holder in $S$. Every lock of
+$U$ is a lock $L&gt;n$, so it has at least $n+1$ keys, all held by people of $W$. For $L\in U$ let $H(L)\subseteq W$ be the set of its holders.</p><p><em>Union bound.</em> For any $r\ge1$ locks of $U$, the union of their sets $H(L)$ has at least $r+1$ people. Indeed, these people hold all the
+at least $(n+1)r$ keys of these locks and each holds at most $n$ keys, so there are more than $r$ of them.</p><p><em>Representatives.</em> By the union bound, any $r$ locks of $U$ have at least $r$ holders in total, so by Hall's marriage theorem we can choose
+for every $L\in U$ a holder $\rho(L)\in H(L)$, with different locks getting different people. A person of $W$ who is not of the form $\rho(L)$
+is called <em>free</em>.</p><p><em>Arrows.</em> For every $L\in U$ draw an arrow from $\rho(L)$ to each other person of $H(L)$. The arrows leaving a representative $p=\rho(L)$
+all belong to its own lock $L$. We claim that from every representative some free person can be reached along arrows. If not, let $Z$ be the
+set of people reachable from some representative $p$ (including $p$); all of them are representatives. Let $T$ be the set of locks they
+represent, so $|T|=|Z|$. For $L\in T$ every holder of $L$ is reached by an arrow from $\rho(L)\in Z$, so $H(L)\subseteq Z$. Thus the $|T|$
+locks of $T$ have only $|Z|=|T|$ holders in total, against the union bound.</p><p><em>Colouring.</em> For $p\in W$ let $\delta(p)$ be $0$ if $p$ is free, and otherwise the smallest number of arrows on a path from $p$ to a free
+person. If $p=\rho(L)$, the first arrow of a shortest such path goes from $p$ to a holder $q$ of $L$ with $\delta(q)=\delta(p)-1$. Colour every
+person of $W$ by the parity of $\delta$. Then every lock $L\in U$ has the holders $p=\rho(L)$ and $q$ of different colours. Let $W'$ be the
+smaller colour class, so $|W'|\le\lfloor\frac{2n-1-s}2\rfloor$, and $W'$ contains a holder of every lock of $U$.</p><p>The group $S\cup W'$ opens every lock: a lock outside $U$ has a holder in $S$, and a lock of $U$ has one in $W'$. Its size is at most
+\[s+\Bigl\lfloor\frac{2n-1-s}2\Bigr\rfloor=\Bigl\lfloor\frac{2n-1+s}2\Bigr\rfloor\le\Bigl\lfloor\frac{3n-1}2\Bigr\rfloor=n+t,\]
+and adding further people (as $n+t\le2n-1$) gives a group of exactly $n+t$ people that opens all locks. Therefore
+\[\boxed{k=n+\Bigl\lfloor\frac{n-1}2\Bigr\rfloor=\Bigl\lfloor\frac{3n-1}{2}\Bigr\rfloor}\]</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p9">
 <h3>Problem 5</h3>
 <div class="ct-meta">Geometry &middot; LPS VII, Chapter 3: Foundational Angle and Configuration Chasing</div>
 <div class="ct-text"><p>Let $ABCD$ ($AD\parallel BC$, $AD&lt;BC$) be an isosceles trapezoid. Let $O$ be the circumcenter of triangle $ABC$. Let $X$ be the point diametrically opposite to $B$ on circle $ABO$, and let $Y$ be the point diametrically opposite to $C$ on circle $ACO$.</p><p>Show that points $A$, $D$, $X$, and $Y$ are concyclic.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Reflect $X$ in the axis of symmetry)</h4>
 <div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/memo-9_s1.svg" alt="Figure for the solution"></div>
 <p>Let $\omega$ be the circle through $A,B,C,D$ (an isosceles trapezoid is cyclic), with centre $O$, and let $\sigma$ be the
@@ -282,14 +333,36 @@ $2\cos\alpha\cos\beta=\cos a+\cos b$:
 \[\lambda+\mu=\frac{\sin(\alpha+\beta)}{\sin\alpha\sin\beta}=\frac{2\sin b}{\cos a-\cos b}=2\kappa\sin b,\qquad
 \lambda\mu=\frac{\cos\alpha\cos\beta}{\sin\alpha\sin\beta}=\frac{\cos a+\cos b}{\cos a-\cos b}=c.\]
 Hence $A,D,X,Y$ all lie on $\Gamma$.</p>
+<h4>Solution 3 (Inversion in the circumcircle)</h4>
+<div class="ct-fig"><img style="width:233px" src="/assets/contests/2026-27/memo-9_s3.svg" alt="Figure for the solution"></div>
+<p>An isosceles trapezoid is cyclic, so $A,B,C,D$ lie on the circumcircle $\omega$ of $ABC$; let $\rho$ be its radius. Take coordinates
+\[B=(-1,0),\quad C=(1,0),\quad A=(-u,v),\quad D=(u,v),\qquad 0&lt;u&lt;1,\ v&gt;0\]
+($u&lt;1$ because $AD&lt;BC$). Then $O=(0,o)$, and $OA^2=OB^2$ reads $u^2+(v-o)^2=1+o^2$, that is, $2vo=u^2+v^2-1$; also $\rho^2=1+o^2$.</p><p><strong>The circles $ABO$ and $ACO$.</strong> $O$ is not on line $AB$: otherwise $AB$ would be a diameter of $\omega$, but the point of $\omega$
+opposite to $B$ is $(1,2o)$, whose first coordinate is not $-u$. In the same way $O$ is not on line $AC$ (the point opposite to $C$ is
+$(-1,2o)$). Also $X\ne O$: otherwise $BO$ would be a diameter of circle $ABO$ and $\angle BAO=90^\circ$, but $\angle BAO$ is a base angle of the
+isosceles triangle $ABO$, hence acute. Similarly $Y\ne O$.</p><p><strong>Inversion.</strong> Invert in $\omega$ (centre $O$, radius $\rho$); it fixes $A,B,C,D$. Let $X',Y'$ be the images of $X,Y$. The circle $ABO$
+passes through the centre $O$, so it is mapped into the line $AB$; hence $X'\in AB$. As $BX$ is a diameter of circle $ABO$,
+$\angle BOX=90^\circ$, and $X'$ is on ray $OX$, so $OX'\perp OB$. Likewise $Y'\in AC$ and $OY'\perp OC$.</p><p>Write $X'=B+t(B-A)$. Since $OA=OB=\rho$,
+\[(B-O)\cdot(B-A)=\rho^2-(B-O)\cdot(A-O)=\rho^2-\frac{2\rho^2-AB^2}{2}=\frac{AB^2}2,\]
+so $0=(X'-O)\cdot(B-O)=\rho^2+t\,\frac{AB^2}2$, i.e. $t\,AB^2=-2\rho^2$. In the same way $Y'=C+s(C-A)$ with $s\,AC^2=-2\rho^2$.</p><p><strong>A circle through $A,D,X',Y'$.</strong> For a point $P$ with second coordinate $y_P$ put
+\[\varphi(P)=\bigl(OP^2-\rho^2\bigr)-\frac{2\rho^2}{v}\,(y_P-v).\]
+The equation $\varphi(P)=0$ has the form $x^2+y^2+(\text{linear terms})=0$. Since $A,D\in\omega$ and $y_A=y_D=v$, we get $\varphi(A)=\varphi(D)=0$.
+For $X'$: the power $OX'^2-\rho^2$ of $X'$ with respect to $\omega$ equals $(A-X')\cdot(B-X')$, because $A,B$ are the points of $\omega$ on the
+line through $X'$; here $A-X'=-(1+t)(B-A)$ and $B-X'=-t(B-A)$, so the power is $t(1+t)AB^2$. Also $y_{X'}=-tv$, so $y_{X'}-v=-(1+t)v$. Hence
+\[\varphi(X')=t(1+t)AB^2+2\rho^2(1+t)=(1+t)\bigl(t\,AB^2+2\rho^2\bigr)=0.\]
+The same computation with $C$, $s$, $AC$ gives $\varphi(Y')=0$. So the set $\Gamma$ given by $\varphi=0$ contains the two distinct points
+$A,D$; an equation of this form with at least two solutions describes a circle. Finally, using $2vo=u^2+v^2-1$,
+\[\varphi(O)=-\rho^2-\frac{2\rho^2}{v}(o-v)=\frac{\rho^2\,(v^2-2vo)}{v^2}=\frac{\rho^2(1-u^2)}{v^2}&gt;0,\]
+so $O\notin\Gamma$.</p><p><strong>Back.</strong> An inversion maps a circle not through its centre to a circle. So the image of $\Gamma$ is a circle, and it contains the
+images of $A,D,X',Y'$, namely $A,D,X,Y$. Hence $A,D,X,Y$ are concyclic.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p10">
 <h3>Problem 6</h3>
 <div class="ct-meta">Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure</div>
 <div class="ct-text"><p>We are given an acute-angled triangle $ABC$. Let $I_a$ be its $A$-excenter. Points $D$ and $E$ lie on the lines $I_aB$ and $I_aC$, respectively, and satisfy $DA=DB$ and $EA=EC$. The circumcircle of $I_aDE$ intersects line $BC$ at points $F$ and $G$. Prove that the circumcircles of $ABC$ and $AFG$ are tangent.</p></div>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Powers of $B$ and $C$ give isogonal lines)</h4>
+<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Powers of $B$ and $C$ give isogonal lines)</h4>
 <div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/memo-10_s1.svg" alt="Figure for the solution"></div>
 <p>Let $a,b,c$ be the sides and $\alpha,\beta,\gamma$ the angles of $ABC$, $\omega$ its circumcircle and $\Omega$ the circle
 $I_aDE$. The circles $ABC$ and $AFG$ meet at $A$; we show they are tangent there.</p><p><strong>Step 1: lengths.</strong> The line $I_aB$ is the external bisector at $B$; its ray towards $I_a$ makes the angle
@@ -315,6 +388,47 @@ the same side of line $AG$ as $B$, and the ray $AG$, lying between the rays $AB$
 The angle between $t$ and the chord $AG$ equals the inscribed angle on $AG$ from the other side, so $t$ is tangent to circle $AFG$ at $A$
 (converse of the tangent&ndash;chord theorem). Thus the circles $ABC$ and $AFG$ have the common tangent $t$ at their common point $A$: they are
 tangent.</p>
+<h4>Solution 2 (The radical axis is the tangent at $A$)</h4>
+<p>Let $a,b,c$ be the sides and $\beta,\gamma$ the angles at $B,C$ of triangle $ABC$, let $\omega$ be its circumcircle with centre $O$, let
+$\Omega$ be the circle $I_aDE$, and let $r_a$ be the distance from $I_a$ to $BC$.</p><p><strong>The powers of $B$ and $C$ with respect to $\Omega$.</strong> The line $BI_a$ is the external bisector at $B$: the ray $BI_a$ bisects the angle
+$180^\circ-\beta$ between ray $BC$ and the extension of $AB$ beyond $B$, so it makes the obtuse angle $90^\circ+\frac\beta2$ with ray $BA$, and
+the opposite ray makes the acute angle $90^\circ-\frac\beta2$ with $BA$. Since $DA=DB$, the foot of $D$ on line $AB$ is the midpoint of $AB$,
+on ray $BA$; hence $D$ lies on the ray opposite to $BI_a$, $B$ is between $D$ and $I_a$, and $BD\cos(90^\circ-\frac\beta2)=\frac c2$, that is,
+$BD=\dfrac{c}{2\sin(\beta/2)}$. As $\angle I_aBC=90^\circ-\frac\beta2$, $BI_a=\dfrac{r_a}{\cos(\beta/2)}$. So $D\ne I_a$, similarly $E\ne I_a$, and
+$\Omega$ exists because $D,E$ lie on the different lines $I_aB$, $I_aC$. The point $B$ is inside the chord $DI_a$ of $\Omega$, so its power is
+\[\operatorname{pow}_\Omega(B)=-BD\cdot BI_a=-\frac{c\,r_a}{2\sin\frac\beta2\cos\frac\beta2}=-\frac{c\,r_a}{\sin\beta},\qquad\text{and likewise}\qquad
+\operatorname{pow}_\Omega(C)=-\frac{b\,r_a}{\sin\gamma}.\]
+By the law of sines $b\sin\gamma=c\sin\beta$, so
+\[\frac{\operatorname{pow}_\Omega(B)}{c^2}=\frac{\operatorname{pow}_\Omega(C)}{b^2}=-\lambda,\qquad \lambda=\frac{r_a}{c\sin\beta}&gt;0.\]
+In particular $B$ and $C$ are inside $\Omega$, so line $BC$ meets $\Omega$ at two points $F\ne G$; the circle $\eta=AFG$ exists since $A\notin BC$.</p><p><strong>An affine function.</strong> For a circle $\kappa$ with centre $K$ and radius $R$ write $\operatorname{pow}_\kappa(P)=PK^2-R^2$. The
+difference $\ell(P)=\operatorname{pow}_\eta(P)-\operatorname{pow}_\omega(P)$ has no quadratic terms: it is an affine function of the coordinates
+of $P$. We know its values at $A,B,C$:</p><ul class="ct-ul"><li><p>$\ell(A)=0$, as $A$ lies on both circles;</p></li><li><p>for a point $P$ of line $BC$, $\operatorname{pow}_\eta(P)$ and $\operatorname{pow}_\Omega(P)$ both equal the signed product
+$(F-P)\cdot(G-P)$, since both circles meet line $BC$ at $F,G$; so $\ell(B)=\operatorname{pow}_\Omega(B)-0=-\lambda c^2$ and $\ell(C)=-\lambda b^2$.</p></li></ul><p>Compare with the affine function $g(P)=2(A-O)\cdot(P-A)$. Clearly $g(A)=0$, and since $OA=OB$,
+$2(A-O)\cdot(A-B)=OA^2-OB^2+AB^2=c^2$, so $g(B)=-c^2$; likewise $g(C)=-b^2$. Two affine functions that agree at three non-collinear points
+are equal, so $\ell=\lambda g$.</p><p><strong>Conclusion.</strong> A common point $P$ of $\omega$ and $\eta$ has $\ell(P)=0$, hence $g(P)=0$: it lies on the line through $A$ perpendicular to
+$OA$, which is the tangent to $\omega$ at $A$ and meets $\omega$ only at $A$. So $\omega$ and $\eta$ have exactly one common point, $A$; two
+circles with exactly one common point are tangent there. Hence the circumcircles of $ABC$ and $AFG$ are tangent at $A$.</p>
+<h4>Solution 3 (Inversion at $A$: two parallel lines)</h4>
+<p>Let $a,b,c$ be the sides and $\beta,\gamma$ the angles at $B,C$ of triangle $ABC$, let $\Omega$ be the circle $I_aDE$, and let $r_a$ be
+the distance from $I_a$ to $BC$.</p><p><strong>The powers of $B$ and $C$ with respect to $\Omega$.</strong> The ray $BI_a$ bisects the angle $180^\circ-\beta$ between ray $BC$ and the
+extension of $AB$ beyond $B$, so it makes the angle $90^\circ+\frac\beta2$ with ray $BA$, and the opposite ray makes the acute angle
+$90^\circ-\frac\beta2$ with $BA$. As $DA=DB$, the foot of $D$ on line $AB$ is the midpoint of $AB$, on ray $BA$; hence $D$ is on the ray
+opposite to $BI_a$, $B$ is between $D$ and $I_a$, and $BD=\dfrac{c}{2\sin(\beta/2)}$. Since $\angle I_aBC=90^\circ-\frac\beta2$,
+$BI_a=\dfrac{r_a}{\cos(\beta/2)}$. In the same way $C$ is between $E$ and $I_a$ with $CE=\dfrac{b}{2\sin(\gamma/2)}$, $CI_a=\dfrac{r_a}{\cos(\gamma/2)}$;
+$\Omega$ exists since $D\ne I_a$ and $E\ne I_a$ lie on the different lines $I_aB$, $I_aC$. Thus $B$ and $C$ are inside $\Omega$, line $BC$ meets
+$\Omega$ at two points $F,G$, the points $B,C$ lie strictly between $F$ and $G$, and by the power of a point and the law of sines
+($c\sin\beta=b\sin\gamma$)
+\[\frac{BF\cdot BG}{c^2}=\frac{BD\cdot BI_a}{c^2}=\frac{r_a}{c\sin\beta}=\frac{r_a}{b\sin\gamma}=\frac{CE\cdot CI_a}{b^2}=\frac{CF\cdot CG}{b^2}.\]
+Call this common value $\lambda$.</p><p><strong>Inversion.</strong> Invert with centre $A$ and radius $1$, and write $P'$ for the image of $P$; recall $P'Q'=\dfrac{PQ}{AP\cdot AQ}$. Line $BC$
+becomes a circle $\kappa$ through $A$ containing $B',C',F',G'$; the circle $ABC$ becomes the line $B'C'$, and the circle $AFG$ the line $F'G'$.
+The inversion maps line $BC$ continuously and bijectively onto $\kappa$ without $A$, so the segment $FG$ goes to the arc $F'G'$ of $\kappa$ not
+containing $A$; as $B,C$ are inside segment $FG$, the points $B',C'$ lie on this arc, on the same side of line $F'G'$. Therefore the inscribed
+angles $\angle F'B'G'$ and $\angle F'C'G'$ are equal, say to $\theta$. Moreover
+\[B'F'\cdot B'G'=\frac{BF\cdot BG}{c^2\,AF\cdot AG}=\frac{\lambda}{AF\cdot AG}=\frac{CF\cdot CG}{b^2\,AF\cdot AG}=C'F'\cdot C'G'.\]
+So the triangles $F'B'G'$ and $F'C'G'$ have equal areas $\frac12B'F'\cdot B'G'\sin\theta=\frac12C'F'\cdot C'G'\sin\theta$. They share the base
+$F'G'$, so $B'$ and $C'$ are at the same distance from line $F'G'$, on the same side: $B'C'\parallel F'G'$. These lines are different, because
+a line meets $\kappa$ in at most two of the four distinct points $B',C',F',G'$.</p><p><strong>Conclusion.</strong> A common point $P\ne A$ of the circles $ABC$ and $AFG$ would give a common point $P'$ of the distinct parallel lines
+$B'C'$ and $F'G'$, which is impossible. So the two circles have only the point $A$ in common, and therefore they are tangent at $A$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p11">

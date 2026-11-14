@@ -105,7 +105,7 @@ sizes $2$ and $5$, and $g(2)\oplus g(5)=1\oplus1=0$. So the winner is $\boxed{A}
 <h3>Problem 2</h3>
 <div class="ct-meta">Geometry &middot; LPS VII, Chapter 11: Similarity, Homothety, and Ratio Geometry</div>
 <div class="ct-text"><p>Let $ABC$ be an acute-angled triangle with orthocenter $H$ and $AD$, $BE$, $CF$ be its altitudes. Let $G$ be the intersection of $EF$ and $AD$ and $I$ be the antipode of $A$ with respect to $(ABC)$. Let $J$ be the intersection of $AI$ and $BC$.</p><p>Show that $HI$ and $GJ$ are parallel.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 (The similar triangle $AEF$)</h4>
 <div class="ct-fig"><img style="width:311px" src="/assets/contests/2026-27/pamo-2_s1.svg" alt="Figure for the solution"></div>
 <p>Since the triangle is acute, $E$ lies on segment $AC$, $F$ on segment $AB$, and $H$ inside the triangle.</p><p><em>Similarity.</em> In the right triangles $ABE$ and $ACF$ we have $AE=AB\cos A$ and $AF=AC\cos A$. With the common angle at $A$, triangle $AEF$ is
@@ -129,6 +129,30 @@ $AFG$, $\angle AGF=180^\circ-C-(90^\circ-B)=90^\circ+B-C$, and the law of sines 
 \[AG=\frac{AF\sin C}{\sin(90^\circ+B-C)}=\frac{b\cos A\,\sin C}{\cos(B-C)} .\]</p><p><em>Comparison.</em>
 \[\frac{AG}{AH}=\frac{b\sin C}{2R\cos(B-C)},\qquad \frac{AJ}{AI}=\frac{c\sin B}{2R\cos(B-C)},\]
 and $b\sin C=c\sin B$ by the law of sines. Hence the ratios are equal and $HI\parallel GJ$.</p>
+<h4>Solution 3 (Coordinates and the radical axis)</h4>
+<p>Since the triangle is acute, the foot $D$ lies strictly between $B$ and $C$, and $H$ lies strictly between $A$
+and $D$. Put $D=(0,0)$, $A=(0,a)$, $B=(-u,0)$, $C=(v,0)$ with $a,u,v&gt;0$, and let $h=\dfrac{uv}{a}$.</p><p><em>The orthocentre.</em> The slope of $AC$ is $-a/v$, so the altitude from $B$ has slope $v/a$ and equation $y=\frac{v}{a}(x+u)$. It meets $AD$
+(the line $x=0$) at $H=(0,h)$.</p><p><em>The antipode $I$ and the point $J$.</em> The circle
+\[x^2+y^2+(u-v)x+(h-a)y-uv=0\]
+passes through $B$ and $C$ (substitute $y=0$: the quadratic $x^2+(u-v)x-uv=(x+u)(x-v)$ vanishes at $x=-u$ and $x=v$) and through $A$ (it gives
+$a^2+(h-a)a-uv=ah-uv=0$). So it is the circumcircle, with centre $O=\bigl(\frac{v-u}2,\frac{a-h}2\bigr)$. The antipode of $A$ is
+$I=2O-A=(v-u,\,-h)$. The point of segment $AI$ with $y=0$ is $A+t(I-A)$ with $a-t(a+h)=0$, i.e. $t=\frac a{a+h}$, so
+\[J=\Bigl(\frac{a(v-u)}{a+h},\,0\Bigr).\]</p><p><em>The point $G$.</em> Since $\angle AEH=\angle AFH=90^\circ$, the points $E,F$ lie on the circle with diameter $AH$; since $\angle BEC=\angle BFC=90^\circ$,
+they lie on the circle with diameter $BC$. A point $X$ lies on the circle with diameter $PQ$ exactly when $\overrightarrow{XP}\cdot\overrightarrow{XQ}=0$,
+so these circles are
+\begin{align*}
+x^2+(y-a)(y-h)=0&amp;\iff x^2+y^2-(a+h)y+uv=0,\\
+(x+u)(x-v)+y^2=0&amp;\iff x^2+y^2+(u-v)x-uv=0,
+\end{align*}
+where we used $ah=uv$. Subtracting the second equation from the first gives
+\[(v-u)x-(a+h)y+2uv=0 .\]
+This is the equation of a line (the coefficient of $y$ is $-(a+h)\ne0$), and both $E$ and $F$ satisfy it. As $E\ne F$ ($E$ lies on $AC$, $F$ on $AB$,
+and neither is $A$), it is the line $EF$. Putting $x=0$ gives
+\[G=\Bigl(0,\,\frac{2uv}{a+h}\Bigr)=\Bigl(0,\,\frac{2ah}{a+h}\Bigr).\]</p><p><em>Conclusion.</em>
+\[\overrightarrow{HI}=(v-u,\,-2h),\qquad
+\overrightarrow{GJ}=\Bigl(\frac{a(v-u)}{a+h},\,-\frac{2ah}{a+h}\Bigr)=\frac{a}{a+h}\,\overrightarrow{HI}.\]
+The two vectors are non-zero multiples of each other, so $HI\parallel GJ$. (When $u=v$, that is $AB=AC$, both lines are the axis $AD$.)
+No division by $v-u$ was needed, so the computation covers every acute triangle.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p3">

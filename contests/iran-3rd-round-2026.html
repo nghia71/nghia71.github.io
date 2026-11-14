@@ -77,7 +77,7 @@ description: Iranian Mathematical Olympiad 2025, Third Round: problems with answ
 <div class="ct-text"><p>Let $ABCD$ be a convex quadrilateral satisfying $BC=CD=DA$. The diagonals $AC$ and $BD$ intersect at $P$. Points $Q$, $A$, $B$, $R$ lie on the line $AB$ in this order and satisfy
 \[\angle AQD=90^\circ-\angle DAP,\qquad \angle BRC=90^\circ-\angle PBC.\]
 Let $S=CR\cap DQ$. Prove that $SP\perp AB$.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 (A phantom point on the circle $PCD$)</h4>
 <div class="ct-fig"><img style="width:308px" src="/assets/contests/2026-27/iran-3rd-round-1_s1.svg" alt="Figure for the solution"></div>
 <p><em>Notation.</em> We use directed angles between lines: $\measuredangle(m,n)$ is the angle through which the line $m$ must be turned
@@ -107,6 +107,23 @@ line $SP=CA$ is perpendicular to $AB$. So assume from now on that $S$ differs fr
 \[\measuredangle(SP,SD)=\measuredangle(CP,CD)=\operatorname{dir}CD-\operatorname{dir}CA=-\alpha .\]
 Therefore $\operatorname{dir}SP=\operatorname{dir}SD+\alpha=(90^\circ-\alpha)+\alpha=90^\circ$, that is, $SP\perp AB$.</p><p>In the figure ($S$ beyond the side $CD$) this is the familiar chase: $SDPC$ is cyclic because $\angle DSC+\angle DPC=180^\circ$, then $\angle DSP=\angle DCP=\alpha$, and the line $SP$ makes
 the angle $180^\circ-(90^\circ-\alpha)-\alpha=90^\circ$ with $QR$. The directed angles make the same chase valid when $S$ falls on the same side of $CD$ as $P$ (this happens, for example, when $\angle CAB$ or $\angle DBA$ is obtuse).</p>
+<h4>Solution 3 (Coordinates along $AB$)</h4>
+<p>Put $A=(0,0)$ and $B=(L,0)$ with $L&gt;0$, and label the quadrilateral counterclockwise, so that it lies above the $x$-axis: $C=(c,u)$ and $D=(d,v)$ with $u,v&gt;0$. Convexity gives two more signs. The point $D$ lies to the left of the ray $AC$ and to the left of the ray $BC$, so
+\[cv-du&gt;0,\qquad J_B=(c-L)v-(d-L)u&gt;0 .\]
+Put $J=cv-(d-L)u=J_B+Lv$; then $J&gt;0$.</p><p><strong>The point $P$.</strong> The points of the line $AC$ are $(tc,tu)$ and those of the line $BD$ are $(L+s(d-L),sv)$. Equating, $tu=sv$ and $tc=L+s(d-L)$; eliminating $s$ gives $tJ=Lv$. So the abscissa of $P$ is $p=Lcv/J$, and
+\[p-d=\frac{(L-d)(cv-du)}{J},\qquad p-c=-\frac{c\,J_B}{J}.\]</p><p><strong>The two angles.</strong> Let $\alpha=\angle DAP=\angle DAC$ and $\beta=\angle PBC=\angle DBC$. Since $DA=DC$, the angle $\alpha$ is a base angle of the isosceles triangle $DAC$, so it is acute; since $CB=CD$, the angle $\beta$ is a base angle of the isosceles triangle $CBD$, so it is acute too. The tangent of the angle between two vectors is their cross product divided by their dot product, so
+\[\tan\alpha=\frac{cv-du}{cd+uv},\qquad \tan\beta=\frac{J_B}{(c-L)(d-L)+uv},\]
+with all four numerators and denominators positive.</p><p><strong>The lines $DQ$ and $CR$.</strong> The point $Q$ lies to the left of $A$, so the ray $QA$ points in the positive $x$-direction, and $\angle AQD=90^\circ-\alpha$ says that the line $QD$ makes the angle $90^\circ-\alpha$ with this direction. Its slope is therefore $\cot\alpha=\dfrac{cd+uv}{cv-du}&gt;0$. In the same way $R$ lies to the right of $B$, the ray $RB$ points in the negative $x$-direction, and the line $RC$ has slope $-\cot\beta=-\dfrac{(c-L)(d-L)+uv}{J_B}&lt;0$. At the abscissa $p$ the two lines have the ordinates
+\[y_1=v+(p-d)\cot\alpha=v+\frac{(L-d)(cd+uv)}{J},\qquad y_2=u+(p-c)(-\cot\beta)=u+\frac{c\bigl((c-L)(d-L)+uv\bigr)}{J}.\]</p><p><strong>The two ordinates are equal.</strong> We have $J(y_1-y_2)=G$, where
+\[G=J(v-u)+(L-d)(cd+uv)-c(c-L)(d-L)-cuv .\]
+Since $J(v-u)=cv^2-cuv+(L-d)(uv-u^2)$ and $-c(c-L)(d-L)=(L-d)(c^2-cL)$,
+\[G=cv^2-2cuv+(L-d)\bigl(2uv-u^2+cd+c^2-cL\bigr).\]
+Now we use the hypotheses. The equations $DA^2=DC^2$ and $CB^2=DA^2$ read
+\[c^2+u^2=2cd+2uv,\tag{1}\]
+\[(c-L)^2+u^2=d^2+v^2.\tag{2}\]
+By (1), $u^2=2cd+2uv-c^2$, so the last bracket equals $2c^2-cd-cL=c(2c-d-L)$, and
+\[G=c\bigl(v^2-2uv+(L-d)(2c-d-L)\bigr)=c\bigl(v^2+d^2-2uv-2cd+2cL-L^2\bigr).\]
+By (1) again, $-2uv-2cd=-c^2-u^2$, so the last bracket is $(d^2+v^2)-\bigl((c-L)^2+u^2\bigr)$, which is $0$ by (2). Hence $G=0$ and $y_1=y_2$.</p><p><strong>Conclusion.</strong> Both lines $DQ$ and $CR$ pass through the point $(p,y_1)$. Their slopes have opposite signs, so they are not parallel and meet in exactly one point; hence $S=(p,y_1)$. Moreover $S\ne P$: otherwise $P$ would lie on the line $DQ$, so the line $DQ$ would be the line $DP=DB$ and $Q=B$, which is false. So $S$ and $P$ are different points with the same abscissa, and the line $SP$ is perpendicular to $AB$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p2">
@@ -355,8 +372,8 @@ where we used (1) for the point $P$. So the line $QR$ passes through $N=(u,v)$, 
 \[PT=ST.\]
 Prove that, as $QR$ varies, the points $T$ lie on a fixed circle.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>proof; the circle has centre $O'$ on segment $OP$ with $PO'=\dfrac{r^3}{r^2+\rho^2}$ and radius $\dfrac{r\rho^2}{r^2+\rho^2}$ ($r,\rho$ the radii of $\omega,\Omega$)</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Inversion, an angle bisector and a homothety)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Inversion, an angle bisector and a homothety)</h4>
 <div class="ct-fig"><img style="width:403px" src="/assets/contests/2026-27/iran-3rd-round-9_s1.svg" alt="Figure for the solution"></div>
 <p>Let $r&lt;\rho$ be the radii of $\omega$ and $\Omega$. The chord $QR$ is not on the line $OP$ (otherwise the circle $OQR$ does not exist).</p><p><strong>Step 1: the point $S'$.</strong> Let $S'$ be the point of the ray $OS$ with $OS\cdot OS'=\rho^2$, i.e. the image of $S$ under the inversion in $\Omega$; so $OS'=\rho^2/r$.
 This inversion fixes $Q$ and $R$ and maps the circle $OQR$, which passes through its centre $O$, to the line $QR$. Hence $S'$ lies on the line $QR$. Since $OS'&gt;\rho$, the point
@@ -368,6 +385,19 @@ By the angle bisector theorem
 \[\frac{PT}{TS'}=\frac{OP}{OS'}=\frac{r}{\rho^2/r}=\frac{r^2}{\rho^2},\qquad\text{so}\qquad \overrightarrow{PT}=k\,\overrightarrow{PS'},\quad k=\frac{r^2}{r^2+\rho^2}.\]</p><p><strong>Step 3: the fixed circle.</strong> The point $S'$ lies on the fixed circle $\Omega'$ with centre $O$ and radius $\rho^2/r$. By Step 2, $T$ is the image of $S'$ under the homothety
 with centre $P$ and ratio $k$, which depends only on $r$ and $\rho$. Hence $T$ lies on the image of $\Omega'$ under this homothety: the circle with centre $O'$ on the segment $PO$,
 $PO'=k\,r=\dfrac{r^3}{r^2+\rho^2}$, and radius $k\cdot\dfrac{\rho^2}{r}=\dfrac{r\rho^2}{r^2+\rho^2}$. This circle does not depend on the chord $QR$.</p>
+<h4>Solution 2 (Coordinates with a horizontal chord)</h4>
+<p>Let $r$ and $\rho$ be the radii of $\omega$ and $\Omega$, so $0&lt;r&lt;\rho$, and put $k=\dfrac{r^2}{\rho^2}$, so $0&lt;k&lt;1$. The line $QR$ does not pass through $O$ (otherwise $O,Q,R$ are collinear and the circle $OQR$ does not exist). Take $O$ as the origin and the $x$-axis parallel to $QR$, so that $QR$ is the line $y=d$ with $d\ne0$. Then $P=(p,d)$ with $p^2+d^2=r^2$, and $Q,R$ are the points $\bigl(\pm\sqrt{\rho^2-d^2},\,d\bigr)$ in some order.</p><p><strong>The point $S$.</strong> The perpendicular bisector of $QR$ is the $y$-axis, so the circle $OQR$ has its centre at a point $(0,g)$ and, as it passes through $O$, its equation is $x^2+y^2=2gy$. It passes through $Q$, where $x^2+y^2=\rho^2$ and $y=d$; so $2g=\rho^2/d$ and the circle is
+\[x^2+y^2=\frac{\rho^2}{d}\,y .\]
+At a common point with $\omega$ we have $x^2+y^2=r^2$, hence $y=kd$. So $S=(s,kd)$ with $s^2+k^2d^2=r^2$. (The condition that $S$ and $Q$ lie on opposite sides of $OR$ chooses the sign of $s$; the computation below is the same for both signs.) Then
+\[s^2-p^2=(r^2-k^2d^2)-(r^2-d^2)=(1-k^2)d^2&gt;0,\]
+so in particular $s\ne p$.</p><p><strong>The point $T$.</strong> Let $T=(t,d)$ be a point of $QR$. Then $PT^2=(t-p)^2$ and $ST^2=(t-s)^2+(1-k)^2d^2$, so $PT=ST$ is equivalent to
+\[2t(s-p)=s^2-p^2+(1-k)^2d^2=(1-k^2)d^2+(1-k)^2d^2=2(1-k)d^2 .\]
+As $s\ne p$, there is exactly one such point, with
+\[t=\frac{(1-k)d^2}{s-p}=\frac{(1-k)d^2(s+p)}{s^2-p^2}=\frac{s+p}{1+k}.\]</p><p><strong>The fixed circle.</strong> Substitute $s=(1+k)t-p$ into $s^2-p^2=(1-k^2)d^2$:
+\[(1+k)t\bigl((1+k)t-2p\bigr)=(1-k^2)d^2,\qquad\text{so}\qquad (1+k)t^2-2pt=(1-k)d^2 .\]
+Adding $(1+k)d^2$ to both sides gives $(1+k)(t^2+d^2)=2(pt+d^2)$. In vectors, with $\vec{T}=(t,d)$ and $\vec P=(p,d)$, this is
+\[(1+k)\,\vec T\cdot\vec T=2\,\vec T\cdot\vec P,\qquad\text{that is}\qquad \vec T\cdot\bigl(\vec T-\vec U\bigr)=0,\quad \vec U=\frac{2}{1+k}\,\vec P .\]
+The point $U$ does not depend on the chord, and the last equation says that $T=O$, $T=U$ or $\angle OTU=90^\circ$: the point $T$ lies on the circle with diameter $OU$. This circle has centre $\dfrac{\rho^2}{r^2+\rho^2}\,P$ on the segment $OP$ and radius $\dfrac{r\rho^2}{r^2+\rho^2}$, and it is the same for every chord $QR$.</p>
 </div></details>
 </section>
 <h2 class="ct-group" id="number-theory">Number Theory</h2>
@@ -434,8 +464,8 @@ and $5$, $7$, $11$ divide $2^s-1$. The orders of $2$ modulo $5,7,11$ are $4,3,10
 <div class="ct-meta">Number Theory &middot; LPS VII, Chapter 49: Combinatorial Number Theory and Structure</div>
 <div class="ct-text"><p>Let $r$ be a positive integer, and let $a_1,a_2,\ldots,a_r$ be distinct positive integers. For each $i\ge r+1$, define $a_i$ to be the smallest positive multiple of $i$ that does not occur among $a_1,a_2,\ldots,a_{i-1}$. Prove that there exists a positive integer $N$ such that
 \[a_n\in\{n,2n\}\qquad\text{for every integer } n&gt;N.\]</p></div>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Tokens ahead of the clock and their odd parts)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Tokens ahead of the clock and their odd parts)</h4>
 <p><strong>Step 1: the values that are &ldquo;ahead&rdquo;.</strong> All terms are distinct. For $n\ge r$ let $U_n=\{a_1,\dots,a_n\}$ and
 $H_n=\{a\in U_n:a&gt;n\}$. If $m&gt;r$ and $m\notin U_{m-1}$, then $a_m=m$; so $m\in U_m$ for every $m&gt;r$. Hence $U_n$ contains all of $r+1,\dots,n$, and exactly $r$ of its $n$ elements are
 outside this range. Among them, those that are at most $r$ are among $a_1,\dots,a_r$ (since $a_m\ge m&gt;r$ for $m&gt;r$), so their number does not depend on $n$. Therefore
@@ -448,6 +478,8 @@ $h\cdot\max O$. Hence it is constant for $n\ge N_2$ (some $N_2\ge N_1$): <em>for
 $2p,3p\in H_{p-1}$. Moreover $4p\in H_p$ (either $k=4$ and the token lands there, or $k&gt;4$ and $4p\in H_{p-1}$).</p><ul class="ct-ul"><li><p>At time $2p$ the tokens at $2p$ and $4p$ are still in place, so the token at $2p$ makes a big jump. As $2p&gt;N_2$, its multiplier is a power of $2$, hence at least $4$, so
 $3\cdot2p=6p\in H_{2p-1}$.</p></li><li><p>At time $3p$ the tokens at $3p$ (present since time $p-1$) and at $6p$ (present at time $2p-1$) are still in place. So the token at $3p$ makes a big jump.</p></li></ul><p>Thus a big jump at $p&gt;N_2$ implies a big jump at $3p$, hence at $9p,27p,\dots$. But then $\mathrm{od}(3^ip)=3^i\,\mathrm{od}(p)$ belongs to the finite set $O$ for every $i\ge0$, a
 contradiction.</p><p>So for every $n&gt;N_2$ either $a_n=n$, or the token at $n$ jumps with $k=2$ and $a_n=2n$. Taking $N=N_2$ completes the proof.</p>
+<h4>Solution 2 (Descending on the multiplier)</h4>
+<p>For $n&gt;r$ the term $a_n$ is a multiple of $n$; write $a_n=k_nn$ and call the positive integer $k_n$ the <em>multiplier</em> of $n$. By definition, $a_n=k_nn$ is the smallest multiple of $n$ not among $a_1,\dots,a_{n-1}$; so the numbers $n,2n,\dots,(k_n-1)n$ all occur among $a_1,\dots,a_{n-1}$. Fix an integer $K\ge3$ with $K&gt;\max\{a_1,\dots,a_r\}$.</p><p><strong>Step 1: every multiplier is at most $K$.</strong> We use induction on $n&gt;r$. Suppose $k_i\le K$ for all $r&lt;i&lt;n$. The number $Kn$ is not one of $a_1,\dots,a_r$, as these are smaller than $K\le Kn$; and it is not $a_i$ for $r&lt;i&lt;n$, as $a_i=k_ii\le Ki&lt;Kn$. So $Kn$ does not occur among $a_1,\dots,a_{n-1}$, hence $a_n\le Kn$ and $k_n\le K$.</p><p><strong>Step 2: the descent.</strong> We prove: <em>if $k\ge3$ and only finitely many $n$ have $k_n&gt;k$, then only finitely many $n$ have $k_n=k$.</em></p><p>Let $X$ be the set consisting of $a_1,\dots,a_r$ and of the values $a_i$ with $i&gt;r$ and $k_i&gt;k$; it is finite. Take $n&gt;r$ with $k_n=k$. Then $(k-1)n$ occurs among $a_1,\dots,a_{n-1}$, and there are two possibilities.</p><ul class="ct-ul"><li><p>$(k-1)n\in X$. Call such $n$ of the <em>first type</em>. Different $n$ give different numbers $(k-1)n$, so there are only finitely many indices of the first type.</p></li><li><p>$(k-1)n=a_i=k_ii$ with $r&lt;i&lt;n$ and $k_i\le k$. Since $i&lt;n$, we get $k_i=(k-1)n/i&gt;k-1$, so $k_i=k$ and $i=\frac{k-1}{k}\,n$. Call $n$ of the <em>second type</em> and $i$ its <em>predecessor</em>: a smaller index, again with multiplier $k$.</p></li></ul><p>Start from any $n$ with $k_n=k$ and pass to predecessors as long as possible. The indices strictly decrease, so the process stops, and it can stop only at an index $n_0$ of the first type. Each step back multiplies the index by $\frac{k-1}{k}$, so $n=\bigl(\frac{k}{k-1}\bigr)^jn_0$ for some $j\ge0$, that is, $(k-1)^jn=k^jn_0$. Since $\gcd(k,k-1)=1$, the number $(k-1)^j$ divides $n_0$; as $k-1\ge2$, this gives $2^j\le n_0$. So $n$ is determined by one of the finitely many indices $n_0$ of the first type and one of finitely many exponents $j$, and there are only finitely many such $n$.</p><p><strong>Conclusion.</strong> By Step 1 no $n$ has $k_n&gt;K$. Applying Step 2 with $k=K$, then $k=K-1$, and so on down to $k=3$, we find that only finitely many $n$ have $k_n\ge3$. Let $N$ be larger than $r$ and than all these $n$. For every $n&gt;N$ the multiplier is $1$ or $2$, that is, $a_n\in\{n,2n\}$.</p>
 </div></details>
 </section>
 <h2 class="ct-group" id="algebra">Algebra</h2>
@@ -567,8 +599,8 @@ $\emptyset,\{1\}$; from a cyclic order $B_1,\dots,B_{2^{n-1}}$ for $n-1$ we get 
 <div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 52: Advanced Combinatorial Structure and Hybrid Methods</div>
 <div class="ct-text"><p>Find all even natural numbers $n$, such that an $n\times n$ table can be filled with the numbers $1,2,3,\ldots,n^2$ (each number exactly once) in such a way that for every cell containing an odd number, the sum of the numbers in its row is strictly greater than the sum of the numbers in its column, and for every cell containing an even number, the sum of the numbers in its row is strictly less than the sum of the numbers in its column.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>all even $n$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Odd numbers in the left half, even numbers in the right half)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Odd numbers in the left half, even numbers in the right half)</h4>
 <p><strong>Answer: such a table exists for every even $n$.</strong></p><p>Let $n$ be even. For $m=1,2,\dots,\frac{n^2}{4}$ define the four numbers
 \[o_m=2m-1,\qquad o_m'=n^2-2m+1,\qquad e_m=2m,\qquad e_m'=n^2+2-2m .\]
 As $m$ runs from $1$ to $\frac{n^2}4$, the numbers $o_m$ are the odd numbers below $\frac{n^2}{2}$ and the $o_m'$ are the odd numbers above $\frac{n^2}{2}$; the $e_m$ are the even numbers up
@@ -578,6 +610,13 @@ to $\frac{n^2}2$ and the $e_m'$ are the even numbers from $\frac{n^2}{2}+2$ to $
 columns consists of $\frac n2$ pairs $\{o_m,o_m'\}$, so its sum is $\frac{n^3}{2}$. Each of the last $\frac n2$ columns consists of $\frac n2$ pairs $\{e_m',e_m\}$, so its sum is $\frac{n^3}{2}+n$.</p><p><strong>Check.</strong> All odd numbers are in the first $\frac n2$ columns, where (row sum) $=\frac{n^3}2+\frac n2&gt;\frac{n^3}{2}=$ (column sum). All even numbers are in the last $\frac n2$ columns, where
 (row sum) $=\frac{n^3}2+\frac n2&lt;\frac{n^3}{2}+n=$ (column sum). So the table satisfies the condition, and the answer is
 \[\boxed{\text{all even } n}.\]</p><p><em>Remark.</em> In any valid table the cell in row $i$ and column $j$ holds an odd number exactly when (row sum $i$) $&gt;$ (column sum $j$); in our table the odd numbers fill whole columns. Filling whole rows with them instead cannot work: the $\frac n2$ odd rows would contain all odd numbers, with total $\bigl(\frac{n^2}{2}\bigr)^2$, so their average sum is $\frac{n^3}{2}$, while the column sums average $\frac1n\cdot\frac{n^2(n^2+1)}{2}=\frac{n^3}{2}+\frac n2$. Some odd row then has sum at most $\frac{n^3}{2}$ and some column has sum at least $\frac{n^3}{2}+\frac n2$, and their common cell is odd with row sum smaller than column sum.</p>
+<h4>Solution 2 (Two by two blocks)</h4>
+<p><strong>Answer: such a table exists for every even $n$.</strong></p><p>Let $n=2m$ and cut the table into $m^2$ blocks of size $2\times2$ (rows $2i-1,2i$ and columns $2j-1,2j$). Number the blocks $h=0,1,\dots,m^2-1$ in any order, put $h'=m^2-1-h$, and fill block number $h$ as
+\[\begin{array}{|c|c|}\hline 4h+1&amp;4h'+4\\\hline 4h'+3&amp;4h+2\\\hline\end{array}\]
+<strong>Every number once.</strong> As $h$ runs over $0,1,\dots,m^2-1$, so does $h'$. Hence the entries $4h+1$ are exactly the numbers $\equiv1\pmod 4$ from $1$ to $n^2-3$, the entries $4h+2$ those $\equiv2$, the entries $4h'+3$ those $\equiv3$, and the entries $4h'+4$ those $\equiv0$ from $4$ to $n^2$. So each of $1,2,\dots,n^2$ appears exactly once. For $n=4$, numbering the blocks row by row, the table is
+\[\begin{array}{|c|c|c|c|}\hline 1&amp;16&amp;5&amp;12\\\hline 15&amp;2&amp;11&amp;6\\\hline 9&amp;8&amp;13&amp;4\\\hline 7&amp;10&amp;3&amp;14\\\hline\end{array}\]
+<strong>Sums.</strong> Since $h+h'=m^2-1$, in each block both rows have sum $4(h+h')+5=n^2+1$, the left column has sum $4(h+h')+4=n^2$, and the right column has sum $4(h+h')+6=n^2+2$. A row of the table crosses $m$ blocks, so every row sum is $m(n^2+1)$. A column with an odd index consists of left columns of $m$ blocks, so its sum is $mn^2$; a column with an even index has sum $m(n^2+2)$.</p><p><strong>Check.</strong> The odd entries $4h+1$ and $4h'+3$ are exactly the entries in the columns with odd index, where the row sum $m(n^2+1)$ is greater than the column sum $mn^2$. The even entries are exactly those in the columns with even index, where the row sum $m(n^2+1)$ is less than the column sum $m(n^2+2)$. So the table has the required property, and the answer is
+\[\boxed{\text{all even } n}.\]</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p18">

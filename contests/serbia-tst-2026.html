@@ -125,7 +125,7 @@ a_{n,m}=\sum_{k\ge0}\frac{d_k(n)d_k(m')}{2^{k+1}}=\sum_{k\ge0}\frac{d_k(1)\,d_k(
 <h3>Problem 3</h3>
 <div class="ct-meta">Geometry &middot; LPS VII, Chapter 24: Cevians, Menelaus, and Projective-Flavored Ratios</div>
 <div class="ct-text"><p>Let $ABC$ be an acute triangle with altitudes $AD$, $BE$, and $CF$, and let $H$ be its orthocenter. The circle with diameter $AC$ intersects the altitude $BE$, outside triangle $ABC$, at the point $K$. Similarly, the circle with diameter $AB$ intersects the altitude $CF$, outside triangle $ABC$, at the point $L$. The circumcircle of triangle $DKL$ intersects the line $BC$ again at the point $G$. Prove that the line $BC$ is tangent to the circumcircle of triangle $GEF$.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 (A circle centred at A, its polar structure, and two harmonic divisions)</h4>
 <div class="ct-fig"><img style="width:391px" src="/assets/contests/2026-27/serbia-tst-3_s1.svg" alt="Figure for the solution"></div>
 <p>Assume first $AB\ne AC$; the case $AB=AC$ is treated at the end. Let $X$ be the intersection of the lines $EF$ and $BC$.</p><p><strong>Tools.</strong> Let $\omega$ be a circle with centre $A$ and radius $\varrho$. For a point $P\ne A$, the <em>polar</em> of $P$ with respect to $\omega$ is the line of all points $Y$ with $\overrightarrow{AP}\cdot\overrightarrow{AY}=\varrho^2$; it is perpendicular to $AP$. The condition is symmetric in $P$ and $Y$, so <em>$Y$ lies on the polar of $P$ if and only if $P$ lies on the polar of $Y$</em>. For four points $P,Q,R,S$ on a line, with signed lengths, the cross ratio is $(P,Q;R,S)=\dfrac{\overline{RP}}{\overline{RQ}}:\dfrac{\overline{SP}}{\overline{SQ}}$; the four points form a <em>harmonic division</em> if $(P,Q;R,S)=-1$. A central projection from a point onto another line preserves cross ratios. We use three standard facts.</p><p><em>Fact 1 (chord and polar).</em> If a line through $P\ne A$ meets $\omega$ at $U,V$, then a point $Q$ of this line lies on the polar of $P$ if and only if $(U,V;P,Q)=-1$. <em>Proof.</em> Let $M$ be the midpoint of $UV$, so $AM\perp UV$, and use coordinates on the line with origin $M$: $U=-u$, $V=u$, $P=p$, $Q=q$. Then $\overrightarrow{AP}\cdot\overrightarrow{AQ}=AM^2+pq$ and $\varrho^2=AM^2+u^2$, so $Q$ is on the polar of $P$ if and only if $pq=u^2$. On the other hand $(U,V;P,Q)=\dfrac{(p+u)(q-u)}{(p-u)(q+u)}$, which equals $-1$ if and only if $2pq=2u^2$. $\square$</p><p><em>Fact 2 (Brokard's theorem: the diagonal triangle is self-polar).</em> Let $K,K',L,L'$ be four points of $\omega$ such that $H=KK'\cap LL'$ lies inside $\omega$ and $W=KL\cap K'L'$, $G_0=KL'\cap K'L$ exist. Then the polar of $H$ is the line $WG_0$, and the polar of $W$ is the line $HG_0$. <em>Proof.</em> As the chords $KK'$ and $LL'$ cross, the points $K$ and $K'$ separate $L$ and $L'$ on $\omega$, so $W$ and $G_0$ are intersections of lines of opposite sides of a convex inscribed quadrilateral; they lie outside the segments $KL,K'L',KL',K'L$, outside $\omega$. Let $P_1$ and $P_2$ be the harmonic conjugates of $W$ with respect to $K,L$ and to $K',L'$; by Fact 1 the polar of $W$ is the line $P_1P_2$ (they are different points, as the lines $KL$ and $K'L'$ meet only at $W$). The projection from $G_0$ of the line $KL$ onto the line $K'L'$ sends $K\mapsto L'$, $L\mapsto K'$, $W\mapsto W$, hence $P_1\mapsto P_2$; so $G_0$ lies on $P_1P_2$. The projection from $H$ sends $K\mapsto K'$, $L\mapsto L'$, $W\mapsto W$, hence again $P_1\mapsto P_2$; so $H$ lies on $P_1P_2$. Thus the polar of $W$ is $HG_0$. In the same way, with the chords $KK'$, $LL'$ through $H$ and projections from $W$ and from $G_0$, the polar of $H$ is $WG_0$. $\square$</p><p><em>Fact 3 (harmonic property of a complete quadrangle)</em> will be used for two quadrangles; in each case we prove it directly in Step 3.</p><p><strong>Step 1: a circle centred at $A$.</strong> The points $B,C,E,F$ lie on the circle with diameter $BC$, and $C,D,H,E$ lie on the circle with diameter $CH$. Hence
@@ -179,6 +179,42 @@ The circle $DKL$ meets $BC$ at $D$ and at a second point $G'$ ($G'=D$ in the tan
 \operatorname{pow}(P,\Gamma)=\Bigl(\mathbf a-\tfrac12\mathbf w\Bigr)\cdot\Bigl(\mathbf h-\tfrac12\mathbf w\Bigr)=\mathbf a\cdot\mathbf h-\tfrac12(\mathbf a\cdot\mathbf w+\mathbf h\cdot\mathbf w)+\tfrac14|\mathbf w|^2=\tfrac14|\mathbf w|^2=PG^2 .
 \]
 As $P$ lies on the line $EF$, this power also equals $\overline{PE}\cdot\overline{PF}$. Hence $\overline{PE}\cdot\overline{PF}=PG^2&gt;0$.</p><p><strong>Step 7: tangency.</strong> The point $G$ is not on the line $EF$: otherwise $G$ and $P$ would be two different common points of the lines $EF$ and $BC$, which are different lines. So the circle $GEF$ exists. It meets the line $BC=PG$ at $G$ and at a second point $G''$ ($G''=G$ in the tangent case), and the power of $P$ with respect to it is $\overline{PG}\cdot\overline{PG''}=\overline{PE}\cdot\overline{PF}=PG^2$. Hence $\overline{PG''}=\overline{PG}$, $G''=G$, and $BC$ is tangent to the circle $GEF$ at $G$.</p><p><strong>The case $AB=AC$.</strong> The figure is symmetric in $AD$, the circle $DKL$ touches $BC$ at $D$, so $G=D$, and the circle $DEF$ (the nine-point circle) is symmetric in $AD$ and passes through $D$; hence it touches $BC$ at $D$.</p>
+<h4>Solution 3 (Coordinates with the foot of the altitude at the origin)</h4>
+<p>Take $D$ as origin and $BC$ as the $x$-axis, scaled so that $A=(0,1)$; then $B=(-b,0)$ and $C=(c,0)$ with $b,c&gt;0$, since the angles at $B$ and $C$ are acute. The angle at $A$ is acute exactly when $\overrightarrow{AB}\cdot\overrightarrow{AC}=1-bc&gt;0$; put
+\[
+s=1-bc&gt;0 .
+\]</p><p><strong>Feet of the altitudes.</strong> The line $AC$ is $\frac xc+y=1$ and has direction $(c,-1)$, so the altitude $BE$ is $y=c(x+b)$; similarly the altitude $CF$ is $y=b(c-x)$. Substituting $y=c(x+b)$ into $\frac xc+y=1$ gives $x\cdot\frac{1+c^2}{c}=1-bc$, so
+\[
+E=\Bigl(\frac{cs}{1+c^2},\ \frac{c(b+c)}{1+c^2}\Bigr),\qquad F=\Bigl(-\frac{bs}{1+b^2},\ \frac{b(b+c)}{1+b^2}\Bigr),
+\]
+the second coordinate of $E$ being $c\bigl(\frac{cs}{1+c^2}+b\bigr)=\frac{c(cs+b+bc^2)}{1+c^2}=\frac{c(b+c)}{1+c^2}$, and $F$ by the same computation with $b,c$ exchanged and $x$ reflected.</p><p><strong>The points $K$ and $L$.</strong> The circle with diameter $AC$ is $x(x-c)+y(y-1)=0$. On the line $y=c(x+b)$ this becomes
+\[
+(1+c^2)x^2-2cs\,x-bcs=0,
+\]
+because $2bc^2-2c=-2cs$ and $b^2c^2-bc=-bcs$. Its discriminant divided by $4$ is $c^2s^2+(1+c^2)bcs=cs(cs+b+bc^2)=cs(b+c)$. The two roots are symmetric about $\frac{cs}{1+c^2}$, the first coordinate of $E$. The point $B$ lies outside this circle (its power is $(-b)(-b-c)=b(b+c)&gt;0$) and $E$, an interior point of the diameter $AC$, lies inside; so one intersection lies between $B$ and $E$, inside the triangle, and the other lies beyond $E$, on the other side of $AC$, outside the triangle. That one is $K$. With
+\[
+v=\sqrt{(b+c)s}
+\]
+we get $K=(k,\,c(k+b))$ with $k=\dfrac{cs+v\sqrt c}{1+c^2}$. In the same way $L=(l,\,b(c-l))$ with $-l=\dfrac{bs+v\sqrt b}{1+b^2}$. In particular $k&gt;0&gt;l$, and both points lie above $BC$.</p><p>These expressions simplify. Since $cs=\frac{c\,v^2}{b+c}$, we have $k=\frac{v\sqrt c\,(v\sqrt c+b+c)}{(b+c)(1+c^2)}$, and $k+b=\frac{cs+bc^2+b+v\sqrt c}{1+c^2}=\frac{b+c+v\sqrt c}{1+c^2}$. Hence, and symmetrically for $L$,
+\[
+\frac{k}{k+b}=\frac{v\sqrt c}{b+c},\qquad \frac{-l}{c-l}=\frac{v\sqrt b}{b+c}. \tag{1}
+\]</p><p><strong>The point $G$.</strong> The points $D,K,L$ are not collinear: a line through the origin that contains a point above the $x$-axis with $x&gt;0$ has positive slope, and then it has no point above the axis with $x&lt;0$. A circle through the origin has an equation $x^2+y^2-gx-ty=0$; it meets $BC$ ($y=0$) at $x=0$ and $x=g$. So the circle $DKL$ is $x^2+y^2-gx-ty=0$ with $G=(g,0)$ (and $g=0$ means that the circle touches $BC$ at $D$, so that $G=D$). Since $K$ is on the circle with diameter $AC$, $k^2+y_K^2=ck+y_K$, and the equation of the circle $DKL$ at $K$ becomes $(c-g)k=(t-1)\,y_K$. In the same way, since $l^2+y_L^2=-bl+y_L$, the equation at $L$ becomes $-(b+g)\,l=(t-1)\,y_L$. With $y_K=c(k+b)$, $y_L=b(c-l)$ and (1),
+\[
+t-1=\frac{(c-g)\,v\sqrt c}{c\,(b+c)}=\frac{(g+b)\,v\sqrt b}{b\,(b+c)},\qquad\text{hence}\qquad \frac{c-g}{\sqrt c}=\frac{g+b}{\sqrt b}. \tag{2}
+\]
+(Explicitly $g=\frac{c\sqrt b-b\sqrt c}{\sqrt b+\sqrt c}$; we only need (2).)</p><p><strong>Tangency.</strong> For $\eta&gt;0$ let $\Gamma_\eta$ be the circle $(x-g)^2+y^2=\eta y$, with centre $(g,\frac\eta2)$ and radius $\frac\eta2$; it touches $BC$ at $G$. A point $(X,Y)$ with $Y&gt;0$ lies on $\Gamma_\eta$ exactly when $\eta=\frac{(X-g)^2+Y^2}{Y}$. Let $\eta_E$ and $\eta_F$ be these values for $E$ and for $F$. If $\eta_E=\eta_F$, then $E,F,G$ lie on one circle $\Gamma_\eta$; they are three different points (the first coordinates of $E$ and $F$ have opposite signs, and $G$ is on $BC$ while $E,F$ are not), so $\Gamma_\eta$ is the circle $GEF$, and it touches $BC$ at $G$. It remains to prove $\eta_E=\eta_F$.</p><p>Using $s^2+(b+c)^2=1+b^2+c^2+b^2c^2=(1+b^2)(1+c^2)$, the point $E=(e,E_y)$ satisfies $e^2+E_y^2=\frac{c^2(1+b^2)}{1+c^2}$, and also $\frac{e}{E_y}=\frac{s}{b+c}$, $\frac1{E_y}=\frac{1+c^2}{c(b+c)}$. So
+\[
+\eta_E=\frac{e^2+E_y^2-2ge+g^2}{E_y}=\frac{1}{b+c}\Bigl(c(1+b^2)-2gs+g^2\,\frac{1+c^2}{c}\Bigr),
+\]
+and in the same way
+\[
+\eta_F=\frac{1}{b+c}\Bigl(b(1+c^2)+2gs+g^2\,\frac{1+b^2}{b}\Bigr).
+\]
+Since $c(1+b^2)-b(1+c^2)=(c-b)s$ and $\frac{1+c^2}{c}-\frac{1+b^2}{b}=\frac{(b-c)s}{bc}$,
+\[
+(b+c)(\eta_E-\eta_F)=s\Bigl(c-b-4g+\frac{(b-c)g^2}{bc}\Bigr)=\frac{s}{bc}\Bigl(b(c-g)^2-c(g+b)^2\Bigr),
+\]
+where the last step is checked by expanding: both brackets times $bc$ equal $bc(c-b)-4bcg+(b-c)g^2$. Squaring (2) gives $b(c-g)^2=c(g+b)^2$. Hence $\eta_E=\eta_F$, and $BC$ is tangent to the circumcircle of $GEF$ at $G$.</p><p>(If $AB=AC$, then $b=c$, (2) gives $g=0$, the circle $DKL$ touches $BC$ at $D$ and $G=D$; the argument above applies unchanged and shows that the circle $DEF$ touches $BC$ at $D$.)</p>
 </div></details>
 </section>
 <h2 class="ct-group" id="day-2">Day 2</h2>
@@ -186,7 +222,7 @@ As $P$ lies on the line $EF$, this power also equals $\overline{PE}\cdot\overlin
 <h3>Problem 4</h3>
 <div class="ct-meta">Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure</div>
 <div class="ct-text"><p>Let $ABCD$ be a cyclic quadrilateral with circumcircle $\Omega$. A point $E$ lies on $\Omega$ such that $AE=AD$. Let $F$ be the intersection of the lines $BE$ and $CD$. The line $AF$ intersects $\Omega$ again at the point $G$. The line through $F$ parallel to $DE$ intersects the line $BC$ at the point $H$. Prove that the line $GH$ is tangent to $\Omega$.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 (The point H has equal power to the circle and to the point F)</h4>
 <div class="ct-fig"><img style="width:238px" src="/assets/contests/2026-27/serbia-tst-4_s1.svg" alt="Figure for the solution"></div>
 <p>We use directed angles between lines modulo $180^\circ$ and assume the figure is not degenerate (in particular $F$ does not lie on $\Omega$). Let $O$ and $R$ be the centre and radius of $\Omega$, and let $\ell$ be the line $FH$.</p><p><strong>Step 1: $HF^2=HB\cdot HC$.</strong> Since $FH\parallel DE$ and $B,C,D,E$ are concyclic,
@@ -223,6 +259,38 @@ So $F$ and $L$ see the segment $HG$ under the same directed angle: $F,L,G,H$ are
 \angle(GH,GF)=\angle(LH,LF)=\angle(LA,LF)=\angle(FA,FH)=\angle(FG,FH).
 \]
 So the triangle $HFG$ has equal angles at $G$ and $F$, and $HG=HF$. Then $HG^2=HF^2$ equals the power of $H$ with respect to $\Omega$, and $G$ lies on $\Omega$. If the line $HG$ met $\Omega$ at a second point $G'$, we would have $\overline{HG}\cdot\overline{HG'}=HG^2$, so $G'=G$. Hence $HG$ is tangent to $\Omega$.</p>
+<h4>Solution 3 (A rational parametrisation of the circle)</h4>
+<p>We assume that the figure is not degenerate: $E\ne D$, the points named in the statement exist, and $H\ne G$.</p><p><strong>Coordinates.</strong> Scale so that $\Omega$ has diameter $1$, and take $A=(0,0)$ with the centre of $\Omega$ at $(0,\frac12)$; so $\Omega$ is $x^2+y^2=y$, and its tangent at $A$ is the line $y=0$. For a real number $t$ put
+\[
+P(t)=\Bigl(\frac{t}{1+t^2},\ \frac{1}{1+t^2}\Bigr).
+\]
+Then $P(t)$ lies on $\Omega$, and conversely every point $(x,y)\ne A$ of $\Omega$ equals $P(t)$ for exactly one $t$, namely $t=\frac xy$: indeed $y=x^2+y^2&gt;0$, and with $x=ty$ the equation gives $y^2(1+t^2)=y$, $y=\frac1{1+t^2}$. So $P(t)$ is the second intersection of $\Omega$ with the line $x=ty$ through $A$. Moreover $AP(t)^2=x^2+y^2=y=\frac1{1+t^2}$.</p><p>Let $B=P(b)$, $C=P(c)$, $D=P(d)$, $E=P(e)$. From $AE=AD$ we get $e^2=d^2$, and as $E\ne D$, $e=-d$ with $d\ne0$.</p><p><strong>Chords and tangents.</strong> For $u\ne v$ the line through $P(u)$ and $P(v)$ is
+\[
+(u+v)\,x+(1-uv)\,y=1 . \tag{1}
+\]
+Indeed, at $P(u)$ the left side is $\frac{(u+v)u+1-uv}{1+u^2}=1$, and symmetrically at $P(v)$; the coefficients are not both $0$, as $u+v=0$ and $uv=1$ would give $u^2=-1$. For $u=v$, the line $2u\,x+(1-u^2)\,y=1$ passes through $P(u)$ and its normal vector $(2u,1-u^2)$ is parallel to $P(u)-(0,\frac12)=\frac{1}{2(1+u^2)}(2u,\,1-u^2)$; so it is the tangent to $\Omega$ at $P(u)$.</p><p><strong>The points $F$ and $G$.</strong> By (1), $DE$ is the line $(1+d^2)y=1$, which is horizontal; so the line through $F$ parallel to $DE$ is horizontal. Again by (1),
+\[
+BE:\ (b-d)x+(1+bd)y=1,\qquad CD:\ (c+d)x+(1-cd)y=1 .
+\]
+Let $F=(x_F,y_F)$. Subtracting the two equations gives
+\[
+(c+2d-b)\,x_F=d(b+c)\,y_F . \tag{2}
+\]
+If $y_F=0$, then $F$ lies on the tangent $y=0$ at $A$, the line $AF$ is this tangent (note $F\ne A$, since $A=(0,0)$ does not satisfy the equation of $BE$), and $G$ would not exist. So $y_F\ne0$; put $g=\frac{x_F}{y_F}$. The line $AF$ is $x=gy$, so $G=P(g)$, and (2) reads
+\[
+(c+2d-b)\,g=d(b+c). \tag{3}
+\]
+Dividing the equation of $BE$ at $F$ by $y_F$ gives
+\[
+\frac1{y_F}=(b-d)g+1+bd. \tag{4}
+\]</p><p><strong>The point $H$.</strong> By (1), $BC$ is $(b+c)x+(1-bc)y=1$. If $b+c=0$, this line is horizontal, parallel to the line through $F$, and $H$ would not exist (or would not be unique). So $b+c\ne0$, and $H=(X,y_F)$ with $(b+c)X=1-(1-bc)y_F$.</p><p><strong>$H$ lies on the tangent at $G$.</strong> The tangent at $G=P(g)$ is $2gx+(1-g^2)y=1$. Using $(b+c)X=1-(1-bc)y_F$ and then (4),
+\begin{align*}
+\frac{b+c}{y_F}\bigl(2gX+(1-g^2)y_F-1\bigr)
+&amp;=2g\Bigl(\frac1{y_F}-1+bc\Bigr)+(b+c)(1-g^2)-\frac{b+c}{y_F}\\
+&amp;=2g\bigl((b-d)g+bd+bc\bigr)-(b+c)\bigl(g^2+(b-d)g+bd\bigr)\\
+&amp;=(b-g)\bigl((c+2d-b)g-d(b+c)\bigr).
+\end{align*}
+(For the last step expand both sides: each equals $(b-c-2d)g^2+(3bd+bc+cd-b^2)g-bd(b+c)$.) By (3) this is $0$, so $2gX+(1-g^2)y_F=1$: the point $H$ lies on the tangent to $\Omega$ at $G$. As $H\ne G$, the line $GH$ is this tangent, which proves the statement.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p5">

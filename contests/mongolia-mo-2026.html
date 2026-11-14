@@ -221,8 +221,8 @@ $3a_1^2a_3$, so $a_1=0$ or $a_3=0$.</p><ul class="ct-ul"><li><p>If $a_1=0$, then
 <h3>Problem 5</h3>
 <div class="ct-meta">Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure</div>
 <div class="ct-text"><p>Let $ABC$ be a triangle with circumcircle $\omega$. The points $E$ and $F$ lie on sides $AC$ and $AB$, respectively, such that the quadrilateral $BCEF$ is cyclic. Let $D$ be a point on segment $EF$. The lines $BD$ and $CD$ meet $\omega$ again at $K$ and $L$, respectively.</p><p>Suppose that the circumcircles of $\triangle BFK$ and $\triangle CEL$ intersect at two distinct points $X$ and $Y$. Prove that the midpoint of the segment $XY$ lies on $\omega$.</p></div>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Radical axis and signed powers on one line)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Radical axis and signed powers on one line)</h4>
 <div class="ct-fig"><img style="width:396px" src="/assets/contests/2026-27/mongolia-mo-5_s1.svg" alt="Figure for the solution"></div>
 <p>Let $\Gamma_1$ be the circle $BFK$ and $\Gamma_2$ the circle $CEL$. They are different circles (they meet in exactly two points), and
 their radical axis is the line $XY$. For a point $Z$ and a circle $\Gamma$ we write $\operatorname{pow}_\Gamma(Z)$ for the power of $Z$.</p><p><em>Step 1: $A$ and $D$ lie on line $XY$.</em> Since $BCEF$ is cyclic, the power of $A$ with respect to that circle gives $AF\cdot AB=AE\cdot AC$.
@@ -247,6 +247,41 @@ and from $\operatorname{pow}_{\Gamma_1}(D)=\operatorname{pow}_\omega(D)$,
 (d-x)(d-y)=d(d-p)\ \Longrightarrow\ xy-d(x+y)=-dp\ \Longrightarrow\ k-d(x+y)=-k\ \Longrightarrow\ x+y=\frac{2k}{d}=2p .
 \]
 So the midpoint of $XY$ has coordinate $\frac{x+y}{2}=p$: it is the point $P$, which lies on $\omega$.</p>
+<h4>Solution 2 (Power functions written with vectors)</h4>
+<p>Place the origin at $A$ and treat points as vectors; $Z\cdot W$ is the dot product and $|Z|^2=Z\cdot Z$. Let $\Gamma_1$ be the
+circle $BFK$ and $\Gamma_2$ the circle $CEL$. For a circle $\Gamma$ with centre $Q$ and radius $r$, the power of a point $Z$ is
+$\operatorname{pow}_\Gamma(Z)=|Z-Q|^2-r^2=|Z|^2-2\,Z\cdot Q+|Q|^2-r^2$. Two facts follow at once.</p><ul class="ct-ul"><li><p>For two circles, $\operatorname{pow}_{\Gamma}(Z)-\operatorname{pow}_{\Gamma'}(Z)$ is an <em>affine</em> function of $Z$, that is, of the
+form $\mathbf n\cdot Z+\text{const}$ (the terms $|Z|^2$ cancel).</p></li><li><p>An affine function $\varphi$ that vanishes at two distinct points $P_1,P_2$ vanishes on the whole line $P_1P_2$: on the points
+$P_1+t(P_2-P_1)$ it is a polynomial of degree at most $1$ in $t$ with the two roots $t=0,1$, hence zero. More generally, if $\varphi(P_1)=\alpha$
+and $\varphi(P_2)=\beta$, then $\varphi(P_1+t(P_2-P_1))=(1-t)\alpha+t\beta$.</p></li></ul><p><em>Setup.</em> The points $E,F$ are different from $A$ (if, say, $F=A$, the circle through $B,C,F$ would be $\omega$ and $BCEF$ would
+degenerate), so the line $EF$ does not pass through $A$ and $D\ne A$. Let $b=AB$, $c=AC$ and $k=AF\cdot AB=AE\cdot AC&gt;0$ (power of $A$ with
+respect to the circle $BCEF$; $F$ and $B$ lie on the same ray from $A$, as do $E$ and $C$). Since $AF=k/b$ and $AE=k/c$,
+\[
+F=\frac{k}{b^2}\,B,\qquad E=\frac{k}{c^2}\,C,\qquad D=(1-t)F+tE\ \ \text{for some } t\in[0,1].
+\]</p><p><em>Step 1: the power of $\omega$ on line $AD$.</em> Let $O$ be the centre of $\omega$. As $\omega$ passes through the origin $A$,
+$\operatorname{pow}_\omega(Z)=|Z|^2-2\,Z\cdot O$. As $B,C\in\omega$, $2\,B\cdot O=|B|^2=b^2$ and $2\,C\cdot O=c^2$. Therefore
+\[
+2\,D\cdot O=(1-t)\frac{k}{b^2}\,b^2+t\,\frac{k}{c^2}\,c^2=k,
+\qquad\text{so}\qquad
+\operatorname{pow}_\omega(sD)=s^2|D|^2-sk\quad\text{for every real } s .
+\]</p><p><em>Step 2: the powers of $\Gamma_1$ and $\Gamma_2$ on line $AD$.</em> Let $\varphi_1=\operatorname{pow}_{\Gamma_1}-\operatorname{pow}_\omega$,
+an affine function. Both circles pass through $B$ and $K$, so $\varphi_1(B)=\varphi_1(K)=0$. Here $K\ne B$: the point $D$ lies inside $\omega$
+(it is a point of the closed triangle $ABC$ other than a vertex), so the line $BD$ meets $\omega$ in two distinct points. Hence $\varphi_1$
+vanishes on line $BK$, which contains $D$: $\varphi_1(D)=0$. At $A$, $\operatorname{pow}_\omega(A)=0$, and line $AB$ meets $\Gamma_1$ at $F$ and
+$B$, both on the same side of $A$, so $\varphi_1(A)=\operatorname{pow}_{\Gamma_1}(A)=AF\cdot AB=k$. By the second fact,
+$\varphi_1(sD)=(1-s)k$. In the same way $\varphi_2=\operatorname{pow}_{\Gamma_2}-\operatorname{pow}_\omega$ vanishes at $C$ and $L$, hence at $D$,
+and $\varphi_2(A)=AE\cdot AC=k$, so $\varphi_2(sD)=(1-s)k$. Adding Step 1,
+\[
+\operatorname{pow}_{\Gamma_1}(sD)=\operatorname{pow}_{\Gamma_2}(sD)=s^2|D|^2-2ks+k\qquad\text{for every real } s. \tag{$*$}
+\]</p><p><em>Step 3: $X$ and $Y$ lie on line $AD$.</em> The circles $\Gamma_1,\Gamma_2$ meet in two points, so they are distinct and not concentric, and
+the points with equal powers form a line, their radical axis, which contains $X$ and $Y$. By $(*)$ the points $A$ ($s=0$) and $D$ ($s=1$)
+have equal powers, and $A\ne D$; so the radical axis is the line $AD$. Thus $X=s_1D$ and $Y=s_2D$ for two distinct reals $s_1,s_2$, and since $X,Y$
+lie on $\Gamma_1$, $s_1$ and $s_2$ are the two roots of $s^2|D|^2-2ks+k=0$ by $(*)$.</p><p><em>Step 4: the midpoint.</em> By Vieta's formulas $s_1+s_2=\dfrac{2k}{|D|^2}$, so the midpoint of $XY$ is $M=s_0D$ with
+$s_0=\dfrac{k}{|D|^2}$. By Step 1,
+\[
+\operatorname{pow}_\omega(M)=s_0^2|D|^2-s_0k=s_0\Bigl(\frac{k}{|D|^2}\,|D|^2-k\Bigr)=0 .
+\]
+A point of power $0$ lies on the circle, so the midpoint of $XY$ lies on $\omega$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p6">

@@ -118,7 +118,7 @@ $x=t-1+\frac{2047}{t+1}$; so $t+1\mid2047$, and $t\in\{22,88\}$ gives $x=110$, w
 <h3>Problem 3</h3>
 <div class="ct-meta">Geometry &middot; LPS VII, Chapter 3: Foundational Angle and Configuration Chasing</div>
 <div class="ct-text"><p>A convex quadrilateral $ABCD$ that is cyclic is given. Point $P$ is chosen on line $BC$ such that $CP=CA$ and point $B$ lies between $C$ and $P$. Point $Q$ is chosen on line $CD$ such that $CQ=CA$ and point $D$ lies between $C$ and $Q$. Prove that the incenter of triangle $ABD$ lies on line $PQ$.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Two circles through the incentre)</h4>
 <div class="ct-fig"><img style="width:263px" src="/assets/contests/2026-27/uzbekistan-mo-3_s1.svg" alt="Figure for the solution"></div>
 <p>Let $I$ be the incentre of $ABD$. We use directed angles $\measuredangle(\ell,m)$ modulo $180^\circ$.</p><p><em>The circle centred at $K$.</em> Let $K$ be the midpoint of the arc $AB$ of the circumcircle not containing $C$ and $D$. As $D$ lies on the other
@@ -150,6 +150,24 @@ $\frac{\sin\angle ABD}{\sin\angle BAD}=\frac{AD}{BD}$ and $\frac{\sin\angle ADB}
 <em>Sum of the coefficients.</em> The $u$- and $v$-coefficients of $I-C$ add up to
 \[\frac{BD\,(x+y)+DA\cdot CB+AB\cdot CD}{AB+BD+DA}=\frac{CA\,(AD+AB)+CA\cdot BD}{AB+BD+DA}=CA,\]
 where we used Ptolemy's theorem $AB\cdot CD+AD\cdot BC=AC\cdot BD$ for the cyclic quadrilateral $ABCD$. By (1), $I$ lies on line $PQ$.</p>
+<h4>Solution 3 (Complex numbers on the unit circle)</h4>
+<p>Take the circumcircle as the unit circle of the complex plane, with $C=1$. The vertices $A,B,C,D$ lie on the circle in this cyclic order, so going around the circle from $C$ we meet $B$, $A$, $D$ in this order or in the reverse order; after a reflection in the real axis if necessary, we may take
+\[B=b^2,\quad A=a^2,\quad D=d^2,\qquad a=e^{i\alpha},\ b=e^{i\beta},\ d=e^{i\delta},\qquad 0&lt;\beta&lt;\alpha&lt;\delta&lt;\pi .\]
+Put $v=\frac{\delta-\beta}{2}$ and $m=\frac{\beta+\delta}{2}$, so $0&lt;v&lt;\frac{\pi}{2}$ and $\sin v&gt;0$, $\cos v&gt;0$, and put $w=e^{im}$, so $b=we^{-iv}$ and $d=we^{iv}$.</p><p><em>The points $P$ and $Q$.</em> We have $B-C=b^2-1=b\,(b-\bar b)=2\sin\beta\cdot ib$ with $\sin\beta&gt;0$, so $ib$ is the unit vector from $C$ towards $B$; likewise $id$ is the unit vector from $C$ towards $D$. Also $CA=|a^2-1|=|a-\bar a|=2\sin\alpha$. Write $k=2\sin\alpha$. As $P$ lies on ray $CB$ (beyond $B$) with $CP=CA$, and similarly for $Q$,
+\[P=1+k\,ib,\qquad Q=1+k\,id .\]
+For real $s,t$ with $s+t=k$, the point $1+i(sb+td)=\frac{s}{k}P+\frac{t}{k}Q$ is an affine combination of $P$ and $Q$, so it lies on line $PQ$. It is therefore enough to write $I-1=i(sb+td)$ with real $s,t$ and $s+t=k$, where $I$ is the incentre of $ABD$.</p><p><em>The incentre.</em> Let $M_1=ab$, $M_2=ad$, $M_3=-bd$; these have arguments $\alpha+\beta$, $\alpha+\delta$ and $\beta+\delta+\pi$, so they are the midpoints of the arc $BA$ not containing $D$, the arc $AD$ not containing $B$, and the arc $DB$ not containing $A$. By equal inscribed angles on equal arcs, line $AM_3$ is the internal bisector of $\angle BAD$ and line $BM_2$ is the internal bisector of $\angle ABD$. We claim that
+\[I=ab+ad-bd .\]
+Call the right-hand side $J$. Then $J-A=-(a-b)(a-d)$ and $M_3-A=-(a^2+bd)$. Using $\bar a=1/a$ and so on,
+\[\overline{(a-b)(a-d)}=\Bigl(\tfrac1a-\tfrac1b\Bigr)\Bigl(\tfrac1a-\tfrac1d\Bigr)=\frac{(a-b)(a-d)}{a^2bd},\qquad \overline{a^2+bd}=\frac{a^2+bd}{a^2bd},\]
+so the quotient $\frac{J-A}{M_3-A}=\frac{(a-b)(a-d)}{a^2+bd}$ equals its own conjugate and is real (the denominator is not $0$, as $M_3\ne A$). Hence $J$ lies on line $AM_3$. Similarly $J-B=(a-b)(b+d)$ and $M_2-B=ad-b^2$, and
+\[\overline{(a-b)(b+d)}=\Bigl(\tfrac1a-\tfrac1b\Bigr)\Bigl(\tfrac1b+\tfrac1d\Bigr)=-\frac{(a-b)(b+d)}{ab^2d},\qquad \overline{ad-b^2}=\frac1{ad}-\frac1{b^2}=-\frac{ad-b^2}{ab^2d},\]
+so $\frac{J-B}{M_2-B}$ is real and $J$ lies on line $BM_2$. Two internal bisectors of a triangle meet only at the incentre, so $J=I$.</p><p><em>The decomposition.</em> Since $b+d=w\,(e^{-iv}+e^{iv})=2w\cos v$ and $bd+1=w\,(w+\bar w)=2w\cos m$,
+\[I-1=a(b+d)-(bd+1)=2w\,(a\cos v-\cos m)=w\bigl[(2\cos\alpha\cos v-2\cos m)+i\,2\sin\alpha\cos v\bigr].\]
+On the other hand, for real $s,t$,
+\[i(sb+td)=iw\bigl(se^{-iv}+te^{iv}\bigr)=w\bigl[(s-t)\sin v+i\,(s+t)\cos v\bigr].\]
+As $\sin v\ne0$ and $\cos v\ne0$, we can choose the real numbers $s,t$ with
+\[s+t=2\sin\alpha=k,\qquad s-t=\frac{2\cos\alpha\cos v-2\cos m}{\sin v},\]
+and then $I-1=i(sb+td)$. By the remark above, the incentre $I$ of triangle $ABD$ lies on line $PQ$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p4">

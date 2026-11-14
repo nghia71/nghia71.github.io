@@ -109,7 +109,7 @@ Hence $Y=\bigl(\frac1p,0\bigr)$.</p><p><em>Conclusion.</em> Since $\frac{p^2+1}{
 <div class="ct-text"><p>Let $a$, $b$, $c$, and $d$ be positive real numbers such that $a+b+c+d = 4$. Find the minimum value of
 \[\frac{a}{(bc+1)^2} + \frac{b}{(cd+1)^2} + \frac{c}{(da+1)^2} + \frac{d}{(ab+1)^2}.\]</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$1$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Cauchy-Schwarz, then AM-GM)</h4>
 <p>Write $S=\frac{a}{(bc+1)^2}+\frac{b}{(cd+1)^2}+\frac{c}{(da+1)^2}+\frac{d}{(ab+1)^2}$. For $a=b=c=d=1$ we get
 $S=4\cdot\frac14=1$. We show $S\ge1$ always.</p><p><em>Step 1 (Cauchy-Schwarz).</em> With weights $a,b,c,d$ and the numbers $u_1=\frac1{bc+1}$, $u_2=\frac1{cd+1}$, $u_3=\frac1{da+1}$, $u_4=\frac1{ab+1}$,
@@ -132,6 +132,19 @@ Adding the four cyclic versions,
 \[\sum\frac{a}{(bc+1)^2}\ \ge\ \frac34(a+b+c+d)-\frac14\bigl((a+c)(b+d)+2ac+2bd\bigr)\ \ge\ 3-\frac14\cdot 8=1,\]
 where the last step uses, with $x=a+c$ and $y=b+d$ (so $x+y=4$), the bounds $2ac\le\frac{x^2}2$ and $2bd\le\frac{y^2}2$ (AM-GM):
 \[(a+c)(b+d)+2ac+2bd\le xy+\frac{x^2+y^2}2=\frac{(x+y)^2}2=8 .\] Equality holds for $a=b=c=d=1$, so the minimum is $\boxed{1}$.</p>
+<h4>Solution 3 (Weighted Jensen and opposite pairs)</h4>
+<p>Let $\varphi(t)=\frac1{(1+t)^2}$ for $t\ge0$. Then $\varphi''(t)=\frac6{(1+t)^4}&gt;0$, so $\varphi$ is convex,
+and it is decreasing.</p><p><em>Jensen.</em> The weights $\frac a4,\frac b4,\frac c4,\frac d4$ are positive with sum $1$, so
+\[\frac{a}{(bc+1)^2}+\frac{b}{(cd+1)^2}+\frac{c}{(da+1)^2}+\frac{d}{(ab+1)^2}
+=4\Bigl(\tfrac a4\varphi(bc)+\tfrac b4\varphi(cd)+\tfrac c4\varphi(da)+\tfrac d4\varphi(ab)\Bigr)\ \ge\ 4\,\varphi\!\Bigl(\frac S4\Bigr),\]
+where
+\[S=a\cdot bc+b\cdot cd+c\cdot da+d\cdot ab=abc+bcd+cda+dab .\]
+<em>Bounding $S$.</em> Put $x=a+c$ and $y=b+d$, so $x+y=4$. Grouping the terms,
+\[S=ac(b+d)+bd(a+c)=ac\,y+bd\,x .\]
+By AM-GM, $ac\le\frac{x^2}4$ and $bd\le\frac{y^2}4$, hence
+\[S\le\frac{x^2y+y^2x}4=\frac{xy(x+y)}4=xy\le\Bigl(\frac{x+y}2\Bigr)^2=4 .\]
+<em>Conclusion.</em> As $\varphi$ is decreasing and $\frac S4\le1$, the sum is at least $4\varphi(1)=4\cdot\frac14=1$. For $a=b=c=d=1$ every term equals
+$\frac14$ and the sum is $1$. Hence the minimum value is $\boxed{1}$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p3">
@@ -159,8 +172,8 @@ expansion $s=x_1+5x_2+25x_3+125x_4+625x_5$ with digits $x_i\in\{0,1,2,3,4\}$, so
 \[\frac{a^2+b^2}{b+c}, \qquad \frac{b^2+c^2}{c+a}, \qquad \frac{c^2+a^2}{a+b}.\]
 Here $\gcd(a,b,c)$ denotes the greatest common divisor of $a$, $b$, and $c$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$(a,b,c)=(1,1,1)$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Symmetric divisibilities, parity, and an lcm bound)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Symmetric divisibilities, parity, and an lcm bound)</h4>
 <p>Clearly $(1,1,1)$ works. Let $(a,b,c)$ be any solution.</p><p><em>Step 1: a symmetric set of conditions.</em> Modulo $b+c$ we have $b\equiv -c$, so $b^2\equiv c^2$; hence $b+c\mid a^2+b^2$ implies
 $b+c\mid a^2+c^2$ as well. In the same way $c+a\mid b^2+c^2$ gives $c+a\mid b^2+a^2$, and $a+b\mid c^2+a^2$ gives $a+b\mid c^2+b^2$. So
 \[b+c\mid a^2+b^2,\ a^2+c^2;\qquad c+a\mid b^2+c^2,\ b^2+a^2;\qquad a+b\mid c^2+a^2,\ c^2+b^2 .\tag{$*$}\]
@@ -176,13 +189,34 @@ The same reasoning works for every pair, so by symmetry we may assume $a\le b\le
 \[(b+c)(c+a)\ \ge\ (b+b)(b+a)=2b^2+2ab\ \ge\ 2b^2+2a^2 ,\]
 with equality only if $c=b$ (first step) and $a=b$ (second step). Comparing with the previous display, equality must hold throughout, so
 $a=b=c$, and $\gcd(a,b,c)=1$ gives $a=b=c=1$.</p><p>The only solution is $\boxed{(a,b,c)=(1,1,1)}$.</p>
+<h4>Solution 2 (Half-sums and the roots of a quadratic)</h4>
+<p>Clearly $(1,1,1)$ works: each quotient equals $\frac22=1$. Let $(a,b,c)$ be any solution.</p><p><em>Step 1: $a,b,c$ are odd.</em> Suppose two of them have the same parity and the third has the other parity. If $b,c$ are the pair, then $b+c$ is even
+while $a^2+b^2$ is odd, so $\frac{a^2+b^2}{b+c}$ is not an integer. In the same way, if $c,a$ are the pair then $c+a$ is even and $b^2+c^2$ is odd,
+and if $a,b$ are the pair then $a+b$ is even and $c^2+a^2$ is odd. So $a,b,c$ all have the same parity, and as $\gcd(a,b,c)=1$ they are all odd.</p><p><em>Step 2: half-sums.</em> Put
+\[x=\frac{a+b}2,\qquad y=\frac{b+c}2,\qquad z=\frac{c+a}2 ,\]
+positive integers with $a=x+z-y$, $b=x+y-z$, $c=y+z-x$. Since $a,b,c&gt;0$, each of $x,y,z$ is less than the sum of the other two.</p><p>Now $a^2+b^2=\bigl(x+(z-y)\bigr)^2+\bigl(x-(z-y)\bigr)^2=2x^2+2(z-y)^2$, and $2y=b+c$ divides it; so $y\mid x^2+(z-y)^2$, and hence
+$y\mid x^2+z^2$. In the same way $b^2+c^2=2y^2+2(x-z)^2$ is divisible by $2z$, so $z\mid x^2+y^2$, and $c^2+a^2=2z^2+2(y-x)^2$ is divisible by $2x$,
+so $x\mid y^2+z^2$.</p><p><em>Step 3: $x,y,z$ are pairwise coprime.</em> If a prime $p$ divides $x$ and $y$, then $p\mid y\mid x^2+z^2$ gives $p\mid z^2$, so $p\mid z$, and then
+$p$ divides $a=x+z-y$, $b$ and $c$, contradicting $\gcd(a,b,c)=1$. The other two pairs are handled in the same way. Each of $x,y,z$ divides
+$x^2+y^2+z^2$ (for instance $x\mid y^2+z^2$), and they are pairwise coprime, so $xyz\mid x^2+y^2+z^2$:
+\[x^2+y^2+z^2=k\,xyz\qquad\text{for a positive integer }k.\]
+<em>Step 4: the smallest two are equal.</em> Everything so far is symmetric in $x,y,z$, so we may assume $x\le y\le z$. First,
+\[kx=\frac{x^2+y^2+z^2}{yz}&gt;2,\qquad\text{because } x^2+y^2+z^2-2yz=x^2+(y-z)^2&gt;0 ;\]
+as $kx$ is an integer, $kx\ge3$. Consider the quadratic
+\[F(t)=t^2-kxy\,t+x^2+y^2 ,\qquad F(z)=0 .\]
+Suppose $x&lt;y$. Then
+\[F(y)=(2-kx)\,y^2+x^2\le x^2-y^2&lt;0 .\]
+As $F$ is a quadratic with positive leading coefficient, $y$ lies strictly between its two roots; the root $z\ge y$ is therefore the larger root, and
+every $t&gt;y$ with $F(t)&lt;0$ satisfies $t&lt;z$. Take $t=x+y$:
+\[F(x+y)=2(x^2+xy+y^2)-kxy(x+y)\le 2(x^2+xy+y^2)-3y(x+y)=2x^2-xy-y^2=(x-y)(2x+y)&lt;0 .\]
+Hence $x+y&lt;z$, contradicting Step 2. So $x=y$.</p><p><em>Step 5: conclusion.</em> As $x=y$ and $\gcd(x,y)=1$, we get $x=y=1$. By Step 2, $z&lt;x+y=2$, so $z=1$. Then $a=b=c=1$.</p><p>The only solution is $\boxed{(a,b,c)=(1,1,1)}$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p5">
 <h3>Problem 5</h3>
 <div class="ct-meta">Geometry &middot; LPS VII, Chapter 11: Similarity, Homothety, and Ratio Geometry</div>
 <div class="ct-text"><p>Let $ABC$ be an acute triangle with circumcenter $O$. Let $ABD$ and $ACE$ be isosceles triangles lying outside triangle $ABC$ so that $\angle BAD = \angle CAE = 90^\circ$. Suppose that the circumcircle of triangle $AED$, whose center is $Q$, intersects the circumcircle of triangle $ABC$ at $Z \ne A$.</p><p>Suppose that $AO$ intersects $DE$ at $X$ and $AQ$ intersects $BC$ at $Y$.</p><p>Show that the circumcircles of triangles $AXY$ and $OQZ$ are tangent.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Complex coordinates and two homotheties)</h4>
 <div class="ct-fig"><img style="width:363px" src="/assets/contests/2026-27/thailand-mo-5_s1.svg" alt="Figure for the solution"></div>
 <p><em>Set-up.</em> Use complex numbers with $A=0$. Write $\beta=B$, $\gamma=C$, $c=AB=|\beta|$, $b=AC=|\gamma|$, and label the
@@ -267,6 +301,42 @@ $\cos\angle OAQ=-\frac{h_a}{m_a}$. Substituting $AO=\frac a{2\sin A}$, $AQ=\frac
 $\frac{\sin^2A}{ah_a}$, the condition becomes
 \[\frac{2}{b^2+c^2}\Bigl(\frac{a^2}4+m_a^2\Bigr)=1,\qquad\text{i.e.}\qquad b^2+c^2=\frac{a^2}2+2m_a^2 ,\]
 which is the median formula in triangle $ABC$. So $T^*\in\omega$, hence $T\in\omega'$, and the circles $(AXY)$ and $(OQZ)$ are tangent at $T$. $\blacksquare$</p>
+<h4>Solution 3 (Inversion at A, then the distance of the centres)</h4>
+<p>Put $A$ at the origin and treat points as vectors; $U\cdot V$ is the dot product.</p><p><em>Set-up.</em> Let $J$ be the rotation through $90^\circ$ about $A$ with $J(B)=D$. Label $ABC$ counterclockwise. As $D$ lies on the other side of
+$AB$ from $C$, it is obtained from $B$ by the clockwise quarter-turn about $A$; as $E$ lies on the other side of $AC$ from $B$, it is obtained from
+$C$ by the counterclockwise quarter-turn. So $J$ is the clockwise quarter-turn and $E=J^{-1}(C)=-J(C)$. The rotation $J$ preserves lengths and dot products, and $J(J(U))=-U$, so $U\cdot J(V)=-J(U)\cdot V$ for all $U,V$.</p><p><em>$A$, $O$, $Q$ are not collinear.</em> If $O=Q$, the two circles would have the same centre and both pass through $A$, so they would coincide and $D$
+would lie on the circle $ABC$; then $\angle BAD=90^\circ$ makes $BD$ a diameter and $O$ the midpoint of $BD$, which lies on the side of line $AB$
+containing $D$. But $O$ is inside the acute triangle, on the side of $AB$ containing $C$, which is the other side. So $O\ne Q$. The line $OQ$ is the
+perpendicular bisector of the common chord $AZ$ and $Z\ne A$, so $A\notin OQ$.</p><p><em>Step 1: inversion.</em> For $U\ne0$ put $U'=\frac{U}{|U|^2}$. A circle through $A$ with centre $W$ has equation $|U|^2=2\,W\cdot U$, so a point
+$U\ne0$ lies on it if and only if $W\cdot U'=\frac12$. A line not through $A$ has an equation $L\cdot U=1$, and then $|U'|^2=\frac1{|U|^2}=L\cdot U'$
+for each of its points $U$. Also $J(U)'=J(U')$.</p><p>Since $B$, $C$ lie on the circle with centre $O$, and $D=J(B)$, $E=-J(C)$ lie on the circle with centre $Q$,
+\[O\cdot B'=O\cdot C'=\tfrac12,\qquad Q\cdot J(B')=\tfrac12,\qquad Q\cdot J(C')=-\tfrac12 .\]
+Let $M=\frac{B'+C'}2$ and $H=\frac{B'-C'}2$. Then $O\cdot M=\frac12$, $O\cdot H=0$, $Q\cdot J(M)=0$ and $Q\cdot J(H)=\frac12$.</p><ul class="ct-ul"><li><p>$Q\cdot J(M)=0$ means $J(Q)\cdot M=0$, so $M$ is a multiple of $Q$, say $M=sQ$. Then $s\,(O\cdot Q)=O\cdot M=\frac12$, so $t:=O\cdot Q\ne0$ and
+$M=\frac{Q}{2t}$.</p></li><li><p>$O\cdot H=0$ means $H=r\,J(O)$ for a real $r$. Then $\frac12=Q\cdot J(H)=r\,Q\cdot J(J(O))=-rt$, so $H=-\frac{J(O)}{2t}$.</p></li></ul><p>For $D'=J(B')$ and $E'=-J(C')$ we get $\frac{D'+E'}2=J(H)=\frac{O}{2t}$ and $\frac{D'-E'}2=J(M)=\frac{J(Q)}{2t}$. Hence
+\[|B'|^2+|C'|^2=2|M|^2+2|H|^2=\frac{|O|^2+|Q|^2}{2t^2}=|D'|^2+|E'|^2 .\]
+<em>Step 2: $X$ and $Y$.</em> Let $L\cdot U=1$ be the equation of line $BC$. Adding $|B'|^2=L\cdot B'$ and $|C'|^2=L\cdot C'$ gives
+\[\frac{|O|^2+|Q|^2}{2t^2}=L\cdot(B'+C')=\frac{L\cdot Q}{t},\qquad\text{so}\qquad L\cdot Q=\frac{|O|^2+|Q|^2}{2t}\ne0 .\]
+The point $\lambda Q$ of line $AQ$ lies on $BC$ exactly when $\lambda\,L\cdot Q=1$; therefore
+\[Y=\lambda Q,\qquad \lambda=\frac{2t}{|O|^2+|Q|^2}.\]
+The same computation for line $DE$, with $D',E'$ in place of $B',C'$ (their sum is $\frac{O}{t}$ and their squared lengths have the same sum), gives
+$X=\lambda O$ with the same $\lambda$. Since $|O|^2+|Q|^2\pm2t=|O\pm Q|^2&gt;0$ (the vectors $O$, $Q$ are not parallel), we have $-1&lt;\lambda&lt;1$, and
+$\lambda\ne0$. So the homothety with centre $A$ and ratio $\lambda$ maps $A,O,Q$ to $A,X,Y$: if $\omega$ is the circle $AOQ$, with centre $W$ and radius
+$R$, then the circle $AXY$ has centre $\lambda W$ and radius $|\lambda|R$.</p><p><em>Step 3: coordinates.</em> Choose Cartesian axes with origin $A$ and line $OQ$ horizontal (a rotation of axes does not change dot products):
+\[O=(o,h),\qquad Q=(q,h),\qquad h\ne0,\quad o\ne q .\]
+Then $t=oq+h^2$ and $|O|^2+|Q|^2=o^2+q^2+2h^2$. The centre $W$ of $\omega$ lies on the perpendicular bisector $x=m$ of $OQ$, where $m=\frac{o+q}2$;
+writing $W=(m,u)$, the condition $|W|^2=|W-O|^2$ reads $2mo+2uh=o^2+h^2$, so
+\[u=\frac{o^2+h^2-o(o+q)}{2h}=\frac{h^2-oq}{2h},\qquad R^2=m^2+u^2 .\]
+Since $OA=OZ$ and $QA=QZ$, the point $Z$ is the reflection of $A$ in line $OQ$ (the line $y=h$), and the circle $OQZ$ is the reflection of $\omega$ in
+that line: its centre is $W^*=(m,\,2h-u)$ and its radius is $R$.</p><p><em>Step 4: the distance of the centres.</em> We compute
+\begin{align*}
+|W^*-\lambda W|^2-(1+\lambda)^2R^2&amp;=(1-\lambda)^2m^2+\bigl(2h-(1+\lambda)u\bigr)^2-(1+\lambda)^2(m^2+u^2)\\
+&amp;=-4\lambda m^2+4h^2-4(1+\lambda)hu=4\bigl[h(h-u)-\lambda\,(hu+m^2)\bigr].
+\end{align*}
+Here $h(h-u)=h^2-\frac{h^2-oq}2=\frac{h^2+oq}2=\frac t2$ and $hu+m^2=\frac{h^2-oq}2+\frac{(o+q)^2}4=\frac{2h^2+o^2+q^2}4=\frac{|O|^2+|Q|^2}4$. So the bracket
+equals $\frac t2-\lambda\cdot\frac{|O|^2+|Q|^2}4=\frac t2-\frac t2=0$, and the distance between the centres of the circles $AXY$ and $OQZ$ is
+$(1+\lambda)R&gt;0$.</p><p><em>Conclusion.</em> The radii are $|\lambda|R$ and $R$. If $\lambda&gt;0$, the distance of the centres $(1+\lambda)R$ is the sum of the radii, and the
+circles are externally tangent. If $\lambda&lt;0$, it is $R-|\lambda|R$, the difference of the radii, and as it is positive the circles are distinct and
+internally tangent. In either case the circles $AXY$ and $OQZ$ are tangent. $\blacksquare$</p>
 </div></details>
 </section>
 <h2 class="ct-group" id="day-2">Day 2</h2>
@@ -379,8 +449,8 @@ $\sqrt{1+p^2/h^2}=AP/AD$.) Hence equality holds iff $\boxed{P \text{ is the foot
 <h3>Problem 10</h3>
 <div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 6: Pigeonhole Principle and Density Arguments</div>
 <div class="ct-text"><p>In a province with $n$ villages, there are $n$ species of pomelo ($n \ge 2$). In a recent year, the productivities of the pomelos satisfy the following.</p><ul class="ct-ul"><li><p>Each village has a non-negative integer productivity for each species.</p></li><li><p>In each village, the total productivity of all $n$ species is exactly $n^2+1$ pomelo.</p></li><li><p>For each species, the total productivity of that species over all $n$ villages is exactly $n^2+1$ pomelo.</p></li></ul><p>Show that for each village there exist another village and $2$ different species such that the total productivity of these $2$ species in these $2$ villages is at least $4n+2$.</p></div>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Two largest entries and averaging)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Two largest entries and averaging)</h4>
 <p>Write the productivities as an $n\times n$ table of nonnegative integers $p_{v,s}$ (village $v$, species $s$); every row sum and
 every column sum equals $N=n^2+1$. Fix a village $v$. Let $s,t$ be species with the two largest entries of row $v$, and put
 $m=p_{v,s}+p_{v,t}$.</p><p><em>Averaging over the other villages.</em> The columns $s$ and $t$ have total $2N$, of which $m$ lies in row $v$; the remaining $2N-m$ is spread over
@@ -390,6 +460,14 @@ the other $n-1$ villages. So some village $w\ne v$ has $p_{w,s}+p_{w,t}\ge\frac{
 as $m$ is an integer, $m\ge 2n+1$. Since the right side of (1) increases with $m$ (the coefficient $n-2$ is positive),
 \[T\ \ge\ \frac{(n-2)(2n+1)+2(n^2+1)}{n-1}=\frac{4n^2-3n}{n-1}=4n+1+\frac1{n-1}&gt;4n+1 .\]
 As $T$ is an integer, $T\ge 4n+2$.</p><p>In both cases the villages $v,w$ and the species $s,t$ have total productivity at least $4n+2$, as required.</p>
+<h4>Solution 2 (Any second village works)</h4>
+<p>Fix a village $v$, and let $w$ be <em>any</em> other village. For each species $j$ ($1\le j\le n$) let $s_j$ be the total productivity of
+species $j$ in the two villages $v$ and $w$. Each village produces $n^2+1$ pomelos in total, so
+\[s_1+s_2+\dots+s_n=2(n^2+1).\]
+Put $x_j=s_j-2n$. These are integers and
+\[x_1+x_2+\dots+x_n=2n^2+2-n\cdot2n=2 .\]
+Number the species so that $x_1\ge x_2\ge\dots\ge x_n$ (there are at least two, as $n\ge2$).</p><ul class="ct-ul"><li><p>If $x_2\ge1$, then $x_1\ge x_2\ge1$, so $x_1+x_2\ge2$.</p></li><li><p>If $x_2\le0$, then $x_j\le x_2\le0$ for every $j\ge3$, so $x_1+x_2\ge x_1+x_2+\dots+x_n=2$.</p></li></ul><p>In both cases $s_1+s_2=x_1+x_2+4n\ge4n+2$. So the villages $v$, $w$ and the two species numbered $1$ and $2$ have total productivity at least $4n+2$,
+as required. (The argument uses only the two village totals: the condition on the species totals is not needed, and every second village $w$ works.)</p>
 </div></details>
 </section>
 {% endraw %}

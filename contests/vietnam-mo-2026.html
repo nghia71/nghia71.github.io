@@ -170,8 +170,8 @@ The smallest $k$ is $\boxed{12}$.</p>
 <h3>Problem 5</h3>
 <div class="ct-meta">Geometry &middot; LPS VII, Chapter 51: Spiral Similarity and Advanced Transformational Geometry</div>
 <div class="ct-text"><p>Let $ABC$ be an acute triangle $(AB&lt;AC)$ with circumcenter $O$. Let $E,F$ be the reflection of $A$ across $B,C$ respectively. Let $M$ be the midpoint of $BC$. Points $I,P$ are chosen on line $AM$ such that triangle $AIE$, $APF$ are isosceles triangles with $IA=IE$, $PA=PF$. Let $T$ be the intersection of $IE$ and $PF$.</p><ul class="ct-parts"><li><p><span class="ct-lbl">(a)</span> Prove that $T$ lies on the circumcircle of triangle $ABC$.</p></li><li><p><span class="ct-lbl">(b)</span> Let $D$ be the intersection of lines $BI$ and $CP$. Let $J$ be the intersection of lines $TD$ and $IP$. Let $X$ be the intersection of line $OT$ and $BC$. Lines $AT$, $AX$ intersect $EF$ at $L,U$ respectively. Prove that the circumcircles of triangles $TAJ$, $TIP$, $TEF$, $TLU$ all have a common point other than $T$.</p></li></ul></div>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Reflections, an Apollonius circle and a Miquel point)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Reflections, an Apollonius circle and a Miquel point)</h4>
 <div class="ct-fig"><img style="width:303px" src="/assets/contests/2026-27/vietnam-mo-5_s1.svg" alt="Figure for the solution"></div>
 <p><strong>Part (a).</strong> Let $\Omega$ be the circumcircle and $A^*$ the antipode of $A$.</p><p><strong>$I$ and $P$.</strong> $\angle ABA^*=90^\circ$, so the line $BA^*$ is the perpendicular to $AB$ at $B$, the midpoint of $AE$: it is the perpendicular bisector of $AE$.
 Hence $I=AM\cap BA^*$ and, likewise, $P=AM\cap CA^*$. (In particular $D=BI\cap CP=A^*$.) In the isosceles triangle $AIE$ the axis $BA^*$ is a line of symmetry,
@@ -210,6 +210,52 @@ $\angle(J'T,J'Y)=\angle(XT,XY)$ and $\angle(J'M,J'O)=\angle(XM,XO)$, i.e. $\angl
 $T$ in $OY$ is $A$, so $A\in J'M$, i.e. $J'\in AM$. On the other hand $J_1\in AM$, and $J_1A=J_1T$ ($J_1$ is the circumcentre of the right triangle $ATJ$), so $J_1\in OY$. Since
 $A\notin OY$, $J'=J_1$. Hence $XJ_1\perp OY$, and $AT\perp OY$ gives $XJ_1\parallel AT$.</p><p><strong>Step 7: conclusion.</strong> The lines $D'T$ (which is $AT$) and $D'Q$ meet line $EF$ at $L$ and $U$. Since $D'E=D'F$, the inversion with centre $D'$ and radius $D'E$ swaps
 $\Gamma$ and the line $EF$, hence $T\leftrightarrow L$ and $Q\leftrightarrow U$. So $D'T\cdot D'L=D'Q\cdot D'U$, and $T$, $L$, $U$, $Q$ are concyclic.</p><p>Thus the circles $TAJ$, $TIP$, $TEF$, $TLU$ all pass through $Q\ne T$.</p>
+<h4>Solution 2 (Oblique coordinates and a pencil of circles)</h4>
+<p><strong>Coordinates.</strong> Take Cartesian coordinates with $B=(-1,0)$, $C=(1,0)$, $A=(u,h)$, $h&gt;0$, so that $M$ is the origin and $BC$ is the $x$-axis.
+The angles at $B$ and $C$ are acute, so $\overrightarrow{BA}\cdot\overrightarrow{BC}=2(1+u)&gt;0$ and $\overrightarrow{CA}\cdot\overrightarrow{CB}=2(1-u)&gt;0$; and $AB&lt;AC$ means $u&lt;0$.
+Thus $-1&lt;u&lt;0$. Put $q=u^2+h^2$; the angle at $A$ is acute, so $\overrightarrow{AB}\cdot\overrightarrow{AC}=q-1&gt;0$. Hence $q&gt;1&gt;u^2$, and the numbers
+\[D_0=q^2-u^2,\qquad K=q^2+q-2u^2,\qquad N=(q+1)^2-4u^2=(q+1-2u)(q+1+2u)\]
+are all positive.</p><p>Write every point as $X=s\,\vec a+z\,\vec e$ with $\vec a=(u,h)$, $\vec e=(1,0)$, and call $[s,z]$ its <em>oblique coordinates</em>; the Cartesian point is $(su+z,\,sh)$. Since
+$\vec a\cdot\vec a=q$, $\vec a\cdot\vec e=u$, $\vec e\cdot\vec e=1$,
+\[|X|^2=Q(s,z)=qs^2+2usz+z^2 .\]
+A circle has a Cartesian equation $|X|^2+(\text{linear terms})=0$, so in oblique coordinates every circle has an equation $Q(s,z)+\alpha s+\beta z+\gamma=0$.
+We have $A=[1,0]$, $B=[0,-1]$, $C=[0,1]$, $E=2B-A=[-1,-2]$, $F=2C-A=[-1,2]$. Line $AM$ is $z=0$ and line $EF$ is $s=-1$.</p><p><strong>The points $I$, $P$, $T$.</strong> $B$ is the midpoint of $AE$, so $IA=IE$ means that $I$ lies on the line through $B$ perpendicular to $AB$. With $I=[i,0]=i\vec a$ and
+$\vec b=-\vec e$ this reads $(i\vec a-\vec b)\cdot(\vec a-\vec b)=iq+iu+u+1=0$. In the same way $P=[p,0]$ with $(p\vec a-\vec e)\cdot(\vec a-\vec e)=pq-pu-u+1=0$. So
+\[i=-\frac{1+u}{q+u},\qquad p=-\frac{1-u}{q-u},\qquad i+p=-\frac{2(q-u^2)}{D_0},\qquad ip=\frac{1-u^2}{D_0},\qquad p-i=\frac{2u(q-1)}{D_0}\ne0 .\]
+The line $IE$ through $[i,0]$ and $[-1,-2]$ is $s=i+\frac{1+i}{2}z$, and the line $PF$ through $[p,0]$ and $[-1,2]$ is $s=p-\frac{1+p}{2}z$. Subtracting,
+$\frac{2+i+p}{2}z=p-i$; here $2+i+p=\frac{2q(q-1)}{D_0}\ne0$, so the lines meet, at $z=\frac{2u}{q}$, and then $s=i+\frac{(1+i)u}{q}=-\frac1q$ (use $1+i=\frac{q-1}{q+u}$). Thus
+\[T=\Bigl[-\frac1q,\ \frac{2u}{q}\Bigr],\qquad\text{in Cartesian coordinates }T=\Bigl(\frac uq,\,-\frac hq\Bigr).\]</p><p><strong>Part (a).</strong> The circle $x^2+y^2-\frac{q-1}{h}y-1=0$ passes through $B$, $C$ and $A$ (at $A$: $q-(q-1)-1=0$), so it is the circumcircle, and its centre is
+$O=\bigl(0,\frac{q-1}{2h}\bigr)$. At $T$ the left side is $\frac{u^2+h^2}{q^2}+\frac{q-1}{q}-1=\frac1q+\frac{q-1}q-1=0$. So $T$ lies on the circumcircle of $ABC$.</p><p><strong>The points of part (b).</strong> Note $z_T=\frac{2u}q&lt;0$ and $s_T=-\frac1q\ne-1$: $T$ is on neither $AM$ nor $EF$.</p><ul class="ct-ul"><li><p>$D$: line $BI$ is $s=i(z+1)$ and line $CP$ is $s=p(1-z)$; they meet at $z=\frac{p-i}{i+p}$, $s=\frac{2ip}{i+p}$, that is,
+$D=\Bigl[-\frac{1-u^2}{q-u^2},\,-\frac{u(q-1)}{q-u^2}\Bigr]$. Its $z$-coordinate is positive, while $z_T&lt;0$.</p></li><li><p>$J$: so $T$ and $D$ are on opposite sides of $z=0$ and $TD$ meets $AM$ in exactly one point $J=[j,0]$. From $z_D-z_T=-\frac{uK}{q(q-u^2)}$ and
+$s_D-s_T=\frac{u^2(q-1)}{q(q-u^2)}$ we get $j=s_T+\frac{-z_T}{z_D-z_T}(s_D-s_T)=-\frac1q+\frac{2u^2(q-1)}{qK}$, i.e.
+\[j=-\frac{q+1-2u^2}{K}&lt;0,\qquad j+1=\frac{q^2-1}{K}.\]
+In particular $J\ne A$.</p></li><li><p>$X$: on segment $OT$ the Cartesian $y$-coordinate goes from $\frac{q-1}{2h}&gt;0$ to $-\frac hq&lt;0$; it vanishes at the fraction $\frac{q(q-1)}{q(q-1)+2h^2}=\frac{q(q-1)}{K}$ of the
+way (as $2h^2=2q-2u^2$), so $X=\bigl(\frac{u(q-1)}{K},0\bigr)$, i.e. $X=[0,x_0]$ with $x_0=\frac{u(q-1)}{K}$.</p></li><li><p>$L$, $U$: the point $A+\tau(T-A)$ has $s=1-\tau\frac{q+1}{q}$, which is $-1$ for $\tau=\frac{2q}{q+1}$; the point $A+\tau(X-A)$ has $s=1-\tau$, which is $-1$ for $\tau=2$. So
+\[L=[-1,l],\quad U=[-1,w],\qquad l=\frac{4u}{q+1},\quad w=2x_0=\frac{2u(q-1)}{K}.\]
+Since $l-w=\frac{2u\,(2K-(q^2-1))}{(q+1)K}=\frac{2uN}{(q+1)K}\ne0$, $L\ne U$.</p></li></ul><p>So $T,A,J$ are not collinear ($A\ne J$ on $z=0$, $T$ off it), $T,I,P$ are not collinear, and $T,E,F$ and $T,L,U$ are not collinear ($T$ off $s=-1$): all four
+circles exist.</p><p><strong>Two circle equations.</strong> Let $\varepsilon(s,z)=Q+\alpha_Es+\beta_Ez+\gamma_E$ define the circle $TEF$ and $\iota(s,z)=Q+\alpha_Is+\beta_Iz+\gamma_I$ the circle $TIP$.
+On $s=-1$, $\varepsilon(-1,z)=z^2+(\beta_E-2u)z+(q-\alpha_E+\gamma_E)$ has roots $\pm2$, so $\beta_E=2u$ and $\gamma_E=\alpha_E-q-4$. On $z=0$,
+$\iota(s,0)=q(s-i)(s-p)$, so $\alpha_I=-q(i+p)=\frac{2q(q-u^2)}{D_0}$ and $\gamma_I=qip=\frac{q(1-u^2)}{D_0}$. The remaining coefficients follow from the value at $T$, where
+$Q(T)=\frac1q-\frac{4u^2}{q^2}+\frac{4u^2}{q^2}=\frac1q$ (the coefficients of $\alpha_E$ and $\beta_I$ there are $s_T+1=\frac{q-1}q\ne0$ and $z_T\ne0$):
+\[\alpha_E=\frac{q^2+4q-1-4u^2}{q-1},\qquad \beta_I=\frac{u(q-1)^2}{2D_0}.\]
+Consequently, on $z=0$ we have $\varepsilon(s,0)=qs^2+\alpha_E(s+1)-q-4$, and on $s=-1$ we have $\varepsilon(-1,z)=z^2-4$ and
+$\iota(-1,z)=z^2+(\beta_I-2u)z+\frac{q(q-1)^2}{D_0}$. Substituting the coordinates found above (using $1-i=\frac{q+1+2u}{q+u}$, $1-p=\frac{q+1-2u}{q-u}$,
+$j-i=\frac{u(q-1)(q+1+2u)}{(q+u)K}$, $j-p=-\frac{u(q-1)(q+1-2u)}{(q-u)K}$ and $K^2-u^2(q-1)^2=D_0N$) gives
+\[\begin{aligned}
+\varepsilon(A)&amp;=\frac{2N}{q-1}, &amp; \iota(A)&amp;=\frac{qN}{D_0},\\
+\varepsilon(J)&amp;=-\frac{2u^2(q-1)N}{K^2}, &amp; \iota(J)&amp;=-\frac{qu^2(q-1)^2N}{D_0K^2},\\
+\varepsilon(L)&amp;=-\frac{4N}{(q+1)^2}, &amp; \iota(L)&amp;=\frac{(q-1)(q^2-q-2u^2)N}{(q+1)^2D_0},\\
+\varepsilon(U)&amp;=-\frac{4D_0N}{K^2}, &amp; \iota(U)&amp;=\frac{(q-1)(q^2-q-2u^2)N}{K^2}.
+\end{aligned}\]
+Hence, with $\kappa_1=\frac{q(q-1)}{2D_0}$ and $\kappa_2=-\frac{(q-1)(q^2-q-2u^2)}{4D_0}$,
+\[\iota(A)=\kappa_1\varepsilon(A),\quad \iota(J)=\kappa_1\varepsilon(J),\qquad \iota(L)=\kappa_2\varepsilon(L),\quad \iota(U)=\kappa_2\varepsilon(U),\]
+and of course $\iota(T)=\varepsilon(T)=0$.</p><p><strong>The circles $TIP$ and $TEF$ meet again.</strong> They are distinct and not tangent at $T$. Otherwise a homothety with centre $T$ (possibly the identity) would map the circle
+$TIP$ onto the circle $TEF$. It maps the second intersection of line $TI$ with the first circle to the second intersection of the same line with the second circle; line $TI$ is
+line $IE$, so $I\mapsto E$, and likewise $P\mapsto F$ (all of $I,P,E,F$ differ from $T$). Then $EF$ would be parallel to, or equal to, $IP$; but $IP$ is $z=0$ and $EF$ is
+$s=-1$, which meet. So the two circles have a second common point $Z\ne T$.</p><p><strong>Conclusion.</strong> For a constant $\kappa$, the equation $\iota-\kappa\varepsilon=0$ is $(1-\kappa)Q+(\text{linear terms})=0$. For $\kappa=\kappa_1$ it holds at the three
+non-collinear points $T,A,J$. If $\kappa_1=1$ it would be a linear equation satisfied by three non-collinear points, hence $\iota-\varepsilon$ would vanish identically and the circles
+$TIP$, $TEF$ would coincide, which we excluded. So $\kappa_1\ne1$, $\iota-\kappa_1\varepsilon=0$ is the equation of a circle through $T,A,J$, and it is the circle $TAJ$.
+In the same way $\iota-\kappa_2\varepsilon=0$ is the circle $TLU$. The point $Z$ satisfies $\varepsilon(Z)=\iota(Z)=0$, so it satisfies both equations.</p><p>Thus the circles $TAJ$, $TIP$, $TEF$, $TLU$ all pass through the point $Z\ne T$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p6">

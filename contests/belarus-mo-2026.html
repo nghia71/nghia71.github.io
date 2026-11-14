@@ -354,7 +354,7 @@ So the last card contains $\boxed{1814400}$ and $\boxed{-1814400}$.</p>
 <div class="ct-meta">Geometry &middot; LPS VII, Chapter 32: Trigonometric Geometry and Metric Conversion</div>
 <div class="ct-text"><p>The incircle of triangle $ABC$ with incentre $I$ is tangent to $BC$ at $D$. Segment $AL$ is the angle bisector of triangle $ABC$. Ray $ID$ intersects the circumcircle $\Gamma$ of triangle $ABC$ at $F$. It turned out that $IA=IF$.
 Prove that $FL$ passes through the centre of $\Gamma$.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 (The condition forces a 60 degree angle; then a homothety at L)</h4>
 <div class="ct-fig"><img style="width:256px" src="/assets/contests/2026-27/belarus-mo-11_s1.svg" alt="Figure for the solution"></div>
 <p>Let $O,R$ be the centre and radius of $\Gamma$, write $A,B,C$ also for the angles of the triangle, let $M$ be the second
@@ -396,6 +396,32 @@ point $L$ lies on segment $IM$. Let $h$ be the homothety with centre $L$ and rat
 $IF$ (direction $u$) to the ray from $M$ with direction $-u$, which contains $O$. It maps $F$ to the point of this ray at distance
 $\frac{LM}{LI}\cdot IF=\frac{MI}{IA}\cdot IA=MI=R$ from $M$, which is $O$. So $L$, $F$ and $h(F)=O$ are collinear: the line $FL$ passes
 through the centre of $\Gamma$.</p>
+<h4>Solution 3 (Coordinates from the point of tangency)</h4>
+<p>Scale the figure so that the inradius is $1$, and take coordinates with $D=(0,0)$, $I=(0,1)$, $B=(-u,0)$ and $C=(v,0)$, where
+$u=BD&gt;0$ and $v=CD&gt;0$. Put $w=uv$ and $t=u+v$.</p><p><em>The vertex $A$.</em> The line $(u^2-1)y=2u(x+u)$ passes through $B$, and its distance from $I$ is
+\[\frac{|(u^2-1)-2u^2|}{\sqrt{(u^2-1)^2+4u^2}}=\frac{u^2+1}{u^2+1}=1,\]
+so it is tangent to the incircle; it is not the line $BC$, because its coefficient of $x$ is $2u\ne0$. Hence it is the line $BA$. In the same
+way the line $CA$ is $(v^2-1)y=-2v(x-v)$. Solving these two linear equations gives
+\[A=\Bigl(\frac{u-v}{w-1},\ \frac{2w}{w-1}\Bigr),\]
+and $w&gt;1$ because $A$ lies above $BC$. Since $(u-v)^2+(w+1)^2=(u-v)^2+4uv+(w-1)^2=t^2+(w-1)^2$,
+\[IA^2=\frac{(u-v)^2+(w+1)^2}{(w-1)^2}=1+\frac{t^2}{(w-1)^2}.\]</p><p><em>The point $L$.</em> Going from $I$ to $A$ the height increases by $\frac{2w}{w-1}-1=\frac{w+1}{w-1}$, so the line $AI$ reaches the height
+$0$ at
+\[L=I-\frac{w-1}{w+1}\,(A-I)=\Bigl(\frac{v-u}{w+1},\ 0\Bigr).\]</p><p><em>The circle $\Gamma$.</em> A circle through $B$ and $C$ has an equation $x^2+y^2+(u-v)x+Ky-w=0$ (for $y=0$ it becomes $(x+u)(x-v)=0$).
+For the point $A$,
+\[x_A^2+(u-v)x_A+y_A^2-w=\frac{w(u-v)^2+4w^2-w(w-1)^2}{(w-1)^2}=\frac{w\bigl(t^2-(w-1)^2\bigr)}{(w-1)^2},\]
+so $A\in\Gamma$ exactly when $K\cdot\frac{2w}{w-1}=\frac{w((w-1)^2-t^2)}{(w-1)^2}$, that is,
+\[K=\frac{(w-1)^2-t^2}{2(w-1)}.\]</p><p><em>The point $F$.</em> The ray $ID$ is the part of the line $x=0$ below $I$. The points $I$ and $D$ are inside $\Gamma$ ($D$ is an interior
+point of the chord $BC$), so the ray leaves the disc at a point $F=(0,f)$ with $f&lt;0$. Then
+\[f^2+Kf-w=0,\qquad(1)\]
+and $IF=1-f$. The condition $IA=IF$ reads $\frac{t^2}{(w-1)^2}=(1-f)^2-1=f^2-2f$, so $t^2=(w-1)^2(f^2-2f)$ and
+$K=\frac{(w-1)(1+2f-f^2)}2$. Substituting in (1) and multiplying by $2$,
+\[2f^2+(w-1)(f+2f^2-f^3)-2w=0,\qquad\text{that is,}\qquad (f-1)(f+1)\bigl((w-1)f-2w\bigr)=0\]
+(expand both sides: each equals $-(w-1)f^3+2wf^2+(w-1)f-2w$). As $f&lt;0$ and $w&gt;1$, the factors $f-1$ and $(w-1)f-2w$ are negative, so
+$f=-1$. Then $t^2=3(w-1)^2$ and $K=-(w-1)$.</p><p><em>The collinearity.</em> The centre of $\Gamma$ is $O=\bigl(-\frac{u-v}2,-\frac K2\bigr)=\bigl(\frac{v-u}2,\frac{w-1}2\bigr)$, and $F=(0,-1)$.
+The point of segment $FO$ at the fraction $\frac2{w+1}$ of the way from $F$ is
+\[F+\frac2{w+1}(O-F)=\Bigl(\frac{v-u}{w+1},\ -1+\frac2{w+1}\cdot\frac{w+1}2\Bigr)=\Bigl(\frac{v-u}{w+1},\ 0\Bigr)=L.\]
+So $L$ lies on the line $FO$ (and $L\ne F$), that is, the line $FL$ passes through the centre of $\Gamma$. The computation covers the
+isosceles case $u=v$ as well.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p12">
@@ -422,7 +448,7 @@ integer is represented at least twice (it occurs twice in the list). So such a s
 <div class="ct-text"><p>Does there exist an infinite non-constant sequence $m_1,m_2,m_3,\dots$ of positive integers such that for all positive integers $k$ the following equality holds
 \[m_{k+2}=(k+1)m_k-km_{k+1}.\]</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p><strong>No</strong></p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Explicit differences)</h4>
 <p>Suppose such a sequence exists and let $d_k=m_{k+1}-m_k$. The recurrence gives
 \[m_{k+2}-m_{k+1}=(k+1)m_k-(k+1)m_{k+1},\qquad\text{i.e.}\qquad d_{k+1}=-(k+1)d_k,\]
@@ -436,6 +462,15 @@ $d_1S_k\le-(k-1)!$ and $m_{k+1}\le m_1-(k-1)!&lt;0$, a contradiction. So the ans
 $d_{k+1}=-(k+1)d_k$, and $d_1\ne0$ (otherwise every $d_k=0$ and the sequence is constant), so $|d_k|=k!\,|d_1|\ge k!$.</p><p>We claim $|d_k|&lt;m_k$ for every $k$. If $d_k&lt;0$, then $1\le m_{k+1}=m_k+d_k$ gives $|d_k|&lt;m_k$. If $d_k&gt;0$, then
 $m_{k+2}=m_{k+1}+d_{k+1}=m_k+d_k-(k+1)d_k=m_k-kd_k\ge1$, so $d_k&lt;\frac{m_k}k\le m_k$.</p><p>Consequently $m_{k+1}=m_k+d_k&lt;2m_k$, so $m_k\le2^{k-1}m_1$, and $k!\le|d_k|&lt;m_k\le2^{k-1}m_1$ for every $k$. But $\frac{k!}{2^{k-1}}$ grows without
 bound (it is multiplied by $\frac{k+1}2\ge\frac32$ at each step from $k=2$ on), a contradiction. So the answer is <strong>no</strong>.</p>
+<h4>Solution 3 (Every other term decreases)</h4>
+<p>Suppose such a sequence exists and let $d_k=m_{k+1}-m_k$. The recurrence can be written as $m_{k+2}-m_{k+1}=(k+1)(m_k-m_{k+1})$,
+that is,
+\[d_{k+1}=-(k+1)\,d_k.\]
+If $d_1=0$, then every $d_k$ is $0$ and the sequence is constant. So $d_1\ne0$; then every $d_k$ is non-zero and any two consecutive
+differences have opposite signs. Hence there is $k_0\in\{1,2\}$ such that $d_k&gt;0$ for every $k\equiv k_0\pmod2$. For each such $k$,
+\[m_{k+2}=m_k+d_k+d_{k+1}=m_k+d_k-(k+1)d_k=m_k-k\,d_k&lt;m_k.\]
+So $m_{k_0}&gt;m_{k_0+2}&gt;m_{k_0+4}&gt;\cdots$ is an infinite strictly decreasing sequence of positive integers, which is impossible. So the answer
+is <strong>no</strong>.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p14">
@@ -498,8 +533,8 @@ integer) and $f(0)=f(1)=0$. This $f$ is not constant, so the answer is <strong>y
 <div class="ct-text"><p>Given a positive integer $n$. Vika wants for the chosen by Sasha real numbers $a_1,a_2,\dots,a_n$ the inequality $|ja_i-ia_j|&lt;j-i$ to hold for all $1\le i&lt;j\le n$. To achieve it, she can choose some of these inequalities and ask Sasha to choose his numbers in any way so that they hold.
 For each positive integer $n$ determine the least possible number of inequalities Vika needs to choose to achieve the desired.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$n-1$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Telescoping and connectivity)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Telescoping and connectivity)</h4>
 <p>Dividing by $ij$, the inequality for $i&lt;j$ reads
 \[\Bigl|\frac{a_i}i-\frac{a_j}j\Bigr|&lt;\frac1i-\frac1j.\]
 Put $b_i=\frac{a_i}i$.</p><p><strong>$n-1$ inequalities suffice.</strong> Let Vika choose the $n-1$ inequalities for the pairs $(k,k+1)$, $1\le k\le n-1$. Then for $i&lt;j$, by the
@@ -510,6 +545,16 @@ edges are the chosen pairs. A graph with $n$ vertices and fewer than $n-1$ edges
 component, so $K\ne\{1,\dots,n\}$. Sasha takes $a_i=i$ for $i\in K$ and $a_i=0$ otherwise, so $b_i=1$ on $K$ and $b_i=0$ elsewhere. Every chosen
 inequality joins two indices of the same component, so it reads $0&lt;\frac1i-\frac1j$ and holds. But for $i\in K$ and $j\notin K$ we get
 $|b_i-b_j|=1&gt;\bigl|\frac1i-\frac1j\bigr|$, so the corresponding inequality fails.</p><p>Hence the least number is $\boxed{n-1}$ (which is $0$ for $n=1$).</p>
+<h4>Solution 2 (A witness for every consecutive pair)</h4>
+<p>Dividing by $ij$, the inequality for $i&lt;j$ reads
+\[|b_i-b_j|&lt;t_i-t_j,\qquad\text{where } b_i=\frac{a_i}i,\ t_i=\frac1i.\]
+Sasha may choose the $b_i$ freely (then $a_i=ib_i$), and $t_1&gt;t_2&gt;\dots&gt;t_n$.</p><p><strong>The $n-1$ consecutive inequalities suffice.</strong> If $|b_k-b_{k+1}|&lt;t_k-t_{k+1}$ for $1\le k\le n-1$, then for $i&lt;j$
+\[|b_i-b_j|\le\sum_{k=i}^{j-1}|b_k-b_{k+1}|&lt;\sum_{k=i}^{j-1}(t_k-t_{k+1})=t_i-t_j.\]</p><p><strong>Every consecutive inequality must be chosen.</strong> Fix $k$ with $1\le k\le n-1$ and suppose Vika does not choose the inequality for the
+pair $(k,k+1)$. Let $\delta=t_k-t_{k+1}&gt;0$, and let Sasha take $b_i=0$ for $i\le k$ and $b_i=\delta$ for $i&gt;k$. For a pair $i&lt;j$ on the same
+side of $k$ the inequality reads $0&lt;t_i-t_j$ and holds. For a pair $i\le k&lt;j$ other than $(k,k+1)$ we have $t_i\ge t_k$ and $t_j\le t_{k+1}$,
+with at least one of them strict, so $t_i-t_j&gt;\delta=|b_i-b_j|$ and the inequality holds. So every inequality except the one for $(k,k+1)$ holds;
+in particular all the chosen ones do. But for $(k,k+1)$ we get $|b_k-b_{k+1}|=\delta=t_k-t_{k+1}$, and the strict inequality fails.</p><p>Hence any good choice contains the $n-1$ consecutive inequalities, and these alone are enough. The least number is $\boxed{n-1}$ (which is
+$0$ for $n=1$). In fact the consecutive pairs form the only good choice of $n-1$ inequalities.</p>
 </div></details>
 </section>
 <h2 class="ct-group" id="grade-10-day-1">Grade 10, Day 1</h2>
@@ -561,7 +606,7 @@ For $n\ge3$, $(*)$ gives $\mathcal L-\mathcal R\ge(a+4)(a+6)\ge35&gt;7$. For $n=
 <div class="ct-meta">Algebra &middot; LPS VII, Chapter 38: Inequalities: Convexity and Functional Methods</div>
 <div class="ct-text"><p>Prove that for any positive integers $m,n$ and real $x&gt;0$ the following inequality holds
 \[\left(x^{m+n-1}+x^{m+n-2}+\dots+x+1\right)^2\le\frac{(m+n)^2}{4mn}\left(x^{2m-1}+\dots+x+1\right)\left(x^{2n-1}+\dots+x+1\right).\]</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Discrete log-convexity)</h4>
 <p>Let $S_k=1+x+\dots+x^{k-1}$ and $g_k=\frac{S_k}k$ for $k\ge1$; all are positive. The inequality is
 \[g_{m+n}^2\le g_{2m}\,g_{2n}.\qquad(1)\]</p><p><em>Step 1: $g_k^2\le g_{k-1}g_{k+1}$ for $k\ge2$.</em> For $x\ne1$, $S_k=\frac{x^k-1}{x-1}$ and
@@ -581,6 +626,25 @@ where $S_k=1+x+\dots+x^{k-1}$, and $\frac{x-1}u&gt;0$ (since $x-1$ and $\ln x$ h
 integrals,
 \[I_{m+n}^2=\Bigl(\int_0^1e^{mus}e^{nus}\,ds\Bigr)^2\le\int_0^1e^{2mus}\,ds\int_0^1e^{2nus}\,ds=I_{2m}I_{2n}.\]
 Dividing by $\bigl(\frac{x-1}u\bigr)^2$ gives $\frac{S_{m+n}^2}{(m+n)^2}\le\frac{S_{2m}S_{2n}}{4mn}$, which is the claim.</p>
+<h4>Solution 3 (Pairs of powers symmetric about the centre)</h4>
+<p>If $x=1$, both sides equal $(m+n)^2$; if $m=n$, both sides are equal. So let $x\ne1$ and, by symmetry, $m&gt;n$. Write
+$S_k=1+x+\dots+x^{k-1}=\frac{x^k-1}{x-1}$.</p><p><em>Reduction.</em> Put $P=x^{m+n}-1$ and $Q=x^m-x^n$. Then
+\[(x^{2m}-1)(x^{2n}-1)=x^{2m+2n}-x^{2m}-x^{2n}+1=P^2-Q^2.\]
+Multiplying the inequality by $4mn(x-1)^2&gt;0$, it becomes $4mnP^2\le(m+n)^2(P^2-Q^2)$, that is, $(m+n)^2Q^2\le(m-n)^2P^2$, or
+$(m+n)|Q|\le(m-n)|P|$. Dividing by $|x-1|$, and using $\frac{|Q|}{|x-1|}=x^n\Bigl|\frac{x^{m-n}-1}{x-1}\Bigr|=x^n+x^{n+1}+\dots+x^{m-1}$ and
+$\frac{|P|}{|x-1|}=S_{m+n}$, we must show
+\[\frac{x^n+x^{n+1}+\dots+x^{m-1}}{m-n}\le\frac{1+x+\dots+x^{m+n-1}}{m+n}.\qquad(*)\]
+So the average of $x^e$ over the inner exponents $E_0=\{n,\dots,m-1\}$ must be at most the average over all exponents
+$E=\{0,\dots,m+n-1\}$.</p><p><em>Symmetric pairs.</em> Both sets are symmetric about $c=\frac{m+n-1}2$: the map $e\mapsto2c-e$ maps each of them onto itself. Hence the sum of
+$x^e$ over either set equals the sum of $g(e)=\frac12\bigl(x^e+x^{2c-e}\bigr)$ over it. Let $y=\max(x,\frac1x)&gt;1$. Then
+$\{x^e,x^{2c-e}\}=\{x^cy^r,x^cy^{-r}\}$ with $r=|e-c|$, so
+\[g(e)=h(|e-c|),\qquad h(r)=\frac{x^c}2\bigl(y^r+y^{-r}\bigr).\]
+The function $h$ is strictly increasing for $r\ge0$: for $0\le r&lt;s$,
+\[(y^s+y^{-s})-(y^r+y^{-r})=(y^{s-r}-1)(y^r-y^{-s})&gt;0.\]
+Every $e\in E_0$ has $|e-c|\le\frac{m-n-1}2$, and every $e$ in $E\setminus E_0=\{0,\dots,n-1\}\cup\{m,\dots,m+n-1\}$ has
+$|e-c|\ge c-(n-1)=\frac{m-n+1}2$. So every value of $g$ on the non-empty set $E\setminus E_0$ is larger than every value of $g$ on $E_0$, and
+the average $\beta$ of $g$ over $E\setminus E_0$ is larger than the average $\alpha$ over $E_0$. The average over $E$ is a weighted average of
+$\alpha$ and $\beta$ with positive weights, hence larger than $\alpha$. This is $(*)$, even with strict inequality.</p><p>So the inequality holds, with equality exactly when $x=1$ or $m=n$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p20">
@@ -785,7 +849,7 @@ the board into $\frac m2\cdot\frac n4$ such rectangles; then every row contains 
 <div class="ct-meta">Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure</div>
 <div class="ct-text"><p>Let $M$ be the midpoint of side $BC$ of triangle $ABC$. Inside the triangle $ABC$ a point $D$ is chosen such that $\angle BAD=\angle CAM$. Ray $\ell$, which passes through $D$ and is parallel to $AB$, intersects the segment $AC$ at $E$ and the circumcircle of $ABC$ at $F$.
 Prove that $DE&gt;EF$.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 (The tangent at A cuts off a segment equal to ED)</h4>
 <div class="ct-fig"><img style="width:245px" src="/assets/contests/2026-27/belarus-mo-27_s1.svg" alt="Figure for the solution"></div>
 <p>Let $\Gamma$ be the circumcircle and write $A,B,C$ also for the angles of the triangle. The ray from $D$ parallel to $AB$ has the
@@ -814,6 +878,21 @@ The terms of first degree in $\gamma$ are $-\gamma bc\cos A+\gamma b^2+\gamma b(
 \[\gamma^2b^2\Bigl[\Bigl(\cos A-\frac bc\Bigr)^2+\sin^2A\Bigr]&gt;0.\]
 So $D^*$ lies outside $\Gamma$, while $E$ lies inside. The ray from $E$ towards $D^*$ (away from $D$) leaves the disc between $E$ and $D^*$, so
 its intersection $F$ with $\Gamma$ lies strictly between $E$ and $D^*$. Therefore $EF&lt;ED^*=ED$.</p>
+<h4>Solution 3 (Power of the point E)</h4>
+<p>Let $\Gamma$ be the circumcircle, $b=AC$, $c=AB$, and write $B,C$ also for the angles of the triangle.</p><p><em>The length $ED$.</em> Since $D$ is inside the triangle, $\angle CAD=\angle BAC-\angle BAD=\angle BAC-\angle CAM=\angle BAM$. The ray from $D$
+parallel to $AB$ that meets $AC$ has the direction from $B$ to $A$, so $\angle ADE=\angle DAB=\angle CAM$ (alternate angles). By the law of
+sines in triangles $ABM$ and $ACM$, $\frac{BM}{\sin\angle BAM}=\frac{AM}{\sin B}$ and $\frac{CM}{\sin\angle CAM}=\frac{AM}{\sin C}$; as $BM=CM$,
+$\frac{\sin\angle BAM}{\sin\angle CAM}=\frac{\sin B}{\sin C}=\frac bc$. The law of sines in triangle $AED$ gives
+\[ED=AE\cdot\frac{\sin\angle EAD}{\sin\angle ADE}=AE\cdot\frac bc.\]</p><p><em>The whole chord.</em> Let $\ell$ also denote the full line through $D$ parallel to $AB$. It meets side $AC$ at the interior point $E$ and side
+$BC$ at an interior point $W$; the segment $EW$ is the part of $\ell$ inside the triangle, so $D$ lies on it, and the ray from $D$ through $E$
+continues beyond $E$ to $F$. Put $\tau=\frac{AE}{AC}\in(0,1)$. As $EW\parallel AB$, triangles $CEW$ and $CAB$ are similar, so
+$EW=\frac{CE}{CA}\cdot AB=(1-\tau)c$.</p><p>The point $E$ is inside $\Gamma$ (an interior point of the chord $AC$), so $\ell$ meets $\Gamma$ at two points on opposite sides of $E$: the
+point $F$, and a point $Z$ on the ray from $E$ through $W$. The point $W$ is inside $\Gamma$ too (an interior point of the chord $BC$), so $Z$
+lies beyond $W$ and $EZ&gt;EW$. By the power of the point $E$,
+\[EF\cdot EZ=EA\cdot EC=\tau b\cdot(1-\tau)b.\]
+Therefore
+\[EF=\frac{\tau(1-\tau)b^2}{EZ}&lt;\frac{\tau(1-\tau)b^2}{(1-\tau)c}=\tau b\cdot\frac bc=AE\cdot\frac bc=ED.\]
+So $DE&gt;EF$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p28">
@@ -822,8 +901,8 @@ its intersection $F$ with $\Gamma$ lies strictly between $E$ and $D^*$. Therefor
 <div class="ct-text"><p>Polynomials $p(x)$ and $q(x)$ of degree $n$ do not have common real roots. For every positive integer $n$ determine all possible numbers of distinct real solutions the following equation can have
 \[p(x)\,q\!\left(\frac{1}{x}\right)=p\!\left(\frac{1}{x}\right)q(x).\]</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>for odd $n$: $2,4,\dots,2n$; for even $n$: $2,4,\dots,2n$, and also infinitely many (the equation can hold for every $x\ne0$)</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Reciprocal polynomials)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Reciprocal polynomials)</h4>
 <p>For a polynomial $f$ of degree at most $n$ put $f^*(x)=x^nf(\frac1x)$ (the coefficients in reverse order). For $x\ne0$ the
 equation is equivalent, after multiplying by $x^n$, to
 \[P(x):=p(x)q^*(x)-p^*(x)q(x)=0.\]
@@ -851,6 +930,32 @@ $u^*(\varepsilon)=\varepsilon^{n-\mu}u(\varepsilon)$:
 \[u(\varepsilon)\varepsilon^nq(\varepsilon)=(-\varepsilon)^\mu\varepsilon^{n-\mu}u(\varepsilon)q(\varepsilon)=(-1)^\mu\varepsilon^nu(\varepsilon)q(\varepsilon).\]
 As $q(\varepsilon)\ne0$ (no common root) and $u(\varepsilon)\ne0$, $\mu$ is even.</p><p>(iv) By (ii) and (iii), the real roots of $p$, counted with multiplicity, are an even number. But $p$ has odd degree $n$ and its non-real roots
 come in conjugate pairs, so it has an odd number of real roots counted with multiplicity. This contradiction shows $P\not\equiv0$ for odd $n$.</p><p><strong>Answer.</strong> For odd $n$: <strong>$2,4,\dots,2n$</strong>. For even $n$: <strong>$2,4,\dots,2n$, or infinitely many</strong> (all $x\ne0$).</p>
+<h4>Solution 2 (A substitution t = x + 1/x and a continuity argument)</h4>
+<p>Here $x=0$ is never a solution, since $\frac10$ is undefined.</p><p><strong>Which numbers can occur.</strong> For $x\ne0$ the equation is equivalent to $R(x)=0$, where
+\[R(x)=x^n\Bigl(p(x)\,q\bigl(\tfrac1x\bigr)-p\bigl(\tfrac1x\bigr)q(x)\Bigr)\]
+is a polynomial of degree at most $2n$. The numbers $1$ and $-1$ are always solutions, and if $x$ is a solution then so is $\frac1x$. If
+$R$ is not the zero polynomial, there are at most $2n$ solutions, and those other than $\pm1$ form pairs $\{x,\frac1x\}$ with $x\ne\frac1x$; so
+the number of solutions is even and between $2$ and $2n$. If $R$ is the zero polynomial, every $x\ne0$ is a solution.</p><p><strong>Every even number from $2$ to $2n$ occurs.</strong> Put $t=x+\frac1x$ and define polynomials $U_j$ in $t$ by $U_0=1$, $U_1=t$,
+$U_{j+1}=tU_j-U_{j-1}$; then $U_j$ has degree $j$ and leading coefficient $1$. For $k\ge1$,
+\[x^k-x^{-k}=\bigl(x-x^{-1}\bigr)\,U_{k-1}(t):\]
+this is clear for $k=1,2$, and the step from $k-1,k$ to $k+1$ follows from
+$x^{k+1}-x^{-(k+1)}=\bigl(x+x^{-1}\bigr)\bigl(x^k-x^{-k}\bigr)-\bigl(x^{k-1}-x^{-(k-1)}\bigr)$.</p><p>Let $0\le j\le n-1$, choose distinct numbers $\tau_1,\dots,\tau_j&gt;2$ and put $H(t)=t^{\,n-1-j}(t-\tau_1)\cdots(t-\tau_j)$, of degree $n-1$ with
+leading coefficient $1$. Subtracting suitable multiples of $U_{n-1},U_{n-2},\dots,U_0$ in turn to remove the leading term, we get
+$H=\sum_{k=1}^nc_kU_{k-1}$ with real $c_k$ and $c_n=1$. Let
+\[P(x)=1+\sum_{k=1}^nc_kx^k,\qquad p(x)=x^nP\bigl(\tfrac1x\bigr)=x^n+\sum_{k=1}^nc_kx^{n-k},\qquad q(x)=x^n.\]
+Both $p$ and $q$ have degree $n$; the only root of $q$ is $0$ and $p(0)=c_n=1$, so there is no common real root. For $x\ne0$ we have
+$p(x)q(\frac1x)=P(\frac1x)$ and $p(\frac1x)q(x)=P(x)$, so the equation becomes
+\[0=P(x)-P\bigl(\tfrac1x\bigr)=\sum_{k=1}^nc_k\bigl(x^k-x^{-k}\bigr)=\bigl(x-x^{-1}\bigr)\,H\bigl(x+\tfrac1x\bigr).\]
+The first factor gives $x=\pm1$. For real $x\ne0$, $x+\frac1x\ne0$, and $x+\frac1x=\tau_i$ holds for exactly two numbers $x$, the roots of
+$x^2-\tau_ix+1=0$, which are distinct (as $\tau_i^2&gt;4$), positive and different from $1$; different $\tau_i$ give different $x$. So the equation
+has exactly $2+2j$ real solutions, and $j=0,1,\dots,n-1$ gives $2,4,\dots,2n$.</p><p><strong>Infinitely many solutions for even $n$.</strong> Take $p=q=(x^2+1)^{n/2}$: there are no real roots at all, and the equation holds for every
+$x\ne0$.</p><p><strong>No identity for odd $n$.</strong> Let $n$ be odd and suppose the equation holds for all $x\ne0$. As $p$ and $q$ have no common real root,
+$V(x)=(p(x),q(x))$ is a non-zero vector for every real $x$, and $N(x)=V(x)/|V(x)|$ is a continuous unit vector on $\mathbb R$. For $x\ne0$ the
+equation says that the determinant of $V(x)$ and $V(\frac1x)$ vanishes, so $N(\frac1x)=\varepsilon(x)N(x)$ with
+$\varepsilon(x)=N(x)\cdot N(\frac1x)\in\{1,-1\}$. The function $\varepsilon$ is continuous on each of the intervals $(0,\infty)$ and
+$(-\infty,0)$, so it is constant on each, and $\varepsilon(1)=\varepsilon(-1)=|N(\pm1)|^2=1$. Hence $N(\frac1x)=N(x)$ for all $x\ne0$.</p><p>Let $a,b\ne0$ be the leading coefficients of $p,q$ and $\lambda=(a,b)/|(a,b)|$. As $y\to+\infty$, $V(y)/y^n\to(a,b)$, so $N(y)\to\lambda$; as
+$y\to-\infty$, $V(y)/|y|^n\to-(a,b)$ because $n$ is odd, so $N(y)\to-\lambda$. Letting $x\to0^+$ in $N(x)=N(\frac1x)$ gives $N(0)=\lambda$, and
+letting $x\to0^-$ gives $N(0)=-\lambda$. Then $\lambda=-\lambda$, impossible for a unit vector.</p><p><strong>Answer.</strong> For odd $n$: <strong>$2,4,\dots,2n$</strong>. For even $n$: <strong>$2,4,\dots,2n$, or infinitely many</strong> (all $x\ne0$).</p>
 </div></details>
 </section>
 <h2 class="ct-group" id="grade-11-day-2">Grade 11, Day 2</h2>
@@ -898,8 +1003,9 @@ reflection reverses directed angles,
 \[\angle(PG,PF)=-\angle(DG,DF).\]</p><p><em>Concyclicity.</em> The points $X,D,F$ are collinear and $X\ne D$. Triangle $GDX$ is isosceles with $GD=GX$, so its base angles satisfy
 $\angle(XG,XD)=-\angle(DG,DX)$. Therefore
 \[\angle(XG,XF)=\angle(XG,XD)=-\angle(DG,DX)=-\angle(DG,DF)=\angle(PG,PF),\]
-so $X,P,G,F$ are concyclic. (If $X=F$ or $P$ coincides with one of the points, the circle $(FXG)$ is the circle through the remaining points and the
-same computation applies.)</p><p>Hence $P$ lies on the circumcircles of $CDF$, $AHC$ and $FXG$.</p>
+so $X,P,G,F$ are concyclic. (If $P$ coincides with $X$ or $G$, it lies on $(FXG)$ trivially. The circle $(FXG)$ exists only when $F,X,G$
+form a triangle, so the statement tacitly assumes $X\ne F$, and we use this in the computation. The assumption is a real restriction: for
+$BH=1$, $HC=\frac45$, $AH=\frac{\sqrt5}2$ the point $F$ on ray $DB$ with $DF=2\,DB$ satisfies all the conditions, and then $X=F$.)</p><p>Hence $P$ lies on the circumcircles of $CDF$, $AHC$ and $FXG$.</p>
 <h4>Solution 2 (The arc midpoint of XP)</h4>
 <p><em>The point $P$.</em> Since $\angle AHC=90^\circ$, the circle $(AHC)$ has diameter $AC$; since $F$ lies on line $DB$ and
 $\angle CDB=90^\circ$, the circle $(CDF)$ has diameter $CF$. Let $P$ be the foot of the perpendicular from $C$ to line $AF$. Then $P\ne A$
@@ -953,7 +1059,7 @@ $524800-262400=262400$. So the answer is <strong>yes</strong>.</p>
 <div class="ct-meta">Number Theory &middot; LPS VII, Chapter 49: Combinatorial Number Theory and Structure</div>
 <div class="ct-text"><p>A positive integer $l$ is $k$-starred if it is smaller than $2^k$ and for every positive integer $m&lt;k$ the remainder of $l$ when divided by $2^m$ does not equal $\frac{2^m-1}{2^k-1}\,l$.
 Let $p$ be a prime number, and $n&gt;1$ be a positive integer which is not divisible by $p$. Prove that the number of $n$-starred and $np$-starred numbers combined is divisible by $2^p$.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Starred numbers are primitive binary words; Moebius inversion)</h4>
 <p><strong>Lemma.</strong> For $1\le l&lt;2^k$ let $w(l)$ be the binary word of length $k$ of $l$ (with leading zeros). Then $l$ is
 $k$-starred if and only if $w(l)$ is <em>primitive</em>, i.e. not of the form $v^{k/d}$ (a word $v$ of length $d$ repeated) with $d\mid k$, $d&lt;k$.</p><p><em>Proof.</em> If $w(l)=v^{k/d}$ with $d&lt;k$, and $v$ also denotes the value of the word $v$, then
@@ -980,6 +1086,24 @@ $d$ and $dp$ with $d\mid e$, so
 Every $d\mid e$ is not divisible by $p$, so by the induction hypothesis each term of the last sum is divisible by $2^p$ (for $e=1$ the sum is
 empty), and so is $2^{ep}$. This proves the claim.</p><p>Applying the claim with $e=n$ ($n&gt;1$, $p\nmid n$) shows that the number of $n$-starred and $np$-starred numbers combined, $P(n)+P(np)$, is
 divisible by $2^p$.</p>
+<h4>Solution 3 (Adding a constant to every block)</h4>
+<p>This solution uses the Lemma of Solution&nbsp;1 and the fact proved there that every binary word $w$ of length $k$ equals $v^{k/d}$ for
+exactly one primitive word $v$ (the <em>root</em> of $w$), whose length $d$ divides $k$. Let $P(k)$ be the number of primitive binary words of
+length $k$; for $k\ge2$ it is the number of $k$-starred numbers. For $d\mid k$, the map $v\mapsto v^{k/d}$ is a bijection from the primitive
+words of length $d$ onto the words of length $k$ whose root has length $d$, so there are $P(d)$ such words.</p><p><em>Roots and powers.</em> If $w=v^{k/\ell}$ for a word $v$ of length $\ell$, then the root of $v$ is also a root of $w$, so its length is $d$ and
+$d\mid\ell$. Conversely, if $d\mid\ell\mid k$, then $w=\bigl(r^{\ell/d}\bigr)^{k/\ell}$, where $r$ is the root. So $w$ is a power of a word of
+length $\ell$ exactly when $d\mid\ell$.</p><p><em>Block words.</em> Let $\Sigma$ be the set of the $2^p$ binary words of length $p$, identified with the residues modulo $2^p$ by their values. A
+binary word $w$ of length $np$ is the same as a word $W$ of length $n$ over the alphabet $\Sigma$ (cut $w$ into blocks of $p$ digits). The word
+$W$ is not primitive exactly when $W=V^{n/e}$ for some $e\mid n$, $e&lt;n$, that is, when $w$ is a power of a binary word of length $ep$ with
+$e\mid n$, $e&lt;n$; by the previous paragraph, exactly when $d\mid ep$ for such an $e$, where $d$ is the length of the root of $w$. Since $d\mid np$
+and $p\nmid n$, we can write $d=d_1$ or $d=d_1p$ with $d_1\mid n$, and $p\nmid d_1$. In both cases $d\mid ep$ if and only if $d_1\mid e$. So $W$
+is not primitive exactly when $d_1$ divides a proper divisor of $n$, that is, when $d_1&lt;n$. Hence $W$ is primitive exactly when $d=n$ or
+$d=np$, and the number of primitive words of length $n$ over $\Sigma$ is
+\[P(n)+P(np).\]</p><p><em>Shifting all letters.</em> For a residue $s$ modulo $2^p$, let $T_s$ add $s$ (modulo $2^p$) to every letter of a word over $\Sigma$. It is a
+bijection with inverse $T_{-s}$, and $T_s(V^r)=(T_sV)^r$, so $T_s$ and $T_{-s}$ map non-primitive words to non-primitive words; hence $T_s$ maps
+the primitive words onto themselves. If $s\ne0$ then $T_s$ changes every letter, so $T_sW\ne W$; consequently the $2^p$ words $T_sW$
+($s=0,1,\dots,2^p-1$) are distinct, since $T_sW=T_{s'}W$ implies $T_{s-s'}W=W$. The sets $\{T_sW\}$ split the primitive words into classes of
+exactly $2^p$ words each, so their number is divisible by $2^p$.</p><p>As $n&gt;1$ and $np&gt;1$, $P(n)+P(np)$ is the number of $n$-starred plus $np$-starred numbers, which is therefore divisible by $2^p$.</p>
 </div></details>
 </section>
 {% endraw %}

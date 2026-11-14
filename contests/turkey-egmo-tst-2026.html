@@ -207,7 +207,7 @@ so $AR=2HM$.</p>
 \[\sum_{i=1}^{1001}x_i-\sum_{i=1}^{1001}x_ix_{i+1}-\sum_{i=1}^{1001}x_ix_{i+2},\]
 where $x_{1002}=x_1$ and $x_{1003}=x_2$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$333$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Reduce to $0$ and $1$, then count gaps)</h4>
 <p>Let $F(x)=\sum x_i-\sum x_ix_{i+1}-\sum x_ix_{i+2}$ (indices mod $1001$).</p><p><em>Step 1: we may assume $x_i\in\{0,1\}$.</em> No term of $F$ contains $x_i^2$, so for fixed values of the other variables $F$ is a linear
 function of $x_i$ on $[0,1]$, and its maximum there is attained at $x_i=0$ or $x_i=1$. Replacing $x_1,x_2,\dots,x_{1001}$ one after another by the
@@ -239,6 +239,11 @@ so $F\le\frac{1001}3&lt;334$ for all admissible $x$. Moreover $F$ is linear in e
 replacing the variables one at a time by the better of $0$ and $1$ does not decrease $F$; hence the maximum is attained at a point of
 $\{0,1\}^{1001}$, where $F$ is an integer, and it is at most $333$. For $x_i=1$ when $i\in\{1,4,7,\dots,997\}$ and $x_i=0$ otherwise, there
 are $333$ ones, no two at cyclic distance $1$ or $2$, so $F=333$. The maximum is $\boxed{333}$.</p>
+<h4>Solution 3 (A random set of indices)</h4>
+<p>Let $F(x)=\sum x_i-\sum x_ix_{i+1}-\sum x_ix_{i+2}$, indices taken modulo $1001$. Call two indices <em>close</em> if their cyclic distance is $1$ or $2$. The close pairs are the $1001$ pairs $\{i,i+1\}$ and the $1001$ pairs $\{i,i+2\}$; these $2002$ pairs are all different (because $1001\ge5$), so $F$ contains exactly one product $x_ix_j$ for each close pair $\{i,j\}$.</p><p><em>A random set.</em> Fix $x_1,\dots,x_{1001}\in[0,1]$ and choose a random set $S\subseteq\{1,\dots,1001\}$ by putting each index $i$ into $S$ with probability $x_i$, independently of the others. For a set $S$ let $e(S)$ be the number of close pairs with both indices in $S$. The expected size of $S$ is $\sum x_i$. A close pair $\{i,j\}$ consists of two different indices, so by independence both lie in $S$ with probability $x_ix_j$; adding over all close pairs, the expected value of $e(S)$ is $\sum x_ix_{i+1}+\sum x_ix_{i+2}$. By linearity of expectation,
+\[
+F(x)=\mathbb{E}\bigl[\,|S|-e(S)\,\bigr].
+\]</p><p><em>Every set gives at most $333$.</em> Let $S$ be any set of indices. For each of the $e(S)$ close pairs inside $S$, delete one of its two indices from $S$. At most $e(S)$ indices are deleted, so the remaining set $I$ has $|I|\ge|S|-e(S)$, and $I$ contains no close pair (every close pair of $S$ has lost an index). If $|I|\ge2$, go around the circle and look at the cyclic distances between consecutive elements of $I$: there are $|I|$ of them, each is at least $3$, and they add up to $1001$. Hence $3|I|\le1001$, so $|I|\le333$; this also holds if $|I|\le1$. Therefore $|S|-e(S)\le333$ for every $S$.</p><p><em>Conclusion.</em> An expected value of a quantity that is always at most $333$ is at most $333$, so $F(x)\le333$ for all admissible $x$. For $x_i=1$ when $i\in\{1,4,7,\dots,997\}$ and $x_i=0$ otherwise, there are $333$ ones and no two of them are close (the last gap, from $997$ to $1$, has four zeros), so every product in $F$ vanishes and $F=333$. The maximum is $\boxed{333}$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p5">

@@ -97,7 +97,7 @@ $2\cdot 6^s=1+7^b$. But the left side is divisible by $3$ while $1+7^b\equiv 2\p
 <div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 39: Graph Theory and Structural Combinatorics</div>
 <div class="ct-text"><p>The $2026$ balls numbered from $1$ to $2026$ are distributed into $1013$ bags so that each bag contains $2$ balls. Asli colors one of the balls in each bag blue and the other red.</p><p>Let $M$ be the sum of the numbers on the blue balls and let $K$ be the sum of the numbers on the red balls. Find the smallest possible value of the integer $N$ such that, no matter how the balls are distributed among the bags, Asli can color them so that $|M-K|\le N$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$1013$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Alternating cycles)</h4>
 <p><strong>$N\ge 1013$.</strong> Put $1$ and $2026$ in one bag, and pair the remaining numbers as $\{2,3\},\{4,5\},\dots,\{2024,2025\}$
 ($1012$ bags). Each of these $1012$ bags contributes $\pm1$ to $M-K$, and the first bag contributes $\pm2025$. Hence
@@ -115,6 +115,21 @@ is a distribution of $1,\dots,2k-2$ into $k-1$ bags. By the induction hypothesis
 and $b$ have different colours. Keep these colours and give $2k$ the colour opposite to $a$, and $2k-1$ the colour opposite to $b$.
 Then both original bags $\{2k,a\}$ and $\{2k-1,b\}$ are two-coloured, and $2k$, $2k-1$ have different colours, so they change
 $M'-K'$ by $\pm1$. Hence $|M-K|\le (k-1)+1=k$.</p></li></ul><p>This completes the induction, and the answer is $\boxed{1013}$.</p>
+<h4>Solution 3 (Sorted differences and a greedy choice of signs)</h4>
+<p>Put $m=1013$, so the balls are $1,2,\dots,2m$ and there are $m$ bags.</p><p><strong>$N\ge 1013$.</strong> Use the bags $\{i,i+m\}$ for $i=1,\dots,m$. Each bag contributes $+m$ or $-m$ to $M-K$, so
+$M-K=m(\varepsilon_1+\dots+\varepsilon_m)$ with every $\varepsilon_i=\pm1$. A sum of $m=1013$ odd numbers is odd, hence not $0$, so
+$|M-K|\ge m=1013$ for every colouring.</p><p><strong>$N=1013$ suffices.</strong> For each bag let its <em>difference</em> be the larger ball minus the smaller one, and list the differences
+as $d_1\le d_2\le\dots\le d_m$. Colouring the larger ball of a bag blue adds its difference to $M-K$, colouring it red subtracts it;
+so $M-K=\pm d_1\pm d_2\pm\dots\pm d_m$, and every choice of signs is possible.</p><p><em>Lemma: $d_i\le m+(d_1+\dots+d_{i-1})$ for every $i$.</em> If $d_i\le m$ there is nothing to prove. Let $d_i=m+k$ with $k\ge1$. A bag
+$\{x,y\}$ with $x&lt;y$ and $y-x\ge d_i$ has $x\le y-d_i\le 2m-(m+k)=m-k$. Different bags have different smaller balls, so at most
+$m-k$ bags have difference at least $d_i$, and at least $k$ bags have difference smaller than $d_i$. In the sorted list these come
+before $d_i$, and each is at least $1$, so $d_1+\dots+d_{i-1}\ge k=d_i-m$.</p><p><em>The greedy colouring.</em> Choose the signs of $d_m,d_{m-1},\dots,d_1$ in this order (largest first), keeping a running total that
+starts at $0$: give each new difference the sign opposite to the sign of the current total (either sign if the total is $0$). If the
+total has absolute value $\rho$ before a step with difference $d$, its absolute value after the step is $|\rho-d|$.</p><p>Before the first step $\rho=0&lt;d_m$, so there is a last step at which $\rho&lt;d$; say this step handles $d_i$ and $\rho=\rho_0$ before it.
+Right after it the absolute value is $d_i-\rho_0\le d_i$. At every later step (handling $d_{i-1},\dots,d_1$) we have $\rho\ge d$, so the
+absolute value drops by exactly that difference. Hence the final value satisfies
+\[|M-K|=d_i-\rho_0-(d_1+\dots+d_{i-1})\le d_i-(d_1+\dots+d_{i-1})\le m\]
+by the Lemma. So Asli can always reach $|M-K|\le 1013$, and the smallest possible $N$ is $\boxed{1013}$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p3">
@@ -190,7 +205,7 @@ the choice of $G$.</p><p>Therefore every choice with sum at most $\frac{115}{6}$
 <div class="ct-meta">Algebra &middot; LPS VII, Chapter 26: Inequalities: Symmetry, Homogenization, and Advanced Structure</div>
 <div class="ct-text"><p>Prove that for all positive real numbers $x,y,z$ satisfying $x^2+y^2+z^2=2$, we have
 \[\frac{1+xy}{xz+yz}+\frac{1+xz}{xy+yz}+\frac{1+yz}{xy+xz}\ge\frac{15}{4}.\]</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Homogenise, then Nesbitt)</h4>
 <p>Since $x^2+y^2+z^2=2$, we have $1=\frac{x^2+y^2+z^2}{2}$ and
 \[1+xy=\frac{x^2+y^2+2xy+z^2}{2}=\frac{(x+y)^2+z^2}{2}.\]
@@ -209,6 +224,17 @@ $t_3=\frac{y+z}{x}$. At equality all $t_i=2$, which suggests splitting
 Summing over $i$ and using $t_1+t_2+t_3\ge 6$ (AM&ndash;GM on $\frac xy+\frac yx$ etc., as in Solution 1),
 \[\sum\Big(t_i+\frac1{t_i}\Big)\ge 3+\frac34\cdot 6=\frac{15}{2},\]
 so the given sum is at least $\frac{15}{4}$, with equality for $x=y=z=\sqrt{2/3}$.</p>
+<h4>Solution 3 (Each numerator is a constant minus its denominator)</h4>
+<p>Put $s=xy+xz+yz&gt;0$. The denominators are $xz+yz=s-xy$, $xy+yz=s-xz$ and $xy+xz=s-yz$; they are positive and
+their sum is $2s$. Since $1+xy=(1+s)-(s-xy)$, and similarly for the other two numerators,
+\[\frac{1+xy}{xz+yz}+\frac{1+xz}{xy+yz}+\frac{1+yz}{xy+xz}=(1+s)\Big(\frac1{s-xy}+\frac1{s-xz}+\frac1{s-yz}\Big)-3.\]
+By the AM&ndash;HM inequality for the three positive denominators,
+\[\frac1{s-xy}+\frac1{s-xz}+\frac1{s-yz}\ge\frac{9}{(s-xy)+(s-xz)+(s-yz)}=\frac{9}{2s},\]
+so the left side is at least
+\[\frac{9(1+s)}{2s}-3=\frac{9}{2s}+\frac32 .\]
+Finally $2(x^2+y^2+z^2)-2s=(x-y)^2+(y-z)^2+(z-x)^2\ge 0$, so $s\le x^2+y^2+z^2=2$ and $\frac{9}{2s}\ge\frac94$. Hence the left side is
+at least $\frac94+\frac32=\frac{15}{4}$. Equality needs $s=2$, i.e. $x=y=z$, so $x=y=z=\sqrt{2/3}$; there all denominators are equal
+and the value is indeed $\frac{15}{4}$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p6">

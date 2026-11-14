@@ -165,7 +165,7 @@ and with $S_1=1$ this is $\bigl(\sum x_i^2\bigr)^2\sqrt n\ge\sum x_i^3$.</p>
 <div class="ct-text"><p>A function $f:\mathbb R\to\mathbb R$ satisfies $f(x)=f\!\left(\frac1x\right)$ for all real numbers $x\ne0$. Assume that there exist polynomials $P,Q$ with real coefficients such that $f(x)=\frac{P(x)}{Q(x)}$ for all real numbers $x$. Prove that there exist polynomials $R,S$ with real coefficients such that
 \[f(x)=\frac{R\left(x+\frac1x\right)}{S\left(x+\frac1x\right)}\]
 for all real numbers $x\ne0$.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Make numerator and denominator symmetric)</h4>
 <p><strong>Lemma.</strong> For every $k\ge0$ there is a polynomial $T_k$ with real (in fact integer) coefficients such that
 $x^k+x^{-k}=T_k\bigl(x+\frac1x\bigr)$ for all $x\ne0$. Indeed $T_0=2$, $T_1(t)=t$, and
@@ -191,6 +191,26 @@ Therefore
 \[x^{-e}Q(x)=q_e+\sum_{k=1}^e q_{e+k}(x^k+x^{-k})=S\Bigl(x+\frac1x\Bigr),\qquad x^{-e}P(x)=R\Bigl(x+\frac1x\Bigr)\]
 with $S=q_e+\sum_k q_{e+k}T_k$ and $R$ defined in the same way from the coefficients of $P$. For real $x\ne0$, $S(x+\frac1x)=x^{-e}Q(x)\ne0$
 and $f(x)=\frac{x^{-e}P(x)}{x^{-e}Q(x)}=\frac{R(x+1/x)}{S(x+1/x)}$.</p>
+<h4>Solution 3 (Write every polynomial as $A(t)+xB(t)$ and multiply by the conjugate)</h4>
+<p>For real $x\ne0$ put $t=x+\frac1x$; then $x^2=tx-1$.</p><p><strong>Step 1: reduction.</strong> For every polynomial $P$ with real coefficients there are polynomials $A,B$ with real coefficients such that
+$P(x)=A(t)+xB(t)$ for all real $x\ne0$. It suffices to show this for $x^k$, by induction on $k$: $x^0=1+x\cdot0$, and if $x^k=A_k(t)+xB_k(t)$,
+then
+\[x^{k+1}=xA_k(t)+x^2B_k(t)=xA_k(t)+(tx-1)B_k(t)=-B_k(t)+x\bigl(A_k(t)+tB_k(t)\bigr).\]
+Replacing $x$ by $\frac1x$ does not change $t$, so also $P(\frac1x)=A(t)+\frac1xB(t)$; and $\frac1x=t-x$.</p><p><strong>Step 2: conjugate.</strong> Since $f(x)=\frac{P(x)}{Q(x)}$ for every real $x$, $Q$ has no real zero. Write $P(x)=A(t)+xB(t)$ and
+$Q(x)=C(t)+xD(t)$ as in Step 1, and for $x\ne0$ multiply numerator and denominator of $\frac{P(x)}{Q(x)}$ by
+$Q(\frac1x)=C+\frac Dx=(C+tD)-xD$ (here $A,B,C,D$ stand for $A(t),\dots$), which is nonzero. Using $x^2=tx-1$,
+\begin{align*}
+Q(x)Q\Bigl(\frac1x\Bigr)&amp;=(C+xD)(C+tD-xD)=C^2+tCD+x\,tD^2-x^2D^2\\
+&amp;=C^2+tCD+D^2,\\
+P(x)Q\Bigl(\frac1x\Bigr)&amp;=(A+xB)(C+tD-xD)=AC+tAD+BD+x\,(BC-AD).
+\end{align*}
+So with the polynomials $W=C^2+tCD+D^2$, $U=AC+tAD+BD$, $V=BC-AD$ we have, for all real $x\ne0$,
+\[f(x)=\frac{U(t)+xV(t)}{W(t)},\qquad W(t)=Q(x)Q\Bigl(\frac1x\Bigr)\ne0 .\]</p><p><strong>Step 3: the $x$-part vanishes.</strong> The identity of Step 2 holds for every $x\ne0$, so we may apply it at $\frac1x$, which has the same $t$:
+$f(\frac1x)=\frac{U(t)+\frac1xV(t)}{W(t)}$. Since $f(x)=f(\frac1x)$, we get $\bigl(x-\frac1x\bigr)V\bigl(x+\frac1x\bigr)=0$ for all $x\ne0$.
+For $x&gt;1$ the first factor is nonzero, so $V(t)=0$ for every $t=x+\frac1x$ with $x&gt;1$, i.e. for every $t&gt;2$ (the map $x\mapsto x+\frac1x$
+is continuous and increasing on $(1,\infty)$, from $2$ to $\infty$). A polynomial with infinitely many zeros is zero, so $V=0$.</p><p><strong>Conclusion.</strong> Taking $R=U$ and $S=W$, both polynomials with real coefficients,
+\[f(x)=\frac{R\left(x+\frac1x\right)}{S\left(x+\frac1x\right)}\qquad\text{for all real }x\ne0,\]
+and the denominator never vanishes there.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p5">
@@ -243,7 +263,7 @@ and by (1) this equals $\frac{BD}{DC}$. So $K=D$.</p><p>Therefore the perpendicu
 <h3>Problem 6</h3>
 <div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 52: Advanced Combinatorial Structure and Hybrid Methods</div>
 <div class="ct-text"><p>An integer $n\ge2$ is given. Wojtek has $n$ bamboos $B_1,B_2,\dots,B_n$ in his garden. All bamboos have a constant rate of growth: every day the bamboo $B_i$ grows by $a_i&gt;0$ meters. Every day at midnight Wojtek can choose one bamboo and cut it to the ground, making its height $0$. The bamboo doesn't stop growing and its rate of growth doesn't change. At the beginning, all the bamboos have height equal to $0$. Assume that $\sum_{i=1}^{n}a_i=1$. Prove that Wojtek can guarantee that the height of every bamboo will always be at most $2$ meters.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Round to powers of two, then split days into even and odd)</h4>
 <p><strong>Rounding.</strong> Since $n\ge2$, every $a_i&lt;1$, so $\frac2{a_i}&gt;2$. Let $p_i=2^{k_i}$ be the largest power of $2$ with
 $p_i\le\frac2{a_i}$; then $k_i\ge1$ and $2p_i&gt;\frac2{a_i}$, i.e.
@@ -274,6 +294,19 @@ whose <em>last</em> $k_i$ digits form the reversed string of $w_i$, i.e. all num
 $2^{k_i}$. These images are pairwise disjoint because the $J_i$ are and $\mathrm{rev}$ is a bijection.</p><p>Schedule: on day $t$, if $t\bmod 2^K\in\mathrm{rev}(J_i)$, cut bamboo $i$. Since $2^{k_i}\mid2^K$, bamboo $i$ is cut exactly on the days
 $t\equiv r_i\pmod{2^{k_i}}$, at most one bamboo is assigned to each day, and by the first paragraph every bamboo always has height at most $2$
 metres.</p>
+<h4>Solution 3 (Round to powers of two, then assign residues greedily by increasing period)</h4>
+<p><strong>Rounding.</strong> Since $n\ge2$ and all $a_i&gt;0$, every $a_i&lt;1$, so $\frac2{a_i}&gt;2$. Let $p_i=2^{k_i}$ be the largest power of two
+with $p_i\le\frac2{a_i}$; then $k_i\ge1$, and $2p_i&gt;\frac2{a_i}$ gives $\frac1{p_i}&lt;a_i$. Hence
+\[a_ip_i\le2\qquad\text{and}\qquad\sum_{i=1}^n\frac1{p_i}&lt;\sum_{i=1}^na_i=1. \tag{1}\]</p><p><strong>Reduction.</strong> Suppose we have residues $r_i$ such that the classes $\{t\ge1:\ t\equiv r_i\pmod{p_i}\}$ are pairwise disjoint. Wojtek cuts
+bamboo $i$ at the midnights of the days of its class (on a day belonging to no class he cuts anything). Each class has a member among
+$1,\dots,p_i$ and consecutive members differ by $p_i$, so bamboo $i$ never grows for more than $p_i$ days without a cut, and its height never
+exceeds $a_ip_i\le2$ by (1). It remains to find the residues.</p><p><strong>Greedy choice.</strong> Renumber so that $p_1\le p_2\le\dots\le p_n$, and choose $r_1,r_2,\dots$ one after another. Suppose $r_1,\dots,r_{i-1}$
+are chosen with disjoint classes, and let $p=p_i$. For $j&lt;i$, $p_j$ is a power of two not larger than $p$, so $p_j\mid p$; therefore the
+class of $r_j$ modulo $p_j$ is the union of exactly $\frac p{p_j}$ residue classes modulo $p$. Together the earlier bamboos occupy at most
+\[\sum_{j&lt;i}\frac p{p_j}=p\sum_{j&lt;i}\frac1{p_j}&lt;p\]
+residues modulo $p$, by (1). So some residue $r_i$ modulo $p$ is free; its class modulo $p$ is disjoint from the class of each $r_j$, $j&lt;i$,
+because that class is a union of other residues modulo $p$. Continuing up to $i=n$ gives the required pairwise disjoint classes, and
+with the schedule above every bamboo always has height at most $2$ metres.</p>
 </div></details>
 </section>
 {% endraw %}

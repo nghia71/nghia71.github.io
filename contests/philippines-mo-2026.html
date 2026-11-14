@@ -160,7 +160,7 @@ with $m&lt;n$ and, swapped, $15$ with $m&gt;n$. Altogether $\boxed{60}$ ordered 
 <div class="ct-meta">Number Theory &middot; LPS VII, Chapter 8: Modular Arithmetic and Congruence Methods</div>
 <div class="ct-text"><p>Let $d\ge 2$ be an integer. An integer $n=\overline{a_1a_2\cdots a_d}$ with $a_1\ne 0$ is <em>left-rotatable</em> if $a_2\ne 0$. In this case, define $L(n)=\overline{a_2a_3\cdots a_da_1}$, which also has $d$ digits like $n$. Similarly, an integer $n=\overline{a_1a_2\cdots a_d}$ with $a_1\ne 0$ is <em>right-rotatable</em> if $a_d\ne 0$. In this case, define $R(n)=\overline{a_da_1a_2\cdots a_{d-1}}$, which also has $d$ digits like $n$.</p><ul class="ct-parts"><li><p><span class="ct-lbl">(a)</span> Show that there exists a $d$ for which there are at least $24$ left-rotatable $d$-digit integers $n$ such that $L(n)\mid n$.</p></li><li><p><span class="ct-lbl">(b)</span> Does there exist a $d$ for which there are at least $24$ right-rotatable $d$-digit integers $n$ such that $R(n)\mid n$?</p></li></ul></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(a) proof ($d=18$ works); (b) $\boxed{\text{No}}$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 (A closed formula for the rotations)</h4>
 <p><em>Formulas.</em> If $n=\overline{a_1a_2\cdots a_d}$, then $10n=a_1\cdot10^d+\overline{a_2\cdots a_d0}$, so
 \[
@@ -191,6 +191,17 @@ $n=kR(n)$ we get $10n=k\big(b\cdot 10^d+n-b\big)$, i.e. $(10-k)\,n=kb\,(10^d-1)$
 \]
 So for every $d$ there are at most $23&lt;24$ right-rotatable $d$-digit integers $n$ with $R(n)\mid n$, and the answer to (b) is
 $\boxed{\text{No}}$.</p>
+<h4>Solution 3 (Part (b) exactly: eliminating the ratios one by one)</h4>
+<p>This solution treats part (b) only, and finds the exact maximum.</p><p>Let $T=10^{d-1}$ and let $n$ be a right-rotatable $d$-digit integer with $R(n)\mid n$. Write $n=10x+a$, where $a=a_d$ is the last digit, so
+$1\le a\le 9$, and $x=\overline{a_1a_2\cdots a_{d-1}}$, so $0\le x&lt;T$. Then $R(n)=aT+x$. Write $n=k\,R(n)$ with a positive integer $k$. Since
+$R(n)\ge aT$ and $n&lt;10T$, we get $kaT\le n&lt;10T$, so $ka\le 9$. Substituting $n=10x+a$ and $R(n)=aT+x$ into $n=kR(n)$ gives
+\[
+(10-k)\,x=a\,(kT-1). \tag{1}
+\]
+As $k\le9$, equation (1) determines $x$, and hence $n$, from the pair $(k,a)$. Note that $T$ is even, so $kT-1$ is odd. We go through the values of
+$k$, using $ka\le9$ and $x&lt;T$.</p><ul class="ct-ul"><li><p>$k=1$: $a=1,\dots,9$, at most $9$ numbers.</p></li><li><p>$k=2$, $6$, $8$: the left side of (1) is $8x$, $4x$, $2x$. For $k=2$ the right side $a(2T-1)$ with $a\le4$ is not divisible by $8$ (as $2T-1$ is
+odd and $8\nmid a$); for $k=6$ and $k=8$ we have $a=1$ and the right side $6T-1$ or $8T-1$ is odd. No solutions.</p></li><li><p>$k=4$: $a\in\{1,2\}$ and $6x=a(4T-1)$. For $a=1$ the right side is odd. For $a=2$, $x=\frac{4T-1}3\ge T$. No solutions.</p></li><li><p>$k=5$: $a=1$ and $5x=5T-1$, which is not divisible by $5$. No solutions.</p></li><li><p>$k=7$: $a=1$ and $x=\frac{7T-1}3\ge T$. $k=9$: $a=1$ and $x=9T-1\ge T$. No solutions.</p></li><li><p>$k=3$: $a\in\{1,2,3\}$ and $7x=a(3T-1)$. For $a=3$, $x=\frac{3(3T-1)}7\ge T$ because $9T-3\ge7T$. So at most the two pairs $(3,1)$, $(3,2)$.</p></li></ul><p>Hence for every $d$ at most $9+2=11&lt;24$ right-rotatable $d$-digit integers $n$ satisfy $R(n)\mid n$, and the answer to (b) is $\boxed{\text{No}}$.</p><p><em>Remark.</em> The bound $11$ is attained: the $9$ repdigits work for every $d$ (then $R(n)=n$), and for $d=6$ also
+$428571=3\cdot142857$ and $857142=3\cdot285714$. In fact the pairs $(3,1)$ and $(3,2)$ give solutions exactly when $6\mid d$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p4">
@@ -245,7 +256,7 @@ $f(k)=\alpha k+\beta(k-1)$, $f(x)=(\alpha+\beta)\lfloor x\rfloor$ off the intege
 <div class="ct-meta">Number Theory &middot; LPS VII, Chapter 22: Summation, Telescoping, and Discrete Transformation</div>
 <div class="ct-text"><p>Prove that there are infinitely many positive integers $k$ satisfying the following property: there exist positive integers $a_1,\dots,a_k$, not all equal, such that
 \[\frac{1}{a_1(a_1+1)}+\frac{1}{a_2(a_2+1)}+\dots+\frac{1}{a_k(a_k+1)}=1.\]</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Telescoping: every even $k\ge4$)</h4>
 <p>Since $\dfrac1{a(a+1)}=\dfrac1a-\dfrac1{a+1}$, for every integer $N\ge2$
 \[
@@ -264,6 +275,15 @@ infinitely many such $k$.</p>
 \]
 and the numbers are not all equal. So every $k=1+\frac{b(b+1)}2$ with $b\ge2$ has the property; these are $4,7,11,16,\dots$, an increasing and
 hence infinite list.</p>
+<h4>Solution 3 (Splitting one term again and again)</h4>
+<p>For a positive integer $a$ put $b=a(a+1)$. Then
+\[
+(b+1)\cdot\frac{1}{b(b+1)}=\frac1b=\frac{1}{a(a+1)},
+\]
+so in any list $a_1,\dots,a_k$ satisfying the equation we may replace one entry equal to $a$ by $b+1$ entries equal to $b$: the sum stays $1$ and
+the length grows by $b\ge2$.</p><p>Start from the list $1,1$, for which $\frac12+\frac12=1$. Replacing the second $1$ gives $1,2,2,2$ (indeed $\frac12+3\cdot\frac16=1$). From then on
+repeatedly replace one of the largest entries: this gives lists of lengths $4,10,52,1858,\dots$, a strictly increasing sequence. Every list after the
+first step keeps the entry $1$ and contains entries at least $2$, so its entries are not all equal. Hence infinitely many $k$ have the property.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p6">
@@ -311,8 +331,8 @@ These $81$ cells contain no bad tile.</p><p>Hence the smallest $n$ is $\boxed{82
 <div class="ct-fig"><img style="width:411px" src="/assets/contests/2026-27/philippines-mo-7_s1.svg" alt="Figure for the solution"></div>
 <p>Indices are taken modulo $4$, and $C_i$ depends only on $m$ modulo $4$.</p><p><em>Set-up.</em> Reflecting the figure if necessary (this changes nothing in the problem), let $A_1A_2A_3A_4$ be counterclockwise; scale it to side $2$
 and put $A_1=(1,-1)$, $A_2=(1,1)$, $A_3=(-1,1)$, $A_4=(-1,-1)$. Let $\rho(x,y)=(-y,x)$ be the rotation by $90^\circ$ about the centre; then
-$\rho(A_i)=A_{i+1}$, and $\rho$ maps the line $s_i=A_iA_{i+1}$ to $s_{i+1}$. We read &ldquo;inscribed&rdquo; as: each $A_i$ is an interior point of the
-side $B_iB_{i+1}$. The chord $A_{i-1}A_i$ of the convex quadrilateral cuts off the triangle
+$\rho(A_i)=A_{i+1}$, and $\rho$ maps the line $s_i=A_iA_{i+1}$ to $s_{i+1}$. Until the paragraph on vertex contact below, we assume that each $A_i$ is an
+interior point of the side $B_iB_{i+1}$. The chord $A_{i-1}A_i$ of the convex quadrilateral cuts off the triangle
 $A_{i-1}B_iA_i$, so $B_i$ lies beyond the line $s_{i-1}$, on the side away from the square. Hence we can write
 \[
 B_i=\rho^{\,i-2}(1+p_i,\ q_i)\quad\text{with } p_i&gt;0:
@@ -340,7 +360,24 @@ With $\sigma=\rho$: $(-2-p_1,p_2)=(-2-p_2,p_3)$ and $\rho(C_3-C_2)=(-p_3,-2-p_2)
 $C_3-C_2=(-p_2,2+p_3)$, $C_4-C_3=(-2-p_4,-p_3)$. With $\sigma=\rho^{-1}$: $(p_1,-2-p_2)=(-p_2,2+p_3)$ is impossible. With $\sigma=\rho$:
 $(-p_1,2+p_2)=(-p_2,2+p_3)$ and $(-2-p_3,-p_2)=(-2-p_4,-p_3)$, so again all $p_i$ are equal.</p></li></ul><p>So $p_i=p$ for all $i$, and $(\ast)$ becomes $(1-q_i)(1+q_{i+1})=p^2$, i.e. $q_{i+1}=T(q_i)$ with $T(t)=\frac{p^2}{1-t}-1$, a strictly
 increasing function on $(-1,1)$. If $q_1&lt;q_2$, applying $T$ repeatedly gives $q_1&lt;q_2&lt;q_3&lt;q_4&lt;q_5=q_1$, a contradiction; similarly $q_1&gt;q_2$ is
-impossible. So $q_2=q_1$, and then $q_3=T(q_2)=T(q_1)=q_2$, and so on: all $q_i$ are equal. By the set-up, $B_1B_2B_3B_4$ is a square.</p><p>Therefore the required integers are exactly $\boxed{\text{the even integers } m}$.</p><p><em>Remark (a synthetic view of the case $m\equiv0$).</em> Since $s_i\perp s_{i-1}$ at $A_i$, the foot $C_i$ lies on line $s_i$ beyond $A_i$, at distance
+impossible. So $q_2=q_1$, and then $q_3=T(q_2)=T(q_1)=q_2$, and so on: all $q_i$ are equal. By the set-up, $B_1B_2B_3B_4$ is a square.</p><p><em>Even $m$ when some $A_i$ is a vertex of $B_1B_2B_3B_4$.</em> Now we only know that $A_i$ lies on the closed segment $B_iB_{i+1}$. Every
+point can still be written as $B_i=\rho^{\,i-2}(1+p_i,q_i)$ with real $p_i,q_i$, and the formulas for the feet are unchanged.</p><p>First, $p_i\ge0$; by symmetry take $i=2$. The line $B_2B_3$ carries a side of the convex quadrilateral, which contains the square, so the square
+lies in one closed half-plane of this line. The line passes through $A_2=(1,1)$, so it is $\alpha(x-1)+\beta(y-1)=0$ with $(\alpha,\beta)\ne(0,0)$
+and the square in $\alpha(x-1)+\beta(y-1)\le0$; testing $A_1=(1,-1)$ and $A_3=(-1,1)$ gives $\beta\ge0$ and $\alpha\ge0$. In the same way the line
+$B_1B_2$ through $A_1$ is $\gamma(x-1)+\delta(y+1)=0$ with the square in $\gamma(x-1)+\delta(y+1)\le0$; testing $A_2$ and $A_4=(-1,-1)$ gives
+$\delta\le0$ and $\gamma\ge0$. The point $B_2=(1+p_2,q_2)$ lies on both lines:
+\[
+\alpha p_2+\beta(q_2-1)=0,\qquad \gamma p_2+\delta(q_2+1)=0.
+\]
+Suppose $p_2&lt;0$. If $\beta=0$, then $\alpha&gt;0$ and the first equation gives $p_2=0$; so $\beta&gt;0$ and $q_2-1=-\alpha p_2/\beta\ge0$. Similarly
+$\delta&lt;0$ and $q_2+1=-\gamma p_2/\delta\le0$. So $q_2\ge1$ and $q_2\le-1$, a contradiction.</p><p>The even-case computation above used only the formulas for the $C_i$ and $p_i\ge0$ (to exclude $2+p_1=-2-p_2$ and $-2-p_2=2+p_3$), so if
+$C_1C_2C_3C_4$ is a square, then all $p_i$ are equal to some $p\ge0$.</p><ul class="ct-ul"><li><p>If $p&gt;0$: $A_i$ lies on $s_{i-1}$ and on $s_i$, while $B_i$ is at distance $p_i&gt;0$ from $s_{i-1}$ and $B_{i+1}$ is at distance $p_{i+1}&gt;0$ from
+$s_i$. So $A_i\ne B_i$ and $A_i\ne B_{i+1}$: every $A_i$ is an interior point of its side, and the argument above shows that $B_1B_2B_3B_4$ is a
+square.</p></li><li><p>If $p=0$: $B_2=(1,q_2)$ and $B_3=\rho(1,q_3)=(-q_3,1)$, so $B_2-A_2=(0,q_2-1)$ and $B_3-A_2=(-1-q_3,0)$. If both were nonzero they would be
+perpendicular, and $A_2$ could not lie on the segment $B_2B_3$ strictly between its ends; hence $B_2=A_2$ or $B_3=A_2$. Rotating by $\rho^{\,i-2}$:
+for every $i$, $B_i=A_i$ or $B_{i+1}=A_i$. If $B_i=A_i$ for all $i$, then $B_1B_2B_3B_4$ is the square $A_1A_2A_3A_4$. Otherwise $B_j\ne A_j$ for
+some $j$; then $B_{j+1}=A_j\ne A_{j+1}$, so $B_{j+2}=A_{j+1}$, and going around, $B_{i+1}=A_i$ for all $i$: again $B_1B_2B_3B_4$ is the square
+$A_4A_1A_2A_3$.</p></li></ul><p>Therefore the required integers are exactly $\boxed{\text{the even integers } m}$.</p><p><em>Remark (a synthetic view of the case $m\equiv0$).</em> Since $s_i\perp s_{i-1}$ at $A_i$, the foot $C_i$ lies on line $s_i$ beyond $A_i$, at distance
 $p_i$ (the distance from $B_i$ to $s_{i-1}$). So $C_1C_2C_3C_4$ is the &ldquo;pinwheel&rdquo; quadrilateral obtained by extending the sides of the square by
 $p_1,\dots,p_4$, and it is cut into the square and four right triangles with legs $2+p_{i-1}$ and $p_i$. If $C_1C_2C_3C_4$ is a square these four
 triangles are congruent (equal hypotenuses, equal angles), which again forces all $p_i$ equal; the rest of the argument is the same.</p>

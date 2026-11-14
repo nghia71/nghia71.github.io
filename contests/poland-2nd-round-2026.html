@@ -76,8 +76,8 @@ description: Polish Mathematical Olympiad 2026, Second Round: problems with answ
 <div class="ct-text"><p>Determine all positive integers $n$ such that there exists positive integer $k$ and primes $p_1,p_2,\dots,p_n,q$ (not necessarily distinct) that satisfy
 \[\sum_{i=1}^{n}\frac{k}{p_i}=\frac{q}{q^2+1}.\]</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$n=1$ and $n=2$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (A prime factor of $q^2+1$ must be one of the $p_i$)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (A prime factor of $q^2+1$ must be one of the $p_i$)</h4>
 <p><em>Examples.</em> $n=1$: $k=2$, $p_1=5$, $q=2$ gives $\frac25=\frac{2}{2^2+1}$. $n=2$: $k=1$, $p_1=p_2=5$, $q=2$ gives
 $\frac15+\frac15=\frac25$.</p><p><em>No other $n$.</em> Let $\Pi=p_1p_2\cdots p_n$. Multiplying the equation by $\Pi(q^2+1)$ gives
 \[k(q^2+1)\sum_{i=1}^n\frac{\Pi}{p_i}=q\,\Pi .\]
@@ -88,6 +88,22 @@ product $\Pi'$ gives $5\sum\frac{\Pi'}{p_i}=\Pi'$, so $5\mid\Pi'$, which is impo
 $p_i$, so $\frac q{q^2+1}\ge\frac kr\ge\frac1r$, i.e. $r\ge\frac{q^2+1}q&gt;q$, so $r\ge q+1$. If $q^2+1$ had two prime factors (counted with
 multiplicity), it would be at least $(q+1)^2&gt;q^2+1$. Hence $q^2+1$ is itself a prime. For odd $q$ the number $q^2+1\ge10$ is even, so it is not
 prime; thus $q=2$ and $q^2+1=5$, and the proof finishes as above.</p>
+<h4>Solution 2 (The exact denominator of the sum, then a size argument)</h4>
+<p><em>Examples.</em> $n=1$: $k=2$, $p_1=5$, $q=2$ gives $\frac25=\frac{2}{2^2+1}$. $n=2$: $k=1$, $p_1=p_2=5$, $q=2$ gives
+$\frac15+\frac15=\frac25$.</p><p><em>No other $n$.</em> Let $r_1&lt;r_2&lt;\dots&lt;r_m$ be the distinct primes among $p_1,\dots,p_n$, and let $c_j\ge1$ be the number of indices $i$ with
+$p_i=r_j$. Grouping equal terms, the equation reads
+\[\sum_{j=1}^m\frac{kc_j}{r_j}=\frac{q}{q^2+1}.\]
+The right-hand side is less than $1$ (as $q&lt;q^2+1$), so every term on the left is less than $1$: $kc_j&lt;r_j$, hence $r_j\nmid kc_j$.</p><p><strong>The reduced denominator.</strong> Put $R=r_1r_2\cdots r_m$. Multiplying by $R$, the left-hand side becomes the integer
+\[N=\sum_{j=1}^m kc_j\cdot\frac{R}{r_j},\]
+so the sum equals $\frac NR$. For each $j$, every summand of $N$ except the $j$-th contains the factor $r_j$, while the $j$-th is
+$kc_j\cdot\frac R{r_j}$, a product of numbers not divisible by the prime $r_j$. Hence $r_j\nmid N$ for every $j$, so $\gcd(N,R)=1$ and $\frac NR$
+is in lowest terms. The fraction $\frac q{q^2+1}$ is also in lowest terms, since a common divisor of $q$ and $q^2+1$ divides $q^2+1-q\cdot q=1$.
+Two equal fractions in lowest terms with positive denominators have equal denominators, so
+\[r_1r_2\cdots r_m=q^2+1 .\]</p><p><strong>Only one prime occurs.</strong> Write $D=q^2+1$. If $m\ge2$, then $r_1^2&lt;r_1r_2\le D$, so $r_1&lt;\sqrt D$. The first group alone gives
+\[\frac{q}{D}\ \ge\ \frac{kc_1}{r_1}\ \ge\ \frac1{r_1}\ &gt;\ \frac1{\sqrt D},\]
+that is, $q&gt;\sqrt D=\sqrt{q^2+1}$, which is false. Hence $m=1$ and $r_1=q^2+1$ is a prime.</p><p><strong>Finishing.</strong> If $q$ were odd, $q^2+1$ would be even and at least $10$, not a prime. So $q=2$ and $r_1=5$: all $p_i$ equal $5$, $c_1=n$, and the
+equation becomes $\frac{kn}5=\frac25$, i.e. $kn=2$. Thus $n=1$ (with $k=2$) or $n=2$ (with $k=1$), and the possible values are exactly
+$n\in\boxed{\{1,2\}}$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p2">

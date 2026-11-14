@@ -76,7 +76,7 @@ description: Germany Team Selection Test 2026: problems with answers and solutio
 <div class="ct-meta">Algebra &middot; LPS VII, Chapter 18: Invariants and Monovariants</div>
 <div class="ct-text"><p><em>Quadratic solitaire</em> is a single-player game. To start the game, the player chooses two distinct nonzero integers $a$ and $b$ and writes the equation $x^2+ax+b=0$ on a blackboard. On each turn, if the equation currently written on the blackboard has two distinct nonzero integer solutions $x=u$ and $x=v$, then the player erases the equation and replaces it by one of the equations $x^2+ux+v=0$ and $x^2+vx+u=0$ of their choosing. Otherwise, the game ends. Determine all initial choices of $a$ and $b$ such that quadratic solitaire can be played forever.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$(a,b)=(1,-2)$ only</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 (The constant term never increases)</h4>
 <p>Write the equation on the board after $t$ turns as $x^2+p_tx+q_t=0$, so $(p_0,q_0)=(a,b)$.
 If the game does not end at turn $t$, the roots $r,s$ are distinct nonzero integers with $r+s=-p_t$ and $rs=q_t$ (Vieta), and
@@ -102,6 +102,21 @@ the game would stop. From $\{1,-2\}$ the options are $x^2-2x+1=0$ (a double root
 $x^2+x-2=0$.</p><p><strong>Back to the start.</strong> If the board shows $x^2+x-2=0$ at some turn $t\ge1$, then at turn $t-1$ the roots were $1$ and $-2$, so the equation was
 $(x-1)(x+2)=x^2+x-2=0$ as well. By backward induction the game started with $x^2+x-2=0$, i.e. $(a,b)=(1,-2)$; and this start indeed allows playing
 forever (rewrite $x^2+x-2=0$ every turn). So the answer is $\boxed{(a,b)=(1,-2)}$.</p>
+<h4>Solution 3 (A cycle of states and the product of the coefficients)</h4>
+<p>Write the state $(a,b)$ when the equation $x^2+ax+b=0$ is on the board. A move from $(a,b)$ is possible exactly when this
+equation has two distinct nonzero integer roots $u,v$, and it leads to $(u,v)$ or to $(v,u)$. So every state that occurs has two distinct nonzero
+integer entries (the first one by the choice of $a,b$, the later ones because they are distinct nonzero roots).</p><p><strong>$(1,-2)$ works.</strong> The equation $x^2+x-2=0$ has the roots $1$ and $-2$, so the player can write $x^2+x-2=0$ again, forever.</p><p>Now suppose that a play $s_0=(a_0,b_0),\,s_1=(a_1,b_1),\,s_2,\dots$ never ends.</p><p><strong>Step 1: $s_0$ lies on a cycle.</strong> If $s_{i+1}=(u,v)$, then $u,v$ are nonzero integers, so $|u|\le|uv|$ and $|v|\le|uv|$, that is,
+$|a_{i+1}|,|b_{i+1}|\le|b_i|$. Hence $|b_i|\le|b_0|$ and $|a_i|\le|b_0|$ for all $i\ge1$: only finitely many states occur, and some state repeats.
+Each state has at most one possible predecessor: if $s_{i+1}=(a,b)$, then $a$ and $b$ are the roots of the equation of $s_i$, so by Vieta's formulas
+$s_i=(-(a+b),\,ab)$. Take a repetition $s_i=s_j$ with $i&lt;j$ and $i$ as small as possible. If $i\ge1$, then $s_{i-1}=s_{j-1}$, as both are the
+predecessor of the same state; this contradicts the choice of $i$. Hence $s_0=s_p$ for some $p\ge1$; below we only use the states
+$s_0,s_1,\dots,s_p$.</p><p><strong>Step 2: every $a_i$ is $\pm1$.</strong> The roots of the equation of $s_i$ are $a_{i+1}$ and $b_{i+1}$, so $b_i=a_{i+1}b_{i+1}$. Multiplying the
+absolute values for $i=0,1,\dots,p-1$ and using $s_p=s_0$,
+\[\prod_{i=0}^{p-1}|b_i|=\prod_{i=1}^{p}|a_i|\cdot\prod_{i=1}^{p}|b_i|=\prod_{i=0}^{p-1}|a_i|\cdot\prod_{i=0}^{p-1}|b_i| .\]
+All $b_i$ are nonzero, so $\prod_{i=0}^{p-1}|a_i|=1$, and since the $a_i$ are nonzero integers, $|a_i|=1$ for $0\le i\le p-1$.</p><p><strong>Step 3: every $a_i$ is $1$.</strong> Let $0\le i\le p-1$ and suppose $a_i=-1$. The roots of the equation of $s_i$ have sum $-a_i=1$, and one of them is
+$a_{i+1}$, which is $\pm1$ by Step 2 (note $s_p=s_0$). If $a_{i+1}=1$, the other root is $0$, which is impossible. If $a_{i+1}=-1$, the other root is
+$b_{i+1}=2$, so $s_{i+1}=(-1,2)$; but $x^2-x+2$ has discriminant $1-8&lt;0$, so the game would end at $s_{i+1}$, a contradiction. Hence $a_i=1$.</p><p><strong>Step 4.</strong> The roots of the equation of $s_0$ have sum $-a_0=-1$, and one of them is $a_1=1$; so the other one is $b_1=-2$ and $s_1=(1,-2)$.
+Its only possible predecessor is $(-(1-2),\,1\cdot(-2))=(1,-2)$, and $s_0$ is a predecessor of $s_1$, so $s_0=(1,-2)$.</p><p>Hence quadratic solitaire can be played forever exactly for $\boxed{(a,b)=(1,-2)}$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p2">
@@ -157,8 +172,8 @@ $\overrightarrow{I_BX}$, which is $\pm90^\circ$ because $I_CB\perp BI_B$. It map
 \[(a_{i+1},b_{i+1},c_{i+1})=\bigl(a_i+\gcd(b_i,c_i),\,b_i+\gcd(c_i,a_i),\,c_i+\gcd(a_i,b_i)\bigr)\]
 for $0\leqslant i\leqslant 2024$. Determine the smallest possible value of $a_{2025}$.</p><p><em>Here $\gcd(x,y)$ denotes the greatest common divisor of integers $x$ and $y$.</em></p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$3\cdot2^{675}$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Halving the triple and counting the halvings)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Halving the triple and counting the halvings)</h4>
 <p>Write $T_t=(a_t,b_t,c_t)$ and $\Phi(a,b,c)=\bigl(a+\gcd(b,c),\,b+\gcd(c,a),\,c+\gcd(a,b)\bigr)$, so $T_{t+1}=\Phi(T_t)$. Note
 $\Phi(2a,2b,2c)=2\Phi(a,b,c)$. Let $N=2025$.</p><p><strong>Construction.</strong> Start with $T_0=(1,5,14)$. Then $T_1=(2,6,15)$, $T_2=(5,7,17)$, $T_3=(6,8,18)$, $T_4=(8,14,20)$, $T_5=(10,18,22)$,
 $T_6=(12,20,24)=4\cdot(3,5,6)$. For any $g$,
@@ -180,6 +195,22 @@ Since $a_N=2^{e_N}x_N$, it suffices to exclude $e_N=675$ with $x_N\le2$ and $e_N
 $z_K\le2^{-673}+\frac12\sum_{i&lt;K}(3-d_i)\le2^{-673}+\frac s2$. So $x_N\ge y_K+s=3-z_K+s\ge3-2^{-673}+\frac s2&gt;2$, i.e. $x_N\ge3$.</p><p><em>$e_N=676$, $K=676$, all $\delta_i=1$.</em> Now $D=3+s$ and (2) gives $z_K\le2^{-674}+\frac{3+s}2$, so $x_N\ge y_K+s\ge\frac32-2^{-674}+\frac s2&gt;1$, i.e. $x_N\ge2$.</p><p><em>$e_N=676$, $K=675$, one $\delta_j=2$.</em> Here $D=s$. If $j&lt;K$: $y_j\ge1$, so $z_j\le2$ and (2) from $j$ gives $z_K\le1+\frac s2$, hence
 $x_N\ge y_K+s\ge2+\frac s2\ge2$. If $j=K$ and $s\ge1$: $x_N\ge y_K+s\ge1+1=2$. If $j=K$ and $s=0$: then $D=0$, so $t_1=2$ and all $d_i=3$;
 by (2) (all earlier $\delta=1$) $z_{K-1}&lt;1$, so $y_{K-1}\ge3$, $x_{t_K}\ge y_{K-1}+2\ge5$ and $x_N=y_K\ge\frac{5+1}{4}&gt;1$, i.e. $x_N\ge2$.</p><p>In every case $a_N=2^{e_N}x_N\ge3\cdot2^{675}$. Hence the smallest possible value of $a_{2025}$ is $\boxed{3\cdot2^{675}}$.</p>
+<h4>Solution 2 (Doubling every three steps)</h4>
+<p>Write $T_t=(a_t,b_t,c_t)$ and $\Phi(a,b,c)=\bigl(a+\gcd(b,c),\,b+\gcd(c,a),\,c+\gcd(a,b)\bigr)$, so that $T_{t+1}=\Phi(T_t)$. For every
+positive integer $g$ we have $\Phi(ga,gb,gc)=g\,\Phi(a,b,c)$.</p><p><strong>Construction.</strong> Start with $T_0=(1,5,14)$. Then $T_1=(2,6,15)$, $T_2=(5,7,17)$, $T_3=(6,8,18)$, $T_4=(8,14,20)$, $T_5=(10,18,22)$ and
+$T_6=(12,20,24)=4\cdot(3,5,6)$. For every $g$,
+\[g(3,5,6)\ \mapsto\ g(4,8,7)\ \mapsto\ g(5,9,11)\ \mapsto\ g(6,10,12)=2g\,(3,5,6),\]
+so $T_{3j}=2^j(3,5,6)$ for all $j\ge2$, and $a_{2025}=a_{3\cdot675}=3\cdot2^{675}$.</p><p><strong>Parity.</strong> A gcd of two integers is even only if both integers are even. Count the even entries of a triple. If exactly one entry is even, all
+three gcds are odd, so $\Phi$ makes that entry odd and the two odd entries even: two even entries. If exactly two entries are even, the gcd of the two
+even ones is even and the other two gcds are odd, so $\Phi$ makes all three entries odd. If all entries are odd, all gcds are odd and $\Phi$ makes all
+entries even. If all entries are even, so are all gcds and all new entries. So the number of even entries changes by
+$1\to2\to0\to3$ and $3\to3$; in particular, whatever triple $R$ of positive integers we start with, all entries of $\Phi(\Phi(\Phi(R)))$ are even.</p><p><strong>Powers of two.</strong> We show by induction on $j$ that $2^j$ divides every entry of $T_t$ for $3j\le t\le 3j+3$. Suppose $T_{3j}=2^jR$ for a
+triple $R$ of positive integers (true for $j=0$). Then $T_{3j+i}=2^j\Phi^i(R)$ for $i=0,1,2,3$, and all entries of $\Phi^3(R)$ are even, so
+$T_{3j+3}=2^{j+1}R'$ for a triple $R'$ of positive integers. This proves the claim.</p><p><strong>Lower bound.</strong> For $3j\le t\le3j+2$ the numbers $b_t,c_t$ are multiples of $2^j$, so $\gcd(b_t,c_t)\ge2^j$ and $a_{t+1}\ge a_t+2^j$. Hence
+\[a_{3j+3}\ge a_{3j}+3\cdot2^j\qquad(j\ge0).\]
+With $j=0$ and $j=1$: $a_3\ge a_0+3\ge4$ and $a_6\ge a_3+6\ge10$. But $a_6$ is a multiple of $2^2=4$, so $a_6\ge12=3\cdot2^2$. If
+$a_{3j}\ge3\cdot2^j$ for some $j\ge2$, then $a_{3j+3}\ge3\cdot2^j+3\cdot2^j=3\cdot2^{j+1}$. By induction $a_{3j}\ge3\cdot2^j$ for all $j\ge2$; in
+particular $a_{2025}=a_{3\cdot675}\ge3\cdot2^{675}$.</p><p>Together with the construction, the smallest possible value of $a_{2025}$ is $\boxed{3\cdot2^{675}}$.</p>
 </div></details>
 </section>
 <h2 class="ct-group" id="vaimo-2">VAIMO 2</h2>
@@ -256,8 +287,8 @@ overgrazed if and only if $\boxed{n=3\cdot2^a,\ a\ge0}$.</p>
 <div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 52: Advanced Combinatorial Structure and Hybrid Methods</div>
 <div class="ct-text"><p>Let $P$ be a regular $100$-gon. An <em>Aussie triangulation</em> is formed by dividing $P$ into a set $T$ of non-overlapping triangles such that:</p><ul class="ct-ul"><li><p>there are exactly $2025$ different points, including the $100$ vertices of $P$, that are a vertex of at least one triangle in $T$, and</p></li><li><p>no three of these $2025$ points are collinear.</p></li></ul><p>A <em>quokkalateral</em> is a convex quadrilateral that consists of two triangles in $T$ sharing a common side. Two quokkalaterals may share a triangle in $T$. Determine the minimum number of quokkalaterals among all Aussie triangulations.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$1011$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Arrows on non-convex edges, then a near-extremal construction)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Arrows on non-convex edges, then a near-extremal construction)</h4>
 <div class="ct-fig"><img style="width:371px" src="/assets/contests/2026-27/germany-tst-6_s1.svg" alt="Figure for the solution"></div>
 <p>Let $m=100$ be the number of vertices of $P$ and $n=2025$ the number of points. Points that are not vertices of $P$ are <em>inner points</em>;
 edges of triangles that are not sides of $P$ are <em>inner edges</em>.</p><p><strong>Counting.</strong> The angles of all triangles add up to $360^\circ$ at each of the $n-m$ inner points plus the angle sum $(m-2)180^\circ$ of $P$, so
@@ -290,6 +321,53 @@ ray $B_jZ$ lies inside angle $B_{j-1}B_jA_3$ and $\angle A_2B_jB_{j-1}+\angle B_
 $A_3$, also $\angle A_2B_jB_{j-1}+\angle B_{j-1}B_jF_j&gt;180^\circ$: an arrow with head $B_j$.</p></li><li><p>$A_3B_j$ $(1\le j\le913)$: in the quadrilateral $A_3F_jB_jF_{j+1}$ the angle at $A_3$ is less than $\angle B_{j-1}A_3B_{j+1}&lt;180^\circ$ and the
 angle at $B_j$ is tiny. Not an arrow. For $A_3B_{914}$ the two triangles are $A_3B_{914}F_{914}$ and $A_3B_{914}A_2$; the four angles at $B_{914}$ add up
 to $360^\circ$ and the two next to $B_{913}B_{914}$ exceed $180^\circ$, so the two next to $A_3B_{914}$ add up to less than $180^\circ$. Not an arrow.</p></li><li><p>The $97$ diagonals $A_1A_i$ join two vertices of $P$, so they are not arrows.</p></li></ul><p>These are all $3033+914+914+914+97=5872$ inner edges, and exactly $914+97=1011$ of them give quokkalaterals. Hence the minimum is $\boxed{1011}$.</p>
+<h4>Solution 2 (Removing the degree-three points, and inserting points two at a time)</h4>
+<p>Let $h=100$ be the number of vertices of $P$, $I=2025-h=1925$ the number of the other points, and call these $I$ points <em>inner
+points</em>. Since no three of the $2025$ points are collinear, no point lies inside a side of a triangle of $T$, so two triangles of $T$ meet in a common
+side, a common vertex, or not at all.</p><p><strong>Counting.</strong> Let $E$ be the number of segments that are sides of triangles of $T$, and $t$ the number of triangles. Euler's formula for the plane
+graph formed by the points and these segments gives $2025-E+(t+1)=2$. Every triangle has $3$ sides, every side of $P$ belongs to one triangle and every
+other segment to two, so $3t=2E-h$. Hence $E=2h+3I-3$, $t=h+2I-2$, and there are $E-h=h+3I-3$ <em>inner edges</em> (segments not on the boundary of $P$).
+These formulas hold for every such triangulation of a convex polygon.</p><p><strong>When is an inner edge bad?</strong> Let $XY$ be an inner edge with triangles $XYU$ and $XYW$. The quadrilateral $XUYW$ has angles at $X$ and $Y$ equal to
+$\angle UXY+\angle YXW$ and $\angle UYX+\angle XYW$, which are not $180^\circ$ (no three points collinear), and not both above $180^\circ$ (the four
+angles add up to $360^\circ$). So $XUYW$ is a quokkalateral unless exactly one of these two angles exceeds $180^\circ$; then call the edge <em>bad</em> and
+<em>charge</em> it to that endpoint. The total angle of $P$ at a vertex of $P$ is less than $180^\circ$, so edges are charged only to inner points. If $F$
+is the number of quokkalaterals, then $F=(h+3I-3)-(\text{number of bad edges})$.</p><p><strong>Charges at one inner point.</strong> Let $V$ be an inner point of degree $m$, and let $\theta_1,\dots,\theta_m$ be the angles at $V$ of its triangles in
+cyclic order ($\sum\theta_i=360^\circ$). The edge between the triangles with angles $\theta_i,\theta_{i+1}$ is charged to $V$ exactly when
+$\theta_i+\theta_{i+1}&gt;180^\circ$. Two such pairs cannot be disjoint, since their four angles would add up to more than $360^\circ$. If $m=3$, all three
+pairs qualify (each $\theta_i&lt;180^\circ$, so $\theta_j+\theta_k=360^\circ-\theta_i&gt;180^\circ$): $V$ gets $3$ charges. If $m\ge4$, a third pair meeting both $\{\theta_{i-1},\theta_i\}$ and $\{\theta_i,\theta_{i+1}\}$ would have to contain $\theta_i$ (it cannot
+consist of $\theta_{i-1},\theta_{i+1}$, which are not neighbours when $m\ge4$), so pairwise overlapping pairs of consecutive angles are at most two,
+and two of them are consecutive pairs $\{\theta_{i-1},\theta_i\},\{\theta_i,\theta_{i+1}\}$: so $V$ gets at
+most $2$ charges, and if it gets $2$, the two charged edges are the two sides at $V$ of one triangle of $T$.</p><p><strong>Degree-three points.</strong> Let $L$ be the number of inner points of degree $3$, and $H=I-L$. Two inner points of degree $3$ are never adjacent:
+the edge joining them would be charged to both ends. An inner point $V$ of degree $3$ lies inside the triangle formed by its three neighbours, which is
+the union of the three triangles at $V$. Remove all these $L$ points, replacing the three triangles around each by the triangle of its neighbours. As
+no two removed points are adjacent, the replaced triples of triangles are disjoint, and we get a triangulation of $P$ with $H$ inner points, hence with
+$h+2H-2$ triangles; $L$ of them are the new big triangles and the other $h+2H-2-L$ are triangles of $T$ with no vertex of degree $3$ among the inner
+points. Call the latter <em>plain</em>.</p><p>If an inner point $V$ of degree at least $4$ gets $2$ charges, the two charged edges $VX,VY$ bound a triangle $VXY$ of $T$. This triangle is plain:
+if $X$ (say) were an inner point of degree $3$, the edge $VX$ would be charged to $X$ as well. Two different points cannot use the same triangle in
+this way: if $X$ also got $2$ charges through the triangle $VXY$, the edge $VX$ would be charged to both $V$ and $X$. So the number of inner points with
+$2$ charges is at most $h+2H-2-L$.</p><p><strong>Lower bound.</strong> The number of bad edges is at most $3L+2H$, and also at most $3L+H+(h+2H-2-L)$. Hence
+\[F\ge(h+3L+3H-3)-(3L+2H)=h+H-3,\]
+\[F\ge(h+3L+3H-3)-(2L+3H+h-2)=L-1 .\]
+Adding, $2F\ge h+H+L-4=h+I-4=2021$, so $F\ge1011$.</p><p><strong>Construction.</strong> We use orientation signs: for three points the sign of the oriented area tells on which side of the line through two of them
+the third lies. Whether an inner edge is bad depends only on such signs for its four points, and these signs are not zero. So if a point is moved
+by a small enough amount, the status (bad or not) of every inner edge whose two triangles keep their vertices is unchanged.</p><p><em>Start.</em> Triangulate $P$ by $97$ diagonals from one vertex into $98$ triangles, put one point inside each (in general position) and join it to
+the three corners. The
+$294$ new edges are bad (charged to their inner endpoint of degree $3$), so at most the $97$ diagonals give quokkalaterals: $F\le97$, with $98$ inner
+points.</p><p><em>Insertion.</em> Let $O$ be an inner point of degree $3$ with neighbours $A,B,C$, so $O$ lies inside triangle $ABC$ and
+$\overrightarrow{OC}=-\alpha\,\overrightarrow{OA}-\beta\,\overrightarrow{OB}$ with $\alpha,\beta&gt;0$. Choose small numbers $0&lt;\eta&lt;\min(\alpha,\beta,1)$ and
+$\varepsilon&gt;0$, and put
+\[P=O+\varepsilon\bigl(\overrightarrow{OC}+\eta\,\overrightarrow{OA}\bigr),\qquad Q=O+\varepsilon\bigl(\overrightarrow{OC}+\eta\,\overrightarrow{OB}\bigr).\]
+Then $P=(1-\varepsilon-\varepsilon\eta)O+\varepsilon C+\varepsilon\eta A$ lies inside triangle $OCA$, and $Q$ inside triangle $OCB$. Also
+\[\overrightarrow{OP}=-\varepsilon(\alpha-\eta)\overrightarrow{OA}-\varepsilon\beta\,\overrightarrow{OB},\quad\text{so}\quad
+\varepsilon(\alpha-\eta)\overrightarrow{OA}+\varepsilon\beta\,\overrightarrow{OB}+\overrightarrow{OP}=\vec 0\]
+with positive coefficients: $O$ lies inside triangle $ABP$; likewise $O$ lies inside triangle $ABQ$. Join $P$ to $O,C,A$ and $Q$ to $O,C,B$. We take
+$\varepsilon$ so small that no three points are collinear and that the edges $CA$ and $CB$, whose inner triangles $OCA,OCB$ become $PCA,QCB$, keep
+their status (this is the small-move remark above, $O$ being moved to $P$ or $Q$). Now:</p><ul class="ct-ul"><li><p>the six edges at $P$ and $Q$ are bad, since $P$ and $Q$ have degree $3$;</p></li><li><p>$OA$ lies in the triangles $OAB$ and $OAP$, and $O$ is inside $ABP$, so the angle of the quadrilateral at $O$ exceeds $180^\circ$: bad; likewise
+$OB$ (triangles $OAB$, $OBQ$) is bad;</p></li><li><p>$OC$ (triangles $OCP$, $OCQ$) may be good;</p></li><li><p>every other inner edge keeps both of its triangles, or is $CA$ or $CB$, so its status does not change.</p></li></ul><p>So the number of inner points grows by $2$ and $F$ by at most $1$, and the new points $P,Q$ have degree $3$, so the next insertion is possible. (A later insertion at $P$ or $Q$ replaces $P$ or $Q$ in the triangles $OAP$, $OBQ$ by a point very close to it; by the choice of its own
+$\varepsilon$ this keeps $OA$ and $OB$ bad.) A one-point version inserts
+only $P$: then $O$ has the triangles $OAB,OBC,OCP,OPA$; the edges at $P$ and $OA$ are bad as before, $OB$ keeps its two triangles, and only $OC$ may
+become good. It adds one inner point and at most one quokkalateral.</p><p>Starting from the $98$ inner points, $913$ two-point insertions and one one-point insertion give $98+1826+1=1925$ inner points, that is, $2025$ points,
+and at most $97+913+1=1011$ quokkalaterals.</p><p>So the minimum number of quokkalaterals is $\boxed{1011}$.</p>
 </div></details>
 </section>
 <h2 class="ct-group" id="aimo-1">AIMO 1</h2>
@@ -298,8 +376,8 @@ to $360^\circ$ and the two next to $B_{913}B_{914}$ exceed $180^\circ$, so the t
 <div class="ct-meta">Geometry &middot; LPS VII, Chapter 48: Inversion and Circle-Preserving Transformation</div>
 <div class="ct-text"><p>Let $ABC$ be a triangle with incenter $I$. Let its incircle $\omega$ touch the side $\overline{BC}$ at $D$. Let the circumcircle of $BCI$ meet $\omega$ at the points $K$ and $L$ such that the points $B,K,I,L,C$ lie on the circular arc in this order. Let the line $KL$ meet $BC$ at $S$.
 Show that there exists a line through $S$ that is tangent to the circumcircles of the triangles $BDK$ and $CDL$.</p></div>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (An inversion centred at $S$)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (An inversion centred at $S$)</h4>
 <div class="ct-fig"><img style="width:342px" src="/assets/contests/2026-27/germany-tst-7_s1.svg" alt="Figure for the solution"></div>
 <p><strong>Powers of $S$.</strong> The line $KL$ is the radical axis of $\omega$ and the circle $(BCI)$, so $S$ has the same power with respect to both.
 Since $BC$ touches $\omega$ at $D$, the power with respect to $\omega$ is $SD^2$; the power with respect to $(BCI)$ is $\overline{SB}\cdot\overline{SC}$
@@ -312,6 +390,24 @@ $\Phi(B),\Phi(D),\Phi(K)$, that is, to $(CDL)$.</p><p><strong>The common tangent
 so $S$ lies outside $(BDK)$ and there is a tangent line $t$ from $S$ to $(BDK)$, touching it at $T_1$. The inversion maps every line through its centre to
 itself, and it maps the one common point $T_1$ of $t$ and $(BDK)$ to a single common point $T_2=\Phi(T_1)$ of $t$ and $\Phi\bigl((BDK)\bigr)=(CDL)$. So $t$
 meets $(CDL)$ in exactly one point, i.e. it is tangent to $(CDL)$ as well. Thus $t$ is a line through $S$ tangent to both circles.</p>
+<h4>Solution 2 (Coordinates and a homothety centred at $S$)</h4>
+<p>Put $D=(0,0)$, $B=(-u,0)$, $C=(v,0)$ and $I=(0,r)$, where $u=BD$, $v=DC$ and $r$ is the inradius. Then $\omega$ is
+$x^2+y^2-2ry=0$, and the circle $BCI$ is
+\[x^2+y^2+(u-v)x+\Bigl(\frac{uv}r-r\Bigr)y-uv=0,\]
+as one checks at $B$, $C$ and $I$. Subtracting the two equations, the common points $K,L$ lie on the line $(u-v)x+\bigl(\frac{uv}r+r\bigr)y=uv$, which
+is therefore the line $KL$. As $KL$ meets $BC$, we have $u\ne v$, and $S=(s,0)$ with $s=\dfrac{uv}{u-v}$.</p><p><strong>The points $K$ and $L$.</strong> Every point of $\omega$ other than $D$ has $y&gt;0$, and it is determined by $\tau=x/y$: from $x=\tau y$ and
+$x^2+y^2=2ry$ we get $y=\frac{2r}{1+\tau^2}$, $x=\frac{2r\tau}{1+\tau^2}$. The line $KL$ does not pass through $D$ (as $uv\ne0$). Substituting into its
+equation and multiplying by $1+\tau^2$ shows that the parameters $\tau_K,\tau_L$ of $K$ and $L$ are the two roots of
+\[uv\,\tau^2-2r(u-v)\,\tau-(uv+2r^2)=0,\qquad\text{so}\qquad \tau_K+\tau_L=\frac{2r(u-v)}{uv}.\]</p><p><strong>The two circles.</strong> A circle through $D$ and $B$ has an equation $x^2+y^2+ux+w_1y=0$. For the circle $\omega_1=(BDK)$, using
+$x_K^2+y_K^2=2ry_K$ and $x_K=\tau_Ky_K$ we get $w_1=-2r-u\tau_K$. Likewise $\omega_2=(CDL)$ is $x^2+y^2-vx+w_2y=0$ with $w_2=-2r+v\tau_L$. Then
+\[w_1-\frac uv\,w_2=-2r+\frac{2ru}{v}-u(\tau_K+\tau_L)=\frac{2r(u-v)}{v}-\frac{2r(u-v)}{v}=0 .\]</p><p><strong>The homothety.</strong> Let $\mathcal H$ be the homothety with centre $S$ and ratio $k=u/v&gt;0$, $\mathcal H(Z)=S+k(Z-S)$. A point $(x,0)$ goes to
+$(s(1-k)+kx,0)$, and $s(1-k)=\frac{uv}{u-v}\cdot\frac{v-u}{v}=-u$; so $\mathcal H(C)=(-u+u,0)=D$ and $\mathcal H(D)=(-u,0)=B$. The centre of $\omega_2$
+is $\bigl(\frac v2,-\frac{w_2}2\bigr)$, the point above the midpoint of $CD$ at height $-\frac{w_2}{2}$; its image lies above the midpoint of
+$\mathcal H(C)\mathcal H(D)=DB$ at height $-\frac{k w_2}{2}=-\frac{w_1}{2}$, so it is $\bigl(-\frac u2,-\frac{w_1}2\bigr)$, the centre of $\omega_1$.
+Hence $\mathcal H(\omega_2)$ is the circle with the centre of $\omega_1$ through $\mathcal H(D)=B\in\omega_1$, that is, $\mathcal H(\omega_2)=\omega_1$.</p><p><strong>The common tangent.</strong> The power of $S$ with respect to $\omega_2$ is $s^2-vs=s(s-v)=\frac{uv}{u-v}\cdot\frac{v^2}{u-v}&gt;0$, so $S$ lies outside
+$\omega_2$ and there is a line $\tau$ through $S$ tangent to $\omega_2$. The homothety $\mathcal H$ maps every line through $S$ to itself, so
+$\tau=\mathcal H(\tau)$ is tangent to $\mathcal H(\omega_2)=\omega_1$ as well. Thus $\tau$ is a line through $S$ tangent to the circumcircles of $BDK$
+and $CDL$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p8">
@@ -406,7 +502,7 @@ Hence the maximum is $\boxed{\dfrac{n^2+3n-2}{2}}$.</p>
 <h3>Problem 2</h3>
 <div class="ct-meta">Geometry &middot; LPS VII, Chapter 3: Foundational Angle and Configuration Chasing</div>
 <div class="ct-text"><p>Let $ABC$ be an acute triangle with $AB&lt;AC$. Let $\Gamma$ be the circumcircle of $ABC$. The perpendicular from $B$ to $AC$ intersects $\Gamma$ again at $D\neq B$. Let $Q$ be the point on $\Gamma$, different from $B$, such that $AB=AQ$. Lines $BQ$ and $AC$ intersect at $R$. Line $DR$ intersects $\Gamma$ again at $S\neq D$. Segment $BC$ intersects the circumcircle of triangle $QRS$ at $T$. Lines $TQ$ and $RS$ intersect at $X$. Prove that $CX$ is perpendicular to $AB$.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 ($T$ is the reflection of $Q$, then a harmonic division)</h4>
 <div class="ct-fig"><img style="width:368px" src="/assets/contests/2026-27/germany-tst-11_s1.svg" alt="Figure for the solution"></div>
 <p>Write $\alpha,\beta,\gamma$ for the angles of $ABC$; $AB&lt;AC$ gives $\gamma&lt;\beta$. Let $E$ be the foot of the altitude from $B$ (so $B,E,D$ are
@@ -459,6 +555,37 @@ under a homothety with centre $R$ and negative ratio; so $X$ and $D$ are on oppo
 $\angle ACD=\angle ABD=\angle ABE=90^\circ-\alpha$. Let $F$ be the foot of the altitude from $C$; it lies on side $AB$, on the same side of $AC$ as $B$,
 and $\angle ACF=90^\circ-\alpha$. The rays $CX$ and $CF$ lie on the same side of line $CA$ and make the same angle with ray $CA$, so they coincide.
 Hence $X$ lies on the altitude $CF$, and $CX\perp AB$.</p>
+<h4>Solution 3 (Coordinates: $T$ is the reflection of $Q$ in $AC$)</h4>
+<p>Put $A=(0,0)$, $C=(1,0)$, $B=(u,v)$ with $v&gt;0$, and let $r=u^2+v^2=AB^2$ and $n=(1-u)^2+v^2=BC^2=r+1-2u$. Since $AB&lt;AC$,
+$r&lt;1$. The angles at $A$ and $C$ are acute, so $0&lt;u&lt;1$, and the angle at $B$ is acute: $\overrightarrow{BA}\cdot\overrightarrow{BC}=r-u&gt;0$. Put
+$w=\frac{r-u}{v}&gt;0$. We shall use the identity
+\[rn=(r-u)^2+v^2,\tag{$*$}\]
+which holds because both sides equal $r^2+r-2ur$ (use $u^2+v^2=r$).</p><p><strong>$\Gamma$, $D$, $R$, $Q$.</strong> The circle $\Gamma$ is $x^2+y^2=x+wy$ (it passes through $A$, $C$, and through $B$ as $u+wv=r$). The perpendicular
+from $B$ to $AC$ is $x=u$; on it $\Gamma$ gives $y^2-wy+u^2-u=0$, with roots $v$ and $w-v$, so $D=(u,w-v)$. For a point of $\Gamma$ we have
+$AZ^2=x^2+y^2=x+wy$; so the points of $\Gamma$ at distance $\sqrt r$ from $A$ are its points on the line $x+wy=r$. Thus $BQ$ is the line $x+wy=r$, and
+$R=(r,0)$, with $0&lt;r&lt;1$.</p><p>Let $Q=(q,z)$. Substituting $x=r-wy$ in $x^2+y^2=r$ gives $(1+w^2)y^2-2rwy+r^2-r=0$, with roots $v$ and $z$; so $vz=-\frac{r(1-r)}{1+w^2}$. By
+$(*)$, $1+w^2=\frac{v^2+(r-u)^2}{v^2}=\frac{rn}{v^2}$, hence
+\[z=-\frac{v(1-r)}{n}&lt;0,\qquad q=r-wz .\]</p><p><strong>The point $T$.</strong> Let $T'=(q,-z)$ be the reflection of $Q$ in $AC$. The line $BC$ is $vx+(1-u)y=v$, and since $vw+1-u=r-u+1-u=n$,
+\[vq-(1-u)z=vr-(vw+1-u)z=vr-nz=vr+v(1-r)=v,\]
+so $T'$ lies on line $BC$. Its height $-z=\frac{v(1-r)}{n}$ lies strictly between $0$ and $v$, because $1-r&lt;n$ is equivalent to $u&lt;r$. So $T'$ lies
+strictly between $B$ and $C$.</p><p><strong>The circle $\omega$ through $Q,R,T'$.</strong> As $Q$ and $T'$ are symmetric in $AC$, the centre of $\omega$ is on $AC$, say $(c_0,0)$, and
+$\omega$ is $f(x,y):=x^2+y^2-2c_0x+2c_0r-r^2=0$ (it passes through $R$). Using $q^2+z^2=AQ^2=r$, the condition $f(Q)=0$ reads
+$r-r^2=2c_0(q-r)=-2c_0wz$, so
+\[2c_0=\frac{r(1-r)}{-wz}=\frac{rn}{vw}=\frac{rn}{r-u}.\]</p><p><strong>$S$ lies on $\omega$.</strong> Let $g(x,y)=x^2+y^2-x-wy$, so $\Gamma$ is $g=0$, and $\ell=f-g=(1-2c_0)x+wy+2c_0r-r^2$, an affine function. Since
+$S\in\Gamma$, we have $S\in\omega$ if and only if $\ell(S)=0$. Write the points of line $DR$ as $R+\mu(D-R)$. Then $g(R+\mu(D-R))$ is a quadratic in
+$\mu$ with leading coefficient $|D-R|^2$, constant term $g(R)=r^2-r$, and roots $\mu=1$ (the point $D$) and $\mu_S$ (the point $S$); so
+$\mu_S=\frac{r^2-r}{|D-R|^2}$. As $\ell$ is affine, $\ell(S)=\ell(R)+\mu_S\bigl(\ell(D)-\ell(R)\bigr)$. Here $\ell(R)=r-r^2$ and, using
+$2c_0(u-r)=-rn$ and $wv=r-u$,
+\[\ell(D)-\ell(R)=(1-2c_0)(u-r)+w(w-v)=(u-r)+rn+w^2-wv=rn+w^2-2wv .\]
+By $(*)$, $|D-R|^2=(u-r)^2+(w-v)^2=rn+w^2-2wv$ as well. Hence $\ell(S)=r-r^2+(r^2-r)=0$, and $S\in\omega$. So $\omega$ is the circle $QRS$.</p><p><strong>$T=T'$.</strong> The power of $C$ with respect to $\omega$ is
+$f(1,0)=(1-r)(1+r-2c_0)$, where
+\[1+r-2c_0=\frac{(1+r)(r-u)-r(r+1-2u)}{r-u}=-\frac{u(1-r)}{r-u}&lt;0;\]
+so $C$ lies inside $\omega$. Hence $C$ lies between the two points where line $BC$ meets $\omega$; one of them is $T'$, on the side of $B$, so the
+other one is beyond $C$. Thus $T'$ is the only point of segment $BC$ on $\omega$, and $T=T'=(q,-z)$.</p><p><strong>The point $X$.</strong> The line $TQ$ is $x=q$. The line $RS$ is the line $RD$, which is not vertical as $u\ne r$; its point with $x=q$ is
+$R+\mu(D-R)$ with $\mu=\frac{q-r}{u-r}=\frac{-wz}{-vw}=\frac zv$, so $X=\bigl(q,\frac{z(w-v)}{v}\bigr)$.</p><p><strong>Conclusion.</strong> We have $\overrightarrow{CX}\cdot\overrightarrow{AB}=u(q-1)+z(w-v)$. With $q-1=r-1-wz$ this is $u(r-1)+z\bigl(w(1-u)-v\bigr)$. Now
+$v\bigl(w(1-u)-v\bigr)=(r-u)(1-u)-v^2=r-u-ur+u^2-(r-u^2)=-u(1+r-2u)=-un$, so
+\[z\bigl(w(1-u)-v\bigr)=-\frac{v(1-r)}{n}\cdot\Bigl(-\frac{un}{v}\Bigr)=u(1-r),\]
+and $\overrightarrow{CX}\cdot\overrightarrow{AB}=u(r-1)+u(1-r)=0$. Hence $CX$ is perpendicular to $AB$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p12">
@@ -504,8 +631,8 @@ $L-1+c$ is nonnegative, so $a_{L-1}=L-1+c$ and $b_{L-1}=c$, contradicting the ch
 <h3>Problem 1</h3>
 <div class="ct-meta">Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure</div>
 <div class="ct-text"><p>Let $ABC$ be a triangle such that $\angle A$ is obtuse. Let $D$ and $E$ be points on sides $AB$ and $AC$, respectively, such that $BDEC$ is cyclic. Suppose the circumcircle of triangle $ADE$ intersects side $BC$ at two points $X$ and $Y$, where $B,X,Y$ and $C$ lie in that order. Let the circumcircles of triangles $BDX$ and $CEY$ be $\Omega$ and $\Gamma$, respectively. Let $P$ be a point such that $PD$ is tangent to $\Omega$ and $PE$ is tangent to $\Gamma$. Let $Q$ be a point such that $QB$ is tangent to $\Omega$ and $QC$ is tangent to $\Gamma$. Prove that points $A$, $P$ and $Q$ are collinear.</p></div>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Three points on a radical axis)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Three points on a radical axis)</h4>
 <div class="ct-fig"><img style="width:267px" src="/assets/contests/2026-27/germany-tst-13_s1.svg" alt="Figure for the solution"></div>
 <p>We use $\measuredangle$ for directed angles between lines, modulo $180^\circ$. Let $\omega$ be the circle through $A,D,E,X,Y$.</p><p><strong>Step 1: $AX=AY$.</strong> Let $t$ be the tangent to $\omega$ at $A$. By the tangent-chord angle and then the cyclic quadrilateral $BDEC$,
 \[\measuredangle(t,AB)=\measuredangle(t,AD)=\measuredangle(EA,ED)=\measuredangle(EC,ED)=\measuredangle(BC,BD)=\measuredangle(BC,AB),\]
@@ -521,6 +648,29 @@ $\measuredangle(CA,YE)=\measuredangle(XD,BA)$, i.e. $\measuredangle(EA,EY)=\meas
 $\measuredangle(DX,DA)=\measuredangle(YX,YA)$, which are equal by (1). Hence $\measuredangle PDE=\measuredangle DEP$ and $PD=PE$.</p><p><strong>Step 4: the radical axis.</strong> $\Omega\ne\Gamma$ (a circle cannot meet line $BC$ in the four points $B,X,Y,C$). The power of $A$ with respect to
 $\Omega$ is $AD\cdot AB$ and with respect to $\Gamma$ is $AE\cdot AC$; these are equal because $BDEC$ is cyclic. The powers of $P$ are $PD^2$ and $PE^2$, and those
 of $Q$ are $QB^2$ and $QC^2$; they are equal by Steps 3 and 2. So $A$, $P$, $Q$ all lie on the radical axis of $\Omega$ and $\Gamma$, which is a line.</p>
+<h4>Solution 2 (Oblique coordinates along $BA$ and $BC$)</h4>
+<p>Scale so that $BC=1$ and put $B=(0,0)$, $C=(1,0)$, $A=(u,v)$ with $v&gt;0$, $X=(p,0)$, $Y=(q,0)$, $0&lt;p&lt;q&lt;1$. Let
+$\lambda=BA^2=u^2+v^2$ and $\mu=CA^2=(u-1)^2+v^2$.</p><p><strong>The points $D,E$.</strong> The circle $ADE$ passes through $X$ and $Y$. The power of $B$ with respect to it is $BX\cdot BY=pq=BD\cdot BA$, so
+$D=B+\frac{pq}{\lambda}\overrightarrow{BA}$; likewise $E=C+\frac{(1-p)(1-q)}{\mu}\overrightarrow{CA}$. The power of $A$ with respect to the circle $BDEC$
+gives $AD\cdot AB=AE\cdot AC$, that is, $\lambda-pq=\mu-(1-p)(1-q)$; expanding, this says $2u=p+q$. Put
+$\delta=\lambda-pq=\mu-(1-p)(1-q)=AD\cdot AB&gt;0$. The angle at $A$ is obtuse: $\overrightarrow{AB}\cdot\overrightarrow{AC}=\lambda-u&lt;0$, so
+\[\delta&lt;u-pq=\tfrac{p+q}2-pq&lt;q-pq=q(1-p).\tag{1}\]</p><p><strong>Two oblique coordinate systems.</strong> Give the point $B+h\,\overrightarrow{BA}+l\,\overrightarrow{BC}=(uh+l,\,vh)$ the coordinates $(h,l)$. Then line
+$BA$ is $l=0$, line $BC$ is $h=0$, $A=(1,0)$, $D=(h_D,0)$ with $h_D=\frac{pq}\lambda$, and $X=(0,p)$. Also put $m=l+h-1$; then the same point is
+$C+h\,\overrightarrow{CA}+m\,\overrightarrow{BC}=(1+(u-1)h+m,\,vh)$, so in the coordinates $(h,m)$ line $CA$ is $m=0$, $C=(0,0)$, $E=(h_E,0)$ with
+$h_E=\frac{(1-p)(1-q)}\mu$, and $Y=(0,q-1)$.</p><p><strong>The circles.</strong> In the coordinates $(h,l)$, $x^2+y^2=\lambda h^2+2uhl+l^2$, and a circle through $B$ is $x^2+y^2+\alpha x+\beta y=0$. Fitting $D$
+and $X$, the circle $\Omega$ is
+\[\lambda h^2+2uhl+l^2-pq\,h-p\,l=0 .\]
+In the coordinates $(h,m)$, $(x-1)^2+y^2=\mu h^2+2(u-1)hm+m^2$, and fitting $C$, $E$ and $Y$, the circle $\Gamma$ is
+\[\mu h^2+2(u-1)hm+m^2-(1-p)(1-q)\,h+(1-q)\,m=0 .\]
+(At $D$: $h_D(\lambda h_D-pq)=0$; at $X$: $p^2-p^2=0$; at $E$: $h_E(\mu h_E-(1-p)(1-q))=0$; at $Y$: $(q-1)^2+(1-q)(q-1)=0$.)</p><p><strong>The tangents.</strong> Affine coordinates map lines to lines, so the tangent to a curve $\Phi=0$ at a point $Z_0$ of it is
+$\partial_1\Phi(Z_0)(h-h_0)+\partial_2\Phi(Z_0)(l-l_0)=0$ in either system.</p><ul class="ct-ul"><li><p>At $B$: $pq\,h+p\,l=0$, i.e. $l=-qh$. At $C$: $-(1-p)(1-q)h+(1-q)m=0$, i.e. $m=(1-p)h$.</p></li><li><p>At $D$: the partial derivatives are $2\lambda h_D-pq=pq$ and $2uh_D-p$; multiplying the tangent equation by $\lambda/(pq)$ it becomes $f_1=0$, where
+\[f_1=\lambda h+\Bigl(2u-\frac\lambda q\Bigr)l-pq .\]</p></li><li><p>At $E$: the partial derivatives are $(1-p)(1-q)$ and $2(u-1)h_E+1-q$; multiplying by $\mu/((1-p)(1-q))$ the tangent becomes $f_2=0$, where
+\[f_2=\mu h+\Bigl(2(u-1)+\frac{\mu}{1-p}\Bigr)m-(1-p)(1-q),\qquad m=l+h-1 .\]</p></li></ul><p>So $P$ satisfies $f_1=f_2=0$. For $Q$: $l=-qh$ and $l=m-h+1=1-ph$, so $h=\frac1{p-q}$; thus $Q$ has $h_Q=\frac1{p-q}\ne1$, $l_Q=-qh_Q$, $m_Q=(1-p)h_Q$,
+and $Q\ne A$.</p><p><strong>The line $AQ$.</strong> Let $g=f_1-f_2$, an affine function of $(h,l)$, with $g(P)=0$.</p><ul class="ct-ul"><li><p>At $A$ ($h=1$, $l=m=0$): $f_1=\lambda-pq=\delta$ and $f_2=\mu-(1-p)(1-q)=\delta$, so $g(A)=0$.</p></li><li><p>At $Q$, with $h=h_Q$: $f_1=2\lambda h-2uqh-pq$ and $f_2=2\mu h+2(u-1)(1-p)h-(1-p)(1-q)$. Using $\lambda-\mu=2u-1$ and $2u=p+q$,
+\[g(Q)=2h\bigl(u(1+p-q)-p\bigr)+1-p-q=h(q-p)(1-p-q)+1-p-q=0,\]
+because $2u(1+p-q)-2p=(p+q)(1+p-q)-2p=(q-p)(1-p-q)$ and $h(q-p)=-1$.</p></li><li><p>The coefficient of $l$ in $g$ is $\bigl(2u-\frac\lambda q\bigr)-\bigl(2(u-1)+\frac\mu{1-p}\bigr)=2-\frac\lambda q-\frac\mu{1-p}$. With
+$\lambda=pq+\delta$ and $\mu=(1-p)(1-q)+\delta$ it equals $(1-p+q)\Bigl(1-\frac{\delta}{q(1-p)}\Bigr)$, which is positive by (1).</p></li></ul><p>So $g$ is not constant, and its zero set is a line. It contains the distinct points $A$ and $Q$, so it is the line $AQ$; and it contains $P$. Hence
+$A$, $P$ and $Q$ are collinear.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p14">
@@ -603,14 +753,26 @@ $n=513$ the number $n^2+8$ is composite, and $255^2+8=65033$ is prime but $65033
 <div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 39: Graph Theory and Structural Combinatorics</div>
 <div class="ct-text"><p>Let $P$ be a convex polyhedron. Anne wants to colour all vertices of $P$ either red or blue. We call an edge of $P$ <em>checkered</em> if it connects two vertices of different colours. We call a face of $P$ <em>diverse</em> if at least half of its edges are checkered.
 Show that if every vertex of $P$ is a vertex of exactly three faces, then Anne can find a colouring where every face of $P$ is diverse.</p></div>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (A colouring with the most checkered edges)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (A colouring with the most checkered edges)</h4>
 <p>There are finitely many colourings; choose one with the largest possible number of checkered edges.</p><p><strong>Every vertex has at most one non-checkered edge.</strong> Each vertex $v$ lies on exactly three faces, hence on exactly three edges. If two or three
 of these edges were non-checkered, recolour $v$ alone. The edges at $v$ swap status (checkered $\leftrightarrow$ non-checkered) and no other edge
 changes, so the number of checkered edges goes up by at least $2-1=1$, contradicting maximality.</p><p><strong>Every face is diverse.</strong> The boundary of a face with $m$ edges is a cycle $v_1v_2\ldots v_m$. Two consecutive edges of this cycle share a
 vertex, so by the previous paragraph they are not both non-checkered. A set of edges of an $m$-cycle with no two consecutive has at most
 $\lfloor m/2\rfloor$ elements, so at least $m-\lfloor m/2\rfloor\ge m/2$ edges of the face are checkered. Hence every face is diverse, and this
 colouring works.</p>
+<h4>Solution 2 (The four colour theorem and a Tait colouring)</h4>
+<p><strong>Local structure.</strong> Around a vertex $V$ the faces and edges at $V$ alternate. As $V$ lies on exactly three faces, it has exactly
+three edges, and each of them separates two of the three faces at $V$; so every two faces at $V$ share an edge.</p><p><strong>Colouring the faces.</strong> By the four colour theorem (applied to the planar graph whose vertices are the faces of $P$, two faces being joined when
+they share an edge), the faces can be coloured with four colours so that faces with a common edge get different colours. Use as colours the four pairs
+$00,01,10,11$ of bits, and label every edge with the bitwise sum modulo $2$ of the colours of its two faces. The two faces are different colours, so
+every label is $01$, $10$ or $11$.</p><p><strong>One edge of each label at every vertex.</strong> Let the three faces at $V$ have colours $c_1,c_2,c_3$. They are pairwise different, since every two of
+these faces share an edge. The edges at $V$ have the labels $c_1+c_2$, $c_2+c_3$, $c_3+c_1$, and these are different: for example
+$c_1+c_2=c_2+c_3$ would give $c_1=c_3$. So $V$ has exactly one edge of each of the labels $01,10,11$.</p><p><strong>Colouring the vertices.</strong> Let $G$ be the set of edges labelled $01$ or $10$. Every vertex lies on exactly two edges of $G$, one of each label.
+Hence $G$ splits into disjoint cycles through all vertices, and along each cycle the labels alternate, so each cycle has even length. Colour the
+vertices of each cycle alternately red and blue. Then every edge of $G$ joins two consecutive vertices of a cycle and is checkered.</p><p><strong>Every face is diverse.</strong> Every uncheckered edge has label $11$, and no two edges labelled $11$ share a vertex (each vertex has only one). Let a
+face have $s$ edges; its boundary is a cycle with $s$ vertices. Its uncheckered edges share no vertex, and each uses two of these $s$ vertices, so
+there are at most $s/2$ of them. Hence at least half of the edges of every face are checkered, and every face is diverse.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p17">
@@ -672,8 +834,8 @@ which vanishes only for $n=3$. Contradiction.</p><p>Hence $P_n$ factors exactly 
 <h3>Problem 3</h3>
 <div class="ct-meta">Geometry &middot; LPS VII, Chapter 11: Similarity, Homothety, and Ratio Geometry</div>
 <div class="ct-text"><p>Let $ABCD$ be a cyclic quadrilateral with circumcircle $\Omega$ such that $CD&gt;BD&gt;BC$. The tangents to $\Omega$ at $B$ and $C$ meet at a point $S$. A line $\ell$ is called <em>coastal</em> if:</p><ul class="ct-ul"><li><p>$\ell$ does not pass through $A$,</p></li><li><p>$\ell$ intersects ray $SD$ at a point $X_\ell$ beyond $D$, and</p></li><li><p>there is a circle tangent to line $\ell$, line $X_\ell A$, segment $SB$ and segment $SC$.</p></li></ul><p>Prove that there is a circle that is tangent to $\Omega$ and all coastal lines.</p></div>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Pole of $SD$, a homothety from $S$, and a homothety from $U$)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Pole of $SD$, a homothety from $S$, and a homothety from $U$)</h4>
 <div class="ct-fig"><img style="width:256px" src="/assets/contests/2026-27/germany-tst-18_s1.svg" alt="Figure for the solution"></div>
 <p>Let $O$ be the centre of $\Omega$. For a point $P\ne O$, its <em>polar</em> is taken with respect to $\Omega$; we use La Hire's principle ($P$ lies on
 the polar of $Q$ iff $Q$ lies on the polar of $P$) and Brocard's theorem: for four distinct points of $\Omega$, the three intersection points of opposite
@@ -703,6 +865,46 @@ gives $K=\frac{2au}{a+u}$. A direct computation now yields $(L-u)(K-u)=(a-u)^2$,
 (If $AU\parallel SD$, the homothety is a translation, $K$ is the midpoint of $AU$, $L=2A-U$, and the same relation holds.)</p><p><strong>Conclusion.</strong> In every case $L=\nu(F)$ lies on $\ell$. The homothety $\nu$ maps $\Omega$ to $\Gamma$ and the tangent of $\Omega$ at $F$, which is
 the line $YF$, to the tangent of $\Gamma$ at $L$, a line through $L$ parallel to $YF$. Since $\ell\parallel YF$ and $L\in\ell$, this tangent is $\ell$.
 Therefore every coastal line is tangent to the fixed circle $\Gamma$, which is tangent to $\Omega$ at $U$.</p>
+<h4>Solution 2 (A fixed circle from the tangent equations)</h4>
+<p>Put $S$ at the origin with ray $SD$ as the positive $x$-axis. Let $2\gamma=\angle BSC$ ($0&lt;\gamma&lt;90^\circ$), let $(e,f)$ be the unit vector
+along the internal bisector of $\angle BSC$, and $d=\sin\gamma$.</p><p><strong>Circles tangent to the segments $SB$ and $SC$.</strong> Let a circle with centre $K$ be tangent to segments $SB$ and $SC$, and let $\hat b,\hat c$ be
+the unit vectors along $SB,SC$. Its points of tangency are the feet of $K$ on the two lines, $(K\cdot\hat b)\hat b$ and $(K\cdot\hat c)\hat c$; they lie on
+the rays $SB,SC$ and are not $S$ (two different lines cannot touch a circle at the same point), so $K\cdot\hat b&gt;0$ and $K\cdot\hat c&gt;0$. As $K$ is
+equally far from both lines, it lies on one of the two bisectors. On the external bisector $K\cdot\hat b=-K\cdot\hat c$, and on the ray of the internal bisector
+opposite to the angle both are negative. Hence $K=t(e,f)$ with $t&gt;0$, and the radius is the distance to $SB$, namely $t\sin\gamma=dt$. In particular $\Omega$
+(tangent to $SB$ at $B$ and to $SC$ at $C$) has centre $U=t_0(e,f)$ and radius $dt_0$ for some $t_0&gt;0$.</p><p><strong>Position of $D$.</strong> The circle $\Omega$ lies in the angular region $BSC$ and touches its sides only at $B$ and $C$. So $D$ lies strictly inside
+the angle, the angle between $(1,0)$ and $(e,f)$ is less than $\gamma$, and $f^2&lt;d^2$. Also $f\ne0$: otherwise $SD$ is the bisector, and the reflection
+in it fixes $\Omega$ and $D$ and swaps $B$ and $C$, giving $DB=DC$, contrary to $CD&gt;BD$. Put
+\[F=\frac{d^2+f^2}{d^2-f^2},\qquad G=\frac{2df}{d^2-f^2}\ne0,\qquad\text{so}\qquad F^2-G^2=1,\quad (F+1)f=dG .\]
+Let $A=(a,b)$.</p><p><strong>If $b=0$.</strong> Then $A$ is on line $SD$. For a coastal line $\ell$ the point $X_\ell$ is on this line and $X_\ell\ne A$ (as $\ell$ avoids $A$),
+so $X_\ell A$ is the $x$-axis. A circle with centre $t(e,f)$, $t&gt;0$, and radius $dt$ is at distance $|f|t&lt;dt$ from the $x$-axis, so the $x$-axis is not
+tangent to it. Hence there are no coastal lines, and any circle tangent to $\Omega$ does the job.</p><p><strong>If $b\ne0$.</strong> Let $\kappa$ be the circle with centre $V=(a,-Fb)$ and radius $\rho=|Gb|&gt;0$. We show that $\kappa$ touches every coastal line and
+$\Omega$.</p><p><em>Tangency to a coastal line.</em> Let $\ell$ be coastal, $X=X_\ell=(x,0)$ with $x&gt;0$, and let the circle tangent to $\ell$, $XA$, $SB$, $SC$ have
+centre $K=t(e,f)$, $t&gt;0$, and radius $dt$. For each of the two lines $\ell$ and $XA$ through $X$ choose the unit normal $\nu$ for which
+$\nu\cdot(K-X)=-dt$ (the signed distance of $K$ from the line is $-dt$); write $\nu=(\cos\theta,\sin\theta)$ for $\ell$ and $\nu=(\cos\varphi,\sin\varphi)$
+for $XA$. As $\nu\cdot X=x\cos\theta$ (resp. $x\cos\varphi$),
+\[x\cos\theta=t(e\cos\theta+f\sin\theta+d),\qquad x\cos\varphi=t(e\cos\varphi+f\sin\varphi+d).\]
+Multiplying the first equation by $e\cos\varphi+f\sin\varphi+d$, the second by $e\cos\theta+f\sin\theta+d$, subtracting and dividing by $x\ne0$ gives
+$\cos\theta\,(f\sin\varphi+d)=\cos\varphi\,(f\sin\theta+d)$, that is,
+\[f\sin(\varphi-\theta)+d(\cos\theta-\cos\varphi)=0.\]
+The lines $\ell\ne XA$ both pass through $X$, so their normals are not parallel and $\sin\frac{\varphi-\theta}2\ne0$. Using
+$\sin(\varphi-\theta)=2\sin\frac{\varphi-\theta}2\cos\frac{\varphi-\theta}2$ and $\cos\theta-\cos\varphi=2\sin\frac{\varphi+\theta}2\sin\frac{\varphi-\theta}2$,
+we get $f\cos\frac{\varphi-\theta}2+d\sin\frac{\varphi+\theta}2=0$. With $c_1=\cos\frac\theta2$, $s_1=\sin\frac\theta2$, $c_2=\cos\frac\varphi2$,
+$s_2=\sin\frac\varphi2$ this reads
+\[c_2(fc_1+ds_1)+s_2(dc_1+fs_1)=0 .\]
+The numbers $fc_1+ds_1$ and $dc_1+fs_1$ are not both $0$ (the system has determinant $f^2-d^2\ne0$ and $(c_1,s_1)\ne(0,0)$), so
+$(c_2,s_2)=\lambda\bigl(dc_1+fs_1,\,-(fc_1+ds_1)\bigr)$ for some $\lambda\ne0$. Hence
+\[\cos\varphi=c_2^2-s_2^2=\lambda^2(d^2-f^2)(c_1^2-s_1^2)=\lambda^2(d^2-f^2)\cos\theta,\]
+\[\sin\varphi=2c_2s_2=-2\lambda^2(dc_1+fs_1)(fc_1+ds_1)=-\lambda^2\bigl(2df+(d^2+f^2)\sin\theta\bigr).\]
+The line $XA$ contains $A$, which is off the $x$-axis, so it is not the $x$-axis and $\cos\varphi\ne0$; then also $\cos\theta\ne0$, and
+\[\tan\varphi\cos\theta=-\frac{2df+(d^2+f^2)\sin\theta}{d^2-f^2}=-G-F\sin\theta .\]
+Since $A$ is on $XA$, $a\cos\varphi+b\sin\varphi=x\cos\varphi$, i.e. $x=a+b\tan\varphi$. Therefore
+\[x\cos\theta=a\cos\theta-Fb\sin\theta-Gb,\qquad\text{i.e.}\qquad \nu\cdot(V-X)=Gb\]
+for the normal $\nu$ of $\ell$. So the distance from $V$ to $\ell$ is $|Gb|=\rho$, and $\ell$ is tangent to $\kappa$.</p><p><em>Tangency to $\Omega$.</em> As $A\in\Omega$, $(a-t_0e)^2+(b-t_0f)^2=d^2t_0^2$. Hence, using $F^2-1=G^2$ and $(F+1)f=dG$,
+\begin{align*}|V-U|^2&amp;=(a-t_0e)^2+(Fb+t_0f)^2=d^2t_0^2-(b-t_0f)^2+(Fb+t_0f)^2\\&amp;=d^2t_0^2+G^2b^2+2dGbt_0=(dt_0+Gb)^2 .\end{align*}
+So $|UV|=|dt_0+Gb|$, which is either the sum $dt_0+\rho$ or the difference $|dt_0-\rho|$ of the radii. Moreover $V\ne U$: otherwise $|dt_0+Gb|=0$
+and $Fb=-t_0f$, so $Gt_0f/F=dt_0$, i.e. $Gf=dF$, i.e. $2df^2=d(d^2+f^2)$, i.e. $f^2=d^2$, which is false. Two circles with different centres whose
+distance is the sum or the difference of the radii are tangent. Hence $\kappa$ is tangent to $\Omega$ and to every coastal line.</p>
 </div></details>
 </section>
 <h2 class="ct-group" id="aimo-5">AIMO 5</h2>
@@ -759,7 +961,7 @@ Hence $f(m)=-m$, completing the induction.</p><p>The only function is $\boxed{f(
 <div class="ct-text"><p>Let $ABCD$ be a convex quadrilateral with $\angle ADC&gt;90^\circ$. Suppose that points $X$ and $Y$ lie on diagonal $AC$ such that
 \[\angle ADX=\angle YDC=90^\circ,\quad\angle CAD=\angle CBX,\quad\text{and}\quad\angle DCA=\angle YBA.\]
 Let $O$ be the circumcentre of triangle $BXY$. Suppose point $R\neq O$ lies on the perpendicular bisector of $AC$ such that lines $OR$ and $AC$ are parallel.</p><p>Prove that line $RO$ bisects angle $\angle DRB$.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 (A homothety centred at $D$ and the Apollonius circle)</h4>
 <div class="ct-fig"><img style="width:301px" src="/assets/contests/2026-27/germany-tst-21_s1.svg" alt="Figure for the solution"></div>
 <p>We use $\measuredangle$ for directed angles between lines (mod $180^\circ$). Place $AC$ horizontally with $A$ on the left and $D$ above; by convexity $B$
@@ -810,6 +1012,33 @@ second chain would give $O_1O\parallel O_1O_2$, which we excluded; similarly $Q\
 It maps line $O_1O_2$ to the parallel line through $Y$, namely $YX$, so $g(O_2)=X$, and its ratio is $s=XY/O_1O_2\in(0,1)$ (the vectors $O_1O_2$ and
 $YX$ point the same way). It maps line $O_1R$ to the parallel line $YQ$ and line $O_2R$ to $XQ$; hence $g(R)=Q$. So $Q$ lies on segment $DR$, strictly
 between $D$ and $R$. If $Q=B$, then $B$ would be on line $RO\parallel AC$ and on line $RD$, so $DB\parallel AC$, impossible; thus $Q\ne B$.</p><p>Therefore ray $RQ$ is ray $RD$, and since $Q$ is the mirror image of $B$ in line $RO$, the line $RO$ bisects angle $BRQ$, which is angle $DRB$.</p>
+<h4>Solution 3 (Coordinates with $D$ at the origin)</h4>
+<p>Put $D=(0,0)$ and scale so that $AC$ is the line $y=1$; let $A=(a,1)$ and $C=(c,1)$ with $a&lt;c$. As $\angle ADC&gt;90^\circ$,
+$\overrightarrow{DA}\cdot\overrightarrow{DC}=ac+1&lt;0$, so $a&lt;0&lt;c$. Put $\alpha=a+c$ and $\beta=ac&lt;-1$.</p><p><strong>$X$, $Y$, $B$.</strong> For $X=(p,1)$ the condition $\angle ADX=90^\circ$ is $ap+1=0$, so $p=-1/a$; likewise $Y=(q,1)$ with $q=-1/c$. Then
+$a&lt;q&lt;p&lt;c$: indeed $q-a=-\frac{1+\beta}{c}&gt;0$, $c-p=\frac{1+\beta}{a}&gt;0$ and $p-q=\frac1c-\frac1a&gt;0$. As $ABCD$ is convex, $B$ and $D$ are on opposite
+sides of $AC$: $B=(b,1+t)$ with $t&gt;0$.</p><p><strong>The angle conditions.</strong> For an angle $\angle ZWZ'$ we have $\cot\angle ZWZ'=\dfrac{\overrightarrow{WZ}\cdot\overrightarrow{WZ'}}{|\det(\overrightarrow{WZ},\overrightarrow{WZ'})|}$,
+and two angles in $(0^\circ,180^\circ)$ are equal exactly when their cotangents are. We find $\cot\angle CAD=\frac{(c-a)(-a)}{c-a}=-a$,
+$\cot\angle DCA=\frac{-c(a-c)}{c-a}=c$,
+\[\cot\angle CBX=\frac{(c-b)(p-b)+t^2}{t(c-p)},\qquad \cot\angle YBA=\frac{(a-b)(q-b)+t^2}{t(q-a)} .\]
+As $-a(c-p)=-ac-1$ and $c(q-a)=-1-ac$, the two given equalities become
+\[(b-c)(b-p)+t^2=-(\beta+1)t,\tag{1}\]
+\[(b-a)(b-q)+t^2=-(\beta+1)t.\tag{2}\]
+Subtracting, $b(a+q-c-p)=aq-cp=\frac{c^2-a^2}{ac}$. Since $a+q-c-p=(a-c)+\frac{c-a}{ac}=\frac{(a-c)(\beta-1)}{\beta}$, this gives
+\[b=\frac{\alpha}{1-\beta}.\]
+Then $b-c=\frac{a(1+c^2)}{1-\beta}$ and $c-q=\frac{1+c^2}{c}$, so $c-q=(b-c)\frac{1-\beta}{\beta}$ and $b-q=(b-c)+(c-q)=\frac{b-c}{\beta}$. With (1),
+\[(b-p)(b-q)=\frac{(b-p)(b-c)}{\beta}=-\frac{t^2+(\beta+1)t}{\beta}.\]</p><p><strong>The points $O$ and $R$.</strong> The centre $O$ of the circle $BXY$ lies on the perpendicular bisector of $XY$: $O=\bigl(\frac{p+q}2,k\bigr)$. From
+$OX=OB$,
+\[\Bigl(\frac{p-q}2\Bigr)^2+(1-k)^2=\Bigl(b-\frac{p+q}2\Bigr)^2+(1+t-k)^2,\]
+that is, $0=(b-p)(b-q)+t^2+2t(1-k)$.
+Hence $2t(k-1)=t^2-\frac{t^2+(\beta+1)t}{\beta}$; dividing by $t$ and multiplying by $\beta$, $2\beta k=2\beta+\beta t-t-\beta-1=(\beta-1)(1+t)$, so
+\[k=\frac{(\beta-1)(1+t)}{2\beta}&gt;0 .\]
+The point $R$ is on the perpendicular bisector $x=\frac\alpha2$ of $AC$ and on the line $y=k$ through $O$ parallel to $AC$: $R=(\sigma,k)$ with
+$\sigma=\frac\alpha2$. As $\frac{p+q}2=-\frac{\alpha}{2\beta}$ and $\beta\ne-1$, the condition $R\ne O$ means $\alpha\ne0$, so $\sigma\ne0$.</p><p><strong>The bisector.</strong> We have $b-\sigma=\frac{\alpha}{1-\beta}-\frac\alpha2=\sigma\cdot\frac{1+\beta}{1-\beta}$ and
+$1+t-k=(1+t)\bigl(1-\frac{\beta-1}{2\beta}\bigr)=(1+t)\frac{\beta+1}{2\beta}$. So the slopes of $RD$ and $RB$ are
+\[\frac{0-k}{0-\sigma}=\frac k\sigma,\qquad \frac{1+t-k}{b-\sigma}=\frac{(1+t)(\beta+1)}{2\beta}\cdot\frac{1-\beta}{\sigma(1+\beta)}=\frac{(1+t)(1-\beta)}{2\beta\sigma}=-\frac k\sigma .\]
+They are opposite and nonzero, so the lines $RD$ and $RB$ are mirror images in the horizontal line $RO$. Moreover $\frac{1+\beta}{1-\beta}&lt;0$, so
+$b-\sigma$ and $0-\sigma$ have the same sign: $D$ and $B$ lie on the same side of the vertical line through $R$. Hence the rays $RD$ and $RB$ are
+mirror images in line $RO$, and line $RO$ bisects $\angle DRB$.</p>
 </div></details>
 </section>
 <h2 class="ct-group" id="aimo-6">AIMO 6</h2>
@@ -837,8 +1066,8 @@ $a_j=\mp49$. Contradiction. So $M\ge75$.</p><p>The smallest sunshine cost is $\b
 <h3>Problem 2</h3>
 <div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 52: Advanced Combinatorial Structure and Hybrid Methods</div>
 <div class="ct-text"><p>Let $n$ be a positive integer, and let $(a_1,a_2,\ldots,a_n)$ be any $n$-tuple of distinct integers. An <em>inversion</em> is a pair $(i,j)$ of integers satisfying $1\leqslant i&lt;j\leqslant n$ and $a_i&gt;a_j$. An inversion is called <em>odd</em> if $j-i$ is odd. Let $A$ be the number of all inversions, and let $B$ be the number of odd inversions.</p><ul class="ct-parts"><li><p><span class="ct-lbl">(a)</span> Prove that $A\leqslant 5B$ for all $n$ and all $n$-tuples $(a_1,a_2,\ldots,a_n)$.</p></li><li><p><span class="ct-lbl">(b)</span> Prove that there exist an $n$ and an $n$-tuple $(a_1,a_2,\ldots,a_n)$ for which $A&gt;4.99B$.</p></li></ul></div>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Charging each even inversion to a middle point)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Charging each even inversion to a middle point)</h4>
 <p>Call an inversion $(i,j)$ <em>even</em> if $j-i$ is even; let $E=A-B$ be the number of even inversions.</p><p><strong>(a)</strong> We show $E\le4B$, which is equivalent to $A\le5B$. Let $(i,j)$ be an even inversion, $j-i=2d$. Put
 \[k=\begin{cases}i+d,&amp; d\text{ odd},\\ i+d-1,&amp; d\text{ even}.\end{cases}\]
 Then $i&lt;k&lt;j$ and $k-i$, $j-k$ are odd. Since $a_i&gt;a_j$, we have $a_i&gt;a_k$ or $a_k&gt;a_j$; so $(i,k)$ or $(k,j)$ is an odd inversion. Assign
@@ -855,6 +1084,29 @@ for even $c$ the pairs counted are (even offset, later odd offset), $\frac{m}{2}
 $C$ is even, $B=\frac C2\cdot\frac{m^2}{4}=\frac{Cm^2}8$. Therefore
 \[\frac AB=1+\frac EB=1+\frac{4(C-1)(m-1)+2(m-2)}{Cm}=5-\frac4m-\frac2C .\]
 With $m=C=1000$ (so $n=10^6$) this is $4.994&gt;4.99$, as required.</p>
+<h4>Solution 2 (A periodic example built from residues modulo $2m+1$)</h4>
+<p>Call an inversion $(i,j)$ <em>even</em> if $j-i$ is even; let $E=A-B$ be the number of even inversions.</p><p><strong>(a)</strong> We show $E\le4B$, which is equivalent to $A\le5B$. Let $(i,j)$ be an even inversion, $j-i=2s$, and put $c=i+s$ if $s$ is odd and
+$c=i+s-1$ if $s$ is even. Then $i&lt;c&lt;j$, and $c-i$ and $j-c$ are odd. As $a_i&gt;a_j$, we have $a_i&gt;a_c$ or $a_c&gt;a_j$; assign $(i,j)$ to the odd inversion
+$(i,c)$ in the first case and to $(c,j)$ in the second. Fix an odd inversion $(x,y)$, $y-x=g$. If $(i,j)$ is assigned to it as $(i,c)$, then $i=x$ and
+$g=c-i\in\{s,s-1\}$, so $s\in\{g,g+1\}$ and $j=x+2s$ takes at most $2$ values. If it is assigned as $(c,j)$, then $j=y$ and $g=j-c\in\{s,s+1\}$, so
+$s\in\{g,g-1\}$ and $i=y-2s$ takes at most $2$ values. So each odd inversion receives at most $4$ even inversions, $E\le4B$ and $A\le5B$.</p><p><strong>(b)</strong> Let $m,T$ be positive integers, $k=2m+1$ and $n=kT$; we index the terms by $i=0,1,\dots,n-1$ (shift by $1$ for the problem's indexing).
+As $k$ is odd, there is a unique $r_i\in\{0,1,\dots,k-1\}$ with $2r_i\equiv-i\pmod k$. Put
+\[a_i=n\,(i+3r_i)+i .\]
+These are distinct, since $a_i\equiv i\pmod n$.</p><p><em>Criterion.</em> Let $0\le i&lt;j\le n-1$, $d=j-i$ and $\delta=r_i-r_j$. If $i+3r_i&gt;j+3r_j$, then $a_i-a_j\ge n+i-j&gt;0$; otherwise $a_i-a_j\le i-j&lt;0$. So
+$(i,j)$ is an inversion if and only if $3\delta&gt;d$. Since $2\delta\equiv j-i=d$ and $2(m+1)=k+1\equiv1\pmod k$, we have $\delta\equiv(m+1)d\pmod k$. Let
+$\rho_d\in\{0,\dots,k-1\}$ be the remainder of $(m+1)d$ modulo $k$. As $|\delta|&lt;k$, either $\delta=\rho_d$ (when $r_i\ge\rho_d$) or
+$\delta=\rho_d-k&lt;0$ (when $r_i&lt;\rho_d$). Hence
+\[(i,i+d)\text{ is an inversion}\iff 3\rho_d&gt;d\ \text{ and }\ r_i\ge\rho_d .\]</p><p><em>The distances that occur.</em> Note $\rho_d\le2m$, so $3\rho_d&gt;d$ forces $d&lt;6m$.</p><ul class="ct-ul"><li><p>$d=2s$: $(m+1)2s=s(k+1)\equiv s$. For $1\le s\le2m$, $\rho_d=s$ and $3s&gt;2s$: these distances occur. For $k\le s&lt;2k$, $\rho_d=s-k$ and
+$3(s-k)&gt;2s$ would need $s&gt;3k$; larger $s$ give $d\ge4k&gt;6m$. So no other even distance occurs.</p></li><li><p>$d=2s+1$: $(m+1)(2s+1)\equiv s+m+1$. For $0\le s\le m-1$, $\rho_d=s+m+1$ and $3(s+m+1)&gt;2s+1$: these occur. For $m\le s\le3m$,
+$\rho_d=s-m$ and $3(s-m)&gt;2s+1$ would need $s&gt;3m+1$; larger $s$ give $d&gt;6m$. So no other odd distance occurs.</p></li></ul><p>All occurring distances are less than $2k$.</p><p><em>Counting.</em> The map $i\mapsto r_i$ is a bijection from any $k$ consecutive integers onto $\{0,\dots,k-1\}$, so among $k$ consecutive values of $i$
+exactly $k-\rho$ have $r_i\ge\rho$. For an occurring odd distance $d=2s+1$, the starting points $i$ lie in $[0,n-d)\subset[0,n)$, which consists of
+$T$ blocks of $k$ consecutive integers; so there are at most $T(k-\rho_d)=T(m-s)$ inversions at distance $d$, and
+\[B\le T\sum_{s=0}^{m-1}(m-s)=T\,\frac{m(m+1)}2 .\]
+For every occurring distance $d&lt;2k$, the interval $[0,n-d)$ contains the $T-2$ blocks of $[0,k(T-2))$, so
+\[A\ge(T-2)\Bigl(\sum_{s=1}^{2m}(k-s)+\frac{m(m+1)}2\Bigr)=(T-2)\Bigl(m(2m+1)+\frac{m(m+1)}2\Bigr).\]
+Hence $A\ge\bigl(1-\frac2T\bigr)\bigl(1+\frac{2(2m+1)}{m+1}\bigr)B=\bigl(1-\frac2T\bigr)\bigl(5-\frac2{m+1}\bigr)B$. For $m=250$ and $T=20000$ (so
+$n=10\,020\,000$), $\bigl(1-\frac1{10000}\bigr)\bigl(5-\frac2{251}\bigr)&gt;0.9999\cdot4.992&gt;4.9915$, and $B&gt;0$ (for instance $(i,i+1)$ is an inversion
+whenever $r_i\ge m+1$). So $A&gt;4.99B$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p24">
@@ -919,8 +1171,8 @@ relation gives $v(H_n)=v(H_m)-1\le-(j+2)$.</p><p>With $j=2024$: $v(H_n)\le-2025$
 Let $X$ be the foot of the altitude from $D$ on $AB$ and let $W$ be the intersection of the angular bisector of $\angle ADC$ with $AC$.
 Let $Y\neq B$ be a point on $k$ such that $BY\parallel AC$. Let $XY$ intersect $k$ again in $Z\neq Y$.
 Finally, let $S\neq W$ be the second intersection of $AC$ with the circumcircle of $YWZ$. Show that $\angle DZS=90^\circ$.</p></div>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (The circle centred at $A$ through $D$)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (The circle centred at $A$ through $D$)</h4>
 <div class="ct-fig"><img style="width:253px" src="/assets/contests/2026-27/germany-tst-26_s1.svg" alt="Figure for the solution"></div>
 <p>Let $h=AD=BC$, let $\kappa$ be the circle with centre $A$ and radius $h$ (it touches $BC$ at $D$), and let $V$ be the foot of the perpendicular
 from $D$ to $AC$. As the triangle is acute, $X$ lies on segment $AB$ and $V$ on segment $AC$. We use $\measuredangle$ for directed angles between lines.</p><p><strong>Step 1: $Y\in\kappa$.</strong> The perpendicular bisector of $AC$ passes through the centre of $k$ and is perpendicular to the chord $BY$ (as $BY\parallel AC$),
@@ -939,6 +1191,29 @@ using $h=BC=DB+DC$. Hence $BM'\parallel AC$, i.e. $M'$ lies on line $BY$. Moreov
 be a parallelogram inscribed in $k$, hence a rectangle, and $\angle ACB=90^\circ$.</p><p><strong>Step 5: $D,V,S,Z$ are concyclic.</strong> Using Step 2, the circle $\kappa$ through $Z,Y,D,M'$, Step 4 and Step 3:
 \[\measuredangle(ZV,ZD)=\measuredangle(ZY,ZD)=\measuredangle(M'Y,M'D)=\measuredangle(AC,SD)=\measuredangle(SV,SD).\]
 So $Z$ lies on the circle through $D,V,S$. Since $\angle DVS=90^\circ$, $DS$ is a diameter of that circle, and therefore $\angle DZS=90^\circ$.</p>
+<h4>Solution 2 (Coordinates adapted to the parallel lines $BY$ and $AC$)</h4>
+<p>Scale so that $AD=BC=1$ and put $D=(0,0)$, $A=(0,1)$, $B=(-u,0)$, $C=(v,0)$ with $u,v&gt;0$ (the foot $D$ lies between $B$ and $C$, as
+the triangle is acute) and $u+v=1$.</p><p><strong>New coordinates.</strong> Put $h=x+vy+u$ and $t=vx-y+uv$. The linear part sends $(1,0)$ to $(1,v)$ and $(0,1)$ to $(v,-1)$, two perpendicular vectors
+of the same length $\sqrt{1+v^2}$; so $(x,y)\mapsto(h,t)$ is a similarity. It multiplies all lengths by $\sqrt{1+v^2}$, keeps right angles, and maps
+lines and circles to lines and circles. From now on we work in the coordinates $(h,t)$ as Cartesian coordinates. Then
+\[B=(0,0),\quad D=(u,uv),\quad A=(1,uv-1),\quad C=(1,v),\]
+and line $AC$ is $h=1$.</p><p><strong>The circle $k$ and $Y$.</strong> Let $L=1+v-uv^2$. The circle $t(t+u^2)+h(h-L)=0$ passes through $B$; through $C$, since
+$v(v+u^2)+1-L=v^2+uv(u+v)-v=v(v+u-1)=0$; and through $A$, since $uv-1+u^2=u-1=-v$ gives $(uv-1)(-v)+1-L=-uv^2+v-v+uv^2=0$. So it is $k$. The line
+$BY$ is parallel to $AC$, so it is $h=0$; on it $t(t+u^2)=0$, and $Y=(0,-u^2)$.</p><p><strong>$X$ and $Z$.</strong> In the original coordinates the foot of $D$ on $AB$ is $X=\bigl(\frac{-u}{1+u^2},\frac{u^2}{1+u^2}\bigr)$, so
+$h_X=\frac{-u+vu^2+u+u^3}{1+u^2}=\frac{u^2}{1+u^2}$. As $X$ is on line $AB$, which is $t=(uv-1)h$ in the new coordinates, the slope of $YX$ is
+$\frac{t_X+u^2}{h_X}=uv-1+(1+u^2)=u(u+v)=u$. So line $YX$ is $t=uh-u^2$. Substituting into the equation of $k$ gives
+$h\bigl((1+u^2)h-u^3-L\bigr)=0$; the root $h=0$ is $Y$, so
+\[h_Z=\frac{L+u^3}{1+u^2}=\frac{2(1-u+u^2)}{1+u^2},\qquad t_Z=uh_Z-u^2,\]
+using $v=1-u$. Note $h_Z-1=\frac{(1-u)^2}{1+u^2}=\frac{v^2}{1+u^2}&gt;0$.</p><p><strong>$W$ and $S$.</strong> The line $YX$ meets $AC$ at $H=(1,uv)$. The bisector of the right angle $ADC$ is $y=x$ in the original coordinates, so
+$W=\bigl(\frac v{1+v},\frac v{1+v}\bigr)$ and $t_W=\frac{v^2-v}{1+v}+uv=uv-\frac{uv}{1+v}$. So $W=(1,t_W)$ with $t_H-t_W=\frac{uv}{1+v}$. Now compute the
+power of $H$ with respect to the circle $YWZ$ in two ways. Along line $YX$, with direction vector $(1,u)$, it is
+$\overrightarrow{HY}\cdot\overrightarrow{HZ}=(0-1)(h_Z-1)(1+u^2)=-v^2$. Along line $AC$ it is $(t_W-t_H)(t_S-t_H)$. Hence
+\[t_S-t_H=\frac{-v^2}{t_W-t_H}=\frac{v(1+v)}{u},\qquad S=\Bigl(1,\ uv+\frac{v(1+v)}u\Bigr),\]
+and indeed $S\ne W$.</p><p><strong>The right angle.</strong> We have $\overrightarrow{DZ}=(h_Z-u,\ t_Z-uv)=(h_Z-u,\ u(h_Z-1))$ and $\overrightarrow{ZS}=(1-h_Z,\ t_S-t_Z)$, so
+\[\overrightarrow{DZ}\cdot\overrightarrow{ZS}=(1-h_Z)\bigl(h_Z-u-u(t_S-t_Z)\bigr).\]
+Here $u(t_S-t_Z)=u^2v+v(1+v)-u^2h_Z+u^3$, so the bracket is
+\[(1+u^2)h_Z-u-u^2(u+v)-v-v^2=2(1-u+u^2)-1-u^2-(1-u)^2=0 .\]
+The points $D,Z,S$ are distinct ($h_Z\ne1$, and $Z\ne D$ because $t_Z=u(h_Z-1)+uv\ne uv$). Hence $\angle DZS=90^\circ$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p27">

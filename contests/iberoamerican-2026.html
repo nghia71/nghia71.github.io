@@ -166,7 +166,7 @@ whichever vertex Mafalda chooses, she needs at least $1519$ friends.</p><p>Hence
 <div class="ct-meta">Number Theory &middot; LPS VII, Chapter 49: Combinatorial Number Theory and Structure</div>
 <div class="ct-text"><p>A sequence $a_1, a_2, a_3, \ldots$ of positive integers is called <em>porteña</em> if it satisfies all of the following conditions:</p><ul class="ct-parts"><li><p><span class="ct-lbl">(i)</span> $a_1 &lt; a_2 &lt; a_3 &lt; \cdots$;</p></li><li><p><span class="ct-lbl">(ii)</span> $2a_n - n$ is a perfect square for every integer $n \ge 1$;</p></li><li><p><span class="ct-lbl">(iii)</span> $a_{n-1} + a_n \le n^2$ for every integer $n \ge 2$.</p></li></ul><p>Determine all porteña sequences.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>only $a_n=\dfrac{n(n+1)}{2}$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Squeezing between consecutive triangular numbers)</h4>
 <p>Let $T_n=\frac{n(n+1)}2$ and $s_n=\sqrt{2a_n-n}\ge0$, an integer by (ii). Since $s_n^2=2a_n-n\equiv n\pmod2$, $s_n\equiv n\pmod 2$.</p><p>The sequence $a_n=T_n$ works: it is increasing, $2T_n-n=n^2$, and $T_{n-1}+T_n=n^2$. We show it is the only one, proving $a_n=T_n$ by
 induction.</p><p><em>$n=1$.</em> By (i) and (iii), $2a_1&lt;a_1+a_2\le4$, so $a_1=1=T_1$.</p><p><em>Step.</em> Let $n\ge2$ and $a_{n-1}=T_{n-1}$. By (i) and (iii),
@@ -187,6 +187,22 @@ bound), so $s_k\le k-2$ by parity, and
 a_k\le\frac{k+(k-2)^2}{2}=T_k-(2k-2)=T_{k-1}-(k-2)\le T_{k-1},
 \]
 hence $a_{k-1}&lt;a_k\le T_{k-1}$. Repeating, $a_1&lt;T_1=1$, impossible. So $a_n\ge T_n$ for all $n$.</p><p>Therefore $a_n=T_n$ for all $n$: the only porteña sequence is $\boxed{a_n=\frac{n(n+1)}{2}}$.</p>
+<h4>Solution 3 (A lower bound from (i) and (ii) alone)</h4>
+<p>Let $T_n=\frac{n(n+1)}2$ and $s_n=\sqrt{2a_n-n}$, a non-negative integer by (ii); then $a_n=\frac{n+s_n^2}{2}$.
+The sequence $a_n=T_n$ is porteña: it is increasing, $2T_n-n=n^2$, and $T_{n-1}+T_n=n^2$.</p><p><em>The square roots increase.</em> By (i), $a_{n+1}-a_n\ge1$, so
+\[
+s_{n+1}^2-s_n^2=2(a_{n+1}-a_n)-1\ge1 .
+\]
+Hence $s_{n+1}&gt;s_n$, and since both are integers, $s_{n+1}\ge s_n+1$. Also $s_1^2=2a_1-1\ge1$, so $s_1\ge1$. By induction $s_n\ge n$ for
+every $n$, that is,
+\[
+a_n=\frac{n+s_n^2}{2}\ge\frac{n+n^2}{2}=T_n\qquad\text{for all } n\ge1 .
+\]</p><p><em>Condition (iii) closes the gap.</em> For $n\ge2$,
+\[
+n^2\ge a_{n-1}+a_n\ge T_{n-1}+T_n=n^2 ,
+\]
+so equality holds throughout, and as $a_{n-1}\ge T_{n-1}$ and $a_n\ge T_n$ separately, both are equalities. Taking $n=2,3,4,\dots$ gives
+$a_n=T_n$ for every $n\ge1$.</p><p>So the only porteña sequence is $\boxed{a_n=\frac{n(n+1)}{2}}$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p5">
@@ -244,8 +260,8 @@ fixed line ($v\ne0$, because $\delta$ is not constant).</p><p>Hence the circumce
 <div class="ct-meta">Number Theory &middot; LPS VII, Chapter 9: Polynomials and Root-Coefficient Strategy</div>
 <div class="ct-text"><p>Determine all integers $n &gt; 1$ for which there exist a permutation $d_1, \ldots, d_k$ of all the positive divisors of $n$ and a polynomial $P(x)$ with integer coefficients such that $P(d_j) = d_{j+1}$ for every $1 \le j \le k-1$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$n$ is a prime power, or $n=p(2p-1)$ with $p$ and $2p-1$ both prime ($n=6,15,91,703,\dots$)</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Differences divide differences)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Differences divide differences)</h4>
 <p><strong>Answer.</strong> $n=p^e$ ($p$ prime, $e\ge1$), or $n=p(2p-1)$ with $p$ and $2p-1$ both prime.</p><p><em>Constructions.</em> For $n=p^e$ take $1,p,p^2,\dots,p^e$ and $P(x)=px$. For $n=pq$ with $q=2p-1$ prime take $1,p,q,pq$ and $P(x)=x^2-px+q$:
 $P(1)=p$, $P(p)=q$, $P(q)=q(q-p+1)=pq$.</p><p><em>Necessity.</em> Let $n$ be divisible by two primes; let $p&lt;q$ be its two smallest prime factors, $D$ its set of divisors, $k=|D|\ge4$, and
 $m=n/p$ its largest proper divisor ($m\ge q&gt;p$). Put $\varphi(d_j)=d_{j+1}$ for $j\le k-1$; $\varphi$ is defined on $D'=D\setminus\{d_k\}$, injective,
@@ -278,6 +294,46 @@ $p$; also $w\le q$ (all divisors $\le p^j$ are powers of $p$, so $q&gt;p^j$). By
 factor $\ge q$, so $w\ge pq&gt;q$, a contradiction.</p></li><li><p>$e_3=q$: $\rho_1=\frac{q-p}{p-1}$ and by $(\diamond)$ $\rho_1\mid q$, so $\rho_1=1$ ($\rho_1=q$ would give $q(2-p)=p$). Thus $q=2p-1$. If $n\ne pq$,
 then $q\mid m$, $m\ne q$, so $m\ge pq$. Apply $(\star)$ to $m=e_{k-1}$ and $p=e_2$, with images $n$ and $q$: $m-p\mid n-q\equiv p^2-q=(p-1)^2$
 (mod $m-p$), so $m-p\le(p-1)^2$; but $m-p\ge pq-p=2p(p-1)&gt;(p-1)^2$. Hence $n=pq=p(2p-1)$.</p></li></ul><p>In all cases $n$ is a prime power or $n=p(2p-1)$ with $p,2p-1$ prime, and these all work:
+\[
+\boxed{\,n=p^e\ (p\text{ prime},\ e\ge1)\quad\text{or}\quad n=p(2p-1)\ (p,\ 2p-1\text{ prime})\,}
+\]</p>
+<h4>Solution 2 (Blocks of multiples and a second difference)</h4>
+<p><strong>Answer.</strong> $n=p^e$ ($p$ prime, $e\ge1$), or $n=p(2p-1)$ with $p$ and $2p-1$ both prime.</p><p><em>Constructions.</em> For $n=p^e$ take the list $1,p,p^2,\dots,p^e$ and $P(x)=px$. For $n=pq$ with $q=2p-1$ prime take the list $1,p,q,pq$ and
+$P(x)=x^2-px+q$: then $P(1)=p$, $P(p)=q$ and $P(q)=q(q-p+1)=pq$.</p><p><em>Two facts about a polynomial $P$ with integer coefficients.</em></p><ul class="ct-parts"><li><p><span class="ct-lbl">(a)</span> For integers $x\ne y$, $x-y\mid P(x)-P(y)$, since $x-y\mid x^i-y^i$ for every $i\ge1$.</p></li><li><p><span class="ct-lbl">(b)</span> For distinct integers $u,v,w$, the slopes $L_1=\frac{P(v)-P(u)}{v-u}$ and $L_2=\frac{P(w)-P(v)}{w-v}$ are integers by (a), and
+$w-u\mid L_2-L_1$. Indeed, dividing by the monic polynomial $x-u$ gives $P(x)-P(u)=(x-u)R(x)$ with $R$ having integer coefficients, and
+$R(v)=L_1$; dividing $R(x)-L_1$ by $x-v$ gives $R(x)-L_1=(x-v)Q(x)$ with $Q$ having integer coefficients. So
+$P(x)=P(u)+L_1(x-u)+(x-u)(x-v)Q(x)$, and substituting $x=w$ gives $L_2=L_1+(w-u)Q(w)$.</p></li></ul><p><em>Set-up.</em> Let $n$ have at least two distinct prime factors, let $p$ be its smallest prime factor and $m=n/p$ its largest proper divisor. Another
+prime factor $r&gt;p$ of $n$ divides $m$, so $m&gt;p$; also $n=pm\ge2m$, so $n-m\ge m$. Write $\varphi(d_j)=d_{j+1}$ for $j\le k-1$, where $k\ge4$
+is the number of divisors. Since the $d_j$ are distinct, $\varphi(x)\ne x$, $\varphi$ is injective, and there is no <em>return</em>
+$\varphi(x)=y$, $\varphi(y)=x$ (it would repeat $x$ in the list). By (a), $x-y\mid\varphi(x)-\varphi(y)$ for any two divisors $x\ne y$ other
+than $d_k$.</p><p><em>Step 1: $d_k=n$.</em> If neither $1$ nor $n$ is last, then $\varphi(1),\varphi(n)$ are distinct numbers in $[1,n]$ whose difference is a
+multiple of $n-1$, so $\{\varphi(1),\varphi(n)\}=\{1,n\}$; as $\varphi(1)\ne1$, this is the return $\varphi(1)=n$, $\varphi(n)=1$. Suppose
+$d_k=1$. If $\varphi(m)$ and $\varphi(n)$ were both $\le m$, their difference would be non-zero, smaller than $m\le n-m$, and a multiple of
+$n-m$, which is impossible. As $\varphi(n)\ne n$, we get $\varphi(m)=n$. Then $n-m\mid n-\varphi(n)$, so $\varphi(n)\equiv n\equiv m\pmod{n-m}$
+with $1\le\varphi(n)\le m$; since $m-(n-m)\le0$, the only such number is $m$, and $\varphi(n)=m$ is a return. Hence $d_k=n$, and every
+value of $\varphi$ other than $\varphi(d_{k-1})=n$ is at most $m$.</p><p><em>Step 2: $d_{k-1}\in\{1,m\}$, and the other one is sent to $p$.</em> If $\varphi(1),\varphi(m)$ were both $\le m$, they would differ by a
+non-zero multiple of $m-1$, so $\{\varphi(1),\varphi(m)\}=\{1,m\}$, a return as before. So $n=\varphi(1)$ or $n=\varphi(m)$. Let $y$ be the
+other one of $1,m$. Then $m-1\mid n-\varphi(y)$ and $n=pm\equiv p\pmod{m-1}$, so $\varphi(y)\equiv p\pmod{m-1}$ with $1\le\varphi(y)\le m$.
+Since $1&lt;p&lt;m$, the only such number is $p$: $\varphi(y)=p$.</p><p><em>Case A: $\varphi(1)=n$ and $\varphi(m)=p$.</em> The divisor $p$ is not last and $\varphi(p)\notin\{p,n\}$, so $1\le\varphi(p)\le m$, and
+$m-p\mid\varphi(m)-\varphi(p)=p-\varphi(p)$. If $m\ge2p$, the only numbers in $[1,m]$ congruent to $p$ modulo $m-p$ are $p$ and $m$ (as
+$2p-m\le0$ and $2m-p&gt;m$); $\varphi(p)=p$ is excluded and $\varphi(p)=m$ is a return. So $m&lt;2p$. Every prime factor of a composite divisor of
+$n$ is at least $p$, so such a divisor is at least $p^2\ge2p$; hence $m$ is a prime $q&gt;p$, $n=pq$, and the list is $q,p,1,pq$. By (a),
+$q-p\mid p-1$ (from $q,p$ with images $p,1$) and $p-1\mid pq-1$ (from $p,1$ with images $1,pq$). As $pq-1=q(p-1)+(q-1)$, we get $p-1\mid q-1$,
+hence $p-1\mid(q-1)-(p-1)=q-p$. Two positive integers dividing each other are equal: $q-p=p-1$, so $q=2p-1$ and $n=p(2p-1)$.</p><p><em>Case B: $\varphi(m)=n$ and $\varphi(1)=p$.</em></p><ul class="ct-ul"><li><p><em>$d_1=1$.</em> If $\varphi(z)=1$ for a divisor $z\ne1$, then $z-1\mid\varphi(z)-\varphi(1)=1-p$, so $2\le z\le p$, hence $z=p$; then
+$\varphi(1)=p$, $\varphi(p)=1$ is a return.</p></li><li><p><em>Multiples of a divisor of $m$ form a final block.</em> Let $d\mid m$ and let $x\ne n$ be a divisor of $n$ that is a multiple of $d$. By
+(a), $x-m\mid P(x)-P(m)$, and $d\mid x-m$, so $d\mid\varphi(x)-n$; as $d\mid n$, also $d\mid\varphi(x)$. Thus after the first multiple of $d$
+in the list, every later entry is a multiple of $d$: the multiples of $d$ fill the last positions of the list.</p></li><li><p><em>$p\nmid m$.</em> Otherwise apply the previous point with $d=p$: the list starts $1,p$, so every entry after $1$ is a multiple of $p$.
+But a prime factor $r\ne p$ of $n$ is a divisor that is neither $1$ nor a multiple of $p$.</p></li><li><p><em>$m$ is a power of a prime.</em> Let $r$ be a prime factor of $m$ and $d=m/r$. Since $r\ne p$, the number $n/d=pr$ has exactly the
+four divisors $1,p,r,pr$, so the multiples of $d$ among the divisors of $n$ are exactly $d,\ pd,\ rd=m,\ prd=n$. By the previous points they
+are the last four entries, and the last two are $m,n$; so $d_{k-2}\in\{m/r,\ pm/r\}$. If $r'\ne r$ were another prime factor of $m$, then also
+$d_{k-2}\in\{m/r',\ pm/r'\}$. But $m/r\ne m/r'$, $pm/r\ne pm/r'$, and $m/r=pm/r'$ or $pm/r=m/r'$ would mean $r'=pr$ or $r=pr'$, impossible for
+primes. So $m=q^e$ for a prime $q&gt;p$ and some $e\ge1$, and with $d=q^{e-1}$ the list ends with $d,pd,qd,pqd$ or with $pd,d,qd,pqd$.</p></li><li><p><em>The order $pd,d,qd,pqd$ is impossible.</em> Here $\varphi(d)=qd$ and $\varphi(qd)=pqd$, so by (a) $(q-1)d\mid pqd-qd=q(p-1)d$, i.e.
+$q-1\mid q(p-1)$. As $q-1$ and $q$ are coprime, $q-1\mid p-1$, but $0&lt;p-1&lt;q-1$.</p></li><li><p><em>The order $d,pd,qd,pqd$.</em> Apply (b) to $u=d$, $v=pd$, $w=qd$, whose images are $pd,qd,pqd$:
+\[
+L_1=\frac{qd-pd}{pd-d}=\frac{q-p}{p-1},\qquad L_2=\frac{pqd-qd}{qd-pd}=\frac{q(p-1)}{q-p}
+\]
+are integers with $L_1L_2=q$. So $L_1$ is a positive divisor of the prime $q$, and $L_1\le q-p&lt;q$; hence $L_1=1$, $q=2p-1$ and $L_2=q$. By (b),
+$w-u=(q-1)d$ divides $L_2-L_1=q-1$, so $d=1$, i.e. $e=1$ and $n=pq=p(2p-1)$.</p></li></ul><p>In both cases $n=p(2p-1)$ with $p$ and $q=2p-1$ prime. Together with the constructions, the answer is
 \[
 \boxed{\,n=p^e\ (p\text{ prime},\ e\ge1)\quad\text{or}\quad n=p(2p-1)\ (p,\ 2p-1\text{ prime})\,}
 \]</p>

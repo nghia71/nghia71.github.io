@@ -107,7 +107,7 @@ and the left-hand side is at least $\frac{15}{25}=\frac35$. Equality holds for $
 <div class="ct-meta">Number Theory &middot; LPS VII, Chapter 4: Divisibility and Prime Structure</div>
 <div class="ct-text"><p>Determine all pairs $(a,b)$ of positive integers such that $a+1$ divides $b+2$ and $b$ divides $2a^2$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$(a,b)=(a,2a)$ for every positive integer $a$, together with $(2,1)$, $(3,2)$ and $(3,18)$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Working with both quotients)</h4>
 <p>Write
 \[b+2=k(a+1),\qquad 2a^2=mb\]
@@ -129,6 +129,17 @@ i.e. $a&lt;2k$. Let $m=\frac{2a^2}{b}$ (a positive integer). Then
 \[m&lt;\frac{2a^2}{ka}=\frac{2a}{k}&lt;4,\]
 so $m\in\{1,2,3\}$. The equation $mb=2a^2$ becomes $mk(a+1)=2a^2+2m$. Since $2a^2+2m\equiv 2+2m\pmod{a+1}$, we need
 $a+1\mid 2m+2$, and then $k=\frac{2a^2+2m}{m(a+1)}$:</p><ul class="ct-ul"><li><p>$m=1$: $a+1\mid 4$, so $a\in\{1,3\}$, giving $k=2$ (not allowed here) or $k=\frac{20}{4}=5$; the latter gives $(a,b)=(3,18)$.</p></li><li><p>$m=2$: $a+1\mid 6$, so $a\in\{1,2,5\}$, giving $k=\frac32,\ 2,\ \frac92$; none is an integer $\ge 3$.</p></li><li><p>$m=3$: $a+1\mid 8$, so $a\in\{1,3,7\}$, giving $k=\frac43,\ 2,\ \frac{13}{3}$; none is an integer $\ge 3$.</p></li></ul><p>So $k\ge 3$ gives only $(3,18)$ (check: $4\mid 20$, $18\mid 18$). All solutions:
+\[(a,b)=\boxed{(a,2a)\ (a\ge 1),\ (2,1),\ (3,2),\ (3,18)}.\]</p>
+<h4>Solution 3 (The two complementary divisors of $4a^2$)</h4>
+<p>Let $(a,b)$ be a solution and put $A=a+1$, so $A\ge 2$ and $2a=2A-2$. Since $b\mid 2a^2$, the number
+\[c=\frac{4a^2}{b}=2\cdot\frac{2a^2}{b}\]
+is an even positive integer, and $bc=(2a)^2$.</p><p><strong>Both $b$ and $c$ are $\equiv-2\pmod A$.</strong> For $b$ this is the condition $A\mid b+2$. Modulo $A$ we have $a\equiv-1$, so with the
+integer $d=\frac{2a^2}{b}=\frac c2$ we get $bd=2a^2\equiv 2$, while $bd\equiv-2d$. Hence $-2d\equiv 2$, that is, $A\mid 2d+2=c+2$.</p><p><strong>The case $b=c$.</strong> Then $b^2=(2a)^2$, so $b=2a$. Every such pair works: $a+1\mid 2a+2$ and $2a\mid 2a^2$.</p><p><strong>The case $b\ne c$.</strong> As $bc=(2a)^2$, the smaller of $b,c$, call it $s$, satisfies $1\le s&lt;2a=2A-2$, and the larger is
+$\ell=\frac{(2A-2)^2}{s}$. The positive integers that are $\equiv-2\pmod A$ are $A-2,\ 2A-2,\ 3A-2,\dots$ (for $A=2$ the first of
+these is $0$, which is not positive). The only one below $2A-2$ is $A-2$, so $A\ge 3$ and $s=A-2$. Then
+\[\ell=\frac{(2A-2)^2}{A-2}=\frac{4A(A-2)+4}{A-2}=4A+\frac{4}{A-2},\]
+so $A-2\mid 4$ and $A\in\{3,4,6\}$, with $\ell=16,\,18,\,25$ respectively. The condition $\ell\equiv-2\pmod A$ holds for
+$16\equiv1\equiv-2\pmod3$ and $18\equiv2\equiv-2\pmod4$, but fails for $25\equiv1\not\equiv4\pmod6$.</p><ul class="ct-ul"><li><p>$A=3$, $a=2$: $\{b,c\}=\{1,16\}$. Since $c$ is even, $c=16$ and $b=1$.</p></li><li><p>$A=4$, $a=3$: $\{b,c\}=\{2,18\}$. Both are even, so $b=2$ or $b=18$.</p></li></ul><p>These pairs work: $3\mid 3$ and $1\mid 8$; $4\mid 4$ and $2\mid 18$; $4\mid 20$ and $18\mid 18$. Hence the solutions are
 \[(a,b)=\boxed{(a,2a)\ (a\ge 1),\ (2,1),\ (3,2),\ (3,18)}.\]</p>
 </div></details>
 </section>

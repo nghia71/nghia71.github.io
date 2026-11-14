@@ -127,7 +127,7 @@ $M$ perpendicular to $AC$ is a diameter, i.e. the line $OM$ ($M\ne O$); then $OM
 <div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 20: Parity, Coloring, and Process Termination</div>
 <div class="ct-text"><p>A baby colors $2026$ blocks on a $2026\times 2026$ grid paper with red or yellow so no two blocks with the same coloring are on the same row or column. The father walks by and realizes that the uncolored part of the paper can be divided into several $1\times 2$ sub-papers by cutting along the grid lines. Prove that the maximum possible number of red blocks is $2025$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>proof (the maximum is $2025$)</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Chessboard count)</h4>
 <div class="ct-fig"><img style="width:223px" src="/assets/contests/2026-27/taiwan-mo-3_s1.svg" alt="Figure for the solution"></div>
 <p>Number rows and columns $1,\dots,2026$ and call cell $(i,j)$ black if $i+j$ is even.</p><p><strong>2026 red blocks are impossible.</strong> The red blocks lie in different rows, so $R\le2026$. If $R=2026$, then all $2026$ coloured blocks are red, one in each
@@ -145,6 +145,22 @@ A domino covers two adjacent cells, whose weights differ by $1$, so it covers an
 $\frac{2026^2-2026}{2}=1013\cdot2025$ dominoes, an odd number, so its total weight is odd. On the other hand
 \[\sum_{\text{all cells}}(i+j)=2\cdot2026\cdot\frac{2026\cdot2027}{2}\quad\text{and}\quad\sum_{i}\bigl(i+\sigma(i)\bigr)=2026\cdot2027\]
 are both even, so the uncoloured part has even total weight. Contradiction; hence $R\le2025$.</p><p><strong>Example with 2025 red blocks.</strong> The construction of Solution 1. (The figure shows one row pair: removed cells in columns $c&lt;c'$ of the same parity, and the tiling.)</p>
+<h4>Solution 3 (Parity of a permutation and diagonal blocks)</h4>
+<div class="ct-fig"><img style="width:267px" src="/assets/contests/2026-27/taiwan-mo-3_s3.svg" alt="Figure for the solution"></div>
+<p>Number the rows and columns $1,\dots,2026$ and colour cell $(i,j)$ (row $i$, column $j$) black if $i+j$ is even and white if $i+j$ is odd.</p><p><strong>2026 red blocks are impossible.</strong> Red blocks lie in different rows, so there are at most $2026$ of them. Suppose there are $2026$. Then all $2026$ coloured blocks
+are red, with exactly one in each row and exactly one in each column. A white cell is a cell whose row and column have different parities. Let $x$ be the number of red
+blocks in an even row and an odd column, and $y$ the number in an odd row and an even column. The $1013$ even rows contain $1013$ red blocks, and so do the $1013$ even
+columns. Counting the red blocks in even rows gives (those in even columns) $+\,x=1013$, and counting those in even columns gives (those in even rows) $+\,y=1013$; the
+bracketed numbers are the same (red blocks in an even row and an even column), so $x=y$. Hence the removed cells contain $x+y=2x$ white cells, an even number.</p><p>On the other hand, each $1\times2$ piece covers one black and one white cell, so the uncoloured part has equally many black and white cells. The whole board has
+$\frac{2026^2}{2}$ cells of each colour, so the removed cells must also contain equally many of each: $1013$ white cells. As $1013$ is odd, this contradicts the previous
+paragraph. Hence there are at most $2025$ red blocks.</p><p><strong>2025 red blocks are possible: diagonal blocks.</strong> Since $2026=6+4\cdot505$, cut the rows into consecutive groups of sizes $6,4,4,\dots,4$ and the columns in the same way.
+This splits the board into rectangles; the ones where a row group meets the column group with the same numbers are the <em>diagonal blocks</em> (one $6\times6$, then $505$ of size $4\times4$).
+Every other rectangle has width $4$ or $6$, an even number, so it is tiled by horizontal $1\times2$ pieces. Inside the diagonal blocks we use local coordinates (row, column), from $1$:</p><ul class="ct-ul"><li><p>In each $4\times4$ block, colour $(1,1),(2,3),(3,2),(4,4)$ red. The other $12$ cells are covered by the pieces
+$\{(1,2),(2,2)\}$, $\{(1,3),(1,4)\}$, $\{(2,1),(3,1)\}$, $\{(2,4),(3,4)\}$, $\{(3,3),(4,3)\}$, $\{(4,1),(4,2)\}$.</p></li><li><p>In the $6\times6$ block, colour $(1,1),(2,2),(3,3),(4,5),(5,4)$ red and $(5,2)$ yellow. The other $30$ cells are covered by the pieces
+$\{(1,2),(1,3)\}$, $\{(1,4),(1,5)\}$, $\{(1,6),(2,6)\}$, $\{(2,1),(3,1)\}$, $\{(2,3),(2,4)\}$, $\{(2,5),(3,5)\}$, $\{(3,2),(4,2)\}$, $\{(3,4),(4,4)\}$,
+$\{(3,6),(4,6)\}$, $\{(4,1),(5,1)\}$, $\{(4,3),(5,3)\}$, $\{(5,5),(6,5)\}$, $\{(5,6),(6,6)\}$, $\{(6,1),(6,2)\}$, $\{(6,3),(6,4)\}$.</p></li></ul><p>(The figure shows both blocks.) Inside each diagonal block the red cells lie in different local rows and columns, and different diagonal blocks use disjoint sets of
+rows and of columns, so no two red blocks share a row or a column. There is only one yellow block. The number of red blocks is $5+4\cdot505=2025$, and the uncoloured
+part is tiled. So the maximum is $2025$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p4">
@@ -179,7 +195,7 @@ $\frac{m-1}{m}&lt;\frac ba\le\frac{m}{m+1}$.</p>
 <div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 10: Double Counting and Counting Identities</div>
 <div class="ct-text"><p>Let $S$ be a set of $100$ distinct points on the $xy$ plane. Let $N$ be the number of rectangles with vertices all in $S$ and edges all parallel to the coordinates. Find the maximum possible value of $N$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\boxed{2025}$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Two bounds at every vertex)</h4>
 <p><strong>Example.</strong> The $10\times10$ grid $\{1,\dots,10\}^2$ contains $\binom{10}{2}^2=45^2=2025$ such rectangles (choose two of the $x$-values and two of the $y$-values).</p><p><strong>Bound.</strong> For a point $P\in S$ let $h$ be the number of points of $S$ on the horizontal line through $P$ (including $P$) and $v$ the number on the vertical line. Let
 $r(P)$ be the number of counted rectangles having $P$ as a vertex. Such a rectangle is determined in two ways:</p><ul class="ct-ul"><li><p>by its vertex on $P$'s horizontal line and its vertex on $P$'s vertical line, so $r(P)\le(h-1)(v-1)$;</p></li><li><p>by its vertex opposite to $P$, a point of $S$ on neither of the two lines, so $r(P)\le 100-(h+v-1)=101-h-v$.</p></li></ul><p>Put $s=h+v-2\ge0$. By AM&ndash;GM, $(h-1)(v-1)\le\frac{s^2}{4}$, and the second bound is $99-s$. If $s\le18$, then $r(P)\le\frac{s^2}4\le81$; if $s\ge18$, then $r(P)\le99-s\le81$.
@@ -196,6 +212,23 @@ For the second, the sequences $r_i$ and $m-i$ are both non-increasing, so by Che
 (Chebyshev's inequality follows from $\sum_{i,k}(r_i-r_k)\bigl((m-i)-(m-k)\bigr)\ge0$, as every term is a product of two numbers of the same sign.) Therefore
 \[N\le\frac12\Bigl(5000-\frac{5000}{m}-50(m-1)\Bigr)=2525-25\Bigl(m+\frac{100}{m}\Bigr)\le2525-25\cdot20=2025,\]
 using $m+\frac{100}m\ge2\sqrt{100}=20$ (AM&ndash;GM). Hence the maximum is $\boxed{2025}$.</p>
+<h4>Solution 3 (Pushing the points into a staircase)</h4>
+<p><strong>Example.</strong> The $10\times10$ grid $\{1,\dots,10\}^2$ contains $\binom{10}{2}^2=45^2=2025$ such rectangles (choose two of the $x$-values and two of the $y$-values).</p><p><strong>Step 1: push the points into a staircase.</strong> Call a horizontal line containing points of $S$ a <em>row</em>; let there be $r$ rows, containing
+$\ell_1\ge\ell_2\ge\dots\ge\ell_r\ge1$ points, with $\ell_1+\dots+\ell_r=100$. A counted rectangle is determined by its two rows and the two $x$-coordinates of its
+vertical sides, which must occur in both rows. Two rows with $\ell_s$ and $\ell_t$ points share at most $\min(\ell_s,\ell_t)$ $x$-coordinates, so
+\[N\le\sum_{1\le s&lt;t\le r}\binom{\min(\ell_s,\ell_t)}{2}.\]
+Now let $T$ be the set of the $100$ lattice points $(j,i)$ with $1\le i\le r$ and $1\le j\le\ell_i$: row $i$ of $T$ occupies the columns $1,2,\dots,\ell_i$. Two rows $s,t$ of $T$
+share exactly $\min(\ell_s,\ell_t)$ columns, so $T$ has exactly the number of rectangles on the right-hand side. Hence it suffices to show that $T$ has at most $2025$
+rectangles. Below, <em>cell $(i,j)$</em> means the point of $T$ in row $i$ and column $j$. Since the $\ell_i$ decrease, $T$ is a staircase: if cell $(i,j)$ is in $T$ and
+$i'\le i$, $j'\le j$, then cell $(i',j')$ is in $T$ (because $\ell_{i'}\ge\ell_i\ge j\ge j'$).</p><p><strong>Step 2: rectangles at one vertex.</strong> Let $c=\ell_1$, the number of columns of $T$, and fix a cell $P=(p,q)$ of $T$. Let $\rho(P)$ be the number of rectangles of $T$
+with a vertex at $P$. We claim $\rho(P)\le101-r-c$.</p><p>Such a rectangle is determined by its vertex $X=(i_0,j_0)$ opposite to $P$, where $i_0\ne p$, $j_0\ne q$; its four vertices are $(p,q),(p,j_0),(i_0,q),(i_0,j_0)$.
+Number the rows other than row $p$ as $1,\dots,r-1$ in increasing order, so row $i_0$ gets the number $i=i_0$ if $i_0&lt;p$ and $i=i_0-1$ if $i_0&gt;p$; number the columns other
+than column $q$ in the same way, so column $j_0$ gets a number $j$. Map $X$ to the cell $(i+1,j+1)$. Different $X$ give different pairs $(i,j)$, so this map is injective.
+Its image lies in $T$: in both cases $i+1\le\max(p,i_0)$ (if $i_0&lt;p$ then $i+1=i_0+1\le p$; if $i_0&gt;p$ then $i+1=i_0$), and likewise $j+1\le\max(q,j_0)$; the cell
+$(\max(p,i_0),\max(q,j_0))$ is one of the four vertices of the rectangle, so it is in $T$, and by the staircase property so is $(i+1,j+1)$. Finally, $i+1\ge2$ and
+$j+1\ge2$, so the image avoids row $1$ and column $1$. Row $1$ of $T$ has $c$ cells and column $1$ has $r$ cells (every row has a cell in column $1$), with one cell in
+common, so $T$ has $100-r-c+1$ cells outside row $1$ and column $1$. Therefore $\rho(P)\le101-r-c$.</p><p><strong>Step 3: conclusion.</strong> All $100$ cells of $T$ lie in its $r$ rows and $c$ columns, so $rc\ge100$, and by AM&ndash;GM $r+c\ge2\sqrt{rc}\ge20$. Thus $\rho(P)\le81$
+for every cell $P$. Each rectangle has $4$ vertices, so $4N(T)=\sum_{P\in T}\rho(P)\le100\cdot81$, i.e. $N\le N(T)\le2025$. Hence the maximum is $\boxed{2025}$.</p>
 </div></details>
 </section>
 {% endraw %}

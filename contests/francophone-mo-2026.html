@@ -94,7 +94,7 @@ $m=n=1$; otherwise $mn&gt;1$ is coprime to $2026$, $f(mn)=2026$, and the factor 
 <section class="ct-problem" id="p2">
 <h3>Problem 2</h3>
 <div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 18: Invariants and Monovariants</div>
-<div class="ct-text"><p>Albert has just finished writing a book, but unfortunately, his printer has shuffled the order of the $N$ pages of his book. Brigitte offers to help him put the pages back in the correct order. Brigitte only allows herself the following two operations, which she can perform in any order and repeatedly:</p><ul class="ct-ul"><li><p>Reverse the order of all pages by placing the first page in the last position, the second in the second-to-last position, and so on, until the last page is placed in the first position.</p></li><li><p>If the first page bears the number $M$, then Brigitte sorts the first $M$ pages in descending order.</p></li></ul><p>For example, if the order of the pages was $3,1,2,5,4$, the first operation would give $4,5,2,1,3$, while the second operation would give $2,1,3,5,4$.</p><p>Show that Brigitte can always put the pages of Albert's book back in the correct order using these two operations.</p></div>
+<div class="ct-text"><p>Albert has just finished writing a book, but unfortunately, his printer has shuffled the order of the $N$ pages of his book. Brigitte offers to help him put the pages back in the correct order. Brigitte only allows herself the following two operations, which she can perform in any order and repeatedly:</p><ul class="ct-ul"><li><p>Reverse the order of all pages by placing the first page in the last position, the second in the second-to-last position, and so on, until the last page is placed in the first position.</p></li><li><p>If the first page bears the number $M$, then Brigitte sorts the first $M$ pages in descending order.</p></li></ul><p>For example, if the order of the pages was $3,1,2,5,4$, the first operation would give $4,5,2,1,3$, while the second operation would give $3,2,1,5,4$.</p><p>Show that Brigitte can always put the pages of Albert's book back in the correct order using these two operations.</p></div>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
 <h4>Solution (The first page can only grow)</h4>
 <p>Call the two operations $R$ (reverse all pages) and $S$ (if the first page is $M$, sort the first $M$ pages in descending
@@ -175,7 +175,7 @@ $\angle APE$ and $\angle EPD$ are equal. Since $D$ lies on segment $PC$, $\angle
 <div class="ct-text"><p>Determine the number of triplets $(a,b,c)$ of strictly positive integers such that
 \[a+b+2c=28^{29}\quad\text{and}\quad ab=c^2.\]</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$2^{29}\cdot 7^{14}-1$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Parametrising $ab=c^2$)</h4>
 <p>Write $N=28^{29}=2^{58}\cdot7^{29}$.</p><p><em>Parametrisation.</em> Let $(a,b,c)$ be a solution, $g=\gcd(a,b)$, $a=gx$, $b=gy$ with $\gcd(x,y)=1$. From $g^2xy=c^2$ we get $g^2\mid c^2$,
 so $g\mid c$ and $xy=(c/g)^2$ is a perfect square; as $x,y$ are coprime, both are squares: $x=m^2$, $y=n^2$ with $\gcd(m,n)=1$. Then
@@ -205,6 +205,20 @@ c=\frac N4-7i^2=7\Bigl(\bigl(\tfrac L2\bigr)^2-i^2\Bigr),\qquad k=7Lj=14Li ,
 and the parity condition holds ($N$, $2c$, $k$ are even), as does $N-2c&gt;0$. The condition $c\ge1$ means $0\le i\le \tfrac L2-1$.</p><p>So $i=0$ gives one triple ($a=b$) and each of the $\tfrac L2-1$ values $i\ge1$ gives two, for a total of
 \[
 1+2\Bigl(\frac L2-1\Bigr)=L-1=\boxed{2^{29}\cdot7^{14}-1}.
+\]</p>
+<h4>Solution 3 (Equal squarefree parts)</h4>
+<p>Write $N=28^{29}=2^{58}\cdot7^{29}=7L^2$ with $L=2^{29}\cdot7^{14}$.</p><p><em>Squarefree parts.</em> Every positive integer can be written uniquely as $du^2$ with $d$ squarefree (a product of distinct primes) and
+$u\ge1$: $d$ is the product of the primes that occur to an odd power. Let $(a,b,c)$ be a solution and write $a=du^2$, $b=ev^2$ in this way.
+Since $ab=de(uv)^2=c^2$ is a square, $de$ is a square. Every prime appears in $d$ and in $e$ with exponent $0$ or $1$, and its exponent in $de$
+is even, so it appears in both or in neither: $d=e$.</p><p><em>The equation.</em> Now $c^2=d^2u^2v^2$ and $c&gt;0$, so $c=duv$, and
+\[
+N=a+b+2c=d(u^2+2uv+v^2)=d(u+v)^2 .
+\]
+So $d(u+v)^2=7L^2$. By uniqueness of the form $du^2$ with $d$ squarefree, $d=7$ and $u+v=L$.</p><p><em>Conversely</em>, for all positive integers $u,v$ with $u+v=L$, the triple $(a,b,c)=(7u^2,7v^2,7uv)$ consists of positive integers with
+$ab=(7uv)^2=c^2$ and $a+b+2c=7(u+v)^2=7L^2=N$. Different pairs $(u,v)$ give different triples, since $u$ is determined by $a=7u^2$.</p><p><em>Counting.</em> The solutions are therefore in bijection with the pairs of positive integers $(u,v)$ with $u+v=L$, namely $u=1,2,\dots,L-1$.
+The number of triples is
+\[
+L-1=\boxed{2^{29}\cdot7^{14}-1}.
 \]</p>
 </div></details>
 </section>

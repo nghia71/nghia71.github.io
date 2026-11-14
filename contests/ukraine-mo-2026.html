@@ -93,8 +93,8 @@ is what we had to prove.</p>
 <h3>Problem 8.2</h3>
 <div class="ct-meta">Geometry &middot; LPS VII, Chapter 3: Foundational Angle and Configuration Chasing</div>
 <div class="ct-text"><p>Inside triangle $ABC$, where $\angle ABC = 3\angle ACB$, a point $D$ is chosen such that $\angle DAB = \angle DAC$. Let $M$ be the midpoint of $BC$. On the perpendicular from $M$ to line $BC$, choose a point $E$ lying in the same half-plane with respect to line $BC$ as point $A$, outside triangle $ABC$, such that $\angle DEM = \frac{\angle BAC}{2}$. Prove that $\angle AED = \angle ABD$.</p></div>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (A hidden isosceles triangle and a cyclic quadrilateral)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (A hidden isosceles triangle and a cyclic quadrilateral)</h4>
 <div class="ct-fig"><img style="width:353px" src="/assets/contests/2026-27/ukraine-mo-2_s1.svg" alt="Figure for the solution"></div>
 <p>Let $\gamma=\angle ACB$, so $\angle ABC=3\gamma$ and $\angle BAC=180^\circ-4\gamma$; let $\ell$ be the perpendicular to $BC$
 at $M$ (the perpendicular bisector of $BC$) and let $L$ be the point where line $AD$ (the bisector of $\angle A$) meets $BC$.</p><p><strong>Where things are.</strong> Since $\angle C&lt;\angle B$, we have $AB&lt;AC$, so $A$ lies on the same side of $\ell$ as $B$; also
@@ -112,6 +112,35 @@ other, and $E$, which lies on the ray from $K$ opposite to $KM$, is on $A$'s sid
 lie on the same side of line $AD$. In the circle through $A,D,K,E$ the angles $\angle AED$ and $\angle AKD$ therefore subtend the chord $AD$
 from the same side, and by Step 1
 \[\angle AED=\angle AKD=\angle ABD.\]</p>
+<h4>Solution 2 (Coordinates and the directions of two rays)</h4>
+<p>Put $\theta=\angle ACB$ and $t=\tan\theta$. Then $\angle ABC=3\theta$ and $4\theta&lt;180^\circ$, so $0&lt;\theta&lt;45^\circ$ and $0&lt;t&lt;1$.
+Also $\angle BAC=180^\circ-4\theta$, so the condition on $E$ reads $\angle DEM=90^\circ-2\theta$.</p><p><strong>Coordinates of $A$.</strong> Take $B=(0,0)$, $C=(1,0)$ and
+\[A=(a,h),\qquad a=\frac{1-3t^2}{4(1-t^2)},\qquad h=\frac{t(3-t^2)}{4(1-t^2)} .\]
+This is the right point. Indeed, $\cos3\theta=4\cos^3\theta-3\cos\theta=\cos^3\theta\,(1-3t^2)$ and
+$\sin3\theta=3\sin\theta-4\sin^3\theta=\cos^3\theta\,(3t-t^3)$, so $(a,h)$ is a positive multiple of $(\cos3\theta,\sin3\theta)$ and lies on the
+ray from $B$ at angle $3\theta$ to $BC$. Moreover $1-a=\frac{3-t^2}{4(1-t^2)}$, so $h=(1-a)t$ and $h&gt;0$: the point lies on the ray from $C$ at
+angle $\theta$ to $CB$.</p><p><strong>The bisector.</strong> Seen from $A$, the direction towards $B$ makes the angle $3\theta-180^\circ$ with the positive $x$-axis, and the
+direction towards $C$ makes the angle $-\theta$, because $C-A=(1-a)(1,-t)$. The internal bisector of $\angle BAC$ has the mean direction
+$\theta-90^\circ$, that is, the direction of the vector $(t,-1)$. So every point $(x,y)$ of the bisector satisfies
+\[y=h-\frac{x-a}{t},\qquad\text{equivalently}\qquad x+ty=a+th=\frac{1+t^2}{4}.\tag{1}\]
+The bisector meets $BC$ at $x_0=\frac{1+t^2}4$. Let $D=(x,y)$. It lies strictly between $A$ and $(x_0,0)$, so $x$ lies between $a$ and $x_0$.
+Both are less than $\frac12$: $x_0&lt;\frac12$ as $t&lt;1$, and $a&lt;\frac12$ because $1-3t^2&lt;2-2t^2$. Hence $x&lt;\frac12$.</p><p><strong>The point $E$.</strong> Here $M=(\frac12,0)$ and $E=(\frac12,e)$ with $e&gt;0$. The ray $EM$ points straight down. Since $x&lt;\frac12$, the point $D$
+lies to the left of line $EM$. The angle between rays $ED$ and $EM$ is $90^\circ-2\theta&lt;90^\circ$, so $D$ is lower than $E$, and the ray $ED$
+points to the left and $2\theta$ below the horizontal:
+\[e-y=\Bigl(\tfrac12-x\Bigr)\tan2\theta=\Bigl(\tfrac12-x\Bigr)\frac{2t}{1-t^2}.\]</p><p><strong>The ray $EA$.</strong> Since $a&lt;\frac12$, the ray $EA$ also points to the left. Let $\alpha$ be its signed angle with the leftward horizontal
+direction (positive above, negative below), so $-90^\circ&lt;\alpha&lt;90^\circ$ and $\tan\alpha=\frac{h-e}{1/2-a}$. Using $h-y=\frac{x-a}t$,
+\[t(1-t^2)(h-e)=(x-a)(1-t^2)-(1-2x)t^2=x(1+t^2)-t^2-\frac{1-3t^2}4=\frac{(1+t^2)(4x-1)}4 .\]
+As $\frac12-a=\frac{1+t^2}{4(1-t^2)}$, this gives $\tan\alpha=\frac{4x-1}{t}$. Replacing $x+ty$ by $\frac{1+t^2}4$ (by $(1)$) in the first product,
+\[(4x-1)(x+ty)-t(tx-y)=x(1+t^2)-\frac{1+t^2}{4}-t^2x+ty=(x+ty)-\frac{1+t^2}{4}=0,\]
+again by $(1)$. Hence
+\[\tan\alpha=\frac{tx-y}{x+ty}.\]
+Now write $D=\rho(\cos\beta,\sin\beta)$ with $\rho=BD$ and $\beta=\angle DBC$; as $D$ is inside the triangle, $0&lt;\beta&lt;3\theta$. Then
+\[tx-y=\frac{\rho\sin(\theta-\beta)}{\cos\theta},\qquad x+ty=\frac{\rho\cos(\theta-\beta)}{\cos\theta}.\]
+By $(1)$, $x+ty&gt;0$, so $\cos(\theta-\beta)&gt;0$ and $-90^\circ&lt;\theta-\beta&lt;90^\circ$. Also $\tan\alpha=\tan(\theta-\beta)$, and both angles lie in
+$(-90^\circ,90^\circ)$; therefore $\alpha=\theta-\beta$.</p><p><strong>Conclusion.</strong> Both rays $EA$ and $ED$ point into the half-plane to the left of $E$, with signed angles $\theta-\beta$ and $-2\theta$ from the
+leftward horizontal. Hence
+\[\angle AED=(\theta-\beta)-(-2\theta)=3\theta-\beta=\angle ABC-\angle DBC=\angle ABD,\]
+the last step because $D$ lies inside $\angle ABC$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p3">
@@ -450,8 +479,8 @@ $OD$; their common points are $P$ and the reflection of $P$ in $OD$. Hence $Q$ i
 <h3>Problem 10.2</h3>
 <div class="ct-meta">Geometry &middot; LPS VII, Chapter 19: Triangle Centers and Classical Triangle Geometry</div>
 <div class="ct-text"><p>A triangle $ABC$ is given. On sides $AB$ and $AC$, points $E$ and $D$ are chosen respectively such that $DE \parallel BC$. Inside triangle $ABC$, a point $F$ is chosen such that $BE = BF$ and $CD = CF$. Prove that line $AF$ passes through the circumcenter of triangle $DEF$.</p></div>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Two angle bisectors meet line $AF$ at the same point)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Two angle bisectors meet line $AF$ at the same point)</h4>
 <div class="ct-fig"><img style="width:332px" src="/assets/contests/2026-27/ukraine-mo-17_s1.svg" alt="Figure for the solution"></div>
 <p><strong>The circumcenter as a meeting point of bisectors.</strong> Since $BE=BF$ and $E$ lies on ray $BA$, the reflection in the bisector
 of $\angle ABF$ maps $F$ to $E$; hence this bisector is the perpendicular bisector of $EF$. Likewise the bisector of $\angle ACF$ is the
@@ -460,6 +489,19 @@ perpendicular bisector of $DF$. So the circumcenter $O'$ of $DEF$ is the common 
 bisector theorem). In triangle $ACF$ the bisector from $C$ meets $AF$ at the point $Y$ with $\frac{AY}{YF}=\frac{CA}{CF}$. The two ratios are
 equal, so $X=Y$. This point lies on both bisectors, i.e. on the perpendicular bisectors of $EF$ and $DF$; it is therefore equidistant from
 $D,E,F$ and equals $O'$. Since $X$ lies on segment $AF$, line $AF$ passes through the circumcenter of $DEF$.</p>
+<h4>Solution 2 (Vectors from $A$: the circumcenter is $\frac{1}{2-t}F$)</h4>
+<p>Identify every point with its position vector from $A$, and write $P\cdot Q$ for the dot product and $|P|$ for the length.
+Since $DE\parallel BC$ with $E$ on side $AB$ and $D$ on side $AC$, triangle $AED$ is a scaled copy of $ABC$ from $A$: there is a number $t$
+with $0&lt;t&lt;1$, $E=tB$ and $D=tC$.</p><p><strong>The conditions on $F$.</strong> $BF=BE$ means $|F-B|^2=|tB-B|^2=(1-t)^2|B|^2$. Expanding $|F-B|^2=|F|^2-2B\cdot F+|B|^2$, we get
+\[2B\cdot F=|F|^2+t(2-t)|B|^2,\tag{1}\]
+and in the same way $CF=CD$ gives
+\[2C\cdot F=|F|^2+t(2-t)|C|^2.\tag{2}\]</p><p><strong>The candidate.</strong> Let $u=\frac1{2-t}$ and $O=uF$. Then
+\[OE^2-OF^2=|uF-tB|^2-|uF-F|^2=(2u-1)|F|^2-2ut\,B\cdot F+t^2|B|^2 .\]
+Substituting $(1)$,
+\[OE^2-OF^2=(2u-1-ut)|F|^2+t^2\bigl(1-u(2-t)\bigr)|B|^2=0,\]
+because $u(2-t)=1$ makes both brackets vanish. So $OE=OF$. The same computation with $C$, $D=tC$ and $(2)$ gives $OD=OF$.</p><p><strong>Conclusion.</strong> $D,E,F$ form a triangle, and $O$ is equidistant from its vertices, so $O$ is its circumcenter. Since $F\neq A$ ($F$ is inside
+the triangle), $O=uF$ lies on line $AF$. In fact $\frac12&lt;u&lt;1$, so the circumcenter of $DEF$ lies on segment $AF$, between its midpoint and
+$F$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p18">
@@ -559,8 +601,8 @@ to $(4,2)$, and the next announcement is $\{L,R\}$. So after one move Petryk alw
 <h3>Problem 10.7</h3>
 <div class="ct-meta">Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure</div>
 <div class="ct-text"><p>In triangle $ABC$, the median $AM$ is drawn, and line $AM$ intersects the circumcircle of triangle $ABC$ again at point $N$. Points $X$ and $Y$ are chosen on line $BC$ such that point $B$ lies on segment $CX$, and point $C$ lies on segment $BY$. It is known that $\angle ABN = 2\angle AXN$ and $\angle ACN = 2\angle AYN$. Prove that $BX = CY$.</p></div>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Two circles with the same power at $M$)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Two circles with the same power at $M$)</h4>
 <div class="ct-fig"><img style="width:384px" src="/assets/contests/2026-27/ukraine-mo-22_s1.svg" alt="Figure for the solution"></div>
 <p>Let $\Gamma$ be the circumcircle, $O$ its center, $m=MB=MC$. By the intersecting chords theorem $MA\cdot MN=MB\cdot MC=m^2$.</p><p><strong>Locating $X$ and $Y$ on circles.</strong> Let $W_B$ be the midpoint of the arc $AN$ of $\Gamma$ that contains $B$, and $W_C$ the midpoint of the
 other arc $AN$ (it contains $C$). Both lie on the perpendicular bisector of $AN$, which passes through $O$, so $W_B$ and $W_C$ are diametrically
@@ -578,6 +620,22 @@ whose roots are negatives of each other. $X=(t_X,0)$ with $t_X&lt;-m$ is a root 
 second equation has roots of opposite signs (their product is $-m^2$), so $\kappa_C$ meets the ray $MC$ in only one point; as $Y$ is such a
 point, $Y=(-t_X,0)$. Hence $MY=MX$ and
 \[BX=MX-m=MY-m=CY.\]</p>
+<h4>Solution 2 (Cotangents in coordinates)</h4>
+<p>Scale so that $MB=MC=1$, and take $M$ as origin, $B=(-1,0)$, $C=(1,0)$, $A=(p,q)$ with $q&gt;0$. Put $r=p^2+q^2=MA^2$.</p><p><strong>The point $N$.</strong> $M$ lies inside the circumcircle on the chord $AN$, between $A$ and $N$, and the intersecting chords theorem gives
+$MA\cdot MN=MB\cdot MC=1$. Hence $N=-\frac1r A=\bigl(-\frac pr,-\frac qr\bigr)$.</p><p><strong>A formula for $\cot\angle AZN$.</strong> Let $Z=(z,0)$ with $z\ne0$. Line $AN$ meets line $BC$ only at $M$, so $Z$ is not on line $AN$ and
+$0^\circ&lt;\angle AZN&lt;180^\circ$. With $\vec{ZA}=(p-z,\,q)$ and $\vec{ZN}=\bigl(-\frac pr-z,\,-\frac qr\bigr)$,
+\[\vec{ZA}\cdot\vec{ZN}=z^2-1-kz,\qquad \Bigl|(p-z)\Bigl(-\frac qr\Bigr)-q\Bigl(-\frac pr-z\Bigr)\Bigr|=L|z|,\]
+where $k=p\bigl(1-\frac1r\bigr)$ and $L=q\bigl(1+\frac1r\bigr)&gt;0$. The dot product is $|ZA|\,|ZN|\cos\angle AZN$ and the absolute cross product
+is $|ZA|\,|ZN|\sin\angle AZN$, so
+\[\cot\angle AZN=\frac{z^2-1-kz}{L|z|}.\tag{1}\]
+In particular ($z=-1$ and $z=1$)
+\[\cot\angle ABN=\frac kL,\qquad \cot\angle ACN=-\frac kL .\]</p><p><strong>Halving an angle.</strong> For $0^\circ&lt;\varphi&lt;180^\circ$,
+\[\cot\frac\varphi2=\frac{1+\cos\varphi}{\sin\varphi}=\cot\varphi+\frac1{\sin\varphi}=\cot\varphi+\sqrt{1+\cot^2\varphi},\]
+since $\sin\varphi&gt;0$. Put $S=\sqrt{1+k^2/L^2}$.</p><p><strong>The point $X$.</strong> $B$ lies on segment $CX$, so $X=(-w,0)$ with $w=MX&gt;1$. From $\angle AXN=\frac12\angle ABN$ we get
+$\cot\angle AXN=\frac kL+S$, while $(1)$ with $z=-w$ gives $\cot\angle AXN=\frac{w^2-1+kw}{Lw}=\frac{1}{L}\bigl(w-\frac1w\bigr)+\frac kL$. Hence
+\[w-\frac1w=LS .\]</p><p><strong>The point $Y$.</strong> $C$ lies on segment $BY$, so $Y=(w',0)$ with $w'=MY&gt;1$. From $\angle AYN=\frac12\angle ACN$ we get
+$\cot\angle AYN=-\frac kL+S$, while $(1)$ with $z=w'$ gives $\frac1L\bigl(w'-\frac1{w'}\bigr)-\frac kL$. Hence
+\[w'-\frac1{w'}=LS .\]</p><p><strong>Conclusion.</strong> The function $w\mapsto w-\frac1w$ is strictly increasing for $w&gt;0$, so $w=w'$. Therefore $BX=MX-MB=w-1=w'-1=MY-MC=CY$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p23">
@@ -751,13 +809,28 @@ same ray from $L$, both below $BC$). Thus $BC$ bisects $\angle PLQ$.</p>
 <div class="ct-text"><p>Find all functions $f : (0, +\infty) \to (0, +\infty)$ such that for all positive $x, y$,
 \[yf(xf(x)) + xf(yf(y)) = f(x+y).\]</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>no such functions</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Squeezing $f$ near $0$)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Squeezing $f$ near $0$)</h4>
 <p><strong>Answer: there is no such function.</strong> Suppose $f$ exists and put $k(t)=f(tf(t))&gt;0$. The equation reads
 \[f(x+y)=y\,k(x)+x\,k(y)\qquad(x,y&gt;0).\tag{1}\]</p><p><strong>$k$ is bounded on every interval $(0,T]$.</strong> For $0&lt;t\le T$ use $(1)$ with $x=t$, $y=2T-t\ge T$:
 $f(2T)=(2T-t)k(t)+t\,k(2T-t)&gt;T\,k(t)$, so $k(t)&lt;f(2T)/T$. Let $K$ be a bound for $k$ on $(0,1]$.</p><p><strong>$f(s)\le Ks$ for $0&lt;s\le2$.</strong> Take $x=y=\frac s2\le1$ in $(1)$: $f(s)=s\,k(\frac s2)\le Ks$.</p><p><strong>$k(t)\le K^2t^2$ for small $t$.</strong> If $0&lt;t\le t_0=\min\bigl(1,\sqrt{2/K}\bigr)$, then $tf(t)\le Kt^2\le2$, so
 $k(t)=f(tf(t))\le K\cdot tf(t)\le K^2t^2$.</p><p><strong>Contradiction.</strong> Take $s=1$ and $0&lt;x&lt;t_0$ in $(1)$: $f(1)=(1-x)k(x)+x\,k(1-x)\le K^2x^2+Kx$, using $k\le K$ on $(0,1]$. Letting
 $x\to0$ gives $f(1)\le0$, impossible. Hence no function satisfies the equation.</p>
+<h4>Solution 2 (Two ways to split $x+y+z$)</h4>
+<p><strong>Answer: there is no such function.</strong> Suppose $f$ exists and put $h(t)=f(tf(t))$. The equation reads
+\[f(x+y)=y\,h(x)+x\,h(y)\qquad(x,y&gt;0).\tag{1}\]</p><p><strong>An identity for $h$.</strong> For $x,y,z&gt;0$ compute $f(x+y+z)$ by $(1)$ once as $f\bigl((x+y)+z\bigr)$ and once as $f\bigl(x+(y+z)\bigr)$:
+\[z\,h(x+y)+(x+y)\,h(z)=x\,h(y+z)+(y+z)\,h(x).\tag{2}\]</p><p><strong>$h$ is affine.</strong> Fix $y&gt;0$ and put $A=\frac{h(2y)-h(y)}{y}$. Taking $z=y$ in $(2)$ and dividing by $y$,
+\[h(x+y)=2h(x)+xA-h(y)\qquad(x&gt;0).\tag{3}\]
+Applying $(3)$ first at $x+y$ and then at $x$,
+\[h(x+2y)=2h(x+y)+(x+y)A-h(y)=4h(x)+(3x+y)A-3h(y).\tag{4}\]
+On the other hand, $(2)$ with $2y$ in place of $y$ and $z=y$ gives $y\,h(x+2y)+(x+2y)h(y)=x\,h(3y)+3y\,h(x)$, that is,
+\[h(x+2y)=3h(x)+\frac{x\,h(3y)}{y}-\frac{(x+2y)\,h(y)}{y}.\tag{5}\]
+Subtracting $(5)$ from $(4)$ and solving for $h(x)$:
+\[h(x)=\Bigl(\frac{h(3y)-h(y)}{y}-3A\Bigr)x+\bigl(h(y)-yA\bigr)\qquad(x&gt;0).\]
+With $y$ fixed, the brackets are constants: $h(x)=\alpha x+\beta$ for all $x&gt;0$.</p><p><strong>$f$ is linear.</strong> By $(1)$, $f(x+y)=y(\alpha x+\beta)+x(\alpha y+\beta)=2\alpha xy+\beta(x+y)$. For $s&gt;0$, the choices
+$x=y=\frac s2$ and $x=\frac s4$, $y=\frac{3s}4$ give $\frac{\alpha s^2}2=\frac{3\alpha s^2}8$, so $\alpha=0$. Every $s&gt;0$ is a sum of two
+positive numbers, so $f(s)=\beta s$ for all $s&gt;0$, and $\beta&gt;0$ because $f$ is positive.</p><p><strong>Contradiction.</strong> Now $h(x)=f(xf(x))=f(\beta x^2)=\beta^2x^2$, while $h(x)=\beta$ for all $x$. At $x=1$ and $x=2$ this gives
+$\beta^2=\beta$ and $4\beta^2=\beta$, so $\beta=0$, which is impossible. Hence no function satisfies the equation.</p>
 </div></details>
 </section>
 {% endraw %}

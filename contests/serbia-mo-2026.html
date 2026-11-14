@@ -78,8 +78,8 @@ description: Serbian Mathematical Olympiad 2026: problems with answers and solut
 \[\{\pi(1),2\pi(2),3\pi(3),\dots,2026\pi(2026)\},\]
 if $\pi$ is a permutation of the set $\{1,2,\dots,2026\}$?</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$2025$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Wilson's theorem on the odd half, and a construction by residues)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Wilson's theorem on the odd half, and a construction by residues)</h4>
 <p>Let $p=1013$, a prime, so $2026=2p$. By the Chinese remainder theorem a residue modulo $2p$ is determined by its parity and its residue
 modulo $p$. For $r\in\mathbb Z_p$ let $o(r)$ and $e(r)$ be the odd and the even number in $\{1,\dots,2p\}$ congruent to $r$ modulo $p$; the odd
 numbers $1,3,\dots,2p-1$ are pairwise incongruent modulo $p$ (two of them differ by an even number of absolute value less than $2p$), so every
@@ -103,6 +103,32 @@ $u\in\mathbb Z_{p-1}$. If $\pi(o(g^u))=o(g^{\sigma(u)})$ and the products are pa
 $u\mapsto u+\sigma(u)$ are bijections of $\mathbb Z_{p-1}$; summing over $u$ gives $\sum u+\sum u\equiv\sum u$, so
 $\sum_{u=0}^{p-2}u=\frac{(p-1)(p-2)}2\equiv0\pmod{p-1}$, which is false because $p-2$ is odd. (A cyclic group of even order has no
 complete mapping.)</p>
+<h4>Solution 2 (Wilson's theorem, and a construction by discrete logarithms)</h4>
+<p>Let $p=1013$; it is prime (no prime up to $31$ divides
+it, and $32^2&gt;1013$), and $2026=2p$. By the Chinese remainder theorem a residue modulo $2p$ is determined by its parity and its residue modulo
+$p$. For $r\in\mathbb Z_p$ let $o(r)$ and $e(r)$ be the odd and the even number in $\{1,\dots,2p\}$ congruent to $r$ modulo $p$. Two distinct odd
+numbers in $\{1,\dots,2p\}$ differ by an even number of absolute value less than $2p$, so they are incongruent modulo $p$; the same holds for the
+even ones. Hence every number in $\{1,\dots,2p\}$ is exactly one of the $o(r)$, $e(r)$. A product $k\pi(k)$ is odd exactly when $k$ and $\pi(k)$
+are both odd, and modulo $p$ it is congruent to the product of the two residues.</p><p><em>At most $2025$ residues.</em> Suppose the $2026$ products $k\pi(k)$ were pairwise incongruent modulo $2p$. Then $p$ of them are odd, so there are
+$p$ odd numbers $k$ with $\pi(k)$ odd; as there are only $p$ odd numbers, $\pi$ maps the odd numbers onto themselves, and the $p$ odd products
+represent every residue modulo $p$ exactly once. If $\pi(o(0))\ne o(0)$, then $o(0)\pi(o(0))$ and $\pi^{-1}(o(0))\cdot o(0)$ are two odd products,
+at two different odd indices, both divisible by $p$: a repetition. So $\pi(o(0))=o(0)$, and $\pi$ permutes the $p-1$ numbers $o(r)$, $r\ne0$. By
+Wilson's theorem,
+\[
+\prod_{r\ne0}o(r)\,\pi(o(r))=\Bigl(\prod_{r\ne0}o(r)\Bigr)^2\equiv\bigl((p-1)!\bigr)^2\equiv1\pmod p .
+\]
+But these $p-1$ products represent the residues $1,2,\dots,p-1$ modulo $p$ once each, so their product is $\equiv(p-1)!\equiv-1\pmod p$. Thus
+$1\equiv-1\pmod p$, which is false. Hence at most $2025$ residues occur.</p><p><em>A permutation with $2025$ residues.</em> Let $g$ be a primitive root modulo $p$; for instance $g=3$ works, because $1012=2^2\cdot11\cdot23$ and
+$3^{506}\equiv-1$, $3^{92}\equiv122$, $3^{44}\equiv586\pmod{1013}$, none of which is $1$. Put $h=\frac{p-1}2=506$. Every nonzero residue is $g^i$ for
+exactly one $i\in\{0,1,\dots,2h-1\}$; moreover $g^{2h}\equiv1$ and $g^h\equiv-1$ (its square is $1$ and it is not $1$). For $0\le i\le 2h-2$ let
+\[
+\sigma(i)=\begin{cases} i, &amp; 0\le i\le h-1,\\ i+1, &amp; h\le i\le 2h-2;\end{cases}
+\]
+then $\sigma$ takes every value in $\{0,\dots,2h-1\}$ except $h$, each once. Define</p><ul class="ct-ul"><li><p>$\pi(o(0))=o(0)$ and $\pi(e(0))=e(0)$;</p></li><li><p>$\pi(e(g^i))=e(g^{\sigma(i)})$ and $\pi(o(g^i))=o(-g^{\sigma(i)})$ for $0\le i\le 2h-2$;</p></li><li><p>$\pi(e(g^{2h-1}))=o(1)$ and $\pi(o(g^{2h-1}))=e(-1)$.</p></li></ul><p>The even values are $e(0)$, the $e(g^j)$ with $j\ne h$, and $e(-1)=e(g^h)$: every even number once. The odd values are $o(0)$, the numbers
+$o(-g^j)=o(g^{j+h})$ with $j\ne h$, that is, every $o(r)$ with $r\ne0,1$, and $o(1)$: every odd number once. So $\pi$ is a permutation.</p><p>For the products we need the exponent sums $i+\sigma(i)$. For $0\le i\le h-1$ they are $0,2,\dots,2h-2$; for $h\le i\le 2h-2$ they are
+$2h+1,2h+3,\dots,4h-3$, which modulo $2h$ are $1,3,\dots,2h-3$. Together they are all of $0,1,\dots,2h-1$ except $2h-1$, each once modulo $2h$.</p><ul class="ct-ul"><li><p>Even products: $e(0)e(0)\equiv0$; $e(g^i)\,e(g^{\sigma(i)})\equiv g^{i+\sigma(i)}$ gives every nonzero residue except $g^{2h-1}$; and
+$e(g^{2h-1})\,o(1)\equiv g^{2h-1}$. So all $p$ even residues occur.</p></li><li><p>Odd products: $o(0)o(0)\equiv0$, and $o(g^i)\,o(-g^{\sigma(i)})\equiv-g^{i+\sigma(i)}$ for $0\le i\le2h-2$, which are $2h-1=p-2$ distinct
+nonzero residues. So $p-1$ odd residues occur. (The remaining product $o(g^{2h-1})\,e(-1)$ is even.)</p></li></ul><p>In total $p+(p-1)=2p-1=2025$ distinct residues occur, and the answer is $\boxed{2025}$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p2">
@@ -202,8 +228,8 @@ sides of each rhombus are parallel, hence of the same colour. So $m=\frac{(n-1)(
 <div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 44: Combinatorial Games and Strategy</div>
 <div class="ct-text"><p>In the plane, $n=2k+1$, $k\in\mathbb{N}$, points are given, no three of which are collinear. Maja and Kosta play the following game: at the beginning, Maja connects every two of these $n$ points by a segment, and assigns a direction to each segment toward one of its two endpoints, in any way she wishes. After that, they play a game consisting of $k$ consecutive rounds. In each round, Kosta first chooses one of the points that has not been chosen earlier in the game, after which Maja does the same, and then the loser of the round is the player whose chosen point is the endpoint toward which the segment between the two points chosen in that round is directed. Maja's goal is to direct the segments at the beginning so that, if she plays optimally in the remainder of the game, regardless of how Kosta chooses points, he cannot win any of the $k$ rounds. In how many different ways can she achieve this goal?</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$(2k)!$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Good orientations are exactly the rotational ones)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Good orientations are exactly the rotational ones)</h4>
 <p>Write $u\to w$ if the segment $uw$ is directed toward $w$; then whoever chose $w$ loses that round. Maja wins a round in which Kosta
 chose $x$ and she chose $y$ exactly when $y\to x$. After some rounds, the rest of the game is the same game on the remaining points. Call an
 orientation of the segments between $2j+1$ points <em>good</em> if Maja can win all $j$ rounds against every play of Kosta. In-neighbours of $w$ are
@@ -235,6 +261,41 @@ $2j-1$) and $x$, again its next $j$ points. So $T$ is rotational. $\square$</p><
 order, and the cyclic order can be read off from it: the point following $u$ is the out-neighbour of $u$ that beats all other out-neighbours of
 $u$. So different cyclic orders give different orientations. The number of cyclic orders (with a direction) of $n=2k+1$ labelled points is
 $(n-1)!$, so the number of ways is $\boxed{(2k)!}$.</p>
+<h4>Solution 2 (Maja's answer function is a single cycle)</h4>
+<p>Write $u\to w$ if the segment $uw$ is directed toward $w$; then whoever chose $w$ loses that round. Maja wins a round
+in which Kosta chose $x$ and she chose $y$ exactly when $y\to x$. After some rounds, the rest of the game is the same game on the remaining
+points. Call an orientation of the segments between $2j+1$ points <em>good</em> if Maja can win all $j$ rounds against every play of Kosta. One point
+is good, and for $j\ge1$ an orientation is good exactly when for every point $x$ there is a point $y\to x$ such that the orientation on the remaining
+$2j-1$ points is good.</p><p><em>Step 1: regularity.</em> In a good orientation on $2j+1$ points every point has exactly $j$ in-neighbours and $j$ out-neighbours. Indeed, let a
+point $w$ have $d$ in-neighbours (points $u$ with $u\to w$). In each round, while some in-neighbour of $w$ is left, let Kosta choose one, say $x$.
+Maja cannot answer with $w$, because $x\to w$. So $w$ stays, and after at most $d$ rounds no in-neighbour of $w$ is left. If $d\le j-1$, a round is
+still to come; Kosta chooses $w$, and whatever Maja chooses, $w$ beats it. Hence $d\ge j$ for every point, and as the in-degrees add up to
+$\binom{2j+1}2=j(2j+1)$, all of them equal $j$.</p><p><em>Step 2: the answer function.</em> Let $T$ be good on $n=2j+1\ge3$ points. Call $y$ a <em>compatible answer</em> to $x$ if $y\to x$ and every
+point other than $x,y$ beats exactly one of $x,y$.</p><ul class="ct-ul"><li><p>Existence. Let $y$ be a winning answer of Maja to $x$. The remaining orientation is good on $2j-1$ points, so by Step 1 every remaining point
+has out-degree $j-1$ there, while it has out-degree $j$ in $T$. So it beats exactly one of $x,y$.</p></li><li><p>At most one answer per $x$. Let $y\ne z$ both be compatible answers to $x$. For the pair $x,y$, the point $z$ beats exactly one of them, and
+$z\to x$; so $y\to z$. For the pair $x,z$, the point $y$ beats exactly one of them, and $y\to x$; so $z\to y$. Contradiction.</p></li><li><p>At most one $x$ per answer. Let $y$ be a compatible answer to both $x\ne z$. Then $y\to z$, so for the pair $x,y$ the point $z$ does not
+beat $y$ and must beat $x$: $z\to x$. Symmetrically, for the pair $z,y$ we get $x\to z$. Contradiction.</p></li></ul><p>So $f(x)=$ the compatible answer to $x$ defines a permutation $f$ of the points with $f(x)\to x$ for every $x$, and
+\[
+\text{if } v\notin\{u,f(u)\},\ \text{then } v \text{ beats exactly one of } u,\ f(u). \tag{$\ast$}
+\]</p><p><em>Step 3: $f$ is one cycle of length $n$.</em> $f$ has no fixed point, and no cycle of length $2$ (it would give $w\to u$ and $u\to w$). Take a
+cycle $v,f(v),\dots,f^{L-1}(v)$ of length $L\ge3$. Since $f(v)\to v$, the point $v$ does not beat $f(v)$; since $v=f\bigl(f^{L-1}(v)\bigr)\to f^{L-1}(v)$, it
+beats $f^{L-1}(v)$. For $1\le i\le L-2$ we have $v\notin\{f^i(v),f^{i+1}(v)\}$, so by $(\ast)$ the relation of $v$ to $f^i(v)$ flips at each step: $v$
+beats $f^i(v)$ exactly for the even $i$ in $\{1,\dots,L-1\}$. As $v$ beats $f^{L-1}(v)$, $L-1$ is even: every cycle of $f$ has odd length. If a point
+$v$ were outside some cycle $C$, then by $(\ast)$ the relation of $v$ to the points of $C$ would flip at each of the $L$ steps once around $C$; as
+$L$ is odd, it would come back reversed, which is absurd. So $f$ is a single cycle, and the points can be labelled $w_0,\dots,w_{n-1}$ (indices modulo
+$n$) with $f(w_m)=w_{m+1}$. By the computation above (with $v=w_m$),
+\[
+w_m \text{ beats } w_{m+i}\ (1\le i\le n-1)\quad\Longleftrightarrow\quad i \text{ is even}. \tag{E}
+\]</p><p><em>Step 4: every such orientation is good.</em> Take any cyclic sequence $w_0,\dots,w_{n-1}$ of the points, $n$ odd, and orient by (E). This is a valid
+orientation: if $w_b$ is $i$ steps after $w_a$, then $w_a$ is $n-i$ steps after $w_b$, and exactly one of $i$, $n-i$ is even. When Kosta chooses
+$w_m$, Maja chooses $w_{m+1}$; it beats $w_m=w_{(m+1)+(n-1)}$ because $n-1$ is even. For two remaining points $a,b$, the points strictly between them
+going forward from $a$ to $b$ contain both $w_m,w_{m+1}$ or neither (the two are consecutive and differ from $a,b$), so the number of steps from
+$a$ to $b$ changes by $0$ or $2$. Hence the remaining $n-2$ points carry the orientation (E) of the remaining cyclic sequence, and Maja repeats
+the strategy until one point is left.</p><p><em>Counting.</em> By Steps 3 and 4, the good orientations are exactly the orientations (E) of the directed cyclic orders of the $n$ points.
+Different cyclic orders give different orientations: in the orientation (E) of $w_0,\dots,w_{n-1}$ the compatible answer to $w_m$ is $w_{m+1}$
+(it beats $w_m$, and a point $w_a\ne w_m,w_{m+1}$ is $i$ and $i+1$ steps before them for some $i$, so it beats exactly one of them by (E)); since
+the compatible answer is unique, the orientation determines $f$ and hence the cyclic order. There are $(n-1)!$ directed cyclic orders of $n$
+labelled points (put a fixed point first and order the others), so the number of ways is $\boxed{(2k)!}$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p5">
@@ -244,7 +305,7 @@ $(n-1)!$, so the number of ways is $\boxed{(2k)!}$.</p>
 \[f\!\left(\frac{x}{y}+\frac{y}{x}\right)=\frac{f(x)}{f(y)}+\frac{f(y)}{f(x)}\]
 for all $x,y\in(0,+\infty)$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$f(x)=x$ for all $x$, and $f(x)=2$ for all $x$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Logarithms, a Cauchy equation and a lower bound)</h4>
 <p>Let $c=f(1)$ and $\varphi(x)=\ln\frac{f(x)}{c}$, so $\varphi(1)=0$ and $\frac{f(x)}{f(y)}=e^{\varphi(x)-\varphi(y)}$. The equation becomes
 \[
@@ -298,6 +359,39 @@ so, again by the periods fact, $\lambda(t)=\frac{h(kt)}{h(t)}=\frac{k^2t^2+1}{k(
 is continuous, tends to $\frac1k$ as $t\to0$ and to $k$ as $t\to\infty$, so every $\lambda\in(\frac1k,k)$ is a period. Products of periods are periods.
 For any $x&gt;0$ choose $N$ with $x^{1/N}\in(\frac1k,k)$; then $x=(x^{1/N})^N$ is a period, so $f(x)=f(x\cdot1)=f(1)$. Thus $f$ is constant, and the
 equation $f\equiv C$ gives $C=1+1=2$.</p><p>Both $f(x)=x$ and $f\equiv2$ satisfy the equation, so the solutions are
+\[
+\boxed{f(x)=x\ \text{ for all } x&gt;0\qquad\text{or}\qquad f(x)=2\ \text{ for all } x&gt;0.}
+\]</p>
+<h4>Solution 3 (Shifts act on the image as isometries, hence as translations)</h4>
+<p>Let $c=f(1)$ and $\varphi(x)=\ln\frac{f(x)}{c}$, so $\frac{f(x)}{f(y)}=e^{\varphi(x)-\varphi(y)}$ and the equation becomes
+\[
+f\Bigl(\frac xy+\frac yx\Bigr)=2\cosh\bigl(\varphi(x)-\varphi(y)\bigr). \tag{1}
+\]
+With $y=1$ and $x=t$: $f\bigl(t+\frac1t\bigr)=2\cosh\varphi(t)$. Applying this with $t=\frac xy$ and comparing with (1), and since $\cosh$ is even
+and strictly increasing on $[0,\infty)$, we get $|\varphi(x)-\varphi(y)|=|\varphi(x/y)|$. Let $G(s)=\varphi(e^s)$ for real $s$; then $G(0)=0$ and
+\[
+|G(a)-G(b)|=|G(a-b)|\qquad\text{for all real } a,b. \tag{2}
+\]
+If $G\equiv0$, then $f\equiv c$, and the equation gives $c=1+1=2$. From now on let $G\not\equiv0$, so its image $X=G(\mathbb R)$ contains at least
+two points ($0$ and a nonzero value).</p><p><em>Step 1: the shifts.</em> Fix a real $t$. If $G(s)=G(s')$, then by (2) $|G(s+t)-G(s'+t)|=|G(s-s')|=|G(s)-G(s')|=0$. So there is a well-defined map
+$T_t:X\to X$ with $T_t\bigl(G(s)\bigr)=G(s+t)$ for all $s$. It preserves distances: $|G(a+t)-G(b+t)|=|G(a-b)|=|G(a)-G(b)|$ by (2), used twice.
+Clearly $T_t=T_{t/2}\circ T_{t/2}$ on $X$.</p><p><em>Lemma.</em> If $X\subseteq\mathbb R$ has at least two points and $\psi:X\to\mathbb R$ preserves distances, then there are $\varepsilon\in\{1,-1\}$ and a real
+$\tau$ with $\psi(x)=\varepsilon x+\tau$ for all $x\in X$. Indeed, fix $p\ne q$ in $X$. Since $|\psi(p)-\psi(q)|=|p-q|\ne0$, the number
+$\varepsilon=\frac{\psi(p)-\psi(q)}{p-q}$ is $\pm1$; put $\tau=\psi(p)-\varepsilon p$, so $\ell(x)=\varepsilon x+\tau$ agrees with $\psi$ at $p$ and $q$. For
+$x\in X$, both $\psi(x)$ and $\ell(x)$ lie at distance $|x-p|$ from $\psi(p)$ and at distance $|x-q|$ from $\psi(q)$. The (at most two) reals at a given
+distance $d$ from $\psi(p)$ are $\psi(p)\pm d$; if $d&gt;0$ they have different distances from $\psi(q)\ne\psi(p)$. So these two distances determine the
+number, and $\psi(x)=\ell(x)$.</p><p>By the lemma, $T_{t/2}(x)=\varepsilon x+\tau$ on $X$. Since $T_{t/2}$ maps $X$ into $X$, for $x\in X$
+\[
+T_t(x)=T_{t/2}\bigl(T_{t/2}(x)\bigr)=\varepsilon(\varepsilon x+\tau)+\tau=x+(1+\varepsilon)\tau .
+\]
+So $T_t$ is a translation of $X$ by a constant; taking $x=G(0)=0$ shows that the constant is $T_t(0)=G(t)$. Hence $G(s+t)=G(s)+G(t)$ for all real
+$s,t$: $G$ is additive.</p><p><em>Step 2: $G$ is linear.</em> Every $z\ge2$ equals $u+\frac1u$ for some $u&gt;0$, and then $f(z)=2\cosh\varphi(u)\ge2$. Hence
+$G(s)=\ln\frac{f(e^s)}c\ge\ln\frac2c$ for all $s\ge\ln2$. If $G(t)&lt;0$ for some $t&gt;0$, then $G(Nt)=NG(t)$ tends to $-\infty$ along the integers $N$ with
+$Nt\ge\ln2$, a contradiction. So $G(t)\ge0$ for $t&gt;0$, and $G(s+t)=G(s)+G(t)\ge G(s)$: $G$ is non-decreasing. Additivity gives $G(0)=0$, $G(-s)=-G(s)$,
+$G(Ns)=NG(s)$ and hence $G(q)=\lambda q$ for all rational $q$, where $\lambda=G(1)\ge0$. For real $s$ and rationals $q_1&lt;s&lt;q_2$ we get
+$\lambda q_1\le G(s)\le\lambda q_2$; letting $q_1,q_2\to s$ gives $G(s)=\lambda s$. As $G\not\equiv0$, $\lambda&gt;0$, and $f(x)=cx^\lambda$.</p><p><em>Step 3: the constants.</em> With $x=y$ the equation gives $f(2)=2$, i.e. $c\cdot2^\lambda=2$. With $y=1$ it gives
+$c\bigl(x+\frac1x\bigr)^\lambda=x^\lambda+x^{-\lambda}$; dividing by $x^\lambda$, $c\bigl(1+x^{-2}\bigr)^\lambda=1+x^{-2\lambda}$, and letting $x\to\infty$ (recall
+$\lambda&gt;0$) gives $c=1$. Then $2^\lambda=2$, so $\lambda=1$ and $f(x)=x$.</p><p>Both functions work: for $f(x)=x$ both sides equal $\frac xy+\frac yx$, and for $f\equiv2$ both sides equal $2$. Therefore
 \[
 \boxed{f(x)=x\ \text{ for all } x&gt;0\qquad\text{or}\qquad f(x)=2\ \text{ for all } x&gt;0.}
 \]</p>

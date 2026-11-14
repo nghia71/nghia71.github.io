@@ -128,8 +128,8 @@ Now $\ast$ is at position $p=L-j-1\ge1$. After subtracting $p$ from the labels l
 <div class="ct-meta">Geometry &middot; LPS VII, Chapter 11: Similarity, Homothety, and Ratio Geometry</div>
 <div class="ct-text"><p>Let $\omega$ be the incircle of triangle $ABC$ with center $I$. Let the points where $\omega$ is tangent to sides $BC$, $CA$, and $AB$ be $D$, $E$, and $F$, respectively. Let $\Omega$ be the circle passing through $A$ and tangent to $BC$ at $D$. Let the second intersection points of lines $DF$ and $DE$ with $\Omega$ be $F_1$ and $E_1$, respectively. Let $T$ be the intersection point of lines $BF_1$ and $CE_1$. Let $U$ be the second intersection point of the circumcircles of triangles $DBF_1$ and $DCE_1$. Prove that
 \[\angle BTA=\angle CTU.\]</p></div>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Homothety at D, then an altitude and a diameter)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Homothety at D, then an altitude and a diameter)</h4>
 <div class="ct-fig"><img style="width:383px" src="/assets/contests/2026-27/turkey-tst-3_s1.svg" alt="Figure for the solution"></div>
 <p>Let $r$ be the radius of $\omega$, let $O$ and $\varrho$ be the centre and radius of $\Omega$, and put $k=\varrho/r$. Both circles touch $BC$ at $D$ from the same side, so the homothety $h$ with centre $D$ and ratio $k$ maps $\omega$ to $\Omega$. Hence
 \[
@@ -167,6 +167,75 @@ Since $TF_1$ is the line $TB$ and $TE_1$ is the line $TC$, this is (3). (In tria
 \delta_a(T)&gt;\frac{k\,r\,h_a}{r}=k\,h_a&gt;2kr&gt;(2k-1)r=\delta_a(U).
 \]
 Thus in neither case is $U$ in the vertical angle (and $U\ne T$, as promised). So the ray $TU$ is $\rho(\text{ray }TA)$, and since $\rho$ maps the ray $TB$ to the ray $TC$, it maps the angle $BTA$ onto the angle $CTU$. Therefore $\angle BTA=\angle CTU$.</p>
+<h4>Solution 2 (Complex coordinates with the touch point at the origin)</h4>
+<p>We work in the complex plane, identifying the point $(x,y)$ with $x+yi$. Take $D=0$, the line $BC$ as the real axis, the triangle in the upper half-plane, and the inradius equal to $1$. Then $I=i$, $B=-b$ and $C=c$ with $b=DB&gt;0$, $c=DC&gt;0$. Put
+\[
+p=bc,\qquad w=b-c .
+\]
+We assume, as the statement does, that the point $T$ and the circles $DBF_1$, $DCE_1$ exist.</p><p><strong>The points $A$, $F$, $E$.</strong> In the right triangle $BDI$ we have $\tan\frac{\angle B}2=\frac{ID}{BD}=\frac1b$, hence
+\[
+\cos\angle B=\frac{b^2-1}{b^2+1},\qquad \sin\angle B=\frac{2b}{b^2+1}.
+\]
+The ray $BA$ leaves $B$ in the direction $(\cos\angle B,\sin\angle B)$, so the line $BA$ is $2b(x+b)=(b^2-1)y$, and the touch point $F$, at distance $BF=BD=b$ from $B$ on this ray, is
+\[
+F=-b+b(\cos\angle B+i\sin\angle B)=\frac{-2b+2b^2i}{1+b^2}.
+\]
+In the same way ($\tan\frac{\angle C}2=\frac1c$, the ray $CA$ has direction $(-\cos\angle C,\sin\angle C)$) the line $CA$ is $2c(c-x)=(c^2-1)y$ and
+\[
+E=\frac{2c+2c^2i}{1+c^2}.
+\]
+The two line equations are satisfied by $x=\frac{b-c}{bc-1}$, $y=\frac{2bc}{bc-1}$ (substitute; for instance $2b\bigl(\frac{b-c}{bc-1}+b\bigr)=\frac{2bc(b^2-1)}{bc-1}$), so
+\[
+A=\frac{w+2p\,i}{p-1}.
+\]
+As $A$ lies above $BC$, its imaginary part $\frac{2p}{p-1}$ is positive, so $p&gt;1$.</p><p><strong>The circle $\Omega$ and the points $F_1$, $E_1$.</strong> A circle touching the real axis at $0$ from above has an equation $x^2+y^2=qy$, where $q&gt;0$ is its diameter. The incircle $\omega$ is $x^2+y^2=2y$; let $\Omega$ be $x^2+y^2=qy$. Then $q&gt;2$: if $q\le2$, every point of $\Omega$ has $y\ge0$ and $x^2+y^2=qy\le2y$, so it lies on or inside $\omega$, while $A\in\Omega$ lies outside the incircle.</p><p>The map $z\mapsto\frac q2z$ sends the circle $x^2+y^2=2y$ onto the circle $x^2+y^2=qy$ and maps every line through $0$ onto itself. The line $DF$ meets $\omega$ at $D$ and $F\ne D$, hence it meets $\Omega$ at $D$ and $\frac q2F$. So
+\[
+F_1=\frac q2F=\frac{-qb+qb^2i}{1+b^2},\qquad E_1=\frac q2E=\frac{qc+qc^2i}{1+c^2}.
+\]</p><p><strong>The point $T$.</strong> We have $F_1-B=\frac{b}{1+b^2}\bigl((1+b^2-q)+qb\,i\bigr)$ and $E_1-C=\frac{c}{1+c^2}\bigl((q-1-c^2)+qc\,i\bigr)$, so
+\[
+BF_1:\ qb(x+b)=(1+b^2-q)\,y,\qquad CE_1:\ qc(x-c)=(q-1-c^2)\,y .
+\]
+Multiply the first equation by $c$, the second by $b$, and subtract: $qp(b+c)=\bigl(c(1+b^2-q)+b(1+c^2-q)\bigr)y=(b+c)(p+1-q)\,y$. Put
+\[
+\Delta=p+1-q .
+\]
+If $\Delta=0$ the two lines are parallel and $T$ does not exist; so $\Delta\ne0$ and $y_T=\frac{pq}{\Delta}$. The first equation then gives $x_T=\frac{(1+b^2-q)c}{\Delta}-b=\frac{c+b^2c-qc-b^2c-b+bq}{\Delta}=\frac{w(q-1)}{\Delta}$. Thus
+\[
+T=\frac{w(q-1)+pq\,i}{\Delta}.
+\]</p><p><strong>The point $U$.</strong> The circle $x^2+y^2+bx-(q-1)y=0$ passes through $D=0$, through $B=-b$, and through $F_1$, because
+\[
+|F_1|^2+b\operatorname{Re}F_1-(q-1)\operatorname{Im}F_1=\frac{q^2b^2-qb^2-(q-1)qb^2}{1+b^2}=0 .
+\]
+As $F_1$ is not on $BC$, this is the circle $DBF_1$. In the same way $x^2+y^2-cx-(q-1)y=0$ is the circle $DCE_1$. A common point of the two circles satisfies $(b+c)x=0$, so $x=0$ and $y^2=(q-1)y$. The common point other than $D$ is therefore
+\[
+U=(q-1)\,i .
+\]</p><p><strong>Four differences.</strong> Multiplying by $\Delta$ and simplifying real and imaginary parts separately:
+\begin{align*}
+\Delta(A-T)&amp;=-\frac{p(q-2)}{p-1}\bigl(w+(p+1)i\bigr),\\
+\Delta(U-T)&amp;=-\bigl(w(q-1)+(p+(q-1)^2)\,i\bigr),\\
+\Delta(B-T)&amp;=c(q-1-b^2)-pq\,i,\\
+\Delta(C-T)&amp;=-b(q-1-c^2)-pq\,i .
+\end{align*}
+For the first line: the real part is $\frac{w\Delta}{p-1}-w(q-1)=\frac{w(\Delta-(p-1)(q-1))}{p-1}=\frac{w(2p-pq)}{p-1}$, and the imaginary part is $\frac{2p\Delta}{p-1}-pq=\frac{p(2p+2-q-pq)}{p-1}=-\frac{p(p+1)(q-2)}{p-1}$. For the second: $(q-1)\Delta-pq=-p-(q-1)^2$. For the third: $-b\Delta-w(q-1)=-bp+c(q-1)=c(q-1-b^2)$, using $bp=b^2c$. For the fourth: $c\Delta-w(q-1)=cp-b(q-1)=-b(q-1-c^2)$.</p><p><strong>The key identity.</strong> Let $Z=\bigl(w+(p+1)i\bigr)\bigl(w(q-1)+(p+(q-1)^2)i\bigr)$. We claim
+\[
+\Delta^2(B-T)(C-T)=p\,Z. \tag{1}
+\]
+<em>Imaginary parts.</em> On the left, $pq\bigl(b(q-1-c^2)-c(q-1-b^2)\bigr)=pq\bigl(w(q-1)+bc(b-c)\bigr)=pqw(p+q-1)$. On the right, $p\,w\bigl(p+(q-1)^2+(p+1)(q-1)\bigr)=pw(q^2-q+pq)=pqw(p+q-1)$.</p><p><em>Real parts.</em> The left side has real part $-p\bigl[(q-1-b^2)(q-1-c^2)+pq^2\bigr]$ and the right side $-p\bigl[(p+1)(p+(q-1)^2)-w^2(q-1)\bigr]$. With $b^2+c^2=w^2+2p$,
+\[
+(q-1-b^2)(q-1-c^2)+pq^2=(q-1)^2-(q-1)w^2-2p(q-1)+p^2+pq^2,
+\]
+and the difference between $(p+1)(p+(q-1)^2)-w^2(q-1)$ and this is $p+p(q-1)^2+2p(q-1)-pq^2=p\bigl((q-1)+1\bigr)^2-pq^2=0$. This proves (1).</p><p>From the first two lines of the table, $\Delta^2(A-T)(U-T)=\frac{p(q-2)}{p-1}Z$. Together with (1),
+\[
+(A-T)(U-T)=\lambda\,(B-T)(C-T),\qquad \lambda=\frac{q-2}{p-1}&gt;0 .
+\]
+Here $Z\ne0$, since both of its factors have positive imaginary part; hence all four differences are non-zero, that is, $T$ is different from $A,B,C,U$. Dividing,
+\[
+\frac{A-T}{B-T}=\lambda\cdot\frac{C-T}{U-T}.
+\]</p><p><strong>Conclusion.</strong> For points $X,Y\ne T$, the argument of $\frac{Y-T}{X-T}$ is the angle of the rotation about $T$ that takes the ray $TX$ to the ray $TY$; if $\operatorname{Arg}$ denotes the argument chosen in $(-180^\circ,180^\circ]$, then $\angle XTY=\bigl|\operatorname{Arg}\frac{Y-T}{X-T}\bigr|$. Two complex numbers that differ by a positive factor have the same argument. Hence
+\[
+\angle BTA=\Bigl|\operatorname{Arg}\frac{A-T}{B-T}\Bigr|=\Bigl|\operatorname{Arg}\frac{C-T}{U-T}\Bigr|=\angle UTC,
+\]
+that is, $\angle BTA=\angle CTU$. (Because the factor $\lambda$ is positive, not merely real, this gives equal angles and not supplementary ones, whatever the position of $T$.)</p>
 </div></details>
 </section>
 <h2 class="ct-group" id="day-2">Day 2</h2>

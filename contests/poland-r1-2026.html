@@ -91,8 +91,8 @@ $n_{k+1}+\frac32=3\bigl(n_k+\frac32\bigr)$, we get $n_k=\frac32(3^k-1)=\frac{3^{
 <h3>Problem 2</h3>
 <div class="ct-meta">Geometry &middot; LPS VII, Chapter 3: Foundational Angle and Configuration Chasing</div>
 <div class="ct-text"><p>Let $I$ be the incenter of an acute triangle $ABC$. Circle $o$ passes through $I$ and is tangent to $BC$ at $C$. Ray $BI$ meets $o$ again at $D\ne I$. Ray $BA$ meets the circumcircle of $ADI$ again at $E\ne A$, which lies outside the segment $AB$. Prove that the intersection of lines $DE$ and $AI$ lies on $o$.</p></div>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (A directed angle chase)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (A directed angle chase)</h4>
 <div class="ct-fig"><img style="width:352px" src="/assets/contests/2026-27/poland-r1-2_s1.svg" alt="Figure for the solution"></div>
 <p>We use directed angles $\measuredangle(\ell,m)$ between lines, modulo $180^\circ$. Let $X$ be the intersection of the lines $DE$ and $AI$. Since $o$ passes
 through $C,D,I$, it suffices to show
@@ -106,6 +106,23 @@ Therefore
 and the difference of the two sides is
 \[\bigl[\measuredangle(BI,AI)-\measuredangle(BI,IC)\bigr]+\measuredangle(AB,AI)-\measuredangle(CB,CI)=\measuredangle(IC,AI)+\measuredangle(AB,AI)-\measuredangle(CB,CI)=0 .\]
 This proves (1), so the intersection $X$ of $DE$ and $AI$ lies on $o$.</p><p><em>Remark.</em> The proof does not use that $E$ lies outside segment $AB$ (that holds exactly when $BC&gt;BA$, because $BA\cdot BE=BI\cdot BD=BC^2$ by powers of the point $B$).</p>
+<h4>Solution 2 (Coordinates on the bisector of angle $B$)</h4>
+<p>Let $a=BA$, $c=BC$, $b=CA$, let $\theta$ be half of $\angle ABC$, and $t=\cos\theta$, $s=\sin\theta$ (so $s,t&gt;0$). Scale so that $BI=1$ and put
+$B=(0,0)$, $I=(1,0)$ (the bisector $BI$ is the $x$-axis), $A=(at,as)$, $C=(ct,-cs)$.</p><p><strong>The incentre condition.</strong> The inradius is the distance from $I$ to $BA$, which is $BI\sin\theta=s$. Splitting $ABC$ into $IBC$, $ICA$, $IAB$ gives
+$[ABC]=\frac s2(a+b+c)$, while $[ABC]=\frac12ac\sin2\theta=acst$. So $b=2act-a-c$. The law of cosines gives
+$b^2=a^2+c^2-2ac(2t^2-1)=(a+c)^2-4act^2$. Substituting $b$, $4a^2c^2t^2-4act(a+c)+4act^2=0$, and dividing by $4act&gt;0$,
+\[t=\frac{a+c}{ac+1}. \tag{1}\]
+Also $a&gt;1$: in triangle $ABI$ the angle at $I$ is $90^\circ+\frac12\angle C&gt;90^\circ$, so $BA&gt;BI$.</p><p><strong>The points $D$ and $E$.</strong> The circle $o$ touches $BC$ at $C$, so the power of $B$ gives $BI\cdot BD=BC^2$; as $D$ is on ray $BI$, $D=(c^2,0)$. The power of
+$B$ with respect to the circle $ADI$ gives $BA\cdot BE=BI\cdot BD=c^2$, so $E=e(t,s)$ with $e=\frac{c^2}a$.</p><p><strong>The intersection $P$ of $AI$ and $DE$.</strong> The affine function $\phi(x,y)=x-\frac ts\,y$ vanishes on line $BA$ (at $A$ and $E$), and $\phi(I)=1$,
+$\phi(D)=c^2$. Write $P=A+\lambda(I-A)=D+\mu(E-D)$. Applying $\phi$ gives $\lambda=c^2(1-\mu)$, and comparing $y$-coordinates gives $as(1-\lambda)=\mu es$, i.e.
+$a(1-\lambda)=\frac{c^2}a\mu$. Eliminating $\mu=1-\frac\lambda{c^2}$: $a^2(1-\lambda)=c^2-\lambda$, so (as $a^2\ne1$ the system has exactly this solution)
+\[\lambda=\frac{a^2-c^2}{a^2-1}. \tag{2}\]</p><p><strong>The second intersection of $AI$ with $o$.</strong> The circle $o$ passes through $I=(1,0)$ and $D=(c^2,0)$, so its equation is
+$x^2+y^2-(1+c^2)x+qy+c^2=0$ for some $q$. Substituting $C$: $c^2-(1+c^2)ct-qcs+c^2=0$, so $qs=2c-(1+c^2)t$. Hence the power of $A$ with respect to $o$ is
+\[\Pi=a^2-(1+c^2)at+qas+c^2=(a+c)^2-2a(1+c^2)t .\]
+Substituting $A+\lambda'(I-A)$ into the equation of $o$ gives a quadratic in $\lambda'$ with leading coefficient $AI^2=1+a^2-2at$, constant term $\Pi$, and the root
+$\lambda'=1$ (the point $I$). So the other intersection of line $AI$ with $o$ is at $\lambda'=\Pi/AI^2$. Finally,
+\[(a^2-1)\,\Pi-(a^2-c^2)\,AI^2=2a(ac-1)\bigl(a+c-(ac+1)t\bigr)=0\]
+by (1), so $\lambda'=\lambda$: the intersection $P$ of $DE$ and $AI$ lies on $o$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p3">
@@ -113,14 +130,22 @@ This proves (1), so the intersection $X$ of $DE$ and $AI$ lies on $o$.</p><p><em
 <div class="ct-meta">Algebra &middot; LPS VII, Chapter 1: Inequalities: Core Classical Methods</div>
 <div class="ct-text"><p>Positive integer $n$ and real numbers $x_1,x_2,\dots,x_{2n+1}$ are given. Assume that $x_i+x_{i+1}\ge 0$ for $i=1,2,\dots,2n+1$, where $x_{2n+2}=x_1$. Prove that
 \[\sum_{i=1}^{2n+1}|x_i|\le(2n+1)\sum_{i=1}^{2n+1}x_i.\]</p></div>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Each term is at most the total)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Each term is at most the total)</h4>
 <p>Indices are cyclic ($x_{2n+2}=x_1$), and let $S=x_1+\dots+x_{2n+1}$. We show $|x_i|\le S$ for every $i$; adding these $2n+1$ inequalities gives
 the claim.</p><p>Fix $i$. The other $2n$ terms $x_{i+1},x_{i+2},\dots,x_{i+2n}$ split into the $n$ consecutive pairs $(x_{i+1},x_{i+2}),\dots,(x_{i+2n-1},x_{i+2n})$, each with
 non-negative sum, so $S-x_i\ge0$, i.e. $x_i\le S$.</p><p>Also, the $2n+2$ terms $x_i,x_{i+1},\dots,x_{i+2n},x_{i+2n+1}=x_i$ (that is, all terms, with $x_i$ counted twice) split into the $n+1$ consecutive pairs
 $(x_i,x_{i+1}),(x_{i+2},x_{i+3}),\dots,(x_{i+2n},x_i)$, each with non-negative sum, so $S+x_i\ge0$, i.e. $-x_i\le S$.</p><p>Hence $|x_i|\le S$ for all $i$, and
 \[\sum_{i=1}^{2n+1}|x_i|\le(2n+1)S=(2n+1)\sum_{i=1}^{2n+1}x_i .\]
 The constant $2n+1$ cannot be improved: for $(x_1,\dots,x_{2n+1})=(1,-1,1,-1,\dots,-1,1)$ all neighbour sums are $0$ or $2$, $S=1$ and $\sum|x_i|=2n+1$.</p>
+<h4>Solution 2 (An alternating sum of neighbour sums)</h4>
+<p>Indices are cyclic modulo $m=2n+1$. Put $s_j=x_j+x_{j+1}\ge0$ and $S=x_1+\dots+x_m$; then $s_1+\dots+s_m=2S$. For a fixed $i$ consider the
+alternating sum of the $m$ numbers $s_i,s_{i+1},\dots,s_{i+2n}$:
+\[s_i-s_{i+1}+s_{i+2}-\dots+s_{i+2n}=\sum_{k=0}^{2n}(-1)^k\bigl(x_{i+k}+x_{i+k+1}\bigr)=2x_i .\]
+Indeed, each $x_{i+k}$ with $1\le k\le2n$ occurs twice, with the signs $(-1)^{k-1}$ and $(-1)^k$, and cancels; what remains is $x_i$ from $k=0$ and
+$x_{i+2n+1}=x_i$ from $k=2n$ (the last sign is $+$ because $2n$ is even). Since all $s_j\ge0$,
+\[2|x_i|\le s_i+s_{i+1}+\dots+s_{i+2n}=2S .\]
+Adding over $i=1,\dots,m$ gives $\sum|x_i|\le(2n+1)S$, the claim. The example in Solution 1 shows that the factor $2n+1$ is best possible.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p4">
@@ -227,8 +252,8 @@ $K\leftrightarrow M$ and fixes $A,D,L$), and $T$ is mapped to itself; so $T\in F
 <div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 10: Double Counting and Counting Identities</div>
 <div class="ct-text"><p>Positive integer $n$ is given. We will call every injective function $f:\{1,\dots,n\}\to\{1,\dots,n\}$ a permutation. Pairwise distinct permutations $f_1,\dots,f_N$ are given. Assume that for every pair of indices (not necessarily distinct) $i,j$, there exists $k$ such that $f_i\circ f_j=f_k$. For $1\le i&lt;j\le n$ let $Z(i,j)$ denote the number of indices $l$ such that $f_l(i)&gt;f_l(j)$. Prove that
 \[\frac{N}{2}\cdot\sum_{1\le i&lt;j\le n}Z(i,j)=\sum_{1\le i&lt;j\le n}Z(i,j)^2.\]</p></div>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Count pairs inverted by two permutations)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Count pairs inverted by two permutations)</h4>
 <p>For a permutation $g$ let $I(g)$ be the set of pairs $\{i,j\}$ ($i&lt;j$) with $g(i)&gt;g(j)$ (inversions), and $\operatorname{inv}(g)=|I(g)|$. Let
 $G=\{f_1,\dots,f_N\}$.</p><p><strong>$G$ is a group.</strong> It is closed under composition. For $g\in G$ the powers $g,g^2,\dots$ lie in the finite set $G$, so $g^a=g^b$ for some $a&lt;b$; then
 $g^{b-a}=\mathrm{id}\in G$, and $g^{-1}=g^{b-a-1}\in G$ (this is $\mathrm{id}$ if $b-a=1$).</p><p><strong>The two sides.</strong> $Z(i,j)$ counts the $g\in G$ with $\{i,j\}\in I(g)$, so
@@ -238,6 +263,18 @@ pairs, so does $\{h(i),h(j)\}$; hence the number of disagreements is $\operatorn
 $J=\sum_{g\in G}\operatorname{inv}(g)$: the first two terms give $NJ$ each, and for each fixed $h$ the map $g\mapsto gh^{-1}$ is a bijection of $G$ (as $G$ is a group),
 so the third term also gives $NJ$. Hence
 \[\sum_{i&lt;j}Z(i,j)^2=\frac12(NJ+NJ-NJ)=\frac N2\,J=\frac N2\sum_{i&lt;j}Z(i,j).\]</p>
+<h4>Solution 2 (An orthogonal projection)</h4>
+<p>Let $G=\{f_1,\dots,f_N\}$; as shown in Solution 1, $G$ is a group. Let $W$ be the real vector space of functions $v$ on the ordered pairs $(i,j)$ of
+distinct elements of $\{1,\dots,n\}$ with $v(j,i)=-v(i,j)$, with the inner product
+\[\langle v,w\rangle=\sum_{i&lt;j}v(i,j)w(i,j)=\frac12\sum_{i\ne j}v(i,j)w(i,j).\]
+For $g\in G$ define $(P_gv)(i,j)=v(g(i),g(j))$. Then $P_g$ is a linear map of $W$ into itself, and it preserves the inner product, because
+$(i,j)\mapsto(g(i),g(j))$ permutes the ordered pairs. Also $(P_gP_hv)(i,j)=(P_hv)(g(i),g(j))=v(h(g(i)),h(g(j)))$, so $P_gP_h=P_{h\circ g}$, and $P_{\mathrm{id}}$
+is the identity. Let
+\[T=\frac1N\sum_{g\in G}P_g ,\qquad E=I-T .\]</p><ul class="ct-ul"><li><p>$T^2=T$: $T^2=\frac1{N^2}\sum_g\sum_hP_{h\circ g}$, and for fixed $g$ the map $h\mapsto h\circ g$ is a bijection of $G$, so $\sum_hP_{h\circ g}=NT$.</p></li><li><p>$T$ is self-adjoint: as $P_{g^{-1}}$ preserves the inner product and $P_{g^{-1}}P_g=P_{\mathrm{id}}$, we get
+$\langle P_gv,w\rangle=\langle v,P_{g^{-1}}w\rangle$; summing over $g$ and using that $g\mapsto g^{-1}$ is a bijection of $G$ gives $\langle Tv,w\rangle=\langle v,Tw\rangle$.</p></li></ul><p>Hence $E^2=I-2T+T^2=E$ and $E$ is self-adjoint, so for every $v$
+\[\langle Ev,Ev\rangle=\langle v,E^2v\rangle=\langle v,Ev\rangle. \tag{$*$}\]</p><p>Now take $v_0(i,j)=1$ for $i&lt;j$ (and $-1$ for $i&gt;j$). For $i&lt;j$, among the $N$ permutations in $G$ exactly $Z(i,j)$ give $v_0(g(i),g(j))=-1$ and the others give
+$+1$, so $(Tv_0)(i,j)=1-\frac{2Z(i,j)}N$ and $(Ev_0)(i,j)=\frac{2Z(i,j)}N$. Then $(*)$ for $v_0$ reads
+\[\frac4{N^2}\sum_{i&lt;j}Z(i,j)^2=\frac2N\sum_{i&lt;j}Z(i,j),\qquad\text{that is,}\qquad \sum_{i&lt;j}Z(i,j)^2=\frac N2\sum_{i&lt;j}Z(i,j).\]</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p9">
@@ -260,8 +297,8 @@ are elements of the sequence with equal sums, as required.</p>
 <h3>Problem 10</h3>
 <div class="ct-meta">Geometry &middot; LPS VII, Chapter 51: Spiral Similarity and Advanced Transformational Geometry</div>
 <div class="ct-text"><p>A cyclic convex quadrilateral $ABCD$ is given. Rays $AB$ and $DC$ meet at $X$. Rays $AD$ and $BC$ meet at $Y$. Let $I,J$ be the incenters of $BCX$ and $CDY$ respectively. Circumcircles of $BCX$ and $CDY$ meet again at $Z\ne C$. Assume that $CX=CY$. Prove that $ZI=ZJ$.</p></div>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Equal circles and a rotation about $Z$)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Equal circles and a rotation about $Z$)</h4>
 <div class="ct-fig"><img style="width:373px" src="/assets/contests/2026-27/poland-r1-10_s1.svg" alt="Figure for the solution"></div>
 <p>Let $\omega_1=(BCX)$ and $\omega_2=(CDY)$ with radii $r_1,r_2$. Note that $B,C,Y$ are collinear and $X,C,D$ are collinear.</p><p><strong>Step 1: $r_1=r_2$.</strong> Since $X$ lies on ray $AB$ beyond $B$, $\angle CBX=180^\circ-\angle ABC$; since $Y$ lies on ray $AD$ beyond $D$,
 $\angle CDY=180^\circ-\angle ADC=\angle ABC$ ($ABCD$ is cyclic). By the law of sines, $CX=2r_1\sin\angle CBX=2r_1\sin\angle ABC$ and $CY=2r_2\sin\angle CDY=2r_2\sin\angle ABC$.
@@ -275,6 +312,28 @@ $C$ and $N'$. Thus $C$ lies between $N$ and $N'$.</p><p><strong>Step 4.</strong>
 \[ZN=ZN'\qquad\text{and}\qquad NI=NB=N'Y=N'J=:\rho .\]
 Put a coordinate on $\ell$ with $C=0$, $N=\nu&gt;0$, $N'=-\nu'&lt;0$. Then $I=\nu-\rho$ and $J=-\nu'+\rho$, so the midpoint of $IJ$ is $\frac{\nu-\nu'}2$, the midpoint of
 $NN'$. Since $ZN=ZN'$, the point $Z$ lies on the perpendicular to $\ell$ through this midpoint, which is the perpendicular bisector of $IJ$. Hence $ZI=ZJ$.</p>
+<h4>Solution 2 (Coordinates with $C$ at the origin)</h4>
+<p>As $ABCD$ is convex, $X$ lies beyond $B$ on ray $AB$ and beyond $C$ on ray $DC$, and $Y$ lies beyond $D$ on ray $AD$ and beyond $C$ on ray $BC$. So $C$
+lies strictly between $D$ and $X$, and strictly between $B$ and $Y$. Scale so that $CX=CY=1$, and let $b=CB$, $d=CD$.</p><p><strong>Step 1: two lengths and an angle.</strong> Use the vectors $X$, $Y$ (from $C$) as an oblique basis: $B=-bY$, $D=-dX$. A point $xX+yY$ of line $XB$ has the form
+$X+\tau(B-X)$, i.e. $(x,y)=(1-\tau,-b\tau)$, and $A$ corresponds to $\tau=\frac{XA}{XB}&gt;1$; a point of line $YD$ has $(x,y)=(-d\sigma,1-\sigma)$. So $A$ satisfies
+$y=b(x-1)$ and $x=d(y-1)$, whence $x(1-bd)=-d(1+b)$. As $x=1-\tau&lt;0$, we get $1-bd&gt;0$ and
+\[\frac{XA}{XB}=1-x=\frac{1+d}{1-bd}.\]
+The power of $X$ with respect to the circle $ABCD$ gives $XA\cdot XB=XC\cdot XD=1+d$, so $XB^2=1-bd$; in the same way $YD^2=1-bd$. Put $\kappa=\sqrt{1-bd}$.
+The law of cosines in $XCB$, where $\angle XCB=180^\circ-\angle XCY$, gives $\kappa^2=1+b^2+2b\cos\angle XCY$, so $\cos\angle XCY=-\frac{b+d}2$.</p><p><strong>Step 2: the incentres.</strong> Now use orthonormal coordinates with $X=(t,s)$, $Y=(t,-s)$, where $t,s&gt;0$, $t^2+s^2=1$ (the $x$-axis bisects $\angle XCY$). From
+$t^2-s^2=\cos\angle XCY$,
+\[s^2=\frac{2+b+d}4,\qquad t^2=\frac{2-b-d}4,\qquad B=(-bt,bs),\qquad D=(-dt,-ds).\]
+The angle $BCX$ is bounded by the directions $(-t,s)$ and $(t,s)$, so its bisector is the positive $y$-axis; the angle $YCD$ is bounded by $(t,-s)$ and $(-t,-s)$,
+so its bisector is the negative $y$-axis. Thus $I=(0,i)$, $J=(0,-j)$ with $i,j&gt;0$. The inradius of $BCX$ is the distance $it$ from $I$ to the line $CX$, its area is
+$\frac12\,b\cdot1\cdot\sin\angle BCX=bst$, and its semiperimeter is $\frac12(1+b+\kappa)$; so $i=\frac{2bs}{1+b+\kappa}$, and likewise $j=\frac{2ds}{1+d+\kappa}$
+(triangle $CDY$ has sides $1,d,\kappa$). Using $\kappa^2=1-bd$ one checks $(1+b+\kappa)(1+d+\kappa)=(1+\kappa)(2+b+d)$, hence
+\[\frac{i-j}2=\frac{s\bigl(b(1+d+\kappa)-d(1+b+\kappa)\bigr)}{(1+\kappa)(2+b+d)}=\frac{s(b-d)}{2+b+d}=\frac{b-d}{4s}=:w .\]
+So the perpendicular bisector of $IJ$ is the line $y=w$.</p><p><strong>Step 3: the point $Z$.</strong> The circle $BCX$ passes through $C=(0,0)$, so it is $x^2+y^2=Ux+Vy$; the points $X$ and $B$ give $1=Ut+Vs$ and $b=-Ut+Vs$, so
+$U=\frac{1-b}{2t}$, $V=\frac{1+b}{2s}$. In the same way the circle $CDY$ is $x^2+y^2=U'x+V'y$ with $U'=\frac{1-d}{2t}$, $V'=-\frac{1+d}{2s}$. For the point
+$(t,w)$, using $16s^2=4(2+b+d)$:
+\[t^2-Ut+w^2-Vw=\frac{b-d}4+\frac{(b-d)\bigl((b-d)-2(1+b)\bigr)}{16s^2}=\frac{b-d}4-\frac{(b-d)(2+b+d)}{16s^2}=0,\]
+\[t^2-U't+w^2-V'w=\frac{d-b}4+\frac{(b-d)\bigl((b-d)+2(1+d)\bigr)}{16s^2}=\frac{d-b}4+\frac{(b-d)(2+b+d)}{16s^2}=0.\]
+The two circles are different ($V&gt;0&gt;V'$), so they meet in at most two points; $C$ and $(t,w)\ne C$ are common points, hence $Z=(t,w)$. Thus $Z$ lies on the
+perpendicular bisector of $IJ$, and $ZI=ZJ$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p11">
@@ -284,8 +343,8 @@ $NN'$. Since $ZN=ZN'$, the point $Z$ lies on the perpendicular to $\ell$ through
 \[\sum_{k=0}^{n}a_k=\sum_{k=0}^{n}b_k\quad\text{and}\quad\sum_{k=0}^{n}ka_k=\sum_{k=0}^{n}kb_k.\]
 Prove that
 \[\sum_{k=0}^{n}k^2a_k\le\sum_{k=0}^{n}k^2b_k.\]</p></div>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Two sign changes and a quadratic weight)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Two sign changes and a quadratic weight)</h4>
 <p>Let $b_k=b_0r^k$ and $c_k=\ln a_k-\ln b_k$. The hypothesis $a_k^2\ge a_{k-1}a_{k+1}$ says $2\ln a_k\ge\ln a_{k-1}+\ln a_{k+1}$, and $\ln b_k$ is linear in $k$, so
 \[c_{k+1}-c_k\le c_k-c_{k-1}\qquad(1\le k\le n-1):\]
 the differences $\Delta_k=c_{k+1}-c_k$ are non-increasing.</p><p><strong>The set where $a_k\ge b_k$ is an interval.</strong> Let $i&lt;j&lt;l$ with $c_i\ge0$ and $c_l\ge0$. Since the $\Delta$'s are non-increasing,
@@ -295,6 +354,20 @@ $\varphi(k)&lt;0$, while $a_k-b_k\ge0$; for the other integers $k$ both factors 
 $\sum(a_k-b_k)=0$ and $\sum k(a_k-b_k)=0$:
 \[0\ge\sum_{k=0}^n\varphi(k)(a_k-b_k)=\sum k^2(a_k-b_k)-(p+q)\sum k(a_k-b_k)+\bigl(p-\tfrac12\bigr)\bigl(q+\tfrac12\bigr)\sum(a_k-b_k)=\sum_{k=0}^nk^2(a_k-b_k).\]
 Hence $\sum k^2a_k\le\sum k^2b_k$.</p>
+<h4>Solution 2 (Moving mass towards the ends)</h4>
+<p>Let $d_k=a_k-b_k$; then $\sum d_k=0$ and $\sum kd_k=0$, and we must show $\sum k^2d_k\le0$. If all $d_k=0$ there is nothing to prove; assume not.</p><p><strong>The surplus is an interval.</strong> With $c_k=\ln a_k-\ln b_k$ as in Solution 1, for $i&lt;j&lt;l$ we have $c_j\ge\frac{(l-j)c_i+(j-i)c_l}{l-i}$; so if $c_i&gt;0$ and
+$c_l&gt;0$ then $c_j&gt;0$. Hence the indices with $d_k&gt;0$ form an interval $\{u,\dots,v\}$, which is non-empty since $\sum d_k=0$ and $d\ne0$. Outside it, $d_k\le0$.</p><p><strong>Deficits on both sides.</strong> Let $\mathcal L=\{k&lt;u\}$, $\mathcal R=\{k&gt;v\}$, and $L_0=\sum_{\mathcal L}(-d_k)$, $R_0=\sum_{\mathcal R}(-d_k)$,
+$P_0=\sum_{k=u}^vd_k&gt;0$. Then $L_0+R_0=P_0$. If $R_0=0$, then $L_0=P_0$ and $\sum kd_k\ge uP_0-(u-1)L_0&gt;0$, a contradiction; similarly $L_0&gt;0$. Let
+$\ell=\frac1{L_0}\sum_{\mathcal L}k(-d_k)\le u-1$ and $r=\frac1{R_0}\sum_{\mathcal R}k(-d_k)\ge v+1$ be the mean positions of the two deficits. Then
+$\sum kd_k=0$ says
+\[\sum_{k=u}^vkd_k=\ell L_0+rR_0 . \tag{1}\]</p><p><strong>Splitting the surplus.</strong> For $\ell&lt;k&lt;r$ we have $k=\frac{(r-k)\ell+(k-\ell)r}{r-\ell}$ and
+\[k^2=\frac{(r-k)\ell^2+(k-\ell)r^2}{r-\ell}-(k-\ell)(r-k).\]
+Multiply by $d_k&gt;0$ and add over $u\le k\le v$; with $\alpha=\sum_{k=u}^vd_k\frac{r-k}{r-\ell}$ and $\beta=\sum_{k=u}^vd_k\frac{k-\ell}{r-\ell}$,
+\[\sum_{k=u}^vk^2d_k&lt;\alpha\ell^2+\beta r^2,\qquad \alpha+\beta=P_0=L_0+R_0,\qquad \alpha\ell+\beta r=\sum_{k=u}^vkd_k=\ell L_0+rR_0 .\]
+Since $\ell\ne r$, the last two equations determine $\alpha,\beta$, so $\alpha=L_0$ and $\beta=R_0$. Hence $\sum_{k=u}^vk^2d_k&lt;L_0\ell^2+R_0r^2$.</p><p><strong>The deficits.</strong> Expanding the square and using the definition of $\ell$,
+$\sum_{\mathcal L}k^2(-d_k)-L_0\ell^2=\sum_{\mathcal L}(k-\ell)^2(-d_k)\ge0$, and likewise on $\mathcal R$. Therefore
+\[\sum_{k\notin[u,v]}k^2(-d_k)\ge L_0\ell^2+R_0r^2&gt;\sum_{k=u}^vk^2d_k ,\]
+that is, $\sum k^2d_k&lt;0$. So $\sum k^2a_k\le\sum k^2b_k$, with equality only when $a_k=b_k$ for all $k$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p12">

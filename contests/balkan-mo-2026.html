@@ -127,8 +127,8 @@ produces exactly $T''$.</p>
 <h3>Problem 3</h3>
 <div class="ct-meta">Geometry &middot; LPS VII, Chapter 51: Spiral Similarity and Advanced Transformational Geometry</div>
 <div class="ct-text"><p>Let $ABCD$ be a parallelogram with $\angle DAB&lt;90^\circ$ and $AB&lt;AD$. Let $H$ be the orthocentre of $\triangle BCD$ and $H'$ be the reflection of $H$ over line $BD$. Line $AH$ intersects the lines $BD$, $CD$, and $BC$ at $E$, $F$, and $G$ respectively. Prove that the circumcircles of $\triangle HEH'$ and $\triangle CFG$ are tangent.</p></div>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (The Miquel point lies on line $C^*E$)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (The Miquel point lies on line $C^*E$)</h4>
 <div class="ct-fig"><img style="width:267px" src="/assets/contests/2026-27/balkan-mo-3_s1.svg" alt="Figure for the solution"></div>
 <p>We use directed angles $\measuredangle(p,q)$ between lines, modulo $180^\circ$. Let $\omega$ be the circle $BCD$, $C^*$ the
 point of $\omega$ diametrically opposite to $C$, and $\ell$ the line $AH$ (which contains $E,F,G$).</p><p><strong>Step 1: $\ell\parallel CC^*$, and $H'\in\omega$, $H'\in CH$.</strong> Since $CC^*$ is a diameter, $C^*D\perp CD$ and $C^*B\perp CB$; also
@@ -140,7 +140,7 @@ collinear. $Z$ is not the midpoint of $BD$ (else $\angle BCD=90^\circ$, but $\an
 bisector of $BD$, so line $AC$, which passes through the midpoint of $BD$, would be this bisector; then $CB=CD$, i.e. $AD=AB$. Hence
 $C\notin\ell$, so $F,G\ne C$ and $C^*\notin\ell$ (in particular $C^*\ne E$). (b) $\ell$ does not pass through $B$ or $D$. If $B\in\ell$, then
 $\ell=AB\parallel CD$, so $CC^*=CD$, $\angle CBD=90^\circ$, and in triangle $ABD$ (right-angled at $D$) $AB&gt;AD$, a contradiction. If $D\in\ell$,
-then similarly $\angle BDC=90^\circ$ and $H=E=H'=D$, so the triangle $HEH'$ of the statement does not exist.</p><p><strong>Step 2: the point $M$.</strong> Let $M$ be the second intersection of line $C^*E$ with $\omega$ ($M=C^*$ if this line is tangent to $\omega$).
+then similarly $\angle BDC=90^\circ$ and $H=E=H'=D$, so the triangle $HEH'$ of the statement does not exist. (c) The statement also presupposes that $\ell$ meets $BD$, i.e. $\ell\nparallel BD$; this fails for some shapes (for example $AB=1$, $AD=\sqrt2$, $\angle DAB=\arccos\frac{2\sqrt2}{3}$), and then there is nothing to prove, so we assume it.</p><p><strong>Step 2: the point $M$.</strong> Let $M$ be the second intersection of line $C^*E$ with $\omega$ ($M=C^*$ if this line is tangent to $\omega$).
 Then $M\ne C$, since $E\notin CC^*$ by (a); and $M\notin\ell$, since line $C^*E$ meets $\ell$ only at $E$, and $E\in\omega$ would put $E$ in
 $\omega\cap BD=\{B,D\}$, excluded by (b). If $M=C^*$, the line $MC^*$ below means the tangent at $C^*$, and the inscribed angle steps hold
 by the tangent&ndash;chord theorem. Since $CC^*$ is a diameter, $MC\perp ME$.
@@ -161,6 +161,27 @@ and with $\measuredangle(MC,ME)=90^\circ$ this gives $\measuredangle(MC,MH)=\mea
 $\measuredangle(MG,MC)=\measuredangle(FG,FC)=\measuredangle(\ell,DC)$. Therefore
 \[\measuredangle(MG,MH)=\measuredangle(\ell,DC)+\measuredangle(BD,\ell)=\measuredangle(DB,DC)=\measuredangle(ME,MF).\]
 By Step 4, the circles $HEH'$ and $CFG$, which both pass through $M$, are tangent at $M$.</p>
+<h4>Solution 2 (Coordinates along line $AH$ and signed radii)</h4>
+<p>We assume, as the statement does, that the points $E,F,G$ exist and that the two triangles are non-degenerate.</p><p><strong>Set-up.</strong> Take $AB$ as the unit of length and coordinates $A=(0,0)$, $B=(1,0)$, $D=(u,v)$, $C=(1+u,v)$ with $v&gt;0$. Then $\angle DAB&lt;90^\circ$ gives $u&gt;0$, and $AB&lt;AD$ gives $w=u^2+v^2&gt;1$. Put
+\[p=v^2,\quad J=w-u,\quad M=p-uJ=(1-u)w,\quad N=M+J,\quad W=w-1,\quad T=w+1-2u.\]
+Here $J&gt;0$ (as $u&lt;\sqrt w&lt;w$), $W&gt;0$, and $T=(u-1)^2+v^2=BD^2&gt;0$. We shall use the identities
+\[N-p=(1-u)J,\quad J-p=u(u-1),\quad M-p=-uJ,\quad M-J=-uW,\quad (1-u)J-p=-uT,\]
+\[p+J^2=wT,\qquad pW^2+N^2=wT^2,\qquad p(w+1)-uN=wT,\]
+each checked by expanding in $u$ and $v$.</p><p><strong>The orthocentre.</strong> The altitude of triangle $BCD$ from $B$ is perpendicular to $CD$, which is horizontal, so it is the line $x=1$. The altitude from $D$ is perpendicular to $BC$, whose direction is $(u,v)$; its points satisfy $u(x-u)+v(y-v)=0$, and $x=1$ gives $y=\frac{w-u}{v}$. Hence $H=(1,h)$ with $h=\frac Jv&gt;0$, and $1+h^2=\frac{p+J^2}{p}=\frac{wT}{p}$.</p><p><strong>New coordinates.</strong> The vectors $(1,h)$ and $(-h,1)$ are perpendicular and have the same length $\sqrt{1+h^2}$. Write every point as $X(1,h)+Y(-h,1)$; then $(X,Y)$ are Cartesian coordinates in which all lengths are divided by the same factor $\sqrt{1+h^2}$. Circles stay circles and the tangency of two circles is unaffected, so from now on we work in $(X,Y)$. The line $\ell=AH$ is the $X$-axis, and its point $(x,hx)$ has $X=x$; in particular $H=(1,0)$. A vector $(a,b)$ has new components $\frac{(a+hb,\ b-ha)}{1+h^2}$. This gives:</p><ul class="ct-ul"><li><p>$BD$, direction $(u-1,v)$: new components proportional to $(W,\ N/v)$, since $u-1+hv=u-1+J=W$ and $v-h(u-1)=\frac{p-(u-1)J}{v}=\frac Nv$; its slope is $\frac{N}{vW}$.</p></li><li><p>$CD$, direction $(1,0)$: slope $-h$.</p></li><li><p>$BC$, direction $(u,v)$: components proportional to $(w,\ M/v)$, since $u+hv=w$ and $v-hu=\frac Mv$; its slope is $\frac{M}{vw}=\frac{1-u}{v}$.</p></li><li><p>$C$: $Y_C=\frac{v-h(1+u)}{1+h^2}=\frac{M-J}{v(1+h^2)}=-\frac{uW}{v(1+h^2)}\ne0$.</p></li></ul><p><strong>The points $E,F,G$.</strong> On $\ell$, $F$ is the point $(x,hx)$ with $hx=v$, so $f=X_F=\frac vh=\frac pJ$. For $G$, solve $(x,hx)=(1+\lambda u,\lambda v)$: then $\lambda(v-hu)=h$, so $\lambda=\frac{J}{M}$ and $g=1+\frac{uJ}{M}=\frac pM$. For $E$, solve $(x,hx)=(1+\lambda(u-1),\lambda v)$: then $\lambda\frac Nv=h$, so $\lambda=\frac JN$ and $e=1+\frac{(u-1)J}{N}=\frac pN$. As $G$ and $E$ exist, $M\ne0$ and $N\ne0$; in particular $u\ne1$. By the identities, $e\ne1$, $f\ne1$, $g\ne1$ and $f\ne g$, so $E,F,G$ all differ from $H$ and $F\ne G$. Put
+\[r=1-e,\qquad s=f-g=\frac{p(M-J)}{JM}=-\frac{puW}{JM};\]
+both are non-zero.</p><p><strong>The circle $\Gamma_1=(HEH')$.</strong> The reflection in $BD$ swaps $H$ and $H'$, so the centre $O_1$ lies on $BD$. It also lies on the perpendicular bisector of the chord $HE$ of the $X$-axis, so $X_{O_1}=\frac{1+e}2$. Starting from $E=(e,0)$ on $BD$ and moving along $BD$ by $\frac r2$ in $X$ changes $Y$ by $\frac r2\cdot\frac N{vW}$. Hence
+\[2O_1=\Bigl(1+e,\ \frac{rN}{vW}\Bigr),\qquad 4R_1^2=4\,O_1E^2=r^2\Bigl(1+\frac{N^2}{pW^2}\Bigr)=\frac wp\Bigl(\frac{rT}W\Bigr)^2,\]
+using $pW^2+N^2=wT^2$.</p><p><strong>The circle $\Gamma_2=(CFG)$.</strong> A circle through $(f,0)$ and $(g,0)$ has an equation $(X-f)(X-g)+Y^2-\beta Y=0$ for some $\beta$, its centre is $O_2=\bigl(\frac{f+g}2,\frac\beta2\bigr)$ and $4R_2^2=s^2+\beta^2$. Since $C$ lies on line $CD$ through $F$ (slope $-h$) and on line $BC$ through $G$ (slope $\frac{1-u}v$),
+\[X_C-f=-\frac{Y_C}{h},\qquad X_C-g=\frac{vY_C}{1-u}.\]
+Substituting $C$ into the equation and dividing by $Y_C\ne0$:
+\[\beta=Y_C\Bigl(1-\frac{v}{h(1-u)}\Bigr)=Y_C\cdot\frac{(1-u)J-p}{(1-u)J}=\frac{uW}{v(1+h^2)}\cdot\frac{uT}{(1-u)J}=\frac{u^2Wp}{vMJ}=-\frac{us}{v},\]
+using $1+h^2=\frac{wT}p$ and $(1-u)w=M$. Therefore
+\[2O_2=\Bigl(f+g,\ -\frac{us}{v}\Bigr),\qquad 4R_2^2=s^2\Bigl(1+\frac{u^2}{p}\Bigr)=\frac wp\,s^2.\]</p><p><strong>The distance of the centres.</strong> Write $2(O_1-O_2)=(d_X,d_Y)$ with $d_X=1+e-f-g$ and $d_Y=\frac{rN}{vW}+\frac{us}{v}$. Expanding (an identity in $e,f,g$),
+\[\frac{d_X^2-r^2-s^2}{2}=(1-f)(e-g)+(1-g)(e-f).\]
+From the identities, $1-f=\frac{u(u-1)}J$, $e-g=-\frac{pJ}{NM}$, $1-g=-\frac{uJ}M$, $e-f=-\frac{pM}{NJ}$, so the right-hand side is
+\[\frac{up}{N}\Bigl(1-\frac{u-1}{M}\Bigr)=\frac{up}{N}\cdot\frac{(1-u)(w+1)}{M}=\frac{up(w+1)}{Nw}=-rs\,\frac{w+1}{W},\]
+where the last step uses $rs=\frac{(1-u)J}{N}\cdot\Bigl(-\frac{puW}{JM}\Bigr)=-\frac{puW}{Nw}$. For the $Y$-components, $d_Y^2$ equals $\frac{r^2N^2}{pW^2}+\frac{u^2s^2}{p}+2rs\frac{uN}{pW}$. Adding everything and using $p(w+1)-uN=wT$,
+\[4\,O_1O_2^2=4R_1^2+4R_2^2+2rs\,\frac{uN-p(w+1)}{pW}=\frac wp\Bigl[\Bigl(\frac{rT}{W}\Bigr)^2+s^2-2\,\frac{rT}{W}\,s\Bigr]=\frac wp\Bigl(\frac{rT}{W}-s\Bigr)^2.\]</p><p><strong>Conclusion.</strong> Put $\rho_1=\frac{rT}W$, $\rho_2=s$ and $k=\frac12\sqrt{w/p}$. Then $R_1=k|\rho_1|$, $R_2=k|\rho_2|$ and $O_1O_2=k|\rho_1-\rho_2|$, with $\rho_1,\rho_2\ne0$. If $\rho_1,\rho_2$ have opposite signs, $O_1O_2=R_1+R_2$ and the circles are externally tangent. If they have the same sign, $O_1O_2=|R_1-R_2|$. The circles are distinct, because $H\in\Gamma_1$ while $\Gamma_2$ meets the $X$-axis only at $F$ and $G$, whose $X$-coordinates $f,g$ differ from $1$. So in this case they are internally tangent. In both cases the circumcircles of $HEH'$ and $CFG$ are tangent.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p4">

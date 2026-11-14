@@ -124,11 +124,13 @@ and $p+q=29+50=\boxed{79}$. (The figure shows the extreme position, where $OQ=15
 <div class="ct-meta">Number Theory &middot; LPS VII, Chapter 25: Diophantine Equations: Factorization and Algebraic Methods</div>
 <div class="ct-text"><p>Find the number of integers less than or equal to $100$ that are equal to $a+b+ab$ for some choice of distinct positive integers $a$ and $b$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$70$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Add one and factor)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Add one and factor)</h4>
 <p>Since $a+b+ab=(a+1)(b+1)-1$, put $x=a+1$ and $y=b+1$. Then $n=a+b+ab$ with distinct positive integers $a,b$ if and only if
 \[n+1=xy\quad\text{for some integers } 2\le x&lt;y.\]
 We claim that an integer $N\ge 2$ can be written as $xy$ with $2\le x&lt;y$ if and only if $N$ is composite and not the square of a prime.</p><ul class="ct-ul"><li><p>If $N$ is prime, it has no factorization with both factors at least $2$.</p></li><li><p>If $N=p^2$ with $p$ prime, its divisors are $1,p,p^2$, so the only factorization with both factors at least $2$ is $p\cdot p$, whose factors are equal.</p></li><li><p>Otherwise $N$ is composite and not a prime square. Let $p$ be its smallest prime factor and write $N=p\cdot \frac{N}{p}$. Every prime factor of $\frac{N}{p}$ is at least $p$, so $\frac Np\ge p$, and $\frac Np\ne p$ because $N\ne p^2$. So $x=p$, $y=\frac Np$ works.</p></li></ul><p>The condition $n\le 100$ means $N=n+1\le 101$, and $N\ge 2\cdot 3=6$ guarantees $n\ge 5&gt;0$. Among $2,3,\dots,101$ (that is, $100$ integers) there are $26$ primes, hence $74$ composites. Removing the prime squares $4,9,25,49$ leaves $70$ values of $N$, and different $N$ give different $n$. The answer is $\boxed{70}$.</p>
+<h4>Solution 2 (Count by the smallest prime factor)</h4>
+<p>Since $a+b+ab=(a+1)(b+1)-1$, the number $n$ has the required form exactly when $N=n+1$ can be written as $N=xy$ with integers $2\le x&lt;y$ (put $x=a+1$, $y=b+1$, and swap $a,b$ if needed). The condition $n\le 100$ becomes $N\le 101$.</p><p>Let $p$ be the smallest prime factor of $N$ and write $N=pm$. We claim that $N$ has a factorization $xy$ with $2\le x&lt;y$ if and only if $m&gt;p$. If $m&gt;p$, take $x=p$, $y=m$. Conversely, suppose $N=xy$ with $2\le x&lt;y$. Every prime factor of $N$ is at least $p$, so $x\ge p$, and then $N=xy&gt;x^2\ge p^2$, so $m=N/p&gt;p$.</p><p>Every prime factor of $m$ is a prime factor of $N$, hence at least $p$. So the numbers $N$ we want are exactly the products $N=pm\le 101$ in which $p$ is prime, $m&gt;p$, and every prime factor of $m$ is at least $p$; each such $N$ arises once, from its smallest prime factor $p$. Since $m&gt;p$ gives $N&gt;p^2$, we need $p^2&lt;101$, so $p\in\{2,3,5,7\}$.</p><ul class="ct-ul"><li><p>$p=2$: $m$ is any integer with $3\le m\le 50$; that is $48$ values.</p></li><li><p>$p=3$: $m$ is odd with $4\le m\le 33$, that is $m=5,7,\dots,33$; $15$ values.</p></li><li><p>$p=5$: $m$ has no prime factor $2$ or $3$ and $6\le m\le 20$, that is $m=7,11,13,17,19$; $5$ values.</p></li><li><p>$p=7$: $m$ has no prime factor $2$, $3$ or $5$ and $8\le m\le 14$, that is $m=11,13$; $2$ values.</p></li></ul><p>The total is $48+15+5+2=\boxed{70}$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p5">
@@ -174,11 +176,21 @@ Since $c+5&gt;0$, there are exactly two solutions, $M=\pm\sqrt{20(c+5)}$, and th
 <div class="ct-text"><p>Find the number of functions $\pi$ mapping the set $A=\{1,2,3,4,5,6\}$ onto $A$ such that for every $a\in A$,
 \[\pi(\pi(\pi(\pi(\pi(\pi(a))))))=a.\]</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$396$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Complementary counting)</h4>
 <p>A function from the finite set $A$ onto $A$ is a bijection, so $\pi$ is a permutation of $A$. Write $\pi$ as a product of disjoint cycles. If $a$ lies in a cycle of length $\ell$, then $\pi^k(a)=a$ exactly when $\ell\mid k$. Hence $\pi^6$ is the identity if and only if every cycle length divides $6$, that is, every cycle has length $1$, $2$, $3$ or $6$.</p><p>There are $6!=720$ permutations in total. A permutation of $6$ elements fails the condition exactly when it has a cycle of length $4$ or $5$, and it cannot have both.</p><ul class="ct-ul"><li><p>A $5$-cycle: choose its $5$ elements in $6$ ways and arrange them in a cycle in $4!=24$ ways; the remaining element is fixed. This gives $144$ permutations.</p></li><li><p>A $4$-cycle: choose its $4$ elements in $\binom64=15$ ways and arrange them in a cycle in $3!=6$ ways; the remaining two elements are either both fixed or swapped, $2$ ways. This gives $180$ permutations.</p></li></ul><p>The answer is $720-144-180=\boxed{396}$.</p>
 <h4>Solution 2 (Counting by cycle type)</h4>
 <p>A function from the finite set $A$ onto $A$ is a permutation, and $\pi^6$ is the identity if and only if every cycle length of $\pi$ divides $6$ (a point on a cycle of length $\ell$ returns to itself after $k$ steps exactly when $\ell\mid k$). So we count permutations of $6$ elements whose cycle lengths all lie in $\{1,2,3,6\}$. The number of permutations of $6$ elements with $m_\ell$ cycles of length $\ell$ is $\dfrac{6!}{\prod_\ell \ell^{m_\ell}\, m_\ell!}$. The allowed cycle types are:</p><ul class="ct-ul"><li><p>$1+1+1+1+1+1$: $1$;</p></li><li><p>$2+1+1+1+1$: $\frac{720}{2\cdot 4!}=15$;</p></li><li><p>$2+2+1+1$: $\frac{720}{2^2\cdot 2!\cdot 2!}=45$;</p></li><li><p>$2+2+2$: $\frac{720}{2^3\cdot 3!}=15$;</p></li><li><p>$3+1+1+1$: $\frac{720}{3\cdot 3!}=40$;</p></li><li><p>$3+2+1$: $\frac{720}{3\cdot 2}=120$;</p></li><li><p>$3+3$: $\frac{720}{3^2\cdot 2!}=40$;</p></li><li><p>$6$: $\frac{720}{6}=120$.</p></li></ul><p>The total is $1+15+45+15+40+120+40+120=\boxed{396}$.</p>
+<h4>Solution 3 (A recursion on the smallest element)</h4>
+<p>A function from the finite set $A$ onto $A$ is a permutation, and $\pi^6$ is the identity exactly when every cycle of $\pi$ has length $1$, $2$, $3$ or $6$ (a point on a cycle of length $\ell$ returns to itself after $k$ steps exactly when $\ell\mid k$).</p><p>For $j\ge 0$ let $F_j$ be the number of permutations of a $j$-element set of integers whose cycle lengths all lie in $\{1,2,3,6\}$; so $F_0=1$ (the empty permutation). For $j\ge1$, look at the cycle containing the smallest element $s$, and let $d$ be its length, with $d\in\{1,2,3,6\}$ and $d\le j$. There are $\binom{j-1}{d-1}$ ways to choose the other $d-1$ elements of this cycle and $(d-1)!$ ways to arrange them: the cycle is $s\to c_1\to\dots\to c_{d-1}\to s$ for an ordering $c_1,\dots,c_{d-1}$ of them. The remaining $j-d$ elements form a permutation of the same kind, in $F_{j-d}$ ways. Hence
+\[F_j=\sum_{\substack{d\in\{1,2,3,6\}\\ d\le j}}\binom{j-1}{d-1}(d-1)!\,F_{j-d}.\]
+Now
+\begin{align*}
+F_1&amp;=F_0=1, &amp; F_2&amp;=F_1+F_0=2,\\
+F_3&amp;=F_2+2F_1+2F_0=6, &amp; F_4&amp;=F_3+3F_2+3\cdot2\,F_1=18,\\
+F_5&amp;=F_4+4F_3+6\cdot 2\,F_2=66, &amp; F_6&amp;=F_5+5F_4+10\cdot 2\,F_3+5!\,F_0=66+90+120+120.
+\end{align*}
+So the answer is $F_6=\boxed{396}$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p8">
@@ -244,8 +256,8 @@ Indeed $A'C'$ is vertical, so it is perpendicular to $BC$. Line $B'C'$ has direc
 \[M=\sum_{i=1}^{8}\sum_{j=1}^{7}\left(|a_{i,j+1}-a_{i,j}|+|a_{j+1,i}-a_{j,i}|\right).\]
 Find the remainder when the maximum possible value of $M$ is divided by $1000$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$896$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Threshold cuts)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Threshold cuts)</h4>
 <div class="ct-fig"><img style="width:224px" src="/assets/contests/2026-27/aime-11_s1.svg" alt="Figure for the solution"></div>
 <p>Call two cells sharing a side <em>adjacent</em>; there are $8\cdot 7+8\cdot 7=112$ adjacent pairs, and $M$ is the sum of $|x-y|$ over them. For a set $S$ of cells, let $c(S)$ be the number of adjacent pairs with exactly one cell in $S$. Note that $c(S)$ equals $c$ of the complement of $S$.</p><p><strong>Step 1: slicing.</strong> For $t=1,2,\dots,63$ let $S_t$ be the set of cells whose number exceeds $t$, so $|S_t|=64-t$. For an adjacent pair with numbers $x&lt;y$, the pair is split by $S_t$ exactly when $x\le t&lt;y$, which happens for $y-x$ values of $t$. Summing over all pairs,
 \[M=\sum_{t=1}^{63}c(S_t).\]</p><p><strong>Step 2: bounds on $c(S)$.</strong> Let $|S|=k\le 32$. A cell has $4$ neighbours if it lies in the inner $6\times6$ block, $3$ if it is a non-corner border cell, and $2$ if it is a corner. If $e(S)$ is the number of adjacent pairs inside $S$, then
@@ -254,6 +266,13 @@ Find the remainder when the maximum possible value of $M$ is divided by $1000$.<
 \[M\le 2\sum_{k=1}^{31}g(k)+g(32)=2\Bigl(4\cdot171+\bigl(3\cdot 294+12\cdot18\bigr)+110\Bigr)+112=2(684+1098+110)+112=3896.\]</p><p><strong>Step 3: a matching example.</strong> Each colour class has $18$ inner cells, $12$ non-corner border cells and $2$ corners. Put $64,\dots,47$ on the black inner cells, $46,\dots,35$ on the black border cells and $34,33$ on the black corners. Then put $32,31$ on the white corners, $30,\dots,19$ on the white border cells and $18,\dots,1$ on the white inner cells (see the figure). Every adjacent pair is black&ndash;white with the larger number on black, so each black number is counted with sign $+$ once per neighbour and each white number with sign $-$:
 \[M=\bigl(4\cdot999+3\cdot486+2\cdot67\bigr)-\bigl(2\cdot63+3\cdot294+4\cdot171\bigr)=5588-1692=3896.\]
 So the maximum is $3896$, and the remainder is $\boxed{896}$.</p>
+<h4>Solution 2 (Distances from the middle value)</h4>
+<p>Call two cells sharing a side <em>adjacent</em>, and write $a_v$ for the number in cell $v$ and $\deg v$ for the number of cells adjacent to $v$. Let $\mu=\frac{65}{2}$, the midpoint of $1$ and $64$.</p><p><strong>An upper bound.</strong> For adjacent cells $u,v$ the triangle inequality gives
+\[|a_u-a_v|\le |a_u-\mu|+|a_v-\mu|,\]
+with equality exactly when $a_u$ and $a_v$ lie on opposite sides of $\mu$ (neither equals $\mu$, which is not an integer). Summing over the adjacent pairs, each cell $v$ appears in $\deg v$ pairs, so
+\[M\le \sum_{v}\deg v\cdot |a_v-\mu| .\]
+The $64$ numbers $|a_v-\mu|$ are $\frac12,\frac32,\dots,\frac{63}2$, each twice. The degrees are $4$ for the $36$ cells of the inner $6\times6$ block, $3$ for the $24$ non-corner border cells and $2$ for the $4$ corners. A sum $\sum \deg v\cdot w_v$, where the values $w_v$ are a fixed list placed on the cells in some order, is largest when larger values go to cells of larger degree: if $\deg u&gt;\deg v$ but $w_u&lt;w_v$, exchanging $w_u$ and $w_v$ changes the sum by $(\deg u-\deg v)(w_v-w_u)&gt;0$. Repeating such exchanges (each one strictly increases the sum, so this stops) reaches a placement in which a cell of larger degree never carries a smaller value, and every such placement gives the same sum. So the largest $36$ values, $\frac{63}2,\dots,\frac{29}2$ (each twice), go to degree $4$; the next $24$, $\frac{27}2,\dots,\frac52$, go to degree $3$; and $\frac32,\frac32,\frac12,\frac12$ go to degree $2$. Therefore
+\[M\le 4\cdot 2\Bigl(\tfrac{63}{2}+\dots+\tfrac{29}{2}\Bigr)+3\cdot 2\Bigl(\tfrac{27}{2}+\dots+\tfrac{5}{2}\Bigr)+2\cdot 2\Bigl(\tfrac32+\tfrac12\Bigr)=8\cdot 414+6\cdot 96+4\cdot 2=3896 .\]</p><p><strong>The bound is attained.</strong> Colour the grid like a chessboard. Each colour class has $18$ inner cells, $12$ non-corner border cells and $2$ corners. Put $1,\dots,18$ on the inner black cells, $19,\dots,30$ on the black border cells and $31,32$ on the black corners; put $64,\dots,47$ on the inner white cells, $46,\dots,35$ on the white border cells and $34,33$ on the white corners. Adjacent cells have different colours, so every adjacent pair has one number below $\mu$ and one above, and the triangle inequality is an equality for every pair. On each colour, the values $|a_v-\mu|$ are $\frac{63}2,\dots,\frac{29}2$ on the inner cells, $\frac{27}2,\dots,\frac52$ on the border cells and $\frac32,\frac12$ on the corners, which is exactly the sorted placement. Hence $M=3896$ for this grid.</p><p>The maximum is $3896$, and the remainder is $\boxed{896}$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p12">
@@ -446,7 +465,7 @@ The circle is tangent to the parabola at the point with parameter $u_0$ exactly 
 <div class="ct-meta">Combinatorics &middot; LPS VI, Chapter 38: Probability and Expected Value</div>
 <div class="ct-text"><p>A standard fair six-sided die is rolled repeatedly. Each time the die reads $1$ or $2$, Alice gets a coin; each time it reads $3$ or $4$, Bob gets a coin; and each time it reads $5$ or $6$, Carol gets a coin. The probability that Alice and Bob each receive at least two coins before Carol receives any coins can be written as $\frac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. Find $100m+n$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$754$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Inclusion-exclusion on two races)</h4>
 <p>Each roll is an A-roll (Alice), a B-roll or a C-roll, each with probability $\frac13$, independently. Let $X$ and $Y$ be the numbers of A-rolls and B-rolls before the first C-roll (with probability $1$ a C-roll eventually occurs). We want $P(X\ge2,\ Y\ge2)$. By inclusion-exclusion,
 \[P(X\ge 2,\,Y\ge 2)=1-P(X\le1)-P(Y\le1)+P(X\le1,\,Y\le1).\]
@@ -463,6 +482,12 @@ giving $p(2,1)=\frac12$ and $p(2,0)=\frac14$; by symmetry $p(1,2)=\frac12$, $p(0
 Hence
 \[p(1,1)=\tfrac13\left(\tfrac12+\tfrac12\right)=\tfrac13,\qquad p(1,0)=p(0,1)=\tfrac13\left(\tfrac14+\tfrac13\right)=\tfrac{7}{36},\qquad p(0,0)=\tfrac13\cdot\tfrac{14}{36}=\tfrac{7}{54}.\]
 The answer is $100\cdot 7+54=\boxed{754}$.</p>
+<h4>Solution 3 (Stop when the second player is done)</h4>
+<p>Call a roll an A-roll, B-roll or C-roll according to who gets the coin; each has probability $\frac13$, independently. Alice and Bob succeed exactly when both have two coins before the first C-roll. Since each roll gives a coin to only one player, in a successful game exactly one of Alice and Bob is the <em>last</em> to reach two coins, at a well-defined roll.</p><p>Suppose Alice is last. Then the rolls up to and including that moment are: some order of exactly one A-roll and $k\ge 2$ B-rolls, followed by an A-roll, and no C-roll. (Bob already has $k\ge2$ coins; Alice has one before the final roll.) Conversely every such string of rolls produces success with Alice last. For a fixed $k$ there are $k+1$ orders, each of probability $3^{-(k+2)}$. Different strings give disjoint events: none of them is the beginning of another, since each one stops at the first moment both players have two coins. So
+\[P(\text{Alice last})=\sum_{k\ge2}\frac{k+1}{3^{k+2}}=\frac1{81}\sum_{j\ge0}\frac{j+3}{3^{j}},\]
+where $j=k-2$. With $\sum_{j\ge0}x^j=\frac1{1-x}$ and $\sum_{j\ge0}jx^j=\frac{x}{(1-x)^2}$ at $x=\frac13$,
+\[\sum_{j\ge0}\frac{j+3}{3^j}=\frac{1/3}{(2/3)^2}+\frac{3}{2/3}=\frac34+\frac92=\frac{21}{4},\qquad P(\text{Alice last})=\frac{21}{324}=\frac{7}{108}.\]
+By symmetry Bob is last with the same probability, so the required probability is $\frac{7}{54}$. Since $7$ and $54$ are coprime, $100m+n=\boxed{754}$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p23">

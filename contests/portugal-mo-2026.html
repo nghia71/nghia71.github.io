@@ -102,7 +102,7 @@ come first there, in increasing order, in columns $1997,\dots,2012$.</p><p>So co
 <div class="ct-meta">Geometry &middot; LPS VI, Chapter 8: Triangle Congruence and Rigid Geometry</div>
 <div class="ct-text"><p>In trapezoid $ABCD$, with $AB\parallel CD$, the midpoint $M$ of $BC$ satisfies $\angle BAM=\angle MAD$.
 Show that $AD=AB+CD$.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Extend $AM$ to meet line $CD$)</h4>
 <div class="ct-fig"><img style="width:267px" src="/assets/contests/2026-27/portugal-mo-2_s1.svg" alt="Figure for the solution"></div>
 <p>In the trapezoid $ABCD$ the sides $AB$ and $DC$ are parallel and point in the same direction ($\vec{DC}$ is a positive multiple of
@@ -121,6 +121,13 @@ The ray $AM$ lies inside the angle $BAD$, so $N$ (on $AD$) and $B$ are on opposi
 give $\angle NMA=\angle MAB$. With the hypothesis $\angle MAB=\angle MAN$ we get $\angle NMA=\angle NAM$, so triangle $NAM$ is isosceles:
 $NM=NA=\frac{AD}{2}$. Comparing,
 \[AD=2\,NM=AB+CD .\]</p>
+<h4>Solution 3 (Areas and equal distances)</h4>
+<div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/portugal-mo-2_s3.svg" alt="Figure for the solution"></div>
+<p>Let $h&gt;0$ be the distance between the parallel lines $AB$ and $CD$. The point $M$ lies on the side $BC$ of the convex quadrilateral $ABCD$, so the ray $AM$ lies inside the angle $BAD$; by the hypothesis it is the bisector of this angle.</p><p><em>Distances from $M$.</em> As $M$ is the midpoint of $BC$, with $B$ on line $AB$ and $C$ on line $CD$, the point $M$ is at distance $\frac h2$ from each of the lines $AB$ and $CD$. Every point of the bisector of an angle is equally far from the two lines of the angle, so $M$ is also at distance $\frac h2$ from the line $AD$.</p><p><em>Areas.</em> The segments $MA$ and $MD$ cut the trapezoid into the triangles $ABM$, $MCD$ and $AMD$. Taking $AB$, $CD$, $AD$ as bases, with the heights $\frac h2$ just found,
+\[[ABM]=\frac{AB\cdot h}{4},\qquad [MCD]=\frac{CD\cdot h}{4},\qquad [AMD]=\frac{AD\cdot h}{4}.\]
+Their sum is the area of the trapezoid, $\frac{(AB+CD)\,h}{2}$. Hence
+\[\frac{(AB+CD+AD)\,h}{4}=\frac{(AB+CD)\,h}{2},\]
+and dividing by $\frac h4$ gives $AB+CD+AD=2(AB+CD)$, that is, $AD=AB+CD$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p3">
@@ -157,7 +164,7 @@ a route from $v_1$ avoiding $v_3$ must start $v_1v_2$ and then leave $v_2$ along
 <div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 31: Extremal Principle and Bounding Arguments</div>
 <div class="ct-text"><p>Pêro filled each cell of the following figure with a positive integer, obeying two rules:</p><ul class="ct-parts"><li><p><span class="ct-lbl">1.</span> In each of the eight rows, all numbers are distinct;</p></li><li><p><span class="ct-lbl">2.</span> Each number not in the last row is equal to the sum of the two numbers immediately below it.</p></li></ul><div class="ct-fig"><img style="width:335px" src="/assets/contests/2026-27/portugal-mo-4.svg" alt="Figure for Day 2, Problem 4"></div><p>In this way, Pêro wrote $29$ distinct numbers in the $36$ cells.</p><p>Pêro realized that it is possible to fill the $36$ cells using fewer distinct numbers.</p><p>What is the minimum number of distinct numbers that Pêro can write?</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$15$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Row maxima, and Fibonacci numbers)</h4>
 <div class="ct-fig"><img style="width:318px" src="/assets/contests/2026-27/portugal-mo-4_s1.svg" alt="Figure for the solution"></div>
 <p>Number the rows $1$ (top) to $8$ (bottom), and let $m_k$ be the largest number in row $k$.</p><p><em>Lower bound.</em> Every cell of row $k+1$ is one of the two cells below some cell of row $k$, and that upper cell equals it plus a positive
@@ -175,6 +182,8 @@ the row above). After $7$ steps we reach the top. The $8$ cells visited hold str
 below it; so we meet $7$ distinct numbers larger than $x$. The other $7$ cells of the bottom row hold numbers that are distinct (rule 1) and
 smaller than $x$ (since $x$ is the largest and the numbers of a row are distinct). Together with $x$ these are $7+1+7=15$ distinct numbers.</p><p><em>Construction.</em> The Fibonacci filling of Solution 1 (bottom row $1,2,3,5,8,13,21,34$; the cell in row $r$ from the bottom and position $i$
 holds $F_{2r+i+2}$) obeys both rules and uses exactly the $15$ numbers $F_2,\dots,F_{16}$.</p><p>So the minimum is $\boxed{15}$.</p>
+<h4>Solution 3 (Ranks grow by two per row)</h4>
+<p>Every number not in the bottom row is the sum of two positive numbers, so it is larger than each of them.</p><p><em>Lower bound.</em> Let $v_1&lt;v_2&lt;\dots&lt;v_N$ be the distinct numbers written, and call $i$ the <em>rank</em> of $v_i$. Number the rows from the bottom as $j=0,1,\dots,7$. We show that every number in row $j$ has rank at least $2j+1$. For $j=0$ this is clear. Suppose it holds for row $j$, and take a cell of row $j+1$ holding $x=a+b$, where $a$ and $b$ are the two cells below it, in row $j$. By rule 1, $a\ne b$, so $a$ and $b$ have different ranks, both at least $2j+1$; hence one of them, say $b$, has rank at least $2j+2$. Since $x&gt;b$, the rank of $x$ is at least $2j+3=2(j+1)+1$. This completes the induction. The top cell is in row $7$, so its rank is at least $15$, and therefore $N\ge 15$.</p><p><em>Construction.</em> Let $F_1=F_2=1$, $F_{k+2}=F_{k+1}+F_k$ be the Fibonacci numbers, and write $F_2,F_3,\dots,F_9=1,2,3,5,8,13,21,34$ in the bottom row, from left to right. Number the positions in each row from the left as $i=0,1,2,\dots$. Then the cell in row $j$ and position $i$ holds $F_{2j+i+2}$: this is true for $j=0$, and if it holds for row $j$, the cell in row $j+1$ and position $i$ holds $F_{2j+i+2}+F_{2j+i+3}=F_{2(j+1)+i+2}$. Since $F_2&lt;F_3&lt;F_4&lt;\cdots$, the numbers in each row are distinct, and the numbers used are exactly $F_2,F_3,\dots,F_{16}$ (the top is $F_{16}=987$): $15$ distinct numbers.</p><p>So the minimum is $\boxed{15}$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p5">
@@ -182,8 +191,8 @@ holds $F_{2r+i+2}$) obeys both rules and uses exactly the $15$ numbers $F_2,\dot
 <div class="ct-meta">Number Theory &middot; LPS VII, Chapter 49: Combinatorial Number Theory and Structure</div>
 <div class="ct-text"><p>A set $S$ is called <em>$n$-extremal</em> if it consists of $n$ distinct integers and, for every integer $k$ with $1\leq k\leq n$, the sum of the $k$ smallest elements of $S$ or the sum of the $k$ largest elements of $S$ (or both) is a multiple of $n$.</p><p>Determine, for each $n$, the minimum possible number of multiples of $n$ that an $n$-extremal set can contain.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$1$ if $n$ is odd, $2$ if $n$ is even</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Prefix sums modulo $n$)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Prefix sums modulo $n$)</h4>
 <p>Let $S=\{s_1&lt;s_2&lt;\dots&lt;s_n\}$, let $P_k=s_1+\dots+s_k$ ($P_0=0$) and $T=P_n$. The sum of the $k$ largest elements is $T-P_{n-k}$.</p><p><em>Reformulation.</em> For $k=n$ both sums equal $T$, so $n\mid T$. Then for $1\le k\le n-1$ the condition reads: $n\mid P_k$ or $n\mid P_{n-k}$.
 So, with
 \[Z=\{k\in\{0,1,\dots,n\}:\ n\mid P_k\},\]
@@ -203,6 +212,10 @@ $s_n$, is a multiple of $n$.</p></li><li><p><em>$n=2$:</em> take $S=\{6,12\}$; t
 also $m\in Z_0$, and the cases $k\ge m+1$ are symmetric. Inside $[1,m]$ and inside $[m+1,n-1]$ membership in $Z_0$ alternates, so $t_{k-1}=t_k$ happens
 only for $k=m+1$ (both $m,m+1\in Z_0$) and for exactly one of $k=1$, $k=n$ (because $1\in Z_0$ exactly when $m$ is odd, and, as $m\ge2$, $n-1\in Z_0$
 exactly when $m$ is even; here $1$, $m+1$ and $n$ are three different indices). So exactly two elements are multiples of $n$. (For instance $n=6$: $\{18,37,53,72,91,107\}$.)</p></li></ul><p>Therefore the minimum is $\boxed{1}$ for odd $n$ and $\boxed{2}$ for even $n$.</p>
+<h4>Solution 2 (Counting blocks of zero residues)</h4>
+<p>Let $S=\{s_1&lt;s_2&lt;\dots&lt;s_n\}$, let $P_k=s_1+\dots+s_k$ for $0\le k\le n$ (so $P_0=0$), and let $T=P_n$. The sum of the $k$ largest elements is $T-P_{n-k}$.</p><p><em>Reformulation.</em> For $k=n$ both sums equal $T$, so $n\mid T$. Then, for $1\le k\le n-1$, the sum of the $k$ largest elements is a multiple of $n$ exactly when $n\mid P_{n-k}$. Put $z_k=1$ if $n\mid P_k$ and $z_k=0$ otherwise ($0\le k\le n$). So $S$ is $n$-extremal exactly when
+\[z_0=z_n=1\qquad\text{and}\qquad z_k=1\ \text{or}\ z_{n-k}=1\quad\text{for } 1\le k\le n-1. \tag{1}\]
+Since $s_k=P_k-P_{k-1}$, if $z_{k-1}=z_k=1$ then $n\mid s_k$. So the number of multiples of $n$ in $S$ is at least the number of <em>adjacent pairs of ones</em> in the string $z_0z_1\dots z_n$, that is, of indices $k$ with $z_{k-1}=z_k=1$.</p><p><em>Counting lemma.</em> A string of zeros and ones with $Z$ ones and $W$ zeros has at least $Z-W-1$ adjacent pairs of ones. Indeed, the zeros cut the string into at most $W+1$ maximal blocks of consecutive ones; a block of $b$ ones contains $b-1$ adjacent pairs, so the total is $Z$ minus the number of blocks, which is at least $Z-(W+1)$.</p><p><em>Lower bounds.</em> Let $n=2m+1$ be odd. The string $z_0\dots z_n$ has $2m+2$ entries. The pairs $\{k,n-k\}$ with $1\le k\le m$ are disjoint and contain one index with $z=1$ each, by (1); with $z_0=z_n=1$ this gives $Z\ge m+2$, so $W\le m$ and there are at least $(m+2)-m-1=1$ adjacent pairs of ones. Let $n=2m$ be even. The string has $2m+1$ entries. Taking $k=m$ in (1) gives $z_m=1$; the disjoint pairs $\{k,n-k\}$ with $1\le k\le m-1$ give $m-1$ further ones, and $z_0=z_n=1$; so $Z\ge m+2$, $W\le m-1$, and there are at least $(m+2)-(m-1)-1=2$ adjacent pairs of ones. Hence an $n$-extremal set contains at least one multiple of $n$, and at least two when $n$ is even.</p><p><em>Constructions.</em> For $n=1$ any one-element set works, and its element is a multiple of $1$. Let $n\ge2$. Choose $t_0,t_1,\dots,t_n\in\{0,1\}$ with $t_0=t_n=0$, let $r_k\in\{0,1,\dots,n-1\}$ be the remainder of $t_k-t_{k-1}$ modulo $n$, and put $s_k=nk+r_k$ for $1\le k\le n$. Then $s_{k+1}-s_k=n+r_{k+1}-r_k\ge n-(n-1)&gt;0$, so the $s_k$ are increasing, and $P_k\equiv r_1+\dots+r_k\equiv t_k\pmod n$. As $n\ge2$ and $t_k\in\{0,1\}$, this means $z_k=1$ exactly when $t_k=0$, and $n\mid s_k$ exactly when $r_k=0$, that is, when $t_{k-1}=t_k$. So $S$ is $n$-extremal when $t_k=0$ or $t_{n-k}=0$ for every $1\le k\le n-1$, and its number of multiples of $n$ is the number of $k$ with $t_{k-1}=t_k$.</p><ul class="ct-ul"><li><p><em>$n$ odd, $n\ge3$:</em> $t_k=0$ for even $k$, $t_k=1$ for odd $k&lt;n$, and $t_n=0$. For $1\le k\le n-1$ the numbers $k$ and $n-k$ have different parities, so one of $t_k,t_{n-k}$ is $0$. The values $t_0,\dots,t_{n-1}$ alternate, and $t_{n-1}=0=t_n$, so exactly one element is a multiple of $n$. (For $n=3$: $S=\{4,8,9\}$.)</p></li><li><p><em>$n=2$:</em> $t_0=t_1=t_2=0$, giving $S=\{2,4\}$ with two multiples of $2$.</p></li><li><p><em>$n=2m$, $m\ge2$:</em> $t_k=0$ for even $k$ and $t_k=1$ for odd $k$ when $0\le k\le m-1$; $t_m=0$; $t_{n-k}=1-t_k$ for $1\le k\le m-1$; $t_n=0$. The condition holds: $t_m=0$, and for $k\ne m$ one of $t_k$, $t_{n-k}=1-t_k$ is $0$. The values alternate along $t_0,\dots,t_{m-1}$ and along $t_{m+1},\dots,t_{n-1}$ (the second run is $1-t_{m-1},\dots,1-t_1$). At the centre, $t_{m-1}=t_m$ when $t_{m-1}=0$, and $t_m=t_{m+1}$ when $t_{m+1}=1-t_{m-1}=0$, i.e. when $t_{m-1}=1$: exactly one of these two happens. At the end, $t_{n-1}=1-t_1=0=t_n$. As $m\ge2$, the pair $(n-1,n)$ is not one of the central pairs, so there are exactly two multiples of $n$. (For $n=6$: $t=0,1,0,0,1,0,0$ and $S=\{7,17,18,25,35,36\}$.)</p></li></ul><p>Therefore the minimum is $\boxed{1}$ for odd $n$ and $\boxed{2}$ for even $n$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p6">

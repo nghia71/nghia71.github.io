@@ -100,7 +100,7 @@ Prove that the sum of the squares of the $n$ numbers is less than or equal to $9
 \[(x_1)^2+(x_2)^2+\dots+(x_n)^2\le9,\]
 and determine all values of $x_1,x_2,\dots,x_n$ for which equality holds.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\sum x_i^2\le 9$, with equality exactly when two of the numbers are $2$, one is $1$ and the others are $0$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Pushing numbers to the ends of the interval)</h4>
 <p>Suppose two of the numbers, say $x_i\ge x_j$, lie strictly between $0$ and $2$. Let $t=\min(2-x_i,\,x_j)&gt;0$ and replace $x_i,x_j$ by
 $x_i+t$ and $x_j-t$. The sum stays $5$, all numbers stay in $[0,2]$, and the sum of squares changes by
@@ -124,6 +124,28 @@ $m(x)\le 1$; equality holds iff $m(x)\in\{0,1\}$, i.e. iff $x\in\{0,1,2\}$.</p><
 \]
 Therefore $\sum x_i^2\le 9$.</p><p>Equality requires $x_i\in\{0,1,2\}$ for all $i$ and $\sum m(x_i)=1$, so exactly one $x_i$ equals $1$ and the others are $0$ or $2$; as the sum is
 $5$, exactly two of them equal $2$. Conversely two $2$'s, one $1$ and $n-3$ zeros give $4+4+1=9$. So equality holds exactly for these tuples.</p>
+<h4>Solution 3 (Splitting at the third largest number)</h4>
+<p>Order the numbers so that $x_1\ge x_2\ge\dots\ge x_n$ and let $t=x_3$, so $0\le t\le 2$. For $i\ge3$ we have $0\le x_i\le t$, hence
+$x_i^2\le t\,x_i$, with equality iff $x_i\in\{0,t\}$. Since $x_3+\dots+x_n=5-x_1-x_2$,
+\[
+\sum_{i=1}^n x_i^2\le x_1^2+x_2^2+t(5-x_1-x_2)=5t+x_1(x_1-t)+x_2(x_2-t). \tag{1}
+\]
+Here $t\le x_2\le x_1\le 2$.</p><p><em>Case $t\le1$.</em> For $t\le x&lt;y$ we have $y(y-t)-x(x-t)=(y-x)(x+y-t)&gt;0$, since $x+y-t\ge y&gt;0$. So $x(x-t)$ is strictly increasing on
+$[t,2]$ and $x_k(x_k-t)\le 2(2-t)$ for $k=1,2$. By (1),
+\[
+\sum x_i^2\le 5t+4(2-t)=8+t\le 9 .
+\]
+Equality forces $t=1$, $x_1=x_2=2$, and equality in $x_i^2\le t x_i$, i.e. $x_i\in\{0,1\}$ for $i\ge3$. Then $x_3+\dots+x_n=1$ with $x_3=1$,
+so $x_4=\dots=x_n=0$.</p><p><em>Case $t&gt;1$.</em> Put $u=2-x_1\ge0$ and $v=2-x_2\ge0$. From $x_1+x_2+x_3\le5$ we get $4-u-v+t\le5$, i.e. $u+v\ge t-1$. For $k=1,2$,
+\[
+2(2-t)-x_k(x_k-t)=(2-x_k)(2+x_k-t)\ge 2(2-x_k),
+\]
+because $x_k\ge t$. Hence $x_1(x_1-t)+x_2(x_2-t)\le 4(2-t)-2(u+v)\le 4(2-t)-2(t-1)$, and by (1)
+\[
+\sum x_i^2\le 5t+8-4t-2(t-1)=10-t&lt;9 .
+\]
+So equality is impossible in this case.</p><p>Therefore $\sum x_i^2\le 9$, and equality holds exactly when two of the numbers equal $2$, one equals $1$ and the remaining $n-3$ equal $0$;
+these tuples (which exist since $n\ge3$) indeed give $4+4+1=9$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p3">
@@ -132,7 +154,7 @@ $5$, exactly two of them equal $2$. Conversely two $2$'s, one $1$ and $n-3$ zero
 <div class="ct-text"><p>Let $a$ and $b$ be integers, and consider the expression
 \[f(x)=x^2+ax+b.\]
 It is known that for every positive prime number $p$, there exists an integer $n$ such that both $f(n)$ and $f(n+1)$ are divisible by $p$. Prove that there exists an integer $m$ such that $f(m)=f(m+1)=0$.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Completing the square)</h4>
 <p>Let $\Delta=a^2-4b$. Note that $4f(x)=(2x+a)^2-\Delta$ and $f(x+1)-f(x)=2x+a+1$.</p><p>Let $p$ be any prime and $n$ an integer with $p\mid f(n)$ and $p\mid f(n+1)$. Then $p\mid f(n+1)-f(n)=2n+a+1$, so $2n+a\equiv-1\pmod p$ and
 \[
@@ -149,6 +171,14 @@ a^2-4b\equiv(2n+1)^2-4n(n+1)=1\pmod p .
 \]
 So the integer $a^2-4b-1$ is divisible by every prime, hence equals $0$.</p><p>Now $a^2=4b+1$ is odd, so $a$ is odd and $m=\frac{-a-1}{2}$ is an integer. Then $m+(m+1)=-a$ and
 $m(m+1)=\frac{a^2-1}{4}=b$, so by Vieta $f(x)=(x-m)(x-m-1)$ and $f(m)=f(m+1)=0$.</p>
+<h4>Solution 3 (Fixing the candidate root first)</h4>
+<p>Note that $f(x+1)-f(x)=2x+a+1$.</p><p><em>The prime $2$.</em> Take $n$ with $2\mid f(n)$ and $2\mid f(n+1)$. Then $2$ divides $f(n+1)-f(n)=2n+a+1$, so $a$ is odd. Hence
+$m=\frac{-a-1}{2}$ is an integer, and $2m=-a-1$ gives
+\[
+f(x+1)-f(x)=2x-2m=2(x-m). \tag{1}
+\]</p><p><em>Odd primes.</em> Let $p$ be an odd prime and $n$ an integer with $p\mid f(n)$ and $p\mid f(n+1)$. By (1), $p\mid 2(n-m)$, and since $p$ is
+odd, $n\equiv m\pmod p$. As $f$ has integer coefficients, $f(m)\equiv f(n)\equiv0\pmod p$.</p><p>So the integer $f(m)$ is divisible by every odd prime; it has infinitely many prime divisors, so $f(m)=0$. Finally (1) with $x=m$ gives
+$f(m+1)=f(m)+0=0$. Thus $f(m)=f(m+1)=0$ for the integer $m=\frac{-a-1}{2}$.</p>
 </div></details>
 </section>
 <h2 class="ct-group" id="day-2">Day 2</h2>
@@ -195,7 +225,7 @@ $a_n-a_1$ is a multiple of $d$, we get $a_n=a_1+(n-1)d$. So $S$ is an arithmetic
 <div class="ct-meta">Geometry &middot; LPS VII, Chapter 11: Similarity, Homothety, and Ratio Geometry</div>
 <div class="ct-text"><p>Let $ABC$ be an acute triangle and let $S$ be a point on side $AB$. Let $P$ be the center of the circle passing through $A,S,C$ and let $Q$ be the center of the circle passing through $B,S,C$.</p><p>Determine the position of point $S$ on side $AB$ for which the area of triangle $PQS$ is minimized.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$S$ is the foot of the altitude from $C$ (the minimum area is $\frac14[ABC]$)</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Triangle $PQS$ is similar to triangle $ABC$)</h4>
 <div class="ct-fig"><img style="width:299px" src="/assets/contests/2026-27/argentina-tst-5_s1.svg" alt="Figure for the solution"></div>
 <p>Let $\alpha,\beta,\gamma$ be the angles of triangle $ABC$, let $H$ be the foot of the altitude from $C$ and $h=CH$. We take $S$ strictly
@@ -222,6 +252,21 @@ $Q=\bigl(\frac{s+q}{2},\frac{h^2+sq}{2h}\bigr)$.</p><p>With $\overrightarrow{SP}
 \]
 because the terms $\pm sh^2$ and $\pm spq$ cancel. For fixed $p,q,h$ this is smallest exactly when $s=0$. So the area is minimal when $S$ is
 <strong>the foot of the altitude from $C$</strong>, and the minimum is $\frac{(p+q)h}{8}=\frac14[ABC]$.</p>
+<h4>Solution 3 (Projecting $PQ$ onto $AB$)</h4>
+<p>Take $S$ strictly between $A$ and $B$, let $H$ be the foot of the altitude from $C$ and $h=CH&gt;0$.</p><p>Both $P$ and $Q$ are equidistant from $S$ and $C$, so the line $PQ$ is the perpendicular bisector of $SC$ (we check below that $P\ne Q$). In
+particular the distance from $S$ to the line $PQ$ is $\frac{SC}{2}$, and
+\[
+[PQS]=\frac12\cdot PQ\cdot\frac{SC}{2}=\frac{PQ\cdot SC}{4}.
+\]</p><p>Now compute $PQ$ by projecting onto line $AB$. The centre $P$ lies on the perpendicular bisector of $AS$, so its orthogonal projection onto $AB$
+is the midpoint of $AS$; likewise the projection of $Q$ is the midpoint of $SB$. These midpoints are $\frac{AS}{2}+\frac{SB}{2}=\frac{AB}{2}$ apart
+(so $P\ne Q$). On the other hand, let $\theta$ be the angle between the lines $SC$ and $AB$, so that $\sin\theta=\frac{CH}{SC}=\frac{h}{SC}$
+(with $\theta=90^\circ$ when $S=H$). The line $PQ$ is perpendicular to $SC$, so it makes the angle $90^\circ-\theta$ with $AB$, and the projection
+of the segment $PQ$ onto $AB$ has length $PQ\cos(90^\circ-\theta)=PQ\cdot\frac{h}{SC}$. Hence
+\[
+PQ\cdot\frac{h}{SC}=\frac{AB}{2},\qquad PQ=\frac{AB\cdot SC}{2h},\qquad [PQS]=\frac{AB\cdot SC^2}{8h}.
+\]
+With $AB$ and $h$ fixed, the area is smallest exactly when $SC$ is smallest, i.e. when $S=H$, which lies on side $AB$ because the triangle is
+acute. So the area is minimal when $S$ is <strong>the foot of the altitude from $C$</strong>, and the minimum is $\frac{AB\cdot h}{8}=\frac14[ABC]$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p6">
@@ -229,7 +274,7 @@ because the terms $\pm sh^2$ and $\pm spq$ cancel. For fixed $p,q,h$ this is sma
 <div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 31: Extremal Principle and Bounding Arguments</div>
 <div class="ct-text"><p>Let $1000$ numbers equal to $2$ and $2000$ numbers equal to $-1$ be arranged around a circle in some order. Bruno counts the number of groups of two or more consecutive numbers whose sum is equal to $0$.</p><ul class="ct-parts"><li><p><span class="ct-lbl">(a)</span> Determine the minimum possible value that Bruno can obtain.</p></li><li><p><span class="ct-lbl">(b)</span> Determine the maximum possible value that Bruno can obtain.</p></li></ul><p><strong>Note:</strong> Each number on the circle may belong to one or more groups, or to none. (So a group is a block of consecutive numbers that is not the whole circle.)</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(a) $1998$; (b) $2997000$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Prefix sums and repeated values)</h4>
 <p>Number the positions $1,2,\dots,3000$ clockwise, let $v_i\in\{2,-1\}$ be the number at position $i$, and put $s_0=0$,
 $s_i=v_1+\dots+v_i$. The total is $1000\cdot2-2000=0$, so $s_{3000}=0=s_0$.</p><p><em>Reformulation.</em> For distinct $i,j\in\{0,1,\dots,2999\}$ let $g(i,j)$ be the group of consecutive positions $i+1,i+2,\dots,j$ going clockwise
@@ -270,6 +315,13 @@ contains a $2$ (a block of $-1$'s has negative sum), and there are only $1000$ t
 at each position.</p><p>Every group has exactly one starting position, so Bruno counts at most $3000\cdot999=2997000$ groups. For the arrangement $2,-1,-1$ repeated
 $1000$ times, from any starting position the running sums repeat with period $3$ ($2,1,0$ or $-1,-2,0$ or $-1,1,0$), so the zero-sum groups
 starting there have lengths $3,6,\dots,2997$, which is $999$ groups. So the maximum is $\boxed{2997000}$.</p>
+<h4>Solution 3 (A third proof of (b): zero-sum groups have length divisible by 3)</h4>
+<p>Here we prove only part (b) again. A group is a block of at least two and at most $2999$ consecutive numbers; it is determined by its
+first position (one of $3000$) and its length (from $2$ to $2999$), and different pairs (first position, length) give different groups.</p><p>If a group contains $p$ twos and $q$ minus ones, its sum is $2p-q$, which is $0$ exactly when $q=2p$; then its length is $3p$. So every zero-sum
+group has length $3,6,\dots,$ or $2997$: only $999$ possible lengths. Hence there are at most $999$ zero-sum groups with a given first position,
+and Bruno counts at most $3000\cdot999=2997000$ groups.</p><p>For the arrangement $2,-1,-1$ repeated $1000$ times, any $3$ consecutive numbers are $2,-1,-1$ in some cyclic order, so every block of length
+$3p$ ($1\le p\le 999$) consists of $p$ such triples and has sum $0$. All $3000\cdot999$ pairs then give zero-sum groups, so the maximum is
+$\boxed{2997000}$.</p>
 </div></details>
 </section>
 {% endraw %}
