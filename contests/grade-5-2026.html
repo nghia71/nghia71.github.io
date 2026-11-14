@@ -159,13 +159,15 @@ Cat: &ldquo;I have more than Dan.&rdquo;<br>
 Dan: &ldquo;I have more than Eve and more than Amy.&rdquo;<br>
 Eve: &ldquo;I have more than Amy.&rdquo;</p><p>What is the largest number of these statements that can be true?</p><p><strong>(A)</strong>&nbsp;$1$&emsp;<strong>(B)</strong>&nbsp;$2$&emsp;<strong>(C)</strong>&nbsp;$3$&emsp;<strong>(D)</strong>&nbsp;$4$&emsp;<strong>(E)</strong>&nbsp;$5$</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p><strong>(D)</strong> $4$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (A circle of &ldquo;more than)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (A circle of &ldquo;more than&rdquo;)</h4>
 <p><strong>Not all five.</strong> If Amy, Bob and Dan all told the truth, then
 \[\text{Amy}&gt;\text{Bob},\qquad \text{Bob}&gt;\text{Dan},\qquad \text{Dan}&gt;\text{Amy},\]
 so Amy would have more than Bob, who has more than Dan, who has more than Amy: Amy would have more pencils
 than herself. That is impossible, so at least one statement is false.</p><p><strong>Four is possible.</strong> Give Dan $1$ pencil, Cat $2$, Bob $3$, Amy $4$ and Eve $5$. Then Amy ($4&gt;3$),
 Bob ($3&gt;2$ and $3&gt;1$), Cat ($2&gt;1$) and Eve ($5&gt;4$) tell the truth; only Dan's statement is false.</p><p>So the largest number of true statements is $\boxed{\textbf{(D)}\ 4}$.</p>
+<h4>Solution 2 (Look at the child with the fewest pencils)</h4>
+<p>Every one of the five statements says &ldquo;I have more than &hellip;&rdquo; about somebody else.</p><p><strong>Not all five.</strong> Look at a child who has the fewest pencils (if several children tie for the fewest, pick any one of them). Nobody has fewer pencils than this child, so this child cannot have more than anybody. So this child's statement is false, and at least one statement is false.</p><p><strong>Four is possible.</strong> Let Amy be the child with the fewest pencils, and line up the others so that every other statement comes true: give Amy $1$ pencil, Eve $2$, Dan $3$, Cat $4$ and Bob $5$. Then</p><ul class="ct-ul"><li><p>Bob: $5&gt;4$ (Cat) and $5&gt;3$ (Dan): true;</p></li><li><p>Cat: $4&gt;3$ (Dan): true;</p></li><li><p>Dan: $3&gt;2$ (Eve) and $3&gt;1$ (Amy): true;</p></li><li><p>Eve: $2&gt;1$ (Amy): true;</p></li><li><p>Amy: $1&gt;5$ (Bob): false.</p></li></ul><p>So the largest number of true statements is $\boxed{\textbf{(D)}\ 4}$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p6">
@@ -410,7 +412,7 @@ Adding up all the stages: $1+4+10+20+35+56=\boxed{126}$.</p>
 <div class="ct-meta">Combinatorics &middot; LPS VI, Chapter 6: Casework, Complement, and Constructive Counting</div>
 <div class="ct-text"><p>In a $3\times3$ grid, at least one cell is to be shaded. In how many ways can the grid be shaded such that no two shaded cells have a common side?</p><p>(Note: Shaded cells are allowed to meet at corners.)</p><div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/grade-5-16.svg" alt="Figure for Problem 16"></div></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$62$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Count by the number of shaded cells)</h4>
 <p>Call the middle cell the centre, the four cells in the corners the corners, and the other four
 cells the edge cells. Two cells are neighbours if they share a side. The centre is a neighbour of the four
@@ -429,6 +431,9 @@ A row may sit directly below another row when they have no shaded cell in the sa
 Each entry is the sum of the entries in the row above for the patterns allowed above it. For example, above
 $010$ we may have $000,100,001,101$, so after $3$ rows: $5+3+3+2=13$; above $101$ only $000$ or $010$: $5+4=9$.</p><p>This gives $17+12+13+12+9=63$ shadings, including the empty one. At least one cell must be shaded, so the
 answer is $63-1=\boxed{62}$.</p>
+<h4>Solution 3 (Start with the centre)</h4>
+<div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/grade-5-16_s3.svg" alt="Figure for the solution"></div>
+<p>Call the middle cell the <em>centre</em>, the four cells in the corners the <em>corners</em>, and the other four cells the <em>edge cells</em> (marked in the figure). Two cells are neighbours if they share a side. The centre is a neighbour of the four edge cells. Each corner is a neighbour of the two edge cells next to it. Two corners are never neighbours.</p><p>First count all good shadings, including the empty one.</p><p><strong>The centre is shaded.</strong> Then no edge cell may be shaded. The corners are not neighbours of the centre or of each other, so each corner can be shaded or not: $2\times2\times2\times2=16$ ways.</p><p><strong>The centre is not shaded.</strong> Count by how many edge cells are shaded. Two edge cells are never neighbours, so any choice of edge cells is fine; then a corner may be shaded only if neither edge cell next to it is shaded.</p><ul class="ct-ul"><li><p><em>No edge cell:</em> each corner shaded or not, $16$ ways.</p></li><li><p><em>One edge cell</em> ($4$ choices): it blocks the two corners next to it; the other two corners are free, $4$ ways each. Total $4\times4=16$.</p></li><li><p><em>Two edge cells.</em> If they meet at a corner, like the top and left edge cells ($4$ such pairs), they block three corners and one corner is free: $2$ ways each, $8$ in all. If they are opposite, like the top and bottom edge cells ($2$ such pairs), they block all four corners: $1$ way each, $2$ in all.</p></li><li><p><em>Three edge cells</em> ($4$ choices): every corner is blocked, $4$ ways.</p></li><li><p><em>Four edge cells:</em> $1$ way.</p></li></ul><p>That is $16+16+8+2+4+1=47$ ways.</p><p>Altogether $16+47=63$ shadings, and one of them is the empty grid. At least one cell must be shaded, so the answer is $63-1=\boxed{62}$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p17">
