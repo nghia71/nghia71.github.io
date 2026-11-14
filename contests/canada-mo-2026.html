@@ -65,7 +65,7 @@ description: Canadian Mathematical Olympiad 2026: problems with answers and solu
 <div class="ct-intro">
 <p>The 5 problems of the Canadian Mathematical Olympiad 2026, each with our own solutions, hidden until you open them. 4 of them ask for an answer and 1 asks for a proof. Where a problem has a final answer, it is shown separately. Try a problem first, then check.</p><p>The CMO has five problems.</p>
 </div>
-<div class="ct-credit">Problems: Canadian Mathematical Olympiad 2026, from the AoPS contest collection. Solutions written by MCC.</div>
+<div class="ct-credit">Problems: Canadian Mathematical Olympiad 2026, from the AoPS contest collection or the official paper. Solutions written by MCC.</div>
 <div class="ct-bar"><button type="button" onclick="ctAll(true)">Show all answers and solutions</button><button type="button" onclick="ctAll(false)">Hide all</button></div>
 <div class="ct-toc-wrap"><div class="ct-toc-row"><a href="#p1">1</a><a href="#p2">2</a><a href="#p3">3</a><a href="#p4">4</a><a href="#p5">5</a></div></div>
 
@@ -77,7 +77,7 @@ description: Canadian Mathematical Olympiad 2026: problems with answers and solu
 \[\sum_{(x,y)\in S}(a-2x)(b-2y)\]
 in terms of $a$ and $b$.</p><p><em>Remark.</em> Here the summation denotes that we sum the value $(a-2x)(b-2y)$ over all points $(x,y)$ in $S$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\boxed{0}$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Half of a rectangle)</h4>
 <p>Let $R$ be the set of lattice points strictly inside the rectangle $[0,a]\times[0,b]$, i.e. $1\le x\le a-1$, $1\le y\le b-1$.
 The diagonal from $(a,0)$ to $(0,b)$ is the line $bx+ay=ab$. A lattice point on it with $1\le x\le a-1$ would satisfy $a\mid bx$, hence
@@ -92,6 +92,15 @@ are $(x,y)$ with $1\le y&lt;b-\frac{bx}{a}$, i.e. $1\le y\le b-1-q$. Using $\sum
 Now compare columns $x$ and $a-x$. Since $\frac{b(a-x)}{a}=b-\frac{bx}a$ and $\frac{bx}a$ is not an integer, $\lfloor b(a-x)/a\rfloor=b-1-q$, so
 $g(a-x)=(b-1-q)q=g(x)$, while $a-2(a-x)=-(a-2x)$. Hence the contributions of columns $x$ and $a-x$ cancel when $x\ne a-x$, and the column
 $x=a/2$ (if $a$ is even) contributes $0\cdot g=0$. The total is $\boxed{0}$.</p>
+<h4>Solution 3 (Two mirror symmetries inside the triangle)</h4>
+<p>Write $f(x,y)=(a-2x)(b-2y)$. We split $S$ by the median of the triangle from $(0,0)$, which lies on the line $ay=bx$ and ends at the midpoint $\bigl(\frac a2,\frac b2\bigr)$ of the hypotenuse.</p><p><em>No point of $S$ is on this line.</em> If $(x,y)\in S$ and $ay=bx$, then $a\mid bx$, so $a\mid x$ because $\gcd(a,b)=1$; this is impossible since $0&lt;x&lt;a$. Hence $S$ is the disjoint union of
+\[S_1=\{(x,y)\in S:\ ay&lt;bx\},\qquad S_2=\{(x,y)\in S:\ ay&gt;bx\}.\]</p><p><em>The part $S_1$.</em> A lattice point $(x,y)$ with $x,y\ge1$ lies in $S_1$ exactly when $\frac yb&lt;\frac xa$ and $\frac xa+\frac yb&lt;1$, that is,
+\[\frac yb&lt;\frac{\min(x,\,a-x)}{a}.\]
+This condition is unchanged when $x$ is replaced by $a-x$, so $(x,y)\mapsto(a-x,y)$ maps $S_1$ onto itself (it is its own inverse). It changes the sign of the summand: $f(a-x,y)=(2x-a)(b-2y)=-f(x,y)$. Therefore
+\[\sum_{S_1}f(x,y)=\sum_{S_1}f(a-x,y)=-\sum_{S_1}f(x,y),\]
+and the sum over $S_1$ is $0$. (Points with $x=\frac a2$ are fixed by the map; their summands are $0$, in agreement with this.)</p><p><em>The part $S_2$.</em> In the same way, $(x,y)$ with $x,y\ge1$ lies in $S_2$ exactly when $\frac xa&lt;\frac yb$ and $\frac xa&lt;1-\frac yb$, that is,
+\[\frac xa&lt;\frac{\min(y,\,b-y)}{b},\]
+which is unchanged by $y\mapsto b-y$. This map sends $S_2$ onto itself and $f(x,b-y)=(a-2x)(2y-b)=-f(x,y)$, so the sum over $S_2$ is $0$ as well.</p><p>Hence $\displaystyle\sum_{(x,y)\in S}(a-2x)(b-2y)=\boxed{0}$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p2">
@@ -99,7 +108,7 @@ $x=a/2$ (if $a$ is even) contributes $0\cdot g=0$. The total is $\boxed{0}$.</p>
 <div class="ct-meta">Number Theory &middot; LPS VII, Chapter 49: Combinatorial Number Theory and Structure</div>
 <div class="ct-text"><p>There are $n$ types of coins in Wario's gold mine. Each coin of the $i$th type is worth $d_i$ cents, where $d_1,\dots,d_n$ are distinct positive integers. A positive integer $D$ is called <em>lucky</em> if the following holds: For each positive integer $k$, any collection of coins (containing any numbers of coins of each type) with a total value of exactly $kD$ cents can be split into $k$ groups, each worth $D$ cents.</p><p>Does a lucky number necessarily exist?</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p><strong>Yes</strong>; for example $D=(n-1)L$ for $n\ge2$ (and $D=d_1$ for $n=1$), or $D=nL$, where $L=\operatorname{lcm}(d_1,\dots,d_n)$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Blocks worth $L$)</h4>
 <p>The answer is <strong>yes</strong>. If $n=1$, $D=d_1$ is lucky (every coin is a group). Let $n\ge2$, $L=\operatorname{lcm}(d_1,\dots,d_n)$, $u_i=L/d_i$ and
 $D=(n-1)L$. We show that $D$ is lucky.</p><p>Take a collection with $c_i$ coins of type $i$ and total $kD$. Write $c_i=u_iq_i+r_i$ with $0\le r_i&lt;u_i$. Call a set of $u_i$ coins of type $i$ a
@@ -116,6 +125,17 @@ The total $knL$ and every block are multiples of $L$, so $W$ is a multiple of $L
 \[Q=kn-s\ge kn-(n-1)&gt;(k-1)n .\]
 So there are at least $(k-1)n$ blocks. Form $k-1$ groups, each consisting of $n$ blocks; each is worth $nL=D$. What is left (the other blocks and the remainder)
 is worth $kD-(k-1)D=D$, and it is the $k$-th group. Hence every collection worth $kD$ splits into $k$ groups worth $D$, and $D=nL$ is lucky.</p>
+<h4>Solution 3 (The product of the values and an exchange argument)</h4>
+<p>The answer is <strong>yes</strong>: we show that $D=d_1d_2\cdots d_n$ is lucky.</p><p><em>Reduction.</em> It suffices to prove: <em>($\star$) every collection worth $kD$ with $k\ge2$ contains a sub-collection worth exactly $D$.</em> Then induction on $k$ finishes: for $k=1$ the whole collection is the one group; for $k\ge2$ we remove a sub-collection worth $D$, and the rest, worth $(k-1)D$, splits into $k-1$ groups by the induction hypothesis.</p><p>If $n=1$, then $D=d_1$ and one coin is a sub-collection worth $D$. Let $n\ge2$, and let the collection have $a_i$ coins of type $i$, with $\sum_i a_id_i=kD$, $k\ge2$. Renumber the types so that $a_1d_1$ is the largest of the numbers $a_id_i$ (this does not change $D$). Then $a_1d_1\ge\frac{kD}{n}\ge\frac{2D}{n}$, so
+\[a_1\ge\frac{2\,d_2d_3\cdots d_n}{n}. \tag{1}\]</p><p><em>A product inequality.</em> For distinct positive integers $e_1&lt;e_2&lt;\dots&lt;e_m$ $(m\ge1)$,
+\[1+e_1e_2\cdots e_m\ge e_1+e_2+\dots+e_m. \tag{2}\]
+For $m=1$ this is clear. For $m\ge2$, the numbers $e_2,\dots,e_m$ are at least $2$, and a product of integers $\ge2$ is at least their sum, by induction on the number of factors: if $U=u_1\cdots u_j\ge u_1+\dots+u_j$ and $u\ge2$, then $Uu\ge U+u\ge u_1+\dots+u_j+u$, because $(U-1)(u-1)\ge1$. So $E=e_2\cdots e_m\ge e_2+\dots+e_m$, and $(e_1-1)(E-1)\ge0$ gives $1+e_1E\ge e_1+E\ge e_1+\dots+e_m$.</p><p><em>Case A: $a_1\ge d_i$ for every $i\ge2$.</em> Look at the $n$-tuples of non-negative integers $(x_1,\dots,x_n)$ with
+\[x_1d_1+\dots+x_nd_n=D\quad\text{and}\quad x_i\le a_i\ \ (2\le i\le n).\]
+The tuple $(D/d_1,0,\dots,0)$ is one of them, so we may choose one with $x_1$ as small as possible. If $x_1\le a_1$, then $x_i$ coins of type $i$ ($i=1,\dots,n$) form a sub-collection worth $D$, and we are done. Suppose instead $x_1&gt;a_1$. For $i\ge2$, replacing $x_1$ by $x_1-d_i$ and $x_i$ by $x_i+d_1$ keeps the value $D$, keeps $x_1-d_i\ge0$ (as $x_1&gt;a_1\ge d_i$) and makes the first entry smaller; by the choice of $x_1$ the new tuple must break the bound for type $i$, so $x_i+d_1&gt;a_i$, that is, $x_i\ge a_i-d_1+1$. Therefore
+\[D=\sum_{i=1}^nx_id_i\ge(a_1+1)d_1+\sum_{i=2}^n(a_i-d_1+1)d_i=kD+\sum_{i=1}^nd_i-d_1\sum_{i=2}^nd_i .\]
+With $k\ge2$ and $\sum_{i=1}^nd_i&gt;d_1$ (as $n\ge2$) this gives
+\[d_1\sum_{i=2}^nd_i\ge D+\sum_{i=1}^nd_i&gt;d_1d_2\cdots d_n+d_1,\qquad\text{so}\qquad \sum_{i=2}^nd_i&gt;1+d_2d_3\cdots d_n,\]
+which contradicts (2) applied to the distinct numbers $d_2,\dots,d_n$. So $x_1\le a_1$, and ($\star$) holds.</p><p><em>When does Case A fail?</em> Let $i\ge2$. By (1), $a_1\ge d_i\cdot\frac2n\prod_{j\ge2,\,j\ne i}d_j$. For $n=2$ the product is empty and $a_1\ge d_2$. For $n\ge4$ the product consists of $n-2$ distinct positive integers, so it is at least $(n-2)!$, and $\frac2n(n-2)!\ge1$ (equality for $n=4$; the left side grows with $n$); so $a_1\ge d_i$. For $n=3$, $a_1\ge\frac23d_2d_3$, which is at least $d_2$ and at least $d_3$ unless one of $d_2,d_3$ equals $1$. So Case A fails only when $n=3$ and one of the coin values is $1$.</p><p><em>Case B: $n=3$ and the values are $1$, $u$, $v$</em> (with $u,v\ge2$ distinct, $D=uv$). Let there be $p$ coins worth $u$, $q$ coins worth $v$ and $s$ coins worth $1$. If $p\ge v$, then $v$ coins worth $u$ form a sub-collection worth $D$; likewise if $q\ge u$. Otherwise the coins worth $u$ or $v$ have total value at most $(v-1)u+(u-1)v=2D-u-v$, so $s\ge kD-(2D-u-v)\ge u+v$. Now take coins worth $u$ or $v$ one at a time, stopping when they are all taken or when the next one would make the total exceed $D$; let $t\le D$ be the total taken. If all were taken, then $s=kD-t\ge D-t$. Otherwise $D-t&lt;\max(u,v)&lt;u+v\le s$. In both cases adding $D-t$ coins worth $1$ gives a sub-collection worth exactly $D$.</p><p>So ($\star$) always holds, and $D=d_1d_2\cdots d_n$ is lucky.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p3">
@@ -166,7 +186,7 @@ of these smaller scores is at most $K^2$, and Turbo, starting at the correspondi
 <div class="ct-text"><p>A sphere with center $I$ is inscribed in a tetrahedron $ABCD$. Suppose that the angle between any two faces of $ABCD$ is acute. Moreover, suppose that
 \[\frac{\operatorname{vol}(IABC)}{BC}=\frac{\operatorname{vol}(IACD)}{CD}=\frac{\operatorname{vol}(IADB)}{DB}.\]
 Show that $AI$ is perpendicular to the plane $BCD$.</p><p><em>Remark.</em> Here, $\operatorname{vol}(IABC)$ denotes the volume of tetrahedron $IABC$, and similarly for $IACD$ and $IADB$.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Two incentres of the face $BCD$)</h4>
 <div class="ct-fig"><img style="width:234px" src="/assets/contests/2026-27/canada-mo-4_s1.svg" alt="Figure for the solution"></div>
 <p>Let $r$ be the inradius, $H$ the foot of the perpendicular from $A$ to the plane $BCD$, and $h_1,h_2,h_3$ the heights from $A$ in the faces $ABC$, $ACD$,
@@ -196,6 +216,14 @@ sides of an angle smaller than $180^\circ$, the points equidistant from the two 
 the angle, where only the internal bisector passes. The plane $\Pi_B$ contains interior points of the tetrahedron (for instance the midpoint of $AH$, as $H$ is inside the face $BCD$), so
 $\Pi_B$ is the internal bisector plane. The centre $I$ is an interior point at equal distances ($r$) from the planes $ABC$ and $ABD$, so $I\in\Pi_B$.</p><p><strong>Conclusion.</strong> In the same way $I$ lies on the plane $\Pi_C$ through $A,H,C$ and on $\Pi_D$ through $A,H,D$. The planes $\Pi_B$ and $\Pi_C$ meet the plane $BCD$ in the lines $HB$ and $HC$,
 which are different because $H$ is not on the line $BC$; so $\Pi_B\ne\Pi_C$, and these two planes meet exactly in their common line $AH$. Hence $I$ lies on $AH$, and $AI\perp BCD$.</p>
+<h4>Solution 3 (The line $AI$ meets the face $BCD$ at its incentre)</h4>
+<p>Let $r$ be the inradius, $h_A$ the distance from $A$ to the plane $BCD$, $J$ the incentre of triangle $BCD$ and $H$ the foot of the perpendicular from $A$ to the plane $BCD$. We show that the line $AI$ and the line $AH$ both meet the plane $BCD$ at $J$.</p><p><strong>Step 1: the line $AI$ meets the face $BCD$ at $J$.</strong> Since $I$ is inside the tetrahedron, $I=\alpha A+\beta B+\gamma C+\delta D$ with positive weights of sum $1$. The point $K=\frac{\beta B+\gamma C+\delta D}{\beta+\gamma+\delta}$ lies in the plane $BCD$, strictly inside triangle $BCD$, and on the line $AI$, with $I$ between $A$ and $K$.</p><p>The tetrahedra $IABC$ and $KABC$ have the common face $ABC$, and since $I$ and $K$ lie on a line through the point $A$ of the plane $ABC$, their distances from that plane are in the ratio $AI:AK$. So $\operatorname{vol}(IABC)=\frac{AI}{AK}\operatorname{vol}(KABC)$, and in the same way for $IACD$ and $IADB$, with the same factor. Moreover the tetrahedron $KABC$ has the base $KBC$ in the plane $BCD$ and apex $A$, so
+\[\operatorname{vol}(KABC)=\tfrac13h_A\cdot\operatorname{area}(KBC)=\tfrac16h_A\cdot BC\cdot\operatorname{dist}(K,BC).\]
+Hence $\dfrac{\operatorname{vol}(IABC)}{BC}=\dfrac{AI\cdot h_A}{6\,AK}\operatorname{dist}(K,BC)$, and similarly with $CD$ and $DB$. The hypothesis now gives
+\[\operatorname{dist}(K,BC)=\operatorname{dist}(K,CD)=\operatorname{dist}(K,DB).\]
+Inside the angle $CBD$ the points at equal distances from the lines $BC$ and $BD$ form the internal bisector, and likewise at $C$; so the only point inside triangle $BCD$ at equal distances from its three sides is $J$. Thus $K=J$.</p><p><strong>Step 2: the foot $H$ is $J$.</strong> The tetrahedron $IABC$ has base $ABC$ and height $r$, so $\operatorname{vol}(IABC)=\frac13r\cdot\operatorname{area}(ABC)=\frac16r\cdot BC\cdot\operatorname{dist}(A,BC)$, and similarly for the other two. The hypothesis gives
+\[\operatorname{dist}(A,BC)=\operatorname{dist}(A,CD)=\operatorname{dist}(A,DB)=:h.\]
+Let $P_1$ be the foot of the perpendicular from $H$ to the line $BC$. The lines $AH$ and $HP_1$ are perpendicular to $BC$ (if $H\ne P_1$), so $BC$ is perpendicular to the plane $AHP_1$ and $AP_1\perp BC$; thus $AP_1=h$, and by Pythagoras in the right triangle $AHP_1$, $HP_1^2=h^2-AH^2$. The dihedral angle of the tetrahedron at $BC$ is the angle between the ray $P_1A$ and the ray from $P_1$ in the plane $BCD$ perpendicular to $BC$ on the side of $D$. If $H$ were on the line $BC$ this angle would be $90^\circ$, and if $H$ were on the other side of $BC$ from $D$ it would be $180^\circ-\angle AP_1H&gt;90^\circ$. As the dihedral angle is acute, $H$ lies strictly on the side of $BC$ containing $D$. Doing the same for $CD$ and $DB$, $H$ is inside triangle $BCD$ and at the same distance $\sqrt{h^2-AH^2}$ from its three sides, so $H=J$.</p><p><strong>Conclusion.</strong> The line $AI$ passes through $K=J=H$, so it is the line $AH$, which is perpendicular to the plane $BCD$. Hence $AI\perp BCD$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p5">
@@ -203,7 +231,7 @@ which are different because $H$ is not on the line $BC$; so $\Pi_B\ne\Pi_C$, and
 <div class="ct-meta">Algebra &middot; LPS VII, Chapter 42: Polynomial Reconstruction and Interpolation</div>
 <div class="ct-text"><p>For each $n\ge1$, determine the maximum integer $c_n$ for which there exists a polynomial $f$ of degree $n$ with rational coefficients, an irrational number $a$, and $c_n$ distinct rational numbers $a_1,a_2,\dots,a_{c_n}$ such that $f(a+a_i)$ is a rational number for all $1\le i\le c_n$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\boxed{c_n=n-1}$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Coordinates in the field $\mathbb{Q}(a)$)</h4>
 <p><strong>Upper bound.</strong> Let $f$, $a$ and rationals $a_1,\dots,a_c$ be as in the problem, $\deg f=n$, leading coefficient $\ell\in\mathbb{Q}$.</p><p>If $a$ is transcendental, then $f(a+a_i)=q$ with $q$ rational means that the rational polynomial $f(t+a_i)-q$ in $t$ vanishes at $t=a$; so it is the zero polynomial, and $f$ is
 constant, a contradiction. So $c=0$ in that case.</p><p>Let $a$ be algebraic of degree $d\ge2$ over $\mathbb{Q}$; then $1,a,\dots,a^{d-1}$ are linearly independent over $\mathbb{Q}$ and every element of $\mathbb{Q}(a)$ is a unique rational
@@ -230,6 +258,14 @@ Thus the left side, divided by $2\sqrt2$, is a linear map from rational polynomi
 system for the coefficients of $f$ is triangular with nonzero diagonal, so it can be solved from the top coefficient down. The solution has leading coefficient $\frac1n$, so $\deg f=n$.
 Now write $f(x+\sqrt2)=A(x)+\sqrt2B(x)$ with $A,B\in\mathbb{Q}[x]$; then $f(x-\sqrt2)=A(x)-\sqrt2B(x)$, so $2\sqrt2B(x)=2\sqrt2\prod_{i&lt;n}(x-i)$ and $B(i)=0$ for $i=1,\dots,n-1$.
 Hence $f(\sqrt2+i)=A(i)$ is rational for these $n-1$ values of $i$. (For $n=2$: $f(x)=\frac{x^2}2-x$.)</p><p>Hence $\boxed{c_n=n-1}$.</p>
+<h4>Solution 3 (Lagrange interpolation and a dimension count)</h4>
+<p><strong>Upper bound.</strong> We prove more: <em>if $f$ has rational coefficients and degree $m\ge1$, and $a$ is irrational, then $f(a+r)$ is rational for at most $m-1$ rational numbers $r$.</em> ($\star$)</p><p>Let $\ell\ne0$ be the leading coefficient of $f$ and $f_{m-1}$ its coefficient of $x^{m-1}$. Suppose $f(a+r_i)=q_i\in\mathbb{Q}$ for $m$ distinct rationals $r_1,\dots,r_m$. By Lagrange interpolation,
+\[g(x)=\sum_{i=1}^mq_i\prod_{j\ne i}\frac{x-r_j}{r_i-r_j}\]
+is a polynomial with rational coefficients, of degree at most $m-1$, with $g(r_i)=q_i$. The polynomial $P(x)=f(x+a)-g(x)$ has degree $m$ and leading coefficient $\ell$ (as $\deg g&lt;m$), and it vanishes at the $m$ distinct numbers $r_i$. Hence
+\[P(x)=\ell\,(x-r_1)(x-r_2)\cdots(x-r_m),\]
+which has rational coefficients. So $f(x+a)=P(x)+g(x)$ has rational coefficients. But by the binomial theorem the coefficient of $x^{m-1}$ in $f(x+a)$ is $m\ell a+f_{m-1}$, which is irrational because $m\ell\ne0$ and $a$ is irrational. This contradiction proves ($\star$); with $m=n$ it gives $c_n\le n-1$.</p><p><strong>Construction.</strong> For $n=1$ there is nothing to construct ($c_1\ge0$ holds with $f(x)=x$, $a=\sqrt2$ and no numbers $a_i$). Let $n\ge2$ and $a=\sqrt2$. Write $f(x)=f_0+f_1x+\dots+f_nx^n$ with unknown rational $f_i$. For a rational $r$, the binomial theorem gives
+\[f(r+\sqrt2)=A_r+B_r\sqrt2,\]
+where $A_r$ and $B_r$ are linear combinations of $f_0,\dots,f_n$ with rational coefficients (even powers of $\sqrt2$ are rational, odd powers are rational multiples of $\sqrt2$). As $\sqrt2$ is irrational, $f(r+\sqrt2)$ is rational exactly when $B_r=0$.</p><p>The $n-1$ equations $B_1=B_2=\dots=B_{n-1}=0$ form a homogeneous linear system in the $n+1$ unknowns $f_0,\dots,f_n$, so its solutions form a subspace $V$ of $\mathbb{Q}^{n+1}$ of dimension at least $(n+1)-(n-1)=2$. The constant polynomials ($f_1=\dots=f_n=0$) satisfy every equation and form a subspace of $V$ of dimension $1$. So $V$ contains a non-constant polynomial $f$, of some degree $m$ with $1\le m\le n$, such that $f(r+\sqrt2)$ is rational for $r=1,2,\dots,n-1$. By ($\star$), $n-1\le m-1$, so $m=n$. This $f$, with $a=\sqrt2$ and $a_i=i$ $(1\le i\le n-1)$, shows $c_n\ge n-1$.</p><p>Hence $\boxed{c_n=n-1}$.</p>
 </div></details>
 </section>
 {% endraw %}

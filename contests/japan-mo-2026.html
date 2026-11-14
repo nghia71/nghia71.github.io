@@ -1,0 +1,273 @@
+---
+title: Japan Mathematical Olympiad 2026, Final Round
+permalink: /contests/japan-mo-2026
+description: Japan Mathematical Olympiad 2026, Final Round: problems with answers and solutions
+---
+{% raw %}
+<style>
+  .ct-intro { margin-bottom: 1.2em; }
+  .ct-credit { font-size: 14px; color: var(--ink-soft); border-left: 3px solid var(--gold); padding: 6px 12px; background: var(--white); margin: 1em 0; }
+  .ct-toc { display: flex; flex-wrap: wrap; gap: 6px; margin: 1em 0 1.4em; }
+  .ct-toc a { display: inline-block; min-width: 2.4em; text-align: center; padding: 4px 8px; border: 1px solid var(--rule); border-radius: 4px; background: var(--white); text-decoration: none; font-size: 14px; }
+  .ct-problem { background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 14px 18px; margin: 1.1em 0; }
+  .ct-problem h3 { margin: 0 0 .3em; font-size: 1.08rem; border-bottom: none; padding-bottom: 0; }
+  .ct-meta { font-size: 13px; color: var(--ink-soft); margin-bottom: .6em; }
+  .ct-text { font-family: Georgia, "Times New Roman", "Noto Serif", serif; font-size: 1.02em; line-height: 1.6; }
+  .ct-text p { margin: .5em 0; }
+  .ct-fig { text-align: center; margin: .8em 0; }
+  .ct-fig img { max-width: 100%; height: auto; max-height: 340px; }
+  .ct-choices { display: flex; flex-wrap: wrap; gap: 6px 22px; margin: .6em 0 .2em; }
+  .ct-choices b { margin-right: .3em; }
+  .ct-problem details { margin-top: .8em; border-top: 1px dashed var(--rule); padding-top: .5em; }
+  .ct-problem summary { cursor: pointer; font-weight: 600; color: var(--brand); font-size: 15px; }
+  .ct-problem details[open] summary { margin-bottom: .5em; }
+  .ct-sol h4 { font-size: 1rem; margin: 1em 0 .3em; color: var(--ink); }
+  .ct-answer { font-weight: 600; }
+  .ct-parts { list-style: none; padding-left: .4em; }
+  .ct-parts li { margin: .35em 0; }
+  .ct-lbl { font-weight: 700; margin-right: .3em; }
+  .ct-note { font-size: 14px; color: var(--ink-soft); font-style: italic; }
+  .ct-bar { margin: .6em 0 1em; display: flex; gap: 10px; flex-wrap: wrap; }
+  .ct-bar button { font: inherit; font-size: 14px; padding: 5px 12px; border-radius: var(--radius); border: 1px solid var(--brand); background: var(--white); color: var(--brand); cursor: pointer; }
+</style>
+<script>
+  window.MathJax = { tex: { inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [['\\[','\\]']], processEscapes: true },
+                     options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] } };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script>
+  function ctAll(open) { document.querySelectorAll('.ct-problem details').forEach(function (d) { d.open = open; }); }
+</script>
+
+<style>
+  .ct-group { font-size: 1.25rem; margin: 1.6em 0 .2em; }
+  .ct-toc-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: .3em 0; }
+  .ct-toc-g { font-size: 13px; color: var(--ink-soft); min-width: 9em; }
+  .ct-toc-wrap { margin: 1em 0 1.4em; }
+  .ct-center { text-align: center; margin: .6em 0; }
+  .ct-tablewrap { overflow-x: auto; margin: .6em 0; text-align: center; }
+  .ct-table { border-collapse: collapse; margin: 0 auto; }
+  .ct-table td { padding: 2px 9px; text-align: center; }
+  .ct-table tr.ct-hl td { border-bottom: 1px solid var(--ink-soft); }
+  .ct-table.ct-vfirst td:first-child { border-right: 1px solid var(--ink-soft); }
+  .ct-ul { padding-left: 1.4em; }
+  .ct-ul li { margin: .3em 0; }
+  .ct-text li > p:first-child { margin-top: 0; }
+  .ct-text li > p:last-child { margin-bottom: 0; }
+  .ct-text mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
+</style>
+
+{% endraw %}
+<p><a href="{{ '/contests-2026' | relative_url }}">&larr; All contests 2026</a></p>
+
+<h1>Japan Mathematical Olympiad 2026, Final Round</h1>
+
+<div class="ct-intro">
+<p>The 5 problems of the Japan Mathematical Olympiad 2026, Final Round, each with our own solutions, hidden until you open them. 3 of them ask for an answer and 2 ask for a proof. Where a problem has a final answer, it is shown separately. Try a problem first, then check.</p><p>The final round of the Japan Mathematical Olympiad has five problems in four hours. The statements were checked against the Japanese original.</p>
+</div>
+<div class="ct-credit">Problems: Japan Mathematical Olympiad 2026, Final Round, from the AoPS contest collection or the official paper. Solutions written by MCC.</div>
+<div class="ct-bar"><button type="button" onclick="ctAll(true)">Show all answers and solutions</button><button type="button" onclick="ctAll(false)">Hide all</button></div>
+<div class="ct-toc-wrap"><div class="ct-toc-row"><a href="#p1">1</a><a href="#p2">2</a><a href="#p3">3</a><a href="#p4">4</a><a href="#p5">5</a></div></div>
+
+{% raw %}
+<section class="ct-problem" id="p1">
+<h3>Problem 1</h3>
+<div class="ct-meta">Geometry &middot; LPS VII, Chapter 51: Spiral Similarity and Advanced Transformational Geometry</div>
+<div class="ct-text"><p>Let $ABC$ be an acute-angled triangle with $AB&lt;AC$, let $O$ be its circumcenter, and let the bisector of $\angle BAC$ meet side $BC$ at $D$. Two distinct points $P$ and $Q$ are taken on the ray $DO$. Both of them lie on the opposite side of line $AC$ from $B$ and on the same side of line $AB$ as $C$, and the three points $D$, $P$, $Q$ lie in this order. Moreover,
+\[AB=BP,\qquad AC=CQ,\qquad \angle ABP=\angle ACQ.\]
+Determine the measure of $\angle BAC$.</p><p>(Here $XY$ denotes the length of segment $XY$.)</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\angle BAC=60^\circ$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (A spiral similarity and coordinates)</h4>
+<div class="ct-fig"><img style="width:259px" src="/assets/contests/2026-27/japan-mo-1_s1.svg" alt="Figure for the solution"></div>
+<p>Write $a=BC$, $b=CA$, $c=AB$ (so $b&gt;c$ and $\angle B&gt;\angle C$), let $R$ be the circumradius, and let $\theta=\angle ABP=\angle ACQ$.
+We write $\measuredangle(\ell,m)$ for the directed angle between lines $\ell$ and $m$, taken modulo $180^\circ$.</p><p><em>Step 1: $A,B,P,D$ are concyclic.</em> The points on the same side of $AB$ as $C$ and on the other side of $AC$ from $B$ form the angular region
+between ray $AC$ and the ray opposite to $AB$. Both $P$ and $Q$ lie there. So ray $AP$ is obtained from ray $AB$, and ray $AQ$ from ray $AC$, by turning
+in the same sense (the sense that takes $AB$ to $AC$), each time by less than $180^\circ$. Hence the isosceles triangles $ABP$ ($BA=BP$) and $ACQ$ ($CA=CQ$)
+have the same orientation. They also have the same apex angle $\theta$, so they are directly similar. Therefore the spiral similarity with center $A$, angle
+$\angle BAP=\angle CAQ=90^\circ-\frac{\theta}{2}$ and ratio $\frac{AP}{AB}=\frac{AQ}{AC}$ maps $B\mapsto P$ and $C\mapsto Q$. It maps triangle $ABC$ onto
+triangle $APQ$ and preserves directed angles, so $\measuredangle(PA,PQ)=\measuredangle(BA,BC)$. The point $D$ lies on line $BC$ and on line $PQ$ (the line $DO$),
+and $D\ne B$ (as $AB&lt;AC$) and $D\ne P$ (as $D$, an interior point of side $BC$, is on the same side of $AC$ as $B$, while $P$ is not). Hence $\measuredangle(PA,PD)=\measuredangle(BA,BD)$, which says that $A,B,P,D$ lie on one circle.</p><p><em>Step 2: line $DO$ is the mirror image of line $DA$ in $BC$.</em> In the circle $ABPD$, the inscribed angle theorem gives
+\[\measuredangle(DA,DB)=\measuredangle(PA,PB),\qquad \measuredangle(DB,DP)=\measuredangle(AB,AP).\]
+The reflection in the perpendicular bisector of $AP$ swaps $A$ and $P$ and fixes $B$ (as $BA=BP$); a reflection reverses directed angles, so
+$\measuredangle(AB,AP)=-\measuredangle(PB,PA)=\measuredangle(PA,PB)$. Hence $\measuredangle(DA,DB)=\measuredangle(DB,DP)$: line $BC$ bisects the angle between the lines
+$DA$ and $DP$. So line $DP$, which is line $DO$, is the reflection of line $DA$ in $BC$.</p><p><em>Step 3: computing $\angle A$.</em> Let $H$ be the foot of the altitude from $A$ and $\delta=\frac{\angle B-\angle C}{2}&gt;0$. In an acute triangle,
+$\angle BAH=90^\circ-\angle B=\angle CAO$, and $AD$ bisects $\angle BAC$; hence $\angle HAD=\angle DAO=\frac{\angle A}{2}-(90^\circ-\angle B)=\delta$ and
+$\angle HAO=2\delta$. Put $D$ at the origin with $BC$ on the $x$-axis, $C$ on the positive side and $A$ above. Since
+$\angle ADB=180^\circ-\angle B-\frac{\angle A}{2}=\angle C+\frac{\angle A}{2}&lt;90^\circ$, the point $A$ lies to the left of the vertical through $D$. With $d=AD$,
+\[A=(-d\sin\delta,\ d\cos\delta),\qquad O=A+R\,(\sin2\delta,\ -\cos2\delta),\]
+because $AO=R$ makes the angle $2\delta$ with the downward vertical $AH$, turned towards $C$. The height of $O$ above $BC$ is $R\cos A$, so
+\[d\cos\delta-R\cos2\delta=R\cos A .\tag{1}\]
+The mirror image of line $DA$ in the $x$-axis is the line through the origin with direction $(\sin\delta,\cos\delta)$. By Step 2, $O$ lies on it, so
+$x_O\cos\delta-y_O\sin\delta=0$, that is,
+\[(R\sin2\delta-d\sin\delta)\cos\delta-R\cos A\,\sin\delta=0 .\]
+Substituting $d\cos\delta=R(\cos A+\cos2\delta)$ from (1) and dividing by $R\sin\delta\ne0$:
+\[2\cos^2\delta-\cos A-\cos2\delta-\cos A=0,\quad\text{i.e.}\quad 1-2\cos A=0 .\]
+Hence $\cos A=\frac12$ and $\angle BAC=60^\circ$.</p><p><em>Step 4: $60^\circ$ really occurs.</em> Let $\angle A=60^\circ$ and $\angle B&gt;\angle C$ (e.g. $\angle B=75^\circ$, $\angle C=45^\circ$); then
+$60^\circ&lt;\angle B&lt;90^\circ$ and $30^\circ&lt;\angle C&lt;60^\circ$. Put $B=(0,0)$, $C=(a,0)$, $A$ above, and let $A'$ be the reflection of $A$ in $BC$. Define
+\[P=B+c\,(\cos C,\ \sin C),\qquad Q=C+b\,(-\cos B,\ \sin B).\]
+Then $BP=c=AB$ and $CQ=b=AC$. Ray $BA$ has direction angle $B$ and ray $BP$ has direction angle $C$, so $\angle ABP=B-C$; ray $CA$ has direction angle $180^\circ-C$
+and ray $CQ$ has direction angle $180^\circ-B$, so $\angle ACQ=B-C$ as well.</p><p><em>The points lie on ray $DO$.</em> Seen from $B$, the points $A'$ and $P$ of the circle with center $B$ and radius $c$ have direction angles $-B$ and $C$. So the chord
+$A'P$ has direction angle $\frac{C-B}{2}+90^\circ=90^\circ-\delta$. Seen from $C$, the points $A'$ and $Q$ of the circle with center $C$ and radius $b$ have direction angles $180^\circ+C$ and $180^\circ-B$, so the chord $A'Q$
+has direction angle $\frac{(180^\circ+C)+(180^\circ-B)}{2}+90^\circ\equiv 90^\circ-\delta\pmod{180^\circ}$. Ray $DA$ has direction angle
+$180^\circ-\angle ADB=90^\circ+\delta$, so the line $DA'$, its mirror image, has direction angle $90^\circ-\delta$. Hence $P$ and $Q$ lie on line $DA'$. By Step 3,
+read backwards (for $\cos A=\frac12$ the last equation holds), $O$ lies on this line too. The points $P$, $Q$, $O$ all lie above $BC$, so they lie on the
+ray from $D$ through $O$. Their heights are $c\sin C=2R\sin^2C&lt;2R\sin^2B=b\sin B$, so the order is $D,P,Q$.</p><p><em>Side conditions.</em> $P$ is seen from $B$ at a direction angle $C$ strictly between $0$ (towards $C$) and $B$ (towards $A$), so $P$ is on the same side of $AB$ as $C$.
+The ray from $B$ at direction angle $C$ meets line $AC$ at the point $K$ with $\angle KBC=\angle KCB=C$, so $BK=\frac{a}{2\cos C}$. Since
+$2c\cos C=2R\sin2C&gt;2R\sin60^\circ=a$ (because $60^\circ&lt;2C&lt;120^\circ$), $P$ lies beyond $K$, on the other side of $AC$ from $B$. Similarly, the ray from $C$ at
+direction angle $180^\circ-B$ meets line $AB$ at $K'$ with $CK'=\frac{a}{2\cos B}$, and $2b\cos B=2R\sin2B&lt;a$ (because $120^\circ&lt;2B&lt;180^\circ$). So $Q$
+lies between $C$ and $K'$, on the same side of $AB$ as $C$. Finally the direction angle $180^\circ-B$ of ray $CQ$ is less than the direction angle
+$180^\circ-C$ of ray $CA$, which is less than the direction angle $180^\circ$ of ray $CB$. So $Q$ and $B$ are on opposite sides of line $AC$.</p><p>All the conditions hold, so $\angle BAC=\boxed{60^\circ}$.</p>
+<h4>Solution 2 (Reflecting A in BC)</h4>
+<div class="ct-fig"><img style="width:386px" src="/assets/contests/2026-27/japan-mo-1_s2.svg" alt="Figure for the solution"></div>
+<p>Write $a=BC$, $b=CA$, $c=AB$ (so $b&gt;c$, $\angle B&gt;\angle C$), let $R$ be the circumradius, $\theta=\angle ABP=\angle ACQ$ and
+$\delta=\frac{\angle B-\angle C}{2}&gt;0$. Directed angles between lines are taken modulo $180^\circ$.</p><p><em>Step 1: line $DO$ passes through the reflection $A'$ of $A$ in $BC$.</em> As in Step 1 of Solution 1, the side conditions show that triangles $ABP$ and $ACQ$
+have the same orientation. So the rotation about $B$ taking ray $BA$ to ray $BP$ and the rotation about $C$ taking ray $CA$ to ray $CQ$ are rotations by the same
+angle $\theta$ in the same sense. The circle $\omega_B$ with center $B$ and radius $c$ passes through $A$, $P$ and $A'$ (because $BA'=BA$). The circle
+$\omega_C$ with center $C$ and radius $b$ passes through $A$, $Q$ and $A'$. By the inscribed angle theorem in directed form, for a point $X$ on a circle with
+center $B$ the directed angle $\measuredangle(XA,XP)$ equals half of the directed rotation angle from $BA$ to $BP$, modulo $180^\circ$. Applying this at
+$X=A'$ in both circles,
+\[\measuredangle(A'A,A'P)=\tfrac{\theta}{2}=\measuredangle(A'A,A'Q)\pmod{180^\circ}\]
+(with the same sign in both). Hence $A'$, $P$, $Q$ are collinear (this is trivial if $A'$ equals $P$ or $Q$). So the line $PQ$, which is line $DO$, passes through $A'$.
+Since $D$ is on $BC$, the line $DA'$ is the mirror image of line $DA$ in $BC$.</p><p><em>Step 2: the angle at $D$.</em> We have $\angle ADB=180^\circ-\angle B-\frac{\angle A}{2}=\angle C+\frac{\angle A}{2}=90^\circ-\delta$. The circumcenter $O$
+of the acute triangle lies above $BC$ (on the side of $A$), and the mirror image of ray $DA$ points below $BC$. So ray $DO$ is the ray opposite to that image, and
+\[\angle ODC=\angle ADB=90^\circ-\delta .\]
+Let $M$ be the midpoint of $BC$. Then $OM\perp BC$ and $OM=R\cos A$. Moreover
+\[DM=\frac a2-BD=\frac a2-\frac{ac}{b+c}=\frac{a(b-c)}{2(b+c)}&gt;0,\]
+so $M$ lies between $D$ and $C$. By the law of sines and the sum-to-product formulas,
+\[DM=\frac{a}{2}\cdot\frac{\sin B-\sin C}{\sin B+\sin C}=R\sin A\cdot\frac{\tan\frac{B-C}{2}}{\tan\frac{B+C}{2}}=R\sin A\,\tan\delta\,\tan\frac A2 .\]
+In the right triangle $OMD$, $\tan\angle ODM=\frac{OM}{DM}$, so
+\[\cot\delta=\frac{R\cos A}{R\sin A\,\tan\delta\,\tan\frac A2},\qquad\text{i.e.}\qquad \cos A=\sin A\tan\frac A2=2\sin^2\frac A2=1-\cos A .\]
+Hence $\cos A=\frac12$ and $\angle A=60^\circ$.</p><p>Conversely, for every acute triangle with $\angle A=60^\circ$ and $AB&lt;AC$, points $P$ and $Q$ with all the required properties exist. This is shown in Step 4 of Solution 1. The answer is $\angle BAC=\boxed{60^\circ}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p2">
+<h3>Problem 2</h3>
+<div class="ct-meta">Number Theory &middot; LPS VII, Chapter 17: Sequences, Recurrences, and Discrete Dynamics</div>
+<div class="ct-text"><p>A sequence $a_1,a_2,\dots$ of positive odd integers satisfies the following condition for every positive integer $n$:</p><ul class="ct-parts"><li><p><span class="ct-lbl"></span> among the odd integers that are greater than $a_{n+1}$ and relatively prime to $a_n$, the smallest one is $a_{n+2}$.</p></li></ul><p>Prove that there exists a positive integer $C$ such that $|a_n-2n|\le C$ for every positive integer $n$.</p></div>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (The half-gaps never increase)</h4>
+<p>All $a_n$ are odd, so we may write $a_{n+1}=a_n+2h_n$ with integers $h_n$. Since $a_{n+2}&gt;a_{n+1}$ for every $n\ge1$, we have $h_n\ge1$ for $n\ge2$.</p><p><em>Lemma 1.</em> For every $n\ge1$, $h_{n+1}$ is the least positive integer $k$ with $\gcd(h_n+k,\,a_n)=1$.</p><p><em>Proof.</em> The odd integers greater than $a_{n+1}$ are $a_{n+1}+2k$ with $k\ge1$. Since $a_n$ is odd,
+\[\gcd(a_{n+1}+2k,\,a_n)=\gcd\bigl(a_n+2(h_n+k),\,a_n\bigr)=\gcd\bigl(2(h_n+k),\,a_n\bigr)=\gcd(h_n+k,\,a_n).\]
+So $a_{n+2}=a_{n+1}+2k$ for the least $k\ge1$ with $\gcd(h_n+k,a_n)=1$, and this $k$ is $h_{n+1}$. $\square$</p><p><em>Lemma 2.</em> For $n\ge2$, $h_{n+1}\le h_n$.</p><p><em>Proof.</em> Let $2^j$ be the least power of $2$ greater than $h_n$, so $2^{j-1}\le h_n&lt;2^j$. The number $k=2^j-h_n\ge1$ makes $h_n+k=2^j$ coprime to the
+odd number $a_n$. By Lemma 1, $h_{n+1}\le 2^j-h_n\le 2^j-2^{j-1}=2^{j-1}\le h_n$. $\square$</p><p><em>Lemma 3.</em> If $n\ge2$ and $h_{n+1}=h_n\ge2$, then $h_{n+2}&lt;h_{n+1}$.</p><p><em>Proof.</em> Equality throughout the chain in Lemma 2 forces $h_n=2^{j-1}$. Write $h_n=h_{n+1}=2^i$ with $i\ge1$. By Lemma 1, $h_{n+1}=2^i$ means that
+$\gcd(2^i+k,a_n)&gt;1$ for $k=1,\dots,2^i-1$. Take $k=2^{i-1}$: the number $2^i+2^{i-1}=3\cdot2^{i-1}$ shares a prime factor with $a_n$, and its only odd
+prime factor is $3$. So $3\mid a_n$, and therefore $a_{n+1}=a_n+2^{i+1}\equiv 2^{i+1}\not\equiv0\pmod 3$. Now $h_{n+1}+2^{i-1}=3\cdot2^{i-1}$ is coprime to
+$a_{n+1}$, and Lemma 1 (with $n+1$ in place of $n$) gives $h_{n+2}\le2^{i-1}&lt;h_{n+1}$. $\square$</p><p><em>Conclusion.</em> By Lemmas 2 and 3, the positive integers $h_2\ge h_3\ge h_4\ge\cdots$ satisfy $h_{n+2}\le h_n-1$ whenever $h_n\ge2$. Hence $h_N=1$ for
+some $N$ (at the latest $N=2h_2$). If $h_n=1$, then Lemma 1 gives $h_{n+1}=1$, because $1+1=2$ is coprime to $a_n$. So $h_n=1$ for all $n\ge N$, that is,
+\[a_n=a_N+2(n-N)\quad\text{and}\quad a_n-2n=a_N-2N\qquad(n\ge N).\]
+Thus $a_n-2n$ takes only finitely many values: the values for $n&lt;N$ and the single value $a_N-2N$. The positive integer
+\[C=1+\max_{1\le n\le N}|a_n-2n|\]
+satisfies $|a_n-2n|\le C$ for every positive integer $n$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p3">
+<h3>Problem 3</h3>
+<div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 49: Combinatorial Number Theory and Structure</div>
+<div class="ct-text"><p>Let $n\ge2$ be an integer and let $m$ be an integer with $m\ge 2n$. Among the vertices of a regular $m$-gon, $2n$ distinct vertices are chosen; $n$ of them are colored red and the remaining $n$ are colored blue, and the following holds:</p><ul class="ct-parts"><li><p><span class="ct-lbl"></span> however we choose two distinct red points and two distinct blue points, the distance between the two red points is different from the distance between the two blue points.</p></li></ul><p>Find, in terms of $n$, the smallest possible value of $m$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$m=n^2+1$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Distinct differences)</h4>
+<div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/japan-mo-3_s1.svg" alt="Figure for the solution"></div>
+<p>Label the vertices $0,1,\dots,m-1$ around the polygon and compute with labels modulo $m$. If the circumradius is $\rho$, the vertices $i$ and $j$ are at distance
+$2\rho\sin\frac{\pi d}{m}$, where $d\in\{0,1,\dots,\lfloor m/2\rfloor\}$ is the cyclic distance between $i$ and $j$. This is strictly increasing in $d$, so
+\[|ij|=|i'j'|\iff i-j\equiv\pm(i'-j')\pmod m .\]
+Let $R$ be the set of red vertices and $B$ the set of blue vertices.</p><p><em>Lower bound.</em> Consider the $n^2$ residues $r-b$ with $r\in R$, $b\in B$. None of them is $0$, because $r\ne b$. They are pairwise distinct: if
+$r-b\equiv r'-b'$ with $(r,b)\ne(r',b')$, then $r\ne r'$ (otherwise also $b=b'$) and $b\ne b'$, and $r-r'\equiv b-b'$. Then the red points $r,r'$ and the blue
+points $b,b'$ are at the same distance, which is forbidden. So there are $n^2$ distinct nonzero residues modulo $m$, and $n^2\le m-1$.</p><p><em>Construction for $m=n^2+1$.</em> Color $0,1,\dots,n-1$ red and $n,2n,\dots,n^2$ blue (these $2n$ vertices are distinct, and $n^2+1\ge2n$). Two red vertices differ by
+$1,\dots,n-1$, so the red cyclic distances are at most $n-1$. Two blue vertices differ by $kn$ with $1\le k\le n-1$, and their cyclic distance is
+$\min(kn,\ n^2+1-kn)$. Here $kn\ge n$ and $n^2+1-kn\ge n^2+1-(n-1)n=n+1$, so every blue cyclic distance is at least $n$. Hence no red distance equals a blue
+distance (the figure shows $n=3$, $m=10$).</p><p>The smallest possible value is $m=\boxed{n^2+1}$.</p>
+<h4>Solution 2 (Rotating the blue set)</h4>
+<p>Label the vertices $0,\dots,m-1$ (modulo $m$). Let $R$ and $B$ be the red and blue sets. For $t\in\mathbb Z_m$ let $B+t$ be the blue set turned by $t$ steps (a rotation of the polygon).</p><p><em>Each rotation puts at most one blue vertex on a red one.</em> Suppose $B+t$ contains two red vertices $r\ne r'$, say $r=b+t$ and $r'=b'+t$ with $b,b'\in B$. Then the
+rotation by $t$ steps carries the segment $bb'$ onto the segment $rr'$. A rotation preserves lengths, so the blue points $b,b'$ are at the same distance as the red points $r,r'$, which is forbidden.
+So $|R\cap(B+t)|\le1$ for every $t$. Moreover $|R\cap(B+0)|=|R\cap B|=0$.</p><p><em>Double counting.</em> Each pair $(r,b)\in R\times B$ satisfies $r\in B+t$ for exactly one $t$, namely $t=r-b$. Therefore
+\[n^2=\sum_{t\in\mathbb Z_m}|R\cap(B+t)|\le 0+(m-1)\cdot1,\]
+so $m\ge n^2+1$.</p><p><em>Equality.</em> For $m=n^2+1$ the bound forces every nonzero rotation to carry exactly one blue vertex onto a red one. The blocks red $=\{0,1,\dots,n-1\}$ and blue
+$=\{n,2n,\dots,n^2\}$ do this. Red points are at cyclic distance at most $n-1$, while two blue points $kn$ apart ($1\le k\le n-1$) are at cyclic distance
+$\min(kn,n^2+1-kn)\ge n$. Since a chord's length depends only on the cyclic distance of its ends, no red distance equals a blue one.</p><p>Hence the minimum is $m=\boxed{n^2+1}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p4">
+<h3>Problem 4</h3>
+<div class="ct-meta">Algebra &middot; LPS VII, Chapter 30: Functional Equations: Core Olympiad Methods</div>
+<div class="ct-text"><p>Find all functions $f$ defined on the real numbers and taking real values such that
+\[f\bigl(x^2+f(y)^2\bigr)+2f(x)y=f\bigl(x+f(y)\bigr)^2\]
+for all real numbers $x$ and $y$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$f(x)=0$ for all $x$, and $f(x)=x$ for all $x$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Exchanging variables, then additivity)</h4>
+<p>Both $f\equiv0$ ($0+0=0$) and $f(x)=x$ ($x^2+y^2+2xy=(x+y)^2$) satisfy the equation. Let $f\not\equiv0$ be a solution, write $Q(x,y)$ for the equation, and let $c=f(0)$.</p><p><em>(a) $f$ is injective.</em> If $f(y_1)=f(y_2)$, subtracting $Q(x,y_2)$ from $Q(x,y_1)$ gives $2f(x)(y_1-y_2)=0$ for all $x$. Choosing $x$ with $f(x)\ne0$ gives $y_1=y_2$.</p><p><em>(b) $f(f(y))=ky$ with $k\ne0$.</em> $Q(f(z),y)$ reads
+\[f\bigl(f(z)^2+f(y)^2\bigr)+2f(f(z))\,y=f\bigl(f(z)+f(y)\bigr)^2 .\]
+The first and last terms do not change when $y$ and $z$ are exchanged, so $y\,f(f(z))=z\,f(f(y))$ for all $y,z$. With $z=1$ this gives $f(f(y))=ky$, where $k=f(f(1))$. If $k=0$,
+then $f(f(y))=0=f(f(0))$ for all $y$, so by injectivity $f(y)=f(0)$ for all $y$, which contradicts injectivity. So $k\ne0$.</p><p><em>(c) $f(0)=0$.</em> From (b), $f(c)=f(f(0))=0$. Then $Q(0,0)$ gives $f(c^2)=f(c)^2=0=f(c)$, so $c^2=c$ by injectivity, i.e. $c\in\{0,1\}$. If $c=1$, then
+$f(1)=f(c)=0$ and $Q(0,1)$ gives $f(0)+2=f(0)^2$, i.e. $3=1$, which is impossible. So $c=0$.</p><p><em>(d) $f(x^2)=f(x)^2$ and $f(f(y))=y$.</em> $Q(x,0)$ gives $f(x^2)=f(x)^2$. With $x=1$, $f(1)\in\{0,1\}$, and $f(1)\ne0=f(0)$, so $f(1)=1$ and $k=f(f(1))=1$.</p><p><em>(e) $f$ is odd and positive on $(0,\infty)$.</em> For $x\ne0$, $f(-x)^2=f(x^2)=f(x)^2$ and $f(-x)\ne f(x)$, so $f(-x)=-f(x)$. For $t&gt;0$, $f(t)=f(\sqrt t)^2\ge0$
+and $f(t)\ne f(0)=0$, so $f(t)&gt;0$.</p><p><em>(f) Additivity on $[0,\infty)$.</em> Replacing $y$ by $f(y)$ in $Q$ and using $f(f(y))=y$ and (d):
+\[f(x^2+y^2)+2f(x)f(y)=f(x+y)^2=f\bigl((x+y)^2\bigr)\qquad\text{for all }x,y. \tag{E}\]
+Putting $y=-x$ and using oddness: $f(2x^2)-2f(x)^2=f(0)=0$. Since $f(x)^2=f(x^2)$, this says $f(2t)=2f(t)$ for $t\ge0$. Adding (E) and (E) with $y$ replaced by $-y$ gives
+\[2f(x^2+y^2)=f\bigl((x+y)^2\bigr)+f\bigl((x-y)^2\bigr).\]
+For $u,v\ge0$ take $x=\frac{\sqrt u+\sqrt v}{2}$ and $y=\frac{\sqrt u-\sqrt v}{2}$; then $(x+y)^2=u$, $(x-y)^2=v$ and $x^2+y^2=\frac{u+v}{2}$. So
+\[f(u)+f(v)=2f\Bigl(\frac{u+v}{2}\Bigr)=f(u+v)\qquad(u,v\ge0).\]</p><p><em>(g) $f(x)=x$.</em> By (f), $f(qt)=qf(t)$ for rational $q\ge0$ and $t\ge0$, so $f(q)=q$ for rational $q\ge0$. Also $f$ is nondecreasing on $[0,\infty)$, since
+$f(u+v)=f(u)+f(v)\ge f(u)$. For real $t\ge0$ and rationals $0\le q_1&lt;t&lt;q_2$ we get $q_1\le f(t)\le q_2$, so $f(t)=t$. By oddness $f(x)=x$ for all $x$.</p><p>So the solutions are $\boxed{f\equiv0\ \text{ and }\ f(x)=x}$.</p>
+<h4>Solution 2 (Monotone involution)</h4>
+<p>Both $f\equiv0$ and $f(x)=x$ are solutions. Let $f\not\equiv0$ be a solution. Steps (a)&ndash;(e) of Solution 1 show:
+$f$ is injective, $f(0)=0$, $f(x^2)=f(x)^2$, $f(f(y))=y$, $f$ is odd, and $f(t)&gt;0$ for $t&gt;0$. Also, as there, substituting $f(y)$ for $y$ gives
+\[f(x^2+y^2)+2f(x)f(y)=f\bigl((x+y)^2\bigr).\]
+Replacing $y$ by $-y$ (oddness) gives $f(x^2+y^2)-2f(x)f(y)=f\bigl((x-y)^2\bigr)$. Subtracting the two equations:
+\[f\bigl((x+y)^2\bigr)-f\bigl((x-y)^2\bigr)=4f(x)f(y).\]</p><p><em>$f$ is strictly increasing.</em> Let $u&gt;v\ge0$ and put $x=\frac{\sqrt u+\sqrt v}2&gt;0$, $y=\frac{\sqrt u-\sqrt v}2&gt;0$. Then $f(u)-f(v)=4f(x)f(y)&gt;0$. So $f$ is strictly
+increasing on $[0,\infty)$. Since $f$ is odd, it is strictly increasing on $\mathbb R$.</p><p><em>An increasing involution is the identity.</em> Suppose $f(x)&gt;x$ for some $x$. Applying the increasing function $f$ gives $x=f(f(x))&gt;f(x)$, a contradiction. In the same way $f(x)&lt;x$
+is impossible. Hence $f(x)=x$ for all $x$.</p><p>The solutions are $\boxed{f\equiv0\ \text{ and }\ f(x)=x}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p5">
+<h3>Problem 5</h3>
+<div class="ct-meta">Geometry &middot; LPS VII, Chapter 55: Three-Dimensional and Spatial Geometry</div>
+<div class="ct-text"><p>In three-dimensional space there is a plane $\pi$. On $\pi$ there is a triangle $ABC$ which is not isosceles; let $I$ be its incenter. Prove that there exists a triangle $\mathcal{T}$ such that the following holds for <em>every</em> point $P$ not on $\pi$ satisfying
+\[AP\cdot BC=BP\cdot CA=CP\cdot AB.\]</p><ul class="ct-parts"><li><p><span class="ct-lbl"></span> Let $I_A$, $I_B$, $I_C$ be the incenters of triangles $BCP$, $CAP$, $ABP$, respectively. Suppose the circumcircles of triangles $II_BI_C$, $II_CI_A$, $II_AI_B$ meet $\pi$ at points $X$, $Y$, $Z$, respectively, other than $I$. Then triangle $XYZ$ is similar to $\mathcal{T}$.</p></li></ul><p>(Here $UV$ denotes the length of segment $UV$.)</p></div>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Menelaus in space and a sphere)</h4>
+<div class="ct-fig"><img style="width:236px" src="/assets/contests/2026-27/japan-mo-5_s1.svg" alt="Figure for the solution"></div>
+<p>Let $a=BC$, $b=CA$, $c=AB$ (pairwise different) and $k=AP\cdot BC=BP\cdot CA=CP\cdot AB$, so $PA=\frac ka$, $PB=\frac kb$, $PC=\frac kc$. Let $D_a,D_b,D_c$ be the feet
+of the internal bisectors of triangle $ABC$ on $BC,CA,AB$. Let $E_a,E_b,E_c$ be the feet of the external bisectors on the lines $BC,CA,AB$; they exist because the triangle is not isosceles. So $E_a$ is the point of line $BC$ outside segment $BC$ with $E_aB:E_aC=c:b$, and similarly for the others.</p><p><em>Step 1: where $I_B$ and $I_C$ lie.</em> In triangle $CAP$ we have $\frac{PA}{PC}=\frac ca=\frac{AD_b}{D_bC}$, so $PD_b$ is the bisector from $P$ (converse of the angle
+bisector theorem). Hence $I_B$ lies on segment $PD_b$. The incenter divides a bisector in the ratio (sum of the two adjacent sides) : (opposite side), so
+\[\frac{PI_B}{I_BD_b}=\frac{PA+PC}{CA}=\frac{k(a+c)}{abc}.\qquad\text{Likewise } I_C\in PD_c,\quad \frac{PI_C}{I_CD_c}=\frac{PA+PB}{AB}=\frac{k(a+b)}{abc}.\]</p><p><em>Step 2: line $I_BI_C$ passes through $E_a$.</em> Triangle $PD_bD_c$ is non-degenerate, because $P\notin\pi$. The two ratios in Step 1 differ (since $b\ne c$), so line $I_BI_C$ is not
+parallel to $D_bD_c$. Let it meet line $D_bD_c$ at $U$. Menelaus' theorem in triangle $PD_bD_c$ gives
+\[\frac{D_bU}{UD_c}=\frac{PI_C/I_CD_c}{PI_B/I_BD_b}=\frac{a+b}{a+c},\]
+with $U$ outside segment $D_bD_c$ (the line meets the other two sides internally). Now let $U'$ be the intersection of line $BC$ with line $D_bD_c$. Here $B$ lies on line
+$AD_c$ beyond $D_c$, and $C$ lies on line $AD_b$ beyond $D_b$. By Menelaus in triangle $AD_bD_c$,
+\[\frac{D_bU'}{U'D_c}=\frac{AB/BD_c}{AC/CD_b}=\frac{(a+b)/a}{(a+c)/a}=\frac{a+b}{a+c},\]
+using $BD_c=\frac{ac}{a+b}$ and $CD_b=\frac{ab}{a+c}$, again with $U'$ outside the segment. So $U=U'$. Finally, Menelaus in triangle $ABC$ with the line $D_bD_cU'$ gives
+$\frac{BU'}{U'C}=\frac{D_cB}{AD_c}\cdot\frac{AD_b}{D_bC}=\frac ab\cdot\frac ca=\frac cb$, so $U'=E_a$. Thus $E_a\in I_BI_C$, and similarly $E_b\in I_CI_A$ and $E_c\in I_AI_B$.
+These points do not depend on $P$.</p><p><em>Step 3: $X\in IE_a$, $Y\in IE_b$, $Z\in IE_c$.</em> The plane of circle $II_BI_C$ contains $I$ and the whole line $I_BI_C$, hence $E_a$. It is not $\pi$ (as $I_B\notin\pi$), so it
+meets $\pi$ exactly in the line $IE_a$ (note $E_a\ne I$, because $E_a$ is on line $BC$). Since $X$ is on this circle and in $\pi$, $X$ lies on line $IE_a$. Likewise $Y$ lies on line $IE_b$ and $Z$ on line $IE_c$. We call these lines $\ell_a=IE_a$, $\ell_b=IE_b$, $\ell_c=IE_c$; they depend only on $ABC$.</p><p><em>The three lines are distinct.</em> A line through the interior point $I$ crosses the boundary of the triangle at two points of two different sides. So at least two of its
+intersection points with the lines $BC,CA,AB$ lie on the sides themselves. But $E_a,E_b,E_c$ lie outside the sides, so no line through $I$ contains two of them.</p><p><em>Step 4: $I,X,Y,Z$ are concyclic.</em> The points $I,I_A,I_B,I_C$ are not coplanar. Otherwise the three circles would lie in one plane, which is not $\pi$, and $X$, $Y$, $Z$ would lie on its
+line of intersection with $\pi$. That line passes through $I$ and $X\ne I$, so it would be $IE_a$, and in the same way $IE_b$, which contradicts Step 3. So there is a sphere $\Sigma$ through
+$I,I_A,I_B,I_C$. Each of the three circles lies on $\Sigma$ (its plane cuts $\Sigma$ in a circle through its three points). Hence $I,X,Y,Z$ lie on $\Sigma\cap\pi$, which is
+a circle $\Gamma$. The points $X,Y,Z$ are different from $I$ and lie on three distinct lines through $I$, so $I,X,Y,Z$ are four distinct points of $\Gamma$.</p><p><em>Step 5: the shape of $XYZ$.</em> By the inscribed angle theorem in $\Gamma$ (directed angles modulo $180^\circ$),
+\[\measuredangle(XY,XZ)=\measuredangle(IY,IZ)=\measuredangle(IE_b,IE_c),\quad\measuredangle(YZ,YX)=\measuredangle(IE_c,IE_a),\quad\measuredangle(ZX,ZY)=\measuredangle(IE_a,IE_b).\]
+Fix one circle $\Gamma_0$ through $I$ that is tangent to none of the lines $IE_a,IE_b,IE_c$, and let $X_0,Y_0,Z_0$ be its second intersections with these lines. Let
+$\mathcal T=X_0Y_0Z_0$. This triangle depends only on $ABC$, and by the same argument its directed angles are the three angles displayed above. Two
+triangles with the same directed angles are directly similar. Indeed, at each vertex the interior angles are equal if the orientations agree and
+supplementary if they differ. In the second case the interior angles of one triangle would add up to $3\cdot180^\circ-180^\circ\ne180^\circ$. Hence $XYZ$ is similar to $\mathcal T$ for every admissible $P$.</p>
+<h4>Solution 2 (Mass points in space)</h4>
+<p>Let $a=BC$, $b=CA$, $c=AB$ (pairwise different) and $k=AP\cdot BC=BP\cdot CA=CP\cdot AB$, so $PA=\frac ka$, $PB=\frac kb$, $PC=\frac kc$. Put $t=\frac{abc}{k}&gt;0$.
+We use position vectors in space.</p><p><em>Step 1: the four incenters as centers of mass.</em> The incenter of a triangle is the weighted average of its vertices with weights equal to the opposite sides. For
+triangle $CAP$ the weights are $PA=\frac ka$ at $C$, $PC=\frac kc$ at $A$, and $CA=b$ at $P$. Multiplying all weights by $\frac{ac}{k}$:
+\[I_B=\frac{aA+cC+tP}{a+c+t},\qquad\text{and similarly}\qquad I_C=\frac{aA+bB+tP}{a+b+t},\quad I_A=\frac{bB+cC+tP}{b+c+t},\quad I=\frac{aA+bB+cC}{a+b+c}.\]
+So, with masses $a,b,c,t$ at $A,B,C,P$, the points $I,I_A,I_B,I_C$ are the centers of mass of the four triples of these points.</p><p><em>Step 2: a fixed point on line $I_BI_C$.</em> Subtracting,
+\[(a+c+t)I_B-(a+b+t)I_C=cC-bB .\]
+Since $b\ne c$, dividing by $c-b=(a+c+t)-(a+b+t)$ gives
+\[E_a:=\frac{cC-bB}{c-b}=\frac{a+c+t}{c-b}\,I_B-\frac{a+b+t}{c-b}\,I_C ,\]
+an affine combination of $I_B$ and $I_C$ (the coefficients add up to $1$). So $E_a$ lies on line $I_BI_C$. On the other hand $E_a$ lies on line $BC$, outside segment $BC$,
+with $E_aB:E_aC=c:b$; it is the foot of the external bisector of angle $A$, and it does not depend on $P$. In the same way
+$E_b=\frac{aA-cC}{a-c}$ lies on line $I_CI_A$ and $E_c=\frac{bB-aA}{b-a}$ lies on line $I_AI_B$.</p><p><em>Step 3: $X$, $Y$, $Z$ lie on fixed lines through $I$.</em> The plane of circle $II_BI_C$ contains $I$ and $E_a$ (a point of line $I_BI_C$). It differs from $\pi$ because
+$I_B\notin\pi$ (the mass $t&gt;0$ sits at $P\notin\pi$). So its intersection with $\pi$ is the line $IE_a$, and $X\in IE_a$. Similarly $Y\in IE_b$ and $Z\in IE_c$. These three lines are
+distinct: a line through the interior point $I$ meets at least two of the side lines $BC,CA,AB$ on the sides themselves, while $E_a,E_b,E_c$ lie outside the sides.</p><p><em>Step 4: concyclicity and similarity.</em> If $I,I_A,I_B,I_C$ were coplanar, the three circles would lie in one plane. That plane meets $\pi$ in a single line, which would
+contain $I$, $X$ and $Y$ and so be both $IE_a$ and $IE_b$; this is impossible. So a sphere $\Sigma$ passes through $I,I_A,I_B,I_C$, and it contains the three circles.
+Hence $I,X,Y,Z$ lie on the circle $\Gamma=\Sigma\cap\pi$. By the inscribed angle theorem, the directed angles of triangle $XYZ$ are
+\[\measuredangle(XY,XZ)=\measuredangle(IE_b,IE_c),\qquad \measuredangle(YZ,YX)=\measuredangle(IE_c,IE_a),\qquad \measuredangle(ZX,ZY)=\measuredangle(IE_a,IE_b),\]
+which depend only on $ABC$. Take for $\mathcal T$ the triangle cut out in the same way on any fixed circle through $I$ that is tangent to none of the three lines. Its directed angles are the same. Equal directed angles force equal interior angles, because the opposite orientation would make the interior angles add up to $360^\circ$. So $XYZ$ is
+similar to $\mathcal T$ for every admissible point $P$.</p>
+</div></details>
+</section>
+{% endraw %}

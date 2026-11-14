@@ -13,32 +13,28 @@ The contests are grouped by level, from the lower grades to the team selection t
 
 ## Lower grades
 
-Selected problems from contests for younger students (such as Kangaroo, MIMC, SMOPS and CLMC), gathered into one collection per grade and presented like a single olympiad. Only the best problems are kept. Coming soon.
+Selected problems from contests for younger students (such as Kangaroo, MIMC, SMOPS and CLMC), gathered into one collection per grade and presented like a single olympiad. Only the best problems are kept; each problem names its source.
 
 <div class="cards">
   <div class="card">
-    <h3>Grade 3 Selection 2026</h3>
-    <p>Grade 3. In preparation.</p>
+    <h3><a href="{{ '/contests/grade-3-4-2026' | relative_url }}">Grades 3-4 Selection 2026</a></h3>
+    <p>23 problems. Selected problems for grades 3 and 4 from 2026 contests (Kangaroo, UKMT, CEMC Gauss, AMC 8).</p>
   </div>
   <div class="card">
-    <h3>Grade 4 Selection 2026</h3>
-    <p>Grade 4. In preparation.</p>
+    <h3><a href="{{ '/contests/grade-5-2026' | relative_url }}">Grade 5 Selection 2026</a></h3>
+    <p>17 problems. Selected problems for grade 5 from 2026 contests (UKMT JMC, MIMC, SMOPS, Gauss, Kangaroo).</p>
   </div>
   <div class="card">
-    <h3>Grade 5 Selection 2026</h3>
-    <p>Grade 5. In preparation.</p>
+    <h3><a href="{{ '/contests/grade-6-2026' | relative_url }}">Grade 6 Selection 2026</a></h3>
+    <p>22 problems. Selected problems for grade 6 from 2026 contests (MIMC, SMOPS, UKMT JMC, AMC 8).</p>
   </div>
   <div class="card">
-    <h3>Grade 6 Selection 2026</h3>
-    <p>Grade 6. In preparation.</p>
+    <h3><a href="{{ '/contests/grade-7-2026' | relative_url }}">Grade 7 Selection 2026</a></h3>
+    <p>24 problems. Selected problems for grade 7 from 2026 contests (MIMC, SMOPS, Gauss, AMC 8).</p>
   </div>
   <div class="card">
-    <h3>Grade 7 Selection 2026</h3>
-    <p>Grade 7. In preparation.</p>
-  </div>
-  <div class="card">
-    <h3>Grade 8 Selection 2026</h3>
-    <p>Grade 8. In preparation.</p>
+    <h3><a href="{{ '/contests/grade-8-2026' | relative_url }}">Grade 8 Selection 2026</a></h3>
+    <p>17 problems. Selected problems for grade 8 from 2026 contests (MIMC, CLMC, Gauss, AMC 8).</p>
   </div>
 </div>
 
@@ -62,6 +58,10 @@ The North American contests: the AMC 10 and AMC 12, the AIME that follows them, 
   <div class="card">
     <h3><a href="{{ '/contests/aime-2026' | relative_url }}">AIME 2026</a></h3>
     <p>30 problems. AIME I and AIME II, 15 each; every answer is an integer from 0 to 999.</p>
+  </div>
+  <div class="card">
+    <h3><a href="{{ '/contests/uk-smc-2026' | relative_url }}">UK SMC 2026</a></h3>
+    <p>25 problems. UKMT Senior Mathematical Challenge: 25 questions (22 multiple choice, 3 with a three-digit answer).</p>
   </div>
 </div>
 
@@ -118,6 +118,10 @@ National olympiads and their rounds. Most problems ask for a proof; where a prob
     <p>5 problems. Canadian Mathematical Olympiad: five problems.</p>
   </div>
   <div class="card">
+    <h3><a href="{{ '/contests/canada-cmoqr-2026' | relative_url }}">Canada MO 2026 (Repêchage)</a></h3>
+    <p>7 problems. Canadian Mathematical Olympiad Qualifying Repêchage: seven problems.</p>
+  </div>
+  <div class="card">
     <h3><a href="{{ '/contests/china-mo-2026' | relative_url }}">China MO 2026</a></h3>
     <p>6 problems. Chinese Mathematical Olympiad (CMO): two days, three problems each.</p>
   </div>
@@ -156,6 +160,10 @@ National olympiads and their rounds. Most problems ask for a proof; where a prob
   <div class="card">
     <h3><a href="{{ '/contests/iran-2nd-round-2026' | relative_url }}">Iran MO 2026 (Second Round)</a></h3>
     <p>6 problems. Iranian olympiad, second round: two days, three problems each.</p>
+  </div>
+  <div class="card">
+    <h3><a href="{{ '/contests/japan-mo-2026' | relative_url }}">Japan MO 2026 (Final Round)</a></h3>
+    <p>5 problems. Japan Mathematical Olympiad, final round: five problems.</p>
   </div>
   <div class="card">
     <h3><a href="{{ '/contests/kazakhstan-mo-2026' | relative_url }}">Kazakhstan MO 2026</a></h3>
@@ -244,6 +252,10 @@ National olympiads and their rounds. Most problems ask for a proof; where a prob
   <div class="card">
     <h3><a href="{{ '/contests/uzbekistan-mo-2026' | relative_url }}">Uzbekistan MO 2026</a></h3>
     <p>5 problems. Uzbek national olympiad, final round: five problems.</p>
+  </div>
+  <div class="card">
+    <h3><a href="{{ '/contests/vietnam-30-4-2026' | relative_url }}">Vietnam 30/4 Olympiad 2026 (Grade 10)</a></h3>
+    <p>5 problems. Vietnam April 30 Traditional Olympiad, grade 10: five problems (translated from Vietnamese).</p>
   </div>
   <div class="card">
     <h3><a href="{{ '/contests/vietnam-mo-2026' | relative_url }}">Vietnam MO 2026</a></h3>
@@ -389,4 +401,4 @@ Tests used to choose national teams for the IMO, EGMO and JBMO. These are among 
   </div>
 </div>
 
-<p class="note">The problems belong to their publishers: AMC problems &copy; Mathematical Association of America, COMC problems &copy; Canadian Mathematical Society; the olympiad problems are taken from the AoPS contest collections. They are reproduced here for non-commercial teaching. The solutions are written by MCC.</p>
+<p class="note">The problems belong to their publishers: AMC problems &copy; Mathematical Association of America, COMC problems &copy; Canadian Mathematical Society, UKMT problems &copy; United Kingdom Mathematics Trust, Gauss problems &copy; CEMC; the olympiad problems are taken from the AoPS contest collections or the official papers, and the lower-grade selections name the source of each problem. They are reproduced here for non-commercial teaching. The solutions are written by MCC.</p>
