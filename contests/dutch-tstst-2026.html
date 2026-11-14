@@ -78,7 +78,8 @@ description: Netherlands Team Selection Test 2026, TSTST: problems with answers 
 <h4>Solution 1 ($X$ is an orthocentre)</h4>
 <div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/dutch-tstst-1_s1.svg" alt="Figure for the solution"></div>
 <p>The vertices lie on $\Gamma$ in the order $A,B,P,C,Q,D$, and $AC$, $BD$ are diameters. Arcs below are arcs of $\Gamma$ not containing the
-other named points.</p><p><strong>$AP\perp BQ$.</strong> Since $BP=CQ$, the arcs $BP$ and $CQ$ are equal. The chords $AP$ and $BQ$ cross at a point $S$ (the points $A,B,P,Q$ alternate on $\Gamma$). By inscribed angles,
+other named points. If $P=B$, then $Q=C$, the perpendicular from $B$ to $AC$ meets the line $AB$ at $X=B$, and $|PQ|=|BC|=|XQ|$; so we assume
+$P\neq B$, hence $Q\neq C$ and $A,B,P,Q$ are four distinct points (possibly $Q=D$).</p><p><strong>$AP\perp BQ$.</strong> Since $BP=CQ$, the arcs $BP$ and $CQ$ are equal. The chords $AP$ and $BQ$ cross at a point $S$ (the points $A,B,P,Q$ alternate on $\Gamma$). By inscribed angles,
 \[\angle BAP+\angle ABQ=\tfrac12\bigl(\operatorname{arc}BP+\operatorname{arc}QDA\bigr)=\tfrac12\bigl(\operatorname{arc}CQ+\operatorname{arc}QD+\operatorname{arc}DA\bigr)=\tfrac12\cdot180^\circ=90^\circ,\]
 because the arc from $C$ through $Q$ and $D$ to $A$ is a semicircle ($AC$ is a diameter). Hence $\angle ASB=90^\circ$.</p><p><strong>$X$ is the orthocentre $H$ of triangle $ABQ$.</strong> The line $BX$ is the altitude from $B$ (it is perpendicular to $AQ$), and the line $AP$ is the altitude from $A$ (it is perpendicular to $BQ$).
 Their intersection $X$ is therefore the orthocentre $H$ of triangle $ABQ$, and $P$ is the second intersection of the altitude from $A$ with the circumcircle $\Gamma$ of $ABQ$.</p><p><strong>$P$ is the reflection of $H$ in $BQ$.</strong> With directed angles modulo $180^\circ$:
@@ -128,7 +129,7 @@ where $a$ and $b$ are positive integers.</p></div>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Products that are squares)</h4>
 <p>Put $c=a^2/b$. Then $z=c-b$, and $c$ is a positive integer with $bc=a^2$. Conversely, if $b,c$ are positive integers with $bc$ a perfect square $a^2$,
-then $\frac{a^2-b^2}{b}=c-b$. So the possible values of $z$ are exactly the differences $c-b$ of positive integers whose product is a square.</p><p>Write $b=ku^2$ with $k$ squarefree. Then $bc$ is a square iff $kc$ is a square iff $c=kv^2$ for some positive integer $v$. Hence the possible values are
+then $\frac{a^2-b^2}{b}=c-b$. So the possible values of $z$ are exactly the differences $c-b$ of positive integers whose product is a square.</p><p>Write $b=ku^2$ with $k$ squarefree. Then $bc$ is a square iff $kc$ is a square iff $c=kv^2$ for some positive integer $v$. Conversely, for any positive integers $k,u,v$ the numbers $b=ku^2$, $c=kv^2$ have the square product $(kuv)^2$. Hence the possible values are
 \[z=k(v^2-u^2)\qquad(k,u,v\ \text{positive integers}).\]
 In particular $z=0$ occurs, and $z$ occurs iff $-z$ does (swap $u$ and $v$). For $z&gt;0$: $z$ occurs iff $z$ has a divisor $e$ of the form $v^2-u^2$ with $v&gt;u\ge1$.</p><p>Which $e$ have this form? $e=(v-u)(v+u)$ with two factors of the same parity and $v+u\ge v-u+2$. An odd $e\ge3$ works: $e=(t+1)^2-t^2$ with $e=2t+1$. A multiple $e=4t$ with
 $t\ge2$ works: $4t=(t+1)^2-(t-1)^2$. No other $e$ works: $e\equiv2\pmod4$ is impossible (two factors of the same parity give an odd number or a multiple of $4$), $e=1$ would need
@@ -150,7 +151,7 @@ $\pm1,\pm2,\pm4$ occurs.</p>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
 <h4>Solution (Which jumps are possible)</h4>
 <p>Let $R_n$ be the number of rainy days among days $1,\dots,n$ and $r_n=R_n/n$; the written sequence is $r_3,r_4,\dots$, and $R_2=1$.</p><p><strong>Two observations.</strong> (a) A rainy day does not decrease the fraction and a dry day does not increase it: $\frac{R+1}{n+1}\ge\frac Rn$ (as $R\le n$) and $\frac{R}{n+1}\le\frac Rn$.
-(b) A dry day cannot jump strictly over $\frac1k$ from above: $\frac Rn&gt;\frac1k&gt;\frac R{n+1}$ would mean $n&lt;kR&lt;n+1$.</p><p><strong>Symmetry.</strong> Exchanging rain and dry replaces every fraction $r$ by $1-r$; the fixed start (one rainy and one dry day) is unchanged. So $c$ is indispensable iff $1-c$ is.
+(b) A dry day cannot jump strictly over $\frac1k$ from above: $\frac Rn&gt;\frac1k&gt;\frac R{n+1}$ would mean $n&lt;kR&lt;n+1$.</p><p><strong>Symmetry.</strong> Exchanging rain and dry from day $3$ on (days $1$ and $2$ stay as they are) replaces every fraction $r_n$ by $1-r_n$, because days $1$ and $2$ contain one rainy and one dry day. So $c$ is indispensable iff $1-c$ is.
 In particular, by (b) and symmetry, a rainy day cannot jump strictly over $1-\frac1k$ from below.</p><p><strong>The numbers $\frac1k$ are indispensable.</strong> Suppose a sequence has terms below and above $c=\frac1k$ but never equals $c$. If $k\ge3$: $r_3\in\{\frac13,\frac23\}$, so
 $r_3\ge\frac13\ge c$ and hence $r_3&gt;c$. Let $r_{n+1}$ be the first term below $c$; then $r_n&gt;c&gt;r_{n+1}$, so day $n+1$ is dry by (a), and this contradicts (b). If $k=2$: some two
 consecutive terms lie on opposite sides of $\frac12$; a downward jump over $\frac12$ contradicts (b) with $k=2$, and an upward jump over $\frac12=1-\frac12$ contradicts the mirror image of (b).

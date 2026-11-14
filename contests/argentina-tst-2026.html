@@ -74,7 +74,7 @@ description: Argentina Team Selection Test 2026: problems with answers and solut
 <section class="ct-problem" id="p1">
 <h3>Problem 1</h3>
 <div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 44: Combinatorial Games and Strategy</div>
-<div class="ct-text"><p>Each face of a $2\times2\times2$ cube is divided into $4$ square cells (so the cube has $24$ cells in total). We define a <em>ring</em> as a sequence of $8$ cells such that each face of the cube contains either $0$ or $2$ of these cells, and each of the $8$ cells shares a side with the previous one and a side with the next one, forming a closed loop around the cube.</p><p>Ana and Beto take turns writing a distinct integer from $1$ to $24$ inclusive in an unused cell of the cube. Ana moves first. After all $24$ numbers have been written, all possible sums of the $8$ numbers in each ring are computed (there are $6$ rings). If all $6$ sums are equal, Beto wins; otherwise, Ana wins. Determine who has a winning strategy, and describe it.</p></div>
+<div class="ct-text"><p>Each face of a $2\times2\times2$ cube is divided into $4$ square cells (so the cube has $24$ cells in total). We define a <em>ring</em> as a sequence of $8$ cells such that each face of the cube contains either $0$ or $2$ of these cells, and each of the $8$ cells shares a side with the previous one and a side with the next one, forming a closed loop around the cube. (So a ring runs straight around the cube: its $8$ cells lie in one layer of unit thickness, on the four faces parallel to one edge direction.)</p><p>Ana and Beto take turns writing a distinct integer from $1$ to $24$ inclusive in an unused cell of the cube. Ana moves first. After all $24$ numbers have been written, all possible sums of the $8$ numbers in each ring are computed (there are $6$ rings). If all $6$ sums are equal, Beto wins; otherwise, Ana wins. Determine who has a winning strategy, and describe it.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>Beto wins</p></div></details>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
 <h4>Solution (Pairing cells on opposite faces)</h4>
@@ -215,7 +215,7 @@ both have $7=2\cdot5-3$ terms, so both list all the sums in increasing order and
 $a_2+a_3=a_1+a_4$, $a_2+a_4=a_1+a_5$ and $a_3+a_4=a_2+a_5$. With $d_i=a_{i+1}-a_i$ these say $d_1=d_3$ (first), $d_3=d_4$ (second minus first) and
 $d_2=d_4$ (third). Hence $d_1=d_2=d_3=d_4$.</p><p><em>Inductive step.</em> Let $n\ge6$ and $S'=S\setminus\{a_n\}$. Every pairwise sum of $S'$ is at most $a_{n-2}+a_{n-1}&lt;a_{n-2}+a_n&lt;a_{n-1}+a_n$, so
 the sums of $S$ include the sums of $S'$ and two more values. Hence $S'$ has at most $2n-5=2(n-1)-3$ sums, and therefore exactly that many. By the
-induction hypothesis $S'$ is an arithmetic progression: $a_i=a_1+(i-1)d$ for $i\le n-1$, and its sums are $2a_1+jd$ for $1\le j\le 2n-5$.</p><p>Since $S$ has only two sums besides those of $S'$, namely $a_{n-2}+a_n$ and $a_{n-1}+a_n$, the smaller sum $a_{n-3}+a_n$ is a sum of $S'$:
+induction hypothesis $S'$ is an arithmetic progression: $a_i=a_1+(i-1)d$ for $i\le n-1$, and its sums are $2a_1+jd$ for $1\le j\le 2n-5$ (here $j=(i-1)+(k-1)$ for $1\le i&lt;k\le n-1$).</p><p>Since $S$ has only two sums besides those of $S'$, namely $a_{n-2}+a_n$ and $a_{n-1}+a_n$, the smaller sum $a_{n-3}+a_n$ is a sum of $S'$:
 $a_{n-3}+a_n=2a_1+jd$ with $j\le 2n-5$. With $a_{n-3}=a_1+(n-4)d$ this gives $a_n=a_1+(j-n+4)d\le a_1+(n-1)d$. As $a_n&gt;a_{n-1}=a_1+(n-2)d$ and
 $a_n-a_1$ is a multiple of $d$, we get $a_n=a_1+(n-1)d$. So $S$ is an arithmetic progression, which completes the induction.</p>
 </div></details>
@@ -230,7 +230,8 @@ $a_n-a_1$ is a multiple of $d$, we get $a_n=a_1+(n-1)d$. So $S$ is an arithmetic
 <div class="ct-fig"><img style="width:299px" src="/assets/contests/2026-27/argentina-tst-5_s1.svg" alt="Figure for the solution"></div>
 <p>Let $\alpha,\beta,\gamma$ be the angles of triangle $ABC$, let $H$ be the foot of the altitude from $C$ and $h=CH$. We take $S$ strictly
 between $A$ and $B$ (for $S=A$ or $S=B$ one of the circles is not defined).</p><p>Both $P$ and $Q$ are equidistant from $S$ and $C$, so they lie on the perpendicular bisector of $SC$; let $M$ be the midpoint of $SC$. Since
-$\angle SAC=\alpha&lt;90^\circ$, the centre $P$ lies on the same side of line $SC$ as $A$, and the central angle is $\angle SPC=2\angle SAC=2\alpha$.
+$\angle SAC=\alpha&lt;90^\circ$, the centre $P$ lies on the same side of line $SC$ as $A$ (an inscribed angle on the chord $SC$ is acute exactly when its vertex
+and the centre are on the same side of the chord), and the central angle is $\angle SPC=2\angle SAC=2\alpha$.
 As $PS=PC$, the line $PM$ bisects this angle, so $\angle SPM=\alpha$. In the same way $Q$ lies on the same side of $SC$ as $B$ and
 $\angle SQM=\beta$. Because $S$ lies between $A$ and $B$, the points $A$ and $B$, hence $P$ and $Q$, are on opposite sides of line $SC$, so $M$
 lies on segment $PQ$. Therefore triangle $PQS$ has $\angle SPQ=\alpha$, $\angle SQP=\beta$ and $\angle PSQ=\gamma$: it is similar to triangle
@@ -307,7 +308,7 @@ $c_0=c_1=c_2=1000$, $\sum c_v(c_v-1)=3\cdot1000\cdot999$ and $N=2997000$.</p><p>
 <h4>Solution 2 (A second proof of (b): counting by starting position)</h4>
 <p>Here we prove only part (b) again, without prefix sums.
 A group is a block of at least two and at most $2999$ consecutive numbers; it is determined by its first position and its length. The total of all
-$3000$ numbers is $1000\cdot2-2000=0$.</p><p>Fix a starting position $i$ and let $\ell_1&lt;\ell_2&lt;\dots&lt;\ell_r$ be the lengths of the groups with sum $0$ that start at $i$ (all $\ell_j\le2999$).
+$3000$ numbers is $1000\cdot2-2000=0$.</p><p>Fix a starting position $i$ and let $\ell_1&lt;\ell_2&lt;\dots&lt;\ell_r$ be the lengths of the groups with sum $0$ that start at $i$ (all $\ell_j\le2999$). If $r=0$ there is nothing to prove, so let $r\ge1$.
 Cut the circle, starting at $i$, into consecutive blocks of lengths $\ell_1,\ \ell_2-\ell_1,\ \dots,\ \ell_r-\ell_{r-1},\ 3000-\ell_r$. These $r+1$
 blocks are nonempty, disjoint and cover the circle. Each has sum $0$: the first $j$ blocks together form the group of length $\ell_j$, with sum
 $0$, so each block is a difference of two zero sums, and the last block has sum $0-0=0$ because the total is $0$. A nonempty block with sum $0$

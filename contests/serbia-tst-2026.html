@@ -79,7 +79,7 @@ description: Serbia Team Selection Test 2026: problems with answers and solution
 Prove that for every two positive integers $m$ and $n$, there exists a positive integer $t$ such that $a_{n,m}=a_{1,t}$.</p></div>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Pairs of divisors are the divisors of one number)</h4>
-<p>The recurrence defines $a_{n,m}$ uniquely, by induction on $nm$. In particular, for $n=1$ it reads
+<p>The recurrence is used for $(n,m)\ne(1,1)$, with the initial value $a_{1,1}=1$; it defines $a_{n,m}$ uniquely, by induction on $nm$. In particular, for $n=1$ it reads
 \[
 a_{1,T}=\sum_{e\mid T,\ e\ne T}a_{1,e}\qquad(T&gt;1). \tag{1}
 \]</p><p>Fix $n$ and $m$ and let $m=q_1^{\beta_1}\cdots q_v^{\beta_v}$ be the prime factorisation of $m$. Choose distinct primes $r_1,\dots,r_v$ that do not divide $n$. For a divisor $l=q_1^{\gamma_1}\cdots q_v^{\gamma_v}$ of $m$ put
@@ -157,7 +157,7 @@ so $\dfrac{DB}{DC}=\dfrac{XB}{XC}$, with $D$ inside and $X$ outside the segment 
 XG^2=\Bigl(\frac{g-w}{2}\Bigr)^2=\Bigl(\frac{g+w}{2}\Bigr)^2-gw=x^2+bc,\qquad
 \overline{XB}\cdot\overline{XC}=(x+b)(x-c)=x^2+(b-c)x-bc=x^2+bc .
 \]
-Since $B,C,E,F$ are concyclic and $X$ lies on $BC$ and on $EF$, we get $XG^2=\overline{XB}\cdot\overline{XC}=\overline{XE}\cdot\overline{XF}$. By the converse of the tangent-secant theorem, $XG$ is tangent to the circle $GEF$. So $BC$ is tangent to the circumcircle of $GEF$ at $G$.</p><p><strong>The case $AB=AC$.</strong> The figure is symmetric in $AD$, the circle $DKL$ touches $BC$ at $D$, so $G=D$, and the circle $DEF$ (the nine-point circle) is symmetric in $AD$ and passes through $D$; hence it touches $BC$ at $D$.</p>
+Since $B,C,E,F$ are concyclic and $X$ lies on $BC$ and on $EF$, we get $XG^2=\overline{XB}\cdot\overline{XC}=\overline{XE}\cdot\overline{XF}$. By the converse of the tangent-secant theorem, $XG$ is tangent to the circle $GEF$. So $BC$ is tangent to the circumcircle of $GEF$ at $G$.</p><p><strong>The case $AB=AC$.</strong> The figure is symmetric in $AD$, the circle $DKL$ touches $BC$ at $D$, so its second intersection with $BC$, counted with multiplicity, is $G=D$, and the circle $DEF$ (the nine-point circle) is symmetric in $AD$ and passes through $D$; hence it touches $BC$ at $D$.</p>
 <h4>Solution 2 (Brokard, an orthocentre, and the Newton-Gauss line)</h4>
 <p>Assume first $AB\ne AC$; the case $AB=AC$ is treated at the end. Vectors and dot products are used freely; for a circle $\Gamma$ with diameter $UV$ and any point $Q$, the power of $Q$ with respect to $\Gamma$ equals $\overrightarrow{QU}\cdot\overrightarrow{QV}$.</p><p><strong>Step 1: the circle $\omega$.</strong> The points $B,C,E,F$ lie on the circle with diameter $BC$, and $C,D,H,E$ on the circle with diameter $CH$, so
 \[
@@ -178,7 +178,7 @@ The circle $DKL$ meets $BC$ at $D$ and at a second point $G'$ ($G'=D$ in the tan
 \[
 \operatorname{pow}(P,\Gamma)=\Bigl(\mathbf a-\tfrac12\mathbf w\Bigr)\cdot\Bigl(\mathbf h-\tfrac12\mathbf w\Bigr)=\mathbf a\cdot\mathbf h-\tfrac12(\mathbf a\cdot\mathbf w+\mathbf h\cdot\mathbf w)+\tfrac14|\mathbf w|^2=\tfrac14|\mathbf w|^2=PG^2 .
 \]
-As $P$ lies on the line $EF$, this power also equals $\overline{PE}\cdot\overline{PF}$. Hence $\overline{PE}\cdot\overline{PF}=PG^2&gt;0$.</p><p><strong>Step 7: tangency.</strong> The point $G$ is not on the line $EF$: otherwise $G$ and $P$ would be two different common points of the lines $EF$ and $BC$, which are different lines. So the circle $GEF$ exists. It meets the line $BC=PG$ at $G$ and at a second point $G''$ ($G''=G$ in the tangent case), and the power of $P$ with respect to it is $\overline{PG}\cdot\overline{PG''}=\overline{PE}\cdot\overline{PF}=PG^2$. Hence $\overline{PG''}=\overline{PG}$, $G''=G$, and $BC$ is tangent to the circle $GEF$ at $G$.</p><p><strong>The case $AB=AC$.</strong> The figure is symmetric in $AD$, the circle $DKL$ touches $BC$ at $D$, so $G=D$, and the circle $DEF$ (the nine-point circle) is symmetric in $AD$ and passes through $D$; hence it touches $BC$ at $D$.</p>
+As $P$ lies on the line $EF$, this power also equals $\overline{PE}\cdot\overline{PF}$. Hence $\overline{PE}\cdot\overline{PF}=PG^2&gt;0$.</p><p><strong>Step 7: tangency.</strong> The point $G$ is not on the line $EF$: otherwise $G$ and $P$ would be two different common points of the lines $EF$ and $BC$, which are different lines. So the circle $GEF$ exists. It meets the line $BC=PG$ at $G$ and at a second point $G''$ ($G''=G$ in the tangent case), and the power of $P$ with respect to it is $\overline{PG}\cdot\overline{PG''}=\overline{PE}\cdot\overline{PF}=PG^2$. Hence $\overline{PG''}=\overline{PG}$, $G''=G$, and $BC$ is tangent to the circle $GEF$ at $G$.</p><p><strong>The case $AB=AC$.</strong> The figure is symmetric in $AD$, the circle $DKL$ touches $BC$ at $D$, so its second intersection with $BC$, counted with multiplicity, is $G=D$, and the circle $DEF$ (the nine-point circle) is symmetric in $AD$ and passes through $D$; hence it touches $BC$ at $D$.</p>
 <h4>Solution 3 (Coordinates with the foot of the altitude at the origin)</h4>
 <p>Take $D$ as origin and $BC$ as the $x$-axis, scaled so that $A=(0,1)$; then $B=(-b,0)$ and $C=(c,0)$ with $b,c&gt;0$, since the angles at $B$ and $C$ are acute. The angle at $A$ is acute exactly when $\overrightarrow{AB}\cdot\overrightarrow{AC}=1-bc&gt;0$; put
 \[
@@ -221,7 +221,7 @@ where the last step is checked by expanding: both brackets times $bc$ equal $bc(
 <section class="ct-problem" id="p4">
 <h3>Problem 4</h3>
 <div class="ct-meta">Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure</div>
-<div class="ct-text"><p>Let $ABCD$ be a cyclic quadrilateral with circumcircle $\Omega$. A point $E$ lies on $\Omega$ such that $AE=AD$. Let $F$ be the intersection of the lines $BE$ and $CD$. The line $AF$ intersects $\Omega$ again at the point $G$. The line through $F$ parallel to $DE$ intersects the line $BC$ at the point $H$. Prove that the line $GH$ is tangent to $\Omega$.</p></div>
+<div class="ct-text"><p>Let $ABCD$ be a cyclic quadrilateral with circumcircle $\Omega$. A point $E\ne D$ lies on $\Omega$ such that $AE=AD$. Let $F$ be the intersection of the lines $BE$ and $CD$. The line $AF$ intersects $\Omega$ again at the point $G$. The line through $F$ parallel to $DE$ intersects the line $BC$ at the point $H$. Prove that the line $GH$ is tangent to $\Omega$.</p></div>
 <details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 (The point H has equal power to the circle and to the point F)</h4>
 <div class="ct-fig"><img style="width:238px" src="/assets/contests/2026-27/serbia-tst-4_s1.svg" alt="Figure for the solution"></div>
@@ -247,7 +247,7 @@ $\angle(FH,FB)=\angle(ED,EB)=\angle(CD,CB)=\angle(CF,CB)$, so $FH$ is tangent to
 \[
 HF^2=\overline{HB}\cdot\overline{HC}=\overline{HL}\cdot\overline{HA},
 \]
-the last product being the power of $H$ with respect to $\Omega$ computed on the line $HA$. By the converse of the tangent-secant theorem, $HF$ is tangent to the circle $AFL$ at $F$, hence
+the last product being the power of $H$ with respect to $\Omega$ computed on the line $HA$. Here $L\ne A$: the tangent $t_A$ to $\Omega$ at $A$ is parallel to $DE$ (as $AD=AE$, the radius to $A$ is perpendicular to $DE$), hence to $FH$; if $AH$ were this tangent, it would be the line $FH$, so $F$ would lie on $t_A$ and the line $AF$ would meet $\Omega$ only at $A$, leaving no point $G$. By the converse of the tangent-secant theorem, $HF$ is tangent to the circle $AFL$ at $F$, hence
 \[
 \angle(LA,LF)=\angle(FA,FH). \tag{1}
 \]</p><p><strong>Step 2: $F,G,H,L$ are concyclic.</strong> The tangent $t_A$ to $\Omega$ at $A$ is parallel to $DE$ (because $AD=AE$), hence to $FH$. By the tangent-chord theorem in $\Omega$,

@@ -185,14 +185,14 @@ arguments are even; e.g. for $a$ even and $b,c$ odd all three gcds are odd, so $
 $a_t=2^{e_t}x_t$. Since $T_{t+1}=2^{e_t}\Phi(r_t)$, the parity lemma gives: if $r_t$ is not all odd then $e_{t+1}=e_t$ and $x_{t+1}=x_t+g\ge x_t+1$
 ($g$ a gcd); if $r_t$ is all odd then $e_{t+1}=e_t+\delta$ with $\delta\ge1$ and $x_{t+1}=(x_t+g)/2^\delta$.</p><p>Let $t_1&lt;\dots&lt;t_K$ be the times $t\in\{0,\dots,N-1\}$ with $r_t$ all odd, $\delta_i$ the corresponding increments, $d_i=t_{i+1}-t_i$,
 $s=N-1-t_K$ and $y_i=x_{t_i+1}$. By the parity lemma (one even entry $\to$ two $\to$ none) we have $t_1\le2$, $d_i\le3$ and $s\le2$. Hence
-$2024=t_1+\sum d_i+s\le2+3(K-1)+2$, so $K\ge675$, and $e_N=\sum\delta_i\ge K\ge675$. Put
+$2024=t_1+\sum d_i+s\le2+3(K-1)+2$, so $K\ge675$, and $e_N=e_0+\sum\delta_i\ge K\ge675$. Put
 \[D=(2-t_1)+\sum_{i&lt;K}(3-d_i)=3K-2025+s\ \ (\ge0).\]
 Also $x_N\ge y_K+s$, $y_1\ge\frac{x_{t_1}+1}{2^{\delta_1}}\ge\frac{t_1+2}{2^{\delta_1}}$ (as $x_{t_1}\ge x_0+t_1$), and
 \[y_{i+1}\ge\frac{x_{t_{i+1}}+1}{2^{\delta_{i+1}}}\ge\frac{y_i+d_i}{2^{\delta_{i+1}}}. \tag{1}\]
 If $\delta_{j+1}=\dots=\delta_i=1$, the shortfalls $z_i=3-y_i$ satisfy $z_{i+1}\le\frac{z_i+(3-d_i)}{2}$, hence
 \[z_i\le\frac{z_j}{2^{\,i-j}}+\frac12\sum_{j\le l&lt;i}(3-d_l). \tag{2}\]
-Since $a_N=2^{e_N}x_N$, it suffices to exclude $e_N=675$ with $x_N\le2$ and $e_N=676$ with $x_N=1$.</p><p><em>$e_N=675$.</em> Then $K=675$, all $\delta_i=1$ and $D=s$. By (2) with $j=1$ and $z_1\le2-\frac{t_1}2\le2$:
-$z_K\le2^{-673}+\frac12\sum_{i&lt;K}(3-d_i)\le2^{-673}+\frac s2$. So $x_N\ge y_K+s=3-z_K+s\ge3-2^{-673}+\frac s2&gt;2$, i.e. $x_N\ge3$.</p><p><em>$e_N=676$, $K=676$, all $\delta_i=1$.</em> Now $D=3+s$ and (2) gives $z_K\le2^{-674}+\frac{3+s}2$, so $x_N\ge y_K+s\ge\frac32-2^{-674}+\frac s2&gt;1$, i.e. $x_N\ge2$.</p><p><em>$e_N=676$, $K=675$, one $\delta_j=2$.</em> Here $D=s$. If $j&lt;K$: $y_j\ge1$, so $z_j\le2$ and (2) from $j$ gives $z_K\le1+\frac s2$, hence
+Since $a_N=2^{e_N}x_N$, it suffices to exclude $e_N=675$ with $x_N\le2$ and $e_N=676$ with $x_N=1$. If $e_N=675$, then $K=675$, $e_0=0$ and all $\delta_i=1$. If $e_N=676$, then either $e_0=1$, $K=675$ and all $\delta_i=1$, or $e_0=0$ and one of the two cases below occurs.</p><p><em>$K=675$, all $\delta_i=1$.</em> Then $D=s$. By (2) with $j=1$ and $z_1\le2-\frac{t_1}2\le2$:
+$z_K\le2^{-673}+\frac12\sum_{i&lt;K}(3-d_i)\le2^{-673}+\frac s2$. So $x_N\ge y_K+s=3-z_K+s\ge3-2^{-673}+\frac s2&gt;2$, i.e. $x_N\ge3$.</p><p><em>$e_0=0$, $K=676$, all $\delta_i=1$.</em> Now $D=3+s$ and (2) gives $z_K\le2^{-674}+\frac{3+s}2$, so $x_N\ge y_K+s\ge\frac32-2^{-674}+\frac s2&gt;1$, i.e. $x_N\ge2$.</p><p><em>$e_0=0$, $K=675$, one $\delta_j=2$.</em> Here $D=s$. If $j&lt;K$: $y_j\ge1$, so $z_j\le2$ and (2) from $j$ gives $z_K\le1+\frac s2$, hence
 $x_N\ge y_K+s\ge2+\frac s2\ge2$. If $j=K$ and $s\ge1$: $x_N\ge y_K+s\ge1+1=2$. If $j=K$ and $s=0$: then $D=0$, so $t_1=2$ and all $d_i=3$;
 by (2) (all earlier $\delta=1$) $z_{K-1}&lt;1$, so $y_{K-1}\ge3$, $x_{t_K}\ge y_{K-1}+2\ge5$ and $x_N=y_K\ge\frac{5+1}{4}&gt;1$, i.e. $x_N\ge2$.</p><p>In every case $a_N=2^{e_N}x_N\ge3\cdot2^{675}$. Hence the smallest possible value of $a_{2025}$ is $\boxed{3\cdot2^{675}}$.</p>
 <h4>Solution 2 (Doubling every three steps)</h4>
@@ -312,8 +312,8 @@ Adding (1) and (2): $2(3|V_3|+2|V_2|+|V_1|)\le5n-4m-2$, so there are at most $\f
 As $q$ is an integer, $q\ge1011$.</p><p><strong>A triangulation with $1011$ quokkalaterals.</strong> Label the vertices of $P$ as $A_1,\dots,A_{100}$ in order.</p><ul class="ct-parts"><li><p><span class="ct-lbl">1.</span> Draw the $97$ diagonals $A_1A_3,A_1A_4,\dots,A_1A_{99}$. In each triangle $A_1A_iA_{i+1}$ $(3\le i\le99)$ put one inner point and join it to the
 three corners ($97$ points).</p></li><li><p><span class="ct-lbl">2.</span> Inside triangle $A_1A_2A_3$ choose $914$ points $B_1,\dots,B_{914}$, in this order, on a circular arc from $A_1$ to $A_3$ that bulges towards
 $A_2$ and stays inside the triangle; so $A_1B_1\dots B_{914}A_3$ is a convex polygon $D$ and $A_2$ lies outside it. Draw the path
-$A_1B_1B_2\dots B_{914}A_3$, join $A_2$ to every $B_j$, and join $A_3$ to every $B_j$. (Every ray from $A_2$ into the triangle crosses the boundary of
-the convex polygon $D$ once on the path, so the triangles $A_2B_{j-1}B_j$ fit together; the triangles $A_3B_{j-1}B_j$ fan out $D$ from its vertex
+$A_1B_1B_2\dots B_{914}A_3$, join $A_2$ to every $B_j$, and join $A_3$ to every $B_j$. (Every ray from $A_2$ into the triangle meets the convex polygon $D$ in a segment whose far end lies on $A_1A_3$, so it crosses
+the path exactly once, and the triangles $A_2B_{j-1}B_j$ fit together; the triangles $A_3B_{j-1}B_j$ fan out $D$ from its vertex
 $A_3$. Here $B_0=A_1$, $B_{915}=A_3$.)</p></li><li><p><span class="ct-lbl">3.</span> In each of the $914$ triangles $B_{j-1}B_jA_3$ $(1\le j\le914)$ put one inner point $F_j$ very close to $A_3$ and join it to the three corners.</p></li></ul><p>This uses $100+97+914+914=2025$ points; after a tiny perturbation of the inner points no three are collinear, and the strict inequalities below are
 not affected. Now we sort the $5872$ inner edges.</p><ul class="ct-ul"><li><p>The $3\cdot(97+914)=3033$ edges at the points with three edges are arrows (at such a point the two angles next to an edge add up to $360^\circ$
 minus one angle).</p></li><li><p>$A_2B_j$ $(1\le j\le914)$: the angle at $B_j$ is the angle of $D$ at $B_j$ measured outside $D$, which exceeds $180^\circ$. Arrow.</p></li><li><p>$B_{j-1}B_j$ $(1\le j\le914)$: line $A_2B_j$ meets side $A_1A_3$ at a point $Z$ and splits $D$, with $B_{j-1}$ and $A_3$ on opposite sides; so
@@ -360,8 +360,9 @@ $\varepsilon&gt;0$, and put
 Then $P=(1-\varepsilon-\varepsilon\eta)O+\varepsilon C+\varepsilon\eta A$ lies inside triangle $OCA$, and $Q$ inside triangle $OCB$. Also
 \[\overrightarrow{OP}=-\varepsilon(\alpha-\eta)\overrightarrow{OA}-\varepsilon\beta\,\overrightarrow{OB},\quad\text{so}\quad
 \varepsilon(\alpha-\eta)\overrightarrow{OA}+\varepsilon\beta\,\overrightarrow{OB}+\overrightarrow{OP}=\vec 0\]
-with positive coefficients: $O$ lies inside triangle $ABP$; likewise $O$ lies inside triangle $ABQ$. Join $P$ to $O,C,A$ and $Q$ to $O,C,B$. We take
-$\varepsilon$ so small that no three points are collinear and that the edges $CA$ and $CB$, whose inner triangles $OCA,OCB$ become $PCA,QCB$, keep
+with positive coefficients: $O$ lies inside triangle $ABP$; likewise $O$ lies inside triangle $ABQ$. Join $P$ to $O,C,A$ and $Q$ to $O,C,B$. Each collinearity of three of the points (old ones, $P$, $Q$) is a polynomial equation in $\varepsilon$ that is not identically
+satisfied for a suitable choice of $\eta$, as no three old points are collinear; so we may take $\varepsilon$ outside a finite set, keeping all points in general
+position, and also so small that the edges $CA$ and $CB$, whose inner triangles $OCA,OCB$ become $PCA,QCB$, keep
 their status (this is the small-move remark above, $O$ being moved to $P$ or $Q$). Now:</p><ul class="ct-ul"><li><p>the six edges at $P$ and $Q$ are bad, since $P$ and $Q$ have degree $3$;</p></li><li><p>$OA$ lies in the triangles $OAB$ and $OAP$, and $O$ is inside $ABP$, so the angle of the quadrilateral at $O$ exceeds $180^\circ$: bad; likewise
 $OB$ (triangles $OAB$, $OBQ$) is bad;</p></li><li><p>$OC$ (triangles $OCP$, $OCQ$) may be good;</p></li><li><p>every other inner edge keeps both of its triangles, or is $CA$ or $CB$, so its status does not change.</p></li></ul><p>So the number of inner points grows by $2$ and $F$ by at most $1$, and the new points $P,Q$ have degree $3$, so the next insertion is possible. (A later insertion at $P$ or $Q$ replaces $P$ or $Q$ in the triangles $OAP$, $OBQ$ by a point very close to it; by the choice of its own
 $\varepsilon$ this keeps $OA$ and $OB$ bad.) A one-point version inserts
@@ -374,7 +375,7 @@ and at most $97+913+1=1011$ quokkalaterals.</p><p>So the minimum number of quokk
 <section class="ct-problem" id="p7">
 <h3>Problem 1</h3>
 <div class="ct-meta">Geometry &middot; LPS VII, Chapter 48: Inversion and Circle-Preserving Transformation</div>
-<div class="ct-text"><p>Let $ABC$ be a triangle with incenter $I$. Let its incircle $\omega$ touch the side $\overline{BC}$ at $D$. Let the circumcircle of $BCI$ meet $\omega$ at the points $K$ and $L$ such that the points $B,K,I,L,C$ lie on the circular arc in this order. Let the line $KL$ meet $BC$ at $S$.
+<div class="ct-text"><p>Let $ABC$ be a triangle with incenter $I$. Let its incircle $\omega$ touch the side $\overline{BC}$ at $D$. Let the circumcircle of $BCI$ meet $\omega$ at the points $K$ and $L$ such that the points $B,K,I,L,C$ lie on the circular arc in this order. Suppose that $AB\ne AC$, and let the line $KL$ meet $BC$ at $S$.
 Show that there exists a line through $S$ that is tangent to the circumcircles of the triangles $BDK$ and $CDL$.</p></div>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
 <h4>Solution 1 (An inversion centred at $S$)</h4>
@@ -402,8 +403,8 @@ equation and multiplying by $1+\tau^2$ shows that the parameters $\tau_K,\tau_L$
 $x_K^2+y_K^2=2ry_K$ and $x_K=\tau_Ky_K$ we get $w_1=-2r-u\tau_K$. Likewise $\omega_2=(CDL)$ is $x^2+y^2-vx+w_2y=0$ with $w_2=-2r+v\tau_L$. Then
 \[w_1-\frac uv\,w_2=-2r+\frac{2ru}{v}-u(\tau_K+\tau_L)=\frac{2r(u-v)}{v}-\frac{2r(u-v)}{v}=0 .\]</p><p><strong>The homothety.</strong> Let $\mathcal H$ be the homothety with centre $S$ and ratio $k=u/v&gt;0$, $\mathcal H(Z)=S+k(Z-S)$. A point $(x,0)$ goes to
 $(s(1-k)+kx,0)$, and $s(1-k)=\frac{uv}{u-v}\cdot\frac{v-u}{v}=-u$; so $\mathcal H(C)=(-u+u,0)=D$ and $\mathcal H(D)=(-u,0)=B$. The centre of $\omega_2$
-is $\bigl(\frac v2,-\frac{w_2}2\bigr)$, the point above the midpoint of $CD$ at height $-\frac{w_2}{2}$; its image lies above the midpoint of
-$\mathcal H(C)\mathcal H(D)=DB$ at height $-\frac{k w_2}{2}=-\frac{w_1}{2}$, so it is $\bigl(-\frac u2,-\frac{w_1}2\bigr)$, the centre of $\omega_1$.
+is $\bigl(\frac v2,-\frac{w_2}2\bigr)$, the point over the midpoint of $CD$ at signed height $-\frac{w_2}{2}$; its image lies over the midpoint of
+$\mathcal H(C)\mathcal H(D)=DB$ at signed height $-\frac{k w_2}{2}=-\frac{w_1}{2}$, so it is $\bigl(-\frac u2,-\frac{w_1}2\bigr)$, the centre of $\omega_1$.
 Hence $\mathcal H(\omega_2)$ is the circle with the centre of $\omega_1$ through $\mathcal H(D)=B\in\omega_1$, that is, $\mathcal H(\omega_2)=\omega_1$.</p><p><strong>The common tangent.</strong> The power of $S$ with respect to $\omega_2$ is $s^2-vs=s(s-v)=\frac{uv}{u-v}\cdot\frac{v^2}{u-v}&gt;0$, so $S$ lies outside
 $\omega_2$ and there is a line $\tau$ through $S$ tangent to $\omega_2$. The homothety $\mathcal H$ maps every line through $S$ to itself, so
 $\tau=\mathcal H(\tau)$ is tangent to $\mathcal H(\omega_2)=\omega_1$ as well. Thus $\tau$ is a line through $S$ tangent to the circumcircles of $BDK$
@@ -454,8 +455,9 @@ first $i$ comes before the first $i+1$; and $C(1)=1$, because bucket $(0,1)$ hol
 The block $(N,N+m)$ contains as many $i$'s as there are $a\in H$ in $(Nx_i,(N+m)x_i)$, an open interval of length $mx_i$ with endpoints outside $H$; such
 an interval contains $\lfloor mx_i\rfloor$ or $\lfloor mx_i\rfloor+1$ half-integers.</p><p>Two consequences. A <em>gap</em> of colour $i$ is a maximal run of buckets without $i$ (every colour occurs infinitely often in both directions). (G) Two
 gaps of colour $i$ differ in length by at most $1$: if the lengths were $g$ and $g'\ge g+2$, the block formed by the shorter gap and its two bounding $i$'s
-(length $g+2$, two $i$'s) and a block of length $g+2$ inside the longer gap (no $i$) would violate the lemma. (R) In the same way, two maximal runs of
-$1$'s differ in length by at most $1$.</p><p><strong>The words $T_j$.</strong> Let $T_1=1$ and $T_j=T_{j-1}\,j\,T_{j-1}$. By induction, $T_j$ has length $2^j-1$, is a palindrome, and its letter at position
+(length $g+2$, two $i$'s) and a block of length $g+2$ inside the longer gap (no $i$) would violate the lemma. (R) Two maximal runs of
+$1$'s differ in length by at most $1$: the number of letters other than $1$ in a block of $m$ buckets is $m$ minus the number of $1$'s, so it also
+varies by at most $1$, and the argument of (G) applies to the letters other than $1$.</p><p><strong>The words $T_j$.</strong> Let $T_1=1$ and $T_j=T_{j-1}\,j\,T_{j-1}$. By induction, $T_j$ has length $2^j-1$, is a palindrome, and its letter at position
 $p$ is $v_2(p)+1$ ($v_2$ = exponent of $2$). So $T_j$ uses only letters $\le j$, its $1$'s are at the odd positions, consecutive letters $i$ are $2^i$
 apart, and $T_{j+1}=T_j\,(j+1)\,T_j$. Consider the statements</p><ul class="ct-parts"><li><p><span class="ct-lbl"></span> $A(j)$: <em>$P$ begins with $T_j$;</em>&emsp;$B(j)$: <em>every letter $\ell&gt;j$ in the whole sequence is immediately preceded and followed by $T_j$.</em></p></li></ul><p>$A(1)$ holds. For $B(1)$: since $C(1)=1$, the ball $1/(2x_1)$ is below $1$, so consecutive colour-$1$ balls are $1/x_1&lt;2$ apart and lie in buckets at most
 two apart. So between two $1$'s there is at most one other letter, which is $B(1)$.</p><p><strong>Step 1: $A(2)$ (here $k\ge3$ is used).</strong> Let $P$ begin with exactly $r\ge1$ ones; the next letter is $2$ (no colour $\ge3$ appears before the first
@@ -465,7 +467,7 @@ gives $(2r-1)+1+(2r-1)=4r-1$ consecutive buckets without a $2$. So $4r-1\le2r+1$
 $T_jT_j=T_{j-1}\,j\,T_{j-1}T_{j-1}\,j\,T_{j-1}$, hence a gap of colour $j$ of length $2^j-2$; by (G) every gap of $j$ has length $\le2^j-1$. Let $\ell&gt;j$
 occur. By $B(j-1)$ we see $T_{j-1}\,\ell\,T_{j-1}$, which has length $2^j-1$ and no letter $j$; so it is a whole gap of $j$, bordered by $j$ on both
 sides. Applying $B(j-1)$ to these two letters $j$ gives $T_{j-1}\,j\,T_{j-1}\,\ell\,T_{j-1}\,j\,T_{j-1}=T_j\,\ell\,T_j$.</p><p><strong>Step 3: for $2\le j\le k-1$, $A(j)$ and $B(j)$ give $A(j+1)$.</strong> Let $c=C(2^j)$ be the letter after the initial $T_j$. Then $c\le j+1$, since $T_j$
-contains no $j+1$. Colour $j+1$ occurs, so by $B(j)$ the word $W=T_j\,(j+1)\,T_j=T_{j+1}$ occurs; its letter at position $p$ is $v_2(p)+1$.</p><ul class="ct-ul"><li><p>If $c=1$: the block $C(0)C(1)\dots C(2^j)=1\,T_j\,1$ has length $2^j+1$ and $2^{j-1}+2$ ones, while positions $2,3,\dots,2^j+2$ of $W$ (note
+contains no $j+1$ and the first $j+1$ in $P$ comes before the first letter $\ell$ for every $\ell&gt;j+1$. Colour $j+1$ occurs, so by $B(j)$ the word $W=T_j\,(j+1)\,T_j=T_{j+1}$ occurs; its letter at position $p$ is $v_2(p)+1$.</p><ul class="ct-ul"><li><p>If $c=1$: the block $C(0)C(1)\dots C(2^j)=1\,T_j\,1$ has length $2^j+1$ and $2^{j-1}+2$ ones, while positions $2,3,\dots,2^j+2$ of $W$ (note
 $2^j+2&lt;2^{j+1}$) form a block of the same length with ones only at $3,5,\dots,2^j+1$, i.e. $2^{j-1}$ ones. This contradicts the balance lemma.</p></li><li><p>If $2\le c=i\le j$: in $P$ the letter $i$ stands at position $2^j-2^{i-1}$ and next at $2^j$, a gap of length $2^{i-1}-1$; in $W$ the letters $i$
 at positions $2^{i-1}$ and $3\cdot2^{i-1}$ are consecutive, a gap of length $2^i-1$. The difference $2^{i-1}\ge2$ contradicts (G).</p></li></ul><p>So $c=j+1$, and by $B(j)$ it is followed by $T_j$: $P$ begins with $T_j\,(j+1)\,T_j=T_{j+1}$.</p><p>Starting from $A(2)$ and alternating Steps 2 and 3, we obtain $A(k)$ and $B(k-1)$.</p><p><strong>Step 4: $P=T_kT_kT_k\cdots$.</strong> By $A(k)$ the centre $T_kT_k$ contains a gap of colour $k$ of length $2^k-2$, so all gaps of $k$ have length
 $2^k-3$, $2^k-2$ or $2^k-1$; by $B(k-1)$ each such gap begins with $T_{k-1}$ and ends with $T_{k-1}$.</p><ul class="ct-ul"><li><p>Length $2^k-3$: the two copies of $T_{k-1}$ overlap in one letter, and the two letters $k-1$ in the gap are $2^{k-1}-2$ apart, a gap of colour $k-1$
@@ -694,9 +696,10 @@ column) and $\sum_L\rho_L=2n+k$,
 \[\frac{2T-2n-k}{3}+2n=T+W\quad\Longrightarrow\quad T=4n-3W-k.\]</p><p><strong>Upper bound.</strong> The first placement is wasteful (everything is empty), so $W\ge1$.</p><ul class="ct-ul"><li><p>If the last placement is also wasteful (and $T\ge2$), then $W\ge2$ and $T\le4n-6$.</p></li><li><p>Otherwise, in the last placement the chosen line goes to a count $\equiv1$, and the other line was not open, so it had count $\equiv1$ or $\equiv2$.
 In the second case it would end with count $\equiv0$, i.e. open, which is impossible at the end. So it goes from $\equiv1$ to $\equiv2$, and $k\ge1$.
 Moreover the sum of the row counts is $T$ and so is the sum of the column counts; modulo $3$ these sums are $n+x$ and $n+y$, so
-$x\equiv y\pmod3$. With $x+y=k\ge1$ this rules out $k=1$, so $k\ge2$ and $T\le4n-3-2=4n-5$.</p></li></ul><p>In all cases $T\le4n-5=3995$.</p><p><strong>Construction with $3995$ lollies.</strong> Number rows $r_1,\dots,r_n$ and columns $c_1,\dots,c_n$ and write $(i,j)$ for the cell in $r_i$ and $c_j$.</p><p><em>Start:</em> place $15$ lollies in the corner $5\times5$ in the order shown in the figure. One checks move by move that each time the row or the
-column of the new cell is open (e.g. moves $1,2,3$ use column openness, move $5$ uses the empty column $c_4$, move $6$ the row $r_1$ which then has $3$
-lollies, and so on). Afterwards rows $r_1,\dots,r_5$ have $4,4,1,2,4$ lollies and columns $c_1,\dots,c_5$ have $4,4,4,2,1$ lollies, and the cells
+$x\equiv y\pmod3$. With $x+y=k\ge1$ this rules out $k=1$, so $k\ge2$ and $T\le4n-3-2=4n-5$.</p></li></ul><p>In all cases $T\le4n-5=3995$.</p><p><strong>Construction with $3995$ lollies.</strong> Number rows $r_1,\dots,r_n$ and columns $c_1,\dots,c_n$ and write $(i,j)$ for the cell in $r_i$ and $c_j$.</p><p><em>Start:</em> place $15$ lollies in the corner $5\times5$ in the order shown in the figure, namely at
+\[(1,1),(1,2),(1,3),(2,1),(2,4),(1,4),(3,1),(4,2),(5,2),(2,2),(2,3),(5,1),(5,5),(5,3),(4,3).\]
+One checks move by move that each time the row or the column of the new cell is open; the open lines used are, in order,
+$r_1,c_2,c_3,r_2,c_4,r_1,r_3,r_4,r_5,c_2,r_2,c_1,c_5,r_5,c_3$. Afterwards rows $r_1,\dots,r_5$ have $4,4,1,2,4$ lollies and columns $c_1,\dots,c_5$ have $4,4,4,2,1$ lollies, and the cells
 $(5,4)$ and $(4,5)$ are empty.</p><p><em>Step $k$</em> ($k=6,7,\dots,n$): place lollies at
 \[(k,\,k-2),\quad(k-1,\,k-2),\quad(k-2,\,k),\quad(k-2,\,k-1)\quad\text{in this order.}\]
 <em>Claim:</em> just before step $k$, row $r_{k-2}$ and column $c_{k-2}$ have counts $\equiv2\pmod3$; row $r_{k-1}$ and column $c_{k-1}$ have counts
@@ -744,7 +747,8 @@ three is $U_3$, so $U_3\le16r$, and with $4r+m\le5r-2$,
 \[p\le(5r-2)^2+16r=25r^2-4r+4&lt;25r^2,\]
 a contradiction.</p><p><strong>Conclusion.</strong> Every good prime comes from one of the finitely many values $n\in\{3,5,9,15,33,255,513\}$ found above, so there are
 only finitely many good primes. (Checking these values directly, the good primes are exactly $17,89,233,1097$, from $n=3,9,15,33$; for $n=5$ and
-$n=513$ the number $n^2+8$ is composite, and $255^2+8=65033$ is prime but $65033-k^2$ has three prime factors for some odd $k$.)</p>
+$n=513$ the number $n^2+8$ is composite ($33=3\cdot11$, $263177=17\cdot113\cdot137$), and $255^2+8=65033$ is prime but $65033-1^2=2^3\cdot11\cdot739$
+has three distinct prime factors.)</p>
 </div></details>
 </section>
 <h2 class="ct-group" id="aimo-4">AIMO 4</h2>
@@ -1003,12 +1007,13 @@ $R\mapsto\frac c2$. Since $\frac y2+\frac{x+c}2=\frac{x+y}2+\frac c2$, the refle
 $\frac{x+y+c}4$ swaps $O_1\leftrightarrow O_2$ and $O\leftrightarrow R$ (it keeps each of the lines $O_1O_2$ and $RO$, both parallel to $AC$). These two
 lines are different: otherwise $O$ would lie on $O_1O_2$, and since $OO_1\perp BY$, $OO_2\perp BX$ (lines of centres of circles through $B,Y$ and
 through $B,X$), we would get $BX\parallel BY$; note $O\ne O_1$, because the circle $AVBY$ cannot pass through the three collinear points $A,Y,X$.</p><p><strong>Parallel sides.</strong> Let $Q$ be the reflection of $B$ in line $RO$; since $O\in RO$, $Q$ lies on $\omega$. Let $t$ be the line through $B$
-perpendicular to $AC$; it is the line $BQ$, or the tangent to $\omega$ at $B$ if $Q=B$. Reflections reverse directed angles, rotating both lines by
+perpendicular to $AC$; it is the line $BQ$, or the tangent to $\omega$ at $B$ if $Q=B$. First, $Q\ne Y$: otherwise $t=BY$, and $O_1O_2\perp t$,
+$O_1O\perp BY$ would give $O_1O\parallel O_1O_2$, which we excluded; in the same way ($O_2O_1\perp t$, $O_2O\perp BX$) $Q\ne X$. So $Q\notin XY$, the
+lines $YQ$, $XQ$ are defined and different. Reflections reverse directed angles, rotating both lines by
 $90^\circ$ keeps a directed angle, and $\omega$ gives inscribed angles; so
 \[\measuredangle(O_1O_2,O_1R)=-\measuredangle(O_2O_1,O_2O)=-\measuredangle(t,BX)=-\measuredangle(YQ,YX)=\measuredangle(YX,YQ),\]
 using $O_2O_1\perp t$ and $O_2O\perp BX$. As $O_1O_2\parallel YX$, this gives $O_1R\parallel YQ$. Similarly
-$\measuredangle(O_2O_1,O_2R)=-\measuredangle(O_1O_2,O_1O)=-\measuredangle(t,BY)=\measuredangle(XY,XQ)$, so $O_2R\parallel XQ$. (If $Q$ were $Y$, the
-second chain would give $O_1O\parallel O_1O_2$, which we excluded; similarly $Q\ne X$. So $Q\notin XY$ and the lines $YQ$, $XQ$ are different.)</p><p><strong>The homothety.</strong> Lines $O_1Y$ and $O_2X$ are the lines $VY$ and $UX$, which meet at $D$. Let $g$ be the homothety centred at $D$ with $g(O_1)=Y$.
+$\measuredangle(O_2O_1,O_2R)=-\measuredangle(O_1O_2,O_1O)=-\measuredangle(t,BY)=\measuredangle(XY,XQ)$, so $O_2R\parallel XQ$.</p><p><strong>The homothety.</strong> Lines $O_1Y$ and $O_2X$ are the lines $VY$ and $UX$, which meet at $D$. Let $g$ be the homothety centred at $D$ with $g(O_1)=Y$.
 It maps line $O_1O_2$ to the parallel line through $Y$, namely $YX$, so $g(O_2)=X$, and its ratio is $s=XY/O_1O_2\in(0,1)$ (the vectors $O_1O_2$ and
 $YX$ point the same way). It maps line $O_1R$ to the parallel line $YQ$ and line $O_2R$ to $XQ$; hence $g(R)=Q$. So $Q$ lies on segment $DR$, strictly
 between $D$ and $R$. If $Q=B$, then $B$ would be on line $RO\parallel AC$ and on line $RD$, so $DB\parallel AC$, impossible; thus $Q\ne B$.</p><p>Therefore ray $RQ$ is ray $RD$, and since $Q$ is the mirror image of $B$ in line $RO$, the line $RO$ bisects angle $BRQ$, which is angle $DRB$.</p>
@@ -1102,7 +1107,7 @@ $\rho_d=s-m$ and $3(s-m)&gt;2s+1$ would need $s&gt;3m+1$; larger $s$ give $d&gt;
 exactly $k-\rho$ have $r_i\ge\rho$. For an occurring odd distance $d=2s+1$, the starting points $i$ lie in $[0,n-d)\subset[0,n)$, which consists of
 $T$ blocks of $k$ consecutive integers; so there are at most $T(k-\rho_d)=T(m-s)$ inversions at distance $d$, and
 \[B\le T\sum_{s=0}^{m-1}(m-s)=T\,\frac{m(m+1)}2 .\]
-For every occurring distance $d&lt;2k$, the interval $[0,n-d)$ contains the $T-2$ blocks of $[0,k(T-2))$, so
+Let $T\ge2$. For every occurring distance $d&lt;2k$, the interval $[0,n-d)$ contains the $T-2$ blocks of $[0,k(T-2))$, so
 \[A\ge(T-2)\Bigl(\sum_{s=1}^{2m}(k-s)+\frac{m(m+1)}2\Bigr)=(T-2)\Bigl(m(2m+1)+\frac{m(m+1)}2\Bigr).\]
 Hence $A\ge\bigl(1-\frac2T\bigr)\bigl(1+\frac{2(2m+1)}{m+1}\bigr)B=\bigl(1-\frac2T\bigr)\bigl(5-\frac2{m+1}\bigr)B$. For $m=250$ and $T=20000$ (so
 $n=10\,020\,000$), $\bigl(1-\frac1{10000}\bigr)\bigl(5-\frac2{251}\bigr)&gt;0.9999\cdot4.992&gt;4.9915$, and $B&gt;0$ (for instance $(i,i+1)$ is an inversion
@@ -1134,7 +1139,7 @@ of them. This is at most $M/2025^{2025}$ as soon as $\sqrt M\ge3\cdot2025^{2025}
 smallest multiple of $d_i$ that is $\ge x_{i+1}$; so $x_{i+1}\le x_i\le x_{i+1}+d_i-1$. Summing these steps,
 $0\le x_1-x_i\le\sum_{j&lt;i}(d_j-1)=2^i-2i&lt;d_i$. Hence for $i\le k$ we get $f_i(x_1)=x_1-x_i$, which does not decrease as $i$ grows; and for
 $i&gt;k$ we get $x_1\le d_k+2^k-2k&lt;2^{k+1}-1\le d_i$, so $f_i(x_1)=x_1\ge f_k(x_1)$. Thus $x_1\ge2^k-1$ is grouse, and as $k$ is arbitrary
-there are infinitely many grouse numbers.</p><p><strong>(b)</strong> we only use the inequality $f_{2k-1}(n)\le f_{2k+1}(n)$, which every grouse number satisfies.</p><p><strong>Forbidden classes.</strong> Let $k\ge2$, $a=2^{2k-1}-1$ and $b=2^{2k+1}-1$. Recall $\gcd(2^u-1,2^v-1)=2^{\gcd(u,v)}-1$; since $\gcd(2k-1,2k+1)=1$, the
+there are infinitely many grouse numbers.</p><p><strong>(b)</strong> We only use the inequality $f_{2k-1}(n)\le f_{2k+1}(n)$, which every grouse number satisfies.</p><p><strong>Forbidden classes.</strong> Let $k\ge2$, $a=2^{2k-1}-1$ and $b=2^{2k+1}-1$. Recall $\gcd(2^u-1,2^v-1)=2^{\gcd(u,v)}-1$; since $\gcd(2k-1,2k+1)=1$, the
 numbers $a,b$ are coprime. For each pair of integers $0\le j&lt;i\le a-1$ (there are $\binom a2$ pairs; note $j&lt;a&lt;b$) the Chinese remainder theorem gives one
 residue class modulo $ab$ consisting of the $n$ with $n\equiv i\pmod a$ and $n\equiv j\pmod b$, that is, $f_{2k-1}(n)=i&gt;j=f_{2k+1}(n)$. No grouse number
 lies in these $\binom a2$ classes. So the fraction of classes modulo $ab$ that may contain grouse numbers is at most
