@@ -90,7 +90,7 @@ Hence the required numbers are exactly
 \[n=\boxed{2^k-1}\qquad(k=1,2,3,\dots).\]</p>
 <h4>Solution 2 (Carries in binary (Legendre))</h4>
 <p>For a positive integer $m$ let $s(m)$ be the number of binary digits $1$ of $m$ (and $s(0)=0$). Legendre's
-formula for the prime $2$ reads $v_2(m!)=m-s(m)$, where $v_2$ is the exponent of $2$. Hence for $0\le k\le n$
+formula for the prime $2$ reads $v_2(m!)=m-s(m)$, where $v_2$ is the exponent of $2$: counting multiples of $2,4,8,\dots$ gives $v_2(m!)=\sum_{j\ge1}\lfloor m/2^j\rfloor$, and a binary digit $1$ of $m$ at position $r$ contributes $2^{r-1}+\dots+2+1=2^r-1$ to this sum. Hence for $0\le k\le n$
 \[v_2\binom nk=v_2(n!)-v_2(k!)-v_2((n-k)!)=s(k)+s(n-k)-s(n).\]
 When two numbers are added in binary, every carry turns two $1$'s of one position into a single $1$ one position higher, so
 $s(u)+s(w)-s(u+w)$ equals the number of carries in the binary addition $u+w$. Thus $\binom nk$ is odd exactly when the addition $k+(n-k)$
@@ -170,7 +170,7 @@ holds for all such $a$, $b$, and $c$.</p></div>
 <p>Let $E$ be the expression inside the absolute value. Bringing it to a common denominator (or checking the identity
 by expansion) gives
 \[E=\frac{a-b}{a+b}+\frac{b-c}{b+c}+\frac{c-a}{c+a}=-\frac{(a-b)(b-c)(c-a)}{(a+b)(b+c)(c+a)}.\]
-Hence $|E|$ is symmetric in $a,b,c$, and we may assume $c\ge a\ge b$ (so $c$ is the largest side). If $a=b$ then $E=0$. Otherwise
+Hence $|E|$ is symmetric in $a,b,c$, and we may assume $c\ge a\ge b$ (so $c$ is the largest side). If two sides are equal then $E=0$. Otherwise $c&gt;a&gt;b$ and
 \[|E|=\frac{a-b}{a+b}\cdot\frac{c-b}{c+b}\cdot\frac{c-a}{c+a}.\]
 The last two factors are positive and strictly increasing in $c$ (each has the form $\frac{c-k}{c+k}=1-\frac{2k}{c+k}$), and the triangle
 inequality gives $c&lt;a+b$. Therefore, with $t=b/a\in(0,1)$,
@@ -245,7 +245,7 @@ $(x,x),(x,0),(0,x)$ with $x$ odd, and $\boxed{6}$ for all other pairs not both e
 \[(\text{odd},\text{odd})\to(\text{odd},\text{even})\to(\text{even},\text{odd})\to(\text{odd},\text{odd}),\]
 so the parity type of $P_{j+3}$ equals that of $P_j$.</p><p><strong>Not both even: three steps.</strong> Apply the rule three times; each sign is fixed by the parities above.</p><ul class="ct-ul"><li><p>$P_j=(a,b)$ with $a,b$ odd: the next terms are $b-a$, then $(b-a)+b=2b-a$, then $(2b-a)-(b-a)=b$; so $P_{j+3}=(2b-a,\,b)$.</p></li><li><p>$P_j=(a,b)$ with $a$ odd, $b$ even: the next terms are $b+a$, then $(a+b)-b=a$, then $a-(a+b)=-b$; so $P_{j+3}=(a,\,-b)$.</p></li><li><p>$P_j=(a,b)$ with $a$ even, $b$ odd: the next terms are $b-a$, then $(b-a)-b=-a$, then $-a+(b-a)=b-2a$; so $P_{j+3}=(-a,\,b-2a)$.</p></li></ul><p>Call these maps $T_{oo}(a,b)=(2b-a,b)$, $T_{oe}(a,b)=(a,-b)$ and $T_{eo}(a,b)=(-a,b-2a)$. Each is an involution: $T_{oo}(2b-a,b)=(a,b)$, $T_{oe}(a,-b)=(a,b)$ and $T_{eo}(-a,b-2a)=(a,b-2a+2a)=(a,b)$. Since $P_{j+3}$ has the same parity type as $P_j$, the same map is applied again, and $P_{j+6}=P_j$ for every $j\ge1$. So the sequence is periodic from the start with period $6$.</p><p><em>Least period.</em> If $l$ is a period from some index on, so is $\gcd(l,6)$ (from a later index the tail has both periods $l$ and $6$, and $\gcd(l,6)$ is an integer combination of them). So the least period divides $6$. Periods $1$ and $2$ are impossible: exactly one of any three consecutive terms is even, so the parities do not repeat with period $1$ or $2$. Period $3$ from some index $k$ on means $P_{j+3}=P_j$ for all $j\ge k$; taking $j\equiv1\pmod 6$, where $P_j=P_1$, this gives $P_4=P_1$. Conversely $P_4=P_1$ gives $P_{t+3}=P_t$ for all $t\ge1$. So the period is $3$ exactly when $P_1=(a_1,a_2)$ is a fixed point of its map:</p><ul class="ct-ul"><li><p>$T_{oo}(a,b)=(a,b)$ iff $2b-a=a$, i.e. $a_1=a_2$ (odd);</p></li><li><p>$T_{oe}(a,b)=(a,b)$ iff $b=-b$, i.e. $a_2=0$ (and $a_1$ odd);</p></li><li><p>$T_{eo}(a,b)=(a,b)$ iff $-a=a$, i.e. $a_1=0$ (and $a_2$ odd).</p></li></ul><p>In all other cases with $a_1,a_2$ not both even the period is $6$.</p><p><strong>Both even.</strong> Now every term is even, so $a_{j+2}=a_{j+1}+a_j$ for all $j\ge1$. For $(a_1,a_2)=(0,0)$ the sequence is constantly $0$, with period $1$. Suppose now that the sequence is periodic with period $l$ from index $k$ on. Multiply $a_{i+2}=a_{i+1}+a_i$ by $a_{i+1}$ and add for $i=k,k+1,\dots,k+l-1$:
 \[\sum_{i=k}^{k+l-1}a_{i+1}a_{i+2}=\sum_{i=k}^{k+l-1}a_{i+1}^2+\sum_{i=k}^{k+l-1}a_ia_{i+1}.\]
-The products $c_i=a_ia_{i+1}$ also satisfy $c_{i+l}=c_i$ for $i\ge k$, so the sum of $c_{i+1}$ over $l$ consecutive indices equals the sum of $c_i$ over the same indices (both are the sum of one full period of $(c_i)$). The first and last sums cancel, leaving $\sum_{i=k}^{k+l-1}a_{i+1}^2=0$. Hence $a_{k+1}=\dots=a_{k+l}=0$; in particular two consecutive terms are $0$. Running the recurrence backwards, $a_j=a_{j+2}-a_{j+1}$, all earlier terms are $0$ too, so $a_1=a_2=0$. Thus a both-even starting pair other than $(0,0)$ never gives a periodic sequence.</p><p><strong>Answer.</strong> The sequence is periodic exactly when $a_1,a_2$ are not both even, or $a_1=a_2=0$. The period is $\boxed{1}$ for $(0,0)$; $\boxed{3}$ for $(a_1,a_2)=(x,x),(x,0),(0,x)$ with $x$ odd; and $\boxed{6}$ for every other pair that is not both even.</p>
+The products $c_i=a_ia_{i+1}$ also satisfy $c_{i+l}=c_i$ for $i\ge k$, so the sum of $c_{i+1}$ over $l$ consecutive indices equals the sum of $c_i$ over the same indices (both are the sum of one full period of $(c_i)$). The first and last sums cancel, leaving $\sum_{i=k}^{k+l-1}a_{i+1}^2=0$. Hence $a_{k+1}=\dots=a_{k+l}=0$. This is a full period, so every term $a_j$ with $j\ge k$ is $0$; in particular $a_{k+1}=a_{k+2}=0$. Running the recurrence backwards, $a_j=a_{j+2}-a_{j+1}$, all earlier terms are $0$ too, so $a_1=a_2=0$. Thus a both-even starting pair other than $(0,0)$ never gives a periodic sequence.</p><p><strong>Answer.</strong> The sequence is periodic exactly when $a_1,a_2$ are not both even, or $a_1=a_2=0$. The period is $\boxed{1}$ for $(0,0)$; $\boxed{3}$ for $(a_1,a_2)=(x,x),(x,0),(0,x)$ with $x$ odd; and $\boxed{6}$ for every other pair that is not both even.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p5">
@@ -269,6 +269,7 @@ $a^{p^2}-1$, and therefore $n$ divides $a^{p^2j}-1$ for every $j\ge0$. It suffic
 $a^n\equiv a\pmod n$.</p><p>Write $n-1=\dfrac{a^{p^2}-a^p}{a^p-1}=a^p\cdot\dfrac{a^{p(p-1)}-1}{a^p-1}$ and compare $p$-adic valuations $v_p$.</p><p>If $p\mid a$, then $v_p(n-1)\ge v_p(a^p)\ge p\ge2$, since the fraction is an integer ($a^p-1\mid a^{p(p-1)}-1$).</p><p>If $p\nmid a$, then $p$ is odd (for $p=2$, $a$ odd would give $2\mid a-1$). By Fermat $a^p\equiv a\not\equiv 1\pmod p$, so $v_p(a^p-1)=0$.
 Put $c=a^{p-1}$; then $p\mid c-1$ and the Lifting-the-Exponent lemma for odd $p$ gives
 \[v_p\bigl(a^{p(p-1)}-1\bigr)=v_p(c^p-1)=v_p(c-1)+v_p(p)\ge1+1=2 .\]
+(Directly: $c=1+pu$ with $u$ an integer, and in $(1+pu)^p-1$ the linear term is $p^2u$ while every later term contains $(pu)^2$.)
 Hence $v_p(n-1)=0+v_p(a^{p(p-1)}-1)-v_p(a^p-1)\ge2$.</p><p>In both cases $p^2\mid n-1$, so $n\mid a^{p^2}-1\mid a^{n-1}-1$ and $n\mid a(a^{n-1}-1)=a^n-a$.</p>
 </div></details>
 </section>
@@ -281,7 +282,7 @@ Hence $v_p(n-1)=0+v_p(a^{p(p-1)}-1)-v_p(a^p-1)\ge2$.</p><p>In both cases $p^2\mi
 <div class="ct-fig"><img style="width:374px" src="/assets/contests/2026-27/germany-mo-6_s1.svg" alt="Figure for the solution"></div>
 <p>Let $\tau$ be the common tangent farther from $P$, touching $k$ at $T$ and $k'$ at $T'$, and let $Q$ be the second
 intersection point of the circles. For two points $U,V$ of $g$ put
-\[\lambda(U,V)=\frac{UV}{PU+PV}.\]</p><p><strong>Configuration.</strong> Reflection in the line of centres swaps $P,Q$ and the two common tangents, so &ldquo;$\tau$ is farther from $P$&rdquo; means
+\[\lambda(U,V)=\frac{UV}{PU+PV}.\]</p><p><strong>Configuration.</strong> Reflection in the line of centres maps each circle to itself and swaps $P,Q$. It also swaps the two common tangents: a common tangent fixed by it would be perpendicular to the line of centres and touch both circles at the same point of that line, impossible for circles meeting in two points. So &ldquo;$\tau$ is farther from $P$&rdquo; means
 that $P$ is farther from $\tau$ than $Q$. On $g$ the order is $A,B,C,D$, so $B$ lies inside $k$ and $D$ outside $k$. Each of the two arcs of
 $k'$ from $B$ to $D$ (one on each side of $g$) goes from inside $k$ to outside $k$ and therefore meets $k$ in $P$ or $Q$; so $P$ and $Q$ lie
 on opposite sides of $g$, and $P$, being farther from $\tau\parallel g$, lies on the side of $g$ away from $\tau$. The point of $k$ where the

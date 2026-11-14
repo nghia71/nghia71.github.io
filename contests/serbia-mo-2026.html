@@ -119,7 +119,8 @@ Wilson's theorem,
 \]
 But these $p-1$ products represent the residues $1,2,\dots,p-1$ modulo $p$ once each, so their product is $\equiv(p-1)!\equiv-1\pmod p$. Thus
 $1\equiv-1\pmod p$, which is false. Hence at most $2025$ residues occur.</p><p><em>A permutation with $2025$ residues.</em> Let $g$ be a primitive root modulo $p$; for instance $g=3$ works, because $1012=2^2\cdot11\cdot23$ and
-$3^{506}\equiv-1$, $3^{92}\equiv122$, $3^{44}\equiv586\pmod{1013}$, none of which is $1$. Put $h=\frac{p-1}2=506$. Every nonzero residue is $g^i$ for
+$3^{506}\equiv-1$, $3^{92}\equiv122$, $3^{44}\equiv586\pmod{1013}$, none of which is $1$ (the order of $3$ divides $1012$, and a proper
+divisor of $1012$ divides $1012/2$, $1012/11$ or $1012/23$). Put $h=\frac{p-1}2=506$. Every nonzero residue is $g^i$ for
 exactly one $i\in\{0,1,\dots,2h-1\}$; moreover $g^{2h}\equiv1$ and $g^h\equiv-1$ (its square is $1$ and it is not $1$). For $0\le i\le 2h-2$ let
 \[
 \sigma(i)=\begin{cases} i, &amp; 0\le i\le h-1,\\ i+1, &amp; h\le i\le 2h-2;\end{cases}
@@ -197,7 +198,9 @@ path. Following this path, in each quadrilateral it passes draw the segment join
 $\gamma_c$ inside the polygon from the midpoint of one side of colour $c$ to the midpoint of the opposite side. It meets edges only at midpoints
 of $c$-edges; inside a quadrilateral it consists of segments joining midpoints of opposite sides.</p><p>Let $c\ne c'$. The two sides of colour $c$ are opposite, so they split the boundary of the polygon into two arcs, and each arc contains exactly one
 side of colour $c'$. Thus the endpoints of $\gamma_c$ and $\gamma_{c'}$ alternate along the boundary, and two curves inside a convex polygon with
-alternating endpoints on the boundary must meet. A common point is not on an edge (on edges $\gamma_c$ only passes midpoints of $c$-edges and
+alternating endpoints on the boundary must meet. (Each curve touches the boundary only at its endpoints. A simple arc contained in $\gamma_c$
+with the same endpoints cuts the polygon into two regions, by the Jordan curve theorem, and the two endpoints of $\gamma_{c'}$ lie in different
+ones.) A common point is not on an edge (on edges $\gamma_c$ only passes midpoints of $c$-edges and
 $\gamma_{c'}$ only midpoints of $c'$-edges), so it lies inside a quadrilateral $Q$ that has a pair of opposite sides of colour $c$ and a pair of
 colour $c'$. The two pairs of $Q$ therefore have colours exactly $c$ and $c'$, so different pairs $\{c,c'\}$ give different quadrilaterals, and
 $F\ge\binom n2$.</p><p><em>Step 3: lower bound.</em> From Steps 1 and 2, $m\ge F-(n-1)\ge\binom n2-(n-1)=\frac{(n-1)(n-2)}{2}$.</p><p><em>Step 4: construction.</em> Let $v_k$ ($1\le k\le n$) be the unit vector at angle $\frac{(k-1)\pi}{n}$, and for $2\le j\le n$ let $Z_j$ be the
@@ -206,11 +209,13 @@ except two, and $Z_n$ (with exterior angles all $\frac\pi n$) is a regular $2n$-
 are the two sides of colour $c_k$. We tile $Z_j$ by $\binom j2$ rhombi with sides parallel to two of the $v_k$, edge to edge, with
 $\frac{(j-1)(j-2)}{2}$ interior vertices, by induction on $j$. For $j=2$, $Z_2$ is one rhombus. For $j\ge3$, let $L$ be the chain
 $0\to v_1\to v_1+v_2\to\dots\to v_1+\dots+v_{j-1}$, formed by the first $j-1$ sides of $Z_{j-1}$. Since $v_j$ makes an angle in $(0,\pi)$ with each
-$v_i$ ($i&lt;j$), translating $L$ by $v_j$ sweeps the strip of $j-1$ rhombi
+$v_i$ ($i&lt;j$), the components of $v_1,\dots,v_{j-1}$ perpendicular to $v_j$ all have the same sign, so translating $L$ by $v_j$ sweeps the strip of
+$j-1$ rhombi
 \[
 R_i=v_1+\dots+v_{i-1}+\{xv_i+yv_j:\ 0\le x,y\le1\},\qquad 1\le i\le j-1,
 \]
-which lies between $L$ and $L+v_j$, while $Z_{j-1}+v_j$ lies on the other side of $L+v_j$. Going around the union we meet the sides
+which lies between $L$ and $L+v_j$; projected along $v_j$, the rhombi $R_i$ cover consecutive intervals, so they have disjoint interiors and
+meet only along common sides. The polygon $Z_{j-1}+v_j$ lies on the other side of $L+v_j$. Going around the union we meet the sides
 $v_1,\dots,v_{j-1}$ (along $L$), $v_j$, then $-v_1,\dots,-v_{j-1}$ (the rest of $Z_{j-1}+v_j$) and $-v_j$: the union is exactly $Z_j$. Tiling
 $Z_{j-1}+v_j$ by the translated tiling of $Z_{j-1}$ and adding the strip gives a tiling of $Z_j$ by $\binom{j-1}2+(j-1)=\binom j2$ rhombi, edge to
 edge. Its interior vertices are those of $Z_{j-1}+v_j$ plus the $j-2$ inner vertices of the chain $L+v_j$, so their number is

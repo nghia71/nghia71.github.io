@@ -86,7 +86,7 @@ so $\angle ADM$ and $\angle DAB$ are alternate angles for the parallel lines $AB
 \angle NDM=\angle ADM=\angle DAB=\angle NAB=\angle ACN=\angle MCN .
 \]
 Next, $D$ and $C$ lie on the same side of line $BM$: the point $N$ of this line lies strictly between $A$ and $D$, and the point $M$ lies
-strictly between $A$ and $C$, so both $D$ and $C$ are on the side opposite to $A$. Also $D\ne C$ (otherwise $B=A+C-M=M$). So the segment
+strictly between $A$ and $C$, so both $D$ and $C$ are on the side opposite to $A$. Also $D\ne C$: if $D=C$, then the midpoint $N$ of $AD=AC$ would be $M$, forcing $B=M$. So the segment
 $NM$ is seen from $D$ and from $C$, on the same side of it, under equal angles; hence $N$, $M$, $C$, $D$ lie on one circle $\omega$.</p><p><em>Step 2: the power of $A$.</em> The line $AD$ meets $\omega$ at $N$ and $D$, both on the same ray from $A$, and the line $AC$ meets $\omega$
 at $M$ and $C$, again on one ray from $A$. So $A$ is outside $\omega$ and the power of the point $A$ gives
 \[
@@ -177,8 +177,8 @@ and $52$ is not good.</p><p><em>$8\mid n$.</em> Put $t=n/4$, an even number. Use
 odd and $n-1\ge 2$, the condition $4(1+t)^2\mid 2^{n-1}(1+t^{n-1})$ is equivalent to $(1+t)^2\mid 1+t^{n-1}$, and by the Lemma (with $x=1$,
 $y=t$, $N=n-1$) to $1+t\mid n-1=4t-1=4(1+t)-5$. So $1+t\mid 5$, $t=4$, $n=16$. Conversely, for $n=16$: the pairs $(2,8)$, $(8,2)$ need
 $100\mid 2^{15}(1+2^{30})$, which holds because $2^{10}=1024\equiv -1\pmod{25}$ gives $2^{30}\equiv -1\pmod{25}$; the pair $(4,4)$ needs
-$64\mid 2\cdot 4^{15}=2^{31}$, which holds. So $16$ is good.</p><p>Therefore the good numbers are exactly $\boxed{n\in\{4,\ 6,\ 16\}}$.</p><p><em>Remark (lifting the exponent).</em> For an odd prime $q$ the Lemma amounts to $v_q(x^N+y^N)=v_q(x+y)+v_q(N)$ (for $q\mid x+y$,
-$q\nmid xy$, $N$ odd). In this language the case analysis can be organised around the single pair $(2,n/2)$: it forces the odd part of
+$64\mid 2\cdot 4^{15}=2^{31}$, which holds. So $16$ is good.</p><p>Therefore the good numbers are exactly $\boxed{n\in\{4,\ 6,\ 16\}}$.</p><p><em>Remark (lifting the exponent).</em> The odd-prime part of the Lemma also follows from the stronger lifting-the-exponent identity $v_q(x^N+y^N)=v_q(x+y)+v_q(N)$, valid for an odd prime $q$ with $q\mid x+y$,
+$q\nmid xy$ and $N$ odd. In this language the case analysis can be organised around the single pair $(2,n/2)$: it forces the odd part of
 $\frac n2+2$ to be $1$ or $5$, which leaves $n=6$, $n=16$ and $n=4m$ with $m$ odd; the pair $(4,m)$ then leaves only $m=1$.</p>
 </div></details>
 </section>
@@ -201,7 +201,7 @@ the constant term of
 f(x)^k f(1/x)^{\,n-k}=x^{\,k-4(n-k)}\,g(x)^n=x^{\,5k-4n}\,g(x)^n ,
 \]
 i.e. the coefficient $c_{4n-5k}$ in $g(x)^n=\sum_{j=0}^{3n}c_jx^j$. So $a_n=\sum_{k=1}^{n-1}c_{4n-5k}$.</p><p>This is exactly the sum of all $c_j$ with $j\equiv 4n\pmod 5$: for $0\le j\le 3n$ with $j\equiv 4n\pmod 5$, the number
-$k=(4n-j)/5$ satisfies $n/5\le k\le 4n/5$, hence $1\le k\le n-1$; and the terms with $j&lt;0$ or $j&gt;3n$ are zero.</p><p>Let $\omega=e^{2\pi i/5}$. The roots-of-unity filter gives
+$k=(4n-j)/5$ satisfies $n/5\le k\le 4n/5$, hence $1\le k\le n-1$; and the terms with $j&lt;0$ or $j&gt;3n$ are zero.</p><p>Let $\omega=e^{2\pi i/5}$. For an integer $h$, the geometric sum $\sum_{t=0}^{4}\omega^{th}$ equals $5$ if $5\mid h$ and $0$ otherwise; applying this with $h=j-4n$ to each coefficient $c_j$ (the roots-of-unity filter) gives
 \[
 \sum_{j\equiv 4n \ (\mathrm{mod}\ 5)}c_j=\frac15\sum_{t=0}^{4}\omega^{-4nt}g(\omega^t)^n=\frac15\sum_{t=0}^{4}\big(\omega^t g(\omega^t)\big)^n
 =\frac15\sum_{t=0}^{4}f(\omega^t)^n ,
@@ -264,14 +264,14 @@ A_1A_2^2=\frac{4R^2+4\,\vec a\cdot\vec u+|\vec u|^2}{4},
 and in the same way $B_1B_2^2=\frac14\big(4R^2+4\,\vec b\cdot\vec u+|\vec u|^2\big)$ and $C_1C_2^2=\frac14\big(4R^2+4\,\vec c\cdot\vec u+|\vec u|^2\big)$.</p><p>So the three lengths are equal iff $\vec a\cdot\vec u=\vec b\cdot\vec u=\vec c\cdot\vec u$, i.e. iff $(\vec a-\vec b)\cdot\vec u=0$ and
 $(\vec b-\vec c)\cdot\vec u=0$. Then $\vec u$ is perpendicular to both $AB$ and $BC$, which are not parallel, so $\vec u=\vec 0$ and
 $\vec p=\vec a+\vec b+\vec c$.</p><p>Finally, the point $H$ with position vector $\vec h=\vec a+\vec b+\vec c$ is the orthocentre: $(\vec h-\vec a)\cdot(\vec b-\vec c)=
-(\vec b+\vec c)\cdot(\vec b-\vec c)=|\vec b|^2-|\vec c|^2=0$, so $AH\perp BC$, and similarly $BH\perp CA$. Hence $P=H$ is the orthocentre of
+(\vec b+\vec c)\cdot(\vec b-\vec c)=|\vec b|^2-|\vec c|^2=0$, so $H$ lies on the line through $A$ perpendicular to $BC$, the altitude from $A$; similarly $H$ lies on the altitude from $B$. These two lines meet only at the orthocentre, so $P=H$ is the orthocentre of
 $ABC$.</p>
 <h4>Solution 2 (Two parallelograms of midpoints)</h4>
 <div class="ct-fig"><img style="width:320px" src="/assets/contests/2026-27/cono-sur-5_s2.svg" alt="Figure for the solution"></div>
 <p>Look at the four midpoints $C_1,B_2,C_2,B_1$. In triangle $ABP$, $C_1B_2$ is a midline, so
 $\overrightarrow{C_1B_2}=\tfrac12\overrightarrow{AP}$; in triangle $ACP$, $\overrightarrow{B_1C_2}=\tfrac12\overrightarrow{AP}$; in triangles
 $ABC$ and $PBC$, $\overrightarrow{C_1B_1}=\overrightarrow{B_2C_2}=\tfrac12\overrightarrow{BC}$. So $C_1B_2C_2B_1$ is a parallelogram with sides
-parallel to $AP$ and $BC$, and $B_1B_2$, $C_1C_2$ are its diagonals. Precisely, with $\vec u=\overrightarrow{AP}$ and $\vec v=\overrightarrow{CB}$,
+parallel to $AP$ and $BC$, and $B_1B_2$, $C_1C_2$ are its diagonals. (It may be degenerate, for example if $AP\parallel BC$; the vector identities below, obtained by subtracting position vectors of midpoints, hold in every case.) Precisely, with $\vec u=\overrightarrow{AP}$ and $\vec v=\overrightarrow{CB}$,
 \[
 \overrightarrow{B_1B_2}=\frac{(B+P)-(C+A)}{2}=\frac{\vec u+\vec v}{2},\qquad
 \overrightarrow{C_1C_2}=\frac{(C+P)-(A+B)}{2}=\frac{\vec u-\vec v}{2},
@@ -312,14 +312,14 @@ $\overrightarrow{GP}=-2\overrightarrow{GO}$ and $\overrightarrow{GK}=-\frac12\ov
 <section class="ct-problem" id="p6">
 <h3>Problem 6</h3>
 <div class="ct-meta">Number Theory &middot; LPS VII, Chapter 49: Combinatorial Number Theory and Structure</div>
-<div class="ct-text"><p>Given a nonnegative integer, an operation over this integer allows us to add to it $2026$ or to delete any two of its equal adjacent digits in base $10$ if there exist any. Let $a$ and $b$ be two arbitrary nonnegative integers.
+<div class="ct-text"><p>Given a nonnegative integer, an operation over this integer allows us to add to it $2026$ or to delete any two of its equal adjacent digits in base $10$ if there exist any (leading zeros of the result are dropped, and deleting all the digits leaves $0$). Let $a$ and $b$ be two arbitrary nonnegative integers.
 Prove that if we start with the number $a$ then it will be possible to perform a finite amount of operations to attain number $b$.</p></div>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
 <h4>Solution (Appending erasable pairs, with Fermat and the Chinese remainder theorem)</h4>
 <p>We show that from $a$ we can reach $b$ by first adding $2026$ several times, reaching a suitable number $N$, and
 then deleting pairs of digits at the right end of $N$.</p><p><em>Deleting at the right end.</em> If an integer $x\ge 10$ has equal last two digits, deleting them turns $x$ into $\lfloor x/100\rfloor$.
 (When all digits are deleted, or leading zeros appear, we read the result as an ordinary integer; in particular deleting both digits of $11$
-gives $0$. Some such convention is needed in any case to reach $b=0$ from a positive number.)</p><p><em>Arithmetic facts.</em> $2026=2\cdot 1013$ and $1013$ is prime, so by Fermat's little theorem $100^{1012}\equiv 1\pmod{1013}$. Put $e=1012$.
+gives $0$. Some such convention is needed in any case to reach $b=0$ from a positive number.)</p><p><em>Arithmetic facts.</em> $2026=2\cdot 1013$ and $1013$ is prime (it has no prime factor up to $31$, and $32^2&gt;1013$), so by Fermat's little theorem $100^{1012}\equiv 1\pmod{1013}$. Put $e=1012$.
 Also $\gcd(11,1013)=1$, so $11$ is invertible modulo $1013$.</p><p><em>The number $N$.</em> Choose an integer $L\ge1$ with $100^{Le}&gt;a$, and let $r=(L+1013)e+1$. For $d\in\{0,1\}$ and $c\in\{1,2,\dots,1013\}$ let
 \[
 Y=11d+11\sum_{t=1}^{c}100^{(L+t)e},\qquad N=b\cdot 100^{\,r}+Y .

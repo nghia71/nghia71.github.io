@@ -121,7 +121,8 @@ a_1=1,\qquad a_{100}=-10^{32},\qquad a_{3j+2}=-2\cdot10^j,\quad a_{3j+3}=2\cdot1
 \]
 and $a_{3j+4}=s_{3j+4}-s_{3j+3}=9\cdot10^j$ for $0\le j\le31$.
 They are distinct: the positive terms are $1$, the numbers $2\cdot10^j$ and the numbers $9\cdot10^j$, which differ in their leading
-digit or in their number of digits; the negative terms are $-2\cdot10^j$ and $-10^{32}$, which differ in their leading digit.</p><p>The largest possible number of good indices is $\boxed{66}$.</p>
+digit or in their number of digits; the negative terms are the numbers $-2\cdot10^j$, which differ from one another in their number of digits, and $-10^{32}$,
+whose absolute value has leading digit $1$ rather than $2$.</p><p>The largest possible number of good indices is $\boxed{66}$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p2">
@@ -176,7 +177,7 @@ of $p$ is divisive.</p><p>Therefore the divisive integers are exactly $\boxed{1,
 <section class="ct-problem" id="p3">
 <h3>Problem 3</h3>
 <div class="ct-meta">Geometry &middot; LPS VII, Chapter 32: Trigonometric Geometry and Metric Conversion</div>
-<div class="ct-text"><p>Let $ABCD$ be a quadrilateral possessing an incenter $I$. Points $K$ and $L$ are chosen on the segments $IA$ and $IC$, respectively, such that $CK\perp ID$ and $AL\perp IB$. Points $P$ and $Q$ are chosen on the segments $AD$ and $BC$, respectively, such that
+<div class="ct-text"><p>Let $ABCD$ be a quadrilateral, not a rhombus, possessing an incenter $I$. Points $K$ and $L$ are chosen on the segments $IA$ and $IC$, respectively, such that $CK\perp ID$ and $AL\perp IB$. Points $P$ and $Q$ are chosen on the segments $AD$ and $BC$, respectively, such that
 \[\angle AKP=\angle ICD\qquad\text{and}\qquad\angle CLQ=\angle IAB.\]
 Prove that $IP=IQ$.</p></div>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -221,14 +222,20 @@ The two expressions are equal, so $IP=IQ$. $\blacksquare$</p>
 <p>Let the incircle (centre $I$, radius $r$) touch $AB$, $BC$, $CD$, $DA$ at $S$, $U$, $V$, $T$, and let
 $\alpha,\beta,\gamma,\delta$ be the half-angles at $A,B,C,D$, so $\alpha+\beta+\gamma+\delta=180^\circ$. Label the
 quadrilateral so that $A,B,C,D$ (hence also $S,U,V,T$) are in counterclockwise order. We write $\measuredangle(\ell,m)$
-for the angle of the counterclockwise rotation taking line $\ell$ to line $m$, taken modulo $180^\circ$.</p><p>The line from the centre to the meeting point of two tangents is perpendicular to the chord of contact:
+for the angle of the counterclockwise rotation taking line $\ell$ to line $m$, taken modulo $180^\circ$.</p><p>We assume that $ABCD$ is not a rhombus. (In a rhombus $IA\perp ID$ and $C$ lies on line $IA$, so every point $K$ of $IA$
+satisfies $CK\perp ID$, likewise for $L$; the points $K$, $L$ are not determined and the statement fails, for example for a square.)
+Note that $\angle AID=180^\circ-\alpha-\delta=90^\circ$ and $\angle BIC=180^\circ-\beta-\gamma=90^\circ$ each hold exactly
+when $\angle A+\angle D=180^\circ$, that is, when $AB\parallel CD$.</p><p>The line from the centre to the meeting point of two tangents is perpendicular to the chord of contact:
 \[ IA\perp TS,\qquad IB\perp SU,\qquad IC\perp UV,\qquad ID\perp VT. \]
-Hence $CK\parallel VT$ and $AL\parallel SU$.</p><p><strong>The case $AD\parallel BC$.</strong> Then $\alpha+\beta=\gamma+\delta=90^\circ$, so $\angle CID=\angle AIB=90^\circ$ and
-$K=L=I$. Now $\angle AIP=\gamma$ and $\angle CIQ=\alpha$, so the exterior angles of triangles $AIP$ and $CIQ$ are
+Hence $CK\parallel VT$ and $AL\parallel SU$.</p><p><strong>The case $AD\parallel BC$.</strong> Then $\alpha+\beta=\gamma+\delta=90^\circ$, so $\angle CID=\angle AIB=90^\circ$: the
+projection of $C$ onto line $ID$ is $I$, and so is the projection of $A$ onto line $IB$. A tangential parallelogram is a
+rhombus, so $AB\nparallel CD$ and hence $\angle AID\ne90^\circ$, $\angle CIB\ne90^\circ$. The only point of line $IA$ whose
+projection onto $ID$ is $I$ is therefore $I$ itself, so $K=I$; likewise $L=I$. Now $\angle AIP=\gamma$ and $\angle CIQ=\alpha$, so the exterior angles of triangles $AIP$ and $CIQ$ are
 $\angle IPD=\alpha+\gamma=\angle IQB$. Since $I$ is at distance $r$ from both $AD$ and $BC$, we get
 $IP=r/\sin(\alpha+\gamma)=IQ$.</p><p><strong>The general case.</strong> Now $AD\nparallel BC$; let $F=AD\cap BC$. Then $\angle CID\ne90^\circ$, so $K\ne I$, and likewise
-$L\ne I$. Also $AB\nparallel CD$: otherwise $\angle AID=90^\circ$, so $CK\parallel IA$, which is impossible for a point
-$K$ of $IA$ (unless $C$ lies on $IA$, when $K$ is not determined; we exclude this case). Let $E=AB\cap CD$. As before,
+$L\ne I$. Also $AB\nparallel CD$: otherwise $\angle AID=90^\circ$, so the line through $C$ perpendicular to $ID$ is parallel
+to $IA$ and must be the line $IA$ itself; then $AC$ bisects the angles at $A$ and $C$, the reflection in $AC$ swaps the lines
+$AB$, $AD$ and the lines $CD$, $CB$, and $AB\parallel CD$ would give $AD\parallel CB$, which is not the case. Let $E=AB\cap CD$. As before,
 $IE\perp SV$ and $IF\perp UT$.</p><p><em>Step 1: $E,C,I,K$ are concyclic, and $E,A,I,L$ are concyclic.</em> Using $KI=IA\perp TS$ and $KC\parallel VT$,
 \[ \measuredangle(KI,KC)=\measuredangle(IA,TS)+\measuredangle(TS,TV)=90^\circ+\measuredangle(TS,TV). \]
 Using $EI\perp SV$ and the tangent&ndash;chord theorem at $V$ (the tangent is $CD$), $\measuredangle(VS,CD)=\measuredangle(TS,TV)$, so
@@ -318,9 +325,10 @@ so $\angle ABM&gt;\angle ACM$ is equivalent to $AC\cdot BD&gt;AB\cdot CD$, which
 ($AC\cdot BD=AB\cdot CD+AD\cdot BC$). Since also $\theta+\varphi&lt;180^\circ$ and $\theta'+\varphi&lt;180^\circ$ (see below), the points $K$ and
 $L$ exist and are unique.</p><p><em>Reduction.</em> Let $\theta=\angle AMB$ and $\theta'=\angle DMC$. In triangle $AMK$ the angles at $A$ and $M$ are $\varphi$ and
 $\theta$, so by the law of sines $MK=MA\sin\varphi/\sin(\theta+\varphi)$; likewise $ML=MD\sin\varphi/\sin(\theta'+\varphi)$. Since $K$, $L$
-lie on the rays $MB$, $MC$, the points $B,C,K,L$ are concyclic iff $MK\cdot MB=ML\cdot MC$ (if $K=B$, then $L=C$ and there is
-nothing to prove; otherwise $MK:MC=ML:MB$, triangles $MKL$ and $MCB$
-are similar, and $\angle MKL=\angle MCB$). With $MA=MD$ this becomes
+lie on the rays $MB$, $MC$, it suffices to prove $MK\cdot MB=ML\cdot MC$. Indeed, if $K=B$ or $L=C$, at most three of the four
+points are distinct and they are not collinear ($B$ is not on line $MC$, $C$ is not on line $MB$), so they lie on a circle;
+otherwise $K\ne B$ and $L\ne C$ lie on two different rays from $M$, and the converse of the power-of-a-point theorem applies.
+With $MA=MD$ the equality $MK\cdot MB=ML\cdot MC$ becomes
 \[
 MB\sin(\theta'+\varphi)=MC\sin(\theta+\varphi). \tag{$*$}
 \]</p><p><em>The angles.</em> From triangle $ABM$, $\theta=180^\circ-\angle BAD-\angle ABM$, so, using $\angle BAD=180^\circ-\angle BCD$,
@@ -340,9 +348,14 @@ By the extended law of sines in $\Gamma$: $AB=2R\sin\angle ACB$, $DB=2R\sin\angl
 right-hand sides equal $2R\bigl(\sin\angle ACB\sin\angle DBC+\sin\angle DCB\sin\angle ABC\bigr)$, which proves $(*)$. Hence $B$, $C$, $K$, $L$
 lie on one circle. $\blacksquare$</p>
 <h4>Solution 2 (Two auxiliary circles and the butterfly theorem)</h4>
-<p>As in Solution 1, $ABCD$ is convex, $\angle ABD=\angle ACD$, and therefore
-\[ \varphi:=\angle DAK=\angle ABM-\angle ACM=\angle MCD-\angle MBD=\angle LDA ; \]
-by Solution 1 (Ptolemy's theorem), $\varphi&gt;0$. We write $\measuredangle(\ell,m)$ for the directed angle from line $\ell$ to
+<p>The cyclic quadrilateral $ABCD$ is convex, the rays $BM$ and $CM$ lie inside the angles $ABD$ and $ACD$, and
+$\angle ABD=\angle ACD$ (inscribed, on arc $AD$). Hence $\angle ABM+\angle MBD=\angle ACM+\angle MCD$, and therefore
+\[ \varphi:=\angle DAK=\angle ABM-\angle ACM=\angle MCD-\angle MBD=\angle LDA . \]
+Moreover $\varphi&gt;0$. By the law of sines in triangles $ABM$ and $DBM$ (with $AM=DM$), and then in $ABD$,
+$\frac{\sin\angle ABM}{\sin\angle MBD}=\frac{\sin\angle BAD}{\sin\angle BDA}=\frac{BD}{AB}$; likewise
+$\frac{\sin\angle ACM}{\sin\angle MCD}=\frac{CD}{AC}$. Both pairs of angles have the sum $\omega=\angle ABD=\angle ACD$, and
+$x\mapsto\sin x/\sin(\omega-x)$ is increasing on $(0,\omega)$, so $\angle ABM&gt;\angle ACM$ is equivalent to $AC\cdot BD&gt;AB\cdot CD$,
+which holds by Ptolemy's theorem $AC\cdot BD=AB\cdot CD+AD\cdot BC$. We write $\measuredangle(\ell,m)$ for the directed angle from line $\ell$ to
 line $m$, taken modulo $180^\circ$.
 Let the lines $CM$ and $BM$ meet the circumcircle $\Gamma$ again at $E$ and $F$; both points lie on the arc $AD$ not
 containing $B$ and $C$.</p><p><em>The points $X$ and $Y$.</em> The inscribed angles on arc $AE$ give $\angle ABE=\angle ACE=\angle ACM&lt;\angle ABM$, so ray
@@ -361,8 +374,9 @@ turned clockwise by $\varphi$) shows that $D,Y,L,C$ are concyclic, so
 \[ ML\cdot MC=MY\cdot MD . \]</p><p><em>The butterfly.</em> The chords $BF$ and $CE$ of $\Gamma$ pass through the midpoint $M$ of the chord $AD$, and the lines
 $BE$ and $CF$ meet $AD$ at $X$ and $Y$. By the butterfly theorem, $MX=MY$. Together with $MA=MD$,
 \[ MK\cdot MB=MX\cdot MA=MY\cdot MD=ML\cdot MC . \]
-Since $K$ and $L$ lie on the rays $MB$ and $MC$, the converse of the power-of-a-point theorem shows that $B$, $C$, $K$, $L$
-lie on one circle. $\blacksquare$</p>
+If $K=B$ or $L=C$, at most three of the four points are distinct and they are not collinear, so they lie on a circle.
+Otherwise, since $K\ne B$ and $L\ne C$ lie on the rays $MB$ and $MC$, the converse of the power-of-a-point theorem shows
+that $B$, $C$, $K$, $L$ lie on one circle. $\blacksquare$</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p6">

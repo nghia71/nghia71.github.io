@@ -84,8 +84,8 @@ The only perfect square in the interval $(a^2,(a+1)^2]$ is $(a+1)^2$, so $a^2+2b
 <p>Since $a^2+2b+1&gt;a^2$, we can write $a^2+2b+1=(a+s)^2$ with an integer $s\ge1$. Then
 \[2b+1=2as+s^2 .\]
 The left side is odd, so $s$ is odd and $s^2\ge s$; hence $2b+1\ge 2as+s\ge 2a+1$, that is, $b\ge a$.
-In exactly the same way the condition on $b^2+2a+1$ gives $a\ge b$. Therefore $a=b$, and then (as in Solution 1) both numbers equal
-$(a+1)^2$. The answer is all pairs $(a,a)$.</p>
+In exactly the same way the condition on $b^2+2a+1$ gives $a\ge b$. Therefore $a=b$.
+Conversely, if $a=b$ then both expressions equal $a^2+2a+1=(a+1)^2$, so every pair $(a,a)$ works. The answer is all pairs $(a,a)$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p2">
@@ -233,7 +233,7 @@ So either $t_i+t_j=1-t_it_j$, i.e. $(1+t_i)(1+t_j)=2$ (&ldquo;type $P$&rdquo;), 
 the same type, and two edges of a triangle share a vertex; say $ij$ and $ik$ are both of type $P$. Then $(1+t_i)(1+t_j)=2=(1+t_i)(1+t_k)$, and
 $1+t_i\ne0$, so $t_j=t_k$. The edge $jk$ then says $(1+t_j)^2=2$ or $(1-t_j)^2=2$, impossible for a rational $t_j$. Type $Q$ is the same.</p><p><strong>Mantel's bound.</strong> In a triangle-free graph with $N$ vertices and $M$ edges, the endpoints of an edge $uv$ have no common neighbour, so
 $\deg u+\deg v\le N$. Summing over all edges, each vertex $v$ appears $\deg v$ times, so $\sum_v(\deg v)^2\le NM$. By Cauchy&ndash;Schwarz,
-$\sum_v(\deg v)^2\ge\frac{(2M)^2}{N}$. Hence $4M^2/N\le NM$, i.e. $M\le N^2/4$. With $N=2026$: $M\le1013^2$.</p><p><strong>Construction.</strong> Take $(a_i,b_i)=(c,2c)$ for $c=1,3,5,\dots,2025$ and $(a_j,b_j)=(3d,-d)$ for $d=4,8,\dots,4052$ ($1013$ vectors of
+$\sum_v(\deg v)^2\ge\frac{(2M)^2}{N}$. Hence $4M^2/N\le NM$; for $M&gt;0$ dividing by $M$ gives $M\le N^2/4$, and for $M=0$ this is trivial. With $N=2026$: $M\le1013^2$.</p><p><strong>Construction.</strong> Take $(a_i,b_i)=(c,2c)$ for $c=1,3,5,\dots,2025$ and $(a_j,b_j)=(3d,-d)$ for $d=4,8,\dots,4052$ ($1013$ vectors of
 each kind). The $4052$ numbers are distinct and nonzero: the $c$ are odd, the $2c$ are $\equiv2\pmod4$, the $3d$ are positive multiples of $4$,
 and the $-d$ are negative. The first kind has $t=2$ and the second $t=-\frac13$, and $(1+2)\bigl(1-\frac13\bigr)=2$, so every one of the $1013^2$
 mixed pairs is of type $P$ and satisfies the condition. Hence the largest value is $M=1013^2=\boxed{1026169}$.</p>
@@ -261,8 +261,8 @@ $ABC$ and hence not on its circumcircle. So the circumcircles of $ABC$ and $DEF$
 of $AB$ away from $C$) and the angle $\angle ABC$ with the chord $AC$ (on the side away from $B$).</p><p>Consider the circle $\omega_1$ through $A,D,F$. The line $t$ makes with the chord $AF$ (which lies along $AB$) the angle $\angle ACB=\angle ADF$, measured on the side of
 $AF$ away from $D$ (since $D$ is on the same side of $AB$ as $C$). By the converse of the tangent&ndash;chord theorem, $t$ is tangent to $\omega_1$ at $A$.
 In the same way, $t$ makes with the chord $AE$ the angle $\angle ABC=\angle ADE$, so $t$ is tangent at $A$ to the circle $\omega_2$ through $A,D,E$.</p><p>Now $\omega_1$ and $\omega_2$ both pass through $D$ and are tangent to the line $t$ at $A$. There is only one such circle (its centre lies on the
-perpendicular to $t$ at $A$ and on the perpendicular bisector of $AD$; these lines meet in one point since $D\notin t$). Hence $\omega_1=\omega_2$, so
-$A,D,E,F$ lie on one circle, which is the circumcircle of $DEF$, and it is tangent to $t$ at $A$. The circumcircle of $ABC$ is also tangent to $t$ at $A$,
+perpendicular to $t$ at $A$ and on the perpendicular bisector of $AD$; these lines meet in one point since $D\notin t$: the point $D$ is inside triangle $ABC$, hence inside its circumcircle, while every point of $t$ other than $A$ lies outside it). Hence $\omega_1=\omega_2$, so
+$A,D,E,F$ lie on one circle, which is the circumcircle of $DEF$, and it is tangent to $t$ at $A$. The circumcircle of $ABC$ is also tangent to $t$ at $A$, and it differs from the circle $DEF$ because $D$ is inside it,
 so the two circles are tangent to each other at $A$.</p>
 <h4>Solution 3 (Inversion at $A$)</h4>
 <p>Write $\beta=\angle ABC$ and $\gamma=\angle ACB$. Invert about $A$ with any radius $r$, and write $X'$ for the image of a point $X\ne A$.
@@ -286,7 +286,7 @@ are tangent at $A$.</p>
 <section class="ct-problem" id="p8">
 <h3>Problem 4b</h3>
 <div class="ct-meta">Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure</div>
-<div class="ct-text"><p>Let $ABC$ be a triangle with $AB\ne AC$, and $E$ and $F$ be the points satisfying
+<div class="ct-text"><p>Let $ABC$ be a triangle with $AB\ne AC$ and with no right angle at $B$ or $C$, and $E$ and $F$ be the points satisfying
 \[\angle BCE = \angle EAC = \angle CBF = \angle FAB = 90^\circ.\]
 Let $D$ be the point of intersection of the lines $BC$ and $EF$. Show that the line $AD$ is tangent to the circumcircle of $ABC$.</p></div>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
@@ -314,7 +314,8 @@ Setting $y=0$ gives $(b+c)(x-c)=-(h^2+c^2)$, so $D=(d,0)$ with
 \[d=\frac{bc-h^2}{b+c},\qquad\text{i.e.}\qquad (b+c)\,d=bc-h^2 .\]
 Now compute the power of $D$ with respect to the circumcircle: since $B,C$ are on the circle and on a line through $D$,
 \[\overline{DB}\cdot\overline{DC}=(d-b)(d-c)=d^2-(b+c)d+bc=d^2+h^2=DA^2 .\]
-So the line $DA$ meets the circle at $A$ and at a second point $A'$ with $DA\cdot DA'=DA^2$, i.e. $A'=A$: the line $DA$ meets the circle only at $A$,
+This power is positive, so $D$ lies outside the circle and the second intersection $A'$ of the line $DA$ with the circle (counted with
+multiplicity) lies on the ray $DA$, with $DA\cdot DA'=DA^2$. Hence $DA'=DA$ and $A'=A$: the line $DA$ meets the circle only at $A$,
 so it is tangent to the circumcircle of $ABC$.</p>
 </div></details>
 </section>

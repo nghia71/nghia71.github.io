@@ -84,7 +84,10 @@ $Y$ is the foot of the perpendicular from $C$ to $m$.</p><p>If $AB=AC$, then $\e
 $k^2=\frac{1+U}2$, $s^2=\frac{1-U}2$, $4s^2k^2=1-U^2$. Then
 \[B=(ck,\,-cs),\qquad C=(bk,\,bs),\qquad H=\Bigl(\frac{(b+c)U}{2k},\ h\Bigr)\ \text{ with }\ h=\frac{(c-b)U}{2s}.\]
 (Check: $H\cdot(C-B)=\frac{(b+c)(b-c)U}2+\frac{(c-b)(b+c)U}2=0$ and $(H-B)\cdot C=bcU-B\cdot C=bcU-bc\cos2\theta=0$, so $AH\perp BC$ and
-$BH\perp AC$.) The line $m$ is $y=h$, hence $X=(ck,h)$ and $Y=(bk,h)$. Write $P=(pk,-ps)$ on line $AB$ and $Q=(qk,qs)$ on line $AC$.</p><p><em>The condition that $P,H,Q$ are collinear.</em> The determinant of $Q-P=((q-p)k,(q+p)s)$ and $H-P$ vanishes:
+$BH\perp AC$.) The line $m$ is $y=h$, hence $X=(ck,h)$ and $Y=(bk,h)$. These differ from $H$: $ck=\frac{(b+c)U}{2k}$ would mean $c(1+U)=(b+c)U$,
+i.e. $AB=AC\cos A=AE$, impossible as $E$ is inside segment $AB$; likewise $bk\ne\frac{(b+c)U}{2k}$. The point $Q$ exists: in triangle $AEC$ the line
+through $H\in EC$ parallel to $AC$ meets $AB$ inside segment $AE$, while $P\ne E$ lies on segment $EB$, so $PH\not\parallel AC$.
+Write $P=(pk,-ps)$ on line $AB$ and $Q=(qk,qs)$ on line $AC$.</p><p><em>The condition that $P,H,Q$ are collinear.</em> The determinant of $Q-P=((q-p)k,(q+p)s)$ and $H-P$ vanishes:
 \[(q-p)k\,h+2pq\,sk-(q+p)s\,\frac{(b+c)U}{2k}=0 .\]
 Multiplying by $4sk$ and substituting $h$, $k^2$, $s^2$:
 \[(q-p)(c-b)U(1+U)+2pq(1-U^2)-(q+p)(b+c)U(1-U)=0,\]
@@ -100,8 +103,10 @@ Using $2s^2=1-U$: $h+cs=\frac{c-bU}{2s}$, $bs-h=\frac{b-cU}{2s}$, $h+ps=\frac{p(
 As $(c-bU)-(b-cU)=(c-b)(1+U)$ and $c\ne b$, this is equivalent to $pq(1-U^2)=U(pc+qb)-U^2(pb+qc)$, which is exactly $(*)$.</p><p>Hence $PX$ and $QY$ meet $\ell$ at the same point: the three lines are concurrent.</p>
 <h4>Solution 2 (Three fixed points of a projectivity)</h4>
 <div class="ct-fig"><img style="width:380px" src="/assets/contests/2026-27/korea-mo-1_s2.svg" alt="Figure for the solution"></div>
-<p>As in Solution 1, $X$ and $Y$ are the feet of the perpendiculars from $B$ and $C$ to the line $m$ through $H$ parallel to $\ell$, and the
-case $AB=AC$ is trivial ($X=Y=D\in\ell$). Assume $AB\ne AC$; then $H\notin\ell$, so $m\ne\ell$. Let $B_1$, $C_1$ be the feet of the perpendiculars from
+<p>Let $m$ be the line through $H$ parallel to $\ell$. Since $\angle BDH=90^\circ$, the circle $BDH$ has diameter $BH$, so $\angle BXH=90^\circ$: $X$ is
+the foot of the perpendicular from $B$ to $m$. Likewise $Y$ is the foot of the perpendicular from $C$ to $m$. If $AB=AC$, then $m=\ell=AD$ and
+$X=Y=D\in\ell$, so the three lines meet at $D$. Assume $AB\ne AC$; then $H\notin\ell$, so $m\ne\ell$. The point $Q$ exists: in triangle $AEC$ the line
+through $H\in EC$ parallel to $AC$ meets $AB$ inside segment $AE$, while $P\ne E$ lies on segment $EB$, so $PH\not\parallel AC$. Let $B_1$, $C_1$ be the feet of the perpendiculars from
 $B$, $C$ to $\ell$ (so $B,X,B_1$ are collinear and $C,Y,C_1$ are collinear), and let $K$ be the foot of the altitude from $B$. Directed angles are taken
 modulo $180^\circ$.</p><p><em>Non-degeneracy.</em> $X$ lies neither on $\ell$ (it is on $m$) nor on $AB$. Indeed, if $X\in AB$ and $X\ne B$, then $AB=BX\perp m$, so $AB\perp\ell$,
 impossible because $\ell$ makes the angle $\frac A2&lt;90^\circ$ with $AB$; and $X=B$ would put $B$ on $m$, so $BH\parallel\ell$, i.e. $\ell\perp AC$,
@@ -147,8 +152,9 @@ so $\frac1{y_j}\ge(2j)^{-1/3}$ for $j\ge J$ (if $J$ is not an integer, read $\lc
 \le \frac32k+y_K^3-c\,k^{2/3},\]
 with $c=\frac{\delta}{4\cdot 2^{1/3}}&gt;0$ (we used $\frac k2-1\ge\frac k4$ and $(2j)^{-1/3}\ge(2k)^{-1/3}$ for $j&lt;k$).</p><p><em>Conclusion.</em> Since $\frac{k^{2/3}}{\sqrt k}=k^{1/6}\to\infty$, we have $c\,k^{2/3}-y_K^3&gt;2026\sqrt k$ for all large $k$, and then
 \[a_{2k}^3=y_k^3&lt;\frac{3k}2-2026\sqrt k .\]
-So the inequality $a_{2n}^3&gt;\frac{3n}2-2026\sqrt n$ holds for only finitely many $n$; the answer is <strong>no</strong>.</p><p><em>Remark.</em> Numerically $\frac{3n}2-a_{2n}^3\approx0.67\,n^{2/3}$, which exceeds $2026\sqrt n$ only for $n$ beyond about $8\cdot10^{20}$; so the inequality is
-true for every $n$ one can check by computer, but it fails eventually.</p>
+So the inequality $a_{2n}^3&gt;\frac{3n}2-2026\sqrt n$ holds for only finitely many $n$; the answer is <strong>no</strong>.</p><p><em>Remark.</em> Computation up to $n=2\cdot10^6$ gives $\frac{3n}2-a_{2n}^3\approx0.67\,n^{2/3}$. If this ratio stays near $0.67$, the deficit exceeds
+$2026\sqrt n$ only for $n$ beyond about $8\cdot10^{20}$; so the inequality is true for every $n$ one can check by computer, but it fails eventually.
+This estimate plays no role in the proof.</p>
 <h4>Solution 2 (The sum of the two cubes)</h4>
 <p><em>Answer: no.</em> Write $x_k=a_{2k-1}$ and $y_k=a_{2k}$ $(k\ge1)$. The recurrence says
 \[x_{k+1}=x_k+\frac1{x_k^2+y_k^2},\qquad y_{k+1}=y_k+\frac1{x_{k+1}^2+y_k^2},\]
@@ -157,8 +163,8 @@ $a_3=\frac32$, $a_4=1+\frac4{13}=\frac{17}{13}$ we get $D_2=\frac5{26}=:\delta$.
 $\beta=y_{k+1}-y=\frac1{x_{k+1}^2+y^2}$, so $0&lt;\beta&lt;\alpha$. Since $t\mapsto t(3y^2+3yt+t^2)$ is increasing for $t&gt;0$,
 \[T_{k+1}-T_k=\alpha(3x^2+3x\alpha+\alpha^2)+\beta(3y^2+3y\beta+\beta^2)&lt;3\alpha(x^2+y^2)+3\alpha^2(x+y)+2\alpha^3
 =3+\frac{3(x+y)}{(x^2+y^2)^2}+\frac2{(x^2+y^2)^3}.\]
-As $x^2+y^2\ge\frac12(x+y)^2$ and $(x+y)^3\ge x^3+y^3=T_k$, the middle term is at most $\frac{12}{(x+y)^3}\le\frac{12}{T_k}$. By the power mean
-inequality $(x^3+y^3)^{1/3}\le(x^2+y^2)^{1/2}$, so $(x^2+y^2)^3\ge T_k^2$, and as $T_k\ge2$ the last term is at most $\frac2{T_k^2}\le\frac1{T_k}$. Hence
+As $x^2+y^2\ge\frac12(x+y)^2$ and $(x+y)^3\ge x^3+y^3=T_k$, the middle term is at most $\frac{12}{(x+y)^3}\le\frac{12}{T_k}$. Since
+$x,y\le\sqrt{x^2+y^2}$, we have $x^3+y^3\le(x^2+y^2)^{3/2}$, so $(x^2+y^2)^3\ge T_k^2$, and as $T_k\ge2$ the last term is at most $\frac2{T_k^2}\le\frac1{T_k}$. Hence
 \[T_{k+1}&lt;T_k+3+\frac{13}{T_k}.\]
 Also $x_{k+1}^3-x_k^3&gt;3x^2\alpha=\frac{3x^2}{x^2+y^2}\ge\frac32$ (as $x\ge y$), so $x_k^3\ge1+\frac32(k-1)\ge k$ and $T_k&gt;k$. Summing, with
 $1+\frac12+\dots+\frac1{k-1}\le1+\ln k$,
@@ -176,7 +182,7 @@ many $n$; the answer is <strong>no</strong>.</p>
 so all terms are at least $1$ and both sequences are increasing.</p><p><em>Step 1: the gap.</em> Let $D_k=x_k-y_k$, so $D_1=0$ and $D_{k+1}-D_k=h_k-\varepsilon_k&gt;0$ because $x_{k+1}&gt;x_k$. From $a_3=\frac32$ and
 $a_4=1+\frac4{13}=\frac{17}{13}$ we get $D_2=\frac5{26}$. Put $d=\frac5{52}$; then $D_k\ge2d$ for $k\ge2$, so for every $k\ge1$
 \[x_{k+1}=y_{k+1}+D_{k+1}&gt;y_k+2d.\]
-The gap is also less than $\frac12$: since $y_{k+1}&gt;y_k$ we have $\varepsilon_k&gt;h_{k+1}$, hence
+The gap is also less than $\frac12$: $D_1=0$, and since $y_{k+1}&gt;y_k$ we have $\varepsilon_k&gt;h_{k+1}$, hence for $k\ge2$
 \[D_k=\sum_{j=1}^{k-1}(h_j-\varepsilon_j)&lt;\sum_{j=1}^{k-1}(h_j-h_{j+1})=h_1-h_k&lt;h_1=\tfrac12 .\]
 <em>Step 2: a lower bound for $y_k^3$.</em> By Step 1, $x_{k+1}=x_k+h_k&lt;y_k+\frac12+\frac12\le2y_k$, so $\varepsilon_k&gt;\frac1{5y_k^2}$ and
 $y_{k+1}^3-y_k^3&gt;3y_k^2\varepsilon_k&gt;\frac35$. Hence $y_k^3\ge1+\frac35(k-1)&gt;\frac{3k}5$ for all $k\ge1$.</p><p><em>Step 3: the shifted cube.</em> Let $U_k=y_k+d\ (\ge1)$. By Step 1,
@@ -213,9 +219,11 @@ $p^k\mid d^2$. In both cases $p^k\mid d^2$; hence $s_1\mid d^2$ and $s=ds_1\le d
 Hence there is $C_0$ such that $w-\sqrt{3c}&gt;K$ whenever $c\ge C_0$.</p><p><em>Conclusion of the case $g=s$.</em> If $c\ge C_0$, then, as $n\ge c$ and $3t-\sqrt{3t}$ is increasing,
 \[3n-\sqrt{3n}-K-s\ \ge\ (3c-\sqrt{3c})-K-(3c-w)=w-\sqrt{3c}-K&gt;0 .\]
 If $c&lt;C_0$, then $s&lt;3C_0&lt;3n-\sqrt{3n}-K$ for all $n$ larger than some $M_2$.</p><p>Taking $M=\max(M_1,M_2,3)$, for every $n\ge M$ and every $1\le a&lt;b&lt;c\le n$ we get $\gcd(a+b+c,\,ab+bc+ca,\,abc)&lt;3n-\sqrt{3n}-2^{2026}$. $\blacksquare$</p><p><em>Remark.</em> The term $\sqrt{3n}$ is of the right order of magnitude. For $(a,b,c)=(105,112,126)$ the gcd is $343=a+b+c=7^3$ (here $d=7$ and $s=d^3$),
-and for $n=126$ the gap $3n-343=35$ is less than twice $\sqrt{3n}\approx19.4$. More generally, for $t\equiv1\pmod3$ and $R=t^2-t+1$, the triples with
-$c-a=tR$, $c-b=R$ and $s=R^3$ (for $t=4$: $(702,741,754)$) have $g=s$ and $3c-\sqrt{3c}-s\approx1.5\,(3c)^{1/3}$, so the true excess over
-$\sqrt{3n}$ is of order $n^{1/3}$.</p>
+and for $n=126$ the gap $3n-343=35$ is less than twice $\sqrt{3n}\approx19.4$. More generally, for $t\equiv1\pmod3$, $t\ge4$, put $R=t^2-t+1$,
+$c=\frac{R^3+(t+1)R}3$, $a=c-tR$, $b=c-R$ (for $t=4$: $(702,741,754)$). Here $R\equiv1\pmod3$ and $3\mid R^2+t+1$, so $a,b,c$ are multiples of $R$ and
+$R^3\mid e_3$; also $s=3c-(t+1)R=R^3=Q$, so $3e_2=s^2-Q=s(s-1)$ and, as $3\nmid s$, $s\mid e_2$. Thus $g=s$, and with $w=(t+1)R$,
+$w-\sqrt{3c}=\frac{w^2-3c}{w+\sqrt{3c}}=\frac{3tR^2-w}{w+\sqrt{3c}}\approx\frac32R\approx\frac32(3c)^{1/3}$. So the true excess over $\sqrt{3n}$ is of
+order $n^{1/3}$.</p>
 <h4>Solution 2 (Reduction to the case gcd equals a+b+c and a quadratic form)</h4>
 <p>Write $K=2^{2026}$, $s=a+b+c$, $e_2=ab+bc+ca$, $e_3=abc$ and $g=\gcd(s,e_2,e_3)$. Note that $t\mapsto 3t-\sqrt{3t}$ is increasing for
 $t\ge1$.</p><p><em>Case $g&lt;s$.</em> Then $g\le\frac s2\le\frac{3n-3}2$, which is less than $3n-\sqrt{3n}-K$ for all $n$ larger than some $M_1$.</p><p><em>Case $g=s$</em>, i.e. $s\mid e_2$ and $s\mid e_3$. Put $x=c-a$, $y=c-b$ (so $x&gt;y\ge1$), $w=x+y$, and $Q=x^2-xy+y^2&gt;0$. Then $s=3c-w$.</p><p><em>Two divisibilities.</em> (i) Modulo $s$ we have $c\equiv-(a+b)$, so $e_2=ab+c(a+b)\equiv ab-(a+b)^2=-(a^2+ab+b^2)$; hence $s\mid a^2+ab+b^2$. From

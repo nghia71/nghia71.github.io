@@ -137,14 +137,16 @@ $1,2,4,8,16,32,23,5,10,20,40,39,37,33,25,9,18,36,31,21$; the residue $3$ does no
 <section class="ct-problem" id="p4">
 <h3>Problem 4</h3>
 <div class="ct-meta">Geometry &middot; LPS VII, Chapter 53: Barycentric and Projective-Flavored Geometry</div>
-<div class="ct-text"><p>Let $ABC$ be a triangle with orthocenter $H$, and let $\omega$ be the circle with diameter $AH$. Let $P,Q\in\omega$, $M\in AB$, $N\in AC$ be such that $PQ\parallel MN\parallel BC$. Let $K$ be the midpoint of the segment $BC$, $T=AK\cap\omega$, and $S=PM\cap QN$. Prove that the lines $AS$, $BH$, and $QT$ are concurrent, i.e. they either have a common point or are all parallel.</p></div>
+<div class="ct-text"><p>Let $ABC$ be a triangle with orthocenter $H$, and let $\omega$ be the circle with diameter $AH$. Let $P,Q\in\omega$, $M\in AB$, $N\in AC$ be such that $PQ\parallel MN\parallel BC$. Let $K$ be the midpoint of the segment $BC$, $T\ne A$ the second intersection of line $AK$ with $\omega$, and $S=PM\cap QN$. Prove that the lines $AS$, $BH$, and $QT$ are concurrent, i.e. they either have a common point or are all parallel.</p></div>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Coordinates)</h4>
 <div class="ct-fig"><img style="width:334px" src="/assets/contests/2026-27/macedonia-mo-4_s1.svg" alt="Figure for the solution"></div>
 <p><em>Replacing $S$.</em> Let $A'$ be the intersection of the line through $P$ parallel to $AB$ with the line through $Q$ parallel to $AC$. The triangles
 $A'PQ$ and $AMN$ have pairwise parallel sides ($A'P\parallel AM$, $A'Q\parallel AN$, $PQ\parallel MN$), so they are homothetic, and the centre of the
 homothety lies on $PM$, $QN$ and $A'A$; that centre is $S$. Hence the line $AS$ is the line $AA'$. (We assume, as the problem does, that $S$
-exists and $S\neq A$.)</p><p><em>Set-up.</em> Take the foot of the altitude from $A$ as origin, $BC$ as the $x$-axis and the altitude as unit: $A=(0,1)$, $B=(b,0)$, $C=(c,0)$ with
+exists and $S\neq A$. In detail: $P-A'=r(M-A)$ and $Q-A'=r(N-A)$ for one ratio $r\ne0$, because $PQ\parallel MN$. If $r=1$, then $PM\parallel QN$
+and $S$ would not exist; so $r\ne1$, and $S=\frac{A'-rA}{1-r}$ lies on $PM$ and on $QN$. Then $A'\ne A$, since $A'=A$ would give $S=A$, and $S$ is on
+line $AA'$.)</p><p><em>Set-up.</em> Take the foot of the altitude from $A$ as origin, $BC$ as the $x$-axis and the altitude as unit: $A=(0,1)$, $B=(b,0)$, $C=(c,0)$ with
 $b\ne c$ and $bc\ne-1$ (the angle at $A$ is not right, otherwise $H=A$ and $\omega$ does not exist), and $b\ne0$ (otherwise $H=B$ and the line $BH$
 does not exist). Then $H=(0,-bc)$, since $(H-B)\cdot(C-A)=(-b,-bc)\cdot(c,-1)=0$. The circle
 with diameter $AH$ is
@@ -192,9 +194,15 @@ from a conic to a line that agree at three points are equal. We check three poin
 $T\ne H$ because $AB\ne AC$, and $T\ne E$ because $E\in AC$, $T\in AK$ and $T\ne A$); $\Phi(H)=H$, so $g(H)=AH\cap BH=H$.</p></li><li><p>$Q=E$, the foot of the altitude from $B$ (it lies on $\omega$ since $\angle AEH=90^\circ$, and on $AC$ and $BH$): $f(E)=E$; and
 $\Phi(E)=E+t(C-A)$ lies on $AC$, so $g(E)=AC\cap BH=E$.</p></li><li><p>$Q=A$: $f(A)=AT\cap BH=AK\cap BH$ since $T\in AK$; and $g(A)=AK\cap BH$ by the choice of the tangent.</p></li></ul><p>If $\angle C\ne90^\circ$, the three points $H,E,A$ are distinct: $E\ne A$ and $H\ne A$ as $\angle A\ne90^\circ$, and $H=E$ would put $H$ on $AC$,
 so the altitude from $A$ would be the line $AC$, i.e. $\angle C=90^\circ$. Then $f=g$. For our $Q$ this says that $QT$ and $AA'=AS$ meet $BH$ at the
-same point (possibly at infinity): the lines $AS$, $BH$, $QT$ are concurrent or all parallel.</p><p>If $\angle C=90^\circ$, then $H=E=C$ and only two test points remain. This case follows from Solution 1, or by continuity: for fixed $Q$
-(moving with the triangle) both $f(Q)$ and $g(Q)$ depend continuously on the triangle, and they agree for all nearby triangles with
-$\angle C\ne90^\circ$.</p>
+same point (possibly at infinity): the lines $AS$, $BH$, $QT$ are concurrent or all parallel.</p><p>If $\angle C=90^\circ$, then $H=E=C$ and only two test points remain, so we compute directly. Take $C=H=(0,0)$, $A=(0,1)$, $B=(b,0)$ with $b\ne0$, and
+put $u=y-1$, so that $A$ is the origin of the $(x,u)$-coordinates, $\omega:\ x^2+u^2+u=0$ and $BH=BC:\ u=-1$. The line $u=\mu x$ meets $\omega$
+again at $Z_\mu$ with $x=-\frac{\mu}{1+\mu^2}$, and for $\mu\ne\mu'$ the line $(\mu+\mu')x+(\mu\mu'-1)u+\mu\mu'=0$ passes through $Z_\mu$ and $Z_{\mu'}$
+(substitute $u=\mu x$: it becomes $-\frac{\mu}{1+\mu^2}\,\mu'(1+\mu^2)+\mu\mu'=0$; the equation is symmetric). Here $Q=(p,mp)$ with $p\ne0$ (as $P\ne Q$),
+so $Q=Z_m$; the median $AK$ has slope $\tau=-\frac2b$, so $T=Z_\tau$, and for $Q\ne T$
+\[QT:\ (m+\tau)x+(m\tau-1)u+m\tau=0 .\]
+Also $e=(-\frac{b}{|b|},0)$, $\ell(Q)=-\frac{pb}{|b|}$ and $BC=|b|$, so $A'=\Phi(Q)=Q+\frac{2p}{b}(C-A)=\bigl(p,\ mp-\frac{2p}b\bigr)=\bigl(p,(m+\tau)p\bigr)$ and
+$AA':\ u=(m+\tau)x$. Since the equation of $QT$ equals $\bigl((m+\tau)x-u\bigr)+m\tau(u+1)$, a combination of the equations of $AA'$ and $BH$ (two
+different lines, as $A\notin BH$), the line $QT$ passes through their common point or is parallel to both. So the claim holds in this case too.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p5">

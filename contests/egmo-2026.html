@@ -100,7 +100,7 @@ has both sides at least $m$, so at least $m^2$ cells.</p><p>Therefore
 whose $(i,j)$ entry is $1$ exactly when the cell in row $i$, column $j$ is red. For a set $I$ of rows let $u_I\in\mathbb{F}_2^N$ be its
 indicator vector (a column vector). The rectangular region with row interval $I$ and column interval $J$ contains
 $\sum_{i\in I,\,j\in J}A_{ij}$ red cells, and modulo $2$ this is the number $u_I^{T}Au_J$. Note that $(u,v)\mapsto u^TAv$ is linear in each
-argument.</p><p><strong>Upper bound.</strong> Colour red only the four central cells, in rows $m,m+1$ and columns $m,m+1$ (the example of Solution 1). A
+argument.</p><p><strong>Upper bound.</strong> Colour red only the four central cells, in rows $m,m+1$ and columns $m,m+1$. A
 rectangular region meets this $2\times2$ block in $0$, $1$, $2$ or $4$ red cells, so it is oddly-rectangular exactly when it contains exactly
 one red cell. Then its rows contain exactly one of the rows $m,m+1$, so they lie within rows $1,\dots,m$ or within rows $m+1,\dots,N$: at
 most $m$ rows. Likewise it has at most $m$ columns, hence at most $m^2$ cells. So $M\le m^2$.</p><p><strong>Lower bound.</strong> Let $\mathcal I$ be the family of the intervals $[1,k]$ with $m\le k\le N$ and $[k,N]$ with $1\le k\le m+1$; each has
@@ -117,8 +117,8 @@ contains exactly one red cell. Then its rows contain exactly one of the rows $m,
 $m+1,\dots,N$: at most $m$ rows. Likewise it has at most $m$ columns, hence at most $m^2$ cells. So $M\le m^2$.</p><p><strong>Every bordeaux board has an odd region with at least $m^2$ cells.</strong> A single red cell is an oddly-rectangular region, so there is an
 oddly-rectangular region $R$ with the largest possible number of cells. Let $R$ consist of rows $r_1,\dots,r_2$ and columns $c_1,\dots,c_2$; its
 height is $h=r_2-r_1+1$. We show $h\ge m$. Suppose instead $h&lt;m$. Throughout we keep the columns $c_1,\dots,c_2$, and for a set $I$ of consecutive
-rows we write $n(I)$ for the number of red cells in the region formed by the rows of $I$ and the columns $c_1,\dots,c_2$. Such a region has more cells than
-$R$ as soon as $I$ has more than $h$ rows. Let $u=r_1-1$ and $v=N-r_2$ be the numbers of rows above and below $R$; then $u+v=2m-h&gt;m$.</p><ul class="ct-ul"><li><p>If $u\ge m$: the rows $1,\dots,r_2$ consist of the rows $1,\dots,u$ and the rows of $R$, so $n(\{1,\dots,r_2\})=n(\{1,\dots,u\})+n(R)$
+rows we write $n(I)$ for the number of red cells in the region formed by the rows of $I$ and the columns $c_1,\dots,c_2$. In particular $n(R)$, short for $n(\{r_1,\dots,r_2\})$, is the number of red cells
+of $R$. Such a region has more cells than $R$ as soon as $I$ has more than $h$ rows. Let $u=r_1-1$ and $v=N-r_2$ be the numbers of rows above and below $R$; then $u+v=2m-h&gt;m$.</p><ul class="ct-ul"><li><p>If $u\ge m$: the rows $1,\dots,r_2$ consist of the rows $1,\dots,u$ and the rows of $R$, so $n(\{1,\dots,r_2\})=n(\{1,\dots,u\})+n(R)$
 with $n(R)$ odd. Hence one of the two regions with rows $1,\dots,u$ and rows $1,\dots,r_2$ is oddly-rectangular. Both have at least $u\ge m&gt;h$
 rows, so this region is larger than $R$.</p></li><li><p>If $v\ge m$: the same argument applies to the rows $r_2+1,\dots,N$ and $r_1,\dots,N$.</p></li><li><p>If $u&lt;m$ and $v&lt;m$: then $u=2m-h-v&gt;m-h\ge1$ and likewise $v\ge1$. Consider the three regions with rows $1,\dots,N$, rows $r_1,\dots,N$
 and rows $1,\dots,r_2$. Every red cell of $R$ is counted in all three, and every other red cell in the columns $c_1,\dots,c_2$ is counted in
@@ -288,10 +288,11 @@ X-C=\frac{-s}{t(2s^2t^2+s^2-1)}\,(Q,\ P).\]</p><p><em>$\Gamma$ and $V$.</em> Sol
 \[\Gamma:\ x^2+y^2-\frac{s(t^2+1)}{2t(st+1)}\,x-\frac{4st^3+3t^2-1}{2t(st+1)}\,y-\frac{P}{2t(st+1)}=0.\]
 Let $V_0=\bigl(-\tfrac12,\ \frac{4st^2+s+3t}{2(st+1)}\bigr)$. Then $V_0-O=\bigl(-\frac12,\frac{tz}2\bigr)$ is perpendicular to the direction
 $(z,\frac1t)$ of $KZ$, and substituting $V_0$ into the equation of $\Gamma$ gives $0$ (direct expansion), so $V_0\in\Gamma$; its
-$y$-coordinate is positive, so it is on $A$'s side of $BC$. The other point of $\Gamma$ on this line is the foot $H$ of the perpendicular from
-$O$ to $KZ$, whose $y$-coordinate $-\frac{sP}{t((2st+1)^2+s^2)}$ is negative. Hence $V=V_0$.</p><p><em>Conclusion.</em> $V-L=\frac{1}{2t(st+1)}\,(-P,\ Q)$, so
+$y$-coordinate is positive, so it is on $A$'s side of $BC$. This line is $y=t-tzx$. Its other point on $\Gamma$ is the foot $H$ of the perpendicular from
+$O$ to $KZ$: with $h=-\frac{sP}{t((2st+1)^2+s^2)}$, the point $H=\bigl(\frac{t-h}{tz},\,h\bigr)$ lies on this line and on $KZ$, and substituting it into the
+equation of $\Gamma$ gives $0$. As $h&lt;0$, $H$ is not on $A$'s side of $BC$. Hence $V=V_0$.</p><p><em>Conclusion.</em> $V-L=\frac{1}{2t(st+1)}\,(-P,\ Q)$, so
 \[(V-L)\cdot(X-C)=\frac{-s}{2t^2(st+1)(2s^2t^2+s^2-1)}\bigl(-PQ+QP\bigr)=0,\]
-i.e. $LV\perp CX$. (The point $X$ exists, so $2s^2t^2+s^2-1\ne0$.)</p>
+i.e. $LV\perp CX$. (Here $2s^2t^2+s^2-1=(s^2-1-2st)+2st(st+1)&gt;0$: since $AC&gt;AB$, the first coordinate of $A$ is negative, i.e. $s^2&gt;1+2st$.)</p>
 <h4>Solution 3 (Powers of points along the line $KZ$)</h4>
 <div class="ct-fig"><img style="width:284px" src="/assets/contests/2026-27/egmo-5_s3.svg" alt="Figure for the solution"></div>
 <p>Let $\alpha,\beta,\gamma$ be the angles of $ABC$, $R$ the radius of $\omega$, $N$ the midpoint of $BC$, $\Gamma$ the circle $ABL$, $Q$ the foot of
@@ -354,6 +355,8 @@ $T=\sum_r m_r^2$. By the Cauchy&ndash;Schwarz inequality,
 <p>We use the $p-1$ Dirichlet characters $\chi$ modulo $p$ (the homomorphisms $(\mathbb Z/p)^\times\to\mathbb C^\times$, extended
 to integers prime to $p$). Their orthogonality relation states that for integers $a,b$ prime to $p$
 \[\frac1{p-1}\sum_\chi\chi(a)\overline{\chi(b)}=\begin{cases}1,&amp;a\equiv b\pmod p,\\0,&amp;\text{otherwise.}\end{cases}\]
+(With a primitive root $g$ modulo $p$, the characters are $\chi_j(g^u)=e^{2\pi i ju/(p-1)}$ for $0\le j&lt;p-1$. If $a\equiv g^u$ and $b\equiv g^w$, the sum is
+$\sum_{j=0}^{p-2}e^{2\pi ij(u-w)/(p-1)}$, a geometric sum equal to $p-1$ if $u\equiv w\pmod{p-1}$, i.e. $a\equiv b$, and to $0$ otherwise.)
 Hence, writing $c(d)$ for the number of divisors $\ell$ of $d^2$ with $\ell\equiv d$,
 \[(p-1)\sum_{d\mid n}c(d)=\sum_\chi\ \sum_{d\mid n}\overline{\chi(d)}\sum_{\ell\mid d^2}\chi(\ell).\]
 Fix $\chi$. The inner function $d\mapsto\overline{\chi(d)}\sum_{\ell\mid d^2}\chi(\ell)$ is multiplicative (for coprime $d,d'$ the

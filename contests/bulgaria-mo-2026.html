@@ -102,7 +102,7 @@ T_N=N=(N+1)-1,\qquad T_{j}=(j+1)(T_{j+1}+1)-1 ,
 \]
 so $T_j+1=(N+1)N\cdots(j+1)$ and the value used for type $j$ is $a_j=T_{j+1}+1=(N+1)N\cdots(j+2)$. These values strictly increase as
 $j$ decreases, so they are distinct. At the end $T_1+1=(N+1)!$, so every sum from $1$ to $(N+1)!-1$ is obtained.
-(For $N=3$: $a_3=1$, $a_2=4$, $a_1=12$, reaching $1,\dots,23$.)</p><p><strong>Upper bound</strong> (the same count as in Solution 1). A sum is determined by the numbers $c_i$ of coins of value $a_i$ used,
+(For $N=3$: $a_3=1$, $a_2=4$, $a_1=12$, reaching $1,\dots,23$.)</p><p><strong>Upper bound.</strong> A sum is determined by the numbers $c_i$ of coins of value $a_i$ used,
 $0\le c_i\le i$, that is, by a point of $\{0,1\}\times\{0,1,2\}\times\dots\times\{0,1,\dots,N\}$. There are $(N+1)!$ such vectors
 $(c_1,\dots,c_N)$, one of them zero, so at most $(N+1)!-1$ positive sums occur and $S\le(N+1)!-1$. With the construction above,
 \[
@@ -131,7 +131,7 @@ strictly decreasing. Now $1/a\in(0,1)$ and
 \]
 because $a&gt;1$ and $n-1\ge 2&gt;1$. Since $\varphi$ is decreasing, $b&lt;1/a$, i.e. $ab&lt;1$.</p><p>Hence $ab\le 1$ in all cases, with equality only for $a=b=1$. The maximum of $ab$ is $\boxed{1}$.</p>
 <h4>Solution 2 (A variant: comparing $n$-th roots)</h4>
-<p>This is the same comparison $b&lt;1/a$ as in Solution 1, done with $n$-th roots instead of monotonicity.</p><p>The pair $a=b=1$ gives $ab=1$. Suppose some solution has $ab&gt;1$; we derive a contradiction.</p><p>Then $a$ and $b$ have the same sign. If both were negative, then $a-1$, $b-1$ are negative and the two terms $a(b-1)^n$, $b(a-1)^n$
+<p>The pair $a=b=1$ gives $ab=1$. Suppose some solution has $ab&gt;1$; we derive a contradiction.</p><p>Then $a$ and $b$ have the same sign. If both were negative, then $a-1$, $b-1$ are negative and the two terms $a(b-1)^n$, $b(a-1)^n$
 have the same sign (both negative for even $n$, both positive for odd $n$), so their sum is not zero. Hence $a,b&gt;0$. Neither equals
 $1$: $a=1$ would give $(b-1)^n=0$, $b=1$, $ab=1$. So both terms are nonzero, and they must have opposite signs; this is impossible for
 even $n$, where both are positive. So $n\ge3$ is odd and $a-1$, $b-1$ have opposite signs; by symmetry $a&gt;1&gt;b&gt;0$, and
@@ -170,11 +170,11 @@ $G\in\mathbb Z[x]$. Putting $x=a$,
 As $0\le p&lt;M$, the remainder is $\boxed{p}$.</p>
 <h4>Solution 2 (Newton identities in $\mathbb Z[x]/(\Phi)$)</h4>
 <p>Let $\Phi(x)=1+x+\dots+x^{p-1}$ and $M=\Phi(a)&gt;p$ (as $M\ge 2^p-1$). We prove, without complex numbers, that $\Phi(x)$
-divides $\prod_{k=1}^{p-1}(x^k-1)-p$ in $\mathbb Z[x]$; then $x=a$ gives the remainder $p$ as in Solution 1.</p><p>Work in the ring $R=\mathbb Z[x]/(\Phi(x))$. Because $\Phi$ is monic of degree $p-1$, every element of $R$ is uniquely an integer
+divides $\prod_{k=1}^{p-1}(x^k-1)-p$ in $\mathbb Z[x]$; then $x=a$ gives the remainder $p$.</p><p>Work in the ring $R=\mathbb Z[x]/(\Phi(x))$. Because $\Phi$ is monic of degree $p-1$, every element of $R$ is uniquely an integer
 combination of $1,x,\dots,x^{p-2}$; in particular, if $j\,r=0$ in $R$ for a positive integer $j$, then $r=0$. In $R$ we have $x^p=1$,
 since $x^p-1=(x-1)\Phi(x)$.</p><p>Let $e_1,\dots,e_p$ be the elementary symmetric functions and $s_m=\sum_{k=0}^{p-1}x^{km}$ the power sums of the $p$ elements
 $1,x,\dots,x^{p-1}$ of $R$. For $1\le m\le p-1$ the exponents $km$ ($0\le k\le p-1$) run over all residues mod $p$, and $x^p=1$, so
-$s_m=1+x+\dots+x^{p-1}=0$ in $R$. Newton's identities, valid in every commutative ring,
+$s_m=1+x+\dots+x^{p-1}=0$ in $R$. Newton's identities (with $e_0=1$), valid in every commutative ring,
 \[
 j\,e_j=\sum_{i=1}^{j}(-1)^{i-1}e_{j-i}\,s_i\qquad(1\le j\le p),
 \]
@@ -200,7 +200,8 @@ $0\le p&lt;M$, so the remainder is $\boxed{p}$.</p>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Inversion centred at $A$)</h4>
 <div class="ct-fig"><img style="width:249px" src="/assets/contests/2026-27/bulgaria-mo-4_s1.svg" alt="Figure for the solution"></div>
-<p><em>Conventions.</em> The &ldquo;smaller arc&rdquo; $DE$ is the arc of $\Omega$ between $D$ and $E$ that does not contain $B$ and $C$;
+<p><em>Conventions.</em> The quadrilateral $BCED$ is convex (it is the triangle $ABC$ with the corner $ADE$ cut off), so $B$ and $C$
+lie on the same arc $DE$ of $\Omega$. The &ldquo;smaller arc&rdquo; $DE$ is the arc of $\Omega$ between $D$ and $E$ that does not contain $B$ and $C$;
 it lies on the same side of $DE$ as $A$. This arc is indeed the smaller one: its measure is $2\angle DBE=2\angle DCE$ (inscribed
 angles from $B$ and $C$, which lie on the other arc), where $\angle DBE=\angle ABE&lt;\angle ABC$ and $\angle DCE=\angle ACD&lt;\angle ACB$;
 at least one of $\angle ABC,\angle ACB$ is acute, so the arc is less than $180^\circ$. Since $F\in\Omega$, the circle $\omega$ is tangent to $\Omega$ at $F$; since $A\in\Gamma$, the
@@ -224,7 +225,8 @@ tangent iff $A$ is their only common point, iff their images under $\iota$ (two 
 parallel. So $\omega$ is tangent to $\Gamma$ iff the tangent to $\Omega$ at $F'$ is parallel to $DE$, and by (1) this happens iff $AF$
 bisects $\angle DFE$. $\blacksquare$</p>
 <h4>Solution 2 (A homothety at $F$ and the antiparallel $DE$)</h4>
-<p><em>Setup</em> (as in Solution 1). The smaller arc $DE$ is the one not containing $B,C$: its measure is $2\angle DBE=2\angle DCE$,
+<p><em>Setup.</em> The quadrilateral $BCED$ is convex (it is the triangle $ABC$ with the corner $ADE$ cut off), so $B$ and $C$ lie on the same
+arc $DE$ of $\Omega$. The smaller arc $DE$ is the one not containing $B,C$: its measure is $2\angle DBE=2\angle DCE$,
 with $\angle DBE&lt;\angle ABC$, $\angle DCE&lt;\angle ACB$, and one of these two angles of the triangle is acute. Let $F'$ be the second
 intersection of line $AF$ with $\Omega$. The point $A$ is outside $\Omega$, and the arc of $\Omega$ facing $A$ contains $D,E$ (first
 points on rays $AB,AC$) but not $B,C$ (second points); so it contains the arc $DE$ through $F$, and $F'$ lies on the arc $DE$ containing
@@ -236,7 +238,8 @@ AF \text{ bisects } \angle DFE\iff F'=M\iff \text{the tangent to }\Omega\text{ a
 \]</p><p><em>The tangent to $\Gamma$ at $A$ is parallel to $DE$.</em> Let $t_A$ be this tangent. By the tangent&ndash;chord angle, $t_A$ makes with
 the chord $AB$ the angle $\angle ACB$, on the side of $AB$ not containing $C$. Since $BCED$ is cyclic, the exterior angle at $D$ gives
 $\angle ADE=\angle BCE=\angle ACB$, with $E$ on the same side of $AB$ as $C$. These are alternate angles at the transversal $AB$, so
-$t_A\parallel DE$.</p><p><em>Reduction.</em> $\omega$ is tangent to $\Gamma$ iff they touch at $A$, iff the tangent to $\omega$ at $A$ is $t_A$, iff (as both
+$t_A\parallel DE$.</p><p><em>Reduction.</em> The circles $\omega$ and $\Gamma$ are different, since $F\in\omega$ but $F\notin\Gamma$ (as $\Gamma\cap\Omega=\{B,C\}$).
+So $\omega$ is tangent to $\Gamma$ iff they touch at $A$, iff the tangent to $\omega$ at $A$ is $t_A$, iff (as both
 lines pass through $A$) the tangent to $\omega$ at $A$ is parallel to $DE$.</p><p><em>Homothety.</em> The circles $\omega$ and $\Omega$ are tangent at $F$, so a homothety $h$ with centre $F$ maps $\omega$ onto $\Omega$.
 It maps $A\in\omega$, $A\ne F$, to a point of $\Omega$ on line $FA$ different from $F$, namely $F'$. A homothety maps tangent lines to
 tangent lines and every line to a parallel line, so the tangent to $\omega$ at $A$ is parallel to the tangent to $\Omega$ at $F'$.</p><p>Combining: $\omega$ is tangent to $\Gamma$ $\iff$ the tangent to $\omega$ at $A$ is parallel to $DE$ $\iff$ the tangent to $\Omega$ at

@@ -147,8 +147,8 @@ separately.</p><p>The answer is: <strong>all $n\ge4$ with $n\ne6$</strong>.</p>
 <p>Call a set $S$ of vertices <em>achievable</em> if some sequence of moves changes the colours of exactly the vertices of $S$.
 A vertex changes colour exactly when it lies in an odd number of the triangles used, so achievable sets are closed under symmetric
 difference, every isosceles triangle is achievable, and the answer is &ldquo;yes&rdquo; exactly when every set is achievable. For $n=3$ the only
-achievable sets are $\varnothing$ and the whole triangle. For $n=6$ the isosceles triangles are $\{x-1,x,x+1\}$, $\{0,2,4\}$ and $\{1,3,5\}$,
-and each meets $\{0,1,3,4\}$ in exactly two vertices, so every achievable set meets $\{0,1,3,4\}$ in an even number of vertices. In both cases
+achievable sets are $\varnothing$ and the whole triangle. For $n=6$ three vertices cut the boundary into arcs of $1,1,4$, of $2,2,2$ or of $1,2,3$ sides; the last
+pattern gives three different side lengths, so the isosceles triangles are $\{x-1,x,x+1\}$, $\{0,2,4\}$ and $\{1,3,5\}$, and each meets $\{0,1,3,4\}$ in exactly two vertices, so every achievable set meets $\{0,1,3,4\}$ in an even number of vertices. In both cases
 $\{0\}$ is not achievable. Let $n\ge4$, $n\ne6$.</p><p><em>Pairs at distance $3$.</em> Since $\{y-1,y,y+1\}\triangle\{y,y+1,y+2\}=\{y-1,y+2\}$, so every pair $\{x,x+3\}$ is achievable.</p><p><em>Case $3\nmid n$.</em> Then $3$ is invertible modulo $n$, so for any two vertices $u\ne v$ we can write $v=u+3m$ with $1\le m&lt;n$, and
 \[\{u,u+3\}\triangle\{u+3,u+6\}\triangle\dots\triangle\{u+3(m-1),u+3m\}=\{u,v\}.\]
 So every pair is achievable, and hence every set with an even number of vertices (split it into pairs). If $|S|$ is odd, then
@@ -222,8 +222,8 @@ What is the biggest number of black cells we can get?</p></div>
 <p>Number the rows $1,\dots,33$ and the columns $1,\dots,83$, and call the cell in row $i$, column $j$ <em>odd</em> if $i$ and $j$
 are both odd. There are $17\cdot42=714$ odd cells and $33\cdot83=2739$ cells in all. We show that the maximum is $2739-714=\boxed{2025}$.</p><p><strong>Construction.</strong> We blacken all cells except the odd ones, in three rounds.</p><ul class="ct-parts"><li><p><span class="ct-lbl">1.</span> Cells with $i,j$ both even: the cell $(i,j)$ is the middle of the horizontal rectangle $(i,j-1),(i,j),(i,j+1)$, whose end cells
 have $j\pm1$ odd, $i$ even, so they are still white.</p></li><li><p><span class="ct-lbl">2.</span> Cells with $i$ odd, $j$ even: use the horizontal rectangle $(i,j\pm1)$; its end cells are odd cells, which are never blackened.</p></li><li><p><span class="ct-lbl">3.</span> Cells with $i$ even, $j$ odd: use the vertical rectangle $(i\pm1,j)$; again its end cells are odd cells.</p></li></ul><p>All rectangles fit in the board because an even index is at least $2$ and at most $32$ (rows) or $82$ (columns). This gives $2025$ black cells.</p><p><strong>Bound.</strong> We need two observations about the final colouring.</p><ul class="ct-ul"><li><p><em>Every $2\times2$ square contains a white cell.</em> Suppose all four of its cells are black and look at the one blackened last. Its
-rectangle contains its horizontal neighbour or its vertical neighbour on both sides, and one of these neighbours is in the square; that
-neighbour was already black, but all three cells of the rectangle had to be white. Contradiction.</p></li><li><p><em>Two adjacent cells of row $33$ are not both black</em>, and similarly for column $83$. A cell of row $33$ can only be the middle of a
+rectangle contains either both horizontal neighbours of this cell or both vertical neighbours, and in either case exactly one of
+these two neighbours lies in the square; that neighbour was already black, but all three cells of the rectangle had to be white. Contradiction.</p></li><li><p><em>Two adjacent cells of row $33$ are not both black</em>, and similarly for column $83$. A cell of row $33$ can only be the middle of a
 horizontal rectangle. If two adjacent cells of row $33$ were black, the rectangle of the later one contains the earlier one, which was already
 black. The corner $(33,83)$ is never the middle of a rectangle, so it stays white.</p></li></ul><p>Now split the board into blocks: the $16\cdot41$ squares formed by rows $2a-1,2a$ and columns $2b-1,2b$ ($a\le16$, $b\le41$), the $41$
 dominoes in row $33$ formed by columns $2b-1,2b$, the $16$ dominoes in column $83$ formed by rows $2a-1,2a$, and the corner cell. That is
@@ -315,7 +315,8 @@ two numbers is not an integer.</p>
 $s=\pm2$ only for $x=\pm1$; so $|s|&gt;2$. We have
 \[u+v=\Bigl(x^2+\frac1{x^2}\Bigr)+\Bigl(x+\frac1x\Bigr)=s^2+s-2,\qquad uv=x^3+\frac1{x^3}+2=s^3-3s+2.\]
 So $m=s^2+s=u+v+2$ is an integer, and $s^3=s(m-s)=ms-(m-s)=(m+1)s-m$, which gives $uv=(m-2)(s-1)$.</p><p>If $m=2$, then $s^2+s-2=0$, so $s\in\{1,-2\}$, impossible as $|s|&gt;2$. Hence $m\ne2$ and $s=1+\frac{uv}{m-2}$ is rational. But $s$ is a root of
-the monic integer polynomial $t^2+t-m$, so the rational number $s$ is an integer.</p><p>Now $x^2=sx-1$ and $\frac1x=s-x$, so
+the monic integer polynomial $t^2+t-m$, so the rational number $s$ is an integer (writing $s=\frac hj$ in lowest terms and clearing denominators gives
+$j\mid h^2$, so $j=1$).</p><p>Now $x^2=sx-1$ and $\frac1x=s-x$, so
 \[u=x^2+\frac1x=(sx-1)+(s-x)=(s-1)(x+1).\]
 As $s\ne1$, $x=\frac u{s-1}-1$ is rational; it is a root of the monic integer polynomial $t^2-st+1$, so $x$ is an integer, and so is
 $\frac1x=s-x$. Hence $x=\pm1$, a contradiction.</p>
@@ -359,7 +360,7 @@ Prove that $FL$ passes through the centre of $\Gamma$.</p></div>
 <div class="ct-fig"><img style="width:256px" src="/assets/contests/2026-27/belarus-mo-11_s1.svg" alt="Figure for the solution"></div>
 <p>Let $O,R$ be the centre and radius of $\Gamma$, write $A,B,C$ also for the angles of the triangle, let $M$ be the second
 intersection of line $AI$ with $\Gamma$ (the midpoint of arc $BC$ not containing $A$), $N$ the midpoint of $BC$ and $H$ the foot of the
-altitude from $A$. We use the standard facts:</p><ul class="ct-parts"><li><p><span class="ct-lbl">(F1)</span> $MB=MC=MI$ (incentre&ndash;excentre lemma), and $MB=2R\sin\frac A2$;</p></li><li><p><span class="ct-lbl">(F2)</span> $AH$ and $AO$ are symmetric with respect to $AI$ (if $B\le90^\circ$ then $\angle BAH=90^\circ-B=\angle CAO$; if $B&gt;90^\circ$ then $H$ lies beyond $B$ and $\angle BAH=B-90^\circ$ on the other side of $AB$, with the same conclusion);</p></li><li><p><span class="ct-lbl">(F3)</span> $IA=4R\sin\frac B2\sin\frac C2$;</p></li><li><p><span class="ct-lbl">(F4)</span> triangles $MBL$ and $MAB$ are similar (common angle at $M$, $\angle MBL=\angle MBC=\frac A2=\angle MAB$), so $MB^2=ML\cdot MA$.</p></li></ul><p><strong>Case $B=C$.</strong> Then $D=N$, and the line $ID$ is the axis of symmetry of the triangle; it contains $A,I,L,O$ and meets $\Gamma$ again at
+altitude from $A$. We use the standard facts:</p><ul class="ct-parts"><li><p><span class="ct-lbl">(F1)</span> $MB=MC=MI$ (incentre&ndash;excentre lemma), and $MB=2R\sin\frac A2$;</p></li><li><p><span class="ct-lbl">(F2)</span> $AH$ and $AO$ are symmetric with respect to $AI$ (if $B\le90^\circ$ then $\angle BAH=90^\circ-B=\angle CAO$; if $B&gt;90^\circ$ then $H$ lies beyond $B$ and $\angle BAH=B-90^\circ$ on the other side of $AB$, with the same conclusion);</p></li><li><p><span class="ct-lbl">(F3)</span> $IA=4R\sin\frac B2\sin\frac C2$ (since $IA=\frac r{\sin(A/2)}$ and $r=4R\sin\frac A2\sin\frac B2\sin\frac C2$);</p></li><li><p><span class="ct-lbl">(F4)</span> triangles $MBL$ and $MAB$ are similar (common angle at $M$, $\angle MBL=\angle MBC=\frac A2=\angle MAB$), so $MB^2=ML\cdot MA$.</p></li></ul><p><strong>Case $B=C$.</strong> Then $D=N$, and the line $ID$ is the axis of symmetry of the triangle; it contains $A,I,L,O$ and meets $\Gamma$ again at
 $F=M$. So the line $FL$ is this axis and passes through $O$.</p><p><strong>Case $B\ne C$.</strong> By symmetry let $B&gt;C$ and put $\delta=\frac{B-C}2&gt;0$. From (F2), $\angle HAI=\frac A2-(90^\circ-B)=\delta$ and
 $\angle IAO=\delta$, and $H$, $O$ lie on different sides of line $AI$.</p><p><em>Step 1: $\angle A=60^\circ$.</em> The rays $IF$ and $AH$ have the same direction (both are perpendicular to $BC$ and point towards $BC$). Hence
 $F$ and $H$ lie on the same side of line $AI$, and $\angle AIF=180^\circ-\angle IAH=180^\circ-\delta$. In the isosceles triangle $AIF$
@@ -383,7 +384,8 @@ which is perpendicular to $BC$). Hence $F'=O$. A homothety maps each point to a 
 $h(F)=O$ are collinear: the line $FL$ passes through the centre of $\Gamma$.</p>
 <h4>Solution 2 (A reflection in OI, then a homothety at L)</h4>
 <p>Let $O,R$ be the centre and radius of $\Gamma$, $M$ the second intersection of line $AI$ with $\Gamma$ (the midpoint of arc
-$BC$ not containing $A$). Recall that $MB=MC=MI$ (incentre&ndash;excentre lemma).</p><p>If $AB=AC$, the line $ID$ is the axis of symmetry, so $F=M$ and the line $FL$ is the axis, which contains $O$. Let $AB\ne AC$. Then
+$BC$ not containing $A$). Recall that $MB=MC=MI$ (incentre&ndash;excentre lemma: $MB=MC$ by equal arcs, and
+$\angle MBI=\frac A2+\frac B2=\angle MIB$).</p><p>If $AB=AC$, the line $ID$ is the axis of symmetry, so $F=M$ and the line $FL$ is the axis, which contains $O$. Let $AB\ne AC$. Then
 $O\notin AI$: otherwise line $AI$ would be the line $OM$, the perpendicular bisector of $BC$, and $AB=AC$. In particular $O\ne I$.</p><p><em>Step 1: $MI=R$.</em> Let $u$ be the direction perpendicular to $BC$ that points from the side of $A$ towards $BC$. The ray $IF$ passes
 through $D$, so it has direction $u$. The ray $OM$ also has direction $u$, since $M$ is the point of $\Gamma$ on the perpendicular bisector of
 $BC$ on the side away from $A$. From $IA=IF$ and $OA=OF$, the line $OI$ is the perpendicular bisector of $AF$. The reflection in $OI$ maps $A$
@@ -416,7 +418,7 @@ point of the chord $BC$), so the ray leaves the disc at a point $F=(0,f)$ with $
 and $IF=1-f$. The condition $IA=IF$ reads $\frac{t^2}{(w-1)^2}=(1-f)^2-1=f^2-2f$, so $t^2=(w-1)^2(f^2-2f)$ and
 $K=\frac{(w-1)(1+2f-f^2)}2$. Substituting in (1) and multiplying by $2$,
 \[2f^2+(w-1)(f+2f^2-f^3)-2w=0,\qquad\text{that is,}\qquad (f-1)(f+1)\bigl((w-1)f-2w\bigr)=0\]
-(expand both sides: each equals $-(w-1)f^3+2wf^2+(w-1)f-2w$). As $f&lt;0$ and $w&gt;1$, the factors $f-1$ and $(w-1)f-2w$ are negative, so
+(on expanding, the left-hand side of the first equation is $-(w-1)f^3+2wf^2+(w-1)f-2w=-(f-1)(f+1)\bigl((w-1)f-2w\bigr)$). As $f&lt;0$ and $w&gt;1$, the factors $f-1$ and $(w-1)f-2w$ are negative, so
 $f=-1$. Then $t^2=3(w-1)^2$ and $K=-(w-1)$.</p><p><em>The collinearity.</em> The centre of $\Gamma$ is $O=\bigl(-\frac{u-v}2,-\frac K2\bigr)=\bigl(\frac{v-u}2,\frac{w-1}2\bigr)$, and $F=(0,-1)$.
 The point of segment $FO$ at the fraction $\frac2{w+1}$ of the way from $F$ is
 \[F+\frac2{w+1}(O-F)=\Bigl(\frac{v-u}{w+1},\ -1+\frac2{w+1}\cdot\frac{w+1}2\Bigr)=\Bigl(\frac{v-u}{w+1},\ 0\Bigr)=L.\]
@@ -476,7 +478,7 @@ is <strong>no</strong>.</p>
 <section class="ct-problem" id="p14">
 <h3>Problem 9.6</h3>
 <div class="ct-meta">Geometry &middot; LPS VII, Chapter 52: Advanced Combinatorial Structure and Hybrid Methods</div>
-<div class="ct-text"><p>Inside a regular $2n$-gon $A_1A_2\dots A_{2n}$ points $B_1,B_2,\dots,B_{2n}$ are chosen such that $A_1$ is the farthest vertex of the $2n$-gon from $B_1$, $A_2$ is the farthest vertex of the $2n$-gon from $B_2$, $\dots$, $A_{2n}$ is the farthest vertex of the $2n$-gon from $B_{2n}$.
+<div class="ct-text"><p>Inside a regular $2n$-gon $A_1A_2\dots A_{2n}$ points $B_1,B_2,\dots,B_{2n}$ are chosen such that $A_1$ is the unique farthest vertex of the $2n$-gon from $B_1$, $A_2$ is the farthest vertex of the $2n$-gon from $B_2$, $\dots$, $A_{2n}$ is the farthest vertex of the $2n$-gon from $B_{2n}$.
 What is the maximal number of points out of $B_1,B_2,\dots,B_{2n}$ that can be collinear?</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$n+1$</p></div></details>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
@@ -519,7 +521,7 @@ $\boxed{0}$.</p><p><em>(b)</em> Let $f(x)=0$ for rational $x$ and $f(x)=1$ for i
 $f(f(x))=0$; and adding a rational number does not change whether a number is rational, so $f(x+f(y))=f(x)$. Hence
 $f(x+f(y))=f(x)=f(x)+y\,f(f(x))$ for all $x,y$, and $f$ is not constant. So the answer is <strong>yes</strong>.</p>
 <h4>Solution 2 (Comparing two values of f(f(y)))</h4>
-<p>Let $c=f(0)$. As in Solution&nbsp;1, $y=0$ gives $f(x+c)=f(x)$, and $x=0$ together with $f(c)=f(0)=c$ gives
+<p>Let $c=f(0)$. Putting $y=0$ gives $f(x+c)=f(x)$, so $f(c)=f(0)=c$, and then $x=0$ gives
 $f(f(y))=c+cy$ for all $y$.</p><p><em>(a)</em> Since $f(y+c)=f(y)$, we have $f(f(y+c))=f(f(y))$, so $c+c(y+c)=c+cy$, i.e. $c^2=0$. Hence $f(0)=\boxed{0}$ (and $f\equiv0$ shows that
 this value occurs).</p><p><em>(b)</em> With $c=0$ we get $f(f(y))=0$ for all $y$, and the equation becomes $f(x+f(y))=f(x)$: every value of $f$ is a period of $f$.
 Conversely, any $f$ with these two properties satisfies the equation, since then $f(x+f(y))=f(x)=f(x)+y\cdot0=f(x)+yf(f(x))$. For example, let
@@ -541,7 +543,8 @@ Put $b_i=\frac{a_i}i$.</p><p><strong>$n-1$ inequalities suffice.</strong> Let Vi
 triangle inequality,
 \[|b_i-b_j|\le\sum_{k=i}^{j-1}|b_k-b_{k+1}|&lt;\sum_{k=i}^{j-1}\Bigl(\frac1k-\frac1{k+1}\Bigr)=\frac1i-\frac1j,\]
 so all inequalities hold.</p><p><strong>Fewer do not suffice.</strong> Suppose Vika chooses fewer than $n-1$ inequalities. Consider the graph on the vertices $1,\dots,n$ whose
-edges are the chosen pairs. A graph with $n$ vertices and fewer than $n-1$ edges is not connected; let $K$ be the vertex set of one connected
+edges are the chosen pairs. A graph with $n$ vertices and fewer than $n-1$ edges is not connected (start from $n$ isolated vertices: each edge
+reduces the number of components by at most one); let $K$ be the vertex set of one connected
 component, so $K\ne\{1,\dots,n\}$. Sasha takes $a_i=i$ for $i\in K$ and $a_i=0$ otherwise, so $b_i=1$ on $K$ and $b_i=0$ elsewhere. Every chosen
 inequality joins two indices of the same component, so it reads $0&lt;\frac1i-\frac1j$ and holds. But for $i\in K$ and $j\notin K$ we get
 $|b_i-b_j|=1&gt;\bigl|\frac1i-\frac1j\bigr|$, so the corresponding inequality fails.</p><p>Hence the least number is $\boxed{n-1}$ (which is $0$ for $n=1$).</p>
@@ -575,7 +578,7 @@ $\angle AIB=90^\circ+\frac C2\ne90^\circ$.)</p><p><em>The homothety.</em> Let $h
 $C'C$ to the parallel line through $D$, which is $DE$, and maps the line $BC$ to itself; hence it maps $C=C'C\cap BC$ to $DE\cap BC=E$. So $h$
 maps triangle $BC'C$ to triangle $BDE$ and the circle $\omega=(BC'C)$ to the circle $(BDE)$.</p><p>A homothety with centre $B$ maps the tangent to $\omega$ at $B$ (a line through $B$) to itself, and this line is the tangent at $B=h(B)$ to the
 image circle. So $(BDE)$ and $(BIC)$ have the same tangent at their common point $B$, i.e. they are tangent at $B$. (Here $h$ has negative
-ratio, so the tangency is external: $C'$ lies beyond $B$, while $D$ lies inside segment $AB$ because
+ratio, so the tangency is external: $C'$ lies beyond $B$, while $D$ lies on ray $AB$, since $\angle BAI=\frac A2&lt;90^\circ$, and inside segment $AB$ because
 $\angle AID=90^\circ&lt;90^\circ+\frac C2=\angle AIB$.)</p>
 </div></details>
 </section>
@@ -592,8 +595,8 @@ $a\ge1$, $d\ge0$, $n\ge2$. Let $U=\{x_1,\dots,x_n\}$ and $V=\{x_{n+1},\dots,x_{2
 $\mathcal R=\prod_{x\in V}x$, so $\mathcal L=\mathcal R+7$.</p><p><em>Parity.</em> If $d$ is even, all terms have the same parity: if all are odd, $\mathcal L$ is odd and $\mathcal R+7$ is even; if all are even,
 $\mathcal L$ is even and $\mathcal R+7$ is odd. So $d$ is odd and the terms alternate in parity; the even-indexed terms
 $E=\{t_0,t_2,\dots,t_{2n-2}\}$ have one parity and the odd-indexed terms $O=\{t_1,\dots,t_{2n-1}\}$ the other. If $U$ contains an even number,
-$\mathcal L$ is even, so $\mathcal R$ is odd and $V$ consists of odd numbers; otherwise $U$ consists of odd numbers. In both cases one of
-$U,V$ is the set of odd terms and the other the set of even terms, so $\{U,V\}=\{E,O\}$.</p><p><em>A simple estimate.</em> If $x_k\ge y_k&gt;0$ for $k=1,\dots,n$, then
+$\mathcal L$ is even, so $\mathcal R$ is odd and $V$ consists of odd numbers; otherwise $U$ consists of odd numbers. Since $d$ is odd, exactly $n$ of the
+$2n$ terms are odd, so in both cases one of $U,V$ is the set of odd terms and the other the set of even terms, so $\{U,V\}=\{E,O\}$.</p><p><em>A simple estimate.</em> If $x_k\ge y_k&gt;0$ for $k=1,\dots,n$, then
 \[\prod x_k-\prod y_k=(x_1-y_1)\,x_2\cdots x_n+y_1\Bigl(x_2\cdots x_n-y_2\cdots y_n\Bigr)\ge(x_1-y_1)\,x_2\cdots x_n.\qquad(*)\]</p><p><em>Case $U=O$, $V=E$.</em> Pair $t_{2j+1}+2=t_{2j}+d+2$ with $t_{2j}$. By $(*)$,
 $\mathcal L-\mathcal R\ge(d+2)(t_3+2)\ge3\cdot(1+3+2)=18&gt;7$. Impossible.</p><p><em>Case $U=E$, $V=O$.</em> Pair $t_{2j}+2$ with $t_{2j+1}=t_{2j}+d$. If $d\ge3$, each factor of $\mathcal L$ is smaller than the corresponding
 factor of $\mathcal R$, so $\mathcal L&lt;\mathcal R$, impossible. So $d=1$, $\mathcal L=\prod_{j=1}^n(a+2j)$, $\mathcal R=\prod_{j=1}^n(a+2j-1)$.
@@ -663,7 +666,7 @@ and $E_2$ the number of $i$ with $a_i=a_{i+2}$. Cut $a_1\dots a_k$ into $t$ maxi
 zeros and runs of ones alternate. Then $E_1=\sum(r_j-1)=k-t$. Pairs $a_i=a_{i+2}$ arise inside a run of length $r\ge3$ ($r-2$ pairs) and
 around every inner run of length $1$ (its two neighbours belong to runs of the same digit). Hence
 \[Z-(k-1)=z+E_2-t+1\ge1-t+\sum_{\text{zero runs}}w_j,\]
-where for a zero run of length $r$ we put $w_j=r+\max(r-2,0)+[\,r=1\text{ and the run is inner}\,]$ (we dropped the non-negative contributions
+where for a zero run of length $r$ we put $w_j=r+\max(r-2,0)+[\,r=1\text{ and the run is inner}\,]$, the bracket being $1$ if the condition holds and $0$ otherwise (we dropped the non-negative contributions
 of the runs of ones to $E_2$). Every zero run has $w_j\ge2$, except an end run of length $1$, which has $w_j=1$. Let $t_0$ be the number of zero
 runs. If both end runs are runs of ones, then $t=2t_0+1$ and all zero runs are inner, so $\sum w_j\ge2t_0=t-1$. If both end runs are zero runs,
 then $t=2t_0-1$ and $\sum w_j\ge2t_0-2=t-1$. Otherwise $t=2t_0$ and at most one zero run is an end run, so $\sum w_j\ge2t_0-1=t-1$. In all cases
@@ -716,7 +719,7 @@ and $P(t)=(t-x)(t-y)(t-z)(t-w)$ for some real $w$. Let $s=x+y+z$, $q=xy+yz+zx$. 
 <em>If $e_3\ne0$:</em> the last relation gives $w=-1$.
 <em>If $e_3=0$:</em> one of the numbers, say $x$, is $0$ (the others are then non-zero), and $P(t)=t(t^3-3t^2-k)$, so $y,z,w$ are the roots of
 $t^3-3t^2-k$ and $yzw=k$. The first given expression is $0-0-yz=k$, so $yzw=-yz$ and again $w=-1$.</p><p>In both cases $w=-1$, so $s=4$ and $q=-ws=4$. Then $x^2-4x-yz=x^2-sx-yz=-q=\boxed{-4}$. (In the case $e_3=0$ this would force
-$y+z=4$, $yz=q-x(y+z)=4$, so $y=z=2$, which is excluded; so in fact $e_3\ne0$.) The value is attained: for $x=1$, $y,z=\frac{3\pm\sqrt5}2$ (the roots of $(t-1)(t^2-3t+1)$) all three expressions equal $-3$.</p>
+$y+z=4$, $yz=q-x(y+z)=4$, so $y=z=2$, which is excluded; so in fact $e_3\ne0$.) The value is attained: for $x=1$, $y,z=\frac{3\pm\sqrt5}2$ (the roots of $(t-1)(t^2-3t+1)$) all three expressions equal $-3$: here $yz=1$, $y+z=3$, $y^2=3y-1$ and $y^3=8y-3$, so $y^3-3y^2-zx=-y-z=-3$, the same holds for $z$, and $x^3-3x^2-yz=1-3-1=-3$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p22">
@@ -840,7 +843,9 @@ and the fourth cell is next to the corner, in row $\varrho$. In both cases the p
 $\varrho$ and $1$ cell in rows of the other parity.</p><p>Let the board have $u$ odd-numbered rows and $w$ even-numbered rows. Count the cells in odd-numbered rows: there are $un$ of them, and each piece
 contributes $3$ if its cross is in an odd row and $1$ otherwise. There are $us$ crosses in odd rows and $ws$ in even rows, so
 \[un=3us+ws=\frac{(3u+w)n}4,\]
-which gives $u=w$. Hence $m=u+w$ is even.</p><p><em>Construction.</em> A $2\times4$ rectangle is cut into two pieces as in the figure, with one cross in each row. If $m$ is even and $4\mid n$, cut
+which gives $u=w$. Hence $m=u+w$ is even.</p><p><em>Construction.</em> A $2\times4$ rectangle is cut into two pieces as in the figure: numbering its rows from the top and its columns from the left, one
+piece is $(2,1),(2,2),(2,3),(1,1)$ with its cross at $(2,1)$, and the other is its half-turn image $(1,4),(1,3),(1,2),(2,4)$ with its cross at
+$(1,4)$. So each row of the rectangle has one cross. If $m$ is even and $4\mid n$, cut
 the board into $\frac m2\cdot\frac n4$ such rectangles; then every row contains $\frac n4$ crosses.</p><p>So the answer is: <strong>all pairs with $m$ even and $4\mid n$</strong>.</p>
 </div></details>
 </section>
@@ -858,7 +863,8 @@ direction from $B$ to $A$; $E$ lies on it between $D$ and $F$, and $E$ is an int
 $\frac{CM}{\sin\angle CAM}=\frac{AM}{\sin C}$; as $BM=CM$, $\frac{\sin\angle BAM}{\sin\angle CAM}=\frac{\sin B}{\sin C}$. Hence, by the law of sines in
 triangle $AED$,
 \[ED=AE\cdot\frac{\sin\angle EAD}{\sin\angle ADE}=AE\cdot\frac{\sin B}{\sin C}.\]</p><p><em>The point $T$.</em> Let $t$ be the tangent to $\Gamma$ at $A$. On the side of line $AC$ away from $B$, the line $t$ makes with $AC$ the angle
-$B$ (tangent&ndash;chord angle). The ray from $E$ beyond $E$ (direction from $B$ to $A$) makes with ray $EA$ the angle $A$. Since $A+B&lt;180^\circ$,
+$B$ (tangent&ndash;chord angle). The ray from $E$ in the direction from $B$ to $A$ (the continuation of ray $DE$ beyond $E$) makes with ray $EA$ the angle $A$. Both rays
+point into the half-plane of line $AC$ not containing $B$, and $A+B&lt;180^\circ$, so
 these two rays meet at a point $T$, and in triangle $AET$ we have $\angle AET=A$, $\angle EAT=B$, $\angle ATE=C$. By the law of sines
 \[ET=AE\cdot\frac{\sin B}{\sin C}=ED.\]</p><p><em>Conclusion.</em> $E$ is inside $\Gamma$ (an interior point of the chord $AC$), and $T$ is outside $\Gamma$ (it lies on the tangent $t$ and
 $T\ne A$). So the segment $ET$ crosses $\Gamma$ at exactly one point, and this is the first point of the ray from $E$ (away from $D$) on
@@ -983,19 +989,20 @@ satisfy the equation: $f(x+y)\bigl(yf(x)+1\bigr)=\frac1{x+y+c}\cdot\frac{x+y+c}{
 <section class="ct-problem" id="p30">
 <h3>Problem 11.6</h3>
 <div class="ct-meta">Geometry &middot; LPS VII, Chapter 3: Foundational Angle and Configuration Chasing</div>
-<div class="ct-text"><p>Given an acute triangle $ABC$. Point $D$ is chosen on the line $AH$ (where $AH$ is an altitude) such that $\angle BDC=90^\circ$ and $D$ lies outside the triangle $ABC$. Point $F$ lies on the ray $DB$ such that $\angle FAC&gt;90^\circ$ and $FC$ is the angle bisector of angle $AFB$. Lines $AB$ and $CF$ intersect at $G$. Point $X$ on the ray $BF$ satisfies $GD=GX$.
+<div class="ct-text"><p>Given an acute triangle $ABC$. Point $D$ is chosen on the line $AH$ (where $AH$ is an altitude) such that $\angle BDC=90^\circ$ and $D$ lies outside the triangle $ABC$. Point $F$ lies on the ray $DB$ such that $\angle FAC&gt;90^\circ$ and $FC$ is the angle bisector of angle $AFB$. Lines $AB$ and $CF$ intersect at $G$. Point $X\ne F$ on the ray $BF$ satisfies $GD=GX$.
 Prove that the circumcircles of triangles $CDF$, $FXG$ and $AHC$ have a common point.</p></div>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
 <h4>Solution 1 (The foot of the perpendicular from C to AF)</h4>
 <div class="ct-fig"><img style="width:272px" src="/assets/contests/2026-27/belarus-mo-30_s1.svg" alt="Figure for the solution"></div>
 <p>We use directed angles $\angle(\ell_1,\ell_2)$ between lines, modulo $180^\circ$.</p><p><em>Two circles with diameters.</em> Since $\angle AHC=90^\circ$, the circle $(AHC)$ has diameter $AC$. Since $F$ lies on line $DB$ and
-$\angle CDB=90^\circ$, the circle $(CDF)$ has diameter $CF$.</p><p><em>The common point.</em> Let $P$ be the foot of the perpendicular from $C$ to the line $AF$. Then $\angle APC=\angle FPC=90^\circ$ (if $P$
-coincides with $A$ or $F$, the corresponding statement is trivial), so $P$ lies on both circles. We show that $P$ lies on $(FXG)$.</p><p><em>Position of $F$.</em> Let $\pi$ be the line through $A$ perpendicular to $AC$. The points $B$ and $D$ lie on the same side of $\pi$ as $C$
-(the triangle is acute, so $\angle BAC&lt;90^\circ$. The points $Z$ of line $AH$ with $\angle BZC=90^\circ$ lie on the circle with diameter
+$\angle CDB=90^\circ$, the circle $(CDF)$ has diameter $CF$.</p><p><em>The common point.</em> Let $P$ be the foot of the perpendicular from $C$ to the line $AF$. Then $P\ne A$ (as $\angle FAC\ne90^\circ$) and $P\ne F$ (as
+$\angle AFC=\frac12\angle AFB&lt;90^\circ$), so $\angle APC=\angle FPC=90^\circ$ and $P$ lies on both circles. We show that $P$ lies on $(FXG)$.
+This circle exists only when $F,X,G$ form a triangle, so the statement tacitly assumes $X\ne F$ (see the remark at the end).</p><p><em>Position of $F$.</em> The points $Z$ of line $AH$ with $\angle BZC=90^\circ$ lie on the circle with diameter
 $BC$, which meets line $AH$ at two points on opposite sides of $BC$, since $H$ is inside it. As $\angle BAC&lt;90^\circ$, $A$ is outside this
 circle, so the intersection point on $A$'s side lies on segment $AH$, inside the triangle. Hence $D$ is the other point, on the ray from $A$
-through $H$ beyond $H$, and this ray makes the acute angle $\angle HAC=90^\circ-C$ with $AC$.). The condition $\angle FAC&gt;90^\circ$ says that $F$
-lies on the other side of $\pi$. So $F$ lies on ray $DB$ beyond $B$; in particular $D$ and $X$ lie on different sides of $B$ on this line, so
+through $H$ beyond $H$. Let $\pi$ be the line through $A$ perpendicular to $AC$. The rays $AB$ and $AD$ make the acute angles
+$\angle BAC$ and $\angle HAC=90^\circ-C$ with $AC$, so $B$ and $D$ lie on the same side of $\pi$ as $C$. The condition $\angle FAC&gt;90^\circ$ says
+that $F$ lies on the other side of $\pi$. So $F$ lies on ray $DB$ beyond $B$; in particular $D$ and $X$ lie on different sides of $B$ on this line, so
 $X\ne D$.</p><p><em>A reflection.</em> The line $CD$ is perpendicular to $DB=FB$, so $D$ is the foot of the perpendicular from $C$ to line $FB$. Let $\sigma$ be the
 reflection in the line $FC$, the bisector of $\angle AFB$. It fixes $F$, $C$ and $G\in FC$ and maps line $FB$ to line $FA$; hence it maps $D$, the
 foot of the perpendicular from $C$ to $FB$, to the foot of the perpendicular from $C$ to $FA$, which is $P$. Consequently $GP=GD=GX$, and since a
@@ -1003,14 +1010,18 @@ reflection reverses directed angles,
 \[\angle(PG,PF)=-\angle(DG,DF).\]</p><p><em>Concyclicity.</em> The points $X,D,F$ are collinear and $X\ne D$. Triangle $GDX$ is isosceles with $GD=GX$, so its base angles satisfy
 $\angle(XG,XD)=-\angle(DG,DX)$. Therefore
 \[\angle(XG,XF)=\angle(XG,XD)=-\angle(DG,DX)=-\angle(DG,DF)=\angle(PG,PF),\]
-so $X,P,G,F$ are concyclic. (If $P$ coincides with $X$ or $G$, it lies on $(FXG)$ trivially. The circle $(FXG)$ exists only when $F,X,G$
-form a triangle, so the statement tacitly assumes $X\ne F$, and we use this in the computation. The assumption is a real restriction: for
+so $X,P,G,F$ are concyclic. (If $P$ coincides with $X$ or $G$, it lies on $(FXG)$ trivially. The assumption $X\ne F$, used in this
+computation, is a real restriction: for
 $BH=1$, $HC=\frac45$, $AH=\frac{\sqrt5}2$ the point $F$ on ray $DB$ with $DF=2\,DB$ satisfies all the conditions, and then $X=F$.)</p><p>Hence $P$ lies on the circumcircles of $CDF$, $AHC$ and $FXG$.</p>
 <h4>Solution 2 (The arc midpoint of XP)</h4>
 <p><em>The point $P$.</em> Since $\angle AHC=90^\circ$, the circle $(AHC)$ has diameter $AC$; since $F$ lies on line $DB$ and
 $\angle CDB=90^\circ$, the circle $(CDF)$ has diameter $CF$. Let $P$ be the foot of the perpendicular from $C$ to line $AF$. Then $P\ne A$
 (as $\angle FAC\ne90^\circ$), and $P\ne F$ (as $\angle AFC=\frac12\angle AFB&lt;90^\circ$), so $\angle APC=\angle FPC=90^\circ$ and $P$ lies on both
-circles. It remains to show that $P$ lies on $(FXG)$.</p><p><em>Position of $X$.</em> As shown in Solution&nbsp;1, $D$ lies on the ray from $A$ through $H$ beyond $H$, and $F$ lies on ray $DB$ beyond $B$.
+circles. It remains to show that $P$ lies on $(FXG)$.</p><p><em>Position of $X$.</em> The circle with diameter $BC$ contains every point $Z$ of line $AH$ with $\angle BZC=90^\circ$; it meets line $AH$ at
+two points on opposite sides of $BC$ (as $H$ is inside it), and $A$ is outside it (as $\angle BAC&lt;90^\circ$). So the point on $A$'s side lies
+inside segment $AH$, and $D$, being outside the triangle, is the other one, beyond $H$ on ray $AH$. Let $\pi$ be the line through $A$
+perpendicular to $AC$. The rays $AB$ and $AD$ make acute angles with $AC$, so $B$ and $D$ lie on the same side of $\pi$ as $C$, while
+$\angle FAC&gt;90^\circ$ puts $F$ on the other side. As $F$ lies on ray $DB$, it lies beyond $B$.
 Since $X$ lies on ray $BF$, the points $D$ and $X$ are on different sides of $B$ on line $FB$; in particular $X\ne D$. Also $X\ne F$, because
 $F,X,G$ form a triangle.</p><p><em>A reflection.</em> The line $CD$ is perpendicular to line $FB$, so $D$ is the foot of the perpendicular from $C$ to $FB$. The reflection in
 line $FC$, the bisector of $\angle AFB$, fixes $F$, $C$ and $G\in FC$ and swaps the lines $FB$ and $FA$, so it maps $D$ to the foot of the
@@ -1078,18 +1089,35 @@ Since $p\nmid n$, the divisors of $np$ are the numbers $d$ and $dp$ with $d\mid 
 and every term is divisible by $2^p$. As $n&gt;1$ and $np&gt;1$, $P(n)+P(np)$ is the number of $n$-starred plus $np$-starred numbers, which is
 therefore divisible by $2^p$.</p>
 <h4>Solution 2 (Induction without Moebius)</h4>
-<p>This solution replaces only the counting step; it uses the Lemma proved in Solution&nbsp;1 (starred numbers = primitive words). By that
-Lemma, for $k\ge2$ the number of $k$-starred numbers equals the number $P(k)$ of primitive binary
-words of length $k$, and $\sum_{d\mid k}P(d)=2^k$ for every $k\ge1$ (each word is a power of a unique primitive word).</p><p><em>Claim: $2^p\mid P(e)+P(ep)$ for every positive integer $e$ with $p\nmid e$.</em> We use strong induction on $e$. The divisors of $ep$ are the
+<p>For $1\le l&lt;2^k$ let $w(l)$ be the binary word of $l$ of length $k$ (with leading zeros). A word is <em>primitive</em> if it is not $v^{k/d}$
+(a word $v$ of length $d$ written $k/d$ times) for some $d\mid k$, $d&lt;k$.</p><p><strong>Lemma 1.</strong> $l$ is $k$-starred if and only if $w(l)$ is primitive.</p><p><em>Proof.</em> If $w(l)=v^{k/d}$ with $d&lt;k$, and $v$ also denotes the value of the word $v$, then $l=v\,(1+2^d+\dots+2^{k-d})=v\cdot\frac{2^k-1}{2^d-1}$
+with $v&lt;2^d$, so $l\bmod 2^d=v=\frac{2^d-1}{2^k-1}\,l$ and $l$ is not starred ($m=d$). Conversely, suppose $r=l\bmod2^m$ equals
+$\frac{2^m-1}{2^k-1}\,l$ for some $m&lt;k$, so that $l(2^m-1)=r(2^k-1)$. Let $g=\gcd(m,k)$. Since $2^a-1\equiv2^{a-b}-1\pmod{2^b-1}$ for $a\ge b$, the
+Euclidean algorithm gives $\gcd(2^m-1,2^k-1)=2^g-1$; so $A=\frac{2^k-1}{2^g-1}$ and $B=\frac{2^m-1}{2^g-1}$ are coprime integers with $lB=rA$, and
+$A\mid l$. Write $l=vA$; then $1\le v\le\frac{2^k-1}{A}=2^g-1$, and $l=v\,(1+2^g+\dots+2^{k-g})$ shows $w(l)=u^{k/g}$, where $u$ is the $g$-digit
+word of $v$. As $g\le m&lt;k$, $w(l)$ is not primitive. $\square$</p><p><strong>Lemma 2.</strong> Every word $w$ of length $k$ equals $v^{k/d}$ for exactly one primitive word $v$ (its <em>root</em>), and $d\mid k$.</p><p><em>Proof.</em> Take $v$ shortest with $w$ a power of $v$; it is primitive, since $v=u^j$ with $j&gt;1$ would make $w$ a power of the shorter $u$. If also
+$w=u^{k/e}$ with $u$ primitive, the infinite word $s=www\dots$ has periods $d$ and $e$, hence period $h=\gcd(d,e)$: with positive integers
+$\alpha,\beta$ such that $\alpha d-\beta e=h$, we get $s_{i+h}=s_{i+h+\beta e}=s_{i+\alpha d}=s_i$. So $v$ is its first $h$ letters repeated, and $v$
+primitive forces $h=d$; likewise $h=e$. Hence $d=e$ and $u=v$. $\square$</p><p>Let $P(k)$ be the number of primitive binary words of length $k$. For $k\ge2$ the zero word is not primitive, so by Lemma 1 the number of
+$k$-starred numbers is $P(k)$; and by Lemma 2, counting words of length $k$ by the length of their root, $\sum_{d\mid k}P(d)=2^k$.</p><p><em>Claim: $2^p\mid P(e)+P(ep)$ for every positive integer $e$ with $p\nmid e$.</em> We use strong induction on $e$. The divisors of $ep$ are the
 $d$ and $dp$ with $d\mid e$, so
 \[2^{ep}=\sum_{d\mid ep}P(d)=\sum_{d\mid e}\bigl(P(d)+P(dp)\bigr),\qquad\text{hence}\qquad P(e)+P(ep)=2^{ep}-\sum_{d\mid e,\ d&lt;e}\bigl(P(d)+P(dp)\bigr).\]
 Every $d\mid e$ is not divisible by $p$, so by the induction hypothesis each term of the last sum is divisible by $2^p$ (for $e=1$ the sum is
 empty), and so is $2^{ep}$. This proves the claim.</p><p>Applying the claim with $e=n$ ($n&gt;1$, $p\nmid n$) shows that the number of $n$-starred and $np$-starred numbers combined, $P(n)+P(np)$, is
 divisible by $2^p$.</p>
 <h4>Solution 3 (Adding a constant to every block)</h4>
-<p>This solution uses the Lemma of Solution&nbsp;1 and the fact proved there that every binary word $w$ of length $k$ equals $v^{k/d}$ for
-exactly one primitive word $v$ (the <em>root</em> of $w$), whose length $d$ divides $k$. Let $P(k)$ be the number of primitive binary words of
-length $k$; for $k\ge2$ it is the number of $k$-starred numbers. For $d\mid k$, the map $v\mapsto v^{k/d}$ is a bijection from the primitive
+<p>For $1\le l&lt;2^k$ let $w(l)$ be the binary word of $l$ of length $k$ (with leading zeros). A word is <em>primitive</em> if it is not $v^{k/d}$
+(a word $v$ of length $d$ written $k/d$ times) for some $d\mid k$, $d&lt;k$.</p><p><strong>Lemma 1.</strong> $l$ is $k$-starred if and only if $w(l)$ is primitive.</p><p><em>Proof.</em> If $w(l)=v^{k/d}$ with $d&lt;k$, and $v$ also denotes the value of the word $v$, then $l=v\,(1+2^d+\dots+2^{k-d})=v\cdot\frac{2^k-1}{2^d-1}$
+with $v&lt;2^d$, so $l\bmod 2^d=v=\frac{2^d-1}{2^k-1}\,l$ and $l$ is not starred ($m=d$). Conversely, suppose $r=l\bmod2^m$ equals
+$\frac{2^m-1}{2^k-1}\,l$ for some $m&lt;k$, so that $l(2^m-1)=r(2^k-1)$. Let $g=\gcd(m,k)$. Since $2^a-1\equiv2^{a-b}-1\pmod{2^b-1}$ for $a\ge b$, the
+Euclidean algorithm gives $\gcd(2^m-1,2^k-1)=2^g-1$; so $A=\frac{2^k-1}{2^g-1}$ and $B=\frac{2^m-1}{2^g-1}$ are coprime integers with $lB=rA$, and
+$A\mid l$. Write $l=vA$; then $1\le v\le\frac{2^k-1}{A}=2^g-1$, and $l=v\,(1+2^g+\dots+2^{k-g})$ shows $w(l)=u^{k/g}$, where $u$ is the $g$-digit
+word of $v$. As $g\le m&lt;k$, $w(l)$ is not primitive. $\square$</p><p><strong>Lemma 2.</strong> Every word $w$ of length $k$ equals $v^{k/d}$ for exactly one primitive word $v$ (its <em>root</em>), and $d\mid k$.</p><p><em>Proof.</em> Take $v$ shortest with $w$ a power of $v$; it is primitive, since $v=u^j$ with $j&gt;1$ would make $w$ a power of the shorter $u$. If also
+$w=u^{k/e}$ with $u$ primitive, the infinite word $s=www\dots$ has periods $d$ and $e$, hence period $h=\gcd(d,e)$: with positive integers
+$\alpha,\beta$ such that $\alpha d-\beta e=h$, we get $s_{i+h}=s_{i+h+\beta e}=s_{i+\alpha d}=s_i$. So $v$ is its first $h$ letters repeated, and $v$
+primitive forces $h=d$; likewise $h=e$. Hence $d=e$ and $u=v$. $\square$</p><p>Let $P(k)$ be the number of primitive binary words of length $k$. For $k\ge2$ the zero word is not primitive, so by Lemma 1 the number of
+$k$-starred numbers is $P(k)$; and by Lemma 2, counting words of length $k$ by the length of their root, $\sum_{d\mid k}P(d)=2^k$.
+For $d\mid k$, the map $v\mapsto v^{k/d}$ is a bijection from the primitive
 words of length $d$ onto the words of length $k$ whose root has length $d$, so there are $P(d)$ such words.</p><p><em>Roots and powers.</em> If $w=v^{k/\ell}$ for a word $v$ of length $\ell$, then the root of $v$ is also a root of $w$, so its length is $d$ and
 $d\mid\ell$. Conversely, if $d\mid\ell\mid k$, then $w=\bigl(r^{\ell/d}\bigr)^{k/\ell}$, where $r$ is the root. So $w$ is a power of a word of
 length $\ell$ exactly when $d\mid\ell$.</p><p><em>Block words.</em> Let $\Sigma$ be the set of the $2^p$ binary words of length $p$, identified with the residues modulo $2^p$ by their values. A

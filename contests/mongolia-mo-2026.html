@@ -89,7 +89,8 @@ integer $a_1$. Hence $q=1$, that is, $\frac{a_2}{a_1}$ is an integer.</p>
 <h4>Solution 2 (Powers of a prime drop at every step)</h4>
 <p>Write $r=\frac{a_2}{a_1}$ and suppose $r$ is not an integer. Then there is a prime $\ell$ that divides the denominator of $r$ in
 lowest terms. For a nonzero rational number $x$, let $v(x)$ be the exponent of $\ell$ in $x$ (so $x=\ell^{v(x)}\frac{u}{w}$ with $u,w$ integers
-not divisible by $\ell$). Then $v(xy)=v(x)+v(y)$, and if $v(x)\ne v(y)$ then $v(x-y)=\min(v(x),v(y))$. Also $v(x)\ge 0$ for every nonzero
+not divisible by $\ell$). Then $v(xy)=v(x)+v(y)$, and if $v(x)\ne v(y)$ then $v(x-y)=\min(v(x),v(y))$: for $v(x)&lt;v(y)$, write $x=\ell^{v(x)}\frac uw$ and
+$y=\ell^{v(x)}\cdot\ell^{j}\frac{u'}{w'}$ with $j\ge1$; then $x-y=\ell^{v(x)}\frac{uw'-\ell^ju'w}{ww'}$, and $\ell$ divides neither $uw'-\ell^ju'w$ nor $ww'$. Also $v(x)\ge 0$ for every nonzero
 integer $x$. Put $e=-v(r)\ge 1$.</p><p><em>Claim.</em> $v(a_{n+1})=v(a_n)-e$ for every $n\ge1$.</p><p>For $n=1$, $a_2=ra_1$ gives $v(a_2)=v(a_1)-e$. Suppose $v(a_n)=v(a_{n-1})-e$ for some $n\ge2$. Then
 \[
 v(ra_n)=v(a_n)-e&lt;v(a_n)+e=v(a_{n-1}),
@@ -167,7 +168,7 @@ edges. Take $11$ copies of $W_4$ and one copy of $W_6$: $11\cdot5+7=62$ islands 
 $3$ and the hubs have degrees $4$ and $6$. Each rim edge forms a triangle with the hub, and each spoke forms a triangle with a rim edge at its
 end. Four pairwise adjacent islands would lie in one wheel and contain at least three rim vertices, which would form a triangle in the rim
 cycle of length $4$ or $6$; this is impossible. So all conditions hold.</p><p>The minimum number of bridges is $\boxed{100}$. (The statement does not require the bridges to connect all islands, and the example above is not
-connected; a connected network needs at least $101$ bridges, see the remark after Solution 2.)</p>
+connected.)</p>
 <h4>Solution 2 (Discharging along triangles)</h4>
 <p>Use the graph language: $62$ vertices, minimum degree $3$, every edge in a triangle, no $K_4$. Give every vertex $w$ the charge
 $\deg w-\frac{16}{5}$; the total charge is $2E-\frac{16\cdot 62}{5}$. We move charge without changing the total and show that all final
@@ -183,7 +184,7 @@ and one wheel $W_6$ (a $6$-cycle plus a hub) gives $55+7=62$ islands and $88+12=
 $3$, every edge is a rim edge or a spoke and lies in a triangle with the hub or with a rim edge, and four pairwise adjacent vertices would have to
 include three rim vertices of one wheel forming a triangle, which a $4$-cycle or $6$-cycle does not contain.</p><p>So the minimum is $\boxed{100}$.</p><p><em>Remark (connected networks).</em> The statement does not require the network to be connected. If it had to be, at least $101$ bridges would be
 needed. In the rule above, a vertex $w$ of degree $4$ gives at most $\frac35$ unless its component is a $W_4$ with hub $w$. Indeed, the graph induced
-on $N(w)$ is triangle-free (a triangle together with $w$ would be a $K_4$). If $w$ is the middle neighbour of three neighbours $v_1,v_2,v_3$, each
+on $N(w)$ is triangle-free (a triangle together with $w$ would be a $K_4$). If $w$ is the middle neighbour of at least three of its neighbours, say $v_1,v_2,v_3$, each
 $v_i$ has degree $3$ and two neighbours in $N(w)$; a triangle-free graph on four vertices in which three vertices have degree $2$ is a $4$-cycle, so
 the fourth neighbour $v_4$ also has two neighbours in $N(w)$; if $\deg v_4=3$ the component is a $W_4$, and otherwise $v_4$ receives nothing from
 $w$, so $w$ gives $\frac35$. If $w$ is the middle neighbour of at most two of them, it gives at most $\frac25+2\cdot\frac1{10}=\frac35$. Now let a
@@ -230,7 +231,9 @@ Line $AB$ meets $\Gamma_1$ at $F$ and $B$, and line $AC$ meets $\Gamma_2$ at $E$
 $\operatorname{pow}_{\Gamma_1}(A)=AF\cdot AB=AE\cdot AC=\operatorname{pow}_{\Gamma_2}(A)$. Line $BK$ passes through $D$ and meets both $\Gamma_1$ and
 $\omega$ at $B$ and $K$, so $\operatorname{pow}_{\Gamma_1}(D)=\operatorname{pow}_\omega(D)$; similarly, using line $CL$,
 $\operatorname{pow}_{\Gamma_2}(D)=\operatorname{pow}_\omega(D)$. Hence $A$ and $D$ have equal powers with respect to $\Gamma_1,\Gamma_2$ and lie
-on their radical axis. As $A\notin EF$, $A\ne D$, so line $XY$ is the line $AD$; call it $\ell$.</p><p><em>Step 2: a cyclic quadrilateral.</em> Let $P$ be the second intersection of $\ell$ with $\omega$. Using directed angles between lines
+on their radical axis. As $A\notin EF$, $A\ne D$, so line $XY$ is the line $AD$; call it $\ell$.</p><p><em>Step 2: a cyclic quadrilateral.</em> First, $D\ne F$: otherwise line $BD$ is $AB$, so $K=A$ and $B,F,K$ are collinear, and the circle $BFK$
+would not exist. Likewise $D\ne E$. So $D$ is an interior point of segment $EF$, hence inside $\omega$, and $\ell$ meets $\omega$ at $A$ and at a second
+point $P$ with $D$ between $A$ and $P$; moreover $P\ne B,C$, because $\ell$ is neither $AB$ nor $AC$. Using directed angles between lines
 (modulo $180^\circ$),
 \[
 \measuredangle BPD=\measuredangle BPA=\measuredangle BCA=\measuredangle BCE=\measuredangle BFE=\measuredangle BFD,
@@ -332,9 +335,9 @@ $\bigl(f(a^2)-f(a)^2\bigr)f(b)$ is bounded as $b$ varies; since $f(b)$ takes all
 \[
 \bigl(nm+c_n(m)\bigr)^2=f(f(n)f(m))^2=f\bigl(f(n)^2f(m)^2\bigr)=f\bigl(f(n^2)f(m^2)\bigr)=n^2m^2+c_{n^2}(m^2),
 \]
-so $2nm\,c_n(m)+c_n(m)^2=c_{n^2}(m^2)$. Fix $n$ and a residue $r$ modulo $n$, and let $m$ run through $m\equiv r\pmod n$. Then $c_n(m)=c_n(r)=:\gamma$ is
+so $2nm\,c_n(m)+c_n(m)^2=c_{n^2}(m^2)$. Fix $n$ and $r\in\{1,\dots,n\}$, and let $m$ run through $m\equiv r\pmod n$ (every residue class has such a representative $r$, with $r=n$ for the class of $0$). Then $c_n(m)=c_n(r)=:\gamma$ is
 constant and the right side stays bounded by $K_{n^2}$, while the left side is $2nm\gamma+\gamma^2$. Letting $m\to\infty$ forces $\gamma=0$. Thus
-$c_n\equiv0$, i.e. $f(f(n)f(m))=nm$; with $n=f(a)$, $m=f(b)$ this is $f(ab)=f(a)f(b)$.</p><p><em>Conclusion.</em> If $p$ is prime and $f(p)=uv$ with $u,v&gt;1$, then $p=f(u)f(v)$ with both factors larger than $1$; so $f$ maps primes to primes.
+$c_n\equiv0$, i.e. $f(f(n)f(m))=nm$; with $n=f(a)$, $m=f(b)$ this is $f(ab)=f(a)f(b)$.</p><p><em>Conclusion.</em> If $p$ is prime, then $f(p)\ne1$, since $f(1)=1$ and $f$ is injective. If $f(p)=uv$ with $u,v&gt;1$, then $p=f(u)f(v)$ with both factors larger than $1$; so $f$ maps primes to primes.
 If $p$ is among the first $2026$ primes and $f(p)&lt;p$, then $q=f(p)$ is also among them and $f(q)=p&gt;q$; pairing $p$ with $q$ shows that at most
 half of the $2026$ primes, i.e. at most $1013$, satisfy $f(p)&lt;p$. Conversely the completely multiplicative $f$ that swaps the $(2i-1)$-th and
 $(2i)$-th primes for $i\le 1013$ and fixes all other primes satisfies $f(1)=1$, $f(f(n))=n$ and

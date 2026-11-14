@@ -213,10 +213,11 @@ the row.</p></li></ul><p>Hence the largest possible value is
 <p>Let $m=4n+1$, and let cell $(x,y)$ be the unit square $[x,x+1]\times[y,y+1]$.</p><p><strong>The boundary is a simple polygon.</strong> The statement treats the boundary of the red shape as a polygon; we check that it is a single
 closed curve without self-contact, so that the angle sum of a polygon applies.</p><ul class="ct-ul"><li><p>There are no holes: a hole would be a set of white cells enclosed by red cells, and these could not be joined to the white cells far
 away, against the connectedness of $W$. As $R$ is connected, the boundary is a single closed curve.</p></li><li><p>There is no <em>pinch</em>, that is, a grid vertex $v$ where two red cells $U,V$ meet only at $v$ and the other two cells $U',V'$ at $v$
-are white. Suppose there were. Join the centres of a chain of red cells from $U$ to $V$ (consecutive cells sharing an edge) by segments, and
-close it by the two half-diagonals from the centres of $U$ and $V$ to $v$. Every piece of this closed curve lies inside red cells and meets
+are white. Suppose there were. Join the centres of a shortest chain of red cells from $U$ to $V$ (consecutive cells sharing an edge; being shortest,
+it uses every cell at most once) by segments, and close it by the two half-diagonals from the centres of $U$ and $V$ to $v$. Every piece of this closed curve lies inside red cells and meets
 the grid lines only at midpoints of edges between two red cells or at $v$; so the curve does not cross itself. Near $v$ it is the diagonal
-through $v$, so the centres of $U'$ and $V'$ (on the other diagonal) lie on opposite sides of it, and by the Jordan curve theorem every path
+through $v$, so points of $U'$ and $V'$ close to $v$ lie on opposite sides of it; the curve does not enter the white cells $U',V'$, so
+their centres lie on opposite sides as well, and by the Jordan curve theorem every path
 from $U'$ to $V'$ meets the curve. But a chain of white cells from $U'$ to $V'$, joined through centres and edge midpoints, stays inside white
 cells and away from all grid vertices, so it misses the curve. This contradicts the connectedness of $W$.</p></li></ul><p><strong>Two counts.</strong> Let $c$ and $d$ be the numbers of vertices of the polygon with interior angle $90^\circ$ and $270^\circ$; so $k=c+d$.
 The angle sum gives $90^\circ c+270^\circ d=(c+d-2)\cdot180^\circ$, that is,
@@ -447,7 +448,7 @@ $a'$ is smaller than $b$. Since $2026$ and every rational $y$ can be brought to 
 then reverse the path from $y$ to $0$).</p><p><strong>Other $\alpha$ fail.</strong> Let $\alpha=\frac pq$ in lowest terms with $p\ge2$, and let $r$ be a prime factor of $p$. For a rational $x$ define
 $\rho(x)\in\{0,1,\dots,r-1,\infty\}$: if $x=\frac uv$ with $r\nmid v$, let $\rho(x)$ be the residue of $uv^{-1}$ modulo $r$ (it does not depend
 on the choice of $u,v$); if no such representation exists ($r$ divides the reduced denominator), let $\rho(x)=\infty$. Then:</p><ul class="ct-ul"><li><p>$\rho(x\pm\alpha)=\rho(x)$: if $x=\frac uv$ with $r\nmid v$, then $x\pm\alpha=\frac{uq\pm pv}{vq}$ with $r\nmid vq$ ($r\nmid q$ because $\gcd(p,q)=1$) and $(uq\pm pv)(vq)^{-1}\equiv
-uv^{-1}\pmod r$; if $r$ divides the reduced denominator of $x$, it still divides that of $x\pm\alpha$.</p></li><li><p>$\rho(1/x)=1/\rho(x)$, with the conventions $1/0=\infty$, $1/\infty=0$.</p></li></ul><p>Hence every reachable number has $\rho\in\{\rho(2026),1/\rho(2026)\}$, at most two values. But $\rho$ takes all $r+1\ge3$ values (on
+uv^{-1}\pmod r$; if $x=\frac uv$ in lowest terms with $r\mid v$, then $r\nmid u$ and $r\nmid q$, so $uq\pm pv\equiv uq\not\equiv0\pmod r$; thus no factor $r$ cancels from $\frac{uq\pm pv}{vq}$, and $r$ still divides the reduced denominator of $x\pm\alpha$.</p></li><li><p>$\rho(1/x)=1/\rho(x)$, with the conventions $1/0=\infty$, $1/\infty=0$.</p></li></ul><p>Hence every reachable number has $\rho\in\{\rho(2026),1/\rho(2026)\}$, at most two values. But $\rho$ takes all $r+1\ge3$ values (on
 $0,1,\dots,r-1$ and $\frac1r$), so some rationals are not reachable.</p><p>Therefore all rationals are reachable exactly for
 \[\boxed{\alpha=\tfrac1k,\quad k=1,2,3,\dots}\]</p>
 </div></details>

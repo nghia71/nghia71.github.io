@@ -99,12 +99,12 @@ $333$. Only the class $1$ has $334$ members, which explains at once why $a_1\equ
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Two special indices cannot both be large)</h4>
 <p><strong>Answer: no.</strong> Suppose such an $f$ exists. Let $S_n=f(1)+\dots+f(n)$. By (i) and (ii), $S_n=nc_n$ with an integer $1\le c_n\le n$.
-Call $n$ <em>special</em> if $S_n=n^2$, i.e. $c_n=n$; by (iii) there are infinitely many special $n$. Let $T_n=\frac{n(n+1)}2$.</p><p><em>(a) $c$ is non-decreasing.</em> We have $f(n)=nc_n-(n-1)c_{n-1}$. If $c_n\le c_{n-1}-1$, then $f(n)\le c_{n-1}-n\le -1$, since $c_{n-1}\le n-1$.</p><p><em>(b) Flat and steep steps.</em> With $\Delta_n=c_n-c_{n-1}\ge0$ we get $f(n)=c_{n-1}+n\Delta_n$. So either $\Delta_n=0$ and $f(n)=c_{n-1}$
+Call $n$ <em>special</em> if $S_n=n^2$, i.e. $c_n=n$; by (iii) there are infinitely many special $n$. Let $T_n=\frac{n(n+1)}2$.</p><p><em>(a) $c$ is non-decreasing.</em> For every $n\ge2$ we have $f(n)=nc_n-(n-1)c_{n-1}$. If $c_n\le c_{n-1}-1$, then $f(n)\le c_{n-1}-n\le -1$, since $c_{n-1}\le n-1$.</p><p><em>(b) Flat and steep steps.</em> For $n\ge2$, with $\Delta_n=c_n-c_{n-1}\ge0$ we get $f(n)=c_{n-1}+n\Delta_n$. So either $\Delta_n=0$ and $f(n)=c_{n-1}$
 (a <em>flat</em> step), or $f(n)\ge c_{n-1}+n$.</p><p><em>(c) No two consecutive flat steps:</em> otherwise $f(n)=c_{n-1}=c_n=f(n+1)$.</p><p><em>(d) If $N$ is special, then $\{f(1),\dots,f(N)\}=\{1,\dots,N-1\}\cup\{T_N\}$.</em> For $n&gt;N$ we have $c_{n-1}\ge c_N=N$, so $f(n)\ge N$ by (b).
 Thus each of $1,\dots,N-1$ is among $f(1),\dots,f(N)$, and the remaining value is $N^2-(1+\dots+(N-1))=T_N$.</p><p><em>(e) If $M\ge2$ is special, then $\{f(1),\dots,f(M-1)\}=\{1,\dots,M-1\}$.</em> Indeed $f(M)=M^2-(M-1)c_{M-1}\ge M^2-(M-1)^2=2M-1&gt;M-1$, so by (d)
 $f(M)=T_M$ and the other values are $1,\dots,M-1$.</p><p><em>(f) There are no special $N&lt;M$ with $N\ge3$.</em> Suppose there are. By (d) and (e), $T_N\in\{f(1),\dots,f(N)\}\subseteq\{1,\dots,M-1\}$, so
 $M-1\ge T_N\ge N+3$ (as $T_N-N-3=\frac{(N-3)(N+2)}2\ge0$). For $N&lt;n\le M-1$ we have $f(n)\le M-1$; if step $n$ were steep, (b) would give
-$f(n)\ge c_{n-1}+n\ge N+n$ (as $c_{n-1}\ge c_N=N$ for $n-1\ge N$), i.e. $n\le M-1-N$. Hence every step $n$ with $M-1-N&lt;n\le M-1$ is flat. Both $n=M-2$ and $n=M-1$ qualify (because
+$f(n)\ge c_{n-1}+n\ge N+n$ (as $c_{n-1}\ge c_N=N$ for $n-1\ge N$), i.e. $n\le M-1-N$. Hence every step $n$ with $N&lt;n\le M-1$ and $n&gt;M-1-N$ is flat. Both $n=M-2$ and $n=M-1$ qualify (because
 $N\ge2$ and $M-2&gt;N$), contradicting (c).</p><p>So at most one special number is $\ge3$, and there are only finitely many special numbers, contradicting (iii). No such bijection exists.</p>
 <h4>Solution 2 (One special index and a permutation lemma)</h4>
 <p>Suppose $f$ exists. Write $S_n=f(1)+\dots+f(n)$; by (i) and (ii), $S_n=nc_n$ with an integer $1\le c_n\le n$. Call $n$ <em>special</em>
@@ -144,9 +144,10 @@ an antichain $B$ of size $w'$ containing $x_j$; it meets $C_i$ in some $y\le x_i
 If $X\cup\{a\}$ is an antichain, then $w(Q)=w'+1$ and the chains $C_1,\dots,C_{w'},\{a\}$ split $Q$. Otherwise $a$ is comparable with some
 $x_i$, and $x_i&lt;a$ since $a$ is maximal. The set $K=\{a\}\cup\{z\in C_i: z\le x_i\}$ is a chain, and $Q\setminus K$ has no antichain of size
 $w'$: such an antichain would lie in $Q'$ and meet $C_i$ in an element above $x_i$, against the choice of $x_i$. By induction $Q\setminus K$ is
-split into at most $w'-1$ chains; with $K$ that is at most $w'\le w(Q)$ chains. $\square$ The answer is the maximum, over all placements, of $\min_\sigma w_\sigma$.</p><p><em>1519 friends always suffice.</em> Fix a placement and, for each of the four orders, a largest antichain $A_\sigma$. Two distinct points $p,q$
+split into at most $w'-1$ chains; with $K$ that is at most $w'\le w(Q)$ chains. $\square$ The answer is the maximum, over all placements, of $\min_\sigma w_\sigma$.</p><p><em>1519 friends always suffice.</em> Alfajores at the same point are collected together, so we work with the $N\le2026$ distinct positions
+(on distinct points each $\preceq_\sigma$ is a partial order). Fix a placement and, for each of the four orders, a largest antichain $A_\sigma$. Two distinct points $p,q$
 are comparable in some order: choose $\sigma_i$ as the sign of $q_i-p_i$ (with $+$ for $0$), after swapping $p,q$ if necessary so that
-$\sigma_1=+1$. Hence no two distinct points lie in all four antichains: at most one point is counted four times and each of the other $2025$ points at most
+$\sigma_1=+1$. Hence no two distinct points lie in all four antichains: at most one point is counted four times and each of the other $N-1\le2025$ points at most
 three times, so
 \[
 \sum_\sigma w_\sigma=\sum_\sigma|A_\sigma|\le 3\cdot2025+4=6079 .
@@ -320,8 +321,9 @@ $2p-m\le0$ and $2m-p&gt;m$); $\varphi(p)=p$ is excluded and $\varphi(p)=m$ is a 
 $n$ is at least $p$, so such a divisor is at least $p^2\ge2p$; hence $m$ is a prime $q&gt;p$, $n=pq$, and the list is $q,p,1,pq$. By (a),
 $q-p\mid p-1$ (from $q,p$ with images $p,1$) and $p-1\mid pq-1$ (from $p,1$ with images $1,pq$). As $pq-1=q(p-1)+(q-1)$, we get $p-1\mid q-1$,
 hence $p-1\mid(q-1)-(p-1)=q-p$. Two positive integers dividing each other are equal: $q-p=p-1$, so $q=2p-1$ and $n=p(2p-1)$.</p><p><em>Case B: $\varphi(m)=n$ and $\varphi(1)=p$.</em></p><ul class="ct-ul"><li><p><em>$d_1=1$.</em> If $\varphi(z)=1$ for a divisor $z\ne1$, then $z-1\mid\varphi(z)-\varphi(1)=1-p$, so $2\le z\le p$, hence $z=p$; then
-$\varphi(1)=p$, $\varphi(p)=1$ is a return.</p></li><li><p><em>Multiples of a divisor of $m$ form a final block.</em> Let $d\mid m$ and let $x\ne n$ be a divisor of $n$ that is a multiple of $d$. By
-(a), $x-m\mid P(x)-P(m)$, and $d\mid x-m$, so $d\mid\varphi(x)-n$; as $d\mid n$, also $d\mid\varphi(x)$. Thus after the first multiple of $d$
+$\varphi(1)=p$, $\varphi(p)=1$ is a return.</p></li><li><p><em>Multiples of a divisor of $m$ form a final block.</em> Let $d\mid m$ and let $x\ne n$ be a divisor of $n$ that is a multiple of $d$. If
+$x=m$, then $\varphi(x)=n$ is a multiple of $d$. Otherwise, by (a), $x-m\mid P(x)-P(m)$, and $d\mid x-m$, so $d\mid\varphi(x)-n$; as $d\mid n$,
+also $d\mid\varphi(x)$. Thus after the first multiple of $d$
 in the list, every later entry is a multiple of $d$: the multiples of $d$ fill the last positions of the list.</p></li><li><p><em>$p\nmid m$.</em> Otherwise apply the previous point with $d=p$: the list starts $1,p$, so every entry after $1$ is a multiple of $p$.
 But a prime factor $r\ne p$ of $n$ is a divisor that is neither $1$ nor a multiple of $p$.</p></li><li><p><em>$m$ is a power of a prime.</em> Let $r$ be a prime factor of $m$ and $d=m/r$. Since $r\ne p$, the number $n/d=pr$ has exactly the
 four divisors $1,p,r,pr$, so the multiples of $d$ among the divisors of $n$ are exactly $d,\ pd,\ rd=m,\ prd=n$. By the previous points they

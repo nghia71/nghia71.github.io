@@ -162,11 +162,14 @@ Adding the first two gives $|\mathbf a|=|\mathbf d|$; adding the first and third
 So $|\mathbf a|=|\mathbf b|=|\mathbf c|=|\mathbf d|$, and by (1) the half-turn about the line through the midpoints of $AB$ and $CD$ swaps $A\leftrightarrow B$ and
 $C\leftrightarrow D$, i.e. maps the tetrahedron onto itself. The same holds for the other two lines, so all three are twofold symmetry axes.</p>
 <h4>Solution 3 (A congruence that swaps the vertices)</h4>
-<p>As in Step 0 of Solution 1, property (2) is equivalent to
-\[AB=CD,\qquad AC=BD,\qquad AD=BC, \tag{$*$}\]
-and Solution 1 shows that (1) implies $(*)$: the half-turn about the line through the midpoints of $AB$ and $CD$ must swap $A\leftrightarrow B$ and
-$C\leftrightarrow D$, which gives $AC=BD$ and $AD=BC$, and the axis through the midpoints of $AC$ and $BD$ gives $AB=CD$. Here we prove $(*)\Rightarrow(1)$ by
-building the symmetry directly. Let $M,N$ be the midpoints of $AB$ and $CD$; they are distinct (Solution 1).</p><p><strong>A congruence.</strong> Put $\mathbf x_1=B-A$, $\mathbf x_2=C-A$, $\mathbf x_3=D-A$ and $\mathbf y_1=A-B$, $\mathbf y_2=D-B$, $\mathbf y_3=C-B$. By $(*)$,
+<p><strong>(2) means equal opposite edges.</strong> The faces $ABC,ABD,ACD,BCD$ have perimeters $AB+AC+BC$, $AB+AD+BD$, $AC+AD+CD$, $BC+BD+CD$. If they are
+equal, the first two give $AC-BD=AD-BC$ and the last two give $AC-BD=BC-AD$; hence $AD=BC$, then $AC=BD$, and the first and the last give $AB=CD$. Conversely,
+under these equalities every face has perimeter $AB+AC+AD$. So (2) is equivalent to
+\[AB=CD,\qquad AC=BD,\qquad AD=BC. \tag{$*$}\]</p><p><strong>(1) $\Rightarrow$ $(*)$.</strong> The six edge midpoints are distinct: edges with a common vertex have different midpoints, and if $AB$ and $CD$ had a common
+midpoint, $ACBD$ would be a parallelogram and the vertices would be coplanar. Let $M,N$ be the midpoints of $AB$ and $CD$, and $\rho$ the half-turn about $MN$. By (1)
+it permutes the vertices; it fixes $M$, so it maps the edge $AB$ to the edge with midpoint $M$, which is $AB$, and likewise $CD$ to $CD$. If $\rho$ fixed $A$, it would
+fix $B$, the axis would be the line $AB$, and $N\in AB$ would make the vertices coplanar. Hence $\rho$ swaps $A,B$ and likewise $C,D$, so $AC=BD$ and $AD=BC$. The
+axis through the midpoints of $AC$ and $BD$ gives $AB=CD$ in the same way.</p><p><strong>$(*)\Rightarrow$ (1).</strong> We build the symmetry directly. As shown above, $M\ne N$.</p><p><strong>A congruence.</strong> Put $\mathbf x_1=B-A$, $\mathbf x_2=C-A$, $\mathbf x_3=D-A$ and $\mathbf y_1=A-B$, $\mathbf y_2=D-B$, $\mathbf y_3=C-B$. By $(*)$,
 \[|\mathbf x_1|=|\mathbf y_1|=AB,\quad |\mathbf x_2|=AC=BD=|\mathbf y_2|,\quad |\mathbf x_3|=AD=BC=|\mathbf y_3|,\]
 \[|\mathbf x_2-\mathbf x_1|=BC=AD=|\mathbf y_2-\mathbf y_1|,\quad |\mathbf x_3-\mathbf x_1|=BD=AC=|\mathbf y_3-\mathbf y_1|,\quad
 |\mathbf x_3-\mathbf x_2|=CD=|\mathbf y_3-\mathbf y_2|.\]
@@ -193,14 +196,14 @@ Who can force a win?</p></div>
 <p>Moves are always available: $1$ is a proper divisor of every number $N\ge2$, so the move $N\to N+1$ exists, and a player is forced to exceed $2026$
 only when even $N+1&gt;2026$, i.e. when $N\ge2026$. The numbers strictly increase, so the game ends.</p><p><strong>Observation.</strong> An odd number has only odd divisors, so from an odd $N$ every move leads to the even number $N+d$.</p><p><strong>Luna's strategy.</strong> Whenever the board shows an even number $E$, Luna writes $E+1$ if $E\le2022$, and $E+2$ (allowed, since $2\mid E$) if $E=2024$.</p><p>We claim that with this strategy Luna always faces an even number $E\le2024$, and Marie always faces an odd number $O\le2023$.
 At the start Luna faces $2$. If Luna faces an even $E\le2022$, she writes the odd number $E+1\le2023$. If Marie faces an odd $O\le2023$, she must write $O+d$ with
-$d$ an odd proper divisor of $O$; this number is even. It is not $2026$: from $O+d=2026$ we would get $d\mid2026=2\cdot1013$, so $d\in\{1,1013\}$; $d=1$ gives
+$d$ an odd proper divisor of $O$; this number is even. It is not $2026$: from $O+d=2026$ we would get $d\mid2026=2\cdot1013$, where $1013$ is prime (it has no prime divisor up to $31$, and $32^2&gt;1013$), and $d$ is odd, so $d\in\{1,1013\}$; $d=1$ gives
 $O=2025&gt;2023$, and $d=1013$ gives $O=1013=d$, not a proper divisor. Hence Marie writes an even number at most $2024$ (or a number larger than $2026$, losing at once).
 If Luna faces $2024$, she writes $2026$, and Marie, facing $2026$, is forced to write a number larger than $2026$ and loses.</p><p>Luna is never forced to exceed $2026$ (she always has the move described, which stays $\le2026$). Since the game is finite, it ends with Marie forced to exceed
 $2026$. So <strong>Luna</strong> can force a win.</p>
 <h4>Solution 2 (Classifying all positions backwards)</h4>
 <p>Call a number $N$ (with $2\le N\le2026$) a <em>win</em> if the player who must move from $N$ can force a win, and a <em>loss</em> otherwise. From $N$ the
 move $N+1$ is always available while $N\le2025$; a player at $2026$ has no move staying $\le2026$.</p><p><strong>Claim.</strong> The losses are exactly the odd numbers $N\le2023$ together with $N=2026$; all other numbers (the even numbers $\le2024$, and $2025$) are wins.</p><p>We prove this by downward induction on $N$.</p><ul class="ct-ul"><li><p>$N=2026$: every move exceeds $2026$, so it is a loss.</p></li><li><p>$N=2025$: the move $+1$ gives $2026$, a loss for the opponent; so $2025$ is a win.</p></li><li><p>$N=2024$: the move $+2$ gives $2026$; a win.</p></li><li><p>$N\le2023$ odd: there is a move ($N+1\le2024$). Every proper divisor $d$ of $N$ is odd, so every move gives an even number $N+d$. It is not $2026$:
-that would force $d\mid2026=2\cdot1013$, so $d=1$ and $N=2025$, or $d=1013=N$, both impossible. So each move gives either an even number $\le2024$, which is a win
+that would force $d\mid2026=2\cdot1013$ with $1013$ prime (no prime divisor up to $31$, and $32^2&gt;1013$) and $d$ odd, so $d=1$ and $N=2025$, or $d=1013=N$, both impossible. So each move gives either an even number $\le2024$, which is a win
 for the opponent by induction, or a number above $2026$, which loses at once. Hence $N$ is a loss.</p></li><li><p>$N\le2022$ even: the move $+1$ gives an odd number $\le2023$, a loss for the opponent; so $N$ is a win.</p></li></ul><p>Luna starts at $2$, an even number at most $2024$, i.e. a win. So <strong>Luna</strong> wins; her winning moves are: add $1$ from an even number $\le2022$, add $2$ from $2024$.</p>
 </div></details>
 </section>
@@ -216,6 +219,9 @@ $2026^{2026}$ (which certainly has more than $7$ digits) ends with these $7$ dig
 \[2026^{2026}\equiv2026\pmod{3^7},\quad\text{i.e.}\quad 3^7\mid 2026\,\bigl(2026^{2025}-1\bigr).\]
 As $3\nmid2026$, this means $3^7\mid2026^{2025}-1$.</p><p>Now $2026-1=2025=3^4\cdot25$, so $3\mid 2026-1$, and the lifting-the-exponent lemma for the odd prime $3$ gives
 \[v_3\bigl(2026^{2025}-1^{2025}\bigr)=v_3(2026-1)+v_3(2025)=4+4=8\ge7 .\]
+(Proof of this special case: for $u=2026$, $u^{25}-1=(u-1)(1+u+\dots+u^{24})$ and the second factor is $\equiv25\not\equiv0\pmod3$, so
+$v_3(u^{25}-1)=4$. If $w\equiv1\pmod3$, say $w=1+3h$, then $w^3-1=(w-1)(w^2+w+1)$ with $w^2+w+1=3(1+3h+3h^2)$, so $v_3(w^3-1)=v_3(w-1)+1$.
+Since $2025=25\cdot3^4$, cubing $u^{25}$ four times gives $v_3(u^{2025}-1)=4+4=8$.)
 Hence $3^7\mid2026^{2025}-1$, and the base-$3$ representation of $2026^{2026}$ ends with $2210001$, the representation of $2026$. (In fact $3^8$ divides the difference,
 so even the last eight digits are $02210001$.)</p>
 <h4>Solution 2 (The binomial theorem)</h4>
@@ -235,8 +241,8 @@ $2026^{2026}$ are those of $2026$.</p>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Shrink every large set to $k$ elements)</h4>
 <p>The $m$ subsets are distinct by hypothesis. Let $S$ be the $n$-element set and
-$\mathcal F_k$ the family of all subsets of $S$ with at most $k$ elements; it has $\sum_{j=0}^{k}\binom nj$ members (terms with $j&gt;n$ are $0$).</p><p><strong>If $m\le\sum_{j=0}^k\binom nj$, the subsets exist.</strong> Two distinct members $X,Y$ of $\mathcal F_k$ have fewer than $k$ common elements: if $|X|&lt;k$ then
-$|X\cap Y|\le|X|&lt;k$, and if $|X|=|Y|=k$ then $X\cap Y$ is a proper subset of $X$, so $|X\cap Y|\le k-1$. Any $m$ members of $\mathcal F_k$ therefore work.</p><p><strong>If the subsets exist, then $m\le\sum_{j=0}^k\binom nj$.</strong> Let $X_1,\dots,X_m$ be distinct subsets, any two with fewer than $k$ common elements. Define
+$\mathcal F_k$ the family of all subsets of $S$ with at most $k$ elements; it has $\sum_{j=0}^{k}\binom nj$ members (terms with $j&gt;n$ are $0$).</p><p><strong>If $m\le\sum_{j=0}^k\binom nj$, the subsets exist.</strong> Two distinct members $X,Y$ of $\mathcal F_k$ have fewer than $k$ common elements: if $|X|&lt;k$ or $|Y|&lt;k$, then
+$|X\cap Y|\le\min(|X|,|Y|)&lt;k$, and if $|X|=|Y|=k$ then $X\cap Y$ is a proper subset of $X$, so $|X\cap Y|\le k-1$. Any $m$ members of $\mathcal F_k$ therefore work.</p><p><strong>If the subsets exist, then $m\le\sum_{j=0}^k\binom nj$.</strong> Let $X_1,\dots,X_m$ be distinct subsets, any two with fewer than $k$ common elements. Define
 $\varphi(X)=X$ if $|X|\le k$, and otherwise let $\varphi(X)$ be any $k$-element subset of $X$. Then $\varphi(X_i)\in\mathcal F_k$ and $\varphi(X_i)\subseteq X_i$.
 The map is injective: if $\varphi(X_i)=\varphi(X_j)=:Z$ with $i\ne j$, then $Z\subseteq X_i\cap X_j$, so $|Z|&lt;k$; but $|Z|&lt;k$ happens only when $Z=\varphi(X_i)=X_i$
 and $Z=\varphi(X_j)=X_j$, contradicting $X_i\ne X_j$. Hence $m\le|\mathcal F_k|=\sum_{j=0}^{k}\binom nj$.</p><p>Both directions together prove the equivalence.</p>
@@ -263,15 +269,16 @@ This completes the induction and the proof of the equivalence.</p>
 $\alpha+\beta+\gamma=1$ (areal coordinates; $P=\alpha A+\beta B+\gamma C$), and let $M=\max(\alpha,\beta,\gamma)$, $m=\min(\alpha,\beta,\gamma)$.
 Points of the sides of $T$ form a set of area $0$ and can be ignored. All triangles below have their vertices in $T$.</p><p><strong>Step 1. Every triangle $\Delta$ not containing $P$ has area at most $\dfrac M{M+m}$.</strong> A closed triangle not containing $P$ lies strictly on one side of
 some line through $P$ (take a line separating $P$ from the convex set $\Delta$ and move it parallel until it passes through $P$). So $\Delta\subseteq K$, where $K$ is
-one of the two pieces into which a line $\ell$ through $P$ cuts $T$. The function $X\mapsto[XYZ]$ is convex in $X$, so a largest triangle inside a convex polygon
-can be taken with its vertices at vertices of the polygon. We check all such triangles.</p><p>If $\ell$ passes through a vertex, say $A$, and meets $BC$ at $D$, the pieces are $ABD$ and $ADC$, of areas $\frac{\gamma}{\beta+\gamma}$ and
+one of the two pieces into which a line $\ell$ through $P$ cuts $T$. For fixed $Y,Z$ the area $[XYZ]$ is the absolute value of an affine function of $X$, hence a convex function of $X$; on a convex polygon
+it is largest at a vertex. Replacing $X$, then $Y$, then $Z$ by a suitable vertex without decreasing the area, we see that a largest triangle inside a convex
+polygon can be taken with its vertices at vertices of the polygon. We check all such triangles.</p><p>If $\ell$ passes through a vertex, say $A$, and meets $BC$ at $D$, the pieces are $ABD$ and $ADC$, of areas $\frac{\gamma}{\beta+\gamma}$ and
 $\frac{\beta}{\beta+\gamma}$ (as $BD:DC=\gamma:\beta$), both at most $\frac M{M+m}$, because $\frac{x}{x+y}=\frac1{1+y/x}\le\frac1{1+m/M}=\frac{M}{M+m}$ whenever $0&lt;x\le M$ and $y\ge m$.</p><p>Otherwise $\ell$ meets two sides, say $AB$ at $X$ and $AC$ at $Y$; write $AX=x\cdot AB$, $AY=y\cdot AC$ ($0&lt;x,y\le1$) and $P=(1-t)X+tY$ with $0&lt;t&lt;1$. Then
 $\beta=(1-t)x$, $\gamma=ty$ and $\alpha=(1-t)(1-x)+t(1-y)$.</p><ul class="ct-ul"><li><p>The piece $XBCY$ (a quadrilateral, or a triangle if $X=B$ or $Y=C$): its vertex triangles have areas $[XBC]=1-x$, $[YBC]=1-y$, $[XBY]=y(1-x)\le1-x$,
 $[XCY]=x(1-y)\le1-y$. Moreover
 \[1-x\le\frac{\alpha}{\alpha+\beta}\iff(1-x)\bigl[(1-t)+t(1-y)\bigr]\le(1-t)(1-x)+t(1-y)\iff t(1-y)(1-x)\le t(1-y),\]
 which is true; so $1-x\le\frac\alpha{\alpha+\beta}\le\frac M{M+m}$, and symmetrically $1-y\le\frac{\alpha}{\alpha+\gamma}\le\frac M{M+m}$.</p></li><li><p>The piece $AXY$ has area $xy$. In the affine coordinates with origin $A$ and unit vectors $\vec{AB},\vec{AC}$ we have $P=(\beta,\gamma)$ and the condition
 $P\in XY$ reads $\frac\beta x+\frac\gamma y=1$, i.e. $y=\frac{\gamma x}{x-\beta}$. So $xy=\frac{\gamma x^2}{x-\beta}$, whose derivative
-$\frac{\gamma x(x-2\beta)}{(x-\beta)^2}$ changes sign only once, from $-$ to $+$; hence $xy$ is largest at an end of the admissible range of $x$, that is, when
+$\frac{\gamma x(x-2\beta)}{(x-\beta)^2}$ changes sign only once, from $-$ to $+$; hence $xy$ is largest at an end of the admissible range $\frac\beta{1-\gamma}\le x\le1$ (here $x&gt;\beta$, and $y\le1$ means $x\ge\frac\beta{1-\gamma}$), that is, when
 $x=1$ ($X=B$) or $y=1$ ($Y=C$). These give $xy=\frac{\gamma}{\alpha+\gamma}$ and $xy=\frac{\beta}{\alpha+\beta}$, both $\le\frac M{M+m}$.</p></li></ul><p><strong>Step 2. Areas just below $\frac M{M+m}$ do occur.</strong> Say $\alpha=M$, $\gamma=m$. The line $BP$ meets $AC$ at $E$ with $AE:EC=\gamma:\alpha$, so
 $[BEC]=\frac{\alpha}{\alpha+\gamma}=\frac M{M+m}$ and $P$ lies on the side $BE$. Moving $E$ slightly towards $C$ gives triangles that miss $P$ with areas
 arbitrarily close to $\frac M{M+m}$; shrinking a triangle by a homothety centred at one of its vertices keeps it inside itself, so every smaller positive area occurs
@@ -320,8 +327,15 @@ of a diagonal). So $f(Q_0)$ contains a disc of some radius $r&gt;0$ around $f(O)
 <strong>every point of the plane is an image point</strong>.</p><p><em>Remark.</em> Step 3 also gives $f\bigl(\frac{X+Y}2\bigr)=\frac{f(X)+f(Y)}2$; with Step 1 (betweenness on lines) this forces $f$ to be affine, and an affine map that
 preserves right angles is a similarity.</p>
 <h4>Solution 2 (Midpoints make $f$ a similarity)</h4>
-<p>We use Steps 1 and 2 of Solution 1: $f$ maps every segment $[P,Q]$ onto the segment $[f(P),f(Q)]$, and it maps every rectangle $ABCD$ onto the
-rectangle $f(A)f(B)f(C)f(D)$, with the vertices in this order. In particular $f$ preserves right angles: if $\angle XYZ=90^\circ$, complete $X,Y,Z$ to a rectangle;
+<p><strong>Segments and rectangles.</strong> Let $P\ne Q$. The two squares with side $PQ$ on opposite sides of line $PQ$
+meet exactly in $[P,Q]$, so by injectivity $f([P,Q])$ is the intersection of two rectangles, a compact convex set. Let $X$ lie strictly between $P$ and $Q$. As
+$f([P,Q])=f([P,X])\cup f([X,Q])$ is convex, the segment $[f(P),f(Q)]$ is the union of its parts in $f([P,X])$ and in $f([X,Q])$; these are closed and non-empty
+(they contain $f(P)$ and $f(Q)$), so, as a segment is connected, they meet. By injectivity the only common point of $f([P,X])$ and $f([X,Q])$ is $f(X)$, so
+$f(X)\in[f(P),f(Q)]$. Hence $f$ maps $[P,Q]$ onto $[f(P),f(Q)]$. Consequently a triangle, the union of the segments from one vertex to the points of the
+opposite side, is mapped onto the triangle of the images of its vertices, and a rectangle $ABCD=\triangle ABC\cup\triangle ACD$ onto the convex hull of
+$f(A),f(B),f(C),f(D)$. By (2) this hull is a rectangle; its corners are extreme points of the hull, so they are exactly $f(A),\dots,f(D)$. The images of the
+diagonals $[A,C]$ and $[B,D]$ meet at the image of the centre, which is not a corner (injectivity), and two segments joining corners of a rectangle meet at a
+non-corner point only if they are its diagonals. So $f(A)f(B)f(C)f(D)$ is a rectangle with the vertices in this order. In particular $f$ preserves right angles: if $\angle XYZ=90^\circ$, complete $X,Y,Z$ to a rectangle;
 then $\angle f(X)f(Y)f(Z)=90^\circ$.</p><p><strong>Step A: $f$ preserves midpoints.</strong> Let $X\ne Y$ and let $XUYW$ be a square with diagonal $XY$; its centre $O$ is the midpoint of $XY$. Then
 $f(X)f(U)f(Y)f(W)$ is a rectangle, and $f(O)$ lies on both of its diagonals $[f(X),f(Y)]$ and $[f(U),f(W)]$. So $f(O)$ is the centre of this rectangle, the
 midpoint of $f(X)f(Y)$:
@@ -336,7 +350,7 @@ The angle $\mathbf e_1,0,\mathbf e_2$ is right, so the angle $f(\mathbf e_1),f(0
 $\mathbf e_1+\mathbf e_2$ and $\mathbf e_1-\mathbf e_2$ are also perpendicular, so $(\mathbf u+\mathbf w)\cdot(\mathbf u-\mathbf w)=0$, i.e.
 $|\mathbf u|=|\mathbf w|=:\kappa$. Hence $|g(x\mathbf e_1+y\mathbf e_2)|^2=|x\mathbf u+y\mathbf w|^2=\kappa^2(x^2+y^2)$, so
 $|f(X)-f(Y)|=|g(X-Y)|=\kappa|X-Y|$ for all $X,Y$: $f$ is a similarity with ratio $\kappa$. A square $ABCD$ with side $a$ is mapped onto the rectangle
-$f(A)f(B)f(C)f(D)$ (Step 2 of Solution 1), whose sides all have length $\kappa a$; so it is a square, and <strong>every square is mapped onto a square</strong>.</p>
+$f(A)f(B)f(C)f(D)$ (see the first paragraph), whose sides all have length $\kappa a$; so it is a square, and <strong>every square is mapped onto a square</strong>.</p>
 </div></details>
 </section>
 {% endraw %}

@@ -236,7 +236,7 @@ x_7=\frac{x_0}{q^7}\,p^7\ge p^7\ge 2^7=128&gt;100,
 \]
 a contradiction. The largest number of numbers is $\boxed{8}$.</p>
 <h4>Solution 2 (Repeated differences)</h4>
-<p>As before, the sheet contains $N$ numbers $x_j=ab^j$ ($0\le j\le N-1$), of which $x_0,\dots,x_{N-2}$ are positive integers at
+<p>Felipe writes $x_j=ab^j$ and stops right after writing the first number that is greater than $100$ or not an integer. So if the sheet contains $N$ numbers $x_0,\dots,x_{N-1}$, then $x_0,\dots,x_{N-2}$ are positive integers at
 most $100$; and $a=1$, $b=2$ gives $N=8$ ($1,2,\dots,64$ and then $128$).</p><p>Suppose $N\ge 9$, so $x_0,\dots,x_7$ are positive integers at most $100$. Reversing the order if necessary, we may assume the common ratio is
 $r&gt;1$. Form the difference tables $\Delta^0_j=x_j$ and $\Delta^{k+1}_j=\Delta^k_{j+1}-\Delta^k_j$. Each $\Delta^k_j$ is an integer combination
 of the $x_i$, hence an integer, and by induction $\Delta^k_j=x_0r^j(r-1)^k&gt;0$. So $\Delta^k_0$ is a positive integer, $\Delta^k_0\ge 1$, for
@@ -352,8 +352,9 @@ already present) is still legal and fills the board. By the monovariant, $4n=\op
 contradiction. So for odd $n$, $|W|\ge 2n+1$ and at most $n^2-2n-1$ cells are black.</p><p><em>Constructions.</em> If $W$ satisfies the rule and the whole board can be obtained from $W$ by legal additions, then painting the added cells in
 reverse order is legal: each intermediate white set is obtained from $W$ by legal additions, and a legal addition never lowers any cell's number of
 neighbours, so every white cell keeps at least two white neighbours.</p><ul class="ct-ul"><li><p>$n$ even: let $W$ consist of the $n/2$ squares $\{2i-1,2i\}\times\{2i-1,2i\}$ on the diagonal; each of its cells has two white neighbours. If the
-square of rows and columns $1,\dots,2i$ is filled, the cell $(2i,2i+1)$ has the neighbours $(2i,2i)$ and $(2i+1,2i+1)$, and then the row-and-column
-filling of (ii), applied four times, fills rows and columns $1,\dots,2i+2$. So the board is filled, $|W|=2n$, and $n^2-2n$ cells are black.</p></li><li><p>$n$ odd, $n\ge3$: take $(n-3)/2$ such squares in rows and columns $1,\dots,n-3$, together with the $3\times3$ square in rows and columns
+square $Q$ of rows and columns $1,\dots,2i$ is filled, the cell $(2i,2i+1)$ has the neighbours $(2i,2i)$ and $(2i+1,2i+1)$; with it added,
+the cells $(2i-1,2i+1),\dots,(1,2i+1)$ of column $2i+1$ can be added one by one (each has a neighbour in $Q$ and the previous one), and likewise the cells $(2i+1,2i),\dots,(2i+1,1)$ of row $2i+1$, starting next to $(2i+1,2i+1)$.
+Now rows and columns $1,\dots,2i+1$ are filled and the cells $(2i+1,2i+2)$, $(2i+2,2i+1)$, $(2i+2,2i+2)$ are white, so column $2i+2$ (upwards from $(2i,2i+2)$) and row $2i+2$ (leftwards from $(2i+2,2i)$) are filled in the same way. This fills rows and columns $1,\dots,2i+2$. So the board is filled, $|W|=2n$, and $n^2-2n$ cells are black.</p></li><li><p>$n$ odd, $n\ge3$: take $(n-3)/2$ such squares in rows and columns $1,\dots,n-3$, together with the $3\times3$ square in rows and columns
 $n-2,n-1,n$ without its corners $(n-2,n)$ and $(n,n-2)$ (these $7$ cells each have at least two of them as neighbours). The two missing corners can
 be added legally, which fills the $3\times 3$ square, and then the board is filled exactly as before. Here $|W|=2(n-3)+7=2n+1$.</p></li></ul><p>Therefore the greatest number of black cells is
 \[

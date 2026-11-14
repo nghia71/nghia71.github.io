@@ -80,8 +80,8 @@ description: Vietnamese Mathematical Olympiad 2026: problems with answers and so
 <h4>Solution 1 (A trigonometric cubic)</h4>
 <p><strong>(a)</strong> Put $y=x^n$ and $y=2^{n-1}z$. Then
 \[P_n(x)=y^3-3\cdot4^{n-1}y-8^{n-1}=8^{n-1}\,(z^3-3z-1).\]
-For $z=2\cos\varphi$ we have $z^3-3z=2\cos3\varphi$, so the three roots of $z^3-3z-1$ are $2\cos\varphi$ with $\cos3\varphi=\frac12$, i.e.
-$\varphi=20^\circ,100^\circ,140^\circ$: the numbers $2\cos20^\circ&gt;0$, $2\cos100^\circ&lt;0$, $2\cos140^\circ&lt;0$. A positive $x$ gives a positive $z$, and
+For $z=2\cos\varphi$ we have $z^3-3z=2\cos3\varphi$. The angles $\varphi=20^\circ,100^\circ,140^\circ$ satisfy $\cos3\varphi=\frac12$, so they
+give three distinct roots $2\cos20^\circ&gt;0$, $2\cos100^\circ&lt;0$, $2\cos140^\circ&lt;0$ of $z^3-3z-1$; a cubic has no further roots. A positive $x$ gives a positive $z$, and
 $x\mapsto z=x^n/2^{n-1}$ is a bijection of the positive reals. So $P_n$ has exactly one positive zero,
 \[a_n=\bigl(2^{n-1}\cdot2\cos\tfrac\pi9\bigr)^{1/n}=2\,c^{1/n},\qquad c=\cos\tfrac\pi9\in(0,1).\]</p><p><strong>(b)</strong> $b_n=\frac{2(1-c^{1/n})}{n}&gt;0$, so $(c_n)$ is increasing; we show it is bounded. By AM&ndash;GM applied to $\frac1c$ and $n-1$ ones,
 $\bigl(\frac1c\bigr)^{1/n}\le\frac{1/c+n-1}{n}=1+\frac{1/c-1}{n}$. Hence
@@ -139,8 +139,8 @@ $u\ge\frac{n^2+1}{n+1}&gt;n-1$, i.e. $u\ge n$, $v=n+1$, and $n(n+1)=n^2+1$ force
 Let $d\mid ab$ with $n^2&lt;d&lt;n^2+n+3$ and $d\ne a,b$. Put $g=\gcd(d,a)$ and $h=\gcd(d,b)$. Since $\frac dg\mid\frac ag\cdot b$ and
 $\gcd(\frac dg,\frac ag)=1$, we get $\frac dg\mid b$, hence $\frac dg\mid h$ and $d\le gh$. Also $g\mid a-d\ne0$ and $h\mid b-d\ne0$, so
 \[n^2&lt;d\le gh\le|a-d|\cdot|b-d| .\]
-All of $a,b,d$ lie in $\{n^2+1,\dots,n^2+n+2\}$, a set of $n+2$ consecutive integers.</p><ul class="ct-ul"><li><p>If $d$ is between $a$ and $b$: $|a-d|+|b-d|=b-a\le n+1$, so the product is at most $\frac{(n+1)^2}4&lt;n^2$.</p></li><li><p>If $d&gt;b$: with $z=d-n^2\le n+2$, $(d-a)(d-b)\le(z-1)(z-2)=(z-2)^2+(z-2)\le n^2+z-2&lt;d$.</p></li><li><p>If $d&lt;a$: $(a-d)(b-d)\le(n^2+n+1-d)(n^2+n+2-d)$, and this is $\ge d$ only for $d=n^2+1$ (as in Solution 1, the quadratic in $z=d-n^2$ is negative for
-$z\ge2$). Then $(a-d)(b-d)\ge n^2+1$ forces $a=n^2+n+1$, $b=n^2+n+2$, so $g\mid n$, $h\mid n+1$ and $d=n^2+1$ divides $gh$, a divisor of $n^2+n$. But
+All of $a,b,d$ lie in $\{n^2+1,\dots,n^2+n+2\}$, a set of $n+2$ consecutive integers.</p><ul class="ct-ul"><li><p>If $d$ is between $a$ and $b$: $|a-d|+|b-d|=b-a\le n+1$, so the product is at most $\frac{(n+1)^2}4&lt;n^2$.</p></li><li><p>If $d&gt;b$: with $z=d-n^2\le n+2$, $(d-a)(d-b)\le(z-1)(z-2)=(z-2)^2+(z-2)\le n^2+z-2&lt;d$.</p></li><li><p>If $d&lt;a$: $(a-d)(b-d)\le(n^2+n+1-d)(n^2+n+2-d)$, and this is $\ge d$ only for $d=n^2+1$: with $z=d-n^2$ the condition $(n+1-z)(n+2-z)\ge n^2+z$ reads
+$z^2-(2n+4)z+3n+2\ge0$, and this convex quadratic is negative at $z=2$ (value $-n-2$) and at $z=n+2$ (value $-n^2-n-2$), hence on all of $[2,n+2]$. Then $(a-d)(b-d)\ge n^2+1$ with $a-d&lt;b-d\le n+1$ forces $a-d=n$ (if $a-d\le n-1$, the product is at most $(n-1)(n+1)&lt;n^2+1$), so $a=n^2+n+1$, $b=n^2+n+2$, so $g\mid n$, $h\mid n+1$ and $d=n^2+1$ divides $gh$, a divisor of $n^2+n$. But
 $n^2+1\mid n^2+n$ means $n^2+1\mid n-1$, impossible as $0&lt;n-1&lt;n^2+1$.</p></li></ul><p>Hence no such $d$ exists: the only divisors in the interval are $\boxed{a\text{ and }b}$.</p>
 </div></details>
 </section>
@@ -195,7 +195,7 @@ $P\mapsto F$, forcing $IP\parallel EF$, but these lines meet at $A'$). Let $Q\ne
 so triangles $QIE$ and $QPF$ are similar and $\frac{QI}{QP}=\frac{IE}{PF}=\frac{IA}{PA}=\rho$. Hence $Q\in\mathcal A$: the circles $TAJ$, $TIP$, $TEF$ pass through $Q$.
 It remains to prove that $Q$ lies on the circle $TLU$.</p><p><strong>Step 4: the circle $\Gamma=(TEF)$.</strong> By (a), $\angle(TE,TF)=\angle(\ell_1,\ell_2)=2\angle(DB,DC)$. The lines $DE$, $DF$ are the reflections of $DA$ in $DB$, $DC$, so the same
 computation gives $\angle(DE,DF)=2\angle(DB,DC)$. Hence $D\in\Gamma$. As $DE=DF$, the line $DA'$ is a diameter of $\Gamma$; let $D'$ be the antipode of $D$ on
-$\Gamma$. Then $D'E=D'F$, and $\angle DTD'=90^\circ=\angle DTA$ shows that $D'$ lies on line $AT$.</p><p><strong>Step 5: $Q,D,J,A'$ are concyclic.</strong> Using $\Gamma$ (points $Q,D,T,D'$) and $\mathcal A$ (points $Q,T,A,J$),
+$\Gamma$. Then $D'E=D'F$, and $\angle DTD'=90^\circ=\angle DTA$ shows that $D'$ lies on line $AT$.</p><p><strong>Step 5: $Q,D,J,A'$ are concyclic.</strong> Here $Q\ne D,J,D'$ (see the remark after Step 6). Using $\Gamma$ (points $Q,D,T,D'$) and $\mathcal A$ (points $Q,T,A,J$),
 \[\angle(QD,QJ)=\angle(QD,QT)+\angle(QT,QJ)=\angle(D'D,D'T)+\angle(AT,AJ)=\angle(DA',AT)+\angle(AT,\ell)=\angle(A'D,A'J).\]
 Let $U_0$ be the point of line $EF$ with $JU_0\perp TD$ (so $JU_0\parallel AT$). Since $\angle DJU_0=\angle DA'U_0=90^\circ$, the circle $DJA'$ has diameter $DU_0$, and
 $Q$ lies on it: $\angle DQU_0=90^\circ$. Also $\angle DQD'=90^\circ$. Therefore $Q$, $U_0$, $D'$ are collinear.</p><p><strong>Step 6: $U_0=U$.</strong> Let $J_1$ be the midpoint of $AJ$. Then $h^{-1}$ maps $J\mapsto J_1$ and $U_0$ to the point $X_0$ of $BC$ with $J_1X_0\parallel AT$.
@@ -208,7 +208,12 @@ quadrilateral and the tangents at $A$ and $T$ meet at a point $Y$ of line $BC$.<
 of the altitudes from $Y$ and $O$. Let $J'$ be the foot of the altitude from $X$. The circles with diameters $XY$ and $XO$ give
 $\angle(J'T,J'Y)=\angle(XT,XY)$ and $\angle(J'M,J'O)=\angle(XM,XO)$, i.e. $\angle(J'T,OY)=-\angle(J'M,OY)$: the lines $J'T$ and $J'M$ are symmetric in $OY$. The reflection of
 $T$ in $OY$ is $A$, so $A\in J'M$, i.e. $J'\in AM$. On the other hand $J_1\in AM$, and $J_1A=J_1T$ ($J_1$ is the circumcentre of the right triangle $ATJ$), so $J_1\in OY$. Since
-$A\notin OY$, $J'=J_1$. Hence $XJ_1\perp OY$, and $AT\perp OY$ gives $XJ_1\parallel AT$.</p><p><strong>Step 7: conclusion.</strong> The lines $D'T$ (which is $AT$) and $D'Q$ meet line $EF$ at $L$ and $U$. Since $D'E=D'F$, the inversion with centre $D'$ and radius $D'E$ swaps
+$A\notin OY$, $J'=J_1$. Hence $XJ_1\perp OY$, and $AT\perp OY$ gives $XJ_1\parallel AT$.</p><p><em>Remark: $Q\ne D,J,D'$.</em> The line $TD$ meets $\mathcal A$ only at $T$ and $J$, so $Q=D$ would give $D=J\in\ell$, i.e. $AB=AC$. The line $IP$ meets the
+circle $TIP$ only at $I$ and $P$, and $J\ne I,P$ because $0&lt;\rho&lt;\infty$; so $Q\ne J$. The line $AT$ meets $\mathcal A$ only at $A$ and $T$, so $Q=D'$ would give
+$D'=A$ or $D'=T$. If $D'=A$, then $A$ lies on the diameter $DA'$ of $\Gamma$, so $D\in AA'=\ell$, i.e. $AB=AC$. If $D'=T$, then $T$ lies on $DA'$, the
+perpendicular from $D$ to $BC$. But the point $N$ of (ii) lies on the ray opposite to ray $MA$, so the feet of the perpendiculars from $A$ and from $N$ to $BC$
+lie on opposite sides of $M$ (not at $M$, as $AB\ne AC$); $T$ is the reflection of $N$ in $OM$, so its foot is on the side of $A$'s foot, while the foot from
+$D$ (the reflection of $A$ in $O$, whose foot is $M$) is on the other side. So $T\notin DA'$.</p><p><strong>Step 7: conclusion.</strong> The lines $D'T$ (which is $AT$) and $D'Q$ meet line $EF$ at $L$ and $U$. Since $D'E=D'F$, the inversion with centre $D'$ and radius $D'E$ swaps
 $\Gamma$ and the line $EF$, hence $T\leftrightarrow L$ and $Q\leftrightarrow U$. So $D'T\cdot D'L=D'Q\cdot D'U$, and $T$, $L$, $U$, $Q$ are concyclic.</p><p>Thus the circles $TAJ$, $TIP$, $TEF$, $TLU$ all pass through $Q\ne T$.</p>
 <h4>Solution 2 (Oblique coordinates and a pencil of circles)</h4>
 <p><strong>Coordinates.</strong> Take Cartesian coordinates with $B=(-1,0)$, $C=(1,0)$, $A=(u,h)$, $h&gt;0$, so that $M$ is the origin and $BC$ is the $x$-axis.
@@ -284,7 +289,7 @@ positive (as $Q(0)&lt;0$).</p><p><strong>(b)</strong> Take $a&gt;0$ and write $P
 \[p^2&gt;3aq\quad\text{and}\quad q^2&gt;3pr,\]
 since $(\sum x_i)^2-3\sum x_ix_j=\frac12\sum(x_i-x_j)^2&gt;0$ and $(\sum x_ix_j)^2-3x_1x_2x_3\sum x_i=\frac12\sum_{\text{cyc}}x_j^2(x_i-x_k)^2&gt;0$, multiplied by $a^2$.
 Suppose $S\le12$.</p><p><em>$a\ge2$.</em> From $q^2&gt;3p$ and $p^2&gt;6q$: $q^4&gt;9p^2&gt;54q$, so $q\ge4$, $p^2&gt;24$, $p\ge5$, and $S\ge a+5+4+1$; for $a\ge3$ this exceeds $12$, and for $a=2$ it equals $12$. Equality forces $P=2x^3-5x^2+4x-1$, which has
-the root $1$.</p><p><em>$a=1$</em>, $p+q+r\le11$. From $p^2&gt;3q$, $q^2&gt;3p$ we get $p,q\ge4$ (if $q\le3$ then $p\le2$, then $q\le1$, then $p&lt;1$). Then:
+the root $1$.</p><p><em>$a=1$</em>, $p+q+r\le11$. From $p^2&gt;3q$, $q^2&gt;3p$ we get $p,q\ge4$ (if $q\le3$ then $p\le2$, then $q\le1$, then $p&lt;1$; the case $p\le3$ is the same with the two inequalities exchanged). Then:
 $p=4$: $q\in\{4,5\}$ (as $q&lt;\frac{16}3$) and $r&lt;\frac{q^2}{12}$: $(4,4,1)$ and $(4,5,2)$ have root $1$; $(4,5,1)$ has $P(1)=1$ and local minimum $P(\frac53)=\frac{23}{27}&gt;0$, so
 only one real root. $p=5$: $q+r\le6$ and $q^2&gt;15r$: $(5,4,1)$ is $Q$ from (a), one real root; $(5,5,1)$ has root $1$. $p\ge6$: $q\le4$ and $q^2&gt;18r\ge18$ fail.
 So $S\ge13$. It is attained by $x^3-5x^2+6x-1$: its values $-1,1,-1,7$ at $x=0,1,2,4$ give three positive roots, in $(0,1)$, $(1,2)$, $(2,4)$, and they are
@@ -308,11 +313,15 @@ i.e. $1+\min(q,a-1)$ values, subject to $a&lt;b\le100$ (for $q=1$, $r=0$ gives $
 Let $W(a)$ be the number of admissible $b$. Counting by hand, block by block:</p><div class="ct-center"><div class="ct-tablewrap"><table class="ct-table ct-vfirst"><tr class="ct-hl"><td>$a$</td><td>$W(a)$</td><td>sum</td></tr><tr><td>$2$&ndash;$10$</td><td>$98,96,93,89,84,78,71,63,54$</td><td>$726$</td></tr><tr><td>$11$&ndash;$20$</td><td>$44,36,31,27,22,20,18,14,14,14$</td><td>$240$</td></tr><tr><td>$21$&ndash;$33$</td><td>$9$ for $a=21,\dots,25$; $5$ for $a=26,\dots,33$</td><td>$85$</td></tr><tr><td>$34$&ndash;$50$</td><td>$3$ for $a=34$; $2$ for $a=35,\dots,50$</td><td>$35$</td></tr><tr><td>$51$&ndash;$99$</td><td>$0$</td><td>$0$</td></tr></table></div></div><p>For instance, for $35\le a\le50$ only $b=2a-1$ ($q=1$) and $b=2a$ ($q=2$, $r=0$) are at most $100$; $a=34$ also has $b=3a-2=100$; for $a\ge51$ even
 $2a-1&gt;100$. In total $726+240+85+35=\boxed{1086}$ pairs. (A short program confirms the count, and the criterion by brute force over all $m\le3b+2a$.)</p>
 <h4>Solution 2 (A smallest losing distance)</h4>
-<p>Keep $b=qa+r$, $f$ and the key difference of Solution 1, and let $G(m)$ be Mario's count and $O(m)$ the optimum.</p><p><strong>Criterion.</strong> Suppose Mario loses for some $m$, and take the smallest such $m$. An optimal route for $m$ uses no $b$-jump: otherwise removing it gives
+<p>Write $b=qa+r$ with $q\ge1$, $0\le r&lt;a$, and let $G(m)$ be Mario's count and $O(m)$ the optimum. For $R\ge0$ let $f(R)=\lfloor R/a\rfloor+(R\bmod a)$;
+this is the least number of jumps of lengths $a$ and $1$ covering $R$ (with $\alpha$ jumps of length $a$ the count is $R-\alpha(a-1)$, smallest for the largest
+$\alpha$).</p><p><strong>Key difference.</strong> For $R\ge b$ write $R=\alpha a+\gamma$, $0\le\gamma&lt;a$. If $\gamma\ge r$, then $R-b=(\alpha-q)a+(\gamma-r)$ and $f(R)-f(R-b)=q+r\ge1$.
+If $\gamma&lt;r$, then $\alpha\ge q+1$ and $R-b=(\alpha-q-1)a+(a+\gamma-r)$, so $f(R)-f(R-b)=q+r+1-a$.</p><p><strong>Criterion.</strong> Suppose Mario loses for some $m$, and take the smallest such $m$. An optimal route for $m$ uses no $b$-jump: otherwise removing it gives
 $O(m-b)\le O(m)-1&lt;G(m)-1=G(m-b)$ (Mario's strategy on $m\ge b$ starts with a $b$-jump), so $m-b$ would be a smaller losing distance. So $O(m)=f(m)$, and $m\ge b$
 (for $m&lt;b$ Mario's count is $f(m)$). By minimality $G(m-b)=O(m-b)\le f(m-b)$, hence $f(m)=O(m)&lt;G(m)=1+G(m-b)\le1+f(m-b)$, i.e. $f(m)-f(m-b)\le0$. By the key difference
-this means $\gamma&lt;r$ and $q+r+1-a\le0$: so $r&gt;0$ and $q+r&lt;a$. Conversely, in that case $m=(q+1)a$ is a losing distance (Solution 1).</p><p>In particular, for $a=6$, $b=14$ ($q=r=2$, $q+r&lt;a$) the distance $m=(q+1)a=18$ is losing, which answers (a).</p><p>Therefore Mario wins for all $m$ iff $a\mid b$ or $q+r\ge a$.</p><p><strong>Counting.</strong> Fix $a$. The values $b\in(a,100]$ with $a\nmid b$ and $q+r&lt;a$ are $b=qa+r$ with $1\le r\le a-1-q$, which requires $q\le a-2$. So the number of
-<em>losing</em> pairs for this $a$ is $\sum_{q\ge1}\#\{r:1\le r\le a-1-q,\ qa+r\le100\}$. Summing over $a=2,\dots,99$ gives $3765$ losing pairs, out of
+this means $\gamma&lt;r$ and $q+r+1-a\le0$: so $r&gt;0$ and $q+r&lt;a$. Conversely, in that case $m=(q+1)a$ is a losing distance: $m-b=a-r\in(0,a)$, so $b&lt;m&lt;2b$ and Mario makes one $b$-jump and $a-r$ jumps of length $1$,
+$1+a-r$ jumps in total, while $q+1&lt;1+a-r$ jumps of length $a$ suffice.</p><p>In particular, for $a=6$, $b=14$ ($q=r=2$, $q+r&lt;a$) the distance $m=(q+1)a=18$ is losing, which answers (a).</p><p>Therefore Mario wins for all $m$ iff $a\mid b$ or $q+r\ge a$.</p><p><strong>Counting.</strong> Fix $a$. The values $b\in(a,100]$ with $a\nmid b$ and $q+r&lt;a$ are $b=qa+r$ with $1\le r\le a-1-q$, which requires $q\le a-2$. So the number of
+<em>losing</em> pairs for this $a$ is $\sum_{q\ge1}\#\{r:1\le r\le a-1-q,\ qa+r\le100\}=\sum_{q=1}^{a-2}\max\bigl(0,\min(a-1-q,\,100-qa)\bigr)$. Summing over $a=2,\dots,99$ gives $3765$ losing pairs, out of
 $\binom{99}{2}=4851$; so $4851-3765=\boxed{1086}$ pairs are winning for Mario.</p>
 </div></details>
 </section>

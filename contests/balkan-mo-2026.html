@@ -126,7 +126,7 @@ produces exactly $T''$.</p>
 <section class="ct-problem" id="p3">
 <h3>Problem 3</h3>
 <div class="ct-meta">Geometry &middot; LPS VII, Chapter 51: Spiral Similarity and Advanced Transformational Geometry</div>
-<div class="ct-text"><p>Let $ABCD$ be a parallelogram with $\angle DAB&lt;90^\circ$ and $AB&lt;AD$. Let $H$ be the orthocentre of $\triangle BCD$ and $H'$ be the reflection of $H$ over line $BD$. Line $AH$ intersects the lines $BD$, $CD$, and $BC$ at $E$, $F$, and $G$ respectively. Prove that the circumcircles of $\triangle HEH'$ and $\triangle CFG$ are tangent.</p></div>
+<div class="ct-text"><p>Let $ABCD$ be a parallelogram with $\angle DAB&lt;90^\circ$ and $AB&lt;AD$. Let $H$ be the orthocentre of $\triangle BCD$ and $H'$ be the reflection of $H$ over line $BD$. Line $AH$ intersects the lines $BD$, $CD$, and $BC$ at $E$, $F$, and $G$ respectively. Assume that $AH$ is not parallel to $BD$ and that $\angle BDC\ne90^\circ$. Prove that the circumcircles of $\triangle HEH'$ and $\triangle CFG$ are tangent.</p></div>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
 <h4>Solution 1 (The Miquel point lies on line $C^*E$)</h4>
 <div class="ct-fig"><img style="width:267px" src="/assets/contests/2026-27/balkan-mo-3_s1.svg" alt="Figure for the solution"></div>
@@ -149,7 +149,8 @@ Then, using $C^*\in ME$, inscribed angles in $\omega$ and $CC^*\parallel\ell$,
 so $M$ lies on circle $DEF$. Consequently
 \[\measuredangle(MF,MC)=\measuredangle(MF,MD)+\measuredangle(MD,MC)=\measuredangle(EF,ED)+\measuredangle(BD,BC)=\measuredangle(\ell,BC)=
 \measuredangle(GF,GC),\]
-so $M$ lies on circle $CFG$. (Thus $M$ is the Miquel point of the lines $BC$, $CD$, $DB$, $\ell$.)</p><p><strong>Step 3: $M$ lies on circle $HEH'$.</strong> Using $C^*\in ME$, $H'\in\omega$, $H'\in CH$ and $CC^*\parallel\ell$:
+so $M$ lies on circle $CFG$. (Thus $M$ is the Miquel point of the lines $BC$, $CD$, $DB$, $\ell$.)</p><p>Also $M\ne H'$. Otherwise line $MC$ is line $H'C=CH$, which is perpendicular to $BD$, and $MC\perp ME$, so $ME\parallel BD$; as $E\in BD$, line $ME$ is
+$BD$ and $M\in\omega\cap BD=\{B,D\}$. Then $H'$, and hence its reflection $H$, is $B$ or $D$, so $\ell=AH$ passes through $B$ or $D$, which (b) excludes.</p><p><strong>Step 3: $M$ lies on circle $HEH'$.</strong> Using $C^*\in ME$, $H'\in\omega$, $H'\in CH$ and $CC^*\parallel\ell$:
 \[\measuredangle(MH',ME)=\measuredangle(MH',MC^*)=\measuredangle(CH',CC^*)=\measuredangle(HH',\ell)=\measuredangle(HH',HE).\]</p><p><strong>Step 4: a tangency criterion.</strong> Let $\Gamma_1$, $\Gamma_2$ be circles through a point $M$ meeting a line $\ell\not\ni M$ at $E,H$ and at
 $F,G$. The tangents $t_1,t_2$ at $M$ satisfy $\measuredangle(t_1,ME)=\measuredangle(HM,\ell)$ and $\measuredangle(t_2,MF)=\measuredangle(GM,\ell)$
 (tangent&ndash;chord angle), so
@@ -203,8 +204,10 @@ an operation do not change), if all numbers are $p$-divisible after an operation
 step, the initial board $1,1,\dots,1$ would consist of $p$-divisible numbers, which is false. Hence $n$ has no odd prime factor.</p><p>The answer is
 \[\boxed{n=2^k,\ k\ge1}\]</p>
 <h4>Solution 2 (Going backwards with the numbers $nm/2^j$)</h4>
-<p>As in Solution 1, the sum of the numbers is always $n$, all numbers on the board
-are rational and non-negative, a board showing $n$ is $n,0,\dots,0$, and powers of two work (the operation turns $x,x$ into $0,2x$).</p><p>Call a number <em>good</em> if it equals $\frac{nm}{2^j}$ for some integers $m\ge0$, $j\ge0$. Finitely many good numbers can be written with
+<p>Since $\frac{(a-b)^2}{a+b}+\frac{4ab}{a+b}=a+b$, the sum of the numbers is always $n$. All numbers on the board are rational and
+non-negative (if $a,b\ge0$ are rational and not both $0$, so are the two new numbers), so a board showing $n$ is $n,0,\dots,0$.
+Powers of two work: the operation turns $x,x$ into $0,2x$, so for $n=2^k$ we pair the ones into pairs giving $0,2$, then pair the twos,
+and so on; after $k$ rounds the board shows $2^k=n$.</p><p>Call a number <em>good</em> if it equals $\frac{nm}{2^j}$ for some integers $m\ge0$, $j\ge0$. Finitely many good numbers can be written with
 one common $j$ (multiply $m$ by a power of $2$).</p><p><em>Lemma.</em> If an operation turns $a,b$ into $a',b'$ and $a',b'$ are good, then $a$ and $b$ are good.</p><p><em>Proof.</em> Write $a'=\frac{nm_1}{2^j}$, $b'=\frac{nm_1'}{2^j}$, and $s=a+b=a'+b'=\frac{nm_2}{2^j}$ with $m_2=m_1+m_1'$; here $s&gt;0$, as
 $a,b$ are not both $0$. Since $a'=\frac{(a-b)^2}{s}$,
 \[(a-b)^2=a's=\frac{n^2m_1m_2}{4^j}.\]

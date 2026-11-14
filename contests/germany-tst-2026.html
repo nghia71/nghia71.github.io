@@ -1130,7 +1130,11 @@ $M$ lie in the blocks with $k=0,1,\dots,b$, so there are at most
 \[\sum_{k=0}^{b}3\cdot2^{k/2}&lt;\frac{3}{\sqrt2-1}\,2^{(b+1)/2}=\frac{3}{\sqrt2-1}\sqrt M\]
 of them. This is at most $M/2025^{2025}$ as soon as $\sqrt M\ge3\cdot2025^{2025}/(\sqrt2-1)$, which holds for $b$ large enough. Such an $M$ proves (b).</p>
 <h4>Solution 2 (Part (b) by forbidden residue classes and the Chinese remainder theorem)</h4>
-<p>Part (a) is proved as in Solution 1. For (b) we only use the inequality $f_{2k-1}(n)\le f_{2k+1}(n)$, which every grouse number satisfies.</p><p><strong>Forbidden classes.</strong> Let $k\ge2$, $a=2^{2k-1}-1$ and $b=2^{2k+1}-1$. Recall $\gcd(2^u-1,2^v-1)=2^{\gcd(u,v)}-1$; since $\gcd(2k-1,2k+1)=1$, the
+<p><strong>(a)</strong> Write $d_i=2^i-1$; then $f_i(n)=n$ whenever $d_i&gt;n$. Fix $k\ge1$, put $x_k=d_k$ and, for $i=k-1,\dots,1$, let $x_i$ be the
+smallest multiple of $d_i$ that is $\ge x_{i+1}$; so $x_{i+1}\le x_i\le x_{i+1}+d_i-1$. Summing these steps,
+$0\le x_1-x_i\le\sum_{j&lt;i}(d_j-1)=2^i-2i&lt;d_i$. Hence for $i\le k$ we get $f_i(x_1)=x_1-x_i$, which does not decrease as $i$ grows; and for
+$i&gt;k$ we get $x_1\le d_k+2^k-2k&lt;2^{k+1}-1\le d_i$, so $f_i(x_1)=x_1\ge f_k(x_1)$. Thus $x_1\ge2^k-1$ is grouse, and as $k$ is arbitrary
+there are infinitely many grouse numbers.</p><p><strong>(b)</strong> we only use the inequality $f_{2k-1}(n)\le f_{2k+1}(n)$, which every grouse number satisfies.</p><p><strong>Forbidden classes.</strong> Let $k\ge2$, $a=2^{2k-1}-1$ and $b=2^{2k+1}-1$. Recall $\gcd(2^u-1,2^v-1)=2^{\gcd(u,v)}-1$; since $\gcd(2k-1,2k+1)=1$, the
 numbers $a,b$ are coprime. For each pair of integers $0\le j&lt;i\le a-1$ (there are $\binom a2$ pairs; note $j&lt;a&lt;b$) the Chinese remainder theorem gives one
 residue class modulo $ab$ consisting of the $n$ with $n\equiv i\pmod a$ and $n\equiv j\pmod b$, that is, $f_{2k-1}(n)=i&gt;j=f_{2k+1}(n)$. No grouse number
 lies in these $\binom a2$ classes. So the fraction of classes modulo $ab$ that may contain grouse numbers is at most

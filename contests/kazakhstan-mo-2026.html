@@ -94,10 +94,10 @@ common perpendicular bisector $\ell$: an isosceles trapezoid.</p>
 \[Z=\Bigl(\tfrac b2,-\tfrac b2\Bigr),\qquad Y=\Bigl(-\tfrac c2,\tfrac c2\Bigr),\qquad X=\Bigl(\tfrac{b+c}2,\tfrac{b+c}2\Bigr)\]
 (for $X$: the midpoint of $BC$ plus half of the vector $(c,b)$, which is perpendicular to $BC$, has length $\frac12BC$ and points away from $A$).
 Also $W=B+C-A=(b,c)$.</p><p>Then $\overrightarrow{YZ}=\frac{b+c}{2}(1,-1)$ and $\overrightarrow{XW}=\frac{b-c}{2}(1,-1)$, so $XW\parallel YZ$; the lengths
-$\frac{|b-c|}{\sqrt2}\ne\frac{b+c}{\sqrt2}$ differ, and $X$ is not on the line $YZ$ (which is $x+y=0$), so $XWYZ$ is a trapezoid, not a parallelogram.
+$\frac{|b-c|}{\sqrt2}\ne\frac{b+c}{\sqrt2}$ differ, and $X$ is not on the line $YZ$ (which is $x+y=0$), so the four points form a trapezoid with bases $XW$ and $YZ$, not a parallelogram (its vertices in convex order are $X,W,Z,Y$ if $b&gt;c$ and $X,W,Y,Z$ if $b&lt;c$).
 The midpoints of $XW$ and $YZ$ are $\bigl(\frac{3b+c}4,\frac{b+3c}4\bigr)$ and $\bigl(\frac{b-c}4,\frac{c-b}4\bigr)$; their difference is
 $\frac{b+c}{2}(1,1)$, perpendicular to the bases. So the two bases have a common perpendicular bisector, and the trapezoid is isosceles.
-(Equivalently, $XZ^2=WY^2=\frac{c^2+(2b+c)^2}{4}$.)</p>
+(As a check, $XZ^2=WY^2=\frac{c^2+(2b+c)^2}{4}$; $XZ$ and $WY$ are the legs or the diagonals, depending on the sign of $b-c$.)</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p2">
@@ -212,20 +212,20 @@ The answer is $\boxed{1+\sqrt{\frac{2}{n-1}}}$.</p>
 <section class="ct-problem" id="p6">
 <h3>Problem 6</h3>
 <div class="ct-meta">Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure</div>
-<div class="ct-text"><p>Let $BE$ and $CF$ be the altitudes of an acute triangle $ABC$ with $AB\ne AC$, and let them intersect at $H$. Let $M$ be the midpoint of side $BC$, and let $N$ be an arbitrary point on segment $AM$. A circle $\omega$ passes through points $B$ and $F$ and is tangent to line $BC$. Line $FN$ meets $\omega$ again at $X$. Prove that the circumcenter of triangle $BXC$ lies on line $HN$.</p></div>
+<div class="ct-text"><p>Let $BE$ and $CF$ be the altitudes of an acute triangle $ABC$ with $AB\ne AC$, and let them intersect at $H$. Let $M$ be the midpoint of side $BC$, and let $N\ne A$ be an arbitrary point on segment $AM$. A circle $\omega$ passes through points $B$ and $F$ and is tangent to line $BC$. Line $FN$ meets $\omega$ again at $X$. Prove that the circumcenter of triangle $BXC$ lies on line $HN$.</p></div>
 <details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 (A hidden circle and a pencil of circles)</h4>
 <div class="ct-fig"><img style="width:383px" src="/assets/contests/2026-27/kazakhstan-mo-6_s1.svg" alt="Figure for the solution"></div>
 <p>Let $D$ be the foot of the altitude from $A$, $P$ the foot of the perpendicular from $H$ to $AM$, $\Omega$ the circle with diameter $BC$
-(center $M$, through $E$ and $F$), $U$ the center of $\omega$, and $O'$ the circumcenter of $BXC$. Assume first $N\ne A,M$.</p><p><strong>Lemma 1. $B,F,M,P$ are concyclic.</strong> $\angle HPM=\angle HDM=90^\circ$, so $P,D$ lie on the circle with diameter $HM$ and $AP\cdot AM=AH\cdot AD$;
+(center $M$, through $E$ and $F$), $U$ the center of $\omega$, and $O'$ the circumcenter of $BXC$. Assume first $N\ne A,M$. Then $X\ne B$, since the line $FN$ passes through $B$ only if $N$ lies on $AB$, i.e. $N=A$; and $X\notin BC$, since $\omega$ meets $BC$ only at $B$. So $BXC$ is a genuine triangle.</p><p><strong>Lemma 1. $B,F,M,P$ are concyclic.</strong> $\angle HPM=\angle HDM=90^\circ$, so $P,D$ lie on the circle with diameter $HM$ and $AP\cdot AM=AH\cdot AD$;
 $\angle BFH=\angle BDH=90^\circ$ gives $AH\cdot AD=AF\cdot AB$. So $AP\cdot AM=AF\cdot AB$, and the converse of the power of a point gives the claim.</p><p><strong>Lemma 2. $B,X,P,N$ are concyclic.</strong> With directed angles modulo $180^\circ$: by the tangent&ndash;chord angle in $\omega$ (tangent $BC$ at $B$),
 $\angle(XB,XN)=\angle(XB,XF)=\angle(BC,BF)$; since $MB=MF$, $\angle(BM,BF)=\angle(FB,FM)$; by Lemma 1, $\angle(FB,FM)=\angle(PB,PM)=\angle(PB,PN)$.
 Hence $\angle(XB,XN)=\angle(PB,PN)$. Let $\kappa$ be this circle, with center $K$.</p><p><strong>Coordinates.</strong> Put $M=(0,0)$, $B=(-1,0)$, $C=(1,0)$, $A=(p,q)$ with $q&gt;0$, $p\ne0$ (as $AB\ne AC$), and $a=p^2+q^2&gt;1$ (angle $A$ acute).
 Then $H=(p,h)$ with $h=\frac{1-p^2}{q}$, and $N=sA$ with $0&lt;s&lt;1$. Since $AP\cdot AM=AH\cdot AD=q(q-h)=a-1$ and $AM=\sqrt a$, we get $P=\frac1aA$.
 For a circle $\gamma$ write $f_\gamma(Z)=|Z|^2-2Z\cdot Z_0+e$ for its power function.</p><ul class="ct-ul"><li><p>$\omega$ is tangent to $BC$ at $B$: $f_\omega=x^2+y^2+2x-2uy+1$. Its power at $A$ equals $AF\cdot AB=a-1$ (Lemma 1), which gives $u=\frac{p+1}{q}$.</p></li><li><p>On the line $AM$, $f_\kappa(\lambda A)=a(\lambda-\frac1a)(\lambda-s)$ since $\kappa$ meets it at $P$ and $N$. Comparing with
 $a\lambda^2-2\lambda K\cdot A+e_\kappa$: $e_\kappa=s$ and $2K\cdot A=1+as$. Then $f_\kappa(B)=0$ gives $1+2K_x+s=0$, so $K_x=-\frac{1+s}2$ and
-$K_y=\frac{1+as+p(1+s)}{2q}$.</p></li><li><p>$\Gamma=(BXC)$: $f_\Gamma=x^2+y^2-2zy-1$ with $O'=(0,z)$.</p></li></ul><p>$\omega,\kappa,\Gamma$ all pass through $B$ and $X$, and $\omega\ne\kappa$ (otherwise $P\in\omega$; but the inversion in $\Omega$ maps $\omega$ to itself
-and $A$ to $P$, and $A\notin\omega$). So $f_\Gamma=\lambda f_\omega+(1-\lambda)f_\kappa$ for some $\lambda$. Constant terms: $-1=\lambda+(1-\lambda)s$, so
+$K_y=\frac{1+as+p(1+s)}{2q}$.</p></li><li><p>$\Gamma=(BXC)$: $f_\Gamma=x^2+y^2-2zy-1$ with $O'=(0,z)$.</p></li></ul><p>$\omega,\kappa,\Gamma$ all pass through $B$ and $X$, and $\omega\ne\kappa$ (otherwise $P\in\omega$; but $\omega$ does not meet the line $AM$: by the formulas above, $f_\omega(tA)=at^2+2tp-2tuq+1=at^2-2t+1$,
+whose discriminant $4-4a$ is negative). So $f_\Gamma=\lambda f_\omega+(1-\lambda)f_\kappa$ for some $\lambda$. Constant terms: $-1=\lambda+(1-\lambda)s$, so
 $\lambda=\frac{1+s}{s-1}$. Coefficients of $y$:
 \[z=\lambda u+(1-\lambda)K_y=\frac{(1+s)(p+1)-(1+as+p+ps)}{q(s-1)}=\frac{s(1-a)}{q(s-1)} .\]</p><p><strong>The line $HN$.</strong> It meets $x=0$ at $H+\frac{1}{1-s}(N-H)$, whose $y$-coordinate is $\frac{s(q-h)}{1-s}=\frac{s(1-a)}{q(s-1)}$ (as $q-h=\frac{a-1}{q}$).
 This is $z$, so $O'\in HN$.</p><p><strong>Special positions.</strong> For $N=M$ the line $FM$ is tangent to $\omega$ at $F$ ($MF^2=MB^2$ is the power of $M$), so $X=F$, $\Gamma=\Omega$ and $O'=M\in HM$.
@@ -234,13 +234,23 @@ the circle $\kappa=(BXP)$ is tangent to line $AM$ at $P$. Then $f_\kappa(\lambda
 $s=\tfrac1a$, and the rest of the computation is unchanged.
 (For $N=A$ we get $X=B$ and the triangle degenerates.)</p>
 <h4>Solution 2 (Moving N along the median)</h4>
-<p>Keep $P$, $U$, Lemmas 1 and 2 of Solution 1, and let $\ell$ be the perpendicular bisector of $BC$. For $N$ on line $AM$, $N\ne P$, let $K(N)$
-be the center of the circle $(BPN)$, and let $K(P)$ be the center of the circle through $B$ tangent to $AM$ at $P$.</p><p><strong>Reduction.</strong> For $N\ne A$ on the segment, $X\ne B$, and by Lemma 2 the circles $\omega$ and $(BPN)$ have common chord $BX$ (for $N=P$, by Lemma 2 in its tangent form, see Solution 1, the
+<p>Let $D$ be the foot of the altitude from $A$, $P$ the foot of the perpendicular from $H$ to $AM$, $\Omega$ the circle with diameter $BC$
+(center $M$, through $E$ and $F$), $U$ the center of $\omega$, $O'$ the circumcenter of $BXC$, and $\ell$ the perpendicular bisector of $BC$. Angles
+$\angle(\cdot,\cdot)$ are directed, modulo $180^\circ$.</p><p><strong>Lemma 1. $B,F,M,P$ are concyclic.</strong> $\angle HPM=\angle HDM=90^\circ$, so $P,D$ lie on the circle with diameter $HM$ and $AP\cdot AM=AH\cdot AD$;
+$\angle BFH=\angle BDH=90^\circ$ gives $AH\cdot AD=AF\cdot AB$. So $AP\cdot AM=AF\cdot AB$, and the converse of the power of a point gives the claim.
+Moreover $AF\cdot AB$ is the power $MA^2-MB^2$ of $A$ in $\Omega$, so $MA^2-MP\cdot MA=MA^2-MB^2$, i.e. $MP\cdot MA=MB^2$; as $A$ is outside $\Omega$
+(angle $A$ is acute), $MP&lt;MB&lt;MA$.</p><p><strong>$P\notin\omega$.</strong> The power of $M$ in $\omega$ is $MB^2$ ($\omega$ touches $BC$ at $B$). For the point of line $AM$ at signed distance $x$ from $M$
+(positive towards $A$) the power in $\omega$ is $x^2-2\beta x+MB^2$ for a constant $\beta$; at $A$ it is $AF\cdot AB=MA^2-MB^2$, which gives $\beta=MB^2/MA=MP$.
+So the power equals $(x-MP)^2+MB^2-MP^2&gt;0$: $\omega$ does not meet line $AM$.</p><p><strong>Lemma 2.</strong> Let $N\ne A$; then $X\ne B$, because the line $FN$ passes through $B$ only if $N$ lies on $AB$. By the tangent&ndash;chord angle in $\omega$,
+$\angle(XB,XN)=\angle(XB,XF)=\angle(BC,BF)$; since $MB=MF$, $\angle(BM,BF)=\angle(FB,FM)$; by Lemma 1, $\angle(FB,FM)=\angle(PB,PM)$. Hence
+$\angle(XB,XN)=\angle(PB,PM)$. For $N\ne P$ this says that $B,X,P,N$ are concyclic; for $N=P$ it says (converse of the tangent&ndash;chord angle) that the circle
+$BXP$ is tangent to $AM$ at $P$.</p><p>For $N$ on line $AM$, $N\ne P$, let $K(N)$
+be the center of the circle $(BPN)$, and let $K(P)$ be the center of the circle through $B$ tangent to $AM$ at $P$.</p><p><strong>Reduction.</strong> For $N\ne A$ on the segment, $X\ne B$, and by Lemma 2 the circles $\omega$ and $(BPN)$ have common chord $BX$; they are different circles, as $P\notin\omega$ (for $N=P$, by the tangent form of Lemma 2, the
 circle through $B$ and $X$ tangent to $AM$ at $P$ is the circle with center $K(P)$, and it meets $\omega$ at $B$ and $X$); so the perpendicular bisector of
 $BX$ is the line $UK(N)$, and $O'=\ell\cap UK(N)$. So it suffices to show $\varphi(N)=\psi(N)$, where $\varphi(N)=\ell\cap UK(N)$ and $\psi(N)=\ell\cap HN$.</p><p><strong>Both maps are projective.</strong> $K(N)$ is the intersection of the perpendicular bisector $m$ of $BP$ with the perpendicular to $AM$ at the midpoint of $PN$;
-so $N\mapsto K(N)$ is an affine bijection from line $AM$ onto $m$ (it also covers $N=P$). $U\notin m$ (as $P\notin\omega$, see Solution 1) and $U\notin\ell$
+so $N\mapsto K(N)$ is an affine bijection from line $AM$ onto $m$ (it also covers $N=P$). $U\notin m$ (as $P\notin\omega$) and $U\notin\ell$
 ($U$ lies on the perpendicular to $BC$ at $B$), so $K\mapsto \ell\cap UK$ is a central projection. Hence $\varphi$ is a projective map from line $AM$ to
-$\ell$. So is $\psi$, the central projection from $H\notin AM$. Two projective maps of a line that agree at three points coincide.</p><p><strong>Three points.</strong></p><ul class="ct-ul"><li><p>$N=A$: $MP\cdot MA=MB^2$ (from $AP\cdot AM=AF\cdot AB$ and the power of $A$ in $\Omega$), so $(BPA)$ is tangent to $BC$ at $B$ and $K(A)$ lies on the
+$\ell$. So is $\psi$, the central projection from $H\notin AM$. Two projective maps of a line that agree at three points coincide.</p><p><strong>Three points.</strong></p><ul class="ct-ul"><li><p>$N=A$: $MP\cdot MA=MB^2$ (Lemma 1), so $(BPA)$ is tangent to $BC$ at $B$ and $K(A)$ lies on the
 perpendicular to $BC$ at $B$, like $U$. So $UK(A)\parallel\ell$; also $HA\parallel\ell$. Both images are the point at infinity of $\ell$.</p></li><li><p>$N=M$: $(BPM)$ is the circle $BFMP$ of Lemma 1; $\omega$ and it meet at $B,F$, so $U,K(M)$ lie on the perpendicular bisector of $BF$, which passes through
 $M$ ($MB=MF$). So $\varphi(M)=M=\psi(M)$.</p></li><li><p>$N=P$: $K(P)$ lies on the perpendicular to $AM$ at $P$, which is line $HP$. Also $U\in HP$: the circles $(BFMP)$ and $(BFMU)$ (the latter has diameter
 $MU$, since $\angle MBU=\angle MFU=90^\circ$, $MF$ being tangent to $\omega$) share $B,F,M$, so they coincide and $\angle MPU=90^\circ$. Hence
@@ -294,7 +304,7 @@ a contradiction.</p><p>So the answer is <strong>no</strong>.</p>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Coordinates)</h4>
 <div class="ct-fig"><img style="width:238px" src="/assets/contests/2026-27/kazakhstan-mo-8_s1.svg" alt="Figure for the solution"></div>
-<p>Put $A=(0,0)$, $C=(c,0)$ and, since $\angle BAC=45^\circ$, $B=(b,b)$ with $b&gt;0$; then $D=A+C-B=(c-b,-b)$.</p><p><strong>The circle and $E$.</strong> The circle $(ACD)$ is $x^2+y^2-cx+(2b-c)y=0$ (it passes through $A$, $C$, and $D$: $(c-b)^2+b^2-c(c-b)-(2b-c)b=0$).
+<p>Put $A=(0,0)$, $C=(c,0)$ and, since $\angle BAC=45^\circ$, $B=(b,b)$ with $b&gt;0$; then $D=A+C-B=(c-b,-b)$. Since $\angle ABC&gt;90^\circ$, $\overrightarrow{BA}\cdot\overrightarrow{BC}=(-b)(c-b)+(-b)(-b)=b(2b-c)&lt;0$, so $c&gt;2b$.</p><p><strong>The circle and $E$.</strong> The circle $(ACD)$ is $x^2+y^2-cx+(2b-c)y=0$ (it passes through $A$, $C$, and $D$: $(c-b)^2+b^2-c(c-b)-(2b-c)b=0$).
 The perpendicular from $A$ to $BC$ has direction $(b,c-b)$ (as $\overrightarrow{BC}=(c-b,-b)$). Substituting $\lambda(b,c-b)$:
 \[\lambda^2\bigl(b^2+(c-b)^2\bigr)=\lambda\bigl(cb-(2b-c)(c-b)\bigr)=\lambda\bigl(2b^2-2bc+c^2\bigr),\]
 so $\lambda=1$ and $E=(b,c-b)$. Then $EB$ is the vertical line $x=b$ and $F=(b,0)$, so $AF=b$, $EF=c-b$, and $EF=2AF$ gives $c=3b$.</p><p>Scale so that $b=1$: $A=(0,0)$, $B=(1,1)$, $C=(3,0)$, $D=(2,-1)$, $E=(1,2)$, $F=(1,0)$, and the circle is $x^2+y^2-3x-y=0$. (Indeed
@@ -303,8 +313,8 @@ $BC$ is $x+2y=3$, so $N=(0,\frac32)$.</p><p><strong>Concurrency.</strong> $CM:\ 
 $AE$ pass through $Q$.</p>
 <h4>Solution 2 (The orthocenter and Ceva)</h4>
 <p><strong>$E$ is the orthocenter of $ABC$.</strong> $AD\parallel BC$, so $AE\perp AD$ and $ED$ is a diameter of $(ACD)$. Hence $EC\perp CD\parallel AB$.
-Thus $E$ lies on the altitudes from $A$ and $C$: it is the orthocenter, and $BE\perp AC$, i.e. $F$ is the foot of the altitude from $B$.</p><p><strong>The shape.</strong> As $\angle BAF=45^\circ$, $AF=BF=:t$. Triangles $AFE$ and $BFC$ are congruent (right angles at $F$, $AF=BF$, $\angle FAE=90^\circ-\angle C=\angle FBC$),
-so $FC=FE=2t$ and $AC=3t$. The orientation used below: $B$ and $E$ lie on the same side of $AC$, with $FB=t$, $FE=2t$.</p><p><strong>The point $M$.</strong> Let $D'$ be the foot of $D$ on $AC$. By the central symmetry in the midpoint of $AC$ (which swaps $A,C$ and $B,D$), $CD'=AF=t$ and
+Thus $E$ lies on the altitudes from $A$ and $C$: it is the orthocenter, and $BE\perp AC$, i.e. $F$ is the foot of the altitude from $B$.</p><p><strong>The shape.</strong> The angle at $B$ is obtuse, so the angles at $A$ and $C$ are acute and the foot $F$ lies strictly between $A$ and $C$. As $\angle BAF=45^\circ$, $AF=BF=:t$. Triangles $AFE$ and $BFC$ are congruent (right angles at $F$, $AF=BF$, $\angle FAE=90^\circ-\angle C=\angle FBC$),
+so $FC=FE=2t$ and $AC=3t$. Moreover $B$ and $E$ lie on the same side of $AC$ (the orthocenter of a triangle with an obtuse angle at $B$ lies on the ray $FB$, beyond $B$), with $FB=t$, $FE=2t$.</p><p><strong>The point $M$.</strong> Let $D'$ be the foot of $D$ on $AC$. By the central symmetry in the midpoint of $AC$ (which swaps $A,C$ and $B,D$), $CD'=AF=t$ and
 $DD'=t$, so $FD'=t=DD'$ and line $DF$ makes $45^\circ$ with $AC$. On the other side of $F$ it meets the perpendicular to $AC$ at $A$ in a point $M'$ with $AM'=AF=t$,
 and $FM'=FD=t\sqrt2$. Then $FM'\cdot FD=2t^2=FA\cdot FC$, so $M'$ lies on $(ACD)$: $M=M'$, $AM\perp AC$, $AM=t$.</p><p><strong>The point $N$.</strong> Line $BC$ has height $t$ at distance $2t$ from $C$ (at $B$), so by similar triangles it has height $\frac32t$ at distance $3t$ from $C$:
 $AN=\frac32t$, $MN=\frac t2$, and $M$ lies between $A$ and $N$.</p><p><strong>Ceva in the right triangle $NAC$.</strong> Line $AE$ is perpendicular to $BC=NC$, so it meets $NC$ at the foot $G$ of the altitude from the right angle $A$, and
@@ -396,7 +406,7 @@ Put $D_P=\sum_{k\in P}d_k\ge0$ and $D_Q=\sum_{k\in Q}(-d_k)\ge0$, so $\sum|a_k-b
 Now $a_k\ge d_k\ge0$, and $A-b_k\ge\sum_{j\in P}a_j-\sum_{j\in P}b_j=D_P$ (since $A\ge\sum_{j\in P}a_j$ and $b_k\le\sum_{j\in P}b_j$). So $1\ge d_kD_P$.</p><p>Summing over $k\in P$: $D_P^2\le p$. Symmetrically (using $a_k^2+1\ge b_kB$), $D_Q^2\le q$. Hence
 \[\sum|a_k-b_k|\le\sqrt p+\sqrt q\le\sqrt{2(p+q)}=\sqrt{2n}\le\sqrt{8n}.\]</p>
 <h4>Solution 2 (Expanding the square of the sum)</h4>
-<p>Keep $A$, $B$, $d_k=a_k-b_k$, and put $s_k=a_k+b_k$, $T=\sum|d_k|$.</p><p><strong>Two facts.</strong> (1) $a_k^2\le a_kA\le b_k^2+1$ and symmetrically, so $|a_k^2-b_k^2|\le1$, i.e. $|d_k|s_k\le1$; since also $|d_k|\le s_k$, $d_k^2\le1$.
+<p>Let $A=\sum a_k$, $B=\sum b_k$, $d_k=a_k-b_k$, and put $s_k=a_k+b_k$, $T=\sum|d_k|$.</p><p><strong>Two facts.</strong> (1) $a_k^2\le a_kA\le b_k^2+1$ and symmetrically, so $|a_k^2-b_k^2|\le1$, i.e. $|d_k|s_k\le1$; since also $|d_k|\le s_k$, $d_k^2\le1$.
 (2) Adding $a_kA\le b_k^2+1$ and $b_kB\le a_k^2+1$ and summing over $k$: $A^2+B^2\le\sum(a_k^2+b_k^2)+2n$, i.e.
 \[\sum_{i\ne j}(a_ia_j+b_ib_j)\le2n .\]</p><p><strong>Estimate.</strong> $T^2=\sum d_k^2+\sum_{i\ne j}|d_i||d_j|\le\sum d_k^2+\sum_{i\ne j}s_is_j$. Using $a_ib_j+b_ia_j=a_ia_j+b_ib_j-d_id_j$,
 \[\sum_{i\ne j}s_is_j=2\sum_{i\ne j}(a_ia_j+b_ib_j)-\sum_{i\ne j}d_id_j\le4n+\sum d_k^2-\Bigl(\sum d_k\Bigr)^2\le4n+\sum d_k^2.\]
@@ -425,7 +435,9 @@ the point $\lambda M+(1-\lambda)N$ has coordinates
 \[\Bigl(\tfrac{(a-c)(b+d)+(b-d)(a+c)}{2S}\cos\theta,\ \tfrac{(a-c)(b+d)-(b-d)(a+c)}{2S}\sin\theta\Bigr)=\Bigl(\tfrac{ab-cd}{S}\cos\theta,\ \tfrac{ad-bc}{S}\sin\theta\Bigr)=\mathcal P .\]
 So $P=\mathcal P=\frac{BD\cdot M+AC\cdot N}{AC+BD}$ is on line $MN$ and has equal powers with respect to the four circles.</p>
 <h4>Solution 2 (Powers along the diagonals)</h4>
-<p>Use the Lemma of Solution 1. On line $AC$ use the coordinate $t$ measured from $E$ towards $A$; on line $BD$ the coordinate $s$ from $E$
+<p>Let $a=EA$, $b=EB$, $c=EC$, $d=ED$.</p><p><strong>Lemma.</strong> $\omega_1$ is symmetric in the bisector of $\angle AEB$. Indeed, by the incenter&ndash;excenter lemma the circle through $A,B,I_1$ is centered at the
+midpoint of arc $AB$ of the circumcircle of $ABE$, which lies on the bisector $EI_1$. So $\omega_1$ contains the reflection of $B$ in this bisector, the point of ray
+$EA$ at distance $b$ from $E$. The same holds for $\omega_2,\omega_3,\omega_4$ with the bisectors of $\angle BEC$, $\angle CED$, $\angle DEA$.</p><p>On line $AC$ use the coordinate $t$ measured from $E$ towards $A$; on line $BD$ the coordinate $s$ from $E$
 towards $B$. By the Lemma, line $AC$ meets $\omega_1$ at $A$ ($t=a$) and at the reflection of $B$ ($t=b$), $\omega_2$ at $C$ ($t=-c$) and the reflection of $B$
 ($t=-b$), $\omega_3$ at $t=-c,-d$, $\omega_4$ at $t=a,d$. Hence on line $AC$ the power functions are
 \[f_1=(t-a)(t-b),\quad f_2=(t+c)(t+b),\quad f_3=(t+c)(t+d),\quad f_4=(t-a)(t-d),\]

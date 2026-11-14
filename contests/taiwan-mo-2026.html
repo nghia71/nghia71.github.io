@@ -77,13 +77,14 @@ description: Taiwan Mathematical Olympiad 2026: problems with answers and soluti
 \[\sum_{i=1}^n\min(a_{\pi_i},b_i)\leq\sum_{i=1}^n\min(a_i,b_i)\]</p></div>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Layer by layer)</h4>
-<p>Choose a number $m$ smaller than all $a_i$ and $b_i$. For real $x,y\ge m$,
-\[\min(x,y)=m+\int_m^{\infty}[t&lt;x]\,[t&lt;y]\,dt,\]
-where $[\,\cdot\,]$ is $1$ if the statement holds and $0$ otherwise (the integrand is $1$ exactly for $m\le t&lt;\min(x,y)$). Summing over $i$,
-\[\sum_{i=1}^n\min(a_{\pi_i},b_i)=nm+\int_m^\infty N_\pi(t)\,dt,\qquad N_\pi(t)=\#\{i:\ a_{\pi_i}&gt;t\ \text{and}\ b_i&gt;t\}.\]
+<p>List the distinct values among all $a_i$ and $b_i$ as $t_0&lt;t_1&lt;\dots&lt;t_r$, and write $[\,\cdot\,]$ for $1$ if the statement holds and $0$ otherwise.
+For any $x,y$ in this list,
+\[\min(x,y)=t_0+\sum_{j=0}^{r-1}(t_{j+1}-t_j)\,[x&gt;t_j]\,[y&gt;t_j],\]
+because the terms with both brackets equal to $1$ are exactly those with $t_j&lt;\min(x,y)$, and their sum telescopes to $\min(x,y)-t_0$. Summing over $i$,
+\[\sum_{i=1}^n\min(a_{\pi_i},b_i)=nt_0+\sum_{j=0}^{r-1}(t_{j+1}-t_j)\,N_\pi(t_j),\qquad N_\pi(t)=\#\{i:\ a_{\pi_i}&gt;t\ \text{and}\ b_i&gt;t\}.\]
 Fix $t$. Let $\alpha$ be the number of indices $j$ with $a_j&gt;t$ and $\beta$ the number with $b_j&gt;t$. Clearly $N_\pi(t)\le\min(\alpha,\beta)$. For the identity
 permutation, since both sequences are non-decreasing, $\{i:a_i&gt;t\}$ consists of the last $\alpha$ indices and $\{i:b_i&gt;t\}$ of the last $\beta$ indices; their
-intersection is the last $\min(\alpha,\beta)$ indices, so $N_{\mathrm{id}}(t)=\min(\alpha,\beta)\ge N_\pi(t)$. Integrating over $t$ gives
+intersection is the last $\min(\alpha,\beta)$ indices, so $N_{\mathrm{id}}(t)=\min(\alpha,\beta)\ge N_\pi(t)$. As every weight $t_{j+1}-t_j$ is positive, summing over $j$ gives
 $\sum\min(a_{\pi_i},b_i)\le\sum\min(a_i,b_i)$.</p>
 <h4>Solution 2 (Removing inversions)</h4>
 <p><strong>Lemma.</strong> If $x\le y$ and $u\le v$, then $\min(y,u)+\min(x,v)\le\min(x,u)+\min(y,v)$.</p><p><em>Proof.</em> If $u\le x$, then $\min(y,u)=\min(x,u)=u$ and the claim is $\min(x,v)\le\min(y,v)$, true as $x\le y$. If $u&gt;x$, then $v&gt;x$, so
@@ -96,7 +97,7 @@ after finitely many swaps, and the sum never decreases on the way. Hence $\sum\m
 <section class="ct-problem" id="p2">
 <h3>Problem 2</h3>
 <div class="ct-meta">Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure</div>
-<div class="ct-text"><p>Let $\triangle ABC$ be inscribed in a circle $\omega$. Denote $M$ as the midpoint of $BC$. Let $P$ be the midpoint of the chord of $\omega$ that passes through $M$ and is perpendicular to $AC$. Let $Q$ be the midpoint of the chord of $\omega$ that passes through $M$ and is perpendicular to $AB$. Prove that $PQ$ is perpendicular to $AO$, where $O$ is the center of $\omega$.</p></div>
+<div class="ct-text"><p>Let $\triangle ABC$ with $\angle BAC\neq90^\circ$ be inscribed in a circle $\omega$. Denote $M$ as the midpoint of $BC$. Let $P$ be the midpoint of the chord of $\omega$ that passes through $M$ and is perpendicular to $AC$. Let $Q$ be the midpoint of the chord of $\omega$ that passes through $M$ and is perpendicular to $AB$. Prove that $PQ$ is perpendicular to $AO$, where $O$ is the center of $\omega$.</p></div>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
 <h4>Solution 1 (A circle on diameter $OM$)</h4>
 <div class="ct-fig"><img style="width:248px" src="/assets/contests/2026-27/taiwan-mo-2_s1.svg" alt="Figure for the solution"></div>
@@ -139,12 +140,19 @@ $\{2,4\},\{6,8\},\dots,\{2022,2024\},\{3,5\},\dots,\{2023,2025\}$, and give the 
 $c&lt;c'$, colour $(2t-1,c)$ and $(2t,c')$ red. Cover columns left of $c$ and right of $c'$ by vertical dominoes, the cells $c+1,\dots,c'$ of the upper row
 and $c,\dots,c'-1$ of the lower row by horizontal dominoes (both runs have the even length $c'-c$).</p></li></ul><p>The $2025$ red blocks lie in different rows and in different columns (columns $1,\dots,2025$), there is one yellow block, and the rest is tiled. So the maximum is $2025$.</p>
 <h4>Solution 2 (Sum of coordinates: the same parity, counted differently)</h4>
+<div class="ct-fig"><img style="width:223px" src="/assets/contests/2026-27/taiwan-mo-3_s2.svg" alt="Figure for the solution"></div>
 <p><strong>Impossibility of 2026.</strong> The red blocks lie in different rows, so there are at most $2026$
 of them; if there are $2026$, all coloured blocks are red, one in each row and each column, so they are the cells $(i,\sigma(i))$ for a permutation $\sigma$ of $\{1,\dots,2026\}$. Give cell $(i,j)$ the weight $i+j$.
 A domino covers two adjacent cells, whose weights differ by $1$, so it covers an odd total weight. The uncoloured part is covered by
 $\frac{2026^2-2026}{2}=1013\cdot2025$ dominoes, an odd number, so its total weight is odd. On the other hand
 \[\sum_{\text{all cells}}(i+j)=2\cdot2026\cdot\frac{2026\cdot2027}{2}\quad\text{and}\quad\sum_{i}\bigl(i+\sigma(i)\bigr)=2026\cdot2027\]
-are both even, so the uncoloured part has even total weight. Contradiction; hence $R\le2025$.</p><p><strong>Example with 2025 red blocks.</strong> The construction of Solution 1. (The figure shows one row pair: removed cells in columns $c&lt;c'$ of the same parity, and the tiling.)</p>
+are both even, so the uncoloured part has even total weight. Contradiction; hence $R\le2025$.</p><p><strong>Example with 2025 red blocks.</strong> Pair the rows as $(2t-1,2t)$, $t=1,\dots,1013$. In row pair $t=1$, colour $(1,1)$ red and $(2,1)$ yellow, and cover
+the rest of these two rows by vertical dominoes in columns $2,\dots,2026$. Columns $2,\dots,2025$ are $1012$ even and $1012$ odd numbers; split them into $1012$
+pairs $c&lt;c'$ of equal parity (for instance $\{2,4\},\{6,8\},\dots,\{2022,2024\},\{3,5\},\dots,\{2023,2025\}$) and give one pair to each row pair $t=2,\dots,1013$.
+In row pair $t$ with columns $c&lt;c'$, colour $(2t-1,c)$ and $(2t,c')$ red. Cover the columns left of $c$ and right of $c'$ by vertical dominoes, and the
+cells in columns $c+1,\dots,c'$ of the upper row and $c,\dots,c'-1$ of the lower row by horizontal dominoes; both runs have the even length $c'-c$.
+(The figure shows one such row pair.) The $2025$ red blocks lie in different rows and in different columns (columns $1,\dots,2025$), there is one yellow block,
+and the rest is tiled. So the maximum is $2025$.</p>
 <h4>Solution 3 (Parity of a permutation and diagonal blocks)</h4>
 <div class="ct-fig"><img style="width:267px" src="/assets/contests/2026-27/taiwan-mo-3_s3.svg" alt="Figure for the solution"></div>
 <p>Number the rows and columns $1,\dots,2026$ and colour cell $(i,j)$ (row $i$, column $j$) black if $i+j$ is even and white if $i+j$ is odd.</p><p><strong>2026 red blocks are impossible.</strong> Red blocks lie in different rows, so there are at most $2026$ of them. Suppose there are $2026$. Then all $2026$ coloured blocks

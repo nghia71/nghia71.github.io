@@ -172,8 +172,8 @@ $n\equiv 1$ and $1$ (blue) if $n\equiv 2\pmod 3$: $n-1$ green lamps.</p></li><li
 $\equiv h+2\pmod 3$, which is red or blue. This gives $n$ green lamps if $3\mid n$ and $n-2$ otherwise.</p></li></ul><p>Hence the maximum is
 \[\boxed{\ n\ \text{if } 3\mid n;\qquad n-1\ \text{if } 3\nmid n,\ n\text{ odd};\qquad n-2\ \text{if } 3\nmid n,\ n\text{ even}\ }.\]</p>
 <h4>Solution 2 (Counting moves per lamp)</h4>
-<p>Use the numbering and residues of Solution 1: a move at lamp $i$ adds $1$ to $x_{i+1}$ and $-1$ to $x_{i-1}$
-(modulo $3$). The effects of moves simply add up, so the final state depends only on how many moves were made at each lamp, and
+<p>Number the lamps $0,1,\dots,n-1$ clockwise (indices modulo $n$) and record the colours as residues modulo $3$: red $=0$, blue $=1$, green $=2$, so that pressing a button adds $1$. A move at lamp $i$ then adds $1$ to $x_{i+1}$ and $2\equiv-1$ to $x_{i-1}$
+(modulo $3$), and initially all $x_j=0$. The effects of moves simply add up, so the final state depends only on how many moves were made at each lamp, and
 only modulo $3$. If $c_i\in\{0,1,2\}$ moves are made at lamp $i$, lamp $j$ ends with
 \[x_j\equiv c_{j-1}-c_{j+1}\pmod 3,\]
 because lamp $j$ is the clockwise neighbour of lamp $j-1$ and the counterclockwise neighbour of lamp $j+1$. Conversely every
@@ -231,14 +231,13 @@ Using $\tan u+\tan v=\frac{\sin(u+v)}{\cos u\cos v}$ this becomes $\sin(x+\alpha
 so $\cos(x+y+2\alpha)+\cos(x+y)=2\cos(x+y+\alpha)\cos\alpha=0$. As $\cos\alpha\ne 0$ and $0&lt;x+y+\alpha&lt;270^\circ$, we get
 $x+y+\alpha=90^\circ$, i.e. $x+y=90^\circ-\frac{\angle A}{2}=\frac{\angle B+\angle C}{2}$.</p><p><strong>The angle chase.</strong> We use directed angles between lines, modulo $180^\circ$. Place $B$ to the left of $C$ with $A$ above $BC$,
 and measure the direction of each line counterclockwise from $BC$. By symmetry in the perpendicular bisector,
-$\angle PCB=x$ and $\angle QCB=y$. The directions are: $BA$: $\angle B$; $BQ$: $y$; $BP$: $x$; $CQ$: $-y$; $CP$: $-x$; $CA$: $-\angle C$.</p><p>Let $Z$ be the second common point of the circles $(ABQ)$ and $(PQX)$ (if they touch at $Q$, take $Z=Q$ and read $ZQ$ as the common
-tangent). Using these two circles,
+$\angle PCB=x$ and $\angle QCB=y$. The directions are: $BA$: $\angle B$; $BQ$: $y$; $BP$: $x$; $CQ$: $-y$; $CP$: $-x$; $CA$: $-\angle C$.</p><p>The circles $(ABQ)$ and $(PQX)$ share $Q$ and are different, since one circle cannot contain the three collinear points $B,P,X$. Let $Z$ be their second common point (if they touch at $Q$, take $Z=Q$ and read $ZQ$ as the common
+tangent). If $Z=A$ or $Z=P$, there is nothing to prove: then $A$, respectively $P$, already lies on all three circles. Otherwise, using these two circles,
 \[\measuredangle(ZA,ZP)=\measuredangle(ZA,ZQ)+\measuredangle(ZQ,ZP)=\measuredangle(BA,BQ)+\measuredangle(XQ,XP)
 =(y-\angle B)+(x+y),\]
 since $XQ$ is the line $CQ$ and $XP$ is the line $BP$. On the other hand $\measuredangle(CA,CP)=-x+\angle C$. The difference is
 \[(x+2y-\angle B)-(\angle C-x)=2(x+y)-(\angle B+\angle C)=0\]
-by the Lemma. Hence $\measuredangle(ZA,ZP)=\measuredangle(CA,CP)$, so $Z$ lies on the circle $(ACP)$. (If $Z=A$ or $Z=P$, there is
-nothing to prove: then $A$, respectively $P$, already lies on all three circles.) Thus $Z$ is a common point of the circumcircles of
+by the Lemma. Hence $\measuredangle(ZA,ZP)=\measuredangle(CA,CP)$, so $Z$ lies on the circle $(ACP)$. Thus $Z$ is a common point of the circumcircles of
 $ABQ$, $ACP$ and $PQX$.</p>
 </div></details>
 </section>

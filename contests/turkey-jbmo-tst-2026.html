@@ -108,7 +108,7 @@ edges and twin edges; in particular every cycle has even length. Colour the ball
 every bag has one blue and one red ball, and so does every twin pair.</p><p>Since every twin pair $\{2i-1,2i\}$ has one blue and one red ball, it contributes $+1$ or $-1$ to $M-K$. Hence
 $M-K=\sum_{i=1}^{1013}(\pm1)$, and $|M-K|\le 1013$.</p><p>So the smallest possible $N$ is $\boxed{1013}$.</p>
 <h4>Solution 2 (Induction by merging bags)</h4>
-<p>The example of Solution 1 (bags $\{1,2026\},\{2,3\},\dots,\{2024,2025\}$) shows $N\ge 1013$.</p><p>For the upper bound we prove: <em>for every $k\ge 1$ and every distribution of the balls $1,2,\dots,2k$ into $k$ bags of two,
+<p><em>Lower bound.</em> Take the bags $\{1,2026\},\{2,3\},\dots,\{2024,2025\}$. In every colouring the first bag changes $M-K$ by $\pm2025$ and each of the other $1012$ bags by $\pm1$, so $|M-K|\ge 2025-1012=1013$. Hence $N\ge 1013$.</p><p>For the upper bound we prove: <em>for every $k\ge 1$ and every distribution of the balls $1,2,\dots,2k$ into $k$ bags of two,
 there is a colouring with $|M-K|\le k$.</em> For $k=1013$ this gives $N\le 1013$.</p><p>For $k=1$ the only bag is $\{1,2\}$ and $|M-K|=1$. Let $k\ge 2$ and assume the claim for $k-1$. Look at the balls $2k$ and $2k-1$.</p><ul class="ct-ul"><li><p>If they share a bag, colour the other $k-1$ bags (balls $1,\dots,2k-2$) by the induction hypothesis with
 $|M'-K'|\le k-1$, and colour $2k,2k-1$ in either way. The last bag changes $M-K$ by $\pm1$, so $|M-K|\le k$.</p></li><li><p>Otherwise the bags are $\{2k,a\}$ and $\{2k-1,b\}$ with $a,b\le 2k-2$. Replace these two bags by the single bag $\{a,b\}$: this
 is a distribution of $1,\dots,2k-2$ into $k-1$ bags. By the induction hypothesis it has a colouring with $|M'-K'|\le k-1$; in it $a$
@@ -141,9 +141,8 @@ by the Lemma. So Asli can always reach $|M-K|\le 1013$, and the smallest possibl
 <div class="ct-fig"><img style="width:303px" src="/assets/contests/2026-27/turkey-jbmo-tst-3_s1.svg" alt="Figure for the solution"></div>
 <p>Let the lines $FA$, $BC$, $DE$ form the triangle $XYZ$ with
 \[X=FA\cap BC,\qquad Y=BC\cap DE,\qquad Z=DE\cap FA,\]
-so $S$ is its circumcenter.</p><p><strong>Parallel chords.</strong> Each of the arcs $AB$, $CD$, $EF$ (not containing other vertices) is less than a semicircle: these
-three arcs are disjoint, and since the chords are equal the arcs are equal or supplementary, so if one were at least $180^\circ$ the
-other two would each equal $360^\circ$ minus it and the three would add up to more than $360^\circ$. So the equal chords $AB$ and
+so $S$ is its circumcenter.</p><p><strong>Parallel chords.</strong> Consider the arcs $AB$, $CD$, $EF$ not containing other vertices; these
+three arcs are disjoint. Since the chords are equal, each of these arcs measures either $\alpha$ or $360^\circ-\alpha$, where $\alpha\le180^\circ$ is the minor arc of a chord of this length. If one of them measured $360^\circ-\alpha$, the three would add up to at least $(360^\circ-\alpha)+2\alpha&gt;360^\circ$; so all three measure $\alpha$. So the equal chords $AB$ and
 $CD$ cut off equal arcs, so the inscribed angles $\angle ADB$ and $\angle DBC$ are
 equal; these are alternate angles, hence $AD\parallel BC$. In the same way $CD=EF$ gives $CF\parallel DE$, and $EF=AB$ gives
 $BE\parallel FA$.</p><p><strong>Three parallelograms.</strong> The lines $AD$ and $BE$ pass through $K$; the line $AD$ is parallel to $BC\ni X,B$ and the line $BE$ is
@@ -160,8 +159,7 @@ circle cannot all be parallel (two parallel equal chords are symmetric about $O$
 perpendicular bisectors are different lines; both contain $O$ and $N$, hence $O=N$. Thus $O$ is the midpoint of $KS$, and $K$, $O$,
 $S$ are collinear.</p>
 <h4>Solution 2 (Projections onto the sides)</h4>
-<p>Use the triangle $XYZ$, the parallel chords $AD\parallel BC$, $BE\parallel FA$, $CF\parallel DE$ and the parallelograms
-$KAXB$, $KDYC$, $KFZE$ from Solution 1. In vector form the parallelograms say
+<p>Let $X=FA\cap BC$, $Y=BC\cap DE$, $Z=DE\cap FA$, so $S$ is the circumcenter of triangle $XYZ$. The arcs $AB$, $CD$, $EF$ not containing other vertices are disjoint, and as the chords are equal each arc measures $\alpha$ or $360^\circ-\alpha$, where $\alpha\le 180^\circ$; an arc of $360^\circ-\alpha$ would make the total at least $360^\circ+\alpha$, so all three arcs measure $\alpha$. Hence the inscribed angles $\angle ADB$ and $\angle DBC$ are equal, and as alternate angles they give $AD\parallel BC$; in the same way $CF\parallel DE$ and $BE\parallel FA$. The lines $AD$ and $BE$ pass through $K$ and are parallel to the lines $XB$ and $XA$, so $KAXB$ is a parallelogram; likewise $KDYC$ and $KFZE$ are parallelograms. In vector form the parallelograms say
 \[K+X=A+B,\qquad K+Y=C+D,\qquad K+Z=E+F.\]
 Let $S'=2O-K$ be the reflection of $K$ in $O$. We show that $S'$ is the circumcenter of $XYZ$.</p><p>Let $u$ be a unit vector along $BC$ and write $\pi(V)=\overrightarrow{OV}\cdot u$ for the signed projection of a point $V$. The
 perpendicular bisector of the chord $BC$ passes through $O$ and is perpendicular to $u$, so $\pi(B)+\pi(C)=2\pi(O)=0$. The chord
@@ -191,7 +189,7 @@ $x_1+\dots+x_k\le 15$; then $x_1+\dots+x_{k+1}&gt;15$, and since every number is
 Put $x_1,\dots,x_k$ in the big group and the rest in the small group, whose sum is
 \[T-(x_1+\dots+x_k)=T-(x_1+\dots+x_{k+1})+x_{k+1}&lt;\tfrac{115}{6}-15+\tfrac56=5.\]</p></li></ul><p>So the greatest value is $T=\boxed{\frac{115}{6}}$.</p>
 <h4>Solution 2 (An extremal splitting)</h4>
-<p>The example of Solution 1 ($23$ numbers just above $\frac56$, the rest small) shows that every $T&gt;\frac{115}{6}$ fails.</p><p>Now let the numbers have sum $T\le\frac{115}{6}$ and suppose that no valid splitting exists. Among all subsets with sum at most $5$
+<p><em>Every $T&gt;\frac{115}{6}$ fails.</em> For $\frac{115}{6}&lt;T\le 23$ take $23$ numbers equal to $\frac{T}{23}$ and ten zeros; for $23&lt;T\le33$ take $23$ ones and ten numbers equal to $\frac{T-23}{10}$. In both cases $23$ numbers exceed $\frac56$; a group with sum at most $5$ contains at most five of them and a group with sum at most $15$ at most $17$, so one is left over and no splitting exists.</p><p>Now let the numbers have sum $T\le\frac{115}{6}$ and suppose that no valid splitting exists. Among all subsets with sum at most $5$
 (the empty set is one) choose a subset $G$ with the largest sum $g$. Its complement has sum $T-g$, which must exceed $15$ (otherwise
 $G$ and its complement would be a valid splitting). Hence $g&lt;T-15\le\frac{25}{6}$.</p><p>Every number $y$ outside $G$ satisfies $g+y&gt;5$, since otherwise $G\cup\{y\}$ would be a subset with sum at most $5$ and larger sum.
 So every number outside $G$ exceeds $5-g&gt;\frac56$. The numbers outside $G$ have sum more than $15$ and each is at most $1$, so
@@ -218,10 +216,10 @@ Second (Nesbitt),
 by the AM&ndash;HM inequality for $x+y$, $y+z$, $z+x$, so $\sum\frac1{t_i}\ge\frac32$. Adding, $\sum t_i+\sum\frac1{t_i}\ge\frac{15}{2}$,
 and the left side of the problem is at least $\frac{15}{4}$. Equality holds for $x=y=z=\sqrt{2/3}$.</p>
 <h4>Solution 2 (One AM-GM per term)</h4>
-<p>As in Solution 1, the $i$-th term equals $\frac12\big(t_i+\frac1{t_i}\big)$ with $t_1=\frac{x+y}{z}$, $t_2=\frac{x+z}{y}$,
+<p>Since $1=\frac{x^2+y^2+z^2}{2}$, we have $1+xy=\frac{(x+y)^2+z^2}{2}$, so the first term is $\frac{(x+y)^2+z^2}{2z(x+y)}=\frac12\big(t_1+\frac1{t_1}\big)$ with $t_1=\frac{x+y}{z}$; similarly the other terms are $\frac12\big(t_i+\frac1{t_i}\big)$ with $t_2=\frac{x+z}{y}$,
 $t_3=\frac{y+z}{x}$. At equality all $t_i=2$, which suggests splitting
 \[t+\frac1t=\Big(\frac t4+\frac1t\Big)+\frac{3t}{4}\ge 2\sqrt{\frac t4\cdot\frac1t}+\frac{3t}{4}=1+\frac{3t}{4}\qquad(t&gt;0).\]
-Summing over $i$ and using $t_1+t_2+t_3\ge 6$ (AM&ndash;GM on $\frac xy+\frac yx$ etc., as in Solution 1),
+Summing over $i$ and using $t_1+t_2+t_3\ge 6$ (indeed $t_1+t_2+t_3=\big(\frac xy+\frac yx\big)+\big(\frac xz+\frac zx\big)+\big(\frac yz+\frac zy\big)$, and each bracket is at least $2$ by AM&ndash;GM),
 \[\sum\Big(t_i+\frac1{t_i}\Big)\ge 3+\frac34\cdot 6=\frac{15}{2},\]
 so the given sum is at least $\frac{15}{4}$, with equality for $x=y=z=\sqrt{2/3}$.</p>
 <h4>Solution 3 (Each numerator is a constant minus its denominator)</h4>
@@ -272,7 +270,7 @@ $R=R_0$, and
 \[AR=\tfrac12 AM=\tfrac14 BC,\qquad\text{i.e.}\qquad |BC|=4|AR|.\]</p>
 <h4>Solution 2 (Two circles and a radical axis)</h4>
 <div class="ct-fig"><img style="width:262px" src="/assets/contests/2026-27/turkey-jbmo-tst-6_s2.svg" alt="Figure for the solution"></div>
-<p>As shown at the start of Solution 1, $P$ and $Q$ lie inside the triangle. Put $A=(0,0)$, $B=(c,0)$, $C=(0,b)$,
+<p>First, $P$ lies inside the triangle. If the rays $PA$ and $PC$ coincided, $P$ would lie on line $AC$ outside segment $AC$, and $\angle BPA&lt;90^\circ$ in triangle $ABP$ (right-angled at $A$); impossible. So the rays $PA$, $PC$ are symmetric about line $PB$, and since $2(90^\circ+\angle ABC)&gt;180^\circ$, the ray opposite to $PB$ bisects $\angle APC&lt;180^\circ$ and meets segment $AC$ at a point $T$ with $P$ strictly between $B$ and $T$. In the same way $Q$ lies inside the triangle. Put $A=(0,0)$, $B=(c,0)$, $C=(0,b)$,
 $a=BC=\sqrt{b^2+c^2}$, $\beta=\angle ABC$, $\gamma=\angle ACB=90^\circ-\beta$.</p><p><strong>The circle $\omega_1$.</strong> The circumcircle of $ABC$ has center $M=\big(\frac c2,\frac b2\big)$ (Thales). Let $\omega_1$ be its reflection in
 $AB$: center $O_1=\big(\frac c2,-\frac b2\big)$, through $A$ and $B$. The reflection $C'$ of $C$ lies on $\omega_1$ below $AB$ and
 sees $AB$ under the angle $\gamma$; so the points of $\omega_1$ above $AB$ see $AB$ under $180^\circ-\gamma=90^\circ+\beta$, and they
@@ -314,8 +312,8 @@ and $j\mapsto c_j$ also permutes $\{1,\dots,p-1\}$ modulo $p$. Multiplying over 
 By Fermat's little theorem $m^{p-1}\equiv 1$, and by Wilson's theorem $(p-1)!\equiv-1$, so $-1\equiv 1\pmod p$, i.e. $p=2$.</p><p>Therefore $2$ is the only prime divisor of $n$ and $4\nmid n$, so $n=2$. Together with $n=1$, the answer is
 $n\in\boxed{\{1,2\}}$.</p>
 <h4>Solution 2 (Divisibility by $p$ and Wilson over a class of units)</h4>
-<p>As in Solution 1, the condition says that $a_1,\dots,a_n$ and $1\cdot a_1,\dots,na_n$ are complete residue systems
-modulo $n$; we work modulo $n$, and $n=1$, $n=2$ work (Solution 1). Note that for a prime $p\mid n$, divisibility of a residue
+<p>A set of $n$ integers with pairwise different remainders modulo $n$ is a complete residue system, so the condition says that $a_1,\dots,a_n$ and $1\cdot a_1,\dots,na_n$ are complete residue systems
+modulo $n$; we work modulo $n$. For $n=1$ take $a_1=0$, and for $n=2$ take $a_1=1$, $a_2=0$ (both lists are $1,0$); so $n=1,2$ work. Note that for a prime $p\mid n$, divisibility of a residue
 modulo $n$ by $p$ is well defined.</p><p><strong>Step 1: $p\mid i\iff p\mid a_i$.</strong> Let $p$ be a prime divisor of $n$, $A=\{i:p\mid i\}$ and $B=\{i:p\mid a_i\}$. Exactly $n/p$
 residues modulo $n$ are divisible by $p$, so $|A|=n/p$, and $|B|=n/p$ because $i\mapsto a_i$ is a bijection. Likewise exactly $n/p$
 indices have $p\mid ia_i$. Since $p$ is prime, $p\mid ia_i$ iff $i\in A\cup B$. So $|A\cup B|=n/p=|A|=|B|$, which forces $A=B$.</p><p><strong>Step 2: $p^2\nmid n$.</strong> If $p^2\mid n$, some index $i$ has $ia_i\equiv p\pmod n$, hence $ia_i\equiv p\pmod{p^2}$. Then $p\mid ia_i$,
@@ -335,7 +333,7 @@ values work.</p>
 <section class="ct-problem" id="p8">
 <h3>Problem 8</h3>
 <div class="ct-meta">Combinatorics &middot; LPS VII, Chapter 39: Graph Theory and Structural Combinatorics</div>
-<div class="ct-text"><p>Let $n\ge 1$ be a positive integer. Initially, $n$ points are marked on a board, with no three of them collinear. In each move, Asli chooses two points among them and joins them by a line segment, then marks a new point on this segment.</p><p>In this move, if Asli joins a point that has been joined to an even number of points with a point that has been joined to an odd number of points, she earns $1$ point; otherwise, she earns $0$ points.</p><p>Find the maximum number of points Asli can earn by the time every pair of points on the board has been joined.</p></div>
+<div class="ct-text"><p>Let $n\ge 1$ be a positive integer. Initially, $n$ points are marked on a board, with no three of them collinear. In each move, Asli chooses two of the original $n$ points that have not yet been joined and joins them by a line segment, then marks a new point on this segment (the new points are never joined).</p><p>In this move, if Asli joins a point that has been joined to an even number of points with a point that has been joined to an odd number of points, she earns $1$ point; otherwise, she earns $0$ points.</p><p>Find the maximum number of points Asli can earn by the time every pair of the original $n$ points has been joined.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$0$ for $n=1$; $\frac{n(n-2)}{2}$ for even $n$; $\binom n2-2=\frac{n^2-n-4}{2}$ for odd $n\ge 3$</p></div></details>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
 <h4>Solution (Counting odd points, and an inductive construction)</h4>

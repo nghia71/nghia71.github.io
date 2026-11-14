@@ -145,7 +145,8 @@ alternating sum of the $m$ numbers $s_i,s_{i+1},\dots,s_{i+2n}$:
 Indeed, each $x_{i+k}$ with $1\le k\le2n$ occurs twice, with the signs $(-1)^{k-1}$ and $(-1)^k$, and cancels; what remains is $x_i$ from $k=0$ and
 $x_{i+2n+1}=x_i$ from $k=2n$ (the last sign is $+$ because $2n$ is even). Since all $s_j\ge0$,
 \[2|x_i|\le s_i+s_{i+1}+\dots+s_{i+2n}=2S .\]
-Adding over $i=1,\dots,m$ gives $\sum|x_i|\le(2n+1)S$, the claim. The example in Solution 1 shows that the factor $2n+1$ is best possible.</p>
+Adding over $i=1,\dots,m$ gives $\sum|x_i|\le(2n+1)S$, the claim. The factor $2n+1$ is best possible: for $(x_1,\dots,x_{2n+1})=(1,-1,1,-1,\dots,-1,1)$ every neighbour sum is $0$ or $2$ (the sum $x_{2n+1}+x_1=2$), $S=1$
+and $\sum|x_i|=2n+1$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p4">
@@ -243,8 +244,8 @@ $T\in AL$.</p><p>So the lines $EK$, $FM$ (the tangents at $E$, $F$) and $AL$ all
 \[E=\frac{b^2A+a^2B}{a^2+b^2}=\frac{(-a^2b,\ ab^2)}{a^2+b^2},\qquad F=\frac{(a^2c,\ ac^2)}{a^2+c^2},\]
 and $K=(-\frac b2,0)$, $L=(\frac{c-b}2,0)$, $M=(\frac c2,0)$. Consider the point
 \[T=\Bigl(\frac{a^2(c-b)}{2(a^2-bc)},\ -\frac{abc}{a^2-bc}\Bigr).\]</p><ul class="ct-ul"><li><p>$T\in AL$: with $\lambda=\frac{a^2}{a^2-bc}$, $A+\lambda(L-A)=\bigl(\lambda\frac{c-b}2,\ a(1-\lambda)\bigr)=T$.</p></li><li><p>$T\in EK$: $\vec{KE}=\Bigl(\frac{b(b^2-a^2)}{2(a^2+b^2)},\frac{ab^2}{a^2+b^2}\Bigr)$ is parallel to $(b^2-a^2,\,2ab)$, and
-$\vec{KT}=\Bigl(\frac{c(a^2-b^2)}{2(a^2-bc)},\,-\frac{abc}{a^2-bc}\Bigr)=-\frac{c}{2(a^2-bc)}\,(b^2-a^2,\ 2ab)$ is parallel to it as well.</p></li><li><p>$T\in FM$: the whole configuration is symmetric under $x\mapsto-x$, $b\leftrightarrow c$ (which exchanges $B\leftrightarrow C$, $E\leftrightarrow F$,
-$K\leftrightarrow M$ and fixes $A,D,L$), and $T$ is mapped to itself; so $T\in FM$ follows from $T\in EK$.</p></li></ul><p>Hence $EK$, $AL$, $FM$ pass through $T$ and are concurrent.</p>
+$\vec{KT}=\Bigl(\frac{c(a^2-b^2)}{2(a^2-bc)},\,-\frac{abc}{a^2-bc}\Bigr)=-\frac{c}{2(a^2-bc)}\,(b^2-a^2,\ 2ab)$ is parallel to it as well.</p></li><li><p>$T\in FM$: the computation for $T\in EK$ is an identity in $a,b,c$. Exchanging $b\leftrightarrow c$ and reflecting in $x\mapsto-x$ turns $B,E,K$ into
+$C,F,M$, fixes $A,D,L$, and turns the formula for $T$ into itself; so the same identity, read for the exchanged parameters, gives $T\in FM$.</p></li></ul><p>Hence $EK$, $AL$, $FM$ pass through $T$ and are concurrent.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p8">
@@ -264,7 +265,8 @@ $J=\sum_{g\in G}\operatorname{inv}(g)$: the first two terms give $NJ$ each, and 
 so the third term also gives $NJ$. Hence
 \[\sum_{i&lt;j}Z(i,j)^2=\frac12(NJ+NJ-NJ)=\frac N2\,J=\frac N2\sum_{i&lt;j}Z(i,j).\]</p>
 <h4>Solution 2 (An orthogonal projection)</h4>
-<p>Let $G=\{f_1,\dots,f_N\}$; as shown in Solution 1, $G$ is a group. Let $W$ be the real vector space of functions $v$ on the ordered pairs $(i,j)$ of
+<p>Let $G=\{f_1,\dots,f_N\}$. It is a group: for $g\in G$ the powers $g,g^2,\dots$ lie in the finite set $G$, so $g^a=g^b$ for some $a&lt;b$; as $g$ is invertible,
+$g^{b-a}=\mathrm{id}\in G$, and $g^{-1}=g^{b-a-1}$ (read $\mathrm{id}$ if $b-a=1$) lies in $G$. Let $W$ be the real vector space of functions $v$ on the ordered pairs $(i,j)$ of
 distinct elements of $\{1,\dots,n\}$ with $v(j,i)=-v(i,j)$, with the inner product
 \[\langle v,w\rangle=\sum_{i&lt;j}v(i,j)w(i,j)=\frac12\sum_{i\ne j}v(i,j)w(i,j).\]
 For $g\in G$ define $(P_gv)(i,j)=v(g(i),g(j))$. Then $P_g$ is a linear map of $W$ into itself, and it preserves the inner product, because
@@ -283,8 +285,9 @@ $+1$, so $(Tv_0)(i,j)=1-\frac{2Z(i,j)}N$ and $(Ev_0)(i,j)=\frac{2Z(i,j)}N$. Then
 <div class="ct-text"><p>A sequence $a_1,a_2,\dots$ of positive integers is given. Assume that $\gcd(a_2-a_1,a_3-a_2,\dots)=1$. Prove that there exists a positive integer $N$ such that the sum of some $N$ elements (not necessarily distinct) of the sequence is equal to the sum of some $N+1$ elements (not necessarily distinct) of the sequence.</p></div>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
 <h4>Solution (An integer combination with coefficient sum $1$)</h4>
-<p>Let $d_k=a_{k+1}-a_k$. The numbers $\gcd(d_1,\dots,d_K)$ form a non-increasing sequence of positive integers whose eventual value is the gcd of all
-differences, $1$; so $\gcd(d_1,\dots,d_K)=1$ for some $K$. By Bezout there are integers $\lambda_1,\dots,\lambda_K$ with $\sum\lambda_kd_k=1$; put $\mu_k=-a_1\lambda_k$, so
+<p>Let $d_k=a_{k+1}-a_k$. Not all $d_k$ are $0$ (their gcd is $1$); let $d_{k_0}\ne0$. For $K\ge k_0$ the numbers $g_K=\gcd(d_1,\dots,d_K)$ are positive
+integers and non-increasing, so they are eventually constant, equal to some $g$. Then $g$ divides every $d_k$, hence divides their gcd $1$; so
+$\gcd(d_1,\dots,d_K)=1$ for some $K$. By Bezout there are integers $\lambda_1,\dots,\lambda_K$ with $\sum\lambda_kd_k=1$; put $\mu_k=-a_1\lambda_k$, so
 $\sum_{k=1}^K\mu_k(a_{k+1}-a_k)=-a_1$.</p><p>Define integers $e_1,\dots,e_{K+1}$ by
 \[\sum_{j=1}^{K+1}e_j\,y_j=y_1+\sum_{k=1}^{K}\mu_k\,(y_{k+1}-y_k)\qquad\text{(identically in the variables } y_j).\]
 Taking all $y_j=1$ gives $\sum e_j=1$; taking $y_j=a_j$ gives $\sum e_ja_j=a_1-a_1=0$.</p><p>Let $\mathcal P=\{j:e_j&gt;0\}$ and $\mathcal N=\{j:e_j&lt;0\}$. Then $\sum_{j\in\mathcal P}e_ja_j=\sum_{j\in\mathcal N}|e_j|a_j$. Put $N=\sum_{j\in\mathcal N}|e_j|$; from
@@ -304,11 +307,13 @@ are elements of the sequence with equal sums, as required.</p>
 $\angle CDY=180^\circ-\angle ADC=\angle ABC$ ($ABCD$ is cyclic). By the law of sines, $CX=2r_1\sin\angle CBX=2r_1\sin\angle ABC$ and $CY=2r_2\sin\angle CDY=2r_2\sin\angle ABC$.
 So $CX=CY$ gives $r_1=r_2$.</p><p><strong>Step 2: a rotation about $Z$.</strong> For $U\in\omega_1$, $U\ne C$, let $U'$ be the second intersection of line $UC$ with $\omega_2$. The directed angles
 $\measuredangle(UZ,UU')=\measuredangle(UZ,UC)$ and $\measuredangle(U'Z,U'U)=\measuredangle(U'Z,U'C)$ do not depend on $U$ (inscribed angles on the chord $ZC$ of
-$\omega_1$ and of $\omega_2$). So all triangles $ZUU'$ are directly similar, and $U\mapsto U'$ is a spiral similarity with centre $Z$. It maps $\omega_1$ onto $\omega_2$,
+$\omega_1$ and of $\omega_2$). So all triangles $ZUU'$ are directly similar, and $U\mapsto U'$ is a spiral similarity with centre $Z$. (Here $U\ne C,Z$ and $U'\ne C$, which excludes at most three points of
+$\omega_1$; the similarity is determined by the remaining points.) It maps $\omega_1$ onto $\omega_2$,
 so its ratio is $r_2/r_1=1$: it is a rotation $\mathcal R$ about $Z$. It maps $B\mapsto Y$ (line $BC$ meets $\omega_2$ again at $Y$) and $X\mapsto D$.</p><p><strong>Step 3: the bisector.</strong> The angles $\angle BCX$ and $\angle YCD$ are vertical angles (ray $CY$ is opposite to ray $CB$, ray $CD$ opposite to ray $CX$), so their
 bisectors lie on one line $\ell$, and $I,J\in\ell$ lie on opposite sides of $C$. Let $N$ and $N'$ be the second intersections of $\ell$ with $\omega_1$ and $\omega_2$.
 By the incenter&ndash;excenter lemma, $N$ is the midpoint of the arc $BX$ not containing $C$, $NB=NI$, and $I$ lies between $C$ and $N$; similarly $N'Y=N'J$ and $J$ lies between
-$C$ and $N'$. Thus $C$ lies between $N$ and $N'$.</p><p><strong>Step 4.</strong> By Step 2 (with $U=N$), $\mathcal R(N)=N'$, because line $NC=\ell$ meets $\omega_2$ again at $N'$. As $\mathcal R$ is a rotation,
+$C$ and $N'$. Thus $C$ lies between $N$ and $N'$.</p><p><strong>Step 4.</strong> By Step 2 (with $U=N$), $\mathcal R(N)=N'$, because line $NC=\ell$ meets $\omega_2$ again at $N'$. The point $N$ is admissible
+there: $N\ne C$, $N'\ne C$, and $N\ne Z$, since $N=Z$ would give $N'=Z=N$ (line $ZC$ meets $\omega_2$ again at $Z$), while $C$ lies strictly between $N$ and $N'$. As $\mathcal R$ is a rotation,
 \[ZN=ZN'\qquad\text{and}\qquad NI=NB=N'Y=N'J=:\rho .\]
 Put a coordinate on $\ell$ with $C=0$, $N=\nu&gt;0$, $N'=-\nu'&lt;0$. Then $I=\nu-\rho$ and $J=-\nu'+\rho$, so the midpoint of $IJ$ is $\frac{\nu-\nu'}2$, the midpoint of
 $NN'$. Since $ZN=ZN'$, the point $Z$ lies on the perpendicular to $\ell$ through this midpoint, which is the perpendicular bisector of $IJ$. Hence $ZI=ZJ$.</p>
@@ -355,7 +360,9 @@ $\sum(a_k-b_k)=0$ and $\sum k(a_k-b_k)=0$:
 \[0\ge\sum_{k=0}^n\varphi(k)(a_k-b_k)=\sum k^2(a_k-b_k)-(p+q)\sum k(a_k-b_k)+\bigl(p-\tfrac12\bigr)\bigl(q+\tfrac12\bigr)\sum(a_k-b_k)=\sum_{k=0}^nk^2(a_k-b_k).\]
 Hence $\sum k^2a_k\le\sum k^2b_k$.</p>
 <h4>Solution 2 (Moving mass towards the ends)</h4>
-<p>Let $d_k=a_k-b_k$; then $\sum d_k=0$ and $\sum kd_k=0$, and we must show $\sum k^2d_k\le0$. If all $d_k=0$ there is nothing to prove; assume not.</p><p><strong>The surplus is an interval.</strong> With $c_k=\ln a_k-\ln b_k$ as in Solution 1, for $i&lt;j&lt;l$ we have $c_j\ge\frac{(l-j)c_i+(j-i)c_l}{l-i}$; so if $c_i&gt;0$ and
+<p>Let $d_k=a_k-b_k$; then $\sum d_k=0$ and $\sum kd_k=0$, and we must show $\sum k^2d_k\le0$. If all $d_k=0$ there is nothing to prove; assume not.</p><p><strong>The surplus is an interval.</strong> Let $c_k=\ln a_k-\ln b_k$. The hypothesis $a_k^2\ge a_{k-1}a_{k+1}$ says $2\ln a_k\ge\ln a_{k-1}+\ln a_{k+1}$, and $\ln b_k$ is affine in $k$, so the
+differences $c_{k+1}-c_k$ are non-increasing. Hence for $i&lt;j&lt;l$ the mean of the differences on $[i,j]$ is at least that on $[j,l]$, i.e.
+$\frac{c_j-c_i}{j-i}\ge\frac{c_l-c_j}{l-j}$, which rearranges to $c_j\ge\frac{(l-j)c_i+(j-i)c_l}{l-i}$; so if $c_i&gt;0$ and
 $c_l&gt;0$ then $c_j&gt;0$. Hence the indices with $d_k&gt;0$ form an interval $\{u,\dots,v\}$, which is non-empty since $\sum d_k=0$ and $d\ne0$. Outside it, $d_k\le0$.</p><p><strong>Deficits on both sides.</strong> Let $\mathcal L=\{k&lt;u\}$, $\mathcal R=\{k&gt;v\}$, and $L_0=\sum_{\mathcal L}(-d_k)$, $R_0=\sum_{\mathcal R}(-d_k)$,
 $P_0=\sum_{k=u}^vd_k&gt;0$. Then $L_0+R_0=P_0$. If $R_0=0$, then $L_0=P_0$ and $\sum kd_k\ge uP_0-(u-1)L_0&gt;0$, a contradiction; similarly $L_0&gt;0$. Let
 $\ell=\frac1{L_0}\sum_{\mathcal L}k(-d_k)\le u-1$ and $r=\frac1{R_0}\sum_{\mathcal R}k(-d_k)\ge v+1$ be the mean positions of the two deficits. Then

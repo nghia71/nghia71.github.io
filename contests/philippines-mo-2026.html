@@ -79,7 +79,7 @@ description: Philippine Mathematical Olympiad 2026, National Stage: problems wit
 <h4>Solution 1 (Projections onto $AC$ and the angle bisector theorem)</h4>
 <div class="ct-fig"><img style="width:321px" src="/assets/contests/2026-27/philippines-mo-1_s1.svg" alt="Figure for the solution"></div>
 <p>Write $b=AC$, so $AB=b-d$ and $BC=b+d$ (the triangle inequality forces $b&gt;2d$).</p><p><em>$BD$ is the bisector of $\angle B$.</em> $AC$ is the middle side, so $\angle B$ is not the largest angle and is acute. The arc $AC$ not containing $B$
-is twice $\angle B&lt;90^\circ$, so it is the minor arc, and $D$ is its midpoint. Equal arcs $AD$ and $DC$ give $\angle ABD=\angle DBC$, so $F$ is the
+has measure $2\angle B&lt;180^\circ$, so it is the minor arc, and $D$ is its midpoint. Equal arcs $AD$ and $DC$ give $\angle ABD=\angle DBC$, so $F$ is the
 foot of the bisector from $B$.</p><p><em>Coordinates along $AC$.</em> Measure signed distances along line $AC$ from $A$, positive towards $C$. The foot $E$ of the altitude from $B$ is at
 \[
 x_E=AB\cos A=\frac{AB^2+AC^2-BC^2}{2\,AC}=\frac{(b-d)^2+b^2-(b+d)^2}{2b}=\frac{b^2-4bd}{2b}=\frac{b-4d}{2}
@@ -201,7 +201,9 @@ $R(n)\ge aT$ and $n&lt;10T$, we get $kaT\le n&lt;10T$, so $ka\le 9$. Substitutin
 As $k\le9$, equation (1) determines $x$, and hence $n$, from the pair $(k,a)$. Note that $T$ is even, so $kT-1$ is odd. We go through the values of
 $k$, using $ka\le9$ and $x&lt;T$.</p><ul class="ct-ul"><li><p>$k=1$: $a=1,\dots,9$, at most $9$ numbers.</p></li><li><p>$k=2$, $6$, $8$: the left side of (1) is $8x$, $4x$, $2x$. For $k=2$ the right side $a(2T-1)$ with $a\le4$ is not divisible by $8$ (as $2T-1$ is
 odd and $8\nmid a$); for $k=6$ and $k=8$ we have $a=1$ and the right side $6T-1$ or $8T-1$ is odd. No solutions.</p></li><li><p>$k=4$: $a\in\{1,2\}$ and $6x=a(4T-1)$. For $a=1$ the right side is odd. For $a=2$, $x=\frac{4T-1}3\ge T$. No solutions.</p></li><li><p>$k=5$: $a=1$ and $5x=5T-1$, which is not divisible by $5$. No solutions.</p></li><li><p>$k=7$: $a=1$ and $x=\frac{7T-1}3\ge T$. $k=9$: $a=1$ and $x=9T-1\ge T$. No solutions.</p></li><li><p>$k=3$: $a\in\{1,2,3\}$ and $7x=a(3T-1)$. For $a=3$, $x=\frac{3(3T-1)}7\ge T$ because $9T-3\ge7T$. So at most the two pairs $(3,1)$, $(3,2)$.</p></li></ul><p>Hence for every $d$ at most $9+2=11&lt;24$ right-rotatable $d$-digit integers $n$ satisfy $R(n)\mid n$, and the answer to (b) is $\boxed{\text{No}}$.</p><p><em>Remark.</em> The bound $11$ is attained: the $9$ repdigits work for every $d$ (then $R(n)=n$), and for $d=6$ also
-$428571=3\cdot142857$ and $857142=3\cdot285714$. In fact the pairs $(3,1)$ and $(3,2)$ give solutions exactly when $6\mid d$.</p>
+$428571=3\cdot142857$ and $857142=3\cdot285714$. In fact the pairs $(3,1)$ and $(3,2)$ give solutions exactly when $6\mid d$: as $a\in\{1,2\}$ is prime to $7$, (1) has an integer solution
+iff $3T\equiv1\pmod7$, i.e. $10^{d-1}\equiv5\pmod7$; the powers of $10$ modulo $7$ are $3,2,6,4,5,1,\dots$ with period $6$, so this means $d-1\equiv5\pmod6$.
+Then $\frac T{10}&lt;x=\frac{a(3T-1)}7&lt;T$, so $n=10x+a$ has $d$ digits, is right-rotatable, and $n=3R(n)$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p4">
@@ -223,7 +225,8 @@ because $(i,j)\mapsto nj-i$ is a bijection from $\{0,\dots,n-1\}\times\mathbb Z_
 computation with $&lt;$ gives the identity for $\lceil\cdot\rceil-1$. The equation is linear, so every $f=\alpha\lfloor x\rfloor+\beta(\lceil x\rceil-1)$
 with $\alpha,\beta\in\mathbb N_0$ satisfies it; it is nondecreasing with values in $\mathbb N_0$.</p><p><em>Conversely,</em> let $f$ be a solution.</p><p><em>Step 1: $f=0$ on $(0,1)$.</em> Let $0&lt;x&lt;1$ and choose $n\ge 1+\frac{2}{1-x}$. We have $\frac{x+i}n\ge x$ exactly for the integers $i$ with
 $(n-1)x\le i\le n-1$; there are $n-\lceil (n-1)x\rceil&gt;(n-1)(1-x)\ge 2$ of them. All terms of the sum are nonnegative and these terms are at least
-$f(x)$, so $f(x)\ge 2f(x)$, and $f(x)=0$.</p><p><em>Step 2: the values.</em> Since $f$ is integer-valued and nondecreasing, it is constant, say equal to $c$, on some interval $(1,1+\delta')$. Let $x&gt;0$
+$f(x)$, so $f(x)\ge 2f(x)$, and $f(x)=0$.</p><p><em>Step 2: the values.</em> The values $f(t)$, $1&lt;t&lt;2$, are nonnegative integers, so they have a least one, $c=f(t_0)$ with $1&lt;t_0&lt;2$; for
+$1&lt;t\le t_0$ monotonicity gives $c\le f(t)\le f(t_0)=c$. So $f=c$ on $(1,1+\delta')$, where $\delta'=t_0-1$. Let $x&gt;0$
 and $n&gt;x$ so large that $\frac{x+n-1}{n}=1+\frac{x-1}{n}&lt;1+\delta'$. Every argument $\frac{x+i}{n}$ is then below $1+\delta'$; it is less than $1$
 for $i&lt;n-x$ (so the term is $0$ by Step 1), equal to $1$ for $i=n-x$, and in $(1,1+\delta')$ for $i&gt;n-x$.</p><ul class="ct-ul"><li><p>If $x\notin\mathbb Z$, the indices $i&gt;n-x$ are $n-\lfloor x\rfloor,\dots,n-1$, so $f(x)=c\lfloor x\rfloor$.</p></li><li><p>If $x=k\in\mathbb Z_{\ge1}$, one index gives the argument $1$ and $k-1$ indices give arguments in $(1,1+\delta')$, so $f(k)=f(1)+(k-1)c$.</p></li></ul><p>Put $\beta=c-f(1)$. Monotonicity gives $0=f(\tfrac12)\le f(1)\le f(\tfrac32)=c$, so $\beta,\alpha:=c-\beta$ are nonnegative integers, and
 $f(x)=(\alpha+\beta)\lfloor x\rfloor$ for $x\notin\mathbb Z$, $f(k)=\alpha k+\beta(k-1)$ for $k\in\mathbb Z_{\ge1}$. This is exactly
@@ -234,8 +237,9 @@ $f(x)=(\alpha+\beta)\lfloor x\rfloor$ for $x\notin\mathbb Z$, $f(k)=\alpha k+\be
 <p><em>These functions work</em> by the identities $\sum_{i=0}^{n-1}\lfloor\frac{x+i}n\rfloor=\lfloor x\rfloor$ (Hermite) and
 $\sum_{i=0}^{n-1}\big(\lceil\frac{x+i}n\rceil-1\big)=\lceil x\rceil-1$; the second follows from the first by replacing $x$ with $x-\varepsilon$ and
 letting $\varepsilon\to0^+$, since $\lfloor t-\varepsilon\rfloor\to\lceil t\rceil-1$. The equation is linear, so all
-$\alpha\lfloor x\rfloor+\beta(\lceil x\rceil-1)$ with $\alpha,\beta\in\mathbb N_0$ are solutions.</p><p><em>Conversely,</em> let $f$ be a solution. Being nondecreasing and $\mathbb N_0$-valued, $f$ is constant on some interval $(0,\delta)$, with value $L$;
-$L\ge1$ would give $f(1)=\sum_{i=0}^{n-1}f(\frac{1+i}{n})\ge n$ for all $n$, so $L=0$. Likewise $f$ is constant, say $c$, on some $(1,1+\delta')$.</p><p><em>The difference $f(x+1)-f(x)$.</em> Write the equation for $x$ and for $x+1$ with the same $n$ and subtract. The arguments for $x+1$ are
+$\alpha\lfloor x\rfloor+\beta(\lceil x\rceil-1)$ with $\alpha,\beta\in\mathbb N_0$ are solutions.</p><p><em>Conversely,</em> let $f$ be a solution. The values of $f$ on $(0,1)$ are nonnegative integers, so they have a least one, $L=f(t_1)$; by
+monotonicity $f=L$ on $(0,\delta)$ with $\delta=t_1$.
+Now $L\ge1$ would give $f(1)=\sum_{i=0}^{n-1}f(\frac{1+i}{n})\ge n$ for all $n$, so $L=0$. In the same way (least value on $(1,2)$) $f$ is constant, say $c$, on some $(1,1+\delta')$.</p><p><em>The difference $f(x+1)-f(x)$.</em> Write the equation for $x$ and for $x+1$ with the same $n$ and subtract. The arguments for $x+1$ are
 $\frac{x+1}{n},\dots,\frac{x+n}{n}$ and those for $x$ are $\frac xn,\dots,\frac{x+n-1}n$; all but one cancel:
 \[
 f(x+1)-f(x)=f\Big(\frac{x+n}{n}\Big)-f\Big(\frac xn\Big)=f\Big(1+\frac xn\Big)-f\Big(\frac xn\Big).
@@ -307,7 +311,7 @@ have $4$ cells, i.e. to be $11011$ vertically. So the middle row is empty outsid
 columns $1,2,4,5$; a cell in their middle column would complete five in a row. Thus the middle column has at most one cell and the total is at
 most $16+1=17$, a contradiction. So $F(5,5)\le17$, and every safe set has at most $24+20+20+17=81$ cells.</p><p><em>An example with $81$.</em> In the three classes with a side of length $6$, choose the cell $(u,v)$ iff $u+v\not\equiv0\pmod3$: in every line the
 unchosen cells occur every third position, so no three consecutive cells are chosen; each line of length $6$ has exactly $4$ chosen cells, giving
-$24$, $20$ and $20$. In the even&ndash;even class choose $(u,v)$ iff $u\ne3\ne v$, or $u=v=3$: rows and columns read $11011$ or $00100$, giving $17$.
+$24$, $20$ and $20$. In the even&ndash;even class choose $(u,v)$ iff ($u\ne3$ and $v\ne3$) or $u=v=3$: rows and columns read $11011$ or $00100$, giving $17$.
 The resulting $81$ black cells are shown in the figure; they contain no bad tile.</p><p>So $81$ cells may avoid the pattern, while any $82$ black cells contain it: the answer is $\boxed{82}$.</p>
 <h4>Solution 2 (Covering each class by straight trominoes)</h4>
 <div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/philippines-mo-6_s2.svg" alt="Figure for the solution"></div>
@@ -317,7 +321,7 @@ renumber inside each class ($2u-1\mapsto u$ and $2u\mapsto u$). The triples $j,j
 trominoes as far as possible:</p><ul class="ct-ul"><li><p>$6\times6$: each of the $6$ rows splits into two trominoes: $12$ trominoes, at most $24$ black cells;</p></li><li><p>$6\times5$ and $5\times6$: each of the $5$ lines of length $6$ splits into two trominoes: $10$ trominoes, at most $20$ each;</p></li><li><p>$5\times5$: the $24$ cells other than the centre split into $8$ trominoes arranged as a pinwheel (second figure): two horizontal trominoes in
 rows $1,2$, columns $1$&ndash;$3$; two vertical ones in columns $4,5$, rows $1$&ndash;$3$; two horizontal ones in rows $4,5$, columns $3$&ndash;$5$; two vertical
 ones in columns $1,2$, rows $3$&ndash;$5$. So at most $8\cdot2+1=17$ black cells.</p></li></ul><p>In total at most $24+20+20+17=81$ black cells avoid a bad tile.</p><p><em>Sharpness.</em> In the classes with a side $6$ colour $(u,v)$ black iff $u+v\not\equiv0\pmod3$ ($24+20+20$ cells; in every line the white cells
-are every third cell), and in the $5\times5$ class colour $(u,v)$ black iff $u\ne3\ne v$ or $u=v=3$ ($17$ cells; lines read $11011$ or $00100$).
+are every third cell), and in the $5\times5$ class colour $(u,v)$ black iff ($u\ne3$ and $v\ne3$) or $u=v=3$ ($17$ cells; lines read $11011$ or $00100$).
 These $81$ cells contain no bad tile.</p><p>Hence the smallest $n$ is $\boxed{82}$.</p>
 </div></details>
 </section>

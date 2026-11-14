@@ -180,8 +180,10 @@ the numbers in each row are distinct, and all numbers used are $F_2,F_3,\dots,F_
 time, each time to a cell of the row above that stands directly on the current cell (every cell below the top lies under at least one cell of
 the row above). After $7$ steps we reach the top. The $8$ cells visited hold strictly increasing numbers, because each is larger than the one
 below it; so we meet $7$ distinct numbers larger than $x$. The other $7$ cells of the bottom row hold numbers that are distinct (rule 1) and
-smaller than $x$ (since $x$ is the largest and the numbers of a row are distinct). Together with $x$ these are $7+1+7=15$ distinct numbers.</p><p><em>Construction.</em> The Fibonacci filling of Solution 1 (bottom row $1,2,3,5,8,13,21,34$; the cell in row $r$ from the bottom and position $i$
-holds $F_{2r+i+2}$) obeys both rules and uses exactly the $15$ numbers $F_2,\dots,F_{16}$.</p><p>So the minimum is $\boxed{15}$.</p>
+smaller than $x$ (since $x$ is the largest and the numbers of a row are distinct). Together with $x$ these are $7+1+7=15$ distinct numbers.</p><p><em>Construction.</em> Let $F_1=F_2=1$, $F_{j+2}=F_{j+1}+F_j$ be the Fibonacci numbers, and write $F_2,\dots,F_9=1,2,3,5,8,13,21,34$ in the
+bottom row. Counting rows from the bottom as $r=0,\dots,7$ and positions from the left as $i=0,1,\dots$, the cell $(r,i)$ holds $F_{2r+i+2}$:
+this holds for $r=0$, and $F_{2r+i+2}+F_{2r+i+3}=F_{2(r+1)+i+2}$ carries it from row $r$ to row $r+1$. The numbers in each row increase
+strictly, so rule 1 holds, and the numbers used are exactly the $15$ numbers $F_2,\dots,F_{16}$.</p><p>So the minimum is $\boxed{15}$.</p>
 <h4>Solution 3 (Ranks grow by two per row)</h4>
 <p>Every number not in the bottom row is the sum of two positive numbers, so it is larger than each of them.</p><p><em>Lower bound.</em> Let $v_1&lt;v_2&lt;\dots&lt;v_N$ be the distinct numbers written, and call $i$ the <em>rank</em> of $v_i$. Number the rows from the bottom as $j=0,1,\dots,7$. We show that every number in row $j$ has rank at least $2j+1$. For $j=0$ this is clear. Suppose it holds for row $j$, and take a cell of row $j+1$ holding $x=a+b$, where $a$ and $b$ are the two cells below it, in row $j$. By rule 1, $a\ne b$, so $a$ and $b$ have different ranks, both at least $2j+1$; hence one of them, say $b$, has rank at least $2j+2$. Since $x&gt;b$, the rank of $x$ is at least $2j+3=2(j+1)+1$. This completes the induction. The top cell is in row $7$, so its rank is at least $15$, and therefore $N\ge 15$.</p><p><em>Construction.</em> Let $F_1=F_2=1$, $F_{k+2}=F_{k+1}+F_k$ be the Fibonacci numbers, and write $F_2,F_3,\dots,F_9=1,2,3,5,8,13,21,34$ in the bottom row, from left to right. Number the positions in each row from the left as $i=0,1,2,\dots$. Then the cell in row $j$ and position $i$ holds $F_{2j+i+2}$: this is true for $j=0$, and if it holds for row $j$, the cell in row $j+1$ and position $i$ holds $F_{2j+i+2}+F_{2j+i+3}=F_{2(j+1)+i+2}$. Since $F_2&lt;F_3&lt;F_4&lt;\cdots$, the numbers in each row are distinct, and the numbers used are exactly $F_2,F_3,\dots,F_{16}$ (the top is $F_{16}=987$): $15$ distinct numbers.</p><p>So the minimum is $\boxed{15}$.</p>
 </div></details>
@@ -246,7 +248,7 @@ marked points, and suppose that no marked point lies inside a cutting segment. I
 every piece (for the marked points in that piece, its boundary included), then the drawings together have no
 crossing. Indeed, segments drawn in different pieces lie in convex polygons without common interior points, so they can
 meet only on a cutting segment $s$; a drawn segment has only its endpoints on $s$ or is $s$ itself, because it ends
-at marked points and stays inside its piece. So two such segments meet only in a common endpoint or coincide.</p><p><em>Lemma (triangles).</em> If the convex hull of the marked points is a triangle $abc$, the set is solvable.</p><p><em>Proof.</em> Induction on the number $m$ of marked points inside the triangle. If $m=0$, draw the sides of $abc$ whose
+at marked points and stays inside its piece. So two such segments meet only in a common endpoint or coincide (a segment drawn in two pieces is drawn once).</p><p><em>Lemma (triangles).</em> If the convex hull of the marked points is a triangle $abc$, the set is solvable.</p><p><em>Proof.</em> Induction on the number $m$ of marked points inside the triangle. If $m=0$, draw the sides of $abc$ whose
 endpoints have the same colour. Let $m\ge1$. Choose an interior marked point $p$ (the choice is made below) and
 join it to $a,b,c$. No marked point lies on $pa,pb,pc$, so every other interior point is inside exactly one of the
 triangles $pab,pbc,pca$, and each of these has fewer than $m$ interior points. Solve the three triangles by the
@@ -265,7 +267,8 @@ going around the polygon all red points are joined. If there is no green point, 
 from $v_1$ into the triangles $v_1v_iv_{i+1}$ and solve each: all points are red and every triangle contains $v_1$.
 By the gluing remark there is no crossing.</p><p><em>Two-coloured hull.</em> We show by induction on the number $h\ge3$ of hull vertices that a set is solvable if its hull
 vertices form a red block and a green block. For $h=3$ this is the Lemma. Let $h\ge4$. Then some red hull vertex
-$r$ and some green hull vertex $g$ are not adjacent. The diagonal $rg$ contains no other marked point and cuts
+$r$ and some green hull vertex $g$ are not adjacent: if the blocks have $k$ and $h-k$ vertices, there are $k(h-k)\ge h-1\ge3$ red&ndash;green pairs,
+and only two of them are adjacent on the boundary (at the two colour changes). The diagonal $rg$ contains no other marked point and cuts
 the polygon into two convex polygons with fewer vertices; in each of them the vertices again form a red block and a
 green block. Solve both parts by the induction hypothesis. In the union the red points are joined (both parts
 contain $r$), the green points are joined (both contain $g$), and there is no crossing by the gluing remark.</p><p>So Melo can complete the task exactly when the colour changes at most twice around the polygon, and the number of

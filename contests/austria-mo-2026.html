@@ -91,7 +91,7 @@ k+x_{k+1}&lt;k+2\le 2^k ,\qquad\text{so}\qquad x_k=\sqrt[k]{k+x_{k+1}}&lt;2 .
 By induction $x_2&lt;2$, which is the claim. (For $n=2$ the expression is just $\sqrt2&lt;2$.)</p><p><em>Remark.</em> The values increase with $n$ and approach about $1.9116$; the bound $2$ is chosen because $\sqrt[k]{k+2}\le 2$, with
 equality only at $k=2$, so the strict inequality comes from the innermost radical.</p>
 <h4>Solution 2 (Comparing with a tower of square roots)</h4>
-<p>Define $x_n,\dots,x_2$ as in Solution 1: $x_n=\sqrt[n]{n}$ and $x_k=\sqrt[k]{k+x_{k+1}}$ for $k=n-1,\dots,2$; the left-hand
+<p>Fix $n\ge2$ and define $x_n=\sqrt[n]{n}$ and $x_k=\sqrt[k]{k+x_{k+1}}$ for $k=n-1,\dots,2$; the left-hand
 side is $x_2$. The idea is to replace every radical of index $k\ge4$ by a square root and to compare with the classical tower
 $\sqrt{2+\sqrt{2+\cdots}}$, which stays below $2$.</p><p><em>Lemma.</em> For every integer $k\ge4$ and every real $x&gt;0$, $(k+x)^2&lt;(2+x)^k$, i.e. $\sqrt[k]{k+x}&lt;\sqrt{2+x}$.</p><p><em>Proof.</em> For $k=4$,
 \[
@@ -165,7 +165,7 @@ $2\cdot87=174$ to $1980$, all larger than $87$. If all three numbers of some $T_
 number is removed from each of the $43$ disjoint triples, and $1$ is removed as well: $k\ge 44$.</p><p>Hence the smallest $k$ is $\boxed{44}$.</p>
 <h4>Solution 2 (Look at the smallest number that stays)</h4>
 <p>Removing $1,\dots,44$ works, since $45\cdot 46=2070&gt;2026$. Now let $L$ be a non-productive list obtained by removing $k$ numbers;
-we show $k\ge44$. Write $N=2026$.</p><p>If $1\in L$, every other $a\in L$ gives the product $1\cdot a=a\in L$, so $L=\{1\}$ and $k=2025$. Otherwise let $t\ge 2$ be the smallest
+we show $k\ge44$. Write $N=2026$.</p><p>If $1\in L$, every other $a\in L$ gives the product $1\cdot a=a\in L$, so $L=\{1\}$ and $k=2025$. If $L$ is empty, $k=2026$. Otherwise let $t\ge 2$ be the smallest
 number in $L$. The numbers $1,\dots,t-1$ are all removed, which is already $t-1$ removals; if $t\ge 45$ we are done. Let $2\le t\le 44$.</p><p>For every integer $x$ with $x&gt;t$ and $N/t^2&lt;x\le N/t$, the numbers $t$ and $x$ are distinct and $tx\le N$. As $t\in L$ and $L$ is not
 productive, $x$ and $tx$ are not both in $L$: at least one of them is removed. These pairs $\{x,tx\}$ are disjoint from each other, because
 every $tx&gt;N/t\ge$ every $x$; and they avoid $1,\dots,t-1$, because all their numbers exceed $t$. Hence
@@ -216,7 +216,7 @@ With directed angles modulo $180^\circ$, using the circle $k$ and then the circl
 \[
 \angle(A_1P,A_1B)=\angle(A_1P,A_1C)=\angle(B_1P,B_1C)=\angle(B_1P,B_1A).
 \]
-So triangles $PBA_1$ and $PAB_1$ are similar, and $PB:PA=BA_1:AB_1$. The right triangles $BA_1H$ and $AB_1H$ have equal vertical angles at
+Two triangles whose directed angles at two pairs of corresponding vertices are equal are directly similar; so triangles $PBA_1$ and $PAB_1$ are similar, and $PB:PA=BA_1:AB_1$. The right triangles $BA_1H$ and $AB_1H$ have equal vertical angles at
 $H$, so they are similar and $BA_1:AB_1=BH:AH$. Therefore $PA:PB=AH:BH$.</p><p><em>Step 3: a secant through $S$.</em> Let a line through $S$ meet $k$ at $X$ and $Y$. By the power of the point $S$, $SA^2=SX\cdot SY$, so
 triangles $SAX$ and $SYA$ (common angle at $S$, $SA:SX=SY:SA$) are similar and $AX:YA=SA:SY$. Likewise $BX:YB=SB:SY$. Since
 $SA=SB$, we get $XA:XB=YA:YB$.</p><p><em>Step 4: conclusion.</em> It is well known that $H'$ lies on $k$ (indeed $\angle AH'B=\angle AHB=180^\circ-\angle ACB$ and $H'$ is on the other
@@ -293,7 +293,7 @@ the opponent is the one who eventually cannot move.</p><p>The start is one pile 
 $n\ge3$ the position is balanced, so <strong>Bob</strong> wins.</p>
 <h4>Solution 2 (Mirror strategy and Grundy values)</h4>
 <p>For $n=1$ Alice removes the stone and Bob cannot move. For even $n$ Alice splits the pile into two piles of $n/2$ and then copies every move
-of Bob on the twin pile; after each of her moves the piles come in equal pairs, so she always has a move, and Bob is the one who gets stuck.</p><p>For odd $n\ge3$ we use Sprague-Grundy theory. The game is a sum of independent one-pile games (each move acts on one pile), so a position is
+of Bob on the twin pile; after each of her moves the piles come in equal pairs, so she always has a move, and Bob is the one who gets stuck.</p><p>For odd $n\ge3$ we use Sprague-Grundy theory. The game always ends, since every move lowers $2\cdot(\text{number of stones})-(\text{number of piles})$, and a player who cannot move loses; for a finite set $X$ of non-negative integers, $\operatorname{mex}X$ is the least non-negative integer not in $X$. The game is a sum of independent one-pile games (each move acts on one pile), so a position is
 lost for the player to move exactly when the XOR of the Grundy values $G(m)$ of its piles is $0$. Here $G(0)=0$ and
 \[
 G(m)=\operatorname{mex}\bigl(\{G(m-1)\}\cup\{G(i)\oplus G(m-i):1\le i\le m-1\}\bigr).
@@ -385,7 +385,7 @@ In the same way $O\in M_3M_6$ gives $r+2s+2t+u=p+q+r+s+t+u$, i.e.
 \[
 s+t=p+q. \tag{2}
 \]
-Adding (1) and (2) and cancelling $q+t$ gives $r+s=u+p$.</p><p><em>The third segment.</em> Consider the polygon $\Pi=M_2\,C\,D\,E\,M_5\,O$. Its area, computed as the sum of the triangles $OM_2C,OCD,ODE,OEM_5$, is
+Adding (1) and (2) and cancelling $q+t$ gives $r+s=u+p$.</p><p><em>The third segment.</em> Reflecting the figure if necessary, we may assume that $A,B,C,D,E,F$ are listed counterclockwise. Consider the polygon $\Pi=M_2\,C\,D\,E\,M_5\,O$. Its area, computed as the sum of the triangles $OM_2C,OCD,ODE,OEM_5$, is
 \[
 [\Pi]=q+2r+2s+t=(q+r+s+t)+(r+s)=(q+r+s+t)+(u+p)=\tfrac S2 .
 \]

@@ -121,8 +121,9 @@ $180^\circ-C$ of ray $CA$, which is less than the direction angle $180^\circ$ of
 <h4>Solution 2 (Reflecting A in BC)</h4>
 <div class="ct-fig"><img style="width:386px" src="/assets/contests/2026-27/japan-mo-1_s2.svg" alt="Figure for the solution"></div>
 <p>Write $a=BC$, $b=CA$, $c=AB$ (so $b&gt;c$, $\angle B&gt;\angle C$), let $R$ be the circumradius, $\theta=\angle ABP=\angle ACQ$ and
-$\delta=\frac{\angle B-\angle C}{2}&gt;0$. Directed angles between lines are taken modulo $180^\circ$.</p><p><em>Step 1: line $DO$ passes through the reflection $A'$ of $A$ in $BC$.</em> As in Step 1 of Solution 1, the side conditions show that triangles $ABP$ and $ACQ$
-have the same orientation. So the rotation about $B$ taking ray $BA$ to ray $BP$ and the rotation about $C$ taking ray $CA$ to ray $CQ$ are rotations by the same
+$\delta=\frac{\angle B-\angle C}{2}&gt;0$. Directed angles between lines are taken modulo $180^\circ$.</p><p><em>Step 1: line $DO$ passes through the reflection $A'$ of $A$ in $BC$.</em> The point $P$ is on the same side of $AB$ as $C$, so triangle $ABP$ has the orientation of $ABC$;
+the point $Q$ is on the other side of $AC$ from $B$, so triangle $ACQ$ has the orientation opposite to that of $ACB$, which is again that of $ABC$.
+So triangles $ABP$ and $ACQ$ have the same orientation. So the rotation about $B$ taking ray $BA$ to ray $BP$ and the rotation about $C$ taking ray $CA$ to ray $CQ$ are rotations by the same
 angle $\theta$ in the same sense. The circle $\omega_B$ with center $B$ and radius $c$ passes through $A$, $P$ and $A'$ (because $BA'=BA$). The circle
 $\omega_C$ with center $C$ and radius $b$ passes through $A$, $Q$ and $A'$. By the inscribed angle theorem in directed form, for a point $X$ on a circle with
 center $B$ the directed angle $\measuredangle(XA,XP)$ equals half of the directed rotation angle from $BA$ to $BP$, modulo $180^\circ$. Applying this at
@@ -138,7 +139,21 @@ so $M$ lies between $D$ and $C$. By the law of sines and the sum-to-product form
 \[DM=\frac{a}{2}\cdot\frac{\sin B-\sin C}{\sin B+\sin C}=R\sin A\cdot\frac{\tan\frac{B-C}{2}}{\tan\frac{B+C}{2}}=R\sin A\,\tan\delta\,\tan\frac A2 .\]
 In the right triangle $OMD$, $\tan\angle ODM=\frac{OM}{DM}$, so
 \[\cot\delta=\frac{R\cos A}{R\sin A\,\tan\delta\,\tan\frac A2},\qquad\text{i.e.}\qquad \cos A=\sin A\tan\frac A2=2\sin^2\frac A2=1-\cos A .\]
-Hence $\cos A=\frac12$ and $\angle A=60^\circ$.</p><p>Conversely, for every acute triangle with $\angle A=60^\circ$ and $AB&lt;AC$, points $P$ and $Q$ with all the required properties exist. This is shown in Step 4 of Solution 1. The answer is $\angle BAC=\boxed{60^\circ}$.</p>
+Hence $\cos A=\frac12$ and $\angle A=60^\circ$.</p><p><em>Step 3: $60^\circ$ really occurs.</em> Let $\angle A=60^\circ$ and $\angle B&gt;\angle C$ with the triangle acute (e.g. $\angle B=75^\circ$, $\angle C=45^\circ$);
+then $60^\circ&lt;\angle B&lt;90^\circ$ and $30^\circ&lt;\angle C&lt;60^\circ$. Put $B=(0,0)$, $C=(a,0)$, $A$ above, $A'$ as before, and define
+\[P=B+c\,(\cos C,\ \sin C),\qquad Q=C+b\,(-\cos B,\ \sin B).\]
+Then $BP=c$, $CQ=b$, and comparing the direction angles of the rays ($B$ and $C$ for $BA$, $BP$; $180^\circ-C$ and $180^\circ-B$ for $CA$, $CQ$),
+$\angle ABP=\angle ACQ=B-C$. Seen from $B$, the points $A'$, $P$ of $\omega_B$ have direction angles $-B$ and $C$, so the chord $A'P$ has direction angle
+$\frac{C-B}{2}+90^\circ=90^\circ-\delta$; seen from $C$, the points $A'$, $Q$ of $\omega_C$ have direction angles $180^\circ+C$ and $180^\circ-B$, so the chord
+$A'Q$ also has direction angle $90^\circ-\delta$ modulo $180^\circ$. The line $DA'$, the mirror image of $DA$ (direction angle $180^\circ-\angle ADB=90^\circ+\delta$),
+has direction angle $90^\circ-\delta$, so $P,Q$ lie on line $DA'$. Reading Step 2 backwards, $\cos A=\frac12$ gives $\tan\angle ODM=\cot\delta$, so
+$\angle ODC=90^\circ-\delta$ and $O$ lies on line $DA'$ too. The points $P,Q,O$ lie above $BC$, hence on ray $DO$, and their heights
+$c\sin C=2R\sin^2C&lt;2R\sin^2B=b\sin B$ give the order $D,P,Q$.</p><p><em>Side conditions.</em> $P$ is seen from $B$ at a direction angle $C$ between $0$ and $B$, so it is on the same side of $AB$ as $C$. The ray from $B$ at
+direction angle $C$ meets line $AC$ at $K$ with $\angle KBC=\angle KCB=C$, so $BK=\frac{a}{2\cos C}$; as $2c\cos C=2R\sin2C&gt;2R\sin60^\circ=a$
+($60^\circ&lt;2C&lt;120^\circ$), $P$ lies beyond $K$, on the other side of $AC$ from $B$. The ray from $C$ at direction angle $180^\circ-B$ meets line $AB$ at $K'$
+with $CK'=\frac{a}{2\cos B}$, and $2b\cos B=2R\sin2B&lt;a$ ($120^\circ&lt;2B&lt;180^\circ$), so $Q$ lies between $C$ and $K'$, on the same side of $AB$ as $C$. Finally
+the direction angle $180^\circ-B$ of ray $CQ$ is less than the direction angle $180^\circ-C$ of ray $CA$, which is less than $180^\circ$ (ray $CB$), so $Q$
+and $B$ are on opposite sides of $AC$. All conditions hold, and the answer is $\angle BAC=\boxed{60^\circ}$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p2">
@@ -210,8 +225,12 @@ For $u,v\ge0$ take $x=\frac{\sqrt u+\sqrt v}{2}$ and $y=\frac{\sqrt u-\sqrt v}{2
 \[f(u)+f(v)=2f\Bigl(\frac{u+v}{2}\Bigr)=f(u+v)\qquad(u,v\ge0).\]</p><p><em>(g) $f(x)=x$.</em> By (f), $f(qt)=qf(t)$ for rational $q\ge0$ and $t\ge0$, so $f(q)=q$ for rational $q\ge0$. Also $f$ is nondecreasing on $[0,\infty)$, since
 $f(u+v)=f(u)+f(v)\ge f(u)$. For real $t\ge0$ and rationals $0\le q_1&lt;t&lt;q_2$ we get $q_1\le f(t)\le q_2$, so $f(t)=t$. By oddness $f(x)=x$ for all $x$.</p><p>So the solutions are $\boxed{f\equiv0\ \text{ and }\ f(x)=x}$.</p>
 <h4>Solution 2 (Monotone involution)</h4>
-<p>Both $f\equiv0$ and $f(x)=x$ are solutions. Let $f\not\equiv0$ be a solution. Steps (a)&ndash;(e) of Solution 1 show:
-$f$ is injective, $f(0)=0$, $f(x^2)=f(x)^2$, $f(f(y))=y$, $f$ is odd, and $f(t)&gt;0$ for $t&gt;0$. Also, as there, substituting $f(y)$ for $y$ gives
+<p>Both $f\equiv0$ ($0+0=0$) and $f(x)=x$ ($x^2+y^2+2xy=(x+y)^2$) are solutions. Let $f\not\equiv0$ be a solution, write $Q(x,y)$ for the equation
+and $c=f(0)$.</p><p><em>Basic facts.</em></p><ul class="ct-ul"><li><p><em>$f$ is injective:</em> if $f(y_1)=f(y_2)$, then $Q(x,y_1)-Q(x,y_2)$ gives $2f(x)(y_1-y_2)=0$; take $x$ with $f(x)\ne0$.</p></li><li><p><em>$f(f(y))=ky$:</em> in $Q(f(z),y)$, i.e. $f\bigl(f(z)^2+f(y)^2\bigr)+2f(f(z))\,y=f\bigl(f(z)+f(y)\bigr)^2$, the first and last terms are symmetric in
+$y,z$, so $y\,f(f(z))=z\,f(f(y))$; with $z=1$, $f(f(y))=ky$ for $k=f(f(1))$. If $k=0$, then $f(f(y))=f(f(0))$, so $f(y)=f(0)$ for all $y$ by injectivity,
+contradicting injectivity.</p></li><li><p><em>$f(0)=0$:</em> $f(c)=f(f(0))=0$, and $Q(0,0)$ gives $f(c^2)=f(c)^2=0=f(c)$, so $c^2=c$. If $c=1$, then $f(1)=0$ and $Q(0,1)$ gives $1+2=1$,
+impossible. So $c=0$.</p></li><li><p><em>$f(x^2)=f(x)^2$ and $f(f(y))=y$:</em> the first is $Q(x,0)$. With $x=1$, $f(1)\in\{0,1\}$, and $f(1)\ne f(0)=0$, so $f(1)=1$ and $k=f(f(1))=1$.</p></li><li><p><em>$f$ is odd and positive on $(0,\infty)$:</em> for $x\ne0$, $f(-x)^2=f(x^2)=f(x)^2$ and $f(-x)\ne f(x)$, so $f(-x)=-f(x)$; for $t&gt;0$,
+$f(t)=f(\sqrt t)^2\ge0$ and $f(t)\ne f(0)$, so $f(t)&gt;0$.</p></li></ul><p>Replacing $y$ by $f(y)$ in $Q$ and using $f(f(y))=y$ and $f(x+y)^2=f\bigl((x+y)^2\bigr)$ gives
 \[f(x^2+y^2)+2f(x)f(y)=f\bigl((x+y)^2\bigr).\]
 Replacing $y$ by $-y$ (oddness) gives $f(x^2+y^2)-2f(x)f(y)=f\bigl((x-y)^2\bigr)$. Subtracting the two equations:
 \[f\bigl((x+y)^2\bigr)-f\bigl((x-y)^2\bigr)=4f(x)f(y).\]</p><p><em>$f$ is strictly increasing.</em> Let $u&gt;v\ge0$ and put $x=\frac{\sqrt u+\sqrt v}2&gt;0$, $y=\frac{\sqrt u-\sqrt v}2&gt;0$. Then $f(u)-f(v)=4f(x)f(y)&gt;0$. So $f$ is strictly

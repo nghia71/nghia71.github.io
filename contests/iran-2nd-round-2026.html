@@ -85,7 +85,7 @@ $u=v$. Checking the three cases of the rule (same row, same column, neither), th
 \[a'=-k-a\pmod 3 \qquad(\text{coordinatewise}).\]</p><p><strong>At most one starting hole is opened by each insertion.</strong> Houshang learns nothing while the lock stays closed, so a strategy is simply a
 fixed sequence $k_1,k_2,\dots$ of holes. Fix such a sequence. If the lock is still
 closed after $t$ insertions, the active hole is $a_t=-k_t-a_{t-1}$, so by induction $a_t=(-1)^t a_0+c_t$ for a vector $c_t$ that depends only on
-$k_1,\dots,k_t$. Insertion number $t$ opens the lock exactly when $a_{t-1}=k_t$, that is, for exactly one initial hole $a_0$. Hence $8$ insertions
+$k_1,\dots,k_t$. Insertion number $t$ can be the first one to open the lock only if $a_{t-1}=k_t$; this affine condition holds for exactly one initial hole $a_0$, so at most one initial hole leads to a first opening at insertion $t$. Hence $8$ insertions
 can open the lock for at most $8$ of the $9$ possible initial holes, and no strategy with fewer than $9$ insertions is guaranteed to work.</p><p><strong>Nine insertions suffice.</strong> List the nine holes as $h_1,\dots,h_9$. Choose $k_t$ so that insertion $t$ opens the lock if the initial hole was
 $h_t$: this means $k_t=(-1)^{t-1}h_t+c_{t-1}$, which is possible because $c_{t-1}$ is already known from $k_1,\dots,k_{t-1}$. Whatever the initial
 hole $h_t$ is, the lock opens at insertion $t\le 9$ at the latest.</p><p>So the minimum number of insertions that guarantees opening the lock is $\boxed{9}$.</p>
@@ -161,12 +161,15 @@ arc $IT'$ of $(MIT')$ and the tangent at $M$ is parallel to the chord $IT'$, i.e
 (The points $M,I,T'$ are not collinear: otherwise the line $IT'$, which is perpendicular to $BC$, would be the line $MI=AI$, giving
 $AI\perp BC$ and $AB=AC$; this is where the triangle being scalene is used.)</p><p>Hence $(MIT')\perp\Omega$, so $\Phi\perp\Omega$, which means that $AO$ is tangent to the circle $ATI_a$.</p>
 <h4>Solution 2 (A pencil of circles in coordinates)</h4>
-<p>As in Solution 1, the claim is equivalent to: the circle $\Phi=(ATI_a)$ is orthogonal to the circumcircle $\Omega$, and
-$\omega=(BCI_a)$ is the circle with center $M$ (midpoint of arc $BC$) through $B,C,I,I_a$, with $I_a$ diametrically opposite to $I$.</p><p><strong>Coordinates.</strong> Take $M=(0,0)$ and the radius of $\omega$ equal to $1$; let $BC$ be the line $y=h$ with $0&lt;h&lt;1$, so $B,C=(\mp\sqrt{1-h^2},h)$.
+<p>Let $\Omega$ be the circumcircle of $ABC$, $I$ the incenter and $M$ the midpoint of arc $BC$ not containing $A$; the points $A,I,K,M,I_a$ lie
+on the bisector of $\angle A$. By the incenter&ndash;excenter lemma, $\omega=(BCI_a)$ is the circle with center $M$ through $B,C,I,I_a$, with $I_a$
+diametrically opposite to $I$. A circle through $A$ is tangent to line $AO$ at $A$ exactly when its center lies on the perpendicular to $OA$ at $A$,
+i.e. when the radius $OA$ of $\Omega$ is tangent to it, i.e. when it is orthogonal to $\Omega$. So we must prove that $\Phi=(ATI_a)$ is orthogonal
+to $\Omega$.</p><p><strong>Coordinates.</strong> Take $M=(0,0)$ and the radius of $\omega$ equal to $1$; let $BC$ be the line $y=h$ with $0&lt;h&lt;1$, so $B,C=(\mp\sqrt{1-h^2},h)$.
 Write $I=(c,s)$ with $c^2+s^2=1$, $s&gt;h$, so $I_a=(-c,-s)$. The circle $\Omega$ passes through $B,C,M$, so it is $x^2+y^2-\frac{y}{h}=0$.
 Line $MI$ is $\{tI\}$; it meets $\Omega$ again at $A=\frac{s}{h}(c,s)$ and $BC$ at $K=\frac hs(c,s)$.</p><p><strong>Pencils.</strong> For circles $x^2+y^2+2gx+2fy+e=0$ and $x^2+y^2+2g'x+2f'y+e'=0$, orthogonality means $2(gg'+ff')=e+e'$.
 $\Gamma=(TKI_a)$ has center on $BC$: $\Gamma:\ x^2+y^2-2qx-2hy+e=0$. Since $\Gamma$ and $\omega:\ x^2+y^2-1=0$ meet at $T$ and $I_a$, every circle
-through $T,I_a$ has the form $\Phi_\lambda=\omega+\lambda(\Gamma-\omega)$, i.e.
+through $T,I_a$ has the form (the difference of two normalized circle equations through $T$ and $I_a$ is a linear function vanishing at both points, hence a multiple of $\Gamma-\omega$) $\Phi_\lambda=\omega+\lambda(\Gamma-\omega)$, i.e.
 \[x^2+y^2-1+\lambda(-2qx-2hy+e+1)=0 .\]
 Orthogonality with $\Omega$ ($g'=0$, $f'=-\frac1{2h}$, $e'=0$) reads $2\lambda h\cdot\frac1{2h}=-1+\lambda(e+1)$, i.e. $\lambda e=1$ (we show below that $e\ne0$). So we must show that
 the member with $\lambda=\frac1e$ passes through $A$, i.e. (multiplying by $e$)
@@ -188,7 +191,9 @@ the circle $ATI_a$.</p>
 <h4>Solution 1 (The circumcenter of ABE lies on AD)</h4>
 <div class="ct-fig"><img style="width:290px" src="/assets/contests/2026-27/iran-2nd-round-4_s1.svg" alt="Figure for the solution"></div>
 <p>Write $\alpha=\angle DAB$, $\beta=\angle ABC$, $\gamma=\angle BCD$, $2\delta=\angle CDA$. From $\alpha+\beta+\gamma+2\delta=360^\circ$
-and $\beta=\alpha+\gamma$ we get $\beta=180^\circ-\delta$; in particular $\beta&gt;90^\circ$.</p><p><strong>Angles at $E$.</strong> In the right triangle $AED$, $\angle EDA=\delta$, so $\angle DAE=90^\circ-\delta=\beta-90^\circ$. In triangle $ABE$,
+and $\beta=\alpha+\gamma$ we get $\beta=180^\circ-\delta$; in particular $\beta&gt;90^\circ$.</p><p><strong>The endpoint case $E=B$.</strong> Then $M=E$, and $\angle DEC=\angle ABC-\angle AED=\beta-90^\circ=90^\circ-\delta$, while $\angle EDC=\delta$; so
+$\angle ECD=90^\circ=\angle EHD$, and $C$, $H$ lie on the circle with diameter $ED$, which also passes through $D$ and $M=E$. From now on $E\ne B$
+(and $E\ne C$, since the interior bisector of $\angle CDA$ is not the side $DC$).</p><p><strong>Angles at $E$.</strong> In the right triangle $AED$, $\angle EDA=\delta$, so $\angle DAE=90^\circ-\delta=\beta-90^\circ$. In triangle $ABE$,
 $\angle BAE=\alpha-(90^\circ-\delta)=90^\circ-\gamma$ (using $\alpha+\delta=180^\circ-\gamma$), hence $\angle AEB=180^\circ-\beta-(90^\circ-\gamma)=90^\circ-\alpha$, and on line $BC$,
 $\angle DEC=180^\circ-90^\circ-(90^\circ-\alpha)=\alpha$. (In particular $\gamma&lt;90^\circ$.)</p><p><strong>The circumcenter $O_1$ of $ABE$ lies on ray $AD$.</strong> Since $\angle ABE=\beta&gt;90^\circ$, $O_1$ lies on the side of $AE$ opposite to $B$, which is the
 side of $D$, and the central angle is $\angle AO_1E=2(180^\circ-\beta)$. The isosceles triangle $AO_1E$ gives $\angle O_1AE=\beta-90^\circ=\angle DAE$.
@@ -199,9 +204,12 @@ circle with diameter $O_1E$. Using directed angles modulo $180^\circ$, if $H\ne 
 because $O_1H$ is the line $AD$ and $O_1E\parallel CD$. If $H=O_1$, then $\angle(MH,ME)=90^\circ$ (as $\angle O_1ME=90^\circ$) and $AD\perp CD$
 (as $O_1E\perp AD$ and $O_1E\parallel CD$), so the same equality holds. Hence $C,D,H,M$ are concyclic.</p>
 <h4>Solution 2 (Law of sines and an SAS similarity)</h4>
-<p>Keep the notation $\alpha,\beta,\gamma,2\delta$ and the angles found at the start of Solution 1:
-$\beta=180^\circ-\delta$, $\angle DEC=\alpha$, $\angle AEB=90^\circ-\alpha$, $\angle BAE=90^\circ-\gamma$, so $\gamma&lt;90^\circ$; note also $\alpha+\gamma+\delta=180^\circ$
-(triangle $DEC$). Put $DE=1$.</p><p><strong>Two lengths.</strong> In the right triangle $AED$: $AE=\tan\delta$ and, $H$ being the foot of the altitude, $\angle AEH=\delta$ and $EH=\sin\delta$.
+<p>Write $\alpha=\angle DAB$, $\beta=\angle ABC$, $\gamma=\angle BCD$, $2\delta=\angle CDA$. From $\alpha+\beta+\gamma+2\delta=360^\circ$ and
+$\beta=\alpha+\gamma$ we get $\beta=180^\circ-\delta$ and $\alpha+\gamma+\delta=180^\circ$.</p><p><strong>The angles.</strong> If $E=B$, then $M=E$, $\angle DEC=\angle ABC-\angle AED=90^\circ-\delta$ and $\angle EDC=\delta$, so $\angle ECD=90^\circ=\angle EHD$:
+the points $C,H$ lie on the circle with diameter $ED$, which also passes through $D$ and $M=E$. So let $E\ne B$ (also $E\ne C$, since the
+bisector of $\angle CDA$ is not the side $DC$). In the right triangle $AED$, $\angle EDA=\delta$, so $\angle DAE=90^\circ-\delta$ and
+$\angle BAE=\alpha-90^\circ+\delta=90^\circ-\gamma$; in particular $\gamma&lt;90^\circ$. In triangle $ABE$,
+$\angle AEB=180^\circ-\beta-(90^\circ-\gamma)=90^\circ-\alpha$, and on line $BC$, $\angle DEC=180^\circ-90^\circ-(90^\circ-\alpha)=\alpha$. Put $DE=1$.</p><p><strong>Two lengths.</strong> In the right triangle $AED$: $AE=\tan\delta$ and, $H$ being the foot of the altitude, $\angle AEH=\delta$ and $EH=\sin\delta$.
 In triangle $ABE$ the law of sines gives $BE=AE\cdot\frac{\sin(90^\circ-\gamma)}{\sin\beta}=\frac{\tan\delta\cos\gamma}{\sin\delta}=\frac{\cos\gamma}{\cos\delta}$
 (as $\sin\beta=\sin\delta$), so $EM=\frac{\cos\gamma}{2\cos\delta}$.</p><p><strong>The triangle $HME$.</strong> The rays from $E$ appear in the order $EB$ ($=EM$), $EA$, $EH$, $ED$, $EC$, so
 $\angle HEM=\angle HEA+\angle AEB=\delta+90^\circ-\alpha$. Consider a triangle $H'M'E'$ with angles $90^\circ-\gamma$ at $H'$, $180^\circ-2\delta$ at $M'$ and
@@ -213,7 +221,7 @@ Its opposite angles at $M$ and $D$ add up to $180^\circ$, so $C,D,H,M$ are concy
 <p>Since $\angle AED=90^\circ$ we may place $E=(0,0)$, $A=(1,0)$ and $D=(0,d)$ with $d&gt;0$.</p><p><strong>The points $C$ and $B$.</strong> The bisector $DE$ of $\angle CDA$ is the $y$-axis, so the reflection in the $y$-axis maps line $DA$ onto line $DC$.
 Line $DA$ meets the $x$-axis at $(1,0)$, so line $DC$ passes through $(-1,0)$, and $C=(x,y)$ satisfies
 \[y=d(1+x).\]
-Also $x&lt;0$, because the interior bisector $DE$ separates $A$ from $C$. Since $E$ lies on segment $BC$ and $E\ne B$, we have $B=t(x,y)$ for some $t&lt;0$.
+Also $x&lt;0$, because the interior bisector $DE$ separates $A$ from $C$. Since $E$ lies on segment $BC$ (possibly $E=B$), we have $B=t(x,y)$ for some $t\le0$.
 Put $L=x^2+y^2$. Moreover $y&gt;0$: in the convex quadrilateral, $A$ and $D$ lie on the same side of line $BC$, i.e. of the line through the origin
 with direction $(x,y)$; the signed cross products of $(x,y)$ with $A=(1,0)$ and with $D=(0,d)$ are $-y$ and $xd&lt;0$, so $-y&lt;0$.</p><p><strong>The angle condition.</strong> Let $\theta\in(0^\circ,90^\circ)$ with $\tan\theta=d$. In the right triangle $AED$, $\angle ADE=90^\circ-\theta$, so
 $\angle D=2(90^\circ-\theta)$. From $\angle A+\angle B+\angle C+\angle D=360^\circ$ and $\angle B=\angle A+\angle C$ we get
@@ -224,8 +232,7 @@ so $\cot\angle ABC=\dfrac{x-tL}{y}$. As $\cot(90^\circ+\theta)=-\tan\theta=-d$, 
 \[tL=x+dy .\]</p><p><strong>The circle.</strong> Put $W=\frac{tL}2=\frac{x+dy}2$, and let $\Sigma$ be the set of points $(X,Y)$ with
 \[X^2+Y^2-WX-\frac{d^2+W}{d}\,Y+W=0 .\]</p><ul class="ct-ul"><li><p>$D=(0,d)$: $d^2-(d^2+W)+W=0$.</p></li><li><p>$H$: line $AD$ is $dX+Y=d$, so the foot of the perpendicular from the origin is $H=\bigl(\frac{d^2}{1+d^2},\frac{d}{1+d^2}\bigr)$, with
 $X^2+Y^2=\frac{d^2}{1+d^2}$. The left side becomes $\frac{d^2-Wd^2-(d^2+W)+W(1+d^2)}{1+d^2}=0$.</p></li><li><p>$C=(x,y)$: by $y=d(1+x)$, $\frac{d^2+W}{d}\,y=(d^2+W)(1+x)=dy+W+Wx$, so the left side is $L-2Wx-dy=L-x^2-dxy-dy=y^2-dy(1+x)=0$.</p></li></ul><p>The points $D$, $H$, $C$ are distinct and not collinear ($H\ne D$ lies on line $AD$, while $C$ does not), so $\Sigma$ is a circle.</p><p><strong>The fourth point.</strong> A point $s(x,y)$ of line $BC$ lies on $\Sigma$ exactly when $Ls^2+ks+W=0$ for a certain constant $k$. One root is $s=1$
-(the point $C$), so by Vieta the other root is $\frac WL=\frac t2$. The point $\frac t2(x,y)$ is the midpoint $M$ of $E=(0,0)$ and $B=t(x,y)$, and
-$M\ne C$ since $t&lt;0$. Hence $M$ lies on $\Sigma$, and $C,D,H,M$ are concyclic.</p>
+(the point $C$), so by Vieta the other root is $\frac WL=\frac t2$. The point $\frac t2(x,y)$ is the midpoint $M$ of $E=(0,0)$ and $B=t(x,y)$, and $M\ne C$ since $t/2\le0&lt;1$ (for $t=0$ the point $M=E=B$ is still the midpoint of the degenerate segment $BE$). Hence $M$ lies on $\Sigma$, and $C,D,H,M$ are concyclic.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p5">

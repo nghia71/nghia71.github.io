@@ -106,7 +106,11 @@ blocks are disjoint because $n-u-1&lt;n-u+r\le 2n-u-1&lt;2n-u+1$, so $|\mathcal 
 <h4>Solution 1 (An auxiliary point on both perpendiculars)</h4>
 <div class="ct-fig"><img style="width:283px" src="/assets/contests/2026-27/emo-2_s1.svg" alt="Figure for the solution"></div>
 <p>We use directed angles $\measuredangle(\ell,m)$ between lines, taken modulo $180^\circ$, and signed products of collinear segments.
-If $K=A$ then $\angle ABK=0$, so $L=C$, $K_1=K_2=A$ and $L_1=L_2=C$, and there is nothing to prove; so $K,L$ are interior points of the side $AC$, and $K\ne L$.</p><p>Let $\ell_K$ and $\ell_L$ be the lines through $K$ and $L$ perpendicular to $BK$ and $BL$; $K_2\in\ell_K$, $L_2\in\ell_L$. As $BK\ne BL$, these lines meet at a point $V$.
+If one of $K,L$ is an endpoint of $AC$, the angle condition forces the other to be the opposite endpoint ($\angle ABK=0$ if and only if
+$\angle CBL=0$, and $\angle ABK=\angle ABC$ if and only if $\angle CBL=\angle ABC$). Then $\{K_1,L_1\}=\{A,C\}$, and the point $K_2$ or $L_2$ attached to
+an endpoint $X\in\{A,C\}$ lies on the tangent at $X$ and on the perpendicular to $BX$ at $X$. These two lines through $X$ coincide only if $BX$ is a diameter,
+which happens for at most one of $X=A$, $X=C$; so one of $K_2,L_2$ is $A$ or $C$. Hence at most three of the points $A,C,K_2,L_2$ are distinct, and they are not
+collinear (a point of the tangent at $X$ other than $X$ is not on line $AC$), so they lie on a circle. From now on $K$ and $L$ are distinct interior points of $AC$.</p><p>Let $\ell_K$ and $\ell_L$ be the lines through $K$ and $L$ perpendicular to $BK$ and $BL$; $K_2\in\ell_K$, $L_2\in\ell_L$. As $BK\ne BL$, these lines meet at a point $V$.
 $V\ne K$: otherwise $K\in\ell_L$, i.e. $LK\perp BL$, i.e. $BL\perp AC$, which is excluded; similarly $V\ne L$. Also $V\notin AC$, since $\ell_K$ meets $AC$ only at $K$.
 Let $\omega$ be the circumcircle of $ABC$.</p><p><strong>Step 1.</strong> Since $\measuredangle(KB,KV)=90^\circ=\measuredangle(LB,LV)$, the points $B,K,V,L$ are concyclic, so
 \[\measuredangle(VB,VK)=\measuredangle(LB,LK)=\measuredangle(BL,AC). \tag{1}\]</p><p><strong>Step 2.</strong> By the tangent&ndash;chord angle, $\measuredangle(K_1K_2,K_1B)=\measuredangle(CK_1,CB)$, i.e. $\measuredangle(K_1B,K_1K_2)=\measuredangle(CB,CK_1)$.
@@ -121,7 +125,11 @@ and $C$). By the converse of the power of a point (the circle through $A,C,V$ me
 $K_2$ lies on the circle $\Gamma$ through $A,C,V$.</p><p><strong>Step 5.</strong> The hypothesis is symmetric under exchanging $A\leftrightarrow C$ and $K\leftrightarrow L$, and $V$ is defined symmetrically. Repeating Steps 2&ndash;4 for
 $L$ shows that $L_2$ also lies on the circle through $A,C,V$, which is $\Gamma$. Hence $A,C,K_2,L_2$ lie on one circle.</p>
 <h4>Solution 2 (Coordinates and the circles through $A$ and $C$)</h4>
-<p>If $K=A$, then $L=C$ and there is nothing to prove (see Solution 1); so $K$ and $L$ are interior points of the side $AC$.</p><p>Take $AC$ as the $x$-axis and the distance from $B$ to $AC$ as the unit of length: $B=(0,1)$, $A=(a,0)$, $C=(c,0)$ with $a&lt;c$. Put
+<p>If one of $K,L$ is an endpoint of $AC$, the angle condition forces the other to be the opposite endpoint ($\angle ABK=0$ if and only if
+$\angle CBL=0$, and $\angle ABK=\angle ABC$ if and only if $\angle CBL=\angle ABC$). Then $\{K_1,L_1\}=\{A,C\}$, and the point $K_2$ or $L_2$ attached to
+an endpoint $X\in\{A,C\}$ lies on the tangent at $X$ and on the perpendicular to $BX$ at $X$. These two lines through $X$ coincide only if $BX$ is a diameter,
+which happens for at most one of $X=A$, $X=C$; so one of $K_2,L_2$ is $A$ or $C$. Hence at most three of the points $A,C,K_2,L_2$ are distinct, and they are not
+collinear (a point of the tangent at $X$ other than $X$ is not on line $AC$), so they lie on a circle. From now on $K$ and $L$ are interior points of $AC$.</p><p>Take $AC$ as the $x$-axis and the distance from $B$ to $AC$ as the unit of length: $B=(0,1)$, $A=(a,0)$, $C=(c,0)$ with $a&lt;c$. Put
 \[s=a+c,\qquad p=ac,\qquad h=1-p,\qquad \Omega(x,y)=x^2+y^2-sx-(1+p)y+p .\]
 One checks $\Omega(A)=\Omega(C)=\Omega(B)=0$, so $\Omega=0$ is the circumcircle $\omega$ of $ABC$. Let $K=(t,0)$ and $L=(u,0)$; then $a&lt;t,u&lt;c$, and
 $t\ne0$, $u\ne0$ because $BK$ and $BL$ are not perpendicular to $AC$.</p><p><strong>Step 1: the angle condition.</strong> Identify points with complex numbers. The vectors from $B$ to $A,C,K,L$ are $a-i$, $c-i$, $t-i$, $u-i$. As $K$ and $L$ lie
@@ -200,7 +208,7 @@ theorem there is an integer $b$, coprime to $Q=q_1q_2\cdots q_c$, with $b\equiv-
 $r\equiv b\pmod Q$. Then $a_r\ne l$ for every $l\in\{1,\dots,c\}$; but $1\le a_r\le c$ by Steps 1 and 3. This contradiction proves Step 4.</p><p><strong>Conclusion.</strong> By Steps 1&ndash;4, $f(p)=p$ for every prime $p$. As $f(1)=1$ and $f$ is completely multiplicative by (i), $f(n)=n$ for every positive integer $n$.
 So the only function is $\boxed{f(n)=n}$.</p>
 <h4>Solution 2 (An elementary proof with powers of $2$)</h4>
-<p>The identity works (Solution 1). Conversely, let $f$ satisfy (i) and (iii); condition (ii) will not be needed. By (i), $f(1)=1$.</p><p><strong>Step 1: if a prime $p$ divides $f(u)$, then $p\mid u$.</strong> Suppose $p\mid f(u)$ and $p\nmid u$. Since $u$ is invertible modulo $p$, every residue class
+<p>The identity works: for $f(n)=n$, (i) holds, (ii) holds with $c=1$, and $n+m$ and $m+n+1$ are consecutive integers, hence coprime. Conversely, let $f$ satisfy (i) and (iii); condition (ii) will not be needed. By (i), $f(1)=1$.</p><p><strong>Step 1: if a prime $p$ divides $f(u)$, then $p\mid u$.</strong> Suppose $p\mid f(u)$ and $p\nmid u$. Since $u$ is invertible modulo $p$, every residue class
 modulo $p$ contains a multiple $n=ux$ of $u$, and then $p\mid f(u)f(x)=f(n)$. Take such an $n\equiv-1\pmod p$ and $m=p$: then $p\mid f(n)+m$, while
 $f(m)+n+1\equiv f(p)\pmod p$; by (iii), $p\nmid f(p)$. Now take $m=p^{p-1}$, so that $f(m)=f(p)^{p-1}\equiv1\pmod p$ by Fermat's little theorem, and a multiple
 $n$ of $u$ with $n\equiv-2\pmod p$. Then $f(n)+m\equiv0$ and $f(m)+n+1\equiv1-2+1=0\pmod p$, contradicting (iii).</p><p>Consequently $f(q)=q^{e_q}$ with $e_q\ge0$ for every prime $q$. Also, (iii) with $m=1$, $n=2$ says that $f(2)+1$ and $f(1)+3=4$ are coprime, so $f(2)$ is
@@ -281,7 +289,9 @@ Hence $\gcd(E_1,E_2)=1$, so $N_d\ne1$ and the exponents of $N_d$ have no common 
 <p>Directed angles $\measuredangle(\ell,m)$ are taken modulo $180^\circ$. Let $\omega=(ABC)$, $\omega_1=(AEF)$, let $\sigma=(MEF)$ with centre $O'$, and let
 $M_1$ be the midpoint of $EF$.</p><p><strong>Step 0.</strong> The circle $\sigma$ passes through $M\in BC$ and is tangent to $BC$, so it touches $BC$ at $M$ and $O'M\perp BC$. Also $O'M_1\perp EF$. The line $EF$ is
 not parallel to $BC$: otherwise the triangles $AEF$ and $ACB$ would be homothetic from $A$, the circles $\omega_1,\omega$ would be tangent at $A$, and $P$ would not
-exist. Let $T=EF\cap BC$; $T\ne M$, since $M,E,F$ are not collinear.</p><p><strong>Step 1: the spiral similarity.</strong> The circles $\omega_1$ and $\omega$ meet at $A$ and $P$, and $A=FB\cap EC$. Hence $\measuredangle(FP,FB)=\measuredangle(FP,FA)=
+exist. Also $F\ne B$: otherwise $\sigma$ would meet $BC$ at $B$ and at $M\ne B$, so it could not be tangent to $BC$; likewise $E\ne C$, and $E,F\ne A$ because
+$AEF$ is a triangle. So $E$, $F$ are interior points of the sides, and $P\ne B,C,E,F$ (the line $AB$ meets $\omega_1$ only at $A,F$ and $\omega$ only at $A,B$;
+similarly for $AC$). Let $T=EF\cap BC$; $T\ne M$, since $M,E,F$ are not collinear.</p><p><strong>Step 1: the spiral similarity.</strong> The circles $\omega_1$ and $\omega$ meet at $A$ and $P$, and $A=FB\cap EC$. Hence $\measuredangle(FP,FB)=\measuredangle(FP,FA)=
 \measuredangle(EP,EA)=\measuredangle(EP,EC)$ and $\measuredangle(BP,BF)=\measuredangle(BP,BA)=\measuredangle(CP,CA)=\measuredangle(CP,CE)$, so the triangles $PFB$
 and $PEC$ are directly similar. Therefore the spiral similarity $\mathcal S$ with centre $P$ that maps $F\mapsto B$ also maps $E\mapsto C$. It maps the line $EF$ to the
 line $BC$ and the midpoint $M_1$ of $EF$ to the midpoint $M$ of $BC$.</p><p><strong>Lemma.</strong> If a spiral similarity with centre $P$ maps a line $g$ to a line $h$ meeting it at $T$, then for every $X\in g$ the points $P,X,\mathcal S(X),T$ are
@@ -353,9 +363,10 @@ lines, so $O$ lies on both segments. Consequently, by the triangle inequality,
 and likewise $|WZ|+|XY|\le|WY|+|XZ|$.</p><p>Now among the perfect matchings of maximal total length take one, $\mathcal D$, with the largest number of crossing pairs of segments. Suppose two segments of
 $\mathcal D$ do not cross; their endpoints are four distinct points $W,X,Y,Z$ in cyclic order, and the two segments are $WX,YZ$ or $WZ,XY$. Replace them by $WY,XZ$.
 By the fact, the total length does not decrease, so the new matching is also of maximal length. The new two segments cross each other, the old two did not; and
-every other segment $UV$ crosses at least as many of the new two as of the old two. (The points $W,X,Y,Z$ cut the boundary into four open arcs; if $U,V$ are on the
-same arc, $UV$ crosses none of the four segments, and checking the six possible pairs of arcs for $U,V$ shows that $UV$ crosses equally many old and new segments,
-except in one case where it crosses none of the old and both of the new.) So the number of crossing pairs grows, contradicting the choice of $\mathcal D$. Hence
+every other segment $UV$ crosses at least as many of the new two as of the old two. (The points $W,X,Y,Z$ cut the boundary into four open arcs. If $U,V$ are on the
+same arc, $UV$ crosses none of the four segments. If they are on two adjacent arcs, $UV$ separates the common endpoint of these arcs from the other three points,
+so it crosses exactly the two segments ending there, one old and one new. If they are on opposite arcs, $UV$ separates two consecutive points of $W,X,Y,Z$ from
+the other two, so it crosses both new segments, and both or none of the old ones.) So the number of crossing pairs grows, contradicting the choice of $\mathcal D$. Hence
 every two segments of $\mathcal D$ cross.</p><p>Finally, a perfect matching in which every two segments cross is unique: number the points $P_1,\dots,P_{2k}$ in cyclic order; for a segment $P_iP_j$, each of the
 other $k-1$ segments has one endpoint on each of the two arcs cut off by $P_i,P_j$, so each arc contains exactly $k-1$ of the points, and $j\equiv i+k\pmod{2k}$.
 So $\mathcal C=\mathcal D=\{P_iP_{i+k}\}$, and $\mathcal C$ has maximal total length.</p><p><em>(d) A cycle.</em> The map $V\mapsto g(f(V))$ sends vertices to vertices; as there are finitely many vertices, iterating it from any vertex eventually repeats,
