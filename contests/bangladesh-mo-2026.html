@@ -128,7 +128,7 @@ description: Bangladesh Mathematical Olympiad 2026, National Round: problems wit
 <h3>Problem 3</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VII scale">E</span>Geometry &middot; LPS VII, Chapter 3: Foundational Angle and Configuration Chasing &middot; Cyclic Quadrilateral Recognition &middot; also Higher Secondary, Problem 3</div>
 <div class="ct-text"><p>$ABCD$ is a cyclic quadrilateral. $F$ is the midpoint of the arc $AB$ not containing $C$ or $D$. Let $CF\cap BD=P$ and $DF\cap AC=Q$. Prove that $PQ\parallel AB$.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 (An auxiliary cyclic quadrilateral $CDPQ$)</h4>
 <div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/bangladesh-mo-3_s1.svg" alt="Figure for the solution"></div>
 <p>We use directed angles between lines, taken modulo $180^\circ$, written $\measuredangle$; then "$W,X,Y,Z$ concyclic" is equivalent to $\measuredangle XWY=\measuredangle XZY$ (for four points, no three collinear), and two lines $\ell,m$ are parallel when $\measuredangle(\ell,n)=\measuredangle(m,n)$ for a third line $n$.</p><p>Since $F$ is the midpoint of arc $AB$, $FA=FB$, so in the isosceles triangle $FAB$ we have $\measuredangle FAB=\measuredangle ABF$.</p><p>Lines $CQ$ and $CA$ coincide, as do $CP$ and $CF$; lines $DQ$ and $DF$ coincide, as do $DP$ and $DB$. Using inscribed angles on the circle $ABCDF$:
@@ -140,6 +140,16 @@ So $\measuredangle(PQ,BD)=\measuredangle(BA,BD)$: the lines $PQ$ and $AB$ make t
 <p>Let $t$ be the tangent to the circle at $F$. Because $F$ is the midpoint of arc $AB$, the radius to $F$ is perpendicular to chord $AB$ (it lies on the perpendicular bisector of $AB$), and $t$ is perpendicular to that same radius. Therefore $t\parallel AB$.</p><p>Apply Pascal's theorem to the (degenerate) hexagon $C\,F\,F\,D\,B\,A$ inscribed in the circle; the "side" $FF$ is the tangent $t$. Pascal's theorem says that the three intersection points of opposite sides
 \[CF\cap DB=P,\qquad FF\cap BA=t\cap AB,\qquad FD\cap AC=Q\]
 are collinear. Since $t\parallel AB$, the middle point is the point at infinity of the direction $AB$. A line through $P$ and $Q$ that also passes through the point at infinity of $AB$ is a line parallel to $AB$. Hence $PQ\parallel AB$.</p><p>(Without points at infinity: Pascal's theorem also holds in the form &ldquo;if one pair of opposite sides is parallel, then the line through the other two intersection points is parallel to them as well&rdquo;; here the pair is $t\parallel AB$.)</p>
+<h4>Solution 3 (A rational parametrisation of the circle)</h4>
+<p>Choose coordinates with $F=(0,0)$ and the circle $x^2+y^2=y$ (centre $(0,\frac12)$, radius $\frac12$; this only fixes the unit of length and the direction of the axes). For a real number $u$ put
+\[T(u)=\Bigl(\frac{u}{1+u^2},\ \frac1{1+u^2}\Bigr).\]
+Since $\bigl(\frac{u}{1+u^2}\bigr)^2+\bigl(\frac1{1+u^2}\bigr)^2=\frac{1}{1+u^2}$, the point $T(u)$ lies on the circle. Conversely every point $(x,y)\ne F$ of the circle has $y=x^2+y^2&gt;0$ and equals $T(u)$ for $u=\frac xy$ (substitute $x=uy$ into $x^2+y^2=y$ to get $y=\frac1{1+u^2}$). Note that $T(u)$ lies on the line $x=uy$ through $F$.</p><p><em>Chords.</em> For $s\ne t$ the line through $T(s)$ and $T(t)$ is
+\[(s+t)\,x+(1-st)\,y=1,\]
+since at $T(s)$ the left side is $\frac{(s+t)s+1-st}{1+s^2}=1$, and similarly at $T(t)$.</p><p><em>The points.</em> For a point $X$ of the circle, $FX^2=x^2+y^2=y$. As $FA=FB$, the points $A$ and $B$ have the same height, so $A=T(a)$ and $B=T(-a)$ for some $a\ne0$; in particular $AB$ is horizontal. Write $C=T(c)$ and $D=T(d)$ (possible since $C,D\ne F$).</p><p>The line $CF$ is $x=cy$ and the line $BD$ is $(d-a)x+(1+ad)y=1$, so
+\[y_P=\frac{1}{(d-a)c+1+ad}=\frac1{1+cd+a(d-c)} .\]
+The line $DF$ is $x=dy$ and the line $AC$ is $(a+c)x+(1-ac)y=1$, so
+\[y_Q=\frac{1}{(a+c)d+1-ac}=\frac1{1+cd+a(d-c)} .\]
+(The denominators are not zero, because the intersection points exist.) Hence $P$ and $Q$ have the same height. They are different points: the lines $CF$ and $DF$ meet only at $F$, which is not on $BD$. So $PQ$ is horizontal, that is, $PQ\parallel AB$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p4">

@@ -158,8 +158,8 @@ So $\ell\mid253=11\cdot23$ but $\ell\ne1,11,23$; hence $\ell=253$.</p><p>The num
 \[\begin{cases}2x+\dfrac yz=3\\[1mm] 2y+\dfrac zx=3\\[1mm] 2z+\dfrac xy=3\end{cases}\]
 and $x$, $y$, and $z$ are pairwise distinct, what is $x+y+z$?</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\dfrac{13}2$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Two relations between $e_1$ and $e_3$)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Two relations between $e_1$ and $e_3$)</h4>
 <p>All of $x,y,z$ are nonzero. Clearing denominators,
 \[2xz+y=3z,\qquad2xy+z=3x,\qquad2yz+x=3y.\tag{1}\]
 Let $s=x+y+z$, $q=xy+yz+zx$ and $p=xyz$.</p><p><em>Sum.</em> Adding the equations (1): $2q+s=3s$, so $q=s$.</p><p><em>Differences.</em> Subtracting consecutive equations of (1):
@@ -167,6 +167,19 @@ Let $s=x+y+z$, $q=xy+yz+zx$ and $p=xyz$.</p><p><em>Sum.</em> Adding the equation
 Multiplying the three and cancelling $(x-y)(y-z)(z-x)\ne0$ (the numbers are distinct; note $(z-y)(x-z)(y-x)=-(x-y)(y-z)(z-x)$):
 \[(2x-1)(2y-1)(2z-1)=-27,\quad\text{i.e.}\quad8p-4q+2s-1=-27,\quad4p-s=-13.\]</p><p><em>Product.</em> The original equations say $\frac yz=3-2x$, $\frac zx=3-2y$, $\frac xy=3-2z$; multiplying,
 \[(3-2x)(3-2y)(3-2z)=1,\quad\text{i.e.}\quad27-18s+12q-8p=1,\quad4p=13-3s.\]</p><p>From $4p=s-13$ and $4p=13-3s$ we get $4s=26$, so $x+y+z=\boxed{\dfrac{13}2}$. (Such triples exist: $x,y,z$ are, in some order, the three real numbers approximately $1.5199,\ -0.2062,\ 5.1863$.)</p>
+<h4>Solution 2 (Eliminate two variables)</h4>
+<p>All of $x,y,z$ are nonzero, since they appear in denominators. The equations say
+\[y=z(3-2x),\qquad z=x(3-2y),\qquad x=y(3-2z).\tag{1}\]
+<em>Express $y$ and $z$ through $x$.</em> Substituting the second equation of (1) into the first gives $y=x(3-2y)(3-2x)$, that is,
+\[y\,D=3x(3-2x),\qquad D=1+6x-4x^2 .\]
+If $D=0$, then $3x(3-2x)=0$, so $x=0$ (excluded) or $x=\frac32$; but $D=1$ at $x=\frac32$. Hence $D\ne0$ and $y=\frac{3x(3-2x)}{D}$. Then
+\[z=x(3-2y)=\frac{x\bigl(3D-6x(3-2x)\bigr)}{D}=\frac{x(3+18x-12x^2-18x+12x^2)}{D}=\frac{3x}{D}.\]
+<em>One equation for $x$.</em> The third equation of (1) becomes
+\[x=\frac{3x(3-2x)}{D}\cdot\frac{3D-6x}{D},\quad\text{so}\quad D^2=9(3-2x)(D-2x)\]
+after dividing by $x\ne0$. Here $D^2=16x^4-48x^3+28x^2+12x+1$ and $9(3-2x)(1+4x-4x^2)=72x^3-180x^2+90x+27$, so the equation is
+\[16x^4-120x^3+208x^2-78x-26=0\iff 2(x-1)(8x^3-52x^2+52x+13)=0.\]
+<em>Conclusion.</em> The system is unchanged by the cyclic substitution $x\to y\to z\to x$, so $y$ and $z$ satisfy the same equation. None of $x,y,z$ equals $1$: if, say, $x=1$, the first equation gives $2+\frac yz=3$, so $y=z$, contradicting distinctness (and similarly for $y$, $z$). Hence $x,y,z$ are three distinct roots of the cubic $8w^3-52w^2+52w+13$, that is, all of its roots, and by Vieta's formulas
+\[x+y+z=\frac{52}{8}=\boxed{\dfrac{13}2}.\]</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p6">
@@ -229,8 +242,8 @@ and $\dfrac{AB}{DA}=\dfrac{CG}{HE}$.</p>
 <h3>Problem 3</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 11: Similarity, Homothety, and Ratio Geometry &middot; Nested and Overlapping Similarity</div>
 <div class="ct-text"><p>In acute $\triangle ABC$, pick points $P$ and $Q$ on $BC$ such that $\angle PAB=\angle ACB$ and $\angle QAC=\angle ABC$. Extend rays $AP$ and $AQ$ past $P$ and $Q$ to $M$ and $N$ respectively such that $\dfrac{AP}{PM}=\dfrac{QN}{AQ}$. Prove that $BM$ and $CN$ intersect on the circumcircle of $ABC$.</p></div>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Two similar triangles $BPM$ and $NQC$)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Two similar triangles $BPM$ and $NQC$)</h4>
 <div class="ct-fig"><img style="width:224px" src="/assets/contests/2026-27/taiwan-apmo-prelim-10_s1.svg" alt="Figure for the solution"></div>
 <p>Write $\angle A,\angle B,\angle C$ for the angles of the triangle and $r=\frac{AP}{PM}=\frac{QN}{AQ}$.</p><p><em>Positions.</em> In triangle $ABP$, $\angle ABP=\angle B$ and $\angle BAP=\angle C$, so $\angle APB=\angle A$; similarly $\angle AQC=\angle A$. Hence triangles $ABP$, $CAQ$ and $CBA$ are similar ($ABP\sim CBA$ share angle $B$; $CAQ\sim CBA$ share angle $C$). In particular $\frac{BP}{AP}=\frac{AQ}{CQ}$ (from $ABP\sim CAQ$), i.e.
 \[BP\cdot CQ=AP\cdot AQ.\tag{1}\]
@@ -239,6 +252,20 @@ Also $\angle APQ=\angle AQP=\angle A&lt;90^\circ$ shows that $Q$ lies between $B
 So triangles $BPM$ and $NQC$ are similar (SAS), with $B\leftrightarrow N$, $P\leftrightarrow Q$, $M\leftrightarrow C$. Hence $\angle PBM=\angle QNC$ and $\angle PMB=\angle QCN$.</p><p><em>The intersection point.</em> The rays $BM$ and $CN$ go from $B$ and $C$ into the half-plane of $BC$ not containing $A$ (as $M,N$ lie beyond $BC$). Since $P$ and $Q$ lie on segment $BC$, the angles these rays make with $BC$ satisfy
 \[\angle MBC+\angle NCB=\angle PBM+\angle QCN=\angle PBM+\angle PMB=180^\circ-\angle BPM=\angle A&lt;180^\circ,\]
 so the two rays meet at a point $T$ in that half-plane, and in triangle $TBC$ we have $\angle TBC+\angle TCB=\angle A$. So $\angle BTC=180^\circ-\angle A$, and since $T$ and $A$ are on opposite sides of $BC$, the quadrilateral $ABTC$ is cyclic: $T$ lies on the circumcircle of $ABC$.</p>
+<h4>Solution 2 (Coordinates and the equation of the circle)</h4>
+<p>Choose coordinates with $B=(0,0)$, $C=(1,0)$ and $A=(u,v)$, $v&gt;0$ (unit length $BC$).</p><p><em>The points $P$ and $Q$.</em> Since $\angle PAB=\angle ACB$ and the angle at $B$ is shared, triangles $ABP$ and $CBA$ are similar, so $BP=\frac{AB^2}{BC}=u^2+v^2$. Likewise triangles $ACQ$ and $BCA$ are similar, so $CQ=AC^2=(1-u)^2+v^2$. Hence $P=(p,0)$ and $Q=(q,0)$ with
+\[p=u^2+v^2,\qquad 1-q=(1-u)^2+v^2 .\]
+Then $p+q=2u$; put $\delta=p-u=u-q$. Also
+\[p(1-q)=(u+\delta)(1-u+\delta)=u-u^2+\delta+\delta^2=v^2+\delta^2,\tag{1}\]
+using $\delta=u^2+v^2-u$.</p><p><em>The lines $BM$ and $CN$.</em> Let $t=\frac{PM}{AP}=\frac{AQ}{QN}&gt;0$. As $M$ lies on ray $AP$ beyond $P$ and $N$ on ray $AQ$ beyond $Q$,
+\[M=P+t(P-A)=\bigl(p+t\delta,\,-tv\bigr),\qquad N=Q+\tfrac1t(Q-A)=\bigl(q-\tfrac{\delta}{t},\,-\tfrac vt\bigr).\]
+So line $BM$ is $x=\alpha y$ and line $CN$ is $x-1=\gamma y$, where
+\[\alpha=-\frac{p/t+\delta}{v},\qquad \gamma=\frac{t(1-q)+\delta}{v}.\]
+These lines are not parallel: $v(\gamma-\alpha)=\frac pt+t(1-q)+2\delta$, and by AM&ndash;GM and (1), $\frac pt+t(1-q)\ge2\sqrt{p(1-q)}=2\sqrt{v^2+\delta^2}&gt;2|\delta|$, so $\gamma-\alpha&gt;0$. Their intersection $T$ has $y=\frac1{\alpha-\gamma}$, $x=\frac{\alpha}{\alpha-\gamma}$.</p><p><em>The circle.</em> The circumcircle of $ABC$ passes through $B$ and $C$, so it has the form $x^2+y^2-x+ey=0$; passing through $A$ gives $u^2+v^2-u+ev=0$, so $e=-\frac{\delta}{v}$. Multiplying the left side at $T$ by $(\alpha-\gamma)^2$ gives
+\[\alpha^2+1-\alpha(\alpha-\gamma)-\frac{\delta}{v}(\alpha-\gamma)=\alpha\gamma+1-\frac{\delta(\alpha-\gamma)}{v}.\]
+Now $v^2\alpha\gamma=-\bigl(p(1-q)+\frac{p\delta}t+t\delta(1-q)+\delta^2\bigr)$ and $v^2\cdot\bigl(-\frac{\delta(\alpha-\gamma)}{v}\bigr)=\delta\bigl(\frac pt+t(1-q)+2\delta\bigr)$, so
+\[\alpha\gamma+1-\frac{\delta(\alpha-\gamma)}{v}=1+\frac{\delta^2-p(1-q)}{v^2}=1-\frac{v^2}{v^2}=0\]
+by (1). Hence $T$ lies on the circumcircle of $ABC$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p11">

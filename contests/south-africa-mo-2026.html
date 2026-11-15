@@ -195,7 +195,7 @@ because $BF\cdot BA=BD\cdot BC$, $FA\cdot BA=EA\cdot CA$ and $DC\cdot BC=CE\cdot
 \[yf(x+y)+f\big(1+yf(x)\big)=1\]
 for all $x,y&gt;0$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$f(x)=\dfrac1x$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 (An upper bound and a supremum argument)</h4>
 <p><em>Check.</em> For $f(x)=1/x$: $\dfrac{y}{x+y}+\dfrac{1}{1+y/x}=\dfrac{y}{x+y}+\dfrac{x}{x+y}=1$.</p><p><em>Upper bound.</em> All values of $f$ are positive, so the equation gives $yf(x+y)&lt;1$. For $t&gt;0$ and any $0&lt;y&lt;t$, take $x=t-y$: $f(t)&lt;1/y$. Letting $y\to t$ gives $f(t)\le1/t$, i.e. $g(t)=tf(t)\le1$ for all $t&gt;0$.</p><p><em>Lower bound for arguments above $1$.</em> Using $f(x+y)\le\frac1{x+y}$ in the equation,
 \[f\big(1+yf(x)\big)=1-yf(x+y)\ge1-\frac{y}{x+y}=\frac{x}{x+y}.\]
@@ -208,6 +208,18 @@ Let $G=\sup_{x&gt;0}g(x)$; $0&lt;G\le1$. The function $s\mapsto\frac{s}{s+u-1}$ 
 by Step 1. Substituting $y=\frac{x-1}{f(x)}$ and writing $g=xf(x)&gt;0$:
 \[f(x)\ge\frac{x}{x+\frac{x-1}{f(x)}}=\frac{xf(x)}{xf(x)+x-1}\iff g+x-1\ge x\iff g\ge1.\]
 So $xf(x)\ge1$, and with Step 1, $f(x)=\frac1x$ for all $x&gt;1$.</p><p><em>Step 3: all $x&gt;0$.</em> Take any $x&gt;0$ and $y&gt;1$. Then $x+y&gt;1$ and $1+yf(x)&gt;1$, so by Step 2 the equation reads $\frac{y}{x+y}+\frac{1}{1+yf(x)}=1$, which gives $1+yf(x)=1+\frac yx$ and $f(x)=\frac1x$.</p><p>The only solution is $\boxed{f(x)=\dfrac1x}$.</p>
+<h4>Solution 3 (Reading off the behaviour at infinity)</h4>
+<p><em>Check.</em> $f(x)=1/x$ works: $\frac{y}{x+y}+\frac{1}{1+y/x}=\frac{y}{x+y}+\frac{x}{x+y}=1$.</p><p><em>Step 1: $f(t)\le\frac1t$.</em> Since $f&gt;0$, the equation gives $yf(x+y)&lt;1$. For $t&gt;0$ and $0&lt;y&lt;t$ put $x=t-y$: then $f(t)&lt;\frac1y$. Letting $y\to t$ gives $f(t)\le\frac1t$ for every $t&gt;0$.</p><p><em>Step 2: $tf(t)\to1$ as $t\to\infty$.</em> Fix $x&gt;0$. By Step 1, $0&lt;f(1+yf(x))\le\frac{1}{1+yf(x)}\to0$ as $y\to\infty$, so the equation gives $yf(x+y)\to1$. With $t=x+y$ this says $(t-x)f(t)\to1$, and since $xf(t)\le\frac xt\to0$, also $tf(t)\to1$.</p><p><em>Step 3: a limit that does not depend on $x$.</em> Fix $x&gt;0$ again and write $t=x+y$, $u=1+yf(x)$. The equation says $1-yf(t)=f(u)$, so
+\[y\bigl(1-yf(t)\bigr)=yf(u)=\frac{y}{u}\cdot uf(u).\]
+As $y\to\infty$ we have $u\to\infty$, so $uf(u)\to1$ by Step 2, and $\frac yu=\frac{y}{1+yf(x)}\to\frac1{f(x)}$. Hence $y(1-yf(t))\to\frac1{f(x)}$. On the other hand, using $y=t-x$,
+\[y\bigl(1-yf(t)\bigr)-t\bigl(1-tf(t)\bigr)=-x+(t^2-y^2)f(t)=-x+x\,tf(t)+x\,yf(t)\longrightarrow -x+x+x=x,\]
+because $tf(t)\to1$ and $yf(t)=tf(t)-xf(t)\to1$. Therefore the limit
+\[L=\lim_{t\to\infty}t\bigl(1-tf(t)\bigr)\]
+exists and equals $\frac1{f(x)}-x$. The left side does not involve $x$, so $\frac{1}{f(x)}=x+L$ for every $x&gt;0$, that is,
+\[f(x)=\frac{1}{x+L}.\]
+By Step 1, $x+L\ge x$, so $L\ge0$.</p><p><em>Step 4: $L=0$.</em> Substitute $f(x)=\frac1{x+L}$. Then $yf(x+y)=\frac{y}{x+y+L}$ and $1+yf(x)=\frac{x+y+L}{x+L}$, so the equation becomes
+\[\frac{y}{x+y+L}+\frac{1}{\frac{x+y+L}{x+L}+L}=1,\qquad\text{i.e.}\qquad \frac{1}{\frac{x+y+L}{x+L}+L}=\frac{x+L}{x+y+L}=\frac{1}{\frac{x+y+L}{x+L}}.\]
+The two denominators differ by $L$, so $L=0$.</p><p>Hence the only solution is $\boxed{f(x)=\dfrac1x}$.</p>
 </div></details>
 </section>
 {% endraw %}

@@ -239,7 +239,7 @@ Similarly $\angle QAC=90^\circ-C$, with ray $AQ$ on the side of $AC$ opposite to
 \[\sqrt{6x}\left(1+\frac1{6x-y}\right)=2,\qquad \sqrt{2y}\left(1-\frac1{6x-y}\right)=6.\]
 Find the minimum possible value of $\dfrac yx$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$9$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 (The ratio as the unknown)</h4>
 <p>The square roots must be defined and the left sides are nonzero, so $x&gt;0$ and $y&gt;0$. Put $u=\sqrt{6x}&gt;0$, $w=\sqrt y&gt;0$ and $t=6x-y=u^2-w^2\ne0$. The equations become
 \[1+\frac1t=\frac2u,\qquad 1-\frac1t=\frac{6}{\sqrt2\,w}=\frac{3\sqrt2}{w}.\]
@@ -250,6 +250,19 @@ Expanding, $-k^2-\frac9{2k^2}+\frac92=0$, i.e. $2k^4-9k^2+9=0$, so $k^2=3$ or $k
 <p>The square roots must be defined and the left sides are nonzero, so $x,y&gt;0$. Put $u=\sqrt{6x}$, $w=\sqrt y$, $t=u^2-w^2=(u+w)(u-w)\ne0$. The equations read $u+\frac ut=2$ and $w-\frac wt=3\sqrt2$. Adding and subtracting, and using $\frac{u\mp w}{t}=\frac1{u\pm w}$:
 \[(u+w)+\frac1{u+w}=2+3\sqrt2,\qquad (u-w)+\frac1{u-w}=2-3\sqrt2.\]
 With $\alpha=u+w$ and $\beta=u-w$, the first equation is $\alpha^2-(2+3\sqrt2)\alpha+1=0$, with discriminant $18+12\sqrt2=6(\sqrt2+1)^2$, so $\alpha=\frac{2+3\sqrt2\pm\sqrt6(\sqrt2+1)}2$; the second has discriminant $18-12\sqrt2=6(\sqrt2-1)^2$, so $\beta=\frac{2-3\sqrt2\pm\sqrt6(\sqrt2-1)}2$. We need $u=\frac{\alpha+\beta}2&gt;0$; the smaller $\alpha$ (about $0.165$) gives $u&lt;0$ with both $\beta$ (about $-0.61$ and $-1.63$), so $\alpha=\frac{2+3\sqrt2+2\sqrt3+\sqrt6}{2}$. Then</p><ul class="ct-ul"><li><p>$\beta=\frac{2-3\sqrt2+2\sqrt3-\sqrt6}{2}$: $u=1+\sqrt3$, $w=\frac{3\sqrt2+\sqrt6}2=\frac{\sqrt6}{2}(1+\sqrt3)$, so $\frac yx=\frac{6w^2}{u^2}=6\cdot\frac64=9$;</p></li><li><p>$\beta=\frac{2-3\sqrt2-2\sqrt3+\sqrt6}{2}$: $u=\frac{2+\sqrt6}2$, $w=\frac{3\sqrt2+2\sqrt3}2=\sqrt3\,u$, so $\frac yx=18$.</p></li></ul><p>Each pair $(\alpha,\beta)$ gives $u,w&gt;0$, $t=\alpha\beta\ne0$, and satisfies the two equations, which are equivalent to the original system. The minimum of $\frac yx$ is $\boxed{9}$.</p>
+<h4>Solution 3 (Solve for x and y in terms of 6x-y)</h4>
+<p>The square roots must be defined and the left sides are nonzero, so $x&gt;0$ and $y&gt;0$. Put $u=6x-y\ne0$. The equations say
+\[1+\frac1u=\frac2{\sqrt{6x}}&gt;0,\qquad 1-\frac1u=\frac6{\sqrt{2y}}&gt;0,\]
+so $\bigl|\frac1u\bigr|&lt;1$, that is $|u|&gt;1$. Squaring,
+\[6x=\frac{4u^2}{(u+1)^2},\qquad y=\frac{18u^2}{(u-1)^2}. \tag{1}\]
+Substituting into $u=6x-y$ and dividing by $u$:
+\[1=\frac{4u}{(u+1)^2}-\frac{18u}{(u-1)^2}. \tag{2}\]
+If $u&gt;1$, then $(u-1)^2&lt;(u+1)^2$, so $\frac{18u}{(u-1)^2}&gt;\frac{4u}{(u+1)^2}$ and the right side of (2) is negative, which is impossible. Hence $u&lt;-1$; write $u=-t$ with $t&gt;1$. Then (2) becomes $1=\frac{18t}{(t+1)^2}-\frac{4t}{(t-1)^2}$, and clearing denominators,
+\[(t^2-1)^2=18t(t-1)^2-4t(t+1)^2\iff t^4-14t^3+42t^2-14t+1=0 .\]
+This equation is unchanged by $t\to\frac1t$. Dividing by $t^2$ and putting $v=t+\frac1t$ (so $t^2+\frac1{t^2}=v^2-2$) gives $v^2-14v+40=0$, i.e. $(v-4)(v-10)=0$. Both values give a root $t&gt;1$, namely $t=2+\sqrt3$ and $t=5+2\sqrt6$.</p><p><em>Both roots give solutions.</em> For such $t$ define $x,y$ by (1) with $u=-t$; they are positive. As $u&lt;-1$, the numbers $\frac{2u}{u+1}$ and $\frac{6u}{u-1}$ are positive, so $\sqrt{6x}=\frac{2u}{u+1}$ and $\sqrt{2y}=\frac{6u}{u-1}$. Equation (2), multiplied by $u$, says $6x-y=u$, and then
+$\sqrt{6x}\bigl(1+\frac1u\bigr)=\frac{2u}{u+1}\cdot\frac{u+1}u=2$ and $\sqrt{2y}\bigl(1-\frac1u\bigr)=\frac{6u}{u-1}\cdot\frac{u-1}u=6$.</p><p><em>The ratio.</em> From (1),
+\[\frac yx=\frac{6y}{6x}=27\Bigl(\frac{u+1}{u-1}\Bigr)^2=27\Bigl(\frac{t-1}{t+1}\Bigr)^2=27\cdot\frac{t-2+\frac1t}{t+2+\frac1t}=27\cdot\frac{v-2}{v+2}.\]
+For $v=4$ this is $9$, and for $v=10$ it is $18$. So the minimum of $\frac yx$ is $\boxed{9}$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p11">
@@ -273,13 +286,19 @@ exactly. Consequently different pairs give different elements: if $x_{ij}=x_{kl}
 <div class="ct-text"><p>Let $a$ and $b$ be two distinct positive integers. Prove that
 \[\prod_{i=0}^{2026}\gcd(a+i,\,b+i)\]
 divides $2026!\times(a-b)$.</p></div>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Counting multiples of prime powers)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Counting multiples of prime powers)</h4>
 <p>We may assume $a&gt;b$ (the statement is symmetric up to the sign of $a-b$, which does not affect divisibility). Put $D=a-b&gt;0$ and $g_i=\gcd(a+i,b+i)$. Since $\gcd(a+i,b+i)=\gcd(a+i,(a+i)-(b+i))$, we have $g_i=\gcd(a+i,D)$.</p><p>Fix a prime $p$ and let $e=v_p(D)$. Then $v_p(g_i)=\min\bigl(v_p(a+i),e\bigr)=\#\{k: 1\le k\le e,\ p^k\mid a+i\}$. Summing over $i=0,\dots,2026$ and swapping the order of counting,
 \[v_p\Bigl(\prod_{i=0}^{2026}g_i\Bigr)=\sum_{k=1}^{e}N_k,\qquad N_k=\#\{i: 0\le i\le2026,\ p^k\mid a+i\}.\]
 Among the $2027$ consecutive integers $a,a+1,\dots,a+2026$, the multiples of $p^k$ number at most $\bigl\lfloor\frac{2026}{p^k}\bigr\rfloor+1$ (if the first one is $a+i_0$, the others are $a+i_0+p^k,\dots$, and $i_0+mp^k\le2026$ gives $m\le\frac{2026}{p^k}$). Therefore
 \[v_p\Bigl(\prod g_i\Bigr)\le\sum_{k=1}^{e}\Bigl(\Bigl\lfloor\frac{2026}{p^k}\Bigr\rfloor+1\Bigr)\le\sum_{k\ge1}\Bigl\lfloor\frac{2026}{p^k}\Bigr\rfloor+e=v_p(2026!)+v_p(D)\]
 by Legendre's formula. This holds for every prime $p$, so $\prod_{i=0}^{2026}\gcd(a+i,b+i)$ divides $2026!\,(a-b)$.</p>
+<h4>Solution 2 (Remove the largest valuation)</h4>
+<p>Write $g_i=\gcd(a+i,b+i)$ for $0\le i\le2026$. It suffices to show that for every prime $p$,
+\[\sum_{i=0}^{2026}v_p(g_i)\le v_p(a-b)+v_p(2026!),\]
+where $v_p(n)$ is the exponent of $p$ in $n$ (and $v_p(a-b)$ means $v_p(|a-b|)$).</p><p>Fix $p$, put $w_i=v_p(g_i)$, and choose an index $i_0$ with $w_{i_0}$ largest. Since $g_{i_0}$ divides $(a+i_0)-(b+i_0)=a-b\ne0$, we have $w_{i_0}\le v_p(a-b)$.</p><p>Now let $i\ne i_0$. Then $p^{w_i}$ divides $a+i$, and, as $w_i\le w_{i_0}$, it also divides $a+i_0$. Hence $p^{w_i}$ divides $|i-i_0|$, so $w_i\le v_p(|i-i_0|)$. As $i$ runs over $0,\dots,2026$ with $i\ne i_0$, the number $|i-i_0|$ runs over $1,2,\dots,i_0$ (for $i&lt;i_0$) and $1,2,\dots,2026-i_0$ (for $i&gt;i_0$). Therefore
+\[\sum_{i\ne i_0}w_i\le v_p\bigl(i_0!\bigr)+v_p\bigl((2026-i_0)!\bigr)\le v_p(2026!),\]
+the last step because $\frac{2026!}{i_0!\,(2026-i_0)!}=\binom{2026}{i_0}$ is an integer.</p><p>Adding $w_{i_0}\le v_p(a-b)$ gives the required inequality for every prime $p$. Hence $\prod_{i=0}^{2026}\gcd(a+i,b+i)$ divides $2026!\times(a-b)$.</p>
 </div></details>
 </section>
 {% endraw %}

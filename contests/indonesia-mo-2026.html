@@ -135,8 +135,8 @@ The first factor equals $\frac{\sin(50^\circ+\alpha)}{\sin\alpha}=\sin50^\circ\c
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Algebra &middot; LPS VII, Chapter 26: Inequalities: Symmetry, Homogenization, and Advanced Structure &middot; uvw and Equal-Variable Reduction</div>
 <div class="ct-text"><p>Prove that for all positive real numbers $a,b,c$ with $abc=1$, the following inequality holds:
 \[\frac{a+3}{3b}+\frac{b+3}{3c}+\frac{c+3}{3a}\ge a+b+c+1.\]</p></div>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Reduction to p and q)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Reduction to p and q)</h4>
 <p>Let $p=a+b+c$ and $q=ab+bc+ca$. Since $abc=1$, $\frac1a+\frac1b+\frac1c=q$, so the left side equals
 \[\frac13\Bigl(\frac ab+\frac bc+\frac ca\Bigr)+q .\]
 By Cauchy&ndash;Schwarz (Engel form), $\frac ab+\frac bc+\frac ca=\frac{a^2}{ab}+\frac{b^2}{bc}+\frac{c^2}{ca}\ge\frac{p^2}{q}$. So it suffices to prove
@@ -144,6 +144,19 @@ By Cauchy&ndash;Schwarz (Engel form), $\frac ab+\frac bc+\frac ca=\frac{a^2}{ab}
 Write the left side as $\bigl(p-\tfrac32q\bigr)^2+\tfrac34q(q-4)$. We use two facts: $q\ge3\sqrt[3]{(abc)^2}=3$ by AM&ndash;GM, and $q^2\ge3(ab\cdot bc+bc\cdot ca+ca\cdot ab)=3abc\,p=3p$.</p><p><em>Case $q\ge4$.</em> Both terms are nonnegative.</p><p><em>Case $3\le q&lt;4$.</em> Then $p\le\frac{q^2}3&lt;\frac32q$ (as $q&lt;\frac92$), so $\frac32q-p\ge\frac32q-\frac{q^2}3\ge0$ and
 \[\Bigl(p-\tfrac32q\Bigr)^2+\tfrac34q(q-4)\ge\Bigl(\tfrac32q-\tfrac{q^2}3\Bigr)^2+\tfrac34q^2-3q=\frac{q^4}{9}-q^3+3q^2-3q=\frac q9\,(q-3)^3\ge0 .\]
 In both cases the inequality holds. Equality requires $q=3$ (in the case $q\ge4$ it would need $q=4$ and $p=\frac32q=6$, contradicting $q^2\ge3p$), hence $a=b=c=1$, where both sides equal $4$.</p>
+<h4>Solution 2 (The sign of (a-1)(b-1)(c-1))</h4>
+<p>Let $p=a+b+c$ and $q=ab+bc+ca$. Since $abc=1$, we have $\frac1a+\frac1b+\frac1c=q$, so the left side equals $\frac13\bigl(\frac ab+\frac bc+\frac ca\bigr)+q$.
+Also $(a-1)(b-1)(c-1)=abc-q+p-1=p-q$. Multiplying by $3$, the inequality is therefore equivalent to
+\[\frac ab+\frac bc+\frac ca-3\ \ge\ 3(a-1)(b-1)(c-1). \tag{1}\]
+By AM&ndash;GM, $\frac ab+\frac bc+\frac ca\ge3\sqrt[3]{\frac ab\cdot\frac bc\cdot\frac ca}=3$, so the left side of (1) is nonnegative, with equality only if $\frac ab=\frac bc=\frac ca$, that is $a=b=c=1$.</p><p><em>Case $(a-1)(b-1)(c-1)\le0$.</em> Then (1) holds, and equality forces $a=b=c=1$.</p><p><em>Case $(a-1)(b-1)(c-1)&gt;0$.</em> Then either all three numbers exceed $1$, which is impossible as $abc=1$, or exactly two of them are less than $1$.
+Inequality (1) is unchanged by the cyclic shift $(a,b,c)\to(b,c,a)$, and any two of $a,b,c$ are cyclically consecutive, so we may assume $a&lt;1$ and $b&lt;1$.
+Write $a=\frac1u$, $b=\frac1v$ with $u,v&gt;1$; then $c=uv$, and
+\[\frac ab+\frac bc+\frac ca=\frac vu+\frac1{uv^2}+u^2v,\qquad (a-1)(b-1)(c-1)=\frac{(u-1)(v-1)(uv-1)}{uv}.\]
+Multiplying the difference of the two sides of (1) by $uv^2&gt;0$ gives
+\[G=v^3+1+u^3v^3-3uv^2-3v(u-1)(v-1)(uv-1).\]
+Put $u=1+x$, $v=1+y$ with $x,y&gt;0$. Expanding,
+\[G=3y^2+2y^3+x\,(3y+3y^2)+x^2\,(3+6y+3y^2)+x^3\,(1+3y+3y^2+y^3),\]
+a polynomial in $x,y$ with nonnegative coefficients and a positive term $3x^2$. Hence $G&gt;0$ and (1) holds strictly.</p><p>So the inequality holds for all positive $a,b,c$ with $abc=1$, with equality only for $a=b=c=1$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p4">
@@ -264,11 +277,30 @@ By (1), $s-2k=\frac{2k\left(u(u+v)-(u^2-k^2)\right)}{u^2-k^2}=\frac{2k(uv+k^2)}{
 <h3>Problem 5</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure &middot; Tangency and Tangent Geometry</div>
 <div class="ct-text"><p>Given a regular pentagon $ABCDE$. Let a circle $\Gamma$ be centered at a point inside the pentagon such that $\Gamma$ passes through $A$ and is tangent to $BC$ at $M$. Let points $A$ and $N$ be the intersections of $\Gamma$ with the side $AE$. Prove that $MN$ is a diameter of $\Gamma$ if and only if $\Gamma$ is tangent to the side $DE$.</p></div>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Both conditions fix the angle BAM)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Both conditions fix the angle BAM)</h4>
 <div class="ct-fig"><img style="width:221px" src="/assets/contests/2026-27/indonesia-mo-10_s1.svg" alt="Figure for the solution"></div>
 <p>Let $O$ be the centre and $r$ the radius of $\Gamma$. Each interior angle of the pentagon is $108^\circ$ and triangle $ABC$ is isosceles with $\angle BAC=36^\circ$. If $M=B$, then $O$ lies on the perpendicular to $BC$ at $B$ and on the perpendicular bisector of $AB$, so $\angle ABO=108^\circ-90^\circ=18^\circ=\angle BAO$; then $O$ is not on the symmetry axis (which makes $54^\circ$ with $AB$) and $\angle MAE=108^\circ\ne90^\circ$, so (by Steps 2 and 3 below) both conditions fail. From now on $M\ne B$ and $x=\angle BAM$ satisfies $0&lt;x\le36^\circ$. Each interior angle of the pentagon is $108^\circ$, and the axis of symmetry $s$ through $A$ (and the midpoint of $CD$) makes $54^\circ$ with $AB$ and with $AE$.</p><p><em>Step 1: $\angle BAO=18^\circ+2x$.</em> In triangle $ABM$, $\angle ABM=108^\circ$, so $\angle AMB=72^\circ-x&lt;90^\circ$. The radius $OM$ is perpendicular to $BC$, and $O$ lies on the same side of $BC$ as $A$. So ray $MA$ lies strictly between rays $MB$ and $MO$, i.e. $B$ and $O$ lie on opposite sides of line $AM$, and $\angle AMO=90^\circ-(72^\circ-x)=18^\circ+x$. Triangle $OAM$ is isosceles ($OA=OM=r$), so $\angle OAM=18^\circ+x$ and
 \[\angle BAO=\angle BAM+\angle MAO=18^\circ+2x .\]</p><p><em>Step 2: $\Gamma$ is tangent to $DE$ iff $x=18^\circ$.</em> The lines $BC$ and $DE$ are mirror images in $s$, and they meet at a point beyond $CD$; the pentagon lies inside the angle they form, whose bisector is $s$. A point inside the pentagon is equidistant from lines $BC$ and $DE$ iff it lies on $s$. If $O\in s$, the reflection in $s$ maps $\Gamma$ to itself and $BC$ to $DE$, so $\Gamma$ touches side $DE$ at the mirror image of $M$. Conversely, if $\Gamma$ touches $DE$, then $O$ is at distance $r$ from both lines, so $O\in s$. Thus $\Gamma$ is tangent to $DE$ iff $\angle BAO=54^\circ$, iff $18^\circ+2x=54^\circ$, iff $x=18^\circ$.</p><p><em>Step 3: $MN$ is a diameter iff $x=18^\circ$.</em> Since $A$, $M$, $N$ lie on $\Gamma$ and $A\ne M$: if $N\ne A$, then $MN$ is a diameter iff $\angle MAN=90^\circ$ (Thales and its converse); if $N=A$ (line $AE$ tangent to $\Gamma$ at $A$), then $MN=MA$ is a diameter iff $AM$ passes through $O$, iff $AM\perp AE$. In both cases, $MN$ is a diameter iff $\angle MAE=90^\circ$, i.e. iff $108^\circ-x=90^\circ$, iff $x=18^\circ$.</p><p>Steps 2 and 3 together give: $MN$ is a diameter of $\Gamma$ if and only if $\Gamma$ is tangent to $DE$.</p>
+<h4>Solution 2 (Coordinates)</h4>
+<p>Take side length $1$, $B=\bigl(-\frac12,0\bigr)$, $C=\bigl(\frac12,0\bigr)$, and the pentagon above the $x$-axis. Put $t=\cos36^\circ$, $s=\sin36^\circ$, $h=\sin72^\circ=2st$ and $H=h+s$.
+The exterior angle of a regular pentagon is $72^\circ$, so the side $BA$ leaves $B$ at $108^\circ$ to the positive $x$-axis and the side $AE$ leaves $A$ at $36^\circ$.
+We use $t=\cos36^\circ=\frac{1+\sqrt5}4$ and $\cos72^\circ=\frac{\sqrt5-1}4$; thus $\frac12+\cos72^\circ=t$, $\cos72^\circ=2t^2-1$, and $4t^2-2t-1=0$. Hence $A=B+(\cos108^\circ,\sin108^\circ)=(-t,h)$, $E=A+(t,s)=(0,H)$, and by symmetry in the $y$-axis $D=(t,h)$:
+\[A=(-t,\,h),\qquad E=(0,\,H),\qquad D=(t,\,h).\]</p><p>Let $O=(x,y)$ be the centre of $\Gamma$. Since $\Gamma$ touches $BC$ at $M$ and $O$ is inside the pentagon, $M=(x,0)$, the radius is $y&gt;0$, and $-\frac12\le x\le\frac12$. Put $w=x+t$; then $w&gt;0$ because $t&gt;\frac12$. The condition $OA=y$ reads $w^2+(y-h)^2=y^2$, that is
+\[2hy=h^2+w^2. \tag{1}\]</p><p><em>The diameter condition.</em> Let $M'=(x,2y)$ be the point of $\Gamma$ opposite $M$. Then $MN$ is a diameter if and only if $N=M'$.
+The line $AE$ is $Y=H+\frac st X$ (it passes through $E=(0,H)$ with slope $\tan36^\circ$). By (1), $M'$ lies on this line if and only if
+\[\frac{h^2+w^2}{h}=H+\frac st\,(w-t)\iff t(h^2+w^2)=htH+hs(w-t)\iff tw^2=hs\,w,\]
+where we used $htH-hst=ht(H-s)=th^2$. As $w&gt;0$, this means $w=\frac{hs}{t}=2s^2$.
+If $MN$ is a diameter, then $M'=N$ lies on $AE$, so $w=2s^2$. Conversely, if $w=2s^2$, then $x=2s^2-t=\frac32-2t$ (since $2s^2=1-\cos72^\circ=\frac32-t$), and $-t&lt;x&lt;0$, so $M'$ lies on the side $AE$ (whose points have $-t\le X\le0$) and $M'\ne A$. Thus $M'$ is the second common point of $\Gamma$ and line $AE$, so $M'=N$. Hence
+\[MN\text{ is a diameter}\iff w=2s^2.\]</p><p><em>The tangency condition.</em> The line $DE$ passes through $E$ with direction $(t,-s)$ (a unit vector, as $D-E=(t,-s)$), so its equation is $sX+tY=tH$, and the distance from the interior point $O$ to it is $tH-sx-ty$. If $\Gamma$ is tangent to side $DE$, this distance equals $y$. Multiplying $tH-s(w-t)-ty-y=0$ by $2h$ and using (1):
+\[2htH+2hst-2hsw-(t+1)(h^2+w^2)=0 .\]
+Since $tH+st=t(h+s)+st=th+h=(t+1)h$ (because $h=2st$), the constant terms combine to $(t+1)h^2$, and dividing by $-(t+1)$ we get, with $2hs=4s^2t=4t(1-t)(1+t)$,
+\[w^2+4t(1-t)\,w-4s^2t^2=0 .\]
+Now $4t(1-t)=2t^2-2s^2$: indeed $2t^2-2s^2=2\cos72^\circ=4t^2-2$, and $4t^2-2=4t-4t^2$ is $4t^2-2t-1=0$ again. So the equation factors as
+\[(w-2s^2)(w+2t^2)=0,\]
+and since $w&gt;0$, tangency to $DE$ implies $w=2s^2$.
+Conversely, if $w=2s^2$, the same computation shows that the distance from $O$ to line $DE$ equals the radius $y$. The foot of the perpendicular from $O$ has coordinate $(O-E)\cdot(t,-s)=tx+s(H-y)$ along $DE$, measured from $E$; with $x=\frac32-2t$ and $2y=H+\frac st x$ (as $M'$ is on $AE$) this equals $2(1-t)=\frac{3-\sqrt5}{2}\approx0.38$, which lies between $0$ and $1$. So the point of tangency lies on the side $DE$, and $\Gamma$ is tangent to side $DE$. Hence
+\[\Gamma\text{ is tangent to side }DE\iff w=2s^2.\]</p><p>Both conditions are equivalent to $w=2s^2$, so $MN$ is a diameter of $\Gamma$ if and only if $\Gamma$ is tangent to $DE$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p11">
@@ -278,7 +310,7 @@ By (1), $s-2k=\frac{2k\left(u(u+v)-(u^2-k^2)\right)}{u^2-k^2}=\frac{2k(uv+k^2)}{
 \[a+b+c=1\quad\text{and}\quad ax+by+cz=0.\]
 Prove that
 \[a|x|+b|y|+c|z|\le\frac{z-x}{2}.\]</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<details class="ct-sol"><summary>Show the 4 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Two cases by the sign of y)</h4>
 <p>Since $ax+by+cz=0$ is a weighted average (with positive weights summing to $1$) of $x\le y\le z$, we have $x\le0\le z$. Let $L=a|x|+b|y|+c|z|$.</p><p><em>Case $y\ge0$.</em> Then $-ax=by+cz\ge0$ and $L=-ax+by+cz=2(-ax)=2(by+cz)$. Moreover $by+cz\le(b+c)z=(1-a)z$. Hence
 \[L^2=4\,(-ax)(by+cz)\le4\,a(1-a)\,(-x)z\le4\cdot\frac14\cdot\Bigl(\frac{z-x}{2}\Bigr)^2,\]
@@ -287,6 +319,20 @@ using $a(1-a)\le\frac14$ and AM&ndash;GM for the nonnegative numbers $-x$ and $z
 <p>Fix $x\le y\le z$. If $x=z$ then all are $0$ and both sides vanish; assume $x&lt;z$, so $x&lt;0&lt;z$ (the weighted average is $0$). Consider the set $W$ of weight vectors $(\alpha,\beta,\gamma)$ with $\alpha,\beta,\gamma\ge0$, $\alpha+\beta+\gamma=1$ and $\alpha x+\beta y+\gamma z=0$. It is the intersection of the triangle (simplex) with a plane through the point $(a,b,c)$, so it is a segment (or a point) whose endpoints lie on the boundary of the triangle, i.e. have a zero coordinate. The function $L(\alpha,\beta,\gamma)=\alpha|x|+\beta|y|+\gamma|z|$ is linear, so on $W$ it is at most its value at an endpoint.</p><p>At an endpoint, at most two weights are positive, say $p$ at $s$ and $q$ at $t$ with $s&lt;0&lt;t$, $s,t\in\{x,y,z\}$ (a single positive weight would sit on a zero value, giving $L=0$). From $p+q=1$ and $ps+qt=0$: $p=\frac{t}{t-s}$, $q=\frac{-s}{t-s}$, and
 \[L=p(-s)+qt=\frac{2(-s)t}{t-s}\le\frac{2}{t-s}\Bigl(\frac{t-s}{2}\Bigr)^2=\frac{t-s}2\le\frac{z-x}{2},\]
 by AM&ndash;GM and $x\le s&lt;t\le z$. Hence $a|x|+b|y|+c|z|\le\frac{z-x}{2}$.</p>
+<h4>Solution 3 (A chord above the graph of the absolute value)</h4>
+<p>Since $0=ax+by+cz$ is a weighted average (positive weights with sum $1$) of $x\le y\le z$, we have $x\le0\le z$. If $x=z$, then $x=y=z=0$ and both sides are $0$. Let $x&lt;z$.</p><p>For $x\le t\le z$ write $t=\lambda x+(1-\lambda)z$ with $\lambda=\frac{z-t}{z-x}\in[0,1]$. By the triangle inequality,
+\[|t|\le\lambda|x|+(1-\lambda)|z|=\lambda(-x)+(1-\lambda)z=:\ell(t),\]
+where $\ell$ is the linear function with $\ell(x)=-x$ and $\ell(z)=z$ (geometrically: the graph of $|t|$ lies below the chord joining $(x,-x)$ and $(z,z)$). Applying this to $x,y,z$ and using that $\ell$ is linear and $a+b+c=1$,
+\[a|x|+b|y|+c|z|\le a\,\ell(x)+b\,\ell(y)+c\,\ell(z)=\ell(ax+by+cz)=\ell(0).\]
+For $t=0$ we have $\lambda=\frac{z}{z-x}$, so
+\[\ell(0)=\frac{z}{z-x}(-x)+\frac{-x}{z-x}\,z=\frac{-2xz}{z-x}\le\frac{z-x}2,\]
+because the last inequality is $-4xz\le(z-x)^2$, i.e. $0\le(z+x)^2$. Hence $a|x|+b|y|+c|z|\le\frac{z-x}2$.</p>
+<h4>Solution 4 (Second moment and Cauchy&ndash;Schwarz)</h4>
+<p>As $0=ax+by+cz$ is a weighted average of $x\le y\le z$ with positive weights summing to $1$, we have $x\le0\le z$, so $-xz\ge0$.</p><p>For every $t$ with $x\le t\le z$ we have $(t-x)(z-t)\ge0$, that is $t^2\le(x+z)t-xz$. Applying this to $t=x,y,z$ with weights $a,b,c$:
+\[ax^2+by^2+cz^2\le(x+z)(ax+by+cz)-xz(a+b+c)=-xz .\]
+By the Cauchy&ndash;Schwarz inequality,
+\[\bigl(a|x|+b|y|+c|z|\bigr)^2=\bigl(\sqrt a\cdot\sqrt a|x|+\sqrt b\cdot\sqrt b|y|+\sqrt c\cdot\sqrt c|z|\bigr)^2\le(a+b+c)(ax^2+by^2+cz^2)\le-xz .\]
+Finally, by AM&ndash;GM for the nonnegative numbers $-x$ and $z$, $-xz\le\bigl(\frac{z-x}2\bigr)^2$. Taking square roots, $a|x|+b|y|+c|z|\le\frac{z-x}2$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p12">
@@ -305,13 +351,21 @@ by AM&ndash;GM and $x\le s&lt;t\le z$. Hence $a|x|+b|y|+c|z|\le\frac{z-x}{2}$.</
 <div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Number Theory &middot; LPS VII, Chapter 21: Arithmetic Functions and Multiplicative Structure &middot; Function Equations on Integers</div>
 <div class="ct-text"><p>Let $A=\{n\in\mathbb N\mid n\ge2\}$. Determine all functions $f:A\to A$ such that $m^{f(n)}$ and $f(m)^n$ have the same number of positive divisors for all integers $m$ and $n$ in $A$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$f(n)=n$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Everything is determined by f(2))</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Everything is determined by f(2))</h4>
 <p>Write $d(\cdot)$ for the number of divisors. The identity function works, since then both numbers are $m^n$.</p><p>Let $c=f(2)=\prod_{j=1}^kp_j^{c_j}$ (distinct primes, $c_j\ge1$). Taking $m=2$: $d(2^{f(n)})=f(n)+1$ and $d(c^n)=\prod_j(nc_j+1)$, so
 \[f(n)=\prod_{j=1}^{k}(nc_j+1)-1\qquad\text{for all }n\ge2. \tag{1}\]
 For $n=2$ this gives $c+1=\prod_j(2c_j+1)$, which is odd, so $c$ is even. Write $c=2^{e}R$ with $R$ odd and $e\ge1$, and $Q=\prod_{p_j\ \mathrm{odd}}(2c_j+1)$, so that
 \[2^eR+1=(2e+1)Q. \tag{2}\]
 For an odd prime power, $p^a\ge3^a\ge2a+1$, with equality only for $p^a=3$; hence $R\ge Q$, and $R=Q$ only if $R\in\{1,3\}$. Also, if a prime power $p^a$ with $p\ge5$ or $a\ge2$ divides $R$, then $\frac{p^a}{2a+1}\ge\frac53$ (for $p\ge5$: $p^a\ge5^a\ge\frac53(2a+1)$; for $p=3$, $a\ge2$: $\frac{3^a}{2a+1}\ge\frac95$), so $R\ge\frac53Q$.</p><ul class="ct-ul"><li><p>If $e\ge3$, then $2^e\ge2e+2$, so $c+1=2^eR+1\ge(2e+2)Q+1&gt;(2e+1)Q$, contradicting (2).</p></li><li><p>If $e=1$: (2) reads $2R+1=3Q$, so $\frac RQ=\frac{3R}{2R+1}&lt;\frac32&lt;\frac53$; thus $R\in\{1,3\}$. $R=3$ gives $7=9$, false; $R=1$ gives $c=2$.</p></li><li><p>If $e=2$: $4R+1=5Q$, so $\frac RQ=\frac{5R}{4R+1}&lt;\frac54&lt;\frac53$, again $R\in\{1,3\}$; $R=3$ gives $13=15$, false; $R=1$ gives $c=4$.</p></li></ul><p>So $c\in\{2,4\}$. If $c=4$, (1) gives $f(n)=2n+1-1=2n$ for $n\ge2$ (and $f(2)=4$ fits). But then $m=3$, $n=2$ gives $d(3^{f(2)})=d(3^4)=5$ and $d(f(3)^2)=d(36)=9$, a contradiction. Hence $c=2$, and (1) gives $f(n)=(n+1)-1=n$ for all $n\ge2$.</p><p>The only solution is $\boxed{f(n)=n}$.</p>
+<h4>Solution 2 (Divisor polynomials modulo a prime)</h4>
+<p>For an integer $m\ge2$ with prime factorisation $m=\prod_i p_i^{e_i}$, let $D_m(X)=\prod_i(1+e_iX)$, a polynomial with integer coefficients, constant term $1$, degree equal to the number of distinct primes of $m$, and leading coefficient $\prod_ie_i$. The number of divisors of $m^k$ is $D_m(k)$. So the condition reads
+\[D_m\bigl(f(n)\bigr)=D_{f(m)}(n)\qquad\text{for all }m,n\ge2. \tag{1}\]
+The identity function works, since then both sides of (1) are $D_m(n)$.</p><p><em>Step 1: $f$ is a polynomial.</em> With $m=2$, $D_2(X)=1+X$, so (1) gives $f(n)=F(n)$ for all $n\ge2$, where $F(X)=D_{f(2)}(X)-1$. The polynomial $F$ has integer coefficients, zero constant term, degree $d\ge1$ (the number of distinct primes of $f(2)$) and positive leading coefficient $A$.</p><p><em>Step 2: $d=1$.</em> Let $k\ge2$ and $m=2^k$, so $D_m(X)=1+kX$. By (1), $1+kF(n)=D_{f(2^k)}(n)$ for all $n\ge2$; two polynomials that agree at infinitely many points are equal, so
+\[1+kF(X)=\prod_{j=1}^{r}(1+g_jX),\]
+where $g_1,\dots,g_r\ge1$ are the exponents in the factorisation of $f(2^k)$. Comparing degrees, $r=d$, and comparing leading coefficients, $kA=g_1g_2\cdots g_d$.
+Now choose $k$ to be a prime not dividing $A$, and reduce modulo $k$. The left side becomes the constant $1$, so in $\mathbb F_k[X]$ we have $\prod_j(1+\bar g_jX)=1$. Over a field the degree of a product is the sum of the degrees, so every factor $1+\bar g_jX$ has degree $0$, that is $k\mid g_j$ for every $j$. Then $k^d$ divides $g_1\cdots g_d=kA$, and since $k\nmid A$, this forces $d=1$. Thus $F(X)=AX$ and
+\[f(n)=An\qquad\text{for all }n\ge2.\]</p><p><em>Step 3: $A=1$.</em> Let $p$ be a prime not dividing $A$, and take $m=p$ in (1): $D_p(An)=1+An$ and $D_{f(p)}(n)=D_{Ap}(n)$, so as before $1+AX=D_{Ap}(X)$ as polynomials. The left side has degree $1$, so $Ap$ has exactly one prime factor. As $p\mid Ap$ and $p\nmid A$, this forces $A=1$.</p><p>Hence $\boxed{f(n)=n}$ is the only solution.</p>
 </div></details>
 </section>
 {% endraw %}

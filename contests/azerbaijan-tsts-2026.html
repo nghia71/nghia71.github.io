@@ -313,7 +313,7 @@ of the row. Altogether $\ell+z=L$ balls are removed in at most two balanced remo
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Algebra &middot; LPS VII, Chapter 26: Inequalities: Symmetry, Homogenization, and Advanced Structure &middot; Homogenization and Normalization</div>
 <div class="ct-text"><p>For all positive real numbers $a,b,c$ with $a^2b+a^2c+b^2a+b^2c+c^2a+c^2b=1$, show that
 \[\frac{ab+bc+ca}{1+2abc}\leq\frac{(a+b+c)^2}{4}.\]</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Homogenize, then a sum of squares)</h4>
 <p>Write $p=a+b+c$, $q=ab+bc+ca$, $r=abc$. Then
 \[a^2b+a^2c+b^2a+b^2c+c^2a+c^2b=pq-3r=1,\qquad (a+b)(b+c)(c+a)=pq-r .\]
@@ -340,6 +340,19 @@ Now
 \[F=x(a-b)(a-c)-y(a-b)(b-c)+z(a-c)(b-c).\]
 The last term is $\ge 0$. For the first two, $x\ge y$ and $a-c\ge b-c\ge 0$ give
 $x(a-b)(a-c)\ge y(a-b)(b-c)$. Hence $F\ge 0$, as required, with equality for $a=b=c$.</p>
+<h4>Solution 3 (Ordered substitution: every coefficient is positive)</h4>
+<p>Write $p=a+b+c$, $q=ab+bc+ca$, $r=abc$. Expanding, the constraint reads $pq-3r=1$, and
+$1+2abc=(pq-3r)+2r=pq-r&gt;0$. Multiplying the left side of the claim by $1=pq-3r$, the inequality becomes $4q(pq-3r)\le p^2(pq-r)$, that is,
+\[F:=p^3q-4pq^2-p^2r+12qr\ \ge\ 0 .\]
+This is homogeneous of degree $5$, and $F$ is symmetric in $a,b,c$, so we may assume $a\ge b\ge c$. Put
+\[c=z,\qquad b=z+y,\qquad a=z+y+x,\qquad x,y\ge0,\ z&gt;0 .\]
+Substituting and expanding (a routine computation) gives
+\begin{align*}
+F={}&amp;2y^2z^3+2y^3z^2+2xyz^3+3xy^2z^2+x^2\bigl(2z^3+9yz^2+8y^2z+2y^3\bigr)\\
+&amp;+x^3\bigl(4z^2+8yz+3y^2\bigr)+x^4(2z+y).
+\end{align*}
+Every coefficient is positive and $x,y\ge0$, $z&gt;0$, so $F\ge0$, which proves the inequality.</p><p><em>Equality.</em> If $F=0$, then in particular $2x^2z^3=0$ and $2y^2z^3=0$; as $z&gt;0$, $x=y=0$, i.e. $a=b=c$. The constraint then gives
+$6a^3=1$, so equality holds exactly for $a=b=c=6^{-1/3}$.</p>
 </div></details>
 </section>
 <h2 class="ct-group" id="imo-tst-day-3">IMO TST Day 3</h2>
@@ -604,8 +617,8 @@ So $MX$ is tangent to $\omega$ at $X$; by symmetry $MY$ is tangent at $Y$. The t
 <div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 39: Graph Theory and Structural Combinatorics &middot; Basic Graph Properties</div>
 <div class="ct-text"><p>A social network has $2025$ users. Two different users are either friends or not friends. A user is considered <em>lonely</em> if they have no friends. Initially, there are no lonely users, and two users Alice and Bob are not friends. A user may <em>swap</em> all their friends, meaning if they were friends with someone before the swap, they are no longer friends, and vice versa.</p><p>Must there exist a way to arrange the $2025$ users in a sequence so that if, one-by-one in that sequence, each user swaps their friends, no user is ever lonely at any point during the process?</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p><strong>Yes</strong></p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Neighbourhoods must not be prefixes or suffixes; induction from both ends)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Neighbourhoods must not be prefixes or suffixes; induction from both ends)</h4>
 <p><strong>Yes</strong>, such an order always exists.</p><p><em>Reformulation.</em> Let $V$ be the set of users and $N(v)$ the set of friends of $v$ at the start ($v\notin N(v)$). After the users of a
 set $S$ have swapped, a pair $u,w$ is friends if and only if it was friends at the start and an even number of $u,w$ lie in $S$, or it was
 not and exactly one of them lies in $S$. So a user $v\notin S$ is lonely exactly when $N(v)=S$, and a user $v\in S$ is lonely exactly when
@@ -648,6 +661,35 @@ The neighbourhoods are $\{b_i\}$, $\{a_i\}$ and $C\setminus\{c_j\}$, and their c
 $\{c_j\}\cup\{a_i,b_i\}_i$. The prefixes are $\{c_1\}$, then sets containing $c_1$ and some $a_i$ but no $b_i$ and at most one more $c$, then
 sets containing $c_1,c_2$; none of them is in the list (the prefix of size $n-1$ is $V\setminus\{c_r\}$, and $c_r$ is not the only friend of
 anyone).</p><p>So in all cases a suitable order exists.</p>
+<h4>Solution 2 (Two safe ends, a random middle and a union bound)</h4>
+<p><strong>Yes</strong>, such an order always exists.</p><p><em>Reformulation.</em> Let $V$ be the set of users, $n=2025$, and $N(v)$ the set of friends of $v$ at the start; $v\notin N(v)$, and
+$N(v)\ne\varnothing$ since nobody is lonely. After the users of a set $S$ have swapped, two users $u,w$ are friends if and only if they were
+friends at the start and both or neither lie in $S$, or they were not friends and exactly one of them lies in $S$. Hence a user $v\notin S$
+is lonely exactly when $N(v)=S$, and a user $v\in S$ is lonely exactly when $N(v)=V\setminus S$. Call the sets $N(v)$ and $V\setminus N(v)$
+($v\in V$) <em>forbidden</em>; there are at most $2n=4050$ of them. For an order $x_1,\dots,x_n$ the sets $S$ that occur are the prefixes
+$S_k=\{x_1,\dots,x_k\}$, so we need an order in which no prefix is forbidden. The prefixes $S_0=\varnothing$ and $S_n=V$ are never forbidden,
+because $N(v)$ and $V\setminus N(v)$ are nonempty ($v\in V\setminus N(v)$) and differ from $V$.</p><p><em>Prefixes of size $1$ and $n-1$.</em> A <em>leaf</em> is a user with exactly one friend, and a user is <em>universal</em> if they are friends
+with all others. The set $\{x\}$ is forbidden exactly when $N(v)=\{x\}$ for some $v$ (a leaf whose only friend is $x$), or
+$V\setminus N(v)=\{x\}$, which forces $v=x$ and $x$ universal. The set $V\setminus\{y\}$ is forbidden exactly when $N(v)=V\setminus\{y\}$
+(then $v=y$ is universal) or $N(v)=\{y\}$. Call a user <em>safe</em> if they are not universal and are not the only friend of a leaf. So $S_1$
+and $S_{n-1}$ are allowed exactly when $x_1$ and $x_n$ are safe.</p><p><em>Prefixes of size $2$ and $n-2$.</em> Let $\mathcal F$ be the family of $2$-element sets of the form $N(v)$ with $|N(v)|=2$ or
+$V\setminus N(v)$ with $|N(v)|=n-2$. A $2$-element set is forbidden exactly when it lies in $\mathcal F$, and a set $V\setminus\{w,y\}$ is
+forbidden exactly when $\{w,y\}\in\mathcal F$ (because $N(v)=V\setminus\{w,y\}$ means $V\setminus N(v)=\{w,y\}$).</p><p><em>Claim: there are $s\ge2$ safe users, and $|\mathcal F|\le s$.</em> Let $\ell$ be the number of leaves and $\mu$ the number of universal
+users. Every unsafe user is universal or the friend of a leaf, so at most $\mu+\ell$ users are unsafe and $s\ge n-\ell-\mu$. Every member of
+$\mathcal F$ comes from a user with $2$ or $n-2$ friends, who is neither a leaf nor universal; so $|\mathcal F|\le n-\ell-\mu\le s$.
+For $s\ge2$:</p><ul class="ct-ul"><li><p>If there is no leaf, the unsafe users are the universal ones. Alice and Bob are not friends, so neither is universal: both are safe.</p></li><li><p>If there is a leaf and a universal user $u$, every leaf is a friend of $u$, so its only friend is $u$; and there is only one universal
+user (a leaf has one friend). So $u$ is the only unsafe user and $s=n-1$.</p></li><li><p>If there are leaves, no universal user, and at least two non-leaves, then $s\ge n-\ell\ge2$.</p></li><li><p>Not every user is a leaf: then the friendships would split the users into pairs, but $n$ is odd.</p></li><li><p>If there is exactly one non-leaf $w$, then $w$ has at least two friends (it is not lonely and not a leaf), all of them leaves whose
+only friend is $w$. Such a friend $x$ is not universal ($n&gt;2$), and if $x$ were the only friend of a leaf, that leaf would be a friend of
+$x$, i.e. it would be $w$, which is not a leaf. So these at least two friends of $w$ are safe.</p></li></ul><p><em>Choosing the ends.</em> For a user $x$ let $i(x)$ be the number of members of $\mathcal F$ containing $x$. Then
+$\sum_{x\text{ safe}}i(x)\le2|\mathcal F|\le2s$. Let $p,q$ be two safe users with the smallest values of $i$; the two smallest of $s$
+numbers have sum at most $\frac2s$ times their total, so $i(p)+i(q)\le4$.</p><p><em>A random order.</em> Put $p$ first, $q$ last, and the other $n-2=2023$ users in between in a uniformly random order. Then $S_1=\{p\}$
+and $S_{n-1}=V\setminus\{q\}$ are allowed. Further:</p><ul class="ct-ul"><li><p>$S_2=\{p,z\}$ with $z$ uniformly random among the $2023$ middle users; it is forbidden only if $\{p,z\}\in\mathcal F$, which happens
+for at most $i(p)$ values of $z$. Similarly $S_{n-2}=V\setminus\{w,q\}$ with $w=x_{n-1}$ uniformly random among the middle users is
+forbidden with probability at most $\frac{i(q)}{2023}$. Together: at most $\frac{4}{2023}$.</p></li><li><p>For $3\le k\le n-3$, $S_k$ is $\{p\}$ together with a uniformly random $(k-1)$-element subset of the $2023$ middle users. A fixed
+forbidden set $F$ of size $k$ can equal $S_k$ only if $p\in F$ and $q\notin F$, and then with probability
+$1/\binom{2023}{k-1}\le1/\binom{2023}{2}$, since $2\le k-1\le 2021$.</p></li></ul><p>There are at most $4050$ forbidden sets, so the probability that some prefix is forbidden is at most
+\[\frac{4}{2023}+\frac{4050}{\binom{2023}{2}}=\frac{4}{2023}+\frac{8100}{2023\cdot2022}&lt;\frac{4+5}{2023}&lt;1 .\]
+Hence some order has no forbidden prefix, and in that order nobody is ever lonely. The answer is <strong>Yes</strong>.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p16">
@@ -722,8 +764,8 @@ is $\boxed{176}$.</p>
 <h3>Problem 2</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure &middot; Radical Axis and Radical Center</div>
 <div class="ct-text"><p>Let $ABC$ be a triangle with $AC&gt;AB$, incenter $I$ and $A$-excenter $J$. Assume that its incircle touches $BC$ at point $K$, the $A$-excircle touches $AC$ at point $L$, and $AI$ intersects $BC$ at point $D$. If $P$ is the intersection of the circumcircles of triangles $AIC$ and $KCL$ (other than $C$), prove that $\angle APD=90^\circ$.</p></div>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Three coaxial circles through $C$)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Three coaxial circles through $C$)</h4>
 <div class="ct-fig"><img style="width:334px" src="/assets/contests/2026-27/azerbaijan-tsts-18_s1.svg" alt="Figure for the solution"></div>
 <p>Let $a,b,c$ be the sides and $s$ the semiperimeter; $b&gt;c$. Directed angles are taken modulo $180^\circ$. We assume $P\ne C$
 (otherwise $P$ is not defined).</p><p><em>Reduction.</em> We show that $P$ also lies on the circle $CDJ$. Then, since $I$, $D$, $J$ lie on the line $AI$,
@@ -740,6 +782,36 @@ $l=b-AA_2=\frac{b^2-c^2-ac}{b+c}$. Hence $(k,l)=\bigl(\frac{ab}{b+c},\ \frac{b^2
 \[(s-c,-(s-b))-(a-c,b)=(s-a,\,-s),\qquad \Bigl(\tfrac{ab}{b+c}-a+c,\ \tfrac{b^2-c^2-ac}{b+c}-b\Bigr)=\tfrac{c}{b+c}\,(b+c-a,\,-(a+b+c))=\tfrac{2c}{b+c}\,(s-a,\,-s).\]
 These vectors are parallel, so the three points are collinear and the three circles have a second common point. As the circles $AIC$ and
 $KCL$ meet again at $P$, the circle $CDJ$ passes through $P$, which completes the proof.</p>
+<h4>Solution 2 (Coordinates with $C$ at the origin)</h4>
+<p>Let $a,b,c$ be the sides, $s$ the semiperimeter, and $U=s-a$, $V=s-b$, $W=s-c$ (all positive), so
+$a=V+W$, $b=U+W$, $c=U+V$, $s=U+V+W$; let $r$ be the inradius. Put $C=(0,0)$, $A=(b,0)$ and $B=a(g,h)$ with $g=\cos C$, $h=\sin C&gt;0$.
+Since $b&gt;c$, $\angle C&lt;\angle B$, so $\angle C$ is acute and $g&gt;0$.</p><p><em>The data.</em> The incircle touches $CA$ and $CB$ at distance $s-c=W$ from $C$, so $K=W(g,h)$ and $I=(W,r)$. The $A$-excircle touches
+line $AC$ at the point $L$ with $AL=s$, beyond $C$, so $L=(b-s,0)=(-V,0)$. By the bisector theorem $CD=\frac{ab}{b+c}=:d$, so $D=d(g,h)$.
+By the cosine rule $1-g=\frac{c^2-(a-b)^2}{2ab}=\frac{2UV}{ab}$, and since $ab=(V+W)(U+W)=UV+Ws$,
+\[1-g=\frac{2UV}{ab},\qquad 1+g=\frac{2Ws}{ab},\qquad h^2=(1-g)(1+g)=\frac{4UVWs}{a^2b^2}.\]
+Finally $r=W\tan\frac C2=\frac{W(1-g)}{h}$, so $hr=W(1-g)$ and $\frac hr=\frac{h^2}{W(1-g)}=\frac{1+g}{W}$.</p><p><em>The two circles.</em> The circle $AIC$ passes through $C$ and $A$, so it is $x^2+y^2-bx-\xi y=0$; through $I$:
+$\xi=\frac{r^2-(b-W)W}{r}=\frac{r^2-UW}{r}$. Hence
+\[h\xi=hr-UW\frac hr=W(1-g)-U(1+g)=(W-U)-bg=-\frac{2UW}{a}.\]
+(The last form: $W(1-g)-U(1+g)=\frac{2UW(V-s)}{ab}=-\frac{2UWb}{ab}$.) The circle $KCL$ passes through $C$ and $L$, so it is
+$x^2+y^2+Vx-\eta y=0$; through $K$: $W+Vg-\eta h=0$, i.e. $h\eta=W+Vg$.</p><p><em>The point $P$.</em> Subtracting the equations, the common chord is $(b+V)x=(\eta-\xi)y$, i.e. $x=\lambda y$ with $\lambda=\frac{\eta-\xi}{s}$
+($b+V=s$), and
+\[h\lambda=\frac{W+Vg-(W-U)+bg}{s}=\frac{U+sg}{s}=g+\alpha,\qquad \alpha:=\frac Us .\]
+On this line the circle $AIC$ gives $y^2(1+\lambda^2)=(b\lambda+\xi)y$, so $P=(\lambda y,y)$ with $y=\frac{b\lambda+\xi}{1+\lambda^2}$. Here
+\[\kappa:=h(b\lambda+\xi)=b(g+\alpha)+(W-U)-bg=W-\frac{UV}{s}=\frac{ab-2UV}{s}=\frac{abg}{s}&gt;0,\]
+so $y\ne0$ and $P\ne C$.</p><p><em>The circle with diameter $AD$.</em> A point $Z=(x,y)$ lies on it if and only if $(x-b)(x-dg)+y(y-dh)=0$. For $Z$ on the circle $AIC$ we
+may replace $x^2+y^2$ by $bx+\xi y$, and the condition becomes $dg(x-b)=(\xi-dh)y$. For $P$, multiply by $1+\lambda^2$ and use
+$y(1+\lambda^2)=b\lambda+\xi$: the condition is $(b\lambda+\xi)(dg\lambda+dh-\xi)=bdg(1+\lambda^2)$, which after expanding and cancelling
+$bdg\lambda^2$ reads
+\[d\bigl[h(b\lambda+\xi)+g(\lambda\xi-b)\bigr]=\xi(b\lambda+\xi).\]
+Multiplying by $h^2$ and using $h(b\lambda+\xi)=\kappa$, $h\lambda=g+\alpha$, this becomes $d\bigl[h^2\kappa+g(g+\alpha)(h\xi)-gbh^2\bigr]=(h\xi)\kappa$,
+i.e.
+\[(h\xi)\bigl[\kappa-dg(g+\alpha)\bigr]=dh^2(\kappa-gb).\qquad(\ast)\]
+Now $s+U=2s-a=b+c$, so $d(1+\alpha)=\frac{ab}{b+c}\cdot\frac{b+c}{s}=\frac{ab}{s}$ and $\kappa=dg(1+\alpha)$. Hence
+$\kappa-dg(g+\alpha)=dg(1-g)$ and $\kappa-gb=gb\bigl(\frac as-1\bigr)=-\frac{gbU}{s}$. Dividing $(\ast)$ by $dg&gt;0$, it becomes
+$(h\xi)(1-g)=-\frac{h^2bU}{s}$, and both sides equal $-\frac{4U^2VW}{a^2b}$:
+\[-\frac{2UW}{a}\cdot\frac{2UV}{ab}=-\frac{4U^2VW}{a^2b},\qquad -\frac{4UVWs}{a^2b^2}\cdot\frac{bU}{s}=-\frac{4U^2VW}{a^2b}.\]
+So $P$ lies on the circle with diameter $AD$. Moreover $P\ne A$ (the circle $KCL$ meets line $CA$ only at $C$ and $L$) and $P\ne D$ (the circle
+$AIC$ meets line $AI$ only at $A$ and $I$). Therefore $\angle APD=90^\circ$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p19">
@@ -752,8 +824,8 @@ then
 Prove that there exist positive integers $A,B,C$ and $D$ such that for all nonnegative integers $n$,
 \[f(An+B)=Cn+D.\]
 We say that $f$ is <em>unbounded</em> if for each nonnegative integer $N$, there exists some nonnegative integer $n$ such that $f(n)\geq N$.</p></div>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Records, gaps between records, and a period)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Records, gaps between records, and a period)</h4>
 <p>Call $r$ a <em>record</em> if $f(r)=\max\{f(0),\dots,f(r)\}$. Since $f$ is unbounded there are infinitely many records. For a record $r$
 the hypothesis (with all splittings $r=m+(r-m)$) gives
 \[f(m)+f(r-m)=f(r)\qquad (0\le m\le r).\qquad(1)\]
@@ -769,6 +841,21 @@ are at most $f(1)$ such indices $t$.</p><p><em>Conclusion.</em> There are infini
 often. By Step 2, $f(n+t)=f(n)+f(t)$ for all $n$, and $f(t)\ge1$ by Step 3. Hence for all $n\ge0$
 \[f(tn+1)=f(1)+n\,f(t),\]
 so $A=t$, $B=1$, $C=f(t)$, $D=f(1)$ are positive integers with $f(An+B)=Cn+D$.</p>
+<h4>Solution 2 (The first index of the smallest positive value)</h4>
+<p>Call $r$ a <em>record</em> if $f(r)=\max\{f(0),\dots,f(r)\}$, and a <em>strict record</em> if $f(r)&gt;f(i)$ for all $i&lt;r$ (so $0$ is a
+strict record). For a record $r$ the hypothesis, applied to all splittings $r=i+(r-i)$, gives
+\[f(i)+f(r-i)=f(r)\qquad(0\le i\le r).\qquad(1)\]
+With $r=0$ this gives $f(0)=0$. Since $f$ is unbounded, there are arbitrarily large strict records: for each $N$, the least $n$ with
+$f(n)\ge N$ is one when $N&gt;0$. Between two consecutive strict records $r&lt;s$ the running maximum does not increase, so
+$\max\{f(0),\dots,f(s-1)\}=f(r)$.</p><p><em>Step 1: $f(i)\ge1$ for $i\ge1$.</em> If $f(i)=0$ with $i\ge1$, take a strict record $s&gt;i$; by (1), $f(s-i)=f(s)$ with $s-i&lt;s$, contradicting
+strictness. Hence $m:=\min\{f(i):i\ge1\}$ is a positive integer; let $a\ge1$ be the least index with $f(a)=m$.</p><p><em>Step 2.</em> Let $s\ge a$ be a strict record and $r&lt;s$ the previous strict record; put $g=s-r$. For $1\le i\le s$, (1) at $s$ and
+$s-i\le s-1$ give
+\[f(i)=f(s)-f(s-i)\ge f(s)-f(r)=f(g),\]
+the last equality being (1) at $s$ with $i=g$. Taking $i=a$ gives $f(g)\le m$, so $f(g)=m$, and by the choice of $a$, $g\ge a$.</p><p><em>Step 3.</em> By (1), $f(s-a)=f(s)-m=f(s)-f(g)=f(r)$. As $r\le s-a\le s-1$, every value $f(0),\dots,f(s-a)$ is at most $f(r)=f(s-a)$, so
+$s-a$ is a record. For $0\le x\le s-a$, (1) at $s$ (with $i=x+a$) and at $s-a$ (with $i=x$) give
+\[f(x+a)=f(s)-f(s-a-x)=f(s)-\bigl(f(s-a)-f(x)\bigr)=m+f(x).\]</p><p><em>Conclusion.</em> Strict records $s$ are arbitrarily large, so $f(x+a)=f(x)+m$ for every $x\ge0$. By induction, using $f(0)=0$,
+\[f(an+a)=(n+1)m=mn+m\qquad(n\ge0),\]
+so $A=B=a$ and $C=D=m$ are positive integers with $f(An+B)=Cn+D$.</p>
 </div></details>
 </section>
 <h2 class="ct-group" id="egmo-tst-day-2">EGMO TST Day 2</h2>
@@ -820,11 +907,13 @@ Hence the maximum is $\boxed{\dfrac{n^2+3n-2}{2}}$.</p>
 <h4>Solution 1 (Vectors from the midpoint of $AC$)</h4>
 <div class="ct-fig"><img style="width:237px" src="/assets/contests/2026-27/azerbaijan-tsts-22_s1.svg" alt="Figure for the solution"></div>
 <p>Let $N$ be the midpoint of $AC$. By the median formula $AB^2+BC^2=2NB^2+\frac{AC^2}2$ and $AD^2+CD^2=2ND^2+\frac{AC^2}2$, so
-$NB=ND=:R$. Take $N$ as origin, write $A=-c$, $C=c$, and use the same letters for points and vectors; $B\cdot B=D\cdot D=R^2$. If $N$ were on
+$NB=ND=:R$. We read the statement, as intended, with $X$ and $Y$ uniquely determined: the line through $B$ perpendicular to $AB$ and the line
+through $D$ perpendicular to $CD$ meet in exactly one point $X$, and similarly for $Y$. (Without this the claim can fail; see the note.)
+Take $N$ as origin, write $A=-c$, $C=c$, and use the same letters for points and vectors; $B\cdot B=D\cdot D=R^2$. If $N$ were on
 $BD$, then $D=-B$, $ABCD$ would be a parallelogram and the lines $XB\perp AB$, $XD\perp CD\parallel AB$ would be parallel, so $X$ would not
-exist. Hence $B$ and $D$ are linearly independent; write $c=\beta B+\delta D$.</p><p><em>The defining equations.</em> $XB\perp AB$ and $XD\perp CD$, $YB\perp BC$, $YD\perp AD$ read
+be a single point. Hence $B$ and $D$ are linearly independent; write $c=\beta B+\delta D$.</p><p><em>The defining equations.</em> $XB\perp AB$ and $XD\perp CD$, $YB\perp BC$, $YD\perp AD$ read
 \[X\cdot(B+c)=R^2+B\cdot c,\quad X\cdot(D-c)=R^2-D\cdot c,\quad Y\cdot(B-c)=R^2-B\cdot c,\quad Y\cdot(D+c)=R^2+D\cdot c .\]
-Each pair determines $X$ (resp. $Y$) uniquely, since $X$ and $Y$ exist.</p><p><em>A candidate.</em> Let $M_0$ be the point with $M_0\cdot B=M_0\cdot D=R^2$ (the intersection of the tangents at $B$ and $D$ to the circle
+By our reading, each pair has exactly one solution, $X$ (resp. $Y$).</p><p><em>A candidate.</em> Let $M_0$ be the point with $M_0\cdot B=M_0\cdot D=R^2$ (the intersection of the tangents at $B$ and $D$ to the circle
 $\omega$ with centre $N$ and radius $R$). Let $V$ be the vector with $V\cdot B=(B-M_0)\cdot c$ and $V\cdot D=(M_0-D)\cdot c$. Then
 $M_0\cdot c=\beta R^2+\delta R^2$ and $(\beta B-\delta D)\cdot c=R^2(\beta^2-\delta^2)$, so
 \[V\cdot c=\beta(B-M_0)\cdot c+\delta(M_0-D)\cdot c=(\beta B-\delta D)\cdot c-(\beta-\delta)M_0\cdot c=R^2(\beta^2-\delta^2)-R^2(\beta-\delta)(\beta+\delta)=0 .\]
@@ -838,15 +927,16 @@ i.e. $M$ lies on $AC$, the statement degenerates; then $M=T$ is still on that ci
 <p>By the median formula, $AB^2+BC^2=2NB^2+\frac{AC^2}2$ and $AD^2+CD^2=2ND^2+\frac{AC^2}2$, where $N$ is the midpoint of $AC$; hence
 $NB=ND=:R$. Put $N=(0,0)$, $A=(-1,0)$,
 $C=(1,0)$, $e=(1,0)$, $B=R(\cos\beta,\sin\beta)$, $D=R(\cos\delta,\sin\delta)$ with $\sin\beta\ne0\ne\sin\delta$ (convexity), and let
-$\alpha=\frac{\beta+\delta}2$, $\gamma=\frac{\beta-\delta}2$, so $\beta=\alpha+\gamma$, $\delta=\alpha-\gamma$. As $X$ exists, $ABCD$ is not a
-parallelogram, so $\cos\gamma\ne0$, and the tangents to the circle $x^2+y^2=R^2$ at $B$ and $D$ meet at
+$\alpha=\frac{\beta+\delta}2$, $\gamma=\frac{\beta-\delta}2$, so $\beta=\alpha+\gamma$, $\delta=\alpha-\gamma$. We read the statement with $X$ and
+$Y$ uniquely determined (each pair of perpendicular lines meets in exactly one point; see the note). Then $ABCD$ is not a
+parallelogram (its perpendiculars at $B$ to $AB$ and at $D$ to $CD$ would be parallel), so $\cos\gamma\ne0$, and the tangents to the circle $x^2+y^2=R^2$ at $B$ and $D$ meet at
 \[M_0=\frac{R}{\cos\gamma}(\cos\alpha,\ \sin\alpha),\qquad M_0\cdot B=M_0\cdot D=R^2 .\]
 The perpendicular to $AB$ at $B$ is $\{Z:\ Z\cdot(B+e)=R^2+B\cdot e\}$ and the perpendicular to $CD$ at $D$ is $\{Z:\ Z\cdot(D-e)=R^2-D\cdot e\}$.
 For $Z=M_0+(0,t)$ these become
 \[t\sin\beta=\cos\beta-\frac{\cos\alpha}{\cos\gamma},\qquad t\sin\delta=\frac{\cos\alpha}{\cos\gamma}-\cos\delta .\]
 Now $\cos(\alpha+\gamma)\cos\gamma-\cos\alpha=-\cos\alpha\sin^2\gamma-\sin\alpha\sin\gamma\cos\gamma=-\sin\gamma\sin(\alpha+\gamma)=-\sin\gamma\sin\beta$,
 and similarly $\cos\alpha-\cos(\alpha-\gamma)\cos\gamma=\sin\gamma(\cos\alpha\sin\gamma-\sin\alpha\cos\gamma)=-\sin\gamma\sin\delta$. So both
-equations say $t=-\tan\gamma$, and $X=M_0-(0,\tan\gamma)$. The same computation with $e$ replaced by $-e$ (the perpendiculars to $BC$ at $B$ and to
+equations say $t=-\tan\gamma$. So $M_0-(0,\tan\gamma)$ lies on both perpendiculars, and as they meet in only one point, $X=M_0-(0,\tan\gamma)$. The same computation with $e$ replaced by $-e$ (the perpendiculars to $BC$ at $B$ and to
 $AD$ at $D$) gives $Y=M_0+(0,\tan\gamma)$.</p><p>Hence $XY$ is perpendicular to $AC$ and its midpoint is $M=M_0$. The foot $T$ of $XY$ on $AC$ satisfies $\angle MTN=90^\circ$, and
 $\angle MBN=\angle MDN=90^\circ$ because $MB$, $MD$ are tangents. So $T$, $M$, $B$, $D$ (and $N$) lie on the circle with diameter $MN$.</p>
 </div></details>
@@ -940,12 +1030,19 @@ Among $n,n+w,\dots,n+Kw$ two use the same $d$, again contradicting the Claim.</p
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 49: Combinatorial Number Theory and Structure &middot; Additive Structure and Sums of Integers</div>
 <div class="ct-text"><p>The set $M$ consists of the numbers from $1$ to $2006$. There is a subset of $M$ such that for any numbers $x&lt;y&lt;z$ in this subset, $x+y$ does not divide $z$. Find the maximum number of elements in this subset.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$1004$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Pairs summing to the largest element)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Pairs summing to the largest element)</h4>
 <p><em>Example.</em> $S=\{1003,1004,\dots,2006\}$ has $1004$ elements, and for $x&lt;y&lt;z$ in $S$ we have $x+y\ge2007&gt;z$, so $x+y\nmid z$.</p><p><em>Bound.</em> Let $S$ be a good subset and $z=\max S$. For $x\in S$ with $x&lt;z$ and $x\ne z-x$: if also $z-x\in S$, then the two distinct
 elements $x$ and $z-x$, both smaller than $z$, have sum $z$, which divides $z$; impossible. So from each pair $\{x,z-x\}$ with
 $1\le x&lt;\frac z2$ at most one number lies in $S$. Hence $S\setminus\{z\}$ has at most $\lfloor\frac{z-1}2\rfloor$ elements, plus possibly
 $\frac z2$ when $z$ is even, i.e. at most $\lfloor\frac z2\rfloor$ elements. As $z\le2006$, $|S|\le1003+1=1004$.</p><p>The maximum is $\boxed{1004}$.</p>
+<h4>Solution 2 (The smallest element and chains of step $a$)</h4>
+<p><em>Example.</em> $S=\{1003,1004,\dots,2006\}$ has $1004$ elements, and for $x&lt;y&lt;z$ in $S$ we have $x+y\ge2007&gt;z$, so $x+y\nmid z$.</p><p><em>Bound.</em> Let $S$ be a good subset and $a=\min S$. If $y&lt;z$ are elements of $S\setminus\{a\}$ with $z-y=a$, then $a&lt;y&lt;z$ and
+$a+y=z$ divides $z$, which is forbidden. So no two elements of $S\setminus\{a\}\subseteq\{a+1,\dots,2006\}$ differ by $a$.</p><p>Split $\{a+1,\dots,2006\}$ into the $a$ residue classes modulo $a$ (some possibly empty); each class is a chain $u,u+a,u+2a,\dots$ of
+$L$ terms, in which $S$ contains no two consecutive terms, hence at most $\lceil L/2\rceil\le\frac{L+1}2$ of them. Summing over the $a$
+classes, whose lengths add up to $2006-a$,
+\[|S\setminus\{a\}|\le\frac{(2006-a)+a}{2}=1003 .\]
+So $|S|\le1004$, and the maximum is $\boxed{1004}$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p28">
@@ -953,21 +1050,40 @@ $\frac z2$ when $z$ is even, i.e. at most $\lfloor\frac z2\rfloor$ elements. As 
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 8: Modular Arithmetic and Congruence Methods &middot; Residue Classes and Case Analysis</div>
 <div class="ct-text"><p>Find all positive integers $a$ such that for any positive integer $n\geq 5$ we have $2^n-n^2\mid a^n-n^a$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$a\in\{2,4\}$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Choose $n=4p-2$)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Choose $n=4p-2$)</h4>
 <p><em>$a=2$ and $a=4$ work.</em> For $n\ge5$ we have $2^n&gt;n^2$. For $a=2$ the two numbers are equal; for $a=4$,
 $4^n-n^4=(2^n-n^2)(2^n+n^2)$.</p><p><em>No other $a$ works.</em> Let $p$ be a prime with $p&gt;a$, $p\ge3$, and take $n=4p-2\ge10$. By Fermat, $2^n=2^{4(p-1)}\cdot2^2\equiv4$ and
 $n^2\equiv(-2)^2=4\pmod p$, so $p\mid 2^n-n^2$. If $a$ works, then $p\mid a^n-n^a$; since $p\nmid a$, $a^n=a^{4(p-1)}a^2\equiv a^2$, and
 $n^a\equiv(-2)^a\pmod p$. Hence $p\mid a^2-(-2)^a$ for every prime $p&gt;a$. A nonzero integer has finitely many prime divisors, so
 $a^2=(-2)^a$. Then $a$ is even and $a^2=2^a$, which gives $a=2$ or $a=4$ (for $a\ge5$, $2^a&gt;a^2$).</p><p>The answer is $\boxed{a\in\{2,4\}}$.</p>
+<h4>Solution 2 (An asymptotic expansion killed by a difference operator)</h4>
+<p><em>$a=2$ and $a=4$ work.</em> For $n\ge5$, $2^n&gt;n^2$. For $a=2$ the two numbers are equal; for $a=4$,
+$4^n-n^4=(2^n-n^2)(2^n+n^2)$. For $a=1$ and $n=5$: $2^5-5^2=7\nmid 1-5$.</p><p><em>No other $a\ge2$ works.</em> Suppose $a\ge2$ works, and let $s\ge1$ be the integer with $2^s\le a&lt;2^{s+1}$. Then
+$q_n=\frac{a^n-n^a}{2^n-n^2}$ is an integer for every $n\ge5$. With $\rho=n^2/2^n$ and
+$\frac1{1-\rho}=1+\rho+\dots+\rho^{s-1}+\frac{\rho^s}{1-\rho}$,
+\[q_n=\sum_{j=0}^{s-1}n^{2j}\lambda_j^{\,n}+R_n,\qquad \lambda_j=\frac{a}{2^{j+1}},\qquad
+R_n=\frac{n^{2s}(a/2^s)^n-n^a}{2^n-n^2}.\]
+For $n\ge7$ we have $n^2\le2^{n-1}$, so $2^n-n^2\ge2^{n-1}$ and $|R_n|\le2\bigl(n^{2s}(a/2^{s+1})^n+n^a/2^n\bigr)$; as $a/2^{s+1}&lt;1$,
+$R_n\to0$.</p><p><em>The operator.</em> Let $E$ be the shift, $(Eu)_n=u_{n+1}$. If $P$ is a polynomial of degree $e$, then
+$(E-\lambda)\bigl(P(n)\lambda^n\bigr)=\bigl(P(n+1)-P(n)\bigr)\lambda^{n+1}$ is a polynomial of degree at most $e-1$ times $\lambda^n$; so
+$(E-\lambda)^{e+1}$ annihilates $P(n)\lambda^n$. Hence
+\[\Phi=\prod_{j=0}^{s-1}\bigl(2^{j+1}E-a\bigr)^{2j+1}=\prod_{j=0}^{s-1}2^{(j+1)(2j+1)}(E-\lambda_j)^{2j+1}\]
+(these operators commute) annihilates every term $n^{2j}\lambda_j^n$, and $\Phi=\sum_i c_iE^i$ with integers $c_i$. Therefore
+$(\Phi q)_n=(\Phi R)_n$ for all $n\ge5$. The left side is an integer, the right side tends to $0$ (a fixed combination of shifts of $R$), so
+$(\Phi R)_n=0$ for all large $n$.</p><p><em>Lemma.</em> If $u_n\to0$ and $\bigl((E-\mu_1)\cdots(E-\mu_N)u\bigr)_n=0$ for all large $n$, where every $\mu_i\ge1$, then $u_n=0$ for all
+large $n$. Indeed, for $N=0$ there is nothing to prove; for $N\ge1$ let $w=(E-\mu_2)\cdots(E-\mu_N)u$. Then $w_n\to0$ and $w_{n+1}=\mu_1w_n$ for
+large $n$, so $|w_n|$ is eventually nondecreasing and tends to $0$; hence $w_n=0$ for large $n$, and induction on $N$ finishes.</p><p>Every $\lambda_j=a/2^{j+1}\ge a/2^s\ge1$ ($j\le s-1$), so the lemma gives $R_n=0$, i.e. $n^{2s}(a/2^s)^n=n^a$, for all large $n$. If
+$a&gt;2^s$, then $(a/2^s)^n n^{2s-a}\to\infty$, a contradiction; so $a=2^s$, and then $n^{2s}=n^a$ gives $a=2s$. Thus $2^s=2s$, which holds
+for $s=1,2$ only (for $s\ge3$, $2^s&gt;2s$, by induction: $2^{s+1}&gt;4s\ge2s+2$). So $a\in\{2,4\}$.</p><p>The answer is $\boxed{a\in\{2,4\}}$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p29">
 <h3>Problem 3</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure &middot; Power of a Point</div>
 <div class="ct-text"><p>Let $ABC$ be an acute triangle whose orthocenter is the point $H$. The circle that passes through the points $B$, $H$ and $C$ intersects the lines $AB$ and $AC$ again at points $D$ and $E$, respectively. Let $P$ and $Q$ be the points of intersection of the segment $DE$ with $HB$ and $HC$, respectively. Points $X$ and $Y$ (different from $A$) on the lines $AP$ and $AQ$, respectively, are chosen so that the points $X$, $A$, $H$, $B$ lie on a circle and the points $Y$, $A$, $H$, $C$ lie on a circle. Prove that the lines $XY$ and $BC$ are parallel.</p></div>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (A circle centred at $H$)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (A circle centred at $H$)</h4>
 <div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/azerbaijan-tsts-29_s1.svg" alt="Figure for the solution"></div>
 <p><em>Step 1: $D,E$ are reflections of $A$.</em> $B,H,C,D$ are concyclic, so $\angle BDC=\angle BHC=180^\circ-\angle A$ (the angle
 $BHC$ of the orthocentre); hence $\angle ADC=\angle A$ and $CA=CD$. The line $CH$ is perpendicular to $AB=AD$ and passes through $C$, so it is the
@@ -981,6 +1097,26 @@ $\angle QAD=\angle D'$. Since $H$ is the circumcentre of $ADE$, $\angle HAE=90^\
 \[\angle PAH=\angle PAE-\angle HAE=\angle D'+\angle E'-90^\circ=\angle QAD-\angle HAD=\angle QAH,\]
 with $P$ and $Q$ on opposite sides of $AH$ (as $D,E$ are). So the lines $AP$ and $AQ$ are symmetric in the line $AH$.</p><p><em>Conclusion.</em> The reflection in the line $AH$ (a line through the centre $H$ of $\gamma$) maps $\gamma$ to itself and the line $AP$ to
 the line $AQ$, so it maps $X$ (the second point of $AP$ on $\gamma$) to $Y$. Hence $XY\perp AH$, and since $AH\perp BC$, $XY\parallel BC$.</p>
+<h4>Solution 2 (Oblique coordinates along $AB$ and $AC$)</h4>
+<p>Let $c=AB$, $b=AC$, $t=\cos A\in(0,1)$, and let $u,v$ be the unit vectors from $A$ towards $B$ and $C$, so $u\cdot v=t$. Write
+$(x,y)$ for the point $A+xu+yv$. Then the squared distance from $A$ is $|(x,y)|^2=x^2+y^2+2txy$, and $(x,y)\cdot u=x+ty$, $(x,y)\cdot v=tx+y$.
+Every circle has an equation $x^2+y^2+2txy-\alpha x-\beta y+\gamma=0$ (expand $|Z-O|^2=\rho^2$). The angles at $B$ and $C$ are acute, so
+the feet of the altitudes from $C$ and $B$ lie inside the sides: $bt&lt;c$ and $ct&lt;b$.</p><p><em>The orthocentre.</em> The line $BH\perp AC$ is $Z\cdot v=B\cdot v$, i.e. $tx+y=ct$; the line $CH\perp AB$ is $x+ty=bt$. Hence
+\[H=(x_H,y_H)=\Bigl(\frac{t(b-ct)}{1-t^2},\ \frac{t(c-bt)}{1-t^2}\Bigr),\qquad |H|^2=x_H(H\cdot u)+y_H(H\cdot v)=bt\,x_H+ct\,y_H .\]</p><p><em>The circle $BHC$, and $D,E$.</em> Let $p=2bct$. We claim the circle $BHC$ is
+\[x^2+y^2+2txy-\Bigl(c+\frac pc\Bigr)x-\Bigl(b+\frac pb\Bigr)y+p=0 .\]
+It passes through $B=(c,0)$ and $C=(0,b)$ directly. At $H$ its left side equals
+$-(c-bt)x_H-(b-ct)y_H+p\bigl(1-\frac{x_H}c-\frac{y_H}b\bigr)$. Here $(c-bt)x_H+(b-ct)y_H=\frac{2t(b-ct)(c-bt)}{1-t^2}$, and
+\[1-\frac{x_H}c-\frac{y_H}b=\frac{bc(1-t^2)-tb(b-ct)-tc(c-bt)}{bc(1-t^2)}=\frac{(b-ct)(c-bt)}{bc(1-t^2)},\]
+so the value is $0$. On the line $AB$ ($y=0$) the equation is $(x-c)(x-\frac pc)=0$, so $D=(\frac pc,0)=(2bt,0)$; similarly $E=(0,2ct)$,
+and the line $DE$ is $cx+by=2bct$.</p><p><em>The directions of $AP$ and $AQ$.</em> Solving $cx+by=2bct$ with $tx+y=ct$ gives $P=\frac{ct}{c-bt}\,(b,\ c-2bt)$, and solving it with
+$x+ty=bt$ gives $Q=\frac{bt}{b-ct}\,(b-2ct,\ c)$.</p><p><em>The circles $AHB$ and $AHC$.</em> The circle $AHB$ passes through $A$, so it is $x^2+y^2+2txy-\alpha x-\beta y=0$; $B$ gives $\alpha=c$,
+and $H$ gives $bt\,x_H+ct\,y_H=c\,x_H+\beta y_H$, i.e. $\beta y_H=ct\,y_H-(c-bt)x_H=ct\,y_H-(b-ct)y_H$ (as $(c-bt)x_H=(b-ct)y_H$), so
+$\beta=2ct-b$. In the same way the circle $AHC$ is $x^2+y^2+2txy-(2bt-c)x-by=0$.</p><p><em>The points $X$ and $Y$.</em> Put $L=b^2+c^2-2bct=BC^2&gt;0$. Substituting $\lambda(b,c-2bt)$ into the equation of the circle $AHB$: its
+squared length is $b^2+(c-2bt)^2+2tb(c-2bt)=L$, and $cb+(2ct-b)(c-2bt)=2t(b^2+c^2-2bct)=2tL$, so the equation is $\lambda^2L-2tL\lambda=0$.
+The root $\lambda=2t\ne0$ gives $X=2t\,(b,\ c-2bt)\ne A$. Symmetrically $Y=2t\,(b-2ct,\ c)$.</p><p><em>Conclusion.</em> The linear function $\Phi(x,y)=\frac xc+\frac yb$ equals $1$ at $B$ and at $C$, so its level lines are the lines parallel
+to $BC$. Now
+\[\Phi(X)=2t\Bigl(\frac bc+\frac{c-2bt}{b}\Bigr)=\frac{2tL}{bc}=2t\Bigl(\frac{b-2ct}{c}+\frac cb\Bigr)=\Phi(Y),\]
+and $X\ne Y$ (their first coordinates differ by $4ct^2\ne0$). Hence the line $XY$ is a level line of $\Phi$, i.e. $XY\parallel BC$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p30">

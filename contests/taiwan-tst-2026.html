@@ -1151,8 +1151,8 @@ So the lines $SU$ and $SA$ coincide: $U$ lies on the line $AS$. (If $U=S$ this i
 <div class="ct-text"><p>Let $a,b,c,d$ be positive reals such that $a+b+c+d=9$. Prove that
 \[a\sqrt{a+b+c}+b\sqrt{b+c+d}+c\sqrt{c+d+a}+d\sqrt{d+a+b}\ge 23.\]</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>proof (the bound $23$ is the infimum, approached at $(a,b,c,d)\to(4,0,0,5)$)</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Rationalize the deficit and use the largest variable)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Rationalize the deficit and use the largest variable)</h4>
 <p>Write the variables cyclically as $a\to b\to c\to d\to a$ and, for a variable $x$, let $x^-$ be the previous one ($a^-=d$, $b^-=a$, $c^-=b$, $d^-=c$). Since $a+b+c=9-d$ etc., the left side is
 \[L=\sum_{x}x\sqrt{9-x^-}=27-\sum_xx\bigl(3-\sqrt{9-x^-}\bigr)=27-\sum_x\frac{x\,x^-}{3+\sqrt{9-x^-}},\]
 using $\sum x=9$ and $3-\sqrt{9-y}=\frac{y}{3+\sqrt{9-y}}$. So we must show
@@ -1163,6 +1163,24 @@ Let $p=a+c$, $q=b+d$, so $p+q=9$.</p><p><em>Case $m\ge\frac92$.</em> The largest
 because $4-(3-s)s^2=s^3-3s^2+4=(s+1)(s-2)^2\ge0$.</p><p><em>Case $m&lt;\frac92$.</em> Then $pq\le\frac{81}4$ and $\sqrt{9-m}&gt;\sqrt{9/2}=\frac3{\sqrt2}$, so
 \[\Sigma&lt;\frac{81/4}{3+3/\sqrt2}=\frac{27}{4}\cdot\frac{\sqrt2}{\sqrt2+1}=\frac{27}4\sqrt2(\sqrt2-1)=\frac{27}4(2-\sqrt2)&lt;4,\]
 since $27(2-\sqrt2)&lt;16\iff38&lt;27\sqrt2\iff1444&lt;1458$.</p><p><em>Strictness.</em> In the first case equality would need $x^-\in\{0,m\}$ whenever $x&gt;0$ (for the first estimate to be sharp); as all variables are positive, all of them would equal $m$, giving $m=\frac94&lt;\frac92$, a contradiction. So $\Sigma&lt;4$ always, and $L&gt;23$. (Letting $(a,b,c,d)\to(4,0,0,5)$ shows that $23$ cannot be improved: then $L\to4\sqrt4+5\sqrt9=23$.)</p>
+<h4>Solution 2 (Comparing each deficit with a chord)</h4>
+<p>Since $a+b+c+d=9$, we have $a+b+c=9-d$, $b+c+d=9-a$, $c+d+a=9-b$ and $d+a+b=9-c$. For $0\le u\le 9$ put
+\[\varphi(u)=3-\sqrt{9-u}=\frac{u}{3+\sqrt{9-u}}.\]
+Using $a+b+c+d=9$ once more, the left side $L$ of the inequality equals
+\[L=a\sqrt{9-d}+b\sqrt{9-a}+c\sqrt{9-b}+d\sqrt{9-c}=3(a+b+c+d)-\Delta=27-\Delta,\]
+where
+\[\Delta=a\varphi(d)+b\varphi(a)+c\varphi(b)+d\varphi(c),\]
+so we must show $\Delta&lt;4$.</p><p><em>Key fact.</em> For $0&lt;u\le9$ we have $\dfrac{\varphi(u)}{u}=\dfrac1{3+\sqrt{9-u}}$, which is strictly increasing in $u$. Hence
+\[\varphi(u)&lt;\frac{u}{v}\,\varphi(v)\qquad\text{whenever }0&lt;u&lt;v\le9.\]</p><p><em>Grouping the variables.</em> Let $A=a+c$ and $B=b+d$, so $A+B=9$ and $0&lt;A,B&lt;9$. All variables are positive, so $b,d&lt;B$ and $a,c&lt;A$. The key fact gives
+\[\varphi(d)&lt;\frac dB\varphi(B),\quad \varphi(b)&lt;\frac bB\varphi(B),\quad \varphi(a)&lt;\frac aA\varphi(A),\quad \varphi(c)&lt;\frac cA\varphi(A).\]
+Multiplying by $a$, $c$, $b$, $d$ respectively and adding,
+\[\Delta&lt;(ad+bc)\frac{\varphi(B)}{B}+(ab+cd)\frac{\varphi(A)}{A}.\]
+Since $(ad+bc)+(ab+cd)=(a+c)(b+d)=AB$, the number $\lambda=\dfrac{ad+bc}{AB}$ lies in $(0,1)$ and the right side equals
+\[\lambda\cdot A\varphi(B)+(1-\lambda)\cdot B\varphi(A)\le\max\{A\varphi(B),\ B\varphi(A)\}.\]</p><p><em>The one-variable bound.</em> Because $A=9-B$, writing $s=\sqrt A\in(0,3)$ gives $A\varphi(B)=A\bigl(3-\sqrt A\bigr)=3s^2-s^3$, and
+\[4-(3s^2-s^3)=s^3-3s^2+4=(s+1)(s-2)^2\ge0.\]
+So $A\varphi(B)\le4$, and in the same way (with $s=\sqrt B$) $B\varphi(A)\le4$.</p><p>Therefore $\Delta&lt;4$, that is,
+\[a\sqrt{a+b+c}+b\sqrt{b+c+d}+c\sqrt{c+d+a}+d\sqrt{d+a+b}=27-\Delta&gt;23.\]
+The constant $23$ cannot be improved: as $(a,b,c,d)\to(4,0,0,5)$ through positive values, the left side tends to $4\sqrt4+5\sqrt9=23$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p42">

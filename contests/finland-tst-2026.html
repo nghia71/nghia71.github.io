@@ -171,11 +171,18 @@ so $f$ is strictly increasing on $[4014,\infty)$ and $f(a)&lt;f(b)$.</p><p><stro
 is a power of $5$?
 Here $\overline{xy}$ denotes the number with the digits of $x$ and $y$. For example, if $x=25$ and $y=125$, then $\overline{xy}=25125$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p><strong>No</strong></p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Factor out the power of 5)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Factor out the power of 5)</h4>
 <p>Let $d$ be the number of digits of $5^b$. Then
 \[N=\overline{5^a5^b}=5^a\cdot10^d+5^b=5^{a+d}2^d+5^b .\]
 Suppose $N=5^k$.</p><ul class="ct-ul"><li><p>If $a+d&gt;b$: $N=5^b\bigl(5^{a+d-b}2^d+1\bigr)$, and the bracket is $\equiv1\pmod5$ and greater than $1$, so it is not a power of $5$.</p></li><li><p>If $a+d&lt;b$: $N=5^{a+d}\bigl(2^d+5^{b-a-d}\bigr)$, and the bracket is not divisible by $5$ and greater than $1$.</p></li><li><p>If $a+d=b$: $N=5^{b}(2^d+1)$, so $2^d+1=5^m$, $m\ge1$. By the lifting-the-exponent lemma $v_2(5^m-1)=2+v_2(m)$, so $2^d=5^m-1$ forces $5^m-1=2^{2+v_2(m)}\le4m$, possible only for $m=1$, $d=2$. Then $5^b$ has two digits, so $b=2$, and $a=b-d=0$, which is not positive.</p></li></ul><p>So $\overline{5^a5^b}$ is <strong>never</strong> a power of $5$.</p>
+<h4>Solution 2 (Compare the powers of 5, then factor)</h4>
+<p>Let $d$ be the number of digits of $5^b$. Then
+\[\overline{5^a5^b}=5^a\cdot10^d+5^b=5^{a+d}2^d+5^b .\]
+Suppose this equals $5^c$. Then $c&gt;b$ and
+\[5^{a+d}\,2^d=5^c-5^b=5^b\bigl(5^{c-b}-1\bigr).\]
+The number $5^{c-b}-1$ is not divisible by $5$, so comparing the exponents of $5$ on both sides gives $a+d=b$, and then
+\[5^{m}-1=2^d,\qquad m=c-b\ge1 .\]</p><ul class="ct-ul"><li><p>$d=1$: $5^m=3$, impossible.</p></li><li><p>$d=2$: $5^m=5$. But $5^b$ has exactly two digits only for $b=2$, and then $a=b-d=0$, which is not positive.</p></li><li><p>$d\ge3$: then $8\mid 5^m-1$. Since $5^m\equiv5\pmod 8$ for odd $m$ and $5^m\equiv1\pmod8$ for even $m$, $m$ is even, $m=2l$. Now $\bigl(5^{l}-1\bigr)\bigl(5^{l}+1\bigr)=2^d$, so both factors are powers of $2$. Two powers of $2$ that differ by $2$ are $2$ and $4$, so $5^l-1=2$ and $5^l=3$, impossible.</p></li></ul><p>So $\overline{5^a5^b}$ is <strong>never</strong> a power of $5$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p6">
@@ -210,7 +217,7 @@ hence $\delta(A)-\delta(C)=c-a=\frac b2$.</p><p>The vector $\overrightarrow{AX}$
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Algebra &middot; LPS VII, Chapter 26: Inequalities: Symmetry, Homogenization, and Advanced Structure &middot; Homogenization and Normalization</div>
 <div class="ct-text"><p>Let $x,y,z$ be positive real numbers such that $x+y+z=2$. Show that
 \[\frac{(x-1)^2}{y}+\frac{(y-1)^2}{z}+\frac{(z-1)^2}{x}\ge\frac14\left(\frac{x^2+y^2}{x+y}+\frac{y^2+z^2}{y+z}+\frac{z^2+x^2}{z+x}\right).\]</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Sum of squares)</h4>
 <p><strong>Rewriting both sides.</strong> Since $x+y+z=2$, we have $x-1=\frac{x-y-z}{2}$, so
 \[\frac{(x-1)^2}{y}=\frac{\bigl((x-z)-y\bigr)^2}{4y}=\frac{(x-z)^2}{4y}-\frac{x-z}{2}+\frac y4 .\]
@@ -232,6 +239,19 @@ Multiply by $D=xyz(x+y)(y+z)(z+x)&gt;0$ and call the resulting polynomial (left 
 \[\begin{aligned}F={}&amp;3(p^2-pq+q^2)\,t^5+\tfrac14(p+q)(26p^2-35pq+26q^2)\,t^4+\tfrac12(9p^4+8p^3q-17p^2q^2+8pq^3+9q^4)\,t^3\\
 &amp;+\tfrac14(p+q)(p^2+5pq+q^2)(4p^2-7pq+4q^2)\,t^2+\tfrac12pq(2p^4+p^3q-5p^2q^2+pq^3+2q^4)\,t+\tfrac14p^2q^2(p-q)^2(p+q).\end{aligned}\]
 Every coefficient is non-negative for $p,q\ge0$: $p^2-pq+q^2\ge0$; $26p^2+26q^2\ge52pq$; $9p^4+9q^4\ge18p^2q^2$; $4p^2+4q^2\ge8pq$; and $2p^4+2q^4\ge4p^2q^2$, $p^3q+pq^3\ge2p^2q^2$. Hence $F\ge0$, which proves the inequality. Equality holds only for $p=q=0$, i.e. $x=y=z=\frac23$.</p>
+<h4>Solution 3 (Titu's lemma on each pair)</h4>
+<p><strong>Rewriting both sides.</strong> Since $x+y+z=2$, we have $x-1=\frac{(x-z)-y}{2}$, so
+\[\frac{(x-1)^2}{y}=\frac{(x-z)^2}{4y}-\frac{x-z}{2}+\frac y4 .\]
+Summing cyclically, the middle terms cancel and $\frac14(x+y+z)=\frac12$, so
+\[\frac{(x-1)^2}{y}+\frac{(y-1)^2}{z}+\frac{(z-1)^2}{x}=\frac12+\frac14\Bigl(\frac{(x-z)^2}{y}+\frac{(y-x)^2}{z}+\frac{(z-y)^2}{x}\Bigr).\]
+On the right, $\frac{x^2+y^2}{x+y}=\frac{x+y}2+\frac{(x-y)^2}{2(x+y)}$, so the right-hand side equals
+\[\frac12+\frac18\Bigl(\frac{(x-y)^2}{x+y}+\frac{(y-z)^2}{y+z}+\frac{(z-x)^2}{z+x}\Bigr).\]
+Hence it suffices to prove
+\[\frac{(x-y)^2}{x+y}+\frac{(y-z)^2}{y+z}+\frac{(z-x)^2}{z+x}\le 2\Bigl(\frac{(x-z)^2}{y}+\frac{(y-x)^2}{z}+\frac{(z-y)^2}{x}\Bigr).\tag{$*$}\]</p><p><strong>One pair at a time.</strong> Write $x-y=(x-z)+(z-y)$. By Titu's lemma (the Cauchy&ndash;Schwarz inequality in Engel form) $\frac{(p+q)^2}{u+v}\le\frac{p^2}{u}+\frac{q^2}{v}$ for $u,v&gt;0$,
+\[\frac{(x-y)^2}{x+y}\le\frac{(x-z)^2}{y}+\frac{(z-y)^2}{x}.\]
+In the same way
+\[\frac{(y-z)^2}{y+z}\le\frac{(y-x)^2}{z}+\frac{(x-z)^2}{y},\qquad \frac{(z-x)^2}{z+x}\le\frac{(z-y)^2}{x}+\frac{(y-x)^2}{z}.\]
+Adding the three inequalities gives exactly $(*)$, which proves the claim.</p><p><strong>Equality.</strong> Equality in Titu's lemma $\frac{(p+q)^2}{u+v}\le\frac{p^2}u+\frac{q^2}v$ holds only when $\frac pu=\frac qv$, so in particular $p$ and $q$ are both zero or have the same sign. For the first pair this means that $z$ lies (weakly) between $x$ and $y$; the other two pairs say that $x$ lies between $y$ and $z$ and that $y$ lies between $z$ and $x$. If one variable were strictly larger than the other two, it would not lie between them; so the largest value is taken at least twice, and likewise the smallest. With three numbers this forces $x=y=z=\frac23$, where equality indeed holds.</p>
 </div></details>
 </section>
 <h2 class="ct-group" id="day-3">Day 3</h2>
@@ -239,9 +259,13 @@ Every coefficient is non-negative for $p,q\ge0$: $p^2-pq+q^2\ge0$; $26p^2+26q^2\
 <h3>Problem 1</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 6: Pigeonhole Principle and Density Arguments &middot; Density and Averaging Arguments</div>
 <div class="ct-text"><p>Let $AB$ be a line in the plane. The set $S$ contains $1390$ points which satisfy the following conditions:</p><ul class="ct-parts"><li><p><span class="ct-lbl">a)</span> The distance between a point in $S$ and line $AB$ is at most $1$.</p></li><li><p><span class="ct-lbl">b)</span> The distance between any two points in $S$ is at least $2$.</p></li></ul><p>Show that there exist two points in $S$ with distance at least $1000$.</p></div>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Disjoint discs in a rectangle)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Disjoint discs in a rectangle)</h4>
 <p>Suppose all pairwise distances are less than $1000$. Project the points orthogonally onto the line $AB$; projection does not increase distances, so all projections lie in a segment of length less than $1000$, say $[m,M]$ in a coordinate along $AB$.</p><p>Draw the open disc of radius $1$ around each point. Since the points are at distance at least $2$ from each other, these discs are disjoint. Each point is at distance at most $1$ from $AB$ and its projection lies in $[m,M]$, so each disc lies in the rectangle consisting of points at distance at most $2$ from $AB$ with projection in $[m-1,M+1]$. This rectangle has area less than $4\cdot1002=4008$, while the discs have total area $1390\pi&gt;1390\cdot3.14&gt;4364$. This is impossible, so some two points are at distance at least $1000$.</p>
+<h4>Solution 2 (One strip and the gaps along the line)</h4>
+<p>Take coordinates with $AB$ as the $x$-axis. Every point of $S$ has $|y|\le1$. Split $S$ into the points with $0\le y\le1$ and those with $-1\le y&lt;0$. One of these two groups contains at least $\frac{1390}{2}=695$ points; call it $S'$.</p><p>Any two points of $S'$ have $y$-coordinates differing by at most $1$ and are at distance at least $2$, so by Pythagoras their $x$-coordinates differ by at least $\sqrt{2^2-1^2}=\sqrt3$. Order the points of $S'$ by their $x$-coordinates. Consecutive points are at least $\sqrt3$ apart in $x$, so the first and the last differ in $x$ by at least
+\[694\sqrt3&gt;694\cdot1.7=1179.8&gt;1000 .\]
+The distance between these two points is at least the difference of their $x$-coordinates, so it is at least $1000$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p10">
@@ -252,11 +276,19 @@ Every coefficient is non-negative for $p,q\ge0$: $p^2-pq+q^2\ge0$; $26p^2+26q^2\
 and $f(x)\le 1$.
 Show that $f(x)$ is periodic.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>proof ($f$ has period $1$)</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (A periodic difference)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (A periodic difference)</h4>
 <p>Since $\frac{13}{42}=\frac16+\frac17$, the condition reads $f\bigl(x+\frac16+\frac17\bigr)-f\bigl(x+\frac16\bigr)=f\bigl(x+\frac17\bigr)-f(x)$. So $g(x)=f\bigl(x+\frac17\bigr)-f(x)$ satisfies $g\bigl(x+\frac16\bigr)=g(x)$: $g$ has period $\frac16$, hence period $1$.</p><p>Let $T(x)=f(x+1)-f(x)=\sum_{j=0}^{6}g\bigl(x+\frac j7\bigr)$. As $g$ has period $1$, so has $T$. Therefore, for every integer $n\ge1$,
 \[f(x+n)=f(x)+nT(x),\qquad f(x-n)=f(x)-nT(x)\]
 (the second follows from the first applied at $x-n$). Since $f\le1$, letting $n\to\infty$ gives $T(x)\le0$ from the first identity and $T(x)\ge0$ from the second. So $T\equiv0$, i.e. $f(x+1)=f(x)$ for all $x$: $f$ is periodic with period $1$.</p>
+<h4>Solution 2 (Shift operators)</h4>
+<p>For a function $u:\mathbb R\to\mathbb R$ let $Tu$ be the function $x\mapsto u\bigl(x+\frac1{42}\bigr)$. Then $T^ku$ is $x\mapsto u\bigl(x+\frac k{42}\bigr)$, and for a polynomial $Q(T)=\sum c_kT^k$ we write $Q(T)u$ for the function $x\mapsto\sum c_k\,u\bigl(x+\frac k{42}\bigr)$. Applying $Q_1(T)$ and then $Q_2(T)$ is the same as applying the product $Q_2(T)Q_1(T)$, and $Q(T)$ applied to the zero function gives the zero function.</p><p>Since $\frac{13}{42}$, $\frac16=\frac7{42}$ and $\frac17=\frac6{42}$, the condition says
+\[\bigl(T^{13}-T^7-T^6+1\bigr)f=0,\qquad\text{i.e.}\qquad (T^7-1)(T^6-1)f=0 .\]
+Now $T^{42}-1=(T^7-1)(1+T^7+T^{14}+\dots+T^{35})=(T^6-1)(1+T^6+T^{12}+\dots+T^{36})$, so
+\[(T^{42}-1)^2=(1+T^7+\dots+T^{35})(1+T^6+\dots+T^{36})\,(T^7-1)(T^6-1),\]
+and applying the first two factors to the zero function $(T^7-1)(T^6-1)f$ gives $(T^{42}-1)^2f=0$. As $T^{42}$ is the shift by $1$, this reads
+\[f(x+2)-2f(x+1)+f(x)=0\qquad\text{for all }x .\]
+Fix $x$ and let $h=f(x+1)-f(x)$. The relation says that the differences $f(x+n+1)-f(x+n)$, $n\in\mathbb Z$, are all equal, hence all equal to $h$, and so $f(x+n)=f(x)+nh$ for every integer $n$ (positive or negative). Since $f\le1$, letting $n\to+\infty$ gives $h\le0$ and letting $n\to-\infty$ gives $h\ge0$. So $h=0$: $f(x+1)=f(x)$ for all $x$, and $f$ is periodic with period $1$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p11">

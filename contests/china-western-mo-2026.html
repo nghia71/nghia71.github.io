@@ -190,7 +190,7 @@ The same argument for $\lambda&lt;0$ gives $\int_{-\infty}^0N\ge\Phi(q)$. So
 <h3>Problem 5</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 32: Trigonometric Geometry and Metric Conversion &middot; Law of Sines and Law of Cosines</div>
 <div class="ct-text"><p>Triangle $ABC$ has orthocenter $H$. $D$ and $E$ are the feet of the altitudes from $B$ and $C$ respectively. $P$ is a point inside $\triangle ABC$ on the circumcircle of $BHC$. $BP$ and $AC$ intersect at $Q$, and $CP$ and $AB$ intersect at $R$. Show that $DE$ bisects $QR$.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Positions along the sides)</h4>
 <div class="ct-fig"><img style="width:298px" src="/assets/contests/2026-27/china-western-mo-5_s1.svg" alt="Figure for the solution"></div>
 <p>Write $A,B,C$ also for the angles, $b=CA$, $c=AB$, and let $e_1,e_2$ be the unit vectors from $A$ towards $C$ and $B$.</p><p><strong>The angle at $P$.</strong> The circle $BHC$ is the reflection of the circumcircle in $BC$, so its points on the same side of $BC$ as $A$ see $BC$ under the angle $180^\circ-A$. Hence $\angle BPC=180^\circ-A$ and $\angle PBC+\angle PCB=A$. With $\varphi=\angle ABQ$ and $\psi=\angle ACR$ ($P$ is inside, so $\angle PBC=B-\varphi$, $\angle PCB=C-\psi$) this gives
@@ -210,6 +210,14 @@ which is (1). So the midpoint of $QR$ lies on $DE$.</p>
 Put $\mu=\dfrac{\overline{ER}}{b\cos A}$; then $\overline{ER}=\mu\,AE$ and, by (2), $\overline{DQ}=-\frac cb\overline{ER}=-\mu\,c\cos A=-\mu\,AD$. Hence
 \[N=\frac{1-\mu}2\,AD\,e_1+\frac{1+\mu}2\,AE\,e_2=\frac{1-\mu}2\,D+\frac{1+\mu}2\,E,\]
 an affine combination of $D$ and $E$. So $N$ lies on line $DE$, i.e. $DE$ bisects $QR$.</p>
+<h4>Solution 3 (The locus is a circle)</h4>
+<p>Let $c=AB$, $b=AC$ and $h=\cos\angle BAC$. Since $(BHC)$ is a circle, $B$, $H$, $C$ are distinct and not collinear, so the angles at $B$ and $C$ are not right. Let $\mathbf u$ and $\mathbf v$ be the unit vectors from $A$ towards $B$ and $C$, so $\mathbf u\cdot\mathbf v=h$, and give each point $X$ the oblique coordinates $(x,y)$ defined by $\overrightarrow{AX}=x\mathbf u+y\mathbf v$. Then
+\[AX^2=x^2+y^2+2hxy. \tag{1}\]</p><p><strong>The points.</strong> $B=(c,0)$ and $C=(0,b)$. The foot $E$ of the altitude from $C$ is the projection of $C$ on line $AB$, so $\overrightarrow{AE}=(\overrightarrow{AC}\cdot\mathbf u)\,\mathbf u=bh\,\mathbf u$, i.e. $E=(bh,0)$; likewise $D=(0,ch)$. The line $DE$ is assumed to exist, so $D\ne E$; since $D=E$ would force $D=E=A$, i.e. $h=0$, we have $h\ne0$, and line $DE$ is $\frac{x}{bh}+\frac{y}{ch}=1$.</p><p>Let $P=(x,y)$. As $P$ is inside the triangle, $x&gt;0$, $y&gt;0$ and $\frac xc+\frac yb&lt;1$; in particular $x&lt;c$ and $y&lt;b$. The points of line $BP$ are $B+s(P-B)=(c+s(x-c),\,sy)$; the first coordinate vanishes for $s=\frac c{c-x}$, so $Q=\bigl(0,\frac{cy}{c-x}\bigr)$. In the same way $R=\bigl(\frac{bx}{b-y},0\bigr)$. The midpoint of $QR$ is $\bigl(\frac{bx}{2(b-y)},\frac{cy}{2(c-x)}\bigr)$, and it lies on $DE$ if and only if
+\[\frac{x}{b-y}+\frac{y}{c-x}=2h .\]
+Multiplying by $(b-y)(c-x)&gt;0$, this is equivalent to $x(c-x)+y(b-y)=2h(b-y)(c-x)$, that is, to $F(x,y)=0$, where
+\[F(x,y)=x^2+y^2+2hxy-(c+2hb)x-(b+2hc)y+2hbc .\]</p><p><strong>The curve $F=0$ is the circle $(BHC)$.</strong> By (1), $F(x,y)=AX^2+\ell(X)$, where $\ell(X)=-(c+2hb)x-(b+2hc)y+2hbc$ is an affine function of the point $X$ (the oblique coordinates depend linearly on $\overrightarrow{AX}$). Writing $\ell(X)=-2\,\mathbf w\cdot\overrightarrow{AX}+k$ for a suitable vector $\mathbf w$ and number $k$, and completing the square,
+\[F=\bigl|\overrightarrow{AX}-\mathbf w\bigr|^2+k-|\mathbf w|^2 .\]
+So the set $F=0$ is a circle, a single point or empty. It contains three non-collinear points:</p><ul class="ct-ul"><li><p>$F(c,0)=c^2-c(c+2hb)+2hbc=0$, so $B$ is on it, and by symmetry $F(0,b)=0$, so $C$ is on it;</p></li><li><p>for $H=(x,y)$: $H$ lies on line $CE$, which is $\frac x{bh}+\frac yb=1$, so $x=h(b-y)$; and $H$ lies on line $BD$, which is $\frac xc+\frac y{ch}=1$, so $y=h(c-x)$. Then $x(c-x)+y(b-y)=h(b-y)(c-x)+h(c-x)(b-y)=2h(b-y)(c-x)$, so $F$ vanishes at $H$.</p></li></ul><p>Hence $F=0$ is exactly the circle through $B$, $H$, $C$.</p><p><strong>Conclusion.</strong> Since $P$ lies on $(BHC)$, $F(x,y)=0$, and by the equivalence above (valid because $P$ is inside the triangle) the midpoint of $QR$ lies on $DE$. So $DE$ bisects $QR$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p6">

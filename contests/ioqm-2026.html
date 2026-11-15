@@ -309,14 +309,22 @@ The answer is $4\cdot24=\boxed{96}$.</p>
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 3: Foundational Angle and Configuration Chasing &middot; Angle Chasing and Hidden Equalities</div>
 <div class="ct-text"><p>Four points $A,B,C$ and $D$ lie on a straight line, in this order. A point $E$, not on the line, satisfies $\angle AEB=\angle BEC=\angle CED=45^\circ$. Let $F$ and $G$ be the midpoints of $AC$ and $BD$, respectively. If $\angle FEG=x^\circ$, what is the value of $x$?</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$90$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution ($F$ and $G$ are circumcentres)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 ($F$ and $G$ are circumcentres)</h4>
 <div class="ct-fig"><img style="width:387px" src="/assets/contests/2026-27/ioqm-19_s1.svg" alt="Figure for the solution"></div>
 <p>$\angle AEC=\angle BED=90^\circ$, so $F$, the midpoint of the hypotenuse $AC$, is the circumcentre of the right triangle $AEC$, and $G$ is the circumcentre of $BED$. Hence $FE=FC$ and $GE=GB$, which give
 \[\angle FEC=\angle ECB,\qquad \angle GEB=\angle EBC.\]
 In triangle $EBC$, $\angle EBC+\angle ECB=180^\circ-45^\circ=135^\circ$. The ray $EF$ lies between $EA$ and $EC$ and the ray $EG$ between $EB$ and $ED$; measuring angles at $E$ from the ray $EA$, the ray $EF$ is at $90^\circ-\angle FEC$ and the ray $EG$ at $45^\circ+\angle GEB$. Therefore
 \[\angle FEG=45^\circ+\angle EBC-(90^\circ-\angle ECB)=135^\circ-45^\circ=90^\circ,\]
 so $x=\boxed{90}$.</p>
+<h4>Solution 2 (Points on a line as tangents of angles)</h4>
+<p>Choose coordinates with $E=(0,1)$ and the line $y=0$, the points $A,B,C,D$ having increasing abscissas. For a point $X=(x,0)$ let $\varphi_X$ be the signed angle from the downward vertical ray of $E$ to the ray $EX$, measured towards the positive $x$-axis; then $-90^\circ&lt;\varphi_X&lt;90^\circ$ and $x=\tan\varphi_X$, and $\varphi_X$ increases with $x$.</p><p>Put $\beta=\varphi_B$ and $t=\tan\beta$. The three given $45^\circ$ angles give
+\[\varphi_A=\beta-45^\circ,\qquad \varphi_C=\beta+45^\circ,\qquad \varphi_D=\beta+90^\circ.\]
+All four angles lie in $(-90^\circ,90^\circ)$, so $-45^\circ&lt;\beta&lt;0^\circ$ and $-1&lt;t&lt;0$; in particular $t\ne0,\pm1$. By the tangent addition formula,
+\[x_A=\frac{t-1}{1+t},\qquad x_C=\frac{t+1}{1-t},\qquad x_D=\tan(\beta+90^\circ)=-\frac1t .\]
+Hence the midpoints $F$ of $AC$ and $G$ of $BD$ have abscissas
+\[x_F=\frac12\cdot\frac{-(t-1)^2+(t+1)^2}{1-t^2}=\frac{2t}{1-t^2},\qquad x_G=\frac12\Bigl(t-\frac1t\Bigr)=\frac{t^2-1}{2t}.\]
+Therefore $x_Fx_G=-1$, and the vectors $\overrightarrow{EF}=(x_F,-1)$ and $\overrightarrow{EG}=(x_G,-1)$ have dot product $x_Fx_G+1=0$. (In angle terms: $x_F=\tan2\beta$ and $x_G=-\cot2\beta=\tan(2\beta+90^\circ)$, so the rays $EF$ and $EG$ make angles $2\beta$ and $2\beta+90^\circ$ with the vertical.) Thus $\angle FEG=90^\circ$ and $x=\boxed{90}$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p20">
@@ -403,9 +411,11 @@ In both cases $BD=u+144/u=25$, and the area is $2\cdot[ABD]=BD\cdot AE=25\cdot12
 <div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 39: Graph Theory and Structural Combinatorics &middot; Basic Graph Properties</div>
 <div class="ct-text"><p>There are $n$ points in the plane, no three of which are collinear. Every pair of points is joined by a segment which is coloured red or blue such that the following conditions hold:</p><ul class="ct-parts"><li><p><span class="ct-lbl">(a)</span> If $A,B,C$ are three points such that $AB$ is red and $BC$ is blue, then $AC$ is red.</p></li><li><p><span class="ct-lbl">(b)</span> For any point $A$, there are exactly three points $B,C,D$ such that $AB$, $AC$, $AD$ are red.</p></li></ul><p>Find the sum of all possible values of $n$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$10$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Red neighbourhoods are forced)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Red neighbourhoods are forced)</h4>
 <p>Think of a graph on the $n$ points with the red segments as edges; each point has red degree $3$, so $n\ge4$, and $3n$ is twice the number of red segments, so $n$ is even. Fix $B$, a red neighbour $A$ of $B$ and the $n-4$ points $C$ with $BC$ blue. By (a), $AC$ is red for each such $C$, so $A$ has at least $1+(n-4)$ red neighbours: $n-3\le3$, $n\le6$. So $n\in\{4,6\}$.</p><p>Both occur: for $n=4$ make all segments red ((a) is vacuous). For $n=6$ split the points into two triples, colour the segments inside each triple blue and the other nine red: each point has $3$ red segments; and if $AB$ is red and $BC$ blue, then $C$ is in $B$'s triple and $A$ in the other one, so $AC$ is red. The answer is $4+6=\boxed{10}$.</p>
+<h4>Solution 2 (Blue segments split the points into classes)</h4>
+<p>Call two points <em>related</em> if they are equal or joined by a blue segment.</p><p><strong>Relatedness is transitive.</strong> Let $A,B,C$ be distinct with $AB$ and $BC$ blue, and suppose $AC$ were red. Apply condition (a) to the points $C,A,B$: $CA$ is red and $AB$ is blue, so $CB$ is red, a contradiction. Hence $AC$ is blue.</p><p>So the points split into classes: two points in the same class are joined by blue, and two points in different classes are joined by red (their segment is not blue). A point in a class of size $s$ is therefore joined by red exactly to the $n-s$ points outside its class, and condition (b) gives $n-s=3$. Thus every class has exactly $n-3\ge1$ points, so $n-3$ divides $n$, hence $n-3$ divides $n-(n-3)=3$, and $n-3\in\{1,3\}$, that is, $n\in\{4,6\}$.</p><p><strong>Both values occur.</strong> Take $n$ points in convex position (no three collinear), split them into classes of size $n-3$ (four classes of one point for $n=4$, two classes of three for $n=6$), colour segments inside a class blue and all others red. Each point has exactly $3$ red segments. If $AB$ is red and $BC$ is blue, then $C$ is in the class of $B$ and $A$ is not, so $AC$ is red: condition (a) holds.</p><p>The answer is $4+6=\boxed{10}$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p27">

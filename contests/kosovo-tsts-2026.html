@@ -251,14 +251,34 @@ In the square both angles $\measuredangle(DA,DB)$ and $\measuredangle(CA,CB)$ ar
 <h3>Problem 1</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 3: Foundational Angle and Configuration Chasing &middot; Angle Chasing and Hidden Equalities</div>
 <div class="ct-text"><p>Let $\triangle ABC$ be an acute scalene triangle and let $O$ be the circumcenter of it. The line $AO$ intersects side $BC$ at point $D$. The circle $(BDO)$ intersects side $AB$ again at point $E$, and the circle $(CDO)$ intersects side $AC$ again at point $F$. The line $EF$ intersects the circles $(BDO)$ and $(CDO)$ again at points $P$ and $Q$, respectively. Prove that the lines $BP$ and $CQ$ intersect on the circle $(ABC)$.</p><p><em>Note.</em> By $(XYZ)$ we denote the circumcircle of triangle $\triangle XYZ$.</p></div>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (The lines pass through the mirror image of $A$)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (The lines pass through the mirror image of $A$)</h4>
 <div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/kosovo-tsts-11_s1.svg" alt="Figure for the solution"></div>
 <p>Let $\Gamma$ be the circle $(ABC)$, $\omega_1=(BDO)$, $\omega_2=(CDO)$, and let $A'$ be the second intersection of $\Gamma$ with the line through $A$ parallel to $BC$ ($A'\ne A$ because $AB\ne AC$). We show that $BP$ and $CQ$ both pass through $A'$. Directed angles $\measuredangle(\ell,m)$ are taken modulo $180^\circ$.</p><p><em>$EF\perp AO$.</em> The point $O$ lies between $A$ and $D$, so $A$ is outside $\omega_1$ and $\omega_2$ and $AE\cdot AB=AO\cdot AD=AF\cdot AC$. Hence $B,C,F,E$ are concyclic and $\measuredangle(EF,AB)=\measuredangle(EF,EB)=\measuredangle(CF,CB)=\measuredangle(CA,CB)$. If $t_A$ is the tangent to $\Gamma$ at $A$, the tangent-chord angle gives $\measuredangle(t_A,AB)=\measuredangle(CA,CB)$. So $EF\parallel t_A$, and $t_A\perp AO$; thus $EF\perp AD$.</p><p><em>The direction of $BP$.</em> In $\omega_1$ (points $B,P,E,D,O$):
 \[\measuredangle(BP,BC)=\measuredangle(BP,BD)=\measuredangle(EP,ED)=\measuredangle(EF,AD)+\measuredangle(AD,ED)=90^\circ+\measuredangle(DO,DE)=90^\circ+\measuredangle(BO,BE),\]
 and $\measuredangle(BO,BE)=\measuredangle(BO,BA)$. With the tangent $t_B$ to $\Gamma$ at $B$ ($t_B\perp BO$),
 \[90^\circ+\measuredangle(BO,BA)=\measuredangle(t_B,BO)+\measuredangle(BO,BA)=\measuredangle(t_B,BA)=\measuredangle(CB,CA).\]
 So $\measuredangle(BP,BC)=\measuredangle(CB,CA)$.</p><p><em>The direction of $BA'$.</em> In $\Gamma$, $\measuredangle(BA',BC)=\measuredangle(AA',AC)=\measuredangle(BC,AC)=\measuredangle(CB,CA)$, using $AA'\parallel BC$.</p><p>Hence $BP$ and $BA'$ make the same directed angle with $BC$: the points $B,P,A'$ are collinear. Exchanging the roles of $B,E,P,\omega_1$ and $C,F,Q,\omega_2$ (the computation is the same with all angles reversed), $C,Q,A'$ are collinear. The lines $BP$ and $CQ$ are different (otherwise $A'$ would lie on $BC$), so they meet at $A'$, a point of $\Gamma$.</p>
+<h4>Solution 2 (Coordinates with the line $AO$ as axis)</h4>
+<p>Let $\Gamma$ be the circle $(ABC)$. Since the triangle is acute, $O$ lies inside it, hence strictly between $A$ and $D$ on the segment $AD$. Take coordinates with
+\[A=(0,0),\qquad O=(o,0),\qquad D=(d,0),\qquad 0&lt;o&lt;d.\]
+Then $\Gamma$ is $X^2+Y^2=2oX$.</p><p><em>Slope parameters on $\Gamma$.</em> For a real $s$, the line $Y=sX$ through $A$ meets $\Gamma$ again at
+\[G(s)=\Bigl(\frac{2o}{1+s^2},\ \frac{2os}{1+s^2}\Bigr),\]
+and every point of $\Gamma$ other than $A$ is $G(s)$ for a unique real $s$ ($G(0)=(2o,0)$ is the antipode of $A$). For any $s_1,s_2$ the line
+\[(1-s_1s_2)X+(s_1+s_2)Y=2o\tag{1}\]
+contains $G(s_1)$ (substitute: the left side becomes $\frac{2o(1-s_1s_2+s_1^2+s_1s_2)}{1+s_1^2}=2o$) and, by symmetry, $G(s_2)$. So for $s_1\ne s_2$, (1) is the line $G(s_1)G(s_2)$.</p><p>The points $B$ and $C$ are not $A$, and not the antipode of $A$ (then $AO$ would pass through $B$ or $C$, and the triangle would have a right angle). So $B=G(\eta)$, $C=G(\zeta)$ with $\eta,\zeta\ne0$, and $\eta+\zeta\ne0$: otherwise $B$ and $C$ would be mirror images in the line $AO$ and $AB=AC$. Writing $B=(x,y)$, we have $\eta=y/x$, $x&gt;0$, $y\ne0$ and $x(1+\eta^2)=2o$. Since $D=(d,0)$ lies on $BC$, (1) gives
+\[d(1-\eta\zeta)=2o.\tag{2}\]</p><p><em>The line $EF$.</em> The point $A$ lies outside the circle $(BDO)$ (on the line $AD$ beyond $O$), so by the power of $A$, $AE\cdot AB=AO\cdot AD=od$ with $E$ on the ray $AB$. As $AB^2=x^2+y^2=2ox$,
+\[E=\frac{od}{AB^2}\,B=\frac{d}{2x}\,(x,y)=\Bigl(\frac d2,\ \frac{dy}{2x}\Bigr).\]
+In the same way the $x$-coordinate of $F$ is $\frac d2$. Hence $EF$ is the line $X=\frac d2$.</p><p><em>The point $P$.</em> The circle $(BDO)$ passes through $(o,0)$ and $(d,0)$, so its equation is $X^2+Y^2-(d+o)X+LY+do=0$ for some $L$; putting in $B$ and using $x^2+y^2=2ox$ gives $Ly=(d-o)x-do$. On the line $X=\frac d2$ the two values of $Y$ are those of $E$ and $P$, with sum $-L$. Hence $P_Y=-L-\frac{dy}{2x}$, and, using $y^2=x(2o-x)$,
+\begin{align*}y\,(P_Y-y)&amp;=-(d-o)x+do-\frac{d\,y^2}{2x}-y^2\\&amp;=-(d-o)x+do-\frac{d(2o-x)}{2}-(2ox-x^2)=x^2-ox-\frac{dx}{2},\end{align*}
+so
+\[P-B=\Bigl(\frac d2-x,\ \frac{x\,(x-o-\frac d2)}{y}\Bigr).\]
+This vector is not zero: if $x=\frac d2$ the second component is $-\frac{do}{2y}\ne0$.</p><p><em>The second point of $BP$ on $\Gamma$.</em> A point $G(\xi)$ with $\xi\neq\eta$ lies on the line $BP$ exactly when $P-B$ is perpendicular to the normal $(1-\eta\xi,\ \eta+\xi)$ of the line (1) through $B$ and $G(\xi)$. Multiply that condition by $\eta=y/x$:
+\[\eta\Bigl(\frac d2-x\Bigr)(1-\eta\xi)+\Bigl(x-o-\frac d2\Bigr)(\eta+\xi)=0
+\iff \xi\Bigl(x(1+\eta^2)-o-\frac d2(1+\eta^2)\Bigr)=o\eta .\]
+By $x(1+\eta^2)=2o$ and (2), $x(1+\eta^2)-o-\frac d2(1+\eta^2)=o-\frac d2(1+\eta^2)=-\frac d2\,\eta(\eta+\zeta)$, so the condition is
+\[\xi=-\frac{2o}{d(\eta+\zeta)}=-\frac{1-\eta\zeta}{\eta+\zeta},\]
+using (2) again. This value is not $\eta$ (else $-1+\eta\zeta=\eta^2+\eta\zeta$, i.e. $\eta^2=-1$), so $G(\xi)$ is a point of $\Gamma$ other than $B$ on the line $BP$.</p><p><em>Conclusion.</em> The formula for $\xi$ is symmetric in $\eta$ and $\zeta$. Exchanging the roles of $B,E,P,(BDO)$ and $C,F,Q,(CDO)$ (every step above only used that $B$ is a point of $\Gamma$ with parameter $\eta$, the other vertex having parameter $\zeta$), the line $CQ$ passes through the same point $G(\xi)$. Moreover $\xi$ is the slope of $BC$, by (1), so $G(\xi)$ is the second intersection of $\Gamma$ with the parallel to $BC$ through $A$; it is not on $BC$, so the lines $BP$ and $CQ$ are different. They meet at $G(\xi)$, which lies on $\Gamma=(ABC)$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p12">

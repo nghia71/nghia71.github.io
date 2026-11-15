@@ -126,8 +126,8 @@ by the inequality $\sum d_i^2\ge\frac{(\sum d_i)^2}{100}$ (Cauchy-Schwarz, or QM
 <div class="ct-text"><p>Positive real number sequences $a_n$ and $b_n$ are defined by
 \[a_{n+1}=a_n-\frac{1}{1+\sum_{i=1}^{n}\frac{1}{a_i}},\qquad b_{n+1}=b_n+\frac{1}{1+\sum_{i=1}^{n}\frac{1}{b_i}}.\]
 If $a_{100}=b_{99}$, show that $a_{100}+b_{100}&gt;a_{101}+b_{101}$.</p></div>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Two invariants)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Two invariants)</h4>
 <p>Let $S_n=1+\sum_{i=1}^n\frac1{a_i}$ and $T_n=1+\sum_{i=1}^n\frac1{b_i}$, so $a_{n+1}=a_n-\frac1{S_n}$ and $b_{n+1}=b_n+\frac1{T_n}$. Then
 \[a_{n+1}S_{n+1}=a_{n+1}S_n+1=a_nS_n,\qquad b_{n+1}T_{n+1}=b_{n+1}T_n+1=b_nT_n+2.\]
 Since $a_1S_1=a_1+1$ and $b_1T_1=b_1+1$, we get $a_nS_n=a_1+1$ and $b_nT_n=b_1+2n-1$ for all $n$. Put $u=a_1+1$ and $v=b_1+198$. The claim is
@@ -136,6 +136,16 @@ Since $a_1S_1=a_1+1$ and $b_1T_1=b_1+1$, we get $a_nS_n=a_1+1$ and $b_nT_n=b_1+2
 \[u=a_1+1\le c+100-\frac{99}{u}&lt;v-\frac{99}{u}.\]
 In particular $u&lt;v$, and $uv&lt;v^2-\frac{99v}{u}&lt;v^2-99&lt;v^2-1$.</p><p><em>Conclusion.</em> $b_{100}=b_{99}+\frac{b_{99}}{b_1+197}=\frac{cv}{v-1}$, so
 \[\frac{b_{100}}{b_1+199}=\frac{cv}{(v-1)(v+1)}=\frac{cv}{v^2-1}&lt;\frac{cv}{uv}=\frac cu=\frac{a_{100}}{u},\]
+which is the required inequality $a_{100}+b_{100}&gt;a_{101}+b_{101}$.</p>
+<h4>Solution 2 (Compare the steps twice)</h4>
+<p>Write $A_n=\sum_{i=1}^{n}\frac1{a_i}$ and $B_n=\sum_{i=1}^{n}\frac1{b_i}$, so that
+\[a_n-a_{n+1}=\frac1{1+A_n}&gt;0,\qquad b_{n+1}-b_n=\frac1{1+B_n}&gt;0 .\]
+Thus $(a_n)$ is strictly decreasing and $(b_n)$ is strictly increasing. The claim $a_{100}+b_{100}&gt;a_{101}+b_{101}$ is equivalent to $a_{100}-a_{101}&gt;b_{101}-b_{100}$, that is, to $A_{100}&lt;B_{100}$.</p><p><strong>Step 1: $a_{99}&gt;b_{100}$.</strong> For $1\le i\le 99$ we have $a_i\ge a_{99}&gt;a_{100}=b_{99}\ge b_i$, so $\frac1{a_i}&lt;\frac1{b_i}$, and adding, $A_{99}&lt;B_{99}$. Hence
+\[a_{99}-a_{100}=\frac1{1+A_{99}}&gt;\frac1{1+B_{99}}=b_{100}-b_{99},\]
+and adding $a_{100}=b_{99}$ gives $a_{99}&gt;b_{100}$.</p><p><strong>Step 2: $A_{100}&lt;B_{100}$.</strong> The term $\frac1{a_{100}}$ of $A_{100}$ equals the term $\frac1{b_{99}}$ of $B_{100}$; remove both. What remains of $A_{100}$ is $\frac1{a_1}+\dots+\frac1{a_{99}}$, and what remains of $B_{100}$ is the sum of the $99$ terms $\frac1{b_j}$ with $j\in\{1,\dots,98,100\}$. For every such $i$ and $j$,
+\[a_i\ge a_{99}&gt;b_{100}\ge b_j\]
+by Step 1 and the monotonicity, so each of the $99$ remaining terms of $A_{100}$ is smaller than each of the $99$ remaining terms of $B_{100}$. Therefore $A_{100}&lt;B_{100}$, so
+\[a_{100}-a_{101}=\frac1{1+A_{100}}&gt;\frac1{1+B_{100}}=b_{101}-b_{100},\]
 which is the required inequality $a_{100}+b_{100}&gt;a_{101}+b_{101}$.</p>
 </div></details>
 </section>
@@ -158,7 +168,7 @@ So $f(5^k)=2\cdot5^k$ and $f(4\cdot5^k)=5^{k+1}$. Between $5^k$ and $4\cdot5^k$ 
 <section class="ct-problem" id="p5">
 <h3>Problem 5</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 36: Coordinate Geometry and Analytic Representation &middot; Cartesian Coordinate Setup</div>
-<div class="ct-text"><p>Two circles $S_1$ and $S_2$ with centers $O_1$ and $O_2$ respectively intersect at $X$ and $Y$. $AB$ is an external common tangent to the circles with $A$ and $B$ lying on $S_1$ and $S_2$ respectively. Tangents to $S_1$ and $S_2$ at $X$ intersect the line of centers $O_1O_2$ at $L$ and $K$ respectively. Show that $XY$, $AK$ and $BL$ are concurrent.</p></div>
+<div class="ct-text"><p>Two circles $S_1$ and $S_2$ with centers $O_1$ and $O_2$ respectively intersect at $X$ and $Y$. $AB$ is an external common tangent to the circles with $A$ and $B$ lying on $S_1$ and $S_2$ respectively. Tangents to $S_1$ and $S_2$ at $X$ intersect the line of centers $O_1O_2$ at $L$ and $K$ respectively. Show that $XY$, $AL$ and $BK$ are concurrent.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>proof (of the corrected statement: $XY$, $AL$, $BK$ are concurrent)</p></div></details>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
 <h4>Solution (Coordinates on the line of centres)</h4>
@@ -215,11 +225,15 @@ The root in $(2,3)$ is a root of $Q$. Now $Q(2)=3(a-6)$ and $Q(3)=4(a-3)$.</p><u
 <div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Number Theory &middot; LPS VI, Chapter 28: Right Triangles and the Pythagorean Framework &middot; Pythagorean Triples</div>
 <div class="ct-text"><p>$\triangle ABC$ is a right-angled triangle, $\angle ACB=90^\circ$. The sides are of integral length. If the product of the legs is equal to the sum of all sides, then find the sides of the triangle. How many such triangles are there?</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>The sides are $3,4,5$; there is exactly $1$ such triangle</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Remove $c$)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Remove $c$)</h4>
 <p>Let the legs be $a,b$ and the hypotenuse $c$. Then $c=ab-a-b$, and $c^2=a^2+b^2$ gives
 \[(ab-a-b)^2=a^2+b^2\iff a^2b^2-2a^2b-2ab^2+2ab=0\iff ab\bigl((a-2)(b-2)-2\bigr)=0.\]
 So $(a-2)(b-2)=2$. Since $a,b\ge1$, both factors are at least $-1$, so a factorisation $2=(-1)(-2)$ is impossible; hence $\{a-2,b-2\}=\{1,2\}$, i.e. $\{a,b\}=\{3,4\}$ and $c=5$. Check: $3\cdot4=12=3+4+5$. There is $\boxed{1}$ such triangle, with sides $3,4,5$.</p>
+<h4>Solution 2 (The inradius is 1)</h4>
+<p>Let the legs be $a=BC$, $b=CA$ and the hypotenuse $c=AB$, let $s=\frac{a+b+c}{2}$ be the semiperimeter and $r$ the inradius. The area is $\frac{ab}{2}$, and also $rs$ (split the triangle into three triangles with apex $I$, the incentre, and heights $r$). The condition $ab=a+b+c$ says $\frac{ab}2=s$, so $rs=s$ and $r=1$.</p><p>In a right triangle $r=\frac{a+b-c}{2}$: the incircle touches the legs at points at distance $r$ from $C$ (with $I$ these points and $C$ form a square), so the tangent lengths from $B$ and $A$ are $a-r$ and $b-r$, and they add up to $c$. Hence $c=a+b-2$. Substituting into $a^2+b^2=c^2$:
+\[a^2+b^2=a^2+b^2+4+2ab-4a-4b\iff ab-2a-2b+2=0\iff (a-2)(b-2)=2.\]
+Both factors are at least $-1$ because $a,b\ge1$, so the factorisation $(-1)(-2)$ is impossible, and $\{a-2,b-2\}=\{1,2\}$. So the legs are $3$ and $4$, and $c=5$; indeed $3\cdot4=12=3+4+5$. There is $\boxed{1}$ such triangle, with sides $3,4,5$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p10">

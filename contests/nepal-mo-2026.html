@@ -177,8 +177,8 @@ so $n$ is not a solution. Hence every solution is a product of prime powers from
 <h3>Problem 6</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 3: Foundational Angle and Configuration Chasing &middot; Cyclic Quadrilateral Recognition</div>
 <div class="ct-text"><p>Let $\omega_1$ and $\omega_2$ be two circles intersecting at distinct points $X$ and $Y$. Let $\ell$ be their common tangent closer to $Y$, intersecting $\omega_1$ at $A$ and $\omega_2$ at $B$. The tangent to $\omega_1$ at $Y$ meets $\omega_2$ again at $C$ with $C\ne Y$. Let the line $XB$ meet $\omega_1$ again at $K$ with $K\ne X$. Let $D=BC\cap AY$, and let $E=YK\cap CX$.</p><p>Prove that $D,Y,X,E$ are concyclic. (Four points are concyclic if there exists a circle containing all four points.)</p></div>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Two auxiliary facts: $YK\parallel BC$ and $A,B,X,D$ concyclic)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Two auxiliary facts: $YK\parallel BC$ and $A,B,X,D$ concyclic)</h4>
 <div class="ct-fig"><img style="width:320px" src="/assets/contests/2026-27/nepal-mo-6_s1.svg" alt="Figure for the solution"></div>
 <p>We use directed angles between lines modulo $180^\circ$, written $\measuredangle(m,n)$, so that the argument does not depend on the picture. Recall: four points $P,Q,R,S$ (no three collinear) are concyclic iff $\measuredangle(RP,RQ)=\measuredangle(SP,SQ)$; and the tangent-chord theorem: if $t$ is tangent at $U$ to a circle through $U,V,W$, then $\measuredangle(t,UV)=\measuredangle(WU,WV)$.</p><p><em>Fact 1: $YK\parallel BC$.</em> In $\omega_1$, the line $YC$ is tangent at $Y$, so by the tangent-chord theorem $\measuredangle(YC,YX)=\measuredangle(KY,KX)$. In $\omega_2$, which contains $B,C,X,Y$, we have $\measuredangle(BC,BX)=\measuredangle(YC,YX)$. Hence $\measuredangle(KY,KX)=\measuredangle(BC,BX)$, and since $KX$ and $BX$ are the same line, $KY\parallel BC$.</p><p><em>Fact 2: $A,B,X,D$ are concyclic.</em> Lines $DA=AY$ and $DB=BC\parallel YK$, so, using $\omega_1$ (through $A,X,Y,K$) and the fact that $K$ lies on line $XB$,
 \[\measuredangle(DA,DB)=\measuredangle(YA,YK)=\measuredangle(XA,XK)=\measuredangle(XA,XB).\]
@@ -187,6 +187,21 @@ Hence $A,B,X,D$ are concyclic.</p><p><em>Conclusion.</em> The line $AB=\ell$ is 
 using the circle $ABXD$ and then the circle $\omega_2$ (through $B,C,X,Y$). On the other side, $EX$ is the line $CX$ and $EY$ is the line $YK\parallel CB$, so
 \[\measuredangle(EX,EY)=\measuredangle(CX,CB).\]
 Therefore $\measuredangle(DX,DY)=\measuredangle(EX,EY)$, and $D,Y,X,E$ are concyclic.</p>
+<h4>Solution 2 (Inversion at Y and oblique coordinates)</h4>
+<p>We use an inversion centred at $Y$ and write $Z'$ for the image of a point $Z\ne Y$. Recall: a circle through $Y$ becomes a line not through $Y$, a line not through $Y$ becomes a circle through $Y$, a line through $Y$ is mapped to itself, and tangency is preserved. In the image we call the centre $O$ (it is the point $Y$).</p><p><strong>The inverted picture.</strong> The circles $\omega_1\ni X,A,K$ and $\omega_2\ni X,B,C$ pass through $Y$, so they become two lines through $X'$: the line $X'A'$ (containing $K'$) and the line $X'B'$ (containing $C'$). The line $\ell$ does not pass through $Y$ and touches $\omega_1$ at $A$ and $\omega_2$ at $B$, so $\ell'$ is a circle through $O$ touching the line $X'A'$ at $A'$ and the line $X'B'$ at $B'$. The two tangent segments from $X'$ to this circle are equal: $X'A'=X'B'$. We choose the radius of inversion so that $X'A'=X'B'=1$.</p><p><strong>Oblique coordinates.</strong> Let $\vec e_1=\overrightarrow{X'B'}$, $\vec e_2=\overrightarrow{X'A'}$ (unit vectors, not parallel) and $g=\vec e_1\cdot\vec e_2$, so $|g|&lt;1$. Write $(x,y)$ for the point $X'+x\vec e_1+y\vec e_2$. Then $X'=(0,0)$, $B'=(1,0)$, $A'=(0,1)$, the squared distance from $X'$ is $Q(x,y)=x^2+y^2+2gxy$, and every circle has an equation $Q(x,y)+\alpha x+\beta y+\gamma=0$ (and conversely such an equation with at least two solutions is a circle). Let $O=(u,v)$. Here $u\ne0$ and $v\ne0$, since $O$ is on neither line $X'A'$ ($x=0$) nor $X'B'$ ($y=0$).</p><p>The circle $\ell'$ is $Q(x,y)-2x-2y+1=0$: on $y=0$ it becomes $(x-1)^2=0$ and on $x=0$ it becomes $(y-1)^2=0$, so it touches both lines at $B'$ and $A'$, and a circle tangent to two given lines at two given points is unique. As $O\in\ell'$, $Q(u,v)=2u+2v-1$, which can be rewritten as
+\[(u+v-1)^2=2(1-g)\,uv. \tag{1}\]
+In particular $u+v-1\ne0$.</p><p><strong>The points $C'$ and $K'$.</strong> The tangent to $\omega_1$ at $Y$ is a line through $Y$, so it is mapped to itself; it meets $\omega_1$ only at $Y$, so it does not meet the line $\omega_1'=X'A'$, i.e. it is the line through $O$ parallel to $\vec e_2$, namely $x=u$. Since $C$ lies on it and on $\omega_2$, $C'$ is on $x=u$ and $y=0$: $C'=(u,0)$.</p><p>The line $XB$ does not pass through $Y$, so it becomes the circle through $O,X',B'$, of the form $Q(x,y)-x-ky=0$ (it passes through $(0,0)$ and $(1,0)$). Putting in $O$ and using $Q(u,v)=2u+2v-1$ gives $k=\frac{u+2v-1}{v}$. The point $K$ is on $XB$ and $\omega_1$, so $K'$ is the second common point of this circle with the line $x=0$, which is $K'=(0,k)$. Note that
+\[k-1=\frac{u+v-1}{v}\ne0 .\]</p><p><strong>The points $D'$ and $E'$.</strong> The line $AY$ goes through $Y$, so it is the line $OA'$; its points satisfy $y-v=-\frac{1-v}{u}(x-u)$. The line $BC$ becomes the circle through $O,B',C'$, whose equation is
+\[(x-u)(x-1+2gy)+y(y-v)=0,\]
+since this has the form $Q+\alpha x+\beta y+\gamma=0$ and vanishes at $(u,v)$, $(1,0)$, $(u,0)$. On the line $OA'$ we replace $y(y-v)$ by $-\frac{1-v}{u}y(x-u)$; the equation becomes $(x-u)\bigl(x-1+(2g-\frac{1-v}{u})y\bigr)=0$. The factor $x-u$ vanishes at $O$, so $D'$, the second common point, satisfies
+\[x-1+\Bigl(2g-\frac{1-v}u\Bigr)y=0. \tag{2}\]
+In the same way, the line $YK$ is the line $OK'$, with points satisfying $y-v=-\frac{k-v}{u}(x-u)$, and the line $CX$ becomes the circle through $O,C',X'$, with equation $(x-u)(x+2gy)+y(y-v)=0$. So $E'$ satisfies
+\[x+\Bigl(2g-\frac{k-v}u\Bigr)y=0. \tag{3}\]
+Equation (3) is a line $m$ through $X'$, and $E'$ lies on it. We show that $D'$ lies on $m$ too.</p><p>Solving (2) together with the equation of line $OA'$ gives
+\[y_{D'}=\frac{u(u+v-1)}{u^2-2gu(1-v)+(1-v)^2}.\]
+The denominator equals $|\overrightarrow{A'O}|^2=Q(u,v-1)$; expanding and using $Q(u,v)=2u+2v-1$ it equals $2(1-g)u$, so by (1), $y_{D'}=\frac{u+v-1}{2(1-g)}=\frac{uv}{u+v-1}=\frac{u}{k-1}$. Subtracting (2) from the left side of (3), at $D'$ the left side of (3) equals
+\[1-\frac{k-1}{u}\,y_{D'}=0 .\]
+So $X',D',E'$ lie on the line $m$.</p><p><strong>Back to the original picture.</strong> The line $m$ does not pass through $O$: otherwise $m$ and the line $OA'$ would both contain $O$ and $D'\ne O$ (note $D\ne Y$, as the line $BC$ meets $\omega_2$ only at $B$ and $C$), so they would coincide and $X'\in m$ would lie on $OA'$; then $O$ would be on the line $X'A'$, which is false. A line not through the centre of inversion is mapped to a circle through $Y$. Hence $X,D,E$ lie on a circle through $Y$: the points $D,Y,X,E$ are concyclic.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p7">
@@ -207,7 +222,7 @@ Therefore $\measuredangle(DX,DY)=\measuredangle(EX,EY)$, and $D,Y,X,E$ are concy
 \[\frac{a}{b+c}+\frac{b}{c+a}+\frac{c}{a+b}\ \ge\ \frac32+\frac{(a-b)^2+(b-c)^2+(c-a)^2}{2(a+b+c)^2}.\]
 Determine when equality holds.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>Equality holds if and only if $a=b=c$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Sum of squares form of Nesbitt)</h4>
 <p>First,
 \[\sum\frac{a}{b+c}-\frac32=\sum\Big(\frac{a}{b+c}-\frac12\Big)=\sum\frac{(a-b)+(a-c)}{2(b+c)},\]
@@ -220,6 +235,16 @@ Since $0&lt;b+c&lt;a+b+c$ and $0&lt;c+a&lt;a+b+c$, we have $(b+c)(c+a)&lt;(a+b+c
 The right-hand side of the problem is $\dfrac32+\dfrac{2p^2-6q}{2p^2}=\dfrac52-\dfrac{3q}{p^2}$, because $(a-b)^2+(b-c)^2+(c-a)^2=2(p^2-3q)$. With $t=p^2/q$ it suffices to show $\dfrac t2\ge\dfrac52-\dfrac3t$, i.e.
 \[t^2-5t+6=(t-2)(t-3)\ge0.\]
 This holds because $t\ge3$, which is $p^2\ge3q$, i.e. $(a-b)^2+(b-c)^2+(c-a)^2\ge0$.</p><p>Equality requires $t=3$, i.e. $a=b=c$; conversely, for $a=b=c$ both sides equal $\frac32$. So equality holds <strong>iff $a=b=c$</strong>.</p>
+<h4>Solution 3 (A tangent line at the equality point)</h4>
+<p>Put $s=a+b+c$ and $x=\frac as$, $y=\frac bs$, $z=\frac cs$, so $x,y,z\in(0,1)$, $x+y+z=1$ and $\frac{a}{b+c}=\frac{x}{1-x}$, etc. For $0&lt;x&lt;1$ we have the exact identity
+\[\frac{x}{1-x}=\frac12+\frac94\Bigl(x-\frac13\Bigr)+\frac94\cdot\frac{(x-\frac13)^2}{1-x},\]
+which is checked by multiplying by $1-x$: the right side becomes $\frac12(1-x)+\frac94(x-\frac13)(1-x)+\frac94(x-\frac13)^2=\frac12-\frac x2+\frac94(x-\frac13)\cdot\frac23=x$.
+(The first two terms are the tangent line of $\frac{x}{1-x}$ at $x=\frac13$.) Adding the three identities, the linear terms cancel because $x+y+z=1$, and since $\frac1{1-x}&gt;1$,
+\[\frac{a}{b+c}+\frac{b}{c+a}+\frac{c}{a+b}\ \ge\ \frac32+\frac94\sum\Bigl(x-\frac13\Bigr)^2,\]
+with equality only if $x=y=z=\frac13$.
+On the other side, $(x-y)^2+(y-z)^2+(z-x)^2=3(x^2+y^2+z^2)-(x+y+z)^2=3\sum\bigl(x-\frac13\bigr)^2$, because $\sum(x-\frac13)^2=x^2+y^2+z^2-\frac13$. So the right side of the problem is
+\[\frac32+\frac{(x-y)^2+(y-z)^2+(z-x)^2}{2}=\frac32+\frac32\sum\Bigl(x-\frac13\Bigr)^2\le\frac32+\frac94\sum\Bigl(x-\frac13\Bigr)^2 .\]
+This proves the inequality. Equality forces $x=y=z$, and for $a=b=c$ both sides equal $\frac32$. So equality holds <strong>iff $a=b=c$</strong>.</p>
 </div></details>
 </section>
 {% endraw %}

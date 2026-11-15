@@ -358,11 +358,15 @@ none of which is divisible by $7$. So the smallest $n$ is $\boxed{13}$.</p>
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Number Theory &middot; LPS VI, Chapter 23: Powers, Cycles, and Units Digits &middot; Periodic Powers Modulo \(m\)</div>
 <div class="ct-text"><p>Find all pairs of positive integers $(x,y)$ such that $3^x-1=2\cdot 13^y$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$(x,y)=(3,1)$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Powers of 3 modulo 13)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Powers of 3 modulo 13)</h4>
 <p><em>$x$ is a multiple of $3$.</em> The right side is divisible by $13$, so $3^x\equiv1\pmod{13}$. The powers $3^1,3^2,3^3,\dots$ leave the remainders $3,9,1,3,9,1,\dots$ modulo $13$, so $3\mid x$. Write $x=3t$. Since $27^t-1=(27-1)\left(27^{t-1}+\dots+27+1\right)$, the equation becomes
 \[26\left(27^{t-1}+\dots+27+1\right)=2\cdot13^y,\qquad\text{that is}\qquad 13^{y-1}=27^{t-1}+\dots+27+1 .\]
 <em>If $y=1$</em>, the right side must be $1$, so $t=1$: this gives $(x,y)=(3,1)$, and indeed $3^3-1=26=2\cdot13$.</p><p><em>If $y\ge2$</em>, the left side is divisible by $13$. As $27\equiv1\pmod{13}$, the right side is $\equiv t\pmod{13}$, so $13\mid t$ and $13\mid x$. Then $3^{13}-1$ divides $3^x-1=\left(3^{13}\right)^{x/13}-1$, hence divides $2\cdot13^y$. But $3^{13}=3\cdot(3^3)^4\equiv3\pmod{13}$, so $3^{13}-1$ is not divisible by $13$; it would then have to divide $2$, which is absurd since $3^{13}-1=1594322$.</p><p>So the only solution is $\boxed{(x,y)=(3,1)}$.</p>
+<h4>Solution 2 (Factor a difference of cubes)</h4>
+<p><em>$x$ is a multiple of $3$.</em> Since $y\ge1$, the right side is divisible by $13$, so $3^x\equiv1\pmod{13}$. The powers $3^1,3^2,3^3,\dots$ leave the remainders $3,9,1,3,9,1,\dots$ modulo $13$, so $x=3k$ for a positive integer $k$.</p><p><em>Factor.</em> With $a=3^k$ the equation reads $a^3-1=2\cdot13^y$, that is,
+\[(3^k-1)\bigl(3^{2k}+3^k+1\bigr)=2\cdot13^y .\]
+The second factor is a sum of two odd numbers and $1$, so it is odd, and it is greater than $1$. As it divides $2\cdot13^y$ and is odd, it is a power of $13$ greater than $1$; in particular $13$ divides it.</p><p><em>The two factors have no common prime.</em> Since $3^k\equiv1\pmod{3^k-1}$, the second factor is $\equiv1+1+1=3\pmod{3^k-1}$, so any common divisor of the two factors divides $3$. But $3^k-1$ is not divisible by $3$. Hence the factors are coprime, and $13\nmid 3^k-1$.</p><p><em>Conclusion.</em> The first factor $3^k-1$ divides $2\cdot13^y$ and is coprime to $13$, so it divides $2$: $3^k-1\le2$, hence $k=1$ and $x=3$. Then $3^3-1=26=2\cdot13$ gives $y=1$. So the only solution is $\boxed{(x,y)=(3,1)}$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p16">

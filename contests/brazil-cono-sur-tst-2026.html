@@ -212,8 +212,8 @@ Hence $\phi(uuu)=\phi(u)^3=\mathbf I$ for every word $u$, and inserting or remov
 <h3>Problem 4</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure &middot; Radical Axis and Radical Center</div>
 <div class="ct-text"><p>Let $ABC$ be a scalene triangle with incenter $I$ and incircle $\omega$. Let $D$ be the point of tangency of $\omega$ with $BC$. Suppose that there exist points $X$ and $Y$ on $\omega$ such that $IX$, $IY$ and $AD$ are tangent to the circumcircle of triangle $AXY$. Prove that $XY$ passes through the midpoint of $BC$.</p></div>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (The power of a point as a function)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (The power of a point as a function)</h4>
 <div class="ct-fig"><img style="width:333px" src="/assets/contests/2026-27/brazil-cono-sur-tst-8_s1.svg" alt="Figure for the solution"></div>
 <p>Let $\Gamma$ be the circle $AXY$, $r$ the inradius and $M$ the midpoint of $BC$.</p><p><strong>Reformulation.</strong> $IX$ is tangent to $\Gamma$ at $X$, so the power of $I$ with respect to $\Gamma$ is $IX^2=r^2$; and $X,Y$ lie on both $\omega$ and $\Gamma$, so $XY$ is the radical axis of $\omega$ and $\Gamma$. The power of $M$ with respect to $\omega$ is $MD^2$ (as $MD$ is tangent to $\omega$). So it suffices to show
 \[\operatorname{pow}_\Gamma(M)=MD^2. \tag{1}\]</p><p><strong>Circles tangent to $AD$ at $A$.</strong> Let $\nu$ be a unit vector perpendicular to $AD$ and $f(Z)=(Z-A)\cdot\nu$ the signed distance from $Z$ to line $AD$. A circle tangent to $AD$ at $A$ has center $A+\lambda\nu$ and radius $|\lambda|$, so its power function is
@@ -228,6 +228,17 @@ Insert $x_A=\frac{(u-v)w}{u+v}$ and $y_A=\frac{2rs}{u+v}$ and divide by $-\frac{
 Finally, Stewart's theorem for the cevian $AD$ gives
 \[AD^2=\frac{(u+w)^2v+(v+w)^2u}{u+v}-uv=w^2+\frac{4uvw}{u+v},\]
 and the right side of (3) minus the second term on the left is $w(u+v+w)-\frac{(u-v)^2w}{u+v}=w^2+\frac{4uvw}{u+v}$. So (3) holds, hence (1), and $M$ lies on the radical axis $XY$.</p>
+<h4>Solution 2 (Coordinates centred at the incentre and a polar line)</h4>
+<p>Let $\Gamma$ be the circle $AXY$ with centre $O$. Scale so that the inradius is $1$ and place $I$ at the origin with $BC$ horizontal below it: $\omega$ is the unit circle, $D=(0,-1)$, and $BC$ is the line $y=-1$. Let $A=(u,v)$ with $v&gt;-1$. We have $u\ne0$: otherwise $A$ lies on the line $ID$, which is perpendicular to $BC$, so $AD$ would be both an altitude and contain $I$, forcing $AB=AC$.</p><p><strong>The line $XY$.</strong> Since $IX$ is tangent to $\Gamma$ at $X$, the radius $OX$ is perpendicular to $IX$, i.e. $(O-X)\cdot X=0$. As $|X|=1$, this says $O\cdot X=1$; similarly $O\cdot Y=1$. The equation $O\cdot Z=1$ describes a line (note $O\ne(0,0)$), so $XY$ is the line
+\[O\cdot Z=1 .\]
+Thus we must show $O\cdot M=1$ for the midpoint $M$ of $BC$.</p><p><strong>The centre $O$.</strong> The tangent length from $I$ to $\Gamma$ is $IX=1$, so the power of $I$ with respect to $\Gamma$ is $1$: $|O|^2-|O-A|^2=1$, i.e. $2\,O\cdot A=|A|^2+1$. Since $\Gamma$ touches $AD$ at $A$, $O$ lies on the perpendicular to $AD$ at $A$; as $D-A=(-u,-1-v)$, this perpendicular has direction $(v+1,-u)$, so $O=A+t\,(v+1,-u)$ for some real $t$. Then $O\cdot A=|A|^2+tu$, and the power condition gives $2tu=1-u^2-v^2$. Hence
+\[O=\Bigl(u+\frac{(v+1)(1-u^2-v^2)}{2u},\ \frac{u^2+v^2+2v-1}{2}\Bigr).\]</p><p><strong>The midpoint $M$.</strong> Lines $AB$ and $AC$ are the two tangents from $A$ to $\omega$, so $B$ and $C$ are exactly the points $Z=(x,-1)$ for which line $AZ$ is at distance $1$ from the origin. The distance from the origin to line $AZ$ is $\frac{|uy_Z-vx|}{|A-Z|}$ with $y_Z=-1$, so the condition is
+\[(u+vx)^2=(x-u)^2+(v+1)^2\iff(1-v^2)x^2-2u(v+1)x+(v+1)^2=0 .\]
+This equation has the two distinct roots $x_B\ne x_C$, so it is a genuine quadratic ($1-v^2\ne0$), and by Vieta
+\[M=\Bigl(\frac{x_B+x_C}{2},-1\Bigr)=\Bigl(\frac{u(v+1)}{1-v^2},-1\Bigr)=\Bigl(\frac{u}{1-v},-1\Bigr).\]</p><p><strong>Conclusion.</strong> We need $O_x\cdot\frac{u}{1-v}-O_y=1$, i.e. $u\,O_x=(1-v)(O_y+1)$. Now
+\[2u\,O_x=2u^2+(v+1)(1-u^2-v^2)=u^2(1-v)+(1-v)(1+v)^2,\]
+\[2(1-v)(O_y+1)=(1-v)\bigl(u^2+(v+1)^2\bigr),\]
+and the two right sides are equal. Hence $O\cdot M=1$, so $M$ lies on $XY$: the line $XY$ passes through the midpoint of $BC$.</p>
 </div></details>
 </section>
 <h2 class="ct-group" id="test-3">Test 3</h2>

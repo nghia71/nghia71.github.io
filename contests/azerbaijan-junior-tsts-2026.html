@@ -118,14 +118,28 @@ so one of them is at least
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Algebra &middot; LPS VII, Chapter 1: Inequalities: Core Classical Methods &middot; Cauchy-Schwarz and Titu&#x27;s Lemma</div>
 <div class="ct-text"><p>Let $a,b,c&gt;0$ with $abc\geq 1$. Show that
 \[\frac{1}{a^4+b^3+c^2}+\frac{1}{b^4+c^3+a^2}+\frac{1}{c^4+a^3+b^2}\leq 1.\]</p></div>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Cauchy-Schwarz with weights $1,b,c^2$)</h4>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Cauchy-Schwarz with weights $1,b,c^2$)</h4>
 <p>Let $S=a^2+b^2+c^2$. By Cauchy-Schwarz,
 \[(a^4+b^3+c^2)(1+b+c^2)\ge\bigl(a^2\cdot1+b^{3/2}b^{1/2}+c\cdot c\bigr)^2=S^2,\]
 so $\dfrac1{a^4+b^3+c^2}\le\dfrac{1+b+c^2}{S^2}$, and similarly for the other two fractions. Adding,
 \[\sum\frac1{a^4+b^3+c^2}\le\frac{3+(a+b+c)+S}{S^2}.\]
 By AM-GM and $abc\ge1$, $S\ge3(abc)^{2/3}\ge3$; also $a+b+c\le\sqrt{3S}\le S$ (as $S\ge3$) and $3\le S$. Hence the numerator is at most
 $3S\le S^2$, and the sum is at most $1$. Equality holds for $a=b=c=1$.</p>
+<h4>Solution 2 (Weighted AM-GM and the sum $\sum\frac1{1+a+ab}=1$)</h4>
+<p><em>Reduction to $abc=1$.</em> Let $k=(abc)^{-1/3}\le1$ and $a'=ka$, $b'=kb$, $c'=kc$, so $a'b'c'=1$. Then
+$a'^4+b'^3+c'^2\le a^4+b^3+c^2$, and similarly for the other denominators, so the left side for $a,b,c$ is at most the left side for
+$a',b',c'$. Hence it suffices to prove the inequality when $abc=1$, which we assume from now on.</p><p><em>One denominator.</em> We show $a^4+b^3+c^2\ge1+a+ab$. Put $X=a^4$, $Y=b^3$, $Z=c^2$. By the weighted AM-GM inequality,
+\begin{align*}
+\tfrac{6}{26}X+\tfrac{8}{26}Y+\tfrac{12}{26}Z&amp;\ge X^{6/26}Y^{8/26}Z^{12/26}=(abc)^{12/13}=1,\\
+\tfrac{11}{26}X+\tfrac{6}{26}Y+\tfrac{9}{26}Z&amp;\ge a^{44/26}b^{18/26}c^{18/26}=a\,(abc)^{9/13}=a,\\
+\tfrac{9}{26}X+\tfrac{12}{26}Y+\tfrac{5}{26}Z&amp;\ge a^{36/26}b^{36/26}c^{10/26}=ab\,(abc)^{5/13}=ab .
+\end{align*}
+(In each line the weights add up to $1$.) The coefficients of $X$, of $Y$ and of $Z$ in the three lines add up to $\frac{26}{26}=1$, so
+adding the lines gives $X+Y+Z\ge1+a+ab$. In the same way (cyclically) $b^4+c^3+a^2\ge1+b+bc$ and $c^4+a^3+b^2\ge1+c+ca$.</p><p><em>The sum.</em> Hence the left side is at most
+\[\frac1{1+a+ab}+\frac1{1+b+bc}+\frac1{1+c+ca}.\]
+Using $abc=1$, $\frac1{1+b+bc}=\frac{a}{a+ab+abc}=\frac{a}{1+a+ab}$ and $\frac1{1+c+ca}=\frac{ab}{ab+abc+a^2bc}=\frac{ab}{1+a+ab}$, so
+the three fractions add up to $\frac{1+a+ab}{1+a+ab}=1$. This proves the inequality; equality holds for $a=b=c=1$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p3">
