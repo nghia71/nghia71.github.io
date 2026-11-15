@@ -5,6 +5,9 @@ description: Canadian Junior Mathematical Olympiad 2026: problems with answers a
 ---
 {% raw %}
 <style>
+  .ct-problem details.ct-hint { margin-top: .5em; }
+  .ct-problem details.ct-hint details.ct-hint { border-top: none; margin-left: 1em; padding-top: .2em; }
+  .ct-hint > summary { font-style: italic; }
   .ct-intro { margin-bottom: 1.2em; }
   .ct-credit { font-size: 14px; color: var(--ink-soft); border-left: 3px solid var(--gold); padding: 6px 12px; background: var(--white); margin: 1em 0; }
   .ct-toc { display: flex; flex-wrap: wrap; gap: 6px; margin: 1em 0 1.4em; }
@@ -104,6 +107,7 @@ description: Canadian Junior Mathematical Olympiad 2026: problems with answers a
 <h3>J1</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Algebra &middot; LPS VI, Chapter 45: Inequalities and Absolute Value &middot; Bounding Integer Solutions</div>
 <div class="ct-text"><p>Let $a,b,c$ be <em>distinct</em> positive integers with $a+b+c=29$.</p><p>What is the smallest possible value of $a^2+b^2+c^2$?</p></div>
+<details class="ct-hint"><summary>Hint 1: understand the problem</summary><div class="ct-text">Try triples of distinct positive integers whose entries are near the average. Compare what happens to the sum of squares when one entry moves farther away.<details class="ct-hint"><summary>Hint 2: key idea</summary><div class="ct-text">Write each integer as $10$ plus a deviation. Expanding the squares, use the fixed total to see which terms stay constant across all triples. (LPS VI, Chapter 45: Inequalities and Absolute Value)<details class="ct-hint"><summary>Hint 3: approach</summary><div class="ct-text">Check whether three distinct deviations of absolute value at most one could have the required sum. If one deviation must be larger, use distinctness to bound the combined squares of the other two. Look for a triple of deviations that makes those bounds tight.<details class="ct-hint"><summary>Common trap</summary><div class="ct-text">The deviations may be zero or negative even though the original integers are positive.</div></details></div></details></div></details></div></details>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\boxed{285}$</p></div></details>
 <details class="ct-sol"><summary>Show solution 1 &ndash; Deviations from $10$</summary><div class="ct-text">
 <p>Write $a=10+u$, $b=10+v$, $c=10+w$. Then $u,v,w$ are distinct integers with $u+v+w=29-30=-1$, and
@@ -124,6 +128,7 @@ For $(p,q)=(2,1)$ we get $3a=29-5$, $a=8$, so $(a,b,c)=(8,10,11)$ attains $285$.
 <h3>J2</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VII scale">E</span>Geometry &middot; LPS VII, Chapter 40: Vector Geometry and Affine Structure &middot; Vector Addition and Balance Relations</div>
 <div class="ct-text"><p>Consider a trapezoid $ABCD$, where sides $AB$, $CD$ are parallel. Points $W,X,Y,Z$ are given such that $BCWX$ and $ADYZ$ form rhombi, and the interiors of the three quadrilaterals $ABCD$, $BCWX$, and $ADYZ$ are disjoint.</p><p>Show that the distance between the centers of $BCWX$ and $ADYZ$ is at most half the perimeter of $ABCD$.</p><p><em>Remark:</em> The center of a rhombus is the intersection of its diagonals.</p></div>
+<details class="ct-hint"><summary>Hint 1: understand the problem</summary><div class="ct-text">Mark the two rhombus centres and the midpoints of the nonparallel sides of the trapezoid. Draw a route from one centre to the other through the two midpoints.<details class="ct-hint"><summary>Hint 2: key idea</summary><div class="ct-text">Each centre is the midpoint of a rhombus diagonal. In each rhombus, use midpoint vectors to relate the segment from that centre to the midpoint of the shared side to an equal rhombus side. (LPS VII, Chapter 40: Vector Geometry and Affine Structure)<details class="ct-hint"><summary>Hint 3: approach</summary><div class="ct-text">Express the two end segments of your route using the side lengths of the rhombi. Express its middle segment as the trapezoid midline, taking the base vectors in the same direction. Set up a comparison between the straight-line distance and the length of this route.<details class="ct-hint"><summary>Common trap</summary><div class="ct-text">For the midline vector, use $\overrightarrow{AB}$ and $\overrightarrow{DC}$ so the parallel base vectors point the same way.</div></details></div></details></div></details></div></details>
 <details class="ct-sol"><summary>Show solution 1 &ndash; Through the midpoints of the legs</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:387px" src="/assets/contests/2026-27/cjmo-2_s1.svg" alt="Figure for the solution"></div>
 <p>Let $M$ and $N$ be the centers of $BCWX$ and $ADYZ$, and let $K$ and $L$ be the midpoints of $BC$ and $AD$. We use vectors.</p><p>Since $BCWX$ is a rhombus (vertices in this order), its center is the midpoint of the diagonal $CX$, so
