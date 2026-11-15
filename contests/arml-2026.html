@@ -119,7 +119,7 @@ so $A-B\equiv-1\pmod{11}$; as $-9\le A-B\le9$, $A-B=-1$.</p><p>Then $A+B$ is odd
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$8$</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Shift and subtract)</h4>
-<p>The $n$th factor is $(2^n)^{1/3^n}=2^{n/3^n}$, so $P=2^S$ with $S=\sum_{n\ge1}\frac{n}{3^n}$ (the partial products converge because the partial sums do). Then
+<p>The $n$th factor is $(2^n)^{1/3^n}=2^{n/3^n}$, so $P=2^S$ with $S=\sum_{n\ge1}\frac{n}{3^n}$ The series converges by comparison with a geometric series, since $0&lt;\frac{n}{3^n}\le\left(\frac23\right)^n$ (as $n\le2^n$); so the partial products converge to $2^S$, and we may subtract convergent series term by term. Then
 \[S-\frac S3=\sum_{n\ge1}\frac{n}{3^n}-\sum_{n\ge1}\frac{n-1}{3^{n}}=\sum_{n\ge1}\frac1{3^n}=\frac12,\]
 so $S=\frac34$, $P=2^{3/4}$ and $P^4=2^3=\boxed{8}$.</p>
 <h4>Solution 2 (Differentiating a geometric series)</h4>
@@ -141,13 +141,13 @@ so $S=\frac34$, $P=2^{3/4}$ and $P^4=2^3=\boxed{8}$.</p>
 <section class="ct-problem" id="p4">
 <h3>Problem 7</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 23: Recurrence and Combinatorial Construction &middot; State-Based Construction</div>
-<div class="ct-text"><p>An <em>Alphabubu Blind Box</em> is a box containing one tile, on which is one letter of the alphabet. When Glenn opens a box, the tile inside is equally likely to contain each of the $26$ letters of the alphabet. Compute the expected number of boxes that Glenn would need to open in order to spell <span>GLENN</span> with his tiles.</p></div>
+<div class="ct-text"><p>An <em>Alphabubu Blind Box</em> is a box containing one tile, on which is one letter of the alphabet. When Glenn opens a box, the tile inside is equally likely to contain each of the $26$ letters of the alphabet, independently of the other boxes. Compute the expected number of boxes that Glenn would need to open in order to spell <span>GLENN</span> with his tiles.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\dfrac{1625}{24}$</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
 <h4>Solution 1 (States and first-step analysis)</h4>
 <p>Glenn needs one G, one L, one E and two N's. Describe the situation by $(a,b)$, where $a\in\{0,1,2,3\}$ is the number of the letters G, L, E still missing and $b\in\{0,1,2\}$ the number of N's still needed. Let $E(a,b)$ be the expected number of further boxes. In state $(a,b)\ne(0,0)$ a box is useful with probability $\frac{u}{26}$, where $u=a+[b&gt;0]$; the expected wait for a useful box is $\frac{26}{u}$, and the useful box is equally likely to be any of the $u$ needed letters. Hence
-\[E(a,b)=\frac{26+a\,E(a-1,b)+[b&gt;0]\,E(a,b-1)}{a+[b&gt;0]},\qquad E(0,0)=0 .\]
-Filling the table:
+\[E(a,b)=\frac{26+a\,E(a-1,b)+[b&gt;0]\,E(a,b-1)}{a+[b&gt;0]},\qquad E(0,0)=0,\]
+where a term with coefficient $0$ ($a=0$, or $b=0$) is simply omitted. Filling the table:
 \[\begin{array}{c|ccc}
  &amp; b=0 &amp; b=1 &amp; b=2\\ \hline
 a=0 &amp; 0 &amp; 26 &amp; 52\\
@@ -157,7 +157,7 @@ a=3 &amp; \frac{143}{3} &amp; \frac{325}{6} &amp; \frac{1625}{24}
 \end{array}\]
 For example $E(3,2)=\frac{26+3\cdot\frac{572}{9}+\frac{325}{6}}{4}=\frac{1625}{24}$. The answer is $\boxed{\tfrac{1625}{24}}$.</p>
 <h4>Solution 2 (Opening boxes in continuous time)</h4>
-<p>Let Glenn open boxes at the arrival times of a Poisson process of rate $1$. The expected time at which he finishes equals the expected number $N$ of boxes he opens (the time is a sum of $N$ independent exponential waiting times with mean $1$, and $N$ is determined by the letters seen so far, so Wald's identity applies). In this model the arrivals of each letter form independent Poisson processes of rate $\frac1{26}$.</p><p>Measure time in units of $26$, i.e. put $u=t/26$, so each letter arrives at rate $1$ in $u$. Glenn is done by time $u$ iff each of G, L, E has appeared (probability $1-e^{-u}$ each) and N has appeared at least twice (probability $1-e^{-u}-ue^{-u}$). With $x=e^{-u}$,
+<p>Let Glenn open boxes at the arrival times of a Poisson process of rate $1$. The expected time at which he finishes equals the expected number $N$ of boxes he opens (the time is a sum of $N$ independent exponential waiting times with mean $1$, and $N$ is determined by the letters seen so far, so Wald's identity applies). Choose the letters independently of the arrival times; then, by the thinning property of Poisson processes, the arrivals of each letter form independent Poisson processes of rate $\frac1{26}$.</p><p>Measure time in units of $26$, i.e. put $u=t/26$, so each letter arrives at rate $1$ in $u$. Glenn is done by time $u$ iff each of G, L, E has appeared (probability $1-e^{-u}$ each) and N has appeared at least twice (probability $1-e^{-u}-ue^{-u}$). With $x=e^{-u}$,
 \[\mathbb E[N]=26\int_0^\infty\Bigl(1-(1-x)^3(1-x-ux)\Bigr)\,du=26\int_0^\infty\Bigl(1-(1-x)^4\Bigr)du+26\int_0^\infty u\,x(1-x)^3\,du .\]
 Expanding in powers of $x=e^{-u}$ and using $\int_0^\infty e^{-ju}du=\frac1j$, $\int_0^\infty ue^{-ju}du=\frac1{j^2}$:
 \[\int_0^\infty\bigl(1-(1-x)^4\bigr)du=\frac41-\frac62+\frac43-\frac14=\frac{25}{12},\qquad \int_0^\infty u\,x(1-x)^3du=1-\frac34+\frac39-\frac1{16}=\frac{25}{48}.\]
@@ -167,18 +167,18 @@ So $\mathbb E[N]=26\left(\frac{25}{12}+\frac{25}{48}\right)=26\cdot\frac{125}{48
 <section class="ct-problem" id="p5">
 <h3>Problem 8</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 32: Trigonometric Geometry and Metric Conversion &middot; Angle Expressions and Trigonometric Identities</div>
-<div class="ct-text"><p>In rectangle $ARML$, point $X$ lies on side $\overline{AR}$, and point $Y$ lies on side $\overline{RM}$. The line that passes through $Y$ and is perpendicular to $\overleftrightarrow{MX}$ intersects $\overleftrightarrow{MX}$ and $\overleftrightarrow{MA}$ at $P$ and $Q$, respectively. Given that $AX=14$, $XR=10$, and $7\cdot YP=13\cdot PQ$, compute $[ARML]$.</p></div>
+<div class="ct-text"><p>In rectangle $ARML$, point $X$ lies on side $\overline{AR}$, and point $Y\ne M$ lies on side $\overline{RM}$. The line that passes through $Y$ and is perpendicular to $\overleftrightarrow{MX}$ intersects $\overleftrightarrow{MX}$ and $\overleftrightarrow{MA}$ at $P$ and $Q$, respectively. Given that $AX=14$, $XR=10$, and $7\cdot YP=13\cdot PQ$, compute $[ARML]$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$120\sqrt6$</p></div></details>
 <details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
 <h4>Solution 1 (Tangents of the angles at $M$)</h4>
 <div class="ct-fig"><img style="width:325px" src="/assets/contests/2026-27/arml-5_s1.svg" alt="Figure for the solution"></div>
-<p>Let $h=RM$, so $AR=24$ and $[ARML]=24h$. The lines $MY$ $(=MR)$, $MX$ and $MA$ all pass through $M$, and the line $YQ$ is perpendicular to $MX$ at $P$. Let $\alpha=\angle RMX$ and $\beta=\angle XMA$; since $X$ lies between $A$ and $R$, ray $MX$ lies inside $\angle RMA$, so $P$ lies between $Y$ and $Q$, and in the right triangles $MPY$ and $MPQ$:
+<p>Let $h=RM$, so $AR=24$ and $[ARML]=24h$. The lines $MY$ $(=MR)$, $MX$ and $MA$ all pass through $M$, and the line $YQ$ is perpendicular to $MX$ at $P$. Let $\alpha=\angle RMX$ and $\beta=\angle XMA$. Since $Y\ne M$ and $\alpha&lt;90^\circ$, the projection $P$ of $Y$ onto line $MX$ lies on ray $MX$ with $MP=MY\cos\alpha&gt;0$. Since $X$ lies between $A$ and $R$, ray $MX$ lies inside $\angle RMA$, so $P$ lies between $Y$ and $Q$, and in the right triangles $MPY$ and $MPQ$:
 \[YP=MP\tan\alpha,\qquad PQ=MP\tan\beta .\]
 So $7\tan\alpha=13\tan\beta$. In right triangle $MRX$, $\tan\alpha=\frac{XR}{RM}=\frac{10}{h}$, and in right triangle $MRA$, $\tan(\alpha+\beta)=\frac{24}{h}$. Therefore
 \[\tan\beta=\frac{\frac{24}h-\frac{10}h}{1+\frac{240}{h^2}}=\frac{14h}{h^2+240}.\]
-The condition becomes $\frac{70}{h}=\frac{182h}{h^2+240}$, i.e. $70h^2+16800=182h^2$, so $h^2=150$ and $h=5\sqrt6$. The area is $24\cdot5\sqrt6=\boxed{120\sqrt6}$. (The position of $Y$ does not matter.)</p>
+The condition becomes $\frac{70}{h}=\frac{182h}{h^2+240}$, i.e. $70h^2+16800=182h^2$, so $h^2=150$ and $h=5\sqrt6$. The area is $24\cdot5\sqrt6=\boxed{120\sqrt6}$. (The position of $Y\ne M$ on side $RM$ does not matter.)</p>
 <h4>Solution 2 (Coordinates with $M$ at the origin)</h4>
-<p>Put $M=(0,0)$, $R=(0,-h)$, $A=(-24,-h)$, $X=(-10,-h)$, where $h=RM$; then $[ARML]=24h$. The lines $MR$, $MX$, $MA$ are the lines through the origin with direction vectors $(0,-1)$, $(-10,-h)$, $(-24,-h)$.</p><p>Rotate the picture so that line $MX$ becomes the positive $x$-axis direction; a line perpendicular to $MX$ is then a vertical line $x=d&gt;0$, and a line through $M$ making angle $\theta$ with $MX$ meets it at height $d\tan\theta$. Here $MR$ and $MA$ make angles $\alpha$ and $\beta$ with $MX$ on opposite sides, where $\cos\alpha=\frac{h}{\sqrt{h^2+100}}$, $\sin\alpha=\frac{10}{\sqrt{h^2+100}}$ (from the dot and cross products of $(0,-1)$ and $(-10,-h)$), and similarly from $(-10,-h)$ and $(-24,-h)$:
+<p>Put $M=(0,0)$, $R=(0,-h)$, $A=(-24,-h)$, $X=(-10,-h)$, where $h=RM$; then $[ARML]=24h$. The lines $MR$, $MX$, $MA$ are the lines through the origin with direction vectors $(0,-1)$, $(-10,-h)$, $(-24,-h)$.</p><p>Rotate the picture so that line $MX$ becomes the positive $x$-axis direction; the line through $Y$ perpendicular to $MX$ is then a vertical line $x=d$, where $d=MY\cos\alpha&gt;0$ because $Y\ne M$ and the angle $\alpha$ between $MR$ and $MX$ (defined below) is acute, and a line through $M$ making angle $\theta$ with $MX$ meets it at height $d\tan\theta$. Here $MR$ and $MA$ make angles $\alpha$ and $\beta$ with $MX$ on opposite sides, where $\cos\alpha=\frac{h}{\sqrt{h^2+100}}$, $\sin\alpha=\frac{10}{\sqrt{h^2+100}}$ (from the dot and cross products of $(0,-1)$ and $(-10,-h)$), and similarly from $(-10,-h)$ and $(-24,-h)$:
 \[\cos\beta=\frac{240+h^2}{\sqrt{h^2+100}\sqrt{h^2+576}},\qquad \sin\beta=\frac{14h}{\sqrt{h^2+100}\sqrt{h^2+576}} .\]
 So $YP=d\tan\alpha=\frac{10d}{h}$ and $PQ=d\tan\beta=\frac{14hd}{h^2+240}$, and $7\cdot YP=13\cdot PQ$ gives $70(h^2+240)=182h^2$, so $h^2=150$, $h=5\sqrt6$, and $[ARML]=24h=\boxed{120\sqrt6}$.</p>
 </div></details>
@@ -194,7 +194,7 @@ So $YP=d\tan\alpha=\frac{10d}{h}$ and $PQ=d\tan\beta=\frac{14hd}{h^2+240}$, and 
 \[k(u^2+uv+v^2)=335=5\cdot67 .\]
 If $u=v$ then $u=v=1$ and $3k=335$, impossible. So $u&gt;v\ge1$ (as $M\ge G\ge H$), and $u^2+uv+v^2\ge7$ divides $335$, so it is $67$ or $335$. The form $u^2+uv+v^2$ never takes the value $335$: $4(u^2+uv+v^2)=(2u+v)^2+3v^2$, and $(2u+v)^2+3v^2\equiv0\pmod5$ forces $5\mid v$ and $5\mid u$ (as $-3$ is not a square mod $5$), contradicting $\gcd(u,v)=1$. For $67$, checking $v=1,2,3,4$ gives $u^2+u+1=67$ (no), $u^2+2u+4=67$ ($u=7$), $u^2+3u+9=67$ (no), $u^2+4u+16=67$ (no), and $v\ge5$ gives $u^2+uv+v^2&gt;67$. So $(u,v)=(7,2)$, $k=5$:
 \[M=245,\qquad G=70,\qquad H=20 .\]
-Finally $(a-b)^2=(a+b)^2-4ab=4(M^2-G^2)=4\cdot(245^2-70^2)=4\cdot175\cdot315=4\cdot 105^2\cdot5$, so $|a-b|=\boxed{210\sqrt5}$.</p>
+These values do occur: $a$ and $b$ must be the roots of $t^2-490t+4900=0$, which are real and positive (discriminant $4(245^2-70^2)&gt;0$, positive sum and product), and then $H=\frac{G^2}{M}=20$. Finally $(a-b)^2=(a+b)^2-4ab=4(M^2-G^2)=4\cdot(245^2-70^2)=4\cdot175\cdot315=4\cdot 105^2\cdot5$, so $|a-b|=\boxed{210\sqrt5}$.</p>
 </div></details>
 </section>
 <h2 class="ct-group" id="power-round">Power Round</h2>
@@ -246,7 +246,7 @@ all digits lie in $\{0,1,3\}$, so $Q(x)=3x^4+3x^3+3x^2+x+1$ is the only possibil
 <h4>Solution (Average angle and integrality)</h4>
 <p>Let the polygon have $n$ sides and angles $a,a+1,\dots,a+n-1$ (degrees, integers). Their sum is $180(n-2)$, so the average angle is
 \[a+\frac{n-1}2=180-\frac{360}n .\]
-Convexity requires $a+n-1&lt;180$, i.e. $a+n-1\le179$. Combining, $180-\frac{360}n+\frac{n-1}2\le179$, so $\frac{n(n+1)}2\le360$, which gives $n\le26$.</p><p>Also $a=180-\frac{360}{n}-\frac{n-1}2$ must be an integer, so $\frac{720}{n}+(n-1)$ must be an even integer; in particular $n\mid720$. The divisors of $720$ up to $26$, from the top, are $24,20,18,16,\dots$: $n=24$ gives $30+23$, $n=20$ gives $36+19$, $n=18$ gives $40+17$ (all odd), while $n=16$ gives $45+15=60$, even. For $n=16$: $a=180-22.5-7.5=150$, and the angles $150^\circ,151^\circ,\dots,165^\circ$ add up to $2520^\circ=180\cdot14$. A convex polygon with these angles exists: take unit vectors $u_1,\dots,u_{16}$ whose directions turn successively by the exterior angles $15^\circ,16^\circ,\dots,30^\circ$ (total $360^\circ$). Consecutive directions differ by less than $180^\circ$, so the $u_i$ do not lie in a closed half-plane, and $0$ is a combination $\sum w_iu_i$ with all $w_i&gt;0$; the closed path with edges $w_1u_1,\dots,w_{16}u_{16}$ is a convex polygon with the required angles. The answer is $\boxed{16}$.</p>
+Convexity requires $a+n-1&lt;180$, i.e. $a+n-1\le179$. Combining, $180-\frac{360}n+\frac{n-1}2\le179$, so $\frac{n(n+1)}2\le360$, which gives $n\le26$.</p><p>Also $a=180-\frac{360}{n}-\frac{n-1}2$ must be an integer, so $\frac{720}{n}+(n-1)$ must be an even integer; in particular $n\mid720$. The divisors of $720$ up to $26$, from the top, are $24,20,18,16,\dots$: $n=24$ gives $30+23$, $n=20$ gives $36+19$, $n=18$ gives $40+17$ (all odd), while $n=16$ gives $45+15=60$, even. For $n=16$: $a=180-22.5-7.5=150$, and the angles $150^\circ,151^\circ,\dots,165^\circ$ add up to $2520^\circ=180\cdot14$. A convex polygon with these angles exists: choose $16$ points on a circle whose successive central gaps are $15^\circ,16^\circ,\dots,30^\circ$ (total $360^\circ$), and take the polygon bounded by the tangent lines at these points. As every gap is less than $180^\circ$, consecutive tangents meet, each tangent contributes a side, and the exterior angle between consecutive sides equals the central gap between their points of tangency. So the interior angles are $165^\circ,164^\circ,\dots,150^\circ$. The answer is $\boxed{16}$.</p>
 </div></details>
 </section>
 <section class="ct-problem" id="p11">

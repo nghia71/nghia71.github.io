@@ -127,7 +127,7 @@ So $xy+yz+zx=7-3=4$ and $x^2+y^2+z^2=7^2-2\cdot4=\boxed{41}$.</p>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$14$</p></div></details>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
 <h4>Solution (Exclude, then build)</h4>
-<p>Every number in the circle needs two neighbours sharing a prime factor with it.</p><ul class="ct-ul"><li><p>$1$ shares no factor with anything.</p></li><li><p>$11,13,17,19$: their only multiples up to $20$ are themselves, so they have no possible neighbour.</p></li><li><p>$7$: the only other multiple of $7$ up to $20$ is $14$, so $7$ has at most one possible neighbour.</p></li></ul><p>This excludes $1$, $7$, $11$, $13$, $17$, $19$, leaving at most $20-6=14$ numbers:
+<p>A circle of one or two numbers cannot beat the construction of $14$ given below, so consider a circle of at least three numbers: every number in it needs two distinct neighbours sharing a prime factor with it.</p><ul class="ct-ul"><li><p>$1$ shares no factor with anything.</p></li><li><p>$11,13,17,19$: their only multiples up to $20$ are themselves, so they have no possible neighbour.</p></li><li><p>$7$: the only other multiple of $7$ up to $20$ is $14$, so $7$ has at most one possible neighbour.</p></li></ul><p>This excludes $1$, $7$, $11$, $13$, $17$, $19$, leaving at most $20-6=14$ numbers:
 \[2,\ 3,\ 4,\ 5,\ 6,\ 8,\ 9,\ 10,\ 12,\ 14,\ 15,\ 16,\ 18,\ 20 .\]
 All $14$ fit:
 \[2,\ 4,\ 8,\ 16,\ 14,\ 20,\ 5,\ 15,\ 3,\ 9,\ 18,\ 12,\ 6,\ 10\ (\text{back to } 2),\]
@@ -162,7 +162,7 @@ Every $t$ occurs: $U(x)=2+t(x-3)$ gives a valid $P$. The values $13+24t$ closest
 \[x=\frac{144}{24-t}=\frac{144}{12\sqrt3}=4\sqrt3 .\]
 Thus $P=(4\sqrt3,4\sqrt3)$ and $AP^2=2\cdot48=\boxed{96}$.</p>
 <h4>Solution 2 (An area ratio)</h4>
-<p>As $AE=AF$, the right triangles $ABE$ and $ADF$ are congruent, so the figure is symmetric about the diagonal $AC$ and $P$ lies on $AC$. Let $CE=CF=u$; then $EF=u\sqrt2$ and $AE^2=12^2+(12-u)^2$, so $AE=EF$ gives $2u^2=144+(12-u)^2$, i.e. $u^2+24u-288=0$ and $u=12\sqrt3-12$.</p><p>Since $P$ is on line $DE$, the ratio $AP:PC$ equals the ratio of the distances from $A$ and $C$ to line $DE$, which is $[ADE]:[CDE]$. Now $[ADE]=\frac12\cdot12\cdot12=72$ (base $AD$, height $12$) and $[CDE]=\frac12\cdot CE\cdot CD=6u=72(\sqrt3-1)$. Hence
+<p>As $AE=AF$, the right triangles $ABE$ and $ADF$ are congruent, so the figure is symmetric about the diagonal $AC$ and $P$ lies on $AC$. Let $CE=CF=u$; then $EF=u\sqrt2$ and $AE^2=12^2+(12-u)^2$, so $AE=EF$ gives $2u^2=144+(12-u)^2$, i.e. $u^2+24u-288=0$ and $u=12\sqrt3-12$.</p><p>Line $DE$ runs from the vertex $D$ to the interior point $E$ of side $BC$, so it separates $A$ from $C$, and $P$ lies inside segment $AC$. Since $P$ is on line $DE$, the ratio $AP:PC$ equals the ratio of the distances from $A$ and $C$ to line $DE$, which is $[ADE]:[CDE]$. Now $[ADE]=\frac12\cdot12\cdot12=72$ (base $AD$, height $12$) and $[CDE]=\frac12\cdot CE\cdot CD=6u=72(\sqrt3-1)$. Hence
 \[\frac{AP}{AC}=\frac{72}{72+72(\sqrt3-1)}=\frac1{\sqrt3},\qquad AP^2=\frac{AC^2}{3}=\frac{288}{3}=\boxed{96}.\]</p>
 </div></details>
 </section>
@@ -188,7 +188,7 @@ This bound is attained by $(a,b,c)=(25,432,1344)$: indeed $\gcd(432,1344)=48$, s
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
 <h4>Solution (Coordinates centred at the square)</h4>
 <div class="ct-fig"><img style="width:300px" src="/assets/contests/2026-27/big-red-6_s1.svg" alt="Figure for the solution"></div>
-<p>Let $d=\frac{s}{\sqrt2}$ be the half-diagonal and put the centre $O$ at the origin with $A=(-d,0)$, $B=(0,d)$, $C=(d,0)$, $D=(0,-d)$. The circumcircle is $x^2+y^2=d^2$ and the square is $|x|+|y|\le d$.</p><p><em>Inside the circle.</em> $AC$ is a diameter, so $P$ is strictly inside the circle iff $\angle APC&gt;90^\circ$, iff $AP^2+CP^2&lt;AC^2$, i.e. $2000&lt;2s^2$, i.e. $s^2&gt;1000$.</p><p><em>The points $P$.</em> For $P=(x,y)$: $AP^2-CP^2=4dx=400-1600$, so $x=-\frac{300}{d}$; and $AP^2+CP^2=2(x^2+y^2)+2d^2=2000$. Hence
+<p>Let $d=\frac{s}{\sqrt2}$ be the half-diagonal and put the centre $O$ at the origin with $A=(-d,0)$, $B=(0,d)$, $C=(d,0)$, $D=(0,-d)$. The circumcircle is $x^2+y^2=d^2$ and the square is $|x|+|y|\le d$.</p><p><em>Inside the circle.</em> For any point $P$, $AP^2+CP^2=2\,OP^2+2d^2$ (expand with $A=(-d,0)$, $C=(d,0)$), so $OP^2=1000-d^2$. Hence $P$ is strictly inside the circle iff $1000-d^2&lt;d^2$, i.e. $d^2&gt;500$, i.e. $s^2&gt;1000$.</p><p><em>The points $P$.</em> For $P=(x,y)$: $AP^2-CP^2=4dx=400-1600$, so $x=-\frac{300}{d}$; and $AP^2+CP^2=2(x^2+y^2)+2d^2=2000$. Hence
 \[y^2=1000-d^2-\frac{90000}{d^2}=400-\left(d-\frac{300}{d}\right)^2 .\]
 There are two such points $(x,\pm y)$, symmetric about $AC$, when the right side is positive.</p><p><em>Outside the square.</em> With $s^2&gt;1000$ we have $d^2&gt;500$, so $d-\frac{300}d&gt;0$. The point is outside iff $\frac{300}{d}+|y|&gt;d$, i.e. $y^2&gt;\left(d-\frac{300}d\right)^2$, i.e. $\left(d-\frac{300}{d}\right)^2&lt;200$ (this also makes $y^2&gt;0$, so $P$ exists). Since $d-\frac{300}{d}=\frac{s}{\sqrt2}-\frac{300\sqrt2}{s}$, the condition $d-\frac{300}{d}&lt;10\sqrt2$ becomes
 \[\frac s2-\frac{300}{s}&lt;10\iff s^2-20s-600&lt;0\iff s&lt;10+10\sqrt7\approx36.46 .\]
@@ -248,7 +248,7 @@ Let $S$ be the set of all real numbers $x$ such that $a_5=a_0$ but $a_1\neq a_0$
 \[\sum_{k=1}^{(N-1)/2}\cos\frac{4\pi k}{N}=\frac12\sum_{j=1}^{N-1}\cos\frac{2\pi j}{N}=-\frac12 .\]
 For $N=31$: $\sum(2+2\cos2\theta)=30-1=29$. For $N=33$ over $1\le k\le16$: $32-1=31$, minus the term $k=11$, which is $2+2\cos\frac{4\pi}{3}=1$: this gives $30$. Hence $\sum_{x\in S}x^2=29+30=\boxed{59}$.</p>
 <h4>Solution 2 (Vieta on the degree-32 polynomial)</h4>
-<p>By induction, $a_n$ is a polynomial in $x$ of the form $a_n=x^{2^n}-2^nx^{2^n-2}+(\text{lower terms})$: if this holds for $n$, then $a_n^2-2=x^{2^{n+1}}-2\cdot2^nx^{2^{n+1}-2}+\cdots$. So
+<p>By induction, for every $n\ge1$, $a_n$ is a polynomial in $x$ of the form $a_n=x^{2^n}-2^nx^{2^n-2}+(\text{lower terms})$: for $n=1$, $a_1=x^2-2$, and if this holds for $n$, then $a_n^2-2=x^{2^{n+1}}-2\cdot2^nx^{2^{n+1}-2}+\cdots$. So
 \[Q(x)=a_5-x=x^{32}+0\cdot x^{31}-32x^{30}+\cdots .\]</p><p><em>All roots of $Q$ are real and distinct.</em> For $\theta\in[0,\pi]$ and $x=2\cos\theta$ we have $a_5=2\cos32\theta$ (from $(2\cos\phi)^2-2=2\cos2\phi$), so $Q(2\cos\theta)=0$ whenever $32\theta\equiv\pm\theta\pmod{2\pi}$, i.e. for $\theta=\frac{2\pi k}{31}$ ($0\le k\le15$) and $\theta=\frac{2\pi k}{33}$ ($0\le k\le16$). These are $16+17-1=32$ different angles in $[0,\pi]$ (only $\theta=0$ is repeated), giving $32$ different real roots, hence all roots of $Q$, each simple.</p><p>By Vieta, the sum of the squares of the roots is $0^2-2(-32)=64$. The set $S$ consists of the roots with $a_1\neq a_0$, i.e. all roots except those of $x^2-2=x$, namely $x=2$ and $x=-1$ (both are roots of $Q$, being fixed points). Therefore
 \[\sum_{x\in S}x^2=64-2^2-(-1)^2=\boxed{59}.\]</p>
 </div></details>
@@ -297,7 +297,7 @@ Find the sum of all Ithacan integers less than or equal to $63$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$188$</p></div></details>
 <details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
 <h4>Solution (Lucas's theorem in base 2)</h4>
-<p>Write $n=\sum_k b_k2^k$ in binary, with $L$ digits ($2^{L-1}\le n&lt;2^L$). By Lucas's theorem, $\binom{n}{2^k}\equiv\binom{b_k}{1}=b_k\pmod2$. The condition $2^{k+2}\le n$ means $k+2\le L-1$. So $n$ is Ithacan iff
+<p>Write $n=\sum_k b_k2^k$ in binary, with $L$ digits ($2^{L-1}\le n&lt;2^L$). By Lucas's theorem, $\binom{n}{2^k}\equiv\binom{b_k}{1}=b_k\pmod2$. (Directly: modulo $2$, repeated squaring gives $(1+x)^{2^j}\equiv1+x^{2^j}$, so $(1+x)^n\equiv\prod_{j:\,b_j=1}(1+x^{2^j})$, and by uniqueness of binary expansion the coefficient of $x^{2^k}$ in this product is $b_k$.) The condition $2^{k+2}\le n$ means $k+2\le L-1$. So $n$ is Ithacan iff
 \[b_k+b_{k+1}+b_{k+2}\ \text{is odd for } 0\le k\le L-3 .\]</p><ul class="ct-ul"><li><p>If $L\le2$ ($n=2,3$) there is no condition: both are Ithacan.</p></li><li><p>If $L\ge3$, subtracting consecutive conditions gives $b_{k+3}=b_k$, so the digits repeat with period $3$, and the block $(b_0,b_1,b_2)$ has odd weight: it is $111$ or has a single $1$.</p></li></ul><p>Block $111$: $n=2^L-1$, giving $7,15,31,63$. A single $1$ in the positions $\equiv\rho\pmod 3$: the top digit $b_{L-1}=1$ forces $\rho\equiv L-1$, so for $L=3,4,5,6$ we get $n=100_2=4$, $1001_2=9$, $10010_2=18$, $100100_2=36$. The Ithacan numbers up to $63$ are $2,3,4,7,9,15,18,31,36,63$, with sum $\boxed{188}$.</p>
 </div></details>
 </section>
