@@ -1,0 +1,529 @@
+---
+title: Belarus Team Selection Test 2026
+permalink: /contests/belarus-tst-2026
+description: Belarus Team Selection Test 2026: problems with answers and solutions
+---
+{% raw %}
+<style>
+  .ct-intro { margin-bottom: 1.2em; }
+  .ct-credit { font-size: 14px; color: var(--ink-soft); border-left: 3px solid var(--gold); padding: 6px 12px; background: var(--white); margin: 1em 0; }
+  .ct-toc { display: flex; flex-wrap: wrap; gap: 6px; margin: 1em 0 1.4em; }
+  .ct-toc a { display: inline-block; min-width: 2.4em; text-align: center; padding: 4px 8px; border: 1px solid var(--rule); border-radius: 4px; background: var(--white); text-decoration: none; font-size: 14px; }
+  .ct-problem { background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 14px 18px; margin: 1.1em 0; }
+  .ct-problem h3 { margin: 0 0 .3em; font-size: 1.08rem; border-bottom: none; padding-bottom: 0; }
+  .ct-meta { font-size: 13px; color: var(--ink-soft); margin-bottom: .6em; }
+  .ct-text { font-family: Georgia, "Times New Roman", "Noto Serif", serif; font-size: 1.02em; line-height: 1.6; }
+  .ct-text p { margin: .5em 0; }
+  .ct-fig { text-align: center; margin: .8em 0; }
+  .ct-fig img { max-width: 100%; height: auto; max-height: 340px; }
+  .ct-choices { display: flex; flex-wrap: wrap; gap: 6px 22px; margin: .6em 0 .2em; }
+  .ct-choices b { margin-right: .3em; }
+  .ct-problem details { margin-top: .8em; border-top: 1px dashed var(--rule); padding-top: .5em; }
+  .ct-problem summary { cursor: pointer; font-weight: 600; color: var(--brand); font-size: 15px; }
+  .ct-problem details[open] summary { margin-bottom: .5em; }
+  .ct-sol h4 { font-size: 1rem; margin: 1em 0 .3em; color: var(--ink); }
+  .ct-answer { font-weight: 600; }
+  .ct-parts { list-style: none; padding-left: .4em; }
+  .ct-parts li { margin: .35em 0; }
+  .ct-lbl { font-weight: 700; margin-right: .3em; }
+  .ct-note { font-size: 14px; color: var(--ink-soft); font-style: italic; }
+  .ct-bar { margin: .6em 0 1em; display: flex; gap: 10px; flex-wrap: wrap; }
+  .ct-bar button { font: inherit; font-size: 14px; padding: 5px 12px; border-radius: var(--radius); border: 1px solid var(--brand); background: var(--white); color: var(--brand); cursor: pointer; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
+</style>
+<script>
+  window.MathJax = { tex: { inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [['\\[','\\]']], processEscapes: true },
+                     options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] } };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script>
+  function ctAll(open) { document.querySelectorAll('.ct-problem details').forEach(function (d) { d.open = open; }); }
+</script>
+
+<style>
+  .ct-group { font-size: 1.25rem; margin: 1.6em 0 .2em; }
+  .ct-toc-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: .3em 0; }
+  .ct-toc-g { font-size: 13px; color: var(--ink-soft); min-width: 9em; }
+  .ct-toc-wrap { margin: 1em 0 1.4em; }
+  .ct-center { text-align: center; margin: .6em 0; }
+  .ct-tablewrap { overflow-x: auto; margin: .6em 0; text-align: center; }
+  .ct-table { border-collapse: collapse; margin: 0 auto; }
+  .ct-table td { padding: 2px 9px; text-align: center; }
+  .ct-table tr.ct-hl td { border-bottom: 1px solid var(--ink-soft); }
+  .ct-table.ct-vfirst td:first-child { border-right: 1px solid var(--ink-soft); }
+  .ct-ul { padding-left: 1.4em; }
+  .ct-ul li { margin: .3em 0; }
+  .ct-text li > p:first-child { margin-top: 0; }
+  .ct-text li > p:last-child { margin-bottom: 0; }
+  .ct-text mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
+</style>
+
+<style>
+  .ct-tags { display: flex; flex-wrap: wrap; gap: 5px; margin: 0 0 .55em; }
+  .ct-tg { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .03em; padding: 2px 8px; border-radius: 999px; line-height: 1.5; }
+  .ct-lv { background: #eee7dc; color: #4a3d33; }
+  .ct-df-Starter { background: #dcf1dc; color: #245c24; }
+  .ct-df-Explorer { background: #d6efec; color: #155e57; }
+  .ct-df-Challenger { background: #dce8f7; color: #1f4c80; }
+  .ct-df-Olympiad { background: #e7defa; color: #4b2a8a; }
+  .ct-df-Advanced { background: #fbe4cc; color: #8a4a0b; }
+  .ct-df-Expert { background: #f8d6cf; color: #8c2600; }
+  .ct-band { margin: 1.3em 0 .5em; font-size: 14px; color: var(--ink-soft); }
+  .ct-band .ct-tg { font-size: 13px; margin-right: .4em; }
+  .ct-legend { font-size: 14.5px; background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 10px 16px; margin: 1em 0 1.4em; }
+  .ct-legend p { margin: .35em 0; }
+  .ct-legend ul { margin: .2em 0 .4em; padding-left: 1.1em; }
+  .ct-legend li { margin: .2em 0; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
+</style>
+{% endraw %}
+<p><a href="{{ '/contests-2026' | relative_url }}">&larr; All contests 2026</a></p>
+
+<h1>Belarus Team Selection Test 2026</h1>
+
+<div class="ct-intro">
+<p>The 20 problems of the Belarus Team Selection Test 2026, each with our own solutions, hidden until you open them. 9 of them ask for an answer and 11 ask for a proof. Where a problem has a final answer, it is shown separately. Try a problem first, then check.</p><p>Six tests. Test 1 was the Silk Road Mathematical Competition 2026 and Test 2 was APMO 2026 (problems 1, 2, 4, 5); Tests 3 to 6 are the Belarusian selection papers.</p>
+</div>
+<div class="ct-credit">Problems: Belarus Team Selection Test 2026, from the AoPS contest collection or the official paper. Solutions written by MCC.</div>
+<div class="ct-bar"><button type="button" onclick="ctAll(true)">Show all answers and solutions</button><button type="button" onclick="ctAll(false)">Hide all</button></div>
+<div class="ct-toc-wrap"><div class="ct-toc-row"><span class="ct-toc-g">Test 1</span><a href="#p1">1</a><a href="#p2">2</a><a href="#p3">3</a><a href="#p4">4</a></div><div class="ct-toc-row"><span class="ct-toc-g">Test 2</span><a href="#p5">1</a><a href="#p6">2</a><a href="#p7">3</a><a href="#p8">4</a></div><div class="ct-toc-row"><span class="ct-toc-g">Test 3</span><a href="#p9">1</a><a href="#p10">2</a><a href="#p11">3</a></div><div class="ct-toc-row"><span class="ct-toc-g">Test 4</span><a href="#p12">1</a><a href="#p13">2</a><a href="#p14">3</a></div><div class="ct-toc-row"><span class="ct-toc-g">Test 5</span><a href="#p15">1</a><a href="#p16">2</a><a href="#p17">3</a></div><div class="ct-toc-row"><span class="ct-toc-g">Test 6</span><a href="#p18">1</a><a href="#p19">2</a><a href="#p20">3</a></div></div>
+
+{% raw %}
+<h2 class="ct-group" id="test-1">Test 1</h2>
+<section class="ct-problem" id="p1">
+<h3>Problem 1</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure &middot; Power of a Point &middot; also Silk Road MO 2026, Problem 1</div>
+<div class="ct-text"><p>The line joining the midpoints of the diagonals of a cyclic quadrilateral $ABCD$ intersects segment $AB$ at point $X$, and the extension of line $BC$ beyond point $C$ at point $Y$. Prove that if the points $A,C,X,Y$ lie on the same circle, then the segments $AB$, $BC$, and $BD$ can form a right triangle.</p></div>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Vectors from $B$)</h4>
+<div class="ct-fig"><img style="width:251px" src="/assets/contests/2026-27/belarus-tst-1_s1.svg" alt="Figure for the solution"></div>
+<p>Let $K$ and $L$ be the midpoints of $AC$ and $BD$ (they are distinct, otherwise $ABCD$ would be a parallelogram and the line
+$KL$ would not be defined). Put the origin at $B$ and write points as vectors; $A$ and $C$ are linearly independent. Since $X$ lies on segment
+$AB$ and $Y$ on ray $BC$ beyond $C$,
+\[
+X=pA,\quad Y=qC\qquad(0&lt;p&lt;1&lt;q),
+\]
+and we write $D=\alpha A+\beta C$.</p><p><em>The Newton line.</em> $K=\tfrac12A+\tfrac12C$ lies on line $XY$, so $K=(1-s)pA+sqC$ for some $s$, i.e. $(1-s)p=\tfrac12$ and $sq=\tfrac12$.
+Adding $\tfrac1{2p}=1-s$ and $\tfrac1{2q}=s$:
+\[
+\frac1p+\frac1q=2 .
+\]
+Similarly $L=\tfrac12D$ lies on $XY$: $\tfrac\alpha2=(1-r)p$, $\tfrac\beta2=rq$ for some $r$, hence
+\[
+\frac\alpha p+\frac\beta q=2 .
+\]</p><p><em>The concyclicity.</em> $X$ and $A$ lie on one ray from $B$, $Y$ and $C$ on another, so $A,C,X,Y$ are concyclic iff the powers agree:
+$BX\cdot BA=BY\cdot BC$, i.e. $p|A|^2=q|C|^2=:t$. Then $\tfrac1p=|A|^2/t$ and $\tfrac1q=|C|^2/t$, and the two relations become
+\[
+|A|^2+|C|^2=2t,\qquad \alpha|A|^2+\beta|C|^2=2t .
+\]</p><p><em>The circle $ABCD$.</em> Let $O$ be its centre. Since $B$ (the origin) is on the circle, $|Z-O|^2=|O|^2$, i.e. $|Z|^2=2\,Z\cdot O$, for
+every point $Z$ of the circle. Applying this to $A$, $C$, $D$:
+\[
+BD^2=|D|^2=2D\cdot O=\alpha\,(2A\cdot O)+\beta\,(2C\cdot O)=\alpha|A|^2+\beta|C|^2=2t=AB^2+BC^2 .
+\]</p><p>Thus $BD^2=AB^2+BC^2$. In particular $BD&lt;AB+BC$ and $BD$ is the longest of the three segments, so they form a triangle, and by the converse of
+Pythagoras' theorem it is right-angled (with hypotenuse $BD$).</p>
+<h4>Solution 2 (An inversion centred at $B$)</h4>
+<p>Let $\Gamma$ be the circle $ABCD$ and $K$, $L$ the midpoints of $AC$, $BD$ (distinct: if $K=L$ the diagonals bisect each
+other, $ABCD$ is a parallelogram and the line $KL$ is not defined). As $X$ lies on ray $BA$
+and $Y$ on ray $BC$, the concyclicity of $A,C,X,Y$ means
+\[
+t:=BX\cdot BA=BY\cdot BC&gt;0 .
+\]
+Let $\iota$ be the inversion with centre $B$ and power $t$. It exchanges $A\leftrightarrow X$ and $C\leftrightarrow Y$. The circle $\Gamma$ passes
+through $B$, so $\iota(\Gamma)$ is a line, through $\iota(A)=X$ and $\iota(C)=Y$: the line $XY$, which contains $K$ and $L$. Hence $\iota(K)$ and
+$\iota(L)$ lie on $\Gamma$.</p><p><em>From $L$.</em> $\iota(L)$ lies on $\Gamma$ and on ray $BL=$ ray $BD$, and is different from $B$, so $\iota(L)=D$. Thus $BL\cdot BD=t$, and as
+$BL=\tfrac12BD$,
+\[
+BD^2=2t .
+\]</p><p><em>From $K$.</em> $K$ is the midpoint of the chord $AC$, so it is inside $\Gamma$, and ray $BK$ meets $\Gamma$ again at a point $K^*$ beyond $K$;
+as above $\iota(K)=K^*$, so $t=BK\cdot BK^*$. The power of $K$ gives $KB\cdot KK^*=KA\cdot KC=\tfrac14AC^2$, and the median formula gives
+$BK^2=\tfrac14(2AB^2+2BC^2-AC^2)$. Hence
+\[
+t=BK\,(BK+KK^*)=BK^2+\tfrac14AC^2=\tfrac12\bigl(AB^2+BC^2\bigr).
+\]</p><p>Therefore $BD^2=2t=AB^2+BC^2$, so $BD$ is the longest of the three segments and $BD&lt;AB+BC$; they form a triangle, right-angled by the
+converse of Pythagoras' theorem, with hypotenuse $BD$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p2">
+<h3>Problem 2</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 17: Sequences, Recurrences, and Discrete Dynamics &middot; Nonlinear Recurrences &middot; also Silk Road MO 2026, Problem 2</div>
+<div class="ct-text"><p>In an infinite sequence $a_1,a_2,\dots$ consisting of positive integers, for each $n\ge 2$, the term $a_{n+1}$ is determined as follows: the fraction
+\[\frac{a_1+a_2+\cdots+a_{n-1}}{a_n}\]
+is reduced to its lowest terms (irreducible form), and then $a_{n+1}$ is set equal to the numerator of this reduced fraction. Prove that there exists a positive integer $N$ such that for all $n\ge N$, the following equality holds:
+\[a_{n+2}=a_{n+1}+a_n.\]</p></div>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (The cancelled factor shrinks and then disappears)</h4>
+<p>Let $S_n=a_1+\dots+a_n$ and, for $n\ge2$, $g_n=\gcd(S_{n-1},a_n)$. The rule says
+\[
+a_{n+1}=\frac{S_{n-1}}{g_n}\qquad(n\ge2).
+\]</p><p><em>Step 1: $g_{n+1}\mid g_n$.</em> Let $d=g_{n+1}=\gcd(S_n,a_{n+1})$. Then $d\mid a_{n+1}$, and $a_{n+1}\mid S_{n-1}$, so $d\mid S_{n-1}$; also
+$d\mid S_n=S_{n-1}+a_n$, so $d\mid a_n$. Hence $d\mid\gcd(S_{n-1},a_n)=g_n$.</p><p><em>Step 2.</em> The positive integers $g_2\ge g_3\ge\cdots$ are non-increasing (by Step 1), so they are constant from some index $N$ on:
+$g_n=g$ for all $n\ge N$.</p><p><em>Step 3: $g=1$.</em> For $n\ge N$ we have $g\mid a_n$ (as $g=g_n\mid a_n$) and
+\[
+a_{n+2}=\frac{S_n}{g}=\frac{S_{n-1}+a_n}{g}=a_{n+1}+\frac{a_n}{g},\qquad\text{i.e.}\qquad a_n=g\,(a_{n+2}-a_{n+1}).
+\]
+We show by induction on $k$ that $g^k\mid a_n$ for all $n\ge N$. For $k=0$ this is clear; if it holds for $k$, then $g^k$ divides
+$a_{n+2}-a_{n+1}$, so $g^{k+1}\mid g(a_{n+2}-a_{n+1})=a_n$. If $g\ge2$, the positive integer $a_N$ would be divisible by arbitrarily large
+powers of $g$, which is impossible. So $g=1$.</p><p><em>Step 4.</em> For $n\ge N$ we now have $a_{n+1}=S_{n-1}$ and $a_{n+2}=S_n$, hence
+\[
+a_{n+2}=S_n=S_{n-1}+a_n=a_{n+1}+a_n\qquad\text{for all }n\ge N .
+\]</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p3">
+<h3>Problem 3</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 39: Graph Theory and Structural Combinatorics &middot; Paths, Cycles, and Connectivity &middot; also Silk Road MO 2026, Problem 3</div>
+<div class="ct-text"><p>On a horizontal segment of length $2025$, its endpoints and all points dividing it into unit segments are marked. Some pairs of marked points are connected by one-way teleporters transporting from the left point to the right point. It is known that several people, using only the teleporters, can travel from the left endpoint to the right endpoint in such a way that each teleporter is used exactly once. Prove that this can be done so that, for every $k=1,2,\dots,2025$, the teleporters transporting $k$ units to the right are used by at most $1013$ people.</p></div>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Let equal jumps follow each other)</h4>
+<p>Label the marked points $0,1,\dots,2025$. Each pair of points carries at most one teleporter (this is what &ldquo;some pairs are
+connected&rdquo; means; with parallel teleporters the claim would fail, e.g. for $1014$ copies of the teleporter $0\to2025$), and a teleporter from $i$ to $j&gt;i$ has length $j-i$.</p><p><em>Plans as matchings.</em> In a valid plan every passage of a person through an inner point $v$ uses one teleporter arriving at $v$ and one
+leaving $v$, and every teleporter is used exactly once; so at every inner point the numbers of arriving and leaving teleporters are equal.
+Conversely, suppose that at every inner point $v$ we fix a bijection $\pi_v$ from the teleporters arriving at $v$ to those leaving $v$. Send
+one person along each teleporter leaving $0$, and let a person arriving at $v$ by $e$ continue with $\pi_v(e)$. Teleporters go to the right,
+so every person reaches $2025$. Every teleporter $f$ is used exactly once: going backwards ($f=\pi_v(e)$ determines $e$, and so on) we reach a
+teleporter leaving $0$, whose person uses $f$; two persons cannot share a teleporter because their routes are determined forwards. So
+every such choice of bijections is a valid plan.</p><p><em>The choice.</em> At each inner point $v$ and for each $k$ such that both teleporters $v-k\to v$ and $v\to v+k$ exist, let $\pi_v$ send the
+first to the second. Different $k$ involve different teleporters, so this is a partial bijection; complete it arbitrarily to a bijection
+(possible since the numbers of arriving and leaving teleporters are equal).</p><p><em>Counting.</em> Fix $k$. Call a <em>$k$-chain</em> a maximal run $v_0\to v_0+k\to v_0+2k\to\dots\to v_0+mk$ ($m\ge1$) of existing teleporters of
+length $k$. By our rule, whoever uses the first teleporter of a $k$-chain uses all of them. Each length-$k$ teleporter lies in exactly one
+$k$-chain, so the number of people using teleporters of length $k$ is at most the number of $k$-chains.</p><p>Two $k$-chains share no marked point: a point $v$ has at most one arriving length-$k$ teleporter (from $v-k$) and at most one leaving one (to
+$v+k$), and if both exist they are consecutive in the same chain. Every $k$-chain contains at least $2$ marked points, and there are $2026$ marked
+points, so there are at most $1013$ $k$-chains.</p><p>Hence, with this plan, for every $k=1,\dots,2025$ at most $1013$ people use teleporters of length $k$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p4">
+<h3>Problem 4</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Algebra &middot; LPS VII, Chapter 5: Polynomial Structure and Algebraic Identities &middot; Symmetric and Cyclic Polynomial Forms &middot; also Silk Road MO 2026, Problem 4</div>
+<div class="ct-text"><p>Let $P(x,y,z)$ be a polynomial with real coefficients satisfying
+\[P(x,y,z)=P(y+z-x,y,z)=P(x,z+x-y,z)=P(x,y,x+y-z).\]</p><ul class="ct-parts"><li><p><span class="ct-lbl">(1)</span> Prove that there exists a polynomial $Q(x,y,z)$ with real coefficients such that
+\[P(x,y,z)=Q(x-y,y-z,z-x).\]</p></li><li><p><span class="ct-lbl">(2)</span> Prove that there exists a polynomial $R(x,y)$ with real coefficients such that
+\[P(x,y,z)=R\big(x^2+y^2+z^2-xy-yz-zx,\ (x-y)(y-z)(z-x)\big).\]</p></li></ul></div>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Composing the three symmetries)</h4>
+<p>Let $T_1(x,y,z)=(y+z-x,y,z)$, $T_2(x,y,z)=(x,z+x-y,z)$, $T_3(x,y,z)=(x,y,x+y-z)$. The hypothesis says $P\circ T_i=P$ for
+$i=1,2,3$, hence $P$ is invariant under every composition of these maps.</p><p><strong>(1)</strong> Apply $T_1$, then $T_2$, then $T_3$, then $T_2$:
+\[
+(x,y,z)\mapsto(y+z-x,\,y,\,z)\mapsto(y+z-x,\,2z-x,\,z)\mapsto(y+z-x,\,2z-x,\,y+2z-2x)\mapsto(y+z-x,\,2y+z-2x,\,y+2z-2x).
+\]
+The result is $(x,y,z)+d\,(1,1,1)$ with $d=y+z-2x$. Hence
+\[
+P(x+d,\,y+d,\,z+d)=P(x,y,z),\qquad d=y+z-2x .
+\]
+Adding the same number to $x,y,z$ does not change $y+z-2x$, so we may iterate: $P(x+jd,y+jd,z+jd)=P(x,y,z)$ for every integer $j\ge0$.
+Fix $(x,y,z)$ with $d\ne0$. The polynomial $s\mapsto P(x+s,y+s,z+s)-P(x,y,z)$ vanishes at the infinitely many points $s=jd$, so it is
+zero. Thus the polynomial
+\[
+G(x,y,z,s)=P(x+s,y+s,z+s)-P(x,y,z)
+\]
+vanishes whenever $y+z\ne2x$; then $(y+z-2x)\,G$ vanishes everywhere, so it is the zero polynomial, and so is $G$. Taking $s=-z$:
+\[
+P(x,y,z)=P(x-z,\,y-z,\,0)=Q(x-y,\,y-z,\,z-x)\qquad\text{with}\qquad Q(u,v,w)=P(-w,\,v,\,0).
+\]</p><p><strong>(2)</strong> Put $u=x-y$, $v=y-z$, $w=z-x$. A direct check shows how the maps act on the differences:
+\[
+T_1:\ (u,v,w)\mapsto(w,v,u),\qquad T_2:\ (u,v,w)\mapsto(v,u,w),\qquad T_3:\ (u,v,w)\mapsto(u,w,v).
+\]
+(For example, for $T_1$: $(y+z-x)-y=z-x$, $y-z$, $z-(y+z-x)=x-y$.) The triples $(x-y,y-z,z-x)$ fill the whole plane
+$\Pi=\{u+v+w=0\}$ (take $x=u+v$, $y=v$, $z=0$). So the invariance of $P$ gives $Q(w,v,u)=Q(v,u,w)=Q(u,w,v)=Q(u,v,w)$ on $\Pi$. These three
+transpositions generate all permutations, so $Q\circ\tau=Q$ on $\Pi$ for every permutation $\tau$ of the variables.</p><p>Let $\widetilde Q=\frac16\sum_\tau Q\circ\tau$. It is a symmetric polynomial that coincides with $Q$ on $\Pi$. By the fundamental theorem on
+symmetric polynomials, $\widetilde Q=F(e_1,e_2,e_3)$ for a real polynomial $F$, where $e_1=u+v+w$, $e_2=uv+vw+wu$, $e_3=uvw$. On $\Pi$ we have
+$e_1=0$ and $e_2=-\tfrac12(u^2+v^2+w^2)$, and
+\[
+u^2+v^2+w^2=(x-y)^2+(y-z)^2+(z-x)^2=2\,(x^2+y^2+z^2-xy-yz-zx).
+\]
+Hence, writing $\sigma=x^2+y^2+z^2-xy-yz-zx$ and $\pi=(x-y)(y-z)(z-x)$,
+\[
+P(x,y,z)=\widetilde Q(u,v,w)=F(0,-\sigma,\pi)=R(\sigma,\pi),\qquad R(s,p)=F(0,-s,p).
+\]</p>
+</div></details>
+</section>
+<h2 class="ct-group" id="test-2">Test 2</h2>
+<section class="ct-problem" id="p5">
+<h3>Problem 1</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 8: Modular Arithmetic and Congruence Methods &middot; Residue Classes and Case Analysis &middot; also APMO 2026, Problem 1</div>
+<div class="ct-text"><p>Find all quadruples of positive integers $(a,p,m,o)$ with $o\ge2$ such that
+\[a!+p!=m^o+26.\]</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$(a,p,m,o)\in\{(3,4,2,2),\,(4,3,2,2),\,(3,5,10,2),\,(5,3,10,2)\}$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Reduce to $\min(a,p)\le3$, then three cases)</h4>
+<p>By symmetry let $a\le p$. Put $M=m^o=a!+p!-26$; recall $o\ge2$.</p><p><em>$a\le3$.</em> If $a\ge4$, then $4\mid a!+p!$ and $M\equiv-26\equiv2\pmod4$. But a perfect power with exponent $o\ge2$ is odd or divisible by $4$. So $a\in\{1,2,3\}$.</p><p><em>$a=1$: $M=p!-25$.</em> We need $p!&gt;25$, so $p\ge4$; $p=4$ gives $M=-1$. Let $p\ge5$. Then $4\mid p!$, so $M\equiv3\pmod 4$; a square is $0$ or $1$ mod $4$, and an even power is a square, so $o$ is odd and $o\ge3$. Also $5\mid p!-25=m^o$, so $5\mid m$ and $125\mid M$, hence $25\mid p!$, so $p\ge10$. If $p\ge15$ then $125\mid p!$ and $M\equiv-25\pmod{125}$, a contradiction. For $10\le p\le14$, $v_5(p!)=2$ and $M=25\bigl(\tfrac{p!}{25}-1\bigr)$; the values $\frac{p!}{25}\bmod5$ for $p=10,11,12,13,14$ are $2,2,4,2,3$, never $1$, so $v_5(M)=2&lt;3$, a contradiction. No solutions.</p><p><em>$a=2$: $M=p!-24$.</em> We need $p\ge5$. For $p=5$, $M=96=2^5\cdot3$ is not a perfect power ($v_3=1$). For $p\ge6$: $3\mid M$, so $3\mid m$ and $9\mid M$; but $9\mid p!$ and $9\nmid24$. No solutions.</p><p><em>$a=3$: $M=p!-20$.</em> We need $p\ge4$. For $p\ge4$ we have $8\mid p!$ and $M\equiv-20\equiv4\pmod8$, so $v_2(M)=2$; since $v_2(M)=o\,v_2(m)$ and $o\ge2$, we get $o=2$. So $M$ is a square. For $p\ge11$, $M\equiv-20\equiv2\pmod{11}$, but $2$ is not a square modulo $11$ (the squares are $0,1,3,4,5,9$). For $4\le p\le10$, $M=4,\,100,\,700,\,5020,\,40300,\,362860,\,3628780$; only $4=2^2$ and $100=10^2$ are squares ($700=7\cdot10^2$, $70^2&lt;5020&lt;71^2$, $200^2&lt;40300&lt;201^2$, $602^2&lt;362860&lt;603^2$, $1904^2&lt;3628780&lt;1905^2$).</p><p>So $(a,p,m,o)=(3,4,2,2)$ or $(3,5,10,2)$, and by symmetry the answer is
+\[\boxed{(a,p,m,o)\in\{(3,4,2,2),(4,3,2,2),(3,5,10,2),(5,3,10,2)\}}.\]
+Check: $3!+4!=30=2^2+26$ and $3!+5!=126=10^2+26$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p6">
+<h3>Problem 2</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 10: Double Counting and Counting Identities &middot; Direct Double Counting &middot; also APMO 2026, Problem 2</div>
+<div class="ct-text"><p>Let $n\ge2$ be an integer. Let $A_1,A_2,\dots,A_{2^n}$ be the $2^n$ subsets of an $n$-element set in some order. Prove that
+\[|A_1\cap A_2|+|A_2\cap A_3|+\dots+|A_{2^n-1}\cap A_{2^n}|+|A_{2^n}\cap A_1|\ge2^{n-2}.\]</p></div>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Common elements equal common non-elements; complements)</h4>
+<p>Let the ground set be $U$, $|U|=n$, indices modulo $2^n$, and $S=\sum_i|A_i\cap A_{i+1}|$. Put $O_i=U\setminus(A_i\cup A_{i+1})$, the elements in neither set.</p><p><em>Step 1: $\sum_i|O_i|=S$.</em> By inclusion-exclusion, $|A_i\cap A_{i+1}|-|O_i|=|A_i|+|A_{i+1}|-n$. Summing over $i$, every set is counted twice:
+\[S-\sum_i|O_i|=2\sum_i|A_i|-n2^n=2\cdot n2^{n-1}-n2^n=0,\]
+since each element lies in exactly $2^{n-1}$ subsets.</p><p><em>Step 2.</em> Hence $2S=\sum_i\bigl(|A_i\cap A_{i+1}|+|O_i|\bigr)$, and the $i$-th term is the number of elements on which $A_i$ and $A_{i+1}$ agree (in both or in neither). This term is $0$ only if $A_{i+1}=U\setminus A_i$. Each subset has exactly one complement, so the pairs $\{A,U\setminus A\}$ form a perfect matching of the $2^n$ subsets; a cycle through all $2^n$ subsets can use at most $2^{n-1}$ of these pairs as consecutive pairs (no two used pairs share a set). So at least $2^n-2^{n-1}=2^{n-1}$ of the $2^n$ consecutive pairs agree somewhere, and $2S\ge2^{n-1}$, i.e. $S\ge2^{n-2}$.</p>
+<h4>Solution 2 (Counting runs element by element)</h4>
+<p>Let $U$ be the ground set. For an element $x$, write around the cycle the word $w_x$ whose $i$-th letter is $1$ if $x\in A_i$ and $0$ otherwise. It is a cyclic word with $2^{n-1}$ ones and $2^{n-1}$ zeros ($n\ge1$). Let $r_x\ge1$ be the number of maximal blocks of ones; the blocks of zeros alternate with them, so there are also $r_x$ of those.</p><p>The number of indices $i$ with $x\in A_i\cap A_{i+1}$ is the number of adjacent pairs $11$ in $w_x$, which is $2^{n-1}-r_x$ (a block of length $\ell$ contains $\ell-1$ such pairs). Likewise there are $2^{n-1}-r_x$ adjacent pairs $00$. Summing over $x$:
+\[S=\sum_i|A_i\cap A_{i+1}|=\sum_x(2^{n-1}-r_x),\qquad T:=\sum_i\#\{x:\ x\notin A_i\cup A_{i+1}\}=\sum_x(2^{n-1}-r_x)=S .\]
+So $2S=S+T=\sum_i a_i$, where $a_i$ is the number of elements on which $A_i$ and $A_{i+1}$ agree.</p><p>Now $a_i=0$ exactly when $A_{i+1}$ is the complement of $A_i$. If this happened for two consecutive indices, $A_{i+2}$ would be the complement of the complement of $A_i$, i.e. $A_{i+2}=A_i$, impossible since $2^n\ge4$ sets are distinct. So among the $2^n$ indices, no two cyclically consecutive ones have $a_i=0$; hence at most $2^{n-1}$ of them have $a_i=0$, at least $2^{n-1}$ have $a_i\ge1$, and $2S\ge2^{n-1}$. Thus $S\ge2^{n-2}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p7">
+<h3>Problem 3</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 36: Coordinate Geometry and Analytic Representation &middot; Cartesian Coordinate Setup &middot; also APMO 2026, Problem 4</div>
+<div class="ct-text"><p>Let $ABCD$ be a quadrilateral with an incircle $\omega$ of centre $I$. The diagonals $AC$ and $BD$ intersect at $E$. Let $J$ be the incentre of triangle $ABD$. The extension of the ray $EJ$ intersects $\omega$ at $P$. Prove that $PI\perp BD$.</p></div>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Tangent lengths and coordinates along $BD$)</h4>
+<div class="ct-fig"><img style="width:287px" src="/assets/contests/2026-27/belarus-tst-7_s1.svg" alt="Figure for the solution"></div>
+<p>Let $r$ be the radius of $\omega$ and $x_A,x_B,x_C,x_D$ the tangent lengths from the vertices, so $AB=x_A+x_B$, $AD=x_A+x_D$, etc. Let $Q$ be the point of $\omega$ with $IQ\perp BD$ on the same side of $BD$ as $A$. We show that $E,J,Q$ are collinear with $J,Q$ on the same side of $BD$; since $E$ lies inside $\omega$ (see the lemma), the ray $EJ$ meets $\omega$ exactly once, so $P=Q$ and $PI\perp BD$.</p><p><em>Lemma: $E$ divides $BD$ in the ratio $BE:ED=x_B:x_D$, and $E$ is inside $\omega$.</em> Let $\omega$ touch $AB,BC,CD,DA$ at $W,X,V,Z$. The segment $WV$ joins points on opposite sides of $BD$, so it meets segment $BD$ at a point $E_1$ inside $\omega$. The tangents at $W$ and $V$ make equal angles with the chord $WV$, so $\sin\angle BWE_1=\sin\angle DVE_1$, and the angles at $E_1$ are vertical. The law of sines in triangles $BWE_1$, $DVE_1$ gives $BE_1:E_1D=BW:DV=x_B:x_D$. The same argument for the chord $XZ$ gives a point of $BD$ with the same ratio, hence the same point $E_1$; so $E_1=WV\cap XZ$. Repeating everything with the diagonal $AC$ shows that $WV\cap XZ$ also lies on $AC$. Hence $E=E_1$.</p><p><em>Coordinates.</em> Put $L=BD$ and coordinates with $B=(0,0)$, $D=(L,0)$, $A$ above the $x$-axis. Let $S$ be the area and $s$ the semiperimeter of triangle $ABD$, so $2s=2x_A+x_B+x_D+L$, and let $r_1=S/s$ be its inradius.</p><ul class="ct-ul"><li><p>$E=(e,0)$ with $e=\dfrac{Lx_B}{x_B+x_D}$.</p></li><li><p>The incircle of $ABD$ touches $BD$ at $T=(t,0)$ with $t=\frac{AB+BD-AD}{2}=\frac{L+x_B-x_D}{2}$, and $J=(t,r_1)$.</p></li><li><p>Let $I=(i,k)$. From $IB^2=r^2+x_B^2$ and $ID^2=r^2+x_D^2$ we get $i=\dfrac{L^2+x_B^2-x_D^2}{2L}$. Splitting $ABD$ by $I$ (which lies on the same side of $AB$ as $D$ and on the same side of $AD$ as $B$) and using signed area for $IBD$: $S=\frac r2(AB+AD)+\frac{Lk}{2}$, so $k=\dfrac{2S-r(2s-L)}{L}$.</p></li><li><p>$Q=(i,k+r)$.</p></li></ul><p>Now
+\[t-e=\frac{(x_D-x_B)(L-x_B-x_D)}{2(x_B+x_D)},\qquad i-e=\frac{(x_D-x_B)(L-x_B-x_D)(L+x_B+x_D)}{2L(x_B+x_D)} .\]
+The points $E$, $J$, $Q$ are collinear iff $r_1(i-e)=(k+r)(t-e)$, and by the two formulas this holds as soon as
+\[r_1\cdot\frac{L+x_B+x_D}{L}=k+r .\]
+Since $L+x_B+x_D=2s-2x_A$, the left side is $\frac{2S-2x_Ar_1}{L}$, while $k+r=\frac{2S-2r(s-L)}{L}$. So we need $x_Ar_1=r(s-L)$, i.e. $\frac{r}{x_A}=\frac{r_1}{s-L}$. Both equal $\tan\frac{\angle BAD}2$: $\omega$ touches $AB$ at distance $x_A$ from $A$, and the incircle of $ABD$ touches $AB$ at distance $s-BD$ from $A$. So $E,J,Q$ are collinear.</p><p>Finally $k+r=r_1\frac{L+x_B+x_D}{L}&gt;0$ and $r_1&gt;0$, so $Q$ and $J$ are both above $BD$, i.e. on the same ray from $E\in BD$. Hence $P=Q$ and $PI\perp BD$.</p>
+<h4>Solution 2 (Tangent parameters on the unit circle)</h4>
+<p>We take $ABCD$ convex (it has an incircle). Choose the unit of length and axes so that $\omega$ is the unit circle $x^2+y^2=1$, $I$ is the origin, $BD$ is the horizontal line $y=h$, and $A$ lies above $BD$. Since $D$ lies inside the angle $ABC$, whose sides are the two tangents from $B$, the line $BD$ passes through the interior of $\omega$; hence $|h|&lt;1$. Let $Q=(0,1)$. We show that $J$ lies strictly between $E$ and $Q$ on a line, and that $E$ is inside $\omega$; then the ray $EJ$ meets $\omega$ only at $Q$, so $P=Q$ and $PI$ is vertical, i.e. $PI\perp BD$.</p><p><em>Parameters.</em> Every point of $\omega$ except $(0,-1)$ can be written as $\bigl(\frac{2u}{1+u^2},\frac{1-u^2}{1+u^2}\bigr)$ for a unique real $u$ (the <em>parameter</em>; $u=0$ gives $Q$), and the tangent there is
+\[2u\,x+(1-u^2)\,y=1+u^2,\]
+because this line contains the point and is perpendicular to the radius. Two tangents with parameters $u,v$ (with $uv\ne-1$) meet at
+\[\Bigl(\frac{u+v}{1+uv},\ \frac{1-uv}{1+uv}\Bigr),\]
+as one checks by substituting into both equations.</p><p>A tangent passes through a point $(b,h)$ of $BD$ exactly when its parameter satisfies $(1+h)u^2-2bu+(1-h)=0$. (The tangent at $(0,-1)$ is $y=-1$, which misses $BD$ because $h\ne-1$.) So the two tangents from $B$ have parameters whose product is $k=\frac{1-h}{1+h}&gt;0$, and the same holds for the two tangents from $D$. Let $s$ be the parameter of the point where $\omega$ touches $AB$ and $t$ that of the point where it touches $AD$; then the touching points on $BC$ and $CD$ have parameters $k/s$ and $k/t$. Since $A$ and $C$ are the intersections of these pairs of tangents,
+\[A=\Bigl(\frac{s+t}{1+st},\frac{1-st}{1+st}\Bigr),\qquad C=\Bigl(\frac{k/s+k/t}{1+k^2/(st)},\frac{1-k^2/(st)}{1+k^2/(st)}\Bigr)=\Bigl(\frac{k(s+t)}{st+k^2},\frac{st-k^2}{st+k^2}\Bigr).\]</p><p><em>Signs.</em> The touching point on segment $AB$ lies strictly above $BD$ (as $B$ is on $BD$ and $A$ above it), so $\frac{1-s^2}{1+s^2}&gt;h$, which rearranges to $s^2&lt;k$; likewise $t^2&lt;k$. Hence $|st|&lt;k$ and $k+st&gt;0$. Also $1+st&gt;0$: if $1+st&lt;0$, then $1-st&gt;2$ and $A_y=\frac{1-st}{1+st}&lt;-1&lt;h$, contradicting that $A$ is above $BD$. A direct computation, using $h=\frac{1-k}{1+k}$ and $1+h=\frac{2}{1+k}$, gives
+\[1-hA_y=\frac{(1+h)(k+st)}{1+st}&gt;0 .\]</p><p><em>The point $E$.</em> Substituting the coordinates and $h=\frac{1-k}{1+k}$ and simplifying gives the identity
+\[A_x\,(hC_y-1)=C_x\,(hA_y-1).\]
+(Geometrically: $A$, $C$ and the pole $(0,1/h)$ of $BD$ are collinear.) The expression $g(X)=X_x(hA_y-1)-A_x(hX_y-1)$ is a linear function of the point $X$ that vanishes at $A$ and, by the identity, at $C$; so it vanishes on the whole line $AC$, in particular at $E=(E_x,h)$:
+\[E_x=\frac{A_x(h^2-1)}{hA_y-1}=\frac{(1-h^2)A_x}{1-hA_y}.\]
+<em>$E$ is inside $\omega$.</em> We need $E_x^2+h^2&lt;1$, i.e. $(1-h^2)A_x^2&lt;(1-hA_y)^2$. Another direct computation gives
+\[(1-hA_y)^2-(1-h^2)A_x^2=\frac{(1+h)^2}{(1+st)^2}\,(k-s^2)(k-t^2),\]
+which is positive by the signs above.</p><p><em>The point $J$.</em> Both $I$ and $J$ lie on the bisector of $\angle BAD$, on the ray from $A$ through $I$. On this ray the distance to line $AB$ is proportional to the distance from $A$; it equals $1$ at $I$ and $r$ at $J$, where $r$ is the inradius of $ABD$. Hence $J=A+r(I-A)=(1-r)A$. As $J$ lies above $BD$ at distance $r$, $J_y=h+r$, so $(1-r)A_y=h+r$ and, since $A_y&gt;h&gt;-1$,
+\[r=\frac{A_y-h}{A_y+1}&gt;0,\qquad J_x=\frac{(1+h)A_x}{A_y+1},\qquad J_y-1=\frac{hA_y-1}{A_y+1}&lt;0 .\]</p><p><em>Collinearity.</em> We have
+\[\frac{J_x}{J_y-1}=\frac{(1+h)A_x}{hA_y-1}=\frac{E_x}{h-1},\]
+using the formula for $E_x$. So the vectors $J-Q$ and $E-Q$ are parallel, i.e. $E$, $J$, $Q$ are collinear. Moreover $h&lt;J_y&lt;1$, so $J$ lies strictly between $E$ (height $h$) and $Q$ (height $1$). The ray from $E$ through $J$ therefore passes through $Q$, and since $E$ is inside $\omega$ this ray meets $\omega$ exactly once. Hence $P=Q=(0,1)$, the line $PI$ is the $y$-axis, and $PI\perp BD$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p8">
+<h3>Problem 4</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 52: Advanced Combinatorial Structure and Hybrid Methods &middot; Combinatorics with Geometric Insight &middot; also APMO 2026, Problem 5</div>
+<div class="ct-text"><p>Let $n$ be a positive integer. There exist $n(n+1)$ rooms arranged in a $(n+1)\times n$ grid. For each two adjacent rooms, there is a door between them. Find the number of ways to choose a subset of doors and lock them such that there are two rooms $S$ and $G$ satisfying the following properties:</p><ul class="ct-parts"><li><p><span class="ct-lbl">(i)</span> $S$ is in the first row and $G$ is in the $(n+1)$-th row.</p></li><li><p><span class="ct-lbl">(ii)</span> One can reach $G$ from $S$ only through unlocked doors.</p></li></ul></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\boxed{2^{2n^2-2}}$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Planar duality: crossings versus walls)</h4>
+<p>Draw the rooms as unit squares $[j-1,j]\times[i-1,i]$ ($1\le j\le n$ columns, $1\le i\le n+1$ rows, row $1$ at the top). A door is a unit wall segment shared by two rooms; there are $(n+1)(n-1)$ doors between horizontally adjacent rooms and $n\cdot n$ between vertically adjacent ones, $2n^2-1$ in all. A locking is <em>good</em> if some room of the top row is joined to some room of the bottom row by a path through unlocked doors.</p><p><em>Irrelevant doors.</em> The $n-1$ doors between two rooms of the top row and the $n-1$ doors between two rooms of the bottom row do not matter: a good path can be cut to start at its last top-row room and to end at its first bottom-row room. Let $\mathcal D$ be the set of the other $m=2n^2-2n+1$ doors.</p><p><em>Walls.</em> A locked door is a wall segment. A <em>blocking wall</em> is a chain of locked doors of $\mathcal D$, consecutive ones sharing an endpoint, running from the left side of the rectangle to the right side.</p><p><em>Duality lemma: a locking is good if and only if there is no blocking wall.</em></p><p><em>Not both.</em> Suppose a good path and a blocking wall both exist; cut the path as above, so it uses doors of $\mathcal D$ only. Draw the path through room centres, crossing each used door at its midpoint, and extend it by vertical segments from its first room centre up to the top side and from its last room centre down to the bottom side. These two extensions lie inside the top and bottom rows, which contain no wall segment of $\mathcal D$ (those lie on the lines at heights $1,\dots,n$ and, for vertical ones, between heights $1$ and $n$). In a rectangle, a curve joining the left and right sides meets every curve joining the top and bottom sides (a standard consequence of the Jordan curve theorem). A segment joining the centres of two adjacent rooms meets the wall segments only at the midpoint of the door between those two rooms. So the meeting point is the midpoint of a door that is both unlocked (used by the path) and locked (on the wall), which is impossible.</p><p><em>No good path gives a blocking wall.</em> Suppose the locking is not good, and let $R$ be the set of rooms that can be reached from some top-row room through unlocked doors of $\mathcal D$. Then $R$ contains the whole top row and no bottom-row room. Let $B$ be the set of doors between a room of $R$ and a room not in $R$; each of them is locked (otherwise the outer room would be reachable), and $B\subseteq\mathcal D$, because the two rooms of a top-row door are both in $R$ and those of a bottom-row door are both outside $R$.
+Consider the graph $W$ whose vertices are the lattice points $(j,i)$ with $0\le j\le n$, $1\le i\le n$ and whose edges are the doors of $B$, each door being the unit segment joining two such points. We count degrees in $W$.</p><ul class="ct-ul"><li><p>An inner point $(j,i)$, $1\le j\le n-1$, is a corner of four rooms (in rows $i,i+1$ and columns $j,j+1$), and the four grid segments at it separate cyclically consecutive rooms among these four. A segment is in $B$ exactly when its two rooms differ in membership of $R$; going once around the point, the membership changes an even number of times. So the degree of $(j,i)$ is even.</p></li><li><p>A left-side point $(0,i)$ lies on only one door, the one between the rooms of column $1$ in rows $i$ and $i+1$; its degree is $1$ if exactly one of these rooms is in $R$ and $0$ otherwise. Going down column $1$ from row $1$ (in $R$) to row $n+1$ (not in $R$), membership changes an odd number of times, so an odd number of left-side points have degree $1$. In the same way an odd number of right-side points $(n,i)$ have degree $1$.</p></li></ul><p>Every connected component of a graph has an even number of vertices of odd degree. The odd vertices of $W$ are exactly the side points of degree $1$, and the left ones are odd in number, so some component of $W$ contains an odd number of left-side odd vertices; having an even total, it also contains a right-side point. A path in this component from a left-side point to a right-side point is a chain of locked doors of $\mathcal D$, consecutive ones sharing an endpoint, from the left side to the right side: a blocking wall.</p><p><em>The dual board.</em> The doors of $\mathcal D$ join lattice points $(j,i)$ with $0\le j\le n$ and $1\le i\le n$ (horizontal walls at heights $1,\dots,n$, vertical walls between heights $i$ and $i+1$ for $1\le i\le n-1$); merging all points of the left side into one terminal $\lambda$ and all points of the right side into one terminal $\rho$, the doors of $\mathcal D$ become the edges of a graph $H$: $n$ rows of $n-1$ interior points, each row joined to $\lambda$ and $\rho$, consecutive rows joined vertically. Likewise, merging the top row of rooms into a terminal $\tau$ and the bottom row into $\beta$, the doors of $\mathcal D$ form a graph $G$: $n-1$ rows of $n$ rooms, joined to $\tau$ and $\beta$. Turning the picture by $90^\circ$ gives an isomorphism $\psi$ from $H$ to $G$ taking $\lambda,\rho$ to $\tau,\beta$; each door $e\in\mathcal D$ is an edge of $H$ (as a wall) and of $G$ (as a passage), so $\sigma(e)=\psi(e)$ is a permutation of $\mathcal D$.</p><p><em>Pairing.</em> For a set $K\subseteq\mathcal D$ of locked doors let $\Phi(K)=\mathcal D\setminus\sigma(K)$. Then: $K$ has a blocking wall $\iff$ the edges $K$ contain a $\lambda$-$\rho$ path in $H$ $\iff$ the edges $\sigma(K)$ contain a $\tau$-$\beta$ path in $G$ $\iff$ the locking $\Phi(K)$ (whose unlocked doors are $\sigma(K)$) is good. With the lemma: $K$ is good $\iff$ $\Phi(K)$ is not good. Since $\Phi$ is a bijection on the subsets of $\mathcal D$, it maps the good lockings injectively into the bad ones and vice versa, so exactly half of the $2^m$ lockings of $\mathcal D$ are good.</p><p>Counting the $2n-2$ irrelevant doors freely, the number of good lockings is
+\[2^{m-1}\cdot2^{2n-2}=2^{2n^2-2}=\boxed{2^{2n^2-2}}.\]
+(For $n=1$ there is one door and it must be unlocked: $2^0=1$.)</p>
+</div></details>
+</section>
+<h2 class="ct-group" id="test-3">Test 3</h2>
+<section class="ct-problem" id="p9">
+<h3>Problem 1</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 8: Modular Arithmetic and Congruence Methods &middot; Residue Classes and Case Analysis</div>
+<div class="ct-text"><p>Some permutation $a_1,a_2,\dots,a_{502}$ of numbers $3,8,13,\dots,2508$ satisfies the following inequality for every $k=1,2,\dots,502$
+\[a_k-a_{k-1}+a_{k-2}-\dots+(-1)^{k-1}a_1&gt;0.\]
+Find all possible values of $a_1$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$a_1=3$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Alternating sums modulo 5)</h4>
+<p>Write $S_0=0$ and $S_k=a_k-a_{k-1}+a_{k-2}-\dots+(-1)^{k-1}a_1$ for $1\le k\le 502$. Then
+\[S_k=a_k-S_{k-1}\qquad(1\le k\le 502),\]
+and the condition says $S_k&gt;0$ for every $k$.</p><p><em>Residues.</em> Every given number is $\equiv 3\pmod 5$. Hence $S_1=a_1\equiv3$, and by induction $S_k\equiv 3-3=0$ for even $k$ and $S_k\equiv 3-0=3$ for odd $k$ (mod $5$). A positive integer that is $\equiv0$ or $\equiv3\pmod5$ is at least $3$. So $S_k\ge3$ for every $k\ge1$.</p><p><em>Where is $3$?</em> Suppose $3=a_j$ with $j\ge2$. Then $S_j=a_j-S_{j-1}=3-S_{j-1}\le 3-3=0$, a contradiction. Therefore $a_1=3$.</p><p><em>$a_1=3$ is possible.</em> Take the increasing order $a_k=5k-2$. Then $S_{2i}=5i$ and $S_{2i+1}=5i+3$ for all $i\ge0$: indeed $S_{2i+1}=(10i+3)-5i=5i+3$ and $S_{2i+2}=(10i+8)-(5i+3)=5(i+1)$. All these are positive.</p><p>Hence the only possible value is $\boxed{a_1=3}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p10">
+<h3>Problem 2</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 10: Double Counting and Counting Identities &middot; Direct Double Counting</div>
+<div class="ct-text"><p>Find the largest value of $d$ (in terms of $n$) such that there exist $k=2^n$ subsets $S_1,S_2,\dots,S_k$ of the set $\{1,2,3,\dots,2^n\}$ such that for any $1\le i&lt;j\le k$ at least $d$ elements lie in exactly one of $S_i$ and $S_j$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$d=2^{n-1}$ for $n\ge2$ (and $d=2$ for $n=1$)</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Double counting and a linear construction)</h4>
+<p>Let $N=2^n$ and write $d(S,T)=|S\triangle T|$ for the number of elements lying in exactly one of $S,T$.</p><p><em>Bound.</em> Suppose $S_1,\dots,S_N$ satisfy $d(S_i,S_j)\ge d$ for all $i&lt;j$. Count the pairs $(\{i,j\},x)$ with $x$ in exactly one of $S_i,S_j$. If $x$ lies in $c_x$ of the sets, it contributes $c_x(N-c_x)\le N^2/4$ pairs $\{i,j\}$. Hence
+\[\binom N2 d\le\sum_{i&lt;j}d(S_i,S_j)=\sum_{x=1}^{N}c_x(N-c_x)\le N\cdot\frac{N^2}{4},\qquad\text{so}\qquad d\le\frac{N^2}{2(N-1)}=\frac N2+\frac{N}{2(N-1)} .\]
+For $n=1$ this gives $d\le2$. For $n\ge2$ we have $N\ge4$, so $0&lt;\frac{N}{2(N-1)}&lt;1$; as $d$ and $\frac N2$ are integers, $d\le \frac N2=2^{n-1}$.</p><p><em>Construction for $n\ge2$.</em> Label the elements of $\{1,\dots,2^n\}$ by the $2^n$ vectors $v\in\{0,1\}^n$, and for each vector $u$ let
+\[S_u=\{v:\ u\cdot v \text{ is odd}\},\qquad u\cdot v=u_1v_1+\dots+u_nv_n .\]
+This gives $2^n$ sets. For $u\ne u'$, an element $v$ lies in exactly one of $S_u,S_{u'}$ exactly when $u\cdot v+u'\cdot v$ is odd, that is, when $w\cdot v$ is odd for $w=u+u'\pmod 2$, a nonzero vector. If $w_t=1$, then changing the $t$-th coordinate of $v$ changes the parity of $w\cdot v$; this pairs the vectors $v$ into pairs with one odd and one even value, so exactly $2^{n-1}$ vectors have $w\cdot v$ odd. Thus $d(S_u,S_{u'})=2^{n-1}$ for all $u\ne u'$.</p><p><em>Construction for $n=1$.</em> The sets $\varnothing$ and $\{1,2\}$ give $d=2$.</p><p>So the largest value is $\boxed{d=2^{n-1}}$ for $n\ge2$, and $d=2$ for $n=1$.</p>
+<h4>Solution 2 (Sign vectors and a doubling construction)</h4>
+<p>Let $N=2^n$. Represent a set $S\subseteq\{1,\dots,N\}$ by the vector $\mathbf s\in\{1,-1\}^N$ whose $x$-th entry is $-1$ if $x\in S$ and $1$ otherwise. For two sets, the entries agree on the elements lying in both or in neither, and differ on the elements of $S\triangle T$, so
+\[\mathbf s\cdot\mathbf t=N-2|S\triangle T| .\]</p><p><em>Bound.</em> Let $\mathbf s_1,\dots,\mathbf s_N$ represent the sets and let every symmetric difference have at least $d$ elements. Then
+\[0\le\Bigl|\sum_i\mathbf s_i\Bigr|^2=\sum_i|\mathbf s_i|^2+2\sum_{i&lt;j}\mathbf s_i\cdot\mathbf s_j\le N\cdot N+N(N-1)(N-2d),\]
+so $N-2d\ge-\frac{N}{N-1}$, i.e. $d\le\frac N2+\frac{N}{2(N-1)}$. For $n\ge2$ the last fraction is less than $1$, and since $d$ and $N/2$ are integers, $d\le N/2=2^{n-1}$; for $n=1$ we get $d\le2$.</p><p><em>Construction.</em> We build, for every $n\ge1$, a family $\mathcal F_n$ of $2^n$ sign vectors of length $2^n$, with first vector $(1,\dots,1)$, any two of which have dot product $0$ (then any two sets differ in exactly $2^{n-1}$ elements). For $n=1$ take $(1,1)$ and $(1,-1)$. If $\mathcal F_n$ is built, let $\mathcal F_{n+1}$ consist of the vectors $(\mathbf s,\mathbf s)$ and $(\mathbf s,-\mathbf s)$ for $\mathbf s\in\mathcal F_n$ (length $2^{n+1}$, $2^{n+1}$ vectors). The dot products are
+\[(\mathbf s,\mathbf s)\cdot(\mathbf t,\pm\mathbf t)=\mathbf s\cdot\mathbf t\pm\mathbf s\cdot\mathbf t,\qquad (\mathbf s,-\mathbf s)\cdot(\mathbf t,-\mathbf t)=2\,\mathbf s\cdot\mathbf t,\]
+which is $0$ when $\mathbf s\ne\mathbf t$; and $(\mathbf s,\mathbf s)\cdot(\mathbf s,-\mathbf s)=0$. So for $n\ge2$ the bound $2^{n-1}$ is attained. For $n=1$ the sets $\varnothing,\{1,2\}$ differ in $2$ elements.</p><p>Answer: $\boxed{d=2^{n-1}}$ for $n\ge2$, and $d=2$ for $n=1$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p11">
+<h3>Problem 3</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 3: Foundational Angle and Configuration Chasing &middot; Cyclic Quadrilateral Recognition</div>
+<div class="ct-text"><p>On the smaller arcs $AB$ and $AC$ of the circumcircle of equilateral triangle $ABC$ points $P$ and $Q$ are chosen such that segment $PQ$ is tangent to the incircle of $ABC$ and intersects segments $AB$ and $AC$ at $R$ and $S$ respectively. Points $X$ and $Y$ lie in the same half-plane as $A$ with respect to $PQ$ such that triangles $PRX$ and $QSY$ are equilateral.
+Prove that one of the intersection points of circumcircles of $BPX$ and $CSY$ lies on $XY$.</p></div>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Equal chords, collinearity of $X,A,Y$, and directed angles)</h4>
+<div class="ct-fig"><img style="width:302px" src="/assets/contests/2026-27/belarus-tst-11_s1.svg" alt="Figure for the solution"></div>
+<p>Let $\Gamma$ be the circumcircle and $O$ the common centre of $\Gamma$ and the incircle $\omega$ (the triangle is equilateral). Along the chord $PQ$ the points lie in the order $P,R,S,Q$. We use directed angles $\measuredangle(\ell,m)$ between lines, taken modulo $180^\circ$.</p><p><em>Step 1: $RA=RP=RX$ and $SA=SQ=SY$.</em> The line $PQ$ touches $\omega$, so its distance from $O$ equals the inradius, which is also the distance from $O$ to $AB$. Equal distances from the centre give equal chords: $PQ=AB$, so $PQ$ subtends an arc of $120^\circ$ or $240^\circ$. The arc from $P$ to $Q$ through $A$ consists of the arcs $PA$ and $AQ$, each less than $120^\circ$; so it is the $120^\circ$ arc, equal to the arc $AB$ (through $P$). Removing the common arc $AP$ gives $\overset{\frown}{PB}=\overset{\frown}{AQ}$, and similarly $\overset{\frown}{QC}=\overset{\frown}{AP}$. By inscribed angles,
+\[\angle RAP=\angle BAP=\tfrac12\overset{\frown}{PB}=\tfrac12\overset{\frown}{AQ}=\angle QPA=\angle RPA ,\]
+so $RA=RP$. As $PRX$ is equilateral, $RA=RP=RX$: $R$ is the centre of a circle $\Gamma_R$ through $A,P,X$. In the same way $SA=SQ=SY$ and $S$ is the centre of a circle $\Gamma_S$ through $A,Q,Y$.</p><p><em>Step 2: $X,A,Y$ are collinear.</em> Let $\alpha=\angle ARS$ and $\beta=\angle ASR$, so $\alpha+\beta=120^\circ$. Since $\angle ARP=180^\circ-\alpha&gt;60^\circ$ and $X$ is on the side of $A$, the ray $RX$ lies inside the angle $ARP$ and $\angle ARX=180^\circ-\alpha-60^\circ=\beta$; in particular $X$ is on the same side of $AB$ as $P$, i.e. not on the side of $C$. In the isosceles triangle $RAX$ the base angle is $\angle RAX=90^\circ-\tfrac{\beta}2$. Likewise $Y$ lies on the side of $AC$ not containing $B$, and $\angle SAY=90^\circ-\tfrac{\alpha}2$. The rays $AX,AB,AC,AY$ follow each other around $A$, so
+\[\angle XAY=\Bigl(90^\circ-\tfrac\beta2\Bigr)+60^\circ+\Bigl(90^\circ-\tfrac\alpha2\Bigr)=240^\circ-\tfrac{\alpha+\beta}{2}=180^\circ ,\]
+and $A$ lies on the segment $XY$.</p><p><em>Step 3: the common point.</em> The line $XY$ makes the angle $\angle SAY=90^\circ-\frac\alpha2\in(30^\circ,90^\circ)$ with $AC$, so it is not perpendicular to $AC$ and meets the line $BO$ (the perpendicular bisector of $AC$) at a point $Z$. We show that $Z$ lies on both circles.</p><p><em>$C,S,Y,Z$ are concyclic.</em> As $Z$ is on the perpendicular bisector of $AC$, $ZA=ZC$, so $\measuredangle(CZ,CA)=\measuredangle(AC,AZ)$. As $SA=SY$, $\measuredangle(YS,YA)=\measuredangle(AY,AS)$. The lines $CS$ and $CA$ coincide, as do $AZ$, $AY$ and $YZ$. Hence
+\[\measuredangle(CZ,CS)=\measuredangle(CZ,CA)=\measuredangle(AC,AZ)=\measuredangle(AS,AY)=-\measuredangle(YS,YA)=\measuredangle(YZ,YS),\]
+which says that $C$ and $Y$ see the segment $ZS$ under the same directed angle: $C,S,Y,Z$ lie on a circle.</p><p><em>$B,P,X,Z$ are concyclic.</em> Let $t_A$ be the tangent to $\Gamma_R$ at $A$ and $t_B$ the tangent to $\Gamma$ at $B$; then $t_A\perp RA=AB$ and $t_B\perp OB$. By the tangent&ndash;chord angle in $\Gamma_R$ (points $A,P,X$) and in $\Gamma$ (points $A,B,P$),
+\[\measuredangle(XZ,XP)=\measuredangle(XA,XP)=\measuredangle(t_A,AP)=\measuredangle(t_A,AB)+\measuredangle(AB,AP)=90^\circ+\measuredangle(AB,AP),\]
+\[\measuredangle(BZ,BP)=\measuredangle(BO,BP)=\measuredangle(BO,t_B)+\measuredangle(t_B,BP)=90^\circ+\measuredangle(AB,AP).\]
+So $\measuredangle(XZ,XP)=\measuredangle(BZ,BP)$ and $B,P,X,Z$ are concyclic.</p><p>Thus $Z$ is a common point of the circumcircles of $BPX$ and $CSY$, and it lies on $XY$.</p>
+</div></details>
+</section>
+<h2 class="ct-group" id="test-4">Test 4</h2>
+<section class="ct-problem" id="p12">
+<h3>Problem 1</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 51: Spiral Similarity and Advanced Transformational Geometry &middot; Transformation Chains in Geometry</div>
+<div class="ct-text"><p>Triangles $ABD$ and $ACE$ are constructed on the outer sides of sides $AB$ and $AC$ of triangles $ABC$ such that
+\[AD=BD,\quad AE=CE\ \text{ and }\ \angle ADB+\angle AEC=180^\circ.\]
+Point $P$ is such that $CD=DP$ and $BE=EP$. Lines $CD$ and $BE$ intersect at $Q$.
+Prove that if $PDQE$ is convex, then it is cyclic.</p></div>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Composition of two rotations)</h4>
+<div class="ct-fig"><img style="width:247px" src="/assets/contests/2026-27/belarus-tst-12_s1.svg" alt="Figure for the solution"></div>
+<p>Let $d=\angle ADB$ and $e=\angle AEC$, so $d+e=180^\circ$, and label $ABC$ counterclockwise. The point $C$ is to the left of the directed line $AB$ and $D$ to its right, so the triangle $DBA$ is counterclockwise; similarly $B$ is to the right of the directed line $AC$ and $E$ to its left, so $EAC$ is counterclockwise. Hence the rotation $\rho_D$ about $D$ through $d$ counterclockwise maps $B$ to $A$, and the rotation $\rho_E$ about $E$ through $e$ counterclockwise maps $A$ to $C$.</p><p><em>Step 1: the point $F$.</em> The composition $\rho_E\circ\rho_D$ is a rotation through $d+e=180^\circ$, i.e. a half-turn, and it maps $B\mapsto A\mapsto C$; a half-turn taking $B$ to $C$ is the half-turn $\sigma_M$ about the midpoint $M$ of $BC$. Put $F=\rho_D(C)$. Then $DF=DC$, and $\rho_E(F)=\sigma_M(C)=B$, so $EF=EB$. The points $P$ with $DP=DC$ and $EP=EB$ are the common points of two circles centred at $D$ and $E$; they are $F$ and its mirror image $F'$ in the line $DE$.</p><p><em>Step 2: oriented angles.</em> For nonzero vectors $u,v$ let $\angle(u,v)$ be the counterclockwise angle from $u$ to $v$, taken modulo $360^\circ$; we have $\angle(-u,-v)=\angle(u,v)$ and $\angle(u,w)=\angle(u,v)+\angle(v,w)$. By construction $\angle(\vec{DC},\vec{DF})=d$ and $\angle(\vec{EF},\vec{EB})=e$. Therefore
+\[\angle(\vec{FD},\vec{FE})=\angle(\vec{DF},\vec{EF})=\angle(\vec{DF},\vec{DC})+\angle(\vec{DC},\vec{EB})+\angle(\vec{EB},\vec{EF})=\angle(\vec{DC},\vec{EB})-180^\circ .\]</p><p><em>Step 3: where $Q$ is.</em> The points $Q$, $D$, $E$ are distinct, as vertices of the quadrilateral $PDQE$. Suppose that $Q$ lies on both rays $DC$ and $EB$ (the rays starting at $D$ and at $E$), or on neither of them; this holds for every acute triangle, see below. If $Q$ is on the ray $DC$, the vector $\vec{QD}$ has the direction of $\vec{CD}$, otherwise that of $\vec{DC}$; likewise $\vec{QE}$ has the direction of $\vec{BE}$ or of $\vec{EB}$. By our assumption both directions are reversed or neither is, and since $\angle(-u,-v)=\angle(u,v)$ we get $\angle(\vec{QD},\vec{QE})=\angle(\vec{DC},\vec{EB})$. Comparing with Step 2,
+\[\angle(\vec{FD},\vec{FE})=\angle(\vec{QD},\vec{QE})+180^\circ .\]
+For points $Z$ off the line $DE$, the value of $\angle(\vec{ZD},\vec{ZE})$ is constant on each of the two arcs of a circle through $D$ and $E$, and the values on the two arcs differ by $180^\circ$ (on one arc it is the inscribed angle $\varphi$, on the other $-(180^\circ-\varphi)$). Hence $F$ lies on the circle $DQE$, on the arc not containing $Q$; so $F$ and $Q$ are on opposite sides of $DE$, and $FDQE$ is a convex cyclic quadrilateral.</p><p><em>Step 4: conclusion.</em> If $P=F$, then $PDQE$ is cyclic. Otherwise $P=F'\ne F$ lies on the same side of $DE$ as $Q$; but in a convex quadrilateral $PDQE$ the diagonal $DE$ separates $P$ from $Q$. So if $PDQE$ is convex, then $P=F$ and $PDQE$ is cyclic.</p><p><em>Why Step 3 holds for an acute triangle.</em> The points $D$ and $C$ are on opposite sides of $AB$, so the segment $DC$ meets the line $AB$ at a point $U$. The orthogonal projection onto $AB$ maps the segment $DC$ onto the segment between the midpoint of $AB$ (the projection of $D$) and the foot of the altitude from $C$; both lie inside the segment $AB$ when the angles at $A$ and $B$ are acute, hence so does $U$ (which is its own projection). In the same way the segment $EB$ meets the side $AC$ at an interior point $V$. The cevians $CU$ and $BV$ meet at a point inside the triangle; this point is $Q$, and it lies on the segments $UC\subset DC$ and $VB\subset EB$, so on both rays $DC$ and $EB$.</p><p><em>Remark: the assumption of Step 3 is needed.</em> If $Q$ lies on exactly one of the rays $DC$, $EB$, then exactly one direction is reversed, and Step 2 gives $\angle(\vec{FD},\vec{FE})=\angle(\vec{QD},\vec{QE})$: the point $F$ is on the circle $DQE$ but on the arc through $Q$, so $FDQE$ is not convex. The only candidate is then $P=F'$, which is on the circle $DQE$ only if $DE$ is a diameter of it. This case occurs for some obtuse triangles, and there $F'DQE$ can be convex without being cyclic: for $B=(-1,0)$, $C=(1,0)$, $A=(1.8,\,0.13)$ and $\angle ADB\approx137.5^\circ$ it is. So the statement is proved whenever $Q$ lies on both rays or on neither (in particular for every acute triangle), and it can fail otherwise.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p13">
+<h3>Problem 2</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 25: Diophantine Equations: Factorization and Algebraic Methods &middot; Bounding and Size Arguments</div>
+<div class="ct-text"><p>A positive integer $n$ has the following property: for any representation $n=abc$ as a product of three positive integer, two of $a,b,c$ sum up to a perfect square.
+Prove that $n$ is squarefree (i.e. there is no perfect square greater than $1$ that divides $n$).</p></div>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Squeezing between consecutive squares)</h4>
+<p><em>Step 1: $n+1$ is a square.</em> Use $n=1\cdot1\cdot n$. The pairwise sums are $2$, $n+1$, $n+1$, and $2$ is not a square, so $n+1=t^2$ for an integer $t\ge2$.</p><p>Suppose, for contradiction, that $p^2\mid n$ for a prime $p$. We exhibit a factorization $n=abc$ in which no two of $a,b,c$ sum to a square. Recall that there is no square strictly between $q^2$ and $(q+1)^2$.</p><p><em>Step 2: $p$ odd.</em> Since $p^2\mid(t-1)(t+1)$ and $\gcd(t-1,t+1)\mid2$, the odd prime $p$ divides only one of the factors, so $p^2\mid t-1$ or $p^2\mid t+1$: $t=p^2q\pm1$ with $q\ge1$. Then
+\[n=t^2-1=p^2q(p^2q\pm2),\qquad m:=\frac n{p^2}=p^2q^2\pm2q .\]
+Take $(a,b,c)=(p,p,m)$. Here $a+b=2p$ is not a square ($p$ odd). For $a+c=b+c=p+m$:</p><ul class="ct-ul"><li><p>sign $+$: $(pq)^2&lt;p^2q^2+2q+p&lt;(pq+1)^2$, because $2q+p&lt;2pq+1\iff p-1&lt;2q(p-1)$;</p></li><li><p>sign $-$: $p+m=p^2q^2-2q+p$. If $p&gt;2q$, it lies strictly between $(pq)^2$ and $(pq)^2+2pq+1$ (as $0&lt;p-2q&lt;2pq+1$); if $p&lt;2q$ it lies strictly between $(pq-1)^2=p^2q^2-2pq+1$ and $(pq)^2$ (as $-2pq+1&lt;p-2q&lt;0$, the left inequality being $1-p&lt;2q(p-1)$); $p=2q$ is impossible since $p$ is odd.</p></li></ul><p>So $p+m$ is never a square, and $(p,p,m)$ violates the property.</p><p><em>Step 3: $p=2$.</em> Then $t$ is odd, $t=2r+1$ with $r\ge1$, and $n=4r(r+1)$. If $r\ne3$, take $(1,4,r(r+1))$: the sums are $5$, $r^2+r+1$ and $r^2+r+4$. The second lies strictly between $r^2$ and $(r+1)^2$. The third lies strictly between $r^2$ and $(r+2)^2$, and it equals $(r+1)^2$ only if $r+4=2r+1$, i.e. $r=3$. So no sum is a square. If $r=3$, then $n=48=3\cdot4\cdot4$ and the sums $7,7,8$ are not squares.</p><p>In all cases we found a bad factorization, a contradiction. Hence $n$ is squarefree.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p14">
+<h3>Problem 3</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 31: Extremal Principle and Bounding Arguments &middot; Bounding and Limiting Arguments</div>
+<div class="ct-text"><p>Given positive integers $n&gt;1$ and $m$. Cells of a $2m\times 2m$ board are filled with positive integers not exceeding $n-1$. We call a rectangular region made of cells <em>kind</em> if the sum of numbers in it is divisible by $n$.
+For all values of $n$ and $m$, find the maximum possible number of kind rectangles in the board.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$m^3(3m+2)$ (for every $n$)</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Prefix sums and a counting lemma)</h4>
+<p>Let $N=2m+1$. The board has $\binom N2^2=m^2(2m+1)^2$ rectangles. The answer is $\boxed{m^3(3m+2)}$, for every $n$.</p><p><em>Example.</em> Write $1$ in the cells $(i,j)$ with $i+j$ even and $n-1$ in the others (for $n=2$ all entries are $1$). A rectangle with an even number of cells has an even side, so it splits into dominoes, each with sum $1+(n-1)=n$: it is kind. A rectangle with both sides odd has one more cell of one kind than of the other, so its sum is $\equiv\pm1\not\equiv0\pmod n$. In a line of $2m$ cells there are $2m+(2m-2)+\dots+2=m(m+1)$ intervals of odd length, so the number of kind rectangles is
+\[m^2(2m+1)^2-m^2(m+1)^2=m^2\bigl((2m+1)^2-(m+1)^2\bigr)=m^3(3m+2).\]</p><p><em>Lemma.</em> Let $x_0,x_1,\dots,x_{2m}$ be residues mod $n$, and let $e$ be the number of $i\in\{1,\dots,2m\}$ with $x_{i-1}\ne x_i$. Then the number $U$ of pairs $i&lt;j$ with $x_i\ne x_j$ is at least $\frac{(m+1)e}{2}$.</p><p><em>Proof.</em> Group the indices by their residue; let the largest group have $s$ indices and put $u=N-s$. Each of the $e$ "unequal neighbours" has an index outside the largest group, and each index belongs to at most two neighbouring pairs, so $e\le 2u$. If $u\le m$, then $s\ge m+1$ and the pairs joining the largest group to the others give $U\ge su\ge(m+1)u\ge\frac{(m+1)e}2$. If $u\ge m+1$, use $U=\frac12\bigl(N^2-\sum s_i^2\bigr)$, where $s_i$ are the group sizes; since $\sum s_i^2\le s\sum s_i=sN$, we get $U\ge\frac{N(N-s)}2=\frac{Nu}{2}\ge\frac{(2m+1)(m+1)}2\ge\frac{(m+1)e}{2}$, as $e\le2m$. $\square$</p><p><em>Bound.</em> Number the rows and columns $1,\dots,2m$. For a column interval $J=\{j_1+1,\dots,j_2\}$ ($0\le j_1&lt;j_2\le2m$) let $x_i$ be the sum of the entries in rows $1,\dots,i$ and columns of $J$ ($x_0=0$). The rectangle with rows $i_1+1,\dots,i_2$ and columns $J$ has sum $x_{i_2}-x_{i_1}$, so it is kind iff $x_{i_1}\equiv x_{i_2}$. Also $x_i-x_{i-1}$ is the sum of the <em>segment</em> of row $i$ over $J$. Let $e_J$ be the number of rows whose segment over $J$ is not kind. By the lemma, at most $\binom N2-\frac{(m+1)e_J}{2}$ kind rectangles have column set $J$, so the total number of kind rectangles is at most
+\[\binom N2^2-\frac{m+1}{2}\sum_J e_J .\]
+Now $\sum_J e_J$ counts the pairs (row, non-kind segment of that row). In a fixed row, apply the lemma to the prefix sums $y_0=0,y_1,\dots,y_{2m}$ of the row: all entries lie in $\{1,\dots,n-1\}$, so consecutive prefix sums differ mod $n$ and $e=2m$; hence at least $m(m+1)$ segments of the row are not kind. Thus $\sum_Je_J\ge 2m\cdot m(m+1)$, and the number of kind rectangles is at most
+\[m^2(2m+1)^2-\frac{m+1}{2}\cdot2m^2(m+1)=m^2(2m+1)^2-m^2(m+1)^2=m^3(3m+2).\]</p>
+</div></details>
+</section>
+<h2 class="ct-group" id="test-5">Test 5</h2>
+<section class="ct-problem" id="p15">
+<h3>Problem 1</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 53: Barycentric and Projective-Flavored Geometry &middot; Projective Incidence Structure</div>
+<div class="ct-text"><p>Given a circle $\omega$ and a point $A$ outside of it. Lines $AF$ and $AE$ are tangent to $\omega$ ($E,F\in\omega$). An arbitrary chord $DK$ of $\omega$ is chosen, and $M$ and $N$ are the intersections of $DK$ with lines $AF$ and $AE$ respectively. Lines $AD$ and $AK$ intersect the chord $FE$ at $H$ and $L$. Assume that chords $EF$ and $DK$ are distinct.
+Prove that lines $ME$, $DL$, $KH$ and $FN$ have a common point or are parallel.</p></div>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Send $A$ to infinity)</h4>
+<div class="ct-fig"><img style="width:299px" src="/assets/contests/2026-27/belarus-tst-15_s1.svg" alt="Figure for the solution"></div>
+<p>Concurrency of lines, or their being all parallel, means that they pass through one point of the projective plane, and this is preserved by projective transformations, as are incidences and tangency. Since $A$ is outside $\omega$, some line through $A$ misses $\omega$; a projective transformation sending this line to the line at infinity and $\omega$ to a circle exists. So we may assume that $\omega$ is the unit circle and $A$ is the point at infinity in the vertical direction. Then:</p><ul class="ct-ul"><li><p>the tangents from $A$ are the vertical tangents $x=1$ and $x=-1$, touching at $F=(1,0)$ and $E=(-1,0)$; the chord $EF$ is the $x$-axis;</p></li><li><p>lines through $A$ are vertical lines.</p></li></ul><p>Let $D=(\cos\alpha,\sin\alpha)$, $K=(\cos\beta,\sin\beta)$, $\sigma=\frac{\alpha+\beta}2$, $\delta=\frac{\alpha-\beta}2$. Then $H=(\cos\alpha,0)$ and $L=(\cos\beta,0)$ (vertical lines through $D$ and $K$). The line $DK$ is $x\cos\sigma+y\sin\sigma=\cos\delta$ (both points satisfy it, as $\cos(\alpha-\sigma)=\cos(\beta-\sigma)=\cos\delta$).</p><p>If $\sin\sigma=0$, then $DK$ is vertical, i.e. it passes through $A$ in the original figure; then $M=N=A$, $H=L$, and the four lines are $AE$, $AF$ and twice the line $DK$, all through $A$. So let $\sin\sigma\ne0$; then $\cos\alpha\ne\cos\beta$. Now
+\[M=\Bigl(1,\ m\Bigr),\quad N=\Bigl(-1,\ n\Bigr),\qquad m=\frac{\cos\delta-\cos\sigma}{\sin\sigma},\quad n=\frac{\cos\delta+\cos\sigma}{\sin\sigma}.\]</p><p><em>Lines $ME$ and $FN$:</em> $y=\frac m2(x+1)$ and $y=\frac n2(1-x)$. Since $m+n=\frac{2\cos\delta}{\sin\sigma}$, if $\cos\delta\ne0$ they meet at
+\[x=\frac{n-m}{n+m}=\frac{\cos\sigma}{\cos\delta},\qquad y=\frac{mn}{m+n}=\frac{\cos^2\delta-\cos^2\sigma}{2\sin\sigma\cos\delta}.\]</p><p><em>Lines $DL$ and $KH$:</em> $y=\frac{\sin\alpha\,(x-\cos\beta)}{\cos\alpha-\cos\beta}$ and $y=\frac{\sin\beta\,(x-\cos\alpha)}{\cos\beta-\cos\alpha}$. Equating, $x(\sin\alpha+\sin\beta)=\sin\alpha\cos\beta+\cos\alpha\sin\beta=\sin(\alpha+\beta)$, and then $y=\frac{\sin\alpha\sin\beta}{\sin\alpha+\sin\beta}$. With $\sin\alpha+\sin\beta=2\sin\sigma\cos\delta\ne0$, $\sin(\alpha+\beta)=2\sin\sigma\cos\sigma$ and $\sin\alpha\sin\beta=\frac{\cos2\delta-\cos2\sigma}2=\cos^2\delta-\cos^2\sigma$,
+\[x=\frac{\cos\sigma}{\cos\delta},\qquad y=\frac{\cos^2\delta-\cos^2\sigma}{2\sin\sigma\cos\delta}.\]
+This is the same point, so the four lines are concurrent.</p><p><em>The case $\cos\delta=0$,</em> i.e. $K=-D$. Then $m=-n=-\cot\sigma=\tan\alpha$ (as $\sigma=\alpha+90^\circ$ up to a multiple of $180^\circ$). The four lines have directions $\vec{EM}=(2,\tan\alpha)$, $\vec{NF}=(2,-n)=(2,\tan\alpha)$, $\vec{LD}=(2\cos\alpha,\sin\alpha)$ and $\vec{KH}=(2\cos\alpha,\sin\alpha)$, all proportional ($\cos\alpha\ne0$ because $\sin\sigma\ne0$). So the four lines are parallel.</p><p>Going back by the projective transformation, the four lines of the original figure have a common point or are parallel.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p16">
+<h3>Problem 2</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Number Theory &middot; LPS VII, Chapter 37: Diophantine Equations: Descent and Infinite Processes &middot; Recursive Reduction of Solutions</div>
+<div class="ct-text"><p>Find the largest positive integer $n$ for which there exist positive integers $m$ and $k$ such that the number
+\[\frac{n^{2k-1}m^2-2m}{n+2}\]
+is a perfect square.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$2$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Pell equation and descent)</h4>
+<p><em>$n=2$ works:</em> $m=2$, $k=1$ give $\frac{2\cdot4-4}{4}=1=1^2$.</p><p>Now let $n,m,k$ be positive integers and $\frac{n^{2k-1}m^2-2m}{n+2}=s^2$ with $s\ge0$ an integer. Put $N=n^{2k-1}$. Multiplying by $N$,
+\[N^2m^2-2Nm=N(n+2)s^2\quad\Longrightarrow\quad (Nm-1)^2-n(n+2)\bigl(n^{k-1}s\bigr)^2=1 .\]
+So $X=Nm-1$ and $Z=n^{k-1}s$ are non-negative integers with $X^2-DZ^2=1$, where $D=n(n+2)=a^2-1$, $a=n+1$.</p><p><em>Lemma.</em> Every solution of $X^2-DZ^2=1$ in non-negative integers has $X\equiv1\pmod n$.</p><p><em>Proof.</em> Note $X\ge1$. If $Z=0$ then $X=1$. If $Z\ge1$, put $X'=aX-DZ$, $Z'=aZ-X$. Using $a^2-D=1$,
+\[X'^2-DZ'^2=(a^2-D)(X^2-DZ^2)=1,\]
+and</p><ul class="ct-ul"><li><p>$X'&gt;0$, since $(aX)^2-(DZ)^2=a^2X^2-D(X^2-1)=X^2+D&gt;0$;</p></li><li><p>$Z'\ge0$, since $(aZ)^2-X^2=a^2Z^2-DZ^2-1=Z^2-1\ge0$;</p></li><li><p>$Z'&lt;Z$, i.e. $X&gt;(a-1)Z$, since $X^2=(a^2-1)Z^2+1&gt;(a-1)^2Z^2$;</p></li><li><p>$X'\equiv X\pmod n$, since $a\equiv1$ and $D\equiv0\pmod n$.</p></li></ul><p>So $(X',Z')$ is a solution of the same kind with smaller $Z$ and the same residue of $X$ mod $n$. Repeating, we reach $Z=0$, $X=1$; hence $X\equiv1\pmod n$. $\square$</p><p>Apply the lemma: $Nm-1\equiv1\pmod n$. Since $2k-1\ge1$, $n\mid N$, so $-1\equiv1$, i.e. $n\mid2$. Hence $n\le2$, and the largest $n$ is $\boxed{2}$.</p>
+<h4>Solution 2 (All solutions of the Pell equation)</h4>
+<p><em>$n=2$ works:</em> $m=2$, $k=1$ give the square $\frac{2\cdot4-4}{4}=1$.</p><p>Suppose $\frac{n^{2k-1}m^2-2m}{n+2}=s^2$ with an integer $s\ge0$, and let $N=n^{2k-1}$, $a=n+1$, $D=a^2-1=n(n+2)$. Multiplying by $N$ and completing the square,
+\[(Nm-1)^2-D\,(n^{k-1}s)^2=1 ,\]
+so $(X,Z)=(Nm-1,\,n^{k-1}s)$ solves the Pell equation $X^2-DZ^2=1$ with $X\ge 1$, $Z\ge0$. As $D$ lies strictly between $n^2$ and $(n+1)^2$, it is not a square, and the smallest solution with $Z\ge1$ is $(a,1)$ (for $Z=1$, $X^2=a^2$). By the theory of the Pell equation, all solutions with $X,Z\ge0$ are given by $X_j+Z_j\sqrt D=(a+\sqrt D)^j$, $j\ge0$. From $(a+\sqrt D)^{j+1}+(a+\sqrt D)^{j-1}=2a(a+\sqrt D)^j$ (as $(a+\sqrt D)^2=2a(a+\sqrt D)-1$) we get
+\[X_0=1,\quad X_1=a,\quad X_{j+1}=2aX_j-X_{j-1}.\]
+Modulo $n$, $a\equiv1$, so $X_{j+1}\equiv2X_j-X_{j-1}$ with $X_0\equiv X_1\equiv1$; by induction $X_j\equiv1\pmod n$ for all $j$.</p><p>On the other hand $X=Nm-1\equiv-1\pmod n$ because $n\mid N$. Thus $1\equiv-1\pmod n$, so $n\le2$. The largest $n$ is $\boxed{2}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p17">
+<h3>Problem 3</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Number Theory &middot; LPS VII, Chapter 49: Combinatorial Number Theory and Structure &middot; Sequences with Arithmetic Constraints</div>
+<div class="ct-text"><p>An infinite sequence $a_1,a_2,\dots$ of positive integers is such that for all positive integers $n&gt;2026$ the following equality holds
+\[\left\{\frac{a_1}{a_n}\right\}+\left\{\frac{a_2}{a_n}\right\}+\dots+\left\{\frac{a_{n-1}}{a_n}\right\}=2,\]
+where $\{x\}=x-\lfloor x\rfloor$ denotes the fractional part of $x$. Let $b_k$ be the number of times $a_k$ appears in $a_1,a_2,\dots,a_k$.
+Prove that there exists a constant $M$ such that for any positive integer $k$ the following inequality holds
+\[\frac{1}{a_1\cdot 2^{b_1}}+\frac{1}{a_2\cdot 2^{b_2}}+\dots+\frac{1}{a_k\cdot 2^{b_k}}&lt;M.\]</p></div>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Few distinct values in each dyadic window)</h4>
+<p>Write $r(x,z)$ for the remainder of $x$ modulo $z$; then $\{x/z\}=r(x,z)/z$, and the condition reads
+\[\sum_{i&lt;n} r(a_i,a_n)=2a_n\qquad(n&gt;2026). \tag{1}\]</p><p><em>Reduction.</em> Let $V$ be the set of values of the sequence. If a value $v$ occurs at indices $k_1&lt;k_2&lt;\dots$, then $b_{k_j}=j$. Hence for every $K$,
+\[\sum_{k\le K}\frac{1}{a_k2^{b_k}}\le\sum_{v\in V}\frac1v\Bigl(\frac12+\frac14+\cdots\Bigr)\le\sum_{v\in V}\frac1v ,\]
+and it suffices to show that $\sum_{v\in V}\frac1v$ is finite; then $M=1+\sum_{v\in V}\frac1v$ works.</p><p><em>Lemma.</em> Let $X_0=1+\max(a_1,\dots,a_{2026})$. For every $X\ge X_0$, at most $4+\sqrt{8X}$ values of $V$ lie in $[X,2X)$.</p><p><em>Proof.</em> Let $W=V\cap[X,2X)$, assume it is non-empty, and let $z\in W$ be the value whose first occurrence, at index $n$, comes last among the first occurrences of the elements of $W$. As $z\ge X_0$, $n&gt;2026$, and every other element of $W$ occurs among $a_1,\dots,a_{n-1}$. In (1) all terms are non-negative, so the elements of $W$ alone contribute at most $2z$:</p><ul class="ct-ul"><li><p>an element $y\in W$ with $y&lt;z$ contributes $r(y,z)=y\ge X&gt;z/2$;</p></li><li><p>the elements $w\in W$ with $w&gt;z$ satisfy $z&lt;w&lt;2X\le2z$, so they contribute $w-z$; these are distinct positive integers, so if there are $q$ of them they contribute at least $1+2+\dots+q=\frac{q(q+1)}2$.</p></li></ul><p>If $p$ elements of $W$ are smaller than $z$, then $p\cdot\frac z2+\frac{q(q+1)}2\le 2z$ with strict inequality when $p\ge1$. Hence $p\le3$, and $q^2&lt;q(q+1)\le4z&lt;8X$, so $q&lt;\sqrt{8X}$. Therefore $|W|=1+p+q&lt;4+\sqrt{8X}$. $\square$</p><p><em>Conclusion.</em> Split $[X_0,\infty)$ into the windows $[2^jX_0,2^{j+1}X_0)$, $j\ge0$. Each value $v$ in the $j$-th window has $\frac1v\le\frac1{2^jX_0}$, so
+\[\sum_{v\in V,\ v\ge X_0}\frac1v\le\sum_{j\ge0}\frac{4+\sqrt{8\cdot2^jX_0}}{2^jX_0}=\frac{8}{X_0}+\sqrt{\frac{8}{X_0}}\sum_{j\ge0}\Bigl(\frac1{\sqrt2}\Bigr)^j&lt;\infty .\]
+Only finitely many values are smaller than $X_0$. So $\sum_{v\in V}\frac1v&lt;\infty$, and the required constant $M$ exists.</p>
+</div></details>
+</section>
+<h2 class="ct-group" id="test-6">Test 6</h2>
+<section class="ct-problem" id="p18">
+<h3>Problem 1</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 39: Graph Theory and Structural Combinatorics &middot; Extremal Graph Structure</div>
+<div class="ct-text"><p>Given a positive integer $n$ and a $n\times n$ board each cell of which is either dark or contains a lantern, which is directed towards one of the board's sides. If a lantern is directed towards board's side $B$, then it illuminates the cell $c$ in which it is located and all cells on the shortest path from $c$ to $B$.
+Find the minimal value of $k$ such that for any arrangement of $k$ lanterns in a table, each of them can be directed such that every cell of the board is illuminated.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$k=(n-1)^2+1=n^2-2n+2$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Hall's marriage theorem)</h4>
+<p>The answer is $\boxed{k=(n-1)^2+1}$.</p><p><em>$(n-1)^2$ lanterns are not enough.</em> Put $(n-1)^2$ lanterns in the cells of the first $n-1$ rows and first $n-1$ columns. The corner cell in row $n$ and column $n$ is dark, and only a lantern in its row or column can illuminate it; there is none. (For $k&lt;(n-1)^2$ lanterns, remove some lanterns from this arrangement.)</p><p><em>$(n-1)^2+1$ lanterns are enough.</em> For $n=1$ the single cell holds the lantern. Let $n\ge2$; then at most $n^2-(n-1)^2-1=2n-2$ cells are dark. A dark cell $c$ is illuminated if some lantern in its row or column is directed towards $c$ (it then lights all cells from itself to the border, including $c$); lantern cells are always illuminated. So it suffices to assign to every dark cell its own lantern in the same row or column (different dark cells getting different lanterns) and direct each assigned lantern towards its dark cell. By Hall's theorem such an assignment exists if every set $S$ of dark cells has at least $|S|$ lanterns in the union of the rows and columns that meet $S$.</p><p>Let $S$ meet $r$ rows and $c$ columns ($1\le r,c\le n$). Their union has $rn+cn-rc$ cells, of which at most $2n-2$ are dark; also $|S|\le\min(rc,\,2n-2)$. So it is enough to prove
+\[rn+cn-rc\ \ge\ (2n-2)+\min(rc,\,2n-2). \tag{1}\]</p><ul class="ct-ul"><li><p>If $rc\le2n-2$: (1) reads $n(r+c-2)\ge 2rc-2$. Since $2n\ge rc+2$ and $r+c\ge2$, it suffices that $(rc+2)(r+c-2)\ge4rc-4$. For $r=1$ this is $(c+2)(c-1)-4c+4=(c-1)(c-2)\ge0$; for $r=2$ it is $2c^2-6c+4=2(c-1)(c-2)\ge0$; by symmetry the same holds for $c\le2$; and for $r,c\ge3$, $(rc+2)(r+c-2)\ge rc(r+c-2)\ge 4rc$.</p></li><li><p>If $rc&gt;2n-2$: then $r,c\ge2$ (if $r=1$ then $c&gt;2n-2\ge n$, impossible). (1) reads $rn+cn-rc\ge4n-4$, i.e. $(n-r)(n-c)\le(n-2)^2$, true since $n-r,n-c\le n-2$.</p></li></ul><p>So Hall's condition holds, the assignment exists, and every arrangement of $(n-1)^2+1$ lanterns can be directed to illuminate the whole board. (Adding lanterns only helps: extra lanterns can be directed arbitrarily.)</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p19">
+<h3>Problem 2</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 27: Bijections and Structural Equivalence &middot; Explicit Bijections</div>
+<div class="ct-text"><p>Does there exist a polynomial $P(x,y,z)$ with rational coefficients such that for any positive integer $n$ there exists a unique triple of positive integers $(x,y,z)$ such that $P(x,y,z)=n$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p><strong>Yes</strong></p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Composing a pairing polynomial)</h4>
+<p><strong>Yes.</strong> First we pair positive integers. For $x,y\ge1$ put $s=x+y$ and
+\[f(x,y)=\frac{(s-1)(s-2)}2+y=\frac{(x+y-1)(x+y-2)}2+y .\]
+The pairs with sum $t$ ($t\ge2$) are $(t-1,1),\dots,(1,t-1)$, i.e. $t-1$ pairs, and there are $\sum_{t=2}^{s-1}(t-1)=\frac{(s-1)(s-2)}2$ pairs with sum less than $s$. List all pairs by increasing sum, and pairs with equal sum by increasing $y$; then $f(x,y)$ is exactly the position of $(x,y)$ in this list. Hence $f$ is a bijection from pairs of positive integers onto the positive integers.</p><p>Now let
+\[P(x,y,z)=f\bigl(f(x,y),\,z\bigr),\]
+a polynomial in $x,y,z$ with rational coefficients. For any positive integer $n$ there is exactly one pair $(u,z)$ with $f(u,z)=n$, and exactly one pair $(x,y)$ with $f(x,y)=u$; so exactly one triple of positive integers gives $P(x,y,z)=n$.</p>
+<h4>Solution 2 (Tetrahedral numbering of triples)</h4>
+<p><strong>Yes.</strong> For positive integers $x,y,z$ let $s=x+y+z$ and $u=y+z$, and put
+\[P(x,y,z)=\binom{s-1}{3}+\binom{u-1}{2}+z ,\]
+a polynomial with rational coefficients (e.g. $\binom{s-1}3=\frac{(s-1)(s-2)(s-3)}6$).</p><p>List all triples of positive integers ordered by $s$, then by $u$, then by $z$. There are $\binom{t-1}{2}$ triples with sum $t$ (stars and bars), so $\sum_{t=3}^{s-1}\binom{t-1}2=\binom{s-1}3$ triples come before all triples with sum $s$ (hockey-stick identity). Among the triples with sum $s$, those with $y+z=w$ number $w-1$ (choices of $z$), so $\sum_{w=2}^{u-1}(w-1)=\binom{u-1}2$ of them have $y+z&lt;u$. Finally, among the triples with given $s$ and $u$, the one with third coordinate $z$ is the $z$-th. Hence $P(x,y,z)$ is the position of $(x,y,z)$ in the list, and every positive integer is the position of exactly one triple.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p20">
+<h3>Problem 3</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Number Theory &middot; LPS VII, Chapter 21: Arithmetic Functions and Multiplicative Structure &middot; Euler Totient and Related Functions</div>
+<div class="ct-text"><p>Given positive integers $a$ and $b$.</p><ul class="ct-parts"><li><p><span class="ct-lbl">a)</span> Prove that the following limit exists:
+\[\lim_{n\to\infty}\frac{\sum_{k=1}^{n}\phi(ak)}{\sum_{k=1}^{n}\phi(bk)}\]</p></li><li><p><span class="ct-lbl">b)</span> Find it.</p></li></ul><p>(Here $\phi(n)$ denotes the Euler totient function.)</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\displaystyle\lim=\frac{a\prod_{p\mid a}\frac{p}{p+1}}{b\prod_{p\mid b}\frac{p}{p+1}}$ ($p$ prime)</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (An asymptotic formula through Moebius inversion)</h4>
+<p>We show that for every positive integer $a$
+\[\Phi_a(n):=\sum_{k=1}^{n}\varphi(ak)=\frac{a\,c_a}{2}\,n^2+O(n\log n),\qquad c_a=\prod_{p\mid a}\Bigl(1-\frac1p\Bigr)\prod_{p\nmid a}\Bigl(1-\frac1{p^2}\Bigr)&gt;0 , \tag{1}\]
+where the products run over primes. Then the limit exists (part a) and equals $\frac{a c_a}{b c_b}$; since $\prod_{p\nmid a}(1-p^{-2})=\prod_{p}(1-p^{-2})\big/\prod_{p\mid a}(1-p^{-2})$ and $\frac{1-1/p}{1-1/p^2}=\frac{p}{p+1}$,
+\[\lim_{n\to\infty}\frac{\Phi_a(n)}{\Phi_b(n)}=\boxed{\frac{a\prod_{p\mid a}\frac{p}{p+1}}{b\prod_{p\mid b}\frac{p}{p+1}}}\]
+(part b).</p><p><em>Proof of (1).</em> Use $\varphi(N)=\sum_{d\mid N}\mu(d)\frac Nd$ ($\mu$ the Möbius function). Then
+\[\Phi_a(n)=\sum_{k\le n}\sum_{d\mid ak}\mu(d)\frac{ak}{d}=a\sum_{d\ge1}\frac{\mu(d)}{d}\sum_{\substack{k\le n\\ d\mid ak}}k .\]
+For a given $d$ let $g=\gcd(a,d)$ and $d'=d/g$. Since $\gcd(d',a/g)=1$, $d\mid ak\iff d'\mid k$. Writing $k=d'j$, the inner sum is $d'\,T(\lfloor n/d'\rfloor)$ with $T(q)=\frac{q(q+1)}2$; it is empty unless $d'\le n$, which needs $d\le an$. For $x\ge0$ we have $\frac{x^2}2-\frac x2&lt;T(\lfloor x\rfloor)\le\frac{x^2}2+\frac x2$, so $d'T(\lfloor n/d'\rfloor)=\frac{n^2}{2d'}+E_d$ with $|E_d|\le\frac n2$. Hence
+\[\Phi_a(n)=\frac{a n^2}{2}\sum_{d\le an}\frac{\mu(d)}{d\,d'}+R,\qquad |R|\le a\sum_{d\le an}\frac{n}{2d}\le an\,(1+\ln(an)) .\]
+Since $dd'=d^2/g\ge d^2/a$, the series $\sum_{d\ge1}\frac{\mu(d)}{dd'}=\sum_{d\ge1}\frac{\mu(d)\gcd(a,d)}{d^2}$ converges absolutely, and its tail beyond $an$ is at most $a\sum_{d&gt;an}\frac1{d^2}\le\frac{a}{an}=\frac1n$, which changes $\Phi_a(n)$ by at most $\frac{an}{2}$. The function $h(d)=\frac{\mu(d)\gcd(a,d)}{d^2}$ is multiplicative, vanishes on non-squarefree $d$, and $h(p)=-\frac1p$ if $p\mid a$, $h(p)=-\frac1{p^2}$ otherwise; by the Euler product for absolutely convergent series of multiplicative functions,
+\[\sum_{d\ge1}h(d)=\prod_p\bigl(1+h(p)\bigr)=c_a ,\]
+and $c_a&gt;0$ because $\prod_p(1-p^{-2})$ converges to a positive number and the finitely many factors $1-\frac1p$ are positive. This proves (1).</p>
+</div></details>
+</section>
+{% endraw %}

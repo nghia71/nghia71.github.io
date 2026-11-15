@@ -1,0 +1,486 @@
+---
+title: Grade 9 Selection 2026, Part 2: selected problems from 2026 contests
+permalink: /contests/grade-9-2-2026
+description: Grade 9 Selection 2026, Part 2: selected problems from 2026 contests: problems with answers and solutions
+---
+{% raw %}
+<style>
+  .ct-intro { margin-bottom: 1.2em; }
+  .ct-credit { font-size: 14px; color: var(--ink-soft); border-left: 3px solid var(--gold); padding: 6px 12px; background: var(--white); margin: 1em 0; }
+  .ct-toc { display: flex; flex-wrap: wrap; gap: 6px; margin: 1em 0 1.4em; }
+  .ct-toc a { display: inline-block; min-width: 2.4em; text-align: center; padding: 4px 8px; border: 1px solid var(--rule); border-radius: 4px; background: var(--white); text-decoration: none; font-size: 14px; }
+  .ct-problem { background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 14px 18px; margin: 1.1em 0; }
+  .ct-problem h3 { margin: 0 0 .3em; font-size: 1.08rem; border-bottom: none; padding-bottom: 0; }
+  .ct-meta { font-size: 13px; color: var(--ink-soft); margin-bottom: .6em; }
+  .ct-text { font-family: Georgia, "Times New Roman", "Noto Serif", serif; font-size: 1.02em; line-height: 1.6; }
+  .ct-text p { margin: .5em 0; }
+  .ct-fig { text-align: center; margin: .8em 0; }
+  .ct-fig img { max-width: 100%; height: auto; max-height: 340px; }
+  .ct-choices { display: flex; flex-wrap: wrap; gap: 6px 22px; margin: .6em 0 .2em; }
+  .ct-choices b { margin-right: .3em; }
+  .ct-problem details { margin-top: .8em; border-top: 1px dashed var(--rule); padding-top: .5em; }
+  .ct-problem summary { cursor: pointer; font-weight: 600; color: var(--brand); font-size: 15px; }
+  .ct-problem details[open] summary { margin-bottom: .5em; }
+  .ct-sol h4 { font-size: 1rem; margin: 1em 0 .3em; color: var(--ink); }
+  .ct-answer { font-weight: 600; }
+  .ct-parts { list-style: none; padding-left: .4em; }
+  .ct-parts li { margin: .35em 0; }
+  .ct-lbl { font-weight: 700; margin-right: .3em; }
+  .ct-note { font-size: 14px; color: var(--ink-soft); font-style: italic; }
+  .ct-bar { margin: .6em 0 1em; display: flex; gap: 10px; flex-wrap: wrap; }
+  .ct-bar button { font: inherit; font-size: 14px; padding: 5px 12px; border-radius: var(--radius); border: 1px solid var(--brand); background: var(--white); color: var(--brand); cursor: pointer; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
+</style>
+<script>
+  window.MathJax = { tex: { inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [['\\[','\\]']], processEscapes: true },
+                     options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] } };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script>
+  function ctAll(open) { document.querySelectorAll('.ct-problem details').forEach(function (d) { d.open = open; }); }
+</script>
+
+<style>
+  .ct-group { font-size: 1.25rem; margin: 1.6em 0 .2em; }
+  .ct-toc-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: .3em 0; }
+  .ct-toc-g { font-size: 13px; color: var(--ink-soft); min-width: 9em; }
+  .ct-toc-wrap { margin: 1em 0 1.4em; }
+  .ct-center { text-align: center; margin: .6em 0; }
+  .ct-tablewrap { overflow-x: auto; margin: .6em 0; text-align: center; }
+  .ct-table { border-collapse: collapse; margin: 0 auto; }
+  .ct-table td { padding: 2px 9px; text-align: center; }
+  .ct-table tr.ct-hl td { border-bottom: 1px solid var(--ink-soft); }
+  .ct-table.ct-vfirst td:first-child { border-right: 1px solid var(--ink-soft); }
+  .ct-ul { padding-left: 1.4em; }
+  .ct-ul li { margin: .3em 0; }
+  .ct-text li > p:first-child { margin-top: 0; }
+  .ct-text li > p:last-child { margin-bottom: 0; }
+  .ct-text mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
+</style>
+
+<style>
+  .ct-tags { display: flex; flex-wrap: wrap; gap: 5px; margin: 0 0 .55em; }
+  .ct-tg { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .03em; padding: 2px 8px; border-radius: 999px; line-height: 1.5; }
+  .ct-lv { background: #eee7dc; color: #4a3d33; }
+  .ct-df-Starter { background: #dcf1dc; color: #245c24; }
+  .ct-df-Explorer { background: #d6efec; color: #155e57; }
+  .ct-df-Challenger { background: #dce8f7; color: #1f4c80; }
+  .ct-df-Olympiad { background: #e7defa; color: #4b2a8a; }
+  .ct-df-Advanced { background: #fbe4cc; color: #8a4a0b; }
+  .ct-df-Expert { background: #f8d6cf; color: #8c2600; }
+  .ct-band { margin: 1.3em 0 .5em; font-size: 14px; color: var(--ink-soft); }
+  .ct-band .ct-tg { font-size: 13px; margin-right: .4em; }
+  .ct-legend { font-size: 14.5px; background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 10px 16px; margin: 1em 0 1.4em; }
+  .ct-legend p { margin: .35em 0; }
+  .ct-legend ul { margin: .2em 0 .4em; padding-left: 1.1em; }
+  .ct-legend li { margin: .2em 0; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
+</style>
+{% endraw %}
+<p><a href="{{ '/contests-2026' | relative_url }}">&larr; All contests 2026</a></p>
+
+<h1>Grade 9 Selection 2026, Part 2: selected problems from 2026 contests</h1>
+
+<div class="ct-intro">
+<p>The 24 problems of the Grade 9 Selection 2026, Part 2: selected problems from 2026 contests, each with our own solutions, hidden until you open them. 17 of them ask for an answer and 7 ask for a proof. Where a problem has a final answer, it is shown separately. Try a problem first, then check.</p><p>Selected problems for grade 9 from five 2026 entrance exams for Vietnam's specialised (chuyên) high schools: Hanoi (mathematics and informatics papers), Ho Chi Minh City, KHTN Hanoi and Chuyên Sư phạm. Translated from Vietnamese; each problem names its source.</p>
+</div>
+<div class="ct-credit">Problems selected from the 2026 contests named under each problem (UKMT, CEMC, MAA, MATHCOUNTS, MIMC, SMOPS, CLMC and Vietnamese entrance exams); they belong to their publishers. Solutions written by MCC.</div>
+<div class="ct-bar"><button type="button" onclick="ctAll(true)">Show all answers and solutions</button><button type="button" onclick="ctAll(false)">Hide all</button></div>
+<div class="ct-toc-wrap"><div class="ct-toc-row"><a href="#p1">1</a><a href="#p2">2</a><a href="#p3">3</a><a href="#p4">4</a><a href="#p5">5</a><a href="#p6">6</a><a href="#p7">7</a><a href="#p8">8</a><a href="#p9">9</a><a href="#p10">10</a><a href="#p11">11</a><a href="#p12">12</a><a href="#p13">13</a><a href="#p14">14</a><a href="#p15">15</a><a href="#p16">16</a><a href="#p17">17</a><a href="#p18">18</a><a href="#p19">19</a><a href="#p20">20</a><a href="#p21">21</a><a href="#p22">22</a><a href="#p23">23</a><a href="#p24">24</a></div></div>
+
+{% raw %}
+<section class="ct-problem" id="p1">
+<h3>Problem 1</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Algebra &middot; LPS VI, Chapter 33: Radicals and Irrational Expressions &middot; Operations with Radicals</div>
+<div class="ct-text"><p>The real numbers $a,b$ satisfy $\sqrt{a+2b}+\sqrt{a-2b}=2$. Compute the value of the expression
+\[P=\left(a-1-b^2\right)^{2026}+\left(a-2-b^2\right)^{2027}.\]</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$-1$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Square twice)</h4>
+<p>Both square roots exist, so $a+2b\ge 0$ and $a-2b\ge 0$. Squaring the given equation,
+\[(a+2b)+(a-2b)+2\sqrt{(a+2b)(a-2b)}=4,\qquad\text{so}\qquad \sqrt{a^2-4b^2}=2-a .\]
+The left side is not negative, so $a\le 2$, and squaring again gives $a^2-4b^2=4-4a+a^2$, that is $4a=4+4b^2$, or
+\[a=1+b^2 .\]
+Hence $a-1-b^2=0$ and $a-2-b^2=-1$, and
+\[P=0^{2026}+(-1)^{2027}=\boxed{-1}.\]
+(Such numbers exist, for example $a=1$, $b=0$.)</p>
+<h4>Solution 2 (Name the two roots)</h4>
+<p>Put $u=\sqrt{a+2b}\ge0$ and $v=\sqrt{a-2b}\ge0$, so $u+v=2$. Also
+\[u^2-v^2=(a+2b)-(a-2b)=4b,\qquad\text{so}\qquad (u-v)(u+v)=4b\quad\text{and}\quad u-v=2b .\]
+Adding and subtracting $u+v=2$ and $u-v=2b$ gives $u=1+b$ and $v=1-b$. Then
+\[a=u^2-2b=(1+b)^2-2b=1+b^2 .\]
+So $a-1-b^2=0$ and $a-2-b^2=-1$, which gives
+\[P=0^{2026}+(-1)^{2027}=\boxed{-1}.\]</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p2">
+<h3>Problem 2</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Algebra &middot; LPS VI, Chapter 37: Polynomials and Algebraic Identities &middot; Symmetric Expressions</div>
+<div class="ct-text"><p>During a practice lesson, the teacher wrote the quadratic equation $ax^2+bx+c=0$ on the board. Two students, Hanh and Phuc, copied the equation down to solve it, but each copied it wrongly: Hanh copied the coefficient $a$ wrongly and found the two roots $4$ and $8$; Phuc copied the coefficient $c$ as its opposite number and found the two roots $-2$ and $8$. Given that Hanh and Phuc each solved the equation they had copied correctly, prove that the teacher's equation has no roots.</p></div>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Vieta for Phuc's equation)</h4>
+<p>Phuc copied only $c$ wrongly, writing $-c$, so he solved $ax^2+bx-c=0$ with the correct $a\ne0$ and $b$. Its roots are $-2$ and $8$, so by Vieta's formulas
+\[-\frac{b}{a}=-2+8=6,\qquad \frac{-c}{a}=(-2)\cdot 8=-16 .\]
+Hence $b=-6a$ and $c=16a$. The discriminant of the teacher's equation is
+\[b^2-4ac=36a^2-64a^2=-28a^2&lt;0\qquad(a\ne0),\]
+so the teacher's equation has no real roots.</p><p>(Hanh's information agrees with this: Hanh kept $b$ and $c$, and the roots $4,8$ give $c:b=32:(-12)=16:(-6)$.)</p>
+<h4>Solution 2 (Rebuild the equation from both students)</h4>
+<p>A quadratic with roots $r$ and $s$ is a non-zero multiple of $(x-r)(x-s)$.</p><p>Hanh changed only $a$, so his equation has the teacher's $b$ and $c$ and is a multiple of $(x-4)(x-8)=x^2-12x+32$. Hence $b:c=-12:32=-3:8$.</p><p>Phuc changed only $c$ (to $-c$), so his equation $ax^2+bx-c=0$ is a multiple of $(x+2)(x-8)=x^2-6x-16$. Hence $a:b=1:(-6)$.</p><p>Together $a:b:c=1:(-6):16$, so the teacher's equation is
+\[a\left(x^2-6x+16\right)=a\left((x-3)^2+7\right)=0 .\]
+Since $a\ne0$ and $(x-3)^2+7\ge 7&gt;0$ for every real $x$, the equation has no roots.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p3">
+<h3>Problem 3</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Combinatorics &middot; LPS VI, Chapter 38: Probability and Expected Value &middot; Classical Probability</div>
+<div class="ct-text"><p>A natural number less than $125$ is chosen at random. Find the probability of the event $A$: &ldquo;the chosen number can be written as the sum of two consecutive perfect squares&rdquo;.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\frac{8}{125}$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (List the sums)</h4>
+<p>There are $125$ equally likely outcomes $0,1,\dots,124$. A sum of two consecutive squares is $k^2+(k+1)^2=2k^2+2k+1$ with $k=0,1,2,\dots$, and it grows with $k$:
+\[1,\ 5,\ 13,\ 25,\ 41,\ 61,\ 85,\ 113,\ 145,\ \dots\]
+Exactly the first $8$ of these (for $k=0,\dots,7$) are less than $125$, and they are all different. So the probability is $\boxed{\dfrac{8}{125}}$.</p>
+<h4>Solution 2 (A test by odd squares)</h4>
+<p>There are $125$ equally likely outcomes $0,1,\dots,124$. If $n=k^2+(k+1)^2$ then
+\[2n-1=4k^2+4k+1=(2k+1)^2 .\]
+Conversely, if $2n-1$ is the square of an odd number $2k+1\ge1$, then $n=k^2+(k+1)^2$. So $n$ is favourable exactly when $2n-1$ is an odd perfect square.</p><p>For $1\le n\le 124$ we have $1\le 2n-1\le 247$, and the odd squares in this range are $1^2,3^2,5^2,\dots,15^2$ ($17^2=289$ is too big): $8$ of them ($n=0$ gives $2n-1=-1$, not a square). The probability is $\boxed{\dfrac{8}{125}}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p4">
+<h3>Problem 4</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Algebra &middot; LPS VI, Chapter 37: Polynomials and Algebraic Identities &middot; Special Identities</div>
+<div class="ct-text"><p>The real numbers $a,b,c$ satisfy both $a+b+c=0$ and $a^2+c^2-4bc-2b+2=0$. Find the value of $M=abc$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$-6$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (A sum of two squares)</h4>
+<p>Since $a=-(b+c)$, we have $a^2=b^2+2bc+c^2$, and the second condition becomes
+\[b^2-2bc+2c^2-2b+2=0 .\]
+The left side is a sum of two squares:
+\[(b-c-1)^2+(c-1)^2=b^2+c^2+1-2bc-2b+2c+c^2-2c+1=b^2-2bc+2c^2-2b+2 .\]
+So $(b-c-1)^2+(c-1)^2=0$, which forces $c=1$ and $b=c+1=2$. Then $a=-b-c=-3$ and
+\[M=abc=(-3)\cdot2\cdot1=\boxed{-6}.\]</p>
+<h4>Solution 2 (A quadratic in $b$)</h4>
+<p>Substitute $a=-(b+c)$ into the second condition and collect powers of $b$:
+\[b^2-2(c+1)b+\left(2c^2+2\right)=0 .\]
+For a real $b$ this quadratic needs a non-negative discriminant:
+\[\frac{\Delta}{4}=(c+1)^2-\left(2c^2+2\right)=-c^2+2c-1=-(c-1)^2\ge 0 .\]
+This holds only for $c=1$. Then $\Delta=0$ and the double root is $b=c+1=2$. Finally $a=-b-c=-3$ and $M=abc=\boxed{-6}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p5">
+<h3>Problem 5</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Number Theory &middot; LPS VI, Chapter 21: Digits, Place Value, and Decimal Structure &middot; Digit Conditions and Search</div>
+<div class="ct-text"><p>Find all natural numbers $n$ such that $n+S(n)=2026$, where $S(n)$ is the sum of the digits of $n$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$n=2021$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Remainders modulo 9)</h4>
+<p>Clearly $n&lt;2026$. Every number up to $2025$ has digit sum at most $1+9+9+9=28$, so $n=2026-S(n)\ge 1998$.</p><p>A number and its digit sum leave the same remainder on division by $9$, so $2026=n+S(n)\equiv 2n\pmod 9$. As $2026=9\cdot225+1$, we need $2n\equiv1\equiv10\pmod 9$, so $n\equiv5\pmod9$. Since $1998=9\cdot222$, the candidates between $1998$ and $2025$ are $2003$, $2012$, $2021$, and
+\[2003+5=2008,\qquad 2012+5=2017,\qquad 2021+5=2026 .\]
+So the only solution is $\boxed{n=2021}$.</p>
+<h4>Solution 2 (Write out the digits)</h4>
+<p>Clearly $n&lt;2026$, and every number up to $2025$ has digit sum at most $28$, so $n\ge 2026-28=1998$.</p><p>For $n=1998$ and $n=1999$ we get $1998+27=2025$ and $1999+28=2027$; neither works. Otherwise $n=\overline{20xy}$ with digits $x\in\{0,1,2\}$ and $y$, and
+\[n+S(n)=2000+10x+y+2+x+y=2002+11x+2y=2026,\qquad\text{so}\qquad 11x+2y=24 .\]
+Then $11x$ is even, so $x=0$ or $x=2$. For $x=0$ we would need $y=12$, not a digit; for $x=2$ we get $y=1$. So $\boxed{n=2021}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p6">
+<h3>Problem 6</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Algebra &middot; LPS VI, Chapter 45: Inequalities and Absolute Value &middot; Comparative Constraints</div>
+<div class="ct-text"><p>Let $(x_1,x_2,x_3,x_4)$ be a permutation of $(1,2,3,4)$. Find the greatest value of the expression
+\[P=\sqrt{|x_1-1|}+\sqrt{|x_2-2|}+\sqrt{|x_3-3|}+\sqrt{|x_4-4|}.\]</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$4\sqrt2$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Total displacement and Cauchy)</h4>
+<p>Let $d_i=|x_i-i|\ge0$. <em>Step 1: $d_1+d_2+d_3+d_4\le 8$.</em> Each $d_i$ is the larger of $x_i,i$ minus the smaller. Altogether the eight numbers $x_1,\dots,x_4,1,\dots,4$ are $1,1,2,2,3,3,4,4$; four of them are subtracted and four added. The sum is largest when the four largest ($4,4,3,3$) are added and the four smallest ($1,1,2,2$) subtracted, so
+\[d_1+d_2+d_3+d_4\le (4+4+3+3)-(1+1+2+2)=8 .\]
+<em>Step 2.</em> For non-negative $p,q,r,s$,
+\[\left(\sqrt p+\sqrt q+\sqrt r+\sqrt s\right)^2\le 4(p+q+r+s),\]
+because $4(p+q+r+s)$ minus the left side equals the sum of the six squares $(\sqrt p-\sqrt q)^2,\dots,(\sqrt r-\sqrt s)^2$. Hence $P^2\le 4\cdot 8=32$ and $P\le 4\sqrt2$.</p><p><em>Equality.</em> We need every $d_i=2$, that is $x_1=3$, $x_2=4$, $x_3=1$, $x_4=2$, and indeed $P=4\sqrt2$ for this permutation. The greatest value is $\boxed{4\sqrt2}$.</p>
+<h4>Solution 2 (A tangent-line bound)</h4>
+<p>Let $d_i=|x_i-i|$. For every $d\ge0$, by the AM-GM inequality,
+\[\sqrt{d}=\frac{\sqrt{2d}}{\sqrt2}\le\frac{1}{\sqrt2}\cdot\frac{d+2}{2}=\frac{d+2}{2\sqrt2},\]
+with equality only when $d=2$. Adding the four inequalities,
+\[P\le\frac{(d_1+d_2+d_3+d_4)+8}{2\sqrt2}.\]
+Now we bound $d_1+d_2+d_3+d_4$. The values $x_1,\dots,x_4$ are $1,2,3,4$ in some order. Each term is $|x_i-i|=\max(x_i,i)-\min(x_i,i)$, and among the eight numbers $x_1,\dots,x_4,1,\dots,4$ (which are $1,1,2,2,3,3,4,4$) the four maxima add up to at most $4+4+3+3=14$ and the four minima to at least $1+1+2+2=6$. So $d_1+\dots+d_4\le 8$ and
+\[P\le\frac{8+8}{2\sqrt2}=4\sqrt2 .\]
+Equality needs every $d_i=2$, which happens for $(x_1,x_2,x_3,x_4)=(3,4,1,2)$. The greatest value is $\boxed{4\sqrt2}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p7">
+<h3>Problem 7</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Geometry &middot; LPS VI, Chapter 20: Similarity and Proportional Geometry &middot; AA Similarity</div>
+<div class="ct-text"><p>Square $ABCD$ has side length $1$. A point $M$ moves on side $BC$ so that the area of triangle $ABM$ equals $x$ $\left(0&lt;x&lt;\frac12\right)$. Take the point $N$ on segment $CD$ such that $\angle AMN=90^\circ$. Find $x$ such that the area of triangle $BDN$ is as small as possible.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$x=\frac14$ (the least area is $\frac38$)</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Similar right triangles)</h4>
+<div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/grade-9-2-7_s1.svg" alt="Figure for the solution"></div>
+<p>Let $BM=m$. Then $x=[ABM]=\frac12\cdot AB\cdot BM=\frac m2$, so $m=2x$ and $0&lt;m&lt;1$; also $MC=1-m$.</p><p>The angles $\angle BAM$ and $\angle CMN$ are both equal to $90^\circ-\angle AMB$ (the first in the right triangle $ABM$, the second because $\angle AMB+\angle AMN+\angle NMC=180^\circ$ with $\angle AMN=90^\circ$). So the right triangles $ABM$ and $MCN$ are similar, and
+\[\frac{CN}{MC}=\frac{BM}{AB}\qquad\Longrightarrow\qquad CN=m(1-m).\]
+Triangle $BDN$ has base $DN=1-CN$ on line $CD$ and height $BC=1$, so
+\[[BDN]=\frac{1-m+m^2}{2}=\frac12\left(\left(m-\tfrac12\right)^2+\tfrac34\right)\ge\frac38,\]
+with equality exactly when $m=\frac12$. The area is smallest for $\boxed{x=\tfrac14}$ (and then it equals $\frac38$).</p>
+<h4>Solution 2 (Coordinates)</h4>
+<p>Put $D=(0,0)$, $C=(1,0)$, $B=(1,1)$, $A=(0,1)$. Let $BM=m$, so $M=(1,1-m)$ and $x=[ABM]=\frac m2$, that is $m=2x\in(0,1)$. Let $N=(t,0)$.</p><p>The condition $\angle AMN=90^\circ$ says the vectors $\overrightarrow{MA}=(-1,m)$ and $\overrightarrow{MN}=(t-1,m-1)$ are perpendicular:
+\[-(t-1)+m(m-1)=0\qquad\Longrightarrow\qquad t=1-m(1-m).\]
+Triangle $BDN$ has base $DN=t$ on the $x$-axis and height $1$ (the height of $B$), so $[BDN]=\frac t2$. By AM-GM, $m(1-m)\le\left(\frac{m+1-m}{2}\right)^2=\frac14$, so
+\[[BDN]=\frac{1-m(1-m)}{2}\ge\frac{1-\frac14}{2}=\frac38,\]
+with equality only when $m=1-m$, that is $m=\frac12$. Hence the area is smallest for $\boxed{x=\tfrac14}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p8">
+<h3>Problem 8</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Combinatorics &middot; LPS VI, Chapter 38: Probability and Expected Value &middot; Sample Space Modeling</div>
+<div class="ct-text"><p>A box contains $15$ cards labelled $1,2,3,\dots,14,15$. Two friends, An and Binh, each draw one card from the box in turn (An draws first, and the card is not put back). Let $a$ and $b$ be the numbers on the cards drawn by An and by Binh, respectively. Find the probability that for this pair $(a,b)$ the equation $x^2-ax+b=0$ has an integer root.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\frac{11}{105}$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Count by the two roots)</h4>
+<p>There are $15\cdot14=210$ equally likely ordered pairs $(a,b)$ with $a\ne b$.</p><p>If $r$ is an integer root, the other root is $s=a-r$, also an integer, and $r+s=a&gt;0$, $rs=b&gt;0$; so $r,s$ are positive integers. Conversely, positive integers $r\le s$ give the pair $a=r+s$, $b=rs$, and different pairs $\{r,s\}$ give different $(a,b)$ (the roots are determined by the equation). So we count $r\le s$ with $r+s\le15$, $rs\le15$ and $r+s\ne rs$:</p><ul class="ct-ul"><li><p>$r=1$: $s=1,\dots,14$ (then $a=s+1\ne s=b$): $14$ pairs.</p></li><li><p>$r=2$: $2s\le15$ gives $s\le7$; $s=2$ is excluded ($a=b=4$): $s=3,\dots,7$, $5$ pairs.</p></li><li><p>$r=3$: $3s\le15$ gives $s\in\{3,4,5\}$: $3$ pairs.</p></li><li><p>$r\ge4$: $rs\ge16$, impossible.</p></li></ul><p>That is $22$ favourable pairs, and the probability is $\dfrac{22}{210}=\boxed{\dfrac{11}{105}}$.</p>
+<h4>Solution 2 (Count by the value of $b$)</h4>
+<p>There are $15\cdot14=210$ equally likely ordered pairs $(a,b)$ with $a\ne b$.</p><p>The equation has an integer root $r$ exactly when it factors as $(x-r)(x-s)$ with integers $r,s$; then $r+s=a&gt;0$ and $rs=b&gt;0$, so $r,s$ are positive. So for each $b$ we write $b=rs$ with $1\le r\le s$; each such factorisation gives one value $a=r+s$, which must satisfy $a\le15$ and $a\ne b$:
+\[\begin{array}{c|ccccccccccccccc}
+b&amp;1&amp;2&amp;3&amp;4&amp;5&amp;6&amp;7&amp;8&amp;9&amp;10&amp;11&amp;12&amp;13&amp;14&amp;15\\\hline
+\text{good }a&amp;2&amp;3&amp;4&amp;5&amp;6&amp;7,5&amp;8&amp;9,6&amp;10,6&amp;11,7&amp;12&amp;13,8,7&amp;14&amp;15,9&amp;8
+\end{array}\]
+For $b=4$ the factorisation $2\cdot2$ gives $a=4=b$ and is dropped; for $b=15$ the factorisation $1\cdot15$ gives $a=16&gt;15$ and is dropped. The table lists $1+1+1+1+1+2+1+2+2+2+1+3+1+2+1=22$ pairs, so the probability is $\dfrac{22}{210}=\boxed{\dfrac{11}{105}}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p9">
+<h3>Problem 9</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Combinatorics &middot; LPS VI, Chapter 50: Combinatorial Geometry &middot; Incidence and Intersection Counting</div>
+<div class="ct-text"><p>There are $100$ distinct points inside a convex pentagon; together with the $5$ vertices of the pentagon they form $105$ points, no three of which are collinear. The pentagon is cut completely into triangles whose sides are segments joining two of these $105$ points, in such a way that</p><ul class="ct-parts"><li><p><span class="ct-lbl">(i)</span> no two of the segments have a common point other than their endpoints;</p></li><li><p><span class="ct-lbl">(ii)</span> no triangle contains any of the points in its interior.</p></li></ul><p>Find the number of triangles.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$203$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Add up all the angles)</h4>
+<p>Let $t$ be the number of triangles. The angles of all the triangles add up to $180^\circ\cdot t$. We add them up again, grouped by their vertex.</p><ul class="ct-ul"><li><p>An inner point is a vertex of all the triangles around it: it is not inside a triangle, and it is not inside a side either (no three points are collinear). So the triangles around it fill the full angle, and their angles there add up to $360^\circ$. Together: $100\cdot360^\circ$.</p></li><li><p>At a vertex of the pentagon, the angles of the triangles fill the angle of the pentagon. Together they give the angle sum of the pentagon, $540^\circ$.</p></li></ul><p>Hence $180t=100\cdot360+540$, so $t=200+3=\boxed{203}$.</p>
+<h4>Solution 2 (Count edges and use Euler's formula)</h4>
+<p>Let $t$ be the number of triangles and $e$ the number of segments used. No point lies inside a side of the pentagon (no three points are collinear), so the boundary consists of exactly the $5$ sides of the pentagon.</p><p><em>Counting sides of triangles.</em> Each of the $5$ boundary segments is a side of exactly one triangle, and every other segment is a side of exactly two triangles. So $3t=2(e-5)+5=2e-5$.</p><p><em>Euler's formula.</em> The drawing is a connected plane graph with $V=105$ vertices, $E=e$ edges and $F=t+1$ faces (the $t$ triangles and the outside). Euler's formula $V-E+F=2$ gives $105-e+t+1=2$, so $e=t+104$.</p><p>Substituting, $3t=2t+208-5$, so $t=\boxed{203}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p10">
+<h3>Problem 10</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Number Theory &middot; LPS VI, Chapter 19: Modular Arithmetic and Remainder Tracking &middot; Strategic Residues</div>
+<div class="ct-text"><p>The integers $a,b,c$ are such that $5a^2-bc$, $5b^2-ca$ and $5c^2-ab$ are all divisible by $8$. Prove that $abc$ is divisible by $8$.</p></div>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (One even number makes all even; all odd is impossible)</h4>
+<p><em>If one of the numbers is even, all three are even.</em> Say $a$ is even. Then $ca$ is even, and $5b^2-ca$ is divisible by $8$, so $5b^2$ is even and $b$ is even. Likewise $ab$ is even and $5c^2-ab$ is divisible by $8$, so $c$ is even. Then $abc$ is a product of three even numbers, hence divisible by $8$. (The same works if $b$ or $c$ is the even one.)</p><p><em>All three cannot be odd.</em> The square of an odd number leaves remainder $1$ on division by $8$. If $a,b,c$ were all odd, then $5a^2\equiv5\pmod 8$, so $bc\equiv5$; similarly $ca\equiv5$ and $ab\equiv5\pmod8$. Multiplying,
+\[(abc)^2=(bc)(ca)(ab)\equiv125\equiv5\pmod 8,\]
+but $(abc)^2$ is an odd square, so it is $\equiv1\pmod8$. This contradiction shows that the first case always happens, and $8\mid abc$.</p>
+<h4>Solution 2 (Subtract two conditions)</h4>
+<p><em>If one of the numbers is even, all three are even.</em> Say $a$ is even. Since $8\mid 5b^2-ca$ and $ca$ is even, $b$ is even; since $8\mid 5c^2-ab$ and $ab$ is even, $c$ is even. Then $8\mid abc$. The same holds if $b$ or $c$ is even.</p><p><em>All three cannot be odd.</em> Suppose they are. Subtracting the first two conditions,
+\[(5a^2-bc)-(5b^2-ca)=5(a^2-b^2)+c(a-b)=(a-b)\bigl(5(a+b)+c\bigr)\]
+is divisible by $8$. Here $a+b$ is even and $c$ is odd, so $5(a+b)+c$ is odd, and therefore $8\mid a-b$. In the same way $8\mid b-c$. So $b\equiv a$ and $c\equiv a\pmod 8$, and
+\[5a^2-bc\equiv5a^2-a^2=4a^2\equiv4\pmod 8\]
+because $a^2$ is odd. This contradicts $8\mid 5a^2-bc$. Hence some number is even, and $8\mid abc$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p11">
+<h3>Problem 11</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Algebra &middot; LPS VI, Chapter 33: Radicals and Irrational Expressions &middot; Operations with Radicals</div>
+<div class="ct-text"><p>The positive real numbers $x,y,z$ satisfy $x^2=y+z$.</p><ul class="ct-parts"><li><p><span class="ct-lbl">(a)</span> Prove that $\sqrt{2\left(x-\sqrt y\right)}=\sqrt{x+\sqrt z}-\sqrt{x-\sqrt z}$.</p></li><li><p><span class="ct-lbl">(b)</span> Compute
+\[T=\frac{\sqrt{x-\sqrt y}+\sqrt{x-\sqrt z}}{\sqrt{x+\sqrt y}+\sqrt{x+\sqrt z}}.\]</p></li></ul></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(a) proof; (b) $T=\sqrt2-1$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Square, then add the two versions)</h4>
+<p>Since $x^2=y+z&gt;y$ and $x&gt;0$, we have $x&gt;\sqrt y$; likewise $x&gt;\sqrt z$. So all the roots in the problem are defined.</p><p>(a) The right side $\sqrt{x+\sqrt z}-\sqrt{x-\sqrt z}$ is not negative, and its square is
+\[(x+\sqrt z)+(x-\sqrt z)-2\sqrt{x^2-z}=2x-2\sqrt y=2\left(x-\sqrt y\right),\]
+using $x^2-z=y$. The left side is the non-negative square root of the same number, so the two sides are equal.</p><p>(b) Write $p=\sqrt{x-\sqrt y}$, $q=\sqrt{x-\sqrt z}$, $p'=\sqrt{x+\sqrt y}$, $q'=\sqrt{x+\sqrt z}$. Part (a) says $\sqrt2\,p=q'-q$. The condition $x^2=y+z$ is symmetric in $y$ and $z$, so the same argument with $y,z$ exchanged gives $\sqrt2\,q=p'-p$. Adding,
+\[\sqrt2\,(p+q)=(p'+q')-(p+q),\qquad\text{so}\qquad (1+\sqrt2)(p+q)=p'+q' .\]
+Therefore
+\[T=\frac{p+q}{p'+q'}=\frac1{1+\sqrt2}=\boxed{\sqrt2-1}.\]</p>
+<h4>Solution 2 (Two new variables)</h4>
+<p>As $x^2=y+z$ exceeds both $y$ and $z$ and $x&gt;0$, we have $x&gt;\sqrt y$ and $x&gt;\sqrt z$, so every root is defined. Put
+\[s=\sqrt{x+\sqrt z},\qquad d=\sqrt{x-\sqrt z},\qquad s\ge d\ge 0 .\]
+Then $s^2+d^2=2x$ and $sd=\sqrt{x^2-z}=\sqrt y$. Hence
+\[x+\sqrt y=\frac{s^2+d^2}{2}+sd=\frac{(s+d)^2}{2},\qquad x-\sqrt y=\frac{(s-d)^2}{2},\]
+so $\sqrt{x+\sqrt y}=\dfrac{s+d}{\sqrt2}$ and $\sqrt{x-\sqrt y}=\dfrac{s-d}{\sqrt2}$.</p><p>(a) $\sqrt{2(x-\sqrt y)}=s-d=\sqrt{x+\sqrt z}-\sqrt{x-\sqrt z}$.</p><p>(b) Multiplying the numerator and the denominator of $T$ by $\sqrt2$,
+\[T=\frac{(s-d)+\sqrt2\,d}{(s+d)+\sqrt2\,s}=\frac{s+(\sqrt2-1)d}{(\sqrt2+1)s+d}.\]
+Since $(\sqrt2-1)(\sqrt2+1)=1$, the numerator is $(\sqrt2-1)\bigl((\sqrt2+1)s+d\bigr)$, and the denominator is positive. So $T=\boxed{\sqrt2-1}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p12">
+<h3>Problem 12</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Geometry &middot; LPS VI, Chapter 8: Triangle Congruence and Rigid Geometry &middot; Auxiliary Lines for Congruence</div>
+<div class="ct-text"><p>Let $ABC$ be an equilateral triangle. Take points $D$ on side $AB$, $E$ on side $AC$, and $F$ on the ray opposite to ray $BA$, such that $AD=CE=BF$. Let $G$ be the midpoint of $DE$. Prove that $\angle FGC=90^\circ$.</p></div>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Complete a parallelogram)</h4>
+<div class="ct-fig"><img style="width:304px" src="/assets/contests/2026-27/grade-9-2-12_s1.svg" alt="Figure for the solution"></div>
+<p>Let the side of the triangle be $1$ and $AD=CE=BF=t$, with $0&lt;t&lt;1$. Then $FD=FB+BA-AD=1$.</p><p>Let $F'$ be the point such that $FDF'E$ is a parallelogram: $EF'$ is parallel to $FD$ (that is, to line $AB$), has the same length $1$, and points the same way as $\overrightarrow{FD}$ (towards the side of $A$). The diagonals $DE$ and $FF'$ of the parallelogram bisect each other, so $G$ is also the midpoint of $FF'$.</p><p>Compare triangles $CBF$ and $F'EC$:</p><ul class="ct-ul"><li><p>$CB=1=F'E$ and $BF=t=EC$;</p></li><li><p>$\angle CBF=180^\circ-\angle ABC=120^\circ$; and $\angle F'EC=120^\circ$ too, because the ray $EF'$ points in the direction of $\overrightarrow{BA}$, the ray $EC$ in the direction of $\overrightarrow{AC}$, and these two directions make the angle $180^\circ-\angle BAC=120^\circ$.</p></li></ul><p>By SAS the triangles are congruent, so $CF=CF'$. In the isosceles triangle $CFF'$ the median $CG$ to the base is also an altitude, so $CG\perp FF'$, that is, $\angle FGC=90^\circ$.</p>
+<h4>Solution 2 (Coordinates and slopes)</h4>
+<p>Take side length $1$ and put $A=(0,0)$, $B=(1,0)$, $C=\left(\frac12,\frac{\sqrt3}2\right)$. Let $AD=CE=BF=t$ with $0&lt;t&lt;1$. Then $D=(t,0)$, $F=(1+t,0)$, and $E$ is on $AC$ at distance $1-t$ from $A$:
+\[E=\left(\frac{1-t}2,\ \frac{\sqrt3(1-t)}2\right),\qquad G=\frac{D+E}{2}=\left(\frac{1+t}4,\ \frac{\sqrt3(1-t)}4\right).\]
+Then
+\[\overrightarrow{GF}=\left(\frac{3(1+t)}4,\ -\frac{\sqrt3(1-t)}4\right),\qquad \overrightarrow{GC}=\left(\frac{1-t}4,\ \frac{\sqrt3(1+t)}4\right).\]
+The slopes of $GF$ and $GC$ are $-\dfrac{\sqrt3(1-t)}{3(1+t)}$ and $\dfrac{\sqrt3(1+t)}{1-t}$, and their product is $-\dfrac{3}{3}=-1$. So $GF\perp GC$, that is, $\angle FGC=90^\circ$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p13">
+<h3>Problem 13</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Number Theory &middot; LPS VI, Chapter 17: Factoring and Structural Decomposition &middot; Higher-Degree Factoring</div>
+<div class="ct-text"><p>Find all positive integers $a,b,c$ such that $ab=6c^2$ and $\dfrac{a^3+b^3+27c^3}{2}$ is a prime number.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$(a,b,c)=(2,3,1)$ and $(3,2,1)$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (The identity for $u^3+v^3+w^3-3uvw$)</h4>
+<p>Recall $u^3+v^3+w^3-3uvw=(u+v+w)(u^2+v^2+w^2-uv-vw-wu)$. Take $u=a$, $v=b$, $w=-3c$; since $9abc=54c^3$,
+\[u^3+v^3+w^3-3uvw=a^3+b^3-27c^3+9abc=a^3+b^3+27c^3 .\]
+So, with $p$ the prime in question,
+\[2p=a^3+b^3+27c^3=(a+b-3c)\,K,\qquad K=a^2+b^2+9c^2-ab+3bc+3ca .\]
+Here $K=\frac12\left[(a-b)^2+(a+3c)^2+(b+3c)^2\right]\ge\frac12(16+16)=16$, so $K&gt;2$ and $a+b-3c&gt;0$. The divisors of $2p$ are $1,2,p,2p$, and $K&gt;2$, so $a+b-3c\in\{1,2\}$; in particular $a+b\le 3c+2$.</p><p>On the other hand, by AM-GM, $a+b\ge2\sqrt{ab}=2\sqrt6\,c&gt;4.8c$. So $4.8c&lt;3c+2$, which gives $c=1$. Then $ab=6$ and $a+b\in\{4,5\}$; the factor pairs of $6$ have sums $7$ and $5$, so $\{a,b\}=\{2,3\}$. Check: $\frac{8+27+27}{2}=31$ is prime. The solutions are $\boxed{(a,b,c)=(2,3,1),\ (3,2,1)}$.</p>
+<h4>Solution 2 (Work with $s=a+b$)</h4>
+<p>Let $s=a+b$. Since $ab=6c^2$,
+\[a^3+b^3=s^3-3ab\,s=s^3-18c^2s,\qquad\text{so}\qquad a^3+b^3+27c^3=s^3-18c^2s+27c^3 .\]
+As a polynomial in $s$ this vanishes at $s=3c$ (because $27c^3-54c^3+27c^3=0$), so it has the factor $s-3c$:
+\[a^3+b^3+27c^3=(s-3c)\left(s^2+3cs-9c^2\right).\]
+By AM-GM, $s\ge2\sqrt{ab}=2\sqrt6\,c&gt;4.8c$. Hence $s-3c&gt;0$ and $s^2+3cs-9c^2&gt;(23+14-9)c^2=28c^2\ge28$.</p><p>If $p$ is the prime, then $2p=(s-3c)(s^2+3cs-9c^2)$ with the second factor larger than $2$, so the first factor is $1$ or $2$: $s\le3c+2$. With $s&gt;4.8c$ this forces $c=1$, and then $ab=6$ with $a+b\le5$, so $\{a,b\}=\{2,3\}$. Indeed $\frac{8+27+27}2=31$ is prime. The answer is $\boxed{(a,b,c)=(2,3,1),\ (3,2,1)}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p14">
+<h3>Problem 14</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Number Theory &middot; LPS VI, Chapter 22: Pigeonhole Principle and Guaranteed Existence &middot; Worst-Case Thresholds</div>
+<div class="ct-text"><p>Find the smallest positive integer $n$ with the following property: among any $n$ consecutive natural numbers there is always one whose sum of digits is divisible by $7$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$13$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Seven numbers in one block of ten)</h4>
+<p>Call a <em>decade</em> a block of ten numbers $10q,10q+1,\dots,10q+9$. Inside a decade only the last digit changes, so consecutive numbers of one decade have consecutive digit sums.</p><p><em>$n=13$ works.</em> Take $13$ consecutive numbers and let the first one end in the digit $d$. If $d\le3$, the first decade already contains at least $10-d\ge7$ of them. If $d\ge4$, the first decade contains $10-d\le6$ of them, and the remaining $13-(10-d)=3+d\ge7$ numbers start at the beginning of the next decade, so that decade contains at least $7$ of them. In either case $7$ consecutive numbers lie in one decade; their digit sums are $7$ consecutive integers, and one of these is divisible by $7$.</p><p><em>$n=12$ fails.</em> The $12$ consecutive numbers $994,995,\dots,999,1000,1001,\dots,1005$ have digit sums
+\[22,23,24,25,26,27,\quad 1,2,3,4,5,6,\]
+none of which is divisible by $7$. So the smallest $n$ is $\boxed{13}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p15">
+<h3>Problem 15</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Number Theory &middot; LPS VI, Chapter 23: Powers, Cycles, and Units Digits &middot; Periodic Powers Modulo \(m\)</div>
+<div class="ct-text"><p>Find all pairs of positive integers $(x,y)$ such that $3^x-1=2\cdot 13^y$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$(x,y)=(3,1)$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Powers of 3 modulo 13)</h4>
+<p><em>$x$ is a multiple of $3$.</em> The right side is divisible by $13$, so $3^x\equiv1\pmod{13}$. The powers $3^1,3^2,3^3,\dots$ leave the remainders $3,9,1,3,9,1,\dots$ modulo $13$, so $3\mid x$. Write $x=3t$. Since $27^t-1=(27-1)\left(27^{t-1}+\dots+27+1\right)$, the equation becomes
+\[26\left(27^{t-1}+\dots+27+1\right)=2\cdot13^y,\qquad\text{that is}\qquad 13^{y-1}=27^{t-1}+\dots+27+1 .\]
+<em>If $y=1$</em>, the right side must be $1$, so $t=1$: this gives $(x,y)=(3,1)$, and indeed $3^3-1=26=2\cdot13$.</p><p><em>If $y\ge2$</em>, the left side is divisible by $13$. As $27\equiv1\pmod{13}$, the right side is $\equiv t\pmod{13}$, so $13\mid t$ and $13\mid x$. Then $3^{13}-1$ divides $3^x-1=\left(3^{13}\right)^{x/13}-1$, hence divides $2\cdot13^y$. But $3^{13}=3\cdot(3^3)^4\equiv3\pmod{13}$, so $3^{13}-1$ is not divisible by $13$; it would then have to divide $2$, which is absurd since $3^{13}-1=1594322$.</p><p>So the only solution is $\boxed{(x,y)=(3,1)}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p16">
+<h3>Problem 16</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Number Theory &middot; LPS VI, Chapter 17: Factoring and Structural Decomposition &middot; Factoring to Solve</div>
+<div class="ct-text"><p>Find all integers $x,y$ satisfying
+\[8x^3+27y^3=18xy+4x+6y+4.\]</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$(x,y)=(1,0)$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Complete $u^3+v^3+1-3uv$)</h4>
+<p>Put $u=2x$ and $v=3y$. The equation reads $u^3+v^3=3uv+2u+2v+4$. Recall
+\[u^3+v^3+1-3uv=(u+v+1)\,K,\qquad K=u^2+v^2+1-uv-u-v=\tfrac12\left[(u-v)^2+(u-1)^2+(v-1)^2\right]\ge0 .\]
+Adding $1$ to both sides of the equation, it becomes $(u+v+1)K=2(u+v+1)+3$, that is
+\[(u+v+1)(K-2)=3 .\]
+So $u+v+1$ is a divisor of $3$. Write $s=u+v$; then $K=s^2-3uv-s+1$.</p><ul class="ct-ul"><li><p>$s+1=1$: $K=5$, so $1-3uv=5$, impossible for integers.</p></li><li><p>$s+1=3$: $K=3$, so $4-3uv-2+1=3$, $uv=0$, and $\{u,v\}=\{0,2\}$.</p></li><li><p>$s+1=-1$: $K-2=-3$, so $K=-1&lt;0$, impossible.</p></li><li><p>$s+1=-3$: $K=1$, so $16-3uv+4+1=1$, $uv=\frac{20}{3}$, impossible.</p></li></ul><p>So $(u,v)=(0,2)$ or $(2,0)$. As $v=3y$ is a multiple of $3$, only $(u,v)=(2,0)$ remains, giving $\boxed{(x,y)=(1,0)}$. Check: $8=0+4+0+4$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p17">
+<h3>Problem 17</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Number Theory &middot; LPS VI, Chapter 18: Parity, Invariants, and Monovariants &middot; Parity Arguments</div>
+<div class="ct-text"><p>Let $n$ be a positive integer for which there exist positive integers $a,b,c$ such that
+\[n=\frac{a^2+b^2+c^2+1}{abc}.\]
+Prove that $n$ is divisible by $4$ but not divisible by $8$.</p></div>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Count the odd numbers among $a,b,c$)</h4>
+<p>We have $n\cdot abc=a^2+b^2+c^2+1$. An even square is divisible by $4$, and an odd square leaves remainder $1$ on division by $8$ (and by $4$). Let $k$ be the number of odd numbers among $a,b,c$; then $a^2+b^2+c^2+1\equiv k+1\pmod 4$.</p><ul class="ct-ul"><li><p>$k=0$ or $k=2$: the right side is odd, but $abc$ is even. Impossible.</p></li><li><p>$k=1$: the right side is $\equiv2\pmod4$, but two of $a,b,c$ are even, so $4\mid abc$, and $4$ divides the left side. Impossible.</p></li></ul><p>So $k=3$: $a,b,c$ are all odd. Then $abc$ is odd and
+\[a^2+b^2+c^2+1\equiv1+1+1+1=4\pmod 8,\]
+so $a^2+b^2+c^2+1=4m$ with $m$ odd. From $n\cdot abc=4m$ with $abc$ odd (so $abc$ has no common factor with $4$), $abc$ divides $m$, and $n=4\cdot\frac{m}{abc}$ where $\frac{m}{abc}$ is odd. Hence $4\mid n$ and $8\nmid n$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p18">
+<h3>Problem 18</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Geometry &middot; LPS VI, Chapter 12: Circle Angles and Cyclic Geometry &middot; Cyclic Quadrilaterals</div>
+<div class="ct-text"><p>The acute triangle $ABC$ $(AB&lt;AC)$ is inscribed in the circle $(O)$. The internal bisector of angle $BAC$ meets the perpendicular bisector of segment $BC$ at $D$.</p><ul class="ct-parts"><li><p><span class="ct-lbl">(a)</span> Prove that $ABDC$ is a cyclic quadrilateral.</p></li><li><p><span class="ct-lbl">(b)</span> Let $M$ be the midpoint of $BC$ and $H$ the orthocentre of triangle $ABC$. Prove that the circle with centre $M$ and radius $MD$ is tangent to the circle with diameter $AH$.</p></li></ul></div>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Arc midpoint and the parallelogram $AKMO$)</h4>
+<div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/grade-9-2-18_s1.svg" alt="Figure for the solution"></div>
+<p><em>(a)</em> Let the bisector of $\angle BAC$ meet $(O)$ again at $D'$. Equal inscribed angles $\angle BAD'=\angle D'AC$ cut off equal arcs, so $D'B=D'C$ and $D'$ lies on the perpendicular bisector of $BC$. The bisector of angle $A$ and the perpendicular bisector of $BC$ are different lines (they would coincide only if $AB=AC$), so they meet in one point only; $D'$ is on both, so $D'=D$. Thus $D$ is on $(O)$, and $ABDC$ is cyclic ($D$ is the midpoint of the arc $BC$ not containing $A$).</p><p><em>(b)</em> Let $R$ be the radius of $(O)$ and $K$ the midpoint of $AH$, the centre of the circle with diameter $AH$.</p><p><em>Step 1: $AH=2\,OM$ and $AH\parallel OM$.</em> Let $AA'$ be a diameter of $(O)$. Then $A'C\perp AC$ and $BH\perp AC$, so $BH\parallel A'C$; likewise $CH\parallel A'B$. So $BHCA'$ is a parallelogram, and its diagonals bisect each other: $M$ is the midpoint of $HA'$. In triangle $AHA'$ the segment $OM$ joins the midpoints of $AA'$ and $HA'$, so $OM\parallel AH$ and $OM=\frac12AH=AK$.</p><p><em>Step 2: $KM=R$.</em> By the midline theorem in triangle $AHA'$, $\overrightarrow{OM}=\frac12\overrightarrow{AH}=\overrightarrow{AK}$: the segments $AK$ and $OM$ are equal, parallel and point the same way, so $AKMO$ is a parallelogram and $KM=AO=R$.</p><p><em>Step 3.</em> The triangle is acute, so $O$ is inside it, on the same side of $BC$ as $A$, while $D$ is on the other side. $O$, $M$, $D$ lie on the perpendicular bisector of $BC$ with $M$ between $O$ and $D$, so $MD=R-OM$. The two radii add up to
+\[MD+\tfrac12AH=(R-OM)+OM=R=KM,\]
+the distance between the centres. Hence the circle with centre $M$ and radius $MD$ and the circle with diameter $AH$ are (externally) tangent.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p19">
+<h3>Problem 19</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VI scale">H</span>Number Theory &middot; LPS VI, Chapter 39: Perfect Powers and Prime Exponents &middot; Difference of Powers in Number Theory</div>
+<div class="ct-text"><p>Let $S$ be the set of positive integers $x$ for which there exist positive integers $y$ and $m$ such that $x^2+2^m=y^2$. Find all positive integers $x$ such that both $x$ and $x+1$ belong to $S$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$x=2^k-1$ $(k\ge1)$ and $x=2^k-2$ $(k\ge2)$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Describe the set $S$ first)</h4>
+<p><em>Step 1: $x\in S$ exactly when the odd part of $x$ has the form $2^j-1$</em>, that is, $x=2^i\left(2^j-1\right)$ with $i\ge0$, $j\ge1$.</p><p>Suppose $x^2+2^m=y^2$. Then $(y-x)(y+x)=2^m$ with $y&gt;x&gt;0$, so both factors are powers of $2$: $y-x=2^u$, $y+x=2^v$, $v&gt;u$. The two factors differ by $2x$, so they have the same parity; as $2^v\ge2$ is even, $2^u$ is even too, so $u\ge1$. Then
+\[x=\frac{2^v-2^u}{2}=2^{u-1}\left(2^{v-u}-1\right).\]
+Conversely, if $x=2^i\left(2^j-1\right)$ with $i\ge0$, $j\ge1$, put $y=2^i\left(2^j+1\right)$; then $y^2-x^2=(y-x)(y+x)=2^{i+1}\cdot2^{i+j+1}=2^{2i+j+2}$, so $x\in S$ with $m=2i+j+2$.</p><p><em>Step 2.</em> One of $x$, $x+1$ is odd, and an odd number is its own odd part.</p><ul class="ct-ul"><li><p>$x$ odd: we need $x=2^k-1$ with $k\ge1$. Then $x+1=2^k=2^k\left(2^1-1\right)\in S$. So all these $x$ work.</p></li><li><p>$x$ even: we need $x+1=2^k-1$, and $x+1\ge3$ gives $k\ge2$. Then $x=2^k-2=2\left(2^{k-1}-1\right)$ with $k-1\ge1$, so $x\in S$. All these $x$ work.</p></li></ul><p>The answer is: $\boxed{x=2^k-1\ (k\ge1)\ \text{or}\ x=2^k-2\ (k\ge2)}$, that is $x=1,2,3,6,7,14,15,30,31,\dots$</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p20">
+<h3>Problem 20</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VI scale">H</span>Number Theory &middot; LPS VI, Chapter 47: Combinatorial Number Theory &middot; Residue-Class Counting</div>
+<div class="ct-text"><p>Consider a positive integer $n$ and a set $S$ of $n$ positive integers $a_1,a_2,a_3,\dots,a_n$ satisfying both of the following conditions:</p><ul class="ct-parts"><li><p><span class="ct-lbl">(i)</span> $a_1&lt;a_2&lt;a_3&lt;\dots&lt;a_n=2000$;</p></li><li><p><span class="ct-lbl">(ii)</span> for every natural number $k$ with $2\le k\le n$ there are positive integers $i,j$ smaller than $k$ (not necessarily distinct) such that $a_k=a_i+4a_j$.</p></li></ul><ul class="ct-parts"><li><p><span class="ct-lbl">1)</span> Prove that all elements of $S$ are even.</p></li><li><p><span class="ct-lbl">2)</span> Find the greatest possible value of $n$.</p></li></ul></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>1) proof; 2) $n=32$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Everything is $a_1$ times a number $\equiv1\pmod4$)</h4>
+<p><em>Key fact.</em> Every $a_k$ is a multiple of $a_1$, and $q_k=a_k/a_1$ leaves remainder $1$ on division by $4$. This holds for $k=1$ ($q_1=1$). If it holds for all indices below $k\ge2$, write $a_k=a_i+4a_j$ with $i,j&lt;k$; then
+\[a_k=a_1q_i+4a_1q_j=a_1\left(q_i+4q_j\right),\qquad q_i+4q_j\equiv q_i\equiv1\pmod 4,\]
+so it holds for $k$ as well.</p><p><em>1)</em> By the key fact every $a_k\equiv a_1\pmod 4$ (because $a_k-a_1=a_1(q_k-1)$ and $4\mid q_k-1$). In particular $a_1\equiv a_n=2000\equiv0\pmod4$, so every element of $S$ is divisible by $4$, hence even.</p><p><em>2)</em> $2000=a_1q_n$ with $q_n\equiv1\pmod4$, so $q_n$ is odd and divides $2000=2^4\cdot5^3$: $q_n\in\{1,5,25,125\}$, and $q_n\le125$. The numbers $q_1&lt;q_2&lt;\dots&lt;q_n$ are different numbers from $\{1,5,9,\dots,125\}$, which has $\frac{125-1}4+1=32$ elements. So $n\le32$.</p><p>For $n=32$ take $a_k=16(4k-3)$, $k=1,\dots,32$, that is $16,80,144,\dots,2000$. They increase, $a_{32}=16\cdot125=2000$, and $a_k=a_{k-1}+64=a_{k-1}+4a_1$ for $k\ge2$, so (ii) holds with $i=k-1$, $j=1$. The greatest value is $\boxed{n=32}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p21">
+<h3>Problem 21</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VI scale">H</span>Algebra &middot; LPS VI, Chapter 37: Polynomials and Algebraic Identities &middot; Polynomial Structure</div>
+<div class="ct-text"><p>The polynomial $P(x)$ with real coefficients has degree $30$ and at least $11$ distinct real roots. Prove that there are no two non-constant polynomials $Q(x)$ and $R(x)$ with real coefficients such that $P(x)=Q^3(x)+R^3(x)$ for all $x\in\mathbb R$.</p></div>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Factor the sum of cubes and compare degrees)</h4>
+<p>Suppose $P=Q^3+R^3$ with non-constant real polynomials $Q,R$ of degrees $q,r\ge1$. Then
+\[P=(Q+R)\left(Q^2-QR+R^2\right).\]
+<em>Real roots.</em> Since $Q^2-QR+R^2=\left(Q-\frac R2\right)^2+\frac34R^2$, at a real number $t$ it vanishes only if $Q(t)=R(t)=0$, and then $(Q+R)(t)=0$ too. So every real root of $P$ is a root of $Q+R$. The polynomial $Q+R$ is not the zero polynomial (otherwise $P=0$), so $P$ has at most $\deg(Q+R)$ distinct real roots (none if $Q+R$ is a non-zero constant). It remains to show $\deg(Q+R)\le10$.</p><p><em>Case $q\ne r$</em>, say $q&gt;r$. Then $Q^3+R^3$ has degree $3q$, so $3q=30$, $q=10$, and $\deg(Q+R)=10$.</p><p><em>Case $q=r$.</em> Let $\alpha,\beta\ne0$ be the leading coefficients of $Q,R$. The coefficient of $x^{2q}$ in $Q^2-QR+R^2$ is $\alpha^2-\alpha\beta+\beta^2=\left(\alpha-\frac\beta2\right)^2+\frac34\beta^2&gt;0$, so this factor has degree $2q$. Comparing degrees, $30=\deg(Q+R)+2q$. Since $\deg(Q+R)\le q$, we get $30\le3q$, so $q\ge10$ and $\deg(Q+R)=30-2q\le10$.</p><p>In both cases $P$ has at most $10$ distinct real roots, contradicting the assumption of at least $11$. So no such $Q,R$ exist.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p22">
+<h3>Problem 22</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VI scale">H</span>Combinatorics &middot; LPS VI, Chapter 22: Pigeonhole Principle and Guaranteed Existence &middot; Worst-Case Thresholds</div>
+<div class="ct-text"><p>For each positive integer $n$ $(n\le 99)$, consider $100$ positive integers $a_1,a_2,\dots,a_{100}$ satisfying both conditions:</p><ul class="ct-parts"><li><p><span class="ct-lbl">(i)</span> $1&lt;a_1&lt;a_2&lt;a_3&lt;\dots&lt;a_{100}$;</p></li><li><p><span class="ct-lbl">(ii)</span> for all $1\le j&lt;i\le 100$, $a_i-a_j\ne n$.</p></li></ul><ul class="ct-parts"><li><p><span class="ct-lbl">1)</span> When $n=2$, prove that $a_3-a_1\ge 4$.</p></li><li><p><span class="ct-lbl">2)</span> Find all values of $n$ for which $a_{100}$ is as small as possible.</p></li></ul></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>1) proof; 2) $n=50$ (the least $a_{100}$ is $151$)</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Blocks of $2n$ consecutive integers)</h4>
+<p><em>1)</em> Here $a_3-a_1\ge2$ and $a_3-a_1\ne2$. If $a_3-a_1=3$, then $a_2$ is $a_1+1$ or $a_1+2$; but $a_2-a_1=2$ is forbidden, and $a_2=a_1+1$ gives $a_3-a_2=2$, also forbidden. Hence $a_3-a_1\ge4$.</p><p><em>2) A block lemma.</em> Among $2n$ consecutive integers $c,c+1,\dots,c+2n-1$ at most $n$ can be chosen: they split into the $n$ pairs $\{c+i,\,c+i+n\}$ ($0\le i\le n-1$), and from each pair at most one number is chosen.</p><p>All $a_i$ lie among the $N=a_{100}-1$ consecutive integers $2,3,\dots,a_{100}$. Write $N=2nq+r$ with $0\le r&lt;2n$ and cut these integers into $q$ blocks of length $2n$ and one block of length $r$. The last block contains at most $\min(r,n)$ chosen numbers (at most $r$ because it has $r$ numbers, at most $n$ by the pairing). So
+\[100\le qn+\min(r,n).\]
+<em>Case $r&lt;n$.</em> Then $100\le qn+r$, and $q\ge1$ (else $100\le r&lt;n\le99$). If $n\le50$: $N=2(qn+r)-r\ge200-(n-1)\ge151$. If $n\ge51$: $N=(qn+r)+qn\ge100+n\ge151$.</p><p><em>Case $r\ge n$.</em> Then $100\le(q+1)n$, and $q\ge1$ (else $100\le n$). Also $N\ge2qn+n=(2q+1)n$. If $q=1$: $2n\ge100$, so $N\ge3n\ge150$, with equality only for $n=50$. If $q\ge2$: $N\ge(2q+1)n\ge\frac{(2q+1)\cdot100}{q+1}\ge\frac{500}{3}&gt;150$.</p><p>So always $N\ge150$, that is $a_{100}\ge151$, and $a_{100}=151$ is possible only for $n=50$. For $n=50$ it is attained by $2,3,\dots,51,\ 102,103,\dots,151$: two numbers from the same group differ by at most $49$, and two numbers from different groups differ by at least $102-51=51$. So $a_{100}$ is smallest exactly for $\boxed{n=50}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p23">
+<h3>Problem 23</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VI scale">H</span>Algebra &middot; LPS VI, Chapter 49: Systems of Equations and Multiple Constraints &middot; Partial Totals and Cyclic Sums</div>
+<div class="ct-text"><p>For real numbers $y_1,y_2,\dots,y_6$, find the greatest value of the expression
+\[M=\sum_{i=1}^{6}\left(\frac{2y_i}{1+y_i^2}\right)^2\left(\frac{2y_{i+1}}{1+y_{i+1}^2}-\frac{2y_{i-1}}{1+y_{i-1}^2}\right),\]
+where $y_0=y_6$ and $y_7=y_1$. (Here $\sum_{i=1}^{n}a_i$ denotes $a_1+a_2+\dots+a_n$.)</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$4$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Differences of neighbours)</h4>
+<p>Put $t_i=\dfrac{2y_i}{1+y_i^2}$. Since $1+y_i^2\ge2|y_i|$, each $t_i$ lies in $[-1,1]$; indices are taken around the cycle ($t_0=t_6$, $t_7=t_1$).</p><p><em>Rewrite $M$.</em> Shifting the index in the second half of the sum, $\sum t_i^2t_{i-1}=\sum t_{i+1}^2t_i$, so
+\[M=\sum_{i=1}^6\left(t_i^2t_{i+1}-t_it_{i+1}^2\right)=\sum_{i=1}^6 t_it_{i+1}\left(t_i-t_{i+1}\right).\]
+From $(u-v)^3=u^3-v^3-3uv(u-v)$ we get $uv(u-v)=\frac13\left(u^3-v^3-(u-v)^3\right)$. Around the cycle the terms $t_i^3-t_{i+1}^3$ cancel, so with $z_i=t_i-t_{i+1}$:
+\[M=-\frac13\left(z_1^3+z_2^3+\dots+z_6^3\right),\qquad z_1+\dots+z_6=0,\qquad -2\le z_i\le2 .\]
+<em>Bound.</em> For $z\ge-2$ we have $z^3-3z+2=(z-1)^2(z+2)\ge0$, so $z^3\ge3z-2$. Adding over $i$,
+\[z_1^3+\dots+z_6^3\ge3(z_1+\dots+z_6)-12=-12,\qquad\text{so}\qquad M\le4 .\]
+<em>Equality.</em> We need each $z_i\in\{1,-2\}$ with sum $0$, for example $(t_1,\dots,t_6)=(1,0,-1,1,0,-1)$, which comes from $(y_1,\dots,y_6)=(1,0,-1,1,0,-1)$. Directly: $M=1\cdot(0-(-1))+0+1\cdot(1-0)+1\cdot(0-(-1))+0+1\cdot(1-0)=4$. The greatest value is $\boxed{4}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p24">
+<h3>Problem 24</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VI scale">H</span>Geometry &middot; LPS VI, Chapter 12: Circle Angles and Cyclic Geometry &middot; Arcs, Central Angles, and Inscribed Angles</div>
+<div class="ct-text"><p>Triangle $ABC$ is inscribed in the circle $(O)$. The circle $(O')$ is tangent to the sides $AB$ and $BC$ at $N$ and $E$, respectively, and is internally tangent to the circle $(O)$ at the point $M$. The lines $MN$ and $ME$ meet the circle $(O)$ again at $S$ and $T$, respectively.</p><ul class="ct-parts"><li><p><span class="ct-lbl">(a)</span> Prove that the line $ST$ is parallel to the line $NE$.</p></li><li><p><span class="ct-lbl">(b)</span> Let $P$ and $Q$ be the points where $ST$ meets the sides $AB$ and $BC$, respectively. Prove that $BP^2=BQ^2=TQ\cdot PS$.</p></li><li><p><span class="ct-lbl">(c)</span> Let $I$ be the incentre of triangle $ABC$. Prove that the quadrilateral $IPBQ$ is a rhombus.</p></li></ul></div>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Homothety at $M$ and two pairs of similar triangles)</h4>
+<div class="ct-fig"><img style="width:226px" src="/assets/contests/2026-27/grade-9-2-24_s1.svg" alt="Figure for the solution"></div>
+<p><em>(a)</em> The two circles touch at $M$, so their centres $O'$, $O$ and $M$ are collinear. The triangles $O'MN$ and $OMS$ are isosceles ($O'M=O'N$, $OM=OS$) and share the base angle at $M$, so $\angle O'NM=\angle OSM$ and $O'N\parallel OS$. As $O'N\perp AB$, also $OS\perp AB$: $S$ is the midpoint of an arc $AB$, and $SA=SB$. In the same way $OT\perp BC$ and $TB=TC$. Moreover $\frac{MN}{MS}=\frac{MO'}{MO}=\frac{ME}{MT}$, so by the converse of Thales' theorem in triangle $MST$, $NE\parallel ST$.</p><p><em>Where the points are.</em> The circle $(O')$ touches $AB$ and contains the point $E\ne B$ of side $BC$, so it lies, together with $O'$, on the same side of $AB$ as $C$. As $O'$ lies on the segment $MO$ and $N$ on the segment $MS$, triangle $MOS$ is triangle $MO'N$ enlarged from $M$, so $\overrightarrow{OS}$ points the same way as $\overrightarrow{O'N}$: perpendicular to $AB$ and away from the side of $C$. So $S$ is the point of $(O)$ farthest from line $AB$ on the side opposite to $C$: the midpoint of the arc $AB$ not containing $C$. In the same way $T$ is the midpoint of the arc $BC$ not containing $A$. Hence the points lie on $(O)$ in the order $A,S,B,T,C$. As $A$ and $B$ separate $S$ from $T$ on the circle, the chords $AB$ and $ST$ cross, so $P$ lies inside both segments $AB$ and $ST$; likewise $Q$ lies inside $BC$ and $ST$. Finally, the segment $PQ$ lies inside the angle $ABC$, while $S$ is on the other side of $AB$ and $T$ on the other side of $BC$; so on the chord the order is $S,P,Q,T$.</p><p><em>(b)</em> The tangent segments from $B$ to $(O')$ are equal: $BN=BE$. Since $PQ\parallel NE$, triangle $BPQ$ is an enlargement of the isosceles triangle $BNE$ from $B$, so $BP=BQ$ and $\angle BPQ=\angle BQP$.</p><p>Compare triangles $SPB$ and $BQT$. Their angles at $P$ and $Q$ are $180^\circ-\angle BPQ$ and $180^\circ-\angle BQP$, which are equal. Also $\angle PSB=\angle TSB$ and $\angle QBT=\angle CBT$ are inscribed angles on the equal arcs $TB$ and $TC$, so they are equal. Hence $\triangle SPB\sim\triangle BQT$, and
+\[\frac{SP}{BQ}=\frac{PB}{QT}\qquad\Longrightarrow\qquad TQ\cdot PS=BP\cdot BQ=BP^2=BQ^2 .\]</p><p><em>(c)</em> As $S$ and $T$ are arc midpoints, $CS$ and $AT$ bisect the angles $C$ and $A$, so they pass through $I$.</p><p><em>$SI=SB$.</em> The angle $\angle SBI=\angle SBA+\angle ABI=\angle SCA+\frac{\angle B}{2}=\frac{\angle C}2+\frac{\angle B}2$, and $\angle SIB$, an exterior angle of triangle $IBC$, equals $\frac{\angle B}2+\frac{\angle C}2$. So triangle $SBI$ is isosceles with $SI=SB$.</p><p><em>$SB^2=SP\cdot ST$.</em> $\angle SBP=\angle SBA$ and $\angle STB$ are inscribed angles on the equal arcs $SA$ and $SB$, so triangles $SBP$ and $STB$ (common angle at $S$) are similar, and $SB^2=SP\cdot ST$.</p><p>So $SI^2=SP\cdot ST$, hence $\frac{SI}{SP}=\frac{ST}{SI}$, and triangles $SIP$ and $STI$ (common angle at $S$) are similar. Therefore
+\[\angle SIP=\angle STI=\angle STA=\angle SCA=\angle SCB,\]
+using inscribed angles on arc $SA$ and the bisector $CS$. The line $SC$ meets the chord $ST$ only at $S$, so $P$ is on the same side of $SC$ as $T$, which is the side of $B$ (by the order $A,S,B,T,C$). Since $S,I,C$ are collinear ($I$ between $S$ and $C$) and $P,B$ lie on the same side of $SC$, the equal corresponding angles give $IP\parallel BC$.</p><p>The same argument at $T$ ($TI=TB$, $TB^2=TQ\cdot TS$, so $\angle TIQ=\angle TSI=\angle TSC=\angle TAC=\angle TAB$) gives $IQ\parallel AB$. So $IPBQ$ is a parallelogram, and since $BP=BQ$ by (b), it is a rhombus.</p>
+</div></details>
+</section>
+{% endraw %}

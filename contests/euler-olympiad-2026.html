@@ -1,0 +1,336 @@
+---
+title: Euler Olympiad 2026 (Georgia, Free University of Tbilisi), Rounds 1 and 2
+permalink: /contests/euler-olympiad-2026
+description: Euler Olympiad 2026 (Georgia, Free University of Tbilisi), Rounds 1 and 2: problems with answers and solutions
+---
+{% raw %}
+<style>
+  .ct-intro { margin-bottom: 1.2em; }
+  .ct-credit { font-size: 14px; color: var(--ink-soft); border-left: 3px solid var(--gold); padding: 6px 12px; background: var(--white); margin: 1em 0; }
+  .ct-toc { display: flex; flex-wrap: wrap; gap: 6px; margin: 1em 0 1.4em; }
+  .ct-toc a { display: inline-block; min-width: 2.4em; text-align: center; padding: 4px 8px; border: 1px solid var(--rule); border-radius: 4px; background: var(--white); text-decoration: none; font-size: 14px; }
+  .ct-problem { background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 14px 18px; margin: 1.1em 0; }
+  .ct-problem h3 { margin: 0 0 .3em; font-size: 1.08rem; border-bottom: none; padding-bottom: 0; }
+  .ct-meta { font-size: 13px; color: var(--ink-soft); margin-bottom: .6em; }
+  .ct-text { font-family: Georgia, "Times New Roman", "Noto Serif", serif; font-size: 1.02em; line-height: 1.6; }
+  .ct-text p { margin: .5em 0; }
+  .ct-fig { text-align: center; margin: .8em 0; }
+  .ct-fig img { max-width: 100%; height: auto; max-height: 340px; }
+  .ct-choices { display: flex; flex-wrap: wrap; gap: 6px 22px; margin: .6em 0 .2em; }
+  .ct-choices b { margin-right: .3em; }
+  .ct-problem details { margin-top: .8em; border-top: 1px dashed var(--rule); padding-top: .5em; }
+  .ct-problem summary { cursor: pointer; font-weight: 600; color: var(--brand); font-size: 15px; }
+  .ct-problem details[open] summary { margin-bottom: .5em; }
+  .ct-sol h4 { font-size: 1rem; margin: 1em 0 .3em; color: var(--ink); }
+  .ct-answer { font-weight: 600; }
+  .ct-parts { list-style: none; padding-left: .4em; }
+  .ct-parts li { margin: .35em 0; }
+  .ct-lbl { font-weight: 700; margin-right: .3em; }
+  .ct-note { font-size: 14px; color: var(--ink-soft); font-style: italic; }
+  .ct-bar { margin: .6em 0 1em; display: flex; gap: 10px; flex-wrap: wrap; }
+  .ct-bar button { font: inherit; font-size: 14px; padding: 5px 12px; border-radius: var(--radius); border: 1px solid var(--brand); background: var(--white); color: var(--brand); cursor: pointer; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
+</style>
+<script>
+  window.MathJax = { tex: { inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [['\\[','\\]']], processEscapes: true },
+                     options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] } };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script>
+  function ctAll(open) { document.querySelectorAll('.ct-problem details').forEach(function (d) { d.open = open; }); }
+</script>
+
+<style>
+  .ct-group { font-size: 1.25rem; margin: 1.6em 0 .2em; }
+  .ct-toc-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: .3em 0; }
+  .ct-toc-g { font-size: 13px; color: var(--ink-soft); min-width: 9em; }
+  .ct-toc-wrap { margin: 1em 0 1.4em; }
+  .ct-center { text-align: center; margin: .6em 0; }
+  .ct-tablewrap { overflow-x: auto; margin: .6em 0; text-align: center; }
+  .ct-table { border-collapse: collapse; margin: 0 auto; }
+  .ct-table td { padding: 2px 9px; text-align: center; }
+  .ct-table tr.ct-hl td { border-bottom: 1px solid var(--ink-soft); }
+  .ct-table.ct-vfirst td:first-child { border-right: 1px solid var(--ink-soft); }
+  .ct-ul { padding-left: 1.4em; }
+  .ct-ul li { margin: .3em 0; }
+  .ct-text li > p:first-child { margin-top: 0; }
+  .ct-text li > p:last-child { margin-bottom: 0; }
+  .ct-text mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
+</style>
+
+<style>
+  .ct-tags { display: flex; flex-wrap: wrap; gap: 5px; margin: 0 0 .55em; }
+  .ct-tg { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .03em; padding: 2px 8px; border-radius: 999px; line-height: 1.5; }
+  .ct-lv { background: #eee7dc; color: #4a3d33; }
+  .ct-df-Starter { background: #dcf1dc; color: #245c24; }
+  .ct-df-Explorer { background: #d6efec; color: #155e57; }
+  .ct-df-Challenger { background: #dce8f7; color: #1f4c80; }
+  .ct-df-Olympiad { background: #e7defa; color: #4b2a8a; }
+  .ct-df-Advanced { background: #fbe4cc; color: #8a4a0b; }
+  .ct-df-Expert { background: #f8d6cf; color: #8c2600; }
+  .ct-band { margin: 1.3em 0 .5em; font-size: 14px; color: var(--ink-soft); }
+  .ct-band .ct-tg { font-size: 13px; margin-right: .4em; }
+  .ct-legend { font-size: 14.5px; background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 10px 16px; margin: 1em 0 1.4em; }
+  .ct-legend p { margin: .35em 0; }
+  .ct-legend ul { margin: .2em 0 .4em; padding-left: 1.1em; }
+  .ct-legend li { margin: .2em 0; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
+</style>
+{% endraw %}
+<p><a href="{{ '/contests-2026' | relative_url }}">&larr; All contests 2026</a></p>
+
+<h1>Euler Olympiad 2026 (Georgia, Free University of Tbilisi), Rounds 1 and 2</h1>
+
+<div class="ct-intro">
+<p>The 16 problems of the Euler Olympiad 2026 (Georgia, Free University of Tbilisi), Rounds 1 and 2, each with our own solutions, hidden until you open them. 11 of them ask for an answer and 5 ask for a proof. Where a problem has a final answer, it is shown separately. Try a problem first, then check.</p><p>Georgian olympiad for grades IX-XII. Round 1: Session 1 = Problems 1-5, Session 2 (March 29, 2026) = Problems 6-10. Round 2: Session 1 = Problems 1-3, Session 2 = Problems 4-6.</p>
+</div>
+<div class="ct-credit">Problems: Euler Olympiad 2026 (Georgia, Free University of Tbilisi), Rounds 1 and 2, from the AoPS contest collection or the official paper. Solutions written by MCC.</div>
+<div class="ct-bar"><button type="button" onclick="ctAll(true)">Show all answers and solutions</button><button type="button" onclick="ctAll(false)">Hide all</button></div>
+<div class="ct-toc-wrap"><div class="ct-toc-row"><span class="ct-toc-g">Round 1</span><a href="#p1">1</a><a href="#p2">2</a><a href="#p3">3</a><a href="#p4">4</a><a href="#p5">5</a><a href="#p6">6</a><a href="#p7">7</a><a href="#p8">8</a><a href="#p9">9</a><a href="#p10">10</a></div><div class="ct-toc-row"><span class="ct-toc-g">Round 2</span><a href="#p11">1</a><a href="#p12">2</a><a href="#p13">3</a><a href="#p14">4</a><a href="#p15">5</a><a href="#p16">6</a></div></div>
+
+{% raw %}
+<h2 class="ct-group" id="round-1">Round 1</h2>
+<section class="ct-problem" id="p1">
+<h3>Problem 1</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VII scale">E</span>Combinatorics &middot; LPS VII, Chapter 2: Fundamental Counting and Structured Enumeration &middot; Constraint-Based Enumeration</div>
+<div class="ct-text"><p>Leonard wrote a number in each square of an $8\times8$ chessboard. The number in each square is the minimum number of knight moves required to reach square $a1$ from that square (see the picture). For example, he wrote $0$ in square $a1$, $2$ in square $b4$, $3$ in square $d1$, and so on. Find the sum of the numbers written in all the squares of the board.</p><div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/euler-olympiad-1.svg" alt="Figure for Round 1, Problem 1"></div></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$220$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Breadth-first labelling)</h4>
+<div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/euler-olympiad-1_s1.svg" alt="Figure for the solution"></div>
+<p>Label the squares layer by layer. Square $a1$ gets $0$. If all squares with labels $0,1,\dots,k$ are known, every still unlabelled square that a knight can reach in one move from a square labelled $k$ gets label $k+1$. A square gets label $k+1$ exactly when it can be reached in $k+1$ moves but not in fewer, so the labels are the required minimum numbers of moves. Carrying this out gives the board in the figure.</p><p>As a check, a knight move always changes the colour of the square, so each label has the parity of the colour (even on the dark squares, like $a1$), which the table respects; and the examples $b4\mapsto2$, $d1\mapsto3$ agree.</p><p>Counting the labels: one $0$, two $1$'s, nine $2$'s, twenty $3$'s, twenty-one $4$'s, ten $5$'s and one $6$ (square $h8$). The sum is
+\[0+2\cdot1+9\cdot2+20\cdot3+21\cdot4+10\cdot5+1\cdot6=\boxed{220}.\]</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p2">
+<h3>Problem 2</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 32: Trigonometric Geometry and Metric Conversion &middot; Law of Sines and Law of Cosines</div>
+<div class="ct-text"><p>Let $ABCD$ be a quadrilateral such that $\angle ABD=20^\circ$, $\angle ADB=26^\circ$, $\angle BCA=13^\circ$, and $\angle DCA=10^\circ$. Find the acute angle between the diagonals $AC$ and $BD$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$87^\circ$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Law of sines on three triangles)</h4>
+<div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/euler-olympiad-2_s1.svg" alt="Figure for the solution"></div>
+<p>Take $ABCD$ convex, so that each diagonal lies inside the angles at its ends. In triangle $ABD$, $\angle BAD=180^\circ-20^\circ-26^\circ=134^\circ$. Let $x=\angle BAC$; then $\angle CAD=134^\circ-x$, with $0&lt;x&lt;134^\circ$.</p><p>In triangle $ABC$, $\angle ABC=180^\circ-x-13^\circ$, so by the law of sines $AB=\dfrac{AC\sin13^\circ}{\sin(13^\circ+x)}$. In triangle $ADC$, $\angle ADC=180^\circ-(134^\circ-x)-10^\circ=36^\circ+x$, so $AD=\dfrac{AC\sin10^\circ}{\sin(36^\circ+x)}$. In triangle $ABD$, $\dfrac{AB}{AD}=\dfrac{\sin26^\circ}{\sin20^\circ}=\dfrac{2\sin13^\circ\cos13^\circ}{2\sin10^\circ\cos10^\circ}$. Comparing the two expressions for $AB/AD$:
+\[\frac{\sin13^\circ\,\sin(36^\circ+x)}{\sin10^\circ\,\sin(13^\circ+x)}=\frac{\sin13^\circ\cos13^\circ}{\sin10^\circ\cos10^\circ}\iff \sin(36^\circ+x)\cos10^\circ=\sin(13^\circ+x)\cos13^\circ .\]
+By the product-to-sum formula this reads
+\[\tfrac12\bigl(\sin(46^\circ+x)+\sin(26^\circ+x)\bigr)=\tfrac12\bigl(\sin(26^\circ+x)+\sin x\bigr),\qquad\text{i.e.}\qquad \sin(46^\circ+x)=\sin x .\]
+For $0&lt;x&lt;134^\circ$ this forces $46^\circ+x=180^\circ-x$, so $x=67^\circ$.</p><p>If the diagonals meet at $E$, then in triangle $ABE$: $\angle AEB=180^\circ-20^\circ-67^\circ=93^\circ$. The acute angle between the diagonals is $\boxed{87^\circ}$.</p><p>(Check: $\angle CBD=180^\circ-67^\circ-13^\circ-20^\circ=80^\circ$ and $\angle CDB=36^\circ+67^\circ-26^\circ=77^\circ$, and indeed $80^\circ+77^\circ+23^\circ=180^\circ$ in triangle $BCD$.)</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p3">
+<h3>Problem 3</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VII scale">E</span>Number Theory &middot; LPS VII, Chapter 25: Diophantine Equations: Factorization and Algebraic Methods &middot; Bounding and Size Arguments</div>
+<div class="ct-text"><p>Find all integers $N$ for which the equation
+\[\sqrt{x^2+x+3}+\sqrt{y^x+7xy+x+y}=x+y+N\]
+has a solution in positive integers.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$N\in\{5,8\}$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Both radicals must be integers)</h4>
+<p>Let $m=x^2+x+3$ and $n=y^x+7xy+x+y$ (positive integers) and $k=x+y+N$, so $\sqrt m+\sqrt n=k$; here $k&gt;0$. Then $\sqrt n=k-\sqrt m$, and squaring, $\sqrt m=\dfrac{k^2+m-n}{2k}$ is rational. The square root of a positive integer is rational only if it is an integer, so $m$ is a perfect square, and then so is $n$.</p><p><em>The first radical.</em> $x^2&lt;x^2+x+3&lt;(x+2)^2$, so $x^2+x+3=(x+1)^2$, i.e. $x=2$, and $\sqrt m=3$.</p><p><em>The second radical.</em> With $x=2$, $n=y^2+15y+2$. As $n&gt;y^2$, write $n=(y+t)^2$ with $t\ge1$: then $y(15-2t)=t^2-2$, so $t\le7$. Trying $t=1,\dots,7$: $13y=-1$, $11y=2$, $9y=7$, $7y=14$, $5y=23$, $3y=34$, $y=47$. So $y=2$ ($t=4$, $n=36$) or $y=47$ ($t=7$, $n=2916=54^2$).</p><p><em>The values of $N$.</em> For $(x,y)=(2,2)$: $3+6=4+N$, $N=5$. For $(x,y)=(2,47)$: $3+54=49+N$, $N=8$. So $N\in\boxed{\{5,8\}}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p4">
+<h3>Problem 4</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VII scale">E</span>Geometry &middot; LPS VII, Chapter 36: Coordinate Geometry and Analytic Representation &middot; Cartesian Coordinate Setup</div>
+<div class="ct-text"><p>Let $C$ be the midpoint of segment $AB$, and let $D$ be the midpoint of segment $AC$. Squares are constructed on segments $AD$ and $DB$ on the same side of line $AB$. Additionally, squares are constructed on segments $AC$ and $CB$ on the opposite side of line $AB$ (see the figure). Find the area of the quadrilateral formed by the centers of these four squares, given that $AB=1$.</p><div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/euler-olympiad-4.svg" alt="Figure for Round 1, Problem 4"></div></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\dfrac{17}{64}$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Coordinates of the four centers)</h4>
+<p>Put $A=(0,0)$, $B=(1,0)$; then $D=(\frac14,0)$ and $C=(\frac12,0)$. The center of a square on a horizontal segment is above or below its midpoint by half the side. With the first two squares above $AB$ and the other two below:
+\[O_1=\Bigl(\tfrac18,\tfrac18\Bigr)\ (\text{on }AD),\quad O_2=\Bigl(\tfrac58,\tfrac38\Bigr)\ (\text{on }DB),\quad O_3=\Bigl(\tfrac34,-\tfrac14\Bigr)\ (\text{on }CB),\quad O_4=\Bigl(\tfrac14,-\tfrac14\Bigr)\ (\text{on }AC).\]
+The quadrilateral $O_1O_2O_3O_4$ is convex, and its diagonals are
+\[\overrightarrow{O_1O_3}=\Bigl(\tfrac58,-\tfrac38\Bigr),\qquad \overrightarrow{O_2O_4}=\Bigl(-\tfrac38,-\tfrac58\Bigr).\]
+They are perpendicular (dot product $-\frac{15}{64}+\frac{15}{64}=0$) and of equal length $\frac{\sqrt{34}}8$. The area of a convex quadrilateral with perpendicular diagonals is half the product of the diagonals, so the area is
+\[\frac12\cdot\frac{34}{64}=\boxed{\frac{17}{64}}.\]
+(The shoelace formula gives the same value.)</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p5">
+<h3>Problem 5</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 12: Exponential Congruences and Order Structure &middot; Orders and Primitive Behavior</div>
+<div class="ct-text"><p>Leonard started working in a library. He was assigned a shelf containing $2026$ books. He decided to change the order of the books every day according to a specific rule. If we number the books consecutively as $1,2,3,\dots,2026$, then on the first day, he rearranges them into the following order:
+\[2026,\ 1,\ 2025,\ 2,\ 2024,\ 3,\ 2023,\ 4,\ \dots,\ 1015,\ 1012,\ 1014,\ 1013.\]
+He continues to rearrange the books using this same principle every day. Determine the first day at the end of which Leonard will obtain the books in the same order as they were initially.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>day $96$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Positions modulo 4053)</h4>
+<p>In the first day's order, book $j$ (for $j\le1013$) stands in position $2j$, and book $2027-j$ in position $2j-1$. So the book that stands in position $k$ is moved to position
+\[\sigma(k)=\begin{cases}2k,&amp; k\le1013,\\ 4053-2k,&amp; k\ge1014,\end{cases}\]
+and every day the books move by the same rule $\sigma$ (a permutation of $\{1,\dots,2026\}$). We need the least $t\ge1$ with $\sigma^t=\mathrm{id}$.</p><p><em>Reformulation.</em> In both cases $\sigma(k)\equiv\pm2k\pmod{4053}$. Hence $\sigma^t(k)\equiv\pm2^tk\pmod{4053}$. Each residue class $r\not\equiv0$ has exactly one representative among $\pm r$ in $\{1,\dots,2026\}$ (as $4053=2\cdot2026+1$).</p><ul class="ct-ul"><li><p>If $\sigma^t=\mathrm{id}$, then for $k=1$: $1\equiv\pm2^t$, i.e. $2^t\equiv\pm1\pmod{4053}$.</p></li><li><p>If $2^t\equiv\pm1$, then $\sigma^t(k)\equiv\pm k$ for every $k$, and the only number of $\{1,\dots,2026\}$ congruent to $\pm k$ is $k$; so $\sigma^t=\mathrm{id}$.</p></li></ul><p><em>The order.</em> $4053=3\cdot7\cdot193$. Modulo $7$ the powers of $2$ are $1,2,4$, never $-1$; so we need $2^t\equiv1\pmod{4053}$. Modulo $3$ this needs $2\mid t$, modulo $7$ it needs $3\mid t$. Modulo $193$: $2^8=256\equiv63$, $2^{16}\equiv63^2\equiv109$, $2^{32}\equiv109^2\equiv108$, $2^{48}\equiv108\cdot109\equiv192\equiv-1$, so $2^{96}\equiv1$. Hence $2^{96}\equiv1\pmod{4053}$, and the order of $2$ divides $96=2^5\cdot3$. It does not divide $48$ (as $2^{48}\equiv-1\pmod{193}$) and does not divide $32$ (as $3\nmid32$). So the order is $96$.</p><p>The books first return to their original order at the end of day $\boxed{96}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p6">
+<h3>Problem 6</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VII scale">E</span>Geometry &middot; LPS VII, Chapter 3: Foundational Angle and Configuration Chasing &middot; Angle Chasing and Hidden Equalities</div>
+<div class="ct-text"><p>In triangle $ABC$, the trisectors $AM$, $AN$ from vertex $A$ and $BP$, $BQ$ from vertex $B$ are drawn as shown in the figure (which is not drawn to scale). It is found that $AM\perp BQ$ and $AC\perp BP$. Find the degree measure of $\angle C$ (a trisector divides an angle into three equal parts).</p><div class="ct-fig"><img style="width:297px" src="/assets/contests/2026-27/euler-olympiad-6.svg" alt="Figure for Round 1, Problem 6"></div></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$18^\circ$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Two angle equations)</h4>
+<p>Let $\angle A=3\alpha$ and $\angle B=3\beta$. As in the figure, $AM$ is the trisector of angle $A$ next to side $AB$ and $BP$ is the trisector of angle $B$ next to side $BA$, so
+\[\angle BAM=\alpha,\qquad \angle ABP=\beta,\qquad \angle ABQ=2\beta .\]</p><ul class="ct-ul"><li><p>$BP\perp AC$: in the right triangle formed by $A$, $B$ and the foot $P$, $\angle ABP=90^\circ-\angle A$, so $\beta=90^\circ-3\alpha$.</p></li><li><p>$AM\perp BQ$: in the triangle formed by $A$, $B$ and the intersection of $AM$ and $BQ$, $\angle BAM+\angle ABQ=90^\circ$, so $\alpha+2\beta=90^\circ$.</p></li></ul><p>Substituting, $\alpha+180^\circ-6\alpha=90^\circ$, so $\alpha=18^\circ$ and $\beta=36^\circ$. Thus $\angle A=54^\circ$, $\angle B=108^\circ$ and $\angle C=180^\circ-54^\circ-108^\circ=\boxed{18^\circ}$.</p><p>(With the other labelling of the trisectors at $A$, i.e. $\angle BAM=2\alpha$, the same equations give $\alpha=\beta=22.5^\circ$ and $\angle C=45^\circ$; the labelling with $\angle ABP=2\beta$ is impossible. The figure of the paper fixes the labelling used above.)</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p7">
+<h3>Problem 7</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VII scale">E</span>Algebra &middot; LPS VII, Chapter 1: Inequalities: Core Classical Methods &middot; Elementary Bounding and Local Estimates</div>
+<div class="ct-text"><p>A positive integer $n$ is given. Find the value of the following sum:
+\[|\sqrt{2026}-1|+|\sqrt{2026}-2|+|\sqrt{2026}-3|+\dots+|\sqrt{2026}-n|\]
+given that this sum is an integer.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$2025$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Count the copies of the root)</h4>
+<p>Let $r=\sqrt{2026}$; since $45^2=2025&lt;2026&lt;46^2$, $45&lt;r&lt;46$, and $r$ is irrational.</p><p>If $n\le45$, the sum is $nr-\frac{n(n+1)}2$, which is irrational. If $n\ge46$,
+\[S=\sum_{i=1}^{45}(r-i)+\sum_{i=46}^{n}(i-r)=(45-(n-45))\,r-1035+\sum_{i=46}^n i=(90-n)\,r+\Bigl(\sum_{i=46}^n i-1035\Bigr).\]
+This is an integer only if $90-n=0$, i.e. $n=90$. Then
+\[S=\sum_{i=46}^{90}i-1035=(4095-1035)-1035=\boxed{2025}.\]</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p8">
+<h3>Problem 8</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VII scale">E</span>Number Theory &middot; LPS VII, Chapter 8: Modular Arithmetic and Congruence Methods &middot; Modular Equations and Solutions</div>
+<div class="ct-text"><p>A pair of natural numbers is called a <em>Kaprekar pair</em> if the square of their sum is equal to the number obtained by concatenating them. For example, $20$ and $25$ form a Kaprekar pair because $(20+25)^2=2025$. Find all Kaprekar pairs of three-digit natural numbers.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$(494,\,209)$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (The sum satisfies s(s-1) = 999a)</h4>
+<p>Let the pair be $a,b$ (three-digit, written in this order) and $s=a+b$. Concatenation gives $1000a+b$, so
+\[s^2=1000a+b=999a+s,\qquad\text{i.e.}\qquad s(s-1)=999a=27\cdot37\cdot a .\]
+Since $100100\le s^2\le999999$, we have $317\le s\le999$.</p><p>As $s$ and $s-1$ are coprime, $27$ divides one of them and $37$ divides one of them. If both divide $s$, then $999\mid s$, so $s=999$, $a=998$, $b=1$, not three-digit. If both divide $s-1$, then $999\mid s-1$, impossible in the range. Otherwise $s\equiv0\pmod{27}$, $s\equiv1\pmod{37}$, giving $s\equiv297\pmod{999}$, or $s\equiv1\pmod{27}$, $s\equiv0\pmod{37}$, giving $s\equiv703\pmod{999}$. In the range only $s=703$ remains, and then
+\[a=\frac{703\cdot702}{999}=494,\qquad b=703-494=209,\qquad 703^2=494209 .\]
+So the only Kaprekar pair of three-digit numbers is $\boxed{(494,209)}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p9">
+<h3>Problem 9</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure &middot; Power of a Point</div>
+<div class="ct-text"><p>Points $C$ and $D$ are taken on a semicircle with diameter $AB$ such that they divide the semicircle into arcs in the ratio arc $AC$ : arc $CD$ : arc $DB=1:2:3$ (see the figure). A point $M$ is chosen on the diameter $AB$ such that the degree measure of $\angle CMD$ is maximized. Find the ratio $\dfrac{AM}{MB}$.</p><div class="ct-fig"><img style="width:231px" src="/assets/contests/2026-27/euler-olympiad-9.svg" alt="Figure for Round 1, Problem 9"></div></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\dfrac{AM}{MB}=\dfrac{1+\sqrt2-\sqrt3}{1-\sqrt2+\sqrt3}=\dfrac{\sqrt6-\sqrt2}{2}$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (The tangent circle)</h4>
+<div class="ct-fig"><img style="width:305px" src="/assets/contests/2026-27/euler-olympiad-9_s1.svg" alt="Figure for the solution"></div>
+<p>The arcs are $30^\circ$, $60^\circ$, $90^\circ$. Take the radius $1$, center $O=(0,0)$, $A=(-1,0)$, $B=(1,0)$; then $C=(-\frac{\sqrt3}2,\frac12)$ (at $150^\circ$) and $D=(0,1)$ (at $90^\circ$).</p><p><em>Where the angle is largest.</em> The line $CD$ meets line $AB$ at $T$; from $D=(0,1)$ and $C$ the line is $y=1+\frac{x}{\sqrt3}$, so $T=(-\sqrt3,0)$, outside the segment $AB$. For a point $M$ of segment $AB$ (all on the same side of $T$), consider the circle through $C$, $D$, $M$. The angle $\angle CMD$ is largest when this circle is tangent to $AB$ at $M$: any other point $M'$ of the segment lies outside the tangent circle, and sees $CD$ under a smaller angle than the points of that circle on the same side of $CD$.</p><p><em>Locating $M$.</em> By the power of $T$, $TM^2=TC\cdot TD$. Here $TD=\sqrt{3+1}=2$ and $TC=\sqrt{\frac34+\frac14}=1$, so $TM=\sqrt2$ and $M=(\sqrt2-\sqrt3,\,0)$, which lies inside $AB$.</p><p>Therefore
+\[\frac{AM}{MB}=\frac{1+\sqrt2-\sqrt3}{1-\sqrt2+\sqrt3}=\boxed{\frac{\sqrt6-\sqrt2}{2}}\approx0.518 .\]
+(To simplify, put $u=\sqrt3-\sqrt2$: $\frac{1-u}{1+u}=\frac{(1-u)^2}{1-u^2}=\frac{6-2\sqrt6-2\sqrt3+2\sqrt2}{2\sqrt6-4}$, and multiplying numerator and denominator by $\sqrt6+2$ gives $\frac{\sqrt6-\sqrt2}{2}$.)</p>
+<h4>Solution 2 (Maximising the tangent)</h4>
+<p>The arcs are $30^\circ$, $60^\circ$, $90^\circ$. Take the radius $1$, center $(0,0)$, $A=(-1,0)$, $B=(1,0)$, so $C=(-\frac{\sqrt3}2,\frac12)$ and $D=(0,1)$, and let $M=(x,0)$ with $-1&lt;x&lt;1$.</p><p>The vectors $\overrightarrow{MD}=(-x,1)$ and $\overrightarrow{MC}=(-\frac{\sqrt3}2-x,\frac12)$ have dot product $x^2+\frac{\sqrt3}2x+\frac12&gt;0$ (its discriminant $\frac34-2$ is negative), so $\angle CMD$ is acute, and its tangent is the cross product divided by the dot product:
+\[\tan\angle CMD=\frac{(-x)\cdot\frac12-1\cdot\bigl(-\frac{\sqrt3}2-x\bigr)}{x^2+\frac{\sqrt3}2x+\frac12}=\frac{x+\sqrt3}{2x^2+\sqrt3\,x+1}.\]
+On acute angles the tangent is increasing, so we maximise this fraction. Put $t=x+\sqrt3$, so $t$ runs over $(\sqrt3-1,\sqrt3+1)$ and $2x^2+\sqrt3x+1=2t^2-3\sqrt3\,t+4$. Then
+\[\tan\angle CMD=\frac{t}{2t^2-3\sqrt3\,t+4}=\frac{1}{2t+\frac4t-3\sqrt3},\]
+and by AM-GM $2t+\frac4t\ge2\sqrt8=4\sqrt2$, with equality exactly for $t=\sqrt2$, which lies in the allowed range. So the angle is largest for $x=\sqrt2-\sqrt3$, that is, $AM=1+\sqrt2-\sqrt3$ and $MB=1-\sqrt2+\sqrt3$.</p><p>With $u=\sqrt3-\sqrt2$,
+\[\frac{AM}{MB}=\frac{1-u}{1+u}=\frac{(1-u)^2}{1-u^2}=\frac{6-2\sqrt6-2\sqrt3+2\sqrt2}{2\sqrt6-4}=\frac{(6-2\sqrt6-2\sqrt3+2\sqrt2)(\sqrt6+2)}{4}=\boxed{\frac{\sqrt6-\sqrt2}{2}}.\]</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p10">
+<h3>Problem 10</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 44: Combinatorial Games and Strategy &middot; Recursive Game Structure</div>
+<div class="ct-text"><p>At the start of a game, Leonard has $1$ lari, and a dealer has $26$ red and $26$ black cards. Leonard and the dealer repeatedly perform the following sequence of actions: first, Leonard bets some portion of his current money and names a color (red or black). Then, the dealer reveals one card from the deck. If Leonard guessed the color correctly, he wins an amount equal to his bet; otherwise, he loses his bet. The game continues until either Leonard runs out of money or the dealer runs out of cards. It is known that the dealer is malicious and acts to minimize Leonard's final total; that is, from the cards remaining in the deck, the dealer always reveals the one that will result in Leonard having the least possible amount of money at the end of the game. Determine the maximum amount of money Leonard can guarantee to have at the end of the game.</p><p>(Note: If Leonard has $x&gt;0$ lari, he can bet any real amount $y$ such that $0\le y\le x$.)</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\dfrac{2^{52}}{\binom{52}{26}}\approx9.08$ lari</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Backward induction)</h4>
+<p>Let $V(r,b)$ be the largest factor by which Leonard can guarantee to multiply his money when $r$ red and $b$ black cards remain (everything scales with his money, so a factor makes sense). We claim
+\[V(r,b)=\frac{2^{r+b}}{\binom{r+b}{r}} .\]
+If $r=0$ or $b=0$ Leonard knows every remaining colour and bets everything each time, so $V=2^{r+b}$, matching the formula.</p><p>Let $r,b\ge1$ and put $V_1=V(r-1,b)$, $V_2=V(r,b-1)$. If Leonard bets the fraction $f\in[0,1]$ of his money on red, the dealer can choose between the results $(1+f)V_1$ (red shown) and $(1-f)V_2$ (black shown), and picks the smaller; betting on black is symmetric. The best Leonard can guarantee is obtained when the two are equal:
+\[(1+f)V_1=(1-f)V_2\iff f=\frac{V_2-V_1}{V_1+V_2},\qquad\text{value }\frac{2V_1V_2}{V_1+V_2}\]
+(if $V_2&lt;V_1$ he bets the fraction $\frac{V_1-V_2}{V_1+V_2}$ on black instead). Indeed, any other bet makes one of the two results smaller. So $\frac1{V(r,b)}=\frac12\Bigl(\frac1{V_1}+\frac1{V_2}\Bigr)$, and the formula follows by induction from Pascal's rule:
+\[\frac12\left(\frac{\binom{r+b-1}{r-1}}{2^{r+b-1}}+\frac{\binom{r+b-1}{r}}{2^{r+b-1}}\right)=\frac{\binom{r+b}{r}}{2^{r+b}} .\]
+Starting with $1$ lari and $26+26$ cards, the guaranteed amount is $V(26,26)=\boxed{\dfrac{2^{52}}{\binom{52}{26}}}\approx9.08$ lari.</p>
+<h4>Solution 2 (One account for every possible deck order)</h4>
+<p>Let $K=\binom{52}{26}$, the number of possible colour sequences of the deck.</p><p><em>Leonard can guarantee $2^{52}/K$.</em> Leonard imagines $K$ accounts, one for each sequence, each holding $\frac1K$ lari. Before each card, every account whose sequence agrees with all cards shown so far bets its whole content on the colour its sequence predicts; the other accounts are empty. The total stake on red minus the total stake on black is at most his money in absolute value, so Leonard can place this net bet on the majority colour. After the card, each surviving account has doubled and the others are emptied, and Leonard's money always equals the sum of the accounts. At the end exactly one account survives, the one of the actual sequence, and it holds $\frac{2^{52}}K$. So whatever the dealer does, Leonard ends with $\frac{2^{52}}{K}$.</p><p><em>He cannot guarantee more.</em> Fix any strategy of Leonard and extend it arbitrarily to all $2^{52}$ red/black sequences (also the impossible ones). At each step, the two continuations give $x+y$ and $x-y$, whose average is $x$; hence the sum of the final amounts over all $2^{52}$ sequences is $2^{52}$. Final amounts are never negative, so the sum over the $K$ possible sequences is at most $2^{52}$, and some possible sequence leaves Leonard with at most $\frac{2^{52}}{K}$. The malicious dealer can reveal the cards in that order.</p><p>Hence the answer is $\boxed{\dfrac{2^{52}}{\binom{52}{26}}}\approx9.08$ lari.</p>
+</div></details>
+</section>
+<h2 class="ct-group" id="round-2">Round 2</h2>
+<section class="ct-problem" id="p11">
+<h3>Problem 1</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Algebra &middot; LPS VII, Chapter 1: Inequalities: Core Classical Methods &middot; AM-GM and Mean Inequalities</div>
+<div class="ct-text"><p>Let the <strong>mean set</strong> of several positive numbers be the set consisting of their arithmetic mean, geometric mean, harmonic mean, and quadratic mean. Among a set of positive numbers, one of them is called <strong>distinguished</strong> if it belongs to the mean set of all the other numbers in the set. Prove that:</p><ul class="ct-parts"><li><p><span class="ct-lbl">(a)</span> If in a set of seven positive numbers, at least six of them are distinguished, then the seventh number is also distinguished.</p></li><li><p><span class="ct-lbl">(b)</span> There do not exist seven pairwise distinct positive numbers such that exactly five of them are distinguished.</p></li></ul></div>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Means of the others versus means of all)</h4>
+<p>Let the seven numbers be $x_1,\dots,x_7$, and let $A,G,H,Q$ be the arithmetic, geometric, harmonic and quadratic means of all seven.</p><p><em>Key remark: $x_i$ is distinguished if and only if $x_i\in\{A,G,H,Q\}$.</em> Write $S=\sum x_j$, $P=\prod x_j$, $R=\sum\frac1{x_j}$, $T=\sum x_j^2$. The means of the other six equal $x_i$ in the following cases:
+\[\frac{S-x_i}{6}=x_i\iff \frac S7=x_i,\qquad \Bigl(\frac P{x_i}\Bigr)^{1/6}=x_i\iff P^{1/7}=x_i,\]
+\[\frac{6}{R-\frac1{x_i}}=x_i\iff R=\frac7{x_i}\iff\frac7R=x_i,\qquad \sqrt{\frac{T-x_i^2}6}=x_i\iff\sqrt{\frac T7}=x_i .\]</p><p><em>Second remark.</em> If the seven numbers are not all equal, then
+\[\min x_j&lt;H&lt;G&lt;A&lt;Q&lt;\max x_j .\]
+(The strict inequalities $H&lt;G&lt;A&lt;Q$ are the mean inequalities for non-constant data; $H&gt;\min$ because $R&lt;\frac7{\min x_j}$, and $Q&lt;\max$ because $T&lt;7(\max x_j)^2$.) So neither the smallest nor the largest number is distinguished.</p><p><strong>(a)</strong> If not all seven numbers were equal, the smallest and the largest would be two (different) non-distinguished numbers, so at most five would be distinguished. Hence if at least six are distinguished, all seven numbers are equal, all four means equal this common value, and the seventh number is distinguished too.</p><p><strong>(b)</strong> For seven pairwise distinct numbers, the distinguished ones are distinct elements of $\{A,G,H,Q\}$, so there are at most four of them. Hence exactly five is impossible.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p12">
+<h3>Problem 2</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure &middot; Tangency and Tangent Geometry</div>
+<div class="ct-text"><p>Let $D$ be the midpoint of side $BC$ of a non-isosceles triangle $ABC$. The tangents to the circumcircle of triangle $ABD$ at points $A$ and $B$ intersect at point $P$. Similarly, the tangents to the circumcircle of triangle $ACD$ at points $A$ and $C$ intersect at point $Q$. Prove that the midpoint of segment $PQ$ lies on the line $BC$.</p></div>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Coordinates centred at the midpoint)</h4>
+<div class="ct-fig"><img style="width:261px" src="/assets/contests/2026-27/euler-olympiad-12_s1.svg" alt="Figure for the solution"></div>
+<p>Put $D=(0,0)$, $B=(-1,0)$, $C=(1,0)$ and $A=(u,v)$ with $v&gt;0$; $AB\ne AC$ means $u\ne0$.</p><p><em>The circle $(ABD)$.</em> Its center lies on the perpendicular bisector $x=-\frac12$ of $BD$: $O_1=(-\frac12,k)$. From $|O_1A|=|O_1D|$: $(u+\frac12)^2+(v-k)^2=\frac14+k^2$, so $k=\dfrac{u^2+u+v^2}{2v}$.</p><p><em>The point $P$.</em> We claim $P=\Bigl(\dfrac{u^2+v^2-u}{2u},\,-\dfrac{v}{2u}\Bigr)$. Indeed, this point lies on the tangent at $B$, since
+\[(P-B)\cdot(B-O_1)=\Bigl(\frac{u^2+v^2+u}{2u},-\frac v{2u}\Bigr)\cdot\Bigl(-\frac12,-k\Bigr)=-\frac{u^2+v^2+u}{4u}+\frac{vk}{2u}=0,\]
+and on the tangent at $A$, since with $w=v^2-u^2-u$ we have $P-A=\bigl(\frac{w}{2u},-\frac{v(2u+1)}{2u}\bigr)$ and $A-O_1=\bigl(\frac{2u+1}{2},\frac{w}{2v}\bigr)$, whose dot product is $\frac{w(2u+1)}{4u}-\frac{w(2u+1)}{4u}=0$.</p><p><em>The point $Q$.</em> The reflection $(x,y)\mapsto(-x,y)$ fixes $D$, swaps $B$ and $C$, and sends $A$ to $(-u,v)$. Applying the formula for $P$ with $-u$ in place of $u$ and reflecting back gives
+\[Q=\Bigl(\frac{u^2+v^2+u}{2u},\,\frac{v}{2u}\Bigr).\]</p><p>The midpoint of $PQ$ is $\Bigl(\dfrac{u^2+v^2}{2u},\,0\Bigr)$, which lies on the line $BC$ (the $x$-axis).</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p13">
+<h3>Problem 3</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Algebra &middot; LPS VII, Chapter 46: Functional Equations: Iteration, Rigidity, and Deep Structure &middot; Iteration and Self-Composition</div>
+<div class="ct-text"><p>Find all functions $f:\mathbb N\to\mathbb N$ defined on the set of positive integers that satisfy the following three conditions for all $n\in\mathbb N$:</p><ul class="ct-parts"><li><p><span class="ct-lbl">1)</span> $f(f(f(n)))+4n=3f(f(n))$;</p></li><li><p><span class="ct-lbl">2)</span> $f(f(n))\le f(n)+2n$;</p></li><li><p><span class="ct-lbl">3)</span> For every positive integer $n$, there exist infinitely many positive integers $m$ such that $\underbrace{f(f(\dots f(n)\dots))}_{m}$ is divisible by $2^m$.</p></li></ul></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$f(n)=2n$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (The characteristic equation of the orbit)</h4>
+<p>The function $f(n)=2n$ works: $8n+4n=12n$, $4n\le2n+2n$, and the $m$-th iterate $2^mn$ is divisible by $2^m$.</p><p>Conversely, fix $n$ and let $a_k$ be the $k$-th iterate of $f$ at $n$ ($a_0=n$), a sequence of positive integers. Applying 1) and 2) to $a_k$:
+\[a_{k+3}=3a_{k+2}-4a_k,\qquad a_{k+2}\le a_{k+1}+2a_k\qquad(k\ge0).\]
+The characteristic polynomial $x^3-3x^2+4=(x+1)(x-2)^2$ gives
+\[a_k=\alpha(-1)^k+(\beta+\gamma k)2^k\]
+for real constants $\alpha,\beta,\gamma$. Substituting into the inequality, the $(-1)^k$ terms cancel ($1+1-2=0$) and
+\[a_{k+2}-a_{k+1}-2a_k=2^k\bigl[4(\beta+\gamma k+2\gamma)-2(\beta+\gamma k+\gamma)-2(\beta+\gamma k)\bigr]=6\gamma\cdot2^k\le0,\]
+so $\gamma\le0$. If $\gamma&lt;0$, then $a_k&lt;0$ for large $k$, impossible; so $\gamma=0$. From $a_0=n$ and $a_1=f(n)$: $\alpha=\frac{2n-f(n)}3$, $\beta=\frac{n+f(n)}3$, and
+\[3a_m=\bigl(2n-f(n)\bigr)(-1)^m+\bigl(n+f(n)\bigr)2^m .\]
+If $2^m\mid a_m$, then $2^m$ divides $2n-f(n)$. By 3) this happens for infinitely many $m$, so $2n-f(n)=0$. As $n$ was arbitrary, $\boxed{f(n)=2n}$ for all $n$.</p>
+<h4>Solution 2 (Successive differences)</h4>
+<p>The function $f(n)=2n$ satisfies the three conditions (as $8n+4n=12n$, $4n\le4n$, and $2^m\mid2^mn$). Conversely, fix $n$ and let $a_0=n$, $a_{k+1}=f(a_k)$; all $a_k$ are positive integers, and by 1), 2) applied at $a_k$,
+\[a_{k+3}=3a_{k+2}-4a_k,\qquad c_k:=a_{k+2}-a_{k+1}-2a_k\le0 .\]
+<em>Step 1.</em> From the recurrence, $c_{k+1}=a_{k+3}-a_{k+2}-2a_{k+1}=2a_{k+2}-2a_{k+1}-4a_k=2c_k$, so $c_k=2^kc_0$.</p><p><em>Step 2: $c_0=0$.</em> Put $e_k=a_{k+1}+a_k&gt;0$. Then $e_{k+1}-2e_k=a_{k+2}-a_{k+1}-2a_k=c_k=2^kc_0$, so $\frac{e_{k+1}}{2^{k+1}}=\frac{e_k}{2^k}+\frac{c_0}2$ and $\frac{e_k}{2^k}=e_0+\frac{kc_0}2$. If $c_0&lt;0$ this becomes negative for large $k$, a contradiction; so $c_0=0$ and all $c_k=0$.</p><p><em>Step 3.</em> Put $d_k=a_{k+1}-2a_k$. Then $d_{k+1}+d_k=c_k=0$, so $d_k=(-1)^kd_0$ with $d_0=f(n)-2n$. Summing $a_{j+1}=2a_j+(-1)^jd_0$,
+\[a_m=2^mn+d_0\sum_{j=0}^{m-1}2^{m-1-j}(-1)^j=2^mn+d_0\cdot\frac{2^m-(-1)^m}{3}.\]
+So $3a_m=2^m(3n+d_0)-(-1)^md_0$. If $2^m\mid a_m$, then $2^m\mid d_0$. By 3) this holds for infinitely many $m$, hence $d_0=0$, i.e. $f(n)=2n$. Since $n$ was arbitrary, $\boxed{f(n)=2n}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p14">
+<h3>Problem 4</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 10: Double Counting and Counting Identities &middot; Direct Double Counting</div>
+<div class="ct-text"><p>A pair of positive integers $(n,k)$ is called <strong>interesting</strong> if $2&lt;k&lt;n$ and it is possible to distribute $n$ people into several committees such that the following two conditions are satisfied:</p><ul class="ct-parts"><li><p><span class="ct-lbl">1)</span> Each committee contains exactly $k$ people.</p></li><li><p><span class="ct-lbl">2)</span> For every pair of people, there exists exactly one committee to which both of them belong.</p></li></ul><p>Prove that:</p><ul class="ct-parts"><li><p><span class="ct-lbl">(a)</span> If the pair $(n,k)$ is interesting, then $n-1$ is divisible by $k-1$.</p></li><li><p><span class="ct-lbl">(b)</span> If the pair $(n,k)$ is interesting, then $n(n-1)$ is divisible by $k(k-1)$.</p></li><li><p><span class="ct-lbl">(c)</span> If $p&gt;2$ is a prime number and $m&gt;1$ is an integer, then the pair $(p^m,p)$ is interesting.</p></li></ul></div>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Count around a person, count pairs, use lines)</h4>
+<p><strong>(a)</strong> Fix a person $X$. Every other person shares exactly one committee with $X$. So the committees containing $X$ split the other $n-1$ people into groups, one per committee, each consisting of the $k-1$ other members of that committee; these groups are disjoint because two committees containing $X$ have no other common member (that pair would lie in two committees). Hence $k-1\mid n-1$.</p><p><strong>(b)</strong> Each pair of people lies in exactly one committee, and each committee contains $\binom k2$ pairs. If there are $c$ committees, then $c\binom k2=\binom n2$, i.e. $c=\dfrac{n(n-1)}{k(k-1)}$, which must be an integer.</p><p><strong>(c)</strong> Identify the $p^m$ people with the vectors of $\mathbb Z_p^m$ (coordinates modulo $p$), and let the committees be the <em>lines</em> $\{u+tv:\ t\in\mathbb Z_p\}$ with $v\ne0$.</p><ul class="ct-ul"><li><p>Each line has exactly $p$ points: if $u+tv=u+sv$ then $(t-s)v=0$, and since $p$ is prime and $v\ne0$, $t=s$.</p></li><li><p>Two distinct people $u\ne w$ lie on the line through $u$ with direction $w-u$.</p></li><li><p>They lie on only one line: if both are on $\{u'+tv\}$, then $w-u=sv$ with $s\ne0$, so the direction $v$ is a nonzero multiple of $w-u$, and the line through $u$ with direction $v$ is the same set as the one with direction $w-u$.</p></li></ul><p>So each committee has $k=p$ members and every pair is in exactly one committee; since $p&gt;2$ and $m&gt;1$, $2&lt;p&lt;p^m$, and $(p^m,p)$ is interesting.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p15">
+<h3>Problem 5</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 20: Parity, Coloring, and Process Termination &middot; Process Termination and Reachability</div>
+<div class="ct-text"><p>Three arbitrary non-negative integers are written on a blackboard. In one move, you can choose any two of them, say $x$ and $y$, and if $x\le y$, you may replace them with the numbers $2x$ and $y-x$. Prove that after repeating this move some number of times, it is possible to reach a state where one of the three numbers on the board is zero.</p></div>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Make the minimum smaller)</h4>
+<p>If a number is $0$ we are done. Otherwise let the numbers be $a\le b\le c$ with $a\ge1$. We show that a few moves produce a triple whose smallest number is $b\bmod a&lt;a$. Repeating, the smallest number is a non-negative integer that strictly decreases, so it eventually becomes $0$.</p><p>Write $b=qa+r$ with $0\le r&lt;a$, $q\ge1$, and write $q$ in binary: $q=\sum_{i=0}^{t}\varepsilon_i2^i$ with $\varepsilon_t=1$. Call the three numbers the $a$-pile, $b$-pile and $c$-pile. We make $t+1$ moves, numbered $i=0,1,\dots,t$; before move $i$ the $a$-pile equals $2^ia$.</p><ul class="ct-ul"><li><p>If $\varepsilon_i=1$: apply the move to the $a$-pile and the $b$-pile, so the $b$-pile decreases by $2^ia$.</p></li><li><p>If $\varepsilon_i=0$: apply the move to the $a$-pile and the $c$-pile, so the $c$-pile decreases by $2^ia$.</p></li></ul><p>In both cases the $a$-pile doubles. After all moves the $b$-pile equals $b-qa=r$, as wanted. It remains to check that every move is allowed.</p><ul class="ct-ul"><li><p>Move $i$ with $\varepsilon_i=1$: the $b$-pile equals $b-\sum_{j&lt;i}\varepsilon_j2^ja\ge\bigl(q-\sum_{j&lt;i}\varepsilon_j2^j\bigr)a\ge2^ia$, since $q$ contains the term $2^i$.</p></li><li><p>Move $i$ with $\varepsilon_i=0$: then $i&lt;t$, and the $c$-pile has lost at most $(2^i-1)a$, so it is at least $c-(2^i-1)a\ge b-(2^i-1)a\ge2^ta-2^ia+a&gt;2^ia$, using $b\ge qa\ge2^ta$ and $2^t\ge2^{i+1}$.</p></li></ul><p>So the procedure works, and repeating it we reach a zero.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p16">
+<h3>Problem 6</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 36: Coordinate Geometry and Analytic Representation &middot; Cartesian Coordinate Setup</div>
+<div class="ct-text"><p>Let $ABCD$ be a right trapezoid with $\angle ABC=\angle BAD=90^\circ$. Suppose there exists an interior point $P$ on segment $AB$ such that lines $PC$ and $BD$ are perpendicular. Let $M$ be the midpoint of segment $PD$. Prove that the circle with center $C$ passing through point $B$ is tangent to the circumcircle of triangle $AMP$.</p></div>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Coordinates)</h4>
+<div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/euler-olympiad-16_s1.svg" alt="Figure for the solution"></div>
+<p>Put $A=(0,0)$, $B=(0,h)$, $C=(c,h)$, $D=(d,0)$ with $c,d,h&gt;0$, and $P=(0,p)$ with $0&lt;p&lt;h$. The condition $PC\perp BD$ reads
+\[(c,\,h-p)\cdot(d,\,-h)=0\iff h(h-p)=cd .\]
+The circle $\omega_C$ with center $C$ through $B$ has radius $CB=c$.</p><p><em>The circle $(AMP)$.</em> $M=(\frac d2,\frac p2)$. The perpendicular bisector of $AP$ is the line $y=\frac p2$, which also contains $M$; so the center is $O=(x_0,\frac p2)$, and $OA=OM$ gives $x_0^2+\frac{p^2}4=(x_0-\frac d2)^2$, i.e. $x_0=\dfrac{d^2-p^2}{4d}$. The radius $\rho$ satisfies
+\[\rho^2=x_0^2+\frac{p^2}4=\frac{(d^2-p^2)^2+4d^2p^2}{16d^2}=\Bigl(\frac{d^2+p^2}{4d}\Bigr)^2,\qquad \rho=\frac{d^2+p^2}{4d}.\]</p><p><em>Tangency.</em> We show $OC=\rho+c$, i.e. the circles are externally tangent. Using $x_0^2+\frac{p^2}4=\rho^2$,
+\[OC^2=(c-x_0)^2+\Bigl(h-\frac p2\Bigr)^2=c^2-2cx_0+\rho^2+h(h-p),\]
+while
+\[(\rho+c)^2=c^2+2c\rho+\rho^2 .\]
+They are equal because
+\[h(h-p)-2cx_0=cd-\frac{c(d^2-p^2)}{2d}=\frac{c(d^2+p^2)}{2d}=2c\rho .\]
+So $OC=\rho+c$, and the two circles are tangent.</p>
+</div></details>
+</section>
+{% endraw %}

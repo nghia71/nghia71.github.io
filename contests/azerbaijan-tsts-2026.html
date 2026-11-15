@@ -1,0 +1,1009 @@
+---
+title: Azerbaijan Team Selection Tests 2026 (IMO TST, BMO TST, EGMO TST, IZhO TST and TSTST)
+permalink: /contests/azerbaijan-tsts-2026
+description: Azerbaijan Team Selection Tests 2026 (IMO TST, BMO TST, EGMO TST, IZhO TST and TSTST): problems with answers and solutions
+---
+{% raw %}
+<style>
+  .ct-intro { margin-bottom: 1.2em; }
+  .ct-credit { font-size: 14px; color: var(--ink-soft); border-left: 3px solid var(--gold); padding: 6px 12px; background: var(--white); margin: 1em 0; }
+  .ct-toc { display: flex; flex-wrap: wrap; gap: 6px; margin: 1em 0 1.4em; }
+  .ct-toc a { display: inline-block; min-width: 2.4em; text-align: center; padding: 4px 8px; border: 1px solid var(--rule); border-radius: 4px; background: var(--white); text-decoration: none; font-size: 14px; }
+  .ct-problem { background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 14px 18px; margin: 1.1em 0; }
+  .ct-problem h3 { margin: 0 0 .3em; font-size: 1.08rem; border-bottom: none; padding-bottom: 0; }
+  .ct-meta { font-size: 13px; color: var(--ink-soft); margin-bottom: .6em; }
+  .ct-text { font-family: Georgia, "Times New Roman", "Noto Serif", serif; font-size: 1.02em; line-height: 1.6; }
+  .ct-text p { margin: .5em 0; }
+  .ct-fig { text-align: center; margin: .8em 0; }
+  .ct-fig img { max-width: 100%; height: auto; max-height: 340px; }
+  .ct-choices { display: flex; flex-wrap: wrap; gap: 6px 22px; margin: .6em 0 .2em; }
+  .ct-choices b { margin-right: .3em; }
+  .ct-problem details { margin-top: .8em; border-top: 1px dashed var(--rule); padding-top: .5em; }
+  .ct-problem summary { cursor: pointer; font-weight: 600; color: var(--brand); font-size: 15px; }
+  .ct-problem details[open] summary { margin-bottom: .5em; }
+  .ct-sol h4 { font-size: 1rem; margin: 1em 0 .3em; color: var(--ink); }
+  .ct-answer { font-weight: 600; }
+  .ct-parts { list-style: none; padding-left: .4em; }
+  .ct-parts li { margin: .35em 0; }
+  .ct-lbl { font-weight: 700; margin-right: .3em; }
+  .ct-note { font-size: 14px; color: var(--ink-soft); font-style: italic; }
+  .ct-bar { margin: .6em 0 1em; display: flex; gap: 10px; flex-wrap: wrap; }
+  .ct-bar button { font: inherit; font-size: 14px; padding: 5px 12px; border-radius: var(--radius); border: 1px solid var(--brand); background: var(--white); color: var(--brand); cursor: pointer; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
+</style>
+<script>
+  window.MathJax = { tex: { inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [['\\[','\\]']], processEscapes: true },
+                     options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] } };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script>
+  function ctAll(open) { document.querySelectorAll('.ct-problem details').forEach(function (d) { d.open = open; }); }
+</script>
+
+<style>
+  .ct-group { font-size: 1.25rem; margin: 1.6em 0 .2em; }
+  .ct-toc-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: .3em 0; }
+  .ct-toc-g { font-size: 13px; color: var(--ink-soft); min-width: 9em; }
+  .ct-toc-wrap { margin: 1em 0 1.4em; }
+  .ct-center { text-align: center; margin: .6em 0; }
+  .ct-tablewrap { overflow-x: auto; margin: .6em 0; text-align: center; }
+  .ct-table { border-collapse: collapse; margin: 0 auto; }
+  .ct-table td { padding: 2px 9px; text-align: center; }
+  .ct-table tr.ct-hl td { border-bottom: 1px solid var(--ink-soft); }
+  .ct-table.ct-vfirst td:first-child { border-right: 1px solid var(--ink-soft); }
+  .ct-ul { padding-left: 1.4em; }
+  .ct-ul li { margin: .3em 0; }
+  .ct-text li > p:first-child { margin-top: 0; }
+  .ct-text li > p:last-child { margin-bottom: 0; }
+  .ct-text mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
+</style>
+
+<style>
+  .ct-tags { display: flex; flex-wrap: wrap; gap: 5px; margin: 0 0 .55em; }
+  .ct-tg { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .03em; padding: 2px 8px; border-radius: 999px; line-height: 1.5; }
+  .ct-lv { background: #eee7dc; color: #4a3d33; }
+  .ct-df-Starter { background: #dcf1dc; color: #245c24; }
+  .ct-df-Explorer { background: #d6efec; color: #155e57; }
+  .ct-df-Challenger { background: #dce8f7; color: #1f4c80; }
+  .ct-df-Olympiad { background: #e7defa; color: #4b2a8a; }
+  .ct-df-Advanced { background: #fbe4cc; color: #8a4a0b; }
+  .ct-df-Expert { background: #f8d6cf; color: #8c2600; }
+  .ct-band { margin: 1.3em 0 .5em; font-size: 14px; color: var(--ink-soft); }
+  .ct-band .ct-tg { font-size: 13px; margin-right: .4em; }
+  .ct-legend { font-size: 14.5px; background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 10px 16px; margin: 1em 0 1.4em; }
+  .ct-legend p { margin: .35em 0; }
+  .ct-legend ul { margin: .2em 0 .4em; padding-left: 1.1em; }
+  .ct-legend li { margin: .2em 0; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
+</style>
+{% endraw %}
+<p><a href="{{ '/contests-2026' | relative_url }}">&larr; All contests 2026</a></p>
+
+<h1>Azerbaijan Team Selection Tests 2026 (IMO TST, BMO TST, EGMO TST, IZhO TST and TSTST)</h1>
+
+<div class="ct-intro">
+<p>The 30 problems of the Azerbaijan Team Selection Tests 2026 (IMO TST, BMO TST, EGMO TST, IZhO TST and TSTST), each with our own solutions, hidden until you open them. 16 of them ask for an answer and 14 ask for a proof. Where a problem has a final answer, it is shown separately. Try a problem first, then check.</p><p>IMO TST: Day 1 April 22, Day 2 April 23, Day 3 April 28, Day 4 April 30, 2026. BMO TST: one paper. EGMO TST: Day 1 January 21, Day 2 January 22, 2026. IZhO TST: one paper. TSTST (pre-selection test for the 2026 teams): one paper.</p>
+</div>
+<div class="ct-credit">Problems: Azerbaijan Team Selection Tests 2026 (IMO TST, BMO TST, EGMO TST, IZhO TST and TSTST), from the AoPS contest collection or the official paper. Solutions written by MCC.</div>
+<div class="ct-bar"><button type="button" onclick="ctAll(true)">Show all answers and solutions</button><button type="button" onclick="ctAll(false)">Hide all</button></div>
+<div class="ct-toc-wrap"><div class="ct-toc-row"><span class="ct-toc-g">IMO TST Day 1</span><a href="#p1">1</a><a href="#p2">2</a><a href="#p3">3</a></div><div class="ct-toc-row"><span class="ct-toc-g">IMO TST Day 2</span><a href="#p4">4</a><a href="#p5">5</a><a href="#p6">6</a></div><div class="ct-toc-row"><span class="ct-toc-g">IMO TST Day 3</span><a href="#p7">7</a><a href="#p8">8</a><a href="#p9">9</a></div><div class="ct-toc-row"><span class="ct-toc-g">IMO TST Day 4</span><a href="#p10">10</a><a href="#p11">11</a><a href="#p12">12</a></div><div class="ct-toc-row"><span class="ct-toc-g">BMO TST</span><a href="#p13">1</a><a href="#p14">2</a><a href="#p15">3</a><a href="#p16">4</a></div><div class="ct-toc-row"><span class="ct-toc-g">EGMO TST Day 1</span><a href="#p17">1</a><a href="#p18">2</a><a href="#p19">3</a></div><div class="ct-toc-row"><span class="ct-toc-g">EGMO TST Day 2</span><a href="#p20">4</a><a href="#p21">5</a><a href="#p22">6</a></div><div class="ct-toc-row"><span class="ct-toc-g">IZhO TST</span><a href="#p23">1</a><a href="#p24">2</a><a href="#p25">3</a><a href="#p26">4</a></div><div class="ct-toc-row"><span class="ct-toc-g">TSTST</span><a href="#p27">1</a><a href="#p28">2</a><a href="#p29">3</a><a href="#p30">4</a></div></div>
+
+{% raw %}
+<h2 class="ct-group" id="imo-tst-day-1">IMO TST Day 1</h2>
+<section class="ct-problem" id="p1">
+<h3>Problem 1</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 31: Extremal Principle and Bounding Arguments &middot; Bounding and Limiting Arguments &middot; also 2026-germany-team-selection-test: AIMO 6, Problem 1; 2026-romania-team-selection-tests: Day 2, Problem 4</div>
+<div class="ct-text"><p>The <em>sunshine cost</em> of a sequence $a_1,a_2,\ldots,a_{100}$ of integers is the largest possible value of
+\[\left|(a_1+a_2+\cdots+a_i)-a_j\right|\]
+as $i$ and $j$ vary over all integers $1,2,\ldots,100$.</p><p>Determine the smallest possible sunshine cost over all sequences $a_1,a_2,\ldots,a_{100}$ of pairwise distinct integers.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$75$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Prefix sums are trapped in a short interval)</h4>
+<p>Write $P_i=a_1+\cdots+a_i$, let $A=\max a_j$, $B=\min a_j$, $D=A-B$, and let $M$ be the sunshine cost. As the $a_j$ are $100$ distinct
+integers, $D\ge99$.</p><p><strong>Construction with cost $75$.</strong> Take $a_1=-25$, $a_2=0$, followed by the pairs $j,-j$ for $j=1,2,\dots,50$, $j\ne25$ (that is $2+2\cdot49=100$
+distinct integers). The prefix sums are $-25$ after $a_1,a_2$ and after every complete pair, and $-25+j$ in the middle of the pair $j,-j$; so they range over
+$[-25,25]$, while the terms range over $[-50,50]$. Hence $M=\max(25-(-50),\,50-(-25))=75$.</p><p><strong>Lower bound.</strong> For every $i$ and $j$, $|P_i-a_j|\le M$; with $j$ giving $A$ and $B$ this means
+\[P_i\in I:=[A-M,\ B+M]\qquad(1\le i\le100),\]
+an interval of length $L=2M-D$ (so $L\ge0$). For $i\ge2$, $a_i=P_i-P_{i-1}$ is a difference of two points of $I$, so $|a_i|\le L$. The $99$ distinct
+integers $a_2,\dots,a_{100}$ lie in $[-L,L]$, which forces $2L+1\ge99$, i.e. $L\ge49$.</p><p>Suppose $M\le74$. Then $D=2M-L\le148-49=99$, so $D=99$, and then $L=2M-99\ge49$ forces $M=74$, $L=49$. So $a_2,\dots,a_{100}$ are exactly the integers
+$-49,\dots,49$, and since all $100$ terms are consecutive integers ($D=99$), $a_1=50$ or $a_1=-50$. But then $|P_1-a_j|=|a_1-a_j|=99&gt;74$ for
+$a_j=\mp49$. Contradiction. So $M\ge75$.</p><p>The smallest sunshine cost is $\boxed{75}$.</p>
+<h4>Solution 2 (Two extreme pairs, and the steps of the partial sums)</h4>
+<p>Write $S_i=a_1+\dots+a_i$ and let
+\[m=\min_ja_j,\quad \mu=\max_ja_j,\quad s=\min_iS_i,\quad \sigma=\max_iS_i .\]
+Let $M$ be the sunshine cost. Since $|S_i-a_j|\le M$ for all $i,j$,
+\[\sigma-m\le M\qquad\text{and}\qquad \mu-s\le M. \tag{1}\]
+(In fact $M=\max(\sigma-m,\ \mu-s)$.)</p><p><strong>Lower bound: $M\ge75$.</strong> The $a_j$ are $100$ distinct integers, so $\mu-m\ge99$. Put $L=\sigma-s$. Adding the two inequalities in (1),
+\[2M\ge L+(\mu-m)\ge L+99. \tag{2}\]
+For $i\ge2$ we have $a_i=S_i-S_{i-1}$, a difference of two numbers of the interval $[s,\sigma]$, so $|a_i|\le L$.</p><p><em>Case $L\ge50$.</em> Then (2) gives $2M\ge149$, and since $M$ is an integer, $M\ge75$.</p><p><em>Case $L\le49$.</em> The $99$ distinct integers $a_2,\dots,a_{100}$ lie in $[-L,L]$, which contains only $2L+1\le99$ integers. Hence $L=49$ and $\{a_2,\dots,a_{100}\}=\{-49,-48,\dots,49\}$, so
+$m\le-49$ and $\mu\ge49$. Moreover $a_1$ is different from all of these, so $|a_1|\ge50$. If $a_1\ge50$, then $\sigma\ge S_1=a_1\ge50$ and (1) gives $M\ge\sigma-m\ge50+49=99$. If $a_1\le-50$, then $s\le S_1\le-50$ and $M\ge\mu-s\ge99$.</p><p>In both cases $M\ge75$.</p><p><strong>A sequence with cost $75$.</strong> Take
+\[-25,\ 0,\ \ 1,-1,\ 2,-2,\ \dots,\ 24,-24,\ \ 26,-26,\ 27,-27,\ \dots,\ 50,-50,\]
+that is, $a_1=-25$, $a_2=0$, followed by the pairs $(j,-j)$ for $j=1,\dots,24$ and for $j=26,\dots,50$. These are $2+48+50=100$ distinct integers (all integers from $-50$ to $50$ except $25$).
+After each complete pair the partial sum returns to $-25$, and inside the pair $(j,-j)$ it equals $-25+j$. So all partial sums lie in $[-25,25]$, while all terms lie in $[-50,50]$; hence
+\[|S_i-a_j|\le25+50=75\quad\text{for all }i,j,\]
+with equality for $S_i=-25$, $a_j=50$. The cost of this sequence is $75$.</p><p>The smallest possible sunshine cost is $\boxed{75}$.</p><p><em>Remark.</em> For $n=4k$ terms the same argument gives $3k$; for other $n$ the two cases do not balance (e.g. the minimum is $5$ for $n=6$).</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p2">
+<h3>Problem 2</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 3: Foundational Angle and Configuration Chasing &middot; Cyclic Quadrilateral Recognition &middot; also 2026-germany-team-selection-test: AIMO 2, Problem 2; 2026-japan-tst: Problem 11</div>
+<div class="ct-text"><p>Let $ABC$ be an acute triangle with $AB&lt;AC$. Let $\Gamma$ be the circumcircle of $ABC$. The perpendicular from $B$ to $AC$ intersects $\Gamma$ again at $D\neq B$. Let $Q$ be the point on $\Gamma$, different from $B$, such that $AB=AQ$. Lines $BQ$ and $AC$ intersect at $R$. Line $DR$ intersects $\Gamma$ again at $S\neq D$. Segment $BC$ intersects the circumcircle of triangle $QRS$ at $T$. Lines $TQ$ and $RS$ intersect at $X$. Prove that $CX$ is perpendicular to $AB$.</p></div>
+<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
+<h4>Solution 1 ($T$ is the reflection of $Q$, then a harmonic division)</h4>
+<div class="ct-fig"><img style="width:368px" src="/assets/contests/2026-27/azerbaijan-tsts-2_s1.svg" alt="Figure for the solution"></div>
+<p>Write $\alpha,\beta,\gamma$ for the angles of $ABC$; $AB&lt;AC$ gives $\gamma&lt;\beta$. Let $E$ be the foot of the altitude from $B$ (so $B,E,D$ are
+collinear) and $H$ the orthocenter. We use $\measuredangle$ for directed angles between lines, modulo $180^\circ$.</p><p><strong>Step 1: where $Q$ and $R$ are.</strong> The chords $AQ$ and $AB$ are equal, so the arcs $AQ$ and $AB$ (not containing $C$) both measure $2\gamma$. Since
+$2\gamma&lt;2\beta$, the point $Q$ lies on the arc $AC$ not containing $B$, strictly between $A$ and $C$, and the arc $QC$ measures $2\beta-2\gamma$. Hence
+chord $BQ$ crosses chord $AC$, so $R$ lies inside both segments, and by inscribed angles
+\[\angle ABQ=\angle AQB=\angle QCA=\angle ACB=\gamma .\]
+In particular $\angle BRA=180^\circ-\alpha-\gamma=\beta$.</p><p><strong>Step 2: $T$ is the reflection $Q^*$ of $Q$ in $AC$.</strong> Since $\angle QCA=\angle ACB$, line $CA$ bisects angle $QCB$, so the reflection $Q^*$ of $Q$
+in $AC$ lies on ray $CB$ with $CQ^*=CQ$. The chord $CQ$ subtends the arc $2\beta-2\gamma$ and the chord $CB$ the arc $2\alpha$; as
+$\beta-\gamma&lt;\alpha$ (because $\beta&lt;90^\circ&lt;\alpha+\gamma$), $CQ^*=CQ&lt;CB$ and $Q^*$ lies on segment $BC$.</p><p>Now $RQ=RQ^*$ and $QQ^*\perp AC$, so $QQ^*\parallel BD$. Hence
+\[\measuredangle RQ^*Q=\measuredangle Q^*QR=\measuredangle(BD,BQ)=\measuredangle DBQ=\measuredangle DSQ=\measuredangle RSQ,\]
+using the isosceles triangle $RQQ^*$, the parallel lines, the circle $\Gamma$ through $B,D,S,Q$, and the collinearity of $D,R,S$. So $Q^*$ lies on the circle
+$(QRS)$. It remains to see that $Q^*$ is the only point of segment $BC$ on this circle. Since $R$ lies between $B$ and $Q$, the power of $B$ with respect to
+the circle is $BR\cdot BQ&gt;0$, so $B$ is outside it. Let $M$ be the midpoint of $QQ^*$, i.e. the foot of the perpendicular from $Q$ to $AC$. Because
+$\angle QCA=\gamma&lt;90^\circ$ and $\angle QRC=\angle BRA=\beta&lt;90^\circ$, the point $M$ lies on ray $CA$ and on ray $RC$, hence strictly between $R$ and $C$:
+the points $R$ and $C$ are on opposite sides of the chord $QQ^*$. As $AC$ is the perpendicular bisector of $QQ^*$, the chord is seen from $R$ under the
+angle $\angle QRQ^*=2\angle QRM=2\beta$ and from $C$ under $\angle QCQ^*=2\gamma$. A point on the other side of the chord from $R$ lies inside the circle
+exactly when it sees the chord under an angle greater than $180^\circ-2\beta$; here $2\gamma&gt;180^\circ-2\beta$ because $\alpha&lt;90^\circ$. So $C$ is inside
+the circle, and segment $BC$, which joins an outside point to an inside point, meets the circle exactly once. Hence $T=Q^*$. Consequently line $TQ$ is the line $QQ^*$, perpendicular to $AC$.</p><p><strong>Step 3: a harmonic division on $AC$.</strong> Recall that $M$, the midpoint of $QQ^*$, lies on $AC$. The line $CR=CA$ is the internal bisector of angle $QCB$; let
+the external bisector meet line $BQ$ at $R'$. Then $(B,Q;R,R')=-1$. Project line $BQ$ onto line $AC$ in the direction perpendicular to $AC$: $B\mapsto E$,
+$Q\mapsto M$, $R\mapsto R$, and $R'\mapsto C$ (since $CR'\perp CA$). Parallel projection preserves cross-ratios, so $(E,M;R,C)=-1$, i.e.
+\[\frac{\overline{RM}}{\overline{RE}}=-\frac{\overline{CM}}{\overline{CE}}. \tag{1}\]</p><p><strong>Step 4: $X$ lies on the altitude from $C$.</strong> Use coordinates with $AC$ as $x$-axis; points of $AC$ have abscissae $r,c,m,e$ (for $R,C,M,E$). As the
+triangle is acute, $D$ is the reflection of $H$ in $AC$: $D=(e,d)$, $H=(e,-d)$. The point $X$ lies on line $QQ^*$, i.e. $X=(m,x)$, and on line $RD$:
+\[x=d\,\frac{m-r}{e-r}.\]
+The altitude from $C$ is line $CH$; it meets line $QQ^*$ at $X'=(m,x')$ with $x'=-d\,\dfrac{m-c}{e-c}$. By (1) these are equal, so $X=X'$ lies on line
+$CH$, and $CX\perp AB$.</p>
+<h4>Solution 2 (Three pairs of similar right triangles)</h4>
+<div class="ct-fig"><img style="width:368px" src="/assets/contests/2026-27/azerbaijan-tsts-2_s2.svg" alt="Figure for the solution"></div>
+<p>Write $\alpha,\beta,\gamma$ for the angles of $ABC$; $AB&lt;AC$ gives $\gamma&lt;\beta$. Let $E$ be the foot of the altitude from $B$ (so $B,E,D$ are
+collinear). We use $\measuredangle$ for directed angles between lines, modulo $180^\circ$.</p><p><strong>Where $Q$ and $R$ are.</strong> The chords $AQ$ and $AB$ are equal, so the arcs $AQ$ and $AB$ (not containing $C$) both measure $2\gamma$. Since
+$2\gamma&lt;2\beta$, the point $Q$ lies on the arc $AC$ not containing $B$, strictly between $A$ and $C$, and the arc $QC$ measures $2\beta-2\gamma$. Hence
+chord $BQ$ crosses chord $AC$, so $R$ lies inside both segments, and by inscribed angles
+\[\angle ABQ=\angle AQB=\angle QCA=\angle ACB=\gamma .\]
+In particular $\angle BRA=180^\circ-\alpha-\gamma=\beta$.</p><p><strong>$T$ is the reflection $Q^*$ of $Q$ in $AC$.</strong> Since $\angle QCA=\angle ACB$, line $CA$ bisects angle $QCB$, so the reflection $Q^*$ of $Q$
+in $AC$ lies on ray $CB$ with $CQ^*=CQ$. The chord $CQ$ subtends the arc $2\beta-2\gamma$ and the chord $CB$ the arc $2\alpha$; as
+$\beta-\gamma&lt;\alpha$ (because $\beta&lt;90^\circ&lt;\alpha+\gamma$), $CQ^*=CQ&lt;CB$ and $Q^*$ lies on segment $BC$.</p><p>Now $RQ=RQ^*$ and $QQ^*\perp AC$, so $QQ^*\parallel BD$. Hence
+\[\measuredangle RQ^*Q=\measuredangle Q^*QR=\measuredangle(BD,BQ)=\measuredangle DBQ=\measuredangle DSQ=\measuredangle RSQ,\]
+using the isosceles triangle $RQQ^*$, the parallel lines, the circle $\Gamma$ through $B,D,S,Q$, and the collinearity of $D,R,S$. So $Q^*$ lies on the circle
+$(QRS)$. It remains to see that $Q^*$ is the only point of segment $BC$ on this circle. Since $R$ lies between $B$ and $Q$, the power of $B$ with respect to
+the circle is $BR\cdot BQ&gt;0$, so $B$ is outside it. Let $M$ be the midpoint of $QQ^*$, i.e. the foot of the perpendicular from $Q$ to $AC$. Because
+$\angle QCA=\gamma&lt;90^\circ$ and $\angle QRC=\angle BRA=\beta&lt;90^\circ$, the point $M$ lies on ray $CA$ and on ray $RC$, hence strictly between $R$ and $C$:
+the points $R$ and $C$ are on opposite sides of the chord $QQ^*$. As $AC$ is the perpendicular bisector of $QQ^*$, the chord is seen from $R$ under the
+angle $\angle QRQ^*=2\angle QRM=2\beta$ and from $C$ under $\angle QCQ^*=2\gamma$. A point on the other side of the chord from $R$ lies inside the circle
+exactly when it sees the chord under an angle greater than $180^\circ-2\beta$; here $2\gamma&gt;180^\circ-2\beta$ because $\alpha&lt;90^\circ$. So $C$ is inside
+the circle, and segment $BC$, which joins an outside point to an inside point, meets the circle exactly once. Hence $T=Q^*$, and line $TQ$ is
+perpendicular to $AC$ at $M$ and parallel to $BD$; moreover $M$ lies strictly between $R$ and $C$.</p><p><strong>Positions on $AC$.</strong> Since $\angle BRA=\beta&lt;90^\circ$, the foot $E$ lies on ray $RA$; hence $R$ lies strictly between $E$ and $M$. Since the
+triangle is acute, $E$ lies inside segment $AC$, and so do $M$ and $R$.</p><p><strong>Three similarities.</strong> All of the following triangles are right-angled at $M$ or $E$.</p><ul class="ct-ul"><li><p>$RMX\sim RED$: the lines $RX$ and $RD$ coincide (both are line $RS$), so the angles at $R$ are equal. Hence $\dfrac{MX}{ED}=\dfrac{RM}{RE}$.</p></li><li><p>$RMQ\sim REB$: $Q$, $B$ lie on line $BQ$ through $R$. Hence $\dfrac{RM}{RE}=\dfrac{MQ}{EB}$.</p></li><li><p>$CMQ\sim CEB$: $M$ and $E$ lie on ray $CA$ and $\angle MCQ=\gamma=\angle ECB$. Hence $\dfrac{MQ}{EB}=\dfrac{CM}{CE}$.</p></li></ul><p>Together, $\dfrac{MX}{ED}=\dfrac{CM}{CE}$, so the right triangles $CMX$ and $CED$ are similar (legs in proportion), and
+\[\angle ACX=\angle MCX=\angle ECD=\angle ACD .\]</p><p><strong>The side of $X$.</strong> As $R$ is between $E$ and $M$, and $MX\parallel ED$ with $X$, $D$ on a line through $R$, the point $X$ is the image of $D$
+under a homothety with centre $R$ and negative ratio; so $X$ and $D$ are on opposite sides of $AC$, i.e. $X$ is on the same side as $B$.</p><p><strong>Conclusion.</strong> The points $B$ and $C$ lie on the same arc $AD$ of $\Gamma$ (the order on $\Gamma$ is $A,D,C,B$), so
+$\angle ACD=\angle ABD=\angle ABE=90^\circ-\alpha$. Let $F$ be the foot of the altitude from $C$; it lies on side $AB$, on the same side of $AC$ as $B$,
+and $\angle ACF=90^\circ-\alpha$. The rays $CX$ and $CF$ lie on the same side of line $CA$ and make the same angle with ray $CA$, so they coincide.
+Hence $X$ lies on the altitude $CF$, and $CX\perp AB$.</p>
+<h4>Solution 3 (Coordinates: $T$ is the reflection of $Q$ in $AC$)</h4>
+<p>Put $A=(0,0)$, $C=(1,0)$, $B=(u,v)$ with $v&gt;0$, and let $r=u^2+v^2=AB^2$ and $n=(1-u)^2+v^2=BC^2=r+1-2u$. Since $AB&lt;AC$,
+$r&lt;1$. The angles at $A$ and $C$ are acute, so $0&lt;u&lt;1$, and the angle at $B$ is acute: $\overrightarrow{BA}\cdot\overrightarrow{BC}=r-u&gt;0$. Put
+$w=\frac{r-u}{v}&gt;0$. We shall use the identity
+\[rn=(r-u)^2+v^2,\tag{$*$}\]
+which holds because both sides equal $r^2+r-2ur$ (use $u^2+v^2=r$).</p><p><strong>$\Gamma$, $D$, $R$, $Q$.</strong> The circle $\Gamma$ is $x^2+y^2=x+wy$ (it passes through $A$, $C$, and through $B$ as $u+wv=r$). The perpendicular
+from $B$ to $AC$ is $x=u$; on it $\Gamma$ gives $y^2-wy+u^2-u=0$, with roots $v$ and $w-v$, so $D=(u,w-v)$. For a point of $\Gamma$ we have
+$AZ^2=x^2+y^2=x+wy$; so the points of $\Gamma$ at distance $\sqrt r$ from $A$ are its points on the line $x+wy=r$. Thus $BQ$ is the line $x+wy=r$, and
+$R=(r,0)$, with $0&lt;r&lt;1$.</p><p>Let $Q=(q,z)$. Substituting $x=r-wy$ in $x^2+y^2=r$ gives $(1+w^2)y^2-2rwy+r^2-r=0$, with roots $v$ and $z$; so $vz=-\frac{r(1-r)}{1+w^2}$. By
+$(*)$, $1+w^2=\frac{v^2+(r-u)^2}{v^2}=\frac{rn}{v^2}$, hence
+\[z=-\frac{v(1-r)}{n}&lt;0,\qquad q=r-wz .\]</p><p><strong>The point $T$.</strong> Let $T'=(q,-z)$ be the reflection of $Q$ in $AC$. The line $BC$ is $vx+(1-u)y=v$, and since $vw+1-u=r-u+1-u=n$,
+\[vq-(1-u)z=vr-(vw+1-u)z=vr-nz=vr+v(1-r)=v,\]
+so $T'$ lies on line $BC$. Its height $-z=\frac{v(1-r)}{n}$ lies strictly between $0$ and $v$, because $1-r&lt;n$ is equivalent to $u&lt;r$. So $T'$ lies
+strictly between $B$ and $C$.</p><p><strong>The circle $\omega$ through $Q,R,T'$.</strong> As $Q$ and $T'$ are symmetric in $AC$, the centre of $\omega$ is on $AC$, say $(c_0,0)$, and
+$\omega$ is $f(x,y):=x^2+y^2-2c_0x+2c_0r-r^2=0$ (it passes through $R$). Using $q^2+z^2=AQ^2=r$, the condition $f(Q)=0$ reads
+$r-r^2=2c_0(q-r)=-2c_0wz$, so
+\[2c_0=\frac{r(1-r)}{-wz}=\frac{rn}{vw}=\frac{rn}{r-u}.\]</p><p><strong>$S$ lies on $\omega$.</strong> Let $g(x,y)=x^2+y^2-x-wy$, so $\Gamma$ is $g=0$, and $\ell=f-g=(1-2c_0)x+wy+2c_0r-r^2$, an affine function. Since
+$S\in\Gamma$, we have $S\in\omega$ if and only if $\ell(S)=0$. Write the points of line $DR$ as $R+\mu(D-R)$. Then $g(R+\mu(D-R))$ is a quadratic in
+$\mu$ with leading coefficient $|D-R|^2$, constant term $g(R)=r^2-r$, and roots $\mu=1$ (the point $D$) and $\mu_S$ (the point $S$); so
+$\mu_S=\frac{r^2-r}{|D-R|^2}$. As $\ell$ is affine, $\ell(S)=\ell(R)+\mu_S\bigl(\ell(D)-\ell(R)\bigr)$. Here $\ell(R)=r-r^2$ and, using
+$2c_0(u-r)=-rn$ and $wv=r-u$,
+\[\ell(D)-\ell(R)=(1-2c_0)(u-r)+w(w-v)=(u-r)+rn+w^2-wv=rn+w^2-2wv .\]
+By $(*)$, $|D-R|^2=(u-r)^2+(w-v)^2=rn+w^2-2wv$ as well. Hence $\ell(S)=r-r^2+(r^2-r)=0$, and $S\in\omega$. So $\omega$ is the circle $QRS$.</p><p><strong>$T=T'$.</strong> The power of $C$ with respect to $\omega$ is
+$f(1,0)=(1-r)(1+r-2c_0)$, where
+\[1+r-2c_0=\frac{(1+r)(r-u)-r(r+1-2u)}{r-u}=-\frac{u(1-r)}{r-u}&lt;0;\]
+so $C$ lies inside $\omega$. Hence $C$ lies between the two points where line $BC$ meets $\omega$; one of them is $T'$, on the side of $B$, so the
+other one is beyond $C$. Thus $T'$ is the only point of segment $BC$ on $\omega$, and $T=T'=(q,-z)$.</p><p><strong>The point $X$.</strong> The line $TQ$ is $x=q$. The line $RS$ is the line $RD$, which is not vertical as $u\ne r$; its point with $x=q$ is
+$R+\mu(D-R)$ with $\mu=\frac{q-r}{u-r}=\frac{-wz}{-vw}=\frac zv$, so $X=\bigl(q,\frac{z(w-v)}{v}\bigr)$.</p><p><strong>Conclusion.</strong> We have $\overrightarrow{CX}\cdot\overrightarrow{AB}=u(q-1)+z(w-v)$. With $q-1=r-1-wz$ this is $u(r-1)+z\bigl(w(1-u)-v\bigr)$. Now
+$v\bigl(w(1-u)-v\bigr)=(r-u)(1-u)-v^2=r-u-ur+u^2-(r-u^2)=-u(1+r-2u)=-un$, so
+\[z\bigl(w(1-u)-v\bigr)=-\frac{v(1-r)}{n}\cdot\Bigl(-\frac{un}{v}\Bigr)=u(1-r),\]
+and $\overrightarrow{CX}\cdot\overrightarrow{AB}=u(r-1)+u(1-r)=0$. Hence $CX$ is perpendicular to $AB$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p3">
+<h3>Problem 3</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-S" title="Superhard, on the LPS VII scale">S</span>Number Theory &middot; LPS VII, Chapter 49: Combinatorial Number Theory and Structure &middot; Counting Integer Configurations &middot; also 2026-germany-team-selection-test: AIMO 6, Problem 3</div>
+<div class="ct-text"><p>For positive integers $n$ and $k$, let $f_k(n)$ denote the remainder when $n$ is divided by $2^k-1$. A positive integer $n$ is <em>grouse</em> if
+\[f_1(n)\leq f_2(n)\leq f_3(n)\leq f_4(n)\leq\cdots\]</p><ul class="ct-parts"><li><p><span class="ct-lbl">(a)</span> Prove that there are infinitely many <em>grouse</em> numbers.</p></li><li><p><span class="ct-lbl">(b)</span> Prove that there exists a positive integer $M$ such that there are at most $\dfrac{M}{2025^{2025}}$ <em>grouse</em> numbers less than $M$.</p></li></ul></div>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (A greedy chain of multiples; grouse numbers hug the powers of two)</h4>
+<p>Write $d_i=2^i-1$. Always $f_1(n)=0$, and $f_i(n)=n$ as soon as $d_i&gt;n$.</p><p><strong>The greedy chain.</strong> Fix $k\ge1$. Put $x_k=d_k$ and, for $i=k-1,k-2,\dots,1$, let $x_i$ be the smallest multiple of $d_i$ that is $\ge x_{i+1}$.
+Then $x_1\ge x_2\ge\dots\ge x_k$ and $x_i\le x_{i+1}+d_i-1$. More generally, starting the chain at any $x_i$, summing these steps gives
+\[0\le x_1-x_i\le\sum_{j=1}^{i-1}(d_j-1)=2^i-2i&lt;d_i. \tag{1}\]</p><p><strong>(a)</strong> We show that $x_1$ is grouse; since $x_1\ge x_k=2^k-1$ and $k$ is arbitrary, this gives infinitely many grouse numbers.</p><ul class="ct-ul"><li><p>For $i\le k$: $x_i$ is a multiple of $d_i$ and $0\le x_1-x_i&lt;d_i$ by (1), so $f_i(x_1)=x_1-x_i$. As $x_i$ does not increase with $i$, the values
+$f_1(x_1)\le f_2(x_1)\le\dots\le f_k(x_1)$ are non-decreasing.</p></li><li><p>For $i&gt;k$: by (1), $x_1\le d_k+2^k-2k&lt;2^{k+1}-1\le d_i$, so $f_i(x_1)=x_1\ge x_1-x_k=f_k(x_1)$.</p></li></ul><p><strong>(b)</strong> <em>Claim. If $2^k\le n&lt;2^{k+1}$ and $n$ is grouse, then $n&gt;2^{k+1}-3\cdot2^{k/2}$.</em> (For $k=0$ this is trivial, so let $k\ge1$.)</p><p><em>Step 1: $n-f_i(n)\ge x_i$ for $1\le i\le k$.</em> The number $n-f_i(n)$ is the largest multiple of $d_i$ not exceeding $n$. For $i=k$:
+$d_k\le n$, so $n-f_k(n)\ge d_k=x_k$. If $n-f_{i+1}(n)\ge x_{i+1}$, then, since $n$ is grouse, $n-f_i(n)\ge n-f_{i+1}(n)\ge x_{i+1}$, and as
+$n-f_i(n)$ is a multiple of $d_i$, the definition of $x_i$ gives $n-f_i(n)\ge x_i$.</p><p><em>Step 2: $x_i=(2^i-1)(2^{k+1-i}-1)$ for $k/2\le i\le k$.</em> For $i=k$ both sides equal $d_k$. Suppose it holds for $i+1$, where $k/2\le i&lt;k$. The
+number $y=(2^i-1)(2^{k+1-i}-1)$ is a multiple of $d_i$ and
+\[y-x_{i+1}=(2^i-1)(2^{k+1-i}-1)-(2^{i+1}-1)(2^{k-i}-1)=2^i-2^{k-i},\]
+which lies in $[0,d_i)$ because $i\ge k-i$ and $k-i\ge1$. So $y$ is the smallest multiple of $d_i$ that is at least $x_{i+1}$, i.e. $y=x_i$.</p><p><em>Step 3.</em> Take $i=\lceil k/2\rceil$. Then $n\ge n-f_i(n)\ge x_i=2^{k+1}-\bigl(2^i+2^{k+1-i}\bigr)+1$. If $k=2t$, then $2^i+2^{k+1-i}=3\cdot2^t=3\cdot2^{k/2}$;
+if $k=2t-1$, then $2^i+2^{k+1-i}=2^{t+1}=2\sqrt2\cdot2^{k/2}&lt;3\cdot2^{k/2}$. This proves the claim.</p><p><em>Counting.</em> By the claim, the block $[2^k,2^{k+1})$ contains at most $3\cdot2^{k/2}$ grouse numbers. Let $M=2^{b+1}$. The grouse numbers below
+$M$ lie in the blocks with $k=0,1,\dots,b$, so there are at most
+\[\sum_{k=0}^{b}3\cdot2^{k/2}&lt;\frac{3}{\sqrt2-1}\,2^{(b+1)/2}=\frac{3}{\sqrt2-1}\sqrt M\]
+of them. This is at most $M/2025^{2025}$ as soon as $\sqrt M\ge3\cdot2025^{2025}/(\sqrt2-1)$, which holds for $b$ large enough. Such an $M$ proves (b).</p>
+<h4>Solution 2 (Part (b) by forbidden residue classes and the Chinese remainder theorem)</h4>
+<p><strong>(a)</strong> Write $d_i=2^i-1$; then $f_i(n)=n$ whenever $d_i&gt;n$. Fix $k\ge1$, put $x_k=d_k$ and, for $i=k-1,\dots,1$, let $x_i$ be the
+smallest multiple of $d_i$ that is $\ge x_{i+1}$; so $x_{i+1}\le x_i\le x_{i+1}+d_i-1$. Summing these steps,
+$0\le x_1-x_i\le\sum_{j&lt;i}(d_j-1)=2^i-2i&lt;d_i$. Hence for $i\le k$ we get $f_i(x_1)=x_1-x_i$, which does not decrease as $i$ grows; and for
+$i&gt;k$ we get $x_1\le d_k+2^k-2k&lt;2^{k+1}-1\le d_i$, so $f_i(x_1)=x_1\ge f_k(x_1)$. Thus $x_1\ge2^k-1$ is grouse, and as $k$ is arbitrary
+there are infinitely many grouse numbers.</p><p><strong>(b)</strong> We only use the inequality $f_{2k-1}(n)\le f_{2k+1}(n)$, which every grouse number satisfies.</p><p><strong>Forbidden classes.</strong> Let $k\ge2$, $a=2^{2k-1}-1$ and $b=2^{2k+1}-1$. Recall $\gcd(2^u-1,2^v-1)=2^{\gcd(u,v)}-1$; since $\gcd(2k-1,2k+1)=1$, the
+numbers $a,b$ are coprime. For each pair of integers $0\le j&lt;i\le a-1$ (there are $\binom a2$ pairs; note $j&lt;a&lt;b$) the Chinese remainder theorem gives one
+residue class modulo $ab$ consisting of the $n$ with $n\equiv i\pmod a$ and $n\equiv j\pmod b$, that is, $f_{2k-1}(n)=i&gt;j=f_{2k+1}(n)$. No grouse number
+lies in these $\binom a2$ classes. So the fraction of classes modulo $ab$ that may contain grouse numbers is at most
+\[1-\frac{\binom a2}{ab}=1-\frac{a-1}{2b}=1-\frac{2^{2k-2}-1}{2^{2k+1}-1}=1-\frac18+\frac{7}{8(2^{2k+1}-1)}\le1-\frac18+\frac{7}{8\cdot31}=\frac{28}{31},\]
+using $2^{2k+1}-1\ge31$.</p><p><strong>Many independent moduli.</strong> Choose $k_1=2$ and $k_j=\prod_{i&lt;j}(2k_i-1)(2k_i+1)$ for $j\ge2$. Each $k_j$ is at least $2$, and every
+earlier number $2k_i\pm1$ divides $k_j$, so it is coprime to $2k_j\pm1$; also $\gcd(2k_j-1,2k_j+1)=1$. Hence the exponents $2k_j\pm1$ $(j=1,\dots,s)$
+are pairwise coprime, and so are the numbers $a_j=2^{2k_j-1}-1$, $b_j=2^{2k_j+1}-1$. Put $M=\prod_{j=1}^{s}a_jb_j$.</p><p><strong>Counting.</strong> The numbers $0,1,\dots,M-1$ represent each class modulo $M$ once. If such a number is grouse, its class modulo each $a_jb_j$ is
+not forbidden. By the Chinese remainder theorem the classes modulo $M$ correspond to tuples of classes modulo $a_1b_1,\dots,a_sb_s$, so at most
+\[\prod_{j=1}^{s}\frac{28}{31}\,a_jb_j=\Bigl(\frac{28}{31}\Bigr)^{s}M\]
+numbers below $M$ are grouse. Choosing $s$ with $(28/31)^s\le2025^{-2025}$ gives at most $M/2025^{2025}$ grouse numbers less than $M$.</p>
+</div></details>
+</section>
+<h2 class="ct-group" id="imo-tst-day-2">IMO TST Day 2</h2>
+<section class="ct-problem" id="p4">
+<h3>Problem 4</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 8: Modular Arithmetic and Congruence Methods &middot; Periodic and Cyclic Behavior Modulo $n$ &middot; also 2026-germany-team-selection-test: VAIMO 2, Problem 1; 2026-romania-team-selection-tests: Day 1, Problem 2</div>
+<div class="ct-text"><p>Let $n$ and $k$ be positive integers such that $n&lt;k&lt;2n$. Suppose $a_1,a_2,\ldots,a_k$ are positive integers such that $2^{a_1}+2^{a_2}+\cdots+2^{a_k}$ is divisible by $2^n-1$.</p><p>Show that at least three of $a_1,a_2,\ldots,a_k$ have the same remainder when divided by $n$.</p></div>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Reading off binary digits)</h4>
+<p>Since $2^n\equiv1\pmod{2^n-1}$, the residue of $2^a$ modulo $2^n-1$ depends only on $a\bmod n$: if $a\equiv r\pmod n$ with
+$0\le r\le n-1$, then $2^a\equiv2^r$. For $0\le r\le n-1$ let $c_r$ be the number of indices $i$ with $a_i\equiv r\pmod n$. Then
+$\sum_r c_r=k$ and
+\[S:=\sum_{r=0}^{n-1}c_r2^r\equiv2^{a_1}+\cdots+2^{a_k}\equiv0\pmod{2^n-1}.\]
+Suppose, for contradiction, that every $c_r\le2$. Then $0&lt;S\le2(2^0+\cdots+2^{n-1})=2(2^n-1)$, with equality only if all $c_r=2$, i.e. $k=2n$,
+which is excluded. So $S$ is a positive multiple of $2^n-1$ below $2(2^n-1)$, i.e. $S=2^n-1$.</p><p><strong>Claim.</strong> If $c_0,\dots,c_{m-1}\in\{0,1,2\}$ and $\sum_{r&lt;m}c_r2^r=2^m-1$, then all $c_r=1$.
+Induction on $m$; $m=1$ is clear. For $m\ge2$, the right side is odd, so $c_0$ is odd, $c_0=1$. Subtracting $1$ and halving gives
+$\sum_{r=1}^{m-1}c_r2^{r-1}=2^{m-1}-1$, and the induction hypothesis gives $c_1=\cdots=c_{m-1}=1$.</p><p>By the claim with $m=n$, every $c_r=1$, so $k=\sum c_r=n$, contradicting $k&gt;n$. Hence some residue class contains at least three of the $a_i$.</p>
+<h4>Solution 2 (A number and its complement)</h4>
+<p>As $2^n\equiv1\pmod{2^n-1}$, replace each $a_i$ by its remainder $r_i\in\{0,\dots,n-1\}$ modulo $n$; this does not change the sum modulo
+$2^n-1$. Assume no remainder occurs three times. Let $U$ be the set of remainders that occur at least once and $W\subseteq U$ the set of those
+occurring twice, and put
+\[A=\sum_{r\in U}2^r,\qquad B=\sum_{r\in W}2^r .\]
+Then $k=|U|+|W|$ and $2^n-1\mid A+B$. Both $A$ and $B$ are at most $2^n-1$, and they are not both equal to $2^n-1$ (that would mean $k=2n$); also
+$A+B\ge k&gt;0$. Hence $A+B=2^n-1$.</p><p>Now $2^n-1$ is the $n$-bit number $11\ldots1$ in binary, and $A$ is an $n$-bit number whose $1$-bits are the positions in $U$. So $B=(2^n-1)-A$
+is the number whose $1$-bits are exactly the positions <em>not</em> in $U$ (subtracting from $11\ldots1$ produces no borrows). But the $1$-bits of
+$B$ are the positions in $W\subseteq U$. A set contained both in $U$ and in its complement is empty, so $W=\varnothing$, $B=0$ and $A=2^n-1$, i.e.
+$U$ is everything. Then $k=|U|=n$, contradicting $n&lt;k$. So some remainder occurs at least three times.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p5">
+<h3>Problem 5</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 31: Extremal Principle and Bounding Arguments &middot; Bounding and Limiting Arguments &middot; also 2026-germany-team-selection-test: AIMO 1, Problem 2; 2026-japan-tst: Problem 4</div>
+<div class="ct-text"><p>There are $2025$ white balls and $2025$ black balls arranged in a row. A balanced segment is a contiguous nonempty segment of balls that contains the same number of white balls as black balls. A balanced removal is the operation of selecting a balanced segment $S$, removing all the balls in $S$, and shifting left the balls that were to the right of $S$ so that the remaining balls form a contiguous row.
+Determine the smallest positive integer $N$ satisfying the following property: for every configuration of balls and for every integer $k$ satisfying $0\leq k\leq 2025$, there exists a sequence of at most $N$ balanced removals after which there are exactly $2k$ remaining balls.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$N=2$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Cut along the zero-level walk)</h4>
+<p>Let $n=2025$. Number the gaps between balls $0,1,\dots,2n$ (gap $t$ is just after the $t$-th ball) and let $P_t$ be the number of
+white minus the number of black balls among the first $t$ balls. So $P_0=P_{2n}=0$, consecutive values differ by $1$, and the segment of balls between
+gaps $i&lt;j$ is balanced exactly when $P_i=P_j$.</p><p><strong>$N\ge2$.</strong> Take the row $BB\,\underbrace{W\cdots W}_{n}\,\underbrace{B\cdots B}_{n-2}$ and $k=1$. One balanced removal leaving $2$ balls would
+remove all balls except either the first two, or the last two, or the first and the last. These pairs are $BB$, $BB$ and $BB$ (as $n-2\ge2$), never one
+white and one black, while the removed segment, and hence the remaining pair, would have to be balanced. So one removal is not enough.</p><p><strong>$N\le2$.</strong> Fix a row and $k$, and put $L=2n-2k$, the number of balls to remove. If $L=0$ do nothing. Otherwise let $z$ be the last gap with
+$z&lt;L$ and $P_z=0$ (it exists, since $P_0=0$), and let $z'$ be the first gap with $z'\ge L$ and $P_{z'}=0$ (it exists, since $P_{2n}=0$). Between
+$z$ and $z'$ the walk does not return to $0$, so $P_t$ has constant sign for $z&lt;t&lt;z'$; say $P_t\ge0$ on $[z,z']$ (the other case is symmetric).</p><p>Put $\ell=L-z$; it is even and $0&lt;\ell\le z'-z$. For $z\le i\le z'-\ell$ consider $g(i)=P_{i+\ell}-P_i$. Then
+\[g(z)=P_{z+\ell}\ge0,\qquad g(z'-\ell)=-P_{z'-\ell}\le0,\]
+all values of $g$ are even (since $\ell$ is even), and $g(i+1)-g(i)\in\{-2,0,2\}$. Hence $g(i)=0$ for some $i$: the balls between gaps $i$ and $i+\ell$
+form a balanced segment of length $\ell$ lying between gaps $z$ and $z'$.</p><p>Now remove this segment, and then (if $z&gt;0$) the first $z$ balls, which form a balanced segment because $P_z=P_0$ and are still contiguous at the start
+of the row. Altogether $\ell+z=L$ balls are removed in at most two balanced removals, leaving $2k$ balls.</p><p>Hence the smallest $N$ is $\boxed{2}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p6">
+<h3>Problem 6</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Algebra &middot; LPS VII, Chapter 26: Inequalities: Symmetry, Homogenization, and Advanced Structure &middot; Homogenization and Normalization</div>
+<div class="ct-text"><p>For all positive real numbers $a,b,c$ with $a^2b+a^2c+b^2a+b^2c+c^2a+c^2b=1$, show that
+\[\frac{ab+bc+ca}{1+2abc}\leq\frac{(a+b+c)^2}{4}.\]</p></div>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Homogenize, then a sum of squares)</h4>
+<p>Write $p=a+b+c$, $q=ab+bc+ca$, $r=abc$. Then
+\[a^2b+a^2c+b^2a+b^2c+c^2a+c^2b=pq-3r=1,\qquad (a+b)(b+c)(c+a)=pq-r .\]
+Hence $1+2abc=(pq-3r)+2r=pq-r=(a+b)(b+c)(c+a)&gt;0$, and
+\[\frac{ab+bc+ca}{1+2abc}=\frac{q\cdot 1}{pq-r}=\frac{q(pq-3r)}{pq-r}.\]
+So the inequality is equivalent to the homogeneous inequality $4q(pq-3r)\le p^2(pq-r)$, that is,
+\[F:=p^3q-4pq^2-p^2r+12qr\ \ge 0 .\]
+Expanding both sides, one checks the identity
+\[F=\sum_{\text{cyc}} ab(a+b-c)(a-b)^2=S_c(a-b)^2+S_a(b-c)^2+S_b(c-a)^2,\]
+where $S_c=ab(a+b-c)$, $S_a=bc(b+c-a)$, $S_b=ca(c+a-b)$. By symmetry we may assume $a\ge b\ge c$. Then $S_c\ge 0$ and $S_b\ge 0$
+(because $a+b\ge c$ and $c+a\ge b$). If $S_a\ge 0$ we are done. Otherwise, since $a-c\ge b-c\ge 0$ we have $(c-a)^2\ge (b-c)^2$, so
+\[S_a(b-c)^2+S_b(c-a)^2\ \ge\ (S_a+S_b)(b-c)^2,\]
+and
+\[S_a+S_b=c\bigl[b(b+c-a)+a(c+a-b)\bigr]=c\bigl[(a-b)^2+c(a+b)\bigr]\ge 0 .\]
+Thus $F\ge 0$, which proves the inequality. Equality holds for $a=b=c=6^{-1/3}$.</p>
+<h4>Solution 2 (A generalized Schur inequality)</h4>
+<p>Write $p=a+b+c$, $q=ab+bc+ca$, $r=abc$. Expanding, the constraint reads $pq-3r=1$, and
+$1+2abc=(pq-3r)+2r=pq-r=(a+b)(b+c)(c+a)$. Multiplying the left side by $1=pq-3r$, the claim becomes $4q(pq-3r)\le p^2(pq-r)$, i.e.
+$F=p^3q-4pq^2-p^2r+12qr\ge 0$.</p><p>Expanding, $F$ is exactly
+\[F=a^2(b+c)(a-b)(a-c)+b^2(c+a)(b-c)(b-a)+c^2(a+b)(c-a)(c-b).\]
+Assume $a\ge b\ge c$ and put $x=a^2(b+c)$, $y=b^2(c+a)$, $z=c^2(a+b)$. Then
+\[x-y=a^2b+a^2c-ab^2-b^2c=ab(a-b)+c(a^2-b^2)\ge 0 .\]
+Now
+\[F=x(a-b)(a-c)-y(a-b)(b-c)+z(a-c)(b-c).\]
+The last term is $\ge 0$. For the first two, $x\ge y$ and $a-c\ge b-c\ge 0$ give
+$x(a-b)(a-c)\ge y(a-b)(b-c)$. Hence $F\ge 0$, as required, with equality for $a=b=c$.</p>
+</div></details>
+</section>
+<h2 class="ct-group" id="imo-tst-day-3">IMO TST Day 3</h2>
+<section class="ct-problem" id="p7">
+<h3>Problem 7</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 39: Graph Theory and Structural Combinatorics &middot; Paths, Cycles, and Connectivity</div>
+<div class="ct-text"><p>A graph is <em>good</em> if its edges can be colored with $2$ colors so that no cycle has two consecutive edges of the same color. What is the maximum number of edges in a good graph with $1000$ vertices?</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$1332$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (No theta subgraph, so the cycles are edge-disjoint)</h4>
+<div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/azerbaijan-tsts-7_s1.svg" alt="Figure for the solution"></div>
+<p><em>Construction.</em> Take a vertex $v$ and $333$ cycles of length $4$ that pairwise share only $v$; this uses
+$1+333\cdot 3=1000$ vertices and $333\cdot4=1332$ edges. Colour the edges of each $4$-cycle alternately red and blue. Every cycle of this graph
+is one of the $4$-cycles (a cycle cannot pass from one $4$-cycle to another, because they meet only at $v$), so the graph is good.</p><p><em>Bound.</em> Fix a good colouring of a good graph $G$ with $n=1000$ vertices.</p><p><em>(i) Every cycle has even length at least $4$.</em> Along a cycle the colours alternate, so its length is even; a simple graph has no
+cycle of length $2$.</p><p><em>(ii) No two distinct cycles share an edge.</em> Suppose cycles $C_1\ne C_2$ share an edge. A cycle contained in another cycle equals it, so
+$C_2$ has an edge outside $C_1$. Follow $C_2$ from this edge in both directions until it first meets vertices of $C_1$; we get a path $R$ of
+$C_2$, with no inner vertex on $C_1$, joining two vertices $x,y$ of $C_1$. Here $x\ne y$: otherwise $C_2$ would meet $C_1$ only at $x$, but
+$C_2$ contains an edge of $C_1$. Now $x$ and $y$ are joined by three paths with no common inner vertices: the two arcs of $C_1$ and $R$. At $x$
+these three paths start with three edges, two of which, say of the paths $R_1,R_2$, have the same colour. Then $R_1\cup R_2$ is a cycle in which
+these two edges are consecutive (both at $x$) and of the same colour, a contradiction.</p><p><em>(iii) Counting.</em> Let $k$ be the number of cycles of $G$. Delete one edge from each cycle. Every cycle of $G$ has lost an edge, so the
+remaining graph has no cycle; a forest on $n$ vertices has at most $n-1$ edges. Hence $|E|-k\le n-1$. By (i) and (ii) the $k$ cycles are
+edge-disjoint and each has at least $4$ edges, so $4k\le |E|$. Therefore
+\[|E|\le n-1+k\le n-1+\frac{|E|}{4},\qquad\text{so}\qquad |E|\le \frac{4(n-1)}{3}=1332 .\]
+The maximum number of edges is $\boxed{1332}$.</p>
+<h4>Solution 2 (Blocks of the graph)</h4>
+<p><em>Construction:</em> take $333$ four-cycles sharing one common vertex and no other vertices ($1000$ vertices, $1332$ edges), and
+colour each four-cycle alternately. Every cycle of this graph is one of the four-cycles, so the graph is good.</p><p><em>Bound.</em> Recall that a <em>block</em> of a graph is a maximal connected subgraph without a cut vertex; every edge lies in exactly one
+block, every cycle lies inside one block, and a block with at least $3$ vertices is $2$-connected. If the graph has $c$ connected components,
+then $\sum_B(|V(B)|-1)=n-c$ over all blocks $B$ (this is the usual count in the block&ndash;cut-vertex tree of each component).</p><p>Let $B$ be a block with at least $3$ vertices and let $vu$, $vw$ be two edges of $B$ at a vertex $v$. Since $B$ is $2$-connected, $B-v$ is
+connected, so there is a $u$&ndash;$w$ path in $B$ avoiding $v$; together with $vu$ and $vw$ it is a cycle in which $vu$ and $vw$ are consecutive.
+Hence $vu$ and $vw$ have different colours, so $v$ has at most $2$ edges in $B$. A $2$-connected graph in which all degrees are at most $2$ is a
+cycle, and it has even length because its colours alternate; so $|V(B)|\ge 4$.</p><p>So every block is a single edge (contributing $1$ edge and $|V(B)|-1=1$) or an even cycle of length $L\ge4$ (contributing $L$ edges and
+$|V(B)|-1=L-1\ge 3$). If there are $k$ cycle blocks,
+\[|E|=\sum_B(|V(B)|-1)+k=n-c+k,\qquad 3k\le \sum_B(|V(B)|-1)=n-c .\]
+Thus $|E|\le (n-1)+\frac{n-1}{3}=999+333=1332$, so the answer is $\boxed{1332}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p8">
+<h3>Problem 8</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Number Theory &middot; LPS VII, Chapter 21: Arithmetic Functions and Multiplicative Structure &middot; Function Equations on Integers &middot; also 2026-germany-team-selection-test: AIMO 5, Problem 2; 2026-japan-tst: Problem 10</div>
+<div class="ct-text"><p>Let $\mathbb{Z}_{&gt;0}$ be the set of positive integers. Determine all functions $f:\mathbb{Z}_{&gt;0}\to\mathbb{Z}$ such that for every $n\in\mathbb{Z}_{&gt;0}$, and every positive divisor $d$ of $n$, there exists a positive divisor $e$ of $n$ such that $n$ divides $d+f(e)$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$f(n)=-n$ for all $n$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Residues as a bijection, and two large primes)</h4>
+<p><strong>$f(n)=-n$ works:</strong> for $d\mid n$ take $e=d$; then $d+f(e)=0$.</p><p>Now let $f$ satisfy the condition; write $D(n)$ for the set of positive divisors of $n$ and $\tau(n)=|D(n)|$.</p><p><strong>Step 1: a bijection.</strong> Fix $n$. The numbers $-d$ $(d\in D(n))$ are $\tau(n)$ different residues modulo $n$ (the divisors below $n$ are distinct
+and nonzero modulo $n$, and $-n\equiv0$). Each of them must be congruent to some $f(e)$ with $e\in D(n)$, and there are only $\tau(n)$ such values. Hence
+\[\{f(e)\bmod n:\ e\in D(n)\}=\{-d\bmod n:\ d\in D(n)\},\quad\text{and the }f(e)\ (e\in D(n))\text{ are pairwise incongruent mod }n. \tag{1}\]</p><p><strong>Step 2: $f(m)=0$ or $f(m)=-d$ for some $d\in D(m)$.</strong> Let $a=f(m)$ and pick a prime $q&gt;|a|+m$; then $q\nmid m$. By (1) for $n=mq$,
+$a\equiv-d\pmod{mq}$ for some $d\mid mq$, i.e. $d=d'$ or $d=d'q$ with $d'\mid m$. In the first case
+$mq\mid a+d'$ and $|a+d'|\le|a|+m&lt;mq$, so $a=-d'$. In the second case $q\mid a$, so $a=0$ (as $q&gt;|a|$).</p><p><strong>Step 3: $f(m)=-m$ for all $m$, by strong induction.</strong> Let $m\ge1$ and assume $f(d)=-d$ for all $d&lt;m$ (nothing is assumed for $m=1$). By (1) for
+$n=m$, the values $f(d)=-d$ $(d\in D(m),\ d&lt;m)$ already occupy all the required residues except $0$, so $f(m)\equiv0\pmod m$, and by Step 2,
+$f(m)\in\{0,-m\}$.</p><p>Suppose $f(m)=0$. Let $q$ be any prime not dividing $m$ and $n=mq$, so $D(n)=D(m)\cup qD(m)$. The residue $-m$ is required by (1), and $-m\not\equiv0$.
+It is not $f(d)=-d$ for $d&lt;m$, $d\mid m$, nor $f(m)=0$. So $f(dq)\equiv-m\pmod{mq}$ for some $d\mid m$. By Step 2, $f(dq)$ is $0$ or $-c$ with
+$c\mid dq$, $0&lt;c\le dq\le mq$; the congruence then forces $f(dq)=-m$ and $m\mid dq$, hence $m\mid d$ and $d=m$. So
+\[f(mq)=-m\quad\text{for every prime } q\nmid m.\]
+Take two different such primes $q,r$ and $N=mqr$. Both $mq$ and $mr$ divide $N$ and $f(mq)=f(mr)=-m$, contradicting the incongruence in (1) for $N$.
+Hence $f(m)=-m$, completing the induction.</p><p>The only function is $\boxed{f(n)=-n}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p9">
+<h3>Problem 9</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-S" title="Superhard, on the LPS VII scale">S</span>Geometry &middot; LPS VII, Chapter 51: Spiral Similarity and Advanced Transformational Geometry &middot; Miquel and Rotational Circle Structure</div>
+<div class="ct-text"><p>Let $ABC$ be a triangle with $\angle B&gt;\angle A&gt;\angle C$. Let $\Omega$ be the circumcircle of triangle $ABC$. The lines tangent to $\Omega$ at points $B$ and $C$ intersect at $P$. Lines $BP$ and $AC$ intersect at $E$. Lines $CP$ and $AB$ intersect at $F$. Let $D$ be the reflection of point $A$ in line $EF$. The circumcircles of triangles $DEB$ and $DFC$ intersect again at $Q\neq D$. Lines $DP$ and $BC$ intersect at $Z$.</p><p>Prove that points $A$, $Z$ and $Q$ are collinear.</p></div>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Locate $Q$ by an angle chase, then a power-of-a-point computation in coordinates)</h4>
+<div class="ct-fig"><img style="width:298px" src="/assets/contests/2026-27/azerbaijan-tsts-9_s1.svg" alt="Figure for the solution"></div>
+<p>Directed angles between lines are taken modulo $180^\circ$; for a line $\ell$ let $\theta(\ell)$ be its direction, so that
+$\angle(\ell,m)=\theta(m)-\theta(\ell)$. Let $T$ be the point where the tangent to $\Omega$ at $A$ meets $BC$. From $\angle B&gt;\angle A&gt;\angle C$
+we get $AC&gt;BC&gt;AB$ and $\angle A&lt;90^\circ$.</p><p><em>Step 1: $T$ lies on $EF$, and $D$ lies on the circle $\Gamma$ with centre $T$ and radius $TA$.</em> Pascal's theorem for the degenerate
+hexagon $AABBCC$ on $\Omega$ says that the points $AA\cap BC=T$, $AB\cap CC=F$ and $BB\cap CA=E$ are collinear. As $D$ is the reflection of $A$
+in the line $EF$, which passes through $T$, we get $TD=TA$. Also $TA^2=TB\cdot TC$.</p><p><em>Step 2: $Q$ lies on $\Omega$.</em> The tangents give $\theta(TA)=\theta(AB)+\theta(AC)-\theta(BC)$ and
+$\theta(BP)=\theta(BA)+\theta(BC)-\theta(AC)$. The reflection in $EF$ maps $A$ to $D$ and fixes $E$ and $T$, so
+$\theta(ED)=2\theta(EF)-\theta(AC)$ and $\theta(TD)=2\theta(EF)-\theta(TA)$. Therefore
+\[\angle(ED,EB)-\angle(CA,CB)=2\theta(AC)+\theta(BP)-\theta(BC)-2\theta(EF)=\theta(TA)+\theta(BC)-2\theta(EF)=\angle(TD,TB),\]
+where the middle equality is exactly the two tangent formulas. Now let $X\ne B$ be a point of $\Omega$. Since
+$\angle(XA,XB)=\angle(CA,CB)$, the point $X$ lies on the circle $DEB$ if and only if $\angle(XD,XB)=\angle(ED,EB)$, i.e. if and only if
+\[\angle(XD,XA)=\angle(TD,TB).\qquad(\ast)\]
+In the same way (exchange the roles of $B,E$ and $C,F$; the middle expression above is symmetric) a point $X\ne C$ of $\Omega$ lies on the
+circle $DFC$ if and only if $(\ast)$ holds. If $D$ lies on $BC$, $(\ast)$ says that $X$ lies on the line $AD$; then $Q$ lies on the line $AD$, $Z=D$,
+and we are done. Otherwise the points $X$ with $(\ast)$ form a circle $\kappa$ through $A$ and $D$ (with $A$ and $D$ removed), which meets
+$\Omega$ at $A$ and at one more point $Q_0$. Hence the second intersection of the circle $DEB$ with $\Omega$ and the second intersection of
+the circle $DFC$ with $\Omega$ are both $Q_0$; so $Q_0$ lies on both circles and $Q=Q_0$. In particular $Q\in\Omega$ and $Q\in\kappa$. The
+centre of $\kappa$ lies on the perpendicular bisector of $AD$, which is the line $EF$.</p><p><em>Step 3: reduction.</em> The line $AQ$ is the radical axis of $\Omega$ and $\kappa$. The point $Z$ lies on $BC$, so its power with respect
+to $\Omega$ is $\overline{ZB}\cdot\overline{ZC}$, which is also its power with respect to the circle $DBC$. Hence $A,Z,Q$ are collinear if and
+only if $Z$ has equal powers with respect to $\kappa$ and to the circle $DBC$, i.e. lies on their radical axis. That radical axis passes
+through $D$, and $Z$ lies on the line $DP$; so it suffices to prove
+\[\operatorname{pow}_\kappa(P)=\operatorname{pow}_{(DBC)}(P).\qquad(\ast\ast)\]</p><p><em>Step 4: coordinates.</em> Take $T$ as origin, $TA=1$ (so $\Gamma$ is the unit circle) and $EF$ as the $x$-axis, with
+$A=(\cos\alpha,\sin\alpha)$, $0&lt;\alpha&lt;\pi$; then $D=(\cos\alpha,-\sin\alpha)$. The point $T$ is outside $\Omega$, so $B$ and $C$ lie on one ray
+from $T$; let $w=(\cos\psi,\sin\psi)$ be its direction and $w^\perp=(-\sin\psi,\cos\psi)$. As $TB\cdot TC=1$, we have $B=bw$, $C=w/b$ with $b=TB$.
+For a point $U$ of the unit circle, $|U-bw|^2=1-2b\,U\cdot w+b^2=b^2\,|U-w/b|^2$, so $UB=b\cdot UC$; in particular $AB=b\cdot AC$, and $b&lt;1$
+because $AB&lt;AC$. Put
+\[m=\tfrac12\bigl(b+\tfrac1b\bigr),\qquad h=\tfrac12\bigl(\tfrac1b-b\bigr)&gt;0,\qquad m^2-h^2=1,\]
+so that $BC=2h$ and $mw$ is the midpoint of $BC$. Write $S=\sin(\alpha+\psi)$, $s=\sin(\alpha-\psi)$; here $s\ne0$ as $A\notin BC$, and
+$S\ne0$ as $D\notin BC$ (note $w\cdot A=\cos(\alpha-\psi)$, $w^\perp\cdot A=s$, $w\cdot D=\cos(\alpha+\psi)$, $w^\perp\cdot D=-S$).</p><p>(a) <em>Circles through $B$ and $C$.</em> A circle $|X|^2-2V\cdot X+k=0$ meets the line $\mathbb R w$ at the points $tw$ with
+$t^2-2(V\cdot w)t+k=0$. So it passes through $B$ and $C$ if and only if $k=1$ and $V\cdot w=m$, i.e. $V=mw+\nu w^\perp$; it passes through a
+point $U$ of the unit circle if and only if $V\cdot U=1$. For $\Omega$ (through $A$) and the circle $DBC$ we get centres $V_1=mw+\nu_1w^\perp$,
+$V_2=mw+\nu_2w^\perp$ with
+\[\nu_1s=1-m\cos(\alpha-\psi),\qquad \nu_2S=m\cos(\alpha+\psi)-1 .\]</p><p>(b) <em>The point $P$.</em> It lies on the perpendicular bisector of $BC$: $P=mw+\pi w^\perp$. Tangency at $B$ means $(P-B)\cdot(V_1-B)=0$, and
+$P-B=(m-b)w+\pi w^\perp$, $V_1-B=(m-b)w+\nu_1w^\perp$, $(m-b)^2=h^2$. So $\pi\nu_1=-h^2$. (Here $\nu_1\ne0$: otherwise $BC$ would be a diameter
+and $\angle A=90^\circ$.)</p><p>(c) <em>The circle $\kappa$.</em> Its centre is a point $K=(c,0)$ of $EF$, so its equation is $|X|^2-2cx+2c\cos\alpha-1=0$. By the tangent-chord
+angle at $D$, $(\ast)$ says that the tangent $t_D$ to $\kappa$ at $D$ satisfies $\angle(t_D,DA)=\angle(TD,TB)=\psi+\alpha$. As $DA$ is
+vertical and $t_D\perp KD$, this means $\theta(KD)=-(\alpha+\psi)$: the vector $D-K=(\cos\alpha-c,-\sin\alpha)$ is parallel to
+$(\cos(\alpha+\psi),-\sin(\alpha+\psi))$. Hence $(\cos\alpha-c)S=\sin\alpha\cos(\alpha+\psi)$, that is,
+\[cS=\sin\psi .\]</p><p>(d) <em>The point $E$.</em> The triangles $EAB$ and $EBC$ are similar (common angle at $E$, and $\angle EBA=\angle ECB$ by the tangent-chord
+angle), so $\frac{EA}{EB}=\frac{EB}{EC}=\frac{AB}{BC}$ and $E$ divides $AC$ externally in the ratio $AB^2:BC^2$:
+$E=\frac{BC^2\cdot A-AB^2\cdot C}{BC^2-AB^2}$. Since $E$ is on the $x$-axis, $BC^2\sin\alpha=AB^2\,\frac{\sin\psi}{b}=b\,AC^2\sin\psi$. With
+$BC^2=4h^2$ and $b\,AC^2=b\bigl(1+\tfrac1{b^2}-\tfrac2b\cos(\alpha-\psi)\bigr)=2\bigl(m-\cos(\alpha-\psi)\bigr)$ this reads
+\[2h^2\sin\alpha=\sin\psi\,\bigl(m-\cos(\alpha-\psi)\bigr).\qquad(\mathrm C)\]</p><p>(e) <em>The computation.</em> By (a) and (c), $\operatorname{pow}_\kappa(P)-\operatorname{pow}_{(DBC)}(P)=2G$ with
+\[G=V_2\cdot P-c\,P_x+c\cos\alpha-1=h^2+\pi(\nu_2+c\sin\psi)+c(\cos\alpha-m\cos\psi),\]
+using $V_2\cdot P=m^2+\nu_2\pi$, $P_x=m\cos\psi-\pi\sin\psi$ and $m^2-1=h^2$. Multiply by $\nu_1Ss$ and use $\pi\nu_1=-h^2$, $\nu_1s=1-m\cos(\alpha-\psi)$,
+$(\nu_2+c\sin\psi)S=m\cos(\alpha+\psi)-1+\sin^2\psi=m\cos(\alpha+\psi)-\cos^2\psi$ and $cS=\sin\psi$:
+\[\nu_1Ss\,G=h^2\Bigl[\bigl(1-m\cos(\alpha-\psi)\bigr)S-\bigl(m\cos(\alpha+\psi)-\cos^2\psi\bigr)s\Bigr]+\sin\psi\bigl(1-m\cos(\alpha-\psi)\bigr)(\cos\alpha-m\cos\psi).\]
+We claim that the right side equals
+\[(\cos\psi-m\cos\alpha)\Bigl[2h^2\sin\alpha-\sin\psi\bigl(m-\cos(\alpha-\psi)\bigr)\Bigr],\]
+which is $0$ by (C). Indeed, the difference of the two expressions is $h^2U+\sin\psi\,W$ with
+\[U=\bigl(1-m\cos(\alpha-\psi)\bigr)S-\bigl(m\cos(\alpha+\psi)-\cos^2\psi\bigr)s-2\sin\alpha\cos\psi+2m\sin\alpha\cos\alpha,\]
+\[W=\bigl(1-m\cos(\alpha-\psi)\bigr)(\cos\alpha-m\cos\psi)+\bigl(m-\cos(\alpha-\psi)\bigr)(\cos\psi-m\cos\alpha).\]
+Since $\cos(\alpha-\psi)S+\cos(\alpha+\psi)s=\sin2\alpha$ and $S-2\sin\alpha\cos\psi=-s$, we get $U=-s+s\cos^2\psi=-s\sin^2\psi$. Expanding $W$, the
+terms $\pm m\cos\psi$ and $\pm m\cos(\alpha-\psi)\cos\alpha$ cancel and
+\[W=(1-m^2)\bigl(\cos\alpha-\cos(\alpha-\psi)\cos\psi\bigr)=-h^2\cdot(-s\sin\psi)=h^2s\sin\psi,\]
+because $\cos\alpha-\cos(\alpha-\psi)\cos\psi=\cos\alpha\sin^2\psi-\sin\alpha\sin\psi\cos\psi=-s\sin\psi$. So $h^2U+\sin\psi\,W=0$, the claim
+holds, $\nu_1Ss\,G=0$, and since $\nu_1,S,s\ne0$ we get $G=0$. This is $(\ast\ast)$, and by Step 3 the points $A$, $Z$, $Q$ are collinear.</p>
+</div></details>
+</section>
+<h2 class="ct-group" id="imo-tst-day-4">IMO TST Day 4</h2>
+<section class="ct-problem" id="p10">
+<h3>Problem 10</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 40: Vector Geometry and Affine Structure &middot; Affine Geometry of Lines and Midpoints</div>
+<div class="ct-text"><p>Two circles $\omega_1$ and $\omega_2$ with centers $O_1$ and $O_2$, respectively, intersect at points $A$ and $B$. The tangent at point $A$ to the circumcircle of triangle $AO_1O_2$ intersects $\omega_1$ and $\omega_2$ at points $D\neq A$ and $E\neq A$, respectively. Prove that the center of the circumcircle of triangle $BO_1O_2$ is equidistant from points $D$ and $E$.</p></div>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (A rhombus and projections onto the tangent)</h4>
+<div class="ct-fig"><img style="width:282px" src="/assets/contests/2026-27/azerbaijan-tsts-10_s1.svg" alt="Figure for the solution"></div>
+<p>Let $N$ be the centre of the circle $AO_1O_2$ and $K$ the centre of the circle $BO_1O_2$, and let $\ell$ be the tangent at $A$, so
+$NA\perp\ell$.</p><p><em>$K$ is the reflection of $N$ in $O_1O_2$.</em> The points $A$ and $B$ are symmetric in the line of centres $O_1O_2$, so the reflection in
+$O_1O_2$ maps the circle $AO_1O_2$ to the circle $BO_1O_2$, and $N$ to $K$. Since $NO_1=NO_2$, the quadrilateral $NO_1KO_2$ has all four
+sides equal to $NO_1$ (reflection preserves lengths), so it is a rhombus and, in vectors,
+\[\vec K=\vec O_1+\vec O_2-\vec N .\]</p><p><em>Projections onto $\ell$.</em> Let $\pi$ be the orthogonal projection onto $\ell$; it is an affine map, so
+$\pi(K)=\pi(O_1)+\pi(O_2)-\pi(N)$. Now $\pi(N)=A$ since $NA\perp\ell$; $\pi(O_1)$ is the midpoint of the chord $AD$ of $\omega_1$, and
+$\pi(O_2)$ is the midpoint of the chord $AE$ of $\omega_2$ (the foot of the perpendicular from a centre to a chord is its midpoint). Hence
+\[\pi(K)=\frac{A+D}{2}+\frac{A+E}{2}-A=\frac{D+E}{2},\]
+the midpoint of $DE$. So $K$ lies on the perpendicular to $DE$ through its midpoint, i.e. on the perpendicular bisector of $DE$, and
+$KD=KE$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p11">
+<h3>Problem 11</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Algebra &middot; LPS VII, Chapter 46: Functional Equations: Iteration, Rigidity, and Deep Structure &middot; Monotonicity, Boundedness, and Regularity &middot; also 2026-romania-team-selection-tests: Day 1, Problem 1</div>
+<div class="ct-text"><p>Let $f:\mathbb{R}^+\to\mathbb{R}^+$ be a non-constant function. Prove that there exist $a,b\in\mathbb{R}^+$ such that
+\[f(a)+f(b)&gt;2f\bigl(\sqrt{ab}\bigr).\]</p></div>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Walking along a geometric progression)</h4>
+<p>Suppose, for a contradiction, that
+\[f(a)+f(b)\le 2f\bigl(\sqrt{ab}\bigr)\qquad\text{for all } a,b&gt;0. \tag{1}\]
+Since $f$ is not constant, there are $u,v&gt;0$ with $f(u)&gt;f(v)$; put $\delta=f(u)-f(v)&gt;0$ and $q=v/u$. Consider the geometric progression
+$x_k=uq^k$ $(k=0,1,2,\dots)$, so that $x_0=u$, $x_1=v$ and $\sqrt{x_{k-1}x_{k+1}}=x_k$ for all $k\ge1$. Applying (1) to $a=x_{k-1}$, $b=x_{k+1}$ gives
+\[f(x_{k+1})-f(x_k)\le f(x_k)-f(x_{k-1})\qquad(k\ge1).\]
+So the differences $d_k=f(x_{k+1})-f(x_k)$ form a non-increasing sequence, and $d_0=f(v)-f(u)=-\delta$. Hence $d_k\le-\delta$ for all $k\ge0$, and
+\[f(x_k)=f(x_0)+d_0+d_1+\dots+d_{k-1}\le f(u)-k\delta .\]
+For $k&gt;f(u)/\delta$ the right-hand side is negative, which contradicts $f(x_k)&gt;0$. Therefore (1) fails for some $a,b$, that is, there exist $a,b\in\mathbb{R}^+$ with $f(a)+f(b)&gt;2f(\sqrt{ab})$.</p>
+<h4>Solution 2 (A value close to the infimum)</h4>
+<p>The values of $f$ are positive, so $m=\inf\{f(x):x&gt;0\}$ exists and $m\ge0$. Since $f$ is not constant, it takes a value larger than $m$: choose $a&gt;0$ with $f(a)&gt;m$ and put
+$\varepsilon=\tfrac13\bigl(f(a)-m\bigr)&gt;0$. By the definition of the infimum there is $c&gt;0$ with $f(c)&lt;m+\varepsilon$. Let
+\[b=\frac{c^2}{a}&gt;0,\qquad\text{so that}\qquad \sqrt{ab}=c .\]
+We claim that this pair works. Indeed, if we had $f(a)+f(b)\le2f(c)$, then
+\[f(b)\le 2f(c)-f(a)&lt;2(m+\varepsilon)-(m+3\varepsilon)=m-\varepsilon&lt;m,\]
+which is impossible because $m$ is a lower bound for the values of $f$. Hence $f(a)+f(b)&gt;2f(c)=2f\bigl(\sqrt{ab}\bigr)$, as required.</p><p><em>Remark.</em> This argument is direct: it names the pair $(a,b)$, and it only uses that $f$ is bounded below and not constant.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p12">
+<h3>Problem 12</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 18: Invariants and Monovariants &middot; Invariant Quantities &middot; also 2026-germany-team-selection-test: AIMO 3, Problem 2</div>
+<div class="ct-text"><p>Bluey is placing lollies on a $1000\times 1000$ grid. Initially, every cell of the grid is empty. At each step, Bluey chooses a row or column in which the total number of lollies is a multiple of $3$, chooses an empty cell in this row or column, and places a lolly in it. If there is no such row or column, Bluey stops.</p><p>Determine the maximum number of lollies that Bluey can place.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$3995$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Counting visits to multiples of 3)</h4>
+<div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/azerbaijan-tsts-12_s1.svg" alt="Figure for the solution"></div>
+<p>Call rows and columns <em>lines</em>; $n=1000$. A line is <em>open</em> if its number of lollies is a multiple of $3$. Every lolly
+raises the count of one row and one column; the line Bluey chose was open just before. Call a placement <em>wasteful</em> if both its row and its
+column were open just before it. Let $T$ be the total number of lollies and $W$ the number of wasteful placements.</p><p><strong>When does Bluey stop?</strong> An open line has a multiple of $3$ lollies, so at most $999&lt;1000$, hence an empty cell. So Bluey stops exactly when no
+line is open. In the final position let $n_L$ be the count of line $L$; then $n_L\equiv1$ or $2\pmod 3$ for all $2n$ lines. Let $k$ be the number of
+lines with $n_L\equiv2$, of which $x$ are rows and $y$ are columns.</p><p><strong>The identity $T=4n-3W-k$.</strong> For a line $L$, the number of placements made in $L$ while $L$ was open equals the number of multiples of $3$
+among $0,1,\dots,n_L-1$, which is $\lceil n_L/3\rceil$. A non-wasteful placement is made while exactly one of its two lines is open, a wasteful one while
+both are. Hence
+\[\sum_L\Bigl\lceil\frac{n_L}{3}\Bigr\rceil=T+W.\]
+If $n_L\equiv\rho_L\in\{1,2\}\pmod3$ then $\lceil n_L/3\rceil=\frac{n_L-\rho_L}3+1$. Using $\sum_Ln_L=2T$ (each lolly is counted in one row and one
+column) and $\sum_L\rho_L=2n+k$,
+\[\frac{2T-2n-k}{3}+2n=T+W\quad\Longrightarrow\quad T=4n-3W-k.\]</p><p><strong>Upper bound.</strong> The first placement is wasteful (everything is empty), so $W\ge1$.</p><ul class="ct-ul"><li><p>If the last placement is also wasteful (and $T\ge2$), then $W\ge2$ and $T\le4n-6$.</p></li><li><p>Otherwise, in the last placement the chosen line goes to a count $\equiv1$, and the other line was not open, so it had count $\equiv1$ or $\equiv2$.
+In the second case it would end with count $\equiv0$, i.e. open, which is impossible at the end. So it goes from $\equiv1$ to $\equiv2$, and $k\ge1$.
+Moreover the sum of the row counts is $T$ and so is the sum of the column counts; modulo $3$ these sums are $n+x$ and $n+y$, so
+$x\equiv y\pmod3$. With $x+y=k\ge1$ this rules out $k=1$, so $k\ge2$ and $T\le4n-3-2=4n-5$.</p></li></ul><p>In all cases $T\le4n-5=3995$.</p><p><strong>Construction with $3995$ lollies.</strong> Number rows $r_1,\dots,r_n$ and columns $c_1,\dots,c_n$ and write $(i,j)$ for the cell in $r_i$ and $c_j$.</p><p><em>Start:</em> place $15$ lollies in the corner $5\times5$ in the order shown in the figure, namely at
+\[(1,1),(1,2),(1,3),(2,1),(2,4),(1,4),(3,1),(4,2),(5,2),(2,2),(2,3),(5,1),(5,5),(5,3),(4,3).\]
+One checks move by move that each time the row or the column of the new cell is open; the open lines used are, in order,
+$r_1,c_2,c_3,r_2,c_4,r_1,r_3,r_4,r_5,c_2,r_2,c_1,c_5,r_5,c_3$. Afterwards rows $r_1,\dots,r_5$ have $4,4,1,2,4$ lollies and columns $c_1,\dots,c_5$ have $4,4,4,2,1$ lollies, and the cells
+$(5,4)$ and $(4,5)$ are empty.</p><p><em>Step $k$</em> ($k=6,7,\dots,n$): place lollies at
+\[(k,\,k-2),\quad(k-1,\,k-2),\quad(k-2,\,k),\quad(k-2,\,k-1)\quad\text{in this order.}\]
+<em>Claim:</em> just before step $k$, row $r_{k-2}$ and column $c_{k-2}$ have counts $\equiv2\pmod3$; row $r_{k-1}$ and column $c_{k-1}$ have counts
+$\equiv1\pmod3$; the cells $(k-1,k-2)$ and $(k-2,k-1)$ are empty; and all rows and columns with index $\ge k$ are empty. For $k=6$ this is the
+situation after the start. Given the claim, the four moves of step $k$ are legal:</p><ul class="ct-parts"><li><p><span class="ct-lbl">1.</span> $(k,k-2)$: row $r_k$ is empty (open); $c_{k-2}$ goes from $\equiv2$ to $\equiv0$.</p></li><li><p><span class="ct-lbl">2.</span> $(k-1,k-2)$: column $c_{k-2}$ is open now; the cell is empty; $r_{k-1}$ goes from $\equiv1$ to $\equiv2$.</p></li><li><p><span class="ct-lbl">3.</span> $(k-2,k)$: column $c_k$ is empty (open); $r_{k-2}$ goes from $\equiv2$ to $\equiv0$.</p></li><li><p><span class="ct-lbl">4.</span> $(k-2,k-1)$: row $r_{k-2}$ is open now; the cell is empty; $c_{k-1}$ goes from $\equiv1$ to $\equiv2$.</p></li></ul><p>After step $k$: $r_{k-1}$ and $c_{k-1}$ have counts $\equiv2$; $r_k$ and $c_k$ have one lolly each, at $(k,k-2)$ and $(k-2,k)$, so the
+cells $(k,k-1)$ and $(k-1,k)$ are empty; lines with index $\ge k+1$ are untouched. So the claim holds for $k+1$. Also $r_{k-2}$ and $c_{k-2}$ now
+have counts $\equiv2+2\equiv1\pmod 3$, and no other line changed.</p><p>After step $n$ every line has count $\equiv1$ or $2\pmod3$ (only $r_{n-1}$ and $c_{n-1}$ are $\equiv2$), so Bluey stops, having placed
+$15+4(n-5)=4n-5=3995$ lollies.</p><p>So the maximum is $\boxed{3995}$.</p>
+</div></details>
+</section>
+<h2 class="ct-group" id="bmo-tst">BMO TST</h2>
+<section class="ct-problem" id="p13">
+<h3>Problem 1</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VII scale">E</span>Algebra &middot; LPS VII, Chapter 1: Inequalities: Core Classical Methods &middot; AM-GM and Mean Inequalities</div>
+<div class="ct-text"><p>Determine all natural numbers $n$ such that the inequality $x^n+2x+1\geq 4x^2$ holds for every $x&gt;0$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$n=6$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (A double root at $x=1$, then AM-GM)</h4>
+<p>Let $f_n(x)=x^n+2x+1-4x^2$. For every $n$, $f_n(1)=0$ and $f_n'(1)=n+2-8=n-6$.</p><p><em>Only $n=6$ is possible.</em> If $n&lt;6$ then $f_n'(1)&lt;0$, so $f_n(x)&lt;f_n(1)=0$ for $x$ slightly larger than $1$; if $n&gt;6$ then
+$f_n'(1)&gt;0$, so $f_n(x)&lt;0$ for $x$ slightly smaller than $1$ (and positive). In both cases the inequality fails.</p><p><em>$n=6$ works.</em> By AM-GM for the four positive numbers $x^6,x,x,1$,
+\[x^6+2x+1=x^6+x+x+1\ \ge\ 4\sqrt[4]{x^6\cdot x\cdot x\cdot 1}=4x^2 .\]
+So the answer is $\boxed{n=6}$.</p>
+<h4>Solution 2 (A factorization)</h4>
+<p>For every $n$ we have $f_n(1)=1+2+1-4=0$ where $f_n(x)=x^n+2x+1-4x^2$, so $x=1$ must be a minimum point of $f_n$ on
+$(0,\infty)$, which forces $f_n'(1)=n-6=0$ (if $f_n'(1)\ne0$, $f_n$ takes negative values on one side of $1$). For $n=6$,
+\[x^6-4x^2+2x+1=(x-1)^2\,(x^4+2x^3+3x^2+4x+1),\]
+and the second factor is positive for $x&gt;0$. Hence the inequality holds for all $x&gt;0$ exactly when $\boxed{n=6}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p14">
+<h3>Problem 2</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 40: Vector Geometry and Affine Structure &middot; Dot Product and Metric Recovery</div>
+<div class="ct-text"><p>Let $ABC$ be a triangle with $AB&lt;AC$, and let $D$ be a point on the side $AC$ such that $AD=\dfrac{AC-AB}{2}$. Points $X$ and $Y$ are chosen on the line through $A$ parallel to $BC$ such that $BX=CY$ and line $AC$ is tangent to the circumcircle of triangle $XDY$. Prove that the tangents to the circumcircle of triangle $XDY$ at points $X$ and $Y$ meet on line $BC$.</p></div>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Vectors and the midpoint of $BC$)</h4>
+<div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/azerbaijan-tsts-14_s1.svg" alt="Figure for the solution"></div>
+<p><em>Which points $X,Y$.</em> Let $h$ be the distance from $A$ to $BC$ and $M$ the midpoint of $BC$. The points of the line
+through $A$ parallel to $BC$ are at height $h$, so $BX=CY$ means that the projections of $X$ and $Y$ on $BC$ are at equal distances from $B$
+and from $C$ respectively. This happens either when $X$ and $Y$ are symmetric in the perpendicular bisector of $BC$ (then $XBCY$ is an
+isosceles trapezoid) or when $\vec{XY}=\vec{BC}$ (then $XYCB$ is a parallelogram). The statement is true in the first case and
+false in general in the second one (see the note); we treat the first case, where the claim is that the tangents meet at $M$.</p><p><em>Reduction.</em> Let $\omega$ be the circle $XDY$ with centre $O$. It is symmetric in the perpendicular bisector of $BC$, so $O$ lies on
+it and $OB=OC$; also $MX=MY$. The tangents at $X$ and $Y$ meet at $M$ if and only if $MX\perp OX$, i.e. if and only if the power of $M$
+equals $MX^2$. Since $A$ lies on line $XY$ and $AD$ is tangent to $\omega$, $\overline{AX}\cdot\overline{AY}=AD^2$ (signed lengths). Writing
+powers as dot products, $\operatorname{pow}(Z)=(Z-O)^2-R^2$, a short computation with $Z=M$ and $Z=A$ shows that
+\[\operatorname{pow}(M)-MX^2=2\bigl[AD^2-(A-O)\cdot(A-M)\bigr]\]
+(indeed $MX^2=MA^2-\overline{AX}\cdot\overline{AY}=MA^2-AD^2$ because $M$ projects onto line $XY$ at the midpoint of $XY$, and
+$\operatorname{pow}(M)=\operatorname{pow}(A)-(A-O)^2+(M-O)^2=AD^2+MA^2-2(A-O)\cdot(A-M)$). So it suffices to prove
+\[(A-O)\cdot(A-M)=AD^2 .\]</p><p><em>Computation.</em> Let $b=AC$, $c=AB$ and let $u,v$ be the unit vectors from $A$ towards $C$ and $B$. Since $OD\perp AC$ and $D=A+AD\,u$,
+\[(A-O)\cdot u=(A-D)\cdot u=-AD=-\tfrac{b-c}{2}.\]
+From $OB=OC$: $(O-A+cv)^2=(O-A+bu)^2$, i.e. $2c\,(A-O)\cdot v+c^2=2b\,(A-O)\cdot u+b^2$, hence $2c\,(A-O)\cdot v=b^2-c^2-b(b-c)$.
+With $A-M=-\frac12(b u+c v)$ we get
+\[(A-O)\cdot(A-M)=-\tfrac12\bigl[b(A-O)\cdot u+c(A-O)\cdot v\bigr]=-\tfrac12\Bigl[-\tfrac{b(b-c)}2+\tfrac{b^2-c^2-b(b-c)}2\Bigr]
+=\tfrac{(b-c)(2b-b-c)}{4}=\Bigl(\tfrac{b-c}2\Bigr)^2=AD^2 .\]
+Hence the tangents at $X$ and $Y$ meet at $M\in BC$.</p>
+<h4>Solution 2 (Coordinates)</h4>
+<p>We treat the configuration where $X$ and $Y$ are symmetric in the perpendicular bisector of $BC$; the only other way to have
+$BX=CY$ is $\vec{XY}=\vec{BC}$, where the statement fails (see the note). Put $B=(-m,0)$, $C=(m,0)$, $A=(p,h)$ with $h&gt;0$, and write $b=AC&gt;c=AB$. Then $c^2-b^2=(p+m)^2-(p-m)^2=4pm$, so
+$pm=-\frac{b^2-c^2}{4}$, and $AD=\frac{b-c}{2}$.</p><p>Let $X=(x,h)$ and $Y=(-x,h)$. The circle $\omega$ through $X,D,Y$ has its centre $O=(0,k)$ on the $y$-axis. The power of $A$ with respect to
+$\omega$ is the product of the signed distances from $A$ to $X$ and $Y$ along the horizontal line, namely $(x-p)(-x-p)=p^2-x^2$; since $AC$ is
+tangent at $D$, it equals $AD^2$. Hence $x^2=p^2-AD^2$.</p><p><em>The centre.</em> Tangency at $D$ means $OD\perp AC$. With $u$ the unit vector from $A$ to $C$ and $D=A+AD\,u$, this gives
+$(A-O)\cdot u=(A-D)\cdot u=-AD$, i.e. $(A-O)\cdot(C-A)=-b\cdot AD$. As $A-O=(p,h-k)$ and $C-A=(m-p,-h)$,
+\[pm-p^2-h^2+hk=-\frac{b(b-c)}{2},\qquad\text{so}\qquad hk=p^2+h^2+\frac{b^2-c^2}{4}-\frac{b(b-c)}{2}=p^2+h^2-\Bigl(\frac{b-c}{2}\Bigr)^2 .\]
+Thus $hk=x^2+h^2$.</p><p><em>The tangent at $X$.</em> With $M=(0,0)$ the midpoint of $BC$, we have $X-O=(x,h-k)$ and $X-M=(x,h)$, so
+\[(X-O)\cdot(X-M)=x^2+h^2-hk=0 .\]
+So $MX$ is tangent to $\omega$ at $X$; by symmetry $MY$ is tangent at $Y$. The two tangents meet at $M$, which lies on $BC$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p15">
+<h3>Problem 3</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 39: Graph Theory and Structural Combinatorics &middot; Basic Graph Properties</div>
+<div class="ct-text"><p>A social network has $2025$ users. Two different users are either friends or not friends. A user is considered <em>lonely</em> if they have no friends. Initially, there are no lonely users, and two users Alice and Bob are not friends. A user may <em>swap</em> all their friends, meaning if they were friends with someone before the swap, they are no longer friends, and vice versa.</p><p>Must there exist a way to arrange the $2025$ users in a sequence so that if, one-by-one in that sequence, each user swaps their friends, no user is ever lonely at any point during the process?</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p><strong>Yes</strong></p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Neighbourhoods must not be prefixes or suffixes; induction from both ends)</h4>
+<p><strong>Yes</strong>, such an order always exists.</p><p><em>Reformulation.</em> Let $V$ be the set of users and $N(v)$ the set of friends of $v$ at the start ($v\notin N(v)$). After the users of a
+set $S$ have swapped, a pair $u,w$ is friends if and only if it was friends at the start and an even number of $u,w$ lie in $S$, or it was
+not and exactly one of them lies in $S$. So a user $v\notin S$ is lonely exactly when $N(v)=S$, and a user $v\in S$ is lonely exactly when
+$N(v)=V\setminus S$. For an order $x_1,\dots,x_n$ the sets $S$ are the prefixes $\{x_1,\dots,x_k\}$, and $N(v)=V\setminus S$ means that
+$N(v)$ is a suffix. Hence we need:</p><div class="ct-center"><p>an order of $V$ in which no set $N(v)$ is a prefix or a suffix.</p></div><p>(Every $N(v)$ is nonempty and differs from $V$, so the empty and the full prefix are harmless.) Here $n=2025$ is odd.</p><p><em>A lemma (with one-sided conditions).</em> Let $G$ be a graph on an odd number $n$ of vertices and let $U_{\rm pre},U_{\rm suf}$ be
+<em>disjoint</em> sets of vertices with nonempty neighbourhoods. Unless $G$ is complete, $n\ge3$ and $U_{\rm pre}=V$ or $U_{\rm suf}=V$, there is
+an order in which $N(v)$ is not a prefix for $v\in U_{\rm pre}$ and not a suffix for $v\in U_{\rm suf}$.</p><p><em>Proof by induction on $n$.</em> For $n=1$ there is nothing to check (no vertex has a neighbour). Let $n\ge3$.</p><p><strong>(a) $G$ complete.</strong> Then $N(v)=V\setminus\{v\}$ is a prefix exactly when $v$ is last, and a suffix exactly when $v$ is first. We need a
+first vertex outside $U_{\rm suf}$ and a different last vertex outside $U_{\rm pre}$. Every vertex lies outside $U_{\rm pre}$ or outside
+$U_{\rm suf}$; neither set is all of $V$; if the only vertex outside $U_{\rm suf}$ were also the only vertex outside $U_{\rm pre}$, all other
+vertices would be in both sets. So suitable distinct vertices exist.</p><p><strong>(b) $G=K_{n-1}$ plus an isolated vertex $z$.</strong> Prefixes containing $z$ are never neighbourhoods. If some $w\ne z$ is outside
+$U_{\rm suf}$, use the order $z,w,\dots$: the only suffix of the form $N(v)=V\setminus\{v,z\}$ is the one with $v=w$. Otherwise
+$U_{\rm suf}=V\setminus\{z\}$, so $U_{\rm pre}=\varnothing$, and any order ending with $z$ works.</p><p><strong>(c) Otherwise.</strong> Call $x$ <em>pre-bad</em> if some $v\in U_{\rm pre}$ has $N(v)=\{x\}$, and <em>suf-bad</em> similarly. We first find
+non-adjacent $p\ne q$ with $p$ not pre-bad and $q$ not suf-bad.</p><ul class="ct-ul"><li><p>If there is an isolated vertex $z$ (it is neither pre-bad nor suf-bad): if some $q\ne z$ is not suf-bad, take $(z,q)$. Otherwise every
+$x\ne z$ has a neighbour $\ell_x\in U_{\rm suf}$ with $N(\ell_x)=\{x\}$; as $\ell_x$ is suf-bad too, its own such neighbour is $x$, so
+$N(x)=\{\ell_x\}$ and $x\in U_{\rm suf}$. Then $U_{\rm suf}=V\setminus\{z\}$, $U_{\rm pre}=\varnothing$, nothing is pre-bad, and we take
+$(p,z)$ with any $p\ne z$.</p></li><li><p>If there is a vertex $\ell$ of degree $1$ whose neighbour $u$ has degree at least $2$: $\ell$ is neither pre-bad nor suf-bad. If some
+$q\notin\{\ell,u\}$ is not suf-bad, take $(\ell,q)$; if some $p\notin\{\ell,u\}$ is not pre-bad, take $(p,\ell)$. Otherwise every
+$x\notin\{\ell,u\}$ is pre-bad, via a vertex $y\in U_{\rm pre}$ with $N(y)=\{x\}$; then $y\notin\{\ell,u\}$, so $y$ is also pre-bad and
+suf-bad, which forces $N(x)=\{y\}$, $x\in U_{\rm pre}$, and (as $x$ is suf-bad) $y\in U_{\rm suf}$: impossible since $y\in U_{\rm pre}$.</p></li><li><p>Otherwise every vertex of degree $1$ lies in a component $\{a,b\}$ with a single edge. If there is no vertex of degree $1$, nothing is
+bad and any non-adjacent pair works. Else, since $n$ is odd, some vertex $r$ lies outside these two-vertex components; $r$ has no neighbour of
+degree $1$, so it is neither pre-bad nor suf-bad. For a component $\{a,b\}$: if $b\notin U_{\rm pre}$, then $a$ is not pre-bad and we take
+$(a,r)$; if $b\in U_{\rm pre}$, then $b\notin U_{\rm suf}$, $a$ is not suf-bad and we take $(r,a)$.</p></li></ul><p>Now put $p$ first and $q$ last, let $G'=G-p-q$, and let $U'_{\rm pre}$ be the set of $v\in U_{\rm pre}$, $v\ne p,q$, adjacent to $p$ but not
+to $q$, and $U'_{\rm suf}$ the set of $v\in U_{\rm suf}$ adjacent to $q$ but not to $p$. These are disjoint, and their vertices have
+nonempty neighbourhoods in $G'$ ($N(v)\ne\{p\}$ because $p$ is not pre-bad, and similarly for $q$). If $G'$ were exceptional, say complete
+with $U'_{\rm pre}=V(G')$ and $|V(G')|\ge 3$, then $q$ would have no neighbour at all and $G-q$ would be complete, i.e. we would be in case (b);
+similarly for $U'_{\rm suf}$. So by induction $G'$ has a good order, and we use $p,\ (\text{that order}),\ q$.</p><p>It is good: for $v\in U_{\rm pre}$, a nonempty prefix contains $p$, and if it contains $q$ it is all of $V$. So if $N(v)$ were a prefix,
+then $v\ne p$, $v\sim p$, $v\not\sim q$, and $v\ne q$ (as $p\not\sim q$); thus $v\in U'_{\rm pre}$ and $N(v)\setminus\{p\}$ would be a
+nonempty prefix of the order of $G'$, a contradiction. Suffixes are symmetric. $\square$</p><p><em>The problem.</em> Here both conditions are required for every vertex. Call $x$ <em>bad</em> if $x$ has a neighbour of degree $1$.</p><p><em>Case 1: there are non-adjacent $p\ne q$, neither bad.</em> Put $p$ first and $q$ last and apply the lemma to $G-p-q$ with
+$U'_{\rm pre}=\{v: v\sim p,\ v\not\sim q\}$, $U'_{\rm suf}=\{v: v\sim q,\ v\not\sim p\}$ (disjoint, with nonempty neighbourhoods in
+$G-p-q$ since no $N(v)$ equals $\{p\}$ or $\{q\}$). The exception would force $q$ or $p$ to have no friends, which is excluded. The same
+check as above shows that no $N(v)$ is a prefix or a suffix: vertices adjacent to both or to neither of $p,q$ cannot give a prefix or a
+suffix, and $N(p)$, $N(q)$ are neither (a prefix contains $p\notin N(p)$, and $N(q)\not\ni p$; symmetrically for suffixes).</p><p><em>Case 2: every two vertices that are not bad are adjacent.</em> Two degree-$1$ vertices whose neighbours have larger degree are not bad and not
+adjacent, so there is at most one such vertex $\ell_0$; if it exists with neighbour $u_0$, the non-bad vertices form a clique containing $\ell_0$, and $\ell_0$
+is adjacent only to the bad vertex $u_0$, so this clique is $\{\ell_0\}$. Then every other vertex is bad, i.e. is $u_0$ or lies in a two-vertex
+component; such vertices are not adjacent to $u_0$, so $u_0$ has degree $1$, a contradiction. Hence the degree-$1$ vertices form
+two-vertex components $\{a_i,b_i\}$ ($1\le i\le k$), and the remaining vertices form a clique $C=\{c_1,\dots,c_r\}$ with no other edges. As
+$n$ is odd, $r$ is odd; $r\ne1$ (no lonely user) and $k\ge1$ (Alice and Bob are not friends), so $r\ge3$. Use the order
+\[c_1,\ a_1,\dots,a_k,\ c_2,\ b_1,\dots,b_k,\ c_3,\dots,c_r .\]
+The neighbourhoods are $\{b_i\}$, $\{a_i\}$ and $C\setminus\{c_j\}$, and their complements are $V\setminus\{b_i\}$, $V\setminus\{a_i\}$ and
+$\{c_j\}\cup\{a_i,b_i\}_i$. The prefixes are $\{c_1\}$, then sets containing $c_1$ and some $a_i$ but no $b_i$ and at most one more $c$, then
+sets containing $c_1,c_2$; none of them is in the list (the prefix of size $n-1$ is $V\setminus\{c_r\}$, and $c_r$ is not the only friend of
+anyone).</p><p>So in all cases a suitable order exists.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p16">
+<h3>Problem 4</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-S" title="Superhard, on the LPS VII scale">S</span>Number Theory &middot; LPS VII, Chapter 49: Combinatorial Number Theory and Structure &middot; Sequences with Arithmetic Constraints &middot; also 2026-germany-team-selection-test: VAIMO 1, Problem 3</div>
+<div class="ct-text"><p>The sequence of triples of positive integers $(a_0,b_0,c_0)$, $(a_1,b_1,c_1)$, $\ldots$, $(a_{2025},b_{2025},c_{2025})$ satisfies
+\[(a_{i+1},b_{i+1},c_{i+1})=\bigl(a_i+\gcd(b_i,c_i),\,b_i+\gcd(c_i,a_i),\,c_i+\gcd(a_i,b_i)\bigr)\]
+for $0\leqslant i\leqslant 2024$. Determine the smallest possible value of $a_{2025}$.</p><p><em>Here $\gcd(x,y)$ denotes the greatest common divisor of integers $x$ and $y$.</em></p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$3\cdot2^{675}$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Halving the triple and counting the halvings)</h4>
+<p>Write $T_t=(a_t,b_t,c_t)$ and $\Phi(a,b,c)=\bigl(a+\gcd(b,c),\,b+\gcd(c,a),\,c+\gcd(a,b)\bigr)$, so $T_{t+1}=\Phi(T_t)$. Note
+$\Phi(2a,2b,2c)=2\Phi(a,b,c)$. Let $N=2025$.</p><p><strong>Construction.</strong> Start with $T_0=(1,5,14)$. Then $T_1=(2,6,15)$, $T_2=(5,7,17)$, $T_3=(6,8,18)$, $T_4=(8,14,20)$, $T_5=(10,18,22)$,
+$T_6=(12,20,24)=4\cdot(3,5,6)$. For any $g$,
+\[g(3,5,6)\ \mapsto\ g(4,8,7)\ \mapsto\ g(5,9,11)\ \mapsto\ g(6,10,12)=2g\,(3,5,6),\]
+so $T_{3m}=2^m(3,5,6)$ for all $m\ge2$, and $a_{2025}=a_{3\cdot675}=3\cdot2^{675}$.</p><p><strong>Parity lemma.</strong> Call a triple <em>reduced</em> if not all its entries are even. For a reduced triple $r$: if $r$ has exactly one even entry, $\Phi(r)$
+has exactly two; if $r$ has exactly two even entries, $\Phi(r)$ is all odd; if $r$ is all odd, $\Phi(r)$ is all even. (A gcd is even only if both
+arguments are even; e.g. for $a$ even and $b,c$ odd all three gcds are odd, so $\Phi$ gives odd, even, even.) In particular $\Phi(r)$ is all even
+<em>if and only if</em> $r$ is all odd.</p><p><strong>Reduced sequence.</strong> Let $2^{e_t}$ be the largest power of $2$ dividing all of $a_t,b_t,c_t$, $r_t=T_t/2^{e_t}$ (reduced) and $x_t=a_t/2^{e_t}\ge1$, so
+$a_t=2^{e_t}x_t$. Since $T_{t+1}=2^{e_t}\Phi(r_t)$, the parity lemma gives: if $r_t$ is not all odd then $e_{t+1}=e_t$ and $x_{t+1}=x_t+g\ge x_t+1$
+($g$ a gcd); if $r_t$ is all odd then $e_{t+1}=e_t+\delta$ with $\delta\ge1$ and $x_{t+1}=(x_t+g)/2^\delta$.</p><p>Let $t_1&lt;\dots&lt;t_K$ be the times $t\in\{0,\dots,N-1\}$ with $r_t$ all odd, $\delta_i$ the corresponding increments, $d_i=t_{i+1}-t_i$,
+$s=N-1-t_K$ and $y_i=x_{t_i+1}$. By the parity lemma (one even entry $\to$ two $\to$ none) we have $t_1\le2$, $d_i\le3$ and $s\le2$. Hence
+$2024=t_1+\sum d_i+s\le2+3(K-1)+2$, so $K\ge675$, and $e_N=e_0+\sum\delta_i\ge K\ge675$. Put
+\[D=(2-t_1)+\sum_{i&lt;K}(3-d_i)=3K-2025+s\ \ (\ge0).\]
+Also $x_N\ge y_K+s$, $y_1\ge\frac{x_{t_1}+1}{2^{\delta_1}}\ge\frac{t_1+2}{2^{\delta_1}}$ (as $x_{t_1}\ge x_0+t_1$), and
+\[y_{i+1}\ge\frac{x_{t_{i+1}}+1}{2^{\delta_{i+1}}}\ge\frac{y_i+d_i}{2^{\delta_{i+1}}}. \tag{1}\]
+If $\delta_{j+1}=\dots=\delta_i=1$, the shortfalls $z_i=3-y_i$ satisfy $z_{i+1}\le\frac{z_i+(3-d_i)}{2}$, hence
+\[z_i\le\frac{z_j}{2^{\,i-j}}+\frac12\sum_{j\le l&lt;i}(3-d_l). \tag{2}\]
+Since $a_N=2^{e_N}x_N$, it suffices to exclude $e_N=675$ with $x_N\le2$ and $e_N=676$ with $x_N=1$. If $e_N=675$, then $K=675$, $e_0=0$ and all $\delta_i=1$. If $e_N=676$, then either $e_0=1$, $K=675$ and all $\delta_i=1$, or $e_0=0$ and one of the two cases below occurs.</p><p><em>$K=675$, all $\delta_i=1$.</em> Then $D=s$. By (2) with $j=1$ and $z_1\le2-\frac{t_1}2\le2$:
+$z_K\le2^{-673}+\frac12\sum_{i&lt;K}(3-d_i)\le2^{-673}+\frac s2$. So $x_N\ge y_K+s=3-z_K+s\ge3-2^{-673}+\frac s2&gt;2$, i.e. $x_N\ge3$.</p><p><em>$e_0=0$, $K=676$, all $\delta_i=1$.</em> Now $D=3+s$ and (2) gives $z_K\le2^{-674}+\frac{3+s}2$, so $x_N\ge y_K+s\ge\frac32-2^{-674}+\frac s2&gt;1$, i.e. $x_N\ge2$.</p><p><em>$e_0=0$, $K=675$, one $\delta_j=2$.</em> Here $D=s$. If $j&lt;K$: $y_j\ge1$, so $z_j\le2$ and (2) from $j$ gives $z_K\le1+\frac s2$, hence
+$x_N\ge y_K+s\ge2+\frac s2\ge2$. If $j=K$ and $s\ge1$: $x_N\ge y_K+s\ge1+1=2$. If $j=K$ and $s=0$: then $D=0$, so $t_1=2$ and all $d_i=3$;
+by (2) (all earlier $\delta=1$) $z_{K-1}&lt;1$, so $y_{K-1}\ge3$, $x_{t_K}\ge y_{K-1}+2\ge5$ and $x_N=y_K\ge\frac{5+1}{4}&gt;1$, i.e. $x_N\ge2$.</p><p>In every case $a_N=2^{e_N}x_N\ge3\cdot2^{675}$. Hence the smallest possible value of $a_{2025}$ is $\boxed{3\cdot2^{675}}$.</p>
+<h4>Solution 2 (Doubling every three steps)</h4>
+<p>Write $T_t=(a_t,b_t,c_t)$ and $\Phi(a,b,c)=\bigl(a+\gcd(b,c),\,b+\gcd(c,a),\,c+\gcd(a,b)\bigr)$, so that $T_{t+1}=\Phi(T_t)$. For every
+positive integer $g$ we have $\Phi(ga,gb,gc)=g\,\Phi(a,b,c)$.</p><p><strong>Construction.</strong> Start with $T_0=(1,5,14)$. Then $T_1=(2,6,15)$, $T_2=(5,7,17)$, $T_3=(6,8,18)$, $T_4=(8,14,20)$, $T_5=(10,18,22)$ and
+$T_6=(12,20,24)=4\cdot(3,5,6)$. For every $g$,
+\[g(3,5,6)\ \mapsto\ g(4,8,7)\ \mapsto\ g(5,9,11)\ \mapsto\ g(6,10,12)=2g\,(3,5,6),\]
+so $T_{3j}=2^j(3,5,6)$ for all $j\ge2$, and $a_{2025}=a_{3\cdot675}=3\cdot2^{675}$.</p><p><strong>Parity.</strong> A gcd of two integers is even only if both integers are even. Count the even entries of a triple. If exactly one entry is even, all
+three gcds are odd, so $\Phi$ makes that entry odd and the two odd entries even: two even entries. If exactly two entries are even, the gcd of the two
+even ones is even and the other two gcds are odd, so $\Phi$ makes all three entries odd. If all entries are odd, all gcds are odd and $\Phi$ makes all
+entries even. If all entries are even, so are all gcds and all new entries. So the number of even entries changes by
+$1\to2\to0\to3$ and $3\to3$; in particular, whatever triple $R$ of positive integers we start with, all entries of $\Phi(\Phi(\Phi(R)))$ are even.</p><p><strong>Powers of two.</strong> We show by induction on $j$ that $2^j$ divides every entry of $T_t$ for $3j\le t\le 3j+3$. Suppose $T_{3j}=2^jR$ for a
+triple $R$ of positive integers (true for $j=0$). Then $T_{3j+i}=2^j\Phi^i(R)$ for $i=0,1,2,3$, and all entries of $\Phi^3(R)$ are even, so
+$T_{3j+3}=2^{j+1}R'$ for a triple $R'$ of positive integers. This proves the claim.</p><p><strong>Lower bound.</strong> For $3j\le t\le3j+2$ the numbers $b_t,c_t$ are multiples of $2^j$, so $\gcd(b_t,c_t)\ge2^j$ and $a_{t+1}\ge a_t+2^j$. Hence
+\[a_{3j+3}\ge a_{3j}+3\cdot2^j\qquad(j\ge0).\]
+With $j=0$ and $j=1$: $a_3\ge a_0+3\ge4$ and $a_6\ge a_3+6\ge10$. But $a_6$ is a multiple of $2^2=4$, so $a_6\ge12=3\cdot2^2$. If
+$a_{3j}\ge3\cdot2^j$ for some $j\ge2$, then $a_{3j+3}\ge3\cdot2^j+3\cdot2^j=3\cdot2^{j+1}$. By induction $a_{3j}\ge3\cdot2^j$ for all $j\ge2$; in
+particular $a_{2025}=a_{3\cdot675}\ge3\cdot2^{675}$.</p><p>Together with the construction, the smallest possible value of $a_{2025}$ is $\boxed{3\cdot2^{675}}$.</p>
+</div></details>
+</section>
+<h2 class="ct-group" id="egmo-tst-day-1">EGMO TST Day 1</h2>
+<section class="ct-problem" id="p17">
+<h3>Problem 1</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 31: Extremal Principle and Bounding Arguments &middot; Bounding and Limiting Arguments</div>
+<div class="ct-text"><p>Consider a table with $m$ rows and $22$ columns. Each cell is filled with a number from the set $A=\{1,2,3,\ldots,2025\}$ (numbers may be repeated), such that for every pair of distinct numbers in $A$, there exists a row that contains exactly one of these two numbers. Find the minimum value of $m$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$176$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Signatures of the numbers)</h4>
+<p>For a number $x\in A$ let its <em>signature</em> be the set of rows containing $x$. A row contains exactly one of $x,y$ if and
+only if it lies in exactly one of the two signatures; so the condition says that the $2025$ signatures are pairwise distinct subsets of the set
+of $m$ rows.</p><p><em>Bound.</em> At most one signature is empty and at most $m$ have one element, so at least $2025-1-m$ signatures have at least two elements.
+Each row has $22$ cells, so it contains at most $22$ distinct numbers; counting pairs (number, row containing it),
+\[22m\ \ge\ \sum_x|{\rm sig}(x)|\ \ge\ m+2(2024-m)=4048-m,\]
+so $23m\ge 4048$ and $m\ge 176$ (since $23\cdot 176=4048$).</p><p><em>Construction for $m=176$.</em> Number the rows $0,1,\dots,175$ and let $H$ be the graph on these rows in which $i$ is joined to
+$i\pm1,\dots,i\pm10$ and to $i+88$ (indices modulo $176$); $H$ is $21$-regular and has $176\cdot21/2=1848$ edges. Give one number the empty
+signature (it is never written), $176$ numbers the single rows, and the remaining $2025-1-176=1848$ numbers the edges of $H$ (a number is
+written in the two rows of its edge). The signatures are distinct, and every row receives $1+21=22$ numbers, one per cell. Hence the minimum
+is $\boxed{176}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p18">
+<h3>Problem 2</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure &middot; Radical Axis and Radical Center</div>
+<div class="ct-text"><p>Let $ABC$ be a triangle with $AC&gt;AB$, incenter $I$ and $A$-excenter $J$. Assume that its incircle touches $BC$ at point $K$, the $A$-excircle touches $AC$ at point $L$, and $AI$ intersects $BC$ at point $D$. If $P$ is the intersection of the circumcircles of triangles $AIC$ and $KCL$ (other than $C$), prove that $\angle APD=90^\circ$.</p></div>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Three coaxial circles through $C$)</h4>
+<div class="ct-fig"><img style="width:334px" src="/assets/contests/2026-27/azerbaijan-tsts-18_s1.svg" alt="Figure for the solution"></div>
+<p>Let $a,b,c$ be the sides and $s$ the semiperimeter; $b&gt;c$. Directed angles are taken modulo $180^\circ$. We assume $P\ne C$
+(otherwise $P$ is not defined).</p><p><em>Reduction.</em> We show that $P$ also lies on the circle $CDJ$. Then, since $I$, $D$, $J$ lie on the line $AI$,
+\[\angle(PA,PD)=\angle(PA,PC)+\angle(PC,PD)=\angle(IA,IC)+\angle(JC,JD)=\angle(AI,IC)+\angle(JC,AI)=\angle(JC,IC)=90^\circ,\]
+because the internal and external bisectors $CI$ and $CJ$ at $C$ are perpendicular. So $\angle APD=90^\circ$.</p><p><em>A criterion.</em> Let $e_1,e_2$ be the unit vectors from $C$ towards $B$ and $A$. A circle through $C$ meets the lines $CB$ and $CA$ again at
+the points $C+ke_1$ and $C+le_2$ (signed $k,l$; $k=0$ means tangency). Its centre $O$ projects onto these lines at the midpoints of the
+chords, so $(O-C)\cdot e_1=\frac k2$ and $(O-C)\cdot e_2=\frac l2$. The map $X\mapsto((X-C)\cdot e_1,(X-C)\cdot e_2)$ is a linear bijection, so
+<em>the centres of several circles through $C$ are collinear if and only if their points $(k,l)$ are collinear.</em> And circles through $C$
+with collinear centres have a second common point (the reflection of $C$ in the line of centres).</p><p><em>The three circles.</em></p><ul class="ct-ul"><li><p>Circle $AIC$: its centre is the midpoint of arc $AC$, on the bisector $BI$, so it is symmetric in $BI$ and meets $BC$ again at the
+reflection of $A$ in $BI$, at distance $c$ from $B$. So $(k,l)=(a-c,\ b)$.</p></li><li><p>Circle $KCL$: $CK=s-c$ towards $B$, and $L$ lies beyond $C$ on line $AC$ with $CL=AL-b=s-b$. So $(k,l)=(s-c,\ -(s-b))$.</p></li><li><p>Circle $CDJ$: $CD=\frac{ab}{b+c}$ (bisector theorem). Its second point $A_2$ on line $CA$ comes from the power of $A$:
+$AD\cdot AJ=AC\cdot AA_2$. Since $AI\cdot AJ=bc$ (triangles $ABI$ and $AJC$ are similar) and $AD=AI\cdot\frac{2s}{b+c}$ ($I$ divides $AD$ in
+the ratio $(b+c):a$), we get $AD\cdot AJ=\frac{2bcs}{b+c}$ and $AA_2=\frac{2cs}{b+c}$, so
+$l=b-AA_2=\frac{b^2-c^2-ac}{b+c}$. Hence $(k,l)=\bigl(\frac{ab}{b+c},\ \frac{b^2-c^2-ac}{b+c}\bigr)$.</p></li></ul><p>Subtracting the first point from the other two:
+\[(s-c,-(s-b))-(a-c,b)=(s-a,\,-s),\qquad \Bigl(\tfrac{ab}{b+c}-a+c,\ \tfrac{b^2-c^2-ac}{b+c}-b\Bigr)=\tfrac{c}{b+c}\,(b+c-a,\,-(a+b+c))=\tfrac{2c}{b+c}\,(s-a,\,-s).\]
+These vectors are parallel, so the three points are collinear and the three circles have a second common point. As the circles $AIC$ and
+$KCL$ meet again at $P$, the circle $CDJ$ passes through $P$, which completes the proof.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p19">
+<h3>Problem 3</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Algebra &middot; LPS VII, Chapter 46: Functional Equations: Iteration, Rigidity, and Deep Structure &middot; Recursive and Nested Functional Forms</div>
+<div class="ct-text"><p>Let $\mathbb{Z}_{\geq 0}$ be the set of all nonnegative integers. Let $f:\mathbb{Z}_{\geq 0}\to\mathbb{Z}_{\geq 0}$ be an unbounded function such that, if $m$ and $n$ are nonnegative integers satisfying
+\[f(m+n)=\max\{f(0),f(1),\ldots,f(m+n)\},\]
+then
+\[f(m+n)=f(m)+f(n).\]
+Prove that there exist positive integers $A,B,C$ and $D$ such that for all nonnegative integers $n$,
+\[f(An+B)=Cn+D.\]
+We say that $f$ is <em>unbounded</em> if for each nonnegative integer $N$, there exists some nonnegative integer $n$ such that $f(n)\geq N$.</p></div>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Records, gaps between records, and a period)</h4>
+<p>Call $r$ a <em>record</em> if $f(r)=\max\{f(0),\dots,f(r)\}$. Since $f$ is unbounded there are infinitely many records. For a record $r$
+the hypothesis (with all splittings $r=m+(r-m)$) gives
+\[f(m)+f(r-m)=f(r)\qquad (0\le m\le r).\qquad(1)\]
+With $r=0$ this gives $f(0)=0$.</p><p><em>Step 1. If $r&lt;R$ are records and $t=R-r$, then $f(t+m)=f(m)+f(t)$ for $0\le m\le r$.</em> By (1) for $R$ (split $R=(r-m)+(t+m)$) and for $r$:
+$f(r-m)+f(t+m)=f(R)$ and $f(r-m)+f(m)=f(r)$. Subtracting, $f(t+m)-f(m)=f(R)-f(r)$, and $m=0$ shows this constant is $f(t)$.</p><p><em>Step 2. If, for a fixed $t\ge1$, infinitely many records $r$ have $r+t$ also a record, then $f(n+t)=f(n)+f(t)$ for all $n\ge0$.</em> Apply Step 1
+with such records $r$ arbitrarily large.</p><p><em>Step 3. $f(n)\ge1$ for all $n\ge1$.</em> Suppose $f(z)=0$ for some $z\ge1$. For every record $R\ge z$, (1) gives $f(R-z)=f(R)$, so $R-z$ is
+also a record (its value is the maximum over $[0,R]$). By Step 2 with $t=z$, $f(n+z)=f(n)$ for all $n$; then $f$ is periodic, hence bounded, a
+contradiction.</p><p><em>Step 4. Gaps between consecutive records take finitely many values.</em> Let $R&lt;R'$ be consecutive records and $t=R'-R$. For $R&lt;m&lt;R'$ the
+index $m$ is not a record, and the largest value on $[0,m-1]$ is $f(R)$, so $f(m)&lt;f(R)$. By (1) for $R'$, $f(R'-m)=f(R')-f(m)&gt;f(R')-f(R)=f(t)$
+(Step 1). As $m$ runs over $(R,R')$, $R'-m$ runs over $(0,t)$; so $f(j)&gt;f(t)$ for all $0&lt;j&lt;t$. Thus every gap $t$ is a &ldquo;new strict minimum&rdquo;:
+$f(t)&lt;f(j)$ for $1\le j&lt;t$. The values $f(t)$ at successive new strict minima strictly decrease and are positive integers (Step 3), so there
+are at most $f(1)$ such indices $t$.</p><p><em>Conclusion.</em> There are infinitely many consecutive pairs of records and finitely many possible gaps, so some gap $t$ occurs infinitely
+often. By Step 2, $f(n+t)=f(n)+f(t)$ for all $n$, and $f(t)\ge1$ by Step 3. Hence for all $n\ge0$
+\[f(tn+1)=f(1)+n\,f(t),\]
+so $A=t$, $B=1$, $C=f(t)$, $D=f(1)$ are positive integers with $f(An+B)=Cn+D$.</p>
+</div></details>
+</section>
+<h2 class="ct-group" id="egmo-tst-day-2">EGMO TST Day 2</h2>
+<section class="ct-problem" id="p20">
+<h3>Problem 4</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 25: Diophantine Equations: Factorization and Algebraic Methods &middot; Bounding and Size Arguments</div>
+<div class="ct-text"><p>Determine the smallest positive integer $m$ for which there are at least $100$ positive integers $k$ such that
+\[\left\lfloor\frac{m(m+1)(2m+1)}{k^2-(4m+1)k+5m^2+3m}\right\rfloor=k.\]</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$2401$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Shift $k$ by $2m$)</h4>
+<p>Let $Q=m^2+m$, so the numerator is $Q(2m+1)$. Put $k=2m+y$ ($y$ an integer, $y&gt;-2m$). Then
+\[k^2-(4m+1)k+5m^2+3m=y^2-y+Q=Q+u,\qquad u=y(y-1)\ge0 .\]
+The condition $\lfloor Q(2m+1)/(Q+u)\rfloor=k$ means $k(Q+u)\le Q(2m+1)&lt;(k+1)(Q+u)$.</p><p><em>Left inequality.</em> It reads $(y-1)Q+u(2m+y)\le0$. Since $u\ge0$ and $2m+y=k&gt;0$, we need $y\le1$. For $y=1$ it holds ($u=0$). For
+$y=-w$, $w\ge0$: it becomes $(w+1)\bigl(w(2m-w)-Q\bigr)\le0$, true because $w(2m-w)\le m^2&lt;Q$.</p><p><em>Right inequality.</em> For $y=1$ ($k=2m+1$): $Q(2m+1)&lt;(2m+2)Q$, true. For $y=-w$ it reads $wQ&lt;(2m+1-w)w(w+1)$: false for $w=0$, and for
+$w\ge1$ equivalent to $Q&lt;(2m+1-w)(w+1)$. With $v=w+1\ge2$: $v^2-(2m+2)v+m^2+m&lt;0$, i.e.
+\[m+1-\sqrt{m+1}&lt;v&lt;m+1+\sqrt{m+1}.\]
+(For $m\ge2$ the lower end exceeds $1$, so $v\ge2$ is automatic, and $k=2m+1-v&gt;0$.)</p><p><em>Counting.</em> So the number of $k$ is $1+(\text{number of integers in the open interval of radius }\sqrt{m+1}\text{ around }m+1)$, i.e.
+$1+(2\lfloor\sqrt{m+1}\rfloor+1)$ if $m+1$ is not a square and $1+(2\sqrt{m+1}-1)$ if it is (for $m\ge2$; for $m=1$ there are $2$). This is at
+least $100$ exactly when $\lfloor\sqrt{m+1}\rfloor\ge49$ and $m+1\ne49^2$, i.e. $m+1\ge 2402$. For $m=2401$ there are exactly $100$ values,
+for $m\le2400$ at most $98$. The answer is $\boxed{2401}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p21">
+<h3>Problem 5</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 49: Combinatorial Number Theory and Structure &middot; Hybrid Combinatorial-Arithmetic Arguments &middot; also 2026-germany-team-selection-test: AIMO 2, Problem 1</div>
+<div class="ct-text"><p>In an $n\times n$ board, for each $1\leq i\leq n$ and $1\leq j\leq n$, the cell in the $i$th row from the bottom and $j$th column from the left contains $\gcd(i,j)$ leaves. A koala travels from the bottom left corner to the top right corner. At each step, the koala moves up or to the right by a single cell. The koala eats the leaves in each cell it visits, including the bottom left and top right cells.</p><p>Determine the maximum number of leaves that the koala can eat.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\dfrac{n^2+3n-2}{2}$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Pairing consecutive anti-diagonals)</h4>
+<p>Write $(i,j)$ for the cell in row $i$ and column $j$ and $g(i,j)=\gcd(i,j)$. Every step increases $i+j$ by $1$, so the koala's path
+visits exactly one cell on each anti-diagonal $i+j=s$, $s=2,3,\dots,2n$.</p><p><strong>Construction.</strong> The staircase $(1,1),(1,2),(2,2),(2,3),\dots,(n-1,n),(n,n)$ visits the diagonal cells $(m,m)$, worth $m$, and the cells
+$(m,m+1)$, worth $\gcd(m,m+1)=1$. It collects $1+2+\cdots+n+(n-1)=\frac{n^2+3n-2}{2}$ leaves.</p><p><strong>Key lemma.</strong> Let $A$ be the visited cell with $i+j=2m$ $(1\le m\le n-1)$ and $B$ the next visited cell (with $i+j=2m+1$). Then
+$g(A)+g(B)\le m+1$.</p><p><em>Proof.</em> $A$ and $B$ share a row or a column, so they share a coordinate $c$, and their other coordinates are consecutive integers. Hence
+$g(A)$ and $g(B)$ both divide $c$, and a common divisor of them divides two consecutive integers, so $\gcd(g(A),g(B))=1$ and
+$g(A)g(B)\mid c$.</p><ul class="ct-ul"><li><p>If $g(A)=1$: $g(B)$ is at most the smaller coordinate of $B$, which is at most $m$ because the coordinates of $B$ add up to $2m+1$. So the sum is at most $m+1$.</p></li><li><p>If $g(B)=1$: similarly $g(A)\le m$, since the coordinates of $A$ add up to $2m$.</p></li><li><p>If $g(A),g(B)\ge2$: then $(g(A)-2)(g(B)-2)\ge0$ gives $g(A)+g(B)\le\frac{g(A)g(B)}2+2\le\frac c2+2$. The coordinate $c$ belongs to $A$,
+whose other coordinate is at least $1$, so $c\le2m-1$; and $c=2m-1$ would force the other coordinate of $A$ to be $1$ and $g(A)=1$. So $c\le2m-2$ and
+$g(A)+g(B)\le m+1$. $\square$</p></li></ul><p><strong>Upper bound.</strong> Group the anti-diagonals as $\{2,3\},\{4,5\},\dots,\{2n-2,2n-1\}$ and $\{2n\}$. By the lemma the cells on the pair
+$\{2m,2m+1\}$ contribute at most $m+1$, and the last cell $(n,n)$ contributes $n$. So the total is at most
+\[\sum_{m=1}^{n-1}(m+1)+n=\frac{(n-1)n}2+(n-1)+n=\frac{n^2+3n-2}{2}.\]
+Hence the maximum is $\boxed{\dfrac{n^2+3n-2}{2}}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p22">
+<h3>Problem 6</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 40: Vector Geometry and Affine Structure &middot; Dot Product and Metric Recovery</div>
+<div class="ct-text"><p>Let $ABCD$ be a convex quadrilateral such that $AB^2+BC^2=AD^2+CD^2$. Points $X$ and $Y$ are chosen such that $XD\perp CD$, $XB\perp AB$, $YB\perp BC$ and $YD\perp AD$. Let lines $AC$ and $XY$ meet at $T$ and let $M$ be the midpoint of $XY$. Prove that points $T$, $M$, $B$, $D$ lie on a circle.</p></div>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Vectors from the midpoint of $AC$)</h4>
+<div class="ct-fig"><img style="width:237px" src="/assets/contests/2026-27/azerbaijan-tsts-22_s1.svg" alt="Figure for the solution"></div>
+<p>Let $N$ be the midpoint of $AC$. By the median formula $AB^2+BC^2=2NB^2+\frac{AC^2}2$ and $AD^2+CD^2=2ND^2+\frac{AC^2}2$, so
+$NB=ND=:R$. Take $N$ as origin, write $A=-c$, $C=c$, and use the same letters for points and vectors; $B\cdot B=D\cdot D=R^2$. If $N$ were on
+$BD$, then $D=-B$, $ABCD$ would be a parallelogram and the lines $XB\perp AB$, $XD\perp CD\parallel AB$ would be parallel, so $X$ would not
+exist. Hence $B$ and $D$ are linearly independent; write $c=\beta B+\delta D$.</p><p><em>The defining equations.</em> $XB\perp AB$ and $XD\perp CD$, $YB\perp BC$, $YD\perp AD$ read
+\[X\cdot(B+c)=R^2+B\cdot c,\quad X\cdot(D-c)=R^2-D\cdot c,\quad Y\cdot(B-c)=R^2-B\cdot c,\quad Y\cdot(D+c)=R^2+D\cdot c .\]
+Each pair determines $X$ (resp. $Y$) uniquely, since $X$ and $Y$ exist.</p><p><em>A candidate.</em> Let $M_0$ be the point with $M_0\cdot B=M_0\cdot D=R^2$ (the intersection of the tangents at $B$ and $D$ to the circle
+$\omega$ with centre $N$ and radius $R$). Let $V$ be the vector with $V\cdot B=(B-M_0)\cdot c$ and $V\cdot D=(M_0-D)\cdot c$. Then
+$M_0\cdot c=\beta R^2+\delta R^2$ and $(\beta B-\delta D)\cdot c=R^2(\beta^2-\delta^2)$, so
+\[V\cdot c=\beta(B-M_0)\cdot c+\delta(M_0-D)\cdot c=(\beta B-\delta D)\cdot c-(\beta-\delta)M_0\cdot c=R^2(\beta^2-\delta^2)-R^2(\beta-\delta)(\beta+\delta)=0 .\]
+Using $V\cdot c=0$ and $M_0\cdot B=M_0\cdot D=R^2$ one checks directly that $X_0=M_0+V$ satisfies the two equations for $X$ and
+$Y_0=M_0-V$ satisfies the two equations for $Y$ (for instance $X_0\cdot(B+c)=R^2+(B-M_0)\cdot c+M_0\cdot c+0=R^2+B\cdot c$). By uniqueness,
+$X=M_0+V$ and $Y=M_0-V$.</p><p><em>Conclusion.</em> Hence the midpoint of $XY$ is $M=M_0$, and $XY\parallel V\perp c$, i.e. $XY\perp AC$. So $T$ is the foot of the
+perpendicular from $M$ to the line $AC$ through $N$, and $\angle MTN=90^\circ$. Also $MB\perp NB$ and $MD\perp ND$ ($MB$, $MD$ are tangents
+to $\omega$). Therefore $B$, $D$, $T$ (and $N$, $M$) lie on the circle with diameter $MN$; in particular $T,M,B,D$ are concyclic. (If $T=M$,
+i.e. $M$ lies on $AC$, the statement degenerates; then $M=T$ is still on that circle.)</p>
+<h4>Solution 2 (Coordinates and trigonometry)</h4>
+<p>By the median formula, $AB^2+BC^2=2NB^2+\frac{AC^2}2$ and $AD^2+CD^2=2ND^2+\frac{AC^2}2$, where $N$ is the midpoint of $AC$; hence
+$NB=ND=:R$. Put $N=(0,0)$, $A=(-1,0)$,
+$C=(1,0)$, $e=(1,0)$, $B=R(\cos\beta,\sin\beta)$, $D=R(\cos\delta,\sin\delta)$ with $\sin\beta\ne0\ne\sin\delta$ (convexity), and let
+$\alpha=\frac{\beta+\delta}2$, $\gamma=\frac{\beta-\delta}2$, so $\beta=\alpha+\gamma$, $\delta=\alpha-\gamma$. As $X$ exists, $ABCD$ is not a
+parallelogram, so $\cos\gamma\ne0$, and the tangents to the circle $x^2+y^2=R^2$ at $B$ and $D$ meet at
+\[M_0=\frac{R}{\cos\gamma}(\cos\alpha,\ \sin\alpha),\qquad M_0\cdot B=M_0\cdot D=R^2 .\]
+The perpendicular to $AB$ at $B$ is $\{Z:\ Z\cdot(B+e)=R^2+B\cdot e\}$ and the perpendicular to $CD$ at $D$ is $\{Z:\ Z\cdot(D-e)=R^2-D\cdot e\}$.
+For $Z=M_0+(0,t)$ these become
+\[t\sin\beta=\cos\beta-\frac{\cos\alpha}{\cos\gamma},\qquad t\sin\delta=\frac{\cos\alpha}{\cos\gamma}-\cos\delta .\]
+Now $\cos(\alpha+\gamma)\cos\gamma-\cos\alpha=-\cos\alpha\sin^2\gamma-\sin\alpha\sin\gamma\cos\gamma=-\sin\gamma\sin(\alpha+\gamma)=-\sin\gamma\sin\beta$,
+and similarly $\cos\alpha-\cos(\alpha-\gamma)\cos\gamma=\sin\gamma(\cos\alpha\sin\gamma-\sin\alpha\cos\gamma)=-\sin\gamma\sin\delta$. So both
+equations say $t=-\tan\gamma$, and $X=M_0-(0,\tan\gamma)$. The same computation with $e$ replaced by $-e$ (the perpendiculars to $BC$ at $B$ and to
+$AD$ at $D$) gives $Y=M_0+(0,\tan\gamma)$.</p><p>Hence $XY$ is perpendicular to $AC$ and its midpoint is $M=M_0$. The foot $T$ of $XY$ on $AC$ satisfies $\angle MTN=90^\circ$, and
+$\angle MBN=\angle MDN=90^\circ$ because $MB$, $MD$ are tangents. So $T$, $M$, $B$, $D$ (and $N$) lie on the circle with diameter $MN$.</p>
+</div></details>
+</section>
+<h2 class="ct-group" id="izho-tst">IZhO TST</h2>
+<section class="ct-problem" id="p23">
+<h3>Problem 1</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure &middot; Power of a Point &middot; also 2026-bosnia-jbmo-tst: Problem 3</div>
+<div class="ct-text"><p>In triangle $ABC$, where $AB&lt;AC$, the angle bisector of $\angle A$ intersects side $BC$ at point $L$, and the circumcircle $\Omega$ at point $W$. On the circumcircle of triangle $WLC$, a point $P\ne W$ is chosen such that $BP=CP$. The tangent to $\Omega$ at $A$ intersects $BC$ at point $T$. On line $BW$, a point $Q$ is chosen such that $TB=TQ$. Prove that the points $Q$, $A$, $P$, $W$ lie on the same circle.</p></div>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Powers of B with respect to two circles)</h4>
+<div class="ct-fig"><img style="width:277px" src="/assets/contests/2026-27/azerbaijan-tsts-23_s1.svg" alt="Figure for the solution"></div>
+<p>Let $a=BC$, $b=CA$, $c=AB$, let $M$ be the midpoint of $BC$, and write $\angle A,\angle B,\angle C$ for the angles of the triangle. Since $AB&lt;AC$, the point $L$ lies between $B$ and $M$ ($LB=\frac{ac}{b+c}&lt;\frac a2$), and the tangent at $A$ meets line $BC$ at a point $T$ beyond $B$ (on ray $CB$). The point $W$ is the midpoint of arc $BC$ not containing $A$, so $WB=WC$ and the perpendicular bisector of $BC$ is the line $WM$. We use $\measuredangle(\ell,m)$ for directed angles between lines modulo $180^\circ$, and signed powers of points.</p><p><em>Step 1: $Q$ lies on the circle $CWT$.</em> Here $Q$ is the point of line $BW$ other than $B$ with $TQ=TB$ (the reflection of $B$ in the foot of the perpendicular from $T$ to $BW$). Also $Q\ne W$: as $WM\perp BC$ and $B$ lies between $T$ and $M$, we have $TW&gt;TM&gt;TB$. Triangle $TBQ$ is isosceles with $TB=TQ$, and triangle $WBC$ is isosceles with $WB=WC$, so (base angles, directed)
+\[\measuredangle(QT,QW)=\measuredangle(QT,QB)=\measuredangle(BQ,BT)=\measuredangle(BW,BC)=\measuredangle(CB,CW)=\measuredangle(CT,CW).\]
+Hence $Q,W,C,T$ are concyclic. The point $B$ lies between $C$ and $T$, so it is inside this circle; thus $B$ lies between $W$ and $Q$, and
+\[BW\cdot BQ=BC\cdot BT. \tag{1}\]</p><p><em>Step 2: $2\,BT\cdot ML=LB^2$.</em> By the tangent&ndash;chord angle, $\angle TAB=\angle C$, so $\angle TAL=\angle C+\frac{\angle A}2$; also $\angle TLA=\angle ALB=180^\circ-\angle B-\frac{\angle A}{2}=\angle C+\frac{\angle A}{2}$. So $TA=TL$. With $t=BT$ and $\ell=LB$, the power of $T$ with respect to $\Omega$ gives $t(t+a)=TA^2=TL^2=(t+\ell)^2$, so $t(a-2\ell)=\ell^2$. Since $a-2\ell=2\left(\frac a2-\ell\right)=2\,ML$,
+\[2\,BT\cdot ML=LB^2. \tag{2}\]</p><p><em>Step 3: the power of $B$ with respect to $\omega=(AWP)$.</em> The point $P$ is the second intersection of line $WM$ with the circle $WLC$. The point $M$ lies inside that circle (between $L$ and $C$ on a chord), so $M$ lies between $W$ and $P$ and $MW\cdot MP=ML\cdot MC$. The points $A,W,P$ are not collinear ($A$ is not on line $WM$ because $AB\ne AC$), so they define a circle $\omega$.</p><p>For a point $X$, put $f(X)=\operatorname{pow}_\omega(X)-\operatorname{pow}_\Omega(X)$. If the circles have centres $O_1,O_2$ and radii $r_1,r_2$, then $f(X)=|X-O_1|^2-r_1^2-|X-O_2|^2+r_2^2=2X\cdot(O_2-O_1)+\text{const}$, so $f$ is a linear function of the position of $X$; in particular it is linear along line $BC$. We evaluate it at three points of $BC$:</p><ul class="ct-ul"><li><p>$f(L)=0$: $\omega$ and $\Omega$ both pass through $A$ and $W$, and $L$ lies on line $AW$, so both powers equal $\overline{LA}\cdot\overline{LW}$.</p></li><li><p>$f(M)=-MW\cdot MP+MB\cdot MC=-ML\cdot MC+MC^2=MC\,(MC-ML)=\frac a2\cdot LB$, since $M$ is inside both circles.</p></li><li><p>Hence, by linearity, with $B$ on the other side of $L$ from $M$ at distance $LB$ from $L$,
+\[f(B)=-\frac{LB}{ML}\,f(M)=-\frac a2\cdot\frac{LB^2}{ML}=-a\cdot BT\]
+by (2).</p></li></ul><p>As $B$ lies on $\Omega$, $\operatorname{pow}_\omega(B)=f(B)=-BC\cdot BT&lt;0$. So $B$ is inside $\omega$, line $WB$ meets $\omega$ again at a point $Q^*$ with $B$ between $W$ and $Q^*$, and
+\[BW\cdot BQ^*=BC\cdot BT .\]</p><p><em>Step 4: conclusion.</em> Comparing with (1), $BQ^*=BQ$, and $Q$, $Q^*$ both lie on the ray from $B$ opposite to $W$. Hence $Q=Q^*\in\omega$, i.e. $Q$, $A$, $P$, $W$ lie on one circle.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p24">
+<h3>Problem 2</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 18: Invariants and Monovariants &middot; Invariant Quantities</div>
+<div class="ct-text"><p>The numbers $2,4,8,\ldots,2^{2024}$ are written on the board. At every step we can perform one of the following:</p><ul class="ct-parts"><li><p><span class="ct-lbl">(i)</span> We delete an even number from the board, say $2k$, and in its place we write the number $k$.</p></li><li><p><span class="ct-lbl">(ii)</span> We delete an odd number from the board, say $2k+1$, and in its place we write the numbers $k$ and $1$.</p></li><li><p><span class="ct-lbl">(iii)</span> We delete two (possibly equal) numbers from the board, say $k$ and $\ell$, and in their place we write the number $k+\ell\cdot 2^k$. (For example, if the board contains the numbers $1,3,5$ and we choose $k=5$ and $\ell=1$, then after this step the board will contain the numbers $3,37$.)</p></li></ul><p>Determine whether the following numbers can be obtained after a series of steps:</p><ul class="ct-parts"><li><p><span class="ct-lbl">(a)</span> $2^{2025}-1$;</p></li><li><p><span class="ct-lbl">(b)</span> $2^{2025}-3$.</p></li></ul><p><strong>Harder formulation:</strong> Which numbers less than $2^{2025}$ can be the last remaining, after a series of steps?</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(a) <strong>No</strong>; (b) <strong>Yes</strong>. Harder formulation: exactly the numbers $2^{2025}-1-2^j$, $0\le j\le 2024$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (The number of binary ones is invariant)</h4>
+<p>For $x\ge0$ let $s(x)$ be the number of ones in the binary expansion of $x$, and let $\Sigma$ be the sum of $s$ over the numbers on
+the board.</p><p><em>$\Sigma$ never changes.</em> (i) $s(2k)=s(k)$. (ii) $s(2k+1)=s(k)+1=s(k)+s(1)$. (iii) Since $k&lt;2^k$, the binary expansion of
+$k+\ell\cdot2^k$ is that of $\ell$ followed by the $k$-digit block of $k$, so $s(k+\ell\,2^k)=s(k)+s(\ell)$. Initially
+$\Sigma=2024$ (each $2^i$ has one binary one).</p><p><em>(a)</em> $2^{2025}-1$ has $2025$ binary ones, more than $\Sigma=2024$, so it can never appear on the board: <strong>No</strong>.</p><p><em>Harder formulation, necessity.</em> If one number $N&lt;2^{2025}$ remains, then $s(N)=2024$, so $N$ has at most $2025$ binary digits, all
+equal to $1$ except exactly one $0$: $N=2^{2025}-1-2^j$ with $0\le j\le2024$.</p><p><em>Sufficiency.</em> Note what (iii) does for small $k$: with $k=1$ it turns $\ell$ into $2\ell+1$ (&ldquo;append the digit $1$&rdquo;), and with $k=2$ it
+turns $\ell$ into $4\ell+2$ (&ldquo;append the digits $10$&rdquo;). Keep the number $2=2^1$ and, using (i), turn each of the other $2023$ numbers into $1$.</p><ul class="ct-ul"><li><p>$j=2024$: halve the $2$ as well, start from one $1$ and append the digit $1$ using the other $2023$ ones; the only number
+left is $2^{2024}-1$.</p></li><li><p>$0\le j\le 2022$: start from a $1$ and append the digit $1$ using $2022-j$ further $1$'s (this gives $2^{2023-j}-1$, i.e. $2023-j$
+ones), then append $10$ using the $2$, then append the digit $1$ using the remaining $j$ ones. The result is
+$(2023-j+1)$ ones, a zero and $j$ ones: $2^{2025}-1-2^j$.</p></li><li><p>$j=2023$: start from the $2$ (binary $10$) and append the digit $1$ using all $2023$ ones: $2^{2025}-1-2^{2023}$.</p></li></ul><p>In particular (b) $2^{2025}-3=2^{2025}-1-2^1$ can be obtained: <strong>Yes</strong>.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p25">
+<h3>Problem 3</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Algebra &middot; LPS VII, Chapter 1: Inequalities: Core Classical Methods &middot; Cauchy-Schwarz and Titu&#x27;s Lemma</div>
+<div class="ct-text"><p>Let $n\geq 2$ be a fixed even integer. We consider polynomials of the form
+\[P(x)=x^n+a_{n-1}x^{n-1}+\cdots+a_1x+1\]
+with real coefficients, having at least one real root. Find the least possible value of $a_1^2+a_2^2+\cdots+a_{n-1}^2$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\dfrac{4}{n-1}$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Cauchy-Schwarz at the root, then a convexity estimate)</h4>
+<p>Let $n=2m$ and let $x$ be a real root; $x\ne0$ since $P(0)=1$. Then $x^n+1=-(a_1x+\dots+a_{n-1}x^{n-1})$, and by Cauchy-Schwarz
+\[(x^n+1)^2\le\Bigl(\sum_{i=1}^{n-1}a_i^2\Bigr)\Bigl(\sum_{i=1}^{n-1}x^{2i}\Bigr).\]
+With $t=x^2&gt;0$ it remains to show
+\[\sum_{i=1}^{n-1}t^i\le\frac{n-1}{4}\,(t^m+1)^2=\frac{n-1}{4}\bigl(1+t^n+2t^m\bigr).\qquad(1)\]
+Let $u_i=t^i+t^{n-i}$ for $0\le i\le m$. The sequence is convex: $u_{i-1}+u_{i+1}-2u_i=(t-1)^2\bigl(t^{i-1}+t^{n-i-1}\bigr)\ge0$. A convex
+sequence lies below its chord, so $u_i\le\frac{(m-i)u_0+i\,u_m}{m}$ with $u_0=1+t^n$, $u_m=2t^m$. Summing,
+\[\sum_{i=1}^{n-1}t^i=t^m+\sum_{i=1}^{m-1}u_i\le t^m+\frac{m-1}{2}(u_0+u_m)=\frac{m-1}2u_0+\frac m2u_m .\]
+The right side of (1) is $\frac{2m-1}4(u_0+u_m)$, and $\frac{2m-1}4(u_0+u_m)-\frac{m-1}2u_0-\frac m2u_m=\frac{u_0-u_m}{4}=\frac{(t^m-1)^2}{4}\ge0$.
+Hence (1) holds and $\sum a_i^2\ge\frac{(x^n+1)^2}{\sum x^{2i}}\ge\frac{4}{n-1}$.</p><p><em>Equality.</em> $P(x)=x^n-\frac{2}{n-1}\bigl(x^{n-1}+\dots+x\bigr)+1$ has $P(1)=0$ and $\sum a_i^2=\frac4{n-1}$. The minimum is
+$\boxed{\dfrac{4}{n-1}}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p26">
+<h3>Problem 4</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-S" title="Superhard, on the LPS VII scale">S</span>Number Theory &middot; LPS VII, Chapter 54: Advanced Number Theory Synthesis &middot; Hybrid Congruence and Factorization Arguments</div>
+<div class="ct-text"><p>Let $a,b,k$ be positive integers. Suppose that for any integer $n\geq 2025$ there exists a positive integer $x_n&gt;n$ such that
+\[x_n\mid n^2+a\quad\text{and}\quad x_n+k\mid n^2+b.\]
+Prove that $k=b-a$.</p></div>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Compare the cofactors; a Pell-type equation cannot hold on a whole progression)</h4>
+<p>For $n\ge2025$ write $x=x_n$ and
+\[n^2+a=xu,\qquad n^2+b=(x+k)v\qquad(u,v\ \text{positive integers}).\]
+Subtracting, $x(v-u)+kv=b-a$.</p><p><em>Case $v&gt;u$.</em> Then $b-a\ge x+kv&gt;n$; impossible for $n&gt;|b-a|$.</p><p><em>Case $v=u$.</em> Then $ku=b-a$, so $u=w:=\frac{b-a}{k}$ is a fixed positive integer and $w\mid n^2+a$.</p><p><em>Case $v&lt;u$.</em> Let $d=u-v\ge1$. Then $xd=kv-(b-a)$, and substituting $v=\frac{xd+b-a}{k}$, $u=v+d$ into $k(n^2+a)=kxu$ gives
+\[kn^2=dx^2+ex-ka,\qquad e=b-a+kd .\]
+<em>$d$ is bounded:</em> if $e\ge0$ then $kn^2\ge dx^2-ka&gt;dn^2-ka$, so $d\le k$ for $n^2&gt;ka$; if $e&lt;0$ then $d&lt;\frac{|b-a|}{k}$. So
+$d\le K:=k+|b-a|$. Multiplying by $4d$:
+\[Y^2-4dk\,n^2=c_d,\qquad Y=2dx+e,\quad c_d=e^2+4dka&gt;0,\qquad(\ast)\]
+and $Y&gt;0$ for large $n$ (as $x&gt;n$ and $|e|\le |b-a|+kK$).
+<em>Claim.</em> Fix a bound $H$. There is $N_0$ such that for every integer $h$ with $1\le h\le H$ and every $d\le K$, the equation $(\ast)$
+does not hold for both $n$ and $n+h$ when $n&gt;N_0$; moreover, if $4dk$ is a perfect square, $(\ast)$ has only finitely many solutions $n$.</p><p>Indeed, if $4dk=s^2$, then $(Y-sn)(Y+sn)=c_d&gt;0$ forces $sn&lt;Y+sn\le c_d$. If $D=4dk$ is not a square and $(n,Y)$, $(n',Y')$ solve $(\ast)$ with
+$Y,Y'&gt;0$, then $0&lt;Y-\sqrt Dn=\frac{c_d}{Y+\sqrt Dn}&lt;\frac{c_d}{2\sqrt D\,n}$, and the same for $n'=n+h$. So the integer $Y'-Y$ differs from the
+irrational number $h\sqrt D$ by less than $\frac{c_d}{2\sqrt D\,n}$. The finitely many numbers $h\sqrt{D}$ ($h\le H$, $d\le K$) have a positive
+distance $\varepsilon$ to the nearest integers, so this is impossible once $n&gt;\max c_d/(2\sqrt D\,\varepsilon)$.</p><p><em>Conclusion.</em> Take $H=K\,(|b-a|+1)$; note that $w=\frac{b-a}k\le|b-a|$ whenever Case $v=u$ occurs.</p><ul class="ct-ul"><li><p>If Case $v=u$ never occurs, then for all large $n$ we are in Case $v&lt;u$. Among $n,n+1,\dots,n+K$ two indices use the same $d$, which
+contradicts the Claim. So Case $v=u$ occurs for some $n$, and $w=\frac{b-a}{k}$ is a positive integer.</p></li><li><p>If $w\ge2$: the squares modulo $w$ are not all congruent ($0^2\not\equiv1^2$), so there is a residue $r$ with
+$r^2\not\equiv-a\pmod w$. For $n\equiv r\pmod w$ Case $v=u$ is impossible (it needs $w\mid n^2+a$), so all large $n\equiv r$ are in Case $v&lt;u$.
+Among $n,n+w,\dots,n+Kw$ two use the same $d$, again contradicting the Claim.</p></li></ul><p>Hence $w=1$, i.e. $k=b-a$. (Conversely $k=b-a$ works with $x_n=n^2+a$.)</p>
+</div></details>
+</section>
+<h2 class="ct-group" id="tstst">TSTST</h2>
+<section class="ct-problem" id="p27">
+<h3>Problem 1</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 49: Combinatorial Number Theory and Structure &middot; Additive Structure and Sums of Integers</div>
+<div class="ct-text"><p>The set $M$ consists of the numbers from $1$ to $2006$. There is a subset of $M$ such that for any numbers $x&lt;y&lt;z$ in this subset, $x+y$ does not divide $z$. Find the maximum number of elements in this subset.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$1004$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Pairs summing to the largest element)</h4>
+<p><em>Example.</em> $S=\{1003,1004,\dots,2006\}$ has $1004$ elements, and for $x&lt;y&lt;z$ in $S$ we have $x+y\ge2007&gt;z$, so $x+y\nmid z$.</p><p><em>Bound.</em> Let $S$ be a good subset and $z=\max S$. For $x\in S$ with $x&lt;z$ and $x\ne z-x$: if also $z-x\in S$, then the two distinct
+elements $x$ and $z-x$, both smaller than $z$, have sum $z$, which divides $z$; impossible. So from each pair $\{x,z-x\}$ with
+$1\le x&lt;\frac z2$ at most one number lies in $S$. Hence $S\setminus\{z\}$ has at most $\lfloor\frac{z-1}2\rfloor$ elements, plus possibly
+$\frac z2$ when $z$ is even, i.e. at most $\lfloor\frac z2\rfloor$ elements. As $z\le2006$, $|S|\le1003+1=1004$.</p><p>The maximum is $\boxed{1004}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p28">
+<h3>Problem 2</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 8: Modular Arithmetic and Congruence Methods &middot; Residue Classes and Case Analysis</div>
+<div class="ct-text"><p>Find all positive integers $a$ such that for any positive integer $n\geq 5$ we have $2^n-n^2\mid a^n-n^a$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$a\in\{2,4\}$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Choose $n=4p-2$)</h4>
+<p><em>$a=2$ and $a=4$ work.</em> For $n\ge5$ we have $2^n&gt;n^2$. For $a=2$ the two numbers are equal; for $a=4$,
+$4^n-n^4=(2^n-n^2)(2^n+n^2)$.</p><p><em>No other $a$ works.</em> Let $p$ be a prime with $p&gt;a$, $p\ge3$, and take $n=4p-2\ge10$. By Fermat, $2^n=2^{4(p-1)}\cdot2^2\equiv4$ and
+$n^2\equiv(-2)^2=4\pmod p$, so $p\mid 2^n-n^2$. If $a$ works, then $p\mid a^n-n^a$; since $p\nmid a$, $a^n=a^{4(p-1)}a^2\equiv a^2$, and
+$n^a\equiv(-2)^a\pmod p$. Hence $p\mid a^2-(-2)^a$ for every prime $p&gt;a$. A nonzero integer has finitely many prime divisors, so
+$a^2=(-2)^a$. Then $a$ is even and $a^2=2^a$, which gives $a=2$ or $a=4$ (for $a\ge5$, $2^a&gt;a^2$).</p><p>The answer is $\boxed{a\in\{2,4\}}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p29">
+<h3>Problem 3</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure &middot; Power of a Point</div>
+<div class="ct-text"><p>Let $ABC$ be an acute triangle whose orthocenter is the point $H$. The circle that passes through the points $B$, $H$ and $C$ intersects the lines $AB$ and $AC$ again at points $D$ and $E$, respectively. Let $P$ and $Q$ be the points of intersection of the segment $DE$ with $HB$ and $HC$, respectively. Points $X$ and $Y$ (different from $A$) on the lines $AP$ and $AQ$, respectively, are chosen so that the points $X$, $A$, $H$, $B$ lie on a circle and the points $Y$, $A$, $H$, $C$ lie on a circle. Prove that the lines $XY$ and $BC$ are parallel.</p></div>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (A circle centred at $H$)</h4>
+<div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/azerbaijan-tsts-29_s1.svg" alt="Figure for the solution"></div>
+<p><em>Step 1: $D,E$ are reflections of $A$.</em> $B,H,C,D$ are concyclic, so $\angle BDC=\angle BHC=180^\circ-\angle A$ (the angle
+$BHC$ of the orthocentre); hence $\angle ADC=\angle A$ and $CA=CD$. The line $CH$ is perpendicular to $AB=AD$ and passes through $C$, so it is the
+perpendicular bisector of $AD$. In the same way $BA=BE$ and $BH$ is the perpendicular bisector of $AE$. Consequently $HA=HD=HE$: the circle
+$\gamma$ with centre $H$ and radius $HA$ passes through $A,D,E$.</p><p><em>Step 2: $X$ and $Y$ lie on $\gamma$.</em> The point $P$ lies on the line $HB$, a chord line of the circle $AHB$, and on the line $AX$. So
+$\overline{PA}\cdot\overline{PX}=\overline{PH}\cdot\overline{PB}$. It also lies on the chords $HB$ and $DE$ of the circle $BHC$, so
+$\overline{PH}\cdot\overline{PB}=\overline{PD}\cdot\overline{PE}$. Hence $\overline{PA}\cdot\overline{PX}=\overline{PD}\cdot\overline{PE}$ and
+$X$ lies on the circle $ADE=\gamma$. Likewise $Y\in\gamma$ (use $Q$, the circle $AHC$ and the circle $BHC$).</p><p><em>Step 3: $AP$ and $AQ$ are symmetric in $AH$.</em> $P$ lies on the perpendicular bisector $BH$ of $AE$, so $PA=PE$ and
+$\angle PAE=\angle PED=\angle E'$, where $\angle D',\angle E'$ denote the angles of triangle $ADE$ at $D,E$. Similarly $QA=QD$ and
+$\angle QAD=\angle D'$. Since $H$ is the circumcentre of $ADE$, $\angle HAE=90^\circ-\angle D'$ and $\angle HAD=90^\circ-\angle E'$. Thus
+\[\angle PAH=\angle PAE-\angle HAE=\angle D'+\angle E'-90^\circ=\angle QAD-\angle HAD=\angle QAH,\]
+with $P$ and $Q$ on opposite sides of $AH$ (as $D,E$ are). So the lines $AP$ and $AQ$ are symmetric in the line $AH$.</p><p><em>Conclusion.</em> The reflection in the line $AH$ (a line through the centre $H$ of $\gamma$) maps $\gamma$ to itself and the line $AP$ to
+the line $AQ$, so it maps $X$ (the second point of $AP$ on $\gamma$) to $Y$. Hence $XY\perp AH$, and since $AH\perp BC$, $XY\parallel BC$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p30">
+<h3>Problem 4</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Algebra &middot; LPS VII, Chapter 30: Functional Equations: Core Olympiad Methods &middot; Substitution and Special Inputs</div>
+<div class="ct-text"><p>Find all functions $f:\mathbb{R}^+\to\mathbb{R}^+$ such that for all positive reals $x,y$,
+\[f(x)f(f(x)+y)=f(x^2)+f(xy).\]</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$f(x)=x$ for all $x$, and $f(x)=2$ for all $x$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Shifts by multiples of $f(1)$)</h4>
+<p>Both functions work: $x(x+y)=x^2+xy$ and $2\cdot2=2+2$.</p><p>Let $f$ be a solution and $c=f(1)$. Putting $x=1$:
+\[f(y+c)=1+\frac{f(y)}c\qquad\text{for all }y&gt;0.\qquad(1)\]
+Now replace $y$ by $y+c$ in the equation and use (1) at the point $f(x)+y$:
+\[f(x)\Bigl(1+\frac{f(f(x)+y)}{c}\Bigr)=f(x^2)+f(xy+xc).\]
+Since $f(x)f(f(x)+y)=f(x^2)+f(xy)$, this gives
+\[f(xy+xc)=\frac{f(xy)}{c}+f(x)-\Bigl(1-\frac1c\Bigr)f(x^2).\]
+With $z=xy$ and $s=xc$ (both arbitrary positive reals):
+\[f(z+s)=\frac{f(z)}c+\kappa(s)\qquad\text{for all }z,s&gt;0,\qquad(2)\]
+where $\kappa(s)$ does not depend on $z$. Expanding $f(z+s+t)$ in two ways with (2),
+$\frac{f(z)}{c^2}+\frac{\kappa(s)}c+\kappa(t)=\frac{f(z)}{c^2}+\frac{\kappa(t)}c+\kappa(s)$, so $(c-1)(\kappa(s)-\kappa(t))=0$.</p><p><em>Case $c\ne1$.</em> Then $\kappa$ is a constant $\kappa_0$, and $f(w)=\frac{f(z)}c+\kappa_0$ for all $0&lt;z&lt;w$. So $f$ takes the same value at
+any two points below $w$, for every $w$: $f$ is constant, $f\equiv c$, and $c^2=2c$ gives $c=2$.</p><p><em>Case $c=1$.</em> Then $\kappa(s)=f(s)$ (the last term vanishes), and (2) reads $f(z+s)=f(z)+f(s)$. As $f&gt;0$, $f$ is increasing; an additive
+increasing function on $\mathbb R^+$ is linear (for rational $q$, $f(q)=qf(1)$, and monotonicity squeezes irrational arguments). With $f(1)=1$
+we get $f(x)=x$.</p><p>So the solutions are $\boxed{f(x)=x}$ and $\boxed{f\equiv2}$.</p>
+</div></details>
+</section>
+{% endraw %}

@@ -1,0 +1,211 @@
+---
+title: International Mathematical Summer Camp 2026
+permalink: /contests/imsc-2026
+description: International Mathematical Summer Camp 2026: problems with answers and solutions
+---
+{% raw %}
+<style>
+  .ct-intro { margin-bottom: 1.2em; }
+  .ct-credit { font-size: 14px; color: var(--ink-soft); border-left: 3px solid var(--gold); padding: 6px 12px; background: var(--white); margin: 1em 0; }
+  .ct-toc { display: flex; flex-wrap: wrap; gap: 6px; margin: 1em 0 1.4em; }
+  .ct-toc a { display: inline-block; min-width: 2.4em; text-align: center; padding: 4px 8px; border: 1px solid var(--rule); border-radius: 4px; background: var(--white); text-decoration: none; font-size: 14px; }
+  .ct-problem { background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 14px 18px; margin: 1.1em 0; }
+  .ct-problem h3 { margin: 0 0 .3em; font-size: 1.08rem; border-bottom: none; padding-bottom: 0; }
+  .ct-meta { font-size: 13px; color: var(--ink-soft); margin-bottom: .6em; }
+  .ct-text { font-family: Georgia, "Times New Roman", "Noto Serif", serif; font-size: 1.02em; line-height: 1.6; }
+  .ct-text p { margin: .5em 0; }
+  .ct-fig { text-align: center; margin: .8em 0; }
+  .ct-fig img { max-width: 100%; height: auto; max-height: 340px; }
+  .ct-choices { display: flex; flex-wrap: wrap; gap: 6px 22px; margin: .6em 0 .2em; }
+  .ct-choices b { margin-right: .3em; }
+  .ct-problem details { margin-top: .8em; border-top: 1px dashed var(--rule); padding-top: .5em; }
+  .ct-problem summary { cursor: pointer; font-weight: 600; color: var(--brand); font-size: 15px; }
+  .ct-problem details[open] summary { margin-bottom: .5em; }
+  .ct-sol h4 { font-size: 1rem; margin: 1em 0 .3em; color: var(--ink); }
+  .ct-answer { font-weight: 600; }
+  .ct-parts { list-style: none; padding-left: .4em; }
+  .ct-parts li { margin: .35em 0; }
+  .ct-lbl { font-weight: 700; margin-right: .3em; }
+  .ct-note { font-size: 14px; color: var(--ink-soft); font-style: italic; }
+  .ct-bar { margin: .6em 0 1em; display: flex; gap: 10px; flex-wrap: wrap; }
+  .ct-bar button { font: inherit; font-size: 14px; padding: 5px 12px; border-radius: var(--radius); border: 1px solid var(--brand); background: var(--white); color: var(--brand); cursor: pointer; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
+</style>
+<script>
+  window.MathJax = { tex: { inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [['\\[','\\]']], processEscapes: true },
+                     options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] } };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script>
+  function ctAll(open) { document.querySelectorAll('.ct-problem details').forEach(function (d) { d.open = open; }); }
+</script>
+
+<style>
+  .ct-group { font-size: 1.25rem; margin: 1.6em 0 .2em; }
+  .ct-toc-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: .3em 0; }
+  .ct-toc-g { font-size: 13px; color: var(--ink-soft); min-width: 9em; }
+  .ct-toc-wrap { margin: 1em 0 1.4em; }
+  .ct-center { text-align: center; margin: .6em 0; }
+  .ct-tablewrap { overflow-x: auto; margin: .6em 0; text-align: center; }
+  .ct-table { border-collapse: collapse; margin: 0 auto; }
+  .ct-table td { padding: 2px 9px; text-align: center; }
+  .ct-table tr.ct-hl td { border-bottom: 1px solid var(--ink-soft); }
+  .ct-table.ct-vfirst td:first-child { border-right: 1px solid var(--ink-soft); }
+  .ct-ul { padding-left: 1.4em; }
+  .ct-ul li { margin: .3em 0; }
+  .ct-text li > p:first-child { margin-top: 0; }
+  .ct-text li > p:last-child { margin-bottom: 0; }
+  .ct-text mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
+</style>
+
+<style>
+  .ct-tags { display: flex; flex-wrap: wrap; gap: 5px; margin: 0 0 .55em; }
+  .ct-tg { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .03em; padding: 2px 8px; border-radius: 999px; line-height: 1.5; }
+  .ct-lv { background: #eee7dc; color: #4a3d33; }
+  .ct-df-Starter { background: #dcf1dc; color: #245c24; }
+  .ct-df-Explorer { background: #d6efec; color: #155e57; }
+  .ct-df-Challenger { background: #dce8f7; color: #1f4c80; }
+  .ct-df-Olympiad { background: #e7defa; color: #4b2a8a; }
+  .ct-df-Advanced { background: #fbe4cc; color: #8a4a0b; }
+  .ct-df-Expert { background: #f8d6cf; color: #8c2600; }
+  .ct-band { margin: 1.3em 0 .5em; font-size: 14px; color: var(--ink-soft); }
+  .ct-band .ct-tg { font-size: 13px; margin-right: .4em; }
+  .ct-legend { font-size: 14.5px; background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 10px 16px; margin: 1em 0 1.4em; }
+  .ct-legend p { margin: .35em 0; }
+  .ct-legend ul { margin: .2em 0 .4em; padding-left: 1.1em; }
+  .ct-legend li { margin: .2em 0; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
+</style>
+{% endraw %}
+<p><a href="{{ '/contests-2026' | relative_url }}">&larr; All contests 2026</a></p>
+
+<h1>International Mathematical Summer Camp 2026</h1>
+
+<div class="ct-intro">
+<p>The 6 problems of the International Mathematical Summer Camp 2026, each with our own solutions, hidden until you open them. 5 of them ask for an answer and 1 asks for a proof. Where a problem has a final answer, it is shown separately. Try a problem first, then check.</p><p>Day 1 and Day 2.</p>
+</div>
+<div class="ct-credit">Problems: International Mathematical Summer Camp 2026, from the AoPS contest collection or the official paper. Solutions written by MCC.</div>
+<div class="ct-bar"><button type="button" onclick="ctAll(true)">Show all answers and solutions</button><button type="button" onclick="ctAll(false)">Hide all</button></div>
+<div class="ct-toc-wrap"><div class="ct-toc-row"><span class="ct-toc-g">Day 1</span><a href="#p1">1</a><a href="#p2">2</a><a href="#p3">3</a></div><div class="ct-toc-row"><span class="ct-toc-g">Day 2</span><a href="#p4">4</a><a href="#p5">5</a><a href="#p6">6</a></div></div>
+
+{% raw %}
+<h2 class="ct-group" id="day-1">Day 1</h2>
+<section class="ct-problem" id="p1">
+<h3>Problem 1</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-S" title="Superhard, on the LPS VII scale">S</span>Combinatorics &middot; LPS VII, Chapter 39: Graph Theory and Structural Combinatorics &middot; Paths, Cycles, and Connectivity</div>
+<div class="ct-text"><p>Uncle Qiang's house consists of a $2026\times2026$ grid of $1\times1$ rooms. Every room has four walls, exactly one of which contains an outgoing one-way door. If the wall is between two adjacent rooms, then the door leads from one room to the other. If the wall is on the perimeter of the house then the door leads outside. In every room, each of the four walls has at most one door, which leads either into or out of the room. There are no incoming doors from outside the house.</p><p>Uncle Qiang wants to redesign the house by performing <em>moves</em>: in a move, he chooses a room whose four walls are not all occupied by doors. He then removes that room's outgoing one-way door and replaces it with a new outgoing one-way door through one of its walls not occupied by a door.</p><p>Uncle Qiang would like to perform a series of up to $k$ moves so that it is possible to exit the house from any room by following only outgoing one-way doors. Find the smallest number $k$ such that this is always possible.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>conjecturally $k=1013^2$; proved $k\ge1013^2$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (The lower bound (partial))</h4>
+<div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/imsc-1_s1.svg" alt="Figure for the solution"></div>
+<p><em>This is partial progress: the lower bound $k\ge1013^2$ is proved; that $1013^2$ moves always suffice is not proved here.</em></p><p>Each room has exactly one outgoing door, so following doors from a room either leads outside or eventually runs around a cycle of rooms. Two adjacent rooms cannot point at each other (their common wall would carry two doors), so every cycle has at least $4$ rooms.</p><p><strong>A bad house.</strong> Split the $2026\times2026$ grid into $1013^2$ blocks of $2\times2$ rooms and in each block let the four doors go around the block (each room points to the next room of its block, clockwise). Every interior wall of a block carries one door, all other walls carry none, so this is a legal house, and it has $1013^2$ disjoint cycles.</p><p><strong>Each move kills at most one of these cycles.</strong> A move changes the door of one room only. A cycle that does not contain that room still consists of rooms with unchanged doors, so it is still a cycle after the move. Hence every one of the $1013^2$ original cycles needs a move in one of its own rooms, and different cycles are disjoint; at least $1013^2$ moves are necessary. (For this particular house $1013^2$ moves also suffice: treat the blocks in order of their distance from the boundary, and in each block turn one room's door to the outside or into an already treated block through a wall that carries no door.)</p><p>So $k\ge1013^2$. The matching upper bound for every house is not established here.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p2">
+<h3>Problem 2</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Algebra &middot; LPS VII, Chapter 46: Functional Equations: Iteration, Rigidity, and Deep Structure &middot; Monotonicity, Boundedness, and Regularity</div>
+<div class="ct-text"><p>Find all functions $f:\mathbb{R}^+\to\mathbb{R}^+$ and polynomials $P$ with non-negative coefficients such that
+\[f(x+P(xy))=f(x)+xf(y)\]
+for all positive real numbers $x$ and $y$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$P(t)=t$ and $f(x)=cx$ for any constant $c&gt;0$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Monotonicity, then a limit)</h4>
+<p><strong>Answer.</strong> $P(t)=t$ and $f(x)=cx$ with $c&gt;0$. These work: $f(x+xy)=cx+cxy=f(x)+xf(y)$.</p><p>Conversely, let $(f,P)$ be a solution and write $P(t)=p_0+p_1t+\dots+p_nt^n$ with all $p_i\ge0$ and $p_n&gt;0$. Call the equation $E(x,y)$.</p><p><strong>Step 1: $P$ is not constant.</strong> If $P\equiv p_0$, then $E(x,y)$ reads $f(x+p_0)=f(x)+xf(y)$, so $f(y)$ does not depend on $y$: $f\equiv K&gt;0$. Then $K=K+xK$, which is false. So $n\ge1$. Hence $P$ is continuous and strictly increasing on $[0,\infty)$, $P(t)\to\infty$ as $t\to\infty$, and $P$ maps $(0,\infty)$ onto $(p_0,\infty)$.</p><p><strong>Step 2: if $a&gt;0$ and $b&gt;a+p_0$, then $f(b)&gt;f(a)$.</strong> By Step 1 there is $s&gt;0$ with $P(s)=b-a$. Then $E(a,s/a)$ gives $f(b)=f(a+P(s))=f(a)+af(s/a)&gt;f(a)$.</p><p><strong>Step 3: $f$ is strictly increasing.</strong> Let $y&gt;y'&gt;0$. For $x&gt;0$,
+\[P(xy)-P(xy')=\sum_{i=1}^{n}p_ix^i\bigl(y^i-y'^i\bigr)\ge p_nx^n\bigl(y^n-y'^n\bigr),\]
+which tends to $\infty$ as $x\to\infty$. Choose $x$ with $P(xy)-P(xy')&gt;p_0$. By Step 2, $f(x+P(xy))&gt;f(x+P(xy'))$, and subtracting $E(x,y')$ from $E(x,y)$ gives $x\bigl(f(y)-f(y')\bigr)&gt;0$.</p><p><strong>Step 4: $p_0=0$.</strong> Since $f$ is increasing and positive, $m=\lim_{x\to0^+}f(x)$ exists and $m\ge0$; also $m&lt;f(z)$ for every $z&gt;0$. Suppose $p_0&gt;0$. In $E(x,1)$ let $x\to0^+$. The right side $f(x)+xf(1)$ tends to $m$. On the left, $x+P(x)&gt;p_0$, so $f(x+P(x))\ge f(p_0)&gt;f(p_0/2)&gt;m$ for every $x$. This contradicts the limit. Hence $p_0=0$, and now $P$ maps $(0,\infty)$ onto $(0,\infty)$.</p><p><strong>Step 5: $m=0$ and $f$ is right-continuous.</strong> Fix $x&gt;0$ and let $y\to0^+$ in $E(x,y)$. Then $x+P(xy)$ decreases to $x$, so the left side tends to the right-hand limit $f(x^+)$, while the right side tends to $f(x)+xm$. Thus $f(x^+)-f(x)=xm$ for every $x$. If $m&gt;0$, pick $N$ numbers $1&lt;x_1&lt;\dots&lt;x_N&lt;2$; since $f$ is increasing,
+\[f(2)-f(1)\ge\sum_{k=1}^{N}\bigl(f(x_k^+)-f(x_k)\bigr)\ge Nm\]
+for every $N$, which is impossible. So $m=0$ and $f(x^+)=f(x)$ for all $x$.</p><p><strong>Step 6: $f(P(t))=Lt$.</strong> Fix $t&gt;0$ and apply $E(x,t/x)$:
+\[f\bigl(x+P(t)\bigr)=f(x)+x\,f(t/x).\]
+Let $x\to0^+$. The left side tends to $f(P(t)^+)=f(P(t))$ and $f(x)\to m=0$, so $x\,f(t/x)\to f(P(t))$. With $Y=t/x\to\infty$ this says
+\[\lim_{Y\to\infty}\frac{f(Y)}{Y}=\frac{f(P(t))}{t}.\]
+The left side does not depend on $t$; call it $L$. Then $L&gt;0$ and $f(P(t))=Lt$ for every $t&gt;0$.</p><p><strong>Step 7: conclusion.</strong> Put $Y=P(t)$ in $f(Y)/Y\to L$ and let $t\to\infty$: $Lt/P(t)\to L$, so $P(t)/t=p_1+p_2t+\dots+p_nt^{n-1}\to1$. This forces $n=1$ and $p_1=1$, i.e. $P(t)=t$. Since $P$ is now the identity, Step 6 reads $f(t)=Lt$. So $f(x)=cx$ with $c=L&gt;0$ and $P(t)=t$, as claimed.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p3">
+<h3>Problem 3</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Number Theory &middot; LPS VII, Chapter 54: Advanced Number Theory Synthesis &middot; Deep Structural Classification Problems</div>
+<div class="ct-text"><p>For a positive integer $k$, define $d(k)$ to be the number of positive divisors of $k$. Find all sequences $a_1,a_2,a_3,\dots$ of positive integers such that the following two conditions hold:</p><ul class="ct-ul"><li><p>$a_{mn}=a_ma_n$ for all positive integers $m$ and $n$;</p></li><li><p>$d(a_n+1)=d(n+1)$ for all positive integers $n$.</p></li></ul></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>only $a_n=n$ for all $n$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Squares and a Pell-type bound)</h4>
+<p>The sequence $a_n=n$ works. Conversely let $(a_n)$ satisfy the conditions. From $a_1=a_1^2$ we get $a_1=1$. Recall that $d(m)$ is odd exactly when $m$ is a perfect square, so
+\[a_n+1\text{ is a square}\iff n+1\text{ is a square}.\tag{1}\]
+We prove $a_n=n$ by strong induction on $n$. If $n&gt;1$ is composite, $n=uv$ with $u,v&lt;n$ and $a_n=a_ua_v=uv$. It remains to treat primes.</p><p><strong>$p=2$.</strong> $d(a_2+1)=d(3)=2$, so $a_2+1$ is a prime $q$. Also $d(a_8+1)=d(9)=3$, so $a_2^3+1=a_8+1$ is the square of a prime $r$. Now $a_2^3+1=(a_2+1)(a_2^2-a_2+1)$ and $q=a_2+1$ divides $r^2$, so $q=r$ and $a_2^2-a_2+1=q=a_2+1$, giving $a_2=2$.</p><p><strong>A lemma.</strong> Let $K\ge2$ and let $u,w$ be positive integers with $w^2=K^2u^2-(K^2-1)$. Then $u\le K/2$. Indeed $(Ku-w)(Ku+w)=K^2-1$ with both factors positive integers $D=Ku+w$, $E=Ku-w$; so $2Ku=D+E\le1+(K^2-1)=K^2$ (a sum of two positive integers with a fixed product is largest when one of them is $1$).</p><p><strong>An odd prime $p$.</strong> Assume $a_m=m$ for all $m&lt;p$, hence for every $m$ whose prime factors are less than $p$. Let $x=a_p$ and $K=2(p-1)$.</p><p><em>Upper bound.</em> $n_1=p(p-2)$ has $n_1+1=(p-1)^2$, and $n_2=4p(p-1)^2(p-2)$ has $n_2+1=(2(p-1)^2-1)^2$ (as $(2m^2-1)^2=4m^2(m^2-1)+1$ with $m=p-1$, $m^2-1=p(p-2)$). By multiplicativity $a_{n_1}=x(p-2)$ and $a_{n_2}=4(p-1)^2(p-2)x$, so by (1) both
+\[x(p-2)+1=u^2,\qquad K^2(p-2)x+1=w^2\]
+are squares; then $w^2=K^2u^2-(K^2-1)$ and the lemma gives $u\le p-1$, i.e. $x(p-2)+1\le(p-1)^2=p(p-2)+1$, so $x\le p$.</p><p><em>Lower bound.</em> Suppose $x=v&lt;p$. If $v\in\{1,2\}$, then $d(a_p+1)\in\{d(2),d(3)\}=\{2\}$ while $p+1\ge4$ is even and composite, so $d(p+1)\ge3$: impossible. So $3\le v&lt;p$ and $a_v=v$. For every $k$ whose prime factors are below $p$, the numbers $a_{vk}=vk$ and $a_{pk}=vk$ coincide, so $d(pk+1)=d(vk+1)$ and by the parity of $d$: $pk+1$ is a square iff $vk+1$ is. Take $k=v-2$ and $k=4(v-1)^2(v-2)$: as above $vk+1$ is a square for both, hence so is $pk+1$:
+\[p(v-2)+1=u^2,\qquad 4(v-1)^2(v-2)p+1=w^2 .\]
+With $K'=2(v-1)$ we get $w^2=K'^2u^2-(K'^2-1)$, so $u\le v-1$ by the lemma, i.e. $p(v-2)+1\le(v-1)^2=v(v-2)+1$ and $p\le v$, a contradiction.</p><p>Hence $a_p=p$, completing the induction. The only sequence is $\boxed{a_n=n}$.</p>
+</div></details>
+</section>
+<h2 class="ct-group" id="day-2">Day 2</h2>
+<section class="ct-problem" id="p4">
+<h3>Problem 4</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 32: Trigonometric Geometry and Metric Conversion &middot; Trigonometric Ceva and Menelaus</div>
+<div class="ct-text"><p>Let $ABC$ be an acute triangle with incenter $I$. Let line $AI$ intersect side $BC$ at $D$. The circumcircle of $ABD$ and the circumcircle of $ACI$ intersect again at point $E$. Let $M$ be the midpoint of $AE$. Let lines $IM$ and $DE$ intersect at point $P$.</p><p>Prove that $\angle BAC+\angle BPD=180^\circ$.</p></div>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Pin down $E$ by trigonometric Ceva)</h4>
+<div class="ct-fig"><img style="width:369px" src="/assets/contests/2026-27/imsc-4_s1.svg" alt="Figure for the solution"></div>
+<p>Write $\angle A=2\alpha$, $\angle B=2\beta$, $\angle C=2\gamma$, so $\alpha+\beta+\gamma=90^\circ$, and let $a,b,g$ denote $\tan\alpha,\tan\beta,\tan\gamma$. From $\tan(\alpha+\beta)=\cot\gamma$ we get
+\[ab+bg+ga=1.\tag{1}\]
+Let $\varphi$ be the acute angle with $\tan\varphi=abg$. Since $bg&lt;1$ and $ab&lt;1$ by (1), $\varphi&lt;\alpha$ and $\varphi&lt;\gamma$.</p><p><strong>Step 1: a point $E'$.</strong> Let $E'$ be the point on the same side of $BC$ as $A$ with $\angle E'BC=\varphi$ and $\angle E'CB=\gamma-\varphi$. As $\varphi&lt;2\beta$ and $\gamma-\varphi&lt;2\gamma$, $E'$ lies inside the triangle, and $\angle E'BA=2\beta-\varphi$, $\angle E'CA=\gamma+\varphi$. Put $x=\angle BAE'$, $y=\angle E'AC$, so $x+y=2\alpha$. Trigonometric Ceva gives
+\[\sin x\,\sin\varphi\,\sin(\gamma+\varphi)=\sin y\,\sin(2\beta-\varphi)\,\sin(\gamma-\varphi).\]
+Since $x\mapsto\sin x/\sin(2\alpha-x)$ is strictly increasing on $(0,2\alpha)$, at most one $x$ fits, and we claim $x=\alpha+\varphi$, i.e.
+\[\sin(\alpha+\varphi)\sin\varphi\sin(\gamma+\varphi)=\sin(\alpha-\varphi)\sin(2\beta-\varphi)\sin(\gamma-\varphi).\]
+Divide by $\cos\alpha\cos\gamma\cos^3\varphi$ and put $t=\tan\varphi=abg$; using $\sin2\beta=\frac{2b}{1+b^2}$, $\cos2\beta=\frac{1-b^2}{1+b^2}$, the claim becomes
+\[(a+t)\,t\,(g+t)=(a-t)(g-t)\,\frac{2b-t(1-b^2)}{1+b^2}.\]
+By (1), $a+t=a(1+bg)$, $g+t=g(1+ab)$, $a-t=a(1-bg)=a^2(b+g)$, $g-t=g^2(a+b)$ and $(a+b)(b+g)=1+b^2$. So the left side is $a^2g^2b(1+ab)(1+bg)$ and the right side is $a^2g^2b(2-ag+agb^2)$; they agree because $(1+ab)(1+bg)=1+ab+bg+ab^2g=2-ag+ab^2g$ by (1). Hence
+\[\angle BAE'=\alpha+\varphi,\qquad \angle E'AC=\alpha-\varphi .\]</p><p><strong>Step 2: $E'=E$.</strong> Since $\angle BAE'&gt;\alpha=\angle BAD$ and $\angle E'CB&lt;\gamma=\angle ICB$, the point $E'$ lies inside triangle $IDC$.</p><ul class="ct-ul"><li><p>$\angle E'AD=\varphi=\angle E'BD$. The line $DE'$ enters triangle $ADC$ at $D$ and leaves through $AC$, so it separates $A$ from $C$; it also separates $B$ from $C$ (as $D$ is between them). So $A$ and $B$ are on the same side of $DE'$, and $A,B,D,E'$ are concyclic.</p></li><li><p>$\angle E'AI=\varphi$ and $\angle E'CI=\gamma-(\gamma-\varphi)=\varphi$. The line $IE'$ enters triangle $IDC$ at $I$ and leaves through $DC$, so it separates $D$ from $C$; it also separates $A$ from $D$ (as $I$ is between them). So $A,C$ are on the same side of $IE'$, and $A,C,I,E'$ are concyclic.</p></li></ul><p>The two circles are different (otherwise $B,D,C$ would be three collinear points on a circle), so they meet only at $A$ and $E$; as $E'\neq A$, $E'=E$. In particular $\angle EBD=\varphi$ and, in circle $ABDE$, $\angle BED=\angle BAD=\alpha$.</p><p><strong>Step 3: where $P$ is.</strong> Menelaus in triangle $ADE$ with the line through $I\in AD$ and $M\in AE$:
+\[\frac{AI}{ID}\cdot\frac{DP}{PE}\cdot\frac{EM}{MA}=1,\quad\text{so}\quad\frac{PD}{PE}=\frac{ID}{IA}=\frac{BD}{BA}=\frac{\sin\alpha}{\sin(\alpha+2\beta)},\]
+using the bisector $BI$ of triangle $ABD$ and the law of sines there ($\angle ADB=180^\circ-\alpha-2\beta$). The line meets sides $AD,AE$ inside, so $P$ is outside segment $DE$; as $\sin\alpha&lt;\sin(\alpha+2\beta)$ we have $PD&lt;PE$, so the order on the line is $E,D,P$.</p><p><strong>Step 4: the angle.</strong> In triangle $BDE$, $\angle DBE=\varphi$ and $\angle BED=\alpha$, so $\angle BDP=\alpha+\varphi$. Let $\omega=\angle BPD=\angle BPE$. The law of sines in triangles $BDP$ and $BEP$ gives
+\[PD=PB\,\frac{\sin(\omega+\alpha+\varphi)}{\sin(\alpha+\varphi)},\qquad PE=PB\,\frac{\sin(\omega+\alpha)}{\sin\alpha},\]
+and with Step 3,
+\[\frac{\sin(\omega+\alpha+\varphi)}{\sin(\omega+\alpha)}=\frac{\sin(\alpha+\varphi)}{\sin(\alpha+2\beta)}.\tag{2}\]
+Here $0&lt;\omega&lt;180^\circ-\alpha-\varphi$, and $\frac{\sin(u+\varphi)}{\sin u}=\cos\varphi+\sin\varphi\cot u$ is strictly decreasing in $u=\omega+\alpha$, so (2) has at most one solution. We show $\omega=180^\circ-2\alpha$ is one (it lies in the range since $\varphi&lt;\alpha$). For this $\omega$, (2) becomes
+\[\sin(\alpha-\varphi)\sin(\alpha+2\beta)=\sin\alpha\,\sin(\alpha+\varphi).\]
+Dividing by $\cos\varphi$ and solving for $\tan\varphi$, this is equivalent to
+\[\tan\varphi=\tan\alpha\cdot\frac{\sin(\alpha+2\beta)-\sin\alpha}{\sin(\alpha+2\beta)+\sin\alpha}=\tan\alpha\cdot\frac{2\cos(\alpha+\beta)\sin\beta}{2\sin(\alpha+\beta)\cos\beta}=\tan\alpha\tan\beta\tan\gamma,\]
+which is the definition of $\varphi$. Therefore $\angle BPD=180^\circ-2\alpha$, that is, $\angle BAC+\angle BPD=180^\circ$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p5">
+<h3>Problem 5</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Number Theory &middot; LPS VII, Chapter 12: Exponential Congruences and Order Structure &middot; Orders and Primitive Behavior</div>
+<div class="ct-text"><p>Find all composite numbers $n$ with the property that if $d&lt;n$ is a positive integer such that $\gcd(d,n)&gt;1$, then
+\[n\mid d^n+(n-d)^{\gcd(d,n)}.\]</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$n=p^k$ with $p$ prime and $2\le k\le p$ (this includes $n=4$), and $n=pq$ with $p&lt;q$ odd primes</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Prime by prime)</h4>
+<p>Throughout, $d&lt;n$ and $g=\gcd(d,n)&gt;1$. We check the divisibility one prime power $r^e\,\|\,n$ at a time.</p><p><strong>Prime powers $n=p^k$ ($k\ge2$).</strong> Here $g&gt;1$ means $p\mid d$; write $v=v_p(d)\in\{1,\dots,k-1\}$, so $g=p^v$ and $v_p(n-d)=v$. Then $v_p(d^n)=nv\ge k$ and $v_p\bigl((n-d)^g\bigr)=vp^v$. If $vp^v\ge k$ the sum is divisible by $p^k$; if $vp^v&lt;k$ the sum has valuation exactly $vp^v&lt;k$. All $v$ occur ($d=p^v$), and $vp^v$ increases with $v$, so the condition holds iff $p\ge k$.</p><p><strong>$n=pq$, $p&lt;q$ odd primes: it works.</strong> If $g=p$ then $q\nmid d$; modulo $p$ both terms vanish, and modulo $q$, since $p$ is odd and $q\nmid d$,
+\[d^{pq}+(n-d)^p\equiv d^{pq}-d^p=d^p\bigl(d^{p(q-1)}-1\bigr)\equiv0\]
+by Fermat. The case $g=q$ is symmetric. So $pq$ divides the sum.</p><p><strong>$n$ even, not a power of $2$: fails.</strong> Write $n=2^am$ with $m&gt;1$ odd and take $d=m+1&lt;n$. It is even and $d\equiv1\pmod m$, so $g$ is a power of $2$, $g\ge2$. For an odd prime $r\mid m$: $d\equiv1$, $n-d\equiv-1\pmod r$, so the sum is $\equiv1+1=2\not\equiv0\pmod r$.</p><p><strong>$n$ odd, $r^e\,\|\,n$ with $e\ge2$ and $m=n/r^e&gt;1$: fails.</strong> Let $\rho$ be a primitive root modulo $r^e$ and choose $t\in[1,r^e-1]$ with $mt\equiv\rho\pmod{r^e}$; put $d=mt&lt;n$. Then $g=m$ is odd and $r\nmid d$, and modulo $r^e$ the sum is $d^n-d^m=d^m(d^{n-m}-1)$. Divisibility would need the order $r^{e-1}(r-1)$ of $d$ to divide $n-m=m(r^e-1)$, which is impossible because $r$ divides the order but not $m(r^e-1)$.</p><p><strong>$n$ odd, squarefree, with at least three prime factors: fails.</strong> Let $q$ be the largest prime factor and $p\ne r$ two others, and let $\rho$ be a primitive root mod $q$. By the Chinese remainder theorem choose $d\in(0,n)$ with $d\equiv0\pmod p$, $d\equiv\rho\pmod q$, $d\equiv1$ modulo the other primes; then $g=p$, and modulo $q$ the sum is $d^n-d^p=d^p(d^{n-p}-1)$, so the condition requires $(q-1)\mid n-p$. In the same way (with $r$ in place of $p$) it requires $(q-1)\mid n-r$. Both together give $(q-1)\mid p-r$, but $0&lt;|p-r|\le q-2-3&lt;q-1$. So the condition fails for one of these $d$.</p><p><strong>Conclusion.</strong> The remaining composite numbers are exactly $p^k$ with $2\le k\le p$ and $pq$ with distinct odd primes, and these work. (For $p=2$ the prime-power case gives only $n=4$.) The answer is
+\[\boxed{n=p^k\ \text{with } p \text{ prime and } 2\le k\le p,\quad\text{or}\quad n=pq\ \text{with } p&lt;q \text{ odd primes}.}\]</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p6">
+<h3>Problem 6</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 31: Extremal Principle and Bounding Arguments &middot; Bounding and Limiting Arguments</div>
+<div class="ct-text"><p>$4$ identical squares can be packed inside a circle of radius $1$ such that their interiors do not overlap. Find the maximum possible side length of these squares.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\dfrac{\sqrt2}{2}$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Arcs on the circle of radius $\sqrt2-1$)</h4>
+<div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/imsc-6_s1.svg" alt="Figure for the solution"></div>
+<p>Let $O$ be the centre of the circle and put $s_0=\frac{\sqrt2}{2}$.</p><p><strong>Construction.</strong> Four squares of side $s_0$ forming a $2\times2$ block with centre $O$ make a square of side $2s_0$, whose vertices are at distance $s_0\sqrt2=1$ from $O$. So side $s_0$ is possible.</p><p><strong>Set-up for the bound.</strong> Let $\Gamma$ be the circle with centre $O$ and radius $r=\sqrt2-1$. For an open square $Q$ let $A(Q)$ be the set of angles $\theta\in[0,2\pi)$ with $(r\cos\theta,r\sin\theta)\in Q$, and $|A(Q)|$ its total length. We use the numbers
+\[\kappa=\frac{s_0}{2r}=\frac{2+\sqrt2}{4}\approx0.854,\qquad r^2=3-2\sqrt2&lt;\tfrac14,\]
+and three facts: (F1) $\kappa&gt;\frac1{\sqrt2}$, so $\arcsin\kappa&gt;\frac\pi4$; (F2) $\arcsin\kappa&gt;\frac{5\pi}{16}$, because $\sin^2\frac{5\pi}{16}=\frac{1+\sin(\pi/8)}2$, $\sin\frac\pi8=\frac{\sqrt{2-\sqrt2}}2&lt;\frac{2\sqrt2-1}4$ (square both sides: $8-4\sqrt2&lt;9-4\sqrt2$), hence $\sin^2\frac{5\pi}{16}&lt;\frac{3+2\sqrt2}8=\kappa^2$; (F3) for $X,Y\in[0,1]$, $\arcsin X+\arcsin Y&gt;\frac\pi2$ iff $X^2+Y^2&gt;1$ (as $\arcsin Y&gt;\frac\pi2-\arcsin X=\arccos X$ iff $Y&gt;\sqrt{1-X^2}$).</p><p><strong>Lemma.</strong> If a square of side $s_0$ lies in the closed unit disc and $Q$ is its interior, then $|A(Q)|\ge\frac\pi2$, with equality only if $O$ is a vertex of the square.</p><p><em>Proof.</em> Take axes along the sides of the square; reflecting in these axes (which fixes $O$, the disc and $|A(Q)|$) we may assume the centre of the square is in the closed first quadrant. Then $Q=(u,u+s_0)\times(v,v+s_0)$ with $u,v\ge-\frac{s_0}2$, and the far vertex $(u+s_0,v+s_0)$ lies in the disc; expanding with $2s_0^2=1$,
+\[u^2+v^2+\sqrt2\,(u+v)\le0 .\tag{1}\]
+So $u+v\le0$, with equality only for $u=v=0$, and $u,v$ are not both positive. Put $p=u+s_0$, $q=v+s_0$; note $p,q\ge\frac{s_0}2$.</p><p><em>Case 1: $u\le0$ and $v\le0$.</em> For $\theta$ in the open first quadrant the lower bounds $r\cos\theta&gt;u$, $r\sin\theta&gt;v$ hold automatically, so $\theta\in A(Q)$ iff $r\cos\theta&lt;p$ and $r\sin\theta&lt;q$, an interval of length $(\alpha_1+\beta_1-\frac\pi2)^+$ where $\alpha_1=\arcsin\min(1,\frac pr)$, $\beta_1=\arcsin\min(1,\frac qr)$. The other quadrants are alike, with $\alpha_2=\arcsin\frac{-u}r$, $\beta_2=\arcsin\frac{-v}r$ (here $-u,-v\le\frac{s_0}2&lt;r$). So
+\[|A(Q)|=\sum_{i,j\in\{1,2\}}\Bigl(\alpha_i+\beta_j-\frac\pi2\Bigr)^+,\qquad \frac pr+\frac{-u}r=\frac{s_0}r=2\kappa .\]</p><ul class="ct-ul"><li><p>If $p\ge r$ and $q\ge r$: $\alpha_1=\beta_1=\frac\pi2$, and the terms $(1,1),(2,1),(1,2)$ give $|A(Q)|\ge\frac\pi2+\alpha_2+\beta_2\ge\frac\pi2$, with equality only if $u=v=0$.</p></li><li><p>If $p&lt;r$: then $\frac{-u}r&gt;2\kappa-1=\frac1{\sqrt2}$, so $\alpha_2&gt;\frac\pi4$, and $\alpha_1\ge\arcsin\kappa&gt;\frac\pi4$. By convexity of $\arcsin$ on $[0,1]$, $\alpha_1+\alpha_2=\arcsin\frac pr+\arcsin\bigl(2\kappa-\frac pr\bigr)\ge2\arcsin\kappa$. If $q\ge r$, the terms $(1,1),(2,1)$ give $|A(Q)|\ge\alpha_1+\alpha_2\ge2\arcsin\kappa&gt;\frac\pi2$. If $q&lt;r$, the same reasoning gives $\beta_1,\beta_2&gt;\frac\pi4$ and $\beta_1+\beta_2\ge2\arcsin\kappa$; all four terms are positive and, by (F2),
+\[|A(Q)|=2(\alpha_1+\alpha_2+\beta_1+\beta_2)-2\pi\ge8\arcsin\kappa-2\pi&gt;\tfrac\pi2 .\]</p></li><li><p>If $p\ge r&gt;q$: symmetric to the previous case, $|A(Q)|&gt;\frac\pi2$.</p></li></ul><p><em>Case 2: $u&gt;0$</em> (the case $v&gt;0$ is the mirror image in the line $y=x$). Then $v&lt;0$, and (1) gives $\sqrt2\,(u-|v|)\le-(u^2+v^2)&lt;0$, so $|v|&gt;u$. Also $q\ge\frac{s_0}2$ and (1) give $(u+s_0)^2\le1-\frac{s_0^2}4&lt;1$, so $u&lt;1-s_0=\frac r{\sqrt2}$. As $p&gt;s_0&gt;r$, a point of $\Gamma$ is in $Q$ iff $r\cos\theta&gt;u$ and $v&lt;r\sin\theta&lt;q$. The first condition means $\theta\in(-A_1,A_1)$ with $A_1=\arccos\frac ur\in(\frac\pi4,\frac\pi2)$; there $\sin$ is increasing, so the second means $\theta\in(-\beta_-,\beta_+)$ with $\beta_-=\arcsin\frac{|v|}r$, $\beta_+=\arcsin\min(1,\frac qr)$. Hence
+\[|A(Q)|=\min(A_1,\beta_-)+\min(A_1,\beta_+),\]
+the least of the four sums below, each larger than $\frac\pi2$:</p><ul class="ct-ul"><li><p>$A_1+A_1&gt;\frac\pi2$ since $A_1&gt;\frac\pi4$;</p></li><li><p>$A_1+\beta_+&gt;\frac\pi2$ since $\beta_+\ge\arcsin\kappa&gt;\frac\pi4$ (as $\frac qr\ge\kappa$);</p></li><li><p>$\beta_-+A_1&gt;\frac\pi2$ since $\beta_-&gt;\arcsin\frac ur=\frac\pi2-A_1$;</p></li><li><p>$\beta_-+\beta_+&gt;\frac\pi2$: clear if $q\ge r$; otherwise, with $w=|v|$, $X=\frac{s_0-w}r$, $Y=\frac wr$, we have $X^2+Y^2=\frac{(s_0-w)^2+w^2}{r^2}\ge\frac{s_0^2/2}{r^2}=\frac{1/4}{r^2}&gt;1$, and (F3) applies.</p></li></ul><p>So $|A(Q)|&gt;\frac\pi2$ in Case 2, which proves the lemma. $\square$</p><p><strong>The bound.</strong> Suppose four squares of side $s&gt;s_0$ with disjoint interiors $Q_1,\dots,Q_4$ lie in the disc. The sets $A(Q_i)$ are disjoint subsets of $[0,2\pi)$, so $\sum|A(Q_i)|\le2\pi$. Let $Q_i'\subset Q_i$ be the interior of the concentric square of side $s_0$ with parallel sides; by the lemma $|A(Q_i)|\ge|A(Q_i')|\ge\frac\pi2$. Hence all these are equal to $\frac\pi2$, and by the equality case each $Q_i'$ has $O$ as a vertex. In axes along its sides, $Q_i'=(0,s_0)^2$, so $A(Q_i')=(0,\frac\pi2)$ (because $r&lt;s_0$), while $Q_i=(-\delta,s_0+\delta)^2$ with $\delta=\frac{s-s_0}2&gt;0$. The open set $A(Q_i)$ contains $(0,\frac\pi2)$ and also $\theta=0$ (the point $(r,0)$ is in $Q_i$), so $|A(Q_i)|&gt;\frac\pi2$, a contradiction.</p><p>Therefore the side cannot exceed $s_0$, and the maximum side length is $\boxed{\dfrac{\sqrt2}{2}}$.</p>
+</div></details>
+</section>
+{% endraw %}
