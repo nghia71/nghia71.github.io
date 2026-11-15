@@ -97,7 +97,6 @@ description: Germany Team Selection Test 2026: problems with answers and solutio
 <p>The 27 problems of the Germany Team Selection Test 2026, each with our own solutions, hidden until you open them. 14 of them ask for an answer and 13 ask for a proof. Where a problem has a final answer, it is shown separately. Try a problem first, then check.</p><p>The German selection tests consist of the VAIMO and AIMO exams; most problems come from the IMO 2025 Shortlist.</p>
 </div>
 <div class="ct-credit">Problems: Germany Team Selection Test 2026, from the AoPS contest collection or the official paper. Solutions written by MCC.</div>
-<div class="ct-bar"><button type="button" onclick="ctAll(true)">Show all answers and solutions</button><button type="button" onclick="ctAll(false)">Hide all</button></div>
 <div class="ct-toc-wrap"><div class="ct-toc-row"><span class="ct-toc-g">VAIMO 1</span><a href="#p1">1</a><a href="#p2">2</a><a href="#p3">3</a></div><div class="ct-toc-row"><span class="ct-toc-g">VAIMO 2</span><a href="#p4">1</a><a href="#p5">2</a><a href="#p6">3</a></div><div class="ct-toc-row"><span class="ct-toc-g">AIMO 1</span><a href="#p7">1</a><a href="#p8">2</a><a href="#p9">3</a></div><div class="ct-toc-row"><span class="ct-toc-g">AIMO 2</span><a href="#p10">1</a><a href="#p11">2</a><a href="#p12">3</a></div><div class="ct-toc-row"><span class="ct-toc-g">AIMO 3</span><a href="#p13">1</a><a href="#p14">2</a><a href="#p15">3</a></div><div class="ct-toc-row"><span class="ct-toc-g">AIMO 4</span><a href="#p16">1</a><a href="#p17">2</a><a href="#p18">3</a></div><div class="ct-toc-row"><span class="ct-toc-g">AIMO 5</span><a href="#p19">1</a><a href="#p20">2</a><a href="#p21">3</a></div><div class="ct-toc-row"><span class="ct-toc-g">AIMO 6</span><a href="#p22">1</a><a href="#p23">2</a><a href="#p24">3</a></div><div class="ct-toc-row"><span class="ct-toc-g">AIMO 7</span><a href="#p25">1</a><a href="#p26">2</a><a href="#p27">3</a></div></div>
 
 {% raw %}
@@ -107,8 +106,7 @@ description: Germany Team Selection Test 2026: problems with answers and solutio
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Algebra &middot; LPS VII, Chapter 18: Invariants and Monovariants &middot; Monovariants and Directional Change</div>
 <div class="ct-text"><p><em>Quadratic solitaire</em> is a single-player game. To start the game, the player chooses two distinct nonzero integers $a$ and $b$ and writes the equation $x^2+ax+b=0$ on a blackboard. On each turn, if the equation currently written on the blackboard has two distinct nonzero integer solutions $x=u$ and $x=v$, then the player erases the equation and replaces it by one of the equations $x^2+ux+v=0$ and $x^2+vx+u=0$ of their choosing. Otherwise, the game ends. Determine all initial choices of $a$ and $b$ such that quadratic solitaire can be played forever.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$(a,b)=(1,-2)$ only</p></div></details>
-<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
-<h4>Solution 1 (The constant term never increases)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; The constant term never increases</summary><div class="ct-text">
 <p>Write the equation on the board after $t$ turns as $x^2+p_tx+q_t=0$, so $(p_0,q_0)=(a,b)$.
 If the game does not end at turn $t$, the roots $r,s$ are distinct nonzero integers with $r+s=-p_t$ and $rs=q_t$ (Vieta), and
 $(p_{t+1},q_{t+1})$ is $(r,s)$ or $(s,r)$.</p><p><strong>The monovariant.</strong> Since $|r|,|s|\ge1$,
@@ -122,7 +120,8 @@ $\varepsilon'=\varepsilon$ and $q'=-2\varepsilon$; then $q=\varepsilon'q'=-2$. S
 $\varepsilon=1$. Thus the equation is $x^2+x-2=0$ at every turn $t\ge N+1$.</p><p><strong>Going backwards.</strong> If the equation at turn $t+1$ is $x^2+x-2=0$, then the two roots at turn $t$ are $1$ and $-2$, so the equation at
 turn $t$ was $(x-1)(x+2)=x^2+x-2=0$ as well. By backward induction the equation was $x^2+x-2=0$ from the very start, i.e. $(a,b)=(1,-2)$.</p><p><strong>It works.</strong> $x^2+x-2=(x-1)(x+2)$ has the distinct nonzero roots $1$ and $-2$, and choosing $x^2+1\cdot x+(-2)=0$ writes the same equation
 again, forever. Hence the only initial choice is $\boxed{(a,b)=(1,-2)}$.</p>
-<h4>Solution 2 (The sum of squares of the coefficients)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; The sum of squares of the coefficients</summary><div class="ct-text">
 <p>Write the equation on the board as $x^2+sx+t=0$. Suppose the game lasts forever, and look at a turn where the roots are the distinct nonzero
 integers $u,v$; by Vieta, $s=-(u+v)$ and $t=uv$, and the next equation has coefficients $(u,v)$ or $(v,u)$.</p><p><strong>No turn has $uv=-1$.</strong> Then $\{u,v\}=\{1,-1\}$, and the next equation is $x^2+x-1=0$ or $x^2-x+1=0$, with discriminants $5$ and $-3$; neither
 has two integer roots, so the game would stop.</p><p><strong>A monovariant.</strong> Let $Q=s^2+t^2$. The next equation has $Q'=u^2+v^2$, and
@@ -133,7 +132,8 @@ the game would stop. From $\{1,-2\}$ the options are $x^2-2x+1=0$ (a double root
 $x^2+x-2=0$.</p><p><strong>Back to the start.</strong> If the board shows $x^2+x-2=0$ at some turn $t\ge1$, then at turn $t-1$ the roots were $1$ and $-2$, so the equation was
 $(x-1)(x+2)=x^2+x-2=0$ as well. By backward induction the game started with $x^2+x-2=0$, i.e. $(a,b)=(1,-2)$; and this start indeed allows playing
 forever (rewrite $x^2+x-2=0$ every turn). So the answer is $\boxed{(a,b)=(1,-2)}$.</p>
-<h4>Solution 3 (A cycle of states and the product of the coefficients)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 3 &ndash; A cycle of states and the product of the coefficients</summary><div class="ct-text">
 <p>Write the state $(a,b)$ when the equation $x^2+ax+b=0$ is on the board. A move from $(a,b)$ is possible exactly when this
 equation has two distinct nonzero integer roots $u,v$, and it leads to $(u,v)$ or to $(v,u)$. So every state that occurs has two distinct nonzero
 integer entries (the first one by the choice of $a,b$, the later ones because they are distinct nonzero roots).</p><p><strong>$(1,-2)$ works.</strong> The equation $x^2+x-2=0$ has the roots $1$ and $-2$, so the player can write $x^2+x-2=0$ again, forever.</p><p>Now suppose that a play $s_0=(a_0,b_0),\,s_1=(a_1,b_1),\,s_2,\dots$ never ends.</p><p><strong>Step 1: $s_0$ lies on a cycle.</strong> If $s_{i+1}=(u,v)$, then $u,v$ are nonzero integers, so $|u|\le|uv|$ and $|v|\le|uv|$, that is,
@@ -154,8 +154,7 @@ Its only possible predecessor is $(-(1-2),\,1\cdot(-2))=(1,-2)$, and $s_0$ is a 
 <h3>Problem 2</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 32: Trigonometric Geometry and Metric Conversion &middot; Angle Expressions and Trigonometric Identities</div>
 <div class="ct-text"><p>Let $ABC$ be an acute-angled triangle. Let $I_B$ and $I_C$ be the excenters of triangle $ABC$ opposite $B$ and $C$, respectively. Let $E$ be a point on line $BA$ such that $\angle EI_BB=90^\circ$. Let $F$ be a point on line $CA$ such that $\angle CI_CF=90^\circ$. Let the circle with center $I_B$ and radius $I_BE$ intersect the segment $I_BB$ at $X$. Let the circle with center $I_C$ and radius $I_CF$ intersect the segment $I_CC$ at $Y$. Prove that $BY$ is perpendicular to $CX$.</p><p>The excenter of a triangle $ABC$ opposite vertex $B$ is the center of the circle that is tangent to line segment $AC$, to ray $BA$ beyond $A$, and to ray $BC$ beyond $C$. The excenter opposite $C$ is similarly defined.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Computing two tangents)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Computing two tangents</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:376px" src="/assets/contests/2026-27/germany-tst-2_s1.svg" alt="Figure for the solution"></div>
 <p>Let $a=BC$, $s$ the semiperimeter, $r$ the inradius, $r_b$ the radius of the excircle opposite $B$, and put
 \[t_B=\tan\tfrac B2,\qquad t_C=\tan\tfrac C2 .\]
@@ -173,7 +172,8 @@ $Y$ lies above $BC$ and
 \[\tan\angle YBC=\frac{1-t_C}{1-t_B}.\]</p><p><strong>Conclusion.</strong> The two acute angles $\angle XCB$ and $\angle YBC$ have tangents whose product is $1$, so $\angle XCB+\angle YBC=90^\circ$. The rays
 $BY$ and $CX$ both point into the half-plane above $BC$, so they meet at a point $Z$, and in triangle $ZBC$ the angle at $Z$ is
 $180^\circ-90^\circ=90^\circ$. Hence $BY\perp CX$.</p>
-<h4>Solution 2 (Similar triangles on the circle with diameter $I_BI_C$)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Similar triangles on the circle with diameter $I_BI_C$</summary><div class="ct-text">
 <p>Write $\beta=\angle B$ and $s$ for the semiperimeter.
 The line $BI_B$ is the internal and $BI_C$ the external bisector of angle $B$, so $\angle I_CBI_B=90^\circ$; likewise
 $\angle I_BCI_C=90^\circ$. Hence $B$ and $C$ lie on the circle with diameter $I_BI_C$. Both excenters lie on the external bisector of
@@ -203,8 +203,7 @@ $\overrightarrow{I_BX}$, which is $\pm90^\circ$ because $I_CB\perp BI_B$. It map
 \[(a_{i+1},b_{i+1},c_{i+1})=\bigl(a_i+\gcd(b_i,c_i),\,b_i+\gcd(c_i,a_i),\,c_i+\gcd(a_i,b_i)\bigr)\]
 for $0\leqslant i\leqslant 2024$. Determine the smallest possible value of $a_{2025}$.</p><p><em>Here $\gcd(x,y)$ denotes the greatest common divisor of integers $x$ and $y$.</em></p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$3\cdot2^{675}$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Halving the triple and counting the halvings)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Halving the triple and counting the halvings</summary><div class="ct-text">
 <p>Write $T_t=(a_t,b_t,c_t)$ and $\Phi(a,b,c)=\bigl(a+\gcd(b,c),\,b+\gcd(c,a),\,c+\gcd(a,b)\bigr)$, so $T_{t+1}=\Phi(T_t)$. Note
 $\Phi(2a,2b,2c)=2\Phi(a,b,c)$. Let $N=2025$.</p><p><strong>Construction.</strong> Start with $T_0=(1,5,14)$. Then $T_1=(2,6,15)$, $T_2=(5,7,17)$, $T_3=(6,8,18)$, $T_4=(8,14,20)$, $T_5=(10,18,22)$,
 $T_6=(12,20,24)=4\cdot(3,5,6)$. For any $g$,
@@ -226,7 +225,8 @@ Since $a_N=2^{e_N}x_N$, it suffices to exclude $e_N=675$ with $x_N\le2$ and $e_N
 $z_K\le2^{-673}+\frac12\sum_{i&lt;K}(3-d_i)\le2^{-673}+\frac s2$. So $x_N\ge y_K+s=3-z_K+s\ge3-2^{-673}+\frac s2&gt;2$, i.e. $x_N\ge3$.</p><p><em>$e_0=0$, $K=676$, all $\delta_i=1$.</em> Now $D=3+s$ and (2) gives $z_K\le2^{-674}+\frac{3+s}2$, so $x_N\ge y_K+s\ge\frac32-2^{-674}+\frac s2&gt;1$, i.e. $x_N\ge2$.</p><p><em>$e_0=0$, $K=675$, one $\delta_j=2$.</em> Here $D=s$. If $j&lt;K$: $y_j\ge1$, so $z_j\le2$ and (2) from $j$ gives $z_K\le1+\frac s2$, hence
 $x_N\ge y_K+s\ge2+\frac s2\ge2$. If $j=K$ and $s\ge1$: $x_N\ge y_K+s\ge1+1=2$. If $j=K$ and $s=0$: then $D=0$, so $t_1=2$ and all $d_i=3$;
 by (2) (all earlier $\delta=1$) $z_{K-1}&lt;1$, so $y_{K-1}\ge3$, $x_{t_K}\ge y_{K-1}+2\ge5$ and $x_N=y_K\ge\frac{5+1}{4}&gt;1$, i.e. $x_N\ge2$.</p><p>In every case $a_N=2^{e_N}x_N\ge3\cdot2^{675}$. Hence the smallest possible value of $a_{2025}$ is $\boxed{3\cdot2^{675}}$.</p>
-<h4>Solution 2 (Doubling every three steps)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Doubling every three steps</summary><div class="ct-text">
 <p>Write $T_t=(a_t,b_t,c_t)$ and $\Phi(a,b,c)=\bigl(a+\gcd(b,c),\,b+\gcd(c,a),\,c+\gcd(a,b)\bigr)$, so that $T_{t+1}=\Phi(T_t)$. For every
 positive integer $g$ we have $\Phi(ga,gb,gc)=g\,\Phi(a,b,c)$.</p><p><strong>Construction.</strong> Start with $T_0=(1,5,14)$. Then $T_1=(2,6,15)$, $T_2=(5,7,17)$, $T_3=(6,8,18)$, $T_4=(8,14,20)$, $T_5=(10,18,22)$ and
 $T_6=(12,20,24)=4\cdot(3,5,6)$. For every $g$,
@@ -249,8 +249,7 @@ particular $a_{2025}=a_{3\cdot675}\ge3\cdot2^{675}$.</p><p>Together with the con
 <h3>Problem 1</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 8: Modular Arithmetic and Congruence Methods &middot; Periodic and Cyclic Behavior Modulo $n$</div>
 <div class="ct-text"><p>Let $n$ and $k$ be positive integers such that $n&lt;k&lt;2n$. Suppose $a_1,a_2,\ldots,a_k$ are positive integers such that $2^{a_1}+2^{a_2}+\cdots+2^{a_k}$ is divisible by $2^n-1$.</p><p>Show that at least three of $a_1,a_2,\ldots,a_k$ have the same remainder when divided by $n$.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Reading off binary digits)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Reading off binary digits</summary><div class="ct-text">
 <p>Since $2^n\equiv1\pmod{2^n-1}$, the residue of $2^a$ modulo $2^n-1$ depends only on $a\bmod n$: if $a\equiv r\pmod n$ with
 $0\le r\le n-1$, then $2^a\equiv2^r$. For $0\le r\le n-1$ let $c_r$ be the number of indices $i$ with $a_i\equiv r\pmod n$. Then
 $\sum_r c_r=k$ and
@@ -259,7 +258,8 @@ Suppose, for contradiction, that every $c_r\le2$. Then $0&lt;S\le2(2^0+\cdots+2^
 which is excluded. So $S$ is a positive multiple of $2^n-1$ below $2(2^n-1)$, i.e. $S=2^n-1$.</p><p><strong>Claim.</strong> If $c_0,\dots,c_{m-1}\in\{0,1,2\}$ and $\sum_{r&lt;m}c_r2^r=2^m-1$, then all $c_r=1$.
 Induction on $m$; $m=1$ is clear. For $m\ge2$, the right side is odd, so $c_0$ is odd, $c_0=1$. Subtracting $1$ and halving gives
 $\sum_{r=1}^{m-1}c_r2^{r-1}=2^{m-1}-1$, and the induction hypothesis gives $c_1=\cdots=c_{m-1}=1$.</p><p>By the claim with $m=n$, every $c_r=1$, so $k=\sum c_r=n$, contradicting $k&gt;n$. Hence some residue class contains at least three of the $a_i$.</p>
-<h4>Solution 2 (A number and its complement)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; A number and its complement</summary><div class="ct-text">
 <p>As $2^n\equiv1\pmod{2^n-1}$, replace each $a_i$ by its remainder $r_i\in\{0,\dots,n-1\}$ modulo $n$; this does not change the sum modulo
 $2^n-1$. Assume no remainder occurs three times. Let $U$ be the set of remainders that occur at least once and $W\subseteq U$ the set of those
 occurring twice, and put
@@ -276,8 +276,7 @@ $U$ is everything. Then $k=|U|=n$, contradicting $n&lt;k$. So some remainder occ
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 20: Parity, Coloring, and Process Termination &middot; Process Termination and Reachability</div>
 <div class="ct-text"><p>There is a row of $n$ paddocks, labelled from left to right with the integers $1$ to $n$, where $n\geq 3$. Skippy the Kangaroo grazes in the paddock according to the following rule:</p><p>If Skippy is grazing in paddock $k$, then she makes a sequence of $k$ hops from a paddock to an adjacent paddock. The first of the $k$ hops is always to the right, unless Skippy is in paddock $n$, in which case it is to the left. Each of the following $k-1$ hops is in the same direction as the previous hop, unless Skippy is in paddock $1$ or $n$. Skippy grazes in the paddock that she is in after the $k^{\text{th}}$ hop.</p><p>For example, if $n=8$ and Skippy is grazing in paddock $3$, the next $4$ paddocks she will graze in are $6,4,8,2$, in this order. Skippy continues grazing in this way indefinitely. A paddock is <em>overgrazed</em> if Skippy eventually grazes in it, regardless of which paddock she starts in. Determine all $n\geq 3$ for which there exists exactly one overgrazed paddock.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$n=3\cdot2^a$ with $a\ge0$ (i.e. $n=3,6,12,24,\dots$)</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Folding the doubling map)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Folding the doubling map</summary><div class="ct-text">
 <p>Let $f(k)$ be the paddock after grazing in paddock $k$.</p><p><strong>The map $f$.</strong> If $2k\le n$, the $k$ hops go straight right and $f(k)=2k$. If $\frac n2&lt;k\le n-1$, Skippy reaches $n$ after $n-k$ hops, turns, and
 makes $2k-n\le n-2$ more hops to the left, so $f(k)=2n-2k$. If $k=n$, she hops left $n-1$ times to paddock $1$ and then once to the right: $f(n)=2$. For an
 integer $x$ let $\|x\|$ be the distance from $x$ to the nearest multiple of $2n$. Then
@@ -292,7 +291,8 @@ $n=2^a\cdot3b$ is not (as $3b$ is odd), so by induction the orbit indeed never m
 then $f^r(k)=2^{a+1}=k$. So $k$ lies on a cycle different from the fixed point $\{k^*\}$, and no paddock is overgrazed.</p><p><strong>If $b=1$, every orbit reaches $k^*=2^{a+1}$.</strong> Now $2n=3\cdot2^{a+1}$.</p><ul class="ct-ul"><li><p>If $3\nmid k$: the orbit never meets $n$ before step $a+1$, since $\|2^ik\|=n$ would mean $2^ik\equiv n\pmod{2n}$, forcing $3\mid 2^ik$. Hence
 $f^{a+1}(k)=\|2^{a+1}k\|$, and $2^{a+1}k\equiv2^{a+1}$ or $2\cdot2^{a+1}\pmod{3\cdot2^{a+1}}$, so in both cases $f^{a+1}(k)=2^{a+1}=k^*$.</p></li><li><p>If $3\mid k$: if the orbit avoided $n$ for $a+1$ steps we would get $f^{a+1}(k)=\|2^{a+1}k\|=0$, which is not a paddock. So the orbit reaches $n$,
 then $2$, and $3\nmid2$, so by the first case it reaches $k^*$.</p></li></ul><p>So $\{k^*\}$ is the only cycle and $k^*$ is the unique overgrazed paddock.</p><p>Therefore exactly one paddock is overgrazed if and only if $\boxed{n=3\cdot2^a,\ a\ge0}$.</p>
-<h4>Solution 2 (Halving the board)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Halving the board</summary><div class="ct-text">
 <p>Let $f_n(k)$ be the paddock after paddock $k$ when there are $n$ paddocks. If $k\le\frac n2$, the $k$ hops go
 straight right and $f_n(k)=2k$. If $\frac n2&lt;k\le n-1$, Skippy reaches $n$ after $n-k$ hops and makes the other $2k-n\le n-2$ hops to the
 left, so $f_n(k)=2n-2k$. From $n$ she hops left $n-1$ times and then once right, so $f_n(n)=2$. All values of $f_n$ are even.</p><p>Every orbit ends in a cycle. If $f_n$ has two different cycles, a start on one never visits the other, and no paddock is overgrazed; if it
@@ -318,8 +318,7 @@ overgrazed if and only if $\boxed{n=3\cdot2^a,\ a\ge0}$.</p>
 <div class="ct-meta"><span class="ct-pd ct-pd-S" title="Superhard, on the LPS VII scale">S</span>Combinatorics &middot; LPS VII, Chapter 52: Advanced Combinatorial Structure and Hybrid Methods &middot; Combinatorics with Geometric Insight</div>
 <div class="ct-text"><p>Let $P$ be a regular $100$-gon. An <em>Aussie triangulation</em> is formed by dividing $P$ into a set $T$ of non-overlapping triangles such that:</p><ul class="ct-ul"><li><p>there are exactly $2025$ different points, including the $100$ vertices of $P$, that are a vertex of at least one triangle in $T$, and</p></li><li><p>no three of these $2025$ points are collinear.</p></li></ul><p>A <em>quokkalateral</em> is a convex quadrilateral that consists of two triangles in $T$ sharing a common side. Two quokkalaterals may share a triangle in $T$. Determine the minimum number of quokkalaterals among all Aussie triangulations.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$1011$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Arrows on non-convex edges, then a near-extremal construction)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Arrows on non-convex edges, then a near-extremal construction</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:371px" src="/assets/contests/2026-27/germany-tst-6_s1.svg" alt="Figure for the solution"></div>
 <p>Let $m=100$ be the number of vertices of $P$ and $n=2025$ the number of points. Points that are not vertices of $P$ are <em>inner points</em>;
 edges of triangles that are not sides of $P$ are <em>inner edges</em>.</p><p><strong>Counting.</strong> The angles of all triangles add up to $360^\circ$ at each of the $n-m$ inner points plus the angle sum $(m-2)180^\circ$ of $P$, so
@@ -352,7 +351,8 @@ ray $B_jZ$ lies inside angle $B_{j-1}B_jA_3$ and $\angle A_2B_jB_{j-1}+\angle B_
 $A_3$, also $\angle A_2B_jB_{j-1}+\angle B_{j-1}B_jF_j&gt;180^\circ$: an arrow with head $B_j$.</p></li><li><p>$A_3B_j$ $(1\le j\le913)$: in the quadrilateral $A_3F_jB_jF_{j+1}$ the angle at $A_3$ is less than $\angle B_{j-1}A_3B_{j+1}&lt;180^\circ$ and the
 angle at $B_j$ is tiny. Not an arrow. For $A_3B_{914}$ the two triangles are $A_3B_{914}F_{914}$ and $A_3B_{914}A_2$; the four angles at $B_{914}$ add up
 to $360^\circ$ and the two next to $B_{913}B_{914}$ exceed $180^\circ$, so the two next to $A_3B_{914}$ add up to less than $180^\circ$. Not an arrow.</p></li><li><p>The $97$ diagonals $A_1A_i$ join two vertices of $P$, so they are not arrows.</p></li></ul><p>These are all $3033+914+914+914+97=5872$ inner edges, and exactly $914+97=1011$ of them give quokkalaterals. Hence the minimum is $\boxed{1011}$.</p>
-<h4>Solution 2 (Removing the degree-three points, and inserting points two at a time)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Removing the degree-three points, and inserting points two at a time</summary><div class="ct-text">
 <p>Let $h=100$ be the number of vertices of $P$, $I=2025-h=1925$ the number of the other points, and call these $I$ points <em>inner
 points</em>. Since no three of the $2025$ points are collinear, no point lies inside a side of a triangle of $T$, so two triangles of $T$ meet in a common
 side, a common vertex, or not at all.</p><p><strong>Counting.</strong> Let $E$ be the number of segments that are sides of triangles of $T$, and $t$ the number of triangles. Euler's formula for the plane
@@ -408,8 +408,7 @@ and at most $97+913+1=1011$ quokkalaterals.</p><p>So the minimum number of quokk
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 48: Inversion and Circle-Preserving Transformation &middot; Inversion with Power and Radical Structure</div>
 <div class="ct-text"><p>Let $ABC$ be a triangle with incenter $I$. Let its incircle $\omega$ touch the side $\overline{BC}$ at $D$. Let the circumcircle of $BCI$ meet $\omega$ at the points $K$ and $L$ such that the points $B,K,I,L,C$ lie on the circular arc in this order. Suppose that $AB\ne AC$, and let the line $KL$ meet $BC$ at $S$.
 Show that there exists a line through $S$ that is tangent to the circumcircles of the triangles $BDK$ and $CDL$.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (An inversion centred at $S$)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; An inversion centred at $S$</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:342px" src="/assets/contests/2026-27/germany-tst-7_s1.svg" alt="Figure for the solution"></div>
 <p><strong>Powers of $S$.</strong> The line $KL$ is the radical axis of $\omega$ and the circle $(BCI)$, so $S$ has the same power with respect to both.
 Since $BC$ touches $\omega$ at $D$, the power with respect to $\omega$ is $SD^2$; the power with respect to $(BCI)$ is $\overline{SB}\cdot\overline{SC}$
@@ -422,7 +421,8 @@ $\Phi(B),\Phi(D),\Phi(K)$, that is, to $(CDL)$.</p><p><strong>The common tangent
 so $S$ lies outside $(BDK)$ and there is a tangent line $t$ from $S$ to $(BDK)$, touching it at $T_1$. The inversion maps every line through its centre to
 itself, and it maps the one common point $T_1$ of $t$ and $(BDK)$ to a single common point $T_2=\Phi(T_1)$ of $t$ and $\Phi\bigl((BDK)\bigr)=(CDL)$. So $t$
 meets $(CDL)$ in exactly one point, i.e. it is tangent to $(CDL)$ as well. Thus $t$ is a line through $S$ tangent to both circles.</p>
-<h4>Solution 2 (Coordinates and a homothety centred at $S$)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Coordinates and a homothety centred at $S$</summary><div class="ct-text">
 <p>Put $D=(0,0)$, $B=(-u,0)$, $C=(v,0)$ and $I=(0,r)$, where $u=BD$, $v=DC$ and $r$ is the inradius. Then $\omega$ is
 $x^2+y^2-2ry=0$, and the circle $BCI$ is
 \[x^2+y^2+(u-v)x+\Bigl(\frac{uv}r-r\Bigr)y-uv=0,\]
@@ -448,8 +448,7 @@ and $CDL$.</p>
 <div class="ct-text"><p>There are $2025$ white balls and $2025$ black balls arranged in a row. A balanced segment is a contiguous nonempty segment of balls that contains the same number of white balls as black balls. A balanced removal is the operation of selecting a balanced segment $S$, removing all the balls in $S$, and shifting left the balls that were to the right of $S$ so that the remaining balls form a contiguous row.
 Determine the smallest positive integer $N$ satisfying the following property: for every configuration of balls and for every integer $k$ satisfying $0\leq k\leq 2025$, there exists a sequence of at most $N$ balanced removals after which there are exactly $2k$ remaining balls.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$N=2$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Cut along the zero-level walk)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Cut along the zero-level walk</summary><div class="ct-text">
 <p>Let $n=2025$. Number the gaps between balls $0,1,\dots,2n$ (gap $t$ is just after the $t$-th ball) and let $P_t$ be the number of
 white minus the number of black balls among the first $t$ balls. So $P_0=P_{2n}=0$, consecutive values differ by $1$, and the segment of balls between
 gaps $i&lt;j$ is balanced exactly when $P_i=P_j$.</p><p><strong>$N\ge2$.</strong> Take the row $BB\,\underbrace{W\cdots W}_{n}\,\underbrace{B\cdots B}_{n-2}$ and $k=1$. One balanced removal leaving $2$ balls would
@@ -470,8 +469,7 @@ of the row. Altogether $\ell+z=L$ balls are removed in at most two balanced remo
 \[\left\lfloor nx_1+\frac12\right\rfloor+\left\lfloor nx_2+\frac12\right\rfloor+\cdots+\left\lfloor nx_k+\frac12\right\rfloor=n\]
 for every integer $n$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>proof; the tuple is $x_i=\dfrac{2^{k-i}}{2^k-1}$ $(1\le i\le k)$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Balls in unit buckets and a self-similar colour word)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Balls in unit buckets and a self-similar colour word</summary><div class="ct-text">
 <p><strong>Existence.</strong> Let $x_i=\dfrac{2^{k-i}}{2^k-1}$; these are positive and decreasing. Using $\lfloor y+\tfrac12\rfloor=\lfloor2y\rfloor-\lfloor y\rfloor$ (check
 $y=m+f$ with $f&lt;\frac12$ and with $f\ge\frac12$), the sum telescopes for every integer $n$:
 \[\sum_{i=1}^{k}\Bigl\lfloor\frac{2^{k-i}n}{2^k-1}+\frac12\Bigr\rfloor=\Bigl\lfloor\frac{2^kn}{2^k-1}\Bigr\rfloor-\Bigl\lfloor\frac{n}{2^k-1}\Bigr\rfloor
@@ -516,8 +514,7 @@ and the solution is unique.</p>
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 49: Combinatorial Number Theory and Structure &middot; Hybrid Combinatorial-Arithmetic Arguments</div>
 <div class="ct-text"><p>In an $n\times n$ board, for each $1\leq i\leq n$ and $1\leq j\leq n$, the cell in the $i$th row from the bottom and $j$th column from the left contains $\gcd(i,j)$ leaves. A koala travels from the bottom left corner to the top right corner. At each step, the koala moves up or to the right by a single cell. The koala eats the leaves in each cell it visits, including the bottom left and top right cells.</p><p>Determine the maximum number of leaves that the koala can eat.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\dfrac{n^2+3n-2}{2}$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Pairing consecutive anti-diagonals)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Pairing consecutive anti-diagonals</summary><div class="ct-text">
 <p>Write $(i,j)$ for the cell in row $i$ and column $j$ and $g(i,j)=\gcd(i,j)$. Every step increases $i+j$ by $1$, so the koala's path
 visits exactly one cell on each anti-diagonal $i+j=s$, $s=2,3,\dots,2n$.</p><p><strong>Construction.</strong> The staircase $(1,1),(1,2),(2,2),(2,3),\dots,(n-1,n),(n,n)$ visits the diagonal cells $(m,m)$, worth $m$, and the cells
 $(m,m+1)$, worth $\gcd(m,m+1)=1$. It collects $1+2+\cdots+n+(n-1)=\frac{n^2+3n-2}{2}$ leaves.</p><p><strong>Key lemma.</strong> Let $A$ be the visited cell with $i+j=2m$ $(1\le m\le n-1)$ and $B$ the next visited cell (with $i+j=2m+1$). Then
@@ -535,8 +532,7 @@ Hence the maximum is $\boxed{\dfrac{n^2+3n-2}{2}}$.</p>
 <h3>Problem 2</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 3: Foundational Angle and Configuration Chasing &middot; Cyclic Quadrilateral Recognition</div>
 <div class="ct-text"><p>Let $ABC$ be an acute triangle with $AB&lt;AC$. Let $\Gamma$ be the circumcircle of $ABC$. The perpendicular from $B$ to $AC$ intersects $\Gamma$ again at $D\neq B$. Let $Q$ be the point on $\Gamma$, different from $B$, such that $AB=AQ$. Lines $BQ$ and $AC$ intersect at $R$. Line $DR$ intersects $\Gamma$ again at $S\neq D$. Segment $BC$ intersects the circumcircle of triangle $QRS$ at $T$. Lines $TQ$ and $RS$ intersect at $X$. Prove that $CX$ is perpendicular to $AB$.</p></div>
-<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
-<h4>Solution 1 ($T$ is the reflection of $Q$, then a harmonic division)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; $T$ is the reflection of $Q$, then a harmonic division</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:368px" src="/assets/contests/2026-27/germany-tst-11_s1.svg" alt="Figure for the solution"></div>
 <p>Write $\alpha,\beta,\gamma$ for the angles of $ABC$; $AB&lt;AC$ gives $\gamma&lt;\beta$. Let $E$ be the foot of the altitude from $B$ (so $B,E,D$ are
 collinear) and $H$ the orthocenter. We use $\measuredangle$ for directed angles between lines, modulo $180^\circ$.</p><p><strong>Step 1: where $Q$ and $R$ are.</strong> The chords $AQ$ and $AB$ are equal, so the arcs $AQ$ and $AB$ (not containing $C$) both measure $2\gamma$. Since
@@ -562,7 +558,8 @@ triangle is acute, $D$ is the reflection of $H$ in $AC$: $D=(e,d)$, $H=(e,-d)$. 
 \[x=d\,\frac{m-r}{e-r}.\]
 The altitude from $C$ is line $CH$; it meets line $QQ^*$ at $X'=(m,x')$ with $x'=-d\,\dfrac{m-c}{e-c}$. By (1) these are equal, so $X=X'$ lies on line
 $CH$, and $CX\perp AB$.</p>
-<h4>Solution 2 (Three pairs of similar right triangles)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Three pairs of similar right triangles</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:368px" src="/assets/contests/2026-27/germany-tst-11_s2.svg" alt="Figure for the solution"></div>
 <p>Write $\alpha,\beta,\gamma$ for the angles of $ABC$; $AB&lt;AC$ gives $\gamma&lt;\beta$. Let $E$ be the foot of the altitude from $B$ (so $B,E,D$ are
 collinear). We use $\measuredangle$ for directed angles between lines, modulo $180^\circ$.</p><p><strong>Where $Q$ and $R$ are.</strong> The chords $AQ$ and $AB$ are equal, so the arcs $AQ$ and $AB$ (not containing $C$) both measure $2\gamma$. Since
@@ -588,7 +585,8 @@ under a homothety with centre $R$ and negative ratio; so $X$ and $D$ are on oppo
 $\angle ACD=\angle ABD=\angle ABE=90^\circ-\alpha$. Let $F$ be the foot of the altitude from $C$; it lies on side $AB$, on the same side of $AC$ as $B$,
 and $\angle ACF=90^\circ-\alpha$. The rays $CX$ and $CF$ lie on the same side of line $CA$ and make the same angle with ray $CA$, so they coincide.
 Hence $X$ lies on the altitude $CF$, and $CX\perp AB$.</p>
-<h4>Solution 3 (Coordinates: $T$ is the reflection of $Q$ in $AC$)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 3 &ndash; Coordinates: $T$ is the reflection of $Q$ in $AC$</summary><div class="ct-text">
 <p>Put $A=(0,0)$, $C=(1,0)$, $B=(u,v)$ with $v&gt;0$, and let $r=u^2+v^2=AB^2$ and $n=(1-u)^2+v^2=BC^2=r+1-2u$. Since $AB&lt;AC$,
 $r&lt;1$. The angles at $A$ and $C$ are acute, so $0&lt;u&lt;1$, and the angle at $B$ is acute: $\overrightarrow{BA}\cdot\overrightarrow{BC}=r-u&gt;0$. Put
 $w=\frac{r-u}{v}&gt;0$. We shall use the identity
@@ -626,8 +624,7 @@ and $\overrightarrow{CX}\cdot\overrightarrow{AB}=u(r-1)+u(1-r)=0$. Hence $CX$ is
 <div class="ct-meta"><span class="ct-pd ct-pd-S" title="Superhard, on the LPS VII scale">S</span>Number Theory &middot; LPS VII, Chapter 49: Combinatorial Number Theory and Structure &middot; Sequences with Arithmetic Constraints</div>
 <div class="ct-text"><p>Let $S$ be a set of positive integers, possibly infinite, such that no positive integer greater than $1$ divides all elements of $S$. Determine all non-periodic infinite sequences $a_1,a_2,a_3,\ldots$ of positive integers such that, for all positive integers $n$,</p><ul class="ct-ul"><li><p>$a_n\leqslant|a_{n+\ell}-\ell|$ for all $\ell$ in $S$, and</p></li><li><p>$a_n=|a_{n+\ell}-\ell|$ for at least one $\ell$ in $S$.</p></li></ul><p><em>We say that an infinite sequence $a_1,a_2,a_3,\ldots$ is periodic if there exists a positive integer $t$ such that $a_n=a_{n+t}$ for all positive integer $n$.</em></p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$a_n=n+c$ for all $n$, where $c\ge0$ is an integer</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Unbounded, then eventually above every shift, then eventually linear)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Unbounded, then eventually above every shift, then eventually linear</summary><div class="ct-text">
 <p><strong>The answer works.</strong> For an integer $c\ge0$ let $a_n=n+c$. These are positive integers, the sequence is strictly increasing (so not
 periodic), and $|a_{n+\ell}-\ell|=|n+c|=a_n$ for every $\ell\in S$, so both conditions hold.</p><p>From now on let $(a_n)$ be a non-periodic sequence with the two properties. Together they say
 \[a_n=\min_{\ell\in S}\,|a_{n+\ell}-\ell|\qquad\text{for every }n\ge1, \tag{$*$}\]
@@ -664,8 +661,7 @@ $L-1+c$ is nonnegative, so $a_{L-1}=L-1+c$ and $b_{L-1}=c$, contradicting the ch
 <h3>Problem 1</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure &middot; Radical Axis and Radical Center</div>
 <div class="ct-text"><p>Let $ABC$ be a triangle such that $\angle A$ is obtuse. Let $D$ and $E$ be points on sides $AB$ and $AC$, respectively, such that $BDEC$ is cyclic. Suppose the circumcircle of triangle $ADE$ intersects side $BC$ at two points $X$ and $Y$, where $B,X,Y$ and $C$ lie in that order. Let the circumcircles of triangles $BDX$ and $CEY$ be $\Omega$ and $\Gamma$, respectively. Let $P$ be a point such that $PD$ is tangent to $\Omega$ and $PE$ is tangent to $\Gamma$. Let $Q$ be a point such that $QB$ is tangent to $\Omega$ and $QC$ is tangent to $\Gamma$. Prove that points $A$, $P$ and $Q$ are collinear.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Three points on a radical axis)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Three points on a radical axis</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:267px" src="/assets/contests/2026-27/germany-tst-13_s1.svg" alt="Figure for the solution"></div>
 <p>We use $\measuredangle$ for directed angles between lines, modulo $180^\circ$. Let $\omega$ be the circle through $A,D,E,X,Y$.</p><p><strong>Step 1: $AX=AY$.</strong> Let $t$ be the tangent to $\omega$ at $A$. By the tangent-chord angle and then the cyclic quadrilateral $BDEC$,
 \[\measuredangle(t,AB)=\measuredangle(t,AD)=\measuredangle(EA,ED)=\measuredangle(EC,ED)=\measuredangle(BC,BD)=\measuredangle(BC,AB),\]
@@ -681,7 +677,8 @@ $\measuredangle(CA,YE)=\measuredangle(XD,BA)$, i.e. $\measuredangle(EA,EY)=\meas
 $\measuredangle(DX,DA)=\measuredangle(YX,YA)$, which are equal by (1). Hence $\measuredangle PDE=\measuredangle DEP$ and $PD=PE$.</p><p><strong>Step 4: the radical axis.</strong> $\Omega\ne\Gamma$ (a circle cannot meet line $BC$ in the four points $B,X,Y,C$). The power of $A$ with respect to
 $\Omega$ is $AD\cdot AB$ and with respect to $\Gamma$ is $AE\cdot AC$; these are equal because $BDEC$ is cyclic. The powers of $P$ are $PD^2$ and $PE^2$, and those
 of $Q$ are $QB^2$ and $QC^2$; they are equal by Steps 3 and 2. So $A$, $P$, $Q$ all lie on the radical axis of $\Omega$ and $\Gamma$, which is a line.</p>
-<h4>Solution 2 (Oblique coordinates along $BA$ and $BC$)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Oblique coordinates along $BA$ and $BC$</summary><div class="ct-text">
 <p>Scale so that $BC=1$ and put $B=(0,0)$, $C=(1,0)$, $A=(u,v)$ with $v&gt;0$, $X=(p,0)$, $Y=(q,0)$, $0&lt;p&lt;q&lt;1$. Let
 $\lambda=BA^2=u^2+v^2$ and $\mu=CA^2=(u-1)^2+v^2$.</p><p><strong>The points $D,E$.</strong> The circle $ADE$ passes through $X$ and $Y$. The power of $B$ with respect to it is $BX\cdot BY=pq=BD\cdot BA$, so
 $D=B+\frac{pq}{\lambda}\overrightarrow{BA}$; likewise $E=C+\frac{(1-p)(1-q)}{\mu}\overrightarrow{CA}$. The power of $A$ with respect to the circle $BDEC$
@@ -711,8 +708,7 @@ $A$, $P$ and $Q$ are collinear.</p>
 <div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 18: Invariants and Monovariants &middot; Invariant Quantities</div>
 <div class="ct-text"><p>Bluey is placing lollies on a $1000\times 1000$ grid. Initially, every cell of the grid is empty. At each step, Bluey chooses a row or column in which the total number of lollies is a multiple of $3$, chooses an empty cell in this row or column, and places a lolly in it. If there is no such row or column, Bluey stops.</p><p>Determine the maximum number of lollies that Bluey can place.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$3995$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Counting visits to multiples of 3)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Counting visits to multiples of 3</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/germany-tst-14_s1.svg" alt="Figure for the solution"></div>
 <p>Call rows and columns <em>lines</em>; $n=1000$. A line is <em>open</em> if its number of lollies is a multiple of $3$. Every lolly
 raises the count of one row and one column; the line Bluey chose was open just before. Call a placement <em>wasteful</em> if both its row and its
@@ -746,8 +742,7 @@ $15+4(n-5)=4n-5=3995$ lollies.</p><p>So the maximum is $\boxed{3995}$.</p>
 <div class="ct-meta"><span class="ct-pd ct-pd-S" title="Superhard, on the LPS VII scale">S</span>Number Theory &middot; LPS VII, Chapter 54: Advanced Number Theory Synthesis &middot; Hybrid Congruence and Factorization Arguments</div>
 <div class="ct-text"><p>Prove that there are finitely many prime numbers $p$ such that</p><ul class="ct-ul"><li><p>$p-8$ is a perfect square, and</p></li><li><p>for all odd positive integers $k&lt;\sqrt{p}$, the number $p-k^2$ has at most two distinct prime factors.</p></li></ul></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>proof (in fact the primes are exactly $17,89,233,1097$)</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Three values of $p-k^2$ divisible by one small prime)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Three values of $p-k^2$ divisible by one small prime</summary><div class="ct-text">
 <p>Call a prime $p$ <em>good</em> if it has both properties. Write $p=n^2+8$. Since $p=9$ is not prime, $p$ is odd and $n$ is odd with $n\ge3$,
 so $p\ge17$. We show that all but finitely many $n$ are impossible.</p><p><strong>Step 1: the shape of $n$ (use $k=3$).</strong> As $3&lt;\sqrt p$, the number $p-9=(n-1)(n+1)$ has at most two prime factors; it is even, so
 $(n-1)(n+1)=2^aq^b$ with $q$ an odd prime and $a\ge3$, $b\ge0$. The numbers $n\pm1$ are even with $\gcd(n-1,n+1)=2$, so one of them is exactly
@@ -788,15 +783,15 @@ has three distinct prime factors.)</p>
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 39: Graph Theory and Structural Combinatorics &middot; Graph Coloring and Labeling</div>
 <div class="ct-text"><p>Let $P$ be a convex polyhedron. Anne wants to colour all vertices of $P$ either red or blue. We call an edge of $P$ <em>checkered</em> if it connects two vertices of different colours. We call a face of $P$ <em>diverse</em> if at least half of its edges are checkered.
 Show that if every vertex of $P$ is a vertex of exactly three faces, then Anne can find a colouring where every face of $P$ is diverse.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (A colouring with the most checkered edges)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; A colouring with the most checkered edges</summary><div class="ct-text">
 <p>There are finitely many colourings; choose one with the largest possible number of checkered edges.</p><p><strong>Every vertex has at most one non-checkered edge.</strong> Each vertex $v$ lies on exactly three faces, hence on exactly three edges. If two or three
 of these edges were non-checkered, recolour $v$ alone. The edges at $v$ swap status (checkered $\leftrightarrow$ non-checkered) and no other edge
 changes, so the number of checkered edges goes up by at least $2-1=1$, contradicting maximality.</p><p><strong>Every face is diverse.</strong> The boundary of a face with $m$ edges is a cycle $v_1v_2\ldots v_m$. Two consecutive edges of this cycle share a
 vertex, so by the previous paragraph they are not both non-checkered. A set of edges of an $m$-cycle with no two consecutive has at most
 $\lfloor m/2\rfloor$ elements, so at least $m-\lfloor m/2\rfloor\ge m/2$ edges of the face are checkered. Hence every face is diverse, and this
 colouring works.</p>
-<h4>Solution 2 (The four colour theorem and a Tait colouring)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; The four colour theorem and a Tait colouring</summary><div class="ct-text">
 <p><strong>Local structure.</strong> Around a vertex $V$ the faces and edges at $V$ alternate. As $V$ lies on exactly three faces, it has exactly
 three edges, and each of them separates two of the three faces at $V$; so every two faces at $V$ share an edge.</p><p><strong>Colouring the faces.</strong> By the four colour theorem (applied to the planar graph whose vertices are the faces of $P$, two faces being joined when
 they share an edge), the faces can be coloured with four colours so that faces with a common edge get different colours. Use as colours the four pairs
@@ -817,8 +812,7 @@ there are at most $s/2$ of them. Hence at least half of the edges of every face 
 \[P_n(x,y,z)=x^n+y^n+z^n-xyz^{n-2}-xy^{n-2}z-x^{n-2}yz\]
 can be written as $P_n(x,y,z)=Q_n(x,y,z)\cdot R_n(x,y,z)$, where $Q_n(x,y,z)$ and $R_n(x,y,z)$ are non-constant polynomials with integer coefficients.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$n=3$ only</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Specialisations and Eisenstein)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Specialisations and Eisenstein</summary><div class="ct-text">
 <p><strong>$n=3$ works:</strong> $P_3=x^3+y^3+z^3-3xyz=(x+y+z)(x^2+y^2+z^2-xy-yz-zx)$.</p><p>From now on $n\ne3$ and suppose $P_n=QR$ with non-constant $Q,R\in\mathbb Z[x,y,z]$. Since $P_n$ is homogeneous of degree $n$, so are $Q$ and $R$
 (the products of the lowest-degree parts and of the highest-degree parts of $Q,R$ are the lowest- and highest-degree parts of $P_n$); let their
 degrees be $d$ and $n-d$, with $1\le d\le n-1$.</p><p><strong>Pure powers occur in $Q$ and $R$.</strong> Let $\alpha,\beta$ be the degrees of $Q,R$ in $x$ alone. Then $\alpha\le d$, $\beta\le n-d$, and
@@ -844,7 +838,8 @@ $n$ odd):
 \[P_n(x,1,-1)=x^n+x^{n-2}+2x=x\bigl(x^{n-3}(x^2+1)+2\bigr),\qquad Q(x,1,-1)=c(x^2+3).\]
 So $x^2+3$ divides $x^{n-3}(x^2+1)+2$. Substituting a root ($x^2=-3$, and $n-3$ is even) gives $-2(-3)^{(n-3)/2}+2=0$, i.e. $(-3)^{(n-3)/2}=1$,
 which forces $n=3$. Contradiction.</p><p>Hence $P_n$ factors exactly for $\boxed{n=3}$.</p>
-<h4>Solution 2 (Substituting $z=-y$ and working modulo $2$)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Substituting $z=-y$ and working modulo $2$</summary><div class="ct-text">
 <p><strong>$n=3$ works:</strong> $P_3=(x+y+z)(x^2+y^2+z^2-xy-yz-zx)$.</p><p><strong>Pure powers.</strong> Suppose $P_n=QR$ with non-constant $Q,R\in\mathbb Z[x,y,z]$. Comparing lowest- and highest-degree parts, $Q$ and $R$
 are homogeneous, of degrees $d$ and $n-d$ with $1\le d\le n-1$. Their degrees in $x$ alone are at most $d$ and $n-d$ and add up to $n$
 (as $P_n$ contains $x^n$), so $Q$ contains $x^d$ with a nonzero coefficient; likewise $y^d$, and $R$ contains $x^{n-d}$, $y^{n-d}$. Hence
@@ -869,8 +864,7 @@ which vanishes only for $n=3$. Contradiction.</p><p>Hence $P_n$ factors exactly 
 <h3>Problem 3</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-S" title="Superhard, on the LPS VII scale">S</span>Geometry &middot; LPS VII, Chapter 11: Similarity, Homothety, and Ratio Geometry &middot; Homothety Centers and Image Tracking</div>
 <div class="ct-text"><p>Let $ABCD$ be a cyclic quadrilateral with circumcircle $\Omega$ such that $CD&gt;BD&gt;BC$. The tangents to $\Omega$ at $B$ and $C$ meet at a point $S$. A line $\ell$ is called <em>coastal</em> if:</p><ul class="ct-ul"><li><p>$\ell$ does not pass through $A$,</p></li><li><p>$\ell$ intersects ray $SD$ at a point $X_\ell$ beyond $D$, and</p></li><li><p>there is a circle tangent to line $\ell$, line $X_\ell A$, segment $SB$ and segment $SC$.</p></li></ul><p>Prove that there is a circle that is tangent to $\Omega$ and all coastal lines.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Pole of $SD$, a homothety from $S$, and a homothety from $U$)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Pole of $SD$, a homothety from $S$, and a homothety from $U$</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:256px" src="/assets/contests/2026-27/germany-tst-18_s1.svg" alt="Figure for the solution"></div>
 <p>Let $O$ be the centre of $\Omega$. For a point $P\ne O$, its <em>polar</em> is taken with respect to $\Omega$; we use La Hire's principle ($P$ lies on
 the polar of $Q$ iff $Q$ lies on the polar of $P$) and Brocard's theorem: for four distinct points of $\Omega$, the three intersection points of opposite
@@ -900,7 +894,8 @@ gives $K=\frac{2au}{a+u}$. A direct computation now yields $(L-u)(K-u)=(a-u)^2$,
 (If $AU\parallel SD$, the homothety is a translation, $K$ is the midpoint of $AU$, $L=2A-U$, and the same relation holds.)</p><p><strong>Conclusion.</strong> In every case $L=\nu(F)$ lies on $\ell$. The homothety $\nu$ maps $\Omega$ to $\Gamma$ and the tangent of $\Omega$ at $F$, which is
 the line $YF$, to the tangent of $\Gamma$ at $L$, a line through $L$ parallel to $YF$. Since $\ell\parallel YF$ and $L\in\ell$, this tangent is $\ell$.
 Therefore every coastal line is tangent to the fixed circle $\Gamma$, which is tangent to $\Omega$ at $U$.</p>
-<h4>Solution 2 (A fixed circle from the tangent equations)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; A fixed circle from the tangent equations</summary><div class="ct-text">
 <p>Put $S$ at the origin with ray $SD$ as the positive $x$-axis. Let $2\gamma=\angle BSC$ ($0&lt;\gamma&lt;90^\circ$), let $(e,f)$ be the unit vector
 along the internal bisector of $\angle BSC$, and $d=\sin\gamma$.</p><p><strong>Circles tangent to the segments $SB$ and $SC$.</strong> Let a circle with centre $K$ be tangent to segments $SB$ and $SC$, and let $\hat b,\hat c$ be
 the unit vectors along $SB,SC$. Its points of tangency are the feet of $K$ on the two lines, $(K\cdot\hat b)\hat b$ and $(K\cdot\hat c)\hat c$; they lie on
@@ -949,8 +944,7 @@ distance is the sum or the difference of the radii are tangent. Hence $\kappa$ i
 <div class="ct-text"><p>Let $n\geq 2$ be a given integer. Find all functions $f:\mathbb{R}\to\mathbb{R}$ such that
 \[f(x-f(y))=f(x+y^n)+f(f(y)+y^n),\qquad\forall x,y\in\mathbb{R}.\]</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$f\equiv0$ and $f(x)=-x^n$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (The group of periods)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; The group of periods</summary><div class="ct-text">
 <p>Both functions work: for $f\equiv0$ both sides vanish, and for $f(x)=-x^n$ we have $f(y)+y^n=0$, so the equation reads
 $f(x+y^n)=f(x+y^n)+f(0)$, true since $f(0)=0$.</p><p>Now let $f$ be any solution, $a=f(0)$ and $c_y=f(y)+y^n$. Writing $u=x+y^n$, the equation becomes
 \[f(u-c_y)=f(u)+f(c_y)\qquad\text{for all }u,y. \tag{1}\]
@@ -974,8 +968,7 @@ for all $y$; the left side is a polynomial of degree $n-1\ge1$ in $y$, so $G=\ma
 <div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Number Theory &middot; LPS VII, Chapter 21: Arithmetic Functions and Multiplicative Structure &middot; Function Equations on Integers</div>
 <div class="ct-text"><p>Let $\mathbb{Z}_{&gt;0}$ be the set of positive integers. Determine all functions $f:\mathbb{Z}_{&gt;0}\to\mathbb{Z}$ such that for every $n\in\mathbb{Z}_{&gt;0}$, and every positive divisor $d$ of $n$, there exists a positive divisor $e$ of $n$ such that $n$ divides $d+f(e)$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$f(n)=-n$ for all $n$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Residues as a bijection, and two large primes)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Residues as a bijection, and two large primes</summary><div class="ct-text">
 <p><strong>$f(n)=-n$ works:</strong> for $d\mid n$ take $e=d$; then $d+f(e)=0$.</p><p>Now let $f$ satisfy the condition; write $D(n)$ for the set of positive divisors of $n$ and $\tau(n)=|D(n)|$.</p><p><strong>Step 1: a bijection.</strong> Fix $n$. The numbers $-d$ $(d\in D(n))$ are $\tau(n)$ different residues modulo $n$ (the divisors below $n$ are distinct
 and nonzero modulo $n$, and $-n\equiv0$). Each of them must be congruent to some $f(e)$ with $e\in D(n)$, and there are only $\tau(n)$ such values. Hence
 \[\{f(e)\bmod n:\ e\in D(n)\}=\{-d\bmod n:\ d\in D(n)\},\quad\text{and the }f(e)\ (e\in D(n))\text{ are pairwise incongruent mod }n. \tag{1}\]</p><p><strong>Step 2: $f(m)=0$ or $f(m)=-d$ for some $d\in D(m)$.</strong> Let $a=f(m)$ and pick a prime $q&gt;|a|+m$; then $q\nmid m$. By (1) for $n=mq$,
@@ -996,8 +989,7 @@ Hence $f(m)=-m$, completing the induction.</p><p>The only function is $\boxed{f(
 <div class="ct-text"><p>Let $ABCD$ be a convex quadrilateral with $\angle ADC&gt;90^\circ$. Suppose that points $X$ and $Y$ lie on diagonal $AC$ such that
 \[\angle ADX=\angle YDC=90^\circ,\quad\angle CAD=\angle CBX,\quad\text{and}\quad\angle DCA=\angle YBA.\]
 Let $O$ be the circumcentre of triangle $BXY$. Suppose point $R\neq O$ lies on the perpendicular bisector of $AC$ such that lines $OR$ and $AC$ are parallel.</p><p>Prove that line $RO$ bisects angle $\angle DRB$.</p></div>
-<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
-<h4>Solution 1 (A homothety centred at $D$ and the Apollonius circle)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; A homothety centred at $D$ and the Apollonius circle</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:301px" src="/assets/contests/2026-27/germany-tst-21_s1.svg" alt="Figure for the solution"></div>
 <p>We use $\measuredangle$ for directed angles between lines (mod $180^\circ$). Place $AC$ horizontally with $A$ on the left and $D$ above; by convexity $B$
 is below $AC$. As $\angle ADC&gt;90^\circ$, the feet of the rays $DX\perp DA$ and $DY\perp DC$ lie inside segment $AC$, in the order $A,Y,X,C$.</p><p><strong>Step 1: two right angles at $B$.</strong> Let $DX$ and $DY$ meet the circle $(ACD)$ again at $U$ and $V$. From $\angle ADU=\angle VDC=90^\circ$, both $AU$
@@ -1020,7 +1012,8 @@ Here $\lambda\ne1$, and since $|k|&gt;1$ the numbers $O-B=\frac{1-k}2b$ and $O-D
 points of line $BD$ dividing $BD$ internally and externally in the ratio $\lambda$, namely $O$ and $O'$. As $\angle ORO'=90^\circ$, $R$ lies on this
 circle, and $R\ne O,O'$ means $R$ is not on line $BD$. Hence $RB:RD=OB:OD$ with $O$ on segment $BD$, and by the converse of the angle bisector theorem,
 line $RO$ bisects angle $DRB$.</p>
-<h4>Solution 2 (An isosceles trapezoid and the reflection of $B$)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; An isosceles trapezoid and the reflection of $B$</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:301px" src="/assets/contests/2026-27/germany-tst-21_s2.svg" alt="Figure for the solution"></div>
 <p>We use $\measuredangle$ for directed angles between lines (mod $180^\circ$). Place $AC$ horizontally with $A$ on the left and $D$ above; by convexity $B$
 is below $AC$. As $\angle ADC&gt;90^\circ$, the feet of the rays $DX\perp DA$ and $DY\perp DC$ lie inside segment $AC$, in the order $A,Y,X,C$.</p><p><strong>Two right angles at $B$.</strong> Let $DX$ and $DY$ meet the circle $(ACD)$ again at $U$ and $V$. From $\angle ADU=\angle VDC=90^\circ$, both $AU$
@@ -1048,7 +1041,8 @@ $\measuredangle(O_2O_1,O_2R)=-\measuredangle(O_1O_2,O_1O)=-\measuredangle(t,BY)=
 It maps line $O_1O_2$ to the parallel line through $Y$, namely $YX$, so $g(O_2)=X$, and its ratio is $s=XY/O_1O_2\in(0,1)$ (the vectors $O_1O_2$ and
 $YX$ point the same way). It maps line $O_1R$ to the parallel line $YQ$ and line $O_2R$ to $XQ$; hence $g(R)=Q$. So $Q$ lies on segment $DR$, strictly
 between $D$ and $R$. If $Q=B$, then $B$ would be on line $RO\parallel AC$ and on line $RD$, so $DB\parallel AC$, impossible; thus $Q\ne B$.</p><p>Therefore ray $RQ$ is ray $RD$, and since $Q$ is the mirror image of $B$ in line $RO$, the line $RO$ bisects angle $BRQ$, which is angle $DRB$.</p>
-<h4>Solution 3 (Coordinates with $D$ at the origin)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 3 &ndash; Coordinates with $D$ at the origin</summary><div class="ct-text">
 <p>Put $D=(0,0)$ and scale so that $AC$ is the line $y=1$; let $A=(a,1)$ and $C=(c,1)$ with $a&lt;c$. As $\angle ADC&gt;90^\circ$,
 $\overrightarrow{DA}\cdot\overrightarrow{DC}=ac+1&lt;0$, so $a&lt;0&lt;c$. Put $\alpha=a+c$ and $\beta=ac&lt;-1$.</p><p><strong>$X$, $Y$, $B$.</strong> For $X=(p,1)$ the condition $\angle ADX=90^\circ$ is $ap+1=0$, so $p=-1/a$; likewise $Y=(q,1)$ with $q=-1/c$. Then
 $a&lt;q&lt;p&lt;c$: indeed $q-a=-\frac{1+\beta}{c}&gt;0$, $c-p=\frac{1+\beta}{a}&gt;0$ and $p-q=\frac1c-\frac1a&gt;0$. As $ABCD$ is convex, $B$ and $D$ are on opposite
@@ -1085,8 +1079,7 @@ mirror images in line $RO$, and line $RO$ bisects $\angle DRB$.</p>
 \[\left|(a_1+a_2+\cdots+a_i)-a_j\right|\]
 as $i$ and $j$ vary over all integers $1,2,\ldots,100$.</p><p>Determine the smallest possible sunshine cost over all sequences $a_1,a_2,\ldots,a_{100}$ of pairwise distinct integers.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$75$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Prefix sums are trapped in a short interval)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Prefix sums are trapped in a short interval</summary><div class="ct-text">
 <p>Write $P_i=a_1+\cdots+a_i$, let $A=\max a_j$, $B=\min a_j$, $D=A-B$, and let $M$ be the sunshine cost. As the $a_j$ are $100$ distinct
 integers, $D\ge99$.</p><p><strong>Construction with cost $75$.</strong> Take $a_1=-25$, $a_2=0$, followed by the pairs $j,-j$ for $j=1,2,\dots,50$, $j\ne25$ (that is $2+2\cdot49=100$
 distinct integers). The prefix sums are $-25$ after $a_1,a_2$ and after every complete pair, and $-25+j$ in the middle of the pair $j,-j$; so they range over
@@ -1102,8 +1095,7 @@ $a_j=\mp49$. Contradiction. So $M\ge75$.</p><p>The smallest sunshine cost is $\b
 <h3>Problem 2</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 52: Advanced Combinatorial Structure and Hybrid Methods &middot; Hybrid Counting and Structure</div>
 <div class="ct-text"><p>Let $n$ be a positive integer, and let $(a_1,a_2,\ldots,a_n)$ be any $n$-tuple of distinct integers. An <em>inversion</em> is a pair $(i,j)$ of integers satisfying $1\leqslant i&lt;j\leqslant n$ and $a_i&gt;a_j$. An inversion is called <em>odd</em> if $j-i$ is odd. Let $A$ be the number of all inversions, and let $B$ be the number of odd inversions.</p><ul class="ct-parts"><li><p><span class="ct-lbl">(a)</span> Prove that $A\leqslant 5B$ for all $n$ and all $n$-tuples $(a_1,a_2,\ldots,a_n)$.</p></li><li><p><span class="ct-lbl">(b)</span> Prove that there exist an $n$ and an $n$-tuple $(a_1,a_2,\ldots,a_n)$ for which $A&gt;4.99B$.</p></li></ul></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Charging each even inversion to a middle point)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Charging each even inversion to a middle point</summary><div class="ct-text">
 <p>Call an inversion $(i,j)$ <em>even</em> if $j-i$ is even; let $E=A-B$ be the number of even inversions.</p><p><strong>(a)</strong> We show $E\le4B$, which is equivalent to $A\le5B$. Let $(i,j)$ be an even inversion, $j-i=2d$. Put
 \[k=\begin{cases}i+d,&amp; d\text{ odd},\\ i+d-1,&amp; d\text{ even}.\end{cases}\]
 Then $i&lt;k&lt;j$ and $k-i$, $j-k$ are odd. Since $a_i&gt;a_j$, we have $a_i&gt;a_k$ or $a_k&gt;a_j$; so $(i,k)$ or $(k,j)$ is an odd inversion. Assign
@@ -1120,7 +1112,8 @@ for even $c$ the pairs counted are (even offset, later odd offset), $\frac{m}{2}
 $C$ is even, $B=\frac C2\cdot\frac{m^2}{4}=\frac{Cm^2}8$. Therefore
 \[\frac AB=1+\frac EB=1+\frac{4(C-1)(m-1)+2(m-2)}{Cm}=5-\frac4m-\frac2C .\]
 With $m=C=1000$ (so $n=10^6$) this is $4.994&gt;4.99$, as required.</p>
-<h4>Solution 2 (A periodic example built from residues modulo $2m+1$)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; A periodic example built from residues modulo $2m+1$</summary><div class="ct-text">
 <p>Call an inversion $(i,j)$ <em>even</em> if $j-i$ is even; let $E=A-B$ be the number of even inversions.</p><p><strong>(a)</strong> We show $E\le4B$, which is equivalent to $A\le5B$. Let $(i,j)$ be an even inversion, $j-i=2s$, and put $c=i+s$ if $s$ is odd and
 $c=i+s-1$ if $s$ is even. Then $i&lt;c&lt;j$, and $c-i$ and $j-c$ are odd. As $a_i&gt;a_j$, we have $a_i&gt;a_c$ or $a_c&gt;a_j$; assign $(i,j)$ to the odd inversion
 $(i,c)$ in the first case and to $(c,j)$ in the second. Fix an odd inversion $(x,y)$, $y-x=g$. If $(i,j)$ is assigned to it as $(i,c)$, then $i=x$ and
@@ -1150,8 +1143,7 @@ whenever $r_i\ge m+1$). So $A&gt;4.99B$.</p>
 <div class="ct-meta"><span class="ct-pd ct-pd-S" title="Superhard, on the LPS VII scale">S</span>Number Theory &middot; LPS VII, Chapter 49: Combinatorial Number Theory and Structure &middot; Counting Integer Configurations</div>
 <div class="ct-text"><p>For positive integers $n$ and $k$, let $f_k(n)$ denote the remainder when $n$ is divided by $2^k-1$. A positive integer $n$ is <em>grouse</em> if
 \[f_1(n)\leq f_2(n)\leq f_3(n)\leq f_4(n)\leq\cdots\]</p><ul class="ct-parts"><li><p><span class="ct-lbl">(a)</span> Prove that there are infinitely many <em>grouse</em> numbers.</p></li><li><p><span class="ct-lbl">(b)</span> Prove that there exists a positive integer $M$ such that there are at most $\dfrac{M}{2025^{2025}}$ <em>grouse</em> numbers less than $M$.</p></li></ul></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (A greedy chain of multiples; grouse numbers hug the powers of two)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; A greedy chain of multiples; grouse numbers hug the powers of two</summary><div class="ct-text">
 <p>Write $d_i=2^i-1$. Always $f_1(n)=0$, and $f_i(n)=n$ as soon as $d_i&gt;n$.</p><p><strong>The greedy chain.</strong> Fix $k\ge1$. Put $x_k=d_k$ and, for $i=k-1,k-2,\dots,1$, let $x_i$ be the smallest multiple of $d_i$ that is $\ge x_{i+1}$.
 Then $x_1\ge x_2\ge\dots\ge x_k$ and $x_i\le x_{i+1}+d_i-1$. More generally, starting the chain at any $x_i$, summing these steps gives
 \[0\le x_1-x_i\le\sum_{j=1}^{i-1}(d_j-1)=2^i-2i&lt;d_i. \tag{1}\]</p><p><strong>(a)</strong> We show that $x_1$ is grouse; since $x_1\ge x_k=2^k-1$ and $k$ is arbitrary, this gives infinitely many grouse numbers.</p><ul class="ct-ul"><li><p>For $i\le k$: $x_i$ is a multiple of $d_i$ and $0\le x_1-x_i&lt;d_i$ by (1), so $f_i(x_1)=x_1-x_i$. As $x_i$ does not increase with $i$, the values
@@ -1165,7 +1157,8 @@ if $k=2t-1$, then $2^i+2^{k+1-i}=2^{t+1}=2\sqrt2\cdot2^{k/2}&lt;3\cdot2^{k/2}$. 
 $M$ lie in the blocks with $k=0,1,\dots,b$, so there are at most
 \[\sum_{k=0}^{b}3\cdot2^{k/2}&lt;\frac{3}{\sqrt2-1}\,2^{(b+1)/2}=\frac{3}{\sqrt2-1}\sqrt M\]
 of them. This is at most $M/2025^{2025}$ as soon as $\sqrt M\ge3\cdot2025^{2025}/(\sqrt2-1)$, which holds for $b$ large enough. Such an $M$ proves (b).</p>
-<h4>Solution 2 (Part (b) by forbidden residue classes and the Chinese remainder theorem)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Part (b) by forbidden residue classes and the Chinese remainder theorem</summary><div class="ct-text">
 <p><strong>(a)</strong> Write $d_i=2^i-1$; then $f_i(n)=n$ whenever $d_i&gt;n$. Fix $k\ge1$, put $x_k=d_k$ and, for $i=k-1,\dots,1$, let $x_i$ be the
 smallest multiple of $d_i$ that is $\ge x_{i+1}$; so $x_{i+1}\le x_i\le x_{i+1}+d_i-1$. Summing these steps,
 $0\le x_1-x_i\le\sum_{j&lt;i}(d_j-1)=2^i-2i&lt;d_i$. Hence for $i\le k$ we get $f_i(x_1)=x_1-x_i$, which does not decrease as $i$ grows; and for
@@ -1190,8 +1183,7 @@ numbers below $M$ are grouse. Choosing $s$ with $(28/31)^s\le2025^{-2025}$ gives
 <div class="ct-text"><p>For a positive integer $n$, let $a_n$ and $b_n$ be the coprime positive integers with
 \[\frac{a_n}{b_n}=1+\frac12+\frac13+\cdots+\frac1n.\]
 Show that the following two assertions are equivalent (i.e., both true or both false):</p><ul class="ct-parts"><li><p><span class="ct-lbl">(i)</span> There are infinitely many $n$ for which $b_n$ is not divisible by $2027$.</p></li><li><p><span class="ct-lbl">(ii)</span> There are infinitely many $n$ for which $b_n$ is not divisible by $2027^{2025}$.</p></li></ul></div>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Splitting off the multiples of $p$)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Splitting off the multiples of $p$</summary><div class="ct-text">
 <p>Let $p=2027$, which is prime, and write $H_n=1+\frac12+\dots+\frac1n$ and $v=v_p$ for the $p$-adic valuation of a nonzero rational number. Since
 $a_n/b_n$ is in lowest terms, $p^k\mid b_n$ if and only if $v(H_n)\le-k$ (for $k\ge1$). So (i) says that $v(H_n)\ge0$ for infinitely many $n$, and (ii)
 says that $v(H_n)\ge-2024$ for infinitely many $n$. Clearly (i) implies (ii); we prove that (ii) implies (i) by contraposition.</p><p><strong>Key relation.</strong> Let $m=\lfloor n/p\rfloor\ge1$. The multiples of $p$ up to $n$ are $p,2p,\dots,mp$, so
@@ -1211,8 +1203,7 @@ relation gives $v(H_n)=v(H_m)-1\le-(j+2)$.</p><p>With $j=2024$: $v(H_n)\le-2025$
 Let $X$ be the foot of the altitude from $D$ on $AB$ and let $W$ be the intersection of the angular bisector of $\angle ADC$ with $AC$.
 Let $Y\neq B$ be a point on $k$ such that $BY\parallel AC$. Let $XY$ intersect $k$ again in $Z\neq Y$.
 Finally, let $S\neq W$ be the second intersection of $AC$ with the circumcircle of $YWZ$. Show that $\angle DZS=90^\circ$.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (The circle centred at $A$ through $D$)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; The circle centred at $A$ through $D$</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:253px" src="/assets/contests/2026-27/germany-tst-26_s1.svg" alt="Figure for the solution"></div>
 <p>Let $h=AD=BC$, let $\kappa$ be the circle with centre $A$ and radius $h$ (it touches $BC$ at $D$), and let $V$ be the foot of the perpendicular
 from $D$ to $AC$. As the triangle is acute, $X$ lies on segment $AB$ and $V$ on segment $AC$. We use $\measuredangle$ for directed angles between lines.</p><p><strong>Step 1: $Y\in\kappa$.</strong> The perpendicular bisector of $AC$ passes through the centre of $k$ and is perpendicular to the chord $BY$ (as $BY\parallel AC$),
@@ -1231,7 +1222,8 @@ using $h=BC=DB+DC$. Hence $BM'\parallel AC$, i.e. $M'$ lies on line $BY$. Moreov
 be a parallelogram inscribed in $k$, hence a rectangle, and $\angle ACB=90^\circ$.</p><p><strong>Step 5: $D,V,S,Z$ are concyclic.</strong> Using Step 2, the circle $\kappa$ through $Z,Y,D,M'$, Step 4 and Step 3:
 \[\measuredangle(ZV,ZD)=\measuredangle(ZY,ZD)=\measuredangle(M'Y,M'D)=\measuredangle(AC,SD)=\measuredangle(SV,SD).\]
 So $Z$ lies on the circle through $D,V,S$. Since $\angle DVS=90^\circ$, $DS$ is a diameter of that circle, and therefore $\angle DZS=90^\circ$.</p>
-<h4>Solution 2 (Coordinates adapted to the parallel lines $BY$ and $AC$)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Coordinates adapted to the parallel lines $BY$ and $AC$</summary><div class="ct-text">
 <p>Scale so that $AD=BC=1$ and put $D=(0,0)$, $A=(0,1)$, $B=(-u,0)$, $C=(v,0)$ with $u,v&gt;0$ (the foot $D$ lies between $B$ and $C$, as
 the triangle is acute) and $u+v=1$.</p><p><strong>New coordinates.</strong> Put $h=x+vy+u$ and $t=vx-y+uv$. The linear part sends $(1,0)$ to $(1,v)$ and $(0,1)$ to $(v,-1)$, two perpendicular vectors
 of the same length $\sqrt{1+v^2}$; so $(x,y)\mapsto(h,t)$ is a similarity. It multiplies all lengths by $\sqrt{1+v^2}$, keeps right angles, and maps
@@ -1260,8 +1252,7 @@ The points $D,Z,S$ are distinct ($h_Z\ne1$, and $Z\ne D$ because $t_Z=u(h_Z-1)+u
 <h3>Problem 3</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 39: Graph Theory and Structural Combinatorics &middot; Paths, Cycles, and Connectivity</div>
 <div class="ct-text"><p>On a $45\times 45$ square grid there is an echidna. From any cell, the echidna can move to any other cell that shares a side with that cell. The echidna starts in one of the cells and makes a sequence of $2024$ moves, after which it has visited each cell exactly once. Prove that it is possible to write the numbers from $1$ to $2025$, one in each cell, in such a way that:</p><ul class="ct-ul"><li><p>For any pair of adjacent cells in the same row, the cell containing the larger number was visited earlier.</p></li><li><p>For any pair of adjacent cells in the same column, the cell containing the larger number was visited later.</p></li></ul></div>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (No directed cycle: a switch count on the enclosed region)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; No directed cycle: a switch count on the enclosed region</summary><div class="ct-text">
 <p>Let $t(c)\in\{0,1,\dots,2024\}$ be the time at which cell $c$ is visited. Form a directed graph $D$ on the cells: for two cells $u,v$ in the same
 row and adjacent, draw $u\to v$ if $t(u)&gt;t(v)$; for two cells $u,v$ in the same column and adjacent, draw $u\to v$ if $t(u)&lt;t(v)$. A labelling as required
 is exactly a numbering in which every arrow goes from a smaller to a larger number. Such a numbering exists if $D$ has no directed cycle (number the cells

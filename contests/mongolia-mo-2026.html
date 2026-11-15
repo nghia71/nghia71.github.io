@@ -97,7 +97,6 @@ description: Mongolian Mathematical Olympiad 2026: problems with answers and sol
 <p>The 6 problems of the Mongolian Mathematical Olympiad 2026, each with our own solutions, hidden until you open them. 2 of them ask for an answer and 4 ask for a proof. Where a problem has a final answer, it is shown separately. Try a problem first, then check.</p><p>The olympiad has six problems.</p>
 </div>
 <div class="ct-credit">Problems: Mongolian Mathematical Olympiad 2026, from the AoPS contest collection or the official paper. Solutions written by MCC.</div>
-<div class="ct-bar"><button type="button" onclick="ctAll(true)">Show all answers and solutions</button><button type="button" onclick="ctAll(false)">Hide all</button></div>
 <div class="ct-toc-wrap"><div class="ct-toc-row"><a href="#p1">1</a><a href="#p2">2</a><a href="#p3">3</a><a href="#p4">4</a><a href="#p5">5</a><a href="#p6">6</a></div></div>
 
 {% raw %}
@@ -105,8 +104,7 @@ description: Mongolian Mathematical Olympiad 2026: problems with answers and sol
 <h3>Problem 1</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 17: Sequences, Recurrences, and Discrete Dynamics &middot; Linear Recurrences</div>
 <div class="ct-text"><p>Let $a_1, a_2$ be fixed positive integers. For $n \ge 2$, define the sequence $(a_n)_{n\ge 1}$ by $a_{n+1} = \frac{a_2}{a_1}a_n - a_{n-1}$. Suppose that $a_n$ is a positive integer for all positive integers $n$. Prove that the ratio $\frac{a_2}{a_1}$ is an integer.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (A closed form with integer polynomials)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; A closed form with integer polynomials</summary><div class="ct-text">
 <p>Write $r=\frac{a_2}{a_1}=\frac{p}{q}$ in lowest terms, with $p,q$ positive integers and $\gcd(p,q)=1$. We must show $q=1$.</p><p>Define polynomials $c_1(x)=1$, $c_2(x)=x$ and $c_{n+1}(x)=x\,c_n(x)-c_{n-1}(x)$ for $n\ge 2$. By induction on $n$, each $c_n$ has integer
 coefficients, degree $n-1$ and leading coefficient $1$ (the step multiplies a monic polynomial of degree $n-1$ by $x$ and subtracts one of
 smaller degree). Also $a_n=a_1c_n(r)$ for all $n\ge1$: this holds for $n=1,2$, and both sides satisfy the same recurrence
@@ -117,7 +115,8 @@ N_n:=q^{n-1}c_n\!\left(\tfrac pq\right)=p^{n-1}+e_{n-2}p^{n-2}q+\dots+e_0q^{n-1}
 is an integer with $N_n\equiv p^{n-1}\pmod q$, and $q^{n-1}a_n=a_1N_n$.</p><p>Suppose $q&gt;1$ and let $\ell$ be a prime factor of $q$. Since $\gcd(p,q)=1$, $\ell\nmid p^{n-1}$, so $\ell\nmid N_n$. As $a_n$ is an integer,
 $\ell^{n-1}$ divides $q^{n-1}a_n=a_1N_n$, and therefore $\ell^{n-1}\mid a_1$. This holds for every $n$, which is impossible for the positive
 integer $a_1$. Hence $q=1$, that is, $\frac{a_2}{a_1}$ is an integer.</p>
-<h4>Solution 2 (Powers of a prime drop at every step)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Powers of a prime drop at every step</summary><div class="ct-text">
 <p>Write $r=\frac{a_2}{a_1}$ and suppose $r$ is not an integer. Then there is a prime $\ell$ that divides the denominator of $r$ in
 lowest terms. For a nonzero rational number $x$, let $v(x)$ be the exponent of $\ell$ in $x$ (so $x=\ell^{v(x)}\frac{u}{w}$ with $u,w$ integers
 not divisible by $\ell$). Then $v(xy)=v(x)+v(y)$, and if $v(x)\ne v(y)$ then $v(x-y)=\min(v(x),v(y))$: for $v(x)&lt;v(y)$, write $x=\ell^{v(x)}\frac uw$ and
@@ -135,8 +134,7 @@ Therefore $\frac{a_2}{a_1}$ is an integer.</p>
 <h3>Problem 2</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 19: Triangle Centers and Classical Triangle Geometry &middot; Centroid, Incenter, Circumcenter, and Orthocenter</div>
 <div class="ct-text"><p>Let $ABC$ be a triangle with circumcircle $\omega$. Let $I$ be its incenter, and the points $E$ and $F$ lie on sides $AC$ and $AB$, respectively, such that $E, I, F$ are collinear and $EF \perp AI$. The lines $BI$ and $CI$ intersect $\omega$ again at $M_B$ and $M_C$, respectively, and the circumcircles of triangles $BFM_B$ and $CEM_C$ intersect the line $BC$ again at points $X$ and $Y$, respectively.</p><p>Prove that $BX = CY$.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Chords from a vertex along the bisector)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Chords from a vertex along the bisector</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:390px" src="/assets/contests/2026-27/mongolia-mo-2_s1.svg" alt="Figure for the solution"></div>
 <p>Let $a=BC$, $b=CA$, $c=AB$. Since $AI$ bisects $\angle EAF$ and $AI\perp EF$, the right triangles $AIE$ and $AIF$ are
 congruent (common side $AI$, equal angles at $A$), so $AE=AF$.</p><p><em>Lemma.</em> Let a circle $\Gamma$ pass through $B$ and meet the lines $BA$, $BC$ and the bisector of $\angle ABC$ again at $U$, $V$, $W$. Measure
@@ -157,7 +155,8 @@ BX=a+c-BF=a+AF&gt;a ,
 \]
 so $X$ lies on ray $BC$ beyond $C$ and $BX=a+AF$. In the same way, at vertex $C$ with the circles $\omega$ and $CEM_C$, the point $Y$ lies on ray
 $CB$ beyond $B$ and $CY=a+b-CE=a+AE$. Since $AE=AF$, we conclude $BX=CY$.</p>
-<h4>Solution 2 (Congruent triangles at the arc midpoint)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Congruent triangles at the arc midpoint</summary><div class="ct-text">
 <p>Let $a=BC$. Since $AI$ bisects $\angle EAF$ and is perpendicular to $EF$, the right triangles $AIE$ and $AIF$ are congruent, so
 $AE=AF$. Note $F\ne A$ (otherwise $A$ would lie on $EF$, but $AI\perp EF$ at $I\ne A$).</p><p>Because $BI$ bisects $\angle ABC$, the point $M_B$ is the midpoint of the arc $AC$ of $\omega$ not containing $B$; hence $M_BA=M_BC$, and
 $A,B,C,M_B$ lie on $\omega$ in this cyclic order, so $\angle BAM_B+\angle BCM_B=180^\circ$.</p><p>Let $X'$ be the point on ray $BC$ beyond $C$ with $CX'=AF$. Since $F$ lies on segment $AB$,
@@ -180,8 +179,7 @@ $CY=a+AE$. As $AE=AF$, we get $BX=CY$.</p>
 <div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 39: Graph Theory and Structural Combinatorics &middot; Extremal Graph Structure</div>
 <div class="ct-text"><p>A country consists of $62$ islands. Some pairs of islands are connected by bridges; we say two islands are adjacent if they are joined by a bridge. Suppose that:</p><ul class="ct-ul"><li><p>Each island is adjacent to at least $3$ other islands.</p></li><li><p>For any two adjacent islands, there exists an island adjacent to both of them.</p></li><li><p>There do not exist $4$ islands such that every pair among them is adjacent.</p></li></ul><p>Determine the minimum possible number of bridges.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$100$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (A neighbour of large degree, then double counting)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; A neighbour of large degree, then double counting</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:374px" src="/assets/contests/2026-27/mongolia-mo-3_s1.svg" alt="Figure for the solution"></div>
 <p>Think of islands as vertices and bridges as edges of a graph $G$ with $62$ vertices and $E$ edges. The conditions say: every degree
 is at least $3$; every edge lies in a triangle; there is no $K_4$ (four pairwise adjacent vertices).</p><p><em>Lemma.</em> Every vertex of degree $3$ has a neighbour of degree at least $4$.</p><p><em>Proof.</em> Let $v$ have neighbours $x,y,z$. For each edge $vx$ there is a vertex adjacent to both $v$ and $x$, that is, $x$ is adjacent to
@@ -200,7 +198,8 @@ $3$ and the hubs have degrees $4$ and $6$. Each rim edge forms a triangle with t
 end. Four pairwise adjacent islands would lie in one wheel and contain at least three rim vertices, which would form a triangle in the rim
 cycle of length $4$ or $6$; this is impossible. So all conditions hold.</p><p>The minimum number of bridges is $\boxed{100}$. (The statement does not require the bridges to connect all islands, and the example above is not
 connected.)</p>
-<h4>Solution 2 (Discharging along triangles)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Discharging along triangles</summary><div class="ct-text">
 <p>Use the graph language: $62$ vertices, minimum degree $3$, every edge in a triangle, no $K_4$. Give every vertex $w$ the charge
 $\deg w-\frac{16}{5}$; the total charge is $2E-\frac{16\cdot 62}{5}$. We move charge without changing the total and show that all final
 charges are nonnegative.</p><p><em>Local structure.</em> Let $v$ have degree $3$ and neighbours $x,y,z$. Each of $x,y,z$ is adjacent to another of them (the edges at $v$ lie in
@@ -234,8 +233,7 @@ A connected network on $62$ islands has no $W_4$ component, so it needs at least
 and for all positive integers $n \ge 1$,
 \[\begin{cases} x_{n+1} = a_1x_n + a_2y_n + a_3\\ y_{n+1} = b_1x_n + b_2y_n + b_3\end{cases}\]
 Suppose that $y_n = x_n^3 + 1$ for all $n \ge 1$. Prove that the sequence $(x_n)_{n\ge 1}$ takes only finitely many distinct values.</p></div>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (All terms are roots of one polynomial)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; All terms are roots of one polynomial</summary><div class="ct-text">
 <p>Since $y_n=x_n^3+1$, the recurrence for $x$ becomes
 \[
 x_{n+1}=a_1x_n+a_2(x_n^3+1)+a_3=g(x_n),\qquad g(t)=a_2t^3+a_1t+(a_2+a_3).
@@ -253,8 +251,7 @@ $3a_1^2a_3$, so $a_1=0$ or $a_3=0$.</p><ul class="ct-ul"><li><p>If $a_1=0$, then
 <h3>Problem 5</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure &middot; Radical Axis and Radical Center</div>
 <div class="ct-text"><p>Let $ABC$ be a triangle with circumcircle $\omega$. The points $E$ and $F$ lie on sides $AC$ and $AB$, respectively, such that the quadrilateral $BCEF$ is cyclic. Let $D$ be a point on segment $EF$. The lines $BD$ and $CD$ meet $\omega$ again at $K$ and $L$, respectively.</p><p>Suppose that the circumcircles of $\triangle BFK$ and $\triangle CEL$ intersect at two distinct points $X$ and $Y$. Prove that the midpoint of the segment $XY$ lies on $\omega$.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Radical axis and signed powers on one line)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Radical axis and signed powers on one line</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:396px" src="/assets/contests/2026-27/mongolia-mo-5_s1.svg" alt="Figure for the solution"></div>
 <p>Let $\Gamma_1$ be the circle $BFK$ and $\Gamma_2$ the circle $CEL$. They are different circles (they meet in exactly two points), and
 their radical axis is the line $XY$. For a point $Z$ and a circle $\Gamma$ we write $\operatorname{pow}_\Gamma(Z)$ for the power of $Z$.</p><p><em>Step 1: $A$ and $D$ lie on line $XY$.</em> Since $BCEF$ is cyclic, the power of $A$ with respect to that circle gives $AF\cdot AB=AE\cdot AC$.
@@ -281,7 +278,8 @@ and from $\operatorname{pow}_{\Gamma_1}(D)=\operatorname{pow}_\omega(D)$,
 (d-x)(d-y)=d(d-p)\ \Longrightarrow\ xy-d(x+y)=-dp\ \Longrightarrow\ k-d(x+y)=-k\ \Longrightarrow\ x+y=\frac{2k}{d}=2p .
 \]
 So the midpoint of $XY$ has coordinate $\frac{x+y}{2}=p$: it is the point $P$, which lies on $\omega$.</p>
-<h4>Solution 2 (Power functions written with vectors)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Power functions written with vectors</summary><div class="ct-text">
 <p>Place the origin at $A$ and treat points as vectors; $Z\cdot W$ is the dot product and $|Z|^2=Z\cdot Z$. Let $\Gamma_1$ be the
 circle $BFK$ and $\Gamma_2$ the circle $CEL$. For a circle $\Gamma$ with centre $Q$ and radius $r$, the power of a point $Z$ is
 $\operatorname{pow}_\Gamma(Z)=|Z-Q|^2-r^2=|Z|^2-2\,Z\cdot Q+|Q|^2-r^2$. Two facts follow at once.</p><ul class="ct-ul"><li><p>For two circles, $\operatorname{pow}_{\Gamma}(Z)-\operatorname{pow}_{\Gamma'}(Z)$ is an <em>affine</em> function of $Z$, that is, of the
@@ -325,8 +323,7 @@ A point of power $0$ lies on the circle, so the midpoint of $XY$ lies on $\omega
 \[f(f(n)f(n+m)) = f(f(n)f(m)) + f(f(n))^2.\]
 Let $f$ be a khongor function. Determine the maximum possible number of primes $p$ among the first $2026$ primes for which $f(p) &lt; p$.</p><p><em>Note:</em> The set $\mathbb{N}$ denotes the set of positive integers.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$1013$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (The error term depends only on the gcd)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; The error term depends only on the gcd</summary><div class="ct-text">
 <p><em>Step 1: $f$ is an involution.</em> With $n=1$ and $f(1)=1$ the equation gives $f(f(m+1))=f(f(m))+1$. Since $f(f(1))=f(1)=1$,
 induction gives $f(f(m))=m$ for all $m$. So $f$ is a bijection of $\mathbb N$ and $f(f(n))^2=n^2$.</p><p><em>Step 2.</em> Define $G(n,m)=f(f(n)f(m))-nm$, an integer. The equation reads $G(n,n+m)+n(n+m)=G(n,m)+nm+n^2$, that is,
 \[
@@ -354,7 +351,8 @@ other primes, and set $f(\prod p^{\alpha_p})=\prod\sigma(p)^{\alpha_p}$. Then $f
 f(f(n)f(n+m))=n(n+m)=nm+n^2=f(f(n)f(m))+f(f(n))^2 .
 \]
 Among the first $2026$ primes exactly $p_2,p_4,\dots,p_{2026}$ satisfy $f(p)&lt;p$. The maximum is $\boxed{1013}$.</p>
-<h4>Solution 2 (Bounded periodic errors and a squaring trick)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Bounded periodic errors and a squaring trick</summary><div class="ct-text">
 <p><em>Involution.</em> Putting $n=1$ and using $f(1)=1$ gives $f(f(m+1))=f(f(m))+1$, and with $f(f(1))=1$ we get $f(f(m))=m$ for all $m$.
 So $f$ is a bijection and $f(f(n))^2=n^2$.</p><p><em>Periodic errors.</em> Let $c_n(m)=f(f(n)f(m))-nm$. The equation says exactly that $c_n(m+n)=c_n(m)$. So for fixed $n$ the function $c_n$ is
 periodic with period $n$, takes finitely many values, and $|c_n(m)|\le K_n$ for some constant $K_n$. Substituting $n=f(a)$, $m=f(b)$:

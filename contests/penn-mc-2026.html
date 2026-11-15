@@ -97,7 +97,6 @@ description: Penn Math Contest 2026: selected problems: problems with answers an
 <p>The 15 problems of the Penn Math Contest 2026: selected problems, each with our own solutions, hidden until you open them. 13 of them ask for an answer and 2 ask for a proof. Where a problem has a final answer, it is shown separately. Try a problem first, then check.</p><p>A selection of the best problems of the fifth Penn Math Contest (18 April 2026, beginners, intermediate and advanced levels) and the ASEEDER x PMC rounds.</p>
 </div>
 <div class="ct-credit">Problems: Penn Math Contest 2026: selected problems, from the AoPS contest collection or the official paper. Solutions written by MCC.</div>
-<div class="ct-bar"><button type="button" onclick="ctAll(true)">Show all answers and solutions</button><button type="button" onclick="ctAll(false)">Hide all</button></div>
 <div class="ct-toc-wrap"><div class="ct-toc-row"><span class="ct-toc-g">Advanced Individual Round</span><a href="#p1">4</a><a href="#p2">7</a><a href="#p3">10</a><a href="#p4">12</a><a href="#p5">13</a><a href="#p6">15</a></div><div class="ct-toc-row"><span class="ct-toc-g">Intermediate Individual Round</span><a href="#p7">12</a><a href="#p8">14</a><a href="#p9">16</a><a href="#p10">19</a></div><div class="ct-toc-row"><span class="ct-toc-g">Intermediate Team Round, Problem 4</span><a href="#p11">Part 3</a></div><div class="ct-toc-row"><span class="ct-toc-g">Intermediate Team Round, Problem 6</span><a href="#p12">Parts 2 and 3</a></div><div class="ct-toc-row"><span class="ct-toc-g">Beginners Individual Round</span><a href="#p13">25</a></div><div class="ct-toc-row"><span class="ct-toc-g">ASEEDER Junior Proof Round</span><a href="#p14">1</a><a href="#p15">2</a></div></div>
 
 {% raw %}
@@ -107,8 +106,7 @@ description: Penn Math Contest 2026: selected problems: problems with answers an
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 32: Trigonometric Geometry and Metric Conversion &middot; Law of Sines and Law of Cosines &middot; also ASEEDER x PMC Senior Theoretical Round, Problem 3</div>
 <div class="ct-text"><p>This week, the HIST 6767: Random Trivia History at Penn is studying three random events:</p><p>1) On January 2, 2004, the spacecraft Stardust flew past Comet Wild 2 to collect samples that would be returned to Earth.</p><p>2) On January 3, 1959, Alaska was admitted into the United States as the 49th state.</p><p>3) On July 23, 1829, the typographer, a precursor to the typewriter, was apparently patented in the United States.</p><p>One student converted each date into its Month-Day numerical equivalent $(1/2,\,1/3,\,7/23)$, and noted that infinitely many triangles with positive integer side lengths have an included angle of $\arctan(1/2)+\arctan(1/3)+\arctan(7/23)$. What is the smallest possible perimeter of such a triangle?</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$40$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Tangent addition and a factorization)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Tangent addition and a factorization</summary><div class="ct-text">
 <p><em>The angle.</em> Let $\theta=\arctan\frac12+\arctan\frac13+\arctan\frac7{23}$. Since
 \[\tan\Bigl(\arctan\tfrac12+\arctan\tfrac13\Bigr)=\frac{\frac12+\frac13}{1-\frac16}=1\]
 and both arctangents lie in $(0,\frac\pi4)$, the first two terms add up to $\frac\pi4$. Then
@@ -116,7 +114,8 @@ and both arctangents lie in $(0,\frac\pi4)$, the first two terms add up to $\fra
 and $\theta&lt;\frac\pi2$, so $\cos\theta=\frac8{17}$ and $\sin\theta=\frac{15}{17}$.</p><p><em>The triangles.</em> Let the sides enclosing $\theta$ be $x$ and $y$ and the third side $z$, all positive integers. By the law of cosines $z^2=x^2+y^2-\frac{16}{17}xy$, so $17\mid 16xy$ and $17$ divides $x$ or $y$; say $y=17m$. Then
 \[z^2=x^2-16mx+289m^2=(x-8m)^2+(15m)^2 .\]
 If $m\ge2$, then $y\ge34$ and $z\ge15m\ge30$, so the perimeter exceeds $64$. If $m=1$, then $(z-|x-8|)(z+|x-8|)=225$, and the factorizations $1\cdot225$, $3\cdot75$, $5\cdot45$, $9\cdot25$, $15\cdot15$ give $(z,|x-8|)=(113,112),(39,36),(25,20),(17,8),(15,0)$. The positive values of $x$ are $120$, $44$, $28$, $16$, $8$, with perimeters $x+17+z$ equal to $250$, $100$, $70$, $50$, $40$.</p><p>The minimum is attained by $x=8$, $y=17$, $z=15$ (the $8$&ndash;$15$&ndash;$17$ right triangle, whose angle between the sides $8$ and $17$ has cosine $\frac8{17}$). The smallest perimeter is $\boxed{40}$.</p>
-<h4>Solution 2 (Complex numbers and a bound)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Complex numbers and a bound</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:321px" src="/assets/contests/2026-27/penn-mc-1_s2.svg" alt="Figure for the solution"></div>
 <p><em>The angle.</em> The arguments of $2+i$, $3+i$, $23+7i$ are $\arctan\frac12$, $\arctan\frac13$, $\arctan\frac7{23}$, each in $(0,\frac\pi4)$, so their sum $\theta$ lies in $(0,\frac{3\pi}4)$ and is the argument of the product
 \[(2+i)(3+i)(23+7i)=(5+5i)(23+7i)=80+150i=10(8+15i).\]
@@ -132,14 +131,14 @@ For integers $x,y$ and an integer $XY$ this forces $17\mid xy$. By symmetry take
 \[(D+F)(D-F)=13,\qquad \tan(U)=\frac{6}{D},\qquad \tan\Bigl(\frac{\pi}{3}-U\Bigr)=\frac{7}{F}.\]
 Please help the CIS 1600 students solve this problem by finding $\lfloor DF\rfloor$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$126$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (A point at distances 6 and 7 from the sides of a 60 degree angle)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; A point at distances 6 and 7 from the sides of a 60 degree angle</summary><div class="ct-text">
 <p>Since $\tan$ has period $\pi$, replace $U$ by $u=\arctan\frac6D\in(0,\frac\pi2)$; the equations still hold. Then $\frac\pi3-u\in(-\frac\pi6,\frac\pi3)$ has positive tangent $\frac7F$, so $\frac\pi3-u\in(0,\frac\pi3)$.</p><p>Let $L=\sqrt{D^2+36}$. The first equation gives $F^2+49=D^2+36=L^2$. In the right triangle with legs $D,6$ the angle opposite $6$ is $u$, so $L\cos u=D$, $L\sin u=6$; likewise $\frac\pi3-u$ is the acute angle with tangent $\frac7F$, so $L\cos(\frac\pi3-u)=F$, $L\sin(\frac\pi3-u)=7$. (Geometrically: a point at distance $L$ from the vertex of a $60^\circ$ angle, at distances $6$ and $7$ from its sides.)</p><p>Expanding,
 \[7=L\sin\Bigl(\frac\pi3-u\Bigr)=\frac{\sqrt3}{2}L\cos u-\frac12L\sin u=\frac{\sqrt3}{2}D-3,\]
 so $D=\frac{20}{\sqrt3}$, and
 \[F=L\cos\Bigl(\frac\pi3-u\Bigr)=\frac12L\cos u+\frac{\sqrt3}2L\sin u=\frac{D}{2}+3\sqrt3=\frac{10}{\sqrt3}+\frac{9}{\sqrt3}=\frac{19}{\sqrt3}.\]
 Check: $D^2-F^2=\frac{400-361}{3}=13$. Hence $DF=\frac{380}{3}=126.\overline{6}$ and $\lfloor DF\rfloor=\boxed{126}$.</p>
-<h4>Solution 2 (Multiplying two complex numbers)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Multiplying two complex numbers</summary><div class="ct-text">
 <p>Replace $U$ by $u=\arctan\frac6D\in(0,\frac\pi2)$ (tangent has period $\pi$). Then $\tan(\frac\pi3-u)=\frac7F&gt;0$ with $\frac\pi3-u\in(-\frac\pi6,\frac\pi3)$, so $\frac\pi3-u\in(0,\frac\pi3)$.</p><p>Let $z=D+6i$ and $w=F+7i$. Both lie in the first quadrant, with arguments $u$ and $\frac\pi3-u$ (their tangents are $\frac6D$ and $\frac7F$). The first equation says $|z|^2=D^2+36=F^2+49=|w|^2$; call this common value $L^2$. Hence
 \[zw=L^2e^{i\pi/3}=\frac{L^2}{2}+\frac{\sqrt3L^2}{2}\,i ,\qquad zw=(DF-42)+(7D+6F)i .\]
 Comparing real parts, $DF-42=\frac{D^2+36}{2}$, so $F=\dfrac{D^2+120}{2D}$. Substituting into $F^2=D^2-13$:
@@ -154,12 +153,12 @@ so
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 41: Continued Fractions and Rational Approximation &middot; Applications to Integer Equations &middot; also ASEEDER x PMC Senior Theoretical Round, Problem 7</div>
 <div class="ct-text"><p>Find the smallest positive integer $n\ge100$ such that $(n+1)+(n+2)+\dots+(2n)$ is a perfect square.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$800$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Coprime factors are squares)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Coprime factors are squares</summary><div class="ct-text">
 <p>The sum is $S=\frac{(n+1)+(2n)}{2}\cdot n=\frac{n(3n+1)}{2}$, and $\gcd(n,3n+1)=1$.</p><p><em>$n$ odd is impossible.</em> Then $S=n\cdot\frac{3n+1}{2}$ with coprime factors, so both are squares: $n=u^2$ and $3u^2+1=2v^2$. Modulo $3$ this says $2v^2\equiv1$, i.e. $v^2\equiv2\pmod 3$, impossible.</p><p><em>$n$ even.</em> Then $S=\frac n2\cdot(3n+1)$ with coprime factors, so $n=2u^2$ and $6u^2+1=v^2$. We need $2u^2\ge100$, i.e. $u\ge8$. For $u=8,9,\dots,19$ the numbers $6u^2+1$ are
 \[385,487,601,727,865,1015,1177,1351,1537,1735,1945,2167,\]
 which lie strictly between consecutive squares ($19^2&lt;385&lt;20^2$, $22^2&lt;487&lt;23^2$, $24^2&lt;601&lt;25^2$, $26^2&lt;727&lt;27^2$, $29^2&lt;865&lt;30^2$, $31^2&lt;1015&lt;32^2$, $34^2&lt;1177&lt;35^2$, $36^2&lt;1351&lt;37^2$, $39^2&lt;1537&lt;40^2$, $41^2&lt;1735&lt;42^2$, $44^2&lt;1945&lt;45^2$, $46^2&lt;2167&lt;47^2$). For $u=20$: $6\cdot400+1=2401=49^2$.</p><p>So $n=2\cdot20^2=\boxed{800}$; indeed $S=400\cdot2401=980^2$.</p>
-<h4>Solution 2 (A Pell equation)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; A Pell equation</summary><div class="ct-text">
 <p>The sum is $S=\frac{n(3n+1)}2$. If $S=k^2$, then multiplying by $24$,
 \[(6n+1)^2-24k^2=1 .\]
 So $X=6n+1$, $Y=k$ is a solution of the Pell equation $X^2-24Y^2=1$, with $X\equiv1\pmod 6$. Conversely, such a solution with $X\equiv 1\pmod 6$, $X&gt;1$, gives $n=\frac{X-1}{6}$ with $S=Y^2$.</p><p>All solutions with $X,Y\ge0$ are $X_j+Y_j\sqrt{24}=(5+\sqrt{24})^j$, $j\ge0$. Indeed, let $X^2-24Y^2=1$ with $X&gt;0$, $Y\ge1$, and put $X'=5X-24Y$, $Y'=5Y-X$. Expanding gives $X'^2-24Y'^2=X^2-24Y^2=1$. From $X^2=24Y^2+1$ we get $\sqrt{24}\,Y&lt;X\le5Y$, so $X'&gt;0$ and $0\le Y'&lt;Y$. Repeating the step, $Y$ decreases until it reaches $0$, where $X=1$. The step is inverted by $X=5X'+24Y'$, $Y=X'+5Y'$, that is, $X+Y\sqrt{24}=(5+\sqrt{24})(X'+Y'\sqrt{24})$, so every solution is obtained from $(1,0)$ by repeated multiplication by $5+\sqrt{24}$. This gives $X_{j+1}=10X_j-X_{j-1}$ with $X_0=1$, $X_1=5$:
@@ -173,14 +172,14 @@ increasing, with residues $1,5,1,5,1,\dots$ modulo $6$ (the recurrence gives $X_
 <div class="ct-text"><p>Let $r_n$ be the ratio $\frac{a}{b}$ where $a\le b$ are the legs of a right triangle such that the inscribed square placed at the right-angle vertex with sides along the legs has area $\frac1n$ of the triangle's area. Compute
 \[\Bigl\lfloor\sum_{n=2}^{2026}\sqrt{r_n}\Bigr\rfloor.\]</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$62$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Solve for the ratio, then telescope)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Solve for the ratio, then telescope</summary><div class="ct-text">
 <p>The square at the right angle has its fourth vertex on the hypotenuse; with side $s$ the small triangles give $\frac sa+\frac sb=1$, so $s=\frac{ab}{a+b}$. The condition $s^2=\frac1n\cdot\frac{ab}2$ becomes $(a+b)^2=2nab$, i.e. with $r=\frac ab\le1$,
 \[r+\frac1r=2n-2,\qquad r_n=(n-1)-\sqrt{(n-1)^2-1}=(n-1)-\sqrt{n(n-2)} .\]
 Now $\left(\frac{\sqrt n-\sqrt{n-2}}{\sqrt2}\right)^2=\frac{2n-2-2\sqrt{n(n-2)}}{2}=r_n$, so $\sqrt{r_n}=\frac{\sqrt n-\sqrt{n-2}}{\sqrt2}$, and the sum telescopes:
 \[\sum_{n=2}^{2026}\sqrt{r_n}=\frac{1}{\sqrt2}\Bigl(\sqrt{2026}+\sqrt{2025}-\sqrt1-\sqrt0\Bigr)=\frac{44+\sqrt{2026}}{\sqrt2}.\]
 Since $45^2=2025&lt;2026&lt;2026.8004=45.02^2$, the numerator is between $89$ and $89.02$, and dividing by $\sqrt2\in(1.41421,1.41422)$ gives a value between $62.93$ and $62.95$. The answer is $\boxed{62}$.</p>
-<h4>Solution 2 (Sum and difference of square roots)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Sum and difference of square roots</summary><div class="ct-text">
 <p>The inscribed square has side $s=\frac{ab}{a+b}$ (from $\frac sa+\frac sb=1$, by similar triangles), so the condition $s^2=\frac{ab}{2n}$ reads $(a+b)^2=2nab$. Put $x=\sqrt{r_n}=\sqrt{a/b}\in(0,1]$. Dividing by $ab$,
 \[x^2+\frac1{x^2}+2=2n,\quad\text{so}\quad \Bigl(x+\frac1x\Bigr)^2=2n\ \text{ and }\ \Bigl(\frac1x-x\Bigr)^2=2n-4 .\]
 As $x\le1$, $x+\frac1x=\sqrt{2n}$ and $\frac1x-x=\sqrt{2n-4}$. Subtracting, $2x=\sqrt{2n}-\sqrt{2n-4}$, so
@@ -195,13 +194,13 @@ With $\sqrt{4052}\in(63.65,63.66)$ (as $63.65^2=4051.3225$ and $63.66^2=4052.595
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 33: Residues, Quadratic Structure, and Higher Congruences &middot; Quadratic Residues</div>
 <div class="ct-text"><p>In the course 1000 Years of Musical Listening, some students are studying Taylor Swift's album &ldquo;1989.&rdquo; Benedict, ambivalent toward the artist, is more interested in the number $19890$ because of its abundance of prime factors. He chooses an ordered pair $(a,b)$ of positive integers with $a+b=19890$, uniformly at random. The probability that both $a$ and $b$ are perfect squares can be written as the fraction $\frac pq$, where $p$ and $q$ are relatively prime positive integers. What is $(p+q)\bmod 1000$?</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$897$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (The two-squares theorem)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; The two-squares theorem</summary><div class="ct-text">
 <p>We read the choice as uniform over the $19889$ ordered pairs $(a,b)$ of positive integers with $a+b=19890$. We count those with $a=x^2$, $b=y^2$, $x,y\ge1$.</p><p>By Jacobi's two-squares theorem, the number of integer pairs $(x,y)$ (signs and order counted) with $x^2+y^2=N$ is $r_2(N)=4\,(d_1(N)-d_3(N))$, where $d_i(N)$ is the number of divisors of $N$ congruent to $i$ modulo $4$. Here $N=19890=2\cdot3^2\cdot5\cdot13\cdot17$. The odd divisors are $3^\alpha m$ with $\alpha\in\{0,1,2\}$ and $m\mid 5\cdot13\cdot17$; since $5,13,17\equiv1\pmod 4$, such a divisor is $\equiv 3^\alpha\pmod 4$. So
 \[d_1-d_3=(1-1+1)\cdot 2^3=8,\qquad r_2(N)=32 .\]
 $N$ is not a perfect square, so no representation has a zero coordinate, and each pair of positive squares corresponds to $4$ sign choices. Hence there are $32/4=8$ ordered pairs, the probability is $\frac{8}{19889}$ (already in lowest terms, as $19889$ is odd), and
 \[(p+q)\bmod 1000=19897\bmod1000=\boxed{897}.\]</p>
-<h4>Solution 2 (Reduce modulo 3 and list)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Reduce modulo 3 and list</summary><div class="ct-text">
 <p>There are $19889$ equally likely ordered pairs $(a,b)$. We need the ordered pairs of positive integers $(x,y)$ with $x^2+y^2=19890$.</p><p>Since $3\mid 19890$ and squares are $0$ or $1$ modulo $3$, $x^2+y^2\equiv0\pmod3$ forces $3\mid x$ and $3\mid y$. Writing $x=3x'$, $y=3y'$ gives $x'^2+y'^2=2210$. As $2210\equiv2\pmod 4$, both $x'$ and $y'$ are odd. Take $x'&lt;y'$ (they cannot be equal, since $2210/2=1105$ is not a square); then $x'^2&lt;1105$, so $x'\in\{1,3,\dots,33\}$. Computing $2210-x'^2$:
 \[\begin{array}{c|ccccccccc}
 x'&amp;1&amp;3&amp;5&amp;7&amp;9&amp;11&amp;13&amp;15&amp;17\\ \hline
@@ -221,8 +220,7 @@ The squares are $2209=47^2$, $1849=43^2$, $1681=41^2$, $1369=37^2$. So $2210=1^2
 \[\sum_{i=1}^{\infty}\sum_{j=1}^{\infty}\sum_{k=1}^{\infty}\frac{F_i\,j\,(F_i+F_j+F_k)}{(F_i\,j+F_j\,k+F_k\,i)\,5^{i+j+k}}=\frac mn .\]
 What is $m+n$?</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$309$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Cyclic symmetrization)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Cyclic symmetrization</summary><div class="ct-text">
 <p>All terms are positive, so the series may be rearranged freely. Write the sum as $S=\sum_{i,j,k\ge1}T(i,j,k)$ with
 \[T(i,j,k)=\frac{F_i\,j}{Q(i,j,k)}\cdot\frac{F_i+F_j+F_k}{5^{i+j+k}},\qquad Q(i,j,k)=F_ij+F_jk+F_ki .\]
 The cyclic shift $(i,j,k)\mapsto(j,k,i)$ is a bijection of the index set, and it leaves $Q$, $F_i+F_j+F_k$ and $5^{i+j+k}$ unchanged while turning the factor $F_ij$ into $F_jk$, and then into $F_ki$. Hence
@@ -238,11 +236,11 @@ From $F_i=F_{i-1}+F_{i-2}$ ($F_0=0$): $G=\frac15+\frac15G+\frac1{25}G$, so $\fra
 <div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Geometry &middot; LPS VI, Chapter 20: Similarity and Proportional Geometry &middot; Hidden Similarity &middot; also ASEEDER x PMC Junior Theoretical Round, Problem 11</div>
 <div class="ct-text"><p>Let $ABCD$ be a trapezoid with $AB\parallel CD$, $AB=BC=DA=1$, and $CD=2$. Let $E$ be a point on segment $\overline{BC}$ such that the perimeters of $DABE$ and $DEC$ are the same, and let $F$ be a point on segment $\overline{DA}$ such that the perimeters of $CDF$ and $CFAB$ are the same. Let $\overline{DE}$ and $\overline{CF}$ intersect at $G$. The area of triangle $EFG$ can be written as $\frac{a\sqrt b}{c}$ in simplest form. What is $a+b+c$?</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$124$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Midpoints and coordinates)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Midpoints and coordinates</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:319px" src="/assets/contests/2026-27/penn-mc-7_s1.svg" alt="Figure for the solution"></div>
 <p><em>Locating $E$ and $F$.</em> The perimeters of $DABE$ and $DEC$ are $1+1+BE+ED$ and $DE+EC+2$; they are equal iff $BE=EC$, so $E$ is the midpoint of $BC$. Similarly, the perimeters of $CDF$ and $CFAB$ are $2+DF+FC$ and $CF+FA+1+1$, so $F$ is the midpoint of $DA$.</p><p><em>Coordinates.</em> The trapezoid is half of a regular hexagon of side $1$: $D=(0,0)$, $C=(2,0)$, $A=(\frac12,\frac{\sqrt3}2)$, $B=(\frac32,\frac{\sqrt3}2)$. Then $E=(\frac74,\frac{\sqrt3}4)$ and $F=(\frac14,\frac{\sqrt3}4)$. The figure is symmetric about $x=1$, so $G$ lies on $x=1$; on line $DE$, $y=\frac{\sqrt3}{7}x$, so $G=(1,\frac{\sqrt3}7)$.</p><p>Triangle $EFG$ has base $EF=\frac32$ on the line $y=\frac{\sqrt3}4$ and height $\frac{\sqrt3}4-\frac{\sqrt3}7=\frac{3\sqrt3}{28}$, so its area is $\frac12\cdot\frac32\cdot\frac{3\sqrt3}{28}=\frac{9\sqrt3}{112}$. Thus $a+b+c=9+3+112=\boxed{124}$.</p>
-<h4>Solution 2 (Similar triangles)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Similar triangles</summary><div class="ct-text">
 <p>The perimeter conditions reduce to $BE=EC$ and $DF=FA$ (the common parts cancel: $AB+DA=2=CD$ and $AB+BC=2=CD$), so $E$ and $F$ are the midpoints of the legs $BC$ and $DA$. Hence $EF$ is the midline of the trapezoid: $EF\parallel DC$ and $EF=\frac{1+2}{2}=\frac32$.</p><p>The trapezoid is half of a regular hexagon with side $1$, so its height is $\frac{\sqrt3}2$, and the line $EF$ is at distance $\frac{\sqrt3}4$ from $DC$.</p><p>Since $EF\parallel DC$, triangles $GEF$ and $GDC$ are similar ($G=DE\cap CF$), with ratio $EF:DC=\frac32:2=3:4$. Their heights from $G$ are in the same ratio and add up to the distance $\frac{\sqrt3}4$ between the parallel lines, so the height of $GEF$ is $\frac37\cdot\frac{\sqrt3}4=\frac{3\sqrt3}{28}$. The area of $EFG$ is $\frac12\cdot\frac32\cdot\frac{3\sqrt3}{28}=\frac{9\sqrt3}{112}$, and the answer is $9+3+112=\boxed{124}$.</p>
 </div></details>
 </section>
@@ -251,14 +249,15 @@ From $F_i=F_{i-1}+F_{i-2}$ ($F_0=0$): $G=\frac15+\frac15G+\frac1{25}G$, so $\fra
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 47: Probabilistic Method and Random Structure &middot; Expectation Arguments &middot; also ASEEDER x PMC Senior Applied Round, Problem 2</div>
 <div class="ct-text"><p>In the PHYS 0150 course at Penn, after each test, Professor Heckman curves students' test scores, all of which are distinct. However, to prevent students from becoming overly reliant on the curve, he curves grades using the following method: first, he randomly picks $3$ of the $20$ students in the class. Then, of those $3$ students, he chooses the one with the highest score and curves it to $100\%$. He then curves up the score of every student in the class by the same percentage, to a maximum of $100\%$. After the curve is applied, if we select a student at random, the probability that they received a score of $100\%$ can be written as $\frac PQ$, where $P$ and $Q$ are relatively prime. What is $P+Q$?</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$101$</p></div></details>
-<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Student by student)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Student by student</summary><div class="ct-text">
 <p>Rank the students $1$ (top) to $20$. The curve multiplies all scores by the factor that brings the chosen student (the best of the three picked) to $100\%$, capping at $100\%$. So a student ends at $100\%$ exactly when his score is at least the chosen student's score, i.e. when his rank $r$ is at most the best rank among the three picked; equivalently, all three picked students have rank $\ge r$. This happens with probability $\binom{21-r}{3}\big/\binom{20}{3}$.</p><p>A random student is ranked $r$ with probability $\frac1{20}$, so the required probability is
 \[\frac{1}{20\binom{20}{3}}\sum_{r=1}^{20}\binom{21-r}{3}=\frac{1}{20\binom{20}{3}}\sum_{m=0}^{20}\binom{m}{3}=\frac{\binom{21}{4}}{20\binom{20}{3}}=\frac{5985}{20\cdot1140}=\frac{21}{80},\]
 using the hockey-stick identity. Hence $P+Q=21+80=\boxed{101}$.</p>
-<h4>Solution 2 (Gaps between the picked students)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Gaps between the picked students</summary><div class="ct-text">
 <p>Rank the students $1$ (top) to $20$ and let $J$ be the best (smallest) rank among the three picked students. After the curve, exactly the students of ranks $1,\dots,J$ have $100\%$: the chosen student is brought to $100\%$, the ones above him would exceed it and are capped, and the ones below stay below. A random student is one of these with probability $\mathbb E[J]/20$.</p><p>The three picked ranks split the other $17$ students into four groups: above the best pick, between the first and second, between the second and third, and below the third. The positions of the three picks form a uniformly random $3$-subset; reading the group sizes $(g_1,g_2,g_3,g_4)$, every composition of $17$ into $4$ nonnegative parts arises equally often, and permuting the parts is a bijection of these compositions, so the four group sizes have the same expectation $\frac{17}4$. Since $J=g_1+1$, $\mathbb E[J]=\frac{21}{4}$.</p><p>The probability is $\frac{21/4}{20}=\frac{21}{80}$, and $P+Q=\boxed{101}$.</p>
-<h4>Solution 3 (Is the random student the best of four)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 3 &ndash; Is the random student the best of four</summary><div class="ct-text">
 <p>Let $T$ be the set of three students picked by the professor and $S$ the student selected at random afterwards; $S$ is chosen uniformly among the $20$ students, independently of $T$. All scores are multiplied by the same factor, which brings the best student of $T$ to $100\%$, and anything above $100\%$ is cut to $100\%$. So $S$ ends at $100\%$ exactly when the score of $S$ is at least the best score in $T$, that is, when $S$ is the best student of the set $T\cup\{S\}$. All $20\binom{20}{3}=22800$ pairs $(S,T)$ are equally likely.</p><p><em>Case $S\in T$</em>, probability $\frac{3}{20}$. Given this, $T$ consists of $S$ and two other students, chosen uniformly; the three members of $T$ play symmetric roles, so $S$ is the best of them with probability $\frac13$.</p><p><em>Case $S\notin T$</em>, probability $\frac{17}{20}$. The pair $(S,T)$ is then the same thing as a $4$-element set $U=T\cup\{S\}$ together with one marked member $S$ of $U$: each such marked set comes from exactly one pair. So given this case, $U$ is a uniform $4$-element set and the marked member is equally likely to be any of its four students; $S$ is the best of $U$ with probability $\frac14$.</p><p>Altogether the probability is
 \[\frac{3}{20}\cdot\frac13+\frac{17}{20}\cdot\frac14=\frac{4}{80}+\frac{17}{80}=\frac{21}{80},\]
 and $P+Q=\boxed{101}$.</p>
@@ -269,10 +268,10 @@ and $P+Q=\boxed{101}$.</p>
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 12: Exponential Congruences and Order Structure &middot; Orders and Primitive Behavior &middot; also ASEEDER x PMC Junior Theoretical Round, Problem 14</div>
 <div class="ct-text"><p>David's favorite number is $67$. He also is fond of its reciprocal, $\frac{1}{67}$, which has a periodic decimal expansion of $0.\overline{a_1a_2a_3\ldots a_n}$. Find $n$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$33$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Euler criterion for 10)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Euler criterion for 10</summary><div class="ct-text">
 <p>Since $\gcd(10,67)=1$, the expansion of $\frac1{67}$ is purely periodic and its period length is the order $n$ of $10$ modulo $67$: $\frac{1}{67}=\frac{A}{10^n-1}$ for an integer $A$ exactly when $67\mid 10^n-1$. By Fermat, $n\mid 66=2\cdot3\cdot11$.</p><p>By Euler's criterion $10^{33}\equiv\left(\frac{10}{67}\right)\pmod{67}$. Now $\left(\frac{2}{67}\right)=-1$ because $67\equiv3\pmod8$, and by quadratic reciprocity $\left(\frac{5}{67}\right)=\left(\frac{67}{5}\right)=\left(\frac{2}{5}\right)=-1$. So $\left(\frac{10}{67}\right)=1$ and $10^{33}\equiv1$; thus $n\mid 33$.</p><p>Finally $10^3=1000=14\cdot67+62\equiv-5$, so $n\ne1,3$, and $10^{11}=10^{3}\cdot10^{3}\cdot10^{3}\cdot10^{2}\equiv(-5)^3\cdot 100=-12500\equiv 29\pmod{67}$ (as $12500=186\cdot67+38$ and $-38\equiv29$), so $n\neq 11$. Hence $n=\boxed{33}$.</p>
-<h4>Solution 2 (Repeated squaring)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Repeated squaring</summary><div class="ct-text">
 <p>The decimal expansion of $\frac1{67}$ is purely periodic (as $\gcd(10,67)=1$), with period length equal to the least $n\ge1$ such that $67\mid 10^n-1$, the order of $10$ modulo $67$. By Fermat's little theorem $10^{66}\equiv1$, so $n$ divides $66$.</p><p>Compute powers of $10$ modulo $67$:
 \[10^2=100\equiv33,\quad 10^3\equiv330\equiv62\equiv-5,\quad 10^6\equiv25,\quad 10^{11}=10^6\cdot10^3\cdot10^2\equiv25\cdot(-5)\cdot33=-4125\equiv29,\]
 \[10^{22}\equiv29^2=841\equiv37,\qquad 10^{33}=10^{22}\cdot10^{11}\equiv37\cdot29=1073=16\cdot67+1\equiv1 .\]
@@ -284,8 +283,7 @@ and $P+Q=\boxed{101}$.</p>
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Algebra &middot; LPS VII, Chapter 9: Polynomials and Root-Coefficient Strategy &middot; Power Sums and Newton-Type Relations &middot; also ASEEDER x PMC Senior Theoretical Round, Problem 1</div>
 <div class="ct-text"><p>Complex numbers $x,y,z$ satisfy $x^n+y^n+z^n=n$ for $n=1,2,3$. What is $\dfrac1{x^3}+\dfrac1{y^3}+\dfrac1{z^3}$?</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$45$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Newton sums for the reciprocals)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Newton sums for the reciprocals</summary><div class="ct-text">
 <p>Let $e_1=x+y+z$, $e_2=xy+yz+zx$, $e_3=xyz$ and $p_n=x^n+y^n+z^n$. Newton's identities give
 \[e_1=p_1=1,\qquad p_2=e_1p_1-2e_2\Rightarrow 2=1-2e_2\Rightarrow e_2=-\tfrac12,\]
 \[p_3=e_1p_2-e_2p_1+3e_3\Rightarrow 3=2+\tfrac12+3e_3\Rightarrow e_3=\tfrac16 .\]
@@ -293,7 +291,8 @@ Since $e_3\ne0$, none of $x,y,z$ is $0$. For the reciprocals $X=\frac1x$, $Y=\fr
 \[s_1=X+Y+Z=\frac{e_2}{e_3}=-3,\quad s_2=XY+YZ+ZX=\frac{e_1}{e_3}=6,\quad s_3=XYZ=\frac1{e_3}=6 .\]
 Then
 \[X^3+Y^3+Z^3=s_1^3-3s_1s_2+3s_3=-27+54+18=\boxed{45}.\]</p>
-<h4>Solution 2 (Reducing with the cubic)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Reducing with the cubic</summary><div class="ct-text">
 <p>From the power sums: $x+y+z=1$; $xy+yz+zx=\frac{1^2-2}{2}=-\frac12$; and from $x^3+y^3+z^3-3xyz=(x+y+z)\bigl((x^2+y^2+z^2)-(xy+yz+zx)\bigr)$ we get $3-3xyz=1\cdot(2+\frac12)$, so $xyz=\frac16$. Hence $x,y,z$ are the roots of
 \[t^3-t^2-\tfrac12t-\tfrac16=0,\]
 and none is $0$. Dividing the equation by $t^3$ gives, for each root,
@@ -308,10 +307,10 @@ Summing over the three roots: $\sum\frac1t=\frac{xy+yz+zx}{xyz}=-3$ and $\sum\fr
 <div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VII scale">E</span>Number Theory &middot; LPS VII, Chapter 21: Arithmetic Functions and Multiplicative Structure &middot; Divisor and Sum Functions &middot; also ASEEDER x PMC Junior Team Round, Problem 4, Part 3</div>
 <div class="ct-text"><p>The Palestra, Penn Men's Basketball's home court, is the oldest college basketball stadium in the country. It has a total of $N$ seats, where $N$ is a $4$-digit integer that begins with $8$. We know that there are $6$ ways to divide the Palestra into sections with an equal number of seats (including dividing it into $1$ or $N$ sections); if it had $5N$ seats, there would instead be $8$ ways to divide it. What is the largest possible value of the greatest prime divisor of $N$?</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$359$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (The shape of $N$)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; The shape of $N$</summary><div class="ct-text">
 <p>The number of ways to divide into equal sections is the number of divisors, so $\tau(N)=6$ and $\tau(5N)=8$. From $6=6\cdot1=3\cdot2$, either $N=p^5$ or $N=p^2q$ with distinct primes $p,q$.</p><ul class="ct-ul"><li><p>$N=p^5$: then $\tau(5N)=7$ if $p=5$ and $12$ otherwise.</p></li><li><p>$N=p^2q$ with $5\nmid N$: $\tau(5N)=12$. With $q=5$: $5N=5^2p^2$, $\tau=9$. With $p=5$: $5N=5^3q$, $\tau=8$.</p></li></ul><p>So $N=25q$ with a prime $q\ne5$. As $8000\le N\le 8999$, $320\le q\le359$. The number $359$ is prime (it is not divisible by $2,3,5,7,11,13,17$, and $19^2&gt;359$), so the largest possible greatest prime divisor is $\boxed{359}$ (for $N=8975$).</p>
-<h4>Solution 2 (Comparing $\tau(5N)$ with $\tau(N)$)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Comparing $\tau(5N)$ with $\tau(N)$</summary><div class="ct-text">
 <p>We need $\tau(N)=6$ and $\tau(5N)=8$, where $\tau$ counts divisors. Write $N=5^kM$ with $5\nmid M$. Then $\tau(N)=(k+1)\tau(M)$ and $\tau(5N)=(k+2)\tau(M)$, so
 \[\frac{k+2}{k+1}=\frac{8}{6}=\frac43\iff k=2 .\]
 Then $\tau(N)=3\tau(M)=6$ gives $\tau(M)=2$, i.e. $M=q$ is a prime other than $5$, and $N=25q$. The condition $8000\le 25q\le8999$ means $320\le q\le359$, and $359$ is prime ($19^2=361&gt;359$ and no prime up to $17$ divides it). The answer is $\boxed{359}$.</p>
@@ -323,8 +322,7 @@ Then $\tau(N)=3\tau(M)=6$ gives $\tau(M)=2$, i.e. $M=q$ is a prime other than $5
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 4: Divisibility and Prime Structure &middot; GCD and LCM Structure &middot; also ASEEDER x PMC Junior Team Round, Problem 5, Parts 2 and 3</div>
 <div class="ct-text"><p>Charlie the Chameleon is quite an odd chameleon and also quite the fan of odd numbers. After sitting in a tree all day, he decides to spice up his life by adding odd numbers. He creates a sequence starting with $1$, then adds the odd numbers in order: first $1$, then $3$, then $5$, and so on. Let this sequence be $c_n$ where $c_0=1$, $c_1=c_0+1=2$, $c_2=c_1+3=5$, $c_3=c_2+5=10$, and so on.</p><p><strong>Part 2:</strong> Find the sum of all possible values $\gcd(c_j,c_{j+1})$ for some positive integer $j$.</p><p><strong>Part 3:</strong> Let $n$ be some fixed integer where $1\le n\le4$. What is the maximum possible value of $\gcd(c_j,c_{j+n})$ for some positive integer $j$?</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>Part 2: $6$; Part 3: $5$, $2$, $13$, $10$ for $n=1,2,3,4$ (largest $13$)</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Eliminating $j$)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Eliminating $j$</summary><div class="ct-text">
 <p>Since $1+3+\dots+(2n-1)=n^2$, we have $c_n=n^2+1$.</p><p><strong>Part 2.</strong> Let $d=\gcd(j^2+1,(j+1)^2+1)$. Then $d$ divides the difference $2j+1$, and hence $4(j^2+1)-(2j+1)(2j-1)=5$. So $d\in\{1,5\}$, and both occur: $\gcd(c_1,c_2)=\gcd(2,5)=1$ and $\gcd(c_2,c_3)=\gcd(5,10)=5$. The sum is $\boxed{6}$.</p><p><strong>Part 3.</strong> Let $g=\gcd(c_j,c_{j+n})$. Then $g$ divides $c_{j+n}-c_j=n(2j+n)$. Three facts bound $g$.</p><ul class="ct-ul"><li><p><em>Odd primes not dividing $n$.</em> If $p$ is an odd prime with $p\nmid n$ and $p^e\mid g$, then $p^e\mid 2j+n$, so $p^e$ divides $4(j^2+1)-(2j+n)(2j-n)=n^2+4$.</p></li><li><p><em>The prime $2$.</em> $j^2+1\equiv1$ or $2\pmod 4$, so $4\nmid g$. If $n$ is odd, $2j+n$ is odd and $c_{j+n}-c_j=n(2j+n)$ is odd, so $g$ is odd.</p></li><li><p><em>The prime $3$.</em> $j^2+1\not\equiv0\pmod 3$, so $3\nmid g$.</p></li></ul><p>Now take each $n$ in turn; in each case we give an upper bound for $g$ and a $j$ that attains it.</p><ul class="ct-ul"><li><p>$n=1$: $g$ is odd, and its odd prime powers divide $1+4=5$, so $g\mid5$. Attained: $\gcd(c_2,c_3)=\gcd(5,10)=5$. The maximum is $\boxed{5}$.</p></li><li><p>$n=2$: no odd prime divides $2$, so every odd prime power dividing $g$ divides $2^2+4=8$; hence $g$ has no odd prime factor, and as $4\nmid g$, $g\le2$. Attained: $\gcd(c_1,c_3)=\gcd(2,10)=2$. The maximum is $\boxed{2}$.</p></li><li><p>$n=3$: $g$ is odd and $3\nmid g$, so all prime factors of $g$ are odd primes not dividing $3$, and their powers divide $3^2+4=13$; hence $g\mid13$. Attained: $\gcd(c_5,c_8)=\gcd(26,65)=13$. The maximum is $\boxed{13}$.</p></li><li><p>$n=4$: no odd prime divides $4$, so the odd part of $g$ divides $4^2+4=20$, hence divides $5$; with $4\nmid g$ this gives $g\mid10$. Attained: $\gcd(c_3,c_7)=\gcd(10,50)=10$. The maximum is $\boxed{10}$.</p></li></ul><p>The largest of the four values, that is, the maximum over all $n$ with $1\le n\le4$ and all $j$, is $13$.</p>
 </div></details>
 </section>
@@ -334,12 +332,12 @@ Then $\tau(N)=3\tau(M)=6$ gives $\tau(M)=2$, i.e. $M=q$ is a prime other than $5
 <div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Combinatorics &middot; LPS VI, Chapter 22: Pigeonhole Principle and Guaranteed Existence &middot; Worst-Case Thresholds</div>
 <div class="ct-text"><p>In EPID 5100: Introductory Epidemiology, the professor is running an activity. Everyone is given a cup of water, except that one cup contains a chemical that looks like water but turns pink when a different chemical is added. For five rounds, each student will mix the contents of their cup with another student in a way such that if one cup contained any amount of the chemical before mixing, both cups will contain some amount of the chemical after mixing. The students cannot mix with the same person twice. If there are $150$ students, after the five rounds, let $a$ be the minimum possible number of cups that will contain the chemical, and let $b$ be the maximum possible number of cups that will contain the chemical. What is $b-a$?</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$26$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Bounds and constructions)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Bounds and constructions</summary><div class="ct-text">
 <p>In each round the $150$ students are split into $75$ mixing pairs, and no pair repeats.</p><p><em>Maximum.</em> In one round the number of cups with the chemical can at most double (each such cup contaminates at most its partner). Starting from $1$, after five rounds there are at most $2^5=32$. This is attained. Suppose that before round $r$ ($1\le r\le5$) exactly $2^{r-1}$ students are contaminated. Each student has had at most $r-1\le4$ partners so far, so we can give the contaminated students, one after another, distinct clean partners they have never met: when we come to the $i$-th of them, at most $(i-1)+4\le 19$ of the $150-2^{r-1}\ge134$ clean students are excluded. Then we pair the remaining clean students among themselves avoiding old pairs. This is possible. The remaining $m=150-2^r\ge118$ students form an even number; join two of them when they have not met yet, so each has at least $m-1-4\ge\frac m2$ such neighbours. Take a largest set $M$ of disjoint pairs of neighbours. If some two students $u,v$ are left unpaired, they are not neighbours and all their neighbours are paired (else $M$ could be enlarged). For a pair $\{p,q\}$ of $M$, if $u$ is a neighbour of $p$ and $v$ of $q$, replacing $\{p,q\}$ by $\{u,p\},\{v,q\}$ would enlarge $M$; so among the four possible neighbour relations between $\{u,v\}$ and $\{p,q\}$ at most two hold. Hence $\deg u+\deg v\le 2|M|\le m-2$, contradicting $\deg u,\deg v\ge\frac m2$. So $M$ pairs all $m$ students. So $b=32$.</p><p><em>Minimum.</em> The student $S$ who starts with the chemical mixes with $5$ different partners, and each of them gets the chemical. So at least $6$ cups contain it. This is attained: take $S$ and five others, $T=\{S,P_1,\dots,P_5\}$, and in each round pair the six members of $T$ among themselves using the $5$ rounds of a round-robin schedule for $6$ players, for example
 \[\{01,23,45\},\ \{02,14,35\},\ \{03,15,24\},\ \{04,13,25\},\ \{05,12,34\}\]
 (with $S=0$), while the other $144$ students use $5$ rounds of a round-robin schedule among themselves: call one of them $\infty$, label the others by the residues modulo $143$, and in round $r$ pair $\infty$ with $r$ and $r+i$ with $r-i$ for $1\le i\le71$. A pair $\{x,y\}$ of residues occurs only in the round with $2r\equiv x+y\pmod{143}$, and $\{\infty,x\}$ only in round $r\equiv x$, so no pair repeats. The chemical never leaves $T$, so exactly $6$ cups contain it. So $a=6$.</p><p>Therefore $b-a=32-6=\boxed{26}$.</p>
-<h4>Solution 2 (Explicit schedules: binary labels and a round robin)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Explicit schedules: binary labels and a round robin</summary><div class="ct-text">
 <p>In each round the $150$ students form $75$ mixing pairs, and no two students mix twice.</p><p><em>A round-robin schedule.</em> We shall need this tool twice. Take a group of $m+1$ students, where $m$ is odd; call one of them $\infty$ and label the others by the residues $0,1,\dots,m-1$ modulo $m$. In round $r$ pair $\infty$ with $r$, and pair $r+i$ with $r-i$ for $i=1,2,\dots,\frac{m-1}{2}$ (all modulo $m$). The residues $r,r\pm1,\dots,r\pm\frac{m-1}{2}$ are all different because $m$ is odd, so every member of the group has exactly one partner in round $r$. Two residues $a\ne b$ are paired only in the round with $2r\equiv a+b\pmod m$, and $\infty$ is paired with $a$ only in round $r\equiv a$; since $2$ is invertible modulo $m$, each pair occurs in at most one round $r\in\{1,\dots,5\}$ when $m\ge5$. So rounds $1$ to $5$ never repeat a pair.</p><p><em>Maximum.</em> If $k$ cups contain the chemical before a round, each of them reaches at most one new cup in that round, so afterwards at most $2k$ cups contain it. Starting from one cup, after five rounds at most $2^5=32$ cups contain it.</p><p>To reach $32$, pick $32$ students, including the one with the chemical, and label them by the $32$ strings of five binary digits, the chemical starting in $00000$. In round $r$ pair every string with the string that differs from it exactly in digit $r$. Two strings are paired in at most one round (they differ in exactly one digit), so no pair repeats. We claim that after round $r$ the chemical is exactly in the cups whose labels have zeros in digits $r+1,\dots,5$. Before round $1$ this set is $\{00000\}$. If before round $r$ the chemical is exactly in the strings with zeros in digits $r,\dots,5$, then round $r$ pairs each of them with the string obtained by changing digit $r$, and these new partners are exactly the strings with zeros in digits $r+1,\dots,5$ and a one in digit $r$; no other pair involves the chemical. This proves the claim, and after round $5$ all $32$ cups contain the chemical. The other $118$ students mix only among themselves, with the round-robin schedule for $m=117$. So $b=32$.</p><p><em>Minimum.</em> The student who starts with the chemical mixes with five different partners, and each of them then has the chemical: at least $6$ cups. To reach $6$, let this student and five others form a group that uses the round-robin schedule for $m=5$, while the other $144$ students use the round-robin schedule for $m=143$. The chemical never leaves the group of six, so $a=6$.</p><p>Therefore $b-a=32-6=\boxed{26}$.</p>
 </div></details>
 </section>
@@ -348,8 +346,7 @@ Then $\tau(N)=3\tau(M)=6$ gives $\tau(M)=2$, i.e. $M=q$ is a prime other than $5
 <h3>Problem 1</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Combinatorics &middot; LPS VI, Chapter 18: Parity, Invariants, and Monovariants &middot; Invariants</div>
 <div class="ct-text"><p>A dragon has $100$ heads. A knight wields two swords: the long sword chops off $7$ heads, but $4$ grow back; the short sword chops off $4$ heads, but $1$ grows back. Prove that no sequence of strikes can ever leave the dragon with zero heads after a strike (the regrowth counts as part of the strike).</p></div>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (An invariant modulo 3)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; An invariant modulo 3</summary><div class="ct-text">
 <p>A strike with the long sword changes the number of heads by $-7+4=-3$, and a strike with the short sword by $-4+1=-3$. So after every complete strike the number of heads has decreased by exactly $3$, and its remainder modulo $3$ never changes.</p><p>At the start there are $100=3\cdot33+1$ heads, so the number of heads is always $\equiv1\pmod 3$. Since $0\equiv0\pmod3$, the dragon can never be left with $0$ heads.</p>
 </div></details>
 </section>
@@ -357,10 +354,10 @@ Then $\tau(N)=3\tau(M)=6$ gives $\tau(M)=2$, i.e. $M=q$ is a prime other than $5
 <h3>Problem 2</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Combinatorics &middot; LPS VI, Chapter 22: Pigeonhole Principle and Guaranteed Existence &middot; Basic Pigeonhole Arguments</div>
 <div class="ct-text"><p>Twenty people, $12$ men and $8$ women, sit at twenty equally spaced seats around a circle. Prove that there exists a pair of diametrically opposite seats that are both occupied by men.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Pigeonhole on the men)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Pigeonhole on the men</summary><div class="ct-text">
 <p>The $20$ equally spaced seats form $10$ pairs of diametrically opposite seats, and every seat belongs to exactly one pair. Place the $12$ men into the pairs containing their seats. Since $12&gt;10$, by the pigeonhole principle some pair receives two men, i.e. both seats of some opposite pair are occupied by men.</p>
-<h4>Solution 2 (Counting the pairs that contain a woman)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Counting the pairs that contain a woman</summary><div class="ct-text">
 <p>Group the $20$ equally spaced seats into the $10$ pairs of diametrically opposite seats. Each of the $8$ women lies in exactly one pair, so at most $8$ pairs contain a woman. Hence at least $10-8=2$ pairs contain no woman, and both seats of such a pair are occupied by men. (In fact this shows there are at least two such pairs.)</p>
 </div></details>
 </section>

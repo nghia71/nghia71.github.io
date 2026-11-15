@@ -97,7 +97,6 @@ description: Polish Mathematical Olympiad 2026, First Round: problems with answe
 <p>The 12 problems of the Polish Mathematical Olympiad 2026, First Round, each with our own solutions, hidden until you open them. 3 of them ask for an answer and 9 ask for a proof. Where a problem has a final answer, it is shown separately. Try a problem first, then check.</p><p>The first round of the Polish olympiad is a take-home round with twelve problems.</p>
 </div>
 <div class="ct-credit">Problems: Polish Mathematical Olympiad 2026, First Round, from the AoPS contest collection or the official paper. Solutions written by MCC.</div>
-<div class="ct-bar"><button type="button" onclick="ctAll(true)">Show all answers and solutions</button><button type="button" onclick="ctAll(false)">Hide all</button></div>
 <div class="ct-toc-wrap"><div class="ct-toc-row"><a href="#p1">1</a><a href="#p2">2</a><a href="#p3">3</a><a href="#p4">4</a><a href="#p5">5</a><a href="#p6">6</a><a href="#p7">7</a><a href="#p8">8</a><a href="#p9">9</a><a href="#p10">10</a><a href="#p11">11</a><a href="#p12">12</a></div></div>
 
 {% raw %}
@@ -106,8 +105,7 @@ description: Polish Mathematical Olympiad 2026, First Round: problems with answe
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 17: Sequences, Recurrences, and Discrete Dynamics &middot; Closed Forms and Hidden Structure</div>
 <div class="ct-text"><p>Piotrek is playing with pebbles. He starts with an empty stack. In $i$-th move, Piotrek removes $i$ pebbles from the stack if he can. If he can't, he adds $i$ pebbles to the stack. For example, after first $5$ moves, Piotrek has $1,3,0,4,9$ pebbles respectively. Find all positive integers $n$ such that Piotrek has $0$ pebbles after $n$ moves.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$n=\dfrac{3^k-3}{2}$ with $k\ge2$, i.e. $n=3,12,39,120,363,\dots$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (From one empty stack to the next)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; From one empty stack to the next</summary><div class="ct-text">
 <p>Let $s_i$ be the number of pebbles after move $i$, with $s_0=0$. In move $i$ Piotrek removes $i$ pebbles if $s_{i-1}\ge i$ and adds $i$ otherwise.</p><p><strong>Claim.</strong> If $s_n=0$ for some $n\ge0$, then $s_i&gt;0$ for $n&lt;i&lt;3n+3$ and $s_{3n+3}=0$.</p><p><em>Proof.</em> Move $n+1$ adds: $s_{n+1}=n+1$. Move $n+2$ adds (as $n+1&lt;n+2$): $s_{n+2}=2n+3$. We show by induction on $j=1,2,\dots,n+1$ that
 \[s_{n+2j}=2n+2+j\qquad\text{and}\qquad s_{n+2j+1}=n+1-j .\]
 For $j=1$ the first formula holds. If $s_{n+2j}=2n+2+j$ with $j\le n+1$, then $s_{n+2j}\ge n+2j+1$ (this is $j\le n+1$), so move $n+2j+1$ removes and
@@ -122,8 +120,7 @@ $n_{k+1}+\frac32=3\bigl(n_k+\frac32\bigr)$, we get $n_k=\frac32(3^k-1)=\frac{3^{
 <h3>Problem 2</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 3: Foundational Angle and Configuration Chasing &middot; Cyclic Quadrilateral Recognition</div>
 <div class="ct-text"><p>Let $I$ be the incenter of an acute triangle $ABC$. Circle $o$ passes through $I$ and is tangent to $BC$ at $C$. Ray $BI$ meets $o$ again at $D\ne I$. Ray $BA$ meets the circumcircle of $ADI$ again at $E\ne A$, which lies outside the segment $AB$. Prove that the intersection of lines $DE$ and $AI$ lies on $o$.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (A directed angle chase)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; A directed angle chase</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:352px" src="/assets/contests/2026-27/poland-r1-2_s1.svg" alt="Figure for the solution"></div>
 <p>We use directed angles $\measuredangle(\ell,m)$ between lines, modulo $180^\circ$. Let $X$ be the intersection of the lines $DE$ and $AI$. Since $o$ passes
 through $C,D,I$, it suffices to show
@@ -137,7 +134,8 @@ Therefore
 and the difference of the two sides is
 \[\bigl[\measuredangle(BI,AI)-\measuredangle(BI,IC)\bigr]+\measuredangle(AB,AI)-\measuredangle(CB,CI)=\measuredangle(IC,AI)+\measuredangle(AB,AI)-\measuredangle(CB,CI)=0 .\]
 This proves (1), so the intersection $X$ of $DE$ and $AI$ lies on $o$.</p><p><em>Remark.</em> The proof does not use that $E$ lies outside segment $AB$ (that holds exactly when $BC&gt;BA$, because $BA\cdot BE=BI\cdot BD=BC^2$ by powers of the point $B$).</p>
-<h4>Solution 2 (Coordinates on the bisector of angle $B$)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Coordinates on the bisector of angle $B$</summary><div class="ct-text">
 <p>Let $a=BA$, $c=BC$, $b=CA$, let $\theta$ be half of $\angle ABC$, and $t=\cos\theta$, $s=\sin\theta$ (so $s,t&gt;0$). Scale so that $BI=1$ and put
 $B=(0,0)$, $I=(1,0)$ (the bisector $BI$ is the $x$-axis), $A=(at,as)$, $C=(ct,-cs)$.</p><p><strong>The incentre condition.</strong> The inradius is the distance from $I$ to $BA$, which is $BI\sin\theta=s$. Splitting $ABC$ into $IBC$, $ICA$, $IAB$ gives
 $[ABC]=\frac s2(a+b+c)$, while $[ABC]=\frac12ac\sin2\theta=acst$. So $b=2act-a-c$. The law of cosines gives
@@ -161,15 +159,15 @@ by (1), so $\lambda'=\lambda$: the intersection $P$ of $DE$ and $AI$ lies on $o$
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Algebra &middot; LPS VII, Chapter 1: Inequalities: Core Classical Methods &middot; Elementary Bounding and Local Estimates</div>
 <div class="ct-text"><p>Positive integer $n$ and real numbers $x_1,x_2,\dots,x_{2n+1}$ are given. Assume that $x_i+x_{i+1}\ge 0$ for $i=1,2,\dots,2n+1$, where $x_{2n+2}=x_1$. Prove that
 \[\sum_{i=1}^{2n+1}|x_i|\le(2n+1)\sum_{i=1}^{2n+1}x_i.\]</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Each term is at most the total)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Each term is at most the total</summary><div class="ct-text">
 <p>Indices are cyclic ($x_{2n+2}=x_1$), and let $S=x_1+\dots+x_{2n+1}$. We show $|x_i|\le S$ for every $i$; adding these $2n+1$ inequalities gives
 the claim.</p><p>Fix $i$. The other $2n$ terms $x_{i+1},x_{i+2},\dots,x_{i+2n}$ split into the $n$ consecutive pairs $(x_{i+1},x_{i+2}),\dots,(x_{i+2n-1},x_{i+2n})$, each with
 non-negative sum, so $S-x_i\ge0$, i.e. $x_i\le S$.</p><p>Also, the $2n+2$ terms $x_i,x_{i+1},\dots,x_{i+2n},x_{i+2n+1}=x_i$ (that is, all terms, with $x_i$ counted twice) split into the $n+1$ consecutive pairs
 $(x_i,x_{i+1}),(x_{i+2},x_{i+3}),\dots,(x_{i+2n},x_i)$, each with non-negative sum, so $S+x_i\ge0$, i.e. $-x_i\le S$.</p><p>Hence $|x_i|\le S$ for all $i$, and
 \[\sum_{i=1}^{2n+1}|x_i|\le(2n+1)S=(2n+1)\sum_{i=1}^{2n+1}x_i .\]
 The constant $2n+1$ cannot be improved: for $(x_1,\dots,x_{2n+1})=(1,-1,1,-1,\dots,-1,1)$ all neighbour sums are $0$ or $2$, $S=1$ and $\sum|x_i|=2n+1$.</p>
-<h4>Solution 2 (An alternating sum of neighbour sums)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; An alternating sum of neighbour sums</summary><div class="ct-text">
 <p>Indices are cyclic modulo $m=2n+1$. Put $s_j=x_j+x_{j+1}\ge0$ and $S=x_1+\dots+x_m$; then $s_1+\dots+s_m=2S$. For a fixed $i$ consider the
 alternating sum of the $m$ numbers $s_i,s_{i+1},\dots,s_{i+2n}$:
 \[s_i-s_{i+1}+s_{i+2}-\dots+s_{i+2n}=\sum_{k=0}^{2n}(-1)^k\bigl(x_{i+k}+x_{i+k+1}\bigr)=2x_i .\]
@@ -187,8 +185,7 @@ and $\sum|x_i|=2n+1$.</p>
 \[b\ge 1+\sqrt{4a+1}\]
 and find all $a,b$ for which equality occurs.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>Equality holds exactly for $(a,b)=(m(m-1),\,2m)$ with $m\ge2$, i.e. $(2,4),(6,6),(12,8),(20,10),\dots$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Difference of two squares)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Difference of two squares</summary><div class="ct-text">
 <p>Let $a^2+ab=t(t+1)$; since $t(t+1)=(-t-1)(-t)$ we may assume $t\ge0$. Multiplying by $4$ and adding $1$, and comparing with $(2a+b)^2$:
 \[4a^2+4ab+1=(2t+1)^2,\qquad (2a+b)^2-(2t+1)^2=b^2-1 .\]
 As $b&gt;1$, the right side is positive, so $u=2a+b-(2t+1)$ and $v=2a+b+(2t+1)$ are positive integers with
@@ -199,7 +196,8 @@ Since $u,v\ge1$, $(u-1)(v-1)\ge0$, i.e. $uv\ge u+v-1$:
 forces $m\ge2$. Conversely, for $a=m(m-1)$, $b=2m$ ($m\ge2$) we have $a^2+ab=a(a+b)=m(m-1)\cdot m(m+1)=(m^2-1)m^2$, a product of two consecutive integers, and
 $1+\sqrt{4a+1}=1+(2m-1)=b$. So equality holds exactly for
 \[\boxed{(a,b)=(m(m-1),\,2m),\ m\ge2}.\]</p>
-<h4>Solution 2 (Write $t=a+c$)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Write $t=a+c$</summary><div class="ct-text">
 <p>Let $a^2+ab=t(t+1)$ with $t\ge0$ (replace $t$ by $-t-1$ if necessary). Since $b\ge2$, $t(t+1)=a(a+b)\ge a(a+2)&gt;a(a+1)$, so $t&gt;a$; write $t=a+c$ with
 $c\ge1$. Expanding $(a+c)(a+c+1)=a^2+ab$ gives
 \[a(2c+1)+c(c+1)=ab,\qquad\text{so}\qquad x:=b-2c-1=\frac{c(c+1)}a .\]
@@ -215,8 +213,7 @@ hypothesis: $a^2+ab=(m^2-1)m^2$. So equality occurs exactly for $\boxed{(a,b)=(m
 <div class="ct-text"><p>Find all positive integers $k,n$ such that
 \[3^k+n^3+6=\prod_{i=k}^{k+n-1}i.\]</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$(k,n)=(3,3)$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Parity, then powers of $3$)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Parity, then powers of $3$</summary><div class="ct-text">
 <p>Let $P=k(k+1)\cdots(k+n-1)$, a product of $n$ consecutive positive integers; it is divisible by $n!$, since $P/n!=\binom{k+n-1}{n}$.</p><p><strong>$n=1$.</strong> The equation $3^k+7=k$ is impossible, as $3^k&gt;k$.</p><p><strong>$n$ is odd.</strong> For $n\ge2$, $P$ is even, while $3^k+n^3+6\equiv1+n\pmod2$. So $n$ is odd.</p><p><strong>$3\mid n$.</strong> For $n\ge3$, $3\mid P$, while $3^k+n^3+6\equiv n^3\equiv n\pmod 3$. So $3\mid n$, and $n\in\{3,9,15,\dots\}$.</p><p><strong>$n\ge9$ is impossible.</strong> Then $3^4\mid9!\mid P$. But $27\mid n^3$, so: if $k\ge2$, $3^k+n^3+6\equiv6\pmod9$ is not divisible by $9$; if $k=1$,
 $3+n^3+6\equiv9\pmod{27}$ is not divisible by $27$. Either way the left side is not divisible by $81$, a contradiction.</p><p><strong>$n=3$.</strong> The equation is $3^k+33=k(k+1)(k+2)$. For $k=1,2,3,4$ the two sides are $36$ vs $6$, $42$ vs $24$, $60$ vs $60$, $114$ vs $120$. For $k\ge5$ even
 $3^k&gt;k(k+1)(k+2)$: at $k=5$, $243&gt;210$, and when $k$ increases by $1$, $3^k$ is multiplied by $3$ while $k(k+1)(k+2)$ is multiplied by $\frac{k+3}{k}\le\frac85&lt;3$.
@@ -227,8 +224,7 @@ So for $k\ge5$ the left side $3^k+33$ is larger than the right side.</p><p>Hence
 <h3>Problem 6</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Algebra &middot; LPS VII, Chapter 18: Invariants and Monovariants &middot; Monovariants and Directional Change</div>
 <div class="ct-text"><p>A sequence of $2025$ real numbers with sum $0$ is given. We will modify the sequence using the following procedure: Let $A$ be the number of positive terms in this sequence, $B$ be the number of negative terms in this sequence and let $S$ be the sum of the positive terms. From every positive term, we subtract $\frac{S}{A}$ and we add $\frac{S}{B}$ to every negative term. Assume that after every application of this procedure, at least one term of the sequence is nonzero. Prove that after a finite number of such procedures, absolute values of all the terms will be smaller than $\frac{1}{2025}$.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (The sum of squares shrinks geometrically)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; The sum of squares shrinks geometrically</summary><div class="ct-text">
 <p>Let $N=2025$, let $x_1,\dots,x_N$ be the current terms and $Q=\sum x_i^2$.</p><p><strong>One step.</strong> If all terms are $0$ there is nothing to prove; otherwise, as the sum is $0$, there are positive and negative terms, so $A,B\ge1$ and $S&gt;0$, and the negative terms
 sum to $-S$. The step replaces each positive term $p$ by $p-\mu_+$ with $\mu_+=\frac SA$ (the mean of the positive terms), each negative term $q$ by $q-\mu_-$ with
 $\mu_-=-\frac SB$ (the mean of the negative terms), and keeps the zeros. The sum stays $0$. Using $\sum(p-\mu)^2=\sum p^2-A\mu^2$ for $A$ numbers with mean $\mu$, the
@@ -236,7 +232,8 @@ new sum of squares is
 \[Q'=Q-A\mu_+^2-B\mu_-^2=Q-S^2\Bigl(\frac1A+\frac1B\Bigr).\]</p><p><strong>Estimates.</strong> Since $A+B\le N$, $\frac1A+\frac1B\ge\frac4{A+B}\ge\frac4N$. Also $\sum|x_i|=2S$, so $Q\le\bigl(\sum|x_i|\bigr)^2=4S^2$. Therefore
 \[Q'\le Q-\frac4N\cdot\frac Q4=\Bigl(1-\frac1N\Bigr)Q .\]</p><p><strong>Conclusion.</strong> After $t$ steps the sum of squares is at most $\bigl(1-\frac1N\bigr)^tQ_0$, which tends to $0$. Choose $t$ with
 $\bigl(1-\frac1N\bigr)^tQ_0&lt;\frac1{N^2}$. Then every term satisfies $|x_i|\le\sqrt{Q_t}&lt;\frac1N=\frac1{2025}$.</p>
-<h4>Solution 2 (The largest absolute value shrinks)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; The largest absolute value shrinks</summary><div class="ct-text">
 <p>Let $N=2025$. We show that one step multiplies the largest absolute value of the terms by a factor smaller than $1-\frac1N$.</p><p><strong>One step.</strong> Let $x_1,\dots,x_N$ be the current terms, with sum $0$. If all of them are $0$ there is nothing to prove. Otherwise there are positive and
 negative terms (the sum is $0$), so $A,B\ge1$, hence $A\le N-1$ and $B\le N-1$. Let $\mathcal M=\max_i|x_i|&gt;0$. The sum of the positive terms is $S$, and since the
 total is $0$, the sum of the absolute values of the negative terms is also $S$. The term of largest absolute value belongs to one of these two groups, so
@@ -255,8 +252,7 @@ this bound is below $\frac1N=\frac1{2025}$, and then all terms have absolute val
 <h3>Problem 7</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure &middot; Tangency and Tangent Geometry</div>
 <div class="ct-text"><p>Let $AD$ be an altitude in an acute triangle $ABC$. Points $E,F$ are the projections of $D$ onto lines $AB$ and $AC$ respectively. Points $K,L,M$ are the midpoints of $BD,BC,DC$ respectively. Prove that the lines $EK,AL,FM$ are concurrent.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Tangents and the symmedian)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Tangents and the symmedian</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:243px" src="/assets/contests/2026-27/poland-r1-7_s1.svg" alt="Figure for the solution"></div>
 <p>Let $\omega$ be the circle with diameter $AD$; it passes through $E$ and $F$ (right angles $AED$, $AFD$). Let $\alpha=\angle BAC&lt;90^\circ$.</p><p><strong>$KE$ and $MF$ are tangents to $\omega$.</strong> $K$ is the midpoint of the hypotenuse $BD$ of the right triangle $BED$, so $KE=KD$. As $KD\perp AD$, the line $KD$ is
 tangent to $\omega$ at $D$, so the power of $K$ is $KD^2=KE^2$. If the line $KE$ met $\omega$ again at $E'$, then $KE\cdot KE'=KE^2$ would give $E'=E$; so $KE$ is the
@@ -270,7 +266,8 @@ by the law of sines in $AEF$. The median $AL$ meets segment $EF$ at an interior 
 because $BL=LC$ means $AB\sin\angle BAL=AC\sin\angle CAL$ (equal areas of $ABL$ and $ACL$). Finally, in the right triangles $ADB$ and $ADC$,
 $AE\cdot AB=AD^2=AF\cdot AC$, so $\frac{AC}{AB}=\frac{AE}{AF}$ and $\frac{ES'}{S'F}=\frac{AE^2}{AF^2}=\frac{ES}{SF}$. Hence $S'=S$, the lines $AL$ and $AT$ coincide, and
 $T\in AL$.</p><p>So the lines $EK$, $FM$ (the tangents at $E$, $F$) and $AL$ all pass through $T$.</p>
-<h4>Solution 2 (Coordinates)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Coordinates</summary><div class="ct-text">
 <p>Put $D=(0,0)$, $A=(0,a)$, $B=(-b,0)$, $C=(c,0)$ with $a,b,c&gt;0$. The angle at $A$ is acute, i.e. $\vec{AB}\cdot\vec{AC}=a^2-bc&gt;0$.</p><p>The foot of the perpendicular from $D$ to $AB$ divides $AB$ in the ratio $AE:EB=AD^2:BD^2=a^2:b^2$, so
 \[E=\frac{b^2A+a^2B}{a^2+b^2}=\frac{(-a^2b,\ ab^2)}{a^2+b^2},\qquad F=\frac{(a^2c,\ ac^2)}{a^2+c^2},\]
 and $K=(-\frac b2,0)$, $L=(\frac{c-b}2,0)$, $M=(\frac c2,0)$. Consider the point
@@ -284,8 +281,7 @@ $C,F,M$, fixes $A,D,L$, and turns the formula for $T$ into itself; so the same i
 <div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 10: Double Counting and Counting Identities &middot; Direct Double Counting</div>
 <div class="ct-text"><p>Positive integer $n$ is given. We will call every injective function $f:\{1,\dots,n\}\to\{1,\dots,n\}$ a permutation. Pairwise distinct permutations $f_1,\dots,f_N$ are given. Assume that for every pair of indices (not necessarily distinct) $i,j$, there exists $k$ such that $f_i\circ f_j=f_k$. For $1\le i&lt;j\le n$ let $Z(i,j)$ denote the number of indices $l$ such that $f_l(i)&gt;f_l(j)$. Prove that
 \[\frac{N}{2}\cdot\sum_{1\le i&lt;j\le n}Z(i,j)=\sum_{1\le i&lt;j\le n}Z(i,j)^2.\]</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Count pairs inverted by two permutations)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Count pairs inverted by two permutations</summary><div class="ct-text">
 <p>For a permutation $g$ let $I(g)$ be the set of pairs $\{i,j\}$ ($i&lt;j$) with $g(i)&gt;g(j)$ (inversions), and $\operatorname{inv}(g)=|I(g)|$. Let
 $G=\{f_1,\dots,f_N\}$.</p><p><strong>$G$ is a group.</strong> It is closed under composition. For $g\in G$ the powers $g,g^2,\dots$ lie in the finite set $G$, so $g^a=g^b$ for some $a&lt;b$; then
 $g^{b-a}=\mathrm{id}\in G$, and $g^{-1}=g^{b-a-1}\in G$ (this is $\mathrm{id}$ if $b-a=1$).</p><p><strong>The two sides.</strong> $Z(i,j)$ counts the $g\in G$ with $\{i,j\}\in I(g)$, so
@@ -295,7 +291,8 @@ pairs, so does $\{h(i),h(j)\}$; hence the number of disagreements is $\operatorn
 $J=\sum_{g\in G}\operatorname{inv}(g)$: the first two terms give $NJ$ each, and for each fixed $h$ the map $g\mapsto gh^{-1}$ is a bijection of $G$ (as $G$ is a group),
 so the third term also gives $NJ$. Hence
 \[\sum_{i&lt;j}Z(i,j)^2=\frac12(NJ+NJ-NJ)=\frac N2\,J=\frac N2\sum_{i&lt;j}Z(i,j).\]</p>
-<h4>Solution 2 (An orthogonal projection)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; An orthogonal projection</summary><div class="ct-text">
 <p>Let $G=\{f_1,\dots,f_N\}$. It is a group: for $g\in G$ the powers $g,g^2,\dots$ lie in the finite set $G$, so $g^a=g^b$ for some $a&lt;b$; as $g$ is invertible,
 $g^{b-a}=\mathrm{id}\in G$, and $g^{-1}=g^{b-a-1}$ (read $\mathrm{id}$ if $b-a=1$) lies in $G$. Let $W$ be the real vector space of functions $v$ on the ordered pairs $(i,j)$ of
 distinct elements of $\{1,\dots,n\}$ with $v(j,i)=-v(i,j)$, with the inner product
@@ -314,8 +311,7 @@ $+1$, so $(Tv_0)(i,j)=1-\frac{2Z(i,j)}N$ and $(Ev_0)(i,j)=\frac{2Z(i,j)}N$. Then
 <h3>Problem 9</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 49: Combinatorial Number Theory and Structure &middot; Additive Structure and Sums of Integers</div>
 <div class="ct-text"><p>A sequence $a_1,a_2,\dots$ of positive integers is given. Assume that $\gcd(a_2-a_1,a_3-a_2,\dots)=1$. Prove that there exists a positive integer $N$ such that the sum of some $N$ elements (not necessarily distinct) of the sequence is equal to the sum of some $N+1$ elements (not necessarily distinct) of the sequence.</p></div>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (An integer combination with coefficient sum $1$)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; An integer combination with coefficient sum $1$</summary><div class="ct-text">
 <p>Let $d_k=a_{k+1}-a_k$. Not all $d_k$ are $0$ (their gcd is $1$); let $d_{k_0}\ne0$. For $K\ge k_0$ the numbers $g_K=\gcd(d_1,\dots,d_K)$ are positive
 integers and non-increasing, so they are eventually constant, equal to some $g$. Then $g$ divides every $d_k$, hence divides their gcd $1$; so
 $\gcd(d_1,\dots,d_K)=1$ for some $K$. By Bezout there are integers $\lambda_1,\dots,\lambda_K$ with $\sum\lambda_kd_k=1$; put $\mu_k=-a_1\lambda_k$, so
@@ -331,8 +327,7 @@ are elements of the sequence with equal sums, as required.</p>
 <h3>Problem 10</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 51: Spiral Similarity and Advanced Transformational Geometry &middot; Spiral Similarity Centers</div>
 <div class="ct-text"><p>A cyclic convex quadrilateral $ABCD$ is given. Rays $AB$ and $DC$ meet at $X$. Rays $AD$ and $BC$ meet at $Y$. Let $I,J$ be the incenters of $BCX$ and $CDY$ respectively. Circumcircles of $BCX$ and $CDY$ meet again at $Z\ne C$. Assume that $CX=CY$. Prove that $ZI=ZJ$.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Equal circles and a rotation about $Z$)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Equal circles and a rotation about $Z$</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:373px" src="/assets/contests/2026-27/poland-r1-10_s1.svg" alt="Figure for the solution"></div>
 <p>Let $\omega_1=(BCX)$ and $\omega_2=(CDY)$ with radii $r_1,r_2$. Note that $B,C,Y$ are collinear and $X,C,D$ are collinear.</p><p><strong>Step 1: $r_1=r_2$.</strong> Since $X$ lies on ray $AB$ beyond $B$, $\angle CBX=180^\circ-\angle ABC$; since $Y$ lies on ray $AD$ beyond $D$,
 $\angle CDY=180^\circ-\angle ADC=\angle ABC$ ($ABCD$ is cyclic). By the law of sines, $CX=2r_1\sin\angle CBX=2r_1\sin\angle ABC$ and $CY=2r_2\sin\angle CDY=2r_2\sin\angle ABC$.
@@ -348,7 +343,8 @@ there: $N\ne C$, $N'\ne C$, and $N\ne Z$, since $N=Z$ would give $N'=Z=N$ (line 
 \[ZN=ZN'\qquad\text{and}\qquad NI=NB=N'Y=N'J=:\rho .\]
 Put a coordinate on $\ell$ with $C=0$, $N=\nu&gt;0$, $N'=-\nu'&lt;0$. Then $I=\nu-\rho$ and $J=-\nu'+\rho$, so the midpoint of $IJ$ is $\frac{\nu-\nu'}2$, the midpoint of
 $NN'$. Since $ZN=ZN'$, the point $Z$ lies on the perpendicular to $\ell$ through this midpoint, which is the perpendicular bisector of $IJ$. Hence $ZI=ZJ$.</p>
-<h4>Solution 2 (Coordinates with $C$ at the origin)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Coordinates with $C$ at the origin</summary><div class="ct-text">
 <p>As $ABCD$ is convex, $X$ lies beyond $B$ on ray $AB$ and beyond $C$ on ray $DC$, and $Y$ lies beyond $D$ on ray $AD$ and beyond $C$ on ray $BC$. So $C$
 lies strictly between $D$ and $X$, and strictly between $B$ and $Y$. Scale so that $CX=CY=1$, and let $b=CB$, $d=CD$.</p><p><strong>Step 1: two lengths and an angle.</strong> Use the vectors $X$, $Y$ (from $C$) as an oblique basis: $B=-bY$, $D=-dX$. A point $xX+yY$ of line $XB$ has the form
 $X+\tau(B-X)$, i.e. $(x,y)=(1-\tau,-b\tau)$, and $A$ corresponds to $\tau=\frac{XA}{XB}&gt;1$; a point of line $YD$ has $(x,y)=(-d\sigma,1-\sigma)$. So $A$ satisfies
@@ -379,8 +375,7 @@ perpendicular bisector of $IJ$, and $ZI=ZJ$.</p>
 \[\sum_{k=0}^{n}a_k=\sum_{k=0}^{n}b_k\quad\text{and}\quad\sum_{k=0}^{n}ka_k=\sum_{k=0}^{n}kb_k.\]
 Prove that
 \[\sum_{k=0}^{n}k^2a_k\le\sum_{k=0}^{n}k^2b_k.\]</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Two sign changes and a quadratic weight)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Two sign changes and a quadratic weight</summary><div class="ct-text">
 <p>Let $b_k=b_0r^k$ and $c_k=\ln a_k-\ln b_k$. The hypothesis $a_k^2\ge a_{k-1}a_{k+1}$ says $2\ln a_k\ge\ln a_{k-1}+\ln a_{k+1}$, and $\ln b_k$ is linear in $k$, so
 \[c_{k+1}-c_k\le c_k-c_{k-1}\qquad(1\le k\le n-1):\]
 the differences $\Delta_k=c_{k+1}-c_k$ are non-increasing.</p><p><strong>The set where $a_k\ge b_k$ is an interval.</strong> Let $i&lt;j&lt;l$ with $c_i\ge0$ and $c_l\ge0$. Since the $\Delta$'s are non-increasing,
@@ -390,7 +385,8 @@ $\varphi(k)&lt;0$, while $a_k-b_k\ge0$; for the other integers $k$ both factors 
 $\sum(a_k-b_k)=0$ and $\sum k(a_k-b_k)=0$:
 \[0\ge\sum_{k=0}^n\varphi(k)(a_k-b_k)=\sum k^2(a_k-b_k)-(p+q)\sum k(a_k-b_k)+\bigl(p-\tfrac12\bigr)\bigl(q+\tfrac12\bigr)\sum(a_k-b_k)=\sum_{k=0}^nk^2(a_k-b_k).\]
 Hence $\sum k^2a_k\le\sum k^2b_k$.</p>
-<h4>Solution 2 (Moving mass towards the ends)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Moving mass towards the ends</summary><div class="ct-text">
 <p>Let $d_k=a_k-b_k$; then $\sum d_k=0$ and $\sum kd_k=0$, and we must show $\sum k^2d_k\le0$. If all $d_k=0$ there is nothing to prove; assume not.</p><p><strong>The surplus is an interval.</strong> Let $c_k=\ln a_k-\ln b_k$. The hypothesis $a_k^2\ge a_{k-1}a_{k+1}$ says $2\ln a_k\ge\ln a_{k-1}+\ln a_{k+1}$, and $\ln b_k$ is affine in $k$, so the
 differences $c_{k+1}-c_k$ are non-increasing. Hence for $i&lt;j&lt;l$ the mean of the differences on $[i,j]$ is at least that on $[j,l]$, i.e.
 $\frac{c_j-c_i}{j-i}\ge\frac{c_l-c_j}{l-j}$, which rearranges to $c_j\ge\frac{(l-j)c_i+(j-i)c_l}{l-i}$; so if $c_i&gt;0$ and
@@ -414,8 +410,7 @@ that is, $\sum k^2d_k&lt;0$. So $\sum k^2a_k\le\sum k^2b_k$, with equality only 
 <div class="ct-text"><p>If $X,Y$ are subsets of $\mathbb{Z}$, by $X+Y$ we will denote the set of all numbers of the type $x+y$ where $x\in X$ and $y\in Y$. In particular $X+Y+Z=(X+Y)+Z$.
 Non-empty and finite subsets $A,B,C$ of $\mathbb{Z}$ are given. Prove that
 \[2|A+B+C|+1\ge|A+B|+|B+C|+|C+A|.\]</p></div>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Two explicit subsets of $A+B+C$)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Two explicit subsets of $A+B+C$</summary><div class="ct-text">
 <p>Let $a_0=\min A$, $a_1=\max A$, $b_1=\max B$, $c_0=\min C$, and $s=b_1+c_0\in B+C$. Split $B+C$ into
 $U=\{y\in B+C:\ y&gt;s\}$ and $V=\{y\in B+C:\ y&lt;s\}$, so $|U|+|V|=|B+C|-1$. All sets below are subsets of $A+B+C$.</p><p><strong>First subset.</strong> $X_1=(A+B+c_0)\cup(a_1+U)$. Every element of $A+B+c_0$ is at most $a_1+b_1+c_0=a_1+s$, and every element of $a_1+U$ is larger than $a_1+s$. So the
 union is disjoint and

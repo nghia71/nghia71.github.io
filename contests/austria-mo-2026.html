@@ -97,7 +97,6 @@ description: Austrian Mathematical Olympiad 2026, National Competition: problems
 <p>The 10 problems of the Austrian Mathematical Olympiad 2026, National Competition, each with our own solutions, hidden until you open them. 7 of them ask for an answer and 3 ask for a proof. Where a problem has a final answer, it is shown separately. Try a problem first, then check.</p><p>The Austrian national competition has a preliminary round with four problems and a final round of two days with three problems each.</p>
 </div>
 <div class="ct-credit">Problems: Austrian Mathematical Olympiad 2026, National Competition, from the AoPS contest collection or the official paper. Solutions written by MCC.</div>
-<div class="ct-bar"><button type="button" onclick="ctAll(true)">Show all answers and solutions</button><button type="button" onclick="ctAll(false)">Hide all</button></div>
 <div class="ct-toc-wrap"><div class="ct-toc-row"><span class="ct-toc-g">Preliminary Round</span><a href="#p1">1</a><a href="#p2">2</a><a href="#p3">3</a><a href="#p4">4</a></div><div class="ct-toc-row"><span class="ct-toc-g">Final Round, Day 1</span><a href="#p5">1</a><a href="#p6">2</a><a href="#p7">3</a></div><div class="ct-toc-row"><span class="ct-toc-g">Final Round, Day 2</span><a href="#p8">4</a><a href="#p9">5</a><a href="#p10">6</a></div></div>
 
 {% raw %}
@@ -108,8 +107,7 @@ description: Austrian Mathematical Olympiad 2026, National Competition: problems
 <div class="ct-text"><p>Prove that for all integers $n\geqslant 2$ the inequality
 \[\sqrt[2]{2+\sqrt[3]{3+\sqrt[4]{\cdots+\sqrt[n]{n}}}}&lt;2\]
 holds.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Bounding from the inside out)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Bounding from the inside out</summary><div class="ct-text">
 <p>Fix $n\ge2$ and define numbers $x_n,x_{n-1},\dots,x_2$ from the innermost radical outwards:
 \[
 x_n=\sqrt[n]{n},\qquad x_k=\sqrt[k]{k+x_{k+1}}\quad(k=n-1,n-2,\dots,2).
@@ -121,7 +119,8 @@ k+x_{k+1}&lt;k+2\le 2^k ,\qquad\text{so}\qquad x_k=\sqrt[k]{k+x_{k+1}}&lt;2 .
 \]
 By induction $x_2&lt;2$, which is the claim. (For $n=2$ the expression is just $\sqrt2&lt;2$.)</p><p><em>Remark.</em> The values increase with $n$ and approach about $1.9116$; the bound $2$ is chosen because $\sqrt[k]{k+2}\le 2$, with
 equality only at $k=2$, so the strict inequality comes from the innermost radical.</p>
-<h4>Solution 2 (Comparing with a tower of square roots)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Comparing with a tower of square roots</summary><div class="ct-text">
 <p>Fix $n\ge2$ and define $x_n=\sqrt[n]{n}$ and $x_k=\sqrt[k]{k+x_{k+1}}$ for $k=n-1,\dots,2$; the left-hand
 side is $x_2$. The idea is to replace every radical of index $k\ge4$ by a square root and to compare with the classical tower
 $\sqrt{2+\sqrt{2+\cdots}}$, which stays below $2$.</p><p><em>Lemma.</em> For every integer $k\ge4$ and every real $x&gt;0$, $(k+x)^2&lt;(2+x)^k$, i.e. $\sqrt[k]{k+x}&lt;\sqrt{2+x}$.</p><p><em>Proof.</em> For $k=4$,
@@ -149,8 +148,7 @@ the inequality for every $n\ge2$.</p>
 Let $I,J,K$ denote the midpoints of segments $DA$, $DB$ and $DC$ respectively.
 Show that there exists a point $X$, independent of the choice of $D$, which lies on the circumcircle of triangle $IJK$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$X$ is the midpoint of $BC$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Reflect $D$ in the midpoint of $BC$)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Reflect $D$ in the midpoint of $BC$</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:300px" src="/assets/contests/2026-27/austria-mo-2_s1.svg" alt="Figure for the solution"></div>
 <p>Write $\alpha=\angle BAC$ and let $M$ be the midpoint of $BC$. We show that $X=M$ works.</p><p><em>Step 1: $\angle BDC=180^\circ-\alpha$.</em> Since $D$ is inside the triangle, $\angle DBC=\angle ABC-\angle DBA$ and
 $\angle DCB=\angle ACB-\angle ACD$. Adding and using the hypothesis $\angle DBA+\angle ACD=180^\circ-2\alpha$,
@@ -162,7 +160,8 @@ other, so it is a parallelogram and $\angle BD'C=\angle BDC=180^\circ-\alpha$. T
 on the other side. Thus $A$ and $D'$ are on opposite sides of $BC$ and $\angle BAC+\angle BD'C=180^\circ$; hence $D'$ lies on the
 circumcircle $\Gamma$ of $ABC$.</p><p><em>Step 3: a homothety.</em> The homothety with centre $D$ and ratio $\tfrac12$ maps $A,B,C$ to the midpoints $I,J,K$, so it maps $\Gamma$ onto
 the circumcircle of $IJK$. It maps $D'\in\Gamma$ to the midpoint of $DD'$, which is $M$. Therefore $M$ lies on the circumcircle of $IJK$.</p><p>The point $X=M$, the midpoint of $BC$, does not depend on $D$.</p>
-<h4>Solution 2 (A midpoint parallelogram and supplementary angles)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; A midpoint parallelogram and supplementary angles</summary><div class="ct-text">
 <p>Write $\alpha=\angle BAC$ and let $M$ be the midpoint of $BC$. We show that $M$ lies on the circle $IJK$.</p><p><em>The angle at $D$.</em> As $D$ is inside the triangle, $\angle DBC=\angle ABC-\angle DBA$ and $\angle DCB=\angle ACB-\angle ACD$, so
 $\angle DBC+\angle DCB=(180^\circ-\alpha)-(\angle DBA+\angle ACD)=(180^\circ-\alpha)-(180^\circ-2\alpha)=\alpha$ and
 $\angle BDC=180^\circ-\alpha$.</p><p><em>The angle at $M$.</em> In triangle $DBC$ the points $J,K,M$ are the midpoints of $DB,DC,BC$. By the midline theorem $JM\parallel DC$ and
@@ -183,8 +182,7 @@ passes through the fixed point $X=M$, the midpoint of $BC$.</p>
 What is the smallest number $k$ such that we can obtain a list that is not productive by removing $k$ numbers from the list
 \[1,2,\ldots,2025,2026\,?\]</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$44$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Disjoint triples)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Disjoint triples</summary><div class="ct-text">
 <p><em>44 removals suffice.</em> Remove $1,2,\dots,44$. The product of two distinct remaining numbers is at least $45\cdot46=2070&gt;2026$,
 so it is not in the list. The list $45,\dots,2026$ is not productive.</p><p><em>At least 44 removals are needed.</em> Suppose that after removing $k$ numbers the list $L$ is not productive.</p><p>If $1\in L$, then for every other number $a\in L$ the distinct numbers $1$ and $a$ have product $a\in L$; so $L=\{1\}$ and $k=2025$.</p><p>So assume $1$ was removed. For $i=2,3,\dots,44$ consider the triple
 \[
@@ -194,7 +192,8 @@ Its numbers are distinct ($i&lt;45\le 89-i&lt;i(89-i)$) and lie in the list ($i(
 first entries are $2,\dots,44$, the second entries $87,\dots,45$, and the products $x(89-x)$ increase for $x&lt;44.5$, running from
 $2\cdot87=174$ to $1980$, all larger than $87$. If all three numbers of some $T_i$ remained, the list would be productive. So at least one
 number is removed from each of the $43$ disjoint triples, and $1$ is removed as well: $k\ge 44$.</p><p>Hence the smallest $k$ is $\boxed{44}$.</p>
-<h4>Solution 2 (Look at the smallest number that stays)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Look at the smallest number that stays</summary><div class="ct-text">
 <p>Removing $1,\dots,44$ works, since $45\cdot 46=2070&gt;2026$. Now let $L$ be a non-productive list obtained by removing $k$ numbers;
 we show $k\ge44$. Write $N=2026$.</p><p>If $1\in L$, every other $a\in L$ gives the product $1\cdot a=a\in L$, so $L=\{1\}$ and $k=2025$. If $L$ is empty, $k=2026$. Otherwise let $t\ge 2$ be the smallest
 number in $L$. The numbers $1,\dots,t-1$ are all removed, which is already $t-1$ removals; if $t\ge 45$ we are done. Let $2\le t\le 44$.</p><p>For every integer $x$ with $x&gt;t$ and $N/t^2&lt;x\le N/t$, the numbers $t$ and $x$ are distinct and $tx\le N$. As $t\in L$ and $L$ is not
@@ -213,8 +212,7 @@ k\ \ge\ (t-1)+\#\{x:\ \max(t,N/t^2)&lt;x\le N/t\}.
 \[a_{n-1}+a_{n+1}\mid a_n^2+k\]
 is satisfied. For which positive integers $k$ is there a $k$-beautiful sequence?</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>all positive integers $k$ except $k=2$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Blocks of ones and $k$'s; a parity obstruction for $k=2$)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Blocks of ones and $k$'s; a parity obstruction for $k=2$</summary><div class="ct-text">
 <p>A $k$-beautiful sequence exists for <strong>every</strong> $k\ne2$.</p><p>A sequence with $a_n=a_{n+k}$ is determined by one period $a_0,\dots,a_{k-1}$, and since it is periodic the divisibility condition holds for
 all $n\ge1$ as soon as it holds for every term, where the neighbours of a term are read cyclically in the period.</p><p><em>$k$ odd.</em> Take $a_n=1$ for all $n$. Then $a_{n-1}+a_{n+1}=2$ divides $1+k$, which is even.</p><p><em>$k$ even, $k\ge4$.</em> Write $k=3x+4y$ with integers $x,y\ge0$: for $k\equiv0\pmod 3$ take $y=0$; for $k\equiv1\pmod3$ take $y=1$ (here
 $k\ge4$); for $k\equiv2\pmod3$ take $y=2$ (here $k\ge8$, because $k$ is even and $k\ne2$). As one period, write $x$ blocks $1,1,k$ and $y$ blocks
@@ -231,8 +229,7 @@ and $2a_0$ cannot divide a number that is $\equiv2\pmod4$. Contradiction.</p><p>
 <h3>Problem 1</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure &middot; Tangency and Tangent Geometry</div>
 <div class="ct-text"><p>Let $ABC$ be an acute triangle with orthocenter $H$ and circumcircle $k$. Let $S$ be the intersection point of the tangents to $k$ at points $A$ and $B$, let $M$ be the midpoint of $AB$, and let $H'$ be the reflection of $H$ with respect to $AB$. Let $P$ be the intersection point of the line $MH$ with the circumcircle $k$ such that $H$ lies between $M$ and $P$.</p><p>Prove that the points $S$, $H'$ and $P$ are collinear.</p></div>
-<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Equal ratios $PA:PB=H'A:H'B$)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Equal ratios $PA:PB=H'A:H'B$</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/austria-mo-5_s1.svg" alt="Figure for the solution"></div>
 <p>Let $C'$ be the point of $k$ diametrically opposite $C$. If $CA=CB$, the points $S$, $H$, $M$, $C$ all lie on the symmetry axis
 of the triangle, $P=C$ and $H'$ is on that axis too, so there is nothing to prove. Assume $CA\ne CB$.</p><p><em>Step 1: $P$ lies on the circle $\omega$ with diameter $CH$.</em> Since $CC'$ is a diameter, $C'B\perp BC$ and $C'A\perp AC$. Also
@@ -260,7 +257,8 @@ The points $Z$ with $ZA:ZB=\lambda$ form a circle (the Apollonius circle; a line
 satisfy it, so it meets $k$ in at most two points. The points $H'$, $Q$, $P$ lie on both. Here $H'\ne Q$, and $H'\ne P$ because $P$ lies on
 the same side of $AB$ as $C$ (it is on the ray from $M$ through $H$) while $H'$ lies on the other side. Hence $Q=P$, i.e. $S$, $H'$, $P$
 are collinear.</p>
-<h4>Solution 2 (Complex numbers)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Complex numbers</summary><div class="ct-text">
 <p>Let $k$ be the unit circle and let $a,b,c$ be the complex coordinates of $A,B,C$, so $\bar a=1/a$, etc. We use the standard facts:</p><ul class="ct-ul"><li><p>the orthocentre is $h=a+b+c$;</p></li><li><p>the tangents at $A$ and $B$ meet at $s=\dfrac{2ab}{a+b}$ ($a+b\ne0$ since the triangle is acute);</p></li><li><p>the reflection of a point $z$ in the line $AB$ is $a+b-ab\bar z$;</p></li><li><p>a point $z$ lies on the line through two points $u,v$ of the unit circle iff $z+uv\bar z=u+v$.</p></li></ul><p>Hence $h'=a+b-ab\left(\frac1a+\frac1b+\frac1c\right)=-\dfrac{ab}{c}$.</p><p><em>The point $P$.</em> The midpoint of $h$ and $-c$ is $\frac{a+b}{2}$, which is $M$. So the line $MH$ passes through $C'=-c$, and $M$ lies
 between $H$ and $C'$; therefore $P$ is the second intersection $p\ne -c$ of the line through $-c$ and $h$ with $k$. Applying the chord
 equation to $u=-c$, $v=p$, $z=h$:
@@ -282,7 +280,8 @@ Note $s\ne h'$, as $|a+b+2c|\ge 2-|a+b|&gt;0$. The ratio is
 \]
 Taking conjugates ($a\mapsto 1/a$ etc.): $(a+b)(a+c)(b+c)\mapsto\frac{(a+b)(a+c)(b+c)}{a^2b^2c^2}$, $\;a+b+2c\mapsto\frac{2ab+bc+ca}{abc}$
 and $2ab+bc+ca\mapsto\frac{a+b+2c}{abc}$. Hence $\bar\rho=\rho$, so $\rho$ is real, and $S$, $H'$, $P$ are collinear.</p>
-<h4>Solution 3 (Coordinates centred at $M$: $P$ is the inverse of $H$)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 3 &ndash; Coordinates centred at $M$: $P$ is the inverse of $H$</summary><div class="ct-text">
 <p>Choose the unit of length and the axes so that $M=(0,0)$, $A=(-1,0)$, $B=(1,0)$ and $C$ lies above the $x$-axis. The circumcentre $O$ lies on the perpendicular bisector of $AB$, which is the $y$-axis, so $O=(0,o)$; as the triangle is acute, $O$ lies inside it and $o&gt;0$. Since $OA^2=1+o^2$, the circle $k$ has the equation
 \[
 X^2+Y^2-2oY=1 .
@@ -309,8 +308,7 @@ using $1-q=2oy$. So the line $H'P$ passes through $(0,-1/o)=S$, and $S$, $H'$, $
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 44: Combinatorial Games and Strategy &middot; Winning and Losing Positions</div>
 <div class="ct-text"><p>Alice and Bob play a game. In the beginning, there is a pile of $n$ stones on the table, where $n$ is a positive integer. In each move, either one stone is removed from an arbitrary pile, or one pile is split into two non-empty piles. The two players alternate, and Alice begins. When a player has no valid moves, the other player wins.</p><p>Determine for each $n$ which of the two players has a winning strategy.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>Alice wins for $n=1$ and for all even $n$; Bob wins for all odd $n\ge3$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Balanced positions)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Balanced positions</summary><div class="ct-text">
 <p><strong>Answer.</strong> Alice wins for $n=1$ and for every even $n$; Bob wins for every odd $n\ge3$.</p><p>The game ends: each move lowers $2\cdot(\text{number of stones})-(\text{number of non-empty piles})$ by at least $1$ (removing a stone lowers it
 by $2$ or by $1$, a split lowers it by $1$), and this quantity is never negative. A player who cannot move faces a table without stones.</p><p>Call a position <em>balanced</em> if the number of piles with exactly one stone is even <em>and</em> the number of piles with an even number of
 stones is even. (Empty piles are ignored.)</p><ul class="ct-parts"><li><p><span class="ct-lbl">1.</span> The final position (no stones) is balanced.</p></li><li><p><span class="ct-lbl">2.</span> <em>Every move from a balanced position gives an unbalanced one.</em> Removing the stone of a $1$-pile changes the number of $1$-piles by
@@ -322,7 +320,8 @@ number of even piles is odd, take an even pile: split $2$ into $1+1$, or remove 
 remove a stone from a $2$ (it becomes a $1$-pile), or split a pile $e\ge4$ into $1+(e-1)$.</p></li></ul><p>So the player who always moves to a balanced position never faces a balanced position, while the opponent always does; as the game ends,
 the opponent is the one who eventually cannot move.</p><p>The start is one pile of $n$ stones. For $n=1$ there is one $1$-pile and for even $n$ one even pile: unbalanced, so <strong>Alice</strong> wins. For odd
 $n\ge3$ the position is balanced, so <strong>Bob</strong> wins.</p>
-<h4>Solution 2 (Mirror strategy and Grundy values)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Mirror strategy and Grundy values</summary><div class="ct-text">
 <p>For $n=1$ Alice removes the stone and Bob cannot move. For even $n$ Alice splits the pile into two piles of $n/2$ and then copies every move
 of Bob on the twin pile; after each of her moves the piles come in equal pairs, so she always has a move, and Bob is the one who gets stuck.</p><p>For odd $n\ge3$ we use Sprague-Grundy theory. The game always ends, since every move lowers $2\cdot(\text{number of stones})-(\text{number of piles})$, and a player who cannot move loses; for a finite set $X$ of non-negative integers, $\operatorname{mex}X$ is the least non-negative integer not in $X$. The game is a sum of independent one-pile games (each move acts on one pile), so a position is
 lost for the player to move exactly when the XOR of the Grundy values $G(m)$ of its piles is $0$. Here $G(0)=0$ and
@@ -343,8 +342,7 @@ wins. For $n=1$ and even $n$ the value is $\ne0$ and <strong>Alice</strong> wins
 \[u_{2n}=\mathrm{GM}(u_{2n+1},u_{2n-1})\quad\text{and}\quad u_{2n+1}=\mathrm{AM}(u_{2n},u_{2n+2})\quad\text{for } n\geq 1.\]
 Here, $\mathrm{AM}(x,y)$ denotes the arithmetic and $\mathrm{GM}(x,y)$ the geometric mean of the two numbers $x$ and $y$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>exactly the pairs of positive integers with $a\le b$ and $a\mid b^2$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (A closed form)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; A closed form</summary><div class="ct-text">
 <p><strong>Answer.</strong> All pairs of positive integers $a\le b$ with $a\mid b^2$.</p><p>The conditions say $u_{2n}^2=u_{2n-1}u_{2n+1}$ and $u_{2n+2}=2u_{2n+1}-u_{2n}$. So from $u_1=a$, $u_2=b$ the sequence is forced:
 \[
 u_{2n+1}=\frac{u_{2n}^2}{u_{2n-1}},\qquad u_{2n+2}=2u_{2n+1}-u_{2n}\qquad(n\ge1),
@@ -360,7 +358,8 @@ $u_{2N-2}=q_{N-1}q_N/a\le0$, a contradiction. So $a\le b$.</p><p><em>Sufficiency
 are positive. Modulo $a$ we have $q_n\equiv(n-1)d$ and $d^2=(b-a)^2\equiv b^2\equiv0$, so $q_n^2\equiv(n-1)^2d^2\equiv0$ and
 $q_nq_{n+1}\equiv(n-1)n\,d^2\equiv0$: all terms are integers. Finally $u_{2n}^2=q_n^2q_{n+1}^2/a^2=u_{2n-1}u_{2n+1}$ with $u_{2n}&gt;0$, so $u_{2n}$ is
 the geometric mean, and $\frac{u_{2n}+u_{2n+2}}2=\frac{q_{n+1}(q_n+q_{n+2})}{2a}=\frac{q_{n+1}^2}{a}=u_{2n+1}$ because $q_n+q_{n+2}=2q_{n+1}$. So the answer is $\boxed{a\le b \text{ and } a\mid b^2}$.</p>
-<h4>Solution 2 (Ratios and an inductive invariant)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Ratios and an inductive invariant</summary><div class="ct-text">
 <p>As in the statement, the sequence is forced: $u_{2n+1}=u_{2n}^2/u_{2n-1}$ and $u_{2n+2}=2u_{2n+1}-u_{2n}$.</p><p><em>Necessity of $a\le b$.</em> Let $\rho_n=u_{2n}/u_{2n-1}&gt;0$. Then $u_{2n+1}=\rho_nu_{2n}$ and $u_{2n+2}=u_{2n}(2\rho_n-1)$, so
 \[
 \rho_{n+1}=\frac{u_{2n+2}}{u_{2n+1}}=\frac{2\rho_n-1}{\rho_n},\qquad 1-\rho_{n+1}=\frac{1-\rho_n}{\rho_n}.
@@ -381,15 +380,15 @@ $u_{2n}&gt;0$, and $u_{2n+1}=\frac{u_{2n}+u_{2n+2}}{2}$ by the definition of $u_
 \[f(f(x)+y)=\alpha x+f(x+f(f(y)))\]
 for all real numbers $x$ and $y$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\alpha=0$ and $\alpha=2$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Surjective, injective, then linear)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Surjective, injective, then linear</summary><div class="ct-text">
 <p><strong>Answer:</strong> $\alpha\in\{0,2\}$.</p><p><em>Examples.</em> For $\alpha=0$, $f(x)=x$ works: both sides equal $x+y$. For $\alpha=2$, $f(x)=-x$ works: the left side is $-(-x+y)=x-y$ and the
 right side is $2x-(x+y)=x-y$.</p><p><em>No other $\alpha$.</em> Let $\alpha\ne0$ and let $f$ be a solution; write $Q(x,y)$ for the equation and $c=f(0)$.</p><ul class="ct-parts"><li><p><span class="ct-lbl">1.</span> $Q(0,y)$: $f(c+y)=f\bigl(f(f(y))\bigr)$ for all $y$.</p></li><li><p><span class="ct-lbl">2.</span> $Q(x,-f(x))$: $c=\alpha x+f\bigl(x+f(f(-f(x)))\bigr)$, so $f$ takes the value $c-\alpha x$ for every real $x$. As $\alpha\ne0$, $f$ is
 <em>surjective</em>.</p></li><li><p><span class="ct-lbl">3.</span> <em>$f$ is injective.</em> Let $f(u)=f(v)$. Comparing $Q(x,u)$ and $Q(x,v)$ (their right-hand sides agree since $f(f(u))=f(f(v))$) gives
 $f(f(x)+u)=f(f(x)+v)$ for all $x$. As $f(x)$ runs through all reals, $f(t+u)=f(t+v)$ for all $t$, i.e. $f$ has period $p=u-v$. Now compare
 $Q(x+p,y)$ with $Q(x,y)$: the left sides are equal because $f(x+p)=f(x)$, and the right sides differ by $\alpha p$. So $\alpha p=0$ and $u=v$.</p></li><li><p><span class="ct-lbl">4.</span> From 1 and injectivity: $f(f(y))=y+c$ for all $y$; in particular $f(f(0))=c$.</p></li><li><p><span class="ct-lbl">5.</span> $Q(x,0)$: $f(f(x))=\alpha x+f(x+f(f(0)))=\alpha x+f(x+c)$. With 4 this gives $x+c=\alpha x+f(x+c)$, so $f(t)=(1-\alpha)(t-c)+c$ for all
 $t$.</p></li><li><p><span class="ct-lbl">6.</span> Then $f(f(y))=(1-\alpha)^2(y-c)+c$. Comparing with $f(f(y))=y+c$ (the coefficients of $y$) gives $(1-\alpha)^2=1$, so $\alpha=2$.</p></li></ul><p>Hence a solution exists exactly for $\boxed{\alpha\in\{0,2\}}$.</p>
-<h4>Solution 2 (Injectivity from equal images)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Injectivity from equal images</summary><div class="ct-text">
 <p><strong>Answer:</strong> $\alpha\in\{0,2\}$.</p><p><em>Examples.</em> For $\alpha=0$ the constant function $f(x)=0$ works: both sides are $0$. For $\alpha=2$, $f(x)=-x$ works: the left side is $-(-x+y)=x-y$ and the right side is $2x-(x+y)=x-y$.</p><p><em>No other $\alpha$.</em> Let $\alpha\ne0$ and let $f$ be a solution; write $Q(x,y)$ for the equation, $c=f(0)$, and $\operatorname{im} g$ for the set of values of a function $g$.</p><ul class="ct-parts"><li><p><span class="ct-lbl">1.</span> $Q(0,y)$ gives $f(y+c)=f\bigl(f(f(y))\bigr)$ for all $y$. So every value $f(z)=f\bigl(f(f(z-c))\bigr)$ of $f$ is a value of $f\circ f\circ f$. Since $\operatorname{im}(f\circ f\circ f)\subseteq\operatorname{im}(f\circ f)\subseteq\operatorname{im} f$, all three sets are equal; call this set $T$. It is not empty.</p></li><li><p><span class="ct-lbl">2.</span> <em>$f$ is injective.</em> Let $f(u)=f(v)$. The left sides of $Q(u,y)$ and $Q(v,y)$ are equal, so $\alpha u+f\bigl(u+f(f(y))\bigr)=\alpha v+f\bigl(v+f(f(y))\bigr)$, that is,
 \[
 f(u+t)-f(v+t)=\alpha(v-u)\qquad\text{for every } t\in\operatorname{im}(f\circ f)=T .
@@ -401,8 +400,7 @@ On the other hand, the right sides of $Q(x,u)$ and $Q(x,v)$ are equal, because $
 <h3>Problem 5</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 28: Area Methods and Geometric Measurement &middot; Area as an Auxiliary Invariant</div>
 <div class="ct-text"><p>Let $ABCDEF$ be a convex hexagon with the property that each of the three segments joining the midpoints of the opposite sides divides the total area of the hexagon in half.</p><p>Show that the three segments intersect in a common point.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Twelve small triangles)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Twelve small triangles</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:315px" src="/assets/contests/2026-27/austria-mo-9_s1.svg" alt="Figure for the solution"></div>
 <p>Let $M_1,\dots,M_6$ be the midpoints of $AB,BC,CD,DE,EF,FA$, let $[\,\cdot\,]$ denote area and $S=[ABCDEF]$.</p><p><em>The point $O$.</em> Going around the boundary, the points $M_1,M_3,M_4,M_6$ appear in this order, so the chords $M_1M_4$ and $M_3M_6$ of the
 convex hexagon cross; let $O$ be their intersection, an interior point of the hexagon.</p><p><em>Bookkeeping.</em> Join $O$ to the six vertices and the six midpoints. Since $M_1$ is the midpoint of $AB$, the triangles $OAM_1$ and $OM_1B$ have
@@ -423,7 +421,8 @@ Adding (1) and (2) and cancelling $q+t$ gives $r+s=u+p$.</p><p><em>The third seg
 The segment $M_2M_5$ also bisects the hexagon, so $[M_2CDEM_5]=\frac S2$. By the shoelace formula (signed areas, vertices counterclockwise),
 $[\Pi]-[M_2CDEM_5]$ equals the signed area of triangle $M_5OM_2$. Hence this triangle has area $0$, so $O$ lies on the line $M_2M_5$, and since $O$
 is inside the convex hexagon, on the segment $M_2M_5$.</p><p>Thus the three segments pass through the common point $O$.</p>
-<h4>Solution 2 (Cross products)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Cross products</summary><div class="ct-text">
 <p>Label the hexagon counterclockwise, let $M_1,\dots,M_6$ be the midpoints of $AB,BC,CD,DE,EF,FA$ and let $S$ be its area. We
 identify points with vectors from a fixed origin and write $U\times V=u_1v_2-u_2v_1$ for $U=(u_1,u_2)$, $V=(v_1,v_2)$; this is
 antisymmetric ($V\times U=-U\times V$, $U\times U=0$) and linear in each factor. The shoelace formula says that for a polygon $P_1P_2\dots P_m$
@@ -463,8 +462,7 @@ the endpoints of this segment, so $O$ lies on the segment $M_2M_5$. The three se
 <div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 27: Bijections and Structural Equivalence &middot; Explicit Bijections</div>
 <div class="ct-text"><p>On two strips, each consisting of $100$ cells numbered from $1$ to $100$, there are $50$ tokens each.</p><p>On the first strip, the tokens are located on cells $1,3,5,\ldots,99$. Each token is then moved one or more cells to the right, i.e., to a cell with a higher number. The tokens may not jump over each other, and no cell may contain two or more tokens. Let $A$ be the number of possible configurations of the tokens that can be reached this way.</p><p>On the second strip, the tokens are located on cells $1,2,3,\ldots,50$. Again, each token is moved one or more cells to the right. The tokens may not jump over each other, and no cell may contain two or more tokens. Moreover, a token cannot be moved further than to the position double its starting position. Let $B$ be the number of possible configurations for the tokens that can be reached this way.</p><p>Prove that $A=B$ holds.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>proof ($A=B=C_{50}=\frac1{51}\binom{100}{50}$)</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Reverse and complement the shifts)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Reverse and complement the shifts</summary><div class="ct-text">
 <p><em>Reachable configurations.</em> Tokens cannot jump, so they keep their order; let token $i$ ($i=1,\dots,50$, from the left) end at
 cell $y_i$, so $y_1&lt;y_2&lt;\dots&lt;y_{50}$.</p><p>On the first strip token $i$ starts at $2i-1$, so a reachable configuration satisfies $y_i\ge 2i$ and $y_{50}\le100$. Conversely, every
 increasing $y$ with these properties is reachable: move the tokens in the order $50,49,\dots,1$, each straight to its target; when token $i$
@@ -477,7 +475,8 @@ i\le z_i\le 50\qquad(1\le i\le 50).
 Similarly $w_i=x_i-i$ turns the second strip into non-decreasing sequences with $1\le w_i\le i$; $B$ counts these.</p><p><em>Bijection.</em> Map $z$ to $w$ with $w_i=51-z_{51-i}$. Reversing the order and changing the sign keeps the sequence non-decreasing,
 $w_i\le 51-(51-i)=i$, and $w_i\ge 51-50=1$. The same formula maps the $w$'s back ($z_i=51-w_{51-i}$ satisfies $z_i\ge 51-(51-i)=i$ and
 $z_i\le 50$), and the two maps are inverse to each other. Hence $A=B$.</p><p>(Both numbers equal the Catalan number $C_{50}$.)</p>
-<h4>Solution 2 (Both are Dyck words)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Both are Dyck words</summary><div class="ct-text">
 <p>Tokens cannot jump, so they keep their order; number them $1,\dots,50$ from the left. On the first strip token $i$ starts at $2i-1$ and
 moves right, so it ends at a cell $y_i\ge2i$. On the second strip token $i$ starts at $i$, moves right and may not pass cell $2i$, so it ends at
 a cell $x_i$ with $i&lt;x_i\le2i$. Conversely, every set of $50$ cells meeting these conditions is reachable: move the tokens one at a time from

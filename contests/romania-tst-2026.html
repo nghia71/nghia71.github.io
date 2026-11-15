@@ -97,7 +97,6 @@ description: Romania Team Selection Test 2026: problems with answers and solutio
 <p>The 13 problems of the Romania Team Selection Test 2026, each with our own solutions, hidden until you open them. 4 of them ask for an answer and 9 ask for a proof. Where a problem has a final answer, it is shown separately. Try a problem first, then check.</p><p>The Romanian TST has four days of problems.</p>
 </div>
 <div class="ct-credit">Problems: Romania Team Selection Test 2026, from the AoPS contest collection or the official paper. Solutions written by MCC.</div>
-<div class="ct-bar"><button type="button" onclick="ctAll(true)">Show all answers and solutions</button><button type="button" onclick="ctAll(false)">Hide all</button></div>
 <div class="ct-toc-wrap"><div class="ct-toc-row"><span class="ct-toc-g">Day 1</span><a href="#p1">1</a><a href="#p2">2</a><a href="#p3">3</a><a href="#p4">4</a></div><div class="ct-toc-row"><span class="ct-toc-g">Day 2</span><a href="#p5">1</a><a href="#p6">4</a><a href="#p7">5</a></div><div class="ct-toc-row"><span class="ct-toc-g">Day 3</span><a href="#p8">1</a><a href="#p9">2</a><a href="#p10">3</a></div><div class="ct-toc-row"><span class="ct-toc-g">Day 4</span><a href="#p11">4</a><a href="#p12">5</a><a href="#p13">6</a></div></div>
 
 {% raw %}
@@ -107,8 +106,7 @@ description: Romania Team Selection Test 2026: problems with answers and solutio
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Algebra &middot; LPS VII, Chapter 46: Functional Equations: Iteration, Rigidity, and Deep Structure &middot; Monotonicity, Boundedness, and Regularity</div>
 <div class="ct-text"><p>Let $f:\mathbb{R}^+\to\mathbb{R}^+$ be a non-constant function. Prove that there exist $a,b\in\mathbb{R}^+$ such that
 \[f(a)+f(b)&gt;2f\bigl(\sqrt{ab}\bigr).\]</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Walking along a geometric progression)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Walking along a geometric progression</summary><div class="ct-text">
 <p>Suppose, for a contradiction, that
 \[f(a)+f(b)\le 2f\bigl(\sqrt{ab}\bigr)\qquad\text{for all } a,b&gt;0. \tag{1}\]
 Since $f$ is not constant, there are $u,v&gt;0$ with $f(u)&gt;f(v)$; put $\delta=f(u)-f(v)&gt;0$ and $q=v/u$. Consider the geometric progression
@@ -117,7 +115,8 @@ $x_k=uq^k$ $(k=0,1,2,\dots)$, so that $x_0=u$, $x_1=v$ and $\sqrt{x_{k-1}x_{k+1}
 So the differences $d_k=f(x_{k+1})-f(x_k)$ form a non-increasing sequence, and $d_0=f(v)-f(u)=-\delta$. Hence $d_k\le-\delta$ for all $k\ge0$, and
 \[f(x_k)=f(x_0)+d_0+d_1+\dots+d_{k-1}\le f(u)-k\delta .\]
 For $k&gt;f(u)/\delta$ the right-hand side is negative, which contradicts $f(x_k)&gt;0$. Therefore (1) fails for some $a,b$, that is, there exist $a,b\in\mathbb{R}^+$ with $f(a)+f(b)&gt;2f(\sqrt{ab})$.</p>
-<h4>Solution 2 (A value close to the infimum)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; A value close to the infimum</summary><div class="ct-text">
 <p>The values of $f$ are positive, so $m=\inf\{f(x):x&gt;0\}$ exists and $m\ge0$. Since $f$ is not constant, it takes a value larger than $m$: choose $a&gt;0$ with $f(a)&gt;m$ and put
 $\varepsilon=\tfrac13\bigl(f(a)-m\bigr)&gt;0$. By the definition of the infimum there is $c&gt;0$ with $f(c)&lt;m+\varepsilon$. Let
 \[b=\frac{c^2}{a}&gt;0,\qquad\text{so that}\qquad \sqrt{ab}=c .\]
@@ -130,8 +129,7 @@ which is impossible because $m$ is a lower bound for the values of $f$. Hence $f
 <h3>Problem 2</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 49: Combinatorial Number Theory and Structure &middot; Hybrid Combinatorial-Arithmetic Arguments</div>
 <div class="ct-text"><p>Let $n$ and $k$ be positive integers such that $n&lt;k&lt;2n$. Suppose $a_1,a_2,\ldots,a_k$ are positive integers such that $2^{a_1}+2^{a_2}+\cdots+2^{a_k}$ is divisible by $2^n-1$.</p><p>Show that at least three of $a_1,a_2,\ldots,a_k$ have the same remainder when divided by $n$.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Balanced digits)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Balanced digits</summary><div class="ct-text">
 <p>Let $M=2^n-1$. Since $2^n\equiv1\pmod M$, we have $2^{a_i}\equiv2^{r_i}\pmod M$, where $r_i\in\{0,1,\dots,n-1\}$ is the remainder of $a_i$ modulo $n$.
 For $j=0,1,\dots,n-1$ let $c_j$ be the number of indices $i$ with $r_i=j$. Then
 \[c_0+c_1+\dots+c_{n-1}=k\qquad\text{and}\qquad \sum_{j=0}^{n-1}c_j2^j\equiv\sum_{i=1}^k2^{a_i}\equiv0\pmod M .\]
@@ -140,7 +138,8 @@ Suppose, for a contradiction, that no three of the $a_i$ have the same remainder
 Now $|D|\le\sum_{j=0}^{n-1}2^j=M$, with equality only if all $e_j$ are equal to $1$ or all are equal to $-1$, that is, only if $k=2n$ or $k=0$. Both are excluded
 ($n&lt;k&lt;2n$), so $|D|&lt;M$, and a multiple of $M$ of absolute value less than $M$ is $0$: $D=0$.</p><p>If some $e_j$ were non-zero, let $t$ be the least such index. Then $D=2^t\bigl(e_t+2e_{t+1}+4e_{t+2}+\cdots\bigr)$, and the bracket is odd because $e_t=\pm1$; so $D\ne0$, a contradiction.
 Hence all $e_j=0$, i.e. $c_j=1$ for every $j$ and $k=n$. This contradicts $k&gt;n$. Therefore some $c_j\ge3$: at least three of the numbers $a_1,\dots,a_k$ have the same remainder modulo $n$.</p>
-<h4>Solution 2 (Averaging over the cyclic shifts)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Averaging over the cyclic shifts</summary><div class="ct-text">
 <p>Let $M=2^n-1$, and for $j=0,\dots,n-1$ let $c_j$ be the number of $a_i$ with remainder $j$ modulo $n$; so $\sum_jc_j=k$. For an integer $t\ge0$ write
 $\langle t\rangle\in\{0,\dots,n-1\}$ for its remainder modulo $n$; note $2^t\equiv2^{\langle t\rangle}\pmod M$, because $2^n\equiv1$.</p><p>For each shift $s=0,1,\dots,n-1$ consider the integer
 \[N_s=\sum_{j=0}^{n-1}c_j\,2^{\langle j+s\rangle}\equiv2^s\sum_{j=0}^{n-1}c_j2^j\equiv2^s\sum_{i=1}^k2^{a_i}\equiv0\pmod M .\]
@@ -157,8 +156,7 @@ Thus $k=n$, contradicting $k&gt;n$. Hence some $c_j\ge3$, which is the claim.</p
 <h3>Problem 3</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 40: Vector Geometry and Affine Structure &middot; Dot Product and Metric Recovery</div>
 <div class="ct-text"><p>Let $ABCDEF$ be a convex hexagon with $AB=CD$, $AF=DE$ and $BC=EF$. The perpendicular bisectors of $AC$ and $BD$ intersect in $X$, while the perpendicular bisectors of $DF$ and $AE$ intersect in $Y$. The rays $AB$ and $DC$ cut in $U$, while the rays $AF$ and $DE$ cut in $V$. Let $\omega_1$ and $\omega_2$ be the circumcircles of triangles $BCU$ and $EFV$ respectively. Suppose that $X\ne Y$ and that $\omega_1$ and $\omega_2$ are not tangent, nor do they share common interior points. Show that the intersection point of the common interior tangents of $\omega_1$ and $\omega_2$ lies on the line $XY$.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Projections on the two lines through U)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Projections on the two lines through U</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:365px" src="/assets/contests/2026-27/romania-tst-3_s1.svg" alt="Figure for the solution"></div>
 <p>Let $O_1,O_2$ and $r_1,r_2$ be the centres and radii of $\omega_1,\omega_2$. The circles lie outside each other, so their common interior tangents meet at the internal centre of similitude
 \[T=\frac{r_2O_1+r_1O_2}{r_1+r_2},\]
@@ -182,7 +180,8 @@ and $V$ on the side of $F$, hence $n'=-n$ and
 Consequently $r_2X+r_1Y=r_2O_1+r_1O_2$, that is
 \[T=\frac{r_2O_1+r_1O_2}{r_1+r_2}=\frac{r_2X+r_1Y}{r_1+r_2}.\]
 So $T$ lies on the line $XY$ (it divides the segment $XY$ in the ratio $XT:TY=r_1:r_2$), which is what we had to prove.</p>
-<h4>Solution 2 (Complex numbers and the centre of rotation)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Complex numbers and the centre of rotation</summary><div class="ct-text">
 <p>Use complex coordinates, a point and its coordinate being denoted by the same letter in upper and lower case, and let the hexagon $ABCDEF$ be labelled counterclockwise. Put $m=BC=EF$.</p><p><em>The point $X$.</em> Let $\omega=\dfrac{d-c}{b-a}$. Then $|\omega|=1$ since $AB=CD$, and $\omega\ne\pm1$ since the lines $AB$, $CD$ are not parallel. Define $x=\dfrac{c-\omega a}{1-\omega}$. A direct check gives
 \[c-x=\omega(a-x),\qquad d-x=(c-x)+(d-c)=\omega(a-x)+\omega(b-a)=\omega(b-x).\tag{1}\]
 So $|x-c|=|x-a|$ and $|x-d|=|x-b|$: the point $x$ lies on the perpendicular bisectors of $AC$ and $BD$, hence it is $X$. (So $X$ is the centre of the rotation $z\mapsto x+\omega(z-x)$ taking $A,B$ to $C,D$.)</p><p><em>The centre $O_1$.</em> Write $\omega=e^{i\varphi}$. By (1) the directed angle from line $AB$ to line $CD$ is $\varphi$ (mod $\pi$), i.e. $\angle(UB,UC)=\varphi$. By the inscribed angle theorem (central angle $=2\times$ inscribed angle, as
@@ -205,8 +204,7 @@ The coefficients are real and add up to $1$, so $T$ lies on the line $XY$.</p>
 <div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 20: Parity, Coloring, and Process Termination &middot; Parity and Coloring Arguments</div>
 <div class="ct-text"><p>Consider a $2026\times 2026$ grid. A <em>domino</em> is a pair of unit cells with a common side. A <em>domino covering</em> is a set $\Gamma$ of dominoes, such that each unit cell is covered by exactly one domino in $\Gamma$. Let $\Gamma_1$ and $\Gamma_2$ be two disjoint domino coverings. Show that there exists a domino covering $\Gamma$ such that
 \[|\Gamma_1\cap\Gamma|+|\Gamma_2\cap\Gamma|\le 2026.\]</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (The unused edges form paths; tile the top and bottom rows horizontally)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; The unused edges form paths; tile the top and bottom rows horizontally</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:257px" src="/assets/contests/2026-27/romania-tst-4_s1.svg" alt="Figure for the solution"></div>
 <p>Let $N=2026$. Consider the graph whose vertices are the unit cells, two cells being joined when they share a side; a domino is an edge, and a domino covering is a perfect matching.
 Call an edge <em>used</em> if it belongs to $F=\Gamma_1\cup\Gamma_2$ and <em>free</em> otherwise. We look for a perfect matching $\Gamma$ containing at most $N$ used edges.</p><p><strong>Step 1: the free edges.</strong> Since $\Gamma_1\cap\Gamma_2=\emptyset$, every cell lies on exactly two used edges. An interior cell has $4$ neighbours, a non-corner boundary cell has $3$, a corner has $2$. So in the graph $G'$ of free edges</p><ul class="ct-ul"><li><p>every interior cell has degree $2$,</p></li><li><p>every boundary cell that is not a corner has degree $1$,</p></li><li><p>every corner has degree $0$.</p></li></ul><p>Hence $G'$ consists of the four isolated corners, of cycles through interior cells, and of paths whose two endpoints are non-corner boundary cells and whose other cells are interior. Each cycle has even length, because the cells can be
@@ -219,7 +217,8 @@ Along a path the colours alternate, so $\pi$ has an odd number of cells iff $u,w
 horizontal sides. Now look at the remaining cells:</p><ul class="ct-ul"><li><p>A cycle of $G'$ contains only interior cells and has even length; cover it by every second edge of the cycle.</p></li><li><p>Let $\pi$ be a path of $G'$ with $p$ cells, and delete those of its endpoints that lie on a horizontal side. What is left is again a path (possibly empty), since only endpoints were removed, and by the Claim it has an even number of cells:
 if no endpoint or both endpoints were removed then $p$ is even, and if exactly one endpoint was removed then $p$ is odd. Cover it by every second edge.</p></li></ul><p>Every cell is now covered exactly once, so $\Gamma$ is a domino covering. All its dominoes outside the top and bottom rows are free edges, i.e. they belong neither to $\Gamma_1$ nor to $\Gamma_2$. Hence
 \[|\Gamma_1\cap\Gamma|+|\Gamma_2\cap\Gamma|=|F\cap\Gamma|\le N=2026 .\]</p><p><em>Remark.</em> The bound seems to be sharp: if $\Gamma_1$ consists of horizontal and $\Gamma_2$ of vertical dominoes, both formed inside the $2\times2$ blocks of the grid, then a computer search for $N\le12$ shows that every covering $\Gamma$ shares at least $N$ dominoes with $\Gamma_1\cup\Gamma_2$ (we do not prove this for general $N$).</p>
-<h4>Solution 2 (Doubling alternate boundary edges and splitting a 2-regular graph)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Doubling alternate boundary edges and splitting a 2-regular graph</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/romania-tst-4_s2.svg" alt="Figure for the solution"></div>
 <p>Let $N=2026$. Let $G$ be the graph whose vertices are the $N^2$ unit cells, two cells being joined by an edge when they share a side. A domino is an edge of $G$, and a domino covering is a perfect matching of $G$ (a set of edges such that every cell lies on exactly one of them). Colour the cells like a chessboard; every edge joins a black cell and a white cell, so every closed walk in $G$ has even length. In $G$ an interior cell has degree $4$, a boundary cell that is not a corner has degree $3$, and a corner has degree $2$.</p><p><strong>Step 1: a $4$-regular multigraph.</strong> Each side of the board is a row of $N$ cells $c_1,c_2,\dots,c_N$, and consecutive cells $c_i,c_{i+1}$ are joined by an edge $e_i$ ($1\le i\le N-1$). Since $N$ is even, the edges $e_1,e_3,e_5,\dots,e_{N-1}$ are pairwise disjoint and together contain every cell of that side exactly once. For each of these $N/2$ edges we add a second, parallel copy, called a <em>new edge</em> (the edges of $G$ are <em>old</em>). We do this on all four sides (see the figure for a $6\times6$ board), adding $4\cdot\frac N2=2N$ new edges. A boundary cell that is not a corner lies on one side and gains one new edge; a corner lies on two sides and gains two; an interior cell gains none. So in the resulting multigraph $H$ every cell has degree exactly $4$. A new edge joins the same two cells as an old edge, so closed walks in $H$ still have even length.</p><p><strong>Step 2: delete the two coverings.</strong> Delete from $H$ the old edges that belong to $\Gamma_1$ or to $\Gamma_2$; all new edges stay. Since $\Gamma_1$ and $\Gamma_2$ are disjoint perfect matchings, every cell loses exactly two edges. In the remaining multigraph $R$ every cell has degree exactly $2$, and $R$ contains all $2N$ new edges.</p><p><strong>Step 3: two perfect matchings.</strong> In a multigraph in which every vertex has degree $2$, the edges split into disjoint cycles: start with any edge and keep leaving the current vertex along its other edge; since every vertex has only two edges, the walk can return only to its starting vertex, and it closes up there. (A cycle may have length $2$: an old edge and its new copy, both still present.) Every cycle of $R$ has even length, so we may colour its edges alternately red and blue. Every cell lies on exactly one cycle and meets exactly one red and one blue edge of it. Hence the red edges form a perfect matching, so do the blue edges, and every edge of $R$ is in exactly one of the two.</p><p><strong>Step 4: the covering $\Gamma$.</strong> The $2N$ new edges are split between the red and the blue matching, so one of them, call it $M$, contains at most $N$ new edges. Replace each new edge of $M$ by the domino formed by its two cells. Since every cell lies on exactly one edge of $M$, the resulting set $\Gamma$ of dominoes is a domino covering.</p><p><strong>Step 5: the overlap.</strong> Let $\delta$ be a domino of $\Gamma$ that belongs to $\Gamma_1$ or to $\Gamma_2$. The old edge $\delta$ was deleted in Step 2, so $\delta$ came from a new edge of $M$. Different dominoes of $\Gamma$ come from different edges of $M$, hence
 \[|\Gamma\cap(\Gamma_1\cup\Gamma_2)|\le(\text{number of new edges in }M)\le N .\]
@@ -231,8 +230,7 @@ Since $\Gamma_1\cap\Gamma_2=\emptyset$, the left side equals $|\Gamma_1\cap\Gamm
 <h3>Problem 1</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 19: Triangle Centers and Classical Triangle Geometry &middot; Angle Bisector and Median Geometry</div>
 <div class="ct-text"><p>Let $ABC$ be an acute-angled triangle. Let $I_B$ and $I_C$ be the excenters of triangle $ABC$ opposite $B$ and $C$, respectively. Let $E$ be a point on line $BA$ such that $\angle EI_BB=90^\circ$. Let $F$ be a point on line $CA$ such that $\angle CI_CF=90^\circ$. Let the circle with center $I_B$ and radius $I_BE$ intersect the segment $I_BB$ at $X$. Let the circle with center $I_C$ and radius $I_CF$ intersect the segment $I_CC$ at $Y$. Prove that $BY$ is perpendicular to $CX$.</p><p>The excenter of a triangle $ABC$ opposite vertex $B$ is the center of the circle that is tangent to line segment $AC$, to ray $BA$ beyond $A$, and to ray $BC$ beyond $C$. The excenter opposite $C$ is similarly defined.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Tangent lengths and two similar right triangles)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Tangent lengths and two similar right triangles</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:384px" src="/assets/contests/2026-27/romania-tst-5_s1.svg" alt="Figure for the solution"></div>
 <p>Let $\beta=\frac12\angle B$, $\gamma=\frac12\angle C$ and $t_b=\tan\beta$, $t_c=\tan\gamma$. The triangle is acute, so $\beta,\gamma&lt;45^\circ$ and $0&lt;t_b,t_c&lt;1$.
 Let $a=BC$ and let $s$ be the semiperimeter.</p><p><em>Two classical lengths.</em> Let the excircle with centre $I_B$ (radius $r_b$) touch line $BC$ at $T_B$. Then $BT_B=s$ and $CT_B=s-a$. Since $BI_B$ bisects angle $B$, the right triangle $BT_BI_B$ gives $r_b=s\,t_b$.
@@ -245,7 +243,8 @@ In particular $X'$ lies between $B$ and $C$.</p><p><em>The point $Y$.</em> In th
 \[\frac{XX'}{X'C}=\frac{1-t_b}{1-t_c}=\frac{BY'}{Y'Y},\]
 so they are similar, with $\angle XCX'=\angle BYY'=90^\circ-\angle YBY'$. Hence $\angle XCB+\angle YBC=90^\circ$. The points $X,Y$ lie on the same side of $BC$ (the side of $A$), so the lines $CX$ and $BY$ meet at a point $Z$ on that side, and in
 triangle $ZBC$ the angle at $Z$ equals $180^\circ-90^\circ=90^\circ$. Therefore $BY\perp CX$.</p>
-<h4>Solution 2 (Coordinates in the half-angle tangents)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Coordinates in the half-angle tangents</summary><div class="ct-text">
 <p>Let $t_b=\tan\frac B2$, $t_c=\tan\frac C2$; since the triangle is acute, $0&lt;t_b,t_c&lt;1$. Take $B=(0,0)$, the line $BC$ as the $x$-axis and $A$ in the upper half-plane; choose the unit of length so that
 $C=(1-t_bt_c,\,0)$.</p><p>The line $BI_B$ is the bisector of angle $B$: $y=t_bx$. The line $CI_B$ bisects the exterior angle at $C$, so it makes the angle $90^\circ-\frac C2$ with the positive $x$-axis: $y=\dfrac{x-(1-t_bt_c)}{t_c}$.
 Solving, $I_B=(1,t_b)$. Symmetrically (reflect the roles of $B$ and $C$), $I_C=(-t_bt_c,\ t_c)$; indeed this point lies on the bisector $y=-t_c\bigl(x-(1-t_bt_c)\bigr)$ of angle $C$ and on the exterior bisector $y=-x/t_b$ at $B$.</p><p>In the right triangle $BI_BE$ the angle at $B$ is $\frac B2$, so $I_BE=t_b\,BI_B$; hence $X$, the point of segment $I_BB$ at distance $I_BE$ from $I_B$, is
@@ -266,8 +265,7 @@ So $BY\perp CX$. (The computation also shows $CX:BY=\tan\frac B2:\tan\frac C2$.)
 \[\left|(a_1+a_2+\cdots+a_i)-a_j\right|\]
 as $i$ and $j$ vary over all integers $1,2,\ldots,100$.</p><p>Determine the smallest possible sunshine cost over all sequences $a_1,a_2,\ldots,a_{100}$ of pairwise distinct integers.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$75$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Two extreme pairs, and the steps of the partial sums)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Two extreme pairs, and the steps of the partial sums</summary><div class="ct-text">
 <p>Write $S_i=a_1+\dots+a_i$ and let
 \[m=\min_ja_j,\quad \mu=\max_ja_j,\quad s=\min_iS_i,\quad \sigma=\max_iS_i .\]
 Let $M$ be the sunshine cost. Since $|S_i-a_j|\le M$ for all $i,j$,
@@ -287,8 +285,7 @@ with equality for $S_i=-25$, $a_j=50$. The cost of this sequence is $75$.</p><p>
 <h3>Problem 5</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 52: Advanced Combinatorial Structure and Hybrid Methods &middot; Combinatorics with Geometric Insight</div>
 <div class="ct-text"><p>A circle $\omega$ <em>touches</em> a half-plane $H$ if $H$ does not contain $\omega$ and $\omega$ is tangent to the boundary line of $H$. Let $\mathcal{H}$ be a finite non-empty set of half-planes in a plane satisfying the following three conditions simultaneously:</p><ul class="ct-parts"><li><p><span class="ct-lbl">1.</span> The boundary lines of the half-planes in $\mathcal{H}$ are in general position (no two are parallel and no three are concurrent);</p></li><li><p><span class="ct-lbl">2.</span> For any three half-planes in $\mathcal{H}$ there exists a circle touching them all;</p></li><li><p><span class="ct-lbl">3.</span> No circle touches all half-planes in $\mathcal{H}$.</p></li></ul><p>Prove that there exists a circle touching exactly three half-planes in $\mathcal{H}$.</p></div>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Lifting to a cylinder and an ordinary plane)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Lifting to a cylinder and an ordinary plane</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:352px" src="/assets/contests/2026-27/romania-tst-7_s1.svg" alt="Figure for the solution"></div>
 <p>We take half-planes to be closed. (Any reading under which the clause &ldquo;$H$ does not contain $\omega$&rdquo; is not vacuous gives the same meaning.) A circle tangent to the boundary line $\ell$ of $H$ lies in one of the two closed half-planes bounded by $\ell$, so $\omega$ <em>touches</em> $H$ exactly when it is tangent to $\ell$ and lies on the side of $\ell$ opposite to $H$ (meeting $H$ only at the point of tangency).</p><p><strong>1. A dictionary.</strong> Write each $H\in\mathcal H$ as $H=\{x\in\mathbb R^2:\ n\cdot x\le p\}$ with a unit vector $n=(n_1,n_2)$ (the outer normal) and a real number $p$, and assign to $H$ the point
 \[\Phi(H)=(n_1,n_2,p)\in\mathbb R^3,\]
@@ -313,8 +310,7 @@ $H_1,H_2,H_3$ and no other half-plane of $\mathcal H$. So $\omega$ touches exact
 <h3>Problem 1</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure &middot; Radical Axis and Radical Center</div>
 <div class="ct-text"><p>Let $ABC$ be a triangle such that $\angle A$ is obtuse. Let $D$ and $E$ be points on sides $AB$ and $AC$, respectively, such that $BDEC$ is cyclic. Suppose the circumcircle of triangle $ADE$ intersects side $BC$ at two points $X$ and $Y$, where $B,X,Y$ and $C$ lie in that order. Let the circumcircles of triangles $BDX$ and $CEY$ be $\Omega$ and $\Gamma$, respectively. Let $P$ be a point such that $PD$ is tangent to $\Omega$ and $PE$ is tangent to $\Gamma$. Let $Q$ be a point such that $QB$ is tangent to $\Omega$ and $QC$ is tangent to $\Gamma$. Prove that points $A$, $P$ and $Q$ are collinear.</p></div>
-<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
-<h4>Solution 1 (All three points lie on the radical axis)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; All three points lie on the radical axis</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:362px" src="/assets/contests/2026-27/romania-tst-8_s1.svg" alt="Figure for the solution"></div>
 <p>Angles $\angle(\ell,\ell')$ between lines are directed and taken modulo $180^\circ$. Let $\omega$ be the circle through $A,D,E,X,Y$. We show that $A$, $P$, $Q$ have equal powers with respect to $\Omega$ and $\Gamma$.</p><p><strong>Step 1: $AX=AY$.</strong> Let $t$ be the tangent to $\omega$ at $A$. By the tangent&ndash;chord theorem and since $B,D,E,C$ are concyclic,
 \[\angle(t,AD)=\angle(EA,ED)=\angle(EC,ED)=\angle(BC,BD)=\angle(BC,AD).\]
@@ -331,7 +327,8 @@ Subtracting (recall that $AD=AB$ and $AE=AC$ as lines),
 and this is $\angle(YX,YA)+\angle(XY,XA)=0$ by (1). So $\angle(DP,DE)=\angle(ED,EP)$, triangle $PDE$ is isosceles, and $PD=PE$.</p><p><strong>Step 4.</strong> The power of $A$ with respect to $\Omega$ is $AD\cdot AB$ and with respect to $\Gamma$ it is $AE\cdot AC$; these are equal because $B,D,E,C$ are concyclic. The power of $P$ is $PD^2$ with respect to $\Omega$ and $PE^2$
 with respect to $\Gamma$; the power of $Q$ is $QB^2$, respectively $QC^2$. By Steps 2 and 3, each of $A,P,Q$ has equal powers with respect to $\Omega$ and $\Gamma$. The centres of $\Omega$ and $\Gamma$ lie on the perpendicular bisectors of $BX$ and
 $CY$, two different parallel lines (the midpoints differ since $B,X,Y,C$ lie in this order), so the circles are not concentric and the points of equal power form a line, the radical axis. Hence $A$, $P$, $Q$ are collinear.</p>
-<h4>Solution 2 (Inversion about A)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Inversion about A</summary><div class="ct-text">
 <p>Let $\rho^2=AD\cdot AB=AE\cdot AC$ (equal since $B,D,E,C$ are concyclic), and let $\mathcal I$ be the inversion with centre $A$ and radius $\rho$. It interchanges $B\leftrightarrow D$ and $C\leftrightarrow E$.</p><p><strong>1. $X$ and $Y$ are fixed, and $\Omega,\Gamma$ are invariant.</strong> The circle $\omega=(ADE)$ passes through $A$, so $\mathcal I(\omega)$ is the line through $\mathcal I(D)=B$ and $\mathcal I(E)=C$, i.e. the line $BC$. The point $X$ lies on both $\omega$ and $BC$, so
 $\mathcal I(X)$ also lies on both, i.e. $\mathcal I(X)\in\{X,Y\}$; but $\mathcal I(X)$ is on the ray $AX$, which does not contain $Y$ (a line through $A$ meets $\omega$ in only one further point). So $\mathcal I(X)=X$ and likewise $\mathcal I(Y)=Y$:
 \[AX=AY=\rho .\]
@@ -345,7 +342,8 @@ In the same way, in $\Gamma$ (chord $CY$, tangents $CQ$ and $YA$): $\angle(CQ,BC
 $\angle(BC,AX)=-\angle(BC,AY)$. Altogether
 \[\angle(BQ,BC)=\angle(BC,AX)=-\angle(BC,AY)=-\angle(CQ,BC)=\angle(CB,CQ),\]
 so triangle $QBC$ is isosceles with $QB=QC$. By Step 2, $Q$ lies on the line $AP$: the points $A,P,Q$ are collinear.</p>
-<h4>Solution 3 (Oblique coordinates and two pairs of tangent lines)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 3 &ndash; Oblique coordinates and two pairs of tangent lines</summary><div class="ct-text">
 <p>Scale the figure so that $BC=1$. Put $u=CX$ and $v=BY$. The point $X$ is not $B$: the line $AB$ meets the circle $(ADE)$ only at $A$ and $D$. Likewise $Y\ne C$. As $B,X,Y,C$ lie in this order, $BX+YC&lt;BC$, that is $(1-u)+(1-v)&lt;1$; so
 \[0&lt;u&lt;1,\qquad 0&lt;v&lt;1,\qquad u+v&gt;1 .\]</p><p><strong>Coordinates.</strong> Take $A$ as origin and write every point $Z$ as $Z=r\,\overrightarrow{AB}+s\,\overrightarrow{AC}$, with coordinates $Z=(r,s)$. Put $U=AB^2$, $V=AC^2$ and $W=\overrightarrow{AB}\cdot\overrightarrow{AC}$; then $W&lt;0$ because $\angle A$ is obtuse. The dot product of $(r,s)$ and $(r',s')$ is $Urr'+W(rs'+r's)+Vss'$, and $|Z|^2=Z\cdot Z$. From $BC^2=1$ we get $U+V-2W=1$. Then
 \[B=(1,0),\quad C=(0,1),\quad X=(u,1-u),\quad Y=(1-v,v).\]
@@ -380,8 +378,7 @@ Finally $uv\ne h$: otherwise $U=v$, $V=u$ and $2W=U+V-1=u+v-1&gt;0$, contradicti
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 31: Extremal Principle and Bounding Arguments &middot; Bounding and Limiting Arguments</div>
 <div class="ct-text"><p>Fix an integer $n\ge 2$. The sets $B$, $C$ and $C_b$ in the statement are all finite, non-empty and consist of positive real numbers. A set $C$ is <em>good</em> for a set $B$ if, for any $b\in B$, there exists a subset $C_b$ of $C$ such that $|\overline{c}_b-b|&lt;|\overline{c}_b-b'|$ for all $b'\in B\setminus\{b\}$, where $\overline{c}_b$ is the arithmetic mean of the numbers in $C_b$. In terms of $n$, determine the smallest positive integer $m$ satisfying the following condition: For every $n$-element set $B$, there exist an $m$-element set $C$ that is good for $B$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$m=\left\lfloor n/2\right\rfloor+1$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Every other element is enough; a geometric progression needs that many)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Every other element is enough; a geometric progression needs that many</summary><div class="ct-text">
 <p>The answer is $m=\lfloor n/2\rfloor+1$.</p><p>Let $B=\{b_1&lt;b_2&lt;\dots&lt;b_n\}$ and $t_i=\frac12(b_i+b_{i+1})$ for $1\le i\le n-1$. A real number $\mu$ is strictly closer to $b_i$ than to every other element of $B$ exactly when $\mu$ lies in the open interval
 $I_i=(t_{i-1},t_i)$, where $t_0=-\infty$, $t_n=+\infty$. So $C$ is good for $B$ iff every interval $I_1,\dots,I_n$ contains the mean of some non-empty subset of $C$.</p><p><strong>Upper bound.</strong> Let
 \[C=\{b_1,b_3,b_5,\dots\}\cup\{b_n\},\]
@@ -401,8 +398,7 @@ of the intervals $I_i$. As $C$ is good, all $n$ intervals are needed: $2m-1\ge n
 <h3>Problem 3</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Number Theory &middot; LPS VII, Chapter 49: Combinatorial Number Theory and Structure &middot; Hybrid Combinatorial-Arithmetic Arguments</div>
 <div class="ct-text"><p>Let $n$ be a positive integer and let $A$ be a finite non-empty set of positive odd integers such that no two distinct elements of $A$ divide one another. Suppose that for any subset $S\subset A$ of size $n+1$, there exist distinct elements $x,y,z\in S$ such that $x\mid y+z$. Prove that $|A|&lt;2^{n^3}$.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Halving from below, then a greedy choice from above)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Halving from below, then a greedy choice from above</summary><div class="ct-text">
 <p>Call a triple of distinct elements $x,y,z$ with $x\mid y+z$ a <em>bad triple with divisor $x$</em>. We must show: if $|A|\ge2^{n^3}$, then some $(n+1)$-element subset of $A$ contains no bad triple.</p><p>For $n=1$ this is clear: a $2$-element set contains no three distinct elements, so the hypothesis forces $|A|\le1&lt;2$. Let $n\ge2$ and put
 \[t=\frac{n^2+n+2}{2}\ \le n^3 .\]
 (Indeed $n^2+n+2\le2n^3$ for $n\ge2$.) We prove the stronger statement $|A|\le2^t-2$. Suppose, on the contrary, that $|A|\ge2^t-1$.</p><p><strong>Three observations.</strong> Let $x,y,z\in A$ be distinct.</p><ul class="ct-parts"><li><p><span class="ct-lbl">(O1)</span> If $x$ is the largest of the three, then $x\nmid y+z$. Indeed $0&lt;y+z&lt;2x$, so $x\mid y+z$ would give $y+z=x$; but $y+z$ is even and $x$ is odd.</p></li><li><p><span class="ct-lbl">(O2)</span> The remainders of $y$ and $z$ modulo $x$ are non-zero (no element of $A$ divides another) and different from $x/2$ ($x$ is odd). If both remainders are smaller than $x/2$, or both are larger than $x/2$, then their sum lies strictly between $0$ and $x$,
@@ -414,7 +410,8 @@ In particular $A_{t-1}\ne\emptyset$, so $u_1&lt;u_2&lt;\dots&lt;u_t$ are defined
 At step $j$ at most $1+(j-1)=j$ elements are removed, so $|U_j|\ge t-(1+2+\dots+j)$, and
 \[|U_n|\ge t-\frac{n(n+1)}2=1 .\]
 Hence $s_1,\dots,s_{n+1}$ can indeed be chosen. Let $S=\{s_1,\dots,s_{n+1}\}\subseteq U$.</p><p><strong>$S$ contains no bad triple.</strong> Suppose $x,y,z\in S$ are distinct with $x\mid y+z$, and $y&lt;z$.</p><ul class="ct-ul"><li><p>$x$ is not the largest of the three, by (O1).</p></li><li><p>$x$ is not the smallest, by (1), since $S\subseteq U$.</p></li><li><p>So $y&lt;x&lt;z$. Write $x=s_j$, $z=s_i$, $y=s_l$; then $i&lt;j&lt;l$. Since $y$ was chosen after step $j$, we have $y\in U_j$, hence $y\ne s_j-(s_i\bmod s_j)=x-(z\bmod x)$. This contradicts (O3).</p></li></ul><p>So the $(n+1)$-element subset $S$ of $A$ contains no $x,y,z$ with $x\mid y+z$, contrary to the hypothesis. Therefore $|A|\le2^t-2&lt;2^t\le2^{n^3}$.</p>
-<h4>Solution 2 (Counting middle divisors, then halving from below)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Counting middle divisors, then halving from below</summary><div class="ct-text">
 <p>Call a triple $a&lt;b&lt;c$ of elements of $A$ a <em>middle triple</em> if $b\mid a+c$.</p><p><strong>Two observations.</strong></p><ul class="ct-parts"><li><p><span class="ct-lbl">(O1)</span> If $a&lt;b&lt;c$ are in $A$, then $c\nmid a+b$: we have $0&lt;a+b&lt;2c$, so $c\mid a+b$ would force $a+b=c$, but $a+b$ is even and $c$ is odd.</p></li><li><p><span class="ct-lbl">(O2)</span> For given $b&lt;c$ in $A$ there is at most one $a&lt;b$ in $A$ with $b\mid a+c$: such an $a$ satisfies $a\equiv-c\pmod b$ and $1\le a\le b-1$, and only one number in this range has a prescribed remainder. Hence a subset of $A$ with $M$ elements contains at most $\binom M2$ middle triples (at most one for each pair $b&lt;c$).</p></li></ul><p>If $n=1$, the hypothesis applied to a $2$-element subset $S$ would require three distinct elements of $S$, which is impossible; so $A$ has no $2$-element subset and $|A|=1&lt;2$. Let $n\ge2$, and suppose for a contradiction that $M=|A|\ge2^{n^3}$. Put $t=2^n$; then $t\le M$ and $M\ge 2^8$. We shall find an $(n+1)$-element subset of $A$ containing no distinct $x,y,z$ with $x\mid y+z$.</p><p><strong>Step 1: a $t$-element subset without middle triples.</strong> Count the pairs $(T,\tau)$ where $T$ is a $t$-element subset of $A$ and $\tau$ is a middle triple contained in $T$. Each of the at most $\binom M2$ middle triples lies in $\binom{M-3}{t-3}$ sets $T$, so the number of pairs is at most $\binom M2\binom{M-3}{t-3}$. Using $\binom{M-3}{t-3}=\binom Mt\binom t3\big/\binom M3$, this equals
 \[\binom Mt\cdot\frac{\binom M2\binom t3}{\binom M3}=\binom Mt\cdot\frac{3\binom t3}{M-2}.\]
 Now $3\binom t3=\frac{t(t-1)(t-2)}2&lt;\frac{t^3}2=\frac{2^{3n}}2\le\frac{2^{n^3}}2\le\frac M2\le M-2$ (we used $3n\le n^3$ for $n\ge2$, and $M\ge4$). So the number of pairs is less than $\binom Mt$, the number of sets $T$. Hence some $t$-element subset $T$ of $A$ contains no middle triple.</p><p><strong>Step 2: halving from below.</strong> Put $T_0=T$. For $j=1,2,\dots$, as long as $T_{j-1}\ne\emptyset$, let $x_j=\min T_{j-1}$ and construct $T_j\subseteq T_{j-1}\setminus\{x_j\}$ as follows. No element $z$ of $T_{j-1}\setminus\{x_j\}$ is divisible by $x_j$ (no element of $A$ divides another), so its remainder modulo $x_j$ is non-zero. As $x_j$ is odd, the non-zero remainders split into the pairs $\{q,\,x_j-q\}$ with $q\ne x_j-q$. For each such pair, keep the elements of $T_{j-1}\setminus\{x_j\}$ in whichever of the two remainder classes has more of them (either one in case of a tie), and discard those in the other class. Let $T_j$ be the set of kept elements. Then:</p><ul class="ct-ul"><li><p>$|T_j|\ge\frac12\bigl(|T_{j-1}|-1\bigr)$, since from each pair of classes we keep at least half;</p></li><li><p>if $y,z\in T_j$ are distinct, then $x_j\nmid y+z$. Indeed $y+z\equiv0\pmod{x_j}$ would need remainders $q$ and $x_j-q$, which lie in different classes of the same pair and are never both kept, or two equal remainders $q$ with $2q\equiv0$, i.e. $q\equiv0$ since $x_j$ is odd, which is excluded.</p></li></ul><p>By induction $|T_j|\ge2^{n-j}$ for $j=0,1,\dots,n$: this holds for $j=0$, and if $|T_{j-1}|\ge2^{n-j+1}$ then $|T_j|\ge2^{n-j}-\frac12$, so $|T_j|\ge2^{n-j}$ as it is an integer. In particular $T_n\ne\emptyset$; let $x_{n+1}=\min T_n$ and $S=\{x_1,\dots,x_{n+1}\}$. Each $x_{j+1}$ belongs to $T_j\subseteq T_{j-1}\setminus\{x_j\}$, whose elements exceed $x_j=\min T_{j-1}$; so $x_1&lt;x_2&lt;\dots&lt;x_{n+1}$, $S$ has $n+1$ elements, and $x_k\in T_j$ whenever $k&gt;j$.</p><p><strong>Step 3: $S$ contains no bad triple.</strong> Suppose $x,y,z\in S$ are distinct and $x\mid y+z$.</p><ul class="ct-ul"><li><p>$x$ is not the largest of the three, by (O1).</p></li><li><p>$x$ is not the smallest: if $x=x_j$, then $y,z$ are later elements $x_k$ ($k&gt;j$), so $y,z\in T_j$ and $x_j\nmid y+z$ by Step 2.</p></li><li><p>$x$ is not the middle one: then the three would form a middle triple contained in $S\subseteq T$, and $T$ has none.</p></li></ul><p>This contradicts the hypothesis applied to the $(n+1)$-element subset $S$. Therefore $|A|&lt;2^{n^3}$.</p>
@@ -426,8 +423,7 @@ Now $3\binom t3=\frac{t(t-1)(t-2)}2&lt;\frac{t^3}2=\frac{2^{3n}}2\le\frac{2^{n^3
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Algebra &middot; LPS VII, Chapter 9: Polynomials and Root-Coefficient Strategy &middot; Vieta&#x27;s Relations</div>
 <div class="ct-text"><p><em>Quadratic solitaire</em> is a single-player game. To start the game, the player chooses two distinct nonzero integers $a$ and $b$ and writes the equation $x^2+ax+b=0$ on a blackboard. On each turn, if the equation currently written on the blackboard has two distinct nonzero integer solutions $x=u$ and $x=v$, then the player erases the equation and replaces it by one of the equations $x^2+ux+v=0$ and $x^2+vx+u=0$ of their choosing. Otherwise, the game ends. Determine all initial choices of $a$ and $b$ such that quadratic solitaire can be played forever.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$(a,b)=(1,-2)$ only</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (The constant term can only shrink)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; The constant term can only shrink</summary><div class="ct-text">
 <p><strong>Answer:</strong> only $a=1$, $b=-2$.</p><p>Suppose the game goes on forever, and let $x^2+a_kx+b_k=0$ $(k=0,1,2,\dots)$ be the equations on the blackboard, $(a_0,b_0)=(a,b)$. The next equation has as its coefficients the two roots of the present one, so by Vieta
 \[a_{k+1}+b_{k+1}=-a_k,\qquad a_{k+1}b_{k+1}=b_k\qquad(k\ge0), \tag{1}\]
 and all $a_k,b_k$ are non-zero integers (the roots are required to be non-zero).</p><p><strong>Step 1.</strong> From (1), $|b_k|=|a_{k+1}|\,|b_{k+1}|\ge|b_{k+1}|$. So $|b_0|\ge|b_1|\ge\cdots$ is a non-increasing sequence of positive integers, hence constant from some index $K$ on. For $k\ge K$ the equality $|b_k|=|b_{k+1}|$ forces
@@ -444,8 +440,7 @@ the initial equation is $x^2+x-2=0$, i.e. $(a,b)=(1,-2)$.</p><p><strong>Converse
 <div class="ct-text"><p>Do there exist a positive integer $N$ and an infinite sequence $a_1,a_2,a_3,\dots$ of positive integers such that
 \[a_{n+1}=\frac{a_1a_2\dots a_n}{a_1+a_2+\dots+a_n}\quad\text{for all } n\ge N\,?\]</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p><strong>No</strong></p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (The valuations of the partial sums stabilise)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; The valuations of the partial sums stabilise</summary><div class="ct-text">
 <p><strong>No</strong>, such $N$ and such a sequence do not exist. Suppose they did. Put
 \[S_n=a_1+\dots+a_n,\qquad P_n=a_1a_2\cdots a_n ,\]
 so that $a_{n+1}S_n=P_n$ for all $n\ge N$.</p><p><strong>Step 1: a recurrence.</strong> For $n\ge N+1$ we have $P_n=a_nP_{n-1}=a_n\cdot a_nS_{n-1}$, hence
@@ -464,8 +459,7 @@ large $n$. But $S_{n+1}=S_n+a_{n+1}&gt;S_n$. This contradiction shows that the a
 <div class="ct-text"><p>Let $ABCD$ be a convex quadrilateral with $\angle ADC&gt;90^\circ$. Suppose that points $X$ and $Y$ lie on diagonal $AC$ such that
 \[\angle ADX=\angle YDC=90^\circ,\quad\angle CAD=\angle CBX,\quad\text{and}\quad\angle DCA=\angle YBA.\]
 Let $O$ be the circumcentre of triangle $BXY$. Suppose point $R\neq O$ lies on the perpendicular bisector of $AC$ such that lines $OR$ and $AC$ are parallel.</p><p>Prove that line $RO$ bisects angle $\angle DRB$.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (A homothety centred at D and three powers of one point)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; A homothety centred at D and three powers of one point</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:441px" src="/assets/contests/2026-27/romania-tst-13_s1.svg" alt="Figure for the solution"></div>
 <p>Let $m$ be the perpendicular bisector of $AC$, and let $H$ be the circumcentre of triangle $ACD$. Since $\angle ADC&gt;90^\circ$, $H$ lies on $m$ on the side of $AC$ opposite to $D$, which is the side of $B$.
 We measure <em>heights</em> as signed distances from the line $AC$, positive on the side of $B$; thus $D$ has height $-q$ with $q&gt;0$ and $H$ has height $h&gt;0$. Let $\ell$ be the line through $H$ parallel to $AC$.</p><p>Let $\Gamma_1$ be the circle $BXC$ with centre $O_1$, and $\Gamma_2$ the circle $BYA$ with centre $O_2$.</p><p><strong>Step 1: $O_1\in DX$, $O_2\in DY$, and $\overrightarrow{O_1H}=\tfrac12\overrightarrow{XA}$, $\overrightarrow{O_2H}=\tfrac12\overrightarrow{YC}$.</strong>
@@ -491,7 +485,8 @@ goes to $H$ (height $h$), we have $h=(\lambda-1)q$, so the image has height $h+\
 So $D$, $B''$, $R$ are collinear and $\overrightarrow{DR}=\lambda\overrightarrow{DB''}$ with $\lambda&gt;1$. Moreover $B''\ne D$: otherwise $R=D$ would lie on $m$, so $DA=DC$ and the whole configuration would be symmetric in $m$ ($X\leftrightarrow Y$, $G$ the midpoint of $AC$, $B\in m$),
 giving $O\in m$, i.e. $R=O$, which is excluded. Consequently $B''$ lies strictly between $D$ and $R$, and the rays $RD$ and $RB''$ coincide.</p><p><strong>Step 6: conclusion.</strong> The line $RO$ passes through the centre $O$ of $\kappa$ and is perpendicular to the chord $BB''$. The reflection in $RO$ therefore maps $\kappa$ to itself and the line $BB''$ to itself, so it interchanges $B$ and $B''$, and it fixes $R$.
 Thus it maps the ray $RB$ onto the ray $RB''=RD$. Hence the line $RO$ bisects the angle $\angle DRB$.</p>
-<h4>Solution 2 (Coordinates)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Coordinates</summary><div class="ct-text">
 <p>Let the midpoint of $AC$ be the origin, $A=(-1,0)$, $C=(1,0)$, $D=(p,-q)$ with $q&gt;0$, and $B=(b_1,b_2)$ with $b_2&gt;0$ ($B$ and $D$ are on opposite sides of $AC$). Since $\angle ADC&gt;90^\circ$, $D$ is inside the circle with diameter $AC$:
 $p^2+q^2&lt;1$. Put
 \[h=\frac{1-p^2-q^2}{2q}&gt;0,\qquad\text{so that}\qquad 1-p^2=q^2+2qh .\]</p><p><em>The points $X=(x,0)$, $Y=(y,0)$.</em> From $\overrightarrow{DX}\cdot\overrightarrow{DA}=0$ and $\overrightarrow{DY}\cdot\overrightarrow{DC}=0$,

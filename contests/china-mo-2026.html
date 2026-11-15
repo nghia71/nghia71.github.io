@@ -97,7 +97,6 @@ description: Chinese Mathematical Olympiad 2026: problems with answers and solut
 <p>The 6 problems of the Chinese Mathematical Olympiad 2026, each with our own solutions, hidden until you open them. Where a problem has a final answer, it is shown separately. Try a problem first, then check.</p><p>The CMO has two days with three problems each.</p>
 </div>
 <div class="ct-credit">Problems: Chinese Mathematical Olympiad 2026, from the AoPS contest collection or the official paper. Solutions written by MCC.</div>
-<div class="ct-bar"><button type="button" onclick="ctAll(true)">Show all answers and solutions</button><button type="button" onclick="ctAll(false)">Hide all</button></div>
 <div class="ct-toc-wrap"><div class="ct-toc-row"><span class="ct-toc-g">Day 1</span><a href="#p1">1</a><a href="#p2">2</a><a href="#p3">3</a></div><div class="ct-toc-row"><span class="ct-toc-g">Day 2</span><a href="#p4">4</a><a href="#p5">5</a><a href="#p6">6</a></div></div>
 
 {% raw %}
@@ -110,8 +109,7 @@ description: Chinese Mathematical Olympiad 2026: problems with answers and solut
 \[B=\{z\in\mathbb{C}\mid z=x+iy,\ x,y\in\mathbb{R},\ |x-y|&lt;2025\},\]
 where $i$ is the imaginary unit, and $re^{i\theta}=r(\cos\theta+i\sin\theta)$.</p><p>Find all complex-coefficient polynomials $P(z)$ such that for every $z\in A$, we have $P(z)\in B$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>the constant polynomials $P(z)=c$ with $|\operatorname{Re}c-\operatorname{Im}c|&lt;2025$</p></div></details>
-<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
-<h4>Solution 1 (A bounded polynomial on every ray)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; A bounded polynomial on every ray</summary><div class="ct-text">
 <p><strong>Answer:</strong> exactly the constant polynomials $P(z)=c$ with $c\in B$, i.e. $|\operatorname{Re}c-\operatorname{Im}c|&lt;2025$.</p><p>A constant $c\in B$ clearly works. Conversely, let $P$ satisfy the condition and put
 \[Q(z)=(1+i)P(z)=\sum_{k=0}^{d}q_kz^k .\]
 For $w=x+iy$ we have $(1+i)w=(x-y)+i(x+y)$, so $\operatorname{Re}\bigl((1+i)w\bigr)=x-y$. Hence the condition says
@@ -124,7 +122,8 @@ Fix $k\ge1$. For $\theta=0$, (2) gives $\operatorname{Re}q_k=0$, so $q_k=it$ wit
 \[0=\operatorname{Re}\bigl(it\,e^{ik\theta_k}\bigr)=-t\sin\frac{\pi}{41},\]
 so $t=0$. Thus $q_k=0$ for all $k\ge1$, $Q$ is constant, and $P=c$ is constant; the condition then says $c\in B$.</p><p>So the required polynomials are the constants:
 \[\boxed{P(z)=c\ \text{ with }c=x_0+iy_0,\ |x_0-y_0|&lt;2025}.\]</p>
-<h4>Solution 2 (The leading coefficient)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; The leading coefficient</summary><div class="ct-text">
 <p><strong>Answer:</strong> exactly the constant polynomials $P(z)=c$ with $c\in B$, i.e. $|\operatorname{Re}c-\operatorname{Im}c|&lt;2025$.</p><p>A constant $c\in B$ clearly works. For $w=x+iy$ we have $(1+i)w=(x-y)+i(x+y)$, so $w\in B$ if and only if $\bigl|\operatorname{Re}\bigl((1+i)w\bigr)\bigr|&lt;2025$.</p><p>Suppose that a polynomial $P$ of degree $d\ge1$ satisfies the condition, and let $Q(z)=(1+i)P(z)=\sum_{k=0}^dq_kz^k$, with $q_d\ne0$. Then $|\operatorname{Re}Q(z)|&lt;2025$ for all $z\in A$.
 Fix $\theta\in[0,\pi/41]$. For $r&gt;0$,
 \[\frac{\operatorname{Re}Q(re^{i\theta})}{r^d}=\operatorname{Re}\bigl(q_de^{id\theta}\bigr)+\sum_{k=0}^{d-1}\operatorname{Re}\bigl(q_ke^{ik\theta}\bigr)\,r^{k-d}.\]
@@ -133,7 +132,8 @@ As $r\to\infty$, the left side tends to $0$ (its absolute value is less than $20
 For $\theta=0$ this says that $q_d$ is purely imaginary, $q_d=it$ with a real $t\ne0$. For $\theta=\frac{\pi}{41d}$ it says that $q_de^{i\pi/41}$ is purely imaginary too; but
 $\operatorname{Re}\bigl(it\,e^{i\pi/41}\bigr)=-t\sin\frac{\pi}{41}\ne0$. This contradiction shows that $P$ is constant, $P=c$, and then the condition says $c\in B$:
 \[\boxed{P(z)=c\ \text{ with }c=x_0+iy_0,\ |x_0-y_0|&lt;2025}.\]</p>
-<h4>Solution 3 (Averaging over a circle inside the sector)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 3 &ndash; Averaging over a circle inside the sector</summary><div class="ct-text">
 <p><strong>Answer:</strong> exactly the constant polynomials $P(z)=c$ with $c\in B$, i.e. $|\operatorname{Re}c-\operatorname{Im}c|&lt;2025$.</p><p>A constant $c\in B$ clearly works. For $w=u+iv$ we have $(1+i)w=(u-v)+i(u+v)$, so $w\in B$ if and only if $\bigl|\operatorname{Re}\bigl((1+i)w\bigr)\bigr|&lt;2025$.
 Suppose that a polynomial $P$ of degree $d\ge1$ satisfies the condition and put $F(z)=(1+i)P(z)$, a polynomial of degree $d$ with leading coefficient $f_d\ne0$. Then $|\operatorname{Re}F(z)|&lt;2025$ for all $z\in A$.</p><p><strong>Discs inside the sector.</strong> Let $\alpha=\frac{\pi}{82}$ (half the opening angle of $A$), let $\rho&gt;0$ and $z_0=\frac{\rho}{\sin\alpha}e^{i\alpha}$. The distance from $z_0$ to each of the two boundary rays of $A$ is $|z_0|\sin\alpha=\rho$, so the circle $|z-z_0|=\rho$ lies in $A$.</p><p><strong>Extracting the leading coefficient.</strong> Expand $F$ around $z_0$: $F(z_0+\zeta)=\sum_{j=0}^d\beta_j\zeta^j$; the top coefficient is $\beta_d=f_d$. Choose an integer $m&gt;2d$, let $\omega=e^{2\pi i/m}$ and $\zeta_k=\rho\,\omega^k$ $(k=0,\dots,m-1)$. Recall that for an integer $l$,
 \[\frac1m\sum_{k=0}^{m-1}\omega^{kl}=\begin{cases}1,&amp;m\mid l,\\0,&amp;m\nmid l.\end{cases}\]
@@ -150,8 +150,7 @@ Letting $\rho\to\infty$ gives $f_d=0$, a contradiction. So $P$ is constant, $P=c
 <div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure &middot; Power of a Point</div>
 <div class="ct-text"><p>Let convex quadrilateral $ABCD$ be inscribed in a circle with center $O$ and radius $1$ and satisfy $\angle ABC&lt;\angle BCD&lt;90^\circ$. Let $P$ be the intersection of lines $BA$ and $CD$, and $Q$ be the intersection of diagonals $AC$ and $BD$. Suppose there exists a point $K$ on segment $BC$ such that $P,A,K,D$ are concyclic, and $KB\cdot KC=\frac12 OP^2$. The line perpendicular to $BC$ and passing through $Q$ intersects line $OP$ at point $T$.</p><ul class="ct-ul"><li><p>Find all possible values of $OP$;</p></li><li><p>Find all possible values of $TB+TC$.</p></li></ul></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$OP=\dfrac{2\sqrt3}{3}$; $TB+TC$ takes exactly the values in the open interval $(2\sqrt2,\,3)$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Tangent length, a triangle inequality, coordinates)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Tangent length, a triangle inequality, coordinates</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:362px" src="/assets/contests/2026-27/china-mo-2_s1.svg" alt="Figure for the solution"></div>
 <p>Let $\omega$ be the unit circle and $d=OP$. Since $\angle ABC+\angle BCD&lt;180^\circ$, the rays $BA$ and $CD$ meet at $P$; so $A$ lies on the segment $PB$,
 $D$ on the segment $PC$, and $\angle PBC=\angle ABC$, $\angle PCB=\angle BCD$.</p><p><strong>Step 1: $PK^2=OP^2-1$.</strong> With directed angles modulo $180^\circ$, using the circles $PAKD$ and $ABCD$,
@@ -183,7 +182,8 @@ Then $HC&gt;HK&gt;0$, so $H$ is an interior point of the segment $BC$ closer to 
 $K$ is on the segment $BC$ and $KB\cdot KC=1-OK^2=\frac23=\frac12OP^2$. Finally $PK^2=\frac13=PA\cdot PB=PD\cdot PC$, so $PK$ is tangent to the circles $ABK$ and $DCK$, whence $\angle PKA=\angle ABC$ and $\angle PKD=\angle BCD$;
 as $A$ and $D$ lie on opposite sides of the line $PK$, $\angle AKD=\angle ABC+\angle BCD=180^\circ-\angle APD$, and $P,A,K,D$ are concyclic.</p><p>So $\cos^2\varphi$ takes exactly the values in $(0,\frac14)$, and $BC=2\sqrt{\frac{2+\cos^2\varphi}3}$ takes exactly the values in $\bigl(2\sqrt{\tfrac23},\sqrt3\bigr)$. By Step 4, $TB+TC=\sqrt3\,BC$.</p><p><strong>Answer.</strong>
 \[\boxed{OP=\frac{2\sqrt3}{3}}\qquad\text{and}\qquad\boxed{2\sqrt2&lt;TB+TC&lt;3}\ \ (\text{every value of this open interval occurs}).\]</p>
-<h4>Solution 2 (The point T by poles and polars)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; The point T by poles and polars</summary><div class="ct-text">
 <p>Let $\omega$ be the unit circle and $d=OP$. Since $\angle ABC+\angle BCD&lt;180^\circ$, the rays $BA$ and $CD$ meet at $P$; so $A$ lies on the segment $PB$,
 $D$ on the segment $PC$, and $\angle PBC=\angle ABC$, $\angle PCB=\angle BCD$.</p><p><strong>Step 1: $PK^2=OP^2-1$.</strong> With directed angles modulo $180^\circ$, using the circles $PAKD$ and $ABCD$,
 \[\measuredangle(KP,KA)=\measuredangle(DP,DA)=\measuredangle(DC,DA)=\measuredangle(BC,BA)=\measuredangle(BK,BA).\]
@@ -220,8 +220,7 @@ as $A$ and $D$ lie on opposite sides of the line $PK$, $\angle AKD=\angle ABC+\a
 <div class="ct-meta"><span class="ct-pd ct-pd-S" title="Superhard, on the LPS VII scale">S</span>Combinatorics &middot; LPS VII, Chapter 18: Invariants and Monovariants &middot; Monovariants and Directional Change</div>
 <div class="ct-text"><p>Let $n$ be a positive integer. Initially there are $n$ red cards and $n$ blue cards. One writes one $0$ on every red card and one $1$ on every blue card. An operation is to choose a red card and a blue card, such that the number on the red card is smaller than the number on the blue card, and then replace the two numbers by their arithmetic mean.</p><p>Determine the smallest $n$ such that it is possible to execute finitely many operations, so that the sum of the numbers on the red cards is larger than $100$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$n=106$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Thresholds, a fair coin and a potential)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Thresholds, a fair coin and a potential</summary><div class="ct-text">
 <p>We prove that the largest possible sum on the red cards is exactly
 \[W_n=n\Bigl(1-\frac{\binom{2n}{n}}{4^n}\Bigr),\]
 and that $W_n&gt;100$ first happens for $n=106$.</p><p><strong>A coin-tossing function.</strong> For integers $i,j\ge0$, not both $0$, let $q(i,j)$ be the probability that, tossing a fair coin repeatedly, the $i$-th head comes before the $j$-th tail. Thus $q(0,j)=1$ for $j\ge1$, $q(i,0)=0$ for $i\ge1$, and looking at the first toss,
@@ -257,8 +256,7 @@ which hold because the middle term minus the left side is $\frac1{4k^2}&gt;0$, a
 <div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 18: Invariants and Monovariants &middot; Monovariants and Directional Change</div>
 <div class="ct-text"><p>There are $30$ colors of cards, with $70$ cards of each color. Initially, any $70$ cards are chosen and arranged from top to bottom into a stack. One operation is defined as follows: from the bottom $20$ cards, choose a card $X$ whose color does not appear among the top $50$ cards; then, from the top $50$ cards, choose a card $Y$ whose color appears at least twice among the top $50$ cards; extract $X$ and insert it back immediately above $Y$. Repeat the above operations until no such $X$ can be selected.</p><ul class="ct-ul"><li><p>Prove that the number of operations that can be performed is finite;</p></li><li><p>For all possible initial situations and operation methods, find the maximum possible number of operations.</p></li></ul></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>finite; the maximum number of operations is $390$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (The tail of single cards)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; The tail of single cards</summary><div class="ct-text">
 <p>Number the positions $1,\dots,70$ from top to bottom; the <em>top part</em> is positions $1$&ndash;$50$, the <em>bottom part</em> positions $51$&ndash;$70$. Since there are $70$ cards of each colour, every sequence of $70$ colours can occur as the initial stack.</p><p><strong>Notation.</strong> Let $C\le30$ be the number of colours in the whole stack (it never changes) and $c$ the number of colours in the top part. A card of the top part is <em>single</em> if no other card of the top part has its colour, and <em>repeated</em> otherwise.
 As $50&gt;30$, there is always a repeated card. Let $q$ be the position of the lowest repeated card of the top part and $s=50-q$; the $s$ cards below it in the top part (the <em>tail</em>) are single. Since at least one colour is repeated,
 \[s\le c-1 .\tag{1}\]</p><p><strong>One operation.</strong> $X$ is inserted immediately above a repeated card $Y$, whose position $y$ satisfies $y\le q$. The cards in positions $y,\dots,50$ move down by one place; the card $Z$ of position $50$ becomes the top card of the bottom part; $X$ is a single card of the new top part.</p><ul class="ct-ul"><li><p><em>If $s\ge1$</em>, then $Z$ is single: its colour leaves the top part while the colour of $X$ enters, so $c$ is unchanged. As a single colour leaves and a new colour enters once, every other colour keeps its multiplicity in the top part, so the repeated cards are the same as before (with positions at or below $y$ shifted by one). The lowest repeated card is now at position $q+1$, followed by the old tail without $Z$: <em>$s$ decreases by exactly $1$</em>.</p></li><li><p><em>If $s=0$</em>, then $Z$ is repeated, its colour stays in the top part and <em>$c$ increases by $1$</em>.</p></li></ul><p><strong>When the process stops.</strong> If $c&lt;C$, some colour of the stack is missing in the top part; a card $X$ of this colour is in the bottom part, and a repeated $Y$ exists, so an operation is possible. If $c=C$, no $X$ exists. So the process stops exactly when $c=C$.</p><p><strong>(a) Finiteness.</strong> $c$ never decreases and is at most $30$; while $c$ is constant, $s$ decreases by $1$ in each operation, and $s\le49$. So there are at most $30\cdot50$ operations.</p><p><strong>(b) An upper bound.</strong> Let $c_0$ and $s_0$ be the initial values, and for $c_0&lt;c'\le C$ let $s(c')$ be the tail length just after $c$ has become $c'$. If $c_0=C$, no operation is possible at all. Let $c_0&lt;C$. While $c=c'&lt;C$, exactly $s(c')$ operations of the first kind are made (with $s(c_0)=s_0$), followed by one operation of the second kind. Hence the total number of operations is
@@ -275,8 +273,7 @@ Starting with $(u,s)=(41,9)$ this proves the claim; colour $0$ always keeps at l
 <div class="ct-text"><p>Determine all real numbers $\lambda$ such that there exists $N&gt;0$ satisfying the following property:</p><p>For any integer $n\geq N$ and $n$ non-negative reals $x_1,\cdots,x_n$ with sum $1$, the following inequality holds:
 \[\Bigl(\sum_{1\leq i&lt;j\leq n}x_ix_j\Bigr)^2\leq\lambda\sum_{1\leq i&lt;j&lt;k\leq n}x_ix_jx_k+\frac1n\sum_{1\leq i&lt;j\leq n}(x_i-x_j)^2.\]</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>all $\lambda&gt;\dfrac32$</p></div></details>
-<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Power sums and one variable)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Power sums and one variable</summary><div class="ct-text">
 <p><strong>Answer:</strong> exactly the numbers $\lambda&gt;\frac32$.</p><p><strong>Rewriting with power sums.</strong> Let $S_k=\sum x_i^k$, so $S_1=1$; write $s=S_2$. Then
 \[\sum_{i&lt;j}x_ix_j=\frac{1-s}2,\qquad e_3:=\sum_{i&lt;j&lt;k}x_ix_jx_k=\frac{1-3s+2S_3}6,\qquad\sum_{i&lt;j}(x_i-x_j)^2=nS_2-S_1^2=ns-1 ,\]
 and the inequality becomes
@@ -295,7 +292,8 @@ For $s\ge0$, $h'(s)=\frac34+\frac s2+\frac{\varepsilon(4s-3)}6\ge\frac34-\frac\v
 \[h(s)\ge h\Bigl(\frac1n\Bigr)=\frac{3n+1}{4n^2}-\frac1n+\varepsilon\frac{(n-1)(n-2)}{6n^2}=\frac{(n-1)\bigl(2\varepsilon(n-2)-3\bigr)}{12n^2}\ \ge0\qquad\text{if }n\ge2+\frac3{2\varepsilon}.\]
 Hence (1) holds for all $n\ge N:=2+\frac3{2\varepsilon}$.</p><p><em>Remark (the best constant for a fixed $n\ge3$).</em> The same computation with $\varepsilon=\frac3{2(n-2)}\le\frac32$ (then still $h'\ge0$ and $h(\frac1n)=0$) shows that for a fixed $n$ the inequality holds exactly for
 $\lambda\ge\frac{3(n-1)}{2(n-2)}$; these numbers decrease to $\frac32$ but never reach it.</p><p><strong>Conclusion.</strong> The required numbers are $\boxed{\lambda&gt;\dfrac32}$.</p>
-<h4>Solution 2 (Cauchy-Schwarz and a factorisation)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Cauchy-Schwarz and a factorisation</summary><div class="ct-text">
 <p><strong>Answer:</strong> exactly the numbers $\lambda&gt;\frac32$.</p><p>Write $e_2=\sum_{i&lt;j}x_ix_j$, $e_3=\sum_{i&lt;j&lt;k}x_ix_jx_k$ and $S_k=\sum_ix_i^k$; so $S_1=1$, and put $s=S_2$. Expanding $S_1^2$ and $S_1^3$,
 \[e_2=\frac{1-s}2,\qquad e_3=\frac{1-3s+2S_3}6,\qquad\sum_{i&lt;j}(x_i-x_j)^2=(n-1)S_2-2e_2=ns-1 .\]
 So the inequality is
@@ -310,7 +308,8 @@ Let $t=\frac1n\le s$. Factoring the differences of the polynomial parts,
 because $s+t\ge0$. Finally
 \[h(t)=\frac{3n+1}{4n^2}-\frac1n+\varepsilon\,\frac{(n-1)(n-2)}{6n^2}=\frac{(n-1)\bigl(2\varepsilon(n-2)-3\bigr)}{12n^2}\ge0\qquad\text{for }n\ge2+\frac3{2\varepsilon}.\]
 So (1) holds for all $n\ge N:=2+\frac3{2\varepsilon}$, and the required numbers are $\boxed{\lambda&gt;\dfrac32}$.</p>
-<h4>Solution 3 (Pairwise averaging for a fixed n)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 3 &ndash; Pairwise averaging for a fixed n</summary><div class="ct-text">
 <p><strong>Answer:</strong> exactly the numbers $\lambda&gt;\frac32$.</p><p>Write $e_2=\sum_{i&lt;j}x_ix_j$, $e_3=\sum_{i&lt;j&lt;k}x_ix_jx_k$ and $S_2=\sum_ix_i^2$. Since $\sum_{i&lt;j}(x_i-x_j)^2=(n-1)S_2-2e_2$ and $S_2+2e_2=1$, the last term of the inequality is $\frac1n\bigl(nS_2-1\bigr)=S_2-\frac1n$.</p><p><strong>The uniform vector.</strong> For $n\ge3$ and $x_1=\dots=x_n=\frac1n$: $e_2=\binom n2\frac1{n^2}=\frac{n-1}{2n}$, $e_3=\binom n3\frac1{n^3}=\frac{(n-1)(n-2)}{6n^2}&gt;0$, and $S_2-\frac1n=0$. So the inequality holds exactly when
 \[\lambda\ \ge\ \frac{e_2^2}{e_3}=\frac{(n-1)^2}{4n^2}\cdot\frac{6n^2}{(n-1)(n-2)}=L_n,\qquad L_n=\frac{3(n-1)}{2(n-2)}=\frac32+\frac3{2(n-2)} .\]
 <em>Necessity.</em> $L_n&gt;\frac32$ for every $n\ge3$. So if $\lambda\le\frac32$, the inequality fails at the uniform vector for every $n\ge3$, and no $N$ exists.</p><p><strong>Claim: for $n\ge5$ the inequality holds with $\lambda=L_n$.</strong> Note $L_n\le2$ for $n\ge5$ (this is $3n-3\le4n-8$). Consider
@@ -329,8 +328,7 @@ which is the required inequality. Hence the answer is $\boxed{\lambda&gt;\dfrac3
 <div class="ct-meta"><span class="ct-pd ct-pd-S" title="Superhard, on the LPS VII scale">S</span>Number Theory &middot; LPS VII, Chapter 54: Advanced Number Theory Synthesis &middot; Deep Structural Classification Problems</div>
 <div class="ct-text"><p>Let $n\geq 3$ be an odd integer such that $\gcd(p-1,n)=1$ for every prime divisor $p$ of $n$. Find the number of $(a,b,c)\in\mathbb{Z}_n^3$ in terms of $n$ such that $\gcd(a,b,c,n)=1$ and there is a permutation $(x_1,x_2,\ldots,x_n)$ of $\{1,2,\ldots,n\}$ satisfying that $n\mid ax_{k+2}+bx_{k+1}+cx_k$ for $1\leq k\leq n$, where indices are taken modulo $n$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\varphi(n)\Bigl(\dfrac{n}{\operatorname{rad}(n)}\Bigr)^{2}$ if $9\nmid n$, and $\dfrac23\,\varphi(n)\Bigl(\dfrac{n}{\operatorname{rad}(n)}\Bigr)^{2}$ if $9\mid n$ (here $\operatorname{rad}(n)$ is the product of the distinct primes dividing $n$)</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (The recurrence modulo prime powers)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; The recurrence modulo prime powers</summary><div class="ct-text">
 <p>Let $\operatorname{rad}(n)$ be the product of the distinct primes dividing $n$. We prove that the number of triples is
 \[\varphi(n)\Bigl(\frac n{\operatorname{rad}(n)}\Bigr)^2\ \ \text{if }9\nmid n,\qquad\frac23\,\varphi(n)\Bigl(\frac n{\operatorname{rad}(n)}\Bigr)^2\ \ \text{if }9\mid n .\]
 We extend $(x_k)$ to all integers $k$ with period $n$; then $ax_{k+2}+bx_{k+1}+cx_k\equiv0\pmod n$ for all $k$, and in every block of $n$ consecutive indices each residue modulo $n$ occurs once.

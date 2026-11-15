@@ -97,7 +97,6 @@ description: Benelux Mathematical Olympiad 2026: problems with answers and solut
 <p>The 4 problems of the Benelux Mathematical Olympiad 2026, each with our own solutions, hidden until you open them. 2 of them ask for an answer and 2 ask for a proof. Where a problem has a final answer, it is shown separately. Try a problem first, then check.</p><p>The Benelux Mathematical Olympiad is a one-day contest of four problems.</p>
 </div>
 <div class="ct-credit">Problems: Benelux Mathematical Olympiad 2026, from the AoPS contest collection or the official paper. Solutions written by MCC.</div>
-<div class="ct-bar"><button type="button" onclick="ctAll(true)">Show all answers and solutions</button><button type="button" onclick="ctAll(false)">Hide all</button></div>
 <div class="ct-toc-wrap"><div class="ct-toc-row"><a href="#p1">1</a><a href="#p2">2</a><a href="#p3">3</a><a href="#p4">4</a></div></div>
 
 {% raw %}
@@ -108,8 +107,7 @@ description: Benelux Mathematical Olympiad 2026: problems with answers and solut
 \[a_k(b_1+\dots+b_k)\le k\quad\text{and}\quad b_k(a_1+\dots+a_k)\le k\quad\text{for }k=1,2,\dots,n.\]
 Prove that
 \[(a_1+a_2+\dots+a_n)(b_1+b_2+\dots+b_n)\le n^2.\]</p></div>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Induction through an exact identity)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Induction through an exact identity</summary><div class="ct-text">
 <p>Write $A_k=a_1+\dots+a_k$, $B_k=b_1+\dots+b_k$ and $P_k=A_kB_k$. The hypotheses say
 $a_kB_k\le k$ and $b_kA_k\le k$. We prove $P_k\le k^2$ for $k=1,\dots,n$ by induction; $k=n$ is the claim.</p><p>For $k=1$ the hypothesis reads $a_1b_1\le 1$, i.e. $P_1\le1$.</p><p>Let $k\ge2$, assume $P_{k-1}\le(k-1)^2$, and suppose for contradiction that $P_k&gt;k^2$. Put $u=a_kB_k\le k$ and $v=b_kA_k\le k$. Since
 $\frac{a_k}{A_k}=\frac{a_kB_k}{A_kB_k}=\frac{u}{P_k}$, we have $A_{k-1}=A_k-a_k=A_k\bigl(1-\frac u{P_k}\bigr)$, and likewise
@@ -128,8 +126,7 @@ for $a_k=b_k=1$.</p>
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 44: Combinatorial Games and Strategy &middot; Winning and Losing Positions</div>
 <div class="ct-text"><p>Let $a_0$ and $N$ be positive integers. Ben and Lux take turns playing the following game: At the start of the game, the number $N$ is written on a board. At move $i\ge 1$ of the game, the player whose turn it is chooses a positive integer $a_i\le a_{i-1}$, and replaces the number $n$ on the board at that point with $n-a_i$. The first player to write down a number $n\le 0$ loses the game. Ben makes the first move. For each $N\ge 2$, determine the smallest possible value of $a_0$ for which Ben can win the game irrespectively of how Lux plays.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>the largest power of $2$ dividing $N-1$, i.e. $a_0=2^{v_2(N-1)}$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Winning positions via the lowest binary digit)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Winning positions via the lowest binary digit</summary><div class="ct-text">
 <p>For a positive integer $x$ let $v_2(x)$ be the exponent of $2$ in $x$, and put
 $v_2(0)=\infty$ (so $2^{v_2(0)}$ is larger than every number). A <em>position</em> is a pair $(n,m)$: the board shows $n\ge1$ and the player to move
 may subtract any positive integer $a\le m$.</p><p>A player facing $n=1$ must write a number $\le0$ and loses. A player facing $n\ge2$ can always subtract $1$ and stay positive, and subtracting
@@ -146,8 +143,7 @@ the largest power of $2$ dividing (current number $-1$).</p>
 <h3>Problem 3</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 24: Cevians, Menelaus, and Projective-Flavored Ratios &middot; Ceva&#x27;s Theorem and Concurrency</div>
 <div class="ct-text"><p>Let $ABCD$ be a parallelogram such that $|AC|=|BC|$, and let $A'$ be the reflection of $A$ in $B$. Lines $BD$ and $A'D$ meet the circumcircle of triangle $ACD$ again at $E$ and $F$, respectively. Lines $AE$ and $A'C$ intersect at $G$. Show that the lines $AC$, $EF$, $BG$ are concurrent or pairwise parallel.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Coordinates)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Coordinates</summary><div class="ct-text">
 <p>Since $CA=CB$, the point $C$ lies on the perpendicular bisector of $AB$. Choose axes and unit so that
 \[A=(-1,0),\quad B=(1,0),\quad C=(0,h)\ (h&gt;0);\qquad\text{then}\quad D=A+C-B=(-2,h),\quad A'=2B-A=(3,0).\]
 <em>The circle.</em> The circle through $A,C,D$ is $\omega:\ x^2+y^2+2x-\frac{h^2+1}{h}\,y+1=0$ (substitute the three points to check).</p><p><em>The point $E$.</em> Points of line $DB$ are $D+t(B-D)=(-2+3t,\ h-ht)$. Substituting into $\omega$, everything simplifies to
@@ -161,7 +157,8 @@ $-1+s(h^2+3)+6s=3$, so $s=\frac4{h^2+9}$ and
 \[F-E=\frac{2\,(h^4+15,\ 6h^3+22h)}{(h^2+9)(h^2+25)},\qquad P-E=\frac{2\,(h^4+15,\ 6h^3+22h)}{(h^2+9)(7-h^2)},\]
 which are parallel: $P\in EF$.</p></li></ul><p>So $AC$, $EF$, $BG$ are concurrent at $P$.</p><p><em>Case $h^2=7$.</em> The directions are $C-A=(1,h)$, $G-B\parallel(h^2-3,4h)=4(1,h)$ and $F-E\parallel(h^4+15,6h^3+22h)=(64,64h)=64(1,h)$. So the
 three lines are pairwise parallel. This completes the proof.</p>
-<h4>Solution 2 (Pascal and Ceva)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Pascal and Ceva</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:366px" src="/assets/contests/2026-27/benelux-mo-3_s2.svg" alt="Figure for the solution"></div>
 <p>We work in the projective plane: parallel lines meet at a point at infinity, so we must show that $AC$, $EF$, $BG$ pass
 through one (possibly infinite) point. Let $\omega$ be the circle $(ACD)$.</p><p><em>Step 1: $AB$ is tangent to $\omega$ at $A$.</em> In the parallelogram, $AD=BC=AC$, so $A$ is the midpoint of the arc $CD$ and the tangent at $A$ is
@@ -185,8 +182,7 @@ parallel.</p>
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 25: Diophantine Equations: Factorization and Algebraic Methods &middot; Bounding and Size Arguments</div>
 <div class="ct-text"><p>Find all pairs $(a,b)$ of positive integers for which there exists a positive integer $c$ such that $a^2+b^2+c^2$ divides $(a+b+c)^2$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>exactly the pairs for which $ab$ is a perfect square, i.e. $(a,b)=(dx^2,dy^2)$ with $d,x,y$ positive integers</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (The quotient is 2 or 3)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; The quotient is 2 or 3</summary><div class="ct-text">
 <p>Let $S=a^2+b^2+c^2$ and $T=a+b+c$, and suppose $S\mid T^2$, say $T^2=kS$ with $k$ a positive integer.</p><p><em>Bounding $k$.</em> $T^2=S+2(ab+bc+ca)&gt;S$, so $k\ge2$. By the Cauchy&ndash;Schwarz (or QM&ndash;AM) inequality $T^2\le 3S$, with equality only for
 $a=b=c$. So $k\in\{2,3\}$.</p><p><em>$k=3$.</em> Then $a=b=c$, and $ab=a^2$ is a perfect square.</p><p><em>$k=2$.</em> The identity
 \[2S-T^2=a^2+b^2+c^2-2ab-2bc-2ca=(a+b-c)^2-4ab\]

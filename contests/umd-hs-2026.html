@@ -97,7 +97,6 @@ description: University of Maryland High School Mathematics Competition 2026: se
 <p>The 15 problems of the University of Maryland High School Mathematics Competition 2026: selected problems, each with our own solutions, hidden until you open them. Where a problem has a final answer, it is shown separately. Try a problem first, then check.</p><p>A selection of the best problems of Part I of the 47th University of Maryland High School Mathematics Competition (2026), multiple choice.</p>
 </div>
 <div class="ct-credit">Problems: University of Maryland High School Mathematics Competition 2026: selected problems, from the AoPS contest collection or the official paper. Solutions written by MCC.</div>
-<div class="ct-bar"><button type="button" onclick="ctAll(true)">Show all answers and solutions</button><button type="button" onclick="ctAll(false)">Hide all</button></div>
 <div class="ct-toc-wrap"><div class="ct-toc-row"><span class="ct-toc-g">Part I</span><a href="#p1">9</a><a href="#p2">11</a><a href="#p3">12</a><a href="#p4">13</a><a href="#p5">14</a><a href="#p6">15</a><a href="#p7">16</a><a href="#p8">17</a><a href="#p9">18</a><a href="#p10">19</a><a href="#p11">20</a><a href="#p12">22</a><a href="#p13">23</a><a href="#p14">24</a><a href="#p15">25</a></div></div>
 
 {% raw %}
@@ -107,12 +106,12 @@ description: University of Maryland High School Mathematics Competition 2026: se
 <div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Algebra &middot; LPS VI, Chapter 53: Sequences, Series, and Recursive Patterns &middot; Geometric Sequences</div>
 <div class="ct-text"><p>A rabbit starts at point $A$ and hops $1$ meter north, then $\frac12$ meter west, then $\frac14$ meter south, then $\frac18$ meter east, then $\frac1{16}$ meter north, then $\frac1{32}$ meter west, etc. The rabbit approaches the point $B$. What is the distance between points $A$ and $B$?</p><p><strong>(A)</strong>&nbsp;$\frac{2\sqrt5}{5}$&emsp;<strong>(B)</strong>&nbsp;$\frac{\sqrt3}{2}$&emsp;<strong>(C)</strong>&nbsp;$\frac{\sqrt5}{2}$&emsp;<strong>(D)</strong>&nbsp;$\frac{\sqrt6}{3}$&emsp;<strong>(E)</strong>&nbsp;$\frac{\sqrt2}{2}$</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(A) $\frac{2\sqrt5}{5}$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Two geometric series)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Two geometric series</summary><div class="ct-text">
 <p>Put $A$ at the origin, with east the positive $x$-direction and north the positive $y$-direction. The hops of lengths $1,\frac14,\frac1{16},\dots$ go alternately north and south, and the hops of lengths $\frac12,\frac18,\frac1{32},\dots$ go alternately west and east. Hence
 \[y_B=1-\frac14+\frac1{16}-\cdots=\frac{1}{1+\frac14}=\frac45,\qquad x_B=-\frac12\left(1-\frac14+\frac1{16}-\cdots\right)=-\frac12\cdot\frac45=-\frac25.\]
 So $AB=\sqrt{\frac{16}{25}+\frac{4}{25}}=\frac{\sqrt{20}}{5}=\frac{2\sqrt5}{5}$, and the answer is $\boxed{\text{(A)}\ \frac{2\sqrt5}{5}}$.</p>
-<h4>Solution 2 (Complex numbers)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Complex numbers</summary><div class="ct-text">
 <p>Identify the plane with the complex numbers, with $A=0$, east $=1$ and north $=i$. Turning a vector by $90^\circ$ counterclockwise (north $\to$ west $\to$ south $\to$ east) is multiplication by $i$, and each hop is half as long as the previous one. So the $k$th hop ($k=0,1,2,\dots$) is $i\left(\frac i2\right)^k$, and
 \[B=\sum_{k\ge0} i\left(\frac i2\right)^k=\frac{i}{1-\frac i2},\qquad |AB|=\frac{|i|}{\left|1-\frac i2\right|}=\frac{1}{\sqrt{1+\frac14}}=\frac{2}{\sqrt5}=\frac{2\sqrt5}{5}.\]
 The series converges because $\left|\frac i2\right|&lt;1$. The answer is $\boxed{\text{(A)}\ \frac{2\sqrt5}{5}}$.</p>
@@ -123,8 +122,7 @@ The series converges because $\left|\frac i2\right|&lt;1$. The answer is $\boxed
 <div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Number Theory &middot; LPS VI, Chapter 23: Powers, Cycles, and Units Digits &middot; Periodic Powers Modulo \(m\)</div>
 <div class="ct-text"><p>Let $D(n)$ denote the sum of the digits of the decimal representation of a positive integer $n$. Define $n_0=7^{7^7}$, and $n_{k+1}=D(n_k)$ for $k\ge0$. Eventually this sequence reaches a single digit and stays there forever. What is that digit?</p><p><strong>(A)</strong>&nbsp;$1$&emsp;<strong>(B)</strong>&nbsp;$3$&emsp;<strong>(C)</strong>&nbsp;$5$&emsp;<strong>(D)</strong>&nbsp;$7$&emsp;<strong>(E)</strong>&nbsp;$9$</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(D) $7$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Digit sums keep the remainder mod 9)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Digit sums keep the remainder mod 9</summary><div class="ct-text">
 <p>Since $10\equiv1\pmod 9$, every positive integer is congruent to the sum of its digits modulo $9$: $D(n)\equiv n\pmod 9$. Also $D(n)&lt;n$ whenever $n\ge10$, so the sequence strictly decreases until it reaches a single digit $d\in\{1,\dots,9\}$, and then $D(d)=d$. Therefore $d\equiv n_0\pmod 9$.</p><p>Now compute $n_0=7^{7^7}$ modulo $9$. The powers of $7$ modulo $9$ are $7,\ 49\equiv4,\ 28\equiv1$, so they repeat with period $3$. The exponent satisfies $7^7\equiv1^7=1\pmod 3$, so $7^{7^7}\equiv7^1=7\pmod 9$. The only digit from $1$ to $9$ that is $\equiv7\pmod9$ is $7$. The answer is $\boxed{\text{(D)}\ 7}$.</p>
 </div></details>
 </section>
@@ -133,12 +131,12 @@ The series converges because $\left|\frac i2\right|&lt;1$. The answer is $\boxed
 <div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Number Theory &middot; LPS VI, Chapter 31: Linear Diophantine Equations &middot; Bounded Positive Solutions</div>
 <div class="ct-text"><p>You have stamps worth $6$ cents, $9$ cents, and $10$ cents. Clearly you cannot put $11$ cents on an envelope using these stamps, but you can put $15$ cents using a $6$-cent stamp and a $9$-cent stamp. Let $y$ be the largest amount that you cannot put on an envelope using only these stamps. Which of the following is true? (Assume you have an unlimited supply of stamps of each kind.)</p><p><strong>(A)</strong>&nbsp;$y&lt;10$&emsp;<strong>(B)</strong>&nbsp;$10&lt;y&lt;15$&emsp;<strong>(C)</strong>&nbsp;$15&lt;y&lt;20$&emsp;<strong>(D)</strong>&nbsp;$20&lt;y&lt;25$&emsp;<strong>(E)</strong>&nbsp;$25&lt;y$</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(D) $20&lt;y&lt;25$ (in fact $y=23$)</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Find the gap, then a run of six)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Find the gap, then a run of six</summary><div class="ct-text">
 <p>Using only $6$- and $9$-cent stamps we can make exactly $0$ and the multiples of $3$ that are at least $6$ (start from $6$, $9$ and $12=6+6$ and add $6$s); in particular $3$ cannot be made.</p><p><em>$23$ cannot be made.</em> With $c$ ten-cent stamps, $23-10c\in\{23,13,3\}$ must be made from $6$s and $9$s. But $23$ and $13$ are not multiples of $3$, and $3$ cannot be made.</p><p><em>Every amount above $23$ can be made.</em> Indeed
 \[24=6\cdot4,\quad 25=6+9+10,\quad 26=6+10+10,\quad 27=9\cdot3,\quad 28=9+9+10,\quad 29=9+10+10.\]
 These are six consecutive amounts; adding $6$-cent stamps to them gives every larger amount.</p><p>So $y=23$ and the answer is $\boxed{\text{(D)}\ 20&lt;y&lt;25}$.</p>
-<h4>Solution 2 (Sort the amounts by remainder mod 3)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Sort the amounts by remainder mod 3</summary><div class="ct-text">
 <p>Write an amount as $n=6a+9b+10c$ with $a,b,c\ge0$. Since $6a+9b\equiv0$ and $10\equiv1\pmod3$, we need $c\equiv n\pmod 3$. The $6$s and $9$s together make exactly $0$ and the multiples of $3$ that are at least $6$ (from $6,9,12$ add $6$s); so the only multiple of $3$ they miss among positive amounts is $3$.</p><p>Take the least possible $c$, namely $c_0\in\{0,1,2\}$ with $c_0\equiv n\pmod 3$. Then $n$ can be made if and only if $n-10c_0$ is $0$ or a multiple of $3$ that is at least $6$; using $c_0+3$ or more ten-cent stamps only makes the rest $30$ smaller, which never helps. So the amounts that cannot be made are:</p><ul class="ct-ul"><li><p>$n\equiv0$: $n=3$;</p></li><li><p>$n\equiv1$: $n-10&lt;0$ or $n-10=3$, i.e. $n\in\{1,4,7,13\}$;</p></li><li><p>$n\equiv2$: $n-20&lt;0$ or $n-20=3$, i.e. $n\in\{2,5,8,11,14,17,23\}$.</p></li></ul><p>The largest is $y=23$, and the answer is $\boxed{\text{(D)}\ 20&lt;y&lt;25}$.</p>
 </div></details>
 </section>
@@ -147,8 +145,7 @@ These are six consecutive amounts; adding $6$-cent stamps to them gives every la
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Combinatorics &middot; LPS VI, Chapter 42: Recursion, Paths, and Dynamic Counting &middot; Blocked and Restricted Paths</div>
 <div class="ct-text"><p>A fair coin is flipped $6$ times. What is the probability that at no point during the $6$ flips the number of heads flipped exceeds the number of tails flipped?</p><p><strong>(A)</strong>&nbsp;$\frac5{16}$&emsp;<strong>(B)</strong>&nbsp;$\frac{11}{32}$&emsp;<strong>(C)</strong>&nbsp;$\frac{13}{64}$&emsp;<strong>(D)</strong>&nbsp;$\frac7{32}$&emsp;<strong>(E)</strong>&nbsp;$\frac{15}{64}$</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(A) $\frac5{16}$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Count step by step)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Count step by step</summary><div class="ct-text">
 <p>Track the lead $\ell=(\text{tails})-(\text{heads})$ after each flip; a sequence is good when $\ell\ge0$ throughout. A tail raises $\ell$ by $1$, a head lowers it by $1$, and a head is forbidden when $\ell=0$. Let us record, after $k$ flips, how many good sequences have each value of $\ell$ (each count is the sum of the counts for $\ell-1$ and $\ell+1$ one row above):
 \[\begin{array}{c|ccccccc}
 k &amp; \ell=0 &amp; 1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 &amp; 6\\\hline
@@ -160,7 +157,8 @@ k &amp; \ell=0 &amp; 1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 &amp; 6\\\hline
 6 &amp; 5 &amp; &amp; 9 &amp; &amp; 5 &amp; &amp; 1
 \end{array}\]
 After $6$ flips there are $5+9+5+1=20$ good sequences out of $2^6=64$, so the probability is $\frac{20}{64}=\frac5{16}$. The answer is $\boxed{\text{(A)}\ \frac5{16}}$.</p>
-<h4>Solution 2 (Reflection)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Reflection</summary><div class="ct-text">
 <p>Let $h_k$ be (heads) $-$ (tails) after $k$ flips. A sequence is bad if $h_k=1$ for some $k$ (the first time heads exceed tails, the difference is exactly $1$). The final value $h_6$ is even.</p><p>Every sequence with $h_6\ge2$ is bad. For a bad sequence with $h_6\le0$, switch heads and tails in all flips after the first moment when $h_k=1$. This changes the final value from $h_6$ to $2-h_6\ge2$, and it is reversible (a sequence ending at $2$ or more must reach $1$, and switching back after its first visit to $1$ recovers the original). So bad sequences with $h_6\le0$ correspond one-to-one to sequences with $h_6\ge2$.</p><p>The sequences with $h_6\ge2$ are those with $4$, $5$ or $6$ heads: $\binom64+\binom65+\binom66=15+6+1=22$. Hence there are $22+22=44$ bad sequences, $64-44=20$ good ones, and the probability is $\frac{20}{64}=\frac5{16}$. The answer is $\boxed{\text{(A)}\ \frac5{16}}$.</p>
 </div></details>
 </section>
@@ -169,14 +167,14 @@ After $6$ flips there are $5+9+5+1=20$ good sequences out of $2^6=64$, so the pr
 <div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Number Theory &middot; LPS VI, Chapter 21: Digits, Place Value, and Decimal Structure &middot; Place-Value Decomposition</div>
 <div class="ct-text"><p>The number $n=99\cdots9$ has $250$ digits all equal to $9$. The sum of the digits of $n^2$ is</p><p><strong>(A)</strong>&nbsp;$2241$&emsp;<strong>(B)</strong>&nbsp;$2250$&emsp;<strong>(C)</strong>&nbsp;$2259$&emsp;<strong>(D)</strong>&nbsp;$2268$&emsp;<strong>(E)</strong>&nbsp;$2277$</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(B) $2250$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Expand $(10^{250}-1)^2$)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Expand $(10^{250}-1)^2$</summary><div class="ct-text">
 <p>We have $n=10^{250}-1$, so
 \[n^2=10^{500}-2\cdot10^{250}+1=10^{250}\left(10^{250}-2\right)+1.\]
 The number $10^{250}-2$ is $\underbrace{99\cdots9}_{249}8$. Multiplying by $10^{250}$ appends $250$ zeros, and adding $1$ turns the last zero into $1$:
 \[n^2=\underbrace{99\cdots9}_{249}8\underbrace{00\cdots0}_{249}1.\]
 The digit sum is $9\cdot249+8+1=2250$. The answer is $\boxed{\text{(B)}\ 2250}$.</p>
-<h4>Solution 2 (Write $n^2=n\cdot10^{250}-n$)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Write $n^2=n\cdot10^{250}-n$</summary><div class="ct-text">
 <p>Since $n^2=n(n+1)-n=n\cdot10^{250}-n$, we can rewrite
 \[n^2=(n-1)\cdot10^{250}+\left(10^{250}-n\right)=(n-1)\cdot10^{250}+1.\]
 Here $n-1=\underbrace{99\cdots9}_{249}8$ has $250$ digits, so $n^2$ consists of the digits of $n-1$, followed by $249$ zeros and a final $1$; there are no carries. The digit sum is $(9\cdot250-1)+1=2250$ (check with $99^2=9801$: $9+8+0+1=18=9\cdot2$). The answer is $\boxed{\text{(B)}\ 2250}$.</p>
@@ -191,10 +189,10 @@ Here $n-1=\underbrace{99\cdots9}_{249}8$ has $250$ digits, so $n^2$ consists of 
 \[C=\sin(A^\circ)+\cos(B^\circ).\]
 Which of the following is true?</p><p><strong>(A)</strong>&nbsp;$A&lt;B&lt;C$&emsp;<strong>(B)</strong>&nbsp;$C&lt;A=B$&emsp;<strong>(C)</strong>&nbsp;$A=B=C$&emsp;<strong>(D)</strong>&nbsp;$A=B&lt;C$&emsp;<strong>(E)</strong>&nbsp;$B&lt;A&lt;C$</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(D) $A=B&lt;C$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Pair the terms)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Pair the terms</summary><div class="ct-text">
 <p>Since $\cos(180^\circ-k^\circ)=-\cos k^\circ$, the terms of $A$ for $k$ and $180-k$ ($k=0,\dots,89$) cancel, and the middle term is $\cos90^\circ=0$. So $A=0$.</p><p>Since $\sin(180^\circ+k^\circ)=-\sin k^\circ=-\sin(180^\circ-k^\circ)$, the terms of $B$ for $180-k$ and $180+k$ ($k=1,\dots,90$) cancel, and the middle term is $\sin180^\circ=0$. So $B=0$.</p><p>Then $C=\sin0^\circ+\cos0^\circ=0+1=1$. Thus $A=B=0&lt;1=C$, and the answer is $\boxed{\text{(D)}\ A=B&lt;C}$.</p>
-<h4>Solution 2 (Symmetric points on the unit circle)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Symmetric points on the unit circle</summary><div class="ct-text">
 <p>The point $(\cos\theta^\circ,\sin\theta^\circ)$ lies on the unit circle. As $\theta$ runs over $0,1,\dots,180$, the points form a set that is symmetric in the $y$-axis (the reflection sends angle $\theta$ to $180-\theta$, which is again in the set). Reflection in the $y$-axis changes the sign of the $x$-coordinate, so the sum of the $x$-coordinates, which is $A$, equals its own negative: $A=0$.</p><p>As $\theta$ runs over $90,91,\dots,270$, the points are symmetric in the $x$-axis (angle $\theta$ goes to $360-\theta$, again between $90$ and $270$). This reflection changes the sign of the $y$-coordinate, so the sum of the $y$-coordinates, which is $B$, is $0$.</p><p>Hence $C=\sin0^\circ+\cos0^\circ=1$ and $A=B&lt;C$. The answer is $\boxed{\text{(D)}\ A=B&lt;C}$.</p>
 </div></details>
 </section>
@@ -203,8 +201,7 @@ Which of the following is true?</p><p><strong>(A)</strong>&nbsp;$A&lt;B&lt;C$&em
 <div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Geometry &middot; LPS VI, Chapter 4: Angle Chasing and Line Configurations &middot; Composite Angle Chases</div>
 <div class="ct-text"><p>Suppose in an isosceles triangle $ABC$ we know $AB=AC$ and $\angle BAC=40^\circ$. Point $D$ lies on side $AB$ so that $BD=BC$. What is the measure of $\angle ACD$ in degrees?</p><p><strong>(A)</strong>&nbsp;$10$&emsp;<strong>(B)</strong>&nbsp;$15$&emsp;<strong>(C)</strong>&nbsp;$20$&emsp;<strong>(D)</strong>&nbsp;$25$&emsp;<strong>(E)</strong>&nbsp;$30$</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(B) $15$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Two isosceles triangles)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Two isosceles triangles</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/umd-hs-7_s1.svg" alt="Figure for the solution"></div>
 <p>Since $AB=AC$ and $\angle BAC=40^\circ$, the base angles are $\angle ABC=\angle ACB=\frac{180^\circ-40^\circ}{2}=70^\circ$.</p><p>In triangle $DBC$ we have $BD=BC$ and $\angle DBC=\angle ABC=70^\circ$, so its base angles are $\angle BCD=\angle BDC=\frac{180^\circ-70^\circ}{2}=55^\circ$. Since $D$ lies on side $AB$, the ray $CD$ lies inside $\angle ACB$, and
 \[\angle ACD=\angle ACB-\angle BCD=70^\circ-55^\circ=15^\circ.\]
@@ -216,8 +213,7 @@ The answer is $\boxed{\text{(B)}\ 15}$.</p>
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Combinatorics &middot; LPS VI, Chapter 6: Casework, Complement, and Constructive Counting &middot; Exhaustive Casework</div>
 <div class="ct-text"><p>Alice has eleven cards with integers $0,1,\dots,10$ written on them, one distinct integer on each card. She wants to form a three-tier tower with six different cards. The bottom row has three cards, the middle row has two and the top has one. Each card in the middle and top must be the sum of the two cards directly beneath it. One such example is the following: bottom row $2,3,1$; middle row $5,4$; top $9$.</p><p>In how many ways can she choose and arrange the cards to form such a tower?</p><p><strong>(A)</strong>&nbsp;$14$&emsp;<strong>(B)</strong>&nbsp;$16$&emsp;<strong>(C)</strong>&nbsp;$18$&emsp;<strong>(D)</strong>&nbsp;$20$&emsp;<strong>(E)</strong>&nbsp;$22$</p><div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/umd-hs-8.svg" alt="Figure for Part I, Problem 17"></div></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(A) $14$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Casework on the middle bottom card)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Casework on the middle bottom card</summary><div class="ct-text">
 <p>Let the bottom row be $a,b,c$ (left to right). Then the middle row is $a+b,\ b+c$ and the top is $a+2b+c$.</p><p>No card is $0$: if $a=0$ then $a+b=b$; if $b=0$ then $a+b=a$; if $c=0$ then $b+c=b$; each repeats a card. So $a,b,c\ge1$, and then the top $a+2b+c$ is the largest card, so we need $a+2b+c\le10$. The six cards are different exactly when $a,b,c$ are different, $a+b\ne c$ and $b+c\ne a$ (the other coincidences are impossible: $a+b\ne b+c$ since $a\ne c$, and $a+b&gt;a,b$, $b+c&gt;b,c$).</p><p>Reversing the bottom row gives another valid tower, and $a\ne c$, so we count bottom rows with $a&lt;c$ and double. Then $b+c&gt;a$ automatically, so only $a+b\ne c$ remains.</p><ul class="ct-ul"><li><p>$b=1$: $a,c\ge2$, $a+c\le8$, $c\ne a+1$: $(2,4),(2,5),(2,6),(3,5)$ ($(2,3)$, $(3,4)$ fail).</p></li><li><p>$b=2$: $a,c\ne2$, $a+c\le6$, $c\ne a+2$: $(1,4),(1,5)$ ($(1,3)$ fails).</p></li><li><p>$b=3$: $a+c\le4$, $a,c\ne3$: $(1,2)$.</p></li><li><p>$b\ge4$: $a+c\le2$ is impossible for $a\ne c$.</p></li></ul><p>This gives $7$ bottom rows with $a&lt;c$, hence $14$ towers. The answer is $\boxed{\text{(A)}\ 14}$.</p>
 </div></details>
 </section>
@@ -226,8 +222,7 @@ The answer is $\boxed{\text{(B)}\ 15}$.</p>
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Number Theory &middot; LPS VI, Chapter 11: Divisors and Arithmetic Functions of a Number &middot; Reconstructing from Divisor Data</div>
 <div class="ct-text"><p>How many digits does the smallest positive integer with exactly $100$ positive integer factors have?</p><p><strong>(A)</strong>&nbsp;$4$&emsp;<strong>(B)</strong>&nbsp;$5$&emsp;<strong>(C)</strong>&nbsp;$6$&emsp;<strong>(D)</strong>&nbsp;$7$&emsp;<strong>(E)</strong>&nbsp;$8$</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(B) $5$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (List the exponent patterns)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; List the exponent patterns</summary><div class="ct-text">
 <p>If $N=p_1^{e_1}\cdots p_k^{e_k}$, then $N$ has $(e_1+1)\cdots(e_k+1)$ divisors. For a given multiset of exponents, $N$ is smallest when the exponents are in decreasing order on the primes $2,3,5,7,\dots$: replacing a prime by a smaller unused one lowers $N$, and if primes $p&lt;q$ carry exponents $u&lt;v$, swapping the exponents multiplies $N$ by $(p/q)^{v-u}&lt;1$. Since $100=2\cdot2\cdot5\cdot5$, the ways to write $100$ as a product of factors $\ge2$ (each factor is some $e_i+1$) come from grouping these four prime factors, and the smallest $N$ for each are:
 \[\begin{array}{ll}
 100: &amp; 2^{99}\\
@@ -248,12 +243,12 @@ The first six are larger than $2^{19}&gt;10^5$ ($2^9\cdot3^9&gt;2^{19}$ because 
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Combinatorics &middot; LPS VI, Chapter 47: Combinatorial Number Theory &middot; Extremal Integer Configurations</div>
 <div class="ct-text"><p>What is the largest possible size of a subset $S$ of $\{1,2,3,\dots,100\}$ such that no element of $S$ is three times another element of $S$?</p><p><strong>(A)</strong>&nbsp;$70$&emsp;<strong>(B)</strong>&nbsp;$73$&emsp;<strong>(C)</strong>&nbsp;$76$&emsp;<strong>(D)</strong>&nbsp;$79$&emsp;<strong>(E)</strong>&nbsp;$82$</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(C) $76$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Chains $x,3x,9x,\dots$)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Chains $x,3x,9x,\dots$</summary><div class="ct-text">
 <p>Every $n\le100$ is uniquely $n=3^jx$ with $3\nmid x$. So $\{1,\dots,100\}$ splits into chains $x,3x,9x,\dots$ (all terms $\le100$), one for each $x\le100$ not divisible by $3$. Two numbers with one three times the other are consecutive terms of the same chain. Hence $S$ is allowed exactly when it never contains two consecutive terms of a chain, and from a chain of length $L$ we can take at most $\lceil L/2\rceil$ terms, attained by the $1$st, $3$rd, $5$th, &hellip; terms.</p><p>The chain of $x$ has length at least $j$ exactly when $3^{j-1}x\le100$. Among $1,\dots,m$ there are $m-\lfloor m/3\rfloor$ numbers not divisible by $3$, so the numbers of chains of length $\ge1,\ge2,\ge3,\ge4,\ge5$ are $67,22,8,2,1$ (take $m=100,33,11,3,1$), and none is longer ($3^5&gt;100$). Since $\lceil L/2\rceil$ counts the levels $1,3,5$ that the chain reaches, the maximum is
 \[67+8+1=76.\]
 The answer is $\boxed{\text{(C)}\ 76}$.</p>
-<h4>Solution 2 (Parity of the exponent of 3)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Parity of the exponent of 3</summary><div class="ct-text">
 <p>Let $v(n)$ be the exponent of $3$ in $n$. If $m=3k$ then $v(m)=v(k)+1$, so $m$ and $k$ have exponents of different parity.</p><p><em>Construction.</em> Let $S$ be the set of $n\le100$ with $v(n)$ even. By the remark, no element of $S$ is three times another. Its size: $v(n)=0$ for $100-33=67$ numbers; $v(n)=2$ for $n=9k$ with $k\le11$, $3\nmid k$: $11-3=8$ numbers; $v(n)=4$ only for $n=81$. Total $76$.</p><p><em>Bound.</em> The numbers with odd $v(n)$ are the $n=3k$ with $v(k)$ even; there are $(33-11)+2=24$ of them ($v=1$: $n=3k$, $k\le33$, $3\nmid k$; $v=3$: $27,54$). Pair each such $n$ with $n/3$. The $24$ pairs $\{n/3,n\}$ are disjoint (the larger element has odd $v$, the smaller even $v$, and $n$ determines $n/3$), and any allowed set contains at most one element of each pair. The remaining $100-48=52$ numbers are singletons. So any allowed set has at most $24+52=76$ elements.</p><p>The answer is $\boxed{\text{(C)}\ 76}$.</p>
 </div></details>
 </section>
@@ -262,19 +257,20 @@ The answer is $\boxed{\text{(C)}\ 76}$.</p>
 <div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Geometry &middot; LPS VI, Chapter 16: Special Segments and Triangle Centers &middot; Angle Bisectors and Incenter</div>
 <div class="ct-text"><p>The incircle of a right triangle $ABC$ divides the hypotenuse $BC$ into two parts with lengths $a$ and $b$. The area of $ABC$ is equal to:</p><p><strong>(A)</strong>&nbsp;$ab$&emsp;<strong>(B)</strong>&nbsp;$a^2+b^2-ab$&emsp;<strong>(C)</strong>&nbsp;$2a^2+2b^2-3ab$&emsp;<strong>(D)</strong>&nbsp;$3ab-a^2-b^2$&emsp;<strong>(E)</strong>&nbsp;$\frac{(a+b)^2}{4}$</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(A) $ab$</p></div></details>
-<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Tangent lengths and Pythagoras)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Tangent lengths and Pythagoras</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:226px" src="/assets/contests/2026-27/umd-hs-11_s1.svg" alt="Figure for the solution"></div>
 <p>The right angle is at $A$ (the hypotenuse is $BC$). Let the incircle, with centre $I$ and radius $r$, touch $BC$ at $T$, with $BT=a$ and $TC=b$. Tangent segments from a point are equal, so the tangent lengths from $B$, $C$ are $a$, $b$; the tangent points on $AB$ and $AC$ together with $A$ and $I$ form a square of side $r$, so the tangent length from $A$ is $r$. Thus $AB=r+a$, $AC=r+b$, $BC=a+b$. By Pythagoras,
 \[(r+a)^2+(r+b)^2=(a+b)^2\iff 2r^2+2r(a+b)=2ab\iff r^2+r(a+b)=ab.\]
 Therefore
 \[[ABC]=\tfrac12(r+a)(r+b)=\tfrac12\bigl(r^2+r(a+b)+ab\bigr)=\tfrac12(ab+ab)=ab.\]
 The answer is $\boxed{\text{(A)}\ ab}$.</p>
-<h4>Solution 2 (Two area formulas)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Two area formulas</summary><div class="ct-text">
 <p>Let the right angle be at $A$, let the incircle have radius $r$ and touch $BC$ at $T$ with $BT=a$, $TC=b$. Equal tangents give $AB=r+a$, $AC=r+b$ (the tangent length from the right-angle vertex is $r$, because the two tangent points, $A$ and the incentre form a square), so the semiperimeter is $s=a+b+r$.</p><p>The area is $[ABC]=rs=r(a+b+r)$ (split the triangle into three triangles with apex at the incentre) and also $[ABC]=\frac12(r+a)(r+b)$. Equating,
 \[2r^2+2r(a+b)=r^2+r(a+b)+ab,\qquad\text{so}\qquad r^2+r(a+b)=ab,\]
 and hence $[ABC]=r(a+b+r)=ab$, without using Pythagoras. The answer is $\boxed{\text{(A)}\ ab}$.</p>
-<h4>Solution 3 (Tangent lengths through the semiperimeter)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 3 &ndash; Tangent lengths through the semiperimeter</summary><div class="ct-text">
 <p>Let the right angle be at $A$, and write $u=AB$, $v=AC$, $w=BC$ and $s=\frac{u+v+w}{2}$. Let the incircle touch $BC$ at $T$, with $BT=a$ and $TC=b$.</p><p><em>Tangent lengths.</em> The two tangent segments from a vertex to the incircle are equal; call their lengths $x$ (from $B$), $y$ (from $C$) and $z$ (from $A$). Then $x+z=u$, $y+z=v$, $x+y=w$, and adding, $x+y+z=s$. Hence $x=s-v$ and $y=s-u$, so
 \[a=BT=s-v,\qquad b=TC=s-u .\]</p><p><em>The product.</em> Using $u+v=2s-w$,
 \[ab=(s-u)(s-v)=s^2-s(u+v)+uv=s^2-s(2s-w)+uv=uv-s(s-w).\]
@@ -290,8 +286,7 @@ Therefore $ab=uv-\frac{uv}2=\frac{uv}{2}$, which is the area of the right triang
 \[2\sqrt{x-1}+4\sqrt{y-2}+6\sqrt{z-3}=x+y+z+8.\]
 What is the smallest possible value of $x+2y+3z$?</p><p><strong>(A)</strong>&nbsp;$40$&emsp;<strong>(B)</strong>&nbsp;$42$&emsp;<strong>(C)</strong>&nbsp;$46$&emsp;<strong>(D)</strong>&nbsp;$48$&emsp;<strong>(E)</strong>&nbsp;$50$</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(E) $50$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (A sum of squares)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; A sum of squares</summary><div class="ct-text">
 <p>Put $u=\sqrt{x-1}$, $v=\sqrt{y-2}$, $w=\sqrt{z-3}$, all $\ge0$; then $x=u^2+1$, $y=v^2+2$, $z=w^2+3$. The condition becomes
 \[2u+4v+6w=u^2+v^2+w^2+14,\]
 that is,
@@ -304,8 +299,7 @@ A sum of squares is $0$ only if each square is $0$, so $u=1$, $v=2$, $w=3$, i.e.
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Combinatorics &middot; LPS VI, Chapter 46: Combinatorial Games and Strategy &middot; Winning and Losing Positions</div>
 <div class="ct-text"><p>Two players play a game with a pile of $n$ stones. They alternate turns, and on each turn a player must remove $1$, $4$, or $5$ stones. The player who removes the last stone wins. Both players play as well as possible (that is, each player, on every turn, makes whatever move gives them the best chance to win). For how many positive integers $n\le2026$ does the <em>second</em> player win the game?</p><p><strong>(A)</strong>&nbsp;$253$&emsp;<strong>(B)</strong>&nbsp;$500$&emsp;<strong>(C)</strong>&nbsp;$505$&emsp;<strong>(D)</strong>&nbsp;$506$&emsp;<strong>(E)</strong>&nbsp;$507$</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(E) $507$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Losing positions are $0,2 \pmod 8$)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Losing positions are $0,2 \pmod 8$</summary><div class="ct-text">
 <p>Call a pile size <em>losing</em> if the player to move loses with best play (pile $0$ is losing: the previous player took the last stone). The second player wins exactly when $n$ is losing. Computing the first few: $0$ L, $1$ W, $2$ L, $3$ W ($\to2$), $4$ W ($\to0$), $5$ W ($\to0$), $6$ W ($\to2$), $7$ W ($\to2$), $8$ L, &hellip; suggests:</p><p><em>Claim.</em> $n$ is losing if and only if $n\equiv0$ or $2\pmod 8$.</p><p>We check the two properties that characterise losing positions, by strong induction on $n$.</p><ul class="ct-ul"><li><p>From $n\equiv0$: removing $1,4,5$ gives residues $7,4,3$; from $n\equiv2$: residues $1,6,5$. None is $0$ or $2$, so every move from a claimed losing position goes to a claimed winning one.</p></li><li><p>From the other residues there is a move to residue $0$ or $2$: $1\to0$ (remove $1$), $3\to2$ (remove $1$), $4\to0$ (remove $4$), $5\to0$ (remove $5$), $6\to2$ (remove $4$), $7\to2$ (remove $5$). The number removed never exceeds the residue, so the move is always legal.</p></li></ul><p>Now count $n\le2026$: $n\equiv0$: $8,16,\dots,2024$, that is $253$ numbers; $n\equiv2$: $2,10,\dots,2026$, that is $254$ numbers. Total $507$, and the answer is $\boxed{\text{(E)}\ 507}$.</p>
 </div></details>
 </section>
@@ -316,10 +310,10 @@ A sum of squares is $0$ only if each square is $0$, so $u=1$, $v=2$, $w=3$, i.e.
 \[P=\left(1+\tan\left(\frac{\pi}{4052}\right)\right)\left(1+\tan\left(\frac{2\pi}{4052}\right)\right)\cdots\left(1+\tan\left(\frac{1012\pi}{4052}\right)\right)\left(1+\tan\left(\frac{1013\pi}{4052}\right)\right).\]
 All angles are in radians. $P$ can be written as $m^n$, where $m,n$ are positive integers and $m$ is as small as possible. What is $m+n$?</p><p><strong>(A)</strong>&nbsp;$509$&emsp;<strong>(B)</strong>&nbsp;$510$&emsp;<strong>(C)</strong>&nbsp;$512$&emsp;<strong>(D)</strong>&nbsp;$514$&emsp;<strong>(E)</strong>&nbsp;$518$</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(A) $509$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Pairs of angles adding to $\pi/4$)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Pairs of angles adding to $\pi/4$</summary><div class="ct-text">
 <p>Note that $4052=4\cdot1013$, so $\frac{1013\pi}{4052}=\frac\pi4$. Write $x_k=\frac{k\pi}{4052}$.</p><p><em>Lemma.</em> If $x+y=\frac\pi4$ (with $x,y\in(0,\frac\pi4)$), then $(1+\tan x)(1+\tan y)=2$. Indeed $1=\tan(x+y)=\frac{\tan x+\tan y}{1-\tan x\tan y}$ gives $\tan x+\tan y+\tan x\tan y=1$, so $(1+\tan x)(1+\tan y)=1+1=2$.</p><p>Pair $k$ with $1013-k$ for $k=1,\dots,506$; since $x_k+x_{1013-k}=\frac\pi4$, this splits the factors $k=1,\dots,1012$ into $506$ pairs with product $2$ each. The last factor is $1+\tan\frac\pi4=2$. So $P=2^{507}$.</p><p>The smallest $m\ge2$ with $P=m^n$ is $m=2$ ($m=1$ is impossible because $P\ne1$), and then $n=507$. Thus $m+n=509$; the answer is $\boxed{\text{(A)}\ 509}$.</p>
-<h4>Solution 2 (Cancelling cosines)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Cancelling cosines</summary><div class="ct-text">
 <p>For any $x$ with $\cos x\ne0$,
 \[1+\tan x=\frac{\cos x+\sin x}{\cos x}=\frac{\sqrt2\cos\left(\frac\pi4-x\right)}{\cos x}.\]
 Let $x_k=\frac{k\pi}{4052}$; as $4052=4\cdot1013$, we have $\frac\pi4-x_k=x_{1013-k}$. Hence
@@ -332,8 +326,7 @@ because as $k$ runs over $1,\dots,1012$ so does $1013-k$, and all these cosines 
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Geometry &middot; LPS VI, Chapter 40: Coordinate Geometry and Analytic Methods &middot; Equation-Based Figure Analysis</div>
 <div class="ct-text"><p>Points $A$, $C$, $B$ lie on a line, with $C$ between $A$ and $B$, where $AC=12$ and $CB=20$. Semicircles are drawn on diameters $CB$ and $AB$, on the same side of line $AB$. Let $\ell$ be the line through $C$ perpendicular to $AB$. A circle $\omega$ is tangent to $\ell$, tangent internally to the arc of the semicircle with diameter $AB$, and tangent externally to the arc of the semicircle with diameter $CB$, at points other than the endpoints of the arcs. Find the radius of $\omega$.</p><p><strong>(A)</strong>&nbsp;$\frac{10}{3}$&emsp;<strong>(B)</strong>&nbsp;$\frac72$&emsp;<strong>(C)</strong>&nbsp;$\frac{15}{4}$&emsp;<strong>(D)</strong>&nbsp;$4$&emsp;<strong>(E)</strong>&nbsp;$\frac{25}{6}$</p><div class="ct-fig"><img style="width:332px" src="/assets/contests/2026-27/umd-hs-15.svg" alt="Figure for Part I, Problem 25"></div></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(C) $\frac{15}{4}$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Coordinates)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Coordinates</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:332px" src="/assets/contests/2026-27/umd-hs-15_s1.svg" alt="Figure for the solution"></div>
 <p>Put $C=(0,0)$, $A=(-12,0)$, $B=(20,0)$, with the semicircles in the upper half-plane. The semicircle on $AB$ has centre $O_1=(4,0)$ and radius $16$; the one on $CB$ has centre $O_2=(10,0)$ and radius $10$. Let $\omega$ have centre $P=(p,h)$ and radius $r$. As in the figure, $\omega$ touches the two semicircles at points of their open arcs. The point where $\omega$ touches the circle on $AB$ internally is $O_1+16\cdot\frac{P-O_1}{|P-O_1|}$, whose height is positive only if $h&gt;0$; so $h&gt;0$. Tangency to $\ell$ (the $y$-axis) means $|p|=r$.</p><p>If $p=-r$, external tangency to the small semicircle gives $(r+10)^2+h^2=(r+10)^2$, so $h=0$, impossible. Hence $p=r$: $\omega$ lies on the side of $\ell$ towards $B$, as in the figure. Internal tangency to the large circle and external tangency to the small one give
 \[(r-4)^2+h^2=(16-r)^2,\qquad (r-10)^2+h^2=(10+r)^2,\]

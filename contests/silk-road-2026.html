@@ -97,7 +97,6 @@ description: Silk Road Mathematical Competition 2026: problems with answers and 
 <p>The 4 problems of the Silk Road Mathematical Competition 2026, each with our own solutions, hidden until you open them. All of them ask for a proof. Where a problem has a final answer, it is shown separately. Try a problem first, then check.</p><p>The competition has four problems.</p>
 </div>
 <div class="ct-credit">Problems: Silk Road Mathematical Competition 2026, from the AoPS contest collection or the official paper. Solutions written by MCC.</div>
-<div class="ct-bar"><button type="button" onclick="ctAll(true)">Show all answers and solutions</button><button type="button" onclick="ctAll(false)">Hide all</button></div>
 <div class="ct-toc-wrap"><div class="ct-toc-row"><a href="#p1">1</a><a href="#p2">2</a><a href="#p3">3</a><a href="#p4">4</a></div></div>
 
 {% raw %}
@@ -105,8 +104,7 @@ description: Silk Road Mathematical Competition 2026: problems with answers and 
 <h3>Problem 1</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure &middot; Power of a Point</div>
 <div class="ct-text"><p>The line joining the midpoints of the diagonals of a cyclic quadrilateral $ABCD$ intersects segment $AB$ at point $X$, and the extension of line $BC$ beyond point $C$ at point $Y$. Prove that if the points $A,C,X,Y$ lie on the same circle, then the segments $AB$, $BC$, and $BD$ can form a right triangle.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Vectors from $B$)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Vectors from $B$</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:251px" src="/assets/contests/2026-27/silk-road-1_s1.svg" alt="Figure for the solution"></div>
 <p>Let $K$ and $L$ be the midpoints of $AC$ and $BD$ (they are distinct, otherwise $ABCD$ would be a parallelogram and the line
 $KL$ would not be defined). Put the origin at $B$ and write points as vectors; $A$ and $C$ are linearly independent. Since $X$ lies on segment
@@ -132,7 +130,8 @@ every point $Z$ of the circle. Applying this to $A$, $C$, $D$:
 BD^2=|D|^2=2D\cdot O=\alpha\,(2A\cdot O)+\beta\,(2C\cdot O)=\alpha|A|^2+\beta|C|^2=2t=AB^2+BC^2 .
 \]</p><p>Thus $BD^2=AB^2+BC^2$. In particular $BD&lt;AB+BC$ and $BD$ is the longest of the three segments, so they form a triangle, and by the converse of
 Pythagoras' theorem it is right-angled (with hypotenuse $BD$).</p>
-<h4>Solution 2 (An inversion centred at $B$)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; An inversion centred at $B$</summary><div class="ct-text">
 <p>Let $\Gamma$ be the circle $ABCD$ and $K$, $L$ the midpoints of $AC$, $BD$ (distinct: if $K=L$ the diagonals bisect each
 other, $ABCD$ is a parallelogram and the line $KL$ is not defined). As $X$ lies on ray $BA$
 and $Y$ on ray $BC$, the concyclicity of $A,C,X,Y$ means
@@ -161,8 +160,7 @@ converse of Pythagoras' theorem, with hypotenuse $BD$.</p>
 \[\frac{a_1+a_2+\cdots+a_{n-1}}{a_n}\]
 is reduced to its lowest terms (irreducible form), and then $a_{n+1}$ is set equal to the numerator of this reduced fraction. Prove that there exists a positive integer $N$ such that for all $n\ge N$, the following equality holds:
 \[a_{n+2}=a_{n+1}+a_n.\]</p></div>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (The cancelled factor shrinks and then disappears)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; The cancelled factor shrinks and then disappears</summary><div class="ct-text">
 <p>Let $S_n=a_1+\dots+a_n$ and, for $n\ge2$, $g_n=\gcd(S_{n-1},a_n)$. The rule says
 \[
 a_{n+1}=\frac{S_{n-1}}{g_n}\qquad(n\ge2).
@@ -184,8 +182,7 @@ a_{n+2}=S_n=S_{n-1}+a_n=a_{n+1}+a_n\qquad\text{for all }n\ge N .
 <h3>Problem 3</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 39: Graph Theory and Structural Combinatorics &middot; Paths, Cycles, and Connectivity</div>
 <div class="ct-text"><p>On a horizontal segment of length $2025$, its endpoints and all points dividing it into unit segments are marked. Some pairs of marked points are connected by one-way teleporters transporting from the left point to the right point. It is known that several people, using only the teleporters, can travel from the left endpoint to the right endpoint in such a way that each teleporter is used exactly once. Prove that this can be done so that, for every $k=1,2,\dots,2025$, the teleporters transporting $k$ units to the right are used by at most $1013$ people.</p></div>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Let equal jumps follow each other)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Let equal jumps follow each other</summary><div class="ct-text">
 <p>Label the marked points $0,1,\dots,2025$. Each pair of points carries at most one teleporter (this is what &ldquo;some pairs are
 connected&rdquo; means; with parallel teleporters the claim would fail, e.g. for $1014$ copies of the teleporter $0\to2025$), and a teleporter from $i$ to $j&gt;i$ has length $j-i$.</p><p><em>Plans as matchings.</em> In a valid plan every passage of a person through an inner point $v$ uses one teleporter arriving at $v$ and one
 leaving $v$, and every teleporter is used exactly once; so at every inner point the numbers of arriving and leaving teleporters are equal.
@@ -209,8 +206,7 @@ points, so there are at most $1013$ $k$-chains.</p><p>Hence, with this plan, for
 \[P(x,y,z)=P(y+z-x,y,z)=P(x,z+x-y,z)=P(x,y,x+y-z).\]</p><ul class="ct-parts"><li><p><span class="ct-lbl">(1)</span> Prove that there exists a polynomial $Q(x,y,z)$ with real coefficients such that
 \[P(x,y,z)=Q(x-y,y-z,z-x).\]</p></li><li><p><span class="ct-lbl">(2)</span> Prove that there exists a polynomial $R(x,y)$ with real coefficients such that
 \[P(x,y,z)=R\big(x^2+y^2+z^2-xy-yz-zx,\ (x-y)(y-z)(z-x)\big).\]</p></li></ul></div>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Composing the three symmetries)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Composing the three symmetries</summary><div class="ct-text">
 <p>Let $T_1(x,y,z)=(y+z-x,y,z)$, $T_2(x,y,z)=(x,z+x-y,z)$, $T_3(x,y,z)=(x,y,x+y-z)$. The hypothesis says $P\circ T_i=P$ for
 $i=1,2,3$, hence $P$ is invariant under every composition of these maps.</p><p><strong>(1)</strong> Apply $T_1$, then $T_2$, then $T_3$, then $T_2$:
 \[

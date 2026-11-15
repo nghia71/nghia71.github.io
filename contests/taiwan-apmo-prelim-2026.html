@@ -97,7 +97,6 @@ description: Taiwan APMO Preliminary Selection 2026: problems with answers and s
 <p>The 12 problems of the Taiwan APMO Preliminary Selection 2026, each with our own solutions, hidden until you open them. 9 of them ask for an answer and 3 ask for a proof. Where a problem has a final answer, it is shown separately. Try a problem first, then check.</p><p>Round 1 held on November 8, 2025 (two hours: Part A numerical answers, Part B proofs, 7 points each); Round 2: four hours, five proof problems.</p>
 </div>
 <div class="ct-credit">Problems: Taiwan APMO Preliminary Selection 2026, from the AoPS contest collection or the official paper. Solutions written by MCC.</div>
-<div class="ct-bar"><button type="button" onclick="ctAll(true)">Show all answers and solutions</button><button type="button" onclick="ctAll(false)">Hide all</button></div>
 <div class="ct-toc-wrap"><div class="ct-toc-row"><span class="ct-toc-g">Round 1</span><a href="#p1">A1</a><a href="#p2">A2</a><a href="#p3">A3</a><a href="#p4">A4</a><a href="#p5">A5</a><a href="#p6">B1</a><a href="#p7">B2</a></div><div class="ct-toc-row"><span class="ct-toc-g">Round 2</span><a href="#p8">1</a><a href="#p9">2</a><a href="#p10">3</a><a href="#p11">4</a><a href="#p12">5</a></div></div>
 
 {% raw %}
@@ -107,8 +106,7 @@ description: Taiwan APMO Preliminary Selection 2026: problems with answers and s
 <div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VII scale">E</span>Combinatorics &middot; LPS VII, Chapter 2: Fundamental Counting and Structured Enumeration &middot; Constraint-Based Enumeration</div>
 <div class="ct-text"><p>There are $4$ silver and $4$ gold coins, and all coins of each type are indistinguishable. Each coin has a heads side and a tails side. How many distinguishable ways are there to stack the coins such that no two heads touch?</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$630$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Colours and orientations separately)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Colours and orientations separately</summary><div class="ct-text">
 <p>A stack is described by two independent pieces of data: the sequence of colours from bottom to top, and the orientation of each coin (heads up, $U$, or heads down, $D$).</p><p><em>Colours.</em> Choosing which $4$ of the $8$ positions hold silver coins gives $\binom84=70$ colour sequences.</p><p><em>Orientations.</em> Two neighbouring coins touch along the top face of the lower coin and the bottom face of the upper coin. Two heads touch exactly when the lower coin is $U$ and the upper coin is $D$. So the orientation word (bottom to top) must not contain $UD$ as consecutive letters: once a $U$ appears, all coins above it are $U$. The admissible words are $D^kU^{8-k}$ for $k=0,1,\ldots,8$, i.e. $9$ words.</p><p>The no-touching condition does not involve colours, so the number of stacks is $70\cdot9=\boxed{630}$.</p>
 </div></details>
 </section>
@@ -117,8 +115,7 @@ description: Taiwan APMO Preliminary Selection 2026: problems with answers and s
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 11: Similarity, Homothety, and Ratio Geometry &middot; Direct Similarity</div>
 <div class="ct-text"><p>Point $P$ is inside $\triangle ABC$ with $CA=10$ and $CB=9$ such that $PA=8$ and $PB=7$. Let $AP$, $BP$, and $CP$ meet the circumcircle again at $K$, $L$, and $M$, respectively. What is $\dfrac{ML}{MK}$?</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\dfrac{36}{35}$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Two pairs of similar triangles)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Two pairs of similar triangles</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:248px" src="/assets/contests/2026-27/taiwan-apmo-prelim-2_s1.svg" alt="Figure for the solution"></div>
 <p>The chords $CM$ and $BL$ meet at $P$. Triangles $PML$ and $PBC$ are similar: $\angle MPL=\angle BPC$ (vertical angles) and $\angle PML=\angle CML=\angle CBL=\angle PBC$ (inscribed angles on arc $CL$). Hence
 \[\frac{ML}{BC}=\frac{PM}{PB}.\]
@@ -134,8 +131,7 @@ Dividing,
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Algebra &middot; LPS VII, Chapter 1: Inequalities: Core Classical Methods &middot; AM-GM and Mean Inequalities</div>
 <div class="ct-text"><p>What is the maximum value of $(a+\sqrt2\,b)(c+d)^2$ over all positive reals $a,b,c,d$ with $a^2+b^2+c^2+d^2=1$?</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\dfrac43$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Cauchy&ndash;Schwarz, then AM&ndash;GM in one variable)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Cauchy&ndash;Schwarz, then AM&ndash;GM in one variable</summary><div class="ct-text">
 <p>Let $u=a^2+b^2$, so $c^2+d^2=1-u$ with $0&lt;u&lt;1$. By Cauchy&ndash;Schwarz,
 \[a+\sqrt2\,b\le\sqrt{1+2}\,\sqrt{a^2+b^2}=\sqrt{3u},\qquad(c+d)^2\le2(c^2+d^2)=2(1-u).\]
 Hence the expression is at most $2\sqrt3\,\sqrt u\,(1-u)$. By AM&ndash;GM,
@@ -148,8 +144,7 @@ so $\sqrt u(1-u)\le\frac2{3\sqrt3}$ and the expression is at most $2\sqrt3\cdot\
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 12: Exponential Congruences and Order Structure &middot; Orders and Primitive Behavior</div>
 <div class="ct-text"><p>How many distinct remainders are there when the terms of the sequence $1,11,111,\ldots$ are divided by $2026$?</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$253$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Reduce to the order of $10$ modulo $1013$)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Reduce to the order of $10$ modulo $1013$</summary><div class="ct-text">
 <p>Let $R_k=\underbrace{11\ldots1}_{k}=\frac{10^k-1}9$. Note $2026=2\cdot1013$ with $1013$ prime.</p><p>All $R_k$ are odd, so $R_j\equiv R_k\pmod{2026}$ if and only if $R_j\equiv R_k\pmod{1013}$. Since $\gcd(9,1013)=1$, this happens if and only if $10^j\equiv10^k\pmod{1013}$, i.e. if and only if $j\equiv k\pmod{\ell}$, where $\ell$ is the order of $10$ modulo $1013$. Hence the number of distinct remainders equals $\ell$.</p><p><em>Computing $\ell$.</em> By Fermat, $\ell\mid1012=4\cdot11\cdot23$. First, $10$ is a quadratic residue modulo $1013$: since $1013\equiv5\pmod8$, $\bigl(\frac2{1013}\bigr)=-1$, and by reciprocity $\bigl(\frac5{1013}\bigr)=\bigl(\frac{1013}5\bigr)=\bigl(\frac35\bigr)=-1$; so $\bigl(\frac{10}{1013}\bigr)=1$ and $\ell\mid506$. Repeated squaring gives
 \[10^{11}\equiv121,\qquad10^{23}\equiv538,\qquad10^{253}\equiv1\pmod{1013}.\]
 So $\ell\mid253=11\cdot23$ but $\ell\ne1,11,23$; hence $\ell=253$.</p><p>The number of distinct remainders is $\boxed{253}$.</p>
@@ -162,8 +157,7 @@ So $\ell\mid253=11\cdot23$ but $\ell\ne1,11,23$; hence $\ell=253$.</p><p>The num
 \[\begin{cases}2x+\dfrac yz=3\\[1mm] 2y+\dfrac zx=3\\[1mm] 2z+\dfrac xy=3\end{cases}\]
 and $x$, $y$, and $z$ are pairwise distinct, what is $x+y+z$?</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\dfrac{13}2$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Two relations between $e_1$ and $e_3$)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Two relations between $e_1$ and $e_3$</summary><div class="ct-text">
 <p>All of $x,y,z$ are nonzero. Clearing denominators,
 \[2xz+y=3z,\qquad2xy+z=3x,\qquad2yz+x=3y.\tag{1}\]
 Let $s=x+y+z$, $q=xy+yz+zx$ and $p=xyz$.</p><p><em>Sum.</em> Adding the equations (1): $2q+s=3s$, so $q=s$.</p><p><em>Differences.</em> Subtracting consecutive equations of (1):
@@ -171,7 +165,8 @@ Let $s=x+y+z$, $q=xy+yz+zx$ and $p=xyz$.</p><p><em>Sum.</em> Adding the equation
 Multiplying the three and cancelling $(x-y)(y-z)(z-x)\ne0$ (the numbers are distinct; note $(z-y)(x-z)(y-x)=-(x-y)(y-z)(z-x)$):
 \[(2x-1)(2y-1)(2z-1)=-27,\quad\text{i.e.}\quad8p-4q+2s-1=-27,\quad4p-s=-13.\]</p><p><em>Product.</em> The original equations say $\frac yz=3-2x$, $\frac zx=3-2y$, $\frac xy=3-2z$; multiplying,
 \[(3-2x)(3-2y)(3-2z)=1,\quad\text{i.e.}\quad27-18s+12q-8p=1,\quad4p=13-3s.\]</p><p>From $4p=s-13$ and $4p=13-3s$ we get $4s=26$, so $x+y+z=\boxed{\dfrac{13}2}$. (Such triples exist: $x,y,z$ are, in some order, the three real numbers approximately $1.5199,\ -0.2062,\ 5.1863$.)</p>
-<h4>Solution 2 (Eliminate two variables)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Eliminate two variables</summary><div class="ct-text">
 <p>All of $x,y,z$ are nonzero, since they appear in denominators. The equations say
 \[y=z(3-2x),\qquad z=x(3-2y),\qquad x=y(3-2z).\tag{1}\]
 <em>Express $y$ and $z$ through $x$.</em> Substituting the second equation of (1) into the first gives $y=x(3-2y)(3-2x)$, that is,
@@ -190,10 +185,10 @@ after dividing by $x\ne0$. Here $D^2=16x^4-48x^3+28x^2+12x+1$ and $9(3-2x)(1+4x-
 <h3>Problem B1</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 39: Graph Theory and Structural Combinatorics &middot; Paths, Cycles, and Connectivity</div>
 <div class="ct-text"><p>Call a matrix <em>row-distinct</em> if no two rows of the matrix are identical. Prove that for any $2025\times2025$ row-distinct matrix, there is some column we can remove to produce a $2025\times2024$ row-distinct matrix.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (A graph with one edge per column)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; A graph with one edge per column</summary><div class="ct-text">
 <p>Let $n=2025$. Suppose, for contradiction, that deleting any single column produces two equal rows. Then for each column $j$ there are two rows that differ <em>only</em> in column $j$; choose one such pair and call it $e_j$.</p><p>Build a graph $G$ whose vertices are the $n$ rows and whose edges are $e_1,\ldots,e_n$, the edge $e_j$ labelled $j$. Two different labels cannot give the same pair of rows (two rows cannot differ in exactly column $j$ and also in exactly column $j'\ne j$), so $G$ is a simple graph with $n$ vertices and $n$ edges. A graph with as many edges as vertices contains a cycle (a forest on $n$ vertices has at most $n-1$ edges).</p><p>Take a cycle $R_1R_2\cdots R_kR_1$ in $G$ and let $j$ be the label of the edge $R_1R_2$. Walking around the cycle, the entry in column $j$ changes when we pass from $R_1$ to $R_2$ (they differ in column $j$), and it never changes along any other edge of the cycle, because those edges carry other labels and their endpoints agree in column $j$. So after returning to $R_1$ the entry in column $j$ differs from the entry of $R_1$ itself, which is absurd.</p><p>Hence some column can be deleted leaving the $2025$ rows pairwise distinct, i.e. a $2025\times2024$ row-distinct matrix.</p>
-<h4>Solution 2 (Choosing distinguishing columns one at a time)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Choosing distinguishing columns one at a time</summary><div class="ct-text">
 <p>Let $n=2025$. We choose columns $j_1,j_2,\ldots$ one after another and keep track of the partition of the $n$ rows into <em>classes</em>: two rows are in the same class when they agree in every column chosen so far. At the start no column is chosen and all rows form one class.</p><p>Suppose that after some steps there are fewer than $n$ classes. Then some class contains two different rows. Being different, they differ in some column $j$; this column is not yet chosen (rows of one class agree in all chosen columns). Choose $j$ next. The class containing the two rows splits into at least two classes, and no class merges with another, so the number of classes grows by at least $1$.</p><p>Since we start with $1$ class and each step adds at least one, after at most $n-1$ steps there are $n$ classes, i.e. every row is alone in its class. So some set of at most $n-1=2024$ columns already distinguishes all rows: any two rows differ in one of these columns.</p><p>As the matrix has $2025$ columns, at least one column $c$ was never chosen. Deleting $c$ keeps all chosen columns, so any two rows still differ in some remaining column. Hence deleting $c$ leaves a $2025\times2024$ row-distinct matrix.</p>
 </div></details>
 </section>
@@ -201,8 +196,7 @@ after dividing by $x\ne0$. Here $D^2=16x^4-48x^3+28x^2+12x+1$ and $9(3-2x)(1+4x-
 <h3>Problem B2</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 24: Cevians, Menelaus, and Projective-Flavored Ratios &middot; Menelaus&#x27;s Theorem and Collinearity</div>
 <div class="ct-text"><p>In acute $\triangle ABC$ with $AC&gt;AB$, points $D$ and $E$ are on $AC$ and $AB$ such that $CD=BE$, and $BD$ and $CE$ intersect at $F$. The line through $F$ parallel to the $\angle A$-bisector meets $AC$ and $AB$ at $G$ and $H$, respectively. Prove that $\dfrac{AB}{DA}=\dfrac{CG}{HE}$.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Find the line first, then apply Menelaus)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Find the line first, then apply Menelaus</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:258px" src="/assets/contests/2026-27/taiwan-apmo-prelim-7_s1.svg" alt="Figure for the solution"></div>
 <p>Let $b=AC$, $c=AB$ (so $b&gt;c$) and $s=CD=BE$, with $0&lt;s&lt;c$ (so $D$ and $E$ are interior points of the sides).</p><p><em>The candidate line.</em> Let $G_0$ be the point of segment $AC$ with $AG_0=b-c$ (so $CG_0=c$), and $H_0$ the point on ray $BA$ beyond $A$ with $AH_0=b-c$. Triangle $AG_0H_0$ is isosceles with apex $A$ and its base angles are $\tfrac12\angle BAC$ (the exterior angle at $A$ is $180^\circ-\angle BAC$), so $G_0H_0$ is parallel to the bisector of $\angle A$. We show that $F$ lies on $G_0H_0$.</p><p><em>Menelaus twice in triangle $ABD$.</em> The line $CFE$ meets the side lines of triangle $ABD$ at $E\in AB$, $F\in BD$, $C\in DA$ (extended beyond $D$):
 \[\frac{AE}{EB}\cdot\frac{BF}{FD}\cdot\frac{DC}{CA}=1\ \Longrightarrow\ \frac{BF}{FD}=\frac{EB\cdot CA}{AE\cdot DC}=\frac{s\cdot b}{(c-s)\,s}=\frac b{c-s}.\]
@@ -211,7 +205,8 @@ Now consider the points $H_0\in AB$ (outside segment $AB$), $F\in BD$, $G_0\in D
 with exactly one of the three points outside its side. By the converse of Menelaus' theorem, $H_0$, $F$, $G_0$ are collinear.</p><p><em>Conclusion.</em> The line through $F$ parallel to the bisector is unique, so it is $H_0G_0$; that is, $G=G_0$ and $H=H_0$. Therefore
 \[CG=c=AB,\qquad HE=HA+AE=(b-c)+(c-s)=b-s=AD,\]
 and $\dfrac{AB}{DA}=\dfrac{CG}{HE}$.</p>
-<h4>Solution 2 (Vectors from $A$)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Vectors from $A$</summary><div class="ct-text">
 <p>Let $b=AC$, $c=AB$, $s=CD=BE$, and let $\mathbf u,\mathbf w$ be the unit vectors along $AB$ and $AC$, with $A$ as origin. Then
 \[B=c\mathbf u,\quad C=b\mathbf w,\quad E=(c-s)\mathbf u,\quad D=(b-s)\mathbf w.\]
 <em>The point $F$.</em> Write $F=B+\lambda(D-B)=(1-\lambda)c\,\mathbf u+\lambda(b-s)\mathbf w$ and $F=C+\mu(E-C)=\mu(c-s)\mathbf u+(1-\mu)b\,\mathbf w$. Comparing coefficients and solving gives $\lambda=\frac b{b+c-s}$, hence
@@ -225,10 +220,10 @@ and $\dfrac{AB}{DA}=\dfrac{CG}{HE}$.</p>
 <div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VII scale">E</span>Number Theory &middot; LPS VII, Chapter 21: Arithmetic Functions and Multiplicative Structure &middot; Divisor and Sum Functions</div>
 <div class="ct-text"><p>For a positive integer $n$, let $f(n)$ be the product of the positive divisors of $n$. Find all $n$ such that $f(n)$ is a power of $n$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$n=1$ and every $n$ that is not a perfect square</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Pairing divisors)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Pairing divisors</summary><div class="ct-text">
 <p>For $n=1$, $f(1)=1=1^1$ is a power of $1$. Let $n\ge2$ and let $\tau$ be the number of divisors of $n$.</p><p>Pairing each divisor $d$ with $n/d$ gives $f(n)^2=\prod_{d\mid n}d\cdot\prod_{d\mid n}\frac nd=n^{\tau}$, so $f(n)=n^{\tau/2}$.</p><p>If $n$ is not a perfect square, $\tau$ is even (no divisor is paired with itself), and $f(n)=n^{\tau/2}$ is a power of $n$.</p><p>If $n=m^2$ is a square ($m\ge2$), $\tau$ is odd and $f(n)=m^{\tau}$. If this were $n^k=m^{2k}$, then $\tau=2k$ would be even (as $m\ge2$), a contradiction.</p><p>So the answer is: $n=1$ and all non-squares.</p>
-<h4>Solution 2 (Prime exponents)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Prime exponents</summary><div class="ct-text">
 <p>For $n=1$ the product is $1=1^1$. Let $n=\prod_{i=1}^rp_i^{e_i}\ge2$ and $\tau=\prod(e_i+1)$. The exponent of $p_i$ in $f(n)$ is the sum of the exponents of $p_i$ over all divisors: each value $0,1,\ldots,e_i$ occurs $\tau/(e_i+1)$ times, so the exponent is $\frac{\tau}{e_i+1}\cdot\frac{e_i(e_i+1)}2=\frac{\tau e_i}2$. Hence $f(n)=n^{\tau/2}$ as a product of prime powers.</p><p>$f(n)=n^k$ for an integer $k$ means $\frac{\tau e_i}2=ke_i$ for all $i$, i.e. $\tau=2k$ is even. And $\tau=\prod(e_i+1)$ is odd exactly when all $e_i$ are even, i.e. when $n$ is a perfect square. Hence the answer: $n=1$ and all $n$ that are not perfect squares.</p>
 </div></details>
 </section>
@@ -237,8 +232,7 @@ and $\dfrac{AB}{DA}=\dfrac{CG}{HE}$.</p>
 <div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VII scale">E</span>Combinatorics &middot; LPS VII, Chapter 20: Parity, Coloring, and Process Termination &middot; Parity and Coloring Arguments</div>
 <div class="ct-text"><p>A textbook has $30$ chapters. Each chapter's page count is a positive integer no greater than $30$, and no two chapters have the same page count. No two chapters appear on the same page. Assume that the first chapter begins on the first page, and that there are no breaks between chapters. Let $N$ be the number of chapters whose first page is an odd page. Find the largest possible value of $N$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$23$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Parity of the number of odd chapters before)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Parity of the number of odd chapters before</summary><div class="ct-text">
 <p>The page counts are $30$ distinct integers between $1$ and $30$, so they are exactly $1,2,\ldots,30$: fifteen odd and fifteen even. A chapter starts on page $1+(\text{total length of the chapters before it})$, so it starts on an odd page exactly when the chapters before it contain an even number of odd-length chapters.</p><p><em>Upper bound.</em> The $j$-th odd-length chapter (in the order of the book) has exactly $j-1$ odd-length chapters before it, so it starts on an odd page iff $j$ is odd: exactly $8$ of the $15$ odd-length chapters do, whatever the order. At most all $15$ even-length chapters do. So $N\le8+15=23$.</p><p><em>Construction.</em> Put the $15$ even-length chapters first (each has no odd chapter before it, so all start on odd pages), followed by the odd-length chapters. This gives $15+8=23$.</p><p>The largest possible value is $\boxed{23}$.</p>
 </div></details>
 </section>
@@ -246,8 +240,7 @@ and $\dfrac{AB}{DA}=\dfrac{CG}{HE}$.</p>
 <h3>Problem 3</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 11: Similarity, Homothety, and Ratio Geometry &middot; Nested and Overlapping Similarity</div>
 <div class="ct-text"><p>In acute $\triangle ABC$, pick points $P$ and $Q$ on $BC$ such that $\angle PAB=\angle ACB$ and $\angle QAC=\angle ABC$. Extend rays $AP$ and $AQ$ past $P$ and $Q$ to $M$ and $N$ respectively such that $\dfrac{AP}{PM}=\dfrac{QN}{AQ}$. Prove that $BM$ and $CN$ intersect on the circumcircle of $ABC$.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Two similar triangles $BPM$ and $NQC$)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Two similar triangles $BPM$ and $NQC$</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:224px" src="/assets/contests/2026-27/taiwan-apmo-prelim-10_s1.svg" alt="Figure for the solution"></div>
 <p>Write $\angle A,\angle B,\angle C$ for the angles of the triangle and $r=\frac{AP}{PM}=\frac{QN}{AQ}$.</p><p><em>Positions.</em> In triangle $ABP$, $\angle ABP=\angle B$ and $\angle BAP=\angle C$, so $\angle APB=\angle A$; similarly $\angle AQC=\angle A$. Hence triangles $ABP$, $CAQ$ and $CBA$ are similar ($ABP\sim CBA$ share angle $B$; $CAQ\sim CBA$ share angle $C$). In particular $\frac{BP}{AP}=\frac{AQ}{CQ}$ (from $ABP\sim CAQ$), i.e.
 \[BP\cdot CQ=AP\cdot AQ.\tag{1}\]
@@ -256,7 +249,8 @@ Also $\angle APQ=\angle AQP=\angle A&lt;90^\circ$ shows that $Q$ lies between $B
 So triangles $BPM$ and $NQC$ are similar (SAS), with $B\leftrightarrow N$, $P\leftrightarrow Q$, $M\leftrightarrow C$. Hence $\angle PBM=\angle QNC$ and $\angle PMB=\angle QCN$.</p><p><em>The intersection point.</em> The rays $BM$ and $CN$ go from $B$ and $C$ into the half-plane of $BC$ not containing $A$ (as $M,N$ lie beyond $BC$). Since $P$ and $Q$ lie on segment $BC$, the angles these rays make with $BC$ satisfy
 \[\angle MBC+\angle NCB=\angle PBM+\angle QCN=\angle PBM+\angle PMB=180^\circ-\angle BPM=\angle A&lt;180^\circ,\]
 so the two rays meet at a point $T$ in that half-plane, and in triangle $TBC$ we have $\angle TBC+\angle TCB=\angle A$. So $\angle BTC=180^\circ-\angle A$, and since $T$ and $A$ are on opposite sides of $BC$, the quadrilateral $ABTC$ is cyclic: $T$ lies on the circumcircle of $ABC$.</p>
-<h4>Solution 2 (Coordinates and the equation of the circle)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Coordinates and the equation of the circle</summary><div class="ct-text">
 <p>Choose coordinates with $B=(0,0)$, $C=(1,0)$ and $A=(u,v)$, $v&gt;0$ (unit length $BC$).</p><p><em>The points $P$ and $Q$.</em> Since $\angle PAB=\angle ACB$ and the angle at $B$ is shared, triangles $ABP$ and $CBA$ are similar, so $BP=\frac{AB^2}{BC}=u^2+v^2$. Likewise triangles $ACQ$ and $BCA$ are similar, so $CQ=AC^2=(1-u)^2+v^2$. Hence $P=(p,0)$ and $Q=(q,0)$ with
 \[p=u^2+v^2,\qquad 1-q=(1-u)^2+v^2 .\]
 Then $p+q=2u$; put $\delta=p-u=u-q$. Also
@@ -277,8 +271,7 @@ by (1). Hence $T$ lies on the circumcircle of $ABC$.</p>
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 33: Residues, Quadratic Structure, and Higher Congruences &middot; Quadratic Residues</div>
 <div class="ct-text"><p>Find all positive integers $n$ such that there exist integers $a$ and $b$ satisfying $n\mid a^2+b^2+1$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>all positive integers $n$ not divisible by $4$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Prime powers and the Chinese remainder theorem)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Prime powers and the Chinese remainder theorem</summary><div class="ct-text">
 <p><em>$4\mid n$ is impossible.</em> Squares are $0$ or $1$ modulo $4$, so $a^2+b^2+1\in\{1,2,3\}\pmod4$ is never $0$.</p><p><em>$n=1,2$</em> work ($a=1$, $b=0$ gives $2$).</p><p><em>Odd primes.</em> Let $p$ be an odd prime. The sets $\{a^2\bmod p\}$ and $\{-1-b^2\bmod p\}$ each have $\frac{p+1}2$ elements, so they intersect: there are $a,b$ with $a^2+b^2+1\equiv0\pmod p$. Not both $a,b$ are divisible by $p$ (else $1\equiv0$); say $p\nmid a$.</p><p><em>Odd prime powers.</em> We lift: suppose $a^2+b^2+1\equiv0\pmod{p^k}$ with $p\nmid a$. Put $a'=a+tp^k$. Then $a'^2+b^2+1\equiv a^2+b^2+1+2atp^k\pmod{p^{k+1}}$; writing $a^2+b^2+1=mp^k$, we need $m+2at\equiv0\pmod p$, which is solvable since $p\nmid2a$. Still $p\nmid a'$, so by induction every $p^k$ works.</p><p><em>General $n$ with $4\nmid n$.</em> Write $n=2^\varepsilon\prod p_i^{k_i}$ with $\varepsilon\in\{0,1\}$. For each prime power factor choose a solution $(a_i,b_i)$, and use the Chinese remainder theorem to get $a\equiv a_i$, $b\equiv b_i$ modulo each factor (for the factor $2$, take $a\equiv1$, $b\equiv0$). Then each prime power divides $a^2+b^2+1$, so $n$ does.</p><p>The answer: all $n$ with $4\nmid n$.</p>
 </div></details>
 </section>
@@ -289,12 +282,12 @@ by (1). Hence $T$ lies on the circumcircle of $ABC$.</p>
 \[\left|\pm a_{i_1}\pm a_{i_2}\pm\cdots\pm a_{i_m}\right|&lt;\frac{1}{2026}\]
 for some choice of signs $\pm$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>proof (in fact two numbers with a minus sign suffice)</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Two close small numbers)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Two close small numbers</summary><div class="ct-text">
 <p>At most $99$ of the numbers exceed $\frac1{10}$: if $100$ of them did, their squares alone would add up to more than $100\cdot\frac1{100}=1$. Hence at least $301$ of the numbers lie in the interval $(0,\frac1{10}]$.</p><p>Sort these $301$ numbers increasingly: $c_1\le c_2\le\cdots\le c_{301}$. The $300$ gaps $c_{i+1}-c_i$ add up to $c_{301}-c_1&lt;\frac1{10}$, so some gap is less than $\frac1{10\cdot300}=\frac1{3000}&lt;\frac1{2026}$. For that pair, the subset $\{i_1,i_2\}$ of size $m=2\le10$ with signs $+,-$ satisfies
 \[|a_{i_1}-a_{i_2}|&lt;\frac1{2026}.\]
 So the bound $m\le10$ in the statement is far from tight: $m=2$ always suffices.</p>
-<h4>Solution 2 (Pigeonhole on sums of at most two numbers)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Pigeonhole on sums of at most two numbers</summary><div class="ct-text">
 <p>Consider all subsets $S\subseteq\{1,\ldots,400\}$ with $|S|\le2$ (including the empty set); there are $1+400+\binom{400}2=80201$ of them. For each let $\sigma(S)=\sum_{i\in S}a_i$. By Cauchy&ndash;Schwarz, $\sigma(S)\le\sqrt{|S|}\sqrt{\sum a_i^2}\le\sqrt2$.</p><p>Divide $[0,\sqrt2]$ into $2866$ intervals of equal length $\frac{\sqrt2}{2866}&lt;\frac1{2026}$ (as $2026\sqrt2&lt;2866$). Since $80201&gt;2866$, two different subsets $S\ne T$ have $\sigma(S),\sigma(T)$ in the same interval, so $|\sigma(S)-\sigma(T)|&lt;\frac1{2026}$. Now
 \[\sigma(S)-\sigma(T)=\sum_{i\in S\setminus T}a_i-\sum_{i\in T\setminus S}a_i,\]
 and $S\triangle T$ is non-empty with at most $4\le10$ elements. Taking these indices with signs $+$ on $S\setminus T$ and $-$ on $T\setminus S$ gives the required choice.</p>

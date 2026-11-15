@@ -97,7 +97,6 @@ description: Canadian Mathematical Olympiad 2026: problems with answers and solu
 <p>The 5 problems of the Canadian Mathematical Olympiad 2026, each with our own solutions, hidden until you open them. 4 of them ask for an answer and 1 asks for a proof. Where a problem has a final answer, it is shown separately. Try a problem first, then check.</p><p>The CMO has five problems.</p>
 </div>
 <div class="ct-credit">Problems: Canadian Mathematical Olympiad 2026, from the AoPS contest collection or the official paper. Solutions written by MCC.</div>
-<div class="ct-bar"><button type="button" onclick="ctAll(true)">Show all answers and solutions</button><button type="button" onclick="ctAll(false)">Hide all</button></div>
 <div class="ct-toc-wrap"><div class="ct-toc-row"><a href="#p1">1</a><a href="#p2">2</a><a href="#p3">3</a><a href="#p4">4</a><a href="#p5">5</a></div></div>
 
 {% raw %}
@@ -108,22 +107,23 @@ description: Canadian Mathematical Olympiad 2026: problems with answers and solu
 \[\sum_{(x,y)\in S}(a-2x)(b-2y)\]
 in terms of $a$ and $b$.</p><p><em>Remark.</em> Here the summation denotes that we sum the value $(a-2x)(b-2y)$ over all points $(x,y)$ in $S$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\boxed{0}$</p></div></details>
-<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Half of a rectangle)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Half of a rectangle</summary><div class="ct-text">
 <p>Let $R$ be the set of lattice points strictly inside the rectangle $[0,a]\times[0,b]$, i.e. $1\le x\le a-1$, $1\le y\le b-1$.
 The diagonal from $(a,0)$ to $(0,b)$ is the line $bx+ay=ab$. A lattice point on it with $1\le x\le a-1$ would satisfy $a\mid bx$, hence
 $a\mid x$ (as $\gcd(a,b)=1$), which is impossible. So $R$ splits into $S$ (points with $bx+ay&lt;ab$) and $S'$ (points with $bx+ay&gt;ab$).</p><p>The map $(x,y)\mapsto(a-x,\,b-y)$ maps $R$ to itself and exchanges $S$ and $S'$ (it changes $bx+ay$ into $2ab-(bx+ay)$). It does not change the
 summand: $(a-2(a-x))(b-2(b-y))=(2x-a)(2y-b)=(a-2x)(b-2y)$. Hence the sums over $S$ and $S'$ are equal and
 \[\sum_{S}(a-2x)(b-2y)=\frac12\sum_{R}(a-2x)(b-2y)=\frac12\Bigl(\sum_{x=1}^{a-1}(a-2x)\Bigr)\Bigl(\sum_{y=1}^{b-1}(b-2y)\Bigr).\]
 But $\sum_{x=1}^{a-1}(a-2x)=a(a-1)-(a-1)a=0$. So the sum is $\boxed{0}$ for all coprime $a,b\ge2$.</p>
-<h4>Solution 2 (Column by column)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Column by column</summary><div class="ct-text">
 <p>Fix $x$ with $1\le x\le a-1$ and put $q=\lfloor bx/a\rfloor$. Since $a\nmid bx$, the number $bx/a$ is not an integer. The points of $S$ in column $x$
 are $(x,y)$ with $1\le y&lt;b-\frac{bx}{a}$, i.e. $1\le y\le b-1-q$. Using $\sum_{y=1}^{Y}(b-2y)=Yb-Y(Y+1)=Y(b-1-Y)$ with $Y=b-1-q$, column $x$ contributes
 \[(a-2x)\,g(x),\qquad g(x)=q\,(b-1-q).\]
 Now compare columns $x$ and $a-x$. Since $\frac{b(a-x)}{a}=b-\frac{bx}a$ and $\frac{bx}a$ is not an integer, $\lfloor b(a-x)/a\rfloor=b-1-q$, so
 $g(a-x)=(b-1-q)q=g(x)$, while $a-2(a-x)=-(a-2x)$. Hence the contributions of columns $x$ and $a-x$ cancel when $x\ne a-x$, and the column
 $x=a/2$ (if $a$ is even) contributes $0\cdot g=0$. The total is $\boxed{0}$.</p>
-<h4>Solution 3 (Two mirror symmetries inside the triangle)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 3 &ndash; Two mirror symmetries inside the triangle</summary><div class="ct-text">
 <p>Write $f(x,y)=(a-2x)(b-2y)$. We split $S$ by the median of the triangle from $(0,0)$, which lies on the line $ay=bx$ and ends at the midpoint $\bigl(\frac a2,\frac b2\bigr)$ of the hypotenuse.</p><p><em>No point of $S$ is on this line.</em> If $(x,y)\in S$ and $ay=bx$, then $a\mid bx$, so $a\mid x$ because $\gcd(a,b)=1$; this is impossible since $0&lt;x&lt;a$. Hence $S$ is the disjoint union of
 \[S_1=\{(x,y)\in S:\ ay&lt;bx\},\qquad S_2=\{(x,y)\in S:\ ay&gt;bx\}.\]</p><p><em>The part $S_1$.</em> A lattice point $(x,y)$ with $x,y\ge1$ lies in $S_1$ exactly when $\frac yb&lt;\frac xa$ and $\frac xa+\frac yb&lt;1$, that is,
 \[\frac yb&lt;\frac{\min(x,\,a-x)}{a}.\]
@@ -139,15 +139,15 @@ which is unchanged by $y\mapsto b-y$. This map sends $S_2$ onto itself and $f(x,
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 49: Combinatorial Number Theory and Structure &middot; Additive Structure and Sums of Integers</div>
 <div class="ct-text"><p>There are $n$ types of coins in Wario's gold mine. Each coin of the $i$th type is worth $d_i$ cents, where $d_1,\dots,d_n$ are distinct positive integers. A positive integer $D$ is called <em>lucky</em> if the following holds: For each positive integer $k$, any collection of coins (containing any numbers of coins of each type) with a total value of exactly $kD$ cents can be split into $k$ groups, each worth $D$ cents.</p><p>Does a lucky number necessarily exist?</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p><strong>Yes</strong>; for example $D=(n-1)L$ for $n\ge2$ (and $D=d_1$ for $n=1$), or $D=nL$, where $L=\operatorname{lcm}(d_1,\dots,d_n)$</p></div></details>
-<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Blocks worth $L$)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Blocks worth $L$</summary><div class="ct-text">
 <p>The answer is <strong>yes</strong>. If $n=1$, $D=d_1$ is lucky (every coin is a group). Let $n\ge2$, $L=\operatorname{lcm}(d_1,\dots,d_n)$, $u_i=L/d_i$ and
 $D=(n-1)L$. We show that $D$ is lucky.</p><p>Take a collection with $c_i$ coins of type $i$ and total $kD$. Write $c_i=u_iq_i+r_i$ with $0\le r_i&lt;u_i$. Call a set of $u_i$ coins of type $i$ a
 <em>block</em>; it is worth exactly $L$. So the collection consists of $Q=q_1+\dots+q_n$ blocks and a remainder of $r_i$ coins of type $i$, worth
 \[W=\sum_i r_id_i\le\sum_i(u_i-1)d_i=nL-\sum_i d_i&lt;nL .\]
 Since the total $kD$ and the blocks are multiples of $L$, $W=sL$ for an integer $s$ with $0\le s\le n-1$, and $Q+s=k(n-1)$.</p><p><em>First group:</em> the remainder (worth $sL$) together with $n-1-s\ge0$ blocks; it is worth $(n-1)L=D$. This needs $n-1-s\le Q$, which holds because
 $Q=k(n-1)-s\ge n-1-s$.</p><p><em>Other groups:</em> the remaining $Q-(n-1-s)=(k-1)(n-1)$ blocks are split into $k-1$ groups of $n-1$ blocks each, each worth $(n-1)L=D$.</p><p>So every collection worth $kD$ splits into $k$ groups worth $D$, and $D$ is lucky.</p>
-<h4>Solution 2 (Take $D=nL$ and peel off whole groups of blocks)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Take $D=nL$ and peel off whole groups of blocks</summary><div class="ct-text">
 <p>The answer is <strong>yes</strong>: we show that $D=nL$ is lucky, where $L=\operatorname{lcm}(d_1,\dots,d_n)$.</p><p>Put $u_i=L/d_i$ (an integer) and call a set of $u_i$ coins of type $i$ a <em>block</em>; every block is worth exactly $L$. Take any collection worth $kD=knL$,
 with $c_i$ coins of type $i$, and write $c_i=u_iq_i+r_i$ with $0\le r_i&lt;u_i$. The collection is made of $Q=q_1+\dots+q_n$ blocks and a remainder of $r_i$ coins of
 type $i$ $(i=1,\dots,n)$, worth
@@ -156,7 +156,8 @@ The total $knL$ and every block are multiples of $L$, so $W$ is a multiple of $L
 \[Q=kn-s\ge kn-(n-1)&gt;(k-1)n .\]
 So there are at least $(k-1)n$ blocks. Form $k-1$ groups, each consisting of $n$ blocks; each is worth $nL=D$. What is left (the other blocks and the remainder)
 is worth $kD-(k-1)D=D$, and it is the $k$-th group. Hence every collection worth $kD$ splits into $k$ groups worth $D$, and $D=nL$ is lucky.</p>
-<h4>Solution 3 (The product of the values and an exchange argument)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 3 &ndash; The product of the values and an exchange argument</summary><div class="ct-text">
 <p>The answer is <strong>yes</strong>: we show that $D=d_1d_2\cdots d_n$ is lucky.</p><p><em>Reduction.</em> It suffices to prove: <em>($\star$) every collection worth $kD$ with $k\ge2$ contains a sub-collection worth exactly $D$.</em> Then induction on $k$ finishes: for $k=1$ the whole collection is the one group; for $k\ge2$ we remove a sub-collection worth $D$, and the rest, worth $(k-1)D$, splits into $k-1$ groups by the induction hypothesis.</p><p>If $n=1$, then $D=d_1$ and one coin is a sub-collection worth $D$. Let $n\ge2$, and let the collection have $a_i$ coins of type $i$, with $\sum_i a_id_i=kD$, $k\ge2$. Renumber the types so that $a_1d_1$ is the largest of the numbers $a_id_i$ (this does not change $D$). Then $a_1d_1\ge\frac{kD}{n}\ge\frac{2D}{n}$, so
 \[a_1\ge\frac{2\,d_2d_3\cdots d_n}{n}. \tag{1}\]</p><p><em>A product inequality.</em> For distinct positive integers $e_1&lt;e_2&lt;\dots&lt;e_m$ $(m\ge1)$,
 \[1+e_1e_2\cdots e_m\ge e_1+e_2+\dots+e_m. \tag{2}\]
@@ -174,8 +175,7 @@ which contradicts (2) applied to the distinct numbers $d_2,\dots,d_n$. So $x_1\l
 <div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 52: Advanced Combinatorial Structure and Hybrid Methods &middot; High-Level Olympiad Synthesis</div>
 <div class="ct-text"><p>Turbo the snail plays a game on a board with $2n$ rows and $2n$ columns. There are $2n^2$ monsters who first choose to occupy $2n^2$ distinct cells, with Turbo's knowledge. After this, Turbo chooses any cell and labels it $1$. Starting from this cell, Turbo then walks through all other $4n^2-1$ cells exactly once, labelling them in order with $2,3,\dots,4n^2$. Turbo only moves between cells which share an edge, and never returns to a cell.</p><p>The final score is the sum of the labels of the cells with monsters. The monsters are trying to place themselves to maximize the score, while Turbo is trying to minimize the score based on the monsters' positions.</p><p>Find, in terms of $n$, the largest score which the monsters can guarantee.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\boxed{4n^4}$</p></div></details>
-<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Chessboard for the monsters, cycle lemma for Turbo)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Chessboard for the monsters, cycle lemma for Turbo</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/canada-mo-3_s1.svg" alt="Figure for the solution"></div>
 <p>Let $N=4n^2$; there are $N/2=2n^2$ monsters.</p><p><strong>The monsters can get $4n^4$.</strong> Colour the board like a chessboard and let the monsters occupy the $2n^2$ black cells. Neighbouring cells have different
 colours, so Turbo's labels alternate in colour. If Turbo starts on a black cell, the monsters get the labels $1,3,5,\dots,N-1$, with sum $(N/2)^2=4n^4$;
@@ -187,7 +187,8 @@ $P_{j+N}=P_j$ (consistent since $P_N=P_0=0$). Choose $s\in\{0,\dots,N-1\}$ with 
 $c_s,c_{s+1},\dots,c_{N-1},c_0,\dots,c_{s-1}$. This is a valid walk through all cells.</p><p>The first $t$ cells of the walk have total weight $P_{s+t}-P_s\ge0$, so among the first $t$ labels at least half are monster cells. Taking $t=2j-1$, at least
 $j$ of the labels $1,\dots,2j-1$ are on monsters, so the $j$-th smallest monster label is at most $2j-1$. Therefore
 \[\text{score}\le\sum_{j=1}^{2n^2}(2j-1)=(2n^2)^2=4n^4 .\]</p><p>Both bounds together give the answer $\boxed{4n^4}$.</p>
-<h4>Solution 2 (Walking the cycle in both directions)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Walking the cycle in both directions</summary><div class="ct-text">
 <p>Let $N=4n^2$; there are $N/2=2n^2$ monsters.</p><p><strong>The monsters can get $4n^4$.</strong> Let the monsters occupy the black cells of a chessboard colouring. Turbo's consecutive cells are neighbours, so their colours alternate;
 the monsters receive either the odd labels $1,3,\dots,N-1$, with sum $(N/2)^2=4n^4$, or the even labels $2,4,\dots,N$, with a larger sum. So the score is at least $4n^4$.</p><p><strong>Turbo can keep the score at most $4n^4$.</strong> The board has a Hamiltonian cycle (a closed walk through all cells, consecutive cells sharing an edge): go along row $1$
 from column $2$ to column $2n$, snake through rows $2,\dots,2n$ inside columns $2,\dots,2n$ (row $2$ right to left, row $3$ left to right, and so on), which ends in row $2n$,
@@ -197,7 +198,8 @@ label $i+1$; in the backward walk $c_0$ gets $1$ and $c_i$ $(i\ge1)$ gets $N-i+1
 Adding the two scores, the monster on $c_0$ contributes $2$ and each of the other $\frac N2-1$ monsters contributes $N+2$:
 \[\text{forward score}+\text{backward score}=2+\Bigl(\frac N2-1\Bigr)(N+2)=\frac{N^2}{2}=8n^4 .\]
 Hence one of the two walks gives a score of at most $4n^4$, whatever the monsters do.</p><p>Both bounds together give the answer $\boxed{4n^4}$.</p>
-<h4>Solution 3 (Averaging over all starting cells of a cycle)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 3 &ndash; Averaging over all starting cells of a cycle</summary><div class="ct-text">
 <p>Let $N=4n^2$ and $K=N/2=2n^2$, the number of monsters.</p><p><strong>The monsters can get $4n^4$.</strong> Let the monsters occupy the black cells of a chessboard colouring. Turbo's consecutive cells share an edge, so their colours alternate;
 the monsters receive either the odd labels $1,3,\dots,N-1$, with sum $K^2=4n^4$, or the even labels $2,4,\dots,N$, with a larger sum. So the score is at least $4n^4$.</p><p><strong>Turbo can keep the score at most $4n^4$.</strong> The board has a Hamiltonian cycle (a closed walk through all cells, consecutive cells sharing an edge): go along row $1$
 from column $2$ to column $2n$, snake through rows $2,\dots,2n$ inside columns $2,\dots,2n$ (row $2$ right to left, row $3$ left to right, and so on), which ends in row $2n$,
@@ -217,8 +219,7 @@ of these smaller scores is at most $K^2$, and Turbo, starting at the correspondi
 <div class="ct-text"><p>A sphere with center $I$ is inscribed in a tetrahedron $ABCD$. Suppose that the angle between any two faces of $ABCD$ is acute. Moreover, suppose that
 \[\frac{\operatorname{vol}(IABC)}{BC}=\frac{\operatorname{vol}(IACD)}{CD}=\frac{\operatorname{vol}(IADB)}{DB}.\]
 Show that $AI$ is perpendicular to the plane $BCD$.</p><p><em>Remark.</em> Here, $\operatorname{vol}(IABC)$ denotes the volume of tetrahedron $IABC$, and similarly for $IACD$ and $IADB$.</p></div>
-<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Two incentres of the face $BCD$)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Two incentres of the face $BCD$</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:234px" src="/assets/contests/2026-27/canada-mo-4_s1.svg" alt="Figure for the solution"></div>
 <p>Let $r$ be the inradius, $H$ the foot of the perpendicular from $A$ to the plane $BCD$, and $h_1,h_2,h_3$ the heights from $A$ in the faces $ABC$, $ACD$,
 $ADB$ (onto $BC$, $CD$, $DB$). Let $\theta_1,\theta_2,\theta_3$ be the dihedral angles of the tetrahedron at $BC$, $CD$, $DB$.</p><p><strong>The condition says $h_1=h_2=h_3$.</strong> The tetrahedron $IABC$ has base $ABC$ and height $r$ (the distance from $I$ to the face $ABC$), so
@@ -232,7 +233,8 @@ sides of $BCD$ and lies inside it, so $H$ is the incentre of $BCD$.</p><p><stron
 of the perpendicular from $T$ to $BC$. The plane through $T$ perpendicular to $BC$ contains $I$ (it contains the normal of $BCD$ at $T$) and cuts the two faces through $BC$ in
 two rays from $Q_1$ forming the angle $\theta$. The point $I$ is inside this angle at distance $r$ from both rays, so $Q_1I$ bisects it, and $TQ_1=r\cot\frac{\theta}{2}$. The
 same holds for the other two edges with the same $\theta$, so $T$ is a point inside triangle $BCD$ at equal distances from its sides: $T$ is the incentre of $BCD$.</p><p>Hence $T=H$. Both $I$ and $A$ lie on the perpendicular to the plane $BCD$ through this point, so $AI\perp BCD$.</p>
-<h4>Solution 2 (Reflections in the planes through $AH$)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Reflections in the planes through $AH$</summary><div class="ct-text">
 <p>Let $r$ be the inradius, $H$ the foot of the perpendicular from $A$ to the plane $BCD$, $h_1,h_2,h_3$ the heights from $A$ in the faces $ABC$, $ACD$,
 $ADB$ (onto $BC$, $CD$, $DB$), and $\theta_1,\theta_2,\theta_3$ the dihedral angles at $BC$, $CD$, $DB$.</p><p><strong>$H$ is the incentre of $BCD$.</strong> The tetrahedron $IABC$ has base area $\frac12h_1\,BC$ and height $r$, so $\operatorname{vol}(IABC)/BC=rh_1/6$; likewise for the other two, and the
 hypothesis gives $h_1=h_2=h_3=:h$. Let $P_1$ be the foot of the perpendicular from $H$ to $BC$ ($H\notin BC$, as the face
@@ -246,7 +248,8 @@ sides of an angle smaller than $180^\circ$, the points equidistant from the two 
 the angle, where only the internal bisector passes. The plane $\Pi_B$ contains interior points of the tetrahedron (for instance the midpoint of $AH$, as $H$ is inside the face $BCD$), so
 $\Pi_B$ is the internal bisector plane. The centre $I$ is an interior point at equal distances ($r$) from the planes $ABC$ and $ABD$, so $I\in\Pi_B$.</p><p><strong>Conclusion.</strong> In the same way $I$ lies on the plane $\Pi_C$ through $A,H,C$ and on $\Pi_D$ through $A,H,D$. The planes $\Pi_B$ and $\Pi_C$ meet the plane $BCD$ in the lines $HB$ and $HC$,
 which are different because $H$ is not on the line $BC$; so $\Pi_B\ne\Pi_C$, and these two planes meet exactly in their common line $AH$. Hence $I$ lies on $AH$, and $AI\perp BCD$.</p>
-<h4>Solution 3 (The line $AI$ meets the face $BCD$ at its incentre)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 3 &ndash; The line $AI$ meets the face $BCD$ at its incentre</summary><div class="ct-text">
 <p>Let $r$ be the inradius, $h_A$ the distance from $A$ to the plane $BCD$, $J$ the incentre of triangle $BCD$ and $H$ the foot of the perpendicular from $A$ to the plane $BCD$. We show that the line $AI$ and the line $AH$ both meet the plane $BCD$ at $J$.</p><p><strong>Step 1: the line $AI$ meets the face $BCD$ at $J$.</strong> Since $I$ is inside the tetrahedron, $I=\alpha A+\beta B+\gamma C+\delta D$ with positive weights of sum $1$. The point $K=\frac{\beta B+\gamma C+\delta D}{\beta+\gamma+\delta}$ lies in the plane $BCD$, strictly inside triangle $BCD$, and on the line $AI$, with $I$ between $A$ and $K$.</p><p>The tetrahedra $IABC$ and $KABC$ have the common face $ABC$, and since $I$ and $K$ lie on a line through the point $A$ of the plane $ABC$, their distances from that plane are in the ratio $AI:AK$. So $\operatorname{vol}(IABC)=\frac{AI}{AK}\operatorname{vol}(KABC)$, and in the same way for $IACD$ and $IADB$, with the same factor. Moreover the tetrahedron $KABC$ has the base $KBC$ in the plane $BCD$ and apex $A$, so
 \[\operatorname{vol}(KABC)=\tfrac13h_A\cdot\operatorname{area}(KBC)=\tfrac16h_A\cdot BC\cdot\operatorname{dist}(K,BC).\]
 Hence $\dfrac{\operatorname{vol}(IABC)}{BC}=\dfrac{AI\cdot h_A}{6\,AK}\operatorname{dist}(K,BC)$, and similarly with $CD$ and $DB$. The hypothesis now gives
@@ -261,8 +264,7 @@ Let $P_1$ be the foot of the perpendicular from $H$ to the line $BC$. The lines 
 <div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Algebra &middot; LPS VII, Chapter 42: Polynomial Reconstruction and Interpolation &middot; Uniqueness by Degree Constraints</div>
 <div class="ct-text"><p>For each $n\ge1$, determine the maximum integer $c_n$ for which there exists a polynomial $f$ of degree $n$ with rational coefficients, an irrational number $a$, and $c_n$ distinct rational numbers $a_1,a_2,\dots,a_{c_n}$ such that $f(a+a_i)$ is a rational number for all $1\le i\le c_n$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\boxed{c_n=n-1}$</p></div></details>
-<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Coordinates in the field $\mathbb{Q}(a)$)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Coordinates in the field $\mathbb{Q}(a)$</summary><div class="ct-text">
 <p><strong>Upper bound.</strong> Let $f$, $a$ and rationals $a_1,\dots,a_c$ be as in the problem, $\deg f=n$, leading coefficient $\ell\in\mathbb{Q}$.</p><p>If $a$ is transcendental, then $f(a+a_i)=q$ with $q$ rational means that the rational polynomial $f(t+a_i)-q$ in $t$ vanishes at $t=a$; so it is the zero polynomial, and $f$ is
 constant, a contradiction. So $c=0$ in that case.</p><p>Let $a$ be algebraic of degree $d\ge2$ over $\mathbb{Q}$; then $1,a,\dots,a^{d-1}$ are linearly independent over $\mathbb{Q}$ and every element of $\mathbb{Q}(a)$ is a unique rational
 combination of them. The polynomial $h(x)=f(a+x)$ has coefficients in $\mathbb{Q}(a)$; writing each coefficient in this basis,
@@ -275,7 +277,8 @@ a polynomial with rational coefficients (Taylor expansion). We have $g(x+\sqrt2)
 $T(g)(r)=0$. The map $T$ is linear, and $T(x^k)$ has degree $k-1$ with leading coefficient $k$, so $T$ maps the polynomials of degree at most $n$ onto those of degree at most
 $n-1$ (triangular system). Choose $f$ of degree at most $n$ with $T(f)=(x-1)(x-2)\cdots(x-(n-1))$; its leading term is $\frac1n x^n$, so $\deg f=n$, and $f(\sqrt2+i)$ is rational for
 $i=1,\dots,n-1$. (For $n=2$: $f(x)=\frac{x^2}{2}-x$ and $f(\sqrt2+1)=\frac12$.)</p><p>Hence $\boxed{c_n=n-1}$ (in particular $c_1=0$).</p>
-<h4>Solution 2 (Conjugates)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Conjugates</summary><div class="ct-text">
 <p>Let $\ell$ be the leading coefficient of $f$.</p><p><strong>Upper bound.</strong> If $a$ is transcendental and $f(a+r)=q$ with $r,q$ rational, then the rational polynomial $f(t+r)-q$ vanishes at $t=a$, so it is the zero polynomial
 and $f$ is constant, which is false. So no $a_i$ exists in that case.</p><p>Let $a$ be algebraic with minimal polynomial $m$ over $\mathbb{Q}$; $\deg m\ge2$ since $a$ is irrational. The minimal polynomial has no repeated root, so $m$ has a root $a'\ne a$
 (complex in general), and there is a field isomorphism $\sigma:\mathbb{Q}(a)\to\mathbb{Q}(a')$ fixing $\mathbb{Q}$ with $\sigma(a)=a'$ (both fields are isomorphic to $\mathbb{Q}[t]/(m)$, by evaluating $t$ at $a$ and at $a'$; concretely $\sigma(g(a))=g(a')$ for $g\in\mathbb{Q}[t]$).
@@ -288,7 +291,8 @@ Thus the left side, divided by $2\sqrt2$, is a linear map from rational polynomi
 system for the coefficients of $f$ is triangular with nonzero diagonal, so it can be solved from the top coefficient down. The solution has leading coefficient $\frac1n$, so $\deg f=n$.
 Now write $f(x+\sqrt2)=A(x)+\sqrt2B(x)$ with $A,B\in\mathbb{Q}[x]$; then $f(x-\sqrt2)=A(x)-\sqrt2B(x)$, so $2\sqrt2B(x)=2\sqrt2\prod_{i&lt;n}(x-i)$ and $B(i)=0$ for $i=1,\dots,n-1$.
 Hence $f(\sqrt2+i)=A(i)$ is rational for these $n-1$ values of $i$. (For $n=2$: $f(x)=\frac{x^2}2-x$.)</p><p>Hence $\boxed{c_n=n-1}$.</p>
-<h4>Solution 3 (Lagrange interpolation and a dimension count)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 3 &ndash; Lagrange interpolation and a dimension count</summary><div class="ct-text">
 <p><strong>Upper bound.</strong> We prove more: <em>if $f$ has rational coefficients and degree $m\ge1$, and $a$ is irrational, then $f(a+r)$ is rational for at most $m-1$ rational numbers $r$.</em> ($\star$)</p><p>Let $\ell\ne0$ be the leading coefficient of $f$ and $f_{m-1}$ its coefficient of $x^{m-1}$. Suppose $f(a+r_i)=q_i\in\mathbb{Q}$ for $m$ distinct rationals $r_1,\dots,r_m$. By Lagrange interpolation,
 \[g(x)=\sum_{i=1}^mq_i\prod_{j\ne i}\frac{x-r_j}{r_i-r_j}\]
 is a polynomial with rational coefficients, of degree at most $m-1$, with $g(r_i)=q_i$. The polynomial $P(x)=f(x+a)-g(x)$ has degree $m$ and leading coefficient $\ell$ (as $\deg g&lt;m$), and it vanishes at the $m$ distinct numbers $r_i$. Hence

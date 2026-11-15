@@ -97,7 +97,6 @@ description: European Girls' Mathematical Olympiad 2026: problems with answers a
 <p>The 6 problems of the European Girls&#x27; Mathematical Olympiad 2026, each with our own solutions, hidden until you open them. 3 of them ask for an answer and 3 ask for a proof. Where a problem has a final answer, it is shown separately. Try a problem first, then check.</p><p>EGMO has two days with three problems each.</p>
 </div>
 <div class="ct-credit">Problems: European Girls&#x27; Mathematical Olympiad 2026, from the AoPS contest collection or the official paper. Solutions written by MCC.</div>
-<div class="ct-bar"><button type="button" onclick="ctAll(true)">Show all answers and solutions</button><button type="button" onclick="ctAll(false)">Hide all</button></div>
 <div class="ct-toc-wrap"><div class="ct-toc-row"><span class="ct-toc-g">Day 1</span><a href="#p1">1</a><a href="#p2">2</a><a href="#p3">3</a></div><div class="ct-toc-row"><span class="ct-toc-g">Day 2</span><a href="#p4">4</a><a href="#p5">5</a><a href="#p6">6</a></div></div>
 
 {% raw %}
@@ -107,8 +106,7 @@ description: European Girls' Mathematical Olympiad 2026: problems with answers a
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 20: Parity, Coloring, and Process Termination &middot; Parity and Coloring Arguments</div>
 <div class="ct-text"><p>A $2026\times 2026$ board is said to be <em>bordeaux</em> if at least one of its $2026^2$ unit cells is coloured red. A rectangular region made of cells is <em>oddly-rectangular</em> if it contains an odd number of red cells. Determine the largest positive integer $M$ such that, in every possible $2026\times 2026$ bordeaux board, there exists an oddly-rectangular region of at least $M$ cells.</p><p><em>Note:</em> A rectangular region has sides that are parallel to the sides of the board and contains all of its interior.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$M=1013^2=1026169$</p></div></details>
-<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Corner parities)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Corner parities</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/egmo-1_s1.svg" alt="Figure for the solution"></div>
 <p>Write $N=2026$ and $m=1013$, so $N=2m$. Number the rows and the columns $1,2,\dots,N$, and number the grid lines
 $0,1,\dots,N$, so that row $i$ lies between horizontal lines $i-1$ and $i$ (similarly for columns). A rectangular region is
@@ -126,7 +124,8 @@ region with both side lengths at least $m$ is even. Applying (1) to the region b
 symmetric.</p></li><li><p>If $x&lt;m$ and $y&lt;m$, then $\bar x=\bar y=N$, and (2) gives $g(x,y)\equiv g(N,y)+g(x,N)+g(N,N)\equiv0$ by the previous cases.</p></li></ul><p>So $g\equiv 0$, and by the remark after (1) no cell is red, contradicting that the board is bordeaux. Hence some oddly-rectangular region
 has both sides at least $m$, so at least $m^2$ cells.</p><p>Therefore
 \[\boxed{M=m^2=1013^2=1026169}\]</p>
-<h4>Solution 2 (A bilinear form over $\mathbb{F}_2$)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; A bilinear form over $\mathbb{F}_2$</summary><div class="ct-text">
 <p>Let $N=2026$, $m=1013$, and let $A$ be the $N\times N$ matrix with entries in $\mathbb{F}_2=\{0,1\}$ (arithmetic mod $2$)
 whose $(i,j)$ entry is $1$ exactly when the cell in row $i$, column $j$ is red. For a set $I$ of rows let $u_I\in\mathbb{F}_2^N$ be its
 indicator vector (a column vector). The rectangular region with row interval $I$ and column interval $J$ contains
@@ -141,7 +140,8 @@ which produces $e_{m+1},\dots,e_N$ and $e_1,\dots,e_m$.</p><p>Suppose every regi
 $e_j$ is a sum of such indicator vectors, so by bilinearity $A_{ij}=e_i^TAe_j=0$ for all $i,j$: no cell is red, a contradiction. Hence some
 oddly-rectangular region has both sides of length at least $m$, so at least $m^2$ cells.</p><p>So
 \[\boxed{M=1013^2=1026169}\]</p>
-<h4>Solution 3 (A largest odd region)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 3 &ndash; A largest odd region</summary><div class="ct-text">
 <p>Write $N=2026$ and $m=1013$, so $N=2m$, and number the rows and the columns $1,2,\dots,N$.</p><p><strong>An example with no large odd region.</strong> Colour red only the four central cells, in rows $m,m+1$ and columns $m,m+1$. A rectangular
 region meets this $2\times2$ block in a rectangle, that is, in $0$, $1$, $2$ or $4$ red cells, so it is oddly-rectangular exactly when it
 contains exactly one red cell. Then its rows contain exactly one of the rows $m,m+1$, so they lie within rows $1,\dots,m$ or within rows
@@ -165,8 +165,7 @@ columns. Hence $R$ has at least $m^2$ cells.</p><p>Therefore
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 49: Combinatorial Number Theory and Structure &middot; Sequences with Arithmetic Constraints</div>
 <div class="ct-text"><p>Given a positive integer $n$, Marie plays a game where she starts with the number $1$ on a blackboard. As many times as she wants, she can choose an integer $j$ such that $1\le j\le n$ and replace the number $V$ on the blackboard with the number $j\cdot R\left(\frac{V}{j}\right)$. Here $R(x)$ denotes the nearest integer to $x$; if $x$ is exactly halfway between two consecutive integers, it is rounded up. For example, $R(1.3)=1$ and $R(1.5)=R(1.8)=2$.</p><ul class="ct-parts"><li><p><span class="ct-lbl">(a)</span> Prove that for each given $n$, there is a positive integer $B$ such that Marie can never end up with a number larger than $B$ on the blackboard.</p></li><li><p><span class="ct-lbl">(b)</span> For any given $n$, let $f(n)$ be the maximum number obtainable on the blackboard after finitely many replacements. Show that there exists a positive integer $N$ such that for all $n\ge N$, we have that $2026$ divides $f(n)$.</p></li></ul></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>proof (one may take $N=1024\cdot1013$)</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Monotone rounding and a doubling lemma)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Monotone rounding and a doubling lemma</summary><div class="ct-text">
 <p>For $1\le j\le n$ and an integer $V\ge0$ put $r_j(V)=j\,R(V/j)$; since $R(x)=\lfloor x+\tfrac12\rfloor$, this is the multiple
 of $j$ nearest to $V$ (rounding up at a tie). Starting from $1$, all numbers on the board are non-negative integers.</p><p><strong>Monotonicity.</strong> If $V\le W$ then $r_j(V)\le r_j(W)$, because $x\mapsto\lfloor x+\frac12\rfloor$ is non-decreasing.</p><p><strong>(a)</strong> Let $B=\operatorname{lcm}(1,2,\dots,n)$. Since $j\mid B$, $r_j(B)=B$ for every $j$. The first number is $1\le B$, and if the
 board shows $V\le B$, then after a move it shows $r_j(V)\le r_j(B)=B$. By induction Marie never exceeds $B$.</p><p><strong>(b)</strong> By (a) only finitely many numbers are obtainable, so the maximum $f=f(n)\ge1$ exists. Since $f$ is obtainable, so is
@@ -184,8 +183,7 @@ which forces $u\bmod 1013=0$. Hence $1024\cdot1013\mid f$, and in particular $20
 <div class="ct-text"><p>Let $\mathbb{R}$ be the set of real numbers. Determine all functions $f:\mathbb{R}\to\mathbb{R}$ such that for all real numbers $x,y$, the following holds:
 \[f\left((f(x)+f(y))^2\right)=(x+y)f(x+y).\]</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$f(x)=0$, $f(x)=x$ and $f(x)=-x$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Zeros, injectivity, additivity)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Zeros, injectivity, additivity</summary><div class="ct-text">
 <p>All three functions work: for $f\equiv0$ both sides are $0$; for $f(x)=\varepsilon x$ with $\varepsilon=\pm1$ the left side is
 $\varepsilon(\varepsilon x+\varepsilon y)^2=\varepsilon(x+y)^2$ and so is the right side. Conversely let $f$ be a solution, write $P(x,y)$
 for the equation, $c=f(0)$ and $g(t)=tf(t)$. Note that if $f$ is a solution, so is $-f$ (both sides change sign).</p><p><strong>Step 1: $f(0)=0$.</strong> $P(0,0)$ gives $f(4c^2)=0$, and then $P(4c^2,0)$ gives $f(c^2)=4c^2f(4c^2)=0$. If $z_1,z_2$ are zeros of $f$,
@@ -213,7 +211,8 @@ $2k=k^3+k$, so $k^2=1$. Replacing $f$ by $-f$ if necessary (also a non-zero solu
 Fix $x$ and put $v=f(x)-x$. By (6), $f(v)=f(f(x))-f(x)=-v/2$. By (1) at $v$, $f(v^2/4)=v\cdot(-v/2)$, i.e. $f(w)=-2w$ for $w=v^2$. Then
 $f(f(w))=f(-2w)=4w$, while (6) gives $f(f(w))=(w+f(w))/2=-w/2$. So $w=0$, $v=0$ and $f(x)=x$.</p><p>Hence the solutions are
 \[\boxed{f\equiv0,\qquad f(x)=x,\qquad f(x)=-x}\]</p>
-<h4>Solution 2 (Infinitely many preimages, then a derivation)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Infinitely many preimages, then a derivation</summary><div class="ct-text">
 <p>All three functions work: for $f\equiv0$ both sides are $0$; for $f(x)=\varepsilon x$ with $\varepsilon=\pm1$ the left side is
 $\varepsilon(\varepsilon x+\varepsilon y)^2=\varepsilon(x+y)^2$ and so is the right side. Conversely, let $f$ be a solution that is not
 identically zero. Write $P(x,y)$ for the equation and $g(t)=tf(t)$.</p><p><strong>Step 1: equal values are zero.</strong> If $f(a)=f(b)$, then $P(a,y)$ and $P(b,y)$ have the same left side, so $g(a+y)=g(b+y)$ for all $y$:
@@ -261,8 +260,7 @@ So $D\equiv0$ and $f(u)=du$. Then $D(d)=0$, and $d^2+D(d)-1=0$ gives $d^2=1$: $f
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Algebra &middot; LPS VII, Chapter 17: Sequences, Recurrences, and Discrete Dynamics &middot; Invariant and Monotone Sequence Behavior</div>
 <div class="ct-text"><p>Let $1=a_1\ge a_2\ge a_3\ge\dots$ be an infinite sequence of real numbers such that $a_n=a_{2n}+a_{2n+1}$ for all positive integers $n$. For $r=2026^{2026}$, prove that
 \[\frac{1}{r}\le a_r\le\frac{2}{r+1}.\]</p></div>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (A sliding window of total $1$)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; A sliding window of total $1$</summary><div class="ct-text">
 <p>We prove $\frac1r\le a_r\le\frac2{r+1}$ for <em>every</em> positive integer $r$; $r=2026^{2026}$ is a special case.</p><p><strong>Claim.</strong> $S_r:=a_r+a_{r+1}+\dots+a_{2r-1}=1$ for every $r\ge1$.</p><p>Indeed $S_1=a_1=1$, and $S_{r+1}=S_r-a_r+a_{2r}+a_{2r+1}=S_r$ because $a_r=a_{2r}+a_{2r+1}$.</p><p><strong>Lower bound.</strong> The sequence is non-increasing, so each of the $r$ terms of $S_r$ is at most $a_r$: $1=S_r\le ra_r$.</p><p><strong>Upper bound.</strong> From $a_r=a_{2r}+a_{2r+1}\le 2a_{2r}$ we get $a_{2r}\ge a_r/2$. For $r\le i\le 2r-1$ we have $a_i\ge a_{2r-1}\ge a_{2r}\ge
 a_r/2$. Hence
 \[1=S_r\ge a_r+(r-1)\cdot\frac{a_r}{2}=\frac{r+1}{2}\,a_r,\]
@@ -277,8 +275,7 @@ $a_1=1$ is shared out exactly over it.</p>
 <h3>Problem 5</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure &middot; Power of a Point</div>
 <div class="ct-text"><p>Let $ABC$ be an acute triangle with $AC&gt;AB$. Denote by $\omega$ its circumcircle and by $O$ its circumcentre. Let $K$ be the intersection of the tangents to $\omega$ at $B$ and $C$. Circle $ABK$ intersects line $BC$ again at $Z\ne B$. Let $L$ be the midpoint of $KZ$. Let $X$ be the intersection of the lines $KZ$ and $AB$. Let $V$ be the point on circle $ABL$ on the same side of $BC$ as $A$ such that $OV$ is perpendicular to $KZ$. Prove that $LV$ is perpendicular to $CX$.</p></div>
-<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
-<h4>Solution 1 ($L$ lies on $AC$, and $V$ is the antipode of $L$)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; $L$ lies on $AC$, and $V$ is the antipode of $L$</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:277px" src="/assets/contests/2026-27/egmo-5_s1.svg" alt="Figure for the solution"></div>
 <p>Let $\alpha,\beta,\gamma$ be the angles of $ABC$, let $\Gamma$ be the circle $ABL$, $N$ the midpoint of $BC$ and $S$ the
 midpoint of $BK$. We write $\measuredangle(p,q)$ for the directed angle between lines $p,q$ (modulo $180^\circ$). Recall $KB=KC$,
@@ -306,7 +303,8 @@ is $X$: the points $C,X,Y$ are collinear. Now, using $\Gamma$ (chord $VA$), then
 \[\measuredangle(LV,CX)=\measuredangle(LV,LA)+\measuredangle(CA,CY)=\measuredangle(BV,BA)-\measuredangle(CY,CA)
 =90^\circ+\measuredangle(BY,BA)-\measuredangle(BY,BA)=90^\circ.\]
 Hence $LV\perp CX$.</p>
-<h4>Solution 2 (Coordinates)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Coordinates</summary><div class="ct-text">
 <p>Put $B=(-1,0)$, $C=(1,0)$, $O=(0,t)$ with $t&gt;0$ (the triangle is acute), so $\omega$ has equation $x^2+y^2-2ty=1$. Since
 $\overrightarrow{OB}\cdot\overrightarrow{BK}=0$ for $K=(0,-1/t)$, this is the point $K$. Let $s=\tan\angle ABC&gt;0$; then
 $A=B+\lambda(1,s)$ with $\lambda=\frac{2(1+st)}{1+s^2}$ (the second intersection of the line $y=s(x+1)$ with $\omega$):
@@ -324,7 +322,8 @@ $O$ to $KZ$: with $h=-\frac{sP}{t((2st+1)^2+s^2)}$, the point $H=\bigl(\frac{t-h
 equation of $\Gamma$ gives $0$. As $h&lt;0$, $H$ is not on $A$'s side of $BC$. Hence $V=V_0$.</p><p><em>Conclusion.</em> $V-L=\frac{1}{2t(st+1)}\,(-P,\ Q)$, so
 \[(V-L)\cdot(X-C)=\frac{-s}{2t^2(st+1)(2s^2t^2+s^2-1)}\bigl(-PQ+QP\bigr)=0,\]
 i.e. $LV\perp CX$. (Here $2s^2t^2+s^2-1=(s^2-1-2st)+2st(st+1)&gt;0$: since $AC&gt;AB$, the first coordinate of $A$ is negative, i.e. $s^2&gt;1+2st$.)</p>
-<h4>Solution 3 (Powers of points along the line $KZ$)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 3 &ndash; Powers of points along the line $KZ$</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:284px" src="/assets/contests/2026-27/egmo-5_s3.svg" alt="Figure for the solution"></div>
 <p>Let $\alpha,\beta,\gamma$ be the angles of $ABC$, $R$ the radius of $\omega$, $N$ the midpoint of $BC$, $\Gamma$ the circle $ABL$, $Q$ the foot of
 the perpendicular from $O$ to line $KZ$, and $D$ the midpoint of $ZC$. Recall that $KB=KC$, $KN\perp BC$, $\angle KBC=\angle KCB=\alpha$
@@ -370,8 +369,7 @@ As $L\ne V$ and $X\ne C$ ($X$ lies on line $KZ$, which meets line $BC$ only at $
 <div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Number Theory &middot; LPS VII, Chapter 21: Arithmetic Functions and Multiplicative Structure &middot; Divisor and Sum Functions</div>
 <div class="ct-text"><p>Let $p$ be a prime number and let $n$ be a positive integer such that $p$ does <strong>not</strong> divide $n$. Denote by $k$ the number of positive divisors of $n$, and by $1=d_1&lt;d_2&lt;\cdots&lt;d_k=n$ the positive divisors of $n$. For $i=1,2,\dots,k$, let $c_i$ be the number of positive divisors $\ell$ of $d_i^2$ such that $d_i-\ell$ is divisible by $p$. Prove that
 \[(p-1)(c_1+c_2+\cdots+c_k)\ge k^2.\]</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (A bijection and Cauchy&ndash;Schwarz)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; A bijection and Cauchy&ndash;Schwarz</summary><div class="ct-text">
 <p>Let $D$ be the set of positive divisors of $n$, so $|D|=k$; all of them, and all divisors of $n^2$, are prime to $p$.</p><p><strong>Claim.</strong> $c_1+\dots+c_k=T$, where $T$ is the number of ordered pairs $(u,v)\in D^2$ with $u\equiv v\pmod p$.</p><p>The left side counts pairs $(d,\ell)$ with $d\in D$, $\ell\mid d^2$, $\ell\equiv d\pmod p$. Map such a pair to
 \[(u,v)=\bigl(\gcd(\ell,d),\ \gcd(d^2/\ell,d)\bigr).\]
 Look at one prime $q\mid n$; let $q^j\,\|\,d$ and $q^t\,\|\,\ell$, $0\le t\le 2j$. The exponents of $q$ in $u,v$ are $\min(t,j)$ and
@@ -382,7 +380,8 @@ bijection between the pairs $(d,\ell)$ with $\ell\mid d^2$ and $D^2$. Finally, $
 $\ell\equiv d\iff d\,u\equiv d\,v\iff u\equiv v\pmod p$. This proves the claim.</p><p><strong>Conclusion.</strong> For a residue $r\in\{1,\dots,p-1\}$ let $m_r$ be the number of divisors of $n$ congruent to $r$; then $\sum_r m_r=k$ and
 $T=\sum_r m_r^2$. By the Cauchy&ndash;Schwarz inequality,
 \[k^2=\Bigl(\sum_{r=1}^{p-1}m_r\Bigr)^2\le(p-1)\sum_{r=1}^{p-1}m_r^2=(p-1)(c_1+\dots+c_k).\]</p>
-<h4>Solution 2 (Characters modulo $p$)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Characters modulo $p$</summary><div class="ct-text">
 <p>We use the $p-1$ Dirichlet characters $\chi$ modulo $p$ (the homomorphisms $(\mathbb Z/p)^\times\to\mathbb C^\times$, extended
 to integers prime to $p$). Their orthogonality relation states that for integers $a,b$ prime to $p$
 \[\frac1{p-1}\sum_\chi\chi(a)\overline{\chi(b)}=\begin{cases}1,&amp;a\equiv b\pmod p,\\0,&amp;\text{otherwise.}\end{cases}\]

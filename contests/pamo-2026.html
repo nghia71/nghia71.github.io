@@ -97,7 +97,6 @@ description: Pan-African Mathematical Olympiad 2026: problems with answers and s
 <p>The 6 problems of the Pan-African Mathematical Olympiad 2026, each with our own solutions, hidden until you open them. 5 of them ask for an answer and 1 asks for a proof. Where a problem has a final answer, it is shown separately. Try a problem first, then check.</p><p>Day 1 was held on 30 June 2026 and Day 2 on 1 July 2026, three problems each.</p>
 </div>
 <div class="ct-credit">Problems: Pan-African Mathematical Olympiad 2026, from the AoPS contest collection or the official paper. Solutions written by MCC.</div>
-<div class="ct-bar"><button type="button" onclick="ctAll(true)">Show all answers and solutions</button><button type="button" onclick="ctAll(false)">Hide all</button></div>
 <div class="ct-toc-wrap"><div class="ct-toc-row"><span class="ct-toc-g">Day 1</span><a href="#p1">1</a><a href="#p2">2</a><a href="#p3">3</a></div><div class="ct-toc-row"><span class="ct-toc-g">Day 2</span><a href="#p4">4</a><a href="#p5">5</a><a href="#p6">6</a></div></div>
 
 {% raw %}
@@ -107,8 +106,7 @@ description: Pan-African Mathematical Olympiad 2026: problems with answers and s
 <div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VII scale">E</span>Combinatorics &middot; LPS VII, Chapter 44: Combinatorial Games and Strategy &middot; Winning and Losing Positions</div>
 <div class="ct-text"><p>$A$ and $B$ play a game with $8$ identical cards arranged in a straight line. Each turn, a player removes a card if it still has at least one adjacent original neighbor. The player left with no moves loses. Here the neighbors of a card are the cards next to it in the original line; removing a card does not make new neighbors. Who has the winning strategy?</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$A$ (the first player) wins</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (An explicit strategy)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; An explicit strategy</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:281px" src="/assets/contests/2026-27/pamo-1_s1.svg" alt="Figure for the solution"></div>
 <p>We assume that $A$ moves first. Number the cards $1,\dots,8$ from left to right. Two cards are neighbours only if
 their numbers differ by $1$, and this never changes. Call a <em>block</em> a maximal set of remaining cards with consecutive numbers. A card can be
@@ -120,7 +118,8 @@ second block we only need the following cases for $B$'s reply.</p><ul class="ct-
 removes an end card, three cards in a row remain and $A$ removes the middle one; if $B$ removes an inner card, a block of $1$ and a block of $2$
 remain and $A$ removes a card of the block of $2$. Either way $B$ has no move left.</p></li><li><p>$B$ removes $5$ (or $7$). The blocks are $\{1,2\},\{4\},\{6,7,8\}$ (or $\{1,2\},\{4,5,6\},\{8\}$). $A$ removes $8$ (or $4$), leaving the twin
 pairs $\{1,2\},\{6,7\}$ (or $\{1,2\},\{5,6\}$).</p></li></ul><p>In every case $B$ eventually has no move, so <strong>the first player $A$ has a winning strategy</strong>: \[\boxed{A}\]</p>
-<h4>Solution 2 (Sprague&ndash;Grundy values)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Sprague&ndash;Grundy values</summary><div class="ct-text">
 <p>Assume $A$ moves first. Two cards are neighbours only if their original positions differ by $1$, so the remaining
 cards split into <em>blocks</em> of consecutive original positions. A card can be removed exactly when its block has at least two cards, and removing
 the $i$-th card of a block of $m$ cards leaves blocks of $i-1$ and $m-i$ cards. So the game is a sum of independent games, one per block, and the
@@ -136,8 +135,7 @@ sizes $2$ and $5$, and $g(2)\oplus g(5)=1\oplus1=0$. So the winner is $\boxed{A}
 <h3>Problem 2</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 11: Similarity, Homothety, and Ratio Geometry &middot; Direct Similarity</div>
 <div class="ct-text"><p>Let $ABC$ be an acute-angled triangle with orthocenter $H$ and $AD$, $BE$, $CF$ be its altitudes. Let $G$ be the intersection of $EF$ and $AD$ and $I$ be the antipode of $A$ with respect to $(ABC)$. Let $J$ be the intersection of $AI$ and $BC$.</p><p>Show that $HI$ and $GJ$ are parallel.</p></div>
-<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
-<h4>Solution 1 (The similar triangle $AEF$)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; The similar triangle $AEF$</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:311px" src="/assets/contests/2026-27/pamo-2_s1.svg" alt="Figure for the solution"></div>
 <p>Since the triangle is acute, $E$ lies on segment $AC$, $F$ on segment $AB$, and $H$ inside the triangle.</p><p><em>Similarity.</em> In the right triangles $ABE$ and $ACF$ we have $AE=AB\cos A$ and $AF=AC\cos A$. With the common angle at $A$, triangle $AEF$ is
 similar to triangle $ABC$ with $E\leftrightarrow B$, $F\leftrightarrow C$ and ratio $\cos A$ (SAS).</p><p><em>Corresponding points.</em> The similarity maps the circumcircle of $ABC$ onto the circumcircle of $AEF$, and the antipode of $A$ onto the
@@ -149,7 +147,8 @@ and
 \[AG=\cos A\cdot AJ .\]</p><p><em>Conclusion.</em> Dividing, $\dfrac{AG}{AH}=\dfrac{AJ}{AI}$. The points $G,H$ lie on ray $AD$ and $J,I$ on ray $AI$, so by the converse of the
 intercept (Thales) theorem in the angle $DAI$, the lines $GJ$ and $HI$ are parallel. (If $AB=AC$, both lines coincide with the axis of symmetry
 $AD$, a degenerate case.)</p>
-<h4>Solution 2 (Law of sines)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Law of sines</summary><div class="ct-text">
 <p>Let $a,b,c$ be the side lengths, $A,B,C$ the angles and $R$ the circumradius; the triangle is acute, so $H$, $D$, $E$, $F$,
 $G$, $J$ lie inside the triangle or on its sides. It suffices to prove $\frac{AG}{AH}=\frac{AJ}{AI}$: then, as $G,H$ are on ray $AD$ and $J,I$ on ray
 $AI$, the converse of the intercept theorem gives $GJ\parallel HI$. (If $AB=AC$, the two rays coincide and both lines are the axis of symmetry;
@@ -161,7 +160,8 @@ $AFG$, $\angle AGF=180^\circ-C-(90^\circ-B)=90^\circ+B-C$, and the law of sines 
 \[AG=\frac{AF\sin C}{\sin(90^\circ+B-C)}=\frac{b\cos A\,\sin C}{\cos(B-C)} .\]</p><p><em>Comparison.</em>
 \[\frac{AG}{AH}=\frac{b\sin C}{2R\cos(B-C)},\qquad \frac{AJ}{AI}=\frac{c\sin B}{2R\cos(B-C)},\]
 and $b\sin C=c\sin B$ by the law of sines. Hence the ratios are equal and $HI\parallel GJ$.</p>
-<h4>Solution 3 (Coordinates and the radical axis)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 3 &ndash; Coordinates and the radical axis</summary><div class="ct-text">
 <p>Since the triangle is acute, the foot $D$ lies strictly between $B$ and $C$, and $H$ lies strictly between $A$
 and $D$. Put $D=(0,0)$, $A=(0,a)$, $B=(-u,0)$, $C=(v,0)$ with $a,u,v&gt;0$, and let $h=\dfrac{uv}{a}$.</p><p><em>The orthocentre.</em> The slope of $AC$ is $-a/v$, so the altitude from $B$ has slope $v/a$ and equation $y=\frac{v}{a}(x+u)$. It meets $AD$
 (the line $x=0$) at $H=(0,h)$.</p><p><em>The antipode $I$ and the point $J$.</em> The circle
@@ -193,8 +193,7 @@ No division by $v-u$ was needed, so the computation covers every acute triangle.
 <div class="ct-text"><p>Find all polynomials $P(x)$ with integer coefficients such that:</p><ul class="ct-ul"><li><p>$P(n)&gt;0$ for all positive integers $n$;</p></li><li><p>for all positive integers $n$, $k$ and primes $p$ that divide $3^n-2^n$ we have:
 \[p^k\mid 3^n-2^n\iff p^k\mid 3^{P(n)}-2^{P(n)}.\]</p></li></ul></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$P(x)=2^a3^b\,x$ with integers $a,b\ge 0$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (LTE and the Chinese remainder theorem)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; LTE and the Chinese remainder theorem</summary><div class="ct-text">
 <p>Since the condition holds for all $k\ge1$, it says: for every positive integer $n$ and every prime $p$ dividing
 $3^n-2^n$,
 \[v_p\bigl(3^{P(n)}-2^{P(n)}\bigr)=v_p\bigl(3^n-2^n\bigr).\tag{$*$}\]
@@ -212,7 +211,8 @@ little theorem $3^n\equiv 1\equiv 2^n\pmod p$. This contradicts Step 2.</p><p><e
 $u$. The positive integer $1+6tu$ is coprime to $6$, but its prime factors are among those of $Q(1+6ct)$, i.e. among $2,3$ (Step 3). Hence
 $1+6tu=1$ and $Q(1+6ct)=c$ for all $t\ge1$. A polynomial taking the value $c$ infinitely often is constant: $Q\equiv c$.</p><p>Therefore
 \[\boxed{P(x)=2^a3^b\,x\quad(a,b\ \text{non-negative integers})}.\]</p>
-<h4>Solution 2 (Zsigmondy and Schur)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Zsigmondy and Schur</summary><div class="ct-text">
 <p>The condition (for all $k\ge1$) says: for every $n\ge1$ and every prime $p\mid 3^n-2^n$,
 $v_p(3^{P(n)}-2^{P(n)})=v_p(3^n-2^n)$; in particular $p\mid 3^{P(n)}-2^{P(n)}$. All such $p$ are at least $5$. We use the LTE lemma (for an odd
 prime $p$ with $p\mid x-y$, $p\nmid xy$: $v_p(x^m-y^m)=v_p(x-y)+v_p(m)$) and two classical theorems:</p><ul class="ct-ul"><li><p><em>Zsigmondy:</em> for coprime $a&gt;b\ge1$ and $n\ge2$, $a^n-b^n$ has a prime factor dividing no $a^j-b^j$ with $j&lt;n$, except when $n=2$ and $a+b$
@@ -234,8 +234,7 @@ by Step 3 (with $n=p-1$) $p\nmid c$. Hence $c=2^a3^b$ and
 <div class="ct-text"><p>Determine all polynomials $P$ with natural number coefficients such that:
 \[P(\sqrt2)=\sqrt{P(2)}.\]</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$P\equiv 0$ or $P(x)=x^m$ ($m=0,1,2,\dots$)</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Rational and irrational parts)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Rational and irrational parts</summary><div class="ct-text">
 <p>Here natural numbers include $0$, so the coefficients are non-negative integers. Write $P(x)=\sum_i c_ix^i$ with non-negative integer coefficients $c_i$. Then
 \[P(\sqrt2)=E+O\sqrt2,\qquad E=\sum_j c_{2j}2^j,\quad O=\sum_j c_{2j+1}2^j,\]
 with $E,O$ non-negative integers. The condition implies $P(\sqrt2)^2=P(2)$, i.e. $E^2+2O^2+2EO\sqrt2=P(2)$. Since $\sqrt2$ is irrational and
@@ -246,7 +245,8 @@ $R(y)=y^j$ for some $j$.</p><p><em>Case $O=0$.</em> Then all odd coefficients va
 $R=0$ or $R(y)=y^j$, i.e. $P=0$ or $P(x)=x^{2j}$.</p><p><em>Case $E=0$.</em> Then all even coefficients vanish and $P(x)=xR(x^2)$ with $R(y)=\sum_jc_{2j+1}y^j$. Now $P(\sqrt2)=\sqrt2\,R(2)$ and
 $P(2)=2R(4)$, so $2R(2)^2=2R(4)$; again $R=0$ or $R(y)=y^j$, i.e. $P(x)=x^{2j+1}$.</p><p><em>Check.</em> For $P(x)=x^m$: $P(\sqrt2)=2^{m/2}=\sqrt{2^m}=\sqrt{P(2)}$. The zero polynomial also works ($0=\sqrt0$). So the answer is
 \[\boxed{P\equiv 0\quad\text{or}\quad P(x)=x^m\ (m=0,1,2,\dots)}.\]</p>
-<h4>Solution 2 (A polynomial with non-negative coefficients)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; A polynomial with non-negative coefficients</summary><div class="ct-text">
 <p>Natural numbers include $0$ here. Let $P(x)=\sum_i c_ix^i$ with non-negative integer coefficients and consider
 \[F(x)=P(x)^2-P(x^2).\]
 The coefficient of $x^k$ in $P(x)^2$ is $\sum_{i+j=k}c_ic_j$. For odd $k$, $P(x^2)$ has no $x^k$ term, so the coefficient of $x^k$ in $F$ is
@@ -264,8 +264,7 @@ $P=0$ or $P(x)=x^m$.</p><p>Conversely $P(x)=x^m$ gives $P(\sqrt2)=2^{m/2}=\sqrt{
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 25: Diophantine Equations: Factorization and Algebraic Methods &middot; Factorization-Based Solutions</div>
 <div class="ct-text"><p>Determine all pairs $(a,n)$ of strictly positive integers such that $a$ is a prime power, $n\ge 2$, and $a^n(a-1)+1$ is a perfect square.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$(a,n)=(2,3)$ and $(4,2)$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Factor and compare sizes)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Factor and compare sizes</summary><div class="ct-text">
 <p>(We do not count $1=p^0$ as a prime power; for $a=1$ the expression equals $1$ for every $n$.) Let $a=p^k$ with $p$ prime and $k\ge1$, $n\ge2$, and $a^n(a-1)+1=m^2$ with $m$ a positive integer. Then
 \[(m-1)(m+1)=a^n(a-1),\qquad m^2=a^{n+1}-a^n+1 .\]
 Here $a^n(a-1)$ is even ($a$ or $a-1$ is even), so $m$ is odd and $m-1$, $m+1$ are consecutive even numbers.</p><p><em>$p$ odd.</em> Then $\gcd(m-1,m+1)=2$, so the odd prime $p$ cannot divide both factors, and $a^n=p^{kn}$ divides one of them. Hence
@@ -278,7 +277,8 @@ that is, $k(n-1)\le 2$. With $k\ge1$, $n\ge2$ this leaves $(k,n)\in\{(1,2),(1,3)
 \[a=2,n=2:\ 4\cdot1+1=5\ \text{(not a square)};\quad a=2,n=3:\ 8\cdot1+1=9=3^2;\quad a=4,n=2:\ 16\cdot3+1=49=7^2 .\]
 Therefore
 \[(a,n)\in\boxed{\{(2,3),\ (4,2)\}}.\]</p>
-<h4>Solution 2 (Splitting the factors exactly)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Splitting the factors exactly</summary><div class="ct-text">
 <p>Let $a=p^k$ ($p$ prime, $k\ge1$), $n\ge2$, and $a^n(a-1)+1=m^2$ with $m\ge1$, so
 $(m-1)(m+1)=a^n(a-1)$. The left side is even, so $m$ is odd.</p><p><em>$p$ odd.</em> Since $\gcd(m-1,m+1)=2$, the power $a^n$ divides $m+\varepsilon$ for one sign $\varepsilon\in\{1,-1\}$. Write $m+\varepsilon=a^ns$;
 then $m-\varepsilon=t$ with $st=a-1$, so $s,t$ are positive integers. Subtracting, $a^ns-t=2\varepsilon$, and multiplying by $s$:
@@ -297,8 +297,7 @@ $2^2\cdot1+1=5$ is not a square, while $2^3\cdot1+1=9$ and $4^2\cdot3+1=49$ are.
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 18: Invariants and Monovariants &middot; Invariant Quantities</div>
 <div class="ct-text"><p>Let $n$ be a non-zero natural number. Consider all grids of size $n\times 1$ where each cell of the grid is colored either black or white. Two grids are said to be &ldquo;similar&rdquo; if one can be transformed into the other by a finite sequence of moves. A move consists of selecting two consecutive cells of the same color and changing the color of both cells. Determine the maximum possible size of a collection of grids such that no two grids in the collection are similar to each other.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$n+1$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Recolouring turns moves into swaps)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Recolouring turns moves into swaps</summary><div class="ct-text">
 <p>Number the cells $1,\dots,n$ and write $c_i=1$ for black and $c_i=0$ for white. A move is reversible (after it
 the two cells still have equal colours, and repeating it restores them), so similarity is an equivalence relation, and the answer is the number of
 equivalence classes.</p><p>Define a new word by $d_i=c_i$ for odd $i$ and $d_i=1-c_i$ for even $i$ (flip every second cell). Neighbouring cells have different parities,
@@ -308,7 +307,8 @@ digits can sort any word into the form $11\dots100\dots0$ (bubble sort: move eac
 on $w$. So two grids are similar if and only if they have the same $w$. As $w$ takes every value $0,1,\dots,n$, there are $n+1$ classes, and the
 maximum size of a collection of pairwise non-similar grids is
 \[\boxed{n+1}.\]</p>
-<h4>Solution 2 (An invariant and induction)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; An invariant and induction</summary><div class="ct-text">
 <p>Write $c_i=1$ if cell $i$ is black and $0$ if white ($1\le i\le n$), and let
 \[D=\sum_{i\ \mathrm{odd}}c_i-\sum_{i\ \mathrm{even}}c_i .\]
 Moves are reversible (the two cells stay equal-coloured), so similarity is an equivalence relation.</p><p><em>$D$ is invariant.</em> A move acts on cells $i,i+1$, one odd and one even, of the same colour. If both were black, both sums drop by $1$; if both

@@ -97,7 +97,6 @@ description: Argentina Team Selection Test 2026: problems with answers and solut
 <p>The 6 problems of the Argentina Team Selection Test 2026, each with our own solutions, hidden until you open them. 4 of them ask for an answer and 2 ask for a proof. Where a problem has a final answer, it is shown separately. Try a problem first, then check.</p><p>The test has two days with three problems each.</p>
 </div>
 <div class="ct-credit">Problems: Argentina Team Selection Test 2026, from the AoPS contest collection or the official paper. Solutions written by MCC.</div>
-<div class="ct-bar"><button type="button" onclick="ctAll(true)">Show all answers and solutions</button><button type="button" onclick="ctAll(false)">Hide all</button></div>
 <div class="ct-toc-wrap"><div class="ct-toc-row"><span class="ct-toc-g">Day 1</span><a href="#p1">1</a><a href="#p2">2</a><a href="#p3">3</a></div><div class="ct-toc-row"><span class="ct-toc-g">Day 2</span><a href="#p4">4</a><a href="#p5">5</a><a href="#p6">6</a></div></div>
 
 {% raw %}
@@ -107,8 +106,7 @@ description: Argentina Team Selection Test 2026: problems with answers and solut
 <div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VII scale">E</span>Combinatorics &middot; LPS VII, Chapter 44: Combinatorial Games and Strategy &middot; Strategy Stealing and Symmetry</div>
 <div class="ct-text"><p>Each face of a $2\times2\times2$ cube is divided into $4$ square cells (so the cube has $24$ cells in total). We define a <em>ring</em> as a sequence of $8$ cells such that each face of the cube contains either $0$ or $2$ of these cells, and each of the $8$ cells shares a side with the previous one and a side with the next one, forming a closed loop around the cube. (So a ring runs straight around the cube: its $8$ cells lie in one layer of unit thickness, on the four faces parallel to one edge direction.)</p><p>Ana and Beto take turns writing a distinct integer from $1$ to $24$ inclusive in an unused cell of the cube. Ana moves first. After all $24$ numbers have been written, all possible sums of the $8$ numbers in each ring are computed (there are $6$ rings). If all $6$ sums are equal, Beto wins; otherwise, Ana wins. Determine who has a winning strategy, and describe it.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>Beto wins</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Pairing cells on opposite faces)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Pairing cells on opposite faces</summary><div class="ct-text">
 <p><strong>Beto</strong> has a winning strategy.</p><p>Read literally, the local description of a ring is also met by some bent loops, but the statement says there are $6$ rings: these are the six
 belts described below, and this is the reading we use.</p><p>Place the cube as $[0,2]^3$. A cell lies on a face perpendicular to one coordinate axis, and it is a unit square described by the unit
 intervals it occupies in the other two coordinates. The six rings are the &ldquo;belts&rdquo; of the cube: for an axis, say the $z$-axis, and a unit
@@ -131,8 +129,7 @@ Prove that the sum of the squares of the $n$ numbers is less than or equal to $9
 \[(x_1)^2+(x_2)^2+\dots+(x_n)^2\le9,\]
 and determine all values of $x_1,x_2,\dots,x_n$ for which equality holds.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\sum x_i^2\le 9$, with equality exactly when two of the numbers are $2$, one is $1$ and the others are $0$</p></div></details>
-<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Pushing numbers to the ends of the interval)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Pushing numbers to the ends of the interval</summary><div class="ct-text">
 <p>Suppose two of the numbers, say $x_i\ge x_j$, lie strictly between $0$ and $2$. Let $t=\min(2-x_i,\,x_j)&gt;0$ and replace $x_i,x_j$ by
 $x_i+t$ and $x_j-t$. The sum stays $5$, all numbers stay in $[0,2]$, and the sum of squares changes by
 \[
@@ -143,7 +140,8 @@ others are $0$ or $2$; if $j$ of them equal $2$, then $2j+r=5$ with $0&lt;r&lt;2
 $2$'s, one $1$ and zeros, and its sum of squares is $4+4+1=9$.</p><p>Every move increased the sum of squares, so the original sum of squares is at most $9$, and it is strictly less than $9$ if at least one move
 was made. Thus equality holds exactly when no move is possible, that is, when the numbers are two $2$'s, one $1$ and $n-3$ zeros (in any order).
 Such tuples exist because $n\ge3$, and they give $\sum x_i^2=9$.</p>
-<h4>Solution 2 (A parity bound for the distance to the endpoints)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; A parity bound for the distance to the endpoints</summary><div class="ct-text">
 <p>Since $\sum x_i=5$,
 \[
 \sum x_i^2=2\sum x_i-\sum x_i(2-x_i)=10-\sum x_i(2-x_i),
@@ -155,7 +153,8 @@ $m(x)\le 1$; equality holds iff $m(x)\in\{0,1\}$, i.e. iff $x\in\{0,1,2\}$.</p><
 \]
 Therefore $\sum x_i^2\le 9$.</p><p>Equality requires $x_i\in\{0,1,2\}$ for all $i$ and $\sum m(x_i)=1$, so exactly one $x_i$ equals $1$ and the others are $0$ or $2$; as the sum is
 $5$, exactly two of them equal $2$. Conversely two $2$'s, one $1$ and $n-3$ zeros give $4+4+1=9$. So equality holds exactly for these tuples.</p>
-<h4>Solution 3 (Splitting at the third largest number)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 3 &ndash; Splitting at the third largest number</summary><div class="ct-text">
 <p>Order the numbers so that $x_1\ge x_2\ge\dots\ge x_n$ and let $t=x_3$, so $0\le t\le 2$. For $i\ge3$ we have $0\le x_i\le t$, hence
 $x_i^2\le t\,x_i$, with equality iff $x_i\in\{0,t\}$. Since $x_3+\dots+x_n=5-x_1-x_2$,
 \[
@@ -185,15 +184,15 @@ these tuples (which exist since $n\ge3$) indeed give $4+4+1=9$.</p>
 <div class="ct-text"><p>Let $a$ and $b$ be integers, and consider the expression
 \[f(x)=x^2+ax+b.\]
 It is known that for every positive prime number $p$, there exists an integer $n$ such that both $f(n)$ and $f(n+1)$ are divisible by $p$. Prove that there exists an integer $m$ such that $f(m)=f(m+1)=0$.</p></div>
-<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Completing the square)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Completing the square</summary><div class="ct-text">
 <p>Let $\Delta=a^2-4b$. Note that $4f(x)=(2x+a)^2-\Delta$ and $f(x+1)-f(x)=2x+a+1$.</p><p>Let $p$ be any prime and $n$ an integer with $p\mid f(n)$ and $p\mid f(n+1)$. Then $p\mid f(n+1)-f(n)=2n+a+1$, so $2n+a\equiv-1\pmod p$ and
 \[
 0\equiv 4f(n)=(2n+a)^2-\Delta\equiv 1-\Delta\pmod p .
 \]
 Thus every prime divides the integer $1-\Delta$, so $1-\Delta=0$, i.e. $a^2-4b=1$.</p><p>Then $a$ is odd, and the roots of $x^2+ax+b$ are $\frac{-a\pm1}{2}$, two consecutive integers. With $m=\frac{-a-1}{2}$ we get
 $f(x)=(x-m)(x-m-1)$, hence $f(m)=f(m+1)=0$.</p>
-<h4>Solution 2 (Two roots modulo every prime)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Two roots modulo every prime</summary><div class="ct-text">
 <p>Fix a prime $p$ and an integer $n$ with $p\mid f(n)$ and $p\mid f(n+1)$. Dividing $f(x)$ by $x-n$ gives the identity
 $f(x)=(x-n)(x-n')+f(n)$ with $n'=-a-n$. Hence, modulo $p$, $f(x)\equiv(x-n)(x-n')$ for every integer $x$. Taking $x=n+1$:
 $0\equiv f(n+1)\equiv 1\cdot(n+1-n')$, so $n'\equiv n+1\pmod p$.</p><p>Comparing with the coefficients of $f$: $a=-(n+n')\equiv-(2n+1)$ and $b=f(0)=nn'+f(n)\equiv n(n+1)\pmod p$. Therefore
@@ -202,7 +201,8 @@ a^2-4b\equiv(2n+1)^2-4n(n+1)=1\pmod p .
 \]
 So the integer $a^2-4b-1$ is divisible by every prime, hence equals $0$.</p><p>Now $a^2=4b+1$ is odd, so $a$ is odd and $m=\frac{-a-1}{2}$ is an integer. Then $m+(m+1)=-a$ and
 $m(m+1)=\frac{a^2-1}{4}=b$, so by Vieta $f(x)=(x-m)(x-m-1)$ and $f(m)=f(m+1)=0$.</p>
-<h4>Solution 3 (Fixing the candidate root first)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 3 &ndash; Fixing the candidate root first</summary><div class="ct-text">
 <p>Note that $f(x+1)-f(x)=2x+a+1$.</p><p><em>The prime $2$.</em> Take $n$ with $2\mid f(n)$ and $2\mid f(n+1)$. Then $2$ divides $f(n+1)-f(n)=2n+a+1$, so $a$ is odd. Hence
 $m=\frac{-a-1}{2}$ is an integer, and $2m=-a-1$ gives
 \[
@@ -217,8 +217,7 @@ $f(m+1)=f(m)+0=0$. Thus $f(m)=f(m+1)=0$ for the integer $m=\frac{-a-1}{2}$.</p>
 <h3>Problem 4</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 49: Combinatorial Number Theory and Structure &middot; Additive Structure and Sums of Integers</div>
 <div class="ct-text"><p>Let $n&gt;4$ be an integer. Consider a set $S$ of $n$ distinct integers with the following property:</p><p>If all sums $x+y$ with $x\ne y$ in $S$ are computed, exactly $2n-3$ distinct values are obtained.</p><p>Prove that, when the elements of $S$ are arranged in increasing order, they form an arithmetic progression.</p><p><strong>Note:</strong> An <em>arithmetic progression</em> is a sequence of numbers in which each term is obtained from the previous one by adding a fixed constant. For example, $(3,6,9,12)$ is an arithmetic progression of $4$ terms.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Many increasing chains of sums)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Many increasing chains of sums</summary><div class="ct-text">
 <p>Write $S=\{a_1&lt;a_2&lt;\dots&lt;a_n\}$ and let $\Sigma$ be the set of sums $a_i+a_j$ with $i&lt;j$, so $|\Sigma|=2n-3$.</p><p>For $3\le k\le n$ consider the chain
 \[
 a_1+a_2&lt;a_1+a_3&lt;\dots&lt;a_1+a_k&lt;a_2+a_k&lt;a_2+a_{k+1}&lt;\dots&lt;a_2+a_n&lt;a_3+a_n&lt;\dots&lt;a_{n-1}+a_n .
@@ -232,7 +231,8 @@ a_{k+1}-a_k=a_2-a_1\qquad(3\le k\le n-1). \tag{1}
 The set $-S=\{-a_n&lt;\dots&lt;-a_1\}$ also has exactly $2n-3$ pairwise sums. Applying (1) to it (its $i$-th smallest element is $-a_{n+1-i}$) gives
 $a_{n+1-k}-a_{n-k}=a_n-a_{n-1}$ for $3\le k\le n-1$. Taking $k=n-2$, which is allowed because $n\ge5$, we get $a_3-a_2=a_n-a_{n-1}$.</p><p>Let $d=a_2-a_1$. By (1), $a_4-a_3=\dots=a_n-a_{n-1}=d$, and then $a_3-a_2=a_n-a_{n-1}=d$. So all consecutive differences equal $d$, and $S$ in
 increasing order is an arithmetic progression.</p>
-<h4>Solution 2 (Induction by removing the largest element)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Induction by removing the largest element</summary><div class="ct-text">
 <p>For any set $T=\{t_1&lt;\dots&lt;t_m\}$ of integers ($m\ge2$), the chain
 $t_1+t_2&lt;t_1+t_3&lt;\dots&lt;t_1+t_m&lt;t_2+t_m&lt;\dots&lt;t_{m-1}+t_m$ shows that $T$ has at least $2m-3$ distinct pairwise sums. We prove by induction on
 $n\ge5$ that a set $S=\{a_1&lt;\dots&lt;a_n\}$ with exactly $2n-3$ pairwise sums is an arithmetic progression.</p><p><em>Base case $n=5$.</em> The two chains
@@ -256,8 +256,7 @@ $a_n-a_1$ is a multiple of $d$, we get $a_n=a_1+(n-1)d$. So $S$ is an arithmetic
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 11: Similarity, Homothety, and Ratio Geometry &middot; Direct Similarity</div>
 <div class="ct-text"><p>Let $ABC$ be an acute triangle and let $S$ be a point on side $AB$. Let $P$ be the center of the circle passing through $A,S,C$ and let $Q$ be the center of the circle passing through $B,S,C$.</p><p>Determine the position of point $S$ on side $AB$ for which the area of triangle $PQS$ is minimized.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$S$ is the foot of the altitude from $C$ (the minimum area is $\frac14[ABC]$)</p></div></details>
-<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Triangle $PQS$ is similar to triangle $ABC$)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Triangle $PQS$ is similar to triangle $ABC$</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:299px" src="/assets/contests/2026-27/argentina-tst-5_s1.svg" alt="Figure for the solution"></div>
 <p>Let $\alpha,\beta,\gamma$ be the angles of triangle $ABC$, let $H$ be the foot of the altitude from $C$ and $h=CH$. We take $S$ strictly
 between $A$ and $B$ (for $S=A$ or $S=B$ one of the circles is not defined).</p><p>Both $P$ and $Q$ are equidistant from $S$ and $C$, so they lie on the perpendicular bisector of $SC$; let $M$ be the midpoint of $SC$. Since
@@ -273,7 +272,8 @@ $\frac{SC}{2h}$ and
 \]
 This is smallest exactly when $SC$ is smallest, i.e. when $S=H$; since the triangle is acute, $H$ lies on side $AB$. The minimum area is
 $\frac14[ABC]$, attained only when $S$ is <strong>the foot of the altitude from $C$</strong>.</p>
-<h4>Solution 2 (Coordinates)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Coordinates</summary><div class="ct-text">
 <p>Since triangle $ABC$ is acute, the foot $H$ of the altitude from $C$ lies strictly between $A$ and $B$. Take $H$ as the origin and $AB$
 as the $x$-axis: $A=(-p,0)$, $B=(q,0)$, $C=(0,h)$ with $p,q,h&gt;0$, and $S=(s,0)$ with $-p&lt;s&lt;q$.</p><p>The centre $P$ of circle $ASC$ lies on the perpendicular bisector of $AS$, so $x_P=\frac{s-p}{2}$. Being equidistant from $S$ and $C$, it satisfies
 $(x-s)^2+y^2=x^2+(y-h)^2$, i.e. $y=\frac{h^2-s^2+2sx}{2h}$; hence $y_P=\frac{h^2-sp}{2h}$. In the same way the centre of circle $BSC$ is
@@ -284,7 +284,8 @@ $Q=\bigl(\frac{s+q}{2},\frac{h^2+sq}{2h}\bigr)$.</p><p>With $\overrightarrow{SP}
 \]
 because the terms $\pm sh^2$ and $\pm spq$ cancel. For fixed $p,q,h$ this is smallest exactly when $s=0$. So the area is minimal when $S$ is
 <strong>the foot of the altitude from $C$</strong>, and the minimum is $\frac{(p+q)h}{8}=\frac14[ABC]$.</p>
-<h4>Solution 3 (Projecting $PQ$ onto $AB$)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 3 &ndash; Projecting $PQ$ onto $AB$</summary><div class="ct-text">
 <p>Take $S$ strictly between $A$ and $B$, let $H$ be the foot of the altitude from $C$ and $h=CH&gt;0$.</p><p>Both $P$ and $Q$ are equidistant from $S$ and $C$, so the line $PQ$ is the perpendicular bisector of $SC$ (we check below that $P\ne Q$). In
 particular the distance from $S$ to the line $PQ$ is $\frac{SC}{2}$, and
 \[
@@ -306,8 +307,7 @@ acute. So the area is minimal when $S$ is <strong>the foot of the altitude from 
 <div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 31: Extremal Principle and Bounding Arguments &middot; Bounding and Limiting Arguments</div>
 <div class="ct-text"><p>Let $1000$ numbers equal to $2$ and $2000$ numbers equal to $-1$ be arranged around a circle in some order. Bruno counts the number of groups of two or more consecutive numbers whose sum is equal to $0$.</p><ul class="ct-parts"><li><p><span class="ct-lbl">(a)</span> Determine the minimum possible value that Bruno can obtain.</p></li><li><p><span class="ct-lbl">(b)</span> Determine the maximum possible value that Bruno can obtain.</p></li></ul><p><strong>Note:</strong> Each number on the circle may belong to one or more groups, or to none. (So a group is a block of consecutive numbers that is not the whole circle.)</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(a) $1998$; (b) $2997000$</p></div></details>
-<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Prefix sums and repeated values)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Prefix sums and repeated values</summary><div class="ct-text">
 <p>Number the positions $1,2,\dots,3000$ clockwise, let $v_i\in\{2,-1\}$ be the number at position $i$, and put $s_0=0$,
 $s_i=v_1+\dots+v_i$. The total is $1000\cdot2-2000=0$, so $s_{3000}=0=s_0$.</p><p><em>Reformulation.</em> For distinct $i,j\in\{0,1,\dots,2999\}$ let $g(i,j)$ be the group of consecutive positions $i+1,i+2,\dots,j$ going clockwise
 (indices modulo $3000$). Every group of length between $1$ and $2999$ is $g(i,j)$ for exactly one ordered pair $(i,j)$, and its sum is $s_j-s_i$
@@ -336,7 +336,8 @@ $c_0=c_1=c_2=1000$, $\sum c_v(c_v-1)=3\cdot1000\cdot999$ and $N=2997000$.</p><p>
 \boxed{\text{(a) } 1998,\qquad \text{(b) } 2997000.}
 \]
 (If the whole circle, whose sum is $0$, were also counted as a group, both answers would increase by $1$.)</p>
-<h4>Solution 2 (A second proof of (b): counting by starting position)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; A second proof of (b): counting by starting position</summary><div class="ct-text">
 <p>Here we prove only part (b) again, without prefix sums.
 A group is a block of at least two and at most $2999$ consecutive numbers; it is determined by its first position and its length. The total of all
 $3000$ numbers is $1000\cdot2-2000=0$.</p><p>Fix a starting position $i$ and let $\ell_1&lt;\ell_2&lt;\dots&lt;\ell_r$ be the lengths of the groups with sum $0$ that start at $i$ (all $\ell_j\le2999$). If $r=0$ there is nothing to prove, so let $r\ge1$.
@@ -347,7 +348,8 @@ contains a $2$ (a block of $-1$'s has negative sum), and there are only $1000$ t
 at each position.</p><p>Every group has exactly one starting position, so Bruno counts at most $3000\cdot999=2997000$ groups. For the arrangement $2,-1,-1$ repeated
 $1000$ times, from any starting position the running sums repeat with period $3$ ($2,1,0$ or $-1,-2,0$ or $-1,1,0$), so the zero-sum groups
 starting there have lengths $3,6,\dots,2997$, which is $999$ groups. So the maximum is $\boxed{2997000}$.</p>
-<h4>Solution 3 (A third proof of (b): zero-sum groups have length divisible by 3)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 3 &ndash; A third proof of (b): zero-sum groups have length divisible by 3</summary><div class="ct-text">
 <p>Here we prove only part (b) again. A group is a block of at least two and at most $2999$ consecutive numbers; it is determined by its
 first position (one of $3000$) and its length (from $2$ to $2999$), and different pairs (first position, length) give different groups.</p><p>If a group contains $p$ twos and $q$ minus ones, its sum is $2p-q$, which is $0$ exactly when $q=2p$; then its length is $3p$. So every zero-sum
 group has length $3,6,\dots,$ or $2997$: only $999$ possible lengths. Hence there are at most $999$ zero-sum groups with a given first position,

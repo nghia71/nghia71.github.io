@@ -97,7 +97,6 @@ description: Argentina Regional Mathematical Olympiad 2026 (Third Round): proble
 <p>The 9 problems of the Argentina Regional Mathematical Olympiad 2026 (Third Round), each with our own solutions, hidden until you open them. Where a problem has a final answer, it is shown separately. Try a problem first, then check.</p><p>Third round. Level 1 (grades 8 and 9), Level 2 (grades 10 and 11), Level 3 (grades 12 and 13); three problems per level.</p>
 </div>
 <div class="ct-credit">Problems: Argentina Regional Mathematical Olympiad 2026 (Third Round), from the AoPS contest collection or the official paper. Solutions written by MCC.</div>
-<div class="ct-bar"><button type="button" onclick="ctAll(true)">Show all answers and solutions</button><button type="button" onclick="ctAll(false)">Hide all</button></div>
 <div class="ct-toc-wrap"><div class="ct-toc-row"><span class="ct-toc-g">Level 3</span><a href="#p1">1</a><a href="#p2">2</a><a href="#p3">3</a></div><div class="ct-toc-row"><span class="ct-toc-g">Level 2</span><a href="#p4">1</a><a href="#p5">2</a><a href="#p6">3</a></div><div class="ct-toc-row"><span class="ct-toc-g">Level 1</span><a href="#p7">1</a><a href="#p8">2</a><a href="#p9">3</a></div></div>
 
 {% raw %}
@@ -107,8 +106,7 @@ description: Argentina Regional Mathematical Olympiad 2026 (Third Round): proble
 <div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Combinatorics &middot; LPS VI, Chapter 22: Pigeonhole Principle and Guaranteed Existence &middot; Guaranteed Coincidence</div>
 <div class="ct-text"><p>Facu and Manu play the following game. First, Facu chooses $10$ distinct integers between $1$ and $100$, inclusive, and writes them on a blackboard. Manu may then erase some of the numbers, possibly none, but must leave at least one number on the board. Next, Manu partitions the remaining numbers into two sets, not necessarily of equal size. If the sums of the numbers in the two sets are equal, Manu wins; otherwise, Facu wins. Determine which player has a winning strategy.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>Manu</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Pigeonhole on subset sums)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Pigeonhole on subset sums</summary><div class="ct-text">
 <p><strong>Manu wins.</strong> The $10$ numbers have $2^{10}-1=1023$ nonempty subsets. Each subset sum is between $1$ and $91+92+\dots+100=955$. Since $1023&gt;955$, two different subsets $S\ne S'$ have the same sum.</p><p>Remove their common elements: $S\setminus S'$ and $S'\setminus S$ are disjoint, still have equal sums, and are both nonempty (if one were empty, the other would have sum $0$ and be empty too, giving $S=S'$). Manu erases every number outside $(S\setminus S')\cup(S'\setminus S)$, which leaves at least one number, and splits the rest into these two sets with equal sums.</p>
 </div></details>
 </section>
@@ -119,8 +117,7 @@ description: Argentina Regional Mathematical Olympiad 2026 (Third Round): proble
 \[\frac{x^2+2y}{y^2-2x}\qquad\text{and}\qquad\frac{y^2+2x}{x^2-2y}\]
 are both integers, which may be positive or negative.</p><ul class="ct-ul"><li><p>Determine all possible values of $x-y$.</p></li><li><p>Determine all pairs $(x,y)$ satisfying these conditions.</p></li></ul></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$x-y\in\{0,2\}$; $(x,y)=(1,1),(3,3),(4,4),(6,6),(4,2),(5,3),(6,4)$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Bound the difference with the second fraction)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Bound the difference with the second fraction</summary><div class="ct-text">
 <p><strong>Small $x$.</strong> For $x\le2$ the candidates are $(1,1)$, $(2,1)$, $(2,2)$. $(1,1)$ gives $\frac{3}{-1}=-3$ twice: it works. $(2,1)$ gives $\frac{6}{-3}=-2$ but $\frac52$: no. $(2,2)$ gives zero denominators: no.</p><p><strong>$x\ge3$: $x-y\le2$.</strong> Then $x^2-2y\ge x^2-2x=x(x-2)&gt;0$, so the second fraction is a positive integer and $y^2+2x\ge x^2-2y$, i.e. $(x-y)(x+y)\le2(x+y)$, so $x-y\le2$.</p><p><strong>$x=y$.</strong> Both fractions equal $\frac{x^2+2x}{x^2-2x}=\frac{x+2}{x-2}=1+\frac4{x-2}$, so $x-2\mid4$, $x-2\in\{\pm1,\pm2,\pm4\}$, $x\in\{1,3,4,6\}$ (positive, $x\ne2$).</p><p><strong>$x=y+1$.</strong> The second fraction is $\frac{y^2+2y+2}{y^2+1}=1+\frac{2y+1}{y^2+1}$, so $y^2+1\le2y+1$, $y\le2$. $y=1$ gives $(2,1)$, already excluded; $y=2$ gives $(3,2)$, where the first fraction is $\frac{13}{-2}$: no.</p><p><strong>$x=y+2$.</strong> The second fraction is $\frac{y^2+2y+4}{y^2+2y+4}=1$. The first is
 \[\frac{y^2+6y+4}{y^2-2y-4}=1+\frac{8(y+1)}{y^2-2y-4}.\]
 For $y\ge12$ we have $0&lt;y^2-2y-4\ \text{and}\ y^2-2y-4&gt;8(y+1)$ (as $y^2-10y-12&gt;0$), so no solution. Checking $y=1,\dots,11$: the denominator $y^2-2y-4$ is $-5,-4,-1,4,11,20,31,44,59,76,95$ and $8(y+1)$ is $16,24,32,40,48,\dots,96$; it divides only for $y=2,3,4$ (quotients $-6,-32,10$). This gives $(4,2)$, $(5,3)$, $(6,4)$, with first fractions $-5$, $-31$, $11$.</p><p><strong>Answer.</strong> The possible values of $x-y$ are $\boxed{0\text{ and }2}$, and the pairs are
@@ -132,8 +129,7 @@ For $y\ge12$ we have $0&lt;y^2-2y-4\ \text{and}\ y^2-2y-4&gt;8(y+1)$ (as $y^2-10
 <div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VII scale">E</span>Geometry &middot; LPS VII, Chapter 32: Trigonometric Geometry and Metric Conversion &middot; Law of Sines and Law of Cosines</div>
 <div class="ct-text"><p>Let $ABCD$ be a rectangle with $AB=\sqrt6$ and $AD=\sqrt2$. Let $E$ be a point on the diagonal $BD$ such that $\angle EAB=15^\circ$, and let $F$ be the point on the side $CD$ such that $AE\perp EF$.</p><p>Determine the perimeter of the quadrilateral $ADFE$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$1+\sqrt3+2\sqrt2$</p></div></details>
-<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
-<h4>Solution 1 (The circle with diameter AF)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; The circle with diameter AF</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/argentina-regional-3_s1.svg" alt="Figure for the solution"></div>
 <p>Since $\tan\angle ABD=\frac{AD}{AB}=\frac1{\sqrt3}$, $\angle ABD=30^\circ$. In triangle $ABE$, $\angle AEB=180^\circ-30^\circ-15^\circ=135^\circ$, and the law of sines gives
 \[AE=\frac{AB\sin30^\circ}{\sin135^\circ}=\frac{\sqrt6\cdot\frac12}{\frac{\sqrt2}2}=\sqrt3 .\]
@@ -143,13 +139,15 @@ The angles $\angle ADF$ and $\angle AEF$ are right, so $A,D,F,E$ lie on the circ
 \[DF=\sqrt{AF^2-AD^2}=\sqrt2,\qquad EF=\sqrt{AF^2-AE^2}=1,\]
 and $DF=\sqrt2&lt;\sqrt6$, so $F$ is indeed on side $CD$. The perimeter of $ADFE$ is
 \[AD+DF+FE+EA=\sqrt2+\sqrt2+1+\sqrt3=\boxed{1+\sqrt3+2\sqrt2}.\]</p>
-<h4>Solution 2 (Coordinates)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Coordinates</summary><div class="ct-text">
 <p>Let $A=(0,0)$, $B=(\sqrt6,0)$, $D=(0,\sqrt2)$. As in any approach, $\angle ABD=30^\circ$ (since $\tan\angle ABD=\frac{\sqrt2}{\sqrt6}$), so in triangle $ABE$ the angle at $E$ is $135^\circ$ and $AE=\frac{\sqrt6\sin30^\circ}{\sin135^\circ}=\sqrt3$. Hence
 \[E=\sqrt3(\cos15^\circ,\sin15^\circ)=\Bigl(\frac{3\sqrt2+\sqrt6}4,\ \frac{3\sqrt2-\sqrt6}4\Bigr).\]
 Let $F=(f,\sqrt2)$. The condition $AE\perp EF$ is $(F-E)\cdot E=0$, i.e. $f\,E_x+\sqrt2\,E_y=|E|^2=3$. Here $\sqrt2E_y=\frac{6-2\sqrt3}{4}=\frac{3-\sqrt3}2$, so
 \[f=\frac{3-\frac{3-\sqrt3}2}{E_x}=\frac{\frac{3+\sqrt3}2}{\frac{\sqrt6(\sqrt3+1)}4}=\frac{2\sqrt3(\sqrt3+1)}{\sqrt6(\sqrt3+1)}=\sqrt2 .\]
 So $F=(\sqrt2,\sqrt2)$ lies on $CD$, $DF=\sqrt2$, and $EF^2=AF^2-AE^2=(2+2)-3=1$. The perimeter is $\sqrt2+\sqrt2+1+\sqrt3=\boxed{1+\sqrt3+2\sqrt2}$.</p>
-<h4>Solution 3 (Guess the point F and check it)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 3 &ndash; Guess the point F and check it</summary><div class="ct-text">
 <p>First locate $E$. Since $\tan\angle ABD=\frac{AD}{AB}=\frac{\sqrt2}{\sqrt6}=\frac1{\sqrt3}$, we have $\angle ABD=30^\circ$, so in triangle $ABE$ the angle at $E$ is $180^\circ-30^\circ-15^\circ=135^\circ$, and the law of sines gives
 \[AE=\frac{AB\sin30^\circ}{\sin135^\circ}=\frac{\sqrt6\cdot\frac12}{\frac{\sqrt2}2}=\sqrt3 .\]
 Thus $E$ is the point at distance $\sqrt3$ from $A$ on the ray $\ell$ from $A$ that makes $15^\circ$ with $AB$.</p><p><strong>A candidate.</strong> Let $F_0$ be the point of side $CD$ with $DF_0=\sqrt2$; it lies on the side because $\sqrt2&lt;\sqrt6=CD$. Triangle $ADF_0$ is right isosceles, so $AF_0=2$ and $\angle DAF_0=45^\circ$, hence $\angle F_0AB=45^\circ$ and the angle between $AF_0$ and $\ell$ is $45^\circ-15^\circ=30^\circ$. Let $E_0$ be the foot of the perpendicular from $F_0$ to $\ell$. In the right triangle $AE_0F_0$,
@@ -163,8 +161,7 @@ Thus $E$ is the point at distance $\sqrt3$ from $A$ on the ray $\ell$ from $A$ t
 <div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Combinatorics &middot; LPS VI, Chapter 22: Pigeonhole Principle and Guaranteed Existence &middot; Worst-Case Thresholds</div>
 <div class="ct-text"><p>A box contains one card for each integer from $100$ to $999$, inclusive, with that integer written on it. Bruno draws cards at random without replacement and records the sum of the digits of the number on each card he draws. Determine the smallest number of cards he must draw to guarantee that at least three of the recorded digit sums are equal.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$53$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Worst case: two of each digit sum)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Worst case: two of each digit sum</summary><div class="ct-text">
 <p>The digit sums of $100,\dots,999$ range over $1,2,\dots,27$. The sum $1$ occurs only for $100$, and the sum $27$ only for $999$; every sum from $2$ to $26$ occurs at least twice (e.g. $s=2$: $101,110,200$; $s=26$: $899,989,998$; in general there are at least two three-digit numbers with any digit sum between $2$ and $26$).</p><p><em>$52$ cards are not enough.</em> Bruno could draw $100$, $999$ and two cards of each sum $2,\dots,26$: $2+2\cdot25=52$ cards with no sum appearing three times.</p><p><em>$53$ cards suffice.</em> If no sum appeared three times, the sums $1$ and $27$ would appear at most once each and the other $25$ sums at most twice, for at most $52$ cards.</p><p>The answer is $\boxed{53}$.</p>
 </div></details>
 </section>
@@ -174,8 +171,7 @@ Thus $E$ is the point at distance $\sqrt3$ from $A$ on the ray $\ell$ from $A$ t
 <div class="ct-text"><p>Let $n$ be a positive integer with at least four positive divisors, including $1$ and $n$. Let $a&lt;b&lt;c&lt;d$ be its four smallest positive divisors. Determine all such integers $n$ satisfying
 \[n=a^2+b^2+c^2+d^2.\]</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$n=130$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Parity, then the smallest odd prime)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Parity, then the smallest odd prime</summary><div class="ct-text">
 <p><em>$n$ is even.</em> If $n$ were odd, $a,b,c,d$ would be odd and $a^2+b^2+c^2+d^2$ would be even. So $a=1$, $b=2$, and $n=5+c^2+d^2$ is even, hence exactly one of $c,d$ is even.</p><p><em>$4\nmid n$.</em> Suppose $4\mid n$. If $3\nmid n$, then $c=4$, $d$ is odd, and $n=21+d^2\equiv21+1\equiv2\pmod 4$, a contradiction. If $3\mid n$, then $c=3$, $d=4$ and $n=1+4+9+16=30$, which is not divisible by $4$.</p><p><em>The rest.</em> So $n\equiv2\pmod4$; the divisors larger than $2$ are odd divisors and twice odd divisors. Let $p$ be the smallest odd prime factor; then $c=p$, which is odd, so $d$ is even, and the smallest even divisor larger than $2$ is $2p$: $d=2p$. Hence
 \[n=1+4+p^2+4p^2=5(1+p^2).\]
 So $5\mid n$, which forces $p\le5$. If $p=3$, then $n=50$, not divisible by $3$; if $p=5$, then $n=130=2\cdot5\cdot13$, whose smallest divisors are $1,2,5,10$, and indeed $1+4+25+100=130$.</p><p>The only such integer is $\boxed{130}$.</p>
@@ -187,15 +183,15 @@ So $5\mid n$, which forces $p\le5$. If $p=3$, then $n=50$, not divisible by $3$;
 <div class="ct-text"><p>Let $ABCD$ be a square, with vertices labelled in order, and let $P$ be a point inside it such that
 \[PA=1,\qquad PB=\sqrt2,\qquad PC=\sqrt3.\]</p><ul class="ct-ul"><li><p>Determine the length of the segment $PD$.</p></li><li><p>Determine the measure of the angle $\angle APB$.</p></li></ul></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$PD=\sqrt2$, $\angle APB=105^\circ$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (A quarter turn about B)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; A quarter turn about B</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:238px" src="/assets/contests/2026-27/argentina-regional-6_s1.svg" alt="Figure for the solution"></div>
 <p><strong>$PD$.</strong> Put $A=(0,0)$, $B=(s,0)$, $C=(s,s)$, $D=(0,s)$ and $P=(x,y)$. Then
 \[PA^2+PC^2=x^2+y^2+(s-x)^2+(s-y)^2=PB^2+PD^2,\]
 so $PD^2=1+3-2=2$ and $\boxed{PD=\sqrt2}$.</p><p><strong>$\angle APB$.</strong> Rotate the plane by $90^\circ$ about $B$ so that $A$ goes to $C$, and let $P'$ be the image of $P$. Then $CP'=AP=1$, $BP'=BP=\sqrt2$ and $\angle PBP'=90^\circ$, so triangle $PBP'$ is right isosceles: $PP'=2$ and $\angle BP'P=45^\circ$. In triangle $PP'C$ we have $PC^2+P'C^2=3+1=4=PP'^2$, so $\angle PCP'=90^\circ$ and, as $P'C=\frac12PP'$, $\angle PP'C=60^\circ$. The rotation maps $\angle APB$ to $\angle CP'B$, hence
 \[\angle APB=\angle CP'B=\angle BP'P+\angle PP'C=45^\circ+60^\circ=\boxed{105^\circ}.\]
 Here we used that $B$ and $C$ lie on opposite sides of line $PP'$. Otherwise $\angle CP'B=60^\circ-45^\circ=15^\circ$, so $\angle APB=15^\circ$, and the law of cosines in triangle $APB$ would give $AB^2=1+2-2\sqrt2\cos15^\circ=2-\sqrt3&lt;\frac12$; then the diagonal of the square would be $\sqrt2\,AB&lt;1=PA$, which is impossible for a point $P$ inside the square.</p>
-<h4>Solution 2 (Coordinates)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Coordinates</summary><div class="ct-text">
 <p>Put $A=(0,0)$, $B=(s,0)$, $C=(s,s)$, $D=(0,s)$, $P=(x,y)$. The data give
 \[x^2+y^2=1,\qquad (x-s)^2+y^2=2,\qquad (x-s)^2+(y-s)^2=3 .\]
 Subtracting, $s^2-2sx=1$ and $s^2-2sy=1$, so $x=y=\frac{s^2-1}{2s}$; then $2x^2=1$ gives $x=\frac1{\sqrt2}$ and $s^2-\sqrt2\,s-1=0$, so $s=\frac{\sqrt2+\sqrt6}2$ and $s^2=2+\sqrt3$.</p><p>Then $PD^2=x^2+(s-y)^2=1-2sy+s^2=1-(s^2-1)+s^2=2$, so $\boxed{PD=\sqrt2}$. By the law of cosines in triangle $APB$,
@@ -210,8 +206,7 @@ so $\angle APB=\boxed{105^\circ}$.</p>
 <div class="ct-text"><p>Tomás wants to express $250$ as a sum of positive integers whose decimal representations contain only the digit $1$. In how many ways can he do this?</p><p><em>Note:</em> Two sums that differ only in the order of their terms are considered the same. For example, there are exactly two ways to express $13$ as such a sum:
 \[13=11+1+1\qquad\text{and}\qquad 13=\underbrace{1+1+\dots+1}_{13\text{ terms}}.\]</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$39$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Count by the number of 111s)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Count by the number of 111s</summary><div class="ct-text">
 <p>The usable summands are $1$, $11$ and $111$ ($1111&gt;250$). A sum is determined by how many of each it uses, so we count non-negative solutions of
 \[a+11b+111c=250 .\]
 For each $c$ and each $b$ with $11b\le250-111c$, the value of $a$ is forced.</p><ul class="ct-ul"><li><p>$c=0$: $11b\le250$, $b=0,\dots,22$: $23$ ways.</p></li><li><p>$c=1$: $11b\le139$, $b=0,\dots,12$: $13$ ways.</p></li><li><p>$c=2$: $11b\le28$, $b=0,1,2$: $3$ ways.</p></li></ul><p>In total $23+13+3=\boxed{39}$ ways.</p>
@@ -222,8 +217,7 @@ For each $c$ and each $b$ with $11b\le250-111c$, the value of $a$ is forced.</p>
 <div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Combinatorics &middot; LPS VI, Chapter 27: Base Systems and Positional Arithmetic &middot; Base Conversion</div>
 <div class="ct-text"><ul class="ct-parts"><li><p><span class="ct-lbl">(a)</span> A magician performs the following trick. First, he prepares three lists $A$, $B$ and $C$, each containing four distinct numbers. He then asks a spectator to secretly choose an integer $n$ between $1$ and $8$, inclusive. The magician asks the spectator three questions: whether $n$ appears in list $A$, whether it appears in list $B$, and whether it appears in list $C$. The spectator must answer each question truthfully with either &ldquo;yes&rdquo; or &ldquo;no&rdquo;. The magician claims that these answers allow him to determine $n$. Can the lists be chosen so that the magician can always determine $n$?</p><p><em>Note:</em> The numbers within each list must be distinct, but a number may appear in more than one list.</p></li><li><p><span class="ct-lbl">(b)</span> Answer the same question when the spectator chooses an integer between $1$ and $16$, inclusive, and the magician asks four questions about membership in four lists $A$, $B$, $C$ and $D$, each containing eight distinct numbers.</p></li></ul></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(a) <strong>Yes</strong>; (b) <strong>Yes</strong></p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Binary digits)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Binary digits</summary><div class="ct-text">
 <p><strong>(a) Yes.</strong> Write $n-1$ in base $2$ with three digits ($n-1\in\{0,\dots,7\}$). Let list $A$ contain the $n$ whose last binary digit is $1$, list $B$ those whose middle digit is $1$, and list $C$ those whose first digit is $1$:
 \[A=\{2,4,6,8\},\qquad B=\{3,4,7,8\},\qquad C=\{5,6,7,8\}.\]
 Each list has four distinct numbers (each digit is $1$ for exactly half of $0,\dots,7$). The three answers tell the magician the three binary digits of $n-1$, hence $n$.</p><p><strong>(b) Yes.</strong> In the same way write $n-1\in\{0,\dots,15\}$ with four binary digits and let the four lists contain the $n$ whose first, second, third, fourth digit is $1$. Each list has $8$ numbers, and the four answers give the binary expansion of $n-1$.</p>
@@ -236,8 +230,7 @@ Each list has four distinct numbers (each digit is $1$ for exactly half of $0,\d
 \[\angle BDC=3\angle DCA\qquad\text{and}\qquad DC=DB.\]
 Determine the measures of the angles $\angle ABC$ and $\angle BCA$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\angle ABC=27^\circ$, $\angle BCA=69^\circ$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Exterior angle and an isosceles triangle)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Exterior angle and an isosceles triangle</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:232px" src="/assets/contests/2026-27/argentina-regional-9_s1.svg" alt="Figure for the solution"></div>
 <p>Let $\angle DCA=x$. The angle $\angle BDC$ is an exterior angle of triangle $ADC$, so
 \[\angle BDC=\angle DAC+\angle DCA=84^\circ+x .\]

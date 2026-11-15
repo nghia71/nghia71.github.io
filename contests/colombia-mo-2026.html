@@ -97,7 +97,6 @@ description: Colombian Mathematical Olympiad 2026: problems with answers and sol
 <p>The 6 problems of the Colombian Mathematical Olympiad 2026, each with our own solutions, hidden until you open them. 5 of them ask for an answer and 1 asks for a proof. Where a problem has a final answer, it is shown separately. Try a problem first, then check.</p><p>The olympiad has two days: Problems 1&ndash;3 on Day 1 and Problems 4&ndash;6 on Day 2.</p>
 </div>
 <div class="ct-credit">Problems: Colombian Mathematical Olympiad 2026, from the AoPS contest collection or the official paper. Solutions written by MCC.</div>
-<div class="ct-bar"><button type="button" onclick="ctAll(true)">Show all answers and solutions</button><button type="button" onclick="ctAll(false)">Hide all</button></div>
 <div class="ct-toc-wrap"><div class="ct-toc-row"><span class="ct-toc-g">Day 1</span><a href="#p1">1</a><a href="#p2">2</a><a href="#p3">3</a></div><div class="ct-toc-row"><span class="ct-toc-g">Day 2</span><a href="#p4">4</a><a href="#p5">5</a><a href="#p6">6</a></div></div>
 
 {% raw %}
@@ -107,8 +106,7 @@ description: Colombian Mathematical Olympiad 2026: problems with answers and sol
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 39: Graph Theory and Structural Combinatorics &middot; Extremal Graph Structure</div>
 <div class="ct-text"><p>A group of $11$ students is participating in a tournament. The tournament consists of a series of $11$ games selected from a list of $22$ possible games. The $11$ chosen games are revealed only on the day of the tournament, and each student must participate in exactly one of the games. To win the competition, the students must win each of the $11$ chosen games. To ensure they win the tournament, the students decide to prepare in advance of the tournament day. It is known that it takes each student $1$ hour of preparation to become an expert at one of the $22$ games and, therefore, guarantee their victory in that game. Each student prepares separately but they agree on which games each will practice. Determine the minimum number of preparation hours required among all of them to guarantee winning the tournament, regardless of which games they have to play on the day of the tournament.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$132$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Each student needs $12$ games; private games plus common games)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Each student needs $12$ games; private games plus common games</summary><div class="ct-text">
 <p>For each student $s$ let $K_s$ be the set of games $s$ prepares; the total number of hours is $\sum_s |K_s|$. The
 students are guaranteed to win exactly when, for every set $G$ of $11$ chosen games, the students can be assigned to the games of $G$, one
 student per game, each student to a game in his own $K_s$.</p><p><em>Lower bound.</em> Suppose some student $s$ prepares at most $11$ games. Then at least $11$ games are outside $K_s$, and if $11$ of them are the
@@ -117,7 +115,8 @@ is at least $11\cdot 12=132$ hours.</p><p><em>Construction with $132$ hours.</em
 &ldquo;private&rdquo; game $g_i$ and the eleven &ldquo;common&rdquo; games $g_{12},\dots,g_{22}$: that is $12$ hours each, $132$ in total. Given the chosen set $G$,
 every student $s_i$ with $g_i\in G$ plays $g_i$. If $j$ students are used in this way, then $G$ contains exactly $11-j$ common games, and the
 remaining $11-j$ students play them, since everybody has prepared every common game. So the tournament is always won.</p><p>The minimum is $\boxed{132}$ hours.</p>
-<h4>Solution 2 (Sliding windows of $12$ consecutive games)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Sliding windows of $12$ consecutive games</summary><div class="ct-text">
 <p>As in any solution, describe a plan by the sets $K_s$ of games each student prepares; the plan works when, for every
 set of $11$ chosen games, each student can be given a different chosen game from his own set.</p><p><em>Lower bound by counting choices.</em> If a student prepares $h$ games, the number of $11$-element sets of games avoiding all of them is
 $\binom{22-h}{11}$, and for each such choice that student cannot be used. So $\binom{22-h}{11}=0$, i.e. $22-h\le 10$ and $h\ge 12$. Summing over
@@ -131,8 +130,7 @@ integers, $c_j\le 22-(11-j)=j+11$. So $c_j$ lies in the window of student $j$, a
 <h3>Problem 2</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 11: Similarity, Homothety, and Ratio Geometry &middot; Nested and Overlapping Similarity</div>
 <div class="ct-text"><p>Let $ABC$ be an acute triangle with $AB &lt; AC$ and let $M$ be the midpoint of the segment $AC$. Let $D$ be the point on $AC$ such that $DB = DC$ and let $E$ be the intersection between the circumcircle of triangle $ABM$ and the line $BD$ (distinct from $B$). Let $P$ and $Q$ be the intersection points of the line $BC$ with the lines $EM$ and $AE$ respectively. Prove that $P$ is the midpoint of the segment $BQ$.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Two similar triangles on the segment $EB$)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Two similar triangles on the segment $EB$</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:390px" src="/assets/contests/2026-27/colombia-mo-2_s1.svg" alt="Figure for the solution"></div>
 <p>Let $\alpha,\beta,\gamma$ be the angles of $ABC$ at $A,B,C$, and let $\omega$ be the circle $ABM$.</p><p><em>Configuration.</em> The perpendicular bisector of $BC$ separates the points nearer to $B$ from those nearer to $C$. Since $AB&lt;AC$, it separates
 $A$ from $C$, so $D$ lies strictly between $A$ and $C$. In the isosceles triangle $DBC$, $DC=\dfrac{BC}{2\cos\gamma}$, while $MC=\dfrac{AC}{2}$.
@@ -157,7 +155,8 @@ $E$ and $\gamma$ at $B$, so $\triangle EBQ\sim\triangle MCB$ (with $E\leftrighta
 \frac{BQ}{CB}=\frac{EB}{MC},\qquad\text{so}\qquad BQ=\frac{BC\cdot EB}{MC}=\frac{2\,BC\cdot EB}{AC}=2\,BP .
 \]
 Since $P$ and $Q$ both lie on the ray $BC$, $P$ is the midpoint of $BQ$.</p>
-<h4>Solution 2 (Coordinates)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Coordinates</summary><div class="ct-text">
 <p>Choose coordinates with $B=(-1,0)$, $C=(1,0)$ and $A$ in the upper half-plane. The point $D$ with $DB=DC$ lies on the perpendicular bisector
 $x=0$ of $BC$; write $D=(0,d)$. As $A$ lies on line $CD$, we can write
 \[
@@ -196,8 +195,7 @@ so $P$ is the midpoint of $BQ$.</p>
 \[a_{n+1} = \begin{cases} \sqrt{a_n} &amp; \text{if } \sqrt{a_n} \text{ is an integer,}\\ a_n + c(a_n) &amp; \text{otherwise.}\end{cases}\]
 Determine all integers that are in all <em>Colombian</em> sequences.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$2,\ 3,\ 4$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Squarefree parts and a descent)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Squarefree parts and a descent</summary><div class="ct-text">
 <p><em>Notation.</em> Every positive integer $x$ can be written uniquely as $x=c(x)\,m(x)$ with $c(x)$ the largest square
 dividing $x$ and $m(x)$ squarefree (take each prime to the largest even power not exceeding its exponent). Then $x$ is a square iff $m(x)=1$,
 and for a square $s$ we have $c(sy)=s\,c(y)$ and $m(sy)=m(y)$.</p><p><em>Only $2,3,4$ can work.</em> For $a=2$ the sequence is $2,3,4,2,3,4,\dots$ ($c(2)=c(3)=1$ and $\sqrt4=2$). So an integer lying in all
@@ -224,7 +222,8 @@ $p_R\ge 2$; with $b_0=2$, $b_{i+1}=4b_i-4$, i.e. $b_i=\frac{2\cdot 4^i+4}{3}$, i
 not a square and $x\ge 9$, the lemma gives a later square $S&lt;9x\le x^2$, followed by $\sqrt S&lt;x$. The remaining non-squares are $3,5,6,7,8$:
 $3\to4\to2$, and $5\to6\to7\to8\to12\to16\to4$, so each of them is followed by $2$ or $4$, which is smaller.</p><p><em>(d) Conclusion.</em> Let $\mu$ be the smallest term of the sequence. By (c), $\mu\le 2$, and by (a), $\mu=2$. So $2$, and hence $3$ and $4$,
 appear in every Colombian sequence.</p><p>The integers in all Colombian sequences are exactly $\boxed{2,\ 3,\ 4}$.</p>
-<h4>Solution 2 (A quantity that never grows from one square jump to the next)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; A quantity that never grows from one square jump to the next</summary><div class="ct-text">
 <p><em>Notation.</em> Every positive integer $x$ can be written uniquely as $x=s^2b$ with $s\ge1$ and $b$ squarefree (take each prime
 to the largest even power not exceeding its exponent in $x$). Then $c(x)=s^2$, and $x$ is a square iff $b=1$. Put
 \[
@@ -256,8 +255,7 @@ $\mu=2$. Hence $2$, and therefore $3$ and $4$, appear in every Colombian sequenc
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 4: Divisibility and Prime Structure &middot; Arithmetic Structure of Products and Powers</div>
 <div class="ct-text"><p>Let $a$ and $b$ be two positive real numbers such that $b \ne 1$. Felipe performs the following procedure. In his first step, he writes the number $a$ on a sheet of paper. From then on, he writes on the sheet the number from the previous step multiplied by $b$. Felipe stops writing numbers when the sheet contains a number greater than $100$ or a number that is not an integer. What is the largest number of numbers the sheet can contain?</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$8$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (The ratio in lowest terms)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; The ratio in lowest terms</summary><div class="ct-text">
 <p>Felipe writes $x_j=ab^j$ for $j=0,1,2,\dots$ and stops right after writing the first number that is greater than $100$
 or not an integer. So if the sheet contains $N$ numbers, then $x_0,\dots,x_{N-2}$ are positive integers at most $100$.</p><p><em>$8$ numbers are possible:</em> $a=1$, $b=2$ gives $1,2,4,8,16,32,64,128$, and Felipe stops at $128&gt;100$.</p><p><em>$9$ numbers are impossible.</em> Then $x_0,\dots,x_7$ would be eight positive integers at most $100$ forming a geometric progression with ratio
 $b\ne1$. The ratio $b=x_1/x_0$ is rational. If $b&lt;1$, read the progression backwards: $x_7,x_6,\dots,x_0$ has ratio $1/b&gt;1$. So we may assume the
@@ -266,7 +264,8 @@ ratio is $p/q&gt;1$ in lowest terms, with $p\ge 2$. Then $x_7=x_0p^7/q^7$ is an 
 x_7=\frac{x_0}{q^7}\,p^7\ge p^7\ge 2^7=128&gt;100,
 \]
 a contradiction. The largest number of numbers is $\boxed{8}$.</p>
-<h4>Solution 2 (Repeated differences)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Repeated differences</summary><div class="ct-text">
 <p>Felipe writes $x_j=ab^j$ and stops right after writing the first number that is greater than $100$ or not an integer. So if the sheet contains $N$ numbers $x_0,\dots,x_{N-1}$, then $x_0,\dots,x_{N-2}$ are positive integers at
 most $100$; and $a=1$, $b=2$ gives $N=8$ ($1,2,\dots,64$ and then $128$).</p><p>Suppose $N\ge 9$, so $x_0,\dots,x_7$ are positive integers at most $100$. Reversing the order if necessary, we may assume the common ratio is
 $r&gt;1$. Form the difference tables $\Delta^0_j=x_j$ and $\Delta^{k+1}_j=\Delta^k_{j+1}-\Delta^k_j$. Each $\Delta^k_j$ is an integer combination
@@ -291,8 +290,7 @@ x_1^{100} &amp;= x_{99} + x_{100}\\
 x_2^{100} &amp;= x_{100} + x_1
 \end{aligned}\]</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$x_1=\dots=x_{100}=0$ or $x_1=\dots=x_{100}=\sqrt[99]{2}$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Looking at the smallest and the largest unknown)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Looking at the smallest and the largest unknown</summary><div class="ct-text">
 <p>Take indices modulo $100$; the system says $x_{i+2}^{100}=x_i+x_{i+1}$ for every $i$. In particular
 \[
 x_i+x_{i+1}\ge 0\qquad\text{for every } i. \tag{1}
@@ -309,7 +307,8 @@ $M\le\sqrt[99]2\le m\le M$, and all unknowns equal $\sqrt[99]2$.</p></li></ul><p
 \[
 \boxed{(x_1,\dots,x_{100})=(0,\dots,0)\quad\text{or}\quad(x_1,\dots,x_{100})=\big(\sqrt[99]{2},\dots,\sqrt[99]{2}\big)} .
 \]</p>
-<h4>Solution 2 (Signs of consecutive differences)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Signs of consecutive differences</summary><div class="ct-text">
 <p>Take indices modulo $100$; the system says $x_{i+2}^{100}=x_i+x_{i+1}$ for every $i$ (call this equation $(E_i)$). In
 particular
 \[
@@ -347,8 +346,7 @@ $\big(\sqrt[99]2\big)^{100}=2\sqrt[99]2$. The solutions are
 <div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 18: Invariants and Monovariants &middot; Monovariants and Directional Change</div>
 <div class="ct-text"><p>Let $n$ be a positive integer. Initially, all cells of a $n \times n$ board are painted white. On each turn, it is allowed to paint one cell of the board black, as long as for every white cell there exist at least two other white cells that share a side with it. Find the greatest amount of cells that might be painted black.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$n^2-2n$ for even $n$, $n^2-2n-1$ for odd $n\ge 3$ (and $1$ for $n=1$)</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (The perimeter of the white region)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; The perimeter of the white region</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:282px" src="/assets/contests/2026-27/colombia-mo-6_s1.svg" alt="Figure for the solution"></div>
 <p>We read the rule as: after each painting, every white cell must have at least two white neighbours (cells sharing a
 side). For $n=1$ the single cell can be painted (no white cell remains), so the answer is $1$; from now on $n\ge2$.</p><p><em>Perimeter.</em> For a set $X$ of cells let $\operatorname{per}(X)$ be the number of unit edges that separate a cell of $X$ from a cell outside $X$
@@ -391,7 +389,8 @@ be added legally, which fills the $3\times 3$ square, and then the board is fill
 \[
 \boxed{\begin{cases} n^2-2n, &amp; n \text{ even},\\ n^2-2n-1, &amp; n\ge 3 \text{ odd},\\ 1, &amp; n=1.\end{cases}}
 \]</p>
-<h4>Solution 2 (Counting edges, and cycles with nothing inside)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Counting edges, and cycles with nothing inside</summary><div class="ct-text">
 <p>We read the rule as: after each painting, every white cell must have at least two white neighbours (cells sharing a
 side). For $n=1$ the single cell can be painted, so the answer is $1$; from now on $n\ge2$.</p><p><em>Edge count.</em> Join two cells by an edge when they share a side; the board has $2n(n-1)$ edges. For a set $X$ of cells let $e(X)$ be the
 number of edges with both ends in $X$. Let $W_0\supset W_1\supset\dots\supset W_k=W$ be the white sets during a legal painting, $W_0$ the whole board,

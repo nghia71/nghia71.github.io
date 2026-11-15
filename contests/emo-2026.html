@@ -97,7 +97,6 @@ description: European Mathematical Olympiad 2026: problems with answers and solu
 <p>The 8 problems of the European Mathematical Olympiad 2026, each with our own solutions, hidden until you open them. 6 of them ask for an answer and 2 ask for a proof. Where a problem has a final answer, it is shown separately. Try a problem first, then check.</p><p>The EMO has eight problems over two days.</p>
 </div>
 <div class="ct-credit">Problems: European Mathematical Olympiad 2026, from the AoPS contest collection or the official paper. Solutions written by MCC.</div>
-<div class="ct-bar"><button type="button" onclick="ctAll(true)">Show all answers and solutions</button><button type="button" onclick="ctAll(false)">Hide all</button></div>
 <div class="ct-toc-wrap"><div class="ct-toc-row"><span class="ct-toc-g">Day 1</span><a href="#p1">1</a><a href="#p2">2</a><a href="#p3">3</a><a href="#p4">4</a></div><div class="ct-toc-row"><span class="ct-toc-g">Day 2</span><a href="#p5">5</a><a href="#p6">6</a><a href="#p7">7</a><a href="#p8">8</a></div></div>
 
 {% raw %}
@@ -107,8 +106,7 @@ description: European Mathematical Olympiad 2026: problems with answers and solu
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 49: Combinatorial Number Theory and Structure &middot; Additive Structure and Sums of Integers</div>
 <div class="ct-text"><p>Determine all positive integers $n$ with the following property: the set $\{1,2,\ldots,2n-1,2n\}$ can be partitioned into two disjoint sets $\mathcal{A}$ and $\mathcal{B}$ with $n$ elements each, such that the sum of the elements of $\mathcal{A}$ divides the sum of the elements of $\mathcal{B}$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>all $n$ with $n\not\equiv 5\pmod 6$ (that is, $n$ even or $n\not\equiv2\pmod3$)</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (The quotient is $1$ or $2$, and all sums occur)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; The quotient is $1$ or $2$, and all sums occur</summary><div class="ct-text">
 <p>Let $S=1+2+\dots+2n=n(2n+1)$, and let $a,b$ be the sums of $\mathcal A,\mathcal B$, so $a+b=S$.</p><p><strong>Necessity.</strong> If $a\mid b$, write $b=ka$ with $k\ge1$; then $S=(k+1)a$. Since $\mathcal A$ has $n$ distinct elements, $a\ge1+2+\dots+n=\frac{n(n+1)}2$, hence
 \[k+1=\frac Sa\le\frac{2n(2n+1)}{n(n+1)}=\frac{4n+2}{n+1}&lt;4 ,\]
 so $k+1\in\{2,3\}$. If $k+1=2$, then $S=2a$ is even, so $n$ is even ($2n+1$ is odd). If $k+1=3$, then $3\mid n(2n+1)$; for $n\equiv2\pmod3$ both factors are
@@ -118,7 +116,8 @@ Start with $\{1,\dots,n\}$ (sum $\frac{n(n+1)}2$). As long as the current set $X
 is $\frac{n(3n+1)}2$, so every value in between is reached.</p><p><strong>Sufficiency.</strong> If $n$ is even, take $a=\frac S2$; if $n\equiv0,1\pmod 3$, take $a=\frac S3$ (an integer, as $3\mid n(2n+1)$). In both cases
 $\frac{n(n+1)}2\le a\le\frac S2\le\frac{n(3n+1)}2$ (for $a=\frac S3$ the first inequality is $2(2n+1)\ge3(n+1)$, true for $n\ge1$). By the lemma some $n$-element
 $\mathcal A$ has sum $a$; its complement $\mathcal B$ has $n$ elements and sum $S-a=a$ or $2a$, a multiple of $a$.</p><p>So the answer is: all positive integers $n$ with $\boxed{n\not\equiv 5\pmod 6}$.</p>
-<h4>Solution 2 (Bounding $\mathcal B$ and explicit partitions)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Bounding $\mathcal B$ and explicit partitions</summary><div class="ct-text">
 <p>Let $S=n(2n+1)$ and let $a,b$ be the sums of $\mathcal A,\mathcal B$.</p><p><strong>Necessity.</strong> Suppose $b=ka$ with $k$ a positive integer. The set $\mathcal A$ has sum at least $1+\dots+n=\frac{n(n+1)}2$, and $\mathcal B$ has sum at most
 $(n+1)+\dots+2n=\frac{n(3n+1)}2$. Hence
 \[k=\frac ba\le\frac{3n+1}{n+1}&lt;3,\]
@@ -133,8 +132,7 @@ blocks are disjoint because $n-u-1&lt;n-u+r\le 2n-u-1&lt;2n-u+1$, so $|\mathcal 
 <h3>Problem 2</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure &middot; Power of a Point</div>
 <div class="ct-text"><p>Given a triangle $ABC$, let $K$ and $L$ be distinct points on side $AC$ such that $\angle ABK=\angle CBL$. Rays $BK$ and $BL$ are not orthogonal to $AC$, and intersect the circumcircle of triangle $ABC$ for the second time at points $K_1$ and $L_1$, respectively. Points $K_2$ and $L_2$ lie on the tangents to the circumcircle of triangle $ABC$ at points $K_1$ and $L_1$, respectively, such that $\angle BKK_2=\angle BLL_2=90^\circ$.</p><p>Prove that the points $A,C,K_2$, and $L_2$ lie on a circle.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (An auxiliary point on both perpendiculars)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; An auxiliary point on both perpendiculars</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:283px" src="/assets/contests/2026-27/emo-2_s1.svg" alt="Figure for the solution"></div>
 <p>We use directed angles $\measuredangle(\ell,m)$ between lines, taken modulo $180^\circ$, and signed products of collinear segments.
 If one of $K,L$ is an endpoint of $AC$, the angle condition forces the other to be the opposite endpoint ($\angle ABK=0$ if and only if
@@ -155,7 +153,8 @@ because $K$ lies inside $\omega$, between $B$ and $K_1$, while $W=V$ would give 
 and $C$). By the converse of the power of a point (the circle through $A,C,V$ meets $\ell_K$ a second time at the point $X$ with $KV\cdot KX=KA\cdot KC$), the point
 $K_2$ lies on the circle $\Gamma$ through $A,C,V$.</p><p><strong>Step 5.</strong> The hypothesis is symmetric under exchanging $A\leftrightarrow C$ and $K\leftrightarrow L$, and $V$ is defined symmetrically. Repeating Steps 2&ndash;4 for
 $L$ shows that $L_2$ also lies on the circle through $A,C,V$, which is $\Gamma$. Hence $A,C,K_2,L_2$ lie on one circle.</p>
-<h4>Solution 2 (Coordinates and the circles through $A$ and $C$)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Coordinates and the circles through $A$ and $C$</summary><div class="ct-text">
 <p>If one of $K,L$ is an endpoint of $AC$, the angle condition forces the other to be the opposite endpoint ($\angle ABK=0$ if and only if
 $\angle CBL=0$, and $\angle ABK=\angle ABC$ if and only if $\angle CBL=\angle ABC$). Then $\{K_1,L_1\}=\{A,C\}$, and the point $K_2$ or $L_2$ attached to
 an endpoint $X\in\{A,C\}$ lies on the tangent at $X$ and on the perpendicular to $BX$ at $X$. These two lines through $X$ coincide only if $BX$ is a diameter,
@@ -197,8 +196,7 @@ a known property of two cevians symmetric about the bisector of angle $B$.</p>
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 39: Graph Theory and Structural Combinatorics &middot; Extremal Graph Structure</div>
 <div class="ct-text"><p>Let $n\geq 2$ be an integer. Euroland has $n$ cities, with direct flights connecting every pair of cities in both directions. For each pair of cities, the emperor assigns a positive price, which is the same in each direction. For two distinct cities $A$ and $B$, let $D(A,B)$ be the number of flights in the cheapest journey between them; if there are multiple such journeys, then $D(A,B)$ is defined by the longest one.</p><p>For each value of $n$, find the largest average value of $D(A,B)$ over all pairs of distinct cities $(A,B)$, that the emperor can achieve.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\dfrac{n+1}{3}$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Count triples with a city in the middle)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Count triples with a city in the middle</summary><div class="ct-text">
 <p>For cities $X\ne Y$ let $d(X,Y)$ be the price of the cheapest journey from $X$ to $Y$, and for each pair fix the journey that defines $D(X,Y)$
 (cheapest, and with the largest number of flights among cheapest ones). A cheapest journey never visits a city twice (cutting out the loop would make it strictly
 cheaper, as prices are positive), so it has $D(X,Y)-1$ intermediate cities. Call $Z$ <em>inner</em> for the pair $\{X,Y\}$ if $Z$ is an intermediate city of the fixed
@@ -218,8 +216,7 @@ and the average is $\frac{n+1}3$. Hence the largest achievable average is $\boxe
 <div class="ct-meta"><span class="ct-pd ct-pd-S" title="Superhard, on the LPS VII scale">S</span>Number Theory &middot; LPS VII, Chapter 21: Arithmetic Functions and Multiplicative Structure &middot; Function Equations on Integers</div>
 <div class="ct-text"><p>Let $\mathbb{N}$ be the set of positive integers. Find all functions $f:\mathbb{N}\to\mathbb{N}$ that simultaneously satisfy the following properties:</p><ul class="ct-parts"><li><p><span class="ct-lbl">(i)</span> $f(mn)=f(m)f(n)$ for all positive integers $m$ and $n$;</p></li><li><p><span class="ct-lbl">(ii)</span> There exists a positive integer $c$ such that $f(n)\leq n^c$ for all positive integers $n$;</p></li><li><p><span class="ct-lbl">(iii)</span> The numbers $f(n)+m$ and $f(m)+n+1$ are coprime for all positive integers $m$ and $n$.</p></li></ul></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$f(n)=n$ for all $n$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Primes in progressions kill every exponent but one)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Primes in progressions kill every exponent but one</summary><div class="ct-text">
 <p><strong>The identity works.</strong> For $f(n)=n$, (i) holds, (ii) holds with $c=1$, and $n+m$ and $m+n+1$ are consecutive integers, hence coprime.</p><p>Conversely, let $f$ satisfy (i)&ndash;(iii). From (i), $f(1)=f(1)^2$, so $f(1)=1$. Condition (iii) with $m=1$, $n=2$ says that $f(2)+1$ and $f(1)+3=4$ are coprime, so
 $f(2)+1$ is odd and <em>$f(2)$ is even</em>. We use one theorem without proof:</p><p><em>Dirichlet's theorem.</em> If $Q\ge1$ and $b$ are coprime integers, then there are infinitely many primes $r$ with $r\equiv b\pmod Q$.</p><p><strong>Step 1: $f(p)=p^{a_p}$ with $0\le a_p\le c$ for every prime $p$.</strong> Suppose a prime $r\ne p$ divides $f(p)$. As $p$ is invertible modulo $r$, there is
 $t\in\{1,\dots,r\}$ with $pt\equiv-1-f(r)\pmod r$. Take $n=pt$ and $m=r$. Then $f(n)+m=f(p)f(t)+r$ and $f(m)+n+1=f(r)+pt+1$ are both divisible by $r$,
@@ -238,7 +235,8 @@ $q_l$.</p><p>Now $f(s_l)=f(p)^{j_l}=p^{kj_l}=s_l^{\,k}$, so $q_l\nmid f(s_l)$ an
 theorem there is an integer $b$, coprime to $Q=q_1q_2\cdots q_c$, with $b\equiv-s_l^{\,k}\pmod{q_l}$ for $l=1,\dots,c$. By Dirichlet's theorem there is a prime
 $r\equiv b\pmod Q$. Then $a_r\ne l$ for every $l\in\{1,\dots,c\}$; but $1\le a_r\le c$ by Steps 1 and 3. This contradiction proves Step 4.</p><p><strong>Conclusion.</strong> By Steps 1&ndash;4, $f(p)=p$ for every prime $p$. As $f(1)=1$ and $f$ is completely multiplicative by (i), $f(n)=n$ for every positive integer $n$.
 So the only function is $\boxed{f(n)=n}$.</p>
-<h4>Solution 2 (An elementary proof with powers of $2$)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; An elementary proof with powers of $2$</summary><div class="ct-text">
 <p>The identity works: for $f(n)=n$, (i) holds, (ii) holds with $c=1$, and $n+m$ and $m+n+1$ are consecutive integers, hence coprime. Conversely, let $f$ satisfy (i) and (iii); condition (ii) will not be needed. By (i), $f(1)=1$.</p><p><strong>Step 1: if a prime $p$ divides $f(u)$, then $p\mid u$.</strong> Suppose $p\mid f(u)$ and $p\nmid u$. Since $u$ is invertible modulo $p$, every residue class
 modulo $p$ contains a multiple $n=ux$ of $u$, and then $p\mid f(u)f(x)=f(n)$. Take such an $n\equiv-1\pmod p$ and $m=p$: then $p\mid f(n)+m$, while
 $f(m)+n+1\equiv f(p)\pmod p$; by (iii), $p\nmid f(p)$. Now take $m=p^{p-1}$, so that $f(m)=f(p)^{p-1}\equiv1\pmod p$ by Fermat's little theorem, and a multiple
@@ -275,8 +273,7 @@ x_{n-1}+x_n=x_nx_1+1\\
 x_n+x_1=x_1x_2+1.
 \end{cases}\]</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$n$ odd: only $x_1=\dots=x_n=1$. $n$ even: $x_1=x_3=\dots=x_{n-1}=1,\ x_2=x_4=\dots=x_n=t$, or $x_2=x_4=\dots=x_n=1,\ x_1=x_3=\dots=x_{n-1}=t$, with any $t&gt;0$.</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Factor out $x-1$)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Factor out $x-1$</summary><div class="ct-text">
 <p>Indices are taken modulo $n$. The $i$-th equation $x_i+x_{i+1}=x_{i+1}x_{i+2}+1$ can be rewritten as
 \[x_i-1=x_{i+1}\,(x_{i+2}-1).\]
 Put $y_i=x_i-1$; then $y_i=x_{i+1}y_{i+2}$ with $x_{i+1}&gt;0$. Consequently:</p><ul class="ct-ul"><li><p>$y_i=0\iff y_{i+2}=0$, and $y_i,y_{i+2}$ have the same sign;</p></li><li><p>$|y_i|=x_{i+1}|y_{i+2}|$.</p></li></ul><p>Call the indices $i,i+2,i+4,\dots$ a <em>chain</em>. If $n$ is odd there is one chain containing all indices; if $n$ is even there are two chains, the odd and the even
@@ -294,8 +291,7 @@ equal to $1$ is symmetric.</p><p>So for odd $n$ the only solution is $\boxed{x_1
 <div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Number Theory &middot; LPS VII, Chapter 4: Divisibility and Prime Structure &middot; Arithmetic Structure of Products and Powers</div>
 <div class="ct-text"><p>Determine all positive integers $n\geq 2$ with the following property: for every positive divisor $d$ of $n$, the product of all the other positive divisors of $n$ is a perfect power.</p><p><em>A perfect power is a number of the form $a^b$ for some integers $a\geq 1$ and $b\geq 2$.</em></p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$n=p^k$ with $p$ prime and $k\ge3$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (A Bezout choice of the divisor)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; A Bezout choice of the divisor</summary><div class="ct-text">
 <p>Let $n=p_1^{e_1}\cdots p_s^{e_s}$ and $\tau=\prod(e_i+1)$, the number of divisors. Pairing $d$ with $n/d$ gives $\bigl(\prod_{d\mid n}d\bigr)^2=n^\tau$, so the
 product of all divisors is $n^{\tau/2}$, and the product of all divisors except $d=\prod p_i^{f_i}$ is
 \[N_d=\frac{n^{\tau/2}}{d}=\prod_i p_i^{\,u_i-f_i},\qquad u_i=\frac{e_i\tau}{2}\in\mathbb Z .\]
@@ -314,8 +310,7 @@ Hence $\gcd(E_1,E_2)=1$, so $N_d\ne1$ and the exponents of $N_d$ have no common 
 <h3>Problem 7</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 51: Spiral Similarity and Advanced Transformational Geometry &middot; Spiral Similarity Centers</div>
 <div class="ct-text"><p>Let $ABC$ be an acute angle triangle with $AB&lt;AC$. Let $M$ be the midpoint of segment $BC$. Let $E$ and $F$ be points on segments $AC$ and $AB$, respectively, such that the circumcircle of triangle $MEF$ is tangent to $BC$. The circumcircles of triangles $AEF$ and $ABC$ intersect at a point $P\neq A$. Let $Q$ be a point on the circumcircle of triangle $AEF$ such that $AQ$ is perpendicular to $BC$.</p><p>Prove that $PQ$ passes through the circumcenter of triangle $MEF$.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (The spiral similarity at $P$)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; The spiral similarity at $P$</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:260px" src="/assets/contests/2026-27/emo-7_s1.svg" alt="Figure for the solution"></div>
 <p>Directed angles $\measuredangle(\ell,m)$ are taken modulo $180^\circ$. Let $\omega=(ABC)$, $\omega_1=(AEF)$, let $\sigma=(MEF)$ with centre $O'$, and let
 $M_1$ be the midpoint of $EF$.</p><p><strong>Step 0.</strong> The circle $\sigma$ passes through $M\in BC$ and is tangent to $BC$, so it touches $BC$ at $M$ and $O'M\perp BC$. Also $O'M_1\perp EF$. The line $EF$ is
@@ -334,7 +329,8 @@ through $M,M_1,T$, which contains $P$ by Step 1. So $P,M,O',T$ are concyclic.</p
 $BC$, hence parallel, so $\measuredangle(QP,QA)=\measuredangle(QP,O'M)$. Thus $\measuredangle(O'P,O'M)=\measuredangle(QP,O'M)$: the lines $O'P$ and $QP$ are parallel,
 and since they share $P$, they coincide. Hence $PQ$ passes through $O'$, the circumcentre of $MEF$.</p><p><em>Remark.</em> Tangency was used only to place $O'$ on the perpendicular bisector of $BC$. The proof shows more: for any $E\in AC$, $F\in AB$, the line $PQ$ passes
 through the intersection of the perpendicular bisectors of $EF$ and $BC$.</p>
-<h4>Solution 2 (Coordinates)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Coordinates</summary><div class="ct-text">
 <p>Put $A=(0,0)$ and let $BC$ be the line $y=-h$ with $h&gt;0$: $B=(b,-h)$, $C=(c,-h)$. As the triangle is acute, the foot $(0,-h)$ of the altitude from
 $A$ lies strictly between $B$ and $C$, so $b&lt;0&lt;c$. Let $m=\frac{b+c}2$, so $M=(m,-h)$, and let $O'$ be the centre of the circle $\sigma=(MEF)$.</p><p><strong>The three circles.</strong> Circles through $A$ have equations $x^2+y^2+\alpha x+\beta y=0$.</p><ul class="ct-ul"><li><p>$\omega=(ABC)$: its centre lies on the perpendicular bisector $x=m$ of $BC$, so $\omega$ is $x^2+y^2-2mx+Vy=0$. On $y=-h$ this reads
 $x^2-2mx+h^2-Vh=0$, with roots $b,c$; hence $bc=h(h-V)$.</p></li><li><p>$\omega_1=(AEF)$: $x^2+y^2+ux+vy=0$.</p></li><li><p>$\sigma$ passes through $M\in BC$ and is tangent to $BC$, so it touches $BC$ at $M$ and $O'=(m,k-h)$ for some $k$. Since $M\in\sigma$, $\sigma$ is
@@ -362,8 +358,7 @@ by the second and then the first relation in $(*)$. Hence the line $PQ$ passes t
 <div class="ct-meta"><span class="ct-pd ct-pd-S" title="Superhard, on the LPS VII scale">S</span>Geometry &middot; LPS VII, Chapter 52: Advanced Combinatorial Structure and Hybrid Methods &middot; Combinatorics with Geometric Insight</div>
 <div class="ct-text"><p>For a convex polygon $\mathcal{P}$, let $\mathcal{B}$ be the set of points on the boundary of $\mathcal{P}$. A function $f:\mathcal{B}\to\mathcal{B}$ is <em>European</em> if it satisfies the following properties:</p><ul class="ct-parts"><li><p><span class="ct-lbl">(i)</span> $f(f(X))=X$ for all points $X\in\mathcal{B}$;</p></li><li><p><span class="ct-lbl">(ii)</span> Line segments $Yf(Y)$ and $Zf(Z)$ have a common point strictly inside the polygon, for all points $Y,Z\in\mathcal{B}$.</p></li></ul><p>What is the largest real number $c$ such that for any convex polygon $\mathcal{P}$ and European function $f$, there is a point $W\in\mathcal{B}$ such that the length of line segment $Wf(W)$ is at least $c$ times the perimeter of $\mathcal{P}$?</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$c=\dfrac1{\pi+2}$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (A half-disc example and a matching argument)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; A half-disc example and a matching argument</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:259px" src="/assets/contests/2026-27/emo-8_s1.svg" alt="Figure for the solution"></div>
 <p>Let $L$ be the perimeter of $\mathcal P$. We show that $c=\frac1{\pi+2}$ works and that no larger $c$ does.</p><p><strong>Upper bound: no $c&gt;\frac1{\pi+2}$ works (a polygon close to a half-disc).</strong> Fix $0&lt;\theta&lt;\pi$ and a large $N$. Let $\mathcal P$ be the convex polygon with
 vertices $O$ and $U_0,\dots,U_N$, where the $U_j$ lie on the unit circle around $O$ at the angles $\frac{\pi-\theta}2+\frac{j\theta}N$; it lies in the angle of size

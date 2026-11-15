@@ -97,7 +97,6 @@ description: Canadian Junior Mathematical Olympiad 2026: problems with answers a
 <p>The 2 problems of the Canadian Junior Mathematical Olympiad 2026, each with our own solutions, hidden until you open them. 1 of them asks for an answer and 1 asks for a proof. Where a problem has a final answer, it is shown separately. Try a problem first, then check.</p><p>The Canadian Junior Mathematical Olympiad 2026. Problems J3, J4 and J5 are also CMO 2026 Problems 1, 2 and 3.</p>
 </div>
 <div class="ct-credit">Problems: Canadian Junior Mathematical Olympiad 2026, from the AoPS contest collection or the official paper. Solutions written by MCC.</div>
-<div class="ct-bar"><button type="button" onclick="ctAll(true)">Show all answers and solutions</button><button type="button" onclick="ctAll(false)">Hide all</button></div>
 <div class="ct-toc-wrap"><div class="ct-toc-row"><a href="#p1">J1</a><a href="#p2">J2</a></div></div>
 
 {% raw %}
@@ -106,13 +105,13 @@ description: Canadian Junior Mathematical Olympiad 2026: problems with answers a
 <div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Algebra &middot; LPS VI, Chapter 45: Inequalities and Absolute Value &middot; Bounding Integer Solutions</div>
 <div class="ct-text"><p>Let $a,b,c$ be <em>distinct</em> positive integers with $a+b+c=29$.</p><p>What is the smallest possible value of $a^2+b^2+c^2$?</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\boxed{285}$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Deviations from $10$)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Deviations from $10$</summary><div class="ct-text">
 <p>Write $a=10+u$, $b=10+v$, $c=10+w$. Then $u,v,w$ are distinct integers with $u+v+w=29-30=-1$, and
 \[a^2+b^2+c^2=300+20(u+v+w)+u^2+v^2+w^2=280+u^2+v^2+w^2 .\]
 The only three distinct integers with all absolute values at most $1$ are $-1,0,1$, whose sum is $0\ne-1$. Hence one of $u,v,w$ has absolute value at least $2$, so its square is at least $4$; the other two are distinct, so their squares add up to at least $0+1=1$. Thus $u^2+v^2+w^2\ge5$ and $a^2+b^2+c^2\ge285$.
 Equality holds for $(u,v,w)=(-2,0,1)$, i.e. $\{a,b,c\}=\{8,10,11\}$, and indeed $8+10+11=29$ and $64+100+121=285$. The smallest value is $\boxed{285}$.</p>
-<h4>Solution 2 (Gaps between the numbers)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Gaps between the numbers</summary><div class="ct-text">
 <p>Let $a&lt;b&lt;c$ and put $p=b-a\ge1$, $q=c-b\ge1$. The identity
 \[3(a^2+b^2+c^2)=(a+b+c)^2+(a-b)^2+(b-c)^2+(c-a)^2\]
 gives $a^2+b^2+c^2=\dfrac{841+p^2+q^2+(p+q)^2}{3}$, so we must minimise $F=p^2+q^2+(p+q)^2$.
@@ -125,15 +124,15 @@ For $(p,q)=(2,1)$ we get $3a=29-5$, $a=8$, so $(a,b,c)=(8,10,11)$ attains $285$.
 <h3>J2</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VII scale">E</span>Geometry &middot; LPS VII, Chapter 40: Vector Geometry and Affine Structure &middot; Vector Addition and Balance Relations</div>
 <div class="ct-text"><p>Consider a trapezoid $ABCD$, where sides $AB$, $CD$ are parallel. Points $W,X,Y,Z$ are given such that $BCWX$ and $ADYZ$ form rhombi, and the interiors of the three quadrilaterals $ABCD$, $BCWX$, and $ADYZ$ are disjoint.</p><p>Show that the distance between the centers of $BCWX$ and $ADYZ$ is at most half the perimeter of $ABCD$.</p><p><em>Remark:</em> The center of a rhombus is the intersection of its diagonals.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Through the midpoints of the legs)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Through the midpoints of the legs</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:387px" src="/assets/contests/2026-27/cjmo-2_s1.svg" alt="Figure for the solution"></div>
 <p>Let $M$ and $N$ be the centers of $BCWX$ and $ADYZ$, and let $K$ and $L$ be the midpoints of $BC$ and $AD$. We use vectors.</p><p>Since $BCWX$ is a rhombus (vertices in this order), its center is the midpoint of the diagonal $CX$, so
 \[\vec{KM}=\tfrac12(C+X)-\tfrac12(B+C)=\tfrac12\overrightarrow{BX},\qquad KM=\tfrac12BX=\tfrac12BC .\]
 In the same way the center of $ADYZ$ is the midpoint of $DZ$, so $\vec{LN}=\tfrac12\overrightarrow{AZ}$ and $LN=\tfrac12AD$.</p><p>The segment $LK$ is the midline of the trapezoid: $\vec{LK}=\tfrac12(B+C)-\tfrac12(A+D)=\tfrac12\bigl(\overrightarrow{AB}+\overrightarrow{DC}\bigr)$. Because $AB\parallel CD$ and $ABCD$ is a (convex) trapezoid, the vectors $\overrightarrow{AB}$ and $\overrightarrow{DC}$ point in the same direction, so $LK=\tfrac12(AB+CD)$.</p><p>By the triangle inequality along the broken line $N\to L\to K\to M$,
 \[MN\le NL+LK+KM=\tfrac12AD+\tfrac12(AB+CD)+\tfrac12BC=\tfrac12(AB+BC+CD+DA),\]
 which is half the perimeter of $ABCD$.</p>
-<h4>Solution 2 (Through the vertices $D,C,B,A$)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Through the vertices $D,C,B,A$</summary><div class="ct-text">
 <p>Let $M$ and $N$ be the centers of $BCWX$ and $ADYZ$. The center of a rhombus is the midpoint of each diagonal; in $BCWX$ the diagonals are $BW$ and $CX$, in $ADYZ$ they are $AY$ and $DZ$. Hence $M=\tfrac12(C+X)$ and $N=\tfrac12(D+Z)$, and
 \[\overrightarrow{NM}=\tfrac12\bigl(\overrightarrow{DC}+\overrightarrow{ZX}\bigr),\qquad \overrightarrow{ZX}=\overrightarrow{ZA}+\overrightarrow{AB}+\overrightarrow{BX}.\]
 Now $ZA=AD$ and $BX=BC$ (sides of the rhombi). By the triangle inequality,

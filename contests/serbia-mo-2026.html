@@ -97,7 +97,6 @@ description: Serbian Mathematical Olympiad 2026: problems with answers and solut
 <p>The 6 problems of the Serbian Mathematical Olympiad 2026, each with our own solutions, hidden until you open them. 4 of them ask for an answer and 2 ask for a proof. Where a problem has a final answer, it is shown separately. Try a problem first, then check.</p><p>The olympiad has two days with three problems each.</p>
 </div>
 <div class="ct-credit">Problems: Serbian Mathematical Olympiad 2026, from the AoPS contest collection or the official paper. Solutions written by MCC.</div>
-<div class="ct-bar"><button type="button" onclick="ctAll(true)">Show all answers and solutions</button><button type="button" onclick="ctAll(false)">Hide all</button></div>
 <div class="ct-toc-wrap"><div class="ct-toc-row"><span class="ct-toc-g">Day 1</span><a href="#p1">1</a><a href="#p2">2</a><a href="#p3">3</a></div><div class="ct-toc-row"><span class="ct-toc-g">Day 2</span><a href="#p4">4</a><a href="#p5">5</a><a href="#p6">6</a></div></div>
 
 {% raw %}
@@ -109,8 +108,7 @@ description: Serbian Mathematical Olympiad 2026: problems with answers and solut
 \[\{\pi(1),2\pi(2),3\pi(3),\dots,2026\pi(2026)\},\]
 if $\pi$ is a permutation of the set $\{1,2,\dots,2026\}$?</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$2025$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Wilson's theorem on the odd half, and a construction by residues)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Wilson's theorem on the odd half, and a construction by residues</summary><div class="ct-text">
 <p>Let $p=1013$, a prime, so $2026=2p$. By the Chinese remainder theorem a residue modulo $2p$ is determined by its parity and its residue
 modulo $p$. For $r\in\mathbb Z_p$ let $o(r)$ and $e(r)$ be the odd and the even number in $\{1,\dots,2p\}$ congruent to $r$ modulo $p$; the odd
 numbers $1,3,\dots,2p-1$ are pairwise incongruent modulo $p$ (two of them differ by an even number of absolute value less than $2p$), so every
@@ -134,7 +132,8 @@ $u\in\mathbb Z_{p-1}$. If $\pi(o(g^u))=o(g^{\sigma(u)})$ and the products are pa
 $u\mapsto u+\sigma(u)$ are bijections of $\mathbb Z_{p-1}$; summing over $u$ gives $\sum u+\sum u\equiv\sum u$, so
 $\sum_{u=0}^{p-2}u=\frac{(p-1)(p-2)}2\equiv0\pmod{p-1}$, which is false because $p-2$ is odd. (A cyclic group of even order has no
 complete mapping.)</p>
-<h4>Solution 2 (Wilson's theorem, and a construction by discrete logarithms)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Wilson's theorem, and a construction by discrete logarithms</summary><div class="ct-text">
 <p>Let $p=1013$; it is prime (no prime up to $31$ divides
 it, and $32^2&gt;1013$), and $2026=2p$. By the Chinese remainder theorem a residue modulo $2p$ is determined by its parity and its residue modulo
 $p$. For $r\in\mathbb Z_p$ let $o(r)$ and $e(r)$ be the odd and the even number in $\{1,\dots,2p\}$ congruent to $r$ modulo $p$. Two distinct odd
@@ -167,8 +166,7 @@ nonzero residues. So $p-1$ odd residues occur. (The remaining product $o(g^{2h-1
 <h3>Problem 2</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure &middot; Radical Axis and Radical Center</div>
 <div class="ct-text"><p>Let $\triangle ABC$ be an acute triangle with $AB&lt;AC$. Let $D$ and $E$ be the feet of the altitudes from vertices $A$ and $B$, respectively, let $H$ be the orthocenter of $\triangle ABC$, and let $F$ be the intersection of the bisector of the interior angle at vertex $A$ with the line $BC$. Let $I$ be the intersection point of the lines $AF$ and $BE$. If the circumcircles of triangles $\triangle BHC$ and $\triangle DFI$ intersect at points $M$ and $P$, prove that the quadrilateral $AEMP$ is cyclic.</p></div>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (A circle of the pencil through $M$ and $P$)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; A circle of the pencil through $M$ and $P$</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:383px" src="/assets/contests/2026-27/serbia-mo-2_s1.svg" alt="Figure for the solution"></div>
 <p>Let $a,b,c$ be the sides and $\alpha,\beta,\gamma$ the angles of triangle $ABC$. Let $\omega_1$ be the circle $BHC$, $\omega_2$ the circle
 $DFI$, and $p_1(Z)$, $p_2(Z)$ the powers of a point $Z$ with respect to them.</p><p><em>Step 1: a criterion.</em> In coordinates, $p_1(Z)=|Z|^2+(\text{linear})$ and $p_2(Z)=|Z|^2+(\text{linear})$. Hence for any real $\lambda$ the
@@ -214,8 +212,7 @@ we do not reproduce that argument here.</p>
 \[\{A_1,A_2,\dots,A_{2n}\}\cup\{B_1,B_2,\dots,B_m\},\]
 and color each of these segments with one of the given $n$ colors, in such a way that the original polygon is partitioned into convex quadrilaterals, each side of each quadrilateral being one of the drawn segments or a side of the polygon, with the property that in each of them the opposite sides are colored the same color.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$m_{\min}=\dfrac{(n-1)(n-2)}{2}$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Colour strips, an angle count, and a rhombus tiling)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Colour strips, an angle count, and a rhombus tiling</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/serbia-mo-3_s1.svg" alt="Figure for the solution"></div>
 <p>By the statement, each side of each quadrilateral is one of the drawn segments or a side of the $2n$-gon, and it carries that colour. Let $F$ be the number of quadrilaterals. Say the two opposite sides $A_iA_{i+1}$ and $A_{i+n}A_{i+n+1}$ have colour $c_i$.</p><p><em>Step 1: $F\le m+n-1$.</em> The angles of all quadrilaterals add up to $2\pi F$. Group them by vertex. At a vertex $A_i$ of the polygon they fill
 the polygon's angle $\pi-\frac\pi n$ (no quadrilateral can have $A_i$ inside one of its sides, since that needs a straight angle there). At a point
@@ -264,8 +261,7 @@ sides of each rhombus are parallel, hence of the same colour. So $m=\frac{(n-1)(
 <div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 44: Combinatorial Games and Strategy &middot; Recursive Game Structure</div>
 <div class="ct-text"><p>In the plane, $n=2k+1$, $k\in\mathbb{N}$, points are given, no three of which are collinear. Maja and Kosta play the following game: at the beginning, Maja connects every two of these $n$ points by a segment, and assigns a direction to each segment toward one of its two endpoints, in any way she wishes. After that, they play a game consisting of $k$ consecutive rounds. In each round, Kosta first chooses one of the points that has not been chosen earlier in the game, after which Maja does the same, and then the loser of the round is the player whose chosen point is the endpoint toward which the segment between the two points chosen in that round is directed. Maja's goal is to direct the segments at the beginning so that, if she plays optimally in the remainder of the game, regardless of how Kosta chooses points, he cannot win any of the $k$ rounds. In how many different ways can she achieve this goal?</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$(2k)!$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Good orientations are exactly the rotational ones)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Good orientations are exactly the rotational ones</summary><div class="ct-text">
 <p>Write $u\to w$ if the segment $uw$ is directed toward $w$; then whoever chose $w$ loses that round. Maja wins a round in which Kosta
 chose $x$ and she chose $y$ exactly when $y\to x$. After some rounds, the rest of the game is the same game on the remaining points. Call an
 orientation of the segments between $2j+1$ points <em>good</em> if Maja can win all $j$ rounds against every play of Kosta. In-neighbours of $w$ are
@@ -297,7 +293,8 @@ $2j-1$) and $x$, again its next $j$ points. So $T$ is rotational. $\square$</p><
 order, and the cyclic order can be read off from it: the point following $u$ is the out-neighbour of $u$ that beats all other out-neighbours of
 $u$. So different cyclic orders give different orientations. The number of cyclic orders (with a direction) of $n=2k+1$ labelled points is
 $(n-1)!$, so the number of ways is $\boxed{(2k)!}$.</p>
-<h4>Solution 2 (Maja's answer function is a single cycle)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Maja's answer function is a single cycle</summary><div class="ct-text">
 <p>Write $u\to w$ if the segment $uw$ is directed toward $w$; then whoever chose $w$ loses that round. Maja wins a round
 in which Kosta chose $x$ and she chose $y$ exactly when $y\to x$. After some rounds, the rest of the game is the same game on the remaining
 points. Call an orientation of the segments between $2j+1$ points <em>good</em> if Maja can win all $j$ rounds against every play of Kosta. One point
@@ -341,8 +338,7 @@ labelled points (put a fixed point first and order the others), so the number of
 \[f\!\left(\frac{x}{y}+\frac{y}{x}\right)=\frac{f(x)}{f(y)}+\frac{f(y)}{f(x)}\]
 for all $x,y\in(0,+\infty)$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$f(x)=x$ for all $x$, and $f(x)=2$ for all $x$</p></div></details>
-<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Logarithms, a Cauchy equation and a lower bound)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Logarithms, a Cauchy equation and a lower bound</summary><div class="ct-text">
 <p>Let $c=f(1)$ and $\varphi(x)=\ln\frac{f(x)}{c}$, so $\varphi(1)=0$ and $\frac{f(x)}{f(y)}=e^{\varphi(x)-\varphi(y)}$. The equation becomes
 \[
 f\Bigl(\frac xy+\frac yx\Bigr)=2\cosh\bigl(\varphi(x)-\varphi(y)\bigr). \tag{1}
@@ -367,7 +363,8 @@ $\lambda=1$: $f(x)=x$.</p></li><li><p>If $\lambda=0$, then $c=2$: $f(x)=2$.</p><
 \[
 \boxed{f(x)=x\ \text{ for all } x&gt;0\qquad\text{or}\qquad f(x)=2\ \text{ for all } x&gt;0.}
 \]</p>
-<h4>Solution 2 (Injective and non-injective cases)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Injective and non-injective cases</summary><div class="ct-text">
 <p>Let $h(r)=r+\frac1r$ for $r&gt;0$ and $c=f(1)$; recall that $h(r)=h(s)$ holds iff $s=r$ or $s=\frac1r$. The equation reads
 $f\bigl(h(\frac xy)\bigr)=h\bigl(\frac{f(x)}{f(y)}\bigr)$, and with $y=1$ it gives $f(h(t))=h\bigl(\frac{f(t)}{c}\bigr)$. Comparing the two (with $t=\frac xy$),
 for all $x,y&gt;0$
@@ -398,7 +395,8 @@ equation $f\equiv C$ gives $C=1+1=2$.</p><p>Both $f(x)=x$ and $f\equiv2$ satisfy
 \[
 \boxed{f(x)=x\ \text{ for all } x&gt;0\qquad\text{or}\qquad f(x)=2\ \text{ for all } x&gt;0.}
 \]</p>
-<h4>Solution 3 (Shifts act on the image as isometries, hence as translations)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 3 &ndash; Shifts act on the image as isometries, hence as translations</summary><div class="ct-text">
 <p>Let $c=f(1)$ and $\varphi(x)=\ln\frac{f(x)}{c}$, so $\frac{f(x)}{f(y)}=e^{\varphi(x)-\varphi(y)}$ and the equation becomes
 \[
 f\Bigl(\frac xy+\frac yx\Bigr)=2\cosh\bigl(\varphi(x)-\varphi(y)\bigr). \tag{1}
@@ -441,8 +439,7 @@ $\lambda&gt;0$) gives $c=1$. Then $2^\lambda=2$, so $\lambda=1$ and $f(x)=x$.</p
 Prove that the pair $(r,s)$ belongs to the set $S$ if and only if the set
 \[G=\{\gcd(a-r,b-s)\mid (a,b)\in S\}\]
 is infinite.</p></div>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Vieta jumping, a bounded index, and periodicity modulo $d$)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Vieta jumping, a bounded index, and periodicity modulo $d$</summary><div class="ct-text">
 <p>Let $\Phi(a,b)=a^2+b^2+la+kb+1$.</p><p><em>Step 0: an equation for $S$.</em> If $(a,b)\in S$, a common divisor of $a$ and $b$ divides $b^2+kb+1$ and $b$, hence $1$; so $\gcd(a,b)=1$.
 Since $a\mid a^2+la$ and $a\mid b^2+kb+1$, we get $a\mid\Phi(a,b)$; likewise $b\mid\Phi(a,b)$, so $ab\mid\Phi(a,b)$. Conversely, if $\Phi(a,b)=tab$
 for an integer $t$, then $a\mid b^2+kb+1$ and $b\mid a^2+la+1$. So $S$ is the set of positive pairs with $\Phi(a,b)=tab$ for some integer $t$, which

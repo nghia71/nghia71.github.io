@@ -97,7 +97,6 @@ description: Francophone Mathematical Olympiad 2026: problems with answers and s
 <p>The 8 problems of the Francophone Mathematical Olympiad 2026, each with our own solutions, hidden until you open them. 4 of them ask for an answer and 4 ask for a proof. Where a problem has a final answer, it is shown separately. Try a problem first, then check.</p><p>The olympiad has a Junior and a Senior paper with four problems each.</p>
 </div>
 <div class="ct-credit">Problems: Francophone Mathematical Olympiad 2026, from the AoPS contest collection or the official paper. Solutions written by MCC.</div>
-<div class="ct-bar"><button type="button" onclick="ctAll(true)">Show all answers and solutions</button><button type="button" onclick="ctAll(false)">Hide all</button></div>
 <div class="ct-toc-wrap"><div class="ct-toc-row"><span class="ct-toc-g">Junior</span><a href="#p1">1</a><a href="#p2">2</a><a href="#p3">3</a><a href="#p4">4</a></div><div class="ct-toc-row"><span class="ct-toc-g">Senior</span><a href="#p5">1</a><a href="#p6">2</a><a href="#p7">3</a><a href="#p8">4</a></div></div>
 
 {% raw %}
@@ -107,8 +106,7 @@ description: Francophone Mathematical Olympiad 2026: problems with answers and s
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 21: Arithmetic Functions and Multiplicative Structure &middot; Function Equations on Integers</div>
 <div class="ct-text"><p>Let $\mathbb N_{\ge1}$ denote the set of strictly positive integers. Let $f:\mathbb N_{\ge1}\to\mathbb N_{\ge1}$ be a function such that:</p><ul class="ct-ul"><li><p>$f(f(n))$ divides a power of $n$ for every integer $n\ge1$,</p></li><li><p>$f(mn)\in\{f(m),f(n)\}$ for all integers $m\ge1$ and $n\ge1$, and</p></li><li><p>$f(k)=2026$ for at least one integer $k\ge1$.</p></li></ul><p>Determine all possible values of $f(2026)$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$f(2026)=1$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Following the value 2026 back to a prime)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Following the value 2026 back to a prime</summary><div class="ct-text">
 <p><em>Lemma.</em> If $n_1,\dots,n_k\ge1$, then $f(n_1n_2\cdots n_k)\in\{f(n_1),\dots,f(n_k)\}$. This follows from the second
 condition by induction on $k$. In particular, for a prime $p$ and $j\ge1$ we get $f(p^j)=f(p)$, and for every $n&gt;1$ there is a prime $p\mid n$ with
 $f(n)=f(p)$.</p><p>Let $k$ be an integer with $f(k)=2026$.</p><p><em>Case $k=1$.</em> Then $f(2026)=f(f(1))$ divides a power of $1$, so $f(2026)=1$.</p><p><em>Case $k&gt;1$.</em> By the lemma there is a prime $p\mid k$ with $f(p)=2026$. Then $f(2026)=f(f(p))$ divides a power of $p$, so
@@ -126,8 +124,7 @@ $m=n=1$; otherwise $mn&gt;1$ is coprime to $2026$, $f(mn)=2026$, and the factor 
 <h3>Problem 2</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 18: Invariants and Monovariants &middot; Monovariants and Directional Change</div>
 <div class="ct-text"><p>Albert has just finished writing a book, but unfortunately, his printer has shuffled the order of the $N$ pages of his book. Brigitte offers to help him put the pages back in the correct order. Brigitte only allows herself the following two operations, which she can perform in any order and repeatedly:</p><ul class="ct-ul"><li><p>Reverse the order of all pages by placing the first page in the last position, the second in the second-to-last position, and so on, until the last page is placed in the first position.</p></li><li><p>If the first page bears the number $M$, then Brigitte sorts the first $M$ pages in descending order.</p></li></ul><p>For example, if the order of the pages was $3,1,2,5,4$, the first operation would give $4,5,2,1,3$, while the second operation would give $3,2,1,5,4$.</p><p>Show that Brigitte can always put the pages of Albert's book back in the correct order using these two operations.</p></div>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (The first page can only grow)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; The first page can only grow</summary><div class="ct-text">
 <p>Call the two operations $R$ (reverse all pages) and $S$ (if the first page is $M$, sort the first $M$ pages in descending
 order). The target order is $1,2,\dots,N$.</p><p><em>Observation.</em> If the first page is $M$, then after $S$ the first page is the largest of the first $M$ pages, which is at least $M$. So
 $S$ never decreases the number on the first page.</p><p><em>Stable positions.</em> Suppose we apply $S$ and the first page does not change, say it stays $m$. Then the largest of the first $m$ pages is
@@ -146,8 +143,7 @@ book in the correct order.</p>
 <h3>Problem 3</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure &middot; Tangency and Tangent Geometry</div>
 <div class="ct-text"><p>Let $ABC$ be an acute-angled triangle and $P$ be the foot of the altitude from $C$. The bisector of the angle $\angle ABC$ intersects the segment $[PC]$ at $D$ and intersects the circle with diameter $[AD]$ at $D$ and $E$. Show that if the line $(EC)$ is tangent to the circle with diameter $[AD]$, then the line $(PE)$ is the bisector of the angle $\angle APC$.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Coordinates along the bisector)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Coordinates along the bisector</summary><div class="ct-text">
 <p>Let $\beta=\tfrac12\angle ABC$, $a=BC$, $c=BA$; since the triangle is acute, $0&lt;2\beta&lt;90^\circ$. Put $B$ at the origin with
 the bisector of $\angle ABC$ as the positive $x$-axis:
 \[
@@ -178,7 +174,8 @@ $u^{\perp}$. So $PE$ is the bisector of $\angle APC$ iff the components of $E-P$
 \]
 They are equal iff $c\cos\beta(\cos\beta-\sin\beta)=a(\cos\beta-\sin\beta)(\cos\beta+\sin\beta)$, i.e. (as $\beta&lt;45^\circ$) iff
 $c\cos\beta=a(\cos\beta+\sin\beta)$, i.e. iff $c=a(1+\tan\beta)$, which we have proved. Hence $PE$ bisects $\angle APC$.</p>
-<h4>Solution 2 (Power of a point and a $45^\circ$ angle)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Power of a point and a $45^\circ$ angle</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:281px" src="/assets/contests/2026-27/francophone-mo-3_s2.svg" alt="Figure for the solution"></div>
 <p>Let $\beta=\tfrac12\angle ABC$ and let $C_0$ be the foot of the perpendicular from $C$ to the bisector $BD$. Let $\Gamma$ be the
 circle with diameter $AD$; it passes through $P$ (as $\angle APD=90^\circ$) and through $E$, and $\angle AED=90^\circ$.</p><p><em>Step 1: $CD\cdot CP=2\,CC_0^2$.</em> The line $CP$ is perpendicular to $AB$ and the bisector makes the angle $\beta$ with $AB$, so the
@@ -206,8 +203,7 @@ $\angle APE$ and $\angle EPD$ are equal. Since $D$ lies on segment $PC$, $\angle
 <div class="ct-text"><p>Determine the number of triplets $(a,b,c)$ of strictly positive integers such that
 \[a+b+2c=28^{29}\quad\text{and}\quad ab=c^2.\]</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$2^{29}\cdot 7^{14}-1$</p></div></details>
-<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Parametrising $ab=c^2$)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Parametrising $ab=c^2$</summary><div class="ct-text">
 <p>Write $N=28^{29}=2^{58}\cdot7^{29}$.</p><p><em>Parametrisation.</em> Let $(a,b,c)$ be a solution, $g=\gcd(a,b)$, $a=gx$, $b=gy$ with $\gcd(x,y)=1$. From $g^2xy=c^2$ we get $g^2\mid c^2$,
 so $g\mid c$ and $xy=(c/g)^2$ is a perfect square; as $x,y$ are coprime, both are squares: $x=m^2$, $y=n^2$ with $\gcd(m,n)=1$. Then
 $c=gmn$ and the first equation becomes
@@ -221,7 +217,8 @@ $s\mid L$, where $L=2^{29}\cdot7^{14}$. Using Gauss's identity $\sum_{s\mid L}\v
 \[
 \sum_{\substack{s\mid L\\ s\ge2}}\varphi(s)=L-\varphi(1)=\boxed{2^{29}\cdot7^{14}-1}.
 \]</p>
-<h4>Solution 2 (A quadratic in $a$ and its discriminant)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; A quadratic in $a$ and its discriminant</summary><div class="ct-text">
 <p>Write $N=28^{29}=7L^2$ with $L=2^{29}\cdot7^{14}$ (indeed $L^2=2^{58}7^{28}$).</p><p>Fix $c\ge1$. Then $a,b$ are the roots of $t^2-(N-2c)t+c^2=0$, with discriminant
 \[
 \Delta=(N-2c)^2-4c^2=N(N-4c)=7L^2(N-4c).
@@ -237,7 +234,8 @@ and the parity condition holds ($N$, $2c$, $k$ are even), as does $N-2c&gt;0$. T
 \[
 1+2\Bigl(\frac L2-1\Bigr)=L-1=\boxed{2^{29}\cdot7^{14}-1}.
 \]</p>
-<h4>Solution 3 (Equal squarefree parts)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 3 &ndash; Equal squarefree parts</summary><div class="ct-text">
 <p>Write $N=28^{29}=2^{58}\cdot7^{29}=7L^2$ with $L=2^{29}\cdot7^{14}$.</p><p><em>Squarefree parts.</em> Every positive integer can be written uniquely as $du^2$ with $d$ squarefree (a product of distinct primes) and
 $u\ge1$: $d$ is the product of the primes that occur to an odd power. Let $(a,b,c)$ be a solution and write $a=du^2$, $b=ev^2$ in this way.
 Since $ab=de(uv)^2=c^2$ is a square, $de$ is a square. Every prime appears in $d$ and in $e$ with exponent $0$ or $1$, and its exponent in $de$
@@ -259,8 +257,7 @@ L-1=\boxed{2^{29}\cdot7^{14}-1}.
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 9: Polynomials and Root-Coefficient Strategy &middot; Remainder, Factor, and Evaluation Logic</div>
 <div class="ct-text"><p>Find all polynomials $P$ with integer coefficients such that, for all integers $a\ge1$ and $b\ge1$, the number $P(a)-P(b)$ is divisible by $a+2b$ or by $2a+b$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>exactly the constant polynomials</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Reducing modulo $a+2b$ and $2a+b$)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Reducing modulo $a+2b$ and $2a+b$</summary><div class="ct-text">
 <p>Constant polynomials work, since then $P(a)-P(b)=0$. Conversely, let $P(x)=\sum_{i=0}^d c_ix^i$ satisfy the condition. We use
 that $u-v\mid P(u)-P(v)$ for integers $u,v$.</p><p>Fix $b\ge1$ and put
 \[
@@ -282,8 +279,7 @@ $c_i\bigl((-\tfrac12)^i-1\bigr)=0$, so $c_i=0$ for all $i\ge1$.</p><p>Therefore 
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 31: Extremal Principle and Bounding Arguments &middot; Bounding and Limiting Arguments</div>
 <div class="ct-text"><p>Judith has gathered her $2026$ friends in a circle, so that each of her friends has a person to their left and a person to their right. Judith wishes to explain to them her clever solution to an Olympiad problem that can be told in a few seconds.</p><p>At 17:00, Judith chooses one of her friends and tells them her solution. Thereafter, every minute starting from 17:01, two things happen:</p><ul class="ct-parts"><li><p><span class="ct-lbl">1.</span> First, every friend who knows the solution tells it to their two neighbors.</p></li><li><p><span class="ct-lbl">2.</span> Then, Judith chooses one of her friends and tells them her solution.</p></li></ul><p>Determine the smallest integer $n$ such that it is possible for all of Judith's friends to know her solution after $n$ minutes.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$n=45$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Each first listener informs an arc)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Each first listener informs an arc</summary><div class="ct-text">
 <p>Call the friend told at 17:00 the <em>$0$-th seed</em> and the friend told by Judith during minute $k$ ($1\le k\le n$) the
 <em>$k$-th seed</em>. The $k$-th seed is told after the spreading of minute $k$, so it takes part in the spreading of minutes $k+1,\dots,n$.</p><p><em>Lower bound.</em> By induction on $t$: at the end of minute $t$, every friend who knows the solution is at distance at most $t-k$ (measured
 around the circle) from the $k$-th seed for some $k\le t$. Indeed, a seed is at distance $0$ from itself, and spreading moves the solution one
@@ -296,7 +292,8 @@ For $n\le44$ this is at most $45^2=2025&lt;2026$. So $n\ge45$.</p><p><em>Constru
 $x,x+1,\dots,y$. A seed told during minute $k$ informs, by the end of minute $45$, the whole arc of radius $45-k$ around it. Choose the seeds</p><ul class="ct-ul"><li><p>$k=0$: friend $0$, informing $[-45,45]$;</p></li><li><p>$k=1$: friend $2$, informing $[-42,46]$;</p></li><li><p>$k=2$: friend $89$, informing $[46,132]$;</p></li><li><p>$k=3,\dots,44$: the centres of consecutive arcs of $91-2k$ friends placed one after another starting at friend $133$;</p></li><li><p>$k=45$: anybody.</p></li></ul><p>The arcs for $k=3,\dots,44$ contain $85+83+\dots+3=43^2-1=1848$ friends, so they fill exactly $[133,1980]$. Altogether the friends
 $-45,-44,\dots,1980$ are informed, which are $2026$ consecutive residues, that is, everybody.</p><p>Hence the smallest possible value is $\boxed{45}$. (If the state &ldquo;after $n$ minutes&rdquo; is read before Judith's telling of minute $n$, the
 bound becomes $(n+1)^2-1=2024$ for $n=44$, and the construction above does not use minute $45$'s telling, so the answer is the same.)</p>
-<h4>Solution 2 (Counting new listeners minute by minute)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Counting new listeners minute by minute</summary><div class="ct-text">
 <p>Let $N_t$ be the number of informed friends at the end of minute $t$ (after Judith's telling), so $N_0=1$.</p><p>At any moment the informed friends form blocks of consecutive friends (arcs). Every block contains a friend told directly by Judith: a friend
 informed by spreading is adjacent to an earlier informed friend, so following earlier and earlier informants inside the block we reach someone
 told by Judith. At the end of minute $t$ Judith has told $t+1$ friends, so there are at most $t+1$ blocks.</p><p>During minute $t+1$ the spreading adds at most two friends per block (its two outer neighbours) and Judith adds at most one. Therefore
@@ -317,8 +314,7 @@ knows the solution after $45$ minutes, whoever Judith tells in minutes $37$ to $
 <h3>Problem 3</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 19: Triangle Centers and Classical Triangle Geometry &middot; Angle Bisector and Median Geometry</div>
 <div class="ct-text"><p>Let $ABC$ be an acute-angled triangle such that $AB\ne AC$. Let $H$ be the orthocenter of $ABC$ and $M$ be the midpoint of $[BC]$. Let $D$ and $E$ be the orthogonal projections of $H$ onto the internal and external bisectors, respectively, of the angle $\angle BAC$. Show that the points $D$, $E$, and $M$ are collinear.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (A rectangle and isogonal lines)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; A rectangle and isogonal lines</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:304px" src="/assets/contests/2026-27/francophone-mo-7_s1.svg" alt="Figure for the solution"></div>
 <p>Let $O$ be the circumcentre and $N$ the midpoint of $AH$.</p><p><em>The rectangle.</em> The internal and external bisectors at $A$ are perpendicular, $HD\perp AD$ and $HE\perp AE$, so $ADHE$ is a rectangle.
 It is not degenerate: $H$ lies on the internal bisector only if the altitude from $A$ is the bisector, i.e. $AB=AC$, and $H$ lies on the
@@ -333,7 +329,8 @@ the centroid and ratio $-\tfrac12$ maps $A\mapsto M$ and $H\mapsto O$). Hence
 \vec{NM}=\vec{AM}-\tfrac12\vec{AH}=\vec{AM}-\vec{OM}=\vec{AO},
 \]
 so $NM\parallel AO$, and $N\ne M$.</p><p>The lines $DE$ and $NM$ both pass through $N$ and are parallel to $AO$, so they coincide. Hence $D$, $E$, $M$ are collinear.</p>
-<h4>Solution 2 (Coordinates with the bisectors as axes)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Coordinates with the bisectors as axes</summary><div class="ct-text">
 <p>Put $A$ at the origin, the internal bisector of $\angle BAC$ as the $x$-axis and the external bisector as the $y$-axis. Let
 $\alpha=\tfrac12\angle BAC$, $b=AC$, $c=AB$ (so $b\ne c$), $k=\cos2\alpha=\cos\angle BAC\ne0$, and
 \[
@@ -356,8 +353,7 @@ So $M$ lies on line $DE$.</p>
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 6: Pigeonhole Principle and Density Arguments &middot; Density and Averaging Arguments</div>
 <div class="ct-text"><p>Show that there exists an integer $n\ge1$ for which there exist at least $2026$ triplets $(a,b,c)$ of strictly positive integers such that
 \[a^2+b^3+c^4=n.\]</p></div>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Too many triples for too few values)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Too many triples for too few values</summary><div class="ct-text">
 <p>Let $t=3\cdot2026=6078$ and consider the triples $(a,b,c)$ with
 \[
 1\le a\le t^6,\qquad 1\le b\le t^4,\qquad 1\le c\le t^3 .

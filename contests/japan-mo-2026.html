@@ -97,7 +97,6 @@ description: Japan Mathematical Olympiad 2026, Final Round: problems with answer
 <p>The 5 problems of the Japan Mathematical Olympiad 2026, Final Round, each with our own solutions, hidden until you open them. 3 of them ask for an answer and 2 ask for a proof. Where a problem has a final answer, it is shown separately. Try a problem first, then check.</p><p>The final round of the Japan Mathematical Olympiad has five problems in four hours. The statements were checked against the Japanese original.</p>
 </div>
 <div class="ct-credit">Problems: Japan Mathematical Olympiad 2026, Final Round, from the AoPS contest collection or the official paper. Solutions written by MCC.</div>
-<div class="ct-bar"><button type="button" onclick="ctAll(true)">Show all answers and solutions</button><button type="button" onclick="ctAll(false)">Hide all</button></div>
 <div class="ct-toc-wrap"><div class="ct-toc-row"><a href="#p1">1</a><a href="#p2">2</a><a href="#p3">3</a><a href="#p4">4</a><a href="#p5">5</a></div></div>
 
 {% raw %}
@@ -108,8 +107,7 @@ description: Japan Mathematical Olympiad 2026, Final Round: problems with answer
 \[AB=BP,\qquad AC=CQ,\qquad \angle ABP=\angle ACQ.\]
 Determine the measure of $\angle BAC$.</p><p>(Here $XY$ denotes the length of segment $XY$.)</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\angle BAC=60^\circ$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (A spiral similarity and coordinates)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; A spiral similarity and coordinates</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:259px" src="/assets/contests/2026-27/japan-mo-1_s1.svg" alt="Figure for the solution"></div>
 <p>Write $a=BC$, $b=CA$, $c=AB$ (so $b&gt;c$ and $\angle B&gt;\angle C$), let $R$ be the circumradius, and let $\theta=\angle ABP=\angle ACQ$.
 We write $\measuredangle(\ell,m)$ for the directed angle between lines $\ell$ and $m$, taken modulo $180^\circ$.</p><p><em>Step 1: $A,B,P,D$ are concyclic.</em> The points on the same side of $AB$ as $C$ and on the other side of $AC$ from $B$ form the angular region
@@ -149,7 +147,8 @@ $2c\cos C=2R\sin2C&gt;2R\sin60^\circ=a$ (because $60^\circ&lt;2C&lt;120^\circ$),
 direction angle $180^\circ-B$ meets line $AB$ at $K'$ with $CK'=\frac{a}{2\cos B}$, and $2b\cos B=2R\sin2B&lt;a$ (because $120^\circ&lt;2B&lt;180^\circ$). So $Q$
 lies between $C$ and $K'$, on the same side of $AB$ as $C$. Finally the direction angle $180^\circ-B$ of ray $CQ$ is less than the direction angle
 $180^\circ-C$ of ray $CA$, which is less than the direction angle $180^\circ$ of ray $CB$. So $Q$ and $B$ are on opposite sides of line $AC$.</p><p>All the conditions hold, so $\angle BAC=\boxed{60^\circ}$.</p>
-<h4>Solution 2 (Reflecting A in BC)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Reflecting A in BC</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:386px" src="/assets/contests/2026-27/japan-mo-1_s2.svg" alt="Figure for the solution"></div>
 <p>Write $a=BC$, $b=CA$, $c=AB$ (so $b&gt;c$, $\angle B&gt;\angle C$), let $R$ be the circumradius, $\theta=\angle ABP=\angle ACQ$ and
 $\delta=\frac{\angle B-\angle C}{2}&gt;0$. Directed angles between lines are taken modulo $180^\circ$.</p><p><em>Step 1: line $DO$ passes through the reflection $A'$ of $A$ in $BC$.</em> The point $P$ is on the same side of $AB$ as $C$, so triangle $ABP$ has the orientation of $ABC$;
@@ -191,8 +190,7 @@ and $B$ are on opposite sides of $AC$. All conditions hold, and the answer is $\
 <h3>Problem 2</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 17: Sequences, Recurrences, and Discrete Dynamics &middot; Invariant and Monotone Sequence Behavior</div>
 <div class="ct-text"><p>A sequence $a_1,a_2,\dots$ of positive odd integers satisfies the following condition for every positive integer $n$:</p><ul class="ct-parts"><li><p><span class="ct-lbl"></span> among the odd integers that are greater than $a_{n+1}$ and relatively prime to $a_n$, the smallest one is $a_{n+2}$.</p></li></ul><p>Prove that there exists a positive integer $C$ such that $|a_n-2n|\le C$ for every positive integer $n$.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (The half-gaps never increase)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; The half-gaps never increase</summary><div class="ct-text">
 <p>All $a_n$ are odd, so we may write $a_{n+1}=a_n+2h_n$ with integers $h_n$. Since $a_{n+2}&gt;a_{n+1}$ for every $n\ge1$, we have $h_n\ge1$ for $n\ge2$.</p><p><em>Lemma 1.</em> For every $n\ge1$, $h_{n+1}$ is the least positive integer $k$ with $\gcd(h_n+k,\,a_n)=1$.</p><p><em>Proof.</em> The odd integers greater than $a_{n+1}$ are $a_{n+1}+2k$ with $k\ge1$. Since $a_n$ is odd,
 \[\gcd(a_{n+1}+2k,\,a_n)=\gcd\bigl(a_n+2(h_n+k),\,a_n\bigr)=\gcd\bigl(2(h_n+k),\,a_n\bigr)=\gcd(h_n+k,\,a_n).\]
 So $a_{n+2}=a_{n+1}+2k$ for the least $k\ge1$ with $\gcd(h_n+k,a_n)=1$, and this $k$ is $h_{n+1}$. $\square$</p><p><em>Lemma 2.</em> For $n\ge2$, $h_{n+1}\le h_n$.</p><p><em>Proof.</em> Let $2^j$ be the least power of $2$ greater than $h_n$, so $2^{j-1}\le h_n&lt;2^j$. The number $k=2^j-h_n\ge1$ makes $h_n+k=2^j$ coprime to the
@@ -205,7 +203,8 @@ some $N$ (at the latest $N=2h_2$). If $h_n=1$, then Lemma 1 gives $h_{n+1}=1$, b
 Thus $a_n-2n$ takes only finitely many values: the values for $n&lt;N$ and the single value $a_N-2N$. The positive integer
 \[C=1+\max_{1\le n\le N}|a_n-2n|\]
 satisfies $|a_n-2n|\le C$ for every positive integer $n$.</p>
-<h4>Solution 2 (A prime term starts the tail)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; A prime term starts the tail</summary><div class="ct-text">
 <p>By the rule, $a_{n+2}&gt;a_{n+1}$ for every $n\ge1$, so $a_2&lt;a_3&lt;a_4&lt;\cdots$. This strictly increasing sequence of integers is unbounded.</p><p><em>Step 1: every prime $p&gt;a_3$ is a term.</em> There are infinitely many primes, so take any prime $p&gt;a_3$; it is odd. Since the terms from $a_3$ on increase without bound, there is an index $m\ge3$ with $a_m\le p&lt;a_{m+1}$. Suppose $p\ne a_m$, so $a_m&lt;p&lt;a_{m+1}$. Put $n=m-1\ge2$. Then $a_n&lt;a_{n+1}=a_m&lt;p$, so $p$ does not divide the positive integer $a_n$, and the prime $p$ is coprime to $a_n$. Thus $p$ is an odd integer greater than $a_{n+1}$ and coprime to $a_n$, and it is smaller than $a_{n+2}=a_{m+1}$. This contradicts the choice of $a_{n+2}$ as the smallest such integer. Hence $p=a_m$.</p><p><em>Step 2: two steps of size $2$ after a prime term.</em> Fix a prime $p&gt;a_3$ and, by Step 1, an index $i\ge3$ with $a_i=p$. As $p&gt;a_3$, we have $i\ge4$, so $a_{i-1}&lt;a_i=p$ (both indices are at least $2$).</p><ul class="ct-ul"><li><p>The number $2p-a_{i-1}$ is odd, it is greater than $p=a_i$, and $\gcd(2p-a_{i-1},a_{i-1})=\gcd(2p,a_{i-1})=1$, because $a_{i-1}$ is odd and $0&lt;a_{i-1}&lt;p$. So it is a candidate for $a_{i+1}$, and $a_{i+1}\le 2p-a_{i-1}\le 2p-1$.</p></li><li><p>The odd number $a_{i+1}+2$ satisfies $p&lt;a_{i+1}+2\le 2p+1&lt;3p$. No odd multiple of $p$ lies strictly between $p$ and $3p$, so $a_{i+1}+2$ is not a multiple of $p$ and is coprime to the prime $p=a_i$. It is the smallest odd integer greater than $a_{i+1}$, so $a_{i+2}=a_{i+1}+2$.</p></li></ul><p><em>Step 3: a step of size $2$ is followed by another one.</em> Suppose $a_{n+1}=a_n+2$ for some $n$. The smallest odd integer greater than $a_{n+1}$ is $a_{n+1}+2=a_n+4$, and $\gcd(a_n+4,a_n)=\gcd(4,a_n)=1$ since $a_n$ is odd. Hence $a_{n+2}=a_{n+1}+2$.</p><p><em>Conclusion.</em> By Steps 2 and 3 and induction, $a_{n+1}=a_n+2$ for every $n\ge N$, where $N=i+1$. Hence $a_n=a_N+2(n-N)$ and $a_n-2n=a_N-2N$ for all $n\ge N$. So $a_n-2n$ takes only finitely many values (those for $n&lt;N$ and the single value $a_N-2N$), and the positive integer
 \[C=1+\max_{1\le n\le N}|a_n-2n|\]
 satisfies $|a_n-2n|\le C$ for every positive integer $n$.</p>
@@ -216,8 +215,7 @@ satisfies $|a_n-2n|\le C$ for every positive integer $n$.</p>
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 49: Combinatorial Number Theory and Structure &middot; Additive Structure and Sums of Integers</div>
 <div class="ct-text"><p>Let $n\ge2$ be an integer and let $m$ be an integer with $m\ge 2n$. Among the vertices of a regular $m$-gon, $2n$ distinct vertices are chosen; $n$ of them are colored red and the remaining $n$ are colored blue, and the following holds:</p><ul class="ct-parts"><li><p><span class="ct-lbl"></span> however we choose two distinct red points and two distinct blue points, the distance between the two red points is different from the distance between the two blue points.</p></li></ul><p>Find, in terms of $n$, the smallest possible value of $m$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$m=n^2+1$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Distinct differences)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Distinct differences</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/japan-mo-3_s1.svg" alt="Figure for the solution"></div>
 <p>Label the vertices $0,1,\dots,m-1$ around the polygon and compute with labels modulo $m$. If the circumradius is $\rho$, the vertices $i$ and $j$ are at distance
 $2\rho\sin\frac{\pi d}{m}$, where $d\in\{0,1,\dots,\lfloor m/2\rfloor\}$ is the cyclic distance between $i$ and $j$. This is strictly increasing in $d$, so
@@ -228,7 +226,8 @@ points $b,b'$ are at the same distance, which is forbidden. So there are $n^2$ d
 $1,\dots,n-1$, so the red cyclic distances are at most $n-1$. Two blue vertices differ by $kn$ with $1\le k\le n-1$, and their cyclic distance is
 $\min(kn,\ n^2+1-kn)$. Here $kn\ge n$ and $n^2+1-kn\ge n^2+1-(n-1)n=n+1$, so every blue cyclic distance is at least $n$. Hence no red distance equals a blue
 distance (the figure shows $n=3$, $m=10$).</p><p>The smallest possible value is $m=\boxed{n^2+1}$.</p>
-<h4>Solution 2 (Rotating the blue set)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Rotating the blue set</summary><div class="ct-text">
 <p>Label the vertices $0,\dots,m-1$ (modulo $m$). Let $R$ and $B$ be the red and blue sets. For $t\in\mathbb Z_m$ let $B+t$ be the blue set turned by $t$ steps (a rotation of the polygon).</p><p><em>Each rotation puts at most one blue vertex on a red one.</em> Suppose $B+t$ contains two red vertices $r\ne r'$, say $r=b+t$ and $r'=b'+t$ with $b,b'\in B$. Then the
 rotation by $t$ steps carries the segment $bb'$ onto the segment $rr'$. A rotation preserves lengths, so the blue points $b,b'$ are at the same distance as the red points $r,r'$, which is forbidden.
 So $|R\cap(B+t)|\le1$ for every $t$. Moreover $|R\cap(B+0)|=|R\cap B|=0$.</p><p><em>Double counting.</em> Each pair $(r,b)\in R\times B$ satisfies $r\in B+t$ for exactly one $t$, namely $t=r-b$. Therefore
@@ -245,8 +244,7 @@ $\min(kn,n^2+1-kn)\ge n$. Since a chord's length depends only on the cyclic dist
 \[f\bigl(x^2+f(y)^2\bigr)+2f(x)y=f\bigl(x+f(y)\bigr)^2\]
 for all real numbers $x$ and $y$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$f(x)=0$ for all $x$, and $f(x)=x$ for all $x$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Exchanging variables, then additivity)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Exchanging variables, then additivity</summary><div class="ct-text">
 <p>Both $f\equiv0$ ($0+0=0$) and $f(x)=x$ ($x^2+y^2+2xy=(x+y)^2$) satisfy the equation. Let $f\not\equiv0$ be a solution, write $Q(x,y)$ for the equation, and let $c=f(0)$.</p><p><em>(a) $f$ is injective.</em> If $f(y_1)=f(y_2)$, subtracting $Q(x,y_2)$ from $Q(x,y_1)$ gives $2f(x)(y_1-y_2)=0$ for all $x$. Choosing $x$ with $f(x)\ne0$ gives $y_1=y_2$.</p><p><em>(b) $f(f(y))=ky$ with $k\ne0$.</em> $Q(f(z),y)$ reads
 \[f\bigl(f(z)^2+f(y)^2\bigr)+2f(f(z))\,y=f\bigl(f(z)+f(y)\bigr)^2 .\]
 The first and last terms do not change when $y$ and $z$ are exchanged, so $y\,f(f(z))=z\,f(f(y))$ for all $y,z$. With $z=1$ this gives $f(f(y))=ky$, where $k=f(f(1))$. If $k=0$,
@@ -259,7 +257,8 @@ Putting $y=-x$ and using oddness: $f(2x^2)-2f(x)^2=f(0)=0$. Since $f(x)^2=f(x^2)
 For $u,v\ge0$ take $x=\frac{\sqrt u+\sqrt v}{2}$ and $y=\frac{\sqrt u-\sqrt v}{2}$; then $(x+y)^2=u$, $(x-y)^2=v$ and $x^2+y^2=\frac{u+v}{2}$. So
 \[f(u)+f(v)=2f\Bigl(\frac{u+v}{2}\Bigr)=f(u+v)\qquad(u,v\ge0).\]</p><p><em>(g) $f(x)=x$.</em> By (f), $f(qt)=qf(t)$ for rational $q\ge0$ and $t\ge0$, so $f(q)=q$ for rational $q\ge0$. Also $f$ is nondecreasing on $[0,\infty)$, since
 $f(u+v)=f(u)+f(v)\ge f(u)$. For real $t\ge0$ and rationals $0\le q_1&lt;t&lt;q_2$ we get $q_1\le f(t)\le q_2$, so $f(t)=t$. By oddness $f(x)=x$ for all $x$.</p><p>So the solutions are $\boxed{f\equiv0\ \text{ and }\ f(x)=x}$.</p>
-<h4>Solution 2 (Monotone involution)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Monotone involution</summary><div class="ct-text">
 <p>Both $f\equiv0$ ($0+0=0$) and $f(x)=x$ ($x^2+y^2+2xy=(x+y)^2$) are solutions. Let $f\not\equiv0$ be a solution, write $Q(x,y)$ for the equation
 and $c=f(0)$.</p><p><em>Basic facts.</em></p><ul class="ct-ul"><li><p><em>$f$ is injective:</em> if $f(y_1)=f(y_2)$, then $Q(x,y_1)-Q(x,y_2)$ gives $2f(x)(y_1-y_2)=0$; take $x$ with $f(x)\ne0$.</p></li><li><p><em>$f(f(y))=ky$:</em> in $Q(f(z),y)$, i.e. $f\bigl(f(z)^2+f(y)^2\bigr)+2f(f(z))\,y=f\bigl(f(z)+f(y)\bigr)^2$, the first and last terms are symmetric in
 $y,z$, so $y\,f(f(z))=z\,f(f(y))$; with $z=1$, $f(f(y))=ky$ for $k=f(f(1))$. If $k=0$, then $f(f(y))=f(f(0))$, so $f(y)=f(0)$ for all $y$ by injectivity,
@@ -278,8 +277,7 @@ is impossible. Hence $f(x)=x$ for all $x$.</p><p>The solutions are $\boxed{f\equ
 <div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 55: Three-Dimensional and Spatial Geometry &middot; Planes, Lines, and Incidence in Space</div>
 <div class="ct-text"><p>In three-dimensional space there is a plane $\pi$. On $\pi$ there is a triangle $ABC$ which is not isosceles; let $I$ be its incenter. Prove that there exists a triangle $\mathcal{T}$ such that the following holds for <em>every</em> point $P$ not on $\pi$ satisfying
 \[AP\cdot BC=BP\cdot CA=CP\cdot AB.\]</p><ul class="ct-parts"><li><p><span class="ct-lbl"></span> Let $I_A$, $I_B$, $I_C$ be the incenters of triangles $BCP$, $CAP$, $ABP$, respectively. Suppose the circumcircles of triangles $II_BI_C$, $II_CI_A$, $II_AI_B$ meet $\pi$ at points $X$, $Y$, $Z$, respectively, other than $I$. Then triangle $XYZ$ is similar to $\mathcal{T}$.</p></li></ul><p>(Here $UV$ denotes the length of segment $UV$.)</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Menelaus in space and a sphere)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Menelaus in space and a sphere</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:236px" src="/assets/contests/2026-27/japan-mo-5_s1.svg" alt="Figure for the solution"></div>
 <p>Let $a=BC$, $b=CA$, $c=AB$ (pairwise different) and $k=AP\cdot BC=BP\cdot CA=CP\cdot AB$, so $PA=\frac ka$, $PB=\frac kb$, $PC=\frac kc$. Let $D_a,D_b,D_c$ be the feet
 of the internal bisectors of triangle $ABC$ on $BC,CA,AB$. Let $E_a,E_b,E_c$ be the feet of the external bisectors on the lines $BC,CA,AB$; they exist because the triangle is not isosceles. So $E_a$ is the point of line $BC$ outside segment $BC$ with $E_aB:E_aC=c:b$, and similarly for the others.</p><p><em>Step 1: where $I_B$ and $I_C$ lie.</em> In triangle $CAP$ we have $\frac{PA}{PC}=\frac ca=\frac{AD_b}{D_bC}$, so $PD_b$ is the bisector from $P$ (converse of the angle
@@ -303,7 +301,8 @@ Fix one circle $\Gamma_0$ through $I$ that is tangent to none of the lines $IE_a
 $\mathcal T=X_0Y_0Z_0$. This triangle depends only on $ABC$, and by the same argument its directed angles are the three angles displayed above. Two
 triangles with the same directed angles are directly similar. Indeed, at each vertex the interior angles are equal if the orientations agree and
 supplementary if they differ. In the second case the interior angles of one triangle would add up to $3\cdot180^\circ-180^\circ\ne180^\circ$. Hence $XYZ$ is similar to $\mathcal T$ for every admissible $P$.</p>
-<h4>Solution 2 (Mass points in space)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Mass points in space</summary><div class="ct-text">
 <p>Let $a=BC$, $b=CA$, $c=AB$ (pairwise different) and $k=AP\cdot BC=BP\cdot CA=CP\cdot AB$, so $PA=\frac ka$, $PB=\frac kb$, $PC=\frac kc$. Put $t=\frac{abc}{k}&gt;0$.
 We use position vectors in space.</p><p><em>Step 1: the four incenters as centers of mass.</em> The incenter of a triangle is the weighted average of its vertices with weights equal to the opposite sides. For
 triangle $CAP$ the weights are $PA=\frac ka$ at $C$, $PC=\frac kc$ at $A$, and $CA=b$ at $P$. Multiplying all weights by $\frac{ac}{k}$:

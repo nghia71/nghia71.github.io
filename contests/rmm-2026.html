@@ -97,7 +97,6 @@ description: Romanian Master of Mathematics 2026: problems with answers and solu
 <p>The 6 problems of the Romanian Master of Mathematics 2026, each with our own solutions, hidden until you open them. 2 of them ask for an answer and 4 ask for a proof. Where a problem has a final answer, it is shown separately. Try a problem first, then check.</p><p>RMM has two days with three problems each. The official paper calls it the 17th competition; the AoPS collection says 16th.</p>
 </div>
 <div class="ct-credit">Problems: Romanian Master of Mathematics 2026, from the AoPS contest collection or the official paper. Solutions written by MCC.</div>
-<div class="ct-bar"><button type="button" onclick="ctAll(true)">Show all answers and solutions</button><button type="button" onclick="ctAll(false)">Hide all</button></div>
 <div class="ct-toc-wrap"><div class="ct-toc-row"><span class="ct-toc-g">Day 1</span><a href="#p1">1</a><a href="#p2">2</a><a href="#p3">3</a></div><div class="ct-toc-row"><span class="ct-toc-g">Day 2</span><a href="#p4">4</a><a href="#p5">5</a><a href="#p6">6</a></div></div>
 
 {% raw %}
@@ -107,8 +106,7 @@ description: Romanian Master of Mathematics 2026: problems with answers and solu
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 39: Graph Theory and Structural Combinatorics &middot; Paths, Cycles, and Connectivity</div>
 <div class="ct-text"><p>Let $n$ be a positive integer. Alice draws a unit area triangle on the board. Then she draws additional triangles by performing $n$ moves in a row. On each move, she chooses a drawn triangle $\Delta$ with no marked points in its interior, marks a point $P$ in its interior, and draws three smaller triangles by joining $P$ to each vertex of $\Delta$ with a segment.</p><p>Once these $n$ moves have been performed, Bob chooses three distinct drawn triangles $\Delta_1$, $\Delta_2$ and $\Delta_3$ which contain no marked points in their interiors, such that $\Delta_2$ shares one side with $\Delta_1$ and another with $\Delta_3$. In terms of $n$, determine the largest possible constant $c$ such that Bob can guarantee that the sum of the areas of $\Delta_1$, $\Delta_2$ and $\Delta_3$ is at least $c$, regardless of Alice's choices.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$c=\dfrac{3}{2n+1}$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (A closed tour through all the triangles)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; A closed tour through all the triangles</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:326px" src="/assets/contests/2026-27/rmm-1_s1.svg" alt="Figure for the solution"></div>
 <p>Call a drawn triangle <em>small</em> if it has no marked point in its interior. Each move replaces one small triangle by three, so after $n$ moves
 there are $2n+1$ small triangles; they tile the original triangle, and any two of them that share more than a vertex share a whole side
@@ -130,8 +128,7 @@ $2n+1$ triples add up to $3$. Hence some triple has area at least $\frac3{2n+1}$
 <h3>Problem 2</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Number Theory &middot; LPS VII, Chapter 33: Residues, Quadratic Structure, and Higher Congruences &middot; Quadratic Residues</div>
 <div class="ct-text"><p>Let $p\ge 11$ be a prime. Suppose that, if $a$ and $b$ are integers such that $1\le a&lt;b\le p-3$, then $b!-a!$ is not divisible by $p$. Prove that $p-5$ is divisible by $8$.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Wilson pairs and the product of all residues)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Wilson pairs and the product of all residues</summary><div class="ct-text">
 <p>All congruences are modulo $p$. Put $h=\frac{p-1}2$; note $2\le h\le p-3$. The hypothesis says that $1!,2!,\dots,(p-3)!$ are pairwise distinct modulo $p$.</p><p><strong>Step 1: a pairing.</strong> For $0\le k\le p-1$,
 \[k!\,(p-1-k)!\equiv(-1)^{k+1}.\tag{1}\]
 Indeed, by Wilson's theorem $-1\equiv(p-1)!=k!\prod_{i=1}^{p-1-k}(p-i)\equiv k!\,(-1)^{p-1-k}(p-1-k)!$, and $(-1)^{p-1-k}=(-1)^k$. In particular $(h!)^2\equiv(-1)^{h+1}$.</p><p><strong>Step 2: $p\equiv1\pmod4$.</strong> Suppose $p\equiv3\pmod 4$. Then $h$ is odd and $(h!)^2\equiv1$, so $h!\equiv\pm1$.
@@ -146,7 +143,8 @@ The product of all non-zero residues is $(p-1)!\equiv-1$, so by (3)
 \[(-1)\cdot s\cdot(-1)^{\frac{p-5}4}h!\equiv-1,\qquad\text{i.e.}\qquad s\equiv(-1)^{\frac{p-5}4}(h!)^{-1}\equiv(-1)^{\frac{p-1}4}\,h!,\]
 where we used $(h!)^{-1}\equiv-h!$ from (2). If $p\equiv1\pmod 8$, this gives $s\equiv h!$; but $h!$ is one of the factorials and $s$ is a missing residue. This is impossible, so
 $p\equiv5\pmod8$, i.e. $8\mid p-5$.</p>
-<h4>Solution 2 (Counting orbits of a four-element group)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Counting orbits of a four-element group</summary><div class="ct-text">
 <p>All congruences are modulo $p$. Put $h=\frac{p-1}2$; the hypothesis says that $1!,2!,\dots,(p-3)!$ are pairwise distinct modulo $p$.
 We first prove three facts.</p><p><strong>(a) A pairing.</strong> For $0\le k\le p-1$ we have $k!\,(p-1-k)!\equiv(-1)^{k+1}$. Indeed, by Wilson's theorem
 $-1\equiv(p-1)!=k!\prod_{i=1}^{p-1-k}(p-i)\equiv k!\,(-1)^{p-1-k}(p-1-k)!$, and $(-1)^{p-1-k}=(-1)^k$. For $k=h$ this gives $(h!)^2\equiv(-1)^{h+1}$.</p><p><strong>(b) $p\equiv1\pmod4$ and $(h!)^2\equiv-1$.</strong> If $p\equiv3\pmod4$, then $h$ is odd, $(h!)^2\equiv1$ and $h!\equiv\pm1$. Now $h!\equiv1=1!$ is impossible because $1&lt;h\le p-3$.
@@ -173,8 +171,7 @@ which means $p\equiv5\pmod8$.</p>
 \[\begin{cases}P(x,y,z)=a\\ Q(x,y,z)=b\\ R(x,y,z)=c,\end{cases}\]
 does <strong>not</strong> have a solution in real numbers $x$, $y$, and $z$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>proof (explicit construction)</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Points on a line first, then a change of coordinates)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Points on a line first, then a change of coordinates</summary><div class="ct-text">
 <p>We must find a polynomial map $\Phi=(P,Q,R):\mathbb R^3\to\mathbb R^3$ whose image is exactly $\mathbb R^3\setminus\mathcal S$.
 If $\mathcal S=\emptyset$, take $(P,Q,R)=(x,y,z)$. Let $\mathcal S$ have $m\ge1$ points.</p><p><strong>Step 1: the points $(a_1,0,0),\dots,(a_m,0,0)$.</strong> Let $a_1,\dots,a_m$ be distinct real numbers and $A(t)=\prod_{i=1}^m(t-a_i)$. Define
 \[F(x,y,z)=(x,\ u,\ v),\qquad u=yz-1+A(x)\,y-y^3z,\qquad v=y^2u-z .\]
@@ -191,7 +188,8 @@ By Lagrange interpolation there are real polynomials $p,q$ with $p(a_i)=b_i$ and
 is a bijection of $\mathbb R^3$ (its inverse subtracts $p(t)$ and $q(t)$) and $\Psi(a_i,0,0)=(a_i,b_i,c_i)$. So the polynomial bijection $\Lambda^{-1}\circ\Psi$ maps $\{(a_i,0,0)\}$ onto $\mathcal S$.</p><p><strong>Step 3: the answer.</strong> Let $\Phi=\Lambda^{-1}\circ\Psi\circ F$ with $F$ from Step 1 for these $a_1,\dots,a_m$. Its three components $P,Q,R$ are polynomials, and since $\Lambda^{-1}\circ\Psi$ is a bijection,
 \[\Phi(\mathbb R^3)=\Lambda^{-1}\Psi\bigl(\mathbb R^3\setminus\{(a_i,0,0)\}\bigr)=\mathbb R^3\setminus\mathcal S .\]
 Thus the system $P=a$, $Q=b$, $R=c$ has no real solution exactly when $(a,b,c)\in\mathcal S$.</p>
-<h4>Solution 2 (A fixed product and a quadratic with negative constant term)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; A fixed product and a quadratic with negative constant term</summary><div class="ct-text">
 <p>We must find a polynomial map $\Phi=(P,Q,R):\mathbb R^3\to\mathbb R^3$ whose image is exactly $\mathbb R^3\setminus\mathcal S$. If $\mathcal S=\emptyset$, take $(P,Q,R)=(x,y,z)$. Let $\mathcal S$ have $m\ge1$ points.</p><p><strong>Step 1: points on a line.</strong> Let $a_1,\dots,a_m$ be distinct reals and $A(t)=\prod_{i=1}^m(t-a_i)$. Define
 \[F(x,y,z)=\bigl(x,\ u,\ v\bigr),\qquad u=yz-1,\qquad v=z-yz\bigl(u^2+A(x)^2\bigr)\,y .\]
 <em>Claim: the image of $F$ is $\mathbb R^3\setminus\{(a_i,0,0):1\le i\le m\}$.</em> Fix a target $(t,\beta,\gamma)$; we need $x=t$ and real $y,z$ with $u=\beta$, $v=\gamma$. Put $k=\beta^2+A(t)^2\ge0$.</p><ul class="ct-ul"><li><p>If $\beta=-1$, take $y=0$, $z=\gamma$: then $u=-1$ and $v=z=\gamma$.</p></li><li><p>If $\beta\ne-1$, then $u=\beta$ means $yz=\beta+1\ne0$, so $z\ne0$ and $y=\frac{\beta+1}z$. Then $v=z-(\beta+1)k\frac{\beta+1}z$, and $v=\gamma$ becomes, after multiplying by $z$,
@@ -210,8 +208,7 @@ So the system $P=a$, $Q=b$, $R=c$ has no real solution exactly when $(a,b,c)\in\
 <div class="ct-text"><p>For any positive integer $m$, let $\varphi(m)$ be the number of positive integers less than or equal to $m$ and coprime to $m$. Define $\varphi_0(m)=m$ and, for each positive integer $k$, $\varphi_k(m)=\varphi(\varphi_{k-1}(m))$. For any integer $n\ge 3$, prove that
 \[\varphi_0(2^n-3)\cdot\varphi_1(2^n-3)\cdot\varphi_2(2^n-3)\cdot\ldots\cdot\varphi_n(2^n-3)\]
 has at most $n$ distinct prime divisors.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Counting factors of two along the chain)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Counting factors of two along the chain</summary><div class="ct-text">
 <p>Let $m=2^n-3$ and $m_k=\varphi_k(m)$. Recall $\varphi(N)=\prod_{p^e\,\|\,N}p^{e-1}(p-1)$. Two consequences:</p><ul class="ct-ul"><li><p>$\varphi(N)$ is even for $N\ge3$, and $\varphi(N)\le N/2$ for even $N$;</p></li><li><p>writing $v_2$ for the exponent of $2$ and $s(N)$ for the number of distinct odd primes dividing $N$,
 \[v_2(\varphi(N))\ \ge\ s(N)\ \ (N\text{ odd}),\qquad v_2(\varphi(N))\ \ge\ v_2(N)-1+s(N)\ \ (N\text{ even}),\tag{1}\]
 because each odd prime $p\mid N$ contributes the even factor $p-1$.</p></li></ul><p><strong>The chain reaches $1$ within $n$ steps.</strong> $m\ge5$ is odd, so $m_1\le m-1&lt;2^n$ and $m_1$ is even. For $k\ge1$ the number $m_k$ is $1$ or even, and $m_{k+1}\le m_k/2$ when $m_k$ is even.
@@ -219,7 +216,8 @@ Hence $m_k&lt;2^{n+1-k}$ as long as $m_k&gt;1$, so $m_n=1$. Let $K\le n$ be the 
 \[0=e_K\ \ge\ s_0+s_1+\dots+s_{K-1}-(K-1),\qquad\text{so}\qquad s_0+s_1+\dots+s_{K-1}\le K-1\le n-1 .\]
 Every odd prime dividing the product $m_0m_1\cdots m_n$ divides some $m_k$ with $k\le K-1$ and is counted in $s_k$. So the product has at most $n-1$ distinct odd prime divisors, and, together
 with the prime $2$, at most $n$ distinct prime divisors.</p>
-<h4>Solution 2 (A logarithmic bound for the tree of primes)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; A logarithmic bound for the tree of primes</summary><div class="ct-text">
 <p>For an odd integer $N\ge1$ let $\mathcal C(N)$ be the smallest set of odd primes that contains all prime divisors of $N$ and, with every prime $p$, all odd prime
 divisors of $p-1$. (So $\mathcal C(1)=\emptyset$.)</p><p><strong>Step 1.</strong> <em>Every odd prime dividing some $\varphi_k(m)$, $m=2^n-3$, lies in $\mathcal C(m)$.</em> This holds for $k=0$. Since $\varphi(N)=\prod_{p^e\|N}p^{e-1}(p-1)$, an odd prime dividing
 $\varphi(N)$ divides $N$ or divides $p-1$ for a prime $p\mid N$ (necessarily odd). So if the odd primes of $\varphi_k(m)$ lie in $\mathcal C(m)$, so do those of $\varphi_{k+1}(m)$.</p><p><strong>Step 2.</strong> <em>$|\mathcal C(N)|\le\log_2N$ for every odd $N\ge1$.</em> We use strong induction on $N$; the case $N=1$ is clear.</p><p>If $N=p$ is prime, let $N'$ be the largest odd divisor of $p-1$. Then $\mathcal C(p)=\{p\}\cup\mathcal C(N')$ and $N'\le\frac{p-1}2$, so
@@ -235,8 +233,7 @@ Counting also the prime $2$, the product has at most $n$ distinct prime divisors
 \[\angle AXB=\angle AZC,\ \angle AZB=\angle AXC,\]
 \[\angle AYB=\angle ATC,\ \angle ATB=\angle AYC.\]
 Prove that the diagonals $XZ$ and $YT$ of the parallelogram intersect on the circumcircle of $BOC$.</p></div>
-<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
-<h4>Solution 1 (A tangent circle, then coordinates)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; A tangent circle, then coordinates</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:460px" src="/assets/contests/2026-27/rmm-5_s1.svg" alt="Figure for the solution"></div>
 <p>Let $A,B,C$ be labelled counterclockwise, let $a$ be the line through $A$ parallel to $BC$ and $m$ the perpendicular bisector of $BC$.
 $\measuredangle(\ell,\ell')$ denotes the directed angle between lines, modulo $180^\circ$. Let $J$ be the common midpoint of the diagonals $XZ$ and $YT$.</p><p><strong>Step 1: $B,C,X,Z$ are concyclic.</strong> Since $X$ is inside the triangle, $\angle AXB+\angle BXC+\angle CXA=360^\circ$, and the same holds for $Z$. The two hypotheses on $X,Z$ give
@@ -269,7 +266,8 @@ and
 \[\frac{o^2-1}{o}\,y=\frac{(s-1)^2-4q^2}{4q^2}\cdot\frac{2q}{s-1}\cdot\frac{q(s-1)}{2s}=\frac{(s-1)^2-4q^2}{4s}.\]
 The two sides agree, so the intersection $J$ of the diagonals lies on the circumcircle of $BOC$.</p><p><em>Remark.</em> $J$ does not depend on the parallelogram: it is the midpoint of the chord cut from the $A$-symmedian by the circumcircle. All admissible parallelograms have this centre, and they are very thin
 (in the figure the angle between the diagonals is about $3^\circ$).</p>
-<h4>Solution 2 (A family of circles through the A-Dumpty point)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; A family of circles through the A-Dumpty point</summary><div class="ct-text">
 <p>Let $A,B,C$ be labelled counterclockwise and let $\Omega$ be the circumcircle. Let $a$ be the line through $A$ parallel to $BC$, $m$ the perpendicular bisector of $BC$,
 $M$ the midpoint of $BC$ and $W=a\cap m$. $\measuredangle(\ell,\ell')$ denotes the directed angle between lines, modulo $180^\circ$. Let $J$ be the common midpoint of the diagonals $XZ$ and $YT$.
 The statement speaks of the circle $BOC$, so $B,O,C$ are not collinear and $\angle BAC\ne90^\circ$. We use the following form of Thales' theorem: a point $P$ lies on the circle with diameter $UV$
@@ -298,7 +296,8 @@ The points with this property form the line $\{P:\ PS^2-PA^2=SB^2\}$, perpendicu
 on the perpendicular to $GJ$ at $J$; if $J=G$, both lie on the line $GE$ ($J\ne E$ because $E\in a$). Either way $X,Y,Z,T$ would be collinear, which is impossible for a parallelogram.</p></li><li><p>$\kappa\ne\kappa'$. The circle with diameter $GE_G$ meets $m$ exactly in $\{G,W\}$ (a point $P\in m$ with $\overrightarrow{PG}\cdot\overrightarrow{PE_G}=0$ is $G$ or has $PE_G\perp m$, i.e. $P=W$). As $G\ne G'$, the sets $\{G,W\}$ and $\{G',W\}$ differ.</p></li><li><p>$J\ne W$, since $J$ is inside the triangle and $W\in a$.</p></li><li><p>$D\ne W$. Let $A_2$ be the reflection of $A$ in $m$; it lies on $\Omega$ and on $a$, and $A_2\ne A$. So $W$, the midpoint of the chord $AA_2$, is inside $\Omega$, and $W\ne S$; as $S\in m$ and $a\cap m=\{W\}$, $S\notin a$.
 If $D$ were on $a$, then the line $AD$ would be $a$ and would contain $S$. Hence $D\notin a$.</p></li></ul><p>Two different circles have at most two common points, and $J,D,W$ are common points of $\kappa$ and $\kappa'$ with $J\ne W$ and $D\ne W$. Hence $J=D$.</p><p><strong>Step 7: conclusion.</strong> The tangents give $\angle OBS=\angle OCS=90^\circ$, so the circle with diameter $OS$ passes through $B$ and $C$: it is the circle $BOC$. Since $S$ lies on the line $AA'$ and
 $OD\perp AA'$ (or $D=O$), $\overrightarrow{DO}\cdot\overrightarrow{DS}=0$, so $D$ lies on this circle. As $J=D$, the diagonals of the parallelogram meet on the circumcircle of $BOC$.</p>
-<h4>Solution 3 (Reciprocals of complex coordinates)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 3 &ndash; Reciprocals of complex coordinates</summary><div class="ct-text">
 <p>We use complex numbers with $A=0$ and the line $BC$ horizontal: $B=b=B_0+ih$ and $C=c=C_0+ih$ with real $B_0\ne C_0$ and $h\ne0$. The line through $A$ parallel to $BC$ is the real axis, and every interior point of the triangle has imaginary part strictly between $0$ and $h$.
 Since $|b|=AB&lt;AC=|c|$, we have $|B_0|&lt;|C_0|$, hence $B_0+C_0\ne0$.</p><p><strong>Step 1: one pair of opposite vertices.</strong> Let $x,z$ be the coordinates of $X,Z$; they are interior points, so $x,z\ne0$. For a point $U\ne A,B$ the number $1-\frac bu=\frac{u-b}{u}$ has argument equal to the directed angle from the ray $UA$ to the ray $UB$.
 For an interior point $U$ the rotations from $UA$ to $UB$ and from $UA$ to $UC$ have opposite senses ($B$ and $C$ lie on different sides of the line $AU$), each of size less than $180^\circ$. So $\arg\bigl(1-\frac bx\bigr)=\pm\angle AXB$ and $\arg\bigl(1-\frac cz\bigr)=\mp\angle AZC$ with opposite signs, and the hypothesis $\angle AXB=\angle AZC$ says that
@@ -323,8 +322,7 @@ Write $\psi$ for the directed angle from the ray $AC$ to the ray $AB$, so $\frac
 <div class="ct-text"><p>Let $k&gt;1$ be an integer, and let $S$ denote the set of all $(k+1)$-tuples of integers $X=(x_1,\ldots,x_{k+1})$ such that $1\le x_1&lt;\cdots&lt;x_{k+1}\le k^2+1$. If $\sigma$ is a permutation of the numbers $1,2,\ldots,k^2+1$, say that an element $X$ of $S$ is $\sigma$-nice if the sequence $\sigma(x_1),\sigma(x_2),\ldots,\sigma(x_{k+1})$ is monotone. Prove that
 \[\min_{1\le i\le k}\left\lfloor\frac{x_i}{i}\right\rfloor+\min_{2\le i\le k+1}\left\lfloor\frac{k^2+2-x_i}{k+2-i}\right\rfloor\ge k+1\]
 if and only if there exists a permutation $\sigma$ such that $X$ is the unique $\sigma$-nice tuple in $S$.</p></div>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Chain decompositions and an explicit permutation)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Chain decompositions and an explicit permutation</summary><div class="ct-text">
 <p>Write $N=k^2+1$, and let $m_1,m_2$ be the two minima in the statement.</p><p><strong>Reformulation.</strong> <em>The inequality $m_1+m_2\ge k+1$ holds if and only if there are integers $\alpha,\beta\ge0$ with $\alpha+\beta=k-1$ such that</em>
 \[x_i\ge(\alpha+1)\,i\quad(1\le i\le k),\qquad x_i\le k^2+2-(\beta+1)(k+2-i)\quad(2\le i\le k+1).\tag{$\ast$}\]
 Indeed, $(\ast)$ says $m_1\ge\alpha+1$ and $m_2\ge\beta+1$, so it implies $m_1+m_2\ge k+1$. Conversely, $m_1\ge1$ and $m_2\ge1$ always (as $x_i\ge i$ and $x_i\le k^2+1-(k+1-i)$); if $m_1+m_2\ge k+1$,

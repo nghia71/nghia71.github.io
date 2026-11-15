@@ -97,7 +97,6 @@ description: Finland Team Selection Tests for the International Mathematical Oly
 <p>The 11 problems of the Finland Team Selection Tests for the International Mathematical Olympiad 2026, each with our own solutions, hidden until you open them. 7 of them ask for an answer and 4 ask for a proof. Where a problem has a final answer, it is shown separately. Try a problem first, then check.</p><p>Three days of tests (Day 1, Day 2, Day 3).</p>
 </div>
 <div class="ct-credit">Problems: Finland Team Selection Tests for the International Mathematical Olympiad 2026, from the AoPS contest collection or the official paper. Solutions written by MCC.</div>
-<div class="ct-bar"><button type="button" onclick="ctAll(true)">Show all answers and solutions</button><button type="button" onclick="ctAll(false)">Hide all</button></div>
 <div class="ct-toc-wrap"><div class="ct-toc-row"><span class="ct-toc-g">Day 1</span><a href="#p1">1</a><a href="#p2">2</a><a href="#p3">3</a><a href="#p4">4</a></div><div class="ct-toc-row"><span class="ct-toc-g">Day 2</span><a href="#p5">1</a><a href="#p6">2</a><a href="#p7">3</a><a href="#p8">4</a></div><div class="ct-toc-row"><span class="ct-toc-g">Day 3</span><a href="#p9">1</a><a href="#p10">2</a><a href="#p11">3</a></div></div>
 
 {% raw %}
@@ -108,8 +107,7 @@ description: Finland Team Selection Tests for the International Mathematical Oly
 <div class="ct-text"><p>Find all prime numbers $p,q,r,s$ such that
 \[p^2+q^2+r^2+s^2=2007.\]</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>there are no such primes</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Modulo 8, modulo 3, then two squares)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Modulo 8, modulo 3, then two squares</summary><div class="ct-text">
 <p><strong>One prime is $2$.</strong> The square of an odd prime is $\equiv1\pmod 8$ and $2^2=4$. With $j$ of the primes equal to $2$, the sum is $\equiv4j+(4-j)\pmod8$, i.e. $4,7,2,5,0$ for $j=0,1,2,3,4$. Since $2007\equiv7\pmod8$, exactly one prime equals $2$, and the other three are odd primes with squares summing to $2003$.</p><p><strong>One prime is $3$.</strong> Squares of primes other than $3$ are $\equiv1\pmod3$, and $9\equiv0$. With $i$ of the three odd primes equal to $3$ the sum is $\equiv3-i\pmod3$; since $2003\equiv2\pmod3$, exactly one equals $3$, and the remaining two primes $u\le v$ satisfy $u^2+v^2=2003-9=1994$.</p><p><strong>No such pair.</strong> Here $u^2\le997$, so $u\le31$, and checking the primes $u\in\{5,7,11,13,17,19,23,29,31\}$ (they are $\ne2,3$) gives $1994-u^2\in\{1969,1945,1873,1825,1705,1633,1465,1153,1033\}$, none of which is a square. (In fact the only representation of $1994$ as a sum of two positive squares is $25^2+37^2$, and $25$ is not prime.)</p><p>Hence the equation has <strong>no</strong> solution in primes.</p>
 </div></details>
 </section>
@@ -117,8 +115,7 @@ description: Finland Team Selection Tests for the International Mathematical Oly
 <h3>Problem 2</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 36: Coordinate Geometry and Analytic Representation &middot; Cartesian Coordinate Setup</div>
 <div class="ct-text"><p>Let $ABC$ be right-angled at $A$, and let $D$ be a point lying on the side $AC$. Denote by $E$ the reflection of $A$ over line $BD$, and by $F$ the intersection of $CE$ with the perpendicular through $D$ to the line $BC$. Prove that $AF$, $DE$, and $BC$ are concurrent.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Coordinates)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Coordinates</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:370px" src="/assets/contests/2026-27/finland-tst-2_s1.svg" alt="Figure for the solution"></div>
 <p>Put $A=(0,0)$, $B=(0,b)$, $C=(c,0)$ and $D=(d,0)$ with $0&lt;d&lt;c$. Line $BD$ is $bx+dy=bd$; the foot of the perpendicular from $A$ to it is $\frac{bd}{b^2+d^2}(b,d)$, so the reflection of $A$ is
 \[E=\Bigl(\frac{2b^2d}{b^2+d^2},\ \frac{2bd^2}{b^2+d^2}\Bigr).\]
@@ -129,7 +126,8 @@ description: Finland Team Selection Tests for the International Mathematical Oly
 <strong>Collinearity of $A,F,P$.</strong> Both $F$ and $P$ lie on the line through $A$ with slope
 \[\frac{2bd(c-d)}{c(b^2+d^2)} :\]
 for $P$ divide its coordinates, for $F$ divide $2bcd^2(c-d)$ by $c^2d(b^2+d^2)$. Hence $AF$ passes through $P=DE\cap BC$, i.e. the three lines are concurrent. (When $b^2+2cd-d^2=0$ the lines $DE$ and $BC$ are parallel; then the same computation shows that $AF$ is parallel to them as well.)</p>
-<h4>Solution 2 (A harmonic division)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; A harmonic division</summary><div class="ct-text">
 <p>Let $Q$ be the foot of the perpendicular from $D$ to $BC$, so that $F=CE\cap DQ$, and let $P=DE\cap BC$. We show that $A$ lies on line $FP$.</p><p><strong>A harmonic quadruple on $AC$.</strong> Since $\angle BAD=\angle BED=\angle BQD=90^\circ$ ($E$ is the reflection of $A$ in $BD$), the points $A,E,Q$ lie on the circle with diameter $BD$. As $DA=DE$, the point $D$ is the midpoint of one of the two arcs $AE$ of this circle, so line $QD$ is one of the two bisectors (internal or external) of the angle between the lines $QA$ and $QE$; line $QC=BC$, perpendicular to $QD$, is the other one. If $E=Q$ (this happens when $BD$ bisects $\angle ABC$), then $F=E=Q$ lies on all three lines and we are done; so let $E\ne Q$ and put $R=QE\cap AC$. The two bisectors of the angle $AQR$ meet line $AR$ at $D$ and $C$, so by the internal and external bisector theorems $\frac{DA}{DR}=\frac{QA}{QR}=\frac{CA}{CR}$, where one of $D,C$ lies between $A$ and $R$ and the other does not. With signed lengths on line $AC$ this reads
 \[\frac{\overline{CA}}{\overline{AD}}=-\frac{\overline{CR}}{\overline{RD}}.\tag{1}\]
 <strong>Ceva and Menelaus in triangle $QCD$.</strong> The lines $QE$, $CE$, $DE$ through $E$ meet the opposite side lines $CD$, $DQ$, $QC$ at $R$, $F$, $P$. By Ceva's theorem in signed form,
@@ -146,8 +144,7 @@ Dividing the two equalities, $\frac{\overline{CA'}}{\overline{A'D}}=-\frac{\over
 \[f(f(x)+y)=f(f(x)-y)+4f(x)y\]
 for all $x,y\in\mathbb{R}$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$f\equiv0$ and $f(x)=x^2+c$ for any constant $c$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Every difference of values is a period)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Every difference of values is a period</summary><div class="ct-text">
 <p>Both families work: for $f(x)=x^2+c$ and $a=f(x)$, $f(a+y)-f(a-y)=(a+y)^2-(a-y)^2=4ay$.</p><p>Let $f\not\equiv0$ and $g(x)=f(x)-x^2$. For every value $a$ of $f$ the equation says $f(a+y)-f(a-y)=4ay=(a+y)^2-(a-y)^2$, i.e.
 \[g(a+y)=g(a-y)\qquad\text{for all }y:\]
 $g$ is symmetric about every value $a$ of $f$. Composing the reflections about two values $a,b$ shows that $g$ has period $2(a-b)$.</p><p>Pick $a_0=f(x_0)\ne0$. For any real $t$ put $y=\frac{t}{4a_0}$; then $f(a_0+y)$ and $f(a_0-y)$ are values of $f$ whose difference is $4a_0y=t$. Hence every real number $2t$ is a period of $g$, so $g$ is constant: $f(x)=x^2+c$.</p>
@@ -159,8 +156,7 @@ $g$ is symmetric about every value $a$ of $f$. Composing the reflections about t
 <div class="ct-text"><p>Show that the function
 \[f(n)=n!-n^{2007}\]
 is injective for $n\in\mathbb{Z}^+$.</p></div>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (p-adic valuations for small a, growth for large a)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; p-adic valuations for small a, growth for large a</summary><div class="ct-text">
 <p>Suppose $f(a)=f(b)$ with $a&lt;b$.</p><p><strong>$a\ge4014$ is impossible.</strong> For $n\ge4014$ we have $n!\ge\left(\frac ne\right)^n\ge n^{2007}$ (the first because $e^n\ge\frac{n^n}{n!}$, the second because $(n-2007)\ln n\ge n$ for such $n$). Then
 \[f(n+1)-f(n)=n\cdot n!-\bigl((n+1)^{2007}-n^{2007}\bigr)&gt;n^{2008}-(n+1)^{2007}=n^{2007}\Bigl(n-\bigl(1+\tfrac1n\bigr)^{2007}\Bigr)&gt;n^{2007}(n-e^{1/2})&gt;0,\]
 so $f$ is strictly increasing on $[4014,\infty)$ and $f(a)&lt;f(b)$.</p><p><strong>$2\le a&lt;4014$ is impossible.</strong> Since $a\mid a!$, $a\mid a^{2007}$ and $a\mid b!$, from $f(a)=f(b)$ we get $a\mid b^{2007}$, so every prime factor of $a$ divides $b$. Choose a prime $p\mid a$ as follows: if $a$ has an odd prime factor take it, otherwise $a=2^k$ ($k\le11$) and $p=2$. Let $e=v_p(a!)$. Then $e\ge1$, and</p><ul class="ct-ul"><li><p>if $p$ is odd: $e\le\frac{a-1}{p-1}\le\frac{4012}2&lt;2007$;</p></li><li><p>if $a=2^k$: $e=2^k-1$, which is $\le1023$ for $k\le10$ and equals $2047$ for $k=11$.</p></li></ul><p>In all cases $e&lt;2007\,v_p(a)$ and $e$ is not a multiple of $2007$. Hence $v_p(f(a))=v_p(a!-a^{2007})=e$. On the other side, $v_p(b!)\ge v_p(a!)+v_p(b)\ge e+1$ (as $b!=a!\,(a+1)\cdots b$ and $p\mid b$), while $v_p(b^{2007})=2007\,v_p(b)$ is a positive multiple of $2007$, hence $\ne e$. If these two valuations differ, $v_p(f(b))$ is the smaller one, which is $\ne e$; if they are equal, $v_p(f(b))\ge e+1$. Either way $v_p(f(b))\ne v_p(f(a))$, a contradiction.</p><p><strong>$a=1$.</strong> Then $f(b)=0$, i.e. $b!=b^{2007}$ with $b\ge2$. For $b\ge4014$, $b!&gt;b^{2007}$ as shown above (the first inequality there is strict, since the series for $e^b$ has positive terms other than $\frac{b^b}{b!}$). For $2\le b&lt;4014$ choose $p\mid b$ as before (with $b$ in place of $a$); then $v_p(b!)=e$ is not a multiple of $2007$, while $v_p(b^{2007})$ is. So $f(b)\ne0$.</p><p>Therefore $f$ is injective on the positive integers.</p>
@@ -175,12 +171,12 @@ so $f$ is strictly increasing on $[4014,\infty)$ and $f(a)&lt;f(b)$.</p><p><stro
 is a power of $5$?
 Here $\overline{xy}$ denotes the number with the digits of $x$ and $y$. For example, if $x=25$ and $y=125$, then $\overline{xy}=25125$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p><strong>No</strong></p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Factor out the power of 5)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Factor out the power of 5</summary><div class="ct-text">
 <p>Let $d$ be the number of digits of $5^b$. Then
 \[N=\overline{5^a5^b}=5^a\cdot10^d+5^b=5^{a+d}2^d+5^b .\]
 Suppose $N=5^k$.</p><ul class="ct-ul"><li><p>If $a+d&gt;b$: $N=5^b\bigl(5^{a+d-b}2^d+1\bigr)$, and the bracket is $\equiv1\pmod5$ and greater than $1$, so it is not a power of $5$.</p></li><li><p>If $a+d&lt;b$: $N=5^{a+d}\bigl(2^d+5^{b-a-d}\bigr)$, and the bracket is not divisible by $5$ and greater than $1$.</p></li><li><p>If $a+d=b$: $N=5^{b}(2^d+1)$, so $2^d+1=5^m$, $m\ge1$. By the lifting-the-exponent lemma $v_2(5^m-1)=2+v_2(m)$, so $2^d=5^m-1$ forces $5^m-1=2^{2+v_2(m)}\le4m$, possible only for $m=1$, $d=2$. Then $5^b$ has two digits, so $b=2$, and $a=b-d=0$, which is not positive.</p></li></ul><p>So $\overline{5^a5^b}$ is <strong>never</strong> a power of $5$.</p>
-<h4>Solution 2 (Compare the powers of 5, then factor)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Compare the powers of 5, then factor</summary><div class="ct-text">
 <p>Let $d$ be the number of digits of $5^b$. Then
 \[\overline{5^a5^b}=5^a\cdot10^d+5^b=5^{a+d}2^d+5^b .\]
 Suppose this equals $5^c$. Then $c&gt;b$ and
@@ -195,8 +191,7 @@ The number $5^{c-b}-1$ is not divisible by $5$, so comparing the exponents of $5
 <div class="ct-text"><p>Let $ABC$ be a triangle with $AB=\frac{AC}{2}+BC$. Let $\omega_1$ and $\omega_2$ be the semicircles outside of $ABC$ with diameters $AB$ and $BC$, respectively. Let $X$ be the projection of $A$ on the common tangent of $\omega_1$ and $\omega_2$.
 Find $\angle CAX$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\angle CAX=60^\circ$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Distances to the tangent)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Distances to the tangent</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:286px" src="/assets/contests/2026-27/finland-tst-6_s1.svg" alt="Figure for the solution"></div>
 <p>Let $\ell$ be the common tangent, $a=BC$, $b=CA$, $c=AB=\frac b2+a$, and for a point $Z$ let $\delta(Z)$ be its distance to $\ell$. The circles with diameters $AB$ and $BC$ lie on one side of $\ell$ and touch it, so their centres $O_1$ (midpoint of $AB$) and $O_2$ (midpoint of $BC$) satisfy $\delta(O_1)=\frac c2$, $\delta(O_2)=\frac a2$, and the points $A,B,C$, which lie on these circles, are on the same side of $\ell$. Distances to a line on one side are affine, so
 \[\delta(A)+\delta(B)=2\delta(O_1)=c,\qquad \delta(B)+\delta(C)=2\delta(O_2)=a,\]
@@ -209,8 +204,7 @@ hence $\delta(A)-\delta(C)=c-a=\frac b2$.</p><p>The vector $\overrightarrow{AX}$
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 31: Extremal Principle and Bounding Arguments &middot; Bounding and Limiting Arguments</div>
 <div class="ct-text"><p>An $n\times n$ grid consists of $n^2$ unit squares. Initially all sides of the squares are white. Some of the sides are then colored black such that each unit square has exactly one black side. In terms of $n$, find</p><ul class="ct-parts"><li><p><span class="ct-lbl">a)</span> the minimal</p></li><li><p><span class="ct-lbl">b)</span> the maximal</p></li></ul><p>number of black sides in the grid.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>a) $\left\lceil\frac{n^2}2\right\rceil$; b) $n^2-\left\lceil\frac{(n-2)^2}2\right\rceil$ for $n\ge2$ (and $1$ for $n=1$)</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Count interior and boundary black sides)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Count interior and boundary black sides</summary><div class="ct-text">
 <p>A black side on the boundary of the board belongs to one square; a black side inside the board belongs to two squares, and each of them has it as its only black side. If $I$ black sides are interior and $J$ are on the boundary, counting squares gives $2I+J=n^2$, so the number of black sides is
 \[I+J=n^2-I .\]
 <strong>a) Minimum.</strong> $I\le\lfloor n^2/2\rfloor$, so the number is at least $\lceil n^2/2\rceil$. This is attained: tile the board (minus one corner square if $n$ is odd) by dominoes and colour the middle side of each domino, plus a boundary side of the leftover corner square. Every square then has exactly one black side.</p><p><strong>b) Maximum.</strong> For $n=1$ the answer is $1$. Let $n\ge2$. The $(n-2)^2$ squares not touching the boundary have only interior sides, and each interior black side serves at most two of them, so $2I\ge(n-2)^2$ and $I\ge\lceil (n-2)^2/2\rceil$. This is attained: tile the inner $(n-2)\times(n-2)$ square by dominoes (if $n$ is odd, leave one inner square $s$ adjacent to the boundary row of squares, and pair it with its neighbour $t$ in that row by colouring their common side), colour the middle side of each domino, and give every remaining boundary square one of its boundary sides. So the maximum is $n^2-\lceil (n-2)^2/2\rceil$.</p>
@@ -221,8 +215,7 @@ hence $\delta(A)-\delta(C)=c-a=\frac b2$.</p><p>The vector $\overrightarrow{AX}$
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Algebra &middot; LPS VII, Chapter 26: Inequalities: Symmetry, Homogenization, and Advanced Structure &middot; Homogenization and Normalization</div>
 <div class="ct-text"><p>Let $x,y,z$ be positive real numbers such that $x+y+z=2$. Show that
 \[\frac{(x-1)^2}{y}+\frac{(y-1)^2}{z}+\frac{(z-1)^2}{x}\ge\frac14\left(\frac{x^2+y^2}{x+y}+\frac{y^2+z^2}{y+z}+\frac{z^2+x^2}{z+x}\right).\]</p></div>
-<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Sum of squares)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Sum of squares</summary><div class="ct-text">
 <p><strong>Rewriting both sides.</strong> Since $x+y+z=2$, we have $x-1=\frac{x-y-z}{2}$, so
 \[\frac{(x-1)^2}{y}=\frac{\bigl((x-z)-y\bigr)^2}{4y}=\frac{(x-z)^2}{4y}-\frac{x-z}{2}+\frac y4 .\]
 Summing cyclically, the middle terms cancel and $\frac14(x+y+z)=\frac12$, so
@@ -236,14 +229,16 @@ Hence the inequality is equivalent to
 Say $x\ge y$ (the other case is the same with the roles of $x,y$ exchanged). Since $z-y&gt;x-y\ge0$,
 \[S_x(y-z)^2\ge\frac{(z-y)^2}{8x}&gt;\frac{(x-y)^2}{8x}\ge\frac{(x-y)^2}{8(x+y)}\ge-S_z(x-y)^2,\]
 and $S_y(z-x)^2\ge0$. So the sum is positive. In all cases the inequality holds, with equality only when $x=y=z=\frac23$.</p>
-<h4>Solution 2 (Homogenise and expand around the smallest variable)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Homogenise and expand around the smallest variable</summary><div class="ct-text">
 <p>Put $s=\frac{x+y+z}2$ $(=1)$ and write the inequality in homogeneous form:
 \[\sum_{\text{cyc}}\frac{(x-s)^2}{y}\ \ge\ \frac14\sum_{\text{cyc}}\frac{x^2+y^2}{x+y}.\]
 Multiply by $D=xyz(x+y)(y+z)(z+x)&gt;0$ and call the resulting polynomial (left minus right) $F(x,y,z)$; it has degree $7$. The inequality is cyclic, so we may assume that $x$ is the smallest variable and write $x=t$, $y=t+p$, $z=t+q$ with $t&gt;0$, $p,q\ge0$. Expanding and collecting powers of $t$ gives
 \[\begin{aligned}F={}&amp;3(p^2-pq+q^2)\,t^5+\tfrac14(p+q)(26p^2-35pq+26q^2)\,t^4+\tfrac12(9p^4+8p^3q-17p^2q^2+8pq^3+9q^4)\,t^3\\
 &amp;+\tfrac14(p+q)(p^2+5pq+q^2)(4p^2-7pq+4q^2)\,t^2+\tfrac12pq(2p^4+p^3q-5p^2q^2+pq^3+2q^4)\,t+\tfrac14p^2q^2(p-q)^2(p+q).\end{aligned}\]
 Every coefficient is non-negative for $p,q\ge0$: $p^2-pq+q^2\ge0$; $26p^2+26q^2\ge52pq$; $9p^4+9q^4\ge18p^2q^2$; $4p^2+4q^2\ge8pq$; and $2p^4+2q^4\ge4p^2q^2$, $p^3q+pq^3\ge2p^2q^2$. Hence $F\ge0$, which proves the inequality. Equality holds only for $p=q=0$, i.e. $x=y=z=\frac23$.</p>
-<h4>Solution 3 (Titu's lemma on each pair)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 3 &ndash; Titu's lemma on each pair</summary><div class="ct-text">
 <p><strong>Rewriting both sides.</strong> Since $x+y+z=2$, we have $x-1=\frac{(x-z)-y}{2}$, so
 \[\frac{(x-1)^2}{y}=\frac{(x-z)^2}{4y}-\frac{x-z}{2}+\frac y4 .\]
 Summing cyclically, the middle terms cancel and $\frac14(x+y+z)=\frac12$, so
@@ -263,10 +258,10 @@ Adding the three inequalities gives exactly $(*)$, which proves the claim.</p><p
 <h3>Problem 1</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 6: Pigeonhole Principle and Density Arguments &middot; Density and Averaging Arguments</div>
 <div class="ct-text"><p>Let $AB$ be a line in the plane. The set $S$ contains $1390$ points which satisfy the following conditions:</p><ul class="ct-parts"><li><p><span class="ct-lbl">a)</span> The distance between a point in $S$ and line $AB$ is at most $1$.</p></li><li><p><span class="ct-lbl">b)</span> The distance between any two points in $S$ is at least $2$.</p></li></ul><p>Show that there exist two points in $S$ with distance at least $1000$.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Disjoint discs in a rectangle)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Disjoint discs in a rectangle</summary><div class="ct-text">
 <p>Suppose all pairwise distances are less than $1000$. Project the points orthogonally onto the line $AB$; projection does not increase distances, so all projections lie in a segment of length less than $1000$, say $[m,M]$ in a coordinate along $AB$.</p><p>Draw the open disc of radius $1$ around each point. Since the points are at distance at least $2$ from each other, these discs are disjoint. Each point is at distance at most $1$ from $AB$ and its projection lies in $[m,M]$, so each disc lies in the rectangle consisting of points at distance at most $2$ from $AB$ with projection in $[m-1,M+1]$. This rectangle has area less than $4\cdot1002=4008$, while the discs have total area $1390\pi&gt;1390\cdot3.14&gt;4364$. This is impossible, so some two points are at distance at least $1000$.</p>
-<h4>Solution 2 (One strip and the gaps along the line)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; One strip and the gaps along the line</summary><div class="ct-text">
 <p>Take coordinates with $AB$ as the $x$-axis. Every point of $S$ has $|y|\le1$. Split $S$ into the points with $0\le y\le1$ and those with $-1\le y&lt;0$. One of these two groups contains at least $\frac{1390}{2}=695$ points; call it $S'$.</p><p>Any two points of $S'$ have $y$-coordinates differing by at most $1$ and are at distance at least $2$, so by Pythagoras their $x$-coordinates differ by at least $\sqrt{2^2-1^2}=\sqrt3$. Order the points of $S'$ by their $x$-coordinates. Consecutive points are at least $\sqrt3$ apart in $x$, so the first and the last differ in $x$ by at least
 \[694\sqrt3&gt;694\cdot1.7=1179.8&gt;1000 .\]
 The distance between these two points is at least the difference of their $x$-coordinates, so it is at least $1000$.</p>
@@ -280,12 +275,12 @@ The distance between these two points is at least the difference of their $x$-co
 and $f(x)\le 1$.
 Show that $f(x)$ is periodic.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>proof ($f$ has period $1$)</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (A periodic difference)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; A periodic difference</summary><div class="ct-text">
 <p>Since $\frac{13}{42}=\frac16+\frac17$, the condition reads $f\bigl(x+\frac16+\frac17\bigr)-f\bigl(x+\frac16\bigr)=f\bigl(x+\frac17\bigr)-f(x)$. So $g(x)=f\bigl(x+\frac17\bigr)-f(x)$ satisfies $g\bigl(x+\frac16\bigr)=g(x)$: $g$ has period $\frac16$, hence period $1$.</p><p>Let $T(x)=f(x+1)-f(x)=\sum_{j=0}^{6}g\bigl(x+\frac j7\bigr)$. As $g$ has period $1$, so has $T$. Therefore, for every integer $n\ge1$,
 \[f(x+n)=f(x)+nT(x),\qquad f(x-n)=f(x)-nT(x)\]
 (the second follows from the first applied at $x-n$). Since $f\le1$, letting $n\to\infty$ gives $T(x)\le0$ from the first identity and $T(x)\ge0$ from the second. So $T\equiv0$, i.e. $f(x+1)=f(x)$ for all $x$: $f$ is periodic with period $1$.</p>
-<h4>Solution 2 (Shift operators)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Shift operators</summary><div class="ct-text">
 <p>For a function $u:\mathbb R\to\mathbb R$ let $Tu$ be the function $x\mapsto u\bigl(x+\frac1{42}\bigr)$. Then $T^ku$ is $x\mapsto u\bigl(x+\frac k{42}\bigr)$, and for a polynomial $Q(T)=\sum c_kT^k$ we write $Q(T)u$ for the function $x\mapsto\sum c_k\,u\bigl(x+\frac k{42}\bigr)$. Applying $Q_1(T)$ and then $Q_2(T)$ is the same as applying the product $Q_2(T)Q_1(T)$, and $Q(T)$ applied to the zero function gives the zero function.</p><p>Since $\frac{13}{42}$, $\frac16=\frac7{42}$ and $\frac17=\frac6{42}$, the condition says
 \[\bigl(T^{13}-T^7-T^6+1\bigr)f=0,\qquad\text{i.e.}\qquad (T^7-1)(T^6-1)f=0 .\]
 Now $T^{42}-1=(T^7-1)(1+T^7+T^{14}+\dots+T^{35})=(T^6-1)(1+T^6+T^{12}+\dots+T^{36})$, so
@@ -302,8 +297,7 @@ Fix $x$ and let $h=f(x+1)-f(x)$. The relation says that the differences $f(x+n+1
 \[P(\mathbb{Z})=\{P(a)\mid a\in\mathbb{Z}\}\]
 contains an infinite geometric progression.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>the polynomials $P(x)=a(bx+c)^d$ with $a,b,c\in\mathbb Z$, $a,b\ne0$, $d\ge1$ (for progressions with infinitely many distinct terms)</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Compare terms d steps apart)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Compare terms d steps apart</summary><div class="ct-text">
 <p>We consider geometric progressions $s,sq,sq^2,\dots$ with infinitely many distinct terms (constant progressions lie in $P(\mathbb Z)$ for every $P$, and ratio $-1$ gives only two values). All terms are integers; if $q=u/v$ in lowest terms, $v^k\mid s$ for all $k$, so $q$ is an integer, and $|q|\ge2$, $s\ne0$.</p><p><strong>These polynomials work.</strong> If $c\ne0$, choose an integer $t$ with $|1+bt|\ge2$; the numbers $c(1+bt)^k$ are $\equiv c\pmod b$, so $c(1+bt)^k=bx_k+c$ for integers $x_k$, and $P(x_k)=ac^d(1+bt)^{dk}$ is a geometric progression. If $c=0$, take $x_k=2^k$.</p><p><strong>Only these work.</strong> Let $P$ have degree $d\ge1$ and leading coefficient $A$, and $P(x_k)=sq^k$ for all $k\ge0$. Then $|x_k|\to\infty$. Put $\beta=\frac{a_{d-1}}{dA}$ (with $a_{d-1}$ the coefficient of $x^{d-1}$) and $y=x+\beta$; then $P=Ay^d+R(y)$ with $\deg R\le d-2$ and rational coefficients. Let $y_k=x_k+\beta$; all $y_k$ are rationals with denominator dividing $dA$. From $P(x_{k+d})=q^dP(x_k)$,
 \[y_{k+d}^{\,d}-(qy_k)^d=\frac{q^dR(y_k)-R(y_{k+d})}{A}=O\bigl(|y_k|^{d-2}\bigr),\]
 because $|y_{k+d}|$ is comparable to $|q||y_k|$. Dividing by a factor of size comparable to $|y_k|^{d-1}$ (for odd $d$ the factor $\sum y_{k+d}^iq^{d-1-i}y_k^{d-1-i}$ is $\ge c_d\max(|y_{k+d}|,|qy_k|)^{d-1}$; for even $d$ use $|y_{k+d}|^d-|qy_k|^d$ in the same way) we get $y_{k+d}-\varepsilon_kqy_k\to0$ with $\varepsilon_k=\pm1$. These differences are rationals with bounded denominators, so $y_{k+d}=\varepsilon qy_k$ exactly for infinitely many $k$, with a fixed sign $\varepsilon$. Substituting into $P(x_{k+d})=q^dP(x_k)$ gives $R(\varepsilon qy_k)=q^dR(y_k)$ for infinitely many $y_k$, hence the polynomial identity $R(\varepsilon qy)=q^dR(y)$. Comparing the coefficients of $y^j$ ($j\le d-2$): $(\varepsilon q)^jr_j=q^dr_j$ forces $r_j=0$ as $|q|\ge2$. So $P(x)=A(x+\beta)^d$.</p><p>Finally write $\beta=\frac uv$ in lowest terms: $P(x)=\frac{A}{v^d}(vx+u)^d$, and the constant term $\frac{Au^d}{v^d}$ is an integer, so $v^d\mid A$. Hence $P(x)=a(bx+c)^d$ with $a=A/v^d$, $b=v$, $c=u$.</p>

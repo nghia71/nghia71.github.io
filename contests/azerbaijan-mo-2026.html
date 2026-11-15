@@ -97,7 +97,6 @@ description: Azerbaijan National Mathematical Olympiad 2026, Seniors: problems w
 <p>The 6 problems of the Azerbaijan National Mathematical Olympiad 2026, Seniors, each with our own solutions, hidden until you open them. 3 of them ask for an answer and 3 ask for a proof. Where a problem has a final answer, it is shown separately. Try a problem first, then check.</p><p>This is the senior paper (grades 10&ndash;11): Day 1 on 18 April 2026 and Day 2 on 19 April 2026, three problems each.</p>
 </div>
 <div class="ct-credit">Problems: Azerbaijan National Mathematical Olympiad 2026, Seniors, from the AoPS contest collection or the official paper. Solutions written by MCC.</div>
-<div class="ct-bar"><button type="button" onclick="ctAll(true)">Show all answers and solutions</button><button type="button" onclick="ctAll(false)">Hide all</button></div>
 <div class="ct-toc-wrap"><div class="ct-toc-row"><span class="ct-toc-g">Day 1</span><a href="#p1">1</a><a href="#p2">2</a><a href="#p3">3</a></div><div class="ct-toc-row"><span class="ct-toc-g">Day 2</span><a href="#p4">4</a><a href="#p5">5</a><a href="#p6">6</a></div></div>
 
 {% raw %}
@@ -108,13 +107,13 @@ description: Azerbaijan National Mathematical Olympiad 2026, Seniors: problems w
 <div class="ct-text"><p>Let $x,y,a,b,c$ be real numbers such that
 \[\begin{cases} a+b+c=1,\\ a^2+b^2+c^2=3,\\ bc-x-2ya=0,\\ ca-x-2yb=0,\\ ab-x-2yc=0.\end{cases}\]
 Prove that $abc\in\left\{-1,\frac{5}{27}\right\}$.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Subtracting the equations)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Subtracting the equations</summary><div class="ct-text">
 <p>Subtracting the fourth equation from the third gives $bc-ca-2y(a-b)=0$, i.e. $(b-a)(c+2y)=0$. In the same way
 \[(b-a)(c+2y)=0,\qquad(c-b)(a+2y)=0,\qquad(a-c)(b+2y)=0 .\]
 <em>Two of $a,b,c$ are equal.</em> If $a,b,c$ were pairwise distinct, we would get $a=b=c=-2y$, a contradiction.</p><p><em>Not all three are equal.</em> Otherwise $3a=1$ and $3a^2=3$, impossible.</p><p>So exactly two are equal. The system is unchanged when $a,b,c$ are permuted (together with the last three equations), so we may assume
 $a=b\ne c$. Then $2a+c=1$ and $2a^2+c^2=3$; substituting $c=1-2a$ gives $6a^2-4a-2=0$, i.e. $(3a+1)(a-1)=0$.</p><ul class="ct-ul"><li><p>$a=1$: $c=-1$ and $abc=-1$;</p></li><li><p>$a=-\frac13$: $c=\frac53$ and $abc=\frac19\cdot\frac53=\frac5{27}$.</p></li></ul><p>Hence $abc\in\{-1,\frac5{27}\}$. (Both values occur: with $a=b$, $y=-\frac a2$ and $x=a^2+ac$ all equations hold.)</p>
-<h4>Solution 2 (A quadratic with three roots)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; A quadratic with three roots</summary><div class="ct-text">
 <p>From $a+b+c=1$ and $a^2+b^2+c^2=3$ we get $ab+bc+ca=\frac{1-3}2=-1$. Let $p=abc$; then $a,b,c$ are the roots of
 \[g(t)=t^3-t^2-t-p .\]
 Multiplying the equation $bc=x+2ya$ by $a$ gives $p=xa+2ya^2$; similarly $p=xb+2yb^2$ and $p=xc+2yc^2$. So $a,b,c$ are roots of
@@ -130,8 +129,7 @@ So $abc\in\{-1,\frac5{27}\}$.</p>
 <div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 44: Combinatorial Games and Strategy &middot; Invariant-Based Game Analysis</div>
 <div class="ct-text"><p>Two players $A$ and $B$ play the following game on an $8\times 8$ chessboard with one knight. A knight's &ldquo;direction&rdquo; is defined as the direction he moves two cells. For example: If a knight moves two cells upward and one cell left, then his &ldquo;direction&rdquo; is up. If it moves two cells right and one cell down then his &ldquo;direction&rdquo; is right. First, $A$ places the knight on some cell of the board and every round goes as follows: Firstly $B$ advises a &ldquo;direction&rdquo; for the move, if there exist two possible moves with that &ldquo;direction&rdquo; then $A$ chooses one of them and changes the knight's position, if there is only one possible move then $A$ can either reject or accept to do that move. It is known that $B$ cannot advise the same &ldquo;direction&rdquo; twice in a round and $A$ cannot reject $B$'s propositions infinitely many times. The round ends when the knight's position has been changed. When a knight moves to a cell that cell gets marked (including the beginning cell). Find the least positive integer $k$, such that regardless of the advices of $B$, $A$ can make the number of marked cells in the board at most $k$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$12$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (A residue class modulo $5$, and three cells in every quarter)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; A residue class modulo $5$, and three cells in every quarter</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:353px" src="/assets/contests/2026-27/azerbaijan-mo-2_s1.svg" alt="Figure for the solution"></div>
 <p><em>Reading of the rules.</em> In a round, $B$ advises different directions one after another (a direction with no
 legal move is not advised). If the advised direction has two moves, $A$ must make one of them, of his choice. If it has one move, $A$ may reject it,
@@ -188,11 +186,11 @@ quarters. Hence every self-safe set has at least $12$ cells, so $k\ge12$, and wi
 <div class="ct-text"><p>Find all nonnegative integers $a,b,c$ such that
 \[20^a+b^4=2024^c.\]</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$(a,b,c)=(0,0,0)$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Fourth powers modulo $11$)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Fourth powers modulo $11$</summary><div class="ct-text">
 <p>If $c=0$, then $20^a+b^4=1$, so $a=0$ (otherwise $20^a\ge20$) and then $b=0$. This gives $(a,b,c)=(0,0,0)$.</p><p>Let $c\ge1$. Since $2024=8\cdot11\cdot23$, we get $20^a+b^4\equiv0\pmod{11}$.</p><ul class="ct-ul"><li><p>Modulo $11$, the fourth powers of $0,1,2,\dots,10$ are $0,1,5,4,3,9,9,3,4,5,1$; so $b^4\bmod 11$ lies in $\{0,1,3,4,5,9\}$.</p></li><li><p>$20\equiv-2\pmod{11}$ and $(-2)^5=-32\equiv1$, so $20^a\bmod11$ runs through $1,9,4,3,5$ (period $5$), and $-20^a\bmod11\in\{10,2,7,8,6\}$.</p></li></ul><p>The two sets $\{0,1,3,4,5,9\}$ and $\{2,6,7,8,10\}$ are disjoint, so $b^4\equiv-20^a\pmod{11}$ is impossible. Hence the only solution is
 $(a,b,c)=\boxed{(0,0,0)}$.</p>
-<h4>Solution 2 (Raising to the fifth power)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Raising to the fifth power</summary><div class="ct-text">
 <p>If $c=0$, the equation is $20^a+b^4=1$, which forces $a=0$ and then $b=0$: the solution $(0,0,0)$.</p><p>Let $c\ge1$; as $11\mid2024$, we get $b^4\equiv-20^a\pmod{11}$. Here $11\nmid b$, since otherwise $11\mid20^a$. Raise both sides to the fifth power:
 \[b^{20}\equiv(-20^a)^5=-\bigl(20^5\bigr)^a\pmod{11}.\]
 By Fermat's little theorem $b^{20}=(b^{10})^2\equiv1$, and $20^5\equiv(-2)^5=-32\equiv1\pmod{11}$. So $1\equiv-1\pmod{11}$, which is false.
@@ -204,8 +202,7 @@ Hence $(a,b,c)=\boxed{(0,0,0)}$ is the only solution.</p>
 <h3>Problem 4</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VII scale">E</span>Combinatorics &middot; LPS VII, Chapter 31: Extremal Principle and Bounding Arguments &middot; Bounding and Limiting Arguments</div>
 <div class="ct-text"><p>A Sudoku is a puzzle played on a $9\times 9$ grid. The grid is divided into nine $3\times 3$ subgrids. The cells are filled with the numbers $\{1,2,3,\dots,9\}$ in such a way that each row, each column, and each $3\times 3$ subgrid contains each of these digits exactly once. Let $M$ and $N$ denote the products of the numbers on the two main diagonals.</p><ul class="ct-parts"><li><p><span class="ct-lbl">(a)</span> Prove that there exists such a Sudoku for which $2025^3\mid MN$.</p></li><li><p><span class="ct-lbl">(b)</span> Prove that there does not exist such a Sudoku for which $2025^4\mid MN$.</p></li></ul></div>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Counting factors $3$ and $5$ on the diagonals)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Counting factors $3$ and $5$ on the diagonals</summary><div class="ct-text">
 <p>Note $2025=3^4\cdot5^2$, so $2025^3=3^{12}5^{6}$ and $2025^4=3^{16}5^{8}$. The main diagonal passes through the three $3\times3$ boxes
 top-left, centre and bottom-right, three cells in each; the other diagonal through top-right, centre and bottom-left. The centre cell lies on
 both diagonals, so its digit is counted twice in $MN$.</p><p><em>(a)</em> The following Sudoku works:
@@ -231,8 +228,7 @@ Let $M$ be the midpoint of $BC$.
 The line $XM$ meets the circumcircle of $ABC$ again at $Y$.
 Let $AY$ intersect $BC$ at $K$.
 Prove that $MD=MK$.</p></div>
-<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Complex numbers)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Complex numbers</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:295px" src="/assets/contests/2026-27/azerbaijan-mo-5_s1.svg" alt="Figure for the solution"></div>
 <p><em>The point $X$.</em> The point $D$ lies strictly between $B$ and $C$ (if $D=B$ or $D=C$, one of $E,F$ is $A$ and the circle $AEF$ is not defined), and
 $D\ne M$ (if $D=M$ the two circles are tangent at $A$ and there is no $X$). The point $X\ne A$ lies on both circles, so, with directed angles modulo
@@ -248,7 +244,8 @@ $MX\cdot MY=1$: that is, $y=-\frac{x}{|x|^2}=-\frac1{\bar x}=-\frac{1+d\bar a}{\
 \[y+d=\frac{-1-d\bar a+d\bar a+d^2}{\bar a+d}=\frac{d^2-1}{\bar a+d},\qquad
 \frac{y-(-d)}{a-(-d)}=\frac{d^2-1}{(\bar a+d)(a+d)}=\frac{d^2-1}{|a+d|^2}\in\mathbb R .\]
 Since $a$ is not real, the line $AY$ meets the real axis in a single point, so $K=-d$. Therefore $MK=|d|=MD$.</p>
-<h4>Solution 2 (Spiral similarity and a midline)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Spiral similarity and a midline</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:295px" src="/assets/contests/2026-27/azerbaijan-mo-5_s2.svg" alt="Figure for the solution"></div>
 <p>Let $N$ be the midpoint of $AD$. Since $AEDF$ is a parallelogram ($DE\parallel AF$, $DF\parallel AE$), $N$ is also the midpoint of $EF$. We
 use directed angles $\measuredangle(\ell,m)$ between lines, taken modulo $180^\circ$. We may assume $D\ne M$ (for $D=M$ the circles $AFE$ and $ABC$
@@ -262,7 +259,8 @@ $X,M,Y$ are collinear), hence
 \[\measuredangle(YX,MN)=\measuredangle(YX,YA),\]
 so $MN\parallel YA$, i.e. $MN\parallel AK$.</p><p><em>Midline.</em> In triangle $ADK$ the line through the midpoint $N$ of $AD$ parallel to $AK$ meets $DK$ (the line $BC$) at the midpoint of $DK$. That
 point is $M$, because $M$ lies on $BC$ and on this line. Hence $MD=MK$.</p>
-<h4>Solution 3 (Oblique coordinates and the reflected point)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 3 &ndash; Oblique coordinates and the reflected point</summary><div class="ct-text">
 <p>The point $D$ lies strictly between $B$ and $C$: if $D=B$ or $D=C$, one of $E,F$ coincides with $A$ and the circle $AEF$ is not defined. Also $D\ne M$: for $D=M$ the circles $AEF$ and $ABC$ are tangent at $A$ and $X$ does not exist.</p><p><em>Coordinates.</em> Let $\mathbf p=\overrightarrow{AB}$, $\mathbf q=\overrightarrow{AC}$, and give the point $A+\xi\mathbf p+\eta\mathbf q$ the coordinates $(\xi,\eta)$. Then $A=(0,0)$, $B=(1,0)$, $C=(0,1)$, $M=(\frac12,\frac12)$, and $D=(1-t,t)$ with $0&lt;t&lt;1$, $t\ne\frac12$. Since $DE\parallel AB$ and $DF\parallel AC$, we get $E=(0,t)$ and $F=(1-t,0)$. Put $b=AB^2$, $c=AC^2$, $g=\mathbf p\cdot\mathbf q$. The squared distance from $A$ to $(\xi,\eta)$ is
 \[\varphi(\xi,\eta)=b\xi^2+2g\xi\eta+c\eta^2,\]
 which is positive for $(\xi,\eta)\ne(0,0)$.</p><p><em>Powers of a point.</em> If a circle with centre $O$ passes through $A$, put $\mathbf w=\overrightarrow{AO}$; the power of a point $P$ is $|\overrightarrow{AP}-\mathbf w|^2-|\mathbf w|^2=AP^2-2\,\mathbf w\cdot\overrightarrow{AP}$. For the circle $ABC$, the points $B$ and $C$ give $2\mathbf w\cdot\mathbf p=b$ and $2\mathbf w\cdot\mathbf q=c$; for the circle $AEF$, the points $F=A+(1-t)\mathbf p$ and $E=A+t\mathbf q$ give $2\mathbf w'\cdot\mathbf p=(1-t)b$ and $2\mathbf w'\cdot\mathbf q=tc$. So the two powers are
@@ -288,8 +286,7 @@ So $X$, $M$, $Z$ are collinear.</p><p><em>Conclusion.</em> $M$ is inside the cir
 <div class="ct-text"><p>Prove that there exist polynomials $P(x)$ and $Q(x)$ with real coefficients such that $\deg P\ge 2026$, $\deg Q\ge 2$, and for all real numbers $x$,
 \[P(Q(x)-x-1)=Q(P(x)).\]</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>e.g. $Q(x)=\frac{x^2+5x}{2}$ and $P=U^{\circ11}-1$ with $U(x)=\frac{x^2+3x-2}{2}$ ($\deg P=2048$)</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Conjugating by a translation)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Conjugating by a translation</summary><div class="ct-text">
 <p><em>Idea.</em> Write $U(x)=Q(x)-x-1$; the equation is $P\circ U=Q\circ P$. If $Q$ were <em>conjugate</em> to $U$ by a translation $L(x)=x-1$,
 that is $Q\circ L=L\circ U$, then $P=L\circ U^{\circ m}$ (with $U^{\circ m}=U\circ\dots\circ U$, $m$ times) would work for every $m$. The condition
 $Q(x-1)=U(x)-1=Q(x)-x-2$ says $Q(x)-Q(x-1)=x+2$, which a quadratic $Q$ can satisfy.</p><p><em>The example.</em> Let
@@ -300,7 +297,8 @@ Now for every real $x$, using (1) with $z=U^{\circ11}(x)$,
 \[Q(P(x))=Q\bigl(U^{\circ11}(x)-1\bigr)=U\bigl(U^{\circ11}(x)\bigr)-1=U^{\circ12}(x)-1,\]
 \[P\bigl(Q(x)-x-1\bigr)=P(U(x))=U^{\circ11}\bigl(U(x)\bigr)-1=U^{\circ12}(x)-1 .\]
 So $P(Q(x)-x-1)=Q(P(x))$. Finally $\deg Q=2$, and since $U$ has degree $2$, $\deg P=2^{11}=2048\ge2026$.</p>
-<h4>Solution 2 (A monomial ansatz)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; A monomial ansatz</summary><div class="ct-text">
 <p><em>Finding the example.</em> Try $Q(x)=kx^2+x+1$, so that $Q(x)-x-1=kx^2$, and $P(x)=p+qx^m$ with $m$ even. Then $P(Q(x)-x-1)=p+qk^mx^{2m}$ is $p$ plus a monomial, and $Q(P(x))=Q(p+qx^m)$ has the same shape if $Q(p+u)=p+ku^2$ for all $u$, that is, if the vertex of the parabola $y=Q(x)$ is at $x=p$ and $Q(p)=p$. The vertex is at $-\frac1{2k}$, so $k=-\frac1{2p}$, and $Q(p)=kp^2+p+1=p$ gives $-\frac p2+1=0$: $p=2$, $k=-\frac14$.</p><p><em>The example.</em> Let $m=2048$, $\gamma=4^{1-m}$ and
 \[Q(x)=1+x-\frac{x^2}{4},\qquad P(x)=2-\gamma x^{m}.\]
 Then $Q(x)-x-1=-\frac{x^2}{4}$, and for every real $u$

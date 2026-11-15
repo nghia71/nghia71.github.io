@@ -97,7 +97,6 @@ description: Singapore Mathematical Olympiad 2026, Senior Section: problems with
 <p>The 5 problems of the Singapore Mathematical Olympiad 2026, Senior Section, each with our own solutions, hidden until you open them. 4 of them ask for an answer and 1 asks for a proof. Where a problem has a final answer, it is shown separately. Try a problem first, then check.</p><p>Senior Section; five problems Q1-Q5. Q3 is also Q5 of the Junior Section.</p>
 </div>
 <div class="ct-credit">Problems: Singapore Mathematical Olympiad 2026, Senior Section, from the AoPS contest collection or the official paper. Solutions written by MCC.</div>
-<div class="ct-bar"><button type="button" onclick="ctAll(true)">Show all answers and solutions</button><button type="button" onclick="ctAll(false)">Hide all</button></div>
 <div class="ct-toc-wrap"><div class="ct-toc-row"><a href="#p1">1</a><a href="#p2">2</a><a href="#p3">3</a><a href="#p4">4</a><a href="#p5">5</a></div></div>
 
 {% raw %}
@@ -106,8 +105,7 @@ description: Singapore Mathematical Olympiad 2026, Senior Section: problems with
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 36: Coordinate Geometry and Analytic Representation &middot; Cartesian Coordinate Setup</div>
 <div class="ct-text"><p>In square $ABCD$, $E,F$ are points on the sides $AB$ and $BC$ respectively. Let $N$ be the foot of the perpendicular from $B$ onto $CE$. The circular arc from $C$ to $A$ centred at $B$ with radius $BC$ intersects the segment $DN$ at $K$. If $\angle FND=90^\circ$ and $KF$ is parallel to $NB$, find the value of $\dfrac{BE+BF}{AB}$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$3-\sqrt5$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Coordinates centred at $N$)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Coordinates centred at $N$</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:242px" src="/assets/contests/2026-27/singapore-senior-mo-1_s1.svg" alt="Figure for the solution"></div>
 <p>Take $AB=1$ (the ratio does not depend on the size). Let $\theta=\angle BCE$ and put $b=\sin\theta$, $c=\cos\theta$. The point $E$ is not $B$ (otherwise $N=B$ and $\angle FND=\angle FBD=45^\circ$), so $0&lt;\theta\le45^\circ$ and $BE=\tan\theta=\frac bc$. In the right triangle $BNC$ (right angle at $N$, hypotenuse $BC=1$) we have $NB=b$ and $NC=c$.</p><p>Place $N$ at the origin, the $x$-axis along $NC$ and the $y$-axis along $NB$:
 \[N=(0,0),\quad C=(c,0),\quad B=(0,b).\]
@@ -123,7 +121,8 @@ taking positive square roots ($c&gt;b&gt;0$). This is $c^2-3bc+b^2=0$, so $\frac
 \[BE=BF=\frac bc=\frac{2}{3+\sqrt5}=\frac{3-\sqrt5}2 .\]
 Conversely these values work: $\lambda=\frac b{c-b}=\frac{\sqrt5-1}2\in(0,1)$, so $K$ is on segment $DN$. Therefore
 \[\frac{BE+BF}{AB}=\boxed{3-\sqrt5}.\]</p>
-<h4>Solution 2 (The altitude of the right triangle $KNF$)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; The altitude of the right triangle $KNF$</summary><div class="ct-text">
 <p>Take $AB=1$, let $\theta=\angle BCE$ and $t=\tan\theta=BE$, so $0&lt;t\le1$.</p><p><strong>Step 1: $BF=BE$.</strong> Use coordinates $B=(0,0)$, $C=(1,0)$, $A=(0,1)$, $D=(1,1)$, $E=(0,t)$, $F=(f,0)$. The foot of the perpendicular from $B$ to line $CE$ is $N=\frac1{1+t^2}(t^2,t)$; write $N=(n_1,n_2)$ and note $n_1^2+n_2^2=\frac{t^2}{1+t^2}=n_1$. Then
 \[\overrightarrow{NF}\cdot\overrightarrow{ND}=(f-n_1)(1-n_1)-n_2(1-n_2)=f(1-n_1)-n_2=\frac{f-t}{1+t^2},\]
 so $\angle FND=90^\circ$ gives $f=t$: $BF=BE=t$. Also $t&lt;1$: if $t=1$ then $F=C$, $N$ is the centre of the square, and the line through $F$ parallel to $NB$ (a diagonal) would be parallel to line $DN=DB$, so $K$ would not exist.</p><p><strong>Step 2: locating $K$.</strong> Let $P$ be the foot of the perpendicular from $F$ to line $CE$. Both $FP$ and $KF$ are parallel to $NB$ (all are perpendicular to $CE$), so $K,F,P$ are collinear. In triangle $KNF$ the angle at $N$ is $90^\circ$ ($K$ lies on $DN$ and $\angle FND=90^\circ$), and $NP\perp KF$ with $P$ on line $KF$. So $P$ is the foot of the altitude from the right angle; it lies between $K$ and $F$, and
@@ -140,11 +139,11 @@ Setting $BK^2=1=\sin^2\theta+\cos^2\theta$ gives $\cos^2\theta=\sin^2\theta\,\fr
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 31: Extremal Principle and Bounding Arguments &middot; Extremal Element Selection</div>
 <div class="ct-text"><p>Let $P$ be a configuration of $n\ge3$ points in the plane, no three collinear and let $K$ be a maximal set of pairwise nonparallel lines, each joining two of these points. Let $M(P)$ be the largest possible size of $K$. What is the minimum value of $M(P)$ over all possible configurations $P$?</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$n$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (A vertex of the convex hull)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; A vertex of the convex hull</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/singapore-senior-mo-2_s1.svg" alt="Figure for the solution"></div>
 <p>$M(P)$ is the number of different directions of the lines joining two points of $P$.</p><p><strong>Lower bound $M(P)\ge n$.</strong> Let $A$ be a vertex of the convex hull of $P$. All other points lie in the angle at $A$ formed by its two hull neighbours $B$ and $Z$, and this angle is less than $180^\circ$. The $n-1$ lines $AQ$ ($Q\in P$, $Q\ne A$) are pairwise nonparallel: two of them pass through $A$, so if they were parallel they would coincide and three points would be collinear.</p><p>We show that the line $BZ$ is parallel to none of them, which gives $n$ directions. Write $\vec u=\overrightarrow{AB}$, $\vec v=\overrightarrow{AZ}$. Every point $Q\ne A$ of $P$ lies in the angle $BAZ$, so $\overrightarrow{AQ}=\alpha\vec u+\beta\vec v$ with $\alpha,\beta\ge0$ not both $0$. If $AQ\parallel BZ$, then $\overrightarrow{AQ}=\lambda\,\overrightarrow{BZ}=\lambda(\vec v-\vec u)$ for some $\lambda\ne0$; since $\vec u,\vec v$ are not parallel, comparing coefficients gives $\alpha=-\lambda$ and $\beta=\lambda$, which cannot both be $\ge0$. So $BZ$ gives a new direction and $M(P)\ge n$.</p><p><strong>A configuration with exactly $n$ directions.</strong> Let $P$ be the vertex set $V_0,\dots,V_{n-1}$ of a regular $n$-gon with centre $O$, $V_k$ at angle $\frac{2\pi k}n$ (no three vertices of a convex polygon are collinear). For an integer $m$, the reflection in the line through $O$ at angle $\frac{\pi m}n$ sends the angle $\frac{2\pi k}n$ to $\frac{2\pi(m-k)}n$, i.e. $V_k\mapsto V_{m-k}$ (indices mod $n$). So if $i+j\equiv m\pmod n$, this reflection swaps $V_i$ and $V_j$, and the chord $V_iV_j$ is perpendicular to its axis. Hence all chords with the same value of $i+j\bmod n$ are parallel, and there are at most $n$ directions. Together with the lower bound, this configuration has exactly $n$.</p><p>So the minimum value of $M(P)$ is $\boxed{n}$.</p>
-<h4>Solution 2 (Each direction class is a matching)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Each direction class is a matching</summary><div class="ct-text">
 <p>$M(P)$ is the number of directions of the $\binom n2$ lines joining two points of $P$; group these segments into classes of parallel ones.</p><p><strong>Each class is a matching.</strong> Two parallel segments cannot share an endpoint (they would lie on one line, giving three collinear points). So a class has at most $\lfloor n/2\rfloor$ segments, and with $d=M(P)$ classes,
 \[\binom n2\le d\Bigl\lfloor\frac n2\Bigr\rfloor .\]
 For odd $n$ this gives $d\ge\frac{n(n-1)/2}{(n-1)/2}=n$. For even $n$ it gives $d\ge n-1$, with equality only if every class has exactly $n/2$ segments, i.e. every class is a perfect matching: then <em>every point is an endpoint of a segment in every one of the $d$ directions</em>.</p><p><strong>Excluding $d=n-1$ for even $n$.</strong> Suppose this happens. Let $A$ be a vertex of the convex hull with hull neighbours $B$ and $Z$; all points lie in the angle $BAZ$, which is less than $180^\circ$. The direction of $BZ$ is one of the $d$ directions, so some segment $AQ$ is parallel to $BZ$. Write $\overrightarrow{AQ}=\alpha\overrightarrow{AB}+\beta\overrightarrow{AZ}$ with $\alpha,\beta\ge0$ (as $Q$ is in the angle) and also $\overrightarrow{AQ}=\lambda(\overrightarrow{AZ}-\overrightarrow{AB})$ with $\lambda\ne0$; then $\alpha=-\lambda$, $\beta=\lambda$, a contradiction. Hence $d\ge n$ for all $n$.</p><p><strong>Equality.</strong> Take the regular $n$-gon with vertices $V_k=(\cos\frac{2\pi k}n,\sin\frac{2\pi k}n)$, $k=0,\dots,n-1$. With $\gamma=\frac{\pi(i+j)}n$ and $\eta=\frac{\pi(j-i)}n$, the sum-to-product formulas give
@@ -158,14 +157,14 @@ So the line $V_iV_j$ is perpendicular to the direction of angle $\gamma=\frac{\p
 <div class="ct-text"><p>Determine all integers $a,b,c$ satisfying
 \[a^2+b^2+c^2=13(ab+bc+ca).\]</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>only $a=b=c=0$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Descent modulo $5$ via $a+b+c$)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Descent modulo $5$ via $a+b+c$</summary><div class="ct-text">
 <p>Let $s=a+b+c$ and $q=ab+bc+ca$. Adding $2q$ to both sides of the equation gives
 \[s^2=a^2+b^2+c^2+2q=15q .\]
 <strong>Everything is divisible by $5$.</strong> Since $5\mid s^2$ and $5$ is prime, $5\mid s$; then $25\mid s^2=15q$, so $5\mid q$. Modulo $5$ we have $c\equiv-a-b$, hence
 \[q=ab+c(a+b)\equiv ab-(a+b)^2=-(a^2+ab+b^2)\pmod5,\]
 so $a^2+ab+b^2\equiv0\pmod 5$. Multiply by $4$: $(2a+b)^2+3b^2\equiv0$, i.e. $(2a+b)^2\equiv2b^2\pmod5$. The squares modulo $5$ are $0,1,4$. If $5\nmid b$ then $b^2\equiv1$ or $4$, so $2b^2\equiv2$ or $3$, which is not a square modulo $5$. Hence $5\mid b$, then $(2a)^2\equiv0$ gives $5\mid a$, and $c\equiv-a-b\equiv0$. So $a,b,c$ are all divisible by $5$.</p><p><strong>Descent.</strong> The equation is homogeneous, so $(a/5,b/5,c/5)$ is again an integer solution. Repeating, $a,b,c$ are divisible by $5^k$ for every $k$, which is only possible for $a=b=c=0$. Conversely $(0,0,0)$ is a solution. The only solution is $\boxed{a=b=c=0}$.</p>
-<h4>Solution 2 (The differences and the form $x^2+xy+y^2$)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; The differences and the form $x^2+xy+y^2$</summary><div class="ct-text">
 <p>Put $x=a-b$, $y=b-c$ (so $c-a=-(x+y)$) and $s=a+b+c$, $q=ab+bc+ca$. From the equation, $a^2+b^2+c^2=13q$, and
 \[s^2=13q+2q=15q,\qquad x^2+y^2+(x+y)^2=2(a^2+b^2+c^2)-2q=24q .\]
 Since $x^2+y^2+(x+y)^2=2(x^2+xy+y^2)$, we get $x^2+xy+y^2=12q=\frac45s^2$, that is
@@ -181,8 +180,7 @@ Since $x^2+y^2+(x+y)^2=2(x^2+xy+y^2)$, we get $x^2+xy+y^2=12q=\frac45s^2$, that 
 If $a_0=b_0=0$ and $a_N\ge1$, determine the smallest possible value of
 \[|c_1|+|c_2|+\cdots+|c_N|.\]</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$1$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (The distance from the origin)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; The distance from the origin</summary><div class="ct-text">
 <p>Let $r_k=\sqrt{a_k^2+b_k^2}$. Put $u=\frac{4a_{k-1}+3b_{k-1}}5$ and $w=\frac{4b_{k-1}-3a_{k-1}}5$. Then
 \[u^2+w^2=\frac{(16+9)(a_{k-1}^2+b_{k-1}^2)+(24-24)a_{k-1}b_{k-1}}{25}=r_{k-1}^2,\]
 and $(a_k,b_k)=(u+c_k,w)$. By the triangle inequality (the distance from the origin to $(u,w)+(c_k,0)$ is at most the sum of the lengths),
@@ -190,7 +188,8 @@ and $(a_k,b_k)=(u+c_k,w)$. By the triangle inequality (the distance from the ori
 Since $r_0=0$, adding these for $k=1,\dots,N$ gives $r_N\le|c_1|+\dots+|c_N|$, and therefore
 \[|c_1|+\dots+|c_N|\ge r_N\ge a_N\ge1 .\]
 The value $1$ is attained: take $c_1=\dots=c_{N-1}=0$ and $c_N=1$. Then $a_k=b_k=0$ for $k&lt;N$, and $a_N=0+1=1$. The smallest possible value is $\boxed{1}$.</p>
-<h4>Solution 2 (A complex closed form)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; A complex closed form</summary><div class="ct-text">
 <p>Let $z_k=a_k+ib_k$ and $\omega=\frac{4-3i}5$, a complex number with $|\omega|=1$. Then
 \[\omega z_{k-1}=\frac{(4a_{k-1}+3b_{k-1})+i(4b_{k-1}-3a_{k-1})}5,\]
 so the two recurrences say exactly $z_k=\omega z_{k-1}+c_k$. With $z_0=0$ this gives, by induction,
@@ -205,8 +204,7 @@ Equality is possible: with $c_N=1$ and all other $c_k=0$ we get $z_N=1$, so $a_N
 <div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Algebra &middot; LPS VII, Chapter 17: Sequences, Recurrences, and Discrete Dynamics &middot; Invariant and Monotone Sequence Behavior</div>
 <div class="ct-text"><p>Let $(x_n)$ be a sequence of positive real numbers. Prove that there are infinitely many positive integers $n$ such that
 \[\frac{x_1+\cdots+x_{n+1}}{x_n}\ge3.99.\]</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Ratios of consecutive partial sums)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Ratios of consecutive partial sums</summary><div class="ct-text">
 <p>Let $c=3.99$ and $S_n=x_1+\dots+x_n$, so $S_n&gt;0$ is increasing. Suppose the statement is false. Then there is $N\ge2$ with
 \[S_{n+1}&lt;c\,x_n=c\,(S_n-S_{n-1})\qquad\text{for all }n\ge N .\]
 Let $r_n=\dfrac{S_{n+1}}{S_n}$; then $r_n&gt;1$ for all $n$. Dividing by $S_n$ gives, for $n\ge N$,
@@ -214,7 +212,8 @@ Let $r_n=\dfrac{S_{n+1}}{S_n}$; then $r_n&gt;1$ for all $n$. Dividing by $S_n$ g
 The numerator satisfies $r^2-cr+c=\bigl(r-\frac c2\bigr)^2+\frac{c(4-c)}4\ge\mu$, where $\mu=\frac{c(4-c)}4&gt;0$ because $c&lt;4$. Hence $r_n&lt;r_{n-1}-\frac{\mu}{r_{n-1}}&lt;r_{n-1}$ for $n\ge N$. So $r_{N-1}&gt;r_N&gt;r_{N+1}&gt;\cdots$, all of them at most $R=r_{N-1}$, and therefore
 \[r_n&lt;r_{n-1}-\frac\mu R\qquad(n\ge N).\]
 After $m$ steps, $r_{N-1+m}&lt;R-\frac{m\mu}R$, which is less than $1$ once $m&gt;\frac{R(R-1)}\mu$. This contradicts $r_n&gt;1$. Hence there are infinitely many $n$ with $\dfrac{x_1+\dots+x_{n+1}}{x_n}\ge3.99$.</p>
-<h4>Solution 2 (Comparison with a sine sequence)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Comparison with a sine sequence</summary><div class="ct-text">
 <p>Let $S_n=x_1+\dots+x_n$ and write $3.99=4\cos^2\varphi$ with $0&lt;\varphi&lt;\frac\pi2$. Suppose the statement is false: there is $N$ such that $S_{n+1}&lt;3.99\,x_n$ for all $n\ge N$. For $n\ge N+1$ (so $n\ge2$) this reads $S_{n+1}&lt;3.99\,(S_n-S_{n-1})$. Put $w_n=S_n/(2\cos\varphi)^n&gt;0$. Dividing by $(2\cos\varphi)^{n+1}$ we get
 \[w_{n+1}+w_{n-1}&lt;2\cos\varphi\;w_n\qquad(n\ge N+1).\qquad(1)\]</p><p>Let $s_k=\sin(k\varphi)$. Then $s_{k+1}+s_{k-1}=2\cos\varphi\,s_k$ for all $k$, $s_0=0$. Let $K\ge1$ be the integer with $K\varphi&lt;\pi\le(K+1)\varphi$ (it exists since $\varphi&lt;\frac\pi2$); then $s_1,\dots,s_K&gt;0$ and $s_{K+1}\le0$.</p><p>Put $W_j=w_{N+j}$. By (1) with $n=N+k$, $k=1,\dots,K$, each bracket below is negative while $s_k&gt;0$, so
 \[\Sigma:=\sum_{k=1}^{K}s_k\bigl(W_{k+1}+W_{k-1}-2\cos\varphi\,W_k\bigr)&lt;0 .\]

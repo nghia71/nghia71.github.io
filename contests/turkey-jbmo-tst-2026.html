@@ -97,7 +97,6 @@ description: Turkey Team Selection Test 2026, for the JBMO: problems with answer
 <p>The 8 problems of the Turkey Team Selection Test 2026, for the JBMO, each with our own solutions, hidden until you open them. 5 of them ask for an answer and 3 ask for a proof. Where a problem has a final answer, it is shown separately. Try a problem first, then check.</p><p>The test has two days with four problems each.</p>
 </div>
 <div class="ct-credit">Problems: Turkey Team Selection Test 2026, for the JBMO, from the AoPS contest collection or the official paper. Solutions written by MCC.</div>
-<div class="ct-bar"><button type="button" onclick="ctAll(true)">Show all answers and solutions</button><button type="button" onclick="ctAll(false)">Hide all</button></div>
 <div class="ct-toc-wrap"><div class="ct-toc-row"><span class="ct-toc-g">Day 1</span><a href="#p1">1</a><a href="#p2">2</a><a href="#p3">3</a><a href="#p4">4</a></div><div class="ct-toc-row"><span class="ct-toc-g">Day 2</span><a href="#p5">5</a><a href="#p6">6</a><a href="#p7">7</a><a href="#p8">8</a></div></div>
 
 {% raw %}
@@ -109,11 +108,11 @@ description: Turkey Team Selection Test 2026, for the JBMO: problems with answer
 \[6^a-7^b\]
 is a perfect square.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$(a,b)=(0,0)$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Modulo 3)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Modulo 3</summary><div class="ct-text">
 <p>A perfect square is a non-negative integer $k^2$, and $k^2\equiv 0$ or $1\pmod 3$.</p><p>If $a\ge 1$, then $6^a\equiv 0$ and $7^b\equiv 1\pmod 3$, so $6^a-7^b\equiv-1\equiv 2\pmod 3$, which is never a square.
 Hence $a=0$, and $1-7^b\ge 0$ forces $b=0$. Indeed $6^0-7^0=0=0^2$.</p><p>The only pair is $(a,b)=\boxed{(0,0)}$.</p>
-<h4>Solution 2 (Modulo 7 and a factorisation)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Modulo 7 and a factorisation</summary><div class="ct-text">
 <p>If $b=0$: $6^a-1$ is $0$ for $a=0$ (a square), $5$ for $a=1$ (not a square), and $\equiv 3\pmod 4$ for $a\ge 2$
 (not a square, since squares are $0$ or $1$ modulo $4$).</p><p>Let $b\ge 1$ and suppose $6^a-7^b=k^2$ with $k\ge 0$. Then $6^a&gt;1$, so $a\ge 1$. Modulo $7$, $6^a\equiv(-1)^a$, and the squares
 modulo $7$ are $0,1,2,4$; since $-1\equiv 6$ is not among them, $a$ is even, $a=2s$ with $s\ge 1$. Then
@@ -128,8 +127,7 @@ $2\cdot 6^s=1+7^b$. But the left side is divisible by $3$ while $1+7^b\equiv 2\p
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 39: Graph Theory and Structural Combinatorics &middot; Paths, Cycles, and Connectivity</div>
 <div class="ct-text"><p>The $2026$ balls numbered from $1$ to $2026$ are distributed into $1013$ bags so that each bag contains $2$ balls. Asli colors one of the balls in each bag blue and the other red.</p><p>Let $M$ be the sum of the numbers on the blue balls and let $K$ be the sum of the numbers on the red balls. Find the smallest possible value of the integer $N$ such that, no matter how the balls are distributed among the bags, Asli can color them so that $|M-K|\le N$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$1013$</p></div></details>
-<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Alternating cycles)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Alternating cycles</summary><div class="ct-text">
 <p><strong>$N\ge 1013$.</strong> Put $1$ and $2026$ in one bag, and pair the remaining numbers as $\{2,3\},\{4,5\},\dots,\{2024,2025\}$
 ($1012$ bags). Each of these $1012$ bags contributes $\pm1$ to $M-K$, and the first bag contributes $\pm2025$. Hence
 $|M-K|\ge 2025-1012=1013$ for every colouring.</p><p><strong>$N=1013$ always suffices.</strong> Call $\{1,2\},\{3,4\},\dots,\{2025,2026\}$ the <em>twin pairs</em>. Draw a graph on the $2026$ balls
@@ -138,7 +136,8 @@ edges). Every ball lies on exactly one edge of each kind, so the graph splits in
 edges and twin edges; in particular every cycle has even length. Colour the balls of each cycle alternately blue and red. Then
 every bag has one blue and one red ball, and so does every twin pair.</p><p>Since every twin pair $\{2i-1,2i\}$ has one blue and one red ball, it contributes $+1$ or $-1$ to $M-K$. Hence
 $M-K=\sum_{i=1}^{1013}(\pm1)$, and $|M-K|\le 1013$.</p><p>So the smallest possible $N$ is $\boxed{1013}$.</p>
-<h4>Solution 2 (Induction by merging bags)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Induction by merging bags</summary><div class="ct-text">
 <p><em>Lower bound.</em> Take the bags $\{1,2026\},\{2,3\},\dots,\{2024,2025\}$. In every colouring the first bag changes $M-K$ by $\pm2025$ and each of the other $1012$ bags by $\pm1$, so $|M-K|\ge 2025-1012=1013$. Hence $N\ge 1013$.</p><p>For the upper bound we prove: <em>for every $k\ge 1$ and every distribution of the balls $1,2,\dots,2k$ into $k$ bags of two,
 there is a colouring with $|M-K|\le k$.</em> For $k=1013$ this gives $N\le 1013$.</p><p>For $k=1$ the only bag is $\{1,2\}$ and $|M-K|=1$. Let $k\ge 2$ and assume the claim for $k-1$. Look at the balls $2k$ and $2k-1$.</p><ul class="ct-ul"><li><p>If they share a bag, colour the other $k-1$ bags (balls $1,\dots,2k-2$) by the induction hypothesis with
 $|M'-K'|\le k-1$, and colour $2k,2k-1$ in either way. The last bag changes $M-K$ by $\pm1$, so $|M-K|\le k$.</p></li><li><p>Otherwise the bags are $\{2k,a\}$ and $\{2k-1,b\}$ with $a,b\le 2k-2$. Replace these two bags by the single bag $\{a,b\}$: this
@@ -146,7 +145,8 @@ is a distribution of $1,\dots,2k-2$ into $k-1$ bags. By the induction hypothesis
 and $b$ have different colours. Keep these colours and give $2k$ the colour opposite to $a$, and $2k-1$ the colour opposite to $b$.
 Then both original bags $\{2k,a\}$ and $\{2k-1,b\}$ are two-coloured, and $2k$, $2k-1$ have different colours, so they change
 $M'-K'$ by $\pm1$. Hence $|M-K|\le (k-1)+1=k$.</p></li></ul><p>This completes the induction, and the answer is $\boxed{1013}$.</p>
-<h4>Solution 3 (Sorted differences and a greedy choice of signs)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 3 &ndash; Sorted differences and a greedy choice of signs</summary><div class="ct-text">
 <p>Put $m=1013$, so the balls are $1,2,\dots,2m$ and there are $m$ bags.</p><p><strong>$N\ge 1013$.</strong> Use the bags $\{i,i+m\}$ for $i=1,\dots,m$. Each bag contributes $+m$ or $-m$ to $M-K$, so
 $M-K=m(\varepsilon_1+\dots+\varepsilon_m)$ with every $\varepsilon_i=\pm1$. A sum of $m=1013$ odd numbers is odd, hence not $0$, so
 $|M-K|\ge m=1013$ for every colouring.</p><p><strong>$N=1013$ suffices.</strong> For each bag let its <em>difference</em> be the larger ball minus the smaller one, and list the differences
@@ -167,8 +167,7 @@ by the Lemma. So Asli can always reach $|M-K|\le 1013$, and the smallest possibl
 <h3>Problem 3</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 40: Vector Geometry and Affine Structure &middot; Affine Geometry of Lines and Midpoints</div>
 <div class="ct-text"><p>All vertices of a hexagon $ABCDEF$ lie on a circle with center $O$, and $|AB|=|CD|=|EF|$. The diagonals $AD$, $BE$, and $CF$ intersect at the point $K$. Let $S$ be the center of the circumcircle of the triangle formed by the lines $AF$, $BC$, and $DE$. Prove that the points $K$, $O$, and $S$ are collinear.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Parallelograms and antiparallels)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Parallelograms and antiparallels</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:303px" src="/assets/contests/2026-27/turkey-jbmo-tst-3_s1.svg" alt="Figure for the solution"></div>
 <p>Let the lines $FA$, $BC$, $DE$ form the triangle $XYZ$ with
 \[X=FA\cap BC,\qquad Y=BC\cap DE,\qquad Z=DE\cap FA,\]
@@ -189,7 +188,8 @@ $N$, and in the same way so do the perpendicular bisectors of $CD$ and $EF$. All
 circle cannot all be parallel (two parallel equal chords are symmetric about $O$, and there is no room for a third), so two of these
 perpendicular bisectors are different lines; both contain $O$ and $N$, hence $O=N$. Thus $O$ is the midpoint of $KS$, and $K$, $O$,
 $S$ are collinear.</p>
-<h4>Solution 2 (Projections onto the sides)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Projections onto the sides</summary><div class="ct-text">
 <p>Let $X=FA\cap BC$, $Y=BC\cap DE$, $Z=DE\cap FA$, so $S$ is the circumcenter of triangle $XYZ$. The arcs $AB$, $CD$, $EF$ not containing other vertices are disjoint, and as the chords are equal each arc measures $\alpha$ or $360^\circ-\alpha$, where $\alpha\le 180^\circ$; an arc of $360^\circ-\alpha$ would make the total at least $360^\circ+\alpha$, so all three arcs measure $\alpha$. Hence the inscribed angles $\angle ADB$ and $\angle DBC$ are equal, and as alternate angles they give $AD\parallel BC$; in the same way $CF\parallel DE$ and $BE\parallel FA$. The lines $AD$ and $BE$ pass through $K$ and are parallel to the lines $XB$ and $XA$, so $KAXB$ is a parallelogram; likewise $KDYC$ and $KFZE$ are parallelograms. In vector form the parallelograms say
 \[K+X=A+B,\qquad K+Y=C+D,\qquad K+Z=E+F.\]
 Let $S'=2O-K$ be the reflection of $K$ in $O$. We show that $S'$ is the circumcenter of $XYZ$.</p><p>Let $u$ be a unit vector along $BC$ and write $\pi(V)=\overrightarrow{OV}\cdot u$ for the signed projection of a point $V$. The
@@ -209,8 +209,7 @@ adding $K+Y=C+D$ and $K+Z=E+F$ gives $\pi_v(S')=\frac{\pi_v(Y)+\pi_v(Z)}{2}$, so
 \[x_1+x_2+\dots+x_{33}=T,\]
 these numbers can be divided into two groups so that the sum of the numbers in the first group is at most $5$ and the sum of the numbers in the second group is at most $15$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\frac{115}{6}$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Two greedy splittings)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Two greedy splittings</summary><div class="ct-text">
 <p>We call a group with sum at most $5$ the small group and a group with sum at most $15$ the big group.</p><p><strong>Every $T&gt;\frac{115}{6}$ fails.</strong> Let $\frac{115}{6}&lt;T\le 33$. If $T\le 23$, take $23$ numbers equal to $\frac{T}{23}$ and ten
 zeros; if $T&gt;23$, take $23$ ones and ten numbers equal to $\frac{T-23}{10}\le 1$. In both cases $23$ of the numbers exceed $\frac56$.
 Six of them would have sum more than $5$, and $18$ of them would have sum more than $15$; so the small group contains at most $5$ and
@@ -219,7 +218,8 @@ $1$) and more than $\frac{25}{6}$, so the big group gets less than $\frac{115}{6
 $x_1+\dots+x_k\le 15$; then $x_1+\dots+x_{k+1}&gt;15$, and since every number is at most $1$, $k+1\ge 16$, so $x_{k+1}\le x_5\le\frac56$.
 Put $x_1,\dots,x_k$ in the big group and the rest in the small group, whose sum is
 \[T-(x_1+\dots+x_k)=T-(x_1+\dots+x_{k+1})+x_{k+1}&lt;\tfrac{115}{6}-15+\tfrac56=5.\]</p></li></ul><p>So the greatest value is $T=\boxed{\frac{115}{6}}$.</p>
-<h4>Solution 2 (An extremal splitting)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; An extremal splitting</summary><div class="ct-text">
 <p><em>Every $T&gt;\frac{115}{6}$ fails.</em> For $\frac{115}{6}&lt;T\le 23$ take $23$ numbers equal to $\frac{T}{23}$ and ten zeros; for $23&lt;T\le33$ take $23$ ones and ten numbers equal to $\frac{T-23}{10}$. In both cases $23$ numbers exceed $\frac56$; a group with sum at most $5$ contains at most five of them and a group with sum at most $15$ at most $17$, so one is left over and no splitting exists.</p><p>Now let the numbers have sum $T\le\frac{115}{6}$ and suppose that no valid splitting exists. Among all subsets with sum at most $5$
 (the empty set is one) choose a subset $G$ with the largest sum $g$. Its complement has sum $T-g$, which must exceed $15$ (otherwise
 $G$ and its complement would be a valid splitting). Hence $g&lt;T-15\le\frac{25}{6}$.</p><p>Every number $y$ outside $G$ satisfies $g+y&gt;5$, since otherwise $G\cup\{y\}$ would be a subset with sum at most $5$ and larger sum.
@@ -234,8 +234,7 @@ the choice of $G$.</p><p>Therefore every choice with sum at most $\frac{115}{6}$
 <div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VII scale">E</span>Algebra &middot; LPS VII, Chapter 26: Inequalities: Symmetry, Homogenization, and Advanced Structure &middot; Homogenization and Normalization</div>
 <div class="ct-text"><p>Prove that for all positive real numbers $x,y,z$ satisfying $x^2+y^2+z^2=2$, we have
 \[\frac{1+xy}{xz+yz}+\frac{1+xz}{xy+yz}+\frac{1+yz}{xy+xz}\ge\frac{15}{4}.\]</p></div>
-<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Homogenise, then Nesbitt)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Homogenise, then Nesbitt</summary><div class="ct-text">
 <p>Since $x^2+y^2+z^2=2$, we have $1=\frac{x^2+y^2+z^2}{2}$ and
 \[1+xy=\frac{x^2+y^2+2xy+z^2}{2}=\frac{(x+y)^2+z^2}{2}.\]
 Hence, with $t_1=\frac{x+y}{z}$,
@@ -246,14 +245,16 @@ Second (Nesbitt),
 \[\sum\frac1{t_i}+3=\sum\Big(\frac{z}{x+y}+1\Big)=(x+y+z)\sum\frac1{x+y}\ge (x+y+z)\cdot\frac{9}{2(x+y+z)}=\frac92\]
 by the AM&ndash;HM inequality for $x+y$, $y+z$, $z+x$, so $\sum\frac1{t_i}\ge\frac32$. Adding, $\sum t_i+\sum\frac1{t_i}\ge\frac{15}{2}$,
 and the left side of the problem is at least $\frac{15}{4}$. Equality holds for $x=y=z=\sqrt{2/3}$.</p>
-<h4>Solution 2 (One AM-GM per term)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; One AM-GM per term</summary><div class="ct-text">
 <p>Since $1=\frac{x^2+y^2+z^2}{2}$, we have $1+xy=\frac{(x+y)^2+z^2}{2}$, so the first term is $\frac{(x+y)^2+z^2}{2z(x+y)}=\frac12\big(t_1+\frac1{t_1}\big)$ with $t_1=\frac{x+y}{z}$; similarly the other terms are $\frac12\big(t_i+\frac1{t_i}\big)$ with $t_2=\frac{x+z}{y}$,
 $t_3=\frac{y+z}{x}$. At equality all $t_i=2$, which suggests splitting
 \[t+\frac1t=\Big(\frac t4+\frac1t\Big)+\frac{3t}{4}\ge 2\sqrt{\frac t4\cdot\frac1t}+\frac{3t}{4}=1+\frac{3t}{4}\qquad(t&gt;0).\]
 Summing over $i$ and using $t_1+t_2+t_3\ge 6$ (indeed $t_1+t_2+t_3=\big(\frac xy+\frac yx\big)+\big(\frac xz+\frac zx\big)+\big(\frac yz+\frac zy\big)$, and each bracket is at least $2$ by AM&ndash;GM),
 \[\sum\Big(t_i+\frac1{t_i}\Big)\ge 3+\frac34\cdot 6=\frac{15}{2},\]
 so the given sum is at least $\frac{15}{4}$, with equality for $x=y=z=\sqrt{2/3}$.</p>
-<h4>Solution 3 (Each numerator is a constant minus its denominator)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 3 &ndash; Each numerator is a constant minus its denominator</summary><div class="ct-text">
 <p>Put $s=xy+xz+yz&gt;0$. The denominators are $xz+yz=s-xy$, $xy+yz=s-xz$ and $xy+xz=s-yz$; they are positive and
 their sum is $2s$. Since $1+xy=(1+s)-(s-xy)$, and similarly for the other two numerators,
 \[\frac{1+xy}{xz+yz}+\frac{1+xz}{xy+yz}+\frac{1+yz}{xy+xz}=(1+s)\Big(\frac1{s-xy}+\frac1{s-xz}+\frac1{s-yz}\Big)-3.\]
@@ -275,8 +276,7 @@ and
 \[\angle CQA=\angle CQB=90^\circ+\angle ACB.\]
 Let $R$ be the intersection point of the lines $BP$ and $CQ$. Prove that
 \[|BC|=4|AR|.\]</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Law of sines: $\tan\angle PBA=\frac13\tan B$)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Law of sines: $\tan\angle PBA=\frac13\tan B$</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:268px" src="/assets/contests/2026-27/turkey-jbmo-tst-6_s1.svg" alt="Figure for the solution"></div>
 <p>Write $\beta=\angle ABC$, $\gamma=\angle ACB$ (so $\beta+\gamma=90^\circ$), and let $M$ be the midpoint of $BC$. We show that
 $R$ is the midpoint of $AM$; since $AM=\frac{BC}{2}$ (median to the hypotenuse), this gives $AR=\frac{BC}{4}$.</p><p><strong>$P$ lies inside the triangle.</strong> If the rays $PA$ and $PC$ coincided, $P$ would lie on line $AC$ outside the segment $AC$,
@@ -299,7 +299,8 @@ $R_0$, $P$ lie on the same side of $AB$ inside angle $ABC$, so $R_0$ lies on lin
 $\tan\angle R_0CA=\frac{c/4}{3b/4}=\frac13\tan\gamma=\tan\angle QCA$, so $R_0$ lies on line $CQ$. The lines $BP$ and $CQ$ are different, so
 $R=R_0$, and
 \[AR=\tfrac12 AM=\tfrac14 BC,\qquad\text{i.e.}\qquad |BC|=4|AR|.\]</p>
-<h4>Solution 2 (Two circles and a radical axis)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Two circles and a radical axis</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:262px" src="/assets/contests/2026-27/turkey-jbmo-tst-6_s2.svg" alt="Figure for the solution"></div>
 <p>First, $P$ lies inside the triangle. If the rays $PA$ and $PC$ coincided, $P$ would lie on line $AC$ outside segment $AC$, and $\angle BPA&lt;90^\circ$ in triangle $ABP$ (right-angled at $A$); impossible. So the rays $PA$, $PC$ are symmetric about line $PB$, and since $2(90^\circ+\angle ABC)&gt;180^\circ$, the ray opposite to $PB$ bisects $\angle APC&lt;180^\circ$ and meets segment $AC$ at a point $T$ with $P$ strictly between $B$ and $T$. In the same way $Q$ lies inside the triangle. Put $A=(0,0)$, $B=(c,0)$, $C=(0,b)$,
 $a=BC=\sqrt{b^2+c^2}$, $\beta=\angle ABC$, $\gamma=\angle ACB=90^\circ-\beta$.</p><p><strong>The circle $\omega_1$.</strong> The circumcircle of $ABC$ has center $M=\big(\frac c2,\frac b2\big)$ (Thales). Let $\omega_1$ be its reflection in
@@ -325,8 +326,7 @@ gives in the same way $CQ:\ \frac{3x}{c}+\frac yb=1$. Solving, $\frac xc=\frac y
 \[\{a_1,a_2,\dots,a_n\}\quad\text{and}\quad\{a_1,2a_2,\dots,na_n\}\]
 are beautiful.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$n=1$ and $n=2$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (gcd classes and Wilson)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; gcd classes and Wilson</summary><div class="ct-text">
 <p>Both sets are beautiful exactly when $a_1,\dots,a_n$ form a complete residue system modulo $n$ and so do
 $1\cdot a_1,2a_2,\dots,na_n$. Work modulo $n$; then the indices $i=1,\dots,n$ are also all residues (with $n\equiv 0$).</p><p><strong>Examples.</strong> For $n=1$ take $a_1=0$. For $n=2$ take $a_1=1$, $a_2=0$: both $\{1,0\}$ and $\{1,0\}$ are complete systems
 modulo $2$.</p><p><strong>Key lemma.</strong> For a residue $r$ let $g(r)=\gcd(r,n)$ (so $g(0)=n$). Then $g(a_i)=g(i)=g(ia_i)$ for every $i$.</p><p><em>Proof.</em> Clearly $g(i)\mid g(ia_i)$ and $g(a_i)\mid g(ia_i)$. As $i$ runs from $1$ to $n$, each of $i$, $a_i$, $ia_i$ runs
@@ -342,7 +342,8 @@ and $j\mapsto c_j$ also permutes $\{1,\dots,p-1\}$ modulo $p$. Multiplying over 
 \[(p-1)!\equiv\prod c_j\equiv m^{p-1}\prod j\prod b_j\equiv m^{p-1}\big((p-1)!\big)^2\pmod p.\]
 By Fermat's little theorem $m^{p-1}\equiv 1$, and by Wilson's theorem $(p-1)!\equiv-1$, so $-1\equiv 1\pmod p$, i.e. $p=2$.</p><p>Therefore $2$ is the only prime divisor of $n$ and $4\nmid n$, so $n=2$. Together with $n=1$, the answer is
 $n\in\boxed{\{1,2\}}$.</p>
-<h4>Solution 2 (Divisibility by $p$ and Wilson over a class of units)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Divisibility by $p$ and Wilson over a class of units</summary><div class="ct-text">
 <p>A set of $n$ integers with pairwise different remainders modulo $n$ is a complete residue system, so the condition says that $a_1,\dots,a_n$ and $1\cdot a_1,\dots,na_n$ are complete residue systems
 modulo $n$; we work modulo $n$. For $n=1$ take $a_1=0$, and for $n=2$ take $a_1=1$, $a_2=0$ (both lists are $1,0$); so $n=1,2$ work. Note that for a prime $p\mid n$, divisibility of a residue
 modulo $n$ by $p$ is well defined.</p><p><strong>Step 1: $p\mid i\iff p\mid a_i$.</strong> Let $p$ be a prime divisor of $n$, $A=\{i:p\mid i\}$ and $B=\{i:p\mid a_i\}$. Exactly $n/p$
@@ -366,8 +367,7 @@ values work.</p>
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 39: Graph Theory and Structural Combinatorics &middot; Basic Graph Properties</div>
 <div class="ct-text"><p>Let $n\ge 1$ be a positive integer. Initially, $n$ points are marked on a board, with no three of them collinear. In each move, Asli chooses two of the original $n$ points that have not yet been joined and joins them by a line segment, then marks a new point on this segment (the new points are never joined).</p><p>In this move, if Asli joins a point that has been joined to an even number of points with a point that has been joined to an odd number of points, she earns $1$ point; otherwise, she earns $0$ points.</p><p>Find the maximum number of points Asli can earn by the time every pair of the original $n$ points has been joined.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$0$ for $n=1$; $\frac{n(n-2)}{2}$ for even $n$; $\binom n2-2=\frac{n^2-n-4}{2}$ for odd $n\ge 3$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Counting odd points, and an inductive construction)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Counting odd points, and an inductive construction</summary><div class="ct-text">
 <p>We read the problem as follows (the marked points on the segments play no role): each move joins two of the
 original $n$ points that are not yet joined, and the game ends when all $\binom n2$ pairs are joined. The <em>degree</em> of a point is
 the number of points it has been joined to. A move is of type $EE$, $OO$ or $EO$ according to the parities of the degrees of its two

@@ -97,7 +97,6 @@ description: Turkey Team Selection Test 2026: problems with answers and solution
 <p>The 9 problems of the Turkey Team Selection Test 2026, each with our own solutions, hidden until you open them. 6 of them ask for an answer and 3 ask for a proof. Where a problem has a final answer, it is shown separately. Try a problem first, then check.</p><p>The Turkish TST has nine problems over three days.</p>
 </div>
 <div class="ct-credit">Problems: Turkey Team Selection Test 2026, from the AoPS contest collection or the official paper. Solutions written by MCC.</div>
-<div class="ct-bar"><button type="button" onclick="ctAll(true)">Show all answers and solutions</button><button type="button" onclick="ctAll(false)">Hide all</button></div>
 <div class="ct-toc-wrap"><div class="ct-toc-row"><span class="ct-toc-g">Day 1</span><a href="#p1">1</a><a href="#p2">2</a><a href="#p3">3</a></div><div class="ct-toc-row"><span class="ct-toc-g">Day 2</span><a href="#p4">4</a><a href="#p5">5</a><a href="#p6">6</a></div><div class="ct-toc-row"><span class="ct-toc-g">Day 3</span><a href="#p7">7</a><a href="#p8">8</a><a href="#p9">9</a></div></div>
 
 {% raw %}
@@ -109,8 +108,7 @@ description: Turkey Team Selection Test 2026: problems with answers and solution
 \[P_n(x)=a_{n+33}x^{33}+\dots+a_{n+1}x+a_n\]
 If the number $2026$ is element of this sequence find all possible values of $a_1$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$a_1\in\{-1,\,0,\,2026\}$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Pure periodicity, then the shape of a window)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Pure periodicity, then the shape of a window</summary><div class="ct-text">
 <p>The answer is $\boxed{a_1\in\{-1,\,0,\,2026\}}$.</p><p>Throughout, $x=a_{n+34}$ and the condition for the index $n$ reads
 \[
 a_n+a_{n+1}x+a_{n+2}x^2+\dots+a_{n+33}x^{33}=0,\qquad x=a_{n+34}. \tag{1}
@@ -138,8 +136,7 @@ and $R_{i+2}=0$.</p></li></ul><p>Starting from $R_0=0$ we run through the whole 
 <div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 20: Parity, Coloring, and Process Termination &middot; Process Termination and Reachability</div>
 <div class="ct-text"><p>There are $n$ balls labeled from $1$ to $n$, placed in a line in a random order. In each move, Aslı takes the ball at position $k$ and places it at the end of the line, where $k$ is the number written on the ball currently at the end of the line. The process stops when the number on the ball at the end of the line is $n$. What is the maximum possible number of moves Aslı can make?</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$2^{n-1}-1$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Following ball n in a more general game)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Following ball n in a more general game</summary><div class="ct-text">
 <p>The answer is $\boxed{2^{n-1}-1}$.</p><p><strong>A more general game.</strong> Take a line of $L\ge1$ balls. Some balls carry labels, which are distinct numbers from $\{1,\dots,L-1\}$; the other balls (at least one) are <em>blank</em>. If the last ball has label $k$, a move takes the ball at position $k$ and puts it at the end. The game stops when the last ball is blank. Let $g(L)$ be the largest possible number of moves.</p><p>The process of the problem is this game with $L=n$, where ball $n$ is the only blank ball. So it is enough to prove that $g(L)\le 2^{L-1}-1$ and to find a start with $2^{n-1}-1$ moves.</p><p><strong>Upper bound: $g(L)\le2^{L-1}-1$.</strong> Induction on $L$. For $L=1$ the only ball is blank and there are $0$ moves. Let $L\ge2$ and fix one blank ball $s$, at position $p$. A move with label $k$ shifts the balls at positions $k+1,\dots,L$ one place to the left and puts the ball of position $k$ last. Hence</p><ul class="ct-ul"><li><p>if $k&gt;p$, the ball $s$ and all balls before it stay where they are;</p></li><li><p>if $k&lt;p$, the ball $s$ moves to position $p-1$;</p></li><li><p>if $k=p$, the ball $s$ becomes last and the game stops.</p></li></ul><p>So the play splits into <em>phases</em> during which $s$ stays at one position $p$; a phase ends either because the game stops (a blank ball is last) or with one move of label $k\le p$, after which either $s$ is at position $p-1$ or the game is over. (A phase may consist of $0$ moves before this final move; and if $s$ starts in the last position, the game has $0$ moves.) The positions of $s$ in different phases are different numbers from $\{1,\dots,L-1\}$ (when $s$ is at position $L$ the game is over).</p><p>Consider the phase with $s$ at position $p$. Only the last $L'=L-p$ balls move, and every label used is larger than $p$. Subtract $p$ from the labels larger than $p$ (they become distinct numbers from $\{1,\dots,L'-1\}$) and regard the balls with labels at most $p$ as blank. Then the phase is a play of the general game with $L'$ balls: a label $k&gt;p$ moves the ball at position $k-p$ among the last $L'$ balls, and among these $L'$ balls at least one is blank because only $L'-1$ labels larger than $p$ exist. By the induction hypothesis the phase has at most $g(L')\le2^{L'-1}-1$ moves, and it is followed by at most one more move. Summing over the possible positions $p=1,\dots,L-1$,
 \[
 g(L)\le\sum_{L'=1}^{L-1}\bigl(2^{L'-1}-1+1\bigr)=2^{L-1}-1 .
@@ -159,8 +156,7 @@ Now $\ast$ is at position $p=L-j-1\ge1$. After subtracting $p$ from the labels l
 <div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 11: Similarity, Homothety, and Ratio Geometry &middot; Homothety Centers and Image Tracking</div>
 <div class="ct-text"><p>Let $\omega$ be the incircle of triangle $ABC$ with center $I$. Let the points where $\omega$ is tangent to sides $BC$, $CA$, and $AB$ be $D$, $E$, and $F$, respectively. Let $\Omega$ be the circle passing through $A$ and tangent to $BC$ at $D$. Let the second intersection points of lines $DF$ and $DE$ with $\Omega$ be $F_1$ and $E_1$, respectively. Let $T$ be the intersection point of lines $BF_1$ and $CE_1$. Let $U$ be the second intersection point of the circumcircles of triangles $DBF_1$ and $DCE_1$. Prove that
 \[\angle BTA=\angle CTU.\]</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Homothety at D, then an altitude and a diameter)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Homothety at D, then an altitude and a diameter</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:383px" src="/assets/contests/2026-27/turkey-tst-3_s1.svg" alt="Figure for the solution"></div>
 <p>Let $r$ be the radius of $\omega$, let $O$ and $\varrho$ be the centre and radius of $\Omega$, and put $k=\varrho/r$. Both circles touch $BC$ at $D$ from the same side, so the homothety $h$ with centre $D$ and ratio $k$ maps $\omega$ to $\Omega$. Hence
 \[
@@ -198,7 +194,8 @@ Since $TF_1$ is the line $TB$ and $TE_1$ is the line $TC$, this is (3). (In tria
 \delta_a(T)&gt;\frac{k\,r\,h_a}{r}=k\,h_a&gt;2kr&gt;(2k-1)r=\delta_a(U).
 \]
 Thus in neither case is $U$ in the vertical angle (and $U\ne T$, as promised). So the ray $TU$ is $\rho(\text{ray }TA)$, and since $\rho$ maps the ray $TB$ to the ray $TC$, it maps the angle $BTA$ onto the angle $CTU$. Therefore $\angle BTA=\angle CTU$.</p>
-<h4>Solution 2 (Complex coordinates with the touch point at the origin)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Complex coordinates with the touch point at the origin</summary><div class="ct-text">
 <p>We work in the complex plane, identifying the point $(x,y)$ with $x+yi$. Take $D=0$, the line $BC$ as the real axis, the triangle in the upper half-plane, and the inradius equal to $1$. Then $I=i$, $B=-b$ and $C=c$ with $b=DB&gt;0$, $c=DC&gt;0$. Put
 \[
 p=bc,\qquad w=b-c .
@@ -275,8 +272,7 @@ that is, $\angle BTA=\angle CTU$. (Because the factor $\lambda$ is positive, not
 <div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 44: Combinatorial Games and Strategy &middot; Invariant-Based Game Analysis</div>
 <div class="ct-text"><p>Aslı and Zehra play a game on a board with $m$ rows and $n$ columns. Initially, Aslı writes integers on each cell of the board such that all rows contain different numbers internally. After that, Aslı and Zehra take turns making moves, with Zehra making the first move. In each of her moves, Zehra chooses an integer that hasn't been chosen yet, and colors all cells containing that number red. In each of her moves, Aslı chooses an integer that hasn't been chosen yet, and colors all cells containing that number blue. If Aslı can guarantee that there are at least $N$ rows that contain only blue cells after all the cells are colored, find the maximum possible value of $N$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\left\lfloor \dfrac{m}{2^{n}}\right\rfloor$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (A weight that Zehra never lets grow, and a binary tree with a pairing strategy)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; A weight that Zehra never lets grow, and a binary tree with a pairing strategy</summary><div class="ct-text">
 <p>The answer is $N=\boxed{\left\lfloor \dfrac{m}{2^{n}}\right\rfloor}$. A player may choose any integer that has not been chosen; choosing an integer that is not on the board colours nothing. If every chosen integer has to be on the board, the game is finite; otherwise we only consider plays in which all cells get coloured, as the statement speaks of the moment &ldquo;after all the cells are colored&rdquo;. The argument below works in both readings.</p><p><strong>Upper bound (Zehra's strategy).</strong> Fix any board. At any moment call a row <em>alive</em> if it has no red cell, and give an alive row with $j$ uncoloured cells the weight $2^{-j}$. Let $\Phi$ be the sum of the weights of the alive rows. At the start $\Phi=m\cdot2^{-n}$. At the end every alive row is completely blue and has weight $1$, so
 \[
 \Phi_{\text{end}}=\text{number of rows that are completely blue}.
@@ -295,8 +291,7 @@ and she fills the remaining $m-q\,2^n$ rows with copies of one of these rows. Th
 \[\varphi(a_i)\varphi(a_{i+1})=a_i^2\]
 holds for all positive integers $i$.</p><p><em>Note: For each positive integer $n$, define $\varphi(n)$ as the number of positive integers coprime with $n$ which are at most $n$.</em></p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>Exactly the sequences in which every step $a_i\to a_{i+1}$ is one of $1\to1$, $1\to2$, $2^k\to2^{k+2}$, $2^k\to3\cdot2^{k+1}$, $2^a3^b\to2^a3^{b+2}$ ($k,a,b\ge1$). In particular $a_i=1$; $a_i=2^{k+2(i-1)}$; $a_i=2^a3^{b+2(i-1)}$.</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Counting the factors 2)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Counting the factors 2</summary><div class="ct-text">
 <p><strong>Answer.</strong> The sequences are exactly those in which every step $a_i\to a_{i+1}$ is of one of the five kinds
 \[
 1\to1,\qquad 1\to2,\qquad 2^k\to2^{k+2},\qquad 2^k\to3\cdot2^{k+1},\qquad 2^a3^b\to2^a3^{b+2}\qquad(k,a,b\ge1).
@@ -321,8 +316,7 @@ Thus $q-1$ divides $2^{a+1}q^{e+1}$; it is prime to $q$ and is twice an odd numb
 <div class="ct-text"><p>Find all functions $f:\mathbb{R}^+\to\mathbb{R}^+$ such that for all $x,y\in\mathbb{R}^+$
 \[f(x+yf(x))=f(f(x))f(x^2+y)\]</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$f(x)=1$ for all $x$, and $f(x)=\dfrac1x$ for all $x$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Commuting affine substitutions and eventual periods)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Commuting affine substitutions and eventual periods</summary><div class="ct-text">
 <p><strong>Answer.</strong> $\boxed{f\equiv1\ \text{ and }\ f(x)=\dfrac1x}$.</p><p>Both work: for $f\equiv1$ both sides are $1$; for $f(x)=1/x$ the left side is $\dfrac{1}{x+y/x}=\dfrac{x}{x^2+y}$ and the right side is $f(1/x)\cdot\dfrac1{x^2+y}=\dfrac{x}{x^2+y}$.</p><p>Now let $f$ be any solution and write $c(x)=f(f(x))$. For $x&gt;0$ and $t&gt;x^2$ put $y=t-x^2$ in the equation:
 \[
 f\bigl(g_x(t)\bigr)=c(x)\,f(t),\qquad g_x(t)=x+(t-x^2)f(x)\qquad(t&gt;x^2). \tag{1}
@@ -370,14 +364,14 @@ Hence $f(f(x))=1/f(x)$: every value $u=f(x)$ satisfies $f(u)=1/u$. For $f(x)=\fr
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 12: Exponential Congruences and Order Structure &middot; Orders and Primitive Behavior</div>
 <div class="ct-text"><p>Let $a,d,r$ be positive integers. Define the integer sequence $x_1,x_2,\dots$ by letting, for each $n\ge 1$, $x_n$ be the smallest prime divisor of $a^{dn+r}+1$.</p><ul class="ct-parts"><li><p><span class="ct-lbl">(a)</span> Prove that there exists a number that appears infinitely many times in the sequence $(x_n)$.</p></li><li><p><span class="ct-lbl">(b)</span> Determine all triples $(a,d,r)$ for which the sequence $(x_n)$ is unbounded above.</p></li></ul></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(b) Exactly the triples with $a$ even and $v_2(d)\le v_2(r)$ (the highest power of $2$ dividing $d$ also divides $r$)</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Fermat for part (a), orders for part (b))</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Fermat for part (a), orders for part (b)</summary><div class="ct-text">
 <p>Write $k_n=dn+r$ and let $v_2(m)$ be the exponent of $2$ in $m$.</p><p><strong>(a)</strong> Let $p$ be the smallest number occurring in the sequence, say $p=x_{n_0}$. Then $p\mid a^{k_{n_0}}+1$, so $p\nmid a$. For $t\ge0$ let $n=n_0+(p-1)t$. By Fermat's theorem $a^{d(p-1)t}\equiv1\pmod p$, hence
 \[
 a^{k_n}+1=a^{k_{n_0}}\cdot a^{d(p-1)t}+1\equiv a^{k_{n_0}}+1\equiv0\pmod p .
 \]
 So $p$ is a prime divisor of $a^{k_n}+1$ and $x_n\le p$; by the choice of $p$ also $x_n\ge p$. Thus $x_n=p$ for all $n=n_0+(p-1)t$, and $p$ appears infinitely many times.</p><p><strong>(b)</strong> <strong>Answer: the sequence is unbounded exactly when $a$ is even and $v_2(d)\le v_2(r)$.</strong></p><p><em>$a$ odd.</em> Then $a^{k}+1$ is even and $x_n=2$ for all $n$.</p><p><em>$a$ even and $v_2(r)&lt;v_2(d)$.</em> Put $s=v_2(r)$. Then $v_2(dn+r)=s$ for all $n$, so $k_n=2^su$ with $u$ odd, and $a^{2^s}+1$ divides $(a^{2^s})^u+1=a^{k_n}+1$. Hence $x_n$ is at most the smallest prime divisor of $a^{2^s}+1$: the sequence is bounded.</p><p><em>$a$ even and $v_2(d)\le v_2(r)$.</em> We use the following lemma.</p><p><em>Lemma. Let $a$ be even, $k\ge1$ and $j=v_2(k)$. Every prime divisor $q$ of $a^k+1$ satisfies $q\equiv1\pmod{2^{j+1}}$.</em></p><p><em>Proof.</em> $a^k+1$ is odd, so $q$ is odd, and $q\nmid a$. Let $o$ be the order of $a$ modulo $q$. From $a^k\equiv-1$ we get $a^{2k}\equiv1$, so $o\mid2k$, while $o\nmid k$ because $-1\not\equiv1\pmod q$. If $v_2(o)\le j$, then $o\mid 2k$ would give $o\mid k$. Hence $v_2(o)=j+1$, and $o\mid q-1$ gives $2^{j+1}\mid q-1$. $\blacksquare$</p><p>Write $d=2^ed'$ with $d'$ odd; then $2^e\mid r$, say $r=2^er'$. Let $j\ge1$. Since $d'$ is odd, there are infinitely many $n$ with $d'n+r'\equiv0\pmod{2^j}$, and for them $v_2(k_n)\ge e+j\ge j$. By the lemma $x_n\ge2^{j+1}+1$. As $j$ is arbitrary, the sequence is unbounded.</p><p>So the triples asked for are exactly those with $\boxed{a\text{ even and }v_2(d)\le v_2(r)}$.</p>
-<h4>Solution 2 (Every value comes back; one prime cannot serve two different powers of two)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Every value comes back; one prime cannot serve two different powers of two</summary><div class="ct-text">
 <p>Write $k_n=dn+r$.</p><p><strong>(a)</strong> We show more: <em>every</em> value of the sequence appears infinitely many times. Fix $m$ and let $p=x_m$. Let $n=m+(p-1)!\,t$ with $t\ge0$, and let $q\le p$ be a prime. If $q\mid a$, then $q$ divides neither $a^{k_m}+1$ nor $a^{k_n}+1$. If $q\nmid a$, then $q-1$ divides $(p-1)!$, so $a^{k_n-k_m}=a^{d(p-1)!\,t}\equiv1\pmod q$ and $a^{k_n}+1\equiv a^{k_m}+1\pmod q$. So the primes up to $p$ dividing $a^{k_n}+1$ are the same as those dividing $a^{k_m}+1$; the smallest prime divisor of the latter is $p$, hence $x_n=p$ for all these $n$.</p><p><strong>(b)</strong> Let $v_2(m)$ be the exponent of $2$ in $m$. If $a$ is odd, every $a^{k_n}+1$ is even and $x_n=2$: bounded. If $a$ is even and $s=v_2(r)&lt;v_2(d)$, then $v_2(dn+r)=s$ for all $n$, so $k_n=2^su$ with $u$ odd, and $a^{2^s}+1$ divides $(a^{2^s})^u+1=a^{k_n}+1$; hence $x_n$ is at most the smallest prime divisor of $a^{2^s}+1$: bounded. Let now $a$ be even and $v_2(d)\le v_2(r)$.</p><p><em>Claim. An odd prime $q$ cannot divide both $a^k+1$ and $a^{k'}+1$ if $v_2(k)&lt;v_2(k')$.</em></p><p>Indeed, write $k=2^ju$, $k'=2^{j'}u'$ with $u,u'$ odd and $j&lt;j'$, and let $E=2^{j'}uu'$. Then $E=k\cdot2^{j'-j}u'$ is an even multiple of $k$, so $a^{E}\equiv(-1)^{2^{j'-j}u'}=1\pmod q$; and $E=k'u$ is an odd multiple of $k'$, so $a^{E}\equiv(-1)^{u}=-1\pmod q$. Thus $1\equiv-1\pmod q$, impossible for odd $q$.</p><p>Suppose the sequence were bounded. All $x_n$ are odd primes ($a$ is even), so only finitely many primes occur as values, and by the claim each of them occurs only for indices $n$ with one fixed value of $v_2(k_n)$. Hence $v_2(k_n)$ would take only finitely many values. But $v_2(k_n)$ is unbounded: with $d=2^ed'$, $r=2^er'$, $d'$ odd, for each $j$ there is $n$ with $2^j\mid d'n+r'$. This contradiction shows that the sequence is unbounded.</p><p>Answer to (b): the triples with $\boxed{a\text{ even and }v_2(d)\le v_2(r)}$.</p>
 </div></details>
 </section>
@@ -385,8 +379,7 @@ So $p$ is a prime divisor of $a^{k_n}+1$ and $x_n\le p$; by the choice of $p$ al
 <h3>Problem 8</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 51: Spiral Similarity and Advanced Transformational Geometry &middot; Miquel and Rotational Circle Structure</div>
 <div class="ct-text"><p>Let $P$ be a point on the circumcircle of triangle $ABC$. Let $D$ and $K$ be points on line $AB$, and let $E$ and $L$ be points on line $AC$, chosen so that $PKDLE$ is a cyclic pentagon. Let $U$ be the second intersection point of the circumcircles of triangles $PBD$ and $PCL$, and let $V$ be the second intersection point of the circumcircles of triangles $PCE$ and $PBK$. Let $X$ be the intersection point of lines $BE$ and $DV$, and let $Y$ be the intersection point of lines $CD$ and $EU$. Prove that the lines $XL$, $YK$, and $BC$ are concurrent.</p></div>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Three Miquel points and Desargues twice)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Three Miquel points and Desargues twice</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:397px" src="/assets/contests/2026-27/turkey-tst-8_s1.svg" alt="Figure for the solution"></div>
 <p>We use directed angles $\angle(\ell,m)$ between lines, modulo $180^\circ$, and assume the configuration is in general position (the points that are used are distinct and the lines that are intersected are not parallel). Let $\omega$ be the circle through $P,K,D,L,E$.</p><p><strong>Step 1 (Miquel).</strong> <em>Let $S$ be a point of line $AB$ and $R$ a point of line $AC$. Then the second intersection of the circles $PBS$ and $PCR$ lies on the line $SR$.</em></p><p>Let the line $SR$ meet the circle $PBS$ again at $M$. Then
 \[
@@ -419,8 +412,7 @@ are collinear. (Here $DB$ is the line $AB$ and $EV$ is the line $KE$, which meet
 <h3>Problem 9</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 39: Graph Theory and Structural Combinatorics &middot; Paths, Cycles, and Connectivity</div>
 <div class="ct-text"><p>On a planet with finitely many cities, some pairs of cities are connected by one-way flights. Show that the cities can be partitioned into several countries, and in each country one city can be chosen as the capital, in such a way that the following conditions hold (a city $v$ can be reached from a city $u$ if one can fly from $u$ to $v$ using one or more flights):</p><ul class="ct-ul"><li><p>In each country, there do not exist two distinct cities such that one can be reached from the other.</p></li><li><p>For any two distinct capitals, at least one of them can be reached from the other.</p></li></ul></div>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Heaviest chains of clusters)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Heaviest chains of clusters</summary><div class="ct-text">
 <p>Write $u\to v$ if $u\ne v$ and $v$ can be reached from $u$. This relation is transitive: if $u\to v$, $v\to w$ and $u\ne w$, then $u\to w$.</p><p><strong>Clusters.</strong> Say that two cities are <em>equivalent</em> if they are equal or each can be reached from the other. This is an equivalence relation; its classes are called clusters. If one city of a cluster $Y$ can be reached from one city of a different cluster $X$, then every city of $Y$ can be reached from every city of $X$; we then write $X&lt;Y$. The relation $&lt;$ on clusters is transitive, and $X&lt;Y$, $Y&lt;X$ never hold together (the two clusters would be one). A <em>chain</em> is a sequence of clusters $X_1&lt;X_2&lt;\dots&lt;X_k$; its <em>weight</em> is $|X_1|+\dots+|X_k|$.</p><p><strong>Numbering the cities.</strong> For a cluster $X$ let $h(X)$ be the largest weight of a chain whose last cluster is $X$; so $h(X)\ge|X|$. Let $W$ be the largest of all $h(X)$. Give the cities of $X$ the numbers
 \[
 h(X)-|X|+1,\ h(X)-|X|+2,\ \dots,\ h(X),

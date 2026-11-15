@@ -97,7 +97,6 @@ description: Caltech Math Meet 2026: selected problems: problems with answers an
 <p>The 9 problems of the Caltech Math Meet 2026: selected problems, each with our own solutions, hidden until you open them. 8 of them ask for an answer and 1 asks for a proof. Where a problem has a final answer, it is shown separately. Try a problem first, then check.</p><p>A selection of the best problems of the Caltech Math Meet (24 January 2026): individual, team and power rounds.</p>
 </div>
 <div class="ct-credit">Problems: Caltech Math Meet 2026: selected problems, from the AoPS contest collection or the official paper. Solutions written by MCC.</div>
-<div class="ct-bar"><button type="button" onclick="ctAll(true)">Show all answers and solutions</button><button type="button" onclick="ctAll(false)">Hide all</button></div>
 <div class="ct-toc-wrap"><div class="ct-toc-row"><span class="ct-toc-g">Individual Round</span><a href="#p1">2</a><a href="#p2">4</a><a href="#p3">5</a><a href="#p4">6</a><a href="#p5">10</a><a href="#p6">11</a></div><div class="ct-toc-row"><span class="ct-toc-g">Team Round</span><a href="#p7">1</a><a href="#p8">2</a></div><div class="ct-toc-row"><span class="ct-toc-g">Power Round</span><a href="#p9">1.30</a></div></div>
 
 {% raw %}
@@ -107,8 +106,7 @@ description: Caltech Math Meet 2026: selected problems: problems with answers an
 <div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Algebra &middot; LPS VI, Chapter 53: Sequences, Series, and Recursive Patterns &middot; Geometric Sequences</div>
 <div class="ct-text"><p>The arithmetic sequence $a_1,a_2,\dots$ with $a_1\neq a_2$ satisfies that $a_1,a_2,a_n$ and $a_1,a_4,a_p$ are both geometric sequences. In this case, $p$ can be represented as $cn+d$ for some integers $c$ and $d$. Compute $c\cdot d$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$-180$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Translate both conditions)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Translate both conditions</summary><div class="ct-text">
 <p>Write $a_k=a+(k-1)\delta$ with $a=a_1$ and $\delta=a_2-a_1\ne0$. Three numbers $u,v,w$ in geometric progression satisfy $v^2=uw$. Note $a\neq0$: if $a_1=0$, then $a_2^2=a_1a_n=0$ would give $a_2=0=a_1$. The condition $a_2^2=a_1a_n$ reads $(a+\delta)^2=a\bigl(a+(n-1)\delta\bigr)$, i.e. $2a\delta+\delta^2=(n-1)a\delta$; dividing by $\delta$, $\delta=(n-3)a$. The condition $a_4^2=a_1a_p$ reads $(a+3\delta)^2=a\bigl(a+(p-1)\delta\bigr)$, i.e. $6a+9\delta=(p-1)a$. Substituting $\delta=(n-3)a$ and dividing by $a$:
 \[p-1=6+9(n-3),\qquad p=9n-20 .\]
 So $c=9$, $d=-20$ and $c\cdot d=\boxed{-180}$.</p>
@@ -119,8 +117,7 @@ So $c=9$, $d=-20$ and $c\cdot d=\boxed{-180}$.</p>
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Number Theory &middot; LPS VI, Chapter 27: Base Systems and Positional Arithmetic &middot; Digit Patterns Across Bases</div>
 <div class="ct-text"><p>For positive integers $n$, let $f(n)$ denote the number whose base-$3$ expansion coincides with the binary expansion of $n$. Compute the number of positive integers less than or equal to $2026$ that can be written in the form $f(a+b)-f(a)-f(b)$ for some positive integers $a$ and $b$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$127$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Each carry contributes a power of 3)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Each carry contributes a power of 3</summary><div class="ct-text">
 <p>Write $a=\sum a_k2^k$, $b=\sum b_k2^k$ in binary and add them column by column: with carries $c_0=0$, $c_1,c_2,\dots\in\{0,1\}$ and result digits $s_k$,
 \[a_k+b_k+c_k=s_k+2c_{k+1}.\]
 Then $f(a+b)=\sum s_k3^k$ and $f(a)+f(b)=\sum(a_k+b_k)3^k=\sum(s_k+2c_{k+1}-c_k)3^k$. Since $\sum_k c_k3^k=\sum_k c_{k+1}3^{k+1}$,
@@ -133,10 +130,10 @@ So every value is a sum of distinct powers of $3$: a number whose base-$3$ digit
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 2: Fundamental Counting and Structured Enumeration &middot; Constraint-Based Enumeration</div>
 <div class="ct-text"><p>Find the number of ways to fill each cell of a $10\times 10$ grid with a $0$ or a $1$ such that every $2\times 2$ subgrid contains exactly two $0$s and exactly two $1$s.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$2046$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Alternating rows or complementary rows)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Alternating rows or complementary rows</summary><div class="ct-text">
 <p>Call a row <em>alternating</em> if it is $0101\ldots$ or $1010\ldots$</p><p><em>Lemma.</em> If two consecutive rows $u,v$ satisfy the condition and $u$ is not alternating, then $v$ is the complement of $u$. Proof: put $e_j=u_j+v_j-1\in\{-1,0,1\}$. The condition for columns $j,j+1$ says $e_j+e_{j+1}=0$. So either all $e_j=0$, i.e. $v_j=1-u_j$ for all $j$, or all $|e_j|=1$ with alternating signs, in which case $u_j=v_j=\frac{1+e_j}{2}$ alternates, contrary to the assumption.</p><p><em>Counting.</em> If every row is alternating, each pair of consecutive alternating rows has every $2\times2$ block with two $0$s and two $1$s, so any choice of the $10$ rows works: $2^{10}$ grids. If some row is not alternating, then by the lemma (applied downwards, and upwards by symmetry) every row is the complement of its neighbours, so the grid is determined by its first row, which can be any non-alternating row: $2^{10}-2$ grids; and these grids do satisfy the condition (each block is $u_j,u_{j+1},1-u_j,1-u_{j+1}$). The total is $2^{10}+2^{10}-2=\boxed{2046}$.</p>
-<h4>Solution 2 (A sign change turns the grid into a sum)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; A sign change turns the grid into a sum</summary><div class="ct-text">
 <p>Number the rows and columns $1,\dots,10$ and replace each entry $g_{ij}\in\{0,1\}$ by the sign
 \[y_{ij}=(-1)^{i+j}\,(2g_{ij}-1)\in\{1,-1\}.\]
 This is a bijection between fillings and sign arrays.</p><p><em>The condition.</em> A $2\times2$ block has two $0$s and two $1$s exactly when the four numbers $2g-1$ in it add up to $0$. In the block with top-left cell $(i,j)$ the four factors $(-1)^{i+j}$ are $\varepsilon,-\varepsilon,-\varepsilon,\varepsilon$ (with $\varepsilon=(-1)^{i+j}$) at the cells $(i,j),(i,j+1),(i+1,j),(i+1,j+1)$. So the condition becomes
@@ -151,8 +148,7 @@ Conversely every sign array of the form $y_{ij}=a_i+b_j$ satisfies all the block
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure &middot; Intersecting Chords and Circle Metrics</div>
 <div class="ct-text"><p>Two strips of paper with widths $10$ and $14$ overlap on a region that is a parallelogram with area $168$. A point $P$ lies inside this parallelogram such that the feet of the altitudes from $P$ to the four sides of the parallelogram all lie on a circle with area $50\pi$. The four possible points $P$ which satisfy this form another parallelogram. What is its area?</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$24$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (The centre is the centre of the parallelogram)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; The centre is the centre of the parallelogram</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:366px" src="/assets/contests/2026-27/caltech-mm-4_s1.svg" alt="Figure for the solution"></div>
 <p>Let strip $1$ lie between parallel lines $\ell_1,\ell_1'$ at distance $10$, with unit direction $\mathbf d_1$, and strip $2$ between $\ell_2,\ell_2'$ at distance $14$, with unit direction $\mathbf d_2$; let $\theta$ be the angle between the strips. The parallelogram has area $\frac{10\cdot14}{\sin\theta}=168$, so $\sin\theta=\frac56$. Let $O$ be its centre, the intersection of the two midlines $m_1,m_2$ of the strips.</p><p>The feet $F_1\in\ell_1$, $F_1'\in\ell_1'$ from $P$ lie on the line through $P$ perpendicular to strip $1$, so $F_1F_1'$ is a chord of length $10$ of the circle $\omega$ through the four feet, perpendicular to $\ell_1$; its perpendicular bisector is $m_1$. Likewise the other two feet form a chord of length $14$ whose perpendicular bisector is $m_2$. So the centre of $\omega$ is $O$, and with $t_1=\overrightarrow{OP}\cdot\mathbf d_1$ (the signed distance from $O$ to the first chord) and $t_2=\overrightarrow{OP}\cdot\mathbf d_2$,
 \[R^2=5^2+t_1^2=7^2+t_2^2=50 .\]
@@ -166,13 +162,13 @@ so $P$ is inside. The feet on the sides of strip $1$ are $t_1\mathbf d_1\pm5\mat
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 55: Three-Dimensional and Spatial Geometry &middot; Spatial Coordinate and Vector Methods</div>
 <div class="ct-text"><p>A cube is suspended in the air with its eight vertices $1,2,3,4,5,6,7$, and $8$ units off of the ground. What is its side length?</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\sqrt{21}$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Vertical components of three edges)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Vertical components of three edges</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/caltech-mm-5_s1.svg" alt="Figure for the solution"></div>
 <p>Let $V$ be the lowest vertex and $\mathbf e_1,\mathbf e_2,\mathbf e_3$ the three edge vectors from $V$; they are mutually perpendicular with length $s$. Let $a,b,c$ be their vertical components. The eight vertices are $V+\varepsilon_1\mathbf e_1+\varepsilon_2\mathbf e_2+\varepsilon_3\mathbf e_3$ with $\varepsilon_i\in\{0,1\}$, so their heights are $1+\{0,a,b,c,a+b,b+c,c+a,a+b+c\}$, and these must be $1,2,\dots,8$. In particular $a,b,c\ge0$ (as $V$ is lowest), and the eight subset sums of $\{a,b,c\}$ are $0,1,\dots,7$.</p><p>Order $a\le b\le c$. The eight subset sums are distinct, so $0&lt;a&lt;b&lt;c$, and the smallest positive sum is $a=1$. Then $b\ge2$, so every sum of two or three of the numbers is at least $3$; hence the sum $2$ is $b$ or $c$, and as $b\le c$, $b=2$. The sums not involving $c$ are $0,1,2,3$, and those involving $c$ are at least $c$; so $4=c$. Thus $\{a,b,c\}=\{1,2,4\}$.</p><p>Now write $\mathbf e_i=s\mathbf u_i$ with $\mathbf u_1,\mathbf u_2,\mathbf u_3$ orthonormal. The vertical unit vector $\mathbf k$ has coordinates $(\mathbf k\cdot\mathbf u_1,\mathbf k\cdot\mathbf u_2,\mathbf k\cdot\mathbf u_3)$ in this orthonormal basis, so
 \[1=|\mathbf k|^2=\sum_i(\mathbf k\cdot\mathbf u_i)^2=\frac{a^2+b^2+c^2}{s^2}=\frac{1+4+16}{s^2}.\]
 Hence $s=\boxed{\sqrt{21}}$. (Such a cube exists: complete $(1,2,4)/\sqrt{21}$ to an orthonormal frame.)</p>
-<h4>Solution 2 (The variance of the heights)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; The variance of the heights</summary><div class="ct-text">
 <p>Let $s$ be the side length, $M$ the centre of the cube, and $\mathbf u_1,\mathbf u_2,\mathbf u_3$ unit vectors along three mutually perpendicular edges. The vertices are $M+\frac s2(\varepsilon_1\mathbf u_1+\varepsilon_2\mathbf u_2+\varepsilon_3\mathbf u_3)$ with $\varepsilon_i\in\{1,-1\}$. Let $\mathbf k$ be the upward unit vector and $c_i=\mathbf k\cdot\mathbf u_i$. In the orthonormal basis $\mathbf u_1,\mathbf u_2,\mathbf u_3$ the vector $\mathbf k$ has coordinates $(c_1,c_2,c_3)$, so $c_1^2+c_2^2+c_3^2=|\mathbf k|^2=1$.</p><p>The height of a vertex minus the height $m$ of $M$ is $\frac s2(\varepsilon_1c_1+\varepsilon_2c_2+\varepsilon_3c_3)$. Average the square of this over the eight sign choices. Each $\varepsilon_i^2=1$, and each product $\varepsilon_i\varepsilon_j$ with $i\ne j$ is $+1$ for four choices and $-1$ for the other four, so the mixed terms average to $0$. Hence
 \[\frac18\sum_{\text{vertices}}(\text{height}-m)^2=\frac{s^2}{4}\left(c_1^2+c_2^2+c_3^2\right)=\frac{s^2}4 .\]
 Also the eight heights average to $m$, since the vertices come in pairs symmetric about $M$.</p><p>The heights are $1,2,\dots,8$, with mean $m=\frac92$ and
@@ -185,8 +181,7 @@ Therefore $\frac{s^2}4=\frac{21}4$ and $s=\boxed{\sqrt{21}}$. Such a cube exists
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Algebra &middot; LPS VII, Chapter 9: Polynomials and Root-Coefficient Strategy &middot; Vieta&#x27;s Relations</div>
 <div class="ct-text"><p>Suppose the polynomial $x^4+ax^3+69x^2+bx+100$ has real coefficients and roots $z_1,z_2,z_3$, and $z_4$, none of which are real. The possible values of $|z_1|+|z_2|+|z_3|+|z_4|$ form an open interval $(m,M)$. Compute $m$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$14$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Pair the conjugate roots)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Pair the conjugate roots</summary><div class="ct-text">
 <p>The coefficients are real and no root is real, so the roots are $z,\bar z,w,\bar w$. Let $|z|=r$, $|w|=s$, $\operatorname{Re}z=p$, $\operatorname{Re}w=q$, with $|p|&lt;r$, $|q|&lt;s$ (the roots are not real). Then
 \[x^4+ax^3+69x^2+bx+100=(x^2-2px+r^2)(x^2-2qx+s^2).\]
 Comparing constant terms, $r^2s^2=100$, so $rs=10$; comparing $x^2$ terms, $r^2+s^2+4pq=69$. The required sum is $2(r+s)$, and
@@ -200,10 +195,10 @@ since $pq\le|p||q|&lt;rs$. So $|z_1|+|z_2|+|z_3|+|z_4|&gt;14$.</p><p>Values arbi
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 31: Extremal Principle and Bounding Arguments &middot; Forcing Structure via Extremes</div>
 <div class="ct-text"><p>Call a binary string <em>encompassing</em> if by erasing some digits from the string, one can obtain any binary string of length $2026$.</p><ul class="ct-parts"><li><p><span class="ct-lbl">(a)</span> Find, with proof, the minimum possible length $N$ of an encompassing string.</p></li><li><p><span class="ct-lbl">(b)</span> Find, with proof, the number of length $N$ encompassing strings (where $N$ is the answer to part (a) of the question).</p></li></ul></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(a) $N=4052$; (b) $2^{2026}$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (An adversarial target string)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; An adversarial target string</summary><div class="ct-text">
 <p>Let $n=2026$. A string $t$ can be obtained from $w$ by erasing digits iff the greedy procedure succeeds: match $t_1$ with the first occurrence of $t_1$ in $w$, then $t_2$ with the first occurrence of $t_2$ after that, and so on (any embedding can be shifted left to the greedy one).</p><p><em>Lower bound.</em> Let $w$ be encompassing. Build a target $t$ adversarially: having matched $t_1,\dots,t_{k-1}$ greedily up to position $q_{k-1}$ ($q_0=0$), let $t_k$ be the digit whose first occurrence after position $q_{k-1}$ is later (if one digit does not occur after $q_{k-1}$, choose it, and the matching fails). Then $t_k$ is matched at the first position $q_k$ such that both digits occur in positions $q_{k-1}+1,\dots,q_k$; in particular $q_k\ge q_{k-1}+2$. Since $w$ is encompassing, all $n$ digits of $t$ get matched, so the length of $w$ is at least $q_n\ge 2n=4052$. The string $(01)^{n}$ has length $4052$ and is encompassing (take the $k$-th digit of any target from the $k$-th block $01$). So $N=\boxed{4052}$.</p><p><em>Counting.</em> Split a string of length $4052$ into $2026$ consecutive blocks of two digits. If every block is $01$ or $10$, the string is encompassing, as above. Conversely, for an encompassing $w$ of length $4052$, the adversarial matching above has $q_k\ge q_{k-1}+2$ and $q_{2026}\le4052$, so $q_k=2k$ for every $k$. By the choice of $q_k$, the two positions $2k-1,2k$ contain both digits: every block is $01$ or $10$. Hence the number of encompassing strings of length $N$ is $\boxed{2^{2026}}$.</p>
-<h4>Solution 2 (Count the digits, then induct)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Count the digits, then induct</summary><div class="ct-text">
 <p>Write $k$ for the length of the targets ($k=2026$) and call a string <em>$k$-encompassing</em> if every binary string of length $k$ can be obtained from it by erasing digits.</p><p><em>(a)</em> A $k$-encompassing string must contain the target $00\ldots0$ ($k$ zeros), so it has at least $k$ zeros, and likewise at least $k$ ones: its length is at least $2k$. The string $(01)^k$ of length $2k$ works: the $i$-th digit of any target can be taken from the $i$-th block $01$. Hence $N=2\cdot2026=\boxed{4052}$.</p><p><em>(b) Claim.</em> A string of length $2k$ is $k$-encompassing exactly when it is a concatenation of $k$ blocks, each $01$ or $10$. We prove this by induction on $k$. For $k=1$ the string must contain both digits, so it is $01$ or $10$.</p><p>Let $k\ge2$ and let $w=w_1w_2\ldots w_{2k}$ be $k$-encompassing. By (a) it has exactly $k$ zeros and $k$ ones.</p><ul class="ct-ul"><li><p><em>$w_1\ne w_2$.</em> Suppose $w_1=w_2$ and let $b$ be the other digit; its first occurrence is at some position $p\ge3$. Take any target that starts with $b$. Its first digit uses a position $\ge p$, so the remaining $k-1$ digits, which can be any string of length $k-1$, come from $w_{p+1}\ldots w_{2k}$. Then this piece is $(k-1)$-encompassing, so by (a) its length $2k-p$ is at least $2(k-1)$, i.e. $p\le2$, a contradiction.</p></li><li><p><em>The rest.</em> Let $b=w_2$; it is the digit different from $w_1$, so it first occurs at position $2$. Any target starting with $b$ uses a position $\ge2$ for its first digit, so its other $k-1$ digits (an arbitrary string of length $k-1$) come from $w_3\ldots w_{2k}$. Hence $w_3\ldots w_{2k}$ is $(k-1)$-encompassing, of length $2(k-1)$, and by induction it is a concatenation of $k-1$ blocks $01$ or $10$.</p></li></ul><p>Conversely, if $w_1w_2$ is $01$ or $10$ and $w_3\ldots w_{2k}$ is $(k-1)$-encompassing, then $w$ is $k$-encompassing: the first digit of a target is taken from $w_1w_2$ and the rest from $w_3\ldots w_{2k}$. This proves the claim (the induction also gives that every concatenation of such blocks works).</p><p>Each of the $2026$ blocks is chosen independently as $01$ or $10$, so the number of encompassing strings of length $N$ is $\boxed{2^{2026}}$.</p>
 </div></details>
 </section>
@@ -211,15 +206,15 @@ since $pq\le|p||q|&lt;rs$. So $|z_1|+|z_2|+|z_3|+|z_4|&gt;14$.</p><p>Values arbi
 <h3>Problem 2</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 36: Coordinate Geometry and Analytic Representation &middot; Cartesian Coordinate Setup</div>
 <div class="ct-text"><p>In acute scalene triangle $ABC$, the foot of the altitude from $A$ is $D$. A line $\ell$ passes through $A$, and the feet of the altitudes from $B$ and $C$ to $\ell$ are $B'$ and $C'$, respectively. Show that the line through $B'$ perpendicular to $AC$ and the line through $C'$ perpendicular to $AB$ intersect on $AD$.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (A symmetric formula for the intersection)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; A symmetric formula for the intersection</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:268px" src="/assets/contests/2026-27/caltech-mm-8_s1.svg" alt="Figure for the solution"></div>
 <p>Put $D$ at the origin with $A=(0,a)$, $B=(b,0)$, $C=(c,0)$, where $a&gt;0$ and $b&lt;0&lt;c$ (the triangle is acute, so $D$ lies between $B$ and $C$; we only need $a\ne0$). Let $\mathbf u=(\cos t,\sin t)$ be a unit vector along $\ell$. The foot of $B$ on $\ell$ is $B'=A+s_B\mathbf u$ and the foot of $C$ is $C'=A+s_C\mathbf u$, where
 \[s_B=(B-A)\cdot\mathbf u=b\cos t-a\sin t,\qquad s_C=(C-A)\cdot\mathbf u=c\cos t-a\sin t .\]
 The line through $B'$ perpendicular to $AC$ is $\{X:(X-B')\cdot(C-A)=0\}$ with $C-A=(c,-a)$. It is not parallel to $AD$ (the $y$-axis), since $AC$ is not horizontal. Its intersection with $AD$ is $X=(0,y)$ with $-c\,B'_x-a(y-B'_y)=0$, i.e.
 \[y=B'_y-\frac{c}{a}B'_x=a+s_B\sin t-\frac ca s_B\cos t=a-\frac{s_B}{a}\left(c\cos t-a\sin t\right)=a-\frac{s_Bs_C}{a}.\]
 This expression is symmetric in $B$ and $C$. Exchanging the roles of $B$ and $C$, the line through $C'$ perpendicular to $AB$ meets $AD$ at the same point $\left(0,a-\frac{s_Bs_C}a\right)$. So the two lines (which are not parallel, since $AB\nparallel AC$) intersect at this point of line $AD$.</p>
-<h4>Solution 2 (Dot products with origin A)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Dot products with origin A</summary><div class="ct-text">
 <p>Take $A$ as the origin and write $\mathbf b,\mathbf c$ for the position vectors of $B,C$; they are not parallel since $A,B,C$ are not collinear. Let $\mathbf u$ be a unit vector along $\ell$. The foot of the perpendicular from $B$ to $\ell$ is $B'=(\mathbf b\cdot\mathbf u)\mathbf u$, and similarly $C'=(\mathbf c\cdot\mathbf u)\mathbf u$.</p><p><em>The two lines.</em> The line through $B'$ perpendicular to $AC$ is the set of points $X$ with $(X-B')\cdot\mathbf c=0$, that is,
 \[X\cdot\mathbf c=B'\cdot\mathbf c=(\mathbf b\cdot\mathbf u)(\mathbf c\cdot\mathbf u).\]
 The line through $C'$ perpendicular to $AB$ is the set of $X$ with
@@ -237,12 +232,12 @@ It is then interpreted as a decimal in base $9$:
 \[0.xyz\ldots_9=x\cdot\tfrac19+y\cdot\tfrac1{81}+z\cdot\tfrac1{729}+\cdots .\]
 What is the expected value of the square of this base-$9$ decimal?</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\frac{23}{960}$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Mean and variance of independent digits)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Mean and variance of independent digits</summary><div class="ct-text">
 <p>For a uniformly random number in $[0,1]$, the base-$3$ digits $x_1,x_2,\dots$ are independent and each is uniform on $\{0,1,2\}$: each string of the first $n$ digits corresponds to an interval of length $3^{-n}$, so it has probability $3^{-n}$, the product of the $n$ one-digit probabilities (numbers with two expansions form a set of probability $0$). The base-$9$ value is $Y=\sum_{k\ge1}x_k9^{-k}$. We compute with the partial sums $Y_n=\sum_{k\le n}x_k9^{-k}$; since $0\le Y-Y_n\le2\sum_{k&gt;n}9^{-k}=\frac{9^{-n}}4$ and $0\le Y\le\frac14$, the mean and the mean square of $Y_n$ tend to those of $Y$, so the infinite sums below are justified.</p><p>Each digit has mean $1$ and variance $\frac{0+1+4}{3}-1=\frac23$. By linearity, $E[Y]=\sum_k9^{-k}=\frac18$. Since the digits are independent, variances add, and the variance of $x_k9^{-k}$ is $\frac23\cdot81^{-k}$:
 \[\operatorname{Var}(Y)=\frac23\sum_{k\ge1}81^{-k}=\frac23\cdot\frac1{80}=\frac1{120}.\]
 Hence $E[Y^2]=\operatorname{Var}(Y)+E[Y]^2=\frac1{120}+\frac1{64}=\frac{8+15}{960}=\boxed{\dfrac{23}{960}}$.</p>
-<h4>Solution 2 (Self-similarity)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Self-similarity</summary><div class="ct-text">
 <p>For a uniformly random number in $[0,1]$, the base-$3$ digits $x_1,x_2,\dots$ are independent and uniform on $\{0,1,2\}$: each string of the first $n$ digits corresponds to an interval of length $3^{-n}$, the product of the $n$ one-digit probabilities (numbers with two expansions form a set of probability $0$). The base-$9$ value $Y=\sum_k x_k9^{-k}$ satisfies
 \[Y=\frac{x_1+Y'}{9},\qquad Y'=\sum_{k\ge1}x_{k+1}9^{-k},\]
 where $Y'$ has the same distribution as $Y$ and is independent of $x_1$. All these expectations are finite, as $0\le Y\le\frac14$. Taking expectations, $m_1=E[Y]$ satisfies $9m_1=1+m_1$, so $m_1=\frac18$. Squaring, with $E[x_1]=1$ and $E[x_1^2]=\frac53$,

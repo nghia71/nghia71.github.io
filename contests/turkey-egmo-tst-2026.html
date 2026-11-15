@@ -97,7 +97,6 @@ description: Turkey Team Selection Test 2026, for the EGMO: problems with answer
 <p>The 6 problems of the Turkey Team Selection Test 2026, for the EGMO, each with our own solutions, hidden until you open them. 4 of them ask for an answer and 2 ask for a proof. Where a problem has a final answer, it is shown separately. Try a problem first, then check.</p><p>The test has two days with three problems each.</p>
 </div>
 <div class="ct-credit">Problems: Turkey Team Selection Test 2026, for the EGMO, from the AoPS contest collection or the official paper. Solutions written by MCC.</div>
-<div class="ct-bar"><button type="button" onclick="ctAll(true)">Show all answers and solutions</button><button type="button" onclick="ctAll(false)">Hide all</button></div>
 <div class="ct-toc-wrap"><div class="ct-toc-row"><span class="ct-toc-g">Day 1</span><a href="#p1">1</a><a href="#p2">2</a><a href="#p3">3</a></div><div class="ct-toc-row"><span class="ct-toc-g">Day 2</span><a href="#p4">4</a><a href="#p5">5</a><a href="#p6">6</a></div></div>
 
 {% raw %}
@@ -107,8 +106,7 @@ description: Turkey Team Selection Test 2026, for the EGMO: problems with answer
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 49: Combinatorial Number Theory and Structure &middot; Sequences with Arithmetic Constraints</div>
 <div class="ct-text"><p>Let $n$ be a positive integer. Consider a sequence of positive integers $a_1,a_2,\ldots,a_n$ such that for every integer $1\le i\le n$, the number $a_{i+1}$ equals the number of indices $j$ with $1\le j\le n$ satisfying $\gcd(a_i,a_j)=1$ (where $a_{n+1}=a_1$). Determine all possible values of $n$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$n=1$ and $n=2$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (The next term is a function of the current term)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; The next term is a function of the current term</summary><div class="ct-text">
 <p>For a positive integer $t$ let
 \[
 c(t)=\#\{\,j:1\le j\le n,\ \gcd(t,a_j)=1\,\}.
@@ -137,8 +135,7 @@ with $c(2)=c(4)$ above avoids Bertrand's postulate.</p>
 \[|x-y|\ge|S-T|,\]
 we call this pair of vertices a good pair. Find the minimum possible value of the number of good pairs.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$n-1$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Prefix sums and inversions of a cyclic permutation)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Prefix sums and inversions of a cyclic permutation</summary><div class="ct-text">
 <p>Label the vertices $V_0,\dots,V_{n-1}$ in circular order with numbers $a_0,\dots,a_{n-1}$, and let
 \[
 P_k=a_0+a_1+\dots+a_{k-1}\qquad(0\le k\le n),\qquad P_0=P_n=0 .
@@ -162,7 +159,8 @@ inversions of $\tau$.</p><p><em>Lemma.</em> A permutation of $\{1,\dots,n\}$ wit
 inversion the permutation is the identity and $c=n$. Otherwise there is an $x$ with $\tau(x)&gt;\tau(x+1)$; then $\tau'=\tau\circ(x\ x{+}1)$ has
 one inversion fewer, and composing with a transposition merges two cycles or splits one, so $c(\tau')\le c(\tau)+1$. By induction,
 $\mathrm{inv}(\tau)-1=\mathrm{inv}(\tau')\ge n-c(\tau')\ge n-c(\tau)-1$.</p><p>For our $n$-cycle, $c=1$, so there are at least $n-1$ good pairs. The minimum is $\boxed{n-1}$.</p>
-<h4>Solution 2 (The good pairs form a connected graph)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; The good pairs form a connected graph</summary><div class="ct-text">
 <p>Label the vertices $V_0,\dots,V_{n-1}$ in circular order, with numbers $a_0,\dots,a_{n-1}$, and put $P_k=a_0+\dots+a_{k-1}$, so
 $P_0=P_n=0$; indices of $P$ are taken mod $n$. For $i&lt;j$ let $x=a_i$, $y=a_j$ and let $S$ be the sum of the numbers strictly between them
 (at $V_{i+1},\dots,V_{j-1}$); then the other side has sum $T=-(x+y+S)$ and
@@ -186,8 +184,7 @@ pairs. The minimum is $\boxed{n-1}$.</p>
 <h3>Problem 3</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 19: Triangle Centers and Classical Triangle Geometry &middot; Centroid, Incenter, Circumcenter, and Orthocenter</div>
 <div class="ct-text"><p>Let $ABC$ be an acute scalene triangle with orthocenter $H$ and circumcenter $O$. Let $M$ be the midpoint of $BC$, and let $P$ be the second intersection point of the line $AH$ with the circumcircle of triangle $ABC$. Let $Q$ be the intersection of the line through $A$ perpendicular to $HM$ and the line through $H$ parallel to $BC$. Finally, let $R$ be the intersection point of the ray $HO$ with the circumcircle of triangle $APQ$.</p><p>Prove that $|AR|=2|HM|$.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 ($R$ is the reflection of $H$ in $O$)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; $R$ is the reflection of $H$ in $O$</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:276px" src="/assets/contests/2026-27/turkey-egmo-tst-3_s1.svg" alt="Figure for the solution"></div>
 <p>Let $\Gamma$ be the circumcircle, $A'$ the antipode of $A$ on $\Gamma$, and $H'$ the reflection of $H$ in $O$.</p><p><em>Classical facts.</em> Since $\angle ACA'=90^\circ$, $A'C\perp AC$, and also $BH\perp AC$; so $BH\parallel CA'$, and similarly $CH\parallel BA'$.
 Thus $BHCA'$ is a parallelogram and its diagonals bisect each other: $M$ is the midpoint of $HA'$. The quadrilateral $AHA'H'$ has diagonals
@@ -208,7 +205,8 @@ circle, so $R=H'$. Therefore
 AR=AH'=HA'=2\,HM .
 \]
 (The point $Q$ exists: $AQ\perp HM$ is parallel to $BC$ only if $HM\perp BC$, i.e. $M$ on the altitude $AH$, i.e. $AB=AC$.)</p>
-<h4>Solution 2 (Coordinates on the altitude)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Coordinates on the altitude</summary><div class="ct-text">
 <p>Let the foot of the altitude from $A$ be the origin, $BC$ the $x$-axis, $A=(0,a)$, $B=(b,0)$, $C=(c,0)$ with $b&lt;0&lt;c$, $a&gt;0$,
 $a^2+bc&gt;0$ (the angle at $A$ is acute) and $b+c\ne0$ (as $AB\ne AC$).</p><p><em>The points.</em> $H=(0,-bc/a)$, since $\vec{BH}\cdot\vec{AC}=(-b)c+(-bc/a)(-a)=0$. Reflecting $H$ in $BC$ gives the second point of the
 altitude on the circumcircle, so $P=(0,bc/a)$. The circumcentre lies on $x=\tfrac{b+c}2$ and on the perpendicular bisector of $AP$, so $O=\bigl(\tfrac{b+c}2,\tfrac{a^2+bc}{2a}\bigr)$;
@@ -238,8 +236,7 @@ so $AR=2HM$.</p>
 \[\sum_{i=1}^{1001}x_i-\sum_{i=1}^{1001}x_ix_{i+1}-\sum_{i=1}^{1001}x_ix_{i+2},\]
 where $x_{1002}=x_1$ and $x_{1003}=x_2$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$333$</p></div></details>
-<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Reduce to $0$ and $1$, then count gaps)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Reduce to $0$ and $1$, then count gaps</summary><div class="ct-text">
 <p>Let $F(x)=\sum x_i-\sum x_ix_{i+1}-\sum x_ix_{i+2}$ (indices mod $1001$).</p><p><em>Step 1: we may assume $x_i\in\{0,1\}$.</em> No term of $F$ contains $x_i^2$, so for fixed values of the other variables $F$ is a linear
 function of $x_i$ on $[0,1]$, and its maximum there is attained at $x_i=0$ or $x_i=1$. Replacing $x_1,x_2,\dots,x_{1001}$ one after another by the
 better endpoint never decreases $F$. So the maximum of $F$ equals its maximum over $\{0,1\}^{1001}$.</p><p><em>Step 2: the $0/1$ case.</em> Let $k$ be the number of ones. Then $F=k-e$, where $e$ is the number of pairs of ones at cyclic distance $1$ or
@@ -252,7 +249,8 @@ F\le k-z\le k-\frac{3k-1001}{2}=\frac{1001-k}{2}.
 \]
 Together with $F\le k$: if $k\le333$ then $F\le333$; if $k\ge334$ then $F\le\frac{667}2&lt;334$. As $F$ is an integer, $F\le333$.</p><p><em>Equality.</em> Put $x_i=1$ for $i=1,4,7,\dots,997$ and $x_i=0$ otherwise: $333$ ones, any two at cyclic distance at least $3$ (the last gap,
 from $997$ to $1$, has four zeros), so $F=333$. The maximum is $\boxed{333}$.</p>
-<h4>Solution 2 (A three-term inequality)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; A three-term inequality</summary><div class="ct-text">
 <p>For $a,b,c\in[0,1]$ we have $(1-a)(1-b)(1-c)\ge0$, that is,
 \[
 a+b+c-ab-bc-ca\le1-abc\le1 .
@@ -270,7 +268,8 @@ so $F\le\frac{1001}3&lt;334$ for all admissible $x$. Moreover $F$ is linear in e
 replacing the variables one at a time by the better of $0$ and $1$ does not decrease $F$; hence the maximum is attained at a point of
 $\{0,1\}^{1001}$, where $F$ is an integer, and it is at most $333$. For $x_i=1$ when $i\in\{1,4,7,\dots,997\}$ and $x_i=0$ otherwise, there
 are $333$ ones, no two at cyclic distance $1$ or $2$, so $F=333$. The maximum is $\boxed{333}$.</p>
-<h4>Solution 3 (A random set of indices)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 3 &ndash; A random set of indices</summary><div class="ct-text">
 <p>Let $F(x)=\sum x_i-\sum x_ix_{i+1}-\sum x_ix_{i+2}$, indices taken modulo $1001$. Call two indices <em>close</em> if their cyclic distance is $1$ or $2$. The close pairs are the $1001$ pairs $\{i,i+1\}$ and the $1001$ pairs $\{i,i+2\}$; these $2002$ pairs are all different (because $1001\ge5$), so $F$ contains exactly one product $x_ix_j$ for each close pair $\{i,j\}$.</p><p><em>A random set.</em> Fix $x_1,\dots,x_{1001}\in[0,1]$ and choose a random set $S\subseteq\{1,\dots,1001\}$ by putting each index $i$ into $S$ with probability $x_i$, independently of the others. For a set $S$ let $e(S)$ be the number of close pairs with both indices in $S$. The expected size of $S$ is $\sum x_i$. A close pair $\{i,j\}$ consists of two different indices, so by independence both lie in $S$ with probability $x_ix_j$; adding over all close pairs, the expected value of $e(S)$ is $\sum x_ix_{i+1}+\sum x_ix_{i+2}$. By linearity of expectation,
 \[
 F(x)=\mathbb{E}\bigl[\,|S|-e(S)\,\bigr].
@@ -281,8 +280,7 @@ F(x)=\mathbb{E}\bigl[\,|S|-e(S)\,\bigr].
 <h3>Problem 5</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 3: Foundational Angle and Configuration Chasing &middot; Local Configuration Cleanup</div>
 <div class="ct-text"><p>In a triangle $ABC$ with $|AB|\ne|AC|$ and $\angle BAC\ne 90^\circ$, let $D$ be a point on the line $AC$ lying on the side of $A$ opposite to $C$, chosen so that $|AD|=|AB|$. Let $E$ be the intersection point of the line $AB$ with the line through $C$ perpendicular to $BD$. Let $M$ and $N$ be the midpoints of the segments $[CD]$ and $[BE]$, respectively. Let $P$ be the midpoint of the arc $BC$ of the circumcircle of $ABC$ that contains $A$, and let $Q$ be the midpoint of the arc $BC$ that does not contain $A$. Let $K$ be the intersection point of the lines $CE$ and $BD$, and let $L$ be the intersection point of the lines $PM$ and $QN$. Prove that the lines $KL$ and $MN$ are perpendicular.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Coordinates with the bisectors as axes)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Coordinates with the bisectors as axes</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:227px" src="/assets/contests/2026-27/turkey-egmo-tst-5_s1.svg" alt="Figure for the solution"></div>
 <p>Let $b=AC$, $c=AB$, $\alpha=\tfrac12\angle BAC$. By hypothesis $b\ne c$ and $\angle BAC\ne90^\circ$. (Both conditions are needed: if
 $b=c$ then $P=A=M$ and the line $PM$ is not defined, and if $\angle BAC=90^\circ$ then $K=L$, as we shall see.)</p><p>Put $A$ at the origin, the internal bisector of $\angle BAC$ as the $x$-axis and the external bisector as the $y$-axis, and let
@@ -312,7 +310,8 @@ L=\Bigl(\frac{b}{2\cos\alpha},\ \frac{c}{2\sin\alpha}\Bigr).
 \]
 and $\vec{KL}\cdot\vec{MN}=\cos2\alpha\,\bigl(-\tfrac{bc}2+\tfrac{bc}2\bigr)=0$. Since $\cos2\alpha=\cos\angle BAC\ne0$, $K\ne L$, and
 $KL\perp MN$.</p>
-<h4>Solution 2 (Feet of the arc midpoints and a difference of squares)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Feet of the arc midpoints and a difference of squares</summary><div class="ct-text">
 <p>Let $b=AC$ and $c=AB$ (by hypothesis $b\ne c$) and let $\ell$ be the internal bisector of $\angle BAC$. On line $AB$ use the coordinate along ray $AB$
 ($B=c$), and on line $AC$ the coordinate along ray $AC$ ($C=b$).</p><p><em>Step 1: $D$, $E$, $M$, $N$.</em> $D=-c$ on line $AC$. The triangle $ABD$ is isosceles with apex $A$, so $BD$ is perpendicular to the bisector
 of $\angle BAD$, which is the external bisector of $\angle BAC$; hence $BD\parallel\ell$ and $CE\perp\ell$. The reflection in $\ell$ maps $C$ to
@@ -344,8 +343,7 @@ $\angle BAC=90^\circ$, which the statement excludes.)</p>
 <div class="ct-text"><p>Find all polynomials $P$ with integer coefficients such that for all coprime positive integers $m$ and $n$,
 \[\gcd\big(n+P(m),\,mP(n)\big)=1.\]</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$P(x)=x^k$ and $P(x)=-x^k$ with $k\ge1$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Primes of $P(m)$ divide $m$)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Primes of $P(m)$ divide $m$</summary><div class="ct-text">
 <p><em>These polynomials work.</em> Let $P=\pm x^k$, $k\ge1$, and let $q$ be a prime dividing both $n\pm m^k$ and $m\cdot(\pm n^k)$. Then
 $q\mid m$ or $q\mid n$; if $q\mid m$ then $q\mid n$, and if $q\mid n$ then $q\mid m^k$, so $q\mid m$. Either way $q$ divides the coprime numbers
 $m,n$, impossible. (The first number is $0$ only for the minus sign with $n=m^k$, which for coprime $m,n$ means $m=n=1$; there

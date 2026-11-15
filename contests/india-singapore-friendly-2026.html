@@ -97,7 +97,6 @@ description: India-Singapore Friendly Contest 2026: problems with answers and so
 <p>The 6 problems of the India-Singapore Friendly Contest 2026, each with our own solutions, hidden until you open them. 2 of them ask for an answer and 4 ask for a proof. Where a problem has a final answer, it is shown separately. Try a problem first, then check.</p><p>Six problems (Q1-Q6 on the page).</p>
 </div>
 <div class="ct-credit">Problems: India-Singapore Friendly Contest 2026, from the AoPS contest collection or the official paper. Solutions written by MCC.</div>
-<div class="ct-bar"><button type="button" onclick="ctAll(true)">Show all answers and solutions</button><button type="button" onclick="ctAll(false)">Hide all</button></div>
 <div class="ct-toc-wrap"><div class="ct-toc-row"><a href="#p1">1</a><a href="#p2">2</a><a href="#p3">3</a><a href="#p4">4</a><a href="#p5">5</a><a href="#p6">6</a></div></div>
 
 {% raw %}
@@ -106,8 +105,7 @@ description: India-Singapore Friendly Contest 2026: problems with answers and so
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 31: Extremal Principle and Bounding Arguments &middot; Bounding and Limiting Arguments</div>
 <div class="ct-text"><p>Let $k\geqslant 2$ and $n$ be positive integers. Find the largest integer $m$ for which there exists a grid with $m$ rows and $n$ columns satisfying the following conditions:</p><ul class="ct-ul"><li><p>Each cell contains a non-negative integer;</p></li><li><p>The sum of numbers in each row is at most $kn$;</p></li><li><p>The numbers in each column are pairwise distinct.</p></li></ul></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$m=2k+1$ for $n\ge2$; $m=k+1$ for $n=1$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Column sums against row sums)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Column sums against row sums</summary><div class="ct-text">
 <p><em>Upper bound.</em> The $m$ numbers in a column are distinct non-negative integers, so the column sum is at least $0+1+\dots+(m-1)=\frac{m(m-1)}2$. Summing over the columns and comparing with the rows,
 \[n\cdot\frac{m(m-1)}{2}\le(\text{sum of all entries})\le m\cdot kn,\]
 so $m-1\le 2k$, i.e. $m\le 2k+1$. If $n=1$, every entry is at most $k\cdot1=k$, so the single column holds distinct numbers from $\{0,\dots,k\}$ and $m\le k+1$; the column $0,1,\dots,k$ shows that $m=k+1$ is attained.</p><p><em>Construction for $n\ge2$, $m=2k+1$.</em> Number the rows $0,1,\dots,2k$. Every column will be a permutation of $\{0,1,\dots,2k\}$.</p><ul class="ct-ul"><li><p>A <em>pair</em> of columns: $x_i=i$ and $x_i'=2k-i$ in row $i$. Each row of the pair sums to $2k$.</p></li><li><p>A <em>triple</em> of columns $(a_i,b_i,c_i)$: $a_i=i$; for $0\le i\le k$ put $b_i=2k-2i$, $c_i=k+i$; for $i=k+j$ with $1\le j\le k$ put $b_i=2k+1-2j$, $c_i=j-1$. The $b$'s run over all even and all odd numbers in $\{0,\dots,2k\}$ once, the $c$'s over $\{k,\dots,2k\}$ and $\{0,\dots,k-1\}$, and every row sums to $i+(2k-2i)+(k+i)=3k$ or $(k+j)+(2k+1-2j)+(j-1)=3k$.</p></li></ul><p>For even $n$ use $n/2$ pairs; for odd $n\ge3$ use one triple and $(n-3)/2$ pairs. Every row then sums to exactly $kn$, and the columns have distinct entries. Hence the answer is $\boxed{m=2k+1}$ for $n\ge 2$ (and $m=k+1$ for $n=1$).</p>
@@ -119,8 +117,7 @@ so $m-1\le 2k$, i.e. $m\le 2k+1$. If $n=1$, every entry is at most $k\cdot1=k$, 
 <div class="ct-text"><p>Points $B,A,C,D,E$ lie on a circle in that order such that
 \[AB\times CD=AC\times BD\quad\text{and}\quad AB+CE=AC+BE.\]
 Show that the line through $E$ parallel to $BC$ and the line through $D$ perpendicular to $AD$ intersect on the angle bisector of $\angle BAC$.</p></div>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Arc coordinates and the intersecting-chord ratio)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Arc coordinates and the intersecting-chord ratio</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:321px" src="/assets/contests/2026-27/india-singapore-friendly-2_s1.svg" alt="Figure for the solution"></div>
 <p>Scale so that the circle is the unit circle centred at $O$, and let $M$ be the midpoint of the arc $BC$ not containing $A$; it lies on the bisector of $\angle BAC$. Put $M=(0,-1)$ and write $P(\varphi)=(\sin\varphi,-\cos\varphi)$, so that $P(0)=M$ and $|P(\varphi)P(\psi)|=2\left|\sin\frac{\varphi-\psi}2\right|$. We may take $B=P(-\beta)$, $C=P(\beta)$ with $0&lt;\beta&lt;\pi$, so $\angle BAC=\beta$, and $A=P(2g)$ with $\frac\beta2&lt;g&lt;\pi-\frac\beta2$. By the order $B,A,C,D,E$, the points $D=P(d)$ and $E=P(\delta)$ lie on arc $BMC$: $-\beta&lt;d,\delta&lt;\beta$. Let $T=\tan\frac\beta2$ and $k=\cot g$.</p><p><em>The point $D$.</em> $AB=2\sin(g+\frac\beta2)$, $AC=2\sin(g-\frac\beta2)$, $DB=2\sin\frac{\beta+d}2$, $DC=2\sin\frac{\beta-d}2$. The condition $\frac{AB}{AC}=\frac{DB}{DC}$, rewritten as $\frac{x-y}{x+y}$ with sum-to-product formulas, gives $\cot g\tan\frac\beta2=\cot\frac\beta2\tan\frac d2$, i.e.
 \[\tan\tfrac d2=T^2k.\]
@@ -137,8 +134,7 @@ Both $X$ and $X_0$ lie inside segment $MA$ and divide it in the same ratio, so $
 <h3>Problem 3</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-S" title="Superhard, on the LPS VII scale">S</span>Number Theory &middot; LPS VII, Chapter 49: Combinatorial Number Theory and Structure &middot; Hybrid Combinatorial-Arithmetic Arguments</div>
 <div class="ct-text"><p>Consider a polynomial $P(x)$ with integer coefficients. For any positive integer $n$, define $f(n)$ to be the number of coefficients in $P(x)^n$ that are not multiples of $67$. Show that for all sufficiently large $n$, at least $n^{0.99}$ of the numbers $f(1),f(2),\dots,f(n)$ are perfect $2026$th powers.</p><p><em>Note:</em> A perfect $2026$th power is in the form $k^{2026}$, where $k$ is an integer.</p></div>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Frobenius splits $P^n$ into base-$q$ blocks)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Frobenius splits $P^n$ into base-$q$ blocks</summary><div class="ct-text">
 <p>Work modulo $p=67$ and let $\bar P\in\mathbb F_p[x]$ be the reduction of $P$; $f(n)$ is the number of nonzero coefficients of $\bar P^{\,n}$. If $\bar P=0$, then $f(n)=0=0^{2026}$ for all $n$; if $\bar P$ is a nonzero constant, $f(n)=1=1^{2026}$. So assume $e=\deg\bar P\ge1$.</p><p><em>Splitting.</em> In $\mathbb F_p[x]$ we have $\bar P(x)^p=\bar P(x^p)$, since $(\sum c_ix^i)^p=\sum c_i^px^{ip}$ and $c^p=c$ for $c\in\mathbb F_p$. Fix $L\ge1$ and $q=p^L$; then $\bar P(x)^{q^j}=\bar P(x^{q^j})$. Write $n=\sum_jm_jq^j$ in base $q$. Then
 \[\bar P^{\,n}=\prod_j\bar P^{\,m_j}\bigl(x^{q^j}\bigr).\]
 Call a digit $m$ <em>small</em> if $me\le q-1$, and let $S=\{0,1,\dots,\lfloor (q-1)/e\rfloor\}$ be the set of small digits; $|S|\ge q/e$. If all digits of $n$ are small, then every exponent in $\bar P^{\,m_j}$ is at most $q-1$, so each exponent $\sum_ja_jq^j$ of the product arises from exactly one choice of terms (base-$q$ representations are unique). Hence the coefficient of $x^{\sum a_jq^j}$ is the product of the corresponding coefficients, and
@@ -153,8 +149,7 @@ for all sufficiently large $N$, since $q$ and $K$ are constants and $N^{0.009}\t
 <div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 27: Bijections and Structural Equivalence &middot; Encoding and Representation</div>
 <div class="ct-text"><p>Let $D,d$ be positive integers with $D\ge 2$ and $d\le D$. Players $A$ and $B$ play the following game:</p><ul class="ct-ul"><li><p>$A$ chooses an integer $n$ with exactly $D$ decimal digits and $\gcd(n,10)=1$, and announces it.</p></li><li><p>$B$ secretly chooses an integer $s\in\{0,1,\dots,n-1\}$.</p></li><li><p>On each turn, $A$ asks a positive integer $q$, and $B$ replies with the $d$-th digit (from the right) of $qs \bmod n$.</p></li></ul><p>$A$'s queries may depend on previous replies. Determine, in terms of $d$ and $D$, the minimum number of turns $A$ needs to guarantee identifying $s$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$D$ turns (independent of $d$)</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (All nines and digit rotation)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; All nines and digit rotation</summary><div class="ct-text">
 <p><em>Lower bound.</em> Each reply is one of the $10$ digits, so after $T$ turns at most $10^T$ different reply sequences are possible, and they must separate the $n$ possible values of $s$. Since $n$ has $D$ digits and is coprime to $10$, $n\ge10^{D-1}+1&gt;10^{D-1}$. Hence $10^T\ge n&gt;10^{D-1}$ and $T\ge D$.</p><p><em>$D$ turns suffice.</em> Let $A$ choose $n=10^D-1=\underbrace{99\dots9}_{D}$ (coprime to $10$). Write every $r\in\{0,\dots,n-1\}$ as a string of $D$ digits (with leading zeros); the string $99\dots9$ does not occur. Multiplying by $10$ modulo $n$ rotates the string cyclically by one place: if $r=10^{D-1}r_{D-1}+r'$ with $r'&lt;10^{D-1}$, then
 \[10r=10^D r_{D-1}+10r'\equiv 10r'+r_{D-1}\pmod{10^D-1},\]
 and $10r'+r_{D-1}&lt;n$. So $10^ks\bmod n$ is the string of $s$ rotated by $k$ places, and its $d$-th digit from the right is the digit of $s$ in position $d-k$ (indices taken modulo $D$). Asking $q=10^k$ for $k=0,1,\dots,D-1$ (here $q$ must be positive, and $10^0=1$) reveals all $D$ digits of $s$, hence $s$.</p><p>So the minimum is $\boxed{D}$, for every $d$.</p>
@@ -166,8 +161,7 @@ and $10r'+r_{D-1}&lt;n$. So $10^ks\bmod n$ is the string of $s$ rotated by $k$ p
 <div class="ct-text"><p>Suppose that there is a sequence of positive reals $a_0,a_1,\dots$ such that for all sufficiently large $n$,
 \[\sum_{i=0}^{n}\binom{n}{i}a_ia_{n-i}\ge 2.01^n\cdot a_n.\]
 Show that there exists a positive integer $i$ satisfying $a_i\le 0.1^{6767}$.</p></div>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (A superadditive defect forces $a_n\to0$)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; A superadditive defect forces $a_n\to0$</summary><div class="ct-text">
 <p>We prove more: $a_n\to0$, so some $a_i$ with $i\ge1$ is below $0.1^{6767}$.</p><p><em>Step 1: a splitting inequality.</em> Choose $N_0\ge2$ such that for all $n\ge N_0$ the hypothesis holds and $2.01^n-2a_0\ge2.005^n$. For $n\ge N_0$, moving the terms $i=0,n$ to the right,
 \[\sum_{i=1}^{n-1}\binom ni a_ia_{n-i}\ge(2.01^n-2a_0)a_n\ge2.005^na_n.\]
 As $\sum_{i=1}^{n-1}\binom ni&lt;2^n$, some $1\le i\le n-1$ has $a_ia_{n-i}\ge(2.005/2)^na_n$. With $x_m=\ln a_m$ and $c=\ln1.0025&gt;0$:
@@ -181,8 +175,7 @@ where $H(\lambda)=-\lambda\log_2\lambda-(1-\lambda)\log_2(1-\lambda)\le1$.</p><p
 <h3>Problem 6</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure &middot; Radical Axis and Radical Center</div>
 <div class="ct-text"><p>Let $ABCDEF$ be a convex hexagon such that $AD$, $BE$, $CF$ concur at a point $O$ and $BC\parallel AD$, $DE\parallel CF$, $FA\parallel EB$. Let $X$, $Y$, and $Z$ be the midpoints of $AD$, $BE$, and $CF$ respectively and assume that $O$ is not coincident with any of them. Prove that $O,X,Y,Z$ are concyclic if and only if $O$ lies on the radical axis of the circumcircles of $\triangle ACE$ and $\triangle BDF$.</p></div>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Vectors along the three diagonals)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Vectors along the three diagonals</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:226px" src="/assets/contests/2026-27/india-singapore-friendly-6_s1.svg" alt="Figure for the solution"></div>
 <p>Put $O$ at the origin and let $u,v,w$ be unit vectors along $AD,BE,CF$. Then $A=au$, $D=du$, $B=bv$, $E=ev$, $C=cw$, $F=fw$ with nonzero reals $a,\dots,f$, the vectors $u,v$ are independent, and $w=\alpha u+\beta v$ with $\alpha,\beta\ne0$ (the three diagonals are distinct lines).</p><p><em>The parallelisms.</em> $C-B=c\alpha u+(c\beta-b)v\parallel u$ gives $b=\beta c$. $E-D=-du+ev\parallel\alpha u+\beta v$ gives $\alpha e+\beta d=0$, i.e. $d=-\alpha e/\beta$. $A-F=(a-\alpha f)u-\beta fv\parallel v$ gives $a=\alpha f$.</p><p><em>Concyclicity.</em> $X=\frac{a+d}2u$, $Y=\frac{b+e}2v$, $Z=\frac{c+f}2w$, all nonzero. Under the inversion $P\mapsto P/|P|^2$ centred at $O$, circles through $O$ correspond to lines not through $O$, and $X,Y,Z$ go to $\frac{2}{a+d}u$, $\frac2{b+e}v$, $\frac2{c+f}w$ (which lie on three different lines through $O$, so they are not on a line through $O$). A line not through $O$ is $\{P:\ell\cdot P=1\}$; the images of $X,Y$ lie on it iff $\ell\cdot u=\frac{a+d}2$ and $\ell\cdot v=\frac{b+e}2$, which determines $\ell$. Then the image of $Z$ is on it iff $\ell\cdot w=\frac{c+f}2$. Hence
 \[O,X,Y,Z\text{ concyclic}\iff \Phi:=\alpha(a+d)+\beta(b+e)-(c+f)=0.\]

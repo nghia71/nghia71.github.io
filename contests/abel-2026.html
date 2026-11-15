@@ -97,7 +97,6 @@ description: Norwegian Mathematical Olympiad 2026, Abel Competition Final: probl
 <p>The 8 problems of the Norwegian Mathematical Olympiad 2026, Abel Competition Final, each with our own solutions, hidden until you open them. 6 of them ask for an answer and 2 ask for a proof. Where a problem has a final answer, it is shown separately. Try a problem first, then check.</p><p>The final round of the Abel competition.</p>
 </div>
 <div class="ct-credit">Problems: Norwegian Mathematical Olympiad 2026, Abel Competition Final, from the AoPS contest collection or the official paper. Solutions written by MCC.</div>
-<div class="ct-bar"><button type="button" onclick="ctAll(true)">Show all answers and solutions</button><button type="button" onclick="ctAll(false)">Hide all</button></div>
 <div class="ct-toc-wrap"><div class="ct-toc-row"><a href="#p1">1a</a><a href="#p2">1b</a><a href="#p3">2a</a><a href="#p4">2b</a><a href="#p5">3a</a><a href="#p6">3b</a><a href="#p7">4a</a><a href="#p8">4b</a></div></div>
 
 {% raw %}
@@ -106,12 +105,12 @@ description: Norwegian Mathematical Olympiad 2026, Abel Competition Final: probl
 <div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VII scale">E</span>Number Theory &middot; LPS VII, Chapter 25: Diophantine Equations: Factorization and Algebraic Methods &middot; Bounding and Size Arguments</div>
 <div class="ct-text"><p>Determine all pairs of positive integers $a, b$ for which both $a^2+2b+1$ and $b^2+2a+1$ are perfect squares.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>all pairs $(a,a)$ with $a$ a positive integer</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Squeezing between consecutive squares)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Squeezing between consecutive squares</summary><div class="ct-text">
 <p>By symmetry we may assume $a\ge b$. Then
 \[a^2&lt;a^2+2b+1\le a^2+2a+1=(a+1)^2 .\]
 The only perfect square in the interval $(a^2,(a+1)^2]$ is $(a+1)^2$, so $a^2+2b+1=(a+1)^2$, which gives $b=a$.</p><p>Conversely, if $a=b$ then both expressions equal $a^2+2a+1=(a+1)^2$, a perfect square. Hence the pairs are exactly $(a,a)$ for every positive integer $a$.</p>
-<h4>Solution 2 (Writing the square as a shifted square)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Writing the square as a shifted square</summary><div class="ct-text">
 <p>Since $a^2+2b+1&gt;a^2$, we can write $a^2+2b+1=(a+s)^2$ with an integer $s\ge1$. Then
 \[2b+1=2as+s^2 .\]
 The left side is odd, so $s$ is odd and $s^2\ge s$; hence $2b+1\ge 2as+s\ge 2a+1$, that is, $b\ge a$.
@@ -124,8 +123,7 @@ Conversely, if $a=b$ then both expressions equal $a^2+2a+1=(a+1)^2$, so every pa
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 8: Modular Arithmetic and Congruence Methods &middot; Periodic and Cyclic Behavior Modulo $n$</div>
 <div class="ct-text"><p>Write $S(n) = 1^1 + 2^2 + \ldots + n^n$ for every positive integer $n$. Show that there are infinitely many positive integers $n$ such that the first digit of $S(n)$ equals the first digit of $n$, while simultaneously the final digit of $S(n)$ equals the final digit of $n$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>proof (for example every $n=10^m$ with $m\ge2$ works)</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Powers of ten)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Powers of ten</summary><div class="ct-text">
 <p>We show that every $n=10^m$ with $m\ge2$ has the property.</p><p><strong>Last digit.</strong> We claim that $k^k \bmod 10$ depends only on $k \bmod 20$. Modulo $2$, $k^k\equiv k$. Modulo $5$: if $5\mid k$ then
 $k^k\equiv0$; otherwise $k^4\equiv1 \pmod 5$ by Fermat's little theorem, so $k^k\equiv k^{r}\pmod 5$ where $r\in\{0,1,2,3\}$ is the remainder
 of $k$ modulo $4$. Both $k\bmod5$ and $k\bmod4$ are determined by $k\bmod20$, so $k^k \bmod 2$ and $k^k\bmod 5$, hence $k^k\bmod10$, depend
@@ -136,7 +134,8 @@ For $n=10^m$ we have $t=n/20=5\cdot10^{m-2}$, so $S(n)\equiv 20\cdot 10^{m-2}\eq
 last digit of $n$.</p><p><strong>First digit.</strong> For $1\le k\le n-1$ we have $k^k\le n^k$, so
 \[n^n&lt; S(n)=n^n+\sum_{k=1}^{n-1}k^k\le n^n+\sum_{k=1}^{n-1}n^k=n^n+\frac{n^n-n}{n-1}&lt;2n^n .\]
 With $n=10^m$, $n^n=10^{mn}$, so $10^{mn}&lt;S(n)&lt;2\cdot10^{mn}$ and the first digit of $S(n)$ is $1$, the first digit of $n$.</p><p>Since this holds for every $m\ge2$, there are infinitely many such $n$.</p>
-<h4>Solution 2 (Numbers just above a power of ten)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Numbers just above a power of ten</summary><div class="ct-text">
 <p>We show that every $n=10^k+65$ with $k\ge5$ has the property. Such an $n$ has first digit $1$ and last digit $5$.</p><p><strong>Last digit.</strong> The last digit of $j^j$ depends only on $j\bmod 20$. Indeed, modulo $2$ we have $j^j\equiv j$; modulo $5$, if $5\mid j$ then
 $j^j\equiv0$, and otherwise $j^4\equiv1\pmod 5$ by Fermat's little theorem, so $j^j\equiv j^{r}\pmod5$ where $r$ is the remainder of $j$ modulo $4$.
 Both $j\bmod 5$ and $j\bmod 4$ are determined by $j\bmod 20$. The last digits of $j^j$ for $j=1,\dots,20$ are
@@ -170,8 +169,7 @@ Hence the first digit of $S(n)$ is $1$, the first digit of $n$.</p><p>So all $n=
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 18: Invariants and Monovariants &middot; Invariant Quantities</div>
 <div class="ct-text"><p>Harald has a stack of $n$ cards, marked with numbers $1, 2, \ldots, n$ in order from top to bottom. Then he reduces the stack repeatedly: Each reduction consists of removing two adjacent cards from the stack, subtracting the number $a$ on the lower card from the number $b$ on the one above, writing the difference $b-a$, on a blank card, and inserting the new card at a freely chosen location in the stack. After $n-1$ such reductions, he is left with just one card. For which positive integers $n$ can the number on this card be zero?</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>exactly the $n\ge4$ with $n\equiv0$ or $3\pmod 4$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Parity of the sum, and building blocks)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Parity of the sum, and building blocks</summary><div class="ct-text">
 <p><strong>Necessity.</strong> A reduction replaces $b$ and $a$ by $b-a$, and $b-a\equiv b+a\pmod 2$. Hence the parity of the sum of all numbers
 in the stack never changes. At the start the sum is $1+2+\dots+n=\frac{n(n+1)}2$, and at the end it is the number on the last card. So the
 last card can be $0$ only if $\frac{n(n+1)}2$ is even, that is, $n\equiv0$ or $3\pmod 4$.</p><p>The case $n=3$ also fails. The original cards are never moved, so $1$ stays above $2$ and $2$ stays above $3$. If the first reduction uses
@@ -190,8 +188,7 @@ $0-0=0$ reduces it to a single card $0$.</p><p>Hence the answer is all $n\ge4$ w
 <div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 18: Invariants and Monovariants &middot; Invariant Quantities</div>
 <div class="ct-text"><p>Let $m$ and $n$ be positive integers. An $m \times n$ grid is called <em>oriented</em> if every unit edge has an arrow pointing on one of the two directions along the edge. A <em>move</em> consists of rotating a grid cell, along with the direction of each of the cell's four edges, by $90^\circ$. Two oriented grids are called <em>friends</em> if some sequences of moves will turn the first grid into the second one. Determine the largest possible size of a collection of oriented $m \times n$ grids so that no two of them are friends.</p><p><em>Example:</em> The oriented $3 \times 2$ grid on the right is the result of rotating the shaded grid cell of the left grid $90^\circ$ counterclockwise.</p><div class="ct-fig"><img style="width:257px" src="/assets/contests/2026-27/abel-4.svg" alt="Figure for Problem 2b"></div></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$2mn+m+n+1$ (the number of unit edges plus one), except $6$ when $m=n=1$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Good edges and three-cycles of labels)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Good edges and three-cycles of labels</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/abel-4_s1.svg" alt="Figure for the solution"></div>
 <p>Let $E=m(n+1)+n(m+1)=2mn+m+n$ be the number of unit edges.</p><p><strong>Good and bad edges.</strong> Colour the cells like a chessboard. Call an edge <em>good</em> if its arrow goes clockwise around the black cell it
 borders and counterclockwise around the white cell it borders (an edge on the boundary borders only one cell, and we use only that cell).
@@ -223,8 +220,7 @@ product of transpositions, and each transposition (exchange of two labels) can b
 <div class="ct-text"><p>Find all infinite sequences $a_1, a_2, \ldots$ of positive integers, such that for every positive integer $n$ there exists a positive integer $k$ satisfying,
 \[k = \frac{a_n}{a_{n+1}} + \ldots + \frac{a_n}{a_{n+k}}.\]</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>exactly the constant sequences</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Looking at the smallest term)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Looking at the smallest term</summary><div class="ct-text">
 <p>Constant sequences work: if $a_n=c$ for all $n$, every fraction equals $1$ and $k=1$ does it.</p><p>Conversely, let the sequence satisfy the condition. Its terms are positive integers, so there is a smallest value $m$; let $N$ be the
 <em>first</em> index with $a_N=m$.</p><p><strong>From $N$ on, the sequence is constant.</strong> Suppose $a_n=m$ for some $n$. Take $k$ as in the condition. Every fraction $\frac{a_n}{a_{n+j}}=\frac{m}{a_{n+j}}$
 is at most $1$, and the $k$ fractions add up to $k$, so each equals $1$; in particular $a_{n+1}=m$. By induction $a_n=m$ for all $n\ge N$.</p><p><strong>$N=1$.</strong> If $N\ge2$, look at $n=N-1$. Then $a_{N-1}&gt;m$ (as $N$ is the first index with value $m$) and all later terms equal $m$, so for every $k$
@@ -239,8 +235,7 @@ which contradicts the condition. Hence $N=1$ and $a_n=m$ for all $n$: the sequen
 \[2(a_ib_j + a_jb_i)^2 = (a_i^2+b_i^2)(a_j^2+b_j^2).\]
 What is the largest value of $M$, given all permitted choices of the 4052 numbers?</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\boxed{1026169}=1013^2$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Angles of vectors: the graph is bipartite)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Angles of vectors: the graph is bipartite</summary><div class="ct-text">
 <p>Let $u_i=(a_i,b_i)$, a nonzero vector with direction angle $\theta_i$, and let $r_i=|u_i|$. The vector $v_j=(b_j,a_j)$
 (the reflection of $u_j$ in the line $y=x$) has length $r_j$ and direction $90^\circ-\theta_j$. Hence
 \[a_ib_j+a_jb_i=u_i\cdot v_j=r_ir_j\cos(\theta_i+\theta_j-90^\circ)=r_ir_j\sin(\theta_i+\theta_j),\]
@@ -257,7 +252,8 @@ The $4052$ numbers are distinct and nonzero: the $c$ are odd, the $2c$ are $\equ
 $-d$ are negative. For such a pair, $a_ib_j+a_jb_i=-cd+6cd=5cd$, and
 \[2(5cd)^2=50c^2d^2=(c^2+4c^2)(9d^2+d^2),\]
 so all $1013^2$ such pairs count. Hence the largest value is $M=1013^2=\boxed{1026169}$.</p>
-<h4>Solution 2 (Slopes, no triangles, and Mantel)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Slopes, no triangles, and Mantel</summary><div class="ct-text">
 <p>Put $t_i=b_i/a_i$, a nonzero rational. Dividing the condition by $a_i^2a_j^2$ gives $2(t_i+t_j)^2=(1+t_i^2)(1+t_j^2)$, which rearranges to
 \[(t_i+t_j)^2=(1-t_it_j)^2 .\]
 So either $t_i+t_j=1-t_it_j$, i.e. $(1+t_i)(1+t_j)=2$ (&ldquo;type $P$&rdquo;), or $t_i+t_j=t_it_j-1$, i.e. $(1-t_i)(1-t_j)=2$ (&ldquo;type $Q$&rdquo;).</p><p>Join $i$ and $j$ when the condition holds. <strong>This graph has no triangle.</strong> If $i,j,k$ were pairwise joined, two of the three edges would have
@@ -274,8 +270,7 @@ mixed pairs is of type $P$ and satisfies the condition. Hence the largest value 
 <h3>Problem 4a</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure &middot; Tangency and Tangent Geometry</div>
 <div class="ct-text"><p>Let $D$ be an interior point of the triangle $ABC$. Let $E$ be the point on the line segment $AC$ such that $\angle ADE = \angle ABC$, and $F$ be the point on the line segment $AB$ such that $\angle ADF = \angle ACB$. Show that the circumcircles of $ABC$ and $DEF$ are mutually tangent.</p></div>
-<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
-<h4>Solution 1 (The circle passes through $A$; homothety)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; The circle passes through $A$; homothety</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:233px" src="/assets/contests/2026-27/abel-7_s1.svg" alt="Figure for the solution"></div>
 <p>Write $\alpha,\beta,\gamma$ for the angles of triangle $ABC$ at $A,B,C$, and $\alpha_1=\angle FAD$, $\alpha_2=\angle DAE$, so $\alpha_1+\alpha_2=\alpha$
 (the ray $AD$ lies inside the angle $BAC$).</p><p><strong>$A,F,D,E$ are concyclic.</strong> In triangle $AFD$, $\angle AFD=180^\circ-\alpha_1-\gamma$; in triangle $ADE$, $\angle AED=180^\circ-\alpha_2-\beta$. Hence
@@ -287,7 +282,8 @@ Since $E$ lies on $AC$ and $F$ on $AB$, this gives $EF\parallel BC$.</p><p><stro
 circle $AFE=\omega$ to the circle $ABC$. Two circles that correspond under a homothety whose centre $A$ lies on both of them are tangent at $A$
 (the tangent line at $A$ is mapped to a parallel line through $A$, i.e. to itself). The circles are different, since $D$ is inside triangle
 $ABC$ and hence not on its circumcircle. So the circumcircles of $ABC$ and $DEF$ are tangent at $A$.</p>
-<h4>Solution 2 (The tangent line at $A$)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; The tangent line at $A$</summary><div class="ct-text">
 <p>Let $t$ be the tangent to the circumcircle of $ABC$ at $A$. By the tangent&ndash;chord angle, $t$ makes the angle $\angle ACB$ with the chord $AB$ (on the side
 of $AB$ away from $C$) and the angle $\angle ABC$ with the chord $AC$ (on the side away from $B$).</p><p>Consider the circle $\omega_1$ through $A,D,F$. The line $t$ makes with the chord $AF$ (which lies along $AB$) the angle $\angle ACB=\angle ADF$, measured on the side of
 $AF$ away from $D$ (since $D$ is on the same side of $AB$ as $C$). By the converse of the tangent&ndash;chord theorem, $t$ is tangent to $\omega_1$ at $A$.
@@ -295,7 +291,8 @@ In the same way, $t$ makes with the chord $AE$ the angle $\angle ABC=\angle ADE$
 perpendicular to $t$ at $A$ and on the perpendicular bisector of $AD$; these lines meet in one point since $D\notin t$: the point $D$ is inside triangle $ABC$, hence inside its circumcircle, while every point of $t$ other than $A$ lies outside it). Hence $\omega_1=\omega_2$, so
 $A,D,E,F$ lie on one circle, which is the circumcircle of $DEF$, and it is tangent to $t$ at $A$. The circumcircle of $ABC$ is also tangent to $t$ at $A$, and it differs from the circle $DEF$ because $D$ is inside it,
 so the two circles are tangent to each other at $A$.</p>
-<h4>Solution 3 (Inversion at $A$)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 3 &ndash; Inversion at $A$</summary><div class="ct-text">
 <p>Write $\beta=\angle ABC$ and $\gamma=\angle ACB$. Invert about $A$ with any radius $r$, and write $X'$ for the image of a point $X\ne A$.
 We use three facts about inversion.</p><ul class="ct-ul"><li><p>$X'$ lies on the ray $AX$ and $AX\cdot AX'=r^2$.</p></li><li><p>If $X,Y,A$ are not collinear, then $\frac{AX}{AY}=\frac{AY'}{AX'}$, and the triangles $AXY$ and $AY'X'$ share the angle at $A$; so they are similar and
 $\angle AY'X'=\angle AXY$.</p></li><li><p>A circle through $A$ is mapped (without the point $A$) onto a line not through $A$, and conversely.</p></li></ul><p>By the second fact,
@@ -320,8 +317,7 @@ are tangent at $A$.</p>
 <div class="ct-text"><p>Let $ABC$ be a triangle with $AB\ne AC$ and with no right angle at $B$ or $C$, and $E$ and $F$ be the points satisfying
 \[\angle BCE = \angle EAC = \angle CBF = \angle FAB = 90^\circ.\]
 Let $D$ be the point of intersection of the lines $BC$ and $EF$. Show that the line $AD$ is tangent to the circumcircle of $ABC$.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Ratio of squares)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Ratio of squares</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:287px" src="/assets/contests/2026-27/abel-8_s1.svg" alt="Figure for the solution"></div>
 <p>By hypothesis $AB\ne AC$ (for $AB=AC$ the line $EF$ would be parallel to $BC$ and $D$ would not exist). By symmetry let $AB&lt;AC$.
 Write $\beta=\angle ABC$, $\gamma=\angle ACB$.</p><p><strong>Lengths $CE$ and $BF$.</strong> Since $\angle EAC=90^\circ$, the point $A$ lies on the circle with diameter $CE$; since $CE\perp BC$, this circle is
@@ -337,7 +333,8 @@ angle at $T$ and $\angle TAB=\gamma=\angle TCA$, so they are similar and
 \[\frac{TB}{TA}=\frac{TA}{TC}=\frac{AB}{AC},\qquad\text{hence}\qquad\frac{TC}{TB}=\frac{AC^2}{AB^2}.\]
 On the line $BC$ there is only one point outside the segment $BC$ whose distances to $C$ and $B$ have a given ratio different from $1$. Hence $T=D$,
 and the line $AD$ is tangent to the circumcircle of $ABC$.</p>
-<h4>Solution 2 (Coordinates)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Coordinates</summary><div class="ct-text">
 <p>Put $BC$ on the $x$-axis: $A=(0,h)$ with $h\ne0$, $B=(b,0)$, $C=(c,0)$; then the hypothesis $AB\ne AC$ means $b+c\ne0$.</p><p>$E$ lies on the line $x=c$ (as $CE\perp BC$): $E=(c,y)$. The condition $AE\perp AC$ reads $(c,\,y-h)\cdot(c,\,-h)=0$, so $y=h+\frac{c^2}{h}$.
 Similarly $F=\bigl(b,\ h+\frac{b^2}{h}\bigr)$. The slope of $EF$ is $\frac{(c^2-b^2)/h}{c-b}=\frac{b+c}{h}$, so the line $EF$ is
 \[y=h+\frac{c^2}{h}+\frac{b+c}{h}(x-c).\]

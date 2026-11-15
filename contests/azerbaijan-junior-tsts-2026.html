@@ -97,7 +97,6 @@ description: Azerbaijan Junior Team Selection Tests 2026 (JBMO TST and Junior TS
 <p>The 12 problems of the Azerbaijan Junior Team Selection Tests 2026 (JBMO TST and Junior TSTST), each with our own solutions, hidden until you open them. 9 of them ask for an answer and 3 ask for a proof. Where a problem has a final answer, it is shown separately. Try a problem first, then check.</p><p>JBMO TST: one paper of 4 problems. Junior TSTST (pre-selection test for the 2026 junior team): one paper of 8 problems.</p>
 </div>
 <div class="ct-credit">Problems: Azerbaijan Junior Team Selection Tests 2026 (JBMO TST and Junior TSTST), from the AoPS contest collection or the official paper. Solutions written by MCC.</div>
-<div class="ct-bar"><button type="button" onclick="ctAll(true)">Show all answers and solutions</button><button type="button" onclick="ctAll(false)">Hide all</button></div>
 <div class="ct-toc-wrap"><div class="ct-toc-row"><span class="ct-toc-g">JBMO TST</span><a href="#p1">1</a><a href="#p2">2</a><a href="#p3">3</a><a href="#p4">4</a></div><div class="ct-toc-row"><span class="ct-toc-g">Junior TSTST</span><a href="#p5">1</a><a href="#p6">2</a><a href="#p7">3</a><a href="#p8">4</a><a href="#p9">5</a><a href="#p10">6</a><a href="#p11">7</a><a href="#p12">8</a></div></div>
 
 {% raw %}
@@ -107,8 +106,7 @@ description: Azerbaijan Junior Team Selection Tests 2026 (JBMO TST and Junior TS
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Combinatorics &middot; LPS VI, Chapter 22: Pigeonhole Principle and Guaranteed Existence &middot; Worst-Case Thresholds</div>
 <div class="ct-text"><p>Find the largest $k$ (in terms of $n$) satisfying the following condition: for any placement of a permutation of $\{1,2,\ldots,n^2\}$ in an $n\times n$ square, there exist $2$ neighbours with difference at least $k$.</p><p><em>Note:</em> neighbours are two cells which share at least one vertex.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$k=n+1$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (A short king path from $1$ to $n^2$)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; A short king path from $1$ to $n^2$</summary><div class="ct-text">
 <p>Let $n\ge2$.</p><p><em>Every arrangement has two neighbours differing by at least $n+1$.</em> Neighbours are king moves. A king can go from any cell to any
 other cell of the $n\times n$ board in at most $n-1$ moves (each move changes the row and the column by at most $1$). Take such a path
 $c_0,c_1,\dots,c_j$ ($j\le n-1$) from the cell of $1$ to the cell of $n^2$. The differences of consecutive numbers along it add up to $n^2-1$,
@@ -122,15 +120,15 @@ so one of them is at least
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Algebra &middot; LPS VII, Chapter 1: Inequalities: Core Classical Methods &middot; Cauchy-Schwarz and Titu&#x27;s Lemma</div>
 <div class="ct-text"><p>Let $a,b,c&gt;0$ with $abc\geq 1$. Show that
 \[\frac{1}{a^4+b^3+c^2}+\frac{1}{b^4+c^3+a^2}+\frac{1}{c^4+a^3+b^2}\leq 1.\]</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Cauchy-Schwarz with weights $1,b,c^2$)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Cauchy-Schwarz with weights $1,b,c^2$</summary><div class="ct-text">
 <p>Let $S=a^2+b^2+c^2$. By Cauchy-Schwarz,
 \[(a^4+b^3+c^2)(1+b+c^2)\ge\bigl(a^2\cdot1+b^{3/2}b^{1/2}+c\cdot c\bigr)^2=S^2,\]
 so $\dfrac1{a^4+b^3+c^2}\le\dfrac{1+b+c^2}{S^2}$, and similarly for the other two fractions. Adding,
 \[\sum\frac1{a^4+b^3+c^2}\le\frac{3+(a+b+c)+S}{S^2}.\]
 By AM-GM and $abc\ge1$, $S\ge3(abc)^{2/3}\ge3$; also $a+b+c\le\sqrt{3S}\le S$ (as $S\ge3$) and $3\le S$. Hence the numerator is at most
 $3S\le S^2$, and the sum is at most $1$. Equality holds for $a=b=c=1$.</p>
-<h4>Solution 2 (Weighted AM-GM and the sum $\sum\frac1{1+a+ab}=1$)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Weighted AM-GM and the sum $\sum\frac1{1+a+ab}=1$</summary><div class="ct-text">
 <p><em>Reduction to $abc=1$.</em> Let $k=(abc)^{-1/3}\le1$ and $a'=ka$, $b'=kb$, $c'=kc$, so $a'b'c'=1$. Then
 $a'^4+b'^3+c'^2\le a^4+b^3+c^2$, and similarly for the other denominators, so the left side for $a,b,c$ is at most the left side for
 $a',b',c'$. Hence it suffices to prove the inequality when $abc=1$, which we assume from now on.</p><p><em>One denominator.</em> We show $a^4+b^3+c^2\ge1+a+ab$. Put $X=a^4$, $Y=b^3$, $Z=c^2$. By the weighted AM-GM inequality,
@@ -150,8 +148,7 @@ the three fractions add up to $\frac{1+a+ab}{1+a+ab}=1$. This proves the inequal
 <h3>Problem 3</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Geometry &middot; LPS VI, Chapter 12: Circle Angles and Cyclic Geometry &middot; Tangent and External Angle Relations</div>
 <div class="ct-text"><p>Let $ABCD$ be a cyclic quadrilateral. The line through $A$ parallel to $BD$ intersects the line through $B$ parallel to $AC$ at $E$. Let $M$ and $N$ be the second intersections of the circumcircle of triangle $EAB$ with the lines $EC$ and $ED$, respectively. Prove that the quadrilateral $MNDC$ is cyclic.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (The tangent at $E$ is parallel to $CD$)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; The tangent at $E$ is parallel to $CD$</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/azerbaijan-junior-tsts-3_s1.svg" alt="Figure for the solution"></div>
 <p>Directed angles between lines are taken modulo $180^\circ$. Let $\omega$ be the circle $EAB$ and $t$ its tangent at $E$.</p><p><em>$t\parallel CD$.</em> By the tangent-chord angle, $\angle(t,EA)=\angle(BE,BA)$. As $EA\parallel BD$ and $EB\parallel AC$, this says
 $\angle(t,BD)=\angle(AC,AB)$. In the circle $ABCD$, $\angle(AC,AB)=\angle(DC,DB)$ (both subtend the chord $BC$). So
@@ -159,7 +156,8 @@ $\angle(t,BD)=\angle(DC,BD)$, i.e. $t\parallel DC$.</p><p><em>Conclusion.</em> $
 line $ED$, $\angle(t,EN)=\angle(DC,DE)$. As $M\in EC$ and $N\in ED$,
 \[\angle(MC,MN)=\angle(ME,MN)=\angle(DC,DE)=\angle(DC,DN),\]
 so $M,N,D,C$ are concyclic.</p>
-<h4>Solution 2 (Power of a point as a linear function)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Power of a point as a linear function</summary><div class="ct-text">
 <p>Let $\omega$ be the circle $EAB$ with centre $O$. For a point $Z$ put $\Phi(Z)=EZ^2-\operatorname{pow}_\omega(Z)$. Since
 $\operatorname{pow}_\omega(Z)=OZ^2-OE^2$, we get $\Phi(Z)=(Z-E)^2-(Z-O)^2+(E-O)^2=2(Z-E)\cdot(O-E)$, a linear function of $Z$.</p><p>For $Z=C$: the line $EC$ meets $\omega$ at $E$ and $M$, so $\operatorname{pow}_\omega(C)=CM\cdot CE$ (signed) and
 $\Phi(C)=CE^2-CM\cdot CE=EM\cdot EC$ (signed). Similarly $\Phi(D)=EN\cdot ED$. So
@@ -176,8 +174,7 @@ $EM\cdot EC=EN\cdot ED$, and by the converse of the power of a point, $M,N,D,C$ 
 <div class="ct-text"><p>Find all positive integers $a,b,c$ and prime numbers $p$ such that both conditions hold at the same time:
 \[a^2+4ab+b=b^2\qquad\text{and}\qquad 2^cp^2+1=b.\]</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$(a,b,c,p)=(68,289,5,3)$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution ($b$ is a perfect square)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; $b$ is a perfect square</summary><div class="ct-text">
 <p><em>Step 1: $b$ is a square.</em> The first equation gives $a^2=b(b-4a-1)$, so $b-4a-1&gt;0$. Let $g=\gcd(b,b-4a-1)$. The two numbers
 $b/g$ and $(b-4a-1)/g$ are coprime with square product $a^2/g^2$, so $b=gs^2$, $b-4a-1=gt^2$ and $a=gst$. Subtracting,
 $g(s^2-t^2)=4gst+1$, so $g\mid1$: $g=1$, $b=s^2$, $a=st$ and
@@ -193,11 +190,11 @@ $1444=38^2$, so $t=4$ and $a=st=68$, $b=289$.</p><p>Check: $68^2+4\cdot68\cdot28
 <div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Algebra &middot; LPS VI, Chapter 37: Polynomials and Algebraic Identities &middot; Special Identities</div>
 <div class="ct-text"><p>If $\sqrt t=3+\dfrac{1}{\sqrt t}$, find the value of $\dfrac{t^6+2t^3+1}{t^3}$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$1300$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Through $t+\frac1t$)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Through $t+\frac1t$</summary><div class="ct-text">
 <p>The condition says $\sqrt t-\frac1{\sqrt t}=3$. Squaring, $t-2+\frac1t=9$, so $t+\frac1t=11$. Then
 \[\frac{t^6+2t^3+1}{t^3}=t^3+\frac1{t^3}+2=\Bigl(t+\frac1t\Bigr)^3-3\Bigl(t+\frac1t\Bigr)+2=1331-33+2=\boxed{1300}.\]</p>
-<h4>Solution 2 (A perfect square)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; A perfect square</summary><div class="ct-text">
 <p>Let $w=\sqrt t-\frac1{\sqrt t}=3$. Note $\frac{t^6+2t^3+1}{t^3}=\Bigl(t^{3/2}+t^{-3/2}\Bigr)^2=\Bigl(t^{3/2}-t^{-3/2}\Bigr)^2+4$.
 Moreover $t^{3/2}-t^{-3/2}=w^3+3w=27+9=36$ (expand $\bigl(\sqrt t-\frac1{\sqrt t}\bigr)^3$). Hence the value is $36^2+4=\boxed{1300}$.</p>
 </div></details>
@@ -209,8 +206,7 @@ Moreover $t^{3/2}-t^{-3/2}=w^3+3w=27+9=36$ (expand $\bigl(\sqrt t-\frac1{\sqrt t
 \[\frac{5a^5-2a^4-7a^3+6a^2-a+4}{a^2-2}\]
 is an integer.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$a\in\{1,2,4\}$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Polynomial division)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Polynomial division</summary><div class="ct-text">
 <p>Dividing,
 \[5a^5-2a^4-7a^3+6a^2-a+4=(a^2-2)(5a^3-2a^2+3a+2)+5a+8 .\]
 So the fraction is an integer if and only if $a^2-2\mid 5a+8$. For $a\ge7$ we have $a^2-2&gt;5a+8&gt;0$ (as $a^2-5a-10&gt;0$), so this is impossible.
@@ -224,8 +220,7 @@ $\boxed{a\in\{1,2,4\}}$.</p>
 <div class="ct-text"><p>Solve the following system of equations in real numbers $x,y$:
 \[\begin{cases} x^2+2y=2xy,\\ x^3+x^2y=y^2.\end{cases}\]</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$(x,y)\in\{(0,0),\ (\tfrac12,-\tfrac14),\ (\tfrac43,\tfrac83)\}$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Solve the first equation for $y$)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Solve the first equation for $y$</summary><div class="ct-text">
 <p>The first equation is $x^2=2y(x-1)$. If $x=1$ it gives $1=0$; so $x\ne1$ and $y=\frac{x^2}{2(x-1)}$. If $x=0$ then $y=0$, and
 $(0,0)$ satisfies both equations. Let $x\ne0$. The second equation $x^3+x^2y=y^2$ becomes, after dividing by $x^3$,
 \[1+\frac{x}{2(x-1)}=\frac{x}{4(x-1)^2}\iff 4(x-1)^2+2x(x-1)=x\iff 6x^2-11x+4=0,\]
@@ -238,12 +233,12 @@ $\boxed{(0,0),\ (\tfrac12,-\tfrac14),\ (\tfrac43,\tfrac83)}$.</p>
 <div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Number Theory &middot; LPS VI, Chapter 19: Modular Arithmetic and Remainder Tracking &middot; Strategic Residues</div>
 <div class="ct-text"><p>Solve in positive integers $(a,b)$ the equation $3^a=b^2+2025$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>no solutions</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Divide out $81$, then work modulo $3$)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Divide out $81$, then work modulo $3$</summary><div class="ct-text">
 <p>Since $b^2+2025&gt;2025&gt;3^6$, we have $a\ge7$. Then $81\mid 3^a$ and $81\mid2025=81\cdot25$, so $81\mid b^2$ and $9\mid b$. Writing
 $b=9c$, the equation becomes $3^{a-4}=c^2+25$ with $a-4\ge3$. Modulo $3$: $c^2\equiv-25\equiv2\pmod3$, but squares are $0$ or $1$ modulo $3$.
 So there are <strong>no solutions</strong> in positive integers.</p>
-<h4>Solution 2 (Modulo $4$, then a difference of squares)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Modulo $4$, then a difference of squares</summary><div class="ct-text">
 <p>Modulo $4$, $b^2+2025\equiv b^2+1\in\{1,2\}$, while $3^a\equiv3$ for odd $a$. So $a$ is even, $a=2m$, and
 \[(3^m-b)(3^m+b)=2025=3^4\cdot5^2 .\]
 Put $d=3^m-b$; it is a positive divisor of $2025$ with $d&lt;3^m+b=\frac{2025}{d}$, so $d&lt;45$, and $2\cdot3^m=d+\frac{2025}d$. For
@@ -255,8 +250,7 @@ which is a power of $3$. So there are <strong>no solutions</strong> in positive 
 <h3>Problem 5</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Number Theory &middot; LPS VI, Chapter 54: Prime Patterns and Number-Theoretic Search &middot; Prime Restrictions by Congruence</div>
 <div class="ct-text"><ul class="ct-parts"><li><p><span class="ct-lbl">(i)</span> Prove that if both $p$ and $p^2+2$ are primes, then $p^3+2$ is also prime.</p></li><li><p><span class="ct-lbl">(ii)</span> Prove that if both $p$ and $8p-1$ are primes, then $8p+1$ is composite.</p></li></ul></div>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Work modulo $3$)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Work modulo $3$</summary><div class="ct-text">
 <p>(i) If $p\ne3$, then $p^2\equiv1\pmod3$ and $p^2+2$ is a multiple of $3$ larger than $3$, not a prime. So $p=3$, and then
 $p^3+2=29$ is prime.</p><p>(ii) Among the three consecutive integers $8p-1$, $8p$, $8p+1$ one is divisible by $3$. If $p=3$, then $8p+1=25$ is composite. If $p\ne3$,
 then $3\nmid8p$, and $3\nmid 8p-1$ because $8p-1$ is a prime larger than $3$ (as $8p-1\ge15$). So $3\mid8p+1&gt;3$, and $8p+1$ is composite.</p>
@@ -268,8 +262,7 @@ then $3\nmid8p$, and $3\nmid 8p-1$ because $8p-1$ is a prime larger than $3$ (as
 <div class="ct-text"><p>Find all real solutions of
 \[x^5-2x^2-9x-6=0.\]</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$x=2$ and $x=-1$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Rational roots and factoring)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Rational roots and factoring</summary><div class="ct-text">
 <p>Trying divisors of $6$: $x=-1$ gives $-1-2+9-6=0$ and $x=2$ gives $32-8-18-6=0$. Dividing by $(x-2)(x+1)=x^2-x-2$ and then once more by
 $x+1$,
 \[x^5-2x^2-9x-6=(x^2-x-2)(x^3+x^2+3x+3)=(x-2)(x+1)^2(x^2+3).\]
@@ -281,14 +274,14 @@ Since $x^2+3&gt;0$, the real solutions are $\boxed{x=2}$ and $\boxed{x=-1}$ (a d
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Geometry &middot; LPS VI, Chapter 16: Special Segments and Triangle Centers &middot; Angle Bisectors and Incenter</div>
 <div class="ct-text"><p>In triangle $ABC$ we have $AB=6$ and $AC=9$. Let $AD$ be the angle bisector of $\angle BAC$ with $D$ lying on $BC$. Let $DE$ be the angle bisector of $\angle ADC$ with $E$ lying on $AC$, such that $AE:EC=2:1$. Find the ratio $\dfrac{AD}{DE}$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\dfrac{AD}{DE}=3$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Bisector theorem and Stewart)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Bisector theorem and Stewart</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:266px" src="/assets/contests/2026-27/azerbaijan-junior-tsts-11_s1.svg" alt="Figure for the solution"></div>
 <p>By the bisector theorem in triangle $ABC$, $BD:DC=AB:AC=2:3$. By the bisector theorem in triangle $ADC$,
 $AE:EC=AD:DC$, so $AD=2DC$. With $AC=9$: $AE=6$, $EC=3$.</p><p>Let $BC=5x$, so $BD=2x$, $DC=3x$ and $AD=6x$. The length of the bisector $AD$ satisfies (Stewart)
 $AD^2=AB\cdot AC-BD\cdot DC$, i.e. $36x^2=54-6x^2$, so $x^2=\frac97$, $DC^2=9x^2=\frac{81}7$, $AD^2=\frac{324}7$.</p><p>For the bisector $DE$ of triangle $ADC$: $DE^2=DA\cdot DC-AE\cdot EC=\frac{18}{\sqrt7}\cdot\frac9{\sqrt7}-18=\frac{162}7-18=\frac{36}7$.
 Hence $AD:DE=\frac{18}{\sqrt7}:\frac6{\sqrt7}=\boxed{3}$.</p>
-<h4>Solution 2 (The angle $ADC$ is $120^\circ$)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; The angle $ADC$ is $120^\circ$</summary><div class="ct-text">
 <p>By the bisector theorem, $BD:DC=AB:AC=2:3$ and $AE:EC=AD:DC$; with $AE:EC=2:1$ this gives $AD=2DC$, $AE=6$,
 $EC=3$. Let $DC=d$, so $AD=2d$. The law of cosines in triangle $ADC$:
 $81=4d^2+d^2-4d^2\cos\angle ADC$. Using $BD=\frac23d$ and $AB=6$ in triangle $ABD$ with $\cos\angle ADB=-\cos\angle ADC$:
@@ -303,14 +296,14 @@ $DE=\frac{2d\cdot d}{3d}=\frac23d$ and $\frac{AD}{DE}=\frac{2d}{\frac23d}=\boxed
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Geometry &middot; LPS VI, Chapter 8: Triangle Congruence and Rigid Geometry &middot; Isosceles and Equilateral Structure</div>
 <div class="ct-text"><p>In quadrilateral $ABCD$ we have $AD=12$, $\angle BAC=30^\circ$, $\angle CAD=50^\circ$, $\angle CDB=60^\circ$ and $\angle BDA=20^\circ$. Find the area of triangle $BCD$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$36\sqrt3$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Two isosceles triangles)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Two isosceles triangles</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:333px" src="/assets/contests/2026-27/azerbaijan-junior-tsts-12_s1.svg" alt="Figure for the solution"></div>
 <p>The quadrilateral is convex, so $C$ lies inside $\angle BAD$ and $B$ inside $\angle ADC$. In triangle $ABD$: $\angle BAD=30^\circ+50^\circ=80^\circ$ and $\angle BDA=20^\circ$, so $\angle ABD=80^\circ=\angle BAD$ and
 $DB=DA=12$. In triangle $ACD$: $\angle CAD=50^\circ$ and $\angle ADC=20^\circ+60^\circ=80^\circ$, so $\angle ACD=50^\circ=\angle CAD$ and
 $DC=DA=12$. So triangle $BCD$ has $DB=DC=12$ and $\angle BDC=60^\circ$: it is equilateral with side $12$, and its area is
 $\frac{\sqrt3}4\cdot144=\boxed{36\sqrt3}$.</p>
-<h4>Solution 2 (The circle centred at $D$)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; The circle centred at $D$</summary><div class="ct-text">
 <p>The quadrilateral is convex, so $C$ lies inside $\angle BAD$ and $B$ inside $\angle ADC$. Let $\Gamma$ be the circle with centre $D$
 and radius $DA=12$. In triangle $ABD$, $\angle BAD=80^\circ$ and $\angle ADB=20^\circ$ give $\angle ABD=80^\circ$, so $DB=DA$ and $B\in\Gamma$.</p><p>Let $C'$ be the point of $\Gamma$ on the ray $DC$. The central angle $\angle BDC'=60^\circ$ and $\angle ADC'=20^\circ+60^\circ=80^\circ&lt;180^\circ$, so
 $A$ is not on the minor arc $BC'$ and the inscribed angle is $\angle BAC'=\frac12\angle BDC'=30^\circ$. Also $C'$ is not on the minor arc $AB$

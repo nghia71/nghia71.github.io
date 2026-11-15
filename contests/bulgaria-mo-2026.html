@@ -97,7 +97,6 @@ description: Bulgarian Mathematical Olympiad 2026: problems with answers and sol
 <p>The 6 problems of the Bulgarian Mathematical Olympiad 2026, each with our own solutions, hidden until you open them. 4 of them ask for an answer and 2 ask for a proof. Where a problem has a final answer, it is shown separately. Try a problem first, then check.</p><p>The olympiad has two days with three problems each.</p>
 </div>
 <div class="ct-credit">Problems: Bulgarian Mathematical Olympiad 2026, from the AoPS contest collection or the official paper. Solutions written by MCC.</div>
-<div class="ct-bar"><button type="button" onclick="ctAll(true)">Show all answers and solutions</button><button type="button" onclick="ctAll(false)">Hide all</button></div>
 <div class="ct-toc-wrap"><div class="ct-toc-row"><span class="ct-toc-g">Day 1</span><a href="#p1">1</a><a href="#p2">2</a><a href="#p3">3</a></div><div class="ct-toc-row"><span class="ct-toc-g">Day 2</span><a href="#p4">4</a><a href="#p5">5</a><a href="#p6">6</a></div></div>
 
 {% raw %}
@@ -107,8 +106,7 @@ description: Bulgarian Mathematical Olympiad 2026: problems with answers and sol
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 49: Combinatorial Number Theory and Structure &middot; Additive Structure and Sums of Integers</div>
 <div class="ct-text"><p>Let $N$ be a positive integer. We have coins of denominations the distinct positive integers $a_1,a_2,\dots,a_N$, so that there are exactly $i$ coins of denomination $a_i$ for every $i=1,2,\dots,N$. Determine, in terms of $N$, the largest integer $S$, for which there exist distinct integers $a_1,a_2,\dots,a_N$, so that every sum from $1$ to $S$ can be obtained as a sum of one or more of the coins.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$S=(N+1)!-1$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Counting selections and the factorial number system)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Counting selections and the factorial number system</summary><div class="ct-text">
 <p><strong>Upper bound.</strong> A sum of coins is determined by how many coins of each denomination it uses: $c_i$ coins of
 value $a_i$, where $0\le c_i\le i$. There are $2\cdot 3\cdots (N+1)=(N+1)!$ choices of $(c_1,\dots,c_N)$, and one of them uses no
 coin at all. Hence at most $(N+1)!-1$ different positive sums can be formed, and if every integer from $1$ to $S$ is a sum, then
@@ -122,7 +120,8 @@ $c_N\le s/N!&lt;(N+1)!/N!=N+1$, so $0\le c_N\le N$, and $r$ is written with $1!,
 \[
 \boxed{S=(N+1)!-1}.
 \]</p>
-<h4>Solution 2 (Growing an interval of sums, coin type by coin type)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Growing an interval of sums, coin type by coin type</summary><div class="ct-text">
 <p><strong>A growth lemma.</strong> Suppose a collection of coins gives every sum $0,1,\dots,T$ (the sum $0$ means using no coin).
 If we add $k$ coins of value $T+1$, we obtain every sum $0,1,\dots,(k+1)(T+1)-1$. Indeed, such a number can be written as
 $q(T+1)+r$ with $0\le q\le k$ and $0\le r\le T$; take $q$ of the new coins and old coins with sum $r$.</p><p><strong>Construction.</strong> Now give the denominations in the order $i=N,N-1,\dots,1$, each time choosing the value one more than the largest
@@ -146,8 +145,7 @@ $(c_1,\dots,c_N)$, one of them zero, so at most $(N+1)!-1$ positive sums occur a
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Algebra &middot; LPS VII, Chapter 1: Inequalities: Core Classical Methods &middot; Elementary Bounding and Local Estimates</div>
 <div class="ct-text"><p>Let $n\ge 2$ be an integer. The real numbers $a$ and $b$ are such that $a(b-1)^n+b(a-1)^n=0$. Determine the maximum possible value of $ab$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$1$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Signs, then a monotone function)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Signs, then a monotone function</summary><div class="ct-text">
 <p>For $a=b=1$ the equation holds and $ab=1$. We show that always $ab\le 1$; then the maximum is $1$.</p><p>If $ab\le 0$ there is nothing to prove, so let $ab&gt;0$.</p><p><em>$a,b$ cannot both be negative.</em> Then $a-1&lt;0$ and $b-1&lt;0$. For even $n$ both terms $a(b-1)^n$ and $b(a-1)^n$ are negative; for odd
 $n$ both are positive. Their sum is not $0$.</p><p>So $a,b&gt;0$. <em>If $n$ is even</em>, both terms are $\ge 0$ and their sum is $0$, so $(a-1)^n=(b-1)^n=0$, $a=b=1$ and $ab=1$.</p><p><em>Let $n\ge 3$ be odd.</em> If $a=1$ the equation becomes $(b-1)^n=0$, so $b=1$; similarly $b=1$ forces $a=1$. Otherwise the two
 terms are nonzero with opposite signs, so $a-1$ and $b-1$ have opposite signs; by symmetry $a&gt;1&gt;b&gt;0$. The equation reads
@@ -161,7 +159,8 @@ strictly decreasing. Now $1/a\in(0,1)$ and
 \varphi\!\left(\tfrac1a\right)=\Bigl(1-\tfrac1a\Bigr)^{n}a=\frac{(a-1)^n}{a^{\,n-1}}&lt;\frac{(a-1)^n}{a}=\varphi(b),
 \]
 because $a&gt;1$ and $n-1\ge 2&gt;1$. Since $\varphi$ is decreasing, $b&lt;1/a$, i.e. $ab&lt;1$.</p><p>Hence $ab\le 1$ in all cases, with equality only for $a=b=1$. The maximum of $ab$ is $\boxed{1}$.</p>
-<h4>Solution 2 (A variant: comparing $n$-th roots)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; A variant: comparing $n$-th roots</summary><div class="ct-text">
 <p>The pair $a=b=1$ gives $ab=1$. Suppose some solution has $ab&gt;1$; we derive a contradiction.</p><p>Then $a$ and $b$ have the same sign. If both were negative, then $a-1$, $b-1$ are negative and the two terms $a(b-1)^n$, $b(a-1)^n$
 have the same sign (both negative for even $n$, both positive for odd $n$), so their sum is not zero. Hence $a,b&gt;0$. Neither equals
 $1$: $a=1$ would give $(b-1)^n=0$, $b=1$, $ab=1$. So both terms are nonzero, and they must have opposite signs; this is impossible for
@@ -181,8 +180,7 @@ Hence $a^{-1}&gt;a^{-2/n}$. But $a&gt;1$ and $-1&lt;-2/n$ (as $n\ge 3$), so $a^{
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 34: Complex Numbers as an Olympiad Tool &middot; Roots of Unity</div>
 <div class="ct-text"><p>Let $a&gt;1$ be an integer and $p&gt;2$ be a prime. Determine the remainder of $(a-1)(a^2-1)\cdots(a^{p-1}-1)$ when divided by $1+a+\dots+a^{p-1}$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$p$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (A polynomial identity via roots of unity)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; A polynomial identity via roots of unity</summary><div class="ct-text">
 <p>Let $\Phi(x)=1+x+\dots+x^{p-1}$ and $M=\Phi(a)$. Since $a\ge 2$, $M\ge 1+2+\dots+2^{p-1}=2^p-1&gt;p$.</p><p>Let $\omega=e^{2\pi i/p}$. The roots of $\Phi$ are $\omega,\omega^2,\dots,\omega^{p-1}$, so $\Phi(x)=\prod_{m=1}^{p-1}(x-\omega^m)$,
 and at $x=1$: $\prod_{m=1}^{p-1}(1-\omega^m)=\Phi(1)=p$. Consider
 \[
@@ -199,7 +197,8 @@ $G\in\mathbb Z[x]$. Putting $x=a$,
 (a-1)(a^2-1)\cdots(a^{p-1}-1)=p+M\cdot G(a),\qquad G(a)\in\mathbb Z .
 \]
 As $0\le p&lt;M$, the remainder is $\boxed{p}$.</p>
-<h4>Solution 2 (Newton identities in $\mathbb Z[x]/(\Phi)$)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Newton identities in $\mathbb Z[x]/(\Phi)$</summary><div class="ct-text">
 <p>Let $\Phi(x)=1+x+\dots+x^{p-1}$ and $M=\Phi(a)&gt;p$ (as $M\ge 2^p-1$). We prove, without complex numbers, that $\Phi(x)$
 divides $\prod_{k=1}^{p-1}(x^k-1)-p$ in $\mathbb Z[x]$; then $x=a$ gives the remainder $p$.</p><p>Work in the ring $R=\mathbb Z[x]/(\Phi(x))$. Because $\Phi$ is monic of degree $p-1$, every element of $R$ is uniquely an integer
 combination of $1,x,\dots,x^{p-2}$; in particular, if $j\,r=0$ in $R$ for a positive integer $j$, then $r=0$. In $R$ we have $x^p=1$,
@@ -228,8 +227,7 @@ $0\le p&lt;M$, so the remainder is $\boxed{p}$.</p>
 <h3>Problem 4</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 48: Inversion and Circle-Preserving Transformation &middot; Tangency and Inversion Cleanup</div>
 <div class="ct-text"><p>Let $ABC$ be a triangle with circumcircle $\Gamma$. A circle $\Omega$ through $B$ and $C$ intersects the sides $AB$ and $AC$ at $D$ and $E$, respectively. Let $F$ be a point on the smaller arc $\widehat{DE}$ of $\Omega$. Denote by $\omega$ the circle, passing through $A$ and $F$, and tangent to $\Omega$. Prove that $\omega$ is tangent to $\Gamma$ if and only if the line $AF$ bisects $\angle DFE$.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Inversion centred at $A$)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Inversion centred at $A$</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:249px" src="/assets/contests/2026-27/bulgaria-mo-4_s1.svg" alt="Figure for the solution"></div>
 <p><em>Conventions.</em> The quadrilateral $BCED$ is convex (it is the triangle $ABC$ with the corner $ADE$ cut off), so $B$ and $C$
 lie on the same arc $DE$ of $\Omega$. The &ldquo;smaller arc&rdquo; $DE$ is the arc of $\Omega$ between $D$ and $E$ that does not contain $B$ and $C$;
@@ -255,7 +253,8 @@ at $F$, this line touches $\iota(\Omega)=\Omega$ at $F'$: it is the tangent to $
 tangent iff $A$ is their only common point, iff their images under $\iota$ (two lines) have no common point, iff these lines are
 parallel. So $\omega$ is tangent to $\Gamma$ iff the tangent to $\Omega$ at $F'$ is parallel to $DE$, and by (1) this happens iff $AF$
 bisects $\angle DFE$. $\blacksquare$</p>
-<h4>Solution 2 (A homothety at $F$ and the antiparallel $DE$)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; A homothety at $F$ and the antiparallel $DE$</summary><div class="ct-text">
 <p><em>Setup.</em> The quadrilateral $BCED$ is convex (it is the triangle $ABC$ with the corner $ADE$ cut off), so $B$ and $C$ lie on the same
 arc $DE$ of $\Omega$. The smaller arc $DE$ is the one not containing $B,C$: its measure is $2\angle DBE=2\angle DCE$,
 with $\angle DBE&lt;\angle ABC$, $\angle DCE&lt;\angle ACB$, and one of these two angles of the triangle is acute. Let $F'$ be the second
@@ -281,8 +280,7 @@ $F'$ is parallel to $DE$ $\iff$ (by (1)) $AF$ bisects $\angle DFE$. $\blacksquar
 <h3>Problem 5</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Number Theory &middot; LPS VII, Chapter 49: Combinatorial Number Theory and Structure &middot; Sequences with Arithmetic Constraints</div>
 <div class="ct-text"><p>Let $(a_n)_{n\ge 1}$ be a strictly increasing sequence of positive integers. Suppose there exists an integer $m$ such that $a_{i+1}-a_i&lt;m$ for all $i\ge 1$. Prove that there exist pairwise distinct indices $p,q,r,s$ such that $a_pa_q=a_ra_s$.</p></div>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Dilations of the sequence and double counting)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Dilations of the sequence and double counting</summary><div class="ct-text">
 <p>Let $S$ be the set of terms. As the sequence is strictly increasing, distinct terms have distinct indices, so it suffices to
 find four <em>distinct</em> elements $y_1,x_1,y_2,x_2$ of $S$ with $x_1y_2=x_2y_1$.</p><p><em>Density.</em> For every $X&gt;0$, $|S\cap[1,X]|\ge (X-a_1)/m$. This is clear if $X&lt;a_1$. Otherwise let $a_j\le X&lt;a_{j+1}$; then
 $X-a_1&lt;a_{j+1}-a_1=\sum_{i=1}^{j}(a_{i+1}-a_i)&lt;jm$, so $j&gt;(X-a_1)/m$.</p><p><em>Double counting.</em> Since the harmonic series diverges, fix $K$ with $H_K=1+\frac12+\dots+\frac1K\ge 2m$ (the gaps are at least $1$, so $m\ge2$ and $K\ge2$). Let $N$ be a large
@@ -312,8 +310,7 @@ pairwise distinct indices $p,q,r,s$ with $a_pa_q=a_ra_s$. $\blacksquare$</p>
 <div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 39: Graph Theory and Structural Combinatorics &middot; Graph Coloring and Labeling</div>
 <div class="ct-text"><p>In the country of Baron Munchausen there are $2^n$ cities, numbered with the integers from $0$ to $2^n-1$. Two cities, numbered as $a$ and $b$, are <em>friendly</em> if in their binary representations the numbers $a$ and $b$ differ in exactly one digit. (For example, for $n=3$, the cities numbered $0$ and $4$ are friendly, as well as those numbered $5$ and $7$).</p><p>Between every two friendly cities there are two one-way roads &ndash; one in each direction. Each road has a category, which is an integer from $1$ to $n$. While traveling through the country, Baron Munchausen observed the following:</p><ul class="ct-parts"><li><p><span class="ct-lbl">(1)</span> For every city, the categories of the outgoing roads from it are all distinct.</p></li><li><p><span class="ct-lbl">(2)</span> For every city, all incoming roads to it have the same category.</p></li></ul><p>Find all $n$ for which this is possible.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>exactly the powers of two, $n=2^k$ ($k\ge 0$)</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Counting colour classes; a linear colouring)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Counting colour classes; a linear colouring</summary><div class="ct-text">
 <p>The answer is: <strong>exactly when $n$ is a power of $2$</strong>.</p><p><em>Reformulation.</em> Suppose the categories are as described. By (2), every city $v$ has a colour $c(v)\in\{1,\dots,n\}$, the common
 category of the roads entering $v$; so the road from $u$ to $v$ has category $c(v)$. By (1), the $n$ friendly neighbours of every
 city $u$ have pairwise different colours, i.e. each of the $n$ colours appears exactly once among the neighbours of $u$. Conversely,
@@ -328,7 +325,8 @@ c(x)=\sum_{j:\ \text{digit } j \text{ of } x \text{ is } 1} v_j\ \in\mathbb F_2^
 (sum modulo $2$, coordinatewise), and identify $\mathbb F_2^{\,k}$ with $\{1,\dots,n\}$. The neighbour of $x$ obtained by changing
 digit $j$ has colour $c(x)+v_j$. As $j$ runs over all digits, $v_j$ runs over all of $\mathbb F_2^{\,k}$, so these $n$ colours are all
 different. Hence the condition holds and the arrangement is possible. (For $n=1$ both cities get colour $1$.)</p><p>So the possible $n$ are exactly $\boxed{n=2^k,\ k\ge 0}$.</p>
-<h4>Solution 2 (Counting colour classes; a doubling construction)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Counting colour classes; a doubling construction</summary><div class="ct-text">
 <p><em>Reformulation and necessity.</em> The category of every road entering a city $v$ is the same, call it the colour $c(v)$; a
 road $u\to v$ has category $c(v)$, so condition (1) says that the $n$ neighbours of each city carry all $n$ colours, each once. For a
 fixed colour $i$, counting adjacent pairs $(u,v)$ with $c(v)=i$ in two ways gives $2^n=n\cdot\#\{v: c(v)=i\}$; so $n\mid 2^n$ and $n$

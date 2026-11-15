@@ -97,7 +97,6 @@ description: Czech and Slovak Mathematical Olympiad 2026, Final Round, Category 
 <p>The 6 problems of the Czech and Slovak Mathematical Olympiad 2026, Final Round, Category A, each with our own solutions, hidden until you open them. 3 of them ask for an answer and 3 ask for a proof. Where a problem has a final answer, it is shown separately. Try a problem first, then check.</p><p>The national final (round III, category A) has two days with three problems each.</p>
 </div>
 <div class="ct-credit">Problems: Czech and Slovak Mathematical Olympiad 2026, Final Round, Category A, from the AoPS contest collection or the official paper. Solutions written by MCC.</div>
-<div class="ct-bar"><button type="button" onclick="ctAll(true)">Show all answers and solutions</button><button type="button" onclick="ctAll(false)">Hide all</button></div>
 <div class="ct-toc-wrap"><div class="ct-toc-row"><span class="ct-toc-g">Day 1</span><a href="#p1">1</a><a href="#p2">2</a><a href="#p3">3</a></div><div class="ct-toc-row"><span class="ct-toc-g">Day 2</span><a href="#p4">4</a><a href="#p5">5</a><a href="#p6">6</a></div></div>
 
 {% raw %}
@@ -107,8 +106,7 @@ description: Czech and Slovak Mathematical Olympiad 2026, Final Round, Category 
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Algebra &middot; LPS VII, Chapter 13: Systems, Symmetry, and Multi-Variable Algebra &middot; Constraint Geometry in Algebraic Systems</div>
 <div class="ct-text"><p>Let $x,y,z$ be positive real numbers such that $x^2+y^2+z^2=75$. Suppose that at least two of the three sums $x+y$, $y+z$ and $z+x$ are greater than or equal to $10$. Determine the minimum and maximum possible values of the remaining sum.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>minimum $\tfrac{10}{3}$, maximum $10$</p></div></details>
-<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Two direct estimates)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Two direct estimates</summary><div class="ct-text">
 <p>By symmetry let $x+y\ge 10$ and $y+z\ge 10$; we find the range of $x+z$.</p><p><strong>Maximum.</strong> Since $xy+yz+zx\le x^2+y^2+z^2$ (equivalent to $\tfrac12\sum(x-y)^2\ge 0$),
 \[
 (x+y)^2+(y+z)^2+(z+x)^2=2(x^2+y^2+z^2)+2(xy+yz+zx)\le 4(x^2+y^2+z^2)=300 .
@@ -122,7 +120,8 @@ so $y\le \tfrac{25}{3}$ and
 x+z\ge 2(10-y)\ge 2\Bigl(10-\tfrac{25}3\Bigr)=\tfrac{10}{3}.
 \]
 Equality holds for $x=z=\tfrac53$, $y=\tfrac{25}{3}$: indeed $\tfrac{25+625+25}{9}=75$ and $x+y=y+z=10$.</p><p>So the remaining sum has minimum $\boxed{\tfrac{10}{3}}$ and maximum $\boxed{10}$.</p>
-<h4>Solution 2 (A quadratic equation for the third sum)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; A quadratic equation for the third sum</summary><div class="ct-text">
 <p>Let $p=x+y\ge 10$, $q=y+z\ge 10$ and $s=z+x$. Then $x=\frac{p-q+s}2$, $y=\frac{p+q-s}2$, $z=\frac{q+s-p}2$, and
 expanding gives the identity
 \[
@@ -137,7 +136,8 @@ $p+q=x+2y+z\le\sqrt{1+4+1}\,\sqrt{x^2+y^2+z^2}=\sqrt{450}&lt;30$. On $(-\infty,t
 $t&lt;\frac{10}3$ we get $f(t)&gt;f(\frac{10}3)\ge 0$; similarly $f(t)&gt;f(10)\ge 0$ for $t&gt;10$. Hence every root of $f$, in particular $s$,
 lies in $[\frac{10}3,10]$.</p><p>Both ends occur: $(x,y,z)=(\frac53,\frac{25}3,\frac53)$ gives $s=\frac{10}3$ and $(5,5,5)$ gives $s=10$. The minimum is
 $\boxed{\tfrac{10}{3}}$ and the maximum is $\boxed{10}$.</p>
-<h4>Solution 3 (One quadratic inequality in the remaining sum)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 3 &ndash; One quadratic inequality in the remaining sum</summary><div class="ct-text">
 <p>By symmetry let $z+x\ge 10$ and $z+y\ge 10$, and let $s=x+y$ be the remaining sum.</p><p>Since $z&gt;0$, we have $x^2+y^2&lt;75$, and since $2(x^2+y^2)-(x+y)^2=(x-y)^2\ge 0$,
 \[
 s^2\le 2(x^2+y^2)&lt;150 ,
@@ -153,8 +153,7 @@ Multiplying by $4$, this is $3s^2-40s+100\le 0$, that is, $(3s-10)(s-10)\le 0$. 
 <h3>Problem 2</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 11: Similarity, Homothety, and Ratio Geometry &middot; Homothety Centers and Image Tracking</div>
 <div class="ct-text"><p>Let $T$ be the centroid of an acute triangle $ABC$. Let $P$ be a point on the minor arc $BC$ of the circumcircle of triangle $ABC$. Let $P'$ be the foot of the perpendicular from $P$ to line segment $BC$. Let $X$ be the intersection of line $P'T$ with the line through $A$ parallel to $BC$. Finally, let $S$ be the midpoint of segment $PX$. Prove that $\angle BAP=\angle SAC$.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Homothety at the centroid and a mirror point)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Homothety at the centroid and a mirror point</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:287px" src="/assets/contests/2026-27/czech-slovak-mo-2_s1.svg" alt="Figure for the solution"></div>
 <p>Let $M$ be the midpoint of $BC$, $\ell$ the perpendicular bisector of $BC$, and $Q$ the reflection of $P$ in $\ell$.</p><p><em>$Q$ and the angle.</em> $\ell$ passes through the circumcentre, so the reflection in $\ell$ maps the circumcircle to itself, swaps $B$
 and $C$, and maps the arc $BP$ onto the arc $CQ$. Hence $Q$ lies on the minor arc $BC$ and the inscribed angles on these equal arcs
@@ -169,7 +168,8 @@ forces $h(X)=P'$. Therefore $\overrightarrow{P'M}=\overrightarrow{h(X)h(A)}=-\fr
 $\overrightarrow{PQ}=2\,\overrightarrow{P'M}$.</p><p>Hence $\overrightarrow{AX}=\overrightarrow{PQ}$, so $A+Q=P+X$ (as position vectors): the segments $PX$ and $AQ$ have the same midpoint.
 Thus $S$ is the midpoint of $AQ$, and $\angle SAC=\angle QAC=\angle BAP$. (If $P$ is the midpoint of the arc, then $Q=P$ and the same
 argument applies.) $\blacksquare$</p>
-<h4>Solution 2 (Complex numbers on the circumcircle)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Complex numbers on the circumcircle</summary><div class="ct-text">
 <p>Let the circumcircle be the unit circle and let $a,b,c,p$ be the points $A,B,C,P$ ($|a|=|b|=|c|=|p|=1$). The foot of the
 perpendicular from $P$ to $BC$ is
 \[
@@ -199,8 +199,7 @@ $(-\pi,\pi)$. A real number with argument in $(-\pi,\pi)$ has argument $0$, so $
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 39: Graph Theory and Structural Combinatorics &middot; Paths, Cycles, and Connectivity</div>
 <div class="ct-text"><p>We say that a group of people is <em>triple</em> if each member of the group is acquainted with exactly $3$ other members, and the group cannot be partitioned into two nonempty subsets such that every person has all their acquaintances within their own subset. The acquaintance relation is mutual. Determine the greatest integer $k\ge 3$ for which there exists a positive integer $n$ such that, from every triple group with at least $n$ people, one can select at least $k$ people and seat them around a round table so that every two adjacent people are acquainted.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$k=5$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (A longest path, and bridges)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; A longest path, and bridges</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:267px" src="/assets/contests/2026-27/czech-slovak-mo-3_s1.svg" alt="Figure for the solution"></div>
 <p>In graph language, a triple group is a finite connected graph in which every vertex has degree $3$ (a connected cubic graph),
 and seating at least $k$ people around the table means finding a cycle of length at least $k$. We show that the answer is
@@ -223,7 +222,8 @@ chain of cells joined by single bridge edges. The two end cells are copies of th
 middle cell is $K_4$ minus one edge: its two vertices of degree $2$ take the bridges to the previous and the next cell. With $m\ge0$
 middle cells the graph is cubic and connected with $4m+10$ vertices, every cycle stays inside one cell, and so it has at most $5$
 vertices.</p>
-<h4>Solution 2 (A leaf block of the bridge structure)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; A leaf block of the bridge structure</summary><div class="ct-text">
 <p>In graph language, a triple group is a finite connected simple graph in which every vertex has degree $3$ (a connected cubic graph), and seating at least $k$ people around the table means finding a cycle of length at least $k$. We show that the answer is $k=5$.</p><p><strong>$k=5$ works (with $n=5$).</strong> We prove: <em>every connected cubic graph $G$ other than $K_4$ has a cycle of length at least $5$.</em> A triple group with at least $5$ people is not $K_4$, so this gives the required seating.</p><p><em>Choosing a piece.</em> A <em>bridge</em> is an edge whose removal disconnects $G$; a bridge lies on no cycle. If an edge $uv$ is not a bridge, there is a $u$&ndash;$v$ path avoiding $uv$, and with $uv$ it forms a cycle. Delete all bridges and call the connected components of the rest <em>pieces</em>. A cycle contains no bridge, so it lies inside one piece. If $G$ has no bridge, let $H=G$. Otherwise consider the graph whose vertices are the pieces, two pieces being joined when a bridge connects them. It is connected, and it has no cycle: if it had one, a bridge on that cycle could be removed and its two pieces would still be connected around the rest of the cycle, so it would not be a bridge. So it is a tree with at least two vertices, and we let $H$ be a leaf of it: a piece with exactly one bridge leaving it. In both cases</p><ul class="ct-ul"><li><p>every vertex of $H$ has degree $3$ in $H$, except at most one vertex, which has degree $2$.</p></li></ul><p>In particular $H$ has minimum degree at least $2$, so it has at least $3$ vertices and contains a cycle.</p><p><em>$H$ has no cut vertex.</em> No edge $e$ of $H$ disconnects $H$: $e$ is not a bridge of $G$, so it lies on a cycle of $G$, and this cycle lies in $H$. Now suppose that removing a vertex $v$ disconnects $H$. If $v$ had only one edge into some component $K$ of $H-v$, that edge would disconnect $K$ from the rest of $H$. So $v$ has at least two edges into each of at least two components, and degree at least $4$, which is impossible.</p><p><em>Detours.</em> Let $S$ be a set of at least two vertices of $H$, and let $u$ be a vertex of $H$ outside $S$. Then there are two distinct vertices $p,q\in S$ and a $p$&ndash;$q$ path of length at least $2$ whose inner vertices all lie outside $S$. Indeed, let $K$ be the component of $H-S$ containing $u$. Since $H$ is connected, some edges join $K$ to $S$. If all of them ended at a single vertex $p$, then removing $p$ would separate $K$ from the nonempty set $S\setminus\{p\}$, and $p$ would be a cut vertex. So there are edges $pk$ and $qk'$ with $p\ne q$ in $S$ and $k,k'\in K$; joining $k$ to $k'$ inside $K$ gives the path.</p><p><em>The cases.</em> Suppose that $H$ has no cycle of length at least $5$.</p><ul class="ct-parts"><li><p><span class="ct-lbl">1.</span> <em>$H$ has a $4$-cycle.</em> Take any cycle of $H$. If it has length $4$ we are done. Otherwise it is a triangle $xyz$. If $H$ had no other vertex, all three vertices would have degree $2$ in $H$, which is not allowed. So by the detour fact with $S=\{x,y,z\}$ there is a path of length at least $2$ between two of them, say $x$ and $y$, avoiding the triangle otherwise. With $y\,z\,x$ it forms a cycle of length at least $4$, hence exactly $4$.</p></li><li><p><span class="ct-lbl">2.</span> <em>$H$ has a vertex outside the $4$-cycle $C=v_1v_2v_3v_4$.</em> Otherwise at least three of $v_1,\dots,v_4$ have degree $3$ in $H$, so they are adjacent to all the other three vertices. Every pair of the four vertices contains one of them, so $H=K_4$. Then no vertex of $H$ has room for a bridge, so $H$ is all of $G$ (as $G$ is connected) and $G=K_4$, which we excluded.</p></li><li><p><span class="ct-lbl">3.</span> <em>A five-vertex subgraph.</em> By the detour fact with $S=\{v_1,v_2,v_3,v_4\}$ there is a path $Q$ of length $\ell\ge 2$ between two vertices of $C$, avoiding $C$ otherwise. If its ends are adjacent on $C$, say $v_1,v_2$, then $Q$ and $v_2v_3v_4v_1$ form a cycle of length $\ell+3\ge 5$. So its ends are opposite, say $v_1,v_3$, and $Q$ with $v_3v_4v_1$ forms a cycle of length $\ell+2$; hence $\ell=2$ and $Q=v_1wv_3$. Let $L$ be the subgraph on $v_1,v_2,v_3,v_4,w$ with the six edges $v_1v_2$, $v_2v_3$, $v_3v_4$, $v_4v_1$, $v_1w$, $wv_3$. The vertices $v_1$ and $v_3$ already have three edges in $L$, so they have no others. Any two of $v_2,v_4,w$ are joined in $L$ by a path of length $4$ through all five vertices:
 \[
 v_2v_1wv_3v_4,\qquad v_2v_1v_4v_3w,\qquad v_4v_1v_2v_3w .
@@ -239,8 +239,7 @@ So an edge between two of $v_2,v_4,w$ would close a $5$-cycle; there is none.</p
 <h3>Problem 4</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 4: Divisibility and Prime Structure &middot; Prime Factorization and Structure</div>
 <div class="ct-text"><p>Let $a$ and $b$ be distinct positive integers such that the numbers $a^2+1$ and $ab+1$ have the same sets of prime divisors. Prove that $a^2+b^2+2$ is divisible by the square of some prime.</p></div>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Primes of $a^2+1$ divide $a-b$; then a size argument)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Primes of $a^2+1$ divide $a-b$; then a size argument</summary><div class="ct-text">
 <p>Let $N=a^2+b^2+2=(a^2+1)+(b^2+1)$.</p><p><em>Step 1.</em> Let $p$ be a prime divisor of $a^2+1$ ($p=2$ is allowed). By hypothesis $p\mid ab+1$, and $p\nmid a$ (since
 $p\mid a^2+1$). From
 $a(a-b)=(a^2+1)-(ab+1)\equiv 0\pmod p$ we get $p\mid a-b$. Then $b\equiv a$, so $p\mid b^2+1$ as well.</p><p><em>Step 2: a size argument.</em> Let $R$ be the product of the distinct primes dividing $a^2+1$; $R&gt;1$ because $a^2+1\ge 2$. By Step 1 each of these primes divides
@@ -268,8 +267,7 @@ a_i-a_{i+1}+\cdots-a_{i+2023}+a_{i+2024}-a_{i+2025}
 \end{array}\]
 where indices are taken modulo $2026$, that is, $a_{j+2026}=a_j$ for all integers $j$. Let $n(\mathcal{P})$ denote the number of good indices of the permutation $\mathcal{P}$. Determine the minimum and maximum possible values of $n(\mathcal{P})$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>minimum $1$, maximum $1013$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Prefix sums and the position of $2026$)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Prefix sums and the position of $2026$</summary><div class="ct-text">
 <p>Indices are taken modulo $2026$. For an index $i$ and $0\le k\le 2025$ let
 \[
 A_i(k)=a_i-a_{i+1}+a_{i+2}-\dots+(-1)^k a_{i+k};
@@ -295,7 +293,8 @@ $i_0+2r-1\not\equiv i_0$. So each pair contains at most one good index, and $n(\
 alternating sum splits into the brackets $(a_{2r-1}-a_{2r})=2027-2r\ge 1$ (the brackets stay aligned after wrapping around, since
 $2026$ is even). After an even number of terms the partial sum is a sum of positive brackets; after an odd number it is such a sum plus a
 positive term. So all $1013$ odd indices are good, and the maximum is $\boxed{1013}$.</p>
-<h4>Solution 2 (Parity of the full alternating sum)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Parity of the full alternating sum</summary><div class="ct-text">
 <p>Indices are taken modulo $2026$. For an index $i$ and $0\le k\le 2025$ let $A_i(k)=a_i-a_{i+1}+\dots+(-1)^ka_{i+k}$, so $i$ is
 good iff $A_i(k)\ge0$ for all $k$, and let $F_i=A_i(2025)$ be the full alternating sum starting at $i$.</p><p><strong>Two facts about $F_i$.</strong> Every number $a_j$ occurs in $F_i$ exactly once, with sign $\pm$, so
 \[
@@ -320,8 +319,7 @@ number of terms and positive after an odd number. All $1013$ odd indices are goo
 <h3>Problem 6</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 40: Vector Geometry and Affine Structure &middot; Affine Geometry of Lines and Midpoints</div>
 <div class="ct-text"><p>Let $ABCDEF$ be a hexagon inscribed in a circle with center $O$, such that each pair of opposite sides is parallel. The lines $AB$, $CD$ and $EF$ form a triangle $\Delta_1$, and the lines $BC$, $DE$ and $FA$ form a triangle $\Delta_2$. Prove that the circumcenters of triangles $\Delta_1$ and $\Delta_2$ are symmetric with respect to point $O$.</p></div>
-<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Projections onto the parallel sides and two parallelograms)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Projections onto the parallel sides and two parallelograms</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:362px" src="/assets/contests/2026-27/czech-slovak-mo-6_s1.svg" alt="Figure for the solution"></div>
 <p>Let $O_1$, $O_2$ be the circumcentres of $\Delta_1$ (lines $AB,CD,EF$) and $\Delta_2$ (lines $BC,DE,FA$). Name the
 intersection points
@@ -339,7 +337,8 @@ $\pi(B)-\pi(Q_1)=\pi(Q_2)-\pi(E)$.</p></li></ul><p>Therefore
 that is, $(O_1+O_2-2O)\cdot v=0$.</p><p>The hexagon $CDEFAB$ satisfies the same hypotheses and gives the same two triangles, so the same argument with the pair of parallel
 sides $CD\parallel FA$ gives $(O_1+O_2-2O)\cdot w=0$ for a unit vector $w$ along $CD$. The vectors $v,w$ are not parallel (otherwise
 $AB\parallel CD$ and $\Delta_1$ would not exist), so $O_1+O_2=2O$: the circumcentres are symmetric with respect to $O$. $\blacksquare$</p>
-<h4>Solution 2 (Distances from the centre and the angles of the triangles)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Distances from the centre and the angles of the triangles</summary><div class="ct-text">
 <p>Take $O$ as the origin and radius $1$. Let the arcs $AB,BC,CD,DE,EF,FA$ (each not containing other vertices) measure
 $2\theta_1,\dots,2\theta_6$, so $\theta_1+\dots+\theta_6=180^\circ$.</p><p><em>Arcs.</em> Two parallel chords cut off equal arcs between them, so $AB\parallel DE$, $BC\parallel EF$, $CD\parallel FA$ give
 $\theta_2+\theta_3=\theta_5+\theta_6$, $\theta_3+\theta_4=\theta_6+\theta_1$, $\theta_4+\theta_5=\theta_1+\theta_2$. From the first and
@@ -375,7 +374,8 @@ gives $\sum_i \sin\alpha_i\,u_i=0$. Hence
 =2\mu\sin\alpha_1\sin\alpha_2\sin\alpha_3 ,
 \]
 so $\mu=0$. Then $(O_1+O_2)\cdot u_1=(O_1+O_2)\cdot u_2=0$ with $u_1,u_2$ independent, so $O_1+O_2=0=2O$. $\blacksquare$</p>
-<h4>Solution 3 (Complex numbers: adding the equations of parallel sides)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 3 &ndash; Complex numbers: adding the equations of parallel sides</summary><div class="ct-text">
 <p>Take $O$ as the origin and the radius as $1$, and use complex numbers. Let $A,B,C,D,E,F$ be $z_1,\dots,z_6$ with $z_k=e^{it_k}$ and $t_1&lt;t_2&lt;\dots&lt;t_6&lt;t_1+2\pi$ (counterclockwise order); extend by $t_{k+6}=t_k+2\pi$, $z_{k+6}=z_k$.</p><p><em>Lines through two points of the circle.</em> For distinct $u,v$ on the unit circle, the line $uv$ is
 \[
 \ell(uv,\,u+v),\qquad\text{where }\ \ell(c,r)=\{z:\ z+c\,\bar z=r\}.

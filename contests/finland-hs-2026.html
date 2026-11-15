@@ -97,7 +97,6 @@ description: Finnish National High School Mathematics Competition 2026: problems
 <p>The 5 problems of the Finnish National High School Mathematics Competition 2026, each with our own solutions, hidden until you open them. 4 of them ask for an answer and 1 asks for a proof. Where a problem has a final answer, it is shown separately. Try a problem first, then check.</p><p>The Finnish National High School Mathematics Competition 2026, five problems.</p>
 </div>
 <div class="ct-credit">Problems: Finnish National High School Mathematics Competition 2026, from the AoPS contest collection or the official paper. Solutions written by MCC.</div>
-<div class="ct-bar"><button type="button" onclick="ctAll(true)">Show all answers and solutions</button><button type="button" onclick="ctAll(false)">Hide all</button></div>
 <div class="ct-toc-wrap"><div class="ct-toc-row"><a href="#p1">1</a><a href="#p2">2</a><a href="#p3">3</a><a href="#p4">4</a><a href="#p5">5</a></div></div>
 
 {% raw %}
@@ -107,12 +106,12 @@ description: Finnish National High School Mathematics Competition 2026: problems
 <div class="ct-text"><p>Find the value of
 \[1^2-2^2-3^2+4^2+5^2-6^2-7^2+8^2+\dots+2025^2-2026^2.\]</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$-2027$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Blocks of four)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Blocks of four</summary><div class="ct-text">
 <p>The signs repeat with period $4$: the term $k^2$ has sign $+$ when $k\equiv0,1\pmod4$ and $-$ when $k\equiv2,3\pmod4$. For every $a$,
 \[a^2-(a+1)^2-(a+2)^2+(a+3)^2=\bigl(2a^2+6a+9\bigr)-\bigl(2a^2+6a+5\bigr)=4 .\]
 Since $2026=4\cdot506+2$, the terms $1^2,\dots,2024^2$ form $506$ such blocks (with $a=1,5,\dots,2021$), contributing $4\cdot506=2024$. The last two terms are $+2025^2-2026^2=-(2025+2026)=-4051$. The value is $2024-4051=\boxed{-2027}$.</p>
-<h4>Solution 2 (Pairing the ends)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Pairing the ends</summary><div class="ct-text">
 <p>Let $s_k=\pm1$ be the sign of $k^2$, so $s_k=+1$ for $k\equiv0,1\pmod4$ and $s_k=-1$ for $k\equiv2,3\pmod4$. Since $2027-k\equiv3-k\pmod4$, the residues $0,1,2,3$ of $k$ go to $3,2,1,0$, so $s_{2027-k}=-s_k$. Pair the term $k^2$ with $(2027-k)^2$ for $k=1,\dots,1013$; these pairs use every index $1,\dots,2026$ once, and the pair $k$ contributes
 \[s_k\bigl(k^2-(2027-k)^2\bigr)=2027\,s_k\,(2k-2027).\]
 For four consecutive indices $k=4j+1,\dots,4j+4$ the signs are $+,-,-,+$, and
@@ -126,8 +125,7 @@ Since $1013=4\cdot253+1$, the indices $k=1,\dots,1012$ form $253$ such groups an
 <div class="ct-text"><p>Solve in positive integers:
 \[a+b+c+d+e=abcde.\]</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>the permutations of $(1,1,1,2,5)$, $(1,1,1,3,3)$ and $(1,1,2,2,2)$ ($40$ ordered solutions)</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Order the variables and bound the product)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Order the variables and bound the product</summary><div class="ct-text">
 <p>The equation is symmetric, so first find the solutions with $a\le b\le c\le d\le e$. Then
 \[abcde=a+b+c+d+e\le 5e,\qquad\text{so}\qquad abcd\le5 .\]
 With $a\le b\le c\le d$ and $abcd\le5$, the quadruple $(a,b,c,d)$ is $(1,1,1,d)$ with $1\le d\le5$, or $(1,1,2,2)$. The equation becomes:</p><ul class="ct-ul"><li><p>$(1,1,1,d)$: $3+d+e=de$, i.e. $(d-1)(e-1)=4$. With $1\le d\le e$ this gives $d-1=1,e-1=4$ or $d-1=e-1=2$: the solutions $(1,1,1,2,5)$ and $(1,1,1,3,3)$.</p></li><li><p>$(1,1,2,2)$: $6+e=4e$, so $e=2$: the solution $(1,1,2,2,2)$.</p></li></ul><p>All three check: $10=10$, $9=9$, $8=8$. Hence the solutions in positive integers are exactly the permutations of
@@ -140,8 +138,7 @@ that is, $20+10+10=40$ ordered quintuples.</p>
 <div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VII scale">E</span>Combinatorics &middot; LPS VII, Chapter 39: Graph Theory and Structural Combinatorics &middot; Paths, Cycles, and Connectivity</div>
 <div class="ct-text"><p>On a chessboard, a move of the camel is performed as follows:</p><ul class="ct-ul"><li><p>first, the camel moves $3$ squares in one direction;</p></li><li><p>then it moves $1$ square in a direction that is orthogonal to the first movement</p></li></ul><p>(the length of the move is always $\sqrt{10}$).</p><p>A $4\times 8$ board is colored like a chessboard. Can the camel visit all black squares exactly once and return to its starting position?</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p><strong>No</strong></p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (A square that would need three tour neighbours)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; A square that would need three tour neighbours</summary><div class="ct-text">
 <p>Label the columns $a,\dots,h$ (numbers $1,\dots,8$) and the rows $1,\dots,4$, with $a1$ black as on a chessboard; a square is black when its column number plus row number is even. A camel move changes the column by $\pm3$ and the row by $\pm1$ or the other way round, so it changes column$+$row by an even number: the camel always stays on squares of one colour. (If the other colour is called black, reflect the board in its vertical axis; with $8$ columns this swaps the two colours and maps camel moves to camel moves, so the answer is the same.)</p><p>List the camel moves from three black squares:</p><ul class="ct-ul"><li><p>from $b2$: only to $e1$ and $e3$ (every other move leaves the board);</p></li><li><p>from $h2$: only to $e1$ and $e3$;</p></li><li><p>from $h4$: only to $e3$ and $g1$.</p></li></ul><p>In a closed tour every square is entered once and left once, so it has exactly two neighbours along the tour, which must be camel moves. A square with only two possible moves must use both of them. Hence $b2$, $h2$ and $h4$ all have $e3$ as a neighbour along the tour, so $e3$ would have three neighbours along the tour, which is impossible.</p><p>So the answer is <strong>No</strong>.</p>
 </div></details>
 </section>
@@ -149,8 +146,7 @@ that is, $20+10+10=40$ ordered quintuples.</p>
 <h3>Problem 4</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 19: Triangle Centers and Classical Triangle Geometry &middot; Centroid, Incenter, Circumcenter, and Orthocenter</div>
 <div class="ct-text"><p>Let $A$, $B$, $C$, $P$, $D$ and $Q$ be points on a circle in this order such that $PD$ and $BP$ are perpendicular. Let $R$ be the intersection of chords $AC$ and $BD$. Let $E$ and $F$ be the intersections of line $PR$ with lines $AB$ and $BC$, respectively. If $|DP|=|DQ|=|DR|$, prove that $B$, $E$, $F$ and $Q$ are concyclic.</p></div>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (R is the incenter of BPQ)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; R is the incenter of BPQ</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:258px" src="/assets/contests/2026-27/finland-hs-4_s1.svg" alt="Figure for the solution"></div>
 <p>Let $\Omega$ be the circle and $O$ its centre. We write $\measuredangle(\ell,m)$ for the directed angle between lines $\ell$ and $m$, taken modulo $180^\circ$.</p><p><em>Step 1: $BP=BQ$.</em> Since $\angle BPD=90^\circ$, $BD$ is a diameter. The point $D$ of $\Omega$ satisfies $DP=DQ$, so $D$ is the midpoint of the arc $PQ$ on which it lies (this arc does not contain $B$, by the order of the points). Hence $OD\perp PQ$, and the line $BD$ through $O$ is the perpendicular bisector of $PQ$. So $BP=BQ$ and $\angle BPQ=\angle BQP$.</p><p><em>Step 2: $R$ is the incenter of triangle $BPQ$.</em> Let $I$ be that incenter. The bisector of $\angle PBQ$ passes through $D$, the midpoint of arc $PQ$ not containing $B$, and $DI=DP$ (the incenter&ndash;excenter lemma). Indeed, put $\theta=\angle IPB=\frac12\angle BPQ$ and $\varphi=\angle PBI=\frac12\angle PBQ$; the angle sum of the isosceles triangle $BPQ$ gives $4\theta+2\varphi=180^\circ$, i.e. $2\theta+\varphi=90^\circ$. As $I$ lies on segment $BD$ and $\angle BPD=90^\circ$, $\angle DPI=90^\circ-\theta=\theta+\varphi$, while $\angle DIP=\theta+\varphi$ as an exterior angle of triangle $BIP$. So triangle $DPI$ is isosceles with $DI=DP$. Both $I$ and $R$ lie on the segment $BD$ (the chords $AC$ and $BD$ meet inside $\Omega$), and since $DB&gt;DP$ there is only one point of that segment at distance $DP$ from $D$. So $R=I$: the lines $PR$ and $QR$ bisect $\angle BPQ$ and $\angle BQP$.</p><p><em>Step 3: $PR\parallel BM$.</em> Let $M$ be the second intersection of line $QR$ with $\Omega$; it is the midpoint of the arc $BP$ not containing $Q$. By inscribed angles and Step 2,
 \[\angle MBP=\angle MQP=\tfrac12\angle BQP=\tfrac12\angle BPQ=\angle BPR .\]
@@ -168,8 +164,7 @@ and $\measuredangle(AB,CB)=\measuredangle(BE,BF)$. Therefore $\measuredangle(QE,
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 14: Inclusion-Exclusion and Overcounting Control &middot; Higher-Order Inclusion-Exclusion</div>
 <div class="ct-text"><p>We are given $4052$ cards such that each of the numbers $1,2,3,\dots,2026$ appears exactly twice among them. If the cards are shuffled randomly, determine whether or not the probability that there are two consecutive cards with the same number is at least $0.5$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p><strong>Yes</strong> (the probability is about $0.632$)</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Two terms of inclusion-exclusion)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Two terms of inclusion-exclusion</summary><div class="ct-text">
 <p>Let $N=2026$ and make the two cards with the same number distinguishable; then all $(2N)!$ orders are equally likely. For $1\le i\le N$ let $A_i$ be the event that the two cards $i$ are adjacent.</p><p>Gluing the two cards $i$ into one block gives $(2N-1)!$ orders of the blocks and $2$ orders inside the block, so
 \[\Pr(A_i)=\frac{2\,(2N-1)!}{(2N)!}=\frac1N .\]
 In the same way, for $i\ne j$,
@@ -177,7 +172,8 @@ In the same way, for $i\ne j$,
 <em>Bonferroni's inequality.</em> If an outcome lies in exactly $m$ of the events, then $m-\binom m2=\frac{m(3-m)}2\le1$, and it is $\le0$ when $m=0$. So $\mathbf 1[m\ge1]\ge m-\binom m2$ for every outcome, and taking expectations,
 \[\Pr\Bigl(\bigcup A_i\Bigr)\ \ge\ \sum_i\Pr(A_i)-\sum_{i&lt;j}\Pr(A_i\cap A_j)=N\cdot\frac1N-\binom N2\frac{2}{N(2N-1)}=1-\frac{N-1}{2N-1}=\frac{N}{2N-1}.\]
 Since $\frac{N}{2N-1}&gt;\frac12$, the probability that two consecutive cards carry the same number is greater than $0.5$: the answer is <strong>Yes</strong>. (Its exact value is the full inclusion&ndash;exclusion sum $\sum_{j=1}^{N}(-1)^{j+1}\binom Nj\frac{2^j(2N-j)!}{(2N)!}$, obtained by gluing $j$ prescribed pairs; for $N=2026$ it is about $0.632$, close to $1-1/e$.)</p>
-<h4>Solution 2 (Second moment)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Second moment</summary><div class="ct-text">
 <p>Let $N=2026$, make equal cards distinguishable (all $(2N)!$ orders equally likely), and let $X$ be the number of values $i$ whose two cards are adjacent. The event in question is $X&gt;0$.</p><p>Gluing the two cards $i$ into a block shows that they are adjacent with probability $\frac{2(2N-1)!}{(2N)!}=\frac1N$; gluing two pairs shows that two given pairs are both adjacent with probability $\frac{4(2N-2)!}{(2N)!}=\frac2{N(2N-1)}$. Hence
 \[\mathbb E[X]=N\cdot\frac1N=1,\qquad \mathbb E[X(X-1)]=N(N-1)\cdot\frac{2}{N(2N-1)}=\frac{2(N-1)}{2N-1},\]
 since $X(X-1)$ counts ordered pairs of distinct values that are both adjacent. So $\mathbb E[X^2]=1+\frac{2(N-1)}{2N-1}=\frac{4N-3}{2N-1}$.</p><p>By the Cauchy&ndash;Schwarz inequality applied to $X=X\cdot\mathbf 1[X&gt;0]$,

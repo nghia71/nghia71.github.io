@@ -97,7 +97,6 @@ description: Bundeswettbewerb Mathematik 2026, German National Mathematics Compe
 <p>The 8 problems of the Bundeswettbewerb Mathematik 2026, German National Mathematics Competition, each with our own solutions, hidden until you open them. 5 of them ask for an answer and 3 ask for a proof. Where a problem has a final answer, it is shown separately. Try a problem first, then check.</p><p>The Bundeswettbewerb has two take-home rounds with four problems each.</p>
 </div>
 <div class="ct-credit">Problems: Bundeswettbewerb Mathematik 2026, German National Mathematics Competition, from the AoPS contest collection or the official paper. Solutions written by MCC.</div>
-<div class="ct-bar"><button type="button" onclick="ctAll(true)">Show all answers and solutions</button><button type="button" onclick="ctAll(false)">Hide all</button></div>
 <div class="ct-toc-wrap"><div class="ct-toc-row"><span class="ct-toc-g">Round 1</span><a href="#p1">1</a><a href="#p2">2</a><a href="#p3">3</a><a href="#p4">4</a></div><div class="ct-toc-row"><span class="ct-toc-g">Round 2</span><a href="#p5">1</a><a href="#p6">2</a><a href="#p7">3</a><a href="#p8">4</a></div></div>
 
 {% raw %}
@@ -107,8 +106,7 @@ description: Bundeswettbewerb Mathematik 2026, German National Mathematics Compe
 <div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VII scale">E</span>Number Theory &middot; LPS VII, Chapter 8: Modular Arithmetic and Congruence Methods &middot; Basic Congruence Manipulation</div>
 <div class="ct-text"><p>Romeo and Juliet meet at a romantic place. She writes her $10$-digit phone number on a piece of paper for him.</p><p>Later, Romeo finds the note again, but he can no longer read one of the digits; he only knows that it was not zero. Therefore, he asks Juliet for the missing digit.</p><p>Juliet enjoys playing with numbers and says to Romeo: If I count how many digits of my phone number are smaller than $1$, then how many digits are smaller than $2$, and so on, and finally how many digits are smaller than $10$, and then add these ten numbers together, the result is divisible by $9$.</p><p>How can Romeo determine the missing digit using this information?</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>The missing digit is the unique $x\in\{1,\dots,9\}$ with $x\equiv 1-s\pmod 9$, where $s$ is the sum of the nine digits Romeo can read.</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Count each digit separately)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Count each digit separately</summary><div class="ct-text">
 <p>Let the digits of the phone number be $d_1,\dots,d_{10}$ and let $c_k$ be the number of digits smaller than $k$ ($k=1,\dots,10$).
 Juliet's sum is $c_1+c_2+\dots+c_{10}$, the number of pairs $(i,k)$ with $d_i&lt;k$. Counting these pairs digit by digit instead: the digit $d_i$ is smaller than exactly the
 $10-d_i$ numbers $k=d_i+1,\dots,10$. Hence
@@ -116,7 +114,8 @@ $10-d_i$ numbers $k=d_i+1,\dots,10$. Hence
 So Juliet tells Romeo that $9\mid 100-S$, that is, $S\equiv 100\equiv 1\pmod 9$.</p><p>Let $s$ be the sum of the nine digits Romeo can read and $x$ the missing digit. Then $s+x\equiv1\pmod 9$, i.e. $x\equiv 1-s\pmod 9$. Since $x\ne0$, we have
 $x\in\{1,2,\dots,9\}$, and these nine numbers lie in nine different residue classes modulo $9$. So exactly one of them satisfies the congruence, and Romeo finds
 the missing digit as <strong>the unique $x\in\{1,\dots,9\}$ with $x\equiv 1-s\pmod 9$</strong> (in particular $x=9$ when $s\equiv1\pmod 9$).</p><p>For example, if the readable digits are $0,1,7,6,5,4,3,2,1$, then $s=29\equiv2$, so $x\equiv -1\equiv 8\pmod 9$ and the missing digit is $8$.</p>
-<h4>Solution 2 (Raise the digits one step at a time)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Raise the digits one step at a time</summary><div class="ct-text">
 <p>For a string of ten digits let $T$ be Juliet's quantity: the number of digits smaller than $1$, plus the number smaller than $2$, and so on up to $10$.</p><p>For the string $0000000000$ every digit is smaller than each of $1,\dots,10$, so $T=10\cdot10=100$.</p><p>Now raise one digit from $d$ to $d+1$ ($0\le d\le 8$). For $k\le d$ the digit was and stays $\ge k$; for $k\ge d+2$ it was and stays $&lt;k$. Only for $k=d+1$ does
 it change from &ldquo;smaller than $k$&rdquo; to &ldquo;not smaller than $k$&rdquo;. So $T$ decreases by exactly $1$.</p><p>Any phone number with digit sum $S$ is reached from $0000000000$ by exactly $S$ such single raises, so $T=100-S$. Juliet's information is therefore
 $9\mid 100-S$, i.e. $S\equiv1\pmod 9$.</p><p>If Romeo reads nine digits with sum $s$, the missing digit $x\in\{1,\dots,9\}$ must satisfy $x\equiv1-s\pmod 9$. The numbers $1,\dots,9$ represent each residue
@@ -128,8 +127,7 @@ class modulo $9$ exactly once, so this determines $x$ uniquely: Romeo computes $
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 25: Diophantine Equations: Factorization and Algebraic Methods &middot; Symmetric and Polynomial Diophantine Forms</div>
 <div class="ct-text"><p>Determine all triples of positive integers $(a,b,c)$ that satisfy the following properties:</p><ul class="ct-parts"><li><p><span class="ct-lbl">(1)</span> The sum $a+b+c$ is a prime number.</p></li><li><p><span class="ct-lbl">(2)</span> The number $ab+bc+ca$ is a divisor of the number $a^2+b^2+c^2$.</p></li></ul></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$(a,b,c)=(1,1,1)$ only</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (The divisor must be the prime itself)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; The divisor must be the prime itself</summary><div class="ct-text">
 <p>Let $p=a+b+c$ (a prime) and $s=ab+bc+ca$. Since $a,b,c\ge1$ we have $p\ge3$ and $s\ge3$.</p><p><strong>$s$ divides $p^2$.</strong> From $p^2=a^2+b^2+c^2+2s$ we get $a^2+b^2+c^2=p^2-2s$. As $s$ divides $a^2+b^2+c^2$ and $2s$, it divides $p^2$.
 The divisors of $p^2$ are $1,p,p^2$.</p><p><strong>$s=p$.</strong> We have $s\ne1$. Also $a^2+b^2+c^2\ge ab+bc+ca$ (this is $\tfrac12[(a-b)^2+(b-c)^2+(c-a)^2]\ge0$), so $p^2=a^2+b^2+c^2+2s\ge 3s$
 and $s\le p^2/3&lt;p^2$. Hence $s=p$, that is,
@@ -137,7 +135,8 @@ and $s\le p^2/3&lt;p^2$. Hence $s=p$, that is,
 \[0=(ab+bc+ca)-(a+b+c)=a(b-1)+b(c-1)+c(a-1).\]
 All three terms are $\ge0$, so all are $0$: $b=c=a=1$. Conversely, for $(1,1,1)$ the sum $3$ is prime and $ab+bc+ca=3$ divides $a^2+b^2+c^2=3$.
 So the only triple is $\boxed{(a,b,c)=(1,1,1)}$.</p>
-<h4>Solution 2 (The quotient and shifted variables)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; The quotient and shifted variables</summary><div class="ct-text">
 <p>Let $p=a+b+c$, $s=ab+bc+ca$ and let $k=\dfrac{a^2+b^2+c^2}{s}$, a positive integer by condition (2). Then
 \[p^2=(a^2+b^2+c^2)+2s=(k+2)\,s.\]
 Here $k+2\ge3$ and $s\ge3$, so neither factor is $1$. The only factorisation of $p^2$ ($p$ prime) into two factors larger than $1$ is $p\cdot p$, hence $s=p$
@@ -151,8 +150,7 @@ The answer is $\boxed{(1,1,1)}$.</p>
 <h3>Problem 3</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 55: Three-Dimensional and Spatial Geometry &middot; Planes, Lines, and Incidence in Space</div>
 <div class="ct-text"><p>We consider a tetrahedron $ABCD$, which is not necessarily regular.</p><p>A line in space is called a twofold symmetry axis of this tetrahedron if a rotation of $180^\circ$ around this line maps the tetrahedron onto itself.</p><p>Prove that the following two properties are equivalent:</p><ul class="ct-parts"><li><p><span class="ct-lbl">(1)</span> All three lines connecting the midpoints of opposite edges of the tetrahedron are twofold symmetry axes.</p></li><li><p><span class="ct-lbl">(2)</span> All faces of the tetrahedron have the same perimeter.</p></li></ul></div>
-<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Half-turns and congruent opposite edges)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Half-turns and congruent opposite edges</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:263px" src="/assets/contests/2026-27/bundeswettbewerb-3_s1.svg" alt="Figure for the solution"></div>
 <p>Write $AB=a$, $CD=a'$, $AC=b$, $BD=b'$, $AD=c$, $BC=c'$ (so $a,a'$; $b,b'$; $c,c'$ are the pairs of opposite edges), and let $M,N$ be the
 midpoints of $AB$ and $CD$. Recall that a half-turn (rotation by $180^\circ$) about a line $\ell$ maps a point $X$ to the point $X'$ such that the foot of the
@@ -170,7 +168,8 @@ to the common side $CD$, so $NA=NB$. Thus $N$ is equidistant from $A$ and $B$; s
 triangle $NAB$ is perpendicular to $AB$. In the same way (triangles $CAB$ and $DBA$ are congruent) $MC=MD$ and $MN\perp CD$.</p><p>Now the foot of the perpendicular from $A$ to the line $MN$ is $M$ (as $AM\perp MN$), and $M$ is the midpoint of $AB$; so the half-turn about $MN$ maps $A$ to $B$
 and $B$ to $A$. Likewise it maps $C$ to $D$ and $D$ to $C$. Thus it maps the tetrahedron onto itself, and $MN$ is a twofold symmetry axis. The same argument
 applies to the other two lines joining midpoints of opposite edges, so (1) holds.</p>
-<h4>Solution 2 (Vectors from the centroid)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Vectors from the centroid</summary><div class="ct-text">
 <p>Put the origin at the centroid $G$ of the vertices and denote the position vectors of $A,B,C,D$ by $\mathbf a,\mathbf b,\mathbf c,\mathbf d$, so
 $\mathbf a+\mathbf b+\mathbf c+\mathbf d=\mathbf 0$. The midpoint of $AB$ is $\mathbf m=\tfrac12(\mathbf a+\mathbf b)$ and that of $CD$ is $-\mathbf m$; so the
 line through them passes through $G$. Here $\mathbf m\ne\mathbf 0$, since otherwise $AB$ and $CD$ would have a common midpoint and the vertices would be coplanar.
@@ -192,7 +191,8 @@ the same perimeter.</p><p><strong>(2) $\Rightarrow$ (1).</strong> Now opposite e
 Adding the first two gives $|\mathbf a|=|\mathbf d|$; adding the first and third gives $|\mathbf a|=|\mathbf c|$; adding the last two gives $|\mathbf a|=|\mathbf b|$.
 So $|\mathbf a|=|\mathbf b|=|\mathbf c|=|\mathbf d|$, and by (1) the half-turn about the line through the midpoints of $AB$ and $CD$ swaps $A\leftrightarrow B$ and
 $C\leftrightarrow D$, i.e. maps the tetrahedron onto itself. The same holds for the other two lines, so all three are twofold symmetry axes.</p>
-<h4>Solution 3 (A congruence that swaps the vertices)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 3 &ndash; A congruence that swaps the vertices</summary><div class="ct-text">
 <p><strong>(2) means equal opposite edges.</strong> The faces $ABC,ABD,ACD,BCD$ have perimeters $AB+AC+BC$, $AB+AD+BD$, $AC+AD+CD$, $BC+BD+CD$. If they are
 equal, the first two give $AC-BD=AD-BC$ and the last two give $AC-BD=BC-AD$; hence $AD=BC$, then $AC=BD$, and the first and the last give $AB=CD$. Conversely,
 under these equalities every face has perimeter $AB+AC+AD$. So (2) is equivalent to
@@ -222,8 +222,7 @@ axes, which is (1).</p>
 <div class="ct-text"><p>Luna and Marie play the following game:</p><p>A number is written on the board. On each turn, a player adds one of its divisors (but not the number itself) to the number on the board and replaces the number on the board with the resulting sum.</p><p>The player who is forced to write a number greater than $2026$ loses the game.</p><p>Initially, the number $2$ is written on the board, and Luna starts.
 Who can force a win?</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>Luna can force a win.</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (A parity strategy with one exception)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; A parity strategy with one exception</summary><div class="ct-text">
 <p>Moves are always available: $1$ is a proper divisor of every number $N\ge2$, so the move $N\to N+1$ exists, and a player is forced to exceed $2026$
 only when even $N+1&gt;2026$, i.e. when $N\ge2026$. The numbers strictly increase, so the game ends.</p><p><strong>Observation.</strong> An odd number has only odd divisors, so from an odd $N$ every move leads to the even number $N+d$.</p><p><strong>Luna's strategy.</strong> Whenever the board shows an even number $E$, Luna writes $E+1$ if $E\le2022$, and $E+2$ (allowed, since $2\mid E$) if $E=2024$.</p><p>We claim that with this strategy Luna always faces an even number $E\le2024$, and Marie always faces an odd number $O\le2023$.
 At the start Luna faces $2$. If Luna faces an even $E\le2022$, she writes the odd number $E+1\le2023$. If Marie faces an odd $O\le2023$, she must write $O+d$ with
@@ -231,7 +230,8 @@ $d$ an odd proper divisor of $O$; this number is even. It is not $2026$: from $O
 $O=2025&gt;2023$, and $d=1013$ gives $O=1013=d$, not a proper divisor. Hence Marie writes an even number at most $2024$ (or a number larger than $2026$, losing at once).
 If Luna faces $2024$, she writes $2026$, and Marie, facing $2026$, is forced to write a number larger than $2026$ and loses.</p><p>Luna is never forced to exceed $2026$ (she always has the move described, which stays $\le2026$). Since the game is finite, it ends with Marie forced to exceed
 $2026$. So <strong>Luna</strong> can force a win.</p>
-<h4>Solution 2 (Classifying all positions backwards)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Classifying all positions backwards</summary><div class="ct-text">
 <p>Call a number $N$ (with $2\le N\le2026$) a <em>win</em> if the player who must move from $N$ can force a win, and a <em>loss</em> otherwise. From $N$ the
 move $N+1$ is always available while $N\le2025$; a player at $2026$ has no move staying $\le2026$.</p><p><strong>Claim.</strong> The losses are exactly the odd numbers $N\le2023$ together with $N=2026$; all other numbers (the even numbers $\le2024$, and $2025$) are wins.</p><p>We prove this by downward induction on $N$.</p><ul class="ct-ul"><li><p>$N=2026$: every move exceeds $2026$, so it is a loss.</p></li><li><p>$N=2025$: the move $+1$ gives $2026$, a loss for the opponent; so $2025$ is a win.</p></li><li><p>$N=2024$: the move $+2$ gives $2026$; a win.</p></li><li><p>$N\le2023$ odd: there is a move ($N+1\le2024$). Every proper divisor $d$ of $N$ is odd, so every move gives an even number $N+d$. It is not $2026$:
 that would force $d\mid2026=2\cdot1013$ with $1013$ prime (no prime divisor up to $31$, and $32^2&gt;1013$) and $d$ odd, so $d=1$ and $N=2025$, or $d=1013=N$, both impossible. So each move gives either an even number $\le2024$, which is a win
@@ -243,8 +243,7 @@ for the opponent by induction, or a number above $2026$, which loses at once. He
 <h3>Problem 1</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 29: Valuations and Lifting the Exponent &middot; Lifting the Exponent (LTE)</div>
 <div class="ct-text"><p>Prove that the representation of $2026^{2026}$ in base $3$ ends with the base $3$ representation of $2026$.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Lifting the exponent)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Lifting the exponent</summary><div class="ct-text">
 <p>Since $3^6=729\le2026&lt;2187=3^7$, the number $2026$ has exactly $7$ digits in base $3$ (namely $2026=2210001_3$). The base-$3$ representation of
 $2026^{2026}$ (which certainly has more than $7$ digits) ends with these $7$ digits if and only if
 \[2026^{2026}\equiv2026\pmod{3^7},\quad\text{i.e.}\quad 3^7\mid 2026\,\bigl(2026^{2025}-1\bigr).\]
@@ -255,7 +254,8 @@ $v_3(u^{25}-1)=4$. If $w\equiv1\pmod3$, say $w=1+3h$, then $w^3-1=(w-1)(w^2+w+1)
 Since $2025=25\cdot3^4$, cubing $u^{25}$ four times gives $v_3(u^{2025}-1)=4+4=8$.)
 Hence $3^7\mid2026^{2025}-1$, and the base-$3$ representation of $2026^{2026}$ ends with $2210001$, the representation of $2026$. (In fact $3^8$ divides the difference,
 so even the last eight digits are $02210001$.)</p>
-<h4>Solution 2 (The binomial theorem)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; The binomial theorem</summary><div class="ct-text">
 <p>As $3^6\le2026&lt;3^7$, the base-$3$ representation of $2026$ has $7$ digits, and the claim is equivalent to $2026^{2026}\equiv2026\pmod{3^7}$; since
 $\gcd(2026,3)=1$, it suffices to show $2026^{2025}\equiv1\pmod{3^7}$.</p><p>Write $2026=1+2025$ with $2025=3^4\cdot25$. By the binomial theorem,
 \[2026^{2025}=1+\sum_{k=1}^{2025}\binom{2025}{k}2025^{k}.\]
@@ -269,15 +269,15 @@ $2026^{2026}$ are those of $2026$.</p>
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 31: Extremal Principle and Bounding Arguments &middot; Bounding and Limiting Arguments</div>
 <div class="ct-text"><p>Let $k,m,n$ be positive integers. Prove that: for a set with $n$ elements, there exist $m$ subsets of it, no two of which are equal, such that any two of them have fewer than $k$ common elements, if and only if
 \[m\le\sum_{j=0}^{k}\binom{n}{j}.\]</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Shrink every large set to $k$ elements)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Shrink every large set to $k$ elements</summary><div class="ct-text">
 <p>The $m$ subsets are distinct by hypothesis. Let $S$ be the $n$-element set and
 $\mathcal F_k$ the family of all subsets of $S$ with at most $k$ elements; it has $\sum_{j=0}^{k}\binom nj$ members (terms with $j&gt;n$ are $0$).</p><p><strong>If $m\le\sum_{j=0}^k\binom nj$, the subsets exist.</strong> Two distinct members $X,Y$ of $\mathcal F_k$ have fewer than $k$ common elements: if $|X|&lt;k$ or $|Y|&lt;k$, then
 $|X\cap Y|\le\min(|X|,|Y|)&lt;k$, and if $|X|=|Y|=k$ then $X\cap Y$ is a proper subset of $X$, so $|X\cap Y|\le k-1$. Any $m$ members of $\mathcal F_k$ therefore work.</p><p><strong>If the subsets exist, then $m\le\sum_{j=0}^k\binom nj$.</strong> Let $X_1,\dots,X_m$ be distinct subsets, any two with fewer than $k$ common elements. Define
 $\varphi(X)=X$ if $|X|\le k$, and otherwise let $\varphi(X)$ be any $k$-element subset of $X$. Then $\varphi(X_i)\in\mathcal F_k$ and $\varphi(X_i)\subseteq X_i$.
 The map is injective: if $\varphi(X_i)=\varphi(X_j)=:Z$ with $i\ne j$, then $Z\subseteq X_i\cap X_j$, so $|Z|&lt;k$; but $|Z|&lt;k$ happens only when $Z=\varphi(X_i)=X_i$
 and $Z=\varphi(X_j)=X_j$, contradicting $X_i\ne X_j$. Hence $m\le|\mathcal F_k|=\sum_{j=0}^{k}\binom nj$.</p><p>Both directions together prove the equivalence.</p>
-<h4>Solution 2 (Induction with Pascal's rule)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Induction with Pascal's rule</summary><div class="ct-text">
 <p>Write $T(n,k)=\sum_{j=0}^{k}\binom nj$, with $\binom nj=0$ for $j&gt;n$ or $j&lt;0$.</p><p><strong>Existence for $m\le T(n,k)$.</strong> The subsets with at most $k$ elements are $T(n,k)$ in number, and two distinct ones share at most $k-1$ elements (a set with
 fewer than $k$ elements meets anything in fewer than $k$ elements; two different $k$-sets share at most $k-1$). Choose any $m$ of them.</p><p><strong>Bound.</strong> We prove, for all integers $n\ge0$ and $k\ge0$: a family $\mathcal F$ of distinct subsets of an $n$-set in which any two members have fewer than
 $k$ common elements has at most $T(n,k)$ members. Induction on $n$.</p><ul class="ct-ul"><li><p>If $k=0$, no two members can exist (an intersection cannot have fewer than $0$ elements), so $|\mathcal F|\le1=T(n,0)$. If $n=0$, the only subset is
@@ -293,8 +293,7 @@ This completes the induction and the proof of the equivalence.</p>
 <div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 28: Area Methods and Geometric Measurement &middot; Area Ratios in Triangles and Polygons</div>
 <div class="ct-text"><p>One considers an equilateral triangle with area $1$ and a real number $0&lt;q&lt;1$. A point $P$ that is part of the triangle is colored green if and only if $P$ lies in every triangle of area $q$ whose vertices are part of the given triangle. Calculate the area of the green-colored region.</p><p><em>Note:</em> &ldquo;Part of the triangle&rdquo; means the inner part of the triangle and the sides of the triangle.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$0$ if $q\le\frac12$, and $\dfrac{2(2q-1)^2}{(1+q)(2-q)}$ if $\frac12&lt;q&lt;1$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (The largest triangle that misses a point)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; The largest triangle that misses a point</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:268px" src="/assets/contests/2026-27/bundeswettbewerb-7_s1.svg" alt="Figure for the solution"></div>
 <p>Let the given triangle be $T=ABC$ (area $1$). For a point $P$ inside $T$ let $\alpha=[PBC]$, $\beta=[PCA]$, $\gamma=[PAB]$, so
 $\alpha+\beta+\gamma=1$ (areal coordinates; $P=\alpha A+\beta B+\gamma C$), and let $M=\max(\alpha,\beta,\gamma)$, $m=\min(\alpha,\beta,\gamma)$.
@@ -334,8 +333,7 @@ one side of the hexagon lies on $CZ$.</p>
 <div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 43: Locus, Transformation, and Construction Geometry &middot; Transformation of Moving Points</div>
 <div class="ct-text"><p>A mapping $f$ of the set of points of the plane into itself has the following two properties:</p><ul class="ct-parts"><li><p><span class="ct-lbl">(1)</span> There are no two distinct points $P$ and $Q$ with $f(P)=f(Q)$.</p></li><li><p><span class="ct-lbl">(2)</span> The mapping $f$ maps every rectangle $R$ of the plane onto a rectangle $R'$ of the plane, i.e., the set of image points $f(P)$ of all points $P$ of the rectangle $R$ is the set of all points of $R'$.</p></li></ul><p>Determine whether $f$ then also maps every square onto a square, and whether every point of the plane is an image point $f(P)$ of a point $P$ of the plane.</p><p><em>Note:</em> Every rectangle has positive area and consists of its sides and its inner points.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p><strong>Yes</strong> (squares go to squares) and <strong>yes</strong> (every point is an image point).</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Segments, then squares, then midpoints)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Segments, then squares, then midpoints</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:354px" src="/assets/contests/2026-27/bundeswettbewerb-8_s1.svg" alt="Figure for the solution"></div>
 <p>By the note in the statement, every rectangle has positive area and is closed (sides included). We use only injectivity and property (2).</p><p><strong>Step 1: $f$ maps every segment $[P,Q]$ onto the segment $[f(P),f(Q)]$.</strong> Let $P\ne Q$. The two rectangles $R_1,R_2$ with common side $PQ$ lying on opposite sides
 of line $PQ$ (say squares) satisfy $R_1\cap R_2=[P,Q]$. As $f$ is injective, $f([P,Q])=f(R_1)\cap f(R_2)$, an intersection of two closed rectangles; so
@@ -357,7 +355,8 @@ Hence $f(Q_k)$ is the image of the square $f(Q_0)$ under the homothety with cent
 of a diagonal). So $f(Q_0)$ contains a disc of some radius $r&gt;0$ around $f(O)$, $f(Q_k)$ contains the disc of radius $2^kr$, and these discs exhaust the plane. Hence
 <strong>every point of the plane is an image point</strong>.</p><p><em>Remark.</em> Step 3 also gives $f\bigl(\frac{X+Y}2\bigr)=\frac{f(X)+f(Y)}2$; with Step 1 (betweenness on lines) this forces $f$ to be affine, and an affine map that
 preserves right angles is a similarity.</p>
-<h4>Solution 2 (Midpoints make $f$ a similarity)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Midpoints make $f$ a similarity</summary><div class="ct-text">
 <p><strong>Segments and rectangles.</strong> Let $P\ne Q$. The two squares with side $PQ$ on opposite sides of line $PQ$
 meet exactly in $[P,Q]$, so by injectivity $f([P,Q])$ is the intersection of two rectangles, a compact convex set. Let $X$ lie strictly between $P$ and $Q$. As
 $f([P,Q])=f([P,X])\cup f([X,Q])$ is convex, the segment $[f(P),f(Q)]$ is the union of its parts in $f([P,X])$ and in $f([X,Q])$; these are closed and non-empty

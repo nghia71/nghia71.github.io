@@ -97,7 +97,6 @@ description: Romanian Mathematical Olympiad 2026, District Round (Etapa judetean
 <p>The 8 problems of the Romanian Mathematical Olympiad 2026, District Round (Etapa judeteana), Grades 9-12, each with our own solutions, hidden until you open them. 6 of them ask for an answer and 2 ask for a proof. Where a problem has a final answer, it is shown separately. Try a problem first, then check.</p><p>District (county) round of the Romanian National Mathematical Olympiad, 2026; four problems for each of Grades 9 to 12. Only Grades 9 and 10 are included here; Grades 11 and 12 (matrices, limits, integrals, groups) lie outside the scope of the books.</p>
 </div>
 <div class="ct-credit">Problems: Romanian Mathematical Olympiad 2026, District Round (Etapa judeteana), Grades 9-12, from the AoPS contest collection or the official paper. Solutions written by MCC.</div>
-<div class="ct-bar"><button type="button" onclick="ctAll(true)">Show all answers and solutions</button><button type="button" onclick="ctAll(false)">Hide all</button></div>
 <div class="ct-toc-wrap"><div class="ct-toc-row"><span class="ct-toc-g">Grade 9</span><a href="#p1">1</a><a href="#p2">2</a><a href="#p3">3</a><a href="#p4">4</a></div><div class="ct-toc-row"><span class="ct-toc-g">Grade 10</span><a href="#p5">1</a><a href="#p6">2</a><a href="#p7">3</a><a href="#p8">4</a></div></div>
 
 {% raw %}
@@ -108,8 +107,7 @@ description: Romanian Mathematical Olympiad 2026, District Round (Etapa judetean
 <div class="ct-text"><p>We consider the real numbers $a$, $b$, $c$ and the equations
 \[x^2+4ax+(b+c)^2=0,\qquad x^2+4bx+(c+a)^2=0,\qquad x^2+4cx+(a+b)^2=0,\]
 respectively.</p><ul class="ct-parts"><li><p><span class="ct-lbl">a)</span> Show that at least one of the equations has real solutions.</p></li><li><p><span class="ct-lbl">b)</span> Prove that if the equations admit a common real solution, then $a=b=c$.</p></li></ul></div>
-<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Sum of the discriminants, then pairwise differences)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Sum of the discriminants, then pairwise differences</summary><div class="ct-text">
 <p><strong>a)</strong> The discriminants of the three equations are
 \[\Delta_1=16a^2-4(b+c)^2,\qquad \Delta_2=16b^2-4(c+a)^2,\qquad \Delta_3=16c^2-4(a+b)^2 .\]
 Since $(b+c)^2+(c+a)^2+(a+b)^2=2(a^2+b^2+c^2)+2(ab+bc+ca)$,
@@ -119,7 +117,8 @@ Three numbers with a nonnegative sum cannot all be negative, so some $\Delta_k\g
 and in the same way $(b-c)(4x-b-c-2a)=0$ and $(c-a)(4x-c-a-2b)=0$.</p><p>Suppose $a,b,c$ are not all equal.</p><ul class="ct-ul"><li><p>If $a,b,c$ are pairwise distinct, then $4x=a+b+2c$ and $4x=b+c+2a$; subtracting gives $c=a$, a contradiction.</p></li><li><p>Otherwise exactly two of them are equal; by the symmetry of the system we may take $a=b\neq c$. From the second relation, $4x=b+c+2a=3a+c$. Substituting $x=\frac{3a+c}4$ into the first equation and multiplying by $16$:
 \[(3a+c)^2+16a(3a+c)+16(a+c)^2=73a^2+54ac+17c^2=0 .\]
 As a quadratic form this has discriminant $54^2-4\cdot73\cdot17=2916-4964&lt;0$, so it vanishes only for $a=c=0$, contradicting $a\neq c$.</p></li></ul><p>Hence $a=b=c$.</p>
-<h4>Solution 2 (One sum of squares)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; One sum of squares</summary><div class="ct-text">
 <p><strong>a)</strong> The discriminant of $x^2+4ax+(b+c)^2=0$ is $4\bigl((2a)^2-(b+c)^2\bigr)$, and similarly for the others. If all three equations had no real solutions, then
 \[4a^2&lt;(b+c)^2,\qquad 4b^2&lt;(c+a)^2,\qquad 4c^2&lt;(a+b)^2 .\]
 Adding, $4(a^2+b^2+c^2)&lt;2(a^2+b^2+c^2)+2(ab+bc+ca)$, that is, $a^2+b^2+c^2&lt;ab+bc+ca$. This is impossible, because
@@ -130,7 +129,8 @@ Since $a-b=\frac{p-q}2$, $b-c=\frac{q-r}2$, $c-a=\frac{r-p}2$, the right-hand si
 Therefore $p^2+q^2+r^2+pq+qr+rp=0$, which can be written as
 \[\tfrac12\bigl((p+q+r)^2+p^2+q^2+r^2\bigr)=0 .\]
 A sum of squares of real numbers vanishes only if every term is $0$, so $p=q=r=0$, that is, $a=b=c=-\frac x2$.</p>
-<h4>Solution 3 (The largest variable and the signs of a common root)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 3 &ndash; The largest variable and the signs of a common root</summary><div class="ct-text">
 <p>The system does not change if $a,b,c$ are permuted (the three equations are only permuted), so we may relabel freely.</p><p><strong>a)</strong> Relabel so that $|a|\ge|b|$ and $|a|\ge|c|$. Then $|b+c|\le|b|+|c|\le2|a|$, so the discriminant of the first equation is
 \[16a^2-4(b+c)^2=4\bigl((2|a|)^2-|b+c|^2\bigr)\ge0,\]
 and the first equation has real solutions.</p><p><strong>b)</strong> Let $x$ be a common real solution.</p><p>If $x=0$, the equations give $b+c=c+a=a+b=0$. Adding, $a+b+c=0$, and then $a=(a+b+c)-(b+c)=0$, and likewise $b=c=0$. So $a=b=c$.</p><p>Let $x\ne0$. The first equation gives
@@ -144,8 +144,7 @@ The numbers $4x$ and $-(a+b+2c)$ are nonzero and have the same sign (the sign of
 <h3>Problem 2</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VII scale">E</span>Geometry &middot; LPS VII, Chapter 40: Vector Geometry and Affine Structure &middot; Vector Addition and Balance Relations</div>
 <div class="ct-text"><p>Let $ABCD$ be a convex quadrilateral, $O$ the intersection of its diagonals, and $G_1$, $G_2$, $G_3$ the centroids of the triangles $ABD$, $ABC$ and $ODC$, respectively. Prove that $O$ is the centroid of the triangle $G_1G_2G_3$ if and only if $ABCD$ is a parallelogram.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Position vectors from O)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Position vectors from O</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:298px" src="/assets/contests/2026-27/romania-district-olympiad-2_s1.svg" alt="Figure for the solution"></div>
 <p>Use position vectors with origin $O$, and write $\vec A,\vec B,\vec C,\vec D$ for the position vectors of the vertices, so $\vec O=\vec 0$. Then
 \[\vec G_1=\tfrac13(\vec A+\vec B+\vec D),\quad \vec G_2=\tfrac13(\vec A+\vec B+\vec C),\quad \vec G_3=\tfrac13(\vec C+\vec D).\]
@@ -154,7 +153,8 @@ The centroid of $G_1G_2G_3$ has position vector $\frac13(\vec G_1+\vec G_2+\vec 
 Because $ABCD$ is convex, $O$ lies strictly inside both diagonals, so $\vec C=-\gamma\vec A$ and $\vec D=-\delta\vec B$ with $\gamma,\delta&gt;0$, and $\vec A,\vec B$ are not parallel ($A$, $O$, $B$ are not collinear). The condition becomes
 \[(1-\gamma)\vec A+(1-\delta)\vec B=\vec 0,\]
 which, since $\vec A$ and $\vec B$ are linearly independent, holds if and only if $\gamma=\delta=1$, i.e. $O$ is the midpoint of both diagonals. A quadrilateral whose diagonals bisect each other is a parallelogram, and conversely. This proves the equivalence.</p><p>(In the parallelogram case $\vec G_1=\frac13\vec A$, $\vec G_2=\frac13\vec B$, $\vec G_3=-\frac13(\vec A+\vec B)$, which are not collinear, so $G_1G_2G_3$ is a genuine triangle.)</p>
-<h4>Solution 2 (Midpoints of the diagonals)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Midpoints of the diagonals</summary><div class="ct-text">
 <p>Take any origin. The centroid of $G_1G_2G_3$ is
 \[\tfrac19\bigl[(A+B+D)+(A+B+C)+(O+C+D)\bigr]=\tfrac19\bigl[2(A+B+C+D)+O\bigr],\]
 so it equals $O$ if and only if $2(A+B+C+D)=8O$, that is,
@@ -169,14 +169,14 @@ are the midpoints of the diagonals $AC$ and $BD$. So the condition says exactly:
 \[4^{n-1}+n^2+11\]
 is a perfect square.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$n=3$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Squeezing between consecutive squares)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Squeezing between consecutive squares</summary><div class="ct-text">
 <p>Put $X=2^{n-1}$, so the number is $N=X^2+n^2+11&gt;X^2$. The next square after $X^2$ is $(X+1)^2=X^2+2^n+1$. If
 \[n^2+11&lt;2^n+1,\quad\text{i.e.}\quad n^2+10&lt;2^n,\]
 then $X^2&lt;N&lt;(X+1)^2$ and $N$ is not a square.</p><p>The inequality $n^2+10&lt;2^n$ holds for $n=6$ ($46&lt;64$), and if it holds for some $n\ge6$ then
 \[2^{n+1}&gt;2n^2+20&gt;(n+1)^2+10,\]
 because $2n^2+20-(n+1)^2-10=n^2-2n+9&gt;0$. So it holds for all $n\ge6$.</p><p>For $n\le5$ we compute $N$: $13,\ 19,\ 36,\ 91,\ 292$ for $n=1,2,3,4,5$. Only $36=6^2$ is a square ($292$ lies between $17^2=289$ and $18^2$). The answer is $\boxed{n=3}$.</p>
-<h4>Solution 2 (Factoring a difference of squares)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Factoring a difference of squares</summary><div class="ct-text">
 <p>Suppose $4^{n-1}+n^2+11=k^2$ with $k$ a positive integer, and put $X=2^{n-1}$. Then
 \[(k-X)(k+X)=n^2+11&gt;0,\]
 so $k&gt;X$, hence $k-X\ge1$ and $k+X\le n^2+11$. Since $k\ge X+1$, this gives $2X+1\le k+X\le n^2+11$, i.e.
@@ -191,11 +191,11 @@ This fails for $n=6$ ($64&gt;46$), and for larger $n$ the left side doubles at e
 \[\begin{aligned}&amp;(1)\ \ i+j \text{ divides } a_i+a_j;\\ &amp;(2)\ \ a_i+a_j \text{ divides } (i+j)^2,\end{aligned}\]
 for any positive integers $i$ and $j$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$a_n=n$ for all $n$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Large primes pin the sequence down)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Large primes pin the sequence down</summary><div class="ct-text">
 <p>The sequence $a_n=n$ works: $i+j$ divides $i+j$, and $i+j$ divides $(i+j)^2$.</p><p>Conversely, let $(a_n)$ satisfy the conditions. With $i=j$: $2i\mid 2a_i$ and $2a_i\mid 4i^2$, so
 \[i\mid a_i\quad\text{and}\quad a_i\mid 2i^2\qquad\text{for every } i. \tag{$*$}\]</p><p><em>Step 1: $a_1=1$.</em> By $(*)$, $a_1\in\{1,2\}$. Suppose $a_1=2$. By $(*)$, $a_2\in\{2,4,8\}$, and with $i=1$, $j=2$: $3\mid 2+a_2$ and $2+a_2\mid 9$, so $2+a_2\in\{3,9\}$, i.e. $a_2\in\{1,7\}$, which contradicts $a_2\in\{2,4,8\}$. So $a_1=1$.</p><p><em>Step 2: $a_p=p$ for every odd prime $p$.</em> By $(*)$, $a_p=pd$ with $d\mid 2p$, so $a_p\in\{p,2p,p^2,2p^2\}$. Condition (1) with $i=1$, $j=p$ says $p+1\mid 1+a_p$. Modulo $p+1$ we have $p\equiv-1$, so:</p><ul class="ct-ul"><li><p>$a_p=2p$: $1+a_p\equiv-1$, and $p+1\nmid 1$;</p></li><li><p>$a_p=p^2$: $1+a_p\equiv 2$, and $p+1\ge4$ does not divide $2$;</p></li><li><p>$a_p=2p^2$: $1+a_p\equiv3$, and $p+1\ge4$ does not divide $3$.</p></li></ul><p>Hence $a_p=p$.</p><p><em>Step 3: $a_n=n$ for every $n$.</em> Fix $n$. For every odd prime $p$, condition (1) with $i=n$, $j=p$ gives $n+p\mid a_n+p$, hence $n+p\mid (a_n+p)-(n+p)=a_n-n$. Choose an odd prime $p&gt;a_n$ (there are infinitely many primes). Since $a_n$ and $n$ are positive, $|a_n-n|&lt;\max(a_n,n)&lt;n+p$, and the only multiple of $n+p$ with absolute value less than $n+p$ is $0$. So $a_n=n$.</p><p>Therefore the only sequence is $\boxed{a_n=n}$.</p>
-<h4>Solution 2 (Working only with the index 1)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Working only with the index 1</summary><div class="ct-text">
 <p>The sequence $a_n=n$ clearly satisfies both conditions. Now let $(a_n)$ be any solution. Taking $i=j$ gives $2i\mid 2a_i\mid 4i^2$, so
 \[i\mid a_i\quad\text{and}\quad a_i\mid 2i^2 . \tag{$*$}\]</p><p><em>$a_1=1$.</em> From $(*)$, $a_1\in\{1,2\}$. If $a_1=2$, then $(*)$ gives $a_2\in\{2,4,8\}$, while $i=1$, $j=2$ gives $3\mid a_2+2\mid 9$, so $a_2+2\in\{3,9\}$; none of $4,6,10$ is $3$ or $9$. Hence $a_1=1$.</p><p><em>The two candidates for $a_n$.</em> With $i=1$, $j=n$: $n+1\mid 1+a_n$ and $1+a_n\mid (n+1)^2$. Write $1+a_n=(n+1)t$ with $t$ a positive integer; then $t\mid n+1$. Also $n\mid a_n=(n+1)t-1=nt+(t-1)$, so $n\mid t-1$. Thus $t=1$, or $t-1\ge n$, i.e. $t\ge n+1$; together with $t\mid n+1$ the latter forces $t=n+1$. So
 \[a_n=n\qquad\text{or}\qquad a_n=(n+1)^2-1=n(n+2).\]</p><p><em>The second candidate almost never works.</em> If $a_n=n(n+2)$, then $(*)$ gives $n(n+2)\mid 2n^2$, so $n+2\mid 2n=2(n+2)-4$, hence $n+2\mid4$, i.e. $n=2$. So $a_n=n$ for all $n\ne2$, and $a_2\in\{2,8\}$.</p><p><em>$a_2=2$.</em> Condition (2) with $i=2$, $j=3$ (where $a_3=3$) requires $a_2+3\mid 25$. For $a_2=8$ this reads $11\mid25$, false. So $a_2=2$.</p><p>Hence the only sequence is $\boxed{a_n=n}$.</p>
@@ -208,14 +208,14 @@ for any positive integers $i$ and $j$.</p></div>
 <div class="ct-text"><p>Let $a,b,x,y&gt;0$ be real numbers with $ab\neq1$, and $c$ a positive integer such that
 \[\log_a\sqrt{x}=\log_b\sqrt{cx+y}=\log_{ab}y.\]</p><ul class="ct-parts"><li><p><span class="ct-lbl">a)</span> Prove that if $c=1$, then $\dfrac{y}{x}$ is irrational.</p></li><li><p><span class="ct-lbl">b)</span> Prove that $\dfrac{y}{x}$ is rational if and only if $c$ is the product of two consecutive positive integers.</p></li></ul></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>proof ($\frac yx=\frac{1+\sqrt{1+4c}}2$)</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (The common value of the logarithms)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; The common value of the logarithms</summary><div class="ct-text">
 <p>Let $t$ be the common value of the three logarithms. (The bases $a$, $b$, $ab$ are positive and different from $1$.) Then
 \[\sqrt x=a^t,\qquad \sqrt{cx+y}=b^t,\qquad y=(ab)^t=a^tb^t=\sqrt x\cdot\sqrt{cx+y}.\]
 Squaring the last relation, $y^2=x(cx+y)=cx^2+xy$. Dividing by $x^2&gt;0$ and writing $r=\frac yx&gt;0$:
 \[r^2-r-c=0,\qquad\text{so}\qquad r=\frac{1+\sqrt{1+4c}}2\]
 (the other root is negative).</p><p>Hence $r$ is rational if and only if $\sqrt{1+4c}$ is rational, i.e. if and only if the positive integer $1+4c$ is a perfect square. A perfect square that is odd is the square of an odd number, so this means $1+4c=(2k+1)^2$ for some integer $k\ge1$ (as $1+4c\ge5$), i.e. $4c=4k^2+4k$, i.e. $c=k(k+1)$. This proves <strong>b)</strong>.</p><p><strong>a)</strong> For $c=1$ we get $r=\frac{1+\sqrt5}2$, which is irrational because $5$ is not a perfect square. (Equivalently, $1$ is not of the form $k(k+1)$ with $k\ge1$, since $1\cdot2=2&gt;1$.)</p>
-<h4>Solution 2 (Rational roots of a monic integer quadratic)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Rational roots of a monic integer quadratic</summary><div class="ct-text">
 <p>Denote by $t$ the common value of the logarithms; then $x=a^{2t}$, $cx+y=b^{2t}$ and $y=a^tb^t$. Multiplying the first two, $x(cx+y)=(a^tb^t)^2=y^2$. So $r=\frac yx$ is a positive root of
 \[P(X)=X^2-X-c .\]
 <strong>b)</strong> If $r$ is rational, write $r=\frac uv$ in lowest terms with $u,v$ positive integers. From $u^2=uv+cv^2$ we get $v\mid u^2$, and as $\gcd(u,v)=1$, $v=1$. So $r$ is a positive integer $k'$ with $k'^2-k'=c$, i.e. $c=k'(k'-1)$, and $k'\ge2$ because $c\ge1$. Thus $c=k(k+1)$ with $k=k'-1\ge1$.</p><p>Conversely, if $c=k(k+1)$, then $P(X)=X^2-X-k(k+1)=(X-(k+1))(X+k)$, whose only positive root is $k+1$; so $r=k+1$ is rational.</p><p><strong>a)</strong> If $c=1$ and $r$ were rational, the argument above would give an integer $k'\ge2$ with $k'(k'-1)=1$, impossible since $k'(k'-1)\ge2$. Hence $\frac yx$ is irrational.</p>
@@ -226,14 +226,14 @@ Squaring the last relation, $y^2=x(cx+y)=cx^2+xy$. Dividing by $x^2&gt;0$ and wr
 <div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VII scale">E</span>Algebra &middot; LPS VII, Chapter 34: Complex Numbers as an Olympiad Tool &middot; Polar Form and De Moivre Structure</div>
 <div class="ct-text"><p>Find all the functions $f:\mathbb{C}\setminus\{0\}\to\mathbb{C}\setminus\{0\}$ that satisfy the following conditions simultaneously:</p><ul class="ct-ul"><li><p>$f(z_1z_2)=f(z_1)f(z_2)$, for any $z_1,z_2\in\mathbb{C}\setminus\{0\}$;</p></li><li><p>$\overline{f(z)}=f\left(\dfrac1z\right)$, for any $z\in\mathbb{C}\setminus\{0\}$;</p></li><li><p>$\overline{z}\,f(z)\in(0,\infty)$, for any $z\in\mathbb{C}\setminus\{0\}$.</p></li></ul></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$f(z)=\dfrac{z}{|z|}$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Factor out z)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Factor out z</summary><div class="ct-text">
 <p><em>Check.</em> For $f(z)=\frac z{|z|}$: $f(z_1z_2)=\frac{z_1z_2}{|z_1||z_2|}=f(z_1)f(z_2)$; $\overline{f(z)}=\frac{\overline z}{|z|}$ and $f\bigl(\frac1z\bigr)=\frac{1/z}{1/|z|}=\frac{|z|}{z}=\frac{|z|\,\overline z}{|z|^2}=\frac{\overline z}{|z|}$; and $\overline z f(z)=|z|&gt;0$.</p><p><em>Uniqueness.</em> Let $f$ satisfy the conditions. By the third condition, $\overline z f(z)=s(z)$ with $s(z)&gt;0$, so
 \[f(z)=\frac{s(z)}{\overline z}=\frac{s(z)}{|z|^2}\,z=h(z)\,z,\qquad h(z)=\frac{s(z)}{|z|^2}&gt;0 .\]
 From $f(1)=f(1)^2$ and $f(1)\neq0$ we get $f(1)=1$, and then $f(z)f\bigl(\frac1z\bigr)=f(1)=1$. Using the second condition,
 \[1=f(z)f\Bigl(\frac1z\Bigr)=f(z)\,\overline{f(z)}=|f(z)|^2=h(z)^2|z|^2 .\]
 As $h(z)&gt;0$, $h(z)=\frac1{|z|}$, and $f(z)=\dfrac{z}{|z|}$. So the only function is $\boxed{f(z)=\dfrac z{|z|}}$.</p>
-<h4>Solution 2 (Positive reals and the unit circle separately)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Positive reals and the unit circle separately</summary><div class="ct-text">
 <p>First, $f(1)^2=f(1)\neq0$ gives $f(1)=1$, so $f\bigl(\frac1z\bigr)=\frac1{f(z)}$ for every $z$.</p><p><em>Positive reals.</em> For $r&gt;0$, the third condition says $r f(r)&gt;0$, so $f(r)$ is a positive real number; then the second condition gives $f(r)=\overline{f(r)}=f\bigl(\frac1r\bigr)=\frac1{f(r)}$, so $f(r)^2=1$ and $f(r)=1$.</p><p><em>Unit circle.</em> For $|u|=1$ we have $\overline{f(u)}=f\bigl(\frac1u\bigr)=\frac1{f(u)}$, so $|f(u)|^2=1$. The third condition says $\overline u f(u)=\rho&gt;0$, so $f(u)=\rho u$ (as $\overline u=\frac1u$), and $|f(u)|=\rho=1$. Thus $f(u)=u$.</p><p><em>All $z$.</em> Writing $z=|z|\cdot u$ with $u=\frac z{|z|}$ on the unit circle, multiplicativity gives
 \[f(z)=f(|z|)\,f(u)=1\cdot u=\frac z{|z|}.\]
 This function satisfies all three conditions (for instance $\overline z\cdot\frac z{|z|}=|z|&gt;0$), so the answer is $\boxed{f(z)=\dfrac z{|z|}}$.</p>
@@ -245,18 +245,19 @@ This function satisfies all three conditions (for instance $\overline z\cdot\fra
 <div class="ct-text"><p>Solve in $\mathbb{R}$ the equation
 \[2+5\cdot6^x=3\cdot2^x+4\cdot3^x.\]</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$x\in\{-1,\,0\}$</p></div></details>
-<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
-<h4>Solution 1 (A hidden product equal to 1)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; A hidden product equal to 1</summary><div class="ct-text">
 <p>Divide by $6^x$ and put $p=2^{-x}$, $q=3^{-x}$ (so $6^{-x}=pq$):
 \[2pq+5=3q+4p\iff 2pq-4p-3q+6=1\iff (2p-3)(q-2)=1 .\]
 Let $t=-x$, so $p=2^t$ and $q=3^t$ are increasing functions of $t$. Since the product is positive, the two factors have the same sign.</p><ul class="ct-ul"><li><p>Both positive: then $2\cdot2^t-3$ and $3^t-2$ are positive and strictly increasing in $t$, so their product is strictly increasing, and the equation has at most one solution in this region. $t=1$ works: $(4-3)(3-2)=1$.</p></li><li><p>Both negative: then $3-2\cdot2^t$ and $2-3^t$ are positive and strictly decreasing, so their product is strictly decreasing and there is at most one solution. $t=0$ works: $(-1)(-1)=1$.</p></li></ul><p>Hence $t\in\{0,1\}$, i.e. the solutions are $\boxed{x=0\text{ and }x=-1}$. Check: $x=0$: $2+5=3+4$; $x=-1$: $2+\frac56=\frac32+\frac43=\frac{17}6$.</p>
-<h4>Solution 2 (Solve for one exponential and compare monotonicity)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Solve for one exponential and compare monotonicity</summary><div class="ct-text">
 <p>Put $u=2^x&gt;0$. The equation is linear in $3^x$:
 \[3^x(5u-4)=3u-2 .\]
 If $5u=4$, the left side is $0$ and the right side is $\frac{12}5-2\ne0$, so $u\neq\frac45$ and
 \[3^x=\frac{3u-2}{5u-4}=\frac35+\frac{2}{5(5u-4)}=:R(u).\]
 On each of the intervals $u&lt;\frac45$ and $u&gt;\frac45$, $R$ is strictly decreasing in $u$, hence strictly decreasing in $x$ (as $u=2^x$ is increasing), while $3^x$ is strictly increasing in $x$. So each of the two ranges of $x$ contains at most one solution.</p><ul class="ct-ul"><li><p>$u&gt;\frac45$, i.e. $x&gt;\log_2\frac45$: $x=0$ gives $u=1$, $R(1)=1=3^0$. Solution.</p></li><li><p>$u&lt;\frac45$: $x=-1$ gives $u=\frac12$, $R\bigl(\frac12\bigr)=\frac{-1/2}{-3/2}=\frac13=3^{-1}$. Solution.</p></li></ul><p>Therefore the solutions are $\boxed{x\in\{-1,0\}}$.</p>
-<h4>Solution 3 (Two products with the same sign)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 3 &ndash; Two products with the same sign</summary><div class="ct-text">
 <p>Divide the equation by $6^x&gt;0$ and put $u=2^{-x}$, $v=3^{-x}$, so that $6^{-x}=uv$:
 \[2uv+5=4u+3v,\qquad\text{that is,}\qquad 2uv-4u-3v+5=0 .\]
 Expanding shows that
@@ -271,8 +272,7 @@ Both $u$ and $v$ are decreasing functions of $x$, with $u=1,v=1$ at $x=0$ and $u
 \[B(A)=\{z_iz_j \mid 1\le i&lt;j\le n\}.\]
 Find the sets $A$ for which $A=B(A)$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$A=\{z\in\mathbb{C}\mid z^n=1\}$, the set of the $n$-th roots of unity</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Moduli, then the polynomial with roots A)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Moduli, then the polynomial with roots A</summary><div class="ct-text">
 <p><em>The $n$-th roots of unity work.</em> Let $U_n=\{z\mid z^n=1\}$. A product of two of them is again in $U_n$, so $B(U_n)\subseteq U_n$. Conversely, for $w\in U_n$ the $n$ numbers $z\in U_n$ give $n$ factorizations $w=z\cdot\frac wz$ with both factors in $U_n$; the factors are equal only if $z^2=w$, which has at most $2$ solutions. Since $n\ge4&gt;2$, some factorization uses two distinct elements, so $w\in B(U_n)$.</p><p>Now let $A$ be any set with $A=B(A)$; in particular every product of two distinct elements of $A$ lies in $A$.</p><p><em>Step 1: all elements have modulus $1$.</em> Order the moduli $r_1\le r_2\le\cdots\le r_n$ (with $r_k=|z_k|$ after relabelling). The product $z_{n-1}z_n$ lies in $A$, so $r_{n-1}r_n\le r_n$, i.e. $r_{n-1}\le1$; similarly $z_1z_2\in A$ gives $r_1r_2\ge r_1$, i.e. $r_2\ge1$. As $n\ge4$, $r_2\le r_{n-1}$, hence $r_2=\cdots=r_{n-1}=1$. If $r_n&gt;1$, then $z_n$ is the only element of modulus $r_n$, yet the $n-2\ge2$ distinct products $z_nz_2,\dots,z_nz_{n-1}$ all have modulus $r_n$ and lie in $A$, a contradiction. So $r_n=1$, and in the same way (products $z_1z_j$, $2\le j\le n-1$) $r_1=1$.</p><p><em>Step 2: a polynomial identity.</em> Let $S=\sum_{a\in A}a$ and $P=\prod_{a\in A}a\neq0$. Fix $z\in A$. The $n-1$ numbers $zw$, $w\in A\setminus\{z\}$, are distinct and lie in $A$, so they are all elements of $A$ except one, say $m$. Comparing sums and products,
 \[z(S-z)=S-m,\qquad z^{n-1}\cdot\frac Pz=\frac Pm .\]
 The second gives $m=z^{2-n}$; substituting in the first, $zS-z^2=S-z^{2-n}$, and multiplying by $z^{n-2}$:
@@ -280,7 +280,8 @@ The second gives $m=z^{2-n}$; substituting in the first, $zS-z^2=S-z^{2-n}$, and
 So the $n$ distinct elements of $A$ are the $n$ roots of this monic polynomial of degree $n$:
 \[\prod_{a\in A}(X-a)=X^n-SX^{n-1}+SX^{n-2}-1 .\]</p><p><em>Step 3: $S=0$.</em> Comparing constant terms, $(-1)^nP=-1$. Because $n\ge4$, the coefficient of $X$ is $0$; this coefficient is $(-1)^{n-1}e_{n-1}$, where $e_{n-1}=\sum_{a\in A}\frac Pa$. So $\sum_{a\in A}\frac1a=0$. But $|a|=1$ means $\frac1a=\overline a$, hence $\overline S=0$ and $S=0$.</p><p>Therefore $\prod_{a\in A}(X-a)=X^n-1$, i.e. $A$ is exactly the set of $n$-th roots of unity:
 \[\boxed{A=\{z\in\mathbb{C}\mid z^n=1\}}.\]</p>
-<h4>Solution 2 (Powers and cosets)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Powers and cosets</summary><div class="ct-text">
 <p>Let $U_n=\{z\mid z^n=1\}$ be the set of the $n$-th roots of unity.</p><p><em>$U_n$ works.</em> A product of two elements of $U_n$ lies in $U_n$, so $B(U_n)\subseteq U_n$. Conversely, let $w\in U_n$. For each of the $n$ elements $z\in U_n$ we have $w=z\cdot\frac wz$ with $\frac wz\in U_n$, and the two factors are equal only when $z^2=w$, which has at most $2$ solutions. Since $n\ge4&gt;2$, some such factorization uses two distinct elements, so $w\in B(U_n)$. Hence $B(U_n)=U_n$.</p><p>Now let $A$ be a set of $n\ge4$ nonzero complex numbers with $A=B(A)$. In particular,
 \[\text{the product of two distinct elements of }A\text{ lies in }A. \tag{$*$}\]</p><p><em>Step 1: every element of $A$ is a root of unity.</em> Let $P$ be the product of all elements of $A$ and fix $z\in A$. The $n-1$ numbers $zw$ with $w\in A$, $w\ne z$, are distinct and lie in $A$ by $(*)$, so they are all the elements of $A$ except one, say $m$. Comparing products,
 \[\prod_{w\ne z}zw=z^{n-1}\cdot\frac Pz=z^{n-2}P\qquad\text{and}\qquad \prod_{w\ne z}zw=\frac Pm,\]

@@ -97,7 +97,6 @@ description: German Mathematical Olympiad 2026, Final Round: problems with answe
 <p>The 6 problems of the German Mathematical Olympiad 2026, Final Round, each with our own solutions, hidden until you open them. 4 of them ask for an answer and 2 ask for a proof. Where a problem has a final answer, it is shown separately. Try a problem first, then check.</p><p>The final round has two days with three problems each.</p>
 </div>
 <div class="ct-credit">Problems: German Mathematical Olympiad 2026, Final Round, from the AoPS contest collection or the official paper. Solutions written by MCC.</div>
-<div class="ct-bar"><button type="button" onclick="ctAll(true)">Show all answers and solutions</button><button type="button" onclick="ctAll(false)">Hide all</button></div>
 <div class="ct-toc-wrap"><div class="ct-toc-row"><span class="ct-toc-g">Day 1</span><a href="#p1">1</a><a href="#p2">2</a><a href="#p3">3</a></div><div class="ct-toc-row"><span class="ct-toc-g">Day 2</span><a href="#p4">4</a><a href="#p5">5</a><a href="#p6">6</a></div></div>
 
 {% raw %}
@@ -109,8 +108,7 @@ description: German Mathematical Olympiad 2026, Final Round: problems with answe
 \[\binom{n}{0},\ \binom{n}{1},\ \binom{n}{2},\ \ldots,\ \binom{n}{n-1}\ \text{and}\ \binom{n}{n}\]
 are all odd numbers.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$n=2^k-1$ with $k\ge1$, i.e. $n=1,3,7,15,\dots$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Counting odd coefficients with polynomials mod 2)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Counting odd coefficients with polynomials mod 2</summary><div class="ct-text">
 <p>We work with polynomials whose coefficients are read modulo $2$ and write $F\equiv G$ when all coefficients of
 $F-G$ are even. Since $(1+x)^2=1+2x+x^2\equiv1+x^2$, squaring repeatedly gives $(1+x)^{2^j}\equiv1+x^{2^j}$ for every $j\ge0$.</p><p>Write $n$ in binary, $n=2^{j_1}+2^{j_2}+\dots+2^{j_s}$ with $j_1&gt;j_2&gt;\dots&gt;j_s\ge0$; here $s$ is the number of binary digits $1$ of $n$. Then
 \[(1+x)^n=\prod_{i=1}^{s}(1+x)^{2^{j_i}}\equiv\prod_{i=1}^{s}\bigl(1+x^{2^{j_i}}\bigr).\]
@@ -119,7 +117,8 @@ sums are pairwise different (binary representations are unique), so no two terms
 $(1+x)^n=\sum_k\binom nk x^k$, the number of odd coefficients $\binom nk$ is exactly $2^s$.</p><p>All $n+1$ coefficients are odd if and only if $n+1=2^s$, i.e. $n=2^s-1$. Conversely, for $n=2^k-1=1+2+\dots+2^{k-1}$ we have $s=k$ and $n+1=2^k=2^s$.
 Hence the required numbers are exactly
 \[n=\boxed{2^k-1}\qquad(k=1,2,3,\dots).\]</p>
-<h4>Solution 2 (Carries in binary (Legendre))</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Carries in binary (Legendre)</summary><div class="ct-text">
 <p>For a positive integer $m$ let $s(m)$ be the number of binary digits $1$ of $m$ (and $s(0)=0$). Legendre's
 formula for the prime $2$ reads $v_2(m!)=m-s(m)$, where $v_2$ is the exponent of $2$: counting multiples of $2,4,8,\dots$ gives $v_2(m!)=\sum_{j\ge1}\lfloor m/2^j\rfloor$, and a binary digit $1$ of $m$ at position $r$ contributes $2^{r-1}+\dots+2+1=2^r-1$ to this sum. Hence for $0\le k\le n$
 \[v_2\binom nk=v_2(n!)-v_2(k!)-v_2((n-k)!)=s(k)+s(n-k)-s(n).\]
@@ -137,8 +136,7 @@ is even.</p><p>Therefore all binomial coefficients in row $n$ are odd exactly fo
 <div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 20: Parity, Coloring, and Process Termination &middot; Process Termination and Reachability</div>
 <div class="ct-text"><p>Let two integers $m$ and $n$ with $0&lt;m&lt;n$ be given. Consider all non-negative integers. Initially, only $m$ and $n$ are colored red, while all others are white.</p><p>The following process recolors the numbers step by step. In each step, the following happens:</p><ul class="ct-parts"><li><p><span class="ct-lbl">1.</span> It is checked whether there are red numbers. If there is at most one, the process terminates.</p></li><li><p><span class="ct-lbl">2.</span> Otherwise, let $k$ be the smallest red number. This number $k$ is now colored black.</p></li><li><p><span class="ct-lbl">3.</span> Next, $k+m$ and $k+n$ are considered. Any red number among these two is colored black, any white number among these two is colored red, and any black number among these two remains black.</p></li></ul><p>Show that:</p><ul class="ct-parts"><li><p><span class="ct-lbl">(a)</span> This process always terminates after a finite number of steps with a single red number $r$, regardless of how the numbers $m$ and $n$ were chosen.</p></li><li><p><span class="ct-lbl">(b)</span> For the single red number at termination, $r\leq 2^n-1$ holds.</p></li></ul></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>proof (the last red number is the least $r&gt;0$ for which $1+x^m+x^n$ divides $1+x^r$ over $\mathbb F_2$)</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Polynomials over the field with two elements)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Polynomials over the field with two elements</summary><div class="ct-text">
 <p><strong>Step 1: the rule &ldquo;black stays black&rdquo; is never used.</strong> Call a number $t$ <em>touched</em> in a step with
 smallest red number $k$ if $t\in\{k+m,k+n\}$; we also say that $m$ and $n$ are touched once by a virtual step $k=0$ before the start.
 A number $t$ can only be touched by the steps $k=t-m$ and $k=t-n$, so it is touched at most twice. A white number that is touched becomes red,
@@ -162,7 +160,8 @@ hence at the first moment when $s&gt;r-n$, still $s\le r$. So at every moment up
 So at least two numbers are red and the process continues.</p></li><li><p>If $r-n&lt;s\le r$: from (2) and $fH\equiv1\pmod{x^s}$ we get $f(G-H)\equiv0\pmod{x^s}$; since $f$ has constant term $1$, this forces
 $G\equiv H\pmod{x^s}$. Both $G$ and $H$ have degree $&lt;s$, hence $G=H$ and $R=1+fH=x^r$: the only red number is $r$.</p></li></ul><p>The smallest red number increases in every step, so after finitely many steps it exceeds $r-n$, and at that moment the red set is $\{r\}$ and
 the process stops. This proves (a), and (b) follows from $r\le 2^n-1$. (The process cannot stop earlier, by the first bullet.)</p>
-<h4>Solution 2 (A reversible 0-1 recurrence (state counting))</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; A reversible 0-1 recurrence (state counting)</summary><div class="ct-text">
 <p><strong>The rule &ldquo;black stays black&rdquo; is never used.</strong> Say $t$ is <em>touched</em> by the step with smallest red number $k$
 if $t\in\{k+m,k+n\}$, and let the initial colouring of $m,n$ count as one touch by a virtual step $k=0$. Then $t$ can be touched only by
 $k=t-m$ and $k=t-n$, i.e. at most twice. The smallest red number grows strictly from step to step ($k$ disappears, only larger numbers are
@@ -196,8 +195,7 @@ terminates with a single red number $r\le 2^n-1$, which proves (a) and (b).</p>
 \[\left|\frac{a-b}{a+b}+\frac{b-c}{b+c}+\frac{c-a}{c+a}\right|&lt;\frac1M\]
 holds for all such $a$, $b$, and $c$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$M=22$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Factor, push the largest side to the limit)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Factor, push the largest side to the limit</summary><div class="ct-text">
 <p>Let $E$ be the expression inside the absolute value. Bringing it to a common denominator (or checking the identity
 by expansion) gives
 \[E=\frac{a-b}{a+b}+\frac{b-c}{b+c}+\frac{c-a}{c+a}=-\frac{(a-b)(b-c)(c-a)}{(a+b)(b+c)(c+a)}.\]
@@ -211,7 +209,8 @@ Thus $g(t)&lt;\frac1{22}$ and $|E|&lt;\frac1{22}$ for every triangle; $M=22$ has
 triangles close to the degenerate triangle $(a,b,c)=(4,1,5)$. Concretely, for the triangle $(400,100,499)$,
 \[|E|=\frac{300\cdot399\cdot99}{500\cdot599\cdot899}=\frac{118503}{2692505}&gt;\frac1{23},\]
 because $23\cdot118503=2725569&gt;2692505$. Since $M$ with the property must satisfy $\frac1M&gt;|E|&gt;\frac1{23}$, every $M\ge23$ fails.</p><p>Hence the largest such integer is $M=\boxed{22}$. (The supremum of $|E|$ is $\max g\approx0.04446\approx\frac1{22.49}$, not attained.)</p>
-<h4>Solution 2 (Ravi substitution)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Ravi substitution</summary><div class="ct-text">
 <p>Write the sides as $a=y+z$, $b=z+x$, $c=x+y$ with $x,y,z&gt;0$ (possible exactly for triangles: $x=\frac{b+c-a}2$, etc.).
 The expression equals
 \[E=-\frac{(a-b)(b-c)(c-a)}{(a+b)(b+c)(c+a)}=-\frac{(y-x)(z-y)(x-z)}{(x+y+2z)(2x+y+z)(x+2y+z)}\]
@@ -234,8 +233,7 @@ the inequality with $M=23$ fails, and so it fails for every $M\ge23$.</p><p>The 
 \[a_n=a_{n-1}+(-1)^{a_{n-1}}\cdot a_{n-2},\qquad n=3,4,5\ldots\]
 Determine all possibilities for the initial values $a_1$ and $a_2$ for which the sequence becomes periodic, and find the corresponding period length in each case.</p><p><em>Note:</em> A sequence $(a_n)$ is called periodic if there exist positive integers $k$ and $l$ such that $a_{n+l}=a_n$ holds for all $n\geq k$. In this context, $l$ is called the period length of the sequence if, additionally, for no $k'\geq k$ a smaller value $0&lt;l'&lt;l$ already exists such that $a_{n+l'}=a_n$ holds for all $n\geq k'$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>periodic exactly when $a_1,a_2$ are not both even, or $a_1=a_2=0$. Period $1$ for $(0,0)$; period $3$ for $(x,x)$, $(x,0)$, $(0,x)$ with $x$ odd; period $6$ for all other pairs that are not both even.</p></div></details>
-<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Compute six steps; a sign argument for the even case)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Compute six steps; a sign argument for the even case</summary><div class="ct-text">
 <p><strong>Parities.</strong> If $a_{n-1}$ is even, $a_n=a_{n-1}+a_{n-2}$; if it is odd, $a_n=a_{n-1}-a_{n-2}$. In both cases
 $a_n\equiv a_{n-1}+a_{n-2}\pmod2$. So if $a_1,a_2$ are both even, all terms are even; otherwise the parities run through the cycle
 odd, odd, even, odd, odd, even, &hellip; (after at most two terms).</p><p><strong>A pair of odd terms.</strong> Suppose $a_k=u$ and $a_{k+1}=v$ are both odd. Applying the rule (each sign is fixed by the parity cycle):
@@ -253,7 +251,8 @@ some point, then $a_{n+2}=a_{n+1}+a_n$ has the sign of $a_n$ and $|a_{n+2}|=|a_n
 impossible. (A zero term $a_n=0$ gives $a_{n+2}=a_{n+1}$, two consecutive terms of the same sign.) So the sequence is unbounded and not periodic.</p><p><strong>Answer.</strong> The sequence is periodic exactly when $a_1,a_2$ are not both even, or $a_1=a_2=0$. The period is $\boxed{1}$ for $(0,0)$;
 $\boxed{3}$ for $(a_1,a_2)=(x,x),(x,0),(0,x)$ with $x$ odd (the sequence then repeats $x,x,0$); and $\boxed{6}$ for every other pair that is
 not both even. (In particular the sequence is periodic whenever $\gcd(a_1,a_2)=1$, the Grade 11 version.)</p>
-<h4>Solution 2 (A three-step involution; the maximum argument for the even case)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; A three-step involution; the maximum argument for the even case</summary><div class="ct-text">
 <p><strong>Parities.</strong> Since $(-1)^{a}a'\equiv a'\pmod 2$, always $a_n\equiv a_{n-1}+a_{n-2}\pmod2$. Thus both-even starting
 values give only even terms, and otherwise the parity pattern of $(a_n,a_{n+1})$ becomes (odd, odd) within two steps and then repeats every
 three steps: (odd,odd) $\to$ (odd,even) $\to$ (even,odd) $\to$ (odd,odd). (As computed: from $(x,y)$ = (odd, even) one step gives
@@ -271,7 +270,8 @@ $\max_{n\ge k}|a_n|=K$ is attained at some $n\ge k+2$ (take a later copy). Since
 Then $3K=|a_{n+2}+a_{n-2}|\le2K$, so $K=0$: the tail is identically $0$, and running the recurrence backwards ($a_{j-2}=a_j-a_{j-1}$) makes
 every term $0$, contradicting $(a_1,a_2)\ne(0,0)$.</p><p><strong>Answer.</strong> Periodic iff $a_1,a_2$ are not both even or $a_1=a_2=0$. The period is $\boxed{1}$ for $(0,0)$, $\boxed{3}$ for
 $(x,x),(x,0),(0,x)$ with $x$ odd, and $\boxed{6}$ for all other pairs not both even.</p>
-<h4>Solution 3 (Three-step involutions on parity classes; a sum of squares over one period)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 3 &ndash; Three-step involutions on parity classes; a sum of squares over one period</summary><div class="ct-text">
 <p>Write $P_j=(a_j,a_{j+1})$ for the pair of consecutive terms at position $j$. The pair $P_{j+1}$ is computed from $P_j$ alone, so if $P_i=P_j$ for some $i&lt;j$, then $P_{i+t}=P_{j+t}$ for all $t\ge0$.</p><p><strong>Parities.</strong> Since $(-1)^{a}a'\equiv a'\pmod 2$, we always have $a_j\equiv a_{j-1}+a_{j-2}\pmod 2$. Hence if $a_1,a_2$ are both even, all terms are even. Otherwise the parity type of $P_j$ runs through the cycle
 \[(\text{odd},\text{odd})\to(\text{odd},\text{even})\to(\text{even},\text{odd})\to(\text{odd},\text{odd}),\]
 so the parity type of $P_{j+3}$ equals that of $P_j$.</p><p><strong>Not both even: three steps.</strong> Apply the rule three times; each sign is fixed by the parities above.</p><ul class="ct-ul"><li><p>$P_j=(a,b)$ with $a,b$ odd: the next terms are $b-a$, then $(b-a)+b=2b-a$, then $(2b-a)-(b-a)=b$; so $P_{j+3}=(2b-a,\,b)$.</p></li><li><p>$P_j=(a,b)$ with $a$ odd, $b$ even: the next terms are $b+a$, then $(a+b)-b=a$, then $a-(a+b)=-b$; so $P_{j+3}=(a,\,-b)$.</p></li><li><p>$P_j=(a,b)$ with $a$ even, $b$ odd: the next terms are $b-a$, then $(b-a)-b=-a$, then $-a+(b-a)=b-2a$; so $P_{j+3}=(-a,\,b-2a)$.</p></li></ul><p>Call these maps $T_{oo}(a,b)=(2b-a,b)$, $T_{oe}(a,b)=(a,-b)$ and $T_{eo}(a,b)=(-a,b-2a)$. Each is an involution: $T_{oo}(2b-a,b)=(a,b)$, $T_{oe}(a,-b)=(a,b)$ and $T_{eo}(-a,b-2a)=(a,b-2a+2a)=(a,b)$. Since $P_{j+3}$ has the same parity type as $P_j$, the same map is applied again, and $P_{j+6}=P_j$ for every $j\ge1$. So the sequence is periodic from the start with period $6$.</p><p><em>Least period.</em> If $l$ is a period from some index on, so is $\gcd(l,6)$ (from a later index the tail has both periods $l$ and $6$, and $\gcd(l,6)$ is an integer combination of them). So the least period divides $6$. Periods $1$ and $2$ are impossible: exactly one of any three consecutive terms is even, so the parities do not repeat with period $1$ or $2$. Period $3$ from some index $k$ on means $P_{j+3}=P_j$ for all $j\ge k$; taking $j\equiv1\pmod 6$, where $P_j=P_1$, this gives $P_4=P_1$. Conversely $P_4=P_1$ gives $P_{t+3}=P_t$ for all $t\ge1$. So the period is $3$ exactly when $P_1=(a_1,a_2)$ is a fixed point of its map:</p><ul class="ct-ul"><li><p>$T_{oo}(a,b)=(a,b)$ iff $2b-a=a$, i.e. $a_1=a_2$ (odd);</p></li><li><p>$T_{oe}(a,b)=(a,b)$ iff $b=-b$, i.e. $a_2=0$ (and $a_1$ odd);</p></li><li><p>$T_{eo}(a,b)=(a,b)$ iff $-a=a$, i.e. $a_1=0$ (and $a_2$ odd).</p></li></ul><p>In all other cases with $a_1,a_2$ not both even the period is $6$.</p><p><strong>Both even.</strong> Now every term is even, so $a_{j+2}=a_{j+1}+a_j$ for all $j\ge1$. For $(a_1,a_2)=(0,0)$ the sequence is constantly $0$, with period $1$. Suppose now that the sequence is periodic with period $l$ from index $k$ on. Multiply $a_{i+2}=a_{i+1}+a_i$ by $a_{i+1}$ and add for $i=k,k+1,\dots,k+l-1$:
@@ -285,8 +285,7 @@ The products $c_i=a_ia_{i+1}$ also satisfy $c_{i+l}=c_i$ for $i\ge k$, so the su
 <div class="ct-text"><p>Let a prime $p$ and a positive integer $a$ be given such that $a-1$ is not divisible by $p$. Furthermore, let
 \[n=1+a^p+a^{2p}+\cdots+a^{(p-1)p}.\qquad(1)\]
 Show that $a^n-a$ is then divisible by $n$.</p><p><em>Note:</em> For $p=2$, the sum in (1) is contextually understood to be $1+a^2$, and for $p=3$ as $1+a^3+a^6$.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Reduce to $p^2\mid n-1$ and use Euler)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Reduce to $p^2\mid n-1$ and use Euler</summary><div class="ct-text">
 <p>Note $a\ne1$ (for $a=1$ the prime $p$ would divide $a-1=0$), so $a^p\ne1$ and the geometric sum gives
 \[n=\frac{a^{p^2}-1}{a^p-1},\qquad\text{so}\qquad n\mid a^{p^2}-1 .\]
 <em>Claim:</em> $p^2\mid n-1$. Then $a^{n-1}-1$ is divisible by $a^{p^2}-1$ (as $x^{p^2}-1\mid x^{p^2j}-1$), hence by $n$, and
@@ -294,7 +293,8 @@ $a^n-a=a(a^{n-1}-1)$ is divisible by $n$, as required.</p><p><em>Proof of the cl
 $b^{p-1}=a^{p(p-1)}\equiv1\pmod{p^2}$. Now
 \[(b-1)(b+b^2+\dots+b^{p-1})=b^p-b=b\,(b^{p-1}-1)\equiv0\pmod{p^2},\]
 and $b-1$ is coprime to $p$, so $p^2\mid b+\dots+b^{p-1}=n-1$.</p></li></ul><p>(For $p=2$ the second case cannot occur: $a$ odd would mean $2\mid a-1$.) This proves the claim and the statement.</p>
-<h4>Solution 2 (Lifting the exponent)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Lifting the exponent</summary><div class="ct-text">
 <p>As $a\ne1$ (otherwise $p\mid a-1=0$), summing the geometric series gives $n(a^p-1)=a^{p^2}-1$, so $n$ divides
 $a^{p^2}-1$, and therefore $n$ divides $a^{p^2j}-1$ for every $j\ge0$. It suffices to show $p^2\mid n-1$: then $a^{n-1}\equiv1$ and
 $a^n\equiv a\pmod n$.</p><p>Write $n-1=\dfrac{a^{p^2}-a^p}{a^p-1}=a^p\cdot\dfrac{a^{p(p-1)}-1}{a^p-1}$ and compare $p$-adic valuations $v_p$.</p><p>If $p\mid a$, then $v_p(n-1)\ge v_p(a^p)\ge p\ge2$, since the fraction is an integer ($a^p-1\mid a^{p(p-1)}-1$).</p><p>If $p\nmid a$, then $p$ is odd (for $p=2$, $a$ odd would give $2\mid a-1$). By Fermat $a^p\equiv a\not\equiv 1\pmod p$, so $v_p(a^p-1)=0$.
@@ -308,8 +308,7 @@ Hence $v_p(n-1)=0+v_p(a^{p(p-1)}-1)-v_p(a^p-1)\ge2$.</p><p>In both cases $p^2\mi
 <h3>Problem 6</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure &middot; Power of a Point</div>
 <div class="ct-text"><p>Let $k$ and $k'$ be two intersecting circles and $P$ one of the two intersection points. Let line $g$ run parallel to the common tangent to $k$ and $k'$ that is further away from $P$. This line intersects $k$ in $A$ and $C$, and $k'$ in $B$ and $D$, such that the four points $A$, $B$, $C$, and $D$ lie on $g$ in this order. The intersection points of $g$ with the angle bisectors of $\angle APB$ and $\angle CPD$ are denoted by $X$ and $Y$, respectively.</p><p>Prove that the circumcircles of triangles $PXC$ and $PBY$, as well as the angle bisector of $\angle BPC$, have a point in common that is different from $P$.</p></div>
-<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Ptolemy, the angle bisector theorem and one identity)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Ptolemy, the angle bisector theorem and one identity</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:374px" src="/assets/contests/2026-27/germany-mo-6_s1.svg" alt="Figure for the solution"></div>
 <p>Let $\tau$ be the common tangent farther from $P$, touching $k$ at $T$ and $k'$ at $T'$, and let $Q$ be the second
 intersection point of the circles. For two points $U,V$ of $g$ put
@@ -342,7 +341,8 @@ hence
 circle, and the line $\ell=PW$ meets it again at a point $Z_1$ on the other side of $W$ from $P$; by the intersecting chords theorem
 $WP\cdot WZ_1=WX\cdot WC$. In the same way $W$ is inside the chord $BY$ of $(PBY)$, and $\ell$ meets this circle again at $Z_2$ beyond $W$ with
 $WP\cdot WZ_2=WB\cdot WY$. By (3), $WZ_1=WZ_2$, and $Z_1,Z_2$ lie on the same ray from $W$, so $Z_1=Z_2$.</p><p>Therefore the circles $(PXC)$, $(PBY)$ and the bisector of $\angle BPC$ pass through a common point $Z=Z_1\ne P$.</p>
-<h4>Solution 2 (Ptolemy and the sine-area formula at $P$)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Ptolemy and the sine-area formula at $P$</summary><div class="ct-text">
 <p>Let $\tau$ be the common tangent farther from $P$, touching $k$ at $T$ and $k'$ at $T'$.</p><p><strong>Configuration.</strong> As $A,B,C,D$ lie on $g$ in this order, $B$ is inside $k$ and $D$ outside, so each of the two arcs of $k'$ between $B$
 and $D$ crosses $k$; thus the two intersection points of the circles lie on different sides of $g$. Since $\tau$ is the tangent farther from
 $P$ (equivalently, by the symmetry in the line of centres, $P$ is the intersection point farther from $\tau$), $P$ is on the side of $g$ away
@@ -375,7 +375,8 @@ the right side is $\frac{\sin\alpha\sin(\beta+\gamma)}{\sin\gamma\sin(\alpha+\be
 r\,[\sin(\beta+\gamma)\sin(\alpha+2\beta)-\sin\gamma\sin(\alpha+\beta)]$. By the product-to-sum formula both brackets equal
 \[\tfrac12\bigl[\cos(\alpha+\beta+\gamma)-\cos(\alpha+3\beta+\gamma)\bigr]=\sin\beta\,\sin(\alpha+2\beta+\gamma).\]
 So (3) holds, $Z_1=Z_2$, and this point $\ne P$ lies on both circles and on the bisector of $\angle BPC$.</p>
-<h4>Solution 3 (Coordinates with the parameter $a=\frac12\left(u-\frac1u\right)$)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 3 &ndash; Coordinates with the parameter $a=\frac12\left(u-\frac1u\right)$</summary><div class="ct-text">
 <p>Let $Q$ be the second intersection point of $k$ and $k'$, and let $\tau,\tau'$ be the two common tangents, $\tau$ the one farther from $P$.</p><p><strong>Configuration.</strong> On $g$ the order is $A,B,C,D$, so $B$ lies inside $k$ (inside its chord $AC$) and $D$ outside $k$. Each of the two arcs of $k'$ from $B$ to $D$, one on each side of $g$, goes from inside $k$ to outside $k$ and therefore meets $k$, at $P$ or at $Q$. Neither $P$ nor $Q$ lies on $g$ (the points of $k$ on $g$ are $A,C$, those of $k'$ are $B,D$), so $P$ and $Q$ lie on opposite sides of $g$. The reflection $\sigma$ in the line of centres maps each circle to itself, swaps $P$ and $Q$, and maps the pair of common tangents to itself; it does not fix $\tau$ (a line fixed by $\sigma$ is the line of centres or perpendicular to it, and such a line tangent to both circles would touch both at the same point of the line of centres, which is impossible for circles meeting in two points), so $\sigma(\tau')=\tau$. Hence the distance from $Q$ to $\tau$ equals the distance from $P$ to $\tau'$, which is smaller than the distance from $P$ to $\tau$: $P$ is farther from $\tau$ than $Q$.</p><p>Choose coordinates with $P=(0,0)$ and $g$ the line $y=1$, with $A,B,C,D$ in increasing order of abscissa (scale so that $P$ is at distance $1$ from $g$). Then $Q$ has ordinate $y_Q&gt;1$. The line $\tau$ is parallel to $g$, so $\tau$ is $y=t$ for some $t$, and both circles, hence $P$ and $Q$, lie on the same side of $\tau$. If $t&lt;0$, the distances of $P$ and $Q$ from $\tau$ would be $-t&lt;y_Q-t$, contradicting the previous paragraph. So $t&gt;y_Q&gt;1$, and $\tau$ is the line touching each circle at its <em>highest</em> point. Therefore the condition on $g$ says exactly: the highest points of $k$ and $k'$ have the same ordinate.</p><p><strong>The parameter.</strong> The map $u\mapsto s(u)=\frac12\left(u-\frac1u\right)$ is a strictly increasing bijection from $(0,\infty)$ onto $\mathbb R$, so every point of $g$ is $(s(u),1)$ for exactly one $u&gt;0$; call $u$ its parameter. Since $1+s(u)^2=\frac14\left(u+\frac1u\right)^2$, the distance from $P$ to this point is $\frac12\left(u+\frac1u\right)$, and the unit vector from $P$ towards it is
 \[e(u)=\left(\frac{u^2-1}{u^2+1},\ \frac{2u}{u^2+1}\right).\]
 Let $A,B,C,D$ have parameters $p_A&lt;p_B&lt;p_C&lt;p_D$.</p><p><strong>Step 1: the tangency condition.</strong> A circle through $P=(0,0)$ has an equation $x^2+y^2-2\alpha x-2\beta y=0$, with centre $(\alpha,\beta)$ and radius $\sqrt{\alpha^2+\beta^2}$. If it meets $g$ at abscissas $a$ and $c$, then $a,c$ are the roots of $x^2-2\alpha x+1-2\beta=0$, so $2\alpha=a+c$ and $2\beta=1-ac$. The radius squared is $\frac14\left((a+c)^2+(1-ac)^2\right)=\frac14(1+a^2)(1+c^2)$, and the highest point has ordinate

@@ -97,7 +97,6 @@ description: Czech-Austrian-Polish-Slovak Match 2026: problems with answers and 
 <p>The 6 problems of the Czech-Austrian-Polish-Slovak Match 2026, each with our own solutions, hidden until you open them. 3 of them ask for an answer and 3 ask for a proof. Where a problem has a final answer, it is shown separately. Try a problem first, then check.</p><p>The Czech-Austrian-Polish-Slovak Match has two days with three problems each.</p>
 </div>
 <div class="ct-credit">Problems: Czech-Austrian-Polish-Slovak Match 2026, from the AoPS contest collection or the official paper. Solutions written by MCC.</div>
-<div class="ct-bar"><button type="button" onclick="ctAll(true)">Show all answers and solutions</button><button type="button" onclick="ctAll(false)">Hide all</button></div>
 <div class="ct-toc-wrap"><div class="ct-toc-row"><span class="ct-toc-g">Day 1</span><a href="#p1">1</a><a href="#p2">2</a><a href="#p3">3</a></div><div class="ct-toc-row"><span class="ct-toc-g">Day 2</span><a href="#p4">4</a><a href="#p5">5</a><a href="#p6">6</a></div></div>
 
 {% raw %}
@@ -109,8 +108,7 @@ description: Czech-Austrian-Polish-Slovak Match 2026: problems with answers and 
 \[a_1+\dots+a_{i-1}=a_{i+1}+\dots+a_{100}.\]
 What is the largest possible number of good indices?</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$66$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Consecutive good indices and an explicit sequence)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Consecutive good indices and an explicit sequence</summary><div class="ct-text">
 <p>For $2\le i\le 99$ let $D_i=(a_1+\dots+a_{i-1})-(a_{i+1}+\dots+a_{100})$; the index $i$ is good iff $D_i=0$. Moving from $i$
 to $i+1$, the term $a_i$ joins the left sum and $a_{i+1}$ leaves the right sum, so
 \[
@@ -130,7 +128,8 @@ So all $66$ indices $i\not\equiv 1\pmod 3$ with $2\le i\le 99$ are good. The ter
 the $c_j$ are even, nonzero ($613$ is not a square) and strictly decreasing; and $c_j=-c_l$ would mean $(j+2)^2+(l+2)^2=1226$ with
 $2\le j+2,\,l+2\le 34$. This is impossible: the larger square would be at least $613$, so the larger base would be at least $25$,
 but $1226-25^2,\dots,1226-34^2$ are $601,550,497,442,385,326,265,202,137,70$, none of which is a square.</p><p>The largest possible number of good indices is $\boxed{66}$.</p>
-<h4>Solution 2 (Prefix sums that alternate in sign)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Prefix sums that alternate in sign</summary><div class="ct-text">
 <p>Let $s_0=0$ and $s_i=a_1+a_2+\dots+a_i$ for $1\le i\le 100$, so $a_i=s_i-s_{i-1}$. The left sum in the definition is $s_{i-1}$ and
 the right sum is $s_{100}-s_i$, so the index $i$ is good if and only if
 \[
@@ -165,8 +164,7 @@ and
 \[k\nmid x^2+y^2+z^2+w^2.\]
 Find all divisive positive integers.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$k\in\{1,2,4,8,16\}$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (All entries are even; a Vieta family modulo $32$ and modulo $p$)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; All entries are even; a Vieta family modulo $32$ and modulo $p$</summary><div class="ct-text">
 <p>Write $S=x^2+y^2+z^2+w^2=xyzw$ for a solution.</p><p><strong>All entries are even.</strong> If all four were odd, then $S\equiv 4\pmod 8$ while $xyzw$ is odd. Otherwise $xyzw$ is even, so the
 number of odd entries is even ($S$ is even); if it is $2$, then $S\equiv 2\pmod 4$ while $xyzw$ has two even factors and is divisible
 by $4$. Hence there are no odd entries, and $16\mid xyzw=S$ for every solution. So every divisor of $16$ is divisive (there are no
@@ -181,7 +179,8 @@ infinitely many quadruples.</p><p><strong>$k$ with an odd prime factor $p$ is no
 ($b_{n+1}=4b_n-b_{n-1}$, $b_{n-1}=4b_n-b_{n+1}$), and there are finitely many pairs, so the sequence of pairs is purely periodic. As
 $(b_1,b_2)\equiv(1,1)$, infinitely many $n$ have $b_nb_{n+1}\equiv1\pmod p$; for them $p\nmid 16b_nb_{n+1}=S_n$, so $k\nmid S_n$.</p><p>Every $k$ that does not divide $16$ has an odd prime factor or is divisible by $32$. Hence the divisive integers are exactly
 $\boxed{1,\,2,\,4,\,8,\,16}$.</p>
-<h4>Solution 2 (Exact power of two by descent; coprime consecutive terms)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Exact power of two by descent; coprime consecutive terms</summary><div class="ct-text">
 <p><strong>Every solution has $S=16\cdot(\text{odd})$.</strong> Let $S=x^2+y^2+z^2+w^2=xyzw$ and let $t$ be the number of odd entries; then
 $S\equiv t\pmod 4$. If $t=4$, then $S\equiv 4\pmod 8$ but $xyzw$ is odd. If $1\le t\le 3$, then $xyzw$ is even, so $t$ is even, $t=2$,
 and $S\equiv 2\pmod 4$ while $4\mid xyzw$. So $t=0$ and $(x,y,z,w)=2(x',y',z',w')$ with
@@ -211,8 +210,7 @@ of $p$ is divisive.</p><p>Therefore the divisive integers are exactly $\boxed{1,
 <div class="ct-text"><p>Let $ABCD$ be a quadrilateral, not a rhombus, possessing an incenter $I$. Points $K$ and $L$ are chosen on the segments $IA$ and $IC$, respectively, such that $CK\perp ID$ and $AL\perp IB$. Points $P$ and $Q$ are chosen on the segments $AD$ and $BC$, respectively, such that
 \[\angle AKP=\angle ICD\qquad\text{and}\qquad\angle CLQ=\angle IAB.\]
 Prove that $IP=IQ$.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (A concyclicity lemma and a symmetric formula)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; A concyclicity lemma and a symmetric formula</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:266px" src="/assets/contests/2026-27/caps-match-3_s1.svg" alt="Figure for the solution"></div>
 <p>Let $r$ be the inradius and $\alpha,\beta,\gamma,\delta$ the half-angles at $A,B,C,D$, so $\alpha+\beta+\gamma+\delta=180^\circ$,
 $\angle IAB=\angle IAD=\alpha$, $\angle ICB=\angle ICD=\gamma$, $IA=r/\sin\alpha$, $IC=r/\sin\gamma$. In triangle $AIB$ the angle at $I$
@@ -248,7 +246,8 @@ computation with $\alpha$ and $\gamma$ exchanged gives
 CQ-CU=-\,\frac{r^2\cos(\gamma+\alpha)+m\sin\gamma\sin\alpha}{r\sin(\gamma+\alpha)} .
 \]
 The two expressions are equal, so $IP=IQ$. $\blacksquare$</p>
-<h4>Solution 2 (Contact chords and a circle through $I$, $E$, $F$)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Contact chords and a circle through $I$, $E$, $F$</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:362px" src="/assets/contests/2026-27/caps-match-3_s2.svg" alt="Figure for the solution"></div>
 <p>Let the incircle (centre $I$, radius $r$) touch $AB$, $BC$, $CD$, $DA$ at $S$, $U$, $V$, $T$, and let
 $\alpha,\beta,\gamma,\delta$ be the half-angles at $A,B,C,D$, so $\alpha+\beta+\gamma+\delta=180^\circ$. Label the
@@ -301,8 +300,7 @@ $\theta$ (or $180^\circ-\theta$), so $IP=2\rho\sin\theta=IQ$. $\blacksquare$</p>
 <div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 44: Combinatorial Games and Strategy &middot; Invariant-Based Game Analysis</div>
 <div class="ct-text"><p>Tom and Jerry play the following game on a $16\times 16$ chessboard. Jerry starts by selecting some, but not all, of the squares, and placing one red pebble on each of the selected squares. Tom then places his one black pebble on an empty square and chooses whether he wants to be the hunter or the prey. After that, Tom and Jerry alternate turns with Jerry starting. In each turn, a player chooses one of his pebbles and moves it to a square sharing an edge with the current square. If such a turn would move the pebble outside of the board, the pebble appears on the other side of the board (i.e. if the pebble is on the left border, it appears in the same row on the right border and similarly for the other cases). If at any point in the game a pebble of the hunter is on the same square as a pebble of the prey, the hunter wins and the game ends. An infinite game is a win for the prey. Which of the two players has a winning strategy?</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>Jerry wins</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (One placement that works for both roles)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; One placement that works for both roles</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:371px" src="/assets/contests/2026-27/caps-match-4_s1.svg" alt="Figure for the solution"></div>
 <p><strong>Jerry</strong> has a winning strategy.</p><p>Use coordinates $(x,y)$ modulo $16$ ($x$ = column, $y$ = row); neighbours differ by $1$ in one coordinate (cyclically). Split the board into
 sixteen $4\times4$ blocks; the <em>centre</em> of a block is its middle $2\times2$ square $\{4i+1,4i+2\}\times\{4j+1,4j+2\}$.
@@ -338,8 +336,7 @@ phase 2 together take $64+56=120$ steps, so the hunter wins after finitely many 
 and
 \[\angle LDA+\angle MBD=\angle MCD.\]
 Prove that the points $B$, $C$, $K$, and $L$ lie on one circle.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Law of sines and distances to an auxiliary line)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Law of sines and distances to an auxiliary line</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:242px" src="/assets/contests/2026-27/caps-match-5_s1.svg" alt="Figure for the solution"></div>
 <p>Let $\Gamma$ (radius $R$) be the circumcircle; $ABCD$ is convex with $M$ on segment $AD$, so at $B$ the rays $BA,BM,BD,BC$ come
 in this order, and at $C$ the rays $CB,CA,CM,CD$.</p><p><em>The two given angles are equal.</em> Let $\varphi=\angle DAK=\angle ABM-\angle ACM$. Since $\angle ABD=\angle ACD$ (inscribed, on arc $AD$),
@@ -378,7 +375,8 @@ The same construction at $C$ (exchange $A\leftrightarrow D$, $B\leftrightarrow C
 By the extended law of sines in $\Gamma$: $AB=2R\sin\angle ACB$, $DB=2R\sin\angle DCB$, $DC=2R\sin\angle DBC$, $AC=2R\sin\angle ABC$. Both
 right-hand sides equal $2R\bigl(\sin\angle ACB\sin\angle DBC+\sin\angle DCB\sin\angle ABC\bigr)$, which proves $(*)$. Hence $B$, $C$, $K$, $L$
 lie on one circle. $\blacksquare$</p>
-<h4>Solution 2 (Two auxiliary circles and the butterfly theorem)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Two auxiliary circles and the butterfly theorem</summary><div class="ct-text">
 <p>The cyclic quadrilateral $ABCD$ is convex, the rays $BM$ and $CM$ lie inside the angles $ABD$ and $ACD$, and
 $\angle ABD=\angle ACD$ (inscribed, on arc $AD$). Hence $\angle ABM+\angle MBD=\angle ACM+\angle MCD$, and therefore
 \[ \varphi:=\angle DAK=\angle ABM-\angle ACM=\angle MCD-\angle MBD=\angle LDA . \]
@@ -418,8 +416,7 @@ that $B$, $C$, $K$, $L$ lie on one circle. $\blacksquare$</p>
 are all integers. Prove that
 \[a_1a_2\cdots a_n+\frac{1}{a_1a_2\cdots a_n}\]
 is also an integer.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (An eigenvector of a product of integer matrices)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; An eigenvector of a product of integer matrices</summary><div class="ct-text">
 <p>Let $m_i=a_i+\frac1{a_{i+1}}\in\mathbb Z$ (indices modulo $n$), $P=a_1a_2\cdots a_n$, and
 \[
 M_i=\begin{pmatrix} m_i &amp; -1\\ 1 &amp; 0\end{pmatrix},\qquad v_i=\begin{pmatrix} a_i\\ 1\end{pmatrix}.
@@ -437,7 +434,8 @@ $t^2-(\operatorname{tr}W)\,t+1$, and $P^2-(\operatorname{tr}W)P+1=0$. Dividing b
 \[
 P+\frac1P=\operatorname{tr}W\in\mathbb Z . \qquad\blacksquare
 \]</p>
-<h4>Solution 2 (A domino expansion with cancellation in pairs)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; A domino expansion with cancellation in pairs</summary><div class="ct-text">
 <p>Indices are taken modulo $n$. Let $s_i=a_i+\frac1{a_{i+1}}$ (an integer) and $P=a_1a_2\cdots a_n$. Arrange $1,2,\dots,n$
 around a circle; a <em>domino</em> is a pair of neighbours $(i,i+1)$, $1\le i\le n$ (for $n=2$ the dominoes $(1,2)$ and
 $(2,1)$ count as different). A <em>tiling</em> is a set $\mathcal D$ of dominoes no two of which share a number; the numbers

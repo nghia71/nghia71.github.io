@@ -97,7 +97,6 @@ description: HMMT November 2026: General and Theme rounds: problems with answers
 <p>The 20 problems of the HMMT November 2026: General and Theme rounds, each with our own solutions, hidden until you open them. Where a problem has a final answer, it is shown separately. Try a problem first, then check.</p><p>HMMT November 2026 was held at Harvard on 7 November 2026. These are its General Round and Theme Round, each of 10 short-answer problems, in full.</p>
 </div>
 <div class="ct-credit">Problems: HMMT November 2026: General and Theme rounds, from the AoPS contest collection or the official paper. Solutions written by MCC.</div>
-<div class="ct-bar"><button type="button" onclick="ctAll(true)">Show all answers and solutions</button><button type="button" onclick="ctAll(false)">Hide all</button></div>
 <div class="ct-toc-wrap"><div class="ct-toc-row"><span class="ct-toc-g">General Round</span><a href="#p1">1</a><a href="#p2">2</a><a href="#p3">3</a><a href="#p4">4</a><a href="#p5">5</a><a href="#p6">6</a><a href="#p7">7</a><a href="#p8">8</a><a href="#p9">9</a><a href="#p10">10</a></div><div class="ct-toc-row"><span class="ct-toc-g">Theme Round</span><a href="#p11">1</a><a href="#p12">2</a><a href="#p13">3</a><a href="#p14">4</a><a href="#p15">5</a><a href="#p16">6</a><a href="#p17">7</a><a href="#p18">8</a><a href="#p19">9</a><a href="#p20">10</a></div></div>
 
 {% raw %}
@@ -107,8 +106,7 @@ description: HMMT November 2026: General and Theme rounds: problems with answers
 <div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Combinatorics &middot; LPS VI, Chapter 10: Logical Deduction and Constraint Puzzles &middot; Constraint Satisfaction</div>
 <div class="ct-text"><p>Each cell of the following $1\times 8$ grid is labeled with a single-digit positive integer such that any two adjacent cells differ by either $3$ or $5$. Compute the sum of all eight numbers in the grid.</p><div class="ct-fig"><img style="width:250px" src="/assets/contests/2026-27/hmmt-nov-gt-1.svg" alt="Figure for General Round, Problem 1"></div></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$38$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Forced cells)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Forced cells</summary><div class="ct-text">
 <p>Number the cells $1$ to $8$ from left to right, so cells $1,3,6,8$ hold $6,8,7,5$. Every cell holds an integer from $1$ to $9$, and the neighbours of a value $v$ must lie in $\{v-5,\,v-3,\,v+3,\,v+5\}$.</p><p><strong>Cell 2</strong> is adjacent to $6$ and to $8$. The admissible neighbours of $6$ are $1,3,9$ and those of $8$ are $3,5$, so cell $2$ holds $3$.</p><p><strong>Cell 7</strong> is adjacent to $7$ and to $5$. The admissible neighbours of $7$ are $2,4$ and those of $5$ are $2,8$, so cell $7$ holds $2$.</p><p><strong>Cells 4 and 5.</strong> Cell $4$ is adjacent to $8$, so it holds $3$ or $5$; cell $5$ is adjacent to $7$, so it holds $2$ or $4$. They must differ by $3$ or $5$. The pairs $(3,2)$, $(3,4)$, $(5,4)$ differ by $1$, and only $(5,2)$ works. So cell $4$ holds $5$ and cell $5$ holds $2$.</p><p>The grid is $6,3,8,5,2,7,2,5$; every adjacent difference is $3$ or $5$, and the sum is
 \[6+3+8+5+2+7+2+5=\boxed{38}.\]</p>
 </div></details>
@@ -118,12 +116,12 @@ description: HMMT November 2026: General and Theme rounds: problems with answers
 <div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VII scale">E</span>Algebra &middot; LPS VII, Chapter 9: Polynomials and Root-Coefficient Strategy &middot; Vieta&#x27;s Relations</div>
 <div class="ct-text"><p>Suppose $m$ and $b$ are positive real numbers such that the line $y=mx+b$ intersects the parabola $y=x^2$ at two points whose $x$-coordinates differ by $4$ and whose $y$-coordinates differ by $12$. Compute $b$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\frac{7}{4}$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Vieta's formulas)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Vieta's formulas</summary><div class="ct-text">
 <p>The intersection points have $x$-coordinates $x_1&lt;x_2$, the roots of $x^2=mx+b$, that is, of $x^2-mx-b=0$. By Vieta's formulas, $x_1+x_2=m$ and $x_1x_2=-b$.</p><p>Both points lie on the line, so their $y$-coordinates differ by $m(x_2-x_1)=4m$. Since $m&gt;0$, this gives $4m=12$, so $m=3$.</p><p>Also
 \[(x_2-x_1)^2=(x_1+x_2)^2-4x_1x_2=m^2+4b,\]
 so $16=9+4b$ and $b=\boxed{\frac{7}{4}}$.</p>
-<h4>Solution 2 (Using the parabola)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Using the parabola</summary><div class="ct-text">
 <p>Let the two intersection points be $(t,t^2)$ and $(t+4,(t+4)^2)$. Their $y$-coordinates differ by
 \[(t+4)^2-t^2=8t+16.\]
 The line through them has positive slope $m$, so the right-hand point is higher and $8t+16=12$, giving $t=-\frac12$. The points are $\left(-\frac12,\frac14\right)$ and $\left(\frac72,\frac{49}{4}\right)$, and the slope of the line is $\frac{12}{4}=3$. Its $y$-intercept is
@@ -135,11 +133,11 @@ The line through them has positive slope $m$, so the right-hand point is higher 
 <div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VII scale">E</span>Combinatorics &middot; LPS VII, Chapter 2: Fundamental Counting and Structured Enumeration &middot; Constraint-Based Enumeration</div>
 <div class="ct-text"><p>Eric the monkey has no bananas. Every morning, Eric may optionally go to the supermarket to buy a single bunch of exactly $5$ bananas. Eric may only go to the supermarket $3$ times. Every night, Eric must eat $1$ banana or else he dies. Compute the number of ways Eric may survive for $15$ nights.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$35$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Deadlines for the three trips)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Deadlines for the three trips</summary><div class="ct-text">
 <p>Eric eats $15$ bananas in $15$ nights, and each trip gives exactly $5$ bananas, so he must make all $3$ trips, on mornings $d_1&lt;d_2&lt;d_3$ among mornings $1$ to $15$. A way of surviving is exactly such a choice of three mornings for which he never runs out.</p><p>Before night $n$ he has eaten $n-1$ bananas and must eat one more, so the bananas bought on mornings $1,\dots,n$ must number at least $n$. With $5$ bananas per trip this says:</p><ul class="ct-ul"><li><p>at least one trip by morning $1$, so $d_1=1$;</p></li><li><p>at least two trips by morning $6$, so $d_2\le 6$;</p></li><li><p>at least three trips by morning $11$, so $d_3\le 11$.</p></li></ul><p>Conversely, if $d_1=1$, $d_2\le 6$ and $d_3\le 11$, then by night $n$ he has bought at least $5$ bananas for $n\le 5$, at least $10$ for $n\le 10$ and $15$ for $n\le 15$, so he survives.</p><p>For each $d_2\in\{2,3,4,5,6\}$ the number of choices of $d_3$ with $d_2&lt;d_3\le 11$ is $11-d_2$, so the count is
 \[9+8+7+6+5=\boxed{35}.\]</p>
-<h4>Solution 2 (Complementary counting)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Complementary counting</summary><div class="ct-text">
 <p>Eric needs $15$ bananas and each of his at most $3$ trips brings $5$, so he makes exactly $3$ trips during mornings $1$ to $15$. On night $1$ he must already have a banana, so the first trip is on morning $1$. The other two trips are on mornings $d_2&lt;d_3$ chosen from $2,\dots,15$, which can be done in $\binom{14}{2}=91$ ways.</p><p>Eric starves exactly when he runs out before a trip. After the first trip he has bananas for nights $1$ to $5$, so he starves if $d_2\ge 7$; if $d_2\le 6$, then after two trips he has bananas for nights $1$ to $10$, and he starves exactly when $d_3\ge 12$.</p><ul class="ct-ul"><li><p>$d_2\ge 7$: both mornings come from $7,\dots,15$, giving $\binom{9}{2}=36$ choices.</p></li><li><p>$d_2\le 6$ and $d_3\ge 12$: $5\cdot 4=20$ choices.</p></li></ul><p>These cases do not overlap, so the number of ways to survive is $91-36-20=\boxed{35}$.</p>
 </div></details>
 </section>
@@ -148,11 +146,11 @@ The line through them has positive slope $m$, so the right-hand point is higher 
 <div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Geometry &middot; LPS VI, Chapter 28: Right Triangles and the Pythagorean Framework &middot; Distance from Perpendicular Structure</div>
 <div class="ct-text"><p>Square $AXYZ$ with area $13$ is placed along hypotenuse $\overline{AC}$ of right triangle $ABC$. Given that the distances from $X$ and $Y$ to $\overline{BC}$ are $10$ and $8$ respectively, compute $BC$.</p><div class="ct-fig"><img style="width:290px" src="/assets/contests/2026-27/hmmt-nov-gt-4.svg" alt="Figure for General Round, Problem 4"></div></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\frac{21}{2}$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Trigonometry of the tilted square)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Trigonometry of the tilted square</summary><div class="ct-text">
 <p>Let $\theta=\angle ACB$ and $s=\sqrt{13}$, the side of the square. Measure heights above line $BC$.</p><p>The side $XY$ is parallel to $AZ$, which lies along $AC$, so $XY$ makes the angle $\theta$ with $BC$; going from $X$ to $Y$ we move away from $A$ along the direction of $AC$, so the height drops by $s\sin\theta$. Thus $s\sin\theta=10-8=2$, so $\sin\theta=\frac{2}{\sqrt{13}}$ and $\cos\theta=\frac{3}{\sqrt{13}}$.</p><p>The side $AX$ is perpendicular to $AC$ and points away from the triangle, so going from $A$ to $X$ the height rises by $s\cos\theta=3$. Hence $AB$, the height of $A$, equals $10-3=7$.</p><p>Finally, in right triangle $ABC$,
 \[BC=\frac{AB}{\tan\theta}=7\cdot\frac{3}{2}=\boxed{\frac{21}{2}}.\]</p>
-<h4>Solution 2 (Congruent right triangles)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Congruent right triangles</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:272px" src="/assets/contests/2026-27/hmmt-nov-gt-4_s2.svg" alt="Figure for the solution"></div>
 <p>Let $P$ be the point with $XP$ horizontal and $PY$ vertical (so $P$ is directly above $Y$ at the height of $X$), and let $Q$ be the point with $AQ$ horizontal and $QX$ vertical. Here horizontal means parallel to $BC$.</p><p>The segments $XY$ and $AX$ are perpendicular and have the same length $\sqrt{13}$. A rotation by $90^\circ$ carries one onto the other (up to direction) and turns horizontal segments into vertical ones and vice versa, so the right triangles $XPY$ and $AQX$ are congruent with the legs swapped:
 \[AQ=PY=10-8=2,\qquad QX=XP=\sqrt{XY^2-PY^2}=\sqrt{13-4}=3.\]
@@ -165,8 +163,7 @@ So $X$ is $3$ higher than $A$, and $AB=10-3=7$.</p><p>The side $AZ$ is parallel 
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Algebra &middot; LPS VII, Chapter 9: Polynomials and Root-Coefficient Strategy &middot; Integer and Rational Root Structure</div>
 <div class="ct-text"><p>Let $\alpha$ be the unique real number such that both $\alpha+\sqrt{\tfrac{11}{12}}$ and $\alpha^3+\sqrt{\tfrac{11}{12}}$ are positive and rational. Compute $\alpha^3+\sqrt{\tfrac{11}{12}}$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\frac{25}{54}$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Comparing irrational parts)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Comparing irrational parts</summary><div class="ct-text">
 <p>Let $s=\sqrt{\tfrac{11}{12}}=\frac{\sqrt{33}}{6}$. Since $33$ is not a perfect square, $s$ is irrational, so if $u+vs=u'+v's$ with rational $u,v,u',v'$, then $u=u'$ and $v=v'$.</p><p>Let $p=\alpha+s$, which is rational, so $\alpha=p-s$. Using $s^2=\frac{11}{12}$ and $s^3=\frac{11}{12}s$,
 \[\alpha^3=(p-s)^3=p^3-3p^2s+3ps^2-s^3=\left(p^3+\frac{11}{4}p\right)-\left(3p^2+\frac{11}{12}\right)s,\]
 so
@@ -174,7 +171,8 @@ so
 This is rational exactly when $3p^2=\frac{1}{12}$, that is, $p=\pm\frac16$; positivity of $\alpha+s=p$ forces $p=\frac16$. Then
 \[\alpha^3+s=\frac{1}{216}+\frac{11}{24}=\frac{1+99}{216}=\boxed{\frac{25}{54}},\]
 which is indeed positive.</p>
-<h4>Solution 2 (A quadratic factor of a cubic)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; A quadratic factor of a cubic</summary><div class="ct-text">
 <p>Let $s=\sqrt{\tfrac{11}{12}}$, which is irrational because $\tfrac{11}{12}=\tfrac{33}{36}$ and $33$ is not a perfect square. Let $p=\alpha+s$ and $q=\alpha^3+s$, both rational. Then $\alpha=p-s$ is irrational, and it is a root of
 \[g(x)=(x-p)^2-\tfrac{11}{12}\qquad\text{and of}\qquad h(x)=x^3-x-(q-p),\]
 both with rational coefficients. Divide $h$ by the monic quadratic $g$: $h(x)=g(x)(x-t)+R(x)$ with $t$ rational and $R(x)=ux+v$ rational of degree at most $1$. Then $R(\alpha)=h(\alpha)-g(\alpha)(\alpha-t)=0$; if $u\ne0$ this would make $\alpha=-\frac vu$ rational, so $u=0$ and then $v=0$. Hence $h(x)=g(x)(x-t)$, and the roots of $h$ are $p+s$, $p-s$ and $t$.</p><p>By Vieta's formulas for $h(x)=x^3+0x^2-x-(q-p)$: the roots sum to $0$, so $t=-2p$; the sum of their pairwise products is $-1$, so
@@ -189,15 +187,15 @@ Therefore $q=\frac16+\frac{8}{27}=\frac{9+16}{54}=\boxed{\frac{25}{54}}$.</p>
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 11: Similarity, Homothety, and Ratio Geometry &middot; Homothety Centers and Image Tracking</div>
 <div class="ct-text"><p>Let $O$ be the circumcenter of an acute triangle $ABC$, and let $D$ and $E$ be points on side $BC$ such that $\overline{OD}$ is parallel to $\overline{AB}$ and $\overline{OE}$ is parallel to $\overline{AC}$. Given that $BD=7$, $DE=6$, and $EC=5$, compute $AO$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\sqrt{105}$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (A homothety of ratio one third)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; A homothety of ratio one third</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:308px" src="/assets/contests/2026-27/hmmt-nov-gt-6_s1.svg" alt="Figure for the solution"></div>
 <p>The points lie on side $BC$ in the order $B,D,E,C$: if $E$ came before $D$, then $D$ would lie on segment $EC$ and $DE\le EC=5$, contradicting $DE=6$. So $BC=7+6+5=18$. Put $B$ at $0$ on line $BC$, so $D$, $E$, $C$ are at $7$, $13$, $18$. Since the triangle is acute, $O$ lies inside it, on the same side of $BC$ as $A$.</p><p>Triangles $DOE$ and $BAC$ have $DO\parallel BA$, $OE\parallel AC$ and $DE\parallel BC$ (both on line $BC$), and $O$, $A$ lie on the same side of $BC$. Hence there is a homothety with positive ratio $\frac{DE}{BC}=\frac{6}{18}=\frac13$ taking $B\mapsto D$, $C\mapsto E$, $A\mapsto O$. It maps line $BC$ to itself, so its centre $X$ lies on $BC$, and $D=X+\frac13(B-X)$ gives $7=\frac23X$, so $X=\frac{21}{2}$ (check: $\frac{21}{2}+\frac13\left(18-\frac{21}{2}\right)=13$, the position of $E$).</p><p>Let $F$ be the foot of the altitude from $A$ and $M$ the midpoint of $BC$, at $9$; since $O$ is the circumcentre, $OM\perp BC$. The homothety maps the perpendicular from $A$ to $BC$ onto the perpendicular from $O$ to $BC$, so it maps $F$ to $M$:
 \[9=X+\tfrac13(F-X)\quad\Longrightarrow\quad F=X+3(9-X)=6.\]
 Let $h=AF$; then $OM=\frac h3$. Now $OA=OB$ gives
 \[(9-6)^2+\left(h-\tfrac h3\right)^2=9^2+\left(\tfrac h3\right)^2\quad\Longrightarrow\quad 9+\tfrac{4h^2}{9}=81+\tfrac{h^2}{9}\quad\Longrightarrow\quad h^2=216.\]
 Therefore $AO^2=OB^2=81+\frac{216}{9}=105$, and $AO=\boxed{\sqrt{105}}$. (Indeed $AB^2=252$, $AC^2=360$, $BC^2=324$, so the triangle is acute.)</p>
-<h4>Solution 2 (Tangents of the angles)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Tangents of the angles</summary><div class="ct-text">
 <p>Let $M$ be the midpoint of $BC$ and $d=OM$; since $O$ is the circumcentre of an acute triangle, $OM\perp BC$ and $O$ lies on the same side of $BC$ as $A$. The points lie on side $BC$ in the order $B,D,E,C$ (if $E$ came before $D$, then $D$ would lie on segment $EC$ and $DE\le EC=5&lt;6$), so $BC=7+6+5=18$ and $BM=MC=9$, so $DM=9-7=2$ with $D$ between $B$ and $M$, and $ME=9-5=4$ with $E$ between $M$ and $C$.</p><p>Since $DO\parallel BA$ and both rays $DO$ and $BA$ point from line $BC$ into the same half-plane, $\angle ODM=\angle ABC$; in right triangle $ODM$ this gives $\tan B=\frac d2$. In the same way $OE\parallel CA$ gives $\angle OEM=\angle ACB$ and $\tan C=\frac d4$. Also the central angle $\angle BOC$ equals $2A$, and $OM$ bisects it, so $\angle BOM=A$ and $\tan A=\frac{BM}{OM}=\frac9d$.</p><p>For the angles of a triangle (none of them right), $\tan A+\tan B+\tan C=\tan A\tan B\tan C$, because $\tan A=-\tan(B+C)=-\frac{\tan B+\tan C}{1-\tan B\tan C}$. So
 \[\frac9d+\frac d2+\frac d4=\frac9d\cdot\frac d2\cdot\frac d4=\frac{9d}{8}\quad\Longrightarrow\quad\frac9d=\frac{3d}{8}\quad\Longrightarrow\quad d^2=24.\]
 Therefore $AO=OB=\sqrt{BM^2+OM^2}=\sqrt{81+24}=\boxed{\sqrt{105}}$.</p>
@@ -208,8 +206,7 @@ Therefore $AO=OB=\sqrt{BM^2+OM^2}=\sqrt{81+24}=\boxed{\sqrt{105}}$.</p>
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 27: Bijections and Structural Equivalence &middot; Encoding and Representation</div>
 <div class="ct-text"><p>In an $11\times 11$ grid of unit squares, rows and columns are indexed consecutively with the integers from $1$ to $11$. Then, every cell with an even row and column index is deleted. Compute the number of ways to partition the resulting shape into rectangles with integer side lengths.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$3^4\cdot 35^{16}$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Independent choices at the junction cells)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Independent choices at the junction cells</summary><div class="ct-text">
 <p>Call a cell with odd row and odd column a <em>junction</em>; there are $6\cdot 6=36$ of them. Every other remaining cell has exactly one even index; call it a <em>link</em>.</p><p><strong>All rectangles are strips.</strong> A rectangle with at least two rows and two columns contains two consecutive rows and two consecutive columns, one of each even, hence a deleted cell. So every rectangle is a $1\times k$ or $k\times 1$ strip.</p><p><strong>Encoding.</strong> For a partition, call two side-by-side cells <em>joined</em> if they lie in the same rectangle. The partition is determined by its set of joined pairs. Conversely, a set of joined pairs comes from a partition into strips exactly when no cell is joined both horizontally and vertically: then every class of cells connected by joins is a straight run of consecutive cells, that is, a strip, and in a strip all neighbouring pairs are joined. (If some cell were joined both ways, its rectangle would contain cells in two rows and two columns.)</p><p><strong>Each adjacent pair contains exactly one junction.</strong> A link in an even row lies in an odd column, so the cells to its left and right have two even indices and are deleted; its only neighbours are the junctions above and below it. Similarly a link in an even column has only the junctions to its left and right as neighbours. Two links are never adjacent and neither are two junctions. So every adjacent pair is a junction together with one of its link neighbours, and the condition &ldquo;not joined both ways&rdquo; only concerns junctions.</p><p>A junction has $h$ horizontal neighbours and $v$ vertical neighbours, where $h=1$ if it is in column $1$ or $11$ and $h=2$ otherwise, and likewise $v$ with rows. The pairs at different junctions are different, so the choices are independent: at a junction we may join a subset of the horizontal pairs and none of the vertical ones, or the reverse, giving $2^h+2^v-1$ choices (the empty choice is counted once).</p><ul class="ct-ul"><li><p>$4$ corner junctions: $h=v=1$, giving $2+2-1=3$ choices each;</p></li><li><p>$16$ other junctions on the border rows and columns: $\{h,v\}=\{1,2\}$, giving $2+4-1=5$ each;</p></li><li><p>$16$ inner junctions: $h=v=2$, giving $4+4-1=7$ each.</p></li></ul><p>The number of partitions is
 \[3^4\cdot 5^{16}\cdot 7^{16}=\boxed{3^4\cdot 35^{16}}=410746364767102203369140625.\]</p>
 </div></details>
@@ -219,8 +216,7 @@ Therefore $AO=OB=\sqrt{BM^2+OM^2}=\sqrt{81+24}=\boxed{\sqrt{105}}$.</p>
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 40: Vector Geometry and Affine Structure &middot; Dot Product and Metric Recovery</div>
 <div class="ct-text"><p>In the diagram, six circles of radius $3$ are arranged so that each is tangent to two others. Their tangency points form the vertices of a cyclic hexagon with circumradius $5$. Compute the area of this hexagon.</p><div class="ct-fig"><img style="width:238px" src="/assets/contests/2026-27/hmmt-nov-gt-8.svg" alt="Figure for General Round, Problem 8"></div></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\frac{147\sqrt3}{4}$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Vectors from the centre)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Vectors from the centre</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:283px" src="/assets/contests/2026-27/hmmt-nov-gt-8_s1.svg" alt="Figure for the solution"></div>
 <p>Let $O$ be the centre of the hexagon's circumcircle, and number the circles' centres $C_1,\dots,C_6$ in order around $O$ (as in the diagram, the ring of circles surrounds $O$), with circle $i$ tangent to circles $i\pm1$ (indices mod $6$). Write $\mathbf c_i$ for the vector $\overrightarrow{OC_i}$ and $r_i=|\mathbf c_i|$.</p><p>Two tangent circles of radius $3$ have centres $6$ apart and touch at the midpoint of their centres, so the tangency point of circles $i$ and $i+1$ is $T_i=\frac12(\mathbf c_i+\mathbf c_{i+1})$, with
 \[|\mathbf c_i-\mathbf c_{i+1}|=6,\qquad |\mathbf c_i+\mathbf c_{i+1}|=2\cdot OT_i=10.\]
@@ -230,7 +226,8 @@ The second relation shows $r_1=r_3=r_5=p$ and $r_2=r_4=r_6=q$ for some $p,q$ wit
 \[\mathbf T_i\times\mathbf T_{i+1}=\tfrac14\left(\mathbf c_i\times\mathbf c_{i+1}+\mathbf c_i\times\mathbf c_{i+2}+\mathbf c_{i+1}\times\mathbf c_{i+2}\right).\]
 Here $\mathbf c_i\times\mathbf c_{i+1}=pq\sin60^\circ=16\sqrt3$, and $\mathbf c_i$, $\mathbf c_{i+2}$ have equal length $r_i$ and make an angle of $120^\circ$, so $\mathbf c_i\times\mathbf c_{i+2}=\frac{\sqrt3}{2}r_i^2$. Summing over $i=1,\dots,6$ (three values of $i$ have $r_i=p$ and three have $r_i=q$):
 \[\text{Area}=\frac18\left(6\cdot 32\sqrt3+\frac{\sqrt3}{2}\cdot 3\left(p^2+q^2\right)\right)=\frac18\left(192\sqrt3+102\sqrt3\right)=\boxed{\frac{147\sqrt3}{4}}.\]</p>
-<h4>Solution 2 (An equiangular hexagon)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; An equiangular hexagon</summary><div class="ct-text">
 <p>Let $O$ be the centre of the circumcircle of the hexagon and $C_1,\dots,C_6$ the centres of the circles in order around $O$ (the ring surrounds $O$, as in the diagram), circle $i$ tangent to circles $i\pm1$, indices mod $6$. Equal circles touch at the midpoint of their centres, so the tangency point $T_i$ of circles $i$ and $i+1$ is the midpoint of $C_iC_{i+1}$, and $C_iC_{i+1}=6$. Let $r_i=OC_i$.</p><p><strong>Distances to the centres.</strong> In triangle $OC_iC_{i+1}$ the median $OT_i$ has length $5$, so by Apollonius' theorem
 \[r_i^2+r_{i+1}^2=2\cdot 5^2+2\cdot 3^2=68.\]
 Hence $r_1=r_3=r_5=p$ and $r_2=r_4=r_6=q$ with $p^2+q^2=68$. All six triangles $OC_iC_{i+1}$ have sides $p,q,6$, so they are congruent and their angles at $O$ are equal; these angles fill the full turn, so each is $60^\circ$. The law of cosines gives $36=p^2+q^2-pq$, so $pq=32$.</p><p><strong>Sides of the hexagon.</strong> In triangle $C_iC_{i+1}C_{i+2}$ the segment $T_iT_{i+1}$ joins midpoints, so $T_iT_{i+1}=\frac12C_iC_{i+2}$. In isosceles triangle $OC_iC_{i+2}$ the legs equal $r_i$ and the apex angle is $120^\circ$, so $C_iC_{i+2}=\sqrt3\,r_i$. Thus the hexagon's sides alternate between $a=\frac{\sqrt3}{2}p$ and $b=\frac{\sqrt3}{2}q$.</p><p><strong>Angles of the hexagon.</strong> Since $T_i$ is the midpoint of $C_iC_{i+1}$, ray $OT_i$ lies strictly inside the $60^\circ$ angle $C_iOC_{i+1}$; so the points $T_1,\dots,T_6$ occur in this order around the circle, and each arc $T_iT_{i+1}$ not containing the other points is less than $120^\circ$. Equal chords therefore cut equal arcs, so the arcs cut by the sides alternate between two values $\alpha,\beta$ with $3\alpha+3\beta=360^\circ$. The angle of the hexagon at a vertex is an inscribed angle standing on the arc made of the four sides not at that vertex, which is $2\alpha+2\beta=240^\circ$; so every angle of the hexagon is $120^\circ$.</p><p><strong>Area.</strong> Extending the three sides of length $a$ of an equiangular hexagon with sides $a,b,a,b,a,b$ produces an equilateral triangle of side $a+2b$, from which three equilateral triangles of side $b$ have been cut off. Hence the area is
@@ -244,12 +241,12 @@ Hence $r_1=r_3=r_5=p$ and $r_2=r_4=r_6=q$ with $p^2+q^2=68$. All six triangles $
 \[a_n=a_{n-1}+10a_{n-7}\quad\text{for all } n\geq 8.\]
 Compute the remainder when $a_{2026}$ is divided by $10000$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$2991$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Weighted tilings)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Weighted tilings</summary><div class="ct-text">
 <p>For $m\ge0$ let $f(m)$ be the sum, over all ways of writing $m$ as an ordered sum of $1$s and $7$s, of $10^{(\text{number of }7\text{s})}$; set $f(m)=0$ for $m&lt;0$. Splitting by the last part gives $f(m)=f(m-1)+10f(m-7)$ for $m\ge 7$, and $f(0)=\dots=f(6)=1$ since only $1$s fit. Thus $a_n=f(n-1)$: both sequences start with seven $1$s and obey the same recurrence.</p><p>An ordered sum with $k$ sevens and $m-7k$ ones has $m-6k$ parts, and the positions of the sevens can be chosen in $\binom{m-6k}{k}$ ways. Hence
 \[a_{2026}=f(2025)=\sum_{k\ge0}\binom{2025-6k}{k}10^k.\]
 Modulo $10000$ only $k\le3$ matter:</p><ul class="ct-ul"><li><p>$k=0$: $1$;</p></li><li><p>$k=1$: $10\cdot 2019=20190\equiv 190$;</p></li><li><p>$k=2$: $100\binom{2013}{2}=100\cdot 2013\cdot 1006=100\cdot 2025078\equiv 100\cdot 78=7800$;</p></li><li><p>$k=3$: $1000\binom{2007}{3}=1000\cdot 669\cdot 1003\cdot 2005$, and $669\cdot1003\cdot2005\equiv 9\cdot3\cdot5\equiv 5\pmod{10}$, so this term is $\equiv 5000$.</p></li></ul><p>The sum is $1+190+7800+5000=12991$, so the remainder is $\boxed{2991}$.</p>
-<h4>Solution 2 (Generating function)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Generating function</summary><div class="ct-text">
 <p>Let $A(x)=\sum_{n\ge1}a_nx^{n}$. For $n\ge8$ the recurrence says that the coefficient of $x^n$ in $(1-x-10x^7)A(x)$ is $a_n-a_{n-1}-10a_{n-7}=0$. For $2\le n\le7$ that coefficient is $a_n-a_{n-1}=0$, and for $n=1$ it is $a_1=1$. Hence $(1-x-10x^7)A(x)=x$, and
 \[A(x)=\frac{x}{1-(x+10x^7)}=\sum_{j\ge0}x\,(x+10x^7)^j=\sum_{j\ge0}\sum_{k=0}^{j}\binom jk10^k\,x^{1+j+6k}.\]
 The coefficient of $x^{2026}$ collects the terms with $j+6k=2025$, so
@@ -263,11 +260,11 @@ Now $10\cdot2019=20190$; $\binom{2013}{2}=2013\cdot1006=2025078$, which ends in 
 <div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 47: Probabilistic Method and Random Structure &middot; Expectation Arguments</div>
 <div class="ct-text"><p>The country of HMMTland has $100$ cities. Engineers propose a tunnel between every pair of cities and randomly assign the distinct construction costs $1,2,\dots,\binom{100}{2}$ to the proposed tunnels, with every assignment equally likely. Each city funds its single cheapest incident tunnel. A tunnel is built if at least one city funds it. If more than one city funds it, it is still built only once. Compute the expected number of connected components in the resulting tunnel system.</p><p>(A <em>connected component</em> is a maximal nonempty set of cities such that every city in the set is reachable from every other city in the set by traveling through built tunnels.)</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\frac{4950}{197}$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Counting edges in a forest)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Counting edges in a forest</summary><div class="ct-text">
 <p>Think of cities as vertices and built tunnels as edges. Call a tunnel <em>mutual</em> if both of its cities fund it. We show that every component contains exactly one mutual tunnel.</p><p><strong>No cycles.</strong> Suppose the built edges contain a cycle $v_1v_2\cdots v_k$ with $k\ge3$. Each of its $k$ edges is funded by one of its two ends, and each of the $k$ vertices funds only one edge, so each vertex funds exactly one cycle edge and no cycle edge is funded twice. Going around, this means (after possibly reversing the direction) that $v_1$ funds $v_1v_2$, $v_2$ funds $v_2v_3$, and so on. Since $v_2$ funds $v_2v_3$ rather than $v_1v_2$, the cost of $v_2v_3$ is less than that of $v_1v_2$; continuing, the costs strictly decrease around the cycle and return to the start, a contradiction.</p><p><strong>One mutual edge per component.</strong> So the built graph is a forest. A component with $k$ vertices is a tree with $k-1$ edges, and each of its $k$ vertices funds an edge of this component. Counting fundings, $k=(k-1)+(\text{number of mutual edges})$, so the component has exactly one mutual edge.</p><p><strong>Expectation.</strong> Hence the number of components equals the number of mutual tunnels. A tunnel $uv$ is mutual exactly when it is the cheapest among the $1+2\cdot98=197$ tunnels at $u$ or $v$; by symmetry this has probability $\frac1{197}$. By linearity of expectation, the expected number of components is
 \[\binom{100}{2}\cdot\frac{1}{197}=\boxed{\frac{4950}{197}}.\]</p>
-<h4>Solution 2 (Following cheaper and cheaper tunnels)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Following cheaper and cheaper tunnels</summary><div class="ct-text">
 <p>For a city $v$ let $f(v)$ be the other end of the tunnel that $v$ funds, and $w(v)$ the cost of that tunnel; the built tunnels are exactly the tunnels $v\,f(v)$.</p><p><strong>Descending walks.</strong> City $f(v)$ funds its cheapest tunnel, and the tunnel to $v$ is one of its tunnels, so $w(f(v))\le w(v)$, with equality exactly when $f(v)$ also funds the tunnel $v\,f(v)$, that is, when $f(f(v))=v$. Starting at any city and applying $f$ repeatedly, the costs never increase and are strictly decreasing until we reach a pair $\{u,f(u)\}$ with $f(f(u))=u$: a tunnel funded by both ends, which we call mutual. Since there are finitely many cities and the costs cannot decrease forever, every walk ends in exactly one mutual pair, where it then alternates.</p><p><strong>Components.</strong> Each step of the walk travels along a built tunnel, so every city lies in the same component as the mutual pair its walk reaches. Conversely, if $v$ and $f(v)$ are joined by a built tunnel, the walk from $v$ passes through $f(v)$, so they reach the same mutual pair. Thus the relation &ldquo;reaches the same mutual pair&rdquo; is constant along built tunnels, and the components are exactly the sets of cities reaching a given mutual pair. Therefore the number of components equals the number of mutual tunnels.</p><p><strong>Expectation.</strong> A tunnel $uv$ is mutual exactly when its cost is the smallest among the $197$ tunnels incident to $u$ or $v$ (the tunnel itself and $98$ more at each end). All orders of these costs are equally likely, so this has probability $\frac1{197}$. By linearity of expectation over the $\binom{100}{2}=4950$ tunnels, the answer is $\boxed{\frac{4950}{197}}$.</p>
 </div></details>
 </section>
@@ -277,10 +274,10 @@ Now $10\cdot2019=20190$; $\binom{2013}{2}=2013\cdot1006=2025078$, which ends in 
 <div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Number Theory &middot; LPS VI, Chapter 15: GCD, LCM, and Multiplicative Interaction &middot; GCD Logic</div>
 <div class="ct-text"><p>Moana is building a square raft by tying four rectangular planks together. All of the planks have integer side lengths, and three of the planks have areas $60$, $28$, and $49$, as shown. Compute the area of the fourth plank.</p><div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/hmmt-nov-gt-11.svg" alt="Figure for Theme Round, Problem 1"></div></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$88$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (The common height of the two small planks)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; The common height of the two small planks</summary><div class="ct-text">
 <p>Let the raft have side $s$. The plank of area $60$ runs along the whole left side, so it is $s$ by $w$ with $sw=60$; in particular $s$ is an integer. The planks of areas $28$ and $49$ have the same height $h$ and widths $x$, $y$ with $x+y=s-w$, and $hx=28$, $hy=49$ with $h,x,y$ integers. So $h$ divides $\gcd(28,49)=7$.</p><ul class="ct-ul"><li><p>If $h=1$, then $s-w=x+y=77$, so $s&gt;77$; but $s$ divides $60$. Impossible.</p></li><li><p>If $h=7$, then $x=4$, $y=7$ and $s-w=11$. With $w=\frac{60}{s}$ this gives $s^2-11s-60=0$, that is, $(s-15)(s+4)=0$, so $s=15$ and $w=4$.</p></li></ul><p>The fourth plank is $s-w=11$ wide and $s-h=8$ tall, so its area is $11\cdot 8=\boxed{88}$.</p>
-<h4>Solution 2 (Trying the divisors of 60)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Trying the divisors of 60</summary><div class="ct-text">
 <p>Let $s$ be the side of the square raft. The plank of area $60$ spans the full height $s$ of the raft, so it is $s\times\frac{60}{s}$ with both sides integers: $s$ is a divisor of $60$. The rest of the raft is a rectangle of width $W=s-\frac{60}{s}&gt;0$, whose bottom strip, made of the planks $28$ and $49$, has area $77$ and some integer height $h$. So $W$ divides $77$.</p><p>For the divisors $s$ of $60$ with $W&gt;0$ we get
 \[s=10,12,15,20,30,60\quad\Longrightarrow\quad W=4,7,11,17,28,59.\]
 Only $W=7$ and $W=11$ divide $77$.</p><ul class="ct-ul"><li><p>$W=7$ ($s=12$): then $h=11$ and the plank of area $28$ would have width $\frac{28}{11}$, not an integer.</p></li><li><p>$W=11$ ($s=15$): then $h=7$, and the bottom planks are $4\times7$ and $7\times7$, as required.</p></li></ul><p>So the top plank is $11$ wide and $15-7=8$ tall, with area $\boxed{88}$.</p>
@@ -291,14 +288,14 @@ Only $W=7$ and $W=11$ divide $77$.</p><ul class="ct-ul"><li><p>$W=7$ ($s=12$): t
 <div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VII scale">E</span>Number Theory &middot; LPS VII, Chapter 16: Diophantine Equations: Linear and Structural Foundations &middot; Bounded Integer Solutions</div>
 <div class="ct-text"><p>Ariel is organizing her collection of human treasures. She can divide her dinglehoppers evenly into groups of $102$, and her snarfblatts evenly into groups of $103$. When she combines all of her dinglehoppers and snarfblatts, she can divide them evenly into groups of $100$. Compute the minimum possible (nonzero) total number of dinglehoppers and snarfblatts in Ariel's collection.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$3500$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Splitting off the hundreds)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Splitting off the hundreds</summary><div class="ct-text">
 <p>Let Ariel have $102a$ dinglehoppers and $103b$ snarfblatts, with $a,b\ge0$ integers, not both zero. The total is
 \[N=102a+103b=100(a+b)+(2a+3b).\]
 It is a multiple of $100$ exactly when $100\mid 2a+3b$. Since $2a+3b&gt;0$, this forces $2a+3b\ge100$, and then
 \[a+b\ge\frac{2a+3b}{3}\ge\frac{100}{3},\qquad\text{so } a+b\ge 34.\]
 Hence $N\ge 100\cdot34+100=3500$. Equality holds for $a=2$, $b=32$: $2\cdot102+32\cdot103=204+3296=3500$. The minimum is $\boxed{3500}$.</p>
-<h4>Solution 2 (Working modulo 102)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Working modulo 102</summary><div class="ct-text">
 <p>Let the total be $N=100t$ with $t\ge1$, made of $102a$ dinglehoppers and $103b$ snarfblatts ($a,b\ge0$). Since $N=102a+103b\equiv b\pmod{102}$, we need
 \[b\equiv 100t\equiv -2t\pmod{102}\qquad\text{and}\qquad 103b\le 100t.\]
 For $1\le t\le 34$ the least $b\ge0$ with $b\equiv-2t$ is $b=102-2t\ge 34$, and then $103b\le100t$ means $103(102-2t)\le 100t$, that is, $10506\le 306t$, or $t\ge 34.3\ldots$. So no $t\le34$ works.</p><p>For $t=35$: $b\equiv-70\equiv32$, and $b=32$ gives $103\cdot32=3296\le3500$ with remainder $3500-3296=204=102\cdot2$, so $a=2$. The minimum total is $100\cdot35=\boxed{3500}$.</p>
@@ -309,14 +306,14 @@ For $1\le t\le 34$ the least $b\ge0$ with $b\equiv-2t$ is $b=102-2t\ge 34$, and 
 <div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VII scale">E</span>Combinatorics &middot; LPS VII, Chapter 23: Recurrence and Combinatorial Construction &middot; Recursive Counting</div>
 <div class="ct-text"><p>Jasmine is making a new design for a flying carpet. Her first draft is a square, and to construct her $(n+1)$th draft she takes her $n$th draft and, for each polygonal region bounded by segments in her diagram, she connects the midpoints of adjacent sides via line segments. The first, second, and third drafts are shown at right, and contain $1$, $5$, and $21$ polygonal regions respectively. Compute the number of polygonal regions in her $6$th draft.</p><div class="ct-fig"><img style="width:358px" src="/assets/contests/2026-27/hmmt-nov-gt-13.svg" alt="Figure for Theme Round, Problem 3"></div></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$1365$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Triangles and one square)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Triangles and one square</summary><div class="ct-text">
 <p><strong>The pieces fit side to side.</strong> In every draft, two regions that touch share a whole side or just a vertex. This holds for draft $1$. If it holds for one draft, then when a region is cut, each of its sides is split at its midpoint, and the region on the other side of that side splits it at the same midpoint; the new segments lie inside the regions and are shared in full by the two pieces on either side. So it holds for the next draft. Hence the &ldquo;sides&rdquo; of each region are just its edges, and we may track the shapes.</p><p><strong>Shapes.</strong> Joining the midpoints of adjacent sides of a square gives a smaller square and $4$ corner triangles. Doing the same in a triangle gives the medial triangle and $3$ corner triangles, so $4$ triangles. Thus every draft has exactly one square, and if $t_n$ is the number of triangles in draft $n$, then
 \[t_1=0,\qquad t_{n+1}=4t_n+4.\]
 The number of regions $R_n=t_n+1$ satisfies $R_{n+1}=4t_n+5=4R_n+1$, so
 \[R_1,\dots,R_6=1,\ 5,\ 21,\ 85,\ 341,\ 1365.\]
 (Equivalently $R_n=\frac{4^n-1}{3}$.) The $6$th draft has $\boxed{1365}$ regions.</p>
-<h4>Solution 2 (Euler's formula)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Euler's formula</summary><div class="ct-text">
 <p>Regard each draft as a plane graph: vertices are the corners of regions, edges are the segments between consecutive vertices, and the regions are the bounded faces. Two neighbouring regions always share whole edges (each old side is split at its midpoint from both sides, and new segments are shared in full), so a region with $n$ sides has exactly $n$ edges.</p><p>Let draft $k$ have $V_k$ vertices, $E_k$ edges, $B_k$ edges on the outer square and $F_k$ regions. Each interior edge borders two regions and each outer edge one, so the regions have $2E_k-B_k$ sides in total. Passing to the next draft, every edge gains its midpoint and splits in two, and every region with $n$ sides gains $n$ new segments (all regions are convex, being pieces of a square cut by straight segments, so these segments meet only at their endpoints and create no further vertices):
 \[V_{k+1}=V_k+E_k,\qquad E_{k+1}=2E_k+(2E_k-B_k)=4E_k-B_k,\qquad B_{k+1}=2B_k.\]
 By Euler's formula $V-E+(F+1)=2$ (counting the outer face), $F_k=E_k-V_k+1$. Starting from $(V,E,B)=(4,4,4)$:
@@ -335,14 +332,14 @@ The counts $1,5,21$ match the given drafts, and the $6$th draft has $\boxed{1365
 <div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VII scale">E</span>Algebra &middot; LPS VII, Chapter 22: Summation, Telescoping, and Discrete Transformation &middot; Telescoping Sums and Products</div>
 <div class="ct-text"><p>After some recent incidents, Snow White has decided to start eating apples again. She eats $1$ apple on day $1$. For each positive integer $n\geq 2$, she eats $n$ times as many apples on day $n$ as she did on all previous days combined. Compute the number of apples Snow White eats on day $2026$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$1013\cdot 2026!$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Running totals)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Running totals</summary><div class="ct-text">
 <p>Let $x_n$ be the number of apples eaten on day $n$ and $S_n=x_1+\dots+x_n$. For $n\ge2$ we have $x_n=nS_{n-1}$, so
 \[S_n=S_{n-1}+nS_{n-1}=(n+1)S_{n-1}.\]
 With $S_1=1$ this gives $S_n=(n+1)n\cdots3\cdot S_1=\frac{(n+1)!}{2}$. Therefore, for $n\ge2$,
 \[x_n=nS_{n-1}=\frac{n\cdot n!}{2},\]
 and on day $2026$ she eats $\frac{2026\cdot2026!}{2}=\boxed{1013\cdot 2026!}$ apples. (Check: $x_2=2$, $x_3=9$, $x_4=48$.)</p>
-<h4>Solution 2 (Ratio of consecutive days)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Ratio of consecutive days</summary><div class="ct-text">
 <p>Let $x_n$ be the number of apples on day $n$ and $S_n$ the total for days $1$ to $n$. For $n\ge2$, $x_{n+1}=(n+1)S_n$ and $x_n=nS_{n-1}$, and $S_n=S_{n-1}+x_n=S_{n-1}(1+n)$. Hence
 \[\frac{x_{n+1}}{x_n}=\frac{(n+1)S_n}{nS_{n-1}}=\frac{(n+1)^2}{n}\qquad(n\ge2).\]
 Since $x_2=2\cdot1=2$, the product telescopes:
@@ -355,14 +352,14 @@ For $N=2026$ this is $\boxed{1013\cdot 2026!}$.</p>
 <div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VII scale">E</span>Number Theory &middot; LPS VII, Chapter 8: Modular Arithmetic and Congruence Methods &middot; Modular Equations and Solutions</div>
 <div class="ct-text"><p>Rapunzel's hair is getting too long again, so she decides to cut it every day for the next $6$ days. At the start of the first day, her hair is $2026$ feet long. First, she chooses a positive integer $m$. Then, on the $n^{\text{th}}$ day, she cuts $\frac{m}{n}$ feet off her hair, then cuts $\frac{1}{n+1}$ of her remaining hair length off. Suppose that Rapunzel's hair does not grow back, and that at the end of each of the $6$ days, her hair length is an integer number of feet. Compute the smallest possible value of $m$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$74$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (A telescoping recurrence)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; A telescoping recurrence</summary><div class="ct-text">
 <p>Let $L_n$ be the length at the end of day $n$, with $L_0=2026$. On day $n$ the length becomes
 \[L_n=\left(L_{n-1}-\frac mn\right)\left(1-\frac{1}{n+1}\right)=\frac{nL_{n-1}-m}{n+1},\qquad\text{so}\qquad (n+1)L_n=nL_{n-1}-m.\]
 Writing $P_n=(n+1)L_n$, this says $P_n=P_{n-1}-m$ with $P_0=L_0=2026$, so $P_n=2026-nm$ and
 \[L_n=\frac{2026-nm}{n+1}.\]
 Since $n\equiv-1\pmod{n+1}$, we have $2026-nm\equiv2026+m\pmod{n+1}$. So $L_1,\dots,L_6$ are integers exactly when $2,3,\dots,7$ all divide $2026+m$, that is, when $\operatorname{lcm}(2,\dots,7)=420$ divides $2026+m$. The smallest positive such $m$ has $2026+m=2100$, so $m=74$.</p><p>For $m=74$ the lengths $L_n=\frac{2026-74n}{n+1}$ are $976,\ 626,\ 451,\ 346,\ 276,\ 226$, all positive integers, and each cut is possible since $L_{n-1}-\frac mn=\frac{n+1}{n}L_n&gt;0$. The answer is $\boxed{74}$.</p>
-<h4>Solution 2 (An invariant)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; An invariant</summary><div class="ct-text">
 <p>Let $L_n$ be the length at the end of day $n$ ($L_0=2026$). Day $n$ turns $L_{n-1}$ into $L_n=\frac{n}{n+1}\left(L_{n-1}-\frac mn\right)$, so $(n+1)L_n=nL_{n-1}-m$. Adding $(n+1)m$ to both sides,
 \[(n+1)(L_n+m)=n(L_{n-1}+m).\]
 So the quantity $(n+1)(L_n+m)$ does not change from day to day, and it equals its starting value $1\cdot(L_0+m)=2026+m$:
@@ -375,13 +372,13 @@ Thus $L_n$ is an integer for $n=1,\dots,6$ exactly when each of $2,3,4,5,6,7$ di
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 43: Locus, Transformation, and Construction Geometry &middot; Transformation of Moving Points</div>
 <div class="ct-text"><p>Raya is flying on the dragon Sisu over Kumandra when they spot a small circular island they want to reach. Initially, Raya and Sisu are directly above the point $(0,0)$. The island consists of all points $(x,y)$ satisfying $(x-4)^2+(y-6)^2\leq 1$. Without wind, Sisu can fly at $2$ units per hour in any direction. Additionally, the wind blows Sisu in the positive $x$-direction at a constant rate of $1$ unit per hour. Compute the minimum amount of time, in hours, before Raya and Sisu can be directly above any point on the island. (Assume that they remain at a constant altitude for the entirety of their flight.)</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\sqrt{21}-2$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (The reachable disk)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; The reachable disk</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:299px" src="/assets/contests/2026-27/hmmt-nov-gt-16_s1.svg" alt="Figure for the solution"></div>
 <p>After $t$ hours the wind has carried Sisu by $(t,0)$, and Sisu's own flying has moved it by some vector $\mathbf v$ with $|\mathbf v|\le 2t$. Every such $\mathbf v$ can be realised (fly in a straight line towards it, zigzagging if the full speed $2$ must be used), so the set of points reachable at time $t$ is the closed disk with centre $W=(t,0)$ and radius $2t$. Later disks contain earlier ones, since the centre moves at speed $1$ while the radius grows at speed $2$.</p><p>The island is the disk with centre $I=(4,6)$ and radius $1$. Two disks meet exactly when the distance between their centres is at most the sum of their radii:
 \[(t-4)^2+6^2\le(2t+1)^2\iff 3t^2+12t-51\ge0\iff t^2+4t-17\ge0.\]
 For $t&gt;0$ this holds exactly when $t\ge-2+\sqrt{21}$. So the minimum time is $\boxed{\sqrt{21}-2}$ hours (about $2.58$ hours); at that moment the reachable disk touches the island at the point $T$ of segment $WI$ with $WT=2t$.</p>
-<h4>Solution 2 (Riding with the wind)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Riding with the wind</summary><div class="ct-text">
 <p>Describe the motion in a frame that drifts with the wind, at velocity $(1,0)$. In this frame the air is still, Sisu starts at the origin and moves at speed at most $2$, and the island moves with velocity $(-1,0)$: at time $t$ it is the disk of radius $1$ centred at $(4-t,\,6)$.</p><p>Sisu can be over the island at time $t$ exactly when some point of the island at that time is within $2t$ of the origin (if such a point is at distance $\delta\le2t$, Sisu flies straight to it at speed $\frac{\delta}{t}\le2$; at the minimum time $\delta=2t$, a full-speed flight). The nearest island point to the origin is at distance $\sqrt{(4-t)^2+36}-1$, so the condition is
 \[\sqrt{(4-t)^2+36}\le 2t+1\iff t^2-8t+52\le4t^2+4t+1\iff t^2+4t-17\ge0.\]
 The positive root of $t^2+4t-17$ is $-2+\sqrt{21}$, and the condition holds exactly for $t\ge\sqrt{21}-2$. The minimum time is $\boxed{\sqrt{21}-2}$ hours.</p>
@@ -392,11 +389,11 @@ The positive root of $t^2+4t-17$ is $-2+\sqrt{21}$, and the condition holds exac
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 27: Bijections and Structural Equivalence &middot; Encoding and Representation</div>
 <div class="ct-text"><p>Mulan orders $10$ soldiers to stand in a line. Each soldier points to one of their neighboring soldiers independently and uniformly at random. Compute the probability that exactly $3$ pairs of neighboring soldiers point at each other.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\frac{63}{128}$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Blocks of equal letters)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Blocks of equal letters</summary><div class="ct-text">
 <p>Write R or L for each soldier according to whether they point right or left. The two end soldiers have only one neighbour, so the string starts with R and ends with L; each of the other $8$ letters is R or L independently with probability $\frac12$. So all $2^8=256$ strings of length $10$ starting with R and ending with L are equally likely.</p><p>Two neighbours point at each other exactly when they form an adjacent pair RL. Cut the string into maximal blocks of equal letters. They alternate R, L, R, L, &hellip;, starting with an R-block and ending with an L-block, so there are $2k$ blocks for some $k\ge1$, and the pairs RL are exactly the $k$ places where an R-block meets the following L-block.</p><p>So we need $6$ blocks. A string with $6$ alternating blocks starting with R is determined by the block lengths, which form an ordered list of $6$ positive integers with sum $10$; there are $\binom{9}{5}=126$ of them. The probability is
 \[\frac{126}{256}=\boxed{\frac{63}{128}}.\]</p>
-<h4>Solution 2 (Placing the three pairs first)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Placing the three pairs first</summary><div class="ct-text">
 <p>Record each soldier's choice as R (right) or L (left). Soldier $1$ must choose R and soldier $10$ must choose L; the other $8$ choices give $256$ equally likely outcomes. A mutual pair is an adjacent RL. Mutual pairs cannot overlap, since a soldier points one way only.</p><p>Suppose the three mutual pairs are fixed, and let $g_0,g_1,g_2,g_3\ge0$ be the numbers of soldiers before the first pair, between the first and second, between the second and third, and after the third; then $g_0+g_1+g_2+g_3=10-6=4$. We count the ways to fill in the other soldiers with no further RL.</p><ul class="ct-ul"><li><p>Before the first pair: these soldiers start with soldier $1$ (an R, if $g_0&gt;0$) and are followed by an R; a string with no RL is some L's followed by some R's, so they are all R: $1$ way.</p></li><li><p>After the last pair: similarly they are all L: $1$ way.</p></li><li><p>Between two pairs: the segment comes after an L and before an R, and the whole stretch has no RL, so it is $\mathrm{L}\cdots\mathrm{L}\,\mathrm{R}\cdots\mathrm{R}$: $g_j+1$ ways.</p></li></ul><p>So the number of outcomes is $\sum(g_1+1)(g_2+1)$ over $g_0+g_1+g_2+g_3=4$. Group by $s=g_1+g_2$: there are $5-s$ choices of $(g_0,g_3)$, and $\sum_{g_1+g_2=s}(g_1+1)(g_2+1)=\binom{s+3}{3}$ (to choose $3$ of $s+3$ objects in a row, let the middle chosen one be in position $g_1+2$; then there are $g_1+1$ choices before it and $g_2+1$ after it). This gives
 \[5\cdot1+4\cdot4+3\cdot10+2\cdot20+1\cdot35=126,\]
 and the probability is $\frac{126}{256}=\boxed{\frac{63}{128}}$.</p>
@@ -407,8 +404,7 @@ and the probability is $\frac{126}{256}=\boxed{\frac{63}{128}}$.</p>
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Geometry &middot; LPS VII, Chapter 11: Similarity, Homothety, and Ratio Geometry &middot; Homothety Centers and Image Tracking</div>
 <div class="ct-text"><p>Cinderella's pumpkin carriage consists of two circular wheels and a circular pumpkin, all tangent to a line segment, which rests on top of both wheels and on which the pumpkin sits, as shown in the figure. When on flat ground, the leftmost point of the pumpkin is directly above the rightmost point of the left wheel, and the rightmost point of the pumpkin is directly above the leftmost point of the right wheel. The wheels have radii $3$ and $4$. Moreover, the height of the carriage is $30$. Compute the radius of the pumpkin.</p><div class="ct-fig"><img style="width:315px" src="/assets/contests/2026-27/hmmt-nov-gt-18.svg" alt="Figure for Theme Round, Problem 8"></div></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\frac{23}{2}$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Coordinates and the half-angle)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Coordinates and the half-angle</summary><div class="ct-text">
 <p>Put the ground on the $x$-axis, the left wheel's centre at $P=(0,3)$, and let $r$ be the pumpkin's radius. The pumpkin's leftmost point is above $x=3$, so its centre is $K=(3+r,\,30-r)$ (its top is at height $30$). Its rightmost point $x=3+2r$ is above the right wheel's leftmost point, so the right wheel's centre is $Q=(d,4)$ with $d=2r+7$.</p><p>The segment lies on a line $\ell$ that touches both wheels from above and the pumpkin from below. Let $\theta$ be its angle of inclination and $\mathbf n=(-\sin\theta,\cos\theta)$ its upward unit normal, so $\ell=\{X:\mathbf n\cdot X=k\}$. The tangencies say
 \[\mathbf n\cdot P=k-3,\qquad \mathbf n\cdot Q=k-4,\qquad \mathbf n\cdot K=k+r.\]
 Subtracting the first from the other two:
@@ -418,7 +414,8 @@ The first gives $\frac{\sin\theta}{1+\cos\theta}=\frac1d$, that is, $u=\tan\frac
 Multiply by $d^2$ and use $u=\frac1d$, $r=\frac{d-7}{2}$, then multiply by $2$:
 \[(31-d)d^2-(d-1)d-30=0\iff d^3-30d^2-d+30=0\iff (d-30)(d^2-1)=0.\]
 Since $d&gt;1$, $d=30$ and $r=\frac{30-7}{2}=\boxed{\frac{23}{2}}$.</p>
-<h4>Solution 2 (Centres of similitude)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Centres of similitude</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:344px" src="/assets/contests/2026-27/hmmt-nov-gt-18_s2.svg" alt="Figure for the solution"></div>
 <p>Place the ground on the $x$-axis with the left wheel centred at $P=(0,3)$; let $r$ be the pumpkin's radius and $\ell$ the line of the segment. The pumpkin's leftmost point lies above $x=3$ and its top is at height $30$, so its centre is $K=(3+r,30-r)$; its rightmost point is at $x=2r+3$, the leftmost point of the right wheel, so the right wheel is centred at $Q=(d,4)$ with $d=2r+7$.</p><p><strong>Internal centres.</strong> The vertical line $x=3$ touches the rightmost point of the left wheel and the leftmost point of the pumpkin, so the two circles lie on opposite sides of it; the line $\ell$ touches the left wheel from above and the pumpkin from below, so again the circles are on opposite sides. Both are internal common tangents, so they pass through the internal centre of similitude, which divides $PK$ in the ratio $3:r$:
 \[I_1=\frac{rP+3K}{r+3}=\left(3,\ \frac{90}{r+3}\right).\]
@@ -436,14 +433,14 @@ Comparing the two slopes, $2d=60$, so $d=30$ and $r=\frac{d-7}{2}=\boxed{\frac{2
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 25: Diophantine Equations: Factorization and Algebraic Methods &middot; Factorization-Based Solutions</div>
 <div class="ct-text"><p>Compute the unique triple of positive integers $(b,e,\ell)$ satisfying $be\ell+\ell+e=6886$ and $be+\ell+\ell e=586$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$(19,10,36)$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Adding the equations)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Adding the equations</summary><div class="ct-text">
 <p>Adding the two equations and $2$,
 \[be\ell+be+2\ell+\ell e+e+2=7474.\]
 The left side factors: $(\ell+1)(be+e+2)=be\ell+e\ell+2\ell+be+e+2$. So
 \[(\ell+1)\bigl(e(b+1)+2\bigr)=7474=2\cdot37\cdot101.\]
 Also the second equation says $e(b+\ell)+\ell=586$, and subtracting $e(b+1)$ from $e(b+\ell)$ gives $(\ell-1)e=586-\ell-e(b+1)$. Go through the divisors $\ell+1\ge2$ of $7474$ with $e(b+1)=\frac{7474}{\ell+1}-2\ge 2$:</p><ul class="ct-ul"><li><p>$\ell=1$: $e(b+1)=3735$, but the second equation gives $e(b+1)=585$. Impossible.</p></li><li><p>$\ell=36$: $e(b+1)=200$, and $35e=586-36-200=350$, so $e=10$ and $b=19$.</p></li><li><p>$\ell=73$: $e(b+1)=99$, and $72e=586-73-99=414$, not a multiple of $72$.</p></li><li><p>$\ell=100$: $e(b+1)=72$, and $99e=586-100-72=414$, not a multiple of $99$.</p></li><li><p>$\ell=201$: $e(b+1)=35$, and $200e=586-201-35=350$, not a multiple of $200$.</p></li><li><p>$\ell+1\in\{3737,7474\}$: $e(b+1)\le 0$. Impossible.</p></li></ul><p>So $(b,e,\ell)=\boxed{(19,10,36)}$. Check: $19\cdot10\cdot36+36+10=6886$ and $190+36+360=586$.</p>
-<h4>Solution 2 (Eliminating b)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Eliminating b</summary><div class="ct-text">
 <p>Multiply the second equation by $\ell$ and subtract the first; the terms $be\ell$ cancel:
 \[\ell^2+\ell^2e-\ell-e=586\ell-6886\quad\Longrightarrow\quad e(\ell^2-1)=-\ell^2+587\ell-6886.\]
 So $\ell\ge2$ (for $\ell=1$ the left side is $0$ but the right side is $-6300$), and $\ell^2-1$ divides $g(\ell)=-\ell^2+587\ell-6886$. In particular $\ell-1\mid g(\ell)$ and $\ell+1\mid g(\ell)$. Since $\ell\equiv1\pmod{\ell-1}$ and $\ell\equiv-1\pmod{\ell+1}$,
@@ -458,15 +455,15 @@ The second equation gives $10b+36+360=586$, so $b=19$. The triple is $\boxed{(19
 <div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 40: Vector Geometry and Affine Structure &middot; Vector Addition and Balance Relations</div>
 <div class="ct-text"><p>Merida paints an equilateral triangle $ABC$ with side length $4$ units on her castle wall. She attempts to shoot an arrow at each vertex of this triangle. However, her arrows strike the wall at points $D$, $E$, and $F$, which are $1$, $2$, and $3$ units away from $A$, $B$, and $C$, respectively. Furthermore, the centroid of triangle $DEF$ coincides with the centroid of triangle $ABC$. Compute the maximum possible area of triangle $DEF$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$4\sqrt3+2\sqrt{21}$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Vectors and the cross product)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Vectors and the cross product</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/hmmt-nov-gt-20_s1.svg" alt="Figure for the solution"></div>
 <p>Let $\mathbf u=\overrightarrow{AD}$, $\mathbf v=\overrightarrow{BE}$, $\mathbf w=\overrightarrow{CF}$, so $|\mathbf u|=1$, $|\mathbf v|=2$, $|\mathbf w|=3$. The centroids are $\frac13(A+B+C)$ and $\frac13(D+E+F)$, so they coincide exactly when $\mathbf u+\mathbf v+\mathbf w=\mathbf 0$.</p><p><strong>The arrows are parallel.</strong> Then $|\mathbf u+\mathbf v|=|\mathbf w|=3=|\mathbf u|+|\mathbf v|$, which is the equality case of the triangle inequality, so $\mathbf v$ points the same way as $\mathbf u$. Hence $\mathbf u=\mathbf e$, $\mathbf v=2\mathbf e$, $\mathbf w=-3\mathbf e$ for a unit vector $\mathbf e$, and every unit vector $\mathbf e$ satisfies the distance and centroid conditions (for a few directions $D,E,F$ are collinear, but the maximising direction below gives positive area, hence a genuine triangle).</p><p><strong>Area.</strong> Write $\mathbf b=\overrightarrow{AB}$, $\mathbf c=\overrightarrow{AC}$ and let $\times$ be the planar cross product, with $ABC$ labelled counterclockwise so that $\mathbf b\times\mathbf c=2[ABC]=8\sqrt3$. Now $\overrightarrow{DE}=\mathbf b+\mathbf e$ and $\overrightarrow{DF}=\mathbf c-4\mathbf e$, so, as $\mathbf e\times\mathbf e=0$,
 \[\overrightarrow{DE}\times\overrightarrow{DF}=\mathbf b\times\mathbf c-4\,\mathbf b\times\mathbf e+\mathbf e\times\mathbf c=8\sqrt3-\mathbf m\times\mathbf e,\qquad \mathbf m=4\mathbf b+\mathbf c.\]
 As $\mathbf e$ runs over all unit vectors, $\mathbf m\times\mathbf e$ takes every value in $[-|\mathbf m|,|\mathbf m|]$. Using $|\mathbf b|=|\mathbf c|=4$ and $\mathbf b\cdot\mathbf c=16\cos60^\circ=8$,
 \[|\mathbf m|^2=16\cdot16+16+8\cdot8=336,\qquad |\mathbf m|=4\sqrt{21}.\]
 So $2[DEF]=\left|8\sqrt3-\mathbf m\times\mathbf e\right|$ is at most $8\sqrt3+4\sqrt{21}$, with equality when $\mathbf m\times\mathbf e=-4\sqrt{21}$. The maximum area is $\boxed{4\sqrt3+2\sqrt{21}}$.</p>
-<h4>Solution 2 (Coordinates and one angle)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Coordinates and one angle</summary><div class="ct-text">
 <p>Place $A=(0,0)$, $B=(4,0)$, $C=(2,2\sqrt3)$, and let $\mathbf u=D-A$, $\mathbf v=E-B$, $\mathbf w=F-C$, of lengths $1,2,3$. The centroid condition $\frac{A+B+C}{3}=\frac{D+E+F}{3}$ means $\mathbf u+\mathbf v+\mathbf w=\mathbf 0$. Then $|\mathbf u+\mathbf v|=3=|\mathbf u|+|\mathbf v|$, which forces $\mathbf u$ and $\mathbf v$ to point the same way, so for some angle $\theta$
 \[\mathbf u=(\cos\theta,\sin\theta),\qquad\mathbf v=2\mathbf u,\qquad\mathbf w=-3\mathbf u,\]
 and every $\theta$ satisfies the distance and centroid conditions (the maximising $\theta$ below gives positive area, so a genuine triangle). Thus

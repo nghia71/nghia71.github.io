@@ -97,7 +97,6 @@ description: Romania Team Selection Test 2026, for the JBMO: problems with answe
 <p>The 5 problems of the Romania Team Selection Test 2026, for the JBMO, each with our own solutions, hidden until you open them. 2 of them ask for an answer and 3 ask for a proof. Where a problem has a final answer, it is shown separately. Try a problem first, then check.</p><p>Romania selects its Junior Balkan team with several tests; only Day 1 is posted in the AoPS collection.</p>
 </div>
 <div class="ct-credit">Problems: Romania Team Selection Test 2026, for the JBMO, from the AoPS contest collection or the official paper. Solutions written by MCC.</div>
-<div class="ct-bar"><button type="button" onclick="ctAll(true)">Show all answers and solutions</button><button type="button" onclick="ctAll(false)">Hide all</button></div>
 <div class="ct-toc-wrap"><div class="ct-toc-row"><span class="ct-toc-g">Day 1</span><a href="#p1">1</a><a href="#p2">2</a><a href="#p3">3</a><a href="#p4">4</a><a href="#p5">5</a></div></div>
 
 {% raw %}
@@ -108,8 +107,7 @@ description: Romania Team Selection Test 2026, for the JBMO: problems with answe
 <div class="ct-text"><p>Let $ABC$ be a right triangle with $\angle BAC=90^\circ$.
 Let $D$ be a point on segment $AC$ and $E$ a point on segment $BD$ such that $\angle ABC=\angle ECD=\angle CED$.
 Prove that $BE=2AD$.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Reflect $D$ in $A$)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Reflect $D$ in $A$</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:233px" src="/assets/contests/2026-27/romania-jbmo-tst-1_s1.svg" alt="Figure for the solution"></div>
 <p>Let $\beta=\angle ABC$. In triangle $ECD$ we have $\angle ECD=\angle CED=\beta$, so it is isosceles with
 \[DE=DC.\]
@@ -123,7 +121,8 @@ while $\angle D'CB=\angle ACB=90^\circ-\beta$. Thus triangle $D'BC$ is isosceles
 Finally, $E$ lies on segment $BD$ and $DE=DC$, so
 \[BE=BD-DE=(2AD+DC)-DC=2AD,\]
 which is what we wanted to prove.</p>
-<h4>Solution 2 (Trigonometry in the two right triangles)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Trigonometry in the two right triangles</summary><div class="ct-text">
 <p>Let $\beta=\angle ABC$. Since $\angle ECD=\angle CED=\beta$, triangle $ECD$ is isosceles with $DE=DC$, and $\angle BDC=\angle EDC=180^\circ-2\beta$ because $E$ lies on segment $BD$. If $D=A$, then $\angle BAC=180^\circ-2\beta$ forces $\beta=45^\circ$, so $AB=AC$; then $E$ is the point of segment $AB$ with $AE=AC=AB$, i.e. $E=B$, and $BE=0=2AD$. So let $D\ne A$; then $D$ lies inside segment $AC$ and $\angle ADB=180^\circ-\angle BDC=2\beta$. Note $2\beta&lt;90^\circ$ because $\angle ADB$ is an angle of the right triangle $ABD$.</p><p>Put $c=AB$ and $d=AD$. In the right triangles $ABC$ and $ABD$ (right angle at $A$),
 \[AC=c\tan\beta,\qquad d=AD=c\cot 2\beta,\qquad BD=\frac{c}{\sin 2\beta}.\]
 Hence $DC=AC-AD=c\tan\beta-c\cot2\beta$, and
@@ -142,8 +141,7 @@ Thus $BE=2AD$.</p><p><em>Remark.</em> The data force $30^\circ&lt;\beta\le45^\ci
 <div class="ct-text"><p>Let $n$ be a positive integer and let $S$ be a set of $2n$ real numbers with sum $0$.
 Prove that there exist two disjoint subsets $A$ and $B$ of $S$, each with $n$ elements, such that for every permutation $a_1,a_2,\dots,a_n$ of the elements of $A$ and every permutation $b_1,b_2,\dots,b_n$ of the elements of $B$, the following inequality holds:
 \[\sum_{i=1}^{n}a_ib_i&lt;0.\]</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Shift by a separating number)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Shift by a separating number</summary><div class="ct-text">
 <p>Since $S$ is a set, its $2n$ elements are distinct. Let $A$ be the set of the $n$ smallest elements of $S$ and $B$ the set of the $n$ largest. Then $\max A&lt;\min B$, so the interval $[\max A,\min B]$ has positive length and we can choose a number $c$ in it with $c\neq0$.</p><p>Take any orderings $a_1,\dots,a_n$ of $A$ and $b_1,\dots,b_n$ of $B$. Expanding,
 \[\sum_{i=1}^n (a_i-c)(b_i-c)=\sum_{i=1}^n a_ib_i-c\sum_{i=1}^n a_i-c\sum_{i=1}^n b_i+nc^2=\sum_{i=1}^n a_ib_i+nc^2,\]
 because $\sum a_i+\sum b_i$ is the sum of all elements of $S$, which is $0$. Hence
@@ -151,7 +149,8 @@ because $\sum a_i+\sum b_i$ is the sum of all elements of $S$, which is $0$. Hen
 For every $i$ we have $a_i\le\max A\le c$ and $b_i\ge\min B\ge c$, so $(a_i-c)(b_i-c)\le0$. Therefore
 \[\sum_{i=1}^n a_ib_i\le -nc^2&lt;0,\]
 for every pair of orderings. So the sets $A$ and $B$ have the required property.</p><p><em>Remark.</em> Distinctness is essential: for $S=\{0,0\}$ (a multiset) the strict inequality fails.</p>
-<h4>Solution 2 (Bounding each product by the smallest element of $B$)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Bounding each product by the smallest element of $B$</summary><div class="ct-text">
 <p>Again let $A$ consist of the $n$ smallest and $B$ of the $n$ largest elements of $S$; as the elements are distinct, $a&lt;m$ for every $a\in A$, where $m=\min B$. Fix any pairing of $A$ with $B$ (this is exactly what a choice of the two orderings does); we show that the sum of the $n$ products is negative.</p><p><strong>Reduction to $m&gt;0$.</strong> If $m\le0$, then every element of $A$ is negative. Replace every element $x$ of $S$ by $-x$: the new set $-S$ still has $2n$ distinct elements with sum $0$, its $n$ smallest elements form $-B$ and its $n$ largest form $-A$, the smallest of which is $-\max A&gt;0$, and every product $ab$ is unchanged because $(-a)(-b)=ab$. So we may assume $m&gt;0$; then all elements of $B$ are positive.</p><p><strong>The estimate.</strong> Let $A^-$ be the set of negative elements of $A$ and $A^+=A\setminus A^-$. For $a\in A^-$ paired with $b$: since $a&lt;0$ and $b\ge m$, we get $ab\le am$. For $a\in A^+$ paired with $b$: since $0\le a&lt;m$ and $b&gt;0$, we get $ab&lt; mb$. Denote by $B^+$ the set of partners of the elements of $A^+$ and by $B^-$ that of the elements of $A^-$. Adding,
 \[\sum ab\le m\Big(\sum_{a\in A^-}a+\sum_{b\in B^+}b\Big),\]
 with strict inequality if $A^+\neq\varnothing$. Since the total sum of $S$ is $0$,
@@ -165,8 +164,7 @@ with strict inequality if $A^-\ne\varnothing$ (then $B^-$ is a nonempty set of p
 <div class="ct-text"><p>Let $n\ge 5$. An $n\times n$ grid is filled with $n^2$ distinct positive integers such that whenever we choose several numbers from the grid, any two of them lying in different rows and different columns, the arithmetic mean of the chosen numbers is a positive integer.
 Determine the smallest possible value of the largest number in the grid.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$1+(n^2-1)\cdot\operatorname{lcm}(1,2,\dots,n-1)$</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (All entries are congruent modulo $\operatorname{lcm}(1,\dots,n-1)$)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; All entries are congruent modulo $\operatorname{lcm}(1,\dots,n-1)$</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:242px" src="/assets/contests/2026-27/romania-jbmo-tst-3_s1.svg" alt="Figure for the solution"></div>
 <p>Call a set of cells <em>admissible</em> if no two of its cells share a row or a column. The condition says: for every admissible set of $k$ cells ($1\le k\le n$), the sum of its entries is divisible by $k$. Let $L=\operatorname{lcm}(1,2,\dots,n-1)$. We prove that the answer is
 \[1+(n^2-1)L .\]</p><p><strong>Step 1: for $2\le k\le n-1$, all entries are congruent modulo $k$.</strong> First let $x$ and $y$ be the entries of two cells in different rows and different columns. Delete the two rows and the two columns of these cells; an $(n-2)\times(n-2)$ grid remains, and since $k-1\le n-2$ we can pick $k-1$ cells $T$ on its diagonal. Then $T$ together with the cell of $x$ is admissible, and so is $T$ together with the cell of $y$ (both have $k$ cells). If $t$ is the sum of the entries in $T$, then $k\mid x+t$ and $k\mid y+t$, so $x\equiv y\pmod k$.</p><p>If the cells of $x$ and $y$ share a row (or a column), choose a cell $z$ outside the rows and columns of both (possible since $n\ge3$); by the previous case $x\equiv z\equiv y\pmod k$.</p><p><strong>Step 2: the lower bound.</strong> By Step 1, any two entries are congruent modulo every $k\in\{2,\dots,n-1\}$, hence modulo $L$. So the $n^2$ entries are distinct positive integers in one residue class modulo $L$. Listed in increasing order, consecutive ones differ by at least $L$, so the largest is at least $1+(n^2-1)L$.</p><p><strong>Step 3: a grid attaining the bound.</strong> Number rows and columns $0,1,\dots,n-1$ and write
@@ -176,7 +174,8 @@ in row $i$, column $j$. As $ni+j$ runs through $0,1,\dots,n^2-1$, the entries ar
 So the mean is $1+L\cdot\dfrac{n^2-1}{2}$, an integer because $L$ is even ($n-1\ge2$).</p></li></ul><p>Hence the smallest possible value of the largest number is
 \[\boxed{1+(n^2-1)\operatorname{lcm}(1,2,\dots,n-1)};\]
 for example $289$ for $n=5$ and $2101$ for $n=6$.</p><p><em>Remark.</em> The argument works for every $n\ge3$. If $0$ were allowed as an entry (and the mean only required to be a natural number), the same proof would give $(n^2-1)\operatorname{lcm}(1,\dots,n-1)$ (shift the construction down by $1$; the $k=n$ mean becomes $L(n^2-1)/2$).</p>
-<h4>Solution 2 (Row values plus column values)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Row values plus column values</summary><div class="ct-text">
 <p>Number the rows and columns $1,\dots,n$, let $x_{ij}$ be the entry in row $i$, column $j$, and call a set of cells <em>admissible</em> if no two of its cells share a row or a column; the condition says that the entries of every admissible set of $k$ cells have a sum divisible by $k$. Let $L=\operatorname{lcm}(1,2,\dots,n-1)$. We show that the answer is $1+(n^2-1)L$.</p><p><strong>Step 1: modulo $k$, every entry is a row value plus a column value ($2\le k\le n$).</strong> Take rows $i\ne i'$ and columns $j\ne j'$. Delete these two rows and two columns; on the diagonal of the remaining $(n-2)\times(n-2)$ grid choose a set $U$ of $k-2$ cells (possible as $k-2\le n-2$). Both $U\cup\{(i,j),(i',j')\}$ and $U\cup\{(i,j'),(i',j)\}$ are admissible sets of $k$ cells, so their sums are divisible by $k$, and subtracting,
 \[x_{ij}+x_{i'j'}\equiv x_{ij'}+x_{i'j}\pmod k .\]
 With $i'=j'=1$ this gives, for all $i,j$ (trivially if $i=1$ or $j=1$),
@@ -195,8 +194,7 @@ The circles $\omega$ and $\omega_1$ intersect again at $E\ne B$, while $\omega$ 
 Line $AB$ meets $\omega_1$ again at $S$, and line $AC$ meets $\omega_2$ again at $R$.
 Let $Q$ and $P$ be the second intersection points of line $EF$ with $\omega_1$ and $\omega_2$, respectively (different from $E$ and $F$).
 Prove that the points $P$, $Q$, $R$, $S$ are concyclic.</p></div>
-<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Power of $A$, then parallels and the tangent at $A$)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Power of $A$, then parallels and the tangent at $A$</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:289px" src="/assets/contests/2026-27/romania-jbmo-tst-4_s1.svg" alt="Figure for the solution"></div>
 <p>We use directed angles between lines, $\measuredangle(\ell,m)$, taken modulo $180^\circ$; then four points $W,X,Y,Z$ (no three collinear) are concyclic if and only if $\measuredangle(XW,XZ)=\measuredangle(YW,YZ)$, and this works in every configuration. Let $t$ be the tangent to $\omega$ at $A$. Recall the tangent-chord rule: for $X,Y$ on $\omega$, $\measuredangle(t,AY)=\measuredangle(XA,XY)$.</p><p><strong>Step 1: $SR\parallel t$.</strong> The circles $\omega_1$ and $\omega_2$ meet at $D$ and $M$, and $A$ lies on line $DM$. By the power of the point $A$,
 \[AS\cdot AB=AM\cdot AD=AR\cdot AC .\]
@@ -211,7 +209,8 @@ so $PR\parallel EA$. (This is Reim's theorem, used twice.)</p><p><strong>Step 3:
 Since $RS\parallel t$ and $RP\parallel AE$, and by the tangent-chord rule with $F\in\omega$,
 \[\measuredangle(RS,RP)=\measuredangle(t,AE)=\measuredangle(FA,FE).\]
 Thus $\measuredangle(QS,QP)=\measuredangle(RS,RP)$.</p><p>We take $P,Q,R,S$ distinct, as the statement intends, and check that no three of them are collinear, so that the criterion applies. Line $EF$ meets $\omega_1$ only at $E,Q$; the point $S$ is not $Q$, and not $E$ (line $AB$ meets $\omega$ only at $A$ and $B$; $E\ne B$, and $E\ne A$ because $A\notin\omega_1$, its power $AM\cdot AD$ being positive); so $S\notin EF$, and likewise $R\notin EF$. If $Q\in SR$, then $\measuredangle(QS,QP)=\measuredangle(SR,EF)$, so the equality above gives $\measuredangle(SR,RP)=\measuredangle(SR,EF)$, i.e. $RP\parallel EF$; as $P\in EF$ this puts $R$ on $EF$, which we excluded. If $P\in SR$, then $\measuredangle(RS,RP)=0$, so $\measuredangle(QS,QP)=0$ and $S$ lies on $QP=EF$, again excluded. So no three of the four points are collinear. Hence the points $P,Q,R,S$ are concyclic.</p>
-<h4>Solution 2 (Inversion at $A$ and the power of the point $Y=SR\cap EF$)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Inversion at $A$ and the power of the point $Y=SR\cap EF$</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:295px" src="/assets/contests/2026-27/romania-jbmo-tst-4_s2.svg" alt="Figure for the solution"></div>
 <p>Let $k=AM\cdot AD&gt;0$ (the point $M$ lies between $A$ and $D$). The line $AMD$ meets both $\omega_1$ and $\omega_2$ at $M$ and $D$, so by the power of a point $k$ is the power of $A$ with respect to both circles.</p><p><strong>The inversion.</strong> Let $\Phi$ be the inversion with centre $A$ and radius $\sqrt k$. If a line through $A$ meets $\omega_1$ at $U$ and $V$, then $AU\cdot AV=k$ with $U,V$ on the same side of $A$, so $\Phi(U)=V$; thus $\Phi$ maps $\omega_1$ onto itself, and likewise $\omega_2$. In particular $\Phi(B)=S$ and $\Phi(C)=R$. The circle $\omega$ passes through $A$, so $\Phi(\omega)$ is a line; it contains $\Phi(B)=S$ and $\Phi(C)=R$, so $\Phi(\omega)$ is the line $SR$.</p><p>Let $E^*=\Phi(E)$ and $F^*=\Phi(F)$. Since $E\in\omega\cap\omega_1$, the point $E^*$ lies on line $SR$ and on $\omega_1$; it is the second intersection of line $AE$ with $\omega_1$, and $E^*\neq S$ because $E\neq B$. Likewise $F^*$ lies on line $SR$ and on $\omega_2$, and $F^*\ne R$. Moreover
 \[AE\cdot AE^*=k=AF\cdot AF^* .\]
@@ -234,7 +233,8 @@ Adding the first two and subtracting the third gives $x(S)+x(R)=x(Q)+x(P)$. So t
 The power of $E$ with respect to $\omega_2$ along the lines $SR$ and $EF$ gives $ER\cdot EF^*=EF\cdot EP$. Therefore
 \[ES\cdot ER=\lambda\,EF^*\cdot ER=\lambda\,EF\cdot EP=EQ\cdot EP,\]
 and the converse of the power of a point (with lines $SR$ and $QP$ through $E$) shows again that $P,Q,R,S$ are concyclic.</p>
-<h4>Solution 3 (A distance ratio on circles through $D$ and $M$)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 3 &ndash; A distance ratio on circles through $D$ and $M$</summary><div class="ct-text">
 <p>Both $\omega_1$ and $\omega_2$ pass through $D$ and $M$, and line $DM$ is line $AD$. We assume the figure is non-degenerate, as the statement describes it: $S\ne B$, $R\ne C$, $P\ne Q$, $S\ne Q$ and $R\ne P$ (otherwise fewer than four distinct points are named, or a second intersection is missing). Note that $A\notin\omega_1$ and $A\notin\omega_2$, because line $AD$ meets these circles only at $D$ and $M$; also $E\ne S$ (line $AB$ meets $\omega$ only at $A$ and $B$) and $F\ne R$.</p><p><strong>The ratio.</strong> Fix one of the two open half-planes bounded by line $DM$ and call it positive. For a point $X$ of $\omega_1$ or $\omega_2$ other than $D,M$ (so $X\notin DM$) put
 \[u(X)=\pm\frac{DX}{MX},\]
 with the sign $+$ if $X$ is in the positive half-plane and $-$ otherwise. For a point $T$ of line $DM$ other than $M$ write $\rho(T)=\overline{DT}/\overline{MT}$ (signed lengths along $DM$). With the coordinate $x$ on line $DM$ such that $D=0$, $M=1$, we have $\rho=x/(x-1)$; this takes every real value except $1$ exactly once, so $\rho(T)$ determines $T$.</p><p><strong>Lemma.</strong> Let $\Gamma$ be a circle through $D$ and $M$, and let $X\ne Y$ be points of $\Gamma$ other than $D,M$.</p><ul class="ct-ul"><li><p>If line $XY$ meets line $DM$ at $T$, then $u(X)\,u(Y)=\rho(T)$.</p></li><li><p>If $XY\parallel DM$, then $u(X)\,u(Y)=1$.</p></li></ul><p><em>Proof.</em> In the first case $T\ne D,M$ (a line through $D$ meets $\Gamma$ at $D$, which is neither $X$ nor $Y$). By the power of the point $T$, $\overline{TX}\cdot\overline{TY}=\overline{TD}\cdot\overline{TM}$ in signed lengths; taking absolute values, $TX\cdot TY=TD\cdot TM$. The signed equality also shows that $T$ lies between $X$ and $Y$ exactly when it lies between $D$ and $M$, so $\angle DTX=\angle YTM$ (reversing both rays does not change an angle). Hence triangles $TDX$ and $TYM$ have equal angles at $T$ and $TD/TY=TX/TM$; hence they are similar, and $DX/YM=TD/TY$. Exchanging $X$ and $Y$, $DY/XM=TD/TX$. Multiplying,
@@ -248,8 +248,7 @@ For the signs: $u(X)u(Y)&lt;0$ if and only if $X,Y$ are on opposite sides of $DM
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 21: Arithmetic Functions and Multiplicative Structure &middot; Divisor and Sum Functions</div>
 <div class="ct-text"><p>We say that two positive integers $a$ and $b$ are <em>interlaced</em> if they have the same number of proper divisors, at least two, denoted $a_1,a_2,\dots,a_n$ and $b_1,b_2,\dots,b_n$, such that $a_1&lt;b_1&lt;a_2&lt;b_2&lt;\cdots&lt;a_n&lt;b_n$.</p><ul class="ct-parts"><li><p><span class="ct-lbl">(a)</span> Give an example of interlaced numbers $a$ and $b$ that each have exactly $2026$ divisors.</p></li><li><p><span class="ct-lbl">(b)</span> If $a$ and $b$ are interlaced, is it possible that $a+b$ and $ab$ are also interlaced?</p></li></ul></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(a) for example $a=2027^{2025}$, $b=2029^{2025}$; (b) no</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Prime powers for (a); the largest proper divisors for (b))</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Prime powers for (a); the largest proper divisors for (b)</summary><div class="ct-text">
 <p>Here a <em>proper divisor</em> of $N$ is a divisor different from $1$ and $N$ (if $1$ were counted, we would always have $a_1=b_1=1$ and no two numbers could be interlaced). If $N$ has proper divisors $d_1&lt;d_2&lt;\dots&lt;d_n$, then $d_1$ is the smallest prime factor of $N$ and $d_i\,d_{n+1-i}=N$ for all $i$ (the map $d\mapsto N/d$ reverses the order). In particular $d_n=N/d_1$.</p><p><strong>A first observation.</strong> If $a$ and $b$ are interlaced, then $a&lt;b$, because $a=a_1a_n&lt;b_1b_n=b$.</p><p><strong>(a)</strong> The numbers $p=2027$ and $q=2029$ are primes (neither is divisible by a prime up to $43$, and the next prime satisfies $47^2=2209&gt;2029$). Take
 \[a=2027^{2025},\qquad b=2029^{2025}.\]
 Each has exactly $2026$ divisors, and the proper divisors are $p^k$ and $q^k$ for $k=1,2,\dots,2024$. We need

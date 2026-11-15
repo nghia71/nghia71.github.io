@@ -97,7 +97,6 @@ description: Polish Mathematical Olympiad 2026, Final Round: problems with answe
 <p>The 6 problems of the Polish Mathematical Olympiad 2026, Final Round, each with our own solutions, hidden until you open them. All of them ask for a proof. Where a problem has a final answer, it is shown separately. Try a problem first, then check.</p><p>The final round has two days with three problems each.</p>
 </div>
 <div class="ct-credit">Problems: Polish Mathematical Olympiad 2026, Final Round, from the AoPS contest collection or the official paper. Solutions written by MCC.</div>
-<div class="ct-bar"><button type="button" onclick="ctAll(true)">Show all answers and solutions</button><button type="button" onclick="ctAll(false)">Hide all</button></div>
 <div class="ct-toc-wrap"><div class="ct-toc-row"><span class="ct-toc-g">Day 1</span><a href="#p1">1</a><a href="#p2">2</a><a href="#p3">3</a></div><div class="ct-toc-row"><span class="ct-toc-g">Day 2</span><a href="#p4">4</a><a href="#p5">5</a><a href="#p6">6</a></div></div>
 
 {% raw %}
@@ -106,8 +105,7 @@ description: Polish Mathematical Olympiad 2026, Final Round: problems with answe
 <h3>Problem 1</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Combinatorics &middot; LPS VII, Chapter 31: Extremal Principle and Bounding Arguments &middot; Extremal Element Selection</div>
 <div class="ct-text"><p>Positive integers $a,b,n$ satisfying $2a=bn$ are given. We divide the set $\{1,2,\dots,2a\}$ into $n$ pairwise disjoint sets, each with $b$ elements. Prove that we can divide these $n$ subsets into two groups such that the union of the sets in the first group contains at least $\frac a2-\frac b4$ numbers that are less than or equal to $a$ and the union of the sets in the second group contains at least $\frac a2-\frac b4$ numbers that are greater than or equal to $a$.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Sort by the number of small elements and cut in the middle)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Sort by the number of small elements and cut in the middle</summary><div class="ct-text">
 <p>Call the numbers $1,\dots,a$ <em>small</em> and $a+1,\dots,2a$ <em>large</em>; there are $a$ of each. A number $&gt;a$ is in
 particular $\ge a$, so it suffices to make the second group contain at least $\frac a2-\frac b4$ large numbers.</p><p>For each of the $n$ sets $S_j$ let $l_j$ be its number of small elements; it has $b-l_j$ large elements, and $\sum_j l_j=a$. Number the sets
 so that $l_1\ge l_2\ge\dots\ge l_n$, let $k=\lfloor n/2\rfloor$, and put $S_1,\dots,S_k$ into the first group and the rest into the second.</p><p>Let $F=l_1+\dots+l_k$ (small numbers in the first group). Each of $l_1,\dots,l_k$ is at least each of $l_{k+1},\dots,l_n$, so
@@ -117,7 +115,8 @@ The second group contains $G=\sum_{j&gt;k}(b-l_j)=(n-k)b-(a-F)$ large numbers, s
 \[G\ge(n-k)b-\frac{nb}2+\frac{kb}2=\frac{(n-k)b}2\ge\frac{nb}4=\frac a2 .\]
 Both groups satisfy the requirement. (If $n=1$, then $k=0$, the first group is empty and $\frac a2-\frac b4=0$, so the claim holds trivially;
 for $n\ge2$ both groups are nonempty.)</p>
-<h4>Solution 2 (Sort, then deal the sets out alternately)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Sort, then deal the sets out alternately</summary><div class="ct-text">
 <p>Call $1,\dots,a$ small and $a+1,\dots,2a$ large. Since every large number is $\ge a$, it is enough to find two
 groups where the first contains at least $\frac a2-\frac b4$ small numbers and the second at least $\frac a2-\frac b4$ large numbers.</p><p>Let $l_j$ be the number of small elements of the $j$-th set, ordered so that $l_1\ge l_2\ge\dots\ge l_n$; then $\sum l_j=a$ and the $j$-th
 set has $b-l_j$ large elements. Deal the sets like cards: sets with odd index go to the first group, sets with even index to the second,
@@ -136,8 +135,7 @@ $\frac a2-\frac b4$ is $0$.)</p>
 <div class="ct-text"><p>Positive integers $a,b$ are given. Prove that $a\mid b-1$ if and only if
 \[\left\lfloor\frac ab\cdot n\right\rfloor=\left\lfloor\frac ab\cdot\left(n-\frac12\right)\right\rfloor\]
 for all $n=1,2,\dots,\left\lfloor\frac b2\right\rfloor$.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Translate to remainders of $an$ modulo $b$)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Translate to remainders of $an$ modulo $b$</summary><div class="ct-text">
 <p><strong>Reformulation.</strong> For $n\ge1$ write $an=bQ_n+r_n$ with $0\le r_n&lt;b$. Then $\lfloor\frac{an}b\rfloor=Q_n$ and
 \[\frac ab\Bigl(n-\frac12\Bigr)=Q_n+\frac{r_n-a/2}{b},\qquad\text{where }\frac{r_n-a/2}{b}&lt;1 .\]
 So the two floors are equal if and only if $r_n\ge\frac a2$. The statement becomes: $a\mid b-1$ if and only if
@@ -147,7 +145,8 @@ $(e\bmod d)&lt;\frac e2$</em> (if $d\le\frac e2$ the remainder is $&lt;d\le\frac
 and $an=bQ_n+r_n\equiv Q_n+r_n\pmod a$, so $a\mid Q_n+r_n$. But $Q_n+r_n\ge1$ (as $an&gt;0$) and $Q_n+r_n&lt;\frac a2+\frac a2=a$, a contradiction.</p><p><strong>(C) implies $a\mid b-1$.</strong> Suppose $a\nmid b-1$ (so $a\ge2$); we find $n\le\lfloor b/2\rfloor$ with $r_n&lt;\frac a2$.</p><ul class="ct-ul"><li><p>$a\ge b$: take $n=1$; $r_1=a\bmod b&lt;\frac a2$ by the fact.</p></li><li><p>$a&lt;b$: write $b=qa+\rho$ with $q\ge1$, $0\le\rho&lt;a$; by assumption $\rho\ne1$.</p><ul class="ct-ul"><li><p>$\rho=0$: take $n=q=\frac ba\le\frac b2$; then $r_n=0&lt;\frac a2$.</p></li><li><p>$\rho\ge2$: let $j=\lfloor a/\rho\rfloor\ge1$ and $n=jq+1$. Then
 \[an=j(qa)+a=j(b-\rho)+a=jb+(a-j\rho),\qquad 0\le a-j\rho=(a\bmod\rho)&lt;\rho&lt;b,\]
 so $r_n=a\bmod\rho&lt;\frac a2$ by the fact. Moreover $j\le\frac a\rho\le\frac a2$, so $n\le\frac{aq}2+1\le\frac{aq+\rho}2=\frac b2$.</p></li></ul></li></ul><p>In each case (C) fails. This proves the equivalence.</p>
-<h4>Solution 2 (Swap the roles: residues of $mb$ modulo $a$)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Swap the roles: residues of $mb$ modulo $a$</summary><div class="ct-text">
 <p><strong>Reformulation.</strong> For real $u&lt;v$, $\lfloor u\rfloor\ne\lfloor v\rfloor$ exactly when some integer $m$ satisfies $u&lt;m\le v$.
 So the two floors at $n$ differ if and only if there is an integer $m$ with
 \[\frac ab\Bigl(n-\frac12\Bigr)&lt;m\le\frac ab\,n,\qquad\text{i.e.}\qquad n-\frac12&lt;\frac{mb}a\le n .\]
@@ -175,12 +174,12 @@ so the integer $mq+1$ is at most $\lfloor\frac b2\rfloor$.</p></li></ul><p>In ev
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Algebra &middot; LPS VII, Chapter 26: Inequalities: Symmetry, Homogenization, and Advanced Structure &middot; Homogenization and Normalization</div>
 <div class="ct-text"><p>A positive integer $n$ and positive real numbers $x_1,x_2,\dots,x_n$ with $\sum_{i=1}^{n}x_i=1$ are given. Prove that
 \[\left(\sum_{i=1}^{n}x_i^2\right)^2\sqrt n\ge\sum_{i=1}^{n}x_i^3.\]</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (The largest variable)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; The largest variable</summary><div class="ct-text">
 <p>Write $S_2=\sum x_i^2$, $S_3=\sum x_i^3$ and let $x_{\max}$ be the largest $x_i$.</p><p>First, $S_3=\sum x_i\cdot x_i^2\le x_{\max}S_2$, and $x_{\max}^2\le S_2$, so $S_3\le S_2^{3/2}$.</p><p>Second, by Cauchy-Schwarz (or QM-AM), $1=\bigl(\sum x_i\bigr)^2\le n\sum x_i^2=nS_2$, so $\sqrt{nS_2}\ge1$.</p><p>Therefore
 \[S_3\le S_2^{3/2}\le S_2^{3/2}\sqrt{nS_2}=\sqrt n\,S_2^2,\]
 which is the claim. (Equality needs $x_{\max}^2=S_2$, i.e. $n=1$; for $n=1$ both sides equal $1$.)</p>
-<h4>Solution 2 (Homogenise and use Cauchy-Schwarz twice)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Homogenise and use Cauchy-Schwarz twice</summary><div class="ct-text">
 <p>With $S_k=\sum x_i^k$, the claim is the homogeneous inequality $S_1S_3\le\sqrt n\,S_2^2$ (both sides have degree $4$;
 here $S_1=1$). By Cauchy-Schwarz,
 \[S_1=\sum 1\cdot x_i\le\sqrt{n}\sqrt{S_2},\qquad S_3=\sum x_i\cdot x_i^2\le\sqrt{S_2}\sqrt{S_4}.\]
@@ -197,8 +196,7 @@ and with $S_1=1$ this is $\bigl(\sum x_i^2\bigr)^2\sqrt n\ge\sum x_i^3$.</p>
 <div class="ct-text"><p>A function $f:\mathbb R\to\mathbb R$ satisfies $f(x)=f\!\left(\frac1x\right)$ for all real numbers $x\ne0$. Assume that there exist polynomials $P,Q$ with real coefficients such that $f(x)=\frac{P(x)}{Q(x)}$ for all real numbers $x$. Prove that there exist polynomials $R,S$ with real coefficients such that
 \[f(x)=\frac{R\left(x+\frac1x\right)}{S\left(x+\frac1x\right)}\]
 for all real numbers $x\ne0$.</p></div>
-<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Make numerator and denominator symmetric)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Make numerator and denominator symmetric</summary><div class="ct-text">
 <p><strong>Lemma.</strong> For every $k\ge0$ there is a polynomial $T_k$ with real (in fact integer) coefficients such that
 $x^k+x^{-k}=T_k\bigl(x+\frac1x\bigr)$ for all $x\ne0$. Indeed $T_0=2$, $T_1(t)=t$, and
 $x^{k+1}+x^{-k-1}=\bigl(x+\frac1x\bigr)(x^k+x^{-k})-(x^{k-1}+x^{-k+1})$ gives $T_{k+1}=tT_k-T_{k-1}$.
@@ -211,7 +209,8 @@ $N$ and $D$ are Laurent polynomials. If a Laurent polynomial $L$ with exponents 
 the polynomial $x^d\bigl(L(x)-L(1/x)\bigr)$ has infinitely many zeros, so it is the zero polynomial, i.e. $c_k=c_{-k}$ for all $k$. Hence, by the
 Lemma, $N(x)=R(x+\frac1x)$ and $D(x)=S(x+\frac1x)$ for polynomials $R,S$ with real coefficients, and for every real $x\ne0$
 \[f(x)=\frac{R\left(x+\frac1x\right)}{S\left(x+\frac1x\right)},\qquad S\Bigl(x+\frac1x\Bigr)=D(x)\ne0 .\]</p>
-<h4>Solution 2 (Reciprocal polynomials)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Reciprocal polynomials</summary><div class="ct-text">
 <p>For $k\ge0$ the identity $x^k+x^{-k}=T_k(x+\frac1x)$ holds with polynomials $T_0=2$, $T_1=t$, $T_{k+1}=tT_k-T_{k-1}$
 (from $(x+\frac1x)(x^k+x^{-k})=(x^{k+1}+x^{-k-1})+(x^{k-1}+x^{1-k})$).</p><p>If $P=0$ take $R=0$, $S=1$. Otherwise cancel the greatest common divisor of $P$ and $Q$; we may then assume $P,Q$ coprime, and $Q$ still has no
 real zero (it divides the original denominator, which has none, because $f=P/Q$ at every real $x$). Let $d=\max(\deg P,\deg Q)$ and define
@@ -223,7 +222,8 @@ Therefore
 \[x^{-e}Q(x)=q_e+\sum_{k=1}^e q_{e+k}(x^k+x^{-k})=S\Bigl(x+\frac1x\Bigr),\qquad x^{-e}P(x)=R\Bigl(x+\frac1x\Bigr)\]
 with $S=q_e+\sum_k q_{e+k}T_k$ and $R$ defined in the same way from the coefficients of $P$. For real $x\ne0$, $S(x+\frac1x)=x^{-e}Q(x)\ne0$
 and $f(x)=\frac{x^{-e}P(x)}{x^{-e}Q(x)}=\frac{R(x+1/x)}{S(x+1/x)}$.</p>
-<h4>Solution 3 (Write every polynomial as $A(t)+xB(t)$ and multiply by the conjugate)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 3 &ndash; Write every polynomial as $A(t)+xB(t)$ and multiply by the conjugate</summary><div class="ct-text">
 <p>For real $x\ne0$ put $t=x+\frac1x$; then $x^2=tx-1$.</p><p><strong>Step 1: reduction.</strong> For every polynomial $P$ with real coefficients there are polynomials $A,B$ with real coefficients such that
 $P(x)=A(t)+xB(t)$ for all real $x\ne0$. It suffices to show this for $x^k$, by induction on $k$: $x^0=1+x\cdot0$, and if $x^k=A_k(t)+xB_k(t)$,
 then
@@ -249,8 +249,7 @@ and the denominator never vanishes there.</p>
 <h3>Problem 5</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 15: Circles, Power, and Radical Structure &middot; Tangency and Tangent Geometry</div>
 <div class="ct-text"><p>An acute triangle $ABC$ with $AB&lt;AC$ is given. Its incircle touches sides $BC,CA,AB$ at $D,E,F$ respectively. Points $X,Y$ lie on the line $EF$ such that $\angle XBC=\angle YCB=90^\circ$. Point $M$ is the midpoint of segment $BC$. The line symmetric to $BX$ with respect to $MX$ and the line symmetric to $CY$ with respect to $MY$ meet at $Z$. Prove that $BC\perp ZD$.</p></div>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Second tangents to the circle on diameter $BC$; coordinates)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Second tangents to the circle on diameter $BC$; coordinates</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:357px" src="/assets/contests/2026-27/poland-mo-5_s1.svg" alt="Figure for the solution"></div>
 <p>Let $a,b,c$ be the side lengths, $s$ the semiperimeter, so $BD=BF=s-b$, $CD=CE=s-c$; let $R=\frac a2$ and let $\omega$ be the
 circle with diameter $BC$ (centre $M$, dashed in the figure).</p><p><strong>Step 1: where $X$ and $Y$ are.</strong> As $\angle B&lt;90^\circ$, the ray from $B$ perpendicular to $BC$ on the side of $A$ lies on the other side of
@@ -272,7 +271,8 @@ which the statement excludes by saying that they meet at a point $Z$), so this p
 \[x_Z=R\,\frac{\cos\mu}{\cos\delta}=R\,\frac{1-\tan\frac{\theta_1}2\tan\frac{\theta_2}2}{1+\tan\frac{\theta_1}2\tan\frac{\theta_2}2}=R\,\frac{p-q}{p+q},\qquad y_Z=R\,\frac{\sin\mu}{\cos\delta}&gt;0 .\]</p><p><strong>Step 4: conclusion.</strong> By Step 1, $\frac pq=\frac{s-b}{s-c}$, so
 \[x_Z=\frac a2\cdot\frac{(s-b)-(s-c)}{(s-b)+(s-c)}=\frac a2\cdot\frac{c-b}{a}=\frac{c-b}2,\]
 while $D$ has abscissa $BD-R=(s-b)-\frac a2=\frac{c-b}2$. So $Z$ and $D$ have the same abscissa, $Z\ne D$ (as $y_Z&gt;0$), and $ZD\perp BC$.</p>
-<h4>Solution 2 (Brianchon and the diagonals of a trapezoid)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Brianchon and the diagonals of a trapezoid</summary><div class="ct-text">
 <p>Let $\omega$ be the circle with diameter $BC$ and centre $M$, and $s$ the semiperimeter, so $BD=s-b$, $CD=s-c$.</p><p><strong>$Z$ is the meet of the second tangents.</strong> $BX\perp BM$ means that $BX$ is tangent to $\omega$ at $B$. Reflecting in line $XM$ (which
 passes through the centre) maps $\omega$ to itself and the tangent $XB$ to the other tangent $XU$ from $X$; similarly the reflection of $CY$ in
 $MY$ is the second tangent $YV$ from $Y$. Thus $Z=XU\cap YV$ (these tangents are distinct lines, as the statement says they meet at a point). Being the intersection of two tangents, $Z$ lies outside $\omega$, whereas $D$ (an
@@ -297,8 +297,7 @@ and by (1) this equals $\frac{BD}{DC}$. So $K=D$.</p><p>Therefore the perpendicu
 <h3>Problem 6</h3>
 <div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 52: Advanced Combinatorial Structure and Hybrid Methods &middot; High-Level Olympiad Synthesis</div>
 <div class="ct-text"><p>An integer $n\ge2$ is given. Wojtek has $n$ bamboos $B_1,B_2,\dots,B_n$ in his garden. All bamboos have a constant rate of growth: every day the bamboo $B_i$ grows by $a_i&gt;0$ meters. Every day at midnight Wojtek can choose one bamboo and cut it to the ground, making its height $0$. The bamboo doesn't stop growing and its rate of growth doesn't change. At the beginning, all the bamboos have height equal to $0$. Assume that $\sum_{i=1}^{n}a_i=1$. Prove that Wojtek can guarantee that the height of every bamboo will always be at most $2$ meters.</p></div>
-<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Round to powers of two, then split days into even and odd)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Round to powers of two, then split days into even and odd</summary><div class="ct-text">
 <p><strong>Rounding.</strong> Since $n\ge2$, every $a_i&lt;1$, so $\frac2{a_i}&gt;2$. Let $p_i=2^{k_i}$ be the largest power of $2$ with
 $p_i\le\frac2{a_i}$; then $k_i\ge1$ and $2p_i&gt;\frac2{a_i}$, i.e.
 \[a_ip_i\le2\qquad\text{and}\qquad\frac1{p_i}&lt;a_i,\quad\text{so}\quad\sum_{i=1}^n2^{-k_i}&lt;\sum a_i=1. \tag{1}\]
@@ -314,7 +313,8 @@ whose maximum exponent $k_i-1$ is at most $K-1$, there are residues
 $r_i'$ with disjoint classes $r_i'\bmod2^{k_i-1}$ inside each group. Put $r_i=2r_i'+g$ for $i\in G_g$. The class $r_i\bmod2^{k_i}$ is
 $\{2t+g:\ t\equiv r_i'\pmod{2^{k_i-1}}\}$; classes in different groups have different parity, and within a group they are disjoint because the
 classes of the $t$'s are. $\square$</p><p>By (1) the Lemma applies to $k_1,\dots,k_n$; cutting bamboo $i$ on the days of its class keeps every bamboo at height at most $2$ forever.</p>
-<h4>Solution 2 (Round to powers of two, then an explicit schedule by reversing binary digits)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Round to powers of two, then an explicit schedule by reversing binary digits</summary><div class="ct-text">
 <p><strong>Rounding.</strong> As $n\ge2$, each $a_i&lt;1$. Let $p_i=2^{k_i}$ be the largest power of two not exceeding $\frac2{a_i}$
 (so $k_i\ge1$). Then $a_ip_i\le2$, and $p_i&gt;\frac1{a_i}$ gives $\sum_i2^{-k_i}&lt;\sum_ia_i=1$. It is enough to give disjoint residue classes
 $r_i\bmod2^{k_i}$: cutting bamboo $i$ exactly on the days $\equiv r_i\pmod{2^{k_i}}$ (on other days cut anything) lets it grow for at most $p_i$
@@ -329,7 +329,8 @@ whose <em>last</em> $k_i$ digits form the reversed string of $w_i$, i.e. all num
 $2^{k_i}$. These images are pairwise disjoint because the $J_i$ are and $\mathrm{rev}$ is a bijection.</p><p>Schedule: on day $t$, if $t\bmod 2^K\in\mathrm{rev}(J_i)$, cut bamboo $i$. Since $2^{k_i}\mid2^K$, bamboo $i$ is cut exactly on the days
 $t\equiv r_i\pmod{2^{k_i}}$, at most one bamboo is assigned to each day, and by the first paragraph every bamboo always has height at most $2$
 metres.</p>
-<h4>Solution 3 (Round to powers of two, then assign residues greedily by increasing period)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 3 &ndash; Round to powers of two, then assign residues greedily by increasing period</summary><div class="ct-text">
 <p><strong>Rounding.</strong> Since $n\ge2$ and all $a_i&gt;0$, every $a_i&lt;1$, so $\frac2{a_i}&gt;2$. Let $p_i=2^{k_i}$ be the largest power of two
 with $p_i\le\frac2{a_i}$; then $k_i\ge1$, and $2p_i&gt;\frac2{a_i}$ gives $\frac1{p_i}&lt;a_i$. Hence
 \[a_ip_i\le2\qquad\text{and}\qquad\sum_{i=1}^n\frac1{p_i}&lt;\sum_{i=1}^na_i=1. \tag{1}\]</p><p><strong>Reduction.</strong> Suppose we have residues $r_i$ such that the classes $\{t\ge1:\ t\equiv r_i\pmod{p_i}\}$ are pairwise disjoint. Wojtek cuts

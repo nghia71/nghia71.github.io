@@ -97,7 +97,6 @@ description: Iberoamerican Mathematical Olympiad 2026: problems with answers and
 <p>The 6 problems of the Iberoamerican Mathematical Olympiad 2026, each with our own solutions, hidden until you open them. Where a problem has a final answer, it is shown separately. Try a problem first, then check.</p><p>The Iberoamerican Olympiad has two days with three problems each.</p>
 </div>
 <div class="ct-credit">Problems: Iberoamerican Mathematical Olympiad 2026, from the AoPS contest collection or the official paper. Solutions written by MCC.</div>
-<div class="ct-bar"><button type="button" onclick="ctAll(true)">Show all answers and solutions</button><button type="button" onclick="ctAll(false)">Hide all</button></div>
 <div class="ct-toc-wrap"><div class="ct-toc-row"><span class="ct-toc-g">Day 1</span><a href="#p1">1</a><a href="#p2">2</a><a href="#p3">3</a></div><div class="ct-toc-row"><span class="ct-toc-g">Day 2</span><a href="#p4">4</a><a href="#p5">5</a><a href="#p6">6</a></div></div>
 
 {% raw %}
@@ -107,8 +106,7 @@ description: Iberoamerican Mathematical Olympiad 2026: problems with answers and
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 8: Modular Arithmetic and Congruence Methods &middot; Residue Classes and Case Analysis</div>
 <div class="ct-text"><p>Let $a_1, a_2, \ldots, a_{1000}$ be the integers from $1$ to $1000$ in some order. For which values of $a_1$ can we guarantee that there is a positive integer $k$, $1 \le k \le 1000$, such that $\underbrace{a_1+a_2+\cdots+a_k}_{k \text{ summands}}$ is a multiple of $3$?</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>exactly when $a_1\equiv 0$ or $a_1\equiv 2\pmod 3$ (i.e. $a_1\not\equiv1\pmod 3$)</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Following the prefix sums modulo 3)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Following the prefix sums modulo 3</summary><div class="ct-text">
 <p><strong>Answer.</strong> Exactly for $a_1\equiv0$ and $a_1\equiv2\pmod 3$.</p><p>Among $1,\dots,1000$ there are $333$ multiples of $3$, $334$ numbers $\equiv1$ and $333$ numbers $\equiv2\pmod3$. The total sum is
 $500500\equiv1\pmod3$. Let $S_k=a_1+\dots+a_k$. Terms divisible by $3$ do not change $S_k$ modulo $3$.</p><p><em>$a_1\equiv0$.</em> Then $k=1$ works.</p><p><em>$a_1\equiv2$.</em> Suppose no $S_k$ is divisible by $3$. List the $667$ terms not divisible by $3$ in their order in the permutation, with
 residues $r_1=2,r_2,\dots,r_{667}\in\{1,2\}$, and let $\sigma_j$ be the residue of the prefix sum right after the $j$-th of them; by our
@@ -127,8 +125,7 @@ $333$. Only the class $1$ has $334$ members, which explains at once why $a_1\equ
 <div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Number Theory &middot; LPS VII, Chapter 49: Combinatorial Number Theory and Structure &middot; Sequences with Arithmetic Constraints</div>
 <div class="ct-text"><p>Let $\mathbb{Z}^+$ denote the set of positive integers. Determine whether there exists a bijective function $f : \mathbb{Z}^+ \to \mathbb{Z}^+$ satisfying all of the following conditions:</p><ul class="ct-parts"><li><p><span class="ct-lbl">(i)</span> $n \mid f(1)+f(2)+\cdots+f(n)$ for every positive integer $n$;</p></li><li><p><span class="ct-lbl">(ii)</span> $f(1)+f(2)+\cdots+f(n) \le n^2$ for every positive integer $n$;</p></li><li><p><span class="ct-lbl">(iii)</span> $f(1)+f(2)+\cdots+f(n) = n^2$ for infinitely many positive integers $n$.</p></li></ul><p><strong>Note:</strong> A function $f : \mathbb{Z}^+ \to \mathbb{Z}^+$ is bijective if every positive integer appears exactly once in the infinite list $f(1), f(2), f(3), \ldots$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p><strong>No</strong>, no such bijection exists</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Two special indices cannot both be large)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Two special indices cannot both be large</summary><div class="ct-text">
 <p><strong>Answer: no.</strong> Suppose such an $f$ exists. Let $S_n=f(1)+\dots+f(n)$. By (i) and (ii), $S_n=nc_n$ with an integer $1\le c_n\le n$.
 Call $n$ <em>special</em> if $S_n=n^2$, i.e. $c_n=n$; by (iii) there are infinitely many special $n$. Let $T_n=\frac{n(n+1)}2$.</p><p><em>(a) $c$ is non-decreasing.</em> For every $n\ge2$ we have $f(n)=nc_n-(n-1)c_{n-1}$. If $c_n\le c_{n-1}-1$, then $f(n)\le c_{n-1}-n\le -1$, since $c_{n-1}\le n-1$.</p><p><em>(b) Flat and steep steps.</em> For $n\ge2$, with $\Delta_n=c_n-c_{n-1}\ge0$ we get $f(n)=c_{n-1}+n\Delta_n$. So either $\Delta_n=0$ and $f(n)=c_{n-1}$
 (a <em>flat</em> step), or $f(n)\ge c_{n-1}+n$.</p><p><em>(c) No two consecutive flat steps:</em> otherwise $f(n)=c_{n-1}=c_n=f(n+1)$.</p><p><em>(d) If $N$ is special, then $\{f(1),\dots,f(N)\}=\{1,\dots,N-1\}\cup\{T_N\}$.</em> For $n&gt;N$ we have $c_{n-1}\ge c_N=N$, so $f(n)\ge N$ by (b).
@@ -137,7 +134,8 @@ $f(M)=T_M$ and the other values are $1,\dots,M-1$.</p><p><em>(f) There are no sp
 $M-1\ge T_N\ge N+3$ (as $T_N-N-3=\frac{(N-3)(N+2)}2\ge0$). For $N&lt;n\le M-1$ we have $f(n)\le M-1$; if step $n$ were steep, (b) would give
 $f(n)\ge c_{n-1}+n\ge N+n$ (as $c_{n-1}\ge c_N=N$ for $n-1\ge N$), i.e. $n\le M-1-N$. Hence every step $n$ with $N&lt;n\le M-1$ and $n&gt;M-1-N$ is flat. Both $n=M-2$ and $n=M-1$ qualify (because
 $N\ge2$ and $M-2&gt;N$), contradicting (c).</p><p>So at most one special number is $\ge3$, and there are only finitely many special numbers, contradicting (iii). No such bijection exists.</p>
-<h4>Solution 2 (One special index and a permutation lemma)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; One special index and a permutation lemma</summary><div class="ct-text">
 <p>Suppose $f$ exists. Write $S_n=f(1)+\dots+f(n)$; by (i) and (ii), $S_n=nc_n$ with an integer $1\le c_n\le n$. Call $n$ <em>special</em>
 if $S_n=n^2$, i.e. $c_n=n$; by (iii) there are infinitely many special $n$.</p><p><em>Monotonicity.</em> $f(n)=nc_n-(n-1)c_{n-1}=c_{n-1}+n(c_n-c_{n-1})$. If $c_n&lt;c_{n-1}$, this is at most $c_{n-1}-n&lt;0$, impossible. So
 $c_1\le c_2\le\cdots$ and $f(n)\ge c_{n-1}$ for every $n\ge2$.</p><p><em>A special $M\ge2$ resets the values.</em> Let $M\ge2$ be special. For $n&gt;M$ we have $f(n)\ge c_{n-1}\ge c_M=M$. Since $f$ is onto, each of
@@ -156,8 +154,7 @@ $1$, $2$ or $4$, so there are at most three of them, contradicting (iii). <stron
 <div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Combinatorics &middot; LPS VII, Chapter 52: Advanced Combinatorial Structure and Hybrid Methods &middot; Combinatorics with Geometric Insight</div>
 <div class="ct-text"><p>Mafalda dreams that she is on an interstellar journey with her friends. During the journey, she discovers a room in the shape of a cube, inside which $2026$ alfajores are floating motionless. She then chooses a vertex of the cube, where she places all the friends accompanying her. Each friend must travel to the opposite vertex of the cube, moving only in directions parallel to its edges and always moving away from the vertex from which they all started. Along the way, each friend collects the alfajores that lie on their path. What is the minimum number of friends Mafalda needs in order to be certain that all the alfajores that were in the cube are collected?</p><p><strong>Note:</strong> Consider the alfajores and the friends to be points in space.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$1519$</p></div></details>
-<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
-<h4>Solution (Four orders, Dilworth, and a double count)</h4>
+<details class="ct-sol"><summary>Show the solution &ndash; Four orders, Dilworth, and a double count</summary><div class="ct-text">
 <p>We read the problem as: the alfajores are in fixed known positions, Mafalda then picks the vertex and the routes, and we want the number
 of friends that suffices for <em>every</em> placement of the $2026$ points. The answer is $1519$.</p><p><em>Model.</em> Let the cube be $[0,1]^3$. For a sign vector $\sigma=(1,\sigma_2,\sigma_3)$, $\sigma_2,\sigma_3\in\{\pm1\}$, write $p\preceq_\sigma q$ if
 $\sigma_i(q_i-p_i)\ge0$ for $i=1,2,3$; this is a partial order. A route from a vertex to the opposite one that only moves parallel to the edges and
@@ -198,8 +195,7 @@ whichever vertex Mafalda chooses, she needs at least $1519$ friends.</p><p>Hence
 <div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Number Theory &middot; LPS VII, Chapter 49: Combinatorial Number Theory and Structure &middot; Sequences with Arithmetic Constraints</div>
 <div class="ct-text"><p>A sequence $a_1, a_2, a_3, \ldots$ of positive integers is called <em>porteña</em> if it satisfies all of the following conditions:</p><ul class="ct-parts"><li><p><span class="ct-lbl">(i)</span> $a_1 &lt; a_2 &lt; a_3 &lt; \cdots$;</p></li><li><p><span class="ct-lbl">(ii)</span> $2a_n - n$ is a perfect square for every integer $n \ge 1$;</p></li><li><p><span class="ct-lbl">(iii)</span> $a_{n-1} + a_n \le n^2$ for every integer $n \ge 2$.</p></li></ul><p>Determine all porteña sequences.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>only $a_n=\dfrac{n(n+1)}{2}$</p></div></details>
-<details class="ct-sol"><summary>Show the 3 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Squeezing between consecutive triangular numbers)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Squeezing between consecutive triangular numbers</summary><div class="ct-text">
 <p>Let $T_n=\frac{n(n+1)}2$ and $s_n=\sqrt{2a_n-n}\ge0$, an integer by (ii). Since $s_n^2=2a_n-n\equiv n\pmod2$, $s_n\equiv n\pmod 2$.</p><p>The sequence $a_n=T_n$ works: it is increasing, $2T_n-n=n^2$, and $T_{n-1}+T_n=n^2$. We show it is the only one, proving $a_n=T_n$ by
 induction.</p><p><em>$n=1$.</em> By (i) and (iii), $2a_1&lt;a_1+a_2\le4$, so $a_1=1=T_1$.</p><p><em>Step.</em> Let $n\ge2$ and $a_{n-1}=T_{n-1}$. By (i) and (iii),
 \[
@@ -207,7 +203,8 @@ T_{n-1}&lt;a_n\le n^2-T_{n-1}=T_n .
 \]
 Since $a_n=\frac{n+s_n^2}{2}$, $T_n=\frac{n+n^2}2$ and $T_{n-1}=\frac{n+n^2-2n}{2}$, this means $n^2-2n&lt;s_n^2\le n^2$. So $s_n\le n$, and $s_n&gt;n-2$
 because $(n-2)^2\le n^2-2n$ for $n\ge2$. Thus $s_n\in\{n-1,n\}$, and the parity condition gives $s_n=n$, i.e. $a_n=T_n$.</p><p>So the only porteña sequence is $\boxed{a_n=\frac{n(n+1)}{2}}$.</p>
-<h4>Solution 2 (An upper bound from the next term and a descent)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; An upper bound from the next term and a descent</summary><div class="ct-text">
 <p>Let $T_n=\frac{n(n+1)}2$ and $s_n=\sqrt{2a_n-n}$, a non-negative integer with $s_n\equiv n\pmod 2$; then $a_n=\frac{n+s_n^2}{2}$ and
 $a_n=T_n\iff s_n=n$. The sequence $a_n=T_n$ is porteña ($2T_n-n=n^2$, $T_{n-1}+T_n=n^2$).</p><p><em>Upper bound $s_n\le n$.</em> If $s_n&gt;n$ then $s_n\ge n+2$ by parity, so $2a_n\ge n+(n+2)^2$. As $a_{n+1}\ge a_n+1$,
 \[
@@ -219,7 +216,8 @@ bound), so $s_k\le k-2$ by parity, and
 a_k\le\frac{k+(k-2)^2}{2}=T_k-(2k-2)=T_{k-1}-(k-2)\le T_{k-1},
 \]
 hence $a_{k-1}&lt;a_k\le T_{k-1}$. Repeating, $a_1&lt;T_1=1$, impossible. So $a_n\ge T_n$ for all $n$.</p><p>Therefore $a_n=T_n$ for all $n$: the only porteña sequence is $\boxed{a_n=\frac{n(n+1)}{2}}$.</p>
-<h4>Solution 3 (A lower bound from (i) and (ii) alone)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 3 &ndash; A lower bound from (i) and (ii) alone</summary><div class="ct-text">
 <p>Let $T_n=\frac{n(n+1)}2$ and $s_n=\sqrt{2a_n-n}$, a non-negative integer by (ii); then $a_n=\frac{n+s_n^2}{2}$.
 The sequence $a_n=T_n$ is porteña: it is increasing, $2T_n-n=n^2$, and $T_{n-1}+T_n=n^2$.</p><p><em>The square roots increase.</em> By (i), $a_{n+1}-a_n\ge1$, so
 \[
@@ -242,8 +240,7 @@ $a_n=T_n$ for every $n\ge1$.</p><p>So the only porteña sequence is $\boxed{a_n=
 <div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 51: Spiral Similarity and Advanced Transformational Geometry &middot; Spiral Similarity Centers</div>
 <div class="ct-text"><p>Let $ABC$ be an acute triangle with $AB &gt; AC$, inscribed in a circle $\Gamma$. Let $X$ be a variable point on the arc $AC$ of $\Gamma$ not containing $B$, with $X$ different from $A$ and $C$. The line $AX$ meets the line $BC$ at $P$. The line through $P$ parallel to $AB$ and the tangent to $\Gamma$ at $B$ meet at $D$. The line through $P$ parallel to $AC$ and the tangent to $\Gamma$ at $C$ meet at $E$. Prove that the circumcenter of triangle $XDE$ lies on a fixed line as $X$ varies over the arc $AC$ of $\Gamma$.</p><p><strong>Note:</strong> The circumcenter of a triangle is the center of the circle passing through its three vertices.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>proof (the circumcentre lies on the perpendicular bisector of $TF$, where $T$ is the pole of $BC$ and $F$ a fixed point)</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (A second fixed point from a spiral similarity)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; A second fixed point from a spiral similarity</summary><div class="ct-text">
 <div class="ct-fig"><img style="width:333px" src="/assets/contests/2026-27/iberoamerican-5_s1.svg" alt="Figure for the solution"></div>
 <p>Let $t_B,t_C$ be the tangents to $\Gamma$ at $B,C$; they meet at a point $T$ (they are not parallel, since $\angle BAC&lt;90^\circ$), and $T$ does
 not lie on line $BC$. We use directed angles $\angle(\ell,m)$ modulo $180^\circ$, and put $\theta=\angle(t_B,t_C)$.</p><p><em>Step 1: $\angle(XD,XE)=\theta$, and $T$ lies on the circle $XDE$.</em> Because $PD\parallel AB$ and $P\in AX$, and by the tangent-chord angle at $B$,
@@ -268,7 +265,8 @@ $\sigma(D)=F=\sigma(F)$ and $D=F$), so $\angle(FD,FE)=\theta=\angle(XD,XE)$ by S
 so the lines through $P$ parallel to $AB$ and to $AC$ both pass through $T$, forcing $P=T\in BC$, which is false.</p><p><em>Step 3: conclusion.</em> By Steps 1 and 2 the circle $XDE$ passes through the two fixed points $T$ and $F$. Hence its centre lies on the
 perpendicular bisector of $TF$, a fixed line.</p><p><em>Remark.</em> Numerically $F$ is the second intersection of the median $AM$ ($M$ the midpoint of $BC$) with $\Gamma$; this is not needed for
 the proof.</p>
-<h4>Solution 2 (The centre moves affinely)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; The centre moves affinely</summary><div class="ct-text">
 <p>Let $t_B,t_C$ be the tangents at $B,C$ and $T=t_B\cap t_C$ ($t_B\nparallel t_C$ since $\angle BAC&lt;90^\circ$). Directed angles are taken modulo
 $180^\circ$.</p><p><em>Step 1: the angle at $X$.</em> From $PD\parallel AB$ and the tangent-chord angle, $\angle(PD,PX)=\angle(AB,AX)=\angle(BD,BX)$, so
 $P,B,D,X$ are concyclic; similarly $\angle(PE,PX)=\angle(AC,AX)=\angle(CE,CX)$ gives $P,C,E,X$ concyclic. Therefore
@@ -292,8 +290,7 @@ fixed line ($v\ne0$, because $\delta$ is not constant).</p><p>Hence the circumce
 <div class="ct-meta"><span class="ct-pd ct-pd-S" title="Superhard, on the LPS VII scale">S</span>Number Theory &middot; LPS VII, Chapter 9: Polynomials and Root-Coefficient Strategy &middot; Remainder, Factor, and Evaluation Logic</div>
 <div class="ct-text"><p>Determine all integers $n &gt; 1$ for which there exist a permutation $d_1, \ldots, d_k$ of all the positive divisors of $n$ and a polynomial $P(x)$ with integer coefficients such that $P(d_j) = d_{j+1}$ for every $1 \le j \le k-1$.</p></div>
 <details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$n$ is a prime power, or $n=p(2p-1)$ with $p$ and $2p-1$ both prime ($n=6,15,91,703,\dots$)</p></div></details>
-<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
-<h4>Solution 1 (Differences divide differences)</h4>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Differences divide differences</summary><div class="ct-text">
 <p><strong>Answer.</strong> $n=p^e$ ($p$ prime, $e\ge1$), or $n=p(2p-1)$ with $p$ and $2p-1$ both prime.</p><p><em>Constructions.</em> For $n=p^e$ take $1,p,p^2,\dots,p^e$ and $P(x)=px$. For $n=pq$ with $q=2p-1$ prime take $1,p,q,pq$ and $P(x)=x^2-px+q$:
 $P(1)=p$, $P(p)=q$, $P(q)=q(q-p+1)=pq$.</p><p><em>Necessity.</em> Let $n$ be divisible by two primes; let $p&lt;q$ be its two smallest prime factors, $D$ its set of divisors, $k=|D|\ge4$, and
 $m=n/p$ its largest proper divisor ($m\ge q&gt;p$). Put $\varphi(d_j)=d_{j+1}$ for $j\le k-1$; $\varphi$ is defined on $D'=D\setminus\{d_k\}$, injective,
@@ -329,7 +326,8 @@ then $q\mid m$, $m\ne q$, so $m\ge pq$. Apply $(\star)$ to $m=e_{k-1}$ and $p=e_
 \[
 \boxed{\,n=p^e\ (p\text{ prime},\ e\ge1)\quad\text{or}\quad n=p(2p-1)\ (p,\ 2p-1\text{ prime})\,}
 \]</p>
-<h4>Solution 2 (Blocks of multiples and a second difference)</h4>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Blocks of multiples and a second difference</summary><div class="ct-text">
 <p><strong>Answer.</strong> $n=p^e$ ($p$ prime, $e\ge1$), or $n=p(2p-1)$ with $p$ and $2p-1$ both prime.</p><p><em>Constructions.</em> For $n=p^e$ take the list $1,p,p^2,\dots,p^e$ and $P(x)=px$. For $n=pq$ with $q=2p-1$ prime take the list $1,p,q,pq$ and
 $P(x)=x^2-px+q$: then $P(1)=p$, $P(p)=q$ and $P(q)=q(q-p+1)=pq$.</p><p><em>Two facts about a polynomial $P$ with integer coefficients.</em></p><ul class="ct-parts"><li><p><span class="ct-lbl">(a)</span> For integers $x\ne y$, $x-y\mid P(x)-P(y)$, since $x-y\mid x^i-y^i$ for every $i\ge1$.</p></li><li><p><span class="ct-lbl">(b)</span> For distinct integers $u,v,w$, the slopes $L_1=\frac{P(v)-P(u)}{v-u}$ and $L_2=\frac{P(w)-P(v)}{w-v}$ are integers by (a), and
 $w-u\mid L_2-L_1$. Indeed, dividing by the monic polynomial $x-u$ gives $P(x)-P(u)=(x-u)R(x)$ with $R$ having integer coefficients, and
