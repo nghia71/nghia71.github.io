@@ -144,6 +144,7 @@ robots: noindex
   .requirements h3 { margin-top: 1.1em; margin-bottom: .4em; font-size: 1rem; }
   .requirements ul { margin-bottom: 0; }
   .requirements table { font-size: 14.5px; }
+  .cards-used { font-size: 14.5px; margin: .6em 0 .4em; }
 </style>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
@@ -309,6 +310,16 @@ document.addEventListener("DOMContentLoaded", function () {
       pre.parentNode.insertBefore(wrapper, pre.nextSibling);
       pre.style.display = "none"; // original stays in the DOM as a no-JS fallback
 
+      // Toolkit solutions: open the box at "# ===== Solution =====" (the card code is above it).
+      function showSolution() {
+        var at = textarea.value.indexOf("# ===== Solution =====");
+        if (at <= 0) return;
+        var before = textarea.value.slice(0, at).split("\n").length - 1;
+        var total = textarea.value.split("\n").length;
+        textarea.scrollTop = textarea.scrollHeight * before / total;
+      }
+      requestAnimationFrame(showSolution);
+
       var runner = makeRunner(function () { return textarea.value; }, wrapper);
 
       var resetBtn = document.createElement("button");
@@ -316,6 +327,7 @@ document.addEventListener("DOMContentLoaded", function () {
       resetBtn.textContent = "↺ Reset";
       resetBtn.addEventListener("click", function () {
         textarea.value = original;
+        showSolution();
         runner.output.textContent = "";
         runner.output.classList.remove("has-content", "is-error");
       });
@@ -393,6 +405,14 @@ These are the exact problems from the fourth coding contest, in the same order: 
 </table>
 <p>Anything else &mdash; network access, file I/O, <code>os</code>/<code>subprocess</code>, GUI toolkits &mdash; is out. This list may grow; the current version always lives on this page.</p>
 
+<h3>Using the TOML Toolkit</h3>
+<ul>
+  <li>You may paste code from the <a href="./toml-toolkit">TOML Toolkit</a> into your submission: use each card&rsquo;s <strong>Copy</strong> button and paste the text at the top of your file.</li>
+  <li>The program must still run on its own, within 30 seconds, using only the allowed libraries (the Toolkit uses only the standard library).</li>
+  <li>The <code># MATH</code> comment is your own: the math is what earns the 5 points, the Toolkit only does the work you explain there.</li>
+  <li>Leave out the picture code (<strong>Copy with picture</strong>); a submission prints only its own output.</li>
+</ul>
+
 <h3>How a submission is scored &mdash; base score, up to 10 per problem</h3>
 <table>
 <thead><tr><th>Worth</th><th>For</th></tr></thead>
@@ -420,7 +440,7 @@ These are the exact problems from the fourth coding contest, in the same order: 
 </div>
 
 <h2>How to read a worked example</h2>
-<p>Each problem below has the same parts: the problem itself; a note with the math that actually makes it solvable; and a commented, runnable Python solution whose structure follows that math. The tags show the difficulty (Easy, Medium, Hard) and the area (Algebra, Combinatorics, Geometry, Number Theory). <strong>Every code block is live</strong> &mdash; click &#9654; <strong>Run</strong> to execute it in your own browser (the first click takes a few seconds to start Python; after that it&rsquo;s instant). Edit it, break it, fix it &mdash; <strong>&#8630; Reset</strong> brings back the original. Nothing here is graded; the playground at the bottom is there for your own experiments.</p>
+<p>Each problem below has the same parts: the problem itself; a note with the math that actually makes it solvable; and a commented, runnable Python solution whose structure follows that math. Every solution is written with the <a href="./toml-toolkit">TOML Toolkit</a>: the code starts with the Copy text of the cards it uses (listed above the code), and the solution itself comes after <code># ===== Solution =====</code>. The tags show the difficulty (Easy, Medium, Hard) and the area (Algebra, Combinatorics, Geometry, Number Theory). <strong>Every code block is live</strong> &mdash; click &#9654; <strong>Run</strong> to execute it in your own browser (the first click takes a few seconds to start Python; after that it&rsquo;s instant). Edit it, break it, fix it &mdash; <strong>&#8630; Reset</strong> brings back the original. Nothing here is graded; the playground at the bottom is there for your own experiments.</p>
 
 <h2>Middle School</h2>
 
@@ -428,19 +448,62 @@ These are the exact problems from the fourth coding contest, in the same order: 
 <h3 id="ms-problem-1">MS &middot; Problem 1 &middot; <span class="tag">Easy</span> <span class="tag">Number Theory</span></h3>
 <p class="problem">How many positive divisors of \(2700\) themselves have more than \(4\) positive divisors?</p>
 <div class="note math">Factor first: \(2700 = 2^2 \cdot 3^3 \cdot 5^2\). Every divisor has the form \(2^a 3^b 5^c\) with \(0 \le a \le 2\), \(0 \le b \le 3\), \(0 \le c \le 2\), so there are \((2+1)(3+1)(2+1) = 36\) divisors, and a divisor \(2^a 3^b 5^c\) itself has \((a+1)(b+1)(c+1)\) divisors. It is easier to count the divisors with <em>at most</em> \(4\) divisors and subtract. With \(1\) divisor: only \(1\). With \(2\): the primes \(2, 3, 5\). With \(3\): squares of primes, \(4, 9, 25\). With \(4\): a prime cubed, \(27\), or a product of two different primes, \(6, 10, 15\). That is \(1 + 3 + 3 + 4 = 11\) divisors, so the answer is \(36 - 11 = 25\). The code lists the divisors, counts the divisors of each, and checks the count of \(36\).</div>
-<pre><code># MATH: 2700 = 2^2 * 3^3 * 5^2 has (2+1)(3+1)(2+1) = 36 divisors.
+<p class="cards-used"><strong>Toolkit cards used:</strong> <a href="./toml-toolkit#NT.DIV.count">NT.DIV.count</a> (factorize, divisors, divisor_count). The code starts with the Copy text of these cards; the part after <code># ===== Solution =====</code> is the student&rsquo;s own. The box opens at the solution; scroll up in it to see the card code.</p>
+<pre><code># ===== TOML Toolkit cards: NT.DIV.count =====
+# (the Copy text of each card, from nghia71.github.io/toml-toolkit; shared parts once)
+# ---- NT.FAC.factorize ----
+def factorize(n):
+    """{prime: exponent} for an integer n &gt;= 1, by trial division up to sqrt(n)."""
+    if n &lt; 1:
+        raise ValueError("factorize needs n &gt;= 1")
+    f, p = {}, 2
+    while p * p &lt;= n:
+        while n % p == 0:
+            f[p] = f.get(p, 0) + 1
+            n //= p
+        p += 1 if p == 2 else 2
+    if n &gt; 1:
+        f[n] = f.get(n, 0) + 1
+    return f
+
+def show_factors(f):
+    """{2: 3, 3: 2} -&gt; '2^3 * 3^2'"""
+    return " * ".join(f"{p}^{e}" if e &gt; 1 else str(p) for p, e in sorted(f.items())) or "1"
+
+# ---- NT.DIV.count ----
+def divisors(n):
+    """Sorted list of the positive divisors of n &gt;= 1."""
+    divs = [1]
+    for p, e in factorize(n).items():
+        divs = [d * p ** k for d in divs for k in range(e + 1)]
+    return sorted(divs)
+
+def divisor_count(n):
+    """tau(n): how many positive divisors n has."""
+    count = 1
+    for e in factorize(n).values():
+        count *= e + 1
+    return count
+
+def divisor_sum(n):
+    """sigma(n): the sum of all positive divisors of n."""
+    total = 1
+    for p, e in factorize(n).items():
+        total *= (p ** (e + 1) - 1) // (p - 1)
+    return total
+
+# ===== Solution =====
+# MATH: 2700 = 2^2 * 3^3 * 5^2 has (2+1)(3+1)(2+1) = 36 divisors.
 # Divisors with at most 4 divisors: 1; primes 2, 3, 5; prime squares 4, 9, 25;
 # 27 and 6, 10, 15 -&gt; 11 of them, so 36 - 11 = 25 have more than 4.
+# Toolkit: factorize, divisors and divisor_count (NT.DIV.count).
 N = 2700
-
-def divisors(n):
-    return [d for d in range(1, n + 1) if n % d == 0]
-
+print(factorize(N))              # {2: 2, 3: 3, 5: 2}
 divs = divisors(N)
-assert len(divs) == (2 + 1) * (3 + 1) * (2 + 1)          # 36
-small = [d for d in divs if len(divisors(d)) &lt;= 4]
+assert len(divs) == divisor_count(N) == (2 + 1) * (3 + 1) * (2 + 1)     # 36
+small = [d for d in divs if divisor_count(d) &lt;= 4]
 print(small)                     # [1, 2, 3, 4, 5, 6, 9, 10, 15, 25, 27]
-big = [d for d in divs if len(divisors(d)) &gt; 4]
+big = [d for d in divs if divisor_count(d) &gt; 4]
 assert len(big) == len(divs) - len(small)
 print(len(big))                  # 25
 </code></pre>
@@ -450,25 +513,111 @@ print(len(big))                  # 25
 <h3 id="ms-problem-2">MS &middot; Problem 2 &middot; <span class="tag">Easy</span> <span class="tag">Geometry</span></h3>
 <p class="problem">The three lines \(y = 13\), \(y = 2x + 1\) and \(y = -x + 4\) enclose a triangle. What is its area?</p>
 <div class="note math">The corners of the triangle are the points where two of the lines cross. \(y = 13\) and \(y = 2x + 1\): \(2x + 1 = 13\), so \(x = 6\), the point \((6, 13)\). \(y = 13\) and \(y = -x + 4\): \(x = -9\), the point \((-9, 13)\). \(y = 2x + 1\) and \(y = -x + 4\): \(2x + 1 = -x + 4\), so \(x = 1\), the point \((1, 3)\). Two corners lie on the horizontal line \(y = 13\), so take that side as the base: its length is \(6 - (-9) = 15\), and the height is the vertical distance from \((1, 3)\) to that line, \(13 - 3 = 10\). The area is \(\frac12 \cdot 15 \cdot 10 = 75\). The code finds the three crossing points exactly (with fractions, so no rounding) and uses the <em>shoelace formula</em>, which works for any triangle given its corners.</div>
-<pre><code># MATH: corners = crossing points of two lines; base on y = 13 has length 15,
-# height 13 - 3 = 10, area = 15 * 10 / 2 = 75.
-# Code: each line as a*x + b*y = c, crossings by Cramer&#x27;s rule (exact
-# fractions), then the shoelace formula.
+<p class="cards-used"><strong>Toolkit cards used:</strong> <a href="./toml-toolkit#GEO.LINE.tools">GEO.LINE.tools</a> (intersect: exact crossing point of two lines) &middot; <a href="./toml-toolkit#GEO.AREA.shoelace">GEO.AREA.shoelace</a> (shoelace_area). The code starts with the Copy text of these cards; the part after <code># ===== Solution =====</code> is the student&rsquo;s own. The box opens at the solution; scroll up in it to see the card code.</p>
+<pre><code># ===== TOML Toolkit cards: GEO.LINE.tools, GEO.AREA.shoelace =====
+# (the Copy text of each card, from nghia71.github.io/toml-toolkit; shared parts once)
+# ---- GEO.PT.vec2 ----
+import math
+
+def add(u, v): return (u[0] + v[0], u[1] + v[1])
+def sub(u, v): return (u[0] - v[0], u[1] - v[1])
+def mul(k, u): return (k * u[0], k * u[1])
+def dot(u, v): return u[0] * v[0] + u[1] * v[1]
+def cross(u, v): return u[0] * v[1] - u[1] * v[0]
+def norm2(u): return dot(u, u)
+def dist(p, q): return math.dist(p, q)
+def dist2(p, q): return norm2(sub(p, q))
+def midpoint(p, q): return ((p[0] + q[0]) / 2, (p[1] + q[1]) / 2)
+
+def orient(a, b, c):
+    """&gt; 0 if a, b, c turn left (counterclockwise), &lt; 0 right, 0 on a line."""
+    return cross(sub(b, a), sub(c, a))
+
+def collinear(a, b, c):
+    return orient(a, b, c) == 0
+
+def angle_deg(a, b, c):
+    """Angle ABC at b, in degrees (0..180)."""
+    u, v = sub(a, b), sub(c, b)
+    return math.degrees(math.atan2(abs(cross(u, v)), dot(u, v)))
+
+def rotate(p, deg, center=(0, 0)):
+    """Rotate p counterclockwise by deg degrees about center (floats)."""
+    t = math.radians(deg)
+    x, y = sub(p, center)
+    return (center[0] + x * math.cos(t) - y * math.sin(t), center[1] + x * math.sin(t) + y * math.cos(t))
+
+# ---- GEO.LINE.tools ----
 from fractions import Fraction
+import math
+
+def line_through(p, q):
+    """(a, b, c) with a x + b y = c through p and q."""
+    a, b = q[1] - p[1], p[0] - q[0]
+    return (a, b, a * p[0] + b * p[1])
+
+def line_slope(m, k):
+    """y = m x + k  -&gt;  (a, b, c)."""
+    return (Fraction(m), Fraction(-1), Fraction(-k))
+
+def intersect(l1, l2):
+    """Intersection point of two lines (exact for integer/Fraction input), or None if parallel."""
+    a1, b1, c1 = l1; a2, b2, c2 = l2
+    d = a1 * b2 - a2 * b1
+    if d == 0:
+        return None
+    return (Fraction(c1 * b2 - c2 * b1) / d, Fraction(a1 * c2 - a2 * c1) / d)
+
+def foot(p, l):
+    """Foot of the perpendicular from p to line l."""
+    a, b, c = l
+    t = Fraction(a * p[0] + b * p[1] - c) / (a * a + b * b)
+    return (p[0] - a * t, p[1] - b * t)
+
+def reflect(p, l):
+    f = foot(p, l)
+    return (2 * f[0] - p[0], 2 * f[1] - p[1])
+
+def dist_point_line(p, l):
+    a, b, c = l
+    return abs(a * p[0] + b * p[1] - c) / math.sqrt(a * a + b * b)
+
+# ---- GEO.AREA.shoelace ----
+from fractions import Fraction
+import math
+
+def signed_area(pts):
+    """Positive when the corners go counterclockwise."""
+    s = 0
+    for (x1, y1), (x2, y2) in zip(pts, pts[1:] + pts[:1]):
+        s += x1 * y2 - x2 * y1
+    return Fraction(s) / 2
+
+def shoelace_area(pts):
+    """Exact area of a simple polygon; pts = corners in boundary order."""
+    if len(pts) &lt; 3:
+        raise ValueError("need at least 3 corners")
+    return abs(signed_area(pts))
+
+def perimeter(pts):
+    return sum(math.dist(p, q) for p, q in zip(pts, pts[1:] + pts[:1]))
+
+# ===== Solution =====
+# MATH: corners = crossing points of two lines; base on y = 13 has length 15,
+# height 13 - 3 = 10, area = 15 * 10 / 2 = 75.
+# Toolkit: each line as (a, b, c) meaning a*x + b*y = c; intersect gives the exact
+# crossing point (GEO.LINE.tools), shoelace_area the area (GEO.AREA.shoelace).
 from itertools import combinations
 
 lines = [(0, 1, 13),      # y = 13
          (-2, 1, 1),      # y = 2x + 1   -&gt;  -2x + y = 1
          (1, 1, 4)]       # y = -x + 4   -&gt;   x + y = 4
 
-corners = []
-for (a1, b1, c1), (a2, b2, c2) in combinations(lines, 2):
-    det = a1 * b2 - a2 * b1                       # never 0: no two lines are parallel
-    corners.append((Fraction(c1 * b2 - c2 * b1, det), Fraction(a1 * c2 - a2 * c1, det)))
-print(corners)                                    # (6, 13), (-9, 13), (1, 3)
-
-(x1, y1), (x2, y2), (x3, y3) = corners
-area = abs((x2 - x1) * (y3 - y1) - (x3 - x1) * (y2 - y1)) / 2   # shoelace
+corners = [intersect(l1, l2) for l1, l2 in combinations(lines, 2)]
+assert None not in corners                        # no two lines are parallel
+print(*[f'({x}, {y})' for x, y in corners])      # (6, 13) (-9, 13) (1, 3)
+area = shoelace_area(corners)
+assert area == 15 * 10 / 2                        # base 15, height 10
 print(area)                                       # 75
 </code></pre>
 </div>
@@ -658,22 +807,49 @@ print(area)                                       # 75
 </g>
 </svg></div>
 <div class="note math">First turn the figure into data: for each prize, the list of students its lines reach (count the lines: there are \(16\)). Without the &ldquo;everybody&rdquo; condition, prize \(p\) has as many choices as it has lines, so there are \(3\cdot2\cdot3\cdot3\cdot2\cdot3 = 324\) ways. Now remove the ways in which somebody gets nothing (<em>inclusion&ndash;exclusion</em>). If a set \(S\) of students is left out, prize \(p\) can only go to its students outside \(S\), so the number of such ways is the product, over the six prizes, of the number of lines that do not end in \(S\). Add this product for every \(S\) with an even number of students and subtract it for every \(S\) with an odd number: the total is \(144\). The code does exactly that, and checks it by trying all \(4^6 = 4096\) ways.</div>
-<pre><code># MATH: inclusion-exclusion over the students who get nothing. If the students in S get
+<p class="cards-used"><strong>Toolkit cards used:</strong> <a href="./toml-toolkit#COMB.PIE.count">COMB.PIE.count</a> (onto_count: the inclusion–exclusion sum). The code starts with the Copy text of these cards; the part after <code># ===== Solution =====</code> is the student&rsquo;s own. The box opens at the solution; scroll up in it to see the card code.</p>
+<pre><code># ===== TOML Toolkit cards: COMB.PIE.count =====
+# (the Copy text of each card, from nghia71.github.io/toml-toolkit; shared parts once)
+# ---- COMB.PIE.count ----
+from itertools import combinations
+
+def pie(events, n_with):
+    """Inclusion-exclusion. n_with(S) = how many objects have every bad event in the tuple S
+    (n_with(()) = all objects). Returns how many objects have none of the bad events."""
+    events = list(events)
+    total = 0
+    for k in range(len(events) + 1):
+        for S in combinations(events, k):
+            total += (-1) ** k * n_with(S)
+    return total
+
+def onto_count(allowed, targets):
+    """allowed[i] = the targets item i may go to. Count the ways to send every item to one
+    allowed target so that every target receives at least one item."""
+    allowed = [set(a) for a in allowed]
+    def n_with(S):                       # the targets in S receive nothing
+        ways = 1
+        for a in allowed:
+            ways *= len(a - set(S))
+        return ways
+    return pie(targets, n_with)
+
+def surjections(n, k):
+    """Onto maps from n items to k targets (every target used)."""
+    return onto_count([range(k)] * n, range(k))
+
+# ===== Solution =====
+# MATH: inclusion-exclusion over the students who get nothing. If the students in S get
 # nothing, prize p can go to any of its joined students outside S, so the count is the
 # product of |allowed(p) minus S|. Add for even |S|, subtract for odd |S|.
-from itertools import combinations, product
+# Toolkit: onto_count does exactly this sum (COMB.PIE.count).
+from itertools import product
 STUDENTS = ['Ana', 'Ben', 'Cai', 'Dee']
 # read from the figure: prize -&gt; students joined to it by a line
 allowed = {1: {'Ana', 'Ben', 'Dee'}, 2: {'Ana', 'Cai'}, 3: {'Ben', 'Cai', 'Dee'},
            4: {'Ana', 'Ben', 'Cai'}, 5: {'Cai', 'Dee'}, 6: {'Ana', 'Ben', 'Dee'}}
 assert sum(len(v) for v in allowed.values()) == 16          # 16 lines in the figure
-total = 0
-for k in range(len(STUDENTS) + 1):
-    for S in combinations(STUDENTS, k):
-        ways = 1
-        for p in allowed:
-            ways *= len(allowed[p] - set(S))
-        total += (-1) ** k * ways
+total = onto_count([allowed[p] for p in sorted(allowed)], STUDENTS)
 # check: list every way (4^6 = 4096) and keep the good ones
 check = sum(1 for way in product(STUDENTS, repeat=6)
             if all(way[i] in allowed[i + 1] for i in range(6)) and len(set(way)) == 4)
@@ -937,10 +1113,91 @@ print(total)
 </g>
 </svg></div>
 <div class="note math">Read the flowchart carefully: it is <em>not</em> the famous &ldquo;\(3N + 1\)&rdquo; machine. An odd multiple of \(3\) goes to \(N + 1\). (The example starting from \(7\) never meets an odd multiple of \(3\), so it cannot tell the two machines apart; the figure can.) Go <em>backward</em> from \(1\). The inputs that give output \(m\) are: \(2m\) (always); \(m - 1\) when that is an odd multiple of \(3\); and \((m - 1)/3\) when that is a whole number, odd and <em>not</em> a multiple of \(3\). Start with \(\{1\}\) and replace the set \(9\) times by all its inputs. That gives \(17\) numbers, \(1, 3, 8, 10, 13, 24, 30, 36, 39, 64, 80, 85, 192, 240, 252, 255, 512\), with sum \(1844\). Each backward step at most doubles, so none is bigger than \(2^9 = 512\): the code checks every number up to \(512\) forward as well.</div>
-<pre><code># MATH: go backward from 1. Inputs that give output m: 2m (even input, always);
+<p class="cards-used"><strong>Toolkit cards used:</strong> <a href="./toml-toolkit#ALG.REC.backward">ALG.REC.backward</a> (check_inputs, backward) &middot; <a href="./toml-toolkit#ALG.REC.iterate">ALG.REC.iterate</a> (terms, for the forward check) &middot; <a href="./toml-toolkit#FIN.SEARCH.first">FIN.SEARCH.first</a> (where). The code starts with the Copy text of these cards; the part after <code># ===== Solution =====</code> is the student&rsquo;s own. The box opens at the solution; scroll up in it to see the card code.</p>
+<pre><code># ===== TOML Toolkit cards: ALG.REC.backward, ALG.REC.iterate, FIN.SEARCH.first =====
+# (the Copy text of each card, from nghia71.github.io/toml-toolkit; shared parts once)
+# ---- ALG.REC.backward ----
+def levels(inputs, target, k):
+    """[L0, L1, ..., Lk]: Lj = all x whose j-th output is target. inputs(m) = set of x with f(x) = m."""
+    out = [{target}]
+    for _ in range(k):
+        out.append({x for m in out[-1] for x in inputs(m)})
+    return out
+
+def backward(inputs, target, k):
+    """All x whose k-th output is target (a set)."""
+    return levels(inputs, target, k)[-1]
+
+def check_inputs(f, inputs, lo, hi):
+    """Test inputs() against f for x in [lo, hi]: x must be among inputs(f(x)), and every
+    p in inputs(m) must satisfy f(p) = m. Returns how many x were checked; raises on a mistake."""
+    for x in range(lo, hi + 1):
+        m = f(x)
+        got = inputs(m)
+        assert x in got, f"inputs({m}) misses {x}"
+        for p in got:
+            assert f(p) == m, f"inputs({m}) gives {p}, but f({p}) = {f(p)}"
+    return hi - lo + 1
+
+# ---- ALG.REC.iterate ----
+def terms(rule, start, n):
+    """First n terms: start is the list of initial terms; rule(list_so_far) gives the next term."""
+    seq = list(start)
+    while len(seq) &lt; n:
+        seq.append(rule(seq))
+    return seq[:n]
+
+def find_cycle(f, x0, limit=10**7):
+    """Iterate x -&gt; f(x) from x0 (x0 is step 0). Returns (s, L): x_s = x_{s+L}, the first repeat."""
+    seen = {}
+    x, i = x0, 0
+    while x not in seen:
+        if i &gt;= limit:
+            raise ValueError("no repeat found within limit")
+        seen[x] = i
+        x = f(x); i += 1
+    s = seen[x]
+    return s, i - s
+
+def nth_by_cycle(f, x0, n):
+    """x_n (x0 is step 0) using the cycle; works for huge n."""
+    s, L = find_cycle(f, x0)
+    m = n if n &lt; s else s + (n - s) % L
+    x = x0
+    for _ in range(m):
+        x = f(x)
+    return x
+
+# ---- FIN.SEARCH.first ----
+def first(prop, start=1, limit=10**7):
+    """Least n &gt;= start with prop(n); raises if none below start + limit."""
+    for n in range(start, start + limit):
+        if prop(n):
+            return n
+    raise ValueError(f"no n in [{start}, {start + limit}) - raise the limit or check prop")
+
+def last(prop, lo, hi):
+    """Greatest n in [lo, hi] with prop(n), or None."""
+    for n in range(hi, lo - 1, -1):
+        if prop(n):
+            return n
+    return None
+
+def count(prop, lo, hi):
+    """How many n in [lo, hi] (both ends included) have prop(n)."""
+    return sum(1 for n in range(lo, hi + 1) if prop(n))
+
+def where(prop, lo, hi):
+    """All n in [lo, hi] with prop(n)."""
+    return [n for n in range(lo, hi + 1) if prop(n)]
+
+# ===== Solution =====
+# MATH: go backward from 1. Inputs that give output m: 2m (even input, always);
 # m - 1 if that is an odd multiple of 3 (rule N + 1); (m - 1)/3 if that is a whole number,
 # odd and NOT a multiple of 3 (rule 3N + 1). Nine backward steps from {1} give exactly
-# the N whose 9th output is 1.
+# the N whose 9th output is 1. Each input is at most 2m, so every such N is at most 2^9.
+# Toolkit: check_inputs and backward (ALG.REC.backward); terms (ALG.REC.iterate) and
+# where (FIN.SEARCH.first) for the forward check.
 def machine(n):
     if n % 2 == 0:
         return n // 2
@@ -959,16 +1216,11 @@ def inputs_giving(m):
     return found
 
 STEPS = 9
-level = {1}
-for _ in range(STEPS):
-    level = {p for m in level for p in inputs_giving(m)}
-for n in level:                      # forward check
-    x = n
-    for _ in range(STEPS):
-        x = machine(x)
-    assert x == 1
-# every input is at most 2^9, so checking all n up to 512 confirms nothing is missing
-assert level == {n for n in range(1, 2 ** STEPS + 1) if (lambda x: [x := machine(x) for _ in range(STEPS)][-1])(n) == 1}
+check_inputs(machine, inputs_giving, 1, 5000)        # inputs_giving really undoes machine
+level = backward(inputs_giving, 1, STEPS)
+# forward check: the 9th output of every n up to 2^9
+ninth = lambda n: terms(lambda a: machine(a[-1]), [n], STEPS + 1)[-1]
+assert sorted(level) == where(lambda n: ninth(n) == 1, 1, 2 ** STEPS)
 print(sorted(level))
 print(sum(level))
 </code></pre>
@@ -1112,23 +1364,140 @@ print(sum(level))
 </g>
 </svg></div>
 <div class="note math">Give the dots coordinates, with \(A = (0, 0)\): then \(B = (1, 8)\), \(C = (8, 4)\) and \(D = (6, 3)\), which is on \(AC\) because \(AC\) goes \(2\) right for every \(1\) up (so \(AD : DC = 3 : 1\)). The midpoint of \(BD\) is \(E = \left(\tfrac72, \tfrac{11}2\right)\). The line \(AE\) is \(y = \tfrac{11}{7}x\) and the line \(BC\) is \(y = 8 - \tfrac47(x - 1)\); they meet at \(F = \left(4, \tfrac{44}{7}\right)\), which is not a dot. The shoelace formula with exact fractions gives area \(EBF = \tfrac{45}{28}\). A check with ratios: area \(ABC = 30\), \(BF\) is \(\tfrac37\) of \(BC\) and \(EF\) is \(\tfrac18\) of \(AF\) (compare \(x\)-coordinates), so area \(EBF = 30\cdot\tfrac37\cdot\tfrac18 = \tfrac{45}{28}\). Answer \(45 + 28 = 73\).</div>
-<pre><code># MATH: read the lattice points A(0,0), B(1,8), C(8,4), D(6,3) (D is on AC).
+<p class="cards-used"><strong>Toolkit cards used:</strong> <a href="./toml-toolkit#GEO.PT.vec2">GEO.PT.vec2</a> (midpoint, collinear) &middot; <a href="./toml-toolkit#GEO.LINE.tools">GEO.LINE.tools</a> (line_through, intersect) &middot; <a href="./toml-toolkit#GEO.AREA.shoelace">GEO.AREA.shoelace</a> (shoelace_area) &middot; <a href="./toml-toolkit#FIN.FRAC.tools">FIN.FRAC.tools</a> (F, m_plus_n). The code starts with the Copy text of these cards; the part after <code># ===== Solution =====</code> is the student&rsquo;s own. The box opens at the solution; scroll up in it to see the card code.</p>
+<pre><code># ===== TOML Toolkit cards: GEO.PT.vec2, GEO.LINE.tools, GEO.AREA.shoelace, FIN.FRAC.tools =====
+# (the Copy text of each card, from nghia71.github.io/toml-toolkit; shared parts once)
+# ---- GEO.PT.vec2 ----
+import math
+
+def add(u, v): return (u[0] + v[0], u[1] + v[1])
+def sub(u, v): return (u[0] - v[0], u[1] - v[1])
+def mul(k, u): return (k * u[0], k * u[1])
+def dot(u, v): return u[0] * v[0] + u[1] * v[1]
+def cross(u, v): return u[0] * v[1] - u[1] * v[0]
+def norm2(u): return dot(u, u)
+def dist(p, q): return math.dist(p, q)
+def dist2(p, q): return norm2(sub(p, q))
+def midpoint(p, q): return ((p[0] + q[0]) / 2, (p[1] + q[1]) / 2)
+
+def orient(a, b, c):
+    """&gt; 0 if a, b, c turn left (counterclockwise), &lt; 0 right, 0 on a line."""
+    return cross(sub(b, a), sub(c, a))
+
+def collinear(a, b, c):
+    return orient(a, b, c) == 0
+
+def angle_deg(a, b, c):
+    """Angle ABC at b, in degrees (0..180)."""
+    u, v = sub(a, b), sub(c, b)
+    return math.degrees(math.atan2(abs(cross(u, v)), dot(u, v)))
+
+def rotate(p, deg, center=(0, 0)):
+    """Rotate p counterclockwise by deg degrees about center (floats)."""
+    t = math.radians(deg)
+    x, y = sub(p, center)
+    return (center[0] + x * math.cos(t) - y * math.sin(t), center[1] + x * math.sin(t) + y * math.cos(t))
+
+# ---- GEO.LINE.tools ----
+from fractions import Fraction
+import math
+
+def line_through(p, q):
+    """(a, b, c) with a x + b y = c through p and q."""
+    a, b = q[1] - p[1], p[0] - q[0]
+    return (a, b, a * p[0] + b * p[1])
+
+def line_slope(m, k):
+    """y = m x + k  -&gt;  (a, b, c)."""
+    return (Fraction(m), Fraction(-1), Fraction(-k))
+
+def intersect(l1, l2):
+    """Intersection point of two lines (exact for integer/Fraction input), or None if parallel."""
+    a1, b1, c1 = l1; a2, b2, c2 = l2
+    d = a1 * b2 - a2 * b1
+    if d == 0:
+        return None
+    return (Fraction(c1 * b2 - c2 * b1) / d, Fraction(a1 * c2 - a2 * c1) / d)
+
+def foot(p, l):
+    """Foot of the perpendicular from p to line l."""
+    a, b, c = l
+    t = Fraction(a * p[0] + b * p[1] - c) / (a * a + b * b)
+    return (p[0] - a * t, p[1] - b * t)
+
+def reflect(p, l):
+    f = foot(p, l)
+    return (2 * f[0] - p[0], 2 * f[1] - p[1])
+
+def dist_point_line(p, l):
+    a, b, c = l
+    return abs(a * p[0] + b * p[1] - c) / math.sqrt(a * a + b * b)
+
+# ---- GEO.AREA.shoelace ----
+from fractions import Fraction
+import math
+
+def signed_area(pts):
+    """Positive when the corners go counterclockwise."""
+    s = 0
+    for (x1, y1), (x2, y2) in zip(pts, pts[1:] + pts[:1]):
+        s += x1 * y2 - x2 * y1
+    return Fraction(s) / 2
+
+def shoelace_area(pts):
+    """Exact area of a simple polygon; pts = corners in boundary order."""
+    if len(pts) &lt; 3:
+        raise ValueError("need at least 3 corners")
+    return abs(signed_area(pts))
+
+def perimeter(pts):
+    return sum(math.dist(p, q) for p, q in zip(pts, pts[1:] + pts[:1]))
+
+# ---- FIN.FRAC.tools ----
+from fractions import Fraction
+
+def F(x, y=None):
+    """Exact fraction from F(3, 4), F('0.75'), F('3/4'), F('2 1/3') or F(0.5).
+    Floats are taken at their exact binary value: prefer strings like '0.1'."""
+    if y is not None:
+        return Fraction(x) / Fraction(y)
+    if isinstance(x, str) and " " in x.strip():          # mixed number '2 1/3'
+        whole, part = x.split()
+        sign = -1 if whole.startswith("-") else 1
+        return Fraction(whole) + sign * Fraction(part)
+    return Fraction(x)
+
+def mn(q):
+    """(m, n) with q = m/n in lowest terms and n &gt; 0."""
+    q = Fraction(q)
+    return q.numerator, q.denominator
+
+def m_plus_n(q):
+    m, n = mn(q)
+    return m + n
+
+def mixed(q):
+    """22/7 -&gt; (3, Fraction(1, 7)): whole part and the rest (for positive q)."""
+    q = Fraction(q)
+    whole = q.numerator // q.denominator
+    return whole, q - whole
+
+# ===== Solution =====
+# MATH: read the lattice points A(0,0), B(1,8), C(8,4), D(6,3) (D is on AC).
 # E is the midpoint of BD. F = (line AE) meets (line BC). Exact fractions + shoelace.
-from fractions import Fraction as Fr
-A, B, C, D = (0, 0), (1, 8), (8, 4), (6, 3)
-assert D[0] * C[1] == D[1] * C[0]                    # D lies on AC
-E = (Fr(B[0] + D[0], 2), Fr(B[1] + D[1], 2))
-def cross(P, Q, R):
-    return (Q[0] - P[0]) * (R[1] - P[1]) - (Q[1] - P[1]) * (R[0] - P[0])
-# F = A + t (E - A) on line BC: cross(B, C, F) = 0 is linear in t
-t = Fr(cross(B, C, A), cross(B, C, A) - cross(B, C, E))
-F = (A[0] + t * (E[0] - A[0]), A[1] + t * (E[1] - A[1]))
-assert cross(B, C, F) == 0
-area = abs(cross(E, B, F)) / 2
-# check: area EBF = (EF/AF) * (BF/BC) * area ABC
-assert (1 - 1 / t) * ((F[0] - B[0]) / (C[0] - B[0])) * abs(cross(A, B, C)) / 2 == area
-print(E, F, area)
-print(area.numerator + area.denominator)
+# Toolkit: midpoint, collinear (GEO.PT.vec2); line_through, intersect (GEO.LINE.tools);
+# shoelace_area (GEO.AREA.shoelace); F, m_plus_n (FIN.FRAC.tools).
+P = lambda x, y: (F(x), F(y))                        # exact points, so midpoints stay exact
+A, B, C, D = P(0, 0), P(1, 8), P(8, 4), P(6, 3)
+assert collinear(A, D, C)                            # D lies on AC
+E = midpoint(B, D)
+Fpt = intersect(line_through(A, E), line_through(B, C))
+assert collinear(B, C, Fpt)
+area = shoelace_area([E, B, Fpt])
+# check: area EBF = (EF/AF) * (BF/BC) * area ABC  (compare x-coordinates)
+assert (Fpt[0] - E[0]) / (Fpt[0] - A[0]) * (Fpt[0] - B[0]) / (C[0] - B[0]) * shoelace_area([A, B, C]) == area
+print(f'E = ({E[0]}, {E[1]})', f'F = ({Fpt[0]}, {Fpt[1]})', 'area =', area)
+print(m_plus_n(area))
 </code></pre>
 </div>
 
@@ -1138,15 +1507,64 @@ print(area.numerator + area.denominator)
 <h3 id="hs-problem-1">HS &middot; Problem 1 &middot; <span class="tag">Easy</span> <span class="tag">Algebra</span></h3>
 <p class="problem">How many ordered pairs \((b, c)\) of positive integers are there such that <em>neither</em> of the equations \(x^2 + bx + 2c = 0\) and \(x^2 + cx + 2b = 0\) has two different real solutions?</p>
 <div class="note math">A quadratic \(x^2 + px + q = 0\) has two different real solutions exactly when its discriminant \(p^2 - 4q\) is positive. So we need \(b^2 - 8c \le 0\) and \(c^2 - 8b \le 0\), that is \(b^2 \le 8c\) and \(c^2 \le 8b\). <strong>Bound the search:</strong> squaring the first, \(b^4 \le 64c^2 \le 64 \cdot 8b\), so \(b^3 \le 512\) and \(b \le 8\); in the same way \(c \le 8\). Now only \(8 \times 8 = 64\) pairs are left to test, and \(20\) of them work. The code tests them, and also a much larger square of pairs to confirm that nothing was missed.</div>
-<pre><code># MATH: no two different real roots &lt;=&gt; discriminant &lt;= 0:
+<p class="cards-used"><strong>Toolkit cards used:</strong> <a href="./toml-toolkit#FIN.CHECK.compare">FIN.CHECK.compare</a> (small_inputs: all pairs in a square) &middot; <a href="./toml-toolkit#FIN.SEARCH.first">FIN.SEARCH.first</a> (count). The code starts with the Copy text of these cards; the part after <code># ===== Solution =====</code> is the student&rsquo;s own. The box opens at the solution; scroll up in it to see the card code.</p>
+<pre><code># ===== TOML Toolkit cards: FIN.CHECK.compare, FIN.SEARCH.first =====
+# (the Copy text of each card, from nghia71.github.io/toml-toolkit; shared parts once)
+# ---- FIN.CHECK.compare ----
+from itertools import product
+
+def compare(fast, slow, inputs, show=3):
+    """Run both on each input (a value, or a tuple of arguments). Return the number checked;
+    raise AssertionError at the first disagreement."""
+    n = 0
+    for x in inputs:
+        args = x if isinstance(x, tuple) else (x,)
+        a, b = fast(*args), slow(*args)
+        if a != b:
+            raise AssertionError(f"disagree at {args}: fast gives {a!r}, slow gives {b!r}")
+        n += 1
+    return n
+
+def small_inputs(k, hi, lo=0):
+    """All k-tuples of integers in [lo, hi]: a quick grid of test inputs."""
+    return list(product(range(lo, hi + 1), repeat=k))
+
+# ---- FIN.SEARCH.first ----
+def first(prop, start=1, limit=10**7):
+    """Least n &gt;= start with prop(n); raises if none below start + limit."""
+    for n in range(start, start + limit):
+        if prop(n):
+            return n
+    raise ValueError(f"no n in [{start}, {start + limit}) - raise the limit or check prop")
+
+def last(prop, lo, hi):
+    """Greatest n in [lo, hi] with prop(n), or None."""
+    for n in range(hi, lo - 1, -1):
+        if prop(n):
+            return n
+    return None
+
+def count(prop, lo, hi):
+    """How many n in [lo, hi] (both ends included) have prop(n)."""
+    return sum(1 for n in range(lo, hi + 1) if prop(n))
+
+def where(prop, lo, hi):
+    """All n in [lo, hi] with prop(n)."""
+    return [n for n in range(lo, hi + 1) if prop(n)]
+
+# ===== Solution =====
+# MATH: no two different real roots &lt;=&gt; discriminant &lt;= 0:
 #   b^2 &lt;= 8c and c^2 &lt;= 8b.  Then b^4 &lt;= 64 c^2 &lt;= 512 b, so b &lt;= 8; same for c.
+# Toolkit: small_inputs (FIN.CHECK.compare) lists the pairs in a square;
+# count (FIN.SEARCH.first) is used for the check on a much bigger square.
 def ok(b, c):
     return b * b - 8 * c &lt;= 0 and c * c - 8 * b &lt;= 0
 
-pairs = [(b, c) for b in range(1, 9) for c in range(1, 9) if ok(b, c)]
+pairs = [(b, c) for b, c in small_inputs(2, 8, lo=1) if ok(b, c)]
 print(pairs)
 # check that the bound is right: nothing more up to 200
-assert pairs == [(b, c) for b in range(1, 201) for c in range(1, 201) if ok(b, c)]
+assert pairs == [(b, c) for b, c in small_inputs(2, 200, lo=1) if ok(b, c)]
+assert len(pairs) == sum(count(lambda c: ok(b, c), 1, 200) for b in range(1, 201))
 print(len(pairs))                # 20
 </code></pre>
 </div>
@@ -1251,18 +1669,95 @@ print(len(pairs))                # 20
 </g>
 </svg></div>
 <div class="note math">Count the rungs: \(A\) is \(14\) m, \(B\) is \(9\) m and \(C\) is \(11\) m. The panel is flat, so its height above a point \((x, y)\) is \(h = px + qy + r\), a linear function, and heights add up across parallelograms: if \(PQRS\) is a parallelogram, \(h(P) + h(R) = h(Q) + h(S)\). With \(O\) the centre, \(ABCO\) is a rhombus, so \(h(O) = 14 + 11 - 9 = 16\); \(O\) is the midpoint of \(BE\), so \(h(E) = 2\cdot16 - 9 = 23\). The drawing is a parallel projection, which keeps parallelograms, so the same reasoning works on the picture itself.</div>
-<pre><code># MATH: a flat panel means height = linear function of position, so heights add up across
+<p class="cards-used"><strong>Toolkit cards used:</strong> <a href="./toml-toolkit#ALG.LIN.solve">ALG.LIN.solve</a> (solve: exact linear system, for the check). The code starts with the Copy text of these cards; the part after <code># ===== Solution =====</code> is the student&rsquo;s own. The box opens at the solution; scroll up in it to see the card code.</p>
+<pre><code># ===== TOML Toolkit cards: ALG.LIN.solve =====
+# (the Copy text of each card, from nghia71.github.io/toml-toolkit; shared parts once)
+# ---- FIN.FRAC.tools ----
+from fractions import Fraction
+
+def F(x, y=None):
+    """Exact fraction from F(3, 4), F('0.75'), F('3/4'), F('2 1/3') or F(0.5).
+    Floats are taken at their exact binary value: prefer strings like '0.1'."""
+    if y is not None:
+        return Fraction(x) / Fraction(y)
+    if isinstance(x, str) and " " in x.strip():          # mixed number '2 1/3'
+        whole, part = x.split()
+        sign = -1 if whole.startswith("-") else 1
+        return Fraction(whole) + sign * Fraction(part)
+    return Fraction(x)
+
+def mn(q):
+    """(m, n) with q = m/n in lowest terms and n &gt; 0."""
+    q = Fraction(q)
+    return q.numerator, q.denominator
+
+def m_plus_n(q):
+    m, n = mn(q)
+    return m + n
+
+def mixed(q):
+    """22/7 -&gt; (3, Fraction(1, 7)): whole part and the rest (for positive q)."""
+    q = Fraction(q)
+    whole = q.numerator // q.denominator
+    return whole, q - whole
+
+# ---- ALG.LIN.solve ----
+from fractions import Fraction
+
+def _rref(A, b):
+    M = [[Fraction(x) for x in row] + [Fraction(r)] for row, r in zip(A, b)]
+    rows, cols = len(M), len(A[0])
+    piv, r = [], 0
+    for c in range(cols):
+        p = next((i for i in range(r, rows) if M[i][c] != 0), None)
+        if p is None:
+            continue
+        M[r], M[p] = M[p], M[r]
+        M[r] = [x / M[r][c] for x in M[r]]
+        for i in range(rows):
+            if i != r and M[i][c] != 0:
+                f = M[i][c]
+                M[i] = [a - f * b2 for a, b2 in zip(M[i], M[r])]
+        piv.append(c); r += 1
+    return M, piv
+
+def solve(A, b):
+    """Exact solution of A x = b.
+    Returns a list of Fractions (unique solution), None (no solution), or
+    (particular, directions) when there are infinitely many: x = particular + any combination of directions."""
+    M, piv = _rref(A, b)
+    cols = len(A[0])
+    if any(all(x == 0 for x in row[:-1]) and row[-1] != 0 for row in M):
+        return None
+    x = [Fraction(0)] * cols
+    for i, c in enumerate(piv):
+        x[c] = M[i][-1]
+    if len(piv) == cols:
+        return x
+    free = [c for c in range(cols) if c not in piv]
+    dirs = []
+    for f in free:
+        d = [Fraction(0)] * cols; d[f] = Fraction(1)
+        for i, c in enumerate(piv):
+            d[c] = -M[i][f]
+        dirs.append(d)
+    return x, dirs
+
+def rank(A):
+    return len(_rref(A, [0] * len(A))[1])
+
+# ===== Solution =====
+# MATH: a flat panel means height = linear function of position, so heights add up across
 # parallelograms. With centre O: ABCO is a rhombus, so h(O) = h(A) + h(C) - h(B);
 # O is the midpoint of BE, so h(E) = 2 h(O) - h(B). Heights read by counting rungs.
+# Toolkit check: solve (ALG.LIN.solve) fits h = h0 + s*hu + t*hv exactly.
 hA, hB, hC = 14, 9, 11
 hO = hA + hC - hB
 hE = 2 * hO - hB
-# check: solve h = h0 + s*hu + t*hv with A=(1,0), B=(0,1), C=(-1,1), E=(0,-1)
-# A gives h0 + hu = hA, B gives h0 + hv = hB, C gives h0 - hu + hv = hC; E = h0 - hv
-fits = [h0 for h0 in range(-200, 201) if h0 - (hA - h0) + (hB - h0) == hC]
-assert len(fits) == 1
-h0 = fits[0]
-assert h0 - (hB - h0) == hE
+# check: with O = (0,0), A = (1,0), B = (0,1), C = (-1,1), E = (0,-1) in (s, t) coordinates,
+# solve h0 + s*hu + t*hv = height at A, B, C for (h0, hu, hv), then evaluate at E.
+h0, hu, hv = solve([[1, 1, 0], [1, 0, 1], [1, -1, 1]], [hA, hB, hC])
+assert h0 == hO and h0 - hv == hE
 print(hE)
 </code></pre>
 </div>
@@ -1474,29 +1969,95 @@ print(hE)
 </g>
 </svg></div>
 <div class="note math">First list the lines in the figure: \(J_1J_2\), \(J_3S_5\), \(S_1S_2\), \(J_4S_4\), \(J_6J_7\), \(S_6S_8\), \(J_8S_3\), \(J_2S_7\) (\(8\) of them; follow each line from end to end, because several cross). Then build every split exactly once: the free junior with the smallest number picks a junior partner and two seniors, the team is skipped if it contains a joined pair, and the rest is split the same way (recursion). Without any lines this gives \(\binom82^2\binom62^2\binom42^2 / 4! = 264\,600\), the count from the original version, which the code uses as a check. With the \(8\) lines it gives \(48\,240\).</div>
-<pre><code># MATH: build each split once: the smallest free junior picks one junior partner and two
-# seniors; skip any team that contains a pair joined in the figure. Recursion.
+<p class="cards-used"><strong>Toolkit cards used:</strong> <a href="./toml-toolkit#COMB.SPLIT.groups">COMB.SPLIT.groups</a> (count_splits, no_pair, all_rules) &middot; <a href="./toml-toolkit#COMB.BINOM.choose">COMB.BINOM.choose</a> (choose, for the count with no lines). The code starts with the Copy text of these cards; the part after <code># ===== Solution =====</code> is the student&rsquo;s own. The box opens at the solution; scroll up in it to see the card code.</p>
+<pre><code># ===== TOML Toolkit cards: COMB.SPLIT.groups, COMB.BINOM.choose =====
+# (the Copy text of each card, from nghia71.github.io/toml-toolkit; shared parts once)
+# ---- COMB.SPLIT.groups ----
 from itertools import combinations
+from math import factorial
+from collections import Counter
+
+def splits(items, sizes, ok=None):
+    """Yield each split of items into groups with the given sizes (groups have no names),
+    as a tuple of groups (tuples). ok(group) -&gt; False drops a group as soon as it is formed."""
+    items = list(items)
+    def rec(free, sizes_left):
+        if not free:
+            yield ()
+            return
+        first, rest = free[0], free[1:]
+        for s in sorted(set(sizes_left)):          # first free item's group has size s
+            left = list(sizes_left); left.remove(s)
+            for others in combinations(rest, s - 1):
+                group = (first,) + others
+                if ok is not None and not ok(group):
+                    continue
+                remain = [x for x in rest if x not in others]
+                for tail in rec(remain, left):
+                    yield (group,) + tail
+    if sum(sizes) != len(items):
+        raise ValueError("group sizes must add up to the number of items")
+    yield from rec(items, list(sizes))
+
+def count_splits(items, sizes, ok=None):
+    return sum(1 for _ in splits(items, sizes, ok))
+
+def splits_formula(sizes):
+    """Number of splits with no rules: n! / (product of s! * product of m_s!)."""
+    out = factorial(sum(sizes))
+    for s in sizes:
+        out //= factorial(s)
+    for m in Counter(sizes).values():
+        out //= factorial(m)
+    return out
+
+def no_pair(pairs):
+    """A rule for ok: no two people from the same pair in one group."""
+    bad = [set(p) for p in pairs]
+    return lambda group: not any(b &lt;= set(group) for b in bad)
+
+def all_rules(*rules):
+    """Combine several ok rules: a group must pass all of them."""
+    return lambda group: all(r(group) for r in rules)
+
+# ---- COMB.BINOM.choose ----
+from math import comb, factorial, perm
+
+def choose(n, k):
+    """C(n, k); 0 when k &lt; 0 or k &gt; n."""
+    return comb(n, k) if 0 &lt;= k &lt;= n else 0
+
+def pascal_row(n):
+    return [comb(n, k) for k in range(n + 1)]
+
+def multinomial(*parts):
+    """(a+b+...)! / (a! b! ...): arrangements of a items of one kind, b of another, ..."""
+    total = factorial(sum(parts))
+    for p in parts:
+        total //= factorial(p)
+    return total
+
+def arrangements(n, k):
+    """Ordered choices of k from n: n (n-1) ... (n-k+1)."""
+    return perm(n, k)
+
+# ===== Solution =====
+# MATH: build each split once: the smallest free person picks the rest of their team;
+# skip any team that does not have 2 juniors and 2 seniors or that contains a pair joined
+# in the figure. Recursion.
+# Toolkit: count_splits, no_pair, all_rules (COMB.SPLIT.groups); choose (COMB.BINOM.choose)
+# for the count with no lines.
+from math import factorial
 J = [f'J{i}' for i in range(1, 9)]; S = [f'S{i}' for i in range(1, 9)]
 # read from the figure: pairs joined by a line
-lines = {frozenset(p) for p in [('J1','J2'), ('J3','S5'), ('S1','S2'), ('J4','S4'),
-                                ('J6','J7'), ('S6','S8'), ('J8','S3'), ('J2','S7')]}
-assert len(lines) == 8
-def ok(team):
-    return all(frozenset(p) not in lines for p in combinations(team, 2))
-def count(js, ss):
-    if not js:
-        return 1
-    a, rest = js[0], js[1:]
-    total = 0
-    for b in rest:
-        for pair in combinations(ss, 2):
-            if ok((a, b) + pair):
-                total += count([x for x in rest if x != b], [x for x in ss if x not in pair])
-    return total
-ans = count(J, S)
-# check with no lines: must give the known 264600
-saved = set(lines); lines.clear(); assert count(J, S) == 264600; lines |= saved
+lines = [('J1', 'J2'), ('J3', 'S5'), ('S1', 'S2'), ('J4', 'S4'),
+         ('J6', 'J7'), ('S6', 'S8'), ('J8', 'S3'), ('J2', 'S7')]
+assert len(set(map(frozenset, lines))) == 8
+two_each = lambda team: sum(p in J for p in team) == 2      # 2 juniors, so 2 seniors
+ans = count_splits(J + S, [4] * 4, ok=all_rules(two_each, no_pair(lines)))
+# check with no lines: must give C(8,2)^2 C(6,2)^2 C(4,2)^2 / 4! = 264600
+no_lines = choose(8, 2) ** 2 * choose(6, 2) ** 2 * choose(4, 2) ** 2 // factorial(4)
+assert count_splits(J + S, [4] * 4, ok=two_each) == no_lines == 264600
 print(ans)
 </code></pre>
 </div>
@@ -1505,20 +2066,82 @@ print(ans)
 <h3 id="hs-problem-4">HS &middot; Problem 4 &middot; <span class="tag">Medium</span> <span class="tag">Number Theory</span></h3>
 <p class="problem">For how many integers \(b\) with \(6 \le b \le 2026\) is the base-\(b\) numeral \(1115_b\) divisible by \(16\)?</p>
 <div class="note math">In base \(b\), \(1115_b = b^3 + b^2 + b + 5\) (the digit \(5\) needs \(b \ge 6\)). Whether this is divisible by \(16\) depends only on the remainder of \(b\) when divided by \(16\): replacing \(b\) by \(b + 16\) changes each power \(b^k\) by a multiple of \(16\). So test the \(16\) remainders once: only \(b \equiv 5\) and \(b \equiv 13 \pmod{16}\) work, i.e. \(b \equiv 5 \pmod 8\). (A reason: for even \(b\) the number is odd; for odd \(b\), \(b^3 + b^2 + b + 5 = (b + 1)(b^2 + 1) + 4\), and \(b^2 + 1 \equiv 2 \pmod 8\).) The bases \(b \equiv 5 \pmod 8\) between \(6\) and \(2026\) are \(13, 21, \dots, 2021\): there are \(\frac{2021 - 13}{8} + 1 = 252\) of them. The code finds the good remainders, counts with them, and checks by testing every base.</div>
-<pre><code># MATH: 1115_b = b^3 + b^2 + b + 5, and divisibility by 16 depends only on
+<p class="cards-used"><strong>Toolkit cards used:</strong> <a href="./toml-toolkit#NT.DIGIT.digits">NT.DIGIT.digits</a> (from_digits: the value of 1115 in base b) &middot; <a href="./toml-toolkit#FIN.SEARCH.first">FIN.SEARCH.first</a> (where, count). The code starts with the Copy text of these cards; the part after <code># ===== Solution =====</code> is the student&rsquo;s own. The box opens at the solution; scroll up in it to see the card code.</p>
+<pre><code># ===== TOML Toolkit cards: NT.DIGIT.digits, FIN.SEARCH.first =====
+# (the Copy text of each card, from nghia71.github.io/toml-toolkit; shared parts once)
+# ---- NT.DIGIT.digits ----
+def digits(n, base=10):
+    """Digits of n &gt;= 0, most significant first."""
+    if n == 0:
+        return [0]
+    out = []
+    while n:
+        n, d = divmod(n, base)
+        out.append(d)
+    return out[::-1]
+
+def from_digits(ds, base=10):
+    n = 0
+    for d in ds:
+        n = n * base + d
+    return n
+
+def digit_sum(n, base=10):
+    return sum(digits(n, base))
+
+def digit_product(n, base=10):
+    p = 1
+    for d in digits(n, base):
+        p *= d
+    return p
+
+def reverse_num(n, base=10):
+    return from_digits(digits(n, base)[::-1], base)
+
+def is_palindrome(n, base=10):
+    ds = digits(n, base)
+    return ds == ds[::-1]
+
+# ---- FIN.SEARCH.first ----
+def first(prop, start=1, limit=10**7):
+    """Least n &gt;= start with prop(n); raises if none below start + limit."""
+    for n in range(start, start + limit):
+        if prop(n):
+            return n
+    raise ValueError(f"no n in [{start}, {start + limit}) - raise the limit or check prop")
+
+def last(prop, lo, hi):
+    """Greatest n in [lo, hi] with prop(n), or None."""
+    for n in range(hi, lo - 1, -1):
+        if prop(n):
+            return n
+    return None
+
+def count(prop, lo, hi):
+    """How many n in [lo, hi] (both ends included) have prop(n)."""
+    return sum(1 for n in range(lo, hi + 1) if prop(n))
+
+def where(prop, lo, hi):
+    """All n in [lo, hi] with prop(n)."""
+    return [n for n in range(lo, hi + 1) if prop(n)]
+
+# ===== Solution =====
+# MATH: 1115_b = b^3 + b^2 + b + 5, and divisibility by 16 depends only on
 # b mod 16. Test the 16 remainders, then count the bases with a good one.
+# Toolkit: from_digits (NT.DIGIT.digits) gives the value in base b;
+# where and count (FIN.SEARCH.first) do the searching.
 LO, HI, M = 6, 2026, 16
 
 def value(b):
-    return b ** 3 + b ** 2 + b + 5
+    return from_digits([1, 1, 1, 5], b)          # b^3 + b^2 + b + 5
 
-good = [r for r in range(M) if value(r) % M == 0]
+good = where(lambda r: value(r) % M == 0, 0, M - 1)
 print(good)                                          # [5, 13]
-count = sum(1 for b in range(LO, HI + 1) if b % M in good)
+answer = count(lambda b: b % M in good, LO, HI)
 
 # check: test every base directly (the digits 1, 1, 1, 5 need b &gt;= 6)
-assert count == sum(1 for b in range(LO, HI + 1) if value(b) % M == 0)
-print(count)                                         # 252
+assert answer == count(lambda b: value(b) % M == 0, LO, HI)
+print(answer)                                        # 252
 </code></pre>
 </div>
 
@@ -1602,44 +2225,122 @@ print(count)                                         # 252
 </g>
 </svg></div>
 <div class="note math">Read the frame: it is the unit cube with corner \(O = (0,0,0)\), but two wires are missing, the left edge of the top face (from \((0,0,1)\) to \((0,1,1)\)) and the back edge of the bottom face (from \((0,1,0)\) to \((1,1,0)\)); the dashed wires are hidden, not missing. Each roll fixes one direction, so a good sequence of rolls is the same thing as a walk of \(5\) steps along the wires from \(O\) that never uses a wire twice. Count those walks by trying every wire at every corner: there are \(13\) (on the full cube there would be \(42\)). So the probability is \(\tfrac{13}{6^5} = \tfrac{13}{7776}\), already in lowest terms, and the answer is \(13 + 7776 = 7789\).</div>
-<pre><code># MATH: each roll picks one of 6 directions, so a good roll sequence is the same thing as a
+<p class="cards-used"><strong>Toolkit cards used:</strong> <a href="./toml-toolkit#COMB.GRAPH.trails">COMB.GRAPH.trails</a> (cube_edges, edge, count_walks) &middot; <a href="./toml-toolkit#FIN.FRAC.tools">FIN.FRAC.tools</a> (F, m_plus_n). The code starts with the Copy text of these cards; the part after <code># ===== Solution =====</code> is the student&rsquo;s own. The box opens at the solution; scroll up in it to see the card code.</p>
+<pre><code># ===== TOML Toolkit cards: COMB.GRAPH.trails, FIN.FRAC.tools =====
+# (the Copy text of each card, from nghia71.github.io/toml-toolkit; shared parts once)
+# ---- COMB.GRAPH.trails ----
+from itertools import product
+
+def neighbours(edges):
+    """{point: set of points joined to it} from a collection of edges (pairs of points)."""
+    adj = {}
+    for e in edges:
+        u, v = tuple(e)
+        adj.setdefault(u, set()).add(v)
+        adj.setdefault(v, set()).add(u)
+    return adj
+
+def walks(edges, start, steps, rule="any", end=None):
+    """Yield each walk (tuple of points) of exactly `steps` moves from start along the edges.
+    rule: 'any' (edges may repeat), 'edges' (no edge used twice), 'points' (no point visited twice).
+    end: if given, keep only walks that finish there."""
+    adj = neighbours(edges)
+    route = [start]
+    used = set()
+    def rec():
+        if len(route) == steps + 1:
+            if end is None or route[-1] == end:
+                yield tuple(route)
+            return
+        here = route[-1]
+        for nxt in sorted(adj.get(here, ())):
+            e = frozenset((here, nxt))
+            if rule == "edges" and e in used:
+                continue
+            if rule == "points" and nxt in route:
+                continue
+            used.add(e); route.append(nxt)
+            yield from rec()
+            route.pop(); used.discard(e)
+    yield from rec()
+
+def count_walks(edges, start, steps, rule="any", end=None):
+    return sum(1 for _ in walks(edges, start, steps, rule, end))
+
+def edge(u, v):
+    return frozenset((u, v))
+
+def cube_edges(dim=3):
+    """The 12 edges of the unit cube [0,1]^3 (or 2^(d-1)*d edges of a d-cube), as frozensets."""
+    V = list(product((0, 1), repeat=dim))
+    return {edge(u, v) for u in V for v in V if sum(a != b for a, b in zip(u, v)) == 1}
+
+def grid_edges(cols, rows):
+    """Edges of a cols x rows grid of points (x, y), neighbours one unit apart."""
+    E = set()
+    for x in range(cols):
+        for y in range(rows):
+            if x + 1 &lt; cols: E.add(edge((x, y), (x + 1, y)))
+            if y + 1 &lt; rows: E.add(edge((x, y), (x, y + 1)))
+    return E
+
+# ---- FIN.FRAC.tools ----
+from fractions import Fraction
+
+def F(x, y=None):
+    """Exact fraction from F(3, 4), F('0.75'), F('3/4'), F('2 1/3') or F(0.5).
+    Floats are taken at their exact binary value: prefer strings like '0.1'."""
+    if y is not None:
+        return Fraction(x) / Fraction(y)
+    if isinstance(x, str) and " " in x.strip():          # mixed number '2 1/3'
+        whole, part = x.split()
+        sign = -1 if whole.startswith("-") else 1
+        return Fraction(whole) + sign * Fraction(part)
+    return Fraction(x)
+
+def mn(q):
+    """(m, n) with q = m/n in lowest terms and n &gt; 0."""
+    q = Fraction(q)
+    return q.numerator, q.denominator
+
+def m_plus_n(q):
+    m, n = mn(q)
+    return m + n
+
+def mixed(q):
+    """22/7 -&gt; (3, Fraction(1, 7)): whole part and the rest (for positive q)."""
+    q = Fraction(q)
+    whole = q.numerator // q.denominator
+    return whole, q - whole
+
+# ===== Solution =====
+# MATH: each roll picks one of 6 directions, so a good roll sequence is the same thing as a
 # walk of 5 steps along the wires from O that never reuses a wire (each step = one roll).
 # Count those walks, divide by 6^5. Wires read from the figure: all 12 edges of the cube
 # [0,1]^3 except (0,0,1)-(0,1,1) and (0,1,0)-(1,1,0).
-from fractions import Fraction
+# Toolkit: cube_edges, edge, count_walks (COMB.GRAPH.trails); F, m_plus_n (FIN.FRAC.tools).
 from itertools import product
-V = list(product((0, 1), repeat=3))
-edges = {frozenset((u, v)) for u in V for v in V if sum(abs(a - b) for a, b in zip(u, v)) == 1}
-edges -= {frozenset(((0, 0, 1), (0, 1, 1))), frozenset(((0, 1, 0), (1, 1, 0)))}
-assert len(edges) == 10
+O = (0, 0, 0)
+frame = cube_edges() - {edge((0, 0, 1), (0, 1, 1)), edge((0, 1, 0), (1, 1, 0))}
+assert len(frame) == 10
 ROLLS = 5
-def walks(at, used, left):
-    if left == 0:
-        return 1
-    total = 0
-    for ax in range(3):
-        nxt = list(at); nxt[ax] = 1 - nxt[ax]; nxt = tuple(nxt)
-        e = frozenset((at, nxt))
-        if e in edges and e not in used:
-            total += walks(nxt, used | {e}, left - 1)
-    return total
-good = walks((0, 0, 0), frozenset(), ROLLS)
+good = count_walks(frame, O, ROLLS, rule='edges')
 # check: follow the bee for all 6^5 roll sequences
 MOVES = [(1,0,0), (-1,0,0), (0,1,0), (0,-1,0), (0,0,1), (0,0,-1)]
 direct = 0; seen = 0
 for rolls in product(MOVES, repeat=ROLLS):
     seen += 1
-    p, used, fine = (0, 0, 0), set(), True
+    p, used, fine = O, set(), True
     for m in rolls:
-        q = tuple(a + b for a, b in zip(p, m)); e = frozenset((p, q))
-        if e not in edges or e in used:
+        q = tuple(a + b for a, b in zip(p, m)); e = edge(p, q)
+        if e not in frame or e in used:
             fine = False; break
         used.add(e); p = q
     direct += fine
 assert seen == 6 ** ROLLS and direct == good
-prob = Fraction(good, 6 ** ROLLS)
+prob = F(good, 6 ** ROLLS)
 print(good, prob)
-print(prob.numerator + prob.denominator)
+print(m_plus_n(prob))
 </code></pre>
 </div>
 
