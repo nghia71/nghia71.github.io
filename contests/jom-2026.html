@@ -1,0 +1,280 @@
+---
+title: Junior Olympiad of Malaysia 2026
+permalink: /contests/jom-2026
+description: Junior Olympiad of Malaysia 2026: problems with answers and solutions
+---
+{% raw %}
+<style>
+  .ct-intro { margin-bottom: 1.2em; }
+  .ct-credit { font-size: 14px; color: var(--ink-soft); border-left: 3px solid var(--gold); padding: 6px 12px; background: var(--white); margin: 1em 0; }
+  .ct-toc { display: flex; flex-wrap: wrap; gap: 6px; margin: 1em 0 1.4em; }
+  .ct-toc a { display: inline-block; min-width: 2.4em; text-align: center; padding: 4px 8px; border: 1px solid var(--rule); border-radius: 4px; background: var(--white); text-decoration: none; font-size: 14px; }
+  .ct-problem { background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 14px 18px; margin: 1.1em 0; }
+  .ct-problem h3 { margin: 0 0 .3em; font-size: 1.08rem; border-bottom: none; padding-bottom: 0; }
+  .ct-meta { font-size: 13px; color: var(--ink-soft); margin-bottom: .6em; }
+  .ct-text { font-family: Georgia, "Times New Roman", "Noto Serif", serif; font-size: 1.02em; line-height: 1.6; }
+  .ct-text p { margin: .5em 0; }
+  .ct-fig { text-align: center; margin: .8em 0; }
+  .ct-fig img { max-width: 100%; height: auto; max-height: 340px; }
+  .ct-choices { display: flex; flex-wrap: wrap; gap: 6px 22px; margin: .6em 0 .2em; }
+  .ct-choices b { margin-right: .3em; }
+  .ct-problem details { margin-top: .8em; border-top: 1px dashed var(--rule); padding-top: .5em; }
+  .ct-problem summary { cursor: pointer; font-weight: 600; color: var(--brand); font-size: 15px; }
+  .ct-problem details[open] summary { margin-bottom: .5em; }
+  .ct-sol h4 { font-size: 1rem; margin: 1em 0 .3em; color: var(--ink); }
+  .ct-answer { font-weight: 600; }
+  .ct-parts { list-style: none; padding-left: .4em; }
+  .ct-parts li { margin: .35em 0; }
+  .ct-lbl { font-weight: 700; margin-right: .3em; }
+  .ct-note { font-size: 14px; color: var(--ink-soft); font-style: italic; }
+  .ct-bar { margin: .6em 0 1em; display: flex; gap: 10px; flex-wrap: wrap; }
+  .ct-bar button { font: inherit; font-size: 14px; padding: 5px 12px; border-radius: var(--radius); border: 1px solid var(--brand); background: var(--white); color: var(--brand); cursor: pointer; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
+</style>
+<script>
+  window.MathJax = { tex: { inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [['\\[','\\]']], processEscapes: true },
+                     options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] } };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script>
+  function ctAll(open) { document.querySelectorAll('.ct-problem details').forEach(function (d) { d.open = open; }); }
+</script>
+
+<style>
+  .ct-group { font-size: 1.25rem; margin: 1.6em 0 .2em; }
+  .ct-toc-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: .3em 0; }
+  .ct-toc-g { font-size: 13px; color: var(--ink-soft); min-width: 9em; }
+  .ct-toc-wrap { margin: 1em 0 1.4em; }
+  .ct-center { text-align: center; margin: .6em 0; }
+  .ct-tablewrap { overflow-x: auto; margin: .6em 0; text-align: center; }
+  .ct-table { border-collapse: collapse; margin: 0 auto; }
+  .ct-table td { padding: 2px 9px; text-align: center; }
+  .ct-table tr.ct-hl td { border-bottom: 1px solid var(--ink-soft); }
+  .ct-table.ct-vfirst td:first-child { border-right: 1px solid var(--ink-soft); }
+  .ct-ul { padding-left: 1.4em; }
+  .ct-ul li { margin: .3em 0; }
+  .ct-text li > p:first-child { margin-top: 0; }
+  .ct-text li > p:last-child { margin-bottom: 0; }
+  .ct-text mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
+</style>
+
+<style>
+  .ct-tags { display: flex; flex-wrap: wrap; gap: 5px; margin: 0 0 .55em; }
+  .ct-tg { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .03em; padding: 2px 8px; border-radius: 999px; line-height: 1.5; }
+  .ct-lv { background: #eee7dc; color: #4a3d33; }
+  .ct-df-Starter { background: #dcf1dc; color: #245c24; }
+  .ct-df-Explorer { background: #d6efec; color: #155e57; }
+  .ct-df-Challenger { background: #dce8f7; color: #1f4c80; }
+  .ct-df-Olympiad { background: #e7defa; color: #4b2a8a; }
+  .ct-df-Advanced { background: #fbe4cc; color: #8a4a0b; }
+  .ct-df-Expert { background: #f8d6cf; color: #8c2600; }
+  .ct-band { margin: 1.3em 0 .5em; font-size: 14px; color: var(--ink-soft); }
+  .ct-band .ct-tg { font-size: 13px; margin-right: .4em; }
+  .ct-legend { font-size: 14.5px; background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 10px 16px; margin: 1em 0 1.4em; }
+  .ct-legend p { margin: .35em 0; }
+  .ct-legend ul { margin: .2em 0 .4em; padding-left: 1.1em; }
+  .ct-legend li { margin: .2em 0; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
+</style>
+{% endraw %}
+<p><a href="{{ '/contests-2026' | relative_url }}">&larr; All contests 2026</a></p>
+
+<h1>Junior Olympiad of Malaysia 2026</h1>
+
+<div class="ct-intro">
+<p>The 10 problems of the Junior Olympiad of Malaysia 2026, each with our own solutions, hidden until you open them. 6 of them ask for an answer and 4 ask for a proof. Where a problem has a final answer, it is shown separately. Try a problem first, then check.</p><p>The Junior Olympiad of Malaysia 2026 (Day 1 on 8 January, Day 2 on 10 January), written by senior Malaysian IMO-camp students for the junior camp students, in the spirit of ELMO: ten problems over two days.</p>
+</div>
+<div class="ct-credit">Problems: Junior Olympiad of Malaysia 2026, from the AoPS contest collection or the official paper. Solutions written by MCC.</div>
+<div class="ct-bar"><button type="button" onclick="ctAll(true)">Show all answers and solutions</button><button type="button" onclick="ctAll(false)">Hide all</button></div>
+<div class="ct-toc-wrap"><div class="ct-toc-row"><span class="ct-toc-g">Day 1</span><a href="#p1">1</a><a href="#p2">2</a><a href="#p3">3</a><a href="#p4">4</a><a href="#p5">5</a></div><div class="ct-toc-row"><span class="ct-toc-g">Day 2</span><a href="#p6">6</a><a href="#p7">7</a><a href="#p8">8</a><a href="#p9">9</a><a href="#p10">10</a></div></div>
+
+{% raw %}
+<h2 class="ct-group" id="day-1">Day 1</h2>
+<section class="ct-problem" id="p1">
+<h3>Problem 1</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VI scale">H</span>Number Theory &middot; LPS VI, Chapter 46: Combinatorial Games and Strategy &middot; Strategic State Tracking</div>
+<div class="ct-text"><p>Let $p$ be a prime number. Tintinn and Tantann play a game. Two numbers $a,b$ are written on a blackboard, with $a=b=1$ in the beginning. With Tintinn going first, they take turns. In each turn, the player picks a number $a$ or $b$ and multiplies it by $5$. If $a+b$ is divisible by $p$ after one of a player's turns, then they win and the game ends. If the game continues forever, no one wins.</p><ul class="ct-parts"><li><p><span class="ct-lbl">(a)</span> Find all $p$ such that Tintinn can guarantee a win.</p></li><li><p><span class="ct-lbl">(b)</span> Find all $p$ such that Tantann can guarantee a win.</p></li></ul></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>(a) $p\in\{2,3\}$; (b) $p\in\{5,13\}$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Walking on the cycle of powers of 5)</h4>
+<p>At every moment $a=5^x$ and $b=5^y$ for some non-negative integers $x,y$, and after $t$ turns $x+y=t$.</p><p><strong>Small primes.</strong> If $p=2$, then $a+b$ is always even, so Tintinn wins with his first move. If $p=3$, Tintinn's first move gives $a+b=6$, so again Tintinn wins. If $p=5$, then $5\mid 5^x+5^y$ exactly when $x\ge1$ and $y\ge1$. After Tintinn's first move one exponent is $1$ and the other is $0$ (sum $6$); Tantann then multiplies the other number by $5$ and gets $5+5=10$. So Tantann wins.</p><p><strong>From now on $p\ne2,3,5$.</strong> Then $5$ is invertible modulo $p$, and
+\[p\mid 5^x+5^y\iff 5^{x-y}\equiv-1\pmod p .\]
+Let $d$ be the order of $5$ modulo $p$ (the least $d\ge1$ with $5^d\equiv1$). Then $5^u\equiv5^v$ exactly when $u\equiv v\pmod d$, and $d\ge2$ because $5\not\equiv1\pmod p$.</p><ul class="ct-ul"><li><p>If $d$ is odd, $-1$ is not a power of $5$: from $5^u\equiv-1$ we would get $5^{2u}\equiv1$, so $d\mid 2u$, so $d\mid u$ and $-1\equiv5^u\equiv1$, impossible for $p\ne2$. Then nobody ever wins.</p></li><li><p>If $d$ is even, $\bigl(5^{d/2}\bigr)^2\equiv1$ and $5^{d/2}\not\equiv1$, so $5^{d/2}\equiv-1$ (as $p$ is prime). Hence $p\mid a+b$ exactly when $x-y\equiv d/2\pmod d$.</p></li></ul><p>In the second case put $s=x-y \bmod d$. Think of the residues $0,1,\dots,d-1$ as $d$ points on a circle; $s$ starts at $0$, every turn moves $s$ one step clockwise or anticlockwise (multiplying $a$ or $b$ by $5$), and the player who moves $s$ onto the target point $d/2$ wins. The start is at distance $d/2$ from the target (the largest possible distance), and a move changes the distance by exactly $1$, except that from distance $d/2$ both moves lead to distance $d/2-1$. A player who moves to distance $1$ loses at once, since the opponent then steps onto the target.</p><ul class="ct-ul"><li><p>$d=2$: the first move reaches the target, so Tintinn wins. But $d=2$ means $p\mid 5^2-1=24$, i.e. $p\in\{2,3\}$, already treated.</p></li><li><p>$d=4$: Tintinn must move from distance $2$ to distance $1$, and Tantann wins. Here $p\mid 5^4-1=624=2^4\cdot3\cdot13$ and $p\nmid 24$, so $p=13$ (indeed $5^2=25\equiv-1\pmod{13}$; Tantann wins with $a=25$, $b=1$).</p></li><li><p>$d\ge6$: the target is at distance $d/2\ge3$ from the start. Each player can make sure never to move to distance $1$: from distance $r$ with $2\le r&lt;d/2$ he moves to $r+1$; from distance $d/2$ he moves to $d/2-1\ge2$; and if the opponent ever moves to distance $1$, he simply wins. With this strategy a player never lets the opponent win, so neither player can guarantee a win.</p></li></ul><p><strong>Answer.</strong> (a) Tintinn can guarantee a win exactly for $\boxed{p=2,3}$. (b) Tantann can guarantee a win exactly for $\boxed{p=5,13}$. For all other primes nobody can force a win.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p2">
+<h3>Problem 2</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-S" title="Superhard, on the LPS VI scale">S</span>Geometry &middot; LPS VI, Chapter 36: Power of a Point and Circle Measurement &middot; Intersecting Chords</div>
+<div class="ct-text"><p>Suppose acute $\triangle ABC$ has circumcircle $\Gamma$. Points $B'$ and $C'$ lie on minor arc $\widehat{BC}$ of $\Gamma$ such that $BB'\parallel AC$ and $CC'\parallel AB$. Let $E$ and $F$ be the feet of altitudes from $B$ to $AC$ and $C$ to $AB$. Suppose line $EF$ intersects $AC'$ at $X$ and $AB'$ at $Y$.</p><p>Prove that the line passing through the two intersections of the circumcircles of $\triangle AEX$ and $\triangle AFY$ also passes through the midpoint of $BC$.</p></div>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Inversion at A)</h4>
+<div class="ct-fig"><img style="width:318px" src="/assets/contests/2026-27/jom-2_s1.svg" alt="Figure for the solution"></div>
+<p>Let $M$ be the midpoint of $BC$ and let $A'$ be the point for which $ABA'C$ is a parallelogram. Since $CA'\parallel AB$ and $BA'\parallel AC$, the point $A'$ lies on line $CC'$ and on line $BB'$; these two lines are parallel to $AB$ and $AC$, so they are not parallel and meet only at $A'$. The diagonals of the parallelogram bisect each other, so line $AA'$ passes through $M$.</p><p>Since $\angle BEC=\angle BFC=90^\circ$, the points $B,C,E,F$ lie on the circle with diameter $BC$; as the triangle is acute, $E$ and $F$ lie inside the segments $AC$ and $AB$, and the power of $A$ gives
+\[k=AE\cdot AC=AF\cdot AB&gt;0 .\]
+Let $\Phi$ be the inversion with centre $A$ and radius $\sqrt k$. It swaps $E\leftrightarrow C$ and $F\leftrightarrow B$. The line $EF$ does not pass through $A$, so $\Phi$ maps it to the circle through $A$, $C$, $B$, namely $\Gamma$.</p><p>The point $X$ lies on line $EF$ and on line $AC'$, so $\Phi(X)$ lies on $\Gamma$ and on line $AC'$ and is different from $A$; hence $\Phi(X)=C'$. In the same way $\Phi(Y)=B'$.</p><p>The circle $(AEX)$ passes through the centre $A$, so $\Phi$ maps it (without $A$) onto the line through $\Phi(E)=C$ and $\Phi(X)=C'$, i.e. line $CC'$. Likewise $(AFY)$ goes to line $BB'$. A common point $Z\ne A$ of the two circles goes to a common point of the two lines, and conversely; the lines have exactly one common point $A'$, so the circles meet at $A$ and at exactly one more point $Z=\Phi(A')$, which lies on ray $AA'$.</p><p>So the line through the two intersection points is line $AZ=AA'$, and it passes through the midpoint $M$ of $BC$.</p>
+<h4>Solution 2 (Power of a point and similar triangles)</h4>
+<p>We use directed angles $\measuredangle(\ell,m)$ between lines, taken modulo $180^\circ$. Let $M$ be the midpoint of $BC$, and let $A'$ be the point with $ABA'C$ a parallelogram; then $A'$ lies on lines $CC'$ (as $CA'\parallel AB$) and $BB'$ (as $BA'\parallel AC$), and line $AA'$ passes through $M$.</p><p><strong>Step 1: $E,C,C',X$ are concyclic, and so are $F,B,B',Y$.</strong> The points $B,C,E,F$ lie on the circle with diameter $BC$, and $A,B,C,C'$ lie on $\Gamma$. Hence
+\[\measuredangle(EX,EC)=\measuredangle(EF,EC)=\measuredangle(BF,BC)=\measuredangle(BA,BC)=\measuredangle(C'A,C'C)=\measuredangle(C'X,C'C),\]
+so $E,C',X,C$ are concyclic. In the same way $\measuredangle(FY,FB)=\measuredangle(CE,CB)=\measuredangle(CA,CB)=\measuredangle(B'A,B'B)=\measuredangle(B'Y,B'B)$, so $F,B',Y,B$ are concyclic.</p><p><strong>Step 2: one constant.</strong> As the triangle is acute, $E$ and $F$ lie inside the sides $AC$, $AB$, and $B,C,E,F$ are concyclic, so $k=AE\cdot AC=AF\cdot AB&gt;0$. The power of $A$ with respect to the circles of Step 1 gives $AX\cdot AC'=AE\cdot AC=k$ and $AY\cdot AB'=AF\cdot AB=k$ (with $X$ on ray $AC'$ and $Y$ on ray $AB'$, as the products are positive). Let $Z$ be the point of ray $AA'$ with $AZ\cdot AA'=k$.</p><p><strong>Step 3: $Z$ lies on both circles.</strong> From $AX\cdot AC'=AE\cdot AC$ we get $AX:AC=AE:AC'$, and the angle at $A$ is common, so triangles $AXE$ and $ACC'$ are similar, with opposite orientation ($X\leftrightarrow C$, $E\leftrightarrow C'$). Likewise $AZ\cdot AA'=AE\cdot AC$ makes triangles $AZE$ and $ACA'$ oppositely similar ($Z\leftrightarrow C$, $E\leftrightarrow A'$). Opposite similarity reverses directed angles, and lines $CC'$ and $CA'$ coincide, so
+\[\measuredangle(XA,XE)=-\measuredangle(CA,CC')=-\measuredangle(CA,CA')=\measuredangle(ZA,ZE).\]
+Hence $A,E,X,Z$ are concyclic. The same argument with $AY\cdot AB'=AZ\cdot AA'=AF\cdot AB$ gives $\measuredangle(YA,YF)=-\measuredangle(BA,BB')=-\measuredangle(BA,BA')=\measuredangle(ZA,ZF)$, so $A,F,Y,Z$ are concyclic.</p><p><strong>Conclusion.</strong> The two circles are different (the circle through $A,E,F$ meets line $EF$ only at $E$ and $F$, while $X$ is neither), and $Z\ne A$ is on both. So their two common points are $A$ and $Z$, and the line through them is line $AA'$, which passes through the midpoint $M$ of $BC$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p3">
+<h3>Problem 3</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Algebra &middot; LPS VI, Chapter 53: Sequences, Series, and Recursive Patterns &middot; Series and Summation Patterns</div>
+<div class="ct-text"><p>Prove that for any set of distinct positive integers $a_1,a_2,\dots,a_n$,
+\[\sum_{1\le i&lt;j\le n}\frac{a_ia_j}{(a_i^2-a_j^2)^2}&lt;\frac n2 .\]</p></div>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (AM-GM and counting by gaps)</h4>
+<p>For $n=1$ the sum is empty and $0&lt;\tfrac12$. Let $n\ge2$ and order the numbers so that $a_1&lt;a_2&lt;\dots&lt;a_n$. For $i&lt;j$,
+\[(a_i^2-a_j^2)^2=(a_j-a_i)^2(a_i+a_j)^2&gt;(a_j-a_i)^2\cdot4a_ia_j,\]
+because $(a_i+a_j)^2-4a_ia_j=(a_j-a_i)^2&gt;0$. So each term is less than $\dfrac{1}{4(a_j-a_i)^2}$. Since the $a$'s are increasing integers, $a_j-a_i\ge j-i$, hence
+\[\sum_{i&lt;j}\frac{a_ia_j}{(a_i^2-a_j^2)^2}&lt;\frac14\sum_{i&lt;j}\frac1{(j-i)^2}=\frac14\sum_{d=1}^{n-1}\frac{n-d}{d^2}&lt;\frac n4\sum_{d=1}^{n-1}\frac1{d^2}.\]
+Finally
+\[\sum_{d=1}^{n-1}\frac1{d^2}\le1+\sum_{d=2}^{n-1}\frac1{d(d-1)}=1+\sum_{d=2}^{n-1}\Bigl(\frac1{d-1}-\frac1d\Bigr)=2-\frac1{n-1}&lt;2,\]
+so the sum is less than $\dfrac n4\cdot2=\dfrac n2$.</p>
+<h4>Solution 2 (A difference of squares and distinct gaps)</h4>
+<p>For $n=1$ the sum is empty. For distinct positive $x,y$ we have the identity
+\[\frac{1}{(x-y)^2}-\frac1{(x+y)^2}=\frac{(x+y)^2-(x-y)^2}{(x^2-y^2)^2}=\frac{4xy}{(x^2-y^2)^2},\]
+so
+\[\frac{a_ia_j}{(a_i^2-a_j^2)^2}=\frac14\Bigl(\frac1{(a_i-a_j)^2}-\frac1{(a_i+a_j)^2}\Bigr)&lt;\frac1{4(a_i-a_j)^2}.\]
+Order the numbers so that $a_1&lt;\dots&lt;a_n$ and fix $i$. The differences $a_j-a_i$ for $j&gt;i$ are <em>distinct</em> positive integers, so
+\[\sum_{j&gt;i}\frac1{(a_j-a_i)^2}\le\sum_{d=1}^{n-i}\frac1{d^2}&lt;2,\]
+using $\frac1{d^2}&lt;\frac1{d-1}-\frac1d$ for $d\ge2$ (the sum telescopes to less than $1+1$). Summing over $i=1,\dots,n$,
+\[\sum_{i&lt;j}\frac{a_ia_j}{(a_i^2-a_j^2)^2}&lt;\frac14\sum_{i=1}^{n}2=\frac n2 .\]</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p4">
+<h3>Problem 4</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VI scale">H</span>Combinatorics &middot; LPS VI, Chapter 26: Double Counting and Combinatorial Proof &middot; Average from Total Contribution</div>
+<div class="ct-text"><p>Find all infinite sequences of integers $1=a_1\le a_2\le\cdots$ satisfying $a_k\le 1+a_1+\cdots+a_{k-1}$ for all $k$, such that there exists a sequence of non-negative integers $b_1,b_2,\dots$ that satisfies
+\[\max\{b_i,b_{i+1},\dots,b_{i+a_k-1}\}\ge k-1\]
+for any $i\ge 0$, and $b_1+b_2+\cdots+b_k&lt;k$ for all $k$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>only $a_k=2^{k-1}$ for all $k$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Counting large terms)</h4>
+<p>We read the window condition for every $k\ge1$ and every $i\ge1$ (the sequence $b$ starts at $b_1$). The answer is $\boxed{a_k=2^{k-1}\text{ for all }k}$.</p><p><strong>Step 1: $a_k\le2^{k-1}$.</strong> By strong induction: $a_1=1$, and if $a_j\le2^{j-1}$ for $j&lt;k$, then $a_k\le1+1+2+\dots+2^{k-2}=2^{k-1}$.</p><p><strong>Step 2: $a_k=2^{k-1}$ works.</strong> It is non-decreasing, starts with $1$, and $1+1+2+\dots+2^{k-2}=2^{k-1}$, so $a_k\le1+a_1+\dots+a_{k-1}$ holds with equality. Let $b_j$ be the exponent of $2$ in $j$. Any $2^{k-1}$ consecutive positive integers contain a multiple of $2^{k-1}$, whose $b$-value is at least $k-1$; this is the window condition. And by Legendre's formula
+\[b_1+\dots+b_m=\sum_{t\ge1}\Bigl\lfloor\frac m{2^t}\Bigr\rfloor\le\sum_{t=1}^{T}\frac m{2^t}=m\bigl(1-2^{-T}\bigr)&lt;m,\]
+where $2^T\le m&lt;2^{T+1}$.</p><p><strong>Step 3: nothing else works.</strong> Suppose $b$ satisfies the conditions but $a_m&lt;2^{m-1}$ for some $m$ (then $m\ge2$). Put $\delta=\frac1{a_m}-\frac1{2^{m-1}}&gt;0$ and choose $K\ge m$ with $2^{-(K-1)}&lt;\delta/2$. By Step 1,
+\[S=\sum_{k=2}^{K}\frac1{a_k}\ge\sum_{k=2}^{K}\frac1{2^{k-1}}+\delta=1-2^{-(K-1)}+\delta&gt;1+\frac\delta2 .\]
+Take a large integer $N$ and fix $k\in\{2,\dots,K\}$. Cut $b_1,\dots,b_N$ into $\lfloor N/a_k\rfloor$ disjoint blocks of $a_k$ consecutive terms starting at $b_1$ (and a leftover piece). Each block contains a term $\ge k-1$, so
+\[c_k=\#\{j\le N:\ b_j\ge k-1\}\ge\Bigl\lfloor\frac N{a_k}\Bigr\rfloor&gt;\frac N{a_k}-1 .\]
+Now count: for each $j$, the number of $k\in\{2,\dots,K\}$ with $b_j\ge k-1$ is $\min(b_j,K-1)\le b_j$. Adding over $j\le N$,
+\[b_1+\dots+b_N\ge\sum_{k=2}^{K}c_k&gt;N\cdot S-(K-1)&gt;N\Bigl(1+\frac\delta2\Bigr)-K .\]
+For $N&gt;2K/\delta$ the right side is larger than $N$, contradicting $b_1+\dots+b_N&lt;N$. Hence $a_k=2^{k-1}$ for every $k$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p5">
+<h3>Problem 5</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 51: Spiral Similarity and Advanced Transformational Geometry &middot; Spiral Similarity Centers</div>
+<div class="ct-text"><p>Let $ABC$ be an acute scalene triangle with orthocenter $H$ and circumcenter $O$. Let $M$ and $N$ denote the midpoints of $BC$ and $AH$ respectively. Lines $MN$ and $AC$ meet at $L$. Suppose $M_c$ and $M_b$ are the midpoints of $AB$ and $AC$.</p><p>Prove that there exist a point $P$ such that $OP\parallel BC$ and $\triangle PM_cB\sim\triangle PM_bL$ in that order.</p></div>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Coordinates, power of a point and two circles)</h4>
+<div class="ct-fig"><img style="width:342px" src="/assets/contests/2026-27/jom-5_s1.svg" alt="Figure for the solution"></div>
+<p>Let $D$ be the foot of the altitude from $A$. Take coordinates with $D=(0,0)$, $B=(-x,0)$, $C=(y,0)$, $A=(0,h)$. As the triangle is acute, $x,y,h&gt;0$; as $\angle A$ is acute, $\overrightarrow{AB}\cdot\overrightarrow{AC}=h^2-xy&gt;0$; as it is scalene, $AB\ne AC$, i.e. $x\ne y$.</p><p><strong>The points.</strong> The circumcentre is $O=\bigl(\tfrac{y-x}2,\tfrac{h^2-xy}{2h}\bigr)$ (it is on the perpendicular bisector of $BC$, and $OA^2-OB^2=0$ is checked directly). The orthocentre is $H=\bigl(0,\tfrac{xy}h\bigr)$ (it is on $AD$, and $\overrightarrow{BH}\cdot\overrightarrow{AC}=xy-xy=0$). So $N=\bigl(0,\tfrac{h^2+xy}{2h}\bigr)$, $M=\bigl(\tfrac{y-x}2,0\bigr)$, $M_c=\bigl(-\tfrac x2,\tfrac h2\bigr)$, $M_b=\bigl(\tfrac y2,\tfrac h2\bigr)$.</p><p>Define $P=\bigl(0,\tfrac{h^2-xy}{2h}\bigr)$, the foot of the perpendicular from $O$ to $AD$. Then $OP\parallel BC$ (equal $y$-coordinates, and $P\ne O$ since $x\ne y$), and $0&lt;\tfrac{h^2-xy}{2h}&lt;h$, so $P$ lies strictly between $A$ and $D$. We show $\triangle PM_cB\sim\triangle PM_bL$.</p><p><strong>The point $L$.</strong> We have $\overrightarrow{MN}=\bigl(\tfrac{x-y}2,\tfrac{h^2+xy}{2h}\bigr)=\overrightarrow{OA}$, so $MN\parallel AO$. Write $L=C+\lambda(A-C)$. Then $L-M=\bigl(\tfrac{x+y}2-\lambda y,\ \lambda h\bigr)$ is parallel to $\bigl(\tfrac{x-y}2,\tfrac{h^2+xy}{2h}\bigr)$, which gives
+\[\Bigl(\tfrac{x+y}2-\lambda y\Bigr)\frac{h^2+xy}{2h}=\lambda h\,\frac{x-y}2\quad\Longrightarrow\quad\lambda=\frac{(x+y)(h^2+xy)}{2x(h^2+y^2)}&gt;0 .\]
+Since $CA^2=h^2+y^2$, the point $L$ lies on ray $CA$ with $CL\cdot CA=\lambda\,CA^2=\dfrac{(x+y)(h^2+xy)}{2x}$. Moreover $L\ne A$ and $L\ne M_b$, because
+\[(x+y)(h^2+xy)-2x(h^2+y^2)=(y-x)(h^2-xy)\ne0,\qquad (x+y)(h^2+xy)-x(h^2+y^2)=y(h^2+x^2)&gt;0 .\]</p><p><strong>Step 1: $A,B,L,P$ are concyclic.</strong> Let $\omega$ be the circle through $A,B,P$ (they are not collinear), and let it meet line $BC$ again at $B_2$. The point $D$ lies on line $AP$ outside the segment $AP$, so its power is $DA\cdot DP=\tfrac{h^2-xy}2&gt;0$; thus $B_2$ is on ray $DB$ with $DB_2=\tfrac{h^2-xy}{2x}$, and $CB_2=y+\tfrac{h^2-xy}{2x}=\tfrac{h^2+xy}{2x}$. Hence the power of $C$ with respect to $\omega$ is
+\[CB\cdot CB_2=\frac{(x+y)(h^2+xy)}{2x}&gt;0 .\]
+Line $CA$ meets $\omega$ at $A$ and at a second point $L'$ on ray $CA$ with $CL'\cdot CA$ equal to this power, i.e. $CL'=CL$. So $L'=L$ and $L\in\omega$.</p><p><strong>Step 2: $A,M_c,M_b,P$ are concyclic.</strong> $\angle APO=90^\circ$ (as $OP\parallel BC\perp AD$), and $\angle AM_cO=\angle AM_bO=90^\circ$ ($O$ lies on the perpendicular bisectors of $AB$ and $AC$). So all four points lie on the circle with diameter $AO$.</p><p><strong>Step 3: the similarity.</strong> We use directed angles $\measuredangle(\ell,m)$ modulo $180^\circ$. Since $M_c,A,B$ are collinear, $M_b,A,L$ are collinear, and by Steps 1 and 2,
+\[\measuredangle(M_cP,M_cB)=\measuredangle(M_cP,M_cA)=\measuredangle(M_bP,M_bA)=\measuredangle(M_bP,M_bL),\]
+\[\measuredangle(BP,BM_c)=\measuredangle(BP,BA)=\measuredangle(LP,LA)=\measuredangle(LP,LM_b).\]
+Both triangles are non-degenerate ($P$ is on $AD$ and $P\ne A$, so $P$ is on neither $AB$ nor $AC$; $L\ne M_b$). Two pairs of equal directed angles give $\triangle PM_cB\sim\triangle PM_bL$, with the vertices in this order. Together with $OP\parallel BC$, this proves the claim.</p>
+</div></details>
+</section>
+<h2 class="ct-group" id="day-2">Day 2</h2>
+<section class="ct-problem" id="p6">
+<h3>Problem 6</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Algebra &middot; LPS VI, Chapter 49: Systems of Equations and Multiple Constraints &middot; Partial Totals and Cyclic Sums</div>
+<div class="ct-text"><p>Find, with proof, all sequences $a_1,a_2,\dots,a_{2026}$ of positive real numbers such that
+\[\sqrt{a_ia_{i+5}}\ge\frac{a_{i+1}+a_{i+4}}{2}\]
+for each positive integer $i$. Note that $a_{2026+n}=a_n$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>the constant sequences $a_1=a_2=\dots=a_{2026}=c$ ($c&gt;0$)</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Sum of the inequalities)</h4>
+<p>All indices are taken modulo $2026$. By AM-GM, $\frac{a_i+a_{i+5}}2\ge\sqrt{a_ia_{i+5}}$, so the condition gives
+\[\frac{a_i+a_{i+5}}2-\frac{a_{i+1}+a_{i+4}}2=\Bigl(\frac{a_i+a_{i+5}}2-\sqrt{a_ia_{i+5}}\Bigr)+\Bigl(\sqrt{a_ia_{i+5}}-\frac{a_{i+1}+a_{i+4}}2\Bigr)\ge0 .\]
+Add this over $i=1,\dots,2026$. Each of $\sum a_i$, $\sum a_{i+5}$, $\sum a_{i+1}$, $\sum a_{i+4}$ is the sum $T$ of all terms, so the total is $\frac{2T}2-\frac{2T}2=0$. A sum of non-negative numbers equal to $0$ has all terms $0$, so both brackets vanish for every $i$. In particular $\sqrt{a_ia_{i+5}}=\frac{a_i+a_{i+5}}2$, which forces $a_i=a_{i+5}$ for every $i$.</p><p>Hence $a_1=a_6=a_{11}=\cdots$, i.e. $a_j=a_1$ for all $j\equiv1+5t\pmod{2026}$. Since $\gcd(5,2026)=1$, the numbers $1+5t$ run through all residues modulo $2026$, so the sequence is constant. Conversely, a constant sequence satisfies the condition with equality. The answer: $\boxed{\text{all constant sequences}}$.</p>
+<h4>Solution 2 (Product of the inequalities)</h4>
+<p>Indices are modulo $2026$. Multiply the $2026$ inequalities (all sides positive):
+\[\prod_{i}\sqrt{a_ia_{i+5}}\ \ge\ \prod_i\frac{a_{i+1}+a_{i+4}}2\ \ge\ \prod_i\sqrt{a_{i+1}a_{i+4}},\]
+the second step by AM-GM in every factor. The left product equals $\sqrt{\prod a_i\cdot\prod a_i}=\prod a_i$, and so does the right product. So all three products are equal. If some inequality $\sqrt{a_ia_{i+5}}\ge\frac{a_{i+1}+a_{i+4}}2$ or some AM-GM step were strict, the corresponding product inequality would be strict (all factors are positive). Hence in every factor $\frac{a_{i+1}+a_{i+4}}2=\sqrt{a_{i+1}a_{i+4}}$, i.e. $a_{i+1}=a_{i+4}$, so $a_j=a_{j+3}$ for all $j$.</p><p>Then $a_1=a_4=a_7=\cdots$, and since $\gcd(3,2026)=1$ the indices $1+3t$ cover every residue modulo $2026$; the sequence is constant. Constant sequences work (equality everywhere). Answer: $\boxed{\text{all constant sequences}}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p7">
+<h3>Problem 7</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VI scale">H</span>Combinatorics &middot; LPS VI, Chapter 22: Pigeonhole Principle and Guaranteed Existence &middot; Classification Buckets</div>
+<div class="ct-text"><p>Let $S=\{1,2,\dots,n\}$, where $n$ is an integer greater than $1$. For each $n$, determine the maximum integer $k$ such that there exists a set of $k$ non-empty subsets of $S$ with the following property:</p><p>For any two subsets $A\ne B$ that share at least one element,
+\[\min(A\cap B)\ne\max(A\cup B),\]
+where $A\cap B$ refers to the set of elements shared by both sets $A$ and $B$, and $A\cup B$ refers to the set of all elements in $A$ and $B$ combined.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$k=2^{n-1}$</p></div></details>
+<details class="ct-sol"><summary>Show the 2 solutions</summary><div class="ct-text">
+<h4>Solution 1 (Pairing sets with the same maximum)</h4>
+<p><strong>When is a pair bad?</strong> Let $A\ne B$ share an element. Every element of $A\cap B$ is at most $\max A$ and at most $\max B$, and both are at most $\max(A\cup B)$. So $\min(A\cap B)=\max(A\cup B)=m$ happens exactly when $\max A=\max B=m$ and $A\cap B=\{m\}$. Call such a pair <em>bad</em>; the family must contain no bad pair.</p><p><strong>Upper bound.</strong> Fix $m\ge2$. To a set $A$ with $\max A=m$ attach
+\[A^*=\{m\}\cup\bigl(\{1,\dots,m-1\}\setminus A\bigr).\]
+Then $\max A^*=m$, $A^*\ne A$ (exactly one of them contains $1$), $A^{**}=A$, and $A\cap A^*=\{m\}$, so $\{A,A^*\}$ is a bad pair. Thus the $2^{m-1}$ subsets with maximum $m$ split into $2^{m-2}$ bad pairs, and the family contains at most one set from each pair, i.e. at most $2^{m-2}$ sets with maximum $m$. With maximum $1$ there is only $\{1\}$. Hence
+\[k\le1+\sum_{m=2}^{n}2^{m-2}=1+(2^{n-1}-1)=2^{n-1}.\]</p><p><strong>Construction.</strong> Take all $2^{n-1}$ subsets containing $1$. Any two distinct ones share $1$, so $\min(A\cap B)=1$; and $A\cup B\ne\{1\}$ (they are distinct), so $\max(A\cup B)\ge2$. The condition holds. Hence the maximum is $\boxed{k=2^{n-1}}$.</p>
+<h4>Solution 2 (Induction on n)</h4>
+<p>Let $f(n)$ be the largest size of a family of non-empty subsets of $\{1,\dots,n\}$ with the property (also for $n=1$, where $f(1)=1$).</p><p><strong>Reformulation.</strong> For distinct $A,B$ with a common element, all elements of $A\cap B$ are at most $\max A,\max B\le\max(A\cup B)$; so $\min(A\cap B)=\max(A\cup B)$ exactly when $A,B$ have the same maximum $m$ and $A\cap B=\{m\}$.</p><p><strong>Recursion.</strong> Let $\mathcal F$ be a good family on $\{1,\dots,n\}$, $n\ge2$. The sets of $\mathcal F$ not containing $n$ form a good family on $\{1,\dots,n-1\}$, so there are at most $f(n-1)$ of them. The sets containing $n$ all have maximum $n$, so any two of them must share an element other than $n$.</p><ul class="ct-ul"><li><p>If $\{n\}\in\mathcal F$, it is the only set containing $n$ (it meets every other such set exactly in $\{n\}$).</p></li><li><p>Otherwise the sets $A\setminus\{n\}$ are distinct, non-empty, pairwise intersecting subsets of $\{1,\dots,n-1\}$. Such a family never contains a set together with its complement in $\{1,\dots,n-1\}$, and the $2^{n-1}$ subsets form $2^{n-2}$ complementary pairs, so there are at most $2^{n-2}$ of them.</p></li></ul><p>Either way at most $2^{n-2}$ sets contain $n$, so $f(n)\le f(n-1)+2^{n-2}$, and by induction $f(n)\le1+1+2+\dots+2^{n-2}=2^{n-1}$.</p><p><strong>Equality.</strong> Build $\mathcal G_1=\{\{1\}\}$ and $\mathcal G_n=\mathcal G_{n-1}\cup\{A\cup\{n\}:\ A\subseteq\{1,\dots,n-1\},\ 1\in A\}$. The new sets have maximum $n$ and pairwise share $1\ne n$; a new set and an old set have different maxima. By induction $\mathcal G_n$ is good, with $|\mathcal G_n|=|\mathcal G_{n-1}|+2^{n-2}=2^{n-1}$. So $f(n)=\boxed{2^{n-1}}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p8">
+<h3>Problem 8</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VI scale">H</span>Geometry &middot; LPS VI, Chapter 36: Power of a Point and Circle Measurement &middot; Secant-Tangent Power</div>
+<div class="ct-text"><p>Let $ABC$ be an acute triangle and let $D$, $E$, $F$ be the midpoints of sides $BC$, $CA$, $AB$ respectively. Point $K$ lies on $BC$ such that line $KE$ is tangent to the circumcircle of $\triangle AEF$. Suppose $BE$ intersects the circumcircles of $\triangle AEF$ and $\triangle CEK$ at $P$, $Q$ respectively such that $B,P,Q,E$ lie on segment $BE$ in that order. Let $R$ be the midpoint of segment $AQ$.</p><p>Prove that $AP=RD$.</p></div>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Power of a point gives BQ = 2PE)</h4>
+<div class="ct-fig"><img style="width:282px" src="/assets/contests/2026-27/jom-8_s1.svg" alt="Figure for the solution"></div>
+<p>Let $a=BC$, $b=CA$, $c=AB$.</p><p><strong>Step 1: $A,B,K,E$ are concyclic.</strong> The homothety with centre $A$ and ratio $2$ maps $E\mapsto C$, $F\mapsto B$, hence the circle $(AEF)$ to the circumcircle $\Gamma$ of $ABC$, and the tangent at $E$ to the tangent $t$ at $C$. So $EK\parallel t$. With directed angles modulo $180^\circ$ and the tangent-chord angle,
+\[\measuredangle(EK,EA)=\measuredangle(t,CA)=\measuredangle(BC,BA)=\measuredangle(BK,BA),\]
+so $A,B,K,E$ are concyclic.</p><p><strong>Step 2: lengths.</strong> The power of $C$ with respect to circle $ABKE$ gives $CK\cdot CB=CE\cdot CA=\tfrac{b^2}2$; this is positive, so $K$ is on ray $CB$ with $CK=\tfrac{b^2}{2a}$, and, measuring along ray $BC$, $BK\cdot BC=a^2-\tfrac{b^2}2$.</p><p>The power of $B$ with respect to circle $(CEK)$, using the lines $BC$ and $BE$, gives
+\[BQ\cdot BE=BK\cdot BC=\frac{2a^2-b^2}2 ,\]
+and the power of $B$ with respect to circle $(AEF)$, using the lines $BA$ and $BE$, gives $BP\cdot BE=BF\cdot BA=\tfrac{c^2}2$. (By the given order, $P$ and $Q$ lie on segment $BE$, so these are ordinary lengths.) The median length formula gives $BE^2=\tfrac{2a^2+2c^2-b^2}4$. Therefore
+\[PE=BE-BP=\frac{BE^2-\frac{c^2}{2}}{BE}=\frac{2a^2-b^2}{4\,BE}=\frac{BQ}2 .\]</p><p><strong>Step 3: conclusion with vectors.</strong> The vectors $\overrightarrow{BQ}$ and $\overrightarrow{PE}$ both point from $B$ towards $E$, and $BQ=2PE$, so $Q-B=2(E-P)$. Using $2E=A+C$,
+\[Q=B+A+C-2P,\qquad R=\frac{A+Q}2=A+\frac{B+C}2-P=A+D-P .\]
+Hence $R-D=A-P$, so $RD=AP$ (indeed $ARDP$ is a parallelogram).</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p9">
+<h3>Problem 9</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VI scale">H</span>Number Theory &middot; LPS VI, Chapter 35: Factorials and Prime Counting &middot; Prime Exponents in Factorials</div>
+<div class="ct-text"><p>Find all integers $n&gt;2026$ such that $\tau((n-1)!)$ divides $\tau(n!)$, where $\tau(k)$ denotes the number of positive divisors of $k$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>all primes $n&gt;2026$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Bounding the ratio between 1 and 2)</h4>
+<p>For a prime $q$ let $e_q$ be the exponent of $q$ in $(n-1)!$ and $v_q$ its exponent in $n$. Then $n!=(n-1)!\cdot n$ and
+\[\frac{\tau(n!)}{\tau((n-1)!)}=\prod_{q\mid n}\frac{e_q+v_q+1}{e_q+1}=\prod_{q\mid n}\Bigl(1+\frac{v_q}{e_q+1}\Bigr).\]
+The divisibility holds exactly when this ratio is an integer.</p><p><strong>Primes work.</strong> If $n$ is prime, then $n\nmid(n-1)!$, so $e_n=0$, $v_n=1$, and the ratio is $2$.</p><p><strong>Composite $n&gt;2026$ fail.</strong> The ratio is greater than $1$; we show it is less than $2$.</p><p><em>(i) A bound for each factor.</em> If $q\mid n$, the multiples $q,2q,\dots,n-q$ of $q$ are all in $(n-1)!$, so $e_q\ge\frac nq-1$ and
+\[1+\frac{v_q}{e_q+1}\le1+\frac{v_qq}{n}=1+x_q,\quad\text{say}.\]
+<em>(ii) The sum $s=\sum x_q$ is small.</em> $\sum_{q\mid n}v_qq$ is the sum of the prime factors of $n$ counted with multiplicity. For integers $u,w\ge2$ we have $uw\ge u+w$, so a product of numbers $\ge2$ is at least their sum; hence for every integer $m\ge2$ the sum of the prime factors of $m$ (with multiplicity) is at most $m$. Write $n=uw$ with $2\le u\le w$. Then the sum of prime factors of $n$ is at most $u+w\le\frac{uw}2+2$, because $\frac{uw}2+2-u-w=\frac{(u-2)(w-2)}2\ge0$. So $s\le\frac12+\frac2n&lt;0.51$.</p><p><em>(iii) The product is less than $2$.</em> Let there be $r$ prime factors. By AM-GM and the binomial theorem,
+\[\prod_q(1+x_q)\le\Bigl(1+\frac sr\Bigr)^r=\sum_{j=0}^{r}\binom rj\frac{s^j}{r^j}\le\sum_{j\ge0}\frac{s^j}{j!}\le1+s+\sum_{j\ge2}\frac{s^j}{2^{j-1}}=1+s+\frac{s^2}{2-s},\]
+using $\binom rj\le\frac{r^j}{j!}$ and $j!\ge2^{j-1}$. For $s&lt;0.51$ this is less than $1+0.51+\frac{0.27}{1.49}&lt;1.7&lt;2$.</p><p>So for composite $n&gt;2026$ the ratio lies strictly between $1$ and $2$ and is not an integer. The answer is: $\boxed{\text{all primes }n&gt;2026}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p10">
+<h3>Problem 10</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Algebra &middot; LPS VII, Chapter 46: Functional Equations: Iteration, Rigidity, and Deep Structure &middot; Monotonicity, Boundedness, and Regularity</div>
+<div class="ct-text"><p>Find all functions $f:\mathbb{R}^+\to\mathbb{R}^+$ such that for all positive reals $x,y$,
+\[xf(x)+\frac1y=xf(x+f(y))+f(xy+1)+f(y).\]</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$f(x)=\dfrac1x$</p></div></details>
+<details class="ct-sol"><summary>Show the solution</summary><div class="ct-text">
+<h4>Solution (Telescoping along steps of length f(y))</h4>
+<p><strong>Check.</strong> For $f(x)=\frac1x$ the left side is $1+\frac1y$ and the right side is
+\[\frac{x}{x+\frac1y}+\frac1{xy+1}+\frac1y=\frac{xy+1}{xy+1}+\frac1y=1+\frac1y .\]</p><p><strong>Uniqueness.</strong> Let $h(y)=f(y)-\frac1y$. Rearranged, the equation says that for all $x,y&gt;0$
+\[f(x)-f\bigl(x+f(y)\bigr)=\frac{f(xy+1)+h(y)}{x}.\tag{$*$}\]
+Fix $y$, put $a=f(y)&gt;0$ and apply $(*)$ at the points $x,\ x+a,\ \dots,\ x+(n-1)a$. Adding (the left sides telescope):
+\[f(x)-f(x+na)=\sum_{j=0}^{n-1}\frac{f\bigl((x+ja)y+1\bigr)+h(y)}{x+ja}.\tag{$**$}\]</p><p><em>Step 1: $h\le0$.</em> Suppose $h(y)&gt;0$. All values of $f$ are positive, so $(**)$ gives
+\[f(x)&gt;f(x)-f(x+na)&gt;h(y)\sum_{j=0}^{n-1}\frac1{x+ja}\ge\frac{h(y)}{c}\Bigl(1+\frac12+\dots+\frac1n\Bigr),\qquad c=\max(x,a),\]
+since $x+ja\le(j+1)c$. The harmonic sums are unbounded, so this fails for large $n$. Hence $f(t)\le\frac1t$ for all $t&gt;0$.</p><p><em>Step 2: $h\ge0$.</em> Suppose $h(y)=-\delta&lt;0$. By Step 1, $f\bigl((x+ja)y+1\bigr)&lt;\frac1{(x+ja)y}$, which is less than $\frac\delta2$ for all $j\ge J$, for some $J$. For those $j$ the summand in $(**)$ is less than $-\frac{\delta}{2(x+ja)}$. Again by the divergence of the harmonic series, the right side of $(**)$ tends to $-\infty$ as $n\to\infty$, so $f(x+na)\to+\infty$. But $f(x+na)\le\frac1{x+na}&lt;\frac1x$ by Step 1, a contradiction.</p><p>So $h\equiv0$, i.e. $\boxed{f(x)=\tfrac1x}$, which is indeed a solution.</p>
+</div></details>
+</section>
+{% endraw %}

@@ -149,7 +149,7 @@ The contests are grouped from primary school to the International Mathematical O
 <h2 id="junior-olympiads">Junior olympiads</h2>
 <p>Olympiads with an age or grade limit: the first proof contests for middle-school and early high-school students.</p>
 <div class="ct-bandwrap">
-<p class="ct-band"><span class="ct-tg ct-df-Olympiad">Olympiad</span><span class="ct-count" data-one="contest" data-many="contests">10 contests</span></p>
+<p class="ct-band"><span class="ct-tg ct-df-Olympiad">Olympiad</span><span class="ct-count" data-one="contest" data-many="contests">11 contests</span></p>
 <div class="cards ct-cards">
   <div class="card" data-lo="8" data-hi="9">
     <h3><a href="{{ '/contests/azerbaijan-junior-nmo-2026' | relative_url }}">Azerbaijan Junior NMO 2026</a></h3>
@@ -175,6 +175,11 @@ The contests are grouped from primary school to the International Mathematical O
     <h3><a href="{{ '/contests/cono-sur-2026' | relative_url }}">Cono Sur MO 2026</a></h3>
     <div class="ct-tags"><span class="ct-tg ct-lv">HS</span><span class="ct-tg ct-df-Olympiad">Olympiad</span></div>
     <p>6 problems. The Cono Sur Olympiad of the South American countries: two days, three problems each.</p>
+  </div>
+  <div class="card" data-lo="8" data-hi="10">
+    <h3><a href="{{ '/contests/jom-2026' | relative_url }}">JOM 2026</a></h3>
+    <div class="ct-tags"><span class="ct-tg ct-lv">MS</span><span class="ct-tg ct-lv">HS</span><span class="ct-tg ct-df-Olympiad">Olympiad</span></div>
+    <p>10 problems. JOM 2026 (Junior Olympiad of Malaysia): 10 problems.</p>
   </div>
   <div class="card" data-lo="6" data-hi="9">
     <h3><a href="{{ '/contests/junior-macedonian-mo-2026' | relative_url }}">Junior Macedonian MO 2026</a></h3>
