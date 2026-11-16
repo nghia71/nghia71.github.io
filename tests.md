@@ -73,6 +73,8 @@ Each semester ends with a **semester exam**, the club's own internal olympiad. T
 
 **What it covers.** Only chapters your team has already studied and passed this semester, and nothing from outside the curriculum. Because every team moves at its own pace, every team's paper is different, drawn from its own chapters.
 
+**Drawings and tables count.** A problem may ask for a figure, a table or a full list. A student who leaves that part out loses its marks, or the whole problem's, as the problem states.
+
 **Format and length.** The same as a chapter test at your level: six problems, 100 points, a pass at 51, and the same duration of 90, 120, 150 or 180 minutes for T1 to T4.
 
 **When.** Your team chooses its own start time within the two days, whatever suits its time zone.
@@ -104,6 +106,8 @@ Once a team has passed it, its semester score is weighted half and half:
 **Thi học kỳ.** Mỗi học kỳ kết thúc bằng một kỳ thi học kỳ, cũng là kỳ thi Olympic nội bộ của câu lạc bộ. Kỳ thi đầu tiên diễn ra vào **thứ Bảy 12 và Chủ nhật 13 tháng 12 năm 2026**, trước Giáng sinh.
 
 **Phạm vi.** Chỉ các chương đội đã học và đã thi đạt trong học kỳ, không kiểm tra kiến thức ngoài chương trình. Vì mỗi đội học theo nhịp độ riêng, đề thi của mỗi đội khác nhau, lấy từ chính các chương của đội đó.
+
+**Vẽ hình và lập bảng được tính điểm.** Đề có thể yêu cầu vẽ hình, lập bảng hoặc liệt kê đầy đủ. Học sinh nào bỏ phần này sẽ mất điểm phần đó, hoặc điểm cả bài, tùy theo yêu cầu của đề.
 
 **Hình thức và thời lượng.** Giống một bài kiểm tra chương của level: 6 bài, 100 điểm, đạt từ 51 điểm, thời lượng không đổi — 90, 120, 150, 180 phút cho T1 đến T4.
 
