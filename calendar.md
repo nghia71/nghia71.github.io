@@ -18,7 +18,7 @@ Every club-wide date in one place. Your team's own chapter-test dates are on the
 <table class="cal-upcoming">
 <thead><tr><th>Date</th><th>What</th><th>Time</th></tr></thead>
 <tbody>
-{% for e in site.data.calendar %}<tr data-until="{{ e.until }}"><td><strong>{{ e.when_en }}</strong></td><td>{{ e.what_en | markdownify | remove: '<p>' | remove: '</p>' | strip }}</td><td>{{ e.time_en }}</td></tr>
+{% for e in site.data.calendar %}<tr data-until="{{ e.until }}"{% if e.highlight %} class="cal-highlight"{% endif %}><td><strong>{{ e.when_en }}</strong></td><td>{{ e.what_en | markdownify | remove: '<p>' | remove: '</p>' | strip }}</td><td>{{ e.time_en }}</td></tr>
 {% endfor %}</tbody>
 </table>
 <p class="cal-none" hidden>Nothing is scheduled right now. New dates appear here as soon as they are set.</p>
@@ -65,7 +65,7 @@ Mọi mốc chung của câu lạc bộ ở một chỗ. Ngày thi chương củ
 <table class="cal-upcoming">
 <thead><tr><th>Ngày</th><th>Nội dung</th><th>Giờ</th></tr></thead>
 <tbody>
-{% for e in site.data.calendar %}<tr data-until="{{ e.until }}"><td><strong>{{ e.when_vn }}</strong></td><td>{{ e.what_vn | markdownify | remove: '<p>' | remove: '</p>' | strip }}</td><td>{{ e.time_vn }}</td></tr>
+{% for e in site.data.calendar %}<tr data-until="{{ e.until }}"{% if e.highlight %} class="cal-highlight"{% endif %}><td><strong>{{ e.when_vn }}</strong></td><td>{{ e.what_vn | markdownify | remove: '<p>' | remove: '</p>' | strip }}</td><td>{{ e.time_vn }}</td></tr>
 {% endfor %}</tbody>
 </table>
 <p class="cal-none" hidden>Hiện chưa có lịch mới. Các ngày mới sẽ xuất hiện ở đây ngay khi được ấn định.</p>
