@@ -9,30 +9,42 @@ This page is the club's live index, for every role: where the roster and every t
 **Jump to:** [Sunday session](#sunday-session) · [Team standings](#team-standings) · [Start here](#start-here) · [Where the data lives](#where-the-clubs-data-lives) · [Glossary](#glossary) · [The public roster](#the-public-roster) · [For Parents & Students](#for-parents--students) · [Coordinator & organizer resources](#coordinator--organizer-resources) · [For Graders](#for-graders){% if site.show_test_material %} · [Test suites](#test-suites){% endif %}
 
 <div class="note" id="sunday-session" markdown="0">
-<strong>Next Sunday session: Sunday 22 November, 7:00–8:30 AM Pacific Standard Time (PST), which is 8:00–9:30 AM in Victoria/B.C. Students present their perfect-score solutions from the Chapter 4 team tests.</strong>
-<p>Every problem on which a team scored full marks is presented once, by one team. When several teams solved it, the best-written solution is chosen, and the problems are shared out so that as many teams as possible present. Allow about 5 to 6 minutes per problem. <em>Provisional until Saturday 21 November:</em> a team that sits Chapter 4 by then and scores full marks on a problem will be added to this list, and problems may be moved so that as many teams as possible present. Teams that sit the test on Sunday 22 November are not invited this time. Retakes are not presented. The coding contest runs on the alternate Sundays (15 and 29 November, see <a href="./toml.html">TOML</a>).</p>
+<strong>Next Sunday session: Sunday 22 November, 7:00–8:30 AM Pacific Standard Time (PST), which is 8:00–9:30 AM in Victoria/B.C. Students present their perfect-score solutions from the team tests: Chapter 4, Chapter 3 papers sat after 8 November, and retakes.</strong>
+<p>Every problem on which a team scored full marks is presented once, by one team. When several teams solved it, the best-written solution is chosen, and the problems are shared out so that as many teams as possible present. Retakes count too: full marks on a second or third attempt earn an invitation. The Attempt column shows which attempt the solution comes from. Allow about 5 minutes per problem. <em>Provisional until Saturday 21 November:</em> a team that sits a team test by then and scores full marks on a problem will be added to this list, and problems may be moved so that as many teams as possible present. Teams that sit a test on Sunday 22 November are not invited this time. The coding contest runs on the alternate Sundays (15 and 29 November, see <a href="./toml.html">TOML</a>).</p>
 <h3>7:00–7:45 AM: Levels T1 and T2</h3>
-<p>No team has full marks yet on a Chapter 4 problem at Levels T1 and T2.</p>
+<div class="ls-wrap"><table class="ls-table">
+<thead><tr><th class="ls-num">#</th><th>Problem (team test)</th><th>Attempt</th><th>Presenting team</th><th>Region</th></tr></thead>
+<tbody>
+<tr><td class="ls-num">1</td><td>Chapter 4: T2 Problem 5</td><td>1st</td><td><strong>T107</strong></td><td>VN</td></tr>
+<tr><td class="ls-num">2</td><td>Chapter 3: T1 Problem 1</td><td>1st</td><td><strong>Cosmic Club</strong></td><td>WC</td></tr>
+<tr><td class="ls-num">3</td><td>Chapter 3: T1 Problem 2 (also T2 Problem 1)</td><td>1st</td><td><strong>T202</strong></td><td>EC</td></tr>
+<tr><td class="ls-num">4</td><td>Chapter 3: T1 Problem 3</td><td>1st</td><td><strong>The underdog</strong></td><td>WC</td></tr>
+<tr><td class="ls-num">5</td><td>Chapter 3: T2 Problem 4</td><td>1st</td><td><strong>Big Potatoes</strong></td><td>FR</td></tr>
+<tr><td class="ls-num">6</td><td>Chapter 3: T1 Problem 1</td><td>2nd</td><td><strong>Westminster</strong></td><td>UK</td></tr>
+<tr><td class="ls-num">7</td><td>Chapter 2: T1 Problem 1</td><td>2nd</td><td><strong>T101</strong></td><td>FR</td></tr>
+<tr><td class="ls-num">8</td><td>Chapter 1: T2 Problem 1</td><td>3rd</td><td><strong>T209</strong></td><td>FR</td></tr>
+</tbody></table></div>
 <h3>7:45–8:30 AM: Levels T3 and T4</h3>
 <div class="ls-wrap"><table class="ls-table">
-<thead><tr><th class="ls-num">#</th><th>Problem (Chapter 4 team test)</th><th>Presenting team</th><th>Region</th></tr></thead>
+<thead><tr><th class="ls-num">#</th><th>Problem (team test)</th><th>Attempt</th><th>Presenting team</th><th>Region</th></tr></thead>
 <tbody>
-<tr><td class="ls-num">1</td><td>T4 Problem 1</td><td><strong>T401</strong></td><td>FR</td></tr>
-<tr><td class="ls-num">2</td><td>T4 Problem 2 (also T3 Problem 3)</td><td><strong>T401</strong></td><td>FR</td></tr>
-<tr><td class="ls-num">3</td><td>T4 Problem 3</td><td><strong>T401</strong></td><td>FR</td></tr>
+<tr><td class="ls-num">1</td><td>Chapter 4: T4 Problem 1</td><td>1st</td><td><strong>T401</strong></td><td>FR</td></tr>
+<tr><td class="ls-num">2</td><td>Chapter 4: T4 Problem 2 (also T3 Problem 3)</td><td>1st</td><td><strong>T401</strong></td><td>FR</td></tr>
+<tr><td class="ls-num">3</td><td>Chapter 4: T4 Problem 3</td><td>1st</td><td><strong>T401</strong></td><td>FR</td></tr>
+<tr><td class="ls-num">4</td><td>Chapter 3: T3 Problem 4</td><td>1st</td><td><strong>The Mathematics Manipulators</strong></td><td>UK</td></tr>
 </tbody></table></div>
-<p>No team has full marks yet on the other Chapter 4 problems. When a team has full marks on two problems and another team that is not yet presenting also has full marks on one of them, that problem goes to the other team, so that more teams present.</p>
+<p>When a team has full marks on two problems and another team that is not yet presenting also has full marks on one of them, that problem goes to the other team, so that more teams present.</p>
 </div>
 
 <details class="vn" markdown="1">
 <summary>🇻🇳 Tiếng Việt — Buổi sinh hoạt Chủ nhật 22/11 (click to expand)</summary>
 
-Chủ nhật 22/11, 7:00–8:30 sáng giờ Pacific Standard Time (PST), tức 8:00–9:30 sáng giờ Victoria/B.C.: học sinh trình bày các lời giải đạt điểm tuyệt đối trong bài thi đội Chương 4. Mỗi bài có đội đạt điểm tối đa được trình bày một lần, bởi một đội. Khi nhiều đội cùng giải được một bài, chúng tôi chọn lời giải viết tốt nhất và chia các bài sao cho nhiều đội được trình bày nhất: nếu một đội có hai bài trong danh sách và một đội chưa được mời cũng đạt điểm tối đa ở một trong hai bài đó, bài đó được chuyển cho đội kia. Mỗi bài khoảng 5–6 phút.
+Chủ nhật 22/11, 7:00–8:30 sáng giờ Pacific Standard Time (PST), tức 8:00–9:30 sáng giờ Victoria/B.C.: học sinh trình bày các lời giải đạt điểm tuyệt đối trong các bài thi đội: Chương 4, các bài Chương 3 thi sau ngày 8/11, và các bài thi lại. Mỗi bài có đội đạt điểm tối đa được trình bày một lần, bởi một đội. Khi nhiều đội cùng giải được một bài, chúng tôi chọn lời giải viết tốt nhất và chia các bài sao cho nhiều đội được trình bày nhất: nếu một đội có hai bài trong danh sách và một đội chưa được mời cũng đạt điểm tối đa ở một trong hai bài đó, bài đó được chuyển cho đội kia. Bài thi lại cũng được tính: đạt điểm tối đa ở lần thi thứ hai hoặc thứ ba vẫn được mời. Cột "Attempt" cho biết bài giải đến từ lần thi thứ mấy (1st, 2nd, 3rd). Mỗi bài khoảng 5 phút.
 
-* **7:00–7:45:** T1 và T2 (chưa có đội nào đạt điểm tối đa ở một bài Chương 4).
-* **7:45–8:30:** T3 và T4 (bảng ở trên).
+* **7:00–7:45:** T1 và T2 (bảng ở trên, 8 bài).
+* **7:45–8:30:** T3 và T4 (bảng ở trên, 4 bài).
 
-Danh sách này còn tạm thời cho đến hết thứ Bảy 21/11: đội nào thi Chương 4 trước ngày đó và đạt điểm tối đa ở một bài sẽ được thêm vào danh sách, và các bài có thể được chia lại để nhiều đội được trình bày nhất. Các đội thi vào Chủ nhật 22/11 lần này không được mời, và bài thi lại không được trình bày. Cuộc thi lập trình diễn ra vào các Chủ nhật xen kẽ (15/11 và 29/11, xem trang [TOML](./toml.html)).
+Danh sách này còn tạm thời cho đến hết thứ Bảy 21/11: đội nào thi một bài thi đội trước ngày đó và đạt điểm tối đa ở một bài sẽ được thêm vào danh sách, và các bài có thể được chia lại để nhiều đội được trình bày nhất. Các đội thi vào Chủ nhật 22/11 lần này không được mời. Cuộc thi lập trình diễn ra vào các Chủ nhật xen kẽ (15/11 và 29/11, xem trang [TOML](./toml.html)).
 
 </details>
 
