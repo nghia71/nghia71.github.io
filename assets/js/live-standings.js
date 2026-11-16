@@ -133,9 +133,17 @@
   // exams: [{teamId, chapter, attempt, total, result, graded}]
   // -> [{level, maxChapter, rows: [{rank, teamId, passed, points, attempts,
   //      chapters: {n: {score, passed}}, latest}]}], levels ascending
-  function paperPoints(level, chapter, attempt) {
+  // graded (optional Date): an exam graded on or after a version's gradedFrom
+  // uses that version's full marks (window.MCC_PAPER_VERSIONS).
+  function paperPoints(level, chapter, attempt, graded) {
     var table = global.MCC_PAPER_POINTS || {};
-    return table[level + "-" + chapter + "-" + attempt] || null;
+    var key = level + "-" + chapter + "-" + attempt;
+    var vers = (global.MCC_PAPER_VERSIONS || {})[key];
+    if (vers && graded instanceof Date && !isNaN(graded)) {
+      var g = graded.getFullYear() + "-" + ("0" + (graded.getMonth() + 1)).slice(-2) + "-" + ("0" + graded.getDate()).slice(-2);
+      vers.forEach(function (v) { if (g >= v[0] && table[v[1]]) key = v[1]; });
+    }
+    return table[key] || null;
   }
 
   function newFirst() {
@@ -152,7 +160,7 @@
     if (missed) return;
     f.scored++;
     f.totalSum += x.total;
-    var max = paperPoints(x.level || level, x.chapter, x.attempt);
+    var max = paperPoints(x.level || level, x.chapter, x.attempt, x.graded);
     if (!max && missing && x.p && x.p.some(function (v) { return v !== null; })) {
       missing["L" + (x.level || level) + "-C" + x.chapter + "-A" + x.attempt] = true;
     }

@@ -64,8 +64,8 @@ Read the rates together with the counts: a team with one test behind it can show
 Teams are shown by their own team name (or by their team ID if they have not chosen a name), with numbers only. Each team's detailed grading comments go to that team privately, through its coordinator.
 
 <div id="live-standings" class="live-standings"></div>
-<script src="{{ '/assets/js/paper-points.js' | relative_url }}?v=1"></script>
-<script src="{{ '/assets/js/live-standings.js' | relative_url }}?v=6"></script>
+<script src="{{ '/assets/js/paper-points.js' | relative_url }}?v=2"></script>
+<script src="{{ '/assets/js/live-standings.js' | relative_url }}?v=7"></script>
 
 <details class="vn" markdown="1">
 <summary>🇻🇳 Tiếng Việt — Bảng xếp hạng các đội (click to expand)</summary>
