@@ -118,8 +118,9 @@ Tôi khuyên nên chọn bản in, vì đây là cuốn sách được thiết k
     <a href="https://www.lulu.com/shop/nghia-doan/four-roads/hardcover/product-w46rpd4.html"><img class="cover" src="./img/four-roads-en-cover.jpg" alt="Four Roads — Tales from Highmere, Volume One"></a>
     <h3>Four Roads — Volume One</h3>
     <p><strong>25 chapters, 75 puzzles</strong>, illustrated, with hints and full solutions.<br>
-       <strong>306 pages, hardcover.</strong></p>
-    <p><a class="btn" href="https://www.lulu.com/shop/nghia-doan/four-roads/hardcover/product-w46rpd4.html">Order from Lulu</a></p>
+       <strong>306 pages, hardcover, full colour.</strong></p>
+    <p><a class="btn" href="https://www.lulu.com/shop/nghia-doan/four-roads/hardcover/product-w46rpd4.html">Linen hardcover</a>
+       <a class="btn" href="https://www.lulu.com/shop/nghia-doan/four-roads/hardcover/product-kv269jk.html">Lower-cost hardcover</a></p>
     <p><a class="btn secondary" href="./four-roads/leaflet-en.pdf">Leaflet (PDF)</a>
        <a class="btn secondary" href="./four-roads/sample-en.pdf">Chapters 1–4 (PDF)</a></p>
   </div>
@@ -129,13 +130,16 @@ Tôi khuyên nên chọn bản in, vì đây là cuốn sách được thiết k
     <a href="https://www.lulu.com/shop/nghia-doan/b%E1%BB%91n-ng%E1%BA%A3-%C4%91%C6%B0%E1%BB%9Dng/hardcover/product-84894k5.html"><img class="cover" src="./img/four-roads-vi-cover.jpg" alt="Bốn ngả đường — Tập một"></a>
     <h3>Bốn ngả đường — Tập một</h3>
     <p><strong>25 chương, 75 câu đố</strong>, có tranh minh họa, gợi ý và lời giải đầy đủ.<br>
-       <strong>297 trang, bìa cứng.</strong></p>
-    <p><a class="btn" href="https://www.lulu.com/shop/nghia-doan/b%E1%BB%91n-ng%E1%BA%A3-%C4%91%C6%B0%E1%BB%9Dng/hardcover/product-84894k5.html">Đặt sách từ Lulu</a></p>
+       <strong>297 trang, bìa cứng, in màu.</strong></p>
+    <p><a class="btn" href="https://www.lulu.com/shop/nghia-doan/b%E1%BB%91n-ng%E1%BA%A3-%C4%91%C6%B0%E1%BB%9Dng/hardcover/product-84894k5.html">Bìa cứng bọc vải</a>
+       <a class="btn" href="https://www.lulu.com/shop/nghia-doan/b%E1%BB%91n-ng%E1%BA%A3-%C4%91%C6%B0%E1%BB%9Dng/hardcover/product-45g6m9w.html">Bìa cứng giá thấp hơn</a></p>
     <p><a class="btn secondary" href="./four-roads/leaflet-vi.pdf">Tờ giới thiệu (PDF)</a>
        <a class="btn secondary" href="./four-roads/sample-vi.pdf">Đọc thử chương 1–4 (PDF)</a></p>
   </div>
 
 </div>
+
+**Two versions, the same book.** Each edition comes as a linen-bound hardcover, for keeping or giving as a prize, and as a lower-cost hardcover with a printed cover. The pages, colour printing and size (6 × 9 in) are the same in both. Lulu shows the current price for your country on each page.
 
 The leaflet is one two-sided page for families. The sample holds the first four chapters in full, with their puzzles, hints and solutions.
 
@@ -143,7 +147,7 @@ The leaflet is one two-sided page for families. The sample holds the first four 
 
 **Sách tặng thưởng của câu lạc bộ.** Mira, Bao, Tavi và Suri lên đường trên bốn ngả đường khắp Highmere. Qua những bến sông, xưởng thợ và miền đất lạ, mỗi câu hỏi lại mở ra một con đường mới. Có thể đọc liền một mạch để theo câu chuyện, hoặc dừng lại cùng các nhân vật và tự giải từng câu đố. Các câu đố dùng toán học, logic và khoa học đời thường; gợi ý và lời giải đầy đủ có trong sách. Dành cho các em từ 10 tuổi trở lên.
 
-**Tập một: 25 chương, 75 câu đố.** Bản tiếng Anh và bản tiếng Việt được đối chiếu từng dòng, nên có cùng tranh vẽ, bản đồ, câu đố và đáp số. Anh chị em và bạn bè đọc hai bản khác nhau vẫn cùng giải được những câu đố như nhau. Tờ giới thiệu là một trang hai mặt dành cho gia đình; bản đọc thử gồm trọn bốn chương đầu, có câu đố, gợi ý và lời giải.
+**Tập một: 25 chương, 75 câu đố.** Bản tiếng Anh và bản tiếng Việt được đối chiếu từng dòng, nên có cùng tranh vẽ, bản đồ, câu đố và đáp số. Anh chị em và bạn bè đọc hai bản khác nhau vẫn cùng giải được những câu đố như nhau. Mỗi bản có hai loại: bìa cứng bọc vải, để giữ lâu hoặc làm quà tặng, và bìa cứng in hình giá thấp hơn. Nội dung, in màu và khổ sách (6 × 9 inch) giống hệt nhau; Lulu hiện giá theo từng nước trên mỗi trang. Tờ giới thiệu là một trang hai mặt dành cho gia đình; bản đọc thử gồm trọn bốn chương đầu, có câu đố, gợi ý và lời giải.
 
 </div>
 
