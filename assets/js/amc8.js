@@ -42,7 +42,10 @@
     if (html !== undefined) e.innerHTML = html;
     return e;
   }
-  function show(id) { ['amc8-signin', 'amc8-list', 'amc8-run', 'amc8-result'].forEach(function (x) { $(x).hidden = x !== id; }); }
+  function show(id) {
+    ['amc8-signin', 'amc8-list', 'amc8-run', 'amc8-result'].forEach(function (x) { $(x).hidden = x !== id; });
+    $('amc8-info').hidden = !(id === 'amc8-signin' || id === 'amc8-list');   // programme information: not during a test or on results
+  }
   function msg(t) { $('amc8-msg').innerHTML = t || ''; }
   function typeset(node) { return window.MathJax && MathJax.typesetPromise ? MathJax.typesetPromise([node]) : Promise.resolve(); }
   function mmss(ms) { ms = Math.max(0, ms); var s = Math.floor(ms / 1000); return Math.floor(s / 60) + ':' + ('0' + (s % 60)).slice(-2); }
