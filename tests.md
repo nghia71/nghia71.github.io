@@ -10,7 +10,7 @@ Learning without testing does not stick. A student can read a chapter, follow ev
 
 Every chapter of the textbook has its own paper. **Three of the six problems examine the chapter just studied; the other three come from the remaining areas**, so all four of Algebra, Combinatorics, Geometry, and Number Theory stay in play all year.
 
-**Every paper is worth 100 points and the pass mark is 51** — chapter test and placement test alike. What changes between levels is how those 100 points are spread, because the levels ask different things of a student. In every case there are six problems: an Easy problem is a single question, a Medium problem is broken into two, a Hard problem into three.
+**Every paper is worth 100 points and the pass mark is 51** — chapter test and placement test alike. What changes between levels is how those 100 points are spread, because the levels ask different things of a student. In every case there are six problems: an Easy problem is a single question (sometimes split into two guided steps), a Medium problem is broken into two, a Hard problem into three. The point spreads below apply to papers set from 15 November 2026; papers sat before that keep the points they were sat with.
 
 ### Chapter tests — the entry level of each book
 
@@ -18,13 +18,24 @@ Every chapter of the textbook has its own paper. **Three of the six problems exa
 
 | Band | Problems | Points each | Questions per problem | Total |
 |---|---|---|---|---|
-| **E — Easy** | 3 | 10, 15, 15 | 1 | 40 |
-| **M — Medium** | 3 | 20 | 2 | 60 |
+| **E — Easy** | 4 | 15 | 1, or 2 guided steps | 60 |
+| **M — Medium** | 2 | 20 | 2 | 40 |
 | | **6** | | | **100** |
 
 ### Chapter tests — the upper level of each book
 
 **T2** (LPS VI) and **T4** (LPS VII) move the weight to the top of the paper.
+
+**T2**
+
+| Band | Problems | Points each | Questions per problem | Total |
+|---|---|---|---|---|
+| **E — Easy** | 2 | 12 | 1, or 2 guided steps | 24 |
+| **M — Medium** | 2 | 18 | 2 | 36 |
+| **H — Hard** | 2 | 20 | 3 | 40 |
+| | **6** | | | **100** |
+
+**T4**
 
 | Band | Problems | Points each | Questions per problem | Total |
 |---|---|---|---|---|
@@ -33,13 +44,13 @@ Every chapter of the textbook has its own paper. **Three of the six problems exa
 | **H — Hard** | 2 | 25 | 3 | 50 |
 | | **6** | | | **100** |
 
-Half an upper-level paper is Hard problems. That is the real difference between the two levels of a book, and it is why a student comfortable at T1 is not automatically ready for T2.
+Hard problems carry 40 points at T2 and half the paper at T4. That is the real difference between the two levels of a book, and it is why a student comfortable at T1 is not automatically ready for T2.
 
 **Problems are not ordered by difficulty.** A paper may run Easy, Medium, Easy, Medium, Easy, Medium. Read all six before choosing where to start.
 
 ### Entrance and reassessment papers
 
-Placement papers use a third shape, identical at **all four levels**, because a placement test has to discriminate at the top of the range as well as the bottom.
+Placement papers at T1 and T2 follow the chapter-test shape of their level (from 16 November 2026). At T3 and T4 they use a shape of their own, because a placement test has to discriminate at the top of the range as well as the bottom.
 
 | Band | Problems | Points each | Questions per problem | Total |
 |---|---|---|---|---|
