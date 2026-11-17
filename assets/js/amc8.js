@@ -20,16 +20,17 @@
   // Answer/reflection saves: a queue sent in order, retried until the server answers.
   var queue = [], busy = false;
   function save(body) { queue.push(body); flush(); }
+  // Everything queued while a request is in flight goes out together as one batch (one round trip).
   function flush() {
     if (busy || !queue.length) return;
-    busy = true; saving('Saving…');
-    var body = queue[0];
-    post(body).then(function (j) {
-      queue.shift(); busy = false;
-      if (!j.ok && j.error === 'locked' && j.state) { S.state = j.state; queue = []; route(); }
-      saving(queue.length ? 'Saving…' : 'All answers saved');
+    busy = true; saving('Saving\u2026');
+    var ops = queue.splice(0, queue.length);
+    post({ action: 'batch', paper: S.paper, ops: ops }).then(function (j) {
+      busy = false;
+      if (j.error === 'locked' && j.state) { S.state = j.state; queue = []; route(); return; }
+      saving(queue.length ? 'Saving\u2026' : 'All answers saved');
       flush();
-    }, function () { busy = false; saving('Connection problem — retrying…'); setTimeout(flush, 3000); });
+    }, function () { queue = ops.concat(queue); busy = false; saving('Connection problem \u2014 retrying\u2026'); setTimeout(flush, 3000); });
   }
   function saving(t) { var e = $('amc8-saving'); if (e) e.textContent = t; }
   function serverNow() { return Date.now() + S.offset; }
