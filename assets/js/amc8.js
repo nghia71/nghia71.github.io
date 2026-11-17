@@ -43,6 +43,7 @@
     return e;
   }
   function show(id) {
+    S.view = id;
     ['amc8-signin', 'amc8-list', 'amc8-run', 'amc8-result'].forEach(function (x) { $(x).hidden = x !== id; });
     $('amc8-info').hidden = !(id === 'amc8-signin' || id === 'amc8-list');   // programme information: not during a test or on results
   }
@@ -67,6 +68,8 @@
   function refreshList() { post({ action: 'status' }).then(function (j) { if (j.ok) renderList(j.tests); }); }
 
   function renderList(tests) {
+    // a late status reply must not pull the student out of a test or results they have just opened
+    if (S.view === 'amc8-run' || S.view === 'amc8-result') return;
     show('amc8-list');
     var box = $('amc8-tests'); box.innerHTML = '';
     $('amc8-who').textContent = S.name + ' (' + S.id + ')';
