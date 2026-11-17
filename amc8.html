@@ -1,0 +1,122 @@
+---
+title: AMC 8 Mock 2026
+---
+<!-- AMC 8 mock exams (Dec 2026 - Jan 2027). This page holds no problems or answers:
+     everything comes from the Apps Script endpoint (mcc-automation src/amc8Api.js) after sign-in. -->
+
+<h1>AMC 8 Mock 2026</h1>
+
+<div id="amc8-msg" class="amc8-msg"></div>
+
+<div id="amc8-signin" hidden>
+  <div class="note">
+    <p>Sign in with your <strong>Student ID and PIN</strong> (the same as on the Lessons and TOML pages). A test opens only on its booked day. Each test can be taken once.</p>
+    <form id="amc8-form" class="amc8-form">
+      <label>Student ID <input id="amc8-id" autocomplete="username" required></label>
+      <label>PIN <input id="amc8-pin" type="password" autocomplete="current-password" required></label>
+      <button class="amc8-btn" type="submit">Sign in</button>
+    </form>
+  </div>
+  <h2>How a test works</h2>
+  <ol>
+    <li><strong>Start.</strong> The paper loads, then you have 1 minute to read the instructions and tick the honesty pledge. The 40-minute timer starts when you press <em>Begin</em>, or after that minute. If your connection is slow, the timer waits until the paper is fully shown (at most 3 minutes after Start).</li>
+    <li><strong>Test, 40 minutes.</strong> 25 multiple-choice questions on this page; click your answer under each question. Every click is saved at once. Press <em>Submit answers</em> when done; at 40 minutes the test is submitted automatically, even if you closed the page.</li>
+    <li><strong>Self-evaluation, up to 25 minutes (optional).</strong> For each question click your second choice, how sure you were, what you did, which idea you used and what was hard. It does not change your score.</li>
+    <li><strong>Results.</strong> Score, correct answers, solutions, analysis and feedback on your own choices. Use <em>Download PDF</em> to keep a copy. You can come back to your results at any time.</li>
+  </ol>
+  <p><strong>Rules:</strong> work alone; no calculator, books, notes, other people, AI or online tools. Scratch paper, pencil, ruler and compass are allowed. Do not share the problems or answers.</p>
+</div>
+
+<div id="amc8-list" hidden>
+  <p>Signed in as <strong id="amc8-who"></strong>. <button class="amc8-btn amc8-small" id="amc8-out">Sign out</button></p>
+  <div id="amc8-tests"></div>
+</div>
+
+<div id="amc8-run" hidden>
+  <div id="amc8-stage"></div>
+  <div id="amc8-hidden" hidden></div>
+</div>
+
+<div id="amc8-result" hidden>
+  <p class="amc8-noprint"><button class="amc8-btn" id="amc8-print">Download PDF</button> <button class="amc8-btn" id="amc8-back">Back to my tests</button>
+  <span class="amc8-hint">In the print window choose <em>Save as PDF</em>.</span></p>
+  <div id="amc8-result-body"></div>
+</div>
+
+<div id="amc8-confirm" class="amc8-modal" hidden><div class="amc8-modal-box">
+  <p><strong>Start <span id="amc8-confirm-paper"></span> now?</strong></p>
+  <p>Once the paper is shown, the 40-minute timer runs without stopping, even if you close the page. You can take this test only once.</p>
+  <button class="amc8-btn" id="amc8-confirm-yes">Start</button> <button class="amc8-btn" id="amc8-confirm-no">Not yet</button>
+</div></div>
+
+<div id="amc8-confirm-submit" class="amc8-modal" hidden><div class="amc8-modal-box">
+  <p><strong>Submit your answers?</strong></p>
+  <p><span id="amc8-blank"></span>After submitting you cannot change any answer.</p>
+  <button class="amc8-btn" id="amc8-sub-yes">Submit</button> <button class="amc8-btn" id="amc8-sub-no">Keep working</button>
+</div></div>
+
+<template id="amc8-orient-tpl">
+  <div class="note">
+    <p><strong>The paper is loaded.</strong> The 40-minute timer starts when you press Begin, or automatically in <strong id="amc8-orient-left"></strong>.</p>
+    <ul>
+      <li>One question is shown at a time. Use the numbered buttons or Previous/Next to move; you can come back to any question.</li>
+      <li>Click a choice to answer; click it again to clear it. Answered questions turn green in the number bar.</li>
+      <li>A wrong answer costs nothing, so answer every question.</li>
+      <li>The clock at the top is the official time. At 0:00 your answers are submitted automatically.</li>
+    </ul>
+    <p><label><input type="checkbox" id="amc8-pledge"> I will work alone, with no calculator, books, notes, other people, AI or online tools, and I will not share the problems or answers.</label></p>
+    <button class="amc8-btn" id="amc8-begin" disabled>Begin</button>
+  </div>
+</template>
+
+<style>
+.amc8-form label { display: inline-block; margin: .3em 1em .3em 0; }
+.amc8-form input { padding: .3em .5em; width: 10em; }
+.amc8-btn { padding: .45em .9em; border: 1px solid #888; border-radius: 6px; background: #f4f4f4; cursor: pointer; font: inherit; }
+.amc8-btn:hover:not([disabled]) { background: #e6e6e6; } .amc8-btn[disabled] { opacity: .5; cursor: default; }
+.amc8-small { padding: .2em .6em; font-size: .9em; }
+.amc8-msg { color: #a40000; margin: .5em 0; }
+.amc8-table { border-collapse: collapse; margin: .5em 0; } .amc8-table td, .amc8-table th { border: 1px solid #ccc; padding: .3em .7em; text-align: left; }
+.amc8-big { font-size: 1.2em; }
+.amc8-bar { position: sticky; top: 0; z-index: 5; display: flex; flex-wrap: wrap; gap: 1em; align-items: center; justify-content: space-between; background: #fff; border-bottom: 1px solid #ccc; padding: .5em 0; }
+.amc8-clock { font-size: 1.5em; font-weight: bold; font-variant-numeric: tabular-nums; } .amc8-clock.low { color: #b00; }
+#amc8-saving { color: #666; font-size: .9em; }
+.amc8-nav { display: flex; flex-wrap: wrap; gap: .3em; margin: .7em 0; }
+.amc8-nb { width: 2.4em; padding: .3em 0; border: 1px solid #aaa; border-radius: 4px; background: #fff; cursor: pointer; }
+.amc8-nb.done { background: #d8f0d8; } .amc8-nb.cur { outline: 2px solid #2a5db0; font-weight: bold; }
+.amc8-q { border: 1px solid #ddd; border-radius: 8px; padding: 1em; margin: .5em 0; }
+.amc8-stem { margin-bottom: .8em; line-height: 1.6; }
+.amc8-choices { display: flex; flex-wrap: wrap; gap: .5em; }
+.amc8-choice { min-width: 6em; padding: .5em .8em; border: 1px solid #999; border-radius: 6px; background: #fff; cursor: pointer; font: inherit; text-align: left; }
+.amc8-choice.on { background: #2a5db0; color: #fff; border-color: #2a5db0; }
+.amc8-let { font-weight: bold; }
+.amc8-pn { margin: .7em 0; }
+.amc8-opts { display: flex; flex-wrap: wrap; gap: .4em; margin-bottom: .5em; }
+.amc8-opt { padding: .35em .7em; border: 1px solid #999; border-radius: 15px; background: #fff; cursor: pointer; font: inherit; }
+.amc8-opt.on { background: #2a5db0; color: #fff; border-color: #2a5db0; }
+.amc8-refl:empty { display: none; } .amc8-refl { border-top: 1px dashed #ccc; margin-top: 1em; padding-top: .5em; }
+.amc8-refl .amc8-choices { display: none; }
+.amc8-hint { color: #555; font-size: .95em; }
+.amc8-modal { position: fixed; inset: 0; background: rgba(0,0,0,.35); display: flex; align-items: center; justify-content: center; z-index: 20; }
+.amc8-modal[hidden] { display: none; }
+.amc8-modal-box { background: #fff; padding: 1.2em 1.5em; border-radius: 10px; max-width: 30em; }
+.amc8-score { font-size: 1.3em; }
+.amc8-rq { border: 1px solid #ddd; border-left: 6px solid #999; border-radius: 6px; padding: .8em 1em; margin: .8em 0; break-inside: avoid-page; }
+.amc8-secure { border-left-color: #2e8b57; } .amc8-fragile { border-left-color: #d4a017; } .amc8-misconception { border-left-color: #b00; }
+.amc8-wrong { border-left-color: #e06666; } .amc8-blank, .amc8-notReached { border-left-color: #999; }
+.amc8-rchoices { display: flex; flex-wrap: wrap; gap: .4em 1.2em; margin: .3em 0; }
+.amc8-rc.ok { font-weight: bold; color: #2e7d32; } .amc8-rc.bad { color: #b00; text-decoration: line-through; }
+.amc8-meta { color: #555; font-size: .9em; }
+.amc8-fb { background: #f7f7fb; border-radius: 6px; padding: .2em .8em; }
+@media print {
+  .site-header, .site-footer, .amc8-noprint, #amc8-msg { display: none !important; }
+  body { font-size: 11pt; } .amc8-rq { page-break-inside: avoid; }
+}
+</style>
+
+<script>
+  window.AMC8_ENDPOINT = "https://script.google.com/macros/s/AKfycbwLkVQCWDLRiopawD9g9FyvEAVnAlsm3V-Rvok2oE3tdtf_Nu4_u55BgNVQI_zQaPuzcg/exec";
+  window.MathJax = { tex: { inlineMath: [['$','$']], processEscapes: true }, options: { enableMenu: false } };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script src="{{ '/assets/js/amc8.js' | relative_url }}?v=1"></script>
