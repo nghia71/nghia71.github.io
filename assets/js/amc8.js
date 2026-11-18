@@ -288,13 +288,7 @@
       if (left <= 0) { clearInterval(S.timer); setTimeout(function () { openResult(S.paper); }, 2000); }
     });
   }
-  function radio(opts, cur, onpick, stack) {
-    var d = el('div', { cls: 'amc8-opts' + (stack ? ' amc8-stack' : '') });
-    opts.forEach(function (o) {
-      d.appendChild(el('button', { cls: 'amc8-opt' + (cur === o[0] ? ' on' : ''), onclick: function () { onpick(cur === o[0] ? null : o[0]); } }, o[1]));
-    });
-    return d;
-  }
+
 
   // ------------------------------------------------------------ results
   function openResult(paper) {
