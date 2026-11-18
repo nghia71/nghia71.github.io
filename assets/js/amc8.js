@@ -117,9 +117,9 @@
     }, function () { $('amc8-stage').innerHTML = '<p>Cannot reach the server. <button class="amc8-btn" id="amc8-retry">Try again</button></p>'; $('amc8-retry').onclick = function () { openPaper(paper); }; });
   }
 
-  // All questions are rendered once (hidden), then moved into view one at a time.
+  // All questions are rendered once (hidden), then shown together on one page.
   function buildPaper() {
-    var h = $('amc8-hidden'); h.innerHTML = '';
+    var h = $('amc8-hidden'); clearStage(); h.innerHTML = '';
     S.P.questions.forEach(function (q, i) {
       var card = el('div', { cls: 'amc8-q', id: 'amc8-q' + i });
       card.appendChild(el('div', { cls: 'amc8-stem' }, '<b>' + q.n + '.</b> ' + q.stem));
@@ -133,6 +133,19 @@
       h.appendChild(card);
     });
   }
+  // Put the given question cards (all, or a subset) on the stage, in order.
+  function placeCards(list) {
+    var box = el('div', { id: 'amc8-cards' });
+    list.forEach(function (i) { box.appendChild($('amc8-q' + i)); });
+    $('amc8-stage').appendChild(box);
+  }
+  // Empty the stage, keeping the question cards (they go back to the hidden store).
+  function clearStage() {
+    var h = $('amc8-hidden');
+    Array.prototype.forEach.call($('amc8-stage').querySelectorAll('.amc8-q'), function (c) { h.appendChild(c); });
+    var st = $('amc8-stage'); st.innerHTML = ''; return st;
+  }
+  function jumpTo(i) { var c = $('amc8-q' + i); if (c) c.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
 
   function route() {
     clearInterval(S.timer);
@@ -160,19 +173,17 @@
 
   function tick(fn) { fn(); S.timer = setInterval(fn, 500); }
 
-  // ------------------------------------------------------------ test
+  // ------------------------------------------------------------ test (all 25 questions on one page)
   function testView() {
-    var st = $('amc8-stage'); st.innerHTML = '';
-    st.appendChild(el('div', { cls: 'amc8-bar' },
+    var st = clearStage();
+    var bar = el('div', { cls: 'amc8-bar' },
       '<span>' + S.paper + '</span><span id="amc8-clock" class="amc8-clock"></span><span id="amc8-saving">All answers saved</span>' +
-      '<button class="amc8-btn" id="amc8-submit">Submit answers</button>'));
-    st.appendChild(el('div', { cls: 'amc8-nav', id: 'amc8-nav' }));
-    st.appendChild(el('div', { id: 'amc8-slot' }));
-    st.appendChild(el('div', { cls: 'amc8-pn' }, '<button class="amc8-btn" id="amc8-prev">← Previous</button> <button class="amc8-btn" id="amc8-next">Next →</button>'));
-    $('amc8-prev').onclick = function () { go(S.cur - 1); };
-    $('amc8-next').onclick = function () { go(S.cur + 1); };
+      '<button class="amc8-btn" id="amc8-submit">Submit answers</button>');
+    bar.appendChild(el('div', { cls: 'amc8-nav', id: 'amc8-nav' }));
+    st.appendChild(bar);
+    placeCards(S.P.questions.map(function (q, i) { return i; }));
     $('amc8-submit').onclick = confirmSubmit;
-    buildNav(); go(S.cur, true);
+    buildNav();
     tick(function () {
       var left = S.state.deadline - serverNow();
       $('amc8-clock').textContent = mmss(left);
@@ -182,19 +193,12 @@
       }
     });
   }
+  // Number bar: answered questions are green; a click scrolls to the question.
   function buildNav() {
-    var nav = $('amc8-nav'); nav.innerHTML = '';
+    var nav = $('amc8-nav'); if (!nav) return; nav.innerHTML = '';
     S.P.questions.forEach(function (q, i) {
-      nav.appendChild(el('button', { cls: 'amc8-nb' + (q.pos !== null ? ' done' : '') + (i === S.cur ? ' cur' : ''), onclick: function () { go(i); } }, String(i + 1)));
+      nav.appendChild(el('button', { cls: 'amc8-nb' + (q.pos !== null ? ' done' : ''), onclick: function () { jumpTo(i); } }, String(i + 1)));
     });
-  }
-  function go(i, silent) {
-    if (i < 0 || i >= S.P.questions.length) return;
-    var slot = $('amc8-slot'), old = slot.firstChild;
-    if (old) $('amc8-hidden').appendChild(old);
-    slot.appendChild($('amc8-q' + i)); S.cur = i; buildNav();
-    if (S.state.phase === 'test' && !silent) save({ action: 'view', paper: S.paper, q: i });
-    if (S.state.phase === 'reflection') renderRefl(i);
   }
   function choose(i, p) {
     if (S.state.phase !== 'test') return;
@@ -223,60 +227,73 @@
     });
   }
 
-  // ------------------------------------------------------------ reflection
+  // ------------------------------------------------------------ second chance (one page)
   function reflView() {
-    var st = $('amc8-stage'); st.innerHTML = '';
+    if (!S.P.retry) {   // just submitted: fetch the list of wrong and blank questions
+      clearStage().appendChild(el('p', { cls: 'amc8-big' }, 'Preparing your second chance\u2026'));
+      return post({ action: 'open', paper: S.paper }).then(function (j) {
+        if (j.ok && j.retry) { S.P.retry = j.retry; S.state = j.state; reflView(); }
+        else if (j.phase === 'done') openResult(S.paper);
+      });
+    }
+    var st = clearStage(), R = S.P.retry;
     st.appendChild(el('div', { cls: 'amc8-bar' },
-      '<span>' + S.paper + ' — self-evaluation (optional)</span><span id="amc8-clock" class="amc8-clock"></span><span id="amc8-saving"></span>' +
+      '<span>' + S.paper + ' — second chance</span><span id="amc8-clock" class="amc8-clock"></span><span id="amc8-saving"></span>' +
       '<button class="amc8-btn" id="amc8-finish">Finish and see results</button>'));
-    st.appendChild(el('p', { cls: 'amc8-hint' }, 'Your answers are submitted and locked. For each question, click what describes your work — about one minute per question. This does not change your score; it lets the results page explain your mistakes. You can also finish now.'));
-    st.appendChild(el('div', { cls: 'amc8-nav', id: 'amc8-nav' }));
-    st.appendChild(el('div', { id: 'amc8-slot' }));
-    st.appendChild(el('div', { cls: 'amc8-pn' }, '<button class="amc8-btn" id="amc8-prev">← Previous</button> <button class="amc8-btn" id="amc8-next">Next →</button>'));
-    $('amc8-prev').onclick = function () { go(S.cur - 1); };
-    $('amc8-next').onclick = function () { go(S.cur + 1); };
-    $('amc8-finish').onclick = function () {
-      var wait = function () { if (queue.length || busy) return setTimeout(wait, 300);
-        post({ action: 'finish', paper: S.paper }).then(function () { openResult(S.paper); }); };
-      wait();
-    };
-    S.cur = 0; go(0, true);
+    st.appendChild(el('p', { cls: 'amc8-hint' }, R.length
+      ? 'Your score is fixed: it counts your first answers only. The ' + (S.P.questions.length - R.length) + ' question(s) you got right are not shown. ' +
+        'Below are the ' + R.length + ' question(s) that were wrong or blank. Wrong answers are crossed out. Choose again: \u2713 means right, \u2717 wrong. ' +
+        'After a second wrong answer you get one hint and one last try. You can always click <em>I don\u2019t know \u2014 stop here</em>. Your score does not change.'
+      : 'All your answers are correct. Click <em>Finish and see results</em>.'));
+    placeCards(R.map(function (x) { return x.q; }));
+    R.forEach(renderRetry);
+    $('amc8-finish').onclick = finish;
+    reflClock();
+    typeset($('amc8-cards'));
+  }
+  function renderRetry(x) {
+    var card = $('amc8-q' + x.q), box = $('amc8-r' + x.q);
+    Array.prototype.forEach.call(card.querySelectorAll('.amc8-choice'), function (b) {
+      var p = +b.getAttribute('data-p'), used = p === x.first || x.tried.indexOf(p) >= 0;
+      var right = x.last === 'right' && p === x.tried[x.tried.length - 1];
+      b.classList.remove('on'); b.classList.toggle('amc8-x', used && !right); b.classList.toggle('amc8-ok', right);
+      b.querySelector('.amc8-mark') && b.removeChild(b.querySelector('.amc8-mark'));
+      if (used) b.appendChild(el('span', { cls: 'amc8-mark' }, right ? ' \u2713' : ' \u2717'));
+      b.disabled = x.stage === 'done' || used;
+      b.onclick = function () { retry(x, p); };
+    });
+    box.innerHTML = '';
+    if (x.hint) box.appendChild(el('p', { cls: 'amc8-hintbox' }, '<b>Hint.</b> ' + x.hint));
+    if (x.stage === 'done' && x.last !== 'right') box.appendChild(el('p', { cls: 'amc8-meta' }, x.stopped ? 'Stopped.' : 'Done.'));
+    if (x.stage !== 'done') box.appendChild(el('button', { cls: 'amc8-btn', onclick: function () { retry(x, null); } }, 'I don’t know — stop here'));
+    typeset(box);
+  }
+  function retry(x, p) {
+    if (x.busy) return; x.busy = true;
+    $('amc8-saving').textContent = 'Checking…';
+    post({ action: 'retry', paper: S.paper, q: x.q, pos: p, stop: p === null }).then(function (j) {
+      x.busy = false; $('amc8-saving').textContent = '';
+      if (j.item) { Object.assign(x, j.item); renderRetry(x); }
+      if (!j.ok && j.error === 'locked') { if (j.state) S.state = j.state; openResult(S.paper); }
+    }, function () { x.busy = false; $('amc8-saving').textContent = 'Not saved — click again'; });
+  }
+  function afterSaves(fn) { var w = function () { if (queue.length || busy) return setTimeout(w, 300); fn(); }; w(); }
+  function finish() {
+    afterSaves(function () { post({ action: 'finish', paper: S.paper }).then(function () { openResult(S.paper); }); });
+  }
+  function reflClock() {
     tick(function () {
       var left = S.state.reflEnd - serverNow();
       $('amc8-clock').textContent = mmss(left);
       if (left <= 0) { clearInterval(S.timer); setTimeout(function () { openResult(S.paper); }, 2000); }
     });
   }
-  function radio(name, opts, cur, onpick) {
-    var d = el('div', { cls: 'amc8-opts' });
+  function radio(opts, cur, onpick, stack) {
+    var d = el('div', { cls: 'amc8-opts' + (stack ? ' amc8-stack' : '') });
     opts.forEach(function (o) {
       d.appendChild(el('button', { cls: 'amc8-opt' + (cur === o[0] ? ' on' : ''), onclick: function () { onpick(cur === o[0] ? null : o[0]); } }, o[1]));
     });
     return d;
-  }
-  function renderRefl(i) {
-    var q = S.P.questions[i], r = q.refl, box = $('amc8-r' + i); box.innerHTML = '';
-    var set = function (field, value) { r[field] = value; save({ action: 'reflect', paper: S.paper, q: i, field: field, value: value }); renderRefl(i); };
-    box.appendChild(el('p', {}, '<b>Your submitted answer:</b> ' + (q.pos === null ? 'blank' : '(' + L[q.pos] + ')')));
-    box.appendChild(el('p', {}, '<b>Second choice</b> (if you hesitated between two):'));
-    box.appendChild(radio('second', [0, 1, 2, 3, 4].filter(function (p) { return p !== q.pos; }).map(function (p) { return [p, '(' + L[p] + ')']; }), r.second, function (v) { set('second', v); }));
-    box.appendChild(el('p', {}, '<b>How sure were you?</b>'));
-    box.appendChild(radio('conf', S.P.conf.map(function (c) { return [c, c]; }), r.conf, function (v) { set('conf', v); }));
-    box.appendChild(el('p', {}, '<b>What did you do?</b>'));
-    box.appendChild(radio('how', S.P.how.map(function (c) { return [c, c]; }), r.how, function (v) { set('how', v); }));
-    if (q.ideas.length) {
-      box.appendChild(el('p', {}, '<b>Which idea did you use?</b>'));
-      box.appendChild(radio('idea', q.ideas.map(function (c, k) { return [k, c]; }).concat([['none', 'None of these']]), r.idea, function (v) { set('idea', v); }));
-    }
-    box.appendChild(el('p', {}, '<b>What was hard?</b> (click all that apply)'));
-    var d = el('div', { cls: 'amc8-opts' });
-    Object.keys(S.P.ticks).forEach(function (k) {
-      var on = r.ticks.indexOf(k) >= 0;
-      d.appendChild(el('button', { cls: 'amc8-opt' + (on ? ' on' : ''), onclick: function () {
-        var t = r.ticks.filter(function (x) { return x !== k; }); if (!on) t.push(k); set('ticks', t); } }, S.P.ticks[k]));
-    });
-    box.appendChild(d);
-    typeset(box);
   }
 
   // ------------------------------------------------------------ results
@@ -288,33 +305,50 @@
       renderResult(j); typeset(out);
     });
   }
-  var CAT = { secure: 'Correct', fragile: 'Correct, not secure', misconception: 'Wrong while sure', wrong: 'Wrong', blank: 'Blank', notReached: 'Not reached' };
+  var OUT = { first: 'Right at the first try', second: 'Right at the second try', hint: 'Right after the hint',
+              fail: 'Not solved', noTry: 'Wrong (second chance not used)', blank: 'Blank' };
+  var LAB = { strength: 'Strength', notSure: 'Not sure yet', weakness: 'Weakness' };
   var DOM = { A: 'Algebra', C: 'Combinatorics', G: 'Geometry', N: 'Number Theory' };
+  function chapterTable(chs, withPaper) {
+    if (!chs.length) return '<p>No questions counted yet.</p>';
+    return '<table class="amc8-table"><tr><th>LPS VI chapter</th><th>Level</th><th>Questions</th><th>Practise in the book</th></tr>' +
+      chs.map(function (c) {
+        return '<tr class="amc8-lv-' + c.label + '"><td>Ch. ' + c.ch + ' ' + c.title + '</td><td><b>' + LAB[c.label] + '</b><br>' + c.first + ' / ' + c.second + ' / ' + c.hint + ' / ' + (c.fail + c.noTry) + '</td><td>' +
+          c.qs.map(function (x) { return (withPaper ? x.paper + ' ' : '') + 'Q' + x.n + ': ' + OUT[x.outcome].toLowerCase(); }).join('<br>') +
+          '</td><td>' + (c.label === 'strength' ? '' : c.practice.join('; ')) + '</td></tr>';
+      }).join('') + '</table>';
+  }
   function renderResult(j) {
-    var out = $('amc8-result-body'), s = j.summary, h = [];
+    var out = $('amc8-result-body'), s = j.summary, c = s.count, h = [];
     h.push('<h2>' + j.paper + ' — ' + S.name + ' (' + S.id + ')</h2>');
-    h.push('<p class="amc8-score">Score: <b>' + j.score + ' / ' + j.total + '</b></p>');
-    h.push('<h3>By area</h3><table class="amc8-table"><tr><th>Area</th><th>Correct</th></tr>' +
-      Object.keys(s.domains).map(function (d) { return '<tr><td>' + DOM[d] + '</td><td>' + s.domains[d].right + ' / ' + s.domains[d].total + '</td></tr>'; }).join('') + '</table>');
-    if (s.priority.length) h.push('<p><b>Fix first</b> (wrong although you were sure): question ' + s.priority.join(', ') + '.</p>');
-    h.push('<h3>Confidence and results</h3><table class="amc8-table"><tr><th>You said</th><th>Right</th><th>Wrong</th><th>Blank</th></tr>' +
-      Object.keys(s.confidence).map(function (c) { var x = s.confidence[c]; return '<tr><td>' + c + '</td><td>' + x.right + '</td><td>' + x.wrong + '</td><td>' + x.blank + '</td></tr>'; }).join('') + '</table>');
-    if (s.chapters.length) h.push('<h3>LPS VI chapters to review</h3><p>' + s.chapters.map(function (c) { return 'Chapter ' + c.ch + (c.count > 1 ? ' (' + c.count + ' questions)' : ''); }).join(', ') + '.</p>');
-    if (s.topics.length) h.push('<h3>Topics and tools to work on</h3><ul>' + s.topics.map(function (t) { return '<li>Q' + t.n + ' (' + CAT[t.cat] + '): ' + t.topic + ' — ' + t.tool + '</li>'; }).join('') + '</ul>');
-    if (s.slow.length) h.push('<p><b>Questions that took more than 3 minutes:</b> ' + s.slow.map(function (x) { return 'Q' + x.n + ' (' + Math.round(x.sec / 60) + ' min)'; }).join(', ') + '.</p>');
+    h.push('<div class="amc8-letter"><p class="amc8-key">Colours: <span class="amc8-qid amc8-q-first">right first time</span> ' +
+      '<span class="amc8-qid amc8-q-second">right at the second try</span> <span class="amc8-qid amc8-q-hint">right after the hint</span> ' +
+      '<span class="amc8-qid amc8-q-fail">not solved</span> <span class="amc8-qid amc8-q-blank">blank</span></p>' + j.letter + '</div>');
+    h.push('<details class="amc8-sol"><summary>Details by LPS VI chapter</summary>' +
+      '<p class="amc8-meta">Score by area: ' + Object.keys(s.domains).map(function (d) { return DOM[d] + ' ' + s.domains[d].first + '/' + s.domains[d].total; }).join(' \u00b7 ') +
+      '. Counts: right at the first try / second try / after the hint / not solved. <b>Strength</b>: all right at the first try; <b>weakness</b>: at least half not solved even with the hint; <b>not sure yet</b>: the rest.</p>' +
+      '<h3>This test</h3>' + chapterTable(s.chapters, false) +
+      (j.profile && j.profile.tests.length > 1 ? '<h3>All your tests so far</h3>' + chapterTable(j.profile.chapters, true) : '') + '</details>');
     h.push('<h3>Question by question</h3>');
     j.questions.forEach(function (q) {
-      var ch = q.ch.map(function (c, p) {
-        var l = L[p], cls = l === q.correct ? ' ok' : l === q.yours ? ' bad' : '';
-        var tag = (l === q.yours ? ' ← your answer' : '') + (l === q.second ? ' ← your 2nd choice' : '');
-        return '<span class="amc8-rc' + cls + '">(' + l + ') ' + c + tag + '</span>';
+      var ch = q.ch.map(function (cc, p) {
+        var l = L[p], cls = l === q.correct ? ' ok' : (l === q.yours || q.tries.indexOf(l) >= 0) ? ' bad' : '';
+        var tag = (l === q.yours ? ' ← your answer' : '') + (q.tries.indexOf(l) >= 0 ? ' ← try ' + (q.tries.indexOf(l) + 2) : '');
+        return '<span class="amc8-rc' + cls + '">(' + l + ') ' + cc + tag + '</span>';
       }).join(' ');
-      h.push('<div class="amc8-rq amc8-' + q.cat + '"><div class="amc8-stem"><b>' + q.n + '.</b> ' + q.stem + '</div><div class="amc8-rchoices">' + ch + '</div>' +
-        '<p class="amc8-meta">' + CAT[q.cat] + ' · correct answer (' + q.correct + ') · time ' + Math.round(q.sec / 60 * 10) / 10 + ' min · ' + DOM[q.dom] + ': ' + q.topic + ' · LPS VI Ch. ' + q.lps.join(', ') + '</p>' +
-        '<div class="amc8-fb">' + q.feedback.map(function (f) { return '<p>' + f.html + '</p>'; }).join('') + '</div>' +
-        '<p><b>Solution.</b> ' + q.sol + '</p><p><b>Analysis.</b> ' + q.ana + '</p></div>');
+      h.push('<div class="amc8-rq amc8-o-' + q.outcome + '" id="amc8-rq' + q.n + '"><div class="amc8-stem"><b>' + q.n + '.</b> ' + q.stem + '</div><div class="amc8-rchoices">' + ch + '</div>' +
+        '<p class="amc8-meta">' + OUT[q.outcome] + ' · correct answer (' + q.correct + ') · ' + DOM[q.dom] + ': ' + q.topic +
+        (q.book ? ' · LPS VI Ch. ' + q.book.ch + ', ' + q.book.sec : '') + '</p>' +
+        (q.feedback ? '<div class="amc8-fb"><p>' + q.feedback + '</p></div>' : '') +
+        '<details class="amc8-sol"' + (q.outcome === 'first' ? '' : ' open') + '><summary>Solution and analysis</summary>' +
+        '<p><b>Solution.</b> ' + q.sol + '</p><p><b>Analysis.</b> ' + q.ana + '</p></details></div>');
     });
     out.innerHTML = h.join('');
+    // a question chip in the letter jumps to that question
+    Array.prototype.forEach.call(out.querySelectorAll('.amc8-letter .amc8-qid'), function (c) {
+      var m = /^Q(\d+)$/.exec(c.textContent); if (!m) return;
+      c.onclick = function () { var d = $('amc8-rq' + m[1]); if (d) d.scrollIntoView({ behavior: 'smooth', block: 'start' }); };
+    });
   }
 
   // ------------------------------------------------------------ boot
@@ -322,7 +356,10 @@
     $('amc8-form').onsubmit = signIn;
     $('amc8-out').onclick = signOut;
     $('amc8-back').onclick = function () { show('amc8-list'); refreshList(); };
-    $('amc8-print').onclick = function () { window.print(); };
+    $('amc8-print').onclick = function () {
+      Array.prototype.forEach.call(document.querySelectorAll('details.amc8-sol'), function (d) { d.open = true; });
+      window.print();
+    };
     var saved = null; try { saved = JSON.parse(sessionStorage.getItem('amc8') || 'null'); } catch (x) {}
     if (saved) { $('amc8-id').value = saved.id; $('amc8-pin').value = saved.pin; signIn(); }
     else {
