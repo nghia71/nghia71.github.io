@@ -65,7 +65,7 @@ Teams are shown by their own team name (or by their team ID if they have not cho
 
 <div id="live-standings" class="live-standings"></div>
 <script src="{{ '/assets/js/paper-points.js' | relative_url }}?v=3"></script>
-<script src="{{ '/assets/js/live-standings.js' | relative_url }}?v=7"></script>
+<script src="{{ '/assets/js/live-standings.js' | relative_url }}?v=8"></script>
 
 <details class="vn" markdown="1">
 <summary>🇻🇳 Tiếng Việt — Bảng xếp hạng các đội (click to expand)</summary>

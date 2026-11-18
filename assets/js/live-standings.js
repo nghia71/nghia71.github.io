@@ -188,6 +188,9 @@
     exams.forEach(function (x) {
       var t = byTeam[x.teamId];
       if (!t || !x.chapter || isNaN(x.total)) return;
+      // Only tests sat at the team's current level: a team moved to another
+      // level starts that level's chapters afresh (T209, L2 -> L1, Nov 2026).
+      if (x.level && t.level && x.level !== t.level) return;
       t.attempts++;
       if (x.attempt === 1 && x.chapter >= 1) addFirstAttempt(t.first, x, t.level, missing);
       var ch = t.chapters[x.chapter] || (t.chapters[x.chapter] = { score: null, passed: false, best: null });
