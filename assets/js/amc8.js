@@ -340,8 +340,8 @@
         '<p class="amc8-meta">' + OUT[q.outcome] + ' · correct answer (' + q.correct + ') · ' + DOM[q.dom] + ': ' + q.topic +
         (q.book ? ' · LPS VI Ch. ' + q.book.ch + ', ' + q.book.sec : '') + '</p>' +
         (q.feedback ? '<div class="amc8-fb"><p>' + q.feedback + '</p></div>' : '') +
-        '<details class="amc8-sol"' + (q.outcome === 'first' ? '' : ' open') + '><summary>Solution and analysis</summary>' +
-        '<p><b>Solution.</b> ' + q.sol + '</p><p><b>Analysis.</b> ' + q.ana + '</p></details></div>');
+        '<details class="amc8-sol"' + (q.outcome === 'first' ? '' : ' open') + '><summary>Analysis and solution</summary>' +
+        '<p><b>Analysis.</b> ' + q.ana + '</p><p><b>Solution.</b> ' + q.sol + '</p></details></div>');
     });
     out.innerHTML = h.join('');
     // a question chip in the letter jumps to that question
