@@ -241,10 +241,15 @@ The contests are grouped from primary school to the International Mathematical O
 <h2 id="national-competitions">National competitions</h2>
 <p>National short-answer competitions: the AMC 10 and 12, the AIME that follows them, the COMC, the UK Senior Mathematical Challenge and India STEMS. Every problem has a final answer (STEMS also has a proof part).</p>
 <div class="ct-bandwrap">
-<p class="ct-band"><span class="ct-tg ct-df-Challenger">Challenger</span><span class="ct-count" data-one="contest" data-many="contests">5 contests</span></p>
+<p class="ct-band"><span class="ct-tg ct-df-Challenger">Challenger</span><span class="ct-count" data-one="contest" data-many="contests">7 contests</span></p>
 <div class="cards ct-cards">
   <div class="card" data-lo="8" data-hi="10">
     <h3><a href="{{ '/contests/amc-10a-2026' | relative_url }}">AMC 10A 2026</a></h3>
+    <div class="ct-tags"><span class="ct-tg ct-lv">HS</span><span class="ct-tg ct-df-Challenger">Challenger</span></div>
+    <p>25 problems, 75 minutes. Grade 10 and below.</p>
+  </div>
+  <div class="card" data-lo="8" data-hi="10">
+    <h3><a href="{{ '/contests/amc-10b-2026' | relative_url }}">AMC 10B 2026</a></h3>
     <div class="ct-tags"><span class="ct-tg ct-lv">HS</span><span class="ct-tg ct-df-Challenger">Challenger</span></div>
     <p>25 problems, 75 minutes. Grade 10 and below.</p>
   </div>
@@ -252,6 +257,11 @@ The contests are grouped from primary school to the International Mathematical O
     <h3><a href="{{ '/contests/amc-12a-2026' | relative_url }}">AMC 12A 2026</a></h3>
     <div class="ct-tags"><span class="ct-tg ct-lv">HS</span><span class="ct-tg ct-df-Challenger">Challenger</span></div>
     <p>25 problems, 75 minutes. Grade 12 and below. Eleven problems are shared with the AMC 10A.</p>
+  </div>
+  <div class="card" data-lo="10" data-hi="12">
+    <h3><a href="{{ '/contests/amc-12b-2026' | relative_url }}">AMC 12B 2026</a></h3>
+    <div class="ct-tags"><span class="ct-tg ct-lv">HS</span><span class="ct-tg ct-df-Challenger">Challenger</span></div>
+    <p>25 problems, 75 minutes. Grade 12 and below. Eleven problems are shared with the AMC 10B.</p>
   </div>
   <div class="card" data-lo="9" data-hi="12">
     <h3><a href="{{ '/contests/comc-2026' | relative_url }}">COMC 2026</a></h3>
@@ -296,6 +306,15 @@ The contests are grouped from primary school to the International Mathematical O
 <section class="ct-cat" markdown="0">
 <h2 id="university-tournaments">University tournaments</h2>
 <p>High-school tournaments run by university students. HMMT and HMIC are given in full; for the others we keep a selection of the best problems.</p>
+<div class="ct-bandwrap">
+<p class="ct-band"><span class="ct-tg ct-df-Explorer">Explorer</span><span class="ct-count" data-one="contest" data-many="contests">1 contest</span></p>
+<div class="cards ct-cards">
+  <div class="card" data-lo="6" data-hi="8">
+    <h3><a href="{{ '/contests/bmmt-2026' | relative_url }}">BmMT 2026</a></h3>
+    <div class="ct-tags"><span class="ct-tg ct-lv">MS</span><span class="ct-tg ct-df-Explorer">Explorer</span></div>
+    <p>26 problems. Berkeley mini Math Tournament 2026: a selection of 26 problems.</p>
+  </div>
+</div></div>
 <div class="ct-bandwrap">
 <p class="ct-band"><span class="ct-tg ct-df-Challenger">Challenger</span><span class="ct-count" data-one="contest" data-many="contests">10 contests</span></p>
 <div class="cards ct-cards">
@@ -608,7 +627,7 @@ The contests are grouped from primary school to the International Mathematical O
   </div>
 </div></div>
 <div class="ct-bandwrap">
-<p class="ct-band"><span class="ct-tg ct-df-Advanced">Advanced</span><span class="ct-count" data-one="contest" data-many="contests">24 contests</span></p>
+<p class="ct-band"><span class="ct-tg ct-df-Advanced">Advanced</span><span class="ct-count" data-one="contest" data-many="contests">26 contests</span></p>
 <div class="cards ct-cards">
   <div class="card" data-lo="10" data-hi="12">
     <h3><a href="{{ '/contests/austria-mo-2026' | relative_url }}">Austria MO 2026 (National Round)</a></h3>
@@ -680,10 +699,20 @@ The contests are grouped from primary school to the International Mathematical O
     <div class="ct-tags"><span class="ct-tg ct-lv">HS</span><span class="ct-tg ct-df-Advanced">Advanced</span></div>
     <p>12 problems. Kazakh national olympiad.</p>
   </div>
+  <div class="card" data-lo="9" data-hi="12">
+    <h3><a href="{{ '/contests/mexico-mo-2026' | relative_url }}">Mexico MO 2026</a></h3>
+    <div class="ct-tags"><span class="ct-tg ct-lv">HS</span><span class="ct-tg ct-df-Advanced">Advanced</span></div>
+    <p>6 problems. Mexican Mathematical Olympiad 2026, national final: two days, three problems each.</p>
+  </div>
   <div class="card" data-lo="10" data-hi="12">
     <h3><a href="{{ '/contests/mongolia-mo-2026' | relative_url }}">Mongolia MO 2026</a></h3>
     <div class="ct-tags"><span class="ct-tg ct-lv">HS</span><span class="ct-tg ct-df-Advanced">Advanced</span></div>
     <p>6 problems. The Mongolian national olympiad.</p>
+  </div>
+  <div class="card" data-lo="8" data-hi="11">
+    <h3><a href="{{ '/contests/moscow-mo-2026' | relative_url }}">Moscow MO 2026</a></h3>
+    <div class="ct-tags"><span class="ct-tg ct-lv">MS</span><span class="ct-tg ct-lv">HS</span><span class="ct-tg ct-df-Advanced">Advanced</span></div>
+    <p>29 problems. Moscow Mathematical Olympiad 2026: grades 8 to 11, 29 problems.</p>
   </div>
   <div class="card" data-lo="10" data-hi="12">
     <h3><a href="{{ '/contests/poland-mo-2026' | relative_url }}">Poland MO 2026 (Final Round)</a></h3>
@@ -732,7 +761,7 @@ The contests are grouped from primary school to the International Mathematical O
   </div>
 </div></div>
 <div class="ct-bandwrap">
-<p class="ct-band"><span class="ct-tg ct-df-Expert">Expert</span><span class="ct-count" data-one="contest" data-many="contests">6 contests</span></p>
+<p class="ct-band"><span class="ct-tg ct-df-Expert">Expert</span><span class="ct-count" data-one="contest" data-many="contests">7 contests</span></p>
 <div class="cards ct-cards">
   <div class="card" data-lo="11" data-hi="12">
     <h3><a href="{{ '/contests/china-mo-2026' | relative_url }}">China MO 2026</a></h3>
@@ -748,6 +777,11 @@ The contests are grouped from primary school to the International Mathematical O
     <h3><a href="{{ '/contests/korea-mo-2026' | relative_url }}">Korea MO 2026 (Final Round)</a></h3>
     <div class="ct-tags"><span class="ct-tg ct-lv">HS</span><span class="ct-tg ct-df-Expert">Expert</span></div>
     <p>6 problems. Korean Mathematical Olympiad, final round: two days, three problems each.</p>
+  </div>
+  <div class="card" data-lo="10" data-hi="12">
+    <h3><a href="{{ '/contests/korea-national-mo-2026' | relative_url }}">Korea MO 2026 (National Olympiad)</a></h3>
+    <div class="ct-tags"><span class="ct-tg ct-lv">HS</span><span class="ct-tg ct-df-Expert">Expert</span></div>
+    <p>8 problems. Korean Mathematical Olympiad 2026 (November): two parts, eight problems.</p>
   </div>
   <div class="card" data-lo="11" data-hi="12">
     <h3><a href="{{ '/contests/all-russian-mo-2026' | relative_url }}">Russia MO 2026</a></h3>
@@ -847,8 +881,22 @@ The contests are grouped from primary school to the International Mathematical O
 <h2 id="international-olympiads">International olympiads</h2>
 <p>International competitions open to many countries.</p>
 <div class="ct-bandwrap">
-<p class="ct-band"><span class="ct-tg ct-df-Advanced">Advanced</span><span class="ct-count" data-one="contest" data-many="contests">9 contests</span></p>
+<p class="ct-band"><span class="ct-tg ct-df-Olympiad">Olympiad</span><span class="ct-count" data-one="contest" data-many="contests">1 contest</span></p>
 <div class="cards ct-cards">
+  <div class="card" data-lo="5" data-hi="11">
+    <h3><a href="{{ '/contests/formula-of-unity-2026' | relative_url }}">Formula of Unity 2026-27</a></h3>
+    <div class="ct-tags"><span class="ct-tg ct-lv">MS</span><span class="ct-tg ct-lv">HS</span><span class="ct-tg ct-df-Olympiad">Olympiad</span></div>
+    <p>49 problems. Formula of Unity / Third Millennium 2026-27, qualifying round: grades R5 to R11, 49 problems.</p>
+  </div>
+</div></div>
+<div class="ct-bandwrap">
+<p class="ct-band"><span class="ct-tg ct-df-Advanced">Advanced</span><span class="ct-count" data-one="contest" data-many="contests">11 contests</span></p>
+<div class="cards ct-cards">
+  <div class="card" data-lo="10" data-hi="12">
+    <h3><a href="{{ '/contests/baltic-way-2026' | relative_url }}">Baltic Way 2026</a></h3>
+    <div class="ct-tags"><span class="ct-tg ct-lv">HS</span><span class="ct-tg ct-df-Advanced">Advanced</span></div>
+    <p>20 problems. Baltic Way 2026: 20 problems.</p>
+  </div>
   <div class="card" data-lo="10" data-hi="12">
     <h3><a href="{{ '/contests/egmo-2026' | relative_url }}">EGMO 2026</a></h3>
     <div class="ct-tags"><span class="ct-tg ct-lv">HS</span><span class="ct-tg ct-df-Advanced">Advanced</span></div>
@@ -888,6 +936,11 @@ The contests are grouped from primary school to the International Mathematical O
     <h3><a href="{{ '/contests/tasimo-2026' | relative_url }}">TASIMO 2026</a></h3>
     <div class="ct-tags"><span class="ct-tg ct-lv">HS</span><span class="ct-tg ct-df-Advanced">Advanced</span></div>
     <p>6 problems. Tashkent International Mathematical Olympiad 2026: 6 problems.</p>
+  </div>
+  <div class="card" data-lo="8" data-hi="11">
+    <h3><a href="{{ '/contests/tournament-of-towns-fall-2026' | relative_url }}">Tournament of Towns 2026 (Fall)</a></h3>
+    <div class="ct-tags"><span class="ct-tg ct-lv">MS</span><span class="ct-tg ct-lv">HS</span><span class="ct-tg ct-df-Advanced">Advanced</span></div>
+    <p>24 problems. Tournament of Towns, Fall 2026: Junior and Senior, O-level and A-level, 24 problems.</p>
   </div>
   <div class="card" data-lo="10" data-hi="12">
     <h3><a href="{{ '/contests/usemo-2026' | relative_url }}">USEMO 2026</a></h3>

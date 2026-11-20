@@ -1,0 +1,570 @@
+---
+title: "AMC 10B 2026"
+permalink: /contests/amc-10b-2026
+description: "2026 AMC 10B problems with answers and solutions"
+---
+{% raw %}
+<style>
+  .ct-problem details.ct-hint { margin-top: .5em; }
+  .ct-problem details.ct-hint details.ct-hint { border-top: none; margin-left: 1em; padding-top: .2em; }
+  .ct-hint > summary { font-style: italic; }
+  .ct-intro { margin-bottom: 1.2em; }
+  .ct-credit { font-size: 14px; color: var(--ink-soft); border-left: 3px solid var(--gold); padding: 6px 12px; background: var(--white); margin: 1em 0; }
+  .ct-toc { display: flex; flex-wrap: wrap; gap: 6px; margin: 1em 0 1.4em; }
+  .ct-toc a { display: inline-block; min-width: 2.4em; text-align: center; padding: 4px 8px; border: 1px solid var(--rule); border-radius: 4px; background: var(--white); text-decoration: none; font-size: 14px; }
+  .ct-problem { background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 14px 18px; margin: 1.1em 0; }
+  .ct-problem h3 { margin: 0 0 .3em; font-size: 1.08rem; border-bottom: none; padding-bottom: 0; }
+  .ct-meta { font-size: 13px; color: var(--ink-soft); margin-bottom: .6em; }
+  .ct-text { font-family: Georgia, "Times New Roman", "Noto Serif", serif; font-size: 1.02em; line-height: 1.6; }
+  .ct-text p { margin: .5em 0; }
+  .ct-fig { text-align: center; margin: .8em 0; }
+  .ct-fig img { max-width: 100%; height: auto; max-height: 340px; }
+  .ct-choices { display: flex; flex-wrap: wrap; gap: 6px 22px; margin: .6em 0 .2em; }
+  .ct-choices b { margin-right: .3em; }
+  .ct-problem details { margin-top: .8em; border-top: 1px dashed var(--rule); padding-top: .5em; }
+  .ct-problem summary { cursor: pointer; font-weight: 600; color: var(--brand); font-size: 15px; }
+  .ct-problem details[open] summary { margin-bottom: .5em; }
+  .ct-sol h4 { font-size: 1rem; margin: 1em 0 .3em; color: var(--ink); }
+  .ct-answer { font-weight: 600; }
+  .ct-parts { list-style: none; padding-left: .4em; }
+  .ct-parts li { margin: .35em 0; }
+  .ct-lbl { font-weight: 700; margin-right: .3em; }
+  .ct-note { font-size: 14px; color: var(--ink-soft); font-style: italic; }
+  .ct-bar { margin: .6em 0 1em; display: flex; gap: 10px; flex-wrap: wrap; }
+  .ct-bar button { font: inherit; font-size: 14px; padding: 5px 12px; border-radius: var(--radius); border: 1px solid var(--brand); background: var(--white); color: var(--brand); cursor: pointer; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
+</style>
+<script>
+  window.MathJax = { tex: { inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [['\\[','\\]']], processEscapes: true },
+                     options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] } };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script>
+  function ctAll(open) { document.querySelectorAll('.ct-problem details').forEach(function (d) { d.open = open; }); }
+</script>
+
+{% endraw %}
+<p><a href="{{ '/contests-2026' | relative_url }}">&larr; All contests 2026</a></p>
+
+<h1>AMC 10B 2026</h1>
+
+<div class="ct-intro">
+<p>The 25 problems of the 2026 AMC 10B (held in November 2026), each with the answer and our own solutions, hidden until you open them. Most problems have two or three solutions that use different ideas. Try a problem first, then check.</p><p>The AMC 10 gives 75 minutes for the 25 problems. Problems shared with the AMC 12B are marked.</p>
+</div>
+<div class="ct-credit">Problems &copy; 2026 Mathematical Association of America (MAA), reproduced for non-commercial teaching in our club. Official contest: <a href="https://maa.org/student-programs/amc/">MAA American Mathematics Competitions</a>. Problem text as published on the <a href="https://artofproblemsolving.com/wiki/index.php?title=2026_AMC_10B_Problems">AoPS wiki</a>. Solutions written by MCC.</div>
+<div class="ct-toc"><a href="#p1">1</a><a href="#p2">2</a><a href="#p3">3</a><a href="#p4">4</a><a href="#p5">5</a><a href="#p6">6</a><a href="#p7">7</a><a href="#p8">8</a><a href="#p9">9</a><a href="#p10">10</a><a href="#p11">11</a><a href="#p12">12</a><a href="#p13">13</a><a href="#p14">14</a><a href="#p15">15</a><a href="#p16">16</a><a href="#p17">17</a><a href="#p18">18</a><a href="#p19">19</a><a href="#p20">20</a><a href="#p21">21</a><a href="#p22">22</a><a href="#p23">23</a><a href="#p24">24</a><a href="#p25">25</a></div>
+
+{% raw %}
+<section class="ct-problem" id="p1">
+<h3>Problem 1</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Algebra &middot; LPS VI, Chapter 29: Exponents, Powers, and Growth &middot; Laws of Exponents</div>
+<div class="ct-text"><p>What is the value of
+\[\frac{2^{2026}+2^{2025}-2^{2023}}{2^{2024}-2^{2023}}?\]</p></div>
+<div class="ct-choices ct-text"><span><b>(A)</b>$5$</span><span><b>(B)</b>$7$</span><span><b>(C)</b>$9$</span><span><b>(D)</b>$11$</span><span><b>(E)</b>$13$</span></div>
+<details class="ct-ans"><summary>Show the answer</summary><p class="ct-answer ct-text">(D) $11$</p></details>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Factor out the smallest power</summary><div class="ct-text">
+<p>Every power in the expression is a multiple of $2^{2023}$:
+\[\frac{2^{2023}\left(2^3+2^2-1\right)}{2^{2023}\left(2-1\right)}=\frac{8+4-1}{1}=\boxed{11}.\]</p>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; The exponent does not matter</summary><div class="ct-text">
+<p>Replace $2026$ by any $n\ge3$:
+\[\frac{2^{n}+2^{n-1}-2^{n-3}}{2^{n-2}-2^{n-3}}.\]
+Raising $n$ by $1$ doubles every term of the numerator and of the denominator, so the value does not depend on $n$. Take the smallest case $n=3$:
+\[\frac{2^3+2^2-2^0}{2^1-2^0}=\frac{8+4-1}{2-1}=\boxed{11}.\]</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p2">
+<h3>Problem 2</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Geometry &middot; LPS VI, Chapter 20: Similarity and Proportional Geometry &middot; Scale Effects &middot; also AMC 12B Problem 1</div>
+<div class="ct-text"><p>A souvenir shop sells solid metal sculptures of Achilles in two sizes. One is $6$ cm tall and one is $8$ cm tall. Proportions between the two sculptures are preserved. The smaller sculpture has a mass of $486$ grams. What is the mass, in grams, of the larger sculpture?</p></div>
+<div class="ct-choices ct-text"><span><b>(A)</b>$648$</span><span><b>(B)</b>$864$</span><span><b>(C)</b>$972$</span><span><b>(D)</b>$1152$</span><span><b>(E)</b>$1458$</span></div>
+<div class="ct-note"><p>On the AMC 12B paper (Problem 1) choice (E) is printed as $1148$ in the AoPS wiki copy; the answer (D) $1152$ is the same.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><p class="ct-answer ct-text">(D) $1152$</p></details>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Volume scales with the cube</summary><div class="ct-text">
+<p>The larger sculpture is the smaller one enlarged by the factor $\frac86=\frac43$ in every direction. Volume, and hence the mass of solid metal, is multiplied by $\left(\frac43\right)^3=\frac{64}{27}$:
+\[486\cdot\frac{64}{27}=18\cdot64=\boxed{1152}.\]</p>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; A divisibility check</summary><div class="ct-text">
+<p>Lengths grow in the ratio $8:6=4:3$, so masses grow in the ratio $4^3:3^3=64:27$. If $M$ is the larger mass, then $27M=64\cdot486$. Since $\gcd(27,64)=1$, $M$ is a multiple of $64$. Among the choices only $1152=64\cdot18$ is a multiple of $64$ ($648=64\cdot10+8$, $864=64\cdot13+32$, $972=64\cdot15+12$, $1458=64\cdot22+50$). Indeed $64\cdot486/27=64\cdot18$, so $M=\boxed{1152}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p3">
+<h3>Problem 3</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Geometry &middot; LPS VI, Chapter 52: Solid Geometry and Spatial Visualization &middot; Volume and Surface Area &middot; also AMC 12B Problem 2</div>
+<div class="ct-text"><p>Bees occupy the $8$ corners of a $1\times2\times3$ rectangular box. The bees can fly inside the box, but cannot fly farther than $\frac12$ units from their respective corners. What is the volume, in cubic units, of the region inside the box that cannot be reached by any bee?</p></div>
+<div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/10B03.svg" alt="Figure for problem 3"></div>
+<div class="ct-choices ct-text"><span><b>(A)</b>$6-\dfrac{\pi}{3}$</span><span><b>(B)</b>$6-\dfrac{\pi}{4}$</span><span><b>(C)</b>$6-\dfrac{\pi}{6}$</span><span><b>(D)</b>$6-\dfrac{\pi}{8}$</span><span><b>(E)</b>$6-\dfrac{\pi}{12}$</span></div>
+<details class="ct-ans"><summary>Show the answer</summary><p class="ct-answer ct-text">(C) $6-\tfrac{\pi}{6}$</p></details>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Eight eighths of a ball</summary><div class="ct-text">
+<p>The points of the box within $\frac12$ of a corner form one eighth of a ball of radius $\frac12$: the three faces at the corner cut the ball into eight equal parts and only one lies inside the box. Its volume is
+\[\frac18\cdot\frac43\pi\left(\frac12\right)^3=\frac{\pi}{48}.\]
+Two corners are at least $1$ apart (the shortest edge is $1$), so these pieces do not overlap. The bees reach $8\cdot\frac{\pi}{48}=\frac{\pi}6$, and the unreachable volume is
+\[\boxed{6-\tfrac{\pi}{6}}.\]</p>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Reassemble one ball</summary><div class="ct-text">
+<p>At each corner a bee reaches the part of the ball of radius $\frac12$ about that corner that lies inside the box, which is one octant of that ball. The eight corners of a box point in the eight different octant directions (each coordinate is either at its minimum or at its maximum), so sliding the eight pieces to a common centre fits them together, without overlap, into one complete ball of radius $\frac12$. (The pieces do not overlap in the box either, as all edges are at least $1=2\cdot\frac12$ long.) The reachable volume is $\frac43\pi\cdot\frac18=\frac\pi6$, and the box has volume $1\cdot2\cdot3=6$. Answer: $\boxed{6-\tfrac{\pi}{6}}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p4">
+<h3>Problem 4</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Algebra &middot; LPS VI, Chapter 17: Factoring and Structural Decomposition &middot; Factoring to Solve</div>
+<div class="ct-text"><p>What positive real number $x$ satisfies the equation
+\[\frac{3}{x+4}-\frac{4}{x+3}=\frac{4}{x-3}-\frac{3}{x-4}?\]</p></div>
+<div class="ct-choices ct-text"><span><b>(A)</b>$\sqrt{21}$</span><span><b>(B)</b>$3+\sqrt7$</span><span><b>(C)</b>$6$</span><span><b>(D)</b>$\sqrt{37}$</span><span><b>(E)</b>$4+\sqrt{13}$</span></div>
+<details class="ct-ans"><summary>Show the answer</summary><p class="ct-answer ct-text">(D) $\sqrt{37}$</p></details>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Pair the terms with the same numerator</summary><div class="ct-text">
+<p>Move terms so that equal numerators sit together:
+\[\frac3{x+4}+\frac3{x-4}=\frac4{x+3}+\frac4{x-3}\quad\Longrightarrow\quad\frac{6x}{x^2-16}=\frac{8x}{x^2-9}.\]
+Since $x&gt;0$ we may divide by $2x$: $3(x^2-9)=4(x^2-16)$, so $x^2=64-27=37$ and $x=\boxed{\sqrt{37}}$. (It is not one of the excluded values $\pm3,\pm4$.)</p>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Combine each side as it stands</summary><div class="ct-text">
+<p>Combine the two fractions on each side without rearranging:
+\[\frac3{x+4}-\frac4{x+3}=\frac{3(x+3)-4(x+4)}{(x+4)(x+3)}=\frac{-(x+7)}{(x+3)(x+4)},\]
+\[\frac4{x-3}-\frac3{x-4}=\frac{4(x-4)-3(x-3)}{(x-3)(x-4)}=\frac{x-7}{(x-3)(x-4)}.\]
+Cross-multiplying (the excluded values $\pm3,\pm4$ aside) gives $-(x+7)(x-3)(x-4)=(x-7)(x+3)(x+4)$. Expanding,
+\[(x+7)(x^2-7x+12)=x^3-37x+84,\qquad(x-7)(x^2+7x+12)=x^3-37x-84,\]
+so $-x^3+37x-84=x^3-37x-84$, i.e. $2x^3-74x=0$, i.e. $x(x^2-37)=0$. The solutions are $x=0$ and $x=\pm\sqrt{37}$, and the only positive one is $x=\boxed{\sqrt{37}}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p5">
+<h3>Problem 5</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Combinatorics &middot; LPS VI, Chapter 50: Combinatorial Geometry &middot; Incidence and Intersection Counting &middot; also AMC 12B Problem 3</div>
+<div class="ct-text"><p>There are $2026$ equally spaced points that all lie on a circle. A line segment is drawn between two points if there is exactly one point between them along the circle. Into how many regions will this divide the interior of the circle? The figure below shows an example with $10$ equally spaced points, in which case there are $21$ interior regions.</p></div>
+<div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/10B05.svg" alt="Figure for problem 5"></div>
+<div class="ct-choices ct-text"><span><b>(A)</b>$4052$</span><span><b>(B)</b>$4053$</span><span><b>(C)</b>$4054$</span><span><b>(D)</b>$6079$</span><span><b>(E)</b>$6081$</span></div>
+<details class="ct-ans"><summary>Show the answer</summary><p class="ct-answer ct-text">(B) $4053$</p></details>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Each chord adds one plus its crossings</summary><div class="ct-text">
+<p>Number the points $0,1,\dots,n-1$ around the circle, $n=2026$; the segments are the $n$ chords $\{i,i+2\}$ (indices mod $n$). Draw the chords one at a time. A new chord that crosses $c$ chords already drawn (at $c$ distinct points) is cut into $c+1$ pieces, and each piece splits one region in two, so the chord adds $c+1$ regions. Hence
+\[\text{regions}=1+(\text{number of chords})+(\text{number of crossing points}),\]
+provided no three chords pass through one point.</p><p>Chord $\{i,i+2\}$ crosses another chord exactly when that chord has one endpoint strictly between $i$ and $i+2$, namely $i+1$, and the other outside; these are the chords $\{i-1,i+1\}$ and $\{i+1,i+3\}$. So each chord meets exactly $2$ others and there are $\frac{2n}{2}=n$ crossing points. No three chords are concurrent: a third chord through the crossing of $\{i,i+2\}$ and $\{i+1,i+3\}$ would have to cross both, but the only other chord crossing $\{i,i+2\}$ is $\{i-1,i+1\}$, which shares the endpoint $i+1$ with $\{i+1,i+3\}$ and so does not cross it. Therefore the number of regions is $1+n+n=2n+1$ (for $n=10$ this gives $21$, as in the figure), and for $n=2026$ it is $\boxed{4053}$.</p>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Describe the regions directly</summary><div class="ct-text">
+<p>Number the points $0,1,\dots,n-1$, $n=2026$, and look at the picture (for $n=10$ it is the figure). The chords $\{i,i+2\}$ form a closed zigzag band near the circle. Chord $\{i,i+2\}$ crosses only the two chords $\{i-1,i+1\}$ and $\{i+1,i+3\}$, the ones through the point $i+1$ it skips. The regions are of three kinds.
+</p><ul>
+</li><li>Next to each arc from point $i$ to point $i+1$ there is one region, bounded by that arc and by pieces of the chords $\{i-1,i+1\}$ and $\{i,i+2\}$, which cross each other: $n$ regions.
+</li><li>At each point $j$ the two chords $\{j-2,j\}$ and $\{j,j+2\}$ leave $j$, and the chord $\{j-1,j+1\}$ cuts across both of them; together they bound a small triangle with a vertex at $j$: $n$ regions.
+</li><li>Everything else is the single central region, bounded by the inner pieces of all the chords.
+</li></ul><p>
+The total is $2n+1$; this gives $21$ for $n=10$, matching the figure, and $2\cdot2026+1=\boxed{4053}$ for $n=2026$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p6">
+<h3>Problem 6</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Number Theory &middot; LPS VI, Chapter 3: Divisibility and Prime Factorization &middot; Divisibility Tests &middot; also AMC 12B Problem 4</div>
+<div class="ct-text"><p>For how many integers $n$ is
+\[\frac{n^2-1}{n+2}\]
+also an integer?</p></div>
+<div class="ct-choices ct-text"><span><b>(A)</b>$2$</span><span><b>(B)</b>$3$</span><span><b>(C)</b>$4$</span><span><b>(D)</b>$6$</span><span><b>(E)</b>$\text{infinitely many}$</span></div>
+<details class="ct-ans"><summary>Show the answer</summary><p class="ct-answer ct-text">(C) $4$</p></details>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Divide the polynomials</summary><div class="ct-text">
+<p>$n^2-1=(n+2)(n-2)+3$, so
+\[\frac{n^2-1}{n+2}=n-2+\frac3{n+2}.\]
+This is an integer exactly when $n+2$ divides $3$, i.e. $n+2\in\{-3,-1,1,3\}$, giving $n=-5,-3,-1,1$. That is $\boxed{4}$ integers. (Check: the values are $-8,-8,0,0$.)</p>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; A difference of squares and a divisor of the difference</summary><div class="ct-text">
+<p>Let $d=n+2$, a nonzero integer. By the difference of squares, $n^2-4=(n-2)(n+2)$ is a multiple of $d$. If $d$ also divides $n^2-1$, it divides the difference $(n^2-1)-(n^2-4)=3$. Conversely, if $d\mid3$, then $d$ divides $3+(n^2-4)=n^2-1$. So the fraction is an integer exactly when $n+2\in\{-3,-1,1,3\}$, i.e. $n\in\{-5,-3,-1,1\}$: there are $\boxed{4}$ such integers.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p7">
+<h3>Problem 7</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Geometry &middot; LPS VI, Chapter 40: Coordinate Geometry and Analytic Methods &middot; Equation-Based Figure Analysis</div>
+<div class="ct-text"><p>A circle in the coordinate plane passes through $(0,0)$, $(3,0)$, and $(0,4)$. The equation of the circle can be written in the form $x^2+y^2+ax+by+c=0$ for some constants $a$, $b$, and $c$. What is $a+b+c$?</p></div>
+<div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/10B07.svg" alt="Figure for problem 7"></div>
+<div class="ct-choices ct-text"><span><b>(A)</b>$-7$</span><span><b>(B)</b>$-2$</span><span><b>(C)</b>$0$</span><span><b>(D)</b>$5$</span><span><b>(E)</b>$7$</span></div>
+<details class="ct-ans"><summary>Show the answer</summary><p class="ct-answer ct-text">(A) $-7$</p></details>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Substitute the three points</summary><div class="ct-text">
+<p>Each point satisfies the equation.
+</p><ul>
+</li><li>$(0,0)$: $c=0$.
+</li><li>$(3,0)$: $9+3a+c=0$, so $a=-3$.
+</li><li>$(0,4)$: $16+4b+c=0$, so $b=-4$.
+</li></ul><p>
+Hence $a+b+c=-3-4+0=\boxed{-7}$.</p>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Thales: the hypotenuse is a diameter</summary><div class="ct-text">
+<p>The three points form a right triangle with the right angle at the origin, so the hypotenuse from $(3,0)$ to $(0,4)$ is a diameter. The centre is its midpoint $\left(\frac32,2\right)$ and the radius is half of $5$. The circle is
+\[\left(x-\tfrac32\right)^2+(y-2)^2=\tfrac{25}4\iff x^2+y^2-3x-4y+\tfrac94+4-\tfrac{25}4=0\iff x^2+y^2-3x-4y=0.\]
+So $a=-3$, $b=-4$, $c=0$ and $a+b+c=\boxed{-7}$.</p>
+</div></details>
+<details class="ct-sol"><summary>Show solution 3 &ndash; Power of the point $(1,1)$</summary><div class="ct-text">
+<p>For any point $(p,q)$, the value $p^2+q^2+ap+bq+c$ is its power with respect to the circle: (distance to the centre)$^2-$(radius)$^2$. At $(1,1)$ this value is $2+a+b+c$, so we only need the power of $(1,1)$.</p><p>The points $(0,0)$, $(3,0)$, $(0,4)$ form a right angle at the origin, so the segment from $(3,0)$ to $(0,4)$, of length $5$, is a diameter: the centre is $\left(\frac32,2\right)$ and the radius is $\frac52$. The power of $(1,1)$ is
+\[\left(1-\tfrac32\right)^2+(1-2)^2-\tfrac{25}4=\tfrac14+1-\tfrac{25}4=-5.\]
+So $2+a+b+c=-5$ and $a+b+c=\boxed{-7}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p8">
+<h3>Problem 8</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Number Theory &middot; LPS VI, Chapter 53: Sequences, Series, and Recursive Patterns &middot; Arithmetic Sequences</div>
+<div class="ct-text"><p>Consider the infinite sequence of sets $\{1\}, \{2,4\}, \{3,5,7\}, \{4,6,8,10\}, \{5,7,9,11,13\}, \ldots$. Here, the $k$-th set contains one more element than the previous set, and its members are the terms of an arithmetic sequence beginning with $k$ and having common difference $2$. Let $N$ be the number of these sets that contain the number $2026$. What is the sum of the digits of $N$?</p></div>
+<div class="ct-choices ct-text"><span><b>(A)</b>$10$</span><span><b>(B)</b>$14$</span><span><b>(C)</b>$16$</span><span><b>(D)</b>$19$</span><span><b>(E)</b>$20$</span></div>
+<details class="ct-ans"><summary>Show the answer</summary><p class="ct-answer ct-text">(D) $19$</p></details>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Which $k$ work?</summary><div class="ct-text">
+<p>The $k$-th set has $k$ terms, $k,k+2,\dots,k+2(k-1)=3k-2$: all numbers of the same parity as $k$ from $k$ to $3k-2$. It contains $2026$ exactly when $k$ is even and $k\le2026\le3k-2$, i.e. $k\ge676$. The even numbers from $676$ to $2026$ number
+\[\frac{2026-676}2+1=676.\]
+So $N=676$ and its digit sum is $6+7+6=\boxed{19}$.</p>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Count by the position of $2026$</summary><div class="ct-text">
+<p>If $2026$ is in the $k$-th set, it is the term $k+2j$ for some $j$ with $0\le j\le k-1$. Then $k=2026-2j$ is determined by $j$, and the condition $j\le k-1$ becomes $j\le2025-2j$, i.e. $3j\le2025$, $j\le675$. Each $j=0,1,\dots,675$ gives a valid set (with $k=2026-2j\ge1$), and different $j$ give different $k$. So $N=676$, with digit sum $\boxed{19}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p9">
+<h3>Problem 9</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Combinatorics &middot; LPS VI, Chapter 6: Casework, Complement, and Constructive Counting &middot; Exhaustive Casework</div>
+<div class="ct-text"><p>A library offers $5$ desks arranged in a row from left to right for quiet studying. Students arrive one at a time and sit down at a desk. If possible, each student avoids sitting next to another student. Otherwise they will, if possible, sit next to one student rather than two. How many possible seating configurations (which seats are occupied) for one to five students are there?</p></div>
+<div class="ct-choices ct-text"><span><b>(A)</b>$14$</span><span><b>(B)</b>$17$</span><span><b>(C)</b>$20$</span><span><b>(D)</b>$22$</span><span><b>(E)</b>$24$</span></div>
+<details class="ct-ans"><summary>Show the answer</summary><p class="ct-answer ct-text">(D) $22$</p></details>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Build the configurations student by student</summary><div class="ct-text">
+<p>Number the desks $1$ to $5$.
+</p><ul>
+</li><li>One student: any desk, $5$ configurations.
+</li><li>Two students: the second student can always find a desk not next to the first, so the pair is non-adjacent: $\binom52-4=6$ configurations, $\{1,3\},\{1,4\},\{1,5\},\{2,4\},\{2,5\},\{3,5\}$.
+</li><li>Three students. From $\{1,3\},\{1,5\},\{3,5\}$ the third student takes the isolated free desk and we get $\{1,3,5\}$. From $\{1,4\}$ every free desk ($2,3,5$) has exactly one occupied neighbour, giving $\{1,2,4\},\{1,3,4\},\{1,4,5\}$; symmetrically $\{2,5\}$ gives $\{1,2,5\},\{2,3,5\},\{2,4,5\}$. From $\{2,4\}$ desk $3$ has two neighbours, so the student takes $1$ or $5$: $\{1,2,4\},\{2,4,5\}$, already listed. In all: $7$ configurations.
+</li><li>Four students: one desk stays empty. Going through the seven sets above: from $\{1,3,5\}$ both free desks have two occupied neighbours, giving $\{1,2,3,5\}$ and $\{1,3,4,5\}$; from $\{1,2,4\}$ desk $5$ (one neighbour) beats desk $3$ (two), giving $\{1,2,4,5\}$; from $\{1,3,4\}$ we get $\{1,3,4,5\}$; from $\{1,4,5\}$ both free desks have one neighbour, giving $\{1,2,4,5\}$ and $\{1,3,4,5\}$; from $\{1,2,5\}$ likewise $\{1,2,3,5\}$ and $\{1,2,4,5\}$; from $\{2,3,5\}$ desk $1$ (one neighbour) beats desk $4$ (two), giving $\{1,2,3,5\}$; from $\{2,4,5\}$ similarly $\{1,2,4,5\}$. So there are $3$ configurations, with the empty desk being $2$, $3$ or $4$.
+</li><li>Five students: $1$ configuration.
+</li></ul><p>
+Total: $5+6+7+3+1=\boxed{22}$.</p>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Count the impossible sets</summary><div class="ct-text">
+<p>Number the desks $1$ to $5$. There are $2^5-1=31$ non-empty sets of desks; we find which cannot occur.</p><p><em>Two students:</em> the second student can always avoid the first, so the $4$ adjacent pairs are impossible and the $6$ others occur.</p><p><em>Three students:</em> three desks in a row ($\{1,2,3\},\{2,3,4\},\{3,4,5\}$) are impossible. Indeed, the first two students to arrive were not adjacent, so they were the two outer desks of the row, and then the third student took the middle desk with two neighbours; but an end desk of the room ($1$ or $5$) or the desk beyond the row was free with at most one neighbour, which he would have preferred. Every other $3$-set occurs: $\{1,3,5\}$ (the students spread out), and the six sets $\{1,4\}\cup\{x\}$ and $\{2,5\}\cup\{x\}$: after the pair $\{1,4\}$ (or $\{2,5\}$) sits down, every free desk has exactly one occupied neighbour, so the third student may take any of them.</p><p><em>Four students:</em> the empty desk cannot be $1$ (or $5$). Before the last student, the occupied set was a $3$-set inside $\{2,3,4,5\}$ other than $\{2,3,4\}$ and $\{3,4,5\}$, so it was $\{2,3,5\}$ or $\{2,4,5\}$; in both cases desk $1$ had only one neighbour while the other free desk had two, so the student took desk $1$. Empty desk $2$, $3$ or $4$ does occur (for example $\{1,3,5\}\to\{1,3,4,5\}$, $\{1,2,4\}\to\{1,2,4,5\}$, $\{1,3,5\}\to\{1,2,3,5\}$).</p><p>All $5$ single desks and the full row occur. The impossible sets number $4+3+2=9$, so the answer is $31-9=\boxed{22}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p10">
+<h3>Problem 10</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Geometry &middot; LPS VI, Chapter 40: Coordinate Geometry and Analytic Methods &middot; Coordinate Area Methods</div>
+<div class="ct-text"><p>What is the area of the region bounded by the graphs of $|x+y|\le4$ and $x^2+y^2-4(x-y)\le2xy$?</p></div>
+<div class="ct-choices ct-text"><span><b>(A)</b>$4$</span><span><b>(B)</b>$8$</span><span><b>(C)</b>$10$</span><span><b>(D)</b>$12$</span><span><b>(E)</b>$16$</span></div>
+<details class="ct-ans"><summary>Show the answer</summary><p class="ct-answer ct-text">(E) $16$</p></details>
+<details class="ct-sol"><summary>Show solution 1 &ndash; A rectangle between two pairs of parallel lines</summary><div class="ct-text">
+<div class="ct-fig"><img style="width:313px" src="/assets/contests/2026-27/10B10_s1.svg" alt="Figure for the solution"></div>
+<p>Move $2xy$ to the left: $x^2-2xy+y^2-4(x-y)\le0$, that is
+\[(x-y)^2\le4(x-y)\iff0\le x-y\le4.\]
+So the region is bounded by the parallel lines $x+y=\pm4$ and the parallel lines $x-y=0$, $x-y=4$, which are perpendicular to the first pair: it is a rectangle. The distance between $x+y=4$ and $x+y=-4$ is $\frac{8}{\sqrt2}=4\sqrt2$; between $x-y=0$ and $x-y=4$ it is $\frac4{\sqrt2}=2\sqrt2$. The area is $4\sqrt2\cdot2\sqrt2=\boxed{16}$.</p>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Find the corners and use the shoelace formula</summary><div class="ct-text">
+<p>The second inequality is $x^2-2xy+y^2\le4(x-y)$, i.e. $(x-y)(x-y-4)\le0$, i.e. $0\le x-y\le4$. Together with $-4\le x+y\le4$, the region is the quadrilateral whose corners solve $x+y=\pm4$, $x-y\in\{0,4\}$:
+\[(2,2),\quad(4,0),\quad(0,-4),\quad(-2,-2).\]
+Going around in this order, the shoelace terms $x_iy_{i+1}-x_{i+1}y_i$ are
+\[2\cdot0-4\cdot2=-8,\quad4\cdot(-4)-0\cdot0=-16,\quad0\cdot(-2)-(-2)(-4)=-8,\quad(-2)\cdot2-2\cdot(-2)=0,\]
+so the area is $\frac12\left|-8-16-8+0\right|=\boxed{16}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p11">
+<h3>Problem 11</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Geometry &middot; LPS VI, Chapter 44: Area Ratios and Cevian Geometry &middot; Nested Region Ratios</div>
+<div class="ct-text"><p>In $\triangle ABC$, point $D$ is $\frac13$ of the way from $A$ to $B$, point $F$ is $\frac14$ of the way from $B$ to $C$, and point $E$ is $\frac15$ of the way from $C$ to $A$. What is the ratio of the area of $\triangle DFE$ to the area of $\triangle ABC$?</p></div>
+<div class="ct-fig"><img style="width:259px" src="/assets/contests/2026-27/10B11.svg" alt="Figure for problem 11"></div>
+<div class="ct-choices ct-text"><span><b>(A)</b>$\dfrac13$</span><span><b>(B)</b>$\dfrac{5}{12}$</span><span><b>(C)</b>$\dfrac{7}{15}$</span><span><b>(D)</b>$\dfrac12$</span><span><b>(E)</b>$\dfrac35$</span></div>
+<details class="ct-ans"><summary>Show the answer</summary><p class="ct-answer ct-text">(B) $\tfrac{5}{12}$</p></details>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Cut off the three corner triangles</summary><div class="ct-text">
+<p>Let $[ABC]=1$. A triangle that shares an angle with $\triangle ABC$ has area equal to the product of the two side fractions along that angle.
+</p><ul>
+</li><li>At $A$: $AD=\frac13AB$ and $AE=\frac45AC$ (as $CE=\frac15CA$), so $[ADE]=\frac13\cdot\frac45=\frac4{15}$.
+</li><li>At $B$: $BD=\frac23BA$ and $BF=\frac14BC$, so $[BDF]=\frac23\cdot\frac14=\frac16$.
+</li><li>At $C$: $CF=\frac34CB$ and $CE=\frac15CA$, so $[CFE]=\frac34\cdot\frac15=\frac3{20}$.
+</li></ul><p>
+Then
+\[[DFE]=1-\frac4{15}-\frac16-\frac3{20}=\frac{60-16-10-9}{60}=\frac{25}{60}=\boxed{\tfrac{5}{12}}.\]</p>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Coordinates</summary><div class="ct-text">
+<p>Area ratios do not change under an affine map, so we may take $A=(0,0)$, $B=(1,0)$, $C=(0,1)$, with $[ABC]=\frac12$. Then
+\[D=\left(\tfrac13,0\right),\quad F=B+\tfrac14(C-B)=\left(\tfrac34,\tfrac14\right),\quad E=C+\tfrac15(A-C)=\left(0,\tfrac45\right).\]
+With $F-D=\left(\frac5{12},\frac14\right)$ and $E-D=\left(-\frac13,\frac45\right)$,
+\[[DFE]=\tfrac12\left|\tfrac5{12}\cdot\tfrac45-\tfrac14\cdot\left(-\tfrac13\right)\right|=\tfrac12\left(\tfrac13+\tfrac1{12}\right)=\tfrac12\cdot\tfrac5{12}.\]
+The ratio is $\boxed{\tfrac5{12}}$.</p>
+</div></details>
+<details class="ct-sol"><summary>Show solution 3 &ndash; Barycentric determinant</summary><div class="ct-text">
+<p>Write each point as a weighted average of the vertices (weights adding to $1$):
+\[D=\tfrac23A+\tfrac13B,\qquad F=\tfrac34B+\tfrac14C,\qquad E=\tfrac15A+\tfrac45C\]
+($E$ is $\frac15$ of the way from $C$ to $A$). For points with weight rows $(\alpha_i,\beta_i,\gamma_i)$, the ratio of the triangle's area to $[ABC]$ is the absolute value of the determinant of the weights:
+\[\det\begin{pmatrix}\frac23&amp;\frac13&amp;0\\0&amp;\frac34&amp;\frac14\\\frac15&amp;0&amp;\frac45\end{pmatrix}=\tfrac23\left(\tfrac34\cdot\tfrac45-0\right)-\tfrac13\left(0-\tfrac14\cdot\tfrac15\right)+0=\tfrac25+\tfrac1{60}=\tfrac{25}{60}.\]
+The ratio is $\boxed{\tfrac5{12}}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p12">
+<h3>Problem 12</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Combinatorics &middot; LPS VI, Chapter 42: Recursion, Paths, and Dynamic Counting &middot; Blocked and Restricted Paths &middot; also AMC 12B Problem 7</div>
+<div class="ct-text"><p>Sharon tosses a fair coin six times and keeps track of how many heads she has gotten. Her first toss is heads. What is the probability that after every toss Sharon's count of heads differs from her count of tails?</p></div>
+<div class="ct-choices ct-text"><span><b>(A)</b>$\dfrac18$</span><span><b>(B)</b>$\dfrac{3}{16}$</span><span><b>(C)</b>$\dfrac14$</span><span><b>(D)</b>$\dfrac{5}{16}$</span><span><b>(E)</b>$\dfrac38$</span></div>
+<div class="ct-note"><p>AMC 12B Problem 7 says "keeps track of how many heads and tails she has gotten"; the problem is otherwise the same.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><p class="ct-answer ct-text">(D) $\tfrac{5}{16}$</p></details>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Track the lead toss by toss</summary><div class="ct-text">
+<p>Let $d$ be heads minus tails. After the first toss $d=1$, and each later toss changes $d$ by $\pm1$. We need $d\ne0$ after every toss; since $d$ starts positive and moves by $1$, this means $d\ge1$ throughout. Count the ways to reach each value (number of ways in brackets):
+\[\begin{array}{c|l}
+\text{toss}&amp;\text{values of }d\\\hline
+1&amp;1\,[1]\\
+2&amp;2\,[1]\\
+3&amp;1\,[1],\ 3\,[1]\\
+4&amp;2\,[2],\ 4\,[1]\\
+5&amp;1\,[2],\ 3\,[3],\ 5\,[1]\\
+6&amp;2\,[5],\ 4\,[4],\ 6\,[1]
+\end{array}\]
+(from $d=1$ the move down to $0$ is not allowed). So $10$ of the $2^5=32$ equally likely sequences for tosses $2$&ndash;$6$ work: probability $\frac{10}{32}=\boxed{\tfrac5{16}}$.</p>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Reflection principle</summary><div class="ct-text">
+<p>After the first toss heads lead by $1$. Look at the remaining $5$ tosses as a walk starting at $1$ with steps $\pm1$; it is good if it never reaches $0$. With $k$ heads among the $5$ tosses the walk ends at $1+k-(5-k)=2k-4$, and there are $\binom5k$ such walks.
+</p><ul>
+</li><li>Walks ending at $-4,-2,0$ ($k=0,1,2$) certainly reach $0$: $1+5+10=16$ walks.
+</li><li>A walk ending at $e&gt;0$ that reaches $0$: reflect its part before the first visit to $0$. This gives a bijection with walks from $-1$ to $e$, which have $\frac{e+1+5}2$ up-steps out of $5$. For $e=2$: $\binom54=5$; $e=4$: $\binom55=1$; $e=6$: $0$.
+</li></ul><p>
+Bad walks: $16+5+1=22$; good walks: $32-22=10$. The probability is $\frac{10}{32}=\boxed{\tfrac5{16}}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p13">
+<h3>Problem 13</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Geometry &middot; LPS VI, Chapter 38: Probability and Expected Value &middot; Sample Space Modeling</div>
+<div class="ct-text"><p>Two points $P$ and $Q$ are chosen independently and uniformly at random on the circle $x^2+y^2=4$ in the coordinate plane. What is the probability that no point on $\overline{PQ}$ lies less than $1$ unit from the origin?</p></div>
+<div class="ct-fig"><img style="width:289px" src="/assets/contests/2026-27/10B13.svg" alt="Figure for problem 13"></div>
+<div class="ct-choices ct-text"><span><b>(A)</b>$\dfrac13$</span><span><b>(B)</b>$1-\dfrac{\pi}{6}$</span><span><b>(C)</b>$\dfrac12$</span><span><b>(D)</b>$\dfrac{\pi}{6}$</span><span><b>(E)</b>$\dfrac23$</span></div>
+<details class="ct-ans"><summary>Show the answer</summary><p class="ct-answer ct-text">(E) $\tfrac23$</p></details>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Distance from the centre to a chord</summary><div class="ct-text">
+<p>Let $\theta\in[0^\circ,180^\circ]$ be the angle $\angle POQ$ at the origin $O$. The point of $\overline{PQ}$ closest to $O$ is the midpoint $M$ of the chord, and in the right triangle $OMP$ we get $OM=2\cos\frac\theta2$. The condition $OM\ge1$ means $\cos\frac\theta2\ge\frac12$, i.e. $\theta\le120^\circ$.</p><p>Fix $P$. Then $\theta\le120^\circ$ exactly when $Q$ lies on the arc of $240^\circ$ centred at $P$ (up to $120^\circ$ on either side). The probability is $\frac{240}{360}=\boxed{\tfrac23}$.</p>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Tangent lines from $P$</summary><div class="ct-text">
+<p>Fix $P$ and draw the two tangent lines from $P$ to the circle of radius $1$ about the origin $O$; they meet the big circle again at $Q_1$ and $Q_2$. A chord $PQ$ comes within distance less than $1$ of $O$ exactly when it passes strictly between these tangents, i.e. when $Q$ is on the open arc $Q_1Q_2$ away from $P$.</p><p>If $T$ is a point of tangency, $\sin\angle OPT=\frac{OT}{OP}=\frac12$, so $\angle OPT=30^\circ$. The triangle $OPQ_1$ is isosceles with base angles $30^\circ$, so $\angle POQ_1=120^\circ$; likewise $\angle POQ_2=120^\circ$ on the other side. The bad arc $Q_1Q_2$ therefore measures $360^\circ-240^\circ=120^\circ$, and the probability that $Q$ avoids it is $1-\frac{120}{360}=\boxed{\tfrac23}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p14">
+<h3>Problem 14</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Algebra &middot; LPS VI, Chapter 37: Polynomials and Algebraic Identities &middot; Symmetric Expressions</div>
+<div class="ct-text"><p>Real numbers $r$ and $s$ satisfy the equations $r+s=2$ and $2^r+2^s=7$. What is $8^r+8^s$?</p></div>
+<div class="ct-choices ct-text"><span><b>(A)</b>$199$</span><span><b>(B)</b>$209$</span><span><b>(C)</b>$221$</span><span><b>(D)</b>$237$</span><span><b>(E)</b>$259$</span></div>
+<details class="ct-ans"><summary>Show the answer</summary><p class="ct-answer ct-text">(E) $259$</p></details>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Sum of cubes</summary><div class="ct-text">
+<p>Let $a=2^r$ and $b=2^s$. Then $a+b=7$ and $ab=2^{r+s}=4$. Since $8^r=a^3$ and $8^s=b^3$,
+\[a^3+b^3=(a+b)^3-3ab(a+b)=343-84=\boxed{259}.\]</p>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Reduce cubes with the quadratic</summary><div class="ct-text">
+<p>Let $a=2^r$, $b=2^s$. From $a+b=7$ and $ab=2^{r+s}=4$, both $a$ and $b$ are roots of $t^2-7t+4=0$, so $t^2=7t-4$ for $t=a,b$. Then
+\[t^3=7t^2-4t=7(7t-4)-4t=45t-28.\]
+Adding for $t=a$ and $t=b$: $a^3+b^3=45\cdot7-56=\boxed{259}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p15">
+<h3>Problem 15</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Combinatorics &middot; LPS VI, Chapter 38: Probability and Expected Value &middot; Sample Space Modeling</div>
+<div class="ct-text"><p>Real numbers $u$ and $v$ are chosen independently and uniformly at random, with $0\le u\le30$ and $0\le v\le10$. What is the probability that the equation $x^2+ux+v^2=0$ has a real solution?</p></div>
+<div class="ct-choices ct-text"><span><b>(A)</b>$\dfrac14$</span><span><b>(B)</b>$\dfrac13$</span><span><b>(C)</b>$\dfrac12$</span><span><b>(D)</b>$\dfrac23$</span><span><b>(E)</b>$\dfrac34$</span></div>
+<details class="ct-ans"><summary>Show the answer</summary><p class="ct-answer ct-text">(D) $\tfrac23$</p></details>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Area in the $uv$-rectangle</summary><div class="ct-text">
+<div class="ct-fig"><img style="width:326px" src="/assets/contests/2026-27/10B15_s1.svg" alt="Figure for the solution"></div>
+<p>The equation has a real solution exactly when its discriminant is non-negative: $u^2-4v^2\ge0$, i.e. $u\ge2v$ (both are non-negative). The point $(u,v)$ is uniform in the $30\times10$ rectangle of area $300$. The line $u=2v$ runs from $(0,0)$ to $(20,10)$; the part of the rectangle with $u&lt;2v$ is the triangle with vertices $(0,0)$, $(0,10)$, $(20,10)$, of area $\frac12\cdot20\cdot10=100$. The probability is
+\[\frac{300-100}{300}=\boxed{\tfrac23}.\]</p>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Condition on $v$</summary><div class="ct-text">
+<p>A real root exists if and only if the discriminant $u^2-4v^2$ is non-negative, i.e. $u\ge2v$. For a fixed $v\in[0,10]$, the number $u$ is uniform on $[0,30]$ and $2v\le20\le30$, so
+\[P(u\ge2v)=\frac{30-2v}{30}=1-\frac v{15}.\]
+This is linear in $v$, so its average over the uniform $v\in[0,10]$ is its value at the average $v=5$: $1-\frac5{15}=\boxed{\tfrac23}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p16">
+<h3>Problem 16</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Combinatorics &middot; LPS VI, Chapter 6: Casework, Complement, and Constructive Counting &middot; Exhaustive Casework</div>
+<div class="ct-text"><p>The $4$ squares in a $2\times2$ grid of squares are each colored either solid red, white, or blue. In how many ways can this be done so that no square colored red shares a side with a square colored blue?</p></div>
+<div class="ct-choices ct-text"><span><b>(A)</b>$29$</span><span><b>(B)</b>$30$</span><span><b>(C)</b>$32$</span><span><b>(D)</b>$34$</span><span><b>(E)</b>$35$</span></div>
+<details class="ct-ans"><summary>Show the answer</summary><p class="ct-answer ct-text">(E) $35$</p></details>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Casework on the white squares</summary><div class="ct-text">
+<p>The four squares form a cycle of side-neighbours (each square touches two others; diagonal squares do not touch). Among non-white squares, neighbours must have the same colour.
+</p><ul>
+</li><li>No white square: the four squares are connected around the cycle, so all are red or all blue: $2$.
+</li><li>One white square ($4$ choices): the other three form a connected chain, all one colour: $4\cdot2=8$.
+</li><li>Two white squares, diagonal ($2$ choices): the other two are diagonal, not neighbours, so each is red or blue freely: $2\cdot4=8$.
+</li><li>Two white squares, side by side ($4$ choices): the other two are neighbours and match: $4\cdot2=8$.
+</li><li>Three white squares: $4\cdot2=8$. Four white squares: $1$.
+</li></ul><p>
+Total $2+8+8+8+8+1=\boxed{35}$.</p>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Colour one diagonal first</summary><div class="ct-text">
+<p>Call the squares $a,b$ (one diagonal) and $c,d$ (the other). Each of $c,d$ shares a side with both $a$ and $b$, and with nothing else that matters, so once $a,b$ are coloured, $c$ and $d$ are chosen independently from the colours compatible with both $a$ and $b$.
+</p><ul>
+</li><li>$a,b$ both white: $3$ choices each for $c,d$: $9$.
+</li><li>one white, one red ($2$ orders): $c,d\in\{\text{red},\text{white}\}$: $2\cdot4=8$; likewise one white, one blue: $8$.
+</li><li>both red: $c,d\in\{\text{red},\text{white}\}$: $4$; both blue: $4$.
+</li><li>one red, one blue ($2$ orders): $c=d=$ white: $2$.
+</li></ul><p>
+Total $9+8+8+4+4+2=\boxed{35}$.</p>
+</div></details>
+<details class="ct-sol"><summary>Show solution 3 &ndash; Walks around a cycle</summary><div class="ct-text">
+<p>Going around the grid, each square shares a side with the next, and the fourth with the first: a colouring is a closed walk of length $4$ on the colours in which consecutive colours must be compatible (not red next to blue). With the colours in the order red, white, blue, compatibility is recorded by the matrix
+\[M=\begin{pmatrix}1&amp;1&amp;0\\1&amp;1&amp;1\\0&amp;1&amp;1\end{pmatrix},\]
+and the number of closed walks of length $4$ is the trace of $M^4$, the sum of the fourth powers of the eigenvalues of $M$. The characteristic polynomial is $(1-\lambda)\left((1-\lambda)^2-2\right)$, so the eigenvalues are $1$ and $1\pm\sqrt2$. Since $(1+\sqrt2)^2=3+2\sqrt2$, $(1+\sqrt2)^4=17+12\sqrt2$, and
+\[\operatorname{tr}M^4=1+(17+12\sqrt2)+(17-12\sqrt2)=\boxed{35}.\]</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p17">
+<h3>Problem 17</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Combinatorics &middot; LPS VI, Chapter 10: Logical Deduction and Constraint Puzzles &middot; Truth and Lies &middot; also AMC 12B Problem 11</div>
+<div class="ct-text"><p>A list contains $2026$ statements, each of which is either true or false. The first statement is "The number of false statements in this list is at least $1001$." The second statement is "The number of false statements in this list is at least $1002$." In general, the $k$th statement in the list is "The number of false statements in this list is at least $k+1000$." How many statements in the list are true?</p></div>
+<div class="ct-choices ct-text"><span><b>(A)</b>$342$</span><span><b>(B)</b>$513$</span><span><b>(C)</b>$1013$</span><span><b>(D)</b>$1026$</span><span><b>(E)</b>$1513$</span></div>
+<details class="ct-ans"><summary>Show the answer</summary><p class="ct-answer ct-text">(B) $513$</p></details>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Let $F$ be the number of false statements</summary><div class="ct-text">
+<p>Statement $k$ is true exactly when $F\ge k+1000$, i.e. $k\le F-1000$.</p><p>If $F\le1000$, every statement is false, so $F=2026$, a contradiction. Hence $F\ge1001$, and the true statements are exactly $k=1,\dots,F-1000$ (note $F-1000\le1026&lt;2026$). So there are $F-1000$ true statements and
+\[(F-1000)+F=2026\quad\Longrightarrow\quad F=1513.\]
+The number of true statements is $1513-1000=\boxed{513}$.</p>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; The true statements form an initial block</summary><div class="ct-text">
+<p>Each statement is stronger than the one before it, so if statement $k$ is true then so are all earlier ones: the true statements are $1,2,\dots,T$ for some $T$. If $T=0$, all $2026$ statements are false, but then statement $1$ ("at least $1001$ false") is true, a contradiction; so $T\ge1$. With $F=2026-T$ false statements:
+</p><ul>
+</li><li>statement $T$ is true: $F\ge T+1000$;
+</li><li>statement $T+1$ is false: $F&lt;T+1001$, i.e. $F\le T+1000$. (Statement $T+1$ exists: if all $2026$ statements were true, then $F=0$, and statement $1$ would be false.)
+</li></ul><p>
+So $F=T+1000$, and $T+(T+1000)=2026$ gives $T=\boxed{513}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p18">
+<h3>Problem 18</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VI scale">H</span>Number Theory &middot; LPS VI, Chapter 35: Factorials and Prime Counting &middot; Prime Exponents in Factorials</div>
+<div class="ct-text"><p>What is the least positive integer $n$ such that $2026!$ is <strong>not</strong> a multiple of $2025^n$?</p></div>
+<div class="ct-choices ct-text"><span><b>(A)</b>$251$</span><span><b>(B)</b>$252$</span><span><b>(C)</b>$253$</span><span><b>(D)</b>$254$</span><span><b>(E)</b>$255$</span></div>
+<details class="ct-ans"><summary>Show the answer</summary><p class="ct-answer ct-text">(C) $253$</p></details>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Legendre's formula</summary><div class="ct-text">
+<p>$2025=3^4\cdot5^2$, so $2025^n=3^{4n}5^{2n}$. The exponents of $3$ and $5$ in $2026!$ are
+\[\left\lfloor\tfrac{2026}3\right\rfloor+\left\lfloor\tfrac{2026}9\right\rfloor+\cdots=675+225+75+25+8+2=1010,\]
+\[\left\lfloor\tfrac{2026}5\right\rfloor+\left\lfloor\tfrac{2026}{25}\right\rfloor+\cdots=405+81+16+3=505.\]
+$2025^n$ divides $2026!$ iff $4n\le1010$ and $2n\le505$, i.e. $n\le252$. The least $n$ that fails is $\boxed{253}$.</p>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Digit sums in base $3$ and base $5$</summary><div class="ct-text">
+<p>The exponent of a prime $p$ in $m!$ equals $\frac{m-s_p(m)}{p-1}$, where $s_p(m)$ is the digit sum of $m$ in base $p$.</p><p>In base $3$: $2026=2\cdot729+2\cdot243+1\cdot81+1=2210001_3$, digit sum $6$, so $3$ appears $\frac{2026-6}2=1010$ times. In base $5$: $2026=3\cdot625+1\cdot125+1\cdot25+1=31101_5$, digit sum $6$, so $5$ appears $\frac{2026-6}4=505$ times.</p><p>As $2025^n=3^{4n}5^{2n}$, divisibility needs $n\le\frac{1010}4=252.5$ and $n\le\frac{505}2=252.5$. So $n=252$ works and $n=\boxed{253}$ is the first failure.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p19">
+<h3>Problem 19</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Combinatorics &middot; LPS VI, Chapter 38: Probability and Expected Value &middot; Dependent and Independent Events &middot; also AMC 12B Problem 13</div>
+<div class="ct-text"><p>A jar contains $12$ green marbles and $8$ red marbles. In a game, Anika and Ben take turns drawing a random marble from the jar, with replacement. If Ben ever draws a red marble he wins, and if Anika ever draws a green marble, she wins. Otherwise, the game continues with the next player's turn. The probability that Ben eventually wins is $A$ if Anika goes first and $B$ if Ben goes first. What is $B-A$?</p></div>
+<div class="ct-choices ct-text"><span><b>(A)</b>$\dfrac{2}{25}$</span><span><b>(B)</b>$\dfrac{4}{25}$</span><span><b>(C)</b>$\dfrac{4}{19}$</span><span><b>(D)</b>$\dfrac{6}{19}$</span><span><b>(E)</b>$\dfrac{9}{20}$</span></div>
+<details class="ct-ans"><summary>Show the answer</summary><p class="ct-answer ct-text">(D) $\tfrac{6}{19}$</p></details>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Two linked equations</summary><div class="ct-text">
+<p>Each draw is green with probability $\frac35$ and red with probability $\frac25$.</p><p>If Anika goes first, Ben can win only if Anika draws red (probability $\frac25$); after that it is Ben's turn, the same situation as Ben going first. So $A=\frac25B$.</p><p>If Ben goes first, he wins at once with probability $\frac25$; otherwise (probability $\frac35$) it is Anika's turn and Ben's chance is $A$. So $B=\frac25+\frac35A$.</p><p>Then $B=\frac25+\frac6{25}B$, so $\frac{19}{25}B=\frac25$, $B=\frac{10}{19}$, $A=\frac4{19}$, and $B-A=\boxed{\tfrac6{19}}$.</p>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Round by round</summary><div class="ct-text">
+<p>Each draw is green with probability $\frac35$, red with probability $\frac25$. Group the draws into rounds of two, one for each player.</p><p><em>Anika first.</em> In a round Anika wins with probability $\frac35$; Ben wins if Anika draws red and then Ben draws red: $\frac25\cdot\frac25=\frac4{25}$; otherwise the round repeats. Ben's overall chance is his share of the decisive rounds:
+\[A=\frac{4/25}{4/25+15/25}=\frac4{19}.\]
+<em>Ben first.</em> Ben wins in a round with probability $\frac25=\frac{10}{25}$; Anika wins if Ben draws green and she draws green: $\frac35\cdot\frac35=\frac9{25}$. So
+\[B=\frac{10/25}{10/25+9/25}=\frac{10}{19}.\]
+Hence $B-A=\boxed{\tfrac6{19}}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p20">
+<h3>Problem 20</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VI scale">H</span>Combinatorics &middot; LPS VI, Chapter 47: Combinatorial Number Theory &middot; Residue-Class Counting &middot; also AMC 12B Problem 16</div>
+<div class="ct-text"><p>Annie, Bobby, and Casey each receive an integer, not necessarily distinct, from $1$ through $10$. In how many ways can the numbers be given so that their sum is divisible by $7$?</p></div>
+<div class="ct-choices ct-text"><span><b>(A)</b>$139$</span><span><b>(B)</b>$140$</span><span><b>(C)</b>$142$</span><span><b>(D)</b>$143$</span><span><b>(E)</b>$145$</span></div>
+<details class="ct-ans"><summary>Show the answer</summary><p class="ct-answer ct-text">(E) $145$</p></details>
+<details class="ct-sol"><summary>Show solution 1 &ndash; A full residue system plus three extras</summary><div class="ct-text">
+<p>The numbers $1,\dots,7$ contain each residue mod $7$ once; the extras $8,9,10$ have residues $1,2,3$. Sort the assignments by how many people get an extra.
+</p><ul>
+</li><li>No extras: all three numbers from $1$&ndash;$7$. The first two are arbitrary and the third is then forced: $7^2=49$.
+</li><li>One extra: choose the person ($3$) and the extra ($3$); of the other two, the first is arbitrary in $1$&ndash;$7$ and the second forced: $3\cdot3\cdot7=63$.
+</li><li>Two extras: choose the person without one ($3$), the two extras ($3\cdot3$), and the last number is forced: $27$.
+</li><li>Three extras: residues from $\{1,2,3\}$ with sum $7$ (the sum is between $3$ and $9$): orderings of $(1,3,3)$ and $(2,2,3)$, $3+3=6$.
+</li></ul><p>
+Total $49+63+27+6=\boxed{145}$.</p>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Count by the exact sum</summary><div class="ct-text">
+<p>The sum is between $3$ and $30$, so it is $7$, $14$, $21$ or $28$. The number of ordered triples from $1$&ndash;$10$ with sum $s$ is, by stars and bars with the upper bound handled by inclusion&ndash;exclusion,
+\[N(s)=\binom{s-1}2-3\binom{s-11}2+3\binom{s-21}2\]
+(a binomial with a negative or too small top counts as $0$). Replacing each number $x$ by $11-x$ shows $N(s)=N(33-s)$.
+\[N(7)=\binom62=15,\qquad N(14)=\binom{13}2-3\binom32=78-9=69,\]
+\[N(21)=N(12)=\binom{11}2-3\binom12=55,\qquad N(28)=N(5)=\binom42=6.\]
+Total $15+69+55+6=\boxed{145}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p21">
+<h3>Problem 21</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Geometry &middot; LPS VI, Chapter 28: Right Triangles and the Pythagorean Framework &middot; Distance from Perpendicular Structure</div>
+<div class="ct-text"><p>Rectangle $ABCD$ has $AB=6$ and $BC=3$. Inside the rectangle are two congruent semicircles, the first with diameter $\overline{AE}$, where $E$ lies on $\overline{AB}$, and the second with diameter $\overline{CF}$, where $F$ lies on $\overline{CD}$. The two semicircles are tangent at $T$. See the figure. What is the radius of the semicircles?</p></div>
+<div class="ct-fig"><img style="width:274px" src="/assets/contests/2026-27/10B21.svg" alt="Figure for problem 21"></div>
+<div class="ct-choices ct-text"><span><b>(A)</b>$\dfrac{13}{8}$</span><span><b>(B)</b>$\dfrac74$</span><span><b>(C)</b>$\dfrac{15}{8}$</span><span><b>(D)</b>$2$</span><span><b>(E)</b>$\dfrac{17}{8}$</span></div>
+<details class="ct-ans"><summary>Show the answer</summary><p class="ct-answer ct-text">(C) $\tfrac{15}{8}$</p></details>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Distance between the centres</summary><div class="ct-text">
+<p>Put $A=(0,0)$, $B=(6,0)$, $C=(6,3)$, $D=(0,3)$ and let $r$ be the radius. The centres are $O_1=(r,0)$ (midpoint of $AE$) and $O_2=(6-r,3)$ (midpoint of $CF$). Externally tangent circles have centres $2r$ apart:
+\[(6-2r)^2+3^2=(2r)^2\iff36-24r+9=0\iff r=\frac{45}{24}=\boxed{\tfrac{15}8}.\]
+(The tangency point is the midpoint $(3,\frac32)$ of $O_1O_2$, which is on the upper half of the first circle and the lower half of the second, so it really lies on both semicircles.)</p>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; The half-turn about the centre</summary><div class="ct-text">
+<p>The half-turn about the centre $M$ of the rectangle maps $A\to C$ and line $AB$ to line $CD$, so it maps the semicircle on $AE$ (radius $r$, from $A$, bulging into the rectangle) to a semicircle of the same radius on a segment of $CD$ starting at $C$, bulging into the rectangle: the second semicircle. It swaps the two semicircles, so it maps their single common point $T$ to itself. The only fixed point of a half-turn is its centre, so $T=M$.</p><p>With $A=(0,0)$, $B=(6,0)$, $D=(0,3)$ we get $T=M=\left(3,\frac32\right)$, and $T$ is at distance $r$ from the centre $(r,0)$ of the first semicircle:
+\[(3-r)^2+\tfrac94=r^2\iff9-6r+\tfrac94=0\iff r=\boxed{\tfrac{15}8}.\]</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p22">
+<h3>Problem 22</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VI scale">H</span>Combinatorics &middot; LPS VI, Chapter 42: Recursion, Paths, and Dynamic Counting &middot; Lattice Paths &middot; also AMC 12B Problem 17</div>
+<div class="ct-text"><p>Belinda follows a path on the plane that is entirely contained within the square region $0\le x,y\le4$. Call her path <em>dignified</em> if and only if all of the following conditions are satisfied.
+</p><ul>
+</li><li>Each step is one unit up, down, or to the right.
+</li><li>The path does not revisit any vertex.
+</li><li>The path starts at $(a,0)$ and ends at $(b,0)$, where $a$ and $b$ are integers with $a&lt;b$, and touches the $x$-axis only at these two points.
+</li></ul><p>
+The following figure shows some examples of dignified and not dignified paths. How many dignified paths can Belinda follow?</p></div>
+<div class="ct-fig"><img style="width:376px" src="/assets/contests/2026-27/10B22.svg" alt="Figure for problem 22"></div>
+<div class="ct-choices ct-text"><span><b>(A)</b>$174$</span><span><b>(B)</b>$340$</span><span><b>(C)</b>$448$</span><span><b>(D)</b>$512$</span><span><b>(E)</b>$970$</span></div>
+<details class="ct-ans"><summary>Show the answer</summary><p class="ct-answer ct-text">(C) $448$</p></details>
+<details class="ct-sol"><summary>Show solution 1 &ndash; One height per column gap</summary><div class="ct-text">
+<p>A step to the right along the $x$-axis would touch the axis along a whole segment, so the path must leave $(a,0)$ upwards. In each column $x$ the path moves only vertically, and in one direction (turning back would revisit a vertex), then steps right. So the path is described by the heights $h_a,h_{a+1},\dots,h_{b-1}\in\{1,2,3,4\}$ of its right steps: it climbs from $(a,0)$ to $(a,h_a)$, steps right, moves vertically to height $h_{a+1}$, &hellip;, steps right to $(b,h_{b-1})$ and drops to $(b,0)$. Every choice of heights gives a dignified path (heights at least $1$ keep it off the axis, and no vertex repeats). So there are $4^{b-a}$ paths from $a$ to $b$.</p><p>For $g=b-a$ there are $5-g$ pairs $(a,b)$ with $0\le a&lt;b\le4$. The total is
+\[4\cdot4+3\cdot4^2+2\cdot4^3+1\cdot4^4=16+48+128+256=\boxed{448}.\]</p>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; A recursion on the end column</summary><div class="ct-text">
+<p>A dignified path never steps right along the $x$-axis (it would touch the axis along a whole segment), and within any column it moves only up or only down (turning back would revisit a vertex). Let $S_b$ be the number of dignified paths ending at $(b,0)$. Remove the final descent in column $b$ and the last right step, which is at some height $h\in\{1,2,3,4\}$ from column $b-1$. What remains starts at $(a,0)$ and reaches column $b-1$; it is either just the climb in column $a=b-1$ (one way) or a dignified path ending at $(b-1,0)$ with its final descent replaced by a vertical move to height $h$ (which is determined by $h$). Conversely each such choice gives a dignified path. So
+\[S_b=4\,(1+S_{b-1}),\qquad S_0=0.\]
+Thus $S_1=4$, $S_2=20$, $S_3=84$, $S_4=340$, and the total is $4+20+84+340=\boxed{448}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p23">
+<h3>Problem 23</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VI scale">H</span>Combinatorics &middot; LPS VI, Chapter 38: Probability and Expected Value &middot; Expected Value and Fairness</div>
+<div class="ct-text"><p>The eight vertices of a cube are randomly and independently colored red, white, or blue. What is the expected number of faces of the cube that have at least two blue vertices?</p></div>
+<div class="ct-choices ct-text"><span><b>(A)</b>$\dfrac{16}{27}$</span><span><b>(B)</b>$2$</span><span><b>(C)</b>$\dfrac{58}{27}$</span><span><b>(D)</b>$\dfrac{22}{9}$</span><span><b>(E)</b>$\dfrac{212}{81}$</span></div>
+<details class="ct-ans"><summary>Show the answer</summary><p class="ct-answer ct-text">(D) $\tfrac{22}{9}$</p></details>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Linearity and the complement</summary><div class="ct-text">
+<p>By linearity of expectation, the expected number of such faces is the sum over the $6$ faces of the probability that the face has at least two blue vertices. A face has $4$ vertices, each blue with probability $\frac13$ independently. The probability of $0$ or $1$ blue vertex is
+\[\left(\tfrac23\right)^4+4\cdot\tfrac13\left(\tfrac23\right)^3=\tfrac{16}{81}+\tfrac{32}{81}=\tfrac{48}{81}.\]
+So each face qualifies with probability $\frac{33}{81}=\frac{11}{27}$, and the expectation is $6\cdot\frac{11}{27}=\boxed{\tfrac{22}9}$.</p>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Linearity with a direct count</summary><div class="ct-text">
+<p>The expected number of faces with a property is, by linearity of expectation, $6$ times the probability that one fixed face has it. Count the $3^4=81$ equally likely colourings of a face's four vertices that have at least two blue ones: exactly two blue: $\binom42\cdot2^2=24$; exactly three: $\binom43\cdot2=8$; four: $1$. That is $33$ colourings, probability $\frac{33}{81}$. The expectation is
+\[6\cdot\frac{33}{81}=\frac{198}{81}=\boxed{\tfrac{22}9}.\]</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p24">
+<h3>Problem 24</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Algebra &middot; LPS VII, Chapter 17: Sequences, Recurrences, and Discrete Dynamics &middot; Invariant and Monotone Sequence Behavior &middot; also AMC 12B Problem 19</div>
+<div class="ct-text"><p>Starting with a list of three numbers, form a sequence in which each subsequent term is the average of the previous three terms. For example, starting with the sequence $(2,4,9)$, the next two terms are $\frac{2+4+9}3=5$ and $\frac{4+9+5}3=6$. Which of the following initial three terms will produce a sequence that has the greatest $2026$th term?</p></div>
+<div class="ct-choices ct-text"><span><b>(A)</b>$(1,2,3)$</span><span><b>(B)</b>$(2,1,1)$</span><span><b>(C)</b>$(3,4,8)$</span><span><b>(D)</b>$(4,4,7)$</span><span><b>(E)</b>$(4,5,6)$</span></div>
+<details class="ct-ans"><summary>Show the answer</summary><p class="ct-answer ct-text">(C) $(3,4,8)$</p></details>
+<details class="ct-sol"><summary>Show solution 1 &ndash; An invariant and shrinking spread</summary><div class="ct-text">
+<p><em>Invariant.</em> If three consecutive terms are $x,y,z$ and the next is $t=\frac{x+y+z}3$, then
+\[y+2z+3t=y+2z+(x+y+z)=x+2y+3z.\]
+So $I=x+2y+3z$ is the same for every window of three consecutive terms.</p><p><em>The terms converge.</em> Let $D$ be the spread (largest minus smallest) of a window $x,y,z$. The next three terms are averages of $x,y,z$ with weights
+\[t_1:\left(\tfrac13,\tfrac13,\tfrac13\right),\quad t_2:\left(\tfrac19,\tfrac49,\tfrac49\right),\quad t_3:\left(\tfrac4{27},\tfrac7{27},\tfrac{16}{27}\right),\]
+all at least $\frac19$. Such an average lies at least $\frac19D$ above the smallest and below the largest of $x,y,z$, so the spread of $t_1,t_2,t_3$ is at most $\frac79D$. Hence the spread tends to $0$ geometrically, all windows lie inside each other, and the terms tend to a limit $L$. Letting the window run to infinity in the invariant gives $6L=I$, i.e. $L=\frac{a_1+2a_2+3a_3}6$.</p><p>After $2026$ terms the spread has shrunk by a factor smaller than $\left(\frac79\right)^{670}$, so the $2026$th term is $L$ up to a negligible error. The values of $I$: (A) $14$, (B) $7$, (C) $35$, (D) $33$, (E) $32$. The largest limit, by a margin of $\frac26$, is for $\boxed{(3,4,8)}$.</p>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Characteristic roots</summary><div class="ct-text">
+<p>The rule $3a_{n+3}=a_{n+2}+a_{n+1}+a_n$ is a linear recurrence with characteristic polynomial
+\[3x^3-x^2-x-1=(x-1)(3x^2+2x+1).\]
+The roots of $3x^2+2x+1$ are complex conjugates with product $\frac13$, so each has absolute value $\frac1{\sqrt3}$. Therefore $a_n=L+c\rho^n+\bar c\bar\rho^{\,n}$ with $|\rho|=\frac1{\sqrt3}$: the terms approach $L$, and the $2026$th term differs from $L$ by about $3^{-1013}$ times a constant, which is negligible.</p><p>To find $L$, note that $a_n+2a_{n+1}+3a_{n+2}$ does not change from one $n$ to the next: the change is $3a_{n+3}-a_{n+2}-a_{n+1}-a_n=0$. Letting $n\to\infty$, $6L=a_1+2a_2+3a_3$. For the choices this is $14,7,35,33,32$, so the largest $2026$th term comes from $\boxed{(3,4,8)}$ (its limit $\frac{35}6$ beats the next, $\frac{33}6$, by far more than the tiny error).</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p25">
+<h3>Problem 25</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VII scale">H</span>Geometry &middot; LPS VII, Chapter 28: Area Methods and Geometric Measurement &middot; Decomposition and Rearrangement of Regions &middot; also AMC 12B Problem 22</div>
+<div class="ct-text"><p>Rectangular card $ABCD$ has $AB=1$ and $AC=2$. As shown in the figure, a second card, $AEFG$, congruent to the first, is stacked onto it so that $\overline{AG}$ lies on $\overline{AC}$ and the two cards share corner $A$. Additional cards are added, following the same pattern (with shared corner $A$), creating a fan of cards. The process stops when a new card fits exactly atop $ABCD$. The shape then created is a nonconvex polygon with rotational symmetry. What is the area of this polygon?</p></div>
+<div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/10B25.svg" alt="Figure for problem 25"></div>
+<div class="ct-choices ct-text"><span><b>(A)</b>$20\sqrt3-24$</span><span><b>(B)</b>$34\sqrt3-48$</span><span><b>(C)</b>$6+3\sqrt3$</span><span><b>(D)</b>$12$</span><span><b>(E)</b>$8\sqrt3$</span></div>
+<details class="ct-ans"><summary>Show the answer</summary><p class="ct-answer ct-text">(A) $20\sqrt3-24$</p></details>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Twelve congruent kites</summary><div class="ct-text">
+<div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/10B25_s1.svg" alt="Figure for the solution"></div>
+<p>$BC=\sqrt{AC^2-AB^2}=\sqrt3$, so $\angle CAD=30^\circ$ and $\angle BAC=60^\circ$. The second card is the first turned $30^\circ$ about $A$ (side $AD$ moves onto the diagonal $AC$). Each card is the previous one turned by $30^\circ$, so after $12$ cards the next would land on $ABCD$: the fan has $12$ cards and $12$-fold rotational symmetry.</p><p>Coordinates: $A=(0,0)$, $B=(1,0)$, $C=(1,\sqrt3)$, $D=(0,\sqrt3)$; the second card has $E=\left(\frac{\sqrt3}2,-\frac12\right)$, $F=(\sqrt3,1)$, $G=\left(\frac{\sqrt3}2,\frac32\right)$. Between the directions of $F$ (at $30^\circ$) and $C$ (at $60^\circ$) the boundary of the fan runs from $F$ along $FG$ to the point $X$ where $FG$ meets $BC$, then up $BC$ to $C$. (Inside this wedge, $ABCD$ reaches out to the line $BC$ and $AEFG$ to the line $FG$, and the fan reaches the farther of the two. The only other card that enters the wedge is the last card of the fan, $ABCD$ turned $30^\circ$ the other way; its side through $A$ points along $AF$, so in the wedge it stays within $\frac{1}{\cos30^\circ}=\frac2{\sqrt3}&lt;\sqrt3$ of $A$, while the outline $FXC$ stays at least $\sqrt3$ from $A$: segment $FX$ lies on line $FG$, which is at distance $AG=\sqrt3$ from $A$, and along $XC$ the distance to $A$ grows from $AX\ge\sqrt3$.) Line $FG$ is $y=2-\frac{x}{\sqrt3}$, so $X=\left(1,2-\frac1{\sqrt3}\right)$. The wedge piece $AFXC$ has area
+\[[AFX]+[AXC]=\tfrac12\left|\sqrt3\left(2-\tfrac1{\sqrt3}\right)-1\cdot1\right|+\tfrac12\cdot1\cdot\left(\sqrt3-2+\tfrac1{\sqrt3}\right)=(\sqrt3-1)+\left(\tfrac{2}{\sqrt3}-1\right)=\tfrac{5\sqrt3}3-2.\]
+The polygon consists of $12$ such pieces: $12\left(\frac{5\sqrt3}3-2\right)=\boxed{20\sqrt3-24}$.</p>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; A regular dodecagon minus twelve notches</summary><div class="ct-text">
+<p>$BC=\sqrt{2^2-1^2}=\sqrt3$, so the diagonal $AC$ makes $30^\circ$ with $AD$ and each new card is the previous one turned by $30^\circ$ about $A$; there are $12$ cards. Their far corners (like $C$ and $F$) lie on the circle of radius $AC=2$ about $A$, $30^\circ$ apart, so they are the vertices of a regular dodecagon of circumradius $2$, with area $12\cdot\frac12\cdot2^2\sin30^\circ=12$. The fan is this dodecagon minus $12$ congruent notches; one notch is the triangle $CFX$, where $X$ is the reflex corner between $C$ and $F$, at which side $CB$ of the first card meets side $FG$ of the second. (Between the rays $AF$ and $AC$ the fan is bounded by the farther of the lines $BC$ and $FG$, so it is the quadrilateral $AFXC$, which is triangle $AFC$ minus triangle $CFX$. The only other card entering this wedge is the last card of the fan, $ABCD$ turned $30^\circ$ the other way, and within the wedge it stays within $\frac{2}{\sqrt3}$ of $A$, well inside $AFXC$, whose outline $FXC$ is at least $\sqrt3$ from $A$.)</p><p>Angles of triangle $CFX$: triangle $ACF$ is isosceles with apex angle $30^\circ$, so $\angle ACF=\angle AFC=75^\circ$. In a card the diagonal makes $30^\circ$ with the side of length $\sqrt3$ and $60^\circ$ with the side of length $1$. So $\angle XCF=75^\circ-30^\circ=45^\circ$ (side $CB$, of length $\sqrt3$) and $\angle XFC=75^\circ-60^\circ=15^\circ$ (side $FG$, of length $1$), and $\angle CXF=120^\circ$. With $CF^2=2^2+2^2-2\cdot2\cdot2\cos30^\circ=8-4\sqrt3$, the law of sines gives
+\[[CFX]=\frac{CF^2\sin45^\circ\sin15^\circ}{2\sin120^\circ}=\frac{(8-4\sqrt3)\cdot\frac{\sqrt3-1}4}{\sqrt3}=\frac{3\sqrt3-5}{\sqrt3}=3-\frac{5}{\sqrt3},\]
+using $\sin45^\circ\sin15^\circ=\frac{\sqrt2}2\cdot\frac{\sqrt6-\sqrt2}4=\frac{\sqrt3-1}4$. The area is
+\[12-12\left(3-\tfrac5{\sqrt3}\right)=12-36+20\sqrt3=\boxed{20\sqrt3-24}.\]</p>
+</div></details>
+</section>
+{% endraw %}

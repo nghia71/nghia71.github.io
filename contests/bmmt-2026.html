@@ -1,0 +1,497 @@
+---
+title: "Berkeley mini Math Tournament 2026: selected problems"
+permalink: /contests/bmmt-2026
+description: "Berkeley mini Math Tournament 2026: selected problems: problems with answers and solutions"
+---
+{% raw %}
+<style>
+  .ct-problem details.ct-hint { margin-top: .5em; }
+  .ct-problem details.ct-hint details.ct-hint { border-top: none; margin-left: 1em; padding-top: .2em; }
+  .ct-hint > summary { font-style: italic; }
+  .ct-intro { margin-bottom: 1.2em; }
+  .ct-credit { font-size: 14px; color: var(--ink-soft); border-left: 3px solid var(--gold); padding: 6px 12px; background: var(--white); margin: 1em 0; }
+  .ct-toc { display: flex; flex-wrap: wrap; gap: 6px; margin: 1em 0 1.4em; }
+  .ct-toc a { display: inline-block; min-width: 2.4em; text-align: center; padding: 4px 8px; border: 1px solid var(--rule); border-radius: 4px; background: var(--white); text-decoration: none; font-size: 14px; }
+  .ct-problem { background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 14px 18px; margin: 1.1em 0; }
+  .ct-problem h3 { margin: 0 0 .3em; font-size: 1.08rem; border-bottom: none; padding-bottom: 0; }
+  .ct-meta { font-size: 13px; color: var(--ink-soft); margin-bottom: .6em; }
+  .ct-text { font-family: Georgia, "Times New Roman", "Noto Serif", serif; font-size: 1.02em; line-height: 1.6; }
+  .ct-text p { margin: .5em 0; }
+  .ct-fig { text-align: center; margin: .8em 0; }
+  .ct-fig img { max-width: 100%; height: auto; max-height: 340px; }
+  .ct-choices { display: flex; flex-wrap: wrap; gap: 6px 22px; margin: .6em 0 .2em; }
+  .ct-choices b { margin-right: .3em; }
+  .ct-problem details { margin-top: .8em; border-top: 1px dashed var(--rule); padding-top: .5em; }
+  .ct-problem summary { cursor: pointer; font-weight: 600; color: var(--brand); font-size: 15px; }
+  .ct-problem details[open] summary { margin-bottom: .5em; }
+  .ct-sol h4 { font-size: 1rem; margin: 1em 0 .3em; color: var(--ink); }
+  .ct-answer { font-weight: 600; }
+  .ct-parts { list-style: none; padding-left: .4em; }
+  .ct-parts li { margin: .35em 0; }
+  .ct-lbl { font-weight: 700; margin-right: .3em; }
+  .ct-note { font-size: 14px; color: var(--ink-soft); font-style: italic; }
+  .ct-bar { margin: .6em 0 1em; display: flex; gap: 10px; flex-wrap: wrap; }
+  .ct-bar button { font: inherit; font-size: 14px; padding: 5px 12px; border-radius: var(--radius); border: 1px solid var(--brand); background: var(--white); color: var(--brand); cursor: pointer; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
+</style>
+<script>
+  window.MathJax = { tex: { inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [['\\[','\\]']], processEscapes: true },
+                     options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] } };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script>
+  function ctAll(open) { document.querySelectorAll('.ct-problem details').forEach(function (d) { d.open = open; }); }
+</script>
+
+<style>
+  .ct-problem details.ct-hint { margin-top: .5em; }
+  .ct-problem details.ct-hint details.ct-hint { border-top: none; margin-left: 1em; padding-top: .2em; }
+  .ct-hint > summary { font-style: italic; }
+
+  .ct-group { font-size: 1.25rem; margin: 1.6em 0 .2em; }
+  .ct-toc-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: .3em 0; }
+  .ct-toc-g { font-size: 13px; color: var(--ink-soft); min-width: 9em; }
+  .ct-toc-wrap { margin: 1em 0 1.4em; }
+  .ct-center { text-align: center; margin: .6em 0; }
+  .ct-tablewrap { overflow-x: auto; margin: .6em 0; text-align: center; }
+  .ct-table { border-collapse: collapse; margin: 0 auto; }
+  .ct-table td { padding: 2px 9px; text-align: center; }
+  .ct-table tr.ct-hl td { border-bottom: 1px solid var(--ink-soft); }
+  .ct-table.ct-vfirst td:first-child { border-right: 1px solid var(--ink-soft); }
+  .ct-ul { padding-left: 1.4em; }
+  .ct-ul li { margin: .3em 0; }
+  .ct-text li > p:first-child { margin-top: 0; }
+  .ct-text li > p:last-child { margin-bottom: 0; }
+  .ct-text mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
+</style>
+
+<style>
+  .ct-tags { display: flex; flex-wrap: wrap; gap: 5px; margin: 0 0 .55em; }
+  .ct-tg { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .03em; padding: 2px 8px; border-radius: 999px; line-height: 1.5; }
+  .ct-lv { background: #eee7dc; color: #4a3d33; }
+  .ct-df-Starter { background: #dcf1dc; color: #245c24; }
+  .ct-df-Explorer { background: #d6efec; color: #155e57; }
+  .ct-df-Challenger { background: #dce8f7; color: #1f4c80; }
+  .ct-df-Olympiad { background: #e7defa; color: #4b2a8a; }
+  .ct-df-Advanced { background: #fbe4cc; color: #8a4a0b; }
+  .ct-df-Expert { background: #f8d6cf; color: #8c2600; }
+  .ct-band { margin: 1.3em 0 .5em; font-size: 14px; color: var(--ink-soft); }
+  .ct-band .ct-tg { font-size: 13px; margin-right: .4em; }
+  .ct-legend { font-size: 14.5px; background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 10px 16px; margin: 1em 0 1.4em; }
+  .ct-legend p { margin: .35em 0; }
+  .ct-legend ul { margin: .2em 0 .4em; padding-left: 1.1em; }
+  .ct-legend li { margin: .2em 0; }
+  .ct-pd { display: inline-block; min-width: 1.6em; text-align: center; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-right: .45em; }
+  .ct-pd-E { background: #dcf1dc; color: #245c24; }
+  .ct-pd-M { background: #dce8f7; color: #1f4c80; }
+  .ct-pd-H { background: #fbe4cc; color: #8a4a0b; }
+  .ct-pd-S { background: #f8d6cf; color: #8c2600; }
+</style>
+{% endraw %}
+<p><a href="{{ '/contests-2026' | relative_url }}">&larr; All contests 2026</a></p>
+
+<h1>Berkeley mini Math Tournament 2026: selected problems</h1>
+
+<div class="ct-intro">
+<p>The 26 problems of the Berkeley mini Math Tournament 2026: selected problems, each with our own solutions, hidden until you open them. Where a problem has a final answer, it is shown separately. Try a problem first, then check.</p><p>A selection of the best problems of the Berkeley mini Math Tournament (12 April 2026), a middle-school tournament: individual, tiebreaker, team and relay rounds (relay problems that use other answers are left out).</p>
+</div>
+<div class="ct-credit">Problems: Berkeley mini Math Tournament 2026: selected problems, from the AoPS contest collection or the official paper. Solutions written by MCC.</div>
+<div class="ct-toc-wrap"><div class="ct-toc-row"><span class="ct-toc-g">Individual Round</span><a href="#p1">10</a><a href="#p2">11</a><a href="#p3">12</a><a href="#p4">13</a><a href="#p5">14</a><a href="#p6">15</a><a href="#p7">16</a><a href="#p8">17</a><a href="#p9">18</a><a href="#p10">19</a><a href="#p11">20</a></div><div class="ct-toc-row"><span class="ct-toc-g">Individual Tiebreaker</span><a href="#p12">3</a></div><div class="ct-toc-row"><span class="ct-toc-g">Team Round</span><a href="#p13">9</a><a href="#p14">10</a><a href="#p15">12</a><a href="#p16">13</a><a href="#p17">14</a><a href="#p18">15</a><a href="#p19">16</a><a href="#p20">17</a><a href="#p21">18</a><a href="#p22">19</a><a href="#p23">20</a></div><div class="ct-toc-row"><span class="ct-toc-g">Relay Round</span><a href="#p24">13</a><a href="#p25">15</a><a href="#p26">17</a></div></div>
+
+{% raw %}
+<h2 class="ct-group" id="individual-round">Individual Round</h2>
+<section class="ct-problem" id="p1">
+<h3>Problem 10</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Algebra &middot; LPS VI, Chapter 13: Rates, Motion, and Work &middot; Average Rate and Time Budget</div>
+<div class="ct-text"><p>Kaity is moving several boxes from her van to the classroom. She picks up either one or two boxes at the van, carries them to the classroom, drops off the boxes, and then walks back to the van, repeating the process until all the boxes are in the classroom and she is back at the van.</p><p>Her walking speed when carrying no boxes is $2.8$ miles per hour, and her walking speed when carrying one box is $2.4$ miles per hour. She finds that it doesn't matter whether she carries one box or two boxes at a time: either way, it will take the same amount of time to move all of the boxes. What is Kaity's walking speed in miles per hour while carrying two boxes? Assume that Kaity picks up and drops off the boxes immediately.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\frac{21}{25}$</p></div></details>
+<details class="ct-sol"><summary>Show the solution &ndash; Compare two boxes at a time</summary><div class="ct-text">
+<p>Let $d$ be the distance (in miles) from the van to the classroom and let $v$ be her speed (in miles per hour) with two boxes. Let $N$ be the number of boxes; $N\ge 2$, since she is able to carry two boxes at a time. Write $N=2k+r$ with $k\ge 1$ and $r\in\{0,1\}$. Carrying two at a time, she makes $k$ trips with two boxes and, if $r=1$, one last trip with a single box; that single-box trip costs the same as one trip of the other plan. So the two plans differ only in how $k$ pairs of boxes are moved, and since $k\ge1$, they take equal time exactly when one pair of boxes takes equal time in both plans.</p><p><em>One box at a time.</em> Two round trips, each with one loaded walk and one empty walk. Since $\frac{1}{2.4}=\frac{5}{12}$ and $\frac{1}{2.8}=\frac{5}{14}$, this takes
+\[2\left(\frac{5d}{12}+\frac{5d}{14}\right)\ \text{hours}.\]
+<em>Two boxes at a time.</em> One round trip: $\dfrac dv+\dfrac{5d}{14}$ hours.</p><p>Setting the two times equal and dividing by $d$:
+\[\frac1v=2\cdot\frac{5}{12}+2\cdot\frac{5}{14}-\frac{5}{14}=\frac56+\frac{5}{14}=\frac{35+15}{42}=\frac{25}{21}.\]
+Therefore $v=\boxed{\tfrac{21}{25}}$ miles per hour. (It is reasonable that she is much slower with two boxes: the one saved empty walk must pay for the extra slowness.)</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p2">
+<h3>Problem 11</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Geometry &middot; LPS VI, Chapter 40: Coordinate Geometry and Analytic Methods &middot; Midpoints and Section Ratios</div>
+<div class="ct-text"><p>Define the <em>drift</em> of a point $(x,y)$ in the coordinate plane as $x+y$. Three corners of a square in the coordinate plane have drifts of $8$, $11$, and $25$, in some order. What is the maximum possible drift of the fourth corner of the square?</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$28$</p></div></details>
+<details class="ct-sol"><summary>Show the solution &ndash; Diagonals share a midpoint</summary><div class="ct-text">
+<p>Write $\delta(x,y)=x+y$ for the drift. Drift is additive: $\delta$ of a sum of two vectors is the sum of the drifts, and $\delta$ of a midpoint is the average of the drifts.</p><p>Let the square be $V_1V_2V_3V_4$ (in order). Its diagonals $V_1V_3$ and $V_2V_4$ have the same midpoint, so
+\[\delta(V_1)+\delta(V_3)=\delta(V_2)+\delta(V_4).\]
+Let $w$ be the drift of the fourth corner and $u$ the drift of the given corner opposite to it. Then $w+u$ equals the sum of the other two given drifts, so $w=(\text{sum of the other two})-u$. The three choices of $u$ give
+\[w=11+25-8=28,\qquad w=8+25-11=22,\qquad w=8+11-25=-6 .\]
+Hence $w\le 28$.</p><p>The value $28$ occurs. Take the square with vertices, in order,
+\[(0.5,\,7.5),\quad(10.5,\,0.5),\quad(17.5,\,10.5),\quad(7.5,\,17.5).\]
+Its consecutive side vectors are $(10,-7)$, $(7,10)$, $(-10,7)$, $(-7,-10)$: all of length $\sqrt{149}$, and consecutive ones are perpendicular because $10\cdot 7+(-7)\cdot 10=0$. The drifts of the vertices are $8$, $11$, $28$, $25$. So the maximum possible drift of the fourth corner is $\boxed{28}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p3">
+<h3>Problem 12</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Number Theory &middot; LPS VI, Chapter 53: Sequences, Series, and Recursive Patterns &middot; Recursive Definitions</div>
+<div class="ct-text"><p>Ben and Theo enter a classroom with the number $0$ written on the blackboard. Ben and Theo repeatedly take turns replacing the number on the blackboard, with Ben going first. Ben writes the smallest multiple of $3$ greater than the current number and Theo writes the smallest multiple of $4$ greater than the current number. The first few numbers that appear on the blackboard are
+\[0,\ 3,\ 4,\ 6,\ 8,\ \dots .\]
+What is the $100$th number that appears on the blackboard, including the initial $0$?</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$198$</p></div></details>
+<details class="ct-sol"><summary>Show the solution &ndash; A cycle of six moves</summary><div class="ct-text">
+<p>Suppose the board shows a multiple of $12$, say $12k$, and it is Ben's turn. The next six moves are
+\[\begin{aligned}&amp;12k\ \xrightarrow{\text{Ben}}\ 12k+3\ \xrightarrow{\text{Theo}}\ 12k+4\ \xrightarrow{\text{Ben}}\ 12k+6\\ &amp;\qquad\xrightarrow{\text{Theo}}\ 12k+8\ \xrightarrow{\text{Ben}}\ 12k+9\ \xrightarrow{\text{Theo}}\ 12k+12,\end{aligned}\]
+and then it is Ben's turn again with the multiple of $12$ given by $12(k+1)$. At the start the board shows $0=12\cdot 0$ and Ben moves first. Hence, by induction, the $(6k+1)$st number on the board is $12k$, and the numbers between follow the pattern above.</p><p>Since $97=6\cdot 16+1$, the $97$th number is $12\cdot 16=192$, followed by $195$, $196$, $198$. The $100$th number is $\boxed{198}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p4">
+<h3>Problem 13</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Number Theory &middot; LPS VI, Chapter 15: GCD, LCM, and Multiplicative Interaction &middot; GCD Logic</div>
+<div class="ct-text"><p>For each positive whole number $n$, let $T(n)=1+2+3+\dots+n$ be the $n$th triangular number. It is known that $T(n)=n(n+1)/2$. What is the sum of all positive whole numbers $m$ for which
+\[\frac{T(m+2)+T(m+4)}{T(m)}\]
+is a whole number?</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$14$</p></div></details>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Division and a size bound</summary><div class="ct-text">
+<p>Using $T(n)=\frac{n(n+1)}2$,
+\[\frac{T(m+2)+T(m+4)}{T(m)}=\frac{(m+2)(m+3)+(m+4)(m+5)}{m(m+1)}=\frac{2m^2+14m+26}{m^2+m},\]
+that is,
+\[\frac{T(m+2)+T(m+4)}{T(m)}=2+\frac{12m+26}{m(m+1)}.\]
+So we need $m(m+1)\mid 12m+26$. Since $12m+26&gt;0$, this forces $m(m+1)\le 12m+26$, that is $m^2-11m-26\le 0$. For $m\ge 14$ we have $m^2-11m-26=m(m-11)-26\ge 14\cdot 3-26&gt;0$, so $m\le 13$. Checking $m=1,\dots,13$:
+\[\frac{38}{2},\ \frac{50}{6},\ \frac{62}{12},\ \frac{74}{20},\ \frac{86}{30},\ \frac{98}{42},\ \frac{110}{56},\ \frac{122}{72},\ \frac{134}{90},\ \frac{146}{110},\ \frac{158}{132},\ \frac{170}{156},\ \frac{182}{182};\]
+only $m=1$ (quotient $19$) and $m=13$ (quotient $1$) give whole numbers. The sum is $1+13=\boxed{14}$.</p>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Coprime factors separately</summary><div class="ct-text">
+<p>Using $T(n)=\frac{n(n+1)}2$,
+\[\frac{T(m+2)+T(m+4)}{T(m)}=\frac{(m+2)(m+3)+(m+4)(m+5)}{m(m+1)}=2+\frac{12m+26}{m(m+1)},\]
+so we need $m(m+1)\mid 12m+26$. Because $m$ and $m+1$ are coprime, this holds exactly when $m\mid 12m+26$ and $m+1\mid 12m+26$.</p><ul class="ct-ul"><li><p>$m\mid 12m+26$ is equivalent to $m\mid 26$, so $m\in\{1,2,13,26\}$.</p></li><li><p>$12m+26=12(m+1)+14$, so $m+1\mid 12m+26$ is equivalent to $m+1\mid 14$, so $m\in\{1,6,13\}$.</p></li></ul><p>Both hold exactly for $m=1$ and $m=13$, and the requested sum is $\boxed{14}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p5">
+<h3>Problem 14</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-E" title="Easy, on the LPS VI scale">E</span>Combinatorics &middot; LPS VI, Chapter 2: Fundamental Counting Principles &middot; Simple Overcount Correction</div>
+<div class="ct-text"><p>Jessica has a $2\times 3$ grid of square cells. In how many ways can she color two cells red and the remaining four cells blue if colorings that differ by a rotation are considered the same, but colorings that differ by a reflection are considered different?</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$9$</p></div></details>
+<details class="ct-sol"><summary>Show the solution &ndash; Pair colorings by the half turn</summary><div class="ct-text">
+<p>The only rotations that carry a $2\times 3$ grid onto itself are the identity and the half turn ($180^\circ$). Without identification there are $\binom62=15$ colorings. The half turn pairs each coloring with its rotated image; two colorings are the same exactly when they are equal or form such a pair.</p><p>A coloring is unchanged by the half turn exactly when its two red cells are swapped by the half turn. The half turn splits the six cells into three pairs (each cell with the cell diametrically opposite), so there are $3$ such colorings. The remaining $15-3=12$ colorings fall into $6$ pairs. The number of distinct colorings is $3+6=\boxed{9}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p6">
+<h3>Problem 15</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Combinatorics &middot; LPS VI, Chapter 10: Logical Deduction and Constraint Puzzles &middot; Constraint Satisfaction</div>
+<div class="ct-text"><p>In a $4\times 4$ Sudoku solution, each column, row, and bolded $2\times 2$ region contains exactly one of each digit from $1$ to $4$, and each cell contains exactly one digit. A Sudoku solution is <em>super</em> if each of the two main diagonals also contains exactly one of each digit from $1$ to $4$. How many distinct $4\times 4$ super Sudoku solutions exist if rotations and reflections are considered distinct?</p><div class="ct-fig"><img style="width:220px" src="/assets/contests/2026-27/bmmt-6.svg" alt="Figure for Individual Round, Problem 15"></div></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$48$</p></div></details>
+<details class="ct-sol"><summary>Show the solution &ndash; Fix the first row</summary><div class="ct-text">
+<p>Write the cells as $(r,c)$ (row $r$, column $c$). Let the first row be $a,b,c,d$ (any of the $4!=24$ orders of the digits). We show that exactly two super Sudoku solutions have this first row.</p><p>The top-left box contains $a,b$ in row $1$, so $(2,1),(2,2)$ hold $c,d$ in some order; similarly $(2,3),(2,4)$ hold $a,b$ in some order. The main diagonal is $(1,1)=a,(2,2),(3,3),(4,4)$.</p><p><em>Case $(2,2)=c$, so $(2,1)=d$.</em> The main diagonal already has $a,c$, so $(3,3),(4,4)\in\{b,d\}$.</p><ul class="ct-ul"><li><p>If row $2$ ends $a,b$: column $3$ has $c,a$ above, so its lower cells hold $\{b,d\}$; column $4$ has $d,b$ above, so its lower cells hold $\{a,c\}$. Then $(4,4)\in\{b,d\}\cap\{a,c\}=\varnothing$: impossible.</p></li><li><p>If row $2$ ends $b,a$: the lower cells of column $3$ hold $\{a,d\}$ and of column $4$ hold $\{b,c\}$. So $(3,3)=d$, $(4,4)=b$, hence $(4,3)=a$, $(3,4)=c$. Rows $3$ and $4$ then need $\{a,b\}$ and $\{c,d\}$ in columns $1,2$; column $1$ already has $a,d$, so $(3,1)=b$, $(4,1)=c$, $(3,2)=a$, $(4,2)=d$.</p></li></ul><p>This gives the grid with rows $abcd,\ dcba,\ badc,\ cdab$. Its columns, boxes and diagonals ($a,c,d,b$ and $d,b,a,c$) are all correct.</p><p><em>Case $(2,2)=d$, so $(2,1)=c$.</em> Now $(3,3),(4,4)\in\{b,c\}$.</p><ul class="ct-ul"><li><p>If row $2$ ends $b,a$: the lower cells of column $3$ hold $\{a,d\}$, so $(3,3)\in\{b,c\}\cap\{a,d\}=\varnothing$: impossible.</p></li><li><p>If row $2$ ends $a,b$: the lower cells of column $3$ hold $\{b,d\}$ and of column $4$ hold $\{a,c\}$, so $(3,3)=b$, $(4,4)=c$, $(4,3)=d$, $(3,4)=a$. Column $1$ has $a,c$ above, and rows $3,4$ need $\{c,d\}$ and $\{a,b\}$ on the left, so $(3,1)=d$, $(4,1)=b$, $(3,2)=c$, $(4,2)=a$.</p></li></ul><p>This gives rows $abcd,\ cdab,\ dcba,\ badc$, again a valid super Sudoku (diagonals $a,d,b,c$ and $d,a,c,b$).</p><p>So each first row extends in exactly $2$ ways, and the total is $24\cdot 2=\boxed{48}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p7">
+<h3>Problem 16</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Algebra &middot; LPS VI, Chapter 45: Inequalities and Absolute Value &middot; Absolute Value as Distance</div>
+<div class="ct-text"><p>An ordered triple of numbers $(a,b,c)$ is <em>stable</em> if it is equal to a permutation of $(|a-b|,|b-c|,|c-a|)$ and $a+b+c\le 2026$. For example, $(0,0,0)$ and $(1,1,0)$ are stable. Compute the number of stable ordered triples of nonnegative integers.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$3040$</p></div></details>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Compare the largest entries</summary><div class="ct-text">
+<p>Being stable only depends on the multiset $\{a,b,c\}$, because the multiset $\{|a-b|,|b-c|,|c-a|\}$ does not depend on the order. Let the multiset be $\{x,y,z\}$ with $0\le x\le y\le z$. Its pairwise differences are $y-x$, $z-y$, $z-x$, and the largest of them is $z-x$.</p><p>The two multisets are equal, so their largest elements agree: $z=z-x$, hence $x=0$. Now $\{0,y,z\}=\{y,\,z-y,\,z\}$; removing $y$ and $z$ from both sides leaves $0=z-y$, so $y=z$. Thus the multiset is $\{0,t,t\}$ for some integer $t\ge 0$. Conversely, for $(t,t,0)$ the differences are $0,t,t$, so every arrangement of $\{0,t,t\}$ is stable as long as the sum $2t\le 2026$, i.e. $t\le 1013$.</p><p>For $t=0$ there is one ordered triple, $(0,0,0)$; for each $t=1,\dots,1013$ there are $3$ ordered triples (choose the position of the $0$). The count is $1+3\cdot 1013=\boxed{3040}$.</p>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Equal sums and equal products</summary><div class="ct-text">
+<p>Being stable only depends on the multiset $\{a,b,c\}$, because the multiset $\{|a-b|,|b-c|,|c-a|\}$ does not depend on the order. Let the multiset be $\{x,y,z\}$ with $0\le x\le y\le z$; its pairwise differences are $y-x$, $z-y$, $z-x$. If the two multisets are equal, they have the same sum and the same product.</p><p><em>Sum.</em> $x+y+z=(y-x)+(z-y)+(z-x)=2z-2x$, so $z=3x+y$. Then $z-y=3x$ and $z-x=2x+y$.</p><p><em>Product.</em> $xyz=(y-x)(z-y)(z-x)$ becomes $xy(3x+y)=3x(y-x)(2x+y)$. Suppose $x&gt;0$. Dividing by $x$,
+\[3xy+y^2=3\left(xy+y^2-2x^2\right),\qquad\text{so}\qquad y^2=3x^2 .\]
+Then $\left(\frac yx\right)^2=3$, which is impossible for integers $x,y$, because $\sqrt3$ is irrational. Hence $x=0$, and the sum condition gives $z=y$.</p><p>So a stable triple is an arrangement of $\{0,t,t\}$ with an integer $t\ge 0$. Conversely, for $(t,t,0)$ the differences are $0,t,t$, so every arrangement of $\{0,t,t\}$ is stable as long as $2t\le 2026$, that is $t\le 1013$. For $t=0$ there is one ordered triple, $(0,0,0)$, and for each $t=1,\dots,1013$ there are $3$ (choose the position of the $0$). The count is $1+3\cdot 1013=\boxed{3040}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p8">
+<h3>Problem 17</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VI scale">H</span>Geometry &middot; LPS VI, Chapter 12: Circle Angles and Cyclic Geometry &middot; Tangent and External Angle Relations</div>
+<div class="ct-text"><p>Triangle $ABC$ has $AB=BC$ and is inscribed in circle $O$. Circle $P$ passes through $A$ and $B$ and intersects line segment $\overline{AC}$ at $D\neq A$. Line $\ell_1$ passes through $D$ and is parallel to $\overline{AB}$. Line $\ell_2$ is tangent to circle $O$ at $C$ and is perpendicular to $\ell_1$, intersecting it at $E$. Given that $EC=\frac{16}{3}$ and that the longest side length of triangle $ABC$ is $16$, compute the radius of $P$ divided by the radius of $O$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\frac{\sqrt3}{3}$</p></div></details>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Angle chase, then the law of sines</summary><div class="ct-text">
+<div class="ct-fig"><img style="width:288px" src="/assets/contests/2026-27/bmmt-8_s1.svg" alt="Figure for the solution"></div>
+<p>Let $\beta=\angle ABC$ and let $O$ also denote the center of circle $O$.</p><p><em>The shape of the triangle.</em> The tangent $\ell_2$ at $C$ is perpendicular to the radius $OC$, and it is perpendicular to $\ell_1\parallel AB$. Hence $OC\parallel AB$. Since $BA=BC$ and $OA=OC$, both $B$ and $O$ lie on the perpendicular bisector of $AC$, which bisects $\angle ABC$; moreover $O$ is on the ray from $B$ through the midpoint of $AC$ (this ray also contains the point of the circle opposite to $B$). So $\angle OBC=\frac\beta2$, and since $OB=OC$, also $\angle OCB=\frac\beta2$. For the parallel lines $OC$ and $AB$ cut by $BC$, the angles $\angle OCB$ and $\angle ABC$ are either equal or supplementary. Equal would give $\frac\beta2=\beta$, impossible. So $\frac\beta2+\beta=180^\circ$, giving $\beta=120^\circ$ and $\angle A=\angle C=30^\circ$.</p><p><em>Lengths.</em> The longest side is $AC=16$. By the law of sines, $2R_O=\frac{AC}{\sin 120^\circ}=\frac{32}{\sqrt3}$, so $R_O=\frac{16}{\sqrt3}$; also $AB=BC=2R_O\sin 30^\circ=\frac{16}{\sqrt3}$.</p><p><em>Locating $D$.</em> Since $CE\perp\ell_1$, $CE$ is the distance from $C$ to $\ell_1$. The line $\ell_1$ passes through $D$ on $AC$ and is parallel to $AB$, so it makes an angle of $\angle A=30^\circ$ with $AC$; hence $CE=CD\sin 30^\circ$, and $CD=2\cdot\frac{16}{3}=\frac{32}{3}$, $AD=16-\frac{32}{3}=\frac{16}{3}$.</p><p><em>Circle $P$.</em> In triangle $ABD$, the law of cosines gives
+\[BD^2=AB^2+AD^2-2\,AB\cdot AD\cos 30^\circ=\frac{256}{3}+\frac{256}{9}-2\cdot\frac{16}{\sqrt3}\cdot\frac{16}{3}\cdot\frac{\sqrt3}{2}=\frac{256}{9},\]
+so $BD=\frac{16}{3}$. Circle $P$ is the circumcircle of $ABD$, so by the law of sines $2R_P=\frac{BD}{\sin\angle BAD}=\frac{16/3}{1/2}$, i.e. $R_P=\frac{16}{3}$. Therefore
+\[\frac{R_P}{R_O}=\frac{16/3}{16/\sqrt3}=\frac{1}{\sqrt3}=\boxed{\tfrac{\sqrt3}{3}}.\]</p>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Coordinates</summary><div class="ct-text">
+<p>Put $A=(-8,0)$ and $C=(8,0)$; since $BA=BC$, the apex is $B=(0,h)$ with $h&gt;0$, and the center of circle $O$ is $O=(0,k)$ on the axis of symmetry, with $OC^2=OB^2$: $64+k^2=(h-k)^2$, so $k=\frac{h^2-64}{2h}$.</p><p>The tangent at $C$ is perpendicular to $OC$; it is also perpendicular to $\ell_1$, which is parallel to $AB$. So $OC\parallel AB$, i.e. the vectors $(8,-k)$ and $(8,h)$ are parallel: $-k=h$. Then $-h=\frac{h^2-64}{2h}$ gives $3h^2=64$, $h=\frac{8}{\sqrt3}$, $k=-\frac{8}{\sqrt3}$. The sides are $AB=BC=\sqrt{64+\frac{64}{3}}=\frac{16}{\sqrt3}&lt;16=AC$, so indeed the longest side is $AC=16$, as required, and $R_O=OB=h-k=\frac{16}{\sqrt3}$.</p><p>Let $D=(p,0)$. The line $\ell_1$ through $D$ parallel to $AB$ has direction $(8,h)=(8,\frac{8}{\sqrt3})$, i.e. direction $(\sqrt3,1)$, so its equation is $x-\sqrt3\,y=p$. The distance from $C$ to $\ell_1$ is $CE$:
+\[\frac{|8-p|}{2}=\frac{16}{3}\quad\Longrightarrow\quad p=8-\frac{32}{3}=-\frac83\]
+(the other value $p=\frac{56}{3}$ is not on segment $AC$). So $D=(-\frac83,0)$.</p><p>The center of circle $P$ lies on the perpendicular bisector $x=-\frac{16}{3}$ of $AD$; write it as $(-\frac{16}{3},s)$. Equal distances to $A$ and $B$:
+\[\left(\tfrac83\right)^2+s^2=\left(\tfrac{16}{3}\right)^2+\left(s-\tfrac{8}{\sqrt3}\right)^2\ \Longrightarrow\ \frac{16}{\sqrt3}s=\frac{256}{9}-\frac{64}{9}+\frac{64}{3}=\frac{128}{3},\]
+so $s=\frac{8}{\sqrt3}$ and $R_P^2=\frac{64}{9}+\frac{64}{3}=\frac{256}{9}$, $R_P=\frac{16}{3}$. Hence $\frac{R_P}{R_O}=\frac{16/3}{16/\sqrt3}=\boxed{\tfrac{\sqrt3}{3}}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p9">
+<h3>Problem 18</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Combinatorics &middot; LPS VI, Chapter 14: Permutations, Combinations, and Binomial Structure &middot; Permutation Structure</div>
+<div class="ct-text"><p>A permutation of the set $\{1,2,\dots,10\}$ is called <em>mountainous</em> if the elements increase to a peak and then decrease. The peak cannot be the first or the last element. What fraction of mountainous permutations have the property that the sum of the first element and the last element is odd?</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\frac23$</p></div></details>
+<details class="ct-sol"><summary>Show the solution &ndash; The two sides of the peak</summary><div class="ct-text">
+<p>In a mountainous permutation the peak is the largest element, $10$. The numbers $1,\dots,9$ are split into a left set $L$ and a right set $R$, both nonempty (the peak is not at an end); the left side is $L$ in increasing order and the right side is $R$ in decreasing order. Conversely, every split with $L,R\ne\varnothing$ gives one mountainous permutation. Hence there are $2^9-2=510$ of them.</p><p>The first element is $\min L$ and the last element is $\min R$. The number $1$ is in $L$ or in $R$; by the left-right mirror symmetry it suffices to count the case $1\in L$ and double. Then the first element is $1$ and the sum is odd exactly when $\min R$ is even. Here $R$ is any nonempty subset of $\{2,\dots,9\}$ (then $L$ automatically contains $1$). Counting by the minimum:
+\[\min R=2:\ 2^7,\quad \min R=4:\ 2^5,\quad \min R=6:\ 2^3,\quad \min R=8:\ 2^1,\]
+a total of $128+32+8+2=170$. With $1\in R$ there are also $170$, so $340$ permutations qualify, and the fraction is $\frac{340}{510}=\boxed{\tfrac23}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p10">
+<h3>Problem 19</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VII scale">M</span>Algebra &middot; LPS VII, Chapter 9: Polynomials and Root-Coefficient Strategy &middot; Vieta&#x27;s Relations</div>
+<div class="ct-text"><p>Let $c$ and $d$ be distinct real numbers. The parabolas $y=x^2+cx+d$ and $y=-x^2+dx+c$ are graphed in the coordinate plane. There are two lines that are tangent to both parabolas, and their slopes are $c$ and $d$. Compute $c-d$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$-4$</p></div></details>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Use the tangent of slope c</summary><div class="ct-text">
+<p>A line $y=kx+m$ is tangent to $y=x^2+cx+d$ exactly when $x^2+(c-k)x+(d-m)=0$ has a double root, i.e.
+\[(c-k)^2=4(d-m).\tag{1}\]
+It is tangent to $y=-x^2+dx+c$ exactly when $x^2+(k-d)x+(m-c)=0$ has a double root, i.e.
+\[(d-k)^2=4(m-c).\tag{2}\]
+One common tangent has slope $k=c$. Then (1) gives $0=4(d-m)$, so $m=d$, and (2) gives $(d-c)^2=4(d-c)$. Since $c\ne d$, we may divide: $d-c=4$. Hence $c-d=\boxed{-4}$.</p><p>(Check with the other slope $k=d$: (2) gives $m=c$, and (1) becomes $(c-d)^2=4(d-c)$, again $d-c=4$; so the data are consistent.)</p>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Vieta on the slope equation</summary><div class="ct-text">
+<p>A line $y=kx+m$ is tangent to $y=x^2+cx+d$ exactly when $x^2+(c-k)x+(d-m)=0$ has a double root, that is $(c-k)^2=4(d-m)$; and it is tangent to $y=-x^2+dx+c$ exactly when $x^2+(k-d)x+(m-c)=0$ has a double root, that is $(d-k)^2=4(m-c)$. Adding the two conditions eliminates $m$:
+\[(c-k)^2+(d-k)^2=4(d-c),\qquad\text{i.e.}\qquad 2k^2-2(c+d)k+\bigl(c^2+d^2+4c-4d\bigr)=0 .\]
+Conversely, for each root $k$ of this quadratic, $m$ is determined by the first condition and the second then holds. So the slopes of the common tangents are the roots of this quadratic, and these are $c$ and $d$. By Vieta's formulas their product is
+\[cd=\frac{c^2+d^2+4c-4d}{2}\quad\Longrightarrow\quad (c-d)^2+4(c-d)=0 .\]
+As $c\ne d$, we get $c-d=\boxed{-4}$. (The sum of the roots, $c+d$, matches automatically.)</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p11">
+<h3>Problem 20</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VI scale">H</span>Geometry &middot; LPS VI, Chapter 12: Circle Angles and Cyclic Geometry &middot; Cyclic Quadrilaterals</div>
+<div class="ct-text"><p>Points $A,B,C,D$, and $E$ lie on a circle in that order such that $\angle ABD=90^\circ$ and $\angle ADC=\angle CBE=60^\circ$. Segments $\overline{BD}$ and $\overline{CE}$ intersect at point $F$. The circle passing through points $A$, $B$, and $F$ intersects $\overline{AE}$ at $G\neq A$. Given $BF=10$ and $DF=8$, compute $AG$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$9\sqrt3-\sqrt7$</p></div></details>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Arcs, a similar pair, then a projection</summary><div class="ct-text">
+<div class="ct-fig"><img style="width:321px" src="/assets/contests/2026-27/bmmt-11_s1.svg" alt="Figure for the solution"></div>
+<p>Let $\omega$ be the circle, with radius $R$.</p><p><em>Arcs.</em> $\angle ABD=90^\circ$, so $AD$ is a diameter and the arc $ABCD$ is $180^\circ$. The inscribed angle $\angle ADC=60^\circ$ cuts off arc $ABC$, so arc $AC=120^\circ$ and arc $CD=60^\circ$. The inscribed angle $\angle CBE=60^\circ$ cuts off arc $CDE$ of $120^\circ$, so arc $DE=60^\circ$ and the remaining arc $EA=120^\circ$.</p><p><em>The radius.</em> Arcs $CD$ and $DE$ are equal, so $\angle DEC=\angle DBE=30^\circ$ (each is half of a $60^\circ$ arc). Triangles $DEF$ and $DBE$ share the angle at $D$ (since $F$ lies on $DB$), and $\angle DEF=\angle DEC=\angle DBE$. Hence they are similar, and $\frac{DE}{DB}=\frac{DF}{DE}$:
+\[DE^2=DF\cdot DB=8\cdot 18=144,\qquad DE=12.\]
+A chord cutting off a $60^\circ$ arc equals the radius, so $R=12$ and $AD=24$.</p><p><em>Lengths at $A$.</em> In right triangle $ABD$, $AB^2=24^2-18^2=252$, and in right triangle $ABF$, $AF^2=AB^2+BF^2=352$, so $AF=4\sqrt{22}$. In triangle $AFD$, by the law of cosines,
+\[\cos\angle FAD=\frac{AF^2+AD^2-FD^2}{2\cdot AF\cdot AD}=\frac{352+576-64}{2\cdot 4\sqrt{22}\cdot 24}=\frac{9}{2\sqrt{22}},\]
+and so $\sin\angle FAD=\sqrt{1-\frac{81}{88}}=\frac{\sqrt7}{2\sqrt{22}}$.
+Also $\angle DAE=30^\circ$ (half of arc $DE$). The points $B$ (hence $F$) and $E$ lie on opposite sides of the diameter $AD$, so $\angle FAE=\angle FAD+30^\circ$.</p><p><em>The point $G$.</em> Because $\angle ABF=90^\circ$, segment $AF$ is a diameter of the circle through $A,B,F$; as $G$ lies on that circle, $\angle AGF=90^\circ$. So $G$ is the foot of the perpendicular from $F$ to $AE$, and
+\[AG=AF\cos(\angle FAD+30^\circ)=4\sqrt{22}\left(\frac{9}{2\sqrt{22}}\cdot\frac{\sqrt3}{2}-\frac{\sqrt7}{2\sqrt{22}}\cdot\frac12\right)=\boxed{9\sqrt3-\sqrt7}.\]</p>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Coordinates on the diameter</summary><div class="ct-text">
+<p><em>Arcs.</em> Since $\angle ABD=90^\circ$, $AD$ is a diameter. The inscribed angle $\angle ADC=60^\circ$ cuts off arc $ABC=120^\circ$, so arc $CD=180^\circ-120^\circ=60^\circ$; the inscribed angle $\angle CBE=60^\circ$ cuts off arc $CDE=120^\circ$, so arc $DE=60^\circ$. Thus $D$ is the midpoint of arc $CE$, and the diameter $AD$ is perpendicular to the chord $CE$.</p><p>Let the radius be $R$ and set $A=(0,0)$, $D=(2R,0)$, centre $(R,0)$, with $B$ above the $x$-axis. Then $C$ and $E$ are at central angles $\pm 60^\circ$ from $D$: $C=(\frac{3R}{2},\frac{\sqrt3R}{2})$, $E=(\frac{3R}{2},-\frac{\sqrt3 R}{2})$, and the line $CE$ is $x=\frac{3R}{2}$.</p><p><em>Finding $R$.</em> $F$ lies on $BD$ with $DF=8$, $DB=18$, and on the line $x=\frac{3R}{2}$, so the horizontal distance from $D$ to $F$ is $\frac R2$, and the horizontal distance from $D$ to $B$ is $\frac{18}{8}\cdot\frac R2=\frac{9R}{8}$. In the right triangle $ABD$ (right angle at $B$), the projection of $DB$ on the hypotenuse $DA$ satisfies $DB^2=DA\cdot(\text{projection})$:
+\[324=2R\cdot\frac{9R}{8}=\frac{9R^2}{4},\qquad R=12 .\]
+So $A=(0,0)$, $D=(24,0)$, $B=D+\frac{18}{8}(F-D)$ with $F=(18,y_F)$; from $DF=8$: $y_F^2=64-36=28$, $F=(18,2\sqrt7)$. Also $E=(18,-6\sqrt3)$.</p><p><em>The point $G$.</em> $\angle ABF=90^\circ$, so $AF$ is a diameter of circle $ABF$ and $\angle AGF=90^\circ$: $G$ is the foot of the perpendicular from $F$ to line $AE$. Hence $AG$ is the projection of $\overrightarrow{AF}$ on the unit vector along $\overrightarrow{AE}=(18,-6\sqrt3)$, which is $\left(\frac{\sqrt3}{2},-\frac12\right)$:
+\[AG=18\cdot\frac{\sqrt3}{2}+2\sqrt7\cdot\left(-\frac12\right)=\boxed{9\sqrt3-\sqrt7}.\]</p>
+</div></details>
+</section>
+<h2 class="ct-group" id="individual-tiebreaker">Individual Tiebreaker</h2>
+<section class="ct-problem" id="p12">
+<h3>Problem 3</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Algebra &middot; LPS VI, Chapter 33: Radicals and Irrational Expressions &middot; Operations with Radicals</div>
+<div class="ct-text"><p>Find the number of positive integers $n\le 2026$ for which $\sqrt n$ is irrational and there exist a nonnegative integer $a$ and a positive integer $b$ such that
+\[\sqrt n=a+\cfrac{1}{b+\cfrac{1}{b+\cfrac{1}{b+\cdots}}}\,.\]
+For example, $n=2$ has this property because
+\[\sqrt 2=1+\cfrac{1}{2+\cfrac{1}{2+\cfrac{1}{2+\cdots}}}\,.\]</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$45$</p></div></details>
+<details class="ct-sol"><summary>Show the solution &ndash; Evaluate the periodic fraction</summary><div class="ct-text">
+<p>Let $x=b+\cfrac{1}{b+\cfrac{1}{b+\cdots}}$. Then $x&gt;0$ and $x=b+\frac1x$, so $x^2-bx-1=0$ and $x=\frac{b+\sqrt{b^2+4}}{2}$. Hence
+\[\frac1x=\frac{2}{b+\sqrt{b^2+4}}=\frac{\sqrt{b^2+4}-b}{2},\qquad \sqrt n=a+\frac1x=\frac{2a-b}{2}+\frac{\sqrt{b^2+4}}{2}.\]
+Let $r=2a-b$, an integer, so $2\sqrt n-r=\sqrt{b^2+4}$. Squaring, $4n-4r\sqrt n+r^2=b^2+4$. If $r\ne 0$, this would make $\sqrt n=\frac{4n+r^2-b^2-4}{4r}$ rational, contrary to the hypothesis. So $r=0$, i.e. $b=2a$, and then $4n=b^2+4$, i.e. $n=a^2+1$; as $b\ge 1$, $a\ge 1$.</p><p>Conversely, if $n=a^2+1$ with $a\ge 1$, then $a^2&lt;n&lt;(a+1)^2$, so $\sqrt n$ is irrational, and $b=2a$ works by the computation above (for example $a=1$, $b=2$ is the $\sqrt2$ case).</p><p>So the answers are $n=a^2+1\le 2026$ with $a\ge1$, i.e. $1\le a\le 45$ (note $45^2+1=2026$). There are $\boxed{45}$ such $n$.</p>
+</div></details>
+</section>
+<h2 class="ct-group" id="team-round">Team Round</h2>
+<section class="ct-problem" id="p13">
+<h3>Problem 9</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Number Theory &middot; LPS VI, Chapter 47: Combinatorial Number Theory &middot; Counting Structured Integer Objects</div>
+<div class="ct-text"><p>Jordan chooses three distinct odd numbers, $a$, $b$, and $c$, between $1$ and $1001$, inclusive, and calculates $a+b-c$. How many different values can be calculated this way?</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$1499$</p></div></details>
+<details class="ct-sol"><summary>Show the solution &ndash; Bounds, then fill the range</summary><div class="ct-text">
+<p><em>Necessary conditions.</em> The sum of three odd numbers is odd, so $a+b-c$ is odd. Since $a,b$ are distinct, $a+b\ge 1+3=4$, and $c\le 1001$, so $a+b-c\ge -997$. Also $a+b\le 999+1001=2000$ and $c\ge 1$, so $a+b-c\le 1999$.</p><p><em>Every odd value from $-997$ to $1999$ occurs.</em></p><ul class="ct-ul"><li><p>Take $c=1$. Then $a,b$ are distinct odd numbers in $\{3,5,\dots,1001\}$, and every even $s$ with $8\le s\le 2000$ is such a sum: $s=3+(s-3)$ if $s\le 1004$ (then $5\le s-3\le 1001$), and $s=(s-1001)+1001$ if $s&gt;1004$ (then $5\le s-1001\le 999$). So all odd values $s-1$ from $7$ to $1999$ occur.</p></li><li><p>Take $c=1001$. Then $a,b$ are distinct odd numbers in $\{1,3,\dots,999\}$, and every even $s$ with $4\le s\le 1996$ is such a sum: $s=1+(s-1)$ if $s\le 1000$, and $s=(s-999)+999$ if $s\ge 1002$ (then $3\le s-999\le 997$). So all odd values $s-1001$ from $-997$ to $995$ occur.</p></li></ul><p>Together these cover all odd numbers from $-997$ to $1999$. Their number is $\frac{1999-(-997)}{2}+1=\boxed{1499}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p14">
+<h3>Problem 10</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Geometry &middot; LPS VI, Chapter 24: Quadrilaterals and Polygon Structure &middot; Regular Polygons</div>
+<div class="ct-text"><p>Regular hexagon $ABCDEF$ has side length $1$. Let $W$, $X$, $Y$, and $Z$ be the midpoints of $\overline{AB}$, $\overline{BC}$, $\overline{CD}$, and $\overline{DE}$, respectively. Points $P$ and $Q$ lie on $\overline{WZ}$ such that $PZ=QW$ and the area of the convex pentagon $PQYCX$ is $\frac14$ of the area of $ABCDEF$. Compute the length $PQ$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\frac{\sqrt3}{3}$</p></div></details>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Cut off two corners</summary><div class="ct-text">
+<div class="ct-fig"><img style="width:282px" src="/assets/contests/2026-27/bmmt-14_s1.svg" alt="Figure for the solution"></div>
+<p>Let $O$ be the centre. The sides $AB$ and $DE$ are opposite, so $WZ$ passes through $O$, is perpendicular to both, and $WZ=2\cdot\frac{\sqrt3}{2}=\sqrt3$ (twice the apothem). Reflection in line $OC$ maps the hexagon to itself and swaps $B\leftrightarrow D$, $W\leftrightarrow Z$, $X\leftrightarrow Y$; since $PZ=QW$ means $WP=ZQ$, it also swaps $P\leftrightarrow Q$. Line $OC$ is parallel to $AB$, so it is perpendicular to $WZ$. In the convex pentagon $PQYCX$ the vertex $P$ is joined to $X$, so $P$ is the point nearer to $W$; let $t=WP=ZQ$.</p><p>$WZ$ cuts the hexagon (area $\frac{3\sqrt3}{2}$) into two halves; the half $WBCDZ$ has area $\frac{3\sqrt3}{4}$ and contains the pentagon. Removing the pentagon leaves the two congruent quadrilaterals $WBXP$ and $ZDYQ$. Now $[WBX]=\frac12\cdot\frac12\cdot\frac12\sin 120^\circ=\frac{\sqrt3}{16}$, and $[WXP]=\frac12\cdot t\cdot h$, where $h$ is the distance from $X$ to $WZ$. Since $OX\perp BC$, $OX=\frac{\sqrt3}{2}$ and $\angle XOC=30^\circ$, the distance is $h=OX\cos 30^\circ=\frac34$. Therefore
+\[\frac{3\sqrt3}{4}-2\left(\frac{\sqrt3}{16}+\frac{3t}{8}\right)=\frac14\cdot\frac{3\sqrt3}{2}\quad\Longrightarrow\quad \frac{3t}{4}=\frac{\sqrt3}{4},\quad t=\frac{\sqrt3}{3}.\]
+Finally $PQ=\sqrt3-2t=\boxed{\tfrac{\sqrt3}{3}}$.</p>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Shoelace in convenient coordinates</summary><div class="ct-text">
+<p>Place the centre at the origin with $WZ$ on the $x$-axis and $C$ below it. The apothem is $\frac{\sqrt3}{2}$ and the circumradius is $1$, so
+\[W=\left(-\tfrac{\sqrt3}{2},0\right),\ Z=\left(\tfrac{\sqrt3}{2},0\right),\ C=(0,-1),\ B=\left(-\tfrac{\sqrt3}{2},-\tfrac12\right),\ D=\left(\tfrac{\sqrt3}{2},-\tfrac12\right),\]
+(indeed $W$ is the midpoint of $AB$ with $A=(-\frac{\sqrt3}{2},\frac12)$, and $Z$ the midpoint of $DE$ with $E=(\frac{\sqrt3}{2},\frac12)$). Then $X=\left(-\frac{\sqrt3}{4},-\frac34\right)$ and $Y=\left(\frac{\sqrt3}{4},-\frac34\right)$. The condition $PZ=QW$ says $P$ and $Q$ are symmetric about the origin; as $P$ is joined to $X$ in the convex pentagon, $P=(-s,0)$ and $Q=(s,0)$ with $s&gt;0$, and $PQ=2s$.</p><p>The shoelace formula for $P,Q,Y,C,X$ (the terms $x_iy_{i+1}-x_{i+1}y_i$ are $0$, $-\frac{3s}{4}$, $-\frac{\sqrt3}{4}$, $-\frac{\sqrt3}{4}$, $-\frac{3s}{4}$) gives
+\[[PQYCX]=\frac12\left(\frac{3s}{2}+\frac{\sqrt3}{2}\right)=\frac{3s}{4}+\frac{\sqrt3}{4}.\]
+The hexagon has area $\frac{3\sqrt3}{2}$, so we need $\frac{3s}{4}+\frac{\sqrt3}{4}=\frac{3\sqrt3}{8}$, i.e. $s=\frac{\sqrt3}{6}$. Hence $PQ=2s=\boxed{\tfrac{\sqrt3}{3}}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p15">
+<h3>Problem 12</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Geometry &middot; LPS VI, Chapter 32: Area by Measurement and Decomposition &middot; Additive and Subtractive Area</div>
+<div class="ct-text"><p>Hexagon $ABCDEF$, shown below, has $AB=DE=12$, $BC=CD=18$, and $EF=AF=6$. All adjacent sides of the hexagon meet at right angles, and the measure of interior angle $F$ is greater than $180^\circ$. Rena wants to draw a line segment $\overline{GH}$ with $G$ on $\overline{BC}$ and $H$ on $\overline{DE}$ such that $\overline{GH}$ divides $ABCDEF$ into two polygons with equal area. It turns out that all such line segments $\overline{GH}$ pass through a common point $P$ inside the hexagon. Find $FP$.</p><div class="ct-fig"><img style="width:273px" src="/assets/contests/2026-27/bmmt-15.svg" alt="Figure for Team Round, Problem 12"></div></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$5$</p></div></details>
+<details class="ct-sol"><summary>Show the solution &ndash; A trapezoid with a fixed midline</summary><div class="ct-text">
+<div class="ct-fig"><img style="width:286px" src="/assets/contests/2026-27/bmmt-15_s1.svg" alt="Figure for the solution"></div>
+<p>Place $C=(0,0)$ with $CB$ along the positive $x$-axis and $CD$ along the positive $y$-axis. Following the sides at right angles,
+\[B=(18,0),\ A=(18,12),\ F=(12,12),\ E=(12,18),\ D=(0,18).\]
+So the hexagon is the $18\times 18$ square with corners $C$, $B$, $(18,18)$, $D$, with the $6\times6$ square at the corner $(18,18)$ removed (this makes the angle at $F$ reflex, as required). Its area is $324-36=288$.</p><p>Let $G=(g,0)$ with $0\le g\le 18$ and $H=(h,18)$ with $0\le h\le 12$. The part of the hexagon on the side of $C$ is the trapezoid $CGHD$ with parallel sides $CG=g$, $DH=h$ and height $18$, of area $9(g+h)$. Equal areas means $9(g+h)=144$, i.e. $g+h=16$.</p><p>The midpoint of $GH$ is $\left(\frac{g+h}{2},9\right)=(8,9)$ for every such segment, so all of them pass through $P=(8,9)$ (and different segments meet only there). Hence
+\[FP=\sqrt{(12-8)^2+(12-9)^2}=\boxed{5}.\]</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p16">
+<h3>Problem 13</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Number Theory &middot; LPS VI, Chapter 15: GCD, LCM, and Multiplicative Interaction &middot; GCD Logic</div>
+<div class="ct-text"><p>A two-digit number $\underline{A}\,\underline{B}$ is <em>reversible</em> if all its digits are nonzero and the greatest common divisor of $\underline{A}\,\underline{B}$ and $\underline{B}\,\underline{A}$ is $1$. How many two-digit numbers are reversible?</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$40$</p></div></details>
+<details class="ct-sol"><summary>Show the solution &ndash; Which primes can divide both</summary><div class="ct-text">
+<p>Let the digits be $a,b\in\{1,\dots,9\}$, and let $p$ be a prime dividing both $10a+b$ and $10b+a$. Then $p$ divides their sum $11(a+b)$ and their difference $9(a-b)$.</p><ul class="ct-ul"><li><p>$p=3$: this happens exactly when $3\mid a+b$ (a number is divisible by $3$ when its digit sum is).</p></li><li><p>$p=11$: $11\mid 10a+b$ means $11\mid b-a$ (as $10\equiv -1$), i.e. $a=b$.</p></li><li><p>$p=2$: both numbers are even exactly when $a$ and $b$ are both even.</p></li><li><p>$p\ge 5$, $p\ne 11$: then $p\mid a+b$ and $p\mid a-b$, so $p\mid 2a$ and $p\mid 2b$, i.e. $p\mid a$ and $p\mid b$; since $a,b\le 9$ this gives $a=b=p$.</p></li></ul><p>Therefore $\underline{a}\,\underline{b}$ is reversible exactly when $a\ne b$, $3\nmid a+b$, and $a,b$ are not both even.</p><p><em>Counting.</em> The digits $1,\dots,9$ contain three of each residue mod $3$, so there are $81-27=54$ ordered pairs with $3\nmid a+b$. Of these, the pairs with $a=b$ have $3\nmid 2a$, i.e. $a\in\{1,2,4,5,7,8\}$: $6$ pairs; $48$ remain. Among the even digits $2,4,6,8$ (residues $2,1,0,2$ mod $3$) there are $12$ ordered pairs with $a\ne b$, of which those with $3\mid a+b$ are $(2,4),(4,2),(4,8),(8,4)$; so $8$ pairs with both digits even must also be removed. The count is $48-8=\boxed{40}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p17">
+<h3>Problem 14</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Algebra &middot; LPS VI, Chapter 53: Sequences, Series, and Recursive Patterns &middot; Recursive Definitions</div>
+<div class="ct-text"><p>Let $\{a_n\}$ be the sequence defined by $a_1=1$, $a_2=1$, and $a_n=a_{n-1}a_{n-2}+a_{n-1}+a_{n-2}$ for each $n\ge 3$. Find the smallest positive integer $k$ such that $a_k$ has more than $30$ digits.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$12$</p></div></details>
+<details class="ct-sol"><summary>Show the solution &ndash; Add one and factor</summary><div class="ct-text">
+<p>Adding $1$ to the recurrence and factoring,
+\[a_n+1=a_{n-1}a_{n-2}+a_{n-1}+a_{n-2}+1=(a_{n-1}+1)(a_{n-2}+1).\]
+Let $b_n=a_n+1$; then $b_1=b_2=2$ and $b_n=b_{n-1}b_{n-2}$. By induction $b_n=2^{F_n}$, where $F_1=F_2=1$, $F_n=F_{n-1}+F_{n-2}$ are the Fibonacci numbers: the exponents add when the powers of $2$ multiply. The Fibonacci numbers run
+\[1,1,2,3,5,8,13,21,34,55,89,144,\dots\]
+so $a_{11}=2^{89}-1$ and $a_{12}=2^{144}-1$.</p><p>Now $2^{89}&lt;2^{90}=1024^9&lt;(1.1\cdot 10^3)^9&lt;3\cdot 10^{27}$, so $a_{11}$ (and every earlier term) has at most $28$ digits. On the other hand $2^{144}&gt;1000^{14}\cdot 16&gt;10^{43}$, so $a_{12}=2^{144}-1\ge 10^{43}$ has more than $30$ digits. The answer is $k=\boxed{12}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p18">
+<h3>Problem 15</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VI scale">H</span>Geometry &middot; LPS VI, Chapter 12: Circle Angles and Cyclic Geometry &middot; Arcs, Central Angles, and Inscribed Angles</div>
+<div class="ct-text"><p>Convex quadrilateral $ABCD$ has $AB=BC$, $\angle ABC=90^\circ$, and $\angle ADC=45^\circ$. There exists a point $O$ inside $ABCD$ such that $ABCO$ is a rhombus. Line $AO$ intersects $\overline{CD}$ at $X$. Given that $CO=2$ and $CX=2\cdot OX$, find the area of $ABCD$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$5+\sqrt3$</p></div></details>
+<details class="ct-sol"><summary>Show solution 1 &ndash; The circle centred at O</summary><div class="ct-text">
+<div class="ct-fig"><img style="width:289px" src="/assets/contests/2026-27/bmmt-18_s1.svg" alt="Figure for the solution"></div>
+<p><em>The rhombus is a square.</em> $ABCO$ is a rhombus with $\angle ABC=90^\circ$, so it is a square of side $2$; in particular $OA=OC=2$, $\angle AOC=90^\circ$, $OA\parallel BC$ and $OC\perp OA$.</p><p><em>$D$ is on the circle centred at $O$.</em> Since $ABCD$ is convex, $B$ and $D$ are on opposite sides of $AC$; $O$ (the reflection of $B$ in $AC$) is on the same side as $D$. Let $\Gamma$ be the circle with centre $O$ and radius $2$, through $A$ and $C$. Every point of $\Gamma$ on $O$'s side of $AC$ sees $AC$ under the inscribed angle $\frac12\angle AOC=45^\circ$, and on that side of $AC$ the points seeing $AC$ under $45^\circ$ form a single arc. Hence $D$ lies on $\Gamma$: $OD=2$.</p><p><em>The angle at $C$.</em> $X$ lies on line $AO$ and $OC\perp AO$, so triangle $COX$ has a right angle at $O$. With $CX=2\,OX$, Pythagoras gives $4\,OX^2=OX^2+4$, so $OX=\frac{2}{\sqrt3}$ and $\cos\angle OCX=\frac{OC}{CX}=\frac{\sqrt3}{2}$: $\angle OCD=30^\circ$.</p><p><em>Area.</em> Triangle $OCD$ is isosceles ($OC=OD=2$) with base angles $30^\circ$, so $\angle COD=120^\circ$. Because $O$ is inside $ABCD$, the angles around $O$ give $\angle DOA=360^\circ-90^\circ-120^\circ=150^\circ$, and
+\[[ABCD]=[ABCO]+[OCD]+[ODA]=4+\frac12\cdot2\cdot2\sin120^\circ+\frac12\cdot2\cdot2\sin150^\circ,\]
+so $[ABCD]=4+\sqrt3+1=\boxed{5+\sqrt3}$.</p>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Coordinates</summary><div class="ct-text">
+<p>$ABCO$ is a rhombus with a right angle at $B$, so it is a square of side $CO=2$. Put $B=(0,0)$, $A=(0,2)$, $C=(2,0)$, $O=(2,2)$; line $AO$ is $y=2$.</p><p>Write $X=(2+u,2)$ (a point of line $AO$; $u\ne0$ since $X\ne O$). Then $OX=|u|$ and $CX=\sqrt{u^2+4}$, and $CX=2\,OX$ gives $u^2+4=4u^2$, $|u|=\frac{2}{\sqrt3}$. Line $CX$ has slope $\frac{2}{u}$, and $D$ lies on it beyond $X$ (as $X$ is on segment $CD$): $D=(2+\lambda u,\,2\lambda)$ with $\lambda\ge1$.</p><p><em>Using $\angle ADC=45^\circ$.</em> The vectors $\overrightarrow{DA}=(-2-\lambda u,\,2-2\lambda)$ and $\overrightarrow{DC}=(-\lambda u,\,-2\lambda)$ must make an angle of $45^\circ$, i.e. $\overrightarrow{DA}\cdot\overrightarrow{DC}=|\overrightarrow{DA}||\overrightarrow{DC}|\cos45^\circ$; equivalently the cross product and the dot product are equal in absolute value. With $u^2=\frac43$:
+\[\begin{aligned}\text{dot}&amp;=\lambda(2u+\lambda u^2)-2\lambda(2-2\lambda)=\tfrac{16}{3}\lambda^2+2u\lambda-4\lambda,\\ \text{cross}&amp;=(-2-\lambda u)(-2\lambda)-(2-2\lambda)(-\lambda u)=4\lambda+2\lambda u .\end{aligned}\]
+Dividing by $\lambda&gt;0$, we need $\frac{16}{3}\lambda+2u-4=\pm(4+2u)$, with the dot product positive.</p><ul class="ct-ul"><li><p>Sign $+$: $\frac{16}{3}\lambda=8$, $\lambda=\frac32$.</p></li><li><p>Sign $-$: $\frac{16}{3}\lambda=-4u$, so $u&lt;0$, $u=-\frac{2}{\sqrt3}$ and $\lambda=\frac{\sqrt3}{2}&lt;1$, which puts $X$ outside segment $CD$: rejected.</p></li></ul><p>With $\lambda=\frac32$: if $u=-\frac{2}{\sqrt3}$, then $D=(2-\sqrt3,3)$ and $O=(2,2)$ lies outside $ABCD$ (it is on the far side of line $CD$ from $A$), which is not allowed. So $u=\frac{2}{\sqrt3}$ and $D=(2+\sqrt3,\,3)$; then $ABCD$ is convex with $O$ inside. By the shoelace formula for $A(0,2)$, $B(0,0)$, $C(2,0)$, $D(2+\sqrt3,3)$ (the terms $x_iy_{i+1}-x_{i+1}y_i$ are $0$, $0$, $6$, $4+2\sqrt3$):
+\[[ABCD]=\frac12\left(6+4+2\sqrt3\right)=\boxed{5+\sqrt3}.\]</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p19">
+<h3>Problem 16</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Algebra &middot; LPS VI, Chapter 49: Systems of Equations and Multiple Constraints &middot; Partial Totals and Cyclic Sums</div>
+<div class="ct-text"><p>Real numbers $a,b,c,d,e$ satisfy the system of equations
+\[\begin{aligned}
+a+b+2d&amp;=22,\\
+b+c+2e&amp;=23,\\
+c+d+2a&amp;=24,\\
+d+e+2b&amp;=25,\\
+e+a+2c&amp;=26.
+\end{aligned}\]
+Compute $a\cdot b\cdot c\cdot d\cdot e$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$3240$</p></div></details>
+<details class="ct-sol"><summary>Show the solution &ndash; Total, then skip-one sums</summary><div class="ct-text">
+<p>Each variable appears with total coefficient $4$ in the five equations, so adding them gives $4S=120$, where $S=a+b+c+d+e=30$. Subtracting each equation from $S$ (for example $S-(a+b+2d)=c+e-d$):
+\[c+e-d=8,\quad a+d-e=7,\quad b+e-a=6,\quad a+c-b=5,\quad b+d-c=4 .\]
+Adding consecutive pairs of these (first and second, second and third, and so on, last and first):
+\[a+c=15,\quad b+d=13,\quad c+e=11,\quad d+a=9,\quad e+b=12 .\]
+Then $2a=(a+c)-(c+e)+(e+b)-(b+d)+(d+a)=15-11+12-13+9=12$, so $a=6$, and successively $c=9$, $e=2$, $b=10$, $d=3$. These satisfy all five equations (for instance $a+b+2d=6+10+6=22$ and $e+a+2c=2+6+18=26$). Hence
+\[abcde=6\cdot10\cdot9\cdot3\cdot2=\boxed{3240}.\]</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p20">
+<h3>Problem 17</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VI scale">H</span>Combinatorics &middot; LPS VI, Chapter 38: Probability and Expected Value &middot; Dependent and Independent Events</div>
+<div class="ct-text"><p>A frog is hopping between a big lilypad and a small lilypad. With $200$ days left, the frog is sitting on the big lilypad. Every day from $199$ to $1$ day left, inclusive, the frog has a $\frac{1}{n+2}$ chance of hopping to the other lilypad, where $n$ is the number of days left. When there are $0$ days left, the frog does not move. What is the probability that the frog is sitting on the big lilypad when there are $0$ days left?</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\frac{20101}{40200}$</p></div></details>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Track the difference of the probabilities</summary><div class="ct-text">
+<p>At any moment let $p$ be the probability that the frog is on the big lilypad and $\delta=p-(1-p)=2p-1$. On the day with $n$ days left, with $q=\frac1{n+2}$ the new probability is $p'=(1-q)p+q(1-p)$, so
+\[\delta'=2p'-1=(1-2q)(2p-1)=\frac{n}{n+2}\,\delta .\]
+Initially $\delta=1$. After the days $n=199,198,\dots,1$,
+\[\delta=\prod_{n=1}^{199}\frac{n}{n+2}=\frac{1\cdot2\cdot3\cdots199}{3\cdot4\cdots201}=\frac{1\cdot 2}{200\cdot201}=\frac{1}{20100}.\]
+Hence $p=\frac{1+\delta}{2}=\frac{20101}{40200}$, so the answer is $\boxed{\tfrac{20101}{40200}}$.</p>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Count the hops by parity</summary><div class="ct-text">
+<p>The frog starts on the big lilypad, so it ends there exactly when it hops an even number of times. On the day with $n$ days left it hops with probability $q_n=\frac1{n+2}$, whichever lilypad it is on, so the hops on different days are independent events.</p><p>Consider the product
+\[\Phi(t)=\prod_{n=1}^{199}\bigl((1-q_n)+q_n t\bigr).\]
+Expanding it, each term picks, for every day, either &ldquo;no hop&rdquo; (factor $1-q_n$) or &ldquo;hop&rdquo; (factor $q_nt$); so the coefficient of $t^j$ is the probability of exactly $j$ hops. Let $E$ and $O$ be the probabilities of an even and of an odd number of hops. Then
+\[E+O=\Phi(1)=1,\qquad E-O=\Phi(-1)=\prod_{n=1}^{199}\left(1-\frac{2}{n+2}\right)=\prod_{n=1}^{199}\frac{n}{n+2}.\]
+The product telescopes: the numerators are $1,2,\dots,199$ and the denominators $3,4,\dots,201$, so it equals $\frac{1\cdot2}{200\cdot201}=\frac{1}{20100}$. Therefore
+\[E=\frac12\left(1+\frac1{20100}\right)=\boxed{\tfrac{20101}{40200}}.\]</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p21">
+<h3>Problem 18</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VI scale">H</span>Number Theory &middot; LPS VI, Chapter 54: Prime Patterns and Number-Theoretic Search &middot; Prime Restrictions by Congruence</div>
+<div class="ct-text"><p>A positive integer is <em>challenging</em> if it is composite and its last digit is $1$, $3$, $7$, or $9$. Compute the largest even integer that cannot be written as the sum of two challenging positive integers.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$122$</p></div></details>
+<details class="ct-sol"><summary>Show the solution &ndash; Multiples of three do the work</summary><div class="ct-text">
+<p>Call a number challenging if it is composite and ends in $1,3,7,9$, i.e. composite, odd and not divisible by $5$.</p><p><em>$122$ is not a sum of two challenging numbers.</em> The challenging numbers below $122$ are
+\[9,21,27,33,39,49,51,57,63,69,77,81,87,91,93,99,111,117,119,121,\]
+and subtracting them from $122$ gives
+\[113,101,95,89,83,73,71,65,59,53,45,41,35,31,29,23,11,5,3,1,\]
+each of which is $1$, a prime, or a multiple of $5$; none is challenging.</p><p><em>Every even $N\ge124$ is such a sum.</em> Note: every odd multiple of $3$ that is at least $9$ and not divisible by $5$ is challenging. We choose a challenging $x$ with $x\equiv N\pmod 3$ and $x\not\equiv N\pmod5$; then $y=N-x$ is odd (even minus odd), divisible by $3$, not divisible by $5$, and we only need $y\ge 9$. Use the pairs
+\[\begin{aligned}N&amp;\equiv0\!\!\pmod3: &amp;&amp; x\in\{9,21\},\\ N&amp;\equiv1\!\!\pmod 3: &amp;&amp; x\in\{49,91\},\\ N&amp;\equiv2\!\!\pmod3: &amp;&amp; x\in\{77,119\}.\end{aligned}\]
+In each pair the two numbers have the same residue mod $3$ but different residues mod $5$ ($9\equiv4$, $21\equiv1$; $49\equiv4$, $91\equiv1$; $77\equiv2$, $119\equiv4$), so at least one of them is $\not\equiv N\pmod 5$. Finally $y\ge 9$: for $N\equiv0,1$ this holds as $N-91\ge 33$; for $N\equiv 2\pmod3$, the smallest even $N\ge124$ is $128$, and $128-119=9$.</p><p>So the largest even integer that is not a sum of two challenging numbers is $\boxed{122}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p22">
+<h3>Problem 19</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VI scale">H</span>Geometry &middot; LPS VI, Chapter 52: Solid Geometry and Spatial Visualization &middot; Volume and Surface Area</div>
+<div class="ct-text"><p>A right rectangular prism has side lengths $20$, $30$, and $40$. Point $P$ inside the prism is the apex of six pyramids whose bases are the faces of the prism. The volumes of these six pyramids form an arithmetic sequence of positive numbers in some order. Let $Q$ be the center of the prism, which is where the space diagonals of the prism intersect. Compute the greatest possible integer value of the length $PQ$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$22$</p></div></details>
+<details class="ct-sol"><summary>Show the solution &ndash; Opposite pyramids pair up</summary><div class="ct-text">
+<div class="ct-fig"><img style="width:314px" src="/assets/contests/2026-27/bmmt-22_s1.svg" alt="Figure for the solution"></div>
+<p>Put the prism as $0\le x\le 20$, $0\le y\le 30$, $0\le z\le 40$, so $Q=(10,15,20)$, and let $P=(x,y,z)$ inside. A pyramid with a face as base and apex $P$ has height equal to the distance from $P$ to that face. The two faces of area $30\cdot40=1200$ give volumes $400x$ and $400(20-x)$; the faces of area $800$ give $\frac{800}{3}y$ and $\frac{800}{3}(30-y)$; the faces of area $600$ give $200z$ and $200(40-z)$. Each pair of opposite pyramids has total volume $8000$ (one third of the prism's volume $24000$, split between them).</p><p>The six volumes form an arithmetic sequence with mean $\frac{24000}{6}=4000$; write them as $4000+ke$ for $k\in\{-5,-3,-1,1,3,5\}$ with $e\ge0$. If $e&gt;0$, two terms sum to $8000$ only when their $k$'s are opposite, so the opposite pairs have deviations $\pm k_1e$, $\pm k_2e$, $\pm k_3e$ with $\{k_1,k_2,k_3\}=\{1,3,5\}$ (if $e=0$, then $P=Q$). Thus
+\[|x-10|=\frac{k_1e}{400},\qquad |y-15|=\frac{3k_2e}{800},\qquad |z-20|=\frac{k_3e}{200},\]
+and positivity of all six volumes means $5e&lt;4000$, i.e. $e&lt;800$. Hence
+\[PQ^2=e^2\left(\frac{k_1^2}{160000}+\frac{9k_2^2}{640000}+\frac{k_3^2}{40000}\right)=\frac{e^2}{640000}\left(4k_1^2+9k_2^2+16k_3^2\right).\]
+The bracket is largest when the largest $k$ goes with the largest coefficient: $4\cdot1+9\cdot9+16\cdot25=485$. So $PQ^2&lt;\frac{800^2}{640000}\cdot 485=485$, i.e. $PQ&lt;\sqrt{485}&lt;22.03$.</p><p>Conversely, with $(k_1,k_2,k_3)=(1,3,5)$ and $e$ running from $0$ to just below $800$, $PQ=\frac{e\sqrt{485}}{800}$ takes every value in $[0,\sqrt{485})$, and the corresponding $P$ is inside the prism with the six volumes $4000\pm e,4000\pm3e,4000\pm5e$ in arithmetic progression. Since $22&lt;\sqrt{485}$, the value $PQ=22$ is attained (with $e=\frac{800\cdot22}{\sqrt{485}}&lt;800$), and no integer larger than $22$ is possible. The answer is $\boxed{22}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p23">
+<h3>Problem 20</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-H" title="Hard, on the LPS VI scale">H</span>Combinatorics &middot; LPS VI, Chapter 6: Casework, Complement, and Constructive Counting &middot; Constructive Counting</div>
+<div class="ct-text"><p>A ten-digit number $N$ is <em>four-gone</em> if all its digits are distinct and for each $1\le n\le 10$, the $n$-digit number formed by taking the leading $n$ digits of $N$ is not divisible by $4$. For example, $1234567890$ is <em>not</em> four-gone because $12$ and $123456$ are divisible by $4$. How many ten-digit numbers are four-gone?</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$144000$</p></div></details>
+<details class="ct-sol"><summary>Show the solution &ndash; Blocks after the odd digits</summary><div class="ct-text">
+<p>A number with at least two digits is divisible by $4$ exactly when its last two digits are, and $\underline{u}\,\underline{v}=10u+v\equiv 2u+v\pmod 4$. So the condition is: the first digit is not $0,4,8$ (the one-digit number must not be divisible by $4$, and the leading digit is not $0$), and for each pair of adjacent digits $u,v$:</p><ul class="ct-ul"><li><p>if $u$ is even, then $v\notin\{0,4,8\}$;</p></li><li><p>if $u$ is odd, then $v\notin\{2,6\}$.</p></li></ul><p>All ten digits are used. Call $0,4,8$ <em>type $Z$</em> and $2,6$ <em>type $W$</em>. A type-$Z$ digit cannot be first and cannot follow an even digit, so it follows an odd digit. A type-$W$ digit cannot follow an odd digit, so it is first or follows an even digit.</p><p>Look at the maximal runs of consecutive even digits. A run that starts the number begins with a $W$; every other run begins right after an odd digit, so it begins with a $Z$; inside a run every digit after the first follows an even digit, so it is a $W$. Hence each of the three $Z$'s starts its own run right after an odd digit, and the two $W$'s are placed either at the very start or right after a $Z$ (or after another $W$ in those places). Conversely every arrangement built this way satisfies all conditions.</p><p>Count the constructions: order the five odd digits ($5!=120$); choose which three of the five odd digits are followed by a $Z$-run ($\binom53=10$) and which $Z$ goes where ($3!=6$); finally insert the two distinct $W$'s into the four ordered slots (the start, and after each $Z$): the first $W$ has $4$ choices and the second then has $5$ positions (it may go before or after the first within the same slot), giving $20$. The total is
+\[120\cdot10\cdot6\cdot20=\boxed{144000}.\]</p>
+</div></details>
+</section>
+<h2 class="ct-group" id="relay-round">Relay Round</h2>
+<section class="ct-problem" id="p24">
+<h3>Problem 13</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Combinatorics &middot; LPS VI, Chapter 6: Casework, Complement, and Constructive Counting &middot; Exhaustive Casework</div>
+<div class="ct-text"><p>How many ways can five people of distinct heights stand in a line such that no three consecutive people have heights in increasing or decreasing order, and exactly two people stand between the shortest person and the tallest person?</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$12$</p></div></details>
+<details class="ct-sol"><summary>Show the solution &ndash; Peaks and valleys</summary><div class="ct-text">
+<p>Label the heights $1&lt;2&lt;3&lt;4&lt;5$. "No three consecutive in increasing or decreasing order" means the line goes up and down alternately, so every inner person is either a peak (taller than both neighbours) or a valley (shorter than both), alternately. The tallest person $5$ is a peak or an end, and the shortest $1$ is a valley or an end. Exactly two people between them means their positions are $\{1,4\}$ or $\{2,5\}$. Reversing the line maps the first case to the second and preserves the conditions, so we count positions $\{1,4\}$ and double.</p><ul class="ct-ul"><li><p>$5$ in position $1$ and $1$ in position $4$: positions $2,4$ are valleys and $3,5$ peaks. Positions $2,3,5$ receive $2,3,4$, and the only remaining condition is $p_2&lt;p_3$ (all others hold automatically because of $5$ and $1$). That is $3$ of the $6$ orders.</p></li><li><p>$1$ in position $1$ and $5$ in position $4$: positions $2,4$ are peaks and $3,5$ valleys. Again positions $2,3,5$ receive $2,3,4$ and the only condition left is $p_2&gt;p_3$: $3$ orders.</p></li></ul><p>So positions $\{1,4\}$ give $6$ lines, and the answer is $2\cdot6=\boxed{12}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p25">
+<h3>Problem 15</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Geometry &middot; LPS VI, Chapter 4: Angle Chasing and Line Configurations &middot; Composite Angle Chases</div>
+<div class="ct-text"><p>Rectangle $ABCD$ has side lengths $AB=20$ and $BC=26$. Points $M$ and $T$ lie on line segments $\overline{AB}$ and $\overline{AD}$, respectively, such that $AT=6$, $\angle ATM=\angle MTC$, and $\angle BMT=x^\circ$. Find $x$.</p></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$\frac{315}{2}$</p></div></details>
+<details class="ct-sol"><summary>Show solution 1 &ndash; An isosceles right triangle</summary><div class="ct-text">
+<div class="ct-fig"><img style="width:244px" src="/assets/contests/2026-27/bmmt-25_s1.svg" alt="Figure for the solution"></div>
+<p>Since $AD=BC=26$ and $AT=6$, we have $TD=20=DC$, and $\angle TDC=90^\circ$. So triangle $TDC$ is an isosceles right triangle and $\angle DTC=45^\circ$. As $T$ lies on segment $AD$, $\angle ATC=180^\circ-45^\circ=135^\circ$. The condition $\angle ATM=\angle MTC$ says $TM$ bisects $\angle ATC$, so $\angle ATM=67.5^\circ$.</p><p>In the right triangle $ATM$ (right angle at $A$), $\angle AMT=90^\circ-67.5^\circ=22.5^\circ$. Also $AM=AT\tan 67.5^\circ=6(1+\sqrt2)&lt;20$, so $M$ is indeed on segment $AB$, strictly between $A$ and $B$. Since $A,M,B$ are collinear,
+\[x=\angle BMT=180^\circ-22.5^\circ=157.5^\circ,\qquad x=\boxed{\tfrac{315}{2}}.\]</p>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Coordinates and the bisector direction</summary><div class="ct-text">
+<p>Put $A=(0,0)$, $B=(20,0)$, $C=(20,26)$, $D=(0,26)$, so $T=(0,6)$. The unit vector from $T$ toward $A$ is $(0,-1)$, and from $T$ toward $C=(20,26)$, i.e. along $(20,20)$, it is $\left(\frac{1}{\sqrt2},\frac{1}{\sqrt2}\right)$. Because $\angle ATM=\angle MTC$ and $M$ is inside angle $ATC$, the ray $TM$ has the direction of the sum of these unit vectors:
+\[\left(\tfrac{1}{\sqrt2},\ \tfrac{1}{\sqrt2}-1\right)\ \parallel\ \bigl(1,\ 1-\sqrt2\bigr).\]
+Meeting the line $y=0$: from $T=(0,6)$ we move $\frac{6}{\sqrt2-1}=6(\sqrt2+1)$ to the right, so $M=(6+6\sqrt2,0)$, which is on segment $AB$ as $6+6\sqrt2&lt;20$.</p><p>The ray $MB$ points in direction $(1,0)$ and the ray $MT$ in direction $(-1,\sqrt2-1)$. Since $\tan 22.5^\circ=\sqrt2-1$, the ray $MT$ makes an angle of $22.5^\circ$ with the ray $MA$ (direction $(-1,0)$), and so $\angle BMT=180^\circ-22.5^\circ=157.5^\circ$. Thus $x=\boxed{\tfrac{315}{2}}$.</p>
+</div></details>
+</section>
+<section class="ct-problem" id="p26">
+<h3>Problem 17</h3>
+<div class="ct-meta"><span class="ct-pd ct-pd-M" title="Medium, on the LPS VI scale">M</span>Geometry &middot; LPS VI, Chapter 44: Area Ratios and Cevian Geometry &middot; Cevian Partitions</div>
+<div class="ct-text"><p>In the figure below, points $D$ and $E$ lie on segments $\overline{AB}$ and $\overline{AC}$, respectively, such that $AC=CD=8$ and $AB=BE=10$. If $AD=4$ and segments $\overline{BE}$ and $\overline{CD}$ intersect at $F$, find the area of non-convex quadrilateral $ACFB$.</p><div class="ct-fig"><img style="width:331px" src="/assets/contests/2026-27/bmmt-26.svg" alt="Figure for Relay Round, Problem 17"></div></div>
+<details class="ct-ans"><summary>Show the answer</summary><div class="ct-answer ct-text"><p>$7\sqrt{15}$</p></div></details>
+<details class="ct-sol"><summary>Show solution 1 &ndash; Two isosceles triangles and Menelaus</summary><div class="ct-text">
+<div class="ct-fig"><img style="width:331px" src="/assets/contests/2026-27/bmmt-26_s1.svg" alt="Figure for the solution"></div>
+<p><em>The angle at $A$.</em> Triangle $ACD$ is isosceles with $CA=CD=8$ and base $AD=4$; the foot of the altitude from $C$ is the midpoint of $AD$, so $\cos A=\frac{2}{8}=\frac14$ and $\sin A=\frac{\sqrt{15}}{4}$.</p><p><em>The point $E$.</em> Triangle $ABE$ is isosceles with $BA=BE=10$; the foot of the altitude from $B$ is the midpoint of $AE$, so $AE=2\cdot10\cos A=5$, hence $EC=3$. Also $DB=10-4=6$.</p><p><em>Areas.</em> $[ABC]=\frac12\cdot AB\cdot AC\sin A=\frac12\cdot10\cdot8\cdot\frac{\sqrt{15}}{4}=10\sqrt{15}$. Menelaus' theorem in triangle $ABE$ with the line $C,F,D$ gives
+\[\frac{AD}{DB}\cdot\frac{BF}{FE}\cdot\frac{EC}{CA}=1\ \Longrightarrow\ \frac46\cdot\frac{BF}{FE}\cdot\frac38=1\ \Longrightarrow\ \frac{BF}{FE}=4 .\]
+Triangles with the same apex $C$ and bases on line $BE$ have areas in the ratio of the bases, so $[BFC]=\frac45[BEC]$, and $[BEC]=\frac{EC}{AC}[ABC]=\frac38\cdot10\sqrt{15}$. Hence $[BFC]=\frac45\cdot\frac{15\sqrt{15}}{4}=3\sqrt{15}$. The non-convex quadrilateral $ACFB$ is triangle $ABC$ with triangle $BFC$ removed:
+\[[ACFB]=10\sqrt{15}-3\sqrt{15}=\boxed{7\sqrt{15}}.\]</p>
+</div></details>
+<details class="ct-sol"><summary>Show solution 2 &ndash; Coordinates</summary><div class="ct-text">
+<p>Put $A=(0,0)$ and $B=(10,0)$, so $D=(4,0)$. Since $CA=CD$, the point $C$ is on the perpendicular bisector $x=2$ of $AD$; with $AC=8$, $C=(2,2\sqrt{15})$ (taking $C$ above the line). Since $BA=BE$ and $E$ lies on $AC$, write $E=\lambda C=(2\lambda,2\sqrt{15}\lambda)$; then $BE^2=(10-2\lambda)^2+60\lambda^2=100$ gives $64\lambda^2=40\lambda$, $\lambda=\frac58$, so $E=\left(\frac54,\frac{5\sqrt{15}}{4}\right)$.</p><p>$F$ is the intersection of $CD$ and $BE$. Line $CD$: $(4,0)+s(-2,2\sqrt{15})$; line $BE$: $(10,0)+r\left(-\frac{35}{4},\frac{5\sqrt{15}}{4}\right)$. Equal $y$: $2s=\frac{5r}{4}$; equal $x$: $4-2s=10-\frac{35r}{4}$, i.e. $4-\frac{5r}{4}=10-\frac{35r}{4}$, so $r=\frac45$, $s=\frac12$ and $F=(3,\sqrt{15})$.</p><p>The shoelace formula for $A(0,0)$, $C(2,2\sqrt{15})$, $F(3,\sqrt{15})$, $B(10,0)$:
+\[[ACFB]=\frac12\left|\,(2\sqrt{15}-6\sqrt{15})+(0-10\sqrt{15})+0+0\,\right|=\frac12\cdot14\sqrt{15}=\boxed{7\sqrt{15}}.\]</p>
+</div></details>
+</section>
+{% endraw %}
