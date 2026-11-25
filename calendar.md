@@ -26,16 +26,16 @@ Every club-wide date in one place. Your team's own chapter-test dates are on the
 
 ### The same times around the world
 
-| | Math Sunday | Coding contest |
-|---|---|---|
-| Seattle, Vancouver area (PST) | 7:00–8:30 AM | 8:00–8:45 AM |
-| Victoria, B.C. (UTC−7) | 8:00–9:30 AM | 9:00–9:45 AM |
-| Toronto, New York | 10:00–11:30 AM | 11:00–11:45 AM |
-| London | 3:00–4:30 PM | 4:00–4:45 PM |
-| Paris | 4:00–5:30 PM | 5:00–5:45 PM |
-| Hanoi, Ho Chi Minh City | 10:00–11:30 PM | 11:00–11:45 PM |
+| | Math Sunday | Coding contest (until 29 Nov) | Purple Comet training (from 17 Jan) |
+|---|---|---|---|
+| Seattle, Vancouver area (PST) | 7:00–8:30 AM | 8:00–8:45 AM | 8:00 AM; MS until 9:00, HS until 9:30 |
+| Victoria, B.C. (UTC−7) | 8:00–9:30 AM | 9:00–9:45 AM | 9:00 AM; MS until 10:00, HS until 10:30 |
+| Toronto, New York | 10:00–11:30 AM | 11:00–11:45 AM | 11:00 AM; MS until 12:00, HS until 12:30 |
+| London | 3:00–4:30 PM | 4:00–4:45 PM | 4:00 PM; MS until 5:00, HS until 5:30 |
+| Paris | 4:00–5:30 PM | 5:00–5:45 PM | 5:00 PM; MS until 6:00, HS until 6:30 |
+| Hanoi, Ho Chi Minh City | 10:00–11:30 PM | 11:00–11:45 PM | 11:00 PM; MS until 12:00, HS until 12:30 |
 
-These hold from November to mid-March 2027.
+These hold from November to mid-March 2027. For the two March mocks, see the [Purple Comet training](./purple-comet-training) page.
 
 ## Through the year
 
@@ -43,10 +43,10 @@ These hold from November to mid-March 2027.
 |---|---|
 | September – December | First semester, ending with the semester exam |
 | January – June | Second semester |
-| Every two weeks, on Sundays | Math Sunday and the TOML coding contest, in turn ([Programs](./programs.md#the-weekly-sunday-session)) |
+| Every two weeks, on Sundays | Math Sunday and, in turn, the TOML coding contest (first semester) or [Purple Comet training](./purple-comet-training) (January – March) ([Programs](./programs.md#the-weekly-sunday-session)) |
 | Any time in the school year | New teams register and sit the two-day entrance test on dates they choose ([Programs](./programs.md#entrance-and-reassessment)); try the free [readiness check](./readiness.md) first |
 | Spring 2027, before Easter | 🥚 The Mystical Egg, for ingenuity on puzzle-style problems |
-| April 2027 | 🌍 [Purple Comet! Math Meet](./purple-comet-2026.md) |
+| April 2027 | 🌍 Purple Comet! Math Meet, 6–15 April, for the teams of the [Purple Comet training](./purple-comet-training) ([last year](./purple-comet-2026.md)) |
 | June 2027 | End of year: the MCC Championship, Top Perfect-Scorers and special recognition ([Awards](./programs.md#awards-through-the-year)) |
 | July – August | No club activity |
 
@@ -71,9 +71,9 @@ Mọi mốc chung của câu lạc bộ ở một chỗ. Ngày thi chương củ
 <p class="cal-none" hidden>Hiện chưa có lịch mới. Các ngày mới sẽ xuất hiện ở đây ngay khi được ấn định.</p>
 </div>
 
-**Giờ ở các nơi** (từ tháng 11 đến giữa tháng 3/2027): Chủ nhật Toán 7:00–8:30 sáng PST = 8:00–9:30 sáng Victoria = 10:00–11:30 sáng Toronto = 4:00–5:30 chiều Paris = 10:00–11:30 tối Việt Nam. Thi lập trình 8:00–8:45 sáng PST = 9:00–9:45 sáng Victoria = 11:00–11:45 sáng Toronto = 5:00–5:45 chiều Paris = 11:00–11:45 tối Việt Nam.
+**Giờ ở các nơi** (từ tháng 11 đến giữa tháng 3/2027): Chủ nhật Toán 7:00–8:30 sáng PST = 8:00–9:30 sáng Victoria = 10:00–11:30 sáng Toronto = 4:00–5:30 chiều Paris = 10:00–11:30 tối Việt Nam. Thi lập trình (đến 29/11) 8:00–8:45 sáng PST = 9:00–9:45 sáng Victoria = 11:00–11:45 sáng Toronto = 5:00–5:45 chiều Paris = 11:00–11:45 tối Việt Nam. Luyện thi Purple Comet (từ 17/1) bắt đầu 8:00 sáng PST = 9:00 sáng Victoria = 11:00 sáng Toronto = 5:00 chiều Paris = 11:00 tối Việt Nam; MS làm 60 phút, HS 90 phút.
 
-**Trong năm học:** học kỳ 1 từ tháng 9 đến tháng 12, kết thúc bằng thi học kỳ; học kỳ 2 từ tháng 1 đến tháng 6. Chủ nhật Toán và thi lập trình TOML luân phiên hai tuần một lần. Đội mới đăng ký và thi đầu vào hai ngày bất cứ lúc nào trong năm học. 🥚 The Mystical Egg vào mùa xuân, trước lễ Phục sinh. 🌍 Purple Comet! Math Meet vào tháng 4/2027. Cuối năm (tháng 6): MCC Championship, Top Perfect-Scorers và các giải đặc biệt. Tháng 7 và tháng 8 câu lạc bộ nghỉ.
+**Trong năm học:** học kỳ 1 từ tháng 9 đến tháng 12, kết thúc bằng thi học kỳ; học kỳ 2 từ tháng 1 đến tháng 6. Chủ nhật Toán luân phiên hai tuần một lần với thi lập trình TOML (học kỳ 1), rồi với [luyện thi Purple Comet](./purple-comet-training) (tháng 1 – tháng 3). Đội mới đăng ký và thi đầu vào hai ngày bất cứ lúc nào trong năm học. 🥚 The Mystical Egg vào mùa xuân, trước lễ Phục sinh. 🌍 Purple Comet! Math Meet từ 6 đến 15/4/2027, cho các đội của chương trình luyện thi Purple Comet. Cuối năm (tháng 6): MCC Championship, Top Perfect-Scorers và các giải đặc biệt. Tháng 7 và tháng 8 câu lạc bộ nghỉ.
 
 </details>
 

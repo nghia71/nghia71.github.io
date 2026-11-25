@@ -81,7 +81,7 @@ Each semester ends with a proctored **semester exam**, the club's internal olymp
 Because each team now tests at its own pace, Sunday is the club's one shared session. It runs on a two-week cycle:
 
 * **Math Sunday:** a lecture on a math topic or on the recent test solutions. Official solutions are taught by Mr. Nghia, Mr. Toan, or one of the teachers, and students who solved a problem perfectly present their own solution.
-* **Coding Sunday, the week after:** the TOML coding contest — see [TOML](./toml.html) for the schedule and how to take part.
+* **The Sunday after:** in the first semester, the TOML coding contest (see [TOML](./toml.html), which ended on 29 November 2026); from January to March 2027, the opt-in [Purple Comet training](./purple-comet-training), a past Purple Comet paper sat by self-formed teams, ahead of the contest on 6–15 April.
 
 Sessions are recorded for the club's YouTube channel, so no one is locked out by time zone.
 
